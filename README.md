@@ -1,40 +1,76 @@
-# Anatomiquiz
+# Anatomiquiz 🧬
 
-Version: 0.3.0 — 2026-05-27
+En modernt utformad interaktiv anatomiquiz för att testa dina kunskaper om skelett, muskler, organ och anatomi. 
 
-En interaktiv webapp för anatomifrågor på svenska. Testa dina kunskaper om skelett, muskler, organ och mer.
+## ✨ Funktioner
 
-Kör lokalt (enkelt sätt):
+- **Interaktiv quiz** – Välj svårighetsgrad, antal frågor och tidspress
+- **Topplista** – Spara och jämför dina resultat
+- **Frågekontroll** – Rapportera felaktiga frågor direkt i appen
+- **Responsiv design** – Fungerar perfekt på mobil, surfplatta och dator
+- **Modern gränssnitt** – Vacker grön design med smidiga animationer
+- **Tillgänglighet** – Fokus på användarupplevelse för alla
 
-```bash
-cd /home/norrtou/Documents/Kod/anatomiquiz
-python3 -m http.server 8000
-# eller: npx serve .
-# öppna sedan http://localhost:8000
+## 🚀 Komma igång
+
+Öppna helt enkelt [anatomiquiz](https://github.com/norrtou/anatomiquiz) i en webbläsare – inga installationer behövs!
+
+1. Välj dina quizinställningar (ämne, svårighetsgrad, antal frågor)
+2. Ange ditt namn
+3. Starta quizet och testa dina kunskaper
+4. Se dina resultat och spara på topplistan
+
+## 📚 Frågor
+
+Appen kommer med en grund av anatomifrågor. Du kan:
+
+- **Lägg till frågor** – Importera nya frågor via JSON-formatet
+- **Hantera frågor** – Granska och uppdatera frågorna i appen
+- **Rapportera fel** – Markera felaktiga frågor för senare granskning
+- **Exportera** – Ladda ner rapporterade frågor för analys
+
+### Frågeformat
+
+Följ denna struktur när du lägger till nya frågor:
+
+```json
+{
+  "id": "unique-id",
+  "prompt": "Vilken ben är längst i kroppen?",
+  "correct": "Lårbenet (femur)",
+  "distractors": ["Skenbenet", "Vaden", "Höftbenet"],
+  "topic": "skelett",
+  "difficulty": "Normal",
+  "source": "Lärobok eller källa"
+}
 ```
 
-Struktur:
-- index.html — appens gränssnitt
-- css/styles.css — styling
-- js/app.js — quizlogik
-- data/questions.json — alla frågor (lägg till fler här)
+**Fält:**
+- `id` – Unikt identifikator
+- `prompt` – Själva frågan
+- `correct` – Det rätta svaret
+- `distractors` – 3-5 felaktiga svar
+- `topic` – Kategori (t.ex. "skelett", "muskler", "organ")
+- `difficulty` – "Easy", "Normal" eller "Hard"
+- `source` – Källa eller lärobok
 
-Funktioner för frågor och validering
- - Appen stöder upp till 500 frågor. Om `data/questions.json` innehåller färre än 500 genereras platshållare (icke-medicinska) för att fylla upp listan. Platshållarna är märkta och ska ersättas med riktiga, faktagranskade frågor senare.
- - Du kan markera frågor som "Felaktig" (rapporterad) och/eller "Uteslut" (temporärt utesluten från quizet). Markeringar sparas i `localStorage` så att du kan granska och hantera dem i gränssnittet.
-- Kör `scripts/validate_questions.py` för att få en icke-destruktiv valideringsrapport om frågornas format.
+## 🛠️ Utveckling
 
-Import / export
- - I vyn "Hantera frågor" finns ett fält för att importera en JSON-fil med frågor. Denna import slår ihop nya frågor i minnet och uppdaterar hanteringsvyn — den skriver inte automatiskt till `data/questions.json`. Efter import kan du ladda ner den sammanslagna filen manuellt om du vill ersätta `data/questions.json`.
- - I vyn "Rapporterade frågor" finns en knapp för att exportera de rapporterade frågorna som en JSON-fil.
+För att bidra eller utveckla vidare:
 
-Kommentar i koden
-- I `js/app.js` finns kommentarer som förklarar att platshållarna måste importeras senare och att appen inte uppfinner medicinska fakta.
+```bash
+# Klona repot
+git clone https://github.com/norrtou/anatomiquiz.git
 
-Lägga till frågor:
- - Följ formatet i `data/questions.json`.
- - Fält: `id`, `prompt`, `correct`, `distractors` (array med 3–5 förslag), `topic`, `difficulty`, `source`.
-- Appen slumpmässigt blandar svaren och filtrerar på `topic` och `difficulty`.
+# Öppna index.html i en webbläsare
+# eller starta en lokal server:
+python3 -m http.server 8000
+```
 
-Källor:
-- Använd etablerade läroböcker i anatomi och Terminologia Anatomica när du lägger till fler frågor.
+## 📄 Licens
+
+Fritt att använda och modifiera för utbildningsändamål.
+
+## 🤝 Bidrag
+
+Förslag på nya frågor och förbättringar är välkomna! Öppna ett issue eller skicka en pull request.
