@@ -425,20 +425,21 @@ select:focus {
   transform: translateX(0);
 }
 
-/* Selected state */
-.answer-btn[aria-pressed="true"] {
+/* Selected state - only show color if it's correct or wrong */
+.answer-btn[aria-pressed="true"]:not(.correct):not(.wrong) {
   border-color: var(--primary);
-  background: rgba(16, 185, 129, 0.08);
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+  background: rgba(16, 185, 129, 0.05);
+  box-shadow: none;
 }
 
-/* Correct answer styling */
+/* Correct answer styling - PURE GREEN */
 .answer-btn.correct {
-  background: var(--success-bg);
+  background: var(--success);
   border-color: var(--success);
-  color: var(--text-primary);
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+  color: white;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
   animation: slideInCorrect 0.4s ease-out;
+  font-weight: 600;
 }
 
 @keyframes slideInCorrect {
@@ -452,13 +453,14 @@ select:focus {
   }
 }
 
-/* Wrong answer styling */
+/* Wrong answer styling - PURE RED */
 .answer-btn.wrong {
-  background: var(--error-bg);
+  background: var(--error);
   border-color: var(--error);
-  color: var(--text-primary);
-  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+  color: white;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
   animation: shake 0.4s ease-out;
+  font-weight: 600;
 }
 
 @keyframes shake {
