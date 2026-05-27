@@ -228,11 +228,6 @@ function showQuestion(){
   if(t>0) startTimer(t)
   // focus first answer for keyboard users
   setTimeout(()=>{ const first = el('answers').querySelector('button'); if(first) first.focus() }, 50)
-
-  // Ensure report button reflects current question
-  const flags = loadFlags()
-  const rep = flags[q.id] && flags[q.id].reported
-  el('reportBtn').textContent = rep ? 'Avmarkera som felaktig' : 'Markera som felaktig'
 }
 
 function selectAnswer(btn, selected, correct){
@@ -255,14 +250,6 @@ function nextQuestion(){
   if(currentIdx>=quizQuestions.length){ finishQuiz(); return }
   el('nextBtn').disabled = true
   showQuestion()
-}
-
-function toggleReportCurrent(){
-  const q = quizQuestions[currentIdx]
-  const flags = loadFlags()
-  const current = !!(flags[q.id] && flags[q.id].reported)
-  setReported(q.id, !current)
-  el('reportBtn').textContent = !current ? 'Avmarkera som felaktig' : 'Markera som felaktig'
 }
 
 function startTimer(sec){
@@ -537,7 +524,6 @@ function init(){
   el('soundToggle').addEventListener('click', toggleSound)
   el('startBtn').addEventListener('click', startQuiz)
   el('nextBtn').addEventListener('click', nextQuestion)
-  el('reportBtn').addEventListener('click', toggleReportCurrent)
   el('saveScore').addEventListener('click', saveScore)
   el('restart').addEventListener('click', ()=>{el('result').classList.add('hidden');el('setup').classList.remove('hidden')})
   el('viewScores').addEventListener('click', showHighscores)
