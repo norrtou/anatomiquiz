@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Anatomiquiz — Interaktiv anatomiquiz med frågor om human anatomi. Testa dina kunskaper om skelett, muskler, organ och mer (på svenska).">
+  <title>Anatomiquiz</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Hoppa till innehåll</a>
+  <main id="main" class="container" role="main">
+    <header class="header">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <h1>Anatomiquiz</h1>
+          <p class="tagline">Interaktiv anatomiquiz — Testa dina kunskaper om skelett, muskler, organ och mer.</p>
+        </div>
+        <button id="soundToggle" class="sound-toggle" aria-label="Ljud på/av" title="Aktivera/inaktivera ljud">🔊</button>
+      </div>
+    </header>
+
+    <section id="setup" class="card" aria-labelledby="setupHeading">
+      <h2 id="setupHeading">Skapa ett quiz åt mig</h2>
+
+      <label for="topic">Ämne</label>
+      <select id="topic">
+        <option value="any" selected>Anatomiska lägesbeskrivningar</option>
+        <option value="muskler" disabled>Muskler (kommer snart)</option>
+        <option value="skelett" disabled>Ben (kommer snart)</option>
+      </select>
+
+      <label for="difficulty">Svårighetsgrad</label>
+      <select id="difficulty">
+        <option value="any">Blandad</option>
+        <option value="Normal">Normal</option>
+        <option value="Hard">Svår</option>
+      </select>
+
+      <label for="numQuestions">Antal frågor</label>
+      <select id="numQuestions">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+      </select>
+
+      <label for="timePerQuestion">Tid i sekunder per fråga. (Låt stå 0 för ingen tidspress)</label>
+      <input id="timePerQuestion" type="number" min="0" value="0" aria-label="Tid per fråga i sekunder" />
+
+      <label for="playerName">Mitt namn</label>
+      <input id="playerName" placeholder="Mitt namn" aria-label="Mitt namn" />
+
+      <div class="actions">
+        <button id="startBtn" class="btn primary">Starta quiz</button>
+        <button id="viewScores" class="btn">Visa topplista</button>
+        <button id="manageBtn" class="btn">Hantera frågor</button>
+        <button id="viewReported" class="btn">Rapporterade frågor</button>
+      </div>
+    </section>
+
+    <section id="quiz" class="card hidden" aria-live="polite" aria-labelledby="quizHeading">
+      <h2 id="quizHeading" class="sr-only">Quiz</h2>
+      <div class="quiz-header">
+        <div id="playerLabel" aria-hidden="false"></div>
+        <div id="progress" aria-live="polite"></div>
+      </div>
+
+      <div id="questionArea" class="question" role="region" aria-live="polite"></div>
+
+      <div id="answers" class="answers" role="list"></div>
+
+      <div class="quiz-footer">
+        <div id="timer" class="timer" aria-live="polite"></div>
+        <div class="quiz-actions">
+          <button id="reportBtn" class="btn">Markera som felaktig</button>
+          <button id="nextBtn" class="btn" disabled aria-disabled="true">Nästa</button>
+        </div>
+        
+      </div>
+    </section>
+
+    <section id="manage" class="card hidden" aria-labelledby="manageHeading">
+      <h2 id="manageHeading">Hantera frågor</h2>
+      <p>Här visas upp till 500 frågor. Markera "Felaktig" om frågan eller svaret är felaktigt. Välj "Uteslut" för att temporärt ta bort frågan från quizet.</p>
+      <div id="manageList" class="manage-list" tabindex="0"></div>
+      <label for="importFile">Importera frågor (JSON):</label>
+      <input id="importFile" type="file" accept="application/json" />
+      <div class="actions">
+        <button id="saveManage" class="btn primary">Spara ändringar</button>
+        <button id="backFromManage" class="btn">Tillbaka</button>
+      </div>
+    </section>
+
+    <section id="reported" class="card hidden" aria-labelledby="reportedHeading">
+      <h2 id="reportedHeading">Rapporterade frågor</h2>
+      <p>Frågor markerade som felaktiga. Du kan avmarkera eller temporärt utesluta dem här.</p>
+      <div id="reportedList"></div>
+      <div class="actions">
+        <button id="exportReported" class="btn">Exportera rapporterade (JSON)</button>
+        <button id="backFromReported" class="btn">Tillbaka</button>
+      </div>
+    </section>
+
+    <section id="result" class="card hidden" aria-labelledby="resultHeading">
+      <h2 id="resultHeading">Resultat</h2>
+      <p id="resultText"></p>
+      <label for="saveName">Spara som</label>
+      <input id="saveName" placeholder="Mitt namn" />
+      <div class="actions">
+        <button id="saveScore" class="btn primary">Spara</button>
+        <button id="restart" class="btn">Spela igen</button>
+      </div>
+    </section>
+
+    <section id="highscores" class="card hidden" aria-labelledby="hsHeading">
+      <h2 id="hsHeading">Topplista</h2>
+      <ol id="scoreList"></ol>
+      <div class="actions">
+        <button id="clearScores" class="btn">Rensa topplista</button>
+        <button id="backToSetup" class="btn">Tillbaka</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <small>Anatomiquiz innehåller hundratals anatomifrågor. Lägg till fler frågor i <code>data/questions.json</code>.</small>
+    </footer>
+  </main>
+
+  <script src="js/app.js" type="module"></script>
+</body>
+</html>
