@@ -48,10 +48,9 @@
 
       <div class="actions">
         <button id="startBtn" class="btn primary">Starta quiz</button>
-        <button id="viewScores" class="btn">Visa topplista</button>
-        <button id="manageBtn" class="btn">Hantera frågor</button>
-        <button id="viewReported" class="btn">Rapporterade frågor</button>
-        <button id="soundToggle" class="btn sound-toggle-btn" aria-label="Ljud på/av" title="Aktivera/inaktivera ljud">🔊 Ljud</button>
+        <button id="viewScores" class="btn">Topplista</button>
+        <button id="manageBtn" class="btn">Hantera</button>
+        <button id="soundToggle" class="btn sound-toggle-btn" aria-label="Ljud på/av" title="Aktivera/inaktivera ljud">🔊</button>
       </div>
     </section>
 
@@ -87,17 +86,7 @@
       </div>
     </section>
 
-    <section id="reported" class="card hidden" aria-labelledby="reportedHeading">
-      <h2 id="reportedHeading">Rapporterade frågor</h2>
-      <p>Frågor markerade som felaktiga. Du kan avmarkera eller temporärt utesluta dem här.</p>
-      <div id="reportedList"></div>
-      <div class="actions">
-        <button id="exportReported" class="btn">Exportera rapporterade (JSON)</button>
-        <button id="backFromReported" class="btn">Tillbaka</button>
-      </div>
-    </section>
-
-    <section id="result" class="card hidden" aria-labelledby="resultHeading">
+<section id="result" class="card hidden" aria-labelledby="resultHeading">
       <h2 id="resultHeading">Resultat</h2>
       <p id="resultText"></p>
       <label for="saveName">Spara som</label>

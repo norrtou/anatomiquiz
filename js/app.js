@@ -446,51 +446,6 @@ function renderManage(){
   container.appendChild(list)
 }
 
-function renderReported(){
-  const container = el('reportedList')
-  container.innerHTML = ''
-  const flags = loadFlags()
-  const reported = Object.keys(flags).filter(id=> flags[id].reported)
-  if(reported.length===0){ container.textContent = 'Inga rapporterade frågor.'; return }
-  const ul = document.createElement('ul')
-  reported.forEach(id=>{
-    const q = allQuestions.find(x=>x.id===id)
-    const li = document.createElement('li')
-    if(q){
-      li.textContent = `[${id}] ${q.prompt} `
-      const excBtn = document.createElement('button')
-      excBtn.className='btn'
-      excBtn.textContent = (flags[id] && flags[id].excluded) ? 'Återinkludera' : 'Uteslut temporärt'
-      excBtn.addEventListener('click', ()=>{ toggleExcluded(id); renderReported(); })
-      const unrep = document.createElement('button')
-      unrep.className='btn'
-      unrep.textContent='Avmarkera'
-      unrep.addEventListener('click', ()=>{ setReported(id,false); renderReported(); renderManage(); })
-      li.appendChild(excBtn); li.appendChild(unrep)
-    } else {
-      li.textContent = `[${id}] (fråga saknas i dataset)`
-    }
-    ul.appendChild(li)
-  })
-  container.appendChild(ul)
-}
-
-// Export reported questions as JSON file (client-side download)
-function exportReported(){
-  const flags = loadFlags()
-  const reportedIds = Object.keys(flags).filter(id=> flags[id].reported)
-  const items = reportedIds.map(id=> allQuestions.find(q=> q.id===id)).filter(Boolean)
-  const blob = new Blob([JSON.stringify(items, null, 2)], {type:'application/json'})
-  const url = URL.createObjectURL(blob)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = 'reported_questions.json'
-  document.body.appendChild(a)
-  a.click()
-  a.remove()
-  URL.revokeObjectURL(url)
-}
-
 // Handle import of JSON questions. This merges imported questions into in-memory list
 // and updates the management UI. It does NOT write to `data/questions.json` on disk.
 // If you want to persist to disk, download the merged JSON and replace the file manually.
@@ -528,14 +483,10 @@ function init(){
   el('restart').addEventListener('click', ()=>{el('result').classList.add('hidden');el('setup').classList.remove('hidden')})
   el('viewScores').addEventListener('click', showHighscores)
   el('manageBtn').addEventListener('click', ()=>{ renderManage(); el('setup').classList.add('hidden'); el('manage').classList.remove('hidden') })
-  el('viewReported').addEventListener('click', ()=>{ renderReported(); el('setup').classList.add('hidden'); el('reported').classList.remove('hidden') })
   el('backFromManage').addEventListener('click', ()=>{ el('manage').classList.add('hidden'); el('setup').classList.remove('hidden') })
-  el('backFromReported').addEventListener('click', ()=>{ el('reported').classList.add('hidden'); el('setup').classList.remove('hidden') })
   el('saveManage').addEventListener('click', ()=>{ alert('Ändringar sparade (sparas automatiskt).'); renderManage() })
   const imp = el('importFile')
   if(imp) imp.addEventListener('change', handleImportFile)
-  const exp = el('exportReported')
-  if(exp) exp.addEventListener('click', exportReported)
   el('backToSetup').addEventListener('click', ()=>{el('highscores').classList.add('hidden');el('setup').classList.remove('hidden')})
   el('clearScores').addEventListener('click', ()=>{ if(confirm('Rensa topplista?')) clearScores() })
 }
