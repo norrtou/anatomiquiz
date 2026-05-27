@@ -1,4 +1,4 @@
-const qsPath = '/data/questions.json'
+const qsPath = './data/questions.json'
 // NOTE: This app will ensure up to MAX_QUESTIONS questions exist by generating
 // placeholders for missing entries. Real questions should be imported later
 // into `data/questions.json`. Placeholders are non-medical and serve only
