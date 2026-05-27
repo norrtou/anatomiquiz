@@ -135,6 +135,12 @@ function startQuiz(){
   const diff = el('difficulty').value
   const topic = el('topic').value
   const flags = loadFlags()
+
+  // Debug info
+  const realQuestions = allQuestions.filter(q => q.source !== 'placeholder')
+  const placeholders = allQuestions.filter(q => q.source === 'placeholder')
+  console.log(`Total frågor: ${allQuestions.length}, Riktiga: ${realQuestions.length}, Placeholders: ${placeholders.length}`)
+
   // Exclude questions that are explicitly marked as placeholders so they
   // are not used in quizzes until replaced with real, fact-checked content.
   // Filter by difficulty: 'any' (all), 'Normal' (normal questions), 'Hard' (difficult questions)
@@ -144,7 +150,13 @@ function startQuiz(){
     if(isPlaceholderSource || isPlaceholderId) return false
     return (diff==='any'||q.difficulty===diff) && (topic==='any'||q.topic===topic) && !(flags[q.id] && flags[q.id].excluded)
   })
-  if(filtered.length===0){alert('Inga frågor matchar urvalet. Prova en annan kombination.');return}
+  if(filtered.length===0){
+    const msg = realQuestions.length === 0
+      ? 'PROBLEM: Frågor laddade inte från data/questions.json! Checka browser console (F12).'
+      : 'Inga frågor matchar urvalet. Prova en annan kombination.'
+    alert(msg)
+    return
+  }
 
   // Ensure full randomization: shuffle filtered pool first
   const shuffledFiltered = shuffle(filtered.slice())
