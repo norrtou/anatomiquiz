@@ -19,7 +19,9 @@
     "prompt": "Kranial betyder: Mot huvudet",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "riktningar",
     "difficulty": "Easy",
@@ -45,7 +47,9 @@
     "prompt": "Kaudal betyder: Mot fötterna",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "riktningar",
     "difficulty": "Easy",
@@ -71,7 +75,9 @@
     "prompt": "Ventral betyder: Mot framsidan",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "riktningar",
     "difficulty": "Easy",
@@ -97,7 +103,9 @@
     "prompt": "Dorsal betyder: Mot baksidan",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "riktningar",
     "difficulty": "Easy",
@@ -123,7 +131,9 @@
     "prompt": "Medial betyder: Mot mittlinjen",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "riktningar",
     "difficulty": "Easy",
@@ -149,7 +159,9 @@
     "prompt": "Lateral betyder: Från mittlinjen",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "riktningar",
     "difficulty": "Easy",
@@ -175,7 +187,9 @@
     "prompt": "Proximal betyder: Närmare ursprung",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "riktningar",
     "difficulty": "Easy",
@@ -201,7 +215,9 @@
     "prompt": "Distal betyder: Längre från ursprung",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "riktningar",
     "difficulty": "Easy",
@@ -227,7 +243,9 @@
     "prompt": "Ytlig betyder: Nära ytan",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "riktningar",
     "difficulty": "Easy",
@@ -253,7 +271,9 @@
     "prompt": "Djup betyder: Långt från ytan",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "riktningar",
     "difficulty": "Easy",
@@ -531,7 +551,9 @@
     "prompt": "Ryggläge (Supine) innebär: På rygg",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "positioner",
     "difficulty": "Easy",
@@ -557,7 +579,9 @@
     "prompt": "Bukläge (Prone) innebär: På mage",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "positioner",
     "difficulty": "Easy",
@@ -583,7 +607,9 @@
     "prompt": "Sidoläge (Lateral) innebär: På sidan",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "positioner",
     "difficulty": "Easy",
@@ -609,7 +635,9 @@
     "prompt": "Fowlerläge (Fowler's) innebär: Halvsittande",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "positioner",
     "difficulty": "Easy",
@@ -635,7 +663,9 @@
     "prompt": "Trendelenburgläge (Trendelenburg) innebär: Huvud ned",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "positioner",
     "difficulty": "Easy",
@@ -661,7 +691,9 @@
     "prompt": "Omvänt Trendelenburgläge (Reverse Trendelenburg) innebär: Huvud upp",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "positioner",
     "difficulty": "Easy",
@@ -687,7 +719,9 @@
     "prompt": "Litotomiläge (Lithotomy) innebär: Ben upp",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "positioner",
     "difficulty": "Easy",
@@ -713,7 +747,9 @@
     "prompt": "Simsläge (Sims) innebär: Halvt bukläge",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "positioner",
     "difficulty": "Easy",
@@ -1940,7 +1976,7 @@
   {
     "id": "q142",
     "type": "mc",
-    "prompt": "Hjärtat ligger ___ från magen",
+    "prompt": "Hjärtat ligger ____ från magen",
     "correct": "Superior",
     "distractors": [
       "Inferior",
@@ -1954,7 +1990,7 @@
   {
     "id": "q143",
     "type": "mc",
-    "prompt": "Tårna ligger ___ från höfterna",
+    "prompt": "Tårna ligger ____ från höfterna",
     "correct": "Distal",
     "distractors": [
       "Proximal",
@@ -1968,7 +2004,7 @@
   {
     "id": "q144",
     "type": "mc",
-    "prompt": "Hörseln ligger ___ från hjärtat",
+    "prompt": "Hörseln ligger ____ från hjärtat",
     "correct": "Lateral",
     "distractors": [
       "Medial",
@@ -1982,7 +2018,7 @@
   {
     "id": "q145",
     "type": "mc",
-    "prompt": "Hudytan är ___ jämfört med musklerna",
+    "prompt": "Hudytan är ____ jämfört med musklerna",
     "correct": "Superficial",
     "distractors": [
       "Profundus",
@@ -1996,7 +2032,7 @@
   {
     "id": "q146",
     "type": "mc",
-    "prompt": "Benen ligger ___ från bröstet",
+    "prompt": "Benen ligger ____ från bröstet",
     "correct": "Inferior",
     "distractors": [
       "Superior",
@@ -2010,7 +2046,7 @@
   {
     "id": "q147",
     "type": "mc",
-    "prompt": "Tummen ligger ___ från lillfingret",
+    "prompt": "Tummen ligger ____ från lillfingret",
     "correct": "Lateral",
     "distractors": [
       "Medial",
@@ -2024,7 +2060,7 @@
   {
     "id": "q148",
     "type": "mc",
-    "prompt": "Nakchirurgiska strukturer är ___ jämfört med hudmärken",
+    "prompt": "Nakchirurgiska strukturer är ____ jämfört med hudmärken",
     "correct": "Profundus",
     "distractors": [
       "Superficial",
@@ -2038,7 +2074,7 @@
   {
     "id": "q149",
     "type": "mc",
-    "prompt": "När du böjer armen i armbågen sker en ____ i armbågsleden",
+    "prompt": "När du böjer armen i armbågen sker en _____ i armbågsleden",
     "correct": "Flexion",
     "distractors": [
       "Extension",
@@ -2052,7 +2088,7 @@
   {
     "id": "q150",
     "type": "mc",
-    "prompt": "När du sträcker armen ut sker en ____ i armbågsleden",
+    "prompt": "När du sträcker armen ut sker en _____ i armbågsleden",
     "correct": "Extension",
     "distractors": [
       "Flexion",
@@ -2066,7 +2102,7 @@
   {
     "id": "q151",
     "type": "mc",
-    "prompt": "När du drar armen bort från kroppen sker en ____ ",
+    "prompt": "När du drar armen bort från kroppen sker en _____ ",
     "correct": "Abduktion",
     "distractors": [
       "Adduktion",
@@ -2080,7 +2116,7 @@
   {
     "id": "q152",
     "type": "mc",
-    "prompt": "När du för armen mot kroppen sker en ____",
+    "prompt": "När du för armen mot kroppen sker en _____",
     "correct": "Adduktion",
     "distractors": [
       "Abduktion",
@@ -2094,7 +2130,7 @@
   {
     "id": "q153",
     "type": "mc",
-    "prompt": "När du drejer huvudet åt sidan sker en ____",
+    "prompt": "När du drejer huvudet åt sidan sker en _____",
     "correct": "Rotation",
     "distractors": [
       "Flexion",
@@ -2108,7 +2144,7 @@
   {
     "id": "q154",
     "type": "mc",
-    "prompt": "När du lutar huvudet åt sidan sker en ____",
+    "prompt": "När du lutar huvudet åt sidan sker en _____",
     "correct": "Lateralflexion",
     "distractors": [
       "Flexion",
@@ -2122,7 +2158,7 @@
   {
     "id": "q155",
     "type": "mc",
-    "prompt": "En snurrande rörelse kallas ____",
+    "prompt": "En snurrande rörelse kallas _____",
     "correct": "Cirkumduktion",
     "distractors": [
       "Pronation",
@@ -2136,7 +2172,7 @@
   {
     "id": "q156",
     "type": "mc",
-    "prompt": "Stå och rotera handflatorna uppåt - det är ____",
+    "prompt": "Stå och rotera handflatorna uppåt - det är _____",
     "correct": "Supination",
     "distractors": [
       "Pronation",
@@ -2150,7 +2186,7 @@
   {
     "id": "q157",
     "type": "mc",
-    "prompt": "Stå och rotera handflatorna nedåt - det är ____",
+    "prompt": "Stå och rotera handflatorna nedåt - det är _____",
     "correct": "Pronation",
     "distractors": [
       "Supination",
@@ -2164,7 +2200,7 @@
   {
     "id": "q158",
     "type": "mc",
-    "prompt": "Dra tåna uppåt från golvet - det är ____",
+    "prompt": "Dra tåna uppåt från golvet - det är _____",
     "correct": "Dorsalflexion",
     "distractors": [
       "Plantarflexion",
@@ -2178,7 +2214,7 @@
   {
     "id": "q159",
     "type": "mc",
-    "prompt": "Peka med tåna - det är ____",
+    "prompt": "Peka med tåna - det är _____",
     "correct": "Plantarflexion",
     "distractors": [
       "Dorsalflexion",
@@ -2192,7 +2228,7 @@
   {
     "id": "q160",
     "type": "mc",
-    "prompt": "Vänd fotsulorna inåt - det är ____",
+    "prompt": "Vänd fotsulorna inåt - det är _____",
     "correct": "Inversion",
     "distractors": [
       "Eversion",
@@ -2206,7 +2242,7 @@
   {
     "id": "q161",
     "type": "mc",
-    "prompt": "Vänd fotsulorna utåt - det är ____",
+    "prompt": "Vänd fotsulorna utåt - det är _____",
     "correct": "Eversion",
     "distractors": [
       "Inversion",
@@ -2223,7 +2259,9 @@
     "prompt": "Flexion innebär att öka vinkeln mellan två ben",
     "correct": "Falskt",
     "distractors": [
-      "Sant"
+      "Sant",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -2235,7 +2273,9 @@
     "prompt": "Extension innebär att minska vinkeln mellan två ben",
     "correct": "Falskt",
     "distractors": [
-      "Sant"
+      "Sant",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -2247,7 +2287,9 @@
     "prompt": "Abduktion är rörelse från mittlinjen",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -2259,7 +2301,9 @@
     "prompt": "Adduktion är rörelse från mittlinjen",
     "correct": "Falskt",
     "distractors": [
-      "Sant"
+      "Sant",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -2271,7 +2315,9 @@
     "prompt": "Pronation är när handflatan roteras nedåt",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -2283,7 +2329,9 @@
     "prompt": "Supination är när handflatan roteras nedåt",
     "correct": "Falskt",
     "distractors": [
-      "Sant"
+      "Sant",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -2295,7 +2343,9 @@
     "prompt": "Dorsalflexion är att dra foten uppåt",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -2307,7 +2357,9 @@
     "prompt": "Plantarflexion är att dra foten uppåt",
     "correct": "Falskt",
     "distractors": [
-      "Sant"
+      "Sant",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -2319,7 +2371,9 @@
     "prompt": "Inversion innebär att fotsula vänds inåt",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -2331,7 +2385,9 @@
     "prompt": "Eversion innebär att fotsula vänds inåt",
     "correct": "Falskt",
     "distractors": [
-      "Sant"
+      "Sant",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -2343,7 +2399,9 @@
     "prompt": "Superior betyder mot huvudet",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -2355,7 +2413,9 @@
     "prompt": "Inferior betyder mot huvudet",
     "correct": "Falskt",
     "distractors": [
-      "Sant"
+      "Sant",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -2367,7 +2427,9 @@
     "prompt": "Medial betyder mot mittlinjen",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -2379,7 +2441,9 @@
     "prompt": "Lateral betyder mot mittlinjen",
     "correct": "Falskt",
     "distractors": [
-      "Sant"
+      "Sant",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -2391,7 +2455,9 @@
     "prompt": "Proximal betyder närmare ursprunget",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -2403,7 +2469,9 @@
     "prompt": "Distal betyder närmare ursprunget",
     "correct": "Falskt",
     "distractors": [
-      "Sant"
+      "Sant",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -2415,7 +2483,9 @@
     "prompt": "Superficial betyder nära ytan",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -2427,7 +2497,9 @@
     "prompt": "Profundus betyder nära ytan",
     "correct": "Falskt",
     "distractors": [
-      "Sant"
+      "Sant",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -2439,7 +2511,9 @@
     "prompt": "Anterior betyder mot framsidan",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -2451,7 +2525,9 @@
     "prompt": "Posterior betyder mot framsidan",
     "correct": "Falskt",
     "distractors": [
-      "Sant"
+      "Sant",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -3356,12 +3432,11 @@
   {
     "id": "q246",
     "type": "mc",
-    "prompt": "'Böja halsen' är en rörelse som kallas ____",
+    "prompt": "'Böja halsen' är en rörelse som kallas _____",
     "correct": "Flexion",
     "distractors": [
-      "Flexion2",
-      "Annat ord",
-      "Neutral position"
+      "Neutral position",
+      "Extension"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3370,12 +3445,11 @@
   {
     "id": "q247",
     "type": "mc",
-    "prompt": "'Sträcka halsen' är en rörelse som kallas ____",
+    "prompt": "'Sträcka halsen' är en rörelse som kallas _____",
     "correct": "Extension",
     "distractors": [
-      "Extension2",
-      "Annat ord",
-      "Neutral position"
+      "Neutral position",
+      "Flexion"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3384,12 +3458,11 @@
   {
     "id": "q248",
     "type": "mc",
-    "prompt": "'Böja höftleden' är en rörelse som kallas ____",
+    "prompt": "'Böja höftleden' är en rörelse som kallas _____",
     "correct": "Flexion",
     "distractors": [
-      "Flexion2",
-      "Annat ord",
-      "Neutral position"
+      "Neutral position",
+      "Extension"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3398,12 +3471,11 @@
   {
     "id": "q249",
     "type": "mc",
-    "prompt": "'Sträcka höftleden' är en rörelse som kallas ____",
+    "prompt": "'Sträcka höftleden' är en rörelse som kallas _____",
     "correct": "Extension",
     "distractors": [
-      "Extension2",
-      "Annat ord",
-      "Neutral position"
+      "Neutral position",
+      "Flexion"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3412,12 +3484,11 @@
   {
     "id": "q250",
     "type": "mc",
-    "prompt": "'Höja axlarna' är en rörelse som kallas ____",
+    "prompt": "'Höja axlarna' är en rörelse som kallas _____",
     "correct": "Elevation",
     "distractors": [
-      "Elevation2",
-      "Annat ord",
-      "Neutral position"
+      "Neutral position",
+      "Depression"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3426,12 +3497,11 @@
   {
     "id": "q251",
     "type": "mc",
-    "prompt": "'Sänka axlarna' är en rörelse som kallas ____",
+    "prompt": "'Sänka axlarna' är en rörelse som kallas _____",
     "correct": "Depression",
     "distractors": [
-      "Depression2",
-      "Annat ord",
-      "Neutral position"
+      "Neutral position",
+      "Elevation"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3440,12 +3510,11 @@
   {
     "id": "q252",
     "type": "mc",
-    "prompt": "'Dra axlarna bakåt' är en rörelse som kallas ____",
+    "prompt": "'Dra axlarna bakåt' är en rörelse som kallas _____",
     "correct": "Retraktion",
     "distractors": [
-      "Retraktion2",
-      "Annat ord",
-      "Neutral position"
+      "Neutral position",
+      "Protraktion"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3454,12 +3523,11 @@
   {
     "id": "q253",
     "type": "mc",
-    "prompt": "'Dra axlarna framåt' är en rörelse som kallas ____",
+    "prompt": "'Dra axlarna framåt' är en rörelse som kallas _____",
     "correct": "Protraktion",
     "distractors": [
-      "Protraktion2",
-      "Annat ord",
-      "Neutral position"
+      "Neutral position",
+      "Retraktion"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3468,12 +3536,11 @@
   {
     "id": "q254",
     "type": "mc",
-    "prompt": "'Böja knäet' är en rörelse som kallas ____",
+    "prompt": "'Böja knäet' är en rörelse som kallas _____",
     "correct": "Flexion",
     "distractors": [
-      "Flexion2",
-      "Annat ord",
-      "Neutral position"
+      "Neutral position",
+      "Extension"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3482,12 +3549,11 @@
   {
     "id": "q255",
     "type": "mc",
-    "prompt": "'Sträcka knäet' är en rörelse som kallas ____",
+    "prompt": "'Sträcka knäet' är en rörelse som kallas _____",
     "correct": "Extension",
     "distractors": [
-      "Extension2",
-      "Annat ord",
-      "Neutral position"
+      "Neutral position",
+      "Flexion"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3496,12 +3562,11 @@
   {
     "id": "q256",
     "type": "mc",
-    "prompt": "'Döja höftleden' är en rörelse som kallas ____",
+    "prompt": "'Döja höftleden' är en rörelse som kallas _____",
     "correct": "Abduktion",
     "distractors": [
-      "Abduktion2",
-      "Annat ord",
-      "Neutral position"
+      "Neutral position",
+      "Adduktion"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3510,12 +3575,11 @@
   {
     "id": "q257",
     "type": "mc",
-    "prompt": "'Föra benen tillsammans' är en rörelse som kallas ____",
+    "prompt": "'Föra benen tillsammans' är en rörelse som kallas _____",
     "correct": "Adduktion",
     "distractors": [
-      "Adduktion2",
-      "Annat ord",
-      "Neutral position"
+      "Neutral position",
+      "Abduktion"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3524,12 +3588,11 @@
   {
     "id": "q258",
     "type": "mc",
-    "prompt": "'Vrida benet inåt' är en rörelse som kallas ____",
+    "prompt": "'Vrida benet inåt' är en rörelse som kallas _____",
     "correct": "Inåtrotation",
     "distractors": [
-      "Inåtrotation2",
-      "Annat ord",
-      "Neutral position"
+      "Neutral position",
+      "Utåtrotation"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3538,12 +3601,11 @@
   {
     "id": "q259",
     "type": "mc",
-    "prompt": "'Vrida benet utåt' är en rörelse som kallas ____",
+    "prompt": "'Vrida benet utåt' är en rörelse som kallas _____",
     "correct": "Utåtrotation",
     "distractors": [
-      "Utåtrotation2",
-      "Annat ord",
-      "Neutral position"
+      "Neutral position",
+      "Inåtrotation"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3552,12 +3614,11 @@
   {
     "id": "q260",
     "type": "mc",
-    "prompt": "'Böja handleden' är en rörelse som kallas ____",
+    "prompt": "'Böja handleden' är en rörelse som kallas _____",
     "correct": "Flexion",
     "distractors": [
-      "Flexion2",
-      "Annat ord",
-      "Neutral position"
+      "Neutral position",
+      "Extension"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3566,12 +3627,11 @@
   {
     "id": "q261",
     "type": "mc",
-    "prompt": "'Sträcka handleden' är en rörelse som kallas ____",
+    "prompt": "'Sträcka handleden' är en rörelse som kallas _____",
     "correct": "Extension",
     "distractors": [
-      "Extension2",
-      "Annat ord",
-      "Neutral position"
+      "Neutral position",
+      "Flexion"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3580,12 +3640,11 @@
   {
     "id": "q262",
     "type": "mc",
-    "prompt": "'Böja tummen till fingrarna' är en rörelse som kallas ____",
+    "prompt": "'Böja tummen till fingrarna' är en rörelse som kallas _____",
     "correct": "Opposition",
     "distractors": [
-      "Opposition2",
-      "Annat ord",
-      "Neutral position"
+      "Neutral position",
+      "Flexion"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3594,7 +3653,7 @@
   {
     "id": "q263",
     "type": "mc",
-    "prompt": "Böja och sträcka en arm är en rörelse i ____",
+    "prompt": "Böja och sträcka en arm är en rörelse i _____",
     "correct": "Sagittalplan",
     "distractors": [
       "Frontalplan",
@@ -3608,7 +3667,7 @@
   {
     "id": "q264",
     "type": "mc",
-    "prompt": "Lyfta och sänka en arm åt sidan är en rörelse i ____",
+    "prompt": "Lyfta och sänka en arm åt sidan är en rörelse i _____",
     "correct": "Frontalplan",
     "distractors": [
       "Sagittalplan",
@@ -3622,7 +3681,7 @@
   {
     "id": "q265",
     "type": "mc",
-    "prompt": "Vrida huvudet är en rörelse i ____",
+    "prompt": "Vrida huvudet är en rörelse i _____",
     "correct": "Transversalplan",
     "distractors": [
       "Sagittalplan",
@@ -3636,7 +3695,7 @@
   {
     "id": "q266",
     "type": "mc",
-    "prompt": "En rörelse mellan fram och bak är i ____",
+    "prompt": "En rörelse mellan fram och bak är i _____",
     "correct": "Frontalplan",
     "distractors": [
       "Sagittalplan",
@@ -3650,7 +3709,7 @@
   {
     "id": "q267",
     "type": "mc",
-    "prompt": "En rörelse mellan vänster och höger är i ____",
+    "prompt": "En rörelse mellan vänster och höger är i _____",
     "correct": "Sagittalplan",
     "distractors": [
       "Frontalplan",
@@ -3664,7 +3723,7 @@
   {
     "id": "q268",
     "type": "mc",
-    "prompt": "En rörelse mellan övre och nedre kroppen är i ____",
+    "prompt": "En rörelse mellan övre och nedre kroppen är i _____",
     "correct": "Transversalplan",
     "distractors": [
       "Sagittalplan",
@@ -3776,7 +3835,7 @@
   {
     "id": "q276",
     "type": "mc",
-    "prompt": "En punkt som är både superior och lateral är ____",
+    "prompt": "En punkt som är både superior och lateral är _____",
     "correct": "Både uppåt och från mittlinjen",
     "distractors": [
       "Både nedåt och mot mittlinjen",
@@ -3790,7 +3849,7 @@
   {
     "id": "q277",
     "type": "mc",
-    "prompt": "En punkt som är både inferior och medial är ____",
+    "prompt": "En punkt som är både inferior och medial är _____",
     "correct": "Både nedåt och mot mittlinjen",
     "distractors": [
       "Både uppåt och från mittlinjen",
@@ -3804,12 +3863,11 @@
   {
     "id": "q278",
     "type": "mc",
-    "prompt": "En punkt som är både proximal och superficial är ____",
+    "prompt": "En punkt som är både proximal och superficial är _____",
     "correct": "Både närmare ursprung och nära ytan",
     "distractors": [
       "Längre från ursprung",
-      "Långt från ytan",
-      "Neutral"
+      "Långt från ytan"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -3818,7 +3876,7 @@
   {
     "id": "q279",
     "type": "mc",
-    "prompt": "En punkt som är både distal och profundus är ____",
+    "prompt": "En punkt som är både distal och profundus är _____",
     "correct": "Både längre från ursprung och långt från ytan",
     "distractors": [
       "Närmare ursprung",
@@ -4252,7 +4310,7 @@
   {
     "id": "q310",
     "type": "mc",
-    "prompt": "Handflatan är den ___ sidan av handen",
+    "prompt": "Handflatan är den ____ sidan av handen",
     "correct": "Palmara/Volar",
     "distractors": [
       "Dorsala",
@@ -4266,7 +4324,7 @@
   {
     "id": "q311",
     "type": "mc",
-    "prompt": "Fotsulans sida kallas den ___ sida",
+    "prompt": "Fotsulans sida kallas den ____ sida",
     "correct": "Plantar",
     "distractors": [
       "Dorsal",
@@ -4381,7 +4439,9 @@
     "prompt": "Cirkumduktion är en rörelse i en plan",
     "correct": "Falskt",
     "distractors": [
-      "Sant"
+      "Sant",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -4393,7 +4453,9 @@
     "prompt": "Rotation kan ske omkring flera axlar",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -4405,7 +4467,9 @@
     "prompt": "Hyperextension är mer sträckning än normal extension",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -4417,7 +4481,9 @@
     "prompt": "Plantarflexion är att lyfta foten",
     "correct": "Falskt",
     "distractors": [
-      "Sant"
+      "Sant",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -4429,7 +4495,9 @@
     "prompt": "Supination av handen gör tummen peka uppåt",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -4441,7 +4509,9 @@
     "prompt": "En struktur kan vara både superficial och distal",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -4453,7 +4523,9 @@
     "prompt": "Anterior och ventral betyder motsatsen",
     "correct": "Falskt",
     "distractors": [
-      "Sant"
+      "Sant",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -4465,7 +4537,9 @@
     "prompt": "Medial och lateral är motsatser",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -4477,7 +4551,9 @@
     "prompt": "Proximal betyder längre från ursprunget",
     "correct": "Falskt",
     "distractors": [
-      "Sant"
+      "Sant",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -4489,7 +4565,9 @@
     "prompt": "Ryggläge är när man ligger på mage",
     "correct": "Falskt",
     "distractors": [
-      "Sant"
+      "Sant",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -4501,7 +4579,9 @@
     "prompt": "Bukläge är supine position",
     "correct": "Falskt",
     "distractors": [
-      "Sant"
+      "Sant",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -4513,7 +4593,9 @@
     "prompt": "Litotomiläge har benen höjda",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -4525,7 +4607,9 @@
     "prompt": "Sagittalplan delar kroppen vänster och höger",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -4537,7 +4621,9 @@
     "prompt": "Frontalplan delar kroppen fram och bak",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -4549,7 +4635,9 @@
     "prompt": "Transversalplan delar kroppen övre och nedre",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -5149,7 +5237,9 @@
     "prompt": "Flexion är en rörelse",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -5161,7 +5251,9 @@
     "prompt": "Extension är en rörelse",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -5173,7 +5265,9 @@
     "prompt": "Abduktion är en rörelse",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -5185,7 +5279,9 @@
     "prompt": "Adduktion är en rörelse",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -5197,7 +5293,9 @@
     "prompt": "Rotation är en rörelse",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -5209,7 +5307,9 @@
     "prompt": "Inåtrotation är en rörelse",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -5221,7 +5321,9 @@
     "prompt": "Utåtrotation är en rörelse",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -5233,7 +5335,9 @@
     "prompt": "Pronation är en rörelse",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -5245,7 +5349,9 @@
     "prompt": "Supination är en rörelse",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -5257,7 +5363,9 @@
     "prompt": "Dorsalflexion är en rörelse",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -5269,7 +5377,9 @@
     "prompt": "Superior är en riktningsterm",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -5281,7 +5391,9 @@
     "prompt": "Inferior är en riktningsterm",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -5293,7 +5405,9 @@
     "prompt": "Anterior är en riktningsterm",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -5305,7 +5419,9 @@
     "prompt": "Posterior är en riktningsterm",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -5317,7 +5433,9 @@
     "prompt": "Medial är en riktningsterm",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -5329,7 +5447,9 @@
     "prompt": "Lateral är en riktningsterm",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -5341,7 +5461,9 @@
     "prompt": "Proximal är en riktningsterm",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -5353,7 +5475,9 @@
     "prompt": "Distal är en riktningsterm",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -5365,7 +5489,9 @@
     "prompt": "Superficial är en riktningsterm",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -5377,7 +5503,9 @@
     "prompt": "Profundus är en riktningsterm",
     "correct": "Sant",
     "distractors": [
-      "Falskt"
+      "Falskt",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -5572,7 +5700,6 @@
     "correct": "Uppåt och åt sidan",
     "distractors": [
       "Motsatsen",
-      "Neutral",
       "Intermediär"
     ],
     "topic": "riktningar",
@@ -5586,7 +5713,6 @@
     "correct": "Uppåt och åt sidan",
     "distractors": [
       "Motsatsen",
-      "Neutral",
       "Intermediär"
     ],
     "topic": "riktningar",
@@ -5600,7 +5726,6 @@
     "correct": "Uppåt och åt sidan",
     "distractors": [
       "Motsatsen",
-      "Neutral",
       "Intermediär"
     ],
     "topic": "riktningar",
@@ -5614,7 +5739,6 @@
     "correct": "Nedåt och inåt",
     "distractors": [
       "Motsatsen",
-      "Neutral",
       "Intermediär"
     ],
     "topic": "riktningar",
@@ -5628,7 +5752,6 @@
     "correct": "Nedåt och inåt",
     "distractors": [
       "Motsatsen",
-      "Neutral",
       "Intermediär"
     ],
     "topic": "riktningar",
@@ -5642,7 +5765,6 @@
     "correct": "Nedåt och inåt",
     "distractors": [
       "Motsatsen",
-      "Neutral",
       "Intermediär"
     ],
     "topic": "riktningar",
@@ -5656,7 +5778,6 @@
     "correct": "Framåt och närmare ursprung",
     "distractors": [
       "Motsatsen",
-      "Neutral",
       "Intermediär"
     ],
     "topic": "riktningar",
@@ -5670,7 +5791,6 @@
     "correct": "Framåt och närmare ursprung",
     "distractors": [
       "Motsatsen",
-      "Neutral",
       "Intermediär"
     ],
     "topic": "riktningar",
@@ -5684,7 +5804,6 @@
     "correct": "Framåt och närmare ursprung",
     "distractors": [
       "Motsatsen",
-      "Neutral",
       "Intermediär"
     ],
     "topic": "riktningar",
@@ -5698,7 +5817,6 @@
     "correct": "Bakåt och längre från ursprung",
     "distractors": [
       "Motsatsen",
-      "Neutral",
       "Intermediär"
     ],
     "topic": "riktningar",
@@ -5712,7 +5830,6 @@
     "correct": "Bakåt och längre från ursprung",
     "distractors": [
       "Motsatsen",
-      "Neutral",
       "Intermediär"
     ],
     "topic": "riktningar",
@@ -5726,7 +5843,6 @@
     "correct": "Bakåt och längre från ursprung",
     "distractors": [
       "Motsatsen",
-      "Neutral",
       "Intermediär"
     ],
     "topic": "riktningar",
@@ -6352,7 +6468,7 @@
   {
     "id": "q465",
     "type": "mc",
-    "prompt": "Palmar/Volar är den ___ sidan av handen",
+    "prompt": "Palmar/Volar är den ____ sidan av handen",
     "correct": "Palmara (undersidan)",
     "distractors": [
       "Dorsala (översidan)",
@@ -6366,7 +6482,7 @@
   {
     "id": "q466",
     "type": "mc",
-    "prompt": "Dorsal är den ___ sidan av handen",
+    "prompt": "Dorsal är den ____ sidan av handen",
     "correct": "Dorsala (översidan)",
     "distractors": [
       "Palmara (undersidan)",
@@ -6380,7 +6496,7 @@
   {
     "id": "q467",
     "type": "mc",
-    "prompt": "Plantar är den ___ sidan av foten",
+    "prompt": "Plantar är den ____ sidan av foten",
     "correct": "Fotsula (undersidan)",
     "distractors": [
       "Dorsal (översidan)",
