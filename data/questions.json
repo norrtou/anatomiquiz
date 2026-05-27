@@ -285,9 +285,9 @@
     "prompt": "Vilket är motsatsen till 'Superior'?",
     "correct": "Inferior",
     "distractors": [
-      "Intermediär",
-      "Ipsilateral",
-      "Omkretsen"
+      "Anterior",
+      "Superficial",
+      "Posterior"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -299,9 +299,9 @@
     "prompt": "Vilket är motsatsen till 'Anterior'?",
     "correct": "Posterior",
     "distractors": [
-      "Intermediär",
-      "Ipsilateral",
-      "Omkretsen"
+      "Lateral",
+      "Ventral",
+      "Radial"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -313,9 +313,9 @@
     "prompt": "Vilket är motsatsen till 'Medial'?",
     "correct": "Lateral",
     "distractors": [
-      "Intermediär",
-      "Ipsilateral",
-      "Omkretsen"
+      "Proximal",
+      "Ventral",
+      "Distal"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -327,9 +327,9 @@
     "prompt": "Vilket är motsatsen till 'Proximal'?",
     "correct": "Distal",
     "distractors": [
-      "Intermediär",
-      "Ipsilateral",
-      "Omkretsen"
+      "Superficial",
+      "Anterior",
+      "Profundus"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -341,9 +341,9 @@
     "prompt": "Vilket är motsatsen till 'Superficial'?",
     "correct": "Profundus",
     "distractors": [
-      "Intermediär",
-      "Ipsilateral",
-      "Omkretsen"
+      "Anterior",
+      "Proximal",
+      "Fibular"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -355,9 +355,9 @@
     "prompt": "Vilket är motsatsen till 'Internal'?",
     "correct": "External",
     "distractors": [
-      "Intermediär",
-      "Ipsilateral",
-      "Omkretsen"
+      "Ulnar",
+      "Proximal",
+      "Ventral"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -369,9 +369,9 @@
     "prompt": "Vilket är motsatsen till 'Central'?",
     "correct": "Peripheral",
     "distractors": [
-      "Intermediär",
-      "Ipsilateral",
-      "Omkretsen"
+      "Medial",
+      "Posterior",
+      "Tibial"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -383,9 +383,9 @@
     "prompt": "Vilket är motsatsen till 'Ipsilateral'?",
     "correct": "Contralateral",
     "distractors": [
-      "Intermediär",
-      "Ipsilateral",
-      "Omkretsen"
+      "Inferior",
+      "Fibular",
+      "Profundus"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -397,9 +397,9 @@
     "prompt": "Vilket är motsatsen till 'Cranial'?",
     "correct": "Caudal",
     "distractors": [
-      "Intermediär",
-      "Ipsilateral",
-      "Omkretsen"
+      "Lateral",
+      "Radial",
+      "Distal"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -411,9 +411,9 @@
     "prompt": "Vilket är motsatsen till 'Ventral'?",
     "correct": "Dorsal",
     "distractors": [
-      "Intermediär",
-      "Ipsilateral",
-      "Omkretsen"
+      "Proximal",
+      "Posterior",
+      "Ventral"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -2652,8 +2652,8 @@
     "correct": "Extension",
     "distractors": [
       "noisnetxE",
-      "Intermediär",
-      "Lateral"
+      "Lateral",
+      "Elevation"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2666,8 +2666,8 @@
     "correct": "Flexion",
     "distractors": [
       "noixelF",
-      "Ipsilateral",
-      "Medial"
+      "Medial",
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2680,8 +2680,8 @@
     "correct": "Adduktion",
     "distractors": [
       "noitkuddA",
-      "Intermediär",
-      "Lateral"
+      "Lateral",
+      "Superior"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2694,8 +2694,8 @@
     "correct": "Abduktion",
     "distractors": [
       "noitkudbA",
-      "Ipsilateral",
-      "Medial"
+      "Medial",
+      "Distal"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2708,8 +2708,8 @@
     "correct": "Pronation",
     "distractors": [
       "noitanorP",
-      "Intermediär",
-      "Lateral"
+      "Lateral",
+      "Tibial"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2722,8 +2722,8 @@
     "correct": "Supination",
     "distractors": [
       "noitanipuS",
-      "Ipsilateral",
-      "Medial"
+      "Medial",
+      "Lateral"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2736,8 +2736,8 @@
     "correct": "Plantarflexion",
     "distractors": [
       "noixelfratnalP",
-      "Intermediär",
-      "Lateral"
+      "Lateral",
+      "Pronation"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2750,8 +2750,8 @@
     "correct": "Dorsalflexion",
     "distractors": [
       "noixelflasroD",
-      "Ipsilateral",
-      "Medial"
+      "Medial",
+      "Abduktion"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2764,8 +2764,8 @@
     "correct": "Eversion",
     "distractors": [
       "noisrevE",
-      "Intermediär",
-      "Lateral"
+      "Lateral",
+      "Tibial"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2778,8 +2778,8 @@
     "correct": "Inversion",
     "distractors": [
       "noisrevnI",
-      "Ipsilateral",
-      "Medial"
+      "Medial",
+      "Anterior"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2792,8 +2792,8 @@
     "correct": "Depression",
     "distractors": [
       "noisserpeD",
-      "Intermediär",
-      "Lateral"
+      "Lateral",
+      "Dorsal"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2805,9 +2805,9 @@
     "prompt": "Vad är motsatsen till Depression?",
     "correct": "Elevation",
     "distractors": [
-      "noitavelE",
-      "Ipsilateral",
-      "Medial"
+      "Medial",
+      "Superficial",
+      "Distal"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2820,8 +2820,8 @@
     "correct": "Retraktion",
     "distractors": [
       "noitkarteR",
-      "Intermediär",
-      "Lateral"
+      "Lateral",
+      "Posterior"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2834,8 +2834,8 @@
     "correct": "Protraktion",
     "distractors": [
       "noitkartorP",
-      "Ipsilateral",
-      "Medial"
+      "Medial",
+      "Proximal"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2848,8 +2848,8 @@
     "correct": "Posterior",
     "distractors": [
       "roiretsoP",
-      "Intermediär",
-      "Lateral"
+      "Lateral",
+      "Medial"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2862,8 +2862,8 @@
     "correct": "Anterior",
     "distractors": [
       "roiretnA",
-      "Ipsilateral",
-      "Medial"
+      "Medial",
+      "Inferior"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2876,8 +2876,8 @@
     "correct": "Inferior",
     "distractors": [
       "roirefnI",
-      "Intermediär",
-      "Lateral"
+      "Lateral",
+      "Fibular"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2890,8 +2890,8 @@
     "correct": "Superior",
     "distractors": [
       "roirepuS",
-      "Ipsilateral",
-      "Medial"
+      "Medial",
+      "Proximal"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2904,8 +2904,8 @@
     "correct": "Lateral",
     "distractors": [
       "laretaL",
-      "Intermediär",
-      "Lateral"
+      "Lateral",
+      "Dorsal"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2918,8 +2918,8 @@
     "correct": "Medial",
     "distractors": [
       "laideM",
-      "Ipsilateral",
-      "Medial"
+      "Medial",
+      "Anterior"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2932,8 +2932,8 @@
     "correct": "Distal",
     "distractors": [
       "latsiD",
-      "Intermediär",
-      "Lateral"
+      "Lateral",
+      "Radial"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2946,8 +2946,8 @@
     "correct": "Proximal",
     "distractors": [
       "lamixorP",
-      "Ipsilateral",
-      "Medial"
+      "Medial",
+      "Anterior"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2960,8 +2960,8 @@
     "correct": "Profundus",
     "distractors": [
       "sudnuforP",
-      "Intermediär",
-      "Lateral"
+      "Lateral",
+      "Inferior"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2974,8 +2974,8 @@
     "correct": "Superficial",
     "distractors": [
       "laicifrepuS",
-      "Ipsilateral",
-      "Medial"
+      "Medial",
+      "Fibular"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2988,8 +2988,8 @@
     "correct": "Ventral",
     "distractors": [
       "lartneV",
-      "Intermediär",
-      "Lateral"
+      "Lateral",
+      "Distal"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -3002,8 +3002,8 @@
     "correct": "Dorsal",
     "distractors": [
       "lasroD",
-      "Ipsilateral",
-      "Medial"
+      "Medial",
+      "Superior"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -3016,8 +3016,8 @@
     "correct": "Ulnar",
     "distractors": [
       "ranlU",
-      "Intermediär",
-      "Lateral"
+      "Lateral",
+      "Profundus"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -3030,8 +3030,8 @@
     "correct": "Radial",
     "distractors": [
       "laidaR",
-      "Ipsilateral",
-      "Medial"
+      "Medial",
+      "Inferior"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -3044,8 +3044,8 @@
     "correct": "Fibular",
     "distractors": [
       "ralubiF",
-      "Intermediär",
-      "Lateral"
+      "Lateral",
+      "Distal"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -3058,8 +3058,8 @@
     "correct": "Tibial",
     "distractors": [
       "laibiT",
-      "Ipsilateral",
-      "Medial"
+      "Medial",
+      "Dorsal"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -3435,8 +3435,9 @@
     "prompt": "'Böja halsen' är en rörelse som kallas _____",
     "correct": "Flexion",
     "distractors": [
-      "Neutral position",
-      "Extension"
+      "Extension",
+      "Protraktion",
+      "Plantarflexion"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3448,8 +3449,9 @@
     "prompt": "'Sträcka halsen' är en rörelse som kallas _____",
     "correct": "Extension",
     "distractors": [
-      "Neutral position",
-      "Flexion"
+      "Flexion",
+      "Depression",
+      "Cirkumduktion"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3461,8 +3463,9 @@
     "prompt": "'Böja höftleden' är en rörelse som kallas _____",
     "correct": "Flexion",
     "distractors": [
-      "Neutral position",
-      "Extension"
+      "Extension",
+      "Abduktion",
+      "Dorsalflexion"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3474,8 +3477,9 @@
     "prompt": "'Sträcka höftleden' är en rörelse som kallas _____",
     "correct": "Extension",
     "distractors": [
-      "Neutral position",
-      "Flexion"
+      "Flexion",
+      "Dorsalflexion",
+      "Inåtrotation"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3487,8 +3491,9 @@
     "prompt": "'Höja axlarna' är en rörelse som kallas _____",
     "correct": "Elevation",
     "distractors": [
-      "Neutral position",
-      "Depression"
+      "Depression",
+      "Retraktion",
+      "Flexion"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3500,8 +3505,9 @@
     "prompt": "'Sänka axlarna' är en rörelse som kallas _____",
     "correct": "Depression",
     "distractors": [
-      "Neutral position",
-      "Elevation"
+      "Elevation",
+      "Cirkumduktion",
+      "Adduktion"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3513,8 +3519,9 @@
     "prompt": "'Dra axlarna bakåt' är en rörelse som kallas _____",
     "correct": "Retraktion",
     "distractors": [
-      "Neutral position",
-      "Protraktion"
+      "Protraktion",
+      "Inåtrotation",
+      "Rotation"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3526,8 +3533,9 @@
     "prompt": "'Dra axlarna framåt' är en rörelse som kallas _____",
     "correct": "Protraktion",
     "distractors": [
-      "Neutral position",
-      "Retraktion"
+      "Retraktion",
+      "Abduktion",
+      "Elevation"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3539,8 +3547,9 @@
     "prompt": "'Böja knäet' är en rörelse som kallas _____",
     "correct": "Flexion",
     "distractors": [
-      "Neutral position",
-      "Extension"
+      "Extension",
+      "Abduktion",
+      "Pronation"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3552,8 +3561,9 @@
     "prompt": "'Sträcka knäet' är en rörelse som kallas _____",
     "correct": "Extension",
     "distractors": [
-      "Neutral position",
-      "Flexion"
+      "Flexion",
+      "Protraktion",
+      "Cirkumduktion"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3565,8 +3575,9 @@
     "prompt": "'Döja höftleden' är en rörelse som kallas _____",
     "correct": "Abduktion",
     "distractors": [
-      "Neutral position",
-      "Adduktion"
+      "Adduktion",
+      "Supination",
+      "Pronation"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3578,8 +3589,9 @@
     "prompt": "'Föra benen tillsammans' är en rörelse som kallas _____",
     "correct": "Adduktion",
     "distractors": [
-      "Neutral position",
-      "Abduktion"
+      "Abduktion",
+      "Inåtrotation",
+      "Pronation"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3591,8 +3603,9 @@
     "prompt": "'Vrida benet inåt' är en rörelse som kallas _____",
     "correct": "Inåtrotation",
     "distractors": [
-      "Neutral position",
-      "Utåtrotation"
+      "Utåtrotation",
+      "Abduktion",
+      "Eversion"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3604,8 +3617,9 @@
     "prompt": "'Vrida benet utåt' är en rörelse som kallas _____",
     "correct": "Utåtrotation",
     "distractors": [
-      "Neutral position",
-      "Inåtrotation"
+      "Inåtrotation",
+      "Supination",
+      "Depression"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3617,8 +3631,9 @@
     "prompt": "'Böja handleden' är en rörelse som kallas _____",
     "correct": "Flexion",
     "distractors": [
-      "Neutral position",
-      "Extension"
+      "Extension",
+      "Inversion",
+      "Dorsalflexion"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3630,8 +3645,9 @@
     "prompt": "'Sträcka handleden' är en rörelse som kallas _____",
     "correct": "Extension",
     "distractors": [
-      "Neutral position",
-      "Flexion"
+      "Flexion",
+      "Plantarflexion",
+      "Retraktion"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3643,8 +3659,9 @@
     "prompt": "'Böja tummen till fingrarna' är en rörelse som kallas _____",
     "correct": "Opposition",
     "distractors": [
-      "Neutral position",
-      "Flexion"
+      "Flexion",
+      "Pronation",
+      "Dorsalflexion"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3867,7 +3884,8 @@
     "correct": "Både närmare ursprung och nära ytan",
     "distractors": [
       "Längre från ursprung",
-      "Långt från ytan"
+      "Långt från ytan",
+      "Plantarflexion"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -5700,7 +5718,8 @@
     "correct": "Uppåt och åt sidan",
     "distractors": [
       "Motsatsen",
-      "Intermediär"
+      "Proximal",
+      "Lateral"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -5713,7 +5732,8 @@
     "correct": "Uppåt och åt sidan",
     "distractors": [
       "Motsatsen",
-      "Intermediär"
+      "Fibular",
+      "Superficial"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -5726,7 +5746,8 @@
     "correct": "Uppåt och åt sidan",
     "distractors": [
       "Motsatsen",
-      "Intermediär"
+      "Profundus",
+      "Posterior"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -5739,7 +5760,8 @@
     "correct": "Nedåt och inåt",
     "distractors": [
       "Motsatsen",
-      "Intermediär"
+      "Tibial",
+      "Radial"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -5752,7 +5774,8 @@
     "correct": "Nedåt och inåt",
     "distractors": [
       "Motsatsen",
-      "Intermediär"
+      "Lateral",
+      "Inferior"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -5765,7 +5788,8 @@
     "correct": "Nedåt och inåt",
     "distractors": [
       "Motsatsen",
-      "Intermediär"
+      "Posterior",
+      "Superficial"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -5778,7 +5802,8 @@
     "correct": "Framåt och närmare ursprung",
     "distractors": [
       "Motsatsen",
-      "Intermediär"
+      "Dorsal",
+      "Anterior"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -5791,7 +5816,8 @@
     "correct": "Framåt och närmare ursprung",
     "distractors": [
       "Motsatsen",
-      "Intermediär"
+      "Protraktion",
+      "Rotation"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -5804,7 +5830,8 @@
     "correct": "Framåt och närmare ursprung",
     "distractors": [
       "Motsatsen",
-      "Intermediär"
+      "Inferior",
+      "Utåtrotation"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -5817,7 +5844,8 @@
     "correct": "Bakåt och längre från ursprung",
     "distractors": [
       "Motsatsen",
-      "Intermediär"
+      "Ventral",
+      "Eversion"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -5830,7 +5858,8 @@
     "correct": "Bakåt och längre från ursprung",
     "distractors": [
       "Motsatsen",
-      "Intermediär"
+      "Depression",
+      "Rotation"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -5843,7 +5872,8 @@
     "correct": "Bakåt och längre från ursprung",
     "distractors": [
       "Motsatsen",
-      "Intermediär"
+      "Inversion",
+      "Anterior"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -6725,7 +6755,7 @@
     "distractors": [
       "Långt från ytan och på baksidan",
       "I mitten och på sidan",
-      "Neutral position"
+      "Radial"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
