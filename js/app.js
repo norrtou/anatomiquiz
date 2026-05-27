@@ -23,8 +23,19 @@ let timeLeft = 0
 let soundEnabled = true
 
 async function loadQuestions(){
-  const res = await fetch(qsPath)
-  allQuestions = await res.json()
+  try {
+    const res = await fetch(qsPath)
+    if (!res.ok) {
+      console.error(`Failed to load questions: ${res.status} ${res.statusText}`)
+      allQuestions = []
+    } else {
+      allQuestions = await res.json()
+      console.log(`Loaded ${allQuestions.length} questions from ${qsPath}`)
+    }
+  } catch(e) {
+    console.error(`Error loading questions from ${qsPath}:`, e)
+    allQuestions = []
+  }
   // Generate placeholders up to MAX_QUESTIONS if needed
   if(allQuestions.length < MAX_QUESTIONS){
     const needed = MAX_QUESTIONS - allQuestions.length
