@@ -21,6 +21,7 @@ let score = 0
 let timerInterval = null
 let timeLeft = 0
 let soundEnabled = true
+let audioContext = null
 
 async function loadQuestions(){
   try {
@@ -348,46 +349,67 @@ function updateSoundButton(){
   }
 }
 
+// Get or create AudioContext (needed for mobile)
+function getAudioContext(){
+  if(!audioContext){
+    const AudioCtx = window.AudioContext || window.webkitAudioContext
+    audioContext = new AudioCtx()
+  }
+  // Resume context on mobile if suspended
+  if(audioContext.state === 'suspended'){
+    audioContext.resume().catch(e => console.log('Audio context resume error:', e))
+  }
+  return audioContext
+}
+
 function playSuccessSound(){
   if(!soundEnabled) return
-  const ctx = new (window.AudioContext || window.webkitAudioContext)()
-  const now = ctx.currentTime
-  const osc = ctx.createOscillator()
-  const gain = ctx.createGain()
+  try {
+    const ctx = getAudioContext()
+    const now = ctx.currentTime
+    const osc = ctx.createOscillator()
+    const gain = ctx.createGain()
 
-  osc.connect(gain)
-  gain.connect(ctx.destination)
+    osc.connect(gain)
+    gain.connect(ctx.destination)
 
-  gain.gain.setValueAtTime(0.15, now)
-  gain.gain.exponentialRampToValueAtTime(0.01, now + 0.3)
+    gain.gain.setValueAtTime(0.15, now)
+    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.3)
 
-  osc.frequency.setValueAtTime(800, now)
-  osc.frequency.exponentialRampToValueAtTime(1200, now + 0.1)
-  osc.frequency.exponentialRampToValueAtTime(800, now + 0.3)
+    osc.frequency.setValueAtTime(800, now)
+    osc.frequency.exponentialRampToValueAtTime(1200, now + 0.1)
+    osc.frequency.exponentialRampToValueAtTime(800, now + 0.3)
 
-  osc.start(now)
-  osc.stop(now + 0.3)
+    osc.start(now)
+    osc.stop(now + 0.3)
+  } catch(e) {
+    console.log('Sound error:', e)
+  }
 }
 
 function playFailSound(){
   if(!soundEnabled) return
-  const ctx = new (window.AudioContext || window.webkitAudioContext)()
-  const now = ctx.currentTime
-  const osc = ctx.createOscillator()
-  const gain = ctx.createGain()
+  try {
+    const ctx = getAudioContext()
+    const now = ctx.currentTime
+    const osc = ctx.createOscillator()
+    const gain = ctx.createGain()
 
-  osc.connect(gain)
-  gain.connect(ctx.destination)
+    osc.connect(gain)
+    gain.connect(ctx.destination)
 
-  gain.gain.setValueAtTime(0.15, now)
-  gain.gain.exponentialRampToValueAtTime(0.01, now + 0.4)
+    gain.gain.setValueAtTime(0.15, now)
+    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.4)
 
-  osc.frequency.setValueAtTime(400, now)
-  osc.frequency.exponentialRampToValueAtTime(300, now + 0.2)
-  osc.frequency.exponentialRampToValueAtTime(200, now + 0.4)
+    osc.frequency.setValueAtTime(400, now)
+    osc.frequency.exponentialRampToValueAtTime(300, now + 0.2)
+    osc.frequency.exponentialRampToValueAtTime(200, now + 0.4)
 
-  osc.start(now)
-  osc.stop(now + 0.4)
+    osc.start(now)
+    osc.stop(now + 0.4)
+  } catch(e) {
+    console.log('Sound error:', e)
+  }
 }
 
 // Render management UI for up to MAX_QUESTIONS questions
