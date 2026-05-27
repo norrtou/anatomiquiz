@@ -482,8 +482,6 @@ function init(){
   el('saveScore').addEventListener('click', saveScore)
   el('restart').addEventListener('click', ()=>{el('result').classList.add('hidden');el('setup').classList.remove('hidden')})
   el('viewScores').addEventListener('click', showHighscores)
-  el('manageBtn').addEventListener('click', ()=>{ renderManage(); el('setup').classList.add('hidden'); el('manage').classList.remove('hidden') })
-  el('backFromManage').addEventListener('click', ()=>{ el('manage').classList.add('hidden'); el('setup').classList.remove('hidden') })
   el('saveManage').addEventListener('click', ()=>{ alert('Ändringar sparade (sparas automatiskt).'); renderManage() })
   const imp = el('importFile')
   if(imp) imp.addEventListener('change', handleImportFile)
