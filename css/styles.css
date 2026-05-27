@@ -10,9 +10,9 @@
   --primary-dark: #059669;      /* Darker emerald for depth */
 
   /* Backgrounds */
-  --bg-main: #f0fdf4;           /* Very faint green background */
-  --bg-gradient-start: #ecfdf5; /* Light mint for gradients */
-  --bg-gradient-end: #f0fdf4;   /* Pale green */
+  --bg-main: #dcfce7;           /* Stronger green background for better visibility */
+  --bg-gradient-start: #bbf7d0; /* Mint green for gradients */
+  --bg-gradient-end: #dcfce7;   /* Pale green */
   --surface: #ffffff;           /* Card/input backgrounds */
 
   /* Text colors */
@@ -362,13 +362,14 @@ select:focus {
   font-size: 1.25rem;
   font-weight: 600;
   padding: 20px;
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.03) 0%, rgba(16, 185, 129, 0.02) 100%);
+  background: linear-gradient(135deg, #a7f3d0 0%, #86efac 100%);
   border-radius: var(--radius-sm);
-  border-left: 4px solid var(--primary);
+  border-left: 4px solid var(--primary-dark);
   margin-bottom: 24px;
   color: var(--text-primary);
   line-height: 1.6;
   animation: fadeIn 0.4s ease-out;
+  box-shadow: var(--shadow);
 }
 
 @keyframes fadeIn {
