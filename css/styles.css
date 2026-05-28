@@ -246,6 +246,16 @@ select::placeholder {
   color: var(--text-secondary);
 }
 
+option {
+  color: var(--text-primary);
+  background: var(--surface);
+}
+
+option:disabled {
+  color: var(--text-secondary);
+  background: #f3f4f6;
+}
+
 input:hover,
 select:hover {
   border-color: var(--primary);
