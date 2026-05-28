@@ -4934,1634 +4934,1721 @@
   {
     "id": "q1236",
     "type": "mc",
-    "prompt": "Vilken typ av ben är överarmsben?",
-    "correct": "långben",
+    "prompt": "Vad heter pannbenet på latin?",
+    "correct": "os frontale",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "femur",
+      "patella",
+      "tibia"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1237",
-    "type": "tf",
-    "prompt": "humerus är ett långben",
-    "correct": "Sant",
+    "type": "mc",
+    "prompt": "Vad heter tinningbenet på latin?",
+    "correct": "os temporale",
     "distractors": [
-      "Falskt"
+      "patella",
+      "tibia",
+      "fibula"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1238",
     "type": "mc",
-    "prompt": "överarmsben ligger i",
-    "correct": "övre extremiteten",
+    "prompt": "Vad heter hjässbenet på latin?",
+    "correct": "os parietale",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "tibia",
+      "fibula",
+      "ossa tarsi"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1239",
     "type": "mc",
-    "prompt": "Det latinska namnet för överarmsben är",
-    "correct": "humerus",
+    "prompt": "Vad heter nackbenet på latin?",
+    "correct": "os occipitale",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "fibula",
+      "ossa tarsi",
+      "ossa metatarsi"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1240",
     "type": "mc",
-    "prompt": "humerus betyder på svenska",
-    "correct": "överarmsben",
+    "prompt": "Vad heter överkäken på latin?",
+    "correct": "os maxillaris",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "ossa tarsi",
+      "ossa metatarsi",
+      "phalanges pedis"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1241",
     "type": "mc",
-    "prompt": "Jämfört med överarmsben, så är ett långben",
-    "correct": "större och längre",
+    "prompt": "Vad heter underkäken på latin?",
+    "correct": "os mandibula",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "ossa metatarsi",
+      "phalanges pedis",
+      "scapula"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1242",
     "type": "mc",
-    "prompt": "Vilken typ av ben är strålben?",
-    "correct": "långben",
+    "prompt": "Vad heter näsbenet på latin?",
+    "correct": "os nasale",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "phalanges pedis",
+      "scapula",
+      "clavicle"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1243",
-    "type": "tf",
-    "prompt": "radius är ett långben",
-    "correct": "Sant",
+    "type": "mc",
+    "prompt": "Vad heter kindbenben på latin?",
+    "correct": "os zygomaticum",
     "distractors": [
-      "Falskt"
+      "scapula",
+      "clavicle",
+      "sternum"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1244",
     "type": "mc",
-    "prompt": "strålben ligger i",
-    "correct": "övre extremiteten",
+    "prompt": "Vad heter ryggraden på latin?",
+    "correct": "columna vertebralis",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "clavicle",
+      "sternum",
+      "costae"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1245",
     "type": "mc",
-    "prompt": "Det latinska namnet för strålben är",
-    "correct": "radius",
+    "prompt": "Vad heter halskotor på latin?",
+    "correct": "vertebrae cervicales",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "sternum",
+      "costae",
+      "os frontale"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1246",
     "type": "mc",
-    "prompt": "radius betyder på svenska",
-    "correct": "strålben",
+    "prompt": "Vad heter bröstkotor på latin?",
+    "correct": "vertebrae thoracicae",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "costae",
+      "os frontale",
+      "os temporale"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1247",
     "type": "mc",
-    "prompt": "Jämfört med strålben, så är ett långben",
-    "correct": "större och längre",
+    "prompt": "Vad heter ländkotor på latin?",
+    "correct": "vertebrae lumbales",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "os frontale",
+      "os temporale",
+      "os parietale"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1248",
     "type": "mc",
-    "prompt": "Vilken typ av ben är armbågsbenet?",
-    "correct": "långben",
+    "prompt": "Vad heter korsbenet på latin?",
+    "correct": "os sacrum",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "os temporale",
+      "os parietale",
+      "os occipitale"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1249",
-    "type": "tf",
-    "prompt": "ulna är ett långben",
-    "correct": "Sant",
+    "type": "mc",
+    "prompt": "Vad heter sterilbenet på latin?",
+    "correct": "os coccygis",
     "distractors": [
-      "Falskt"
+      "os parietale",
+      "os occipitale",
+      "os maxillaris"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1250",
     "type": "mc",
-    "prompt": "armbågsbenet ligger i",
-    "correct": "övre extremiteten",
+    "prompt": "Vad heter överarmsben på latin?",
+    "correct": "humerus",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "os occipitale",
+      "os maxillaris",
+      "os mandibula"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1251",
     "type": "mc",
-    "prompt": "Det latinska namnet för armbågsbenet är",
-    "correct": "ulna",
+    "prompt": "Vad heter armbågsknotan på latin?",
+    "correct": "olecranon",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "os maxillaris",
+      "os mandibula",
+      "os nasale"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1252",
     "type": "mc",
-    "prompt": "ulna betyder på svenska",
-    "correct": "armbågsbenet",
+    "prompt": "Vad heter strålben på latin?",
+    "correct": "radius",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "os mandibula",
+      "os nasale",
+      "os zygomaticum"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1253",
     "type": "mc",
-    "prompt": "Jämfört med armbågsbenet, så är ett långben",
-    "correct": "större och längre",
+    "prompt": "Vad heter armbågsbenet på latin?",
+    "correct": "ulna",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "os nasale",
+      "os zygomaticum",
+      "columna vertebralis"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1254",
     "type": "mc",
-    "prompt": "Vilken typ av ben är lårbenet?",
-    "correct": "långben",
+    "prompt": "Vad heter handrötsben på latin?",
+    "correct": "ossa carpi",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "os zygomaticum",
+      "columna vertebralis",
+      "vertebrae cervicales"
     ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1255",
-    "type": "tf",
-    "prompt": "femur är ett långben",
-    "correct": "Sant",
+    "type": "mc",
+    "prompt": "Vad heter mellanhåndsben på latin?",
+    "correct": "ossa metacarpi",
     "distractors": [
-      "Falskt"
+      "columna vertebralis",
+      "vertebrae cervicales",
+      "vertebrae thoracicae"
     ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1256",
     "type": "mc",
-    "prompt": "lårbenet ligger i",
-    "correct": "nedre extremiteten",
+    "prompt": "Vad heter fingerben på latin?",
+    "correct": "phalanges",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "vertebrae cervicales",
+      "vertebrae thoracicae",
+      "vertebrae lumbales"
     ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1257",
     "type": "mc",
-    "prompt": "Det latinska namnet för lårbenet är",
+    "prompt": "Vad heter lårbenet på latin?",
     "correct": "femur",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "vertebrae thoracicae",
+      "vertebrae lumbales",
+      "os sacrum"
     ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1258",
     "type": "mc",
-    "prompt": "femur betyder på svenska",
-    "correct": "lårbenet",
+    "prompt": "Vad heter knäskålen på latin?",
+    "correct": "patella",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "vertebrae lumbales",
+      "os sacrum",
+      "os coccygis"
     ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1259",
     "type": "mc",
-    "prompt": "Jämfört med lårbenet, så är ett långben",
-    "correct": "större och längre",
+    "prompt": "Vad heter skenbenet på latin?",
+    "correct": "tibia",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "os sacrum",
+      "os coccygis",
+      "humerus"
     ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1260",
     "type": "mc",
-    "prompt": "Vilken typ av ben är skenbenet?",
-    "correct": "långben",
+    "prompt": "Vad heter vadbenet på latin?",
+    "correct": "fibula",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "os coccygis",
+      "humerus",
+      "olecranon"
     ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1261",
-    "type": "tf",
-    "prompt": "tibia är ett långben",
-    "correct": "Sant",
+    "type": "mc",
+    "prompt": "Vad heter fotrotsben på latin?",
+    "correct": "ossa tarsi",
     "distractors": [
-      "Falskt"
+      "humerus",
+      "olecranon",
+      "radius"
     ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1262",
     "type": "mc",
-    "prompt": "skenbenet ligger i",
-    "correct": "nedre extremiteten",
+    "prompt": "Vad heter mellanfottsben på latin?",
+    "correct": "ossa metatarsi",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "olecranon",
+      "radius",
+      "ulna"
     ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1263",
     "type": "mc",
-    "prompt": "Det latinska namnet för skenbenet är",
-    "correct": "tibia",
+    "prompt": "Vad heter tåben på latin?",
+    "correct": "phalanges pedis",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "radius",
+      "ulna",
+      "ossa carpi"
     ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1264",
     "type": "mc",
-    "prompt": "tibia betyder på svenska",
-    "correct": "skenbenet",
+    "prompt": "Vad heter skulderbladet på latin?",
+    "correct": "scapula",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "ulna",
+      "ossa carpi",
+      "ossa metacarpi"
     ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1265",
     "type": "mc",
-    "prompt": "Jämfört med skenbenet, så är ett långben",
-    "correct": "större och längre",
+    "prompt": "Vad heter nyckelbenet på latin?",
+    "correct": "clavicle",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "ossa carpi",
+      "ossa metacarpi",
+      "phalanges"
     ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1266",
     "type": "mc",
-    "prompt": "Vilken typ av ben är vadbenet?",
-    "correct": "långben",
+    "prompt": "Vad heter bröstbenet på latin?",
+    "correct": "sternum",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "ossa metacarpi",
+      "phalanges",
+      "femur"
     ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1267",
-    "type": "tf",
-    "prompt": "fibula är ett långben",
-    "correct": "Sant",
+    "type": "mc",
+    "prompt": "Vad heter revben på latin?",
+    "correct": "costae",
     "distractors": [
-      "Falskt"
+      "phalanges",
+      "femur",
+      "patella"
     ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1268",
     "type": "mc",
-    "prompt": "vadbenet ligger i",
-    "correct": "nedre extremiteten",
+    "prompt": "Vad är os frontale på svenska?",
+    "correct": "pannbenet",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "lårbenet",
+      "knäskålen",
+      "skenbenet"
     ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1269",
     "type": "mc",
-    "prompt": "Det latinska namnet för vadbenet är",
-    "correct": "fibula",
+    "prompt": "Vad är os temporale på svenska?",
+    "correct": "tinningbenet",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "knäskålen",
+      "skenbenet",
+      "vadbenet"
     ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1270",
     "type": "mc",
-    "prompt": "fibula betyder på svenska",
-    "correct": "vadbenet",
+    "prompt": "Vad är os parietale på svenska?",
+    "correct": "hjässbenet",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "skenbenet",
+      "vadbenet",
+      "fotrotsben"
     ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1271",
     "type": "mc",
-    "prompt": "Jämfört med vadbenet, så är ett långben",
-    "correct": "större och längre",
+    "prompt": "Vad är os occipitale på svenska?",
+    "correct": "nackbenet",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "vadbenet",
+      "fotrotsben",
+      "mellanfottsben"
     ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1272",
     "type": "mc",
-    "prompt": "Vilken typ av ben är knäskålen?",
-    "correct": "sesamben",
+    "prompt": "Vad är os maxillaris på svenska?",
+    "correct": "överkäken",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "fotrotsben",
+      "mellanfottsben",
+      "tåben"
     ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1273",
-    "type": "tf",
-    "prompt": "patella är ett sesamben",
-    "correct": "Sant",
+    "type": "mc",
+    "prompt": "Vad är os mandibula på svenska?",
+    "correct": "underkäken",
     "distractors": [
-      "Falskt"
+      "mellanfottsben",
+      "tåben",
+      "skulderbladet"
     ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1274",
     "type": "mc",
-    "prompt": "knäskålen ligger i",
-    "correct": "nedre extremiteten",
+    "prompt": "Vad är os nasale på svenska?",
+    "correct": "näsbenet",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "tåben",
+      "skulderbladet",
+      "nyckelbenet"
     ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1275",
     "type": "mc",
-    "prompt": "Det latinska namnet för knäskålen är",
-    "correct": "patella",
+    "prompt": "Vad är os zygomaticum på svenska?",
+    "correct": "kindbenben",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "skulderbladet",
+      "nyckelbenet",
+      "bröstbenet"
     ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1276",
     "type": "mc",
-    "prompt": "patella betyder på svenska",
-    "correct": "knäskålen",
+    "prompt": "Vad är columna vertebralis på svenska?",
+    "correct": "ryggraden",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "nyckelbenet",
+      "bröstbenet",
+      "revben"
     ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1277",
     "type": "mc",
-    "prompt": "Jämfört med knäskålen, så är ett långben",
-    "correct": "större och längre",
+    "prompt": "Vad är vertebrae cervicales på svenska?",
+    "correct": "halskotor",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "bröstbenet",
+      "revben",
+      "pannbenet"
     ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1278",
     "type": "mc",
-    "prompt": "Vilken typ av ben är skulderbladet?",
-    "correct": "plattben",
+    "prompt": "Vad är vertebrae thoracicae på svenska?",
+    "correct": "bröstkotor",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "revben",
+      "pannbenet",
+      "tinningbenet"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1279",
-    "type": "tf",
-    "prompt": "scapula är ett plattben",
-    "correct": "Sant",
+    "type": "mc",
+    "prompt": "Vad är vertebrae lumbales på svenska?",
+    "correct": "ländkotor",
     "distractors": [
-      "Falskt"
+      "pannbenet",
+      "tinningbenet",
+      "hjässbenet"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1280",
     "type": "mc",
-    "prompt": "skulderbladet ligger i",
-    "correct": "övre extremiteten",
+    "prompt": "Vad är os sacrum på svenska?",
+    "correct": "korsbenet",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "tinningbenet",
+      "hjässbenet",
+      "nackbenet"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1281",
     "type": "mc",
-    "prompt": "Det latinska namnet för skulderbladet är",
-    "correct": "scapula",
+    "prompt": "Vad är os coccygis på svenska?",
+    "correct": "sterilbenet",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "hjässbenet",
+      "nackbenet",
+      "överkäken"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1282",
     "type": "mc",
-    "prompt": "scapula betyder på svenska",
-    "correct": "skulderbladet",
+    "prompt": "Vad är humerus på svenska?",
+    "correct": "överarmsben",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "nackbenet",
+      "överkäken",
+      "underkäken"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1283",
     "type": "mc",
-    "prompt": "Jämfört med skulderbladet, så är ett långben",
-    "correct": "större och längre",
+    "prompt": "Vad är olecranon på svenska?",
+    "correct": "armbågsknotan",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "överkäken",
+      "underkäken",
+      "näsbenet"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1284",
     "type": "mc",
-    "prompt": "Vilken typ av ben är nyckelbenet?",
-    "correct": "långben",
+    "prompt": "Vad är radius på svenska?",
+    "correct": "strålben",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "underkäken",
+      "näsbenet",
+      "kindbenben"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1285",
-    "type": "tf",
-    "prompt": "clavicle är ett långben",
-    "correct": "Sant",
+    "type": "mc",
+    "prompt": "Vad är ulna på svenska?",
+    "correct": "armbågsbenet",
     "distractors": [
-      "Falskt"
+      "näsbenet",
+      "kindbenben",
+      "ryggraden"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1286",
     "type": "mc",
-    "prompt": "nyckelbenet ligger i",
-    "correct": "övre extremiteten",
+    "prompt": "Vad är ossa carpi på svenska?",
+    "correct": "handrötsben",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "kindbenben",
+      "ryggraden",
+      "halskotor"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1287",
     "type": "mc",
-    "prompt": "Det latinska namnet för nyckelbenet är",
-    "correct": "clavicle",
+    "prompt": "Vad är ossa metacarpi på svenska?",
+    "correct": "mellanhåndsben",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "ryggraden",
+      "halskotor",
+      "bröstkotor"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1288",
     "type": "mc",
-    "prompt": "clavicle betyder på svenska",
-    "correct": "nyckelbenet",
+    "prompt": "Vad är phalanges på svenska?",
+    "correct": "fingerben",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "halskotor",
+      "bröstkotor",
+      "ländkotor"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1289",
     "type": "mc",
-    "prompt": "Jämfört med nyckelbenet, så är ett långben",
-    "correct": "större och längre",
+    "prompt": "Vad är femur på svenska?",
+    "correct": "lårbenet",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "bröstkotor",
+      "ländkotor",
+      "korsbenet"
     ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1290",
     "type": "mc",
-    "prompt": "Vilken typ av ben är bröstbenet?",
-    "correct": "plattben",
+    "prompt": "Vad är patella på svenska?",
+    "correct": "knäskålen",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "ländkotor",
+      "korsbenet",
+      "sterilbenet"
     ],
-    "topic": "osteologi_thorax",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1291",
-    "type": "tf",
-    "prompt": "sternum är ett plattben",
-    "correct": "Sant",
+    "type": "mc",
+    "prompt": "Vad är tibia på svenska?",
+    "correct": "skenbenet",
     "distractors": [
-      "Falskt"
+      "korsbenet",
+      "sterilbenet",
+      "överarmsben"
     ],
-    "topic": "osteologi_thorax",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1292",
     "type": "mc",
-    "prompt": "bröstbenet ligger i",
-    "correct": "nedre extremiteten",
+    "prompt": "Vad är fibula på svenska?",
+    "correct": "vadbenet",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "sterilbenet",
+      "överarmsben",
+      "armbågsknotan"
     ],
-    "topic": "osteologi_thorax",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1293",
     "type": "mc",
-    "prompt": "Det latinska namnet för bröstbenet är",
-    "correct": "sternum",
+    "prompt": "Vad är ossa tarsi på svenska?",
+    "correct": "fotrotsben",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "överarmsben",
+      "armbågsknotan",
+      "strålben"
     ],
-    "topic": "osteologi_thorax",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1294",
     "type": "mc",
-    "prompt": "sternum betyder på svenska",
-    "correct": "bröstbenet",
+    "prompt": "Vad är ossa metatarsi på svenska?",
+    "correct": "mellanfottsben",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "armbågsknotan",
+      "strålben",
+      "armbågsbenet"
     ],
-    "topic": "osteologi_thorax",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1295",
     "type": "mc",
-    "prompt": "Jämfört med bröstbenet, så är ett långben",
-    "correct": "större och längre",
+    "prompt": "Vad är phalanges pedis på svenska?",
+    "correct": "tåben",
     "distractors": [
-      "kortben",
-      "oregelbundet ben",
-      "plattben"
+      "strålben",
+      "armbågsbenet",
+      "handrötsben"
     ],
-    "topic": "osteologi_thorax",
-    "difficulty": "Normal",
-    "source": "generated_extended"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1296",
     "type": "mc",
-    "prompt": "Vilket ben är ett långben?",
-    "correct": "långben",
+    "prompt": "Vad är scapula på svenska?",
+    "correct": "skulderbladet",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "armbågsbenet",
+      "handrötsben",
+      "mellanhåndsben"
     ],
-    "topic": "osteologi_placement",
-    "difficulty": "Normal",
-    "source": "generated_fill"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1297",
-    "type": "tf",
-    "prompt": "Vilka ben utgör skelettet?",
-    "correct": "axial skelett",
+    "type": "mc",
+    "prompt": "Vad är clavicle på svenska?",
+    "correct": "nyckelbenet",
     "distractors": [
-      "Falskt"
+      "handrötsben",
+      "mellanhåndsben",
+      "fingerben"
     ],
-    "topic": "osteologi_types",
-    "difficulty": "Normal",
-    "source": "generated_fill"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1298",
     "type": "mc",
-    "prompt": "Vad är skillnaden mellan ett långben och ett kortben?",
-    "correct": "5mm",
+    "prompt": "Vad är sternum på svenska?",
+    "correct": "bröstbenet",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "mellanhåndsben",
+      "fingerben",
+      "lårbenet"
     ],
-    "topic": "osteologi_joints",
-    "difficulty": "Normal",
-    "source": "generated_fill"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1299",
-    "type": "tf",
-    "prompt": "Hur många kotor har ryggraden?",
-    "correct": "7",
+    "type": "mc",
+    "prompt": "Vad är costae på svenska?",
+    "correct": "revben",
     "distractors": [
-      "Falskt"
+      "fingerben",
+      "lårbenet",
+      "knäskålen"
     ],
-    "topic": "osteologi_cells",
-    "difficulty": "Normal",
-    "source": "generated_fill"
+    "topic": "osteologi_kranium",
+    "difficulty": "Easy",
+    "source": "Osteologi"
   },
   {
     "id": "q1300",
-    "type": "mc",
-    "prompt": "Vilket ben är lårbenet?",
-    "correct": "femur",
+    "type": "tf",
+    "prompt": "Femur är lårbenet",
+    "correct": "Sant",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "Falskt"
     ],
-    "topic": "osteologi_placement",
+    "topic": "osteologi_summary",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1301",
     "type": "tf",
-    "prompt": "Vilka ben finns i underarmen?",
-    "correct": "radius och ulna",
+    "prompt": "Tibia och fibula utgör underbenet",
+    "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
-    "topic": "osteologi_types",
+    "topic": "osteologi_summary",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1302",
-    "type": "mc",
-    "prompt": "Vilket ben är det största i kroppen?",
-    "correct": "femur",
+    "type": "tf",
+    "prompt": "Patella är knäskålen",
+    "correct": "Sant",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "Falskt"
     ],
-    "topic": "osteologi_joints",
+    "topic": "osteologi_summary",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1303",
     "type": "tf",
-    "prompt": "Vad heter knäskålen?",
-    "correct": "patella",
+    "prompt": "Humerus är överarmsben",
+    "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
-    "topic": "osteologi_cells",
+    "topic": "osteologi_summary",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1304",
-    "type": "mc",
-    "prompt": "Vilka ben finns i handen?",
-    "correct": "ossa carpi",
+    "type": "tf",
+    "prompt": "Radius och ulna utgör underarmen",
+    "correct": "Sant",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "Falskt"
     ],
-    "topic": "osteologi_placement",
+    "topic": "osteologi_summary",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1305",
     "type": "tf",
-    "prompt": "Vilka ben finns i foten?",
-    "correct": "ossa tarsi",
+    "prompt": "Ryggraden har 33 kotår",
+    "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
-    "topic": "osteologi_types",
+    "topic": "osteologi_summary",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1306",
-    "type": "mc",
-    "prompt": "Vilket ben förbinder axeln med bröstet?",
-    "correct": "nyckelbenet",
+    "type": "tf",
+    "prompt": "Det finns 7 halskotor",
+    "correct": "Sant",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "Falskt"
     ],
-    "topic": "osteologi_joints",
+    "topic": "osteologi_summary",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1307",
     "type": "tf",
-    "prompt": "Vad är höftbenet?",
-    "correct": "höftbenet",
+    "prompt": "Det finns 12 bröstkotor",
+    "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
-    "topic": "osteologi_cells",
+    "topic": "osteologi_summary",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1308",
-    "type": "mc",
-    "prompt": "Vilka ben utgör bäckenet?",
-    "correct": "höftbenen",
+    "type": "tf",
+    "prompt": "Det finns 5 ländkotor",
+    "correct": "Sant",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "Falskt"
     ],
-    "topic": "osteologi_placement",
+    "topic": "osteologi_summary",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1309",
     "type": "tf",
-    "prompt": "Hur många revben finns det?",
-    "correct": "24",
+    "prompt": "Skulderbladet heter scapula på latin",
+    "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
-    "topic": "osteologi_types",
+    "topic": "osteologi_summary",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1310",
-    "type": "mc",
-    "prompt": "Vad är sternum?",
-    "correct": "bröstbenet",
+    "type": "tf",
+    "prompt": "Nyckelbenet heter clavicle på latin",
+    "correct": "Sant",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "Falskt"
     ],
-    "topic": "osteologi_joints",
+    "topic": "osteologi_summary",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1311",
     "type": "tf",
-    "prompt": "Vilket ben är ett långben? (variant 2)",
-    "correct": "långben",
+    "prompt": "Bröstbenet kallas sternum",
+    "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
-    "topic": "osteologi_cells",
+    "topic": "osteologi_summary",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1312",
-    "type": "mc",
-    "prompt": "Vilka ben utgör skelettet? (variant 2)",
-    "correct": "axial skelett",
+    "type": "tf",
+    "prompt": "En vuxen människa har 206 ben",
+    "correct": "Sant",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "Falskt"
     ],
-    "topic": "osteologi_placement",
+    "topic": "osteologi_summary",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1313",
     "type": "tf",
-    "prompt": "Vad är skillnaden mellan ett långben och ett kortben? (variant 2)",
-    "correct": "5mm",
+    "prompt": "Revbenen är 24 till antalet",
+    "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
-    "topic": "osteologi_types",
+    "topic": "osteologi_summary",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1314",
-    "type": "mc",
-    "prompt": "Hur många kotor har ryggraden? (variant 2)",
-    "correct": "7",
-    "distractors": [
-      "kortben",
-      "appendikulärt skelett"
-    ],
-    "topic": "osteologi_joints",
-    "difficulty": "Normal",
-    "source": "generated_fill"
-  },
-  {
-    "id": "q1315",
     "type": "tf",
-    "prompt": "Vilket ben är lårbenet? (variant 2)",
-    "correct": "femur",
+    "prompt": "Kranium skyddar hjärnan",
+    "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
-    "topic": "osteologi_cells",
+    "topic": "osteologi_summary",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1315",
+    "type": "mc",
+    "prompt": "Vilka ben utgör övre extremiteten?",
+    "correct": "överarmsben, underarmben, handben",
+    "distractors": [
+      "En annan sida",
+      "En tredje alternativ",
+      "Ingen av dessa"
+    ],
+    "topic": "osteologi_upper",
+    "difficulty": "Normal",
+    "source": "Osteologi"
   },
   {
     "id": "q1316",
     "type": "mc",
-    "prompt": "Vilka ben finns i underarmen? (variant 2)",
-    "correct": "radius och ulna",
+    "prompt": "Vilka ben utgör nedre extremiteten?",
+    "correct": "lårbenet, underbenet, fotben",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "En annan sida",
+      "En tredje alternativ",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_placement",
+    "topic": "osteologi_lower",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1317",
-    "type": "tf",
-    "prompt": "Vilket ben är det största i kroppen? (variant 2)",
-    "correct": "femur",
+    "type": "mc",
+    "prompt": "Vad är columna vertebralis?",
+    "correct": "ryggraden",
     "distractors": [
-      "Falskt"
+      "En annan sida",
+      "En tredje alternativ",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_types",
+    "topic": "osteologi_columna",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1318",
     "type": "mc",
-    "prompt": "Vad heter knäskålen? (variant 2)",
-    "correct": "patella",
+    "prompt": "Vilka kotor tillhör axial skelett?",
+    "correct": "alla vertebraler",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "En annan sida",
+      "En tredje alternativ",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_joints",
+    "topic": "osteologi_columna",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1319",
-    "type": "tf",
-    "prompt": "Vilka ben finns i handen? (variant 2)",
-    "correct": "ossa carpi",
+    "type": "mc",
+    "prompt": "Hur många handets ben finns det?",
+    "correct": "27",
     "distractors": [
-      "Falskt"
+      "En annan sida",
+      "En tredje alternativ",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_cells",
+    "topic": "osteologi_upper",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1320",
     "type": "mc",
-    "prompt": "Vilka ben finns i foten? (variant 2)",
-    "correct": "ossa tarsi",
+    "prompt": "Hur många fotens ben finns det?",
+    "correct": "26",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "En annan sida",
+      "En tredje alternativ",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_placement",
+    "topic": "osteologi_lower",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1321",
-    "type": "tf",
-    "prompt": "Vilket ben förbinder axeln med bröstet? (variant 2)",
-    "correct": "nyckelbenet",
+    "type": "mc",
+    "prompt": "Vilket ben är det största i kroppen?",
+    "correct": "femur",
     "distractors": [
-      "Falskt"
+      "En annan sida",
+      "En tredje alternativ",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_types",
+    "topic": "osteologi_lower",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1322",
     "type": "mc",
-    "prompt": "Vad är höftbenet? (variant 2)",
-    "correct": "höftbenet",
+    "prompt": "Vad heter höftbenet på latin?",
+    "correct": "os coxae",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "En annan sida",
+      "En tredje alternativ",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_joints",
+    "topic": "osteologi_pelvis",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1323",
-    "type": "tf",
-    "prompt": "Vilka ben utgör bäckenet? (variant 2)",
-    "correct": "höftbenen",
+    "type": "mc",
+    "prompt": "Vilka ben utgör bäckenet?",
+    "correct": "höftbenen, korsbenet, sterilbenet",
     "distractors": [
-      "Falskt"
+      "En annan sida",
+      "En tredje alternativ",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_cells",
+    "topic": "osteologi_pelvis",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1324",
     "type": "mc",
-    "prompt": "Hur många revben finns det? (variant 2)",
-    "correct": "24",
+    "prompt": "Vad är thorax skyddad av?",
+    "correct": "revbenen och bröstbenet",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "En annan sida",
+      "En tredje alternativ",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_placement",
+    "topic": "osteologi_thorax",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1325",
-    "type": "tf",
-    "prompt": "Vad är sternum? (variant 2)",
-    "correct": "bröstbenet",
+    "type": "mc",
+    "prompt": "Hur många revben är det normalt?",
+    "correct": "24",
     "distractors": [
-      "Falskt"
+      "En annan sida",
+      "En tredje alternativ",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_types",
+    "topic": "osteologi_thorax",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1326",
     "type": "mc",
-    "prompt": "Vilket ben är ett långben? (variant 3)",
-    "correct": "långben",
+    "prompt": "Vad skyddar kranium?",
+    "correct": "hjärnan",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "En annan sida",
+      "En tredje alternativ",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_joints",
+    "topic": "osteologi_kranium",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1327",
-    "type": "tf",
-    "prompt": "Vilka ben utgör skelettet? (variant 3)",
-    "correct": "axial skelett",
+    "type": "mc",
+    "prompt": "Vad kallas armens längre ben?",
+    "correct": "ulna",
     "distractors": [
-      "Falskt"
+      "En annan sida",
+      "En tredje alternativ",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_cells",
+    "topic": "osteologi_upper",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1328",
     "type": "mc",
-    "prompt": "Vad är skillnaden mellan ett långben och ett kortben? (variant 3)",
-    "correct": "5mm",
+    "prompt": "Vilka är de små benen i handen?",
+    "correct": "handrötsben",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "En annan sida",
+      "En tredje alternativ",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_placement",
+    "topic": "osteologi_upper",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1329",
-    "type": "tf",
-    "prompt": "Hur många kotor har ryggraden? (variant 3)",
-    "correct": "7",
+    "type": "mc",
+    "prompt": "Vilka är de små benen i foten?",
+    "correct": "fotrotsben",
     "distractors": [
-      "Falskt"
+      "En annan sida",
+      "En tredje alternativ",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_types",
+    "topic": "osteologi_lower",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1330",
     "type": "mc",
-    "prompt": "Vilket ben är lårbenet? (variant 3)",
-    "correct": "femur",
+    "prompt": "os frontale är",
+    "correct": "pannbenet",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_joints",
+    "topic": "osteologi_kranium",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1331",
-    "type": "tf",
-    "prompt": "Vilka ben finns i underarmen? (variant 3)",
-    "correct": "radius och ulna",
+    "type": "mc",
+    "prompt": "os temporale är",
+    "correct": "tinningbenet",
     "distractors": [
-      "Falskt"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_cells",
+    "topic": "osteologi_kranium",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1332",
     "type": "mc",
-    "prompt": "Vilket ben är det största i kroppen? (variant 3)",
-    "correct": "femur",
+    "prompt": "os occipitale är",
+    "correct": "nackbenet",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_placement",
+    "topic": "osteologi_kranium",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1333",
-    "type": "tf",
-    "prompt": "Vad heter knäskålen? (variant 3)",
-    "correct": "patella",
+    "type": "mc",
+    "prompt": "os mandibula är",
+    "correct": "underkäken",
     "distractors": [
-      "Falskt"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_types",
+    "topic": "osteologi_kranium",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1334",
     "type": "mc",
-    "prompt": "Vilka ben finns i handen? (variant 3)",
-    "correct": "ossa carpi",
+    "prompt": "Radius ligger på",
+    "correct": "tummesedan",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_joints",
+    "topic": "osteologi_upper",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1335",
-    "type": "tf",
-    "prompt": "Vilka ben finns i foten? (variant 3)",
-    "correct": "ossa tarsi",
+    "type": "mc",
+    "prompt": "Ulna ligger på",
+    "correct": "lillfingersidan",
     "distractors": [
-      "Falskt"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_cells",
+    "topic": "osteologi_upper",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1336",
     "type": "mc",
-    "prompt": "Vilket ben förbinder axeln med bröstet? (variant 3)",
-    "correct": "nyckelbenet",
+    "prompt": "Tibia ligger på",
+    "correct": "insidan av underbenet",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_placement",
+    "topic": "osteologi_lower",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1337",
-    "type": "tf",
-    "prompt": "Vad är höftbenet? (variant 3)",
-    "correct": "höftbenet",
+    "type": "mc",
+    "prompt": "Fibula ligger på",
+    "correct": "utsidan av underbenet",
     "distractors": [
-      "Falskt"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_types",
+    "topic": "osteologi_lower",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1338",
     "type": "mc",
-    "prompt": "Vilka ben utgör bäckenet? (variant 3)",
-    "correct": "höftbenen",
+    "prompt": "Femur är ett",
+    "correct": "långben",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_joints",
+    "topic": "osteologi_lower",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1339",
-    "type": "tf",
-    "prompt": "Hur många revben finns det? (variant 3)",
-    "correct": "24",
+    "type": "mc",
+    "prompt": "Patella är ett",
+    "correct": "sesamben",
     "distractors": [
-      "Falskt"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_cells",
+    "topic": "osteologi_lower",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1340",
     "type": "mc",
-    "prompt": "Vad är sternum? (variant 3)",
-    "correct": "bröstbenet",
+    "prompt": "Scapula är ett",
+    "correct": "plattben",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_placement",
+    "topic": "osteologi_upper",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1341",
-    "type": "tf",
-    "prompt": "Vilket ben är ett långben? (variant 4)",
-    "correct": "långben",
+    "type": "mc",
+    "prompt": "Vertebrae cervicales är",
+    "correct": "halskotor",
     "distractors": [
-      "Falskt"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_types",
+    "topic": "osteologi_columna",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1342",
     "type": "mc",
-    "prompt": "Vilka ben utgör skelettet? (variant 4)",
-    "correct": "axial skelett",
+    "prompt": "Vertebrae thoracicae är",
+    "correct": "bröstkotor",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_joints",
+    "topic": "osteologi_columna",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1343",
-    "type": "tf",
-    "prompt": "Vad är skillnaden mellan ett långben och ett kortben? (variant 4)",
-    "correct": "5mm",
+    "type": "mc",
+    "prompt": "Vertebrae lumbales är",
+    "correct": "ländkotor",
     "distractors": [
-      "Falskt"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_cells",
+    "topic": "osteologi_columna",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1344",
     "type": "mc",
-    "prompt": "Hur många kotor har ryggraden? (variant 4)",
-    "correct": "7",
+    "prompt": "Os sacrum är",
+    "correct": "korsbenet",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_placement",
+    "topic": "osteologi_columna",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1345",
-    "type": "tf",
-    "prompt": "Vilket ben är lårbenet? (variant 4)",
-    "correct": "femur",
+    "type": "mc",
+    "prompt": "Costae är",
+    "correct": "revben",
     "distractors": [
-      "Falskt"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_types",
+    "topic": "osteologi_thorax",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1346",
     "type": "mc",
-    "prompt": "Vilka ben finns i underarmen? (variant 4)",
-    "correct": "radius och ulna",
+    "prompt": "Sternum är",
+    "correct": "bröstbenet",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_joints",
+    "topic": "osteologi_thorax",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1347",
-    "type": "tf",
-    "prompt": "Vilket ben är det största i kroppen? (variant 4)",
-    "correct": "femur",
+    "type": "mc",
+    "prompt": "Os coxae är",
+    "correct": "höftbenet",
     "distractors": [
-      "Falskt"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_cells",
+    "topic": "osteologi_pelvis",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1348",
     "type": "mc",
-    "prompt": "Vad heter knäskålen? (variant 4)",
-    "correct": "patella",
+    "prompt": "Ossa carpi är",
+    "correct": "handrötsben",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_placement",
+    "topic": "osteologi_upper",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1349",
-    "type": "tf",
-    "prompt": "Vilka ben finns i handen? (variant 4)",
-    "correct": "ossa carpi",
+    "type": "mc",
+    "prompt": "Ossa metacarpi är",
+    "correct": "mellanhåndsben",
     "distractors": [
-      "Falskt"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_types",
+    "topic": "osteologi_upper",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1350",
     "type": "mc",
-    "prompt": "Vilka ben finns i foten? (variant 4)",
-    "correct": "ossa tarsi",
+    "prompt": "Ossa tarsi är",
+    "correct": "fotrotsben",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_joints",
+    "topic": "osteologi_lower",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1351",
-    "type": "tf",
-    "prompt": "Vilket ben förbinder axeln med bröstet? (variant 4)",
-    "correct": "nyckelbenet",
+    "type": "mc",
+    "prompt": "Ossa metatarsi är",
+    "correct": "mellanfottsben",
     "distractors": [
-      "Falskt"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_cells",
+    "topic": "osteologi_lower",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1352",
     "type": "mc",
-    "prompt": "Vad är höftbenet? (variant 4)",
-    "correct": "höftbenet",
+    "prompt": "Phalanges är",
+    "correct": "fingerben",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_placement",
+    "topic": "osteologi_upper",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1353",
-    "type": "tf",
-    "prompt": "Vilka ben utgör bäckenet? (variant 4)",
-    "correct": "höftbenen",
+    "type": "mc",
+    "prompt": "Phalanges pedis är",
+    "correct": "tåben",
     "distractors": [
-      "Falskt"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_types",
+    "topic": "osteologi_lower",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1354",
     "type": "mc",
-    "prompt": "Hur många revben finns det? (variant 4)",
-    "correct": "24",
+    "prompt": "Olecranon är",
+    "correct": "armbågsknotan",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_joints",
+    "topic": "osteologi_upper",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1355",
-    "type": "tf",
-    "prompt": "Vad är sternum? (variant 4)",
-    "correct": "bröstbenet",
+    "type": "mc",
+    "prompt": "Clavicula är",
+    "correct": "nyckelbenet",
     "distractors": [
-      "Falskt"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_cells",
+    "topic": "osteologi_upper",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1356",
     "type": "mc",
-    "prompt": "Vilket ben är ett långben? (variant 5)",
-    "correct": "långben",
+    "prompt": "Skulderbladet är ett",
+    "correct": "plattben",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_placement",
+    "topic": "osteologi_upper",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1357",
-    "type": "tf",
-    "prompt": "Vilka ben utgör skelettet? (variant 5)",
-    "correct": "axial skelett",
+    "type": "mc",
+    "prompt": "Humerus är ett",
+    "correct": "långben",
     "distractors": [
-      "Falskt"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_types",
+    "topic": "osteologi_upper",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1358",
     "type": "mc",
-    "prompt": "Vad är skillnaden mellan ett långben och ett kortben? (variant 5)",
-    "correct": "5mm",
+    "prompt": "Radius och ulna tillsammans utgör",
+    "correct": "underarmen",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_joints",
+    "topic": "osteologi_upper",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1359",
-    "type": "tf",
-    "prompt": "Hur många kotor har ryggraden? (variant 5)",
-    "correct": "7",
+    "type": "mc",
+    "prompt": "Tibia och fibula tillsammans utgör",
+    "correct": "underbenet",
     "distractors": [
-      "Falskt"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_cells",
+    "topic": "osteologi_lower",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   },
   {
     "id": "q1360",
     "type": "mc",
-    "prompt": "Vilket ben är lårbenet? (variant 5)",
-    "correct": "femur",
+    "prompt": "Kortben är",
+    "correct": "ungefär lika långt som bred",
     "distractors": [
-      "kortben",
-      "appendikulärt skelett"
+      "Annat ben",
+      "Annan struktur",
+      "Ingen av dessa"
     ],
-    "topic": "osteologi_placement",
+    "topic": "osteologi_types",
     "difficulty": "Normal",
-    "source": "generated_fill"
+    "source": "Osteologi"
   }
 ]
