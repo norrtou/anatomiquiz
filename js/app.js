@@ -399,29 +399,9 @@ function handleImportFile(ev){
   reader.readAsText(f, 'utf-8')
 }
 
-function debugLog(msg) {
-  const debugEl = el('debug')
-  if(debugEl) {
-    debugEl.innerHTML += msg + '<br>'
-  }
-  console.log(msg)
-}
-
 function init(){
-  debugLog('✓ Init starts')
-  loadQuestions().then(()=>{
-    debugLog(`✓ Frågor laddade: ${allQuestions.length}`)
-  })
-  const btn = el('startBtn')
-  debugLog(`startBtn element: ${btn ? '✓ Found' : '✗ NOT FOUND'}`)
-  if(!btn) {
-    debugLog('✗ ERROR: startBtn element not found!')
-    return
-  }
-  btn.addEventListener('click', ()=>{
-    debugLog('▶ Start quiz clicked')
-    startQuiz()
-  })
+  loadQuestions().then(()=>console.log('Frågor laddade:', allQuestions.length))
+  el('startBtn').addEventListener('click', startQuiz)
   el('nextBtn').addEventListener('click', nextQuestion)
   el('saveScore').addEventListener('click', saveScore)
   el('restart').addEventListener('click', ()=>{el('result').classList.add('hidden');el('setup').classList.remove('hidden')})
