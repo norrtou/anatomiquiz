@@ -6008,646 +6008,606 @@
     "source": "Osteologi"
   },
   {
-    "id": "q1315",
-    "type": "mc",
-    "prompt": "Vilka ben utgör övre extremiteten?",
-    "correct": "överarmsben, underarmben, handben",
-    "distractors": [
-      "En annan sida",
-      "En tredje alternativ",
-      "Ingen av dessa"
-    ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "Osteologi"
-  },
-  {
-    "id": "q1316",
-    "type": "mc",
-    "prompt": "Vilka ben utgör nedre extremiteten?",
-    "correct": "lårbenet, underbenet, fotben",
-    "distractors": [
-      "En annan sida",
-      "En tredje alternativ",
-      "Ingen av dessa"
-    ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "Osteologi"
-  },
-  {
-    "id": "q1317",
-    "type": "mc",
-    "prompt": "Vad är columna vertebralis?",
-    "correct": "ryggraden",
-    "distractors": [
-      "En annan sida",
-      "En tredje alternativ",
-      "Ingen av dessa"
-    ],
-    "topic": "osteologi_columna",
-    "difficulty": "Normal",
-    "source": "Osteologi"
-  },
-  {
-    "id": "q1318",
-    "type": "mc",
-    "prompt": "Vilka kotor tillhör axial skelett?",
-    "correct": "alla vertebraler",
-    "distractors": [
-      "En annan sida",
-      "En tredje alternativ",
-      "Ingen av dessa"
-    ],
-    "topic": "osteologi_columna",
-    "difficulty": "Normal",
-    "source": "Osteologi"
-  },
-  {
-    "id": "q1319",
-    "type": "mc",
-    "prompt": "Hur många handets ben finns det?",
-    "correct": "27",
-    "distractors": [
-      "En annan sida",
-      "En tredje alternativ",
-      "Ingen av dessa"
-    ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "Osteologi"
-  },
-  {
-    "id": "q1320",
-    "type": "mc",
-    "prompt": "Hur många fotens ben finns det?",
-    "correct": "26",
-    "distractors": [
-      "En annan sida",
-      "En tredje alternativ",
-      "Ingen av dessa"
-    ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "Osteologi"
-  },
-  {
-    "id": "q1321",
-    "type": "mc",
-    "prompt": "Vilket ben är det största i kroppen?",
-    "correct": "femur",
-    "distractors": [
-      "En annan sida",
-      "En tredje alternativ",
-      "Ingen av dessa"
-    ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "Osteologi"
-  },
-  {
-    "id": "q1322",
-    "type": "mc",
-    "prompt": "Vad heter höftbenet på latin?",
-    "correct": "os coxae",
-    "distractors": [
-      "En annan sida",
-      "En tredje alternativ",
-      "Ingen av dessa"
-    ],
-    "topic": "osteologi_pelvis",
-    "difficulty": "Normal",
-    "source": "Osteologi"
-  },
-  {
-    "id": "q1323",
-    "type": "mc",
-    "prompt": "Vilka ben utgör bäckenet?",
-    "correct": "höftbenen, korsbenet, sterilbenet",
-    "distractors": [
-      "En annan sida",
-      "En tredje alternativ",
-      "Ingen av dessa"
-    ],
-    "topic": "osteologi_pelvis",
-    "difficulty": "Normal",
-    "source": "Osteologi"
-  },
-  {
-    "id": "q1324",
-    "type": "mc",
-    "prompt": "Vad är thorax skyddad av?",
-    "correct": "revbenen och bröstbenet",
-    "distractors": [
-      "En annan sida",
-      "En tredje alternativ",
-      "Ingen av dessa"
-    ],
-    "topic": "osteologi_thorax",
-    "difficulty": "Normal",
-    "source": "Osteologi"
-  },
-  {
-    "id": "q1325",
-    "type": "mc",
-    "prompt": "Hur många revben är det normalt?",
-    "correct": "24",
-    "distractors": [
-      "En annan sida",
-      "En tredje alternativ",
-      "Ingen av dessa"
-    ],
-    "topic": "osteologi_thorax",
-    "difficulty": "Normal",
-    "source": "Osteologi"
-  },
-  {
-    "id": "q1326",
-    "type": "mc",
-    "prompt": "Vad skyddar kranium?",
-    "correct": "hjärnan",
-    "distractors": [
-      "En annan sida",
-      "En tredje alternativ",
-      "Ingen av dessa"
-    ],
-    "topic": "osteologi_kranium",
-    "difficulty": "Normal",
-    "source": "Osteologi"
-  },
-  {
-    "id": "q1327",
-    "type": "mc",
-    "prompt": "Vad kallas armens längre ben?",
-    "correct": "ulna",
-    "distractors": [
-      "En annan sida",
-      "En tredje alternativ",
-      "Ingen av dessa"
-    ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "Osteologi"
-  },
-  {
-    "id": "q1328",
-    "type": "mc",
-    "prompt": "Vilka är de små benen i handen?",
-    "correct": "handrötsben",
-    "distractors": [
-      "En annan sida",
-      "En tredje alternativ",
-      "Ingen av dessa"
-    ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "Osteologi"
-  },
-  {
-    "id": "q1329",
-    "type": "mc",
-    "prompt": "Vilka är de små benen i foten?",
-    "correct": "fotrotsben",
-    "distractors": [
-      "En annan sida",
-      "En tredje alternativ",
-      "Ingen av dessa"
-    ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "Osteologi"
-  },
-  {
-    "id": "q1330",
-    "type": "mc",
-    "prompt": "os frontale är",
-    "correct": "pannbenet",
-    "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
-    ],
-    "topic": "osteologi_kranium",
-    "difficulty": "Normal",
-    "source": "Osteologi"
-  },
-  {
-    "id": "q1331",
-    "type": "mc",
-    "prompt": "os temporale är",
-    "correct": "tinningbenet",
-    "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
-    ],
-    "topic": "osteologi_kranium",
-    "difficulty": "Normal",
-    "source": "Osteologi"
-  },
-  {
-    "id": "q1332",
-    "type": "mc",
-    "prompt": "os occipitale är",
-    "correct": "nackbenet",
-    "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
-    ],
-    "topic": "osteologi_kranium",
-    "difficulty": "Normal",
-    "source": "Osteologi"
-  },
-  {
-    "id": "q1333",
-    "type": "mc",
-    "prompt": "os mandibula är",
-    "correct": "underkäken",
-    "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
-    ],
-    "topic": "osteologi_kranium",
-    "difficulty": "Normal",
-    "source": "Osteologi"
-  },
-  {
-    "id": "q1334",
-    "type": "mc",
-    "prompt": "Radius ligger på",
-    "correct": "tummesedan",
-    "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
-    ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "Osteologi"
-  },
-  {
-    "id": "q1335",
-    "type": "mc",
-    "prompt": "Ulna ligger på",
-    "correct": "lillfingersidan",
-    "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
-    ],
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "Osteologi"
-  },
-  {
-    "id": "q1336",
-    "type": "mc",
-    "prompt": "Tibia ligger på",
-    "correct": "insidan av underbenet",
-    "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
-    ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "Osteologi"
-  },
-  {
-    "id": "q1337",
-    "type": "mc",
-    "prompt": "Fibula ligger på",
-    "correct": "utsidan av underbenet",
-    "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
-    ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "Osteologi"
-  },
-  {
-    "id": "q1338",
-    "type": "mc",
-    "prompt": "Femur är ett",
-    "correct": "långben",
-    "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
-    ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "Osteologi"
-  },
-  {
     "id": "q1339",
-    "type": "mc",
-    "prompt": "Patella är ett",
-    "correct": "sesamben",
+    "type": "tf",
+    "prompt": "os frontale är pannbenet",
+    "correct": "Sant",
     "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
+      "Falskt"
     ],
-    "topic": "osteologi_lower",
+    "topic": "osteologi_verify",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
   {
     "id": "q1340",
-    "type": "mc",
-    "prompt": "Scapula är ett",
-    "correct": "plattben",
+    "type": "tf",
+    "prompt": "os temporale är tinningbenet",
+    "correct": "Sant",
     "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
+      "Falskt"
     ],
-    "topic": "osteologi_upper",
+    "topic": "osteologi_verify",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
   {
     "id": "q1341",
-    "type": "mc",
-    "prompt": "Vertebrae cervicales är",
-    "correct": "halskotor",
+    "type": "tf",
+    "prompt": "os parietale är hjässbenet",
+    "correct": "Sant",
     "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
+      "Falskt"
     ],
-    "topic": "osteologi_columna",
+    "topic": "osteologi_verify",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
   {
     "id": "q1342",
-    "type": "mc",
-    "prompt": "Vertebrae thoracicae är",
-    "correct": "bröstkotor",
+    "type": "tf",
+    "prompt": "os occipitale är nackbenet",
+    "correct": "Sant",
     "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
+      "Falskt"
     ],
-    "topic": "osteologi_columna",
+    "topic": "osteologi_verify",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
   {
     "id": "q1343",
-    "type": "mc",
-    "prompt": "Vertebrae lumbales är",
-    "correct": "ländkotor",
+    "type": "tf",
+    "prompt": "os nasale är näsbenet",
+    "correct": "Sant",
     "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
+      "Falskt"
     ],
-    "topic": "osteologi_columna",
+    "topic": "osteologi_verify",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
   {
     "id": "q1344",
-    "type": "mc",
-    "prompt": "Os sacrum är",
-    "correct": "korsbenet",
+    "type": "tf",
+    "prompt": "os zygomaticum är kindbenet",
+    "correct": "Sant",
     "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
+      "Falskt"
     ],
-    "topic": "osteologi_columna",
+    "topic": "osteologi_verify",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
   {
     "id": "q1345",
-    "type": "mc",
-    "prompt": "Costae är",
-    "correct": "revben",
+    "type": "tf",
+    "prompt": "maxilla är överkäken",
+    "correct": "Sant",
     "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
+      "Falskt"
     ],
-    "topic": "osteologi_thorax",
+    "topic": "osteologi_verify",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
   {
     "id": "q1346",
-    "type": "mc",
-    "prompt": "Sternum är",
-    "correct": "bröstbenet",
+    "type": "tf",
+    "prompt": "mandibula är underkäken",
+    "correct": "Sant",
     "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
+      "Falskt"
     ],
-    "topic": "osteologi_thorax",
+    "topic": "osteologi_verify",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
   {
     "id": "q1347",
-    "type": "mc",
-    "prompt": "Os coxae är",
-    "correct": "höftbenet",
+    "type": "tf",
+    "prompt": "humerus är överarmsben",
+    "correct": "Sant",
     "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
+      "Falskt"
     ],
-    "topic": "osteologi_pelvis",
+    "topic": "osteologi_verify",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
   {
     "id": "q1348",
-    "type": "mc",
-    "prompt": "Ossa carpi är",
-    "correct": "handrötsben",
+    "type": "tf",
+    "prompt": "radius är strålben",
+    "correct": "Sant",
     "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
+      "Falskt"
     ],
-    "topic": "osteologi_upper",
+    "topic": "osteologi_verify",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
   {
     "id": "q1349",
-    "type": "mc",
-    "prompt": "Ossa metacarpi är",
-    "correct": "mellanhåndsben",
+    "type": "tf",
+    "prompt": "ulna är armbågsben",
+    "correct": "Sant",
     "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
+      "Falskt"
     ],
-    "topic": "osteologi_upper",
+    "topic": "osteologi_verify",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
   {
     "id": "q1350",
-    "type": "mc",
-    "prompt": "Ossa tarsi är",
-    "correct": "fotrotsben",
+    "type": "tf",
+    "prompt": "carpus är handloven",
+    "correct": "Sant",
     "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
+      "Falskt"
     ],
-    "topic": "osteologi_lower",
+    "topic": "osteologi_verify",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
   {
     "id": "q1351",
-    "type": "mc",
-    "prompt": "Ossa metatarsi är",
-    "correct": "mellanfottsben",
+    "type": "tf",
+    "prompt": "metacarpus är mellanhanden",
+    "correct": "Sant",
     "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
+      "Falskt"
     ],
-    "topic": "osteologi_lower",
+    "topic": "osteologi_verify",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
   {
     "id": "q1352",
-    "type": "mc",
-    "prompt": "Phalanges är",
-    "correct": "fingerben",
+    "type": "tf",
+    "prompt": "phalanx är fingerben",
+    "correct": "Sant",
     "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
+      "Falskt"
     ],
-    "topic": "osteologi_upper",
+    "topic": "osteologi_verify",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
   {
     "id": "q1353",
-    "type": "mc",
-    "prompt": "Phalanges pedis är",
-    "correct": "tåben",
+    "type": "tf",
+    "prompt": "scapula är skulderblad",
+    "correct": "Sant",
     "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
+      "Falskt"
     ],
-    "topic": "osteologi_lower",
+    "topic": "osteologi_verify",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
   {
     "id": "q1354",
-    "type": "mc",
-    "prompt": "Olecranon är",
-    "correct": "armbågsknotan",
+    "type": "tf",
+    "prompt": "clavicula är nyckelben",
+    "correct": "Sant",
     "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
+      "Falskt"
     ],
-    "topic": "osteologi_upper",
+    "topic": "osteologi_verify",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
   {
     "id": "q1355",
-    "type": "mc",
-    "prompt": "Clavicula är",
-    "correct": "nyckelbenet",
+    "type": "tf",
+    "prompt": "femur är lårbenet",
+    "correct": "Sant",
     "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
+      "Falskt"
     ],
-    "topic": "osteologi_upper",
+    "topic": "osteologi_verify",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
   {
     "id": "q1356",
-    "type": "mc",
-    "prompt": "Skulderbladet är ett",
-    "correct": "plattben",
+    "type": "tf",
+    "prompt": "patella är knäskål",
+    "correct": "Sant",
     "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
+      "Falskt"
     ],
-    "topic": "osteologi_upper",
+    "topic": "osteologi_verify",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
   {
     "id": "q1357",
-    "type": "mc",
-    "prompt": "Humerus är ett",
-    "correct": "långben",
+    "type": "tf",
+    "prompt": "tibia är skenbenet",
+    "correct": "Sant",
     "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
+      "Falskt"
     ],
-    "topic": "osteologi_upper",
+    "topic": "osteologi_verify",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
   {
     "id": "q1358",
-    "type": "mc",
-    "prompt": "Radius och ulna tillsammans utgör",
-    "correct": "underarmen",
+    "type": "tf",
+    "prompt": "fibula är vadbenet",
+    "correct": "Sant",
     "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
+      "Falskt"
     ],
-    "topic": "osteologi_upper",
+    "topic": "osteologi_verify",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
   {
     "id": "q1359",
     "type": "mc",
-    "prompt": "Tibia och fibula tillsammans utgör",
-    "correct": "underbenet",
+    "prompt": "Vad heter pannbenet på latin?",
+    "correct": "os frontale",
     "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
+      "ulna",
+      "humerus",
+      "columna vertebralis"
     ],
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
+    "topic": "osteologi_verify",
+    "difficulty": "Easy",
     "source": "Osteologi"
   },
   {
     "id": "q1360",
     "type": "mc",
-    "prompt": "Kortben är",
-    "correct": "ungefär lika långt som bred",
+    "prompt": "Vad heter tinningbenet på latin?",
+    "correct": "os temporale",
     "distractors": [
-      "Annat ben",
-      "Annan struktur",
-      "Ingen av dessa"
+      "clavicula",
+      "os coxae",
+      "os occipitale"
     ],
-    "topic": "osteologi_types",
+    "topic": "osteologi_verify",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1361",
+    "type": "mc",
+    "prompt": "Vad heter hjässbenet på latin?",
+    "correct": "os parietale",
+    "distractors": [
+      "os sacrum",
+      "calcaneus",
+      "clavicula"
+    ],
+    "topic": "osteologi_verify",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1362",
+    "type": "mc",
+    "prompt": "Vad heter nackbenet på latin?",
+    "correct": "os occipitale",
+    "distractors": [
+      "mandibula",
+      "sternum",
+      "maxilla"
+    ],
+    "topic": "osteologi_verify",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1363",
+    "type": "mc",
+    "prompt": "Vad heter näsbenet på latin?",
+    "correct": "os nasale",
+    "distractors": [
+      "os sacrum",
+      "os pubis",
+      "humerus"
+    ],
+    "topic": "osteologi_verify",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1364",
+    "type": "mc",
+    "prompt": "Vad heter kindbenet på latin?",
+    "correct": "os zygomaticum",
+    "distractors": [
+      "os sacrum",
+      "ulna",
+      "os pubis"
+    ],
+    "topic": "osteologi_verify",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1365",
+    "type": "mc",
+    "prompt": "Vad heter överkäken på latin?",
+    "correct": "maxilla",
+    "distractors": [
+      "os sacrum",
+      "os zygomaticum",
+      "fibula"
+    ],
+    "topic": "osteologi_verify",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1366",
+    "type": "mc",
+    "prompt": "Vad heter underkäken på latin?",
+    "correct": "mandibula",
+    "distractors": [
+      "radius",
+      "clavicula",
+      "ulna"
+    ],
+    "topic": "osteologi_verify",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1367",
+    "type": "mc",
+    "prompt": "Vad heter överarmsben på latin?",
+    "correct": "humerus",
+    "distractors": [
+      "os sacrum",
+      "os frontale",
+      "clavicula"
+    ],
+    "topic": "osteologi_verify",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1368",
+    "type": "mc",
+    "prompt": "Vad heter strålben på latin?",
+    "correct": "radius",
+    "distractors": [
+      "costae",
+      "calcaneus",
+      "os frontale"
+    ],
+    "topic": "osteologi_verify",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1369",
+    "type": "mc",
+    "prompt": "Vad heter armbågsben på latin?",
+    "correct": "ulna",
+    "distractors": [
+      "tibia",
+      "sternum",
+      "metacarpus"
+    ],
+    "topic": "osteologi_verify",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1370",
+    "type": "mc",
+    "prompt": "Vad heter handloven på latin?",
+    "correct": "carpus",
+    "distractors": [
+      "os pubis",
+      "mandibula",
+      "costae"
+    ],
+    "topic": "osteologi_verify",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1371",
+    "type": "mc",
+    "prompt": "Vad heter mellanhanden på latin?",
+    "correct": "metacarpus",
+    "distractors": [
+      "os zygomaticum",
+      "os ilium",
+      "patella"
+    ],
+    "topic": "osteologi_verify",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1372",
+    "type": "mc",
+    "prompt": "Vad är phalanx?",
+    "correct": "fingerben",
+    "distractors": [
+      "hjässbenet",
+      "skulderblad",
+      "knäskål"
+    ],
+    "topic": "osteologi_verify",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1373",
+    "type": "mc",
+    "prompt": "Vad är scapula?",
+    "correct": "skulderblad",
+    "distractors": [
+      "pubisbenet",
+      "bröstben",
+      "knäskål"
+    ],
+    "topic": "osteologi_verify",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1374",
+    "type": "mc",
+    "prompt": "Vad är clavicula?",
+    "correct": "nyckelben",
+    "distractors": [
+      "underkäken",
+      "hälbenet",
+      "tinningbenet"
+    ],
+    "topic": "osteologi_verify",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1375",
+    "type": "mc",
+    "prompt": "Vad är femur?",
+    "correct": "lårbenet",
+    "distractors": [
+      "tarmbenet",
+      "fingerben",
+      "mellanhanden"
+    ],
+    "topic": "osteologi_verify",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1376",
+    "type": "mc",
+    "prompt": "Vad är patella?",
+    "correct": "knäskål",
+    "distractors": [
+      "pubisbenet",
+      "bröstben",
+      "revben"
+    ],
+    "topic": "osteologi_verify",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1377",
+    "type": "mc",
+    "prompt": "Vad är tibia?",
+    "correct": "skenbenet",
+    "distractors": [
+      "lårbenet",
+      "handloven",
+      "tinningbenet"
+    ],
+    "topic": "osteologi_verify",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1378",
+    "type": "mc",
+    "prompt": "Vad är fibula?",
+    "correct": "vadbenet",
+    "distractors": [
+      "pubisbenet",
+      "hälbenet",
+      "handloven"
+    ],
+    "topic": "osteologi_verify",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1379",
+    "type": "mc",
+    "prompt": "Vad är calcaneus?",
+    "correct": "hälbenet",
+    "distractors": [
+      "knäskål",
+      "revben",
+      "bröstben"
+    ],
+    "topic": "osteologi_verify",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1380",
+    "type": "mc",
+    "prompt": "Vad är sternum?",
+    "correct": "bröstben",
+    "distractors": [
+      "revben",
+      "näsbenet",
+      "armbågsben"
+    ],
+    "topic": "osteologi_verify",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1381",
+    "type": "mc",
+    "prompt": "Vad är costae?",
+    "correct": "revben",
+    "distractors": [
+      "nyckelben",
+      "överkäken",
+      "ryggraden"
+    ],
+    "topic": "osteologi_verify",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1382",
+    "type": "mc",
+    "prompt": "Vad är columna vertebralis?",
+    "correct": "ryggraden",
+    "distractors": [
+      "revben",
+      "tinningbenet",
+      "underkäken"
+    ],
+    "topic": "osteologi_verify",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1383",
+    "type": "mc",
+    "prompt": "Vad är os sacrum?",
+    "correct": "korsbenet",
+    "distractors": [
+      "nyckelben",
+      "kindbenet",
+      "armbågsben"
+    ],
+    "topic": "osteologi_verify",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1384",
+    "type": "mc",
+    "prompt": "Vad är os coxae?",
+    "correct": "höftbenet",
+    "distractors": [
+      "fingerben",
+      "tinningbenet",
+      "överarmsben"
+    ],
+    "topic": "osteologi_verify",
     "difficulty": "Normal",
     "source": "Osteologi"
   }
