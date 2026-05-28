@@ -126,34 +126,6 @@
     "source": "Muskler"
   },
   {
-    "id": "q10",
-    "type": "mc",
-    "prompt": "Vad är den svenska benämningen på Supraspinatus?",
-    "correct": "överkammuskel",
-    "distractors": [
-      "lång tumabduktor",
-      "fyrväxlad lårmuskeln",
-      "lilla bröstmuskeln"
-    ],
-    "topic": "muskler_namn",
-    "difficulty": "Easy",
-    "source": "Muskler"
-  },
-  {
-    "id": "q11",
-    "type": "mc",
-    "prompt": "Vad är den svenska benämningen på Deltoideus?",
-    "correct": "deltamuskel",
-    "distractors": [
-      "gemensam fingerextensor",
-      "breda ryggmuskeln",
-      "oppositionsmuskel för tumme"
-    ],
-    "topic": "muskler_namn",
-    "difficulty": "Easy",
-    "source": "Muskler"
-  },
-  {
     "id": "q12",
     "type": "mc",
     "prompt": "Vad är den svenska benämningen på Biceps brachii?",
@@ -176,216 +148,6 @@
       "flexor digitorum profundus",
       "rutmuskeln",
       "stora sätesmuskeln"
-    ],
-    "topic": "muskler_namn",
-    "difficulty": "Easy",
-    "source": "Muskler"
-  },
-  {
-    "id": "q14",
-    "type": "mc",
-    "prompt": "Vad är den svenska benämningen på Flexor carpi ulnaris?",
-    "correct": "flexor carpi ulnaris",
-    "distractors": [
-      "långt strålbent fingerextensor",
-      "stora sätesmuskeln",
-      "fyrväxlad lårmuskeln"
-    ],
-    "topic": "muskler_namn",
-    "difficulty": "Easy",
-    "source": "Muskler"
-  },
-  {
-    "id": "q15",
-    "type": "mc",
-    "prompt": "Vad är den svenska benämningen på Flexor carpi radialis?",
-    "correct": "flexor carpi radialis",
-    "distractors": [
-      "deltamuskel",
-      "flexor digitorum profundus",
-      "flexor pollicis brevis"
-    ],
-    "topic": "muskler_namn",
-    "difficulty": "Easy",
-    "source": "Muskler"
-  },
-  {
-    "id": "q16",
-    "type": "mc",
-    "prompt": "Vad är den svenska benämningen på Extensor carpi radialis longus?",
-    "correct": "långt strålbent fingerextensor",
-    "distractors": [
-      "kort tumextensor",
-      "ytlig fingerflexor",
-      "bakre lårmuskeln"
-    ],
-    "topic": "muskler_namn",
-    "difficulty": "Easy",
-    "source": "Muskler"
-  },
-  {
-    "id": "q17",
-    "type": "mc",
-    "prompt": "Vad är den svenska benämningen på Extensor carpi radialis brevis?",
-    "correct": "kort strålbent fingerextensor",
-    "distractors": [
-      "flexor carpi ulnaris",
-      "ryggsträckaren",
-      "fyrväxlad lårmuskeln"
-    ],
-    "topic": "muskler_namn",
-    "difficulty": "Easy",
-    "source": "Muskler"
-  },
-  {
-    "id": "q18",
-    "type": "mc",
-    "prompt": "Vad är den svenska benämningen på Extensor digitorum communis?",
-    "correct": "gemensam fingerextensor",
-    "distractors": [
-      "deltamuskel",
-      "framskenbensmuskel",
-      "raka bukmuskeln"
-    ],
-    "topic": "muskler_namn",
-    "difficulty": "Easy",
-    "source": "Muskler"
-  },
-  {
-    "id": "q19",
-    "type": "mc",
-    "prompt": "Vad är den svenska benämningen på Flexor digitorum superficialis?",
-    "correct": "ytlig fingerflexor",
-    "distractors": [
-      "långt strålbent fingerextensor",
-      "bakre lårmuskeln",
-      "breda ryggmuskeln"
-    ],
-    "topic": "muskler_namn",
-    "difficulty": "Easy",
-    "source": "Muskler"
-  },
-  {
-    "id": "q20",
-    "type": "mc",
-    "prompt": "Vad är den svenska benämningen på Flexor digitorum profundus?",
-    "correct": "flexor digitorum profundus",
-    "distractors": [
-      "lång tumextensor",
-      "trehövdade överarmsmuskeln",
-      "breda ryggmuskeln"
-    ],
-    "topic": "muskler_namn",
-    "difficulty": "Easy",
-    "source": "Muskler"
-  },
-  {
-    "id": "q21",
-    "type": "mc",
-    "prompt": "Vad är den svenska benämningen på Flexor pollicis longus?",
-    "correct": "lång tumflexor",
-    "distractors": [
-      "tvärsgående bukmuskel",
-      "kappmuskeln",
-      "stora bröstmuskeln"
-    ],
-    "topic": "muskler_namn",
-    "difficulty": "Easy",
-    "source": "Muskler"
-  },
-  {
-    "id": "q22",
-    "type": "mc",
-    "prompt": "Vad är den svenska benämningen på Extensor pollicis brevis?",
-    "correct": "kort tumextensor",
-    "distractors": [
-      "gemensam fingerextensor",
-      "lång tumextensor",
-      "kappmuskeln"
-    ],
-    "topic": "muskler_namn",
-    "difficulty": "Easy",
-    "source": "Muskler"
-  },
-  {
-    "id": "q23",
-    "type": "mc",
-    "prompt": "Vad är den svenska benämningen på Extensor pollicis longus?",
-    "correct": "lång tumextensor",
-    "distractors": [
-      "kort strålbent fingerextensor",
-      "flexor digitorum profundus",
-      "stora sätesmuskeln"
-    ],
-    "topic": "muskler_namn",
-    "difficulty": "Easy",
-    "source": "Muskler"
-  },
-  {
-    "id": "q24",
-    "type": "mc",
-    "prompt": "Vad är den svenska benämningen på Opponens pollicis?",
-    "correct": "oppositionsmuskel för tumme",
-    "distractors": [
-      "kappmuskeln",
-      "gemensam fingerextensor",
-      "tumadduktor"
-    ],
-    "topic": "muskler_namn",
-    "difficulty": "Easy",
-    "source": "Muskler"
-  },
-  {
-    "id": "q25",
-    "type": "mc",
-    "prompt": "Vad är den svenska benämningen på Flexor pollicis brevis?",
-    "correct": "flexor pollicis brevis",
-    "distractors": [
-      "trehövdade överarmsmuskeln",
-      "ytlig fingerflexor",
-      "fyrväxlad lårmuskeln"
-    ],
-    "topic": "muskler_namn",
-    "difficulty": "Easy",
-    "source": "Muskler"
-  },
-  {
-    "id": "q26",
-    "type": "mc",
-    "prompt": "Vad är den svenska benämningen på Abductor pollicis brevis?",
-    "correct": "kort tumabduktor",
-    "distractors": [
-      "ryggsträckaren",
-      "lilla bröstmuskeln",
-      "kort strålbent fingerextensor"
-    ],
-    "topic": "muskler_namn",
-    "difficulty": "Easy",
-    "source": "Muskler"
-  },
-  {
-    "id": "q27",
-    "type": "mc",
-    "prompt": "Vad är den svenska benämningen på Abductor pollicis longus?",
-    "correct": "lång tumabduktor",
-    "distractors": [
-      "flexor carpi radialis",
-      "trehövdad vadsmuskel",
-      "oppositionsmuskel för tumme"
-    ],
-    "topic": "muskler_namn",
-    "difficulty": "Easy",
-    "source": "Muskler"
-  },
-  {
-    "id": "q28",
-    "type": "mc",
-    "prompt": "Vad är den svenska benämningen på Adductor pollicis?",
-    "correct": "tumadduktor",
-    "distractors": [
-      "framskenbensmuskel",
-      "ryggsträckaren",
-      "lång tumabduktor"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -6081,6 +5843,210 @@
     "id": "q500",
     "type": "tf",
     "prompt": "Transversus abdominis är en muskel",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q501",
+    "type": "tf",
+    "prompt": "Serratus anterior är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q502",
+    "type": "tf",
+    "prompt": "Rhomboidei är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q503",
+    "type": "tf",
+    "prompt": "Erector spinae är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q504",
+    "type": "tf",
+    "prompt": "Latissimus dorsi är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q505",
+    "type": "tf",
+    "prompt": "Hamstrings är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q506",
+    "type": "tf",
+    "prompt": "Tibialis anterior är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q507",
+    "type": "tf",
+    "prompt": "Biceps brachii är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q508",
+    "type": "tf",
+    "prompt": "Pectoralis major är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q509",
+    "type": "tf",
+    "prompt": "Diafragma är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q510",
+    "type": "tf",
+    "prompt": "Triceps brachii är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q511",
+    "type": "tf",
+    "prompt": "Trapezius är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q512",
+    "type": "tf",
+    "prompt": "Gluteus maximus är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q513",
+    "type": "tf",
+    "prompt": "Pectoralis minor är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q514",
+    "type": "tf",
+    "prompt": "Rectus abdominis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q515",
+    "type": "tf",
+    "prompt": "Quadriceps är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q516",
+    "type": "tf",
+    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q517",
+    "type": "tf",
+    "prompt": "Serratus anterior är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
