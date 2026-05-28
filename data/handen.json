@@ -40,7 +40,7 @@
     "distractors": [
       "Tumme och två fingrar på spetsarna",
       "Tumme mot radiella sidan av pekfingret",
-      "Tumme och två fingrar tillsammans med fingertopp kontakt"
+      "Två fingrar tillsammans utan tumme"
     ],
     "topic": "handen_grepptyper",
     "difficulty": "medel"
@@ -51,9 +51,9 @@
     "prompt": "Diagonalt volargrepp är ett grepp där:",
     "correct": "Palmar grip med objektet diagonalt placerat",
     "distractors": [
-      "Tumme och två fingrar på spetsarna",
+      "Alla fingrar tillsammans runt objektet",
       "Tumme mot radiella sidan av pekfingret",
-      "Tumme och två fingrar tillsammans med fingertopp kontakt"
+      "Hook-liknande grepp utan tumme"
     ],
     "topic": "handen_grepptyper",
     "difficulty": "medel"
@@ -65,8 +65,8 @@
     "correct": "Palmar grip med objektet tvärsgående placerat",
     "distractors": [
       "Tumme och två fingrar på spetsarna",
-      "Tumme mot radiella sidan av pekfingret",
-      "Tumme och två fingrar tillsammans med fingertopp kontakt"
+      "Alla fingrar tillsammans runt objektet",
+      "Tumme mot radiella sidan av pekfingret"
     ],
     "topic": "handen_grepptyper",
     "difficulty": "medel"
@@ -77,9 +77,9 @@
     "prompt": "Sfäriskt volargrepp är ett grepp där:",
     "correct": "Hålla rund eller sfärisk objekt med öppen hand",
     "distractors": [
-      "Tumme och två fingrar på spetsarna",
       "Tumme mot radiella sidan av pekfingret",
-      "Tumme och två fingrar tillsammans med fingertopp kontakt"
+      "Palmar grip med objektet diagonalt placerat",
+      "Hook-liknande grepp utan tumme"
     ],
     "topic": "handen_grepptyper",
     "difficulty": "medel"
@@ -90,9 +90,9 @@
     "prompt": "Extensionsgrepp är ett grepp där:",
     "correct": "Hook-liknande grepp utan tummes medverkan",
     "distractors": [
-      "Tumme och två fingrar på spetsarna",
-      "Tumme mot radiella sidan av pekfingret",
-      "Tumme och två fingrar tillsammans med fingertopp kontakt"
+      "Alla fingrar tillsammans runt objektet",
+      "Palmar grip med objektet tvärsgående placerat",
+      "Tumme mot radiella sidan av pekfingret"
     ],
     "topic": "handen_grepptyper",
     "difficulty": "medel"
@@ -405,9 +405,9 @@
     "prompt": "Vad är funktionen av M. opponens pollicis?",
     "correct": "Opposition tumme",
     "distractors": [
-      "Abduktion tumme",
+      "Abduktion tumme CMC",
       "Flexion tumme MCP",
-      "Adduktion tumme"
+      "Adduktion tumme CMC"
     ],
     "topic": "handen_muskler",
     "difficulty": "medel"
@@ -523,7 +523,9 @@
     "prompt": "Vad är funktionen av M. lumbricalis I-II?",
     "correct": "MCP flexion + IP extension pek/långfinger",
     "distractors": [
-      "Flexion tumme MCP"
+      "MCP flexion utan IP extension för pek/långfinger",
+      "IP extension utan MCP flexion för ring/lillfinger",
+      "Flexion tumme MCP och CMC"
     ],
     "topic": "handen_muskler",
     "difficulty": "medel"
@@ -545,7 +547,9 @@
     "prompt": "Vad är funktionen av M. lumbricalis III-IV?",
     "correct": "MCP flexion + IP extension ring/lillfinger",
     "distractors": [
-      "Flexion tumme MCP"
+      "MCP flexion utan IP extension för ring/lillfinger",
+      "IP extension utan MCP flexion för pek/långfinger",
+      "Flexion tumme MCP och CMC"
     ],
     "topic": "handen_muskler",
     "difficulty": "medel"
@@ -613,9 +617,9 @@
     "prompt": "Vad är funktionen av M. flexor digitorum superficialis?",
     "correct": "Flexion PIP finger II-V",
     "distractors": [
-      "Abduktion tumme CMC",
-      "Flexion tumme MCP",
-      "Opposition tumme CMC"
+      "Flexion MCP finger II-V",
+      "Flexion PIP tumme CMC",
+      "Extension DIP finger II-V"
     ],
     "topic": "handen_muskler",
     "difficulty": "medel"
@@ -637,9 +641,9 @@
     "prompt": "Vad är funktionen av M. flexor digitorum profundus?",
     "correct": "Flexion DIP finger II-V",
     "distractors": [
-      "Abduktion tumme CMC",
-      "Flexion tumme MCP",
-      "Opposition tumme CMC"
+      "Flexion PIP finger II-V",
+      "Flexion DIP tumme CMC",
+      "Extension MCP finger II-V"
     ],
     "topic": "handen_muskler",
     "difficulty": "medel"
@@ -661,7 +665,9 @@
     "prompt": "Vad är funktionen av M. extensor digitorum?",
     "correct": "Extension finger II-V",
     "distractors": [
-      "Flexion tumme MCP"
+      "Extension MCP finger II-V",
+      "Flexion PIP finger II-V",
+      "Extension DIP tumme CMC"
     ],
     "topic": "handen_muskler",
     "difficulty": "medel"
