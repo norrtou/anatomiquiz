@@ -140,34 +140,6 @@
     "source": "Muskler"
   },
   {
-    "id": "q11",
-    "type": "mc",
-    "prompt": "Vad är den svenska benämningen på Supraspinatus?",
-    "correct": "supraspinatus",
-    "distractors": [
-      "främre sågmuskeln",
-      "trehövdade överarmsmuskeln",
-      "djup fingerflexor"
-    ],
-    "topic": "muskler_namn",
-    "difficulty": "Easy",
-    "source": "Muskler"
-  },
-  {
-    "id": "q12",
-    "type": "mc",
-    "prompt": "Vad är den svenska benämningen på Deltoideus?",
-    "correct": "deltamuskeln",
-    "distractors": [
-      "tvåhövdade överarmsmuskeln",
-      "framskenbensmuskel",
-      "trehövdade överarmsmuskeln"
-    ],
-    "topic": "muskler_namn",
-    "difficulty": "Easy",
-    "source": "Muskler"
-  },
-  {
     "id": "q13",
     "type": "mc",
     "prompt": "Vad är den svenska benämningen på Biceps brachii?",
@@ -190,34 +162,6 @@
       "lång tumextensor",
       "lång tumabduktor",
       "tvärsgående bukmuskel"
-    ],
-    "topic": "muskler_namn",
-    "difficulty": "Easy",
-    "source": "Muskler"
-  },
-  {
-    "id": "q15",
-    "type": "mc",
-    "prompt": "Vad är den svenska benämningen på Flexor carpi ulnaris?",
-    "correct": "flexor carpi ulnaris",
-    "distractors": [
-      "vadsmuskel",
-      "kort tumflexor",
-      "framskenbensmuskel"
-    ],
-    "topic": "muskler_namn",
-    "difficulty": "Easy",
-    "source": "Muskler"
-  },
-  {
-    "id": "q16",
-    "type": "mc",
-    "prompt": "Vad är den svenska benämningen på Flexor carpi radialis?",
-    "correct": "flexor carpi radialis",
-    "distractors": [
-      "trehövdade överarmsmuskeln",
-      "djup fingerflexor",
-      "stora bröstmuskeln"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -6057,6 +6001,54 @@
     ],
     "topic": "muskler_allmänt",
     "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q501",
+    "type": "tf",
+    "prompt": "Supraspinatus abducerar humerus",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_funktion",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q502",
+    "type": "tf",
+    "prompt": "Deltoideus abducerar humerus",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_funktion",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q503",
+    "type": "tf",
+    "prompt": "Flexor carpi ulnaris flekterar handleden",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_funktion",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q504",
+    "type": "tf",
+    "prompt": "Flexor carpi radialis flekterar handleden",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_funktion",
+    "difficulty": "Normal",
     "source": "Muskler"
   }
 ]
