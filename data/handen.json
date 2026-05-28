@@ -53,7 +53,7 @@
     "distractors": [
       "Alla fingrar tillsammans runt objektet",
       "Tumme mot radiella sidan av pekfingret",
-      "Hook-liknande grepp utan tumme"
+      "Krok-liknande grepp utan tumme"
     ],
     "topic": "handen_grepptyper",
     "difficulty": "medel"
@@ -75,11 +75,11 @@
     "id": "q7",
     "type": "mc",
     "prompt": "Sfäriskt volargrepp är ett grepp där:",
-    "correct": "Hålla rund eller sfärisk objekt med öppen hand",
+    "correct": "Hålla rund eller sfäriskt objekt med öppen hand",
     "distractors": [
       "Tumme mot radiella sidan av pekfingret",
       "Palmar grepp med objektet diagonalt placerat",
-      "Hook-liknande grepp utan tumme"
+      "Krok-liknande grepp utan tumme"
     ],
     "topic": "handen_grepptyper",
     "difficulty": "medel"
@@ -88,7 +88,7 @@
     "id": "q8",
     "type": "mc",
     "prompt": "Extensionsgrepp är ett grepp där:",
-    "correct": "Hook-liknande grepp utan tummes medverkan",
+    "correct": "Krok-liknande grepp utan tummes medverkan",
     "distractors": [
       "Alla fingrar tillsammans runt objektet",
       "Palmar grepp med objektet tvärsgående placerat",
@@ -100,7 +100,7 @@
   {
     "id": "q9",
     "type": "mc",
-    "prompt": "Vilket ben motsvarar 'Båtbenet'?",
+    "prompt": "Vilket ben motsvarar 'Os scaphoideum'?",
     "correct": "Os scaphoideum",
     "distractors": [
       "Os lunatum",
@@ -126,7 +126,7 @@
   {
     "id": "q11",
     "type": "mc",
-    "prompt": "Vilket ben motsvarar 'Tretandade benet'?",
+    "prompt": "Vilket ben motsvarar 'Os triquetrum'?",
     "correct": "Os triquetrum",
     "distractors": [
       "Os scaphoideum",
@@ -139,7 +139,7 @@
   {
     "id": "q12",
     "type": "mc",
-    "prompt": "Vilket ben motsvarar 'Ärtbenet'?",
+    "prompt": "Vilket ben motsvarar 'Os pisiforme'?",
     "correct": "Os pisiforme",
     "distractors": [
       "Os scaphoideum",
@@ -152,7 +152,7 @@
   {
     "id": "q13",
     "type": "mc",
-    "prompt": "Vilket ben motsvarar 'Traetzium'?",
+    "prompt": "Vilket ben motsvarar 'Trapezium'?",
     "correct": "Os trapezium",
     "distractors": [
       "Os scaphoideum",
@@ -165,7 +165,7 @@
   {
     "id": "q14",
     "type": "mc",
-    "prompt": "Vilket ben motsvarar 'Huvudbenet'?",
+    "prompt": "Vilket ben motsvarar 'Os capitatum'?",
     "correct": "Os capitatum",
     "distractors": [
       "Os scaphoideum",
@@ -1267,7 +1267,7 @@
   {
     "id": "q104",
     "type": "tf",
-    "prompt": "N. medianus innerverar Thumb, index, middle, medial half ring finger",
+    "prompt": "N. medianus innerverar tumme, pekfinger, långfinger, medial half ring finger",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1278,7 +1278,7 @@
   {
     "id": "q105",
     "type": "tf",
-    "prompt": "N. ulnaris innerverar Lateral half ring finger, little finger",
+    "prompt": "N. ulnaris innerverar Lateral half ring finger, lilla finger",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2088,7 +2088,7 @@
     "distractors": [
       "Dorsal region",
       "Central region",
-      "Forearm region"
+      "Underarmsregion"
     ],
     "topic": "handen_muskler_region",
     "difficulty": "medel",
@@ -2101,7 +2101,7 @@
     "distractors": [
       "Dorsal region",
       "Central region",
-      "Forearm region"
+      "Underarmsregion"
     ],
     "topic": "handen_muskler_region",
     "difficulty": "medel",
@@ -2114,7 +2114,7 @@
     "distractors": [
       "Dorsal region",
       "Central region",
-      "Forearm region"
+      "Underarmsregion"
     ],
     "topic": "handen_muskler_region",
     "difficulty": "medel",
@@ -2127,7 +2127,7 @@
     "distractors": [
       "Dorsal region",
       "Central region",
-      "Forearm region"
+      "Underarmsregion"
     ],
     "topic": "handen_muskler_region",
     "difficulty": "medel",
@@ -2140,7 +2140,7 @@
     "distractors": [
       "Dorsal region",
       "Central region",
-      "Forearm region"
+      "Underarmsregion"
     ],
     "topic": "handen_muskler_region",
     "difficulty": "medel",
@@ -2153,7 +2153,7 @@
     "distractors": [
       "Dorsal region",
       "Central region",
-      "Forearm region"
+      "Underarmsregion"
     ],
     "topic": "handen_muskler_region",
     "difficulty": "medel",
@@ -2166,7 +2166,7 @@
     "distractors": [
       "Dorsal region",
       "Central region",
-      "Forearm region"
+      "Underarmsregion"
     ],
     "topic": "handen_muskler_region",
     "difficulty": "medel",
@@ -2175,7 +2175,7 @@
   {
     "type": "mc",
     "prompt": "Articulatio radiocarpea ligger var?",
-    "correct": "mellan radius och handrotsben",
+    "correct": "mellan Radius och handrotsben",
     "distractors": [
       "I handled",
       "I underarmen",
@@ -2226,7 +2226,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Fingertoppsgrepp: tumme och två finger på spetsarna",
+    "prompt": "Fingertoppsgrepp: tumme och två fingrar på spetsarna",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2248,7 +2248,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Chuckgrepp: tumme och två finger tillsammans",
+    "prompt": "Chuckgrepp: tumme och två fingrar tillsammans",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2292,7 +2292,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Sfäriskt volargrepp: rund objekt",
+    "prompt": "Sfäriskt volargrepp: runt objekt",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2303,7 +2303,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Extensionsgrepp: hook-grepp utan tumme",
+    "prompt": "Extensionsgrepp: krok-grepp utan tumme",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2347,7 +2347,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Mallet finger påverkar Extensor tendon injury",
+    "prompt": "Mallet finger påverkar Extensor sena injury",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2358,7 +2358,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Boutonniere deformity påverkar PIP joint",
+    "prompt": "Boutonniere deformity påverkar PIP led",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2421,7 +2421,7 @@
   },
   {
     "type": "tf",
-    "prompt": "N. medianus innerverar thumb opposition",
+    "prompt": "N. medianus innerverar tumme opposition",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2432,7 +2432,7 @@
   },
   {
     "type": "tf",
-    "prompt": "N. medianus innerverar index finger sensation",
+    "prompt": "N. medianus innerverar pekfinger finger sensation",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2443,7 +2443,7 @@
   },
   {
     "type": "tf",
-    "prompt": "N. medianus innerverar middle finger sensation",
+    "prompt": "N. medianus innerverar långfinger finger sensation",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2476,7 +2476,7 @@
   },
   {
     "type": "tf",
-    "prompt": "N. ulnaris innerverar little finger sensation",
+    "prompt": "N. ulnaris innerverar lilla finger sensation",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2498,7 +2498,7 @@
   },
   {
     "type": "tf",
-    "prompt": "N. radialis innerverar dorsal hand sensation",
+    "prompt": "N. radialis innerverar Dorsal hand sensation",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2695,7 +2695,7 @@
   },
   {
     "type": "mc",
-    "prompt": "Vilken muskel utför Flexion MCP + Extension IP?",
+    "prompt": "Vilken muskel utför flexion MCP + Extension IP?",
     "correct": "Lumbricals",
     "distractors": [
       "Extensor",
@@ -2708,7 +2708,7 @@
   },
   {
     "type": "mc",
-    "prompt": "Vilken muskel utför Opposition tumme?",
+    "prompt": "Vilken muskel utför opposition tumme?",
     "correct": "M. opponens pollicis",
     "distractors": [
       "Extensor",
@@ -2721,7 +2721,7 @@
   },
   {
     "type": "mc",
-    "prompt": "Vilken muskel utför Abduktion alla finger?",
+    "prompt": "Vilken muskel utför abduktion av alla finger?",
     "correct": "M. interossei dorsales",
     "distractors": [
       "Extensor",
@@ -2734,7 +2734,7 @@
   },
   {
     "type": "mc",
-    "prompt": "Vilken muskel utför Adduktion alla finger?",
+    "prompt": "Vilken muskel utför adduktion av alla finger?",
     "correct": "M. interossei palmares",
     "distractors": [
       "Extensor",
@@ -2747,7 +2747,7 @@
   },
   {
     "type": "mc",
-    "prompt": "Vilken muskel utför Flexion all fingers?",
+    "prompt": "Vilken muskel utför flexion av alla fingers?",
     "correct": "Flexor digitorum superficialis",
     "distractors": [
       "Extensor",
@@ -2782,7 +2782,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Extensor tendons går genom Dorsal tunnels",
+    "prompt": "Extensor senor går genom Dorsal tunnels",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2859,7 +2859,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Thumbs CMC-joint är en saddle joint",
+    "prompt": "Thumbs CMC-led är en saddle led",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2892,7 +2892,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Pronation occurs at radio-ulnar joint",
+    "prompt": "Pronation occurs at radio-ulnar led",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2914,7 +2914,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Carpal tunnel contains 9 tendons and 1 nerve",
+    "prompt": "Carpal tunnel contains 9 senor and 1 nerv",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2925,7 +2925,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Wrist flexion är ungefär ~80 degrees",
+    "prompt": "Wrist flexion är ungefär ~80 grader",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2936,7 +2936,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Wrist extension är ungefär ~70 degrees",
+    "prompt": "Wrist extension är ungefär ~70 grader",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2947,7 +2947,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Radial deviation är ungefär ~20 degrees",
+    "prompt": "Radial deviation är ungefär ~20 grader",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2958,7 +2958,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Ulnar deviation är ungefär ~30 degrees",
+    "prompt": "Ulnar deviation är ungefär ~30 grader",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2969,7 +2969,7 @@
   },
   {
     "type": "tf",
-    "prompt": "MCP flexion är ungefär ~90 degrees",
+    "prompt": "MCP flexion är ungefär ~90 grader",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2980,7 +2980,7 @@
   },
   {
     "type": "tf",
-    "prompt": "PIP flexion är ungefär ~100 degrees",
+    "prompt": "PIP flexion är ungefär ~100 grader",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2991,7 +2991,7 @@
   },
   {
     "type": "tf",
-    "prompt": "DIP flexion är ungefär ~80 degrees",
+    "prompt": "DIP flexion är ungefär ~80 grader",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3002,7 +3002,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Radial artery försörjer thumb and index finger",
+    "prompt": "Radial artery försörjer tumme and pekfinger finger",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3013,7 +3013,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Ulnar artery försörjer ring and little finger",
+    "prompt": "Ulnar artery försörjer ring and lilla finger",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3086,7 +3086,7 @@
   {
     "type": "mc",
     "prompt": "Primär funktion av M. abductor pollicis brevis är:",
-    "correct": "abduction of thumb at CMC",
+    "correct": "abduction of tumme at CMC",
     "distractors": [
       "Extension",
       "Pronation",
@@ -3099,7 +3099,7 @@
   {
     "type": "mc",
     "prompt": "Primär funktion av M. flexor pollicis brevis är:",
-    "correct": "flexion of thumb at MCP",
+    "correct": "flexion of tumme at MCP",
     "distractors": [
       "Extension",
       "Pronation",
@@ -3112,7 +3112,7 @@
   {
     "type": "mc",
     "prompt": "Primär funktion av M. opponens pollicis är:",
-    "correct": "opposition of thumb",
+    "correct": "opposition of tumme",
     "distractors": [
       "Extension",
       "Pronation",
@@ -3125,7 +3125,7 @@
   {
     "type": "mc",
     "prompt": "Primär funktion av M. adductor pollicis är:",
-    "correct": "adduction of thumb",
+    "correct": "adduction of tumme",
     "distractors": [
       "Extension",
       "Pronation",
@@ -3138,10 +3138,10 @@
   {
     "type": "mc",
     "prompt": "Var är ursprunget av Flexor carpi radialis?",
-    "correct": "medial epicondyle humerus",
+    "correct": "medial epikondyl humerus",
     "distractors": [
-      "Scaphoid",
-      "Lunate",
+      "Os scaphoideum",
+      "Os lunatum",
       "Radius"
     ],
     "topic": "handen_muskler_origin",
@@ -3151,10 +3151,10 @@
   {
     "type": "mc",
     "prompt": "Var är ursprunget av Flexor carpi ulnaris?",
-    "correct": "medial epicondyle humerus",
+    "correct": "medial epikondyl humerus",
     "distractors": [
-      "Scaphoid",
-      "Lunate",
+      "Os scaphoideum",
+      "Os lunatum",
       "Radius"
     ],
     "topic": "handen_muskler_origin",
@@ -3166,8 +3166,8 @@
     "prompt": "Var är ursprunget av Extensor carpi radialis longus?",
     "correct": "lateral supracondylar ridge",
     "distractors": [
-      "Scaphoid",
-      "Lunate",
+      "Os scaphoideum",
+      "Os lunatum",
       "Radius"
     ],
     "topic": "handen_muskler_origin",
@@ -3177,10 +3177,10 @@
   {
     "type": "mc",
     "prompt": "Var är ursprunget av Extensor carpi radialis brevis?",
-    "correct": "lateral epicondyle",
+    "correct": "lateral epikondyl",
     "distractors": [
-      "Scaphoid",
-      "Lunate",
+      "Os scaphoideum",
+      "Os lunatum",
       "Radius"
     ],
     "topic": "handen_muskler_origin",
@@ -3203,7 +3203,7 @@
   {
     "type": "mc",
     "prompt": "Vilken är funktionen av Dorsal radiocarpal ligament?",
-    "correct": "dorsal stability",
+    "correct": "Dorsal stability",
     "distractors": [
       "Flexion",
       "Extension",
@@ -3241,7 +3241,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Carpometacarpal joint of thumb: saddle joint",
+    "prompt": "Carpometacarpal led of tumme: saddle led",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3274,7 +3274,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Distal interphalangeal joint: only flexion/extension",
+    "prompt": "Distal interphalangeal led: only flexion/extension",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3285,7 +3285,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Flexor sheath: tendon protection",
+    "prompt": "Flexor slida: sena protection",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3318,7 +3318,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Lumbricals I-II: innervation by median nerve",
+    "prompt": "Lumbricals I-II: innervation by median nerv",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3329,7 +3329,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Lumbricals III-IV: innervation by ulnar nerve",
+    "prompt": "Lumbricals III-IV: innervation by ulnar nerv",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3890,7 +3890,7 @@
   },
   {
     "type": "tf",
-    "prompt": "N. medianus har någon sensorisk eller motorisk funktion för dorsal hand",
+    "prompt": "N. medianus har någon sensorisk eller motorisk funktion för Dorsal hand",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3967,7 +3967,7 @@
   },
   {
     "type": "tf",
-    "prompt": "N. ulnaris har någon sensorisk eller motorisk funktion för dorsal hand",
+    "prompt": "N. ulnaris har någon sensorisk eller motorisk funktion för Dorsal hand",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4044,7 +4044,7 @@
   },
   {
     "type": "tf",
-    "prompt": "N. radialis har någon sensorisk eller motorisk funktion för dorsal hand",
+    "prompt": "N. radialis har någon sensorisk eller motorisk funktion för Dorsal hand",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4165,7 +4165,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Radialis-nerven innerverar dorsal hand",
+    "prompt": "Radialis-nerven innerverar Dorsal hand",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4286,7 +4286,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Tendon sheaths skyddar senorna",
+    "prompt": "sena sheaths skyddar senorna",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4297,7 +4297,7 @@
   },
   {
     "type": "mc",
-    "prompt": "Vad är \"Båtbenet\"?",
+    "prompt": "Vad är \"Os scaphoideum\"?",
     "correct": "Os scaphoideum",
     "distractors": [
       "Annan muskel",
@@ -4310,7 +4310,7 @@
   },
   {
     "type": "mc",
-    "prompt": "Vad är \"Måntbenet\"?",
+    "prompt": "Vad är \"Os lunatum\"?",
     "correct": "Os lunatum",
     "distractors": [
       "Annan muskel",
@@ -4323,7 +4323,7 @@
   },
   {
     "type": "mc",
-    "prompt": "Vad är \"Ärtbenet\"?",
+    "prompt": "Vad är \"Os pisiforme\"?",
     "correct": "Os pisiforme",
     "distractors": [
       "Annan muskel",
@@ -4336,7 +4336,7 @@
   },
   {
     "type": "mc",
-    "prompt": "Vad är \"Huvudbenet\"?",
+    "prompt": "Vad är \"Os capitatum\"?",
     "correct": "Os capitatum",
     "distractors": [
       "Annan muskel",
@@ -4349,7 +4349,7 @@
   },
   {
     "type": "mc",
-    "prompt": "Vad är \"Krokbenet\"?",
+    "prompt": "Vad är \"Os hamatum\"?",
     "correct": "Os hamatum",
     "distractors": [
       "Annan muskel",
@@ -4766,7 +4766,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Radiocarpal joint är en Ellipsoid joint",
+    "prompt": "Radiocarpal led är en Ellipsoid led",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4777,7 +4777,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Midcarpal joint är en Gliding joint",
+    "prompt": "Midcarpal led är en Gliding led",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4788,7 +4788,7 @@
   },
   {
     "type": "tf",
-    "prompt": "CMC I joint är en Saddle joint",
+    "prompt": "CMC I led är en Saddle led",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4799,7 +4799,7 @@
   },
   {
     "type": "tf",
-    "prompt": "MCP joint är en Ellipsoid joint",
+    "prompt": "MCP led är en Ellipsoid led",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4810,7 +4810,7 @@
   },
   {
     "type": "tf",
-    "prompt": "IP joint är en Hinge joint",
+    "prompt": "IP led är en Hinge led",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4887,7 +4887,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Carpal tunnel innehåller 9 flexor tendons",
+    "prompt": "Carpal tunnel innehåller 9 flexor senor",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4964,7 +4964,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Flexor tendons har vinculums för blodförsörjning",
+    "prompt": "Flexor senor har vinculums för blodförsörjning",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4975,7 +4975,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Extensor tendons är organiserade i 6 compartments",
+    "prompt": "Extensor senor är organiserade i 6 compartments",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5063,7 +5063,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Pronation-supination sker i radio-ulnar joint",
+    "prompt": "Pronation-supination sker i radio-ulnar led",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5140,7 +5140,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Trapezium har en saddle joint med metacarpal I",
+    "prompt": "Trapezium har en saddle led med metacarpal I",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5151,7 +5151,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Trapezoideum är det minsta metacarpal bone",
+    "prompt": "Trapezoideum är det minsta metacarpal ben",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5173,7 +5173,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Hamatum har en karakteristisk hook",
+    "prompt": "Hamatum har en karakteristisk krok",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5294,7 +5294,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Flexor sheaths är viktiga för tendons glidning",
+    "prompt": "Flexor sheaths är viktiga för senor glidning",
     "correct": "Sant",
     "distractors": [
       "Falskt"
