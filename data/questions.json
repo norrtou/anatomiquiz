@@ -13358,5 +13358,2413 @@
     "topic": "osteologi_thorax",
     "difficulty": "Hard",
     "source": "Osteologi"
+  },
+  {
+    "id": "q1001",
+    "type": "mc",
+    "prompt": "Vilka ben utgör övre extremiteten?",
+    "correct": "överarmsben, underarmben, handben och fingerben",
+    "distractors": [
+      "bara överarmsben",
+      "bara handben",
+      "bara fingerben"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1002",
+    "type": "mc",
+    "prompt": "Vilka ben utgör nedre extremiteten?",
+    "correct": "lårbenet, underbenben, fotben och tåben",
+    "distractors": [
+      "bara lårbenet",
+      "bara fotben",
+      "bara tåben"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1003",
+    "type": "mc",
+    "prompt": "Vilka ben utgör axelskulderregionen?",
+    "correct": "scapula, clavicula och överarmsbenen",
+    "distractors": [
+      "bara scapula",
+      "bara clavicula",
+      "bara överarmsbenen"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1004",
+    "type": "mc",
+    "prompt": "Vilka ben utgör höftregionen?",
+    "correct": "höftbenet, korsbenet och gödben",
+    "distractors": [
+      "bara höftbenet",
+      "bara lårbenet",
+      "bara underbenben"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1005",
+    "type": "mc",
+    "prompt": "Vilka ben utgör handledenregionen?",
+    "correct": "karpalben (8 ben)",
+    "distractors": [
+      "metacarpalben",
+      "fingerben",
+      "underarmben"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1006",
+    "type": "mc",
+    "prompt": "Vilka ben utgör fotbågen?",
+    "correct": "talus, naviculare och andra tarbenen",
+    "distractors": [
+      "bara hälbenet",
+      "bara metatarsalbenen",
+      "bara phalanger"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1007",
+    "type": "mc",
+    "prompt": "Vilket av dessa ben sitter i övre extremiteten?",
+    "correct": "humerus och radius",
+    "distractors": [
+      "femur och tibia",
+      "höftben och korsbenet",
+      "revben och sternum"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1008",
+    "type": "mc",
+    "prompt": "Vilket av dessa ben sitter i nedre extremiteten?",
+    "correct": "femur och tibia",
+    "distractors": [
+      "humerus och radius",
+      "höftben",
+      "revben och sternum"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1009",
+    "type": "mc",
+    "prompt": "Vilket av dessa ben sitter i kraniet?",
+    "correct": "pannbenet och nackbenet",
+    "distractors": [
+      "revben",
+      "lårbenet",
+      "höftbenet"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1010",
+    "type": "mc",
+    "prompt": "Vilket av dessa ben sitter i bröstkassen?",
+    "correct": "revben och sternum",
+    "distractors": [
+      "höftbenet",
+      "lårbenet",
+      "överarmsbenet"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1011",
+    "type": "tf",
+    "prompt": "Metacarpalerna sitter distalt om karpalbenen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1012",
+    "type": "tf",
+    "prompt": "Phalangerna sitter distalt om metacarpalerna",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1013",
+    "type": "tf",
+    "prompt": "Humerus ligger proximalt i övre extremiteten",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1014",
+    "type": "tf",
+    "prompt": "Ulna ligger medial om radius i pronationsposition",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1015",
+    "type": "tf",
+    "prompt": "Femur sitter proximalt i nedre extremiteten",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1016",
+    "type": "tf",
+    "prompt": "Tarbenen sitter distalt om tibia och fibula",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1017",
+    "type": "mc",
+    "prompt": "Vilka ben förbinder skuldergordlingen med kroppen?",
+    "correct": "clavicula och sternum",
+    "distractors": [
+      "scapula",
+      "humerus",
+      "revben"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1018",
+    "type": "mc",
+    "prompt": "Vilka ben förbinder överarmen med underarmen?",
+    "correct": "humerus och armbågsled mellan ulna och radius",
+    "distractors": [
+      "scapula",
+      "carpalbenen",
+      "metacarpalbenen"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1019",
+    "type": "mc",
+    "prompt": "Vilka ben förbinder lårbenet med underbenben?",
+    "correct": "femur och tibia/fibula via knäleden",
+    "distractors": [
+      "höftbenet",
+      "tarbenen",
+      "metatarsalbenen"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1020",
+    "type": "tf",
+    "prompt": "Höftbenen är förbundna med ryggraden via korsbenet",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1021",
+    "type": "tf",
+    "prompt": "Scapula är direkt förbunden med bröstkassen via ben",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1022",
+    "type": "tf",
+    "prompt": "Os hamatum är ett karpalben",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1023",
+    "type": "tf",
+    "prompt": "Os trapezium är ett tarsalben",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1024",
+    "type": "tf",
+    "prompt": "Talus är ett ben i foten",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1025",
+    "type": "tf",
+    "prompt": "Calcaneus är ett ben i händen",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1026",
+    "type": "mc",
+    "prompt": "Vilka av dessa ben sitter i handloven?",
+    "correct": "scaphoideum, lunatum, triquetrum, pisiforme, trapezium, trapezoideum, capitatum, hamatum",
+    "distractors": [
+      "bara de fyra proximala",
+      "bara de fyra distala",
+      "alla åtta tillsammans"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1027",
+    "type": "tf",
+    "prompt": "Phalanx proximalis är det första fingerbenet från handloven",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1028",
+    "type": "tf",
+    "prompt": "Phalanx distalis är det längsta fingerbenet",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1029",
+    "type": "mc",
+    "prompt": "Vilken typ av ben är femur?",
+    "correct": "långben (os longum)",
+    "distractors": [
+      "kortben",
+      "plattben",
+      "oregelbundet ben"
+    ],
+    "topic": "osteologi_types",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1030",
+    "type": "mc",
+    "prompt": "Vilken typ av ben är carpalben?",
+    "correct": "kortben (ossa brevia)",
+    "distractors": [
+      "långben",
+      "plattben",
+      "oregelbundet ben"
+    ],
+    "topic": "osteologi_types",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1031",
+    "type": "mc",
+    "prompt": "Vilken typ av ben är sternum?",
+    "correct": "plattben (os planum)",
+    "distractors": [
+      "långben",
+      "kortben",
+      "oregelbundet ben"
+    ],
+    "topic": "osteologi_types",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1032",
+    "type": "mc",
+    "prompt": "Vilken typ av ben är vertebra?",
+    "correct": "oregelbundet ben (os irregulare)",
+    "distractors": [
+      "långben",
+      "kortben",
+      "plattben"
+    ],
+    "topic": "osteologi_types",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1033",
+    "type": "tf",
+    "prompt": "Långben är karakteriserade av att de är mycket längre än breda",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_types",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1034",
+    "type": "tf",
+    "prompt": "Kortben är ungefär lika långa som breda",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_types",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1035",
+    "type": "tf",
+    "prompt": "Plattben är viktiga för att skydda organ",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_types",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1036",
+    "type": "tf",
+    "prompt": "Oregelbundna ben har samma form som kortben",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "osteologi_types",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1037",
+    "type": "mc",
+    "prompt": "Vilka ben är langben?",
+    "correct": "humerus, radius, ulna, femur, tibia, fibula, metacarpalben, metatarsalbenen",
+    "distractors": [
+      "cardialben",
+      "revben",
+      "höftbenet"
+    ],
+    "topic": "osteologi_types",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1038",
+    "type": "mc",
+    "prompt": "Vilka ben är kortben?",
+    "correct": "carpalben och tarsalbenen",
+    "distractors": [
+      "långben",
+      "plattben",
+      "oregelbundna ben"
+    ],
+    "topic": "osteologi_types",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1039",
+    "type": "mc",
+    "prompt": "Vilka ben är platta ben?",
+    "correct": "skallen, revbenen, scapula, sternum, höftbenen",
+    "distractors": [
+      "långben",
+      "kortben",
+      "oregelbundna ben"
+    ],
+    "topic": "osteologi_types",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1040",
+    "type": "mc",
+    "prompt": "Vilka ben är oregelbundna ben?",
+    "correct": "vertebrorna och ansiktets ben",
+    "distractors": [
+      "långben",
+      "kortben",
+      "plattben"
+    ],
+    "topic": "osteologi_types",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1041",
+    "type": "tf",
+    "prompt": "Revben är exempel på platta ben",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_types",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1042",
+    "type": "tf",
+    "prompt": "Scapula är ett plattben",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_types",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1043",
+    "type": "tf",
+    "prompt": "Höftbenet är ett oregelbundet ben",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "osteologi_types",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1044",
+    "type": "mc",
+    "prompt": "Vad är en gångjärnsled?",
+    "correct": "en led som tillåter rörelse i en riktning (böjning/sträckning)",
+    "distractors": [
+      "en led som tillåter rotation",
+      "en kulled",
+      "en vridled"
+    ],
+    "topic": "osteologi_joints",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1045",
+    "type": "mc",
+    "prompt": "Vad är en kulled?",
+    "correct": "en led som tillåter rörelse i flera riktningar",
+    "distractors": [
+      "en led som tillåter rotation",
+      "en gångjärnsled",
+      "en vridled"
+    ],
+    "topic": "osteologi_joints",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1046",
+    "type": "mc",
+    "prompt": "Vad är en vridled?",
+    "correct": "en led som tillåter rotation omkring en axel",
+    "distractors": [
+      "en kulled",
+      "en gångjärnsled",
+      "en glidled"
+    ],
+    "topic": "osteologi_joints",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1047",
+    "type": "mc",
+    "prompt": "Vad är en glidled?",
+    "correct": "en led där ben glider mot varandra med liten rörlighet",
+    "distractors": [
+      "en kulled",
+      "en gångjärnsled",
+      "en vridled"
+    ],
+    "topic": "osteologi_joints",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1048",
+    "type": "tf",
+    "prompt": "Gångjärnsleden är en enaxlig led",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_joints",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1049",
+    "type": "tf",
+    "prompt": "Kulleder är mera mobila än gångjärnsleder",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_joints",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1050",
+    "type": "tf",
+    "prompt": "Vridleder tillåter rotation runt en axel",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_joints",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1051",
+    "type": "mc",
+    "prompt": "Vilka leder är gångjärnsleder?",
+    "correct": "armbågsleden, knäleden, fingerlederna",
+    "distractors": [
+      "höftleden",
+      "axelleden",
+      "höftlederna"
+    ],
+    "topic": "osteologi_joints",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1052",
+    "type": "mc",
+    "prompt": "Vilka leder är kulleder?",
+    "correct": "axelleden och höftleden",
+    "distractors": [
+      "armbågsleden",
+      "knäleden",
+      "vertebrallederna"
+    ],
+    "topic": "osteologi_joints",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1053",
+    "type": "mc",
+    "prompt": "Vilka leder är vridleder?",
+    "correct": "atlantoaxiallleden (mellan C1 och C2)",
+    "distractors": [
+      "axelleden",
+      "höftleden",
+      "knäleden"
+    ],
+    "topic": "osteologi_joints",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1054",
+    "type": "tf",
+    "prompt": "Axelleden (articulatio humeri) är en kulled",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_joints",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1055",
+    "type": "tf",
+    "prompt": "Höftleden (articulatio coxae) är en kulled",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_joints",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1056",
+    "type": "tf",
+    "prompt": "Knäleden är en gångjärnsled",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_joints",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1057",
+    "type": "tf",
+    "prompt": "Armbågsleden är en kulled",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "osteologi_joints",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1058",
+    "type": "mc",
+    "prompt": "Vilken ledtyp tillåter mest rörlighet?",
+    "correct": "kulled (multi-axial)",
+    "distractors": [
+      "gångjärnsled",
+      "vridled",
+      "glidled"
+    ],
+    "topic": "osteologi_joints",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1059",
+    "type": "mc",
+    "prompt": "Vilken ledtyp tillåter endast rotation?",
+    "correct": "vridled (uni-axial)",
+    "distractors": [
+      "kulled",
+      "gångjärnsled",
+      "glidled"
+    ],
+    "topic": "osteologi_joints",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1060",
+    "type": "tf",
+    "prompt": "Karpallederna är glid-/glidleder med liten rörlighet",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_joints",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1061",
+    "type": "tf",
+    "prompt": "Fingerlederna är gångjärnsleder",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_joints",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1062",
+    "type": "mc",
+    "prompt": "Vad är osteoblaster?",
+    "correct": "benceller som bygger nytt ben",
+    "distractors": [
+      "mogna benceller",
+      "celler som bryter ner ben",
+      "odifferentierade stamceller"
+    ],
+    "topic": "osteologi_cells",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1063",
+    "type": "mc",
+    "prompt": "Vad är osteocyter?",
+    "correct": "mogna benceller som underhåller benmassan",
+    "distractors": [
+      "ungbenceller som bygger ben",
+      "celler som bryter ner ben",
+      "benceller i periosteum"
+    ],
+    "topic": "osteologi_cells",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1064",
+    "type": "mc",
+    "prompt": "Vad är osteoklaster?",
+    "correct": "benceller som bryter ner ben",
+    "distractors": [
+      "benceller som bygger ben",
+      "mogna benceller",
+      "benceller i periosteum"
+    ],
+    "topic": "osteologi_cells",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1065",
+    "type": "tf",
+    "prompt": "Osteoblaster bygger nytt ben",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_cells",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1066",
+    "type": "tf",
+    "prompt": "Osteocyter är de mest talrika bencellerna",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_cells",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1067",
+    "type": "tf",
+    "prompt": "Osteoklaster bryter ner ben",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_cells",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1068",
+    "type": "mc",
+    "prompt": "Vad är kompakt benvävnad?",
+    "correct": "tät benvävnad på benens yta",
+    "distractors": [
+      "lös benvävnad i benmärgen",
+      "sen och bindvävnad",
+      "ben-märgs vävnad"
+    ],
+    "topic": "osteologi_cells",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1069",
+    "type": "mc",
+    "prompt": "Vad är spongös benvävnad?",
+    "correct": "lös ben-vävnad med luftfyllda rum (trabekulär ben)",
+    "distractors": [
+      "tät benvävnad",
+      "ben-märgs vävnad",
+      "bindvävnad"
+    ],
+    "topic": "osteologi_cells",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1070",
+    "type": "tf",
+    "prompt": "Kompakt benvävnad är tätare än spongös benvävnad",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_cells",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1071",
+    "type": "tf",
+    "prompt": "Spongös benvävnad är lätt och kan absorbera chock",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_cells",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1072",
+    "type": "mc",
+    "prompt": "Vad är periosteum?",
+    "correct": "membran som omger benet utanpå",
+    "distractors": [
+      "membran på insidan av benet",
+      "ben-märg",
+      "ben-vävnaden själv"
+    ],
+    "topic": "osteologi_cells",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1073",
+    "type": "mc",
+    "prompt": "Vad är endosteum?",
+    "correct": "membran på insidan av benet som omger benmärgen",
+    "distractors": [
+      "membran utanpå benet",
+      "ben-märgen själv",
+      "ben-vävnaden själv"
+    ],
+    "topic": "osteologi_cells",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1074",
+    "type": "tf",
+    "prompt": "Periosteum innehåller blodkärl och nerver",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_cells",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1075",
+    "type": "tf",
+    "prompt": "Endosteum är viktigt för benets tillväxt",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_cells",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1076",
+    "type": "mc",
+    "prompt": "Vad är ligament?",
+    "correct": "fibrösa band av bindvävnad som förbinder ben",
+    "distractors": [
+      "senor som förbinder muskler med ben",
+      "membran runt benen",
+      "ben-märk själv"
+    ],
+    "topic": "osteologi_ligaments",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1077",
+    "type": "tf",
+    "prompt": "Ligament förbinder ben med ben",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_ligaments",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1078",
+    "type": "tf",
+    "prompt": "Senor förbinder muskler med ben",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_ligaments",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1079",
+    "type": "tf",
+    "prompt": "Ligament och senor är samma struktur",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "osteologi_ligaments",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1080",
+    "type": "mc",
+    "prompt": "Vilken är funktionen av ligament?",
+    "correct": "att stabilisera leder och begränsa rörelse",
+    "distractors": [
+      "att bygga ben",
+      "att tillåta maximal rörlighet",
+      "att föra nervimpulser"
+    ],
+    "topic": "osteologi_ligaments",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1081",
+    "type": "tf",
+    "prompt": "Strumma ligament möjliggör större ledstabilitet",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_ligaments",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1082",
+    "type": "tf",
+    "prompt": "Elastiska ligament möjliggör större rörlighet än strammare ligament",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_ligaments",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1083",
+    "type": "mc",
+    "prompt": "Vilka ligament är viktiga för knäledstabilitet?",
+    "correct": "collateral ligament och korslokaliserade ligament (ACL/PCL)",
+    "distractors": [
+      "bara senor",
+      "bara muskler",
+      "bara brosk"
+    ],
+    "topic": "osteologi_ligaments",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1084",
+    "type": "tf",
+    "prompt": "Höftleden har starka ligament för stabilitet",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_ligaments",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1085",
+    "type": "tf",
+    "prompt": "Axelleden har starkare ligament än höftleden",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "osteologi_ligaments",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1086",
+    "type": "mc",
+    "prompt": "Vad betyder proximalt?",
+    "correct": "närmast kroppen eller utgångspunkten",
+    "distractors": [
+      "långt från kroppen",
+      "mot sidan",
+      "mot centrum"
+    ],
+    "topic": "osteologi_orientation",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1087",
+    "type": "mc",
+    "prompt": "Vad betyder distalt?",
+    "correct": "långt från kroppen eller utgångspunkten",
+    "distractors": [
+      "närmast kroppen",
+      "mot sidan",
+      "mot centrum"
+    ],
+    "topic": "osteologi_orientation",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1088",
+    "type": "mc",
+    "prompt": "Vad betyder medial?",
+    "correct": "mot centerlinjen/mittlinjen av kroppen",
+    "distractors": [
+      "långt från mittlinjen",
+      "mot sidan",
+      "uppåt"
+    ],
+    "topic": "osteologi_orientation",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1089",
+    "type": "mc",
+    "prompt": "Vad betyder lateral?",
+    "correct": "långt från centerlinjen/mittlinjen av kroppen",
+    "distractors": [
+      "mot mittlinjen",
+      "toward the midline",
+      "uppåt"
+    ],
+    "topic": "osteologi_orientation",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1090",
+    "type": "tf",
+    "prompt": "Proximal betyder närmast kroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_orientation",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1091",
+    "type": "tf",
+    "prompt": "Distal betyder långt från kroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_orientation",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1092",
+    "type": "tf",
+    "prompt": "Medial betyder mot kroppens mittlinje",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_orientation",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1093",
+    "type": "tf",
+    "prompt": "Lateral betyder långt från kroppens mittlinje",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_orientation",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1094",
+    "type": "mc",
+    "prompt": "I underarmen är radius...",
+    "correct": "lateral (på tumvsidan)",
+    "distractors": [
+      "medial",
+      "proximal",
+      "distal"
+    ],
+    "topic": "osteologi_orientation",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1095",
+    "type": "mc",
+    "prompt": "I underarmen är ulna...",
+    "correct": "medial (på lillfingersidan)",
+    "distractors": [
+      "lateral",
+      "proximal",
+      "distal"
+    ],
+    "topic": "osteologi_orientation",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1096",
+    "type": "tf",
+    "prompt": "Radius ligger lateralt i pronationsposition",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_orientation",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1097",
+    "type": "tf",
+    "prompt": "Ulna ligger medial i pronationsposition",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_orientation",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1098",
+    "type": "mc",
+    "prompt": "Vilka ben utgör huvudsakligen skelettet?",
+    "correct": "axial skelett (kranium, vertebrala, thorax) och appendikulärt skelett (extremiteter)",
+    "distractors": [
+      "bara långben",
+      "bara kortben",
+      "bara plattben"
+    ],
+    "topic": "osteologi_summary",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1099",
+    "type": "tf",
+    "prompt": "Det axiala skelettet utgörs av kranium, ryggrad och bröstkorg",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_summary",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1100",
+    "type": "tf",
+    "prompt": "Det appendikulära skelettet utgörs av extremiteterna och deras gördlar",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_summary",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1101",
+    "type": "mc",
+    "prompt": "Hur många ben finns det ungefär i en vuxen människa?",
+    "correct": "206",
+    "distractors": [
+      "150",
+      "250",
+      "180"
+    ],
+    "topic": "osteologi_summary",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1102",
+    "type": "tf",
+    "prompt": "Barnskelettet har fler ben än vuxna",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_summary",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1103",
+    "type": "tf",
+    "prompt": "Några ben sammansmälts under utvecklingen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_summary",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1104",
+    "type": "mc",
+    "prompt": "Vilka är de viktigaste funktionerna av skelettbenen?",
+    "correct": "stödja kroppen, skydda organ, möjliggöra rörelse, producera blodceller",
+    "distractors": [
+      "bara stöd",
+      "bara skydd",
+      "bara rörelse"
+    ],
+    "topic": "osteologi_summary",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1105",
+    "type": "mc",
+    "prompt": "Vilka ben sitter i överarmen?",
+    "correct": "humerus",
+    "distractors": [
+      "radius och ulna",
+      "scapula",
+      "clavicula"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1106",
+    "type": "mc",
+    "prompt": "Vilka ben sitter i underarmen?",
+    "correct": "radius och ulna",
+    "distractors": [
+      "humerus",
+      "carpalbenen",
+      "metacarpalbenen"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1107",
+    "type": "mc",
+    "prompt": "Vilka ben sitter i handloven/handled?",
+    "correct": "carpalben (8)",
+    "distractors": [
+      "metacarpalben",
+      "phalanger",
+      "underarmben"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1108",
+    "type": "mc",
+    "prompt": "Vilka ben sitter i hand-mellanhanden?",
+    "correct": "metacarpalben (5)",
+    "distractors": [
+      "carpalben",
+      "phalanger",
+      "underarmben"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1109",
+    "type": "mc",
+    "prompt": "Vilka ben sitter i fingrarna?",
+    "correct": "phalanger (prox, media, distala)",
+    "distractors": [
+      "carpalben",
+      "metacarpalben",
+      "underarmben"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1110",
+    "type": "mc",
+    "prompt": "Vilka ben sitter i låret?",
+    "correct": "femur",
+    "distractors": [
+      "tibia och fibula",
+      "tarbenen",
+      "höftbenet"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1111",
+    "type": "mc",
+    "prompt": "Vilka ben sitter i knäregionen?",
+    "correct": "femur, tibia, fibula och patella",
+    "distractors": [
+      "bara tibia",
+      "bara patella",
+      "bara femur"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1112",
+    "type": "mc",
+    "prompt": "Vilka ben sitter i underbenet?",
+    "correct": "tibia och fibula",
+    "distractors": [
+      "femur",
+      "tarbenen",
+      "höftbenet"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1113",
+    "type": "mc",
+    "prompt": "Vilka ben sitter i ankeln?",
+    "correct": "tibia, fibula och talus",
+    "distractors": [
+      "tarbenen andra än talus",
+      "metatarsalbenen",
+      "höftbenet"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1114",
+    "type": "mc",
+    "prompt": "Vilka ben sitter i foten?",
+    "correct": "tarbenen, metatarsalbenen och phalanger",
+    "distractors": [
+      "bara tarbenen",
+      "bara metatarsalbenen",
+      "bara phalanger"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1115",
+    "type": "tf",
+    "prompt": "Scapula är en del av övre extremiteten",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1116",
+    "type": "tf",
+    "prompt": "Clavicula förbinder överarmen med bröstet",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1117",
+    "type": "tf",
+    "prompt": "Clavicula förbinder skulderbladet med sternum",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1118",
+    "type": "tf",
+    "prompt": "Höftbenet är en del av nedre extremiteten",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1119",
+    "type": "tf",
+    "prompt": "Korsbenet är direkt kopplat till höftbenen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1120",
+    "type": "tf",
+    "prompt": "Revben är anslutna till sternum framtill",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1121",
+    "type": "tf",
+    "prompt": "Revben är anslutna till bröstkotor baktill",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1122",
+    "type": "mc",
+    "prompt": "Vilken ben är mest lateral i underarmen vid pronation?",
+    "correct": "radius",
+    "distractors": [
+      "ulna",
+      "humerus",
+      "carpalben"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1123",
+    "type": "mc",
+    "prompt": "Vilken ben är mest medial i underarmen vid pronation?",
+    "correct": "ulna",
+    "distractors": [
+      "radius",
+      "humerus",
+      "carpalben"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1124",
+    "type": "mc",
+    "prompt": "Vilken ben är mest lateral i underbenet?",
+    "correct": "fibula",
+    "distractors": [
+      "tibia",
+      "femur",
+      "höftbenet"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1125",
+    "type": "mc",
+    "prompt": "Vilken ben är mest medial i underbenet?",
+    "correct": "tibia",
+    "distractors": [
+      "fibula",
+      "femur",
+      "höftbenet"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1126",
+    "type": "tf",
+    "prompt": "Radius ligger på tumvarsidan",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1127",
+    "type": "tf",
+    "prompt": "Ulna ligger på lillfingersidan",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1128",
+    "type": "tf",
+    "prompt": "Fibula ligger på långsädesidan av underbenet",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1129",
+    "type": "tf",
+    "prompt": "Tibia ligger på insidan av underbenet",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1130",
+    "type": "mc",
+    "prompt": "Vilket av dessa ben utgör det axiala skelettet?",
+    "correct": "kranium, ryggrad och bröstkorg",
+    "distractors": [
+      "extremiteterna",
+      "höftbenen",
+      "skulderbladet"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1131",
+    "type": "mc",
+    "prompt": "Vilket av dessa ben utgör det appendikulära skelettet?",
+    "correct": "extremiteterna och deras gördlar",
+    "distractors": [
+      "kranium",
+      "ryggrad",
+      "bröstkorg"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1132",
+    "type": "tf",
+    "prompt": "Det axiala skelettet utgörs av huvudet, ryggen och bröstet",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1133",
+    "type": "tf",
+    "prompt": "Det appendikulära skelettet utgörs av armarna, benen och deras gördlar",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1134",
+    "type": "mc",
+    "prompt": "Vilken del av lårbenet är närmast höftleden?",
+    "correct": "höftsidan (proximal)",
+    "distractors": [
+      "knäsidan",
+      "mittendelen",
+      "skaftets ände"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1135",
+    "type": "mc",
+    "prompt": "Vilken del av lårbenet är närmast knäleden?",
+    "correct": "knäsidan (distal)",
+    "distractors": [
+      "höftsidan",
+      "mittendelen",
+      "skaftets början"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1136",
+    "type": "tf",
+    "prompt": "Epifysis är benets änddel",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1137",
+    "type": "tf",
+    "prompt": "Diafysis är benets skaft eller mittendel",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1138",
+    "type": "tf",
+    "prompt": "Metafysis är området mellan epifysis och diafysis",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1139",
+    "type": "mc",
+    "prompt": "Vad är ett trochanterskallt ben ben?",
+    "correct": "den stora eller lilla knölen på lårbenet",
+    "distractors": [
+      "en process på skulderbladet",
+      "ett hål i benet",
+      "en fördjupning"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1140",
+    "type": "tf",
+    "prompt": "Trochanter major sitter på lårbenet",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1141",
+    "type": "tf",
+    "prompt": "Olecranon sitter på armbågsben (ulna)",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1142",
+    "type": "mc",
+    "prompt": "Vilken del av skulderbladet är högst?",
+    "correct": "acromion",
+    "distractors": [
+      "spina scapulae",
+      "processus coracoideus",
+      "cavitas glenoidale"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1143",
+    "type": "mc",
+    "prompt": "Vilken led förbinder överarmsbenet med underarmsbenen?",
+    "correct": "armbågsleden",
+    "distractors": [
+      "axelleden",
+      "handledsleden",
+      "höftleden"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1144",
+    "type": "mc",
+    "prompt": "Vilken led förbinder lårbenet med underbensbenen?",
+    "correct": "knäleden",
+    "distractors": [
+      "höftleden",
+      "ankelleden",
+      "höftleder"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1145",
+    "type": "mc",
+    "prompt": "Vilken led förbinder överarmsbenet med skulderbladet?",
+    "correct": "axelleden",
+    "distractors": [
+      "armbågsleden",
+      "handledsleden",
+      "nackleder"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1146",
+    "type": "mc",
+    "prompt": "Vilken led förbinder lårbenet med höftbenet?",
+    "correct": "höftleden",
+    "distractors": [
+      "knäleden",
+      "ankelleden",
+      "bäckenleden"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1147",
+    "type": "mc",
+    "prompt": "Vilket av dessa ben är inte i övre extremiteten?",
+    "correct": "femur",
+    "distractors": [
+      "humerus",
+      "radius",
+      "clavicula"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1148",
+    "type": "mc",
+    "prompt": "Vilket av dessa ben är inte i nedre extremiteten?",
+    "correct": "scapula",
+    "distractors": [
+      "femur",
+      "tibia",
+      "tarsalbenen"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1149",
+    "type": "mc",
+    "prompt": "Vilket av dessa ben är inte i skallen?",
+    "correct": "sternum",
+    "distractors": [
+      "pannbenet",
+      "underkäken",
+      "nackbenet"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1150",
+    "type": "mc",
+    "prompt": "Vilket av dessa ben är inte i bröstkassen?",
+    "correct": "höftbenet",
+    "distractors": [
+      "revben",
+      "sternum",
+      "bröstkotorna"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1151",
+    "type": "tf",
+    "prompt": "De flesta ben finns i par (ett på vardera sida)",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1152",
+    "type": "tf",
+    "prompt": "Sternum är ett oparat ben",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1153",
+    "type": "tf",
+    "prompt": "Pannbenet är ett parigt ben",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1154",
+    "type": "tf",
+    "prompt": "Höftbenen är ett parigt ben (två höftben)",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1155",
+    "type": "mc",
+    "prompt": "Vilka ben följer på varandra från proximalt till distalt i övre extremiteten?",
+    "correct": "humerus - radius/ulna - carpalben - metacarpalben - phalanger",
+    "distractors": [
+      "carpalben - humerus - phalanger",
+      "scapula - humerus - femur",
+      "clavicula - radius - tarbenen"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1156",
+    "type": "mc",
+    "prompt": "Vilka ben följer på varandra från proximalt till distalt i nedre extremiteten?",
+    "correct": "femur - tibia/fibula - tarbenen - metatarsalbenen - phalanger",
+    "distractors": [
+      "tarbenen - femur - phalanger",
+      "höftbenet - femur - humerus",
+      "höftbenet - tibia - radius"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1157",
+    "type": "mc",
+    "prompt": "Vilka ben utgör greppet när man tar något?",
+    "correct": "carpalbenen för stabilitet, metacarpalben och phalanger för rörelse",
+    "distractors": [
+      "bara phalanger",
+      "bara carpalben",
+      "bara metacarpalben"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1158",
+    "type": "mc",
+    "prompt": "Vilka ben är viktigast för att stå och gå?",
+    "correct": "femur, tibia, fibula, tarbenen för stöd och rörelse",
+    "distractors": [
+      "bara femur",
+      "bara tarbenen",
+      "bara höftbenen"
+    ],
+    "topic": "osteologi_placement",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1159",
+    "type": "mc",
+    "prompt": "Vilka leder är gångjärnsleder mellan fingerlederna?",
+    "correct": "interphalangealleder (mellan phalanger)",
+    "distractors": [
+      "carpal-metacarpal leder",
+      "metacarpal-phalangeal leder",
+      "radioulnar leder"
+    ],
+    "topic": "osteologi_joints",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1160",
+    "type": "mc",
+    "prompt": "Vilka leder är gångjärnsleder mellan tårna?",
+    "correct": "interphalangealleder i foten",
+    "distractors": [
+      "tarsal-metatarsal leder",
+      "metatarsal-phalangeal leder",
+      "ankle joint"
+    ],
+    "topic": "osteologi_joints",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1161",
+    "type": "tf",
+    "prompt": "Karpometakarpalleder är kulleder",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_joints",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1162",
+    "type": "tf",
+    "prompt": "Radioulnarleder möjliggör pronation och supination",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_joints",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1163",
+    "type": "mc",
+    "prompt": "Vilka är karakteristiska för långben?",
+    "correct": "två ändar (epifyser) och ett långt skaft (diafysis)",
+    "distractors": [
+      "ungefär lika långa som breda",
+      "tunna och platta",
+      "oregelbundna former"
+    ],
+    "topic": "osteologi_types",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1164",
+    "type": "tf",
+    "prompt": "Metacarpalbenen är långben",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_types",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1165",
+    "type": "tf",
+    "prompt": "Metatarsalbenen är långben",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_types",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1166",
+    "type": "tf",
+    "prompt": "Phalanxbenen i fingrar och tår är långben",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_types",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1167",
+    "type": "mc",
+    "prompt": "Vilka ben är exempel på kortben i foten?",
+    "correct": "tarbenen (talus, calcaneus, naviculare, cuboid, etc)",
+    "distractors": [
+      "metatarsalbenen",
+      "phalanger",
+      "höftbenet"
+    ],
+    "topic": "osteologi_types",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1168",
+    "type": "mc",
+    "prompt": "Vilka ben är platta ben som skyddar hjärnan?",
+    "correct": "skallbenen (pannben, hjässben, nackben, tinningben)",
+    "distractors": [
+      "revben",
+      "höftbenen",
+      "långben"
+    ],
+    "topic": "osteologi_types",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1169",
+    "type": "tf",
+    "prompt": "Revbenen är platta ben",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_types",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1170",
+    "type": "tf",
+    "prompt": "Höftbenen är oregelbundna ben",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "osteologi_types",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1171",
+    "type": "mc",
+    "prompt": "Vilka är benvävnadens tre huvudtyper av celler?",
+    "correct": "osteoblaster, osteocyter, osteoklaster",
+    "distractors": [
+      "osteoblaster, osteocyter, osteogena celler",
+      "bara osteoblaster",
+      "bara osteocyter"
+    ],
+    "topic": "osteologi_cells",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1172",
+    "type": "tf",
+    "prompt": "Osteoblaster kan bli osteocyter när de blir inbäddade i ben",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_cells",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1173",
+    "type": "tf",
+    "prompt": "Osteoklaster utvecklas från blodets vita blodkroppar (monocyter)",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_cells",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1174",
+    "type": "mc",
+    "prompt": "Vad är benets längd-tillväxt möjliggord av?",
+    "correct": "epifysiska skivorna (tillväxtzoner)",
+    "distractors": [
+      "periosteum",
+      "endosteum",
+      "benmärgen"
+    ],
+    "topic": "osteologi_cells",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1175",
+    "type": "tf",
+    "prompt": "Epifysiska skivorna stänger efter puberteten",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_cells",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1176",
+    "type": "tf",
+    "prompt": "Efter att epifysiska skivorna stängs kan ben inte växa längre",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_cells",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1177",
+    "type": "mc",
+    "prompt": "Vilka ligament stabiliserar knäleden?",
+    "correct": "collateral ligament, korslokaliserade ligament (ACL/PCL), patella ligament",
+    "distractors": [
+      "bara collateral ligament",
+      "bara ACL",
+      "bara patella ligament"
+    ],
+    "topic": "osteologi_ligaments",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1178",
+    "type": "mc",
+    "prompt": "Vilka ligament stabiliserar höftleden?",
+    "correct": "iliofemoral ligament, pubofemoral ligament, ischiofemoral ligament",
+    "distractors": [
+      "bara iliofemoral",
+      "bara en ligament",
+      "inga ligament"
+    ],
+    "topic": "osteologi_ligaments",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1179",
+    "type": "tf",
+    "prompt": "Höftledligamenten är starkare än axelledligamenten",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_ligaments",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1180",
+    "type": "tf",
+    "prompt": "Axelleden har svagare ligament men starkare muskler runt omkring",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_ligaments",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1181",
+    "type": "mc",
+    "prompt": "Vilken är det största benet i kroppen?",
+    "correct": "femur (lårbenet)",
+    "distractors": [
+      "humerus",
+      "tibia",
+      "höftbenet"
+    ],
+    "topic": "osteologi_summary",
+    "difficulty": "Easy",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1182",
+    "type": "mc",
+    "prompt": "Vilken är det minsta benet i kroppen?",
+    "correct": "stapesius (i innerörat)",
+    "distractors": [
+      "periosteum",
+      "talus",
+      "pisiforme"
+    ],
+    "topic": "osteologi_summary",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1183",
+    "type": "tf",
+    "prompt": "Femuret är längre än tibia",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_summary",
+    "difficulty": "Normal",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1184",
+    "type": "mc",
+    "prompt": "Vad motsätter sig det mest till att ben brister?",
+    "correct": "kollagen-innehål och mineralinnehål tillsammans",
+    "distractors": [
+      "bara mineraler",
+      "bara kollagen",
+      "bara vatten"
+    ],
+    "topic": "osteologi_summary",
+    "difficulty": "Hard",
+    "source": "Osteologi"
+  },
+  {
+    "id": "q1185",
+    "type": "tf",
+    "prompt": "Benmassa ökar genom livet och når maksimum vid 30 års ålder",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "osteologi_summary",
+    "difficulty": "Hard",
+    "source": "Osteologi"
   }
 ]
