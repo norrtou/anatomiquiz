@@ -649,9 +649,10 @@ ol li {
 @media (max-width: 640px) {
   .quiz-footer {
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
   }
 
   .quiz-actions {
