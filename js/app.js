@@ -325,65 +325,6 @@ function clearScores(){
   showHighscores()
 }
 
-}
-
-}
-
-    btn.textContent = '🔊'
-    btn.classList.remove('off')
-  } else {
-    btn.textContent = '🔇'
-    btn.classList.add('off')
-  }
-}
-
-  }
-  // Resume context on mobile if suspended
-  }
-}
-
-  try {
-    const now = ctx.currentTime
-    const osc = ctx.createOscillator()
-    const gain = ctx.createGain()
-
-    osc.connect(gain)
-    gain.connect(ctx.destination)
-
-    gain.gain.setValueAtTime(0.15, now)
-    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.3)
-
-    osc.frequency.setValueAtTime(800, now)
-    osc.frequency.exponentialRampToValueAtTime(1200, now + 0.1)
-    osc.frequency.exponentialRampToValueAtTime(800, now + 0.3)
-
-    osc.start(now)
-    osc.stop(now + 0.3)
-  } catch(e) {
-  }
-}
-
-  try {
-    const now = ctx.currentTime
-    const osc = ctx.createOscillator()
-    const gain = ctx.createGain()
-
-    osc.connect(gain)
-    gain.connect(ctx.destination)
-
-    gain.gain.setValueAtTime(0.15, now)
-    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.4)
-
-    osc.frequency.setValueAtTime(400, now)
-    osc.frequency.exponentialRampToValueAtTime(300, now + 0.2)
-    osc.frequency.exponentialRampToValueAtTime(200, now + 0.4)
-
-    osc.start(now)
-    osc.stop(now + 0.4)
-  } catch(e) {
-  }
-}
-
 // Render management UI for up to MAX_QUESTIONS questions
 function renderManage(){
   const container = el('manageList')
