@@ -1103,9 +1103,7 @@
     "prompt": "En rörelse från mittlinjen kallas:",
     "correct": "Abduktion",
     "distractors": [
-      "Adduktion",
-      "Flexion",
-      "Extension"
+      "Adduktion"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -1114,40 +1112,34 @@
   {
     "id": "q83",
     "type": "mc",
-    "prompt": "En rörelse från mittlinjen kallas:",
-    "correct": "Abduktion",
+    "prompt": "En rörelse mot mittlinjen kallas:",
+    "correct": "Adduktion",
     "distractors": [
-      "Adduktion",
-      "Flexion",
-      "Extension"
+      "Abduktion"
     ],
     "topic": "begrepp",
-    "difficulty": "Easy",
+    "difficulty": "Normal",
     "source": "Terminologi"
   },
   {
     "id": "q84",
     "type": "mc",
-    "prompt": "En rörelse från mittlinjen kallas:",
-    "correct": "Abduktion",
+    "prompt": "Böjning av en led kallas?",
+    "correct": "Flexion",
     "distractors": [
-      "Adduktion",
-      "Flexion",
       "Extension"
     ],
     "topic": "begrepp",
-    "difficulty": "Easy",
+    "difficulty": "Normal",
     "source": "Terminologi"
   },
   {
     "id": "q85",
     "type": "mc",
-    "prompt": "En rörelse mot mittlinjen kallas:",
-    "correct": "Adduktion",
+    "prompt": "Sträckning av en led kallas?",
+    "correct": "Extension",
     "distractors": [
-      "Abduktion",
-      "Extension",
-      "Rotation"
+      "Flexion"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -1156,40 +1148,40 @@
   {
     "id": "q86",
     "type": "mc",
-    "prompt": "En rörelse mot mittlinjen kallas:",
-    "correct": "Adduktion",
+    "prompt": "Vad är motsatsen till flexion?",
+    "correct": "Extension",
     "distractors": [
       "Abduktion",
-      "Extension",
+      "Adduktion",
       "Rotation"
     ],
     "topic": "begrepp",
-    "difficulty": "Easy",
+    "difficulty": "Normal",
     "source": "Terminologi"
   },
   {
     "id": "q87",
     "type": "mc",
-    "prompt": "En rörelse mot mittlinjen kallas:",
-    "correct": "Adduktion",
+    "prompt": "Vad är motsatsen till dorsal?",
+    "correct": "Ventral",
     "distractors": [
-      "Abduktion",
-      "Extension",
-      "Rotation"
+      "Lateral",
+      "Medial",
+      "Proximal"
     ],
     "topic": "begrepp",
-    "difficulty": "Easy",
+    "difficulty": "Normal",
     "source": "Terminologi"
   },
   {
     "id": "q88",
     "type": "mc",
-    "prompt": "Böjning av en led kallas?",
-    "correct": "Flexion",
+    "prompt": "Vad är motsatsen till superior?",
+    "correct": "Inferior",
     "distractors": [
-      "Extension",
-      "Rotation",
-      "Inversion"
+      "Anterior",
+      "Posterior",
+      "Distal"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -1198,38 +1190,38 @@
   {
     "id": "q89",
     "type": "mc",
-    "prompt": "Böjning av en led kallas?",
-    "correct": "Flexion",
+    "prompt": "Vad är motsatsen till anterior?",
+    "correct": "Posterior",
     "distractors": [
-      "Extension",
-      "Rotation",
-      "Inversion"
+      "Superior",
+      "Distal",
+      "Lateral"
     ],
     "topic": "begrepp",
-    "difficulty": "Easy",
+    "difficulty": "Normal",
     "source": "Terminologi"
   },
   {
     "id": "q90",
     "type": "mc",
-    "prompt": "Böjning av en led kallas?",
-    "correct": "Flexion",
+    "prompt": "En rotation inåt kallas:",
+    "correct": "Inåtrotation",
     "distractors": [
-      "Extension",
-      "Rotation",
-      "Inversion"
+      "Utåtrotation",
+      "Flexion",
+      "Extension"
     ],
     "topic": "begrepp",
-    "difficulty": "Easy",
+    "difficulty": "Normal",
     "source": "Terminologi"
   },
   {
     "id": "q91",
     "type": "mc",
-    "prompt": "Sträckning av en led kallas?",
-    "correct": "Extension",
+    "prompt": "En rotation utåt kallas:",
+    "correct": "Utåtrotation",
     "distractors": [
-      "Flexion",
+      "Inåtrotation",
       "Abduktion",
       "Adduktion"
     ],
@@ -1240,40 +1232,40 @@
   {
     "id": "q92",
     "type": "mc",
-    "prompt": "Sträckning av en led kallas?",
-    "correct": "Extension",
+    "prompt": "En cirkulär rörelse kallas:",
+    "correct": "Cirkumduktion",
     "distractors": [
+      "Rotation",
       "Flexion",
-      "Abduktion",
-      "Adduktion"
+      "Abduktion"
     ],
     "topic": "begrepp",
-    "difficulty": "Easy",
+    "difficulty": "Normal",
     "source": "Terminologi"
   },
   {
     "id": "q93",
     "type": "mc",
-    "prompt": "Sträckning av en led kallas?",
-    "correct": "Extension",
+    "prompt": "Handflatan är på den sidan som kallas?",
+    "correct": "Palmar / Volar",
     "distractors": [
-      "Flexion",
-      "Abduktion",
-      "Adduktion"
+      "Dorsal",
+      "Tibial",
+      "Fibular"
     ],
     "topic": "begrepp",
-    "difficulty": "Easy",
+    "difficulty": "Normal",
     "source": "Terminologi"
   },
   {
     "id": "q94",
     "type": "mc",
-    "prompt": "Vad är motsatsen till flexion?",
-    "correct": "Extension",
+    "prompt": "Handflatan roterad uppåt kallas?",
+    "correct": "Supination",
     "distractors": [
-      "Abduktion",
-      "Adduktion",
-      "Rotation"
+      "Pronation",
+      "Dorsiflexion",
+      "Plantarflexion"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -1282,40 +1274,40 @@
   {
     "id": "q95",
     "type": "mc",
-    "prompt": "Vad är motsatsen till flexion?",
-    "correct": "Extension",
+    "prompt": "Handflatan roterad nedåt kallas?",
+    "correct": "Pronation",
     "distractors": [
-      "Abduktion",
-      "Adduktion",
-      "Rotation"
+      "Supination",
+      "Inversion",
+      "Eversion"
     ],
     "topic": "begrepp",
-    "difficulty": "Easy",
+    "difficulty": "Normal",
     "source": "Terminologi"
   },
   {
     "id": "q96",
     "type": "mc",
-    "prompt": "Vad är motsatsen till flexion?",
-    "correct": "Extension",
+    "prompt": "Foten dragen upp kallas?",
+    "correct": "Dorsalflexion",
     "distractors": [
-      "Abduktion",
-      "Adduktion",
-      "Rotation"
+      "Plantarflexion",
+      "Inversion",
+      "Eversion"
     ],
     "topic": "begrepp",
-    "difficulty": "Easy",
+    "difficulty": "Normal",
     "source": "Terminologi"
   },
   {
     "id": "q97",
     "type": "mc",
-    "prompt": "Vad är motsatsen till dorsal?",
-    "correct": "Ventral",
+    "prompt": "Foten pressad ned kallas?",
+    "correct": "Plantarflexion",
     "distractors": [
-      "Lateral",
-      "Medial",
-      "Proximal"
+      "Dorsalflexion",
+      "Eversion",
+      "Inversion"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -1324,39 +1316,37 @@
   {
     "id": "q98",
     "type": "mc",
-    "prompt": "Vad är motsatsen till dorsal?",
-    "correct": "Ventral",
+    "prompt": "Fotsula roterad inåt kallas?",
+    "correct": "Inversion",
     "distractors": [
-      "Lateral",
-      "Medial",
-      "Proximal"
+      "Eversion",
+      "Dorsalflexion",
+      "Plantarflexion"
     ],
     "topic": "begrepp",
-    "difficulty": "Easy",
+    "difficulty": "Normal",
     "source": "Terminologi"
   },
   {
     "id": "q99",
     "type": "mc",
-    "prompt": "Vad är motsatsen till dorsal?",
-    "correct": "Ventral",
+    "prompt": "Fotsula roterad utåt kallas?",
+    "correct": "Eversion",
     "distractors": [
-      "Lateral",
-      "Medial",
-      "Proximal"
+      "Inversion",
+      "Plantarflexion",
+      "Dorsalflexion"
     ],
     "topic": "begrepp",
-    "difficulty": "Easy",
+    "difficulty": "Normal",
     "source": "Terminologi"
   },
   {
     "id": "q100",
     "type": "mc",
-    "prompt": "Vad är motsatsen till superior?",
-    "correct": "Inferior",
+    "prompt": "En struktur som är närmare ursprunget är:",
+    "correct": "Proximal",
     "distractors": [
-      "Anterior",
-      "Posterior",
       "Distal"
     ],
     "topic": "begrepp",
@@ -1366,579 +1356,17 @@
   {
     "id": "q101",
     "type": "mc",
-    "prompt": "Vad är motsatsen till superior?",
-    "correct": "Inferior",
+    "prompt": "En struktur som är längre från ursprunget är:",
+    "correct": "Distal",
     "distractors": [
-      "Anterior",
-      "Posterior",
-      "Distal"
+      "Proximal"
     ],
     "topic": "begrepp",
-    "difficulty": "Easy",
+    "difficulty": "Normal",
     "source": "Terminologi"
   },
   {
     "id": "q102",
-    "type": "mc",
-    "prompt": "Vad är motsatsen till superior?",
-    "correct": "Inferior",
-    "distractors": [
-      "Anterior",
-      "Posterior",
-      "Distal"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q103",
-    "type": "mc",
-    "prompt": "Vad är motsatsen till anterior?",
-    "correct": "Posterior",
-    "distractors": [
-      "Superior",
-      "Distal",
-      "Lateral"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q104",
-    "type": "mc",
-    "prompt": "Vad är motsatsen till anterior?",
-    "correct": "Posterior",
-    "distractors": [
-      "Superior",
-      "Distal",
-      "Lateral"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q105",
-    "type": "mc",
-    "prompt": "Vad är motsatsen till anterior?",
-    "correct": "Posterior",
-    "distractors": [
-      "Superior",
-      "Distal",
-      "Lateral"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q106",
-    "type": "mc",
-    "prompt": "En rotation inåt kallas:",
-    "correct": "Inåtrotation",
-    "distractors": [
-      "Utåtrotation",
-      "Flexion",
-      "Extension"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q107",
-    "type": "mc",
-    "prompt": "En rotation inåt kallas:",
-    "correct": "Inåtrotation",
-    "distractors": [
-      "Utåtrotation",
-      "Flexion",
-      "Extension"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q108",
-    "type": "mc",
-    "prompt": "En rotation inåt kallas:",
-    "correct": "Inåtrotation",
-    "distractors": [
-      "Utåtrotation",
-      "Flexion",
-      "Extension"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q109",
-    "type": "mc",
-    "prompt": "En rotation utåt kallas:",
-    "correct": "Utåtrotation",
-    "distractors": [
-      "Inåtrotation",
-      "Abduktion",
-      "Adduktion"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q110",
-    "type": "mc",
-    "prompt": "En rotation utåt kallas:",
-    "correct": "Utåtrotation",
-    "distractors": [
-      "Inåtrotation",
-      "Abduktion",
-      "Adduktion"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q111",
-    "type": "mc",
-    "prompt": "En rotation utåt kallas:",
-    "correct": "Utåtrotation",
-    "distractors": [
-      "Inåtrotation",
-      "Abduktion",
-      "Adduktion"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q112",
-    "type": "mc",
-    "prompt": "En cirkulär rörelse kallas:",
-    "correct": "Cirkumduktion",
-    "distractors": [
-      "Rotation",
-      "Flexion",
-      "Abduktion"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q113",
-    "type": "mc",
-    "prompt": "En cirkulär rörelse kallas:",
-    "correct": "Cirkumduktion",
-    "distractors": [
-      "Rotation",
-      "Flexion",
-      "Abduktion"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q114",
-    "type": "mc",
-    "prompt": "En cirkulär rörelse kallas:",
-    "correct": "Cirkumduktion",
-    "distractors": [
-      "Rotation",
-      "Flexion",
-      "Abduktion"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q115",
-    "type": "mc",
-    "prompt": "Handflatan är på den sidan som kallas?",
-    "correct": "Palmar / Volar",
-    "distractors": [
-      "Dorsal",
-      "Tibial",
-      "Fibular"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q116",
-    "type": "mc",
-    "prompt": "Handflatan är på den sidan som kallas?",
-    "correct": "Palmar / Volar",
-    "distractors": [
-      "Dorsal",
-      "Tibial",
-      "Fibular"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q117",
-    "type": "mc",
-    "prompt": "Handflatan är på den sidan som kallas?",
-    "correct": "Palmar / Volar",
-    "distractors": [
-      "Dorsal",
-      "Tibial",
-      "Fibular"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q118",
-    "type": "mc",
-    "prompt": "Handflatan roterad uppåt kallas?",
-    "correct": "Supination",
-    "distractors": [
-      "Pronation",
-      "Dorsiflexion",
-      "Plantarflexion"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q119",
-    "type": "mc",
-    "prompt": "Handflatan roterad uppåt kallas?",
-    "correct": "Supination",
-    "distractors": [
-      "Pronation",
-      "Dorsiflexion",
-      "Plantarflexion"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q120",
-    "type": "mc",
-    "prompt": "Handflatan roterad uppåt kallas?",
-    "correct": "Supination",
-    "distractors": [
-      "Pronation",
-      "Dorsiflexion",
-      "Plantarflexion"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q121",
-    "type": "mc",
-    "prompt": "Handflatan roterad nedåt kallas?",
-    "correct": "Pronation",
-    "distractors": [
-      "Supination",
-      "Inversion",
-      "Eversion"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q122",
-    "type": "mc",
-    "prompt": "Handflatan roterad nedåt kallas?",
-    "correct": "Pronation",
-    "distractors": [
-      "Supination",
-      "Inversion",
-      "Eversion"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q123",
-    "type": "mc",
-    "prompt": "Handflatan roterad nedåt kallas?",
-    "correct": "Pronation",
-    "distractors": [
-      "Supination",
-      "Inversion",
-      "Eversion"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q124",
-    "type": "mc",
-    "prompt": "Foten dragen upp kallas?",
-    "correct": "Dorsalflexion",
-    "distractors": [
-      "Plantarflexion",
-      "Inversion",
-      "Eversion"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q125",
-    "type": "mc",
-    "prompt": "Foten dragen upp kallas?",
-    "correct": "Dorsalflexion",
-    "distractors": [
-      "Plantarflexion",
-      "Inversion",
-      "Eversion"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q126",
-    "type": "mc",
-    "prompt": "Foten dragen upp kallas?",
-    "correct": "Dorsalflexion",
-    "distractors": [
-      "Plantarflexion",
-      "Inversion",
-      "Eversion"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q127",
-    "type": "mc",
-    "prompt": "Foten pressad ned kallas?",
-    "correct": "Plantarflexion",
-    "distractors": [
-      "Dorsalflexion",
-      "Eversion",
-      "Inversion"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q128",
-    "type": "mc",
-    "prompt": "Foten pressad ned kallas?",
-    "correct": "Plantarflexion",
-    "distractors": [
-      "Dorsalflexion",
-      "Eversion",
-      "Inversion"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q129",
-    "type": "mc",
-    "prompt": "Foten pressad ned kallas?",
-    "correct": "Plantarflexion",
-    "distractors": [
-      "Dorsalflexion",
-      "Eversion",
-      "Inversion"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q130",
-    "type": "mc",
-    "prompt": "Fotsula roterad inåt kallas?",
-    "correct": "Inversion",
-    "distractors": [
-      "Eversion",
-      "Dorsalflexion",
-      "Plantarflexion"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q131",
-    "type": "mc",
-    "prompt": "Fotsula roterad inåt kallas?",
-    "correct": "Inversion",
-    "distractors": [
-      "Eversion",
-      "Dorsalflexion",
-      "Plantarflexion"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q132",
-    "type": "mc",
-    "prompt": "Fotsula roterad inåt kallas?",
-    "correct": "Inversion",
-    "distractors": [
-      "Eversion",
-      "Dorsalflexion",
-      "Plantarflexion"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q133",
-    "type": "mc",
-    "prompt": "Fotsula roterad utåt kallas?",
-    "correct": "Eversion",
-    "distractors": [
-      "Inversion",
-      "Plantarflexion",
-      "Dorsalflexion"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q134",
-    "type": "mc",
-    "prompt": "Fotsula roterad utåt kallas?",
-    "correct": "Eversion",
-    "distractors": [
-      "Inversion",
-      "Plantarflexion",
-      "Dorsalflexion"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q135",
-    "type": "mc",
-    "prompt": "Fotsula roterad utåt kallas?",
-    "correct": "Eversion",
-    "distractors": [
-      "Inversion",
-      "Plantarflexion",
-      "Dorsalflexion"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q136",
-    "type": "mc",
-    "prompt": "En struktur som är närmare ursprunget är:",
-    "correct": "Proximal",
-    "distractors": [
-      "Distal",
-      "Superficial",
-      "Deep"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q137",
-    "type": "mc",
-    "prompt": "En struktur som är närmare ursprunget är:",
-    "correct": "Proximal",
-    "distractors": [
-      "Distal",
-      "Superficial",
-      "Deep"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q138",
-    "type": "mc",
-    "prompt": "En struktur som är närmare ursprunget är:",
-    "correct": "Proximal",
-    "distractors": [
-      "Distal",
-      "Superficial",
-      "Deep"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q139",
-    "type": "mc",
-    "prompt": "En struktur som är längre från ursprunget är:",
-    "correct": "Distal",
-    "distractors": [
-      "Proximal",
-      "Superficial",
-      "Deep"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q140",
-    "type": "mc",
-    "prompt": "En struktur som är längre från ursprunget är:",
-    "correct": "Distal",
-    "distractors": [
-      "Proximal",
-      "Superficial",
-      "Deep"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q141",
-    "type": "mc",
-    "prompt": "En struktur som är längre från ursprunget är:",
-    "correct": "Distal",
-    "distractors": [
-      "Proximal",
-      "Superficial",
-      "Deep"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q142",
     "type": "mc",
     "prompt": "Hjärtat ligger ____ från magen",
     "correct": "Superior",
@@ -1952,13 +1380,23 @@
     "source": "Terminologi"
   },
   {
-    "id": "q143",
+    "id": "q103",
     "type": "mc",
     "prompt": "Tårna ligger ____ från höfterna",
     "correct": "Distal",
     "distractors": [
-      "Proximal",
-      "Superior",
+      "Proximal"
+    ],
+    "topic": "riktningar",
+    "difficulty": "Normal",
+    "source": "Terminologi"
+  },
+  {
+    "id": "q104",
+    "type": "mc",
+    "prompt": "Hörseln ligger ____ från hjärtat",
+    "correct": "Lateral",
+    "distractors": [
       "Medial"
     ],
     "topic": "riktningar",
@@ -1966,21 +1404,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q144",
-    "type": "mc",
-    "prompt": "Hörseln ligger ____ från hjärtat",
-    "correct": "Lateral",
-    "distractors": [
-      "Medial",
-      "Superior",
-      "Distal"
-    ],
-    "topic": "riktningar",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q145",
+    "id": "q105",
     "type": "mc",
     "prompt": "Hudytan är ____ jämfört med musklerna",
     "correct": "Superficial",
@@ -1994,7 +1418,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q146",
+    "id": "q106",
     "type": "mc",
     "prompt": "Benen ligger ____ från bröstet",
     "correct": "Inferior",
@@ -2008,21 +1432,19 @@
     "source": "Terminologi"
   },
   {
-    "id": "q147",
+    "id": "q107",
     "type": "mc",
     "prompt": "Tummen ligger ____ från lillfingret",
     "correct": "Lateral",
     "distractors": [
-      "Medial",
-      "Distal",
-      "Proximal"
+      "Medial"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
     "source": "Terminologi"
   },
   {
-    "id": "q148",
+    "id": "q108",
     "type": "mc",
     "prompt": "Djupa strukturer är ____ jämfört med hudmärken",
     "correct": "Profundus",
@@ -2036,13 +1458,47 @@
     "source": "Terminologi"
   },
   {
-    "id": "q149",
+    "id": "q109",
     "type": "mc",
     "prompt": "När du böjer armen i armbågen sker en _____ i armbågsleden",
     "correct": "Flexion",
     "distractors": [
-      "Extension",
-      "Rotation",
+      "Extension"
+    ],
+    "topic": "rörelser",
+    "difficulty": "Normal",
+    "source": "Terminologi"
+  },
+  {
+    "id": "q110",
+    "type": "mc",
+    "prompt": "När du sträcker armen ut sker en _____ i armbågsleden",
+    "correct": "Extension",
+    "distractors": [
+      "Flexion"
+    ],
+    "topic": "rörelser",
+    "difficulty": "Normal",
+    "source": "Terminologi"
+  },
+  {
+    "id": "q111",
+    "type": "mc",
+    "prompt": "När du drar armen bort från kroppen sker en _____",
+    "correct": "Abduktion",
+    "distractors": [
+      "Adduktion"
+    ],
+    "topic": "rörelser",
+    "difficulty": "Normal",
+    "source": "Terminologi"
+  },
+  {
+    "id": "q112",
+    "type": "mc",
+    "prompt": "När du för armen mot kroppen sker en _____",
+    "correct": "Adduktion",
+    "distractors": [
       "Abduktion"
     ],
     "topic": "rörelser",
@@ -2050,49 +1506,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q150",
-    "type": "mc",
-    "prompt": "När du sträcker armen ut sker en _____ i armbågsleden",
-    "correct": "Extension",
-    "distractors": [
-      "Flexion",
-      "Adduktion",
-      "Inversion"
-    ],
-    "topic": "rörelser",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q151",
-    "type": "mc",
-    "prompt": "När du drar armen bort från kroppen sker en _____",
-    "correct": "Abduktion",
-    "distractors": [
-      "Adduktion",
-      "Flexion",
-      "Rotation"
-    ],
-    "topic": "rörelser",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q152",
-    "type": "mc",
-    "prompt": "När du för armen mot kroppen sker en _____",
-    "correct": "Adduktion",
-    "distractors": [
-      "Abduktion",
-      "Extension",
-      "Eversion"
-    ],
-    "topic": "rörelser",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q153",
+    "id": "q113",
     "type": "mc",
     "prompt": "När du drejer huvudet åt sidan sker en _____",
     "correct": "Rotation",
@@ -2106,21 +1520,19 @@
     "source": "Terminologi"
   },
   {
-    "id": "q154",
+    "id": "q114",
     "type": "mc",
     "prompt": "När du lutar huvudet åt sidan sker en _____",
     "correct": "Lateralflexion",
     "distractors": [
-      "Flexion",
-      "Extension",
-      "Rotation"
+      "Extension"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
     "source": "Terminologi"
   },
   {
-    "id": "q155",
+    "id": "q115",
     "type": "mc",
     "prompt": "En snurrande rörelse kallas _____",
     "correct": "Cirkumduktion",
@@ -2134,7 +1546,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q156",
+    "id": "q116",
     "type": "mc",
     "prompt": "Stå och rotera handflatorna uppåt - det är _____",
     "correct": "Supination",
@@ -2148,7 +1560,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q157",
+    "id": "q117",
     "type": "mc",
     "prompt": "Stå och rotera handflatorna nedåt - det är _____",
     "correct": "Pronation",
@@ -2162,13 +1574,11 @@
     "source": "Terminologi"
   },
   {
-    "id": "q158",
+    "id": "q118",
     "type": "mc",
     "prompt": "Dra tåna uppåt från golvet - det är _____",
     "correct": "Dorsalflexion",
     "distractors": [
-      "Plantarflexion",
-      "Inversion",
       "Extension"
     ],
     "topic": "rörelser",
@@ -2176,7 +1586,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q159",
+    "id": "q119",
     "type": "mc",
     "prompt": "Peka med tåna - det är _____",
     "correct": "Plantarflexion",
@@ -2190,7 +1600,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q160",
+    "id": "q120",
     "type": "mc",
     "prompt": "Vänd fotsulorna inåt - det är _____",
     "correct": "Inversion",
@@ -2204,7 +1614,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q161",
+    "id": "q121",
     "type": "mc",
     "prompt": "Vänd fotsulorna utåt - det är _____",
     "correct": "Eversion",
@@ -2218,7 +1628,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q162",
+    "id": "q122",
     "type": "tf",
     "prompt": "Flexion innebär att öka vinkeln mellan två ben",
     "correct": "Falskt",
@@ -2230,7 +1640,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q163",
+    "id": "q123",
     "type": "tf",
     "prompt": "Extension innebär att minska vinkeln mellan två ben",
     "correct": "Falskt",
@@ -2242,7 +1652,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q164",
+    "id": "q124",
     "type": "tf",
     "prompt": "Abduktion är rörelse från mittlinjen",
     "correct": "Sant",
@@ -2254,7 +1664,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q165",
+    "id": "q125",
     "type": "tf",
     "prompt": "Adduktion är rörelse från mittlinjen",
     "correct": "Falskt",
@@ -2266,7 +1676,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q166",
+    "id": "q126",
     "type": "tf",
     "prompt": "Pronation är när handflatan roteras nedåt",
     "correct": "Sant",
@@ -2278,7 +1688,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q167",
+    "id": "q127",
     "type": "tf",
     "prompt": "Supination är när handflatan roteras nedåt",
     "correct": "Falskt",
@@ -2290,7 +1700,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q168",
+    "id": "q128",
     "type": "tf",
     "prompt": "Dorsalflexion är att dra foten uppåt",
     "correct": "Sant",
@@ -2302,7 +1712,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q169",
+    "id": "q129",
     "type": "tf",
     "prompt": "Plantarflexion är att dra foten uppåt",
     "correct": "Falskt",
@@ -2314,7 +1724,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q170",
+    "id": "q130",
     "type": "tf",
     "prompt": "Inversion innebär att fotsula vänds inåt",
     "correct": "Sant",
@@ -2326,7 +1736,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q171",
+    "id": "q131",
     "type": "tf",
     "prompt": "Eversion innebär att fotsula vänds inåt",
     "correct": "Falskt",
@@ -2338,7 +1748,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q172",
+    "id": "q132",
     "type": "tf",
     "prompt": "Superior betyder mot huvudet",
     "correct": "Sant",
@@ -2350,7 +1760,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q173",
+    "id": "q133",
     "type": "tf",
     "prompt": "Inferior betyder mot huvudet",
     "correct": "Falskt",
@@ -2362,7 +1772,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q174",
+    "id": "q134",
     "type": "tf",
     "prompt": "Medial betyder mot mittlinjen",
     "correct": "Sant",
@@ -2374,7 +1784,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q175",
+    "id": "q135",
     "type": "tf",
     "prompt": "Lateral betyder mot mittlinjen",
     "correct": "Falskt",
@@ -2386,7 +1796,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q176",
+    "id": "q136",
     "type": "tf",
     "prompt": "Proximal betyder närmare ursprunget",
     "correct": "Sant",
@@ -2398,7 +1808,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q177",
+    "id": "q137",
     "type": "tf",
     "prompt": "Distal betyder närmare ursprunget",
     "correct": "Falskt",
@@ -2410,7 +1820,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q178",
+    "id": "q138",
     "type": "tf",
     "prompt": "Superficial betyder nära ytan",
     "correct": "Sant",
@@ -2422,7 +1832,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q179",
+    "id": "q139",
     "type": "tf",
     "prompt": "Profundus betyder nära ytan",
     "correct": "Falskt",
@@ -2434,7 +1844,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q180",
+    "id": "q140",
     "type": "tf",
     "prompt": "Anterior betyder mot framsidan",
     "correct": "Sant",
@@ -2446,7 +1856,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q181",
+    "id": "q141",
     "type": "tf",
     "prompt": "Posterior betyder mot framsidan",
     "correct": "Falskt",
@@ -2458,13 +1868,35 @@
     "source": "Terminologi"
   },
   {
-    "id": "q182",
+    "id": "q142",
     "type": "mc",
     "prompt": "Vilken rörelse är detta? Armen höjs uppåt från sidan",
     "correct": "Abduktion",
     "distractors": [
-      "Adduktion",
-      "Flexion",
+      "Adduktion"
+    ],
+    "topic": "rörelser",
+    "difficulty": "Normal",
+    "source": "Terminologi"
+  },
+  {
+    "id": "q143",
+    "type": "mc",
+    "prompt": "Vilken rörelse är detta? Armen sänks ner från upphöjd position",
+    "correct": "Adduktion",
+    "distractors": [
+      "Abduktion"
+    ],
+    "topic": "rörelser",
+    "difficulty": "Normal",
+    "source": "Terminologi"
+  },
+  {
+    "id": "q144",
+    "type": "mc",
+    "prompt": "Vilken rörelse är detta? Armvecket stängs",
+    "correct": "Flexion",
+    "distractors": [
       "Extension"
     ],
     "topic": "rörelser",
@@ -2472,49 +1904,19 @@
     "source": "Terminologi"
   },
   {
-    "id": "q183",
-    "type": "mc",
-    "prompt": "Vilken rörelse är detta? Armen sänks ner från upphöjd position",
-    "correct": "Adduktion",
-    "distractors": [
-      "Abduktion",
-      "Extension",
-      "Inversion"
-    ],
-    "topic": "rörelser",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q184",
-    "type": "mc",
-    "prompt": "Vilken rörelse är detta? Armvecket stängs",
-    "correct": "Flexion",
-    "distractors": [
-      "Extension",
-      "Abduktion",
-      "Pronation"
-    ],
-    "topic": "rörelser",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q185",
+    "id": "q145",
     "type": "mc",
     "prompt": "Vilken rörelse är detta? Armvecket öppnas",
     "correct": "Extension",
     "distractors": [
-      "Flexion",
-      "Adduktion",
-      "Eversion"
+      "Flexion"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
     "source": "Terminologi"
   },
   {
-    "id": "q186",
+    "id": "q146",
     "type": "mc",
     "prompt": "Vilken rörelse är detta? Handleden vrids så tummen pekar upp",
     "correct": "Supination",
@@ -2528,7 +1930,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q187",
+    "id": "q147",
     "type": "mc",
     "prompt": "Vilken rörelse är detta? Handleden vrids så tummen pekar ned",
     "correct": "Pronation",
@@ -2542,7 +1944,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q188",
+    "id": "q148",
     "type": "mc",
     "prompt": "Vilken rörelse är detta? Halsen vrids åt höger",
     "correct": "Rotation",
@@ -2556,13 +1958,11 @@
     "source": "Terminologi"
   },
   {
-    "id": "q189",
+    "id": "q149",
     "type": "mc",
     "prompt": "Vilken rörelse är detta? Ryggen böjs åt höger",
     "correct": "Lateralflexion",
     "distractors": [
-      "Flexion",
-      "Rotation",
       "Extension"
     ],
     "topic": "rörelser",
@@ -2570,13 +1970,11 @@
     "source": "Terminologi"
   },
   {
-    "id": "q190",
+    "id": "q150",
     "type": "mc",
     "prompt": "Vad är motsatsen till Flexion?",
     "correct": "Extension",
     "distractors": [
-      "Lateral",
-      "Elevation",
       "Flexion"
     ],
     "topic": "begrepp",
@@ -2584,12 +1982,11 @@
     "source": "Terminologi"
   },
   {
-    "id": "q191",
+    "id": "q151",
     "type": "mc",
     "prompt": "Vad är motsatsen till Extension?",
     "correct": "Flexion",
     "distractors": [
-      "Medial",
       "Extension"
     ],
     "topic": "begrepp",
@@ -2597,7 +1994,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q192",
+    "id": "q152",
     "type": "mc",
     "prompt": "Vad är motsatsen till Abduktion?",
     "correct": "Adduktion",
@@ -2610,7 +2007,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q193",
+    "id": "q153",
     "type": "mc",
     "prompt": "Vad är motsatsen till Adduktion?",
     "correct": "Abduktion",
@@ -2623,7 +2020,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q194",
+    "id": "q154",
     "type": "mc",
     "prompt": "Vad är motsatsen till Supination?",
     "correct": "Pronation",
@@ -2636,7 +2033,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q195",
+    "id": "q155",
     "type": "mc",
     "prompt": "Vad är motsatsen till Pronation?",
     "correct": "Supination",
@@ -2649,7 +2046,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q196",
+    "id": "q156",
     "type": "mc",
     "prompt": "Vad är motsatsen till Dorsalflexion?",
     "correct": "Plantarflexion",
@@ -2662,7 +2059,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q197",
+    "id": "q157",
     "type": "mc",
     "prompt": "Vad är motsatsen till Plantarflexion?",
     "correct": "Dorsalflexion",
@@ -2675,7 +2072,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q198",
+    "id": "q158",
     "type": "mc",
     "prompt": "Vad är motsatsen till Inversion?",
     "correct": "Eversion",
@@ -2688,7 +2085,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q199",
+    "id": "q159",
     "type": "mc",
     "prompt": "Vad är motsatsen till Eversion?",
     "correct": "Inversion",
@@ -2701,7 +2098,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q200",
+    "id": "q160",
     "type": "mc",
     "prompt": "Vad är motsatsen till Elevation?",
     "correct": "Depression",
@@ -2714,7 +2111,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q201",
+    "id": "q161",
     "type": "mc",
     "prompt": "Vad är motsatsen till Depression?",
     "correct": "Elevation",
@@ -2728,7 +2125,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q202",
+    "id": "q162",
     "type": "mc",
     "prompt": "Vad är motsatsen till Protraktion?",
     "correct": "Retraktion",
@@ -2741,7 +2138,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q203",
+    "id": "q163",
     "type": "mc",
     "prompt": "Vad är motsatsen till Retraktion?",
     "correct": "Protraktion",
@@ -2754,7 +2151,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q204",
+    "id": "q164",
     "type": "mc",
     "prompt": "Vad är motsatsen till Anterior?",
     "correct": "Posterior",
@@ -2767,7 +2164,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q205",
+    "id": "q165",
     "type": "mc",
     "prompt": "Vad är motsatsen till Posterior?",
     "correct": "Anterior",
@@ -2780,7 +2177,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q206",
+    "id": "q166",
     "type": "mc",
     "prompt": "Vad är motsatsen till Superior?",
     "correct": "Inferior",
@@ -2793,7 +2190,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q207",
+    "id": "q167",
     "type": "mc",
     "prompt": "Vad är motsatsen till Inferior?",
     "correct": "Superior",
@@ -2806,7 +2203,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q208",
+    "id": "q168",
     "type": "mc",
     "prompt": "Vad är motsatsen till Medial?",
     "correct": "Lateral",
@@ -2819,7 +2216,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q209",
+    "id": "q169",
     "type": "mc",
     "prompt": "Vad är motsatsen till Lateral?",
     "correct": "Medial",
@@ -2832,7 +2229,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q210",
+    "id": "q170",
     "type": "mc",
     "prompt": "Vad är motsatsen till Proximal?",
     "correct": "Distal",
@@ -2845,7 +2242,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q211",
+    "id": "q171",
     "type": "mc",
     "prompt": "Vad är motsatsen till Distal?",
     "correct": "Proximal",
@@ -2858,7 +2255,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q212",
+    "id": "q172",
     "type": "mc",
     "prompt": "Vad är motsatsen till Superficial?",
     "correct": "Profundus",
@@ -2871,7 +2268,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q213",
+    "id": "q173",
     "type": "mc",
     "prompt": "Vad är motsatsen till Profundus?",
     "correct": "Superficial",
@@ -2884,7 +2281,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q214",
+    "id": "q174",
     "type": "mc",
     "prompt": "Vad är motsatsen till Dorsal?",
     "correct": "Ventral",
@@ -2897,7 +2294,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q215",
+    "id": "q175",
     "type": "mc",
     "prompt": "Vad är motsatsen till Ventral?",
     "correct": "Dorsal",
@@ -2910,7 +2307,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q216",
+    "id": "q176",
     "type": "mc",
     "prompt": "Vad är motsatsen till Radial?",
     "correct": "Ulnar",
@@ -2923,7 +2320,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q217",
+    "id": "q177",
     "type": "mc",
     "prompt": "Vad är motsatsen till Ulnar?",
     "correct": "Radial",
@@ -2936,7 +2333,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q218",
+    "id": "q178",
     "type": "mc",
     "prompt": "Vad är motsatsen till Tibial?",
     "correct": "Fibular",
@@ -2949,7 +2346,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q219",
+    "id": "q179",
     "type": "mc",
     "prompt": "Vad är motsatsen till Fibular?",
     "correct": "Tibial",
@@ -2962,7 +2359,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q220",
+    "id": "q180",
     "type": "mc",
     "prompt": "Vad betyder 'Flexion'?",
     "correct": "Böjning av en led",
@@ -2976,7 +2373,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q221",
+    "id": "q181",
     "type": "mc",
     "prompt": "Vad betyder 'Extension'?",
     "correct": "Sträckning av en led",
@@ -2990,7 +2387,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q222",
+    "id": "q182",
     "type": "mc",
     "prompt": "Vad betyder 'Abduktion'?",
     "correct": "Rörelse från mittlinjen",
@@ -3004,7 +2401,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q223",
+    "id": "q183",
     "type": "mc",
     "prompt": "Vad betyder 'Adduktion'?",
     "correct": "Rörelse mot mittlinjen",
@@ -3018,7 +2415,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q224",
+    "id": "q184",
     "type": "mc",
     "prompt": "Vad betyder 'Rotation'?",
     "correct": "Vridande rörelse",
@@ -3032,7 +2429,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q225",
+    "id": "q185",
     "type": "mc",
     "prompt": "Vad betyder 'Pronation'?",
     "correct": "Rotationen av hand eller fot nedåt",
@@ -3046,7 +2443,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q226",
+    "id": "q186",
     "type": "mc",
     "prompt": "Vad betyder 'Supination'?",
     "correct": "Rotationen av hand eller fot uppåt",
@@ -3060,7 +2457,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q227",
+    "id": "q187",
     "type": "mc",
     "prompt": "Vad betyder 'Dorsiflexion'?",
     "correct": "Foten dras uppåt",
@@ -3074,7 +2471,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q228",
+    "id": "q188",
     "type": "mc",
     "prompt": "Vad betyder 'Plantarflexion'?",
     "correct": "Foten pressas nedåt",
@@ -3088,7 +2485,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q229",
+    "id": "q189",
     "type": "mc",
     "prompt": "Vad betyder 'Inversion'?",
     "correct": "Fotsulorna vänds inåt",
@@ -3102,7 +2499,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q230",
+    "id": "q190",
     "type": "mc",
     "prompt": "Vad betyder 'Eversion'?",
     "correct": "Fotsulorna vänds utåt",
@@ -3116,7 +2513,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q231",
+    "id": "q191",
     "type": "mc",
     "prompt": "Vad betyder 'Cirkumduktion'?",
     "correct": "Cirkulär rörelse",
@@ -3130,7 +2527,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q232",
+    "id": "q192",
     "type": "mc",
     "prompt": "Vad betyder 'Elevation'?",
     "correct": "Höjning av en del",
@@ -3144,7 +2541,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q233",
+    "id": "q193",
     "type": "mc",
     "prompt": "Vad betyder 'Depression'?",
     "correct": "Sänkning av en del",
@@ -3158,7 +2555,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q234",
+    "id": "q194",
     "type": "mc",
     "prompt": "Vad betyder 'Protraktion'?",
     "correct": "Rörelse framåt",
@@ -3172,7 +2569,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q235",
+    "id": "q195",
     "type": "mc",
     "prompt": "Vad betyder 'Retraktion'?",
     "correct": "Rörelse bakåt",
@@ -3186,7 +2583,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q236",
+    "id": "q196",
     "type": "mc",
     "prompt": "Vad betyder 'Superior'?",
     "correct": "Mot huvudet",
@@ -3200,7 +2597,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q237",
+    "id": "q197",
     "type": "mc",
     "prompt": "Vad betyder 'Inferior'?",
     "correct": "Mot fötterna",
@@ -3214,7 +2611,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q238",
+    "id": "q198",
     "type": "mc",
     "prompt": "Vad betyder 'Anterior'?",
     "correct": "Mot framsidan",
@@ -3228,7 +2625,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q239",
+    "id": "q199",
     "type": "mc",
     "prompt": "Vad betyder 'Posterior'?",
     "correct": "Mot baksidan",
@@ -3242,35 +2639,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q240",
-    "type": "mc",
-    "prompt": "Vad betyder 'Medial'?",
-    "correct": "Mot mittlinjen",
-    "distractors": [
-      "En muskelgrupp",
-      "En benstruktur",
-      "En nervväg"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q241",
-    "type": "mc",
-    "prompt": "Vad betyder 'Lateral'?",
-    "correct": "Från mittlinjen",
-    "distractors": [
-      "En muskelgrupp",
-      "En benstruktur",
-      "En nervväg"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q242",
+    "id": "q200",
     "type": "mc",
     "prompt": "Vad betyder 'Proximal'?",
     "correct": "Närmare ursprunget",
@@ -3284,7 +2653,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q243",
+    "id": "q201",
     "type": "mc",
     "prompt": "Vad betyder 'Distal'?",
     "correct": "Längre från ursprunget",
@@ -3298,7 +2667,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q244",
+    "id": "q202",
     "type": "mc",
     "prompt": "Vad betyder 'Superficial'?",
     "correct": "Nära ytan",
@@ -3312,7 +2681,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q245",
+    "id": "q203",
     "type": "mc",
     "prompt": "Vad betyder 'Profundus'?",
     "correct": "Långt från ytan",
@@ -3326,63 +2695,55 @@
     "source": "Terminologi"
   },
   {
-    "id": "q246",
+    "id": "q204",
     "type": "mc",
     "prompt": "'Böja halsen' är en rörelse som kallas _____",
     "correct": "Flexion",
     "distractors": [
-      "Extension",
-      "Protraktion",
-      "Plantarflexion"
+      "Extension"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
     "source": "Terminologi"
   },
   {
-    "id": "q247",
+    "id": "q205",
     "type": "mc",
     "prompt": "'Sträcka halsen' är en rörelse som kallas _____",
     "correct": "Extension",
     "distractors": [
-      "Flexion",
-      "Depression",
-      "Cirkumduktion"
+      "Flexion"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
     "source": "Terminologi"
   },
   {
-    "id": "q248",
+    "id": "q206",
     "type": "mc",
     "prompt": "'Böja höftleden' är en rörelse som kallas _____",
     "correct": "Flexion",
     "distractors": [
-      "Extension",
-      "Abduktion",
-      "Dorsalflexion"
+      "Extension"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
     "source": "Terminologi"
   },
   {
-    "id": "q249",
+    "id": "q207",
     "type": "mc",
     "prompt": "'Sträcka höftleden' är en rörelse som kallas _____",
     "correct": "Extension",
     "distractors": [
-      "Flexion",
-      "Dorsalflexion",
-      "Inåtrotation"
+      "Flexion"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
     "source": "Terminologi"
   },
   {
-    "id": "q250",
+    "id": "q208",
     "type": "mc",
     "prompt": "'Höja axlarna' är en rörelse som kallas _____",
     "correct": "Elevation",
@@ -3396,7 +2757,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q251",
+    "id": "q209",
     "type": "mc",
     "prompt": "Sänka axlarna direkt ned från sidan kallas _____",
     "correct": "Depression",
@@ -3410,7 +2771,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q252",
+    "id": "q210",
     "type": "mc",
     "prompt": "'Dra axlarna bakåt' är en rörelse som kallas _____",
     "correct": "Retraktion",
@@ -3424,7 +2785,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q253",
+    "id": "q211",
     "type": "mc",
     "prompt": "'Dra axlarna framåt' är en rörelse som kallas _____",
     "correct": "Protraktion",
@@ -3438,63 +2799,55 @@
     "source": "Terminologi"
   },
   {
-    "id": "q254",
+    "id": "q212",
     "type": "mc",
     "prompt": "'Böja knäet' är en rörelse som kallas _____",
     "correct": "Flexion",
     "distractors": [
-      "Extension",
-      "Abduktion",
-      "Pronation"
+      "Extension"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
     "source": "Terminologi"
   },
   {
-    "id": "q255",
+    "id": "q213",
     "type": "mc",
     "prompt": "'Sträcka knäet' är en rörelse som kallas _____",
     "correct": "Extension",
     "distractors": [
-      "Flexion",
-      "Protraktion",
-      "Cirkumduktion"
+      "Flexion"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
     "source": "Terminologi"
   },
   {
-    "id": "q256",
+    "id": "q214",
     "type": "mc",
     "prompt": "'Döja höftleden' är en rörelse som kallas _____",
     "correct": "Abduktion",
     "distractors": [
-      "Adduktion",
-      "Supination",
-      "Pronation"
+      "Adduktion"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
     "source": "Terminologi"
   },
   {
-    "id": "q257",
+    "id": "q215",
     "type": "mc",
     "prompt": "'Föra benen tillsammans' är en rörelse som kallas _____",
     "correct": "Adduktion",
     "distractors": [
-      "Abduktion",
-      "Inåtrotation",
-      "Pronation"
+      "Abduktion"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
     "source": "Terminologi"
   },
   {
-    "id": "q258",
+    "id": "q216",
     "type": "mc",
     "prompt": "'Vrida benet inåt' är en rörelse som kallas _____",
     "correct": "Inåtrotation",
@@ -3508,7 +2861,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q259",
+    "id": "q217",
     "type": "mc",
     "prompt": "Vrida benet RAKT UTÅT när man ligger på rygg kallas _____",
     "correct": "Extern rotation",
@@ -3522,21 +2875,19 @@
     "source": "Terminologi"
   },
   {
-    "id": "q260",
+    "id": "q218",
     "type": "mc",
     "prompt": "'Böja handleden' är en rörelse som kallas _____",
     "correct": "Flexion",
     "distractors": [
-      "Extension",
-      "Inversion",
-      "Dorsalflexion"
+      "Extension"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
     "source": "Terminologi"
   },
   {
-    "id": "q261",
+    "id": "q219",
     "type": "mc",
     "prompt": "Sträcka handleden bakåt kallas _____",
     "correct": "Extension",
@@ -3550,7 +2901,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q262",
+    "id": "q220",
     "type": "mc",
     "prompt": "'Böja tummen till fingrarna' är en rörelse som kallas _____",
     "correct": "Opposition",
@@ -3564,7 +2915,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q263",
+    "id": "q221",
     "type": "mc",
     "prompt": "Böja och sträcka en arm är en rörelse i _____",
     "correct": "Sagittalplan",
@@ -3578,7 +2929,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q264",
+    "id": "q222",
     "type": "mc",
     "prompt": "Lyfta och sänka en arm åt sidan är en rörelse i _____",
     "correct": "Frontalplan",
@@ -3592,7 +2943,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q265",
+    "id": "q223",
     "type": "mc",
     "prompt": "Vrida huvudet är en rörelse i _____",
     "correct": "Transversalplan",
@@ -3606,7 +2957,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q266",
+    "id": "q224",
     "type": "mc",
     "prompt": "En rörelse mellan fram och bak är i _____",
     "correct": "Frontalplan",
@@ -3620,7 +2971,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q267",
+    "id": "q225",
     "type": "mc",
     "prompt": "En rörelse mellan vänster och höger är i _____",
     "correct": "Sagittalplan",
@@ -3634,7 +2985,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q268",
+    "id": "q226",
     "type": "mc",
     "prompt": "En rörelse mellan övre och nedre kroppen är i _____",
     "correct": "Transversalplan",
@@ -3648,7 +2999,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q269",
+    "id": "q227",
     "type": "mc",
     "prompt": "Vilken position är det när man ligger på rygg?",
     "correct": "Ryggläge",
@@ -3662,7 +3013,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q270",
+    "id": "q228",
     "type": "mc",
     "prompt": "Vilken position är det när man ligger på mage?",
     "correct": "Bukläge",
@@ -3676,7 +3027,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q271",
+    "id": "q229",
     "type": "mc",
     "prompt": "Vilken position är det när man ligger på sidan?",
     "correct": "Sidoläge",
@@ -3690,7 +3041,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q272",
+    "id": "q230",
     "type": "mc",
     "prompt": "Vilken position är det när man är halvsittande?",
     "correct": "Fowlerläge",
@@ -3704,7 +3055,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q273",
+    "id": "q231",
     "type": "mc",
     "prompt": "Vilken position är det med huvud ned?",
     "correct": "Trendelenburgläge",
@@ -3718,7 +3069,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q274",
+    "id": "q232",
     "type": "mc",
     "prompt": "Vilken position är det med huvud upp?",
     "correct": "Omvänt Trendelenburgläge",
@@ -3732,7 +3083,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q275",
+    "id": "q233",
     "type": "mc",
     "prompt": "Vilken position är det med ben upp?",
     "correct": "Litotomiläge",
@@ -3746,7 +3097,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q276",
+    "id": "q234",
     "type": "mc",
     "prompt": "En punkt som är både superior och lateral är _____",
     "correct": "Både uppåt och från mittlinjen",
@@ -3760,7 +3111,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q277",
+    "id": "q235",
     "type": "mc",
     "prompt": "En punkt som är både inferior och medial är _____",
     "correct": "Både nedåt och mot mittlinjen",
@@ -3774,7 +3125,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q278",
+    "id": "q236",
     "type": "mc",
     "prompt": "En punkt som är både proximal och superficial är _____",
     "correct": "Både närmare ursprung och nära ytan",
@@ -3788,7 +3139,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q279",
+    "id": "q237",
     "type": "mc",
     "prompt": "En punkt som är både distal och profundus är _____",
     "correct": "Både längre från ursprung och långt från ytan",
@@ -3802,7 +3153,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q280",
+    "id": "q238",
     "type": "mc",
     "prompt": "Superior är samma som",
     "correct": "Kranial",
@@ -3816,7 +3167,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q281",
+    "id": "q239",
     "type": "mc",
     "prompt": "Inferior betyder",
     "correct": "Nedåt",
@@ -3830,7 +3181,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q282",
+    "id": "q240",
     "type": "mc",
     "prompt": "Anterior är samma som",
     "correct": "Ventral",
@@ -3844,7 +3195,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q283",
+    "id": "q241",
     "type": "mc",
     "prompt": "Posterior är samma som",
     "correct": "Dorsal",
@@ -3858,7 +3209,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q284",
+    "id": "q242",
     "type": "mc",
     "prompt": "Palmar är samma som",
     "correct": "Volar",
@@ -3872,7 +3223,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q285",
+    "id": "q243",
     "type": "mc",
     "prompt": "Plantar är samma som",
     "correct": "Fotsula",
@@ -3886,7 +3237,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q286",
+    "id": "q244",
     "type": "mc",
     "prompt": "Dorsal hand är samma som",
     "correct": "Ovansida",
@@ -3900,7 +3251,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q287",
+    "id": "q245",
     "type": "mc",
     "prompt": "Ventral hand är samma som",
     "correct": "Handflata",
@@ -3914,7 +3265,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q288",
+    "id": "q246",
     "type": "mc",
     "prompt": "'Superior' kommer från latin och betyder",
     "correct": "Ovan",
@@ -3928,7 +3279,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q289",
+    "id": "q247",
     "type": "mc",
     "prompt": "'Inferior' kommer från latin och betyder",
     "correct": "Lägre",
@@ -3942,7 +3293,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q290",
+    "id": "q248",
     "type": "mc",
     "prompt": "'Medial' kommer från latin och betyder",
     "correct": "Mitten",
@@ -3956,7 +3307,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q291",
+    "id": "q249",
     "type": "mc",
     "prompt": "'Proximal' kommer från latin och betyder",
     "correct": "Närmast",
@@ -3970,7 +3321,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q292",
+    "id": "q250",
     "type": "mc",
     "prompt": "'Superficies' från latin betyder",
     "correct": "Yta",
@@ -3984,7 +3335,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q293",
+    "id": "q251",
     "type": "mc",
     "prompt": "'Flexion' kommer från latin och betyder",
     "correct": "Böjning",
@@ -3998,7 +3349,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q294",
+    "id": "q252",
     "type": "mc",
     "prompt": "'Abduction' betyder 'från' och",
     "correct": "Mittlinjen",
@@ -4012,7 +3363,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q295",
+    "id": "q253",
     "type": "mc",
     "prompt": "'Adduction' betyder 'mot' och",
     "correct": "Mittlinjen",
@@ -4026,77 +3377,67 @@
     "source": "Terminologi"
   },
   {
-    "id": "q296",
+    "id": "q254",
     "type": "mc",
     "prompt": "Vilken term hör ihop med 'fram'?",
     "correct": "Anterior",
     "distractors": [
-      "Posterior",
-      "Medial",
-      "Distal"
+      "Posterior"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
     "source": "Terminologi"
   },
   {
-    "id": "q297",
+    "id": "q255",
     "type": "mc",
     "prompt": "Vilken term hör ihop med 'bak'?",
     "correct": "Posterior",
     "distractors": [
-      "Anterior",
-      "Lateral",
-      "Proximal"
+      "Anterior"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
     "source": "Terminologi"
   },
   {
-    "id": "q298",
+    "id": "q256",
     "type": "mc",
     "prompt": "Vilken term hör ihop med 'böja'?",
     "correct": "Flexion",
     "distractors": [
-      "Extension",
-      "Rotation",
-      "Elevation"
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
     "source": "Terminologi"
   },
   {
-    "id": "q299",
+    "id": "q257",
     "type": "mc",
     "prompt": "Vilken term hör ihop med 'sträcka'?",
     "correct": "Extension",
     "distractors": [
-      "Flexion",
-      "Adduktion",
-      "Depression"
+      "Flexion"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
     "source": "Terminologi"
   },
   {
-    "id": "q300",
+    "id": "q258",
     "type": "mc",
     "prompt": "Vilken term hör ihop med 'sprida'?",
     "correct": "Abduktion",
     "distractors": [
-      "Adduktion",
-      "Flexion",
-      "Inversion"
+      "Adduktion"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
     "source": "Terminologi"
   },
   {
-    "id": "q301",
+    "id": "q259",
     "type": "mc",
     "prompt": "Vilken term hör ihop med 'vrid in'?",
     "correct": "Inåtrotation",
@@ -4110,7 +3451,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q302",
+    "id": "q260",
     "type": "mc",
     "prompt": "Vilken term hör ihop med 'hand upp'?",
     "correct": "Supination",
@@ -4124,7 +3465,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q303",
+    "id": "q261",
     "type": "mc",
     "prompt": "Vilken term hör ihop med 'hand ned'?",
     "correct": "Pronation",
@@ -4138,7 +3479,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q304",
+    "id": "q262",
     "type": "mc",
     "prompt": "Vilken term hör ihop med 'fot upp'?",
     "correct": "Dorsalflexion",
@@ -4152,7 +3493,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q305",
+    "id": "q263",
     "type": "mc",
     "prompt": "Vilken term hör ihop med 'fot ned'?",
     "correct": "Plantarflexion",
@@ -4166,7 +3507,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q306",
+    "id": "q264",
     "type": "mc",
     "prompt": "Tumsidans sida av underarmen kallas",
     "correct": "Radial",
@@ -4180,7 +3521,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q307",
+    "id": "q265",
     "type": "mc",
     "prompt": "Lillfingersidans sida av underarmen kallas",
     "correct": "Ulnar",
@@ -4194,7 +3535,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q308",
+    "id": "q266",
     "type": "mc",
     "prompt": "Stortåsidans sida av benet kallas",
     "correct": "Tibial",
@@ -4208,7 +3549,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q309",
+    "id": "q267",
     "type": "mc",
     "prompt": "Lilltåsidans sida av benet kallas",
     "correct": "Fibular",
@@ -4222,7 +3563,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q310",
+    "id": "q268",
     "type": "mc",
     "prompt": "Handflatan är den ____ sidan av handen",
     "correct": "Palmara/Volar",
@@ -4236,7 +3577,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q311",
+    "id": "q269",
     "type": "mc",
     "prompt": "Fotsulans sida kallas den ____ sida",
     "correct": "Plantar",
@@ -4250,35 +3591,31 @@
     "source": "Terminologi"
   },
   {
-    "id": "q312",
+    "id": "q270",
     "type": "mc",
     "prompt": "'Böjning' heter på latin",
     "correct": "Flexion",
     "distractors": [
-      "Extension",
-      "Rotatio",
-      "Elevatio"
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
     "source": "Terminologi"
   },
   {
-    "id": "q313",
+    "id": "q271",
     "type": "mc",
     "prompt": "'Sträckning' heter på latin",
     "correct": "Extension",
     "distractors": [
-      "Flexion",
-      "Depressio",
-      "Adductio"
+      "Flexion"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
     "source": "Terminologi"
   },
   {
-    "id": "q314",
+    "id": "q272",
     "type": "mc",
     "prompt": "'Abduktion' betyder på svenska",
     "correct": "Från mittlinjen",
@@ -4292,7 +3629,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q315",
+    "id": "q273",
     "type": "mc",
     "prompt": "'Adduktion' betyder på svenska",
     "correct": "Mot mittlinjen",
@@ -4306,7 +3643,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q316",
+    "id": "q274",
     "type": "mc",
     "prompt": "'Rotatio' betyder på svenska",
     "correct": "Vriding",
@@ -4320,7 +3657,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q317",
+    "id": "q275",
     "type": "mc",
     "prompt": "'Elevatio' betyder på svenska",
     "correct": "Höjning",
@@ -4334,7 +3671,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q318",
+    "id": "q276",
     "type": "mc",
     "prompt": "'Depressio' betyder på svenska",
     "correct": "Sänkning",
@@ -4348,7 +3685,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q319",
+    "id": "q277",
     "type": "tf",
     "prompt": "Cirkumduktion är en rörelse i ett plan",
     "correct": "Falskt",
@@ -4360,7 +3697,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q320",
+    "id": "q278",
     "type": "tf",
     "prompt": "Rotation kan ske omkring flera axlar",
     "correct": "Sant",
@@ -4372,7 +3709,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q321",
+    "id": "q279",
     "type": "tf",
     "prompt": "Hyperextension är mer sträckning än normal extension",
     "correct": "Sant",
@@ -4384,7 +3721,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q322",
+    "id": "q280",
     "type": "tf",
     "prompt": "Plantarflexion är att lyfta foten",
     "correct": "Falskt",
@@ -4396,7 +3733,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q323",
+    "id": "q281",
     "type": "tf",
     "prompt": "Supination av handen gör tummen peka uppåt",
     "correct": "Sant",
@@ -4408,7 +3745,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q324",
+    "id": "q282",
     "type": "tf",
     "prompt": "En struktur kan vara både superficial och distal",
     "correct": "Sant",
@@ -4420,7 +3757,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q325",
+    "id": "q283",
     "type": "tf",
     "prompt": "Anterior och ventral betyder motsatsen",
     "correct": "Falskt",
@@ -4432,7 +3769,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q326",
+    "id": "q284",
     "type": "tf",
     "prompt": "Medial och lateral är motsatser",
     "correct": "Sant",
@@ -4444,7 +3781,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q327",
+    "id": "q285",
     "type": "tf",
     "prompt": "Proximal betyder längre från ursprunget",
     "correct": "Falskt",
@@ -4456,7 +3793,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q328",
+    "id": "q286",
     "type": "tf",
     "prompt": "Ryggläge är när man ligger på mage",
     "correct": "Falskt",
@@ -4468,7 +3805,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q329",
+    "id": "q287",
     "type": "tf",
     "prompt": "Bukläge är supine position",
     "correct": "Falskt",
@@ -4480,7 +3817,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q330",
+    "id": "q288",
     "type": "tf",
     "prompt": "Litotomiläge har benen höjda",
     "correct": "Sant",
@@ -4492,7 +3829,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q331",
+    "id": "q289",
     "type": "tf",
     "prompt": "Sagittalplan delar kroppen vänster och höger",
     "correct": "Sant",
@@ -4504,7 +3841,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q332",
+    "id": "q290",
     "type": "tf",
     "prompt": "Frontalplan delar kroppen fram och bak",
     "correct": "Sant",
@@ -4516,7 +3853,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q333",
+    "id": "q291",
     "type": "tf",
     "prompt": "Transversalplan delar kroppen övre och nedre",
     "correct": "Sant",
@@ -4528,7 +3865,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q334",
+    "id": "q292",
     "type": "mc",
     "prompt": "En patient i ryggläge ligger på",
     "correct": "Rygg",
@@ -4542,7 +3879,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q335",
+    "id": "q293",
     "type": "mc",
     "prompt": "En patient i bukläge ligger på",
     "correct": "Mage",
@@ -4556,7 +3893,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q336",
+    "id": "q294",
     "type": "mc",
     "prompt": "Trendelenburgläge används för att",
     "correct": "Förbättra blodflödet till huvud",
@@ -4570,7 +3907,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q337",
+    "id": "q295",
     "type": "mc",
     "prompt": "Fowlerläge är användbart för",
     "correct": "Cirkulationen och andningen",
@@ -4584,7 +3921,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q338",
+    "id": "q296",
     "type": "mc",
     "prompt": "En hand i pronation har",
     "correct": "Handflatorna nedåt",
@@ -4598,7 +3935,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q339",
+    "id": "q297",
     "type": "mc",
     "prompt": "Vilken rörelse är det när man böjer en led?",
     "correct": "Flexion",
@@ -4612,7 +3949,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q340",
+    "id": "q298",
     "type": "mc",
     "prompt": "Vilken rörelse är det när man sträcker en led?",
     "correct": "Extension",
@@ -4626,7 +3963,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q341",
+    "id": "q299",
     "type": "mc",
     "prompt": "Vilken rörelse är det när man drar något bort från mittlinjen utan att röra det upp?",
     "correct": "Abduktion",
@@ -4640,7 +3977,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q342",
+    "id": "q300",
     "type": "mc",
     "prompt": "Vilken rörelse är det när man för något till mitten?",
     "correct": "Adduktion",
@@ -4654,7 +3991,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q343",
+    "id": "q301",
     "type": "mc",
     "prompt": "Vilken rörelse är det när något roterar inåt?",
     "correct": "Inåtrotation",
@@ -4668,7 +4005,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q344",
+    "id": "q302",
     "type": "mc",
     "prompt": "Vilken rörelse är det när något roteras utåt?",
     "correct": "Utåtrotation",
@@ -4682,7 +4019,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q345",
+    "id": "q303",
     "type": "mc",
     "prompt": "Vilken rörelse är det när handen vänds uppåt?",
     "correct": "Supination",
@@ -4696,7 +4033,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q346",
+    "id": "q304",
     "type": "mc",
     "prompt": "Vilken rörelse är det när handen vänds nedåt?",
     "correct": "Pronation",
@@ -4710,7 +4047,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q347",
+    "id": "q305",
     "type": "mc",
     "prompt": "Vilken rörelse är det när foten lyfts upp?",
     "correct": "Dorsalflexion",
@@ -4724,7 +4061,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q348",
+    "id": "q306",
     "type": "mc",
     "prompt": "Vilken rörelse är det när foten pressas ned?",
     "correct": "Plantarflexion",
@@ -4738,7 +4075,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q349",
+    "id": "q307",
     "type": "mc",
     "prompt": "Vilken rörelse är det när fotsula vänds in?",
     "correct": "Inversion",
@@ -4752,7 +4089,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q350",
+    "id": "q308",
     "type": "mc",
     "prompt": "Vilken rörelse är det när fotsula vänds ut?",
     "correct": "Eversion",
@@ -4766,7 +4103,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q352",
+    "id": "q309",
     "type": "mc",
     "prompt": "Vilken rörelse är det när något sänks ned?",
     "correct": "Depression",
@@ -4780,7 +4117,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q353",
+    "id": "q310",
     "type": "mc",
     "prompt": "Vilken rörelse är det när något dras framåt?",
     "correct": "Protraktion",
@@ -4794,7 +4131,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q354",
+    "id": "q311",
     "type": "mc",
     "prompt": "Vilken rörelse är det när något dras bakåt?",
     "correct": "Retraktion",
@@ -4808,7 +4145,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q355",
+    "id": "q312",
     "type": "mc",
     "prompt": "Vilken rörelse är det när något roterar cirkulärt?",
     "correct": "Cirkumduktion",
@@ -4822,7 +4159,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q356",
+    "id": "q313",
     "type": "mc",
     "prompt": "Vilket ord betyder 'Böjning'?",
     "correct": "Flexion",
@@ -4836,13 +4173,11 @@
     "source": "Terminologi"
   },
   {
-    "id": "q357",
+    "id": "q314",
     "type": "mc",
     "prompt": "Vilket ord betyder 'Sträckning'?",
     "correct": "Extension",
     "distractors": [
-      "Internal",
-      "Fibular",
       "Flexion"
     ],
     "topic": "begrepp",
@@ -4850,7 +4185,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q358",
+    "id": "q315",
     "type": "mc",
     "prompt": "Vilket ord betyder 'Från mittlinjen'?",
     "correct": "Abduktion",
@@ -4864,7 +4199,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q359",
+    "id": "q316",
     "type": "mc",
     "prompt": "Vilket ord betyder 'Mot mittlinjen'?",
     "correct": "Adduktion",
@@ -4878,7 +4213,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q360",
+    "id": "q317",
     "type": "mc",
     "prompt": "Vilket ord betyder 'Uppåt'?",
     "correct": "Superior",
@@ -4892,7 +4227,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q361",
+    "id": "q318",
     "type": "mc",
     "prompt": "Vilket ord betyder 'Nedåt'?",
     "correct": "Inferior",
@@ -4906,7 +4241,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q362",
+    "id": "q319",
     "type": "mc",
     "prompt": "Vilket ord betyder 'Framåt'?",
     "correct": "Anterior",
@@ -4920,7 +4255,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q363",
+    "id": "q320",
     "type": "mc",
     "prompt": "Vilket ord betyder 'Bakåt'?",
     "correct": "Posterior",
@@ -4934,7 +4269,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q364",
+    "id": "q321",
     "type": "mc",
     "prompt": "Vilket ord betyder 'Inåt från kanten'?",
     "correct": "Medial",
@@ -4948,7 +4283,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q365",
+    "id": "q322",
     "type": "mc",
     "prompt": "Vilket ord betyder 'Utåt från mitten'?",
     "correct": "Lateral",
@@ -4962,7 +4297,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q366",
+    "id": "q323",
     "type": "mc",
     "prompt": "Vilket ord betyder 'Närmare utgångspunkten'?",
     "correct": "Proximal",
@@ -4976,7 +4311,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q367",
+    "id": "q324",
     "type": "mc",
     "prompt": "Vilket ord betyder 'Längre från utgångspunkten'?",
     "correct": "Distal",
@@ -4990,7 +4325,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q368",
+    "id": "q325",
     "type": "mc",
     "prompt": "Vilket ord betyder 'Vid ytan'?",
     "correct": "Superficial",
@@ -5004,7 +4339,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q369",
+    "id": "q326",
     "type": "mc",
     "prompt": "Vilket ord betyder 'I djupet'?",
     "correct": "Profundus",
@@ -5018,7 +4353,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q370",
+    "id": "q327",
     "type": "mc",
     "prompt": "Vilket ord betyder 'På ryggsidan'?",
     "correct": "Dorsal",
@@ -5032,7 +4367,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q371",
+    "id": "q328",
     "type": "mc",
     "prompt": "Vilket ord betyder 'På framsidan'?",
     "correct": "Ventral",
@@ -5046,7 +4381,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q372",
+    "id": "q329",
     "type": "mc",
     "prompt": "Vilket ord betyder 'Hand vändning nedåt'?",
     "correct": "Pronation",
@@ -5060,7 +4395,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q373",
+    "id": "q330",
     "type": "mc",
     "prompt": "Vilket ord betyder 'Hand vändning uppåt'?",
     "correct": "Supination",
@@ -5074,7 +4409,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q374",
+    "id": "q331",
     "type": "mc",
     "prompt": "Vilket ord betyder 'Vriding'?",
     "correct": "Rotation",
@@ -5088,7 +4423,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q375",
+    "id": "q332",
     "type": "mc",
     "prompt": "Vilket ord betyder 'Cirkelrörelse'?",
     "correct": "Cirkumduktion",
@@ -5102,7 +4437,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q376",
+    "id": "q333",
     "type": "tf",
     "prompt": "Flexion är en rörelse",
     "correct": "Sant",
@@ -5114,7 +4449,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q377",
+    "id": "q334",
     "type": "tf",
     "prompt": "Extension är en rörelse",
     "correct": "Sant",
@@ -5126,7 +4461,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q378",
+    "id": "q335",
     "type": "tf",
     "prompt": "Abduktion är en rörelse",
     "correct": "Sant",
@@ -5138,7 +4473,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q379",
+    "id": "q336",
     "type": "tf",
     "prompt": "Adduktion är en rörelse",
     "correct": "Sant",
@@ -5150,7 +4485,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q380",
+    "id": "q337",
     "type": "tf",
     "prompt": "Rotation är en rörelse",
     "correct": "Sant",
@@ -5162,7 +4497,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q381",
+    "id": "q338",
     "type": "tf",
     "prompt": "Inåtrotation är en rörelse",
     "correct": "Sant",
@@ -5174,7 +4509,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q382",
+    "id": "q339",
     "type": "tf",
     "prompt": "Utåtrotation är en rörelse",
     "correct": "Sant",
@@ -5186,7 +4521,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q383",
+    "id": "q340",
     "type": "tf",
     "prompt": "Pronation är en rörelse",
     "correct": "Sant",
@@ -5198,7 +4533,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q384",
+    "id": "q341",
     "type": "tf",
     "prompt": "Supination är en rörelse",
     "correct": "Sant",
@@ -5210,7 +4545,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q385",
+    "id": "q342",
     "type": "tf",
     "prompt": "Dorsalflexion är en rörelse",
     "correct": "Sant",
@@ -5222,7 +4557,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q386",
+    "id": "q343",
     "type": "tf",
     "prompt": "Superior är en riktningsterm",
     "correct": "Sant",
@@ -5234,7 +4569,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q387",
+    "id": "q344",
     "type": "tf",
     "prompt": "Inferior är en riktningsterm",
     "correct": "Sant",
@@ -5246,7 +4581,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q388",
+    "id": "q345",
     "type": "tf",
     "prompt": "Anterior är en riktningsterm",
     "correct": "Sant",
@@ -5258,7 +4593,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q389",
+    "id": "q346",
     "type": "tf",
     "prompt": "Posterior är en riktningsterm",
     "correct": "Sant",
@@ -5270,7 +4605,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q390",
+    "id": "q347",
     "type": "tf",
     "prompt": "Medial är en riktningsterm",
     "correct": "Sant",
@@ -5282,7 +4617,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q391",
+    "id": "q348",
     "type": "tf",
     "prompt": "Lateral är en riktningsterm",
     "correct": "Sant",
@@ -5294,7 +4629,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q392",
+    "id": "q349",
     "type": "tf",
     "prompt": "Proximal är en riktningsterm",
     "correct": "Sant",
@@ -5306,7 +4641,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q393",
+    "id": "q350",
     "type": "tf",
     "prompt": "Distal är en riktningsterm",
     "correct": "Sant",
@@ -5318,7 +4653,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q394",
+    "id": "q351",
     "type": "tf",
     "prompt": "Superficial är en riktningsterm",
     "correct": "Sant",
@@ -5330,7 +4665,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q395",
+    "id": "q352",
     "type": "tf",
     "prompt": "Profundus är en riktningsterm",
     "correct": "Sant",
@@ -5342,7 +4677,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q396",
+    "id": "q353",
     "type": "mc",
     "prompt": "Motsatsen till Flexion är?",
     "correct": "Extension",
@@ -5356,7 +4691,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q397",
+    "id": "q354",
     "type": "mc",
     "prompt": "Motsatsen till Abduktion är?",
     "correct": "Adduktion",
@@ -5370,7 +4705,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q398",
+    "id": "q355",
     "type": "mc",
     "prompt": "Motsatsen till Supination är?",
     "correct": "Pronation",
@@ -5384,21 +4719,19 @@
     "source": "Terminologi"
   },
   {
-    "id": "q399",
+    "id": "q356",
     "type": "mc",
     "prompt": "Motsatsen till Dorsalflexion är?",
     "correct": "Plantarflexion",
     "distractors": [
-      "Anterior",
-      "Extension",
-      "Supination"
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
     "source": "Terminologi"
   },
   {
-    "id": "q400",
+    "id": "q357",
     "type": "mc",
     "prompt": "Motsatsen till Inversion är?",
     "correct": "Eversion",
@@ -5412,7 +4745,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q401",
+    "id": "q358",
     "type": "mc",
     "prompt": "Motsatsen till Elevation är?",
     "correct": "Depression",
@@ -5426,7 +4759,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q402",
+    "id": "q359",
     "type": "mc",
     "prompt": "Motsatsen till Protraktion är?",
     "correct": "Retraktion",
@@ -5440,7 +4773,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q403",
+    "id": "q360",
     "type": "mc",
     "prompt": "Motsatsen till Superior är?",
     "correct": "Inferior",
@@ -5454,7 +4787,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q404",
+    "id": "q361",
     "type": "mc",
     "prompt": "Motsatsen till Anterior är?",
     "correct": "Posterior",
@@ -5468,7 +4801,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q405",
+    "id": "q362",
     "type": "mc",
     "prompt": "Motsatsen till Medial är?",
     "correct": "Lateral",
@@ -5482,7 +4815,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q406",
+    "id": "q363",
     "type": "mc",
     "prompt": "Motsatsen till Proximal är?",
     "correct": "Distal",
@@ -5496,7 +4829,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q407",
+    "id": "q364",
     "type": "mc",
     "prompt": "Motsatsen till Superficial är?",
     "correct": "Profundus",
@@ -5510,7 +4843,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q408",
+    "id": "q365",
     "type": "mc",
     "prompt": "Motsatsen till Dorsal är?",
     "correct": "Ventral",
@@ -5524,7 +4857,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q409",
+    "id": "q366",
     "type": "mc",
     "prompt": "Superior + Lateral =",
     "correct": "Uppåt och åt sidan",
@@ -5538,35 +4871,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q410",
-    "type": "mc",
-    "prompt": "Superior + Lateral =",
-    "correct": "Uppåt och åt sidan",
-    "distractors": [
-      "Nedåt och mot mittlinjen",
-      "Bakåt och närmare ursprung",
-      "Framåt och längre från ursprung"
-    ],
-    "topic": "riktningar",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q411",
-    "type": "mc",
-    "prompt": "Superior + Lateral =",
-    "correct": "Uppåt och åt sidan",
-    "distractors": [
-      "Nedåt och mot mittlinjen",
-      "Bakåt och längre från ursprung",
-      "Framåt och närmare ursprung"
-    ],
-    "topic": "riktningar",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q412",
+    "id": "q367",
     "type": "mc",
     "prompt": "Inferior + Medial =",
     "correct": "Nedåt och mot mittlinjen",
@@ -5580,35 +4885,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q413",
-    "type": "mc",
-    "prompt": "Inferior + Medial =",
-    "correct": "Nedåt och mot mittlinjen",
-    "distractors": [
-      "Uppåt och åt sidan",
-      "Bakåt och längre från ursprung",
-      "Framåt och närmare ursprung"
-    ],
-    "topic": "riktningar",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q414",
-    "type": "mc",
-    "prompt": "Inferior + Medial =",
-    "correct": "Nedåt och mot mittlinjen",
-    "distractors": [
-      "Uppåt och åt sidan",
-      "Bakåt och längre från ursprung",
-      "Framåt och närmare ursprung"
-    ],
-    "topic": "riktningar",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q415",
+    "id": "q368",
     "type": "mc",
     "prompt": "Anterior + Proximal =",
     "correct": "Framåt och närmare ursprung",
@@ -5622,35 +4899,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q416",
-    "type": "mc",
-    "prompt": "Anterior + Proximal =",
-    "correct": "Framåt och närmare ursprung",
-    "distractors": [
-      "Bakåt och längre från ursprung",
-      "Uppåt och åt sidan",
-      "Nedåt och mot mittlinjen"
-    ],
-    "topic": "riktningar",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q417",
-    "type": "mc",
-    "prompt": "Anterior + Proximal =",
-    "correct": "Framåt och närmare ursprung",
-    "distractors": [
-      "Bakåt och längre från ursprung",
-      "Uppåt och åt sidan",
-      "Nedåt och mot mittlinjen"
-    ],
-    "topic": "riktningar",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q418",
+    "id": "q369",
     "type": "mc",
     "prompt": "Posterior + Distal =",
     "correct": "Bakåt och längre från ursprung",
@@ -5664,35 +4913,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q419",
-    "type": "mc",
-    "prompt": "Posterior + Distal =",
-    "correct": "Bakåt och längre från ursprung",
-    "distractors": [
-      "Framåt och närmare ursprung",
-      "Uppåt och åt sidan",
-      "Nedåt och mot mittlinjen"
-    ],
-    "topic": "riktningar",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q420",
-    "type": "mc",
-    "prompt": "Posterior + Distal =",
-    "correct": "Bakåt och längre från ursprung",
-    "distractors": [
-      "Framåt och närmare ursprung",
-      "Uppåt och åt sidan",
-      "Nedåt och mot mittlinjen"
-    ],
-    "topic": "riktningar",
-    "difficulty": "Normal",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q421",
+    "id": "q370",
     "type": "mc",
     "prompt": "Ordet 'flexion' kommer från latin och betyder",
     "correct": "Böjning",
@@ -5706,7 +4927,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q422",
+    "id": "q371",
     "type": "mc",
     "prompt": "Ordet 'extension' kommer från latin och betyder",
     "correct": "Sträckning",
@@ -5720,7 +4941,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q423",
+    "id": "q372",
     "type": "mc",
     "prompt": "'Abductus' från latin betyder ungefär",
     "correct": "Vänd bort",
@@ -5734,7 +4955,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q424",
+    "id": "q373",
     "type": "mc",
     "prompt": "'Adductus' från latin betyder ungefär",
     "correct": "Vänd till",
@@ -5748,7 +4969,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q425",
+    "id": "q374",
     "type": "mc",
     "prompt": "'Rotatio' från latin betyder",
     "correct": "Vriding",
@@ -5762,7 +4983,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q426",
+    "id": "q375",
     "type": "mc",
     "prompt": "'Superior' kommer från latin och betyder",
     "correct": "Högre",
@@ -5776,21 +4997,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q427",
-    "type": "mc",
-    "prompt": "'Inferior' kommer från latin och betyder",
-    "correct": "Lägre",
-    "distractors": [
-      "Högre",
-      "Senare",
-      "Vidare"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q428",
+    "id": "q376",
     "type": "mc",
     "prompt": "'Anterior' från latin betyder",
     "correct": "Framför",
@@ -5804,7 +5011,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q429",
+    "id": "q377",
     "type": "mc",
     "prompt": "'Posterior' från latin betyder",
     "correct": "Bakom",
@@ -5818,7 +5025,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q430",
+    "id": "q378",
     "type": "mc",
     "prompt": "'Medius' från latin betyder",
     "correct": "Mitten",
@@ -5832,7 +5039,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q431",
+    "id": "q379",
     "type": "mc",
     "prompt": "Motsatsen till flexion är",
     "correct": "Extension",
@@ -5846,7 +5053,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q432",
+    "id": "q380",
     "type": "mc",
     "prompt": "Motsatsen till abduktion är",
     "correct": "Adduktion",
@@ -5860,7 +5067,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q433",
+    "id": "q381",
     "type": "mc",
     "prompt": "Motsatsen till elevation är",
     "correct": "Depression",
@@ -5874,7 +5081,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q434",
+    "id": "q382",
     "type": "mc",
     "prompt": "Motsatsen till protraktion är",
     "correct": "Retraktion",
@@ -5888,7 +5095,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q435",
+    "id": "q383",
     "type": "mc",
     "prompt": "Motsatsen till inversion är",
     "correct": "Eversion",
@@ -5902,7 +5109,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q436",
+    "id": "q384",
     "type": "mc",
     "prompt": "Motsatsen till dorsalflexion är",
     "correct": "Plantarflexion",
@@ -5916,7 +5123,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q437",
+    "id": "q385",
     "type": "mc",
     "prompt": "Motsatsen till supination är",
     "correct": "Pronation",
@@ -5930,7 +5137,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q438",
+    "id": "q386",
     "type": "mc",
     "prompt": "Motsatsen till utåtrotation är",
     "correct": "Inåtrotation",
@@ -5944,7 +5151,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q439",
+    "id": "q387",
     "type": "mc",
     "prompt": "Vad heter positionen då man ligger på rygg?",
     "correct": "Supine",
@@ -5958,7 +5165,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q440",
+    "id": "q388",
     "type": "mc",
     "prompt": "Vad heter positionen då man ligger på mage?",
     "correct": "Prone",
@@ -5972,7 +5179,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q441",
+    "id": "q389",
     "type": "mc",
     "prompt": "Vad heter den halvsittande positionen?",
     "correct": "Fowler's",
@@ -5986,7 +5193,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q442",
+    "id": "q390",
     "type": "mc",
     "prompt": "Vilken position har huvudet ned?",
     "correct": "Trendelenburg",
@@ -6000,7 +5207,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q443",
+    "id": "q391",
     "type": "mc",
     "prompt": "Sagittalplan delar kroppen i",
     "correct": "Vänster och höger halvor",
@@ -6014,7 +5221,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q444",
+    "id": "q392",
     "type": "mc",
     "prompt": "Frontalplan delar kroppen i",
     "correct": "Fram och bakre delen",
@@ -6028,7 +5235,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q445",
+    "id": "q393",
     "type": "mc",
     "prompt": "Transversalplan delar kroppen i",
     "correct": "Övre och nedre delen",
@@ -6042,7 +5249,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q446",
+    "id": "q394",
     "type": "mc",
     "prompt": "Medianplan är",
     "correct": "Mittplan mellan höger och vänster",
@@ -6056,35 +5263,31 @@
     "source": "Terminologi"
   },
   {
-    "id": "q447",
+    "id": "q395",
     "type": "mc",
     "prompt": "Böja armen i armbågen är en",
     "correct": "Flexion",
     "distractors": [
-      "Extension",
-      "Abduktion",
-      "Rotation"
+      "Extension"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
     "source": "Terminologi"
   },
   {
-    "id": "q448",
+    "id": "q396",
     "type": "mc",
     "prompt": "Sträcka armen ut från kroppen är en",
     "correct": "Extension",
     "distractors": [
-      "Flexion",
-      "Adduktion",
-      "Inversion"
+      "Flexion"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
     "source": "Terminologi"
   },
   {
-    "id": "q449",
+    "id": "q397",
     "type": "mc",
     "prompt": "Lyfta armen rakt ut från sidan kallas _____",
     "correct": "Abduktion",
@@ -6098,7 +5301,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q450",
+    "id": "q398",
     "type": "mc",
     "prompt": "Föra armen ned längs sidan av kroppen kallas _____",
     "correct": "Adduktion",
@@ -6112,7 +5315,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q452",
+    "id": "q399",
     "type": "mc",
     "prompt": "Sänka armen ned från axelnivå kallas _____",
     "correct": "Depression",
@@ -6126,7 +5329,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q453",
+    "id": "q400",
     "type": "mc",
     "prompt": "En hand i supination har",
     "correct": "Handflatan uppåt",
@@ -6140,7 +5343,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q454",
+    "id": "q401",
     "type": "mc",
     "prompt": "En hand i pronation har",
     "correct": "Handflatan nedåt",
@@ -6154,7 +5357,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q455",
+    "id": "q402",
     "type": "mc",
     "prompt": "Radialflexion av handleden böjer mot",
     "correct": "Tumsidan",
@@ -6168,7 +5371,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q456",
+    "id": "q403",
     "type": "mc",
     "prompt": "Ulnarflexion av handleden böjer mot",
     "correct": "Lillfingersidan",
@@ -6182,7 +5385,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q457",
+    "id": "q404",
     "type": "mc",
     "prompt": "Dorsalflexion av foten är när",
     "correct": "Foten dras uppåt",
@@ -6196,7 +5399,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q458",
+    "id": "q405",
     "type": "mc",
     "prompt": "Plantarflexion av foten är när",
     "correct": "Foten pressas ned",
@@ -6210,7 +5413,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q459",
+    "id": "q406",
     "type": "mc",
     "prompt": "Inversion av foten är när",
     "correct": "Fotsula vänds inåt",
@@ -6224,7 +5427,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q460",
+    "id": "q407",
     "type": "mc",
     "prompt": "Eversion av foten är när",
     "correct": "Fotsula vänds utåt",
@@ -6238,7 +5441,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q461",
+    "id": "q408",
     "type": "mc",
     "prompt": "Radial betyder sidan mot",
     "correct": "Tummen",
@@ -6252,7 +5455,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q462",
+    "id": "q409",
     "type": "mc",
     "prompt": "Ulnar betyder sidan mot",
     "correct": "Lillfingret",
@@ -6266,7 +5469,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q463",
+    "id": "q410",
     "type": "mc",
     "prompt": "Tibial betyder sidan mot",
     "correct": "Stortån",
@@ -6280,7 +5483,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q464",
+    "id": "q411",
     "type": "mc",
     "prompt": "Fibular betyder sidan mot",
     "correct": "Lilltån",
@@ -6294,7 +5497,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q465",
+    "id": "q412",
     "type": "mc",
     "prompt": "Palmar/Volar är den ____ sidan av handen",
     "correct": "Undersidan",
@@ -6308,7 +5511,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q466",
+    "id": "q413",
     "type": "mc",
     "prompt": "Dorsal är den ____ sidan av handen",
     "correct": "Översidan",
@@ -6322,7 +5525,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q467",
+    "id": "q414",
     "type": "mc",
     "prompt": "Plantar är den ____ sidan av foten",
     "correct": "Fotsulan",
@@ -6336,7 +5539,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q468",
+    "id": "q415",
     "type": "mc",
     "prompt": "Inåtrotation betyder rotation",
     "correct": "Mot mittlinjen",
@@ -6350,7 +5553,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q469",
+    "id": "q416",
     "type": "mc",
     "prompt": "Utåtrotation betyder rotation",
     "correct": "Utåt",
@@ -6364,7 +5567,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q470",
+    "id": "q417",
     "type": "mc",
     "prompt": "En rotationrörelse kan ske omkring",
     "correct": "Kroppens längdaxel",
@@ -6378,7 +5581,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q471",
+    "id": "q418",
     "type": "mc",
     "prompt": "Cirkumduktion är en rörelse som",
     "correct": "Sker i en cirkelrörelse",
@@ -6392,7 +5595,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q472",
+    "id": "q419",
     "type": "mc",
     "prompt": "Cirkumduktion kombinerar",
     "correct": "Flera olika rörelser",
@@ -6406,7 +5609,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q473",
+    "id": "q420",
     "type": "mc",
     "prompt": "Elevation av scapula betyder",
     "correct": "Höjning av axeln",
@@ -6420,7 +5623,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q474",
+    "id": "q421",
     "type": "mc",
     "prompt": "Depression av scapula betyder",
     "correct": "Sänkning av axeln",
@@ -6434,7 +5637,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q475",
+    "id": "q422",
     "type": "mc",
     "prompt": "Protraktion av scapula betyder",
     "correct": "Rörelse framåt",
@@ -6448,7 +5651,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q476",
+    "id": "q423",
     "type": "mc",
     "prompt": "Retraktion av scapula betyder",
     "correct": "Rörelse bakåt",
@@ -6462,7 +5665,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q477",
+    "id": "q424",
     "type": "mc",
     "prompt": "Protrusion av käken betyder",
     "correct": "Framåttippning",
@@ -6476,7 +5679,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q478",
+    "id": "q425",
     "type": "mc",
     "prompt": "Retrusion av käken betyder",
     "correct": "Bakåttippning",
@@ -6490,7 +5693,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q479",
+    "id": "q426",
     "type": "mc",
     "prompt": "Opposition av tummen betyder",
     "correct": "Tummen möter fingrarnas toppar",
@@ -6504,7 +5707,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q480",
+    "id": "q427",
     "type": "mc",
     "prompt": "Reposition betyder att",
     "correct": "Återgå till neutral position",
@@ -6518,7 +5721,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q481",
+    "id": "q428",
     "type": "mc",
     "prompt": "En struktur är både proximal och lateral - det är",
     "correct": "Närmare ursprung och från mittlinjen",
@@ -6532,7 +5735,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q482",
+    "id": "q429",
     "type": "mc",
     "prompt": "En struktur är både distal och medial - det är",
     "correct": "Längre från ursprung och mot mittlinjen",
@@ -6546,7 +5749,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q483",
+    "id": "q430",
     "type": "mc",
     "prompt": "En struktur är både superficial och anterior - det är",
     "correct": "Nära ytan och på framsidan",
@@ -6560,7 +5763,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q484",
+    "id": "q431",
     "type": "mc",
     "prompt": "Ipsilateral betyder",
     "correct": "Samma sida",
@@ -6574,7 +5777,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q485",
+    "id": "q432",
     "type": "mc",
     "prompt": "Contralateral betyder",
     "correct": "Motsatt sida",
@@ -6588,35 +5791,31 @@
     "source": "Terminologi"
   },
   {
-    "id": "q486",
+    "id": "q433",
     "type": "mc",
     "prompt": "En böjning i en led kallas",
     "correct": "Flexion",
     "distractors": [
-      "Extension",
-      "Rotation",
-      "Abduktion"
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
     "source": "Terminologi"
   },
   {
-    "id": "q487",
+    "id": "q434",
     "type": "mc",
     "prompt": "En sträckning i en led kallas",
     "correct": "Extension",
     "distractors": [
-      "Flexion",
-      "Adduktion",
-      "Inversion"
+      "Flexion"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
     "source": "Terminologi"
   },
   {
-    "id": "q488",
+    "id": "q435",
     "type": "mc",
     "prompt": "'Kranial' betyder samma som",
     "correct": "Superior",
@@ -6630,49 +5829,31 @@
     "source": "Terminologi"
   },
   {
-    "id": "q489",
-    "type": "mc",
-    "prompt": "Vad betyder 'Kaudal'?",
-    "correct": "Mot svansen",
-    "distractors": [
-      "Mot huvudet",
-      "Framåt",
-      "Bak"
-    ],
-    "topic": "begrepp",
-    "difficulty": "Easy",
-    "source": "Terminologi"
-  },
-  {
-    "id": "q490",
+    "id": "q436",
     "type": "mc",
     "prompt": "'Ventral' betyder samma som",
     "correct": "Anterior",
     "distractors": [
-      "Posterior",
-      "Superior",
-      "Lateral"
+      "Posterior"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
     "source": "Terminologi"
   },
   {
-    "id": "q491",
+    "id": "q437",
     "type": "mc",
     "prompt": "'Dorsal' betyder samma som",
     "correct": "Posterior",
     "distractors": [
-      "Anterior",
-      "Inferior",
-      "Medial"
+      "Anterior"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
     "source": "Terminologi"
   },
   {
-    "id": "q492",
+    "id": "q438",
     "type": "mc",
     "prompt": "En rörelse bort från mittlinjen av kroppen kallas _____",
     "correct": "Abduktion",
@@ -6686,7 +5867,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q493",
+    "id": "q439",
     "type": "mc",
     "prompt": "En rörelse mot mittlinjen av kroppen kallas _____",
     "correct": "Adduktion",
@@ -6700,7 +5881,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q495",
+    "id": "q440",
     "type": "mc",
     "prompt": "Att sänka något från axelnivå ned kallas _____",
     "correct": "Depression",
@@ -6714,7 +5895,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q496",
+    "id": "q441",
     "type": "mc",
     "prompt": "Att dra något framåt kallas",
     "correct": "Protraktion",
@@ -6728,7 +5909,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q497",
+    "id": "q442",
     "type": "mc",
     "prompt": "Att dra något bakåt kallas",
     "correct": "Retraktion",
@@ -6742,7 +5923,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q498",
+    "id": "q443",
     "type": "mc",
     "prompt": "En cirkulär rörelse kallas",
     "correct": "Cirkumduktion",
@@ -6756,7 +5937,7 @@
     "source": "Terminologi"
   },
   {
-    "id": "q499",
+    "id": "q444",
     "type": "mc",
     "prompt": "Vridning av en kroppsdel kallas",
     "correct": "Rotation",
@@ -6770,21 +5951,19 @@
     "source": "Terminologi"
   },
   {
-    "id": "q500",
+    "id": "q445",
     "type": "mc",
     "prompt": "En översträckning av en led kallas",
     "correct": "Hyperextension",
     "distractors": [
-      "Extension",
-      "Flexion",
-      "Adduktion"
+      "Flexion"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
     "source": "Terminologi"
   },
   {
-    "id": "q501",
+    "id": "q446",
     "type": "mc",
     "prompt": "Vilken riktning betyder mot huvudet?",
     "correct": "Kranial",
@@ -6798,7 +5977,7 @@
     "source": "generated"
   },
   {
-    "id": "q502",
+    "id": "q447",
     "type": "tf",
     "prompt": "Medial betyder mot mittlinjen",
     "correct": "Sant",
@@ -6810,7 +5989,7 @@
     "source": "generated"
   },
   {
-    "id": "q503",
+    "id": "q448",
     "type": "tf",
     "prompt": "Distal betyder längre från ursprung",
     "correct": "Sant",

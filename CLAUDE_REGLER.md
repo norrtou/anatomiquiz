@@ -54,13 +54,16 @@ En fråga utan relevanta alternativ är värdelös och förstör quizet. Inga fi
 - Alla alternativ måste kunna motiveras med "detta är också ett ben/en muskel/en riktning"
 
 ### 2.3 Multiple Choice (MC) Struktur
-**Format:** 1 korrekt svar + 3 distraktorer (TOTALT 4 alternativ)
+**Format:** 1 korrekt svar + 1-3 distraktorer (TOTALT 2-4 alternativ efter behov)
 
-- ALLA MC-frågor MÅSTE ha exakt 4 alternativ
+- MC-frågor MÅSTE ha 2-4 alternativ totalt
+  - Minst 2 alternativ (1 correct + 1 distractor)
+  - Max 4 alternativ (1 correct + 3 distractors)
+  - Använd det antal som är logiskt för frågan
 - 1 = korrekt svar
-- 3 = semantiskt relevanta distractors
+- 1-3 = semantiskt relevanta distractors
 - **INGEN FRÅGA får ha:**
-  - Bara 1-2 alternativ
+  - 1 alternativ (måste ha minst 2 totalt)
   - Duplikat (samma svar både i "correct" och i "distractors")
   - Filler-ord
 
@@ -225,9 +228,11 @@ En fråga utan relevanta alternativ är värdelös och förstör quizet. Inga fi
 - **ALDRIG:** "Vilken muskel adduktion?" (felanvänd ordklasse)
 - **ANVÄND:** "Vilken muskel adducerar?" (korrekt verb)
 
-### 6.5 För Få Alternativ
-- Varje MC-fråga behöver EXAKT 4 alternativ
-- Aldrig 2-3 alternativ för MC-frågor
+### 6.5 Antal Alternativ
+- MC-frågor behöver 2-4 alternativ efter behov
+- Minst 2 (1 correct + 1 distractor)
+- Max 4 (1 correct + 3 distractors)
+- ALDRIG 1 alternativ (måste ha minst 2 totalt)
 
 ### 6.6 Dubbletter
 - Samma ord ALDRIG både i "correct" och "distractors"
@@ -279,7 +284,7 @@ Före varje session/commit, kontrollera:
 - [ ] ALLA svenska ord är grammatiskt korrekta
 - [ ] ALLA latinska termer är korrekt Swedish Medical Latin
 - [ ] INGA engelska medicinska termer förekommer
-- [ ] ALLA MC-frågor har exakt 4 alternativ (1 korrekt + 3 distraktorer)
+- [ ] ALLA MC-frågor har 2-4 alternativ (1 korrekt + 1-3 distraktorer efter behov)
 - [ ] INGA dubbletter mellan "correct" och "distractors"
 - [ ] INGA filler-alternativ ("Annat", "Ingen av dessa", osv)
 - [ ] ALLA alternativ är semantiskt relevanta för frågan

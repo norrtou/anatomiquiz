@@ -1,1 +1,4529 @@
-[]
+[
+  {
+    "id": "q1",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tumme och två fingrar på spetsarna.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q2",
+    "type": "tf",
+    "prompt": "Nyckelgrepp använder tumme mot radiella sidan av pekfingret.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q3",
+    "type": "tf",
+    "prompt": "Chuckgrepp använder tumme och två fingrar tillsammans.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q4",
+    "type": "mc",
+    "prompt": "Fem-fingergrepp är ett grepp där:",
+    "correct": "Alla fingrar tillsammans runt objektet",
+    "distractors": [
+      "Tumme och två fingrar på spetsarna",
+      "Tumme mot radiella sidan av pekfingret",
+      "Tumme och två fingrar tillsammans med fingertopp kontakt"
+    ],
+    "topic": "handen_grepptyper",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q5",
+    "type": "mc",
+    "prompt": "Diagonalt volargrepp är ett grepp där:",
+    "correct": "Palmar grip med objektet diagonalt placerat",
+    "distractors": [
+      "Tumme och två fingrar på spetsarna",
+      "Tumme mot radiella sidan av pekfingret",
+      "Tumme och två fingrar tillsammans med fingertopp kontakt"
+    ],
+    "topic": "handen_grepptyper",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q6",
+    "type": "mc",
+    "prompt": "Transversellt volargrepp är ett grepp där:",
+    "correct": "Palmar grip med objektet tvärsgående placerat",
+    "distractors": [
+      "Tumme och två fingrar på spetsarna",
+      "Tumme mot radiella sidan av pekfingret",
+      "Tumme och två fingrar tillsammans med fingertopp kontakt"
+    ],
+    "topic": "handen_grepptyper",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q7",
+    "type": "mc",
+    "prompt": "Sfäriskt volargrepp är ett grepp där:",
+    "correct": "Hålla rund eller sfärisk objekt med öppen hand",
+    "distractors": [
+      "Tumme och två fingrar på spetsarna",
+      "Tumme mot radiella sidan av pekfingret",
+      "Tumme och två fingrar tillsammans med fingertopp kontakt"
+    ],
+    "topic": "handen_grepptyper",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q8",
+    "type": "mc",
+    "prompt": "Extensionsgrepp är ett grepp där:",
+    "correct": "Hook-liknande grepp utan tummes medverkan",
+    "distractors": [
+      "Tumme och två fingrar på spetsarna",
+      "Tumme mot radiella sidan av pekfingret",
+      "Tumme och två fingrar tillsammans med fingertopp kontakt"
+    ],
+    "topic": "handen_grepptyper",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q9",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tumme och två fingrar på spetsarna.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q10",
+    "type": "tf",
+    "prompt": "Nyckelgrepp använder tumme mot radiella sidan av pekfingret.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q11",
+    "type": "tf",
+    "prompt": "Chuckgrepp använder tumme och två fingrar tillsammans.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q12",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tumme och två fingrar på spetsarna.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q13",
+    "type": "tf",
+    "prompt": "Nyckelgrepp använder tumme mot radiella sidan av pekfingret.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q14",
+    "type": "tf",
+    "prompt": "Chuckgrepp använder tumme och två fingrar tillsammans.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q15",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tumme och två fingrar på spetsarna.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q16",
+    "type": "tf",
+    "prompt": "Nyckelgrepp använder tumme mot radiella sidan av pekfingret.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q17",
+    "type": "tf",
+    "prompt": "Chuckgrepp använder tumme och två fingrar tillsammans.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q18",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tumme och två fingrar på spetsarna.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q19",
+    "type": "tf",
+    "prompt": "Nyckelgrepp använder tumme mot radiella sidan av pekfingret.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q20",
+    "type": "tf",
+    "prompt": "Chuckgrepp använder tumme och två fingrar tillsammans.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q21",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tumme och två fingrar på spetsarna.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q22",
+    "type": "tf",
+    "prompt": "Nyckelgrepp använder tumme mot radiella sidan av pekfingret.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q23",
+    "type": "tf",
+    "prompt": "Chuckgrepp använder tumme och två fingrar tillsammans.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q24",
+    "type": "mc",
+    "prompt": "Vilket ben motsvarar 'Båtbenet'?",
+    "correct": "Os scaphoideum",
+    "distractors": [
+      "Os lunatum",
+      "Os triquetrum",
+      "Os pisiforme"
+    ],
+    "topic": "handen_ben",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q25",
+    "type": "mc",
+    "prompt": "Vilket ben motsvarar 'Månbenet'?",
+    "correct": "Os lunatum",
+    "distractors": [
+      "Os scaphoideum",
+      "Os triquetrum",
+      "Os pisiforme"
+    ],
+    "topic": "handen_ben",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q26",
+    "type": "mc",
+    "prompt": "Vilket ben motsvarar 'Tretandade benet'?",
+    "correct": "Os triquetrum",
+    "distractors": [
+      "Os scaphoideum",
+      "Os lunatum",
+      "Os pisiforme"
+    ],
+    "topic": "handen_ben",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q27",
+    "type": "mc",
+    "prompt": "Vilket ben motsvarar 'Ärtbenet'?",
+    "correct": "Os pisiforme",
+    "distractors": [
+      "Os scaphoideum",
+      "Os lunatum",
+      "Os triquetrum"
+    ],
+    "topic": "handen_ben",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q28",
+    "type": "mc",
+    "prompt": "Vilket ben motsvarar 'Traetzium'?",
+    "correct": "Os trapezium",
+    "distractors": [
+      "Os scaphoideum",
+      "Os lunatum",
+      "Os triquetrum"
+    ],
+    "topic": "handen_ben",
+    "difficulty": "lätt"
+  },
+  {
+    "id": "q29",
+    "type": "mc",
+    "prompt": "Vilket ben motsvarar 'Huvudbenet'?",
+    "correct": "Os capitatum",
+    "distractors": [
+      "Os scaphoideum",
+      "Os lunatum",
+      "Os triquetrum"
+    ],
+    "topic": "handen_ben",
+    "difficulty": "lätt"
+  },
+  {
+    "id": "q30",
+    "type": "mc",
+    "prompt": "Vilket ben motsvarar 'Hakbenet'?",
+    "correct": "Os hamatum",
+    "distractors": [
+      "Os scaphoideum",
+      "Os lunatum",
+      "Os triquetrum"
+    ],
+    "topic": "handen_ben",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q31",
+    "type": "mc",
+    "prompt": "Vad är funktionen av M. abductor pollicis brevis?",
+    "correct": "Abduktion tumme",
+    "distractors": [
+      "Adduktion tumme"
+    ],
+    "topic": "handen_muskler",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q32",
+    "type": "tf",
+    "prompt": "M. abductor pollicis brevis innerveras av N. medianus.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q33",
+    "type": "mc",
+    "prompt": "Vad är funktionen av M. flexor pollicis brevis?",
+    "correct": "Flexion tumme MCP",
+    "distractors": [
+      "Abduktion tumme",
+      "Opposition tumme",
+      "Adduktion tumme"
+    ],
+    "topic": "handen_muskler",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q34",
+    "type": "tf",
+    "prompt": "M. flexor pollicis brevis innerveras av N. medianus.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q35",
+    "type": "mc",
+    "prompt": "Vad är funktionen av M. opponens pollicis?",
+    "correct": "Opposition tumme",
+    "distractors": [
+      "Abduktion tumme",
+      "Flexion tumme MCP",
+      "Adduktion tumme"
+    ],
+    "topic": "handen_muskler",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q36",
+    "type": "tf",
+    "prompt": "M. opponens pollicis innerveras av N. medianus.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q37",
+    "type": "mc",
+    "prompt": "Vad är funktionen av M. adductor pollicis?",
+    "correct": "Adduktion tumme",
+    "distractors": [
+      "Abduktion tumme"
+    ],
+    "topic": "handen_muskler",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q38",
+    "type": "tf",
+    "prompt": "M. adductor pollicis innerveras av N. ulnaris.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q39",
+    "type": "mc",
+    "prompt": "Vad är funktionen av M. abductor digiti minimi?",
+    "correct": "Abduktion lillfinger",
+    "distractors": [
+      "Abduktion tumme",
+      "Flexion tumme MCP",
+      "Opposition tumme"
+    ],
+    "topic": "handen_muskler",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q40",
+    "type": "tf",
+    "prompt": "M. abductor digiti minimi innerveras av N. ulnaris.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q41",
+    "type": "mc",
+    "prompt": "Vad är funktionen av M. flexor digiti minimi brevis?",
+    "correct": "Flexion lillfinger",
+    "distractors": [
+      "Abduktion tumme",
+      "Flexion tumme MCP",
+      "Opposition tumme"
+    ],
+    "topic": "handen_muskler",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q42",
+    "type": "tf",
+    "prompt": "M. flexor digiti minimi brevis innerveras av N. ulnaris.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q43",
+    "type": "mc",
+    "prompt": "Vad är funktionen av M. opponens digiti minimi?",
+    "correct": "Opposition lillfinger",
+    "distractors": [
+      "Abduktion tumme",
+      "Flexion tumme MCP",
+      "Opposition tumme"
+    ],
+    "topic": "handen_muskler",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q44",
+    "type": "tf",
+    "prompt": "M. opponens digiti minimi innerveras av N. ulnaris.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q45",
+    "type": "mc",
+    "prompt": "Vad är funktionen av M. lumbricalis I-II?",
+    "correct": "MCP flexion + IP extension pek/långfinger",
+    "distractors": [
+      "Flexion tumme MCP"
+    ],
+    "topic": "handen_muskler",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q46",
+    "type": "tf",
+    "prompt": "M. lumbricalis I-II innerveras av N. medianus.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q47",
+    "type": "mc",
+    "prompt": "Vad är funktionen av M. lumbricalis III-IV?",
+    "correct": "MCP flexion + IP extension ring/lillfinger",
+    "distractors": [
+      "Flexion tumme MCP"
+    ],
+    "topic": "handen_muskler",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q48",
+    "type": "tf",
+    "prompt": "M. lumbricalis III-IV innerveras av N. ulnaris.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q49",
+    "type": "mc",
+    "prompt": "Vad är funktionen av M. interossei palmares?",
+    "correct": "Adduktion finger",
+    "distractors": [
+      "Abduktion tumme"
+    ],
+    "topic": "handen_muskler",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q50",
+    "type": "tf",
+    "prompt": "M. interossei palmares innerveras av N. ulnaris.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q51",
+    "type": "mc",
+    "prompt": "Vad är funktionen av M. interossei dorsales?",
+    "correct": "Abduktion finger",
+    "distractors": [
+      "Abduktion tumme",
+      "Flexion tumme MCP",
+      "Opposition tumme"
+    ],
+    "topic": "handen_muskler",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q52",
+    "type": "tf",
+    "prompt": "M. interossei dorsales innerveras av N. ulnaris.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q53",
+    "type": "mc",
+    "prompt": "Vad är funktionen av M. flexor digitorum superficialis?",
+    "correct": "Flexion PIP finger II-V",
+    "distractors": [
+      "Abduktion tumme",
+      "Flexion tumme MCP",
+      "Opposition tumme"
+    ],
+    "topic": "handen_muskler",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q54",
+    "type": "tf",
+    "prompt": "M. flexor digitorum superficialis innerveras av N. medianus.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q55",
+    "type": "mc",
+    "prompt": "Vad är funktionen av M. flexor digitorum profundus?",
+    "correct": "Flexion DIP finger II-V",
+    "distractors": [
+      "Abduktion tumme",
+      "Flexion tumme MCP",
+      "Opposition tumme"
+    ],
+    "topic": "handen_muskler",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q56",
+    "type": "tf",
+    "prompt": "M. flexor digitorum profundus innerveras av N. medianus/ulnaris.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q57",
+    "type": "mc",
+    "prompt": "Vad är funktionen av M. extensor digitorum?",
+    "correct": "Extension finger II-V",
+    "distractors": [
+      "Flexion tumme MCP"
+    ],
+    "topic": "handen_muskler",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q58",
+    "type": "tf",
+    "prompt": "M. extensor digitorum innerveras av N. radialis.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q59",
+    "type": "tf",
+    "prompt": "M. abductor pollicis brevis innerveras av N. medianus.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q60",
+    "type": "tf",
+    "prompt": "M. flexor pollicis brevis innerveras av N. medianus.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q61",
+    "type": "tf",
+    "prompt": "M. opponens pollicis innerveras av N. medianus.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q62",
+    "type": "tf",
+    "prompt": "M. adductor pollicis innerveras av N. ulnaris.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q63",
+    "type": "tf",
+    "prompt": "M. abductor digiti minimi innerveras av N. ulnaris.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q64",
+    "type": "tf",
+    "prompt": "M. flexor digiti minimi brevis innerveras av N. ulnaris.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q65",
+    "type": "tf",
+    "prompt": "M. opponens digiti minimi innerveras av N. ulnaris.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q66",
+    "type": "tf",
+    "prompt": "M. lumbricalis I-II innerveras av N. medianus.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q67",
+    "type": "tf",
+    "prompt": "M. lumbricalis III-IV innerveras av N. ulnaris.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q68",
+    "type": "tf",
+    "prompt": "M. interossei palmares innerveras av N. ulnaris.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q69",
+    "type": "tf",
+    "prompt": "M. interossei dorsales innerveras av N. ulnaris.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q70",
+    "type": "tf",
+    "prompt": "M. flexor digitorum superficialis innerveras av N. medianus.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q71",
+    "type": "tf",
+    "prompt": "M. flexor digitorum profundus innerveras av N. medianus/ulnaris.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q72",
+    "type": "tf",
+    "prompt": "M. extensor digitorum innerveras av N. radialis.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q73",
+    "type": "tf",
+    "prompt": "M. abductor pollicis brevis innerveras av N. medianus.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q74",
+    "type": "tf",
+    "prompt": "M. flexor pollicis brevis innerveras av N. medianus.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q75",
+    "type": "tf",
+    "prompt": "M. opponens pollicis innerveras av N. medianus.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q76",
+    "type": "tf",
+    "prompt": "M. adductor pollicis innerveras av N. ulnaris.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q77",
+    "type": "tf",
+    "prompt": "M. abductor digiti minimi innerveras av N. ulnaris.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q78",
+    "type": "tf",
+    "prompt": "M. flexor digiti minimi brevis innerveras av N. ulnaris.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q79",
+    "type": "tf",
+    "prompt": "M. opponens digiti minimi innerveras av N. ulnaris.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q80",
+    "type": "tf",
+    "prompt": "M. lumbricalis I-II innerveras av N. medianus.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q81",
+    "type": "tf",
+    "prompt": "M. lumbricalis III-IV innerveras av N. ulnaris.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q82",
+    "type": "tf",
+    "prompt": "M. interossei palmares innerveras av N. ulnaris.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q83",
+    "type": "tf",
+    "prompt": "M. interossei dorsales innerveras av N. ulnaris.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q84",
+    "type": "tf",
+    "prompt": "M. flexor digitorum superficialis innerveras av N. medianus.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q85",
+    "type": "tf",
+    "prompt": "M. flexor digitorum profundus innerveras av N. medianus/ulnaris.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q86",
+    "type": "tf",
+    "prompt": "M. extensor digitorum innerveras av N. radialis.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q87",
+    "type": "mc",
+    "prompt": "Articulatio radiocarpea är vilken typ av led?",
+    "correct": "Ellipsoidled",
+    "distractors": [
+      "Gångjärnsledd",
+      "Glidled",
+      "Annan alternativ"
+    ],
+    "topic": "handen_leder",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q88",
+    "type": "mc",
+    "prompt": "Articulatio mediocarpea är vilken typ av led?",
+    "correct": "Glidled",
+    "distractors": [
+      "Ellipsoidled",
+      "Gångjärnsledd",
+      "Annan alternativ"
+    ],
+    "topic": "handen_leder",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q89",
+    "type": "mc",
+    "prompt": "Articulatio carpometacarpalis pollicis är vilken typ av led?",
+    "correct": "Sadelled",
+    "distractors": [
+      "Ellipsoidled",
+      "Gångjärnsledd",
+      "Glidled"
+    ],
+    "topic": "handen_leder",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q90",
+    "type": "mc",
+    "prompt": "Articulationes metacarpophalangeae är vilken typ av led?",
+    "correct": "Ellipsoidled",
+    "distractors": [
+      "Gångjärnsledd",
+      "Glidled",
+      "Annan alternativ"
+    ],
+    "topic": "handen_leder",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q91",
+    "type": "mc",
+    "prompt": "Articulationes interfalangeae är vilken typ av led?",
+    "correct": "Gångjärnsledd",
+    "distractors": [
+      "Ellipsoidled",
+      "Glidled",
+      "Annan alternativ"
+    ],
+    "topic": "handen_leder",
+    "difficulty": "medel"
+  },
+  {
+    "id": "q92",
+    "type": "tf",
+    "prompt": "Karpaltunneln innehåller 9 böjsenor.",
+    "correct": "Sant",
+    "topic": "handen_senskidor",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q93",
+    "type": "tf",
+    "prompt": "Extensor retinaklet har 6 distinkta fack.",
+    "correct": "Sant",
+    "topic": "handen_senskidor",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q94",
+    "type": "tf",
+    "prompt": "Palmara aponeurosen är kontinuerlig med M. palmaris longus sena.",
+    "correct": "Sant",
+    "topic": "handen_senskidor",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q95",
+    "type": "tf",
+    "prompt": "Den gemensamma flexorsenskidan löper från handlovet till lillfingrets ändfalang.",
+    "correct": "Sant",
+    "topic": "handen_senskidor",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q96",
+    "type": "tf",
+    "prompt": "Listers tuberkel är en landmärke för M. extensor pollicis longus.",
+    "correct": "Sant",
+    "topic": "handen_senskidor",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q97",
+    "type": "tf",
+    "prompt": "Karpaltunneln innehåller 9 böjsenor.",
+    "correct": "Sant",
+    "topic": "handen_senskidor",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q98",
+    "type": "tf",
+    "prompt": "Extensor retinaklet har 6 distinkta fack.",
+    "correct": "Sant",
+    "topic": "handen_senskidor",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q99",
+    "type": "tf",
+    "prompt": "Palmara aponeurosen är kontinuerlig med M. palmaris longus sena.",
+    "correct": "Sant",
+    "topic": "handen_senskidor",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q100",
+    "type": "tf",
+    "prompt": "Den gemensamma flexorsenskidan löper från handlovet till lillfingrets ändfalang.",
+    "correct": "Sant",
+    "topic": "handen_senskidor",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q101",
+    "type": "tf",
+    "prompt": "Listers tuberkel är en landmärke för M. extensor pollicis longus.",
+    "correct": "Sant",
+    "topic": "handen_senskidor",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q102",
+    "type": "tf",
+    "prompt": "Carpal tunnel syndrome orsakas av N. medianus trycks i karpaltunneln.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q103",
+    "type": "tf",
+    "prompt": "Claw hand uppstår vid N. ulnaris skada.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q104",
+    "type": "tf",
+    "prompt": "N. medianus skada förlamar tummen helt.",
+    "correct": "Falskt",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q105",
+    "type": "tf",
+    "prompt": "Guyon canal syndrome påverkar N. ulnaris.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q106",
+    "type": "tf",
+    "prompt": "Carpal tunnel syndrome orsakas av N. medianus trycks i karpaltunneln.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q107",
+    "type": "tf",
+    "prompt": "Claw hand uppstår vid N. ulnaris skada.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q108",
+    "type": "tf",
+    "prompt": "N. medianus skada förlamar tummen helt.",
+    "correct": "Falskt",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q109",
+    "type": "tf",
+    "prompt": "Guyon canal syndrome påverkar N. ulnaris.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q110",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q111",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q112",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_innervation",
+    "difficulty": "svår",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q113",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q114",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q115",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q116",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q117",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q118",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q119",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_muskler",
+    "difficulty": "lätt",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q120",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q121",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q122",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q123",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_grepptyper",
+    "difficulty": "lätt",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q124",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q125",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_innervation",
+    "difficulty": "lätt",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q126",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_innervation",
+    "difficulty": "lätt",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q127",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q128",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q129",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q130",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q131",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q132",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q133",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q134",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q135",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q136",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q137",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q138",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q139",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q140",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q141",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q142",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q143",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q144",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q145",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q146",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q147",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q148",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q149",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_patologi",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q150",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q151",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q152",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q153",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q154",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q155",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q156",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_innervation",
+    "difficulty": "svår",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q157",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q158",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_muskler",
+    "difficulty": "svår",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q159",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q160",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q161",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q162",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_patologi",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q163",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q164",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q165",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q166",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q167",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q168",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q169",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q170",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q171",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q172",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_muskler",
+    "difficulty": "lätt",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q173",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q174",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q175",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q176",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_grepptyper",
+    "difficulty": "lätt",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q177",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q178",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q179",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q180",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q181",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q182",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q183",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q184",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q185",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_muskler",
+    "difficulty": "lätt",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q186",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q187",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q188",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q189",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_muskler",
+    "difficulty": "svår",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q190",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q191",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q192",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q193",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q194",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q195",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q196",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q197",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q198",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q199",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q200",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q201",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q202",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q203",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_innervation",
+    "difficulty": "svår",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q204",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q205",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q206",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q207",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q208",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_grepptyper",
+    "difficulty": "lätt",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q209",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q210",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q211",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q212",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_patologi",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q213",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q214",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q215",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q216",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q217",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q218",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q219",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q220",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q221",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_patologi",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q222",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q223",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q224",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q225",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q226",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q227",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q228",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q229",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q230",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q231",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q232",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q233",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_grepptyper",
+    "difficulty": "lätt",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q234",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q235",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q236",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q237",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q238",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q239",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q240",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q241",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q242",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q243",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q244",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q245",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q246",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q247",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q248",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q249",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q250",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q251",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q252",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q253",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q254",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q255",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q256",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q257",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q258",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q259",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q260",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q261",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q262",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q263",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q264",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_patologi",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q265",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q266",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q267",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q268",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q269",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q270",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q271",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q272",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q273",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q274",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q275",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q276",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q277",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q278",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q279",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q280",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q281",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q282",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_innervation",
+    "difficulty": "lätt",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q283",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q284",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q285",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q286",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q287",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_innervation",
+    "difficulty": "lätt",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q288",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q289",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q290",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q291",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q292",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q293",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q294",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q295",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q296",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q297",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_muskler",
+    "difficulty": "lätt",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q298",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q299",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q300",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q301",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_patologi",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q302",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q303",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q304",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q305",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q306",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q307",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q308",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q309",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q310",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q311",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q312",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q313",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q314",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q315",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q316",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_innervation",
+    "difficulty": "svår",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q317",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q318",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q319",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q320",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q321",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q322",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q323",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q324",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q325",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q326",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q327",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q328",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q329",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q330",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q331",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q332",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q333",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_muskler",
+    "difficulty": "lätt",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q334",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_muskler",
+    "difficulty": "lätt",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q335",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q336",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q337",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q338",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q339",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q340",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q341",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_innervation",
+    "difficulty": "svår",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q342",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q343",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q344",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q345",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q346",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q347",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q348",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q349",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q350",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q351",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q352",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q353",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q354",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q355",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q356",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q357",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q358",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q359",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q360",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q361",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_muskler",
+    "difficulty": "svår",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q362",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_innervation",
+    "difficulty": "lätt",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q363",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_innervation",
+    "difficulty": "svår",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q364",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q365",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q366",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q367",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_innervation",
+    "difficulty": "lätt",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q368",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_innervation",
+    "difficulty": "lätt",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q369",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q370",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q371",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q372",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q373",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_innervation",
+    "difficulty": "lätt",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q374",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q375",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_innervation",
+    "difficulty": "svår",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q376",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q377",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q378",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q379",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q380",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q381",
+    "type": "tf",
+    "prompt": "M. palmaris longus är alltid närvarande.",
+    "correct": "Falskt",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q382",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q383",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q384",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q385",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q386",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q387",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q388",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_innervation",
+    "difficulty": "lätt",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q389",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q390",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q391",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q392",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q393",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "medel",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q394",
+    "type": "tf",
+    "prompt": "N. radialis innerverar alla extensormuskler.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q395",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q396",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q397",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_grepptyper",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q398",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_muskler",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q399",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q400",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_innervation",
+    "difficulty": "medel",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q401",
+    "type": "tf",
+    "prompt": "N. medianus innerverar opposition av tummen.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q402",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_grepptyper",
+    "difficulty": "svår",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q403",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_patologi",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q404",
+    "type": "tf",
+    "prompt": "N. ulnaris innerverar alla interossei.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q405",
+    "type": "tf",
+    "prompt": "Extensionsgrepp använder tummen aktivt.",
+    "correct": "Falskt",
+    "topic": "handen_innervation",
+    "difficulty": "lätt",
+    "distractors": [
+      "Sant"
+    ]
+  },
+  {
+    "id": "q406",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett power-grepp.",
+    "correct": "Sant",
+    "topic": "handen_innervation",
+    "difficulty": "svår",
+    "distractors": [
+      "Falskt"
+    ]
+  },
+  {
+    "id": "q407",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "correct": "Sant",
+    "topic": "handen_muskler",
+    "difficulty": "lätt",
+    "distractors": [
+      "Falskt"
+    ]
+  }
+]

@@ -2,6 +2,7 @@
 function getQuestionsPath(topic) {
   if (topic === 'osteologi') return './data/ben.json'
   if (topic === 'muskler') return './data/muskler.json'
+  if (topic === 'handen') return './data/handen.json'
   return './data/riktningar.json'
 }
 
@@ -123,7 +124,19 @@ function toggleExcluded(id){
   saveFlags(flags)
 }
 
-function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function getSecureRandom() {
+  const arr = new Uint32Array(1);
+  crypto.getRandomValues(arr);
+  return arr[0] / (0xffffffff + 1);
+}
+
+function shuffle(a) {
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(getSecureRandom() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
 
 function sampleWithoutReplacement(arr, n){
   if(n<=0) return []
@@ -164,6 +177,8 @@ async function startQuiz(){
       topicMatch = q.topic.startsWith('osteologi_')
     } else if(topic === 'muskler') {
       topicMatch = q.topic.startsWith('muskler_')
+    } else if(topic === 'handen') {
+      topicMatch = q.topic.startsWith('handen_')
     } else {
       topicMatch = q.topic === topic
     }
