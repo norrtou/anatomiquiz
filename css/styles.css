@@ -648,18 +648,29 @@ ol li {
 
 @media (max-width: 640px) {
   .quiz-footer {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .quiz-actions {
-    width: 100%;
     margin-left: 0;
   }
 
   .btn {
-    flex: 1;
-    min-width: unset;
+    padding: 8px 10px;
+    font-size: 0.85rem;
+    min-height: 40px;
+    flex: 0 0 auto;
+  }
+
+  .btn-cancel {
+    flex: 0 0 auto;
+  }
+
+  .timer {
+    font-size: 0.85rem;
+    min-width: auto;
   }
 
   .header {
