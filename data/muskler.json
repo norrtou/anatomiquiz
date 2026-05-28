@@ -806,216 +806,6 @@
     "source": "Muskler"
   },
   {
-    "id": "q83",
-    "type": "mc",
-    "prompt": "Vad står förkortningen BB för?",
-    "correct": "Biceps brachii",
-    "distractors": [
-      "Opponens pollicis",
-      "Abductor pollicis brevis",
-      "Tibialis anterior"
-    ],
-    "topic": "muskler_förkortning",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q84",
-    "type": "mc",
-    "prompt": "Vad står förkortningen TB för?",
-    "correct": "Triceps brachii",
-    "distractors": [
-      "Extensor carpi radialis brevis",
-      "Flexor carpi ulnaris",
-      "Triceps brachii"
-    ],
-    "topic": "muskler_förkortning",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q85",
-    "type": "mc",
-    "prompt": "Vad står förkortningen FCU för?",
-    "correct": "Flexor carpi ulnaris",
-    "distractors": [
-      "Flexor digitorum superficialis",
-      "Rectus abdominis",
-      "Hamstrings"
-    ],
-    "topic": "muskler_förkortning",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q86",
-    "type": "mc",
-    "prompt": "Vad står förkortningen FCR för?",
-    "correct": "Flexor carpi radialis",
-    "distractors": [
-      "Deltoideus",
-      "Extensor carpi radialis brevis",
-      "Triceps surae"
-    ],
-    "topic": "muskler_förkortning",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q87",
-    "type": "mc",
-    "prompt": "Vad står förkortningen EDC för?",
-    "correct": "Extensor digitorum communis",
-    "distractors": [
-      "Flexor pollicis longus",
-      "Extensor carpi radialis brevis",
-      "Abductor pollicis longus"
-    ],
-    "topic": "muskler_förkortning",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q88",
-    "type": "mc",
-    "prompt": "Vad står förkortningen FDS för?",
-    "correct": "Flexor digitorum superficialis",
-    "distractors": [
-      "Rectus abdominis",
-      "Gluteus maximus",
-      "Supraspinatus"
-    ],
-    "topic": "muskler_förkortning",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q89",
-    "type": "mc",
-    "prompt": "Vad står förkortningen FDP för?",
-    "correct": "Flexor digitorum profundus",
-    "distractors": [
-      "Transversus abdominis",
-      "Extensor pollicis longus",
-      "Supraspinatus"
-    ],
-    "topic": "muskler_förkortning",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q90",
-    "type": "mc",
-    "prompt": "Vad står förkortningen FPL för?",
-    "correct": "Flexor pollicis longus",
-    "distractors": [
-      "Extensor pollicis longus",
-      "Quadriceps",
-      "Tibialis anterior"
-    ],
-    "topic": "muskler_förkortning",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q91",
-    "type": "mc",
-    "prompt": "Vad står förkortningen EPB för?",
-    "correct": "Extensor pollicis brevis",
-    "distractors": [
-      "Abductor pollicis brevis",
-      "Flexor digitorum superficialis",
-      "Flexor carpi ulnaris"
-    ],
-    "topic": "muskler_förkortning",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q92",
-    "type": "mc",
-    "prompt": "Vad står förkortningen EPL för?",
-    "correct": "Extensor pollicis longus",
-    "distractors": [
-      "Rectus abdominis",
-      "Supraspinatus",
-      "Abductor pollicis longus"
-    ],
-    "topic": "muskler_förkortning",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q93",
-    "type": "mc",
-    "prompt": "Vad står förkortningen OP för?",
-    "correct": "Opponens pollicis",
-    "distractors": [
-      "Flexor pollicis brevis",
-      "Transversus abdominis",
-      "Hamstrings"
-    ],
-    "topic": "muskler_förkortning",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q94",
-    "type": "mc",
-    "prompt": "Vad står förkortningen FPB för?",
-    "correct": "Flexor pollicis brevis",
-    "distractors": [
-      "Abductor pollicis longus",
-      "Pectoralis minor",
-      "Flexor carpi ulnaris"
-    ],
-    "topic": "muskler_förkortning",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q95",
-    "type": "mc",
-    "prompt": "Vad står förkortningen APB för?",
-    "correct": "Abductor pollicis brevis",
-    "distractors": [
-      "Supraspinatus",
-      "Opponens pollicis",
-      "Adductor pollicis"
-    ],
-    "topic": "muskler_förkortning",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q96",
-    "type": "mc",
-    "prompt": "Vad står förkortningen APL för?",
-    "correct": "Abductor pollicis longus",
-    "distractors": [
-      "Rectus abdominis",
-      "Flexor digitorum superficialis",
-      "Transversus abdominis"
-    ],
-    "topic": "muskler_förkortning",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q97",
-    "type": "mc",
-    "prompt": "Vad står förkortningen ADP för?",
-    "correct": "Adductor pollicis",
-    "distractors": [
-      "Extensor pollicis brevis",
-      "Quadriceps",
-      "Extensor pollicis longus"
-    ],
-    "topic": "muskler_förkortning",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
     "id": "q98",
     "type": "tf",
     "prompt": "Flexor carpi ulnaris innerveras av n ulnaris",
@@ -6047,6 +5837,186 @@
     "id": "q517",
     "type": "tf",
     "prompt": "Serratus anterior är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q518",
+    "type": "tf",
+    "prompt": "Trapezius är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q519",
+    "type": "tf",
+    "prompt": "Pectoralis major är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q520",
+    "type": "tf",
+    "prompt": "Pectoralis minor är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q521",
+    "type": "tf",
+    "prompt": "Erector spinae är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q522",
+    "type": "tf",
+    "prompt": "Rectus abdominis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q523",
+    "type": "tf",
+    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q524",
+    "type": "tf",
+    "prompt": "Serratus anterior är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q525",
+    "type": "tf",
+    "prompt": "Rhomboidei är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q526",
+    "type": "tf",
+    "prompt": "Latissimus dorsi är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q527",
+    "type": "tf",
+    "prompt": "Diafragma är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q528",
+    "type": "tf",
+    "prompt": "Supraspinatus är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q529",
+    "type": "tf",
+    "prompt": "Deltoideus är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q530",
+    "type": "tf",
+    "prompt": "Biceps brachii är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q531",
+    "type": "tf",
+    "prompt": "Triceps brachii är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q532",
+    "type": "tf",
+    "prompt": "Flexor carpi ulnaris är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
