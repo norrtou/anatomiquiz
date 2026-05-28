@@ -400,8 +400,18 @@ function handleImportFile(ev){
 }
 
 function init(){
+  console.log('Init starts')
   loadQuestions().then(()=>console.log('Frågor laddade:', allQuestions.length))
-  el('startBtn').addEventListener('click', startQuiz)
+  const btn = el('startBtn')
+  console.log('startBtn element:', btn)
+  if(!btn) {
+    console.error('ERROR: startBtn element not found!')
+    return
+  }
+  btn.addEventListener('click', ()=>{
+    console.log('Start quiz clicked')
+    startQuiz()
+  })
   el('nextBtn').addEventListener('click', nextQuestion)
   el('saveScore').addEventListener('click', saveScore)
   el('restart').addEventListener('click', ()=>{el('result').classList.add('hidden');el('setup').classList.remove('hidden')})
