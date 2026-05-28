@@ -399,9 +399,20 @@ function handleImportFile(ev){
   reader.readAsText(f, 'utf-8')
 }
 
+function cancelQuiz(){
+  if(confirm('Är du säker? Ditt resultat sparas inte.')) {
+    el('quiz').classList.add('hidden')
+    el('setup').classList.remove('hidden')
+    el('result').classList.add('hidden')
+    el('highscores').classList.add('hidden')
+    clearTimer()
+  }
+}
+
 function init(){
   loadQuestions().then(()=>console.log('Frågor laddade:', allQuestions.length))
   el('startBtn').addEventListener('click', startQuiz)
+  el('cancelBtn').addEventListener('click', cancelQuiz)
   el('nextBtn').addEventListener('click', nextQuestion)
   el('saveScore').addEventListener('click', saveScore)
   el('restart').addEventListener('click', ()=>{el('result').classList.add('hidden');el('setup').classList.remove('hidden')})
