@@ -3,9 +3,9 @@
     "id": "q1",
     "type": "mc",
     "prompt": "Vad är den svenska benämningen på Trapezius?",
-    "correct": "trapezmuskel",
+    "correct": "kappmuskeln",
     "distractors": [
-      "kort tumflexor",
+      "flexor pollicis brevis",
       "kort tumabduktor",
       "kort tumextensor"
     ],
@@ -17,10 +17,10 @@
     "id": "q2",
     "type": "mc",
     "prompt": "Vad är den svenska benämningen på Pectoralis major?",
-    "correct": "stor bröstmuskel",
+    "correct": "stora bröstmuskeln",
     "distractors": [
-      "bred ryggmuskel",
-      "fyrväxlad lårmuskels",
+      "breda ryggmuskeln",
+      "fyrväxlad lårmuskeln",
       "lång tumflexor"
     ],
     "topic": "muskler_namn",
@@ -31,11 +31,11 @@
     "id": "q3",
     "type": "mc",
     "prompt": "Vad är den svenska benämningen på Pectoralis minor?",
-    "correct": "liten bröstmuskel",
+    "correct": "lilla bröstmuskeln",
     "distractors": [
-      "armbågsbent fiberflexor",
+      "flexor carpi ulnaris",
       "lång tumflexor",
-      "knäflexorer"
+      "bakre lårmuskeln"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -45,9 +45,9 @@
     "id": "q4",
     "type": "mc",
     "prompt": "Vad är den svenska benämningen på Erector spinae?",
-    "correct": "ryggräckare",
+    "correct": "ryggsträckaren",
     "distractors": [
-      "tvåhövdat armmuskel",
+      "tvåhövdade överarmsmuskeln",
       "lång tumabduktor",
       "ytlig fingerflexor"
     ],
@@ -59,9 +59,9 @@
     "id": "q5",
     "type": "mc",
     "prompt": "Vad är den svenska benämningen på Rectus abdominis?",
-    "correct": "rak bukmuskel",
+    "correct": "raka bukmuskeln",
     "distractors": [
-      "ryggräckare",
+      "ryggsträckaren",
       "ytlig fingerflexor",
       "deltamuskel"
     ],
@@ -75,9 +75,9 @@
     "prompt": "Vad är den svenska benämningen på Transversus abdominis?",
     "correct": "tvärsgående bukmuskel",
     "distractors": [
-      "liten bröstmuskel",
+      "lilla bröstmuskeln",
       "lång tumextensor",
-      "stor skinkmuskel"
+      "stora sätesmuskeln"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -87,11 +87,11 @@
     "id": "q7",
     "type": "mc",
     "prompt": "Vad är den svenska benämningen på Serratus anterior?",
-    "correct": "tandad frammuskel",
+    "correct": "främre sågmuskeln",
     "distractors": [
-      "stor bröstmuskel",
+      "stora bröstmuskeln",
       "kort strålbent fingerextensor",
-      "trehövdat armmuskel"
+      "trehövdade överarmsmuskeln"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -101,11 +101,11 @@
     "id": "q8",
     "type": "mc",
     "prompt": "Vad är den svenska benämningen på Rhomboidei?",
-    "correct": "rombemuskel",
+    "correct": "rutmuskeln",
     "distractors": [
       "trehövdad vadsmuskel",
       "deltamuskel",
-      "djup fingerflexor"
+      "flexor digitorum profundus"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -115,10 +115,10 @@
     "id": "q9",
     "type": "mc",
     "prompt": "Vad är den svenska benämningen på Latissimus dorsi?",
-    "correct": "bred ryggmuskel",
+    "correct": "breda ryggmuskeln",
     "distractors": [
-      "fyrväxlad lårmuskels",
-      "stor bröstmuskel",
+      "fyrväxlad lårmuskeln",
+      "stora bröstmuskeln",
       "kort tumabduktor"
     ],
     "topic": "muskler_namn",
@@ -132,8 +132,8 @@
     "correct": "överkammuskel",
     "distractors": [
       "lång tumabduktor",
-      "fyrväxlad lårmuskels",
-      "liten bröstmuskel"
+      "fyrväxlad lårmuskeln",
+      "lilla bröstmuskeln"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -146,7 +146,7 @@
     "correct": "deltamuskel",
     "distractors": [
       "gemensam fingerextensor",
-      "bred ryggmuskel",
+      "breda ryggmuskeln",
       "oppositionsmuskel för tumme"
     ],
     "topic": "muskler_namn",
@@ -157,11 +157,11 @@
     "id": "q12",
     "type": "mc",
     "prompt": "Vad är den svenska benämningen på Biceps brachii?",
-    "correct": "tvåhövdat armmuskel",
+    "correct": "tvåhövdade överarmsmuskeln",
     "distractors": [
-      "kort tumflexor",
+      "flexor pollicis brevis",
       "kort strålbent fingerextensor",
-      "tandad frammuskel"
+      "främre sågmuskeln"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -171,11 +171,11 @@
     "id": "q13",
     "type": "mc",
     "prompt": "Vad är den svenska benämningen på Triceps brachii?",
-    "correct": "trehövdat armmuskel",
+    "correct": "trehövdade överarmsmuskeln",
     "distractors": [
-      "djup fingerflexor",
-      "rombemuskel",
-      "stor skinkmuskel"
+      "flexor digitorum profundus",
+      "rutmuskeln",
+      "stora sätesmuskeln"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -185,11 +185,11 @@
     "id": "q14",
     "type": "mc",
     "prompt": "Vad är den svenska benämningen på Flexor carpi ulnaris?",
-    "correct": "armbågsbent fiberflexor",
+    "correct": "flexor carpi ulnaris",
     "distractors": [
       "långt strålbent fingerextensor",
-      "stor skinkmuskel",
-      "fyrväxlad lårmuskels"
+      "stora sätesmuskeln",
+      "fyrväxlad lårmuskeln"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -199,11 +199,11 @@
     "id": "q15",
     "type": "mc",
     "prompt": "Vad är den svenska benämningen på Flexor carpi radialis?",
-    "correct": "strålbent fiberflexor",
+    "correct": "flexor carpi radialis",
     "distractors": [
       "deltamuskel",
-      "djup fingerflexor",
-      "kort tumflexor"
+      "flexor digitorum profundus",
+      "flexor pollicis brevis"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -217,7 +217,7 @@
     "distractors": [
       "kort tumextensor",
       "ytlig fingerflexor",
-      "knäflexorer"
+      "bakre lårmuskeln"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -229,9 +229,9 @@
     "prompt": "Vad är den svenska benämningen på Extensor carpi radialis brevis?",
     "correct": "kort strålbent fingerextensor",
     "distractors": [
-      "armbågsbent fiberflexor",
-      "ryggräckare",
-      "fyrväxlad lårmuskels"
+      "flexor carpi ulnaris",
+      "ryggsträckaren",
+      "fyrväxlad lårmuskeln"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -245,7 +245,7 @@
     "distractors": [
       "deltamuskel",
       "framskenbensmuskel",
-      "rak bukmuskel"
+      "raka bukmuskeln"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -258,8 +258,8 @@
     "correct": "ytlig fingerflexor",
     "distractors": [
       "långt strålbent fingerextensor",
-      "knäflexorer",
-      "bred ryggmuskel"
+      "bakre lårmuskeln",
+      "breda ryggmuskeln"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -269,11 +269,11 @@
     "id": "q20",
     "type": "mc",
     "prompt": "Vad är den svenska benämningen på Flexor digitorum profundus?",
-    "correct": "djup fingerflexor",
+    "correct": "flexor digitorum profundus",
     "distractors": [
       "lång tumextensor",
-      "trehövdat armmuskel",
-      "bred ryggmuskel"
+      "trehövdade överarmsmuskeln",
+      "breda ryggmuskeln"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -286,8 +286,8 @@
     "correct": "lång tumflexor",
     "distractors": [
       "tvärsgående bukmuskel",
-      "trapezmuskel",
-      "stor bröstmuskel"
+      "kappmuskeln",
+      "stora bröstmuskeln"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -301,7 +301,7 @@
     "distractors": [
       "gemensam fingerextensor",
       "lång tumextensor",
-      "trapezmuskel"
+      "kappmuskeln"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -314,8 +314,8 @@
     "correct": "lång tumextensor",
     "distractors": [
       "kort strålbent fingerextensor",
-      "djup fingerflexor",
-      "stor skinkmuskel"
+      "flexor digitorum profundus",
+      "stora sätesmuskeln"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -327,7 +327,7 @@
     "prompt": "Vad är den svenska benämningen på Opponens pollicis?",
     "correct": "oppositionsmuskel för tumme",
     "distractors": [
-      "trapezmuskel",
+      "kappmuskeln",
       "gemensam fingerextensor",
       "tumadduktor"
     ],
@@ -339,11 +339,11 @@
     "id": "q25",
     "type": "mc",
     "prompt": "Vad är den svenska benämningen på Flexor pollicis brevis?",
-    "correct": "kort tumflexor",
+    "correct": "flexor pollicis brevis",
     "distractors": [
-      "trehövdat armmuskel",
+      "trehövdade överarmsmuskeln",
       "ytlig fingerflexor",
-      "fyrväxlad lårmuskels"
+      "fyrväxlad lårmuskeln"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -355,8 +355,8 @@
     "prompt": "Vad är den svenska benämningen på Abductor pollicis brevis?",
     "correct": "kort tumabduktor",
     "distractors": [
-      "ryggräckare",
-      "liten bröstmuskel",
+      "ryggsträckaren",
+      "lilla bröstmuskeln",
       "kort strålbent fingerextensor"
     ],
     "topic": "muskler_namn",
@@ -369,7 +369,7 @@
     "prompt": "Vad är den svenska benämningen på Abductor pollicis longus?",
     "correct": "lång tumabduktor",
     "distractors": [
-      "strålbent fiberflexor",
+      "flexor carpi radialis",
       "trehövdad vadsmuskel",
       "oppositionsmuskel för tumme"
     ],
@@ -384,7 +384,7 @@
     "correct": "tumadduktor",
     "distractors": [
       "framskenbensmuskel",
-      "ryggräckare",
+      "ryggsträckaren",
       "lång tumabduktor"
     ],
     "topic": "muskler_namn",
@@ -395,11 +395,11 @@
     "id": "q29",
     "type": "mc",
     "prompt": "Vad är den svenska benämningen på Gluteus maximus?",
-    "correct": "stor skinkmuskel",
+    "correct": "stora sätesmuskeln",
     "distractors": [
       "trehövdad vadsmuskel",
-      "tandad frammuskel",
-      "stor bröstmuskel"
+      "främre sågmuskeln",
+      "stora bröstmuskeln"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -409,9 +409,9 @@
     "id": "q30",
     "type": "mc",
     "prompt": "Vad är den svenska benämningen på Hamstrings?",
-    "correct": "knäflexorer",
+    "correct": "bakre lårmuskeln",
     "distractors": [
-      "strålbent fiberflexor",
+      "flexor carpi radialis",
       "trehövdad vadsmuskel",
       "lång tumextensor"
     ],
