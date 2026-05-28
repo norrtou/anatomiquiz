@@ -10,7 +10,6 @@ const OLD_FLAGS_KEY = 'wiil_question_flags'
 const NEW_FLAGS_KEY = 'hur_question_flags'
 const OLD_SCORES_KEY = 'wiil_highscores'
 const NEW_SCORES_KEY = 'hur_highscores'
-const SOUND_KEY = 'hur_sound_enabled'
 
 const el = id => document.getElementById(id)
 
@@ -20,8 +19,6 @@ let currentIdx = 0
 let score = 0
 let timerInterval = null
 let timeLeft = 0
-let soundEnabled = true
-let audioContext = null
 
 async function loadQuestions(){
   try {
@@ -246,9 +243,7 @@ function selectAnswer(btn, selected, correct){
   Array.from(el('answers').children).forEach(b=>{b.disabled=true; b.setAttribute('aria-disabled','true')})
   if(selected===correct){
     btn.classList.add('correct'); btn.setAttribute('aria-pressed','true'); score++
-    playSuccessSound()
   } else { btn.classList.add('wrong');
-    playFailSound()
     // mark correct
     Array.from(el('answers').children).find(b=>b.textContent===correct)?.classList.add('correct')
   }
@@ -330,22 +325,10 @@ function clearScores(){
   showHighscores()
 }
 
-// Sound functions
-function loadSoundSetting(){
-  const stored = localStorage.getItem(SOUND_KEY)
-  soundEnabled = stored === null ? true : stored === 'true'
-  updateSoundButton()
 }
 
-function toggleSound(){
-  soundEnabled = !soundEnabled
-  localStorage.setItem(SOUND_KEY, soundEnabled)
-  updateSoundButton()
 }
 
-function updateSoundButton(){
-  const btn = el('soundToggle')
-  if(soundEnabled){
     btn.textContent = '🔊'
     btn.classList.remove('off')
   } else {
@@ -354,23 +337,12 @@ function updateSoundButton(){
   }
 }
 
-// Get or create AudioContext (needed for mobile)
-function getAudioContext(){
-  if(!audioContext){
-    const AudioCtx = window.AudioContext || window.webkitAudioContext
-    audioContext = new AudioCtx()
   }
   // Resume context on mobile if suspended
-  if(audioContext.state === 'suspended'){
-    audioContext.resume().catch(e => console.log('Audio context resume error:', e))
   }
-  return audioContext
 }
 
-function playSuccessSound(){
-  if(!soundEnabled) return
   try {
-    const ctx = getAudioContext()
     const now = ctx.currentTime
     const osc = ctx.createOscillator()
     const gain = ctx.createGain()
@@ -388,14 +360,10 @@ function playSuccessSound(){
     osc.start(now)
     osc.stop(now + 0.3)
   } catch(e) {
-    console.log('Sound error:', e)
   }
 }
 
-function playFailSound(){
-  if(!soundEnabled) return
   try {
-    const ctx = getAudioContext()
     const now = ctx.currentTime
     const osc = ctx.createOscillator()
     const gain = ctx.createGain()
@@ -413,7 +381,6 @@ function playFailSound(){
     osc.start(now)
     osc.stop(now + 0.4)
   } catch(e) {
-    console.log('Sound error:', e)
   }
 }
 
@@ -493,8 +460,6 @@ function handleImportFile(ev){
 
 function init(){
   loadQuestions().then(()=>console.log('Frågor laddade:', allQuestions.length))
-  loadSoundSetting()
-  el('soundToggle').addEventListener('click', toggleSound)
   el('startBtn').addEventListener('click', startQuiz)
   el('nextBtn').addEventListener('click', nextQuestion)
   el('saveScore').addEventListener('click', saveScore)

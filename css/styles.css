@@ -628,23 +628,6 @@ ol li {
 }
 
 /* ============================================================================
-   SOUND TOGGLE BUTTON
-   ============================================================================ */
-
-.sound-toggle-btn {
-  flex: 0;
-  min-width: auto;
-  padding: 12px 16px;
-  font-size: 0.95rem;
-}
-
-.sound-toggle-btn.off {
-  opacity: 0.6;
-  color: var(--text-secondary);
-  border-color: var(--text-secondary);
-}
-
-/* ============================================================================
    RESPONSIVE DESIGN
    Mobile-first approach ensures great experience on all devices
    ============================================================================ */
