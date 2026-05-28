@@ -5,9 +5,9 @@
     "prompt": "Vad är den svenska benämningen på Trapezius?",
     "correct": "kappmuskeln",
     "distractors": [
-      "flexor pollicis brevis",
-      "kort tumabduktor",
-      "kort tumextensor"
+      "lång tumabduktor",
+      "extensor carpi radialis longus",
+      "tvärsgående bukmuskel"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -19,9 +19,9 @@
     "prompt": "Vad är den svenska benämningen på Pectoralis major?",
     "correct": "stora bröstmuskeln",
     "distractors": [
-      "breda ryggmuskeln",
-      "fyrväxlad lårmuskeln",
-      "lång tumflexor"
+      "kort tumflexor",
+      "supraspinatus",
+      "extensor carpi radialis brevis"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -33,9 +33,9 @@
     "prompt": "Vad är den svenska benämningen på Pectoralis minor?",
     "correct": "lilla bröstmuskeln",
     "distractors": [
-      "flexor carpi ulnaris",
-      "lång tumflexor",
-      "bakre lårmuskeln"
+      "bakre lårmuskeln",
+      "flexor carpi radialis",
+      "ytlig fingerflexor"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -47,8 +47,8 @@
     "prompt": "Vad är den svenska benämningen på Erector spinae?",
     "correct": "ryggsträckaren",
     "distractors": [
-      "tvåhövdade överarmsmuskeln",
-      "lång tumabduktor",
+      "oppositionsmuskel för tummen",
+      "deltamuskeln",
       "ytlig fingerflexor"
     ],
     "topic": "muskler_namn",
@@ -61,9 +61,9 @@
     "prompt": "Vad är den svenska benämningen på Rectus abdominis?",
     "correct": "raka bukmuskeln",
     "distractors": [
-      "ryggsträckaren",
-      "ytlig fingerflexor",
-      "deltamuskel"
+      "oppositionsmuskel för tummen",
+      "tvåhövdade överarmsmuskeln",
+      "extensor carpi radialis brevis"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -75,9 +75,9 @@
     "prompt": "Vad är den svenska benämningen på Transversus abdominis?",
     "correct": "tvärsgående bukmuskel",
     "distractors": [
-      "lilla bröstmuskeln",
-      "lång tumextensor",
-      "stora sätesmuskeln"
+      "kort tumextensor",
+      "ytlig fingerflexor",
+      "supraspinatus"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -90,8 +90,8 @@
     "correct": "främre sågmuskeln",
     "distractors": [
       "stora bröstmuskeln",
-      "kort strålbent fingerextensor",
-      "trehövdade överarmsmuskeln"
+      "lilla bröstmuskeln",
+      "vadsmuskel"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -103,9 +103,9 @@
     "prompt": "Vad är den svenska benämningen på Rhomboidei?",
     "correct": "rutmuskeln",
     "distractors": [
-      "trehövdad vadsmuskel",
-      "deltamuskel",
-      "flexor digitorum profundus"
+      "gemensam fingerextensor",
+      "lång tumflexor",
+      "vadsmuskel"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -117,9 +117,37 @@
     "prompt": "Vad är den svenska benämningen på Latissimus dorsi?",
     "correct": "breda ryggmuskeln",
     "distractors": [
-      "fyrväxlad lårmuskeln",
-      "stora bröstmuskeln",
-      "kort tumabduktor"
+      "bakre lårmuskeln",
+      "tvärsgående bukmuskel",
+      "kappmuskeln"
+    ],
+    "topic": "muskler_namn",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q10",
+    "type": "mc",
+    "prompt": "Vad är den svenska benämningen på Diafragma?",
+    "correct": "mellangärde",
+    "distractors": [
+      "vadsmuskel",
+      "kort tumabduktor",
+      "lång tumabduktor"
+    ],
+    "topic": "muskler_namn",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q11",
+    "type": "mc",
+    "prompt": "Vad är den svenska benämningen på Supraspinatus?",
+    "correct": "supraspinatus",
+    "distractors": [
+      "främre sågmuskeln",
+      "trehövdade överarmsmuskeln",
+      "djup fingerflexor"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -128,12 +156,12 @@
   {
     "id": "q12",
     "type": "mc",
-    "prompt": "Vad är den svenska benämningen på Biceps brachii?",
-    "correct": "tvåhövdade överarmsmuskeln",
+    "prompt": "Vad är den svenska benämningen på Deltoideus?",
+    "correct": "deltamuskeln",
     "distractors": [
-      "flexor pollicis brevis",
-      "kort strålbent fingerextensor",
-      "främre sågmuskeln"
+      "tvåhövdade överarmsmuskeln",
+      "framskenbensmuskel",
+      "trehövdade överarmsmuskeln"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
@@ -142,25 +170,53 @@
   {
     "id": "q13",
     "type": "mc",
-    "prompt": "Vad är den svenska benämningen på Triceps brachii?",
-    "correct": "trehövdade överarmsmuskeln",
+    "prompt": "Vad är den svenska benämningen på Biceps brachii?",
+    "correct": "tvåhövdade överarmsmuskeln",
     "distractors": [
-      "flexor digitorum profundus",
-      "rutmuskeln",
-      "stora sätesmuskeln"
+      "extensor carpi radialis brevis",
+      "kort tumextensor",
+      "rutmuskeln"
     ],
     "topic": "muskler_namn",
     "difficulty": "Easy",
     "source": "Muskler"
   },
   {
-    "id": "q29",
+    "id": "q14",
     "type": "mc",
-    "prompt": "Vad är den svenska benämningen på Gluteus maximus?",
-    "correct": "stora sätesmuskeln",
+    "prompt": "Vad är den svenska benämningen på Triceps brachii?",
+    "correct": "trehövdade överarmsmuskeln",
     "distractors": [
-      "trehövdad vadsmuskel",
-      "främre sågmuskeln",
+      "lång tumextensor",
+      "lång tumabduktor",
+      "tvärsgående bukmuskel"
+    ],
+    "topic": "muskler_namn",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q15",
+    "type": "mc",
+    "prompt": "Vad är den svenska benämningen på Flexor carpi ulnaris?",
+    "correct": "flexor carpi ulnaris",
+    "distractors": [
+      "vadsmuskel",
+      "kort tumflexor",
+      "framskenbensmuskel"
+    ],
+    "topic": "muskler_namn",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q16",
+    "type": "mc",
+    "prompt": "Vad är den svenska benämningen på Flexor carpi radialis?",
+    "correct": "flexor carpi radialis",
+    "distractors": [
+      "trehövdade överarmsmuskeln",
+      "djup fingerflexor",
       "stora bröstmuskeln"
     ],
     "topic": "muskler_namn",
@@ -168,1217 +224,203 @@
     "source": "Muskler"
   },
   {
-    "id": "q30",
-    "type": "mc",
-    "prompt": "Vad är den svenska benämningen på Hamstrings?",
-    "correct": "bakre lårmuskeln",
-    "distractors": [
-      "flexor carpi radialis",
-      "trehövdad vadsmuskel",
-      "lång tumextensor"
-    ],
-    "topic": "muskler_namn",
-    "difficulty": "Easy",
-    "source": "Muskler"
-  },
-  {
-    "id": "q31",
-    "type": "tf",
-    "prompt": "Trapezius eleverar och fixerar scapula",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q32",
-    "type": "tf",
-    "prompt": "Pectoralis major adducerar i art. glenohumerale",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q33",
-    "type": "tf",
-    "prompt": "Pectoralis minor inåtrotation och depression av scapula",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q34",
-    "type": "tf",
-    "prompt": "Erector spinae extenderar columna",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q35",
-    "type": "tf",
-    "prompt": "Rectus abdominis flekterar columna",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q36",
-    "type": "tf",
-    "prompt": "Transversus abdominis ökar buktrycket",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q37",
-    "type": "tf",
-    "prompt": "Serratus anterior fixerar skulderbladet",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q38",
-    "type": "tf",
-    "prompt": "Rhomboidei adducerar skulderbladet",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q39",
-    "type": "tf",
-    "prompt": "Latissimus dorsi adducerar humerus",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q40",
-    "type": "tf",
-    "prompt": "Supraspinatus abducerar humerus",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q41",
-    "type": "tf",
-    "prompt": "Deltoideus abducerar humerus",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q42",
-    "type": "tf",
-    "prompt": "Biceps brachii flekterar armen",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q43",
-    "type": "tf",
-    "prompt": "Triceps brachii extenderar armen",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q44",
-    "type": "tf",
-    "prompt": "Flexor carpi ulnaris flekterar handleden",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q45",
-    "type": "tf",
-    "prompt": "Flexor carpi radialis flekterar handleden",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q46",
-    "type": "tf",
-    "prompt": "Extensor carpi radialis longus extenderar handleden",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q47",
-    "type": "tf",
-    "prompt": "Extensor carpi radialis brevis extenderar handleden",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q48",
-    "type": "tf",
-    "prompt": "Extensor digitorum communis extenderar fingrar",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q49",
-    "type": "tf",
-    "prompt": "Flexor digitorum superficialis flekterar fingrar",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q50",
-    "type": "tf",
-    "prompt": "Flexor digitorum profundus flekterar fingrar",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q51",
-    "type": "tf",
-    "prompt": "Flexor pollicis longus flekterar tumme",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q52",
-    "type": "tf",
-    "prompt": "Extensor pollicis brevis extenderar tumme",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q53",
-    "type": "tf",
-    "prompt": "Extensor pollicis longus extenderar tumme",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q54",
-    "type": "tf",
-    "prompt": "Opponens pollicis opponerar tumme",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q55",
-    "type": "tf",
-    "prompt": "Flexor pollicis brevis flekterar tumme",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q56",
-    "type": "tf",
-    "prompt": "Abductor pollicis brevis abducerar tumme",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q57",
-    "type": "tf",
-    "prompt": "Abductor pollicis longus abducerar tumme",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q58",
-    "type": "tf",
-    "prompt": "Adductor pollicis adducerar tumme",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q59",
-    "type": "tf",
-    "prompt": "Gluteus maximus extenderar höften",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q60",
-    "type": "tf",
-    "prompt": "Hamstrings flekterar knät",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q61",
-    "type": "tf",
-    "prompt": "Quadriceps extenderar knät",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q62",
-    "type": "tf",
-    "prompt": "Triceps surae flekterar fotleden",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q63",
-    "type": "tf",
-    "prompt": "Tibialis anterior extenderar fotleden",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q64",
-    "type": "mc",
-    "prompt": "Är Supraspinatus extrinsic eller intrinsic?",
-    "correct": "extrinsic",
-    "distractors": [
-      "intrinsic"
-    ],
-    "topic": "muskler_klassificering",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q65",
-    "type": "mc",
-    "prompt": "Är Deltoideus extrinsic eller intrinsic?",
-    "correct": "extrinsic",
-    "distractors": [
-      "intrinsic"
-    ],
-    "topic": "muskler_klassificering",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q66",
-    "type": "mc",
-    "prompt": "Är Biceps brachii extrinsic eller intrinsic?",
-    "correct": "extrinsic",
-    "distractors": [
-      "intrinsic"
-    ],
-    "topic": "muskler_klassificering",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q67",
-    "type": "mc",
-    "prompt": "Är Triceps brachii extrinsic eller intrinsic?",
-    "correct": "extrinsic",
-    "distractors": [
-      "intrinsic"
-    ],
-    "topic": "muskler_klassificering",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q68",
-    "type": "mc",
-    "prompt": "Är Flexor carpi ulnaris extrinsic eller intrinsic?",
-    "correct": "extrinsic",
-    "distractors": [
-      "intrinsic"
-    ],
-    "topic": "muskler_klassificering",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q69",
-    "type": "mc",
-    "prompt": "Är Flexor carpi radialis extrinsic eller intrinsic?",
-    "correct": "extrinsic",
-    "distractors": [
-      "intrinsic"
-    ],
-    "topic": "muskler_klassificering",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q70",
-    "type": "mc",
-    "prompt": "Är Extensor carpi radialis longus extrinsic eller intrinsic?",
-    "correct": "extrinsic",
-    "distractors": [
-      "intrinsic"
-    ],
-    "topic": "muskler_klassificering",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q71",
-    "type": "mc",
-    "prompt": "Är Extensor carpi radialis brevis extrinsic eller intrinsic?",
-    "correct": "extrinsic",
-    "distractors": [
-      "intrinsic"
-    ],
-    "topic": "muskler_klassificering",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q72",
-    "type": "mc",
-    "prompt": "Är Extensor digitorum communis extrinsic eller intrinsic?",
-    "correct": "extrinsic",
-    "distractors": [
-      "intrinsic"
-    ],
-    "topic": "muskler_klassificering",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q73",
-    "type": "mc",
-    "prompt": "Är Flexor digitorum superficialis extrinsic eller intrinsic?",
-    "correct": "extrinsic",
-    "distractors": [
-      "intrinsic"
-    ],
-    "topic": "muskler_klassificering",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q74",
-    "type": "mc",
-    "prompt": "Är Flexor digitorum profundus extrinsic eller intrinsic?",
-    "correct": "extrinsic",
-    "distractors": [
-      "intrinsic"
-    ],
-    "topic": "muskler_klassificering",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q75",
-    "type": "mc",
-    "prompt": "Är Flexor pollicis longus extrinsic eller intrinsic?",
-    "correct": "extrinsic",
-    "distractors": [
-      "intrinsic"
-    ],
-    "topic": "muskler_klassificering",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q76",
-    "type": "mc",
-    "prompt": "Är Extensor pollicis brevis extrinsic eller intrinsic?",
-    "correct": "extrinsic",
-    "distractors": [
-      "intrinsic"
-    ],
-    "topic": "muskler_klassificering",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q77",
-    "type": "mc",
-    "prompt": "Är Extensor pollicis longus extrinsic eller intrinsic?",
-    "correct": "extrinsic",
-    "distractors": [
-      "intrinsic"
-    ],
-    "topic": "muskler_klassificering",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q78",
-    "type": "mc",
-    "prompt": "Är Opponens pollicis extrinsic eller intrinsic?",
-    "correct": "intrinsic",
-    "distractors": [
-      "extrinsic"
-    ],
-    "topic": "muskler_klassificering",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q79",
-    "type": "mc",
-    "prompt": "Är Flexor pollicis brevis extrinsic eller intrinsic?",
-    "correct": "intrinsic",
-    "distractors": [
-      "extrinsic"
-    ],
-    "topic": "muskler_klassificering",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q80",
-    "type": "mc",
-    "prompt": "Är Abductor pollicis brevis extrinsic eller intrinsic?",
-    "correct": "intrinsic",
-    "distractors": [
-      "extrinsic"
-    ],
-    "topic": "muskler_klassificering",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q81",
-    "type": "mc",
-    "prompt": "Är Abductor pollicis longus extrinsic eller intrinsic?",
-    "correct": "extrinsic",
-    "distractors": [
-      "intrinsic"
-    ],
-    "topic": "muskler_klassificering",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q82",
-    "type": "mc",
-    "prompt": "Är Adductor pollicis extrinsic eller intrinsic?",
-    "correct": "intrinsic",
-    "distractors": [
-      "extrinsic"
-    ],
-    "topic": "muskler_klassificering",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q98",
-    "type": "tf",
-    "prompt": "Flexor carpi ulnaris innerveras av n ulnaris",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_innervation",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q99",
-    "type": "tf",
-    "prompt": "Flexor carpi radialis innerveras av n medianus",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_innervation",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q100",
-    "type": "tf",
-    "prompt": "Extensor carpi radialis longus innerveras av n radialis",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_innervation",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q101",
-    "type": "tf",
-    "prompt": "Extensor carpi radialis brevis innerveras av n radialis",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_innervation",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q102",
-    "type": "tf",
-    "prompt": "Extensor digitorum communis innerveras av n radialis",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_innervation",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q103",
-    "type": "tf",
-    "prompt": "Flexor digitorum superficialis innerveras av n medianus",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_innervation",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q104",
-    "type": "tf",
-    "prompt": "Flexor digitorum profundus innerveras av n medianus och n ulnaris",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_innervation",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q105",
-    "type": "tf",
-    "prompt": "Flexor pollicis longus innerveras av n medianus",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_innervation",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q106",
-    "type": "tf",
-    "prompt": "Extensor pollicis brevis innerveras av n radialis",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_innervation",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q107",
-    "type": "tf",
-    "prompt": "Extensor pollicis longus innerveras av n radialis",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_innervation",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q108",
-    "type": "tf",
-    "prompt": "Opponens pollicis innerveras av n medianus",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_innervation",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q109",
-    "type": "tf",
-    "prompt": "Flexor pollicis brevis innerveras av n medianus och n ulnaris",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_innervation",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q110",
-    "type": "tf",
-    "prompt": "Abductor pollicis brevis innerveras av n medianus",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_innervation",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q111",
-    "type": "tf",
-    "prompt": "Abductor pollicis longus innerveras av n radialis",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_innervation",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q112",
-    "type": "tf",
-    "prompt": "Adductor pollicis innerveras av n ulnaris",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_innervation",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q1",
-    "type": "mc",
-    "prompt": "Vilken muskel flekterar?",
-    "correct": "Rectus abdominis",
-    "distractors": [
-      "Gluteus maximus",
-      "Triceps surae",
-      "Deltoideus"
-    ],
-    "topic": "muskler_rörelse_flexion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q2",
-    "type": "mc",
-    "prompt": "Vilken muskel flekterar?",
-    "correct": "Biceps brachii",
-    "distractors": [
-      "Abductor pollicis longus",
-      "Quadriceps",
-      "Trapezius"
-    ],
-    "topic": "muskler_rörelse_flexion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q3",
-    "type": "mc",
-    "prompt": "Vilken muskel flekterar?",
-    "correct": "Flexor carpi ulnaris",
-    "distractors": [
-      "Extensor pollicis brevis",
-      "Abductor pollicis brevis",
-      "Biceps brachii"
-    ],
-    "topic": "muskler_rörelse_flexion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q4",
-    "type": "mc",
-    "prompt": "Vilken muskel flekterar?",
-    "correct": "Flexor carpi radialis",
-    "distractors": [
-      "Triceps surae",
-      "Diafragma",
-      "Rectus abdominis"
-    ],
-    "topic": "muskler_rörelse_flexion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q5",
-    "type": "mc",
-    "prompt": "Vilken muskel flekterar?",
-    "correct": "Flexor digitorum superficialis",
-    "distractors": [
-      "Pectoralis major",
-      "Deltoideus",
-      "Transversus abdominis"
-    ],
-    "topic": "muskler_rörelse_flexion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q6",
-    "type": "mc",
-    "prompt": "Vilken muskel flekterar?",
-    "correct": "Flexor digitorum profundus",
-    "distractors": [
-      "Extensor digitorum communis",
-      "Rectus abdominis",
-      "Rhomboidei"
-    ],
-    "topic": "muskler_rörelse_flexion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q7",
-    "type": "mc",
-    "prompt": "Vilken muskel flekterar?",
-    "correct": "Flexor pollicis longus",
-    "distractors": [
-      "Diafragma",
-      "Serratus anterior",
-      "Erector spinae"
-    ],
-    "topic": "muskler_rörelse_flexion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q8",
-    "type": "mc",
-    "prompt": "Vilken muskel flekterar?",
-    "correct": "Flexor pollicis brevis",
-    "distractors": [
-      "Biceps brachii",
-      "Pectoralis major",
-      "Deltoideus"
-    ],
-    "topic": "muskler_rörelse_flexion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q9",
-    "type": "mc",
-    "prompt": "Vilken muskel flekterar?",
-    "correct": "Hamstrings",
-    "distractors": [
-      "Flexor pollicis brevis",
-      "Transversus abdominis",
-      "Diafragma"
-    ],
-    "topic": "muskler_rörelse_flexion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q10",
-    "type": "mc",
-    "prompt": "Vilken muskel flekterar?",
-    "correct": "Triceps surae",
-    "distractors": [
-      "Trapezius",
-      "Flexor carpi radialis",
-      "Erector spinae"
-    ],
-    "topic": "muskler_rörelse_flexion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q11",
-    "type": "mc",
-    "prompt": "Vilken muskel extenderar?",
-    "correct": "Erector spinae",
-    "distractors": [
-      "Triceps brachii",
-      "Extensor carpi radialis longus",
-      "Serratus anterior"
-    ],
-    "topic": "muskler_rörelse_extension",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q12",
-    "type": "mc",
-    "prompt": "Vilken muskel extenderar?",
-    "correct": "Triceps brachii",
-    "distractors": [
-      "Extensor carpi radialis longus",
-      "Supraspinatus",
-      "Quadriceps"
-    ],
-    "topic": "muskler_rörelse_extension",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q13",
-    "type": "mc",
-    "prompt": "Vilken muskel extenderar?",
-    "correct": "Extensor carpi radialis longus",
-    "distractors": [
-      "Rectus abdominis",
-      "Erector spinae",
-      "Extensor pollicis longus"
-    ],
-    "topic": "muskler_rörelse_extension",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q14",
-    "type": "mc",
-    "prompt": "Vilken muskel extenderar?",
-    "correct": "Extensor carpi radialis brevis",
-    "distractors": [
-      "Extensor pollicis longus",
-      "Rhomboidei",
-      "Flexor digitorum profundus"
-    ],
-    "topic": "muskler_rörelse_extension",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q15",
-    "type": "mc",
-    "prompt": "Vilken muskel extenderar?",
-    "correct": "Extensor digitorum communis",
-    "distractors": [
-      "Flexor pollicis longus",
-      "Trapezius",
-      "Extensor pollicis brevis"
-    ],
-    "topic": "muskler_rörelse_extension",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q16",
-    "type": "mc",
-    "prompt": "Vilken muskel extenderar?",
-    "correct": "Extensor pollicis brevis",
-    "distractors": [
-      "Gluteus maximus",
-      "Extensor pollicis longus",
-      "Transversus abdominis"
-    ],
-    "topic": "muskler_rörelse_extension",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
     "id": "q17",
     "type": "mc",
-    "prompt": "Vilken muskel extenderar?",
-    "correct": "Extensor pollicis longus",
+    "prompt": "Vilken muskel fixering?",
+    "correct": "Trapezius",
     "distractors": [
-      "Flexor digitorum superficialis",
-      "Tibialis anterior",
-      "Rhomboidei"
+      "Pectoralis major",
+      "Transversus abdominis",
+      "Flexor pollicis brevis"
     ],
-    "topic": "muskler_rörelse_extension",
+    "topic": "muskler_rörelse_fixering",
     "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q18",
     "type": "mc",
-    "prompt": "Vilken muskel extenderar?",
-    "correct": "Gluteus maximus",
+    "prompt": "Vilken muskel fixering?",
+    "correct": "Serratus anterior",
     "distractors": [
-      "Flexor carpi radialis",
-      "Extensor pollicis longus",
-      "Rhomboidei"
+      "Latissimus dorsi",
+      "Deltoideus",
+      "Abductor pollicis longus"
     ],
-    "topic": "muskler_rörelse_extension",
+    "topic": "muskler_rörelse_fixering",
     "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q19",
     "type": "mc",
-    "prompt": "Vilken muskel extenderar?",
-    "correct": "Quadriceps",
+    "prompt": "Vilken muskel adduktion?",
+    "correct": "Pectoralis major",
     "distractors": [
-      "Trapezius",
-      "Triceps surae",
-      "Biceps brachii"
+      "Flexor pollicis brevis",
+      "Diafragma",
+      "Serratus anterior"
     ],
-    "topic": "muskler_rörelse_extension",
+    "topic": "muskler_rörelse_adduktion",
     "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q20",
     "type": "mc",
-    "prompt": "Vilken muskel extenderar?",
-    "correct": "Tibialis anterior",
+    "prompt": "Vilken muskel adduktion?",
+    "correct": "Rhomboidei",
     "distractors": [
       "Flexor carpi ulnaris",
-      "Rectus abdominis",
-      "Extensor pollicis longus"
+      "Pectoralis minor",
+      "Flexor carpi radialis"
     ],
-    "topic": "muskler_rörelse_extension",
+    "topic": "muskler_rörelse_adduktion",
     "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q21",
     "type": "mc",
-    "prompt": "Vilken muskel abducerar?",
-    "correct": "Supraspinatus",
+    "prompt": "Vilken muskel adduktion?",
+    "correct": "Latissimus dorsi",
     "distractors": [
-      "Triceps surae",
-      "Biceps brachii",
-      "Quadriceps"
+      "Flexor digitorum profundus",
+      "Opponens pollicis",
+      "Flexor pollicis brevis"
     ],
-    "topic": "muskler_rörelse_abduktion",
+    "topic": "muskler_rörelse_adduktion",
     "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q22",
     "type": "mc",
-    "prompt": "Vilken muskel abducerar?",
-    "correct": "Deltoideus",
+    "prompt": "Vilken muskel extension?",
+    "correct": "Erector spinae",
     "distractors": [
-      "Extensor pollicis longus",
-      "Rectus abdominis",
-      "Latissimus dorsi"
+      "Flexor digitorum profundus",
+      "Latissimus dorsi",
+      "Flexor carpi radialis"
     ],
-    "topic": "muskler_rörelse_abduktion",
+    "topic": "muskler_rörelse_extension",
     "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q23",
     "type": "mc",
-    "prompt": "Vilken muskel abducerar?",
-    "correct": "Abductor pollicis brevis",
+    "prompt": "Vilken muskel extension?",
+    "correct": "Triceps brachii",
     "distractors": [
-      "Extensor digitorum communis",
-      "Abductor pollicis longus",
-      "Diafragma"
+      "Abductor pollicis brevis",
+      "Deltoideus",
+      "Flexor pollicis brevis"
     ],
-    "topic": "muskler_rörelse_abduktion",
+    "topic": "muskler_rörelse_extension",
     "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q24",
     "type": "mc",
-    "prompt": "Vilken muskel abducerar?",
-    "correct": "Abductor pollicis longus",
+    "prompt": "Vilken muskel extension?",
+    "correct": "Extensor carpi radialis longus",
     "distractors": [
-      "Opponens pollicis",
-      "Extensor pollicis brevis",
-      "Latissimus dorsi"
+      "Rhomboidei",
+      "Flexor digitorum profundus",
+      "Trapezius"
     ],
-    "topic": "muskler_rörelse_abduktion",
+    "topic": "muskler_rörelse_extension",
     "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q25",
     "type": "mc",
-    "prompt": "Vilken muskel adducerar?",
-    "correct": "Pectoralis major",
+    "prompt": "Vilken muskel flexion?",
+    "correct": "Rectus abdominis",
     "distractors": [
-      "Gluteus maximus",
-      "Extensor digitorum communis",
-      "Extensor carpi radialis longus"
+      "Latissimus dorsi",
+      "Adductor pollicis",
+      "Pectoralis minor"
     ],
-    "topic": "muskler_rörelse_adduktion",
+    "topic": "muskler_rörelse_flexion",
     "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q26",
     "type": "mc",
-    "prompt": "Vilken muskel adducerar?",
-    "correct": "Rhomboidei",
+    "prompt": "Vilken muskel flexion?",
+    "correct": "Biceps brachii",
     "distractors": [
-      "Extensor digitorum communis",
-      "Extensor pollicis longus",
-      "Supraspinatus"
+      "Gluteus maximus",
+      "Abductor pollicis brevis",
+      "Tibialis anterior"
     ],
-    "topic": "muskler_rörelse_adduktion",
+    "topic": "muskler_rörelse_flexion",
     "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q27",
     "type": "mc",
-    "prompt": "Vilken muskel adducerar?",
-    "correct": "Latissimus dorsi",
+    "prompt": "Vilken muskel flexion?",
+    "correct": "Flexor carpi ulnaris",
     "distractors": [
-      "Flexor digitorum superficialis",
-      "Erector spinae",
-      "Extensor pollicis brevis"
+      "Pectoralis minor",
+      "Extensor carpi radialis longus",
+      "Extensor pollicis longus"
     ],
-    "topic": "muskler_rörelse_adduktion",
+    "topic": "muskler_rörelse_flexion",
     "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q28",
     "type": "mc",
-    "prompt": "Vilken muskel adducerar?",
-    "correct": "Adductor pollicis",
+    "prompt": "Vilken muskel abduktion?",
+    "correct": "Supraspinatus",
     "distractors": [
-      "Erector spinae",
-      "Serratus anterior",
-      "Hamstrings"
+      "Diafragma",
+      "Quadriceps",
+      "Rectus abdominis"
     ],
-    "topic": "muskler_rörelse_adduktion",
+    "topic": "muskler_rörelse_abduktion",
     "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q29",
+    "type": "mc",
+    "prompt": "Vilken muskel abduktion?",
+    "correct": "Deltoideus",
+    "distractors": [
+      "Flexor pollicis longus",
+      "Flexor pollicis brevis",
+      "Extensor carpi radialis longus"
+    ],
+    "topic": "muskler_rörelse_abduktion",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q30",
+    "type": "mc",
+    "prompt": "Vilken muskel abduktion?",
+    "correct": "Abductor pollicis brevis",
+    "distractors": [
+      "Triceps surae",
+      "Tibialis anterior",
+      "Hamstrings"
+    ],
+    "topic": "muskler_rörelse_abduktion",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q31",
     "type": "mc",
     "prompt": "Gör Rectus abdominis flexion eller extension?",
     "correct": "Flexion",
@@ -1390,7 +432,7 @@
     "source": "Muskler"
   },
   {
-    "id": "q30",
+    "id": "q32",
     "type": "mc",
     "prompt": "Gör Biceps brachii flexion eller extension?",
     "correct": "Flexion",
@@ -1402,7 +444,7 @@
     "source": "Muskler"
   },
   {
-    "id": "q31",
+    "id": "q33",
     "type": "mc",
     "prompt": "Gör Flexor carpi ulnaris flexion eller extension?",
     "correct": "Flexion",
@@ -1414,7 +456,7 @@
     "source": "Muskler"
   },
   {
-    "id": "q32",
+    "id": "q34",
     "type": "mc",
     "prompt": "Gör Flexor carpi radialis flexion eller extension?",
     "correct": "Flexion",
@@ -1426,7 +468,7 @@
     "source": "Muskler"
   },
   {
-    "id": "q33",
+    "id": "q35",
     "type": "mc",
     "prompt": "Gör Flexor digitorum superficialis flexion eller extension?",
     "correct": "Flexion",
@@ -1438,7 +480,7 @@
     "source": "Muskler"
   },
   {
-    "id": "q34",
+    "id": "q36",
     "type": "mc",
     "prompt": "Gör Flexor digitorum profundus flexion eller extension?",
     "correct": "Flexion",
@@ -1450,7 +492,7 @@
     "source": "Muskler"
   },
   {
-    "id": "q35",
+    "id": "q37",
     "type": "mc",
     "prompt": "Gör Flexor pollicis longus flexion eller extension?",
     "correct": "Flexion",
@@ -1462,7 +504,7 @@
     "source": "Muskler"
   },
   {
-    "id": "q36",
+    "id": "q38",
     "type": "mc",
     "prompt": "Gör Flexor pollicis brevis flexion eller extension?",
     "correct": "Flexion",
@@ -1474,7 +516,7 @@
     "source": "Muskler"
   },
   {
-    "id": "q37",
+    "id": "q39",
     "type": "mc",
     "prompt": "Gör Hamstrings flexion eller extension?",
     "correct": "Flexion",
@@ -1486,7 +528,7 @@
     "source": "Muskler"
   },
   {
-    "id": "q38",
+    "id": "q40",
     "type": "mc",
     "prompt": "Gör Triceps surae flexion eller extension?",
     "correct": "Flexion",
@@ -1498,7 +540,7 @@
     "source": "Muskler"
   },
   {
-    "id": "q39",
+    "id": "q41",
     "type": "mc",
     "prompt": "Gör Erector spinae flexion eller extension?",
     "correct": "Extension",
@@ -1510,7 +552,7 @@
     "source": "Muskler"
   },
   {
-    "id": "q40",
+    "id": "q42",
     "type": "mc",
     "prompt": "Gör Triceps brachii flexion eller extension?",
     "correct": "Extension",
@@ -1522,7 +564,7 @@
     "source": "Muskler"
   },
   {
-    "id": "q41",
+    "id": "q43",
     "type": "mc",
     "prompt": "Gör Extensor carpi radialis longus flexion eller extension?",
     "correct": "Extension",
@@ -1534,7 +576,7 @@
     "source": "Muskler"
   },
   {
-    "id": "q42",
+    "id": "q44",
     "type": "mc",
     "prompt": "Gör Extensor carpi radialis brevis flexion eller extension?",
     "correct": "Extension",
@@ -1546,7 +588,7 @@
     "source": "Muskler"
   },
   {
-    "id": "q43",
+    "id": "q45",
     "type": "mc",
     "prompt": "Gör Extensor digitorum communis flexion eller extension?",
     "correct": "Extension",
@@ -1558,7 +600,7 @@
     "source": "Muskler"
   },
   {
-    "id": "q44",
+    "id": "q46",
     "type": "mc",
     "prompt": "Gör Extensor pollicis brevis flexion eller extension?",
     "correct": "Extension",
@@ -1570,7 +612,7 @@
     "source": "Muskler"
   },
   {
-    "id": "q45",
+    "id": "q47",
     "type": "mc",
     "prompt": "Gör Extensor pollicis longus flexion eller extension?",
     "correct": "Extension",
@@ -1582,7 +624,7 @@
     "source": "Muskler"
   },
   {
-    "id": "q46",
+    "id": "q48",
     "type": "mc",
     "prompt": "Gör Gluteus maximus flexion eller extension?",
     "correct": "Extension",
@@ -1594,7 +636,7 @@
     "source": "Muskler"
   },
   {
-    "id": "q47",
+    "id": "q49",
     "type": "mc",
     "prompt": "Gör Quadriceps flexion eller extension?",
     "correct": "Extension",
@@ -1606,7 +648,7 @@
     "source": "Muskler"
   },
   {
-    "id": "q48",
+    "id": "q50",
     "type": "mc",
     "prompt": "Gör Tibialis anterior flexion eller extension?",
     "correct": "Extension",
@@ -1618,7 +660,7 @@
     "source": "Muskler"
   },
   {
-    "id": "q49",
+    "id": "q51",
     "type": "tf",
     "prompt": "Trapezius eleverar och fixerar scapula",
     "correct": "Sant",
@@ -1630,33 +672,9 @@
     "source": "Muskler"
   },
   {
-    "id": "q50",
-    "type": "tf",
-    "prompt": "Pectoralis major adducerar i art. glenohumerale",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
-    "id": "q51",
-    "type": "tf",
-    "prompt": "Pectoralis minor inåtrotation och depression av scapula",
-    "correct": "Sant",
-    "distractors": [
-      "Falskt"
-    ],
-    "topic": "muskler_funktion",
-    "difficulty": "Normal",
-    "source": "Muskler"
-  },
-  {
     "id": "q52",
     "type": "tf",
-    "prompt": "Erector spinae extenderar columna",
+    "prompt": "Pectoralis major adducerar",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1668,7 +686,7 @@
   {
     "id": "q53",
     "type": "tf",
-    "prompt": "Rectus abdominis flekterar columna",
+    "prompt": "Pectoralis minor inåtrotation och depression",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1680,7 +698,7 @@
   {
     "id": "q54",
     "type": "tf",
-    "prompt": "Transversus abdominis ökar buktrycket",
+    "prompt": "Erector spinae extenderar columna",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1692,7 +710,7 @@
   {
     "id": "q55",
     "type": "tf",
-    "prompt": "Serratus anterior fixerar skulderbladet",
+    "prompt": "Rectus abdominis flekterar columna",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1704,7 +722,7 @@
   {
     "id": "q56",
     "type": "tf",
-    "prompt": "Rhomboidei adducerar skulderbladet",
+    "prompt": "Transversus abdominis ökar buktrycket",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1716,7 +734,7 @@
   {
     "id": "q57",
     "type": "tf",
-    "prompt": "Latissimus dorsi adducerar humerus",
+    "prompt": "Serratus anterior fixerar scapula",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1728,7 +746,7 @@
   {
     "id": "q58",
     "type": "tf",
-    "prompt": "Diafragma andningsmuskel",
+    "prompt": "Rhomboidei adducerar scapula",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1740,7 +758,7 @@
   {
     "id": "q59",
     "type": "tf",
-    "prompt": "Supraspinatus abducerar humerus",
+    "prompt": "Latissimus dorsi adducerar",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1752,7 +770,7 @@
   {
     "id": "q60",
     "type": "tf",
-    "prompt": "Deltoideus abducerar humerus",
+    "prompt": "Diafragma andningsmuskel",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1764,7 +782,7 @@
   {
     "id": "q61",
     "type": "tf",
-    "prompt": "Biceps brachii flekterar armen",
+    "prompt": "Supraspinatus abducerar humerus",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1776,7 +794,7 @@
   {
     "id": "q62",
     "type": "tf",
-    "prompt": "Triceps brachii extenderar armen",
+    "prompt": "Deltoideus abducerar humerus",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1788,7 +806,7 @@
   {
     "id": "q63",
     "type": "tf",
-    "prompt": "Flexor carpi ulnaris flekterar handleden",
+    "prompt": "Biceps brachii flekterar armen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1800,7 +818,7 @@
   {
     "id": "q64",
     "type": "tf",
-    "prompt": "Flexor carpi radialis flekterar handleden",
+    "prompt": "Triceps brachii extenderar armen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1812,7 +830,7 @@
   {
     "id": "q65",
     "type": "tf",
-    "prompt": "Extensor carpi radialis longus extenderar handleden",
+    "prompt": "Flexor carpi ulnaris flekterar handleden",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1824,7 +842,7 @@
   {
     "id": "q66",
     "type": "tf",
-    "prompt": "Extensor carpi radialis brevis extenderar handleden",
+    "prompt": "Flexor carpi radialis flekterar handleden",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1836,7 +854,7 @@
   {
     "id": "q67",
     "type": "tf",
-    "prompt": "Extensor digitorum communis extenderar fingrar",
+    "prompt": "Extensor carpi radialis longus extenderar handleden",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1848,7 +866,7 @@
   {
     "id": "q68",
     "type": "tf",
-    "prompt": "Flexor digitorum superficialis flekterar fingrar",
+    "prompt": "Extensor carpi radialis brevis extenderar handleden",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1860,7 +878,7 @@
   {
     "id": "q69",
     "type": "tf",
-    "prompt": "Flexor digitorum profundus flekterar fingrar",
+    "prompt": "Extensor digitorum communis extenderar fingrar",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1872,7 +890,7 @@
   {
     "id": "q70",
     "type": "tf",
-    "prompt": "Flexor pollicis longus flekterar tumme",
+    "prompt": "Flexor digitorum superficialis flekterar fingrar",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1884,7 +902,7 @@
   {
     "id": "q71",
     "type": "tf",
-    "prompt": "Extensor pollicis brevis extenderar tumme",
+    "prompt": "Flexor digitorum profundus flekterar fingrar",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1896,7 +914,7 @@
   {
     "id": "q72",
     "type": "tf",
-    "prompt": "Extensor pollicis longus extenderar tumme",
+    "prompt": "Flexor pollicis longus flekterar tumme",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1908,7 +926,7 @@
   {
     "id": "q73",
     "type": "tf",
-    "prompt": "Opponens pollicis opponerar tumme",
+    "prompt": "Extensor pollicis brevis extenderar tumme",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1920,7 +938,7 @@
   {
     "id": "q74",
     "type": "tf",
-    "prompt": "Flexor pollicis brevis flekterar tumme",
+    "prompt": "Extensor pollicis longus extenderar tumme",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1932,7 +950,7 @@
   {
     "id": "q75",
     "type": "tf",
-    "prompt": "Abductor pollicis brevis abducerar tumme",
+    "prompt": "Opponens pollicis opponerar tumme",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1944,7 +962,7 @@
   {
     "id": "q76",
     "type": "tf",
-    "prompt": "Abductor pollicis longus abducerar tumme",
+    "prompt": "Flexor pollicis brevis flekterar tumme",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1956,7 +974,7 @@
   {
     "id": "q77",
     "type": "tf",
-    "prompt": "Adductor pollicis adducerar tumme",
+    "prompt": "Abductor pollicis brevis abducerar tumme",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1968,7 +986,7 @@
   {
     "id": "q78",
     "type": "tf",
-    "prompt": "Gluteus maximus extenderar höften",
+    "prompt": "Abductor pollicis longus abducerar tumme",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1980,7 +998,7 @@
   {
     "id": "q79",
     "type": "tf",
-    "prompt": "Hamstrings flekterar knät",
+    "prompt": "Adductor pollicis adducerar tumme",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1992,7 +1010,7 @@
   {
     "id": "q80",
     "type": "tf",
-    "prompt": "Quadriceps extenderar knät",
+    "prompt": "Gluteus maximus extenderar höften",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2004,7 +1022,7 @@
   {
     "id": "q81",
     "type": "tf",
-    "prompt": "Triceps surae flekterar fotleden",
+    "prompt": "Hamstrings flekterar knät",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2016,7 +1034,7 @@
   {
     "id": "q82",
     "type": "tf",
-    "prompt": "Tibialis anterior extenderar fotleden",
+    "prompt": "Quadriceps extenderar knät",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2028,379 +1046,379 @@
   {
     "id": "q83",
     "type": "tf",
-    "prompt": "Flexor carpi ulnaris är en muskel i menniskokroppen",
+    "prompt": "Triceps surae flekterar fotleden",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_funktion",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q84",
     "type": "tf",
-    "prompt": "Trapezius är en muskel i menniskokroppen",
+    "prompt": "Tibialis anterior extenderar fotleden",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_funktion",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q85",
     "type": "tf",
-    "prompt": "Trapezius är en muskel i menniskokroppen",
+    "prompt": "Flexor carpi ulnaris innerveras av n ulnaris",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_innervation",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q86",
     "type": "tf",
-    "prompt": "Triceps brachii är en muskel i menniskokroppen",
+    "prompt": "Flexor carpi radialis innerveras av n medianus",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_innervation",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q87",
     "type": "tf",
-    "prompt": "Extensor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Extensor carpi radialis longus innerveras av n radialis",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_innervation",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q88",
     "type": "tf",
-    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
+    "prompt": "Extensor carpi radialis brevis innerveras av n radialis",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_innervation",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q89",
     "type": "tf",
-    "prompt": "Erector spinae är en muskel i menniskokroppen",
+    "prompt": "Extensor digitorum communis innerveras av n radialis",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_innervation",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q90",
     "type": "tf",
-    "prompt": "Triceps brachii är en muskel i menniskokroppen",
+    "prompt": "Flexor digitorum superficialis innerveras av n medianus",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_innervation",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q91",
     "type": "tf",
-    "prompt": "Latissimus dorsi är en muskel i menniskokroppen",
+    "prompt": "Flexor digitorum profundus innerveras av n medianus och n ulnaris",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_innervation",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q92",
     "type": "tf",
-    "prompt": "Supraspinatus är en muskel i menniskokroppen",
+    "prompt": "Flexor pollicis longus innerveras av n medianus",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_innervation",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q93",
     "type": "tf",
-    "prompt": "Serratus anterior är en muskel i menniskokroppen",
+    "prompt": "Extensor pollicis brevis innerveras av n radialis",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_innervation",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q94",
     "type": "tf",
-    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
+    "prompt": "Extensor pollicis longus innerveras av n radialis",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_innervation",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q95",
     "type": "tf",
-    "prompt": "Latissimus dorsi är en muskel i menniskokroppen",
+    "prompt": "Opponens pollicis innerveras av n medianus",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_innervation",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q96",
     "type": "tf",
-    "prompt": "Triceps surae är en muskel i menniskokroppen",
+    "prompt": "Flexor pollicis brevis innerveras av n medianus och n ulnaris",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_innervation",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q97",
     "type": "tf",
-    "prompt": "Flexor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Abductor pollicis brevis innerveras av n medianus",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_innervation",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q98",
     "type": "tf",
-    "prompt": "Triceps surae är en muskel i menniskokroppen",
+    "prompt": "Abductor pollicis longus innerveras av n radialis",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_innervation",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q99",
     "type": "tf",
-    "prompt": "Triceps surae är en muskel i menniskokroppen",
+    "prompt": "Adductor pollicis innerveras av n ulnaris",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_innervation",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q100",
-    "type": "tf",
-    "prompt": "Trapezius är en muskel i menniskokroppen",
-    "correct": "Sant",
+    "type": "mc",
+    "prompt": "Är Supraspinatus extrinsic eller intrinsic?",
+    "correct": "extrinsic",
     "distractors": [
-      "Falskt"
+      "intrinsic"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_klassificering",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q101",
-    "type": "tf",
-    "prompt": "Triceps surae är en muskel i menniskokroppen",
-    "correct": "Sant",
+    "type": "mc",
+    "prompt": "Är Deltoideus extrinsic eller intrinsic?",
+    "correct": "extrinsic",
     "distractors": [
-      "Falskt"
+      "intrinsic"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_klassificering",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q102",
-    "type": "tf",
-    "prompt": "Abductor pollicis brevis är en muskel i menniskokroppen",
-    "correct": "Sant",
+    "type": "mc",
+    "prompt": "Är Biceps brachii extrinsic eller intrinsic?",
+    "correct": "extrinsic",
     "distractors": [
-      "Falskt"
+      "intrinsic"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_klassificering",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q103",
-    "type": "tf",
-    "prompt": "Gluteus maximus är en muskel i menniskokroppen",
-    "correct": "Sant",
+    "type": "mc",
+    "prompt": "Är Triceps brachii extrinsic eller intrinsic?",
+    "correct": "extrinsic",
     "distractors": [
-      "Falskt"
+      "intrinsic"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_klassificering",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q104",
-    "type": "tf",
-    "prompt": "Extensor pollicis brevis är en muskel i menniskokroppen",
-    "correct": "Sant",
+    "type": "mc",
+    "prompt": "Är Flexor carpi ulnaris extrinsic eller intrinsic?",
+    "correct": "extrinsic",
     "distractors": [
-      "Falskt"
+      "intrinsic"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_klassificering",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q105",
-    "type": "tf",
-    "prompt": "Quadriceps är en muskel i menniskokroppen",
-    "correct": "Sant",
+    "type": "mc",
+    "prompt": "Är Flexor carpi radialis extrinsic eller intrinsic?",
+    "correct": "extrinsic",
     "distractors": [
-      "Falskt"
+      "intrinsic"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_klassificering",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q106",
-    "type": "tf",
-    "prompt": "Supraspinatus är en muskel i menniskokroppen",
-    "correct": "Sant",
+    "type": "mc",
+    "prompt": "Är Extensor carpi radialis longus extrinsic eller intrinsic?",
+    "correct": "extrinsic",
     "distractors": [
-      "Falskt"
+      "intrinsic"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_klassificering",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q107",
-    "type": "tf",
-    "prompt": "Extensor carpi radialis brevis är en muskel i menniskokroppen",
-    "correct": "Sant",
+    "type": "mc",
+    "prompt": "Är Extensor carpi radialis brevis extrinsic eller intrinsic?",
+    "correct": "extrinsic",
     "distractors": [
-      "Falskt"
+      "intrinsic"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_klassificering",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q108",
-    "type": "tf",
-    "prompt": "Serratus anterior är en muskel i menniskokroppen",
-    "correct": "Sant",
+    "type": "mc",
+    "prompt": "Är Extensor digitorum communis extrinsic eller intrinsic?",
+    "correct": "extrinsic",
     "distractors": [
-      "Falskt"
+      "intrinsic"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_klassificering",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q109",
-    "type": "tf",
-    "prompt": "Deltoideus är en muskel i menniskokroppen",
-    "correct": "Sant",
+    "type": "mc",
+    "prompt": "Är Flexor digitorum superficialis extrinsic eller intrinsic?",
+    "correct": "extrinsic",
     "distractors": [
-      "Falskt"
+      "intrinsic"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_klassificering",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q110",
-    "type": "tf",
-    "prompt": "Flexor digitorum profundus är en muskel i menniskokroppen",
-    "correct": "Sant",
+    "type": "mc",
+    "prompt": "Är Opponens pollicis extrinsic eller intrinsic?",
+    "correct": "intrinsic",
     "distractors": [
-      "Falskt"
+      "extrinsic"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_klassificering",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q111",
-    "type": "tf",
-    "prompt": "Biceps brachii är en muskel i menniskokroppen",
-    "correct": "Sant",
+    "type": "mc",
+    "prompt": "Är Flexor pollicis brevis extrinsic eller intrinsic?",
+    "correct": "intrinsic",
     "distractors": [
-      "Falskt"
+      "extrinsic"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_klassificering",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q112",
-    "type": "tf",
-    "prompt": "Trapezius är en muskel i menniskokroppen",
-    "correct": "Sant",
+    "type": "mc",
+    "prompt": "Är Abductor pollicis brevis extrinsic eller intrinsic?",
+    "correct": "intrinsic",
     "distractors": [
-      "Falskt"
+      "extrinsic"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_klassificering",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q113",
-    "type": "tf",
-    "prompt": "Extensor pollicis brevis är en muskel i menniskokroppen",
-    "correct": "Sant",
+    "type": "mc",
+    "prompt": "Är Adductor pollicis extrinsic eller intrinsic?",
+    "correct": "intrinsic",
     "distractors": [
-      "Falskt"
+      "extrinsic"
     ],
-    "topic": "muskler_allmänt",
-    "difficulty": "Easy",
+    "topic": "muskler_klassificering",
+    "difficulty": "Normal",
     "source": "Muskler"
   },
   {
     "id": "q114",
     "type": "tf",
-    "prompt": "Extensor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Tibialis anterior är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2412,7 +1430,7 @@
   {
     "id": "q115",
     "type": "tf",
-    "prompt": "Latissimus dorsi är en muskel i menniskokroppen",
+    "prompt": "Flexor digitorum superficialis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2424,7 +1442,7 @@
   {
     "id": "q116",
     "type": "tf",
-    "prompt": "Flexor carpi radialis är en muskel i menniskokroppen",
+    "prompt": "Supraspinatus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2436,7 +1454,7 @@
   {
     "id": "q117",
     "type": "tf",
-    "prompt": "Deltoideus är en muskel i menniskokroppen",
+    "prompt": "Rhomboidei är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2448,7 +1466,7 @@
   {
     "id": "q118",
     "type": "tf",
-    "prompt": "Triceps brachii är en muskel i menniskokroppen",
+    "prompt": "Quadriceps är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2460,7 +1478,7 @@
   {
     "id": "q119",
     "type": "tf",
-    "prompt": "Trapezius är en muskel i menniskokroppen",
+    "prompt": "Latissimus dorsi är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2472,7 +1490,7 @@
   {
     "id": "q120",
     "type": "tf",
-    "prompt": "Adductor pollicis är en muskel i menniskokroppen",
+    "prompt": "Opponens pollicis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2484,7 +1502,7 @@
   {
     "id": "q121",
     "type": "tf",
-    "prompt": "Flexor carpi ulnaris är en muskel i menniskokroppen",
+    "prompt": "Adductor pollicis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2496,7 +1514,7 @@
   {
     "id": "q122",
     "type": "tf",
-    "prompt": "Adductor pollicis är en muskel i menniskokroppen",
+    "prompt": "Abductor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2508,7 +1526,7 @@
   {
     "id": "q123",
     "type": "tf",
-    "prompt": "Serratus anterior är en muskel i menniskokroppen",
+    "prompt": "Adductor pollicis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2520,7 +1538,7 @@
   {
     "id": "q124",
     "type": "tf",
-    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Extensor pollicis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2532,7 +1550,7 @@
   {
     "id": "q125",
     "type": "tf",
-    "prompt": "Rhomboidei är en muskel i menniskokroppen",
+    "prompt": "Triceps surae är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2544,7 +1562,7 @@
   {
     "id": "q126",
     "type": "tf",
-    "prompt": "Abductor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Triceps surae är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2556,7 +1574,7 @@
   {
     "id": "q127",
     "type": "tf",
-    "prompt": "Flexor carpi radialis är en muskel i menniskokroppen",
+    "prompt": "Quadriceps är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2568,7 +1586,7 @@
   {
     "id": "q128",
     "type": "tf",
-    "prompt": "Extensor carpi radialis longus är en muskel i menniskokroppen",
+    "prompt": "Triceps brachii är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2580,7 +1598,7 @@
   {
     "id": "q129",
     "type": "tf",
-    "prompt": "Flexor digitorum superficialis är en muskel i menniskokroppen",
+    "prompt": "Hamstrings är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2592,7 +1610,7 @@
   {
     "id": "q130",
     "type": "tf",
-    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
+    "prompt": "Triceps brachii är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2604,7 +1622,7 @@
   {
     "id": "q131",
     "type": "tf",
-    "prompt": "Pectoralis minor är en muskel i menniskokroppen",
+    "prompt": "Latissimus dorsi är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2616,7 +1634,7 @@
   {
     "id": "q132",
     "type": "tf",
-    "prompt": "Biceps brachii är en muskel i menniskokroppen",
+    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2628,7 +1646,7 @@
   {
     "id": "q133",
     "type": "tf",
-    "prompt": "Flexor digitorum superficialis är en muskel i menniskokroppen",
+    "prompt": "Flexor carpi ulnaris är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2640,7 +1658,7 @@
   {
     "id": "q134",
     "type": "tf",
-    "prompt": "Tibialis anterior är en muskel i menniskokroppen",
+    "prompt": "Adductor pollicis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2652,7 +1670,7 @@
   {
     "id": "q135",
     "type": "tf",
-    "prompt": "Flexor carpi radialis är en muskel i menniskokroppen",
+    "prompt": "Diafragma är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2664,7 +1682,7 @@
   {
     "id": "q136",
     "type": "tf",
-    "prompt": "Flexor digitorum superficialis är en muskel i menniskokroppen",
+    "prompt": "Serratus anterior är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2676,7 +1694,7 @@
   {
     "id": "q137",
     "type": "tf",
-    "prompt": "Flexor digitorum superficialis är en muskel i menniskokroppen",
+    "prompt": "Serratus anterior är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2688,7 +1706,7 @@
   {
     "id": "q138",
     "type": "tf",
-    "prompt": "Flexor carpi radialis är en muskel i menniskokroppen",
+    "prompt": "Quadriceps är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2700,7 +1718,7 @@
   {
     "id": "q139",
     "type": "tf",
-    "prompt": "Extensor carpi radialis longus är en muskel i menniskokroppen",
+    "prompt": "Rectus abdominis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2712,7 +1730,7 @@
   {
     "id": "q140",
     "type": "tf",
-    "prompt": "Pectoralis minor är en muskel i menniskokroppen",
+    "prompt": "Flexor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2724,7 +1742,7 @@
   {
     "id": "q141",
     "type": "tf",
-    "prompt": "Biceps brachii är en muskel i menniskokroppen",
+    "prompt": "Extensor carpi radialis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2736,7 +1754,7 @@
   {
     "id": "q142",
     "type": "tf",
-    "prompt": "Flexor carpi ulnaris är en muskel i menniskokroppen",
+    "prompt": "Flexor pollicis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2748,7 +1766,7 @@
   {
     "id": "q143",
     "type": "tf",
-    "prompt": "Flexor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Abductor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2760,7 +1778,7 @@
   {
     "id": "q144",
     "type": "tf",
-    "prompt": "Rhomboidei är en muskel i menniskokroppen",
+    "prompt": "Flexor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2772,7 +1790,7 @@
   {
     "id": "q145",
     "type": "tf",
-    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
+    "prompt": "Pectoralis major är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2784,7 +1802,7 @@
   {
     "id": "q146",
     "type": "tf",
-    "prompt": "Diafragma är en muskel i menniskokroppen",
+    "prompt": "Flexor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2796,7 +1814,7 @@
   {
     "id": "q147",
     "type": "tf",
-    "prompt": "Abductor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Triceps brachii är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2808,7 +1826,7 @@
   {
     "id": "q148",
     "type": "tf",
-    "prompt": "Diafragma är en muskel i menniskokroppen",
+    "prompt": "Abductor pollicis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2820,7 +1838,7 @@
   {
     "id": "q149",
     "type": "tf",
-    "prompt": "Flexor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Abductor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2832,7 +1850,7 @@
   {
     "id": "q150",
     "type": "tf",
-    "prompt": "Flexor carpi radialis är en muskel i menniskokroppen",
+    "prompt": "Extensor carpi radialis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2844,7 +1862,7 @@
   {
     "id": "q151",
     "type": "tf",
-    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
+    "prompt": "Flexor carpi radialis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2856,7 +1874,7 @@
   {
     "id": "q152",
     "type": "tf",
-    "prompt": "Flexor carpi ulnaris är en muskel i menniskokroppen",
+    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2868,7 +1886,7 @@
   {
     "id": "q153",
     "type": "tf",
-    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
+    "prompt": "Flexor carpi radialis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2880,7 +1898,7 @@
   {
     "id": "q154",
     "type": "tf",
-    "prompt": "Pectoralis major är en muskel i menniskokroppen",
+    "prompt": "Extensor carpi radialis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2892,7 +1910,7 @@
   {
     "id": "q155",
     "type": "tf",
-    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
+    "prompt": "Triceps surae är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2904,7 +1922,7 @@
   {
     "id": "q156",
     "type": "tf",
-    "prompt": "Diafragma är en muskel i menniskokroppen",
+    "prompt": "Rectus abdominis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2916,7 +1934,7 @@
   {
     "id": "q157",
     "type": "tf",
-    "prompt": "Extensor carpi radialis longus är en muskel i menniskokroppen",
+    "prompt": "Erector spinae är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2928,7 +1946,7 @@
   {
     "id": "q158",
     "type": "tf",
-    "prompt": "Diafragma är en muskel i menniskokroppen",
+    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2940,7 +1958,7 @@
   {
     "id": "q159",
     "type": "tf",
-    "prompt": "Flexor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2952,7 +1970,7 @@
   {
     "id": "q160",
     "type": "tf",
-    "prompt": "Extensor carpi radialis brevis är en muskel i menniskokroppen",
+    "prompt": "Extensor carpi radialis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2964,7 +1982,7 @@
   {
     "id": "q161",
     "type": "tf",
-    "prompt": "Flexor carpi ulnaris är en muskel i menniskokroppen",
+    "prompt": "Abductor pollicis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2976,7 +1994,7 @@
   {
     "id": "q162",
     "type": "tf",
-    "prompt": "Trapezius är en muskel i menniskokroppen",
+    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2988,7 +2006,7 @@
   {
     "id": "q163",
     "type": "tf",
-    "prompt": "Flexor digitorum profundus är en muskel i menniskokroppen",
+    "prompt": "Diafragma är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3000,7 +2018,7 @@
   {
     "id": "q164",
     "type": "tf",
-    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Abductor pollicis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3012,7 +2030,7 @@
   {
     "id": "q165",
     "type": "tf",
-    "prompt": "Tibialis anterior är en muskel i menniskokroppen",
+    "prompt": "Pectoralis minor är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3024,7 +2042,7 @@
   {
     "id": "q166",
     "type": "tf",
-    "prompt": "Trapezius är en muskel i menniskokroppen",
+    "prompt": "Supraspinatus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3036,7 +2054,7 @@
   {
     "id": "q167",
     "type": "tf",
-    "prompt": "Pectoralis minor är en muskel i menniskokroppen",
+    "prompt": "Supraspinatus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3048,7 +2066,7 @@
   {
     "id": "q168",
     "type": "tf",
-    "prompt": "Hamstrings är en muskel i menniskokroppen",
+    "prompt": "Pectoralis minor är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3060,7 +2078,7 @@
   {
     "id": "q169",
     "type": "tf",
-    "prompt": "Supraspinatus är en muskel i menniskokroppen",
+    "prompt": "Extensor pollicis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3072,7 +2090,7 @@
   {
     "id": "q170",
     "type": "tf",
-    "prompt": "Gluteus maximus är en muskel i menniskokroppen",
+    "prompt": "Latissimus dorsi är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3084,7 +2102,7 @@
   {
     "id": "q171",
     "type": "tf",
-    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
+    "prompt": "Tibialis anterior är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3096,7 +2114,7 @@
   {
     "id": "q172",
     "type": "tf",
-    "prompt": "Tibialis anterior är en muskel i menniskokroppen",
+    "prompt": "Deltoideus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3108,7 +2126,7 @@
   {
     "id": "q173",
     "type": "tf",
-    "prompt": "Flexor digitorum superficialis är en muskel i menniskokroppen",
+    "prompt": "Flexor pollicis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3120,7 +2138,7 @@
   {
     "id": "q174",
     "type": "tf",
-    "prompt": "Pectoralis minor är en muskel i menniskokroppen",
+    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3132,7 +2150,7 @@
   {
     "id": "q175",
     "type": "tf",
-    "prompt": "Flexor carpi radialis är en muskel i menniskokroppen",
+    "prompt": "Triceps brachii är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3144,7 +2162,7 @@
   {
     "id": "q176",
     "type": "tf",
-    "prompt": "Extensor carpi radialis brevis är en muskel i menniskokroppen",
+    "prompt": "Quadriceps är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3156,7 +2174,7 @@
   {
     "id": "q177",
     "type": "tf",
-    "prompt": "Supraspinatus är en muskel i menniskokroppen",
+    "prompt": "Flexor digitorum superficialis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3168,7 +2186,7 @@
   {
     "id": "q178",
     "type": "tf",
-    "prompt": "Hamstrings är en muskel i menniskokroppen",
+    "prompt": "Latissimus dorsi är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3180,7 +2198,7 @@
   {
     "id": "q179",
     "type": "tf",
-    "prompt": "Flexor digitorum profundus är en muskel i menniskokroppen",
+    "prompt": "Extensor pollicis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3192,7 +2210,7 @@
   {
     "id": "q180",
     "type": "tf",
-    "prompt": "Tibialis anterior är en muskel i menniskokroppen",
+    "prompt": "Flexor digitorum profundus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3204,7 +2222,7 @@
   {
     "id": "q181",
     "type": "tf",
-    "prompt": "Extensor carpi radialis brevis är en muskel i menniskokroppen",
+    "prompt": "Tibialis anterior är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3216,7 +2234,7 @@
   {
     "id": "q182",
     "type": "tf",
-    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
+    "prompt": "Serratus anterior är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3228,7 +2246,7 @@
   {
     "id": "q183",
     "type": "tf",
-    "prompt": "Triceps surae är en muskel i menniskokroppen",
+    "prompt": "Flexor pollicis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3240,7 +2258,7 @@
   {
     "id": "q184",
     "type": "tf",
-    "prompt": "Pectoralis major är en muskel i menniskokroppen",
+    "prompt": "Extensor carpi radialis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3252,7 +2270,7 @@
   {
     "id": "q185",
     "type": "tf",
-    "prompt": "Extensor carpi radialis longus är en muskel i menniskokroppen",
+    "prompt": "Triceps brachii är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3264,7 +2282,7 @@
   {
     "id": "q186",
     "type": "tf",
-    "prompt": "Flexor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Abductor pollicis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3276,7 +2294,7 @@
   {
     "id": "q187",
     "type": "tf",
-    "prompt": "Flexor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Quadriceps är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3288,7 +2306,7 @@
   {
     "id": "q188",
     "type": "tf",
-    "prompt": "Flexor digitorum superficialis är en muskel i menniskokroppen",
+    "prompt": "Rhomboidei är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3300,7 +2318,7 @@
   {
     "id": "q189",
     "type": "tf",
-    "prompt": "Erector spinae är en muskel i menniskokroppen",
+    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3312,7 +2330,7 @@
   {
     "id": "q190",
     "type": "tf",
-    "prompt": "Flexor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Triceps brachii är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3324,7 +2342,7 @@
   {
     "id": "q191",
     "type": "tf",
-    "prompt": "Flexor digitorum profundus är en muskel i menniskokroppen",
+    "prompt": "Tibialis anterior är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3336,7 +2354,7 @@
   {
     "id": "q192",
     "type": "tf",
-    "prompt": "Flexor digitorum profundus är en muskel i menniskokroppen",
+    "prompt": "Triceps surae är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3348,7 +2366,7 @@
   {
     "id": "q193",
     "type": "tf",
-    "prompt": "Adductor pollicis är en muskel i menniskokroppen",
+    "prompt": "Latissimus dorsi är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3360,7 +2378,7 @@
   {
     "id": "q194",
     "type": "tf",
-    "prompt": "Serratus anterior är en muskel i menniskokroppen",
+    "prompt": "Abductor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3372,7 +2390,7 @@
   {
     "id": "q195",
     "type": "tf",
-    "prompt": "Supraspinatus är en muskel i menniskokroppen",
+    "prompt": "Abductor pollicis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3384,7 +2402,7 @@
   {
     "id": "q196",
     "type": "tf",
-    "prompt": "Serratus anterior är en muskel i menniskokroppen",
+    "prompt": "Erector spinae är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3396,7 +2414,7 @@
   {
     "id": "q197",
     "type": "tf",
-    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
+    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3408,7 +2426,7 @@
   {
     "id": "q198",
     "type": "tf",
-    "prompt": "Flexor digitorum profundus är en muskel i menniskokroppen",
+    "prompt": "Diafragma är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3420,7 +2438,7 @@
   {
     "id": "q199",
     "type": "tf",
-    "prompt": "Pectoralis major är en muskel i menniskokroppen",
+    "prompt": "Erector spinae är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3432,7 +2450,7 @@
   {
     "id": "q200",
     "type": "tf",
-    "prompt": "Quadriceps är en muskel i menniskokroppen",
+    "prompt": "Triceps brachii är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3444,7 +2462,7 @@
   {
     "id": "q201",
     "type": "tf",
-    "prompt": "Extensor carpi radialis brevis är en muskel i menniskokroppen",
+    "prompt": "Erector spinae är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3456,7 +2474,7 @@
   {
     "id": "q202",
     "type": "tf",
-    "prompt": "Opponens pollicis är en muskel i menniskokroppen",
+    "prompt": "Latissimus dorsi är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3468,7 +2486,7 @@
   {
     "id": "q203",
     "type": "tf",
-    "prompt": "Serratus anterior är en muskel i menniskokroppen",
+    "prompt": "Tibialis anterior är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3480,7 +2498,7 @@
   {
     "id": "q204",
     "type": "tf",
-    "prompt": "Flexor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Pectoralis minor är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3492,7 +2510,7 @@
   {
     "id": "q205",
     "type": "tf",
-    "prompt": "Gluteus maximus är en muskel i menniskokroppen",
+    "prompt": "Serratus anterior är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3504,7 +2522,7 @@
   {
     "id": "q206",
     "type": "tf",
-    "prompt": "Rhomboidei är en muskel i menniskokroppen",
+    "prompt": "Pectoralis minor är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3516,7 +2534,7 @@
   {
     "id": "q207",
     "type": "tf",
-    "prompt": "Deltoideus är en muskel i menniskokroppen",
+    "prompt": "Extensor carpi radialis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3528,7 +2546,7 @@
   {
     "id": "q208",
     "type": "tf",
-    "prompt": "Serratus anterior är en muskel i menniskokroppen",
+    "prompt": "Gluteus maximus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3540,7 +2558,7 @@
   {
     "id": "q209",
     "type": "tf",
-    "prompt": "Flexor carpi radialis är en muskel i menniskokroppen",
+    "prompt": "Abductor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3552,7 +2570,7 @@
   {
     "id": "q210",
     "type": "tf",
-    "prompt": "Extensor carpi radialis brevis är en muskel i menniskokroppen",
+    "prompt": "Flexor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3564,7 +2582,7 @@
   {
     "id": "q211",
     "type": "tf",
-    "prompt": "Gluteus maximus är en muskel i menniskokroppen",
+    "prompt": "Serratus anterior är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3576,7 +2594,7 @@
   {
     "id": "q212",
     "type": "tf",
-    "prompt": "Trapezius är en muskel i menniskokroppen",
+    "prompt": "Flexor pollicis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3588,7 +2606,7 @@
   {
     "id": "q213",
     "type": "tf",
-    "prompt": "Gluteus maximus är en muskel i menniskokroppen",
+    "prompt": "Extensor pollicis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3600,7 +2618,7 @@
   {
     "id": "q214",
     "type": "tf",
-    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Deltoideus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3612,7 +2630,7 @@
   {
     "id": "q215",
     "type": "tf",
-    "prompt": "Deltoideus är en muskel i menniskokroppen",
+    "prompt": "Flexor carpi radialis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3624,7 +2642,7 @@
   {
     "id": "q216",
     "type": "tf",
-    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
+    "prompt": "Erector spinae är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3636,7 +2654,7 @@
   {
     "id": "q217",
     "type": "tf",
-    "prompt": "Flexor carpi radialis är en muskel i menniskokroppen",
+    "prompt": "Extensor pollicis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3648,7 +2666,7 @@
   {
     "id": "q218",
     "type": "tf",
-    "prompt": "Serratus anterior är en muskel i menniskokroppen",
+    "prompt": "Flexor carpi radialis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3660,7 +2678,7 @@
   {
     "id": "q219",
     "type": "tf",
-    "prompt": "Erector spinae är en muskel i menniskokroppen",
+    "prompt": "Gluteus maximus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3672,7 +2690,7 @@
   {
     "id": "q220",
     "type": "tf",
-    "prompt": "Pectoralis major är en muskel i menniskokroppen",
+    "prompt": "Serratus anterior är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3684,7 +2702,7 @@
   {
     "id": "q221",
     "type": "tf",
-    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
+    "prompt": "Tibialis anterior är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3696,7 +2714,7 @@
   {
     "id": "q222",
     "type": "tf",
-    "prompt": "Rhomboidei är en muskel i menniskokroppen",
+    "prompt": "Extensor pollicis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3708,7 +2726,7 @@
   {
     "id": "q223",
     "type": "tf",
-    "prompt": "Opponens pollicis är en muskel i menniskokroppen",
+    "prompt": "Abductor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3720,7 +2738,7 @@
   {
     "id": "q224",
     "type": "tf",
-    "prompt": "Hamstrings är en muskel i menniskokroppen",
+    "prompt": "Rhomboidei är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3732,7 +2750,7 @@
   {
     "id": "q225",
     "type": "tf",
-    "prompt": "Flexor carpi ulnaris är en muskel i menniskokroppen",
+    "prompt": "Quadriceps är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3744,7 +2762,7 @@
   {
     "id": "q226",
     "type": "tf",
-    "prompt": "Quadriceps är en muskel i menniskokroppen",
+    "prompt": "Pectoralis minor är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3756,7 +2774,7 @@
   {
     "id": "q227",
     "type": "tf",
-    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
+    "prompt": "Latissimus dorsi är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3768,7 +2786,7 @@
   {
     "id": "q228",
     "type": "tf",
-    "prompt": "Flexor digitorum superficialis är en muskel i menniskokroppen",
+    "prompt": "Rectus abdominis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3780,7 +2798,7 @@
   {
     "id": "q229",
     "type": "tf",
-    "prompt": "Hamstrings är en muskel i menniskokroppen",
+    "prompt": "Latissimus dorsi är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3792,7 +2810,7 @@
   {
     "id": "q230",
     "type": "tf",
-    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
+    "prompt": "Hamstrings är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3804,7 +2822,7 @@
   {
     "id": "q231",
     "type": "tf",
-    "prompt": "Latissimus dorsi är en muskel i menniskokroppen",
+    "prompt": "Quadriceps är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3816,7 +2834,7 @@
   {
     "id": "q232",
     "type": "tf",
-    "prompt": "Triceps brachii är en muskel i menniskokroppen",
+    "prompt": "Flexor carpi ulnaris är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3828,7 +2846,7 @@
   {
     "id": "q233",
     "type": "tf",
-    "prompt": "Abductor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Tibialis anterior är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3840,7 +2858,7 @@
   {
     "id": "q234",
     "type": "tf",
-    "prompt": "Adductor pollicis är en muskel i menniskokroppen",
+    "prompt": "Triceps brachii är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3852,7 +2870,7 @@
   {
     "id": "q235",
     "type": "tf",
-    "prompt": "Hamstrings är en muskel i menniskokroppen",
+    "prompt": "Diafragma är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3864,7 +2882,7 @@
   {
     "id": "q236",
     "type": "tf",
-    "prompt": "Rhomboidei är en muskel i menniskokroppen",
+    "prompt": "Hamstrings är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3876,7 +2894,7 @@
   {
     "id": "q237",
     "type": "tf",
-    "prompt": "Diafragma är en muskel i menniskokroppen",
+    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3888,7 +2906,7 @@
   {
     "id": "q238",
     "type": "tf",
-    "prompt": "Adductor pollicis är en muskel i menniskokroppen",
+    "prompt": "Rhomboidei är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3900,7 +2918,7 @@
   {
     "id": "q239",
     "type": "tf",
-    "prompt": "Serratus anterior är en muskel i menniskokroppen",
+    "prompt": "Extensor carpi radialis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3912,7 +2930,7 @@
   {
     "id": "q240",
     "type": "tf",
-    "prompt": "Supraspinatus är en muskel i menniskokroppen",
+    "prompt": "Flexor carpi radialis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3924,7 +2942,7 @@
   {
     "id": "q241",
     "type": "tf",
-    "prompt": "Latissimus dorsi är en muskel i menniskokroppen",
+    "prompt": "Opponens pollicis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3936,7 +2954,7 @@
   {
     "id": "q242",
     "type": "tf",
-    "prompt": "Abductor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Adductor pollicis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3948,7 +2966,7 @@
   {
     "id": "q243",
     "type": "tf",
-    "prompt": "Extensor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Triceps brachii är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3972,7 +2990,7 @@
   {
     "id": "q245",
     "type": "tf",
-    "prompt": "Flexor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Extensor carpi radialis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3984,7 +3002,7 @@
   {
     "id": "q246",
     "type": "tf",
-    "prompt": "Gluteus maximus är en muskel i menniskokroppen",
+    "prompt": "Opponens pollicis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3996,7 +3014,7 @@
   {
     "id": "q247",
     "type": "tf",
-    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
+    "prompt": "Abductor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4008,7 +3026,7 @@
   {
     "id": "q248",
     "type": "tf",
-    "prompt": "Triceps surae är en muskel i menniskokroppen",
+    "prompt": "Flexor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4020,7 +3038,7 @@
   {
     "id": "q249",
     "type": "tf",
-    "prompt": "Abductor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Flexor carpi ulnaris är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4032,7 +3050,7 @@
   {
     "id": "q250",
     "type": "tf",
-    "prompt": "Erector spinae är en muskel i menniskokroppen",
+    "prompt": "Pectoralis minor är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4044,7 +3062,7 @@
   {
     "id": "q251",
     "type": "tf",
-    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
+    "prompt": "Flexor digitorum superficialis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4056,7 +3074,7 @@
   {
     "id": "q252",
     "type": "tf",
-    "prompt": "Abductor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Deltoideus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4068,7 +3086,7 @@
   {
     "id": "q253",
     "type": "tf",
-    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Flexor digitorum superficialis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4080,7 +3098,7 @@
   {
     "id": "q254",
     "type": "tf",
-    "prompt": "Tibialis anterior är en muskel i menniskokroppen",
+    "prompt": "Rhomboidei är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4092,7 +3110,7 @@
   {
     "id": "q255",
     "type": "tf",
-    "prompt": "Pectoralis major är en muskel i menniskokroppen",
+    "prompt": "Erector spinae är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4104,7 +3122,7 @@
   {
     "id": "q256",
     "type": "tf",
-    "prompt": "Serratus anterior är en muskel i menniskokroppen",
+    "prompt": "Pectoralis minor är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4116,7 +3134,7 @@
   {
     "id": "q257",
     "type": "tf",
-    "prompt": "Gluteus maximus är en muskel i menniskokroppen",
+    "prompt": "Extensor carpi radialis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4128,7 +3146,7 @@
   {
     "id": "q258",
     "type": "tf",
-    "prompt": "Pectoralis major är en muskel i menniskokroppen",
+    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4140,7 +3158,7 @@
   {
     "id": "q259",
     "type": "tf",
-    "prompt": "Flexor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Diafragma är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4152,7 +3170,7 @@
   {
     "id": "q260",
     "type": "tf",
-    "prompt": "Extensor carpi radialis longus är en muskel i menniskokroppen",
+    "prompt": "Rectus abdominis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4164,7 +3182,7 @@
   {
     "id": "q261",
     "type": "tf",
-    "prompt": "Erector spinae är en muskel i menniskokroppen",
+    "prompt": "Opponens pollicis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4176,7 +3194,7 @@
   {
     "id": "q262",
     "type": "tf",
-    "prompt": "Abductor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Gluteus maximus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4188,7 +3206,7 @@
   {
     "id": "q263",
     "type": "tf",
-    "prompt": "Flexor carpi radialis är en muskel i menniskokroppen",
+    "prompt": "Deltoideus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4200,7 +3218,7 @@
   {
     "id": "q264",
     "type": "tf",
-    "prompt": "Hamstrings är en muskel i menniskokroppen",
+    "prompt": "Flexor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4212,7 +3230,7 @@
   {
     "id": "q265",
     "type": "tf",
-    "prompt": "Flexor digitorum superficialis är en muskel i menniskokroppen",
+    "prompt": "Erector spinae är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4224,7 +3242,7 @@
   {
     "id": "q266",
     "type": "tf",
-    "prompt": "Flexor digitorum superficialis är en muskel i menniskokroppen",
+    "prompt": "Deltoideus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4236,7 +3254,7 @@
   {
     "id": "q267",
     "type": "tf",
-    "prompt": "Extensor carpi radialis longus är en muskel i menniskokroppen",
+    "prompt": "Flexor digitorum profundus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4248,7 +3266,7 @@
   {
     "id": "q268",
     "type": "tf",
-    "prompt": "Flexor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Opponens pollicis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4260,7 +3278,7 @@
   {
     "id": "q269",
     "type": "tf",
-    "prompt": "Abductor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Flexor carpi radialis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4272,7 +3290,7 @@
   {
     "id": "q270",
     "type": "tf",
-    "prompt": "Flexor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Triceps brachii är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4284,7 +3302,7 @@
   {
     "id": "q271",
     "type": "tf",
-    "prompt": "Diafragma är en muskel i menniskokroppen",
+    "prompt": "Supraspinatus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4296,7 +3314,7 @@
   {
     "id": "q272",
     "type": "tf",
-    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Extensor pollicis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4320,7 +3338,7 @@
   {
     "id": "q274",
     "type": "tf",
-    "prompt": "Latissimus dorsi är en muskel i menniskokroppen",
+    "prompt": "Flexor digitorum profundus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4332,7 +3350,7 @@
   {
     "id": "q275",
     "type": "tf",
-    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
+    "prompt": "Triceps brachii är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4344,7 +3362,7 @@
   {
     "id": "q276",
     "type": "tf",
-    "prompt": "Rectus abdominis är en muskel i menniskokroppen",
+    "prompt": "Pectoralis minor är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4356,7 +3374,7 @@
   {
     "id": "q277",
     "type": "tf",
-    "prompt": "Biceps brachii är en muskel i menniskokroppen",
+    "prompt": "Opponens pollicis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4368,7 +3386,7 @@
   {
     "id": "q278",
     "type": "tf",
-    "prompt": "Flexor digitorum superficialis är en muskel i menniskokroppen",
+    "prompt": "Serratus anterior är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4380,7 +3398,7 @@
   {
     "id": "q279",
     "type": "tf",
-    "prompt": "Extensor carpi radialis brevis är en muskel i menniskokroppen",
+    "prompt": "Erector spinae är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4392,7 +3410,7 @@
   {
     "id": "q280",
     "type": "tf",
-    "prompt": "Rectus abdominis är en muskel i menniskokroppen",
+    "prompt": "Opponens pollicis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4404,7 +3422,7 @@
   {
     "id": "q281",
     "type": "tf",
-    "prompt": "Flexor carpi radialis är en muskel i menniskokroppen",
+    "prompt": "Diafragma är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4416,7 +3434,7 @@
   {
     "id": "q282",
     "type": "tf",
-    "prompt": "Pectoralis major är en muskel i menniskokroppen",
+    "prompt": "Erector spinae är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4428,7 +3446,7 @@
   {
     "id": "q283",
     "type": "tf",
-    "prompt": "Tibialis anterior är en muskel i menniskokroppen",
+    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4440,7 +3458,7 @@
   {
     "id": "q284",
     "type": "tf",
-    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
+    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4452,7 +3470,7 @@
   {
     "id": "q285",
     "type": "tf",
-    "prompt": "Biceps brachii är en muskel i menniskokroppen",
+    "prompt": "Pectoralis major är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4464,7 +3482,7 @@
   {
     "id": "q286",
     "type": "tf",
-    "prompt": "Flexor digitorum superficialis är en muskel i menniskokroppen",
+    "prompt": "Triceps brachii är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4476,7 +3494,7 @@
   {
     "id": "q287",
     "type": "tf",
-    "prompt": "Triceps brachii är en muskel i menniskokroppen",
+    "prompt": "Deltoideus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4488,7 +3506,7 @@
   {
     "id": "q288",
     "type": "tf",
-    "prompt": "Abductor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Extensor pollicis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4500,7 +3518,7 @@
   {
     "id": "q289",
     "type": "tf",
-    "prompt": "Hamstrings är en muskel i menniskokroppen",
+    "prompt": "Triceps surae är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4512,7 +3530,7 @@
   {
     "id": "q290",
     "type": "tf",
-    "prompt": "Latissimus dorsi är en muskel i menniskokroppen",
+    "prompt": "Flexor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4524,7 +3542,7 @@
   {
     "id": "q291",
     "type": "tf",
-    "prompt": "Extensor carpi radialis brevis är en muskel i menniskokroppen",
+    "prompt": "Flexor carpi ulnaris är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4536,7 +3554,7 @@
   {
     "id": "q292",
     "type": "tf",
-    "prompt": "Flexor carpi ulnaris är en muskel i menniskokroppen",
+    "prompt": "Pectoralis minor är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4548,7 +3566,7 @@
   {
     "id": "q293",
     "type": "tf",
-    "prompt": "Pectoralis minor är en muskel i menniskokroppen",
+    "prompt": "Rectus abdominis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4560,7 +3578,7 @@
   {
     "id": "q294",
     "type": "tf",
-    "prompt": "Rhomboidei är en muskel i menniskokroppen",
+    "prompt": "Abductor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4572,7 +3590,7 @@
   {
     "id": "q295",
     "type": "tf",
-    "prompt": "Triceps surae är en muskel i menniskokroppen",
+    "prompt": "Flexor carpi radialis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4584,7 +3602,7 @@
   {
     "id": "q296",
     "type": "tf",
-    "prompt": "Rectus abdominis är en muskel i menniskokroppen",
+    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4596,7 +3614,7 @@
   {
     "id": "q297",
     "type": "tf",
-    "prompt": "Latissimus dorsi är en muskel i menniskokroppen",
+    "prompt": "Flexor carpi ulnaris är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4608,7 +3626,7 @@
   {
     "id": "q298",
     "type": "tf",
-    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
+    "prompt": "Abductor pollicis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4620,7 +3638,7 @@
   {
     "id": "q299",
     "type": "tf",
-    "prompt": "Deltoideus är en muskel i menniskokroppen",
+    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4632,7 +3650,7 @@
   {
     "id": "q300",
     "type": "tf",
-    "prompt": "Flexor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Triceps surae är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4644,7 +3662,7 @@
   {
     "id": "q301",
     "type": "tf",
-    "prompt": "Flexor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4656,7 +3674,7 @@
   {
     "id": "q302",
     "type": "tf",
-    "prompt": "Flexor carpi ulnaris är en muskel i menniskokroppen",
+    "prompt": "Rectus abdominis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4668,7 +3686,7 @@
   {
     "id": "q303",
     "type": "tf",
-    "prompt": "Serratus anterior är en muskel i menniskokroppen",
+    "prompt": "Hamstrings är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4680,7 +3698,7 @@
   {
     "id": "q304",
     "type": "tf",
-    "prompt": "Abductor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4692,7 +3710,7 @@
   {
     "id": "q305",
     "type": "tf",
-    "prompt": "Adductor pollicis är en muskel i menniskokroppen",
+    "prompt": "Extensor pollicis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4704,7 +3722,7 @@
   {
     "id": "q306",
     "type": "tf",
-    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
+    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4716,7 +3734,7 @@
   {
     "id": "q307",
     "type": "tf",
-    "prompt": "Serratus anterior är en muskel i menniskokroppen",
+    "prompt": "Flexor carpi radialis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4728,7 +3746,7 @@
   {
     "id": "q308",
     "type": "tf",
-    "prompt": "Trapezius är en muskel i menniskokroppen",
+    "prompt": "Gluteus maximus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4740,7 +3758,7 @@
   {
     "id": "q309",
     "type": "tf",
-    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Flexor carpi ulnaris är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4752,7 +3770,7 @@
   {
     "id": "q310",
     "type": "tf",
-    "prompt": "Quadriceps är en muskel i menniskokroppen",
+    "prompt": "Abductor pollicis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4764,7 +3782,7 @@
   {
     "id": "q311",
     "type": "tf",
-    "prompt": "Diafragma är en muskel i menniskokroppen",
+    "prompt": "Deltoideus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4776,7 +3794,7 @@
   {
     "id": "q312",
     "type": "tf",
-    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Supraspinatus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4788,7 +3806,7 @@
   {
     "id": "q313",
     "type": "tf",
-    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
+    "prompt": "Deltoideus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4800,7 +3818,7 @@
   {
     "id": "q314",
     "type": "tf",
-    "prompt": "Adductor pollicis är en muskel i menniskokroppen",
+    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4812,7 +3830,7 @@
   {
     "id": "q315",
     "type": "tf",
-    "prompt": "Hamstrings är en muskel i menniskokroppen",
+    "prompt": "Supraspinatus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4824,7 +3842,7 @@
   {
     "id": "q316",
     "type": "tf",
-    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Serratus anterior är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4836,7 +3854,7 @@
   {
     "id": "q317",
     "type": "tf",
-    "prompt": "Erector spinae är en muskel i menniskokroppen",
+    "prompt": "Rhomboidei är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4848,7 +3866,7 @@
   {
     "id": "q318",
     "type": "tf",
-    "prompt": "Triceps surae är en muskel i menniskokroppen",
+    "prompt": "Flexor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4860,7 +3878,7 @@
   {
     "id": "q319",
     "type": "tf",
-    "prompt": "Extensor carpi radialis longus är en muskel i menniskokroppen",
+    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4872,7 +3890,7 @@
   {
     "id": "q320",
     "type": "tf",
-    "prompt": "Erector spinae är en muskel i menniskokroppen",
+    "prompt": "Opponens pollicis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4884,7 +3902,7 @@
   {
     "id": "q321",
     "type": "tf",
-    "prompt": "Erector spinae är en muskel i menniskokroppen",
+    "prompt": "Quadriceps är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4896,7 +3914,7 @@
   {
     "id": "q322",
     "type": "tf",
-    "prompt": "Extensor carpi radialis longus är en muskel i menniskokroppen",
+    "prompt": "Triceps brachii är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4908,7 +3926,7 @@
   {
     "id": "q323",
     "type": "tf",
-    "prompt": "Rectus abdominis är en muskel i menniskokroppen",
+    "prompt": "Deltoideus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4920,7 +3938,7 @@
   {
     "id": "q324",
     "type": "tf",
-    "prompt": "Serratus anterior är en muskel i menniskokroppen",
+    "prompt": "Adductor pollicis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4932,7 +3950,7 @@
   {
     "id": "q325",
     "type": "tf",
-    "prompt": "Triceps brachii är en muskel i menniskokroppen",
+    "prompt": "Flexor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4944,7 +3962,7 @@
   {
     "id": "q326",
     "type": "tf",
-    "prompt": "Extensor carpi radialis brevis är en muskel i menniskokroppen",
+    "prompt": "Extensor pollicis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4956,7 +3974,7 @@
   {
     "id": "q327",
     "type": "tf",
-    "prompt": "Serratus anterior är en muskel i menniskokroppen",
+    "prompt": "Pectoralis minor är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4968,7 +3986,7 @@
   {
     "id": "q328",
     "type": "tf",
-    "prompt": "Opponens pollicis är en muskel i menniskokroppen",
+    "prompt": "Trapezius är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4980,7 +3998,7 @@
   {
     "id": "q329",
     "type": "tf",
-    "prompt": "Erector spinae är en muskel i menniskokroppen",
+    "prompt": "Serratus anterior är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4992,7 +4010,7 @@
   {
     "id": "q330",
     "type": "tf",
-    "prompt": "Flexor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Flexor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5004,7 +4022,7 @@
   {
     "id": "q331",
     "type": "tf",
-    "prompt": "Adductor pollicis är en muskel i menniskokroppen",
+    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5016,7 +4034,7 @@
   {
     "id": "q332",
     "type": "tf",
-    "prompt": "Pectoralis minor är en muskel i menniskokroppen",
+    "prompt": "Hamstrings är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5028,7 +4046,7 @@
   {
     "id": "q333",
     "type": "tf",
-    "prompt": "Supraspinatus är en muskel i menniskokroppen",
+    "prompt": "Rectus abdominis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5040,7 +4058,7 @@
   {
     "id": "q334",
     "type": "tf",
-    "prompt": "Biceps brachii är en muskel i menniskokroppen",
+    "prompt": "Trapezius är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5052,7 +4070,7 @@
   {
     "id": "q335",
     "type": "tf",
-    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Extensor carpi radialis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5064,7 +4082,7 @@
   {
     "id": "q336",
     "type": "tf",
-    "prompt": "Deltoideus är en muskel i menniskokroppen",
+    "prompt": "Rhomboidei är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5076,7 +4094,7 @@
   {
     "id": "q337",
     "type": "tf",
-    "prompt": "Gluteus maximus är en muskel i menniskokroppen",
+    "prompt": "Abductor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5088,7 +4106,7 @@
   {
     "id": "q338",
     "type": "tf",
-    "prompt": "Trapezius är en muskel i menniskokroppen",
+    "prompt": "Opponens pollicis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5100,7 +4118,7 @@
   {
     "id": "q339",
     "type": "tf",
-    "prompt": "Flexor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Diafragma är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5112,7 +4130,7 @@
   {
     "id": "q340",
     "type": "tf",
-    "prompt": "Serratus anterior är en muskel i menniskokroppen",
+    "prompt": "Biceps brachii är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5124,7 +4142,7 @@
   {
     "id": "q341",
     "type": "tf",
-    "prompt": "Biceps brachii är en muskel i menniskokroppen",
+    "prompt": "Flexor digitorum superficialis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5136,7 +4154,7 @@
   {
     "id": "q342",
     "type": "tf",
-    "prompt": "Trapezius är en muskel i menniskokroppen",
+    "prompt": "Rhomboidei är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5148,7 +4166,7 @@
   {
     "id": "q343",
     "type": "tf",
-    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
+    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5160,7 +4178,7 @@
   {
     "id": "q344",
     "type": "tf",
-    "prompt": "Erector spinae är en muskel i menniskokroppen",
+    "prompt": "Abductor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5172,7 +4190,7 @@
   {
     "id": "q345",
     "type": "tf",
-    "prompt": "Extensor carpi radialis longus är en muskel i menniskokroppen",
+    "prompt": "Gluteus maximus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5184,7 +4202,7 @@
   {
     "id": "q346",
     "type": "tf",
-    "prompt": "Flexor carpi ulnaris är en muskel i menniskokroppen",
+    "prompt": "Biceps brachii är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5196,7 +4214,7 @@
   {
     "id": "q347",
     "type": "tf",
-    "prompt": "Quadriceps är en muskel i menniskokroppen",
+    "prompt": "Extensor pollicis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5208,7 +4226,7 @@
   {
     "id": "q348",
     "type": "tf",
-    "prompt": "Adductor pollicis är en muskel i menniskokroppen",
+    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5220,7 +4238,7 @@
   {
     "id": "q349",
     "type": "tf",
-    "prompt": "Abductor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5232,7 +4250,7 @@
   {
     "id": "q350",
     "type": "tf",
-    "prompt": "Flexor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Diafragma är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5244,7 +4262,7 @@
   {
     "id": "q351",
     "type": "tf",
-    "prompt": "Trapezius är en muskel i menniskokroppen",
+    "prompt": "Rectus abdominis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5256,7 +4274,7 @@
   {
     "id": "q352",
     "type": "tf",
-    "prompt": "Gluteus maximus är en muskel i menniskokroppen",
+    "prompt": "Extensor carpi radialis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5268,7 +4286,7 @@
   {
     "id": "q353",
     "type": "tf",
-    "prompt": "Flexor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Rectus abdominis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5280,7 +4298,7 @@
   {
     "id": "q354",
     "type": "tf",
-    "prompt": "Triceps surae är en muskel i menniskokroppen",
+    "prompt": "Flexor carpi radialis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5292,7 +4310,7 @@
   {
     "id": "q355",
     "type": "tf",
-    "prompt": "Erector spinae är en muskel i menniskokroppen",
+    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5304,7 +4322,7 @@
   {
     "id": "q356",
     "type": "tf",
-    "prompt": "Deltoideus är en muskel i menniskokroppen",
+    "prompt": "Flexor digitorum superficialis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5316,7 +4334,7 @@
   {
     "id": "q357",
     "type": "tf",
-    "prompt": "Erector spinae är en muskel i menniskokroppen",
+    "prompt": "Abductor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5328,7 +4346,7 @@
   {
     "id": "q358",
     "type": "tf",
-    "prompt": "Tibialis anterior är en muskel i menniskokroppen",
+    "prompt": "Flexor pollicis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5340,7 +4358,7 @@
   {
     "id": "q359",
     "type": "tf",
-    "prompt": "Tibialis anterior är en muskel i menniskokroppen",
+    "prompt": "Abductor pollicis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5352,7 +4370,7 @@
   {
     "id": "q360",
     "type": "tf",
-    "prompt": "Diafragma är en muskel i menniskokroppen",
+    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5364,7 +4382,7 @@
   {
     "id": "q361",
     "type": "tf",
-    "prompt": "Pectoralis major är en muskel i menniskokroppen",
+    "prompt": "Erector spinae är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5376,7 +4394,7 @@
   {
     "id": "q362",
     "type": "tf",
-    "prompt": "Supraspinatus är en muskel i menniskokroppen",
+    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5388,7 +4406,7 @@
   {
     "id": "q363",
     "type": "tf",
-    "prompt": "Tibialis anterior är en muskel i menniskokroppen",
+    "prompt": "Erector spinae är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5400,7 +4418,7 @@
   {
     "id": "q364",
     "type": "tf",
-    "prompt": "Tibialis anterior är en muskel i menniskokroppen",
+    "prompt": "Flexor pollicis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5412,7 +4430,7 @@
   {
     "id": "q365",
     "type": "tf",
-    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Serratus anterior är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5424,7 +4442,7 @@
   {
     "id": "q366",
     "type": "tf",
-    "prompt": "Flexor carpi ulnaris är en muskel i menniskokroppen",
+    "prompt": "Latissimus dorsi är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5436,7 +4454,7 @@
   {
     "id": "q367",
     "type": "tf",
-    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Flexor digitorum superficialis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5448,7 +4466,7 @@
   {
     "id": "q368",
     "type": "tf",
-    "prompt": "Pectoralis major är en muskel i menniskokroppen",
+    "prompt": "Serratus anterior är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5460,7 +4478,7 @@
   {
     "id": "q369",
     "type": "tf",
-    "prompt": "Flexor digitorum superficialis är en muskel i menniskokroppen",
+    "prompt": "Quadriceps är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5472,7 +4490,7 @@
   {
     "id": "q370",
     "type": "tf",
-    "prompt": "Gluteus maximus är en muskel i menniskokroppen",
+    "prompt": "Flexor digitorum superficialis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5484,7 +4502,7 @@
   {
     "id": "q371",
     "type": "tf",
-    "prompt": "Abductor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Latissimus dorsi är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5496,7 +4514,7 @@
   {
     "id": "q372",
     "type": "tf",
-    "prompt": "Abductor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5508,7 +4526,7 @@
   {
     "id": "q373",
     "type": "tf",
-    "prompt": "Deltoideus är en muskel i menniskokroppen",
+    "prompt": "Serratus anterior är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5520,7 +4538,7 @@
   {
     "id": "q374",
     "type": "tf",
-    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
+    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5532,7 +4550,7 @@
   {
     "id": "q375",
     "type": "tf",
-    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
+    "prompt": "Pectoralis major är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5544,7 +4562,7 @@
   {
     "id": "q376",
     "type": "tf",
-    "prompt": "Pectoralis major är en muskel i menniskokroppen",
+    "prompt": "Rhomboidei är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5556,7 +4574,7 @@
   {
     "id": "q377",
     "type": "tf",
-    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
+    "prompt": "Erector spinae är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5568,7 +4586,7 @@
   {
     "id": "q378",
     "type": "tf",
-    "prompt": "Opponens pollicis är en muskel i menniskokroppen",
+    "prompt": "Flexor digitorum profundus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5580,7 +4598,7 @@
   {
     "id": "q379",
     "type": "tf",
-    "prompt": "Tibialis anterior är en muskel i menniskokroppen",
+    "prompt": "Biceps brachii är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5592,7 +4610,7 @@
   {
     "id": "q380",
     "type": "tf",
-    "prompt": "Tibialis anterior är en muskel i menniskokroppen",
+    "prompt": "Biceps brachii är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5604,7 +4622,7 @@
   {
     "id": "q381",
     "type": "tf",
-    "prompt": "Latissimus dorsi är en muskel i menniskokroppen",
+    "prompt": "Biceps brachii är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5616,7 +4634,7 @@
   {
     "id": "q382",
     "type": "tf",
-    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
+    "prompt": "Opponens pollicis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5628,7 +4646,7 @@
   {
     "id": "q383",
     "type": "tf",
-    "prompt": "Flexor carpi radialis är en muskel i menniskokroppen",
+    "prompt": "Triceps brachii är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5640,7 +4658,7 @@
   {
     "id": "q384",
     "type": "tf",
-    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Rhomboidei är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5652,7 +4670,7 @@
   {
     "id": "q385",
     "type": "tf",
-    "prompt": "Flexor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Flexor carpi ulnaris är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5664,7 +4682,7 @@
   {
     "id": "q386",
     "type": "tf",
-    "prompt": "Flexor carpi ulnaris är en muskel i menniskokroppen",
+    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5676,7 +4694,7 @@
   {
     "id": "q387",
     "type": "tf",
-    "prompt": "Flexor digitorum superficialis är en muskel i menniskokroppen",
+    "prompt": "Deltoideus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5688,7 +4706,7 @@
   {
     "id": "q388",
     "type": "tf",
-    "prompt": "Opponens pollicis är en muskel i menniskokroppen",
+    "prompt": "Pectoralis minor är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5700,7 +4718,7 @@
   {
     "id": "q389",
     "type": "tf",
-    "prompt": "Erector spinae är en muskel i menniskokroppen",
+    "prompt": "Serratus anterior är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5712,7 +4730,7 @@
   {
     "id": "q390",
     "type": "tf",
-    "prompt": "Flexor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Flexor digitorum profundus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5724,7 +4742,7 @@
   {
     "id": "q391",
     "type": "tf",
-    "prompt": "Extensor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Biceps brachii är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5736,7 +4754,7 @@
   {
     "id": "q392",
     "type": "tf",
-    "prompt": "Biceps brachii är en muskel i menniskokroppen",
+    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5748,7 +4766,7 @@
   {
     "id": "q393",
     "type": "tf",
-    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Abductor pollicis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5760,7 +4778,7 @@
   {
     "id": "q394",
     "type": "tf",
-    "prompt": "Adductor pollicis är en muskel i menniskokroppen",
+    "prompt": "Opponens pollicis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5772,7 +4790,7 @@
   {
     "id": "q395",
     "type": "tf",
-    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Pectoralis minor är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5784,7 +4802,7 @@
   {
     "id": "q396",
     "type": "tf",
-    "prompt": "Opponens pollicis är en muskel i menniskokroppen",
+    "prompt": "Flexor digitorum superficialis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5796,7 +4814,7 @@
   {
     "id": "q397",
     "type": "tf",
-    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Triceps brachii är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5808,7 +4826,7 @@
   {
     "id": "q398",
     "type": "tf",
-    "prompt": "Tibialis anterior är en muskel i menniskokroppen",
+    "prompt": "Flexor carpi radialis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5820,7 +4838,7 @@
   {
     "id": "q399",
     "type": "tf",
-    "prompt": "Pectoralis major är en muskel i menniskokroppen",
+    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5832,7 +4850,7 @@
   {
     "id": "q400",
     "type": "tf",
-    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
+    "prompt": "Extensor carpi radialis brevis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5844,7 +4862,7 @@
   {
     "id": "q401",
     "type": "tf",
-    "prompt": "Opponens pollicis är en muskel i menniskokroppen",
+    "prompt": "Serratus anterior är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5856,7 +4874,7 @@
   {
     "id": "q402",
     "type": "tf",
-    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
+    "prompt": "Erector spinae är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5868,7 +4886,7 @@
   {
     "id": "q403",
     "type": "tf",
-    "prompt": "Extensor carpi radialis brevis är en muskel i menniskokroppen",
+    "prompt": "Rhomboidei är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5880,7 +4898,7 @@
   {
     "id": "q404",
     "type": "tf",
-    "prompt": "Deltoideus är en muskel i menniskokroppen",
+    "prompt": "Flexor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5904,7 +4922,7 @@
   {
     "id": "q406",
     "type": "tf",
-    "prompt": "Abductor pollicis longus är en muskel i menniskokroppen",
+    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5928,7 +4946,7 @@
   {
     "id": "q408",
     "type": "tf",
-    "prompt": "Pectoralis major är en muskel i menniskokroppen",
+    "prompt": "Hamstrings är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5940,7 +4958,7 @@
   {
     "id": "q409",
     "type": "tf",
-    "prompt": "Pectoralis major är en muskel i menniskokroppen",
+    "prompt": "Hamstrings är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5952,7 +4970,7 @@
   {
     "id": "q410",
     "type": "tf",
-    "prompt": "Abductor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Biceps brachii är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5964,7 +4982,7 @@
   {
     "id": "q411",
     "type": "tf",
-    "prompt": "Deltoideus är en muskel i menniskokroppen",
+    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5976,7 +4994,7 @@
   {
     "id": "q412",
     "type": "tf",
-    "prompt": "Flexor digitorum profundus är en muskel i menniskokroppen",
+    "prompt": "Hamstrings är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5988,7 +5006,7 @@
   {
     "id": "q413",
     "type": "tf",
-    "prompt": "Latissimus dorsi är en muskel i menniskokroppen",
+    "prompt": "Abductor pollicis longus är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -6000,7 +5018,7 @@
   {
     "id": "q414",
     "type": "tf",
-    "prompt": "Biceps brachii är en muskel i menniskokroppen",
+    "prompt": "Flexor digitorum superficialis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -6012,7 +5030,7 @@
   {
     "id": "q415",
     "type": "tf",
-    "prompt": "Abductor pollicis brevis är en muskel i menniskokroppen",
+    "prompt": "Flexor carpi ulnaris är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -6024,7 +5042,7 @@
   {
     "id": "q416",
     "type": "tf",
-    "prompt": "Triceps brachii är en muskel i menniskokroppen",
+    "prompt": "Rectus abdominis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -6036,7 +5054,7 @@
   {
     "id": "q417",
     "type": "tf",
-    "prompt": "Diafragma är en muskel i menniskokroppen",
+    "prompt": "Serratus anterior är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -6048,7 +5066,7 @@
   {
     "id": "q418",
     "type": "tf",
-    "prompt": "Triceps brachii är en muskel i menniskokroppen",
+    "prompt": "Pectoralis major är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -6060,7 +5078,7 @@
   {
     "id": "q419",
     "type": "tf",
-    "prompt": "Triceps brachii är en muskel i menniskokroppen",
+    "prompt": "Rectus abdominis är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -6072,7 +5090,967 @@
   {
     "id": "q420",
     "type": "tf",
+    "prompt": "Deltoideus är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q421",
+    "type": "tf",
+    "prompt": "Flexor pollicis brevis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q422",
+    "type": "tf",
+    "prompt": "Latissimus dorsi är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q423",
+    "type": "tf",
+    "prompt": "Gluteus maximus är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q424",
+    "type": "tf",
+    "prompt": "Flexor carpi ulnaris är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q425",
+    "type": "tf",
+    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q426",
+    "type": "tf",
+    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q427",
+    "type": "tf",
+    "prompt": "Abductor pollicis longus är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q428",
+    "type": "tf",
+    "prompt": "Erector spinae är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q429",
+    "type": "tf",
+    "prompt": "Deltoideus är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q430",
+    "type": "tf",
+    "prompt": "Pectoralis minor är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q431",
+    "type": "tf",
+    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q432",
+    "type": "tf",
+    "prompt": "Triceps brachii är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q433",
+    "type": "tf",
+    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q434",
+    "type": "tf",
+    "prompt": "Trapezius är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q435",
+    "type": "tf",
+    "prompt": "Triceps surae är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q436",
+    "type": "tf",
+    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q437",
+    "type": "tf",
+    "prompt": "Triceps surae är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q438",
+    "type": "tf",
+    "prompt": "Deltoideus är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q439",
+    "type": "tf",
+    "prompt": "Pectoralis minor är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q440",
+    "type": "tf",
     "prompt": "Pectoralis major är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q441",
+    "type": "tf",
+    "prompt": "Trapezius är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q442",
+    "type": "tf",
+    "prompt": "Abductor pollicis brevis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q443",
+    "type": "tf",
+    "prompt": "Flexor digitorum superficialis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q444",
+    "type": "tf",
+    "prompt": "Hamstrings är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q445",
+    "type": "tf",
+    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q446",
+    "type": "tf",
+    "prompt": "Extensor carpi radialis brevis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q447",
+    "type": "tf",
+    "prompt": "Tibialis anterior är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q448",
+    "type": "tf",
+    "prompt": "Erector spinae är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q449",
+    "type": "tf",
+    "prompt": "Diafragma är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q450",
+    "type": "tf",
+    "prompt": "Diafragma är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q451",
+    "type": "tf",
+    "prompt": "Flexor pollicis brevis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q452",
+    "type": "tf",
+    "prompt": "Diafragma är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q453",
+    "type": "tf",
+    "prompt": "Abductor pollicis brevis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q454",
+    "type": "tf",
+    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q455",
+    "type": "tf",
+    "prompt": "Triceps surae är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q456",
+    "type": "tf",
+    "prompt": "Extensor carpi radialis brevis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q457",
+    "type": "tf",
+    "prompt": "Extensor carpi radialis longus är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q458",
+    "type": "tf",
+    "prompt": "Extensor pollicis longus är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q459",
+    "type": "tf",
+    "prompt": "Deltoideus är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q460",
+    "type": "tf",
+    "prompt": "Latissimus dorsi är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q461",
+    "type": "tf",
+    "prompt": "Extensor carpi radialis brevis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q462",
+    "type": "tf",
+    "prompt": "Rectus abdominis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q463",
+    "type": "tf",
+    "prompt": "Diafragma är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q464",
+    "type": "tf",
+    "prompt": "Extensor carpi radialis brevis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q465",
+    "type": "tf",
+    "prompt": "Extensor digitorum communis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q466",
+    "type": "tf",
+    "prompt": "Flexor digitorum superficialis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q467",
+    "type": "tf",
+    "prompt": "Abductor pollicis brevis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q468",
+    "type": "tf",
+    "prompt": "Deltoideus är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q469",
+    "type": "tf",
+    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q470",
+    "type": "tf",
+    "prompt": "Flexor digitorum superficialis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q471",
+    "type": "tf",
+    "prompt": "Pectoralis minor är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q472",
+    "type": "tf",
+    "prompt": "Triceps brachii är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q473",
+    "type": "tf",
+    "prompt": "Flexor digitorum profundus är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q474",
+    "type": "tf",
+    "prompt": "Flexor carpi ulnaris är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q475",
+    "type": "tf",
+    "prompt": "Adductor pollicis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q476",
+    "type": "tf",
+    "prompt": "Flexor carpi radialis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q477",
+    "type": "tf",
+    "prompt": "Extensor carpi radialis brevis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q478",
+    "type": "tf",
+    "prompt": "Abductor pollicis brevis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q479",
+    "type": "tf",
+    "prompt": "Erector spinae är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q480",
+    "type": "tf",
+    "prompt": "Gluteus maximus är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q481",
+    "type": "tf",
+    "prompt": "Pectoralis minor är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q482",
+    "type": "tf",
+    "prompt": "Gluteus maximus är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q483",
+    "type": "tf",
+    "prompt": "Gluteus maximus är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q484",
+    "type": "tf",
+    "prompt": "Deltoideus är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q485",
+    "type": "tf",
+    "prompt": "Rectus abdominis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q486",
+    "type": "tf",
+    "prompt": "Supraspinatus är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q487",
+    "type": "tf",
+    "prompt": "Serratus anterior är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q488",
+    "type": "tf",
+    "prompt": "Diafragma är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q489",
+    "type": "tf",
+    "prompt": "Pectoralis minor är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q490",
+    "type": "tf",
+    "prompt": "Latissimus dorsi är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q491",
+    "type": "tf",
+    "prompt": "Opponens pollicis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q492",
+    "type": "tf",
+    "prompt": "Extensor carpi radialis brevis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q493",
+    "type": "tf",
+    "prompt": "Transversus abdominis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q494",
+    "type": "tf",
+    "prompt": "Supraspinatus är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q495",
+    "type": "tf",
+    "prompt": "Rectus abdominis är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q496",
+    "type": "tf",
+    "prompt": "Extensor carpi radialis longus är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q497",
+    "type": "tf",
+    "prompt": "Extensor carpi radialis longus är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q498",
+    "type": "tf",
+    "prompt": "Erector spinae är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q499",
+    "type": "tf",
+    "prompt": "Triceps brachii är en muskel i menniskokroppen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "muskler_allmänt",
+    "difficulty": "Easy",
+    "source": "Muskler"
+  },
+  {
+    "id": "q500",
+    "type": "tf",
+    "prompt": "Quadriceps är en muskel i menniskokroppen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
