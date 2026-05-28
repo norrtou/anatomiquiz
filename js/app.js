@@ -133,7 +133,6 @@ function startQuiz(){
   const name = el('playerName').value.trim() || 'Spelare'
   const num = parseInt(el('numQuestions').value,10)
   const timePer = parseInt(el('timePerQuestion').value,10) || 0
-  const diff = el('difficulty').value
   const topic = el('topic').value
   const flags = loadFlags()
 
@@ -162,7 +161,7 @@ function startQuiz(){
       topicMatch = q.topic === topic
     }
 
-    return (diff==='any'||q.difficulty===diff) && topicMatch && !(flags[q.id] && flags[q.id].excluded)
+    return topicMatch && !(flags[q.id] && flags[q.id].excluded)
   })
   if(filtered.length===0){
     const msg = realQuestions.length === 0
