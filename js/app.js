@@ -1,7 +1,13 @@
-const qsPath = './data/questions.json'
+// Get path based on topic
+function getQuestionsPath(topic) {
+  if (topic === 'osteologi') return './data/ben.json'
+  if (topic === 'muskler') return './data/muskler.json'
+  return './data/riktningar.json'
+}
+
 // NOTE: This app will ensure up to MAX_QUESTIONS questions exist by generating
 // placeholders for missing entries. Real questions should be imported later
-// into `data/questions.json`. Placeholders are non-medical and serve only
+// into the appropriate data files. Placeholders are non-medical and serve only
 // to exercise the UI. Do NOT treat placeholders as factual content.
 const MAX_QUESTIONS = 500
 
@@ -20,18 +26,18 @@ let score = 0
 let timerInterval = null
 let timeLeft = 0
 
-async function loadQuestions(){
+async function loadQuestions(path){
   try {
-    const res = await fetch(qsPath)
+    const res = await fetch(path)
     if (!res.ok) {
       console.error(`Failed to load questions: ${res.status} ${res.statusText}`)
       allQuestions = []
     } else {
       allQuestions = await res.json()
-      console.log(`Loaded ${allQuestions.length} questions from ${qsPath}`)
+      console.log(`Loaded ${allQuestions.length} questions from ${path}`)
     }
   } catch(e) {
-    console.error(`Error loading questions from ${qsPath}:`, e)
+    console.error(`Error loading questions from ${path}:`, e)
     allQuestions = []
   }
   // Generate placeholders up to MAX_QUESTIONS if needed
@@ -126,11 +132,13 @@ function sampleWithoutReplacement(arr, n){
   return copy.slice(0, Math.min(n, copy.length))
 }
 
-function startQuiz(){
+async function startQuiz(){
   const name = el('playerName').value.trim() || 'Spelare'
   const num = parseInt(el('numQuestions').value,10)
   const timePer = parseInt(el('timePerQuestion').value,10) || 0
   const topic = el('topic').value
+  const qsPath = getQuestionsPath(topic)
+  await loadQuestions(qsPath)
   const flags = loadFlags()
 
   // Debug info
