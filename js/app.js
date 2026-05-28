@@ -149,7 +149,20 @@ function startQuiz(){
     const isPlaceholderSource = !!(q.source && String(q.source).toLowerCase()==='placeholder')
     const isPlaceholderId = /^ph\d{3}$/.test(String(q.id))
     if(isPlaceholderSource || isPlaceholderId) return false
-    return (diff==='any'||q.difficulty===diff) && (topic==='any'||q.topic===topic) && !(flags[q.id] && flags[q.id].excluded)
+
+    // Handle topic filtering
+    let topicMatch = false
+    if(topic === 'any') {
+      topicMatch = true
+    } else if(topic === 'any_riktningar') {
+      topicMatch = q.topic === 'riktningar'
+    } else if(topic === 'osteologi') {
+      topicMatch = q.topic.startsWith('osteologi_')
+    } else {
+      topicMatch = q.topic === topic
+    }
+
+    return (diff==='any'||q.difficulty===diff) && topicMatch && !(flags[q.id] && flags[q.id].excluded)
   })
   if(filtered.length===0){
     const msg = realQuestions.length === 0
