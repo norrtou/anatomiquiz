@@ -100,19 +100,6 @@
   {
     "id": "q9",
     "type": "mc",
-    "prompt": "Vilket ben motsvarar 'Os scaphoideum'?",
-    "correct": "Os scaphoideum",
-    "distractors": [
-      "Os lunatum",
-      "Os triquetrum",
-      "Os pisiforme"
-    ],
-    "topic": "handen_ben",
-    "difficulty": "medel"
-  },
-  {
-    "id": "q10",
-    "type": "mc",
     "prompt": "Vilket ben motsvarar 'Månbenet'?",
     "correct": "Os lunatum",
     "distractors": [
@@ -124,59 +111,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q11",
-    "type": "mc",
-    "prompt": "Vilket ben motsvarar 'Os triquetrum'?",
-    "correct": "Os triquetrum",
-    "distractors": [
-      "Os scaphoideum",
-      "Os lunatum",
-      "Os pisiforme"
-    ],
-    "topic": "handen_ben",
-    "difficulty": "medel"
-  },
-  {
-    "id": "q12",
-    "type": "mc",
-    "prompt": "Vilket ben motsvarar 'Os pisiforme'?",
-    "correct": "Os pisiforme",
-    "distractors": [
-      "Os scaphoideum",
-      "Os lunatum",
-      "Os triquetrum"
-    ],
-    "topic": "handen_ben",
-    "difficulty": "medel"
-  },
-  {
-    "id": "q13",
-    "type": "mc",
-    "prompt": "Vilket ben motsvarar 'Trapezium'?",
-    "correct": "Os trapezium",
-    "distractors": [
-      "Os scaphoideum",
-      "Os lunatum",
-      "Os triquetrum"
-    ],
-    "topic": "handen_ben",
-    "difficulty": "lätt"
-  },
-  {
-    "id": "q14",
-    "type": "mc",
-    "prompt": "Vilket ben motsvarar 'Os capitatum'?",
-    "correct": "Os capitatum",
-    "distractors": [
-      "Os scaphoideum",
-      "Os lunatum",
-      "Os triquetrum"
-    ],
-    "topic": "handen_ben",
-    "difficulty": "lätt"
-  },
-  {
-    "id": "q15",
+    "id": "q10",
     "type": "mc",
     "prompt": "Vilket ben motsvarar 'Hakbenet'?",
     "correct": "Os hamatum",
@@ -189,7 +124,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q16",
+    "id": "q11",
     "type": "mc",
     "prompt": "Vad är funktionen av M. abductor pollicis brevis?",
     "correct": "Abduktion tumme",
@@ -200,7 +135,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q17",
+    "id": "q12",
     "type": "tf",
     "prompt": "M. abductor pollicis brevis innerveras av N. medianus.",
     "correct": "Sant",
@@ -211,7 +146,7 @@
     ]
   },
   {
-    "id": "q18",
+    "id": "q13",
     "type": "mc",
     "prompt": "Vad är funktionen av M. flexor pollicis brevis?",
     "correct": "Flexion tumme MCP",
@@ -224,7 +159,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q19",
+    "id": "q14",
     "type": "tf",
     "prompt": "M. flexor pollicis brevis innerveras av N. medianus.",
     "correct": "Sant",
@@ -235,7 +170,7 @@
     ]
   },
   {
-    "id": "q20",
+    "id": "q15",
     "type": "mc",
     "prompt": "Vad är funktionen av M. opponens pollicis?",
     "correct": "Opposition tumme",
@@ -248,7 +183,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q21",
+    "id": "q16",
     "type": "tf",
     "prompt": "M. opponens pollicis innerveras av N. medianus.",
     "correct": "Sant",
@@ -259,7 +194,7 @@
     ]
   },
   {
-    "id": "q22",
+    "id": "q17",
     "type": "mc",
     "prompt": "Vad är funktionen av M. adductor pollicis?",
     "correct": "Adduktion tumme",
@@ -270,7 +205,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q23",
+    "id": "q18",
     "type": "tf",
     "prompt": "M. adductor pollicis innerveras av N. ulnaris.",
     "correct": "Sant",
@@ -281,7 +216,7 @@
     ]
   },
   {
-    "id": "q24",
+    "id": "q19",
     "type": "mc",
     "prompt": "Vad är funktionen av M. abductor digiti minimi?",
     "correct": "Abduktion lillfinger",
@@ -294,7 +229,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q25",
+    "id": "q20",
     "type": "tf",
     "prompt": "M. abductor digiti minimi innerveras av N. ulnaris.",
     "correct": "Sant",
@@ -305,7 +240,7 @@
     ]
   },
   {
-    "id": "q26",
+    "id": "q21",
     "type": "mc",
     "prompt": "Vad är funktionen av M. flexor digiti minimi brevis?",
     "correct": "Flexion lillfinger",
@@ -318,7 +253,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q27",
+    "id": "q22",
     "type": "tf",
     "prompt": "M. flexor digiti minimi brevis innerveras av N. ulnaris.",
     "correct": "Sant",
@@ -329,7 +264,7 @@
     ]
   },
   {
-    "id": "q28",
+    "id": "q23",
     "type": "mc",
     "prompt": "Vad är funktionen av M. opponens digiti minimi?",
     "correct": "Opposition lillfinger",
@@ -342,7 +277,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q29",
+    "id": "q24",
     "type": "tf",
     "prompt": "M. opponens digiti minimi innerveras av N. ulnaris.",
     "correct": "Sant",
@@ -353,7 +288,7 @@
     ]
   },
   {
-    "id": "q30",
+    "id": "q25",
     "type": "mc",
     "prompt": "Vad är funktionen av M. lumbricalis I-II?",
     "correct": "MCP flexion + IP extension pek/långfinger",
@@ -366,7 +301,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q31",
+    "id": "q26",
     "type": "tf",
     "prompt": "M. lumbricalis I-II innerveras av N. medianus.",
     "correct": "Sant",
@@ -377,7 +312,7 @@
     ]
   },
   {
-    "id": "q32",
+    "id": "q27",
     "type": "mc",
     "prompt": "Vad är funktionen av M. lumbricalis III-IV?",
     "correct": "MCP flexion + IP extension ring/lillfinger",
@@ -390,7 +325,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q33",
+    "id": "q28",
     "type": "tf",
     "prompt": "M. lumbricalis III-IV innerveras av N. ulnaris.",
     "correct": "Sant",
@@ -401,7 +336,7 @@
     ]
   },
   {
-    "id": "q34",
+    "id": "q29",
     "type": "mc",
     "prompt": "Vad är funktionen av M. interossei palmares?",
     "correct": "Adduktion finger",
@@ -412,7 +347,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q35",
+    "id": "q30",
     "type": "tf",
     "prompt": "M. interossei palmares innerveras av N. ulnaris.",
     "correct": "Sant",
@@ -423,7 +358,7 @@
     ]
   },
   {
-    "id": "q36",
+    "id": "q31",
     "type": "mc",
     "prompt": "Vad är funktionen av M. interossei dorsales?",
     "correct": "Abduktion finger",
@@ -436,7 +371,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q37",
+    "id": "q32",
     "type": "tf",
     "prompt": "M. interossei dorsales innerveras av N. ulnaris.",
     "correct": "Sant",
@@ -447,7 +382,7 @@
     ]
   },
   {
-    "id": "q38",
+    "id": "q33",
     "type": "mc",
     "prompt": "Vad är funktionen av M. flexor digitorum superficialis?",
     "correct": "Flexion PIP finger II-V",
@@ -460,7 +395,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q39",
+    "id": "q34",
     "type": "tf",
     "prompt": "M. flexor digitorum superficialis innerveras av N. medianus.",
     "correct": "Sant",
@@ -471,7 +406,7 @@
     ]
   },
   {
-    "id": "q40",
+    "id": "q35",
     "type": "mc",
     "prompt": "Vad är funktionen av M. flexor digitorum profundus?",
     "correct": "Flexion DIP finger II-V",
@@ -484,7 +419,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q41",
+    "id": "q36",
     "type": "tf",
     "prompt": "M. flexor digitorum profundus innerveras av N. medianus/ulnaris.",
     "correct": "Sant",
@@ -495,7 +430,7 @@
     ]
   },
   {
-    "id": "q42",
+    "id": "q37",
     "type": "mc",
     "prompt": "Vad är funktionen av M. extensor digitorum?",
     "correct": "Extension finger II-V",
@@ -508,7 +443,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q43",
+    "id": "q38",
     "type": "tf",
     "prompt": "M. extensor digitorum innerveras av N. radialis.",
     "correct": "Sant",
@@ -519,7 +454,7 @@
     ]
   },
   {
-    "id": "q44",
+    "id": "q39",
     "type": "mc",
     "prompt": "Articulatio radiocarpea är vilken typ av led?",
     "correct": "Ellipsoidled",
@@ -532,7 +467,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q45",
+    "id": "q40",
     "type": "mc",
     "prompt": "Articulatio mediocarpea är vilken typ av led?",
     "correct": "Glidled",
@@ -545,7 +480,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q46",
+    "id": "q41",
     "type": "mc",
     "prompt": "Articulatio carpometacarpalis pollicis är vilken typ av led?",
     "correct": "Sadelled",
@@ -558,7 +493,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q47",
+    "id": "q42",
     "type": "mc",
     "prompt": "Articulationes metacarpophalangeae är vilken typ av led?",
     "correct": "Ellipsoidled",
@@ -571,7 +506,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q48",
+    "id": "q43",
     "type": "mc",
     "prompt": "Articulationes interfalangeae är vilken typ av led?",
     "correct": "Gångjärnsledd",
@@ -584,7 +519,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q49",
+    "id": "q44",
     "type": "tf",
     "prompt": "Karpaltunneln innehåller 9 böjsenor.",
     "correct": "Sant",
@@ -595,7 +530,7 @@
     ]
   },
   {
-    "id": "q50",
+    "id": "q45",
     "type": "tf",
     "prompt": "Extensor retinaculum har 6 distinkta fack.",
     "correct": "Sant",
@@ -606,7 +541,7 @@
     ]
   },
   {
-    "id": "q51",
+    "id": "q46",
     "type": "tf",
     "prompt": "Palmara aponeurosen är kontinuerlig med M. palmaris longus sena.",
     "correct": "Sant",
@@ -617,7 +552,7 @@
     ]
   },
   {
-    "id": "q52",
+    "id": "q47",
     "type": "tf",
     "prompt": "Den gemensamma flexorsenskidan löper från handlovet till lillfingrets ändfalang.",
     "correct": "Sant",
@@ -628,7 +563,7 @@
     ]
   },
   {
-    "id": "q53",
+    "id": "q48",
     "type": "tf",
     "prompt": "Listers tuberkel är en landmärke för M. extensor pollicis longus.",
     "correct": "Sant",
@@ -639,7 +574,7 @@
     ]
   },
   {
-    "id": "q54",
+    "id": "q49",
     "type": "tf",
     "prompt": "karpalkanalsyndrom orsakas av N. medianus trycks i karpaltunneln.",
     "correct": "Sant",
@@ -650,7 +585,7 @@
     ]
   },
   {
-    "id": "q55",
+    "id": "q50",
     "type": "tf",
     "prompt": "Claw hand uppstår vid N. ulnaris skada.",
     "correct": "Sant",
@@ -661,7 +596,7 @@
     ]
   },
   {
-    "id": "q56",
+    "id": "q51",
     "type": "tf",
     "prompt": "N. medianus skada förlamar tummen helt.",
     "correct": "Falskt",
@@ -672,7 +607,7 @@
     ]
   },
   {
-    "id": "q57",
+    "id": "q52",
     "type": "tf",
     "prompt": "Guyons kanalsyndrom påverkar N. ulnaris.",
     "correct": "Sant",
@@ -683,7 +618,7 @@
     ]
   },
   {
-    "id": "q58",
+    "id": "q53",
     "type": "tf",
     "prompt": "N. ulnaris innerverar alla interossei.",
     "correct": "Sant",
@@ -694,7 +629,7 @@
     ]
   },
   {
-    "id": "q59",
+    "id": "q54",
     "type": "tf",
     "prompt": "Sfäriskt volargrepp är ett power-grepp.",
     "correct": "Sant",
@@ -705,7 +640,7 @@
     ]
   },
   {
-    "id": "q60",
+    "id": "q55",
     "type": "tf",
     "prompt": "Extensionsgrepp använder tummen aktivt.",
     "correct": "Falskt",
@@ -716,7 +651,7 @@
     ]
   },
   {
-    "id": "q61",
+    "id": "q56",
     "type": "tf",
     "prompt": "N. radialis innerverar alla extensormuskler.",
     "correct": "Sant",
@@ -727,7 +662,7 @@
     ]
   },
   {
-    "id": "q62",
+    "id": "q57",
     "type": "tf",
     "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
     "correct": "Sant",
@@ -738,7 +673,7 @@
     ]
   },
   {
-    "id": "q63",
+    "id": "q58",
     "type": "tf",
     "prompt": "M. palmaris longus är alltid närvarande.",
     "correct": "Falskt",
@@ -749,7 +684,7 @@
     ]
   },
   {
-    "id": "q64",
+    "id": "q59",
     "type": "tf",
     "prompt": "N. medianus innerverar opposition av tummen.",
     "correct": "Sant",
@@ -760,7 +695,7 @@
     ]
   },
   {
-    "id": "q65",
+    "id": "q60",
     "type": "tf",
     "prompt": "Chuckgrepp är ett precision-grepp.",
     "correct": "Sant",
@@ -781,7 +716,7 @@
     ],
     "topic": "handen_ben",
     "difficulty": "lätt",
-    "id": "q66"
+    "id": "q61"
   },
   {
     "type": "mc",
@@ -794,7 +729,7 @@
     ],
     "topic": "handen_ben",
     "difficulty": "lätt",
-    "id": "q67"
+    "id": "q62"
   },
   {
     "type": "mc",
@@ -807,7 +742,7 @@
     ],
     "topic": "handen_ben",
     "difficulty": "lätt",
-    "id": "q68"
+    "id": "q63"
   },
   {
     "type": "mc",
@@ -820,20 +755,7 @@
     ],
     "topic": "handen_ben",
     "difficulty": "lätt",
-    "id": "q69"
-  },
-  {
-    "type": "mc",
-    "prompt": "Vad är latinamnet för trapezium?",
-    "correct": "Os trapezium",
-    "distractors": [
-      "Os naviculare",
-      "Os cuboideum",
-      "Os tali"
-    ],
-    "topic": "handen_ben",
-    "difficulty": "lätt",
-    "id": "q70"
+    "id": "q64"
   },
   {
     "type": "mc",
@@ -846,7 +768,7 @@
     ],
     "topic": "handen_ben",
     "difficulty": "lätt",
-    "id": "q71"
+    "id": "q65"
   },
   {
     "type": "mc",
@@ -859,7 +781,7 @@
     ],
     "topic": "handen_ben",
     "difficulty": "lätt",
-    "id": "q72"
+    "id": "q66"
   },
   {
     "type": "mc",
@@ -872,7 +794,7 @@
     ],
     "topic": "handen_ben",
     "difficulty": "lätt",
-    "id": "q73"
+    "id": "q67"
   },
   {
     "type": "mc",
@@ -885,7 +807,7 @@
     ],
     "topic": "handen_ben",
     "difficulty": "lätt",
-    "id": "q74"
+    "id": "q68"
   },
   {
     "type": "mc",
@@ -898,7 +820,7 @@
     ],
     "topic": "handen_ben",
     "difficulty": "lätt",
-    "id": "q75"
+    "id": "q69"
   },
   {
     "type": "mc",
@@ -911,7 +833,7 @@
     ],
     "topic": "handen_ben",
     "difficulty": "lätt",
-    "id": "q76"
+    "id": "q70"
   },
   {
     "type": "mc",
@@ -924,23 +846,10 @@
     ],
     "topic": "handen_ben",
     "difficulty": "lätt",
-    "id": "q77"
+    "id": "q71"
   },
   {
-    "type": "mc",
-    "prompt": "Vilket ben motsvarar Os trapezium?",
-    "correct": "trapezium",
-    "distractors": [
-      "Os scaphoideum",
-      "Os trapezoideum",
-      "Os lunatum"
-    ],
-    "topic": "handen_ben",
-    "difficulty": "lätt",
-    "id": "q78"
-  },
-  {
-    "id": "q79",
+    "id": "q72",
     "type": "mc",
     "prompt": "Vad heter båtbenet på latinsk medicinsk svenska?",
     "correct": "Os scaphoideum",
@@ -953,7 +862,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q80",
+    "id": "q73",
     "type": "mc",
     "prompt": "Vad heter måntbenet på latinsk medicinsk svenska?",
     "correct": "Os lunatum",
@@ -966,7 +875,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q81",
+    "id": "q74",
     "type": "mc",
     "prompt": "Vad heter tresidig ben på latinsk medicinsk svenska?",
     "correct": "Os triquetrum",
@@ -979,7 +888,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q82",
+    "id": "q75",
     "type": "mc",
     "prompt": "Vad heter ärtbenet på latinsk medicinsk svenska?",
     "correct": "Os pisiforme",
@@ -992,20 +901,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q83",
-    "type": "mc",
-    "prompt": "Vad heter trapezium på latinsk medicinsk svenska?",
-    "correct": "Os trapezium",
-    "distractors": [
-      "Os naviculare",
-      "Tarsus",
-      "Carpale"
-    ],
-    "topic": "handen_ben",
-    "difficulty": "medel"
-  },
-  {
-    "id": "q84",
+    "id": "q76",
     "type": "mc",
     "prompt": "Vad heter trapezoid på latinsk medicinsk svenska?",
     "correct": "Os trapezoideum",
@@ -1018,7 +914,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q85",
+    "id": "q77",
     "type": "mc",
     "prompt": "Vad heter huvudbenet på latinsk medicinsk svenska?",
     "correct": "Os capitatum",
@@ -1031,7 +927,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q86",
+    "id": "q78",
     "type": "mc",
     "prompt": "Vad heter krokbenet på latinsk medicinsk svenska?",
     "correct": "Os hamatum",
@@ -1044,7 +940,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q87",
+    "id": "q79",
     "type": "mc",
     "prompt": "Vad heter tummetubsen på latinsk medicinsk svenska?",
     "correct": "Os metacarpale I",
@@ -1057,7 +953,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q88",
+    "id": "q80",
     "type": "mc",
     "prompt": "Vad heter pekarfingerbenen på latinsk medicinsk svenska?",
     "correct": "Os metacarpale II",
@@ -1070,7 +966,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q89",
+    "id": "q81",
     "type": "mc",
     "prompt": "Vad är funktionen av M. abductor pollicis brevis?",
     "correct": "Abduktion CMC/MCP tumme",
@@ -1083,7 +979,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q90",
+    "id": "q82",
     "type": "mc",
     "prompt": "Vad är det svenska namnet för M. abductor pollicis brevis?",
     "correct": "kort tumabduktor",
@@ -1096,7 +992,7 @@
     "difficulty": "lätt"
   },
   {
-    "id": "q91",
+    "id": "q83",
     "type": "mc",
     "prompt": "Vad är funktionen av M. flexor pollicis brevis?",
     "correct": "Flexion MCP tumme",
@@ -1109,7 +1005,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q92",
+    "id": "q84",
     "type": "mc",
     "prompt": "Vad är det svenska namnet för M. flexor pollicis brevis?",
     "correct": "kort tumflexor",
@@ -1122,7 +1018,7 @@
     "difficulty": "lätt"
   },
   {
-    "id": "q93",
+    "id": "q85",
     "type": "mc",
     "prompt": "Vad är det svenska namnet för M. opponens pollicis?",
     "correct": "oppositionsmuskeln för tummen",
@@ -1135,7 +1031,7 @@
     "difficulty": "lätt"
   },
   {
-    "id": "q94",
+    "id": "q86",
     "type": "mc",
     "prompt": "Vad är det svenska namnet för M. adductor pollicis?",
     "correct": "tumaddduktor",
@@ -1148,7 +1044,7 @@
     "difficulty": "lätt"
   },
   {
-    "id": "q95",
+    "id": "q87",
     "type": "mc",
     "prompt": "Vad är det svenska namnet för M. abductor digiti minimi?",
     "correct": "lillfinger abduktor",
@@ -1161,7 +1057,7 @@
     "difficulty": "lätt"
   },
   {
-    "id": "q96",
+    "id": "q88",
     "type": "mc",
     "prompt": "Vad är det svenska namnet för M. flexor digiti minimi brevis?",
     "correct": "kort lillfinger flexor",
@@ -1174,7 +1070,7 @@
     "difficulty": "lätt"
   },
   {
-    "id": "q97",
+    "id": "q89",
     "type": "mc",
     "prompt": "Vad är det svenska namnet för M. opponens digiti minimi?",
     "correct": "oppositionsmuskeln för lillfinger",
@@ -1187,7 +1083,7 @@
     "difficulty": "lätt"
   },
   {
-    "id": "q98",
+    "id": "q90",
     "type": "mc",
     "prompt": "Vad är det svenska namnet för M. lumbricalis I-II?",
     "correct": "lumbricals I-II",
@@ -1200,7 +1096,7 @@
     "difficulty": "lätt"
   },
   {
-    "id": "q99",
+    "id": "q91",
     "type": "mc",
     "prompt": "Vad är det svenska namnet för M. lumbricalis III-IV?",
     "correct": "lumbricals III-IV",
@@ -1213,7 +1109,7 @@
     "difficulty": "lätt"
   },
   {
-    "id": "q100",
+    "id": "q92",
     "type": "mc",
     "prompt": "Vad är det svenska namnet för M. interossei palmares?",
     "correct": "palmära interossei",
@@ -1226,7 +1122,7 @@
     "difficulty": "lätt"
   },
   {
-    "id": "q101",
+    "id": "q93",
     "type": "mc",
     "prompt": "Vad är det svenska namnet för M. interossei dorsales?",
     "correct": "dorsala interossei",
@@ -1239,7 +1135,7 @@
     "difficulty": "lätt"
   },
   {
-    "id": "q102",
+    "id": "q94",
     "type": "mc",
     "prompt": "Articulatio carpometacarpalis I är vilken typ av led?",
     "correct": "Saddeleled",
@@ -1252,7 +1148,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q103",
+    "id": "q95",
     "type": "mc",
     "prompt": "Articulationes interphalangeae är vilken typ av led?",
     "correct": "Gångjärnsledd",
@@ -1265,7 +1161,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q104",
+    "id": "q96",
     "type": "tf",
     "prompt": "N. medianus innerverar tumme, pekfinger, långfinger, medial half ring finger",
     "correct": "Sant",
@@ -1276,7 +1172,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q105",
+    "id": "q97",
     "type": "tf",
     "prompt": "N. ulnaris innerverar Lateral half ring finger, lilla finger",
     "correct": "Sant",
@@ -1287,7 +1183,7 @@
     "difficulty": "medel"
   },
   {
-    "id": "q106",
+    "id": "q98",
     "type": "tf",
     "prompt": "N. radialis innerverar dorsal surface",
     "correct": "Sant",
@@ -1308,7 +1204,7 @@
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "medel",
-    "id": "q107"
+    "id": "q99"
   },
   {
     "type": "tf",
@@ -1319,7 +1215,7 @@
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "lätt",
-    "id": "q108"
+    "id": "q100"
   },
   {
     "type": "mc",
@@ -1332,7 +1228,7 @@
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "medel",
-    "id": "q109"
+    "id": "q101"
   },
   {
     "type": "tf",
@@ -1343,7 +1239,7 @@
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "lätt",
-    "id": "q110"
+    "id": "q102"
   },
   {
     "type": "mc",
@@ -1356,7 +1252,7 @@
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "medel",
-    "id": "q111"
+    "id": "q103"
   },
   {
     "type": "tf",
@@ -1367,7 +1263,7 @@
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "lätt",
-    "id": "q112"
+    "id": "q104"
   },
   {
     "type": "tf",
@@ -1378,7 +1274,7 @@
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "lätt",
-    "id": "q113"
+    "id": "q105"
   },
   {
     "type": "tf",
@@ -1389,7 +1285,7 @@
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "lätt",
-    "id": "q114"
+    "id": "q106"
   },
   {
     "type": "mc",
@@ -1402,7 +1298,7 @@
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "medel",
-    "id": "q115"
+    "id": "q107"
   },
   {
     "type": "tf",
@@ -1413,7 +1309,7 @@
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "lätt",
-    "id": "q116"
+    "id": "q108"
   },
   {
     "type": "mc",
@@ -1426,7 +1322,7 @@
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "medel",
-    "id": "q117"
+    "id": "q109"
   },
   {
     "type": "tf",
@@ -1437,7 +1333,7 @@
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "lätt",
-    "id": "q118"
+    "id": "q110"
   },
   {
     "type": "mc",
@@ -1450,7 +1346,7 @@
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "medel",
-    "id": "q119"
+    "id": "q111"
   },
   {
     "type": "tf",
@@ -1461,7 +1357,7 @@
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "lätt",
-    "id": "q120"
+    "id": "q112"
   },
   {
     "type": "mc",
@@ -1474,7 +1370,7 @@
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "medel",
-    "id": "q121"
+    "id": "q113"
   },
   {
     "type": "tf",
@@ -1485,7 +1381,7 @@
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "lätt",
-    "id": "q122"
+    "id": "q114"
   },
   {
     "type": "tf",
@@ -1496,7 +1392,7 @@
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "lätt",
-    "id": "q123"
+    "id": "q115"
   },
   {
     "type": "mc",
@@ -1509,7 +1405,7 @@
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "medel",
-    "id": "q124"
+    "id": "q116"
   },
   {
     "type": "tf",
@@ -1520,7 +1416,7 @@
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "lätt",
-    "id": "q125"
+    "id": "q117"
   },
   {
     "type": "mc",
@@ -1533,7 +1429,7 @@
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "medel",
-    "id": "q126"
+    "id": "q118"
   },
   {
     "type": "tf",
@@ -1544,7 +1440,7 @@
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "lätt",
-    "id": "q127"
+    "id": "q119"
   },
   {
     "type": "mc",
@@ -1557,7 +1453,7 @@
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "medel",
-    "id": "q128"
+    "id": "q120"
   },
   {
     "type": "tf",
@@ -1568,7 +1464,7 @@
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "lätt",
-    "id": "q129"
+    "id": "q121"
   },
   {
     "type": "mc",
@@ -1581,7 +1477,7 @@
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "medel",
-    "id": "q130"
+    "id": "q122"
   },
   {
     "type": "tf",
@@ -1592,7 +1488,7 @@
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "lätt",
-    "id": "q131"
+    "id": "q123"
   },
   {
     "type": "tf",
@@ -1603,7 +1499,7 @@
     ],
     "topic": "handen_innervation",
     "difficulty": "medel",
-    "id": "q132"
+    "id": "q124"
   },
   {
     "type": "tf",
@@ -1614,7 +1510,7 @@
     ],
     "topic": "handen_innervation",
     "difficulty": "medel",
-    "id": "q133"
+    "id": "q125"
   },
   {
     "type": "tf",
@@ -1625,7 +1521,7 @@
     ],
     "topic": "handen_innervation",
     "difficulty": "medel",
-    "id": "q134"
+    "id": "q126"
   },
   {
     "type": "tf",
@@ -1636,7 +1532,7 @@
     ],
     "topic": "handen_innervation",
     "difficulty": "medel",
-    "id": "q135"
+    "id": "q127"
   },
   {
     "type": "tf",
@@ -1647,7 +1543,7 @@
     ],
     "topic": "handen_innervation",
     "difficulty": "medel",
-    "id": "q136"
+    "id": "q128"
   },
   {
     "type": "tf",
@@ -1658,7 +1554,7 @@
     ],
     "topic": "handen_innervation",
     "difficulty": "medel",
-    "id": "q137"
+    "id": "q129"
   },
   {
     "type": "mc",
@@ -1671,7 +1567,7 @@
     ],
     "topic": "handen_ben_klassificering",
     "difficulty": "medel",
-    "id": "q138"
+    "id": "q130"
   },
   {
     "type": "mc",
@@ -1684,7 +1580,7 @@
     ],
     "topic": "handen_ben_klassificering",
     "difficulty": "medel",
-    "id": "q139"
+    "id": "q131"
   },
   {
     "type": "mc",
@@ -1697,7 +1593,7 @@
     ],
     "topic": "handen_ben_klassificering",
     "difficulty": "medel",
-    "id": "q140"
+    "id": "q132"
   },
   {
     "type": "mc",
@@ -1710,7 +1606,7 @@
     ],
     "topic": "handen_ben_klassificering",
     "difficulty": "medel",
-    "id": "q141"
+    "id": "q133"
   },
   {
     "type": "mc",
@@ -1723,7 +1619,7 @@
     ],
     "topic": "handen_ben_klassificering",
     "difficulty": "medel",
-    "id": "q142"
+    "id": "q134"
   },
   {
     "type": "mc",
@@ -1736,7 +1632,7 @@
     ],
     "topic": "handen_ben_klassificering",
     "difficulty": "medel",
-    "id": "q143"
+    "id": "q135"
   },
   {
     "type": "tf",
@@ -1747,7 +1643,7 @@
     ],
     "topic": "handen_anatomiska_fakta",
     "difficulty": "medel",
-    "id": "q144"
+    "id": "q136"
   },
   {
     "type": "tf",
@@ -1758,7 +1654,7 @@
     ],
     "topic": "handen_anatomiska_fakta",
     "difficulty": "medel",
-    "id": "q145"
+    "id": "q137"
   },
   {
     "type": "tf",
@@ -1769,7 +1665,7 @@
     ],
     "topic": "handen_anatomiska_fakta",
     "difficulty": "medel",
-    "id": "q146"
+    "id": "q138"
   },
   {
     "type": "tf",
@@ -1780,7 +1676,7 @@
     ],
     "topic": "handen_anatomiska_fakta",
     "difficulty": "medel",
-    "id": "q147"
+    "id": "q139"
   },
   {
     "type": "tf",
@@ -1791,7 +1687,7 @@
     ],
     "topic": "handen_anatomiska_fakta",
     "difficulty": "medel",
-    "id": "q148"
+    "id": "q140"
   },
   {
     "type": "tf",
@@ -1802,7 +1698,7 @@
     ],
     "topic": "handen_anatomiska_fakta",
     "difficulty": "medel",
-    "id": "q149"
+    "id": "q141"
   },
   {
     "type": "tf",
@@ -1813,7 +1709,7 @@
     ],
     "topic": "handen_anatomiska_fakta",
     "difficulty": "medel",
-    "id": "q150"
+    "id": "q142"
   },
   {
     "type": "tf",
@@ -1824,7 +1720,7 @@
     ],
     "topic": "handen_anatomiska_fakta",
     "difficulty": "medel",
-    "id": "q151"
+    "id": "q143"
   },
   {
     "type": "tf",
@@ -1835,7 +1731,7 @@
     ],
     "topic": "handen_anatomiska_fakta",
     "difficulty": "medel",
-    "id": "q152"
+    "id": "q144"
   },
   {
     "type": "mc",
@@ -1848,7 +1744,7 @@
     ],
     "topic": "handen_rörelser",
     "difficulty": "lätt",
-    "id": "q153"
+    "id": "q145"
   },
   {
     "type": "mc",
@@ -1861,7 +1757,7 @@
     ],
     "topic": "handen_rörelser",
     "difficulty": "lätt",
-    "id": "q154"
+    "id": "q146"
   },
   {
     "type": "mc",
@@ -1874,7 +1770,7 @@
     ],
     "topic": "handen_rörelser",
     "difficulty": "lätt",
-    "id": "q155"
+    "id": "q147"
   },
   {
     "type": "mc",
@@ -1887,7 +1783,7 @@
     ],
     "topic": "handen_rörelser",
     "difficulty": "lätt",
-    "id": "q156"
+    "id": "q148"
   },
   {
     "type": "mc",
@@ -1900,7 +1796,7 @@
     ],
     "topic": "handen_ben_anatomi",
     "difficulty": "medel",
-    "id": "q157"
+    "id": "q149"
   },
   {
     "type": "tf",
@@ -1911,7 +1807,7 @@
     ],
     "topic": "handen_ben_namn",
     "difficulty": "lätt",
-    "id": "q158"
+    "id": "q150"
   },
   {
     "type": "mc",
@@ -1924,7 +1820,7 @@
     ],
     "topic": "handen_ben_anatomi",
     "difficulty": "medel",
-    "id": "q159"
+    "id": "q151"
   },
   {
     "type": "tf",
@@ -1935,7 +1831,7 @@
     ],
     "topic": "handen_ben_namn",
     "difficulty": "lätt",
-    "id": "q160"
+    "id": "q152"
   },
   {
     "type": "mc",
@@ -1948,7 +1844,7 @@
     ],
     "topic": "handen_ben_anatomi",
     "difficulty": "medel",
-    "id": "q161"
+    "id": "q153"
   },
   {
     "type": "tf",
@@ -1959,7 +1855,7 @@
     ],
     "topic": "handen_ben_namn",
     "difficulty": "lätt",
-    "id": "q162"
+    "id": "q154"
   },
   {
     "type": "mc",
@@ -1972,7 +1868,7 @@
     ],
     "topic": "handen_ben_anatomi",
     "difficulty": "medel",
-    "id": "q163"
+    "id": "q155"
   },
   {
     "type": "tf",
@@ -1983,7 +1879,7 @@
     ],
     "topic": "handen_ben_namn",
     "difficulty": "lätt",
-    "id": "q164"
+    "id": "q156"
   },
   {
     "type": "mc",
@@ -1996,7 +1892,7 @@
     ],
     "topic": "handen_ben_anatomi",
     "difficulty": "medel",
-    "id": "q165"
+    "id": "q157"
   },
   {
     "type": "tf",
@@ -2007,7 +1903,7 @@
     ],
     "topic": "handen_ben_namn",
     "difficulty": "lätt",
-    "id": "q166"
+    "id": "q158"
   },
   {
     "type": "mc",
@@ -2020,7 +1916,7 @@
     ],
     "topic": "handen_ben_anatomi",
     "difficulty": "medel",
-    "id": "q167"
+    "id": "q159"
   },
   {
     "type": "tf",
@@ -2031,7 +1927,7 @@
     ],
     "topic": "handen_ben_namn",
     "difficulty": "lätt",
-    "id": "q168"
+    "id": "q160"
   },
   {
     "type": "mc",
@@ -2044,7 +1940,7 @@
     ],
     "topic": "handen_ben_anatomi",
     "difficulty": "medel",
-    "id": "q169"
+    "id": "q161"
   },
   {
     "type": "tf",
@@ -2055,7 +1951,7 @@
     ],
     "topic": "handen_ben_namn",
     "difficulty": "lätt",
-    "id": "q170"
+    "id": "q162"
   },
   {
     "type": "mc",
@@ -2068,7 +1964,7 @@
     ],
     "topic": "handen_ben_anatomi",
     "difficulty": "medel",
-    "id": "q171"
+    "id": "q163"
   },
   {
     "type": "tf",
@@ -2079,7 +1975,7 @@
     ],
     "topic": "handen_ben_namn",
     "difficulty": "lätt",
-    "id": "q172"
+    "id": "q164"
   },
   {
     "type": "mc",
@@ -2092,7 +1988,7 @@
     ],
     "topic": "handen_muskler_region",
     "difficulty": "medel",
-    "id": "q173"
+    "id": "q165"
   },
   {
     "type": "mc",
@@ -2105,7 +2001,7 @@
     ],
     "topic": "handen_muskler_region",
     "difficulty": "medel",
-    "id": "q174"
+    "id": "q166"
   },
   {
     "type": "mc",
@@ -2118,7 +2014,7 @@
     ],
     "topic": "handen_muskler_region",
     "difficulty": "medel",
-    "id": "q175"
+    "id": "q167"
   },
   {
     "type": "mc",
@@ -2131,7 +2027,7 @@
     ],
     "topic": "handen_muskler_region",
     "difficulty": "medel",
-    "id": "q176"
+    "id": "q168"
   },
   {
     "type": "mc",
@@ -2144,7 +2040,7 @@
     ],
     "topic": "handen_muskler_region",
     "difficulty": "medel",
-    "id": "q177"
+    "id": "q169"
   },
   {
     "type": "mc",
@@ -2157,7 +2053,7 @@
     ],
     "topic": "handen_muskler_region",
     "difficulty": "medel",
-    "id": "q178"
+    "id": "q170"
   },
   {
     "type": "mc",
@@ -2170,7 +2066,7 @@
     ],
     "topic": "handen_muskler_region",
     "difficulty": "medel",
-    "id": "q179"
+    "id": "q171"
   },
   {
     "type": "mc",
@@ -2183,7 +2079,7 @@
     ],
     "topic": "handen_leder_anatomi",
     "difficulty": "medel",
-    "id": "q180"
+    "id": "q172"
   },
   {
     "type": "mc",
@@ -2196,7 +2092,7 @@
     ],
     "topic": "handen_leder_anatomi",
     "difficulty": "medel",
-    "id": "q181"
+    "id": "q173"
   },
   {
     "type": "mc",
@@ -2209,7 +2105,7 @@
     ],
     "topic": "handen_leder_anatomi",
     "difficulty": "medel",
-    "id": "q182"
+    "id": "q174"
   },
   {
     "type": "mc",
@@ -2222,7 +2118,7 @@
     ],
     "topic": "handen_leder_anatomi",
     "difficulty": "medel",
-    "id": "q183"
+    "id": "q175"
   },
   {
     "type": "tf",
@@ -2233,7 +2129,7 @@
     ],
     "topic": "handen_grepptyper",
     "difficulty": "lätt",
-    "id": "q184"
+    "id": "q176"
   },
   {
     "type": "tf",
@@ -2244,7 +2140,7 @@
     ],
     "topic": "handen_grepptyper",
     "difficulty": "lätt",
-    "id": "q185"
+    "id": "q177"
   },
   {
     "type": "tf",
@@ -2255,7 +2151,7 @@
     ],
     "topic": "handen_grepptyper",
     "difficulty": "lätt",
-    "id": "q186"
+    "id": "q178"
   },
   {
     "type": "tf",
@@ -2266,7 +2162,7 @@
     ],
     "topic": "handen_grepptyper",
     "difficulty": "lätt",
-    "id": "q187"
+    "id": "q179"
   },
   {
     "type": "tf",
@@ -2277,7 +2173,7 @@
     ],
     "topic": "handen_grepptyper",
     "difficulty": "lätt",
-    "id": "q188"
+    "id": "q180"
   },
   {
     "type": "tf",
@@ -2288,7 +2184,7 @@
     ],
     "topic": "handen_grepptyper",
     "difficulty": "lätt",
-    "id": "q189"
+    "id": "q181"
   },
   {
     "type": "tf",
@@ -2299,7 +2195,7 @@
     ],
     "topic": "handen_grepptyper",
     "difficulty": "lätt",
-    "id": "q190"
+    "id": "q182"
   },
   {
     "type": "tf",
@@ -2310,7 +2206,7 @@
     ],
     "topic": "handen_grepptyper",
     "difficulty": "lätt",
-    "id": "q191"
+    "id": "q183"
   },
   {
     "type": "tf",
@@ -2321,7 +2217,7 @@
     ],
     "topic": "handen_patologi",
     "difficulty": "svår",
-    "id": "q192"
+    "id": "q184"
   },
   {
     "type": "tf",
@@ -2332,7 +2228,7 @@
     ],
     "topic": "handen_patologi",
     "difficulty": "svår",
-    "id": "q193"
+    "id": "q185"
   },
   {
     "type": "tf",
@@ -2343,7 +2239,7 @@
     ],
     "topic": "handen_patologi",
     "difficulty": "svår",
-    "id": "q194"
+    "id": "q186"
   },
   {
     "type": "tf",
@@ -2354,7 +2250,7 @@
     ],
     "topic": "handen_patologi",
     "difficulty": "svår",
-    "id": "q195"
+    "id": "q187"
   },
   {
     "type": "tf",
@@ -2365,7 +2261,7 @@
     ],
     "topic": "handen_patologi",
     "difficulty": "svår",
-    "id": "q196"
+    "id": "q188"
   },
   {
     "type": "mc",
@@ -2378,7 +2274,7 @@
     ],
     "topic": "handen_muskler_funktion",
     "difficulty": "svår",
-    "id": "q197"
+    "id": "q189"
   },
   {
     "type": "mc",
@@ -2391,7 +2287,7 @@
     ],
     "topic": "handen_muskler_funktion",
     "difficulty": "svår",
-    "id": "q198"
+    "id": "q190"
   },
   {
     "type": "mc",
@@ -2404,7 +2300,7 @@
     ],
     "topic": "handen_muskler_funktion",
     "difficulty": "svår",
-    "id": "q199"
+    "id": "q191"
   },
   {
     "type": "mc",
@@ -2417,7 +2313,7 @@
     ],
     "topic": "handen_muskler_funktion",
     "difficulty": "svår",
-    "id": "q200"
+    "id": "q192"
   },
   {
     "type": "tf",
@@ -2428,7 +2324,7 @@
     ],
     "topic": "handen_innervation_detaljerad",
     "difficulty": "medel",
-    "id": "q201"
+    "id": "q193"
   },
   {
     "type": "tf",
@@ -2439,7 +2335,7 @@
     ],
     "topic": "handen_innervation_detaljerad",
     "difficulty": "medel",
-    "id": "q202"
+    "id": "q194"
   },
   {
     "type": "tf",
@@ -2450,7 +2346,7 @@
     ],
     "topic": "handen_innervation_detaljerad",
     "difficulty": "medel",
-    "id": "q203"
+    "id": "q195"
   },
   {
     "type": "tf",
@@ -2461,7 +2357,7 @@
     ],
     "topic": "handen_innervation_detaljerad",
     "difficulty": "medel",
-    "id": "q204"
+    "id": "q196"
   },
   {
     "type": "tf",
@@ -2472,7 +2368,7 @@
     ],
     "topic": "handen_innervation_detaljerad",
     "difficulty": "medel",
-    "id": "q205"
+    "id": "q197"
   },
   {
     "type": "tf",
@@ -2483,7 +2379,7 @@
     ],
     "topic": "handen_innervation_detaljerad",
     "difficulty": "medel",
-    "id": "q206"
+    "id": "q198"
   },
   {
     "type": "tf",
@@ -2494,7 +2390,7 @@
     ],
     "topic": "handen_innervation_detaljerad",
     "difficulty": "medel",
-    "id": "q207"
+    "id": "q199"
   },
   {
     "type": "tf",
@@ -2505,7 +2401,7 @@
     ],
     "topic": "handen_innervation_detaljerad",
     "difficulty": "medel",
-    "id": "q208"
+    "id": "q200"
   },
   {
     "type": "tf",
@@ -2516,7 +2412,7 @@
     ],
     "topic": "handen_innervation_detaljerad",
     "difficulty": "medel",
-    "id": "q209"
+    "id": "q201"
   },
   {
     "type": "mc",
@@ -2529,7 +2425,7 @@
     ],
     "topic": "handen_ben_metakarpaler",
     "difficulty": "lätt",
-    "id": "q210"
+    "id": "q202"
   },
   {
     "type": "tf",
@@ -2540,7 +2436,7 @@
     ],
     "topic": "handen_ben_metakarpaler",
     "difficulty": "lätt",
-    "id": "q211"
+    "id": "q203"
   },
   {
     "type": "mc",
@@ -2553,7 +2449,7 @@
     ],
     "topic": "handen_ben_metakarpaler",
     "difficulty": "lätt",
-    "id": "q212"
+    "id": "q204"
   },
   {
     "type": "tf",
@@ -2564,7 +2460,7 @@
     ],
     "topic": "handen_ben_metakarpaler",
     "difficulty": "lätt",
-    "id": "q213"
+    "id": "q205"
   },
   {
     "type": "mc",
@@ -2577,7 +2473,7 @@
     ],
     "topic": "handen_ben_metakarpaler",
     "difficulty": "lätt",
-    "id": "q214"
+    "id": "q206"
   },
   {
     "type": "tf",
@@ -2588,7 +2484,7 @@
     ],
     "topic": "handen_ben_metakarpaler",
     "difficulty": "lätt",
-    "id": "q215"
+    "id": "q207"
   },
   {
     "type": "mc",
@@ -2601,7 +2497,7 @@
     ],
     "topic": "handen_ben_metakarpaler",
     "difficulty": "lätt",
-    "id": "q216"
+    "id": "q208"
   },
   {
     "type": "tf",
@@ -2612,7 +2508,7 @@
     ],
     "topic": "handen_ben_metakarpaler",
     "difficulty": "lätt",
-    "id": "q217"
+    "id": "q209"
   },
   {
     "type": "mc",
@@ -2625,7 +2521,7 @@
     ],
     "topic": "handen_ben_metakarpaler",
     "difficulty": "lätt",
-    "id": "q218"
+    "id": "q210"
   },
   {
     "type": "tf",
@@ -2636,7 +2532,7 @@
     ],
     "topic": "handen_ben_metakarpaler",
     "difficulty": "lätt",
-    "id": "q219"
+    "id": "q211"
   },
   {
     "type": "tf",
@@ -2647,7 +2543,7 @@
     ],
     "topic": "handen_ben_falangar",
     "difficulty": "medel",
-    "id": "q220"
+    "id": "q212"
   },
   {
     "type": "tf",
@@ -2658,7 +2554,7 @@
     ],
     "topic": "handen_ben_falangar",
     "difficulty": "medel",
-    "id": "q221"
+    "id": "q213"
   },
   {
     "type": "tf",
@@ -2669,7 +2565,7 @@
     ],
     "topic": "handen_ben_falangar",
     "difficulty": "medel",
-    "id": "q222"
+    "id": "q214"
   },
   {
     "type": "tf",
@@ -2680,7 +2576,7 @@
     ],
     "topic": "handen_ben_falangar",
     "difficulty": "medel",
-    "id": "q223"
+    "id": "q215"
   },
   {
     "type": "tf",
@@ -2691,7 +2587,7 @@
     ],
     "topic": "handen_ben_falangar",
     "difficulty": "medel",
-    "id": "q224"
+    "id": "q216"
   },
   {
     "type": "mc",
@@ -2704,7 +2600,7 @@
     ],
     "topic": "handen_muskler_funktioner",
     "difficulty": "svår",
-    "id": "q225"
+    "id": "q217"
   },
   {
     "type": "mc",
@@ -2717,7 +2613,7 @@
     ],
     "topic": "handen_muskler_funktioner",
     "difficulty": "svår",
-    "id": "q226"
+    "id": "q218"
   },
   {
     "type": "mc",
@@ -2730,7 +2626,7 @@
     ],
     "topic": "handen_muskler_funktioner",
     "difficulty": "svår",
-    "id": "q227"
+    "id": "q219"
   },
   {
     "type": "mc",
@@ -2743,7 +2639,7 @@
     ],
     "topic": "handen_muskler_funktioner",
     "difficulty": "svår",
-    "id": "q228"
+    "id": "q220"
   },
   {
     "type": "mc",
@@ -2756,7 +2652,7 @@
     ],
     "topic": "handen_muskler_funktioner",
     "difficulty": "svår",
-    "id": "q229"
+    "id": "q221"
   },
   {
     "type": "tf",
@@ -2767,7 +2663,7 @@
     ],
     "topic": "handen_senor",
     "difficulty": "medel",
-    "id": "q230"
+    "id": "q222"
   },
   {
     "type": "tf",
@@ -2778,7 +2674,7 @@
     ],
     "topic": "handen_senor",
     "difficulty": "medel",
-    "id": "q231"
+    "id": "q223"
   },
   {
     "type": "tf",
@@ -2789,7 +2685,7 @@
     ],
     "topic": "handen_senor",
     "difficulty": "medel",
-    "id": "q232"
+    "id": "q224"
   },
   {
     "type": "tf",
@@ -2800,7 +2696,7 @@
     ],
     "topic": "handen_senor",
     "difficulty": "medel",
-    "id": "q233"
+    "id": "q225"
   },
   {
     "type": "tf",
@@ -2811,7 +2707,7 @@
     ],
     "topic": "handen_innervation_motor",
     "difficulty": "medel",
-    "id": "q234"
+    "id": "q226"
   },
   {
     "type": "tf",
@@ -2822,7 +2718,7 @@
     ],
     "topic": "handen_innervation_motor",
     "difficulty": "medel",
-    "id": "q235"
+    "id": "q227"
   },
   {
     "type": "tf",
@@ -2833,7 +2729,7 @@
     ],
     "topic": "handen_innervation_motor",
     "difficulty": "medel",
-    "id": "q236"
+    "id": "q228"
   },
   {
     "type": "tf",
@@ -2844,7 +2740,7 @@
     ],
     "topic": "handen_fakta",
     "difficulty": "medel",
-    "id": "q237"
+    "id": "q229"
   },
   {
     "type": "tf",
@@ -2855,7 +2751,7 @@
     ],
     "topic": "handen_fakta",
     "difficulty": "medel",
-    "id": "q238"
+    "id": "q230"
   },
   {
     "type": "tf",
@@ -2866,7 +2762,7 @@
     ],
     "topic": "handen_fakta",
     "difficulty": "medel",
-    "id": "q239"
+    "id": "q231"
   },
   {
     "type": "tf",
@@ -2877,7 +2773,7 @@
     ],
     "topic": "handen_fakta",
     "difficulty": "medel",
-    "id": "q240"
+    "id": "q232"
   },
   {
     "type": "tf",
@@ -2888,7 +2784,7 @@
     ],
     "topic": "handen_fakta",
     "difficulty": "medel",
-    "id": "q241"
+    "id": "q233"
   },
   {
     "type": "tf",
@@ -2899,7 +2795,7 @@
     ],
     "topic": "handen_fakta",
     "difficulty": "medel",
-    "id": "q242"
+    "id": "q234"
   },
   {
     "type": "tf",
@@ -2910,7 +2806,7 @@
     ],
     "topic": "handen_fakta",
     "difficulty": "medel",
-    "id": "q243"
+    "id": "q235"
   },
   {
     "type": "tf",
@@ -2921,7 +2817,7 @@
     ],
     "topic": "handen_fakta",
     "difficulty": "medel",
-    "id": "q244"
+    "id": "q236"
   },
   {
     "type": "tf",
@@ -2932,7 +2828,7 @@
     ],
     "topic": "handen_rörelsområde",
     "difficulty": "svår",
-    "id": "q245"
+    "id": "q237"
   },
   {
     "type": "tf",
@@ -2943,7 +2839,7 @@
     ],
     "topic": "handen_rörelsområde",
     "difficulty": "svår",
-    "id": "q246"
+    "id": "q238"
   },
   {
     "type": "tf",
@@ -2954,7 +2850,7 @@
     ],
     "topic": "handen_rörelsområde",
     "difficulty": "svår",
-    "id": "q247"
+    "id": "q239"
   },
   {
     "type": "tf",
@@ -2965,7 +2861,7 @@
     ],
     "topic": "handen_rörelsområde",
     "difficulty": "svår",
-    "id": "q248"
+    "id": "q240"
   },
   {
     "type": "tf",
@@ -2976,7 +2872,7 @@
     ],
     "topic": "handen_rörelsområde",
     "difficulty": "svår",
-    "id": "q249"
+    "id": "q241"
   },
   {
     "type": "tf",
@@ -2987,7 +2883,7 @@
     ],
     "topic": "handen_rörelsområde",
     "difficulty": "svår",
-    "id": "q250"
+    "id": "q242"
   },
   {
     "type": "tf",
@@ -2998,7 +2894,7 @@
     ],
     "topic": "handen_rörelsområde",
     "difficulty": "svår",
-    "id": "q251"
+    "id": "q243"
   },
   {
     "type": "tf",
@@ -3009,7 +2905,7 @@
     ],
     "topic": "handen_blodförsörjning",
     "difficulty": "svår",
-    "id": "q252"
+    "id": "q244"
   },
   {
     "type": "tf",
@@ -3020,7 +2916,7 @@
     ],
     "topic": "handen_blodförsörjning",
     "difficulty": "svår",
-    "id": "q253"
+    "id": "q245"
   },
   {
     "type": "tf",
@@ -3031,7 +2927,7 @@
     ],
     "topic": "handen_blodförsörjning",
     "difficulty": "svår",
-    "id": "q254"
+    "id": "q246"
   },
   {
     "type": "tf",
@@ -3042,7 +2938,7 @@
     ],
     "topic": "handen_blodförsörjning",
     "difficulty": "svår",
-    "id": "q255"
+    "id": "q247"
   },
   {
     "type": "mc",
@@ -3055,7 +2951,7 @@
     ],
     "topic": "handen_intrinsic_func",
     "difficulty": "medel",
-    "id": "q256"
+    "id": "q248"
   },
   {
     "type": "mc",
@@ -3068,7 +2964,7 @@
     ],
     "topic": "handen_intrinsic_func",
     "difficulty": "medel",
-    "id": "q257"
+    "id": "q249"
   },
   {
     "type": "mc",
@@ -3081,7 +2977,7 @@
     ],
     "topic": "handen_intrinsic_func",
     "difficulty": "medel",
-    "id": "q258"
+    "id": "q250"
   },
   {
     "type": "mc",
@@ -3094,7 +2990,7 @@
     ],
     "topic": "handen_intrinsic_func",
     "difficulty": "medel",
-    "id": "q259"
+    "id": "q251"
   },
   {
     "type": "mc",
@@ -3107,7 +3003,7 @@
     ],
     "topic": "handen_intrinsic_func",
     "difficulty": "medel",
-    "id": "q260"
+    "id": "q252"
   },
   {
     "type": "mc",
@@ -3120,7 +3016,7 @@
     ],
     "topic": "handen_intrinsic_func",
     "difficulty": "medel",
-    "id": "q261"
+    "id": "q253"
   },
   {
     "type": "mc",
@@ -3133,7 +3029,7 @@
     ],
     "topic": "handen_intrinsic_func",
     "difficulty": "medel",
-    "id": "q262"
+    "id": "q254"
   },
   {
     "type": "mc",
@@ -3146,7 +3042,7 @@
     ],
     "topic": "handen_muskler_origin",
     "difficulty": "svår",
-    "id": "q263"
+    "id": "q255"
   },
   {
     "type": "mc",
@@ -3159,7 +3055,7 @@
     ],
     "topic": "handen_muskler_origin",
     "difficulty": "svår",
-    "id": "q264"
+    "id": "q256"
   },
   {
     "type": "mc",
@@ -3172,7 +3068,7 @@
     ],
     "topic": "handen_muskler_origin",
     "difficulty": "svår",
-    "id": "q265"
+    "id": "q257"
   },
   {
     "type": "mc",
@@ -3185,7 +3081,7 @@
     ],
     "topic": "handen_muskler_origin",
     "difficulty": "svår",
-    "id": "q266"
+    "id": "q258"
   },
   {
     "type": "mc",
@@ -3198,7 +3094,7 @@
     ],
     "topic": "handen_ligament",
     "difficulty": "svår",
-    "id": "q267"
+    "id": "q259"
   },
   {
     "type": "mc",
@@ -3211,7 +3107,7 @@
     ],
     "topic": "handen_ligament",
     "difficulty": "svår",
-    "id": "q268"
+    "id": "q260"
   },
   {
     "type": "mc",
@@ -3224,7 +3120,7 @@
     ],
     "topic": "handen_ligament",
     "difficulty": "svår",
-    "id": "q269"
+    "id": "q261"
   },
   {
     "type": "mc",
@@ -3237,7 +3133,7 @@
     ],
     "topic": "handen_ligament",
     "difficulty": "svår",
-    "id": "q270"
+    "id": "q262"
   },
   {
     "type": "tf",
@@ -3248,7 +3144,7 @@
     ],
     "topic": "handen_kombi",
     "difficulty": "medel",
-    "id": "q271"
+    "id": "q263"
   },
   {
     "type": "tf",
@@ -3259,7 +3155,7 @@
     ],
     "topic": "handen_kombi",
     "difficulty": "medel",
-    "id": "q272"
+    "id": "q264"
   },
   {
     "type": "tf",
@@ -3270,7 +3166,7 @@
     ],
     "topic": "handen_kombi",
     "difficulty": "medel",
-    "id": "q273"
+    "id": "q265"
   },
   {
     "type": "tf",
@@ -3281,7 +3177,7 @@
     ],
     "topic": "handen_kombi",
     "difficulty": "medel",
-    "id": "q274"
+    "id": "q266"
   },
   {
     "type": "tf",
@@ -3292,7 +3188,7 @@
     ],
     "topic": "handen_kombi",
     "difficulty": "medel",
-    "id": "q275"
+    "id": "q267"
   },
   {
     "type": "tf",
@@ -3303,7 +3199,7 @@
     ],
     "topic": "handen_kombi",
     "difficulty": "medel",
-    "id": "q276"
+    "id": "q268"
   },
   {
     "type": "tf",
@@ -3314,7 +3210,7 @@
     ],
     "topic": "handen_kombi",
     "difficulty": "medel",
-    "id": "q277"
+    "id": "q269"
   },
   {
     "type": "tf",
@@ -3325,7 +3221,7 @@
     ],
     "topic": "handen_kombi",
     "difficulty": "medel",
-    "id": "q278"
+    "id": "q270"
   },
   {
     "type": "tf",
@@ -3336,7 +3232,7 @@
     ],
     "topic": "handen_kombi",
     "difficulty": "medel",
-    "id": "q279"
+    "id": "q271"
   },
   {
     "type": "tf",
@@ -3347,7 +3243,7 @@
     ],
     "topic": "handen_kombi",
     "difficulty": "medel",
-    "id": "q280"
+    "id": "q272"
   },
   {
     "type": "tf",
@@ -3358,7 +3254,7 @@
     ],
     "topic": "handen_muskler_klassificering",
     "difficulty": "lätt",
-    "id": "q281"
+    "id": "q273"
   },
   {
     "type": "tf",
@@ -3369,7 +3265,7 @@
     ],
     "topic": "handen_muskler_klassificering",
     "difficulty": "lätt",
-    "id": "q282"
+    "id": "q274"
   },
   {
     "type": "tf",
@@ -3380,7 +3276,7 @@
     ],
     "topic": "handen_muskler_klassificering",
     "difficulty": "lätt",
-    "id": "q283"
+    "id": "q275"
   },
   {
     "type": "tf",
@@ -3391,7 +3287,7 @@
     ],
     "topic": "handen_muskler_klassificering",
     "difficulty": "lätt",
-    "id": "q284"
+    "id": "q276"
   },
   {
     "type": "tf",
@@ -3402,7 +3298,7 @@
     ],
     "topic": "handen_muskler_klassificering",
     "difficulty": "lätt",
-    "id": "q285"
+    "id": "q277"
   },
   {
     "type": "tf",
@@ -3413,7 +3309,7 @@
     ],
     "topic": "handen_muskler_klassificering",
     "difficulty": "lätt",
-    "id": "q286"
+    "id": "q278"
   },
   {
     "type": "tf",
@@ -3424,7 +3320,7 @@
     ],
     "topic": "handen_muskler_klassificering",
     "difficulty": "lätt",
-    "id": "q287"
+    "id": "q279"
   },
   {
     "type": "tf",
@@ -3435,7 +3331,7 @@
     ],
     "topic": "handen_muskler_klassificering",
     "difficulty": "lätt",
-    "id": "q288"
+    "id": "q280"
   },
   {
     "type": "tf",
@@ -3446,7 +3342,7 @@
     ],
     "topic": "handen_muskler_klassificering",
     "difficulty": "lätt",
-    "id": "q289"
+    "id": "q281"
   },
   {
     "type": "tf",
@@ -3457,7 +3353,7 @@
     ],
     "topic": "handen_muskler_klassificering",
     "difficulty": "lätt",
-    "id": "q290"
+    "id": "q282"
   },
   {
     "type": "tf",
@@ -3468,7 +3364,7 @@
     ],
     "topic": "handen_muskler_klassificering",
     "difficulty": "lätt",
-    "id": "q291"
+    "id": "q283"
   },
   {
     "type": "tf",
@@ -3479,7 +3375,7 @@
     ],
     "topic": "handen_muskler_klassificering",
     "difficulty": "lätt",
-    "id": "q292"
+    "id": "q284"
   },
   {
     "type": "tf",
@@ -3490,7 +3386,7 @@
     ],
     "topic": "handen_muskler_klassificering",
     "difficulty": "lätt",
-    "id": "q293"
+    "id": "q285"
   },
   {
     "type": "tf",
@@ -3501,7 +3397,7 @@
     ],
     "topic": "handen_ben_klassificering",
     "difficulty": "lätt",
-    "id": "q294"
+    "id": "q286"
   },
   {
     "type": "tf",
@@ -3512,7 +3408,7 @@
     ],
     "topic": "handen_ben_klassificering",
     "difficulty": "lätt",
-    "id": "q295"
+    "id": "q287"
   },
   {
     "type": "tf",
@@ -3523,7 +3419,7 @@
     ],
     "topic": "handen_ben_klassificering",
     "difficulty": "lätt",
-    "id": "q296"
+    "id": "q288"
   },
   {
     "type": "tf",
@@ -3534,7 +3430,7 @@
     ],
     "topic": "handen_ben_klassificering",
     "difficulty": "lätt",
-    "id": "q297"
+    "id": "q289"
   },
   {
     "type": "tf",
@@ -3545,7 +3441,7 @@
     ],
     "topic": "handen_ben_klassificering",
     "difficulty": "lätt",
-    "id": "q298"
+    "id": "q290"
   },
   {
     "type": "tf",
@@ -3556,7 +3452,7 @@
     ],
     "topic": "handen_ben_klassificering",
     "difficulty": "lätt",
-    "id": "q299"
+    "id": "q291"
   },
   {
     "type": "tf",
@@ -3567,7 +3463,7 @@
     ],
     "topic": "handen_ben_klassificering",
     "difficulty": "lätt",
-    "id": "q300"
+    "id": "q292"
   },
   {
     "type": "tf",
@@ -3578,7 +3474,7 @@
     ],
     "topic": "handen_ben_klassificering",
     "difficulty": "lätt",
-    "id": "q301"
+    "id": "q293"
   },
   {
     "type": "tf",
@@ -3589,7 +3485,7 @@
     ],
     "topic": "handen_extrinsic_klassificering",
     "difficulty": "lätt",
-    "id": "q302"
+    "id": "q294"
   },
   {
     "type": "tf",
@@ -3600,7 +3496,7 @@
     ],
     "topic": "handen_extrinsic_klassificering",
     "difficulty": "lätt",
-    "id": "q303"
+    "id": "q295"
   },
   {
     "type": "tf",
@@ -3611,7 +3507,7 @@
     ],
     "topic": "handen_extrinsic_klassificering",
     "difficulty": "lätt",
-    "id": "q304"
+    "id": "q296"
   },
   {
     "type": "tf",
@@ -3622,7 +3518,7 @@
     ],
     "topic": "handen_extrinsic_klassificering",
     "difficulty": "lätt",
-    "id": "q305"
+    "id": "q297"
   },
   {
     "type": "tf",
@@ -3633,7 +3529,7 @@
     ],
     "topic": "handen_extrinsic_klassificering",
     "difficulty": "lätt",
-    "id": "q306"
+    "id": "q298"
   },
   {
     "type": "tf",
@@ -3644,7 +3540,7 @@
     ],
     "topic": "handen_extrinsic_klassificering",
     "difficulty": "lätt",
-    "id": "q307"
+    "id": "q299"
   },
   {
     "type": "tf",
@@ -3655,7 +3551,7 @@
     ],
     "topic": "handen_extrinsic_klassificering",
     "difficulty": "lätt",
-    "id": "q308"
+    "id": "q300"
   },
   {
     "type": "tf",
@@ -3666,7 +3562,7 @@
     ],
     "topic": "handen_extrinsic_klassificering",
     "difficulty": "lätt",
-    "id": "q309"
+    "id": "q301"
   },
   {
     "type": "tf",
@@ -3677,7 +3573,7 @@
     ],
     "topic": "handen_extrinsic_klassificering",
     "difficulty": "lätt",
-    "id": "q310"
+    "id": "q302"
   },
   {
     "type": "tf",
@@ -3688,7 +3584,7 @@
     ],
     "topic": "handen_extrinsic_klassificering",
     "difficulty": "lätt",
-    "id": "q311"
+    "id": "q303"
   },
   {
     "type": "tf",
@@ -3699,7 +3595,7 @@
     ],
     "topic": "handen_extrinsic_klassificering",
     "difficulty": "lätt",
-    "id": "q312"
+    "id": "q304"
   },
   {
     "type": "tf",
@@ -3710,7 +3606,7 @@
     ],
     "topic": "handen_extrinsic_klassificering",
     "difficulty": "lätt",
-    "id": "q313"
+    "id": "q305"
   },
   {
     "type": "tf",
@@ -3721,7 +3617,7 @@
     ],
     "topic": "handen_extrinsic_klassificering",
     "difficulty": "lätt",
-    "id": "q314"
+    "id": "q306"
   },
   {
     "type": "tf",
@@ -3732,7 +3628,7 @@
     ],
     "topic": "handen_extrinsic_klassificering",
     "difficulty": "lätt",
-    "id": "q315"
+    "id": "q307"
   },
   {
     "type": "tf",
@@ -3743,7 +3639,7 @@
     ],
     "topic": "handen_rörelser_klassificering",
     "difficulty": "lätt",
-    "id": "q316"
+    "id": "q308"
   },
   {
     "type": "tf",
@@ -3754,7 +3650,7 @@
     ],
     "topic": "handen_rörelser_klassificering",
     "difficulty": "lätt",
-    "id": "q317"
+    "id": "q309"
   },
   {
     "type": "tf",
@@ -3765,7 +3661,7 @@
     ],
     "topic": "handen_rörelser_klassificering",
     "difficulty": "lätt",
-    "id": "q318"
+    "id": "q310"
   },
   {
     "type": "tf",
@@ -3776,7 +3672,7 @@
     ],
     "topic": "handen_rörelser_klassificering",
     "difficulty": "lätt",
-    "id": "q319"
+    "id": "q311"
   },
   {
     "type": "tf",
@@ -3787,7 +3683,7 @@
     ],
     "topic": "handen_rörelser_klassificering",
     "difficulty": "lätt",
-    "id": "q320"
+    "id": "q312"
   },
   {
     "type": "tf",
@@ -3798,7 +3694,7 @@
     ],
     "topic": "handen_rörelser_klassificering",
     "difficulty": "lätt",
-    "id": "q321"
+    "id": "q313"
   },
   {
     "type": "tf",
@@ -3809,7 +3705,7 @@
     ],
     "topic": "handen_rörelser_klassificering",
     "difficulty": "lätt",
-    "id": "q322"
+    "id": "q314"
   },
   {
     "type": "tf",
@@ -3820,7 +3716,7 @@
     ],
     "topic": "handen_rörelser_klassificering",
     "difficulty": "lätt",
-    "id": "q323"
+    "id": "q315"
   },
   {
     "type": "tf",
@@ -3831,7 +3727,7 @@
     ],
     "topic": "handen_rörelser_klassificering",
     "difficulty": "lätt",
-    "id": "q324"
+    "id": "q316"
   },
   {
     "type": "tf",
@@ -3842,7 +3738,7 @@
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "medel",
-    "id": "q325"
+    "id": "q317"
   },
   {
     "type": "tf",
@@ -3853,7 +3749,7 @@
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "medel",
-    "id": "q326"
+    "id": "q318"
   },
   {
     "type": "tf",
@@ -3864,7 +3760,7 @@
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "medel",
-    "id": "q327"
+    "id": "q319"
   },
   {
     "type": "tf",
@@ -3875,7 +3771,7 @@
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "medel",
-    "id": "q328"
+    "id": "q320"
   },
   {
     "type": "tf",
@@ -3886,7 +3782,7 @@
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "medel",
-    "id": "q329"
+    "id": "q321"
   },
   {
     "type": "tf",
@@ -3897,7 +3793,7 @@
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "medel",
-    "id": "q330"
+    "id": "q322"
   },
   {
     "type": "tf",
@@ -3908,7 +3804,7 @@
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "medel",
-    "id": "q331"
+    "id": "q323"
   },
   {
     "type": "tf",
@@ -3919,7 +3815,7 @@
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "medel",
-    "id": "q332"
+    "id": "q324"
   },
   {
     "type": "tf",
@@ -3930,7 +3826,7 @@
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "medel",
-    "id": "q333"
+    "id": "q325"
   },
   {
     "type": "tf",
@@ -3941,7 +3837,7 @@
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "medel",
-    "id": "q334"
+    "id": "q326"
   },
   {
     "type": "tf",
@@ -3952,7 +3848,7 @@
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "medel",
-    "id": "q335"
+    "id": "q327"
   },
   {
     "type": "tf",
@@ -3963,7 +3859,7 @@
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "medel",
-    "id": "q336"
+    "id": "q328"
   },
   {
     "type": "tf",
@@ -3974,7 +3870,7 @@
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "medel",
-    "id": "q337"
+    "id": "q329"
   },
   {
     "type": "tf",
@@ -3985,7 +3881,7 @@
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "medel",
-    "id": "q338"
+    "id": "q330"
   },
   {
     "type": "tf",
@@ -3996,7 +3892,7 @@
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "medel",
-    "id": "q339"
+    "id": "q331"
   },
   {
     "type": "tf",
@@ -4007,7 +3903,7 @@
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "medel",
-    "id": "q340"
+    "id": "q332"
   },
   {
     "type": "tf",
@@ -4018,7 +3914,7 @@
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "medel",
-    "id": "q341"
+    "id": "q333"
   },
   {
     "type": "tf",
@@ -4029,7 +3925,7 @@
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "medel",
-    "id": "q342"
+    "id": "q334"
   },
   {
     "type": "tf",
@@ -4040,7 +3936,7 @@
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "medel",
-    "id": "q343"
+    "id": "q335"
   },
   {
     "type": "tf",
@@ -4051,7 +3947,7 @@
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "medel",
-    "id": "q344"
+    "id": "q336"
   },
   {
     "type": "tf",
@@ -4062,7 +3958,7 @@
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "medel",
-    "id": "q345"
+    "id": "q337"
   },
   {
     "type": "tf",
@@ -4073,7 +3969,7 @@
     ],
     "topic": "handen_leder",
     "difficulty": "lätt",
-    "id": "q346"
+    "id": "q338"
   },
   {
     "type": "tf",
@@ -4084,7 +3980,7 @@
     ],
     "topic": "handen_leder",
     "difficulty": "lätt",
-    "id": "q347"
+    "id": "q339"
   },
   {
     "type": "tf",
@@ -4095,7 +3991,7 @@
     ],
     "topic": "handen_leder",
     "difficulty": "lätt",
-    "id": "q348"
+    "id": "q340"
   },
   {
     "type": "tf",
@@ -4106,7 +4002,7 @@
     ],
     "topic": "handen_leder",
     "difficulty": "lätt",
-    "id": "q349"
+    "id": "q341"
   },
   {
     "type": "tf",
@@ -4117,7 +4013,7 @@
     ],
     "topic": "handen_leder",
     "difficulty": "lätt",
-    "id": "q350"
+    "id": "q342"
   },
   {
     "type": "tf",
@@ -4128,7 +4024,7 @@
     ],
     "topic": "handen_fakta_enkla",
     "difficulty": "lätt",
-    "id": "q351"
+    "id": "q343"
   },
   {
     "type": "tf",
@@ -4139,7 +4035,7 @@
     ],
     "topic": "handen_fakta_enkla",
     "difficulty": "lätt",
-    "id": "q352"
+    "id": "q344"
   },
   {
     "type": "tf",
@@ -4150,7 +4046,7 @@
     ],
     "topic": "handen_fakta_enkla",
     "difficulty": "lätt",
-    "id": "q353"
+    "id": "q345"
   },
   {
     "type": "tf",
@@ -4161,7 +4057,7 @@
     ],
     "topic": "handen_fakta_enkla",
     "difficulty": "lätt",
-    "id": "q354"
+    "id": "q346"
   },
   {
     "type": "tf",
@@ -4172,7 +4068,7 @@
     ],
     "topic": "handen_fakta_enkla",
     "difficulty": "lätt",
-    "id": "q355"
+    "id": "q347"
   },
   {
     "type": "tf",
@@ -4183,7 +4079,7 @@
     ],
     "topic": "handen_fakta_enkla",
     "difficulty": "lätt",
-    "id": "q356"
+    "id": "q348"
   },
   {
     "type": "tf",
@@ -4194,7 +4090,7 @@
     ],
     "topic": "handen_fakta_enkla",
     "difficulty": "lätt",
-    "id": "q357"
+    "id": "q349"
   },
   {
     "type": "tf",
@@ -4205,7 +4101,7 @@
     ],
     "topic": "handen_fakta_enkla",
     "difficulty": "lätt",
-    "id": "q358"
+    "id": "q350"
   },
   {
     "type": "tf",
@@ -4216,7 +4112,7 @@
     ],
     "topic": "handen_fakta_enkla",
     "difficulty": "lätt",
-    "id": "q359"
+    "id": "q351"
   },
   {
     "type": "tf",
@@ -4227,7 +4123,7 @@
     ],
     "topic": "handen_fakta_enkla",
     "difficulty": "lätt",
-    "id": "q360"
+    "id": "q352"
   },
   {
     "type": "tf",
@@ -4238,7 +4134,7 @@
     ],
     "topic": "handen_fakta_enkla",
     "difficulty": "lätt",
-    "id": "q361"
+    "id": "q353"
   },
   {
     "type": "tf",
@@ -4249,7 +4145,7 @@
     ],
     "topic": "handen_fakta_enkla",
     "difficulty": "lätt",
-    "id": "q362"
+    "id": "q354"
   },
   {
     "type": "tf",
@@ -4260,7 +4156,7 @@
     ],
     "topic": "handen_fakta_enkla",
     "difficulty": "lätt",
-    "id": "q363"
+    "id": "q355"
   },
   {
     "type": "tf",
@@ -4271,7 +4167,7 @@
     ],
     "topic": "handen_fakta_enkla",
     "difficulty": "lätt",
-    "id": "q364"
+    "id": "q356"
   },
   {
     "type": "tf",
@@ -4282,7 +4178,7 @@
     ],
     "topic": "handen_fakta_enkla",
     "difficulty": "lätt",
-    "id": "q365"
+    "id": "q357"
   },
   {
     "type": "tf",
@@ -4293,72 +4189,7 @@
     ],
     "topic": "handen_fakta_enkla",
     "difficulty": "lätt",
-    "id": "q366"
-  },
-  {
-    "type": "mc",
-    "prompt": "Vad är \"Os scaphoideum\"?",
-    "correct": "Os scaphoideum",
-    "distractors": [
-      "Os trapezoideum",
-      "Os hamatum",
-      "Os capitatum"
-    ],
-    "topic": "handen_beskrivningar",
-    "difficulty": "lätt",
-    "id": "q367"
-  },
-  {
-    "type": "mc",
-    "prompt": "Vad är \"Os lunatum\"?",
-    "correct": "Os lunatum",
-    "distractors": [
-      "Os scaphoideum",
-      "Os pisiforme",
-      "Os trapezium"
-    ],
-    "topic": "handen_beskrivningar",
-    "difficulty": "lätt",
-    "id": "q368"
-  },
-  {
-    "type": "mc",
-    "prompt": "Vad är \"Os pisiforme\"?",
-    "correct": "Os pisiforme",
-    "distractors": [
-      "Os scaphoideum",
-      "Os lunatum",
-      "Os hamatum"
-    ],
-    "topic": "handen_beskrivningar",
-    "difficulty": "lätt",
-    "id": "q369"
-  },
-  {
-    "type": "mc",
-    "prompt": "Vad är \"Os capitatum\"?",
-    "correct": "Os capitatum",
-    "distractors": [
-      "Os scaphoideum",
-      "Os trapezium",
-      "Os hamatum"
-    ],
-    "topic": "handen_beskrivningar",
-    "difficulty": "lätt",
-    "id": "q370"
-  },
-  {
-    "type": "mc",
-    "prompt": "Vad är \"Os hamatum\"?",
-    "correct": "Os hamatum",
-    "distractors": [
-      "Os scaphoideum",
-      "Os pisiforme",
-      "Os lunatum"
-    ],
-    "topic": "handen_beskrivningar",
-    "difficulty": "lätt",
-    "id": "q371"
+    "id": "q358"
   },
   {
     "type": "mc",
@@ -4371,7 +4202,7 @@
     ],
     "topic": "handen_beskrivningar",
     "difficulty": "lätt",
-    "id": "q372"
+    "id": "q359"
   },
   {
     "type": "mc",
@@ -4384,7 +4215,7 @@
     ],
     "topic": "handen_beskrivningar",
     "difficulty": "lätt",
-    "id": "q373"
+    "id": "q360"
   },
   {
     "type": "mc",
@@ -4397,7 +4228,7 @@
     ],
     "topic": "handen_beskrivningar",
     "difficulty": "lätt",
-    "id": "q374"
+    "id": "q361"
   },
   {
     "type": "mc",
@@ -4410,7 +4241,7 @@
     ],
     "topic": "handen_beskrivningar",
     "difficulty": "lätt",
-    "id": "q375"
+    "id": "q362"
   },
   {
     "type": "mc",
@@ -4423,7 +4254,7 @@
     ],
     "topic": "handen_beskrivningar",
     "difficulty": "lätt",
-    "id": "q376"
+    "id": "q363"
   },
   {
     "type": "mc",
@@ -4436,7 +4267,7 @@
     ],
     "topic": "handen_beskrivningar",
     "difficulty": "lätt",
-    "id": "q377"
+    "id": "q364"
   },
   {
     "type": "mc",
@@ -4449,7 +4280,7 @@
     ],
     "topic": "handen_beskrivningar",
     "difficulty": "lätt",
-    "id": "q378"
+    "id": "q365"
   },
   {
     "type": "mc",
@@ -4462,7 +4293,7 @@
     ],
     "topic": "handen_motionpar",
     "difficulty": "lätt",
-    "id": "q379"
+    "id": "q366"
   },
   {
     "type": "mc",
@@ -4475,7 +4306,7 @@
     ],
     "topic": "handen_motionpar",
     "difficulty": "lätt",
-    "id": "q380"
+    "id": "q367"
   },
   {
     "type": "mc",
@@ -4488,7 +4319,7 @@
     ],
     "topic": "handen_motionpar",
     "difficulty": "lätt",
-    "id": "q381"
+    "id": "q368"
   },
   {
     "type": "mc",
@@ -4501,7 +4332,7 @@
     ],
     "topic": "handen_motionpar",
     "difficulty": "lätt",
-    "id": "q382"
+    "id": "q369"
   },
   {
     "type": "mc",
@@ -4514,7 +4345,7 @@
     ],
     "topic": "handen_motionpar",
     "difficulty": "lätt",
-    "id": "q383"
+    "id": "q370"
   },
   {
     "type": "tf",
@@ -4525,7 +4356,7 @@
     ],
     "topic": "handen_muskelakton",
     "difficulty": "medel",
-    "id": "q384"
+    "id": "q371"
   },
   {
     "type": "tf",
@@ -4536,7 +4367,7 @@
     ],
     "topic": "handen_muskelakton",
     "difficulty": "medel",
-    "id": "q385"
+    "id": "q372"
   },
   {
     "type": "tf",
@@ -4547,7 +4378,7 @@
     ],
     "topic": "handen_muskelakton",
     "difficulty": "medel",
-    "id": "q386"
+    "id": "q373"
   },
   {
     "type": "tf",
@@ -4558,7 +4389,7 @@
     ],
     "topic": "handen_muskelakton",
     "difficulty": "medel",
-    "id": "q387"
+    "id": "q374"
   },
   {
     "type": "tf",
@@ -4569,7 +4400,7 @@
     ],
     "topic": "handen_muskelakton",
     "difficulty": "medel",
-    "id": "q388"
+    "id": "q375"
   },
   {
     "type": "tf",
@@ -4580,7 +4411,7 @@
     ],
     "topic": "handen_muskelakton",
     "difficulty": "medel",
-    "id": "q389"
+    "id": "q376"
   },
   {
     "type": "tf",
@@ -4591,7 +4422,7 @@
     ],
     "topic": "handen_muskelakton",
     "difficulty": "medel",
-    "id": "q390"
+    "id": "q377"
   },
   {
     "type": "tf",
@@ -4602,7 +4433,7 @@
     ],
     "topic": "handen_muskelakton",
     "difficulty": "medel",
-    "id": "q391"
+    "id": "q378"
   },
   {
     "type": "tf",
@@ -4613,7 +4444,7 @@
     ],
     "topic": "handen_muskelakton",
     "difficulty": "medel",
-    "id": "q392"
+    "id": "q379"
   },
   {
     "type": "tf",
@@ -4624,7 +4455,7 @@
     ],
     "topic": "handen_muskelakton",
     "difficulty": "medel",
-    "id": "q393"
+    "id": "q380"
   },
   {
     "type": "tf",
@@ -4635,7 +4466,7 @@
     ],
     "topic": "handen_muskelakton",
     "difficulty": "medel",
-    "id": "q394"
+    "id": "q381"
   },
   {
     "type": "tf",
@@ -4646,7 +4477,7 @@
     ],
     "topic": "handen_muskelakton",
     "difficulty": "medel",
-    "id": "q395"
+    "id": "q382"
   },
   {
     "type": "tf",
@@ -4657,7 +4488,7 @@
     ],
     "topic": "handen_muskelakton",
     "difficulty": "medel",
-    "id": "q396"
+    "id": "q383"
   },
   {
     "type": "tf",
@@ -4668,7 +4499,7 @@
     ],
     "topic": "handen_muskelakton",
     "difficulty": "medel",
-    "id": "q397"
+    "id": "q384"
   },
   {
     "type": "mc",
@@ -4681,7 +4512,7 @@
     ],
     "topic": "handen_regioner",
     "difficulty": "lätt",
-    "id": "q398"
+    "id": "q385"
   },
   {
     "type": "mc",
@@ -4694,7 +4525,7 @@
     ],
     "topic": "handen_regioner",
     "difficulty": "lätt",
-    "id": "q399"
+    "id": "q386"
   },
   {
     "type": "mc",
@@ -4707,7 +4538,7 @@
     ],
     "topic": "handen_regioner",
     "difficulty": "lätt",
-    "id": "q400"
+    "id": "q387"
   },
   {
     "type": "tf",
@@ -4718,7 +4549,7 @@
     ],
     "topic": "handen_metakarpaler_fakta",
     "difficulty": "lätt",
-    "id": "q401"
+    "id": "q388"
   },
   {
     "type": "tf",
@@ -4729,7 +4560,7 @@
     ],
     "topic": "handen_metakarpaler_fakta",
     "difficulty": "lätt",
-    "id": "q402"
+    "id": "q389"
   },
   {
     "type": "tf",
@@ -4740,7 +4571,7 @@
     ],
     "topic": "handen_metakarpaler_fakta",
     "difficulty": "lätt",
-    "id": "q403"
+    "id": "q390"
   },
   {
     "type": "tf",
@@ -4751,7 +4582,7 @@
     ],
     "topic": "handen_metakarpaler_fakta",
     "difficulty": "lätt",
-    "id": "q404"
+    "id": "q391"
   },
   {
     "type": "tf",
@@ -4762,7 +4593,7 @@
     ],
     "topic": "handen_metakarpaler_fakta",
     "difficulty": "lätt",
-    "id": "q405"
+    "id": "q392"
   },
   {
     "type": "tf",
@@ -4773,7 +4604,7 @@
     ],
     "topic": "handen_ledtyper_fakta",
     "difficulty": "medel",
-    "id": "q406"
+    "id": "q393"
   },
   {
     "type": "tf",
@@ -4784,7 +4615,7 @@
     ],
     "topic": "handen_ledtyper_fakta",
     "difficulty": "medel",
-    "id": "q407"
+    "id": "q394"
   },
   {
     "type": "tf",
@@ -4795,7 +4626,7 @@
     ],
     "topic": "handen_ledtyper_fakta",
     "difficulty": "medel",
-    "id": "q408"
+    "id": "q395"
   },
   {
     "type": "tf",
@@ -4806,7 +4637,7 @@
     ],
     "topic": "handen_ledtyper_fakta",
     "difficulty": "medel",
-    "id": "q409"
+    "id": "q396"
   },
   {
     "type": "tf",
@@ -4817,7 +4648,7 @@
     ],
     "topic": "handen_ledtyper_fakta",
     "difficulty": "medel",
-    "id": "q410"
+    "id": "q397"
   },
   {
     "type": "tf",
@@ -4828,7 +4659,7 @@
     ],
     "topic": "handen_avslutande_fakta",
     "difficulty": "medel",
-    "id": "q411"
+    "id": "q398"
   },
   {
     "type": "tf",
@@ -4839,7 +4670,7 @@
     ],
     "topic": "handen_avslutande_fakta",
     "difficulty": "medel",
-    "id": "q412"
+    "id": "q399"
   },
   {
     "type": "tf",
@@ -4850,7 +4681,7 @@
     ],
     "topic": "handen_avslutande_fakta",
     "difficulty": "medel",
-    "id": "q413"
+    "id": "q400"
   },
   {
     "type": "tf",
@@ -4861,7 +4692,7 @@
     ],
     "topic": "handen_avslutande_fakta",
     "difficulty": "medel",
-    "id": "q414"
+    "id": "q401"
   },
   {
     "type": "tf",
@@ -4872,7 +4703,7 @@
     ],
     "topic": "handen_avslutande_fakta",
     "difficulty": "medel",
-    "id": "q415"
+    "id": "q402"
   },
   {
     "type": "tf",
@@ -4883,7 +4714,7 @@
     ],
     "topic": "handen_avslutande_fakta",
     "difficulty": "medel",
-    "id": "q416"
+    "id": "q403"
   },
   {
     "type": "tf",
@@ -4894,7 +4725,7 @@
     ],
     "topic": "handen_avslutande_fakta",
     "difficulty": "medel",
-    "id": "q417"
+    "id": "q404"
   },
   {
     "type": "tf",
@@ -4905,7 +4736,7 @@
     ],
     "topic": "handen_avslutande_fakta",
     "difficulty": "medel",
-    "id": "q418"
+    "id": "q405"
   },
   {
     "type": "tf",
@@ -4916,7 +4747,7 @@
     ],
     "topic": "handen_avslutande_fakta",
     "difficulty": "medel",
-    "id": "q419"
+    "id": "q406"
   },
   {
     "type": "tf",
@@ -4927,7 +4758,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q420"
+    "id": "q407"
   },
   {
     "type": "tf",
@@ -4938,7 +4769,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q421"
+    "id": "q408"
   },
   {
     "type": "tf",
@@ -4949,7 +4780,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q422"
+    "id": "q409"
   },
   {
     "type": "tf",
@@ -4960,7 +4791,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q423"
+    "id": "q410"
   },
   {
     "type": "tf",
@@ -4971,7 +4802,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q424"
+    "id": "q411"
   },
   {
     "type": "tf",
@@ -4982,7 +4813,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q425"
+    "id": "q412"
   },
   {
     "type": "tf",
@@ -4993,7 +4824,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q426"
+    "id": "q413"
   },
   {
     "type": "tf",
@@ -5004,7 +4835,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q427"
+    "id": "q414"
   },
   {
     "type": "tf",
@@ -5015,7 +4846,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q428"
+    "id": "q415"
   },
   {
     "type": "tf",
@@ -5026,7 +4857,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q429"
+    "id": "q416"
   },
   {
     "type": "tf",
@@ -5037,7 +4868,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q430"
+    "id": "q417"
   },
   {
     "type": "tf",
@@ -5048,7 +4879,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q431"
+    "id": "q418"
   },
   {
     "type": "tf",
@@ -5059,7 +4890,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q432"
+    "id": "q419"
   },
   {
     "type": "tf",
@@ -5070,7 +4901,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q433"
+    "id": "q420"
   },
   {
     "type": "tf",
@@ -5081,7 +4912,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q434"
+    "id": "q421"
   },
   {
     "type": "tf",
@@ -5092,7 +4923,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q435"
+    "id": "q422"
   },
   {
     "type": "tf",
@@ -5103,7 +4934,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q436"
+    "id": "q423"
   },
   {
     "type": "tf",
@@ -5114,7 +4945,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q437"
+    "id": "q424"
   },
   {
     "type": "tf",
@@ -5125,7 +4956,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q438"
+    "id": "q425"
   },
   {
     "type": "tf",
@@ -5136,7 +4967,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q439"
+    "id": "q426"
   },
   {
     "type": "tf",
@@ -5147,7 +4978,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q440"
+    "id": "q427"
   },
   {
     "type": "tf",
@@ -5158,7 +4989,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q441"
+    "id": "q428"
   },
   {
     "type": "tf",
@@ -5169,7 +5000,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q442"
+    "id": "q429"
   },
   {
     "type": "tf",
@@ -5180,7 +5011,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q443"
+    "id": "q430"
   },
   {
     "type": "tf",
@@ -5191,7 +5022,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q444"
+    "id": "q431"
   },
   {
     "type": "tf",
@@ -5202,7 +5033,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q445"
+    "id": "q432"
   },
   {
     "type": "tf",
@@ -5213,7 +5044,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q446"
+    "id": "q433"
   },
   {
     "type": "tf",
@@ -5224,7 +5055,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q447"
+    "id": "q434"
   },
   {
     "type": "tf",
@@ -5235,7 +5066,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q448"
+    "id": "q435"
   },
   {
     "type": "tf",
@@ -5246,7 +5077,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q449"
+    "id": "q436"
   },
   {
     "type": "tf",
@@ -5257,7 +5088,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q450"
+    "id": "q437"
   },
   {
     "type": "tf",
@@ -5268,7 +5099,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q451"
+    "id": "q438"
   },
   {
     "type": "tf",
@@ -5279,7 +5110,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q452"
+    "id": "q439"
   },
   {
     "type": "tf",
@@ -5290,7 +5121,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q453"
+    "id": "q440"
   },
   {
     "type": "tf",
@@ -5301,7 +5132,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q454"
+    "id": "q441"
   },
   {
     "type": "tf",
@@ -5312,7 +5143,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q455"
+    "id": "q442"
   },
   {
     "type": "tf",
@@ -5323,7 +5154,7 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q456"
+    "id": "q443"
   },
   {
     "type": "tf",
@@ -5334,6 +5165,6 @@
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
-    "id": "q457"
+    "id": "q444"
   }
 ]
