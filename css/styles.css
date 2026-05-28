@@ -355,7 +355,8 @@ select:focus {
 .btn-cancel {
   border-color: var(--error);
   color: var(--error);
-  margin-right: 24px;
+  white-space: nowrap;
+  flex: 0 0 auto;
 }
 
 .btn-cancel:hover:not(:disabled) {
