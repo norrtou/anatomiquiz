@@ -49,7 +49,7 @@
     "distractors": [
       "os nasale",
       "os temporale",
-      "os maxillaris"
+      "maxilla"
     ],
     "topic": "osteologi_kranium",
     "difficulty": "Easy",
@@ -59,7 +59,7 @@
     "id": "q505",
     "type": "mc",
     "prompt": "Vad heter överkäken på latin?",
-    "correct": "os maxillaris",
+    "correct": "maxilla",
     "distractors": [
       "os mandibula",
       "os temporale",
@@ -75,7 +75,7 @@
     "prompt": "Vad heter underkäken på latin?",
     "correct": "os mandibula",
     "distractors": [
-      "os maxillaris",
+      "maxilla",
       "os nasale",
       "os frontale"
     ],
@@ -174,7 +174,7 @@
   {
     "id": "q514",
     "type": "tf",
-    "prompt": "Underkäken är os maxillaris",
+    "prompt": "Underkäken är maxilla",
     "correct": "Falskt",
     "distractors": [
       "Sant"
@@ -3905,7 +3905,7 @@
     "distractors": [
       "tarsal-metatarsal leder",
       "metatarsal-phalangeal leder",
-      "ankle joint"
+      "articulatio talocruralis"
     ],
     "topic": "osteologi_joints",
     "difficulty": "Hard",
@@ -4991,7 +4991,7 @@
     "id": "q1240",
     "type": "mc",
     "prompt": "Vad heter överkäken på latin?",
-    "correct": "os maxillaris",
+    "correct": "maxilla",
     "distractors": [
       "ossa tarsi",
       "ossa metatarsi",
@@ -5023,7 +5023,7 @@
     "distractors": [
       "phalanges pedis",
       "scapula",
-      "clavicle"
+      "clavicula"
     ],
     "topic": "osteologi_kranium",
     "difficulty": "Easy",
@@ -5036,7 +5036,7 @@
     "correct": "os zygomaticum",
     "distractors": [
       "scapula",
-      "clavicle",
+      "clavicula",
       "sternum"
     ],
     "topic": "osteologi_kranium",
@@ -5049,7 +5049,7 @@
     "prompt": "Vad heter ryggraden på latin?",
     "correct": "columna vertebralis",
     "distractors": [
-      "clavicle",
+      "clavicula",
       "sternum",
       "costae"
     ],
@@ -5121,7 +5121,7 @@
     "distractors": [
       "os parietale",
       "os occipitale",
-      "os maxillaris"
+      "maxilla"
     ],
     "topic": "osteologi_kranium",
     "difficulty": "Easy",
@@ -5134,7 +5134,7 @@
     "correct": "humerus",
     "distractors": [
       "os occipitale",
-      "os maxillaris",
+      "maxilla",
       "os mandibula"
     ],
     "topic": "osteologi_kranium",
@@ -5147,7 +5147,7 @@
     "prompt": "Vad heter armbågsknotan på latin?",
     "correct": "olecranon",
     "distractors": [
-      "os maxillaris",
+      "maxilla",
       "os mandibula",
       "os nasale"
     ],
@@ -5341,7 +5341,7 @@
     "id": "q1265",
     "type": "mc",
     "prompt": "Vad heter nyckelbenet på latin?",
-    "correct": "clavicle",
+    "correct": "clavicula",
     "distractors": [
       "ossa carpi",
       "ossa metacarpi",
@@ -5438,7 +5438,7 @@
   {
     "id": "q1272",
     "type": "mc",
-    "prompt": "Vad är os maxillaris på svenska?",
+    "prompt": "Vad är maxilla på svenska?",
     "correct": "överkäken",
     "distractors": [
       "fotrotsben",
@@ -5788,7 +5788,7 @@
   {
     "id": "q1297",
     "type": "mc",
-    "prompt": "Vad är clavicle på svenska?",
+    "prompt": "Vad är clavicula på svenska?",
     "correct": "nyckelbenet",
     "distractors": [
       "handrötsben",
@@ -5950,7 +5950,7 @@
   {
     "id": "q1310",
     "type": "tf",
-    "prompt": "Nyckelbenet heter clavicle på latin",
+    "prompt": "Nyckelbenet heter clavicula på latin",
     "correct": "Sant",
     "distractors": [
       "Falskt"
