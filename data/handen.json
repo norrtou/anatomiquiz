@@ -49,7 +49,7 @@
     "id": "q5",
     "type": "mc",
     "prompt": "Diagonalt volargrepp är ett grepp där:",
-    "correct": "Palmar grepp med objektet diagonalt placerat",
+    "correct": "palmär grepp med objektet diagonalt placerat",
     "distractors": [
       "Alla fingrar tillsammans runt objektet",
       "Tumme mot radiella sidan av pekfingret",
@@ -62,7 +62,7 @@
     "id": "q6",
     "type": "mc",
     "prompt": "Transversellt volargrepp är ett grepp där:",
-    "correct": "Palmar grepp med objektet tvärsgående placerat",
+    "correct": "palmär grepp med objektet tvärsgående placerat",
     "distractors": [
       "Tumme och två fingrar på spetsarna",
       "Alla fingrar tillsammans runt objektet",
@@ -78,7 +78,7 @@
     "correct": "Hålla rund eller sfäriskt objekt med öppen hand",
     "distractors": [
       "Tumme mot radiella sidan av pekfingret",
-      "Palmar grepp med objektet diagonalt placerat",
+      "palmär grepp med objektet diagonalt placerat",
       "Krok-liknande grepp utan tumme"
     ],
     "topic": "handen_grepptyper",
@@ -91,7 +91,7 @@
     "correct": "Krok-liknande grepp utan tummes medverkan",
     "distractors": [
       "Alla fingrar tillsammans runt objektet",
-      "Palmar grepp med objektet tvärsgående placerat",
+      "palmär grepp med objektet tvärsgående placerat",
       "Tumme mot radiella sidan av pekfingret"
     ],
     "topic": "handen_grepptyper",
@@ -597,7 +597,7 @@
   {
     "id": "q50",
     "type": "tf",
-    "prompt": "Extensor retinaklet har 6 distinkta fack.",
+    "prompt": "Extensor retinaculum har 6 distinkta fack.",
     "correct": "Sant",
     "topic": "handen_senskidor",
     "difficulty": "medel",
@@ -641,7 +641,7 @@
   {
     "id": "q54",
     "type": "tf",
-    "prompt": "Carpal tunnel syndrome orsakas av N. medianus trycks i karpaltunneln.",
+    "prompt": "karpalkanalsyndrom orsakas av N. medianus trycks i karpaltunneln.",
     "correct": "Sant",
     "topic": "handen_patologi",
     "difficulty": "svår",
@@ -674,7 +674,7 @@
   {
     "id": "q57",
     "type": "tf",
-    "prompt": "Guyon canal syndrome påverkar N. ulnaris.",
+    "prompt": "Guyons kanalsyndrom påverkar N. ulnaris.",
     "correct": "Sant",
     "topic": "handen_patologi",
     "difficulty": "svår",
@@ -1289,7 +1289,7 @@
   {
     "id": "q106",
     "type": "tf",
-    "prompt": "N. radialis innerverar Dorsal surface",
+    "prompt": "N. radialis innerverar dorsal surface",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1892,7 +1892,7 @@
   {
     "type": "mc",
     "prompt": "Os scaphoideum ligger i vilken rad på handrotsbenen?",
-    "correct": "proximal row",
+    "correct": "proximal rad",
     "distractors": [
       "mittraden",
       "dorsala raden",
@@ -1916,7 +1916,7 @@
   {
     "type": "mc",
     "prompt": "Os lunatum ligger i vilken rad på handrotsbenen?",
-    "correct": "proximal row",
+    "correct": "proximal rad",
     "distractors": [
       "mittraden",
       "dorsala raden",
@@ -1940,7 +1940,7 @@
   {
     "type": "mc",
     "prompt": "Os triquetrum ligger i vilken rad på handrotsbenen?",
-    "correct": "proximal row",
+    "correct": "proximal rad",
     "distractors": [
       "mittraden",
       "dorsala raden",
@@ -1964,7 +1964,7 @@
   {
     "type": "mc",
     "prompt": "Os pisiforme ligger i vilken rad på handrotsbenen?",
-    "correct": "proximal row",
+    "correct": "proximal rad",
     "distractors": [
       "mittraden",
       "dorsala raden",
@@ -1988,7 +1988,7 @@
   {
     "type": "mc",
     "prompt": "Os trapezium ligger i vilken rad på handrotsbenen?",
-    "correct": "distal row",
+    "correct": "distal rad",
     "distractors": [
       "mittraden",
       "dorsala raden",
@@ -2012,7 +2012,7 @@
   {
     "type": "mc",
     "prompt": "Os trapezoideum ligger i vilken rad på handrotsbenen?",
-    "correct": "distal row",
+    "correct": "distal rad",
     "distractors": [
       "mittraden",
       "dorsala raden",
@@ -2036,7 +2036,7 @@
   {
     "type": "mc",
     "prompt": "Os capitatum ligger i vilken rad på handrotsbenen?",
-    "correct": "distal row",
+    "correct": "distal rad",
     "distractors": [
       "mittraden",
       "dorsala raden",
@@ -2060,7 +2060,7 @@
   {
     "type": "mc",
     "prompt": "Os hamatum ligger i vilken rad på handrotsbenen?",
-    "correct": "distal row",
+    "correct": "distal rad",
     "distractors": [
       "mittraden",
       "dorsala raden",
@@ -2084,9 +2084,9 @@
   {
     "type": "mc",
     "prompt": "M. abductor pollicis brevis ligger i vilken region?",
-    "correct": "Thenar region",
+    "correct": "thenar region",
     "distractors": [
-      "Dorsal region",
+      "dorsal region",
       "Central region",
       "Underarmsregion"
     ],
@@ -2097,9 +2097,9 @@
   {
     "type": "mc",
     "prompt": "M. flexor pollicis brevis ligger i vilken region?",
-    "correct": "Thenar region",
+    "correct": "thenar region",
     "distractors": [
-      "Dorsal region",
+      "dorsal region",
       "Central region",
       "Underarmsregion"
     ],
@@ -2110,9 +2110,9 @@
   {
     "type": "mc",
     "prompt": "M. opponens pollicis ligger i vilken region?",
-    "correct": "Thenar region",
+    "correct": "thenar region",
     "distractors": [
-      "Dorsal region",
+      "dorsal region",
       "Central region",
       "Underarmsregion"
     ],
@@ -2123,9 +2123,9 @@
   {
     "type": "mc",
     "prompt": "M. adductor pollicis ligger i vilken region?",
-    "correct": "Thenar region",
+    "correct": "thenar region",
     "distractors": [
-      "Dorsal region",
+      "dorsal region",
       "Central region",
       "Underarmsregion"
     ],
@@ -2136,9 +2136,9 @@
   {
     "type": "mc",
     "prompt": "M. abductor digiti minimi ligger i vilken region?",
-    "correct": "Hypothenar region",
+    "correct": "hypothenar region",
     "distractors": [
-      "Dorsal region",
+      "dorsal region",
       "Central region",
       "Underarmsregion"
     ],
@@ -2149,9 +2149,9 @@
   {
     "type": "mc",
     "prompt": "M. flexor digiti minimi brevis ligger i vilken region?",
-    "correct": "Hypothenar region",
+    "correct": "hypothenar region",
     "distractors": [
-      "Dorsal region",
+      "dorsal region",
       "Central region",
       "Underarmsregion"
     ],
@@ -2162,9 +2162,9 @@
   {
     "type": "mc",
     "prompt": "M. opponens digiti minimi ligger i vilken region?",
-    "correct": "Hypothenar region",
+    "correct": "hypothenar region",
     "distractors": [
-      "Dorsal region",
+      "dorsal region",
       "Central region",
       "Underarmsregion"
     ],
@@ -2314,7 +2314,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Carpal tunnel syndrome påverkar N. medianus",
+    "prompt": "karpalkanalsyndrom påverkar N. medianus",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2325,7 +2325,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Guyon canal syndrome påverkar N. ulnaris",
+    "prompt": "Guyons kanalsyndrom påverkar N. ulnaris",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2336,7 +2336,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Dupuytren contracture påverkar Palmar fascia",
+    "prompt": "Dupuytren kontraktur påverkar palmär fascia",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2347,7 +2347,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Mallet finger påverkar Extensor sena injury",
+    "prompt": "mallettumme påverkar Extensor sena skada",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2358,7 +2358,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Boutonniere deformity påverkar PIP led",
+    "prompt": "buttoniere deformitet påverkar PIP led",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2498,7 +2498,7 @@
   },
   {
     "type": "tf",
-    "prompt": "N. radialis innerverar Dorsal hand sensation",
+    "prompt": "N. radialis innerverar dorsal hand sensation",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2509,7 +2509,7 @@
   },
   {
     "type": "tf",
-    "prompt": "N. radialis innerverar thenar muscles",
+    "prompt": "N. radialis innerverar thenar-muskler",
     "correct": "Falskt",
     "distractors": [
       "Sant"
@@ -2782,7 +2782,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Extensor senor går genom Dorsal tunnels",
+    "prompt": "Extensor senor går genom dorsal tunnels",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2793,7 +2793,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Flexor digitorum superficialis går genom Vinculum",
+    "prompt": "Flexor digitorum superficialis går genom vinculum",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3024,7 +3024,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Palmer arches försörjer hand perfusion",
+    "prompt": "Palmer bågar försörjer hand perfusion",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3035,7 +3035,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Superficial palmar arch försörjer common digital arteries",
+    "prompt": "Superficial palmär båge försörjer common digital arteries",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3202,8 +3202,8 @@
   },
   {
     "type": "mc",
-    "prompt": "Vilken är funktionen av Dorsal radiocarpal ligament?",
-    "correct": "Dorsal stability",
+    "prompt": "Vilken är funktionen av dorsal radiocarpal ligament?",
+    "correct": "dorsal stability",
     "distractors": [
       "Flexion",
       "Extension",
@@ -3285,7 +3285,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Flexor slida: sena protection",
+    "prompt": "Flexor slida: sena skyddande",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3296,7 +3296,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Dorsal interossei: abduction primary action",
+    "prompt": "dorsal interossei: abduction primary action",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3307,7 +3307,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Palmar interossei: adduction primary action",
+    "prompt": "palmär interossei: adduction primary action",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3890,7 +3890,7 @@
   },
   {
     "type": "tf",
-    "prompt": "N. medianus har någon sensorisk eller motorisk funktion för Dorsal hand",
+    "prompt": "N. medianus har någon sensorisk eller motorisk funktion för dorsal hand",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3901,7 +3901,7 @@
   },
   {
     "type": "tf",
-    "prompt": "N. medianus har någon sensorisk eller motorisk funktion för palmar hand",
+    "prompt": "N. medianus har någon sensorisk eller motorisk funktion för palmär hand",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3967,7 +3967,7 @@
   },
   {
     "type": "tf",
-    "prompt": "N. ulnaris har någon sensorisk eller motorisk funktion för Dorsal hand",
+    "prompt": "N. ulnaris har någon sensorisk eller motorisk funktion för dorsal hand",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3978,7 +3978,7 @@
   },
   {
     "type": "tf",
-    "prompt": "N. ulnaris har någon sensorisk eller motorisk funktion för palmar hand",
+    "prompt": "N. ulnaris har någon sensorisk eller motorisk funktion för palmär hand",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4044,7 +4044,7 @@
   },
   {
     "type": "tf",
-    "prompt": "N. radialis har någon sensorisk eller motorisk funktion för Dorsal hand",
+    "prompt": "N. radialis har någon sensorisk eller motorisk funktion för dorsal hand",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4055,7 +4055,7 @@
   },
   {
     "type": "tf",
-    "prompt": "N. radialis har någon sensorisk eller motorisk funktion för palmar hand",
+    "prompt": "N. radialis har någon sensorisk eller motorisk funktion för palmär hand",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4165,7 +4165,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Radialis-nerven innerverar Dorsal hand",
+    "prompt": "Radialis-nerven innerverar dorsal hand",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4242,7 +4242,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Thenar muskler rör tummen",
+    "prompt": "thenar muskler rör tummen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4253,7 +4253,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Hypothenar muskler rör lillfingret",
+    "prompt": "hypothenar muskler rör lillfingret",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4264,7 +4264,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Carpal tunnel syndrome orsakas av nervkompression",
+    "prompt": "karpalkanalsyndrom orsakas av nervkompression",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4505,8 +4505,8 @@
   },
   {
     "type": "mc",
-    "prompt": "Motsatsen till Dorsal flexion är:",
-    "correct": "Palmar flexion",
+    "prompt": "Motsatsen till dorsal flexion är:",
+    "correct": "palmär flexion",
     "distractors": [
       "Rotation",
       "Cirkumduktion",
@@ -4672,7 +4672,7 @@
   },
   {
     "type": "mc",
-    "prompt": "Thenar region är området för:",
+    "prompt": "thenar region är området för:",
     "correct": "tummen",
     "distractors": [
       "Benet",
@@ -4685,7 +4685,7 @@
   },
   {
     "type": "mc",
-    "prompt": "Hypothenar region är området för:",
+    "prompt": "hypothenar region är området för:",
     "correct": "lillfingret",
     "distractors": [
       "Benet",
@@ -4821,7 +4821,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Dorsal interossei gör abduktion",
+    "prompt": "dorsal interossei gör abduktion",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4832,7 +4832,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Palmar interossei gör adduktion",
+    "prompt": "palmär interossei gör adduktion",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4975,7 +4975,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Extensor senor är organiserade i 6 compartments",
+    "prompt": "Extensor senor är organiserade i 6 fack",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4986,7 +4986,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Carpal tunnel syndrome komprimerar medianus-nerven",
+    "prompt": "karpalkanalsyndrom komprimerar medianus-nerven",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5250,7 +5250,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Dorsal interossei motsvarar fingerabduktion",
+    "prompt": "dorsal interossei motsvarar fingerabduktion",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5261,7 +5261,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Palmar interossei motsvarar fingeradduktion",
+    "prompt": "palmär interossei motsvarar fingeradduktion",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5272,7 +5272,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Thenar region innehåller opponentsmuskeln",
+    "prompt": "thenar region innehåller opponentsmuskeln",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5283,7 +5283,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Hypothenar region motsvarar lillfinger muskulatur",
+    "prompt": "hypothenar region motsvarar lillfinger muskulatur",
     "correct": "Sant",
     "distractors": [
       "Falskt"
