@@ -3426,12 +3426,12 @@
   {
     "id": "q251",
     "type": "mc",
-    "prompt": "'Sänka axlarna' är en rörelse som kallas _____",
+    "prompt": "Sänka axlarna direkt ned från sidan kallas _____",
     "correct": "Depression",
     "distractors": [
-      "Elevation",
-      "Cirkumduktion",
-      "Adduktion"
+      "Flexion",
+      "Rotation",
+      "Pronation"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3538,12 +3538,12 @@
   {
     "id": "q259",
     "type": "mc",
-    "prompt": "'Vrida benet utåt' är en rörelse som kallas _____",
-    "correct": "Utåtrotation",
+    "prompt": "Vrida benet RAKT UTÅT när man ligger på rygg kallas _____",
+    "correct": "Extern rotation (utåtrotation)",
     "distractors": [
-      "Inåtrotation",
       "Supination",
-      "Depression"
+      "Pronation",
+      "Abduktion"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -3566,12 +3566,12 @@
   {
     "id": "q261",
     "type": "mc",
-    "prompt": "'Sträcka handleden' är en rörelse som kallas _____",
+    "prompt": "Sträcka handleden bakåt kallas _____",
     "correct": "Extension",
     "distractors": [
-      "Flexion",
-      "Plantarflexion",
-      "Retraktion"
+      "Rotation",
+      "Pronation",
+      "Inversion"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -4656,12 +4656,12 @@
   {
     "id": "q341",
     "type": "mc",
-    "prompt": "Vilken rörelse är det när man drar något från mitten?",
+    "prompt": "Vilken rörelse är det när man drar något bort från mittlinjen utan att röra det upp?",
     "correct": "Abduktion",
     "distractors": [
-      "Eversion",
-      "Elevation",
-      "Adduktion"
+      "Rotation",
+      "Flexion",
+      "Pronation"
     ],
     "topic": "rörelser",
     "difficulty": "Easy",
@@ -6128,12 +6128,12 @@
   {
     "id": "q449",
     "type": "mc",
-    "prompt": "Lyfta armen uppåt från sidan är en",
+    "prompt": "Lyfta armen rakt ut från sidan (utan att röra den framåt) kallas _____",
     "correct": "Abduktion",
     "distractors": [
-      "Adduktion",
+      "Rotation",
       "Flexion",
-      "Elevation"
+      "Pronation"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -6142,12 +6142,12 @@
   {
     "id": "q450",
     "type": "mc",
-    "prompt": "Föra armen ned mot kroppen är en",
+    "prompt": "Föra armen ned längs sidan av kroppen (dra den in mot kroppen) kallas _____",
     "correct": "Adduktion",
     "distractors": [
-      "Abduktion",
+      "Flexion",
       "Extension",
-      "Depression"
+      "Pronation"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -6156,12 +6156,12 @@
   {
     "id": "q451",
     "type": "mc",
-    "prompt": "Dra armen uppåt är en",
+    "prompt": "Lyfta armen rakt uppåt från kroppen kallas _____",
     "correct": "Elevation",
     "distractors": [
-      "Depression",
-      "Abduktion",
-      "Flexion"
+      "Adduktion",
+      "Flexion",
+      "Inversion"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -6170,12 +6170,12 @@
   {
     "id": "q452",
     "type": "mc",
-    "prompt": "Sänka armen nedåt är en",
+    "prompt": "Sänka armen ned från axelnivå kallas _____",
     "correct": "Depression",
     "distractors": [
-      "Elevation",
-      "Adduktion",
-      "Extension"
+      "Abduktion",
+      "Extension",
+      "Pronation"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -6730,12 +6730,12 @@
   {
     "id": "q492",
     "type": "mc",
-    "prompt": "En rörelse bort från kroppen kallas",
+    "prompt": "En rörelse bort från mittlinjen av kroppen kallas _____",
     "correct": "Abduktion",
     "distractors": [
-      "Adduktion",
+      "Rotation",
       "Flexion",
-      "Elevation"
+      "Extension"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -6744,12 +6744,12 @@
   {
     "id": "q493",
     "type": "mc",
-    "prompt": "En rörelse mot kroppen kallas",
+    "prompt": "En rörelse mot mittlinjen av kroppen kallas _____",
     "correct": "Adduktion",
     "distractors": [
-      "Abduktion",
+      "Flexion",
       "Extension",
-      "Depression"
+      "Pronation"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
@@ -6772,12 +6772,12 @@
   {
     "id": "q495",
     "type": "mc",
-    "prompt": "Att sänka något kallas",
+    "prompt": "Att sänka något från axelnivå ned kallas _____",
     "correct": "Depression",
     "distractors": [
-      "Elevation",
-      "Extension",
-      "Adduktion"
+      "Abduktion",
+      "Flexion",
+      "Rotation"
     ],
     "topic": "begrepp",
     "difficulty": "Easy",
