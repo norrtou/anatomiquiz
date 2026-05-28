@@ -6810,5 +6810,43 @@
     "topic": "begrepp",
     "difficulty": "Easy",
     "source": "Terminologi"
+  },
+  {
+    "id": "q501",
+    "type": "mc",
+    "prompt": "Vilken riktning betyder mot huvudet?",
+    "correct": "Kranial",
+    "distractors": [
+      "Lateral",
+      "Distal",
+      "Superior"
+    ],
+    "topic": "riktningar",
+    "difficulty": "Normal",
+    "source": "generated"
+  },
+  {
+    "id": "q502",
+    "type": "tf",
+    "prompt": "Medial betyder mot mittlinjen",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "riktningar",
+    "difficulty": "Normal",
+    "source": "generated"
+  },
+  {
+    "id": "q503",
+    "type": "tf",
+    "prompt": "Distal betyder längre från ursprung",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "riktningar",
+    "difficulty": "Normal",
+    "source": "generated"
   }
 ]
