@@ -162,6 +162,8 @@ async function startQuiz(){
       topicMatch = q.topic === 'riktningar'
     } else if(topic === 'osteologi') {
       topicMatch = q.topic.startsWith('osteologi_')
+    } else if(topic === 'muskler') {
+      topicMatch = q.topic.startsWith('muskler_')
     } else {
       topicMatch = q.topic === topic
     }
