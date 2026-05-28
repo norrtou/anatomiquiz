@@ -516,13 +516,16 @@ select:focus {
 
 /* Timer warning state - red when running out */
 .timer.warning {
-  color: var(--error);
-  animation: pulse 1s infinite;
+  color: white;
+  background-color: var(--error);
+  padding: 4px 8px;
+  border-radius: 4px;
+  animation: blink-red 0.5s infinite;
 }
 
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.6; }
+@keyframes blink-red {
+  0%, 100% { background-color: var(--error); opacity: 1; }
+  50% { background-color: #ff6b6b; opacity: 0.8; }
 }
 
 /* ============================================================================

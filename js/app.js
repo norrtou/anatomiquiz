@@ -270,6 +270,12 @@ function startTimer(sec){
   timerInterval = setInterval(()=>{
     timeLeft--
     el('timer').textContent = `Tid: ${timeLeft}s`
+    // Blink rött när under 4 sekunder
+    if(timeLeft < 4){
+      el('timer').classList.add('warning')
+    } else {
+      el('timer').classList.remove('warning')
+    }
     if(timeLeft<=0){
       clearTimer();
       // auto mark wrong and show correct
