@@ -651,26 +651,31 @@ ol li {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 8px;
   }
 
   .quiz-actions {
     margin-left: 0;
+    gap: 8px;
   }
 
   .btn {
-    padding: 8px 10px;
-    font-size: 0.85rem;
-    min-height: 40px;
+    padding: 6px 8px;
+    font-size: 0.8rem;
+    min-height: 36px;
     flex: 0 0 auto;
   }
 
   .btn-cancel {
     flex: 0 0 auto;
+    padding: 6px 8px;
+    font-size: 0.8rem;
   }
 
   .timer {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     min-width: auto;
+    display: none;
   }
 
   .header {
