@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.9
+- Kvalitetsgranskning ben.json: 56 rättningar — stavfel i 11 prompts (pannbenetet→pannbenet m.fl.), faktafel (stapesius→stapes, Os coccyx→Os coccygis), grammatik (en revben→ett revben), fixade sifferfrågor med bennamn-distraktorer (q38/39/40/64/114/245), duplikat-distraktor (q233), semantisk dubblettdistraktor (q170), korrigerade topics för 28 frågor felaktigt märkta osteologi_kranium.
+- Fixade bugg i tentaplugg.json: difficulty-fältet saknades vilket gjorde att ämnet inte gick att starta.
+
 ## 0.3.8
 - Ändrade menytext från "Studier (tentor)" till "Tentaplugg".
 

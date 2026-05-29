@@ -186,7 +186,7 @@
   {
     "id": "q15",
     "type": "mc",
-    "prompt": "Var sitter pannbenetet?",
+    "prompt": "Var sitter pannbenet?",
     "correct": "i fronten av skallen",
     "distractors": [
       "på baksidan",
@@ -200,7 +200,7 @@
   {
     "id": "q16",
     "type": "mc",
-    "prompt": "Var sitter tinningbenetet?",
+    "prompt": "Var sitter tinningbenet?",
     "correct": "på sidan av skallen",
     "distractors": [
       "i fronten",
@@ -214,7 +214,7 @@
   {
     "id": "q17",
     "type": "mc",
-    "prompt": "Var sitter hjässbenetet?",
+    "prompt": "Var sitter hjässbenet?",
     "correct": "på sidan och toppen av skallen",
     "distractors": [
       "i näsan",
@@ -228,7 +228,7 @@
   {
     "id": "q18",
     "type": "mc",
-    "prompt": "Var sitter nackbenetet?",
+    "prompt": "Var sitter nackbenet?",
     "correct": "på baksidan av skallen",
     "distractors": [
       "i fronten",
@@ -270,7 +270,7 @@
   {
     "id": "q21",
     "type": "mc",
-    "prompt": "Var sitter näsbenetet?",
+    "prompt": "Var sitter näsbenet?",
     "correct": "i centrum av ansiktet mellan ögonen",
     "distractors": [
       "på kinderna",
@@ -284,7 +284,7 @@
   {
     "id": "q22",
     "type": "mc",
-    "prompt": "Var sitter kindbenetet?",
+    "prompt": "Var sitter kindbenet?",
     "correct": "på sidorna av ansiktet under ögonen",
     "distractors": [
       "på pannan",
@@ -303,7 +303,7 @@
     "distractors": [
       "näsans ben",
       "underkäkens spets",
-      "en revben"
+      "ett revben"
     ],
     "topic": "osteologi_kranium",
     "difficulty": "Normal",
@@ -493,9 +493,9 @@
     "prompt": "Hur många halskotor finns det?",
     "correct": "7",
     "distractors": [
-      "pannbenet",
-      "tinningbenet",
-      "hjässbenet"
+      "5",
+      "8",
+      "12"
     ],
     "topic": "osteologi_columna",
     "difficulty": "Normal",
@@ -507,9 +507,9 @@
     "prompt": "Hur många bröstkotor finns det?",
     "correct": "12",
     "distractors": [
-      "pannbenet",
-      "tinningbenet",
-      "hjässbenet"
+      "7",
+      "10",
+      "5"
     ],
     "topic": "osteologi_columna",
     "difficulty": "Normal",
@@ -521,9 +521,9 @@
     "prompt": "Hur många ländkotor finns det?",
     "correct": "5",
     "distractors": [
-      "pannbenet",
-      "tinningbenet",
-      "hjässbenet"
+      "4",
+      "7",
+      "12"
     ],
     "topic": "osteologi_columna",
     "difficulty": "Normal",
@@ -712,7 +712,7 @@
   {
     "id": "q55",
     "type": "tf",
-    "prompt": "Os coccyx är gödben",
+    "prompt": "Os coccygis är gödben",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -828,8 +828,8 @@
     "correct": "24",
     "distractors": [
       "12 totalt",
-      "pannbenet",
-      "tinningbenet"
+      "20",
+      "28"
     ],
     "topic": "osteologi_thorax",
     "difficulty": "Normal",
@@ -1475,9 +1475,9 @@
     "prompt": "Hur många karpalben finns det?",
     "correct": "8",
     "distractors": [
-      "pannbenet",
-      "tinningbenet",
-      "hjässbenet"
+      "6",
+      "10",
+      "5"
     ],
     "topic": "osteologi_upper",
     "difficulty": "Normal",
@@ -1718,7 +1718,7 @@
   {
     "id": "q133",
     "type": "mc",
-    "prompt": "Var sitter skenbenetet?",
+    "prompt": "Var sitter skenbenet?",
     "correct": "på insidan av underbenet",
     "distractors": [
       "på utsidan av underbenet",
@@ -1732,7 +1732,7 @@
   {
     "id": "q134",
     "type": "mc",
-    "prompt": "Var sitter vadbenetet?",
+    "prompt": "Var sitter vadbenet?",
     "correct": "på utsidan av underbenet",
     "distractors": [
       "på insidan av underbenet",
@@ -1857,7 +1857,7 @@
     "distractors": [
       "de översta revbenen",
       "alla revben lika mycket",
-      "ingen revben kan böjas"
+      "inga revben kan böjas"
     ],
     "topic": "osteologi_thorax",
     "difficulty": "Normal",
@@ -2209,7 +2209,7 @@
     "distractors": [
       "bara de fyra proximala",
       "bara de fyra distala",
-      "alla åtta tillsammans"
+      "bara fem av åtta"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -2559,7 +2559,7 @@
     "id": "q197",
     "type": "mc",
     "prompt": "Vilka leder är vridleder?",
-    "correct": "atlantoaxiallleden",
+    "correct": "atlantoaxialleden",
     "distractors": [
       "axelleden",
       "höftleden",
@@ -3026,7 +3026,7 @@
     "correct": "långt från centerlinjen/mittlinjen av kroppen",
     "distractors": [
       "mot mittlinjen",
-      "mot mittlinjen",
+      "nedåt",
       "uppåt"
     ],
     "topic": "osteologi_orientation",
@@ -3173,9 +3173,9 @@
     "prompt": "Hur många ben finns det ungefär i en vuxen människa?",
     "correct": "206",
     "distractors": [
-      "pannbenet",
-      "tinningbenet",
-      "hjässbenet"
+      "208",
+      "180",
+      "214"
     ],
     "topic": "osteologi_summary",
     "difficulty": "Normal",
@@ -3486,7 +3486,7 @@
   {
     "id": "q269",
     "type": "tf",
-    "prompt": "Ulna ligger på lillfingeridan",
+    "prompt": "Ulna ligger på lillfingersidan",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -3626,7 +3626,7 @@
   {
     "id": "q280",
     "type": "mc",
-    "prompt": "Vad är ett trochanterskallt ben ben?",
+    "prompt": "Vad är en trochanter?",
     "correct": "den stora eller lilla knölen på lårbenet",
     "distractors": [
       "en process på skulderbladet",
@@ -4179,7 +4179,7 @@
     "id": "q322",
     "type": "mc",
     "prompt": "Vilken är det minsta benet i kroppen?",
-    "correct": "stapesius",
+    "correct": "stapes",
     "distractors": [
       "periosteum",
       "talus",
@@ -4205,7 +4205,7 @@
     "id": "q324",
     "type": "mc",
     "prompt": "Vad motsätter sig det mest till att ben brister?",
-    "correct": "kollagen-innehål och mineralinnehål tillsammans",
+    "correct": "kollageninnehåll och mineralinnehåll tillsammans",
     "distractors": [
       "bara mineraler",
       "bara kollagen",
@@ -4218,7 +4218,7 @@
   {
     "id": "q325",
     "type": "tf",
-    "prompt": "Benmassa ökar genom livet och når maksimum vid 30 års ålder",
+    "prompt": "Benmassa ökar genom livet och når maximum vid 30 års ålder",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4270,7 +4270,7 @@
     "source": "generated"
   },
   {
-    "prompt": "Vad heter kindbenben på latin?",
+    "prompt": "Vad heter kindbenet på latin?",
     "correct": "os zygomaticum",
     "type": "mc",
     "distractors": [
@@ -4466,7 +4466,7 @@
     "source": "generated"
   },
   {
-    "prompt": "Vad heter sterilbenet på latin?",
+    "prompt": "Vad heter gödbenet på latin?",
     "correct": "os coccygis",
     "type": "mc",
     "distractors": [
@@ -4821,7 +4821,7 @@
       "ossa carpi",
       "ossa metacarpi"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_upper",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -4835,7 +4835,7 @@
       "ossa metacarpi",
       "phalanges"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_upper",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -4849,7 +4849,7 @@
       "phalanges",
       "femur"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_thorax",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -4863,7 +4863,7 @@
       "femur",
       "patella"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_thorax",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -4989,7 +4989,7 @@
       "bröstbenet",
       "revben"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_columna",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -5003,7 +5003,7 @@
       "revben",
       "pannbenet"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_columna",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -5017,7 +5017,7 @@
       "pannbenet",
       "tinningbenet"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_columna",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -5031,7 +5031,7 @@
       "tinningbenet",
       "hjässbenet"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_columna",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -5045,7 +5045,7 @@
       "hjässbenet",
       "nackbenet"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_columna",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -5059,7 +5059,7 @@
       "nackbenet",
       "överkäken"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_columna",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -5073,7 +5073,7 @@
       "överkäken",
       "underkäken"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_upper",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -5087,7 +5087,7 @@
       "underkäken",
       "näsbenet"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_upper",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -5101,7 +5101,7 @@
       "näsbenet",
       "kindbenet"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_upper",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -5115,7 +5115,7 @@
       "kindbenet",
       "ryggraden"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_upper",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -5129,7 +5129,7 @@
       "ryggraden",
       "halskotor"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_upper",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -5143,7 +5143,7 @@
       "halskotor",
       "bröstkotor"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_upper",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -5157,7 +5157,7 @@
       "bröstkotor",
       "ländkotor"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_upper",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -5171,7 +5171,7 @@
       "ländkotor",
       "korsbenet"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_lower",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -5185,7 +5185,7 @@
       "korsbenet",
       "gödben"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_lower",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -5199,7 +5199,7 @@
       "gödben",
       "överarmsben"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_lower",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -5213,7 +5213,7 @@
       "överarmsben",
       "armbågsknotan"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_lower",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -5227,7 +5227,7 @@
       "armbågsknotan",
       "strålben"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_lower",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -5241,7 +5241,7 @@
       "strålben",
       "armbågsbenet"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_lower",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -5255,7 +5255,7 @@
       "armbågsbenet",
       "handrotsben"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_lower",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -5269,7 +5269,7 @@
       "handrotsben",
       "mellanhåndsben"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_upper",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -5283,7 +5283,7 @@
       "mellanhåndsben",
       "fingerben"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_upper",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -5297,7 +5297,7 @@
       "fingerben",
       "lårbenet"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_thorax",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -5311,7 +5311,7 @@
       "lårbenet",
       "knäskålen"
     ],
-    "topic": "osteologi_kranium",
+    "topic": "osteologi_thorax",
     "difficulty": "Normal",
     "source": "Osteologi"
   },
@@ -5378,7 +5378,7 @@
   {
     "id": "q409",
     "type": "tf",
-    "prompt": "Ryggraden har 33 kotår",
+    "prompt": "Ryggraden har 33 kotor",
     "correct": "Sant",
     "distractors": [
       "Falskt"
