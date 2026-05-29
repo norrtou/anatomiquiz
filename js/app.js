@@ -7,6 +7,26 @@ function getQuestionsPath(topic) {
   return './data/riktningar.json'
 }
 
+// Topics that have Hard difficulty questions
+const topicsWithHardQuestions = ['handen']
+
+function updateDifficultyOptions() {
+  const topic = el('topic').value
+  const difficultySelect = el('difficulty')
+  const hardOption = difficultySelect.querySelector('option[value="Hard"]')
+
+  if (topicsWithHardQuestions.includes(topic)) {
+    // This topic has Hard questions - enable the option
+    hardOption.disabled = false
+  } else {
+    // This topic doesn't have Hard questions - disable and reset to 'any'
+    hardOption.disabled = true
+    if (difficultySelect.value === 'Hard') {
+      difficultySelect.value = 'any'
+    }
+  }
+}
+
 // NOTE: This app will ensure up to MAX_QUESTIONS questions exist by generating
 // placeholders for missing entries. Real questions should be imported later
 // into the appropriate data files. Placeholders are non-medical and serve only
@@ -458,6 +478,10 @@ function init(){
   if(imp) imp.addEventListener('change', handleImportFile)
   el('backToSetup').addEventListener('click', ()=>{el('highscores').classList.add('hidden');el('setup').classList.remove('hidden')})
   el('clearScores').addEventListener('click', ()=>{ if(confirm('Rensa topplista?')) clearScores() })
+
+  // Update difficulty options when topic changes
+  el('topic').addEventListener('change', updateDifficultyOptions)
+  updateDifficultyOptions() // Initial state
 }
 
 document.addEventListener('DOMContentLoaded', init)
