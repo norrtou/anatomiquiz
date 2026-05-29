@@ -162,15 +162,10 @@ main {
 }
 
 .header h1 .version {
-  display: inline-block;
-  margin-left: 12px;
-  font-size: 0.6em;
-  font-weight: 500;
-  color: var(--text-secondary) !important;
-  background: none !important;
-  -webkit-text-fill-color: var(--text-secondary) !important;
-  background-clip: unset !important;
-  opacity: 0.6;
+  font-size: 0.35em;
+  font-weight: 400;
+  opacity: 0.5;
+  -webkit-text-fill-color: inherit;
 }
 
 .tagline {
