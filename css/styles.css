@@ -162,14 +162,21 @@ main {
 }
 
 .header h1 .version {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 400;
   color: #000 !important;
   -webkit-text-fill-color: #000 !important;
   background-clip: unset !important;
   -webkit-background-clip: unset !important;
-  display: inline;
+  -webkit-text-stroke: 0 !important;
+  display: inline !important;
   margin-left: 4px;
+}
+
+@media (max-width: 640px) {
+  .header h1 .version {
+    font-size: 1.2rem;
+  }
 }
 
 .tagline {
