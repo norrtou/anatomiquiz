@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.3
+- Fixade versionssynlighet i rubrik - versionsnumret är nu synligt efter "Anatomiquiz".
+
 ## 0.3.2
 - Lagt till alla ämnen (neurologi, blodomloppet) i "Blandade frågor" och aktiverat Hard-svårighet för relevanta ämnen.
 
