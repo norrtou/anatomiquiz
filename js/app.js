@@ -14,15 +14,21 @@ function updateDifficultyOptions() {
   const topic = el('topic').value
   const difficultySelect = el('difficulty')
   const hardOption = difficultySelect.querySelector('option[value="Hard"]')
+  const anyOption = difficultySelect.querySelector('option[value="any"]')
 
   if (topicsWithHardQuestions.includes(topic)) {
-    // This topic has Hard questions - enable the option
+    // This topic has Hard questions - enable both Blandat and Svår
+    anyOption.disabled = false
     hardOption.disabled = false
-  } else {
-    // This topic doesn't have Hard questions - disable and reset to 'any'
-    hardOption.disabled = true
-    if (difficultySelect.value === 'Hard') {
+    if (difficultySelect.value !== 'any' && difficultySelect.value !== 'Normal' && difficultySelect.value !== 'Hard') {
       difficultySelect.value = 'any'
+    }
+  } else {
+    // This topic doesn't have Hard questions - only Normal is available
+    anyOption.disabled = true
+    hardOption.disabled = true
+    if (difficultySelect.value !== 'Normal') {
+      difficultySelect.value = 'Normal'
     }
   }
 }
