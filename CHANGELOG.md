@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.7
+- Döpte om studier.json till tentaplugg.json och uppdaterade alla referenser i app.js och index.html.
+
 ## 0.3.6
 - Kvalitetsgranskning av studier.json: fixade stavfel (överarmsbenet, Kontorslandskapets), korrigerade grammatik, samt tog bort parentesformat som avslöjade korrekta svar (46 frågor åtgärdade). Bekräftade 59 sant/falskt-frågor i ämnet.
 
