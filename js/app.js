@@ -9,7 +9,7 @@ function getQuestionsPath(topic) {
 }
 
 // Topics that have Hard difficulty questions
-const topicsWithHardQuestions = ['handen']
+const topicsWithHardQuestions = ['handen', 'muskler', 'any_riktningar', 'blandade']
 
 function updateDifficultyOptions() {
   const topic = el('topic').value
@@ -202,7 +202,7 @@ async function startQuiz(){
   // Load questions based on topic
   if(topic === 'blandade'){
     // Load from all subject files for mixed questions
-    const paths = ['./data/ben.json', './data/handen.json', './data/muskler.json', './data/medicinsk_terminologi.json', './data/riktningar.json']
+    const paths = ['./data/ben.json', './data/handen.json', './data/muskler.json', './data/medicinsk_terminologi.json', './data/riktningar.json', './data/neurologi.json', './data/blodomloppet.json']
     await loadQuestionsFromMultiplePaths(paths)
   } else {
     const qsPath = getQuestionsPath(topic)
