@@ -4,6 +4,7 @@ function getQuestionsPath(topic) {
   if (topic === 'muskler') return './data/muskler.json'
   if (topic === 'handen') return './data/handen.json'
   if (topic === 'medicinsk_terminologi') return './data/medicinsk_terminologi.json'
+  if (topic === 'studier') return './data/studier.json'
   // 'blandade' uses loadQuestionsFromMultiplePaths() instead
   return './data/riktningar.json'
 }
@@ -202,7 +203,7 @@ async function startQuiz(){
   // Load questions based on topic
   if(topic === 'blandade'){
     // Load from all subject files for mixed questions
-    const paths = ['./data/ben.json', './data/handen.json', './data/muskler.json', './data/medicinsk_terminologi.json', './data/riktningar.json', './data/neurologi.json', './data/blodomloppet.json']
+    const paths = ['./data/ben.json', './data/handen.json', './data/muskler.json', './data/medicinsk_terminologi.json', './data/riktningar.json', './data/neurologi.json', './data/blodomloppet.json', './data/studier.json']
     await loadQuestionsFromMultiplePaths(paths)
   } else {
     const qsPath = getQuestionsPath(topic)
@@ -236,6 +237,8 @@ async function startQuiz(){
       topicMatch = q.topic.startsWith('muskler_')
     } else if(topic === 'handen') {
       topicMatch = q.topic.startsWith('handen_')
+    } else if(topic === 'studier') {
+      topicMatch = q.topic.startsWith('studier_')
     } else if(topic === 'blandade') {
       // Blandade questions include all topics
       topicMatch = true

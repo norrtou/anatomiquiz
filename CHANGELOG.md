@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.6
+- Kvalitetsgranskning av studier.json: fixade stavfel (överarmsbenet, Kontorslandskapets), korrigerade grammatik, samt tog bort parentesformat som avslöjade korrekta svar (46 frågor åtgärdade). Bekräftade 59 sant/falskt-frågor i ämnet.
+
+## 0.3.5
+- Utökade "Studier (tentor)" med 148 nya frågor (HT25 omtenta, VT20, VT21, HT22) — totalt 353 frågor i ämnet.
+
+## 0.3.4
+- Lagt till nytt ämne "Studier (tentor)" med 205 frågor baserade på ATPB14 ordinarie tentor (HT25 och VT24). Täcker neurologi, osteologi, fysiologi, kardiologi, leder, muskler, ergonomi och åldrande.
+
 ## 0.3.3
 - Fixade versionsvisning i rubriken - versionen visas nu synligt till höger om "Anatomiquiz" på både dator och mobil.
 
