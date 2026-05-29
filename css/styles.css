@@ -165,17 +165,19 @@ main {
   font-size: 1rem;
   font-weight: 400;
   color: #000 !important;
-  -webkit-text-fill-color: #000 !important;
+  background: transparent !important;
   background-clip: unset !important;
   -webkit-background-clip: unset !important;
-  -webkit-text-stroke: 0 !important;
+  -webkit-text-fill-color: #000 !important;
   display: inline !important;
   margin-left: 4px;
+  text-shadow: none !important;
+  filter: none !important;
 }
 
 @media (max-width: 640px) {
   .header h1 .version {
-    font-size: 1.2rem;
+    font-size: 1.2rem !important;
   }
 }
 
