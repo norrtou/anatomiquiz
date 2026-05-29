@@ -1,26 +1,10 @@
-# Changelog
+# CHANGELOG - Anatomiquiz
 
-All notable changes to this project are documented below.
+## 0.3.2
+- Lagt till alla ämnen (neurologi, blodomloppet) i "Blandade frågor" och aktiverat Hard-svårighet för relevanta ämnen.
 
-## [0.3.0] - 2026-05-27
-### Changed
-- App renamed to "Anatomiquiz" (from "Hur är läget?") to reflect broader anatomy focus.
-- Meta description and tagline updated to general anatomy quiz instead of position-specific.
-- Project scope expanded to include all anatomy topics beyond positions and directions.
+## 0.3.1
+- Flyttat "Medicinsk terminologi" till position 2 i ämnes-listan för bättre synlighet.
 
-## [0.2.0] - 2026-05-27
-### Added
-- App renamed to "Hur är läget?" (title, heading, README, meta description).
-- `VERSION` file and `CHANGELOG.md` added.
-- Visual badge for placeholder questions in management view.
-
-### Changed
-- UI language reviewed and standardized (labels, buttons, confirmation texts).
-- Platshållarfrågor excluded from quiz selection until replaced with real questions.
-- LocalStorage keys migrated from `wiil_...` to `hur_...` with automatic migration and cleanup.
-- Meta description and tagline updated.
-
-### Fixed
-- Ensured TF/MC rules and dataset validation remain intact after edits.
-
-
+## 0.3.0
+- Skapat nytt ämne "Medicinsk terminologi" med 500 MC-frågor baserade på 133 medicinska termer (latin/grekiska). Blandad mix av svenska→latin och latin→svenska frågor med 4 alternativ vardera.
