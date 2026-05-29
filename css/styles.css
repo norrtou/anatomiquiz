@@ -165,6 +165,7 @@ main {
   display: flex;
   align-items: baseline;
   gap: 8px;
+  flex-wrap: nowrap;
 }
 
 .header h1 {
@@ -177,12 +178,15 @@ main {
   background-clip: text;
   letter-spacing: -0.5px;
   line-height: 1.2;
+  flex-shrink: 0;
 }
 
 .version {
   font-size: 0.9rem;
   font-weight: 400;
   color: #059669;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .tagline {
