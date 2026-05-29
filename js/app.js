@@ -207,6 +207,9 @@ async function startQuiz(){
       topicMatch = q.topic.startsWith('muskler_')
     } else if(topic === 'handen') {
       topicMatch = q.topic.startsWith('handen_')
+    } else if(topic === 'blandade') {
+      // Blandade questions include all topics
+      topicMatch = true
     } else {
       topicMatch = q.topic === topic
     }
