@@ -164,8 +164,10 @@ main {
 .header h1 .version {
   font-size: 0.8rem;
   font-weight: 400;
-  color: #000;
-  -webkit-text-fill-color: #000;
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+  background-clip: unset !important;
+  -webkit-background-clip: unset !important;
   display: inline;
   margin-left: 4px;
 }
