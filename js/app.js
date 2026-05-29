@@ -3,6 +3,7 @@ function getQuestionsPath(topic) {
   if (topic === 'osteologi') return './data/ben.json'
   if (topic === 'muskler') return './data/muskler.json'
   if (topic === 'handen') return './data/handen.json'
+  if (topic === 'medicinsk_terminologi') return './data/medicinsk_terminologi.json'
   // 'blandade' uses loadQuestionsFromMultiplePaths() instead
   return './data/riktningar.json'
 }
@@ -201,7 +202,7 @@ async function startQuiz(){
   // Load questions based on topic
   if(topic === 'blandade'){
     // Load from all subject files for mixed questions
-    const paths = ['./data/ben.json', './data/handen.json', './data/muskler.json', './data/riktningar.json']
+    const paths = ['./data/ben.json', './data/handen.json', './data/muskler.json', './data/medicinsk_terminologi.json', './data/riktningar.json']
     await loadQuestionsFromMultiplePaths(paths)
   } else {
     const qsPath = getQuestionsPath(topic)
