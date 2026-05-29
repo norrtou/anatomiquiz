@@ -3,7 +3,7 @@ function getQuestionsPath(topic) {
   if (topic === 'osteologi') return './data/ben.json'
   if (topic === 'muskler') return './data/muskler.json'
   if (topic === 'handen') return './data/handen.json'
-  if (topic === 'blandade') return './data/questions.json'
+  // 'blandade' uses loadQuestionsFromMultiplePaths() instead
   return './data/riktningar.json'
 }
 
@@ -255,7 +255,7 @@ async function startQuiz(){
   })
   if(filtered.length===0){
     const msg = realQuestions.length === 0
-      ? 'PROBLEM: Frågor laddade inte från data/questions.json! Checka browser console (F12).'
+      ? 'PROBLEM: Inga frågor laddade! Checka browser console (F12).'
       : 'Inga frågor matchar urvalet. Prova en annan kombination.'
     alert(msg)
     return
