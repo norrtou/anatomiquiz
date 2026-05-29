@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.12
+- Kvalitetsgranskning riktningar.json: 9 rättningar — faktafel ('Hörseln'→'Örat', q104), stavfel ('drejer'→'vrider', q113), correct i distractors (q169), självrefererande distraktorer (q150/q151), fråga med sin egna term som distraktor (q30), inkonsekvent stavning Dorsiflexion→Dorsalflexion (q94/q116/q120).
+
 ## 0.3.11
 - Kvalitetsgranskning muskler.json: 8 rättningar — duplikat ID (q113 → q113b), inkompletta meningar (q17, q60), grammatikfel ('opponerar tumme', 'för och', 'vrid'→'vrida', 'sätts sig').
 

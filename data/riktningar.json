@@ -393,7 +393,7 @@
     "distractors": [
       "Proximal",
       "Posterior",
-      "Ventral"
+      "Lateral"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -1264,7 +1264,7 @@
     "correct": "Supination",
     "distractors": [
       "Pronation",
-      "Dorsiflexion",
+      "Dorsalflexion",
       "Plantarflexion"
     ],
     "topic": "begrepp",
@@ -1394,7 +1394,7 @@
   {
     "id": "q104",
     "type": "mc",
-    "prompt": "Hörseln ligger ____ från hjärtat",
+    "prompt": "Örat ligger ____ från hjärtat",
     "correct": "Lateral",
     "distractors": [
       "Medial"
@@ -1508,7 +1508,7 @@
   {
     "id": "q113",
     "type": "mc",
-    "prompt": "När du drejer huvudet åt sidan sker en _____",
+    "prompt": "När du vrider huvudet åt sidan sker en _____",
     "correct": "Rotation",
     "distractors": [
       "Flexion",
@@ -1552,7 +1552,7 @@
     "correct": "Supination",
     "distractors": [
       "Pronation",
-      "Dorsiflexion",
+      "Dorsalflexion",
       "Abduktion"
     ],
     "topic": "rörelser",
@@ -1606,7 +1606,7 @@
     "correct": "Inversion",
     "distractors": [
       "Eversion",
-      "Dorsiflexion",
+      "Dorsalflexion",
       "Rotation"
     ],
     "topic": "rörelser",
@@ -1975,7 +1975,7 @@
     "prompt": "Vad är motsatsen till Flexion?",
     "correct": "Extension",
     "distractors": [
-      "Flexion"
+      "Adduktion"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -1987,7 +1987,7 @@
     "prompt": "Vad är motsatsen till Extension?",
     "correct": "Flexion",
     "distractors": [
-      "Extension"
+      "Rotation"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2221,7 +2221,7 @@
     "prompt": "Vad är motsatsen till Lateral?",
     "correct": "Medial",
     "distractors": [
-      "Medial",
+      "Proximal",
       "Anterior"
     ],
     "topic": "begrepp",
@@ -5931,8 +5931,7 @@
     "topic": "riktningar",
     "difficulty": "Normal",
     "source": "generated"
-  }
-  ,
+  },
   {
     "id": "q449",
     "type": "mc",
