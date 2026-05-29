@@ -170,7 +170,7 @@
   {
     "id": "q17",
     "type": "mc",
-    "prompt": "Vilken muskel fixering?",
+    "prompt": "Vilken muskel fixerar scapula?",
     "correct": "Trapezius",
     "distractors": [
       "Pectoralis major",
@@ -588,7 +588,7 @@
   {
     "id": "q60",
     "type": "tf",
-    "prompt": "Diafragma andningsmuskel",
+    "prompt": "Diafragma är en andningsmuskel",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -768,7 +768,7 @@
   {
     "id": "q75",
     "type": "tf",
-    "prompt": "Opponens pollicis opponerar tumme",
+    "prompt": "Opponens pollicis opponerar tummen",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1232,10 +1232,9 @@
     "topic": "muskler_klassificering",
     "difficulty": "Normal",
     "source": "Muskler"
-  }
-  ,
+  },
   {
-    "id": "q113",
+    "id": "q113b",
     "type": "mc",
     "prompt": "Vilken situation är ett exempel på koncentrisk flexion av M. deltoideus (anterior del)?",
     "correct": "Att lyfta armen rakt framåt/uppåt för att nå en kaffekopp på översta hyllan.",
@@ -1370,7 +1369,7 @@
     "id": "q124",
     "type": "mc",
     "prompt": "Vilken situation är ett exempel på koncentrisk utåtrotation av M. infraspinatus?",
-    "correct": "Att vrida överarmen utåt för och sträcka sig efter säkerhetsbältet i bilen med samma sidas hand.",
+    "correct": "Att vrida överarmen utåt och sträcka sig efter säkerhetsbältet i bilen med samma sidas hand.",
     "distractors": [
       "Att föra handen till motsatt axel för att klia sig på ryggen."
     ],
@@ -1696,7 +1695,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk opponering av M. opponens pollicis?",
     "correct": "Att föra tummen mot lillfingrets topp för att kunna nypa tag om ett litet knappnålshuvud eller ett gem på golvet.",
     "distractors": [
-      "Att hålla handen helt platt och stel för och klappa i händerna."
+      "Att hålla handen helt platt och stel och klappa i händerna."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Hard",
@@ -2030,7 +2029,7 @@
     "id": "q179",
     "type": "mc",
     "prompt": "Vilken situation är ett exempel på koncentrisk flexion, abduktion och utåtrotation av M. sartorius?",
-    "correct": "Att lyfta benet och vrid det så att du kan lägga upp din vrist på det andra knät (skräddarställning).",
+    "correct": "Att lyfta benet och vrida det så att du kan lägga upp din vrist på det andra knät (skräddarställning).",
     "distractors": [
       "Att sträcka ut benet helt spikrakt framför sig."
     ],
@@ -2284,7 +2283,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk eversion av M. peroneus (fibularis) longus?",
     "correct": "Att vinkla fotsulan utåt i sidled för att parera och återfå balansen om man håller på att stuka foten inåt på ett ojämnt underlag.",
     "distractors": [
-      "Att sätts sig i en djup skräddarställning med fotsulorna vända mot varandra."
+      "Att sätta sig i en djup skräddarställning med fotsulorna vända mot varandra."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Hard",

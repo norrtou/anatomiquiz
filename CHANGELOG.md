@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.11
+- Kvalitetsgranskning muskler.json: 8 rättningar — duplikat ID (q113 → q113b), inkompletta meningar (q17, q60), grammatikfel ('opponerar tumme', 'för och', 'vrid'→'vrida', 'sätts sig').
+
 ## 0.3.10
 - Ta bort meningen om Handen och svårighet från ingresstexten på framsidan.
 
