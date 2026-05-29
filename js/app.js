@@ -89,6 +89,25 @@ async function loadQuestions(path){
   }
 }
 
+async function loadQuestionsFromMultiplePaths(paths){
+  allQuestions = []
+  for(const path of paths){
+    try {
+      const res = await fetch(path)
+      if (!res.ok) {
+        console.error(`Failed to load questions: ${res.status} ${res.statusText}`)
+      } else {
+        const data = await res.json()
+        allQuestions = allQuestions.concat(data)
+        console.log(`Loaded ${data.length} questions from ${path}`)
+      }
+    } catch(e) {
+      console.error(`Error loading questions from ${path}:`, e)
+    }
+  }
+  console.log(`Total loaded: ${allQuestions.length} questions from all paths`)
+}
+
 // Question flags persisted in localStorage: { [id]: { reported: bool, excluded: bool } }
 function loadFlags(){
   try{
@@ -178,8 +197,17 @@ async function startQuiz(){
   const timePer = parseInt(el('timePerQuestion').value,10) || 0
   const topic = el('topic').value
   const difficulty = el('difficulty').value
-  const qsPath = getQuestionsPath(topic)
-  await loadQuestions(qsPath)
+
+  // Load questions based on topic
+  if(topic === 'blandade'){
+    // Load from all subject files for mixed questions
+    const paths = ['./data/ben.json', './data/handen.json', './data/muskler.json', './data/riktningar.json']
+    await loadQuestionsFromMultiplePaths(paths)
+  } else {
+    const qsPath = getQuestionsPath(topic)
+    await loadQuestions(qsPath)
+  }
+
   const flags = loadFlags()
 
   // Debug info
