@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.8
+- Ändrade menytext från "Studier (tentor)" till "Tentaplugg".
+
 ## 0.3.7
 - Döpte om studier.json till tentaplugg.json och uppdaterade alla referenser i app.js och index.html.
 
