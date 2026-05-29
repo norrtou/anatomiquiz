@@ -5114,5 +5114,699 @@
     "topic": "handen_samling_fakta",
     "difficulty": "medel",
     "id": "q442"
+  },
+  {
+    "id": "q443",
+    "type": "mc",
+    "prompt": "Vad kallas leden mellan os scaphoideum och os lunatum?",
+    "correct": "articulatio intercarpea",
+    "distractors": [
+      "articulatio radiocarpea",
+      "articulatio carpometacarpea",
+      "articulatio mediocarpea"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q444",
+    "type": "mc",
+    "prompt": "Vilken typ av led är articulatio radiocarpea funktionellt sett?",
+    "correct": "Elipsoidled (äggled)",
+    "distractors": [
+      "Gångjärnsled",
+      "Vridled",
+      "Sadelled"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q445",
+    "type": "mc",
+    "prompt": "Vilken rörelse i handleden innebär en vinkling av handen mot lillfingersidan?",
+    "correct": "Ulnardeviation",
+    "distractors": [
+      "Radialdeviation",
+      "Palmarflexion",
+      "Dorsalflexion"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q446",
+    "type": "mc",
+    "prompt": "Vad heter den anatomiska struktur som bildar ledpannan i den proximala delen av articulatio radiocarpea, förutom facies articularis carpi på radius?",
+    "correct": "Discus articularis (triangular fibrocartilage complex)",
+    "distractors": [
+      "Labrum glenoidale",
+      "Meniscus ulnaris",
+      "Ligamentum carpi radiatum"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q447",
+    "type": "mc",
+    "prompt": "Vilket ben ingår INTE i den proximala raden av karpalben som artikulerar i articulatio mediocarpea?",
+    "correct": "Os trapezium",
+    "distractors": [
+      "Os triquetrum",
+      "Os lunatum",
+      "Os scaphoideum"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q448",
+    "type": "mc",
+    "prompt": "Vilken typ av ledkaraktär har articulatio carpometacarpea pollicis (CMC 1)?",
+    "correct": "Sadelled",
+    "distractors": [
+      "Glidled",
+      "Gångjärnsled",
+      "Kulled"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q449",
+    "type": "mc",
+    "prompt": "Vilken specifik rörelse möjliggörs i CMC 1-leden när tummen förs mot lillfingrets spets?",
+    "correct": "Opposition",
+    "distractors": [
+      "Reposition",
+      "Abduktion",
+      "Flexion"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q450",
+    "type": "mc",
+    "prompt": "Vilka rörelser tillåts primärt i articulationes metacarpophalangeae (MCP) II–V?",
+    "correct": "Flexion/extension och abduktion/adduktion",
+    "distractors": [
+      "Endast flexion och extension",
+      "Rotation och circumduktion",
+      "Translation och glidning"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q451",
+    "type": "mc",
+    "prompt": "Från vilken anatomisk referenslinje utgår abduktion och adduktion av fingrar II–V i MCP-lederna?",
+    "correct": "En longitudinell linje genom digitus medius (finger III)",
+    "distractors": [
+      "Handens mittlinje i frontalplanet",
+      "En longitudinell linje genom digitus index (finger II)",
+      "Handens mediala ulnara kant"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q452",
+    "type": "mc",
+    "prompt": "Vilken typ av led är articulationes interphalangeae proximales (PIP)?",
+    "correct": "Gångjärnsled (gynglymus)",
+    "distractors": [
+      "Vridled (trochoid)",
+      "Planled",
+      "Sadelled"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q453",
+    "type": "mc",
+    "prompt": "Vilket ligament förhindrar hyperextension i articulationes interphalangeae (PIP och DIP)?",
+    "correct": "Ligamentum palmare (volarplattan)",
+    "distractors": [
+      "Retinaculum flexorum",
+      "Ligamentum collaterale",
+      "Ligamentum metacarpale transversum profundum"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q454",
+    "type": "mc",
+    "prompt": "Vilka karpalben artikulerar direkt mot radius i articulatio radiocarpea vid neutralposition?",
+    "correct": "Os scaphoideum och os lunatum",
+    "distractors": [
+      "Os scaphoideum och os trapezium",
+      "Os lunatum och os triquetrum",
+      "Os triquetrum och os pisiforme"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q455",
+    "type": "mc",
+    "prompt": "Vad kallas leden mellan den proximala och distala raden av karpalben?",
+    "correct": "Articulatio mediocarpea",
+    "distractors": [
+      "Articulatio intercarpea",
+      "Articulatio radiocarpea",
+      "Articulatio carpometacarpea"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q456",
+    "type": "mc",
+    "prompt": "Vilken av följande leder uppvisar minst rörlighet (är den stramaste amfiartrosen)?",
+    "correct": "Articulatio carpometacarpea II",
+    "distractors": [
+      "Articulatio carpometacarpea V",
+      "Articulatio carpometacarpea IV",
+      "Articulatio carpometacarpea I"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q457",
+    "type": "mc",
+    "prompt": "Under palmarflexion i handledskomplexet, i vilken led sker procentuellt sett störst andel av rörelsen?",
+    "correct": "Articulatio mediocarpea",
+    "distractors": [
+      "Articulatio carpometacarpea",
+      "Articulatio radiocarpea",
+      "Articulatio pisohamata"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q458",
+    "type": "mc",
+    "prompt": "Vilken bindvävsstruktur stabiliserar articulationes metacarpophalangeae lateralt och stramas vid flexion?",
+    "correct": "Ligamenta collateralia",
+    "distractors": [
+      "Ligamenta metacarpalia interossea",
+      "Membrana interossea antebrachii",
+      "Ligamenta palmaria"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q459",
+    "type": "mc",
+    "prompt": "Varför är abduktion i MCP-lederna II–V avsevärt mer begränsad när fingrarna är maximalt flekterade?",
+    "correct": "Ligamenta collateralia stramas i flexion",
+    "distractors": [
+      "Volarplattan blockerar rörelsen mekaniskt",
+      "Ligamenta collateralia relaxeras i flexion",
+      "Tendo musculus flexor digitorum profundus hindrar sidorörelse"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q460",
+    "type": "mc",
+    "prompt": "Vad kallas den ledytan på os hamatum som artikulerar mot os metacarpale V?",
+    "correct": "Facies articularis",
+    "distractors": [
+      "Sulcus carpi",
+      "Tuberculum",
+      "Processus styloideus"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q461",
+    "type": "mc",
+    "prompt": "Vilken led drabbas oftast vid så kallad \"rhizartros\" (tummens bassledsartros)?",
+    "correct": "Articulatio carpometacarpea I",
+    "distractors": [
+      "Articulatio interphalangea pollicis",
+      "Articulatio trapeziolunata",
+      "Articulatio metacarpophalangea I"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q462",
+    "type": "mc",
+    "prompt": "Vad heter den korta leden mellan os triquetrum och os pisiforme?",
+    "correct": "Articulatio pisotriquetra",
+    "distractors": [
+      "Articulatio pisohamata",
+      "Articulatio ulnocarpea",
+      "Articulatio intercarpea proximalis"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q463",
+    "type": "mc",
+    "prompt": "Vilken mekanisk axel saknas i articulationes interphalangeae?",
+    "correct": "Den longitudinella axeln (rotation)",
+    "distractors": [
+      "Både den transversella och sagittala axeln",
+      "Den transversella axeln (flexion/extension)",
+      "Ingen, de är treaxlade leder"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q464",
+    "type": "mc",
+    "prompt": "Vad kallas lederna mellan de enskilda baserna på os metacarpale II–V?",
+    "correct": "Articulationes intermetacarpales",
+    "distractors": [
+      "Articulationes interphalangeae",
+      "Articulationes carpometacarpales",
+      "Articulationes metacarpophalangeae"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q465",
+    "type": "mc",
+    "prompt": "Vilket karpalben ingår i den distala raden och artikulerar mot os metacarpale II?",
+    "correct": "Os trapezoideum",
+    "distractors": [
+      "Os hamatum",
+      "Os trapezium",
+      "Os capitatum"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q466",
+    "type": "mc",
+    "prompt": "Vad är sant angående ledkapseln i articulatio radiocarpea?",
+    "correct": "Den är anatomiskt helt separerad från articulatio radioulnaris distalis via discus articularis.",
+    "distractors": [
+      "Den kommunicerar fritt med articulatio mediocarpea under normala förhållanden.",
+      "Den omsluter även os pisiforme.",
+      "Den är förstärkt enbart på den dorsala sidan."
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q467",
+    "type": "mc",
+    "prompt": "Vilket ligament förbinder os capitatum med de omgivande karpalbenen i ett solfjäderformat mönster på volarsidan?",
+    "correct": "Ligamentum carpi radiatum",
+    "distractors": [
+      "Ligamentum carpi ulnare",
+      "Ligamentum radiocarpeum dorsale",
+      "Ligamentum collaterale carpi radiale"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q468",
+    "type": "mc",
+    "prompt": "Hur definieras rörelsen extension i articulatio metacarpophalangea pollicis (MCP 1)?",
+    "correct": "En rörelse i sagittalplanet bort från handflatan",
+    "distractors": [
+      "En rörelse i frontalplanet parallellt med handflatan",
+      "En rörelse i frontalplanet i ulnar riktning",
+      "En rörelse i sagittalplanet bort från radius"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q469",
+    "type": "mc",
+    "prompt": "Vilken typ av led är articulationes carpometacarpales II–IV funktionellt och strukturellt sett?",
+    "correct": "Planleder (glidleder)",
+    "distractors": [
+      "Vridleder",
+      "Sadelleder",
+      "Gångjärnsleder"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q470",
+    "type": "mc",
+    "prompt": "Vilken rörelse i articulatio radiocarpea minskar vinkeln mellan handryggen och underarmens baksida?",
+    "correct": "Dorsalflexion (extension)",
+    "distractors": [
+      "Ulnardeviation",
+      "Palmarflexion",
+      "Radialdeviation"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q471",
+    "type": "mc",
+    "prompt": "Vilket ben är det centrala rotationscentrumet i articulatio mediocarpea?",
+    "correct": "Os capitatum",
+    "distractors": [
+      "Os hamatum",
+      "Os scaphoideum",
+      "Os lunatum"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q472",
+    "type": "mc",
+    "prompt": "Vilken rörelse sker i articulationes metacarpophalangeae II-V när fingrarna spretas utåt från långfingret?",
+    "correct": "Abduktion",
+    "distractors": [
+      "Lateralrotation",
+      "Flexion",
+      "Adduktion"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q473",
+    "type": "mc",
+    "prompt": "Vad kallas den anatomiska strukturen som förbinder de volara plattorna (ligamenta palmaria) mellan MCP-lederna II–V?",
+    "correct": "Ligamentum metacarpale transversum profundum",
+    "distractors": [
+      "Retinaculum flexorum",
+      "Ligamentum carpi transversum",
+      "Aponeurosis palmaris"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q474",
+    "type": "mc",
+    "prompt": "Svaret är True eller False: Articulatio radiocarpea och articulatio mediocarpea delar en stor, gemensam ledhåla.",
+    "correct": "False",
+    "distractors": [
+      "True"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q475",
+    "type": "mc",
+    "prompt": "Vilken av följande leder i handen har tre funktionella rörelseaxlar (multiaxiell/kulledskaraktär, även om abduktion/adduktion är begränsad)?",
+    "correct": "Articulationes metacarpophalangeae II-V",
+    "distractors": [
+      "Articulationes interphalangeae proximales",
+      "Articulatio pisotriquetra",
+      "Articulatio carpometacarpea I"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q476",
+    "type": "mc",
+    "prompt": "Vid radialdeviation i handleden sker, förutom en lateral förskjutning, även en specifik biomekanisk rörelse i os scaphoideum. Vilken?",
+    "correct": "Palmarflexion",
+    "distractors": [
+      "Abduktion",
+      "Dorsalflexion",
+      "Supination"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q477",
+    "type": "mc",
+    "prompt": "Vad förhindrar att böjsenorna (tendines musculus flexor digitorum superficialis et profundus) lyfter från lederna (\"bowstringing\") vid flexion av fingrarna?",
+    "correct": "Pars anularis och pars cruciformis (pulleysystemet)",
+    "distractors": [
+      "Ligamenta collateralia",
+      "Connexus intertendinei",
+      "Ligamenta palmaria"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q478",
+    "type": "mc",
+    "prompt": "Vilken funktionell nackdel uppstår i fingrarnas leder vid en skada på volarplattan (ligamentum palmare)?",
+    "correct": "Risk för hyperextensionsdeformitet",
+    "distractors": [
+      "Förlust av adduktionskraft",
+      "Lateral instabilitet i frontalplanet",
+      "Total förlust av flexionsförmåga"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q479",
+    "type": "mc",
+    "prompt": "Vilken led drabbas vid en skada som kallas \"skidåkartumme\" (ruptur av ligamentum collaterale ulnare)?",
+    "correct": "Articulatio metacarpophalangea I",
+    "distractors": [
+      "Articulatio radiocarpea",
+      "Articulatio carpometacarpea I",
+      "Articulatio interphalangea pollicis"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q480",
+    "type": "mc",
+    "prompt": "Svaret är True eller False: Os pisiforme räknas som ett sesamben inbäddat i senan till musculus flexor carpi ulnaris och bildar en led mot os triquetrum.",
+    "correct": "True",
+    "distractors": [
+      "False"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q481",
+    "type": "mc",
+    "prompt": "Vilket karpalben ingår i den distala raden och artikulerar primärt mot os metacarpale III?",
+    "correct": "Os capitatum",
+    "distractors": [
+      "Os trapezium",
+      "Os trapezoideum",
+      "Os hamatum"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q482",
+    "type": "mc",
+    "prompt": "Vad kallas leden mellan phalanx proximalis och phalanx media på digitus minimus?",
+    "correct": "Articulatio interphalangea proximalis V",
+    "distractors": [
+      "Articulatio metacarpophalangea V",
+      "Articulatio carpometacarpea V",
+      "Articulatio interphalangea distalis V"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q483",
+    "type": "mc",
+    "prompt": "Vilken led i handens fingrar drabbas primärt av Heberdens knutor (artros)?",
+    "correct": "Articulatio interphalangea distalis (DIP)",
+    "distractors": [
+      "Articulatio interphalangea proximalis (PIP)",
+      "Articulatio carpometacarpea (CMC)",
+      "Articulatio metacarpophalangea (MCP)"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q484",
+    "type": "mc",
+    "prompt": "Vilken rörelse i CMC 1-leden för tummen i palmar riktning, vinkelrätt mot handflatan?",
+    "correct": "Abduktion",
+    "distractors": [
+      "Flexion",
+      "Extension",
+      "Adduktion"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q485",
+    "type": "mc",
+    "prompt": "Vad är den korrekta anatomiska benämningen på leden mellan phalanx proximalis och phalanx distalis på tummen (digitus pollex)?",
+    "correct": "Articulatio interphalangea pollicis",
+    "distractors": [
+      "Articulatio interphalangea distalis I",
+      "Articulatio interphalangea proximalis I",
+      "Articulatio metacarpophalangea I"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q486",
+    "type": "mc",
+    "prompt": "Svaret är True eller False: Articulatio mediocarpea har en jämn, rätlinjig ledspringa som enbart tillåter glidrörelser i ett plan.",
+    "correct": "False",
+    "distractors": [
+      "True"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q487",
+    "type": "mc",
+    "prompt": "Vilket ligament stabiliserar handledens radiala sida mot överdriven ulnardeviation?",
+    "correct": "Ligamentum collaterale carpi radiale",
+    "distractors": [
+      "Ligamentum ulnocarpeum palmare",
+      "Ligamentum radiocarpeum palmare",
+      "Ligamentum collaterale carpi ulnare"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q488",
+    "type": "mc",
+    "prompt": "Vilken typ av ledytor möts i articulatio mediocarpea mellan å ena sidan os scaphoideum/lunatum/triquetrum och å andra sidan os capitatum/hamatum?",
+    "correct": "En konvex yta distalt och en konkav yta proximalt, samt vice versa (S-formad ledlinje)",
+    "distractors": [
+      "En ren cylindersockel",
+      "En ren bikonvex struktur",
+      "Enbart helt plana ytor"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q489",
+    "type": "mc",
+    "prompt": "Vad kallas lederna mellan karpalbenen i samma rad?",
+    "correct": "Articulationes intercarpeae",
+    "distractors": [
+      "Articulationes mediocarpeae",
+      "Articulationes radiocarpeae",
+      "Articulationes carpometacarpaleae"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q490",
+    "type": "mc",
+    "prompt": "Vilken mekanisk egenskap karaktäriserar articulatio carpometacarpea V i jämförelse med articulatio carpometacarpea II och III?",
+    "correct": "Den har betydligt större rörlighet för att underlätta grepp runt runda föremål",
+    "distractors": [
+      "Den tillåter ren rotation men ingen flexion",
+      "Den är en funktionell kulled",
+      "Den är helt orörlig (ankylotisk)"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q491",
+    "type": "mc",
+    "prompt": "Vilken rörelse i handledskomplexet utförs primärt i sagittalplanet kring en frontal axel?",
+    "correct": "Flexion och extension",
+    "distractors": [
+      "Abduktion och adduktion",
+      "Radialdeviation och ulnardeviation",
+      "Pronation och supination"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
+  },
+  {
+    "id": "q492",
+    "type": "mc",
+    "prompt": "Vilken anatomisk struktur i articulationes metacarpophalangeae skyddar ledbrosket dorsalt och fungerar som glidyta för sträcksenorna?",
+    "correct": "Dorsala aponeurosen (sträckapparaten)",
+    "distractors": [
+      "Ligamenta collateralia",
+      "Bursa ulnaris",
+      "Ligamenta palmaria"
+    ],
+    "topic": "hand_leder",
+    "difficulty": "Hard",
+    "source": "Handen"
   }
 ]
