@@ -3,6 +3,7 @@ function getQuestionsPath(topic) {
   if (topic === 'osteologi') return './data/ben.json'
   if (topic === 'muskler') return './data/muskler.json'
   if (topic === 'handen') return './data/handen.json'
+  if (topic === 'blandade') return './data/questions.json'
   return './data/riktningar.json'
 }
 
