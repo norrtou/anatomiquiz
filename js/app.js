@@ -151,6 +151,7 @@ async function startQuiz(){
   const num = parseInt(el('numQuestions').value,10)
   const timePer = parseInt(el('timePerQuestion').value,10) || 0
   const topic = el('topic').value
+  const difficulty = el('difficulty').value
   const qsPath = getQuestionsPath(topic)
   await loadQuestions(qsPath)
   const flags = loadFlags()
@@ -184,7 +185,16 @@ async function startQuiz(){
       topicMatch = q.topic === topic
     }
 
-    return topicMatch && !(flags[q.id] && flags[q.id].excluded)
+    // Handle difficulty filtering
+    let difficultyMatch = true
+    if(difficulty === 'Normal') {
+      difficultyMatch = q.difficulty === 'Normal'
+    } else if(difficulty === 'Hard') {
+      difficultyMatch = q.difficulty === 'Hard'
+    }
+    // 'any' means all difficulties
+
+    return topicMatch && difficultyMatch && !(flags[q.id] && flags[q.id].excluded)
   })
   if(filtered.length===0){
     const msg = realQuestions.length === 0
