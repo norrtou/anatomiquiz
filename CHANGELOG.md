@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.21
+- Döpte om "Blandade frågor" till "Slumpade frågor" och flyttade det sist i ämnesmenyn. Slumpade frågor hämtar nu automatiskt från alla aktiva ämnen inklusive Neurologi och Blodomloppet.
+
 ## 0.3.20
 - Versionsnummer i headern laddas nu dynamiskt från VERSION-filen istället för att vara hårdkodat i HTML.
 
