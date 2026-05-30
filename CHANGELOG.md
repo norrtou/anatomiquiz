@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.52
+- Sitemap: startsidan listad med explicit adress, konsekvent med övriga sidor.
+
 ## 0.3.51
 - Strukturerad data: BreadcrumbList-URLs ändrade till absoluta adresser på ordliste- och info-sidan.
 
