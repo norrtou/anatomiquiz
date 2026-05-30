@@ -1,63 +1,61 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.45
+- Versionshistorik: alla poster renskrives som ren text utan filnamn, HTML-taggar eller teknisk notation som mobilwebbläsare auto-länkar.
+
 ## 0.3.44
-- Info-sidan: HTML-tecken i ändringsloggen escapas nu korrekt — <a>, <button> m.fl. i loggtext renderades som riktiga hyperlänkar.
+- Info-sidan: HTML-tecken i ändringsloggen escapas nu innan de renderas.
 
 ## 0.3.43
-- sr-only-klass definierad i styles.css (saknades — orsakade att skärmläsar-labels syntes som vanlig text).
-- Ordlistesidan: redundant label "Sök term eller definition" borttagen; inputen har redan aria-label.
+- sr-only-klass definierad i stilmallen (saknades — skärmläsar-labels syntes som vanlig text).
+- Ordlistesidan: redundant sökrubrik borttagen.
 
 ## 0.3.42
-- Info separerad till egen sida: info.html med SEO, schema.org AboutPage och brödsmula som <a href> — identisk struktur med medicinskordlista.html.
-- Changelog-logik extraherad till js/info.js.
-- Info-sektionen och showInfo/loadChangelog/renderChangelog borttagna ur index.html och app.js.
+- Info separerad till egen sida med SEO och brödsmulor — samma struktur som ordlistesidan.
+- Changelog-logik extraherad till separat skriptfil.
 
 ## 0.3.41
-- Brödsmula ordlistesidan (mobil): täcker nu :visited, :hover, :focus, :active — index.html är alltid besökt så länken visades lila. Lade även till -webkit-tap-highlight-color: transparent.
+- Brödsmula ordlistesidan (mobil): alla länktillstånd täckta, tap-highlight borttagen.
 
 ## 0.3.40
-- Brödsmula på ordlistesidan: a.breadcrumb-link (specificitet 0,1,1) slår nu webbläsarens a:-webkit-any-link — grön färg och inget understreck, identiskt med info-sidan.
+- Brödsmula på ordlistesidan: specificitet ökad för att slå webbläsarens standardfärg på ankarlänkar.
 
 ## 0.3.39
-- Ordlista-knappen: ändrad från <a> till <button onclick> — eliminerar understrecket permanent. CSS-fixar för a.btn borttagna.
+- Ordlista-knappen: ändrad till knapp-element för att eliminera automatiskt understreck.
 
 ## 0.3.38
-- Ordlistesidan: brödsmulorna flyttade in i kortet (vit bakgrund) — samma placering och design som på info-sidan.
+- Ordlistesidan: brödsmulorna flyttade in i kortet — samma placering som på info-sidan.
 
 ## 0.3.37
-- Brödsmuleknappar: appearance: none + -webkit-appearance: none tillagt så att button.breadcrumb-link ser identisk ut med a.breadcrumb-link på iOS/Safari.
+- Brödsmuleknappar: OS-standardstyling nollställd för enhetlig design på iOS och Android.
 
 ## 0.3.36
-- Ordlista-knappen: text-decoration: none !important för att säkert slå mobilwebbläsares standardstilar.
+- Ordlista-knappen: understreck borttaget med !important.
 
 ## 0.3.35
-- Info-sidan: tillbakaknappen överst ersatt med brödsmula (← Anatomiquiz / Info).
-- Ordlistesidan: tillbakaknappen borttagen; brödsmule-nav (som redan fanns) räcker.
-- Brödsmule-CSS flyttad till styles.css (delas nu av båda sidorna); glossary.css rensat från duplikat.
+- Info-sidan: tillbakaknapp överst ersatt med brödsmula.
+- Brödsmule-CSS centraliserad och dubbletter borttagna.
 
 ## 0.3.34
 - Ordlistesidan: tillbakaknapp tillagd högst upp i kortet.
 
 ## 0.3.33
-- Ordlista-knappen (mobil): understreck borttaget på alla tillstånd (a.btn, :hover, :focus, :visited) — täcker alla webbläsares standardstilar.
+- Ordlista-knappen (mobil): understreck borttaget för alla länktillstånd.
 
 ## 0.3.32
 - Info-sidan: tillbakaknapp tillagd högst upp, precis som den befintliga längst ned.
 
 ## 0.3.31
-- Ordlista-knappen: understreck borttaget (text-decoration: none tillagt i .btn).
+- Ordlista-knappen: understreck borttaget.
 
 ## 0.3.30
-- index.html: komplett SEO-uppdatering — beskrivande title, meta description/keywords/author/robots, Open Graph (6 taggar), Twitter Card, schema.org WebApplication + LearningResource + EducationalAudience (JSON-LD).
-- Webbläsartema: theme-color (#10b981) och color-scheme deklarerade.
-- Preload på kritisk CSS, defer på app.js-scriptet.
-- Indentering och HTML-kommentarer rättade i alla sektioner; &amp;-escaping i title och select-option.
+- Startsidan: komplett SEO-uppdatering med Open Graph, Twitter Card och strukturerad data.
+- Webbläsartema, preload och defer tillagt.
 
 ## 0.3.29
-- Ordlistan separerad till egen sida: medicinskordlista.html med full SEO (title, description, Open Graph, Twitter Card, schema.org DefinedTermSet + BreadcrumbList), brödsmulor och termräknare.
-- Ordlistedata flyttad från hårdkodat JS-array i app.js till data/ordlista.json (195 termer).
-- Ordliste-logik extraherad till js/glossary.js med egna stilar i css/glossary.css.
-- Ordlista-knappen på startsidan är nu en direktlänk till medicinskordlista.html.
+- Ordlistan separerad till egen sida med full SEO, brödsmulor och termräknare.
+- Ordlistedata flyttad till separat JSON-fil (195 termer).
+- Ordliste-logik och stilar extraherade till egna filer.
 
 ## 0.3.28
 - Ordlistan: etymologinot tillagd på alla ~185 poster med latinskt/grekiskt ursprungsord och bokstavlig betydelse (t.ex. "acetabulum = ättikskål", "musculus = liten mus", "phalanx = stridsformation").
