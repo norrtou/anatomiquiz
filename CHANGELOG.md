@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.18
+- Lade till Neurologi som aktivt ämne: 120 sant/falskt-frågor (Normal svårighet) i data/neurologi.json. Täcker CNS/PNS-struktur, neuron, myelin, synapser, signalsubstanser, aktionspotential, reflexer, hjärnstrukturer, ledning, reception, regeneration, neuroplasticitet, utveckling och åldrande. Aktiverade neurologi-alternativet i dropdown-menyn och kopplade ämnet i app.js.
+
 ## 0.3.17
 - Fixade Info-sida: changelog visar nu alla versioner med fullständigt innehåll. Bytte från ul/li till div-baserad rendering för att undvika overflow:hidden-klippning; tog bort max-height-begränsning så hela loggen är synlig och sidan scrollas naturligt.
 

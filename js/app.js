@@ -5,6 +5,7 @@ function getQuestionsPath(topic) {
   if (topic === 'handen') return './data/handen.json'
   if (topic === 'medicinsk_terminologi') return './data/medicinsk_terminologi.json'
   if (topic === 'tentaplugg') return './data/tentaplugg.json'
+  if (topic === 'neurologi') return './data/neurologi.json'
   // 'blandade' uses loadQuestionsFromMultiplePaths() instead
   return './data/riktningar.json'
 }
@@ -242,6 +243,8 @@ async function startQuiz(){
       topicMatch = q.topic.startsWith('handen_')
     } else if(topic === 'tentaplugg') {
       topicMatch = q.topic.startsWith('studier_')
+    } else if(topic === 'neurologi') {
+      topicMatch = q.topic.startsWith('nervsystemet_')
     } else if(topic === 'blandade') {
       // Blandade questions include all topics
       topicMatch = true

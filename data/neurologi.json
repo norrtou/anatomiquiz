@@ -1,1 +1,1202 @@
-[]
+[
+  {
+    "id": "nervsystemet_q1",
+    "type": "tf",
+    "prompt": "Sant eller falskt: CNS består av hjärna och ryggmärg.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_struktur",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q2",
+    "type": "tf",
+    "prompt": "Sant eller falskt: PNS inkluderar både sensoriska och motoriska nerver.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_struktur",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q3",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Somatiska nervsystemet styr viljestyrd motorik.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_struktur",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q4",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Autonoma nervsystemet styr skelettmuskler direkt.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_struktur",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q5",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Sympatiska nervsystemet aktiveras vid stress.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_struktur",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q6",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Parasympatiska nervsystemet dominerar vid vila.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_struktur",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q7",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Neuroner kan normalt inte genomgå mitos i vuxen CNS.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_neuron",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q8",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Gliaceller har ingen funktion i nervsystemets signalering.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_neuron",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q9",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Axon leder signaler från cellkroppen.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_neuron",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q10",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Dendriter leder signaler bort från cellkroppen.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_neuron",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q11",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Dendriter tar emot inkommande signaler.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_neuron",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q12",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Myelin ökar ledningshastigheten i axon.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_myelin",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q13",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Schwannceller bildar myelin i PNS.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_myelin",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q14",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Oligodendrocyter bildar myelin i CNS.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_myelin",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q15",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Synapser är alltid elektriska kopplingar.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_synaps",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q16",
+    "type": "tf",
+    "prompt": "Sant eller falskt: De flesta synapser i CNS är kemiska.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_synaps",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q17",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Signalsubstanser frisätts presynaptiskt.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_synaps",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q18",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Acetylkolin används i neuromuskulär transmission.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_synaps",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q19",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Dopamin är enbart kopplat till motorik.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_synaps",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q20",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Serotonin påverkar stämningsläge och sömn.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_synaps",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q21",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Noradrenalin är kopplat till stress och vakenhet.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_synaps",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q22",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Aktionspotentialer är graderade signaler.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_aktionspotential",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q23",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Aktionspotentialer följer allt-eller-inget-principen.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_aktionspotential",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q24",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Depolarisation innebär att membranet blir mer positivt.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_aktionspotential",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q25",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Repolarisation innebär återgång mot vilopotential.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_aktionspotential",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q26",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Vilopotential är cirka +30 mV i neuron.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_aktionspotential",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q27",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Vilopotential är cirka -70 mV i neuron.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_aktionspotential",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q28",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Natriuminflöde bidrar till depolarisation.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_aktionspotential",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q29",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Kaliumutflöde bidrar till repolarisation.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_aktionspotential",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q30",
+    "type": "tf",
+    "prompt": "Sant eller falskt: En synapsklyfta är intracellulär.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_synaps",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q31",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Motoriska neuron leder signaler från CNS till muskler.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_reflex",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q32",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Sensoriska neuron leder signaler från periferin till CNS.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_reflex",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q33",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Afferenta banor leder signaler från CNS till periferin.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_reflex",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q34",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Efferenta banor leder signaler från CNS till effektororgan.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_reflex",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q35",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Reflex kräver alltid cortexaktivering.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_reflex",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q36",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Ryggmärgen kan själv generera reflexer.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_reflex",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q37",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Monosynaptiska reflexer saknar interneuron.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_reflex",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q38",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Muskelspolar är viktiga i sträckreflexer.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_reflex",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q39",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Golgi senorgan registrerar muskelspänning.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_reflex",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q40",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Cerebellum är viktigt för koordination.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_hjarna",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q41",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Basala ganglier påverkar rörelseinitiering.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_hjarna",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q42",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Thalamus är en sensorisk relästation.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_hjarna",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q43",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Hypotalamus reglerar homeostas.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_hjarna",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q44",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Hjärnstammen styr andning och hjärtrytm.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_hjarna",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q45",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Occipitalloben bearbetar syn.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_hjarna",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q46",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Temporalloben saknar funktion i hörsel.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_hjarna",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q47",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Parietalloben bearbetar sensorik från kroppen.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_hjarna",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q48",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Frontalloben är involverad i planering och motorik.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_hjarna",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q49",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Corpus callosum kopplar ihop hjärnhalvorna.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_hjarna",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q50",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Grå substans innehåller främst nervcellskroppar.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_hjarna",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q51",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Vit substans innehåller främst myeliniserade axon.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_hjarna",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q52",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Alla nervfibrer leder signaler lika snabbt.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_ledning",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q53",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Myelinisering ökar ledningshastigheten.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_ledning",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q54",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Saltatorisk ledning sker i omyeliniserade axon.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_ledning",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q55",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Noder av Ranvier möjliggör snabb signalöverföring.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_ledning",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q56",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Synaptisk transmission kan vara både excitatorisk och inhibitorisk.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_synaps",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q57",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Inhibition ökar sannolikheten för aktionspotential.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_synaps",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q58",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Excitation minskar sannolikheten för aktionspotential.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_synaps",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q59",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Temporal summation påverkar neuronets aktivering.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_synaps",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q60",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Motorisk enhet består av ett motorneuron och muskelfibrer.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_reflex",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q61",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Receptorer omvandlar stimuli till elektriska signaler.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_reception",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q62",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Proprioception handlar om kroppens position.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_reception",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q63",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Nociception är samma sak som emotionell smärta.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_reception",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q64",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Nociception innebär registrering av skadliga stimuli.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_reception",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q65",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Sensorisk adaptation innebär minskad respons vid upprepad stimulering.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_reception",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q66",
+    "type": "tf",
+    "prompt": "Sant eller falskt: CNS har god regenerationsförmåga efter skada.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_regeneration",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q67",
+    "type": "tf",
+    "prompt": "Sant eller falskt: PNS har bättre regenerationsförmåga än CNS.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_regeneration",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q68",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Neuroplasticitet innebär förändringsförmåga i nervsystemet.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_regeneration",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q69",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Gliaceller deltar i stöd och homeostas i CNS.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_neuron",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q70",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Axon leder signaler mot cellkroppen.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_neuron",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q71",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Dendriter tar emot signaler från andra neuroner.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_neuron",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q72",
+    "type": "tf",
+    "prompt": "Sant eller falskt: En synaps är en direkt cytoplasmisk koppling mellan neuroner.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_synaps",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q73",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Signalsubstanser lagras i vesiklar presynaptiskt.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_synaps",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q74",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Acetylkolin bryts ner i synapsklyftan.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_synaps",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q75",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Dopamin är kopplat till belöning och motivation.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_synaps",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q76",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Serotonin saknar påverkan på sömn.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_synaps",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q77",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Noradrenalin påverkar vakenhet.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_synaps",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q78",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Aktionspotentialens amplitud varierar med stimulus.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_aktionspotential",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q79",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Refraktärperiod påverkar nervens excitabilitet.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_aktionspotential",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q80",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Alla synapser är excitatoriska.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_synaps",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q81",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Afferenta banor leder signaler till CNS.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_reflex",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q82",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Efferenta banor leder signaler från CNS.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_reflex",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q83",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Reflexbågar går alltid via hjärnan.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_reflex",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q84",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Ryggmärgen kan hantera reflexer självständigt.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_reflex",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q85",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Motorcortex styr viljestyrda rörelser.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_hjarna",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q86",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Cerebellum är viktig för balans.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_hjarna",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q87",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Basala ganglier är oviktiga för rörelse.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_hjarna",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q88",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Thalamus filtrerar sensorisk information.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_hjarna",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q89",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Hypotalamus styr autonoma funktioner.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_hjarna",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q90",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Hjärnstammen styr vitala funktioner.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_hjarna",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q91",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Occipitalloben bearbetar hörsel.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_hjarna",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q92",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Temporalloben bearbetar ljud.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_hjarna",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q93",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Parietalloben bearbetar kroppssinne.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_hjarna",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q94",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Frontalloben saknar motorisk funktion.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_hjarna",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q95",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Vit substans innehåller myeliniserade axon.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_hjarna",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q96",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Grå substans innehåller mest axon.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_hjarna",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q97",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Myelin minskar ledningshastighet.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_ledning",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q98",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Saltatorisk ledning ökar hastighet.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_ledning",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q99",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Nervsystemet är plastiskt och förändringsbart.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_regeneration",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q100",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Alla nervskador i CNS läker snabbt och fullständigt.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_regeneration",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q101",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Nervsystemet genomgår omfattande myelinisering under barndomen.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_utveckling",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q102",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Sensorisk perception är helt färdigutvecklad vid födseln.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_utveckling",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q103",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Synsystemet fortsätter att utvecklas under tidig barndom.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_utveckling",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q104",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Synaptisk pruning innebär borttagning av överflödiga synapser.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_utveckling",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q105",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Motorisk kontroll utvecklas genom erfarenhet.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_utveckling",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q106",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Hjärnans plasticitet är hög i barndomen.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_utveckling",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q107",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Språkfunktioner utvecklas främst efter 30 års ålder.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_utveckling",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q108",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Sensorisk integration förbättras med utveckling.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_utveckling",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q109",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Reflexer ersätter viljestyrd motorik i barndomen.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_utveckling",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q110",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Nervsystemets utveckling sker främst första levnadsåret.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_utveckling",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q111",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Åldrande kan minska nervledningshastighet.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_aldrande",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q112",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Kognition kan påverkas av åldersförändringar i hjärnan.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_aldrande",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q113",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Synapser ökar kontinuerligt hela livet.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_aldrande",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q114",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Myelin kan brytas ned vid åldrande.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_aldrande",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q115",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Reaktionshastighet minskar ofta med ålder.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_aldrande",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q116",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Sensorisk perception kan försämras med ålder.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_aldrande",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q117",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Neuroplasticitet försvinner helt i ålderdom.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_aldrande",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q118",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Balans kan påverkas av åldersförändringar i nervsystemet.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_aldrande",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q119",
+    "type": "tf",
+    "prompt": "Sant eller falskt: Smärtupplevelse kan förändras med ålder.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "nervsystemet_aldrande",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  },
+  {
+    "id": "nervsystemet_q120",
+    "type": "tf",
+    "prompt": "Sant eller falskt: CNS är helt oförändrat genom hela livet.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "nervsystemet_aldrande",
+    "difficulty": "Normal",
+    "source": "Nervsystemet"
+  }
+]
