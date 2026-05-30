@@ -496,6 +496,57 @@ function handleImportFile(ev){
   reader.readAsText(f, 'utf-8')
 }
 
+function showInfo() {
+  el('setup').classList.add('hidden')
+  el('quiz').classList.add('hidden')
+  el('result').classList.add('hidden')
+  el('highscores').classList.add('hidden')
+  el('info').classList.remove('hidden')
+  loadChangelog()
+}
+
+async function loadChangelog() {
+  const container = el('changelogContent')
+  if (container.dataset.loaded) return
+  container.innerHTML = '<p class="changelog-loading">Laddar ändringslogg…</p>'
+  try {
+    const res = await fetch('./CHANGELOG.md')
+    if (!res.ok) throw new Error()
+    const text = await res.text()
+    container.innerHTML = renderChangelog(text)
+    container.dataset.loaded = '1'
+  } catch {
+    container.innerHTML = '<p class="changelog-loading">Kunde inte ladda ändringslogg.</p>'
+  }
+}
+
+function renderChangelog(text) {
+  const lines = text.split('\n')
+  let html = ''
+  let version = null
+  let items = []
+
+  function flush() {
+    if (!version) return
+    let inner = ''
+    if (items.length) {
+      inner = '<ul class="changelog-items">' +
+        items.map(i => `<li>${i}</li>`).join('') +
+        '</ul>'
+    }
+    html += `<div class="changelog-entry"><div class="changelog-version">v${version}</div>${inner}</div>`
+    version = null
+    items = []
+  }
+
+  lines.forEach(line => {
+    if (line.startsWith('## ')) { flush(); version = line.slice(3).trim() }
+    else if (line.startsWith('- ') && version) items.push(line.slice(2).trim())
+  })
+  flush()
+  return html || '<p class="changelog-loading">Ingen ändringslogg hittades.</p>'
+}
+
 function cancelQuiz(){
   if(confirm('Är du säker? Ditt resultat sparas inte.')) {
     el('quiz').classList.add('hidden')
@@ -514,6 +565,8 @@ function init(){
   el('saveScore').addEventListener('click', saveScore)
   el('restart').addEventListener('click', ()=>{el('result').classList.add('hidden');el('setup').classList.remove('hidden')})
   el('viewScores').addEventListener('click', showHighscores)
+  el('viewInfo').addEventListener('click', showInfo)
+  el('backFromInfo').addEventListener('click', () => { el('info').classList.add('hidden'); el('setup').classList.remove('hidden') })
   el('saveManage').addEventListener('click', ()=>{ alert('Ändringar sparade (sparas automatiskt).'); renderManage() })
   const imp = el('importFile')
   if(imp) imp.addEventListener('change', handleImportFile)
