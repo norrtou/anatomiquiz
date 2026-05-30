@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.56
+- Tagline på startsidan ändrad till "Öva på funktionell anatomi med quiz och flashcards".
+
 ## 0.3.55
 - Favicon uppdaterad till skeletthand-ikon (64x64 PNG).
 
