@@ -677,6 +677,7 @@ select:focus {
 
 .primary-actions .btn {
   flex: 1;
+  min-width: 0;
 }
 
 .btn-start {
@@ -1011,6 +1012,7 @@ ol li {
   .primary-actions .btn {
     flex: 1 !important;
     width: 0;
+    min-width: 0 !important;
   }
 
   .secondary-actions .btn {

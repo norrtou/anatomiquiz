@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.66
+- Primärknapparna: min-width: 0 tillagd — iOS WebKit låter annars flex-items behålla sin textbredd som minimum.
+
 ## 0.3.65
 - Primärknapparna: flex: 1 !important i mobilmedian — identisk med sekundärknapparna.
 
