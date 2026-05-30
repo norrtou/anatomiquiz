@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.43
+- sr-only-klass definierad i styles.css (saknades — orsakade att skärmläsar-labels syntes som vanlig text).
+- Ordlistesidan: redundant label "Sök term eller definition" borttagen; inputen har redan aria-label.
+
 ## 0.3.42
 - Info separerad till egen sida: info.html med SEO, schema.org AboutPage och brödsmula som <a href> — identisk struktur med medicinskordlista.html.
 - Changelog-logik extraherad till js/info.js.
