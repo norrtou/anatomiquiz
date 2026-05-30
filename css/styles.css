@@ -1070,6 +1070,10 @@ ol li {
 }
 
 /* Yttre behållare — skapar perspektivet för 3D-effekten */
+#flashcards {
+  background: #d1fae5;
+}
+
 .fc-scene {
   cursor: pointer;
   margin-bottom: 24px;
@@ -1112,7 +1116,7 @@ ol li {
 
 /* Framsida — synlig i vila */
 .fc-front {
-  background: #d1fae5;
+  background: var(--surface);
   border: 2px solid rgba(16, 185, 129, 0.2);
   box-shadow: var(--shadow);
   -webkit-transform: perspective(800px) rotateY(0deg);
