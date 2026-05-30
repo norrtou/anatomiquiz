@@ -920,6 +920,11 @@ ol li {
     width: auto;
   }
 
+  .secondary-actions .btn {
+    flex: 1 !important;
+    width: 0;
+  }
+
   .btn-cancel {
     flex: 0 0 auto;
     padding: 6px 8px;
