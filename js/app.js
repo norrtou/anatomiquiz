@@ -506,6 +506,164 @@ function handleImportFile(ev){
 }
 
 
+// ============================================================================
+// FLASHCARDS
+// ============================================================================
+
+let fcCards = []         // [{prompt, correct}]
+let fcIdx = 0
+let fcFlipped = false
+let fcTimerInterval = null
+let fcAutoNext = null
+
+async function startFlashcards() {
+  const name    = el('playerName').value.trim() || 'Spelare'
+  const num     = parseInt(el('numQuestions').value, 10)
+  const topic   = el('topic').value
+  const diff    = el('difficulty').value
+  const timePer = parseInt(el('timePerQuestion').value, 10) || 0
+
+  if (topic === 'blandade') {
+    const paths = [...new Set(
+      Array.from(el('topic').options)
+        .filter(o => !o.disabled && o.value !== 'blandade')
+        .map(o => getQuestionsPath(o.value))
+    )]
+    await loadQuestionsFromMultiplePaths(paths)
+  } else {
+    await loadQuestions(getQuestionsPath(topic))
+  }
+
+  const flags = loadFlags()
+
+  const filtered = allQuestions.filter(q => {
+    const isPlaceholderSource = !!(q.source && String(q.source).toLowerCase() === 'placeholder')
+    const isPlaceholderId = /^ph\d{3}$/.test(String(q.id))
+    if (isPlaceholderSource || isPlaceholderId) return false
+
+    let topicMatch = false
+    if (topic === 'any_riktningar') topicMatch = q.topic === 'riktningar'
+    else if (topic === 'osteologi')  topicMatch = q.topic.startsWith('osteologi_')
+    else if (topic === 'muskler')    topicMatch = q.topic.startsWith('muskler_')
+    else if (topic === 'handen')     topicMatch = q.topic.startsWith('handen_')
+    else if (topic === 'tentaplugg') topicMatch = q.topic.startsWith('studier_')
+    else if (topic === 'neurologi')  topicMatch = q.topic.startsWith('nervsystemet_')
+    else if (topic === 'blodomloppet') topicMatch = q.topic.startsWith('blodomloppet_')
+    else if (topic === 'blandade')   topicMatch = true
+    else topicMatch = q.topic === topic
+
+    let diffMatch = true
+    if (diff === 'Normal') diffMatch = q.difficulty === 'Normal'
+    else if (diff === 'Hard') diffMatch = q.difficulty === 'Hard'
+
+    return topicMatch && diffMatch && !(flags[q.id] && flags[q.id].excluded)
+  })
+
+  if (!filtered.length) {
+    alert('Inga kort matchar urvalet. Prova en annan kombination.')
+    return
+  }
+
+  fcCards = shuffle(filtered.slice())
+    .slice(0, Math.min(num, filtered.length))
+    .map(q => ({ prompt: q.prompt, correct: q.correct }))
+
+  fcIdx = 0
+  el('fcTimer').dataset.timePer = timePer
+  el('fcPlayerLabel').textContent = name
+  el('setup').classList.add('hidden')
+  el('flashcards').classList.remove('hidden')
+  showFlashcard()
+}
+
+function showFlashcard() {
+  if (fcIdx >= fcCards.length) { finishFlashcards(); return }
+
+  clearFcTimers()
+  fcFlipped = false
+
+  const card = fcCards[fcIdx]
+  el('fcCard').classList.remove('is-flipped')
+  el('fcQuestion').textContent = card.prompt
+  el('fcAnswer').textContent = card.correct
+  el('fcProgress').textContent = `Kort ${fcIdx + 1} / ${fcCards.length}`
+  el('fcFinished').classList.add('hidden')
+  el('fcScene').classList.remove('hidden')
+  el('fcNextBtn').classList.remove('hidden')
+  el('fcTimer').classList.remove('warning')
+
+  const timePer = parseInt(el('fcTimer').dataset.timePer, 10) || 0
+  el('fcTimer').textContent = timePer > 0 ? `Tid: ${timePer}s` : ''
+  if (timePer > 0) startFcTimer(timePer)
+}
+
+// autoFlip = true när timern löper ut (triggar automatisk nästa efter 4s)
+function flipCard(autoFlip = false) {
+  if (fcFlipped) return
+  fcFlipped = true
+  clearFcTimer()
+  el('fcCard').classList.add('is-flipped')
+
+  if (autoFlip) startFcAutoNext()
+}
+
+function startFcTimer(sec) {
+  let left = sec
+  el('fcTimer').textContent = `Tid: ${left}s`
+  fcTimerInterval = setInterval(() => {
+    left--
+    el('fcTimer').textContent = `Tid: ${left}s`
+    if (left < 4) el('fcTimer').classList.add('warning')
+    if (left <= 0) { clearFcTimer(); flipCard(true) }
+  }, 1000)
+}
+
+function startFcAutoNext() {
+  let countdown = 4
+  el('fcTimer').textContent = `Nästa: ${countdown}s`
+  fcAutoNext = setInterval(() => {
+    countdown--
+    if (countdown > 0) {
+      el('fcTimer').textContent = `Nästa: ${countdown}s`
+    } else {
+      clearFcTimers()
+      nextFlashcard()
+    }
+  }, 1000)
+}
+
+function clearFcTimer() {
+  if (fcTimerInterval) { clearInterval(fcTimerInterval); fcTimerInterval = null }
+}
+
+function clearFcTimers() {
+  clearFcTimer()
+  if (fcAutoNext) { clearInterval(fcAutoNext); fcAutoNext = null }
+}
+
+function nextFlashcard() {
+  clearFcTimers()
+  fcIdx++
+  showFlashcard()
+}
+
+function finishFlashcards() {
+  clearFcTimers()
+  el('fcScene').classList.add('hidden')
+  el('fcNextBtn').classList.add('hidden')
+  el('fcTimer').textContent = ''
+  el('fcDoneText').textContent = `Klart! Du gick igenom alla ${fcCards.length} kort.`
+  el('fcFinished').classList.remove('hidden')
+}
+
+function cancelFlashcards() {
+  clearFcTimers()
+  el('flashcards').classList.add('hidden')
+  el('setup').classList.remove('hidden')
+}
+
+// ============================================================================
+
 function cancelQuiz(){
   if(confirm('Är du säker? Ditt resultat sparas inte.')) {
     el('quiz').classList.add('hidden')
@@ -530,6 +688,13 @@ function init(){
   loadVersion()
   loadQuestions().then(()=>console.log('Frågor laddade:', allQuestions.length))
   el('startBtn').addEventListener('click', startQuiz)
+  el('startFlashcardsBtn').addEventListener('click', startFlashcards)
+  el('fcCancelBtn').addEventListener('click', cancelFlashcards)
+  el('fcNextBtn').addEventListener('click', nextFlashcard)
+  el('fcRestartBtn').addEventListener('click', () => { fcIdx = 0; showFlashcard() })
+  el('fcBackBtn').addEventListener('click', cancelFlashcards)
+  el('fcScene').addEventListener('click', () => flipCard(false))
+  el('fcScene').addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flipCard(false) } })
   el('cancelBtn').addEventListener('click', cancelQuiz)
   el('nextBtn').addEventListener('click', nextQuestion)
   el('saveScore').addEventListener('click', saveScore)

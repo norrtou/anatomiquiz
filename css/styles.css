@@ -661,12 +661,22 @@ select:focus {
    INFO & CHANGELOG SECTION
    ============================================================================ */
 
-/* Setup action area: Starta quiz ovanför, sekundära knappar under */
+/* Setup action area: primärknappar + sekundära knappar */
 .setup-actions {
   margin-top: 24px;
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+/* Rad med quiz- och flashcard-knapparna sida vid sida */
+.primary-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.primary-actions .btn-start {
+  flex: 1;
 }
 
 .btn-start {
@@ -1039,6 +1049,136 @@ ol li {
   *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================================================
+   FLASHCARDS
+   Tvåsidigt kort med 3D-flip-animation. Framsida = fråga, baksida = svar.
+   ============================================================================ */
+
+/* Rubrikrad med spelarnamn och kortets position */
+.fc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Yttre behållare — skapar perspektivet för 3D-effekten */
+.fc-scene {
+  perspective: 1200px;
+  cursor: pointer;
+  margin-bottom: 24px;
+  border-radius: var(--radius);
+  outline: none;
+}
+
+.fc-scene:focus-visible .fc-card {
+  box-shadow: 0 0 0 3px var(--primary);
+}
+
+/* Själva kortet som roterar */
+.fc-card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: var(--radius);
+  min-height: 220px;
+}
+
+.fc-card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+/* Gemensamma stilar för fram- och baksida */
+.fc-front,
+.fc-back {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 24px 20px;
+  border-radius: var(--radius);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Framsida — neutral, vit */
+.fc-front {
+  background: var(--surface);
+  border: 2px solid rgba(16, 185, 129, 0.2);
+  box-shadow: var(--shadow);
+}
+
+/* Baksida — grön, roterad 180° i vila */
+.fc-back {
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  border: 2px solid var(--primary);
+  box-shadow: var(--shadow-lg);
+  transform: rotateY(180deg);
+}
+
+/* Frågetexten på framsidan */
+.fc-question {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+  line-height: 1.55;
+  margin: 0 0 20px 0;
+}
+
+/* Svaret på baksidan */
+.fc-answer {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  text-align: center;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* "Tryck för att se svaret" — diskret ledtext */
+.fc-hint {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: auto;
+  letter-spacing: 0.2px;
+}
+
+/* "SVAR"-etikett på baksidan */
+.fc-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--primary);
+  margin-bottom: 14px;
+}
+
+/* Klart-vy när alla kort är genomgångna */
+.fc-finished {
+  text-align: center;
+  padding: 32px 0 8px;
+}
+
+.fc-done-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+/* Reducera animation för användare som föredrar det */
+@media (prefers-reduced-motion: reduce) {
+  .fc-card {
     transition-duration: 0.01ms !important;
   }
 }

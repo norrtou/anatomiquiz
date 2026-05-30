@@ -153,7 +153,10 @@
       <input id="playerName" placeholder="Mitt namn" aria-label="Mitt namn" autocomplete="nickname" />
 
       <div class="setup-actions">
-        <button id="startBtn" class="btn primary btn-start">Starta quiz</button>
+        <div class="primary-actions">
+          <button id="startBtn" class="btn primary btn-start">Starta quiz</button>
+          <button id="startFlashcardsBtn" class="btn primary btn-start">Starta flashcards</button>
+        </div>
         <div class="secondary-actions">
           <button class="btn" onclick="window.location.href='info.html'">Info</button>
           <button class="btn" onclick="window.location.href='medicinskordlista.html'">Ordlista</button>
@@ -163,7 +166,50 @@
     </section>
 
 
-<!-- =========================================================
+    <!-- =========================================================
+         Flashcard-sektion (dold initialt)
+         ========================================================= -->
+    <section id="flashcards" class="card hidden" aria-labelledby="fcHeading" aria-live="polite">
+      <h2 id="fcHeading" class="sr-only">Flashcards</h2>
+
+      <div class="fc-header">
+        <div id="fcPlayerLabel" class="fc-player"></div>
+        <div id="fcProgress" class="fc-progress"></div>
+      </div>
+
+      <!-- Kortet — klicka för att flippa -->
+      <div class="fc-scene" id="fcScene" role="button" tabindex="0" aria-label="Tryck för att se svaret">
+        <div class="fc-card" id="fcCard">
+          <div class="fc-front">
+            <p id="fcQuestion" class="fc-question"></p>
+            <span class="fc-hint">Tryck på kortet för att se svaret</span>
+          </div>
+          <div class="fc-back">
+            <span class="fc-label">Svar</span>
+            <p id="fcAnswer" class="fc-answer"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Klart-vy -->
+      <div id="fcFinished" class="fc-finished hidden">
+        <p id="fcDoneText" class="fc-done-text"></p>
+        <div class="actions">
+          <button id="fcRestartBtn" class="btn primary">Börja om</button>
+          <button id="fcBackBtn" class="btn">Tillbaka</button>
+        </div>
+      </div>
+
+      <div class="quiz-footer">
+        <button id="fcCancelBtn" class="btn btn-cancel">Avbryt</button>
+        <div id="fcTimer" class="timer" aria-live="polite"></div>
+        <div class="quiz-actions">
+          <button id="fcNextBtn" class="btn primary">Nästa</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
          Quizsektion — frågor och svarsalternativ (dold initialt)
          aria-live="polite" meddelar skärmläsare om innehållsändringar.
          ========================================================= -->
