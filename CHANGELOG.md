@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.37
+- Brödsmuleknappar: appearance: none + -webkit-appearance: none tillagt så att button.breadcrumb-link ser identisk ut med a.breadcrumb-link på iOS/Safari.
+
 ## 0.3.36
 - Ordlista-knappen: text-decoration: none !important för att säkert slå mobilwebbläsares standardstilar.
 
