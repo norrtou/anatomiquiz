@@ -1164,7 +1164,8 @@ ol li {
 
 /* "Tryck för att se svaret" — diskret ledtext */
 .fc-hint {
-  font-size: 0.8rem;
+  font-size: 0.64rem;
+  font-style: italic;
   color: var(--text-secondary);
   margin-top: auto;
   letter-spacing: 0.2px;

@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.77
+- fc-hint: 0.64rem (20% mindre) och kursiv stil.
+
 ## 0.3.76
 - Tar bort #flashcards bakgrundsfärg — sektionen ska vara vit, bara kortet (#bbf7d0) ska vara grönt.
 
