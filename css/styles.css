@@ -880,6 +880,12 @@ select:focus {
   transition: color var(--transition-fast);
 }
 
+/* Specificitet 0,1,1 — slår webbläsarens a:-webkit-any-link (0,1,1) i kaskadens author-skikt */
+a.breadcrumb-link {
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+
 /* Knappvariant — nollställer ALL webbläsar- och OS-styling så att
    button.breadcrumb-link ser identisk ut med a.breadcrumb-link */
 button.breadcrumb-link {

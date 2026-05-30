@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.40
+- Brödsmula på ordlistesidan: a.breadcrumb-link (specificitet 0,1,1) slår nu webbläsarens a:-webkit-any-link — grön färg och inget understreck, identiskt med info-sidan.
+
 ## 0.3.39
 - Ordlista-knappen: ändrad från <a> till <button onclick> — eliminerar understrecket permanent. CSS-fixar för a.btn borttagna.
 
