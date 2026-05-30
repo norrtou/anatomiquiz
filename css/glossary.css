@@ -117,3 +117,28 @@
   }
 
 }
+
+/* Noscript-lista — visas bara för sökmotorer och användare utan JS */
+.glossary-noscript {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(140px, 1fr) 2fr;
+  gap: 0;
+}
+
+.glossary-noscript dt {
+  font-weight: 700;
+  color: var(--primary-dark);
+  padding: 8px 16px;
+  border-bottom: 1px solid rgba(16, 185, 129, 0.07);
+}
+
+.glossary-noscript dd {
+  margin: 0;
+  padding: 8px 16px;
+  border-bottom: 1px solid rgba(16, 185, 129, 0.07);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}

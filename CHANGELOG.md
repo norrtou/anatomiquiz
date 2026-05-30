@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.54
+- Favicon tillagd (ben-ikon i SVG) på alla sidor.
+- Ordlistans 195 termer inbäddade i noscript-block för sökmotorsynlighet.
+- Ordlistesidan: preload, theme-color och color-scheme tillagda. Stavfel i keywords rättat.
+- Ordlistesidan och info-sidan: OG- och Twitter-bildtexter korrigerade till sidspecifika texter.
+- Info-sidan: keywords och fullständig robots-tagg tillagda. H1 ändrad till "Om Anatomiquiz".
+
 ## 0.3.53
 - Startsidan: canonical och og:url uppdaterade till explicit adress, konsekvent med sitemapen.
 
