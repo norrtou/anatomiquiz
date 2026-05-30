@@ -1076,6 +1076,7 @@ ol li {
 
 /* Yttre behållare — skapar perspektivet för 3D-effekten */
 .fc-scene {
+  -webkit-perspective: 1200px;
   perspective: 1200px;
   cursor: pointer;
   margin-bottom: 24px;
@@ -1090,13 +1091,17 @@ ol li {
 /* Själva kortet som roterar */
 .fc-card {
   position: relative;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: var(--radius);
   min-height: 220px;
+  will-change: transform;
 }
 
 .fc-card.is-flipped {
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
@@ -1111,8 +1116,8 @@ ol li {
   justify-content: center;
   padding: 28px 24px 20px;
   border-radius: var(--radius);
-  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 /* Framsida — neutral, vit */
@@ -1120,6 +1125,8 @@ ol li {
   background: var(--surface);
   border: 2px solid rgba(16, 185, 129, 0.2);
   box-shadow: var(--shadow);
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
 }
 
 /* Baksida — grön, roterad 180° i vila */
@@ -1127,6 +1134,7 @@ ol li {
   background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
   border: 2px solid var(--primary);
   box-shadow: var(--shadow-lg);
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 

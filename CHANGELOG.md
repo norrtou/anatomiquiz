@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.61
+- Flashcard-animation: webkit-prefix tillagda på alla 3D-transforms och perspective så animationen fungerar på mobil.
+
 ## 0.3.60
 - Mobil: de två gröna startknapparna delar nu alltid samma rad.
 
