@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.38
+- Ordlistesidan: brödsmulorna flyttade in i kortet (vit bakgrund) — samma placering och design som på info-sidan.
+
 ## 0.3.37
 - Brödsmuleknappar: appearance: none + -webkit-appearance: none tillagt så att button.breadcrumb-link ser identisk ut med a.breadcrumb-link på iOS/Safari.
 
