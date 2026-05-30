@@ -1012,6 +1012,9 @@ ol li {
   .primary-actions .btn {
     flex: 1 !important;
     width: 0;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    padding: 10px 6px;
   }
 
   .secondary-actions .btn {
@@ -1076,8 +1079,6 @@ ol li {
 
 /* Yttre behållare — skapar perspektivet för 3D-effekten */
 .fc-scene {
-  -webkit-perspective: 1200px;
-  perspective: 1200px;
   cursor: pointer;
   margin-bottom: 24px;
   border-radius: var(--radius);
@@ -1088,21 +1089,16 @@ ol li {
   box-shadow: 0 0 0 3px var(--primary);
 }
 
-/* Själva kortet som roterar */
+/*
+ * Kortet — per-element-perspective-teknik.
+ * Undviker transform-style: preserve-3d som iOS Safari hanterar fel
+ * när ett förälderelement har border-radius. Varje sida har sin
+ * egen perspective() direkt i transform-egenskapen.
+ */
 .fc-card {
   position: relative;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: var(--radius);
   min-height: 220px;
-  will-change: transform;
-}
-
-.fc-card.is-flipped {
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
 }
 
 /* Gemensamma stilar för fram- och baksida */
@@ -1118,24 +1114,37 @@ ol li {
   border-radius: var(--radius);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Framsida — neutral, vit */
+/* Framsida — synlig i vila */
 .fc-front {
   background: var(--surface);
   border: 2px solid rgba(16, 185, 129, 0.2);
   box-shadow: var(--shadow);
-  -webkit-transform: rotateY(0deg);
-  transform: rotateY(0deg);
+  -webkit-transform: perspective(800px) rotateY(0deg);
+  transform: perspective(800px) rotateY(0deg);
 }
 
-/* Baksida — grön, roterad 180° i vila */
+/* Baksida — dold i vila (vänd bort från betraktaren) */
 .fc-back {
   background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
   border: 2px solid var(--primary);
   box-shadow: var(--shadow-lg);
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+  -webkit-transform: perspective(800px) rotateY(-180deg);
+  transform: perspective(800px) rotateY(-180deg);
+}
+
+/* Flippad — framsida vrids bort, baksida vrids fram */
+.fc-card.is-flipped .fc-front {
+  -webkit-transform: perspective(800px) rotateY(180deg);
+  transform: perspective(800px) rotateY(180deg);
+}
+
+.fc-card.is-flipped .fc-back {
+  -webkit-transform: perspective(800px) rotateY(0deg);
+  transform: perspective(800px) rotateY(0deg);
 }
 
 /* Frågetexten på framsidan */
@@ -1191,7 +1200,8 @@ ol li {
 
 /* Reducera animation för användare som föredrar det */
 @media (prefers-reduced-motion: reduce) {
-  .fc-card {
+  .fc-front,
+  .fc-back {
     transition-duration: 0.01ms !important;
   }
 }

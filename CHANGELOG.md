@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.62
+- Flashcard-animation: per-element-perspective istället för preserve-3d — fungerar på iOS Safari med border-radius.
+- Primärknapparna: white-space: nowrap och mindre font på mobil förhindrar radbrytning.
+
 ## 0.3.61
 - Flashcard-animation: webkit-prefix tillagda på alla 3D-transforms och perspective så animationen fungerar på mobil.
 
