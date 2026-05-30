@@ -326,7 +326,7 @@ a.btn,
 a.btn:hover,
 a.btn:focus,
 a.btn:visited {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .btn {

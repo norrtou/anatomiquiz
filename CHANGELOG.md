@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.36
+- Ordlista-knappen: text-decoration: none !important för att säkert slå mobilwebbläsares standardstilar.
+
 ## 0.3.35
 - Info-sidan: tillbakaknappen överst ersatt med brödsmula (← Anatomiquiz / Info).
 - Ordlistesidan: tillbakaknappen borttagen; brödsmule-nav (som redan fanns) räcker.
