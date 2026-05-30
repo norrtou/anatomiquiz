@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.73
+- Flashcard: grön bakgrund på .fc-card istället för .fc-front — 3D-transform på fc-front blockerade bakgrundsrendering på mobil.
+
 ## 0.3.72
 - Flashcard framsida: background #bbf7d0 — kortet självt är grönt, inte bara sektionen.
 

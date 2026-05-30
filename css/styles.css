@@ -1095,6 +1095,7 @@ ol li {
   position: relative;
   border-radius: var(--radius);
   min-height: 220px;
+  background: #bbf7d0;
 }
 
 /* Gemensamma stilar för fram- och baksida */
@@ -1116,7 +1117,7 @@ ol li {
 
 /* Framsida — synlig i vila */
 .fc-front {
-  background: #bbf7d0;
+  background: transparent;
   border: 2px solid rgba(16, 185, 129, 0.2);
   box-shadow: var(--shadow);
   -webkit-transform: perspective(800px) rotateY(0deg);
