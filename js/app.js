@@ -202,8 +202,11 @@ async function startQuiz(){
 
   // Load questions based on topic
   if(topic === 'blandade'){
-    // Load from all subject files for mixed questions
-    const paths = ['./data/ben.json', './data/handen.json', './data/muskler.json', './data/medicinsk_terminologi.json', './data/riktningar.json', './data/neurologi.json', './data/blodomloppet.json', './data/tentaplugg.json']
+    const paths = [...new Set(
+      Array.from(el('topic').options)
+        .filter(o => !o.disabled && o.value !== 'blandade')
+        .map(o => getQuestionsPath(o.value))
+    )]
     await loadQuestionsFromMultiplePaths(paths)
   } else {
     const qsPath = getQuestionsPath(topic)
