@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.51
+- Strukturerad data: BreadcrumbList-URLs ändrade till absoluta adresser på ordliste- och info-sidan.
+
 ## 0.3.50
 - Google Search Console-verifieringstaggen tillagd.
 
