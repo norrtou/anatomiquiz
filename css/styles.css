@@ -1112,7 +1112,7 @@ ol li {
 
 /* Framsida — synlig i vila */
 .fc-front {
-  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+  background: #f0fdf4;
   border: 2px solid rgba(16, 185, 129, 0.2);
   box-shadow: var(--shadow);
   -webkit-transform: perspective(800px) rotateY(0deg);
