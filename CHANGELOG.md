@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.80
+- Info-sidan: rubrik "Info" borttagen.
+
 ## 0.3.79
 - Frågestatistik: procentsatser borttagna ur tabellen.
 
