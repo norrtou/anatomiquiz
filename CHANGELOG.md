@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.15
+- Faktakontroll av alla Normal-frågor i muskler.json: 11 rättningar — fabricerade svenska muskelnamn borttagna ur distraktorer (q1, q2, q3, q4, q5, q6, q8, q10, q13, q14) och ersatta med etablerade svenska anatomiska termer (kappmuskeln, breda ryggmuskeln, deltamuskeln m.fl.); q238 distraktorn "Os coxae" ersatt med "Sacrum" då tuber ischiadicum tekniskt är en del av os coxae. Alla korrekta svar och T/F-påståenden bekräftade faktamässigt korrekta.
+
+## 0.3.14
+- Kompletterade muskler.json med 73 nya frågor (Normal svårighet) baserade på kurslistan: 29 ursprung-frågor (MC), 29 fäste-frågor (MC), 5 klassificerings-frågor (FDP/FPL/EPB/EPL/APL som extrinsic) och 10 funktions-frågor (T/F) för tidigare ej täckta funktioner (höftextension Hamstrings, höftflexion Quadriceps, knäflexion Gastrocnemius, supination Tibialis anterior m.fl.). Totalt 273 frågor i muskler.json.
+
 ## 0.3.13
 - Tentaplugg är nu förstaval i ämnesmenyn.
 

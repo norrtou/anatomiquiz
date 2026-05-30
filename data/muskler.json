@@ -5,7 +5,7 @@
     "prompt": "Vad är den svenska benämningen på Trapezius?",
     "correct": "kappmuskeln",
     "distractors": [
-      "lång tumabduktor",
+      "breda ryggmuskeln",
       "extensor carpi radialis longus",
       "tvärsgående bukmuskel"
     ],
@@ -19,7 +19,7 @@
     "prompt": "Vad är den svenska benämningen på Pectoralis major?",
     "correct": "stora bröstmuskeln",
     "distractors": [
-      "kort tumflexor",
+      "breda ryggmuskeln",
       "supraspinatus",
       "extensor carpi radialis brevis"
     ],
@@ -35,7 +35,7 @@
     "distractors": [
       "bakre lårmuskeln",
       "flexor carpi radialis",
-      "ytlig fingerflexor"
+      "ryggsträckaren"
     ],
     "topic": "muskler_namn",
     "difficulty": "Normal",
@@ -47,9 +47,9 @@
     "prompt": "Vad är den svenska benämningen på Erector spinae?",
     "correct": "ryggsträckaren",
     "distractors": [
-      "oppositionsmuskel för tummen",
+      "kappmuskeln",
       "deltamuskeln",
-      "ytlig fingerflexor"
+      "trehövdade överarmsmuskeln"
     ],
     "topic": "muskler_namn",
     "difficulty": "Normal",
@@ -61,7 +61,7 @@
     "prompt": "Vad är den svenska benämningen på Rectus abdominis?",
     "correct": "raka bukmuskeln",
     "distractors": [
-      "oppositionsmuskel för tummen",
+      "tvärsgående bukmuskel",
       "tvåhövdade överarmsmuskeln",
       "extensor carpi radialis brevis"
     ],
@@ -75,8 +75,8 @@
     "prompt": "Vad är den svenska benämningen på Transversus abdominis?",
     "correct": "tvärsgående bukmuskel",
     "distractors": [
-      "kort tumextensor",
-      "ytlig fingerflexor",
+      "raka bukmuskeln",
+      "kappmuskeln",
       "supraspinatus"
     ],
     "topic": "muskler_namn",
@@ -103,8 +103,8 @@
     "prompt": "Vad är den svenska benämningen på Rhomboidei?",
     "correct": "rutmuskeln",
     "distractors": [
-      "gemensam fingerextensor",
-      "lång tumflexor",
+      "breda ryggmuskeln",
+      "kappmuskeln",
       "vadsmuskel"
     ],
     "topic": "muskler_namn",
@@ -132,8 +132,8 @@
     "correct": "mellangärde",
     "distractors": [
       "vadsmuskel",
-      "kort tumabduktor",
-      "lång tumabduktor"
+      "kappmuskeln",
+      "rutmuskeln"
     ],
     "topic": "muskler_namn",
     "difficulty": "Normal",
@@ -146,7 +146,7 @@
     "correct": "tvåhövdade överarmsmuskeln",
     "distractors": [
       "extensor carpi radialis brevis",
-      "kort tumextensor",
+      "trehövdade överarmsmuskeln",
       "rutmuskeln"
     ],
     "topic": "muskler_namn",
@@ -159,8 +159,8 @@
     "prompt": "Vad är den svenska benämningen på Triceps brachii?",
     "correct": "trehövdade överarmsmuskeln",
     "distractors": [
-      "lång tumextensor",
-      "lång tumabduktor",
+      "tvåhövdade överarmsmuskeln",
+      "deltamuskeln",
       "tvärsgående bukmuskel"
     ],
     "topic": "muskler_namn",
@@ -2432,5 +2432,735 @@
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Hard",
     "source": "Muskler - Muskelrörelse applicering"
+  },
+  {
+    "id": "q213",
+    "type": "mc",
+    "prompt": "Var har Trapezius sitt ursprung?",
+    "correct": "Occiput, cervikalkotorna och thorakalkotorna",
+    "distractors": ["Sternum och clavicula", "Costae III-V", "Sacrum och crista iliaca"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q214",
+    "type": "mc",
+    "prompt": "Var har Pectoralis major sitt ursprung?",
+    "correct": "Sternum och clavicula",
+    "distractors": ["Occiput, cervikalkotorna och thorakalkotorna", "Costae III-V", "Os pubis"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q215",
+    "type": "mc",
+    "prompt": "Var har Pectoralis minor sitt ursprung?",
+    "correct": "Costae III-V",
+    "distractors": ["Sternum och clavicula", "Lateralt på costae 1-9", "Processus spinosus"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q216",
+    "type": "mc",
+    "prompt": "Var har Erector spinae sitt ursprung?",
+    "correct": "Sacrum och crista iliaca",
+    "distractors": ["Os pubis", "T7-L5 och crista iliaca", "Occiput och thorakalkotorna"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q217",
+    "type": "mc",
+    "prompt": "Var har Rectus abdominis sitt ursprung?",
+    "correct": "Os pubis",
+    "distractors": ["Sacrum och crista iliaca", "Costae III-V", "Processus spinosus"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q218",
+    "type": "mc",
+    "prompt": "Var har Transversus abdominis sitt ursprung?",
+    "correct": "Djupa bladet av fascia thoracolumbalis, insidan av costa 7-12 och crista iliaca",
+    "distractors": ["Os pubis", "Sacrum och crista iliaca", "Lateralt på costae 1-9"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q219",
+    "type": "mc",
+    "prompt": "Var har Serratus anterior sitt ursprung?",
+    "correct": "Lateralt på costae 1-9",
+    "distractors": ["Costae III-V", "Processus spinosus", "Sacrum och crista iliaca"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q220",
+    "type": "mc",
+    "prompt": "Var har Rhomboidei sitt ursprung?",
+    "correct": "Processus spinosus",
+    "distractors": ["Sacrum och crista iliaca", "Occiput och cervikalkotorna", "Lateralt på costae 1-9"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q221",
+    "type": "mc",
+    "prompt": "Var har Latissimus dorsi sitt ursprung?",
+    "correct": "T7-L5, fascia thoracolumbalis, crista iliaca och nedersta 3-4 revbenen",
+    "distractors": ["Sacrum och crista iliaca", "Occiput, cervikalkotorna och thorakalkotorna", "Os coxae"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q222",
+    "type": "mc",
+    "prompt": "Var har Supraspinatus sitt ursprung?",
+    "correct": "Fossa supraspinata på scapula",
+    "distractors": ["Clavicula, acromion och scapula", "Scapula och humerus", "Humerus"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q223",
+    "type": "mc",
+    "prompt": "Var har Deltoideus sitt ursprung?",
+    "correct": "Clavicula, acromion och scapula",
+    "distractors": ["Fossa supraspinata på scapula", "Scapula", "Scapula och humerus"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q224",
+    "type": "mc",
+    "prompt": "Var har Biceps brachii sitt ursprung?",
+    "correct": "Scapula",
+    "distractors": ["Scapula och humerus", "Humerus", "Clavicula, acromion och scapula"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q225",
+    "type": "mc",
+    "prompt": "Var har Triceps brachii sitt ursprung?",
+    "correct": "Scapula och humerus",
+    "distractors": ["Scapula", "Humerus", "Ulna"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q226",
+    "type": "mc",
+    "prompt": "Var har Flexor carpi ulnaris sitt ursprung?",
+    "correct": "Mediala epicondylen på humerus",
+    "distractors": ["Laterala epicondylen på humerus", "Radius och ulna", "Ulna"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q227",
+    "type": "mc",
+    "prompt": "Var har Flexor carpi radialis sitt ursprung?",
+    "correct": "Mediala epicondylen på humerus",
+    "distractors": ["Laterala epicondylen på humerus", "Radius", "Ulna"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q228",
+    "type": "mc",
+    "prompt": "Var har Extensor carpi radialis longus sitt ursprung?",
+    "correct": "Laterala epicondylen på humerus",
+    "distractors": ["Mediala epicondylen på humerus", "Radius och ulna", "Ulna"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q229",
+    "type": "mc",
+    "prompt": "Var har Extensor carpi radialis brevis sitt ursprung?",
+    "correct": "Laterala epicondylen på humerus",
+    "distractors": ["Mediala epicondylen på humerus", "Radius", "Ulna"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q230",
+    "type": "mc",
+    "prompt": "Var har Extensor digitorum communis sitt ursprung?",
+    "correct": "Laterala epicondylen på humerus",
+    "distractors": ["Mediala epicondylen på humerus", "Radius och ulna", "Radius"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q231",
+    "type": "mc",
+    "prompt": "Var har Flexor digitorum superficialis sitt ursprung?",
+    "correct": "Mediala epicondylen på humerus, radius och ulna",
+    "distractors": ["Ulna", "Laterala epicondylen på humerus", "Radius"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q232",
+    "type": "mc",
+    "prompt": "Var har Flexor digitorum profundus sitt ursprung?",
+    "correct": "Ulna",
+    "distractors": ["Radius", "Mediala epicondylen på humerus", "Radius och ulna"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q233",
+    "type": "mc",
+    "prompt": "Var har Flexor pollicis longus sitt ursprung?",
+    "correct": "Radius",
+    "distractors": ["Ulna", "Mediala epicondylen på humerus", "Radius och ulna"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q234",
+    "type": "mc",
+    "prompt": "Var har Extensor pollicis brevis sitt ursprung?",
+    "correct": "Radius",
+    "distractors": ["Ulna", "Laterala epicondylen på humerus", "Radius och ulna"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q235",
+    "type": "mc",
+    "prompt": "Var har Extensor pollicis longus sitt ursprung?",
+    "correct": "Ulna",
+    "distractors": ["Radius", "Laterala epicondylen på humerus", "Radius och ulna"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q236",
+    "type": "mc",
+    "prompt": "Var har Abductor pollicis longus sitt ursprung?",
+    "correct": "Radius och ulna",
+    "distractors": ["Radius", "Ulna", "Mediala epicondylen på humerus"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q237",
+    "type": "mc",
+    "prompt": "Var har Gluteus maximus sitt ursprung?",
+    "correct": "Os coxae",
+    "distractors": ["Femur", "Tuber ischiadicum på os coxae", "Os coxae och femur"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q238",
+    "type": "mc",
+    "prompt": "Var har Hamstrings sitt ursprung?",
+    "correct": "Tuber ischiadicum på os coxae",
+    "distractors": ["Sacrum", "Tibia och fibula", "Femur"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q239",
+    "type": "mc",
+    "prompt": "Var har Quadriceps sitt ursprung?",
+    "correct": "Os coxae och femur",
+    "distractors": ["Os coxae", "Femur", "Tuber ischiadicum på os coxae"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q240",
+    "type": "mc",
+    "prompt": "Var har Triceps surae sitt ursprung?",
+    "correct": "Tibia, fibula och femurs mediala och laterala kondyl",
+    "distractors": ["Femur", "Tibia och fibula", "Os coxae och femur"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q241",
+    "type": "mc",
+    "prompt": "Var har Tibialis anterior sitt ursprung?",
+    "correct": "Tibias lateralsida",
+    "distractors": ["Tibia och fibula", "Fibula", "Femur"],
+    "topic": "muskler_ursprung",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q242",
+    "type": "mc",
+    "prompt": "Var fäster Trapezius?",
+    "correct": "Scapula och clavicula",
+    "distractors": ["Processus coracoideus", "Margo medialis scapulae", "Humerus"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q243",
+    "type": "mc",
+    "prompt": "Var fäster Pectoralis major?",
+    "correct": "Humerus",
+    "distractors": ["Scapula och clavicula", "Processus coracoideus", "Radius"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q244",
+    "type": "mc",
+    "prompt": "Var fäster Pectoralis minor?",
+    "correct": "Processus coracoideus",
+    "distractors": ["Humerus", "Margo medialis scapulae", "Scapula och clavicula"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q245",
+    "type": "mc",
+    "prompt": "Var fäster Erector spinae?",
+    "correct": "Samtliga kotor i ländrygg, bröstrygg och nacke",
+    "distractors": ["Revbensbrosket och processus xiphoideus", "Rektusskidan och linea alba", "Scapula"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q246",
+    "type": "mc",
+    "prompt": "Var fäster Rectus abdominis?",
+    "correct": "Revbensbrosket och processus xiphoideus",
+    "distractors": ["Rektusskidan och linea alba", "Samtliga kotor i ländrygg och bröstrygg", "Scapula"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q247",
+    "type": "mc",
+    "prompt": "Var fäster Transversus abdominis?",
+    "correct": "Rektusskidan och linea alba",
+    "distractors": ["Revbensbrosket och processus xiphoideus", "Samtliga kotor i ländrygg och nacke", "Scapula"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q248",
+    "type": "mc",
+    "prompt": "Var fäster Serratus anterior?",
+    "correct": "Scapula",
+    "distractors": ["Humerus", "Margo medialis scapulae", "Processus coracoideus"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q249",
+    "type": "mc",
+    "prompt": "Var fäster Rhomboidei?",
+    "correct": "Margo medialis scapulae",
+    "distractors": ["Scapula och clavicula", "Processus coracoideus", "Humerus"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q250",
+    "type": "mc",
+    "prompt": "Var fäster Latissimus dorsi?",
+    "correct": "Humerus",
+    "distractors": ["Scapula och clavicula", "Ulna", "Margo medialis scapulae"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q251",
+    "type": "mc",
+    "prompt": "Var fäster Supraspinatus?",
+    "correct": "Humerus",
+    "distractors": ["Scapula", "Clavicula", "Radius"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q252",
+    "type": "mc",
+    "prompt": "Var fäster Deltoideus?",
+    "correct": "Humerus",
+    "distractors": ["Scapula", "Clavicula", "Ulna"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q253",
+    "type": "mc",
+    "prompt": "Var fäster Biceps brachii?",
+    "correct": "Radius",
+    "distractors": ["Ulna", "Humerus", "Scapula"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q254",
+    "type": "mc",
+    "prompt": "Var fäster Triceps brachii?",
+    "correct": "Ulna",
+    "distractors": ["Radius", "Humerus", "Scapula"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q255",
+    "type": "mc",
+    "prompt": "Var fäster Flexor carpi ulnaris?",
+    "correct": "Metacarpalbenen",
+    "distractors": ["Falangerna", "Tummens ytterfalang", "Ulna"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q256",
+    "type": "mc",
+    "prompt": "Var fäster Flexor carpi radialis?",
+    "correct": "Metacarpalbenen",
+    "distractors": ["Falangerna", "Ulna", "Radius"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q257",
+    "type": "mc",
+    "prompt": "Var fäster Extensor carpi radialis longus?",
+    "correct": "Metacarpalbenen",
+    "distractors": ["Falangerna", "Tummens grundfalang", "Ulna"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q258",
+    "type": "mc",
+    "prompt": "Var fäster Extensor carpi radialis brevis?",
+    "correct": "Metacarpalbenen",
+    "distractors": ["Falangerna", "Tummens ytterfalang", "Radius"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q259",
+    "type": "mc",
+    "prompt": "Var fäster Extensor digitorum communis?",
+    "correct": "De fyra fingrarna (finger II-V)",
+    "distractors": ["Metacarpalbenen", "Tummens falanger", "Ulna"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q260",
+    "type": "mc",
+    "prompt": "Var fäster Flexor digitorum superficialis?",
+    "correct": "De fyra fingrarna (finger II-V)",
+    "distractors": ["Metacarpalbenen", "Tummens falanger", "Radius"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q261",
+    "type": "mc",
+    "prompt": "Var fäster Flexor digitorum profundus?",
+    "correct": "De fyra fingrarna (finger II-V)",
+    "distractors": ["Metacarpalbenen", "Tummens falanger", "Mellanfalangerna"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q262",
+    "type": "mc",
+    "prompt": "Var fäster Flexor pollicis longus?",
+    "correct": "Tummens ytterfalang",
+    "distractors": ["Tummens grundfalang", "Basen av os metacarpale I", "Metacarpalbenen"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q263",
+    "type": "mc",
+    "prompt": "Var fäster Extensor pollicis brevis?",
+    "correct": "Tummens grundfalang",
+    "distractors": ["Tummens ytterfalang", "Basen av os metacarpale I", "Metacarpalbenen"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q264",
+    "type": "mc",
+    "prompt": "Var fäster Extensor pollicis longus?",
+    "correct": "Tummens ytterfalang",
+    "distractors": ["Tummens grundfalang", "Basen av os metacarpale I", "Metacarpalbenen"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q265",
+    "type": "mc",
+    "prompt": "Var fäster Abductor pollicis longus?",
+    "correct": "Basen av os metacarpale I",
+    "distractors": ["Tummens grundfalang", "Tummens ytterfalang", "Metacarpalbenen"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q266",
+    "type": "mc",
+    "prompt": "Var fäster Gluteus maximus?",
+    "correct": "Femur",
+    "distractors": ["Os coxae", "Tibia", "Fibula"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q267",
+    "type": "mc",
+    "prompt": "Var fäster Hamstrings?",
+    "correct": "Tibia och fibula",
+    "distractors": ["Femur", "Calcaneus", "Os coxae"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q268",
+    "type": "mc",
+    "prompt": "Var fäster Quadriceps?",
+    "correct": "Tibia",
+    "distractors": ["Femur", "Fibula", "Calcaneus"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q269",
+    "type": "mc",
+    "prompt": "Var fäster Triceps surae?",
+    "correct": "Calcaneus",
+    "distractors": ["Tibia", "Fibula", "Metatarsale 1"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q270",
+    "type": "mc",
+    "prompt": "Var fäster Tibialis anterior?",
+    "correct": "Metatarsale 1",
+    "distractors": ["Calcaneus", "Tibia", "Fibula"],
+    "topic": "muskler_fäste",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q271",
+    "type": "mc",
+    "prompt": "Är Flexor digitorum profundus extrinsic eller intrinsic?",
+    "correct": "extrinsic",
+    "distractors": ["intrinsic"],
+    "topic": "muskler_klassificering",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q272",
+    "type": "mc",
+    "prompt": "Är Flexor pollicis longus extrinsic eller intrinsic?",
+    "correct": "extrinsic",
+    "distractors": ["intrinsic"],
+    "topic": "muskler_klassificering",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q273",
+    "type": "mc",
+    "prompt": "Är Extensor pollicis brevis extrinsic eller intrinsic?",
+    "correct": "extrinsic",
+    "distractors": ["intrinsic"],
+    "topic": "muskler_klassificering",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q274",
+    "type": "mc",
+    "prompt": "Är Extensor pollicis longus extrinsic eller intrinsic?",
+    "correct": "extrinsic",
+    "distractors": ["intrinsic"],
+    "topic": "muskler_klassificering",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q275",
+    "type": "mc",
+    "prompt": "Är Abductor pollicis longus extrinsic eller intrinsic?",
+    "correct": "extrinsic",
+    "distractors": ["intrinsic"],
+    "topic": "muskler_klassificering",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q276",
+    "type": "tf",
+    "prompt": "Hamstrings extenderar i art. coxae",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "muskler_funktion",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q277",
+    "type": "tf",
+    "prompt": "Quadriceps flekterar i art. coxae",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "muskler_funktion",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q278",
+    "type": "tf",
+    "prompt": "Gastrocnemius flekterar även i art. genu",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "muskler_funktion",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q279",
+    "type": "tf",
+    "prompt": "Tibialis anterior utför supination av foten",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "muskler_funktion",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q280",
+    "type": "tf",
+    "prompt": "Latissimus dorsi extenderar och inåtroterar i art. glenohumerale",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "muskler_funktion",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q281",
+    "type": "tf",
+    "prompt": "Rhomboidei lyfter och inåtroterar scapula",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "muskler_funktion",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q282",
+    "type": "tf",
+    "prompt": "Biceps brachii flekterar i art. glenohumerale",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "muskler_funktion",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q283",
+    "type": "tf",
+    "prompt": "Triceps brachii extenderar i art. glenohumerale",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "muskler_funktion",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q284",
+    "type": "tf",
+    "prompt": "Supraspinatus stabiliserar i art. glenohumerale",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "muskler_funktion",
+    "difficulty": "Normal",
+    "source": "Muskler"
+  },
+  {
+    "id": "q285",
+    "type": "tf",
+    "prompt": "Transversus abdominis fungerar som andningsmuskel",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "muskler_funktion",
+    "difficulty": "Normal",
+    "source": "Muskler"
   }
 ]
