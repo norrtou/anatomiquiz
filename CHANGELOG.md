@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.72
+- Flashcard framsida: background #bbf7d0 — kortet självt är grönt, inte bara sektionen.
+
 ## 0.3.71
 - Flashcard-sektionen (#flashcards): background #d1fae5 — åsidosätter .card:s vita bakgrund direkt på sektionsnivå.
 
