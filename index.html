@@ -152,38 +152,15 @@
       <div class="setup-actions">
         <button id="startBtn" class="btn primary btn-start">Starta quiz</button>
         <div class="secondary-actions">
-          <button id="viewInfo" class="btn">Info</button>
+          <button class="btn" onclick="window.location.href='info.html'">Info</button>
           <button class="btn" onclick="window.location.href='medicinskordlista.html'">Ordlista</button>
           <button id="viewScores" class="btn">Topplista</button>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================
-         Infosektion — om appen och versionshistorik (dold initialt)
-         ========================================================= -->
-    <section id="info" class="card hidden" aria-labelledby="infoHeading">
-      <nav class="breadcrumb" aria-label="Brödsmula">
-        <button id="backFromInfoTop" class="breadcrumb-link">← Anatomiquiz</button>
-        <span class="breadcrumb-sep" aria-hidden="true">/</span>
-        <span class="breadcrumb-current" aria-current="page">Info</span>
-      </nav>
-      <h2 id="infoHeading">Info</h2>
 
-      <div class="info-about">
-        <p>Anatomiquiz är en webbapp för att träna och testa anatomiska kunskaper på svenska och medicinsk latin. Frågorna täcker bland annat skelett, muskler, riktningar och medicinsk terminologi. Den är gjord för arbetsterapeuter, men bör fungera för fysioterapeuter, sjuksköterskor, läkare och andra som vill öva på sina kunskaper. Den kan innehålla faktafel och buggar, så den ersätter aldrig andra studier, men tanken är att den ska vara ett roligt komplement med lite multiple choice och true/false-frågor. Planerade tillägg är frågor inom fler anatomiska och fysiologiska områden, fokusområden för olika professioner och så fler svårighetsnivåer. Den ska även så småningom innehålla fler frågor kring problem, skador och sjukdomar.</p>
-        <p class="info-creator">Skapad av <a href="https://github.com/norrtou" target="_blank" rel="noopener noreferrer" class="info-link">Norrtou Creations</a></p>
-      </div>
-
-      <h3 class="changelog-heading">Versionshistorik</h3>
-      <div id="changelogContent" class="changelog-list"></div>
-
-      <div class="actions">
-        <button id="backFromInfo" class="btn">← Tillbaka</button>
-      </div>
-    </section>
-
-    <!-- =========================================================
+<!-- =========================================================
          Quizsektion — frågor och svarsalternativ (dold initialt)
          aria-live="polite" meddelar skärmläsare om innehållsändringar.
          ========================================================= -->

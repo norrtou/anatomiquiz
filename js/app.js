@@ -505,59 +505,6 @@ function handleImportFile(ev){
   reader.readAsText(f, 'utf-8')
 }
 
-function showInfo() {
-  el('setup').classList.add('hidden')
-  el('quiz').classList.add('hidden')
-  el('result').classList.add('hidden')
-  el('highscores').classList.add('hidden')
-  el('info').classList.remove('hidden')
-  loadChangelog()
-}
-
-async function loadChangelog() {
-  const container = el('changelogContent')
-  if (container.dataset.loaded) return
-  container.innerHTML = '<p class="changelog-loading">Laddar ändringslogg…</p>'
-  try {
-    const res = await fetch('./CHANGELOG.md')
-    if (!res.ok) throw new Error()
-    const text = await res.text()
-    container.innerHTML = renderChangelog(text)
-    container.dataset.loaded = '1'
-  } catch {
-    container.innerHTML = '<p class="changelog-loading">Kunde inte ladda ändringslogg.</p>'
-  }
-}
-
-function renderChangelog(text) {
-  const entries = []
-  let current = null
-
-  for (const rawLine of text.split(/\r?\n/)) {
-    const line = rawLine.trimEnd()
-    if (line.startsWith('## ')) {
-      if (current) entries.push(current)
-      current = { version: line.slice(3).trim(), items: [] }
-    } else if (current && line.startsWith('- ')) {
-      current.items.push(line.slice(2).trim())
-    }
-  }
-  if (current) entries.push(current)
-
-  const recent = entries.slice(0, 20)
-  if (!recent.length) return '<p class="changelog-loading">Ingen ändringslogg hittades.</p>'
-
-  return recent.map(e => {
-    const itemsHtml = e.items.length
-      ? e.items.map(i => `<div class="cl-item">– ${i}</div>`).join('')
-      : ''
-    return `<div class="changelog-entry">
-      <div class="changelog-version">v${e.version}</div>
-      <div class="cl-body">${itemsHtml}</div>
-    </div>`
-  }).join('')
-}
-
 
 function cancelQuiz(){
   if(confirm('Är du säker? Ditt resultat sparas inte.')) {
@@ -588,10 +535,6 @@ function init(){
   el('saveScore').addEventListener('click', saveScore)
   el('restart').addEventListener('click', ()=>{el('result').classList.add('hidden');el('setup').classList.remove('hidden')})
   el('viewScores').addEventListener('click', showHighscores)
-  el('viewInfo').addEventListener('click', showInfo)
-  const backFromInfo = () => { el('info').classList.add('hidden'); el('setup').classList.remove('hidden') }
-  el('backFromInfo').addEventListener('click', backFromInfo)
-  el('backFromInfoTop').addEventListener('click', backFromInfo)
   el('saveManage').addEventListener('click', ()=>{ alert('Ändringar sparade (sparas automatiskt).'); renderManage() })
   const imp = el('importFile')
   if(imp) imp.addEventListener('change', handleImportFile)

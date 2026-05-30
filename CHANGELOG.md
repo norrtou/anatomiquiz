@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.42
+- Info separerad till egen sida: info.html med SEO, schema.org AboutPage och brödsmula som <a href> — identisk struktur med medicinskordlista.html.
+- Changelog-logik extraherad till js/info.js.
+- Info-sektionen och showInfo/loadChangelog/renderChangelog borttagna ur index.html och app.js.
+
 ## 0.3.41
 - Brödsmula ordlistesidan (mobil): täcker nu :visited, :hover, :focus, :active — index.html är alltid besökt så länken visades lila. Lade även till -webkit-tap-highlight-color: transparent.
 
