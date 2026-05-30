@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.47
+- Medicinska ordlistan: engelska termen efter "Eng:" visas nu kursivt.
+
 ## 0.3.46
 - Versionshistorik: alla filnamn med ändelser borttagna ur alla poster.
 

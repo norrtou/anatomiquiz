@@ -63,7 +63,7 @@ function renderTerms(terms, query) {
       groups[letter].forEach(e => {
         html += `<div class="glossary-entry">
           <span class="glossary-term">${escapeHtml(e.term)}</span>
-          <span class="glossary-def">${escapeHtml(e.def)}</span>
+          <span class="glossary-def">${formatDef(e.def)}</span>
         </div>`
       })
     })
@@ -95,6 +95,22 @@ function escapeHtml(str) {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
+}
+
+/**
+ * Escapar HTML och kursiverar engelska termer (text efter "Eng: " t.o.m. nästa punkt).
+ * @param {string} str
+ * @returns {string}
+ */
+/**
+ * Escapar HTML och kursiverar engelska termer (text efter "Eng: " t.o.m. nästa punkt).
+ * Parentetiskt innehåll som "(pl. alveoli)" behandlas som en enhet och
+ * avbryter inte matchningen trots inre punkt.
+ * @param {string} str
+ * @returns {string}
+ */
+function formatDef(str) {
+  return escapeHtml(str).replace(/Eng: ((?:[^.(]|\([^)]*\))+)\./g, 'Eng: <em>$1</em>.')
 }
 
 /**
