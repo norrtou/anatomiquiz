@@ -1,1 +1,1002 @@
-[]
+[
+  {
+    "id": "blodomloppet_q1",
+    "type": "tf",
+    "prompt": "Det systemiska blodomloppet transporterar blod mellan hjärta och lungor.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_kretsloppet",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q2",
+    "type": "tf",
+    "prompt": "Lungkretsloppet går mellan hjärta och lungor.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_kretsloppet",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q3",
+    "type": "tf",
+    "prompt": "Vänster kammare pumpar blod till lungkretsloppet.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q4",
+    "type": "tf",
+    "prompt": "Höger kammare pumpar blod till lungkretsloppet.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q5",
+    "type": "tf",
+    "prompt": "Syrerikt blod kommer in i vänster förmak.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q6",
+    "type": "tf",
+    "prompt": "Vener leder alltid syrerikt blod.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_karl",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q7",
+    "type": "tf",
+    "prompt": "Arterier leder alltid syrerikt blod.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_karl",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q8",
+    "type": "tf",
+    "prompt": "Lungartärerna transporterar syrerikt blod.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_kretsloppet",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q9",
+    "type": "tf",
+    "prompt": "Lungvenerna transporterar syrerikt blod till hjärtat.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_kretsloppet",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q10",
+    "type": "tf",
+    "prompt": "Högra förmaket tar emot blod från lungvenerna.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q11",
+    "type": "tf",
+    "prompt": "Övre hålvenen tömmer blod till vänster förmak.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_karl",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q12",
+    "type": "tf",
+    "prompt": "Höger förmak tar emot venöst blod från kroppen.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q13",
+    "type": "tf",
+    "prompt": "Trikuspidalisklaffen sitter mellan höger förmak och kammare.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q14",
+    "type": "tf",
+    "prompt": "Mitralisklaffen sitter mellan höger kammare och aorta.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q15",
+    "type": "tf",
+    "prompt": "Aortaklaffen sitter mellan vänster kammare och aorta.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q16",
+    "type": "tf",
+    "prompt": "Pulmonalisklaffen leder blod till systemkretsloppet.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q17",
+    "type": "tf",
+    "prompt": "Aorta är kroppens största artär.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_karl",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q18",
+    "type": "tf",
+    "prompt": "Kapillärer är platsen för gasutbyte.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_karl",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q19",
+    "type": "tf",
+    "prompt": "Venoler leder blod från hjärtat till kapillärer.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_karl",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q20",
+    "type": "tf",
+    "prompt": "Arterioler reglerar blodflöde till kapillärnät.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_karl",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q21",
+    "type": "tf",
+    "prompt": "Blodtryck är högst i vener.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_fysiologi",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q22",
+    "type": "tf",
+    "prompt": "Blodtryck är högst i aorta.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_fysiologi",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q23",
+    "type": "tf",
+    "prompt": "Venklaffar hindrar backflöde i vener.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_karl",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q24",
+    "type": "tf",
+    "prompt": "Arterier har ofta klaffar.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_karl",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q25",
+    "type": "tf",
+    "prompt": "Systemkretsloppet startar i höger kammare.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_kretsloppet",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q26",
+    "type": "tf",
+    "prompt": "Systemkretsloppet startar i vänster kammare.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_kretsloppet",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q27",
+    "type": "tf",
+    "prompt": "Blodet går aorta → kropp → vena cava → höger förmak.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_kretsloppet",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q28",
+    "type": "tf",
+    "prompt": "Blodet går lungor → höger förmak → vänster kammare.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_kretsloppet",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q29",
+    "type": "tf",
+    "prompt": "Lungkretsloppet syftar till syresättning av blod.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_kretsloppet",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q30",
+    "type": "tf",
+    "prompt": "Systemkretsloppet syftar till syresättning av blod i lungor.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_kretsloppet",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q31",
+    "type": "tf",
+    "prompt": "Erytrocyter transporterar syre.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_blod",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q32",
+    "type": "tf",
+    "prompt": "Leukocyter transporterar syre.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_blod",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q33",
+    "type": "tf",
+    "prompt": "Hemoglobin binder syre i blodet.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_blod",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q34",
+    "type": "tf",
+    "prompt": "Plasma är blodets cellkomponent.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_blod",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q35",
+    "type": "tf",
+    "prompt": "Blodplättar är viktiga för koagulation.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_blod",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q36",
+    "type": "tf",
+    "prompt": "Kapillärer har tjocka muskellager.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_karl",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q37",
+    "type": "tf",
+    "prompt": "Diffusion sker främst i kapillärer.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_karl",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q38",
+    "type": "tf",
+    "prompt": "Artärer har tunna väggar och stort lumen.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_karl",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q39",
+    "type": "tf",
+    "prompt": "Vener har ofta större lumen än artärer.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_karl",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q40",
+    "type": "tf",
+    "prompt": "Hjärtat har tre kammare hos människan.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q41",
+    "type": "tf",
+    "prompt": "Hjärtat har fyra kamrar.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q42",
+    "type": "tf",
+    "prompt": "Sinusknutan styr hjärtats rytm.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q43",
+    "type": "tf",
+    "prompt": "AV-knutan finns i vänster kammare.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q44",
+    "type": "tf",
+    "prompt": "AV-knutan fördröjer impulsen mellan förmak och kammare.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q45",
+    "type": "tf",
+    "prompt": "Purkinjefibrer sprider impulser i kammarmuskulatur.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q46",
+    "type": "tf",
+    "prompt": "Hjärtats elektriska impuls startar i vänster kammare.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q47",
+    "type": "tf",
+    "prompt": "Systole är hjärtats fyllnadsfas.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_fysiologi",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q48",
+    "type": "tf",
+    "prompt": "Diastole är hjärtats avslappningsfas.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_fysiologi",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q49",
+    "type": "tf",
+    "prompt": "Blodtryck mäts i mmHg.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_fysiologi",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q50",
+    "type": "tf",
+    "prompt": "Diastoliskt tryck är alltid högre än systoliskt.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_fysiologi",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q51",
+    "type": "tf",
+    "prompt": "Systemkretsloppet börjar i vänster kammare → aorta → kropp → vena cava → höger förmak.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_kretsloppet",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q52",
+    "type": "tf",
+    "prompt": "Lungkretsloppet börjar i höger kammare → lungartär → lungor → lungvener → vänster förmak.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_kretsloppet",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q53",
+    "type": "tf",
+    "prompt": "Aorta transporterar syrerikt blod från hjärtat.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_karl",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q54",
+    "type": "tf",
+    "prompt": "Vena cava superior leder blod från nedre kroppen.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_karl",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q55",
+    "type": "tf",
+    "prompt": "Vena cava inferior leder blod från nedre kroppen till hjärtat.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_karl",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q56",
+    "type": "tf",
+    "prompt": "Arterioler reglerar perifert motstånd.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_fysiologi",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q57",
+    "type": "tf",
+    "prompt": "Kapillärväggar består av flera muskellager.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_karl",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q58",
+    "type": "tf",
+    "prompt": "Gasutbyte sker genom diffusion i kapillärer.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_karl",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q59",
+    "type": "tf",
+    "prompt": "Blodtryck sjunker gradvis från artärer till vener.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_fysiologi",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q60",
+    "type": "tf",
+    "prompt": "Blodflödet i vener drivs delvis av muskelpumpen.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_fysiologi",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q61",
+    "type": "tf",
+    "prompt": "Hjärtats vänstra sida hanterar systemkretsloppet.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q62",
+    "type": "tf",
+    "prompt": "Hjärtats högra sida hanterar systemkretsloppet.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q63",
+    "type": "tf",
+    "prompt": "Förmaken pumpar blod ut i kroppen.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q64",
+    "type": "tf",
+    "prompt": "Kamrarna pumpar blod ut från hjärtat.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q65",
+    "type": "tf",
+    "prompt": "Klaffar förhindrar backflöde i hjärtat.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q66",
+    "type": "tf",
+    "prompt": "Mitralisklaffen sitter mellan vänster förmak och kammare.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q67",
+    "type": "tf",
+    "prompt": "Trikuspidalisklaffen sitter mellan vänster förmak och kammare.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q68",
+    "type": "tf",
+    "prompt": "Lungartärerna leder syrefattigt blod.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_kretsloppet",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q69",
+    "type": "tf",
+    "prompt": "Lungvenerna leder syrefattigt blod.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_kretsloppet",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q70",
+    "type": "tf",
+    "prompt": "Artärer leder alltid blod från hjärtat.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_karl",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q71",
+    "type": "tf",
+    "prompt": "Vener leder alltid blod till hjärtat.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_karl",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q72",
+    "type": "tf",
+    "prompt": "Pulmonalisklaffen finns mellan höger kammare och lungartär.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q73",
+    "type": "tf",
+    "prompt": "Aortaklaffen finns mellan vänster kammare och aorta.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q74",
+    "type": "tf",
+    "prompt": "Blodets väg genom hjärtat sker i strikt ordning.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q75",
+    "type": "tf",
+    "prompt": "Hjärtats retledningssystem styr kontraktion.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q76",
+    "type": "tf",
+    "prompt": "Erytrocyter saknar cellkärna hos vuxna människor.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_blod",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q77",
+    "type": "tf",
+    "prompt": "Leukocyter ingår i immunförsvaret.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_blod",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q78",
+    "type": "tf",
+    "prompt": "Trombocyter är viktiga för blodstillning.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_blod",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q79",
+    "type": "tf",
+    "prompt": "Plasma består till största delen av vatten.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_blod",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q80",
+    "type": "tf",
+    "prompt": "Blodets funktion inkluderar transport av gaser och näringsämnen.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_blod",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q81",
+    "type": "tf",
+    "prompt": "Artärer har alltid syrerikt blod.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_karl",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q82",
+    "type": "tf",
+    "prompt": "Vener har alltid syrefattigt blod.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_karl",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q83",
+    "type": "tf",
+    "prompt": "Lungkretsloppet är ett lågtryckssystem.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_fysiologi",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q84",
+    "type": "tf",
+    "prompt": "Systemkretsloppet är ett högtryckssystem.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_fysiologi",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q85",
+    "type": "tf",
+    "prompt": "Kapillärer är viktiga för utbyte mellan blod och vävnad.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_karl",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q86",
+    "type": "tf",
+    "prompt": "Arterioler reglerar blodflöde in i kapillärer.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_karl",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q87",
+    "type": "tf",
+    "prompt": "Venoler leder blod från kapillärer.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_karl",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q88",
+    "type": "tf",
+    "prompt": "Venösa klaffar förhindrar backflöde.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_karl",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q89",
+    "type": "tf",
+    "prompt": "Blodtrycket är högst i kapillärer.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_fysiologi",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q90",
+    "type": "tf",
+    "prompt": "Hjärtcykeln består av systole och diastole.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_fysiologi",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q91",
+    "type": "tf",
+    "prompt": "Systole innebär hjärtats avslappning.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_fysiologi",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q92",
+    "type": "tf",
+    "prompt": "Diastole innebär fyllnad av hjärtat.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_fysiologi",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q93",
+    "type": "tf",
+    "prompt": "Blodet passerar lungorna innan kroppen i kretsloppet.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_kretsloppet",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q94",
+    "type": "tf",
+    "prompt": "Blodet passerar lungorna efter att ha lämnat höger kammare.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_kretsloppet",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q95",
+    "type": "tf",
+    "prompt": "Vänster kammare har tjockare vägg än höger kammare.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q96",
+    "type": "tf",
+    "prompt": "Höger kammare pumpar mot högt tryck i systemkretsloppet.",
+    "correct": "Falskt",
+    "distractors": ["Sant"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q97",
+    "type": "tf",
+    "prompt": "Hjärtats retledningssystem inkluderar AV-knutan.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q98",
+    "type": "tf",
+    "prompt": "Sinusknutan är hjärtats primära pacemaker.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_hjarta",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q99",
+    "type": "tf",
+    "prompt": "Pulsen motsvarar hjärtats slagfrekvens.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_fysiologi",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  },
+  {
+    "id": "blodomloppet_q100",
+    "type": "tf",
+    "prompt": "Blodtryck påverkas av hjärtminutvolym och kärlmotstånd.",
+    "correct": "Sant",
+    "distractors": ["Falskt"],
+    "topic": "blodomloppet_fysiologi",
+    "difficulty": "Normal",
+    "source": "Blodomloppet"
+  }
+]

@@ -6,6 +6,7 @@ function getQuestionsPath(topic) {
   if (topic === 'medicinsk_terminologi') return './data/medicinsk_terminologi.json'
   if (topic === 'tentaplugg') return './data/tentaplugg.json'
   if (topic === 'neurologi') return './data/neurologi.json'
+  if (topic === 'blodomloppet') return './data/blodomloppet.json'
   // 'blandade' uses loadQuestionsFromMultiplePaths() instead
   return './data/riktningar.json'
 }
@@ -245,6 +246,8 @@ async function startQuiz(){
       topicMatch = q.topic.startsWith('studier_')
     } else if(topic === 'neurologi') {
       topicMatch = q.topic.startsWith('nervsystemet_')
+    } else if(topic === 'blodomloppet') {
+      topicMatch = q.topic.startsWith('blodomloppet_')
     } else if(topic === 'blandade') {
       // Blandade questions include all topics
       topicMatch = true

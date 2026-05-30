@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.19
+- Lade till Blodomloppet som aktivt ämne: 100 sant/falskt-frågor (Normal svårighet) i data/blodomloppet.json. Täcker systemkretsloppet, lungkretsloppet, hjärtanatomi, hjärtats retledningssystem, kärltyper, blodkomponenter och fysiologi. Aktiverade blodomloppet-alternativet i dropdown-menyn och kopplade ämnet i app.js. Språkkorrigering: "bakflöde" → "backflöde" (q88).
+
 ## 0.3.18
 - Lade till Neurologi som aktivt ämne: 120 sant/falskt-frågor (Normal svårighet) i data/neurologi.json. Täcker CNS/PNS-struktur, neuron, myelin, synapser, signalsubstanser, aktionspotential, reflexer, hjärnstrukturer, ledning, reception, regeneration, neuroplasticitet, utveckling och åldrande. Aktiverade neurologi-alternativet i dropdown-menyn och kopplade ämnet i app.js.
 
