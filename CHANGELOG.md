@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.39
+- Ordlista-knappen: ändrad från <a> till <button onclick> — eliminerar understrecket permanent. CSS-fixar för a.btn borttagna.
+
 ## 0.3.38
 - Ordlistesidan: brödsmulorna flyttade in i kortet (vit bakgrund) — samma placering och design som på info-sidan.
 
