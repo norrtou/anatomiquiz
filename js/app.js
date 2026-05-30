@@ -604,7 +604,7 @@ function showFlashcard() {
   }
 
   if (wasFlipped) {
-    setTimeout(startCard, 500) // matchar CSS transition-duration
+    setTimeout(startCard, 800)
   } else {
     startCard()
   }

@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.82
+- Flashcard: fördröjning för svarspopulering 500ms → 800ms för att undvika att svaret skymtas.
+
 ## 0.3.81
 - Flashcard: återställer transform på .fc-front (behövs för animationstiming) — grön bakgrund via .fc-card istället, .fc-front transparent.
 
