@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.50
+- Google Search Console-verifieringstaggen tillagd.
+
 ## 0.3.49
 - Sitemap och robots.txt tillagda för sökmotorer. Alla sidor länkar till sitemapen.
 
