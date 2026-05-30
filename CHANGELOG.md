@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.74
+- Flashcard framsida: tar bort transform:rotateY(0deg) från viloläget — no-op-3D-transform skapade compositing-lager som blockerade background-color på mobil.
+
 ## 0.3.73
 - Flashcard: grön bakgrund på .fc-card istället för .fc-front — 3D-transform på fc-front blockerade bakgrundsrendering på mobil.
 
