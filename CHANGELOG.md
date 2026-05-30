@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.49
+- Sitemap och robots.txt tillagda för sökmotorer. Alla sidor länkar till sitemapen.
+
 ## 0.3.48
 - Open Graph komplett på alla sidor: og:url, og:image (1518x864), bildmått och alt-text aktiverade. Canonical-URL satt. Info-sidan fick Twitter Card. Bildfil tillagd i projektet.
 
