@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.25
+- Ordlistan utökad med 24 nya termer: kroppspositioner (anatomisk position, ryggläge, bukläge, sidoläge, Fowlerläge, Trendelenburgläge, omvänt Trendelenburgläge, litotomiläge, simsläge), rörelsetermer (inåtrotation, utåtrotation, deviation, anteversion, retroversion, protrusion, retrusion), riktningstermer (central, perifer, intermediär, internus, externus, obliqt plan) och ytor (parietal, visceral).
+
 ## 0.3.24
 - Faktakontroll ordlistan: stavfelen "beny ta" → "benyta" (Fossa) och "ledbroskyt" → "ledbrosket" (Synovialis) rättade.
 - Ordlistan: textstorlek höjd till 0.95rem, samma som info-sidan.
