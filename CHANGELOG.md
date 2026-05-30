@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.64
+- Primärknapparna: identisk flex-logik som sekundärknapparna. width: 100% borttagen från btn-start.
+
 ## 0.3.63
 - Knappar: display:grid grid-template-columns:1fr 1fr — inga overrides behövs.
 - Animation: opacity-teknik istället för backface-visibility, fungerar i alla browsers.

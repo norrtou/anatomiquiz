@@ -669,15 +669,17 @@ select:focus {
   gap: 12px;
 }
 
-/* Rad med quiz- och flashcard-knapparna sida vid sida */
+/* Rad med quiz- och flashcard-knapparna — identisk logik som .secondary-actions */
 .primary-actions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 12px;
 }
 
+.primary-actions .btn {
+  flex: 1;
+}
+
 .btn-start {
-  width: 100%;
   padding: 14px 24px;
   font-size: 1.05rem;
   font-weight: 700;
