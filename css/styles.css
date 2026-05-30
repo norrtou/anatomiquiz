@@ -671,12 +671,9 @@ select:focus {
 
 /* Rad med quiz- och flashcard-knapparna sida vid sida */
 .primary-actions {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 12px;
-}
-
-.primary-actions .btn-start {
-  flex: 1;
 }
 
 .btn-start {
@@ -1009,14 +1006,6 @@ ol li {
     width: auto;
   }
 
-  .primary-actions .btn {
-    flex: 1 !important;
-    width: 0;
-    white-space: nowrap;
-    font-size: 0.8rem;
-    padding: 10px 6px;
-  }
-
   .secondary-actions .btn {
     flex: 1 !important;
     width: 0;
@@ -1105,17 +1094,17 @@ ol li {
 .fc-front,
 .fc-back {
   position: absolute;
-  inset: 0;
+  top: 0; right: 0; bottom: 0; left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 28px 24px 20px;
   border-radius: var(--radius);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                      opacity 0s 0.25s;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0s 0.25s;
 }
 
 /* Framsida — synlig i vila */
@@ -1125,26 +1114,30 @@ ol li {
   box-shadow: var(--shadow);
   -webkit-transform: perspective(800px) rotateY(0deg);
   transform: perspective(800px) rotateY(0deg);
+  opacity: 1;
 }
 
-/* Baksida — dold i vila (vänd bort från betraktaren) */
+/* Baksida — dold via opacity + roterad bort */
 .fc-back {
   background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
   border: 2px solid var(--primary);
   box-shadow: var(--shadow-lg);
   -webkit-transform: perspective(800px) rotateY(-180deg);
   transform: perspective(800px) rotateY(-180deg);
+  opacity: 0;
 }
 
-/* Flippad — framsida vrids bort, baksida vrids fram */
+/* Flippad — framsidan vrids bort och döljs, baksidan vrids fram */
 .fc-card.is-flipped .fc-front {
   -webkit-transform: perspective(800px) rotateY(180deg);
   transform: perspective(800px) rotateY(180deg);
+  opacity: 0;
 }
 
 .fc-card.is-flipped .fc-back {
   -webkit-transform: perspective(800px) rotateY(0deg);
   transform: perspective(800px) rotateY(0deg);
+  opacity: 1;
 }
 
 /* Frågetexten på framsidan */

@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.63
+- Knappar: display:grid grid-template-columns:1fr 1fr — inga overrides behövs.
+- Animation: opacity-teknik istället för backface-visibility, fungerar i alla browsers.
+
 ## 0.3.62
 - Flashcard-animation: per-element-perspective istället för preserve-3d — fungerar på iOS Safari med border-radius.
 - Primärknapparna: white-space: nowrap och mindre font på mobil förhindrar radbrytning.
