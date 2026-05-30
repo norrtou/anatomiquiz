@@ -1008,6 +1008,11 @@ ol li {
     width: auto;
   }
 
+  .primary-actions .btn {
+    flex: 1 !important;
+    width: 0;
+  }
+
   .secondary-actions .btn {
     flex: 1 !important;
     width: 0;

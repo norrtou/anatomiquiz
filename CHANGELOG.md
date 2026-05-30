@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.65
+- Primärknapparna: flex: 1 !important i mobilmedian — identisk med sekundärknapparna.
+
 ## 0.3.64
 - Primärknapparna: identisk flex-logik som sekundärknapparna. width: 100% borttagen från btn-start.
 
