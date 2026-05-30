@@ -583,18 +583,31 @@ function showFlashcard() {
   fcFlipped = false
 
   const card = fcCards[fcIdx]
+  const wasFlipped = el('fcCard').classList.contains('is-flipped')
+  const timePer = parseInt(el('fcTimer').dataset.timePer, 10) || 0
+
+  // Töm svaret INNAN flip-back-animationen startar så det inte skymtas
+  el('fcAnswer').textContent = ''
   el('fcCard').classList.remove('is-flipped')
   el('fcQuestion').textContent = card.prompt
-  el('fcAnswer').textContent = card.correct
   el('fcProgress').textContent = `Kort ${fcIdx + 1} / ${fcCards.length}`
   el('fcFinished').classList.add('hidden')
   el('fcScene').classList.remove('hidden')
   el('fcNextBtn').classList.remove('hidden')
   el('fcTimer').classList.remove('warning')
-
-  const timePer = parseInt(el('fcTimer').dataset.timePer, 10) || 0
   el('fcTimer').textContent = timePer > 0 ? `Tid: ${timePer}s` : ''
-  if (timePer > 0) startFcTimer(timePer)
+
+  // Fyll i svaret och starta timer först när flip-back-animationen är klar
+  const startCard = () => {
+    el('fcAnswer').textContent = card.correct
+    if (timePer > 0) startFcTimer(timePer)
+  }
+
+  if (wasFlipped) {
+    setTimeout(startCard, 500) // matchar CSS transition-duration
+  } else {
+    startCard()
+  }
 }
 
 // autoFlip = true när timern löper ut (triggar automatisk nästa efter 4s)
