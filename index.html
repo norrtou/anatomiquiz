@@ -2,22 +2,116 @@
 <html lang="sv">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Anatomiquiz — Interaktiv anatomiquiz med frågor om human anatomi. Testa dina kunskaper om skelett, muskler, organ och mer (på svenska).">
-  <title>Anatomiquiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- =========================================================
+       Primär SEO
+       ========================================================= -->
+  <title>Anatomiquiz — Interaktiv anatomiquiz på svenska | Skelett, muskler &amp; terminologi</title>
+  <meta name="description" content="Gratis interaktiv anatomiquiz på svenska. Träna inför tentan med frågor om skelett, muskler, neurologi, blodomloppet och medicinsk terminologi. Passar arbetsterapeuter, fysioterapeuter och sjuksköterskor.">
+  <meta name="keywords" content="anatomiquiz, anatomi quiz, human anatomi svenska, medicinsk terminologi quiz, skelett quiz, muskelquiz, neurologi quiz, tentaplugg anatomi, arbetsterapeut utbildning, fysioterapeut utbildning">
+  <meta name="author" content="Norrtou Creations">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+  <!-- Canonical — uppdatera till faktisk produktionsdomän vid driftsättning -->
+  <!-- <link rel="canonical" href="https://example.com/"> -->
+
+  <!-- =========================================================
+       Webbläsartema och färgschema
+       ========================================================= -->
+  <meta name="theme-color" content="#10b981">
+  <meta name="color-scheme" content="light">
+
+  <!-- =========================================================
+       Open Graph (Facebook, LinkedIn, m.fl.)
+       ========================================================= -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Anatomiquiz — Interaktiv anatomiquiz på svenska">
+  <meta property="og:description" content="Gratis interaktiv quiz i human anatomi på svenska. Träna skelett, muskler, neurologi, blodomloppet och medicinsk terminologi. Passar studenter inom vård och medicin.">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="Anatomiquiz">
+  <!-- <meta property="og:url" content="https://example.com/"> -->
+  <!-- <meta property="og:image" content="https://example.com/img/og-anatomiquiz.png"> -->
+  <!-- <meta property="og:image:width" content="1200"> -->
+  <!-- <meta property="og:image:height" content="630"> -->
+  <!-- <meta property="og:image:alt" content="Anatomiquiz — Interaktiv anatomiquiz på svenska"> -->
+
+  <!-- =========================================================
+       Twitter / X Card
+       ========================================================= -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Anatomiquiz — Interaktiv anatomiquiz på svenska">
+  <meta name="twitter:description" content="Gratis interaktiv quiz i human anatomi. Träna skelett, muskler, neurologi, blodomloppet och medicinsk terminologi.">
+  <!-- <meta name="twitter:image" content="https://example.com/img/og-anatomiquiz.png"> -->
+  <!-- <meta name="twitter:image:alt" content="Anatomiquiz — Interaktiv anatomiquiz på svenska"> -->
+
+  <!-- =========================================================
+       Strukturerad data — schema.org (JSON-LD)
+       Typ: WebApplication beskriver den interaktiva quizappen.
+       LearningResource anger att den är avsedd för lärande.
+       ========================================================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["WebApplication", "LearningResource"],
+    "name": "Anatomiquiz",
+    "description": "Gratis interaktiv anatomiquiz på svenska med frågor om skelett, muskler, neurologi, blodomloppet och medicinsk terminologi.",
+    "applicationCategory": "EducationApplication",
+    "operatingSystem": "Web",
+    "inLanguage": "sv-SE",
+    "isAccessibleForFree": true,
+    "educationalUse": "practice",
+    "learningResourceType": "quiz",
+    "author": {
+      "@type": "Organization",
+      "name": "Norrtou Creations",
+      "url": "https://github.com/norrtou"
+    },
+    "audience": {
+      "@type": "EducationalAudience",
+      "educationalRole": "student",
+      "audienceType": "Arbetsterapeuter, fysioterapeuter, sjuksköterskor, läkare och medicinstudenter"
+    },
+    "about": [
+      { "@type": "Thing", "name": "Human anatomi" },
+      { "@type": "Thing", "name": "Medicinsk terminologi" },
+      { "@type": "Thing", "name": "Osteologi" },
+      { "@type": "Thing", "name": "Neurologi" },
+      { "@type": "Thing", "name": "Blodomloppet" }
+    ],
+    "hasPart": {
+      "@type": "DefinedTermSet",
+      "name": "Medicinsk ordlista",
+      "url": "medicinskordlista.html"
+    }
+  }
+  </script>
+
+  <!-- Preload kritisk CSS -->
+  <link rel="preload" href="css/styles.css" as="style">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
+  <!-- Hoppa-till-innehåll för tangentbordsanvändare (tillgänglighet) -->
   <a class="skip-link" href="#main">Hoppa till innehåll</a>
+
   <main id="main" class="container" role="main">
+
+    <!-- =========================================================
+         Sidhuvud
+         ========================================================= -->
     <header class="header">
       <div class="header-title">
         <h1>Anatomiquiz</h1>
-        <span class="version" id="appVersion"></span>
+        <span class="version" id="appVersion" aria-label="Appversion"></span>
       </div>
       <p class="tagline">Testversion, buggar och faktafel kan förekomma.</p>
     </header>
 
+    <!-- =========================================================
+         Inställningssektion — quizkonfiguration (visas vid start)
+         ========================================================= -->
     <section id="setup" class="card" aria-labelledby="setupHeading">
       <h2 id="setupHeading">Skapa ett quiz åt mig</h2>
 
@@ -28,7 +122,7 @@
         <option value="handen">Handen</option>
         <option value="osteologi">Ben</option>
         <option value="muskler">Muskler</option>
-        <option value="any_riktningar">Lägen & riktningar</option>
+        <option value="any_riktningar">Lägen &amp; riktningar</option>
         <option value="neurologi">Neurologi (t/f-frågor)</option>
         <option value="blodomloppet">Blodomloppet (t/f-frågor)</option>
         <option value="blandade">Slumpade frågor</option>
@@ -49,11 +143,11 @@
         <option value="Hard">Svår</option>
       </select>
 
-      <label for="timePerQuestion">Tid i sekunder per fråga. (Låt stå 0 för ingen tidspress)</label>
+      <label for="timePerQuestion">Tid i sekunder per fråga (0 = ingen tidspress)</label>
       <input id="timePerQuestion" type="number" min="0" value="0" aria-label="Tid per fråga i sekunder" />
 
       <label for="playerName">Mitt namn</label>
-      <input id="playerName" placeholder="Mitt namn" aria-label="Mitt namn" />
+      <input id="playerName" placeholder="Mitt namn" aria-label="Mitt namn" autocomplete="nickname" />
 
       <div class="setup-actions">
         <button id="startBtn" class="btn primary btn-start">Starta quiz</button>
@@ -65,7 +159,10 @@
       </div>
     </section>
 
-<section id="info" class="card hidden" aria-labelledby="infoHeading">
+    <!-- =========================================================
+         Infosektion — om appen och versionshistorik (dold initialt)
+         ========================================================= -->
+    <section id="info" class="card hidden" aria-labelledby="infoHeading">
       <h2 id="infoHeading">Info</h2>
 
       <div class="info-about">
@@ -81,6 +178,10 @@
       </div>
     </section>
 
+    <!-- =========================================================
+         Quizsektion — frågor och svarsalternativ (dold initialt)
+         aria-live="polite" meddelar skärmläsare om innehållsändringar.
+         ========================================================= -->
     <section id="quiz" class="card hidden" aria-live="polite" aria-labelledby="quizHeading">
       <h2 id="quizHeading" class="sr-only">Quiz</h2>
       <div class="quiz-header">
@@ -101,6 +202,9 @@
       </div>
     </section>
 
+    <!-- =========================================================
+         Hantera-sektion — granska och importera frågor (dold initialt)
+         ========================================================= -->
     <section id="manage" class="card hidden" aria-labelledby="manageHeading">
       <h2 id="manageHeading">Hantera frågor</h2>
       <p>Här visas upp till 500 frågor. Markera "Felaktig" om frågan eller svaret är felaktigt. Välj "Uteslut" för att temporärt ta bort frågan från quizet.</p>
@@ -113,17 +217,23 @@
       </div>
     </section>
 
-<section id="result" class="card hidden" aria-labelledby="resultHeading">
+    <!-- =========================================================
+         Resultatsektion — poäng och spara i topplista (dold initialt)
+         ========================================================= -->
+    <section id="result" class="card hidden" aria-labelledby="resultHeading">
       <h2 id="resultHeading">Resultat</h2>
       <p id="resultText"></p>
       <label for="saveName">Spara som</label>
-      <input id="saveName" placeholder="Mitt namn" />
+      <input id="saveName" placeholder="Mitt namn" autocomplete="nickname" />
       <div class="actions">
         <button id="saveScore" class="btn primary">Spara</button>
         <button id="restart" class="btn">Spela igen</button>
       </div>
     </section>
 
+    <!-- =========================================================
+         Topplista — sparade resultat (dold initialt)
+         ========================================================= -->
     <section id="highscores" class="card hidden" aria-labelledby="hsHeading">
       <h2 id="hsHeading">Topplista</h2>
       <ol id="scoreList"></ol>
@@ -135,6 +245,7 @@
 
   </main>
 
-  <script src="js/app.js"></script>
+  <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
+  <script src="js/app.js" defer></script>
 </body>
 </html>

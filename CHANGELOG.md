@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.30
+- index.html: komplett SEO-uppdatering — beskrivande title, meta description/keywords/author/robots, Open Graph (6 taggar), Twitter Card, schema.org WebApplication + LearningResource + EducationalAudience (JSON-LD).
+- Webbläsartema: theme-color (#10b981) och color-scheme deklarerade.
+- Preload på kritisk CSS, defer på app.js-scriptet.
+- Indentering och HTML-kommentarer rättade i alla sektioner; &amp;-escaping i title och select-option.
+
 ## 0.3.29
 - Ordlistan separerad till egen sida: medicinskordlista.html med full SEO (title, description, Open Graph, Twitter Card, schema.org DefinedTermSet + BreadcrumbList), brödsmulor och termräknare.
 - Ordlistedata flyttad från hårdkodat JS-array i app.js till data/ordlista.json (195 termer).
