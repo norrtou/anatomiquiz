@@ -1,3 +1,181 @@
+// ============================================================================
+// ORDLISTA — Latinska och medicinska termer som förekommer i quizet
+// Källa: Terminologia Anatomica, Nomina Anatomica, svensk medicinsk ordbok
+// ============================================================================
+const GLOSSARY = [
+  { term: 'Abdomen', def: 'Buk; bukhålan och dess innehåll.' },
+  { term: 'Abduktion', def: 'Rörelse bort från kroppens mittlinje.' },
+  { term: 'Acetabulum', def: 'Höftledsskål i bäckenet; tar emot lårbenshuvudet (caput femoris).' },
+  { term: 'Acromion (akromion)', def: 'Lateralt utskott på skulderbladets ryggrad; bildar skuldertoppen.' },
+  { term: 'Adduktion', def: 'Rörelse mot kroppens mittlinje.' },
+  { term: 'Afferent', def: 'Inkommande; leder nervsignaler från periferin till CNS.' },
+  { term: 'Aktionspotential', def: 'Elektrisk impuls längs nervfiber som följer allt-eller-inget-principen.' },
+  { term: 'Alvéolus (alveol)', def: 'Liten urholkning eller luftsäck, t.ex. i lungan där gasutbyte sker.' },
+  { term: 'Anterior', def: 'På framsidan; mot buken (synonym: ventral).' },
+  { term: 'Aorta', def: 'Kroppens största artär; utgår från vänster hjärtkammare.' },
+  { term: 'Arcus', def: 'Båge; bågformig anatomisk struktur.' },
+  { term: 'Arteria (artär)', def: 'Blodkärl som leder blod bort från hjärtat.' },
+  { term: 'Articulatio', def: 'Led; anatomisk förbindning mellan ben.' },
+  { term: 'Atlas (C1)', def: 'Första halskotan; bär upp skallen och artikulerar med nackbenet.' },
+  { term: 'Atrium', def: 'Förmak; en av hjärtats två övre kamrar.' },
+  { term: 'Axis (C2)', def: 'Andra halskotan; densutskotet möjliggör rotation av atlas och skallen.' },
+  { term: 'Axilla', def: 'Armhåla.' },
+  { term: 'Axon', def: 'Nervcellfibern som leder aktionspotentialen bort från cellkroppen.' },
+  { term: 'Basis', def: 'Bas; nedre eller bredaste delen av en anatomisk struktur.' },
+  { term: 'Biceps', def: 'Tvåhövdad muskel (med två ursprung), t.ex. M. biceps brachii i överarmen.' },
+  { term: 'Bilateralis', def: 'Bilateral; på båda sidor av kroppen.' },
+  { term: 'Brachium', def: 'Överarm.' },
+  { term: 'Brevis', def: 'Kort.' },
+  { term: 'Calcaneus', def: 'Hälben; det största tarsalbenet.' },
+  { term: 'Canalis', def: 'Kanal; rörformigt hålrum i ben eller vävnad.' },
+  { term: 'Capitulum', def: 'Litet huvud; liten avrundad ledyta på ett ben.' },
+  { term: 'Caput', def: 'Huvud; ledhuvudet som passar in i en ledgrop.' },
+  { term: 'Carpus', def: 'Handrot; de åtta handrotsbenen och deras region.' },
+  { term: 'Caudal (kaudal)', def: 'Mot svansen; nedåt i kroppen hos människan (synonym: inferior).' },
+  { term: 'Cavitas glenoidalis', def: 'Ledhålan på scapula där humerus sitter i axelleden.' },
+  { term: 'Cerebellum', def: 'Lillhjärna; koordinerar rörelser, balans och finmotorik.' },
+  { term: 'Cerebrum', def: 'Storhjärna; ansvarar för medvetande, motorik, sensorik och kognition.' },
+  { term: 'Cervicalis', def: 'Som hör till halsen; cervikala kotor = halskotor (C1–C7).' },
+  { term: 'Cirkumduktion', def: 'Cirkulär rörelse i en led; kombinerar flexion, extension, abduktion och adduktion.' },
+  { term: 'Clavicula', def: 'Nyckelben; förbinder sternum med scapula.' },
+  { term: 'CNS', def: 'Centrala nervsystemet; hjärna och ryggmärg.' },
+  { term: 'Collateralis', def: 'Löpande bredvid; t.ex. collaterala ligament på sidorna av en led.' },
+  { term: 'Columna vertebralis', def: 'Ryggraden; 33–34 kotor indelade i cervical-, thorakal-, lumbal-, sakral- och coccygealnivå.' },
+  { term: 'Condylus', def: 'Ledknöl; avrundad knöl på ett ben som bildar del av en led.' },
+  { term: 'Contralateral', def: 'På motsatt sida av kroppen (jfr ipsilateral).' },
+  { term: 'Cor', def: 'Hjärta.' },
+  { term: 'Corpus', def: 'Kropp; den centrala delen av en struktur.' },
+  { term: 'Corpus callosum', def: 'Hjärnbalken; nervfiberbunt som förbinder vänster och höger hjärnhalva.' },
+  { term: 'Cortex', def: 'Bark; yttre lager, t.ex. hjärnbarken (cortex cerebri).' },
+  { term: 'Costa (costae)', def: 'Revben; 12 par revben bildar bröstkorgen.' },
+  { term: 'Coxa', def: 'Höft; coxaleden = höftleden.' },
+  { term: 'Cranial (kranial)', def: 'Mot skallen/huvudet (synonym: superior).' },
+  { term: 'Cranium (kranium)', def: 'Skallen; benskelettstrukturen som omger och skyddar hjärnan.' },
+  { term: 'Crista', def: 'List eller kam; upphöjd benrand, t.ex. crista iliaca (höftbensskammen).' },
+  { term: 'Cubitus', def: 'Armbåge.' },
+  { term: 'Cutis (dérma)', def: 'Hud; kroppens yttre skyddande organ.' },
+  { term: 'Dendrit', def: 'Grenformiga utskott på en nervcell som tar emot inkommande signaler.' },
+  { term: 'Depression', def: 'Sänkning; nedåtrörelse av en kroppsdel, t.ex. skulderblad.' },
+  { term: 'Dextrum', def: 'Höger (sida).' },
+  { term: 'Diaphragma', def: 'Mellangärdet; kupformad andningsmuskel som separerar bröst- och bukhålan.' },
+  { term: 'Diaphysis', def: 'Benstammens skaft; mittdelen på ett rörben.' },
+  { term: 'Diastole', def: 'Hjärtats avslappnings- och fyllnadsfas.' },
+  { term: 'Digitus', def: 'Finger eller tå.' },
+  { term: 'Discus', def: 'Skiva, t.ex. intervertebral discus (mellankotsskiva) eller discus articularis (ledskiva).' },
+  { term: 'Distal', def: 'Längre från ursprunget eller kroppens centrum; motsats till proximal.' },
+  { term: 'Dorsal', def: 'Mot baksidan; ovansidan av hand eller fot (synonym: posterior).' },
+  { term: 'Dorsalflexion', def: 'Fotleden böjs uppåt; foten dras mot underbenet.' },
+  { term: 'Efferent', def: 'Utgående; leder nervsignaler från CNS till muskler och körtlar.' },
+  { term: 'Elevation', def: 'Höjning; uppåtrörelse av en kroppsdel, t.ex. skulderblad.' },
+  { term: 'Encephalon', def: 'Hjärna; hela hjärnan inklusive storhjärna, lillhjärna och hjärnstam.' },
+  { term: 'Epicondylus', def: 'Knöl ovanpå condylus; fäste för muskler, t.ex. på humerus vid armbågen.' },
+  { term: 'Epiphysis', def: 'Benstammens ände; tillväxtzon i unga ben (epifysplatta).' },
+  { term: 'Erytrocyt', def: 'Röd blodkropp; transporterar syre med hjälp av hemoglobin.' },
+  { term: 'Eversion', def: 'Rotation av fotsulan utåt.' },
+  { term: 'Extension', def: 'Sträckning av en led; ökar vinkeln mellan bensegmenten.' },
+  { term: 'Extensor', def: 'Sträckare; muskel som utför extension.' },
+  { term: 'Extremitas', def: 'Extremitet; arm eller ben.' },
+  { term: 'Fascia', def: 'Bindvävshinna som omger och separerar muskler och organ.' },
+  { term: 'Femur', def: 'Lårben; kroppens längsta och starkaste ben.' },
+  { term: 'Fibula', def: 'Vadben; det smala benet på utsidan av underbenet.' },
+  { term: 'Fibular (peroneal)', def: 'På vadbens-/lilltåsidan av underbenet.' },
+  { term: 'Flexion', def: 'Böjning av en led; minskar vinkeln mellan bensegmenten.' },
+  { term: 'Flexor', def: 'Böjare; muskel som utför flexion.' },
+  { term: 'Foramen', def: 'Hål eller öppning i ben, t.ex. foramen magnum i nackbenet.' },
+  { term: 'Fossa', def: 'Grop eller fördjupning i en benyta.' },
+  { term: 'Frontalplan', def: 'Vertikalt plan som delar kroppen i en framre och en bakre del (synonym: koronalplan).' },
+  { term: 'Genu', def: 'Knä.' },
+  { term: 'Gliacell', def: 'Stödjande och skyddande cell i nervsystemet, t.ex. oligodendrocyt och schwanncell.' },
+  { term: 'Hemoglobin', def: 'Syrebärande protein i de röda blodkropparna (erytrocyterna).' },
+  { term: 'Humerus', def: 'Överarmsben; artikulerar med scapula i axelleden och radius/ulna i armbågsleden.' },
+  { term: 'Hyperextension', def: 'Sträckning förbi neutral anatomisk position.' },
+  { term: 'Hypotalamus', def: 'Hjärnstruktur som reglerar homeostas, hunger, törst och hormonbalans.' },
+  { term: 'Inferior', def: 'Nedre; mot fötterna (synonym: kaudal).' },
+  { term: 'Inversion', def: 'Rotation av fotsulan inåt.' },
+  { term: 'Ipsilateral', def: 'På samma sida av kroppen (jfr contralateral).' },
+  { term: 'Kapillär', def: 'Det minsta blodkärlet; gasutbyte sker här mellan blod och vävnad.' },
+  { term: 'Lateral', def: 'Bort från kroppens mittlinje; mot sidan.' },
+  { term: 'Lateralflexion', def: 'Sidorörelse; böjning av ryggraden eller halsen åt sidan.' },
+  { term: 'Leukocyt', def: 'Vit blodkropp; ingår i kroppens immunförsvar.' },
+  { term: 'Ligamentum', def: 'Band av tät bindvävnad som förbinder ben med ben.' },
+  { term: 'Liquor cerebrospinalis', def: 'Ryggmärgsvätska; skyddar och omger hjärna och ryggmärg.' },
+  { term: 'Lumbalis', def: 'Som hör till ländryggen; lumbala kotor = ländkotor (L1–L5).' },
+  { term: 'Luxatio', def: 'Urledvridning; dislokation av en led.' },
+  { term: 'Malleolus', def: 'Knöl vid ankeln; medial malleolus på tibia, lateral på fibula.' },
+  { term: 'Mandibula', def: 'Underkäken.' },
+  { term: 'Maxilla', def: 'Överkäken.' },
+  { term: 'Medial', def: 'Mot kroppens mittlinje.' },
+  { term: 'Medianplan', def: 'Sagittalplanet som löper exakt i mitten och delar kroppen i lika höger och vänster halvor.' },
+  { term: 'Medulla', def: 'Märg; t.ex. ryggmärgen (medulla spinalis) eller benmärgen.' },
+  { term: 'Membrana', def: 'Hinna; tunn vävnadshinna.' },
+  { term: 'Meniscus', def: 'Halvmånformig fibrocartilaginös broskskiva, t.ex. i knäleden.' },
+  { term: 'Musculus (M.)', def: 'Muskel.' },
+  { term: 'Myelin', def: 'Fettrik isolationshölje kring axon; ökar signalledningshastigheten.' },
+  { term: 'Neuron', def: 'Nervcell; består av cellkropp, axon och dendriter.' },
+  { term: 'Nodus Ranvieri', def: 'Avbrott i myelinskidan som möjliggör saltatorisk signalledning.' },
+  { term: 'Occipitalis', def: 'Som hör till nackbenet; occipital = bakhuvudet.' },
+  { term: 'Olecranon', def: 'Armbågsknölen; det bakre utskottet på ulna som bildar armbågen.' },
+  { term: 'Opposition', def: 'Tummen förs mot fingerspetsarna; exklusivt för primaterna.' },
+  { term: 'Os (ossa)', def: 'Ben/benen; t.ex. os frontale = pannbenet.' },
+  { term: 'Osteoblast', def: 'Bencell som skapar ny benmatrix och bygger upp ben.' },
+  { term: 'Osteoklast', def: 'Bencell som bryter ner och resorberar benvävnad.' },
+  { term: 'Osteocyt', def: 'Mogen bencell inuti benvävnaden som underhåller benmatrixen.' },
+  { term: 'Palmar (volar)', def: 'Handflatans sida av handen.' },
+  { term: 'Parasagittalplan', def: 'Sagittalplan parallellt med medianplanet men inte i kroppens mitt.' },
+  { term: 'Parasympaticus', def: 'Del av autonoma nervsystemet; aktiv vid vila, matsmältning och återhämtning.' },
+  { term: 'Patella', def: 'Knäskål; ett sesamben i quadriceps-senan framför knäleden.' },
+  { term: 'Pes', def: 'Fot.' },
+  { term: 'Phalanges', def: 'Finger- och tåben; singularis phalanx (proximal, medial, distal).' },
+  { term: 'Plantar', def: 'Fotsulans sida av foten.' },
+  { term: 'Plantarflexion', def: 'Fotleden böjs nedåt; att gå på tå eller peka med foten.' },
+  { term: 'PNS', def: 'Perifera nervsystemet; alla nerver utanför hjärna och ryggmärg.' },
+  { term: 'Posterior', def: 'På baksidan; mot ryggen (synonym: dorsal).' },
+  { term: 'Processus', def: 'Utskott; framskjutande utsprång från ett ben eller organ.' },
+  { term: 'Profundus', def: 'Djup; långt från ytan (motsats: superficialis).' },
+  { term: 'Pronation', def: 'Rotation av underarmen så handflatan vänds nedåt eller bakåt.' },
+  { term: 'Protraktion', def: 'Framåtrörelse av en kroppsdel, t.ex. skulderblad eller käke.' },
+  { term: 'Proximal', def: 'Närmare ursprunget eller kroppen; motsats till distal.' },
+  { term: 'Pulmo', def: 'Lunga.' },
+  { term: 'Radial', def: 'På strålbenets/tumsidans sida av underarmen och handen.' },
+  { term: 'Radius', def: 'Strålben; det yttre av underarmens ben, på tumsidan.' },
+  { term: 'Ramus', def: 'Gren; nervgren eller utskott på ett ben.' },
+  { term: 'Reposition', def: 'Återgång till neutral position, t.ex. tummen efter opposition.' },
+  { term: 'Retraktion', def: 'Bakåtrörelse av en kroppsdel, t.ex. skulderblad eller käke.' },
+  { term: 'Rotation', def: 'Vridande rörelse av en kroppsdel kring en axel.' },
+  { term: 'Sacrum', def: 'Korsbenet; 5 sammanvuxna ryggkotor i bäckenet.' },
+  { term: 'Sagittalplan', def: 'Lodrätt plan som delar kroppen i vänster och höger delar; flexion och extension sker i detta plan.' },
+  { term: 'Scapula', def: 'Skulderblad; plattben på bröstkorgens baksida.' },
+  { term: 'Sinister', def: 'Vänster (sida).' },
+  { term: 'Sinusknutan (SA-noden)', def: 'Hjärtats naturliga pacemaker i höger förmak; initierar hjärtats elektriska impuls.' },
+  { term: 'Sternum', def: 'Bröstben; plattben i mitten av bröstkorgens framsida.' },
+  { term: 'Sulcus', def: 'Fåra eller ytlig fördjupning, t.ex. på hjärnans yta eller i benvävnad.' },
+  { term: 'Superficialis', def: 'Ytlig; nära ytan (motsats: profundus).' },
+  { term: 'Superior', def: 'Övre; mot huvudet (synonym: kranial).' },
+  { term: 'Supination', def: 'Rotation av underarmen så handflatan vänds uppåt eller framåt.' },
+  { term: 'Sympaticus', def: 'Del av autonoma nervsystemet; aktiv vid stress och fysisk aktivitet ("fight or flight").' },
+  { term: 'Synaps', def: 'Kontaktzonen där nervsignalen överförs kemiskt från ett neuron till nästa cell.' },
+  { term: 'Synovialis (synovia)', def: 'Ledvätska; smörjer, dämpar och ger näring till ledbrosket.' },
+  { term: 'Talus', def: 'Språngben; tarsalben som bildar ankelleden med tibia och fibula.' },
+  { term: 'Tendo (sena)', def: 'Bindvävssträngen som förbinder en muskel med ett ben.' },
+  { term: 'Thalamus', def: 'Relästation i hjärnan för sensorisk information på väg till hjärnbarken.' },
+  { term: 'Thoracalis', def: 'Som hör till bröstkorgen; thorakala kotor = bröstkotor (T1–T12).' },
+  { term: 'Thorax', def: 'Bröstkorg; skelettet av revben, sternum och thorakala kotor.' },
+  { term: 'Tibia', def: 'Skenben; det tjocka, viktbärande benet på insidan av underbenet.' },
+  { term: 'Tibial', def: 'På skenbenets/stortåsidan av underbenet.' },
+  { term: 'Transversalplan', def: 'Horisontellt plan som delar kroppen i övre och nedre delar; rotation sker i detta plan.' },
+  { term: 'Triceps', def: 'Trehövdad muskel (med tre ursprung), t.ex. M. triceps brachii i överarmens baksida.' },
+  { term: 'Trochanter', def: 'Stor knöl på lårbenet; fäste för höftens muskler.' },
+  { term: 'Tuber', def: 'Utbuktning eller knöl på ett ben.' },
+  { term: 'Ulna', def: 'Armbågsben; det inre benet i underarmen på lillfingersidan.' },
+  { term: 'Ulnar', def: 'På armbågsbenets/lillfingersida av underarmen och handen.' },
+  { term: 'Varus', def: 'Sned, indragen mot mitten; t.ex. genu varum = hjulbent knä.' },
+  { term: 'Vena (ven)', def: 'Blodkärl som leder blod tillbaka till hjärtat.' },
+  { term: 'Vena cava', def: 'Den stora hålvenen; superior leder blod från övre kroppen, inferior från nedre kroppen till höger förmak.' },
+  { term: 'Ventral', def: 'Mot framsidan/buken (synonym: anterior).' },
+  { term: 'Vertebra', def: 'Kotben; ryggraden består av 33–34 kotor.' },
+  { term: 'Viscera', def: 'Inälvorna; de inre organen i buk- och bröstkorgen.' },
+]
+
 // Get path based on topic
 function getQuestionsPath(topic) {
   if (topic === 'osteologi') return './data/ben.json'
@@ -558,6 +736,50 @@ function renderChangelog(text) {
   }).join('')
 }
 
+function renderGlossary(filter) {
+  const container = el('glossaryContent')
+  const q = (filter || '').toLowerCase().trim()
+  const terms = q
+    ? GLOSSARY.filter(e =>
+        e.term.toLowerCase().includes(q) ||
+        e.def.toLowerCase().includes(q)
+      )
+    : GLOSSARY
+
+  if (!terms.length) {
+    container.innerHTML = '<p class="glossary-empty">Inga träffar.</p>'
+    return
+  }
+
+  // Group alphabetically by first letter of term
+  const groups = {}
+  terms.forEach(e => {
+    const letter = e.term[0].toUpperCase()
+    if (!groups[letter]) groups[letter] = []
+    groups[letter].push(e)
+  })
+
+  let html = ''
+  Object.keys(groups).sort().forEach(letter => {
+    html += `<div class="glossary-letter">${letter}</div>`
+    groups[letter].forEach(e => {
+      html += `<div class="glossary-entry"><span class="glossary-term">${e.term}</span><span class="glossary-def">${e.def}</span></div>`
+    })
+  })
+  container.innerHTML = html
+}
+
+function showGlossary() {
+  el('setup').classList.add('hidden')
+  el('quiz').classList.add('hidden')
+  el('result').classList.add('hidden')
+  el('highscores').classList.add('hidden')
+  el('info').classList.add('hidden')
+  el('glossary').classList.remove('hidden')
+  el('glossarySearch').value = ''
+  renderGlossary('')
+}
+
 function cancelQuiz(){
   if(confirm('Är du säker? Ditt resultat sparas inte.')) {
     el('quiz').classList.add('hidden')
@@ -589,6 +811,9 @@ function init(){
   el('viewScores').addEventListener('click', showHighscores)
   el('viewInfo').addEventListener('click', showInfo)
   el('backFromInfo').addEventListener('click', () => { el('info').classList.add('hidden'); el('setup').classList.remove('hidden') })
+  el('viewGlossary').addEventListener('click', showGlossary)
+  el('backFromGlossary').addEventListener('click', () => { el('glossary').classList.add('hidden'); el('setup').classList.remove('hidden') })
+  el('glossarySearch').addEventListener('input', e => renderGlossary(e.target.value))
   el('saveManage').addEventListener('click', ()=>{ alert('Ändringar sparade (sparas automatiskt).'); renderManage() })
   const imp = el('importFile')
   if(imp) imp.addEventListener('change', handleImportFile)

@@ -1,5 +1,15 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.24
+- Faktakontroll ordlistan: stavfelen "beny ta" → "benyta" (Fossa) och "ledbroskyt" → "ledbrosket" (Synovialis) rättade.
+- Ordlistan: textstorlek höjd till 0.95rem, samma som info-sidan.
+
+## 0.3.23
+- Ny sida: Ordlista med 140 latinska och medicinska termer som används i quizet, sorterade alfabetiskt med korta förklaringar. Sökfunktion filtrerar direkt på term och förklaring. Nås via ny knapp på startsidan. Knapplayouten omstrukturerades: "Starta quiz" är nu en tydlig primärknapp ovanför Info, Ordlista och Topplista.
+
+## 0.3.22
+- Faktakontroll av riktningar.json: 5 rättningar — q224 (rörelse fram/bak = sagittalplan, inte frontalplan), q225 (rörelse vänster/höger = frontalplan, inte sagittalplan), q399 (sänka armen = adduktion, inte depression), q446 (Superior utbytt mot Kaudal som distraktor; Superior är synonym till Kranial och kan inte vara fel svar), q214 (stavfel "Döja höftleden" → "Föra benet ut åt sidan från höften").
+
 ## 0.3.21
 - Döpte om "Blandade frågor" till "Slumpade frågor" och flyttade det sist i ämnesmenyn. Slumpade frågor hämtar nu automatiskt från alla aktiva ämnen inklusive Neurologi och Blodomloppet.
 

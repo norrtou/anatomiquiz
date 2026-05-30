@@ -647,15 +647,29 @@ select:focus {
    INFO & CHANGELOG SECTION
    ============================================================================ */
 
-/* On mobile, make Start-button span full width when 3 buttons are in grid */
-#setup .actions #startBtn {
-  grid-column: 1 / -1;
+/* Setup action area: Starta quiz ovanför, sekundära knappar under */
+.setup-actions {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-@media (min-width: 600px) {
-  #setup .actions #startBtn {
-    grid-column: auto;
-  }
+.btn-start {
+  width: 100%;
+  padding: 14px 24px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.secondary-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.secondary-actions .btn {
+  flex: 1;
 }
 
 .info-about {
@@ -755,6 +769,91 @@ select:focus {
 .cl-item:last-child {
   border-bottom: none;
   padding-bottom: 0;
+}
+
+/* ============================================================================
+   GLOSSARY / ORDLISTA
+   ============================================================================ */
+
+.glossary-desc {
+  color: var(--text-secondary);
+  margin: 0 0 16px 0;
+  font-size: 0.95rem;
+}
+
+.glossary-search {
+  margin-bottom: 20px;
+}
+
+.glossary-list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+  max-height: 62vh;
+  overflow-y: auto;
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  border-radius: var(--radius-sm);
+}
+
+.glossary-letter {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 5px 16px;
+  letter-spacing: 1.5px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.glossary-entry {
+  display: grid;
+  grid-template-columns: minmax(140px, 1fr) 2fr;
+  gap: 8px;
+  padding: 9px 16px;
+  border-bottom: 1px solid rgba(16, 185, 129, 0.07);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  transition: background var(--transition-fast);
+  align-items: start;
+}
+
+.glossary-entry:last-child {
+  border-bottom: none;
+}
+
+.glossary-entry:hover {
+  background: rgba(16, 185, 129, 0.04);
+}
+
+.glossary-term {
+  font-weight: 700;
+  color: var(--primary-dark);
+  word-break: break-word;
+}
+
+.glossary-def {
+  color: var(--text-primary);
+}
+
+.glossary-empty {
+  padding: 16px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .glossary-entry {
+    grid-template-columns: 1fr;
+    gap: 2px;
+    padding: 8px 12px;
+  }
+
+  .glossary-def {
+    color: var(--text-secondary);
+  }
 }
 
 /* ============================================================================
