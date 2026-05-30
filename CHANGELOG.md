@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.60
+- Mobil: de två gröna startknapparna delar nu alltid samma rad.
+
 ## 0.3.59
 - Flashcards: svaret töms innan flip-back-animationen startar så att nästa korts svar inte skymtas vid övergången.
 
