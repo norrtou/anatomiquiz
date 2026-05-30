@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.83
+- Flashcard: svarsfördröjning 800→1200ms.
+
 ## 0.3.82
 - Flashcard: fördröjning för svarspopulering 500ms → 800ms för att undvika att svaret skymtas.
 

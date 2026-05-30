@@ -604,7 +604,7 @@ function showFlashcard() {
   }
 
   if (wasFlipped) {
-    setTimeout(startCard, 800)
+    setTimeout(startCard, 1200)
   } else {
     startCard()
   }
