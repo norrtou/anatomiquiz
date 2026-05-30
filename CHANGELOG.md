@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.20
+- Versionsnummer i headern laddas nu dynamiskt från VERSION-filen istället för att vara hårdkodat i HTML.
+
 ## 0.3.19
 - Lade till Blodomloppet som aktivt ämne: 100 sant/falskt-frågor (Normal svårighet) i data/blodomloppet.json. Täcker systemkretsloppet, lungkretsloppet, hjärtanatomi, hjärtats retledningssystem, kärltyper, blodkomponenter och fysiologi. Aktiverade blodomloppet-alternativet i dropdown-menyn och kopplade ämnet i app.js. Språkkorrigering: "bakflöde" → "backflöde" (q88).
 

@@ -568,7 +568,18 @@ function cancelQuiz(){
   }
 }
 
+async function loadVersion() {
+  try {
+    const res = await fetch('./VERSION')
+    if (!res.ok) return
+    const text = (await res.text()).trim()
+    const el_ = document.getElementById('appVersion')
+    if (el_) el_.textContent = 'v' + text
+  } catch {}
+}
+
 function init(){
+  loadVersion()
   loadQuestions().then(()=>console.log('Frågor laddade:', allQuestions.length))
   el('startBtn').addEventListener('click', startQuiz)
   el('cancelBtn').addEventListener('click', cancelQuiz)
