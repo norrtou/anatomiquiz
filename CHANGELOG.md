@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.53
+- Startsidan: canonical och og:url uppdaterade till explicit adress, konsekvent med sitemapen.
+
 ## 0.3.52
 - Sitemap: startsidan listad med explicit adress, konsekvent med övriga sidor.
 
