@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.46
+- Versionshistorik: alla filnamn med ändelser borttagna ur alla poster.
+
 ## 0.3.45
 - Versionshistorik: alla poster renskrives som ren text utan filnamn, HTML-taggar eller teknisk notation som mobilwebbläsare auto-länkar.
 
@@ -70,63 +73,63 @@
 - Ordlistan utökad med 24 nya termer: kroppspositioner (anatomisk position, ryggläge, bukläge, sidoläge, Fowlerläge, Trendelenburgläge, omvänt Trendelenburgläge, litotomiläge, simsläge), rörelsetermer (inåtrotation, utåtrotation, deviation, anteversion, retroversion, protrusion, retrusion), riktningstermer (central, perifer, intermediär, internus, externus, obliqt plan) och ytor (parietal, visceral).
 
 ## 0.3.24
-- Faktakontroll ordlistan: stavfelen "beny ta" → "benyta" (Fossa) och "ledbroskyt" → "ledbrosket" (Synovialis) rättade.
-- Ordlistan: textstorlek höjd till 0.95rem, samma som info-sidan.
+- Faktakontroll ordlistan: stavfelen i Fossa och Synovialis rättade.
+- Ordlistan: textstorlek höjd, samma som info-sidan.
 
 ## 0.3.23
 - Ny sida: Ordlista med 140 latinska och medicinska termer som används i quizet, sorterade alfabetiskt med korta förklaringar. Sökfunktion filtrerar direkt på term och förklaring. Nås via ny knapp på startsidan. Knapplayouten omstrukturerades: "Starta quiz" är nu en tydlig primärknapp ovanför Info, Ordlista och Topplista.
 
 ## 0.3.22
-- Faktakontroll av riktningar.json: 5 rättningar — q224 (rörelse fram/bak = sagittalplan, inte frontalplan), q225 (rörelse vänster/höger = frontalplan, inte sagittalplan), q399 (sänka armen = adduktion, inte depression), q446 (Superior utbytt mot Kaudal som distraktor; Superior är synonym till Kranial och kan inte vara fel svar), q214 (stavfel "Döja höftleden" → "Föra benet ut åt sidan från höften").
+- Faktakontroll av riktningar: 5 rättningar — sagittalplan/frontalplan (q224, q225), adduktion/depression (q399), Superior/Kaudal som distraktor (q446), stavfel i frågetext (q214).
 
 ## 0.3.21
 - Döpte om "Blandade frågor" till "Slumpade frågor" och flyttade det sist i ämnesmenyn. Slumpade frågor hämtar nu automatiskt från alla aktiva ämnen inklusive Neurologi och Blodomloppet.
 
 ## 0.3.20
-- Versionsnummer i headern laddas nu dynamiskt från VERSION-filen istället för att vara hårdkodat i HTML.
+- Versionsnummer i headern laddas nu dynamiskt istället för att vara hårdkodat.
 
 ## 0.3.19
-- Lade till Blodomloppet som aktivt ämne: 100 sant/falskt-frågor (Normal svårighet) i data/blodomloppet.json. Täcker systemkretsloppet, lungkretsloppet, hjärtanatomi, hjärtats retledningssystem, kärltyper, blodkomponenter och fysiologi. Aktiverade blodomloppet-alternativet i dropdown-menyn och kopplade ämnet i app.js. Språkkorrigering: "bakflöde" → "backflöde" (q88).
+- Lade till Blodomloppet som aktivt ämne: 100 sant/falskt-frågor (Normal svårighet). Täcker systemkretsloppet, lungkretsloppet, hjärtanatomi, retledningssystemet, kärltyper, blodkomponenter och fysiologi. Språkkorrigering: "bakflöde" korrigerat till "backflöde".
 
 ## 0.3.18
-- Lade till Neurologi som aktivt ämne: 120 sant/falskt-frågor (Normal svårighet) i data/neurologi.json. Täcker CNS/PNS-struktur, neuron, myelin, synapser, signalsubstanser, aktionspotential, reflexer, hjärnstrukturer, ledning, reception, regeneration, neuroplasticitet, utveckling och åldrande. Aktiverade neurologi-alternativet i dropdown-menyn och kopplade ämnet i app.js.
+- Lade till Neurologi som aktivt ämne: 120 sant/falskt-frågor (Normal svårighet). Täcker CNS/PNS-struktur, neuron, myelin, synapser, signalsubstanser, aktionspotential, reflexer, hjärnstrukturer, ledning, reception, regeneration, neuroplasticitet, utveckling och åldrande.
 
 ## 0.3.17
-- Fixade Info-sida: changelog visar nu alla versioner med fullständigt innehåll. Bytte från ul/li till div-baserad rendering för att undvika overflow:hidden-klippning; tog bort max-height-begränsning så hela loggen är synlig och sidan scrollas naturligt.
+- Fixade Info-sida: ändringsloggen visar nu alla versioner med fullständigt innehåll och sidan scrollas naturligt.
 
 ## 0.3.16
-- Lade till Info-sida med appbeskrivning, länk till Norrtou Creations på GitHub och dynamisk ändringslogg hämtad från CHANGELOG.md. Info-knapp tillagd på framsidan till vänster om Topplista.
+- Lade till Info-sida med appbeskrivning, länk till Norrtou Creations på GitHub och dynamisk ändringslogg. Info-knapp tillagd på framsidan.
 
 ## 0.3.15
-- Faktakontroll av alla Normal-frågor i muskler.json: 11 rättningar — fabricerade svenska muskelnamn borttagna ur distraktorer (q1, q2, q3, q4, q5, q6, q8, q10, q13, q14) och ersatta med etablerade svenska anatomiska termer (kappmuskeln, breda ryggmuskeln, deltamuskeln m.fl.); q238 distraktorn "Os coxae" ersatt med "Sacrum" då tuber ischiadicum tekniskt är en del av os coxae. Alla korrekta svar och T/F-påståenden bekräftade faktamässigt korrekta.
+- Faktakontroll av alla Normal-frågor om muskler: 11 rättningar — fabricerade muskelnamn borttagna ur distraktorer och ersatta med etablerade svenska anatomiska termer. Alla korrekta svar bekräftade faktamässigt korrekta.
 
 ## 0.3.14
-- Kompletterade muskler.json med 73 nya frågor (Normal svårighet) baserade på kurslistan: 29 ursprung-frågor (MC), 29 fäste-frågor (MC), 5 klassificerings-frågor (FDP/FPL/EPB/EPL/APL som extrinsic) och 10 funktions-frågor (T/F) för tidigare ej täckta funktioner (höftextension Hamstrings, höftflexion Quadriceps, knäflexion Gastrocnemius, supination Tibialis anterior m.fl.). Totalt 273 frågor i muskler.json.
+- Kompletterade muskelfrågorna med 73 nya frågor (Normal svårighet) baserade på kurslistan: ursprung, fäste, klassificering och funktion. Totalt 273 frågor om muskler.
 
 ## 0.3.13
 - Tentaplugg är nu förstaval i ämnesmenyn.
 
 ## 0.3.12
-- Kvalitetsgranskning riktningar.json: 9 rättningar — faktafel ('Hörseln'→'Örat', q104), stavfel ('drejer'→'vrider', q113), correct i distractors (q169), självrefererande distraktorer (q150/q151), fråga med sin egna term som distraktor (q30), inkonsekvent stavning Dorsiflexion→Dorsalflexion (q94/q116/q120).
+- Kvalitetsgranskning av riktningsfrågor: 9 rättningar — faktafel (Hörseln→Örat), stavfel (drejer→vrider), felaktiga distraktorer och inkonsekvent stavning av Dorsalflexion.
 
 ## 0.3.11
-- Kvalitetsgranskning muskler.json: 8 rättningar — duplikat ID (q113 → q113b), inkompletta meningar (q17, q60), grammatikfel ('opponerar tumme', 'för och', 'vrid'→'vrida', 'sätts sig').
+- Kvalitetsgranskning av muskelfrågor: 8 rättningar — duplikat-ID, inkompletta meningar och grammatikfel åtgärdade.
 
 ## 0.3.10
-- Ta bort meningen om Handen och svårighet från ingresstexten på framsidan.
+- Borttagen mening om Handen och svårighet från ingresstexten på framsidan.
 
 ## 0.3.9
-- Kvalitetsgranskning ben.json: 56 rättningar — stavfel i 11 prompts (pannbenetet→pannbenet m.fl.), faktafel (stapesius→stapes, Os coccyx→Os coccygis), grammatik (en revben→ett revben), fixade sifferfrågor med bennamn-distraktorer (q38/39/40/64/114/245), duplikat-distraktor (q233), semantisk dubblettdistraktor (q170), korrigerade topics för 28 frågor felaktigt märkta osteologi_kranium.
-- Fixade bugg i tentaplugg.json: difficulty-fältet saknades vilket gjorde att ämnet inte gick att starta.
+- Kvalitetsgranskning av benfrågor: 56 rättningar — stavfel i frågetext, faktafel, grammatik och felaktigt kategoriserade frågor åtgärdade.
+- Fixade bugg i Tentaplugg där ämnet inte gick att starta.
 
 ## 0.3.8
 - Ändrade menytext från "Studier (tentor)" till "Tentaplugg".
 
 ## 0.3.7
-- Döpte om studier.json till tentaplugg.json och uppdaterade alla referenser i app.js och index.html.
+- Bytte namn på ämnet Studier till Tentaplugg och uppdaterade alla referenser.
 
 ## 0.3.6
-- Kvalitetsgranskning av studier.json: fixade stavfel (överarmsbenet, Kontorslandskapets), korrigerade grammatik, samt tog bort parentesformat som avslöjade korrekta svar (46 frågor åtgärdade). Bekräftade 59 sant/falskt-frågor i ämnet.
+- Kvalitetsgranskning av Studier-frågorna: stavfel, grammatik och parentesformat som avslöjade korrekta svar åtgärdade (46 frågor). Bekräftade 59 sant/falskt-frågor i ämnet.
 
 ## 0.3.5
 - Utökade "Studier (tentor)" med 148 nya frågor (HT25 omtenta, VT20, VT21, HT22) — totalt 353 frågor i ämnet.
