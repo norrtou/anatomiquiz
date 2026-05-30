@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.35
+- Info-sidan: tillbakaknappen överst ersatt med brödsmula (← Anatomiquiz / Info).
+- Ordlistesidan: tillbakaknappen borttagen; brödsmule-nav (som redan fanns) räcker.
+- Brödsmule-CSS flyttad till styles.css (delas nu av båda sidorna); glossary.css rensat från duplikat.
+
 ## 0.3.34
 - Ordlistesidan: tillbakaknapp tillagd högst upp i kortet.
 

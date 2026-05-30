@@ -25,42 +25,6 @@
 }
 
 /* ============================================================================
-   Brödsmulor
-   ============================================================================ */
-
-.breadcrumb {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 12px;
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-}
-
-.breadcrumb-link {
-  color: var(--primary-dark);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color var(--transition-fast);
-}
-
-.breadcrumb-link:hover,
-.breadcrumb-link:focus-visible {
-  color: var(--primary);
-  text-decoration: underline;
-}
-
-.breadcrumb-sep {
-  color: var(--text-secondary);
-  opacity: 0.5;
-}
-
-.breadcrumb-current {
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
-/* ============================================================================
    Ordlistekortet
    ============================================================================ */
 
@@ -152,7 +116,4 @@
     min-width: unset;
   }
 
-  .breadcrumb {
-    flex-wrap: wrap;
-  }
 }
