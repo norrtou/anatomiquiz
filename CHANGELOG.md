@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.31
+- Ordlista-knappen: understreck borttaget (text-decoration: none tillagt i .btn).
+
 ## 0.3.30
 - index.html: komplett SEO-uppdatering — beskrivande title, meta description/keywords/author/robots, Open Graph (6 taggar), Twitter Card, schema.org WebApplication + LearningResource + EducationalAudience (JSON-LD).
 - Webbläsartema: theme-color (#10b981) och color-scheme deklarerade.
