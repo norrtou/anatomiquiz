@@ -736,6 +736,60 @@ select:focus {
   font-size: 1.05rem;
 }
 
+/* ============================================================================
+   FRÅGESTATISTIK (info.html)
+   ============================================================================ */
+
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin-bottom: 28px;
+}
+
+.stats-table th {
+  text-align: left;
+  padding: 8px 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgba(16, 185, 129, 0.2);
+}
+
+.stats-table th:not(:first-child) {
+  text-align: right;
+}
+
+.stats-table td {
+  padding: 9px 12px;
+  color: var(--text-primary);
+  border-bottom: 1px solid rgba(16, 185, 129, 0.08);
+}
+
+.stats-table td:not(:first-child) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.stats-table tr:last-child td {
+  border-bottom: none;
+  font-weight: 700;
+  border-top: 2px solid rgba(16, 185, 129, 0.2);
+}
+
+.stats-diff {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.stats-loading {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
 .changelog-heading {
   font-size: 1.05rem;
   font-weight: 700;

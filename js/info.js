@@ -80,7 +80,80 @@ function renderChangelog(text) {
 }
 
 // ============================================================================
+// Frågestatistik
+// ============================================================================
+
+const TOPICS = [
+  { label: 'Tentaplugg',           file: './data/tentaplugg.json' },
+  { label: 'Ben',                  file: './data/ben.json' },
+  { label: 'Muskler',              file: './data/muskler.json' },
+  { label: 'Handen',               file: './data/handen.json' },
+  { label: 'Lägen & riktningar',   file: './data/riktningar.json' },
+  { label: 'Medicinsk terminologi',file: './data/medicinsk_terminologi.json' },
+  { label: 'Neurologi',            file: './data/neurologi.json' },
+  { label: 'Blodomloppet',         file: './data/blodomloppet.json' },
+]
+
+async function loadStats() {
+  const container = document.getElementById('statsContent')
+  container.innerHTML = '<p class="stats-loading">Laddar statistik…</p>'
+
+  try {
+    const results = await Promise.all(
+      TOPICS.map(t => fetch(t.file).then(r => r.json()).then(data => {
+        const questions = Array.isArray(data) ? data : data.questions
+        const normal = questions.filter(q => q.difficulty !== 'Hard').length
+        const hard   = questions.length - normal
+        return { label: t.label, total: questions.length, normal, hard }
+      }))
+    )
+
+    const totals = results.reduce((acc, r) => ({
+      total: acc.total + r.total,
+      normal: acc.normal + r.normal,
+      hard: acc.hard + r.hard,
+    }), { total: 0, normal: 0, hard: 0 })
+
+    const pct = (n, tot) => tot ? Math.round(n / tot * 100) + '%' : '—'
+
+    const rows = results.map(r => `
+      <tr>
+        <td>${escapeHtml(r.label)}</td>
+        <td>${r.total}</td>
+        <td>${r.normal} <span class="stats-diff">${pct(r.normal, r.total)}</span></td>
+        <td>${r.hard > 0 ? r.hard + ' <span class="stats-diff">' + pct(r.hard, r.total) + '</span>' : '<span class="stats-diff">—</span>'}</td>
+      </tr>`).join('')
+
+    container.innerHTML = `
+      <table class="stats-table" aria-label="Frågestatistik per ämne">
+        <thead>
+          <tr>
+            <th>Ämne</th>
+            <th>Totalt</th>
+            <th>Normal</th>
+            <th>Svår</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${rows}
+          <tr>
+            <td>Totalt</td>
+            <td>${totals.total}</td>
+            <td>${totals.normal} <span class="stats-diff">${pct(totals.normal, totals.total)}</span></td>
+            <td>${totals.hard} <span class="stats-diff">${pct(totals.hard, totals.total)}</span></td>
+          </tr>
+        </tbody>
+      </table>`
+  } catch {
+    container.innerHTML = '<p class="stats-loading">Kunde inte ladda statistik.</p>'
+  }
+}
+
+// ============================================================================
 // Init
 // ============================================================================
 
-document.addEventListener('DOMContentLoaded', loadChangelog)
+document.addEventListener('DOMContentLoaded', () => {
+  loadStats()
+  loadChangelog()
+})
