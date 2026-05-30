@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.32
+- Info-sidan: tillbakaknapp tillagd högst upp, precis som den befintliga längst ned.
+
 ## 0.3.31
 - Ordlista-knappen: understreck borttaget (text-decoration: none tillagt i .btn).
 
