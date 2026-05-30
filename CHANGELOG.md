@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.41
+- Brödsmula ordlistesidan (mobil): täcker nu :visited, :hover, :focus, :active — index.html är alltid besökt så länken visades lila. Lade även till -webkit-tap-highlight-color: transparent.
+
 ## 0.3.40
 - Brödsmula på ordlistesidan: a.breadcrumb-link (specificitet 0,1,1) slår nu webbläsarens a:-webkit-any-link — grön färg och inget understreck, identiskt med info-sidan.
 

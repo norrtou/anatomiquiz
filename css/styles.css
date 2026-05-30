@@ -880,10 +880,15 @@ select:focus {
   transition: color var(--transition-fast);
 }
 
-/* Specificitet 0,1,1 — slår webbläsarens a:-webkit-any-link (0,1,1) i kaskadens author-skikt */
-a.breadcrumb-link {
+/* Specificitet 0,2,1 — täcker alla länktillstånd inklusive :visited (lila på mobil) */
+a.breadcrumb-link,
+a.breadcrumb-link:visited,
+a.breadcrumb-link:hover,
+a.breadcrumb-link:focus,
+a.breadcrumb-link:active {
   color: var(--primary-dark);
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Knappvariant — nollställer ALL webbläsar- och OS-styling så att
