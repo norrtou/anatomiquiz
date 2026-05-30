@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.29
+- Ordlistan separerad till egen sida: medicinskordlista.html med full SEO (title, description, Open Graph, Twitter Card, schema.org DefinedTermSet + BreadcrumbList), brödsmulor och termräknare.
+- Ordlistedata flyttad från hårdkodat JS-array i app.js till data/ordlista.json (195 termer).
+- Ordliste-logik extraherad till js/glossary.js med egna stilar i css/glossary.css.
+- Ordlista-knappen på startsidan är nu en direktlänk till medicinskordlista.html.
+
 ## 0.3.28
 - Ordlistan: etymologinot tillagd på alla ~185 poster med latinskt/grekiskt ursprungsord och bokstavlig betydelse (t.ex. "acetabulum = ättikskål", "musculus = liten mus", "phalanx = stridsformation").
 

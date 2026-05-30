@@ -1,0 +1,158 @@
+/**
+ * glossary.css — Stilar specifika för medicinskordlista.html
+ *
+ * Bygger ovanpå styles.css (som måste laddas först).
+ * Innehåller layout för hela ordlistesidan samt komponenter
+ * som saknas i styles.css: brödsmulor, verktygsfält, räknare och sidfot.
+ */
+
+/* ============================================================================
+   Sidlayout
+   ============================================================================ */
+
+/* Ger ordlistesidan generösare luft utan att störa quiz-layouten */
+.glossary-page {
+  padding-bottom: 48px;
+}
+
+.glossary-header {
+  margin-bottom: 8px;
+}
+
+/* Döljer versionstaggen som annars visas i quiz-headern */
+.glossary-page .version {
+  display: none;
+}
+
+/* ============================================================================
+   Brödsmulor
+   ============================================================================ */
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.breadcrumb-link {
+  color: var(--primary-dark);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.breadcrumb-link:hover,
+.breadcrumb-link:focus-visible {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.breadcrumb-sep {
+  color: var(--text-secondary);
+  opacity: 0.5;
+}
+
+.breadcrumb-current {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* ============================================================================
+   Ordlistekortet
+   ============================================================================ */
+
+/* Tar bort max-height-begränsningen som behövs i quiz-läget men är
+   onödig när ordlistan är en egen sida */
+.glossary-card .glossary-list {
+  max-height: none;
+  border: none;
+  border-top: 1px solid rgba(16, 185, 129, 0.15);
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+/* ============================================================================
+   Verktygsfält (sök + räknare)
+   ============================================================================ */
+
+.glossary-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+/* Sökfältet tar all tillgänglig bredd */
+.glossary-toolbar .glossary-search {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* ============================================================================
+   Termräknare
+   ============================================================================ */
+
+.term-count {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  min-width: 80px;
+  text-align: right;
+}
+
+/* ============================================================================
+   Sidfot
+   ============================================================================ */
+
+.glossary-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+  text-align: center;
+}
+
+.glossary-source {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.glossary-source em {
+  font-style: italic;
+  color: var(--text-primary);
+}
+
+.glossary-back-btn {
+  /* Ärver .btn från styles.css */
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ============================================================================
+   Responsivitet
+   ============================================================================ */
+
+@media (max-width: 480px) {
+  .glossary-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .term-count {
+    text-align: center;
+    min-width: unset;
+  }
+
+  .breadcrumb {
+    flex-wrap: wrap;
+  }
+}

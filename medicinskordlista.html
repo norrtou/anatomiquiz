@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- =========================================================
+       Primär SEO
+       ========================================================= -->
+  <title>Medicinsk ordlista — latinska och anatomiska termer | Anatomiquiz</title>
+  <meta name="description" content="Komplett medicinsk ordlista med 195 latinska och anatomiska termer på svenska. Varje term har definition, svenska och engelska synonymer, lekmannauttryck samt etymologi. Passar studenter inom medicin, arbetsterapi, fysioterapi och omvårdnad.">
+  <meta name="keywords" content="medicinsk ordlista, anatomiska termer, latinska termer, medicinsk terminologi, anatomi svenska, medicinsk latin, anatomibegrep, sjukvårdsbegrepp">
+  <meta name="author" content="Norrtou Creations">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+  <!-- Canonical — uppdatera till faktisk produktionsdomän vid driftsättning -->
+  <!-- <link rel="canonical" href="https://example.com/medicinskordlista.html"> -->
+
+  <!-- =========================================================
+       Open Graph (Facebook, LinkedIn, m.fl.)
+       ========================================================= -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Medicinsk ordlista — 195 latinska och anatomiska termer">
+  <meta property="og:description" content="Komplett medicinsk ordlista på svenska med definitioner, synonymer, lekmannauttryck och etymologi. Gratis att använda för medicinstudenter.">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="Anatomiquiz">
+  <!-- <meta property="og:url" content="https://example.com/medicinskordlista.html"> -->
+  <!-- <meta property="og:image" content="https://example.com/img/og-ordlista.png"> -->
+  <!-- <meta property="og:image:width" content="1200"> -->
+  <!-- <meta property="og:image:height" content="630"> -->
+  <!-- <meta property="og:image:alt" content="Medicinsk ordlista — Anatomiquiz"> -->
+
+  <!-- =========================================================
+       Twitter / X Card
+       ========================================================= -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Medicinsk ordlista — 195 latinska och anatomiska termer">
+  <meta name="twitter:description" content="Komplett medicinsk ordlista på svenska med definitioner, synonymer och etymologi. Gratis för medicinstudenter.">
+  <!-- <meta name="twitter:image" content="https://example.com/img/og-ordlista.png"> -->
+  <!-- <meta name="twitter:image:alt" content="Medicinsk ordlista — Anatomiquiz"> -->
+
+  <!-- =========================================================
+       Strukturerad data — schema.org (JSON-LD)
+       Typ: DefinedTermSet beskriver en samling definierade termer.
+       ========================================================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DefinedTermSet",
+    "name": "Medicinsk ordlista — latinska och anatomiska termer",
+    "description": "Komplett ordlista med 195 latinska och anatomiska termer på svenska, med definitioner, synonymer och etymologi.",
+    "inLanguage": "sv-SE",
+    "url": "medicinskordlista.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Norrtou Creations",
+      "url": "https://github.com/norrtou"
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Anatomiquiz",
+      "description": "Interaktiv anatomiquiz för medicinstudenter"
+    }
+  }
+  </script>
+
+  <!-- =========================================================
+       Webbplats-schema för sitelinks search box
+       ========================================================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Medicinsk ordlista",
+    "description": "Komplett medicinsk ordlista med latinska och anatomiska termer på svenska.",
+    "inLanguage": "sv-SE",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Anatomiquiz",
+          "item": "index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Medicinsk ordlista",
+          "item": "medicinskordlista.html"
+        }
+      ]
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/glossary.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+  <main id="main" class="container glossary-page" role="main">
+
+    <!-- Brödsmula-navigering -->
+    <nav class="breadcrumb" aria-label="Brödsmula">
+      <a href="index.html" class="breadcrumb-link">← Anatomiquiz</a>
+      <span class="breadcrumb-sep" aria-hidden="true">/</span>
+      <span class="breadcrumb-current" aria-current="page">Medicinsk ordlista</span>
+    </nav>
+
+    <header class="header glossary-header">
+      <div class="header-title">
+        <h1>Medicinsk ordlista</h1>
+      </div>
+      <p class="tagline">Latinska och anatomiska termer med definitioner, synonymer och etymologi.</p>
+    </header>
+
+    <!-- Söksektion -->
+    <section class="card glossary-card" aria-labelledby="glossaryHeading">
+      <h2 id="glossaryHeading" class="sr-only">Sök i ordlistan</h2>
+
+      <div class="glossary-toolbar">
+        <label for="glossarySearch" class="sr-only">Sök term eller definition</label>
+        <input
+          id="glossarySearch"
+          type="search"
+          placeholder="Sök term, synonym eller definition…"
+          class="glossary-search"
+          aria-label="Sök i ordlistan"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <span id="termCount" class="term-count" aria-live="polite" aria-atomic="true"></span>
+      </div>
+
+      <!-- Ordlistans innehåll fylls i av glossary.js -->
+      <div id="glossaryContent" class="glossary-list" role="list" aria-live="polite" aria-label="Ordlisteposter"></div>
+    </section>
+
+    <!-- Sidfot -->
+    <footer class="glossary-footer">
+      <p class="glossary-source">
+        Termer baserade på
+        <em>Terminologia Anatomica</em>,
+        <em>Nomina Anatomica</em>
+        och svensk medicinsk ordbok.
+      </p>
+      <a href="index.html" class="btn glossary-back-btn">← Tillbaka till quizet</a>
+    </footer>
+
+  </main>
+
+  <script src="js/glossary.js"></script>
+</body>
+</html>
