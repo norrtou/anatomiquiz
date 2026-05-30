@@ -8,6 +8,23 @@ const CHANGELOG_URL = './CHANGELOG.md'
 const MAX_ENTRIES = 20
 
 // ============================================================================
+// Hjälpfunktioner
+// ============================================================================
+
+/**
+ * Escapar HTML-specialtecken så att changelog-text inte tolkas som markup.
+ * @param {string} str
+ * @returns {string}
+ */
+function escapeHtml(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+}
+
+// ============================================================================
 // Changelog
 // ============================================================================
 
@@ -53,9 +70,9 @@ function renderChangelog(text) {
 
   return recent
     .map(e => {
-      const itemsHtml = e.items.map(i => `<div class="cl-item">– ${i}</div>`).join('')
+      const itemsHtml = e.items.map(i => `<div class="cl-item">– ${escapeHtml(i)}</div>`).join('')
       return `<div class="changelog-entry">
-        <div class="changelog-version">v${e.version}</div>
+        <div class="changelog-version">v${escapeHtml(e.version)}</div>
         <div class="cl-body">${itemsHtml}</div>
       </div>`
     })

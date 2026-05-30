@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.44
+- Info-sidan: HTML-tecken i ändringsloggen escapas nu korrekt — <a>, <button> m.fl. i loggtext renderades som riktiga hyperlänkar.
+
 ## 0.3.43
 - sr-only-klass definierad i styles.css (saknades — orsakade att skärmläsar-labels syntes som vanlig text).
 - Ordlistesidan: redundant label "Sök term eller definition" borttagen; inputen har redan aria-label.
