@@ -671,13 +671,9 @@ select:focus {
 
 /* Rad med quiz- och flashcard-knapparna — identisk logik som .secondary-actions */
 .primary-actions {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 12px;
-}
-
-.primary-actions .btn {
-  flex: 1;
-  min-width: 0;
 }
 
 .btn-start {
@@ -1007,12 +1003,6 @@ ol li {
     min-height: 36px;
     flex: 0 0 auto !important;
     width: auto;
-  }
-
-  .primary-actions .btn {
-    flex: 1 !important;
-    width: 0;
-    min-width: 0 !important;
   }
 
   .secondary-actions .btn {
