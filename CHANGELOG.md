@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.17
+- Fixade Info-sida: changelog visar nu alla versioner med fullständigt innehåll. Bytte från ul/li till div-baserad rendering för att undvika overflow:hidden-klippning; tog bort max-height-begränsning så hela loggen är synlig och sidan scrollas naturligt.
+
 ## 0.3.16
 - Lade till Info-sida med appbeskrivning, länk till Norrtou Creations på GitHub och dynamisk ändringslogg hämtad från CHANGELOG.md. Info-knapp tillagd på framsidan till vänster om Topplista.
 

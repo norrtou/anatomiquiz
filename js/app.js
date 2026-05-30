@@ -521,30 +521,32 @@ async function loadChangelog() {
 }
 
 function renderChangelog(text) {
-  const lines = text.split('\n')
-  let html = ''
-  let version = null
-  let items = []
+  const entries = []
+  let current = null
 
-  function flush() {
-    if (!version) return
-    let inner = ''
-    if (items.length) {
-      inner = '<ul class="changelog-items">' +
-        items.map(i => `<li>${i}</li>`).join('') +
-        '</ul>'
+  for (const rawLine of text.split(/\r?\n/)) {
+    const line = rawLine.trimEnd()
+    if (line.startsWith('## ')) {
+      if (current) entries.push(current)
+      current = { version: line.slice(3).trim(), items: [] }
+    } else if (current && line.startsWith('- ')) {
+      current.items.push(line.slice(2).trim())
     }
-    html += `<div class="changelog-entry"><div class="changelog-version">v${version}</div>${inner}</div>`
-    version = null
-    items = []
   }
+  if (current) entries.push(current)
 
-  lines.forEach(line => {
-    if (line.startsWith('## ')) { flush(); version = line.slice(3).trim() }
-    else if (line.startsWith('- ') && version) items.push(line.slice(2).trim())
-  })
-  flush()
-  return html || '<p class="changelog-loading">Ingen ändringslogg hittades.</p>'
+  const recent = entries.slice(0, 20)
+  if (!recent.length) return '<p class="changelog-loading">Ingen ändringslogg hittades.</p>'
+
+  return recent.map(e => {
+    const itemsHtml = e.items.length
+      ? e.items.map(i => `<div class="cl-item">– ${i}</div>`).join('')
+      : ''
+    return `<div class="changelog-entry">
+      <div class="changelog-version">v${e.version}</div>
+      <div class="cl-body">${itemsHtml}</div>
+    </div>`
+  }).join('')
 }
 
 function cancelQuiz(){
