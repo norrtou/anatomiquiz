@@ -114,14 +114,12 @@ async function loadStats() {
       hard: acc.hard + r.hard,
     }), { total: 0, normal: 0, hard: 0 })
 
-    const pct = (n, tot) => tot ? Math.round(n / tot * 100) + '%' : '—'
-
     const rows = results.map(r => `
       <tr>
         <td>${escapeHtml(r.label)}</td>
         <td>${r.total}</td>
-        <td>${r.normal} <span class="stats-diff">${pct(r.normal, r.total)}</span></td>
-        <td>${r.hard > 0 ? r.hard + ' <span class="stats-diff">' + pct(r.hard, r.total) + '</span>' : '<span class="stats-diff">—</span>'}</td>
+        <td>${r.normal}</td>
+        <td>${r.hard > 0 ? r.hard : '<span class="stats-diff">—</span>'}</td>
       </tr>`).join('')
 
     container.innerHTML = `
@@ -139,8 +137,8 @@ async function loadStats() {
           <tr>
             <td>Totalt</td>
             <td>${totals.total}</td>
-            <td>${totals.normal} <span class="stats-diff">${pct(totals.normal, totals.total)}</span></td>
-            <td>${totals.hard} <span class="stats-diff">${pct(totals.hard, totals.total)}</span></td>
+            <td>${totals.normal}</td>
+            <td>${totals.hard}</td>
           </tr>
         </tbody>
       </table>`

@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.79
+- Frågestatistik: procentsatser borttagna ur tabellen.
+
 ## 0.3.78
 - Info-sidan: dynamisk frågestatistik-tabell (ämne, totalt, Normal/Svår) hämtad direkt från JSON-filerna.
 
