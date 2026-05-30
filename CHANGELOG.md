@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.33
+- Ordlista-knappen (mobil): understreck borttaget på alla tillstånd (a.btn, :hover, :focus, :visited) — täcker alla webbläsares standardstilar.
+
 ## 0.3.32
 - Info-sidan: tillbakaknapp tillagd högst upp, precis som den befintliga längst ned.
 

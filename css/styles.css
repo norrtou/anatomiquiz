@@ -321,6 +321,14 @@ select:focus {
   }
 }
 
+/* Säkerställer att <a class="btn"> aldrig får webbläsarens standardunderstreck */
+a.btn,
+a.btn:hover,
+a.btn:focus,
+a.btn:visited {
+  text-decoration: none;
+}
+
 .btn {
   padding: 10px 12px;
   border-radius: var(--radius-sm);
