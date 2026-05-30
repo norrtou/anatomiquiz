@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.55
+- Favicon uppdaterad till skeletthand-ikon (64x64 PNG).
+
 ## 0.3.54
 - Favicon tillagd (ben-ikon i SVG) på alla sidor.
 - Ordlistans 195 termer inbäddade i noscript-block för sökmotorsynlighet.
