@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.87
+- Studenters flashcards flyttas till plats 2 i ämneslistan.
+
 ## 0.3.86
 - Döper om ämnet "Funktionell Anatomi FC" → "Studenters flashcards" (filnamn, topic-fält, source-fält, UI).
 
