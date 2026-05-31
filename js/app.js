@@ -7,7 +7,7 @@ function getQuestionsPath(topic) {
   if (topic === 'tentaplugg') return './data/tentaplugg.json'
   if (topic === 'neurologi') return './data/neurologi.json'
   if (topic === 'blodomloppet') return './data/blodomloppet.json'
-  if (topic === 'funktionell_anatomi_fc') return './data/funktionell_anatomi_fc.json'
+  if (topic === 'studenters_flashcards') return './data/studenters_flashcards.json'
   // 'blandade' uses loadQuestionsFromMultiplePaths() instead
   return './data/riktningar.json'
 }
