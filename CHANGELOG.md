@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.4.1
+- Medicinsk ordbok: alla 1 081 poster märkta med ordklass — (subst.), (adj.), (verb), (prefix) eller (adv.) — direkt i beskrivningen före Sv:/Eng:.
+
 ## 0.4.0
 - Medicinsk ordbok: 886 nya poster tillagda från KI:s anatomiska termförteckning; totalt 1081 poster (A–Ö).
 
