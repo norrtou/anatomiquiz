@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.85
+- Funktionell Anatomi FC: korrektur och kvalitetskontroll av alla 875 kort — stavfel, grammatik, latinska termer, felmatchade par, bildkort utan bild raderade, triple-quotes rensade.
+
+## 0.3.84
+- Nytt ämne: Funktionell Anatomi FC — 942 flashcards importerade från externa CSV-filer (Noji-export).
+
 ## 0.3.83
 - Flashcard: svarsfördröjning 800→1200ms.
 

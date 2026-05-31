@@ -7,6 +7,7 @@ function getQuestionsPath(topic) {
   if (topic === 'tentaplugg') return './data/tentaplugg.json'
   if (topic === 'neurologi') return './data/neurologi.json'
   if (topic === 'blodomloppet') return './data/blodomloppet.json'
+  if (topic === 'funktionell_anatomi_fc') return './data/funktionell_anatomi_fc.json'
   // 'blandade' uses loadQuestionsFromMultiplePaths() instead
   return './data/riktningar.json'
 }
@@ -510,6 +511,30 @@ function handleImportFile(ev){
 // FLASHCARDS
 // ============================================================================
 
+// Krymper textstorleken tills texten ryms i kortet, ned till minRem.
+function fitFcText(textEl, defaultRem, minRem = 0.6) {
+  const rootPx = parseFloat(getComputedStyle(document.documentElement).fontSize)
+  let px = defaultRem * rootPx
+  textEl.style.fontSize = px + 'px'
+
+  const container = textEl.closest('.fc-front, .fc-back')
+  if (!container) return
+
+  const hint  = container.querySelector('.fc-hint')
+  const label = container.querySelector('.fc-label')
+  const padStyle = getComputedStyle(container)
+  const padV  = parseFloat(padStyle.paddingTop) + parseFloat(padStyle.paddingBottom)
+  const hintH = hint  ? hint.offsetHeight  + 8  : 0
+  const labelH = label ? label.offsetHeight + 14 : 0
+  const available = container.clientHeight - padV - hintH - labelH - 16
+
+  const minPx = minRem * rootPx
+  while (textEl.scrollHeight > available && px > minPx) {
+    px -= 0.5
+    textEl.style.fontSize = px + 'px'
+  }
+}
+
 let fcCards = []         // [{prompt, correct}]
 let fcIdx = 0
 let fcFlipped = false
@@ -596,10 +621,12 @@ function showFlashcard() {
   el('fcNextBtn').classList.remove('hidden')
   el('fcTimer').classList.remove('warning')
   el('fcTimer').textContent = timePer > 0 ? `Tid: ${timePer}s` : ''
+  fitFcText(el('fcQuestion'), 1.1)
 
   // Fyll i svaret och starta timer först när flip-back-animationen är klar
   const startCard = () => {
     el('fcAnswer').textContent = card.correct
+    fitFcText(el('fcAnswer'), 1.25)
     if (timePer > 0) startFcTimer(timePer)
   }
 
