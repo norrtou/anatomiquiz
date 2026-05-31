@@ -773,10 +773,16 @@ select:focus {
   font-variant-numeric: tabular-nums;
 }
 
-.stats-table tr:last-child td {
-  border-bottom: none;
+.stats-total-row td {
   font-weight: 700;
   border-top: 2px solid rgba(16, 185, 129, 0.2);
+}
+
+.stats-fc-row td {
+  border-bottom: none;
+  border-top: 2px solid rgba(16, 185, 129, 0.1);
+  color: var(--text-secondary);
+  font-style: italic;
 }
 
 .stats-diff {

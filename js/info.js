@@ -94,19 +94,27 @@ const TOPICS = [
   { label: 'Blodomloppet',         file: './data/blodomloppet.json' },
 ]
 
+const FC_TOPICS = [
+  { label: 'Studenters flashcards', file: './data/studenters_flashcards.json' },
+]
+
 async function loadStats() {
   const container = document.getElementById('statsContent')
   container.innerHTML = '<p class="stats-loading">Laddar statistik…</p>'
 
   try {
-    const results = await Promise.all(
-      TOPICS.map(t => fetch(t.file).then(r => r.json()).then(data => {
-        const questions = Array.isArray(data) ? data : data.questions
-        const normal = questions.filter(q => q.difficulty !== 'Hard').length
-        const hard   = questions.length - normal
-        return { label: t.label, total: questions.length, normal, hard }
-      }))
-    )
+    const countCards = (file) =>
+      fetch(file).then(r => r.json()).then(data => {
+        const items = Array.isArray(data) ? data : data.questions
+        const normal = items.filter(q => q.difficulty !== 'Hard').length
+        const hard   = items.length - normal
+        return { total: items.length, normal, hard }
+      })
+
+    const [results, fcResults] = await Promise.all([
+      Promise.all(TOPICS.map(t => countCards(t.file).then(r => ({ label: t.label, ...r })))),
+      Promise.all(FC_TOPICS.map(t => countCards(t.file).then(r => ({ label: t.label, ...r })))),
+    ])
 
     const totals = results.reduce((acc, r) => ({
       total: acc.total + r.total,
@@ -114,12 +122,22 @@ async function loadStats() {
       hard: acc.hard + r.hard,
     }), { total: 0, normal: 0, hard: 0 })
 
-    const rows = results.map(r => `
+    const dash = '<span class="stats-diff">—</span>'
+
+    const quizRows = results.map(r => `
       <tr>
         <td>${escapeHtml(r.label)}</td>
         <td>${r.total}</td>
         <td>${r.normal}</td>
-        <td>${r.hard > 0 ? r.hard : '<span class="stats-diff">—</span>'}</td>
+        <td>${r.hard > 0 ? r.hard : dash}</td>
+      </tr>`).join('')
+
+    const fcRows = fcResults.map(r => `
+      <tr class="stats-fc-row">
+        <td>${escapeHtml(r.label)}</td>
+        <td>${r.total}</td>
+        <td>${dash}</td>
+        <td>${dash}</td>
       </tr>`).join('')
 
     container.innerHTML = `
@@ -133,13 +151,14 @@ async function loadStats() {
           </tr>
         </thead>
         <tbody>
-          ${rows}
-          <tr>
-            <td>Totalt</td>
+          ${quizRows}
+          <tr class="stats-total-row">
+            <td>Totalt quiz</td>
             <td>${totals.total}</td>
             <td>${totals.normal}</td>
             <td>${totals.hard}</td>
           </tr>
+          ${fcRows}
         </tbody>
       </table>`
   } catch {
