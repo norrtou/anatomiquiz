@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.90
+- Ta bort rubriken "Skapa ett quiz åt mig".
+
 ## 0.3.89
 - Flashcard klart-vy: tre knappar på rad — "Pröva igen" (samma kort), "Nya kort" (ny omgång), "Avsluta".
 
