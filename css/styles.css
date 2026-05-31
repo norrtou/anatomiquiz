@@ -1239,6 +1239,10 @@ ol li {
 }
 
 /* Klart-vy när alla kort är genomgångna */
+.fc-finish-actions {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .fc-finished {
   text-align: center;
   padding: 32px 0 8px;

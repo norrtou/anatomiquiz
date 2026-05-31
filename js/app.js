@@ -731,8 +731,13 @@ function init(){
   el('startFlashcardsBtn').addEventListener('click', startFlashcards)
   el('fcCancelBtn').addEventListener('click', cancelFlashcards)
   el('fcNextBtn').addEventListener('click', nextFlashcard)
-  el('fcRestartBtn').addEventListener('click', () => { fcIdx = 0; showFlashcard() })
-  el('fcBackBtn').addEventListener('click', cancelFlashcards)
+  el('fcRetryBtn').addEventListener('click', () => {
+    el('fcFinished').classList.add('hidden')
+    fcIdx = 0
+    showFlashcard()
+  })
+  el('fcNewBtn').addEventListener('click', startFlashcards)
+  el('fcQuitBtn').addEventListener('click', cancelFlashcards)
   el('fcScene').addEventListener('click', () => { if (!fcFlipped) flipCard(false); else nextFlashcard() })
   el('fcScene').addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); if (!fcFlipped) flipCard(false); else nextFlashcard() } })
   el('cancelBtn').addEventListener('click', cancelQuiz)
