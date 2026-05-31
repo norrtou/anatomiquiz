@@ -91,10 +91,11 @@
   <link rel="icon" type="image/svg+xml" href="/anatomiquiz/img/favicon.svg">
   <link rel="icon" type="image/png" sizes="64x64" href="/anatomiquiz/img/favicon.png">
   <link rel="apple-touch-icon" href="/anatomiquiz/img/favicon.png">
+  <link rel="manifest" href="/anatomiquiz/manifest.json">
 
   <!-- Preload kritisk CSS -->
-  <link rel="preload" href="css/styles.css?v=0.4.2" as="style">
-  <link rel="stylesheet" href="css/styles.css?v=0.4.2">
+  <link rel="preload" href="css/styles.css?v=0.4.3" as="style">
+  <link rel="stylesheet" href="css/styles.css?v=0.4.3">
 </head>
 <body>
 
@@ -115,10 +116,24 @@
     </header>
 
     <!-- =========================================================
+         Introsektion — beskrivande text för besökare och sökmotorer
+         ========================================================= -->
+    <section class="intro" aria-label="Om Anatomiquiz">
+      <p>
+        Anatomiquiz är ett gratis, interaktivt quiz på svenska för dig som pluggar anatomi.
+        Träna skelett, muskler, neurologi, blodomloppet och medicinsk terminologi inför tentan
+        – som arbetsterapeut, fysioterapeut, sjuksköterska eller läkarstudent. Slå upp begrepp
+        i den <a href="medicinskordlista.html">medicinska ordlistan</a> eller öva med quiz och
+        flashcards nedan.
+      </p>
+    </section>
+
+    <!-- =========================================================
          Inställningssektion — quizkonfiguration (visas vid start)
          ========================================================= -->
     <section id="setup" class="card" aria-labelledby="setupHeading">
 
+      <h2 id="setupHeading" class="sr-only">Starta quiz eller flashcards</h2>
 
       <label for="topic">Ämne</label>
       <select id="topic">

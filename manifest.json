@@ -1,0 +1,19 @@
+{
+  "name": "Anatomiquiz — interaktiv anatomiquiz på svenska",
+  "short_name": "Anatomiquiz",
+  "description": "Gratis interaktiv anatomiquiz på svenska – träna skelett, muskler, neurologi, blodomloppet och medicinsk terminologi.",
+  "lang": "sv-SE",
+  "dir": "ltr",
+  "start_url": "/anatomiquiz/",
+  "scope": "/anatomiquiz/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#10b981",
+  "background_color": "#ffffff",
+  "categories": ["education", "medical"],
+  "icons": [
+    { "src": "/anatomiquiz/img/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "/anatomiquiz/img/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/anatomiquiz/img/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

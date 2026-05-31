@@ -209,6 +209,23 @@ main {
   font-weight: 400;
 }
 
+/* Introsektion på startsidan — beskrivande text för besökare och SEO */
+.intro {
+  margin: 0 0 20px 0;
+}
+
+.intro p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.intro a {
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
 /* ============================================================================
    CARD STYLES
    ============================================================================ */
