@@ -94,8 +94,8 @@
   <link rel="manifest" href="/anatomiquiz/manifest.json">
 
   <!-- Preload kritisk CSS -->
-  <link rel="preload" href="css/styles.css?v=0.4.3" as="style">
-  <link rel="stylesheet" href="css/styles.css?v=0.4.3">
+  <link rel="preload" href="css/styles.css?v=0.4.4" as="style">
+  <link rel="stylesheet" href="css/styles.css?v=0.4.4">
 </head>
 <body>
 
@@ -114,19 +114,6 @@
       </div>
       <p class="tagline">Öva på funktionell anatomi med quiz och flashcards</p>
     </header>
-
-    <!-- =========================================================
-         Introsektion — beskrivande text för besökare och sökmotorer
-         ========================================================= -->
-    <section class="intro" aria-label="Om Anatomiquiz">
-      <p>
-        Anatomiquiz är ett gratis, interaktivt quiz på svenska för dig som pluggar anatomi.
-        Träna skelett, muskler, neurologi, blodomloppet och medicinsk terminologi inför tentan
-        – som arbetsterapeut, fysioterapeut, sjuksköterska eller läkarstudent. Slå upp begrepp
-        i den <a href="medicinskordlista.html">medicinska ordlistan</a> eller öva med quiz och
-        flashcards nedan.
-      </p>
-    </section>
 
     <!-- =========================================================
          Inställningssektion — quizkonfiguration (visas vid start)
@@ -292,6 +279,22 @@
         <button id="clearScores" class="btn">Rensa topplista</button>
         <button id="backToSetup" class="btn">Tillbaka</button>
       </div>
+    </section>
+
+    <!-- =========================================================
+         Om-sektion — beskrivande text sist på sidan.
+         Döljs automatiskt när startvyn (#setup) är dold, dvs under
+         pågående quiz/flashcards, via CSS (#setup.hidden ~ .intro).
+         ========================================================= -->
+    <section class="card intro" aria-labelledby="introHeading">
+      <h2 id="introHeading">Om Anatomiquiz</h2>
+      <p>
+        Anatomiquiz är ett gratis, interaktivt quiz på svenska för dig som pluggar anatomi.
+        Träna skelett, muskler, neurologi, blodomloppet och medicinsk terminologi inför tentan
+        – som arbetsterapeut, fysioterapeut, sjuksköterska eller läkarstudent. Slå upp begrepp
+        i den <a href="medicinskordlista.html">medicinska ordlistan</a> eller öva med quiz och
+        flashcards ovan.
+      </p>
     </section>
 
   </main>

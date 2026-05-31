@@ -209,9 +209,11 @@ main {
   font-weight: 400;
 }
 
-/* Introsektion på startsidan — beskrivande text för besökare och SEO */
-.intro {
-  margin: 0 0 20px 0;
+/* Om-sektionen sist på startsidan — beskrivande text för besökare och SEO */
+.intro h2 {
+  margin: 0 0 12px 0;
+  font-size: 1.05rem;
+  color: var(--text-primary);
 }
 
 .intro p {
@@ -224,6 +226,11 @@ main {
 .intro a {
   color: var(--primary-dark);
   font-weight: 600;
+}
+
+/* Dölj Om-sektionen när startvyn är dold (under quiz/flashcards/resultat) */
+#setup.hidden ~ .intro {
+  display: none;
 }
 
 /* ============================================================================
