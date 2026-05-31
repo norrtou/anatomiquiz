@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.3.99
+- Infosidan: byter rubrik "Frågestatistik" till "Antal frågor".
+
 ## 0.3.98
 - Infosidan: Studenters flashcards visas dynamiskt i frågestatistiken, separat under quiztotalen med egna kolumnmarkeringar.
 
