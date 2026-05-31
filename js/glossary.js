@@ -27,6 +27,10 @@ async function loadTerms() {
 
 /**
  * Renderar termer i #glossaryContent, grupperade alfabetiskt.
+ *
+ * Markupen är identisk med den som scripts/generate_glossary.py förrenderar
+ * statiskt (semantisk <dl>, stabila id:n, lang="en" på engelska termer) så att
+ * djuplänkar är stabila oavsett om sidan renderas av servern eller av JS.
  * @param {Array<{term: string, def: string}>} terms
  * @param {string} query  Sökfras (tom = visa alla)
  */
@@ -59,23 +63,35 @@ function renderTerms(terms, query) {
   Object.keys(groups)
     .sort()
     .forEach(letter => {
-      html += `<div class="glossary-letter">${letter}</div>`
+      const letterId = 'letter-' + slugifyBase(letter)
+      html += `<h3 class="glossary-letter" id="${letterId}">${letter}</h3>`
+      html += '<dl class="glossary-group">'
       groups[letter].forEach(e => {
-        html += `<div class="glossary-entry">
-          <span class="glossary-term">${escapeHtml(e.term)}</span>
-          <span class="glossary-def">${formatDef(e.def)}</span>
-        </div>`
+        html += `<div class="glossary-entry" id="${slugify(e.term)}"><dt class="glossary-term">${escapeHtml(e.term)}</dt><dd class="glossary-def">${formatDef(e.def)}</dd></div>`
       })
+      html += '</dl>'
     })
 
   container.innerHTML = html
 }
 
 /**
- * Renderar ett felmeddelande om datahämtningen misslyckas.
+ * Hanterar misslyckad datahämtning utan att förstöra det statiskt
+ * förrenderade innehållet. Finns redan poster i DOM:en (no-JS-fallbacken)
+ * behålls de och endast sökfältet inaktiveras; annars visas ett felmeddelande.
  */
 function renderError() {
   const container = document.getElementById('glossaryContent')
+  const input = document.getElementById('glossarySearch')
+
+  if (container.querySelector('.glossary-entry')) {
+    if (input) {
+      input.disabled = true
+      input.placeholder = 'Sök är inte tillgänglig offline'
+    }
+    return
+  }
+
   container.innerHTML =
     '<p class="glossary-empty">Kunde inte ladda ordlistan. Försök ladda om sidan.</p>'
 }
@@ -98,6 +114,32 @@ function escapeHtml(str) {
 }
 
 /**
+ * Bygger ett ankarvänligt slug-fragment. Måste ge identiskt resultat som
+ * slugify() i scripts/generate_glossary.py så att djuplänkar är stabila.
+ * @param {string} str
+ * @returns {string}
+ */
+function slugifyBase(str) {
+  return str
+    .toLowerCase()
+    .replace(/[åä]/g, 'a')
+    .replace(/ö/g, 'o')
+    .replace(/é|è/g, 'e')
+    .replace(/ü/g, 'u')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}
+
+/**
+ * Stabilt id för en ordlistepost (term-<slug>).
+ * @param {string} term
+ * @returns {string}
+ */
+function slugify(term) {
+  return 'term-' + slugifyBase(term)
+}
+
+/**
  * Escapar HTML och kursiverar engelska termer (text efter "Eng: " t.o.m. nästa punkt).
  * @param {string} str
  * @returns {string}
@@ -110,7 +152,7 @@ function escapeHtml(str) {
  * @returns {string}
  */
 function formatDef(str) {
-  return escapeHtml(str).replace(/Eng: ((?:[^.(]|\([^)]*\))+)\./g, 'Eng: <em>$1</em>.')
+  return escapeHtml(str).replace(/Eng: ((?:[^.(]|\([^)]*\))+)\./g, 'Eng: <em lang="en">$1</em>.')
 }
 
 /**

@@ -879,7 +879,9 @@ select:focus {
   border-radius: var(--radius-sm);
 }
 
+/* h3-rubrik per bokstav — nollställ rubrikens UA-marginal */
 .glossary-letter {
+  margin: 0;
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
   color: white;
   font-weight: 700;
@@ -889,6 +891,11 @@ select:focus {
   position: sticky;
   top: 0;
   z-index: 1;
+}
+
+/* <dl> per bokstavsgrupp — nollställ listans UA-marginal */
+.glossary-group {
+  margin: 0;
 }
 
 .glossary-entry {
@@ -911,13 +918,17 @@ select:focus {
   background: rgba(16, 185, 129, 0.04);
 }
 
+/* <dt> — nollställ ev. UA-marginal */
 .glossary-term {
+  margin: 0;
   font-weight: 700;
   color: var(--primary-dark);
   word-break: break-word;
 }
 
+/* <dd> — nollställ webbläsarens indrag (margin-inline-start: 40px) */
 .glossary-def {
+  margin: 0;
   color: var(--text-primary);
 }
 
