@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.4.0
+- Medicinsk ordbok: 886 nya poster tillagda från KI:s anatomiska termförteckning; totalt 1081 poster (A–Ö).
+
 ## 0.3.99
 - Infosidan: byter rubrik "Frågestatistik" till "Antal frågor".
 
