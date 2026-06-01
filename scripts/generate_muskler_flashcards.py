@@ -32,7 +32,7 @@ SUB = {
 
 # Allmänna begreppskort (inte knutna till en enskild muskel).
 CONCEPT_CARDS = [
-    ("Extrinsisk muskel", "Muskelbuken sitter utanför handen (i underarmen) och verkar på handen via långa senor."),
+    ("Extrinsisk muskel", "Muskelbuken ligger utanför handen (ursprung proximalt, t.ex. i underarmen eller armen)."),
     ("Intrinsisk muskel", "Ligger helt inne i handen (både ursprung och fäste i handen)."),
 ]
 
@@ -91,29 +91,33 @@ MUSCLES = [
         "funktion": "Primär andningsmuskel",
     },
     # ---- Övre extremitet (extrinsisk/intrinsisk anges) ----
-    # OBS: extrinsisk/intrinsisk gäller endast handens muskler (ursprung i
-    # underarmen resp. helt inne i handen). Supraspinatus, deltoideus, biceps
-    # och triceps brachii verkar på skuldra/armbåge och får därför ingen sådan
-    # märkning, trots att källistan felaktigt angav "EXTRINSICMUSKEL".
+    # Extrinsisk/intrinsisk gäller hela övre extremiteten enligt källistan:
+    # extrinsisk = muskelbuken ligger utanför handen (proximalt), intrinsisk =
+    # helt inne i handen. Supraspinatus, deltoideus, biceps och triceps brachii
+    # är därför extrinsiska, precis som listan anger.
     {
         "namn": "Supraspinatus",
         "uf": "Ursprung: Fossa supraspinata (scapula)\nFäste: Humerus",
         "funktion": "Abducerar och stabiliserar i art. glenohumerale",
+        "kategori": "Extrinsisk muskel",
     },
     {
         "namn": "Deltoideus",
         "uf": "Ursprung: Clavicula, acromion, scapula\nFäste: Humerus",
         "funktion": "Abducerar i art. glenohumerale",
+        "kategori": "Extrinsisk muskel",
     },
     {
         "namn": "Biceps brachii",
         "uf": "Ursprung: Scapula\nFäste: Radius",
         "funktion": "Flekterar i art. cubiti, flekterar i art. glenohumerale",
+        "kategori": "Extrinsisk muskel",
     },
     {
         "namn": "Triceps brachii",
         "uf": "Ursprung: Scapula, humerus\nFäste: Ulna",
         "funktion": "Extenderar i art. cubiti, extenderar i art. glenohumerale",
+        "kategori": "Extrinsisk muskel",
     },
     {
         "namn": "Flexor carpi ulnaris (FCU) & Flexor carpi radialis (FCR)",

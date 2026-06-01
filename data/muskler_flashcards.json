@@ -4,7 +4,7 @@
     "type": "fc",
     "prompt": "Extrinsisk muskel",
     "sub": "(Vad innebär det?)",
-    "correct": "Muskelbuken sitter utanför handen (i underarmen) och verkar på handen via långa senor.",
+    "correct": "Muskelbuken ligger utanför handen (ursprung proximalt, t.ex. i underarmen eller armen).",
     "topic": "muskler_flashcards",
     "difficulty": "Normal",
     "source": "Muskler Flashcards (VT26)"
@@ -232,6 +232,16 @@
   {
     "id": "mfc_24",
     "type": "fc",
+    "prompt": "Supraspinatus",
+    "sub": "(Extrinsisk eller intrinsisk muskel?)",
+    "correct": "Extrinsisk muskel",
+    "topic": "muskler_flashcards",
+    "difficulty": "Normal",
+    "source": "Muskler Flashcards (VT26)"
+  },
+  {
+    "id": "mfc_25",
+    "type": "fc",
     "prompt": "Deltoideus",
     "sub": "(Ursprung och fäste?)",
     "correct": "Ursprung: Clavicula, acromion, scapula\nFäste: Humerus",
@@ -240,7 +250,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_25",
+    "id": "mfc_26",
     "type": "fc",
     "prompt": "Deltoideus",
     "sub": "(Vad är dess funktion?)",
@@ -250,7 +260,17 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_26",
+    "id": "mfc_27",
+    "type": "fc",
+    "prompt": "Deltoideus",
+    "sub": "(Extrinsisk eller intrinsisk muskel?)",
+    "correct": "Extrinsisk muskel",
+    "topic": "muskler_flashcards",
+    "difficulty": "Normal",
+    "source": "Muskler Flashcards (VT26)"
+  },
+  {
+    "id": "mfc_28",
     "type": "fc",
     "prompt": "Biceps brachii",
     "sub": "(Ursprung och fäste?)",
@@ -260,7 +280,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_27",
+    "id": "mfc_29",
     "type": "fc",
     "prompt": "Biceps brachii",
     "sub": "(Vad är dess funktion?)",
@@ -270,7 +290,17 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_28",
+    "id": "mfc_30",
+    "type": "fc",
+    "prompt": "Biceps brachii",
+    "sub": "(Extrinsisk eller intrinsisk muskel?)",
+    "correct": "Extrinsisk muskel",
+    "topic": "muskler_flashcards",
+    "difficulty": "Normal",
+    "source": "Muskler Flashcards (VT26)"
+  },
+  {
+    "id": "mfc_31",
     "type": "fc",
     "prompt": "Triceps brachii",
     "sub": "(Ursprung och fäste?)",
@@ -280,7 +310,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_29",
+    "id": "mfc_32",
     "type": "fc",
     "prompt": "Triceps brachii",
     "sub": "(Vad är dess funktion?)",
@@ -290,39 +320,9 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_30",
-    "type": "fc",
-    "prompt": "Flexor carpi ulnaris (FCU) & Flexor carpi radialis (FCR)",
-    "sub": "(Ursprung och fäste?)",
-    "correct": "Ursprung: Mediala epicondylen på humerus\nFäste: Metacarpalbenen",
-    "topic": "muskler_flashcards",
-    "difficulty": "Normal",
-    "source": "Muskler Flashcards (VT26)"
-  },
-  {
-    "id": "mfc_31",
-    "type": "fc",
-    "prompt": "Flexor carpi ulnaris (FCU) & Flexor carpi radialis (FCR)",
-    "sub": "(Vad är dess funktion?)",
-    "correct": "Flekterar i art. radiocarpea",
-    "topic": "muskler_flashcards",
-    "difficulty": "Normal",
-    "source": "Muskler Flashcards (VT26)"
-  },
-  {
-    "id": "mfc_32",
-    "type": "fc",
-    "prompt": "Flexor carpi ulnaris (FCU) & Flexor carpi radialis (FCR)",
-    "sub": "(Vilken innervation?)",
-    "correct": "FCU: n. ulnaris\nFCR: n. medianus",
-    "topic": "muskler_flashcards",
-    "difficulty": "Normal",
-    "source": "Muskler Flashcards (VT26)"
-  },
-  {
     "id": "mfc_33",
     "type": "fc",
-    "prompt": "Flexor carpi ulnaris (FCU) & Flexor carpi radialis (FCR)",
+    "prompt": "Triceps brachii",
     "sub": "(Extrinsisk eller intrinsisk muskel?)",
     "correct": "Extrinsisk muskel",
     "topic": "muskler_flashcards",
@@ -332,9 +332,9 @@
   {
     "id": "mfc_34",
     "type": "fc",
-    "prompt": "Extensor carpi radialis longus & brevis (ECRL & ECRB)",
+    "prompt": "Flexor carpi ulnaris (FCU) & Flexor carpi radialis (FCR)",
     "sub": "(Ursprung och fäste?)",
-    "correct": "Ursprung: Laterala epicondylen på humerus\nFäste: Metacarpalbenen",
+    "correct": "Ursprung: Mediala epicondylen på humerus\nFäste: Metacarpalbenen",
     "topic": "muskler_flashcards",
     "difficulty": "Normal",
     "source": "Muskler Flashcards (VT26)"
@@ -342,9 +342,9 @@
   {
     "id": "mfc_35",
     "type": "fc",
-    "prompt": "Extensor carpi radialis longus & brevis (ECRL & ECRB)",
+    "prompt": "Flexor carpi ulnaris (FCU) & Flexor carpi radialis (FCR)",
     "sub": "(Vad är dess funktion?)",
-    "correct": "Extenderar i art. radiocarpea",
+    "correct": "Flekterar i art. radiocarpea",
     "topic": "muskler_flashcards",
     "difficulty": "Normal",
     "source": "Muskler Flashcards (VT26)"
@@ -352,9 +352,9 @@
   {
     "id": "mfc_36",
     "type": "fc",
-    "prompt": "Extensor carpi radialis longus & brevis (ECRL & ECRB)",
+    "prompt": "Flexor carpi ulnaris (FCU) & Flexor carpi radialis (FCR)",
     "sub": "(Vilken innervation?)",
-    "correct": "n. radialis",
+    "correct": "FCU: n. ulnaris\nFCR: n. medianus",
     "topic": "muskler_flashcards",
     "difficulty": "Normal",
     "source": "Muskler Flashcards (VT26)"
@@ -362,7 +362,7 @@
   {
     "id": "mfc_37",
     "type": "fc",
-    "prompt": "Extensor carpi radialis longus & brevis (ECRL & ECRB)",
+    "prompt": "Flexor carpi ulnaris (FCU) & Flexor carpi radialis (FCR)",
     "sub": "(Extrinsisk eller intrinsisk muskel?)",
     "correct": "Extrinsisk muskel",
     "topic": "muskler_flashcards",
@@ -372,9 +372,9 @@
   {
     "id": "mfc_38",
     "type": "fc",
-    "prompt": "Extensor digitorum communis (EDC)",
+    "prompt": "Extensor carpi radialis longus & brevis (ECRL & ECRB)",
     "sub": "(Ursprung och fäste?)",
-    "correct": "Ursprung: Laterala epicondylen på humerus\nFäste: De fyra fingrarna",
+    "correct": "Ursprung: Laterala epicondylen på humerus\nFäste: Metacarpalbenen",
     "topic": "muskler_flashcards",
     "difficulty": "Normal",
     "source": "Muskler Flashcards (VT26)"
@@ -382,9 +382,9 @@
   {
     "id": "mfc_39",
     "type": "fc",
-    "prompt": "Extensor digitorum communis (EDC)",
+    "prompt": "Extensor carpi radialis longus & brevis (ECRL & ECRB)",
     "sub": "(Vad är dess funktion?)",
-    "correct": "Extenderar de fyra fingrarna",
+    "correct": "Extenderar i art. radiocarpea",
     "topic": "muskler_flashcards",
     "difficulty": "Normal",
     "source": "Muskler Flashcards (VT26)"
@@ -392,7 +392,7 @@
   {
     "id": "mfc_40",
     "type": "fc",
-    "prompt": "Extensor digitorum communis (EDC)",
+    "prompt": "Extensor carpi radialis longus & brevis (ECRL & ECRB)",
     "sub": "(Vilken innervation?)",
     "correct": "n. radialis",
     "topic": "muskler_flashcards",
@@ -402,7 +402,7 @@
   {
     "id": "mfc_41",
     "type": "fc",
-    "prompt": "Extensor digitorum communis (EDC)",
+    "prompt": "Extensor carpi radialis longus & brevis (ECRL & ECRB)",
     "sub": "(Extrinsisk eller intrinsisk muskel?)",
     "correct": "Extrinsisk muskel",
     "topic": "muskler_flashcards",
@@ -412,9 +412,9 @@
   {
     "id": "mfc_42",
     "type": "fc",
-    "prompt": "Flexor digitorum superficialis (FDS)",
+    "prompt": "Extensor digitorum communis (EDC)",
     "sub": "(Ursprung och fäste?)",
-    "correct": "Ursprung: Mediala epicondylen på humerus, radius och ulna\nFäste: De fyra fingrarna",
+    "correct": "Ursprung: Laterala epicondylen på humerus\nFäste: De fyra fingrarna",
     "topic": "muskler_flashcards",
     "difficulty": "Normal",
     "source": "Muskler Flashcards (VT26)"
@@ -422,9 +422,9 @@
   {
     "id": "mfc_43",
     "type": "fc",
-    "prompt": "Flexor digitorum superficialis (FDS)",
+    "prompt": "Extensor digitorum communis (EDC)",
     "sub": "(Vad är dess funktion?)",
-    "correct": "Flekterar de fyra fingrarna",
+    "correct": "Extenderar de fyra fingrarna",
     "topic": "muskler_flashcards",
     "difficulty": "Normal",
     "source": "Muskler Flashcards (VT26)"
@@ -432,9 +432,9 @@
   {
     "id": "mfc_44",
     "type": "fc",
-    "prompt": "Flexor digitorum superficialis (FDS)",
+    "prompt": "Extensor digitorum communis (EDC)",
     "sub": "(Vilken innervation?)",
-    "correct": "n. medianus",
+    "correct": "n. radialis",
     "topic": "muskler_flashcards",
     "difficulty": "Normal",
     "source": "Muskler Flashcards (VT26)"
@@ -442,7 +442,7 @@
   {
     "id": "mfc_45",
     "type": "fc",
-    "prompt": "Flexor digitorum superficialis (FDS)",
+    "prompt": "Extensor digitorum communis (EDC)",
     "sub": "(Extrinsisk eller intrinsisk muskel?)",
     "correct": "Extrinsisk muskel",
     "topic": "muskler_flashcards",
@@ -452,9 +452,9 @@
   {
     "id": "mfc_46",
     "type": "fc",
-    "prompt": "Flexor digitorum profundus (FDP)",
+    "prompt": "Flexor digitorum superficialis (FDS)",
     "sub": "(Ursprung och fäste?)",
-    "correct": "Ursprung: Ulna\nFäste: De fyra fingrarna",
+    "correct": "Ursprung: Mediala epicondylen på humerus, radius och ulna\nFäste: De fyra fingrarna",
     "topic": "muskler_flashcards",
     "difficulty": "Normal",
     "source": "Muskler Flashcards (VT26)"
@@ -462,7 +462,7 @@
   {
     "id": "mfc_47",
     "type": "fc",
-    "prompt": "Flexor digitorum profundus (FDP)",
+    "prompt": "Flexor digitorum superficialis (FDS)",
     "sub": "(Vad är dess funktion?)",
     "correct": "Flekterar de fyra fingrarna",
     "topic": "muskler_flashcards",
@@ -472,9 +472,9 @@
   {
     "id": "mfc_48",
     "type": "fc",
-    "prompt": "Flexor digitorum profundus (FDP)",
+    "prompt": "Flexor digitorum superficialis (FDS)",
     "sub": "(Vilken innervation?)",
-    "correct": "Dig II-III: n. medianus\nDig IV-V: n. ulnaris",
+    "correct": "n. medianus",
     "topic": "muskler_flashcards",
     "difficulty": "Normal",
     "source": "Muskler Flashcards (VT26)"
@@ -482,7 +482,7 @@
   {
     "id": "mfc_49",
     "type": "fc",
-    "prompt": "Flexor digitorum profundus (FDP)",
+    "prompt": "Flexor digitorum superficialis (FDS)",
     "sub": "(Extrinsisk eller intrinsisk muskel?)",
     "correct": "Extrinsisk muskel",
     "topic": "muskler_flashcards",
@@ -492,9 +492,9 @@
   {
     "id": "mfc_50",
     "type": "fc",
-    "prompt": "Flexor pollicis longus (FPL)",
+    "prompt": "Flexor digitorum profundus (FDP)",
     "sub": "(Ursprung och fäste?)",
-    "correct": "Ursprung: Radius\nFäste: Tummens ytterfalang",
+    "correct": "Ursprung: Ulna\nFäste: De fyra fingrarna",
     "topic": "muskler_flashcards",
     "difficulty": "Normal",
     "source": "Muskler Flashcards (VT26)"
@@ -502,9 +502,9 @@
   {
     "id": "mfc_51",
     "type": "fc",
-    "prompt": "Flexor pollicis longus (FPL)",
+    "prompt": "Flexor digitorum profundus (FDP)",
     "sub": "(Vad är dess funktion?)",
-    "correct": "Flekterar tummen (pollicis)",
+    "correct": "Flekterar de fyra fingrarna",
     "topic": "muskler_flashcards",
     "difficulty": "Normal",
     "source": "Muskler Flashcards (VT26)"
@@ -512,9 +512,9 @@
   {
     "id": "mfc_52",
     "type": "fc",
-    "prompt": "Flexor pollicis longus (FPL)",
+    "prompt": "Flexor digitorum profundus (FDP)",
     "sub": "(Vilken innervation?)",
-    "correct": "n. medianus",
+    "correct": "Dig II-III: n. medianus\nDig IV-V: n. ulnaris",
     "topic": "muskler_flashcards",
     "difficulty": "Normal",
     "source": "Muskler Flashcards (VT26)"
@@ -522,7 +522,7 @@
   {
     "id": "mfc_53",
     "type": "fc",
-    "prompt": "Flexor pollicis longus (FPL)",
+    "prompt": "Flexor digitorum profundus (FDP)",
     "sub": "(Extrinsisk eller intrinsisk muskel?)",
     "correct": "Extrinsisk muskel",
     "topic": "muskler_flashcards",
@@ -532,9 +532,9 @@
   {
     "id": "mfc_54",
     "type": "fc",
-    "prompt": "Extensor pollicis brevis (EPB) & Extensor pollicis longus (EPL)",
+    "prompt": "Flexor pollicis longus (FPL)",
     "sub": "(Ursprung och fäste?)",
-    "correct": "Ursprung: Radius respektive ulna\nFäste: Tummens två falanger (EPL ytterfalangen, EPB grundfalangen)",
+    "correct": "Ursprung: Radius\nFäste: Tummens ytterfalang",
     "topic": "muskler_flashcards",
     "difficulty": "Normal",
     "source": "Muskler Flashcards (VT26)"
@@ -542,9 +542,9 @@
   {
     "id": "mfc_55",
     "type": "fc",
-    "prompt": "Extensor pollicis brevis (EPB) & Extensor pollicis longus (EPL)",
+    "prompt": "Flexor pollicis longus (FPL)",
     "sub": "(Vad är dess funktion?)",
-    "correct": "Extenderar tummen",
+    "correct": "Flekterar tummen (pollicis)",
     "topic": "muskler_flashcards",
     "difficulty": "Normal",
     "source": "Muskler Flashcards (VT26)"
@@ -552,9 +552,9 @@
   {
     "id": "mfc_56",
     "type": "fc",
-    "prompt": "Extensor pollicis brevis (EPB) & Extensor pollicis longus (EPL)",
+    "prompt": "Flexor pollicis longus (FPL)",
     "sub": "(Vilken innervation?)",
-    "correct": "n. radialis",
+    "correct": "n. medianus",
     "topic": "muskler_flashcards",
     "difficulty": "Normal",
     "source": "Muskler Flashcards (VT26)"
@@ -562,7 +562,7 @@
   {
     "id": "mfc_57",
     "type": "fc",
-    "prompt": "Extensor pollicis brevis (EPB) & Extensor pollicis longus (EPL)",
+    "prompt": "Flexor pollicis longus (FPL)",
     "sub": "(Extrinsisk eller intrinsisk muskel?)",
     "correct": "Extrinsisk muskel",
     "topic": "muskler_flashcards",
@@ -572,6 +572,46 @@
   {
     "id": "mfc_58",
     "type": "fc",
+    "prompt": "Extensor pollicis brevis (EPB) & Extensor pollicis longus (EPL)",
+    "sub": "(Ursprung och fäste?)",
+    "correct": "Ursprung: Radius respektive ulna\nFäste: Tummens två falanger (EPL ytterfalangen, EPB grundfalangen)",
+    "topic": "muskler_flashcards",
+    "difficulty": "Normal",
+    "source": "Muskler Flashcards (VT26)"
+  },
+  {
+    "id": "mfc_59",
+    "type": "fc",
+    "prompt": "Extensor pollicis brevis (EPB) & Extensor pollicis longus (EPL)",
+    "sub": "(Vad är dess funktion?)",
+    "correct": "Extenderar tummen",
+    "topic": "muskler_flashcards",
+    "difficulty": "Normal",
+    "source": "Muskler Flashcards (VT26)"
+  },
+  {
+    "id": "mfc_60",
+    "type": "fc",
+    "prompt": "Extensor pollicis brevis (EPB) & Extensor pollicis longus (EPL)",
+    "sub": "(Vilken innervation?)",
+    "correct": "n. radialis",
+    "topic": "muskler_flashcards",
+    "difficulty": "Normal",
+    "source": "Muskler Flashcards (VT26)"
+  },
+  {
+    "id": "mfc_61",
+    "type": "fc",
+    "prompt": "Extensor pollicis brevis (EPB) & Extensor pollicis longus (EPL)",
+    "sub": "(Extrinsisk eller intrinsisk muskel?)",
+    "correct": "Extrinsisk muskel",
+    "topic": "muskler_flashcards",
+    "difficulty": "Normal",
+    "source": "Muskler Flashcards (VT26)"
+  },
+  {
+    "id": "mfc_62",
+    "type": "fc",
     "prompt": "Opponens pollicis (OP)",
     "sub": "(Vad är dess funktion?)",
     "correct": "Opponerar tummen",
@@ -580,7 +620,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_59",
+    "id": "mfc_63",
     "type": "fc",
     "prompt": "Opponens pollicis (OP)",
     "sub": "(Vilken innervation?)",
@@ -590,7 +630,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_60",
+    "id": "mfc_64",
     "type": "fc",
     "prompt": "Opponens pollicis (OP)",
     "sub": "(Extrinsisk eller intrinsisk muskel?)",
@@ -600,7 +640,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_61",
+    "id": "mfc_65",
     "type": "fc",
     "prompt": "Flexor pollicis brevis (FPB)",
     "sub": "(Vad är dess funktion?)",
@@ -610,7 +650,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_62",
+    "id": "mfc_66",
     "type": "fc",
     "prompt": "Flexor pollicis brevis (FPB)",
     "sub": "(Vilken innervation?)",
@@ -620,7 +660,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_63",
+    "id": "mfc_67",
     "type": "fc",
     "prompt": "Flexor pollicis brevis (FPB)",
     "sub": "(Extrinsisk eller intrinsisk muskel?)",
@@ -630,7 +670,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_64",
+    "id": "mfc_68",
     "type": "fc",
     "prompt": "Abductor pollicis longus (APL)",
     "sub": "(Ursprung och fäste?)",
@@ -640,7 +680,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_65",
+    "id": "mfc_69",
     "type": "fc",
     "prompt": "Abductor pollicis longus (APL)",
     "sub": "(Vad är dess funktion?)",
@@ -650,7 +690,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_66",
+    "id": "mfc_70",
     "type": "fc",
     "prompt": "Abductor pollicis longus (APL)",
     "sub": "(Vilken innervation?)",
@@ -660,7 +700,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_67",
+    "id": "mfc_71",
     "type": "fc",
     "prompt": "Abductor pollicis longus (APL)",
     "sub": "(Extrinsisk eller intrinsisk muskel?)",
@@ -670,7 +710,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_68",
+    "id": "mfc_72",
     "type": "fc",
     "prompt": "Abductor pollicis brevis (APB)",
     "sub": "(Vad är dess funktion?)",
@@ -680,7 +720,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_69",
+    "id": "mfc_73",
     "type": "fc",
     "prompt": "Abductor pollicis brevis (APB)",
     "sub": "(Vilken innervation?)",
@@ -690,7 +730,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_70",
+    "id": "mfc_74",
     "type": "fc",
     "prompt": "Abductor pollicis brevis (APB)",
     "sub": "(Extrinsisk eller intrinsisk muskel?)",
@@ -700,7 +740,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_71",
+    "id": "mfc_75",
     "type": "fc",
     "prompt": "Adductor pollicis (ADP)",
     "sub": "(Vad är dess funktion?)",
@@ -710,7 +750,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_72",
+    "id": "mfc_76",
     "type": "fc",
     "prompt": "Adductor pollicis (ADP)",
     "sub": "(Vilken innervation?)",
@@ -720,7 +760,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_73",
+    "id": "mfc_77",
     "type": "fc",
     "prompt": "Adductor pollicis (ADP)",
     "sub": "(Extrinsisk eller intrinsisk muskel?)",
@@ -730,7 +770,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_74",
+    "id": "mfc_78",
     "type": "fc",
     "prompt": "Gluteus maximus",
     "sub": "(Ursprung och fäste?)",
@@ -740,7 +780,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_75",
+    "id": "mfc_79",
     "type": "fc",
     "prompt": "Gluteus maximus",
     "sub": "(Vad är dess funktion?)",
@@ -750,7 +790,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_76",
+    "id": "mfc_80",
     "type": "fc",
     "prompt": "Hamstrings",
     "sub": "(Ursprung och fäste?)",
@@ -760,7 +800,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_77",
+    "id": "mfc_81",
     "type": "fc",
     "prompt": "Hamstrings",
     "sub": "(Vad är dess funktion?)",
@@ -770,7 +810,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_78",
+    "id": "mfc_82",
     "type": "fc",
     "prompt": "Quadriceps",
     "sub": "(Ursprung och fäste?)",
@@ -780,7 +820,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_79",
+    "id": "mfc_83",
     "type": "fc",
     "prompt": "Quadriceps",
     "sub": "(Vad är dess funktion?)",
@@ -790,7 +830,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_80",
+    "id": "mfc_84",
     "type": "fc",
     "prompt": "Triceps surae (Gastrocnemius + Soleus)",
     "sub": "(Ursprung och fäste?)",
@@ -800,7 +840,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_81",
+    "id": "mfc_85",
     "type": "fc",
     "prompt": "Triceps surae (Gastrocnemius + Soleus)",
     "sub": "(Vad är dess funktion?)",
@@ -810,7 +850,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_82",
+    "id": "mfc_86",
     "type": "fc",
     "prompt": "Tibialis anterior",
     "sub": "(Ursprung och fäste?)",
@@ -820,7 +860,7 @@
     "source": "Muskler Flashcards (VT26)"
   },
   {
-    "id": "mfc_83",
+    "id": "mfc_87",
     "type": "fc",
     "prompt": "Tibialis anterior",
     "sub": "(Vad är dess funktion?)",
