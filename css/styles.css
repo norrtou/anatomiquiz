@@ -1201,13 +1201,23 @@ ol li {
   padding: 28px 24px 20px;
   overflow-y: auto;
   border-radius: var(--radius);
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-                      opacity 0s 0.25s;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-              opacity 0s 0.25s;
+  /*
+   * Transform och opacity animeras var för sig. Opacity får en RIKTIG
+   * varaktighet (0.25s) — inte 0s, som iOS/WebKit behandlar som "ingen
+   * övergång" och därför byter direkt vid t=0 (= svaret blinkar fram medan
+   * frågan syns). Sidorna staggas (se transition-delay nedan) så att frågan
+   * tonar ut under första halvan och svaret tonar in under andra halvan;
+   * vid mittpunkten är kortet kant-mot-kant och tomt → ingen dubbeltext.
+   */
+  -webkit-transition-property: -webkit-transform, opacity;
+  transition-property: transform, opacity;
+  -webkit-transition-duration: 0.5s, 0.25s;
+  transition-duration: 0.5s, 0.25s;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), ease;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), ease;
 }
 
-/* Framsida — synlig i vila */
+/* Framsida — synlig i vila, tonar ut under flippens FÖRSTA halva */
 .fc-front {
   background: transparent;
   border: 2px solid rgba(16, 185, 129, 0.2);
@@ -1215,9 +1225,11 @@ ol li {
   -webkit-transform: perspective(800px) rotateY(0deg);
   transform: perspective(800px) rotateY(0deg);
   opacity: 1;
+  -webkit-transition-delay: 0s, 0s;
+  transition-delay: 0s, 0s;
 }
 
-/* Baksida — dold via opacity + roterad bort */
+/* Baksida — dold i vila, tonar in under flippens ANDRA halva */
 .fc-back {
   background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
   border: 2px solid var(--primary);
@@ -1225,6 +1237,8 @@ ol li {
   -webkit-transform: perspective(800px) rotateY(-180deg);
   transform: perspective(800px) rotateY(-180deg);
   opacity: 0;
+  -webkit-transition-delay: 0s, 0.25s;
+  transition-delay: 0s, 0.25s;
 }
 
 /* Flippad — framsidan vrids bort och döljs, baksidan vrids fram */
