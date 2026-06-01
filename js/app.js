@@ -619,7 +619,7 @@ function showFlashcard() {
   // På så vis kan nästa korts svar aldrig blinka till under bytet — tidigare
   // skrevs svaret in på en timer medan opacity-bytet på mobilen glappade.
   cardEl.classList.add('fc-no-anim')
-  cardEl.classList.remove('is-flipped', 'fc-entering')
+  cardEl.classList.remove('is-flipped')
 
   el('fcQuestion').textContent = card.prompt
   const subEl = el('fcQuestionSub')
@@ -638,10 +638,9 @@ function showFlashcard() {
   fitFcText(el('fcQuestion'), 1.1)
   fitFcText(el('fcAnswer'), 1.25)
 
-  // Slå på flip-animationen igen nästa frame + låt kortet tona in mjukt
+  // Slå på flip-animationen igen nästa frame (snäppet till framsidan är klart)
   requestAnimationFrame(() => {
     cardEl.classList.remove('fc-no-anim')
-    cardEl.classList.add('fc-entering')
   })
 
   if (timePer > 0) startFcTimer(timePer)

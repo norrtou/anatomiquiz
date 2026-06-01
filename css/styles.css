@@ -1201,7 +1201,6 @@ ol li {
   padding: 28px 24px 20px;
   overflow-y: auto;
   border-radius: var(--radius);
-  will-change: transform, opacity;
   -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
                       opacity 0s 0.25s;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
@@ -1250,22 +1249,6 @@ ol li {
 .fc-card.fc-no-anim .fc-back {
   -webkit-transition: none !important;
   transition: none !important;
-}
-
-/* Mjuk intoning av nästa kort (ersätter den ryckiga flip-tillbaka-animationen) */
-.fc-card.fc-entering {
-  -webkit-animation: fcCardEnter 0.28s ease both;
-  animation: fcCardEnter 0.28s ease both;
-}
-
-@-webkit-keyframes fcCardEnter {
-  from { opacity: 0; -webkit-transform: translateY(8px); transform: translateY(8px); }
-  to   { opacity: 1; -webkit-transform: none; transform: none; }
-}
-
-@keyframes fcCardEnter {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: none; }
 }
 
 /* Frågetexten på framsidan */
