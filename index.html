@@ -94,8 +94,8 @@
   <link rel="manifest" href="/anatomiquiz/manifest.json">
 
   <!-- Preload kritisk CSS -->
-  <link rel="preload" href="css/styles.css?v=0.4.4" as="style">
-  <link rel="stylesheet" href="css/styles.css?v=0.4.4">
+  <link rel="preload" href="css/styles.css?v=0.4.6" as="style">
+  <link rel="stylesheet" href="css/styles.css?v=0.4.6">
 </head>
 <body>
 
@@ -126,6 +126,7 @@
       <select id="topic">
         <option value="tentaplugg" selected>Tentaplugg</option>
         <option value="studenters_flashcards">Studenters flashcards</option>
+        <option value="muskler_flashcards">Muskler Flashcards</option>
         <option value="medicinsk_terminologi">Medicinsk terminologi</option>
         <option value="handen">Handen</option>
         <option value="osteologi">Ben</option>
@@ -187,6 +188,7 @@
         <div class="fc-card" id="fcCard">
           <div class="fc-front">
             <p id="fcQuestion" class="fc-question"></p>
+            <span id="fcQuestionSub" class="fc-question-sub hidden"></span>
             <span class="fc-hint">Tryck på kortet för att se svaret</span>
           </div>
           <div class="fc-back">

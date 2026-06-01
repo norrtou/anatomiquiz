@@ -8,6 +8,7 @@ function getQuestionsPath(topic) {
   if (topic === 'neurologi') return './data/neurologi.json'
   if (topic === 'blodomloppet') return './data/blodomloppet.json'
   if (topic === 'studenters_flashcards') return './data/studenters_flashcards.json'
+  if (topic === 'muskler_flashcards') return './data/muskler_flashcards.json'
   // 'blandade' uses loadQuestionsFromMultiplePaths() instead
   return './data/riktningar.json'
 }
@@ -522,11 +523,13 @@ function fitFcText(textEl, defaultRem, minRem = 0.6) {
 
   const hint  = container.querySelector('.fc-hint')
   const label = container.querySelector('.fc-label')
+  const sub   = container.querySelector('.fc-question-sub')
   const padStyle = getComputedStyle(container)
   const padV  = parseFloat(padStyle.paddingTop) + parseFloat(padStyle.paddingBottom)
   const hintH = hint  ? hint.offsetHeight  + 8  : 0
   const labelH = label ? label.offsetHeight + 14 : 0
-  const available = container.clientHeight - padV - hintH - labelH - 16
+  const subH  = sub && !sub.classList.contains('hidden') ? sub.offsetHeight + 8 : 0
+  const available = container.clientHeight - padV - hintH - labelH - subH - 16
 
   const minPx = minRem * rootPx
   while (textEl.scrollHeight > available && px > minPx) {
@@ -591,7 +594,7 @@ async function startFlashcards() {
 
   fcCards = shuffle(filtered.slice())
     .slice(0, Math.min(num, filtered.length))
-    .map(q => ({ prompt: q.prompt, correct: q.correct }))
+    .map(q => ({ prompt: q.prompt, sub: q.sub || '', correct: q.correct }))
 
   fcIdx = 0
   el('fcTimer').dataset.timePer = timePer
@@ -615,6 +618,9 @@ function showFlashcard() {
   el('fcAnswer').textContent = ''
   el('fcCard').classList.remove('is-flipped')
   el('fcQuestion').textContent = card.prompt
+  const subEl = el('fcQuestionSub')
+  subEl.textContent = card.sub || ''
+  subEl.classList.toggle('hidden', !card.sub)
   el('fcProgress').textContent = `Kort ${fcIdx + 1} / ${fcCards.length}`
   el('fcFinished').classList.add('hidden')
   el('fcScene').classList.remove('hidden')
