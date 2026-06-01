@@ -611,36 +611,40 @@ function showFlashcard() {
   fcFlipped = false
 
   const card = fcCards[fcIdx]
-  const wasFlipped = el('fcCard').classList.contains('is-flipped')
+  const cardEl = el('fcCard')
   const timePer = parseInt(el('fcTimer').dataset.timePer, 10) || 0
 
-  // Töm svaret INNAN flip-back-animationen startar så det inte skymtas
-  el('fcAnswer').textContent = ''
-  el('fcCard').classList.remove('is-flipped')
+  // Nytt kort: snäpp tillbaka till framsidan UTAN animation och fyll i båda
+  // sidorna medan baksidan är garanterat dold (roterad bort + opacity 0).
+  // På så vis kan nästa korts svar aldrig blinka till under bytet — tidigare
+  // skrevs svaret in på en timer medan opacity-bytet på mobilen glappade.
+  cardEl.classList.add('fc-no-anim')
+  cardEl.classList.remove('is-flipped', 'fc-entering')
+
   el('fcQuestion').textContent = card.prompt
   const subEl = el('fcQuestionSub')
   subEl.textContent = card.sub || ''
   subEl.classList.toggle('hidden', !card.sub)
+  el('fcAnswer').textContent = card.correct
   el('fcProgress').textContent = `Kort ${fcIdx + 1} / ${fcCards.length}`
   el('fcFinished').classList.add('hidden')
   el('fcScene').classList.remove('hidden')
   el('fcNextBtn').classList.remove('hidden')
   el('fcTimer').classList.remove('warning')
   el('fcTimer').textContent = timePer > 0 ? `Tid: ${timePer}s` : ''
+
+  // Tvinga en omflöde så att snäppet appliceras innan animationerna slås på igen
+  void cardEl.offsetWidth
   fitFcText(el('fcQuestion'), 1.1)
+  fitFcText(el('fcAnswer'), 1.25)
 
-  // Fyll i svaret och starta timer först när flip-back-animationen är klar
-  const startCard = () => {
-    el('fcAnswer').textContent = card.correct
-    fitFcText(el('fcAnswer'), 1.25)
-    if (timePer > 0) startFcTimer(timePer)
-  }
+  // Slå på flip-animationen igen nästa frame + låt kortet tona in mjukt
+  requestAnimationFrame(() => {
+    cardEl.classList.remove('fc-no-anim')
+    cardEl.classList.add('fc-entering')
+  })
 
-  if (wasFlipped) {
-    setTimeout(startCard, 1200)
-  } else {
-    startCard()
-  }
+  if (timePer > 0) startFcTimer(timePer)
 }
 
 // autoFlip = true när timern löper ut (triggar automatisk nästa efter 4s)
