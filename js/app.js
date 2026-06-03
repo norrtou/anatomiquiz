@@ -470,18 +470,18 @@ function clearTimer(){ if(timerInterval){clearInterval(timerInterval);timerInter
 function finishQuiz(){
   el('quiz').classList.add('hidden')
   el('result').classList.remove('hidden')
-  el('resultText').textContent = `Du fick ${score} av ${quizQuestions.length} rätt.`
-  el('saveName').value = el('playerName').value || 'Spelare'
+  // Resultatet sparas automatiskt i topplistan när quizet är klart
+  saveScore()
+  el('resultText').textContent = `Du fick ${score} av ${quizQuestions.length} rätt. Resultatet sparades i topplistan.`
   el('resultText').setAttribute('aria-live','polite')
 }
 
 function saveScore(){
-  const name = el('saveName').value || 'Spelare'
+  const name = el('playerName').value.trim() || 'Spelare'
   const scores = getScores()
   scores.push({name,score, total:quizQuestions.length, date: new Date().toISOString()})
   scores.sort((a,b)=> (b.score/b.total) - (a.score/a.total))
   saveScores(scores.slice(0,50))
-  showHighscores()
 }
 
 function showHighscores(){
@@ -826,7 +826,7 @@ function init(){
   el('fcScene').addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); if (!fcFlipped) flipCard(false); else nextFlashcard() } })
   el('cancelBtn').addEventListener('click', cancelQuiz)
   el('nextBtn').addEventListener('click', nextQuestion)
-  el('saveScore').addEventListener('click', saveScore)
+  el('finishBtn').addEventListener('click', ()=>{el('result').classList.add('hidden');el('setup').classList.remove('hidden')})
   el('restart').addEventListener('click', ()=>{el('result').classList.add('hidden');el('setup').classList.remove('hidden')})
   el('viewScores').addEventListener('click', showHighscores)
   el('saveManage').addEventListener('click', ()=>{ alert('Ändringar sparade (sparas automatiskt).'); renderManage() })
