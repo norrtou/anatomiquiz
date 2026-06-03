@@ -138,7 +138,20 @@ function saveFlags(flags){
   localStorage.setItem(NEW_FLAGS_KEY, JSON.stringify(flags))
 }
 
+// Fallback i minnet om localStorage inte går att skriva till
+// (t.ex. privat läge i Safari/Chrome på iPhone, där setItem kastar fel).
+// Då sparas topplistan för den pågående sessionen istället för att tyst försvinna.
+let memoryScores = null
+let storageWarned = false
+
+function warnStorageUnavailable(){
+  if(storageWarned) return
+  storageWarned = true
+  alert('Obs: din webbläsare tillåter inte att resultat sparas permanent (vanligt i privat läge på iPhone). Topplistan visas så länge sidan är öppen, men försvinner när du laddar om.')
+}
+
 function getScores(){
+  if(memoryScores) return memoryScores
   try{
     let raw = localStorage.getItem(NEW_SCORES_KEY)
     const oldRaw = localStorage.getItem(OLD_SCORES_KEY)
@@ -150,11 +163,18 @@ function getScores(){
       localStorage.removeItem(OLD_SCORES_KEY)
     }
     return JSON.parse(raw || '[]')
-  }catch(e){ return [] }
+  }catch(e){ return memoryScores || [] }
 }
 
 function saveScores(scores){
-  localStorage.setItem(NEW_SCORES_KEY, JSON.stringify(scores))
+  try{
+    localStorage.setItem(NEW_SCORES_KEY, JSON.stringify(scores))
+    memoryScores = null
+  }catch(e){
+    // localStorage otillgängligt (privat läge/kvot) — behåll i minnet för sessionen
+    memoryScores = scores
+    warnStorageUnavailable()
+  }
 }
 
 function isExcluded(q){
