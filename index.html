@@ -94,8 +94,8 @@
   <link rel="manifest" href="/anatomiquiz/manifest.json">
 
   <!-- Preload kritisk CSS -->
-  <link rel="preload" href="css/styles.css?v=0.4.9" as="style">
-  <link rel="stylesheet" href="css/styles.css?v=0.4.9">
+  <link rel="preload" href="css/styles.css?v=0.4.12" as="style">
+  <link rel="stylesheet" href="css/styles.css?v=0.4.12">
 </head>
 <body>
 
@@ -157,6 +157,11 @@
 
       <label for="playerName">Mitt namn</label>
       <input id="playerName" placeholder="Mitt namn" aria-label="Mitt namn" autocomplete="nickname" />
+
+      <label class="checkbox-row" for="practiceWrong">
+        <input type="checkbox" id="practiceWrong" />
+        <span>Öva extra på de jag svarar fel på <small>(gäller quiz)</small></span>
+      </label>
 
       <div class="setup-actions">
         <div class="primary-actions">
@@ -302,6 +307,6 @@
   </main>
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
-  <script src="js/app.js?v=0.4.11" defer></script>
+  <script src="js/app.js?v=0.4.12" defer></script>
 </body>
 </html>

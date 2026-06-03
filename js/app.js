@@ -50,6 +50,9 @@ const OLD_FLAGS_KEY = 'wiil_question_flags'
 const NEW_FLAGS_KEY = 'hur_question_flags'
 const OLD_SCORES_KEY = 'wiil_highscores'
 const NEW_SCORES_KEY = 'hur_highscores'
+// IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
+// Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
+const WRONG_KEY = 'hur_wrong_questions'
 
 const el = id => document.getElementById(id)
 
@@ -177,6 +180,32 @@ function saveScores(scores){
   }
 }
 
+// "Öva extra på de jag svarar fel på": frågor man svarar fel på vägs upp i
+// quizurvalet (~50% oftare). Dynamiskt — så fort man svarar rätt på en fråga
+// tas den bort ur listan och behandlas som vilken annan fråga som helst.
+let wrongQuestions = null
+
+function loadWrong(){
+  if(wrongQuestions) return wrongQuestions
+  try{ wrongQuestions = new Set(JSON.parse(localStorage.getItem(WRONG_KEY) || '[]')) }
+  catch(e){ wrongQuestions = new Set() }
+  return wrongQuestions
+}
+
+function saveWrong(){
+  try{ localStorage.setItem(WRONG_KEY, JSON.stringify([...loadWrong()])) }catch(e){}
+}
+
+function markWrong(id){
+  const s = loadWrong()
+  if(!s.has(id)){ s.add(id); saveWrong() }
+}
+
+function markCorrect(id){
+  const s = loadWrong()
+  if(s.has(id)){ s.delete(id); saveWrong() }
+}
+
 function isExcluded(q){
   const flags = loadFlags()
   return !!(flags[q.id] && flags[q.id].excluded)
@@ -217,12 +246,24 @@ function sampleWithoutReplacement(arr, n){
   return copy.slice(0, Math.min(n, copy.length))
 }
 
+// Viktad sampling utan återläggning (Efraimidis–Spirakis): högre vikt → större
+// chans att komma med. Vikt 1.5 ger frågan ~50% större sannolikhet än en vanlig.
+function weightedSampleWithoutReplacement(arr, n, weightOf){
+  if(n<=0) return []
+  return arr
+    .map(item => ({ item, key: Math.pow(getSecureRandom(), 1 / Math.max(weightOf(item), 1e-9)) }))
+    .sort((a,b)=> b.key - a.key)
+    .slice(0, Math.min(n, arr.length))
+    .map(x => x.item)
+}
+
 async function startQuiz(){
   const name = el('playerName').value.trim() || 'Spelare'
   const num = parseInt(el('numQuestions').value,10)
   const timePer = parseInt(el('timePerQuestion').value,10) || 0
   const topic = el('topic').value
   const difficulty = el('difficulty').value
+  const practiceWrong = !!el('practiceWrong')?.checked
 
   // Load questions based on topic
   if(topic === 'blandade'){
@@ -307,15 +348,22 @@ async function startQuiz(){
   const tfCount = Math.min(tfPool.length, maxTf)
   let mcCount = num - tfCount
 
-  // Sample without replacement from shuffled pools
-  let tfSelected = sampleWithoutReplacement(tfPool, tfCount)
-  let mcSelected = sampleWithoutReplacement(mcPool, mcCount)
+  // Om "öva extra"-läget är på: vikta upp frågor man senast svarat fel på.
+  // Annars likformig slump som tidigare.
+  const wrongIds = practiceWrong ? loadWrong() : null
+  const pick = (pool, count) => practiceWrong
+    ? weightedSampleWithoutReplacement(pool, count, q => wrongIds.has(q.id) ? 1.5 : 1)
+    : sampleWithoutReplacement(pool, count)
+
+  // Sample from shuffled pools
+  let tfSelected = pick(tfPool, tfCount)
+  let mcSelected = pick(mcPool, mcCount)
 
   // If not enough MC, try to fill from remaining shuffledFiltered (preserving randomness)
   if(mcSelected.length < mcCount){
     const pickedIds = new Set([...tfSelected, ...mcSelected].map(q=>q.id))
     const remainingPreferred = shuffledFiltered.filter(q=> !pickedIds.has(q.id) && q.type==='mc')
-    const add = sampleWithoutReplacement(remainingPreferred, mcCount - mcSelected.length)
+    const add = pick(remainingPreferred, mcCount - mcSelected.length)
     mcSelected = mcSelected.concat(add)
   }
 
@@ -325,7 +373,7 @@ async function startQuiz(){
   if(combined.length < totalNeeded){
     const pickedIds = new Set(combined.map(q=>q.id))
     const remaining = shuffledFiltered.filter(q=> !pickedIds.has(q.id))
-    const add = sampleWithoutReplacement(remaining, totalNeeded - combined.length)
+    const add = pick(remaining, totalNeeded - combined.length)
     combined = combined.concat(add)
   }
 
@@ -369,9 +417,14 @@ function showQuestion(){
 
 function selectAnswer(btn, selected, correct){
   Array.from(el('answers').children).forEach(b=>{b.disabled=true; b.setAttribute('aria-disabled','true')})
+  const q = quizQuestions[currentIdx]
   if(selected===correct){
     btn.classList.add('correct'); btn.setAttribute('aria-pressed','true'); score++
+    // Rätt svar: frågan behöver inte längre extra övning
+    if(q) markCorrect(q.id)
   } else { btn.classList.add('wrong');
+    // Fel svar: vägs upp i framtida quiz om "öva extra"-läget är på
+    if(q) markWrong(q.id)
     // mark correct
     Array.from(el('answers').children).find(b=>b.textContent===correct)?.classList.add('correct')
   }
@@ -403,8 +456,10 @@ function startTimer(sec){
       clearTimer();
       // auto mark wrong and show correct
       Array.from(el('answers').children).forEach(b=>b.disabled=true)
-      const correct = quizQuestions[currentIdx].correct
-      Array.from(el('answers').children).find(b=>b.textContent===correct)?.classList.add('correct')
+      const cq = quizQuestions[currentIdx]
+      // Tiden ut räknas som fel — vägs upp i framtida quiz om "öva extra" är på
+      if(cq) markWrong(cq.id)
+      Array.from(el('answers').children).find(b=>b.textContent===cq.correct)?.classList.add('correct')
       el('nextBtn').disabled = false
     }
   },1000)
