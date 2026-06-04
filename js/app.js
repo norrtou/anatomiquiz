@@ -898,7 +898,7 @@ function cancelQuiz(){
 
 async function loadVersion() {
   try {
-    const res = await fetch('./VERSION')
+    const res = await fetch('./VERSION?t=' + Date.now(), { cache: 'no-store' })
     if (!res.ok) return
     const text = (await res.text()).trim()
     const el_ = document.getElementById('appVersion')
