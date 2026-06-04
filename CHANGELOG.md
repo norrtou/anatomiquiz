@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.4.30
+- Tog bort fältet "Tid i sekunder per fråga" och inställningen att ange tidsgräns. Timern räknar nu i stället upp tiden fram till klicket (ingen tidsgräns, ingen auto-markering som fel, ingen automatisk kortvändning).
+- Quiz: tiden fram till klicket visas på den svarsknapp man tryckte på (rätt eller fel).
+- Flashcards: tiden fram till att man vänder kortet visas på svarssidan (baksidan).
+- "Timer på/av"-checkboxen styr om tiden mäts och visas. Den totala speltiden sparas i statistiken som tidigare.
+- Cachebustern för `styles.css` och `app.js` bumpad till 0.4.30.
+
 ## 0.4.29
 - Tog bort den missvisande parentestexten bakom "Timer på/av"-checkboxen.
 - Cachebustern för `styles.css` och `app.js` bumpad till 0.4.29.

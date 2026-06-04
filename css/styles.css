@@ -651,6 +651,22 @@ select:focus {
   text-align: center;
 }
 
+/* Tiden fram till klick, visad på den tryckta svarsknappen */
+.answer-time {
+  margin-left: 8px;
+  font-size: 0.85em;
+  font-weight: 700;
+  opacity: 0.75;
+}
+
+/* Tiden fram till klick, visad på flashcardens svarssida */
+.fc-answer-time {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
 /* Timer warning state - red when running out */
 .timer.warning {
   color: white;

@@ -65,7 +65,8 @@ let quizQuestions = []
 let currentIdx = 0
 let score = 0
 let timerInterval = null
-let timeLeft = 0
+let questionStartTime = 0
+let quizTimerOn = false
 let quizStartTime = 0
 
 async function loadQuestions(path){
@@ -265,7 +266,7 @@ function weightedSampleWithoutReplacement(arr, n, weightOf){
 async function startQuiz(){
   const name = el('playerName').value.trim() || 'Spelare'
   const num = parseInt(el('numQuestions').value,10)
-  const timePer = el('timerEnabled')?.checked ? (parseInt(el('timePerQuestion').value,10) || 0) : 0
+  quizTimerOn = !!el('timerEnabled')?.checked
   const topic = el('topic').value
   const difficulty = el('difficulty').value
   const practiceWrong = !!el('practiceWrong')?.checked
@@ -392,8 +393,7 @@ async function startQuiz(){
   el('result').classList.add('hidden')
   el('quiz').classList.remove('hidden')
   el('nextBtn').disabled = true
-  el('timer').textContent = timePer>0 ? `Tid: ${timePer}s` : ''
-  el('timer').dataset.timePer = timePer
+  el('timer').textContent = ''
   showQuestion()
 }
 
@@ -416,8 +416,8 @@ function showQuestion(){
   el('progress').textContent = `Fråga ${currentIdx+1}/${quizQuestions.length} — Poäng: ${score}`
   // announce for screen readers
   el('progress').setAttribute('aria-live','polite')
-  const t = parseInt(el('timer').dataset.timePer,10) || 0
-  if(t>0) startTimer(t)
+  questionStartTime = Date.now()
+  if(quizTimerOn) startCountUp(); else el('timer').textContent = ''
   // focus first answer for keyboard users
   setTimeout(()=>{ const first = el('answers').querySelector('button'); if(first) first.focus() }, 50)
 }
@@ -438,6 +438,14 @@ function selectAnswer(btn, selected, correct){
   el('nextBtn').disabled = false
   el('nextBtn').setAttribute('aria-disabled','false')
   clearTimer()
+  if(quizTimerOn){
+    const secs = (Date.now()-questionStartTime)/1000
+    const t = document.createElement('span')
+    t.className = 'answer-time'
+    t.textContent = fmtSec(secs)
+    btn.appendChild(t)
+    el('timer').textContent = 'Tid: ' + fmtSec(secs)
+  }
 }
 
 function nextQuestion(){
@@ -447,29 +455,17 @@ function nextQuestion(){
   showQuestion()
 }
 
-function startTimer(sec){
-  timeLeft = sec
-  el('timer').textContent = `Tid: ${timeLeft}s`
+// Formatera sekunder med en decimal och svenskt kommatecken, t.ex. "8,4 s".
+function fmtSec(s){ return s.toFixed(1).replace('.', ',') + ' s' }
+
+// Räknar UPP tiden från att frågan visades (ingen tidsgräns, ingen auto-fail).
+function startCountUp(){
+  el('timer').classList.remove('warning')
+  el('timer').textContent = 'Tid: 0 s'
   timerInterval = setInterval(()=>{
-    timeLeft--
-    el('timer').textContent = `Tid: ${timeLeft}s`
-    // Blink rött när under 4 sekunder
-    if(timeLeft < 4){
-      el('timer').classList.add('warning')
-    } else {
-      el('timer').classList.remove('warning')
-    }
-    if(timeLeft<=0){
-      clearTimer();
-      // auto mark wrong and show correct
-      Array.from(el('answers').children).forEach(b=>b.disabled=true)
-      const cq = quizQuestions[currentIdx]
-      // Tiden ut räknas som fel — vägs upp i framtida quiz om "öva extra" är på
-      if(cq) markWrong(cq.id)
-      Array.from(el('answers').children).find(b=>b.textContent===cq.correct)?.classList.add('correct')
-      el('nextBtn').disabled = false
-    }
-  },1000)
+    const s = Math.floor((Date.now()-questionStartTime)/1000)
+    el('timer').textContent = `Tid: ${s} s`
+  },500)
 }
 
 function clearTimer(){ if(timerInterval){clearInterval(timerInterval);timerInterval=null} }
@@ -715,14 +711,15 @@ let fcCards = []         // [{prompt, correct}]
 let fcIdx = 0
 let fcFlipped = false
 let fcTimerInterval = null
-let fcAutoNext = null
+let fcStartTime = 0
+let fcTimerOn = false
 
 async function startFlashcards() {
   const name    = el('playerName').value.trim() || 'Spelare'
   const num     = parseInt(el('numQuestions').value, 10)
   const topic   = el('topic').value
   const diff    = el('difficulty').value
-  const timePer = el('timerEnabled')?.checked ? (parseInt(el('timePerQuestion').value, 10) || 0) : 0
+  fcTimerOn = !!el('timerEnabled')?.checked
 
   if (topic === 'blandade') {
     const paths = [...new Set(
@@ -770,7 +767,6 @@ async function startFlashcards() {
     .map(q => ({ prompt: q.prompt, sub: q.sub || '', correct: q.correct }))
 
   fcIdx = 0
-  el('fcTimer').dataset.timePer = timePer
   el('fcPlayerLabel').textContent = name
   el('setup').classList.add('hidden')
   el('flashcards').classList.remove('hidden')
@@ -785,7 +781,6 @@ function showFlashcard() {
 
   const card = fcCards[fcIdx]
   const cardEl = el('fcCard')
-  const timePer = parseInt(el('fcTimer').dataset.timePer, 10) || 0
 
   // Nytt kort: snäpp tillbaka till framsidan UTAN animation och fyll i båda
   // sidorna medan baksidan är garanterat dold (roterad bort + opacity 0).
@@ -804,7 +799,8 @@ function showFlashcard() {
   el('fcScene').classList.remove('hidden')
   el('fcNextBtn').classList.remove('hidden')
   el('fcTimer').classList.remove('warning')
-  el('fcTimer').textContent = timePer > 0 ? `Tid: ${timePer}s` : ''
+  el('fcTimer').textContent = ''
+  el('fcAnswerTime').textContent = ''
 
   // Tvinga en omflöde så att snäppet appliceras innan animationerna slås på igen
   void cardEl.offsetWidth
@@ -816,42 +812,31 @@ function showFlashcard() {
     cardEl.classList.remove('fc-no-anim')
   })
 
-  if (timePer > 0) startFcTimer(timePer)
+  fcStartTime = Date.now()
+  if (fcTimerOn) startFcCountUp()
 }
 
-// autoFlip = true när timern löper ut (triggar automatisk nästa efter 4s)
-function flipCard(autoFlip = false) {
+function flipCard() {
   if (fcFlipped) return
   fcFlipped = true
   clearFcTimer()
   el('fcCard').classList.add('is-flipped')
-
-  if (autoFlip) startFcAutoNext()
+  // Tiden fram till klicket visas på svarssidan (kortets baksida).
+  if (fcTimerOn) {
+    const secs = (Date.now() - fcStartTime) / 1000
+    el('fcAnswerTime').textContent = 'Tid: ' + fmtSec(secs)
+    el('fcTimer').textContent = 'Tid: ' + fmtSec(secs)
+  }
 }
 
-function startFcTimer(sec) {
-  let left = sec
-  el('fcTimer').textContent = `Tid: ${left}s`
+// Räknar UPP tiden tills man vänder kortet (ingen automatisk vändning).
+function startFcCountUp() {
+  el('fcTimer').classList.remove('warning')
+  el('fcTimer').textContent = 'Tid: 0 s'
   fcTimerInterval = setInterval(() => {
-    left--
-    el('fcTimer').textContent = `Tid: ${left}s`
-    if (left < 4) el('fcTimer').classList.add('warning')
-    if (left <= 0) { clearFcTimer(); flipCard(true) }
-  }, 1000)
-}
-
-function startFcAutoNext() {
-  let countdown = 4
-  el('fcTimer').textContent = `Nästa: ${countdown}s`
-  fcAutoNext = setInterval(() => {
-    countdown--
-    if (countdown > 0) {
-      el('fcTimer').textContent = `Nästa: ${countdown}s`
-    } else {
-      clearFcTimers()
-      nextFlashcard()
-    }
-  }, 1000)
+    const s = Math.floor((Date.now() - fcStartTime) / 1000)
+    el('fcTimer').textContent = `Tid: ${s} s`
+  }, 500)
 }
 
 function clearFcTimer() {
@@ -860,7 +845,6 @@ function clearFcTimer() {
 
 function clearFcTimers() {
   clearFcTimer()
-  if (fcAutoNext) { clearInterval(fcAutoNext); fcAutoNext = null }
 }
 
 function nextFlashcard() {

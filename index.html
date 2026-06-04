@@ -94,8 +94,8 @@
   <link rel="manifest" href="/anatomiquiz/manifest.json">
 
   <!-- Preload kritisk CSS -->
-  <link rel="preload" href="css/styles.css?v=0.4.29" as="style">
-  <link rel="stylesheet" href="css/styles.css?v=0.4.29">
+  <link rel="preload" href="css/styles.css?v=0.4.30" as="style">
+  <link rel="stylesheet" href="css/styles.css?v=0.4.30">
 </head>
 <body>
 
@@ -159,9 +159,6 @@
         <option value="Hard">Svår</option>
       </select>
 
-      <label for="timePerQuestion">Tid i sekunder per fråga (0 = ingen tidspress)</label>
-      <input id="timePerQuestion" type="number" min="0" value="0" aria-label="Tid per fråga i sekunder" />
-
       <label for="playerName">Mitt namn</label>
       <input id="playerName" placeholder="Mitt namn" aria-label="Mitt namn" autocomplete="nickname" />
 
@@ -212,6 +209,7 @@
           <div class="fc-back">
             <span class="fc-label">Svar</span>
             <p id="fcAnswer" class="fc-answer"></p>
+            <span id="fcAnswerTime" class="fc-answer-time"></span>
             <span class="fc-hint">Tryck för nästa kort</span>
           </div>
         </div>
@@ -324,6 +322,6 @@
   </main>
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
-  <script src="js/app.js?v=0.4.29" defer></script>
+  <script src="js/app.js?v=0.4.30" defer></script>
 </body>
 </html>
