@@ -556,11 +556,23 @@ function renderScoreList(){
     ol.appendChild(li)
     return
   }
-  list.forEach(s=>{
+  const mk = (cls, text) => { const sp = document.createElement('span'); sp.className = cls; sp.textContent = text; return sp }
+  list.forEach((s, i)=>{
     const li = document.createElement('li')
+    li.className = 'score-row'
     const pct = Math.round((s.score/s.total)*100)
-    const label = s.topicLabel || 'Okänt ämne'
-    li.textContent = `${s.name} — ${label} — ${s.score}/${s.total} (${pct}%) — ${new Date(s.date).toLocaleString()}`
+    // Endast i highscore: korta bort förkortningsparentesen, t.ex. "Handen (MC+TF)" → "Handen".
+    const label = (s.topicLabel || 'Okänt ämne').replace(/\s*\([^)]*\)\s*$/, '')
+    const d = new Date(s.date)
+    const dateStr = d.toLocaleDateString('sv-SE') + ' ' + d.toLocaleTimeString('sv-SE', { hour: '2-digit', minute: '2-digit' })
+    li.append(
+      mk('sr-rank', (i+1) + '.'),
+      mk('sr-name', s.name),
+      mk('sr-topic', label),
+      mk('sr-score', `${s.score}/${s.total}`),
+      mk('sr-pct', `${pct}%`),
+      mk('sr-date', dateStr)
+    )
     ol.appendChild(li)
   })
 }
