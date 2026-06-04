@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.4.17
+- Nytt ämne "Moho Flashcards" (endast flashcards) med 52 MOHO-begrepp. Framsidan visar svensk term med engelsk term under, baksidan visar förklaring och exempel.
+- Ny datafil `data/moho_flashcards.json`; ämnet registrerat i `index.html` och `app.js`.
+- `app.js`-cachebustern bumpad till 0.4.17.
+
 ## 0.4.16
 - Tydligare bekräftelse när man rensar topplistan: "Rensa topplista?" ersatt med "Är du säker? Hela topplistan och statistiken raderas permanent och kan inte återställas." så att man inte råkar radera av misstag.
 - `app.js`-cachebustern bumpad till 0.4.16.

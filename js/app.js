@@ -9,6 +9,7 @@ function getQuestionsPath(topic) {
   if (topic === 'blodomloppet') return './data/blodomloppet.json'
   if (topic === 'studenters_flashcards') return './data/studenters_flashcards.json'
   if (topic === 'muskler_flashcards') return './data/muskler_flashcards.json'
+  if (topic === 'moho_flashcards') return './data/moho_flashcards.json'
   // 'blandade' uses loadQuestionsFromMultiplePaths() instead
   return './data/riktningar.json'
 }
