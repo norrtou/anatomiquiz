@@ -274,7 +274,7 @@ async function startQuiz(){
   if(topic === 'blandade'){
     const paths = [...new Set(
       Array.from(el('topic').options)
-        .filter(o => !o.disabled && o.value !== 'blandade')
+        .filter(o => !o.disabled && !['blandade', 'moho_flashcards', 'otipm_flashcards'].includes(o.value))
         .map(o => getQuestionsPath(o.value))
     )]
     await loadQuestionsFromMultiplePaths(paths)
@@ -727,7 +727,7 @@ async function startFlashcards() {
   if (topic === 'blandade') {
     const paths = [...new Set(
       Array.from(el('topic').options)
-        .filter(o => !o.disabled && o.value !== 'blandade')
+        .filter(o => !o.disabled && !['blandade', 'moho_flashcards', 'otipm_flashcards'].includes(o.value))
         .map(o => getQuestionsPath(o.value))
     )]
     await loadQuestionsFromMultiplePaths(paths)

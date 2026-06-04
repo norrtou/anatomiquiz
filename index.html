@@ -124,22 +124,23 @@
 
       <label for="topic">Ämne</label>
       <select id="topic">
-        <option value="tentaplugg" selected>Tentaplugg</option>
-        <option value="studenters_flashcards">Studenters flashcards</option>
-        <option value="muskler_flashcards">Muskler Flashcards</option>
-        <option value="medicinsk_terminologi">Medicinsk terminologi</option>
-        <option value="handen">Handen</option>
-        <option value="osteologi">Ben</option>
-        <option value="muskler">Muskler</option>
-        <option value="any_riktningar">Lägen &amp; riktningar</option>
-        <option value="neurologi">Neurologi (t/f-frågor)</option>
-        <option value="blodomloppet">Blodomloppet (t/f-frågor)</option>
-        <option value="ergonomi">Ergonomi</option>
-        <option value="olika_aldrar">Olika åldrar</option>
-        <option value="moho_flashcards">Moho Flashcards</option>
-        <option value="otipm_flashcards">OTIPM Flashcards</option>
-        <option value="blandade">Slumpade frågor</option>
+        <option value="tentaplugg" selected>Tentaplugg (MC+FC)</option>
+        <option value="studenters_flashcards">ATP-studenters flashcards (FC)</option>
+        <option value="osteologi">Ben (MC+TF)</option>
+        <option value="blodomloppet">Blodomloppet (TF)</option>
+        <option value="ergonomi">Ergonomi (MC+FC)</option>
+        <option value="handen">Handen (MC+TF)</option>
+        <option value="any_riktningar">Lägen &amp; riktningar (MC+TF)</option>
+        <option value="medicinsk_terminologi">Medicinsk terminologi (MC+FC)</option>
+        <option value="moho_flashcards">Moho (FC)</option>
+        <option value="muskler_flashcards">Muskler (FC)</option>
+        <option value="muskler">Muskler (MC+TF)</option>
+        <option value="neurologi">Neurologi (TF)</option>
+        <option value="olika_aldrar">Olika åldrar (MC+FC)</option>
+        <option value="otipm_flashcards">OTIPM (FC)</option>
+        <option value="blandade">Slumpade frågor (MC+FC+TF)</option>
       </select>
+      <p id="topicLegend" style="font-size:0.75em;font-style:italic;margin:0.25em 0 0;white-space:nowrap;overflow-x:auto;">MC = Multiple Choice-frågor för quiz, FC = Flashcards, TF = Sant eller falskt-frågor för quiz</p>
 
       <label for="numQuestions">Antal frågor</label>
       <select id="numQuestions">
@@ -315,6 +316,6 @@
   </main>
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
-  <script src="js/app.js?v=0.4.20" defer></script>
+  <script src="js/app.js?v=0.4.21" defer></script>
 </body>
 </html>
