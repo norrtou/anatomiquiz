@@ -94,8 +94,8 @@
   <link rel="manifest" href="/anatomiquiz/manifest.json">
 
   <!-- Preload kritisk CSS -->
-  <link rel="preload" href="css/styles.css?v=0.4.27" as="style">
-  <link rel="stylesheet" href="css/styles.css?v=0.4.27">
+  <link rel="preload" href="css/styles.css?v=0.4.28" as="style">
+  <link rel="stylesheet" href="css/styles.css?v=0.4.28">
 </head>
 <body>
 
@@ -159,8 +159,8 @@
         <option value="Hard">Svår</option>
       </select>
 
-      <label for="timePerQuestion">Sekunder per fråga (används om tidsgräns är på)</label>
-      <input id="timePerQuestion" type="number" min="1" value="20" aria-label="Sekunder per fråga" />
+      <label for="timePerQuestion">Tid i sekunder per fråga (0 = ingen tidspress)</label>
+      <input id="timePerQuestion" type="number" min="0" value="0" aria-label="Tid per fråga i sekunder" />
 
       <label for="playerName">Mitt namn</label>
       <input id="playerName" placeholder="Mitt namn" aria-label="Mitt namn" autocomplete="nickname" />
@@ -171,8 +171,8 @@
           <span>Öva extra på de jag svarar fel på <small>(gäller quiz)</small></span>
         </label>
         <label class="checkbox-row" for="timerEnabled">
-          <input type="checkbox" id="timerEnabled" />
-          <span>Tidsgräns per fråga <small>(använder sekunderna ovan)</small></span>
+          <input type="checkbox" id="timerEnabled" checked />
+          <span>Timer på/av <small>(av = ingen tidsgräns)</small></span>
         </label>
       </div>
 
@@ -324,6 +324,6 @@
   </main>
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
-  <script src="js/app.js?v=0.4.27" defer></script>
+  <script src="js/app.js?v=0.4.28" defer></script>
 </body>
 </html>
