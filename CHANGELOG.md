@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.4.31
+- Bytte checkboxtexten "Timer på/av" till "Visa tid".
+- Cachebustern för `styles.css` och `app.js` bumpad till 0.4.31.
+
 ## 0.4.30
 - Tog bort fältet "Tid i sekunder per fråga" och inställningen att ange tidsgräns. Timern räknar nu i stället upp tiden fram till klicket (ingen tidsgräns, ingen auto-markering som fel, ingen automatisk kortvändning).
 - Quiz: tiden fram till klicket visas på den svarsknapp man tryckte på (rätt eller fel).
