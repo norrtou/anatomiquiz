@@ -550,25 +550,6 @@ function renderScoreList(){
   if(list.length === 0 && scores.length > 0) list = scores
   const ol = el('scoreList'); ol.innerHTML=''
 
-  // TILLFÄLLIG DIAGNOSTIK (alltid synlig tills vi hittat orsaken till att highscoren
-  // växlar mellan full och tom). Visar om datan finns i lagringen och i vilken kontext.
-  try{
-    const sc = localStorage.getItem(NEW_SCORES_KEY)
-    const standalone = (typeof navigator !== 'undefined' && navigator.standalone === true) ||
-      (typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(display-mode: standalone)').matches)
-    const dbg = document.createElement('li')
-    dbg.style.cssText = 'font-size:0.7rem;opacity:0.85;white-space:normal;word-break:break-word;list-style:none;margin-bottom:8px'
-    dbg.textContent = 'DIAG: hur_highscores=' + (sc ? sc.length + ' tecken' : 'SAKNAS') +
-      ' | getScores=' + scores.length + ' st' +
-      ' | hemskärmsläge=' + (standalone ? 'JA' : 'nej') +
-      ' | nycklar=[' + Object.keys(localStorage).join(', ') + ']'
-    ol.appendChild(dbg)
-  }catch(e){
-    const dbg = document.createElement('li')
-    dbg.textContent = 'DIAG: localStorage-fel: ' + e.message
-    ol.appendChild(dbg)
-  }
-
   if(list.length === 0){
     const li = document.createElement('li')
     li.textContent = 'Inga resultat än.'
