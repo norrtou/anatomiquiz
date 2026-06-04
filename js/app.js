@@ -540,11 +540,14 @@ function buildScoreFilter(){
 
 function renderScoreList(){
   const sel = el('scoreFilter')
-  const filterVal = sel ? sel.value : 'all'
+  // Tomt/ogiltigt filtervärde behandlas som "alla" så att data aldrig döljs av misstag.
+  const filterVal = (sel && sel.value) ? sel.value : 'all'
   const scores = getScores()
-  const list = filterVal === 'all'
+  let list = filterVal === 'all'
     ? scores
     : scores.filter(s => s.total === parseInt(filterVal,10))
+  // Säkerhetsnät: finns det resultat men filtret gav tomt, visa alla i stället för "tomt".
+  if(list.length === 0 && scores.length > 0) list = scores
   const ol = el('scoreList'); ol.innerHTML=''
   if(list.length === 0){
     const li = document.createElement('li')
