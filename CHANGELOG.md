@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.4.39
+- Återinförde diagnostikraden i topplistan, nu ALLTID synlig, för att hitta varför highscoren växlar mellan full och tom mellan laddningar. Visar om datan finns i lagringen, antal poster och om appen körs i hemskärmsläge (separat lagring på iOS).
+- Cachebustern för `styles.css` och `app.js` bumpad till 0.4.39.
+
 ## 0.4.38
 - Tog bort den tillfälliga diagnostikraden i topplistan (behövdes inte längre — highscore-datan var aldrig borta, det var ett filterfel som fixades i 0.4.36). Säkerhetsnätet som visar alla resultat när filtret ger tomt är kvar.
 - Cachebustern för `styles.css` och `app.js` bumpad till 0.4.38.
