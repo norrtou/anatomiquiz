@@ -62,6 +62,7 @@ let currentIdx = 0
 let score = 0
 let timerInterval = null
 let timeLeft = 0
+let quizStartTime = 0
 
 async function loadQuestions(path){
   try {
@@ -379,6 +380,8 @@ async function startQuiz(){
 
   quizQuestions = shuffle(combined).slice(0, totalNeeded)
   currentIdx = 0; score=0
+  // Mät alltid tiden (oavsett om frågetimern är på) för statistik per ämne.
+  quizStartTime = Date.now()
   el('playerLabel').textContent = `${name}`
   el('setup').classList.add('hidden')
   el('highscores').classList.add('hidden')
@@ -486,12 +489,15 @@ function saveScore(){
   const name = el('playerName').value.trim() || 'Spelare'
   const topic = el('topic').value
   const scores = getScores()
+  // Total speltid i ms (från quizstart till sista svaret). 0 om av någon anledning ej satt.
+  const durationMs = quizStartTime ? Date.now() - quizStartTime : 0
   scores.push({
     name,
     score,
     total: quizQuestions.length,
     topic,
     topicLabel: topicLabelFor(topic),
+    durationMs,
     date: new Date().toISOString()
   })
   scores.sort((a,b)=> (b.score/b.total) - (a.score/a.total))
@@ -546,9 +552,14 @@ function renderStats(){
   const byTopic = {}
   scores.forEach(s=>{
     const key = s.topicLabel || 'Okänt ämne'
-    if(!byTopic[key]) byTopic[key] = { count:0, pctSum:0 }
+    if(!byTopic[key]) byTopic[key] = { count:0, pctSum:0, timeMs:0, timedQuestions:0 }
     byTopic[key].count++
     byTopic[key].pctSum += (s.score/s.total)*100
+    // Genomsnittlig tid/fråga räknas bara på resultat som har en sparad speltid.
+    if(s.durationMs > 0){
+      byTopic[key].timeMs += s.durationMs
+      byTopic[key].timedQuestions += s.total
+    }
   })
   const ul = el('statsList'); ul.innerHTML=''
   const entries = Object.entries(byTopic).sort((a,b)=> b[1].count - a[1].count)
@@ -560,8 +571,14 @@ function renderStats(){
   }
   entries.forEach(([label, d])=>{
     const avg = Math.round(d.pctSum / d.count)
+    let text = `${label}: ${d.count} försök — i snitt ${avg}%`
+    if(d.timedQuestions > 0){
+      const secPerQ = (d.timeMs / d.timedQuestions) / 1000
+      const tPerQ = secPerQ >= 10 ? Math.round(secPerQ) : secPerQ.toFixed(1)
+      text += ` — ca ${tPerQ} s/fråga`
+    }
     const li = document.createElement('li')
-    li.textContent = `${label}: ${d.count} försök — i snitt ${avg}%`
+    li.textContent = text
     ul.appendChild(li)
   })
 }
