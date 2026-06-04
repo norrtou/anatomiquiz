@@ -476,12 +476,94 @@ function finishQuiz(){
   el('resultText').setAttribute('aria-live','polite')
 }
 
+// Hämta läsbart ämnesnamn från <select>-alternativet, t.ex. 'osteologi' → 'Ben'
+function topicLabelFor(value){
+  const opt = Array.from(el('topic').options).find(o => o.value === value)
+  return (opt && opt.textContent.trim()) || value || 'Okänt ämne'
+}
+
 function saveScore(){
   const name = el('playerName').value.trim() || 'Spelare'
+  const topic = el('topic').value
   const scores = getScores()
-  scores.push({name,score, total:quizQuestions.length, date: new Date().toISOString()})
+  scores.push({
+    name,
+    score,
+    total: quizQuestions.length,
+    topic,
+    topicLabel: topicLabelFor(topic),
+    date: new Date().toISOString()
+  })
   scores.sort((a,b)=> (b.score/b.total) - (a.score/a.total))
   saveScores(scores.slice(0,50))
+}
+
+// Fyll filtret med ett alternativ per förekommande antal frågor, så att resultat
+// med olika frågeantal inte blandas i samma topplista. "Alla" visar allt.
+function buildScoreFilter(){
+  const sel = el('scoreFilter')
+  if(!sel) return
+  const prev = sel.value
+  const totals = [...new Set(getScores().map(s=>s.total))].sort((a,b)=>a-b)
+  sel.innerHTML = ''
+  const allOpt = document.createElement('option')
+  allOpt.value = 'all'; allOpt.textContent = 'Alla antal frågor'
+  sel.appendChild(allOpt)
+  totals.forEach(t=>{
+    const o = document.createElement('option')
+    o.value = String(t); o.textContent = `${t} frågor`
+    sel.appendChild(o)
+  })
+  if(prev && Array.from(sel.options).some(o=>o.value===prev)) sel.value = prev
+}
+
+function renderScoreList(){
+  const sel = el('scoreFilter')
+  const filterVal = sel ? sel.value : 'all'
+  const scores = getScores()
+  const list = filterVal === 'all'
+    ? scores
+    : scores.filter(s => s.total === parseInt(filterVal,10))
+  const ol = el('scoreList'); ol.innerHTML=''
+  if(list.length === 0){
+    const li = document.createElement('li')
+    li.textContent = 'Inga resultat än.'
+    ol.appendChild(li)
+    return
+  }
+  list.forEach(s=>{
+    const li = document.createElement('li')
+    const pct = Math.round((s.score/s.total)*100)
+    const label = s.topicLabel || 'Okänt ämne'
+    li.textContent = `${s.name} — ${label} — ${s.score}/${s.total} (${pct}%) — ${new Date(s.date).toLocaleString()}`
+    ol.appendChild(li)
+  })
+}
+
+// Statistik per ämne: antal genomförda quiz och genomsnittligt resultat i procent.
+function renderStats(){
+  const scores = getScores()
+  const byTopic = {}
+  scores.forEach(s=>{
+    const key = s.topicLabel || 'Okänt ämne'
+    if(!byTopic[key]) byTopic[key] = { count:0, pctSum:0 }
+    byTopic[key].count++
+    byTopic[key].pctSum += (s.score/s.total)*100
+  })
+  const ul = el('statsList'); ul.innerHTML=''
+  const entries = Object.entries(byTopic).sort((a,b)=> b[1].count - a[1].count)
+  if(entries.length === 0){
+    const li = document.createElement('li')
+    li.textContent = 'Ingen statistik än.'
+    ul.appendChild(li)
+    return
+  }
+  entries.forEach(([label, d])=>{
+    const avg = Math.round(d.pctSum / d.count)
+    const li = document.createElement('li')
+    li.textContent = `${label}: ${d.count} försök — i snitt ${avg}%`
+    ul.appendChild(li)
+  })
 }
 
 function showHighscores(){
@@ -489,14 +571,9 @@ function showHighscores(){
   el('quiz').classList.add('hidden')
   el('result').classList.add('hidden')
   el('highscores').classList.remove('hidden')
-  const scores = getScores()
-  const ol = el('scoreList'); ol.innerHTML=''
-  scores.forEach(s=>{
-    const li = document.createElement('li')
-    const pct = Math.round((s.score/s.total)*100)
-    li.textContent = `${s.name} — ${s.score}/${s.total} (${pct}%) — ${new Date(s.date).toLocaleString()}`
-    ol.appendChild(li)
-  })
+  buildScoreFilter()
+  renderScoreList()
+  renderStats()
   // focus the list for keyboard users
   setTimeout(()=>{ el('scoreList').focus?.() },50)
 }
@@ -834,6 +911,7 @@ function init(){
   if(imp) imp.addEventListener('change', handleImportFile)
   el('backToSetup').addEventListener('click', ()=>{el('highscores').classList.add('hidden');el('setup').classList.remove('hidden')})
   el('clearScores').addEventListener('click', ()=>{ if(confirm('Rensa topplista?')) clearScores() })
+  el('scoreFilter')?.addEventListener('change', renderScoreList)
 
   // Update difficulty options when topic changes
   el('topic').addEventListener('change', updateDifficultyOptions)

@@ -94,8 +94,8 @@
   <link rel="manifest" href="/anatomiquiz/manifest.json">
 
   <!-- Preload kritisk CSS -->
-  <link rel="preload" href="css/styles.css?v=0.4.12" as="style">
-  <link rel="stylesheet" href="css/styles.css?v=0.4.12">
+  <link rel="preload" href="css/styles.css?v=0.4.14" as="style">
+  <link rel="stylesheet" href="css/styles.css?v=0.4.14">
 </head>
 <body>
 
@@ -279,7 +279,13 @@
          ========================================================= -->
     <section id="highscores" class="card hidden" aria-labelledby="hsHeading">
       <h2 id="hsHeading">Topplista</h2>
+      <div class="hs-filter">
+        <label for="scoreFilter">Visa</label>
+        <select id="scoreFilter"></select>
+      </div>
       <ol id="scoreList"></ol>
+      <h3 id="statsHeading" class="hs-stats-heading">Statistik per ämne</h3>
+      <ul id="statsList" class="stats-list"></ul>
       <div class="actions">
         <button id="clearScores" class="btn">Rensa topplista</button>
         <button id="backToSetup" class="btn">Tillbaka</button>
@@ -305,6 +311,6 @@
   </main>
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
-  <script src="js/app.js?v=0.4.13" defer></script>
+  <script src="js/app.js?v=0.4.14" defer></script>
 </body>
 </html>
