@@ -925,7 +925,7 @@ function init(){
   el('cancelBtn').addEventListener('click', cancelQuiz)
   el('nextBtn').addEventListener('click', nextQuestion)
   el('finishBtn').addEventListener('click', ()=>{el('result').classList.add('hidden');el('setup').classList.remove('hidden')})
-  el('restart').addEventListener('click', ()=>{el('result').classList.add('hidden');el('setup').classList.remove('hidden')})
+  el('restart').addEventListener('click', ()=>{ startQuiz() })
   el('viewScores').addEventListener('click', showHighscores)
   el('saveManage').addEventListener('click', ()=>{ alert('Ändringar sparade (sparas automatiskt).'); renderManage() })
   const imp = el('importFile')
