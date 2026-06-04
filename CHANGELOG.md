@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.4.25
+- Dolde ämnena "Moho" och "OTIPM" från ämneslistan. De är ATP-teori (ej anatomi) och ska testas på annat sätt; återinförs senare. Datafiler och kod är kvar (optionerna är utkommenterade på sin plats).
+- Cachebustern för `styles.css` och `app.js` bumpad till 0.4.25.
+
 ## 0.4.24
 - Alla dropdowns (inte bara ämne) använder nu samma mindre textstorlek på smala mobilskärmar (≤480px); de var tidigare onödigt stora.
 - Förklaringsraden under ämnesväljaren tillåts nu radbrytas korrekt i stället för att tvingas på en rad med horisontell scroll.
