@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.4.29
+- Tog bort den missvisande parentestexten bakom "Timer på/av"-checkboxen.
+- Cachebustern för `styles.css` och `app.js` bumpad till 0.4.29.
+
 ## 0.4.28
 - Checkboxen heter nu "Timer på/av" och är på som standard. Den enda funktionen är att slå av/på timern; resten av timerfunktionen är oförändrad.
 - Återställde sekundfältet till originalet ("Tid i sekunder per fråga (0 = ingen tidspress)", standard 0, min 0) – ändringarna i 0.4.27 (omdöpning, standard 20, min 1) var inte önskade.
