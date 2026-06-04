@@ -54,6 +54,10 @@ const OLD_FLAGS_KEY = 'wiil_question_flags'
 const NEW_FLAGS_KEY = 'hur_question_flags'
 const OLD_SCORES_KEY = 'wiil_highscores'
 const NEW_SCORES_KEY = 'hur_highscores'
+// Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
+// en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
+// köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
+const APP_VERSION = '0.4.42'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -917,7 +921,14 @@ async function loadVersion() {
     if (!res.ok) return
     const text = (await res.text()).trim()
     const el_ = document.getElementById('appVersion')
-    if (el_) el_.textContent = 'v' + text
+    if (!el_) return
+    // Om den färska VERSION skiljer sig från versionen i denna (körda) app.js kör
+    // webbläsaren cachad gammal kod — uppmana till omladdning i stället för att dölja det.
+    if (text && text !== APP_VERSION) {
+      el_.textContent = 'v' + APP_VERSION + ' – ny version ' + text + ' finns, ladda om sidan'
+    } else {
+      el_.textContent = 'v' + APP_VERSION
+    }
   } catch {}
 }
 
