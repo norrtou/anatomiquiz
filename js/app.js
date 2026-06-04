@@ -553,6 +553,26 @@ function renderScoreList(){
     const li = document.createElement('li')
     li.textContent = 'Inga resultat än.'
     ol.appendChild(li)
+    // TILLFÄLLIG DIAGNOSTIK: visa råa localStorage-nycklar direkt på skärmen så vi
+    // ser om highscore-datan finns kvar i webbläsaren eller verkligen är borta.
+    try{
+      const sc = localStorage.getItem(NEW_SCORES_KEY)
+      const old = localStorage.getItem(OLD_SCORES_KEY)
+      const dbg = document.createElement('li')
+      dbg.style.fontSize = '0.7rem'
+      dbg.style.opacity = '0.85'
+      dbg.style.whiteSpace = 'normal'
+      dbg.style.wordBreak = 'break-word'
+      dbg.textContent = 'DIAGNOSTIK — nycklar: [' + Object.keys(localStorage).join(', ') +
+        '] | hur_highscores: ' + (sc ? sc.length + ' tecken' : 'SAKNAS') +
+        ' | wiil_highscores: ' + (old ? old.length + ' tecken' : 'SAKNAS') +
+        ' | minnescache: ' + (memoryScores ? memoryScores.length + ' poster' : 'nej')
+      ol.appendChild(dbg)
+    }catch(e){
+      const dbg = document.createElement('li')
+      dbg.textContent = 'DIAGNOSTIK: localStorage kastar fel: ' + e.message
+      ol.appendChild(dbg)
+    }
     return
   }
   list.forEach(s=>{
