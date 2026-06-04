@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.4.34
+- Topplistan visas nu som prydliga kolumner (rang, namn, ämne, poäng, procent, datum) i stället för en hopträngd em-streck-rad.
+- I topplistan kortas ämnesnamnet av utan förkortningsparentesen (t.ex. "Handen (MC+TF)" → "Handen") — endast här, inte i ämnesväljaren.
+- Varje post ryms på en rad inom skärmbredden på mobil; ämneskolumnen krymper vid behov i stället för att radbryta eller kräva sidledsscroll.
+- Cachebustern för `styles.css` och `app.js` bumpad till 0.4.34.
+
 ## 0.4.33
 - Topplistan visas nu med mycket mindre typsnitt så att varje post ryms på en rad (radbryts inte). Listan kan scrollas i sidled om en post är extra lång.
 - Cachebustern för `styles.css` och `app.js` bumpad till 0.4.33.

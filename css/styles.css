@@ -1139,21 +1139,41 @@ ol li {
   line-height: 1.6;
 }
 
-/* Topplistan: liten text så varje post ryms på en enda rad */
+/* Topplistan: kompakt, prydlig rad per post (ryms på en rad, scrollar i sidled vid behov) */
 #scoreList {
-  overflow-x: auto;
+  list-style: none;
+  padding-left: 0;
 }
 
-#scoreList li {
-  font-size: 0.72rem;
-  line-height: 1.4;
-  margin-bottom: 4px;
-  white-space: nowrap;
+.score-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  padding: 5px 8px;
+  margin: 0;
+  border-radius: 6px;
 }
+
+.score-row:nth-child(odd) {
+  background: rgba(16, 185, 129, 0.06);
+}
+
+/* Fasta kolumner; ämnet får krympa/avkortas så hela raden ryms inom skärmbredden */
+.score-row > span { white-space: nowrap; flex: 0 0 auto; }
+.score-row .sr-rank { color: var(--text-secondary); min-width: 1.6em; text-align: right; }
+.score-row .sr-name { font-weight: 700; }
+.score-row .sr-topic { color: var(--text-secondary); flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.score-row .sr-score { font-variant-numeric: tabular-nums; }
+.score-row .sr-pct { font-weight: 700; color: var(--primary); font-variant-numeric: tabular-nums; }
+.score-row .sr-date { color: var(--text-secondary); font-variant-numeric: tabular-nums; }
 
 @media (max-width: 640px) {
-  #scoreList li {
-    font-size: 0.6rem;
+  .score-row {
+    font-size: 0.62rem;
+    gap: 7px;
+    padding: 4px 6px;
   }
 }
 
