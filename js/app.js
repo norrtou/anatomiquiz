@@ -12,6 +12,7 @@ function getQuestionsPath(topic) {
   if (topic === 'moho_flashcards') return './data/moho_flashcards.json'
   if (topic === 'otipm_flashcards') return './data/otipm_flashcards.json'
   if (topic === 'ergonomi') return './data/ergonomi.json'
+  if (topic === 'olika_aldrar') return './data/olika_aldrar.json'
   // 'blandade' uses loadQuestionsFromMultiplePaths() instead
   return './data/riktningar.json'
 }
