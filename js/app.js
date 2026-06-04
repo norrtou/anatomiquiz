@@ -57,7 +57,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.4.43'
+const APP_VERSION = '0.4.44'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -526,7 +526,8 @@ function saveScore(){
     durationMs,
     date: new Date().toISOString()
   })
-  scores.sort((a,b)=> (b.score/b.total) - (a.score/a.total))
+  // Senaste först, så att de 50 SENASTE resultaten behålls (inte de 50 högsta).
+  scores.sort((a,b)=> new Date(b.date) - new Date(a.date))
   saveScores(scores.slice(0,50))
 }
 
@@ -559,6 +560,8 @@ function renderScoreList(){
     : scores.filter(s => s.total === parseInt(filterVal,10))
   // Säkerhetsnät: finns det resultat men filtret gav tomt, visa alla i stället för "tomt".
   if(list.length === 0 && scores.length > 0) list = scores
+  // Visa de 20 SENASTE resultaten (nyast först), oberoende av lagringsordning.
+  list = [...list].sort((a,b)=> new Date(b.date) - new Date(a.date)).slice(0,20)
   const ol = el('scoreList'); ol.innerHTML=''
 
   if(list.length === 0){
