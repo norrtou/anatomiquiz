@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.4.32
+- "Öva extra på de jag svarar fel på" garanterar nu återkomst i stället för att bara vikta upp frågan. En felsvarad fråga får en "skuld" (antal garanterade återkomster) som sparas i localStorage och överlever "Spela igen", omladdning och webbläsarstängning.
+- En felsvarad fråga tvingas garanterat in i kommande vändor (minst de två nästa 10-frågorsvändorna; i längre vändor är den med i själva vändan). Fortsätter man svara fel byggs skulden på (+2, tak 6) så den återkommer ännu fler gånger; rätt svar nollar skulden.
+- Cachebustern för `styles.css` och `app.js` bumpad till 0.4.32.
+
 ## 0.4.31
 - Bytte checkboxtexten "Timer på/av" till "Visa tid".
 - Cachebustern för `styles.css` och `app.js` bumpad till 0.4.31.

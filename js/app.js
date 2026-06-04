@@ -186,30 +186,60 @@ function saveScores(scores){
   }
 }
 
-// "Öva extra på de jag svarar fel på": frågor man svarar fel på vägs upp i
-// quizurvalet (~50% oftare). Dynamiskt — så fort man svarar rätt på en fråga
-// tas den bort ur listan och behandlas som vilken annan fråga som helst.
+// "Öva extra på de jag svarar fel på": varje felsvarad fråga får en "skuld"
+// = antal garanterade återkomster. Lagras i localStorage som { id: skuld } och
+// överlever "Spela igen", omladdning och att man stänger/öppnar webbläsaren.
+// Vid varje ny vända (när läget är på) tvingas alla frågor med skuld > 0 in i
+// urvalet (garanterat, inte bara vägt upp), och deras skuld minskar med 1 när
+// de kommer med. Fel svar igen lägger på mer skuld (+2, tak 6) så att frågan
+// återkommer ännu fler gånger; rätt svar nollar skulden helt.
+const WRONG_REVIEW_ADD = 2   // garanterar återkomst i minst de två nästa vändorna
+const WRONG_REVIEW_MAX = 6   // tak så att en envis fråga inte växer obegränsat
 let wrongQuestions = null
 
 function loadWrong(){
   if(wrongQuestions) return wrongQuestions
-  try{ wrongQuestions = new Set(JSON.parse(localStorage.getItem(WRONG_KEY) || '[]')) }
-  catch(e){ wrongQuestions = new Set() }
+  wrongQuestions = new Map()
+  try{
+    const raw = JSON.parse(localStorage.getItem(WRONG_KEY) || '{}')
+    if(Array.isArray(raw)){
+      // Gammalt format (lista med id) → ge varje fråga startskuld.
+      raw.forEach(id => wrongQuestions.set(id, WRONG_REVIEW_ADD))
+    } else if(raw && typeof raw === 'object'){
+      Object.entries(raw).forEach(([id, debt]) => {
+        const d = Number(debt) || 0
+        if(d > 0) wrongQuestions.set(id, d)
+      })
+    }
+  }catch(e){ wrongQuestions = new Map() }
   return wrongQuestions
 }
 
 function saveWrong(){
-  try{ localStorage.setItem(WRONG_KEY, JSON.stringify([...loadWrong()])) }catch(e){}
+  try{
+    const obj = {}
+    loadWrong().forEach((debt, id) => { if(debt > 0) obj[id] = debt })
+    localStorage.setItem(WRONG_KEY, JSON.stringify(obj))
+  }catch(e){}
 }
 
 function markWrong(id){
-  const s = loadWrong()
-  if(!s.has(id)){ s.add(id); saveWrong() }
+  const m = loadWrong()
+  m.set(id, Math.min((m.get(id) || 0) + WRONG_REVIEW_ADD, WRONG_REVIEW_MAX))
+  saveWrong()
 }
 
 function markCorrect(id){
-  const s = loadWrong()
-  if(s.has(id)){ s.delete(id); saveWrong() }
+  const m = loadWrong()
+  if(m.has(id)){ m.delete(id); saveWrong() }
+}
+
+// Förbruka en garanterad återkomst (frågan kom med i en vända).
+function consumeReview(id){
+  const m = loadWrong()
+  const d = (m.get(id) || 0) - 1
+  if(d > 0) m.set(id, d); else m.delete(id)
+  saveWrong()
 }
 
 function isExcluded(q){
@@ -250,17 +280,6 @@ function sampleWithoutReplacement(arr, n){
   const copy = arr.slice()
   shuffle(copy)
   return copy.slice(0, Math.min(n, copy.length))
-}
-
-// Viktad sampling utan återläggning (Efraimidis–Spirakis): högre vikt → större
-// chans att komma med. Vikt 1.5 ger frågan ~50% större sannolikhet än en vanlig.
-function weightedSampleWithoutReplacement(arr, n, weightOf){
-  if(n<=0) return []
-  return arr
-    .map(item => ({ item, key: Math.pow(getSecureRandom(), 1 / Math.max(weightOf(item), 1e-9)) }))
-    .sort((a,b)=> b.key - a.key)
-    .slice(0, Math.min(n, arr.length))
-    .map(x => x.item)
 }
 
 async function startQuiz(){
@@ -345,45 +364,41 @@ async function startQuiz(){
 
   // Ensure full randomization: shuffle filtered pool first
   const shuffledFiltered = shuffle(filtered.slice())
-
-  // Separate pools from shuffled filtered
-  const tfPool = shuffledFiltered.filter(q=> q.type==='tf')
-  const mcPool = shuffledFiltered.filter(q=> q.type==='mc' && (1 + (q.distractors?.length||0)) >=3 && (1 + (q.distractors?.length||0)) <=5)
-
-  const maxTf = Math.floor(num * 0.1)
-  const tfCount = Math.min(tfPool.length, maxTf)
-  let mcCount = num - tfCount
-
-  // Om "öva extra"-läget är på: vikta upp frågor man senast svarat fel på.
-  // Annars likformig slump som tidigare.
-  const wrongIds = practiceWrong ? loadWrong() : null
-  const pick = (pool, count) => practiceWrong
-    ? weightedSampleWithoutReplacement(pool, count, q => wrongIds.has(q.id) ? 1.5 : 1)
-    : sampleWithoutReplacement(pool, count)
-
-  // Sample from shuffled pools
-  let tfSelected = pick(tfPool, tfCount)
-  let mcSelected = pick(mcPool, mcCount)
-
-  // If not enough MC, try to fill from remaining shuffledFiltered (preserving randomness)
-  if(mcSelected.length < mcCount){
-    const pickedIds = new Set([...tfSelected, ...mcSelected].map(q=>q.id))
-    const remainingPreferred = shuffledFiltered.filter(q=> !pickedIds.has(q.id) && q.type==='mc')
-    const add = pick(remainingPreferred, mcCount - mcSelected.length)
-    mcSelected = mcSelected.concat(add)
-  }
-
-  // If still short, fill from remaining generic pool (no duplicates)
   const totalNeeded = Math.min(num, filtered.length)
-  let combined = [...mcSelected, ...tfSelected]
-  if(combined.length < totalNeeded){
-    const pickedIds = new Set(combined.map(q=>q.id))
-    const remaining = shuffledFiltered.filter(q=> !pickedIds.has(q.id))
-    const add = pick(remaining, totalNeeded - combined.length)
-    combined = combined.concat(add)
+
+  // Öva-extra-läget: tvinga in alla frågor med kvarvarande skuld (garanterad
+  // återkomst, inte bara uppviktad), högst skuld först. Klarar man inte av alla
+  // på en vända får de som inte ryms vänta till nästa — skulden ligger kvar.
+  let forced = []
+  if(practiceWrong){
+    const wrongMap = loadWrong()
+    forced = shuffledFiltered
+      .filter(q => (wrongMap.get(q.id) || 0) > 0)
+      .sort((a,b) => (wrongMap.get(b.id) || 0) - (wrongMap.get(a.id) || 0))
+      .slice(0, totalNeeded)
+  }
+  const forcedIds = new Set(forced.map(q => q.id))
+
+  // Fyll resten av vändan med vanlig slump, behåll tf-taket (~10 %) över helheten.
+  const fillCount = totalNeeded - forced.length
+  const remainingPool = shuffledFiltered.filter(q => !forcedIds.has(q.id))
+  const maxTf = Math.floor(num * 0.1)
+  const forcedTf = forced.filter(q => q.type === 'tf').length
+  const tfPool = remainingPool.filter(q => q.type === 'tf')
+  const mcPool = remainingPool.filter(q => q.type === 'mc' && (1 + (q.distractors?.length||0)) >= 3 && (1 + (q.distractors?.length||0)) <= 5)
+
+  const tfFill = sampleWithoutReplacement(tfPool, Math.max(0, Math.min(maxTf - forcedTf, fillCount)))
+  let fill = sampleWithoutReplacement(mcPool, fillCount - tfFill.length).concat(tfFill)
+  if(fill.length < fillCount){
+    const used = new Set([...forcedIds, ...fill.map(q => q.id)])
+    const rest = remainingPool.filter(q => !used.has(q.id))
+    fill = fill.concat(sampleWithoutReplacement(rest, fillCount - fill.length))
   }
 
-  quizQuestions = shuffle(combined).slice(0, totalNeeded)
+  quizQuestions = shuffle([...forced, ...fill]).slice(0, totalNeeded)
+
+  // Varje forcerad fråga som kom med förbrukar en garanterad återkomst.
+  if(practiceWrong) forced.forEach(q => consumeReview(q.id))
   currentIdx = 0; score=0
   // Mät alltid tiden (oavsett om frågetimern är på) för statistik per ämne.
   quizStartTime = Date.now()
