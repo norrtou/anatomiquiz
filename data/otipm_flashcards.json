@@ -1,0 +1,502 @@
+[
+  {
+    "id": "otipm_1",
+    "type": "fc",
+    "prompt": "OTIPM",
+    "sub": "Occupational Therapy Intervention Process Model",
+    "correct": "Modell som styr den arbetsterapeutiska processen med fokus på aktivitet, klientcentrering och top-down-perspektiv.\n\nEx: Används för att strukturera rehabilitering efter stroke.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_2",
+    "type": "fc",
+    "prompt": "Arbetsterapeutisk process",
+    "sub": "Occupational therapy process",
+    "correct": "Hela förloppet från utredning och målformulering via intervention till utvärdering.\n\nEx: Från första besök till avslut av insats.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_3",
+    "type": "fc",
+    "prompt": "Klientcentrerat arbetssätt",
+    "sub": "Client-centered practice",
+    "correct": "Utgår från personens egna mål, behov och prioriteringar.\n\nEx: Patient vill prioritera att duscha själv istället för styrketräning.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_4",
+    "type": "fc",
+    "prompt": "Top-down-ansats",
+    "sub": "Top-down approach",
+    "correct": "Börjar i klientens aktiviteter och vardag i stället för i kroppsfunktioner (\"true top-down\").\n\nEx: Utgår från att patienten inte kan laga mat.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_5",
+    "type": "fc",
+    "prompt": "Bottom-up-ansats",
+    "sub": "Bottom-up approach",
+    "correct": "Börjar i kroppsfunktioner och komponenter — det perspektiv OTIPM medvetet undviker som startpunkt.\n\nEx: Träna handstyrka innan matlagning.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_6",
+    "type": "fc",
+    "prompt": "Aktivitetsutförande",
+    "sub": "Occupational performance",
+    "correct": "Hur en person faktiskt utför en vardagsaktivitet.\n\nEx: Hur någon lagar mat trots tremor.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_7",
+    "type": "fc",
+    "prompt": "Aktivitetsproblem",
+    "sub": "Occupational performance problem",
+    "correct": "Svårighet i en vardagsaktivitet som klienten vill eller behöver utföra.\n\nEx: Svårt att klä sig efter en fraktur.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_8",
+    "type": "fc",
+    "prompt": "Utförandeanalys (analys av aktivitetsutförande)",
+    "sub": "Occupational performance analysis",
+    "correct": "OTIPM:s centrala bedömning: observation av hur klienten utför en meningsfull uppgift i verklig situation.\n\nEx: Observera hur patienten lagar mat i köket.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_9",
+    "type": "fc",
+    "prompt": "Aktivitetsanalys",
+    "sub": "Activity analysis",
+    "correct": "Analys av en aktivitets generella krav, oberoende av en specifik person.\n\nEx: Vad krävs generellt för att duscha säkert?",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_10",
+    "type": "fc",
+    "prompt": "Uppgiftsanalys",
+    "sub": "Task analysis",
+    "correct": "Bryter ned en aktivitet i delsteg.\n\nEx: Handla mat → planera, gå, plocka, betala.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_11",
+    "type": "fc",
+    "prompt": "Kliniskt resonemang",
+    "sub": "Clinical reasoning",
+    "correct": "Det professionella beslutsfattande som styr varje steg i processen.\n\nEx: Välja ADL-träning framför styrketräning.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_12",
+    "type": "fc",
+    "prompt": "Aktivitetsprofil",
+    "sub": "Occupational profile",
+    "correct": "Samlad bild av personens aktivitetsliv, historia och prioriteringar.\n\nEx: Tidigare aktiv, nu begränsad pga stroke.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_13",
+    "type": "fc",
+    "prompt": "Klientmål",
+    "sub": "Client goals",
+    "correct": "Personens egna mål för insatsen.\n\nEx: Kunna klä sig själv igen.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_14",
+    "type": "fc",
+    "prompt": "Målsättning",
+    "sub": "Goal setting",
+    "correct": "Att formulera konkreta, mätbara mål tillsammans med klienten.\n\nEx: Mål att duscha själv inom 4 veckor.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_15",
+    "type": "fc",
+    "prompt": "Utförandesammanhang (aktivitetskontext)",
+    "sub": "Occupational performance context",
+    "correct": "Helheten av faktorer som omger och påverkar aktivitetsutförandet.\n\nEx: Att duscha hemma vs på sjukhus.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_16",
+    "type": "fc",
+    "prompt": "Fysisk kontext",
+    "sub": "Physical context",
+    "correct": "Miljö och objekt runt aktiviteten.\n\nEx: Hala golv i badrum.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_17",
+    "type": "fc",
+    "prompt": "Social kontext",
+    "sub": "Social context",
+    "correct": "Människorna runt aktiviteten.\n\nEx: Partner hjälper till vid matlagning.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_18",
+    "type": "fc",
+    "prompt": "Kulturell kontext",
+    "sub": "Cultural context",
+    "correct": "Normer och värderingar som påverkar aktiviteten.\n\nEx: Förväntan att klara sig själv hemma.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_19",
+    "type": "fc",
+    "prompt": "Aktivitetskrav",
+    "sub": "Activity demands",
+    "correct": "Vad aktiviteten i sig kräver av utföraren.\n\nEx: Balans och greppstyrka i duschen.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_20",
+    "type": "fc",
+    "prompt": "Kroppsfunktioner",
+    "sub": "Body functions",
+    "correct": "Fysiologiska och psykologiska funktioner som påverkar utförandet.\n\nEx: Nedsatt handfunktion efter stroke.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_21",
+    "type": "fc",
+    "prompt": "Kroppsstrukturer",
+    "sub": "Body structures",
+    "correct": "Anatomiska strukturer.\n\nEx: Skada i handled.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_22",
+    "type": "fc",
+    "prompt": "Klientfaktorer",
+    "sub": "Client factors",
+    "correct": "Inre faktorer hos personen som påverkar aktivitet.\n\nEx: Smärta, motivation, ångest.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_23",
+    "type": "fc",
+    "prompt": "Vanor",
+    "sub": "Habits",
+    "correct": "Automatiserade beteenden i vardagen.\n\nEx: Alltid äta frukost vid samma tid.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_24",
+    "type": "fc",
+    "prompt": "Roller",
+    "sub": "Roles",
+    "correct": "Sociala roller som påverkar aktivitetsmönster.\n\nEx: Förälder, pensionär.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_25",
+    "type": "fc",
+    "prompt": "Rutiner",
+    "sub": "Routines",
+    "correct": "Återkommande aktivitetsmönster.\n\nEx: Morgonrutin med medicin och dusch.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_26",
+    "type": "fc",
+    "prompt": "Aktivitet som intervention",
+    "sub": "Occupation-based intervention",
+    "correct": "Träning i en riktig, meningsfull aktivitet.\n\nEx: Laga mat i ett kök som träning.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_27",
+    "type": "fc",
+    "prompt": "Syftesinriktad aktivitet",
+    "sub": "Purposeful activity",
+    "correct": "Aktivitet med terapeutiskt syfte, men inte alltid verklig vardagsaktivitet.\n\nEx: Sortera objekt för handträning.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_28",
+    "type": "fc",
+    "prompt": "Förberedande metoder (förberedande åtgärder)",
+    "sub": "Preparatory methods",
+    "correct": "Träning av funktion inför en aktivitet.\n\nEx: Greppträning med boll innan matlagning.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_29",
+    "type": "fc",
+    "prompt": "Kompensation",
+    "sub": "Compensation",
+    "correct": "Alternativa sätt eller hjälpmedel som ersätter nedsatt förmåga.\n\nEx: Använda duschstol vid balansproblem.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_30",
+    "type": "fc",
+    "prompt": "Anpassning",
+    "sub": "Adaptation",
+    "correct": "Förändring av aktivitet eller miljö.\n\nEx: Flytta köksredskap till lättåtkomlig nivå.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_31",
+    "type": "fc",
+    "prompt": "Möjliggörande",
+    "sub": "Enablement",
+    "correct": "Stöd som gör en aktivitet möjlig.\n\nEx: Arbetsterapeut ordnar hjälpmedel för påklädning.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_32",
+    "type": "fc",
+    "prompt": "Hjälpmedel",
+    "sub": "Assistive devices",
+    "correct": "Tekniska stöd inom den kompensatoriska modellen.\n\nEx: Griptång för att plocka upp saker.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_33",
+    "type": "fc",
+    "prompt": "Miljöanpassning",
+    "sub": "Environmental modification",
+    "correct": "Ändring av den fysiska miljön.\n\nEx: Ta bort mattor för att minska fallrisk.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_34",
+    "type": "fc",
+    "prompt": "Träning i kontext",
+    "sub": "Training in context",
+    "correct": "Träning i den verkliga miljö där aktiviteten ska utföras.\n\nEx: Träna dusch i eget badrum.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_35",
+    "type": "fc",
+    "prompt": "Simulerad aktivitet",
+    "sub": "Simulated activity",
+    "correct": "Träning i en kontrollerad, konstruerad miljö.\n\nEx: Öva matlagning i ett terapikök.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_36",
+    "type": "fc",
+    "prompt": "Terapeutisk användning av jaget",
+    "sub": "Therapeutic use of self",
+    "correct": "Hur terapeuten medvetet använder relation, bemötande och kommunikation som verktyg.\n\nEx: Uppmuntrar och guidar patienten lugnt.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_37",
+    "type": "fc",
+    "prompt": "Kompensatorisk modell",
+    "sub": "Compensatory model",
+    "correct": "OTIPM-interventionsmodell som kompenserar för nedsatt förmåga via hjälpmedel, anpassning eller förändrad metod – utan att träna själva funktionen.\n\nEx: Inför duschstol och griptång så att morgonrutinen fungerar.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_38",
+    "type": "fc",
+    "prompt": "Pedagogisk modell",
+    "sub": "Model for education and teaching",
+    "correct": "OTIPM-interventionsmodell med undervisning i grupp om aktivitet och hälsa, där klienter lär och reflekterar tillsammans.\n\nEx: Gruppträff om energibesparing vid trötthet.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_39",
+    "type": "fc",
+    "prompt": "Modell för aktivitetsträning",
+    "sub": "Acquisitional model",
+    "correct": "OTIPM-interventionsmodell där klienten återtränar eller lär in färdigheter genom att utföra meningsfulla aktiviteter.\n\nEx: Träna påklädning genom att faktiskt klä på sig varje morgon.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_40",
+    "type": "fc",
+    "prompt": "Modell för förbättring av personliga faktorer och kroppsfunktioner",
+    "sub": "Restorative model",
+    "correct": "OTIPM:s återskapande modell som återställer eller utvecklar kroppsfunktioner och personliga faktorer.\n\nEx: Handträning för att återfå greppstyrka efter stroke.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_41",
+    "type": "fc",
+    "prompt": "Planering av intervention",
+    "sub": "Intervention planning",
+    "correct": "Att bestämma mål, modell och insatser utifrån utförandeanalysen.\n\nEx: Planera träning i köksaktivitet.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_42",
+    "type": "fc",
+    "prompt": "Genomförande av intervention",
+    "sub": "Intervention implementation",
+    "correct": "Att utföra de planerade insatserna.\n\nEx: Träna påklädning i hemmet.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_43",
+    "type": "fc",
+    "prompt": "Utvärdering",
+    "sub": "Intervention evaluation",
+    "correct": "Att bedöma effekten av insatsen, ofta med en ny utförandeanalys.\n\nEx: Kan personen duscha själv nu?",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_44",
+    "type": "fc",
+    "prompt": "Gruppintervention",
+    "sub": "Group intervention",
+    "correct": "Behandling som genomförs i grupp.\n\nEx: Matlagningsgrupp i rehab.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_45",
+    "type": "fc",
+    "prompt": "Individuell intervention",
+    "sub": "Individual intervention",
+    "correct": "Enskild behandling anpassad till en klient.\n\nEx: Träning i badrummet hemma.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_46",
+    "type": "fc",
+    "prompt": "Hemmiljöinsats",
+    "sub": "Home environment intervention",
+    "correct": "Anpassning eller träning i klientens hem.\n\nEx: Montera stödhandtag i duschen.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_47",
+    "type": "fc",
+    "prompt": "Utfallsmått",
+    "sub": "Outcome measures",
+    "correct": "Instrument för att mäta resultat av insatsen.\n\nEx: COPM används för målskattning.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_48",
+    "type": "fc",
+    "prompt": "Standardiserad bedömning",
+    "sub": "Standardized assessment",
+    "correct": "Bedömning med normer och fastställd metod.\n\nEx: AMPS eller COPM.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_49",
+    "type": "fc",
+    "prompt": "Delaktighet",
+    "sub": "Participation",
+    "correct": "Aktivt deltagande i livssituationer.\n\nEx: Återgår till arbete.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_50",
+    "type": "fc",
+    "prompt": "Aktivitetsbalans",
+    "sub": "Occupational balance",
+    "correct": "Jämvikt mellan olika typer av aktiviteter.\n\nEx: För mycket vila efter en skada.",
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "OTIPM Flashcards"
+  }
+]
