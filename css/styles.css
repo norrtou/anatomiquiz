@@ -316,6 +316,19 @@ option {
   background: var(--surface);
 }
 
+/* Två checkboxar bredvid varandra (öva extra + tidsgräns); radbryts på smal skärm */
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin: 16px 0 8px;
+}
+
+.checkbox-group .checkbox-row {
+  flex: 1 1 240px;
+  margin: 0;
+}
+
 /* Checkbox-rad (t.ex. "Öva extra på de jag svarar fel på") */
 .checkbox-row {
   display: flex;
@@ -1152,7 +1165,6 @@ ol li {
   .timer {
     font-size: 0.75rem;
     min-width: auto;
-    display: none;
   }
 
   .header {

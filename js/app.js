@@ -265,7 +265,7 @@ function weightedSampleWithoutReplacement(arr, n, weightOf){
 async function startQuiz(){
   const name = el('playerName').value.trim() || 'Spelare'
   const num = parseInt(el('numQuestions').value,10)
-  const timePer = parseInt(el('timePerQuestion').value,10) || 0
+  const timePer = el('timerEnabled')?.checked ? (parseInt(el('timePerQuestion').value,10) || 20) : 0
   const topic = el('topic').value
   const difficulty = el('difficulty').value
   const practiceWrong = !!el('practiceWrong')?.checked
@@ -722,7 +722,7 @@ async function startFlashcards() {
   const num     = parseInt(el('numQuestions').value, 10)
   const topic   = el('topic').value
   const diff    = el('difficulty').value
-  const timePer = parseInt(el('timePerQuestion').value, 10) || 0
+  const timePer = el('timerEnabled')?.checked ? (parseInt(el('timePerQuestion').value, 10) || 20) : 0
 
   if (topic === 'blandade') {
     const paths = [...new Set(
