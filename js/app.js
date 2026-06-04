@@ -57,7 +57,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.4.42'
+const APP_VERSION = '0.4.43'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -131,18 +131,19 @@ async function loadQuestionsFromMultiplePaths(paths){
 function loadFlags(){
   try{
     // Prefer new key; if missing but old key exists, migrate it.
-    let raw = localStorage.getItem(NEW_FLAGS_KEY)
+    const rawNew = localStorage.getItem(NEW_FLAGS_KEY)
     const oldRaw = localStorage.getItem(OLD_FLAGS_KEY)
-    if(!raw && oldRaw){
-      // migrate old -> new, then remove old
-      raw = oldRaw
-      localStorage.setItem(NEW_FLAGS_KEY, raw)
-      localStorage.removeItem(OLD_FLAGS_KEY)
-    } else if(oldRaw){
-      // new exists (or not), but remove old to keep storage clean
-      localStorage.removeItem(OLD_FLAGS_KEY)
+    const raw = rawNew || oldRaw
+    // Parsa färdigt innan skrivning; migrering/städning isoleras så ett skrivfel
+    // (full localStorage / privat läge) aldrig kastar bort redan inlästa flaggor.
+    const parsed = JSON.parse(raw || '{}')
+    if(oldRaw){
+      try{
+        if(!rawNew) localStorage.setItem(NEW_FLAGS_KEY, oldRaw)
+        localStorage.removeItem(OLD_FLAGS_KEY)
+      }catch(_){ /* skrivning misslyckades — parsed har redan datan */ }
     }
-    return JSON.parse(raw || '{}')
+    return parsed
   }catch(e){ return {} }
 }
 
@@ -166,16 +167,22 @@ function warnStorageUnavailable(){
 function getScores(){
   if(memoryScores) return memoryScores
   try{
-    let raw = localStorage.getItem(NEW_SCORES_KEY)
+    const rawNew = localStorage.getItem(NEW_SCORES_KEY)
     const oldRaw = localStorage.getItem(OLD_SCORES_KEY)
-    if(!raw && oldRaw){
-      raw = oldRaw
-      localStorage.setItem(NEW_SCORES_KEY, raw)
-      localStorage.removeItem(OLD_SCORES_KEY)
-    } else if(oldRaw){
-      localStorage.removeItem(OLD_SCORES_KEY)
+    const raw = rawNew || oldRaw
+    // Parsa datan FÄRDIGT innan någon skrivning. Migrering/städning av den gamla
+    // nyckeln görs i ett EGET try/catch: en misslyckad skrivning (full localStorage
+    // på delad origin, privat läge) får ALDRIG kasta oss till catch-grenen och
+    // returnera tomt fast highscoren redan är inläst. Det var precis den buggen som
+    // fick topplistan att se tom ut fast datan låg kvar i localStorage.
+    const parsed = JSON.parse(raw || '[]')
+    if(oldRaw){
+      try{
+        if(!rawNew) localStorage.setItem(NEW_SCORES_KEY, oldRaw)
+        localStorage.removeItem(OLD_SCORES_KEY)
+      }catch(_){ /* skrivning misslyckades — strunt i det, parsed har redan datan */ }
     }
-    return JSON.parse(raw || '[]')
+    return parsed
   }catch(e){ return memoryScores || [] }
 }
 
