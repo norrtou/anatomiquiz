@@ -346,11 +346,11 @@ option:disabled {
   background: #f3f4f6;
 }
 
-/* På smala mobilskärmar: krymp ämnesväljaren så varje ämne ryms på en rad
-   i listan som poppar upp (den ärver textstorleken från select/option). */
+/* På smala mobilskärmar: krymp alla dropdowns (de var onödigt stora) så att
+   texten ryms bättre i listan som poppar upp. */
 @media (max-width: 480px) {
-  #topic,
-  #topic option {
+  select,
+  select option {
     font-size: 0.8rem;
   }
 }
