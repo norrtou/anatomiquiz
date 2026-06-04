@@ -346,6 +346,15 @@ option:disabled {
   background: #f3f4f6;
 }
 
+/* På smala mobilskärmar: krymp ämnesväljaren så varje ämne ryms på en rad
+   i listan som poppar upp (den ärver textstorleken från select/option). */
+@media (max-width: 480px) {
+  #topic,
+  #topic option {
+    font-size: 0.8rem;
+  }
+}
+
 input:hover,
 select:hover {
   border-color: var(--primary);
