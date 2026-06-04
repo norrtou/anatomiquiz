@@ -927,7 +927,7 @@ function init(){
   const imp = el('importFile')
   if(imp) imp.addEventListener('change', handleImportFile)
   el('backToSetup').addEventListener('click', ()=>{el('highscores').classList.add('hidden');el('setup').classList.remove('hidden')})
-  el('clearScores').addEventListener('click', ()=>{ if(confirm('Rensa topplista?')) clearScores() })
+  el('clearScores').addEventListener('click', ()=>{ if(confirm('Är du säker? Hela topplistan och statistiken raderas permanent och kan inte återställas.')) clearScores() })
   el('scoreFilter')?.addEventListener('change', renderScoreList)
 
   // Update difficulty options when topic changes
