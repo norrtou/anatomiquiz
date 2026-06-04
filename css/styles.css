@@ -1139,6 +1139,24 @@ ol li {
   line-height: 1.6;
 }
 
+/* Topplistan: liten text så varje post ryms på en enda rad */
+#scoreList {
+  overflow-x: auto;
+}
+
+#scoreList li {
+  font-size: 0.72rem;
+  line-height: 1.4;
+  margin-bottom: 4px;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  #scoreList li {
+    font-size: 0.6rem;
+  }
+}
+
 /* ============================================================================
    RESPONSIVE DESIGN
    Mobile-first approach ensures great experience on all devices
