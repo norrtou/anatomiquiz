@@ -57,7 +57,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.4.47'
+const APP_VERSION = '0.4.48'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -645,7 +645,10 @@ function renderStats(){
   const scores = getScores()
   const byTopic = {}
   scores.forEach(s=>{
-    const key = s.topicLabel || 'Okänt ämne'
+    // Visa bara ämnesnamnet utan förkortningsparentes, t.ex. "Lårben (femur)"
+    // → "Lårben", precis som topplistorna. Nyckeln blir samma så att resultat
+    // med och utan parentes grupperas ihop.
+    const key = (s.topicLabel || 'Okänt ämne').replace(/\s*\([^)]*\)\s*$/, '')
     if(!byTopic[key]) byTopic[key] = { count:0, pctSum:0, timeMs:0, timedQuestions:0 }
     byTopic[key].count++
     byTopic[key].pctSum += (s.score/s.total)*100

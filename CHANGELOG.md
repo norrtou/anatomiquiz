@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.4.48
+- Statistik per ämne visar nu bara ämnesnamnet utan förkortningsparentes (t.ex. "Lårben (femur)" → "Lårben"), precis som topplistorna. Resultat med och utan parentes grupperas på samma namn.
+- Highscore-/statistikdatan i localStorage är orörd; bara grupperingsnyckeln i `renderStats`.
+- Cachebustrar och APP_VERSION bumpade till 0.4.48.
+
 ## 0.4.47
 - Statistiktabellens typsnitt matchar nu resten av highscore (`.score-row`): 0.78rem på desktop och 0.62rem på mobil (tidigare 0.8/0.66rem), så texten ryms snyggt på mobilskärm.
 - Cachebustrar och APP_VERSION bumpade till 0.4.47.
