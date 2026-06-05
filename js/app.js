@@ -57,7 +57,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.4.45'
+const APP_VERSION = '0.4.46'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -591,6 +591,55 @@ function renderScoreList(){
   })
 }
 
+// Bästa resultat: topp 10 rankade på procent (högst först). Vid samma procent
+// (avrundad, dvs det som visas) rankar det med snabbast speltid över. Resultat
+// utan sparad tid (durationMs 0) hamnar sist vid lika procent. Följer samma
+// frågeantals-filter som "Senaste resultaten".
+function renderBestList(){
+  const sel = el('scoreFilter')
+  const filterVal = (sel && sel.value) ? sel.value : 'all'
+  const scores = getScores()
+  let list = filterVal === 'all'
+    ? scores
+    : scores.filter(s => s.total === parseInt(filterVal,10))
+  // Säkerhetsnät: finns det resultat men filtret gav tomt, visa alla i stället för "tomt".
+  if(list.length === 0 && scores.length > 0) list = scores
+  // Tid saknas (durationMs 0) behandlas som "oändligt långsam" så att resultat
+  // med uppmätt tid alltid rankar över ett otimat resultat vid samma procent.
+  const timeKey = s => (s.durationMs > 0 ? s.durationMs : Infinity)
+  list = [...list].sort((a,b)=>{
+    const pa = Math.round((a.score/a.total)*100)
+    const pb = Math.round((b.score/b.total)*100)
+    if(pb !== pa) return pb - pa
+    return timeKey(a) - timeKey(b)
+  }).slice(0,10)
+  const ol = el('bestList'); ol.innerHTML=''
+  if(list.length === 0){
+    const li = document.createElement('li')
+    li.textContent = 'Inga resultat än.'
+    ol.appendChild(li)
+    return
+  }
+  const mk = (cls, text) => { const sp = document.createElement('span'); sp.className = cls; sp.textContent = text; return sp }
+  list.forEach((s, i)=>{
+    const li = document.createElement('li')
+    li.className = 'score-row'
+    const pct = Math.round((s.score/s.total)*100)
+    const label = (s.topicLabel || 'Okänt ämne').replace(/\s*\([^)]*\)\s*$/, '')
+    const d = new Date(s.date)
+    const dateStr = d.toLocaleDateString('sv-SE') + ' ' + d.toLocaleTimeString('sv-SE', { hour: '2-digit', minute: '2-digit' })
+    li.append(
+      mk('sr-rank', (i+1) + '.'),
+      mk('sr-name', s.name),
+      mk('sr-topic', label),
+      mk('sr-score', `${s.score}/${s.total}`),
+      mk('sr-pct', `${pct}%`),
+      mk('sr-date', dateStr)
+    )
+    ol.appendChild(li)
+  })
+}
+
 // Statistik per ämne: antal genomförda quiz och genomsnittligt resultat i procent.
 function renderStats(){
   const scores = getScores()
@@ -656,6 +705,7 @@ function showHighscores(){
   buildScoreFilter()
   renderScoreList()
   renderStats()
+  renderBestList()
   // focus the list for keyboard users
   setTimeout(()=>{ el('scoreList').focus?.() },50)
 }
@@ -988,7 +1038,7 @@ function init(){
   if(imp) imp.addEventListener('change', handleImportFile)
   el('backToSetup').addEventListener('click', ()=>{el('highscores').classList.add('hidden');el('setup').classList.remove('hidden')})
   el('clearScores').addEventListener('click', ()=>{ if(confirm('Är du säker? Hela topplistan och statistiken raderas permanent och kan inte återställas.')) clearScores() })
-  el('scoreFilter')?.addEventListener('change', renderScoreList)
+  el('scoreFilter')?.addEventListener('change', ()=>{ renderScoreList(); renderBestList() })
 
   // Update difficulty options when topic changes
   el('topic').addEventListener('change', updateDifficultyOptions)
