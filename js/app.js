@@ -57,7 +57,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.4.52'
+const APP_VERSION = '0.4.53'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -675,7 +675,12 @@ function renderStats(){
     }
   })
   const ul = el('statsList'); ul.innerHTML=''
-  const entries = Object.entries(byTopic).sort((a,b)=> b[1].count - a[1].count)
+  // Sortera mest gjorda ämnet överst. Vid lika antal försök rankar det med
+  // högst snitt-% (pctSum/count) över.
+  const entries = Object.entries(byTopic).sort((a,b)=>{
+    if(b[1].count !== a[1].count) return b[1].count - a[1].count
+    return (b[1].pctSum / b[1].count) - (a[1].pctSum / a[1].count)
+  })
   if(entries.length === 0){
     const li = document.createElement('li')
     li.textContent = 'Ingen statistik än.'
