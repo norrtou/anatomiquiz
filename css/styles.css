@@ -1262,9 +1262,18 @@ ol li {
     width: auto;
   }
 
+  /* Fyra knappar på en rad: krymp font/padding/gap så de längsta orden
+     ("Topplista", "Inställningar") ryms på en rad utan radbrytning. */
+  .secondary-actions {
+    gap: 6px;
+  }
+
   .secondary-actions .btn {
     flex: 1 !important;
     width: 0;
+    padding: 8px 3px;
+    font-size: 0.66rem;
+    white-space: nowrap;
   }
 
   .btn-cancel {
