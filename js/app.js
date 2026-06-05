@@ -57,7 +57,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.5.1'
+const APP_VERSION = '0.5.2'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -891,6 +891,7 @@ function applySettings(){
   }
   if(typeof s.practiceWrong === 'boolean') el('practiceWrong').checked = s.practiceWrong
   if(typeof s.timerEnabled === 'boolean') el('timerEnabled').checked = s.timerEnabled
+  updateTopicOptions()
   updateStartButtons()
 }
 
@@ -904,13 +905,53 @@ function saveSettings(){
   try{ localStorage.setItem(SETTINGS_KEY, JSON.stringify(s)) }catch{}
 }
 
-// Vilka typer ett ämne erbjuder, avläst ur etikettens parentes, t.ex.
+// Vilka typer en ämnesetikett erbjuder, avläst ur parentesen, t.ex.
 // "Ben (MC+TF)" → {mc,tf}, "Muskler (FC)" → {fc}, "Tentaplugg (MC+FC)" → {mc,fc}.
-function topicCapabilities(){
-  const opt = el('topic')?.selectedOptions?.[0]
-  const m = opt ? opt.textContent.match(/\(([^)]*)\)\s*$/) : null
+// hasTag = etiketten har någon känd typtagg alls.
+function typeTagOf(text){
+  const m = (text || '').match(/\(([^)]*)\)\s*$/)
   const tag = m ? m[1].toUpperCase() : ''
-  return { mc: tag.includes('MC'), tf: tag.includes('TF'), fc: tag.includes('FC') }
+  return { mc: tag.includes('MC'), tf: tag.includes('TF'), fc: tag.includes('FC'), hasTag: /MC|TF|FC/.test(tag) }
+}
+
+function topicCapabilities(){
+  return typeTagOf(el('topic')?.selectedOptions?.[0]?.textContent)
+}
+
+// Komplett ämneslista (sparas före filtrering). Behövs för att kunna ÅTERskapa
+// dolda ämnen — på iOS/WebKit göms inte <option hidden>, så vi tar bort och
+// bygger om <option>-elementen i stället.
+let allTopicOptions = []
+function captureTopicOptions(){
+  const topicEl = el('topic')
+  if(topicEl) allTopicOptions = Array.from(topicEl.options).map(o => ({ value:o.value, text:o.textContent }))
+}
+
+// Visa bara ämnen som har minst en av de valda frågetyperna. Ämnen utan känd
+// typtagg visas alltid. Bevarar valt ämne om det fortfarande finns, annars
+// hoppar till första synliga (och uppdaterar svårighetsvalen).
+function updateTopicOptions(){
+  const topicEl = el('topic')
+  if(!topicEl || !allTopicOptions.length) return
+  const sel = getSelectedTypes()
+  const prev = topicEl.value
+  const visible = allTopicOptions.filter(o => {
+    const c = typeTagOf(o.text)
+    return !c.hasTag || sel.some(t => c[t])
+  })
+  topicEl.innerHTML = ''
+  visible.forEach(o => {
+    const opt = document.createElement('option')
+    opt.value = o.value
+    opt.textContent = o.text
+    topicEl.appendChild(opt)
+  })
+  if(visible.some(o => o.value === prev)){
+    topicEl.value = prev
+  } else if(visible.length){
+    topicEl.value = visible[0].value
+    updateDifficultyOptions()
+  }
 }
 
 // Skugga (inaktivera) en startknapp om dess läge inte är möjligt. Quiz kräver att
@@ -1150,7 +1191,7 @@ function init(){
 
   // Inställningssida: öppna/spara/tillbaka + brödsmulelänk.
   el('openSettings')?.addEventListener('click', showSettings)
-  el('saveSettings')?.addEventListener('click', ()=>{ saveSettings(); updateStartButtons(); hideSettings() })
+  el('saveSettings')?.addEventListener('click', ()=>{ saveSettings(); updateTopicOptions(); updateStartButtons(); hideSettings() })
   el('backFromSettings')?.addEventListener('click', ()=>{ applySettings(); hideSettings() })
   el('settingsCrumb')?.addEventListener('click', (e)=>{ e.preventDefault(); applySettings(); hideSettings() })
   // Frågetyps-kryssrutor: håll knapparnas av/på i synk medan man bockar.
@@ -1160,8 +1201,9 @@ function init(){
 
   // Uppdatera svårighetsval + startknapparnas av/på när ämnet byts.
   el('topic').addEventListener('change', ()=>{ updateDifficultyOptions(); updateStartButtons() })
+  captureTopicOptions()     // Spara hela ämneslistan INNAN filtrering
   updateDifficultyOptions() // Initial state
-  applySettings()           // Läs in sparade inställningar (uppdaterar även knapparna)
+  applySettings()           // Läs in sparade inställningar (filtrerar ämnen + uppdaterar knapparna)
 }
 
 document.addEventListener('DOMContentLoaded', init)
