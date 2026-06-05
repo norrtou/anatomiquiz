@@ -57,7 +57,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.4.51'
+const APP_VERSION = '0.4.52'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -550,6 +550,16 @@ function buildScoreFilter(){
   if(prev && Array.from(sel.options).some(o=>o.value===prev)) sel.value = prev
 }
 
+// Formaterar total speltid (ms) som m:ss, t.ex. 42000 → "0:42", 122000 → "2:02".
+// Äldre resultat utan sparad tid (durationMs 0) visas som "–".
+function formatDuration(ms){
+  if(!(ms > 0)) return '–'
+  const total = Math.round(ms / 1000)
+  const m = Math.floor(total / 60)
+  const s = total % 60
+  return `${m}:${String(s).padStart(2, '0')}`
+}
+
 function renderScoreList(){
   const sel = el('scoreFilter')
   // Tomt/ogiltigt filtervärde behandlas som "alla" så att data aldrig döljs av misstag.
@@ -587,6 +597,7 @@ function renderScoreList(){
       mk('sr-topic', label),
       mk('sr-score', `${s.score}/${s.total}`),
       mk(pct < 75 ? 'sr-pct weak' : 'sr-pct', `${pct}%`),
+      mk('sr-time', formatDuration(s.durationMs)),
       mk('sr-date', dateStr)
     )
     ol.appendChild(li)
@@ -638,6 +649,7 @@ function renderBestList(){
       mk('sr-topic', label),
       mk('sr-score', `${s.score}/${s.total}`),
       mk(pct < 75 ? 'sr-pct weak' : 'sr-pct', `${pct}%`),
+      mk('sr-time', formatDuration(s.durationMs)),
       mk('sr-date', dateStr)
     )
     ol.appendChild(li)
