@@ -57,7 +57,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.5.2'
+const APP_VERSION = '0.5.3'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -954,17 +954,15 @@ function updateTopicOptions(){
   }
 }
 
-// Skugga (inaktivera) en startknapp om dess läge inte är möjligt. Quiz kräver att
-// ämnet HAR en quiz-typ (MC/TF) som också är ikryssad i filtret; flashcards kräver
-// att ämnet har FC och att Flashcards är ikryssat. Uppdateras dynamiskt vid både
-// ämnesbyte och filterändring.
+// Skugga (inaktivera) en startknapp om det VALDA ämnet inte erbjuder det läget:
+// quiz kräver att ämnet har MC eller TF, flashcards kräver att ämnet har FC.
+// Knapparna speglar alltså ämnet; frågetypsfiltret sköter ämneslistan (inte
+// knapparna), så ett dolt/avbockat filter gör inte knappen skuggad för ett ämne
+// som faktiskt har läget. Uppdateras vid ämnesbyte och när listan filtrerats om.
 function updateStartButtons(){
-  const sel = getSelectedTypes()
   const cap = topicCapabilities()
-  const quizActive = (cap.mc && sel.includes('mc')) || (cap.tf && sel.includes('tf'))
-  const fcActive = cap.fc && sel.includes('fc')
-  const sb = el('startBtn'); if(sb) sb.disabled = !quizActive
-  const fb = el('startFlashcardsBtn'); if(fb) fb.disabled = !fcActive
+  const sb = el('startBtn'); if(sb) sb.disabled = !(cap.mc || cap.tf)
+  const fb = el('startFlashcardsBtn'); if(fb) fb.disabled = !cap.fc
 }
 
 function showSettings(){
