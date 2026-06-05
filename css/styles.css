@@ -1510,7 +1510,7 @@ ol li {
   gap: 10px;
   padding: 9px 8px;
   border-bottom: 1px solid var(--bg-gradient-start);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   line-height: 1.4;
   border-radius: 6px;
 }
@@ -1588,7 +1588,7 @@ ol li {
 
 @media (max-width: 640px) {
   .stat-row {
-    font-size: 0.66rem;
+    font-size: 0.62rem;
     gap: 7px;
     padding: 8px 6px;
   }
