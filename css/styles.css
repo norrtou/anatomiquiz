@@ -9,6 +9,10 @@
   --primary-light: #34d399;     /* Lighter emerald for highlights */
   --primary-dark: #059669;      /* Darker emerald for depth */
 
+  /* Accent (teal) - komplementton för sekundära genvägsknappar (Case, Ordlista) */
+  --accent: #0d9488;            /* Teal */
+  --accent-dark: #0f766e;       /* Mörkare teal för text/kontrast */
+
   /* Backgrounds */
   --bg-main: #dcfce7;           /* Stronger green background for better visibility */
   --bg-gradient-start: #bbf7d0; /* Mint green for gradients */
@@ -830,6 +834,26 @@ select:focus {
 
 .secondary-actions .btn {
   flex: 1;
+}
+
+/* Accent-rad (teal) — genvägsknapparna Case + Ordlista längst ned på framsidan */
+.accent-row .btn {
+  border-color: var(--accent);
+  color: var(--accent-dark);
+}
+
+.accent-row .btn:hover:not(:disabled) {
+  background: rgba(13, 148, 136, 0.06);
+  border-color: var(--accent-dark);
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
+}
+
+.accent-row .btn:active:not(:disabled) {
+  box-shadow: 0 2px 4px rgba(13, 148, 136, 0.15);
+}
+
+.accent-row .btn:focus {
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.25);
 }
 
 .info-about {
@@ -1658,3 +1682,111 @@ ol li {
   .st-bar { flex-basis: 48px; }
   .st-time { min-width: 3.6em; }
 }
+
+/* ============================================================================
+   CASE — kliniska fallbeskrivningar (case.html)
+   ============================================================================ */
+
+.case-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0 20px;
+  flex-wrap: wrap;
+}
+
+.case-filter label {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.case-filter select {
+  flex: 1 1 160px;
+  min-width: 140px;
+  margin: 0;
+}
+
+.case-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.case-card {
+  border: 1px solid rgba(16, 185, 129, 0.18);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.04) 0%, rgba(52, 211, 153, 0.04) 100%);
+  padding: 20px;
+}
+
+.case-card.hidden { display: none; }
+
+.case-card-head {
+  margin-bottom: 12px;
+}
+
+.case-topic-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--primary-dark);
+  background: rgba(16, 185, 129, 0.12);
+  border-radius: 999px;
+  padding: 3px 10px;
+  margin-bottom: 8px;
+}
+
+.case-title {
+  margin: 0 0 4px 0;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.case-meta {
+  margin: 0;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.case-body p {
+  margin: 0 0 12px 0;
+  line-height: 1.7;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.case-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Medicinskt latinska termer kursiveras för att skilja dem från brödtexten */
+.case-body em {
+  font-style: italic;
+  color: var(--primary-dark);
+}
+
+/* Mobil: case-texten är lång, så den får en något mindre grad och tätare radavstånd */
+@media (max-width: 640px) {
+  .case-body p {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+  .case-title {
+    font-size: 1rem;
+  }
+}
+
+.case-empty {
+  margin: 18px 0 0;
+  padding: 16px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.case-empty.hidden { display: none; }

@@ -94,8 +94,8 @@
   <link rel="manifest" href="/anatomiquiz/manifest.json">
 
   <!-- Preload kritisk CSS -->
-  <link rel="preload" href="css/styles.css?v=0.5.3" as="style">
-  <link rel="stylesheet" href="css/styles.css?v=0.5.3">
+  <link rel="preload" href="css/styles.css?v=0.6.0" as="style">
+  <link rel="stylesheet" href="css/styles.css?v=0.6.0">
 </head>
 <body>
 
@@ -166,9 +166,12 @@
         </div>
         <div class="secondary-actions">
           <button class="btn" onclick="window.location.href='info.html'">Info</button>
-          <button class="btn" onclick="window.location.href='medicinskordlista.html'">Ordlista</button>
           <button id="viewScores" class="btn">Topplista</button>
           <button id="openSettings" class="btn">Inställningar</button>
+        </div>
+        <div class="secondary-actions accent-row">
+          <button class="btn" onclick="window.location.href='case.html'">Exempel med case</button>
+          <button class="btn" onclick="window.location.href='medicinskordlista.html'">Ordlista</button>
         </div>
       </div>
     </section>
@@ -325,6 +328,10 @@
          Topplista — sparade resultat (dold initialt)
          ========================================================= -->
     <section id="highscores" class="card hidden" aria-labelledby="hsHeading">
+      <nav class="crumbs" aria-label="Brödsmulor">
+        <a href="#" id="scoresCrumb" class="crumb-link">‹ Start</a>
+        <span class="crumb-current" aria-current="page">Topplista</span>
+      </nav>
       <h2 id="hsHeading">Senaste resultaten</h2>
       <div class="hs-filter">
         <label for="scoreFilter">Visa</label>
@@ -360,6 +367,6 @@
   </main>
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
-  <script src="js/app.js?v=0.5.3" defer></script>
+  <script src="js/app.js?v=0.6.0" defer></script>
 </body>
 </html>
