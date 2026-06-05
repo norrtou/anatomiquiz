@@ -57,10 +57,12 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.4.53'
+const APP_VERSION = '0.5.0'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
+// Permanenta inställningar (namn, valda frågetyper, öva-extra, visa tid).
+const SETTINGS_KEY = 'hur_settings'
 
 const el = id => document.getElementById(id)
 
@@ -293,7 +295,13 @@ function sampleWithoutReplacement(arr, n){
   return copy.slice(0, Math.min(n, copy.length))
 }
 
-async function startQuiz(){
+async function startQuiz(allowedTypes){
+  // Vilka frågetyper som får vara med (delmängd av mc/tf). Saknas argument
+  // (t.ex. "Spela igen") används de sparade valen, annars båda.
+  if(!allowedTypes || !allowedTypes.length){
+    allowedTypes = getSelectedTypes().filter(t => t === 'mc' || t === 'tf')
+    if(!allowedTypes.length) allowedTypes = ['mc','tf']
+  }
   const name = el('playerName').value.trim() || 'Spelare'
   const num = parseInt(el('numQuestions').value,10)
   quizTimerOn = !!el('timerEnabled')?.checked
@@ -328,6 +336,10 @@ async function startQuiz(){
     const isPlaceholderSource = !!(q.source && String(q.source).toLowerCase()==='placeholder')
     const isPlaceholderId = /^ph\d{3}$/.test(String(q.id))
     if(isPlaceholderSource || isPlaceholderId) return false
+
+    // Frågetypsfilter: bara valda typer (mc/tf). Utesluter bl.a. fc-kort som
+    // 'blandade' annars drar in, så de aldrig hamnar i ett quiz.
+    if(!allowedTypes.includes(q.type)) return false
 
     // Handle topic filtering
     let topicMatch = false
@@ -393,7 +405,9 @@ async function startQuiz(){
   // Fyll resten av vändan med vanlig slump, behåll tf-taket (~10 %) över helheten.
   const fillCount = totalNeeded - forced.length
   const remainingPool = shuffledFiltered.filter(q => !forcedIds.has(q.id))
-  const maxTf = Math.floor(num * 0.1)
+  // TF-tak på ~10 % gäller bara när MC också är valt; väljer man enbart TF
+  // ska hela quizet få vara TF (annars skulle taket svälta urvalet).
+  const maxTf = allowedTypes.includes('mc') ? Math.floor(num * 0.1) : num
   const forcedTf = forced.filter(q => q.type === 'tf').length
   const tfPool = remainingPool.filter(q => q.type === 'tf')
   const mcPool = remainingPool.filter(q => q.type === 'mc' && (1 + (q.distractors?.length||0)) >= 3 && (1 + (q.distractors?.length||0)) <= 5)
@@ -853,6 +867,76 @@ let fcTimerInterval = null
 let fcStartTime = 0
 let fcTimerOn = false
 
+// ---------------------------------------------------------------------------
+// Inställningar & frågetypsfilter
+// ---------------------------------------------------------------------------
+
+// Valda frågetyper enligt kryssrutorna (input[data-type] som är ikryssade).
+function getSelectedTypes(){
+  return Array.from(document.querySelectorAll('input[data-type]')).filter(c => c.checked).map(c => c.dataset.type)
+}
+
+function loadSettings(){
+  try{ return JSON.parse(localStorage.getItem(SETTINGS_KEY)) || {} }catch{ return {} }
+}
+
+// Läs in sparade inställningar i fälten (namn, frågetyper, kryssrutor). Anropas
+// vid start och varje gång inställningssidan lämnas utan att spara, så att
+// "Tillbaka" återställer osparade ändringar.
+function applySettings(){
+  const s = loadSettings()
+  if(typeof s.name === 'string') el('playerName').value = s.name
+  if(Array.isArray(s.types)){
+    document.querySelectorAll('input[data-type]').forEach(c=>{ c.checked = s.types.includes(c.dataset.type) })
+  }
+  if(typeof s.practiceWrong === 'boolean') el('practiceWrong').checked = s.practiceWrong
+  if(typeof s.timerEnabled === 'boolean') el('timerEnabled').checked = s.timerEnabled
+  updateStartButtons()
+}
+
+function saveSettings(){
+  const s = {
+    name: el('playerName').value.trim(),
+    types: getSelectedTypes(),
+    practiceWrong: !!el('practiceWrong')?.checked,
+    timerEnabled: !!el('timerEnabled')?.checked
+  }
+  try{ localStorage.setItem(SETTINGS_KEY, JSON.stringify(s)) }catch{}
+}
+
+// Vilka typer ett ämne erbjuder, avläst ur etikettens parentes, t.ex.
+// "Ben (MC+TF)" → {mc,tf}, "Muskler (FC)" → {fc}, "Tentaplugg (MC+FC)" → {mc,fc}.
+function topicCapabilities(){
+  const opt = el('topic')?.selectedOptions?.[0]
+  const m = opt ? opt.textContent.match(/\(([^)]*)\)\s*$/) : null
+  const tag = m ? m[1].toUpperCase() : ''
+  return { mc: tag.includes('MC'), tf: tag.includes('TF'), fc: tag.includes('FC') }
+}
+
+// Skugga (inaktivera) en startknapp om dess läge inte är möjligt. Quiz kräver att
+// ämnet HAR en quiz-typ (MC/TF) som också är ikryssad i filtret; flashcards kräver
+// att ämnet har FC och att Flashcards är ikryssat. Uppdateras dynamiskt vid både
+// ämnesbyte och filterändring.
+function updateStartButtons(){
+  const sel = getSelectedTypes()
+  const cap = topicCapabilities()
+  const quizActive = (cap.mc && sel.includes('mc')) || (cap.tf && sel.includes('tf'))
+  const fcActive = cap.fc && sel.includes('fc')
+  const sb = el('startBtn'); if(sb) sb.disabled = !quizActive
+  const fb = el('startFlashcardsBtn'); if(fb) fb.disabled = !fcActive
+}
+
+function showSettings(){
+  applySettings()
+  el('setup').classList.add('hidden')
+  el('settings').classList.remove('hidden')
+}
+
+function hideSettings(){
+  el('settings').classList.add('hidden')
+  el('setup').classList.remove('hidden')
+}
+
 async function startFlashcards() {
   const name    = el('playerName').value.trim() || 'Spelare'
   const num     = parseInt(el('numQuestions').value, 10)
@@ -1039,7 +1123,7 @@ async function loadVersion() {
 function init(){
   loadVersion()
   loadQuestions().then(()=>console.log('Frågor laddade:', allQuestions.length))
-  el('startBtn').addEventListener('click', startQuiz)
+  el('startBtn').addEventListener('click', ()=>startQuiz())
   el('startFlashcardsBtn').addEventListener('click', startFlashcards)
   el('fcCancelBtn').addEventListener('click', cancelFlashcards)
   el('fcNextBtn').addEventListener('click', nextFlashcard)
@@ -1064,9 +1148,20 @@ function init(){
   el('clearScores').addEventListener('click', ()=>{ if(confirm('Är du säker? Hela topplistan och statistiken raderas permanent och kan inte återställas.')) clearScores() })
   el('scoreFilter')?.addEventListener('change', ()=>{ renderScoreList(); renderBestList() })
 
-  // Update difficulty options when topic changes
-  el('topic').addEventListener('change', updateDifficultyOptions)
+  // Inställningssida: öppna/spara/tillbaka + brödsmulelänk.
+  el('openSettings')?.addEventListener('click', showSettings)
+  el('saveSettings')?.addEventListener('click', ()=>{ saveSettings(); updateStartButtons(); hideSettings() })
+  el('backFromSettings')?.addEventListener('click', ()=>{ applySettings(); hideSettings() })
+  el('settingsCrumb')?.addEventListener('click', (e)=>{ e.preventDefault(); applySettings(); hideSettings() })
+  // Frågetyps-kryssrutor: håll knapparnas av/på i synk medan man bockar.
+  document.querySelectorAll('input[data-type]').forEach(c=>{
+    c.addEventListener('change', updateStartButtons)
+  })
+
+  // Uppdatera svårighetsval + startknapparnas av/på när ämnet byts.
+  el('topic').addEventListener('change', ()=>{ updateDifficultyOptions(); updateStartButtons() })
   updateDifficultyOptions() // Initial state
+  applySettings()           // Läs in sparade inställningar (uppdaterar även knapparna)
 }
 
 document.addEventListener('DOMContentLoaded', init)

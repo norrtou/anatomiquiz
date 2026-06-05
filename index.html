@@ -94,8 +94,8 @@
   <link rel="manifest" href="/anatomiquiz/manifest.json">
 
   <!-- Preload kritisk CSS -->
-  <link rel="preload" href="css/styles.css?v=0.4.53" as="style">
-  <link rel="stylesheet" href="css/styles.css?v=0.4.53">
+  <link rel="preload" href="css/styles.css?v=0.5.0" as="style">
+  <link rel="stylesheet" href="css/styles.css?v=0.5.0">
 </head>
 <body>
 
@@ -159,20 +159,6 @@
         <option value="Hard">Svår</option>
       </select>
 
-      <label for="playerName">Mitt namn</label>
-      <input id="playerName" placeholder="Mitt namn" aria-label="Mitt namn" autocomplete="nickname" />
-
-      <div class="checkbox-group">
-        <label class="checkbox-row" for="practiceWrong">
-          <input type="checkbox" id="practiceWrong" />
-          <span>Öva extra på de jag svarar fel på <small>(gäller quiz)</small></span>
-        </label>
-        <label class="checkbox-row" for="timerEnabled">
-          <input type="checkbox" id="timerEnabled" checked />
-          <span>Visa tid</span>
-        </label>
-      </div>
-
       <div class="setup-actions">
         <div class="primary-actions">
           <button id="startBtn" class="btn primary btn-start">Starta quiz</button>
@@ -182,7 +168,57 @@
           <button class="btn" onclick="window.location.href='info.html'">Info</button>
           <button class="btn" onclick="window.location.href='medicinskordlista.html'">Ordlista</button>
           <button id="viewScores" class="btn">Topplista</button>
+          <button id="openSettings" class="btn">Inställningar</button>
         </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Inställningssida — sparas permanent (dold initialt).
+         Namn, frågetyper (piller), öva-extra och visa tid bor här.
+         ========================================================= -->
+    <section id="settings" class="card hidden" aria-labelledby="settingsHeading">
+      <nav class="crumbs" aria-label="Brödsmulor">
+        <a href="#" id="settingsCrumb" class="crumb-link">‹ Start</a>
+        <span class="crumb-current" aria-current="page">Inställningar</span>
+      </nav>
+
+      <h2 id="settingsHeading">Inställningar</h2>
+
+      <label for="playerName">Mitt namn</label>
+      <input id="playerName" placeholder="Mitt namn" aria-label="Mitt namn" autocomplete="nickname" />
+
+      <span class="settings-label" id="qtypeLabel">Frågetyper</span>
+      <div class="checkbox-group" role="group" aria-labelledby="qtypeLabel">
+        <label class="checkbox-row" for="typeMc">
+          <input type="checkbox" id="typeMc" data-type="mc" checked />
+          <span>Flervalsfrågor</span>
+        </label>
+        <label class="checkbox-row" for="typeTf">
+          <input type="checkbox" id="typeTf" data-type="tf" checked />
+          <span>Sant eller falskt</span>
+        </label>
+        <label class="checkbox-row" for="typeFc">
+          <input type="checkbox" id="typeFc" data-type="fc" checked />
+          <span>Flashcards</span>
+        </label>
+      </div>
+      <p class="settings-hint">Välj vilka frågetyper du vill öva på. Flervalsfrågor och Sant eller falskt gäller quizet, Flashcards gäller flashcards-läget.</p>
+
+      <div class="checkbox-group">
+        <label class="checkbox-row" for="practiceWrong">
+          <input type="checkbox" id="practiceWrong" />
+          <span>Öva extra på de jag svarar fel på <small>(gäller quiz)</small></span>
+        </label>
+        <label class="checkbox-row" for="timerEnabled">
+          <input type="checkbox" id="timerEnabled" checked />
+          <span>Visa tid <small>(Tid räknas alltid, men du vill kanske inte stressas av att se räknaren)</small></span>
+        </label>
+      </div>
+
+      <div class="actions">
+        <button id="saveSettings" class="btn primary">Spara</button>
+        <button id="backFromSettings" class="btn">Tillbaka</button>
       </div>
     </section>
 
@@ -324,6 +360,6 @@
   </main>
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
-  <script src="js/app.js?v=0.4.53" defer></script>
+  <script src="js/app.js?v=0.5.0" defer></script>
 </body>
 </html>
