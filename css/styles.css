@@ -1505,8 +1505,10 @@ ol li {
 
 /* Statistikrad: ämne | antal försök | stapel | procent | tid/fråga.
    Stapeln (.st-bar) krymper/växer; övriga kolumner har fast bredd så att
-   procent och tid radar upp sig prydligt. Speglar topplistans .score-row. */
-.stat-row {
+   procent och tid radar upp sig prydligt. Speglar topplistans .score-row.
+   OBS: selektorn måste vara mer specifik än `.stats-list li` (0,1,1) annars
+   vinner dess font-size: 0.9rem — därför `.stats-list .stat-row` (0,2,0). */
+.stats-list .stat-row {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1589,7 +1591,7 @@ ol li {
 }
 
 @media (max-width: 640px) {
-  .stat-row {
+  .stats-list .stat-row {
     font-size: 0.62rem;
     gap: 7px;
     padding: 8px 6px;
