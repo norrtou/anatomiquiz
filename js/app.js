@@ -57,7 +57,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.4.44'
+const APP_VERSION = '0.4.45'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -616,14 +616,34 @@ function renderStats(){
   }
   entries.forEach(([label, d])=>{
     const avg = Math.round(d.pctSum / d.count)
-    let text = `${label}: ${d.count} försök — i snitt ${avg}%`
+    let timeText = ''
     if(d.timedQuestions > 0){
       const secPerQ = (d.timeMs / d.timedQuestions) / 1000
       const tPerQ = secPerQ >= 10 ? Math.round(secPerQ) : secPerQ.toFixed(1)
-      text += ` — ca ${tPerQ} s/fråga`
+      timeText = `${tPerQ} s/fr`
     }
     const li = document.createElement('li')
-    li.textContent = text
+    // Svaga ämnen (< 75 % snitt) markeras rött (stapel + procent) som en
+    // varningssignal om vad som behöver pluggas mer. Tröskeln matchar samma
+    // röda ton som fel svar (--error).
+    li.className = avg < 75 ? 'stat-row weak' : 'stat-row'
+    // Kolumner: ämne | antal försök | stapel+procent | tid/fråga.
+    // Stapelns bredd speglar snittprocenten; allt textinnehåll är riktiga
+    // noder så att skärmläsare läser ämne, försök, procent och tid.
+    const topic = document.createElement('span')
+    topic.className = 'st-topic'; topic.textContent = label
+    const count = document.createElement('span')
+    count.className = 'st-count'; count.textContent = `${d.count} försök`
+    const bar = document.createElement('span')
+    bar.className = 'st-bar'; bar.setAttribute('aria-hidden', 'true')
+    const fill = document.createElement('span')
+    fill.className = 'st-bar-fill'; fill.style.width = `${avg}%`
+    bar.appendChild(fill)
+    const pct = document.createElement('span')
+    pct.className = 'st-pct'; pct.textContent = `${avg}%`
+    const time = document.createElement('span')
+    time.className = 'st-time'; time.textContent = timeText
+    li.append(topic, count, bar, pct, time)
     ul.appendChild(li)
   })
 }

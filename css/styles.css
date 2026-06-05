@@ -1499,3 +1499,98 @@ ol li {
 .stats-list li:last-child {
   border-bottom: none;
 }
+
+/* Statistikrad: ämne | antal försök | stapel | procent | tid/fråga.
+   Stapeln (.st-bar) krymper/växer; övriga kolumner har fast bredd så att
+   procent och tid radar upp sig prydligt. Speglar topplistans .score-row. */
+.stat-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 8px;
+  border-bottom: 1px solid var(--bg-gradient-start);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  border-radius: 6px;
+}
+
+.stat-row:nth-child(odd) {
+  background: rgba(16, 185, 129, 0.06);
+}
+
+.stat-row:last-child {
+  border-bottom: none;
+}
+
+.st-topic {
+  font-weight: 700;
+  color: var(--text-primary);
+  flex: 1 1 auto;
+  min-width: 3em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.st-count {
+  flex: 0 0 auto;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.st-bar {
+  flex: 0 0 70px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(16, 185, 129, 0.15);
+  overflow: hidden;
+}
+
+.st-bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+}
+
+.st-pct {
+  flex: 0 0 auto;
+  min-width: 2.6em;
+  text-align: right;
+  font-weight: 700;
+  color: var(--primary-dark);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Svagt ämne (< 75 % snitt): röd stapel och röd procent som varningssignal. */
+.stat-row.weak .st-bar {
+  background: rgba(239, 68, 68, 0.15);
+}
+
+.stat-row.weak .st-bar-fill {
+  background: linear-gradient(90deg, var(--error) 0%, #f87171 100%);
+}
+
+.stat-row.weak .st-pct {
+  color: var(--error);
+}
+
+.st-time {
+  flex: 0 0 auto;
+  min-width: 4.2em;
+  text-align: right;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 640px) {
+  .stat-row {
+    font-size: 0.66rem;
+    gap: 7px;
+    padding: 8px 6px;
+  }
+  .st-bar { flex-basis: 48px; }
+  .st-time { min-width: 3.6em; }
+}
