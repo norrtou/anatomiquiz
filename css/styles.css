@@ -1172,6 +1172,8 @@ ol li {
 .score-row .sr-topic { color: var(--text-secondary); flex: 1 1 auto; min-width: 2em; overflow: hidden; text-overflow: ellipsis; }
 .score-row .sr-score { font-variant-numeric: tabular-nums; }
 .score-row .sr-pct { font-weight: 700; color: var(--primary); font-variant-numeric: tabular-nums; }
+/* Ej klarat (< 75 %): röd procenttext, samma röda ton som statistikens svaga ämnen. */
+.score-row .sr-pct.weak { color: var(--error); }
 .score-row .sr-date { color: var(--text-secondary); font-variant-numeric: tabular-nums; }
 
 @media (max-width: 640px) {

@@ -57,7 +57,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.4.48'
+const APP_VERSION = '0.4.49'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -579,12 +579,14 @@ function renderScoreList(){
     const label = (s.topicLabel || 'Okänt ämne').replace(/\s*\([^)]*\)\s*$/, '')
     const d = new Date(s.date)
     const dateStr = d.toLocaleDateString('sv-SE') + ' ' + d.toLocaleTimeString('sv-SE', { hour: '2-digit', minute: '2-digit' })
+    // Procenttexten färgas grönt vid klarat (≥ 75 %) och rött vid ej klarat
+    // (< 75 %), samma tröskel och röda ton som statistikens svaga ämnen.
     li.append(
       mk('sr-rank', (i+1) + '.'),
       mk('sr-name', s.name),
       mk('sr-topic', label),
       mk('sr-score', `${s.score}/${s.total}`),
-      mk('sr-pct', `${pct}%`),
+      mk(pct < 75 ? 'sr-pct weak' : 'sr-pct', `${pct}%`),
       mk('sr-date', dateStr)
     )
     ol.appendChild(li)
