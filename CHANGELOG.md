@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.6.2
+- **Språk- och faktagranskning av hela ämnet Ben/Osteologi** (`data/ben.json`, 445 frågor). Samtliga frågor genomgångna mot både språk och fakta.
+- **Faktafel rättade:** "Karpometakarpalleder är kulleder" var markerat Sant → **Falskt** (CMC-leder är sadel-/planleder, inte kulleder); spongiöst ben beskrevs ha "luftfyllda rum" → **märgfyllda hålrum**; "benmassa ökar genom livet" → benmassan **når sitt maximum runt 30 års ålder**.
+- **Felaktigt ord genomgående:** *os coccygis* kallades "gödben" (inte ett riktigt svenskt anatomiord) → **svansbenet** i samtliga ~12 frågor.
+- **Logiskt bakvända prompter:** ~25 frågor av typen "os frontale är svenska namnet för …" (kallade det *latinska* namnet "svenska namnet") omskrivna till "Vad är os frontale på svenska?".
+- **Språk:** systematiska stavfel (tarbenen→tarsalbenen, bröstkassen→bröstkorgen, mellanhåndsben, Vilkett→Vilket, sittbensknöppen→sittbensknölen, Strumma→Strama, möjliggord, avstavade ben-vävnad/ben-märg), ihopblandad latin/engelska i ligamentfrågorna, samt awkward fraser ("ett ben själv", "längd-tillväxt") städade. Alla frågor och svarsalternativ börjar nu med versal.
+- Cachebustrar och APP_VERSION bumpade till 0.6.2.
+- Highscore-datan i localStorage är orörd.
+
 ## 0.6.1
 - **Språk- och faktagranskning av hela ämnet Handen** (`data/handen.json`, 490 → 487 frågor). Samtliga frågor genomgångna mot både språk och fakta.
 - **Faktafel rättade:** M. palmaris longus stod felaktigt som *Extensor* (→ Flexor); radiell/ulnar halva av ringfingrets innervation var omkastad mellan n. medianus och n. ulnaris; os pisiforme/os triquetrum var klassade som "oregelbundet ben" (→ kortben, som övriga handrotsben); en distraktor var identisk med det rätta svaret. I nervutbredningsrutan rättades fyra celler från Sant → Falskt (n. medianus saknar funktion för lillfinger och handryggen; n. radialis saknar lillfinger och palmar funktion). Antalet intrinsiska handmuskler rättat 17 → 19.
