@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.6.1
+- **Språk- och faktagranskning av hela ämnet Handen** (`data/handen.json`, 490 → 487 frågor). Samtliga frågor genomgångna mot både språk och fakta.
+- **Faktafel rättade:** M. palmaris longus stod felaktigt som *Extensor* (→ Flexor); radiell/ulnar halva av ringfingrets innervation var omkastad mellan n. medianus och n. ulnaris; os pisiforme/os triquetrum var klassade som "oregelbundet ben" (→ kortben, som övriga handrotsben); en distraktor var identisk med det rätta svaret. I nervutbredningsrutan rättades fyra celler från Sant → Falskt (n. medianus saknar funktion för lillfinger och handryggen; n. radialis saknar lillfinger och palmar funktion). Antalet intrinsiska handmuskler rättat 17 → 19.
+- **Borttaget:** tre meningslösa dubblettfrågor (pronation kopplat till grepptyp, där greppet var irrelevant); en behölls i omskrivet, vettigt skick.
+- **Språk:** stavfel (måntbenet, tumaddduktor, Saddeleled, Gångjärnsledd, intrinsik, gynglymus m.fl.), engelska ord översatta till svenska (medial/lateral half ring finger, dorsal surface, interossei muscles m.fl.), trasig meningsbyggnad, nonsensord (tummetubsen, pekarfingerbenen, "Vid polsen"), särskrivningar, genusfel och telegrafiska meningar omskrivna. Alla frågor och svarsalternativ börjar nu med versal.
+- De svåra leder-frågorna (q445–q492) var redan välskrivna och lämnades orörda.
+- Cachebustrar och APP_VERSION bumpade till 0.6.1.
+- Highscore-datan i localStorage är orörd.
+
 ## 0.6.0
 - Ny **Case-sektion** (`case.html`): kliniska fallbeskrivningar som använder ämnenas anatomiska begrepp i sitt sammanhang. Varje case är ungefär en halv A4 långt, beskriver en person med en typisk krämpa/skada och använder medicinskt latinska termer med lekmannatermen inom parentes efter. Brödsmula tillbaka till start som vanligt.
 - **Framsidan:** ny knapprad längst ned med **Case** + **Ordlista** (Ordlista flyttad dit från sekundärraden, som nu rymmer Info, Topplista, Inställningar). Raden har en **teal-accent** (`--accent` #0d9488) som komplementton till det gröna, via klassen `.accent-row`.
