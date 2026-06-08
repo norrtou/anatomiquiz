@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.6.5
+- **Språk- och faktagranskning av hela ämnet Muskler** (`data/muskler.json`, 273 frågor, inkl. 100 Hard-tillämpningsfrågor). Fakta (innervation, ursprung/fäste, funktion) var korrekt — åtgärderna var språkliga.
+- **Stavfel:** `vadsmuskel` → vadmuskeln; `Att rät ut` → Att räta ut (q157).
+- **Nervförkortning:** `innerveras av n ulnaris/medianus/radialis` → `N. ulnaris/medianus/radialis` (q85–q99).
+- **Versalisering:** svarsalternativen i namnfrågorna (q1–q14) och i klassificeringsfrågorna (extrinsic/intrinsic) började med liten bokstav — nu versaliserade. Termen intrinsic/extrinsic behållen (samma som det källbaserade tentaplugg-ämnet).
+- Cachebustrar och APP_VERSION bumpade till 0.6.5.
+- Highscore-datan i localStorage är orörd.
+
 ## 0.6.4
 - **Granskning av ämnet Tentaplugg** (`data/tentaplugg.json`, 353 kliniska scenariofrågor). Ämnet var genomgående välskrivet (fullständiga meningar, korrekt grammatik, korrekta fakta, redan versaliserat) — endast två rättelser behövdes:
   - **studier_q200:** prompten var självmotsägande ("celler **i CNS** som bildar myelin i det **perifera** nervsystemet") — Schwannceller hör till PNS. "i CNS" borttaget.
