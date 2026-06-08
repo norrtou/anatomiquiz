@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.6.8
+- **Granskning av Studenters flashcards** (`data/studenters_flashcards.json`, 806 kort). Den informella stilen (minnesregler, emojis, "reversed"-kort) lämnades orörd; fokus på rena fel och obegripliga frågor.
+- **Dolda Unicode-gremlins:** 31 kort (mest "gamla tentor") hade dekomponerad Unicode (t.ex. "ö" = o + kombinerande prick, "å" = a + ring) från copy-paste — hela filen NFC-normaliserad. Detta gjorde också att vissa typos kunde rättas (t.ex. "fö rmedlas" → "förmedlas").
+- **Bildberoende frågor gjorda självständiga:** "nervflätan **på bilden**…" (ffc_290, "på bilden" borttaget), "Vilken muskel flekterar **den markerade leden**?" → "…DIP-leden (yttersta fingerleden)?" (ffc_307), och "Vilka ben/leder pekar **de röda pilarna** på?" omskriven till en självständig namnge-fråga med komplett svar (ffc_409).
+- **Typos:** Claviceln → Clavicula (flera kort), Fascialis → Facialis, körtlen → körteln (Bukspottskörteln/Sköldkörteln), Klohande → Klohand, Carpometakapalled → Carpometakarpalled, Superus/Inferus → Superior/Inferior.
+- **Stilnormalisering (på begäran):** förkortningarna för muskler och nerver konsekvent satta till `M. xxx` / `N. xxx` med gement namn (t.ex. "M Deltoideus" → "M. deltoideus", "n Ulnaris" → "N. ulnaris") över hela settet.
+- Cachebustrar och APP_VERSION bumpade till 0.6.8.
+- Highscore-datan i localStorage är orörd.
+
 ## 0.6.7
 - **Blodomloppet** (`data/blodomloppet.json`): granskning av hela ämnet (100 sant/falskt-frågor) — i övrigt felfritt (korrekt fakta, rena meningar, redan versaliserade). En enda otydlig fråga skärptes:
   - **q93:** "Blodet passerar lungorna innan kroppen i kretsloppet." (tvetydig — saknade referenspunkt i ett slutet kretslopp) → "Blodet passerar lungorna direkt efter att ha lämnat **vänster kammare**." Svaret är fortsatt Falskt och bildar nu ett entydigt kontrastpar med q94 (höger kammare → Sant).
