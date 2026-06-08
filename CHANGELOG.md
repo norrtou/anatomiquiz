@@ -1,5 +1,17 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.6.11
+- **Spoiler-städning över alla ämnen:** sökte systematiskt (med stam-/böjningsmatchning) efter MC-frågor där en redundant parentes-gloss avslöjar svaret genom att upprepa ett ord ur frågan. 8 äkta läckor täppta:
+  - **ben q314:** "längd**tillväxt**?" → svar "Epifysplattorna ~~(tillväxtplattorna)~~".
+  - **handen q257/q258:** prompten innehöll översättningsglosan "(volart/dorsalt radiocarpalligament)" som gav bort svaret "Volar/Dorsal" — borttagen.
+  - **handen q492:** svar "Dorsala aponeurosen ~~(sträckapparaten)~~" (ekade "sträcksenorna").
+  - **tentaplugg q186:** frågan namngav eponymen "(benämnt efter Leonard Hayflick)" → svar "Hayflick-gränsen" — borttagen.
+  - **tentaplugg q273:** "(os ischii)" gav bort "Tuber ischiadicum" — borttagen.
+  - **olika_aldrar q37/q62:** svarsglosorna "(balanssinnet)" och "(ålderssynthet)" ekade "balansen"/"åldern" i frågan — borttagna.
+  - Lämnade orörda: Hard-frågornas rörelse-parenteser (t.ex. "(med böjt knä)") som är meningsfulla villkor, samt fall där parentes-ordet delas av distraktorerna (ingen läcka).
+- Cachebustrar och APP_VERSION bumpade till 0.6.11.
+- Highscore-datan i localStorage är orörd.
+
 ## 0.6.10
 - **Studenters flashcards – andra städpassen** (`data/studenters_flashcards.json`): jakt på kvarvarande bildhänvisningar och obegripliga/hopslagna meningar.
 - **Bildhänvisningar borttagna:** `(bild 1)`, `(bild 2/kanten)` m.fl. i ffc_833–836 (erector spinae & rectus abdominis) — ben-/fästesinfo behållen, bildnoteringarna borta. Inga `pil`/`markerad`-hänvisningar kvar.
