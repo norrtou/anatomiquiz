@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.6.10
+- **Studenters flashcards – andra städpassen** (`data/studenters_flashcards.json`): jakt på kvarvarande bildhänvisningar och obegripliga/hopslagna meningar.
+- **Bildhänvisningar borttagna:** `(bild 1)`, `(bild 2/kanten)` m.fl. i ffc_833–836 (erector spinae & rectus abdominis) — ben-/fästesinfo behållen, bildnoteringarna borta. Inga `pil`/`markerad`-hänvisningar kvar.
+- **Hopslagna ord (förlorade radbrytningar):** ~190 gränser där ord klistrats ihop (t.ex. "förmakAtrium", "höftledenOs coxae", "Exempel:Margo") separerade med mellanslag; kolon följt direkt av text fick mellanslag. De avsiktliga minnesregel-versalerna i ffc_260 (`OsteoKlaster`/`OsteoBlaster`, "K=Krossar"/"Bygger") bevarades; typo `Osterocyter` → `Osteocyter`.
+- **Handfixade trasiga listor:** ffc_197 (processus spinosus) återställd till punktlista; rena gemen-gemen-hopslagningar i ffc_311, ffc_479, ffc_763, ffc_787 isärskrivna.
+- Cachebustrar och APP_VERSION bumpade till 0.6.10.
+- Highscore-datan i localStorage är orörd.
+
 ## 0.6.9
 - **Granskning av Muskler-flashcards** (`data/muskler_flashcards.json`, 87 kort, VT26-versionen). Settet var i praktiken felfritt — korrekt och konsekvent fakta (ursprung/fäste/funktion/innervation), enhetlig stil, inga typos eller dekomponerad Unicode. Supraspinatus-ursprunget är korrekt angivet (fossa supraspinata).
 - **Enda åtgärd:** de 10 innervationssvaren började med gement `n.` medan settets övriga svar börjar med versal — den inledande nervförkortningen versaliserad (`n. radialis` → `N. radialis`); förekomster mitt i sträng (t.ex. "FCU: n. ulnaris") lämnades gemena enligt korrekt svensk konvention.
