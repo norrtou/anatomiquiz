@@ -1,5 +1,15 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.6.3
+- **Språk- och faktagranskning av hela ämnet Riktningar/Terminologi** (`data/riktningar.json`, 543 frågor, inkl. 100 Hard-muskelfrågor). Innehållet (rörelse- och riktningsdefinitioner) var faktamässigt korrekt — problemen var nästan uteslutande språkliga.
+- **Systematiska stavfel:** `kroppposition` (trippel-p) → kroppsposition (~15 frågor), `kropplig` → kroppslig (6), `Vriding` → Vridning (7), `Dorsiflexion` → Dorsalflexion.
+- **Engelska/inkonsekventa termer → svenska:** `Abduction/Adduction` → Abduktion/Adduktion; `Extern rotation` → Utåtrotation; "Bukläge är supine position" omskrivet; q387–390 hade engelska svar (Supine/Prone/Fowler's/Lithotomy) → svenska lägesnamn (Ryggläge/Bukläge/Fowlerläge/Litotomiläge/Trendelenburg).
+- **Omskrivna frågor:** cirkulära/genusfela definitioner av handens/fotens ytor (q412–414), etymologifrågorna för ab-/adduktion (q252–253), samt "RAKT UTÅT"-versaler.
+- **Hard-typos:** `löftar`/`lyftar` → lyfts, `rycktas` → rycks, `bromsa` → bromsas, `slappet` → slappt, dubbel-s i Tibial-/Fibularsidan, och en trippelupprepning ("framför sig framför kroppen").
+- Alla frågor och svarsalternativ börjar nu med versal.
+- Cachebustrar och APP_VERSION bumpade till 0.6.3.
+- Highscore-datan i localStorage är orörd.
+
 ## 0.6.2
 - **Språk- och faktagranskning av hela ämnet Ben/Osteologi** (`data/ben.json`, 445 frågor). Samtliga frågor genomgångna mot både språk och fakta.
 - **Faktafel rättade:** "Karpometakarpalleder är kulleder" var markerat Sant → **Falskt** (CMC-leder är sadel-/planleder, inte kulleder); spongiöst ben beskrevs ha "luftfyllda rum" → **märgfyllda hålrum**; "benmassa ökar genom livet" → benmassan **når sitt maximum runt 30 års ålder**.
