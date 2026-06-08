@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.6.6
+- **Granskning av hela ämnet Neurologi/Nervsystemet** (`data/neurologi.json`, 120 sant/falskt-frågor). Ämnet var mycket välskrivet (fullständiga, korrekta meningar, redan versaliserade) och faktamässigt korrekt. Endast tre språkliga finputsningar:
+  - **q39:** särskrivning "Golgi senorgan" → "Golgis senorgan".
+  - **q55:** calque "Noder av Ranvier" → "Ranviers noder" (samma form som i tentaplugg-ämnet).
+  - **q86:** kongruensfel "Cerebellum är viktig" → "viktigt" (matchar q40).
+- Cachebustrar och APP_VERSION bumpade till 0.6.6.
+- Highscore-datan i localStorage är orörd.
+
 ## 0.6.5
 - **Språk- och faktagranskning av hela ämnet Muskler** (`data/muskler.json`, 273 frågor, inkl. 100 Hard-tillämpningsfrågor). Fakta (innervation, ursprung/fäste, funktion) var korrekt — åtgärderna var språkliga.
 - **Stavfel:** `vadsmuskel` → vadmuskeln; `Att rät ut` → Att räta ut (q157).
