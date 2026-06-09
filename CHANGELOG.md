@@ -1,5 +1,17 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.6.12
+- **Nytt ämne: Skuldra (MC+TF)** (`data/skuldran.json`, 100 frågor, 70 MC + 30 TF, alla på Normal-nivå). Anatomiskt fokus, latinsk nomenklatur enligt Terminologia Anatomica och svenska benämningar enligt etablerad litteratur; nivå avsedd för 1:a-årsstudenter i arbetsterapi och fysioterapi. Inga engelska termer.
+- **Fyra delämnen:**
+  - `skuldra_ben` (28): skuldergördelns ben och landmärken — scapula (cavitas glenoidalis, spina, acromion, processus coracoideus, fossae, marginer, angulus inferior), clavicula (sternal/akromial ände, S-form) och proximala humerus (caput, tuberculum majus/minus, sulcus intertubercularis, collum chirurgicum, tuberositas deltoidea).
+  - `skuldra_leder` (30): **de fyra lederna** som efterfrågades — art. glenohumerale (kulled, labrum, rörelser, instabilitet), art. acromioclavicularis (plan led, lig. coracoclaviculare), art. sternoclavicularis (enda äkta förbindelsen till axialskelettet, discus articularis, sadelled) och den skapulotorakala leden (funktionell, ej synovial).
+  - `skuldra_muskler` (34): deltoideus, trapezius, serratus anterior, mm. rhomboidei, levator scapulae, pectoralis major/minor, latissimus dorsi, teres major, biceps/triceps/coracobrachialis (ursprung/fäste/funktion/innervation). Rotatorkuffen nedtonad till ett par stabiliseringsfrågor.
+  - `skuldra_funktion` (8): skapulohumeral rytm (~2:1), samspel mellan lederna vid abduktion, bursa subacromialis, luxation (anterior).
+- Frågor återanvänder och omformulerar typiska tenta-/ben-/muskelfrågor utan att dubblera befintliga frågor ordagrant.
+- Inkopplat i app.js (`getQuestionsPath` + båda `topicMatch`-blocken, prefix `skuldra_`), ämnesmenyn i index.html samt statistiklistan i info.js.
+- Cachebustrar och APP_VERSION bumpade till 0.6.12.
+- Highscore-datan i localStorage är orörd.
+
 ## 0.6.11
 - **Spoiler-städning över alla ämnen:** sökte systematiskt (med stam-/böjningsmatchning) efter MC-frågor där en redundant parentes-gloss avslöjar svaret genom att upprepa ett ord ur frågan. 8 äkta läckor täppta:
   - **ben q314:** "längd**tillväxt**?" → svar "Epifysplattorna ~~(tillväxtplattorna)~~".

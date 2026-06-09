@@ -2,6 +2,7 @@
 function getQuestionsPath(topic) {
   if (topic === 'osteologi') return './data/ben.json'
   if (topic === 'muskler') return './data/muskler.json'
+  if (topic === 'skuldran') return './data/skuldran.json'
   if (topic === 'handen') return './data/handen.json'
   if (topic === 'medicinsk_terminologi') return './data/medicinsk_terminologi.json'
   if (topic === 'tentaplugg') return './data/tentaplugg.json'
@@ -57,7 +58,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.6.11'
+const APP_VERSION = '0.6.12'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -351,6 +352,8 @@ async function startQuiz(allowedTypes){
       topicMatch = q.topic.startsWith('osteologi_')
     } else if(topic === 'muskler') {
       topicMatch = q.topic.startsWith('muskler_')
+    } else if(topic === 'skuldran') {
+      topicMatch = q.topic.startsWith('skuldra_')
     } else if(topic === 'handen') {
       topicMatch = q.topic.startsWith('handen_')
     } else if(topic === 'tentaplugg') {
@@ -1005,6 +1008,7 @@ async function startFlashcards() {
     if (topic === 'any_riktningar') topicMatch = q.topic === 'riktningar'
     else if (topic === 'osteologi')  topicMatch = q.topic.startsWith('osteologi_')
     else if (topic === 'muskler')    topicMatch = q.topic.startsWith('muskler_')
+    else if (topic === 'skuldran')   topicMatch = q.topic.startsWith('skuldra_')
     else if (topic === 'handen')     topicMatch = q.topic.startsWith('handen_')
     else if (topic === 'tentaplugg') topicMatch = q.topic.startsWith('studier_')
     else if (topic === 'neurologi')  topicMatch = q.topic.startsWith('nervsystemet_')
