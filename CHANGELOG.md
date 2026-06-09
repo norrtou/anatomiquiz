@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.6.14
+- **Nytt ämne: Ledtyper (MC)** (`data/ledtyper.json`, 52 frågor, enbart MC, Normal-nivå). Ledtyperna så som 1177 beskriver dem (kulled, gångjärnsled, vridled, äggled, sadelled, planled samt synovialled som överordnad kategori), med fokus på vilka rörelser varje ledtyp utför. Faktagranskat mot 1177:s sida "Så fungerar skelett och leder".
+- **Alla ledexempel hämtade enbart från användarens befintliga ämnen** — inga nya leder införda (gäller även distraktorerna): axelled/höftled (kulled), armbågsled/knäled/interfalangealleder (gångjärnsled), radioulnarled/atlantoaxialled (vridled), handled (äggled), tummens basled CMC I & SC-led (sadelled), AC-led/handlovsleder (planled). Klassificeringarna stämmer med ben.json/handen.json/skuldran.json/tentaplugg.json.
+- **Fyra delämnen:** `ledtyper_typ` (15, varje ledtyps rörelse + jämförelser), `ledtyper_synovial` (6, synovialled samt ledbrosk/ledvätska/ledband/ledkapsel enligt 1177), `ledtyper_exempel` (18, led → ledtyp), `ledtyper_rorelse` (13, konkreta rörelser vid namngivna leder, t.ex. pronation/supination i radioulnarleden, opposition i tumbasen, rotation i atlantoaxialleden).
+- Inkopplat i app.js (`getQuestionsPath` + båda `topicMatch`-blocken, prefix `ledtyper_`), ämnesmenyn i index.html samt statistiklistan i info.js.
+- Cachebustrar och APP_VERSION bumpade till 0.6.14.
+- Highscore-datan i localStorage är orörd.
+
 ## 0.6.13
 - **Nytt ämne: Grepp (MC+TF)** (`data/grepp.json`, 100 frågor, 65 MC + 35 TF, alla på Normal-nivå). Bygger på Sollerman-greppklassificeringen och Handrehabilitering (Björkman, Johansson & Rosén 2023, kap 2, s 32-65). Endast de sju efterfrågade greppen behandlas — extensionsgreppet utelämnat. Inga termer utanför referensmaterialet (samma termflora som redan används i handen.json/tentaplugg.json).
 - **Fem delämnen:**

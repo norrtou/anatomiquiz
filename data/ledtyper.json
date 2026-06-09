@@ -1,0 +1,730 @@
+[
+  {
+    "id": "q1",
+    "type": "mc",
+    "prompt": "Vilken rörelse tillåter en gångjärnsled?",
+    "correct": "Böjning och sträckning (i en riktning)",
+    "distractors": [
+      "Rörelse åt alla håll",
+      "Endast vridning kring en axel",
+      "Endast glidning"
+    ],
+    "topic": "ledtyper_typ",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q2",
+    "type": "mc",
+    "prompt": "Vilken rörelse är typisk för en kulled?",
+    "correct": "Rörelse åt alla håll",
+    "distractors": [
+      "Endast böjning och sträckning",
+      "Endast vridning kring en axel",
+      "Endast glidning"
+    ],
+    "topic": "ledtyper_typ",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q3",
+    "type": "mc",
+    "prompt": "Vilken rörelse tillåter en vridled?",
+    "correct": "Vridning (rotation) kring en axel",
+    "distractors": [
+      "Böjning och sträckning",
+      "Rörelse åt alla håll",
+      "Glidning mellan benytorna"
+    ],
+    "topic": "ledtyper_typ",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q4",
+    "type": "mc",
+    "prompt": "Vilken rörelse tillåter en planled (glidled)?",
+    "correct": "Liten glidning mellan benytorna",
+    "distractors": [
+      "Rörelse åt alla håll",
+      "Vridning kring en axel",
+      "Böjning och sträckning"
+    ],
+    "topic": "ledtyper_typ",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q5",
+    "type": "mc",
+    "prompt": "I hur många plan kan en äggled röras?",
+    "correct": "I två plan (framåt-bakåt och i sidled)",
+    "distractors": [
+      "Bara i ett plan",
+      "Åt alla håll som en kulled",
+      "Inte alls"
+    ],
+    "topic": "ledtyper_typ",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q6",
+    "type": "mc",
+    "prompt": "Vilken rörelse möjliggör en sadelled?",
+    "correct": "Rörelse i två plan (bland annat opposition i tummen)",
+    "distractors": [
+      "Endast vridning",
+      "Endast glidning",
+      "Endast sträckning"
+    ],
+    "topic": "ledtyper_typ",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q7",
+    "type": "mc",
+    "prompt": "Vilken ledtyp tillåter störst rörlighet?",
+    "correct": "Kulled",
+    "distractors": [
+      "Gångjärnsled",
+      "Planled",
+      "Vridled"
+    ],
+    "topic": "ledtyper_typ",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q8",
+    "type": "mc",
+    "prompt": "Vilken ledtyp har minst rörlighet?",
+    "correct": "Planled (glidled)",
+    "distractors": [
+      "Kulled",
+      "Äggled",
+      "Sadelled"
+    ],
+    "topic": "ledtyper_typ",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q9",
+    "type": "mc",
+    "prompt": "En led som bara kan böjas och sträckas i en riktning är en...?",
+    "correct": "Gångjärnsled",
+    "distractors": [
+      "Kulled",
+      "Vridled",
+      "Planled"
+    ],
+    "topic": "ledtyper_typ",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q10",
+    "type": "mc",
+    "prompt": "En led som kan röras åt alla håll är en...?",
+    "correct": "Kulled",
+    "distractors": [
+      "Gångjärnsled",
+      "Sadelled",
+      "Planled"
+    ],
+    "topic": "ledtyper_typ",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q11",
+    "type": "mc",
+    "prompt": "En led där benen bara kan vridas i förhållande till varandra är en...?",
+    "correct": "Vridled",
+    "distractors": [
+      "Gångjärnsled",
+      "Äggled",
+      "Planled"
+    ],
+    "topic": "ledtyper_typ",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q12",
+    "type": "mc",
+    "prompt": "Vilken ledtyp kan röras i två plan men tillåter inte fri rörelse åt alla håll som en kulled?",
+    "correct": "Äggled",
+    "distractors": [
+      "Gångjärnsled",
+      "Vridled",
+      "Planled"
+    ],
+    "topic": "ledtyper_typ",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q13",
+    "type": "mc",
+    "prompt": "Vilken ledtyp möjliggör cirkumduktion (rundgång), t.ex. att rita en cirkel i luften med hela armen?",
+    "correct": "Kulled",
+    "distractors": [
+      "Gångjärnsled",
+      "Vridled",
+      "Planled"
+    ],
+    "topic": "ledtyper_typ",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q14",
+    "type": "mc",
+    "prompt": "Vad menas med att en led är tvåaxlad, som handleden?",
+    "correct": "Den kan röras i två plan men inte roteras fritt åt alla håll",
+    "distractors": [
+      "Den har två ledhuvuden",
+      "Den kan bara böjas",
+      "Den är helt orörlig"
+    ],
+    "topic": "ledtyper_typ",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q15",
+    "type": "mc",
+    "prompt": "Vilken ledtyp passar bäst där det behövs stabilitet men bara liten rörlighet?",
+    "correct": "Planled (glidled)",
+    "distractors": [
+      "Kulled",
+      "Äggled",
+      "Sadelled"
+    ],
+    "topic": "ledtyper_typ",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q16",
+    "type": "mc",
+    "prompt": "Vad är gemensamt för synovialleder (äkta leder)?",
+    "correct": "De har ledbrosk, ledkapsel och ledvätska och är rörliga",
+    "distractors": [
+      "De saknar ledvätska",
+      "De är helt orörliga",
+      "De är hopväxta med ben"
+    ],
+    "topic": "ledtyper_synovial",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q17",
+    "type": "mc",
+    "prompt": "Kulleder, gångjärnsleder och vridleder är alla exempel på...?",
+    "correct": "Synovialleder (äkta leder)",
+    "distractors": [
+      "Endast planleder",
+      "Oäkta, orörliga leder",
+      "Benbryggor"
+    ],
+    "topic": "ledtyper_synovial",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q18",
+    "type": "mc",
+    "prompt": "Vad kallas vätskan som smörjer leden och minskar friktionen mellan benytorna?",
+    "correct": "Ledvätska",
+    "distractors": [
+      "Ledbrosk",
+      "Ledband",
+      "Ledkapsel"
+    ],
+    "topic": "ledtyper_synovial",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q19",
+    "type": "mc",
+    "prompt": "Vilken struktur håller samman leden och hindrar benen från att röra sig i fel riktning?",
+    "correct": "Ledband",
+    "distractors": [
+      "Ledvätska",
+      "Ledbrosk",
+      "Ledkapsel"
+    ],
+    "topic": "ledtyper_synovial",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q20",
+    "type": "mc",
+    "prompt": "Vad är ledbroskets uppgift i en led?",
+    "correct": "Gör att benens ytor lätt glider mot varandra utan att slitas",
+    "distractors": [
+      "Producerar blodceller",
+      "Håller ihop benen som ett band",
+      "Vrider leden"
+    ],
+    "topic": "ledtyper_synovial",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q21",
+    "type": "mc",
+    "prompt": "Vad gör ledkapseln?",
+    "correct": "Sitter runt hela leden och håller ledvätskan på plats",
+    "distractors": [
+      "Producerar röda blodkroppar",
+      "Sträcker ut leden",
+      "Förbinder muskeln med benet"
+    ],
+    "topic": "ledtyper_synovial",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q22",
+    "type": "mc",
+    "prompt": "Vilken ledtyp är axelleden (articulatio glenohumerale)?",
+    "correct": "Kulled",
+    "distractors": [
+      "Gångjärnsled",
+      "Sadelled",
+      "Planled"
+    ],
+    "topic": "ledtyper_exempel",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q23",
+    "type": "mc",
+    "prompt": "Vilken ledtyp är höftleden?",
+    "correct": "Kulled",
+    "distractors": [
+      "Gångjärnsled",
+      "Vridled",
+      "Äggled"
+    ],
+    "topic": "ledtyper_exempel",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q24",
+    "type": "mc",
+    "prompt": "Vilken ledtyp är den del av armbågsleden som böjer och sträcker armen?",
+    "correct": "Gångjärnsled",
+    "distractors": [
+      "Kulled",
+      "Sadelled",
+      "Vridled"
+    ],
+    "topic": "ledtyper_exempel",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q25",
+    "type": "mc",
+    "prompt": "Vilken ledtyp är knäleden?",
+    "correct": "Gångjärnsled",
+    "distractors": [
+      "Kulled",
+      "Äggled",
+      "Planled"
+    ],
+    "topic": "ledtyper_exempel",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q26",
+    "type": "mc",
+    "prompt": "Vilken ledtyp är fingrarnas ytterleder (interfalangeallederna)?",
+    "correct": "Gångjärnsled",
+    "distractors": [
+      "Kulled",
+      "Sadelled",
+      "Vridled"
+    ],
+    "topic": "ledtyper_exempel",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q27",
+    "type": "mc",
+    "prompt": "Vilken ledtyp är handleden (articulatio radiocarpea)?",
+    "correct": "Äggled (ellipsoidled)",
+    "distractors": [
+      "Kulled",
+      "Gångjärnsled",
+      "Sadelled"
+    ],
+    "topic": "ledtyper_exempel",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q28",
+    "type": "mc",
+    "prompt": "Vilken ledtyp är tummens basled (CMC I, articulatio carpometacarpale pollicis)?",
+    "correct": "Sadelled",
+    "distractors": [
+      "Kulled",
+      "Gångjärnsled",
+      "Äggled"
+    ],
+    "topic": "ledtyper_exempel",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q29",
+    "type": "mc",
+    "prompt": "Vilken ledtyp är leden mellan nyckelbenets laterala ände och acromion (AC-leden)?",
+    "correct": "Planled (glidled)",
+    "distractors": [
+      "Kulled",
+      "Sadelled",
+      "Vridled"
+    ],
+    "topic": "ledtyper_exempel",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q30",
+    "type": "mc",
+    "prompt": "Vilken ledtyp är leden mellan strålbenet och armbågsbenet (radioulnarleden)?",
+    "correct": "Vridled",
+    "distractors": [
+      "Gångjärnsled",
+      "Kulled",
+      "Planled"
+    ],
+    "topic": "ledtyper_exempel",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q31",
+    "type": "mc",
+    "prompt": "Vilken ledtyp är leden mellan atlas och axis (atlantoaxialleden) i nacken?",
+    "correct": "Vridled",
+    "distractors": [
+      "Kulled",
+      "Gångjärnsled",
+      "Sadelled"
+    ],
+    "topic": "ledtyper_exempel",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q32",
+    "type": "mc",
+    "prompt": "Vilken ledtyp är lederna mellan handlovsbenen?",
+    "correct": "Planled (glidled)",
+    "distractors": [
+      "Kulled",
+      "Äggled",
+      "Vridled"
+    ],
+    "topic": "ledtyper_exempel",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q33",
+    "type": "mc",
+    "prompt": "Vilken ledtyp är leden mellan nyckelbenet och bröstbenet (SC-leden, articulatio sternoclavicularis)?",
+    "correct": "Sadelled",
+    "distractors": [
+      "Kulled",
+      "Gångjärnsled",
+      "Planled"
+    ],
+    "topic": "ledtyper_exempel",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q34",
+    "type": "mc",
+    "prompt": "Axelleden och höftleden tillhör samma ledtyp. Vilken?",
+    "correct": "Kulled",
+    "distractors": [
+      "Gångjärnsled",
+      "Äggled",
+      "Sadelled"
+    ],
+    "topic": "ledtyper_exempel",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q35",
+    "type": "mc",
+    "prompt": "Armbågsleden och knäleden böjer och sträcker. Vilken ledtyp har de gemensamt?",
+    "correct": "Gångjärnsled",
+    "distractors": [
+      "Kulled",
+      "Vridled",
+      "Planled"
+    ],
+    "topic": "ledtyper_exempel",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q36",
+    "type": "mc",
+    "prompt": "Vilken av följande leder är ett exempel på en kulled?",
+    "correct": "Axelleden",
+    "distractors": [
+      "Handleden",
+      "Tummens basled",
+      "AC-leden"
+    ],
+    "topic": "ledtyper_exempel",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q37",
+    "type": "mc",
+    "prompt": "Vilken av följande leder är ett exempel på en gångjärnsled?",
+    "correct": "Knäleden",
+    "distractors": [
+      "Höftleden",
+      "Handleden",
+      "Tummens basled"
+    ],
+    "topic": "ledtyper_exempel",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q38",
+    "type": "mc",
+    "prompt": "Vilken av följande leder är ett exempel på en sadelled?",
+    "correct": "Tummens basled (CMC I)",
+    "distractors": [
+      "Axelleden",
+      "Knäleden",
+      "Handleden"
+    ],
+    "topic": "ledtyper_exempel",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q39",
+    "type": "mc",
+    "prompt": "Vilken av följande leder är ett exempel på en äggled?",
+    "correct": "Handleden",
+    "distractors": [
+      "Höftleden",
+      "Armbågsleden",
+      "Tummens basled"
+    ],
+    "topic": "ledtyper_exempel",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q40",
+    "type": "mc",
+    "prompt": "Vilka rörelser tillåter axelleden tack vare att den är en kulled?",
+    "correct": "Rörelse åt alla håll (böjning, sträckning, abduktion, adduktion och rotation)",
+    "distractors": [
+      "Endast böjning och sträckning",
+      "Endast vridning",
+      "Endast glidning"
+    ],
+    "topic": "ledtyper_rorelse",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q41",
+    "type": "mc",
+    "prompt": "Vilken rörelse utförs i radioulnarleden, som är en vridled?",
+    "correct": "Pronation och supination (vridning av underarmen)",
+    "distractors": [
+      "Böjning och sträckning",
+      "Abduktion och adduktion",
+      "Glidning"
+    ],
+    "topic": "ledtyper_rorelse",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q42",
+    "type": "mc",
+    "prompt": "Vilken rörelse möjliggör atlantoaxialleden (vridled) i nacken?",
+    "correct": "Att vrida huvudet i sidled (rotation), som när man skakar på huvudet",
+    "distractors": [
+      "Att böja huvudet framåt",
+      "Att glida i sidled",
+      "Att abducera huvudet"
+    ],
+    "topic": "ledtyper_rorelse",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q43",
+    "type": "mc",
+    "prompt": "Vilka rörelser tillåter knäleden som gångjärnsled?",
+    "correct": "Böjning och sträckning",
+    "distractors": [
+      "Rörelse åt alla håll",
+      "Vridning som huvudrörelse",
+      "Endast glidning"
+    ],
+    "topic": "ledtyper_rorelse",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q44",
+    "type": "mc",
+    "prompt": "Vilken rörelse i tummens basled (sadelled) gör att tummen kan föras mot de andra fingrarna?",
+    "correct": "Opposition",
+    "distractors": [
+      "Pronation",
+      "Glidning",
+      "Enbart extension"
+    ],
+    "topic": "ledtyper_rorelse",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q45",
+    "type": "mc",
+    "prompt": "Vilka rörelser tillåter höftleden som kulled?",
+    "correct": "Böjning, sträckning, abduktion, adduktion och rotation",
+    "distractors": [
+      "Endast böjning",
+      "Endast vridning",
+      "Endast glidning"
+    ],
+    "topic": "ledtyper_rorelse",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q46",
+    "type": "mc",
+    "prompt": "Vilken typ av rörelse sker mellan handlovsbenen (planleder)?",
+    "correct": "Små glidrörelser",
+    "distractors": [
+      "Stor rotation",
+      "Böjning i 90 grader",
+      "Opposition"
+    ],
+    "topic": "ledtyper_rorelse",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q47",
+    "type": "mc",
+    "prompt": "Vilka rörelser tillåter handleden som äggled?",
+    "correct": "Böjning/sträckning och rörelse i sidled (i två plan)",
+    "distractors": [
+      "Vridning kring en axel",
+      "Rörelse åt alla håll som en kulled",
+      "Endast glidning"
+    ],
+    "topic": "ledtyper_rorelse",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q48",
+    "type": "mc",
+    "prompt": "Armbågsleden innehåller både en gångjärnsled och en vridled. Vilken rörelse hör till vridleden?",
+    "correct": "Pronation och supination",
+    "distractors": [
+      "Böjning och sträckning",
+      "Abduktion",
+      "Opposition"
+    ],
+    "topic": "ledtyper_rorelse",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q49",
+    "type": "mc",
+    "prompt": "Vilken rörelse hör till armbågsledens gångjärnsdel?",
+    "correct": "Böjning och sträckning av armen",
+    "distractors": [
+      "Vridning av underarmen",
+      "Rörelse åt alla håll",
+      "Glidning"
+    ],
+    "topic": "ledtyper_rorelse",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q50",
+    "type": "mc",
+    "prompt": "Fingrarnas ytterleder är gångjärnsleder. Vilka rörelser tillåter de?",
+    "correct": "Böjning och sträckning",
+    "distractors": [
+      "Rörelse åt alla håll",
+      "Vridning kring en axel",
+      "Opposition"
+    ],
+    "topic": "ledtyper_rorelse",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q51",
+    "type": "mc",
+    "prompt": "Varför kan du röra armen åt alla håll i axelleden men bara böja och sträcka i armbågen?",
+    "correct": "Axelleden är en kulled medan armbågens gångjärnsled bara tillåter rörelse i en riktning",
+    "distractors": [
+      "Båda är kulleder",
+      "Axelleden är en gångjärnsled",
+      "Armbågen är en planled"
+    ],
+    "topic": "ledtyper_rorelse",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  },
+  {
+    "id": "q52",
+    "type": "mc",
+    "prompt": "Vilken ledtyp ger tummen dess särskilda rörlighet jämfört med de övriga fingrarnas grundleder?",
+    "correct": "Sadelled",
+    "distractors": [
+      "Gångjärnsled",
+      "Planled",
+      "Vridled"
+    ],
+    "topic": "ledtyper_rorelse",
+    "difficulty": "Normal",
+    "source": "Ledtyper"
+  }
+]
