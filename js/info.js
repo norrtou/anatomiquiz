@@ -95,10 +95,13 @@ const TOPICS = [
   { label: 'Medicinsk terminologi',file: './data/medicinsk_terminologi.json' },
   { label: 'Neurologi',            file: './data/neurologi.json' },
   { label: 'Blodomloppet',         file: './data/blodomloppet.json' },
+  { label: 'Ergonomi',             file: './data/ergonomi.json' },
+  { label: 'Olika åldrar',         file: './data/olika_aldrar.json' },
 ]
 
 const FC_TOPICS = [
   { label: 'Studenters flashcards', file: './data/studenters_flashcards.json' },
+  { label: 'Muskler flashcards',    file: './data/muskler_flashcards.json' },
 ]
 
 async function loadStats() {

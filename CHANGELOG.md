@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.6.15
+- **Info-tabellen (statistik) kompletterad med alla ämnen** (`js/info.js`). Lade till de ämnen som saknades: Ergonomi och Olika åldrar i quiz-listan samt Muskler flashcards i flashcard-listan. Skuldra/Grepp/Ledtyper fanns redan med sedan de skapades. OTIPM och Moho utelämnade enligt önskemål. Antalen räknas live ur respektive JSON-fil, så de är alltid korrekta (totalt 3223 quizfrågor + 893 flashcards).
+- **Blandade frågor verifierade att täcka allt MC/TF utom Moho/OTIPM:** laddaren är dynamisk och bygger sin fil-lista ur ämnesmenyns alternativ (exkluderar `blandade`, `moho_flashcards`, `otipm_flashcards`). Därmed dras Skuldra, Grepp, Ledtyper, Ergonomi och Olika åldrar in automatiskt; flashcard-kort filtreras bort av frågetypsfiltret. Bekräftat: blandade-poolen = 3223 MC/TF-frågor, Moho/OTIPM korrekt uteslutna. (Ingen kodändring behövdes här.)
+- Cachebustrar och APP_VERSION bumpade till 0.6.15.
+- Highscore-datan i localStorage är orörd.
+
 ## 0.6.14
 - **Nytt ämne: Ledtyper (MC)** (`data/ledtyper.json`, 52 frågor, enbart MC, Normal-nivå). Ledtyperna så som 1177 beskriver dem (kulled, gångjärnsled, vridled, äggled, sadelled, planled samt synovialled som överordnad kategori), med fokus på vilka rörelser varje ledtyp utför. Faktagranskat mot 1177:s sida "Så fungerar skelett och leder".
 - **Alla ledexempel hämtade enbart från användarens befintliga ämnen** — inga nya leder införda (gäller även distraktorerna): axelled/höftled (kulled), armbågsled/knäled/interfalangealleder (gångjärnsled), radioulnarled/atlantoaxialled (vridled), handled (äggled), tummens basled CMC I & SC-led (sadelled), AC-led/handlovsleder (planled). Klassificeringarna stämmer med ben.json/handen.json/skuldran.json/tentaplugg.json.
