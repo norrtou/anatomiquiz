@@ -1,5 +1,15 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.6.16
+- **Entydighetsgranskning av de tre nya ämnena (Grepp, Skuldra, Ledtyper):** gick igenom samtliga 252 MC-frågor och säkerställde att exakt ETT svarsalternativ är korrekt. Fyra frågor hade en distraktor som i själva verket också var korrekt — rättade:
+  - **grepp q7:** "Vilket grepp använder tumme, pekfinger och långfinger tillsammans?" hade Nyckelgrepp som distraktor (kan tolkas som korrekt). Omformulerad till entydig trepunktsdefinition: "Vilket grepp bildar ett trepunktsfäste mellan tummen, pekfingret och långfingret?" (svar Chuckgrepp), nyckelgreppet utbytt.
+  - **grepp q38:** glödlampa → Fem-fingergrepp hade Sfäriskt volargrepp som distraktor — ett runt föremål kan försvaras som sfäriskt. Distraktorn utbytt.
+  - **grepp q47:** runt dörrvred → Sfäriskt volargrepp hade Fem-fingergrepp som distraktor — samma rund-föremåls-överlapp. Distraktorn utbytt.
+  - **ledtyper q12:** beskrivningen "två plan men inte alla håll" passar både äggled OCH sadelled. Omformulerad och förankrad i de ovala/äggformade ledytorna (svar Äggled).
+- Skuldra hade inga entydighetsfel.
+- Cachebustrar och APP_VERSION bumpade till 0.6.16.
+- Highscore-datan i localStorage är orörd.
+
 ## 0.6.15
 - **Info-tabellen (statistik) kompletterad med alla ämnen** (`js/info.js`). Lade till de ämnen som saknades: Ergonomi och Olika åldrar i quiz-listan samt Muskler flashcards i flashcard-listan. Skuldra/Grepp/Ledtyper fanns redan med sedan de skapades. OTIPM och Moho utelämnade enligt önskemål. Antalen räknas live ur respektive JSON-fil, så de är alltid korrekta (totalt 3223 quizfrågor + 893 flashcards).
 - **Blandade frågor verifierade att täcka allt MC/TF utom Moho/OTIPM:** laddaren är dynamisk och bygger sin fil-lista ur ämnesmenyns alternativ (exkluderar `blandade`, `moho_flashcards`, `otipm_flashcards`). Därmed dras Skuldra, Grepp, Ledtyper, Ergonomi och Olika åldrar in automatiskt; flashcard-kort filtreras bort av frågetypsfiltret. Bekräftat: blandade-poolen = 3223 MC/TF-frågor, Moho/OTIPM korrekt uteslutna. (Ingen kodändring behövdes här.)
