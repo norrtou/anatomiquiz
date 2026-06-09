@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.6.17
+- **Rättat felplacerad text i index.html:** en lös textsträng "Hitta" hade hamnat direkt efter `og:url`-metataggen inne i `<head>`. Webbläsaren flyttar lös text från `<head>` in i `<body>`, vilket gjorde att ordet dök upp överst på sidan (bl.a. ovanför topplistan). Borttagen.
+- Cachebustrar och APP_VERSION bumpade till 0.6.17.
+- Highscore-datan i localStorage är orörd.
+
 ## 0.6.16
 - **Entydighetsgranskning av de tre nya ämnena (Grepp, Skuldra, Ledtyper):** gick igenom samtliga 252 MC-frågor och säkerställde att exakt ETT svarsalternativ är korrekt. Fyra frågor hade en distraktor som i själva verket också var korrekt — rättade:
   - **grepp q7:** "Vilket grepp använder tumme, pekfinger och långfinger tillsammans?" hade Nyckelgrepp som distraktor (kan tolkas som korrekt). Omformulerad till entydig trepunktsdefinition: "Vilket grepp bildar ett trepunktsfäste mellan tummen, pekfingret och långfingret?" (svar Chuckgrepp), nyckelgreppet utbytt.
