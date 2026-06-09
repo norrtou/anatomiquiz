@@ -60,7 +60,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.6.17'
+const APP_VERSION = '0.6.18'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -314,9 +314,15 @@ async function startQuiz(allowedTypes){
 
   // Load questions based on topic
   if(topic === 'blandade'){
+    // Slumpade frågor = bara quiz-ämnen (MC/TF). Rena flashcard-ämnen (FC) tas
+    // aldrig in, så slumpade frågor innehåller aldrig flashcards.
     const paths = [...new Set(
       Array.from(el('topic').options)
-        .filter(o => !o.disabled && !['blandade', 'moho_flashcards', 'otipm_flashcards'].includes(o.value))
+        .filter(o => {
+          if(o.disabled || o.value === 'blandade') return false
+          const t = typeTagOf(o.textContent)
+          return t.mc || t.tf
+        })
         .map(o => getQuestionsPath(o.value))
     )]
     await loadQuestionsFromMultiplePaths(paths)
@@ -340,8 +346,8 @@ async function startQuiz(allowedTypes){
     const isPlaceholderId = /^ph\d{3}$/.test(String(q.id))
     if(isPlaceholderSource || isPlaceholderId) return false
 
-    // Frågetypsfilter: bara valda typer (mc/tf). Utesluter bl.a. fc-kort som
-    // 'blandade' annars drar in, så de aldrig hamnar i ett quiz.
+    // Frågetypsfilter: bara valda typer (mc/tf). Extra säkerhetsnät — slumpade
+    // frågor laddar redan bara MC/TF-ämnen, så inga fc-kort kan hamna i ett quiz.
     if(!allowedTypes.includes(q.type)) return false
 
     // Handle topic filtering
@@ -993,9 +999,15 @@ async function startFlashcards() {
   fcTimerOn = !!el('timerEnabled')?.checked
 
   if (topic === 'blandade') {
+    // Slumpade frågor erbjuder inte flashcards (knappen är skuggad). Skulle detta
+    // ändå nås laddas bara MC/TF-ämnen, så inga flashcards kan komma med.
     const paths = [...new Set(
       Array.from(el('topic').options)
-        .filter(o => !o.disabled && !['blandade', 'moho_flashcards', 'otipm_flashcards'].includes(o.value))
+        .filter(o => {
+          if(o.disabled || o.value === 'blandade') return false
+          const t = typeTagOf(o.textContent)
+          return t.mc || t.tf
+        })
         .map(o => getQuestionsPath(o.value))
     )]
     await loadQuestionsFromMultiplePaths(paths)

@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.6.18
+- **Slumpade frågor (blandade) innehåller inte längre flashcards.**
+  - **Etiketten** i ämnesmenyn ändrad från "Slumpade frågor (MC+FC+TF)" till "Slumpade frågor (MC+TF)". Eftersom appens lägeslogik läser typtaggen ur etiketten innebär detta att knappen "Starta flashcards" nu är skuggad när Slumpade frågor är valt (det gick tidigare att köra slumpade som flashcards), och att Slumpade frågor döljs om man bara bockat i frågetypen Flashcards.
+  - **Laddaren** för blandade (både quiz- och flashcards-läget i `js/app.js`) bygger nu sin fil-lista enbart från ämnen vars etikett har MC eller TF — rena flashcard-ämnen (Studenters flashcards, Muskler flashcards) tas aldrig in. Poolen innehåller därmed 0 flashcard-kort (verifierat). Quizutfallet är oförändrat (FC-ämnena bidrog ändå inte med MC/TF), men inga flashcard-filer hämtas längre i onödan.
+  - Frågetypsfiltret i quizet kvarstår som extra säkerhetsnät.
+- Cachebustrar och APP_VERSION bumpade till 0.6.18.
+- Highscore-datan i localStorage är orörd.
+
 ## 0.6.17
 - **Rättat felplacerad text i index.html:** en lös textsträng "Hitta" hade hamnat direkt efter `og:url`-metataggen inne i `<head>`. Webbläsaren flyttar lös text från `<head>` in i `<body>`, vilket gjorde att ordet dök upp överst på sidan (bl.a. ovanför topplistan). Borttagen.
 - Cachebustrar och APP_VERSION bumpade till 0.6.17.
