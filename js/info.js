@@ -88,6 +88,7 @@ const TOPICS = [
   { label: 'Ben',                  file: './data/ben.json' },
   { label: 'Muskler',              file: './data/muskler.json' },
   { label: 'Skuldra',              file: './data/skuldran.json' },
+  { label: 'Grepp',                file: './data/grepp.json' },
   { label: 'Handen',               file: './data/handen.json' },
   { label: 'Lägen & riktningar',   file: './data/riktningar.json' },
   { label: 'Medicinsk terminologi',file: './data/medicinsk_terminologi.json' },

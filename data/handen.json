@@ -2,7 +2,7 @@
   {
     "id": "q1",
     "type": "tf",
-    "prompt": "Fingertoppsgrepp använder tumme och två fingrar på spetsarna.",
+    "prompt": "Fingertoppsgrepp innebär att tummens pulpa möter pekfingrets pulpa, topp mot topp.",
     "correct": "Sant",
     "topic": "handen_grepptyper",
     "difficulty": "Normal",
@@ -664,12 +664,12 @@
   {
     "id": "q57",
     "type": "tf",
-    "prompt": "Fingertoppsgrepp använder tre fingrar och tumme.",
-    "correct": "Sant",
+    "prompt": "Fingertoppsgrepp använder tummen mot alla fyra fingrarna samtidigt.",
+    "correct": "Falskt",
     "topic": "handen_innervation",
     "difficulty": "Normal",
     "distractors": [
-      "Falskt"
+      "Sant"
     ]
   },
   {
@@ -2070,10 +2070,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Fingertoppsgrepp: tumme och två fingrar på spetsarna",
-    "correct": "Sant",
+    "prompt": "Fingertoppsgrepp och chuckgrepp är samma grepp.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_grepptyper",
     "difficulty": "Normal",

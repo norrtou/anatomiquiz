@@ -1,5 +1,18 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.6.13
+- **Nytt ämne: Grepp (MC+TF)** (`data/grepp.json`, 100 frågor, 65 MC + 35 TF, alla på Normal-nivå). Bygger på Sollerman-greppklassificeringen och Handrehabilitering (Björkman, Johansson & Rosén 2023, kap 2, s 32-65). Endast de sju efterfrågade greppen behandlas — extensionsgreppet utelämnat. Inga termer utanför referensmaterialet (samma termflora som redan används i handen.json/tentaplugg.json).
+- **Fem delämnen:**
+  - `grepp_typer` (29): indelning precisionsgrepp/kraftgrepp, vilka fingrar varje grepp använder, definitioner av fingertoppsgrepp, nyckelgrepp, chuckgrepp, fem-fingergrepp samt diagonalt/transversellt/sfäriskt volargrepp.
+  - `grepp_exempel` (24): konkreta vardagsexempel per grepp — synål/mynt/knapp/gem (fingertopp), nyckel/blixtlås/spelkort (nyckel), penna/pensel/nål (chuck), burklock/glödlampa (fem-finger), hammare/skruvmejsel/kniv/kvast (diagonalt), portfölj/konservburk/cykelstyre/trappräcke (transversellt), äpple/dörrvred/boll (sfäriskt).
+  - `grepp_muskler` (24): inblandade muskler — opponens/adductor/abductor/flexor pollicis, flexor digitorum superficialis/profundus, mm. interossei (palmares/dorsales), mm. lumbricales, opponens digiti minimi, extensor digitorum — samt innervation (n. medianus/ulnaris/radialis). M. adductor pollicis lyft fram som nyckelgreppets nyckelmuskel.
+  - `grepp_leder` (14): CMC I (sadelled, opposition), MCP/PIP/DIP-leder, tummens IP-led, handens välvning via de yttre fingrarnas CMC-leder.
+  - `grepp_skador` (9): hur skada på n. medianus/ulnaris/radialis och artros i tumbasen (CMC I) påverkar olika grepp.
+- Inkopplat i app.js (`getQuestionsPath` + båda `topicMatch`-blocken, prefix `grepp_`), ämnesmenyn i index.html samt statistiklistan i info.js.
+- **Faktafel rättat i Handen** (`data/handen.json`): tre frågor (q1, q57, q174) påstod felaktigt att fingertoppsgreppet använder tumme + två/tre fingrar — det gör det inte (då vore det chuckgrepp). q1 omformulerad till korrekt definition ("tummens pulpa möter pekfingrets pulpa, topp mot topp", Sant); q57 och q174 omgjorda till distinkta missuppfattnings-kontroller (Falskt) så de inte dubblerar varandra och förstärker skillnaden mot chuckgreppet.
+- Cachebustrar och APP_VERSION bumpade till 0.6.13.
+- Highscore-datan i localStorage är orörd.
+
 ## 0.6.12
 - **Nytt ämne: Skuldra (MC+TF)** (`data/skuldran.json`, 100 frågor, 70 MC + 30 TF, alla på Normal-nivå). Anatomiskt fokus, latinsk nomenklatur enligt Terminologia Anatomica och svenska benämningar enligt etablerad litteratur; nivå avsedd för 1:a-årsstudenter i arbetsterapi och fysioterapi. Inga engelska termer.
 - **Fyra delämnen:**

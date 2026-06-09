@@ -1,0 +1,1332 @@
+[
+  {
+    "id": "q1",
+    "type": "mc",
+    "prompt": "Greppen delas in i två huvudgrupper. Vilka?",
+    "correct": "Precisionsgrepp och kraftgrepp",
+    "distractors": [
+      "Tumgrepp och fingergrepp",
+      "Statiska och dynamiska grepp",
+      "Volargrepp och dorsalgrepp"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q2",
+    "type": "tf",
+    "prompt": "Fingertoppsgrepp, nyckelgrepp, chuckgrepp och fem-fingergrepp räknas som precisionsgrepp.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q3",
+    "type": "tf",
+    "prompt": "Diagonalt, transversellt och sfäriskt volargrepp räknas som kraftgrepp.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q4",
+    "type": "mc",
+    "prompt": "Vilket grepp innebär att tummens pulpa möter pekfingrets pulpa (topp mot topp)?",
+    "correct": "Fingertoppsgrepp",
+    "distractors": [
+      "Nyckelgrepp",
+      "Sfäriskt volargrepp",
+      "Transversellt volargrepp"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q5",
+    "type": "mc",
+    "prompt": "Vilket grepp innebär att tummen trycks mot pekfingrets radiala sida?",
+    "correct": "Nyckelgrepp",
+    "distractors": [
+      "Fingertoppsgrepp",
+      "Chuckgrepp",
+      "Fem-fingergrepp"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q6",
+    "type": "tf",
+    "prompt": "I nyckelgreppet är pekfingret böjt och tummen ligger an mot dess radiala sida.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q7",
+    "type": "mc",
+    "prompt": "Vilket grepp använder tumme, pekfinger och långfinger tillsammans?",
+    "correct": "Chuckgrepp",
+    "distractors": [
+      "Fingertoppsgrepp",
+      "Nyckelgrepp",
+      "Transversellt volargrepp"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q8",
+    "type": "mc",
+    "prompt": "Vilket precisionsgrepp använder tummen mot alla fyra fingrarna samtidigt?",
+    "correct": "Fem-fingergrepp",
+    "distractors": [
+      "Chuckgrepp",
+      "Fingertoppsgrepp",
+      "Nyckelgrepp"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q9",
+    "type": "mc",
+    "prompt": "Vad kännetecknar de tre volargreppen?",
+    "correct": "Föremålet hålls mot handflatan med fingrarna runtom (kraftgrepp)",
+    "distractors": [
+      "Föremålet hålls bara mellan fingertopparna",
+      "Tummen är alltid passiv",
+      "Endast lillfingret används"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q10",
+    "type": "mc",
+    "prompt": "I vilket volargrepp ligger föremålet diagonalt i handflatan, t.ex. ett verktygsskaft?",
+    "correct": "Diagonalt volargrepp",
+    "distractors": [
+      "Transversellt volargrepp",
+      "Sfäriskt volargrepp",
+      "Nyckelgrepp"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q11",
+    "type": "mc",
+    "prompt": "I vilket volargrepp ligger föremålet tvärs över handflatan, t.ex. ett bärhandtag?",
+    "correct": "Transversellt volargrepp",
+    "distractors": [
+      "Diagonalt volargrepp",
+      "Sfäriskt volargrepp",
+      "Chuckgrepp"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q12",
+    "type": "mc",
+    "prompt": "Vilket volargrepp formar handen runt ett runt (sfäriskt) föremål?",
+    "correct": "Sfäriskt volargrepp",
+    "distractors": [
+      "Transversellt volargrepp",
+      "Diagonalt volargrepp",
+      "Fem-fingergrepp"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q13",
+    "type": "tf",
+    "prompt": "Chuckgrepp är ett precisionsgrepp.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q14",
+    "type": "tf",
+    "prompt": "Sfäriskt volargrepp är ett kraftgrepp.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q15",
+    "type": "mc",
+    "prompt": "Vilket av följande är INTE ett precisionsgrepp?",
+    "correct": "Diagonalt volargrepp",
+    "distractors": [
+      "Fingertoppsgrepp",
+      "Nyckelgrepp",
+      "Chuckgrepp"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q16",
+    "type": "mc",
+    "prompt": "Vilket av följande är INTE ett kraftgrepp?",
+    "correct": "Fingertoppsgrepp",
+    "distractors": [
+      "Diagonalt volargrepp",
+      "Transversellt volargrepp",
+      "Sfäriskt volargrepp"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q17",
+    "type": "tf",
+    "prompt": "Kraftgrepp används när man behöver stor kraft och stabilitet, t.ex. för att hålla ett verktyg.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q18",
+    "type": "tf",
+    "prompt": "Precisionsgrepp används för att hantera små föremål med stor noggrannhet.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q19",
+    "type": "mc",
+    "prompt": "Vilket grepp lämpar sig bäst för att hålla ett mycket litet föremål, som en synål?",
+    "correct": "Fingertoppsgrepp",
+    "distractors": [
+      "Sfäriskt volargrepp",
+      "Transversellt volargrepp",
+      "Diagonalt volargrepp"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q20",
+    "type": "mc",
+    "prompt": "Vilken förmåga hos tummen är en grundförutsättning för precisionsgreppen?",
+    "correct": "Opposition",
+    "distractors": [
+      "Adduktion",
+      "Extension",
+      "Pronation"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q21",
+    "type": "tf",
+    "prompt": "För att kunna greppa runt ett föremål måste handen kunna välvas och forma sig efter föremålet.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q22",
+    "type": "mc",
+    "prompt": "Vilket grepp involverar flest fingrar?",
+    "correct": "Fem-fingergrepp",
+    "distractors": [
+      "Fingertoppsgrepp",
+      "Nyckelgrepp",
+      "Chuckgrepp"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q23",
+    "type": "tf",
+    "prompt": "I fem-fingergreppet är tummen i opposition mot de övriga fingrarna.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q24",
+    "type": "tf",
+    "prompt": "Fingertoppsgreppet ger stor precision men förhållandevis liten kraft.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q25",
+    "type": "mc",
+    "prompt": "Vilken greppgrupp ger störst kraft?",
+    "correct": "Kraftgreppen (volargreppen)",
+    "distractors": [
+      "Precisionsgreppen",
+      "Fingertoppsgreppet",
+      "Nyckelgreppet"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q26",
+    "type": "mc",
+    "prompt": "Vad är gemensamt för diagonalt, transversellt och sfäriskt grepp?",
+    "correct": "Föremålet stabiliseras mot handflatan (volart)",
+    "distractors": [
+      "Föremålet hålls endast med fingertopparna",
+      "Tummen får inte användas",
+      "Handleden måste vara böjd"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q27",
+    "type": "mc",
+    "prompt": "Vilket grepp använder du för att plocka upp en synål från bordet?",
+    "correct": "Fingertoppsgrepp",
+    "distractors": [
+      "Sfäriskt volargrepp",
+      "Transversellt volargrepp",
+      "Nyckelgrepp"
+    ],
+    "topic": "grepp_exempel",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q28",
+    "type": "mc",
+    "prompt": "Att plocka upp ett litet mynt med tumme och pekfingertopp är ett exempel på vilket grepp?",
+    "correct": "Fingertoppsgrepp",
+    "distractors": [
+      "Diagonalt volargrepp",
+      "Sfäriskt volargrepp",
+      "Chuckgrepp"
+    ],
+    "topic": "grepp_exempel",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q29",
+    "type": "tf",
+    "prompt": "Att knäppa en liten knapp i en skjorta är ett exempel på fingertoppsgrepp.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_exempel",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q30",
+    "type": "mc",
+    "prompt": "Vilket grepp använder du för att trä en tråd genom ett nålsöga?",
+    "correct": "Fingertoppsgrepp",
+    "distractors": [
+      "Nyckelgrepp",
+      "Transversellt volargrepp",
+      "Sfäriskt volargrepp"
+    ],
+    "topic": "grepp_exempel",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q31",
+    "type": "mc",
+    "prompt": "Att plocka upp ett gem från ett bord är ett exempel på vilket grepp?",
+    "correct": "Fingertoppsgrepp",
+    "distractors": [
+      "Sfäriskt volargrepp",
+      "Diagonalt volargrepp",
+      "Fem-fingergrepp"
+    ],
+    "topic": "grepp_exempel",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q32",
+    "type": "mc",
+    "prompt": "Att vrida om en nyckel i ett lås är ett typiskt exempel på vilket grepp?",
+    "correct": "Nyckelgrepp",
+    "distractors": [
+      "Chuckgrepp",
+      "Sfäriskt volargrepp",
+      "Fingertoppsgrepp"
+    ],
+    "topic": "grepp_exempel",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q33",
+    "type": "mc",
+    "prompt": "Vilket grepp används när du drar upp ett blixtlås?",
+    "correct": "Nyckelgrepp",
+    "distractors": [
+      "Sfäriskt volargrepp",
+      "Transversellt volargrepp",
+      "Fem-fingergrepp"
+    ],
+    "topic": "grepp_exempel",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q34",
+    "type": "tf",
+    "prompt": "Att hålla ett spelkort mellan tummen och pekfingrets sida är ett nyckelgrepp.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_exempel",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q35",
+    "type": "mc",
+    "prompt": "Vilket grepp använder du för att hålla och skriva med en penna?",
+    "correct": "Chuckgrepp",
+    "distractors": [
+      "Nyckelgrepp",
+      "Sfäriskt volargrepp",
+      "Transversellt volargrepp"
+    ],
+    "topic": "grepp_exempel",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q36",
+    "type": "tf",
+    "prompt": "Att hålla en nål mellan tumme, pekfinger och långfinger vid sömnad är ett chuckgrepp.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_exempel",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q37",
+    "type": "mc",
+    "prompt": "Att skruva av ett burklock genom att greppa det med tummen och alla fingertopparna är ett exempel på vilket grepp?",
+    "correct": "Fem-fingergrepp",
+    "distractors": [
+      "Nyckelgrepp",
+      "Diagonalt volargrepp",
+      "Fingertoppsgrepp"
+    ],
+    "topic": "grepp_exempel",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q38",
+    "type": "mc",
+    "prompt": "Att greppa en glödlampa med tumme och alla fingertoppar för att skruva i den är ett exempel på vilket grepp?",
+    "correct": "Fem-fingergrepp",
+    "distractors": [
+      "Sfäriskt volargrepp",
+      "Chuckgrepp",
+      "Nyckelgrepp"
+    ],
+    "topic": "grepp_exempel",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q39",
+    "type": "mc",
+    "prompt": "Vilket grepp använder du när du håller en hammare för att slå in en spik?",
+    "correct": "Diagonalt volargrepp",
+    "distractors": [
+      "Sfäriskt volargrepp",
+      "Fingertoppsgrepp",
+      "Nyckelgrepp"
+    ],
+    "topic": "grepp_exempel",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q40",
+    "type": "tf",
+    "prompt": "Att hålla en skruvmejsel stadigt med skaftet diagonalt i handen är ett diagonalt volargrepp.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_exempel",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q41",
+    "type": "mc",
+    "prompt": "Att hålla i ett kvastskaft för att sopa golvet är ett exempel på vilket grepp?",
+    "correct": "Diagonalt volargrepp",
+    "distractors": [
+      "Transversellt volargrepp",
+      "Chuckgrepp",
+      "Fem-fingergrepp"
+    ],
+    "topic": "grepp_exempel",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q42",
+    "type": "mc",
+    "prompt": "Vilket grepp använder du för att hålla en kniv när du skär grönsaker?",
+    "correct": "Diagonalt volargrepp",
+    "distractors": [
+      "Fingertoppsgrepp",
+      "Sfäriskt volargrepp",
+      "Nyckelgrepp"
+    ],
+    "topic": "grepp_exempel",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q43",
+    "type": "mc",
+    "prompt": "Att bära en portfölj eller väska i dess handtag är ett exempel på vilket grepp?",
+    "correct": "Transversellt volargrepp",
+    "distractors": [
+      "Sfäriskt volargrepp",
+      "Fingertoppsgrepp",
+      "Chuckgrepp"
+    ],
+    "topic": "grepp_exempel",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q44",
+    "type": "mc",
+    "prompt": "Gustav öppnar locket på en konservburk med sin dominanta hand. Vilket grepp använder han?",
+    "correct": "Transversellt volargrepp",
+    "distractors": [
+      "Fingertoppsgrepp",
+      "Nyckelgrepp",
+      "Diagonalt volargrepp"
+    ],
+    "topic": "grepp_exempel",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q45",
+    "type": "tf",
+    "prompt": "Att hålla i ett cykelstyre är ett exempel på transversellt volargrepp.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_exempel",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q46",
+    "type": "mc",
+    "prompt": "Vilket grepp använder du för att hålla ett äpple i handen?",
+    "correct": "Sfäriskt volargrepp",
+    "distractors": [
+      "Transversellt volargrepp",
+      "Fingertoppsgrepp",
+      "Nyckelgrepp"
+    ],
+    "topic": "grepp_exempel",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q47",
+    "type": "mc",
+    "prompt": "Att greppa ett runt dörrvred för att öppna en dörr är ett exempel på vilket grepp?",
+    "correct": "Sfäriskt volargrepp",
+    "distractors": [
+      "Diagonalt volargrepp",
+      "Chuckgrepp",
+      "Fem-fingergrepp"
+    ],
+    "topic": "grepp_exempel",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q48",
+    "type": "tf",
+    "prompt": "Att hålla en boll i en hand med fingrarna spridda runt den är ett sfäriskt volargrepp.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_exempel",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q49",
+    "type": "mc",
+    "prompt": "Vilken muskel utför opposition av tummen, vilket är grunden för precisionsgreppen?",
+    "correct": "M. opponens pollicis",
+    "distractors": [
+      "M. adductor pollicis",
+      "M. abductor pollicis longus",
+      "M. flexor digitorum profundus"
+    ],
+    "topic": "grepp_muskler",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q50",
+    "type": "tf",
+    "prompt": "M. opponens pollicis för tummen mot de övriga fingertopparna.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_muskler",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q51",
+    "type": "mc",
+    "prompt": "Vilken muskel är viktigast i nyckelgreppet?",
+    "correct": "M. adductor pollicis",
+    "distractors": [
+      "M. opponens pollicis",
+      "M. abductor pollicis brevis",
+      "M. flexor digitorum superficialis"
+    ],
+    "topic": "grepp_muskler",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q52",
+    "type": "tf",
+    "prompt": "M. adductor pollicis är kraftigt aktiv i nyckelgreppet.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_muskler",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q53",
+    "type": "mc",
+    "prompt": "Vilken nerv innerverar m. adductor pollicis, som är central i nyckelgreppet?",
+    "correct": "N. ulnaris",
+    "distractors": [
+      "N. medianus",
+      "N. radialis",
+      "N. axillaris"
+    ],
+    "topic": "grepp_muskler",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q54",
+    "type": "mc",
+    "prompt": "Vilken muskel böjer tummens ytterled (IP-led) när du nyper hårt med fingertoppsgreppet?",
+    "correct": "M. flexor pollicis longus",
+    "distractors": [
+      "M. flexor pollicis brevis",
+      "M. opponens pollicis",
+      "M. extensor pollicis longus"
+    ],
+    "topic": "grepp_muskler",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q55",
+    "type": "mc",
+    "prompt": "Vilken muskel böjer fingrarnas ytterleder (DIP) och behövs för ett stadigt kraftgrepp?",
+    "correct": "M. flexor digitorum profundus",
+    "distractors": [
+      "M. flexor digitorum superficialis",
+      "Mm. lumbricales",
+      "M. opponens digiti minimi"
+    ],
+    "topic": "grepp_muskler",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q56",
+    "type": "mc",
+    "prompt": "Vilken muskel böjer fingrarnas mellanleder (PIP-lederna)?",
+    "correct": "M. flexor digitorum superficialis",
+    "distractors": [
+      "M. flexor digitorum profundus",
+      "Mm. interossei",
+      "M. extensor digitorum"
+    ],
+    "topic": "grepp_muskler",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q57",
+    "type": "mc",
+    "prompt": "Vilken muskelgrupp sprider (abducerar) fingrarna så att handen kan formas runt ett sfäriskt föremål?",
+    "correct": "Mm. interossei dorsales",
+    "distractors": [
+      "Mm. interossei palmares",
+      "Mm. lumbricales",
+      "M. adductor pollicis"
+    ],
+    "topic": "grepp_muskler",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q58",
+    "type": "mc",
+    "prompt": "Vilka muskler för fingrarna samman (adducerar) mot långfingret?",
+    "correct": "Mm. interossei palmares",
+    "distractors": [
+      "Mm. interossei dorsales",
+      "Mm. lumbricales",
+      "M. opponens pollicis"
+    ],
+    "topic": "grepp_muskler",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q59",
+    "type": "tf",
+    "prompt": "De långa fingerflexorerna (m. flexor digitorum superficialis och profundus) ger huvudkraften i kraftgreppen.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_muskler",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q60",
+    "type": "mc",
+    "prompt": "Vilken muskel abducerar tummen palmart, en rörelse som behövs för att öppna handen inför ett grepp?",
+    "correct": "M. abductor pollicis brevis",
+    "distractors": [
+      "M. adductor pollicis",
+      "M. opponens pollicis",
+      "M. flexor pollicis longus"
+    ],
+    "topic": "grepp_muskler",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q61",
+    "type": "tf",
+    "prompt": "Tummens thenarmuskler (opponens pollicis, abductor pollicis brevis och flexor pollicis brevis) är viktiga för precisionsgreppen.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_muskler",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q62",
+    "type": "mc",
+    "prompt": "Vilken muskel hjälper till att böja tummens grundled (MCP-leden) i greppen?",
+    "correct": "M. flexor pollicis brevis",
+    "distractors": [
+      "M. flexor pollicis longus",
+      "M. opponens pollicis",
+      "M. abductor pollicis longus"
+    ],
+    "topic": "grepp_muskler",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q63",
+    "type": "mc",
+    "prompt": "Vilken nerv innerverar de flesta thenarmusklerna och är därför viktig för tummens opposition?",
+    "correct": "N. medianus",
+    "distractors": [
+      "N. ulnaris",
+      "N. radialis",
+      "N. axillaris"
+    ],
+    "topic": "grepp_muskler",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q64",
+    "type": "mc",
+    "prompt": "Vilken nerv innerverar mm. interossei, som styr fingrarna i kraftgreppen?",
+    "correct": "N. ulnaris",
+    "distractors": [
+      "N. medianus",
+      "N. radialis",
+      "N. musculocutaneus"
+    ],
+    "topic": "grepp_muskler",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q65",
+    "type": "tf",
+    "prompt": "Mm. lumbricales och mm. interossei (handens inre muskler) bidrar till att forma greppet runt föremålet.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_muskler",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q66",
+    "type": "mc",
+    "prompt": "Vilken muskel utför opposition av lillfingret och hjälper handen att välvas i volargreppen?",
+    "correct": "M. opponens digiti minimi",
+    "distractors": [
+      "M. opponens pollicis",
+      "M. adductor pollicis",
+      "M. flexor digitorum profundus"
+    ],
+    "topic": "grepp_muskler",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q67",
+    "type": "tf",
+    "prompt": "För ett stadigt fem-fingergrepp krävs både tummens opposition och böjning i alla fingrar.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_muskler",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q68",
+    "type": "mc",
+    "prompt": "Vilken muskel sträcker (extenderar) fingrarna så att handen kan öppnas inför ett grepp?",
+    "correct": "M. extensor digitorum",
+    "distractors": [
+      "M. flexor digitorum profundus",
+      "Mm. interossei",
+      "M. opponens pollicis"
+    ],
+    "topic": "grepp_muskler",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q69",
+    "type": "mc",
+    "prompt": "Vilken nerv styr musklerna som öppnar handen (extensorerna) inför ett grepp?",
+    "correct": "N. radialis",
+    "distractors": [
+      "N. medianus",
+      "N. ulnaris",
+      "N. axillaris"
+    ],
+    "topic": "grepp_muskler",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q70",
+    "type": "mc",
+    "prompt": "Vilken muskel för tummen in mot handflatan (adduktion)?",
+    "correct": "M. adductor pollicis",
+    "distractors": [
+      "M. abductor pollicis brevis",
+      "M. opponens pollicis",
+      "M. flexor pollicis longus"
+    ],
+    "topic": "grepp_muskler",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q71",
+    "type": "mc",
+    "prompt": "Vilken led i tummens bas är en sadelled och möjliggör opposition?",
+    "correct": "Art. carpometacarpale pollicis (CMC I)",
+    "distractors": [
+      "MCP-leden",
+      "IP-leden",
+      "PIP-leden"
+    ],
+    "topic": "grepp_leder",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q72",
+    "type": "tf",
+    "prompt": "Tummens karpometakarpalled (CMC I) är en sadelled.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_leder",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q73",
+    "type": "mc",
+    "prompt": "Vilken rörelse i CMC I-leden är avgörande för att kunna utföra precisionsgrepp?",
+    "correct": "Opposition",
+    "distractors": [
+      "Extension",
+      "Pronation",
+      "Dorsalflexion"
+    ],
+    "topic": "grepp_leder",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q74",
+    "type": "tf",
+    "prompt": "Utan rörlighet i tummens CMC I-led försvåras alla grepp där tummen möter fingrarna.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_leder",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q75",
+    "type": "mc",
+    "prompt": "Vilka fingerleder böjs när du sluter handen runt ett föremål i ett kraftgrepp?",
+    "correct": "MCP-, PIP- och DIP-lederna",
+    "distractors": [
+      "Endast MCP-leden",
+      "Endast DIP-leden",
+      "Endast handleden"
+    ],
+    "topic": "grepp_leder",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q76",
+    "type": "mc",
+    "prompt": "Vad heter fingrarnas grundleder (mot mellanhanden)?",
+    "correct": "MCP-lederna (metakarpofalangeallederna)",
+    "distractors": [
+      "PIP-lederna",
+      "DIP-lederna",
+      "CMC-lederna"
+    ],
+    "topic": "grepp_leder",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q77",
+    "type": "mc",
+    "prompt": "Vad heter fingrarnas mellanleder?",
+    "correct": "PIP-lederna (proximala interfalangeallederna)",
+    "distractors": [
+      "DIP-lederna",
+      "MCP-lederna",
+      "IP-lederna"
+    ],
+    "topic": "grepp_leder",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q78",
+    "type": "mc",
+    "prompt": "Vad heter fingrarnas ytterleder?",
+    "correct": "DIP-lederna (distala interfalangeallederna)",
+    "distractors": [
+      "PIP-lederna",
+      "MCP-lederna",
+      "CMC-lederna"
+    ],
+    "topic": "grepp_leder",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q79",
+    "type": "tf",
+    "prompt": "Tummen har en interfalangealled (IP-led) medan de övriga fingrarna har två (PIP och DIP).",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_leder",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q80",
+    "type": "mc",
+    "prompt": "Varför är karpometakarpallederna i ring- och lillfinger viktiga för greppet?",
+    "correct": "De är rörligare och låter handen välva sig runt föremålet",
+    "distractors": [
+      "De är helt orörliga och ger stadga",
+      "De utför tummens opposition",
+      "De böjer fingrarnas ytterleder"
+    ],
+    "topic": "grepp_leder",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q81",
+    "type": "tf",
+    "prompt": "Att handen kan välvas beror bland annat på rörligheten i de yttre fingrarnas karpometakarpalleder.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_leder",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q82",
+    "type": "mc",
+    "prompt": "I vilken led sker tummens opposition?",
+    "correct": "Karpometakarpalleden (CMC I, sadelleden)",
+    "distractors": [
+      "MCP-leden",
+      "IP-leden",
+      "Handleden"
+    ],
+    "topic": "grepp_leder",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q83",
+    "type": "mc",
+    "prompt": "En skada på n. medianus försämrar tummens opposition. Vilken greppgrupp drabbas särskilt?",
+    "correct": "Precisionsgreppen (t.ex. fingertoppsgrepp)",
+    "distractors": [
+      "Inga grepp påverkas",
+      "Endast kraftgreppen",
+      "Endast sfäriskt volargrepp"
+    ],
+    "topic": "grepp_skador",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q84",
+    "type": "tf",
+    "prompt": "Vid skada på n. medianus blir det svårt att opponera tummen, vilket försämrar precisionsgreppen.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_skador",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q85",
+    "type": "tf",
+    "prompt": "En skada på n. medianus förlamar hela tummen.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "grepp_skador",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q86",
+    "type": "mc",
+    "prompt": "En skada på n. ulnaris försvagar m. adductor pollicis. Vilket grepp påverkas tydligt?",
+    "correct": "Nyckelgreppet",
+    "distractors": [
+      "Fingertoppsgreppet",
+      "Sfäriskt volargrepp",
+      "Inget grepp"
+    ],
+    "topic": "grepp_skador",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q87",
+    "type": "tf",
+    "prompt": "Skada på n. ulnaris försvagar handens inre muskler (mm. interossei) och därmed kraftgreppet.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_skador",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q88",
+    "type": "mc",
+    "prompt": "En skada på n. radialis gör det svårt att sträcka ut fingrarna. Hur påverkas greppet?",
+    "correct": "Det blir svårt att öppna handen inför ett grepp",
+    "distractors": [
+      "Det blir omöjligt att böja fingrarna",
+      "Tummen kan inte opponeras",
+      "Greppet påverkas inte alls"
+    ],
+    "topic": "grepp_skador",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q89",
+    "type": "mc",
+    "prompt": "Smärtande artros i tummens CMC I-led (tumbasen) försvårar särskilt...",
+    "correct": "grepp där tummen belastas, som nyckel- och fingertoppsgrepp",
+    "distractors": [
+      "endast lillfingrets rörelser",
+      "handledens böjning",
+      "inga grepp alls"
+    ],
+    "topic": "grepp_skador",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q90",
+    "type": "tf",
+    "prompt": "Nedsatt kraft i de långa fingerflexorerna försämrar kraftgreppen mest.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_skador",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q91",
+    "type": "tf",
+    "prompt": "Nyckelgreppet räknas som ett precisionsgrepp trots att det kan utveckla relativt stor kraft.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q92",
+    "type": "mc",
+    "prompt": "Vilket grepp passar bäst för att med kraft hålla ett brett, runt föremål?",
+    "correct": "Sfäriskt volargrepp",
+    "distractors": [
+      "Fingertoppsgrepp",
+      "Nyckelgrepp",
+      "Chuckgrepp"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q93",
+    "type": "tf",
+    "prompt": "I chuckgreppet bildar tumme, pekfinger och långfinger tillsammans ett stabilt trepunktsfäste.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_typer",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q94",
+    "type": "mc",
+    "prompt": "Vilket grepp använder du för att hålla en pensel när du målar detaljer?",
+    "correct": "Chuckgrepp",
+    "distractors": [
+      "Sfäriskt volargrepp",
+      "Transversellt volargrepp",
+      "Nyckelgrepp"
+    ],
+    "topic": "grepp_exempel",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q95",
+    "type": "mc",
+    "prompt": "Att hålla i ett trappräcke när du går nedför trappan är ett exempel på vilket grepp?",
+    "correct": "Transversellt volargrepp",
+    "distractors": [
+      "Fingertoppsgrepp",
+      "Nyckelgrepp",
+      "Chuckgrepp"
+    ],
+    "topic": "grepp_exempel",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q96",
+    "type": "tf",
+    "prompt": "M. flexor pollicis longus böjer tummens IP-led och behövs när man nyper hårt med tumtoppen.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_muskler",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q97",
+    "type": "mc",
+    "prompt": "I chuckgreppet samverkar tummens muskler med flexorerna till vilka fingrar?",
+    "correct": "Pekfingret och långfingret",
+    "distractors": [
+      "Ringfingret och lillfingret",
+      "Endast lillfingret",
+      "Samtliga tår"
+    ],
+    "topic": "grepp_muskler",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q98",
+    "type": "tf",
+    "prompt": "I kraftgreppen böjs fingrarna i alla tre lederna (MCP, PIP och DIP) runt föremålet.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_leder",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q99",
+    "type": "mc",
+    "prompt": "Vilken led böjs i tummen när du nyper med tumtoppen i ett fingertoppsgrepp?",
+    "correct": "IP-leden",
+    "distractors": [
+      "PIP-leden",
+      "MCP-leden",
+      "CMC I-leden"
+    ],
+    "topic": "grepp_leder",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  },
+  {
+    "id": "q100",
+    "type": "tf",
+    "prompt": "Om tummens opposition uteblir blir det svårt att utföra både fingertoppsgrepp och chuckgrepp.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "grepp_skador",
+    "difficulty": "Normal",
+    "source": "Grepp"
+  }
+]
