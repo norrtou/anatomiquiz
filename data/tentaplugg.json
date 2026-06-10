@@ -1235,12 +1235,12 @@
   {
     "id": "studier_q98",
     "type": "mc",
-    "prompt": "Vad påverkar bland annat nervsignalernas ledningshastighet?",
-    "correct": "Myelin",
+    "prompt": "Vilken egenskap hos en nervfiber är avgörande för hur snabbt den leder nervsignaler?",
+    "correct": "Graden av myelinisering",
     "distractors": [
-      "Ranviers noder",
-      "Transmittorsubstanser",
-      "Ganglion"
+      "Cellkroppens storlek",
+      "Antalet transmittorsubstanser",
+      "Förekomsten av ganglion"
     ],
     "topic": "studier_neurologi",
     "difficulty": "Normal"
@@ -1931,9 +1931,9 @@
     "id": "studier_q153",
     "type": "mc",
     "prompt": "Hur många kammare har hjärtat?",
-    "correct": "4",
+    "correct": "2",
     "distractors": [
-      "2",
+      "4",
       "3",
       "6"
     ],
@@ -2251,7 +2251,7 @@
   {
     "id": "studier_q178",
     "type": "mc",
-    "prompt": "Vad kallas den vätska som produceras i corpus pineale och reglerar dygnsrytmen?",
+    "prompt": "Vad kallas det hormon som produceras i corpus pineale och reglerar dygnsrytmen?",
     "correct": "Melatonin",
     "distractors": [
       "Kortisol",
@@ -2665,19 +2665,6 @@
     "difficulty": "Normal"
   },
   {
-    "prompt": "Ungefär hur många gånger högre blir belastningen på nacken av att läsa med 60 graders flekterad nacke, jämfört med att hålla huvudet i optimal position?",
-    "correct": "12 ggr högre",
-    "distractors": [
-      "1,5 ggr högre",
-      "3 ggr högre",
-      "10 ggr högre"
-    ],
-    "topic": "studier_ergonomi",
-    "id": "studier_q210",
-    "type": "mc",
-    "difficulty": "Normal"
-  },
-  {
     "prompt": "Vad är korrekt om m. adductor pollicis?",
     "correct": "Är kontraherad i nyckelgreppet",
     "distractors": [
@@ -2835,19 +2822,6 @@
     ],
     "topic": "studier_muskler",
     "id": "studier_q223",
-    "type": "mc",
-    "difficulty": "Normal"
-  },
-  {
-    "prompt": "Gustav ska med sin dominerande högra hand öppna locket på en konservburk. Vilket grepp enligt Sollerman använder han sannolikt?",
-    "correct": "Transversellt volargrepp",
-    "distractors": [
-      "Femfingergrepp",
-      "Sfäriskt volargrepp",
-      "Diagonalt volargrepp"
-    ],
-    "topic": "studier_hand",
-    "id": "studier_q224",
     "type": "mc",
     "difficulty": "Normal"
   },

@@ -1,5 +1,18 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.6.19
+- **Grundlig faktagranskning av samtliga MC/TF-ämnen** (≈2 400 frågor: ben, blodomloppet, ergonomi, grepp, handen, ledtyper, muskler, neurologi, olika_aldrar, riktningar, skuldran, tentaplugg). `medicinsk_terminologi.json` granskades inte (skyddad källa).
+- **Sakfel rättade:**
+  - **Hjärtat har 2 kammare, inte 4.** `tentaplugg studier_q153` ("Hur många kammare har hjärtat?") rätt svar 4 → **2** (4 blev distraktor). `blodomloppet q41` "Hjärtat har fyra kamrar" → "Hjärtat har **två** kamrar" (svar Sant).
+  - **handen q220:** "M. flexor carpi radialis går genom karpaltunneln" Sant → **Falskt** (FCR löper i eget fack; krockade med att karpaltunneln rymmer 9 senor).
+  - **handen q221:** "M. flexor carpi ulnaris går genom Guyons kanal" Sant → **Falskt** (kanalen rymmer n./a. ulnaris; FCU fäster på os pisiforme).
+  - **handen q468:** tum-MCP-extension — rätt svar omdefinierat till "En rörelse i frontalplanet parallellt med handflatan" (det felaktiga sagittalplan-svaret blev distraktor; var inkonsekvent med abduktionsdefinitionen i q484).
+- **Tvetydiga/svaga frågor borttagna:** `tentaplugg studier_q210` (nackbelastning "12 ggr" – ej källstödd), `tentaplugg studier_q224` och `grepp q44` (konservburkslock → Sollerman-grepp – ej entydigt verifierbart).
+- **Omformuleringar för entydighet:** `tentaplugg studier_q98` (ledningshastighet — distraktorn "Ranviers noder" var försvarbart korrekt; frågan omformulerad med "Graden av myelinisering" och entydiga distraktorer). `tentaplugg studier_q178` ordval "vätska" → "hormon" (melatonin).
+- **Stavfel rättade:** `skuldran q66/q76` Romd→Romb (romboideus), `handen q421` frakureras→fraktureras, `handen q445` lillfingeridan→lillfingersidan.
+- Cachebustrar och APP_VERSION bumpade till 0.6.19.
+- Highscore-datan i localStorage är orörd.
+
 ## 0.6.18
 - **Slumpade frågor (blandade) innehåller inte längre flashcards.**
   - **Etiketten** i ämnesmenyn ändrad från "Slumpade frågor (MC+FC+TF)" till "Slumpade frågor (MC+TF)". Eftersom appens lägeslogik läser typtaggen ur etiketten innebär detta att knappen "Starta flashcards" nu är skuggad när Slumpade frågor är valt (det gick tidigare att köra slumpade som flashcards), och att Slumpade frågor döljs om man bara bockat i frågetypen Flashcards.
