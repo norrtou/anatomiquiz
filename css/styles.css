@@ -8,6 +8,8 @@
   --primary: #10b981;           /* Emerald green - main accent */
   --primary-light: #34d399;     /* Lighter emerald for highlights */
   --primary-dark: #059669;      /* Darker emerald for depth */
+  --primary-deep: #047857;      /* Mörk smaragd — vit text klarar WCAG AA (4,5:1) */
+  --primary-deepest: #065f46;   /* Mörkaste smaragd för gradienter/hover */
 
   /* Accent (teal) - komplementton för sekundära genvägsknappar (Case, Ordlista) */
   --accent: #0d9488;            /* Teal */
@@ -27,7 +29,7 @@
   /* Semantic colors */
   --success: #10b981;           /* Green - correct answers */
   --success-bg: #ecfdf5;        /* Success background */
-  --error: #ef4444;             /* Red - wrong answers */
+  --error: #dc2626;             /* Red - wrong answers; klarar WCAG AA mot vitt åt båda hållen */
   --error-bg: #fef2f2;          /* Error background */
   --warning: #f59e0b;           /* Amber - warnings */
 
@@ -391,6 +393,13 @@ select:focus {
   box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
 }
 
+/* Tydlig fokusring vid tangentbordsnavigering (WCAG 2.4.7) */
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--primary-dark);
+  outline-offset: 2px;
+}
+
 /* ============================================================================
    BUTTONS & ACTIONS
    ============================================================================ */
@@ -454,14 +463,14 @@ select:focus {
 
 /* Primary button - full gradient with white text */
 .btn.primary {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  background: linear-gradient(135deg, var(--primary-deep) 0%, var(--primary-deepest) 100%);
   color: var(--text-light);
   border: none;
   box-shadow: var(--shadow);
 }
 
 .btn.primary:hover:not(:disabled) {
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  background: linear-gradient(135deg, var(--primary-deepest) 0%, #064e3b 100%);
   box-shadow: var(--shadow-lg);
   transform: translateY(-2px);
 }
@@ -477,10 +486,14 @@ select:focus {
   cursor: not-allowed;
 }
 
-/* Focus state for accessibility */
+/* Tydlig fokusring enbart vid tangentbordsfokus (WCAG 2.4.7) */
 .btn:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--primary-dark);
+  outline-offset: 2px;
 }
 
 /* Cancel button - red, separate from other actions */
@@ -541,6 +554,13 @@ select:focus {
   line-height: 1.5;
 }
 
+/* Förklaring av MC/FC/TF under ämnesväljaren på startsidan */
+.topic-legend {
+  font-size: 0.75em;
+  font-style: italic;
+  margin: 0.25em 0 0;
+}
+
 /* ============================================================================
    QUIZ SECTION STYLES
    ============================================================================ */
@@ -596,12 +616,6 @@ select:focus {
   }
 }
 
-@media (min-width: 1024px) {
-  .answers[role="list"] {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 /* Individual answer buttons */
 .answer-btn {
   padding: 16px 20px;
@@ -630,17 +644,15 @@ select:focus {
   transform: translateX(0);
 }
 
-/* Selected state - only show color if it's correct or wrong */
-.answer-btn[aria-pressed="true"]:not(.correct):not(.wrong) {
-  border-color: var(--primary);
-  background: rgba(16, 185, 129, 0.05);
-  box-shadow: none;
+.answer-btn:focus-visible {
+  outline: 3px solid var(--primary-dark);
+  outline-offset: 2px;
 }
 
-/* Correct answer styling - PURE GREEN */
+/* Correct answer styling - mörk smaragd, vit text klarar WCAG AA */
 .answer-btn.correct {
-  background: var(--success);
-  border-color: var(--success);
+  background: var(--primary-deep);
+  border-color: var(--primary-deep);
   color: white;
   box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
   animation: slideInCorrect 0.4s ease-out;
@@ -666,6 +678,14 @@ select:focus {
   box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
   animation: shake 0.4s ease-out;
   font-weight: 600;
+}
+
+/* ✓/✗-markering på besvarad fråga — komplement till färgen (WCAG 1.4.1) */
+.answer-mark {
+  margin-left: auto;
+  padding-left: 12px;
+  font-weight: 700;
+  font-size: 1.1em;
 }
 
 @keyframes shake {
@@ -852,8 +872,8 @@ select:focus {
   box-shadow: 0 2px 4px rgba(13, 148, 136, 0.15);
 }
 
-.accent-row .btn:focus {
-  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.25);
+.accent-row .btn:focus-visible {
+  outline-color: var(--accent-dark);
 }
 
 .info-about {

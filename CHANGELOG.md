@@ -1,5 +1,16 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.7.0
+- **Tillgänglighets- och SEO-genomgång av hela webbplatsen** (alla fyra sidor + CSS + app.js):
+  - **Timern tystad för skärmläsare:** `#timer`/`#fcTimer` hade `aria-live="polite"` och uppdateras varje sekund → skärmläsare läste upp "Tid: 1 s, 2 s, 3 s…" oavbrutet. Nu `role="timer"` (tyst). Sektionsövergripande `aria-live` på `#quiz` och `#flashcards` borttagen av samma skäl (timern ligger i sektionerna); `#fcQuestion` fick egen `aria-live="polite"` så nya kort fortfarande annonseras.
+  - **Rätt/fel förmedlas inte längre med enbart färg (WCAG 1.4.1):** besvarade svarsknappar får ✓/✗-ikon + dold skärmläsartext ("rätt svar"/"fel svar") via ny `markAnswerBtn()`. Felaktiga `aria-pressed`/`role="button"` på svarsknapparna borttagna; `role="list"` på `#answers` borttagen (ogiltig utan listitem-barn).
+  - **Kontrast (WCAG AA):** primärknapparnas gradient mörkad (`--primary-deep` #047857 → `--primary-deepest` #065f46; vit text ≥ 4,5:1), rätt-svar-grönt #10b981 → #047857, `--error` #ef4444 → #dc2626 (vit/på vit text klarar AA).
+  - **Synliga fokusringar:** `:focus-visible` med solid 3px-outline på knappar, svarsknappar, input och select (ersätter knappt synliga 10–20 %-skuggor); accentknapparna får teal-ring. Visas bara vid tangentbordsfokus.
+  - **SEO — riktiga länkar:** Info/Case/Ordlista-knapparna på startsidan var `<button onclick>` (ofollowbara för sökmotorer) → nu `<a class="btn">`; ger crawlbara interna länkar och öppna-i-ny-flik.
+  - **Övrigt:** `hasPart.url` i JSON-LD nu absolut URL; `meta keywords` borttagen på alla sidor (ignoreras sedan 2009); `apple-touch-icon` → icon-192.png (Apple kräver ≥180px); meningslös `preload` av CSS borttagen; `#topicLegend`-inline-stil flyttad till CSS-klass och kopplad till ämnesväljaren via `aria-describedby`.
+- Cachebustrar (CSS nu enhetligt 0.7.0 på alla sidor — låg kvar på 0.6.11 på undersidorna) och APP_VERSION bumpade till 0.7.0.
+- Highscore-datan i localStorage är orörd.
+
 ## 0.6.19
 - **Grundlig faktagranskning av samtliga MC/TF-ämnen** (≈2 400 frågor: ben, blodomloppet, ergonomi, grepp, handen, ledtyper, muskler, neurologi, olika_aldrar, riktningar, skuldran, tentaplugg). `medicinsk_terminologi.json` granskades inte (skyddad källa).
 - **Sakfel rättade:**

@@ -60,7 +60,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.6.19'
+const APP_VERSION = '0.7.0'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -462,33 +462,45 @@ function showQuestion(){
     const b = document.createElement('button')
     b.className = 'answer-btn'
     b.type = 'button'
-    b.setAttribute('role','button')
-    b.setAttribute('aria-pressed','false')
     b.textContent = opt
     b.addEventListener('click', ()=>selectAnswer(b, opt, q.correct))
     el('answers').appendChild(b)
   })
   el('progress').textContent = `Fråga ${currentIdx+1}/${quizQuestions.length} — Poäng: ${score}`
-  // announce for screen readers
-  el('progress').setAttribute('aria-live','polite')
   questionStartTime = Date.now()
   if(quizTimerOn) startCountUp(); else el('timer').textContent = ''
   // focus first answer for keyboard users
   setTimeout(()=>{ const first = el('answers').querySelector('button'); if(first) first.focus() }, 50)
 }
 
+// Markera en svarsknapp som rätt/fel med färg + ✓/✗ + dold skärmläsartext,
+// så att utfallet inte förmedlas med enbart färg (WCAG 1.4.1).
+function markAnswerBtn(b, ok){
+  b.classList.add(ok ? 'correct' : 'wrong')
+  const icon = document.createElement('span')
+  icon.className = 'answer-mark'
+  icon.setAttribute('aria-hidden','true')
+  icon.textContent = ok ? '✓' : '✗'
+  const sr = document.createElement('span')
+  sr.className = 'sr-only'
+  sr.textContent = ok ? ' — rätt svar' : ' — fel svar'
+  b.append(icon, sr)
+}
+
 function selectAnswer(btn, selected, correct){
   Array.from(el('answers').children).forEach(b=>{b.disabled=true; b.setAttribute('aria-disabled','true')})
   const q = quizQuestions[currentIdx]
   if(selected===correct){
-    btn.classList.add('correct'); btn.setAttribute('aria-pressed','true'); score++
+    markAnswerBtn(btn, true); score++
     // Rätt svar: frågan behöver inte längre extra övning
     if(q) markCorrect(q.id)
-  } else { btn.classList.add('wrong');
+  } else {
+    // Hitta rätt-knappen FÖRE markeringen — ✓/✗-texten ändrar textContent
+    const correctBtn = Array.from(el('answers').children).find(b=>b.textContent===correct)
+    markAnswerBtn(btn, false)
     // Fel svar: vägs upp i framtida quiz om "öva extra"-läget är på
     if(q) markWrong(q.id)
-    // mark correct
-    Array.from(el('answers').children).find(b=>b.textContent===correct)?.classList.add('correct')
+    if(correctBtn) markAnswerBtn(correctBtn, true)
   }
   el('nextBtn').disabled = false
   el('nextBtn').setAttribute('aria-disabled','false')
