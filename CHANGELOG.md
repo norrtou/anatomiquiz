@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.7.1
+- **PageSpeed Insights-åtgärder (Tillgänglighet + Best practices)**, utan synlig designändring:
+  - **Kontrast (WCAG AA, 4,5:1):** all grön TEXT på ljus bakgrund mörkad till `--primary-deep` #047857 (5,5:1 mot vitt). Tidigare användes `--primary` #10b981 (2,2:1) och `--primary-dark` #059669 (3,8:1) — båda underkända. Gäller bl.a. sekundärknapparnas text (Info/Topplista/Inställningar m.fl.), länkar i Om-texten (`.intro a`), versionsnumret i sidhuvudet, brödsmulelänkar, badges, topplistans procent, flashcardens "SVAR"-etikett/svarstext, case-taggar och fotnotskod. Hover-tillstånd för länkar → `--primary-deepest` #065f46. Kantlinjer/accent-färger (icke-text) orörda, så utseendet är nästan identiskt.
+  - **Konsol-404:an borta:** `init()` i app.js anropade `loadQuestions()` UTAN sökväg → `fetch(undefined)` gav `GET /anatomiquiz/undefined` 404 + fellogg vid varje sidladdning. Förladdningen var dessutom meningslös (frågorna laddas alltid om med rätt sökväg när quiz/flashcards startas) och fyllde bara `allQuestions` med placeholders. Anropet borttaget.
+  - **CSP mot XSS:** `<meta http-equiv="Content-Security-Policy">` på alla fyra sidorna: `default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'`. Säkert eftersom sajten saknar inline-skript/-stilar och externa resurser (JSON-LD-block är data, inte körbara, och påverkas inte). Verifierat i headless Chrome: inga CSP-blockeringar på någon sida.
+  - **Kan INTE fixas på GitHub Pages** (kräver HTTP-svarshuvuden, som GitHub Pages inte låter en sätta; meta-taggar räcker inte): HSTS-policy, COOP, X-Frame-Options/`frame-ancestors` (clickjacking). Trusted Types hoppades över medvetet — appen renderar via `innerHTML` och skulle gå sönder utan större refaktorering.
+- Cachebustrar (styles.css/app.js/case.js → 0.7.1) och APP_VERSION bumpade till 0.7.1.
+- Highscore-datan i localStorage är orörd.
+
 ## 0.7.0
 - **Tillgänglighets- och SEO-genomgång av hela webbplatsen** (alla fyra sidor + CSS + app.js):
   - **Timern tystad för skärmläsare:** `#timer`/`#fcTimer` hade `aria-live="polite"` och uppdateras varje sekund → skärmläsare läste upp "Tid: 1 s, 2 s, 3 s…" oavbrutet. Nu `role="timer"` (tyst). Sektionsövergripande `aria-live` på `#quiz` och `#flashcards` borttagen av samma skäl (timern ligger i sektionerna); `#fcQuestion` fick egen `aria-live="polite"` så nya kort fortfarande annonseras.

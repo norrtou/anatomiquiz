@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSP mot XSS (skript/stilar/data endast från egen origin). OBS: GitHub Pages tillåter inga egna HTTP-headers, därav meta-tagg; frame-ancestors/HSTS/COOP kan inte sättas via meta. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
 
   <!-- =========================================================
        Primär SEO
@@ -82,7 +84,7 @@
   <link rel="icon" type="image/png" sizes="64x64" href="/anatomiquiz/img/favicon.png">
   <link rel="apple-touch-icon" href="/anatomiquiz/img/icon-192.png">
   <link rel="manifest" href="/anatomiquiz/manifest.json">
-  <link rel="stylesheet" href="css/styles.css?v=0.7.0">
+  <link rel="stylesheet" href="css/styles.css?v=0.7.1">
 </head>
 <body>
 
