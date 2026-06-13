@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.15
+- **Medicinska ordlistan: bokstaven S berikad** till fullt husformat. Synliga termer: 4 051 → **4 321** (273 S-poster berikade, 0 stubbar kvar).
+  - **Sammanslagningar/borttagningar (7 stubbar):** c/k-dubbletterna Sakrum → Sacrum och Sklera → Sclera (täcks redan av publicerade poster); Sequela → slagen ihop med Sekvele (lat./sv. synonym); -ös-former integrerade i grundordet enligt husregel: Soporös → Sopor, Stridorös → Stridor, Submukös → Submukosa, Seborroiskt → Seborré.
+  - **Rubrikfixar:** felstavade/trasiga stubbrubriker rättade – Sekretotisk otit → Sekretorisk otit; Systemiskt: → Systemisk.
+  - **Cross-referenser:** SAA/Amyloidos, SAB+SAH/Subaraknoidalblödning, SN/Sant negativ, SP/Sant positiv, Subileus/Ileus, Sensorisk afasi/Afasi, Störande variabel/Confounding factor, Supinera/Pronera, Systolisk/Diastolisk, Serum/Plasma, SXA/DXA m.fl.
+  - Forsknings-/statistikbegrepp (Sannolikhetskvot, Sensitivitet/Specificitet, Sensitivitetsanalys, Signifikans(nivå), Stratifiering, Systematisk översikt, Sant pos./neg., Sham) bevarade med tolkningsförklaring.
+  - Innehåller även en separat upprensning: de fyra enbokstavsposterna A/B/C/D (evidensgrad) sammanslagna till en samlad post **Evidensgrad**.
+- APP_VERSION/VERSION → 0.8.15 (cachebusters: glossary.css → 0.8.15, glossary.js → 0.8.15, app.js → 0.8.15). Highscore-data orörd.
+
 ## 0.8.14
 - **Medicinska ordlistan: bokstaven R berikad** till fullt husformat. Synliga termer: 3 898 → **4 051** (153 R-poster berikade, 0 stubbar kvar).
   - **Sammanslagningar (2 stubbar borttagna):** c/k-dubbletten Resekera → Resecera (även-stavning); Rektum → täcks redan av publicerade Rectum (som anger "rektum" som svensk form).

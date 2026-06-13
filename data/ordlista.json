@@ -10,10 +10,6 @@
     "status": "stub"
   },
   {
-    "term": "A",
-    "def": "Evidensgrad A (SBU/GRADE); kräver stöd i systematiska översikter och metaanalyser av randomiserade kontrollerade studier, eller minst en randomiserad kontrollerad studie av god kvalitet (evidensnivå 1a–1b). (beteckning) Eng: evidence level A."
-  },
-  {
     "term": "AA",
     "def": "Sekundär (reaktiv) systemisk amyloidos; inlagring av AA-amyloid som följd av långvarig inflammation. (förkortn.) Eng: AA amyloidosis. Se Amyloidos."
   },
@@ -2234,10 +2230,6 @@
     "def": "Oparig; vena azygos = oparig ven på höger sida av ryggraden. (adj.) Sv: azygosvenen. Eng: azygos. Av grek. a- (utan) + zygon = ok, par."
   },
   {
-    "term": "B",
-    "def": "Evidensgrad B; näst högsta vetenskapliga underlaget, baserat på minst en väl genomförd kontrollerad studie utan randomisering eller flera väldesignade observationsstudier (evidensnivå 2a och 2b). (beteckning) Eng: evidence level B."
-  },
-  {
     "term": "B27",
     "def": "HLA-B27; ett humant leukocytantigen (vävnadstyp) med stark koppling till spondylartriter som ankyloserande spondylit (Bechterew) och reaktiv artrit. (förkortn.) Eng: HLA-B27."
   },
@@ -2732,10 +2724,6 @@
   {
     "term": "Bypass",
     "def": "Förbiledning; kirurgiskt anlagd förbikoppling förbi ett hinder, t.ex. kranskärl vid bypassoperation. (subst., eng.) Sv: förbiledning. Eng: bypass."
-  },
-  {
-    "term": "C",
-    "def": "Evidensgrad C; underlag från välutformade kliniska studier men utan randomiserade kontrollerade studier för den specifika rekommendationen (evidensnivå 3). (beteckning) Eng: evidence level C."
   },
   {
     "term": "C-peptid",
@@ -3916,10 +3904,6 @@
   {
     "term": "Cytotoxisk",
     "def": "Giftig för celler; som skadar eller dödar celler. (adj., pl. -a) Eng: cytotoxic. Av gr. kytos = cell + toxikon = gift."
-  },
-  {
-    "term": "D",
-    "def": "Evidensgrad D; lägsta nivån, bygger på utlåtanden från expertkommittéer eller klinisk erfarenhet i avsaknad av direkt användbara studier av god kvalitet (evidensnivå 4). (beteckning) Eng: evidence level D."
   },
   {
     "term": "D-dimer",
@@ -5508,6 +5492,10 @@
   {
     "term": "EVF",
     "def": "Erytrocytvolymfraktion (hematokrit); den andel av blodvolymen som utgörs av röda blodkroppar. (förkortn.) Sv: hematokrit. Eng: haematocrit."
+  },
+  {
+    "term": "Evidensgrad",
+    "def": "Gradering av hur starkt det vetenskapliga underlaget är för en rekommendation (SBU/GRADE), från A (starkast) till D (svagast): A – stöd i systematiska översikter och metaanalyser av randomiserade kontrollerade studier, eller minst en god randomiserad kontrollerad studie (evidensnivå 1a–1b); B – minst en väl genomförd kontrollerad studie utan randomisering, eller flera väldesignade observationsstudier (2a–2b); C – välutformade kliniska studier men utan randomiserade kontrollerade studier för den specifika rekommendationen (3); D – utlåtanden från expertkommittéer eller klinisk erfarenhet i avsaknad av direkt användbara studier av god kvalitet (4). (beteckning) Eng: evidence level A–D."
   },
   {
     "term": "Evolution",
@@ -15321,13 +15309,11 @@
   },
   {
     "term": "SAA",
-    "def": "prekursor-proteinet serumamyloid A",
-    "status": "stub"
+    "def": "Serumamyloid A; ett akutfasprotein som bildas i levern vid inflammation och är förstadium (prekursor) till AA-amyloid vid sekundär amyloidos. (förkortn.) Eng: serum amyloid A. Se Amyloidos."
   },
   {
     "term": "SAB",
-    "def": "subaraknoidalblödning",
-    "status": "stub"
+    "def": "Subaraknoidalblödning; blödning i utrymmet mellan de mjuka hjärnhinnorna, oftast orsakad av ett brustet pulsåderbråck. (förkortn.) Sv: subaraknoidalblödning. Eng: subarachnoid haemorrhage. Se Subaraknoidalblödning."
   },
   {
     "term": "Sacciformis",
@@ -15343,17 +15329,11 @@
   },
   {
     "term": "Säcktuba",
-    "def": "igenväxt äggledare där en vätskefylld säck bildats",
-    "status": "stub"
+    "def": "Igenväxt (tilltäppt) äggledare där sekret samlats och bildat en vätskefylld säck (hydrosalpinx). (subst., -n, säcktubor) Eng: hydrosalpinx. Lekman: en äggledare som täppts till och fyllts med vätska. Av gr. salpinx = trumpet (äggledaren)."
   },
   {
     "term": "Sackulär",
-    "def": "säckliknande",
-    "status": "stub",
-    "variants": [
-      "sackulära",
-      "sackulärt"
-    ]
+    "def": "Säckliknande; som har formen av en utbuktande säck, t.ex. om ett pulsåderbråck (sackulärt aneurysm) som buktar ut åt ena sidan. (adj., -t, pl. -a) Eng: saccular. Av lat. sacculus = liten säck."
   },
   {
     "term": "Sacralis",
@@ -15361,7 +15341,7 @@
   },
   {
     "term": "Sacrum",
-    "def": "Korsbenet; 5 sammanvuxna ryggkotor i bäckenet. (subst.) Sv: korsben. Eng: sacrum, sacral bone. Av lat. os sacrum = det heliga benet; sacer = helig (troligen offrades detta ben vid religiösa riter)."
+    "def": "Korsbenet; 5 sammanvuxna ryggkotor i bäckenet. (subst.) Sv: korsben, sakrum. Eng: sacrum, sacral bone. Av lat. os sacrum = det heliga benet; sacer = helig (troligen offrades detta ben vid religiösa riter)."
   },
   {
     "term": "Sagitta",
@@ -15369,12 +15349,7 @@
   },
   {
     "term": "Sagittal",
-    "def": "som ligger i sagittalplanet, mittplanet som delar kroppen i två delar framifrån och bak",
-    "status": "stub",
-    "variants": [
-      "sagittala",
-      "sagittalt"
-    ]
+    "def": "Som ligger i eller är parallell med sagittalplanet – det plan som delar kroppen i en höger och en vänster del (framifrån–bakåt). (adj., -t, pl. -a) Eng: sagittal. Av lat. sagitta = pil (pilens riktning rakt framifrån)."
   },
   {
     "term": "Sagittalis",
@@ -15386,77 +15361,35 @@
   },
   {
     "term": "SAH",
-    "def": "\"subarachnoidal hemorrhage\", subaraknoidal blödning",
-    "status": "stub"
+    "def": "Subarachnoid haemorrhage (subaraknoidalblödning); engelsk förkortning för blödning under spindelvävshinnan. (förkortn., eng.) Sv: subaraknoidalblödning. Eng: subarachnoid haemorrhage. Se Subaraknoidalblödning."
   },
   {
     "term": "Sakral",
-    "def": "som gäller korsbenet",
-    "status": "stub",
-    "variants": [
-      "sakrala",
-      "sakralt"
-    ]
+    "def": "Som hör till korsbenet (sacrum) eller den nedersta delen av ryggen. (adj., -t, pl. -a) Eng: sacral. Av lat. os sacrum = korsbenet."
   },
   {
     "term": "Sakralcysta",
-    "def": "svullnad långt bak i sätesfåran, kan bli inflammerad",
-    "status": "stub",
-    "variants": [
-      "sakralcystan",
-      "sakralcystorna",
-      "sakralcystor"
-    ]
+    "def": "Pilonidalcysta; en med hår fylld cysta/svullnad längst bak i sätesfåran ovanför svanskotan, som lätt blir inflammerad och varbildande. (subst., -n, -or) Eng: pilonidal cyst. Lekman: en hålighet längst bak i stjärtfåran som kan bli inflammerad. Av lat. pilus = hår + nidus = bo."
   },
   {
     "term": "Sakroiliakaled",
-    "def": "lederna mellan korsbenet och höftbenet",
-    "status": "stub",
-    "variants": [
-      "sakroiliakalederna",
-      "sakroiliakaleden"
-    ]
-  },
-  {
-    "term": "Sakrum",
-    "def": "korsbenet",
-    "status": "stub"
+    "def": "Leden mellan korsbenet (sacrum) och tarmbenet (ilium) i bäckenet; en stabil, föga rörlig led som kan inflammeras (sakroiliit). (subst., -en, -er) Eng: sacroiliac joint. Av lat. sacrum = korsben + ilium = tarmben."
   },
   {
     "term": "Salicylat",
-    "def": "läkemedelsgruppen som omfattar preparat som Albyl, Aspirin, Magnecyl etc.",
-    "status": "stub",
-    "variants": [
-      "salicylaterna",
-      "salicylater",
-      "salicylatet"
-    ]
+    "def": "Salt eller ester av salicylsyra; samlingsnamn för den grupp läkemedel (t.ex. acetylsalicylsyra – Aspirin, Magnecyl, Albyl) med smärtstillande, febernedsättande och blodförtunnande verkan. (subst., -et, pl. -er) Eng: salicylate. Av lat. salix = pil (ämnet utvanns ur pilbark)."
   },
   {
     "term": "Salicylism",
-    "def": "öronsus, reaktion mot ASA",
-    "status": "stub",
-    "variants": [
-      "salicylismen"
-    ]
+    "def": "Salicylatförgiftning; symtom som öronsus (tinnitus), illamående, snabb andning och yrsel vid för hög dos acetylsalicylsyra eller andra salicylater. (subst., -en) Eng: salicylism. Av lat. salix = pil + -ism."
   },
   {
     "term": "Salicylsyra",
-    "def": "det huvudsakliga verksamma ämnet i läkemedel som Albyl, Aspirin. Magnecyl etc.",
-    "status": "stub",
-    "variants": [
-      "salicylsyran",
-      "salicylsyrorna",
-      "salicylsyror"
-    ]
+    "def": "Den verksamma syran i salicylatläkemedel; har keratolytisk (uppmjukande) verkan på huden och är utgångsämne för acetylsalicylsyra. (subst., -n) Eng: salicylic acid. Av lat. salix = pil."
   },
   {
     "term": "Salinisk",
-    "def": "salthaltig",
-    "status": "stub",
-    "variants": [
-      "saliniska"
-    ]
+    "def": "Salthaltig; som innehåller eller har med koksaltlösning att göra, t.ex. ett saliniskt laxermedel som binder vatten i tarmen. (adj., pl. -a) Eng: saline. Av lat. sal = salt."
   },
   {
     "term": "Saliva",
@@ -15468,35 +15401,15 @@
   },
   {
     "term": "Salivation",
-    "def": "salivutsöndring",
-    "status": "stub",
-    "variants": [
-      "salivationen"
-    ]
+    "def": "Salivutsöndring; produktion och avgivande av saliv från spottkörtlarna. (subst., -en) Eng: salivation. Av lat. saliva = saliv, spott."
   },
   {
     "term": "Salpingektomi",
-    "def": "borttagande av äggledare",
-    "status": "stub",
-    "variants": [
-      "salpingektomera",
-      "salpingektomerar",
-      "salpingektomerad",
-      "salpingektomerade",
-      "salpingektomin",
-      "salpingektomierna",
-      "salpingektomier"
-    ]
+    "def": "Kirurgiskt borttagande av en äggledare, t.ex. vid utomkvedshavandeskap. (subst., -n, pl. -er) Eng: salpingectomy. Av gr. salpinx = trumpet (äggledarens form) + ektome = bortskärande."
   },
   {
     "term": "Salpingit",
-    "def": "inflammation i äggledare",
-    "status": "stub",
-    "variants": [
-      "salpingiten",
-      "salpingiterna",
-      "salpingiter"
-    ]
+    "def": "Inflammation i äggledaren, oftast som del av en uppåtstigande underlivsinfektion (bäckeninflammation). (subst., -en, pl. -er) Eng: salpingitis. Av gr. salpinx = trumpet + -it = inflammation."
   },
   {
     "term": "Salpinx",
@@ -15504,45 +15417,27 @@
   },
   {
     "term": "Saluretisk",
-    "def": "saltdrivande",
-    "status": "stub",
-    "variants": [
-      "saluretiska"
-    ]
+    "def": "Saltdrivande; som ökar utsöndringen av salt (natrium) och därmed vatten via urinen, om vissa vätskedrivande läkemedel. (adj., pl. -a) Eng: saluretic. Av lat. sal = salt + gr. ouresis = urinering."
   },
   {
     "term": "Salutogenes",
-    "def": "läran om vad som ger god hälsa",
-    "status": "stub",
-    "variants": [
-      "salutogenesen"
-    ]
+    "def": "Det som skapar och främjar hälsa; ett perspektiv som fokuserar på vad som gör att människor förblir friska snarare än på vad som orsakar sjukdom (motsats till patogenes). (subst., -en) Eng: salutogenesis. Av lat. salus = hälsa + gr. genesis = uppkomst."
   },
   {
     "term": "Sangvinolent",
-    "def": "blodblandad",
-    "status": "stub",
-    "variants": [
-      "sangvinolenta"
-    ]
+    "def": "Blodblandad; om sekret eller vätska som är uppblandad med blod. (adj., pl. -a) Eng: sanguinolent. Av lat. sanguis = blod."
   },
   {
     "term": "Sannolikhetskvot",
-    "def": "sannolikheten för att en individ i en given befolkningsgrupp (till exempel med en viss sjukdom) har ett bestämt testresultat, i förhållande till sannolikheten för att en individ utan den aktuella sjukdomen har samma testresultat",
-    "status": "stub",
-    "variants": [
-      "sannolikhetsförhållande"
-    ]
+    "def": "Likelihood ratio; mått som anger hur mycket ett visst testresultat förändrar sannolikheten för sjukdom – förhållandet mellan sannolikheten för resultatet hos sjuka och hos friska. (subst., -en, pl. -er) Sv: sannolikhetsförhållande. Eng: likelihood ratio. Forskningsterm."
   },
   {
     "term": "Sant negativ",
-    "def": "en person utan den aktuella sjukdomen som har ett negativt testresultat",
-    "status": "stub"
+    "def": "En person utan den aktuella sjukdomen som korrekt får ett negativt testresultat; en av de fyra utfallskategorierna när ett tests träffsäkerhet bedöms. (uttryck) Eng: true negative. Forskningsterm. Se Specificitet."
   },
   {
     "term": "Sant positiv",
-    "def": "(SP) en person med den aktuella sjukdomen som har ett positivt testresultat",
-    "status": "stub"
+    "def": "(SP) En person med den aktuella sjukdomen som korrekt får ett positivt testresultat; en av de fyra utfallskategorierna vid bedömning av ett tests träffsäkerhet. (uttryck) Eng: true positive. Forskningsterm. Se Sensitivitet."
   },
   {
     "term": "Saphena",
@@ -15550,37 +15445,23 @@
   },
   {
     "term": "Saprofyt",
-    "def": "bakterie eller svamp som lever av organiska ämnen",
-    "status": "stub",
-    "variants": [
-      "saprofyten",
-      "saprofyterna",
-      "saprofyter"
-    ]
+    "def": "Bakterie eller svamp som lever på dött, organiskt material och normalt inte orsakar sjukdom. (subst., -en, pl. -er) Eng: saprophyte. Av gr. sapros = rutten + phyton = växt."
   },
   {
     "term": "Sarcoma uteri",
-    "def": "elakartad tumör i livmodern",
-    "status": "stub"
+    "def": "Elakartad (malign) tumör som utgår från livmoderns muskel- eller bindväv; en ovanlig men aggressiv form av livmodercancer. (subst., lat.) Eng: uterine sarcoma. Av gr. sarx = kött + lat. uterus = livmoder."
   },
   {
     "term": "Sarkoidos",
-    "def": "kronisk inflammationssjukdom med okänd orsak i många organsystem, finns oftast i lungorna, men förekommer i många fall även i andra organ",
-    "status": "stub"
+    "def": "Kronisk inflammationssjukdom av okänd orsak där små inflammationshärdar (granulom) bildas i olika organ, oftast lungorna och lymfkörtlarna. (subst., -en) Eng: sarcoidosis. Lekman: en inflammationssjukdom som oftast sätter sig i lungorna. Av gr. sarx = kött + eidos = liknande."
   },
   {
     "term": "Sarkom",
-    "def": "elakartad tumör som utgår från bindväv, brosk, ben eller liknande",
-    "status": "stub",
-    "variants": [
-      "sarkomen",
-      "sarkomet"
-    ]
+    "def": "Elakartad (malign) tumör som utgår från kroppens stödjevävnad – bindväv, brosk, ben, fett eller muskel. (subst., -et, pl. -) Eng: sarcoma. Av gr. sarx = kött."
   },
   {
     "term": "Sarkopeni",
-    "def": "förlust av muskelmassa, till exempel på grund av åldrandet",
-    "status": "stub"
+    "def": "Förlust av muskelmassa och muskelstyrka, framför allt som följd av åldrandet. (subst., -n) Eng: sarcopenia. Av gr. sarx = kött, muskel + penia = brist."
   },
   {
     "term": "Sartor",
@@ -15592,18 +15473,15 @@
   },
   {
     "term": "SBP",
-    "def": "spontan bakteriell peritonit",
-    "status": "stub"
+    "def": "Spontan bakteriell peritonit; bakteriell infektion i bukvätskan (ascites) utan påvisbar inre läcka, en komplikation framför allt vid svår leversjukdom. (förkortn.) Eng: spontaneous bacterial peritonitis."
   },
   {
     "term": "SBU",
-    "def": "Statens beredning för medicinsk utvärdering",
-    "status": "stub"
+    "def": "Statens beredning för medicinsk och social utvärdering; svensk myndighet som granskar och sammanställer det vetenskapliga underlaget för metoder i vården. (förkortn.) Eng: Swedish Agency for Health Technology Assessment. Forskningsterm."
   },
   {
     "term": "Scabies",
-    "def": "skabb",
-    "status": "stub"
+    "def": "Skabb; smittsam, mycket kliande hudsjukdom orsakad av skabbkvalstret som gräver gångar i huden. (subst., lat.) Sv: skabb. Eng: scabies. Av lat. scabere = klia, riva."
   },
   {
     "term": "Scala",
@@ -15623,26 +15501,19 @@
   },
   {
     "term": "Scarlatina",
-    "def": "scharlakansfeber",
-    "status": "stub"
+    "def": "Scharlakansfeber; streptokockinfektion med halsont, hög feber och finprickigt rött hudutslag. (subst., lat.) Sv: scharlakansfeber. Eng: scarlet fever. Av it. scarlatto = scharlakansröd."
   },
   {
     "term": "Schizoid",
-    "def": "schizofreni-liknande",
-    "status": "stub",
-    "variants": [
-      "schizoida"
-    ]
+    "def": "Som påminner om schizofreni; särskilt om en personlighetstyp präglad av inåtvändhet, känslomässig distans och ointresse för nära relationer. (adj., pl. -a) Eng: schizoid. Av gr. schizein = klyva + eidos = liknande."
   },
   {
     "term": "Schobers test",
-    "def": "test som används till att bedöma rörligheten i ryggraden genom att jämföra avståndet mellan två punkter i nedre delen av ryggen i upprätt respektive framåtböjd ställning",
-    "status": "stub"
+    "def": "Schobers test; klinisk mätning av ländryggens rörlighet, där avståndet mellan två markeringar på huden jämförs i upprätt och framåtböjd ställning. (egennamn) Eng: Schober's test. Lekman: ett enkelt mått på hur mycket man kan böja sig framåt i ryggen."
   },
   {
     "term": "SCLE",
-    "def": "subakut kutan lupus erytematosus",
-    "status": "stub"
+    "def": "Subakut kutan lupus erythematosus; en hudform av lupus med ljuskänsliga, ringformiga eller fjällande utslag. (förkortn.) Eng: subacute cutaneous lupus erythematosus."
   },
   {
     "term": "Sclera",
@@ -15666,16 +15537,7 @@
   },
   {
     "term": "Seborré",
-    "def": "sjukligt ökad fettutsöndring i huden så att den blir fet, glansig och gulaktig; ökad talgproduktion",
-    "status": "stub"
-  },
-  {
-    "term": "Seborroiskt",
-    "def": "torr, flagande hud",
-    "status": "stub",
-    "variants": [
-      "seborroiska"
-    ]
+    "def": "Ökad talgproduktion som gör huden fet, glansig och gulaktigt fjällande, särskilt i ansikte och hårbotten. Även seborroisk (adj.) = som hör till eller liknar seborré, t.ex. seborroiskt eksem (mjällig hudinflammation i talgrika hudområden). (subst., -n) Eng: seborrhoea. Av lat. sebum = talg + gr. rhoia = flöde."
   },
   {
     "term": "Sebum",
@@ -15683,147 +15545,75 @@
   },
   {
     "term": "Secernera",
-    "def": "utsöndra",
-    "status": "stub",
-    "variants": [
-      "secernerar",
-      "secernering",
-      "secernerad",
-      "secernerade"
-    ]
+    "def": "Utsöndra; om körtlar eller slemhinnor som avger ett sekret. (verb, -r, secernerade, secernerat) Eng: secrete. Av lat. secernere = avskilja."
   },
   {
     "term": "Sectio",
-    "def": "skära, ofta om kejsarsnitt",
-    "status": "stub"
+    "def": "Snitt, skärning; oftast kortform för sectio caesarea = kejsarsnitt. (subst., lat.) Sv: kejsarsnitt. Eng: section, caesarean section. Av lat. secare = skära."
   },
   {
     "term": "Sedation",
-    "def": "lugna ned",
-    "status": "stub",
-    "variants": [
-      "sedationen"
-    ]
+    "def": "Dämpning av medvetande och oro med läkemedel, så att patienten blir lugn och dåsig men oftast väckbar. (subst., -en) Eng: sedation. Av lat. sedare = lugna, stilla."
   },
   {
     "term": "Sedativum",
-    "def": "lugnande läkemedel",
-    "status": "stub",
-    "variants": [
-      "sedativa",
-      "sedativerna",
-      "sedativet"
-    ]
+    "def": "Lugnande läkemedel; medel som dämpar oro och rastlöshet. (subst., -et, pl. sedativa) Eng: sedative. Av lat. sedare = lugna."
   },
   {
     "term": "Sederande",
-    "def": "sömngivande, rogivande",
-    "status": "stub"
+    "def": "Lugnande och dåsighetsframkallande; om läkemedel eller dess biverkan. (adj./pres. particip) Eng: sedating. Av lat. sedare = lugna."
   },
   {
     "term": "Sediment",
-    "def": "partiklar som fallit till botten i stillastående vätska",
-    "status": "stub",
-    "variants": [
-      "sedimenten",
-      "sedimentet"
-    ]
+    "def": "Bottenfällning; partiklar som sjunkit till botten i en stillastående vätska, t.ex. i urin vid urinprov. (subst., -et, pl. -) Eng: sediment. Av lat. sedere = sitta, sjunka."
   },
   {
     "term": "Sedimentering",
-    "def": "utfällning som fallit till botten",
-    "status": "stub",
-    "variants": [
-      "sedimenteringen",
-      "sedimenteringarna",
-      "sedimenteringar"
-    ]
+    "def": "Att fasta partiklar långsamt faller mot botten i en vätska och bildar en bottensats. (subst., -en, pl. -ar) Eng: sedimentation. Av lat. sedere = sitta, sjunka."
   },
   {
     "term": "Segment",
-    "def": "avsnitt, del",
-    "status": "stub",
-    "variants": [
-      "segmenten",
-      "segmentet"
-    ]
+    "def": "Avgränsat avsnitt eller del av en större struktur, t.ex. ett lung- eller leversegment. (subst., -et, pl. -) Eng: segment. Av lat. segmentum = avskuret stycke."
   },
   {
     "term": "Sekret",
-    "def": "avsöndrad vätska från körtlar, till exempel svettkörtlar",
-    "status": "stub",
-    "variants": [
-      "sekretet"
-    ]
+    "def": "Vätska som avsöndras (utsöndras) av en körtel eller slemhinna, t.ex. svett, saliv eller slem. (subst., -et, pl. -) Eng: secretion. Av lat. secernere = avskilja."
   },
   {
     "term": "Sekretion",
-    "def": "utsöndring",
-    "status": "stub",
-    "variants": [
-      "sekretionen",
-      "sekretionerna",
-      "sekretioner"
-    ]
+    "def": "Utsöndring; körtlars eller cellers avgivande av ett sekret. (subst., -en, pl. -er) Eng: secretion. Av lat. secernere = avskilja."
   },
   {
-    "term": "Sekretotisk otit",
-    "def": "sekretorisk mellanöreinflammation, vätska i mellanörat, \"öronkatarr\", är den vanligaste formen av öronsjukdom och den vanligaste orsaken till lockkänsla och nedsatt hörsel hos barn",
-    "status": "stub"
+    "term": "Sekretorisk otit",
+    "def": "Sekretorisk mellanöreinflammation (”öronkatarr”); vätska bakom trumhinnan utan akut infektion, vanligaste orsaken till lockkänsla och nedsatt hörsel hos barn. (subst.) Eng: otitis media with effusion. Lekman: vätska i mellanörat som ger lock för örat. Av lat. secernere = avskilja + gr. ous (ot-) = öra."
   },
   {
     "term": "Sekundärinfektion",
-    "def": "infektion som uppstår som följd av en annan sjukdom eller infektion, infektion som följer efter en annan sjukdom",
-    "status": "stub",
-    "variants": [
-      "sekundärinfektionen",
-      "sekundärinfektionerna",
-      "sekundärinfektioner"
-    ]
+    "def": "Infektion som tillstöter ovanpå en redan pågående sjukdom eller skada, t.ex. bakteriell infektion efter en virusförkylning. (subst., -en, pl. -er) Eng: secondary infection. Av lat. secundus = den andre, följande."
   },
   {
     "term": "Sekundärprofylax",
-    "def": "förebyggande åtgärd/behandling mot sjukdom som redan har uppstått, för att förhindra ytterligare försämring",
-    "status": "stub"
+    "def": "Förebyggande behandling vid en redan uppkommen sjukdom för att hindra återfall eller försämring, t.ex. blodförtunning efter hjärtinfarkt. (subst., -en) Eng: secondary prevention. Av lat. secundus = följande + gr. prophylaxis = förebyggande."
   },
   {
     "term": "Sekvele",
-    "def": "följdtillstånd",
-    "status": "stub",
-    "variants": [
-      "sekvelen",
-      "sekveler",
-      "sekvel"
-    ]
+    "def": "Följdtillstånd; bestående men eller resttillstånd efter en sjukdom eller skada. Även (lat.) sequela, pl. sequelae. (subst., -n, pl. sekveler) Eng: sequela. Av lat. sequi = följa."
   },
   {
     "term": "Selektion",
-    "def": "urval",
-    "status": "stub",
-    "variants": [
-      "selektionen",
-      "selektionerna",
-      "selektioner"
-    ]
+    "def": "Urval; process där vissa individer, celler eller egenskaper väljs ut, t.ex. naturligt urval eller urval av patienter i en studie. (subst., -en, pl. -er) Eng: selection. Av lat. seligere = välja ut."
   },
   {
     "term": "Selektiv",
-    "def": "utvald",
-    "status": "stub",
-    "variants": [
-      "selektiva",
-      "selektivt"
-    ]
+    "def": "Som verkar riktat på ett bestämt mål och inte på andra, t.ex. ett läkemedel som binder till en viss receptor. (adj., -t, pl. -a) Eng: selective. Av lat. seligere = välja ut."
   },
   {
     "term": "Selektivitet",
-    "def": "ett läkemedels benägenhet att ha en mycket riktad och avgränsad verkan med bindning till en målmolekyl (receptor)",
-    "status": "stub"
+    "def": "Ett läkemedels förmåga att verka riktat på en bestämd målmolekyl (receptor) med liten påverkan på andra, vilket ger färre biverkningar. (subst., -en) Eng: selectivity. Av lat. seligere = välja ut."
   },
   {
     "term": "Selen",
-    "def": "ett livsviktigt mikronäringsämne med viktiga funktioner i en rad av kroppens förbränningsprocesser. Ingen sjukdomsförebyggande effekt av ökat selenintag har dokumenterats.",
-    "status": "stub"
+    "def": "Selen; livsnödvändigt spårämne (mikronäringsämne) som ingår i flera av kroppens enzymer och i antioxidantförsvaret. (subst., -et) Eng: selenium. Av gr. selene = månen."
   },
   {
     "term": "Sella",
@@ -15843,103 +15633,47 @@
   },
   {
     "term": "Seminom",
-    "def": "elakartad tumör i testikel",
-    "status": "stub",
-    "variants": [
-      "seminomen",
-      "seminomet"
-    ]
+    "def": "Vanligaste formen av testikelcancer, utgången från testikelns könscellsbildande vävnad; har oftast god prognos. (subst., -et, pl. -) Eng: seminoma. Av lat. semen = säd, frö."
   },
   {
     "term": "Semipermeabel",
-    "def": "halvgenomtränglig",
-    "status": "stub",
-    "variants": [
-      "semipermeabelt",
-      "semipermeabla"
-    ]
+    "def": "Halvgenomtränglig; om ett membran som släpper igenom vissa ämnen (t.ex. vatten) men hindrar andra. (adj., -t, pl. semipermeabla) Eng: semipermeable. Av lat. semi- = halv + permeare = tränga igenom."
   },
   {
     "term": "Senil",
-    "def": "ålderdomssvaghet",
-    "status": "stub",
-    "variants": [
-      "senila",
-      "senilt"
-    ]
+    "def": "Som hör till hög ålder; äldre benämning på åldersbetingad nedsättning, särskilt av minne och tankeförmåga. (adj., -t, pl. -a) Eng: senile. Av lat. senilis = gammal, av senex = gammal man."
   },
   {
     "term": "Senilitet",
-    "def": "ålderdomssvaghet",
-    "status": "stub",
-    "variants": [
-      "seniliteten"
-    ]
+    "def": "Ålderdomssvaghet; äldre och numera undviken benämning på åldersbetingad nedsättning av kroppsliga och mentala funktioner. (subst., -en) Eng: senility. Av lat. senex = gammal."
   },
   {
     "term": "Sensibilisera",
-    "def": "att göra mer känslig, uppmärksam",
-    "status": "stub",
-    "variants": [
-      "sensibiliserar",
-      "sensibilisering",
-      "sensibiliseringen",
-      "sensibiliseringarna",
-      "sensibiliseringar",
-      "sensibiliserad",
-      "sensibiliserade"
-    ]
+    "def": "Göra överkänslig; framkalla ett tillstånd där immunförsvaret reagerar mot ett ämne (allergen) vid förnyad kontakt. (verb, -r, sensibiliserade, sensibiliserat) Eng: sensitise. Av lat. sensibilis = förnimbar, känslig."
   },
   {
     "term": "Sensibilitet",
-    "def": "känslighet, uppmärksamhet",
-    "status": "stub",
-    "variants": [
-      "sensibiliteten",
-      "sensibiliteterna",
-      "sensibiliteter"
-    ]
+    "def": "Känslighet; förmågan att förnimma sinnesintryck, särskilt känsel som beröring, smärta och temperatur. (subst., -en, pl. -er) Eng: sensibility. Av lat. sensibilis = förnimbar."
   },
   {
     "term": "Sensitiv",
-    "def": "känslig",
-    "status": "stub",
-    "variants": [
-      "sensitiva",
-      "sensitivt"
-    ]
+    "def": "Känslig; som lätt reagerar på påverkan, eller (om test) som har hög förmåga att upptäcka sjukdom. (adj., -t, pl. -a) Eng: sensitive. Av lat. sentire = känna, förnimma."
   },
   {
     "term": "Sensitivitet",
-    "def": "ett tests eller provs förmåga att korrekt påvisa sjukdom",
-    "status": "stub",
-    "variants": [
-      "sensitiviteterna",
-      "sensitiviteter"
-    ]
+    "def": "Ett tests förmåga att korrekt identifiera dem som har sjukdomen (andelen sjuka som får positivt provsvar). (subst., -en, pl. -er) Eng: sensitivity. Forskningsterm. Av lat. sentire = känna."
   },
   {
     "term": "Sensitivitetsanalys",
-    "def": "Analyser för att testa om resultaten från metaanalyser är känsliga för restriktioner i den data som ingår. Om resultaten är konsekventa styrker det dokumentationen av effekten och generaliserbarheten.",
-    "status": "stub",
-    "variants": [
-      "sensitivitetsanalysen",
-      "sensitivitetsanalyserna",
-      "sensitivitetsanalyser"
-    ]
+    "def": "Analys som prövar hur robust resultatet av t.ex. en metaanalys är genom att se om det förändras när olika antaganden eller urval i data ändras. (subst., -en, pl. -er) Eng: sensitivity analysis. Forskningsterm."
   },
   {
     "term": "Sensorisk",
-    "def": "som gäller känseln",
-    "status": "stub",
-    "variants": [
-      "sensoriska"
-    ]
+    "def": "Som gäller känsel eller sinnesförnimmelser; om nerver som leder signaler från sinnesorganen till hjärnan. (adj., pl. -a) Eng: sensory. Av lat. sentire = känna, förnimma."
   },
   {
     "term": "Sensorisk afasi",
-    "def": "oförmåga att uppfatta, förstå",
-    "status": "stub"
+    "def": "Språkstörning med nedsatt förmåga att uppfatta och förstå tal, trots att talet kan flyta lätt; beror på skada i hjärnans bakre språkområde (Wernicke). (subst.) Eng: sensory (receptive) aphasia. Av lat. sentire = känna + gr. a- (utan) + phasis = tal. Se Afasi."
   },
   {
     "term": "Sensus",
@@ -15947,94 +15681,47 @@
   },
   {
     "term": "Sentinel node",
-    "def": "portvaktskörtel, den första lymfkörteln som dränerar lymfan från ett tumörområde, till exempel vid bröstcancer. Om denna lymfkörtel är fri från cancerceller är det inte nödvändigt att avlägsna de övriga lymfkörtlarna.",
-    "status": "stub",
-    "variants": [
-      "sentinel"
-    ]
+    "def": "Portvaktskörtel; den första lymfkörteln som tar emot lymfa från ett tumörområde. Är den fri från cancerceller behöver övriga körtlar oftast inte tas bort. (subst., eng.) Sv: portvaktskörtel. Eng: sentinel node. Lekman: den första lymfkörteln dit en tumör kan sprida sig."
   },
   {
     "term": "Seponera",
-    "def": "avbryta behandling, används särskilt om läkemedelsbehandling",
-    "status": "stub",
-    "variants": [
-      "seponerar",
-      "seponering",
-      "seponerad",
-      "seponerade"
-    ]
+    "def": "Sätta ut, avbryta en behandling – används särskilt om att avsluta ett läkemedel. (verb, -r, seponerade, seponerat) Eng: discontinue. Av lat. seponere = lägga åt sidan."
   },
   {
     "term": "Sepsis",
-    "def": "allvarlig blodförgiftning med bakterier i blodet",
-    "status": "stub",
-    "variants": [
-      "sepsisen"
-    ]
+    "def": "Livshotande organpåverkan orsakad av kroppens överdrivna svar på en infektion; blodförgiftning. (subst., -en) Eng: sepsis. Lekman: en livshotande reaktion i hela kroppen på en infektion. Av gr. sepsis = förruttnelse. Jfr Septikemi."
   },
   {
     "term": "Septikemi",
-    "def": "allvarlig blodförgiftning med bakterier i blodet",
-    "status": "stub",
-    "variants": [
-      "septikemin"
-    ]
+    "def": "Blodförgiftning i egentlig mening – förekomst av levande bakterier i blodet med allmänpåverkan; äldre begrepp som delvis ersatts av sepsis. (subst., -n) Eng: septicaemia. Av gr. sepsis = förruttnelse + haima = blod. Jfr Sepsis."
   },
   {
     "term": "Septisk",
-    "def": "som har med blodförgiftning att göra",
-    "status": "stub",
-    "variants": [
-      "septiska"
-    ]
+    "def": "Som har med blodförgiftning (sepsis) att göra, t.ex. septisk chock; även: orsakad av infektion. (adj., pl. -a) Eng: septic. Av gr. sepsis = förruttnelse."
   },
   {
     "term": "Septum",
     "def": "Skiljevägg; t.ex. septum nasi (näsans skiljevägg), septum interventriculare, septum pellucidum. (subst.) Sv: septum, skiljevägg. Eng: septum, partition. Av lat. saepire = stängsla; septum = skiljevägg."
   },
   {
-    "term": "Sequela",
-    "def": "följdtillstånd",
-    "status": "stub",
-    "variants": [
-      "sequelae",
-      "sequeler"
-    ]
-  },
-  {
     "term": "SERM",
-    "def": "selektiv östrogenreceptormodulator, till exempel raloxifen",
-    "status": "stub"
+    "def": "Selektiv östrogenreceptormodulator; läkemedelsgrupp (t.ex. raloxifen, tamoxifen) som verkar östrogenlikt i vissa vävnader och östrogenblockerande i andra. (förkortn.) Eng: selective oestrogen receptor modulator."
   },
   {
     "term": "Serologi",
-    "def": "läran om antigener och antikroppar, hur kroppens försvarssystem reagerar och bildar försvarsämnen (antikroppar)",
-    "status": "stub",
-    "variants": [
-      "serologin"
-    ]
+    "def": "Läran om antigen och antikroppar i blodet; laboratoriemetoder som påvisar immunförsvarets antikroppssvar, t.ex. mot en infektion. (subst., -n) Eng: serology. Av lat. serum = vassla, blodvätska + gr. logos = lära."
   },
   {
     "term": "Serologisk",
-    "def": "prov på antikroppar",
-    "status": "stub",
-    "variants": [
-      "serologiska"
-    ]
+    "def": "Som gäller analys av antikroppar (och antigen) i blodet, t.ex. ett serologiskt prov för att påvisa genomgången infektion. (adj., pl. -a) Eng: serological. Av lat. serum = blodvätska."
   },
   {
     "term": "Serös",
-    "def": "serumrik, lättflytande",
-    "status": "stub",
-    "variants": [
-      "serösa",
-      "seröst"
-    ]
+    "def": "Serumlik; som avsöndrar eller innehåller en tunn, klar, gulaktig vätska som liknar blodserum, t.ex. en serös hinna eller serös vätska. (adj., -t, pl. -a) Eng: serous. Av lat. serum = vassla, blodvätska."
   },
   {
     "term": "Serpiginös",
-    "def": "krypande; om sår och sjukliga nybildningsprocesser som breder ut sig på ett område samtidigt som såret läks på ett annat område",
-    "status": "stub"
+    "def": "Krypande; om sår eller hudförändringar som breder ut sig i en kant samtidigt som de läker i mitten, så att de tycks vandra. (adj., -t, pl. -a) Eng: serpiginous. Av lat. serpere = krypa (som en orm)."
   },
   {
     "term": "Serratus",
@@ -16042,13 +15729,7 @@
   },
   {
     "term": "Serum",
-    "def": "blodvätska, den vätska som blir kvar när blodet har levrat sig",
-    "status": "stub",
-    "variants": [
-      "sera",
-      "serumen",
-      "serumet"
-    ]
+    "def": "Blodvätska; den klara, gulaktiga vätska som återstår när blodet har levrat sig och blodkroppar och levringsämnen avskilts. (subst., -et, pl. sera) Eng: serum. Av lat. serum = vassla. Jfr Plasma."
   },
   {
     "term": "Sesamoideus",
@@ -16056,90 +15737,51 @@
   },
   {
     "term": "Sessil",
-    "def": "med bred bas, fastsittande",
-    "status": "stub",
-    "variants": [
-      "sessila"
-    ]
+    "def": "Bredbasig, fastsittande; om en förändring (t.ex. en polyp) som sitter direkt mot underlaget utan skaft. (adj., pl. -a) Eng: sessile. Av lat. sessilis = sittande, av sedere = sitta."
   },
   {
     "term": "Severs sjukdom",
-    "def": "inflammation i hälsenans fäste. Tillstånd som förekommer hos barn i tidig pubertet när de växer snabbt.",
-    "status": "stub",
-    "variants": [
-      "Morbus sever",
-      "Mb sever"
-    ]
+    "def": "Sever sjukdom; smärtsam retning i hälbenets tillväxtzon vid hälsenans fäste, drabbar barn i tidig pubertet under snabb tillväxt. (egennamn) Sv: morbus Sever. Eng: Sever's disease. Lekman: växtvärk i hälen hos barn."
   },
   {
     "term": "Sfinkterotomi",
-    "def": "avskärning av en ringmuskel, slutmuskel",
-    "status": "stub",
-    "variants": [
-      "sfinkterotomierna",
-      "sfinkterotomier",
-      "sfinkterotomin"
-    ]
+    "def": "Kirurgiskt snitt genom en ringmuskel (slutmuskel), t.ex. för att vidga den vid analfissur eller i gallgångsmynningen. (subst., -n, pl. -er) Eng: sphincterotomy. Av gr. sphinkter = snörmuskel + tome = snitt."
   },
   {
     "term": "SGA",
-    "def": "\"small for gestational age\", nyfödda barn som är små i förhållande till graviditetens varaktighet",
-    "status": "stub"
+    "def": "Small for gestational age; nyfött barn som är litet (låg vikt/längd) i förhållande till graviditetslängden. (förkortn., eng.) Eng: small for gestational age."
   },
   {
     "term": "Sham",
-    "def": "Låtsas, simulera. Används om en forskningsmetod som innebär att man studerar effekten av en behandling (till exempel akupunktur, sjukgymnastik) genom att några av patienterna får riktig behandling medan andra får inaktiv \"låtsasbehandling\" (shambehandling). Sedan jämförs effekterna av de två behandlingarna.",
-    "status": "stub"
+    "def": "Skenbehandling; i forskning en låtsasbehandling utan verksam komponent som jämförs med den verkliga behandlingen för att skilja effekt från förväntan. (subst., eng.) Sv: skenbehandling. Eng: sham. Forskningsterm."
   },
   {
     "term": "SHBG",
-    "def": "sexhormonbindande globulin, ett könshormon",
-    "status": "stub"
+    "def": "Sexualhormonbindande globulin; ett protein som binder och transporterar könshormoner i blodet och styr hur stor andel som är fritt verksam. (förkortn.) Eng: sex hormone-binding globulin."
   },
   {
     "term": "SIADH",
-    "def": "\"syndrome of inappropriate ADH secretion\"",
-    "status": "stub"
+    "def": "Syndrom med olämpligt hög utsöndring av antidiuretiskt hormon (ADH), vilket ger vattenretention och lågt natrium i blodet. (förkortn.) Eng: syndrome of inappropriate antidiuretic hormone secretion."
   },
   {
     "term": "Sialadenit",
-    "def": "inflammation i spottkörtel",
-    "status": "stub",
-    "variants": [
-      "sialadeniten",
-      "sialadeniterna",
-      "sialadeniter"
-    ]
+    "def": "Inflammation i en spottkörtel, t.ex. orsakad av sten, bakterier eller virus (påssjuka). (subst., -en, pl. -er) Eng: sialadenitis. Av gr. sialon = saliv + aden = körtel + -it = inflammation."
   },
   {
     "term": "Sialolitiasis",
-    "def": "sten i spottkörtel eller dess utloppskanal",
-    "status": "stub"
+    "def": "Spottsten; sten i en spottkörtel eller dess utförsgång som kan ge svullnad och smärta vid måltid. (subst.) Eng: sialolithiasis. Av gr. sialon = saliv + lithos = sten."
   },
   {
     "term": "Sibilant",
-    "def": "visslande, främmande ljud från lungorna",
-    "status": "stub"
+    "def": "Visslande; om biljud från lungorna (ronki) som uppstår när luft passerar förträngda luftrör, t.ex. vid astma. (adj.) Eng: sibilant. Av lat. sibilare = vissla."
   },
   {
     "term": "Sideropeni",
-    "def": "järnbrist",
-    "status": "stub",
-    "variants": [
-      "sideropenin",
-      "sideropenierna",
-      "sideropenier"
-    ]
+    "def": "Järnbrist; för låg mängd järn i kroppen, den vanligaste orsaken till blodbrist (anemi). (subst., -n, pl. -er) Eng: sideropenia. Av gr. sideros = järn + penia = brist."
   },
   {
     "term": "Sideros",
-    "def": "järnlunga, orsakad av långvarig inandning av järndamm",
-    "status": "stub",
-    "variants": [
-      "siderosen",
-      "sideroserna",
-      "sideroser"
-    ]
+    "def": "Inlagring av järn i vävnad; särskilt ”järnlunga”, lungsjukdom orsakad av långvarig inandning av järndamm. (subst., -en, pl. -er) Eng: siderosis. Av gr. sideros = järn."
   },
   {
     "term": "Sidoläge",
@@ -16147,8 +15789,7 @@
   },
   {
     "term": "SIDS",
-    "def": "sudden infant death syndrome, plötslig spädbarnsdöd",
-    "status": "stub"
+    "def": "Sudden infant death syndrome; plötslig oväntad spädbarnsdöd, oftast under sömn och utan påvisbar orsak. (förkortn., eng.) Sv: plötslig spädbarnsdöd. Eng: sudden infant death syndrome."
   },
   {
     "term": "Sigmoideus",
@@ -16156,46 +15797,23 @@
   },
   {
     "term": "Sigmoidoskopi",
-    "def": "undersökning av nedre delen av tjocktarmens vänstra sida med ett böjligt rör med ljuskälla som man kan se igenom",
-    "status": "stub",
-    "variants": [
-      "sigmoidoskopin",
-      "sigmoidoskopierna",
-      "sigmoidoskopier"
-    ]
+    "def": "Endoskopisk undersökning av ändtarmen och nedre (vänstra) delen av tjocktarmen med ett böjligt, belyst instrument. (subst., -n, pl. -er) Eng: sigmoidoscopy. Av gr. sigma (bokstaven S, om tarmens form) + skopein = betrakta."
   },
   {
     "term": "Sigmoidostomi",
-    "def": "konstgjord öppning från sigmoideum-delen av tjocktarmen (nedre vänstra delen) och ut genom huden",
-    "status": "stub",
-    "variants": [
-      "sigmoidostomin",
-      "sigmoidostomierna",
-      "sigmoidostomier"
-    ]
+    "def": "Konstgjord tarmöppning (stomi) där sigmoideum – nedre vänstra delen av tjocktarmen – leds ut genom bukväggen. (subst., -n, pl. -er) Eng: sigmoidostomy. Av gr. sigma (S-formen) + stoma = mun, öppning."
   },
   {
     "term": "Signifikansnivå",
-    "def": "Den gräns man sätter för att resultatet av ett test ska vara statistiskt signifikant. Sätts vanligtvis vid 0,05 (5 %)",
-    "status": "stub"
+    "def": "Den gräns (vanligen 5 %, p = 0,05) under vilken ett resultats p-värde måste ligga för att skillnaden ska räknas som statistiskt säkerställd. (subst., -n, pl. -er) Eng: significance level. Forskningsterm. Se Signifikant."
   },
   {
     "term": "Signifikant",
-    "def": "En statistiskt signifikant skillnad beror på vilken signifikansnivå man har bestämt sig för, vanligen anges signifikansnivån p<0,05. P-värdet anger sannolikheten (probability) för att en påvisad skillnad kan ha uppstått av en slump när man antar att det i verkligheten inte är någon skillnad mellan effekterna (till exempel mellan två behandlingar eller två faktorer). Om p-värdet är under signifikansnivån räknar man med att sannolikheten för att skillnaden mellan grupperna beror på slumpen är så liten så att man kan säga att det är en statistiskt signifikant skillnad.",
-    "status": "stub",
-    "variants": [
-      "signifikanta"
-    ]
+    "def": "Statistiskt säkerställd; om en skillnad vars p-värde är lägre än den valda signifikansnivån (oftast p < 0,05), så att den sannolikt inte beror på slumpen. (adj., pl. -a) Eng: significant. Forskningsterm. Se P-värde."
   },
   {
     "term": "Silikos",
-    "def": "dammlunga, orsakad av långvarig inandning av damm från sten, sand eller annat material som innehåller silicium (kiselsyrepartiklar)",
-    "status": "stub",
-    "variants": [
-      "silikosen",
-      "silikoserna",
-      "silikoser"
-    ]
+    "def": "Dammlunga; bestående lungskada (fibros) orsakad av långvarig inandning av kiseldioxiddamm från sten och sand. (subst., -en, pl. -er) Eng: silicosis. Av lat. silex = kisel, flinta."
   },
   {
     "term": "Simplex",
@@ -16215,13 +15833,7 @@
   },
   {
     "term": "Sinuit",
-    "def": "bihåleinflammation",
-    "status": "stub",
-    "variants": [
-      "sinuiten",
-      "sinuiterna",
-      "sinuiter"
-    ]
+    "def": "Bihåleinflammation; inflammation i slemhinnan i en eller flera näsbihålor, ofta efter förkylning. (subst., -en, pl. -er) Sv: bihåleinflammation. Eng: sinusitis. Av lat. sinus = håla, bukt + -it = inflammation. Även sinusit."
   },
   {
     "term": "Sinus",
@@ -16229,14 +15841,7 @@
   },
   {
     "term": "Sinusknuta",
-    "def": "litet område i hjärtats högra förmak som utlöser hjärtats elektriska impulser och som leder till att hjärtat dras samman, bestämmer frekvensen (pacemaker) och är en del av hjärtats styrsystem",
-    "status": "stub",
-    "variants": [
-      "sinusknutan",
-      "SA-node",
-      "sa-node",
-      "nodus sinuatrialis"
-    ]
+    "def": "Hjärtats normala impulsgivare; ett litet område i högra förmaket som spontant utlöser de elektriska impulser som styr hjärtfrekvensen (kroppens egen pacemaker). (subst., -n) Eng: sinus node, sinoatrial node. Lekman: hjärtats inbyggda taktgivare. Av lat. sinus = bukt."
   },
   {
     "term": "Sinusknutan (SA-noden)",
@@ -16244,26 +15849,15 @@
   },
   {
     "term": "Sinusrytm",
-    "def": "hjärtats normala elektriska rytm",
-    "status": "stub",
-    "variants": [
-      "sinusrytmen"
-    ]
+    "def": "Hjärtats normala rytm, då impulserna utgår regelbundet från sinusknutan. (subst., -en) Eng: sinus rhythm. Av lat. sinus = bukt."
   },
   {
     "term": "Sinustakykardi",
-    "def": "snabb hjärtrytm som styrs av sinusknutan",
-    "status": "stub",
-    "variants": [
-      "sinustakykardin",
-      "sinustakykardierna",
-      "sinustakykardier"
-    ]
+    "def": "Snabb men regelbunden hjärtrytm (över 100 slag/min) som styrs normalt av sinusknutan, t.ex. vid ansträngning, feber eller oro. (subst., -n, pl. -er) Eng: sinus tachycardia. Av lat. sinus + gr. tachys = snabb + kardia = hjärta."
   },
   {
     "term": "SIRS",
-    "def": "\"systemic inflammatory response syndrome\", det vill säga sepsis vid infektion",
-    "status": "stub"
+    "def": "Systemiskt inflammatoriskt svarssyndrom; kroppens generella inflammationssvar (feber, snabb puls och andning, påverkade vita blodkroppar) som vid infektion övergår i sepsis. (förkortn.) Eng: systemic inflammatory response syndrome."
   },
   {
     "term": "Situs",
@@ -16271,19 +15865,11 @@
   },
   {
     "term": "Sjögren",
-    "def": "Sjögrens syndrom, reumatisk sjukdom som kännetecknas av torra slemhinnor, till exempel i munnen och ögonen",
-    "status": "stub",
-    "variants": [
-      "Sjögrens"
-    ]
+    "def": "Sjögrens syndrom; kronisk autoimmun (reumatisk) sjukdom som främst angriper tår- och spottkörtlar och ger torra ögon och torr mun. (egennamn) Eng: Sjögren's syndrome. Lekman: en sjukdom som ger torra ögon och torr mun."
   },
   {
     "term": "Skafoideum",
-    "def": "båtbenet, ett av benen i handloven",
-    "status": "stub",
-    "variants": [
-      "scaphoideum"
-    ]
+    "def": "Båtbenet; det största benet i den proximala raden av handlovens ben, på tumsidan – bryts lätt vid fall mot utsträckt hand. (subst., lat.) Sv: båtbenet. Eng: scaphoid. Av gr. skaphe = båt + eidos = liknande. Även scaphoideum."
   },
   {
     "term": "Skeletos",
@@ -16295,200 +15881,99 @@
   },
   {
     "term": "Skintigrafi",
-    "def": "undersökning där radioaktivt ämne tillförs i det organ man vill studera. Efter en viss tid registreras den radioaktiva strålningen från organet så att en bild bestående av många punkter framträder.",
-    "status": "stub",
-    "variants": [
-      "skintigrafin",
-      "skintigrafierna",
-      "skintigrafier"
-    ]
+    "def": "Nukleärmedicinsk bildundersökning där ett svagt radioaktivt ämne ges och dess strålning från ett organ registreras och avbildas. (subst., -n, pl. -er) Eng: scintigraphy. Av lat. scintilla = gnista + gr. graphein = skriva, avbilda."
   },
   {
     "term": "Skintigrafisk",
-    "def": "En undersökning där radioaktivt ämne tillförs i det organ man vill studera. Efter en viss tid registreras den radioaktiva strålningen från organet så att en bild bestående av många punkter framträder.",
-    "status": "stub",
-    "variants": [
-      "skintigrafiska"
-    ]
+    "def": "Som gäller eller utförs med skintigrafi, dvs. bildgivning med hjälp av ett radioaktivt spårämne. (adj., pl. -a) Eng: scintigraphic. Av lat. scintilla = gnista. Se Skintigrafi."
   },
   {
     "term": "Skintigram",
-    "def": "Bildupptagning efter tillförsel av radioaktivt ämne som koncentreras i det organ man vill studera. Bilden skapas genom att registrera den radioaktiva strålningen.",
-    "status": "stub",
-    "variants": [
-      "skintigrammen",
-      "skintigrammet"
-    ]
+    "def": "Den bild som erhålls vid skintigrafi, framställd genom att registrera strålningen från ett radioaktivt ämne som anrikats i ett organ. (subst., -met, pl. -) Eng: scintigram. Av lat. scintilla = gnista + gr. gramma = bild. Se Skintigrafi."
   },
   {
     "term": "Skirrös",
-    "def": "hård",
-    "status": "stub",
-    "variants": [
-      "skirröst",
-      "skirrösa"
-    ]
-  },
-  {
-    "term": "Sklera",
-    "def": "ögats senhinna, ögonvita",
-    "status": "stub"
+    "def": "Hård, fast; om en tumör med riklig bindväv som gör den hård vid beröring, t.ex. viss bröstcancer. (adj., -t, pl. -a) Eng: scirrhous. Av gr. skirrhos = hård svulst."
   },
   {
     "term": "Sklerit",
-    "def": "inflammation i ögats senhinna",
-    "status": "stub",
-    "variants": [
-      "skleriten",
-      "skleriterna",
-      "skleriter"
-    ]
+    "def": "Inflammation i ögats senhinna (sklera); ger djup, ofta svår ögonsmärta och rodnad och kan hota synen. (subst., -en, pl. -er) Eng: scleritis. Av gr. skleros = hård + -it = inflammation."
   },
   {
     "term": "Sklerodermi",
-    "def": "hård hud, kan uppträda som separat sjukdom",
-    "status": "stub",
-    "variants": [
-      "sklerodermin",
-      "sklerodermierna",
-      "sklerodermier"
-    ]
+    "def": "Sjukdom med förhårdnad och förtjockad hud på grund av ökad bindväv; kan vara enbart i huden eller del av en systemsjukdom som även drabbar inre organ. (subst., -n, pl. -er) Eng: scleroderma. Av gr. skleros = hård + derma = hud."
   },
   {
     "term": "Skleros",
-    "def": "förhårdnad",
-    "status": "stub",
-    "variants": [
-      "sklerosen",
-      "skleroserna",
-      "skleroser"
-    ]
+    "def": "Förhårdnad; förtätning och förstelning av en vävnad genom ökad bindväv, t.ex. åderförkalkning (arterioskleros). (subst., -en, pl. -er) Eng: sclerosis. Av gr. skleros = hård."
   },
   {
     "term": "Sklerosera",
-    "def": "bli hård",
-    "status": "stub",
-    "variants": [
-      "skleroserar",
-      "sklerosering",
-      "skleroserad",
-      "skleroserade"
-    ]
+    "def": "Bli hård eller förhårdna; även: avsiktligt åstadkomma förhårdnad/igenväxning av t.ex. ett blodkärl genom injektion av retande medel. (verb, -r, skleroserade, skleroserat) Eng: sclerose. Av gr. skleros = hård."
   },
   {
     "term": "Skleroserande behandling",
-    "def": "injektion av lokalt irriterande medel i blodkärl (åderbråck) så att de sluter sig",
-    "status": "stub"
+    "def": "Behandling där ett retande medel sprutas in i ett blodkärl (t.ex. åderbråck) så att kärlväggen retas, faller samman och växer igen. (subst.) Eng: sclerotherapy. Lekman: spruta som får åderbråck att försvinna. Se Skleroterapi."
   },
   {
     "term": "Skleroterapi",
-    "def": "injektion av lokalt irriterande medel i blodkärl (åderbråck) så att de sluter sig",
-    "status": "stub",
-    "variants": [
-      "skleroterapin",
-      "skleroterapierna",
-      "skleroterapier"
-    ]
+    "def": "Injektion av retande medel i ett blodkärl (åderbråck, hemorrojder) för att det ska sluta sig och försvinna. (subst., -n, pl. -er) Eng: sclerotherapy. Av gr. skleros = hård + therapeia = behandling."
   },
   {
     "term": "Skolios",
-    "def": "ryggrad som är vriden i sidled",
-    "status": "stub",
-    "variants": [
-      "skoliosen",
-      "skolioserna",
-      "skolioser"
-    ]
+    "def": "Sidledskrökning av ryggraden, ofta med samtidig vridning av kotorna. (subst., -en, pl. -er) Eng: scoliosis. Lekman: en rygg som är krökt åt sidan. Av gr. skolios = krokig."
   },
   {
     "term": "Skotom",
-    "def": "blind fläck i synfältet",
-    "status": "stub",
-    "variants": [
-      "skotomen",
-      "skotomet"
-    ]
+    "def": "Område med nedsatt eller saknad syn (blind fläck) inom synfältet. (subst., -et, pl. -) Eng: scotoma. Av gr. skotos = mörker."
   },
   {
     "term": "Skrotal",
-    "def": "som har med pungen att göra",
-    "status": "stub",
-    "variants": [
-      "skrotala",
-      "skrotalt"
-    ]
+    "def": "Som hör till pungen (skrotum). (adj., -t, pl. -a) Eng: scrotal. Av lat. scrotum = pung."
   },
   {
     "term": "Skrotum",
-    "def": "pungen",
-    "status": "stub"
+    "def": "Pungen; hudsäcken nedanför penis som rymmer testiklarna. (subst., lat.) Sv: pungen. Eng: scrotum. Av lat. scrotum = pung."
   },
   {
     "term": "Skulderbursit",
-    "def": "inflammation i slemsäck i skulderområdet",
-    "status": "stub"
+    "def": "Inflammation i en slemsäck (bursa) i skulderregionen, som ger smärta särskilt vid lyft av armen. (subst., -en, pl. -er) Eng: shoulder bursitis. Av lat. bursa = säck, pung + -it = inflammation."
   },
   {
     "term": "Skulderkapsulit",
-    "def": "inflammation i skuldrans ledkapsel",
-    "status": "stub",
-    "variants": [
-      "skulderkapsuliten",
-      "skulderkapsuliterna",
-      "skulderkapsuliter"
-    ]
+    "def": "Inflammation och skrumpning av skulderledens ledkapsel med stelhet och smärta; ”frusen skuldra”. (subst., -en, pl. -er) Eng: adhesive capsulitis, frozen shoulder. Lekman: stel och öm axel som är svår att röra. Av lat. capsula = liten kapsel + -it = inflammation."
   },
   {
     "term": "Skulderluxation",
-    "def": "axeln ur led",
-    "status": "stub",
-    "variants": [
-      "skulderluxationen",
-      "skulderluxationerna",
-      "skulderluxationer"
-    ]
+    "def": "Axelledsurledvridning; när överarmens ledhuvud hoppar ur skulderledens ledskål. (subst., -en, pl. -er) Eng: shoulder dislocation. Lekman: axeln ur led. Av lat. luxare = vrida ur led."
   },
   {
     "term": "Skvamös",
-    "def": "fjällig, flagande",
-    "status": "stub",
-    "variants": [
-      "skvamösa",
-      "skvamöst"
-    ]
+    "def": "Fjällig, flagande; som avstöter hudflagor, eller (om vävnad) bestående av platta, fjällika celler (skivepitel). (adj., -t, pl. -a) Eng: squamous. Av lat. squama = fjäll."
   },
   {
     "term": "Slaganfall",
-    "def": "sammanfattande benämning på sjukdomar i hjärnan orsakade av kärlsjukdom, det vill säga hjärninfarkt och hjärnblödning, vilket leder till att hjärnvävnad dör på grund av förlorad blodförsörjning",
-    "status": "stub",
-    "variants": [
-      "slaganfallet"
-    ]
+    "def": "Stroke; akut hjärnskada orsakad av blodpropp (hjärninfarkt) eller blödning, så att hjärnvävnad dör av syrebrist. (subst., -et, pl. -) Sv: stroke, slaganfall. Eng: stroke. Lekman: när en del av hjärnan skadas av en propp eller blödning."
   },
   {
     "term": "SLE",
-    "def": "systemisk lupus erytematosus",
-    "status": "stub"
+    "def": "Systemisk lupus erythematosus; kronisk autoimmun systemsjukdom som kan drabba hud, leder, njurar, blod och många andra organ. (förkortn.) Eng: systemic lupus erythematosus."
   },
   {
     "term": "SMA",
-    "def": "\"smooth muscle antibody\", glattmuskelantikropp",
-    "status": "stub"
+    "def": "Smooth muscle antibody (glattmuskelantikropp); en autoantikropp som bland annat ses vid autoimmun leverinflammation. (förkortn., eng.) Eng: smooth muscle antibody."
   },
   {
     "term": "SN",
-    "def": "sant negativ: en person utan den aktuella sjukdomen som har ett negativt testresultat",
-    "status": "stub"
+    "def": "Sant negativ; person utan den aktuella sjukdomen som korrekt får ett negativt testresultat. (förkortn.) Eng: true negative. Forskningsterm. Se Sant negativ."
   },
   {
     "term": "Snöblindhet",
-    "def": "ytliga sår i hornhinnan efter strålning med ultraviolett ljus",
-    "status": "stub"
+    "def": "Smärtsam, ytlig brännskada på hornhinnan av starkt ultraviolett ljus som reflekteras i snö; ger värk, tårflöde och tillfälligt nedsatt syn. (subst., -en) Eng: snow blindness, photokeratitis. Lekman: ”solbränna” på ögats yta efter starkt ljus i snö."
   },
   {
     "term": "SNRI",
-    "def": "\"serotonin–norepinephrine reuptake inhibitors\", en grupp antidepressiva läkemedel",
-    "status": "stub"
+    "def": "Serotonin- och noradrenalinåterupptagshämmare; grupp antidepressiva läkemedel som höjer halten av både serotonin och noradrenalin i hjärnan. (förkortn.) Eng: serotonin–noradrenaline reuptake inhibitor."
   },
   {
     "term": "Solaris",
@@ -16500,12 +15985,7 @@
   },
   {
     "term": "Solitär",
-    "def": "ensam, enstaka",
-    "status": "stub",
-    "variants": [
-      "solitära",
-      "solitärt"
-    ]
+    "def": "Ensam, enstaka; om en förändring som uppträder som en enda härd, t.ex. en solitär lungrundhärd. (adj., -t, pl. -a) Eng: solitary. Av lat. solus = ensam."
   },
   {
     "term": "Soma",
@@ -16513,21 +15993,11 @@
   },
   {
     "term": "Somatisering",
-    "def": "förkroppsligande",
-    "status": "stub",
-    "variants": [
-      "somatiseringen",
-      "somatiseringarna",
-      "somatiseringar"
-    ]
+    "def": "Att psykiska påfrestningar tar sig uttryck som kroppsliga symtom utan påvisbar kroppslig sjukdom. (subst., -en, pl. -ar) Eng: somatisation. Av gr. soma = kropp."
   },
   {
     "term": "Somatisk",
-    "def": "som har med kroppen att göra",
-    "status": "stub",
-    "variants": [
-      "somatiska"
-    ]
+    "def": "Som gäller kroppen och dess organ, i motsats till psykisk. (adj., pl. -a) Eng: somatic. Av gr. soma = kropp."
   },
   {
     "term": "Somato",
@@ -16535,112 +16005,55 @@
   },
   {
     "term": "Somatoforma",
-    "def": "som påminner om kroppsliga besvär utan att någon sådan sjukdom förekommer, psykiskt betingade besvär",
-    "status": "stub",
-    "variants": [
-      "somatoform",
-      "somatoformt"
-    ]
+    "def": "Om besvär som liknar kroppslig sjukdom men saknar påvisbar kroppslig orsak och anses ha psykisk bakgrund. (adj., somatoform, -t) Eng: somatoform. Av gr. soma = kropp + lat. forma = form."
   },
   {
     "term": "Somatogen",
-    "def": "med kroppsligt upphov",
-    "status": "stub",
-    "variants": [
-      "somatogena",
-      "somatogent"
-    ]
+    "def": "Med kroppsligt ursprung; om besvär eller symtom som beror på en kroppslig orsak. (adj., -t, pl. -a) Eng: somatogenic. Av gr. soma = kropp + genes = uppkomst."
   },
   {
     "term": "Somatotrofisk",
-    "def": "som främjar kroppens tillväxt",
-    "status": "stub",
-    "variants": [
-      "somatotrofiska"
-    ]
+    "def": "Som främjar kroppens (vävnadernas) tillväxt, t.ex. tillväxthormonets verkan. (adj., pl. -a) Eng: somatotrophic. Av gr. soma = kropp + trophe = näring, tillväxt."
   },
   {
     "term": "Sömnapné",
-    "def": "uppehåll i inandning på minst tio sekunder under sömn",
-    "status": "stub"
+    "def": "Upprepade andningsuppehåll på minst tio sekunder under sömnen, ofta med snarkning och dagtrötthet. (subst., -n, pl. -er) Eng: sleep apnoea. Lekman: andningsuppehåll medan man sover. Av gr. a- (utan) + pnoe = andning."
   },
   {
     "term": "Sömndeprivation",
-    "def": "att hålla en person vaken, frånta en person möjligheten att sova",
-    "status": "stub",
-    "variants": [
-      "sömndeprivationen"
-    ]
+    "def": "Sömnbrist; att en person hålls vaken eller berövas möjligheten att sova, avsiktligt eller ofrivilligt. (subst., -en) Eng: sleep deprivation. Av lat. deprivare = beröva."
   },
   {
     "term": "Somnolens",
-    "def": "sömnighet",
-    "status": "stub"
+    "def": "Sänkt vakenhet med uttalad sömnighet, där personen lätt somnar men kan väckas. (subst., -en) Eng: somnolence. Av lat. somnus = sömn."
   },
   {
     "term": "Sopor",
-    "def": "djup sömn",
-    "status": "stub"
-  },
-  {
-    "term": "Soporös",
-    "def": "sovande, dvalliknande tillstånd",
-    "status": "stub",
-    "variants": [
-      "soporösa",
-      "soporöst"
-    ]
+    "def": "Sopor; djup medvetandesänkning där personen bara kan väckas tillfälligt med kraftig stimulering, mellan somnolens och koma. Även soporös (adj.) = som befinner sig i ett sådant dvalliknande, svårväckt tillstånd. (subst.) Eng: sopor. Av lat. sopor = djup sömn."
   },
   {
     "term": "SP",
-    "def": "sant positiv: en person med den aktuelle sjukdomen som har ett positivt testresultat",
-    "status": "stub"
+    "def": "Sant positiv; person med den aktuella sjukdomen som korrekt får ett positivt testresultat. (förkortn.) Eng: true positive. Forskningsterm. Se Sant positiv."
   },
   {
     "term": "Spaltlampa",
-    "def": "mikroskop som används för att undersöka hornhinnan",
-    "status": "stub",
-    "variants": [
-      "spaltlampan",
-      "spaltlamporna",
-      "spaltlampor"
-    ]
+    "def": "Spaltlampa; ett mikroskop med en smal ljusspalt som ögonläkaren använder för att förstorat undersöka ögats främre delar. (subst., -n, pl. -or) Eng: slit lamp. Lekman: ögonläkarens undersökningsmikroskop."
   },
   {
     "term": "Spasm",
-    "def": "kramper",
-    "status": "stub",
-    "variants": [
-      "spasmen",
-      "spasmerna",
-      "spasmer"
-    ]
+    "def": "Ofrivillig, krampaktig sammandragning av en muskel eller ett ihåligt organs muskelvägg. (subst., -en, pl. -er) Eng: spasm. Av gr. spasmos = kramp."
   },
   {
     "term": "Spasmolytisk",
-    "def": "kramplösande",
-    "status": "stub",
-    "variants": [
-      "spasmolytiska"
-    ]
+    "def": "Kramplösande; om läkemedel som löser eller motverkar kramp i glatt muskulatur, t.ex. i tarm eller urinvägar. (adj., pl. -a) Eng: spasmolytic, antispasmodic. Av gr. spasmos = kramp + lysis = upplösning."
   },
   {
     "term": "Spasticitet",
-    "def": "tillstånd med ihållande stramhet, kramper i muskulaturen",
-    "status": "stub",
-    "variants": [
-      "spasticiteten",
-      "spasticiteterna",
-      "spasticiteter"
-    ]
+    "def": "Ökad muskelspänning med stelhet och kramp på grund av skada i de centrala nervbanorna, t.ex. efter stroke eller vid CP. (subst., -en, pl. -er) Eng: spasticity. Av gr. spasmos = kramp."
   },
   {
     "term": "Spastisk",
-    "def": "krampaktig, ihållande spänningar i muskulaturen",
-    "status": "stub",
-    "variants": [
-      "spastiska"
-    ]
+    "def": "Krampaktig; präglad av ökad, ihållande muskelspänning till följd av nervskada. (adj., pl. -a) Eng: spastic. Av gr. spastikos = krampaktig."
   },
   {
     "term": "Spatium",
@@ -16648,18 +16061,11 @@
   },
   {
     "term": "Specificitet",
-    "def": "ett mått på ett tests eller provs förmåga att korrekt utpeka de som är \"friska\"",
-    "status": "stub",
-    "variants": [
-      "specificiteten",
-      "specificiteterna",
-      "specificiteter"
-    ]
+    "def": "Ett tests förmåga att korrekt friklassa dem som är friska (andelen friska som får negativt provsvar). (subst., -en, pl. -er) Eng: specificity. Forskningsterm. Av lat. species = slag, art."
   },
   {
     "term": "SPECT",
-    "def": "\"single photon emission computed tomography\", avbilding med nukleärmedicinsk, datortomografisk teknik",
-    "status": "stub"
+    "def": "Single photon emission computed tomography; nukleärmedicinsk metod som med roterande gammakamera ger tredimensionella snittbilder av ett radioaktivt spårämnes fördelning. (förkortn., eng.) Eng: single photon emission computed tomography."
   },
   {
     "term": "Sperma",
@@ -16671,13 +16077,7 @@
   },
   {
     "term": "Spermie",
-    "def": "sädescell",
-    "status": "stub",
-    "variants": [
-      "spermien",
-      "spermierna",
-      "spermier"
-    ]
+    "def": "Sädescell; den manliga könscellen som bildas i testikeln och kan befrukta ägget. (subst., -n, pl. -er) Eng: spermatozoon, sperm. Av gr. sperma = säd, frö."
   },
   {
     "term": "Sphenoidalis",
@@ -16697,14 +16097,7 @@
   },
   {
     "term": "Spider nevi",
-    "def": "blodkärl i huden som ser ut som en liten stjärna",
-    "status": "stub",
-    "variants": [
-      "spider",
-      "spider naevi",
-      "spider naevus",
-      "spider nevus"
-    ]
+    "def": "Spindelnaevus; liten stjärnformig kärlutvidgning i huden med ett centralt kärl och utstrålande grenar, kan ses vid leversjukdom och graviditet. (subst., eng./lat.) Sv: spindelnaevus. Eng: spider naevus. Lekman: ett litet stjärnformat kärlmärke i huden. Av eng. spider = spindel + lat. naevus = födelsemärke."
   },
   {
     "term": "Spina",
@@ -16712,33 +16105,19 @@
   },
   {
     "term": "Spinal",
-    "def": "som har med ryggraden att göra",
-    "status": "stub",
-    "variants": [
-      "spinala",
-      "spinalt"
-    ]
+    "def": "Som hör till ryggraden eller ryggmärgen. (adj., -t, pl. -a) Eng: spinal. Av lat. spina = tagg, ryggrad."
   },
   {
     "term": "Spinal chock",
-    "def": "reaktion under de första timmarna/dagarna efter att ryggmärgen skadats, ger total förlamning och slapphet i all muskulatur som försörjs av nerver nedanför skadestället i ryggmärgen",
-    "status": "stub"
+    "def": "Övergående bortfall av all nervfunktion (förlamning och slapphet) nedanför en akut ryggmärgsskada under de första timmarna till veckorna efter skadan. (subst.) Eng: spinal shock. Lekman: tillfällig total förlamning strax efter en ryggmärgsskada. Av lat. spina = ryggrad."
   },
   {
     "term": "Spinalanestesi",
-    "def": "bedövning som sätts i ryggen",
-    "status": "stub",
-    "variants": [
-      "spinalanestesin"
-    ]
+    "def": "Ryggbedövning där bedövningsmedel sprutas in i vätskan kring ryggmärgen (spinalrummet) och bedövar kroppens nedre del. (subst., -n) Sv: ryggbedövning. Eng: spinal anaesthesia. Av lat. spina = ryggrad + gr. anaisthesia = känsellöshet. Jfr Spinalbedövning."
   },
   {
     "term": "Spinalbedövning",
-    "def": "bedövning som sätts i ryggen",
-    "status": "stub",
-    "variants": [
-      "spinalbedövningen"
-    ]
+    "def": "Ryggbedövning; bedövning som ges som en injektion in i vätskerummet kring ryggmärgen och bedövar underkroppen. (subst., -en) Eng: spinal anaesthesia. Av lat. spina = ryggrad. Jfr Spinalanestesi."
   },
   {
     "term": "Spinalis",
@@ -16746,33 +16125,15 @@
   },
   {
     "term": "Spinalnerv",
-    "def": "nerv som utgår från ryggmärgen",
-    "status": "stub",
-    "variants": [
-      "spinalnerven",
-      "spinalnerverna",
-      "spinalnerver"
-    ]
+    "def": "Ryggmärgsnerv; en av de 31 par nerver som utgår från ryggmärgen och försörjer kroppen med känsel- och rörelsesignaler. (subst., -en, pl. -er) Eng: spinal nerve. Av lat. spina = ryggrad + nervus = nerv."
   },
   {
     "term": "Spinalpunktion",
-    "def": "instick mellan två kotor i nedre delen av ryggen och in i hålrummet som omger ryggmärgen för att ta prov av vätskan som omger ryggmärgen (spinalvätskan)",
-    "status": "stub",
-    "variants": [
-      "spinalpunktionen",
-      "spinalpunktionerna",
-      "spinalpunktioner"
-    ]
+    "def": "Lumbalpunktion; instick med nål mellan två ländkotor in i vätskerummet kring ryggmärgen för att ta prov av ryggmärgsvätskan (likvor). (subst., -en, pl. -er) Eng: spinal (lumbar) puncture. Lekman: provtagning av ryggmärgsvätska med en nål i ryggen. Av lat. spina = ryggrad + punctio = stick."
   },
   {
     "term": "Spinalstenos",
-    "def": "trångt parti i ryggmärgskanalen som kan klämma på ryggmärgen",
-    "status": "stub",
-    "variants": [
-      "spinalstenosen",
-      "spinalstenoserna",
-      "spinalstenoser"
-    ]
+    "def": "Förträngning av ryggmärgskanalen som klämmer på ryggmärg eller nervrötter och kan ge bensmärta och domningar vid gång. (subst., -en, pl. -er) Eng: spinal stenosis. Lekman: trång ryggmärgskanal. Av lat. spina = ryggrad + gr. stenosis = förträngning."
   },
   {
     "term": "Spinosus",
@@ -16784,23 +16145,11 @@
   },
   {
     "term": "Spirometer",
-    "def": "instrument för att mäta den luftmängd som kan blåsas ut vid utandning, mäter både volym och hastighet",
-    "status": "stub",
-    "variants": [
-      "spirometern",
-      "spirometrar",
-      "spirometrarna"
-    ]
+    "def": "Instrument som mäter den luftmängd och det luftflöde en person kan blåsa ut, för att bedöma lungfunktionen. (subst., -n, pl. spirometrar) Eng: spirometer. Av lat. spirare = andas + gr. metron = mått."
   },
   {
     "term": "Spirometri",
-    "def": "undersökning som mäter den luftmängd som kan blåsas ut vid utandning, omfattar både volym och hastighet",
-    "status": "stub",
-    "variants": [
-      "spirometrin",
-      "spirometrierna",
-      "spirometrier"
-    ]
+    "def": "Lungfunktionsundersökning som mäter utandad luftvolym och luftflöde, används bland annat vid astma och KOL. (subst., -n, pl. -er) Eng: spirometry. Av lat. spirare = andas + gr. metron = mått."
   },
   {
     "term": "Splanchnicus",
@@ -16808,32 +16157,15 @@
   },
   {
     "term": "Splanknisk",
-    "def": "som har med cirkulationen till mag-tarmkanalen att göra",
-    "status": "stub",
-    "variants": [
-      "splankniska"
-    ]
+    "def": "Som hör till de inre bukorganen och deras blodförsörjning (inälvorna). (adj., pl. -a) Eng: splanchnic. Av gr. splanchna = inälvor."
   },
   {
     "term": "Splenektomera",
-    "def": "ta bort mjälten",
-    "status": "stub",
-    "variants": [
-      "splenektomerar",
-      "splenektomering",
-      "splenektomerad",
-      "splenektomerade"
-    ]
+    "def": "Operera bort mjälten. (verb, -r, splenektomerade, splenektomerat) Eng: splenectomise. Av gr. splen = mjälte + ektome = bortskärande."
   },
   {
     "term": "Splenektomi",
-    "def": "borttagning av mjälten",
-    "status": "stub",
-    "variants": [
-      "splenektomin",
-      "splenektomierna",
-      "splenektomier"
-    ]
+    "def": "Kirurgiskt borttagande av mjälten, t.ex. efter skada eller vid vissa blodsjukdomar. (subst., -n, pl. -er) Eng: splenectomy. Av gr. splen = mjälte + ektome = bortskärande."
   },
   {
     "term": "Splenius",
@@ -16841,21 +16173,11 @@
   },
   {
     "term": "Splenomegali",
-    "def": "förstorad mjälte",
-    "status": "stub",
-    "variants": [
-      "splenomegalin"
-    ]
+    "def": "Förstorad mjälte. (subst., -n) Eng: splenomegaly. Av gr. splen = mjälte + megas = stor."
   },
   {
     "term": "Spondylit",
-    "def": "inflammation i ryggkota",
-    "status": "stub",
-    "variants": [
-      "spondyliten",
-      "spondyliterna",
-      "spondyliter"
-    ]
+    "def": "Inflammation i en eller flera ryggkotor, t.ex. vid infektion eller inflammatorisk ryggsjukdom. (subst., -en, pl. -er) Eng: spondylitis. Av gr. spondylos = ryggkota + -it = inflammation."
   },
   {
     "term": "Spondylo",
@@ -16863,46 +16185,23 @@
   },
   {
     "term": "Spondyloartros",
-    "def": "slitageförändringar i ryggen",
-    "status": "stub"
+    "def": "Artros (slitageförändringar) i ryggradens leder, med broskförslitning och pålagringar. (subst.) Eng: spondyloarthrosis. Av gr. spondylos = ryggkota + arthron = led."
   },
   {
     "term": "Spondylolistes",
-    "def": "framåtglidning av en kota i förhållande till kotan nedanför",
-    "status": "stub",
-    "variants": [
-      "spondylolistesen",
-      "spondylolisteserna",
-      "spondylolisteser"
-    ]
+    "def": "Framåtglidning av en ryggkota i förhållande till kotan nedanför. (subst., -en, pl. -er) Eng: spondylolisthesis. Av gr. spondylos = ryggkota + olisthesis = glidning."
   },
   {
     "term": "Spondylolys",
-    "def": "spalt eller spricka i en ryggkotas kotbåge med risk för förskjutning, kan vara medfött eller uppstå efter skada",
-    "status": "stub",
-    "variants": [
-      "spondylolysen",
-      "spondylolyserna",
-      "spondylolyser"
-    ]
+    "def": "Spricka eller defekt i en ryggkotas kotbåge, medfödd eller efter belastning, som kan leda till att kotan glider framåt. (subst., -en, pl. -er) Eng: spondylolysis. Av gr. spondylos = ryggkota + lysis = upplösning."
   },
   {
     "term": "Spondylos",
-    "def": "slitage med förkalkningar i ryggen",
-    "status": "stub",
-    "variants": [
-      "spondyloserna",
-      "spondyloser",
-      "spondylosen"
-    ]
+    "def": "Åldersbetingade slitageförändringar i ryggraden med benpålagringar och förträngda diskutrymmen. (subst., -en, pl. -er) Eng: spondylosis. Av gr. spondylos = ryggkota."
   },
   {
     "term": "Spondylotisk",
-    "def": "slitageförändringar i ryggen",
-    "status": "stub",
-    "variants": [
-      "spondylotiska"
-    ]
+    "def": "Som beror på eller har med slitageförändringar i ryggraden (spondylos) att göra. (adj., pl. -a) Eng: spondylotic. Av gr. spondylos = ryggkota. Se Spondylos."
   },
   {
     "term": "Spongiosus",
@@ -16910,31 +16209,15 @@
   },
   {
     "term": "Spontanfraktur",
-    "def": "benbrott som uppstår utan någon väsentlig yttre skada",
-    "status": "stub",
-    "variants": [
-      "spontanfrakturen",
-      "spontanfrakturerna",
-      "spontanfrakturer"
-    ]
+    "def": "Benbrott som uppstår utan eller vid obetydligt yttre våld, oftast i ett ben som försvagats av sjukdom (t.ex. benskörhet eller tumör). (subst., -en, pl. -er) Eng: pathological fracture. Av lat. spontaneus = självmant + fractura = brott."
   },
   {
     "term": "Spontanpneumothorax",
-    "def": "plötsligt sammanfall av en del av lungan utan att det föranleds av någon yttre skada",
-    "status": "stub",
-    "variants": [
-      "spontanpneumotorax"
-    ]
+    "def": "Plötslig kollaps av en del av lungan, då luft samlas i lungsäcken utan föregående yttre skada. (subst.) Sv: spontan pneumotorax. Eng: spontaneous pneumothorax. Lekman: när en lunga faller ihop av sig själv. Av gr. pneuma = luft + thorax = bröstkorg."
   },
   {
     "term": "Spontanremission",
-    "def": "tillstånd som blir bättre av sig självt",
-    "status": "stub",
-    "variants": [
-      "spontanremissionen",
-      "spontanremissionerna",
-      "spontanremissioner"
-    ]
+    "def": "Att en sjukdom förbättras eller läker av sig självt utan behandling. (subst., -en, pl. -er) Eng: spontaneous remission. Av lat. spontaneus = självmant + remittere = sända tillbaka, släppa."
   },
   {
     "term": "Spurius",
@@ -16942,8 +16225,7 @@
   },
   {
     "term": "Sputum",
-    "def": "upphostning",
-    "status": "stub"
+    "def": "Upphostat slem från de nedre luftvägarna, som kan analyseras vid t.ex. lunginfektion. (subst., lat.) Sv: upphostning. Eng: sputum. Av lat. spuere = spotta."
   },
   {
     "term": "Squama",
@@ -16951,28 +16233,23 @@
   },
   {
     "term": "SR",
-    "def": "sänkningsreaktion",
-    "status": "stub"
+    "def": "Sänkningsreaktion (sänka); blodprov som mäter hur snabbt röda blodkroppar sjunker i ett rör och som stiger vid inflammation. (förkortn.) Sv: sänka, sänkningsreaktion. Eng: erythrocyte sedimentation rate. Lekman: ett blodprov som visar om det finns inflammation i kroppen."
   },
   {
     "term": "SS",
-    "def": "serotonergt syndrom",
-    "status": "stub"
+    "def": "Serotonergt syndrom; potentiellt livshotande tillstånd med oro, svettningar, skakningar, snabb puls och feber orsakat av för hög serotoninaktivitet, oftast av läkemedel. (förkortn.) Eng: serotonin syndrome."
   },
   {
     "term": "SSRI",
-    "def": "\"selective serotonin reuptake inhibitor\", selektiv serotoninåterupptagshämmare, en grupp medel mot depression",
-    "status": "stub"
+    "def": "Selektiv serotoninåterupptagshämmare; den vanligaste gruppen antidepressiva läkemedel. (förkortn.) Eng: selective serotonin reuptake inhibitor."
   },
   {
     "term": "SSS",
-    "def": "sjuk sinusknuta",
-    "status": "stub"
+    "def": "Sjuk sinusknuta (sick sinus syndrome); störd funktion i hjärtats impulsgivare som ger omväxlande för långsam och för snabb hjärtrytm. (förkortn.) Eng: sick sinus syndrome."
   },
   {
     "term": "Städet",
-    "def": "ett av benen i mellanörat",
-    "status": "stub"
+    "def": "Städet (incus); det mellersta av mellanörats tre hörselben, som överför ljudvågor från hammaren till stigbygeln. (subst., best. -et) Sv: städet. Eng: incus. Av lat. incus = städ."
   },
   {
     "term": "Stapedius",
@@ -16984,48 +16261,23 @@
   },
   {
     "term": "Stas",
-    "def": "stopp i, eller stark minskning av blodflödet",
-    "status": "stub",
-    "variants": [
-      "stasen"
-    ]
+    "def": "Stockning; stopp eller kraftig minskning av flödet i blod, lymfa eller annan kroppsvätska. (subst., -en) Eng: stasis. Av gr. stasis = stillastående."
   },
   {
     "term": "Staseksem",
-    "def": "eksem som uppstår på grund av starkt minskad blodgenomströmning",
-    "status": "stub",
-    "variants": [
-      "staseksemen",
-      "staseksemet"
-    ]
+    "def": "Eksem på underbenen orsakat av försämrat blodåterflöde (venös stas), med rodnad, klåda och hudförändringar. (subst., -et, pl. -) Eng: stasis eczema, venous eczema. Av gr. stasis = stillastående."
   },
   {
     "term": "Staslever",
-    "def": "blodrik lever på grund av att hjärtat inte klara att forsla bort allt blod som kommer tillbaka till hjärtat, anhopning av blod i levern",
-    "status": "stub",
-    "variants": [
-      "staslevern"
-    ]
+    "def": "Blodstockning i levern på grund av att ett sviktande hjärta inte förmår pumpa undan blodet, så att levern blir blodfylld och förstorad. (subst., -n) Eng: congestive hepatopathy. Av gr. stasis = stillastående."
   },
   {
     "term": "Staspapill",
-    "def": "det område där synnerven kommer in i ögonbrunnen (papillen), är svullet och \"bomullsaktigt\" så att det kan ses genom ett oftalmoskop, tillståndet innebär att trycket i hjärnan är förhöjt, ett allvarligt tillstånd",
-    "status": "stub",
-    "variants": [
-      "staspapillen",
-      "staspapillerna",
-      "staspapiller"
-    ]
+    "def": "Svullnad av synnervens papill (där synnerven träder in i ögat) på grund av förhöjt tryck inuti skallen; ett allvarligt tecken. (subst., -en, pl. -er) Eng: papilloedema. Av gr. stasis = stockning + lat. papilla = vårta."
   },
   {
     "term": "Statin",
-    "def": "kolesterolsänkande läkemedel",
-    "status": "stub",
-    "variants": [
-      "statinerna",
-      "statiner",
-      "statinet"
-    ]
+    "def": "Kolesterolsänkande läkemedel som hämmar leverns kolesterolproduktion och minskar risken för hjärt-kärlsjukdom. (subst., -et, pl. -er) Eng: statin. Lekman: läkemedel som sänker det skadliga blodfettet."
   },
   {
     "term": "Status",
@@ -17033,18 +16285,15 @@
   },
   {
     "term": "STD",
-    "def": "\"sexually transmitted disease\", sexuellt överförbar sjukdom",
-    "status": "stub"
+    "def": "Sexually transmitted disease; sexuellt överförbar sjukdom (numera oftare STI). (förkortn., eng.) Eng: sexually transmitted disease."
   },
   {
     "term": "Steatorré",
-    "def": "fettrik avföring",
-    "status": "stub"
+    "def": "Fettdiarré; onormalt fettrik, ljus och illaluktande avföring på grund av bristande fettupptag i tarmen. (subst., -n) Eng: steatorrhoea. Av gr. stear = talg, fett + rhoia = flöde."
   },
   {
     "term": "STEC",
-    "def": "Shigatoxin-producerande Escherichia coli",
-    "status": "stub"
+    "def": "Shigatoxinbildande Escherichia coli; tarmbakterie som producerar shigatoxin och kan ge blodig diarré och njurpåverkan (HUS). (förkortn.) Eng: Shiga toxin-producing Escherichia coli."
   },
   {
     "term": "Stella",
@@ -17056,73 +16305,39 @@
   },
   {
     "term": "STEMI",
-    "def": "\"ST-elevated myocardial infarction\", ST-höjningsinfarkt. EKG visar typiska förändringar (ST-höjning) som bekräftar att en \"säker\" hjärtinfarkt föreligger.",
-    "status": "stub"
+    "def": "ST-höjningsinfarkt; hjärtinfarkt där EKG visar ST-höjning, vilket talar för ett helt tilltäppt kranskärl och kräver akut öppnande. (förkortn., eng.) Eng: ST-elevation myocardial infarction."
   },
   {
     "term": "Stenos",
-    "def": "förträngning, trångt parti",
-    "status": "stub",
-    "variants": [
-      "stenosen",
-      "stenoserna",
-      "stenoser"
-    ]
+    "def": "Förträngning; onormalt trångt parti i ett kärl, en kanal eller en hjärtklaff. (subst., -en, pl. -er) Eng: stenosis. Av gr. stenosis = förträngning."
   },
   {
     "term": "Stenosera",
-    "def": "bli trång, förträngd",
-    "status": "stub",
-    "variants": [
-      "stenoserar",
-      "stenosering",
-      "stenoserad",
-      "stenoserade"
-    ]
+    "def": "Förträngas; bli trängre eller täppas till, om ett kärl eller en kanal. (verb, -r, stenoserade, stenoserat) Eng: stenose. Av gr. stenosis = förträngning."
   },
   {
     "term": "Stenotisk",
-    "def": "trång, förträngd, avstängd",
-    "status": "stub",
-    "variants": [
-      "stenotiska"
-    ]
+    "def": "Förträngd; som har eller utgör en förträngning. (adj., pl. -a) Eng: stenotic. Av gr. stenosis = förträngning."
   },
   {
     "term": "Stent",
-    "def": "används oftast som beteckning på en form av rörformig protes som håller ett blodkärl öppet efter att det blockerats på grund av att det var för trångt",
-    "status": "stub"
+    "def": "Liten rörformig nätprotes som förs in i ett kärl eller en kanal för att hålla det öppet, t.ex. i ett kranskärl efter ballongvidgning. (subst., -en, pl. -ar) Eng: stent. Lekman: ett litet rörnät som håller ett blodkärl öppet."
   },
   {
     "term": "Stentning",
-    "def": "insättning av rörformig protes i till exempel trånga blodkärl som på så sätt hålls öppna, hindrar att kärlet faller ihop",
-    "status": "stub",
-    "variants": [
-      "stentningen"
-    ]
+    "def": "Inläggning av en stent för att hålla ett förträngt kärl eller hålrum öppet. (subst., -en) Eng: stenting. Se Stent."
   },
   {
     "term": "Sterkoral",
-    "def": "som har med avföring att göra",
-    "status": "stub",
-    "variants": [
-      "sterkorala",
-      "sterkoralt"
-    ]
+    "def": "Som har med avföring (faeces) att göra. (adj., -t, pl. -a) Eng: stercoral. Av lat. stercus = träck, avföring."
   },
   {
     "term": "Sterkoraldiarré",
-    "def": "diarré som uppstår på grund av förstoppning som täpper igen tarmen så att endast vätska kan passera det förstoppade partiet",
-    "status": "stub"
+    "def": "Paradoxal diarré; lös avföring som läcker förbi en hård fekal propp vid svår förstoppning. (subst., -n) Eng: stercoral diarrhoea. Av lat. stercus = avföring."
   },
   {
     "term": "Sternal",
-    "def": "som har med bröstbenet att göra",
-    "status": "stub",
-    "variants": [
-      "sternala",
-      "sternalt"
-    ]
+    "def": "Som hör till bröstbenet (sternum). (adj., -t, pl. -a) Eng: sternal. Av gr. sternon = bröstben."
   },
   {
     "term": "Sternalis",
@@ -17130,13 +16345,7 @@
   },
   {
     "term": "Sternalpunktion",
-    "def": "instick i bröstbenet för att suga ut prov av benmärgen",
-    "status": "stub",
-    "variants": [
-      "sternalpunktionen",
-      "sternalpunktionerna",
-      "sternalpunktioner"
-    ]
+    "def": "Benmärgsprov där en nål förs in i bröstbenet för att suga ut benmärg. (subst., -en, pl. -er) Eng: sternal puncture. Av gr. sternon = bröstben + lat. punctio = stick."
   },
   {
     "term": "Sternum",
@@ -17144,32 +16353,15 @@
   },
   {
     "term": "Steroid",
-    "def": "förkortning av kortikosteroid, ett binjurebarkhormon som även finns som läkemedel. Det påverkar de flesta kroppsfunktioner och används som läkemedel särskilt för att dämpa inflammationer som inte orsakats av infektioner. Man skiljer mellan tre huvudtyper av kortikosteroider: Mineralkortikoider, som kontrollerar koncentrationen och balansen av olika kemikalier i kroppen. De hindrar bland annat att för mycket natrium och vatten går ut med urinen. Glukokortikoider, som har en rad olika uppgifter varav en är att bidra till att ombilda kolhydrater, som stärkelse, till energikällan glykogen i levern. De har även en central roll i kroppens försvarssystem mot inflammationer. Könshormoner består av manliga hormoner som kallas androgener (testosteron) och kvinnliga hormoner som kallas östrogen och progesteron. Dessa hormoner påverkar könsmognaden och könsdriften.",
-    "status": "stub",
-    "variants": [
-      "steroiderna",
-      "steroider",
-      "steroiden"
-    ]
+    "def": "Steroid; samlingsnamn för en grupp fettlösliga ämnen med gemensam kärnstruktur, bland annat binjurebarkhormoner (kortikosteroider) och könshormoner; i dagligt tal ofta en kortikosteroid som dämpar inflammation. (subst., -en, pl. -er) Eng: steroid. Av gr. stereos = fast + eidos = liknande."
   },
   {
     "term": "Stigmatisera",
-    "def": "utpeka nedvärderande",
-    "status": "stub",
-    "variants": [
-      "stigmatiserar",
-      "stigmatisering",
-      "stigmatiserad",
-      "stigmatiserade"
-    ]
+    "def": "Brännmärka; peka ut och nedvärdera en person eller grupp på grund av t.ex. sjukdom, så att de utsätts för fördomar. (verb, -r, stigmatiserade, stigmatiserat) Eng: stigmatise. Av gr. stigma = märke, brännmärke."
   },
   {
     "term": "Stockningssvikt",
-    "def": "hjärtsvikt som leder till att blodet anhopar sig i till exempel lever, lungor eller ben",
-    "status": "stub",
-    "variants": [
-      "stockningssvikten"
-    ]
+    "def": "Hjärtsvikt där det försämrade pumparbetet leder till att blod och vätska stockar sig bakåt i lungor, lever och ben. (subst., -en) Eng: congestive heart failure. Lekman: hjärtsvikt med vätskeansamling i kroppen."
   },
   {
     "term": "Stoma",
@@ -17177,58 +16369,31 @@
   },
   {
     "term": "Stomatit",
-    "def": "inflammation i munslemhinnan",
-    "status": "stub",
-    "variants": [
-      "stomatiten",
-      "stomatiterna",
-      "stomatiter"
-    ]
+    "def": "Inflammation i munhålans slemhinna, t.ex. med rodnad, sår och sveda. (subst., -en, pl. -er) Eng: stomatitis. Av gr. stoma = mun + -it = inflammation."
   },
   {
     "term": "Stomi",
-    "def": "öppning av tarm eller urinvägar till huden",
-    "status": "stub",
-    "variants": [
-      "stomin",
-      "stomierna",
-      "stomier"
-    ]
+    "def": "Kirurgiskt anlagd öppning där tarm eller urinväg leds ut genom bukväggen och töms i en påse. (subst., -n, pl. -er) Eng: stoma, ostomy. Lekman: en öppning på magen där tarmen mynnar i en påse. Av gr. stoma = mun, öppning."
   },
   {
     "term": "Störande variabel",
-    "def": "En variabel sägs vara störande när den har samband både med effektvariabeln och en förklaringsvariabel.",
-    "status": "stub"
+    "def": "Confounder; en faktor som påverkar både den studerade orsaken och utfallet och därför kan ge en skenbar koppling mellan dem. (subst.) Eng: confounding variable. Forskningsterm. Se Confounding factor."
   },
   {
     "term": "Strabism",
-    "def": "skelning",
-    "status": "stub",
-    "variants": [
-      "strabismen"
-    ]
+    "def": "Skelning; när ögonen inte är riktade åt samma håll. (subst., -en) Sv: skelning. Eng: strabismus, squint. Av gr. strabismos = skelning."
   },
   {
     "term": "Strålben",
-    "def": "radius, ben i underarmen som befinner sig på tumsidan",
-    "status": "stub",
-    "variants": [
-      "strålbenet"
-    ]
+    "def": "Strålbenet (radius); det ben i underarmen som ligger på tumsidan. (subst., best. -et) Sv: strålben. Eng: radius. Av lat. radius = stråle, eker."
   },
   {
     "term": "Strangulation",
-    "def": "ischemi i tarmen på grund av inkämning av tarmen",
-    "status": "stub"
+    "def": "Avsnörning; när blodtillförseln stryps, t.ex. när en tarmslynga kläms i ett bråck och hotar att dö av syrebrist. (subst., -en) Eng: strangulation. Av lat. strangulare = strypa."
   },
   {
     "term": "Stratifiering",
-    "def": "indelning i lager eller grupper, till exempel i förhållande till risk: högriskgrupp jämfört med lågriskgrupp. Kan användas för att justera för confounders i kliniska prövningar.",
-    "status": "stub",
-    "variants": [
-      "stratifikation",
-      "stratifikationen"
-    ]
+    "def": "Indelning i skikt eller grupper, t.ex. efter risknivå; i studier ett sätt att hantera störande faktorer genom att analysera grupperna var för sig. (subst., -en) Sv: stratifikation. Eng: stratification. Forskningsterm. Av lat. stratum = lager."
   },
   {
     "term": "Stratum",
@@ -17236,26 +16401,15 @@
   },
   {
     "term": "Stratum basale",
-    "def": "överhudens understa lager",
-    "status": "stub"
+    "def": "Basalcellslagret; överhudens (epidermis) understa cellager, där nya hudceller bildas. (subst., lat.) Eng: stratum basale, basal layer. Av lat. stratum = lager + basalis = vid basen."
   },
   {
     "term": "Stressinkontinens",
-    "def": "ofrivillig urinavgång vid hosta eller tunga lyft",
-    "status": "stub",
-    "variants": [
-      "stressinkontinensen",
-      "stressinkontinenserna",
-      "stressinkontinenser"
-    ]
+    "def": "Ansträngningsinkontinens; ofrivilligt urinläckage vid tryckökning i buken som hosta, nysning, skratt eller tunga lyft. (subst., -en, pl. -er) Eng: stress incontinence. Lekman: urinläckage när man hostar eller lyfter tungt."
   },
   {
     "term": "Stressulcus",
-    "def": "ytliga magsår som kan uppstå som komplikation till andra allvarliga tillstånd",
-    "status": "stub",
-    "variants": [
-      "stressulkus"
-    ]
+    "def": "Stressår; akuta, ytliga sår i magsäckens eller tolvfingertarmens slemhinna som kan uppstå vid svår sjukdom eller stort kroppsligt trauma. (subst., lat.) Eng: stress ulcer. Av lat. ulcus = sår."
   },
   {
     "term": "Stria",
@@ -17267,42 +16421,23 @@
   },
   {
     "term": "Stridor",
-    "def": "väsljud, blåsljud som beror på att det är trångt i luftvägarna",
-    "status": "stub"
-  },
-  {
-    "term": "Stridorös",
-    "def": "väsande, ansträngd",
-    "status": "stub",
-    "variants": [
-      "stridorösa",
-      "stridoröst"
-    ]
+    "def": "Strävt, vinande andningsljud som hörs när luft passerar en förträngning i de övre luftvägarna, t.ex. struphuvudet; ett tecken på hotande luftvägshinder. Även stridorös (adj.) = väsande och ansträngd, om sådan andning. (subst., -en) Eng: stridor. Lekman: ett vinande andningsljud som tyder på trånga luftvägar. Av lat. stridor = väsande, gnisslande ljud."
   },
   {
     "term": "Striktur",
-    "def": "förträngning på grund av ärrvävnad",
-    "status": "stub",
-    "variants": [
-      "strikturen",
-      "strikturerna",
-      "strikturer"
-    ]
+    "def": "Förträngning av ett rörformigt organ orsakad av ärrvävnad, t.ex. i urinrör, matstrupe eller tarm. (subst., -en, pl. -er) Eng: stricture. Av lat. stringere = dra åt, snöra."
   },
   {
     "term": "Struma",
-    "def": "förstorad sköldkörtel",
-    "status": "stub"
+    "def": "Förstorad sköldkörtel, som kan synas eller kännas som en svullnad framtill på halsen. (subst., -n) Sv: sköldkörtelförstoring. Eng: goitre. Lekman: förstorad sköldkörtel. Av lat. struma = svullen körtel."
   },
   {
     "term": "STSS",
-    "def": "\"streptococcal toxic shock syndrome\", streptokockbetingad toxisk chock",
-    "status": "stub"
+    "def": "Streptokockbetingad toxisk chock; livshotande chocktillstånd orsakat av gifter (toxiner) från streptokocker. (förkortn., eng.) Eng: streptococcal toxic shock syndrome."
   },
   {
     "term": "Stupor",
-    "def": "orörlig; inom psykiatrin en beteckning på en patient som är svår att kontakta, som är uttryckslös",
-    "status": "stub"
+    "def": "Stupor; tillstånd av orörlighet och stumhet där personen är vaken men inte reagerar på omgivningen, ses bland annat inom psykiatrin. (subst., -en) Eng: stupor. Av lat. stupor = bedövning, dvala."
   },
   {
     "term": "Styloideus",
@@ -17318,13 +16453,7 @@
   },
   {
     "term": "Subaraknoidalblödning",
-    "def": "hjärnhinneblödning, pulsåderblödning i eller utanpå hjärnan",
-    "status": "stub",
-    "variants": [
-      "subaraknoidalblödningen",
-      "subaraknoidalblödningarna",
-      "subaraknoidalblödningar"
-    ]
+    "def": "Blödning i utrymmet mellan de mjuka hjärnhinnorna (under spindelvävshinnan), oftast av ett brustet pulsåderbråck; ger plötslig svår huvudvärk. (subst., -en, pl. -ar) Eng: subarachnoid haemorrhage. Lekman: en allvarlig blödning runt hjärnan. Av lat. sub = under + gr. arachne = spindel(väv)."
   },
   {
     "term": "Subcutis",
@@ -17332,121 +16461,59 @@
   },
   {
     "term": "Subdiafragmatisk",
-    "def": "under mellangärdesmuskeln",
-    "status": "stub",
-    "variants": [
-      "subdiafragmatiska"
-    ]
+    "def": "Belägen under mellangärdet (diafragma). (adj., pl. -a) Eng: subdiaphragmatic. Av lat. sub = under + gr. diaphragma = skiljevägg, mellangärde."
   },
   {
     "term": "Subdural",
-    "def": "under eller innanför den hårda hjärnhinnan och/eller ryggmärgens hårda hinna",
-    "status": "stub",
-    "variants": [
-      "subdurala",
-      "subduralt"
-    ]
+    "def": "Belägen under den hårda hjärnhinnan (dura mater), mellan denna och spindelvävshinnan. (adj., -t, pl. -a) Eng: subdural. Av lat. sub = under + dura mater = hård hinna."
   },
   {
     "term": "Subduralt hematom",
-    "def": "blodansamling efter blödning i utrymmet mellan hjärnhinnorna, oftast resultat av en skallskada",
-    "status": "stub",
-    "variants": [
-      "subduralhematom"
-    ]
+    "def": "Blodansamling under den hårda hjärnhinnan, oftast efter en skallskada med bristning av bryggvener; kan utvecklas snabbt eller långsamt. (subst.) Sv: subduralhematom. Eng: subdural haematoma. Av lat. sub = under + dura + gr. haima = blod."
   },
   {
     "term": "Subfebril",
-    "def": "lätt temperaturstegring",
-    "status": "stub",
-    "variants": [
-      "subfebrila",
-      "subfebrilt"
-    ]
+    "def": "Lätt förhöjd kroppstemperatur (oftast 37,5–38 °C), strax under egentlig feber. (adj., -t, pl. -a) Eng: subfebrile. Av lat. sub = under + febris = feber."
   },
   {
     "term": "Subfertilitet",
-    "def": "nedsatt fruktsamhet, nedsatt förmåga att bli gravid",
-    "status": "stub",
-    "variants": [
-      "subfertiliteten"
-    ]
+    "def": "Nedsatt men inte upphävd fruktsamhet; minskad förmåga att bli gravid. (subst., -en) Eng: subfertility. Av lat. sub = under + fertilis = fruktbar."
   },
   {
     "term": "Subfrenisk",
-    "def": "under mellangärdet",
-    "status": "stub",
-    "variants": [
-      "subfreniska"
-    ]
+    "def": "Belägen under mellangärdet (diafragma), t.ex. en subfrenisk abscess. (adj., pl. -a) Eng: subphrenic. Av lat. sub = under + gr. phren = mellangärde."
   },
   {
     "term": "Subhepatisk",
-    "def": "under levern",
-    "status": "stub",
-    "variants": [
-      "subhepatiska"
-    ]
+    "def": "Belägen under levern. (adj., pl. -a) Eng: subhepatic. Av lat. sub = under + gr. hepar = lever."
   },
   {
     "term": "Subileus",
-    "def": "hotande stopp i tarmen",
-    "status": "stub"
+    "def": "Ofullständigt, hotande tarmvred; partiellt stopp i tarmpassagen som riskerar att övergå i fullständigt tarmstopp. (subst.) Eng: subileus, partial obstruction. Av lat. sub = under + gr. eileos = tarmvred. Se Ileus."
   },
   {
     "term": "Subklinisk",
-    "def": "tillstånd som inte ger klara eller tydliga sjukdomstecken",
-    "status": "stub",
-    "variants": [
-      "subkliniska"
-    ]
+    "def": "Som inte ger några märkbara symtom men kan påvisas med prov; om ett tidigt eller lindrigt sjukdomsstadium. (adj., pl. -a) Eng: subclinical. Av lat. sub = under + gr. kline = säng (jfr klinisk)."
   },
   {
     "term": "Subkutan",
-    "def": "under huden",
-    "status": "stub",
-    "variants": [
-      "subkutana",
-      "subkutant"
-    ]
+    "def": "Belägen under huden; om t.ex. fettvävnad eller en injektion som ges i underhuden. (adj., -t, pl. -a) Eng: subcutaneous. Av lat. sub = under + cutis = hud."
   },
   {
     "term": "Sublingual",
-    "def": "under tungan",
-    "status": "stub",
-    "variants": [
-      "sublinguala",
-      "sublingualt"
-    ]
+    "def": "Belägen eller given under tungan, t.ex. en tablett som löses upp under tungan och tas upp via slemhinnan. (adj., -t, pl. -a) Eng: sublingual. Av lat. sub = under + lingua = tunga."
   },
   {
     "term": "Subluxation",
-    "def": "delvis ur led",
-    "status": "stub",
-    "variants": [
-      "subluxationen",
-      "subluxationerna",
-      "subluxationer"
-    ]
-  },
-  {
-    "term": "Submukös",
-    "def": "som finns under slemhinnan",
-    "status": "stub",
-    "variants": [
-      "submukösa",
-      "submuköst"
-    ]
+    "def": "Partiell urledvridning; när ledytorna delvis förskjutits men ännu har viss kontakt (ofullständig luxation). (subst., -en, pl. -er) Eng: subluxation. Av lat. sub = under + luxare = vrida ur led."
   },
   {
     "term": "Submukosa",
-    "def": "den lösa bindväven under slemhinnan",
-    "status": "stub"
+    "def": "Submukosa; det lösa bindvävslager som ligger under en slemhinna (mukosa) och bär dess blodkärl och nerver. Även submukös (adj.) = belägen i eller under detta lager, t.ex. ett submuköst myom. (subst.) Eng: submucosa. Av lat. sub = under + mucosa = slemhinna."
   },
   {
     "term": "Suboccipitalt",
-    "def": "under/nedanför huvudet, nacken",
-    "status": "stub"
+    "def": "Belägen nedanför nackbenet (os occipitale), i nedre delen av bakhuvudet och övre nacken. (adv./adj.) Eng: suboccipital. Av lat. sub = under + occiput = bakhuvud."
   },
   {
     "term": "Substantia",
@@ -17454,23 +16521,11 @@
   },
   {
     "term": "Substitution",
-    "def": "ersättning, till exempel substitutionsdos med hormon i tablettform som ersättning för låg nivå i blodet",
-    "status": "stub",
-    "variants": [
-      "substitutionen",
-      "substitutionerna",
-      "substitutioner"
-    ]
+    "def": "Ersättning; att tillföra ett ämne kroppen saknar, t.ex. hormon i tablettform vid bristande egen produktion. (subst., -en, pl. -er) Eng: substitution. Av lat. substituere = sätta i stället."
   },
   {
     "term": "Substitutionsbehandling",
-    "def": "behandling som innebär extra tillförsel av ett ämne som det finns för lite av i kroppen",
-    "status": "stub",
-    "variants": [
-      "substitutionsbehandlingen",
-      "substitutionsterapi",
-      "substitutionsterapin"
-    ]
+    "def": "Behandling som ersätter ett ämne kroppen har för lite av, t.ex. sköldkörtelhormon, insulin eller järn. (subst., -en) Sv: substitutionsterapi. Eng: replacement therapy. Av lat. substituere = sätta i stället."
   },
   {
     "term": "Sudor",
@@ -17482,26 +16537,15 @@
   },
   {
     "term": "Suicid",
-    "def": "självmord",
-    "status": "stub"
+    "def": "Självmord; avsiktligt avslutande av det egna livet. (subst., -et) Sv: självmord. Eng: suicide. Av lat. sui = sig själv + caedere = döda."
   },
   {
     "term": "Suicidal",
-    "def": "som hotar begå självmord",
-    "status": "stub",
-    "variants": [
-      "suicidala",
-      "suicidalt"
-    ]
+    "def": "Självmordsbenägen; som har tankar på eller riskerar att begå självmord. (adj., -t, pl. -a) Eng: suicidal. Av lat. sui = sig själv + caedere = döda."
   },
   {
     "term": "Suicidförsök",
-    "def": "självmordsförsök",
-    "status": "stub",
-    "variants": [
-      "suicidförsöken",
-      "suicidförsöket"
-    ]
+    "def": "Självmordsförsök; handling där en person avsiktligt skadar sig i avsikt att dö men överlever. (subst., -et, pl. -) Eng: suicide attempt. Av lat. sui = sig själv + caedere = döda."
   },
   {
     "term": "Sulcus",
@@ -17509,8 +16553,7 @@
   },
   {
     "term": "Sunna",
-    "def": "en beteckning på kvinnlig könsstympning",
-    "status": "stub"
+    "def": "Sunna; en form av kvinnlig könsstympning där förhuden och/eller del av klitoris avlägsnas (typ I enligt WHO). (subst.) Eng: sunna circumcision."
   },
   {
     "term": "Super",
@@ -17538,51 +16581,23 @@
   },
   {
     "term": "Supinera",
-    "def": "rotera fot eller arm utåt (motsats till pronera)",
-    "status": "stub",
-    "variants": [
-      "supinering",
-      "supinerad",
-      "supinerade",
-      "supinerande",
-      "supinerar"
-    ]
+    "def": "Vrida underarmen så att handflatan vänds uppåt/framåt, eller vrida foten så att fotsulan vänds inåt (motsats till pronera). (verb, -r, supinerade, supinerat) Eng: supinate. Av lat. supinus = bakåtböjd, liggande på rygg. Jfr Pronera."
   },
   {
     "term": "Suppression",
-    "def": "undertryckande",
-    "status": "stub",
-    "variants": [
-      "suppressionen"
-    ]
+    "def": "Undertryckande; nedtryckning eller hämning av en funktion, t.ex. av benmärg, immunförsvar eller hormonproduktion. (subst., -en) Eng: suppression. Av lat. supprimere = trycka ned."
   },
   {
     "term": "Supprimera",
-    "def": "undertrycka",
-    "status": "stub",
-    "variants": [
-      "supprimerar",
-      "supprimering",
-      "supprimerad",
-      "supprimerade"
-    ]
+    "def": "Undertrycka, hämma; trycka ned eller dämpa en funktion eller process. (verb, -r, supprimerade, supprimerat) Eng: suppress. Av lat. supprimere = trycka ned."
   },
   {
     "term": "Suppuration",
-    "def": "varbildning",
-    "status": "stub",
-    "variants": [
-      "suppurationen"
-    ]
+    "def": "Varbildning; bildning av var i en infekterad vävnad. (subst., -en) Eng: suppuration. Av lat. sub = under + pus (pur-) = var."
   },
   {
     "term": "Suppurativ",
-    "def": "varbildande",
-    "status": "stub",
-    "variants": [
-      "suppurativa",
-      "suppurativt"
-    ]
+    "def": "Varbildande; som ger upphov till eller åtföljs av var. (adj., -t, pl. -a) Eng: suppurative, purulent. Av lat. pus (pur-) = var."
   },
   {
     "term": "Supra",
@@ -17590,25 +16605,15 @@
   },
   {
     "term": "Suprapubisk",
-    "def": "ovanför blygdbenet, används till exempel för att beteckna kateter som läggs in till urinblåsan genom huden ovanför blygdbenet",
-    "status": "stub",
-    "variants": [
-      "suprapubiska"
-    ]
+    "def": "Belägen ovanför blygdbenet (os pubis); används t.ex. om kateter som läggs in till urinblåsan genom buken ovanför blygdbenet. (adj., pl. -a) Eng: suprapubic. Av lat. supra = ovanför + pubis = blygdben."
   },
   {
     "term": "Supraspinatus",
-    "def": "sena i skuldran som hjälper till att lyfta armen ut från kroppen och uppåt, drabbas ofta av seninflammation",
-    "status": "stub"
+    "def": "Supraspinatus; en av skuldrans rotatorkuffmuskler, vars sena hjälper till att lyfta armen ut från kroppen och ofta drabbas av inflammation eller bristning. (subst., lat.) Eng: supraspinatus. Av lat. supra = ovanför + spina (scapulae) = skulderbladets kam."
   },
   {
     "term": "Supraventrikulär",
-    "def": "som befinner sig ovanför hjärtkamrarna (ventriklerna), betecknar vanligtvis rytmstörningar i hjärtat som uppstår i förmaken eller i övergången till hjärtkamrarna",
-    "status": "stub",
-    "variants": [
-      "supraventrikulära",
-      "supraventrikulärt"
-    ]
+    "def": "Som uppstår ovanför hjärtkamrarna, dvs. i förmaken eller AV-knutan; oftast om en sorts snabb hjärtrytmstörning. (adj., -t, pl. -a) Eng: supraventricular. Av lat. supra = ovanför + ventriculus = liten kammare."
   },
   {
     "term": "Supremus",
@@ -17624,8 +16629,7 @@
   },
   {
     "term": "Suspension",
-    "def": "uppslamning av fasta partiklar i en vätska",
-    "status": "stub"
+    "def": "Uppslamning; en vätska med fint fördelade fasta partiklar som inte är lösta utan svävar och kan bottenfällas, t.ex. en flytande medicin som ska skakas före bruk. (subst., -en) Eng: suspension. Av lat. suspendere = hänga upp."
   },
   {
     "term": "Suspensorius",
@@ -17641,13 +16645,7 @@
   },
   {
     "term": "Sutur",
-    "def": "tråd för att sy igen sår; sy ett sår",
-    "status": "stub",
-    "variants": [
-      "suturen",
-      "suturerna",
-      "suturer"
-    ]
+    "def": "Kirurgisk söm/stygn för att sy ihop ett sår; även benämning på den fasta fogen mellan skallens ben. (subst., -en, pl. -er) Eng: suture. Av lat. suere = sy."
   },
   {
     "term": "Sutura",
@@ -17655,62 +16653,31 @@
   },
   {
     "term": "Suturera",
-    "def": "sy ett sår",
-    "status": "stub",
-    "variants": [
-      "suturerar",
-      "suturering",
-      "suturerad",
-      "suturerade"
-    ]
+    "def": "Sy ihop ett sår eller en vävnad med stygn. (verb, -r, suturerade, suturerat) Eng: suture. Av lat. suere = sy."
   },
   {
     "term": "Svetsblänk",
-    "def": "ytliga skada på ögats hornhinna",
-    "status": "stub"
+    "def": "Ytlig brännskada på hornhinnan av starkt ultraviolett ljus från en svetsljusbåge; ger kraftig värk, ljuskänslighet och tårflöde några timmar efteråt. (subst., -et) Eng: arc eye, photokeratitis. Lekman: ”solbränna” på ögat efter att ha tittat på svetsljus."
   },
   {
     "term": "SXA",
-    "def": "enkel röntgenabsorptiometri (single-energy x-ray absorptiometry) en metod för mätning av bentäthet i häl och underarm",
-    "status": "stub"
+    "def": "Enkelenergi-röntgenabsorptiometri; metod för att mäta bentäthet i häl eller underarm med röntgen av en energinivå. (förkortn.) Eng: single-energy x-ray absorptiometry. Jfr DXA."
   },
   {
     "term": "Symbios",
-    "def": "samliv mellan två olika organismer",
-    "status": "stub",
-    "variants": [
-      "symbiosen",
-      "symbioserna",
-      "symbioser"
-    ]
+    "def": "Samliv mellan två olika organismer; ofta om ett samspel där båda har nytta av varandra, t.ex. tarmfloran och människan. (subst., -en, pl. -er) Eng: symbiosis. Av gr. syn = tillsammans + bios = liv."
   },
   {
     "term": "Symfys",
-    "def": "betecknar vanligtvid blygdbenet i bäckenet; kan också beteckna två ben som är sammanväxtra",
-    "status": "stub",
-    "variants": [
-      "symfysen",
-      "symfyserna",
-      "symfyser"
-    ]
+    "def": "Broskfog mellan två ben som tillåter ringa rörelse; oftast om blygdbensfogen (symphysis pubica) framtill i bäckenet. (subst., -en, pl. -er) Eng: symphysis. Av gr. symphysis = sammanväxning."
   },
   {
     "term": "Symfysiolys",
-    "def": "Blygdbenet består ursprungligen av två ben som är ordentligt fästa i varandra, men under graviditeten lossas förbindelsen något så att bäckenet ska kunna tänjas ut under förlossningen. Denna uppluckring kan ge obehag och smärtor (del av bäckenuppluckringsproblemet).",
-    "status": "stub",
-    "variants": [
-      "symfysiolysen"
-    ]
+    "def": "Uppluckring och smärtsam isärglidning av blygdbensfogen under graviditet, då bäckenet mjukas upp inför förlossningen; del av foglossning och bäckensmärta. (subst., -en) Eng: symphysiolysis. Lekman: smärtande uppluckring av bäckenets framfog under graviditet. Av gr. symphysis = fog + lysis = upplösning."
   },
   {
     "term": "Sympatektomi",
-    "def": "borttagning av sympatisk nervvävnad, den del av nervsystemet som vi inte kan kontrollera med viljan",
-    "status": "stub",
-    "variants": [
-      "sympatektomin",
-      "sympatektomierna",
-      "sympatektomier"
-    ]
+    "def": "Kirurgiskt avlägsnande eller avbrytande av sympatiska nervtrådar, t.ex. för att minska svettning eller kärlkramp. (subst., -n, pl. -er) Eng: sympathectomy. Av gr. sympathetikos + ektome = bortskärande."
   },
   {
     "term": "Sympaticus",
@@ -17718,35 +16685,19 @@
   },
   {
     "term": "Sympatikolytisk",
-    "def": "som motverkar det sympatiska nervsystemet, motverkar adrenalineffekterna",
-    "status": "stub",
-    "variants": [
-      "sympatikolytiska"
-    ]
+    "def": "Som dämpar det sympatiska nervsystemets verkan (motverkar adrenalineffekterna), t.ex. en betablockerare. (adj., pl. -a) Eng: sympatholytic. Av sympatikus + gr. lysis = upplösning."
   },
   {
     "term": "Sympatikomimetisk",
-    "def": "som förstärker verkan från det sympatiska nervsystemet, förstärker adrenalineffekterna",
-    "status": "stub",
-    "variants": [
-      "sympatikomimetiska"
-    ]
+    "def": "Som härmar och förstärker det sympatiska nervsystemets verkan (adrenalineffekterna), t.ex. ökad puls och vidgade luftrör. (adj., pl. -a) Eng: sympathomimetic. Av sympatikus + gr. mimetikos = härmande."
   },
   {
     "term": "Sympatikusaktivitet",
-    "def": "som stimulerar aktiviteten i det icke viljestyrda nervsystemet (autonoma nervsystemet)",
-    "status": "stub",
-    "variants": [
-      "sympatikusaktiviteten"
-    ]
+    "def": "Aktivitet i den sympatiska delen av det autonoma (icke viljestyrda) nervsystemet, som bland annat ökar puls och blodtryck. (subst., -en) Eng: sympathetic activity. Se Sympatiska nervsystemet."
   },
   {
     "term": "Sympatiska nervsystemet",
-    "def": "den del av det icke viljestyrda nervsystemet (autonoma nervsystemet), som ger adrenalineffekter, till exempel i hjärtat, lungorna, blodkärlen, tarmen",
-    "status": "stub",
-    "variants": [
-      "sympatisk"
-    ]
+    "def": "Den del av det autonoma (icke viljestyrda) nervsystemet som mobiliserar kroppen för aktivitet (”kamp eller flykt”) med ökad puls, vidgade luftrör och höjt blodtryck. (subst.) Eng: sympathetic nervous system. Lekman: den del av nervsystemet som gör kroppen redo för ansträngning. Av gr. sympathetikos = medkännande, samverkande."
   },
   {
     "term": "Symphysis",
@@ -17754,20 +16705,11 @@
   },
   {
     "term": "Symtom",
-    "def": "de tecken och obehag som den sjuke själv upplever",
-    "status": "stub",
-    "variants": [
-      "symtomen",
-      "symtomet"
-    ]
+    "def": "Tecken på sjukdom som den sjuke själv märker och beskriver, t.ex. smärta eller illamående (till skillnad från fynd som läkaren konstaterar). (subst., -et, pl. -) Eng: symptom. Av gr. symptoma = sammanträffande, det som drabbar."
   },
   {
     "term": "Symtomatologi",
-    "def": "de sammanlagda tecken och obehag som den sjuke märker",
-    "status": "stub",
-    "variants": [
-      "symtomatologin"
-    ]
+    "def": "Läran om sjukdomars symtom; även den samlade bilden av en sjukdoms symtom. (subst., -n) Eng: symptomatology. Av gr. symptoma = symtom + logos = lära."
   },
   {
     "term": "Syn",
@@ -17783,16 +16725,11 @@
   },
   {
     "term": "Syndaktyli",
-    "def": "medfödd sammanväxt mellan fingrar eller tår, jämför Downs syndrom",
-    "status": "stub",
-    "variants": [
-      "syndachtyli"
-    ]
+    "def": "Medfödd sammanväxning mellan två eller flera fingrar eller tår. (subst., -n) Eng: syndactyly. Av gr. syn = tillsammans + daktylos = finger, tå."
   },
   {
     "term": "Syndesmos",
-    "def": "bindvävsförbindelse mellan två ben, till exempel i skallen där många ben är sammanvävda med en slags söm emellan. Dessa övergångssömmar uppträder som sömmar i skallen.",
-    "status": "stub"
+    "def": "Fast bindvävsförbindelse mellan två ben, t.ex. mellan sken- och vadben vid fotleden. (subst., -en, pl. -er) Eng: syndesmosis. Av gr. syn = tillsammans + desmos = band."
   },
   {
     "term": "Syndesmosis",
@@ -17800,30 +16737,15 @@
   },
   {
     "term": "Syndrom",
-    "def": "en samling tecken och besvär som hör till en bestämd sjukdom; en bestämt uppsättning symtom",
-    "status": "stub",
-    "variants": [
-      "syndromen",
-      "syndromet"
-    ]
+    "def": "En grupp symtom och tecken som regelbundet förekommer tillsammans och kännetecknar ett bestämt sjukdomstillstånd. (subst., -et, pl. -) Eng: syndrome. Av gr. syndrome = sammanlopp."
   },
   {
     "term": "Syneki",
-    "def": "sammanväxningar mellan ögats lins och regnbågshinnan",
-    "status": "stub",
-    "variants": [
-      "synekin",
-      "synekierna",
-      "synekier"
-    ]
+    "def": "Sammanväxning mellan vävnader som normalt är fria; i ögat mellan regnbågshinnan och linsen eller hornhinnan. (subst., -n, pl. -er) Eng: synechia. Av gr. synecheia = sammanhang."
   },
   {
     "term": "Synergetisk",
-    "def": "samverkande",
-    "status": "stub",
-    "variants": [
-      "synergetiska"
-    ]
+    "def": "Samverkande; som verkar tillsammans mot ett gemensamt mål. (adj., pl. -a) Eng: synergetic. Av gr. syn = tillsammans + ergon = arbete, verkan. Jfr Synergistisk."
   },
   {
     "term": "Synergist",
@@ -17831,66 +16753,31 @@
   },
   {
     "term": "Synergistisk",
-    "def": "förstärkande",
-    "status": "stub",
-    "variants": [
-      "synergistiska"
-    ]
+    "def": "Förstärkande; om två faktorer (t.ex. läkemedel) vars samlade effekt är större än summan av var för sig. (adj., pl. -a) Eng: synergistic. Av gr. syn = tillsammans + ergon = verkan."
   },
   {
     "term": "Synkope",
-    "def": "svimningsanfall",
-    "status": "stub",
-    "variants": [
-      "synkoperingen",
-      "synkoperingarna",
-      "synkoperingar"
-    ]
+    "def": "Svimning; kortvarig medvetslöshet på grund av övergående minskat blodflöde till hjärnan. (subst., -n, pl. -er) Eng: syncope. Lekman: svimning. Av gr. synkope = avbrott, sammanstörtande."
   },
   {
     "term": "Synovektomera",
-    "def": "operera bort en kroniskt inflammerad ledhinna",
-    "status": "stub",
-    "variants": [
-      "synovektomerade",
-      "synovektomerar",
-      "synovektomering",
-      "synovektomerad"
-    ]
+    "def": "Operera bort en kroniskt inflammerad ledhinna. (verb, -r, synovektomerade, synovektomerat) Eng: synovectomise. Av nylat. synovia = ledvätska + gr. ektome = bortskärande."
   },
   {
     "term": "Synovektomi",
-    "def": "operation där ledhinnan avlägsnas i en kroniskt inflammerad led",
-    "status": "stub",
-    "variants": [
-      "synovektomin",
-      "synovektomierna",
-      "synovektomier"
-    ]
+    "def": "Operation där en kroniskt inflammerad ledhinna avlägsnas, t.ex. vid reumatoid artrit. (subst., -n, pl. -er) Eng: synovectomy. Av nylat. synovia = ledvätska + gr. ektome = bortskärande."
   },
   {
     "term": "Synovia",
-    "def": "ledvätska",
-    "status": "stub"
+    "def": "Ledvätska; den klara, sega vätska som smörjer och närför en led. (subst., lat.) Sv: ledvätska. Eng: synovial fluid. Av nylat. synovia = ledvätska."
   },
   {
     "term": "Synovial",
-    "def": "som har med ledhinnan att göra",
-    "status": "stub",
-    "variants": [
-      "synoviala",
-      "synovialt"
-    ]
+    "def": "Som hör till ledhinnan eller ledvätskan. (adj., -t, pl. -a) Eng: synovial. Av nylat. synovia = ledvätska."
   },
   {
     "term": "Synovialhinna",
-    "def": "ledhinnan",
-    "status": "stub",
-    "variants": [
-      "synovialhinnan",
-      "synovialhinnorna",
-      "synovialhinnor"
-    ]
+    "def": "Ledhinnan; den inre hinna som klär en ledkapsel och bildar ledvätskan. (subst., -n, pl. -or) Sv: ledhinna. Eng: synovial membrane. Av nylat. synovia = ledvätska."
   },
   {
     "term": "Synovialis (synovia)",
@@ -17898,69 +16785,35 @@
   },
   {
     "term": "Synovialvätska",
-    "def": "ledvätska",
-    "status": "stub",
-    "variants": [
-      "synovialvätskan",
-      "synovialvätskorna",
-      "synovialvätskor"
-    ]
+    "def": "Ledvätska; den vätska som ledhinnan bildar för att smörja leden. (subst., -n, pl. -or) Sv: ledvätska. Eng: synovial fluid. Av nylat. synovia = ledvätska."
   },
   {
     "term": "Synovit",
-    "def": "inflammation i ledhinnan",
-    "status": "stub",
-    "variants": [
-      "synoviten",
-      "synoviterna",
-      "synoviter"
-    ]
+    "def": "Inflammation i ledhinnan, med svullnad, värme och smärta i leden. (subst., -en, pl. -er) Eng: synovitis. Av nylat. synovia = ledvätska + -it = inflammation."
   },
   {
     "term": "Syntax",
-    "def": "satslära, ordsammansättning, ordens inbördes sammansättning",
-    "status": "stub"
+    "def": "Satslära; reglerna för hur ord fogas samman till satser och meningar. (subst., -en) Eng: syntax. Av gr. syntaxis = sammanställning."
   },
   {
     "term": "Syringomyeli",
-    "def": "sjukdom i ryggmärgen där en vätskefylld blåsa inne i ryggmärgen trycker på omkringliggande nervvävnad och kan ge störningar, särskilt i känseln (förlust av smärt- och temperaturkänsla)",
-    "status": "stub"
+    "def": "Sjukdom där en vätskefylld håla bildas inuti ryggmärgen och trycker på nervvävnaden, ofta med bortfall av smärt- och temperaturkänsel. (subst., -n) Eng: syringomyelia. Av gr. syrinx = rör, pipa + myelos = märg."
   },
   {
     "term": "Systematisk översikt",
-    "def": "En översiktsartikel där specifika och accepterade metoder har används för att identifiera, utvärdera och summera resultat från studier som har undersökt en bestämd problemställning. Artikeln kan, men behöver inte, bygga på en metaanalys.",
-    "status": "stub",
-    "variants": [
-      "systematic review"
-    ]
+    "def": "Översiktsartikel som med fördefinierade, redovisade metoder söker, värderar och sammanställer all relevant forskning om en bestämd frågeställning; kan bygga på en metaanalys. (subst.) Sv: systematic review. Eng: systematic review. Forskningsterm."
   },
   {
     "term": "Systemeffekt",
-    "def": "verkan på hela organismen",
-    "status": "stub",
-    "variants": [
-      "systemeffekten",
-      "systemeffekterna",
-      "systemeffekter"
-    ]
+    "def": "Verkan som omfattar hela kroppen, i motsats till en lokal effekt på applikationsstället. (subst., -en, pl. -er) Eng: systemic effect. Av gr. systema = sammanställd helhet."
   },
   {
-    "term": "Systemiskt:",
-    "def": "som inverkar på hela organismen",
-    "status": "stub",
-    "variants": [
-      "systemiska"
-    ]
+    "term": "Systemisk",
+    "def": "Som påverkar hela kroppen (hela organismen), i motsats till lokal. (adj., -t, pl. -a) Eng: systemic. Av gr. systema = sammansatt helhet."
   },
   {
     "term": "Systemsjukdom",
-    "def": "sjukdom som finns i hela kroppen",
-    "status": "stub",
-    "variants": [
-      "systemsjukdomen",
-      "systemsjukdomarna",
-      "systemsjukdomar"
-    ]
+    "def": "Sjukdom som drabbar flera organsystem eller kroppen som helhet, t.ex. en autoimmun bindvävssjukdom. (subst., -en, pl. -ar) Eng: systemic disease. Av gr. systema = helhet."
   },
   {
     "term": "Systole",
@@ -17968,11 +16821,7 @@
   },
   {
     "term": "Systolisk",
-    "def": "den hjärtfas då hjärtat drar ihop sig och trycker ut blod i kretsloppet, anger också det övre värdet i blodtrycket",
-    "status": "stub",
-    "variants": [
-      "systoliska"
-    ]
+    "def": "Som hör till systole, hjärtats sammandragningsfas då blod pumpas ut; anger även det övre (högre) blodtrycksvärdet. (adj., pl. -a) Eng: systolic. Av gr. systole = sammandragning. Jfr Diastolisk."
   },
   {
     "term": "Taenia",
