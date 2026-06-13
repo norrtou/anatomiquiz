@@ -54,6 +54,10 @@ Följ denna struktur när du lägger till nya frågor:
 - `difficulty` – "Easy", "Normal" eller "Hard"
 - `source` – Källa eller lärobok
 
+## 📖 Medicinsk ordlista
+
+Sajten har en medicinsk ordlista (`medicinskordlista.html`) som byggs ut till att täcka all medicinsk terminologi på svenska. Syfte, datamodell och arbetsgång (inkl. hur poster berikas bokstav för bokstav) beskrivs i **[ORDLISTA.md](ORDLISTA.md)**.
+
 ## 🛠️ Utveckling
 
 För att bidra eller utveckla vidare:

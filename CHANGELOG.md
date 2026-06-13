@@ -1,5 +1,16 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.0
+- **Stor utbyggnad av den medicinska ordlistan** mot målet att täcka all medicinsk terminologi på svenska. En omfattande lista med medicinska termer (3 965 st) har importerats och de som saknades i `data/ordlista.json` lades in. Ordlistan berikas sedan bokstav för bokstav till fullt husformat (definition, ordklass, böjning, Sv/Eng/lekmannasvenska, etymologi).
+  - **Berikat och publicerat: A, B, C, D.** Synliga termer i ordlistan: 1 081 → **1 967**.
+  - **Stub-arkitektur:** ännu ej berikade poster ligger i `ordlista.json` med `"status": "stub"` (3 754 nya importerades; 2 859 kvarstår som stubs E–Ö). Stubbar **döljs live** — både `scripts/generate_glossary.py` och `js/glossary.js` (`loadTerms`) filtrerar bort `status === "stub"`, så ofärdiga poster aldrig syns eller indexeras. Den renderade `medicinskordlista.html` förblev byte-identisk fram tills första bokstaven berikades.
+  - **-ös-regel:** medicinska -ös-adjektiv (adenomatös, cancerös …) ges ingen egen post utan integreras i grundordet med "även …" (löser även slug-kollisioner då ö foldas till o).
+  - **c/k-stavningsdubbletter:** grekisk-härledda ord (Catarakt/Katarakt, Cardio-/Kardio-, Cholecystit/Kolecystit …) berikas under c-formen med not "även k-form"; k-dubbletterna tas bort när K m.fl. berikas.
+  - **Faktagranskning:** rättat flera fel i den importerade källtexten, bl.a. bakteriostatisk (tillväxthämmande, ej dödande), brachycefali (kort/brett huvud, ej litet), cervixprolaps (livmoderhalsframfall, ej diskbråck), dopaminagonist (stimulerar receptorn), BMD (bone mineral density), bäcken (pelvis); samt rättade stavfel och markerade föråldrade/icke-medicinska termer.
+- **Ny dokumentation:** `ORDLISTA.md` (syfte, datamodell, arbetsgång, c/k- och -ös-regler) + länk i `README.md`. `data/ordlista_import_raw.json` sparad som råimport/backup (redigeras ej).
+- Cachebustrar bumpade för ändrade filer (app.js och glossary.js → 0.8.0); CSS oförändrad. APP_VERSION/VERSION → 0.8.0.
+- Highscore-datan i localStorage är orörd.
+
 ## 0.7.1
 - **PageSpeed Insights-åtgärder (Tillgänglighet + Best practices)**, utan synlig designändring:
   - **Kontrast (WCAG AA, 4,5:1):** all grön TEXT på ljus bakgrund mörkad till `--primary-deep` #047857 (5,5:1 mot vitt). Tidigare användes `--primary` #10b981 (2,2:1) och `--primary-dark` #059669 (3,8:1) — båda underkända. Gäller bl.a. sekundärknapparnas text (Info/Topplista/Inställningar m.fl.), länkar i Om-texten (`.intro a`), versionsnumret i sidhuvudet, brödsmulelänkar, badges, topplistans procent, flashcardens "SVAR"-etikett/svarstext, case-taggar och fotnotskod. Hover-tillstånd för länkar → `--primary-deepest` #065f46. Kantlinjer/accent-färger (icke-text) orörda, så utseendet är nästan identiskt.

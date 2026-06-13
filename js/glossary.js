@@ -18,7 +18,12 @@ const DATA_URL = './data/ordlista.json'
 async function loadTerms() {
   const res = await fetch(DATA_URL)
   if (!res.ok) throw new Error(`HTTP ${res.status}`)
-  return res.json()
+  const data = await res.json()
+  // Stubs (status === 'stub') är ofärdiga poster som samlats i ordlista.json
+  // men ännu inte berikats — de ska inte visas live. Filtreras bort här så att
+  // både rendering och sökning matchar den statiska förrenderingen i
+  // scripts/generate_glossary.py (som hoppar över samma poster).
+  return data.filter(e => e.status !== 'stub')
 }
 
 // ============================================================================

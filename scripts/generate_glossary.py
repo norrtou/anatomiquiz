@@ -145,6 +145,11 @@ def set_meta(text: str, attr: str, name: str, value: str) -> str:
 
 def main() -> None:
     terms = json.loads(DATA.read_text(encoding="utf-8"))
+    # Stubs (status == "stub") är ofärdiga poster som samlats i ordlista.json
+    # men ännu inte berikats — de ska INTE renderas live. Filtrera bort dem
+    # före allt annat (count, HTML, JSON-LD, slug-kollisionskoll) så att
+    # ofärdig data aldrig syns och stub-slugs aldrig kan blockera bygget.
+    terms = [e for e in terms if e.get("status") != "stub"]
     count = len(terms)
 
     # Kontrollera unika slugs — annars blir djuplänkar tvetydiga
