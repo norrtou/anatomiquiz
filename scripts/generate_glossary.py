@@ -228,14 +228,14 @@ def main() -> None:
     social_title = f"Medicinsk ordlista — {count} latinska och anatomiska termer"
     img_alt = f"Medicinsk ordlista — {count} latinska och anatomiska termer på Anatomiquiz"
     desc = (
-        f"Komplett medicinsk ordlista med {count} latinska och anatomiska termer på "
-        "svenska. Varje term har definition, ordklass, svenska och engelska synonymer, "
-        "lekmannauttryck samt etymologi. Passar studenter inom medicin, arbetsterapi, "
-        "fysioterapi och omvårdnad."
+        "Sökbar medicinsk ordlista på svenska med latinska och medicinska anatomiska, "
+        "fysiologiska, patologiska, biologiska och tekniska termer. Varje term har "
+        "definition, ordklass, svenska och engelska synonymer, lekmannauttryck samt "
+        "etymologi. Passar studenter inom medicin, arbetsterapi, fysioterapi och omvårdnad."
     )
     social_desc = (
-        f"Komplett medicinsk ordlista på svenska med {count} termer: definitioner, "
-        "synonymer, lekmannauttryck och etymologi. Gratis för medicinstudenter."
+        "Sökbar medicinsk ordlista på svenska: definitioner, synonymer, lekmannauttryck "
+        "och etymologi för latinska och medicinska termer. Gratis för medicinstudenter."
     )
 
     page = set_meta(page, "name", "description", desc)

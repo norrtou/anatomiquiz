@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.9
+- **Medicinska ordlistan: ny ingress och meta-beskrivningar.** Tagline-stycket under rubriken omskrivet till "Medicinska ord, förkortningar och begrepp med definitioner, synonymer och etymologi i en sökbar ordlista. Sök bland tusentals latinska och medicinska anatomiska, fysiologiska, patologiska, biologiska och tekniska termer."
+  - `meta name="description"`, `og:description` och `twitter:description` omskrivna i samma anda och **utan termantal** (genereras av `scripts/generate_glossary.py`, rad ~230). `<title>` och sociala titlar behåller antalet tillsvidare.
+- APP_VERSION/VERSION → 0.8.9 (cachebusters: glossary.css → 0.8.9, glossary.js → 0.8.9, app.js → 0.8.9). Ordliste- och highscore-data orörd.
+
 ## 0.8.8
 - **Medicinska ordlistan: bokstaven M berikad** till fullt husformat. Synliga termer: 3 098 → **3 202** (104 M-poster berikade, 0 stubbar kvar).
   - **Sammanslagningar (5 stubbar borttagna):** c/k-dubbletten Makula → täcks av redan publicerade Macula (även-stavning); Megacolon → Megakolon; Menarche → Menarke (försvenskad form); Mesenterial → Mesenteriell (stavningsvariant); Medianvärde → Median (synonym).
