@@ -227,11 +227,10 @@ def main() -> None:
 
     social_title = f"Medicinsk ordlista — {count} latinska och anatomiska termer"
     img_alt = f"Medicinsk ordlista — {count} latinska och anatomiska termer på Anatomiquiz"
+    # Bing kräver 145–159 tecken; håll längden konstant (ingen {count}) så den inte driver.
     desc = (
-        "Sökbar medicinsk ordlista på svenska med latinska och medicinska anatomiska, "
-        "fysiologiska, patologiska, biologiska och tekniska termer. Varje term har "
-        "definition, ordklass, svenska och engelska synonymer, lekmannauttryck samt "
-        "etymologi. Passar studenter inom medicin, arbetsterapi, fysioterapi och omvårdnad."
+        "Sökbar medicinsk ordlista på svenska med tusentals latinska och anatomiska "
+        "termer: definition, ordklass, synonymer, lekmannauttryck och etymologi."
     )
     social_desc = (
         "Sökbar medicinsk ordlista på svenska: definitioner, synonymer, lekmannauttryck "

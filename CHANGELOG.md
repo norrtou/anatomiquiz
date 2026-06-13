@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.16
+- **SEO:** Meta-descriptionen för medicinska ordlistan kortad till 146 tecken (Bing kräver 145–159; tidigare ~310). Texten är nu count-oberoende ("tusentals" i st.f. hårdkodat antal) så längden inte driver iväg när termantalet växer. Källan satt i `scripts/generate_glossary.py`; `medicinskordlista.html` omgenererad (body byte-identisk). og:/twitter:description orörda.
+- APP_VERSION/VERSION → 0.8.16 (cachebuster: app.js → 0.8.16).
+
 ## 0.8.15
 - **Medicinska ordlistan: bokstaven S berikad** till fullt husformat. Synliga termer: 4 051 → **4 321** (273 S-poster berikade, 0 stubbar kvar).
   - **Sammanslagningar/borttagningar (7 stubbar):** c/k-dubbletterna Sakrum → Sacrum och Sklera → Sclera (täcks redan av publicerade poster); Sequela → slagen ihop med Sekvele (lat./sv. synonym); -ös-former integrerade i grundordet enligt husregel: Soporös → Sopor, Stridorös → Stridor, Submukös → Submukosa, Seborroiskt → Seborré.
