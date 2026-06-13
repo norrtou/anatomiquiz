@@ -2939,7 +2939,7 @@
   },
   {
     "term": "Carpus",
-    "def": "Handrot; de åtta handrotsbenen och deras region. (subst.) Sv: handrot. Eng: carpus, wrist. Lekman: handleden (vardaglig). Av grek. karpos = handled, möjligen besläktat med karpos = frukt (skörda)."
+    "def": "Handrot; de åtta handrotsbenen och deras region. (subst.) Sv: handrot, karpus. Eng: carpus, wrist. Lekman: handleden (vardaglig). Av grek. karpos = handled, möjligen besläktat med karpos = frukt (skörda)."
   },
   {
     "term": "Cartilagineus",
@@ -3223,7 +3223,7 @@
   },
   {
     "term": "Choledochus",
-    "def": "Gemensamma gallgången; ductus choledochus leder galla till duodenum. (subst.) Sv: gemensamma gallgången. Eng: common bile duct. Lekman: gallgången. Av grek. chole (galla) + dechesthai = mottaga."
+    "def": "Gemensamma gallgången; ductus choledochus leder galla till duodenum. (subst.) Sv: gemensamma gallgången, koledokus. Eng: common bile duct. Lekman: gallgången. Av grek. chole (galla) + dechesthai = mottaga."
   },
   {
     "term": "Cholelithiasis",
@@ -3415,11 +3415,11 @@
   },
   {
     "term": "Coccygodyni",
-    "def": "Smärta i svanskotan (os coccygis). (subst., -n) Sv: svanskotssmärta. Eng: coccygodynia. Av gr. kokkyx = gök/svanskota + odyne = smärta."
+    "def": "Smärta i svanskotan (os coccygis). (subst., -n) Sv: svanskotssmärta, koccygodyni. Eng: coccygodynia. Av gr. kokkyx = gök/svanskota + odyne = smärta."
   },
   {
     "term": "Coccyx",
-    "def": "Svanskota; de 3–5 sammanvuxna svanskotorna, formen liknar en göknäbb. (subst.) Sv: svanskota, coccyx. Eng: coccyx, tailbone. Lekman: svanskotan. Av grek. kokkyx = gök; formen liknar en göknäbb."
+    "def": "Svanskota; de 3–5 sammanvuxna svanskotorna, formen liknar en göknäbb. (subst.) Sv: svanskota, coccyx, koccyx. Eng: coccyx, tailbone. Lekman: svanskotan. Av grek. kokkyx = gök; formen liknar en göknäbb."
   },
   {
     "term": "Cochlea",
@@ -3439,7 +3439,7 @@
   },
   {
     "term": "Coitus",
-    "def": "Samlag. (subst., lat.) Sv: samlag. Eng: coitus. Av lat. coire = komma samman."
+    "def": "Samlag. (subst., lat.) Sv: samlag, koitus. Eng: coitus. Av lat. coire = komma samman."
   },
   {
     "term": "Colicus",
@@ -3635,7 +3635,7 @@
   },
   {
     "term": "Cornea",
-    "def": "Hornhinna; ögats genomskinliga främre del. (subst.) Sv: hornhinna. Eng: cornea. Lekman: hornhinnan. Av lat. corneus (hornaktig) + -ea; cornea tunica = hornaktig hinna."
+    "def": "Hornhinna; ögats genomskinliga främre del. (subst.) Sv: hornhinna, kornea. Eng: cornea. Lekman: hornhinnan. Av lat. corneus (hornaktig) + -ea; cornea tunica = hornaktig hinna."
   },
   {
     "term": "Cornealis",
@@ -8887,33 +8887,19 @@
   },
   {
     "term": "JIA",
-    "def": "juvenil idiopatisk artrit, barnreumatism",
-    "status": "stub"
+    "def": "Juvenil idiopatisk artrit; samlingsnamn för kroniska ledinflammationer som debuterar före 16 års ålder utan känd orsak (barnreumatism). (förkortn.) Sv: barnreumatism. Eng: juvenile idiopathic arthritis. Av lat. juvenilis = ungdomlig + gr. idios = egen, säregen + arthritis = ledinflammation. Se JRA, Juvenil."
   },
   {
     "term": "Jonisera",
-    "def": "när en eller flera elektroner i en atom tas bort/läggs till så att atomen får en positiv/negativ laddning, det vill säga blir en jon",
-    "status": "stub",
-    "variants": [
-      "joniserar",
-      "joniserat",
-      "joniserade"
-    ]
+    "def": "Tillföra eller avlägsna en eller flera elektroner från en atom eller molekyl så att den får en elektrisk laddning och blir en jon. (verb, joniserar, joniserade, joniserat) Eng: ionize. Lekman: ge en atom elektrisk laddning. Av gr. ion = den som går, vandrar (joner vandrar mot elektroder)."
   },
   {
     "term": "Jonisering",
-    "def": "när en eller flera elektroner i en atom tas bort/läggs till så att atomen får en positiv/negativ laddning, det vill säga blir en jon",
-    "status": "stub",
-    "variants": [
-      "joniseringen",
-      "joniseringarna",
-      "joniseringar"
-    ]
+    "def": "Processen då en atom eller molekyl tillförs eller förlorar elektroner och därmed får en elektrisk laddning (blir en jon); t.ex. det som joniserande strålning orsakar i vävnad. (subst.) Sv: jonisation. Eng: ionization. Lekman: när en atom får elektrisk laddning. Av gr. ion = den som går, vandrar."
   },
   {
     "term": "JRA",
-    "def": "juvenil reumatoid artrit, synonymt med JIA, barnreumatism",
-    "status": "stub"
+    "def": "Juvenil reumatoid artrit; äldre benämning på barnreumatism, i nyare terminologi vanligen ersatt av JIA. (förkortn.) Sv: barnreumatism. Eng: juvenile rheumatoid arthritis. Se JIA."
   },
   {
     "term": "Jugularis",
@@ -8925,119 +8911,59 @@
   },
   {
     "term": "Juvenil",
-    "def": "ungdomlig",
-    "status": "stub",
-    "variants": [
-      "juvenila",
-      "juvenilt"
-    ]
+    "def": "Ungdomlig; som rör eller uppträder hos barn och ungdom, ofta om sjukdomsformer som debuterar tidigt i livet (t.ex. juvenil diabetes, juvenil idiopatisk artrit). (adj., juvenilt, juvenila) Sv: ungdomlig. Eng: juvenile. Av lat. juvenilis = ungdomlig, av juvenis = ung."
   },
   {
     "term": "Kakektisk",
-    "def": "avmagrad, kraftlös",
-    "status": "stub",
-    "variants": [
-      "kakektiska"
-    ]
+    "def": "Avmagrad och kraftlös till följd av kakexi. (adj., -t, -a) Sv: utmärglad. Eng: cachectic. Av gr. kakos = dålig + hexis = tillstånd. Se Kakexi."
   },
   {
     "term": "Kakexi",
-    "def": "från grekiskans kakos (dåligt) + hexis (tillstånd). Tillstånd med höggradig avmagring, utmärgling och dåligt allmäntillstånd. Ses vid vissa svåra sjukdomar som till exempel långt framskriden cancer, aids, tuberkulos",
-    "status": "stub",
-    "variants": [
-      "kakexin"
-    ]
+    "def": "Höggradig avmagring och utmärgling med dåligt allmäntillstånd; ses vid svår sjukdom som långt framskriden cancer, aids och tuberkulos. (subst., -n) Sv: utmärgling, avmagring. Eng: cachexia. Lekman: sjuklig avmagring. Av gr. kakos = dålig + hexis = tillstånd."
   },
   {
     "term": "Käkläsa",
-    "def": "Svårighet att gapa på grund av kramp i tuggmuskulaturen",
-    "status": "stub"
+    "def": "Svårighet att gapa på grund av kramp i tuggmusklerna. (subst., -n) Sv: trismus. Eng: trismus, lockjaw. Lekman: käkarna går inte att öppna. Av käke + läsa (= låsa)."
   },
   {
     "term": "Kalcifikation",
-    "def": "förkalkning",
-    "status": "stub",
-    "variants": [
-      "kalcifikationen",
-      "kalcifikationerna",
-      "kalcifikationer"
-    ]
+    "def": "Förkalkning; inlagring av kalksalter (kalcium) i en vävnad. (subst., -en, pl. -er) Sv: förkalkning. Eng: calcification. Lekman: förkalkning i vävnad. Av lat. calx = kalk + facere = göra."
   },
   {
     "term": "Kalcinos",
-    "def": "sjuklig inlagring av kalk i en vävnad eller ett organ",
-    "status": "stub",
-    "variants": [
-      "kalcinosen",
-      "kalcinoserna",
-      "kalcinoser"
-    ]
+    "def": "Sjuklig inlagring av kalk i en vävnad eller ett organ. (subst., -en, pl. -er) Sv: kalkinlagring. Eng: calcinosis. Av lat. calx = kalk + gr. -osis = tillstånd."
   },
   {
     "term": "Kalcitonin",
-    "def": "hormon som bildas i sköldkörteln, har en viktig funktion för omsättningen av kalk i kroppen",
-    "status": "stub"
+    "def": "Hormon från sköldkörteln som sänker kalkhalten i blodet och bidrar till regleringen av kalkomsättningen. (subst., -et) Eng: calcitonin. Av lat. calx = kalk + thyreoidea + -in."
   },
   {
     "term": "Kalcium",
-    "def": "metall, kemiskt grundämne med viktig biologisk betydelse, en elektrolyt som bland annat kan uppmätas i blodet (kalk)",
-    "status": "stub",
-    "variants": [
-      "kalciumet"
-    ]
+    "def": "Grundämne och metall (Ca); en elektrolyt med central betydelse för skelett, muskelfunktion och blodlevring, mäts i blodet. (subst., -et) Sv: kalk. Eng: calcium. Lekman: kalk. Av lat. calx = kalk."
   },
   {
     "term": "Kalciuri",
-    "def": "kalk i urinen",
-    "status": "stub",
-    "variants": [
-      "kalciurin"
-    ]
+    "def": "Förekomst av kalk (kalcium) i urinen. (subst., -n) Eng: calciuria. Av lat. calx = kalk + gr. ouron = urin."
   },
   {
     "term": "Kalium",
-    "def": "grundämne, metall, en elektrolyt som bland annat kan uppmätas i blodet",
-    "status": "stub"
-  },
-  {
-    "term": "Kalix",
-    "def": "njurkalk i den förgrenade delen av njurbäckenet",
-    "status": "stub"
+    "def": "Grundämne och metall (K); en elektrolyt med central betydelse för nerv- och muskelfunktion, mäts i blodet. (subst., -et) Eng: potassium. Av nylat. kalium, av arab. al-qaly = aska, pottaska."
   },
   {
     "term": "Kallositet",
-    "def": "hudvalk, hård och tjock hud på fotsulan eller i handen",
-    "status": "stub",
-    "variants": [
-      "kallositeten",
-      "kallositeterna",
-      "kallositeter"
-    ]
-  },
-  {
-    "term": "Kallus",
-    "def": "under läkningen nybildad benvävnad i och kring en fraktur",
-    "status": "stub"
+    "def": "Hudvalk; förtjockad och hård hud till följd av tryck, t.ex. på fotsula eller i handflatan. (subst., -en, pl. -er) Sv: hudvalk, valk. Eng: callosity. Lekman: förhårdnad hud. Av lat. callosus = hård, av callus = svål."
   },
   {
     "term": "Kammartakykardi",
-    "def": "Allvarlig störning av hjärtrytmen som kan övergå i kammarflimmer, vilket kan leda till döden",
-    "status": "stub"
+    "def": "Allvarlig, snabb hjärtrytmrubbning som uppstår i hjärtats kammare och kan övergå i livshotande kammarflimmer. (subst., -n, pl. -er) Sv: ventrikeltakykardi. Eng: ventricular tachycardia. Lekman: farligt snabb rytm från hjärtkamrarna. Av kammare + gr. tachys = snabb + kardia = hjärta."
   },
   {
     "term": "Kantotomi",
-    "def": "operationssnitt i ögonvrån för att utvidga ögonvinkeln eller ögonvrån, till exempel i akutsituationer med förhöjt tryck i ögat",
-    "status": "stub"
+    "def": "Operationssnitt i ögonvrån som vidgar ögonspringan, t.ex. akut för att avlasta ett förhöjt tryck i ögonhålan. (subst., -n, pl. -er) Eng: canthotomy. Av gr. kanthos = ögonvrå + tome = snitt."
   },
   {
     "term": "Kanyl",
-    "def": "ihåliga instrument som förs in i kroppen vid medicinsk behandling eller diagnostik",
-    "status": "stub",
-    "variants": [
-      "kanylen",
-      "kanylerna",
-      "kanyler"
-    ]
+    "def": "Ihåligt, rörformat instrument (ofta med nål) som förs in i kroppen för att tillföra eller tömma vätska. (subst., -en, pl. -er) Eng: cannula. Lekman: tunt rör eller nål som sätts in i kroppen. Av lat. cannula = litet rör, av canna = rör."
   },
   {
     "term": "Kapillär",
@@ -9045,1503 +8971,611 @@
   },
   {
     "term": "Kapsulit",
-    "def": "inflammation i ledkapsel",
-    "status": "stub",
-    "variants": [
-      "kapsuliten",
-      "kapsuliterna",
-      "kapsuliter"
-    ]
+    "def": "Inflammation i en ledkapsel. (subst., -en, pl. -er) Sv: ledkapselinflammation. Eng: capsulitis. Av lat. capsula = liten ask + -itis = inflammation."
   },
   {
     "term": "Kaputnekros",
-    "def": "nedbrytning och upplösning (förstöring) av ledhuvudet på lårbenet",
-    "status": "stub",
-    "variants": [
-      "kaputnekrosen",
-      "kaputnekroserna",
-      "kaputnekroser"
-    ]
+    "def": "Vävnadsdöd i ledhuvudet på lårbenet, oftast till följd av störd blodförsörjning. (subst., -en, pl. -er) Eng: caput necrosis. Av lat. caput = huvud + gr. nekrosis = vävnadsdöd."
   },
   {
     "term": "Karbamid",
-    "def": "urea, nedbrytningsprodukt från aminosyror, mängden i blodet är en indikator på njurfunktionen",
-    "status": "stub",
-    "variants": [
-      "karbamiden"
-    ]
+    "def": "Urea; kvävehaltig nedbrytningsprodukt från proteiner som utsöndras via njurarna, dess halt i blodet speglar njurfunktionen. (subst., -en) Sv: urea, urinämne. Eng: urea, carbamide. Av lat. carbo = kol + amid."
   },
   {
     "term": "Karboanhydrashämmare",
-    "def": "läkemedel som hämmar karboanhydras, ett enzym som främjar bildandet av karbonsyra från koldioxid och vatten",
-    "status": "stub"
+    "def": "Läkemedel som hämmar enzymet karboanhydras; används bl.a. vätskedrivande och för att sänka ögontrycket vid glaukom. (subst., -n, pl. -∅) Eng: carbonic anhydrase inhibitor. Av kol + anhydras + hämmare."
   },
   {
     "term": "Karbunkel",
-    "def": "böld, svullnad i huden, särskilt vid kvisslor (akne)",
-    "status": "stub",
-    "variants": [
-      "karbunkeln",
-      "karbunklarna",
-      "karbunkler"
-    ]
-  },
-  {
-    "term": "Karcinogen",
-    "def": "cancerframkallande",
-    "status": "stub",
-    "variants": [
-      "karcinogena",
-      "karcinogent"
-    ]
-  },
-  {
-    "term": "Karcinom",
-    "def": "cancer i epitelvävnaden (= hudlagret över hud och slemhinnor)",
-    "status": "stub",
-    "variants": [
-      "karcinomen",
-      "karcinomet"
-    ]
+    "def": "Djup hudinfektion där flera intilliggande hårsäcksbölder (furunklar) flyter samman till en stor varig knöl med flera öppningar. (subst., -n, pl. karbunklar) Eng: carbuncle. Lekman: stor, djup böld med flera öppningar. Av lat. carbunculus = liten glödande kol."
   },
   {
     "term": "Karcinomatos",
-    "def": "allmän spridning av en cancertumör",
-    "status": "stub",
-    "variants": [
-      "karcinomatosen",
-      "karcinomatoserna",
-      "karcinomatoser"
-    ]
-  },
-  {
-    "term": "Karcinomatös",
-    "def": "karcinom-/cancerangripen",
-    "status": "stub",
-    "variants": [
-      "karcinomatösa",
-      "karcinomatöst"
-    ]
-  },
-  {
-    "term": "Kardia",
-    "def": "benämning på det område där matstrupen mynnar i magsäcken",
-    "status": "stub"
+    "def": "Utbredd spridning av en cancersjukdom till många platser i kroppen, t.ex. i bukhinnan (peritoneal karcinomatos). (subst., -en, pl. -er) Eng: carcinomatosis. Även karcinomatös (adj.) = som beror på eller är angripen av utbredd cancerspridning. Av karcinom + -osis. Se Carcinom."
   },
   {
     "term": "Kardinalfel",
-    "def": "huvudfel, mycket stort fel",
-    "status": "stub",
-    "variants": [
-      "kardinalfelet",
-      "kardinalfelen"
-    ]
+    "def": "Huvudfel; det grundläggande, avgörande felet. (subst., -et, pl. -∅) Sv: huvudfel. Eng: cardinal error. Av lat. cardinalis = huvudsaklig."
   },
   {
     "term": "Kardinalsymtom",
-    "def": "det dominerande symtomet",
-    "status": "stub",
-    "variants": [
-      "kardinalsymtomen",
-      "kardinalsymtomet"
-    ]
+    "def": "Det mest framträdande och kännetecknande symtomet vid en sjukdom. (subst., -et, pl. -∅) Sv: huvudsymtom. Eng: cardinal symptom. Av lat. cardinalis = huvudsaklig (av cardo = dörrgångjärn)."
   },
   {
     "term": "Kardiodepression",
-    "def": "sänkt hjärtfrekvens och kraft i hjärtats sammandragningar",
-    "status": "stub"
+    "def": "Nedsatt pumpförmåga hos hjärtat med minskad slagkraft och/eller hjärtfrekvens, t.ex. som biverkan av vissa läkemedel. (subst., -en) Eng: cardiodepression. Av gr. kardia = hjärta + depression = nedsättning."
   },
   {
     "term": "Kardiogen",
-    "def": "som härrör från hjärtat",
-    "status": "stub",
-    "variants": [
-      "kardiogena",
-      "kardiogent"
-    ]
+    "def": "Som har sitt ursprung i hjärtat, t.ex. kardiogen chock (chock orsakad av sviktande hjärtpumpning). (adj., -t, -a) Eng: cardiogenic. Av gr. kardia = hjärta + -gen = ursprung."
   },
   {
     "term": "Kardiologi",
-    "def": "läran om hjärtat och dess sjukdomar",
-    "status": "stub",
-    "variants": [
-      "kardiologin"
-    ]
+    "def": "Läran om hjärtat och dess sjukdomar. (subst., -n) Eng: cardiology. Av gr. kardia = hjärta + -logi = lära. Se Kardiologisk."
   },
   {
     "term": "Kardiologisk",
-    "def": "hjärt-",
-    "status": "stub",
-    "variants": [
-      "kardiologiska"
-    ]
-  },
-  {
-    "term": "Kardiomegali",
-    "def": "förstorat hjärta",
-    "status": "stub",
-    "variants": [
-      "kardiomegalin",
-      "kardiomegalierna",
-      "kardiomegalier"
-    ]
-  },
-  {
-    "term": "Kardiomyopati",
-    "def": "sjukdom i hjärtmuskulaturen",
-    "status": "stub",
-    "variants": [
-      "kardiomyopatierna",
-      "kardiomyopatier",
-      "kardiomyopatin"
-    ]
+    "def": "Som rör kardiologi (hjärtsjukvården). (adj., -t, -a) Sv: hjärt-. Eng: cardiological. Se Kardiologi."
   },
   {
     "term": "Kardiopati",
-    "def": "hjärtsjukdom",
-    "status": "stub",
-    "variants": [
-      "kardiopatin",
-      "kardiopatierna",
-      "kardiopatier"
-    ]
+    "def": "Hjärtsjukdom (allmän benämning). (subst., -n, pl. -er) Sv: hjärtsjukdom. Eng: cardiopathy. Av gr. kardia = hjärta + pathos = lidande."
   },
   {
     "term": "Kardiopulmonell",
-    "def": "som avser både hjärta och lungor",
-    "status": "stub",
-    "variants": [
-      "kardiopulmonella",
-      "kardiopulmonellt"
-    ]
-  },
-  {
-    "term": "Kardioselektiv",
-    "def": "som verkar särskilt på hjärtat",
-    "status": "stub",
-    "variants": [
-      "kardioselektiva",
-      "kardioselektivt"
-    ]
+    "def": "Som avser både hjärta och lungor, t.ex. kardiopulmonell återupplivning (hjärt-lungräddning). (adj., -t, -a) Eng: cardiopulmonary. Av gr. kardia = hjärta + lat. pulmo = lunga."
   },
   {
     "term": "Kardiotokografi",
-    "def": "CTG, metod där fostrets hjärtfrekvens och livmoderns sammandragningar registreras med en speciell apparatur (kardiotokograf)",
-    "status": "stub",
-    "variants": [
-      "kardiotokografin",
-      "kardiotokografierna",
-      "kardiotokografier"
-    ]
-  },
-  {
-    "term": "Kardiotoxisk",
-    "def": "som är giftig för hjärtat",
-    "status": "stub",
-    "variants": [
-      "kardiotoxiska"
-    ]
-  },
-  {
-    "term": "Kardiovaskulär",
-    "def": "som avser både hjärta och blodkärl",
-    "status": "stub",
-    "variants": [
-      "kardiovaskulära",
-      "kardiovaskulärt"
-    ]
+    "def": "CTG; samtidig registrering av fostrets hjärtfrekvens och livmoderns sammandragningar under graviditet och förlossning. (subst., -n, pl. -er) Eng: cardiotocography (CTG). Av gr. kardia = hjärta + tokos = födsel + -grafi."
   },
   {
     "term": "Karies",
-    "def": "tandröta",
-    "status": "stub",
-    "variants": [
-      "caries"
-    ]
-  },
-  {
-    "term": "Kariös",
-    "def": "tänder angripna av tandröta",
-    "status": "stub",
-    "variants": [
-      "kariösa",
-      "kariöst"
-    ]
+    "def": "Tandröta; bakteriell nedbrytning av tändernas hårdvävnad som ger hål. (subst., -en) Sv: tandröta, hål i tänderna. Eng: caries, tooth decay. Även kariös (adj.) = angripen av karies, frätskadad av tandröta. Även stavat caries. Av lat. caries = röta."
   },
   {
     "term": "Karotisstenos",
-    "def": "förträngning i en halsartär, i de flesta fallen en följd av ateroskleros (åderförkalkning)",
-    "status": "stub",
-    "variants": [
-      "karotisstenosen",
-      "karotisstenoserna",
-      "karotisstenoser",
-      "carotisstenos",
-      "carotisstenosen",
-      "carotisstenoserna",
-      "carotisstenoser"
-    ]
+    "def": "Förträngning av halspulsådern (a. carotis), oftast på grund av åderförkalkning; ökar risken för stroke. (subst., -en, pl. -er) Eng: carotid stenosis. Även stavat carotisstenos. Av gr. karotis = halspulsåder + stenos = förträngning."
   },
   {
     "term": "Karpal",
-    "def": "handloven",
-    "status": "stub",
-    "variants": [
-      "karpala",
-      "karpalt"
-    ]
+    "def": "Som hör till handloven (handroten). (adj., -t, -a) Eng: carpal. Av gr. karpos = handlov. Se Karpaltunnelsyndrom, Carpus."
   },
   {
     "term": "Karpaltunnelsyndrom",
-    "def": "domningar i tumme, pek- och långfinger orsakad av klämd nerv (medianus) i handleden",
-    "status": "stub",
-    "variants": [
-      "karpaltunnelsyndromet"
-    ]
-  },
-  {
-    "term": "Karpus",
-    "def": "handloven, består av åtta ben i två rader",
-    "status": "stub"
+    "def": "Domningar och smärta i tumme, pek- och långfinger orsakade av att medianusnerven kläms i karpaltunneln vid handleden. (subst., -et, pl. -∅) Eng: carpal tunnel syndrome. Av karpal (handlov) + tunnel + syndrom."
   },
   {
     "term": "Karunkel",
-    "def": "rund, vårtliknande upphöjning, till exempel urinrörskarunkel (vårtliknande blåröd svullnad av slemhinnan i urinrörsmynningen hos kvinnor)",
-    "status": "stub",
-    "variants": [
-      "karunkeln",
-      "karunklarna",
-      "karunkler"
-    ]
+    "def": "Liten rund, vårtliknande köttutväxt på en slemhinna, t.ex. urinrörskarunkel vid urinrörsmynningen hos kvinnor. (subst., -n, pl. karunklar) Eng: caruncle. Av lat. caruncula = litet köttstycke."
   },
   {
     "term": "Karyotyp",
-    "def": "genetisk term för kromosomuppsättning, typ av ärftlighetsmönster, till exempel 45,X (Turners syndrom)",
-    "status": "stub",
-    "variants": [
-      "karyotypen",
-      "karyotyperna",
-      "karyotyper"
-    ]
+    "def": "En individs (eller cells) fullständiga kromosomuppsättning beskriven till antal och utseende; t.ex. 45,X vid Turners syndrom. (subst., -en, pl. -er) Eng: karyotype. Av gr. karyon = kärna + typos = avbild."
   },
   {
     "term": "Kasuistik",
-    "def": "fallbeskrivning, publikation innehållande en noggrann skildring av ett fall, till exempel en patient med en speciell sjukdom.",
-    "status": "stub",
-    "variants": [
-      "kasuistiken",
-      "kasuistikerna",
-      "kasuistiker"
-    ]
+    "def": "Fallbeskrivning; noggrann skildring av ett enskilt sjukdomsfall, t.ex. en patient med en ovanlig sjukdom. (subst., -en, pl. -er) Eng: case report, casuistry. Av lat. casus = fall."
   },
   {
     "term": "Kasus",
-    "def": "sjukdomsfall",
-    "status": "stub"
+    "def": "Sjukdomsfall; enskilt fall av en sjukdom. (subst.) Eng: case. Av lat. casus = fall, händelse."
   },
   {
     "term": "Katabolism",
-    "def": "bryta ned/nedbrytning av vävnad",
-    "status": "stub",
-    "variants": [
-      "katabolismen",
-      "katabolismerna",
-      "katabolismer"
-    ]
+    "def": "Nedbrytande ämnesomsättning; de processer där kroppen bryter ned större molekyler och vävnad till mindre och frigör energi. (subst., -en) Sv: nedbrytning. Eng: catabolism. Motsats: anabolism. Av gr. kataballein = kasta ner."
   },
   {
     "term": "Katalysera",
-    "def": "påskynda, få en (kemisk) process att gå snabbare",
-    "status": "stub",
-    "variants": [
-      "katalyserar",
-      "katalys",
-      "katalyserat",
-      "katalyserade"
-    ]
-  },
-  {
-    "term": "Katarakt",
-    "def": "grå starr i ögat",
-    "status": "stub"
+    "def": "Påskynda en kemisk reaktion utan att själv förbrukas, t.ex. så som ett enzym gör. (verb, -ar, -ade, -at) Eng: catalyse. Lekman: snabba på en kemisk process. Även katalys (subst.) = själva påskyndandet av reaktionen. Av gr. katalysis = upplösning."
   },
   {
     "term": "Katarr",
-    "def": "benämning på en slemhinneinflammation som karakteriseras av ökad aktivitet av slemhinnans körtelceller med bildning av ett rikligt, ofta tunnflytande, ibland mera slemmigt sekret",
-    "status": "stub",
-    "variants": [
-      "katarren",
-      "katarrerna",
-      "katarrer"
-    ]
+    "def": "Slemhinneinflammation med ökad slemproduktion och rikligt, ofta tunnflytande sekret (t.ex. snuva vid förkylning). (subst., -en, pl. -er) Eng: catarrh. Lekman: slemhinneinflammation med rinnande sekret. Av gr. katarrhein = flyta ner."
   },
   {
     "term": "Katarral",
-    "def": "som hör till katarr, katarral infektion = infektion i förening med slemavsöndring såsom snuva",
-    "status": "stub"
+    "def": "Som hör till eller kännetecknas av katarr; med riklig slemavsöndring (t.ex. katarral infektion med snuva). (adj., -t, -a) Eng: catarrhal. Se Katarr."
   },
   {
     "term": "Kataton",
-    "def": "mekanisk oro, ofta med upprepade rörelser eller gester, förekommer i synnerhet vid schizofreni",
-    "status": "stub",
-    "variants": [
-      "katatona"
-    ]
+    "def": "Som uppvisar katatoni; tillstånd med påverkad rörelseförmåga – t.ex. orörlighet och stelhet eller upprepade stereotypa rörelser – som bl.a. kan ses vid schizofreni. (adj., -t, -a) Eng: catatonic. Av gr. kata- + tonos = spänning."
   },
   {
     "term": "Katekolamin",
-    "def": "benämning på adrenalin, noradrenalin och dopamin, vilka är neurotransmittorer såväl i det centrala som i det autonoma (sympatiska) nervsystemet, produceras i binjuremärgen. Dessa hormoner spelar en viktig roll i kontrollen av hur snabbt ditt hjärta slår, blodtrycket och kroppens reaktion på stress och akuta påfrestningar. Signaler från hjärnan stimulerar binjurarna till att producera dessa hormoner.",
-    "status": "stub",
-    "variants": [
-      "katekolaminerna",
-      "katekolaminer",
-      "katekolaminet"
-    ]
+    "def": "Grupp signalämnen och hormoner (adrenalin, noradrenalin, dopamin) som bildas bl.a. i binjuremärgen och styr hjärtfrekvens, blodtryck och kroppens stressreaktion. (subst., -et, pl. -er) Eng: catecholamine. Av katekol (kemisk struktur) + amin."
   },
   {
     "term": "Kateter",
-    "def": "rörformat, styvt eller böjligt instrument av exempelvis metall, glas, gummi, plast som genom antingen normala eller kirurgiskt anlagda kroppsöppningar kan föras in i eller genom kanalformade kroppsdelar",
-    "status": "stub",
-    "variants": [
-      "katetern",
-      "katetrar",
-      "katetrarna"
-    ]
+    "def": "Rörformat, styvt eller böjligt instrument som förs in i en kroppshålighet eller kanal för att tömma, tillföra eller mäta (t.ex. urinkateter). (subst., -n, pl. katetrar) Eng: catheter. Lekman: tunt rör som förs in i kroppen. Av gr. katheter, av kathienai = sända ner."
   },
   {
     "term": "Kateterisera",
-    "def": "införa/införande av kateter (rör)",
-    "status": "stub",
-    "variants": [
-      "kateteriserar",
-      "kateterisering",
-      "kateteriserat",
-      "kateteriserade"
-    ]
+    "def": "Föra in en kateter (rör) i en kroppshålighet, t.ex. i urinblåsan. (verb, -ar, -ade, -at) Eng: catheterise. Även kateterisering (subst.) = själva införandet. Se Kateter."
   },
   {
     "term": "Kattklössjuka",
-    "def": "infektionssjukdom med den gramnegativa mikroorganismen Bartonella henselae, som överförs vid bett eller klösskador av katt. Huvudsymtomen är feber och lymfkörtelsvullnad, ofta också hudförändringar, ibland med varbildning, på platsen för rivningen eller bettet.",
-    "status": "stub",
-    "variants": [
-      "cat-scratch-disease"
-    ]
+    "def": "Infektion orsakad av bakterien Bartonella henselae, överförd via katts bett eller rivsår; ger feber och lymfkörtelsvullnad, ibland varbildning vid skadan. (subst., -n) Eng: cat-scratch disease. Av katt + klös + sjuka."
   },
   {
     "term": "Kaudal",
-    "def": "nedåtriktad",
-    "status": "stub",
-    "variants": [
-      "kaudala",
-      "kaudalt"
-    ]
+    "def": "Som är riktad mot eller belägen åt svansänden (nedåt på bålen). (adj., -t, -a) Sv: nedåtriktad. Eng: caudal. Motsats: kranial. Av lat. cauda = svans."
   },
   {
     "term": "Kausal",
-    "def": "orsakande",
-    "status": "stub",
-    "variants": [
-      "kausala",
-      "kausalt"
-    ]
+    "def": "Som gäller orsak och verkan; t.ex. kausal behandling = behandling riktad mot själva orsaken. (adj., -t, -a) Sv: orsaks-. Eng: causal. Av lat. causa = orsak."
   },
   {
     "term": "Kaustisk",
-    "def": "frätande medel (basiskt)",
-    "status": "stub",
-    "variants": [
-      "kaustiska"
-    ]
+    "def": "Frätande; om (oftast basiskt) ämne som skadar vävnad vid kontakt. (adj., -t, -a) Sv: frätande. Eng: caustic. Av gr. kaustikos = brännande."
   },
   {
     "term": "Kauter",
-    "def": "kirurgiskt instrument för att via glödgad nålspets avlägsna oönskad vävnad",
-    "status": "stub",
-    "variants": [
-      "kautern",
-      "kautrar",
-      "kautrarna"
-    ]
+    "def": "Kirurgiskt instrument som med upphettad eller elektrisk spets bränner bort vävnad eller stillar blödning. (subst., -n, pl. kautrar) Eng: cautery. Se Kauterisera. Av gr. kauter = brännjärn."
   },
   {
     "term": "Kauterisera",
-    "def": "Upphettning av vävnad för blodstillning eller förstöring av vävnaden, till exempel vid tumörbehandling. Termen används också som benämning på lokalbehandling med kemiska medel, till exempel lapis eller fenol, eller frysning med kolsyreis, vilket ger liknande förstöring av vävnaden.",
-    "status": "stub",
-    "variants": [
-      "kauteriserar",
-      "kauterisering",
-      "kauteriserat",
-      "kauterisation"
-    ]
+    "def": "Bränna vävnad (med värme, ström eller frätande/kylande medel) för att stilla blödning eller förstöra oönskad vävnad. (verb, -ar, -ade, -at) Eng: cauterise. Även kauterisering/kauterisation (subst.) = själva ingreppet. Av gr. kauterion = brännjärn."
   },
   {
     "term": "Kavern",
-    "def": "hålrum på grund av en sjukdom, exempelvis vid tuberkulos uppkommen håla genom nedbrytning av vävnad i lungor",
-    "status": "stub",
-    "variants": [
-      "kavernen",
-      "kavernerna",
-      "kaverner"
-    ]
-  },
-  {
-    "term": "Kavernös",
-    "def": "med hålrum",
-    "status": "stub",
-    "variants": [
-      "kavernösa",
-      "kavernöst"
-    ]
+    "def": "Patologiskt hålrum i ett organ, t.ex. i lungan efter vävnadssönderfall vid tuberkulos. (subst., -en, pl. -er) Sv: hålrum. Eng: cavern, cavity. Även kavernös (adj.) = som innehåller eller bildar hålrum, t.ex. kavernöst hemangiom (blodkärlstumör med stora blodfyllda hålrum). Av lat. caverna = håla."
   },
   {
     "term": "Kavitet",
-    "def": "fördjupning, hålrum",
-    "status": "stub",
-    "variants": [
-      "kaviteten",
-      "kaviteterna",
-      "kaviteter"
-    ]
+    "def": "Hålighet eller hålrum i kroppen, t.ex. bukhålan eller ett karieshål i en tand. (subst., -en, pl. -er) Sv: hålrum. Eng: cavity. Av lat. cavitas, av cavus = ihålig."
   },
   {
     "term": "Kawasakis syndrom",
-    "def": "tillstånd som drabbar barn, främst i åldern 1–2 år, och som karakteriseras av en mer eller mindre generell inflammation av små eller medelstora blodkärl (vaskulit), typiska symtom är feber, utslag, irritation i ögats bindhinna (konjunktivit), sår på läpparna och svalginflammation samt svullnad av halslymfkörtlar",
-    "status": "stub"
+    "def": "Akut febersjukdom hos små barn (oftast 1–2 år) med utbredd inflammation i små och medelstora blodkärl (vaskulit); ger feber, hudutslag, ögoninflammation, spruckna läppar och svullna halslymfkörtlar och kan skada hjärtats kranskärl. (egennamn) Eng: Kawasaki disease. Efter den japanske barnläkaren Tomisaku Kawasaki."
   },
   {
     "term": "KBT",
-    "def": "kognitiv beteendeterapi",
-    "status": "stub"
+    "def": "Kognitiv beteendeterapi; psykoterapiform inriktad på att förändra ogynnsamma tankemönster och beteenden. (förkortn.) Eng: cognitive behavioural therapy (CBT)."
   },
   {
     "term": "Keilit",
-    "def": "läppinflammation",
-    "status": "stub",
-    "variants": [
-      "keiliten",
-      "keiliterna",
-      "keiliter"
-    ]
+    "def": "Inflammation i läpparna. (subst., -en, pl. -er) Sv: läppinflammation. Eng: cheilitis. Av gr. cheilos = läpp + -itis."
   },
   {
     "term": "Keilos",
-    "def": "sårbildning på läpparna, sårsprickor i mungipan",
-    "status": "stub",
-    "variants": [
-      "keilosen",
-      "keiloserna",
-      "keiloser"
-    ]
+    "def": "Sprickbildning och sår på läpparna och i mungiporna, ofta vid vitaminbrist. (subst., -en, pl. -er) Eng: cheilosis. Av gr. cheilos = läpp + -osis."
   },
   {
     "term": "Kelering",
-    "def": "ringformade föreningar som bildas mellan vissa organiska ämnen och metalljoner",
-    "status": "stub"
+    "def": "Kemisk inbindning av metalljoner i ringformade komplex; utnyttjas i läkemedel (kelatbildare) som binder och avlägsnar t.ex. överskott av järn eller tungmetaller. (subst., -en) Eng: chelation. Av gr. chele = klo."
   },
   {
     "term": "Keloid",
-    "def": "godartad nybildning av bindväv i överskott, vanligen i ärr, så att ärret är frambuktande, ärrsvulst",
-    "status": "stub",
-    "variants": [
-      "keloiderna",
-      "keloider"
-    ]
+    "def": "Godartad, frambuktande överväxt av ärrvävnad som breder ut sig utanför det ursprungliga såret. (subst., -en, pl. -er) Sv: ärrsvulst. Eng: keloid. Av gr. kele = svulst + -oid = liknande."
   },
   {
     "term": "Kemoprofylax",
-    "def": "förebyggande av sjukdom genom användning av läkemedel eller kemiskt ämne",
-    "status": "stub",
-    "variants": [
-      "kemoprofylaxen",
-      "kemoprofylaxerna",
-      "kemoprofylaxer"
-    ]
+    "def": "Förebyggande av sjukdom med läkemedel, t.ex. malariatabletter inför en resa. (subst., -en) Eng: chemoprophylaxis. Av kemo- (kemisk) + profylax = förebyggande."
   },
   {
     "term": "Kemoreceptor",
-    "def": "en receptor i den mänskliga kroppen som har förmåga att detektera förändringar i den kemiska miljön, därefter skickas signaler till centrala nervsystemet",
-    "status": "stub",
-    "variants": [
-      "kemoreceptorn",
-      "kemoreceptorerna",
-      "kemoreceptorer"
-    ]
+    "def": "Sinnescell som känner av kemiska förändringar (t.ex. syre- och koldioxidhalt eller pH) och skickar signaler till nervsystemet. (subst., -n, pl. -er) Eng: chemoreceptor. Av kemo- + receptor."
   },
   {
     "term": "Kemos",
-    "def": "kraftig svullnad i ögats bindhinna så att den omger hornhinnan som en vall",
-    "status": "stub"
+    "def": "Kraftig svullnad (ödem) i ögats bindhinna så att den buktar som en vall runt hornhinnan. (subst.) Eng: chemosis. Av gr. cheme = gapande mussla."
   },
   {
     "term": "Kemotaxis",
-    "def": "en mikroorganisms eller cells rörelse mot eller bort från en plats, orsakad av ett kemiskt ämne som vanligen utsöndras av en bakterie",
-    "status": "stub"
+    "def": "Riktad rörelse hos en cell eller mikroorganism mot eller bort från ett kemiskt ämne, t.ex. vita blodkroppar som lockas till en infektionshärd. (subst.) Eng: chemotaxis. Av kemo- + gr. taxis = riktning."
   },
   {
     "term": "Keratin",
-    "def": "hornämne, trådbildande, svårlösliga proteiner som finns i hudens hornlager, i hår och i naglar",
-    "status": "stub",
-    "variants": [
-      "keratinet"
-    ]
+    "def": "Hornämne; sega, svårlösliga trådproteiner som bygger upp hudens hornlager, hår och naglar. (subst., -et) Sv: hornämne. Eng: keratin. Av gr. keras = horn."
   },
   {
     "term": "Keratinisering",
-    "def": "förhorningsprocess, bildandet av hornämne i huden",
-    "status": "stub",
-    "variants": [
-      "keratiniseringen"
-    ]
+    "def": "Förhorning; processen då hudceller fylls med keratin och bildar hornlager. (subst., -en) Sv: förhorning. Eng: keratinisation. Se Keratin."
   },
   {
     "term": "Keratit",
-    "def": "inflammation i hornhinnan",
-    "status": "stub",
-    "variants": [
-      "keratiten",
-      "keratiterna",
-      "keratiter",
-      "keratitis"
-    ]
+    "def": "Inflammation i ögats hornhinna. (subst., -en, pl. -er) Sv: hornhinneinflammation. Eng: keratitis. Av gr. keras = horn + -itis."
   },
   {
     "term": "Keratokonjunktivit",
-    "def": "inflammation i hornhinnan och i den yttersta bindhinnan i ögat",
-    "status": "stub",
-    "variants": [
-      "keratokonjunktiviten",
-      "keratokonjunktiviterna",
-      "keratokonjunktiviter"
-    ]
+    "def": "Samtidig inflammation i ögats hornhinna och bindhinna. (subst., -en, pl. -er) Eng: keratoconjunctivitis. Av gr. keras = horn + konjunktiva + -itis."
   },
   {
     "term": "Keratokonus",
-    "def": "konformad förändring av hornhinnan, hornhinnan blir spetsigare, en ärftlig degenerativ ögonsjukdom som börjar i 20-årsåldern och som långsamt fortskrider",
-    "status": "stub"
+    "def": "Ärftlig, långsamt fortskridande ögonsjukdom där hornhinnan blir tunnare och buktar ut konformat så att synen försämras; debuterar oftast i 20-årsåldern. (subst.) Eng: keratoconus. Av gr. keras = horn + konos = kon."
   },
   {
     "term": "Keratolys",
-    "def": "avlossning av överhudens hornlager",
-    "status": "stub",
-    "variants": [
-      "keratolysen"
-    ]
+    "def": "Avlossning eller upplösning av hudens hornlager. (subst., -en) Eng: keratolysis. Av gr. keras = horn + lysis = upplösning."
   },
   {
     "term": "Keratolytikum",
-    "def": "läkemedel som pålägges eller smörjs in i huden och löser upp eller mjukar upp hornlagret",
-    "status": "stub",
-    "variants": [
-      "keratolytikumet"
-    ]
+    "def": "Läkemedel som löser upp eller mjukar upp hudens hornlager, t.ex. salicylsyra mot förhårdnader. (subst., -et, pl. keratolytika) Eng: keratolytic. Se Keratolys."
   },
   {
     "term": "Keratopati",
-    "def": "hornhinnesjukdom eller -skada som inte är inflammation",
-    "status": "stub"
+    "def": "Icke-inflammatorisk sjukdom eller skada på hornhinnan. (subst., -n, pl. -er) Eng: keratopathy. Av gr. keras = horn + pathos = lidande."
   },
   {
     "term": "Ketoacidos",
-    "def": "syraansamling i urin och blod på grund av ökad bildning av ketonkroppar, särskilt vid diabeteskoma",
-    "status": "stub",
-    "variants": [
-      "ketoacidosen",
-      "ketoacidoserna",
-      "ketoacidoser"
-    ]
+    "def": "Försurning av blodet (metabol acidos) orsakad av ökad bildning av sura ketonkroppar, t.ex. vid svår insulinbrist (diabetesketoacidos). (subst., -en, pl. -er) Eng: ketoacidosis. Av keton + acidos = försurning."
   },
   {
     "term": "Ketonuri",
-    "def": "ketonkroppar i urinen, ett uttryck för dåligt kontrollerad diabetes",
-    "status": "stub"
+    "def": "Förekomst av ketonkroppar i urinen; tecken på fettförbränning vid t.ex. svält eller dåligt reglerad diabetes. (subst., -n) Eng: ketonuria. Av keton + gr. ouron = urin."
   },
   {
     "term": "Kinetisk",
-    "def": "rörelse-",
-    "status": "stub",
-    "variants": [
-      "kinetiska"
-    ]
+    "def": "Som rör eller orsakas av rörelse. (adj., -t, -a) Sv: rörelse-. Eng: kinetic. Av gr. kinesis = rörelse."
   },
   {
     "term": "Klaudikation",
-    "def": "gångsmärta i benet på grund av nedsatt blodförsörjning",
-    "status": "stub"
+    "def": "Krampartad smärta i benets muskler vid gång på grund av otillräcklig blodförsörjning (claudicatio intermittens, fönstertittarsjuka). (subst., -en) Eng: claudication. Lekman: bensmärta vid gång (fönstertittarsjuka). Av lat. claudicare = halta."
   },
   {
     "term": "Klimakterium",
-    "def": "övergångsåldern",
-    "status": "stub",
-    "variants": [
-      "klimakteriet"
-    ]
+    "def": "Övergångsåldern; den period då äggstockarnas hormonproduktion avtar och menstruationerna upphör. (subst., -et) Sv: övergångsåldern. Eng: climacteric, menopause. Av gr. klimakter = steg på en stege (kritisk period)."
   },
   {
     "term": "Kliniker",
-    "def": "betecknar vanligen en läkare som arbetar med patienter, kan också användas som gemensam benämning på vårdpersonal som arbetar med patienter",
-    "status": "stub",
-    "variants": [
-      "klinikern",
-      "klinikerna"
-    ]
+    "def": "Läkare eller annan vårdpersonal som arbetar praktiskt med patienter, till skillnad från t.ex. en laboratorieforskare. (subst., -n, pl. -∅) Eng: clinician. Av gr. kline = säng (sjukbädd)."
   },
   {
     "term": "Klinisk",
-    "def": "patientinriktade",
-    "status": "stub",
-    "variants": [
-      "kliniska"
-    ]
+    "def": "Som rör den direkta undersökningen och vården av patienter vid sjukbädden, t.ex. kliniska fynd. (adj., -t, -a) Eng: clinical. Av gr. kline = säng."
   },
   {
     "term": "Klinisk signifikant",
-    "def": "Ett resultat från en studie som är viktigt för patienterna. Man skiljer mellan statistiskt och kliniskt signifikant (viktigt). Ett resultat kan vara statistiskt signifikant men ändå av ringa kliniskt intresse (är oviktigt sett ur patientens synvinkel).",
-    "status": "stub"
+    "def": "Forskningsbegrepp: resultat som har verklig betydelse för patienten, till skillnad från enbart statistisk signifikans (ett resultat kan vara statistiskt säkerställt men ändå sakna praktisk nytta). (uttr.) Eng: clinically significant. Jfr Konfidensintervall."
   },
   {
     "term": "KLL",
-    "def": "kronisk lymfatisk leukemi",
-    "status": "stub"
+    "def": "Kronisk lymfatisk leukemi; långsamt förlöpande blodcancer med ansamling av mogna men funktionsodugliga lymfocyter. (förkortn.) Eng: chronic lymphocytic leukaemia."
   },
   {
     "term": "Kloasma",
-    "def": "leverfläck",
-    "status": "stub"
+    "def": "Symmetriska brunaktiga pigmentfläckar i ansiktet, ofta utlösta av graviditet eller p-piller (graviditetsmask). (subst.) Sv: melasma. Eng: chloasma, melasma. Av gr. chloazein = bli grönaktig."
   },
   {
     "term": "Klonus",
-    "def": "snabba och livliga ryckningar i en muskelgrupp, kan uppstå vid utlösning av reflexer",
-    "status": "stub"
+    "def": "Ofrivilliga, snabbt upprepade muskelryckningar som utlöses när en muskel tänjs ut; tecken på skada i centrala motoriska banor. (subst., -en) Eng: clonus. Av gr. klonos = häftig rörelse."
   },
   {
     "term": "Klubbfingrar",
-    "def": "trumpinnefingrar",
-    "status": "stub"
+    "def": "Trumpinnefingrar; kolvformad uppdrivning av fingerändarna med ökad nagelvälvning, ses vid kroniska lung- och hjärtsjukdomar. (subst., plural) Sv: trumpinnefingrar. Eng: clubbing, digital clubbing. Lekman: kolvformade fingertoppar."
   },
   {
     "term": "Klusterrandomisering",
-    "def": "Ett studieupplägg där en grupp deltagare (patienter) fördelas (randomiseras) till samma behandling. Till exempel att alla på samma sjukhus, samma skola, samma landsbygdsort får samma behandling.",
-    "status": "stub"
+    "def": "Forskningsbegrepp: studieupplägg där hela grupper (t.ex. ett sjukhus eller en skola) – inte enskilda individer – lottas till samma behandling. (subst., -en) Eng: cluster randomisation."
   },
   {
     "term": "KML",
-    "def": "kronisk myeloid leukemi",
-    "status": "stub"
+    "def": "Kronisk myeloisk leukemi; blodcancer i den myeloiska cellinjen, kopplad till den så kallade Philadelphiakromosomen. (förkortn.) Eng: chronic myeloid leukaemia."
   },
   {
     "term": "Koagel",
-    "def": "blodlever, blodklump, blodkaka; den halvfasta massa som bildas vid blodets koagulation",
-    "status": "stub",
-    "variants": [
-      "koaglen",
-      "koagler",
-      "koaglet"
-    ]
+    "def": "Levrat blod; den halvfasta klump (blodkaka) som bildas när blod koagulerar. (subst., -et, pl. koagler) Sv: blodklump, blodlever. Eng: clot, coagulum. Lekman: blodklump. Av lat. coagulum = ystämne."
   },
   {
     "term": "Koagulas",
-    "def": "ett enzym i bland annat stafylokockbakterier vilket katalyserar protrombins övergång till trombin, och startar därmed koagulationen",
-    "status": "stub",
-    "variants": [
-      "koagulaset"
-    ]
+    "def": "Enzym (bl.a. hos stafylokocker) som utlöser koagulation genom att omvandla protrombin till trombin; används för att artbestämma bakterier. (subst., -et) Eng: coagulase. Se Koagulation."
   },
   {
     "term": "Koagulation",
-    "def": "blodlevring, en serie reaktioner som medför att blod omvandlas från vätska till en geléliknande massa",
-    "status": "stub",
-    "variants": [
-      "koagulationen",
-      "koagulationerna",
-      "koagulationer"
-    ]
+    "def": "Blodlevring; kedja av reaktioner som omvandlar flytande blod till en geléartad propp och stoppar blödning. (subst., -en, pl. -er) Sv: blodlevring. Eng: coagulation. Lekman: att blodet stelnar. Av lat. coagulare = få att stelna."
   },
   {
     "term": "Koagulationsfaktor",
-    "def": "när blodet levrar sig, koagulerar, sker det som ett resultat av att en rad faktorer (koagulationsfaktorer) utlöser en serie reaktioner som slutligen leder till blodlevring",
-    "status": "stub",
-    "variants": [
-      "koagulationsfaktorn",
-      "koagulationsfaktorerna",
-      "koagulationsfaktorer"
-    ]
+    "def": "Ett av de proteiner i blodet som i en kaskad samverkar för att åstadkomma blodlevring; brist (t.ex. på faktor VIII) ger blödarsjuka. (subst., -en, pl. -er) Eng: coagulation factor, clotting factor. Se Koagulation."
   },
   {
     "term": "Koagulationstid",
-    "def": "den tid det tar för ett visst blodprov att levra sig",
-    "status": "stub",
-    "variants": [
-      "koagulationstiden",
-      "koagulationstiderna",
-      "koagulationstider"
-    ]
+    "def": "Den tid det tar för ett blodprov att levra sig; mått på blodets levringsförmåga. (subst., -en, pl. -er) Eng: coagulation time, clotting time. Se Koagulation."
   },
   {
     "term": "Koagulera",
-    "def": "att blodet levrar sig",
-    "status": "stub",
-    "variants": [
-      "koagulerar",
-      "koagulering",
-      "koagulerat",
-      "koagulerade"
-    ]
+    "def": "Levra sig; om blod (eller annan vätska) som övergår från flytande till halvfast form. (verb, -ar, -ade, -at) Sv: levra sig. Eng: coagulate. Se Koagulation."
   },
   {
     "term": "Koagulopati",
-    "def": "rubbning i blodets förmåga att levra sig",
-    "status": "stub",
-    "variants": [
-      "koagulopatin",
-      "koagulopatierna",
-      "koagulopatier"
-    ]
+    "def": "Rubbning i blodets förmåga att levra sig – antingen ökad blödningsbenägenhet eller ökad benägenhet för blodproppar. (subst., -n, pl. -er) Eng: coagulopathy. Av koagulation + gr. pathos = lidande."
   },
   {
     "term": "Koarktation",
-    "def": "förträngning av blodkärl, medfödd",
-    "status": "stub",
-    "variants": [
-      "koarktationen"
-    ]
+    "def": "Medfödd, lokal förträngning av ett blodkärl. (subst., -en, pl. -er) Sv: förträngning. Eng: coarctation. Av lat. coarctare = tränga ihop. Se Koarktation av aorta."
   },
   {
     "term": "Koarktation av aorta",
-    "def": "medfödd förträngning av aorta, vanligen belägen strax under aortabågen",
-    "status": "stub"
+    "def": "Medfödd förträngning av stora kroppspulsådern (aorta), oftast strax efter aortabågen; ger högt blodtryck i överkroppen och svaga pulsar i benen. (subst.) Eng: coarctation of the aorta. Se Koarktation."
   },
   {
     "term": "Koccygektomi",
-    "def": "borttagning av svanskotan",
-    "status": "stub",
-    "variants": [
-      "koccygektomin",
-      "koccygektomierna",
-      "koccygektomier"
-    ]
-  },
-  {
-    "term": "Koccygodyni",
-    "def": "smärtor i svansbenet",
-    "status": "stub"
-  },
-  {
-    "term": "Koccyx",
-    "def": "svansbenet",
-    "status": "stub"
+    "def": "Operativt borttagande av svanskotan (svansbenet). (subst., -n, pl. -er) Eng: coccygectomy. Av gr. kokkyx = gök/svanskota + ektomi = bortskärande. Se Coccyx."
   },
   {
     "term": "Koebners fenomen",
-    "def": "manifestation av hudsjukdom där huden blivit skadad, exempelvis genom rivning. Ses bland annat vid lichen ruber planus och psoriasis",
-    "status": "stub",
-    "variants": [
-      "köbners fenomen",
-      "köbnerfenomen",
-      "köbner",
-      "köbnerreaktion"
-    ]
+    "def": "Uppkomst av en hudsjukdoms typiska utslag i hud som utsatts för skada (t.ex. rivmärken); ses bl.a. vid psoriasis och lichen ruber. (egennamn) Eng: Koebner phenomenon. Efter den tyske hudläkaren Heinrich Köbner (1838–1904)."
   },
   {
     "term": "Koenzym",
-    "def": "en särskild icke-proteinhaltig organisk förening",
-    "status": "stub",
-    "variants": [
-      "koenzymerna",
-      "koenzymer",
-      "koenzymet"
-    ]
+    "def": "Liten icke-proteinmolekyl (ofta vitaminbaserad) som ett enzym behöver för att fungera. (subst., -et, pl. -er) Eng: coenzyme. Av ko- (med-) + enzym."
   },
   {
     "term": "Kognitiv",
-    "def": "som avser kognition; de tankefunktioner med vilkas hjälp information och kunskap hanteras, till de kognitiva funktionerna räknas bland annat varseblivning, minne, begreppsbildning, resonerande, problemlösning och uppmärksamhet",
-    "status": "stub",
-    "variants": [
-      "kognitiva",
-      "kognitivt"
-    ]
+    "def": "Som rör kognition – de tankefunktioner med vilka vi varseblir, minns, resonerar, löser problem och riktar uppmärksamhet. (adj., -t, -a) Eng: cognitive. Av lat. cognoscere = lära känna."
   },
   {
     "term": "Koilonyki",
-    "def": "onormal form på finger- eller tånagel, vilken innebär att den normala konvexa nagelvälvningen i stället är konkav",
-    "status": "stub",
-    "variants": [
-      "koilonykin",
-      "koilonykierna",
-      "koilonykier"
-    ]
-  },
-  {
-    "term": "Koitus",
-    "def": "samlag",
-    "status": "stub"
+    "def": "Skednaglar; onormalt konkav (inåtbuktande) form på finger- eller tånaglar i stället för normalt välvd, ses bl.a. vid järnbrist. (subst., -n) Sv: skednaglar. Eng: koilonychia, spoon nails. Av gr. koilos = ihålig + onyx = nagel."
   },
   {
     "term": "Koklea",
-    "def": "bensnäckan, en del av innerörats benlabyrint",
-    "status": "stub"
+    "def": "Hörselsnäckan; den snäckformade delen av innerörats benlabyrint som omvandlar ljud till nervsignaler. (subst., -n) Sv: snäckan, hörselsnäckan. Eng: cochlea. Av lat./gr. cochlea = snäcka."
   },
   {
     "term": "KOL",
-    "def": "kroniskt obstruktiv lungsjukdom, permanent luftrörsinflammation (kronisk bronkit) förenad med ständiga andningssvårigheter och nedsatt lungfunktion",
-    "status": "stub",
-    "variants": [
-      "kol"
-    ]
+    "def": "Kroniskt obstruktiv lungsjukdom; bestående luftvägsobstruktion med kronisk bronkit och/eller emfysem, vanligen orsakad av rökning. (förkortn.) Eng: chronic obstructive pulmonary disease (COPD). Lekman: kronisk lungsjukdom med trånga luftrör, ofta av rökning."
   },
   {
     "term": "Kolangiografi",
-    "def": "röntgenundersökning av levern och gallvägarna",
-    "status": "stub",
-    "variants": [
-      "kolangiografin"
-    ]
+    "def": "Röntgenundersökning av gallvägarna (och levern) med kontrastmedel. (subst., -n, pl. -er) Eng: cholangiography. Av gr. chole = galla + angeion = kärl + -grafi."
   },
   {
     "term": "Kolangiom",
-    "def": "tumör i gallgången",
-    "status": "stub",
-    "variants": [
-      "kolangiomen",
-      "kolangiomet"
-    ]
+    "def": "Tumör utgången från gallgångarnas epitel. (subst., -et, pl. -∅) Eng: cholangioma. Av gr. chole = galla + angeion = kärl + -om = tumör."
   },
   {
     "term": "Kolangiopankreatikografi",
-    "def": "ERCP, endoskopisk retrograd kolangiopankreatikografi, röntgenundersökning av gallgång och utförselgång till bukspottkörteln efter att ett böjligt rör (endoskop) har förts ner till gallgångsöppningen i tolvfingertarmen och kontrastmedel sprutats in genom öppningen",
-    "status": "stub",
-    "variants": [
-      "kolangiopankreatikografin",
-      "kolangiopankreatikografierna",
-      "kolangiopankreatikografier"
-    ]
-  },
-  {
-    "term": "Kolangit",
-    "def": "gallvägsinflammation",
-    "status": "stub",
-    "variants": [
-      "kolangiten",
-      "kolangiterna",
-      "kolangiter"
-    ]
-  },
-  {
-    "term": "Kolecystektomera",
-    "def": "avlägsna gallblåsan",
-    "status": "stub",
-    "variants": [
-      "kolecystektomerar",
-      "kolecystektomering",
-      "kolecystektomerat",
-      "kolecystektomerade"
-    ]
+    "def": "ERCP; röntgenundersökning av gallgång och bukspottkörtelns utförsgång där ett endoskop förs ner till tolvfingertarmen och kontrastmedel sprutas in. (subst., -n, pl. -er) Eng: cholangiopancreatography (ERCP). Av gr. chole = galla + pankreas + -grafi."
   },
   {
     "term": "Kolecystektomi",
-    "def": "borttagning av gallblåsan",
-    "status": "stub",
-    "variants": [
-      "kolecystektomin",
-      "kolecystektomierna",
-      "kolecystektomier"
-    ]
-  },
-  {
-    "term": "Kolecystit",
-    "def": "gallblåseinflammation",
-    "status": "stub"
+    "def": "Operativt borttagande av gallblåsan. (subst., -n, pl. -er) Eng: cholecystectomy. Lekman: operation där gallblåsan tas bort. Även kolecystektomera (verb) = att operativt avlägsna gallblåsan. Av gr. chole = galla + kystis = blåsa + ektomi = bortskärande."
   },
   {
     "term": "Kolecystolitiasis",
-    "def": "sten i utloppet från gallblåsan",
-    "status": "stub"
-  },
-  {
-    "term": "Koledokolithiasis",
-    "def": "sten i gemensamma gallgången",
-    "status": "stub"
-  },
-  {
-    "term": "Koledokolitiasis",
-    "def": "sten i gemensamma gallgången",
-    "status": "stub"
-  },
-  {
-    "term": "Koledokus",
-    "def": "gallgången",
-    "status": "stub"
-  },
-  {
-    "term": "Kolektomera",
-    "def": "avlägsna tjocktarmen",
-    "status": "stub",
-    "variants": [
-      "kolektomerar",
-      "kolektomering",
-      "kolektomerat",
-      "kolektomerade"
-    ]
+    "def": "Gallsten belägen i själva gallblåsan eller dess utlopp. (subst.) Eng: cholecystolithiasis. Av gr. chole = galla + kystis = blåsa + lithos = sten. Jfr Kolelitiasis, Choledocholitiasis."
   },
   {
     "term": "Kolektomi",
-    "def": "borttagning av tjocktarmen",
-    "status": "stub",
-    "variants": [
-      "kolektomin",
-      "kolektomierna",
-      "kolektomier"
-    ]
+    "def": "Operativt borttagande av hela eller delar av tjocktarmen. (subst., -n, pl. -er) Eng: colectomy. Även kolektomera (verb) = att operativt avlägsna tjocktarmen. Av gr. kolon = tjocktarm + ektomi = bortskärande."
   },
   {
     "term": "Kolelitiasis",
-    "def": "gallsten",
-    "status": "stub"
-  },
-  {
-    "term": "Kolestas",
-    "def": "försämrat eller totalt hinder för avflöde av galla från levern till tunntarmen",
-    "status": "stub"
+    "def": "Gallstenssjukdom; förekomst av gallstenar, oftast i gallblåsan. (subst.) Sv: gallsten. Eng: cholelithiasis. Av gr. chole = galla + lithos = sten + -iasis. Jfr Kolecystolitiasis."
   },
   {
     "term": "Kolesteatom",
-    "def": "sjuklig förändring som kan uppkomma som komplikation till kronisk inflammation i mellanörat",
-    "status": "stub",
-    "variants": [
-      "kolesteatomen",
-      "kolesteatomer",
-      "kolesteatomet"
-    ]
+    "def": "Inkapslad ansamling av förhornade hudceller i mellanörat, oftast som komplikation till kronisk öroninflammation; växer destruktivt och kan skada hörselbenen. (subst., -en, pl. -er) Eng: cholesteatoma. Av kolesterol + gr. -om (historiskt missvisande namngiven som tumör)."
   },
   {
     "term": "Kolesterol",
-    "def": "kolesterol, fettämne",
-    "status": "stub"
+    "def": "Fettliknande ämne (sterol) som är byggsten i cellmembran och utgångspunkt för gallsyror och hormoner; höga blodnivåer ökar risken för åderförfettning. (subst., -et) Eng: cholesterol. Av gr. chole = galla + stereos = fast + -ol."
   },
   {
     "term": "Kolik",
-    "def": "smärtsam knipartartad tarmkramp ibland anfallsvis, även om andra buksmärtor",
-    "status": "stub"
+    "def": "Anfallsvis, intensiv krampsmärta från ett ihåligt bukorgan, t.ex. tarm, gallvägar eller urinledare. (subst., -en, pl. -er) Eng: colic. Av gr. kolikos, av kolon = tjocktarm."
   },
   {
     "term": "Kolinerg",
-    "def": "effekt som normalt utövas av signalsubstansen acetylkolin",
-    "status": "stub",
-    "variants": [
-      "kolinerga",
-      "kolinergt"
-    ]
-  },
-  {
-    "term": "Kolit",
-    "def": "tjocktarmsinflammation",
-    "status": "stub",
-    "variants": [
-      "koliten",
-      "koliterna",
-      "koliter"
-    ]
+    "def": "Som förmedlas av eller svarar på signalsubstansen acetylkolin (t.ex. kolinerga nervtrådar). (adj., -t, -a) Eng: cholinergic. Av acetylkolin + gr. ergon = verkan."
   },
   {
     "term": "Kollagen",
-    "def": "sammanfattande benämning på den dominerande fiberkomponenten i bindväv, en av kroppens vanligaste proteiner som håller samman celler, organ och andra vävnadsstrukturer",
-    "status": "stub",
-    "variants": [
-      "kollagener",
-      "kollagent"
-    ]
+    "def": "Det vanligaste strukturproteinet i kroppens bindväv; ger draghållfasthet åt hud, senor, ben och brosk. (subst., -et, pl. -er) Eng: collagen. Av gr. kolla = lim + -gen = bildande."
   },
   {
     "term": "Kollagenos",
-    "def": "samlingsnamn på olika sjukdomar som karaktäriseras av bindvävsförändringar",
-    "status": "stub",
-    "variants": [
-      "kollagenosen",
-      "kollagenoserna",
-      "kollagenoser"
-    ]
+    "def": "Samlingsnamn för autoimmuna systemsjukdomar med inflammation i bindväv, t.ex. SLE och sklerodermi. (subst., -en, pl. -er) Sv: bindvävssjukdom. Eng: collagenosis, connective tissue disease. Av kollagen + -osis."
   },
   {
     "term": "Kollaps",
-    "def": "sammanbrott",
-    "status": "stub"
+    "def": "Plötsligt sammanbrott – av kroppsfunktioner (svimning, cirkulationssvikt) eller av en struktur (t.ex. lungkollaps). (subst., -en, pl. -er) Sv: sammanbrott. Eng: collapse. Av lat. collabi = falla samman."
   },
   {
     "term": "Kollateral",
-    "def": "sidoställd, som ligger vid sidan om, till exempel blodkärl som går parallellt med ett annat kärl",
-    "status": "stub",
-    "variants": [
-      "kollaterala",
-      "kollateralt"
-    ]
+    "def": "Sidoställd; som ligger eller löper vid sidan av, t.ex. ett blodkärl parallellt med ett annat. (adj., -t, -a) Eng: collateral. Av lat. com- = med + latus = sida. Se Kollateralkretslopp."
   },
   {
     "term": "Kollateralkretslopp",
-    "def": "ny blodförsörjning som uppstår genom att små kärl utvidgas och övertar funktionen hos en tilltäppt artär",
-    "status": "stub",
-    "variants": [
-      "kollateralkretsloppen",
-      "kollateralkretsloppet"
-    ]
+    "def": "Ny, kringgående blodförsörjning som bildas när små sidokärl vidgas och tar över sedan en artär blivit tilltäppt. (subst., -et, pl. -∅) Eng: collateral circulation. Se Kollateral."
   },
   {
     "term": "Kolloid",
-    "def": "geléaktig",
-    "status": "stub",
-    "variants": [
-      "kolloida"
-    ]
-  },
-  {
-    "term": "Kolon",
-    "def": "tjocktarm",
-    "status": "stub"
+    "def": "Geléartad; (1) blandning där mycket små partiklar är jämnt utspridda i ett medium, (2) den geléartade lagringsformen av hormon i sköldkörtelns folliklar. (subst./adj.) Eng: colloid. Av gr. kolla = lim + -oid = liknande."
   },
   {
     "term": "Kolon descendens",
-    "def": "nedåtstigande del av tjocktarmen",
-    "status": "stub"
+    "def": "Nedåtgående tjocktarm; den del av tjocktarmen som löper nedåt längs bukens vänstra sida. (subst.) Eng: descending colon. Se Colon."
   },
   {
     "term": "Kolonflora",
-    "def": "tjocktarmsflora",
-    "status": "stub"
+    "def": "Tjocktarmsflora; de bakterier som normalt lever i tjocktarmen. (subst., -n) Sv: tarmflora. Eng: colonic flora. Se Colon."
   },
   {
     "term": "Koloproktektomi",
-    "def": "avlägsnande av tjocktarm och ändtarm",
-    "status": "stub",
-    "variants": [
-      "koloproktektomin",
-      "koloproktektomierna",
-      "koloproktektomier"
-    ]
+    "def": "Operativt borttagande av både tjocktarm och ändtarm. (subst., -n, pl. -er) Eng: coloproctectomy. Av gr. kolon = tjocktarm + proktos = ändtarm + ektomi."
   },
   {
     "term": "Kolorektal",
-    "def": "som avser tjocktarm och ändtarm",
-    "status": "stub",
-    "variants": [
-      "kolorektala",
-      "kolorektalt"
-    ]
+    "def": "Som avser tjocktarm och ändtarm tillsammans. (adj., -t, -a) Eng: colorectal. Av kolon + lat. rectum = ändtarm."
   },
   {
     "term": "Kolorektalcancer",
-    "def": "cancer i tjocktarm och ändtarm",
-    "status": "stub",
-    "variants": [
-      "kolorektalcancern"
-    ]
+    "def": "Cancer i tjocktarm eller ändtarm; en av de vanligaste cancerformerna. (subst., -n) Sv: tjock- och ändtarmscancer. Eng: colorectal cancer. Se Kolorektal."
   },
   {
     "term": "Kolostomi",
-    "def": "konstgjord öppning från tjocktarmen ut genom bukväggen",
-    "status": "stub",
-    "variants": [
-      "kolostomin",
-      "kolostomierna",
-      "kolostomier"
-    ]
+    "def": "Konstgjord öppning (stomi) där tjocktarmen leds ut genom bukväggen för tömning i en påse. (subst., -n, pl. -er) Eng: colostomy. Av gr. kolon + stoma = mun, öppning."
   },
   {
     "term": "Kolostrum",
-    "def": "moderns bröstmjölk, råmjölk",
-    "status": "stub"
+    "def": "Råmjölk; den första, antikroppsrika bröstmjölken som bildas de första dagarna efter förlossningen. (subst.) Sv: råmjölk. Eng: colostrum. Av lat. colostrum."
   },
   {
     "term": "Kolpit",
-    "def": "slidkatarr",
-    "status": "stub",
-    "variants": [
-      "kolpiten",
-      "kolpiterna",
-      "kolpiter"
-    ]
+    "def": "Inflammation i slidan. (subst., -en, pl. -er) Sv: slidkatarr, vaginit. Eng: colpitis, vaginitis. Av gr. kolpos = sköte, slida + -itis."
   },
   {
     "term": "Kolposkop",
-    "def": "kikarinstrument som förs in i slidan för kontroll av mikroskopiska förändringar på livmoderhalsen och livmodertappen",
-    "status": "stub",
-    "variants": [
-      "kolposkopen",
-      "kolposkopet"
-    ]
+    "def": "Förstorande kikarinstrument som används för att undersöka slidan och livmoderhalsen, t.ex. vid cellförändringar. (subst., -et, pl. -∅) Eng: colposcope. Av gr. kolpos = slida + skopein = betrakta."
   },
   {
     "term": "Koma",
-    "def": "djup medvetslöshet",
-    "status": "stub"
-  },
-  {
-    "term": "Komatös",
-    "def": "i djup medvetslöshet",
-    "status": "stub",
-    "variants": [
-      "komatösa",
-      "komatöst"
-    ]
-  },
-  {
-    "term": "Komedon",
-    "def": "vidgning och igenproppning av talgkörtlarnas utförsgångar, pormask",
-    "status": "stub"
+    "def": "Djup, ej väckbar medvetslöshet. (subst.) Sv: medvetslöshet. Eng: coma. Lekman: djup medvetslöshet. Även komatös (adj.) = som befinner sig i koma, djupt medvetslös. Av gr. koma = djup sömn."
   },
   {
     "term": "Kommensal",
-    "def": "snyltare",
-    "status": "stub",
-    "variants": [
-      "kommensala",
-      "kommensalt"
-    ]
+    "def": "Organism som lever på eller i en värd och drar nytta av den utan att skada den, t.ex. delar av kroppens normalflora. (subst., -en, pl. -er; även adj.) Eng: commensal. Av lat. com- = med + mensa = bord (bordsgäst)."
   },
   {
     "term": "Komminut",
-    "def": "krossa, sönderslå, bryta i småbitar, komminut benbrott = splitterfraktur med flera lössprängda benfragment",
-    "status": "stub",
-    "variants": [
-      "komminuta"
-    ]
+    "def": "Splittrad i flera bitar; komminut fraktur = benbrott med flera lösa benfragment (splitterfraktur). (adj., -∅, -a) Eng: comminuted. Av lat. comminuere = krossa."
   },
   {
     "term": "Kommissur",
-    "def": "sammanfogning, term för en bildning som utgör förbindelse mellan två anatomiska strukturer, till exempel i skallen",
-    "status": "stub",
-    "variants": [
-      "kommissuren",
-      "kommissurerna",
-      "kommissurer"
-    ]
+    "def": "Förbindelse som förenar två anatomiska strukturer, t.ex. nervbanorna mellan hjärnhalvorna eller mungipornas hörn. (subst., -en, pl. -er) Eng: commissure. Av lat. commissura = fog."
   },
   {
     "term": "Kommunikant",
-    "def": "ven som på nedre extremiteten förbinder det ytliga vensystemet med det djupa",
-    "status": "stub",
-    "variants": [
-      "kommunikanten",
-      "kommunikanterna",
-      "kommunikanter"
-    ]
+    "def": "Förbindande ven på benet (vena communicans) som länkar det ytliga vensystemet med det djupa. (subst., -en, pl. -er; även adj.) Eng: communicating vein, perforator. Av lat. communicare = förbinda."
   },
   {
     "term": "Komorbid",
-    "def": "annan samtidig sjukdom",
-    "status": "stub",
-    "variants": [
-      "komorbida"
-    ]
+    "def": "Som föreligger samtidigt med en annan sjukdom. (adj., -t, -a) Eng: comorbid. Se Komorbiditet."
   },
   {
     "term": "Komorbiditet",
-    "def": "annan samtidig sjukdom",
-    "status": "stub",
-    "variants": [
-      "komorbiditeten"
-    ]
+    "def": "Samsjuklighet; förekomst av en eller flera ytterligare sjukdomar samtidigt med en grundsjukdom. (subst., -en) Sv: samsjuklighet. Eng: comorbidity. Av lat. com- = med + morbus = sjukdom."
   },
   {
     "term": "Komparativ",
-    "def": "jämförande",
-    "status": "stub",
-    "variants": [
-      "komparativa",
-      "komparativt"
-    ]
+    "def": "Jämförande; som bygger på jämförelse, t.ex. en komparativ studie. (adj., -t, -a) Sv: jämförande. Eng: comparative. Av lat. comparare = jämföra."
   },
   {
     "term": "Kompartmentsyndrom",
-    "def": "nedsatt blodcirkulation med skadlig effekt på nerver och muskulatur, orsakat av ökat tryck, särskilt i armarnas och benens vävnadsfack som har oeftergivliga bindvävsväggar",
-    "status": "stub",
-    "variants": [
-      "kompartmentsyndromen",
-      "kompartmentsyndromet"
-    ]
+    "def": "Tillstånd där ökat tryck i ett muskelfack med oeftergivliga bindvävsväggar stryper blodcirkulationen och skadar muskler och nerver. (subst., -et, pl. -∅) Eng: compartment syndrome. Av eng. compartment = fack + syndrom."
   },
   {
     "term": "Kompatibel",
-    "def": "förenlig",
-    "status": "stub",
-    "variants": [
-      "kompatibelt",
-      "kompatibla"
-    ]
+    "def": "Förenlig; som går att kombinera utan skadlig reaktion, t.ex. blod som kan ges till en viss mottagare. (adj., -t, kompatibla) Sv: förenlig. Eng: compatible. Motsats: inkompatibel. Av lat. compati = lida med."
   },
   {
     "term": "Kompatibilitet",
-    "def": "som överensstämmer",
-    "status": "stub",
-    "variants": [
-      "kompatibiliteten"
-    ]
+    "def": "Förenlighet; egenskapen att två saker kan kombineras utan skadlig reaktion, t.ex. mellan blodgrupper. (subst., -en) Sv: förenlighet. Eng: compatibility. Se Kompatibel."
   },
   {
     "term": "Kompensation",
-    "def": "som uppvägs av något annat",
-    "status": "stub",
-    "variants": [
-      "kompensationen",
-      "kompensationerna",
-      "kompensationer"
-    ]
+    "def": "Utjämning; kroppens eller ett organs förmåga att uppväga en störning eller brist, t.ex. att hjärtat ökar slagfrekvensen vid blodförlust. (subst., -en, pl. -er) Eng: compensation. Motsats: dekompensation. Av lat. compensare = väga upp."
   },
   {
     "term": "Kompetitiv",
-    "def": "konkurrerande",
-    "status": "stub",
-    "variants": [
-      "kompetitiva",
-      "kompetitivt",
-      "---"
-    ]
+    "def": "Konkurrerande; som verkar genom konkurrens om samma bindningsställe, t.ex. en kompetitiv hämmare som tävlar med ett ämne om ett enzym. (adj., -t, -a) Eng: competitive. Av lat. competere = tävla."
   },
   {
     "term": "Komplement",
-    "def": "en grupp proteiner (komplementfaktorer) i blodplasma som spelar en betydelsefull roll inom kroppens immunförsvar (behövs för att en antikropp ska kunna oskadliggöra ett antigen)",
-    "status": "stub",
-    "variants": [
-      "komplementen",
-      "komplementet"
-    ]
+    "def": "Grupp blodplasmaproteiner (komplementsystemet) som samverkar i immunförsvaret och förstärker antikropparnas förmåga att oskadliggöra mikrober. (subst., -et, pl. -∅) Eng: complement. Av lat. complementum = komplettering."
   },
   {
     "term": "Komplementär",
-    "def": "kompletterande",
-    "status": "stub",
-    "variants": [
-      "komplementära",
-      "komplementärt"
-    ]
+    "def": "Kompletterande; som fyller ut eller utgör motstycke till något annat. (adj., -t, -a) Sv: kompletterande. Eng: complementary. Av lat. complementum = komplettering."
   },
   {
     "term": "Komplex",
-    "def": "sammansatt",
-    "status": "stub",
-    "variants": [
-      "komplexa"
-    ]
+    "def": "(1, adj.) Sammansatt, invecklad. (2, subst.) Enhet av flera sammankopplade delar, t.ex. ett immunkomplex eller QRS-komplexet i EKG. (adj./subst.) Eng: complex. Av lat. complexus = sammanflätad."
   },
   {
     "term": "Komponent",
-    "def": "beståndsdel",
-    "status": "stub",
-    "variants": [
-      "komponenten",
-      "komponenterna",
-      "komponenter"
-    ]
+    "def": "Beståndsdel; del som tillsammans med andra bygger upp en helhet. (subst., -en, pl. -er) Sv: beståndsdel. Eng: component. Av lat. componere = sätta samman."
   },
   {
     "term": "Kompressionsbrott",
-    "def": "benbrott som innebär att benet har tryckts ihop, klämts ihop. Ett typiskt exempel är ett kompressionsbrott i en ryggkota.",
-    "status": "stub"
+    "def": "Benbrott där benet pressats ihop, typiskt en hopsjunken ryggkota. (subst., -et, pl. -∅) Sv: kompressionsfraktur. Eng: compression fracture. Se Kompressionsfraktur."
   },
   {
     "term": "Kompressionsfraktur",
-    "def": "benbrott där benet har tryckts ihop, avser vanligen fraktur i ryggkotorna",
-    "status": "stub",
-    "variants": [
-      "kompressionsfrakturen",
-      "kompressionsfrakturerna",
-      "kompressionsfrakturer"
-    ]
+    "def": "Benbrott där benet pressats samman, oftast i en ryggkota som sjunker ihop, t.ex. vid benskörhet. (subst., -en, pl. -er) Sv: kompressionsbrott. Eng: compression fracture. Av kompression + fraktur."
   },
   {
     "term": "Kompulsion",
-    "def": "tvångshandling",
-    "status": "stub",
-    "variants": [
-      "kompulsionen",
-      "kompulsionerna",
-      "kompulsioner"
-    ]
+    "def": "Tvångshandling; återkommande beteende som personen känner sig tvingad att utföra för att lindra ångest, t.ex. vid tvångssyndrom. (subst., -en, pl. -er) Sv: tvångshandling. Eng: compulsion. Av lat. compellere = tvinga."
   },
   {
     "term": "Kondition",
-    "def": "tillstånd",
-    "status": "stub"
+    "def": "(1) Allmänt tillstånd eller form. (2) Kroppens uthållighet och syreupptagningsförmåga. (subst., -en) Eng: condition; fitness. Av lat. condicio = tillstånd."
   },
   {
     "term": "Kondrit",
-    "def": "inflammation i brosk",
-    "status": "stub",
-    "variants": [
-      "kondriten",
-      "kondriterna",
-      "kondriter"
-    ]
+    "def": "Inflammation i brosk. (subst., -en, pl. -er) Sv: broskinflammation. Eng: chondritis. Av gr. chondros = brosk + -itis."
   },
   {
     "term": "Kondrolys",
-    "def": "brosknedbrytning, brosknekros",
-    "status": "stub",
-    "variants": [
-      "kondrolysen",
-      "chondrolys",
-      "chondrolysen"
-    ]
+    "def": "Nedbrytning eller upplösning av brosk (brosknekros), t.ex. i en led. (subst., -en) Eng: chondrolysis. Av gr. chondros = brosk + lysis = upplösning."
   },
   {
     "term": "Konduktion",
-    "def": "ledning",
-    "status": "stub",
-    "variants": [
-      "konduktionen",
-      "konduktionerna",
-      "konduktioner"
-    ]
+    "def": "Ledning; överföring av t.ex. värme eller elektriska impulser genom direkt kontakt, t.ex. impulsledningen i hjärtat. (subst., -en, pl. -er) Sv: ledning. Eng: conduction. Av lat. conducere = leda."
   },
   {
     "term": "Kondyl",
-    "def": "ledhuvud, den konvexa komponenten i en kulled som finns i änden på ett rörben, används oftast om benet vid armbågen och knäleden",
-    "status": "stub",
-    "variants": [
-      "kondylen",
-      "kondylerna",
-      "kondyler"
-    ]
+    "def": "Ledknöl; den runda, konvexa ledytan i änden av ett rörben, t.ex. vid knä eller armbåge. (subst., -en, pl. -er) Eng: condyle. Av gr. kondylos = knoge."
   },
   {
     "term": "Kondylom",
-    "def": "könsvårtor, vårtaktig utväxt på könsdelar på grund av virus",
-    "status": "stub"
+    "def": "Könsvårta; vårtliknande utväxt på könsorgan eller i analområdet orsakad av humant papillomvirus (HPV). (subst., -et, pl. -∅) Sv: könsvårta. Eng: condyloma. Av gr. kondyloma = knöl."
   },
   {
     "term": "Konfidensintervall",
-    "def": "(CI) statistisk term, den vanligaste formen av osäkerhetsintervall. Konfidensgraden anges i procent och markerar med hur stor sannolikhet verkligheten befinner sig inom konfidensintervallet. Den vanligaste konfidensgraden inom statistiken är 95 %. Det innebär att verkligheten vi försöker mäta befinner sig innanför konfidensintervallet vid 95 % av fallen, eller 19 av 20 gånger. Ett brett konfidensintervall innebär att resultatet är mycket osäkert. Ett snävt konfidensintervall innebär att resultatet är mycket säkert.",
-    "status": "stub",
-    "variants": [
-      "confidence interval"
-    ]
+    "def": "Statistik: osäkerhetsintervall som anger inom vilket spann det sanna värdet sannolikt ligger; vid 95 % konfidensgrad väntas värdet rymmas i intervallet i 19 fall av 20. Brett intervall = osäkert resultat, snävt = säkrare. (subst., -et, pl. -∅) Sv: konfidensintervall (CI). Eng: confidence interval."
   },
   {
     "term": "Konfusion",
-    "def": "förvirring",
-    "status": "stub",
-    "variants": [
-      "konfusionen",
-      "konfusionerna",
-      "konfusioner"
-    ]
+    "def": "Förvirring; tillstånd med nedsatt klarhet i tänkande, orientering och uppmärksamhet (akut konfusion = delirium). (subst., -en, pl. -er) Sv: förvirring. Eng: confusion. Av lat. confundere = blanda samman."
   },
   {
     "term": "Kongenital",
-    "def": "medfödd",
-    "status": "stub",
-    "variants": [
-      "kongenitala",
-      "kongenitalt"
-    ]
+    "def": "Medfödd; som finns redan vid födelsen. (adj., -t, -a) Sv: medfödd. Eng: congenital. Av lat. congenitus = medfödd."
   },
   {
     "term": "Kongestiv",
-    "def": "blodstockning, lokalt ökad blodmängd (hyperemi) i blodkärlen orsakad antingen av ökat tillflöde eller hinder i avflödet",
-    "status": "stub",
-    "variants": [
-      "kongestivt",
-      "kongestion"
-    ]
+    "def": "Som beror på eller kännetecknas av blodstockning (lokalt ökad blodmängd), t.ex. kongestiv hjärtsvikt. (adj., -t, -a) Eng: congestive. Även kongestion (subst.) = blodstockning, ansamling av blod eller vätska. Av lat. congerere = hopa."
   },
   {
     "term": "Konisera",
-    "def": "ta bort livmodertappen på grund av cellförändringar",
-    "status": "stub",
-    "variants": [
-      "konisering",
-      "konisation",
-      "koniserad",
-      "koniserade"
-    ]
-  },
-  {
-    "term": "Konjunktivit",
-    "def": "inflammation i den yttre hinnan på ögonlockens insida",
-    "status": "stub",
-    "variants": [
-      "konjunktiviten"
-    ]
+    "def": "Operativt avlägsna en konformad bit av livmoderhalsen, oftast på grund av cellförändringar. (verb, -ar, -ade, -at) Eng: cone biopsy, conisation. Även konisering/konisation (subst.) = själva ingreppet. Av lat. conus = kon."
   },
   {
     "term": "Konstipation",
-    "def": "förstoppning",
-    "status": "stub"
+    "def": "Förstoppning; trög och försvårad tarmtömning. (subst., -en) Sv: förstoppning. Eng: constipation. Av lat. constipare = packa ihop."
   },
   {
     "term": "Kontrollerad studie",
-    "def": "Studie med kontrollgrupp",
-    "status": "stub"
-  },
-  {
-    "term": "Kontusion",
-    "def": "kroppslig stöt- eller krosskada",
-    "status": "stub"
+    "def": "Forskningsbegrepp: studie där en behandlingsgrupp jämförs med en kontrollgrupp som får annan eller ingen behandling (t.ex. placebo). (subst.) Eng: controlled study. Jfr Konfidensintervall."
   },
   {
     "term": "Konvalescens",
-    "def": "bättring, bättringsfas efter en sjukdom eller operation",
-    "status": "stub"
+    "def": "Tillfrisknande; återhämtningsfasen efter en sjukdom eller operation. (subst., -en) Sv: tillfrisknande. Eng: convalescence. Av lat. convalescere = tillfriskna."
   },
   {
     "term": "Konvulsion",
-    "def": "kramp",
-    "status": "stub"
-  },
-  {
-    "term": "Kornea",
-    "def": "ögats hornhinna",
-    "status": "stub"
-  },
-  {
-    "term": "Koronar",
-    "def": "som har med hjärtats kranskärl att göra",
-    "status": "stub",
-    "variants": [
-      "koronara",
-      "koronart"
-    ]
-  },
-  {
-    "term": "Kortikal",
-    "def": "som har att göra med hjärnbarken, eller det yttre kompakta skiktet på ett ben",
-    "status": "stub",
-    "variants": [
-      "kortikala",
-      "kortikalt"
-    ]
+    "def": "Kramp; ofrivilliga, kraftiga muskelsammandragningar, t.ex. vid ett epileptiskt anfall. (subst., -en, pl. -er) Sv: kramp. Eng: convulsion. Av lat. convellere = rycka loss."
   },
   {
     "term": "Kortison",
-    "def": "används vanligen för att antyda gruppen glukokortikoider (utgör en typ av kortikosteroider/ steroider) som används som antiinflammatorisk behandling av diverse tillstånd",
-    "status": "stub"
+    "def": "Glukokortikoid (binjurebarkhormon) och samlingsbenämning för kortisonläkemedel som dämpar inflammation och immunförsvar. (subst., -et) Eng: cortisone. Lekman: inflammationsdämpande binjurebarkhormon och läkemedel. Av lat. cortex = bark."
   },
   {
     "term": "Koxalgi",
-    "def": "smärtor i höftleden",
-    "status": "stub",
-    "variants": [
-      "koxalgin",
-      "koxalgierna",
-      "koxalgier"
-    ]
+    "def": "Smärta i höftleden. (subst., -n, pl. -er) Sv: höftledssmärta. Eng: coxalgia. Av lat. coxa = höft + gr. algos = smärta."
   },
   {
     "term": "Koxartros",
-    "def": "artros i höftleden",
-    "status": "stub",
-    "variants": [
-      "koxartrosen",
-      "koxartroserna",
-      "koxartroser"
-    ]
+    "def": "Artros (broskförslitning) i höftleden. (subst., -en, pl. -er) Sv: höftledsartros. Eng: coxarthrosis. Av lat. coxa = höft + artros."
   },
   {
     "term": "Koxit",
-    "def": "inflammation i höftleden",
-    "status": "stub",
-    "variants": [
-      "koxiten",
-      "koxiterna",
-      "koxiter"
-    ]
+    "def": "Inflammation i höftleden. (subst., -en, pl. -er) Sv: höftledsinflammation. Eng: coxitis. Av lat. coxa = höft + -itis."
   },
   {
     "term": "Krikos",
@@ -10549,35 +9583,23 @@
   },
   {
     "term": "Kryptorkism",
-    "def": "testiklarna har inte vandrat ner i skrotum under fosterutvecklingen",
-    "status": "stub",
-    "variants": [
-      "retentio testis",
-      "testikelretention"
-    ]
+    "def": "Tillstånd där den ena eller båda testiklarna inte vandrat ner i pungen under fosterutvecklingen. (subst., -en) Sv: testikelretention, retentio testis. Eng: cryptorchidism. Lekman: testikel som inte kommit ner i pungen. Av gr. kryptos = dold + orchis = testikel."
   },
   {
     "term": "Kyphosis",
     "def": "Dorsalt konvex krökning av ryggraden; överdrivna bakåtkrökning, puckelrygg. (subst.) Sv: kyfos, puckelrygg. Eng: kyphosis. Lekman: puckelrygg. Av grek. kyphos = puckel, böjd."
   },
   {
-    "term": "Labia major",
-    "def": "de yttre blygdläpparna",
-    "status": "stub"
+    "term": "Labia majora",
+    "def": "De yttre, större blygdläpparna; två hudveck med underliggande fettväv som omsluter de inre blygdläpparna och slidöppningen. (subst., lat. plural; sing. labium majus) Sv: yttre blygdläpparna. Eng: labia majora. Lekman: de yttre blygdläpparna. Av lat. labium = läpp + major = större. Se Labia minora."
   },
   {
-    "term": "Labia minor",
-    "def": "de inre blygdläpparna",
-    "status": "stub"
+    "term": "Labia minora",
+    "def": "De inre, mindre blygdläpparna; två tunna hudveck innanför de yttre blygdläpparna som omger slidans och urinrörets mynning. (subst., lat. plural; sing. labium minus) Sv: inre blygdläpparna. Eng: labia minora. Lekman: de inre blygdläpparna. Av lat. labium = läpp + minor = mindre. Se Labia majora."
   },
   {
     "term": "Labial",
-    "def": "som har med läppar att göra eller är läppformat",
-    "status": "stub",
-    "variants": [
-      "labiala",
-      "labialt"
-    ]
+    "def": "Som har med läpparna att göra eller är läppformad; inom tandvården den yta av en framtand som vetter mot läppen. (adj., -t, -a) Eng: labial. Av lat. labium = läpp. Se Labialis."
   },
   {
     "term": "Labialis",
@@ -10585,12 +9607,7 @@
   },
   {
     "term": "Labil",
-    "def": "instabil, ostadig, vacklande",
-    "status": "stub",
-    "variants": [
-      "labila",
-      "labilt"
-    ]
+    "def": "Instabil, ostadig, lätt påverkbar; används bl.a. om humör (emotionellt labil) och om kroppsfunktioner som snabbt växlar. (adj., -t, -a) Sv: instabil, ostadig. Eng: labile. Motsats: stabil. Av lat. labilis = som lätt glider eller faller, av labi = glida, falla."
   },
   {
     "term": "Labium (labrum)",
@@ -10602,13 +9619,7 @@
   },
   {
     "term": "Labyrintit",
-    "def": "inflammation i labyrinten, innerörat som innehåller hörsel- och balansorgan",
-    "status": "stub",
-    "variants": [
-      "labyrintiten",
-      "labyrintiterna",
-      "labyrintiter"
-    ]
+    "def": "Inflammation i innerörats labyrint (hörsel- och balansorgan), ofta virusorsakad, med yrsel, hörselnedsättning och ostadighet. (subst., -en, pl. -er) Eng: labyrinthitis. Lekman: inflammation i innerörat som ger yrsel. Av lat. labyrinthus = labyrint (innerörat) + gr. -itis = inflammation. Se Labyrinthus."
   },
   {
     "term": "Lac",
@@ -10616,13 +9627,7 @@
   },
   {
     "term": "Laceration",
-    "def": "reva, sönderslitning",
-    "status": "stub",
-    "variants": [
-      "lacerationen",
-      "lacerationerna",
-      "lacerationer"
-    ]
+    "def": "Skada i form av en reva eller sönderslitning av vävnad, t.ex. ett bristningssår med ojämna kanter. (subst., -en, pl. -er) Sv: bristning, sönderslitning. Eng: laceration. Lekman: en rivskada eller reva i vävnaden. Av lat. lacerare = slita sönder. Se Lacero."
   },
   {
     "term": "Lacero",
@@ -10635,15 +9640,6 @@
   {
     "term": "Lacrima",
     "def": "Tår; tårfluid från glandula lacrimalis. (subst.) Sv: tår. Eng: tear, lacrima. Av lat. lacrima = tår."
-  },
-  {
-    "term": "Lacrimal",
-    "def": "som har med tårar att göra",
-    "status": "stub",
-    "variants": [
-      "lacrimala",
-      "lacrimalt"
-    ]
   },
   {
     "term": "Lacrimalis",
@@ -10659,95 +9655,51 @@
   },
   {
     "term": "LADA",
-    "def": "\"latent autoimmune diabetes of the adult\", en undergrupp av typ 1-diabetes",
-    "status": "stub"
+    "def": "Latent autoimmun diabetes hos vuxna; en långsamt utvecklad autoimmun diabetesform som debuterar i vuxen ålder och till en början kan likna typ 2-diabetes men hör till typ 1. (förkortn.) Eng: latent autoimmune diabetes in adults. Lekman: en smygande autoimmun diabetes hos vuxna."
   },
   {
     "term": "Lagoftalmus",
-    "def": "oförmåga att sluta ögat",
-    "status": "stub"
+    "def": "Oförmåga att sluta ögat helt, så att en springa kvarstår; medför risk för uttorkning och skada på hornhinnan. (subst., -en) Eng: lagophthalmos. Lekman: ögat går inte att blunda helt. Av gr. lagos = hare (som sägs sova med öppna ögon) + ophthalmos = öga."
   },
   {
     "term": "Lågvirulent",
-    "def": "minskad infektionsrisk",
-    "status": "stub",
-    "variants": [
-      "lågvirulenta"
-    ]
+    "def": "Med låg sjukdomsframkallande förmåga; om en mikroorganism som ger liten infektionsrisk eller mild infektion. (adj., -t, -a) Eng: low-virulence. Motsats: högvirulent. Av sv. låg + lat. virulentus = giftig, av virus = gift. Se Virulens."
   },
   {
     "term": "Läkemedelsexantem",
-    "def": "utslag som orsakas av en reaktion ett ett läkemedel",
-    "status": "stub"
+    "def": "Hudutslag som utlöses av en reaktion mot ett läkemedel. (subst., -et, pl. = el. -er) Sv: läkemedelsutslag. Eng: drug exanthem. Lekman: hudutslag orsakat av en medicin. Av läkemedel + gr. exanthema = utslag. Se Exantem."
   },
   {
     "term": "Läkemedelsresistens",
-    "def": "läkemedel som inte längre verkar, till exempel antibiotika som inte verkar mot vissa typer av bakterier - dessa har då utvecklat resistens",
-    "status": "stub",
-    "variants": [
-      "läkemedelsresistensen"
-    ]
+    "def": "Tillstånd där ett läkemedel inte längre har avsedd effekt, t.ex. när bakterier blivit motståndskraftiga (resistenta) mot antibiotika. (subst., -en) Eng: drug resistance. Lekman: när en medicin slutar verka. Av läkemedel + lat. resistentia = motstånd. Se Resistens, Antibiotikaresistens."
   },
   {
     "term": "Lakrimal",
-    "def": "som har med tårar att göra",
-    "status": "stub",
-    "variants": [
-      "lakrimala",
-      "lakrimalt"
-    ]
+    "def": "Som har med tårar eller tårapparaten att göra. (adj., -t, -a; även stavat lacrimal) Eng: lacrimal. Av lat. lacrima = tår. Se Lacrima, Lacrimalis."
   },
   {
     "term": "Laktas",
-    "def": "enzym som finns i celler i tunntarmens slemhinna och som bryter ned födans laktos (mjölksocker) till dess beståndsdelar galaktos och glukos, vilka kan tas upp från tarmen",
-    "status": "stub",
-    "variants": [
-      "laktasen",
-      "laktaserna",
-      "laktaser"
-    ]
+    "def": "Enzym i tunntarmens slemhinna som bryter ned mjölksocker (laktos) till galaktos och glukos, vilka kan tas upp i tarmen. (subst., -et el. -en) Eng: lactase. Lekman: enzymet som bryter ned mjölksocker. Av lat. lac (gen. lactis) = mjölk + enzymändelsen -as. Se Laktos, Laktosintolerans."
   },
   {
     "term": "Laktat",
-    "def": "salter av mjölksyra som bildas vid anaerob ämnesomsättning, framför allt vid glykolys i muskulaturen",
-    "status": "stub",
-    "variants": [
-      "laktatet"
-    ]
+    "def": "Salt eller jon av mjölksyra; bildas vid syrefattig (anaerob) ämnesomsättning, framför allt i muskler vid hård ansträngning. (subst., -et) Sv: mjölksyresalt. Eng: lactate. Lekman: mjölksyra i kroppen. Av lat. lac (gen. lactis) = mjölk."
   },
   {
     "term": "Laktation",
-    "def": "bildning av mjölk i bröstkörtlarna, amning",
-    "status": "stub",
-    "variants": [
-      "laktationen",
-      "laktationerna",
-      "laktationer"
-    ]
+    "def": "Bildning och avsöndring av mjölk i bröstkörtlarna; även amningsperioden. (subst., -en) Sv: mjölkbildning, amning. Eng: lactation. Lekman: mjölkproduktion vid amning. Av lat. lactare = ge di, av lac = mjölk."
   },
   {
     "term": "Laktos",
-    "def": "mjölksocker",
-    "status": "stub",
-    "variants": [
-      "laktosen"
-    ]
+    "def": "Mjölksocker; den dominerande sockerarten i mjölk, en disackarid uppbyggd av galaktos och glukos. (subst., -en) Sv: mjölksocker. Eng: lactose. Av lat. lac (gen. lactis) = mjölk. Se Laktas, Laktosintolerans."
   },
   {
     "term": "Laktosintolerans",
-    "def": "nedsatt förmåga att tåla laktos (mjölksocker) på grund av brist på enzymet laktas som ska bryta ned laktosen, kan bland annat ge gaser i magen och magsmärtor",
-    "status": "stub",
-    "variants": [
-      "laktosintoleransen"
-    ]
+    "def": "Nedsatt förmåga att bryta ned och tåla mjölksocker (laktos) på grund av brist på enzymet laktas; ger gaser, uppblåsthet, buksmärta och diarré. (subst., -en) Eng: lactose intolerance. Lekman: dålig på att tåla mjölksocker. Av laktos + lat. in- = o- + tolerantia = tålighet. Se Laktas, Laktos."
   },
   {
     "term": "Laktulos",
-    "def": "syntetiskt framställd sockerart, en disackarid (uppbyggd av galaktos och fruktos), som inte bryts ned i människans tunntarm. Laktulos har sin effekt i tjocktarmen där sockret förjäses av bakterier och ger upphov till lösare avföring, används därför ofta som avföringsmedel.",
-    "status": "stub",
-    "variants": [
-      "laktulosen"
-    ]
+    "def": "Syntetisk disackarid (galaktos + fruktos) som inte bryts ned i tunntarmen utan jäses av bakterier i tjocktarmen och ger lösare avföring; används som avföringsmedel och vid leverencefalopati. (subst., -en) Eng: lactulose. Lekman: ett milt avföringsmedel. Av lat. lac = mjölk. Se Laxans."
   },
   {
     "term": "Lambdoideus",
@@ -10763,18 +9715,11 @@
   },
   {
     "term": "Laminektomi",
-    "def": "operativt avlägsnande av taggutskottet och den bakre bågdelen (lamina arcus vertebrae) på en eller flera ryggkotor för att frilägga ryggmärgen och dess nervrötter",
-    "status": "stub",
-    "variants": [
-      "laminektomin",
-      "laminektomierna",
-      "laminektomier"
-    ]
+    "def": "Kirurgiskt avlägsnande av en ryggkotas bakre kotbåge (lamina) och taggutskott för att frilägga och avlasta ryggmärgen och nervrötterna. (subst., -n, pl. -er) Eng: laminectomy. Lekman: operation där en del av kotan tas bort för att ge nerverna plats. Av lat. lamina = tunn skiva, platta + gr. ektome = bortskärande. Se Lamina."
   },
   {
     "term": "Langerhans",
-    "def": "Paul Langerhans (1847–88) upptäckte de Langerhanska cellöarna i bukspottkörteln och de Langerhanska cellerna, en grupp av fagocyter med viktig funktion inom immunsystemet (de två celltyperna har inget med varandra att göra)",
-    "status": "stub"
+    "def": "Paul Langerhans (1847–1888), tysk patolog som beskrev de Langerhanska cellöarna (de hormonproducerande cellgrupperna i bukspottkörteln) och de Langerhanska cellerna (en typ av immunceller i huden) – de två har inget med varandra att göra. (egennamn) Eng: islets of Langerhans, Langerhans cells. Se LCH."
   },
   {
     "term": "Lanugo",
@@ -10782,98 +9727,43 @@
   },
   {
     "term": "Laparocentes",
-    "def": "stick med nål genom bukväggen för att avlägsna vätska ur bukhålan",
-    "status": "stub",
-    "variants": [
-      "laparocentesen"
-    ]
+    "def": "Punktion av bukhålan med nål genom bukväggen för att tappa ut fri vätska (ascites). (subst., -en, pl. -er) Sv: buktappning. Eng: paracentesis. Lekman: att tappa vätska ur buken med en nål. Av gr. lapara = mjukdel, buk + kentesis = stick, punktion. Se Ascites."
   },
   {
     "term": "Laparoskopi",
-    "def": "\"titthålsundersökning\", endoskopi av bäckenet och bukhålans organ med hjälp av ett optiskt instrument (laparoskop, \"rörkikare\"), ett tunt rör med belysning som förs genom bukväggen",
-    "status": "stub",
-    "variants": [
-      "laparoskopin",
-      "laparoskopierna",
-      "laparoskopier"
-    ]
+    "def": "Titthålsundersökning av bukhålans och bäckenets organ med ett smalt, belyst optiskt instrument (laparoskop) som förs in genom bukväggen. (subst., -n, pl. -er) Sv: titthålskirurgi i buken. Eng: laparoscopy. Lekman: titthålsundersökning av buken. Av gr. lapara = buk + skopein = betrakta. Se Laparotomi."
   },
   {
     "term": "Laparotomi",
-    "def": "kirurgiskt ingrepp genom bukväggen och in i buken",
-    "status": "stub",
-    "variants": [
-      "laparotomin",
-      "laparotomierna",
-      "laparotomier"
-    ]
+    "def": "Kirurgiskt öppnande av bukhålan genom ett snitt i bukväggen. (subst., -n, pl. -er) Sv: buksnitt. Eng: laparotomy. Lekman: bukoperation med öppet snitt. Av gr. lapara = buk + tome = snitt. Se Laparoskopi."
   },
   {
     "term": "Lapis",
-    "def": "frätande medel, silvernitrat",
-    "status": "stub"
+    "def": "Silvernitrat (lapis infernalis); ett frätande (etsande) medel som använts för att bränna bort t.ex. vårtor och vild köttbildning. (subst.) Sv: silvernitrat, helvetessten. Eng: silver nitrate. Av lat. lapis = sten."
   },
   {
     "term": "Laryngeal",
-    "def": "som gäller strupen",
-    "status": "stub",
-    "variants": [
-      "laryngeala",
-      "laryngealt"
-    ]
-  },
-  {
-    "term": "Laryngektomera",
-    "def": "avlägsna struphuvud och stämband, canceroperation",
-    "status": "stub",
-    "variants": [
-      "laryngektomerar",
-      "laryngektomerat",
-      "laryngektomerade"
-    ]
+    "def": "Som hör till eller gäller struphuvudet (larynx). (adj., -t, -a) Eng: laryngeal. Av gr. larynx = struphuvud. Se Larynx."
   },
   {
     "term": "Laryngektomi",
-    "def": "operation varvid man avlägsnar struphuvud och stämband, canceroperation",
-    "status": "stub",
-    "variants": [
-      "laryngektomin",
-      "laryngektomierna",
-      "laryngektomier"
-    ]
+    "def": "Operativt avlägsnande av struphuvudet med stämbanden, oftast på grund av cancer; patienten andas därefter genom en öppning på halsen. (subst., -n, pl. -er; även verb laryngektomera = utföra ingreppet) Eng: laryngectomy. Lekman: operation där struphuvudet tas bort. Av gr. larynx = struphuvud + ektome = bortskärande. Se Larynx, Laryngostomi."
   },
   {
     "term": "Laryngit",
-    "def": "inflammation i struphuvudet, hos barn krupp, oftast orsakad av virus, vanligaste symtomen är halsont, hosta och heshet till följd av att stämbanden angripits",
-    "status": "stub",
-    "variants": [
-      "laryngiten",
-      "laryngiterna",
-      "laryngiter"
-    ]
+    "def": "Inflammation i struphuvudet (larynx), oftast virusorsakad, med heshet, hosta och halsont; hos små barn kan den ge falsk krupp. (subst., -en, pl. -er) Eng: laryngitis. Lekman: inflammation i struphuvudet som gör en hes. Av gr. larynx = struphuvud + -itis = inflammation. Se Larynx."
   },
   {
     "term": "Laryngoskop",
-    "def": "instrument med vars hjälp man kan se ner i strupen",
-    "status": "stub",
-    "variants": [
-      "laryngoskopen",
-      "laryngoskopet"
-    ]
+    "def": "Instrument för att betrakta struphuvudet och stämbanden, t.ex. vid intubation. (subst., -et, pl. =) Eng: laryngoscope. Lekman: instrument att se ned i struphuvudet med. Av gr. larynx = struphuvud + skopein = betrakta. Se Laryngeal."
   },
   {
     "term": "Laryngostomi",
-    "def": "operativt insnitt i struphuvudet",
-    "status": "stub"
+    "def": "Kirurgiskt anlagd öppning från struphuvudet ut genom halsen, för andning. (subst., -n, pl. -er) Eng: laryngostomy. Av gr. larynx = struphuvud + stoma = mun, öppning. Se Laryngektomi."
   },
   {
     "term": "Laryngotrakeal",
-    "def": "som gäller strupe och luftrör",
-    "status": "stub",
-    "variants": [
-      "laryngotrakeala",
-      "laryngotrakealt"
-    ]
+    "def": "Som gäller både struphuvudet (larynx) och luftstrupen (trakea). (adj., -t, -a) Eng: laryngotracheal. Av gr. larynx = struphuvud + tracheia = luftstrupe."
   },
   {
     "term": "Larynx",
@@ -10881,27 +9771,15 @@
   },
   {
     "term": "Larynxspasm",
-    "def": "sammandragning av luftröret runt stämbanden, blockering av luftröret",
-    "status": "stub",
-    "variants": [
-      "larynxspasmen",
-      "larynxspasmer"
-    ]
+    "def": "Plötslig kramp i struphuvudets muskler som drar ihop stämbanden och tillfälligt blockerar luftvägen. (subst., -en, pl. -er) Sv: glottiskramp. Eng: laryngospasm. Lekman: kramp i struphuvudet som hindrar andningen. Av gr. larynx = struphuvud + spasmos = kramp. Se Larynx."
   },
   {
     "term": "LASIK",
-    "def": "laser in situ keratomileusis är en vanlig operationsmetod vid brytningsfel i ögat, till exempel närsynthet",
-    "status": "stub"
+    "def": "Laser in situ keratomileusis; vanlig ögonoperation där hornhinnan formas om med laser för att korrigera brytningsfel som närsynthet, översynthet och astigmatism. (förkortn.) Eng: laser in situ keratomileusis. Lekman: laseroperation av ögat mot glasögonberoende."
   },
   {
     "term": "Latenstid",
-    "def": "tiden från stimulering tills något händer, väntetid",
-    "status": "stub",
-    "variants": [
-      "latenstiden",
-      "latenstiderna",
-      "latenstider"
-    ]
+    "def": "Tiden från en stimulering eller smitta tills en reaktion eller ett symtom uppträder; väntetid, fördröjning. (subst., -en, pl. -er) Sv: fördröjningstid. Eng: latency. Av lat. latens = dold, av latere = vara dold + tid."
   },
   {
     "term": "Lateral",
@@ -10913,14 +9791,7 @@
   },
   {
     "term": "Lateralisera",
-    "def": "rörelse åt sidan",
-    "status": "stub",
-    "variants": [
-      "lateraliserar",
-      "lateralisering",
-      "lateraliserat",
-      "lateraliserade"
-    ]
+    "def": "Förskjuta eller förskjutas åt sidan, åt vänster eller höger om medellinjen; även att en funktion domineras av ena hjärnhalvan (lateralisering). (verb, -r, -de, -t) Eng: lateralise. Av lat. lateralis = som hör till sidan, av latus = sida. Se Lateral."
   },
   {
     "term": "Latissimus",
@@ -10932,85 +9803,47 @@
   },
   {
     "term": "Lavage",
-    "def": "rengöring, sköljning genom att vätska förs in i till exempel ändtarmen eller magsäcken",
-    "status": "stub"
+    "def": "Sköljning eller spolning av ett hålrum eller en vävnad med vätska, t.ex. magsköljning eller bronkoalveolärt lavage i lungan. (subst., -t el. -n) Sv: sköljning, spolning. Eng: lavage. Lekman: sköljning med vätska. Av fr. lavage = tvättning, av lat. lavare = tvätta. Se Lavemang."
   },
   {
     "term": "Lavemang",
-    "def": "rengöring, sköljning genom att vätska förs in i till exempel ändtarmen eller magsäcken",
-    "status": "stub"
+    "def": "Införande av vätska i ändtarmen för att tömma tarmen eller tillföra läkemedel. (subst., -et, pl. =) Sv: tarmsköljning. Eng: enema. Lekman: tarmspolning via ändtarmen. Av fr. lavement = tvättning, av lat. lavare = tvätta. Se Lavage, Laxans."
   },
   {
     "term": "Laxans",
-    "def": "laxermedel, avföringsmedel",
-    "status": "stub"
-  },
-  {
-    "term": "Laxantia",
-    "def": "avföringsmedel",
-    "status": "stub"
-  },
-  {
-    "term": "Laxerande",
-    "def": "preparat som har avförande verkan",
-    "status": "stub"
+    "def": "Avföringsmedel; läkemedel som ökar tarmtömningen och motverkar förstoppning. (subst., -et; lat. pluralform laxantia; även laxerande (adj.) = som har avförande verkan) Sv: avföringsmedel, laxermedel. Eng: laxative. Lekman: medel mot förstoppning. Av lat. laxare = lösa upp, av laxus = slak, lös. Se Laktulos, Lavemang."
   },
   {
     "term": "LCH",
-    "def": "Langerhans cellhistiocytos",
-    "status": "stub"
+    "def": "Langerhans cellhistiocytos; en ovanlig sjukdom med ansamling och nybildning av Langerhanska celler (en typ av immunceller), som kan drabba bl.a. skelett, hud och lungor. (förkortn.) Eng: Langerhans cell histiocytosis. Se Langerhans."
   },
   {
     "term": "LCT",
-    "def": "\"long chain triglycerides\", långa fettsyror",
-    "status": "stub",
-    "variants": [
-      "LCT-fett"
-    ]
+    "def": "Långkedjiga triglycerider; fetter (triglycerider) med långa fettsyrekedjor, den vanligaste formen av fett i kosten. (förkortn.) Eng: long chain triglycerides. Jfr MCT."
   },
   {
     "term": "LD",
-    "def": "laktatdehydrogenas, ett av de enzymer som deltar i organismens nedbrytning av socker (glykolys), kan vid cellskada (till exempel i hjärtmuskeln; hjärtinfarkt) komma ut i blodbanan och då användas för diagnostik",
-    "status": "stub"
+    "def": "Laktatdehydrogenas (även LDH); ett enzym som deltar i sockernedbrytningen och finns i de flesta celler. Vid cellskada (t.ex. hemolys, vävnadsskada eller vissa tumörer) läcker det ut i blodet och kan mätas. (förkortn.) Eng: lactate dehydrogenase. Se Laktat."
   },
   {
     "term": "LDL-kolesterol",
-    "def": "\"low density lipoprotein\", det \"onda\" kolesterolet, höga värden av LDL har samband med högre risk för hjärt-kärlsjukdom",
-    "status": "stub",
-    "variants": [
-      "LDL-kolesterolet"
-    ]
+    "def": "Low density lipoprotein-kolesterol; det \"onda\" kolesterolet, vars höga nivåer ökar risken för åderförfettning och hjärt-kärlsjukdom. (subst., -et) Eng: low-density lipoprotein cholesterol. Lekman: det skadliga blodfettet. Jfr HDL. Se Lipoprotein, Kolesterol."
   },
   {
     "term": "LE",
-    "def": "lungemboli",
-    "status": "stub"
+    "def": "Lungemboli; blodpropp i lungans kärl. Förkortningen kan i andra sammanhang även stå för lupus erythematosus. (förkortn.) Eng: pulmonary embolism. Se Lungemboli."
   },
   {
     "term": "Ledläpp",
-    "def": "ring av fiberbrosk i ledhinnan längs kanten av en ledyta",
-    "status": "stub",
-    "variants": [
-      "ledläppen"
-    ]
+    "def": "Ring av fiberbrosk längs kanten av en ledskål som fördjupar den och gör leden stabilare; finns t.ex. i axel- och höftleden. (subst., -en, pl. -ar) Eng: labrum. Lekman: broskkant runt ledskålen. Av led + läpp (jfr lat. labrum = kant, läpp). Se Labium (labrum)."
   },
   {
     "term": "Leiomyom",
-    "def": "godartad tumör som utgår från glatt muskulatur, till exempel i livmoderna (kallas då myom)",
-    "status": "stub",
-    "variants": [
-      "leiomyomen",
-      "leiomyomet"
-    ]
+    "def": "Godartad tumör utgången från glatt muskulatur; i livmodern kallas den myom. (subst., -et, pl. =) Eng: leiomyoma. Lekman: godartad knuta i glatt muskulatur. Av gr. leios = slät + mys = muskel + -om = tumör. Se Myom, Leiomyosarkom."
   },
   {
     "term": "Leiomyosarkom",
-    "def": "elakartad tumör som utgår från glatt muskulatur",
-    "status": "stub",
-    "variants": [
-      "leiomyosarkomen",
-      "leiomyosarkomet"
-    ]
+    "def": "Elakartad (malign) tumör utgången från glatt muskulatur. (subst., -et, pl. =) Eng: leiomyosarcoma. Av gr. leios = slät + mys = muskel + sarx = kött + -om = tumör. Se Sarkom, Leiomyom."
   },
   {
     "term": "Lens",
@@ -11022,92 +9855,47 @@
   },
   {
     "term": "Lentigo",
-    "def": "åldersfläck, välavgränsad flat hudfläck som är brunare än omgivningen på grund av ökad mängd melanin och lipofuscin",
-    "status": "stub"
+    "def": "Välavgränsad, platt, brunaktig hudfläck som beror på ökad mängd pigment (melanin); s.k. åldersfläck. (subst., pl. lentigines) Sv: åldersfläck. Eng: lentigo. Lekman: pigmentfläck eller åldersfläck i huden. Av lat. lens (gen. lentis) = lins, efter fläckens form."
   },
   {
     "term": "Lentikulär",
-    "def": "linsformad/som hör till ögats lins",
-    "status": "stub",
-    "variants": [
-      "lentikulära",
-      "lentikulärt"
-    ]
+    "def": "Linsformad; som har formen av eller hör till en lins, t.ex. ögats lins. (adj., -t, -a) Eng: lenticular. Av lat. lenticula = liten lins, av lens = lins. Se Lens."
   },
   {
     "term": "Lepra",
-    "def": "spetälska",
-    "status": "stub"
+    "def": "Spetälska; kronisk infektionssjukdom orsakad av bakterien Mycobacterium leprae, som angriper hud och perifera nerver. (subst., -n) Sv: spetälska. Eng: leprosy. Lekman: spetälska. Av gr. lepra = fjällande hudsjukdom, av lepein = fjälla."
   },
   {
     "term": "Leptosom",
-    "def": "kroppstyp som är smal och långsträckt, gänglig och med svagt utvecklad muskulatur och fettvävnad",
-    "status": "stub"
+    "def": "Smal, långsmal och späd kroppstyp med klent utvecklad muskulatur och fettväv. (adj./subst.) Eng: leptosomic. Lekman: smal och spinkig kroppsbyggnad. Av gr. leptos = tunn, smal + soma = kropp. Jfr Astenisk."
   },
   {
     "term": "Lesion",
-    "def": "skada",
-    "status": "stub",
-    "variants": [
-      "lesionen",
-      "lesionerna",
-      "lesioner"
-    ]
+    "def": "Skada eller sjuklig förändring i en vävnad eller ett organ. (subst., -en, pl. -er) Sv: skada, förändring. Eng: lesion. Lekman: en skada eller förändring i kroppen. Av lat. laesio = skada, av laedere = skada."
   },
   {
     "term": "Letal",
-    "def": "dödlig",
-    "status": "stub",
-    "variants": [
-      "letala",
-      "letalt"
-    ]
+    "def": "Dödlig; som leder till döden. (adj., -t, -a) Sv: dödlig. Eng: lethal. Av lat. letalis = dödlig, av letum = död. Se Letalitet."
   },
   {
     "term": "Letalitet",
-    "def": "dödlighet",
-    "status": "stub",
-    "variants": [
-      "letaliteten",
-      "letaliteterna",
-      "letaliteter"
-    ]
+    "def": "Dödlighet; andelen som avlider av en viss sjukdom, ofta uttryckt som andel av de insjuknade. (subst., -en) Sv: dödlighet. Eng: lethality. Av lat. letalis = dödlig. Se Letal. Jfr Mortalitet."
   },
   {
     "term": "Letargi",
-    "def": "sjukligt ihållande medvetslöshet eller dvala",
-    "status": "stub",
-    "variants": [
-      "letargin",
-      "letargierna",
-      "letargier"
-    ]
+    "def": "Sjuklig, ihållande dåsighet, dvala eller slöhet med nedsatt vakenhet och reaktionsförmåga. (subst., -n) Sv: dvala, slöhet. Eng: lethargy. Lekman: onormal dvala eller slöhet. Av gr. lethe = glömska + argos = overksam. Se Letargisk."
   },
   {
     "term": "Letargisk",
-    "def": "sömndrucken, sömnsjuk, försjunken i dvala",
-    "status": "stub",
-    "variants": [
-      "letargiska"
-    ]
+    "def": "Slö, dåsig, försjunken i dvala; som präglas av letargi. (adj., -t, -a) Sv: dvalliknande, slö. Eng: lethargic. Se Letargi."
   },
   {
     "term": "Leukemi",
-    "def": "blodcancer, elakartade blodsjukdomar med störd utmognad och ökad bildning av vita blodkroppar (leukocyter)",
-    "status": "stub",
-    "variants": [
-      "leukemin",
-      "leukemierna",
-      "leukemier"
-    ]
+    "def": "Blodcancer; en grupp elakartade sjukdomar i den blodbildande vävnaden med okontrollerad nybildning av omogna vita blodkroppar. Indelas i akut respektive kronisk samt myeloisk respektive lymfatisk form. (subst., -n, pl. -er) Sv: blodcancer. Eng: leukaemia. Lekman: cancer i de vita blodkropparna. Av gr. leukos = vit + haima = blod. Se Leukocyt, Lymfatisk leukemi."
   },
   {
     "term": "Leukemoid",
-    "def": "leukemiliknande (men ej orsakad av leukemiska förändringar i den blodbildande vävnaden)",
-    "status": "stub",
-    "variants": [
-      "leukemoida"
-    ]
+    "def": "Leukemiliknande; om en kraftig ökning av vita blodkroppar (leukemoid reaktion) som liknar leukemi men beror på t.ex. svår infektion och inte på blodcancer. (adj., -t, -a) Eng: leukaemoid. Av gr. leukos = vit + haima = blod + -oid = liknande. Se Leukemi, Leukocytos."
   },
   {
     "term": "Leukocyt",
@@ -11115,37 +9903,23 @@
   },
   {
     "term": "Leukocytisk",
-    "def": "som tillhör de vita blodkropparna",
-    "status": "stub",
-    "variants": [
-      "leukocytiska"
-    ]
+    "def": "Som hör till eller utgörs av vita blodkroppar (leukocyter). (adj., -t, -a) Eng: leukocytic. Av gr. leukos = vit + kytos = cell. Se Leukocyt."
   },
   {
     "term": "Leukocytos",
-    "def": "ökat antal vita blodkroppar",
-    "status": "stub",
-    "variants": [
-      "leukocytosen"
-    ]
+    "def": "Ökat antal vita blodkroppar (leukocyter) i blodet, vanligen som reaktion på infektion eller inflammation. (subst., -en) Eng: leukocytosis. Lekman: förhöjt antal vita blodkroppar. Av gr. leukos = vit + kytos = cell + -os = tillstånd. Se Leukocyt. Jfr Leukopeni."
   },
   {
     "term": "Leukokori",
-    "def": "vit/gråvit pupill",
-    "status": "stub"
+    "def": "Vit eller gråvit reflex i pupillen i stället för den normala röda; ett varningstecken som hos barn kan tyda på t.ex. starr eller näthinnetumör (retinoblastom). (subst., -n) Sv: vit pupillreflex. Eng: leukocoria. Lekman: vit pupill. Av gr. leukos = vit + kore = pupill."
   },
   {
     "term": "Leukopeni",
-    "def": "minskat antal vita blodkroppar",
-    "status": "stub",
-    "variants": [
-      "leukopenin"
-    ]
+    "def": "Minskat antal vita blodkroppar (leukocyter) i blodet, vilket ökar känsligheten för infektioner. (subst., -n) Eng: leukopenia. Lekman: för få vita blodkroppar. Av gr. leukos = vit + penia = brist. Se Leukocyt. Jfr Leukocytos."
   },
   {
     "term": "Leukoplaki",
-    "def": "vit permanent slemhinneförändring som uppstår genom att epitelet på till exempel munnens slemhinna förtjockas",
-    "status": "stub"
+    "def": "Vit, inte avskrapbar slemhinneförändring som uppstår genom förtjockning av epitelet, t.ex. i munnen; betraktas som ett möjligt förstadium till cancer. (subst., -n, pl. -er) Eng: leukoplakia. Lekman: vit fläck på slemhinnan som inte går att skrapa bort. Av gr. leukos = vit + plax (plakos) = platta, fält."
   },
   {
     "term": "Levator",
@@ -11153,21 +9927,15 @@
   },
   {
     "term": "Levercirros",
-    "def": "skrumplever",
-    "status": "stub",
-    "variants": [
-      "levercirrosen"
-    ]
+    "def": "Skrumplever; kronisk, irreversibel sjukdom där leverns vävnad ersätts av bindväv (ärr) och knutor med försämrad leverfunktion. (subst., -en) Sv: skrumplever. Eng: liver cirrhosis. Lekman: skrumplever. Av lever + gr. kirrhos = gulröd (leverns färg) + -os = tillstånd. Se Cirros."
   },
   {
     "term": "LH",
-    "def": "luteiniserande hormon (LH), könshormon från hypofysen som deltar i styrningen av menstruationscykeln genom att påverka produktionen av östrogen och progesteron i äggstockar och binjurar",
-    "status": "stub"
+    "def": "Luteiniserande hormon; könshormon från hypofysens framlob som styr menstruationscykeln, utlöser ägglossningen och stimulerar bildningen av könshormoner i äggstockar och testiklar. (förkortn.) Eng: luteinising hormone. Se Luteiniserande, Hypofys."
   },
   {
     "term": "Lhermittes tecken",
-    "def": "känslan av att det går en elektrisk ström längs ryggraden när huvudet böjs framåt, kan uppträda vid sjukdomar i CNS",
-    "status": "stub"
+    "def": "Känsla av elektrisk stöt som strålar nedför ryggen och ut i armar eller ben när huvudet böjs framåt; tecken på påverkan i halsryggmärgen, ses bl.a. vid multipel skleros. (egennamn) Eng: Lhermitte's sign. Lekman: en elstöt längs ryggen när man böjer huvudet framåt. Efter den franske neurologen Jean Lhermitte."
   },
   {
     "term": "Libere",
@@ -11179,8 +9947,7 @@
   },
   {
     "term": "Libido",
-    "def": "sexualdrift",
-    "status": "stub"
+    "def": "Sexualdrift, sexuell lust. (subst., -n) Sv: sexlust, könsdrift. Eng: libido. Lekman: sexlust. Av lat. libido = begär, lust."
   },
   {
     "term": "Lien",
@@ -11188,25 +9955,15 @@
   },
   {
     "term": "Lienal",
-    "def": "som har med mjälten att göra",
-    "status": "stub",
-    "variants": [
-      "lienala",
-      "lienalt"
-    ]
+    "def": "Som har med mjälten (lien) att göra. (adj., -t, -a) Sv: mjält-. Eng: lienal. Av lat. lien = mjälte. Se Lien."
   },
   {
     "term": "Lienalis",
     "def": "Som hör till mjälten; t.ex. arteria lienalis (splenalis). (adj.) Sv: lienal. Eng: lienal, splenic. Av lat. lien = mjälte."
   },
   {
-    "term": "Ligamenten",
-    "def": "ledband",
-    "status": "stub",
-    "variants": [
-      "ligament",
-      "ligamentet"
-    ]
+    "term": "Ligament",
+    "def": "Ledband; ett band av stark bindväv som förbinder skelettdelar och stabiliserar leder. (subst., -et, pl. =) Sv: ledband. Eng: ligament. Lekman: stadigt band som håller ihop leder. Av lat. ligamentum = band, av ligare = binda. Se Ligamentum."
   },
   {
     "term": "Ligamentum",
@@ -11214,68 +9971,31 @@
   },
   {
     "term": "Ligatur",
-    "def": "underbindning, tillknytning av blodkärl vid kirurgiska ingrepp för att förhindra blödning, betecknar också tråden som används till detta",
-    "status": "stub",
-    "variants": [
-      "ligaturen",
-      "ligaturerna",
-      "ligaturer"
-    ]
+    "def": "Underbindning; tillknytning av ett blodkärl (eller annan struktur) med en tråd för att stoppa eller förebygga blödning vid operation. Betecknar även själva tråden. (subst., -en, pl. -er) Eng: ligature. Lekman: tråd som knyts om ett blodkärl. Av lat. ligatura = bindning, av ligare = binda. Se Ligera."
   },
   {
     "term": "Ligera",
-    "def": "underbinda, sluta ett blodkärl genom att knyta ihop det med en tråd",
-    "status": "stub",
-    "variants": [
-      "ligerar",
-      "ligerat",
-      "ligerade"
-    ]
-  },
-  {
-    "term": "Ligering",
-    "def": "underbindning, slutning av ett blodkärl genom att knyta ihop det med en tråd",
-    "status": "stub",
-    "variants": [
-      "ligeringen"
-    ]
+    "def": "Underbinda; sluta ett blodkärl genom att knyta ihop det med en tråd. (verb, -r, -de, -t; subst. ligering = själva underbindningen) Eng: ligate. Av lat. ligare = binda. Se Ligatur."
   },
   {
     "term": "Liggsår",
-    "def": "trycksår, dekubitalsår, sår som uppkommer vid långvarigt tryck av huden mot underlaget så att blodcirkulationen minskas och vävnadsdöd uppstår, uppkommer oftast där skelettdelar ligger ytligt; hos liggande patienter till exempel i ryggslutet, över sittknölarna samt på hälarna",
-    "status": "stub"
+    "def": "Trycksår (dekubitalsår); hud- och vävnadsskada som uppstår vid långvarigt tryck mot underlaget så att blodcirkulationen stryps och vävnaden dör. Uppträder oftast över utskjutande skelettdelar (korsben, sittben, hälar) hos sängliggande. (subst., -et, pl. =) Sv: trycksår, dekubitalsår. Eng: pressure ulcer. Lekman: sår av att ligga eller sitta för länge i samma läge."
   },
   {
     "term": "Likelihood ratio",
-    "def": "Värdet av ett diagnostiskt test. Positivt likelihood ratio LR(+) är sensitiviteten dividerad med (1 minus specificiteten). Ju mer LR(+) överstiger 1, desto större sannolikhet för att testutfallet verkligen indikerar sjukdom. Positivt likelihood ratio LR(–) är (1 minus sensitiviteten) dividerat med specificiteten. Ju mer LR(–) understiger 1 desto större sannolikhet för att testutfallet utesluter sjukdom. Diagnostiska test med LR-värden nära 1 har ringa värde",
-    "status": "stub"
+    "def": "Sannolikhetskvot (LR); mått på hur mycket ett testresultat förändrar sannolikheten för sjukdom. Positivt likelihood ratio, LR(+), är sensitiviteten delad med (1 minus specificiteten) – ju mer det överstiger 1, desto starkare talar ett positivt test för sjukdom. Negativt likelihood ratio, LR(–), är (1 minus sensitiviteten) delat med specificiteten – ju mer det understiger 1, desto starkare talar ett negativt test mot sjukdom. Värden nära 1 har litet diagnostiskt värde. (subst.) Eng: likelihood ratio. Se LR, Sensitivitet, Specificitet."
   },
   {
     "term": "Likenifiering",
-    "def": "förtjockning av hud där såväl epitel som bindväv deltar i förändringen. Kronisk rivning framkallad av långvarig klåda ger lichenifiering, som därför kan förekomma vid kliande hudsjukdomar",
-    "status": "stub",
-    "variants": [
-      "lichenifiering",
-      "lichenifieringen",
-      "lichenifierat",
-      "lichenifierade",
-      "likenifieringen",
-      "likeniserat",
-      "likeniserade"
-    ]
+    "def": "Förtjockning och förgrövning av huden med accentuerad hudteckning, orsakad av långvarig rivning vid kronisk klåda; ses vid t.ex. eksem. (subst., -en; även stavat lichenifiering) Eng: lichenification. Lekman: förtjockad, läderlik hud av långvarigt kliande. Av gr. leichen = lav (lichen) + lat. facere = göra."
   },
   {
     "term": "Likvorré",
-    "def": "likvorflöde, sipprande utflöde av hjärn- och ryggmärgsvätska, ofta ur ena näsborren men ibland till örat, till följd av fraktur i främre delen av skallbasen och samtidig skada på hjärnhinnorna",
-    "status": "stub",
-    "variants": [
-      "liquorhe"
-    ]
+    "def": "Läckage av hjärn- och ryggmärgsvätska (likvor), oftast ur näsan eller örat, till följd av skallbasfraktur med skada på hjärnhinnorna. (subst., -n; även liquorré) Eng: CSF leak. Lekman: läckage av hjärnvätska, ofta ur näsan. Av lat. liquor = vätska + gr. rhoia = flöde. Se Liquor."
   },
   {
     "term": "Limbiska systemet",
-    "def": "sammansatt system av nervceller som utgör en utvecklingshistoriskt äldre del av storhjärnan och hjärnbarken, utgör ett överordnat centrum för utvärdering av signaler från kroppen och från omvärlden",
-    "status": "stub"
+    "def": "Grupp av sammankopplade strukturer djupt i hjärnan (bl.a. amygdala, hippocampus och gördelvindlingen) som styr känslor, motivation, minne och vissa kroppsfunktioner. (subst., best. form) Eng: limbic system. Lekman: hjärnans känslocentrum. Av lat. limbus = kant, bård (strukturerna kantar hjärnbalken). Se Limbus."
   },
   {
     "term": "Limbus",
@@ -11291,12 +10011,7 @@
   },
   {
     "term": "Lingual",
-    "def": "som har med tungan att göra",
-    "status": "stub",
-    "variants": [
-      "linguala",
-      "lingualt"
-    ]
+    "def": "Som har med tungan att göra; inom tandvården den yta av en tand som vetter mot tungan. (adj., -t, -a) Eng: lingual. Av lat. lingua = tunga. Se Lingua, Lingualis."
   },
   {
     "term": "Lingualis",
@@ -11308,68 +10023,31 @@
   },
   {
     "term": "Liniment",
-    "def": "flytande läkemedel för utvärtes bruk",
-    "status": "stub",
-    "variants": [
-      "linimenten",
-      "linimentet"
-    ]
+    "def": "Flytande, ofta oljigt läkemedel för utvärtes bruk som gnids in i huden. (subst., -et, pl. =) Sv: ingnidningsmedel. Eng: liniment. Lekman: en inrivningsvätska för huden. Av lat. linimentum, av linere = smörja."
   },
   {
     "term": "Linjär",
-    "def": "rak",
-    "status": "stub",
-    "variants": [
-      "linjära",
-      "linjärt"
-    ]
+    "def": "Rätlinjig; som följer en rät linje eller förlöper i en rak linje. (adj., -t, -a) Sv: rak, rätlinjig. Eng: linear. Av lat. linea = linje. Se Linea."
   },
   {
     "term": "Lipas",
-    "def": "enzym som bryter ner fett",
-    "status": "stub",
-    "variants": [
-      "lipasen",
-      "lipaserna",
-      "lipaser"
-    ]
+    "def": "Enzym som bryter ned fett (triglycerider) till fettsyror och glycerol; bildas bl.a. i bukspottkörteln, och förhöjt lipas i blodet ses vid bukspottkörtelinflammation. (subst., -et el. -en) Eng: lipase. Lekman: enzymet som bryter ned fett. Av gr. lipos = fett + enzymändelsen -as. Se Pankreatit."
   },
   {
     "term": "Lipid",
-    "def": "organiskt ämne som är olösligt i vatten men lösligt i organiska lösningsmedel, till lipiderna hör bland annat fetter och vaxer",
-    "status": "stub",
-    "variants": [
-      "lipiderna",
-      "lipider",
-      "lipiden"
-    ]
+    "def": "Fettämne; samlingsnamn för organiska ämnen som är olösliga i vatten men lösliga i fettlösningsmedel, t.ex. fetter (triglycerider), kolesterol och vaxer. (subst., -en, pl. -er) Sv: fettämne. Eng: lipid. Av gr. lipos = fett. Se Lipoprotein."
   },
   {
     "term": "Lipodystrofi",
-    "def": "samlingsterm för lokaliserad eller generell förändring av fettvävnad, innefattande lipatrofi, fettsvulst (lipom) samt insulin-lipodystrofi (de lokala förändringar i fettvävnad som kan uppträda på platsen för insulininjektioner vid diabetes)",
-    "status": "stub",
-    "variants": [
-      "lipodystrofin"
-    ]
+    "def": "Onormal fördelning eller förändring av kroppens fettväv; kan vara lokal eller generell och innefattar både förlust (lipatrofi) och ansamling av fett, t.ex. vid upprepade insulininjektioner på samma ställe. (subst., -n) Eng: lipodystrophy. Av gr. lipos = fett + dys- = dålig, störd + trophe = näring. Se Lipom."
   },
   {
     "term": "Lipom",
-    "def": "godartad tumör som utgår från fettvävnad",
-    "status": "stub",
-    "variants": [
-      "lipomen",
-      "lipomet"
-    ]
+    "def": "Godartad (benign) tumör utgången från fettvävnad; en mjuk, ofta förskjutbar knuta under huden. (subst., -et, pl. =) Eng: lipoma. Lekman: godartad fettknöl under huden. Av gr. lipos = fett + -om = tumör. Se Lipodystrofi."
   },
   {
     "term": "Lipoprotein",
-    "def": "partiklar med uppgift att transportera fettämnen, lipider, i blodet",
-    "status": "stub",
-    "variants": [
-      "lipoproteinerna",
-      "lipoproteiner",
-      "lipoproteinet"
-    ]
+    "def": "Partikel av fett och protein som transporterar olösliga fettämnen (lipider) i blodet; indelas efter täthet i bl.a. LDL och HDL. (subst., -et, pl. -er) Eng: lipoprotein. Av gr. lipos = fett + protein. Se Lipid, LDL-kolesterol."
   },
   {
     "term": "Liquid",
@@ -11377,8 +10055,7 @@
   },
   {
     "term": "Liquor",
-    "def": "vätska",
-    "status": "stub"
+    "def": "Vätska; i medicinskt språk oftast liquor cerebrospinalis, dvs. hjärn- och ryggmärgsvätskan. (subst.) Sv: vätska. Eng: liquor. Av lat. liquor = vätska. Se Liquor cerebrospinalis, Likvorré."
   },
   {
     "term": "Liquor cerebrospinalis",
@@ -11386,13 +10063,7 @@
   },
   {
     "term": "Litotomi",
-    "def": "detsamma som litektomi; operation för att avlägsna sten",
-    "status": "stub",
-    "variants": [
-      "litotomin",
-      "litotomierna",
-      "litotomier"
-    ]
+    "def": "Operativt avlägsnande av sten (konkrement), t.ex. urinblåse- eller njursten, genom ett snitt. (subst., -n, pl. -er) Sv: stenoperation. Eng: lithotomy. Av gr. lithos = sten + tome = snitt. Se Litotripsi, Litotomiläge."
   },
   {
     "term": "Litotomiläge",
@@ -11400,53 +10071,27 @@
   },
   {
     "term": "Litotripsi",
-    "def": "stenkrossning, främst i urinblåsan",
-    "status": "stub",
-    "variants": [
-      "litotripsin",
-      "litotripsierna",
-      "litotripsier"
-    ]
+    "def": "Krossning av sten (t.ex. njur- eller urinblåsesten) till små fragment som kan utsöndras, ofta med stötvågor utifrån. (subst., -n, pl. -er) Sv: stenkrossning. Eng: lithotripsy. Lekman: stenkrossning utan operation. Av gr. lithos = sten + tripsis = krossning. Se Litotomi."
   },
   {
     "term": "Livedo",
-    "def": "nätformad blåaktig missfärgning av huden som beror på blodstockning i hudens vener",
-    "status": "stub"
+    "def": "Nätformig, blåröd missfärgning av huden som beror på trög blodcirkulation i hudens småkärl. (subst.) Eng: livedo. Lekman: blåröd marmorering av huden. Av lat. livedo = blåaktig missfärgning, av livere = vara blåaktig."
   },
   {
     "term": "LMV",
-    "def": "Läkemedelsverket",
-    "status": "stub"
+    "def": "Läkemedelsverket; den svenska myndighet som ansvarar för godkännande och kontroll av läkemedel och medicintekniska produkter. (förkortn.) Eng: Swedish Medical Products Agency."
   },
   {
     "term": "LMWH",
-    "def": "low molekular weight heparin (heparing med låg molekylvikt)",
-    "status": "stub"
+    "def": "Lågmolekylärt heparin; en grupp blodförtunnande läkemedel (heparin med låg molekylvikt) som ges som injektion för att förebygga och behandla blodproppar. (förkortn.) Eng: low molecular weight heparin. Lekman: blodförtunnande spruta. Se Heparin."
   },
   {
     "term": "Lobektomi",
-    "def": "kirurgiskt ingrepp varvid en lob av ett organ, till exempel i lungan eller levern, avlägsnas",
-    "status": "stub",
-    "variants": [
-      "lobektomera",
-      "lobektomerar",
-      "lobektomering",
-      "lobektomerat",
-      "lobektomerade",
-      "lobektomin",
-      "lobektomierna",
-      "lobektomier"
-    ]
+    "def": "Kirurgiskt avlägsnande av en lob (avgränsad del) av ett organ, t.ex. en lunglob eller en leverlob. (subst., -n, pl. -er; verb lobektomera) Eng: lobectomy. Av gr. lobos = lob + ektome = bortskärande. Se Lobus, Lobotomi."
   },
   {
     "term": "Lobotomi",
-    "def": "neurokirurgisk operationsmetod för lindrande av ångest, vid till exempel schizofreni, samt av svåra smärttillstånd. Metoden innebär avskärning av storhjärnans nervbanor till och från pannloberna.",
-    "status": "stub",
-    "variants": [
-      "lobotomin",
-      "lobotomierna",
-      "lobotomier"
-    ]
+    "def": "Numera övergiven psykokirurgisk operation där nervbanorna till pannloben skars av i syfte att lindra svår ångest eller psykossjukdom. (subst., -n, pl. -er) Eng: lobotomy. Lekman: äldre hjärnoperation vid svår psykisk sjukdom. Av gr. lobos = lob + tome = snitt. Se Lobus."
   },
   {
     "term": "Lobulus",
@@ -11458,8 +10103,7 @@
   },
   {
     "term": "Loci",
-    "def": "områden, pluralform av locus",
-    "status": "stub"
+    "def": "Pluralform av locus; platser eller områden, t.ex. på en kromosom. (subst., lat. pl.) Eng: loci. Av lat. locus = plats. Se Locus."
   },
   {
     "term": "Locus",
@@ -11467,29 +10111,15 @@
   },
   {
     "term": "Logoped",
-    "def": "behandlar talfel",
-    "status": "stub",
-    "variants": [
-      "logopeden",
-      "logopederna",
-      "logopeder"
-    ]
+    "def": "Legitimerad vårdgivare som utreder och behandlar störningar i tal, språk, röst och sväljning. (subst., -en, pl. -er) Eng: speech and language therapist. Lekman: tal- och språkterapeut. Av gr. logos = ord, tal + paideia = fostran, undervisning. Se Logopedi."
   },
   {
     "term": "Logopedi",
-    "def": "yrkesbenämning på person som avlagt logopedexamen, det vill säga har behörighet att diagnostisera och behandla olika slag av språkstörningar samt röst- och talrubbningar",
-    "status": "stub",
-    "variants": [
-      "logopedin"
-    ]
+    "def": "Läran om och vården av störningar i tal, språk, röst och sväljning; logopedens verksamhetsområde. (subst., -n) Eng: speech and language therapy. Av gr. logos = ord, tal + paideia = fostran. Se Logoped."
   },
   {
     "term": "Lokomotorisk",
-    "def": "som gäller rörelseorganen",
-    "status": "stub",
-    "variants": [
-      "lokomotoriska"
-    ]
+    "def": "Som gäller förflyttning och rörelse; som hör till rörelseorganen. (adj., -t, -a) Eng: locomotor. Lekman: som har med kroppens rörelseförmåga att göra. Av lat. locus = plats + motor = rörare, av movere = röra."
   },
   {
     "term": "Longissimus",
@@ -11505,11 +10135,7 @@
   },
   {
     "term": "Lordos",
-    "def": "den normala krökningen av hals- och ländryggrad, ökad lordos i ländryggen ger svankrygg",
-    "status": "stub",
-    "variants": [
-      "lordosen"
-    ]
+    "def": "Den normala, framåtkonvexa krökningen av ryggraden i halsen och ländryggen; ökad ländlordos ger svankrygg. (subst., -en, pl. -er) Sv: svank. Eng: lordosis. Lekman: ryggens inåtsvank. Av gr. lordosis, av lordos = framåtböjd. Se Lordosis. Jfr Kyfos."
   },
   {
     "term": "Lordosis",
@@ -11517,54 +10143,31 @@
   },
   {
     "term": "LPK",
-    "def": "leukocytpartikelkoncentration, ett uttryck för antalet via blodkroppar (leukocyter) i blodet",
-    "status": "stub"
+    "def": "Leukocytpartikelkoncentration; laboratoriemått på antalet vita blodkroppar (leukocyter) per liter blod. (förkortn.) Eng: white blood cell count. Lekman: blodprov på antalet vita blodkroppar. Se Leukocyt, Leukocytos."
   },
   {
     "term": "LR",
-    "def": "\"likelihood ratio\", sannolikhetskvot. LR+ uttrycker risken för att ett givet test (eller nivå i ett test) förkommer hos en patient med det aktuella tillståndet (jämfört med hos en patient utan tillståndet). LR- uttrycker risken för att ett givet test (eller nivå i ett test) förkommer hos en patient utan det aktuella tillståndet.",
-    "status": "stub",
-    "variants": [
-      "LR-",
-      "LR+"
-    ]
+    "def": "Likelihood ratio (sannolikhetskvot); mått på hur mycket ett testresultat ändrar sannolikheten för sjukdom, där LR+ anger hur mycket ett positivt test talar för sjukdom och LR– hur mycket ett negativt test talar emot. (förkortn.) Eng: likelihood ratio. Se Likelihood ratio."
   },
   {
     "term": "Lues",
-    "def": "syfilis",
-    "status": "stub"
+    "def": "Syfilis; kronisk sexuellt överförbar infektion orsakad av bakterien Treponema pallidum. (subst., -en) Sv: syfilis. Eng: lues. Av lat. lues = farsot, pest. Se Luetisk."
   },
   {
     "term": "Luetisk",
-    "def": "syfilitisk",
-    "status": "stub",
-    "variants": [
-      "luetiska"
-    ]
+    "def": "Som beror på eller hör samman med syfilis (lues); syfilitisk. (adj., -t, -a) Eng: luetic. Se Lues."
   },
   {
     "term": "Luftemboli",
-    "def": "luftbubblor i blodet",
-    "status": "stub",
-    "variants": [
-      "luftembolin",
-      "luftembolierna",
-      "luftembolier"
-    ]
+    "def": "Luftbubblor som kommit in i blodbanan och kan blockera kärl; kan uppstå vid t.ex. kärlskada, kirurgi eller dykning. (subst., -n, pl. -er) Eng: air embolism. Lekman: luftbubbla som täpper till ett blodkärl. Av luft + gr. embolos = propp. Se Emboli."
   },
   {
     "term": "Lumbago",
-    "def": "smärtor i ländryggen",
-    "status": "stub"
+    "def": "Akut, lokaliserad smärta i ländryggen; ryggskott. (subst.) Sv: ryggskott. Eng: lumbago. Lekman: ryggskott. Av lat. lumbus = länd. Se Lumbal."
   },
   {
     "term": "Lumbal",
-    "def": "i ländryggen",
-    "status": "stub",
-    "variants": [
-      "lumbala",
-      "lumbalt"
-    ]
+    "def": "Som hör till ländryggen, mellan revbenen och korsbenet. (adj., -t, -a) Sv: länd-. Eng: lumbar. Av lat. lumbus = länd. Se Lumbalis, Lumbalpunktion."
   },
   {
     "term": "Lumbalis",
@@ -11572,22 +10175,11 @@
   },
   {
     "term": "Lumbalpunktion",
-    "def": "instick i ryggmärgskanalen genom huden och mellan två kotor i ländryggen, antingen för att suga ut ryggmärgsvätska eller för att ge bedövning",
-    "status": "stub",
-    "variants": [
-      "lumbalpunktionen",
-      "lumbalpunktionerna",
-      "lumbalpunktioner"
-    ]
+    "def": "Instick med nål i ryggmärgskanalen mellan två ländkotor för att tappa ut ryggmärgsvätska (likvor) för analys eller ge läkemedel och bedövning. (subst., -en, pl. -er) Sv: ryggmärgsprov, LP. Eng: lumbar puncture. Lekman: ryggvätskeprov. Av lat. lumbus = länd + punctio = stick. Se Lumbal, Liquor."
   },
   {
     "term": "Lumbosakral",
-    "def": "som gäller ländrygg och korsrygg",
-    "status": "stub",
-    "variants": [
-      "lumbosakrala",
-      "lumbosakralt"
-    ]
+    "def": "Som gäller övergången mellan ländrygg (lumbal) och korsben (sakrum). (adj., -t, -a) Eng: lumbosacral. Av lat. lumbus = länd + os sacrum = korsben. Se Lumbal, Sakral."
   },
   {
     "term": "Lumbricalis",
@@ -11611,41 +10203,19 @@
   },
   {
     "term": "Lungemboli",
-    "def": "blodpropp i lungan",
-    "status": "stub",
-    "variants": [
-      "lungembolin",
-      "lungembolierna",
-      "lungembolier"
-    ]
+    "def": "Blodpropp i lungans artärer, oftast en propp som lossnat från en ventrombos i benen och förts till lungan; kan ge andnöd, bröstsmärta och vara livshotande. (subst., -n, pl. -er) Sv: lungpropp. Eng: pulmonary embolism. Lekman: blodpropp i lungan. Av lunga + gr. embolos = propp. Se Emboli, LE."
   },
   {
     "term": "Lunginfarkt",
-    "def": "område i lungorna som har mist blodförsörjningen på grund av blodpropp",
-    "status": "stub",
-    "variants": [
-      "lunginfarkterna",
-      "lunginfarkter",
-      "lunginfarkten"
-    ]
+    "def": "Vävnadsdöd i ett lungavsnitt som förlorat sin blodförsörjning, oftast till följd av lungemboli. (subst., -en, pl. -er) Eng: pulmonary infarction. Lekman: död lungvävnad efter en blodpropp. Se Lungemboli, Infarkt."
   },
   {
     "term": "Lunginfiltrat",
-    "def": "på röntgenbild synliga förtätningar i lungvävnad vilka utgörs av sjukliga förändringar",
-    "status": "stub",
-    "variants": [
-      "lunginfiltraten",
-      "lunginfiltratet"
-    ]
+    "def": "Förtätning i lungvävnaden som syns på röntgen och utgörs av sjukliga förändringar, t.ex. vätska, var eller celler vid lunginflammation. (subst., -et, pl. =) Eng: pulmonary infiltrate. Lekman: en förtätning i lungan på röntgen. Se Infiltrat."
   },
   {
     "term": "Lungödem",
-    "def": "kraftigt ökad mängd vätska i lungorna, orsakad av svårt sviktande funktion hos hjärtats vänstra kammare",
-    "status": "stub",
-    "variants": [
-      "lungödemen",
-      "lungödemet"
-    ]
+    "def": "Onormal ansamling av vätska i lungorna, oftast orsakad av sviktande pumpfunktion i hjärtats vänsterkammare; ger svår andnöd. (subst., -et) Eng: pulmonary oedema. Lekman: vätska i lungorna. Av lunga + gr. oidema = svullnad. Se Ödem."
   },
   {
     "term": "Lunula",
@@ -11653,17 +10223,11 @@
   },
   {
     "term": "Luteal",
-    "def": "som har med gulkroppen i äggstockarna att göra",
-    "status": "stub",
-    "variants": [
-      "luteala",
-      "lutealt"
-    ]
+    "def": "Som hör till gulkroppen (corpus luteum) i äggstocken; lutealfasen är menstruationscykelns andra hälft efter ägglossningen. (adj., -t, -a) Eng: luteal. Av lat. luteus = gul. Se Luteiniserande, Luteus."
   },
   {
     "term": "Luteiniserande",
-    "def": "luteiniserande hormon (LH), könskörtelpåverkande hormon från hypofysen som befrämjar ägglossningen och bildningen av gulkroppar i äggstockarna",
-    "status": "stub"
+    "def": "Som befrämjar bildning av gulkropp; särskilt i luteiniserande hormon (LH), ett hypofyshormon som utlöser ägglossning och stimulerar gulkroppens och könshormonernas bildning. (adj.) Eng: luteinising. Av lat. luteus = gul. Se LH, Luteal."
   },
   {
     "term": "Luteus",
@@ -11671,8 +10235,7 @@
   },
   {
     "term": "LUTS",
-    "def": "Eng. lower urinary tract symtoms. Symtom kan tyda på störd funktion i urinblåsan och/eller urinröret",
-    "status": "stub"
+    "def": "Symtom från de nedre urinvägarna (urinblåsa och urinrör), t.ex. trängningar, täta trängningar, svag stråle och ofullständig tömning; vanligt vid bl.a. godartad prostataförstoring. (förkortn.) Eng: lower urinary tract symptoms. Lekman: besvär med vattenkastningen."
   },
   {
     "term": "Luxatio",
@@ -11680,109 +10243,51 @@
   },
   {
     "term": "Luxation",
-    "def": "urledvridning",
-    "status": "stub",
-    "variants": [
-      "luxationen",
-      "luxationerna",
-      "luxationer"
-    ]
+    "def": "Urledvridning; ledytorna har förskjutits ur sitt normala läge så att leden gått ur led. (subst., -en, pl. -er) Sv: urledvridning. Eng: luxation. Lekman: leden har gått ur led. Av lat. luxatio, av luxare = vrida ur led. Se Luxatio. Jfr Subluxation."
   },
   {
     "term": "Lymfadenit",
-    "def": "inflammation i lymfkörtel",
-    "status": "stub",
-    "variants": [
-      "lymfadeniten",
-      "lymfadeniterna",
-      "lymfadeniter"
-    ]
+    "def": "Inflammation i en eller flera lymfkörtlar, ofta till följd av infektion. (subst., -en, pl. -er) Eng: lymphadenitis. Lekman: inflammation i en lymfkörtel. Av lat. lympha = lymfa + gr. aden = körtel + -itis = inflammation. Se Lymfadenopati."
   },
   {
     "term": "Lymfadenopati",
-    "def": "sjukligt förändrad lymfkörtel, betecknar ofta förstorade lymfkörtlar vid infektioner och cancer",
-    "status": "stub",
-    "variants": [
-      "lymfadenopatin",
-      "lymfadenopatierna",
-      "lymfadenopatier"
-    ]
+    "def": "Sjuklig förändring eller (vanligen) förstoring av lymfkörtlar; ses vid infektioner, inflammation och cancer. (subst., -n, pl. -er) Sv: förstorade lymfkörtlar. Eng: lymphadenopathy. Lekman: svullna lymfkörtlar. Av lat. lympha = lymfa + gr. aden = körtel + pathos = sjukdom. Se Lymfadenit."
   },
   {
     "term": "Lymfangit",
-    "def": "inflammation i lymfkärl",
-    "status": "stub",
-    "variants": [
-      "lymfangiten",
-      "lymfangiterna",
-      "lymfangiter"
-    ]
+    "def": "Inflammation i lymfkärl, som kan synas som en röd strimma i huden från ett infekterat sår mot närmaste lymfkörtlar. (subst., -en, pl. -er) Eng: lymphangitis. Lekman: inflammation i ett lymfkärl. Av lat. lympha = lymfa + gr. angeion = kärl + -itis = inflammation."
   },
   {
     "term": "Lymfatisk",
-    "def": "som har med lymfvävnad att göra",
-    "status": "stub",
-    "variants": [
-      "lymfatiska"
-    ]
+    "def": "Som hör till lymfan, lymfkärlen eller lymfvävnaden. (adj., -t, -a) Eng: lymphatic. Av lat. lympha = lymfa. Se Lympha, Lymphaticus."
   },
   {
     "term": "Lymfatisk leukemi",
-    "def": "blodcancer som härrör från lymfceller (lymfoblaster)",
-    "status": "stub"
+    "def": "Blodcancer som utgår från lymfcellernas förstadier (lymfoblaster eller lymfocyter); förekommer i akut (ALL) och kronisk (KLL) form. (subst.) Eng: lymphocytic leukaemia. Se Leukemi, Lymfocyt."
   },
   {
     "term": "Lymfocyt",
-    "def": "vit blodkropp, utgör 20–50 % av alla vita blodkroppar, är särskilt aktiva vid kroniska infektioner",
-    "status": "stub",
-    "variants": [
-      "lymfocyten",
-      "lymfocyterna",
-      "lymfocyter"
-    ]
+    "def": "Typ av vit blodkropp som är central i immunförsvaret; indelas i B-, T- och NK-celler och utgör 20–50 % av blodets vita blodkroppar. (subst., -en, pl. -er) Eng: lymphocyte. Lekman: en immunförsvarscell i blodet. Av lat. lympha = lymfa + gr. kytos = cell. Se Leukocyt, Lymfocytisk."
   },
   {
     "term": "Lymfocytisk",
-    "def": "som tillhör lymfocyterna (en typ av vita blodkroppar)",
-    "status": "stub",
-    "variants": [
-      "lymfocytiska"
-    ]
+    "def": "Som hör till eller domineras av lymfocyter (en typ av vita blodkroppar). (adj., -t, -a) Eng: lymphocytic. Se Lymfocyt."
   },
   {
     "term": "Lymfödem",
-    "def": "svullnad i en arm eller ett ben på grund av stopp i lymfkärlen så att vätska och lymfa ansamlas",
-    "status": "stub",
-    "variants": [
-      "lymfödemet"
-    ]
+    "def": "Svullnad, oftast i en arm eller ett ben, som beror på bristande dränage i lymfkärlen så att lymfvätska ansamlas i vävnaden. (subst., -et) Eng: lymphoedema. Lekman: svullnad av stockad lymfvätska. Av lat. lympha = lymfa + gr. oidema = svullnad. Se Ödem."
   },
   {
     "term": "Lymfogen",
-    "def": "som gäller lymfkärl och lymfvävnad",
-    "status": "stub",
-    "variants": [
-      "lymfogena",
-      "lymfogent"
-    ]
+    "def": "Som sprids via eller härrör från lymfkärl och lymfvävnad; t.ex. lymfogen spridning av cancer. (adj., -t, -a) Eng: lymphogenous. Av lat. lympha = lymfa + gr. -genes = som ger upphov till. Se Lympha."
   },
   {
     "term": "Lymfom",
-    "def": "elakartad tumör med ursprung i lymfvävnad",
-    "status": "stub",
-    "variants": [
-      "lymfomen",
-      "lymfomet"
-    ]
+    "def": "Elakartad (malign) tumör som utgår från lymfvävnadens celler; indelas främst i Hodgkins lymfom och non-Hodgkin-lymfom. (subst., -et, pl. =) Sv: lymfkörtelcancer. Eng: lymphoma. Lekman: cancer i lymfsystemet. Av lat. lympha = lymfa + gr. -om = tumör. Se Lymfosarkom."
   },
   {
     "term": "Lymfosarkom",
-    "def": "elakartad tumör som utgår från lymfvävnad",
-    "status": "stub",
-    "variants": [
-      "lymfosarkomen",
-      "lymfosarkomet"
-    ]
+    "def": "Äldre benämning på elakartad tumör som utgår från lymfvävnad; motsvarar i stort sett non-Hodgkin-lymfom. (subst., -et, pl. =) Eng: lymphosarcoma. Av lat. lympha = lymfa + gr. sarx = kött + -om = tumör. Se Lymfom."
   },
   {
     "term": "Lympha",
@@ -11798,19 +10303,11 @@
   },
   {
     "term": "Lys",
-    "def": "upplösning av celler, vävnader eller molekyler, till exempel hemolys (sönderfall av röda blodkroppar)",
-    "status": "stub",
-    "variants": [
-      "lysen"
-    ]
+    "def": "Upplösning eller sönderfall av celler, vävnad eller molekyler, t.ex. hemolys (sönderfall av röda blodkroppar). (subst., -en) Eng: lysis. Av gr. lysis = upplösning. Se Lytisk, Hemolys."
   },
   {
     "term": "Lytisk",
-    "def": "något som har med upplösning, sönderfall att göra",
-    "status": "stub",
-    "variants": [
-      "lytiska"
-    ]
+    "def": "Som har med upplösning eller sönderfall (lys) att göra; t.ex. lytisk skelettförändring där bensubstans bryts ned. (adj., -t, -a) Eng: lytic. Av gr. lysis = upplösning. Se Lys."
   },
   {
     "term": "Maceratio",

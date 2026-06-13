@@ -1,5 +1,26 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.6
+- **Medicinska ordlistan: bokstaven L berikad** till fullt husformat. Synliga termer: 2 973 → **3 098** (125 L-poster berikade, 0 stubbar kvar).
+  - **Sammanslagningar (5 stubbar borttagna):** stavningsdubbletten Lacrimal → Lakrimal (även-stavning); operationsverbet Laryngektomera → Laryngektomi; Ligering → Ligera (verb/verbalsubst.); Laxantia och Laxerande → Laxans (lat. plural resp. adj.).
+  - **Rubriker rättade:** Labia major/minor → **Labia majora/minora** (korrekt latinsk pluralform); Ligamenten → **Ligament** (grundform i stället för bestämd plural).
+  - **Faktarättning i importtexten:** Logoped/Logopedi (källtexten hade kastat om person och ämne – nu logoped = vårdgivaren, logopedi = ämnet/läran).
+  - Diagnostiska statistikbegrepp (Likelihood ratio, LR) bevarade med formelförklaring; LR korsrefererat mot Likelihood ratio.
+- APP_VERSION/VERSION → 0.8.6 (cachebuster app.js → 0.8.6). Highscore-datan orörd.
+
+## 0.8.5
+- **Medicinska ordlistan: bokstaven K berikad** till fullt husformat. Synliga termer: 2 807 → **2 973** (166 K-poster berikade, 0 stubbar kvar).
+  - **c/k-dubbletter:** 28 k-stubbar togs bort till förmån för redan publicerade c-former (Katarakt→Catarakt, Karcinom→Carcinom, Kolit→Colit, Kolon→Colon, Konjunktivit→Conjunktivit, Koronar→Coronar, Kontusion→Contusion, Kornea→Cornea m.fl.). Sex c-poster som saknade k-formen kompletterades med den (Carpus, Coccyx, Coccygodyni, Choledochus, Cornea, Coitus) så att k-stavningen förblir sökbar.
+  - **Sammanslagningar:** -ös-adjektiv infogade i grundordet (karcinomatös→Karcinomatos, kariös→Karies, kavernös→Kavern, komatös→Koma); operationsverben kolecystektomera/kolektomera infogade i substantiven (Kolecystektomi/Kolektomi); stavningsdubbletten Koledokolithiasis borttagen (täcks av Choledocholitiasis).
+  - **Faktarättningar i importtexten:** Karbunkel (sammanflytande hårsäcksbölder, ej akne), Kloasma (melasma/graviditetsmask, ej leverfläck), Kommensal (skadar inte värden, ej snyltare), Kataton (även orörlighet/stelhet, ej bara oro).
+  - Statistik-/forskningsbegrepp (Konfidensintervall, Kontrollerad studie, Klusterrandomisering, Klinisk signifikant) ramade som forskningsbegrepp.
+- APP_VERSION/VERSION → 0.8.5 (cachebuster app.js → 0.8.5). Highscore-datan orörd.
+
+## 0.8.4
+- **Medicinska ordlistan: bokstaven J berikad** till fullt husformat. Synliga termer: 2 802 → **2 807** (5 J-poster, 0 stubbar kvar).
+  - Berikade: JIA, JRA (korsrefererade som synonyma benämningar på barnreumatism), Jonisera, Jonisering, Juvenil.
+- APP_VERSION/VERSION → 0.8.4 (cachebuster app.js → 0.8.4). Highscore-datan orörd.
+
 ## 0.8.3
 - **Medicinska ordlistan: bokstaven I berikad** till fullt husformat. Synliga termer: 2 604 → **2 802** (238 I-poster, 0 stubbar kvar).
   - Dubbletter/stavning: Icterus → **Ikterus** (svensk stavning). -ös-adjektiv infogade i grundordet i stället för egen post: infektiös → Infektion, intertriginös → Intertrigo.
