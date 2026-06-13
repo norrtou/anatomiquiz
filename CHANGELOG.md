@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.17
+- **SEO:** Meta-descriptions kortade till Bings krav (145–159 tecken) på resten av projektets sidor: index.html (204 → 150), info.html (169 → 148), case.html (162 → 149). Innehållet bevarat, bara putsat ned i längd. og:/twitter:description (sociala kort, ingen 159-gräns) orörda.
+- APP_VERSION/VERSION → 0.8.17 (cachebuster: app.js → 0.8.17).
+
 ## 0.8.16
 - **SEO:** Meta-descriptionen för medicinska ordlistan kortad till 146 tecken (Bing kräver 145–159; tidigare ~310). Texten är nu count-oberoende ("tusentals" i st.f. hårdkodat antal) så längden inte driver iväg när termantalet växer. Källan satt i `scripts/generate_glossary.py`; `medicinskordlista.html` omgenererad (body byte-identisk). og:/twitter:description orörda.
 - APP_VERSION/VERSION → 0.8.16 (cachebuster: app.js → 0.8.16).
