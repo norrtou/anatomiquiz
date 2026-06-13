@@ -1,5 +1,17 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.14
+- **Medicinska ordlistan: bokstaven R berikad** till fullt husformat. Synliga termer: 3 898 → **4 051** (153 R-poster berikade, 0 stubbar kvar).
+  - **Sammanslagningar (2 stubbar borttagna):** c/k-dubbletten Resekera → Resecera (även-stavning); Rektum → täcks redan av publicerade Rectum (som anger "rektum" som svensk form).
+  - **Cross-referenser:** RA/Reumatoid, RAST/Allergi, RCA/Koronarkärl, RCT/Randomiserat kontrollerat försök, RR/Relativ risk, RRI/Relativ riskökning, RRR/Relativ riskreduktion, RRT/Dialys, RF/Reumatoid, RIND/TIA, RPGN/Glomerulonefrit, RMR/Basalmetabolism.
+  - Forsknings-/statistikbegrepp (Randomisering, RCT, Relativ risk/RR/RRI/RRR, Retrospektiv) bevarade med tolkningsförklaring.
+  - **OBS källflagga:** importens råtext angav *Rubeola* = "röda hund" (samma som Rubella). Internationell/latinsk nomenklatur skiljer dem: **Rubella = röda hund**, **Rubeola = mässling**. Berikade enligt den vedertagna åtskillnaden, inte råtexten — bör verifieras.
+- APP_VERSION/VERSION → 0.8.14 (cachebusters: glossary.css → 0.8.14, glossary.js → 0.8.14, app.js → 0.8.14). Ordliste- och highscore-data orörd.
+
+## 0.8.13
+- **Medicinska ordlistan: bokstaven Q berikad** till fullt husformat. Synliga termer: 3 895 → **3 898** (3 Q-poster berikade: Q-tagg, QCT, QT-intervall; 0 stubbar kvar).
+- APP_VERSION/VERSION → 0.8.13 (cachebusters: glossary.css → 0.8.13, glossary.js → 0.8.13, app.js → 0.8.13). Ordliste- och highscore-data orörd.
+
 ## 0.8.12
 - **Medicinska ordlistan: bokstaven P berikad** till fullt husformat. Synliga termer: 3 446 → **3 895** (449 P-poster berikade, 0 stubbar kvar). Hittills största bokstaven.
   - **Sammanslagningar (15 stubbar borttagna):** th/t-formerna Parathyreoidea→Paratyreoidea, Pneumothorax→Pneumotorax; c/k- och stavningsdubbletter Panniculit→Pannikulit, Pediculos + Pediculosis→Pedikulos, Petechium→Petekium, Pingvekula→Pinguecula, Polynevropati→Polyneuropati, Pyoderma→Pyodermi, Proptosis→Proptos, Paronykion→Paronyki; synonympar Periodontit→Parodontit, Periodontal→Parodontal, Pip→Pip-led; slug-kollisionen Pustulös→Pustulos (pustulös/pustulos ger identiskt ankar-id, adjektivet integrerat i Pustulos-posten).

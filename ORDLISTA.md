@@ -45,8 +45,10 @@ Ordlistan byggs ut från en omfattande importerad lista med medicinska termer (3
 - **N: klart** (112 poster berikade; 5 stubbar sammanslagna: ph/f-formerna Nephrolithiasis→Nefrolitiasis, Nephropati→Nefropati, Nephrotoxisk→Nefrotoxisk, c/k-formen Nocturnal→Nokturnal, plural Neutrofila granulocyter→Neutrofil granulocyt; cross-ref NHL/NPV/NUD/NT. Synliga termer totalt: 3 314).
 - **O: klart** (132 poster berikade; 2 stubbar borttagna: c/k Otoscleros→Otoskleros, slug-kollisionen Okular→Okulär (okular = mikroskoplins integrerat i Okulär); cross-ref OCD/Ooforektomi↔Ovariektomi/Opiat/Opportunist/Ortostatisk. Synliga termer totalt: 3 446).
 - **P: klart** (449 poster berikade — största bokstaven; 15 stubbar borttagna: th/t Parathyreoidea→Paratyreoidea, Pneumothorax→Pneumotorax; stavnings-/c-k-dubbletter Panniculit→Pannikulit, Pediculos+Pediculosis→Pedikulos, Petechium→Petekium, Pingvekula→Pinguecula, Polynevropati→Polyneuropati, Pyoderma→Pyodermi, Proptosis→Proptos, Paronykion→Paronyki; synonympar Periodontit→Parodontit, Periodontal→Parodontal, Pip→Pip-led; slug-kollision Pustulös→Pustulos. Rubrik rättad: Parasympatimimetisk→Parasympatomimetisk. Synliga termer totalt: 3 895).
+- **Q: klart** (3 poster berikade: Q-tagg, QCT, QT-intervall. Synliga termer totalt: 3 898).
+- **R: klart** (153 poster berikade; 2 stubbar borttagna: c/k Resekera→Resecera, Rektum→täcks av publicerade Rectum; cross-ref RA/RAST/RCA/RCT/RR/RRI/RRR/RRT/RF/RIND/RPGN/RMR; källflagga Rubeola=mässling vs råtextens "röda hund". Synliga termer totalt: 4 051).
 - Återstår (stubs per bokstav):
-  Q 3 · R 155 · S 280 · T 221 · U 59 · V 103 · W 5 · X 6 · Y 1 · Z 2 · Ö 5
+  S 280 · T 221 · U 59 · V 103 · W 5 · X 6 · Y 1 · Z 2 · Ö 5
 
 ### c/k-stavningsdubbletter (viktigt vid K m.fl.)
 Grekisk-härledda medicinska ord finns ofta i både c- och k-stavning (Catarakt/Katarakt, Carcinom/Karcinom, Cardio-/Kardio-, Cholecystit/Kolecystit, Colit/Kolit, Coronar/Koronar, Conjunktivit/Konjunktivit, Curativ/Kurativ …). C-formerna är redan berikade och **publicerade** (de noterar k-formen med "även …"). När K (och andra letter) berikas: ta bort k-stubben om en redan publicerad c-post täcker samma ord — behåll den publicerade, lägg ev. till "även k-form". Kontrollera genom att byta k→c i K-termen och se om en synlig post finns.
