@@ -1,5 +1,19 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.11
+- **Medicinska ordlistan: bokstaven O berikad** till fullt husformat. Synliga termer: 3 314 → **3 446** (132 O-poster berikade, 0 stubbar kvar).
+  - **Sammanslagningar (2 stubbar borttagna):** c/k-dubbletten Otoscleros → Otoskleros (även-stavning); slug-kollisionen Okular → Okulär (substantivet okular = mikroskopets ögonlins integrerat i Okulär-posten, eftersom okular/okulär annars ger identiskt ankar-id).
+  - **Cross-referenser:** OCD ↔ Obsessiv kompulsiv neuros, Ooforektomi ↔ Ovariektomi (äkta synonymer, grek./lat. rot), Opiat → Opioid, Opportunist → Opportunistisk infektion, Ortostatisk → Ortostatisk hypotension.
+  - Forsknings-/statistikbegrepp (OR = odds ratio) bevarat med tolkningsförklaring.
+- APP_VERSION/VERSION → 0.8.11 (cachebusters: glossary.css → 0.8.11, glossary.js → 0.8.11, app.js → 0.8.11). Ordliste- och highscore-data orörd.
+
+## 0.8.10
+- **Medicinska ordlistan: bokstaven N berikad** till fullt husformat. Synliga termer: 3 202 → **3 314** (112 N-poster berikade, 0 stubbar kvar).
+  - **Sammanslagningar (5 stubbar borttagna):** ph/f-dubbletterna Nephrolithiasis → Nefrolitiasis, Nephropati → Nefropati och Nephrotoxisk → Nefrotoxisk (alla noterade som "även"-stavning); c/k-dubbletten Nocturnal → Nokturnal (även-stavning); plural Neutrofila granulocyter → Neutrofil granulocyt (singular med pluralform i texten).
+  - **Cross-referenser:** NHL ↔ non-Hodgkins lymfom, NPV ↔ Negativt prediktivt värde, NUD ↔ Non-ulcer, NT → PK-INR.
+  - Forsknings-/statistikbegrepp (NNT, NNH, NS, NPV, nollhypotes, negativt prediktivt värde) bevarade med formel- och tolkningsförklaring.
+- APP_VERSION/VERSION → 0.8.10 (cachebusters: glossary.css → 0.8.10, glossary.js → 0.8.10, app.js → 0.8.10). Ordliste- och highscore-data orörd.
+
 ## 0.8.9
 - **Medicinska ordlistan: ny ingress och meta-beskrivningar.** Tagline-stycket under rubriken omskrivet till "Medicinska ord, förkortningar och begrepp med definitioner, synonymer och etymologi i en sökbar ordlista. Sök bland tusentals latinska och medicinska anatomiska, fysiologiska, patologiska, biologiska och tekniska termer."
   - `meta name="description"`, `og:description` och `twitter:description` omskrivna i samma anda och **utan termantal** (genereras av `scripts/generate_glossary.py`, rad ~230). `<title>` och sociala titlar behåller antalet tillsvidare.
