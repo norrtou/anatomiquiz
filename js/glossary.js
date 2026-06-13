@@ -53,6 +53,7 @@ function renderTerms(terms, query) {
 
   if (!filtered.length) {
     container.innerHTML = '<p class="glossary-empty">Inga träffar.</p>'
+    updateAlphabet(new Set())
     return
   }
 
@@ -64,12 +65,14 @@ function renderTerms(terms, query) {
     groups[letter].push(e)
   })
 
+  updateAlphabet(new Set(Object.keys(groups)))
+
   let html = ''
   Object.keys(groups)
     .sort()
     .forEach(letter => {
       const letterId = 'letter-' + slugifyBase(letter)
-      html += `<h3 class="glossary-letter" id="${letterId}">${letter}</h3>`
+      html += `<h3 class="glossary-letter" id="${letterId}">${letter}<a class="glossary-top" href="#main" aria-label="Tillbaka till toppen">↑ Topp</a></h3>`
       html += '<dl class="glossary-group">'
       groups[letter].forEach(e => {
         html += `<div class="glossary-entry" id="${slugify(e.term)}"><dt class="glossary-term">${escapeHtml(e.term)}</dt><dd class="glossary-def">${formatDef(e.def)}</dd></div>`
@@ -78,6 +81,25 @@ function renderTerms(terms, query) {
     })
 
   container.innerHTML = html
+}
+
+/**
+ * Tonar ned bokstäver i alfabetsraden (#glossaryAlphabet) som saknar synliga
+ * poster. Endast befintliga bokstäver (renderade som <a>) växlar; bokstäver
+ * som aldrig har poster är statiska <span> och förblir nedtonade.
+ *
+ * CSS:ens `pointer-events: none` på .is-disabled gör nedtonade bokstäver
+ * oklickbara, så ingen extra klickhantering behövs.
+ * @param {Set<string>} present  Versala begynnelsebokstäver med synliga poster
+ */
+function updateAlphabet(present) {
+  document.querySelectorAll('#glossaryAlphabet .glossary-alpha').forEach(el => {
+    const letter = el.dataset.letter
+    // <span> = bokstav utan poster i hela listan; lämna alltid nedtonad.
+    const hasAnchor = el.tagName === 'A'
+    const active = hasAnchor && present.has(letter)
+    el.classList.toggle('is-disabled', !active)
+  })
 }
 
 /**

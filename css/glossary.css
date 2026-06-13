@@ -69,6 +69,71 @@
 }
 
 /* ============================================================================
+   Alfabetsrad — snabbnavigering till bokstavsgrupperna
+   ============================================================================ */
+
+.glossary-alphabet {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 6px;
+  row-gap: 2px;
+  margin-bottom: 12px;
+}
+
+/* En kompakt bokstav — bara text, ingen ram. Länkar (befintliga bokstäver)
+   och inaktiva <span> (bokstäver utan poster) delar utseende; .is-disabled
+   tonar ned. */
+.glossary-alpha {
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--primary);
+  text-decoration: none;
+  user-select: none;
+}
+
+a.glossary-alpha:hover,
+a.glossary-alpha:focus-visible {
+  color: var(--primary-deep);
+  text-decoration: underline;
+}
+
+/* Bokstäver utan poster (statiskt) eller utan sökträffar (under sökning) */
+.glossary-alpha.is-disabled {
+  color: var(--text-secondary);
+  opacity: 0.35;
+  pointer-events: none;
+  cursor: default;
+}
+
+/* Bokstavsrubriken: bokstaven till vänster, "Topp"-länken till höger.
+   scroll-margin-top hindrar att rubriken hamnar dold vid hoppankare. */
+.glossary-letter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  scroll-margin-top: 8px;
+}
+
+/* "Topp"-länk i varje bokstavsrubrik — diskret, på den gröna rubrikytan */
+.glossary-top {
+  flex-shrink: 0;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.glossary-top:hover,
+.glossary-top:focus-visible {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ============================================================================
    Sidfot
    ============================================================================ */
 
@@ -116,4 +181,7 @@
     min-width: unset;
   }
 
+  .glossary-alphabet {
+    column-gap: 5px;
+  }
 }

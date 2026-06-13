@@ -83,7 +83,10 @@ def build_glossary_html(terms: list[dict]) -> str:
     lines: list[str] = []
     for letter in sorted(groups):
         anchor = slugify(letter).replace("term-", "letter-")
-        lines.append(f'        <h3 class="glossary-letter" id="{anchor}">{letter}</h3>')
+        lines.append(
+            f'        <h3 class="glossary-letter" id="{anchor}">{letter}'
+            '<a class="glossary-top" href="#main" aria-label="Tillbaka till toppen">↑ Topp</a></h3>'
+        )
         lines.append('        <dl class="glossary-group">')
         for entry in groups[letter]:
             slug = slugify(entry["term"])
@@ -95,6 +98,40 @@ def build_glossary_html(terms: list[dict]) -> str:
                 f'<dd class="glossary-def">{definition}</dd></div>'
             )
         lines.append("        </dl>")
+    return "\n".join(lines)
+
+
+# Svenska alfabetet — fast ordning för alfabetsraden. Bokstäver utan poster
+# renderas nedtonade (icke-klickbara), så raden ser likadan ut oavsett innehåll.
+SWEDISH_ALPHABET = list("ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ")
+
+
+def build_alphabet_html(terms: list[dict]) -> str:
+    """Bygg den klickbara alfabetsraden som hoppankare till bokstavsgrupperna.
+
+    Befintliga bokstäver blir <a href="#letter-x">; saknade bokstäver blir
+    nedtonade <span> (is-disabled). Eventuella icke-bokstavsinitialer (t.ex.
+    siffror) läggs först, i samma sorteringsordning som grupperna renderas.
+    glossary.js växlar is-disabled live efter sökträffar.
+    """
+    present = {entry["term"][0].upper() for entry in terms}
+    extras = sorted(present - set(SWEDISH_ALPHABET))
+    order = extras + SWEDISH_ALPHABET
+
+    lines: list[str] = []
+    for letter in order:
+        anchor = slugify(letter).replace("term-", "letter-")
+        label = escape_html(letter)
+        if letter in present:
+            lines.append(
+                f'        <a class="glossary-alpha" href="#{anchor}" '
+                f'data-letter="{label}">{label}</a>'
+            )
+        else:
+            lines.append(
+                f'        <span class="glossary-alpha is-disabled" '
+                f'data-letter="{label}" aria-disabled="true">{label}</span>'
+            )
     return "\n".join(lines)
 
 
@@ -166,6 +203,14 @@ def main() -> None:
         "<!-- GENERATED:GLOSSARY:START -->",
         "<!-- GENERATED:GLOSSARY:END -->",
         build_glossary_html(terms),
+    )
+
+    # 1b. Alfabetsrad (hoppankare)
+    page = replace_between(
+        page,
+        "<!-- GENERATED:ALPHABET:START -->",
+        "<!-- GENERATED:ALPHABET:END -->",
+        build_alphabet_html(terms),
     )
 
     # 2. JSON-LD DefinedTermSet

@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.7
+- **Medicinska ordlistan: klickbar alfabetsrad** under sökrutan. En klassisk A–Ö-rad (inkl. Å Ä Ö) där varje befintlig bokstav är ett hoppankare till sin bokstavsgrupp; bokstäver utan poster (W, Y, Å, Ä, Ö) visas nedtonade och oklickbara.
+  - Förrenderad statiskt av `scripts/generate_glossary.py` (markörer `GENERATED:ALPHABET:START/END`) så den fungerar utan JS och speglar exakt vilka bokstäver som finns i `data/ordlista.json`.
+  - `glossary.js` tonar ned bokstäver utan sökträffar i realtid medan man söker.
+- **"↑ Topp"-länk i varje bokstavsrubrik** (höger ände) som tar tillbaka till sidans topp. Följer med när rubriken är sticky. Renderas identiskt av både `generate_glossary.py` och `glossary.js`.
+- APP_VERSION/VERSION → 0.8.7 (cachebusters: glossary.css → 0.8.7, glossary.js → 0.8.7, app.js → 0.8.7). Ordliste- och highscore-data orörd.
+
 ## 0.8.6
 - **Medicinska ordlistan: bokstaven L berikad** till fullt husformat. Synliga termer: 2 973 → **3 098** (125 L-poster berikade, 0 stubbar kvar).
   - **Sammanslagningar (5 stubbar borttagna):** stavningsdubbletten Lacrimal → Lakrimal (även-stavning); operationsverbet Laryngektomera → Laryngektomi; Ligering → Ligera (verb/verbalsubst.); Laxantia och Laxerande → Laxans (lat. plural resp. adj.).
