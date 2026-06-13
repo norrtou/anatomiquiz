@@ -19,6 +19,13 @@
   margin-bottom: 8px;
 }
 
+/* Ingressen är lång och informativ — håll den nedtonad och kompakt
+   så den inte tränger undan sökrutan på små skärmar */
+.glossary-header .tagline {
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
 /* Döljer versionstaggen som annars visas i quiz-headern */
 .glossary-page .version {
   display: none;
