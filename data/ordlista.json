@@ -4843,7 +4843,7 @@
   },
   {
     "term": "Eksem",
-    "def": "Kliande, inflammatorisk hudsjukdom med rodnad, små blåsor, vätskning och fjällning. (subst., -et, pl. -∅) Eng: eczema, dermatitis. Även eksematös (adj.) = eksemliknande (eng: eczematous)."
+    "def": "Kliande, inflammatorisk hudsjukdom med rodnad, små blåsor, vätskning och fjällning. (subst., -et, pl. -∅) Eng: eczema, dermatitis. Även eksematös (adj.) = av eksemkaraktär; med eksemets typiska rodnad, vätskning och fjällning (eng: eczematous)."
   },
   {
     "term": "Ektasi",
@@ -7011,7 +7011,7 @@
   },
   {
     "term": "Heberdens knutor",
-    "def": "Hårda, ärtstora benknölar (osteofyter) vid de yttersta fingerlederna, ett tecken på artros i fingrarna. (subst., pl.) Eng: Heberden's nodes. Efter läkaren William Heberden."
+    "def": "Hårda, ärtstora benknölar (osteofyter) vid de yttersta fingerlederna (DIP-lederna); kännetecken för artros i ytterfingerlederna, s.k. heberdensk artros (Heberden-artros). Motsvarande knölar vid mellanfingerlederna (PIP) kallas Bouchards knutor. (subst., pl.) Eng: Heberden's nodes. Efter läkaren William Heberden."
   },
   {
     "term": "Heimlichs manöver",
@@ -7923,205 +7923,127 @@
   },
   {
     "term": "Ia",
-    "def": "dokumentation från metaanalyser av randomiserade kontrollerade prövningar",
-    "status": "stub"
+    "def": "Evidensnivå 1a; högsta vetenskapliga underlaget, från metaanalyser av randomiserade kontrollerade studier. (beteckning) Eng: evidence level Ia."
   },
   {
     "term": "Iatrogen",
-    "def": "orsakad av läkaren",
-    "status": "stub",
-    "variants": [
-      "iatrogena",
-      "iatrogent"
-    ]
+    "def": "Orsakad av sjukvården eller behandlingen (t.ex. en biverkning eller komplikation av en åtgärd). (adj., -t, -a) Eng: iatrogenic. Av gr. iatros = läkare + genes = ursprung."
   },
   {
     "term": "Ib",
-    "def": "dokumentation från minst en randomiserad kontrollerad prövning",
-    "status": "stub"
+    "def": "Evidensnivå 1b; underlag från minst en randomiserad kontrollerad studie. (beteckning) Eng: evidence level Ib."
   },
   {
     "term": "IBD",
-    "def": "\"inflammatory bowel disease\", kronisk inflammationssjukdom i tarmen (ulcerös kolit och Crohns sjukdom)",
-    "status": "stub"
+    "def": "Inflammatorisk tarmsjukdom; samlingsnamn för kroniska tarminflammationer, främst ulcerös kolit och Crohns sjukdom. (förkortn.) Eng: inflammatory bowel disease."
   },
   {
     "term": "IBS",
-    "def": "\"irritable bowel syndrom\", irritabel tarm",
-    "status": "stub"
+    "def": "Irritabel tarm; vanlig funktionell tarmsjukdom med buksmärta och ändrade avföringsvanor utan påvisbar organisk skada. (förkortn.) Sv: irritabel tarm, colon irritabile. Eng: irritable bowel syndrome."
   },
   {
     "term": "ICD",
-    "def": "\"international classification of diseases\", internationellt system för klassificering av sjukdomar (används främst på sjukhus)",
-    "status": "stub",
-    "variants": [
-      "ICD-klassifikationer",
-      "ICD-systemet",
-      "ICD-10"
-    ]
+    "def": "Internationell klassifikation av sjukdomar; WHO:s kodsystem för att klassificera diagnoser (aktuell version ICD-10/ICD-11). (förkortn.) Eng: International Classification of Diseases. (ICD kan även avse implanterbar defibrillator.)"
   },
   {
     "term": "ICP",
-    "def": "intrakraniellt tryck",
-    "status": "stub"
+    "def": "Intrakraniellt tryck; trycket inuti skallen. (förkortn.) Eng: intracranial pressure."
   },
   {
     "term": "ICPC",
-    "def": "international classification of diseases in primary care",
-    "status": "stub"
+    "def": "Internationell klassifikation för primärvården; diagnos- och kontaktorsakskodning anpassad för primärvård. (förkortn.) Eng: International Classification of Primary Care."
   },
   {
     "term": "ICSI",
-    "def": "intracytoplasmisk spermieinjektion in vitro",
-    "status": "stub"
-  },
-  {
-    "term": "Icterus",
-    "def": "gulsot",
-    "status": "stub"
+    "def": "Intracytoplasmatisk spermieinjektion; provrörsbefruktning där en enda spermie injiceras direkt in i ägget. (förkortn.) Eng: intracytoplasmic sperm injection."
   },
   {
     "term": "Idiopatisk",
-    "def": "utan känd orsak",
-    "status": "stub",
-    "variants": [
-      "idiopatiska"
-    ]
+    "def": "Utan känd orsak; om sjukdom som uppstår av sig själv utan påvisbar bakomliggande orsak. (adj., pl. -a) Eng: idiopathic. Av gr. idios = egen + pathos = lidande."
   },
   {
     "term": "Idiopatisk trombocytopen purpura",
-    "def": "nedsatt mängd blodplättar som bland annat kan leda till hudblödningar",
-    "status": "stub"
+    "def": "ITP; autoimmun brist på blodplättar (trombocyter) som ger blåmärken och hudblödningar, utan känd bakomliggande orsak. (subst.) Eng: idiopathic thrombocytopenic purpura. Se ITP."
   },
   {
     "term": "Idiosynkrasi",
-    "def": "genetiskt betingad onormal reaktion på ett läkemedel eller annat främmande ämne",
-    "status": "stub"
+    "def": "Ovanlig, ofta ärftligt betingad, avvikande reaktion på ett läkemedel eller annat ämne. (subst.) Eng: idiosyncrasy."
   },
   {
     "term": "IFN",
-    "def": "interferon, glykoprotein med förmåga att hämma virusökning, används som läkemedel vid exempelvis hepatit C och cancer",
-    "status": "stub"
+    "def": "Interferon; signalprotein (cytokin) som hämmar virusförökning och modulerar immunförsvaret; används som läkemedel vid t.ex. hepatit och vissa cancerformer. (förkortn.) Eng: interferon. Se Interferon."
   },
   {
     "term": "IgA",
-    "def": "immunglobulin A",
-    "status": "stub"
+    "def": "Immunglobulin A; antikropp som framför allt finns i slemhinnor och kroppssekret (saliv, tårar, tarm) och utgör ett första försvar. (förkortn.) Eng: immunoglobulin A."
   },
   {
     "term": "IgA-EMA",
-    "def": "antikropp mot endomysium. Ett antikroppstest för celiaki.",
-    "status": "stub"
+    "def": "IgA-antikropp mot endomysium; blodprov som används vid diagnostik av celiaki. (förkortn.) Eng: IgA endomysial antibody."
   },
   {
     "term": "IgA-tTG",
-    "def": "test av vävnadsglutaminas. Ett antikroppstest för celiaki.",
-    "status": "stub"
+    "def": "IgA-antikropp mot vävnadstransglutaminas; det vanligaste blodprovet vid utredning av celiaki. (förkortn.) Eng: IgA tissue transglutaminase antibody."
   },
   {
     "term": "IgD",
-    "def": "immunglobulin D",
-    "status": "stub"
+    "def": "Immunglobulin D; antikropp som finns i liten mängd och bl.a. sitter på omogna B-cellers yta. (förkortn.) Eng: immunoglobulin D."
   },
   {
     "term": "IgE",
-    "def": "immunglobulin E",
-    "status": "stub"
+    "def": "Immunglobulin E; antikropp som är central vid allergiska reaktioner och försvar mot parasiter. (förkortn.) Eng: immunoglobulin E."
   },
   {
     "term": "IGF-1",
-    "def": "insulinliknande tillväxtfaktor 1",
-    "status": "stub",
-    "variants": [
-      "igf- 1"
-    ]
+    "def": "Insulinliknande tillväxtfaktor 1; hormon (bildas främst i levern på stimulans av tillväxthormon) som styr tillväxt och cellnybildning. (förkortn.) Eng: insulin-like growth factor 1."
   },
   {
     "term": "IgG",
-    "def": "immunglobulin G",
-    "status": "stub"
+    "def": "Immunglobulin G; den vanligaste antikroppen i blodet, ger långvarigt skydd och kan passera moderkakan till fostret. (förkortn.) Eng: immunoglobulin G."
   },
   {
     "term": "IgG-AGA",
-    "def": "IgG- eller IgA-antikropp mot gliadin. Ett antikroppstest för celiaki.",
-    "status": "stub",
-    "variants": [
-      "AGA",
-      "IgA-AGA"
-    ]
+    "def": "IgG- (eller IgA-) antikropp mot gliadin; äldre blodprov vid celiakiutredning. (förkortn.) Eng: IgG anti-gliadin antibody."
   },
   {
     "term": "IgM",
-    "def": "immunglobulin M",
-    "status": "stub"
+    "def": "Immunglobulin M; den största antikroppen, bildas först vid en ny infektion. (förkortn.) Eng: immunoglobulin M."
   },
   {
     "term": "IIa",
-    "def": "dokumentation från minst en kontrollerad prövning med god metodisk kvalitet utan randomisering",
-    "status": "stub"
+    "def": "Evidensnivå 2a; underlag från minst en väl genomförd kontrollerad studie utan randomisering. (beteckning) Eng: evidence level IIa."
   },
   {
     "term": "IIb",
-    "def": "dokumentation från minst en annan experimentell och vetenskaplig prövning med god metodisk kvalitet",
-    "status": "stub"
+    "def": "Evidensnivå 2b; underlag från minst en annan väl genomförd kvasiexperimentell studie. (beteckning) Eng: evidence level IIb."
   },
   {
     "term": "III",
-    "def": "dokumentation från icke-experimentella deskriptiva studier som komparativa studier, korrelationsstudier och fall-kontrollstudier",
-    "status": "stub"
+    "def": "Evidensnivå 3; underlag från icke-experimentella beskrivande studier, t.ex. jämförande studier och fall-kontrollstudier. (beteckning) Eng: evidence level III."
   },
   {
     "term": "Ikterus",
-    "def": "gulsot",
-    "status": "stub"
+    "def": "Gulsot; gulfärgning av hud och ögonvitor på grund av förhöjt bilirubin i blodet. (subst.) Sv: gulsot. Eng: jaundice, icterus. Även stavn. icterus. Av gr. ikteros = gulsot."
   },
   {
     "term": "Iktyos",
-    "def": "tidigare benämd fiskfjällssjuka, en grupp av ärftliga hudsjukdomar som kännetecknas av torrhet i huden och en fisklik, ofta fastsittande fjällning beroende på ett ökat hornlager i överhuden",
-    "status": "stub",
-    "variants": [
-      "iktyosen",
-      "iktyoserna",
-      "iktyoser"
-    ]
+    "def": "Ärftlig hudsjukdom (”fiskfjällssjuka”) med torr hud och fastsittande fjällning till följd av förtjockat hornlager. (subst., -en, pl. -er) Eng: ichthyosis. Av gr. ichthys = fisk."
   },
   {
     "term": "Ileit",
-    "def": "inflammation i nedre delen av tunntarmen",
-    "status": "stub",
-    "variants": [
-      "ileiten",
-      "ileiterna",
-      "ileiter"
-    ]
+    "def": "Inflammation i nedre delen av tunntarmen (ileum). (subst., -en, pl. -er) Eng: ileitis. Av lat. ileum + -itis."
   },
   {
     "term": "Ileocekal",
-    "def": "övergången mellan tunntarm och tjocktarm",
-    "status": "stub",
-    "variants": [
-      "ileocekala",
-      "ileocekalt"
-    ]
+    "def": "Som rör övergången mellan tunntarm (ileum) och tjocktarm (cekum). (adj., -t, -a) Eng: ileocaecal."
   },
   {
     "term": "Ileosakralled",
-    "def": "de två lederna längst ner i ryggen mellan höftbenet (ilium) och korsbenet (sakrum)",
-    "status": "stub",
-    "variants": [
-      "ileosakrallederna",
-      "ileosakralleden"
-    ]
+    "def": "SI-leden; leden mellan höftbenet (ilium) och korsbenet (sacrum) i nedre delen av ryggen. (subst., -en, pl. -er) Sv: iliosakralled, SI-led. Eng: sacroiliac joint."
   },
   {
     "term": "Ileostomi",
-    "def": "framläggning av nedre delen av tunntarmen (ileum) så att den mynnar på buken",
-    "status": "stub",
-    "variants": [
-      "ileostomin",
-      "ileostomierna",
-      "ileostomier"
-    ]
+    "def": "Stomi där nedre delen av tunntarmen (ileum) leds ut genom bukväggen och mynnar på buken. (subst., -n, pl. -er) Eng: ileostomy."
   },
   {
     "term": "Ileum",
@@ -8129,8 +8051,7 @@
   },
   {
     "term": "Ileus",
-    "def": "tarmstopp, tarmvred, upphävd eller blockerad tarmpassage",
-    "status": "stub"
+    "def": "Tarmvred; stopp eller upphävd passage i tarmen, mekaniskt eller på grund av förlamad tarmrörelse. (subst.) Sv: tarmvred, tarmstopp. Eng: ileus, bowel obstruction."
   },
   {
     "term": "Ilia",
@@ -8146,189 +8067,87 @@
   },
   {
     "term": "Immigration",
-    "def": "invandring av celler i en vävnad, till exempel av vita blodkroppar",
-    "status": "stub",
-    "variants": [
-      "immigrationen",
-      "immigrationerna",
-      "immigrationer"
-    ]
+    "def": "Invandring av celler (t.ex. vita blodkroppar) in i en vävnad. (subst., -en, pl. -er) Eng: immigration."
   },
   {
     "term": "Immobilisera",
-    "def": "att göra en kroppsdel orörlig",
-    "status": "stub",
-    "variants": [
-      "immobiliserar",
-      "immobilisering",
-      "immobiliserat",
-      "immobiliserade"
-    ]
+    "def": "Att göra orörlig; fixera en kroppsdel, t.ex. med gips. (verb) Eng: to immobilise."
   },
   {
     "term": "Immun",
-    "def": "motståndskraftig",
-    "status": "stub",
-    "variants": [
-      "immuna",
-      "immunt"
-    ]
+    "def": "Motståndskraftig; skyddad mot en viss infektion. (adj., -t, -a) Eng: immune. Av lat. immunis = fri från."
   },
   {
     "term": "Immundefekt",
-    "def": "svaghet i kroppens försvarssystem mot infektioner, gifter och främmande vävnad",
-    "status": "stub",
-    "variants": [
-      "immundefekten",
-      "immundefekterna",
-      "immundefekter"
-    ]
+    "def": "Brist eller svaghet i immunförsvaret som ger ökad infektionskänslighet (medfödd eller förvärvad). (subst., -en, pl. -er) Eng: immunodeficiency."
   },
   {
     "term": "Immunglobulin",
-    "def": "proteiner som är antikroppar mot mikroorganismer och finns i blodet",
-    "status": "stub",
-    "variants": [
-      "immunglobulinerna",
-      "immunglobuliner",
-      "immunglobulinet"
-    ]
+    "def": "Antikropp; protein bildat av immunförsvaret som binder och oskadliggör främmande ämnen (indelas i IgG, IgA, IgM, IgE, IgD). (subst., -et, pl. -er) Eng: immunoglobulin."
   },
   {
     "term": "Immunisera",
-    "def": "göra motståndskraftig (genom vaccination)",
-    "status": "stub",
-    "variants": [
-      "immuniserar",
-      "immunisering",
-      "immuniserad",
-      "immuniserade"
-    ]
+    "def": "Att göra motståndskraftig mot en infektion, oftast genom vaccination. (verb) Eng: to immunise."
   },
   {
     "term": "Immunitet",
-    "def": "motståndskraft mot infektioner",
-    "status": "stub",
-    "variants": [
-      "immuniteten"
-    ]
+    "def": "Motståndskraft mot en viss infektion. (subst., -en) Eng: immunity."
   },
   {
     "term": "Immunkompetent",
-    "def": "endomysiumantikropp. Kan användas som antikroppstest för celiaki.",
-    "status": "stub",
-    "variants": [
-      "immunkompetenta"
-    ]
+    "def": "Med fungerande immunförsvar; om en person vars immunsystem fungerar normalt (motsats till immunsupprimerad). (adj., pl. -a) Eng: immunocompetent."
   },
   {
     "term": "Immunologi",
-    "def": "läran om immunsystemet och hur det fungerar",
-    "status": "stub",
-    "variants": [
-      "immunologin"
-    ]
+    "def": "Läran om immunförsvaret och hur det fungerar. (subst., -n) Eng: immunology."
   },
   {
     "term": "Immunologisk",
-    "def": "som har med immunsystemet att göra, kroppens försvarssystem mot infektioner och inflammationer",
-    "status": "stub",
-    "variants": [
-      "immunologiska"
-    ]
+    "def": "Som rör immunförsvaret. (adj., pl. -a) Eng: immunological."
   },
   {
     "term": "Immunsuppression",
-    "def": "ämnen som hämmar antikroppsbildning och andra typer av immunrespons",
-    "status": "stub",
-    "variants": [
-      "immunsuppressionen",
-      "immunsuppressiv"
-    ]
+    "def": "Dämpning av immunförsvaret, avsiktligt (med läkemedel) eller på grund av sjukdom. (subst., -en) Eng: immunosuppression."
   },
   {
     "term": "Immunsupprimera",
-    "def": "behandling som dämpar aktiviteten i vårt infektions- och inflammationsförsvar (immunsystemet)",
-    "status": "stub",
-    "variants": [
-      "immunsupprimerande",
-      "immunsupprimerar",
-      "immunsupprimering",
-      "immunsupprimerad",
-      "immunsupprimerade"
-    ]
+    "def": "Att med behandling dämpa immunförsvarets aktivitet, t.ex. efter transplantation eller vid autoimmun sjukdom. (verb) Eng: to immunosuppress."
   },
   {
     "term": "Immunsystem",
-    "def": "kroppens försvarssystem mot infektioner och inflammationer via mikroorganismer, gifter, främmande vävnad – består av vita blodkroppar, antikroppar, hud, slemhinnor, lymfkörtlar, mjälte, tymus, benmärg etc",
-    "status": "stub",
-    "variants": [
-      "immunsystemet"
-    ]
+    "def": "Kroppens försvarssystem mot infektioner och främmande/sjuka celler, bestående av bl.a. vita blodkroppar, antikroppar, lymfkörtlar, mjälte och benmärg. (subst., -et) Eng: immune system."
   },
   {
     "term": "Impermeabel",
-    "def": "ogenomtränglig",
-    "status": "stub",
-    "variants": [
-      "impermeabelt",
-      "impermeabla"
-    ]
+    "def": "Ogenomtränglig; som inte släpper igenom t.ex. vätska. (adj., -t, pl. -bla) Eng: impermeable. Motsats: permeabel."
   },
   {
     "term": "Impetigo",
-    "def": "svinkoppor",
-    "status": "stub"
+    "def": "Svinkoppor; ytlig, smittsam bakteriell hudinfektion med gulaktiga krustor, vanlig hos barn. (subst.) Sv: svinkoppor. Eng: impetigo."
   },
   {
     "term": "Impingement",
-    "def": "inklämning av en anatomisk del, avser som regel ett smalt parti där en muskel/sena eller nerv kommer i kläm",
-    "status": "stub"
+    "def": "Inklämning; tillstånd där en sena eller nerv kläms i ett trångt utrymme, t.ex. axelns impingement. (subst.) Eng: impingement."
   },
   {
     "term": "Implantat",
-    "def": "främmande vävnad som placeras i kroppen, till exempel en pacemaker",
-    "status": "stub",
-    "variants": [
-      "implantaten",
-      "implantatet"
-    ]
+    "def": "Främmande material eller vävnad som placeras in i kroppen, t.ex. pacemaker, ledprotes eller tandimplantat. (subst., -et, pl. -∅) Eng: implant."
   },
   {
     "term": "Implementera",
-    "def": "genomföra, göra känt och ta i bruk",
-    "status": "stub",
-    "variants": [
-      "implementering"
-    ]
+    "def": "Att införa och ta i praktiskt bruk, t.ex. nya riktlinjer. (verb) Eng: to implement."
   },
   {
     "term": "Implikation",
-    "def": "följd, som medför",
-    "status": "stub",
-    "variants": [
-      "implikationen",
-      "implikationerna",
-      "implikationer"
-    ]
+    "def": "Följd eller innebörd; något som medförs eller antyds. (subst., -en, pl. -er) Eng: implication."
   },
   {
     "term": "Impotens",
-    "def": "erektil dysfunktion, oförmåga att få tillräcklig erektion av penis för att kunna genomföra samlag",
-    "status": "stub",
-    "variants": [
-      "impotensen"
-    ]
+    "def": "Erektil dysfunktion; oförmåga att få eller bibehålla en erektion tillräcklig för samlag. (subst., -en) Eng: impotence. Se Erektil dysfunktion."
   },
   {
     "term": "Impregnation",
-    "def": "befruktning; spermiens inträngande i äggcellen, alternativt in- eller genomdränkning",
-    "status": "stub",
-    "variants": [
-      "impregnationen",
-      "impregnationerna",
-      "impregnationer"
-    ]
+    "def": "Befruktning (spermiens inträngande i ägget); även genomdränkning av ett material. (subst., -en, pl. -er) Eng: impregnation."
   },
   {
     "term": "Impressio",
@@ -8336,13 +8155,7 @@
   },
   {
     "term": "Impression",
-    "def": "fördjupning genom tryck från en intilliggande struktur",
-    "status": "stub",
-    "variants": [
-      "impressionen",
-      "impressionerna",
-      "impressioner"
-    ]
+    "def": "Fördjupning/intryck i en struktur orsakat av tryck från en intilliggande del. (subst., -en, pl. -er) Eng: impression."
   },
   {
     "term": "Imus",
@@ -8350,40 +8163,27 @@
   },
   {
     "term": "In situ",
-    "def": "på platsen, ej spridd; cancer in situ växer enbart på sitt uppkomstställe och har således inte övergått till att bli invasiv (spritt sig till omgivningen)",
-    "status": "stub"
+    "def": "”På platsen”; om t.ex. cancer in situ som ännu växer enbart på sitt uppkomstställe och inte spridit sig (ej invasiv). (lat. uttryck) Eng: in situ."
   },
   {
     "term": "In vitro",
-    "def": "i provrör eller liknande",
-    "status": "stub"
+    "def": "”I glas”; om försök eller processer som sker utanför den levande kroppen, t.ex. i provrör. (lat. uttryck) Eng: in vitro. Motsats: in vivo."
   },
   {
     "term": "In vitro-fertilisering",
-    "def": "provrörsbefruktning",
-    "status": "stub"
+    "def": "Provrörsbefruktning (IVF); ägg och spermier förs samman utanför kroppen och det befruktade ägget återförs till livmodern. (subst.) Sv: provrörsbefruktning. Eng: in vitro fertilisation."
   },
   {
     "term": "In vivo",
-    "def": "i den levande organismen",
-    "status": "stub"
+    "def": "”I det levande”; om processer eller försök som sker i den levande organismen. (lat. uttryck) Eng: in vivo. Motsats: in vitro."
   },
   {
     "term": "Inadekvat",
-    "def": "icke fullt motsvarande, överensstämmande eller likvärdig",
-    "status": "stub",
-    "variants": [
-      "inadekvata"
-    ]
+    "def": "Otillräcklig eller olämplig; som inte motsvarar behovet. (adj., pl. -a) Eng: inadequate. Motsats: adekvat."
   },
   {
     "term": "Inaktiv",
-    "def": "overksam",
-    "status": "stub",
-    "variants": [
-      "inaktiva",
-      "inaktivt"
-    ]
+    "def": "Overksam, utan aktivitet. (adj., -t, -a) Eng: inactive. Motsats: aktiv."
   },
   {
     "term": "Inåtrotation",
@@ -8391,28 +8191,15 @@
   },
   {
     "term": "Inch",
-    "def": "längdmått, 1 inch = 2,54 centimeter",
-    "status": "stub"
+    "def": "Tum; angloamerikanskt längdmått, 1 inch = 2,54 cm. (subst.) Sv: tum. Eng: inch."
   },
   {
     "term": "Incidens",
-    "def": "förekomst, antalet nya fall under en given tidsperiod, till exempel ett år",
-    "status": "stub",
-    "variants": [
-      "incidensen",
-      "incidenserna",
-      "incidenser"
-    ]
+    "def": "Antalet nya fall av en sjukdom i en befolkning under en viss tidsperiod (t.ex. per år). (subst., -en, pl. -er) Eng: incidence. Jfr prevalens."
   },
   {
     "term": "Incision",
-    "def": "insnitt i huden",
-    "status": "stub",
-    "variants": [
-      "incisionen",
-      "incisionerna",
-      "incisioner"
-    ]
+    "def": "Operativt snitt i huden eller en vävnad. (subst., -en, pl. -er) Sv: snitt. Eng: incision. Av lat. incidere = skära in."
   },
   {
     "term": "Incisivus",
@@ -8440,136 +8227,55 @@
   },
   {
     "term": "Indicera",
-    "def": "motivera, berättiga",
-    "status": "stub",
-    "variants": [
-      "indicerar",
-      "indicering",
-      "indicerat",
-      "indicerade"
-    ]
+    "def": "Att motivera eller utgöra skäl för en viss åtgärd (vara indikerad). (verb) Eng: to be indicated. Av lat. indicare = utvisa. Jfr Indikera."
   },
   {
     "term": "Indikation",
-    "def": "omständighet som utgör skäl för att vidta en viss åtgärd",
-    "status": "stub",
-    "variants": [
-      "indikationen",
-      "indikationerna",
-      "indikationer"
-    ]
+    "def": "Skäl eller omständighet som motiverar en viss behandling eller åtgärd. (subst., -en, pl. -er) Eng: indication. Motsats: kontraindikation."
   },
   {
     "term": "Indikativ",
-    "def": "som antyder",
-    "status": "stub",
-    "variants": [
-      "indikativa",
-      "indikativt"
-    ]
+    "def": "Som antyder eller pekar på något. (adj., -t, -a) Eng: indicative."
   },
   {
     "term": "Indikera",
-    "def": "ange, peka ut, visa eller ge utslag för förändring",
-    "status": "stub",
-    "variants": [
-      "indikerar",
-      "indikering",
-      "indikerad",
-      "indikerade"
-    ]
+    "def": "Att peka på, antyda eller tyda på något. (verb) Eng: to indicate. Jfr Indicera."
   },
   {
     "term": "Indolent",
-    "def": "smärtfri, oöm, likgiltig, loj, oberörd",
-    "status": "stub",
-    "variants": [
-      "indolenta"
-    ]
+    "def": "Smärtfri, oöm (om en förändring); även liknöjd. (adj., pl. -a) Eng: indolent. Av lat. in- = icke + dolere = ha ont."
   },
   {
     "term": "Indragning",
-    "def": "används oftast för att beskriva en företeelse där en person har besvär med tung andning. Vid sådana tillfällen arbetar bröstkorgens andningsmuskulatur hårt och mjukvävnaden mellan musklerna på halsen, i bröstväggen och i buken dras in så att musklerna framträder tydligt.",
-    "status": "stub",
-    "variants": [
-      "indragningen",
-      "indragningarna",
-      "indragningar"
-    ]
+    "def": "Inåtdragning av mjukdelar mellan revben och vid halsgrop vid ansträngd andning; tecken på andnöd. (subst., -en, pl. -ar) Eng: (chest) retractions."
   },
   {
     "term": "Induktion",
-    "def": "framkallande, igångsättning",
-    "status": "stub",
-    "variants": [
-      "induktionen",
-      "induktionerna",
-      "induktioner"
-    ]
+    "def": "Igångsättning eller framkallande av ett förlopp, t.ex. induktion av förlossning eller narkos. (subst., -en, pl. -er) Eng: induction."
   },
   {
     "term": "Induration",
-    "def": "förhårdnad, konsistensökning hos en vävnad eller ett organ",
-    "status": "stub",
-    "variants": [
-      "indurationen",
-      "indurationerna",
-      "indurationer"
-    ]
+    "def": "Förhårdnad; ökad fasthet i en vävnad eller ett organ. (subst., -en, pl. -er) Eng: induration. Av lat. indurare = göra hård."
   },
   {
     "term": "Indurera",
-    "def": "bli hård",
-    "status": "stub",
-    "variants": [
-      "indurerar",
-      "indurering",
-      "indurerat",
-      "indurerade"
-    ]
+    "def": "Att bli hård (om vävnad). (verb) Eng: to indurate."
   },
   {
     "term": "Infantil",
-    "def": "barnslig, omogen; anger att en sjukdom huvudsakligen förekommer hos spädbarn",
-    "status": "stub",
-    "variants": [
-      "infantila",
-      "infantilt"
-    ]
+    "def": "Som rör späd-/barndomen; även barnslig, omogen. (adj., -t, -a) Eng: infantile. Av lat. infans = barn."
   },
   {
     "term": "Infarkt",
-    "def": "område med död vävnad på grund av dålig blodtillförsel",
-    "status": "stub",
-    "variants": [
-      "infarkterna",
-      "infarkter",
-      "infarkten"
-    ]
+    "def": "Vävnadsdöd i ett område på grund av plötsligt avbruten blodtillförsel (t.ex. hjärtinfarkt). (subst., -en, pl. -er) Eng: infarction. Av lat. infarcire = stoppa full."
   },
   {
     "term": "Infektion",
-    "def": "smittsam sjukdom, framkallad av mikroorganismer (vanligen virus eller bakterier)",
-    "status": "stub",
-    "variants": [
-      "infektionen",
-      "infektionerna",
-      "infektioner"
-    ]
-  },
-  {
-    "term": "Infektiös",
-    "def": "smittsam",
-    "status": "stub",
-    "variants": [
-      "infektiösa",
-      "infektiöst"
-    ]
+    "def": "Sjukdom orsakad av att mikroorganismer (virus, bakterier, svamp eller parasiter) tränger in och förökar sig i kroppen. (subst., -en, pl. -er) Eng: infection. Även infektiös (adj.) = som orsakas av eller har samband med infektion, av infektionskaraktär (t.ex. infektiös artrit); även smittsam (eng: infectious)."
   },
   {
     "term": "Infektiös endokardit",
-    "def": "inflammation i hjärtats inre hinna orsakad av en bakterieinfektion",
-    "status": "stub"
+    "def": "Inflammation i hjärtats innerhinna och klaffar orsakad av en bakterieinfektion. (subst.) Eng: infective endocarditis."
   },
   {
     "term": "Inferior",
@@ -8577,73 +8283,35 @@
   },
   {
     "term": "Infertil",
-    "def": "ofruktsam",
-    "status": "stub",
-    "variants": [
-      "infertila",
-      "infertilt"
-    ]
+    "def": "Ofruktsam; oförmögen att få barn. (adj., -t, -a) Sv: ofruktsam. Eng: infertile. Motsats: fertil."
   },
   {
     "term": "Infertilitet",
-    "def": "ofruktsamhet",
-    "status": "stub",
-    "variants": [
-      "infertiliteten"
-    ]
+    "def": "Ofruktsamhet; oförmåga att bli gravid efter en längre tids försök. (subst., -en) Sv: ofruktsamhet. Eng: infertility."
   },
   {
     "term": "Infibulation",
-    "def": "metod för kvinnlig omskärelse som innebär att slidöppningen förminskas genom att de inre och/eller de yttre blygdläpparna sys ihop så att de växer samman, med eller utan att klitoris skärs bort",
-    "status": "stub"
+    "def": "Den mest omfattande formen av kvinnlig könsstympning, där slidöppningen sys ihop och förminskas. (subst.) Eng: infibulation."
   },
   {
     "term": "Infibulera",
-    "def": "sy ihop blygdläpparna hos kvinnor, en metod för kvinnlig omskärelse",
-    "status": "stub",
-    "variants": [
-      "infibulerar",
-      "infibulering",
-      "infibulerad",
-      "infibulerade"
-    ]
+    "def": "Att utföra infibulation (en form av kvinnlig könsstympning). (verb) Eng: to infibulate."
   },
   {
     "term": "Infiltrat",
-    "def": "vätska, inflammatoriska celler eller tumörceller som vid sjukliga processer tränger in i en vävnad eller ett organ (infiltration)",
-    "status": "stub",
-    "variants": [
-      "infiltraten",
-      "infiltratet"
-    ]
+    "def": "Ansamling av vätska, inflammatoriska celler eller tumörceller som trängt in i en vävnad (syns t.ex. som en fläck på lungröntgen). (subst., -et, pl. -∅) Eng: infiltrate."
   },
   {
     "term": "Infiltration",
-    "def": "inträngande av främmande material (i regel vätska eller celler) i ett organ eller en vävnad vilket resulterar i en volymökning (infiltrat) hos organet eller vävnaden",
-    "status": "stub",
-    "variants": [
-      "infiltrationen",
-      "infiltrationerna",
-      "infiltrationer"
-    ]
+    "def": "Inträngande och ansamling av celler eller vätska i en vävnad, vilket gör den större. (subst., -en, pl. -er) Eng: infiltration."
   },
   {
     "term": "Inflammation",
-    "def": "kroppens försvarsreaktion och effekten av skadevållande faktorer som kan vara antingen livlösa (till exempel mekaniskt våld, värme, kyla, strålning, kemikalier) eller levande (till exempel bakterier, virus)",
-    "status": "stub",
-    "variants": [
-      "inflammationen",
-      "inflammationerna",
-      "inflammationer"
-    ]
+    "def": "Kroppens försvarsreaktion på skada eller retning (av t.ex. mikrober, kemikalier eller mekaniskt våld), med rodnad, värme, svullnad och smärta. (subst., -en, pl. -er) Eng: inflammation."
   },
   {
     "term": "Influensa",
-    "def": "luftvägsinfektion orsakad av influensavirus, i typiska fall med hög och ihållande feber, muskelsmärtor och huvudvärk i omkring en vecka",
-    "status": "stub",
-    "variants": [
-      "influensan"
-    ]
+    "def": "Luftvägsinfektion av influensavirus med plötslig hög feber, muskelvärk, huvudvärk och hosta. (subst., -n) Eng: influenza, flu."
   },
   {
     "term": "Infra",
@@ -8651,14 +8319,7 @@
   },
   {
     "term": "Infundera",
-    "def": "hälla in, ge som infusion",
-    "status": "stub",
-    "variants": [
-      "infunderar",
-      "infundering",
-      "infunderat",
-      "infunderade"
-    ]
+    "def": "Att tillföra vätska eller läkemedel som infusion (dropp). (verb) Eng: to infuse."
   },
   {
     "term": "Infundibulum",
@@ -8666,13 +8327,7 @@
   },
   {
     "term": "Infusion",
-    "def": "vanligen om dropp som ges intravenöst (blodprodukter eller vätska innehållande näringsämnen eller läkemedel) under längre tid (1-12 timmar)",
-    "status": "stub",
-    "variants": [
-      "infusionen",
-      "infusionerna",
-      "infusioner"
-    ]
+    "def": "Tillförsel av vätska, näring, blod eller läkemedel direkt i blodet (dropp) under längre tid. (subst., -en, pl. -er) Sv: dropp. Eng: infusion."
   },
   {
     "term": "Inguen",
@@ -8680,12 +8335,7 @@
   },
   {
     "term": "Inguinal",
-    "def": "ljumsk-",
-    "status": "stub",
-    "variants": [
-      "inguinala",
-      "inguinalt"
-    ]
+    "def": "Som rör ljumsken. (adj., -t, -a) Sv: ljumsk-. Eng: inguinal. Av lat. inguen = ljumske."
   },
   {
     "term": "Inguinalis",
@@ -8693,167 +8343,75 @@
   },
   {
     "term": "Inhalation",
-    "def": "inandning",
-    "status": "stub",
-    "variants": [
-      "inhalationen",
-      "inhalationerna",
-      "inhalationer"
-    ]
+    "def": "Inandning; tillförsel av läkemedel eller gas via luftvägarna. (subst., -en, pl. -er) Sv: inandning. Eng: inhalation."
   },
   {
     "term": "Inhalator",
-    "def": "apparat som gör det möjligt att andas in läkemedel i förångad form",
-    "status": "stub",
-    "variants": [
-      "inhalatorn",
-      "inhalatorerna",
-      "inhalatorer"
-    ]
+    "def": "Apparat för att andas in läkemedel i form av fina droppar eller pulver, t.ex. vid astma. (subst., -n, pl. -er) Eng: inhaler."
   },
   {
     "term": "Inhibera",
-    "def": "hämma, stoppa, hindra, hålla tillbaka",
-    "status": "stub",
-    "variants": [
-      "inhiberad",
-      "inhibition"
-    ]
+    "def": "Att hämma eller hindra ett förlopp. (verb) Eng: to inhibit. Motsats: stimulera."
   },
   {
     "term": "Inhibitor",
-    "def": "hämmare",
-    "status": "stub",
-    "variants": [
-      "inhibitorn",
-      "inhibitorerna",
-      "inhibitorer"
-    ]
+    "def": "Hämmare; ämne som bromsar eller stoppar en reaktion eller process. (subst., -n, pl. -er) Sv: hämmare. Eng: inhibitor."
   },
   {
     "term": "Initial",
-    "def": "begynnande",
-    "status": "stub",
-    "variants": [
-      "initiala",
-      "initialt"
-    ]
+    "def": "Begynnande; som rör början av ett förlopp. (adj., -t, -a) Eng: initial. Av lat. initium = början."
   },
   {
     "term": "Injektion",
-    "def": "insprutning av vätska",
-    "status": "stub",
-    "variants": [
-      "injektionen",
-      "injektionerna",
-      "injektioner"
-    ]
+    "def": "Insprutning av läkemedel eller vätska med spruta. (subst., -en, pl. -er) Sv: spruta. Eng: injection."
   },
   {
     "term": "Inkarceration",
-    "def": "inklämning, till exempel av ett bråck",
-    "status": "stub",
-    "variants": [
-      "inkarcerationen",
-      "inkarcerationerna",
-      "inkarcerationer"
-    ]
+    "def": "Inklämning, t.ex. av ett bråck så att blodtillförseln stryps. (subst., -en, pl. -er) Eng: incarceration."
   },
   {
     "term": "Inklination",
-    "def": "lutningsvinkel",
-    "status": "stub",
-    "variants": [
-      "inklinationen"
-    ]
+    "def": "Lutning(svinkel). (subst., -en) Eng: inclination."
   },
   {
     "term": "Inkludera",
-    "def": "ta med, räkna in",
-    "status": "stub",
-    "variants": [
-      "inkluderar",
-      "inkludering",
-      "inkluderat",
-      "inkluderade"
-    ]
+    "def": "Att ta med eller räkna in. (verb) Eng: to include. Motsats: exkludera."
   },
   {
     "term": "Inklusion",
-    "def": "tas med",
-    "status": "stub",
-    "variants": [
-      "inklusionen",
-      "inklusionerna",
-      "inklusioner"
-    ]
+    "def": "Att tas med, t.ex. i en studie; även en inneslutning. (subst., -en, pl. -er) Eng: inclusion."
   },
   {
     "term": "Inklusive",
-    "def": "innefattande",
-    "status": "stub"
+    "def": "Inräknat, medräknat. (prep.) Eng: including, inclusive. Motsats: exklusive."
   },
   {
     "term": "Inkompatibel",
-    "def": "oförenlig",
-    "status": "stub",
-    "variants": [
-      "inkompatibelt",
-      "inkompatibla"
-    ]
+    "def": "Oförenlig; som inte går att kombinera (t.ex. två läkemedel eller blodgrupper). (adj., -t, pl. -bla) Eng: incompatible."
   },
   {
     "term": "Inkompetent",
-    "def": "oskicklig",
-    "status": "stub",
-    "variants": [
-      "inkompetenta"
-    ]
+    "def": "Som inte fungerar tillräckligt; t.ex. en klaff som inte sluter tätt. (adj., pl. -a) Eng: incompetent."
   },
   {
     "term": "Inkontinens",
-    "def": "oförmåga att hålla urin eller avföring",
-    "status": "stub",
-    "variants": [
-      "inkontinensen"
-    ]
+    "def": "Oförmåga att hålla tätt; ofrivilligt läckage av urin eller avföring. (subst., -en) Eng: incontinence."
   },
   {
     "term": "Inkorporera",
-    "def": "uppta, upptag",
-    "status": "stub",
-    "variants": [
-      "inkorporerar",
-      "inkorporering",
-      "inkorporerat",
-      "inkorporerade"
-    ]
+    "def": "Att uppta och införliva i en helhet. (verb) Eng: to incorporate."
   },
   {
     "term": "Inkretinhormoner",
-    "def": "hormoner som bildas i tarmslemhinnans celler i anslutning till måltid och som stimulerar frisättningen av insulin",
-    "status": "stub",
-    "variants": [
-      "inkretin"
-    ]
+    "def": "Tarmhormoner (t.ex. GLP-1) som frisätts vid måltid och ökar insulinfrisättningen. (subst., pl.) Eng: incretins."
   },
   {
     "term": "Inkubation",
-    "def": "tiden det tar från att man smittas med en mikroorganism tills sjukdomen bryter ut",
-    "status": "stub",
-    "variants": [
-      "inkubationen"
-    ]
+    "def": "Inkubationstid; tiden från smittotillfället tills sjukdomen bryter ut. (subst., -en) Eng: incubation."
   },
   {
     "term": "Innervation",
-    "def": "överföring av nervimpulser via nerver till och från hjärnan eller ryggmärgen samt för nervförsörjning av muskler, organ och hud",
-    "status": "stub",
-    "variants": [
-      "innervationen",
-      "innervationerna",
-      "innervationer"
-    ]
+    "def": "Nervförsörjning; nervernas försörjning av och signalering till muskler, organ och hud. (subst., -en, pl. -er) Eng: innervation."
   },
   {
     "term": "Innominatus",
@@ -8861,36 +8419,19 @@
   },
   {
     "term": "Inokulation",
-    "def": "ympning, medvetet eller omedvetet införande av ett sjukdomsframkallande ämne (oftast mikroorganismer) i kroppen, exempelvis vaccination",
-    "status": "stub",
-    "variants": [
-      "inokulationen",
-      "inokulationerna",
-      "inokulationer"
-    ]
+    "def": "Införande av mikroorganismer eller annat ämne i kroppen, t.ex. vid vaccination eller smitta. (subst., -en, pl. -er) Eng: inoculation."
   },
   {
     "term": "Inoperabel",
-    "def": "går inte att operera",
-    "status": "stub",
-    "variants": [
-      "inoperabelt",
-      "inoperabla"
-    ]
+    "def": "Som inte går att operera. (adj., -t, pl. -bla) Eng: inoperable. Motsats: operabel."
   },
   {
     "term": "Inotrop",
-    "def": "den effekt på kraften i hjärtmuskelns sammandragning som ett läkemedel ger",
-    "status": "stub",
-    "variants": [
-      "inotropa",
-      "inotropt"
-    ]
+    "def": "Som påverkar kraften i hjärtmuskelns sammandragning (positivt inotrop = ökar kraften). (adj., -t, -a) Eng: inotropic."
   },
   {
     "term": "INR",
-    "def": "\"international normalized ratio\" (internationell normaliserad kvot), enhet för mätning av antikoagulationseffekt (har ersatt TT)",
-    "status": "stub"
+    "def": "International normalized ratio; standardiserat mått på blodets koagulationstid, används för att styra behandling med blodförtunnande (warfarin). (förkortn.) Eng: international normalised ratio."
   },
   {
     "term": "Inscriptio",
@@ -8906,113 +8447,51 @@
   },
   {
     "term": "Insertion",
-    "def": "infästning/fästplats (för muskler, senor, placenta etc), alternativt insättande av tandprotes i munhålan, alternativt kromosomrubbning som innebär att ett kromosomsegment flyttas från sin normala position och skjuts in på felaktig plats i samma eller i en annan kromosom, avser även tillskott av en eller flera nukleotider i en gen",
-    "status": "stub",
-    "variants": [
-      "insertionen",
-      "insertionerna",
-      "insertioner"
-    ]
+    "def": "Fästplats; t.ex. en muskels eller senas infästning i benet; även (genetiskt) inskjutning av DNA i en gen. (subst., -en, pl. -er) Eng: insertion."
   },
   {
     "term": "Insomni",
-    "def": "sömnlöshet",
-    "status": "stub",
-    "variants": [
-      "insomnia",
-      "insomnin",
-      "insomnierna"
-    ]
+    "def": "Sömnlöshet; svårt att somna eller att bibehålla sömnen. (subst., -n, pl. -er) Sv: sömnlöshet. Eng: insomnia."
   },
   {
     "term": "Insöndring",
-    "def": "inre sekretion, frisättning av ämnen till blodet",
-    "status": "stub",
-    "variants": [
-      "insöndra"
-    ]
+    "def": "Inre sekretion; frisättning av ämnen (t.ex. hormoner) direkt till blodet. (subst., -en) Eng: secretion (internal)."
   },
   {
     "term": "Inspiration",
-    "def": "inandning",
-    "status": "stub",
-    "variants": [
-      "inspirationen",
-      "inspirationerna",
-      "inspirationer"
-    ]
+    "def": "Inandning. (subst., -en, pl. -er) Sv: inandning. Eng: inspiration. Motsats: exspiration."
   },
   {
     "term": "Inspiratorisk",
-    "def": "som har samband med inandning",
-    "status": "stub"
+    "def": "Som rör eller sker under inandningen. (adj., pl. -a) Eng: inspiratory."
   },
   {
     "term": "Instabil",
-    "def": "som lätt rubbas (ur något konkret eller abstrakt viloläge)",
-    "status": "stub",
-    "variants": [
-      "instabila"
-    ]
+    "def": "Ostadig; som lätt rubbas, t.ex. en led eller ett sjukdomstillstånd. (adj., pl. -a) Eng: unstable."
   },
   {
     "term": "Instillation",
-    "def": "indrypning av läkemedel (i sår, öga, öra etc)",
-    "status": "stub",
-    "variants": [
-      "instillationen",
-      "instillationerna",
-      "instillationer"
-    ]
+    "def": "Indrypning av läkemedel i t.ex. öga, öra, näsa eller urinblåsa. (subst., -en, pl. -er) Eng: instillation."
   },
   {
     "term": "Instruktion",
-    "def": "anvisning",
-    "status": "stub",
-    "variants": [
-      "instruktionen",
-      "instruktionerna",
-      "instruktioner"
-    ]
+    "def": "Anvisning, föreskrift. (subst., -en, pl. -er) Eng: instruction."
   },
   {
     "term": "Insufficiens",
-    "def": "brist",
-    "status": "stub",
-    "variants": [
-      "insufficiensen",
-      "insufficienserna",
-      "insufficienser"
-    ]
+    "def": "Otillräcklig funktion hos ett organ; t.ex. hjärt- eller njurinsufficiens, eller en klaff som inte sluter tätt. (subst., -en, pl. -er) Sv: svikt. Eng: insufficiency."
   },
   {
     "term": "Insufficient",
-    "def": "otillräcklig",
-    "status": "stub",
-    "variants": [
-      "insufficienta"
-    ]
+    "def": "Otillräcklig; som inte fungerar tillräckligt. (adj., pl. -a) Eng: insufficient."
   },
   {
     "term": "Insufflation",
-    "def": "inblåsning av luft, gas eller pulver i något av kroppens organ",
-    "status": "stub",
-    "variants": [
-      "insufflationen",
-      "insufflationerna",
-      "insufflationer"
-    ]
+    "def": "Inblåsning av luft, gas eller pulver i en kroppshåla eller ett organ. (subst., -en, pl. -er) Eng: insufflation."
   },
   {
     "term": "Insufflera",
-    "def": "blåsa in luft eller gas, till exempel vid endoskopisk undersökning",
-    "status": "stub",
-    "variants": [
-      "insufflerar",
-      "insufflering",
-      "insufflerat",
-      "insufflerade"
-    ]
+    "def": "Att blåsa in luft eller gas, t.ex. i bukhålan vid titthålskirurgi. (verb) Eng: to insufflate."
   },
   {
     "term": "Insula",
@@ -9020,39 +8499,23 @@
   },
   {
     "term": "Insulin",
-    "def": "Insulin är ett hormon som produceras i bukspottkörteln och har en central roll i kontrollen av många metaboliska processer, bland annat stimulerar insulin cellerna att ta upp glukos från blodet och stimulerar levern att ta upp och lagra överskottsglukos. Insulin används vid behandling av diabetes mellitus.",
-    "status": "stub"
+    "def": "Blodsockersänkande hormon från bukspottkörteln; får cellerna att ta upp glukos och levern att lagra det. Används som läkemedel vid diabetes. (subst.) Eng: insulin."
   },
   {
     "term": "Insulinresistens",
-    "def": "försämrad verkan av insulinet. Insulin är ett hormon som spelar en viktig roll i kroppens sockeromsättning. Det ökar upptaget av glukos (socker) från blodet in i cellerna och sänker därmed glukoshalten i blodet.",
-    "status": "stub",
-    "variants": [
-      "insulinresistensen"
-    ]
+    "def": "Försämrad känslighet för insulin, så att cellerna tar upp glukos sämre; central mekanism vid typ 2-diabetes. (subst., -en) Eng: insulin resistance."
   },
   {
     "term": "Insult",
-    "def": "plötsligt påkommen skada",
-    "status": "stub"
+    "def": "Plötsligt påkommen skada eller påverkan på ett organ, t.ex. cerebral insult (stroke). (subst.) Eng: insult."
   },
   {
     "term": "Intakt",
-    "def": "oskadad",
-    "status": "stub",
-    "variants": [
-      "intakta"
-    ]
+    "def": "Hel och oskadad. (adj., pl. -a) Eng: intact."
   },
   {
     "term": "Integritet",
-    "def": "helt eller oskadat tillstånd",
-    "status": "stub",
-    "variants": [
-      "integriteten",
-      "integriteterna",
-      "integriteter"
-    ]
+    "def": "Helt och oskadat tillstånd; även personlig okränkbarhet. (subst., -en) Eng: integrity."
   },
   {
     "term": "Integumentum",
@@ -9060,16 +8523,11 @@
   },
   {
     "term": "Intention to treat-analys",
-    "def": "Bearbetning av forskningsresultat där alla deltagande försökspersoner i en klinisk prövning tas med, oavsett om de har hoppat av studien eller följt föreskrifterna (till exempel inte tagit behandlingen). I randomiserade studier innebär Intention to treat-analys att den ursprungliga jämförbarheten bevaras och att bortfallsbias förhindras.",
-    "status": "stub"
+    "def": "Analysprincip i kliniska prövningar där alla randomiserade deltagare räknas i sin ursprungliga grupp, oavsett om de fullföljde behandlingen; bevarar jämförbarheten och minskar bias. (subst.) Eng: intention-to-treat analysis."
   },
   {
     "term": "Intentionstremor",
-    "def": "darrningar som utlöses då patienten vill utföra en viss rörelse eller innan den fullbordats, vanligast vid neurologiska sjukdomar",
-    "status": "stub",
-    "variants": [
-      "intentionstremorn"
-    ]
+    "def": "Skakning som tilltar när man riktar en rörelse mot ett mål (t.ex. för fingret mot näsan); tecken på lillhjärnsstörning. (subst., -n) Eng: intention tremor."
   },
   {
     "term": "Inter",
@@ -9077,69 +8535,31 @@
   },
   {
     "term": "Interaktion",
-    "def": "kombinationseffekt, hur läkemedel påverkar varandras effekt",
-    "status": "stub",
-    "variants": [
-      "interaktionen",
-      "interaktionerna",
-      "interaktioner"
-    ]
+    "def": "Växelverkan; särskilt hur läkemedel påverkar varandras effekt. (subst., -en, pl. -er) Eng: interaction."
   },
   {
     "term": "Interferens",
-    "def": "störning",
-    "status": "stub",
-    "variants": [
-      "interferensen",
-      "interferenserna",
-      "interferenser"
-    ]
+    "def": "Störning; att olika faktorer eller signaler påverkar varandra. (subst., -en, pl. -er) Eng: interference."
   },
   {
     "term": "Interferera",
-    "def": "som blandar sig med, samverkar med, stör, komplicerar",
-    "status": "stub",
-    "variants": [
-      "interfererar",
-      "interfererat",
-      "interfererade"
-    ]
+    "def": "Att störa eller blanda sig i, samverka med. (verb) Eng: to interfere."
   },
   {
     "term": "Interferon",
-    "def": "Proteiner som hör till signalsubstansgruppen cytokiner och som bildas i olika vävnadsceller i samband med infektioner. Renframställda interferoner kan ha antiviral, immunmodulerande eller tumörhämmande verkan och används därför vid kronisk virushepatit, MS, vissa cancerformer och vissa former av immundefekt.",
-    "status": "stub",
-    "variants": [
-      "interferonerna",
-      "interferoner",
-      "interferonet"
-    ]
+    "def": "Signalprotein (cytokin) som frisätts vid virusinfektion och hämmar virusförökning samt påverkar immunförsvaret; används som läkemedel (IFN). (subst., -et, pl. -er) Eng: interferon."
   },
   {
     "term": "Interindividuell",
-    "def": "mellan individer",
-    "status": "stub",
-    "variants": [
-      "interindividuella",
-      "interindividuellt"
-    ]
+    "def": "Som rör skillnader mellan olika individer. (adj., -t, -a) Eng: interindividual. Motsats: intraindividuell."
   },
   {
     "term": "Interkostal",
-    "def": "mellan revbenen",
-    "status": "stub",
-    "variants": [
-      "interkostala",
-      "interkostalt"
-    ]
+    "def": "Som ligger mellan revbenen (t.ex. interkostalmusklerna). (adj., -t, -a) Eng: intercostal. Av lat. inter = mellan + costa = revben."
   },
   {
     "term": "Interkurrent",
-    "def": "mellankommande; till exempel interkurrent sjukdom, sjukdom som tillstöter och förändrar förloppet av en redan föreliggande sjukdom",
-    "status": "stub",
-    "variants": [
-      "interkurrenta"
-    ]
+    "def": "Mellankommande; om en sjukdom som tillstöter och påverkar förloppet av en redan pågående sjukdom. (adj., pl. -a) Eng: intercurrent."
   },
   {
     "term": "Intermediär",
@@ -9151,8 +8571,7 @@
   },
   {
     "term": "Intermittent",
-    "def": "periodisk",
-    "status": "stub"
+    "def": "Som kommer och går periodvis, med uppehåll. (adj.) Eng: intermittent. Motsats: kontinuerlig."
   },
   {
     "term": "Internus",
@@ -9160,78 +8579,35 @@
   },
   {
     "term": "Interskapulär",
-    "def": "mellan skulderbladen",
-    "status": "stub",
-    "variants": [
-      "interskapulära",
-      "interskapulärt"
-    ]
+    "def": "Som ligger mellan skulderbladen. (adj., -t, -a) Eng: interscapular."
   },
   {
     "term": "Interstitiell",
-    "def": "mellanrums-, mellan-",
-    "status": "stub",
-    "variants": [
-      "interstitiella",
-      "interstitiellt"
-    ]
+    "def": "Som rör mellanrummen (stödjevävnaden) mellan ett organs funktionella celler, t.ex. interstitiell lungsjukdom. (adj., -t, -a) Eng: interstitial. Av lat. interstitium = mellanrum."
   },
   {
     "term": "Interstitium",
     "def": "Mellanrum; vävnadsrummet mellan celler och kärl. (subst.) Sv: interstitium, mellanrum. Eng: interstitium. Av lat. inter (mellan) + sistere = stå; interstitium = mellanrum."
   },
   {
-    "term": "Intertriginös",
-    "def": "anger att en hudåkomma (till exempel psoriasis eller eksem) finns på ställen där hud ligger mot hud, till exempel mellan skinkorna, under brösten, mellan fingrar och tår",
-    "status": "stub",
-    "variants": [
-      "intertriginösa",
-      "intertriginöst"
-    ]
-  },
-  {
     "term": "Intertrigo",
-    "def": "hudinflammation som uppstår där hud ligger mot hud",
-    "status": "stub"
+    "def": "Hudinflammation i hudveck där hud ligger mot hud (t.ex. under brösten, i ljumskar), ofta med svamp- eller bakterieinslag. (subst.) Eng: intertrigo. Även intertriginös (adj.) = som sitter där hud ligger mot hud."
   },
   {
     "term": "Intervenera",
-    "def": "ingripa, inleda behandling",
-    "status": "stub",
-    "variants": [
-      "intervenerar",
-      "intervenering",
-      "intervenerat",
-      "intervenerade"
-    ]
+    "def": "Att ingripa eller sätta in en åtgärd/behandling. (verb) Eng: to intervene."
   },
   {
     "term": "Intervention",
-    "def": "ingrepp eller åtgärd i en bestämd situation",
-    "status": "stub",
-    "variants": [
-      "interventionen",
-      "interventionerna",
-      "interventioner"
-    ]
+    "def": "Ingrepp eller åtgärd som sätts in i ett bestämt syfte. (subst., -en, pl. -er) Eng: intervention."
   },
   {
     "term": "Intervertebral",
-    "def": "mellan ryggkotorna",
-    "status": "stub",
-    "variants": [
-      "intervertebrala",
-      "intervertebralt"
-    ]
+    "def": "Som ligger mellan ryggkotorna (t.ex. mellankotskivan). (adj., -t, -a) Eng: intervertebral. Av lat. inter = mellan + vertebra = ryggkota."
   },
   {
     "term": "Intestinal",
-    "def": "som avser eller hör till inälvorna eller tarmarna",
-    "status": "stub",
-    "variants": [
-      "intestinala",
-      "intestinalt"
-    ]
+    "def": "Som rör tarmen/inälvorna. (adj., -t, -a) Sv: tarm-. Eng: intestinal. Av lat. intestinum = tarm."
   },
   {
     "term": "Intestinum",
@@ -9239,36 +8615,19 @@
   },
   {
     "term": "Intima",
-    "def": "den innersta hinnan i ett blod- eller lymfkärl",
-    "status": "stub"
+    "def": "Tunica intima; det innersta cellskiktet (endotel med stödjevävnad) i ett blod- eller lymfkärls vägg. (subst.) Eng: intima. Av lat. intimus = innerst."
   },
   {
     "term": "Intolerans",
-    "def": "överkänslighet (mot läkemedel eller födoämnen)",
-    "status": "stub",
-    "variants": [
-      "intoleransen",
-      "intoleranserna",
-      "intoleranser"
-    ]
+    "def": "Överkänslighet (icke-allergisk) mot ett ämne, t.ex. ett läkemedel eller livsmedel. (subst., -en, pl. -er) Eng: intolerance."
   },
   {
     "term": "Intoxikation",
-    "def": "förgiftning",
-    "status": "stub",
-    "variants": [
-      "intoxikationen",
-      "intoxikationerna",
-      "intoxikationer"
-    ]
+    "def": "Förgiftning. (subst., -en, pl. -er) Sv: förgiftning. Eng: intoxication, poisoning."
   },
   {
     "term": "Intoxikerad",
-    "def": "förgiftad, intag av överdos",
-    "status": "stub",
-    "variants": [
-      "intoxikerade"
-    ]
+    "def": "Förgiftad; påverkad av en överdos eller ett gift. (adj., pl. -e/-ade) Eng: intoxicated, poisoned."
   },
   {
     "term": "Intra",
@@ -9276,232 +8635,107 @@
   },
   {
     "term": "Intraabdominell",
-    "def": "som ligger inne i buken",
-    "status": "stub",
-    "variants": [
-      "intraabdominella",
-      "intraabdominellt"
-    ]
+    "def": "Belägen inne i bukhålan. (adj., -t, -a) Eng: intra-abdominal."
   },
   {
     "term": "Intraartikulär",
-    "def": "inne i en led",
-    "status": "stub",
-    "variants": [
-      "intraartikulära",
-      "intraartikulärt"
-    ]
+    "def": "Belägen inne i en led. (adj., -t, -a) Eng: intra-articular. Motsats: extraartikulär."
   },
   {
     "term": "Intrabulbär",
-    "def": "inne i ögongloben",
-    "status": "stub",
-    "variants": [
-      "intrabulbära",
-      "intrabulbärt"
-    ]
+    "def": "Belägen inne i ögongloben. (adj., -t, -a) Eng: intrabulbar."
   },
   {
     "term": "Intracellulär",
-    "def": "inne i cellen",
-    "status": "stub",
-    "variants": [
-      "intracellulära",
-      "intracellulärt"
-    ]
+    "def": "Belägen inne i cellen. (adj., -t, -a) Eng: intracellular. Motsats: extracellulär."
   },
   {
     "term": "Intracerebral",
-    "def": "inne i hjärnan",
-    "status": "stub",
-    "variants": [
-      "intracerebrala",
-      "intracerebralt"
-    ]
+    "def": "Belägen inne i hjärnan (t.ex. intracerebral blödning). (adj., -t, -a) Eng: intracerebral."
   },
   {
     "term": "Intradermal",
-    "def": "i huden, särskilt i samband med nålstick",
-    "status": "stub",
-    "variants": [
-      "intradermala",
-      "intradermalt"
-    ]
+    "def": "I huden; t.ex. en intradermal injektion i hudens överhud/läderhud. (adj., -t, -a) Eng: intradermal."
   },
   {
     "term": "Intrahepatisk",
-    "def": "i levern",
-    "status": "stub",
-    "variants": [
-      "intrahepatiska"
-    ]
+    "def": "Belägen inne i levern. (adj., pl. -a) Eng: intrahepatic."
   },
   {
     "term": "Intraindividuell",
-    "def": "inom en och samma individ",
-    "status": "stub",
-    "variants": [
-      "intraindividuella",
-      "intraindividuellt"
-    ]
+    "def": "Som rör skillnader inom en och samma individ (t.ex. över tid). (adj., -t, -a) Eng: intraindividual. Motsats: interindividuell."
   },
   {
     "term": "Intrakardiell",
-    "def": "i hjärtat",
-    "status": "stub",
-    "variants": [
-      "intrakardiella",
-      "intrakardiellt"
-    ]
+    "def": "Belägen inne i hjärtat. (adj., -t, -a) Eng: intracardiac."
   },
   {
     "term": "Intrakavernös",
-    "def": "i svällkropparna i penis",
-    "status": "stub",
-    "variants": [
-      "intrakavernösa",
-      "intrakavernöst"
-    ]
+    "def": "I penisens svällkroppar (corpora cavernosa); t.ex. intrakavernös injektion vid erektionssvikt. (adj., -t, -a) Eng: intracavernosal."
   },
   {
     "term": "Intrakraniell",
-    "def": "i huvudet eller i hjärnan",
-    "status": "stub",
-    "variants": [
-      "intrakraniella",
-      "intrakraniellt"
-    ]
+    "def": "Belägen inne i skallen/hjärnan. (adj., -t, -a) Eng: intracranial. Av lat. intra = inom + cranium = skalle."
   },
   {
     "term": "Intraktabel",
-    "def": "som inte kan behandlas",
-    "status": "stub",
-    "variants": [
-      "intraktabelt",
-      "intraktabla"
-    ]
+    "def": "Svårbehandlad; som inte svarar på behandling. (adj., -t, pl. -bla) Eng: intractable."
   },
   {
     "term": "Intramuskulär",
-    "def": "i musklerna",
-    "status": "stub",
-    "variants": [
-      "intramuskulära",
-      "intramuskulärt"
-    ]
+    "def": "I en muskel; t.ex. intramuskulär injektion (i.m.). (adj., -t, -a) Eng: intramuscular."
   },
   {
     "term": "Intraokulär",
-    "def": "i ögongloben",
-    "status": "stub",
-    "variants": [
-      "intraokulära",
-      "intraokulärt"
-    ]
+    "def": "Inne i ögongloben; t.ex. intraokulärt tryck. (adj., -t, -a) Eng: intraocular."
   },
   {
     "term": "Intraossös",
-    "def": "inne i skelettet",
-    "status": "stub",
-    "variants": [
-      "intraossösa",
-      "intraossöst"
-    ]
+    "def": "Inne i benvävnaden; t.ex. intraossös nål för vätsketillförsel i benmärgen. (adj., -t, -a) Eng: intraosseous."
   },
   {
     "term": "Intraperitoneal",
-    "def": "som ligger innanför bukhinnan (peritoneum)",
-    "status": "stub",
-    "variants": [
-      "intraperitoneala",
-      "intraperitonealt"
-    ]
+    "def": "Belägen innanför bukhinnan (i bukhålan). (adj., -t, -a) Eng: intraperitoneal."
   },
   {
     "term": "Intratekal",
-    "def": "innanför hjärnhinnorna",
-    "status": "stub",
-    "variants": [
-      "intratekala",
-      "intratekalt"
-    ]
+    "def": "I ryggmärgsvätskan (innanför hjärnhinnorna); t.ex. intratekal läkemedelstillförsel via lumbalpunktion. (adj., -t, -a) Eng: intrathecal."
   },
   {
     "term": "Intrauterin",
-    "def": "inne i livmodern",
-    "status": "stub",
-    "variants": [
-      "intrauterina",
-      "intrauterint"
-    ]
+    "def": "Belägen inne i livmodern (t.ex. intrauterin tillväxt eller spiral). (adj., -t, -a) Eng: intrauterine."
   },
   {
     "term": "Intravasal",
-    "def": "inne i blodkärlen",
-    "status": "stub",
-    "variants": [
-      "intravasala",
-      "intravasalt"
-    ]
+    "def": "Belägen inne i blodkärlen. (adj., -t, -a) Eng: intravascular. Motsats: extravasal."
   },
   {
     "term": "Intravaskulär",
-    "def": "inne i blod- eller lymfkärlen",
-    "status": "stub",
-    "variants": [
-      "intravaskulära",
-      "intravaskulärt"
-    ]
+    "def": "Belägen inne i blod- eller lymfkärlen. (adj., -t, -a) Eng: intravascular."
   },
   {
     "term": "Intravenös",
-    "def": "i en ven, som ges direkt i blodet",
-    "status": "stub",
-    "variants": [
-      "intravenösa",
-      "intravenöst",
-      "i.v."
-    ]
+    "def": "I en ven; om läkemedel/vätska som ges direkt i blodet (i.v.). (adj., -t, -a) Eng: intravenous. Av lat. intra = inom + vena = ven."
   },
   {
     "term": "Intravesikal",
-    "def": "inne i blåsan",
-    "status": "stub",
-    "variants": [
-      "intravesikala",
-      "intravesikalt"
-    ]
+    "def": "Inne i urinblåsan; t.ex. intravesikal sköljning eller behandling. (adj., -t, -a) Eng: intravesical."
   },
   {
     "term": "Intrinsic",
-    "def": "inre",
-    "status": "stub"
+    "def": "Inneboende, inre; t.ex. intrinsic factor (inre faktor för B12-upptag) eller intrinsicmuskler i handen. (adj., eng.) Eng: intrinsic."
   },
   {
     "term": "Introitus",
-    "def": "ingången till ett hålrum",
-    "status": "stub"
+    "def": "Ingången till ett hålrum, oftast slidöppningen (introitus vaginae). (subst., lat.) Eng: introitus."
   },
   {
     "term": "Intubation",
-    "def": "införande av ett rör genom näsan eller munnen till luftrören",
-    "status": "stub",
-    "variants": [
-      "intubationen",
-      "intubationerna",
-      "intubationer"
-    ]
+    "def": "Inläggning av ett rör i luftstrupen via mun eller näsa för att säkra luftvägen och kunna ventilera. (subst., -en, pl. -er) Eng: intubation."
   },
   {
     "term": "Intubera",
-    "def": "föra ner ett rör genom munnen eller näsan till luftrören på en medvetslös patient",
-    "status": "stub",
-    "variants": [
-      "intuberar",
-      "intubering",
-      "intuberat",
-      "intuberade"
-    ]
+    "def": "Att föra ned ett rör i luftstrupen för att hålla luftvägen öppen och kunna andas åt patienten. (verb) Eng: to intubate."
   },
   {
     "term": "Intumescentia",
@@ -9509,30 +8743,15 @@
   },
   {
     "term": "Invagination",
-    "def": "tillstånd då ett tarmavsnitt följer med tarminnehållet och transporteras av tarmens rörelser (peristaltik) in i det följande avsnittet, varvid det svullnar och därigenom mer eller mindre fastnar - det inskjutna tarmavsnittet (invaginatet) hindrar tarmpassagen och ger därmed upphov till tarmvred (ileus). Alternativt en kirurgisk åtgärd som innebär att ett organ stjälps in i ett annat, till exempel när stumpen efter det kirurgiskt avlägsnade maskformiga bihanget (appendix) invagineras i blindtarmen.",
-    "status": "stub",
-    "variants": [
-      "invaginationen",
-      "invaginationerna",
-      "invaginationer"
-    ]
+    "def": "Tarminvagination; ett tarmavsnitt glider in i nästa (som ett teleskop) och orsakar tarmstopp; även kirurgisk inbuktning av en struktur i en annan. (subst., -en, pl. -er) Eng: intussusception."
   },
   {
     "term": "Invasiv",
-    "def": "som tränger in i kroppen, till exempel en undersökning (endoskopi) eller ett ingrepp (operation), eller inväxt i omgivande vävnad (till exempel en cancertumör)",
-    "status": "stub",
-    "variants": [
-      "invasiva",
-      "invasivt"
-    ]
+    "def": "Som tränger in; om ingrepp som går in i kroppen eller om en tumör som växer in i omgivande vävnad. (adj., -t, -a) Eng: invasive. Motsats: non-invasiv."
   },
   {
     "term": "Invasivitet",
-    "def": "förmågan att tränga in i vävnad, till exempel en tumörs förmåga att växa in i omgivande vävnader. Hög invasivitet är ett dåligt tecken.",
-    "status": "stub",
-    "variants": [
-      "invasiviteten"
-    ]
+    "def": "Förmågan att tränga in i vävnad, t.ex. hur aggressivt en tumör växer in i omgivningen. (subst., -en) Eng: invasiveness."
   },
   {
     "term": "Inversion",
@@ -9544,41 +8763,19 @@
   },
   {
     "term": "Inverterad",
-    "def": "motsatt, omvänd, ut-och-invänd",
-    "status": "stub",
-    "variants": [
-      "inverterade"
-    ]
+    "def": "Omvänd, ut-och-invänd. (adj.) Eng: inverted."
   },
   {
     "term": "Involuntär",
-    "def": "ofrivillig, utan kontroll, inte viljestyrd",
-    "status": "stub",
-    "variants": [
-      "involuntära"
-    ]
+    "def": "Ofrivillig; inte viljestyrd. (adj., pl. -a) Eng: involuntary. Motsats: voluntär."
   },
   {
     "term": "Involution",
-    "def": "tillbakabildning med samtidig storleksminskning av ett organ eller en vävnad",
-    "status": "stub",
-    "variants": [
-      "involutionen",
-      "involutionerna",
-      "involutioner"
-    ]
+    "def": "Tillbakabildning och storleksminskning av ett organ, t.ex. livmodern efter förlossning. (subst., -en, pl. -er) Eng: involution."
   },
   {
     "term": "Involvera",
-    "def": "ingå, delta, medföra",
-    "status": "stub",
-    "variants": [
-      "involverande",
-      "involverar",
-      "involvering",
-      "involverat",
-      "involverade"
-    ]
+    "def": "Att innefatta, beröra eller dra in i något. (verb) Eng: to involve."
   },
   {
     "term": "Ipsilateral",
@@ -9586,28 +8783,15 @@
   },
   {
     "term": "IPSS",
-    "def": "International Prostate Symptom Score, internationell symtombedömning för prostatabesvär",
-    "status": "stub"
+    "def": "International Prostate Symptom Score; frågeformulär som graderar besvär från nedre urinvägarna vid t.ex. prostataförstoring. (förkortn.) Eng: International Prostate Symptom Score."
   },
   {
     "term": "Iridektomi",
-    "def": "avlägsnande av en del av regnbågshinnan, vid operation av grön starr",
-    "status": "stub",
-    "variants": [
-      "iridektomin",
-      "iridektomierna",
-      "iridektomier"
-    ]
+    "def": "Kirurgiskt avlägsnande av en bit av regnbågshinnan (iris), t.ex. vid glaukombehandling. (subst., -n, pl. -er) Eng: iridectomy. Av gr. iris = regnbåge + ektome = bortskärande."
   },
   {
     "term": "Iridocyklit",
-    "def": "inflammation i regnbågshinnan och strålkroppen",
-    "status": "stub",
-    "variants": [
-      "iridocykliten",
-      "iridocykliterna",
-      "iridocykliter"
-    ]
+    "def": "Inflammation i regnbågshinnan (iris) och strålkroppen (ciliarkroppen); en form av främre uveit. (subst., -en, pl. -er) Eng: iridocyclitis."
   },
   {
     "term": "Iris",
@@ -9615,60 +8799,27 @@
   },
   {
     "term": "Irit",
-    "def": "inflammation i regnbågshinnan",
-    "status": "stub",
-    "variants": [
-      "iriten",
-      "iriterna",
-      "iriter"
-    ]
+    "def": "Inflammation i regnbågshinnan (iris). (subst., -en, pl. -er) Eng: iritis. Av gr. iris + -itis."
   },
   {
     "term": "Irreponibel",
-    "def": "som inte kan återföras till normal plats",
-    "status": "stub",
-    "variants": [
-      "irreponibla"
-    ]
+    "def": "Som inte går att återföra till normalläge (t.ex. ett bråck som inte går att trycka tillbaka). (adj., pl. -bla) Eng: irreducible. Motsats: reponibel."
   },
   {
     "term": "Irreversibel",
-    "def": "som inte är omvändbar, sjukdom eller tillstånd som inte går att bota",
-    "status": "stub",
-    "variants": [
-      "irreversibelt",
-      "irreversibla"
-    ]
+    "def": "Oåterkallelig; som inte kan återställas eller botas. (adj., -t, pl. -bla) Eng: irreversible. Motsats: reversibel."
   },
   {
     "term": "Irrigation",
-    "def": "långvarig sköljning eller spolning, till exempel kontinuerlig spolning av ett sår, översköljning av ett organ eller ett område med vätska (till exempel av ett öga)",
-    "status": "stub",
-    "variants": [
-      "irrigationen",
-      "irrigationerna",
-      "irrigationer",
-      "irrigering",
-      "irrigeringen"
-    ]
+    "def": "Sköljning/spolning av ett sår, hålrum eller organ med vätska. (subst., -en, pl. -er) Sv: spolning. Eng: irrigation."
   },
   {
     "term": "Ischemi",
-    "def": "lokal syrebrist i vävnad på grund av bristande till- eller avflöde av blod, vilket innebär risk för vävnadsdöd",
-    "status": "stub",
-    "variants": [
-      "ischemin",
-      "ischemierna",
-      "ischemier"
-    ]
+    "def": "Lokal syrebrist i en vävnad på grund av otillräcklig blodtillförsel, med risk för vävnadsdöd. (subst., -n, pl. -er) Eng: ischaemia. Av gr. ischein = hejda + haima = blod."
   },
   {
     "term": "Ischemisk",
-    "def": "lokal syrebrist i vävnad på grund av bristande till- eller avflöde av blod",
-    "status": "stub",
-    "variants": [
-      "ischemiska"
-    ]
+    "def": "Som beror på eller rör syrebrist till följd av nedsatt blodflöde (t.ex. ischemisk hjärtsjukdom). (adj., pl. -a) Eng: ischaemic."
   },
   {
     "term": "Ischiadicus",
@@ -9676,13 +8827,7 @@
   },
   {
     "term": "Ischias",
-    "def": "nervsmärtor längs ischiasnerven som orsakas av tryck mot ischiasnerven, vanligen från ett diskbråck",
-    "status": "stub",
-    "variants": [
-      "ischiasen",
-      "ischiaserna",
-      "ischiaser"
-    ]
+    "def": "Smärta som strålar längs ischiasnerven ned i benet, oftast orsakad av tryck mot en nervrot (t.ex. diskbråck). (subst., -en) Eng: sciatica."
   },
   {
     "term": "Ischium",
@@ -9694,40 +8839,19 @@
   },
   {
     "term": "Isoenzym",
-    "def": "\"familj\" av enzymer som katalyserar samma reaktion men ändå företer vissa skillnader i uppbyggnad och egenskaper",
-    "status": "stub",
-    "variants": [
-      "isoenzymerna",
-      "isoenzymer",
-      "isoenzymet"
-    ]
+    "def": "Olika former (isoformer) av ett enzym som katalyserar samma reaktion men skiljer sig i byggnad, t.ex. CK-MB i hjärtat. (subst., -et, pl. -er) Eng: isoenzyme."
   },
   {
     "term": "Isometrisk",
-    "def": "sammandragning av en muskel utan att dess längd förändras",
-    "status": "stub",
-    "variants": [
-      "isometriska"
-    ]
+    "def": "Om muskelarbete där muskeln spänns och utvecklar kraft utan att ändra längd (statiskt arbete). (adj., pl. -a) Eng: isometric."
   },
   {
     "term": "Isoton",
-    "def": "term använd om en vätska med samma osmotiska tryck som en annan, inom medicinen åsyftas oftast saltlösningars förhållande till blodet",
-    "status": "stub",
-    "variants": [
-      "isotona",
-      "isotont"
-    ]
+    "def": "Med samma osmotiska tryck (salthalt) som kroppens vätskor; t.ex. isoton koksaltlösning. (adj., -t, -a) Eng: isotonic. Jfr hyperton, hypoton."
   },
   {
     "term": "Isotop",
-    "def": "Inom transplantationskirurgin ett inplanteringsställe som beträffande omgivande vävnad och plats i kroppen överensstämmer med det ställe i givarens kropp som organet tagits. Alternativt olika former av ett och samma kemiska grundämne med samma placering i det periodiska systemet men med olika atommassa eller -vikt, används bland annat vid nukleärmedicinska (skintigrafiska) undersökningar",
-    "status": "stub",
-    "variants": [
-      "isotopen",
-      "isotoperna",
-      "isotoper"
-    ]
+    "def": "En av flera former av ett grundämne med samma antal protoner men olika antal neutroner (olika atommassa); radioaktiva isotoper används som spårämne vid t.ex. skintigrafi. (subst., -en, pl. -er) Eng: isotope."
   },
   {
     "term": "Isthmus",
@@ -9735,23 +8859,19 @@
   },
   {
     "term": "ITP",
-    "def": "idiopatisk trombocytopen purpura",
-    "status": "stub"
+    "def": "Idiopatisk (immunologisk) trombocytopen purpura; autoimmun brist på blodplättar med blödningsbenägenhet. (förkortn.) Eng: immune thrombocytopenic purpura. Se Idiopatisk trombocytopen purpura."
   },
   {
     "term": "IUD",
-    "def": "(intrauterine device) livmoderinlägg, spiral",
-    "status": "stub"
+    "def": "Intrauterint preventivmedel; livmoderinlägg (spiral), med koppar eller hormon. (förkortn.) Sv: spiral. Eng: intrauterine device."
   },
   {
     "term": "IUI",
-    "def": "intrauterin inseminering",
-    "status": "stub"
+    "def": "Intrauterin insemination; införande av tvättade spermier direkt i livmodern vid fertilitetsbehandling. (förkortn.) Eng: intrauterine insemination."
   },
   {
     "term": "IVRA",
-    "def": "intravenös regional anestesi",
-    "status": "stub"
+    "def": "Intravenös regional anestesi; bedövning av en arm/ben där bedövningsmedel sprutas i en ven medan en blodtrycksmanschett håller kvar det i extremiteten. (förkortn.) Eng: intravenous regional anaesthesia (Bier's block)."
   },
   {
     "term": "Jejunalis",

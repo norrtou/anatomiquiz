@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.3
+- **Medicinska ordlistan: bokstaven I berikad** till fullt husformat. Synliga termer: 2 604 → **2 802** (238 I-poster, 0 stubbar kvar).
+  - Dubbletter/stavning: Icterus → **Ikterus** (svensk stavning). -ös-adjektiv infogade i grundordet i stället för egen post: infektiös → Infektion, intertriginös → Intertrigo.
+  - **-ös-glosor skärpta:** infektiös och eksematös fick egna, distinkta betydelseförklaringar i stället för att likställas med grundordet (infektiös = orsakad av/har samband med infektion, av infektionskaraktär; även smittsam — eksematös = av eksemkaraktär).
+- **Återställning efter trasig redigeringssession:** `medicinskordlista.html` hade fått sin kropp raderad (blank sida) och länkarna i index.html/sitemap.xml pekade på det gamla filnamnet `medicinskterminologi.html` (404). Sidan återställd från `0.8.2`, länkar rättade, I-berikningen återvunnen ur backup. Se BUG_REPORT_ASSISTANT.md.
+- APP_VERSION/VERSION → 0.8.3 (cachebuster app.js → 0.8.3). Highscore-datan orörd.
+
 ## 0.8.2
 - **Medicinska ordlistan: bokstäverna G och H berikade** till fullt husformat. Synliga termer: 2 291 → **2 604**.
   - G: 86 poster berikade; 2 dubbletter sammanslagna (Granulomatös→Granulom, Glykosuri→Glukosuri) och 2 icke-termer borttagna ("Grupp 1"/"Grupp 2", som var resvaccinationskategorier, inte uppslagsord).
