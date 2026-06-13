@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.1
+- **Medicinska ordlistan: bokstäverna E och F berikade** till fullt husformat. Synliga termer: 1 967 → **2 291**.
+  - E: 202 poster berikade; 1 inskrapad skräppost ("Enter words…") och 5 stavnings-/-ös-dubbletter borttagna (Eksematös→Eksem, Erytematös→Erytem, Eclampsi→Eklampsi, Encephalit→Encefalit, Evakuation→Evakuering).
+  - F: 122 poster berikade; 5 dubbletter sammanslagna (Fibrös→Fibros, Fallots syndrom→Fallots tetrad, Fixation→Fixering, Fotosensitivitet→Fotosensibilitet, Fekalier→Feces); rättat stavfel i rubrik (Falska postitiva → Falska positiva).
+  - Faktagranskning: rättat bl.a. Erytrofobi (rädsla för att rodna, ej erytrodermi), Eskarotomi (≠ fasciotomi), Falang (ben, ej led), Femurfraktur (lårbensbrott).
+- APP_VERSION/VERSION → 0.8.1 (cachebuster app.js → 0.8.1). Highscore-datan orörd.
+
 ## 0.8.0
 - **Stor utbyggnad av den medicinska ordlistan** mot målet att täcka all medicinsk terminologi på svenska. En omfattande lista med medicinska termer (3 965 st) har importerats och de som saknades i `data/ordlista.json` lades in. Ordlistan berikas sedan bokstav för bokstav till fullt husformat (definition, ordklass, böjning, Sv/Eng/lekmannasvenska, etymologi).
   - **Berikat och publicerat: A, B, C, D.** Synliga termer i ordlistan: 1 081 → **1 967**.
