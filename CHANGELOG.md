@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.8
+- **Medicinska ordlistan: bokstaven M berikad** till fullt husformat. Synliga termer: 3 098 → **3 202** (104 M-poster berikade, 0 stubbar kvar).
+  - **Sammanslagningar (5 stubbar borttagna):** c/k-dubbletten Makula → täcks av redan publicerade Macula (även-stavning); Megacolon → Megakolon; Menarche → Menarke (försvenskad form); Mesenterial → Mesenteriell (stavningsvariant); Medianvärde → Median (synonym).
+  - **Rubriker rättade:** Mamillen → **Mamill** och Metafysen → **Metafys** (grundform i stället för bestämd form); Mandrin/mandräng → **Mandräng** (även-stavning mandrin).
+  - **Faktarättning i importtexten:** Makulopati (källtexten angav felaktigt "sjukdomar i hornhinnan" – rättat till sjukdom i gula fläcken/makula, enligt ordets betydelse).
+  - Evidens-/statistikbegrepp (MADRS, MAO/MAOH, Mol, Median) bevarade med förklaring.
+- APP_VERSION/VERSION → 0.8.8 (cachebusters: glossary.css → 0.8.8, glossary.js → 0.8.8, app.js → 0.8.8). Highscore-datan orörd.
+
 ## 0.8.7
 - **Medicinska ordlistan: klickbar alfabetsrad** under sökrutan. En klassisk A–Ö-rad (inkl. Å Ä Ö) där varje befintlig bokstav är ett hoppankare till sin bokstavsgrupp; bokstäver utan poster (W, Y, Å, Ä, Ö) visas nedtonade och oklickbara.
   - Förrenderad statiskt av `scripts/generate_glossary.py` (markörer `GENERATED:ALPHABET:START/END`) så den fungerar utan JS och speglar exakt vilka bokstäver som finns i `data/ordlista.json`.
