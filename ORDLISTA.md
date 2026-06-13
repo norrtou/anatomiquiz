@@ -37,8 +37,9 @@ Ordlistan byggs ut från en omfattande importerad lista med medicinska termer (3
 - **F: klart** (122 berikade, 5 dubbletter sammanslagna).
 - **G: klart** (86 berikade, 2 dubbletter + 2 icke-termer ("Grupp 1/2") borttagna).
 - **H: klart** (227 berikade, 4 dubbletter borttagna; 3 rubriker rättade).
+- **I: klart** (238 poster; Icterus→Ikterus; -ös-formerna infektiös/intertriginös infogade i grundord. Synliga termer totalt: 2 802).
 - Återstår (stubs per bokstav):
-  I 201 · J 5 · K 201 · L 130 · M 109 · N 117 · O 134 · P 464 · Q 3 · R 155 · S 280 · T 221 · U 59 · V 103 · W 5 · X 6 · Y 1 · Z 2 · Ö 5
+  J 5 · K 201 · L 130 · M 109 · N 117 · O 134 · P 464 · Q 3 · R 155 · S 280 · T 221 · U 59 · V 103 · W 5 · X 6 · Y 1 · Z 2 · Ö 5
 
 ### c/k-stavningsdubbletter (viktigt vid K m.fl.)
 Grekisk-härledda medicinska ord finns ofta i både c- och k-stavning (Catarakt/Katarakt, Carcinom/Karcinom, Cardio-/Kardio-, Cholecystit/Kolecystit, Colit/Kolit, Coronar/Koronar, Conjunktivit/Konjunktivit, Curativ/Kurativ …). C-formerna är redan berikade och **publicerade** (de noterar k-formen med "även …"). När K (och andra letter) berikas: ta bort k-stubben om en redan publicerad c-post täcker samma ord — behåll den publicerade, lägg ev. till "även k-form". Kontrollera genom att byta k→c i K-termen och se om en synlig post finns.
@@ -92,8 +93,9 @@ Riktlinjer:
 - **Faktakonservativt:** den importerade råtexten ger betydelsen. Lägg hellre till mindre etymologi än att gissa. Kör inte över kursunderlaget med eget resonemang (se `CLAUDE_REGLER.md`).
 
 ### -ös-adjektiv integreras i grundordet
-Medicinska **-ös**-former (adenomatös, fibrös, ödematös …) betyder "lik/av samma slag som" grundordet och är en **böjning**, inte ett eget uppslagsord. Ge dem ingen egen post — integrera i grundformen med "**även …**", t.ex.:
-> Adenomatos — "… Eng: adenomatosis. Även adenomatös (adj.) = körtelliknande …"
+Medicinska **-ös**-former (adenomatös, fibrös, ödematös …) ges ingen egen post — integrera dem i grundformen med "**även …**". **MEN:** substantivet och -ös-adjektivet är relaterade, inte samma ord. Glosan måste vara en **egen, tydlig förklaring som visar skillnaden** — aldrig bara likställa adjektivet med grundordet. Skriv `även <ordet> (adj.) = <distinkt betydelse>`, t.ex.:
+> Adenomatos — "… Eng: adenomatosis. Även adenomatös (adj.) = körtelliknande, av adenomkaraktär …"
+> Infektion — "… Även infektiös (adj.) = som orsakas av eller har samband med infektion; även smittsam." (INTE bara "= smittsam".)
 
 Detta löser samtidigt slug-kollisioner (se nedan) och formen förblir sökbar eftersom sökningen även matchar `def`-texten.
 
