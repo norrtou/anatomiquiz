@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.12
+- **Medicinska ordlistan: bokstaven P berikad** till fullt husformat. Synliga termer: 3 446 → **3 895** (449 P-poster berikade, 0 stubbar kvar). Hittills största bokstaven.
+  - **Sammanslagningar (15 stubbar borttagna):** th/t-formerna Parathyreoidea→Paratyreoidea, Pneumothorax→Pneumotorax; c/k- och stavningsdubbletter Panniculit→Pannikulit, Pediculos + Pediculosis→Pedikulos, Petechium→Petekium, Pingvekula→Pinguecula, Polynevropati→Polyneuropati, Pyoderma→Pyodermi, Proptosis→Proptos, Paronykion→Paronyki; synonympar Periodontit→Parodontit, Periodontal→Parodontal, Pip→Pip-led; slug-kollisionen Pustulös→Pustulos (pustulös/pustulos ger identiskt ankar-id, adjektivet integrerat i Pustulos-posten).
+  - **Rubrik rättad:** Parasympatimimetisk → **Parasympatomimetisk** (felstavning i importen).
+  - **Cross-referenser:** PMS/PMDD/PMDS, PCO/PCOS/Polycystiskt ovariesyndrom, PPV/Positivt prediktivt värde, PTH/Paratyreoideahormon, PRL/Prolaktin, PPI/Protonpumpshämmare, PTSD/Posttraumatiskt stressyndrom, PCI/PTCA, Prebiotika/Probiotika m.fl.
+  - Forsknings-/statistikbegrepp (P-värde, Power, Prevalens, Publication bias, Positivt prediktivt värde) bevarade med tolkningsförklaring.
+- APP_VERSION/VERSION → 0.8.12 (cachebusters: glossary.css → 0.8.12, glossary.js → 0.8.12, app.js → 0.8.12). Ordliste- och highscore-data orörd.
+
 ## 0.8.11
 - **Medicinska ordlistan: bokstaven O berikad** till fullt husformat. Synliga termer: 3 314 → **3 446** (132 O-poster berikade, 0 stubbar kvar).
   - **Sammanslagningar (2 stubbar borttagna):** c/k-dubbletten Otoscleros → Otoskleros (även-stavning); slug-kollisionen Okular → Okulär (substantivet okular = mikroskopets ögonlins integrerat i Okulär-posten, eftersom okular/okulär annars ger identiskt ankar-id).
