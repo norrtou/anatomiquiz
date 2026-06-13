@@ -35,8 +35,10 @@ Ordlistan byggs ut från en omfattande importerad lista med medicinska termer (3
 - **D: klart** (170 berikade, 2 dubbletter sammanslagna).
 - **E: klart** (202 berikade, 1 skräppost + 5 dubbletter borttagna).
 - **F: klart** (122 berikade, 5 dubbletter sammanslagna).
+- **G: klart** (86 berikade, 2 dubbletter + 2 icke-termer ("Grupp 1/2") borttagna).
+- **H: klart** (227 berikade, 4 dubbletter borttagna; 3 rubriker rättade).
 - Återstår (stubs per bokstav):
-  G 90 · H 231 · I 201 · J 5 · K 201 · L 130 · M 109 · N 117 · O 134 · P 464 · Q 3 · R 155 · S 280 · T 221 · U 59 · V 103 · W 5 · X 6 · Y 1 · Z 2 · Ö 5
+  I 201 · J 5 · K 201 · L 130 · M 109 · N 117 · O 134 · P 464 · Q 3 · R 155 · S 280 · T 221 · U 59 · V 103 · W 5 · X 6 · Y 1 · Z 2 · Ö 5
 
 ### c/k-stavningsdubbletter (viktigt vid K m.fl.)
 Grekisk-härledda medicinska ord finns ofta i både c- och k-stavning (Catarakt/Katarakt, Carcinom/Karcinom, Cardio-/Kardio-, Cholecystit/Kolecystit, Colit/Kolit, Coronar/Koronar, Conjunktivit/Konjunktivit, Curativ/Kurativ …). C-formerna är redan berikade och **publicerade** (de noterar k-formen med "även …"). När K (och andra letter) berikas: ta bort k-stubben om en redan publicerad c-post täcker samma ord — behåll den publicerade, lägg ev. till "även k-form". Kontrollera genom att byta k→c i K-termen och se om en synlig post finns.

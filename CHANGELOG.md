@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.2
+- **Medicinska ordlistan: bokstäverna G och H berikade** till fullt husformat. Synliga termer: 2 291 → **2 604**.
+  - G: 86 poster berikade; 2 dubbletter sammanslagna (Granulomatös→Granulom, Glykosuri→Glukosuri) och 2 icke-termer borttagna ("Grupp 1"/"Grupp 2", som var resvaccinationskategorier, inte uppslagsord).
+  - H: 227 poster berikade; 4 dubbletter sammanslagna (Hemorroid→Hemorrojd, Hidroadenit→Hidrosadenit, Hodgkins sjukdom→Hodgkins lymfom, Hyperhidrosis→Hyperhidros); 3 rubriker rättade (Heberdenska→Heberdens knutor, Horner→Horners syndrom, Hip Harris Score→Harris Hip Score).
+  - Städning av trasiga/dubblerade källtexter (bl.a. Hjärtblock, Hyperhidros) och hyper-/hypo-par korsrefererade med sina motsatser.
+- APP_VERSION/VERSION → 0.8.2 (cachebuster app.js → 0.8.2). Highscore-datan orörd.
+
 ## 0.8.1
 - **Medicinska ordlistan: bokstäverna E och F berikade** till fullt husformat. Synliga termer: 1 967 → **2 291**.
   - E: 202 poster berikade; 1 inskrapad skräppost ("Enter words…") och 5 stavnings-/-ös-dubbletter borttagna (Eksematös→Eksem, Erytematös→Erytem, Eclampsi→Eklampsi, Encephalit→Encefalit, Evakuation→Evakuering).
