@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.23
+- **Alfabetsraden: tecken-/ändelsefacket märks "suffix" i stället för "#".** Facket innehåller bara suffix (poster som inleds med streck), så etiketten är nu uttrycklig. Speglat i `scripts/generate_glossary.py` (`group_label`) och `js/glossary.js` (sökträffarnas grupprubrik). Sidorna omgenererade.
+- APP_VERSION/VERSION → 0.8.23 (cachebuster: app.js → 0.8.23, glossary.css/js → 0.8.23; styles.css oförändrad 0.7.1).
+
 ## 0.8.22
 - **Ordlistan uppdelad i många små sidor (prestanda/SEO).** Den enda `medicinskordlista.html` hade växt till ~3,5 MB och fick katastrofal hastighet i Search Console (Core Web Vitals mäts per URL). Ordlistan är nu uppdelad i **en sida per begynnelsegrupp** — `ordlista-a.html … ordlista-z.html`, `ordlista-oe.html` (Ö), `ordlista-siffror.html`, `ordlista-tecken.html` (ändelser/suffix) — plus en lätt landningssida `medicinskordlista.html`.
   - **Indexsidan visar bokstaven A:s innehåll** (som ordlistan såg ut förr), inte hela listan — bara A laddas, så sidan är lätt (~180 KB mot 3,5 MB). Övriga bokstäver nås via alfabetsraden (egna sidor) eller sökrutan. Tyngsta gruppsidan (P) 216 KB; varje URL laddar snabbt och indexeras separat.

@@ -162,7 +162,7 @@ function renderResults(terms, query, currentPage) {
 
   let html = ''
   GROUP_ORDER.filter(k => groups[k]).forEach(key => {
-    const label = key === 'siffror' ? '0–9' : key === 'tecken' ? '#' : key
+    const label = key === 'siffror' ? '0–9' : key === 'tecken' ? 'suffix' : key
     html += `<h3 class="glossary-letter">${escapeHtml(label)}</h3>`
     html += '<dl class="glossary-group">'
     groups[key].forEach(e => {

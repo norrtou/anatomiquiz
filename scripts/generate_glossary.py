@@ -45,7 +45,7 @@ LANDING_FILE = "medicinskordlista.html"
 
 # Cachebusters per asset — bumpa bara den som faktiskt ändrats.
 STYLES_V = "0.7.1"        # css/styles.css (oförändrad sedan tidigare)
-GLOSSARY_V = "0.8.22"     # css/glossary.css + js/glossary.js (denna release)
+GLOSSARY_V = "0.8.23"     # css/glossary.css + js/glossary.js (denna release)
 
 # Svenska alfabetet — fast ordning för alfabetsraden. Bokstäver utan poster
 # renderas nedtonade (icke-klickbara), så raden ser likadan ut oavsett innehåll.
@@ -131,14 +131,13 @@ def format_def(text: str) -> str:
 def group_label(key: str) -> str:
     """Kort etikett för alfabetsraden (chip-text).
 
-    'tecken' (poster som inleds med streck, dvs ändelser/suffix) får '#' —
-    standardsymbolen för symbol-/övrigtfacket i A–Ö-index (jfr iOS-kontakter).
-    Eftersom siffror har ett eget '0–9'-fack blir '#' rent symbolfacket.
+    'tecken'-facket innehåller bara suffix (poster som inleds med streck), så
+    chippet märks "suffix" i stället för en generisk symbol.
     """
     if key == "siffror":
         return "0–9"
     if key == "tecken":
-        return "#"
+        return "suffix"
     return key
 
 
