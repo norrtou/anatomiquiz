@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.21
+- **Medicinska ordlistan: systematiska suffix-poster (latin/grekiska).** Hela listan av medicinska efterled/slutled införd som egna poster i streck-form (`-agra`, `-algia / -algi`, `-cele` …), var och en med betydelse, ursprung och exempel – på samma sätt som prefix-posterna. Synliga termer: 5 294 → **5 447** (+153 suffix).
+  - **Varianter samlade per post:** latinsk/grekisk + svensk form ligger i en gemensam post (`-algia / -algi`, `-osis / -os`, `-ektomi` osv.). Dubbletter över källans ämnesindelning slogs ihop (`-clasis/-clasia/-klasi` patologisk + kirurgisk; `-lysis/-lys` upplösning + kirurgisk frigöring; `-logia/-logi` läran om + sjukligt tal).
+  - **Slug-disambiguering:** suffix-poster (inleds med streck) får ankarprefix `term-suffix-` så att de inte krockar med likalydande grundord/prefix (`-toxin` vs `Toxin`, `-plasma` vs `Plasma`, `-receptor`, `-stoma`, `-valva`, `-in` vs `in-`). Logiken speglad identiskt i `scripts/generate_glossary.py` och `js/glossary.js`; inga befintliga ankare påverkas (ingen tidigare term inleds med streck).
+  - **Källrättelser verifierade mot litteratur (Wiktionary, Merriam-Webster Medical, medicinska ordböcker):** `-ont` → **`-odontia / -odonti`** (anodontia/hyperdontia/oligodontia är grek. *-odontia*; exemplet anodonti flyttat dit från `-dentia`, som behållits som latinsk variant med ex. *edentia*). `-ade` (spuriöst "funktionellt nätverk") → ersatt av det riktiga riktningssuffixet **`-ad`** (lat. *cephalad, caudad, ventrad*). `neuroexeres` → **`neurexeres`** (eng. *neurexeresis*). `-doxia`: psykiatri-påståendet borttaget (grek. *doxa* = åsikt; ortodoxi/heterodoxi). Bekräftade och behållna: `-cholia` (acholia), `-chylia` (achylia), `-thelia` (athelia/polythelia), `-icterus` (anicteric), `-tocia` (dystocia), `-liposis` (liposis).
+  - **Städade/utelämnade källposter:** `-vcf` → `-valva`; `-gocrine` → `-krin`; korrupt `-spasmus`-exempel rensat. Utelämnade utan litteraturstöd: `-gasis`, `-isis` (= bara grek. `-sis`), `-strismus` (trismus < *trismos*); `-dysesthesia` slogs in i `-estesi` (dysestesi som exempel); `-ia` noterat i `-iasis`-posten.
+  - `medicinskordlista.html` omgenererad via `scripts/generate_glossary.py`; statisk markup byte-identisk för befintliga poster. SEO-meta orörd ("tusentals", ingen siffra).
+- APP_VERSION/VERSION → 0.8.21 (cachebuster: app.js → 0.8.21, glossary.js → 0.8.21).
+
 ## 0.8.20
 - **Prefix-listan: tre källflaggade former kontrollerade mot litteratur och rättade.** Synliga termer: 5 295 → **5 294**.
   - `pycl- / pyclo-` → rättat till **`pycn- / pycno-`** (även pykn-/pykno-), grek. *pyknos* = tät/tjock. Var OCR-fel (n→l) i källistan.

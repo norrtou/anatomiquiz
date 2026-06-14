@@ -163,7 +163,11 @@ function slugifyBase(str) {
  * @returns {string}
  */
 function slugify(term) {
-  return 'term-' + slugifyBase(term)
+  // Suffix-poster inleds med streck (t.ex. "-algi"); de får prefixet
+  // "term-suffix-" så att slugen inte kolliderar med likalydande grundord
+  // eller prefix. Måste matcha slugify() i scripts/generate_glossary.py.
+  const base = term.charAt(0) === '-' ? 'term-suffix-' : 'term-'
+  return base + slugifyBase(term)
 }
 
 /**

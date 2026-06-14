@@ -54,11 +54,18 @@ _SLUG_MAP = {"å": "a", "ä": "a", "ö": "o", "é": "e", "è": "e", "ü": "u"}
 
 
 def slugify(term: str) -> str:
-    """Stabil ankar-id från en term. Identisk logik som i js/glossary.js."""
+    """Stabil ankar-id från en term. Identisk logik som i js/glossary.js.
+
+    Suffix-poster inleds med streck (t.ex. "-algi"); de får prefixet
+    "term-suffix-" så att deras slug inte kolliderar med likalydande grundord
+    eller prefix (strecket faller annars bort i slugen). Inga andra termer
+    inleds med streck, så befintliga ankare påverkas inte.
+    """
+    is_suffix = term.startswith("-")
     s = term.lower()
     s = "".join(_SLUG_MAP.get(c, c) for c in s)
     s = re.sub(r"[^a-z0-9]+", "-", s).strip("-")
-    return f"term-{s}"
+    return f"term-suffix-{s}" if is_suffix else f"term-{s}"
 
 
 def format_def(text: str) -> str:
