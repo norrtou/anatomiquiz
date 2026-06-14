@@ -85,11 +85,11 @@ function escapeHtml(str) {
     .replace(/"/g, '&quot;')
 }
 
-/** Escapar HTML och kursiverar engelska termer (text efter "Eng: "). */
+/** Escapar HTML och kursiverar ordklassen (ledande token: subst., adj., verb …). */
 function formatDef(str) {
   return escapeHtml(str).replace(
-    /Eng: ((?:[^.(]|\([^)]*\))+)\./g,
-    'Eng: <em lang="en">$1</em>.'
+    /^(subst\.|adj\.|adv\.|verb|prefix|suffix|förk\.|pron\.|räkn\.|interj\.|konj\.|prep\.)(?![a-zåäö])/,
+    '<em>$1</em>'
   )
 }
 

@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.25
+- **Ordlistan: standardiserad grundmall för alla poster (uppslagsverksstil).** Samtliga 5 391 poster följer nu en enhetlig struktur: **fett, gement uppslagsord** (utom förkortningar och egennamn/eponymer), **kursiv förkortad ordklass** direkt följd av **böjning i parentes** (`subst. (-en, pl. -er) …`), gemen definitionsinledning, varianter (`Sv.`, `Vardag.`, `Eng.`) och etymologi.
+  - **Uppslagsord gemeniserade:** 4 164 termer (Abdomen → abdomen). Förkortningar (ACE, AAT, 5-FU) och 26 kurerade eponymer (Crohns sjukdom, Parkinsons sjukdom, Cushings syndrom, Sjögren …) behåller versal; eponym-härledda gloss-ord skyddas (Apgarpoäng).
+  - **Fältmarkörer:** `Lekman:` → `Vardag.`, `Eng:` → `Eng.`, `Sv:` → `Sv.`.
+  - **Rendering:** `formatDef`/`format_def` kursiverar nu den **ledande ordklass-token** i stället för den engelska termen — endast ordklassen kursiveras. Speglat byte-identiskt i `scripts/generate_glossary.py` och `js/glossary.js`. Sidorna omgenererade.
+  - Grundmall att bygga vidare på (t.ex. arkaiska varianter som *bleksot* senare).
+- APP_VERSION/VERSION → 0.8.25 (cachebuster: app.js → 0.8.25, glossary.css/js → 0.8.25; styles.css oförändrad 0.7.1).
+
 ## 0.8.24
 - **Ordlistan: kvalitetskontroll av dubbletter – svensk/latinsk formpar sammanslagna.** 56 par där samma ord stod som två poster i olika form (svensk vs latinsk) slogs ihop till en post med det **latinska/medicinska ordet som uppslagsord** och den svenska formen invävd som `Svensk form: …`; allt innehåll bevarat. Adjektiv (`Frontal→Frontalis`, `Renal→Renalis`, `Nasal→Nasalis` m.fl.) och substantiv (`Membran→Membrana`, `Ligament→Ligamentum`, `Tonsill→Tonsilla` m.fl.).
   - **4 par hölls medvetet isär** som falska vänner (lika form, olika ord): `Fibros`/`Fibrosus`, `Median`/`Medianus`, `Mental` (*mens*, psyket)/`Mentalis` (*mentum*, hakan), `Perone` (subst.)/`Peroneus` (adj.).

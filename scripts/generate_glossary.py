@@ -45,7 +45,7 @@ LANDING_FILE = "medicinskordlista.html"
 
 # Cachebusters per asset — bumpa bara den som faktiskt ändrats.
 STYLES_V = "0.7.1"        # css/styles.css (oförändrad sedan tidigare)
-GLOSSARY_V = "0.8.23"     # css/glossary.css + js/glossary.js (denna release)
+GLOSSARY_V = "0.8.25"     # css/glossary.css + js/glossary.js (denna release)
 
 # Svenska alfabetet — fast ordning för alfabetsraden. Bokstäver utan poster
 # renderas nedtonade (icke-klickbara), så raden ser likadan ut oavsett innehåll.
@@ -115,11 +115,11 @@ def escape_html(text: str) -> str:
 
 
 def format_def(text: str) -> str:
-    """Escapa HTML och kursivera den engelska termen. Matchar formatDef i JS."""
+    """Escapa HTML och kursivera ordklassen i början. Matchar formatDef i JS."""
     escaped = escape_html(text)
     return re.sub(
-        r"Eng: ((?:[^.(]|\([^)]*\))+)\.",
-        r'Eng: <em lang="en">\1</em>.',
+        r"^(subst\.|adj\.|adv\.|verb|prefix|suffix|förk\.|pron\.|räkn\.|interj\.|konj\.|prep\.)(?![a-zåäö])",
+        r"<em>\1</em>",
         escaped,
     )
 
