@@ -1,5 +1,15 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.19
+- **Medicinska ordlistan: systematiska prefix-poster (latin/grekiska).** Hela listan av medicinska för- och kombineringsled införd som egna poster i streck-form (`a-`, `ab-`, `aden- / adeno-` …), var och en med betydelse, ursprung och exempel. Synliga termer: 4 701 → **5 295** (+652 prefix, −58 ersatta).
+  - **Ersatta gamla poster:** de 58 tidigare versala prefix-posterna (Ab, Ad, Adeno, Di, Endo, Epi, Exo, Hyper, Para, Sub …) togs bort och ersattes av de nya streck-formerna. De fyra prefix-posterna utan motsvarighet i listan (Giga, Krikos, Mylo, Psoa) lämnades orörda.
+  - **Varianter samlade per post:** stavningsvarianter (t.ex. `haem-/hemat-/hemato-/hemo-`) ligger i en gemensam post; assimilerade former skrivs in i original-prefixets post (ad- → ac-/af-/ag-/al-/ap-/as-/at-, con- → co-/col-/com-/cor-, in- → il-/im-/ir-, ob- → oc-/of-/op-, sub- → suc-/suf-/…, syn- → sym-, ex- → ef-, en- → em-, dis- → dif-, apo- → ap-/aph-).
+  - **Rättade OCR-fel** i källistans C-avsnitt (`gorm-`→corm-, `gorono-`→corono-, `gortic-`→cortic-, `gostat-`→cost-, `goxo-`→coxo-, `gylindr-`→cylindr-).
+  - **Slug-disambiguering:** `ana- (grek.)`, `cis- (lat.)`, `genu- (lat.)` fick språktagg i titeln för att inte krocka med befintliga poster ANA, CIS, Genu.
+  - **Källflaggor att verifiera:** `parati- / paratio-`, `pemi- / pemp-`, `pycl- / pyclo-` (ovanliga/oklara former i källistan – tolkade som parathyreoidea-, blåsa- resp. pykn-/pykno-).
+  - `medicinskordlista.html` omgenererad via `scripts/generate_glossary.py`; statisk markup byte-identisk för befintliga poster. SEO-meta orörd ("tusentals", ingen siffra).
+- APP_VERSION/VERSION → 0.8.19 (cachebuster: app.js → 0.8.19, glossary.js → 0.8.19). Highscore-data orörd.
+
 ## 0.8.18
 - **Medicinska ordlistan: bokstäverna T–Ö (samt 5-ASA/5-FU) berikade** till fullt husformat. Synliga termer: 4 321 → **4 701**. Därmed är hela A–Ö berikat och 0 dolda stubbar återstår.
   - **T:** 201 berikade, 20 sammanslagna/borttagna (bl.a. Tymus → Thymus, Trokanter/Trochanter major/minor → Trochanter, Thoracal → Thoracalis, Trendelenburgs läge → Trendelenburgläge, verbformer → substantiv); rubrikfix "tics och Tourettes syndrom" → Tourettes syndrom.
