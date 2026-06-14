@@ -1,151 +1,50 @@
 /**
- * glossary.js — Medicinsk ordlista
+ * glossary.js — Medicinsk ordlista (global sökning över alla undersidor)
  *
- * Hanterar hämtning, filtrering och rendering av medicinska termer.
- * Används uteslutande av medicinskordlista.html.
+ * Ordlistan är uppdelad i en sida per begynnelsegrupp (ordlista-a.html …,
+ * ordlista-siffror.html, ordlista-tecken.html) plus en landningssida. Varje
+ * sida levererar sitt innehåll FÖRRENDERAT som statisk <dl> — crawlbart och
+ * läsbart helt utan JavaScript. Den här filen bygger INTE om listan; den lägger
+ * bara till global sökning ovanpå det statiska innehållet:
+ *
+ *   - Datan (data/ordlista.json) lazy-laddas först när användaren börjar söka,
+ *     så att sidladdningen förblir lätt (snabb LCP / Core Web Vitals).
+ *   - Sökträffar visas i #searchResults och länkas till rätt sida + ankare,
+ *     oavsett vilken undersida man söker från. Är träffen på den aktuella sidan
+ *     används ett rent #ankare (ingen omladdning).
+ *   - Medan en sökning är aktiv döljs det statiska #glossaryContent; töms
+ *     sökrutan återställs det.
+ *
+ * pageKey()/pageSlug()/slugify() MÅSTE spegla scripts/generate_glossary.py
+ * byte för byte, annars pekar sökträffarnas länkar fel.
  */
 
 const DATA_URL = './data/ordlista.json'
 
+const SWEDISH_ALPHABET = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ']
+// Ordning för grupper i sökträffarna (matchar alfabetsraden).
+const GROUP_ORDER = [...SWEDISH_ALPHABET, 'siffror', 'tecken']
+const PAGE_SLUG = { Å: 'aa', Ä: 'ae', Ö: 'oe' }
+
 // ============================================================================
-// Datahämtning
+// Gruppering & slugs — spegelbild av scripts/generate_glossary.py
 // ============================================================================
 
-/**
- * Hämtar ordlisteposter från DATA_URL.
- * @returns {Promise<Array<{term: string, def: string}>>}
- */
-async function loadTerms() {
-  const res = await fetch(DATA_URL)
-  if (!res.ok) throw new Error(`HTTP ${res.status}`)
-  const data = await res.json()
-  // Stubs (status === 'stub') är ofärdiga poster som samlats i ordlista.json
-  // men ännu inte berikats — de ska inte visas live. Filtreras bort här så att
-  // både rendering och sökning matchar den statiska förrenderingen i
-  // scripts/generate_glossary.py (som hoppar över samma poster).
-  return data.filter(e => e.status !== 'stub')
+/** Vilken sida en term hör till. */
+function pageKey(term) {
+  const c = term[0]
+  if (c >= '0' && c <= '9') return 'siffror'
+  const cu = c.toUpperCase()
+  return SWEDISH_ALPHABET.includes(cu) ? cu : 'tecken'
 }
 
-// ============================================================================
-// Rendering
-// ============================================================================
-
-/**
- * Renderar termer i #glossaryContent, grupperade alfabetiskt.
- *
- * Markupen är identisk med den som scripts/generate_glossary.py förrenderar
- * statiskt (semantisk <dl>, stabila id:n, lang="en" på engelska termer) så att
- * djuplänkar är stabila oavsett om sidan renderas av servern eller av JS.
- * @param {Array<{term: string, def: string}>} terms
- * @param {string} query  Sökfras (tom = visa alla)
- */
-function renderTerms(terms, query) {
-  const container = document.getElementById('glossaryContent')
-  const q = query.toLowerCase().trim()
-
-  const filtered = q
-    ? terms.filter(
-        e =>
-          e.term.toLowerCase().includes(q) ||
-          e.def.toLowerCase().includes(q)
-      )
-    : terms
-
-  if (!filtered.length) {
-    container.innerHTML = '<p class="glossary-empty">Inga träffar.</p>'
-    updateAlphabet(new Set())
-    return
-  }
-
-  // Gruppera på första bokstaven i termen
-  const groups = {}
-  filtered.forEach(e => {
-    const letter = e.term[0].toUpperCase()
-    if (!groups[letter]) groups[letter] = []
-    groups[letter].push(e)
-  })
-
-  updateAlphabet(new Set(Object.keys(groups)))
-
-  let html = ''
-  Object.keys(groups)
-    .sort()
-    .forEach(letter => {
-      const letterId = 'letter-' + slugifyBase(letter)
-      html += `<h3 class="glossary-letter" id="${letterId}">${letter}<a class="glossary-top" href="#main" aria-label="Tillbaka till toppen">↑ Topp</a></h3>`
-      html += '<dl class="glossary-group">'
-      groups[letter].forEach(e => {
-        html += `<div class="glossary-entry" id="${slugify(e.term)}"><dt class="glossary-term">${escapeHtml(e.term)}</dt><dd class="glossary-def">${formatDef(e.def)}</dd></div>`
-      })
-      html += '</dl>'
-    })
-
-  container.innerHTML = html
+/** Filnamns-slug för en grupp. */
+function pageSlug(key) {
+  if (key === 'siffror' || key === 'tecken') return key
+  return PAGE_SLUG[key] || key.toLowerCase()
 }
 
-/**
- * Tonar ned bokstäver i alfabetsraden (#glossaryAlphabet) som saknar synliga
- * poster. Endast befintliga bokstäver (renderade som <a>) växlar; bokstäver
- * som aldrig har poster är statiska <span> och förblir nedtonade.
- *
- * CSS:ens `pointer-events: none` på .is-disabled gör nedtonade bokstäver
- * oklickbara, så ingen extra klickhantering behövs.
- * @param {Set<string>} present  Versala begynnelsebokstäver med synliga poster
- */
-function updateAlphabet(present) {
-  document.querySelectorAll('#glossaryAlphabet .glossary-alpha').forEach(el => {
-    const letter = el.dataset.letter
-    // <span> = bokstav utan poster i hela listan; lämna alltid nedtonad.
-    const hasAnchor = el.tagName === 'A'
-    const active = hasAnchor && present.has(letter)
-    el.classList.toggle('is-disabled', !active)
-  })
-}
-
-/**
- * Hanterar misslyckad datahämtning utan att förstöra det statiskt
- * förrenderade innehållet. Finns redan poster i DOM:en (no-JS-fallbacken)
- * behålls de och endast sökfältet inaktiveras; annars visas ett felmeddelande.
- */
-function renderError() {
-  const container = document.getElementById('glossaryContent')
-  const input = document.getElementById('glossarySearch')
-
-  if (container.querySelector('.glossary-entry')) {
-    if (input) {
-      input.disabled = true
-      input.placeholder = 'Sök är inte tillgänglig offline'
-    }
-    return
-  }
-
-  container.innerHTML =
-    '<p class="glossary-empty">Kunde inte ladda ordlistan. Försök ladda om sidan.</p>'
-}
-
-// ============================================================================
-// Hjälpfunktioner
-// ============================================================================
-
-/**
- * Escapar HTML-specialtecken för säker injektion i innerHTML.
- * @param {string} str
- * @returns {string}
- */
-function escapeHtml(str) {
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-}
-
-/**
- * Bygger ett ankarvänligt slug-fragment. Måste ge identiskt resultat som
- * slugify() i scripts/generate_glossary.py så att djuplänkar är stabila.
- * @param {string} str
- * @returns {string}
- */
+/** Bygger ett ankarvänligt slug-fragment (måste matcha Python:s slugify). */
 function slugifyBase(str) {
   return str
     .toLowerCase()
@@ -157,87 +56,194 @@ function slugifyBase(str) {
     .replace(/^-+|-+$/g, '')
 }
 
-/**
- * Stabilt id för en ordlistepost (term-<slug>).
- * @param {string} term
- * @returns {string}
- */
+/** Stabilt ankar-id för en ordlistepost (term-<slug> / term-suffix-<slug>). */
 function slugify(term) {
-  // Suffix-poster inleds med streck (t.ex. "-algi"); de får prefixet
-  // "term-suffix-" så att slugen inte kolliderar med likalydande grundord
-  // eller prefix. Måste matcha slugify() i scripts/generate_glossary.py.
   const base = term.charAt(0) === '-' ? 'term-suffix-' : 'term-'
   return base + slugifyBase(term)
 }
 
 /**
- * Escapar HTML och kursiverar engelska termer (text efter "Eng: " t.o.m. nästa punkt).
- * @param {string} str
- * @returns {string}
+ * Länk till en terms position. Är termen på den aktuella sidan används ett rent
+ * #ankare (ingen omladdning); annars full sökväg till rätt undersida.
  */
-/**
- * Escapar HTML och kursiverar engelska termer (text efter "Eng: " t.o.m. nästa punkt).
- * Parentetiskt innehåll som "(pl. alveoli)" behandlas som en enhet och
- * avbryter inte matchningen trots inre punkt.
- * @param {string} str
- * @returns {string}
- */
+function termHref(term, currentPage) {
+  const key = pageKey(term)
+  const slug = pageSlug(key)
+  const anchor = '#' + slugify(term)
+  return slug === currentPage ? anchor : `ordlista-${slug}.html${anchor}`
+}
+
+// ============================================================================
+// Hjälpfunktioner
+// ============================================================================
+
+function escapeHtml(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+}
+
+/** Escapar HTML och kursiverar engelska termer (text efter "Eng: "). */
 function formatDef(str) {
-  return escapeHtml(str).replace(/Eng: ((?:[^.(]|\([^)]*\))+)\./g, 'Eng: <em lang="en">$1</em>.')
+  return escapeHtml(str).replace(
+    /Eng: ((?:[^.(]|\([^)]*\))+)\./g,
+    'Eng: <em lang="en">$1</em>.'
+  )
+}
+
+// ============================================================================
+// Datahämtning (lazy)
+// ============================================================================
+
+let termsPromise = null
+
+/** Hämtar och cachar ordlisteposter (filtrerar bort stubs). Laddas en gång. */
+function loadTerms() {
+  if (!termsPromise) {
+    termsPromise = fetch(DATA_URL)
+      .then(res => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`)
+        return res.json()
+      })
+      .then(data => data.filter(e => e.status !== 'stub'))
+      .catch(err => {
+        termsPromise = null // tillåt ny försök vid nästa sökning
+        throw err
+      })
+  }
+  return termsPromise
+}
+
+// ============================================================================
+// Rendering av sökträffar
+// ============================================================================
+
+/**
+ * Renderar filtrerade träffar i #searchResults, grupperade per bokstav, med
+ * varje term länkad till sin position. Döljer det statiska bläddringsinnehållet
+ * så länge en sökning är aktiv.
+ */
+function renderResults(terms, query, currentPage) {
+  const results = document.getElementById('searchResults')
+  const content = document.getElementById('glossaryContent')
+  const q = query.toLowerCase().trim()
+
+  if (!q) {
+    // Tom sökning: återställ statiskt innehåll.
+    results.hidden = true
+    results.innerHTML = ''
+    content.hidden = false
+    updateAlphabet(null)
+    updateCount(null)
+    return
+  }
+
+  const filtered = terms.filter(
+    e => e.term.toLowerCase().includes(q) || e.def.toLowerCase().includes(q)
+  )
+
+  content.hidden = true
+  results.hidden = false
+
+  if (!filtered.length) {
+    results.innerHTML = '<p class="glossary-empty">Inga träffar.</p>'
+    updateAlphabet(new Set())
+    updateCount(0)
+    return
+  }
+
+  const groups = {}
+  filtered.forEach(e => {
+    const key = pageKey(e.term)
+    ;(groups[key] || (groups[key] = [])).push(e)
+  })
+
+  let html = ''
+  GROUP_ORDER.filter(k => groups[k]).forEach(key => {
+    const label = key === 'siffror' ? '0–9' : key === 'tecken' ? '#' : key
+    html += `<h3 class="glossary-letter">${escapeHtml(label)}</h3>`
+    html += '<dl class="glossary-group">'
+    groups[key].forEach(e => {
+      const href = termHref(e.term, currentPage)
+      html += `<div class="glossary-entry"><dt class="glossary-term"><a href="${href}">${escapeHtml(
+        e.term
+      )}</a></dt><dd class="glossary-def">${formatDef(e.def)}</dd></div>`
+    })
+    html += '</dl>'
+  })
+
+  results.innerHTML = html
+  updateAlphabet(new Set(Object.keys(groups)))
+  updateCount(filtered.length)
 }
 
 /**
- * Uppdaterar termräknaren i #termCount om elementet finns.
- * @param {number} total   Totalt antal termer i ordlistan
- * @param {number} visible Antal synliga termer efter filtrering
+ * Tonar ned grupper i alfabetsraden som saknar sökträffar. <span>-chips
+ * (grupper helt utan sida) förblir alltid nedtonade. present === null
+ * återställer alla <a>-chips till aktiva (ingen aktiv sökning).
  */
-function updateCount(total, visible) {
+function updateAlphabet(present) {
+  document.querySelectorAll('#glossaryAlphabet .glossary-alpha').forEach(el => {
+    if (el.tagName !== 'A') return // saknar sida → alltid nedtonad
+    const active = present === null || present.has(el.dataset.group)
+    el.classList.toggle('is-disabled', !active)
+  })
+}
+
+/** Uppdaterar räknaren. null = ingen aktiv sökning (tom text). */
+function updateCount(visible) {
   const el = document.getElementById('termCount')
   if (!el) return
   el.textContent =
-    visible === total
-      ? `${total} termer`
-      : `${visible} av ${total} termer`
+    visible === null ? '' : visible === 1 ? '1 träff' : `${visible} träffar`
+}
+
+/** Sökrutan kunde inte laddas: inaktivera den, behåll statiskt innehåll. */
+function disableSearch(input) {
+  if (input) {
+    input.disabled = true
+    input.placeholder = 'Sök är inte tillgänglig offline'
+  }
 }
 
 // ============================================================================
 // Init
 // ============================================================================
 
-async function init() {
-  let terms = []
+function init() {
+  const input = document.getElementById('glossarySearch')
+  if (!input) return
 
-  try {
-    terms = await loadTerms()
-  } catch {
-    renderError()
-    return
+  const currentPage = document.body.dataset.page || null
+  let terms = null
+  let debounce = null
+
+  async function run() {
+    if (!terms) {
+      try {
+        terms = await loadTerms()
+      } catch {
+        disableSearch(input)
+        return
+      }
+    }
+    renderResults(terms, input.value, currentPage)
   }
 
-  const input = document.getElementById('glossarySearch')
-
-  // Första rendering med alla termer
-  renderTerms(terms, '')
-  updateCount(terms.length, terms.length)
-
-  // Realtidssökning
-  input.addEventListener('input', () => {
-    const q = input.value
-    const filtered = q.toLowerCase().trim()
-      ? terms.filter(
-          e =>
-            e.term.toLowerCase().includes(q.toLowerCase()) ||
-            e.def.toLowerCase().includes(q.toLowerCase())
-        )
-      : terms
-    renderTerms(terms, q)
-    updateCount(terms.length, filtered.length)
+  // Förladda datan så fort användaren visar avsikt att söka.
+  input.addEventListener('focus', () => loadTerms().catch(() => {}), {
+    once: true,
   })
 
-  // Fokusera sökfältet direkt (desktop)
-  if (window.matchMedia('(min-width: 600px)').matches) {
-    input.focus()
-  }
+  input.addEventListener('input', () => {
+    clearTimeout(debounce)
+    debounce = setTimeout(run, 150)
+  })
+
+  // Fokusera sökfältet direkt på desktop.
+  if (window.matchMedia('(min-width: 600px)').matches) input.focus()
 }
 
 document.addEventListener('DOMContentLoaded', init)
