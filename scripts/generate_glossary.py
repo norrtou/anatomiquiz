@@ -45,7 +45,7 @@ LANDING_FILE = "medicinskordlista.html"
 
 # Cachebusters per asset — bumpa bara den som faktiskt ändrats.
 STYLES_V = "0.7.1"        # css/styles.css (oförändrad sedan tidigare)
-GLOSSARY_V = "0.8.26"     # css/glossary.css + js/glossary.js (denna release)
+GLOSSARY_V = "0.8.28"     # css/glossary.css + js/glossary.js (denna release)
 
 # Svenska alfabetet — fast ordning för alfabetsraden. Bokstäver utan poster
 # renderas nedtonade (icke-klickbara), så raden ser likadan ut oavsett innehåll.
@@ -62,6 +62,18 @@ _PAGE_SLUG = {"Å": "aa", "Ä": "ae", "Ö": "oe"}
 # ---------------------------------------------------------------------------
 # Gruppering & slugs
 # ---------------------------------------------------------------------------
+
+def sort_value(entry: dict) -> str:
+    """Sträng som styr en posts gruppering OCH ordning inom gruppen.
+
+    Normalt termen själv, men ett valfritt "sort"-fält kan överstyra det. Det
+    används för poster vars uppslagsord inte börjar på en sorterbar bokstav,
+    t.ex. grekiska glyf-termer (β-blockerare) som ska filas under sin latinska
+    translitterering (beta-blockerare → B). Måste spegla sortValue() i
+    js/glossary.js. Se [[project_glossary_grundmall]].
+    """
+    return entry.get("sort") or entry["term"]
+
 
 def page_key(term: str) -> str:
     """Vilken sida en term hör till. Måste matcha pageKey() i js/glossary.js.
@@ -604,9 +616,9 @@ def main() -> None:
     # Gruppera på sidnyckel; sortera varje grupp alfabetiskt på term.
     groups: dict[str, list[dict]] = {}
     for entry in terms:
-        groups.setdefault(page_key(entry["term"]), []).append(entry)
+        groups.setdefault(page_key(sort_value(entry)), []).append(entry)
     for key in groups:
-        groups[key].sort(key=lambda e: e["term"].lower())
+        groups[key].sort(key=lambda e: sort_value(e).lower())
 
     present = set(groups)
 

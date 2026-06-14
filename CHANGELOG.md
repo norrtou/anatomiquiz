@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.28
+- **Ordlistan: grekiska glyf-termer insorterade under latinsk bokstav (38 poster).** Termer med grekisk inledningsbokstav (β-blockerare, ω-3-fettsyror, χ²-test …) visas nu med den grekiska glyfen som uppslagsord men sorteras in under sin latinska translitterering (β → B, ω → O, χ → C, φ → F osv.). Hela det utskrivna ordet anges i parentes direkt efter ordklassen, t.ex. *subst.* (beta-blockerare) …, vilket gör posten sökbar utan grekiskt tangentbord.
+  - **3 integrerade** i befintliga poster (β-blockerare ← betablockerare, α-receptor ← alfareceptor, α-fetoprotein ← Alfa-1-fetoprotein); deras gamla ankare bevarades så inga djuplänkar bröts.
+  - **35 nya** poster enligt grundmallen (α₁/α₂/β₁/β₂-receptorer, β-amyloid, β-laktam, β-oxidation, γ-GT, γ-globulin, γ-interferon, γ-strålning, γ-aminosmörsyra, δ/κ/μ/σ-receptorer, opioidreceptorer, immunglobulinkedjor, ω-fettsyror, EEG-vågor m.fl.).
+  - **Mekanism:** nytt valfritt `sort`-fält i `data/ordlista.json` styr både bokstavsgrupp och ordning inom gruppen; speglat byte-identiskt i `scripts/generate_glossary.py` (`sort_value`) och `js/glossary.js` (`sortValue`). Explicit `slug` per post hindrar kollision med de utskrivna grundorden.
+  - Synliga termer: 5 412 → **5 447** (+35). Sidorna omgenererade.
+- **Ordlistan: bokstavsrubrikerna får plats på mobil.** Sidtiteln (`Medicinska ord på A` m.fl.) skalar nu med skärmbredden (`clamp(1.5rem, 6.5vw, 2.5rem)`) så att även långa titlar ryms snyggt; scoped i `glossary.css`.
+- APP_VERSION/VERSION → 0.8.28 (cachebuster: app.js → 0.8.28, glossary.css/js → 0.8.28; styles.css oförändrad 0.7.1).
+
 ## 0.8.27
 - **Flashcards avstängda för ämnet Tentaplugg (tillsvidare).** Ämnet innehåller frågor som inte fungerar som flashcards. Etiketten i ämnesvalet ändrad från "Tentaplugg (MC+FC)" till "Tentaplugg (MC)", vilket via den befintliga `updateStartButtons`-logiken automatiskt dimmar (inaktiverar) "Starta flashcards"-knappen när Tentaplugg är valt. Ingen kodlogik ändrad.
 - APP_VERSION/VERSION → 0.8.27 (cachebuster: app.js → 0.8.27; glossary oförändrad 0.8.26; styles.css 0.7.1).

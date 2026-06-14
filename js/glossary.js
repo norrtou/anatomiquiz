@@ -30,6 +30,15 @@ const PAGE_SLUG = { Å: 'aa', Ä: 'ae', Ö: 'oe' }
 // Gruppering & slugs — spegelbild av scripts/generate_glossary.py
 // ============================================================================
 
+/**
+ * Sträng som styr en posts gruppering och ordning. Normalt termen, men ett
+ * valfritt "sort"-fält överstyr (t.ex. grekisk glyf β-blockerare → beta-...).
+ * Speglar sort_value() i scripts/generate_glossary.py.
+ */
+function sortValue(entry) {
+  return entry.sort || entry.term
+}
+
 /** Vilken sida en term hör till. */
 function pageKey(term) {
   const c = term[0]
@@ -66,8 +75,8 @@ function slugify(term) {
  * Länk till en terms position. Är termen på den aktuella sidan används ett rent
  * #ankare (ingen omladdning); annars full sökväg till rätt undersida.
  */
-function termHref(term, currentPage, slugOverride) {
-  const key = pageKey(term)
+function termHref(term, currentPage, slugOverride, sortKey) {
+  const key = pageKey(sortKey || term)
   const slug = pageSlug(key)
   const anchor = '#' + (slugOverride || slugify(term))
   return slug === currentPage ? anchor : `ordlista-${slug}.html${anchor}`
@@ -156,7 +165,7 @@ function renderResults(terms, query, currentPage) {
 
   const groups = {}
   filtered.forEach(e => {
-    const key = pageKey(e.term)
+    const key = pageKey(sortValue(e))
     ;(groups[key] || (groups[key] = [])).push(e)
   })
 
@@ -166,7 +175,7 @@ function renderResults(terms, query, currentPage) {
     html += `<h3 class="glossary-letter">${escapeHtml(label)}</h3>`
     html += '<dl class="glossary-group">'
     groups[key].forEach(e => {
-      const href = termHref(e.term, currentPage, e.slug)
+      const href = termHref(e.term, currentPage, e.slug, e.sort)
       html += `<div class="glossary-entry"><dt class="glossary-term"><a href="${href}">${escapeHtml(
         e.term
       )}</a></dt><dd class="glossary-def">${formatDef(e.def)}</dd></div>`

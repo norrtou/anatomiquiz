@@ -19,6 +19,14 @@
   margin-bottom: 8px;
 }
 
+/* Sidtiteln ("Medicinska ord på A" m.fl.) skalar med skärmbredden så att
+   även långa titlar ("Medicinska ändelser (suffix)") får plats snyggt på
+   mobil. Scoped till ordlistesidorna; laddas efter styles.css och vinner. */
+.glossary-header h1 {
+  font-size: clamp(1.5rem, 6.5vw, 2.5rem);
+  word-break: break-word;
+}
+
 /* Ingressen är lång och informativ — håll den nedtonad och kompakt
    så den inte tränger undan sökrutan på små skärmar */
 .glossary-header .tagline {

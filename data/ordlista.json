@@ -704,8 +704,10 @@
     "def": "subst. akutfasprotein som hämmar nedbrytande enzymer och skyddar vävnaden; stiger vid akuta inflammationer. Eng. alpha-1 antitrypsin. Se AAT."
   },
   {
-    "term": "Alfa-1-fetoprotein",
-    "def": "subst. protein av betydelse som tumörmarkör och vid bedömning av avvikande graviditeter. Eng. alpha-fetoprotein. Se AFP."
+    "term": "α-fetoprotein",
+    "def": "subst. (alfa-fetoprotein) protein som bildas i fostrets lever och gulesäck; används som tumörmarkör (bl.a. levercancer och testikelcancer) och vid fosterdiagnostik. Eng. alpha-fetoprotein. Se AFP.",
+    "slug": "term-alfa-1-fetoprotein",
+    "sort": "alfa-fetoprotein"
   },
   {
     "term": "alfa-adrenerg receptor",
@@ -720,8 +722,10 @@
     "def": "subst. (-n, pl. -∅) läkemedel som blockerar alfa-adrenerga receptorer, vilket vidgar blodkärl och sänker blodtrycket. Eng. alpha blocker."
   },
   {
-    "term": "alfareceptor",
-    "def": "subst. (-n, pl. -er) alfa-adrenerg receptor; mottagarmolekyl för adrenalin och noradrenalin. Eng. alpha receptor."
+    "term": "α-receptor",
+    "def": "subst. (alfa-receptor) alfa-adrenerg receptor; mottagarmolekyl för adrenalin och noradrenalin, bl.a. i blodkärlsväggen där stimulering ger kärlsammandragning. Eng. alpha receptor. Jfr β-receptor, adrenerg.",
+    "slug": "term-alfareceptor",
+    "sort": "alfa-receptor"
   },
   {
     "term": "alge- / algesi- / algo-",
@@ -2604,8 +2608,10 @@
     "def": "subst. (-en, pl. -er) läkemedel som stimulerar beta-adrenerga receptorer; beta-2-agonister vidgar luftrören vid astma och KOL. Eng. beta agonist."
   },
   {
-    "term": "betablockerare",
-    "def": "subst. (-n, pl. -∅) läkemedel som blockerar beta-adrenerga receptorer; sänker puls och blodtryck och avlastar hjärtat. Eng. beta blocker."
+    "term": "β-blockerare",
+    "def": "subst. (beta-blockerare) läkemedel som blockerar beta-adrenerga receptorer; sänker puls och blodtryck och avlastar hjärtat. Eng. beta blocker. Jfr β-receptor, betaagonist.",
+    "slug": "term-betablockerare",
+    "sort": "beta-blockerare"
   },
   {
     "term": "bias",
@@ -21647,5 +21653,215 @@
   {
     "term": "ångestneuros",
     "def": "subst. (-en, pl. -er) historisk psykiatrisk diagnos för tillstånd med kronisk ångest, före nuvarande indelning i ångestsyndrom enligt DSM/ICD. Eng. anxiety neurosis. Ålderdomligt/historiskt. Jfr ångestsyndrom."
+  },
+  {
+    "term": "α₁-receptor",
+    "sort": "alfa-1-receptor",
+    "slug": "term-alfa-1-receptor",
+    "def": "subst. (alfa-1-receptor) undergrupp av alfa-adrenerga receptorer, främst i blodkärlens glatta muskulatur; stimulering ger kärlsammandragning. Eng. alpha-1 receptor. Jfr α-receptor, α₂-receptor."
+  },
+  {
+    "term": "α₂-receptor",
+    "sort": "alfa-2-receptor",
+    "slug": "term-alfa-2-receptor",
+    "def": "subst. (alfa-2-receptor) undergrupp av alfa-adrenerga receptorer, bl.a. presynaptiskt, som hämmar frisättningen av noradrenalin (negativ återkoppling). Eng. alpha-2 receptor. Jfr α-receptor, α₁-receptor."
+  },
+  {
+    "term": "α-helix",
+    "sort": "alfa-helix",
+    "slug": "term-alfa-helix",
+    "def": "subst. (alfa-helix) spiralformad sekundärstruktur hos proteiner där aminosyrakedjan vrids till en högergängad spiral som stabiliseras av vätebindningar. Eng. alpha helix. Av grek. helix = spiral. Jfr β-flak."
+  },
+  {
+    "term": "α-strålning",
+    "sort": "alfa-strålning",
+    "slug": "term-alfa-stralning",
+    "def": "subst. (alfa-strålning) joniserande strålning av alfapartiklar (heliumkärnor med 2 protoner och 2 neutroner); kort räckvidd, stoppas av papper, men skadlig vid intag i kroppen. Eng. alpha radiation. Jfr β-strålning, γ-strålning."
+  },
+  {
+    "term": "β-receptor",
+    "sort": "beta-receptor",
+    "slug": "term-beta-receptor",
+    "def": "subst. (beta-receptor) beta-adrenerg receptor; mottagarmolekyl för adrenalin och noradrenalin. β₁ finns främst i hjärtat (ökar puls och kraft), β₂ i luftrör och kärl (vidgar). Eng. beta receptor. Jfr α-receptor, β-blockerare."
+  },
+  {
+    "term": "β₁-receptor",
+    "sort": "beta-1-receptor",
+    "slug": "term-beta-1-receptor",
+    "def": "subst. (beta-1-receptor) undergrupp av beta-adrenerga receptorer som dominerar i hjärtat; stimulering ökar hjärtfrekvens och kontraktionskraft. Eng. beta-1 receptor. Jfr β-receptor, β₂-receptor."
+  },
+  {
+    "term": "β₂-receptor",
+    "sort": "beta-2-receptor",
+    "slug": "term-beta-2-receptor",
+    "def": "subst. (beta-2-receptor) undergrupp av beta-adrenerga receptorer i bl.a. luftrörens och blodkärlens glatta muskulatur; stimulering vidgar luftrör och kärl. Eng. beta-2 receptor. Jfr β-receptor, betaagonist."
+  },
+  {
+    "term": "β-oxidation",
+    "sort": "beta-oxidation",
+    "slug": "term-beta-oxidation",
+    "def": "subst. (beta-oxidation) nedbrytning av fettsyror i mitokondrierna där kolkedjan kortas två kol i taget och ger acetyl-CoA samt energi. Eng. beta oxidation. Jfr ω-oxidation."
+  },
+  {
+    "term": "β-amyloid",
+    "sort": "beta-amyloid",
+    "slug": "term-beta-amyloid",
+    "def": "subst. (beta-amyloid) olösligt proteinfragment (Aβ) som klumpar ihop sig och bildar plack i hjärnan vid Alzheimers sjukdom. Eng. beta-amyloid, amyloid beta. Jfr amyloid, amyloidos."
+  },
+  {
+    "term": "β-laktam",
+    "sort": "beta-laktam",
+    "slug": "term-beta-laktam",
+    "def": "subst. (beta-laktam) den fyrring (betalaktamring) som ger antibiotika som penicilliner och cefalosporiner deras verkan; bakteriers betalaktamas kan bryta ringen och ge resistens. Eng. beta-lactam. Jfr penicillin."
+  },
+  {
+    "term": "χ²-test",
+    "sort": "chi-2-test",
+    "slug": "term-chi-2-test",
+    "def": "subst. (chi-två-test) statistiskt test som jämför observerade frekvenser med förväntade för att avgöra om en skillnad eller ett samband är slumpmässigt. Eng. chi-squared test. Av grek. chi (χ)."
+  },
+  {
+    "term": "δ-våg",
+    "sort": "delta-våg",
+    "slug": "term-delta-vag",
+    "def": "subst. (delta-våg) den långsammaste hjärnvågstypen (under ca 4 Hz) på EEG; dominerar vid djup, drömlös sömn. Eng. delta wave. Jfr θ-våg, EEG."
+  },
+  {
+    "term": "δ-receptor",
+    "sort": "delta-receptor",
+    "slug": "term-delta-receptor",
+    "def": "subst. (delta-receptor) en av opioidreceptorerna; bidrar till smärtlindring och påverkar sinnesstämningen. Eng. delta opioid receptor. Jfr opioid, μ-receptor, κ-receptor."
+  },
+  {
+    "term": "δ-bilirubin",
+    "sort": "delta-bilirubin",
+    "slug": "term-delta-bilirubin",
+    "def": "subst. (delta-bilirubin) bilirubin som är kovalent bundet till albumin; uppträder vid långvarig gallstas och försvinner långsamt eftersom det följer albuminets nedbrytning. Eng. delta bilirubin. Jfr bilirubin."
+  },
+  {
+    "term": "ε-aminokapronsyra",
+    "sort": "epsilon-aminokapronsyra",
+    "slug": "term-epsilon-aminokapronsyra",
+    "def": "subst. (epsilon-aminokapronsyra) antifibrinolytiskt läkemedel som hämmar fibrinolysen och därmed minskar blödning. Eng. epsilon-aminocaproic acid. Jfr tranexamsyra, fibrinolys."
+  },
+  {
+    "term": "φ-koefficient",
+    "sort": "fi-koefficient",
+    "slug": "term-fi-koefficient",
+    "def": "subst. (fi-koefficient) statistiskt mått på sambandets styrka mellan två binära variabler i en fyrfältstabell; varierar mellan −1 och +1. Eng. phi coefficient. Av grek. fi (φ)."
+  },
+  {
+    "term": "γ-GT",
+    "sort": "gamma-GT",
+    "slug": "term-gamma-gt",
+    "def": "subst. (gamma-GT) gamma-glutamyltransferas; leverenzym som stiger i blodet vid gallstas, leverpåverkan och högt alkoholintag. Eng. gamma-glutamyl transferase, GGT. Vardag. levervärde. Jfr ALAT, ASAT."
+  },
+  {
+    "term": "γ-globulin",
+    "sort": "gamma-globulin",
+    "slug": "term-gamma-globulin",
+    "def": "subst. (gamma-globulin) den fraktion av blodets plasmaproteiner som innehåller antikroppar (immunglobuliner); syns vid proteinelektrofores. Eng. gamma globulin. Jfr immunglobulin, antikropp."
+  },
+  {
+    "term": "γ-interferon",
+    "sort": "gamma-interferon",
+    "slug": "term-gamma-interferon",
+    "def": "subst. (gamma-interferon) signalprotein (IFN-γ, typ II-interferon) som frisätts av T- och NK-celler och aktiverar makrofager; centralt i försvaret mot bakterier inuti celler. Eng. gamma interferon, interferon gamma. Jfr interferon, cytokin."
+  },
+  {
+    "term": "γ-strålning",
+    "sort": "gamma-strålning",
+    "slug": "term-gamma-stralning",
+    "def": "subst. (gamma-strålning) energirik elektromagnetisk joniserande strålning från atomkärnor; lång räckvidd och kräver tjock bly- eller betongavskärmning. Eng. gamma radiation. Jfr α-strålning, β-strålning."
+  },
+  {
+    "term": "γ-aminosmörsyra",
+    "sort": "gamma-aminosmörsyra",
+    "slug": "term-gamma-aminosmorsyra",
+    "def": "subst. (gamma-aminosmörsyra) GABA; den viktigaste dämpande (inhibitoriska) signalsubstansen i centrala nervsystemet. Eng. gamma-aminobutyric acid (GABA). Jfr signalsubstans, glutamat."
+  },
+  {
+    "term": "κ-receptor",
+    "sort": "kappa-receptor",
+    "slug": "term-kappa-receptor",
+    "def": "subst. (kappa-receptor) en av opioidreceptorerna; bidrar till smärtlindring men kan ge bl.a. dysfori. Eng. kappa opioid receptor. Jfr opioid, μ-receptor, δ-receptor."
+  },
+  {
+    "term": "κ-kedja",
+    "sort": "kappa-kedja",
+    "slug": "term-kappa-kedja",
+    "def": "subst. (kappa-kedja) den ena av antikropparnas två typer av lätta kedjor (kappa eller lambda). Eng. kappa light chain. Jfr λ-kedja, immunglobulin."
+  },
+  {
+    "term": "λ-kedja",
+    "sort": "lambda-kedja",
+    "slug": "term-lambda-kedja",
+    "def": "subst. (lambda-kedja) den ena av antikropparnas två typer av lätta kedjor (lambda eller kappa). Eng. lambda light chain. Jfr κ-kedja, immunglobulin."
+  },
+  {
+    "term": "λ-lätta kedjor",
+    "sort": "lambda-lätta kedjor",
+    "slug": "term-lambda-latta-kedjor",
+    "def": "subst. (lambda-lätta kedjor) lambda-typen av immunglobulinernas lätta kedjor; analys av fria lätta kedjor (kappa/lambda-kvot) används vid utredning av myelom och andra plasmacellssjukdomar. Eng. lambda light chains. Jfr λ-kedja, κ-kedja."
+  },
+  {
+    "term": "μ-receptor",
+    "sort": "my-receptor",
+    "slug": "term-my-receptor",
+    "def": "subst. (my-receptor) den viktigaste opioidreceptorn för smärtlindring; förmedlar morfinets effekt men även andningsdämpning, förstoppning och beroende. Eng. mu opioid receptor. Jfr opioid, κ-receptor, δ-receptor."
+  },
+  {
+    "term": "ρ-protein",
+    "sort": "rho-protein",
+    "slug": "term-rho-protein",
+    "def": "subst. (rho-protein) Rho; familj av små G-proteiner (GTP-as) som styr cellens aktinskelett och därmed form, rörelse och delning. Eng. Rho protein. Jfr G-protein."
+  },
+  {
+    "term": "σ-receptor",
+    "sort": "sigma-receptor",
+    "slug": "term-sigma-receptor",
+    "def": "subst. (sigma-receptor) receptor i nervsystemet som tidigare räknades till opioidreceptorerna men numera ses som egen typ; påverkas av bl.a. vissa psykofarmaka. Eng. sigma receptor. Jfr receptor."
+  },
+  {
+    "term": "σ-faktor",
+    "sort": "sigma-faktor",
+    "slug": "term-sigma-faktor",
+    "def": "subst. (sigma-faktor) protein hos bakterier som styr RNA-polymeras till rätt startplats på DNA så att avläsningen (transkriptionen) av en gen börjar. Eng. sigma factor. Jfr transkription."
+  },
+  {
+    "term": "θ-våg",
+    "sort": "theta-våg",
+    "slug": "term-theta-vag",
+    "def": "subst. (theta-våg) hjärnvåg med frekvens ca 4–8 Hz på EEG; ses bl.a. vid dåsighet, lätt sömn och hos barn. Eng. theta wave. Jfr δ-våg, EEG."
+  },
+  {
+    "term": "τ-protein",
+    "sort": "tau-protein",
+    "slug": "term-tau-protein",
+    "def": "subst. (tau-protein) protein som stabiliserar nervcellernas mikrotubuli; vid bl.a. Alzheimers sjukdom blir det onormalt fosforylerat och bildar trådnystan inne i cellerna. Eng. tau protein. Jfr β-amyloid, mikrotubuli."
+  },
+  {
+    "term": "ω-3-fettsyror",
+    "sort": "omega-3-fettsyror",
+    "slug": "term-omega-3-fettsyror",
+    "def": "subst. (omega-3-fettsyror) grupp fleromättade fettsyror där första dubbelbindningen sitter vid tredje kolet från metyländen; finns i bl.a. fet fisk och anses gynna hjärt-kärlhälsan. Eng. omega-3 fatty acids. Jfr ω-6-fettsyror, fettsyra."
+  },
+  {
+    "term": "ω-6-fettsyror",
+    "sort": "omega-6-fettsyror",
+    "slug": "term-omega-6-fettsyror",
+    "def": "subst. (omega-6-fettsyror) grupp fleromättade fettsyror med första dubbelbindningen vid sjätte kolet från metyländen; finns i bl.a. vegetabiliska oljor. Eng. omega-6 fatty acids. Jfr ω-3-fettsyror, fettsyra."
+  },
+  {
+    "term": "ω-oxidation",
+    "sort": "omega-oxidation",
+    "slug": "term-omega-oxidation",
+    "def": "subst. (omega-oxidation) alternativ nedbrytning av fettsyror som börjar i den ände (omega-kolet) som är längst från karboxylgruppen; sker i levern och får ökad betydelse när β-oxidationen är överbelastad. Eng. omega oxidation. Jfr β-oxidation."
+  },
+  {
+    "term": "ζ-potential",
+    "sort": "zeta-potential",
+    "slug": "term-zeta-potential",
+    "def": "subst. (zeta-potential) den elektriska potentialen vid gränsskiktet runt en partikel i en vätska; mått på hur stabil en kolloid eller suspension är. Eng. zeta potential. Jfr kolloid."
   }
 ]
