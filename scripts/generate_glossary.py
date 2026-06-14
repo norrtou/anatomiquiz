@@ -45,7 +45,7 @@ LANDING_FILE = "medicinskordlista.html"
 
 # Cachebusters per asset — bumpa bara den som faktiskt ändrats.
 STYLES_V = "0.7.1"        # css/styles.css (oförändrad sedan tidigare)
-GLOSSARY_V = "0.8.25"     # css/glossary.css + js/glossary.js (denna release)
+GLOSSARY_V = "0.8.26"     # css/glossary.css + js/glossary.js (denna release)
 
 # Svenska alfabetet — fast ordning för alfabetsraden. Bokstäver utan poster
 # renderas nedtonade (icke-klickbara), så raden ser likadan ut oavsett innehåll.
@@ -161,7 +161,7 @@ def build_group_dl(entries: list[dict]) -> str:
     """
     lines = ['        <dl class="glossary-group">']
     for entry in entries:
-        slug = slugify(entry["term"])
+        slug = entry.get("slug") or slugify(entry["term"])
         term = escape_html(entry["term"])
         definition = format_def(entry["def"])
         lines.append(
@@ -596,7 +596,7 @@ def main() -> None:
     terms = [e for e in terms if e.get("status") != "stub"]
 
     # Kontrollera unika term-slugs globalt — annars blir djuplänkar tvetydiga.
-    slugs = [slugify(e["term"]) for e in terms]
+    slugs = [e.get("slug") or slugify(e["term"]) for e in terms]
     dupes = {s for s in slugs if slugs.count(s) > 1}
     if dupes:
         raise SystemExit(f"FEL: slug-kollisioner: {sorted(dupes)}")

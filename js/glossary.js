@@ -66,10 +66,10 @@ function slugify(term) {
  * Länk till en terms position. Är termen på den aktuella sidan används ett rent
  * #ankare (ingen omladdning); annars full sökväg till rätt undersida.
  */
-function termHref(term, currentPage) {
+function termHref(term, currentPage, slugOverride) {
   const key = pageKey(term)
   const slug = pageSlug(key)
-  const anchor = '#' + slugify(term)
+  const anchor = '#' + (slugOverride || slugify(term))
   return slug === currentPage ? anchor : `ordlista-${slug}.html${anchor}`
 }
 
@@ -166,7 +166,7 @@ function renderResults(terms, query, currentPage) {
     html += `<h3 class="glossary-letter">${escapeHtml(label)}</h3>`
     html += '<dl class="glossary-group">'
     groups[key].forEach(e => {
-      const href = termHref(e.term, currentPage)
+      const href = termHref(e.term, currentPage, e.slug)
       html += `<div class="glossary-entry"><dt class="glossary-term"><a href="${href}">${escapeHtml(
         e.term
       )}</a></dt><dd class="glossary-def">${formatDef(e.def)}</dd></div>`

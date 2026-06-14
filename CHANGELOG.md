@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.26
+- **Ordlistan: Å och Ä fyllda (21 nya poster).** Tidigare tomma bokstäver; nu egna sidor (`ordlista-aa.html`, `ordlista-ae.html`) och aktiva i alfabetsraden. Posterna följer grundmallen och kopplas till latinska/moderna termer.
+  - **Kliniskt etablerade:** ärr, ärrbildning, ärrvävnad, ärrbråck, ärrkontraktur, ätstörning; ångest, ångestsyndrom, åderbråck, åderförkalkning.
+  - **Historiska/kyrkbokstermer märkta *Ålderdomligt*:** åder, åderlåtning, åderlåta, åderinflammation, åderstockning, åkomma, ålderdom, ålderdomssvaghet, åldersbräcklighet, åldersförfall, ångestneuros (flera var vanliga dödsorsaker i äldre kyrkböcker).
+  - **Slug-kollision löst:** `ärr` foldas annars till samma ankare som förkortningen `ARR`. Nytt valfritt `slug`-fält i `data/ordlista.json` åsidosätter foldningen för enstaka poster (`ärr` → `term-aerr`); speglat byte-identiskt i `scripts/generate_glossary.py` och `js/glossary.js`. Befintliga ankare orörda.
+  - Synliga termer: 5 391 → **5 412** (+21). Sidorna omgenererade.
+- APP_VERSION/VERSION → 0.8.26 (cachebuster: app.js → 0.8.26, glossary.css/js → 0.8.26; styles.css oförändrad 0.7.1).
+
 ## 0.8.25
 - **Ordlistan: standardiserad grundmall för alla poster (uppslagsverksstil).** Samtliga 5 391 poster följer nu en enhetlig struktur: **fett, gement uppslagsord** (utom förkortningar och egennamn/eponymer), **kursiv förkortad ordklass** direkt följd av **böjning i parentes** (`subst. (-en, pl. -er) …`), gemen definitionsinledning, varianter (`Sv.`, `Vardag.`, `Eng.`) och etymologi.
   - **Uppslagsord gemeniserade:** 4 164 termer (Abdomen → abdomen). Förkortningar (ACE, AAT, 5-FU) och 26 kurerade eponymer (Crohns sjukdom, Parkinsons sjukdom, Cushings syndrom, Sjögren …) behåller versal; eponym-härledda gloss-ord skyddas (Apgarpoäng).
