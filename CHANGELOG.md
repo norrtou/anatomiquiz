@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.29
+- **Ordlistan: grekiska termerna kompletterade och korrigerade.** Granskning av 0.8.28 mot ursprungslistan visade tappade detaljer som nu rättats:
+  - **ε-kedja** (epsilon-kedja) tillagd under E — embryonal hemoglobinkedja som tidigare fallit bort. Synliga termer 5 447 → **5 448**.
+  - **Böjning återställd** i de två integrerade posterna: α-receptor `(alfa-receptor; -n, pl. -er)` och β-blockerare `(beta-blockerare; -n, pl. -∅)` (föll bort när parentesen byttes mot translittereringen).
+  - **Dubbla translittereringsformer angivna** där båda används i svensk medicinsk terminologi: χ²-test `(chi-två-test, även khi-två-test)`, φ-koefficient `(fi-koefficient, även phi-koefficient)`, μ-receptor `(my-receptor, även mu-receptor)`. Gör posterna sökbara på båda stavningarna.
+- APP_VERSION/VERSION → 0.8.29 (cachebuster: app.js → 0.8.29, glossary.css/js → 0.8.29; styles.css oförändrad 0.7.1).
+
 ## 0.8.28
 - **Ordlistan: grekiska glyf-termer insorterade under latinsk bokstav (38 poster).** Termer med grekisk inledningsbokstav (β-blockerare, ω-3-fettsyror, χ²-test …) visas nu med den grekiska glyfen som uppslagsord men sorteras in under sin latinska translitterering (β → B, ω → O, χ → C, φ → F osv.). Hela det utskrivna ordet anges i parentes direkt efter ordklassen, t.ex. *subst.* (beta-blockerare) …, vilket gör posten sökbar utan grekiskt tangentbord.
   - **3 integrerade** i befintliga poster (β-blockerare ← betablockerare, α-receptor ← alfareceptor, α-fetoprotein ← Alfa-1-fetoprotein); deras gamla ankare bevarades så inga djuplänkar bröts.
