@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.20
+- **Prefix-listan: tre källflaggade former kontrollerade mot litteratur och rättade.** Synliga termer: 5 295 → **5 294**.
+  - `pycl- / pyclo-` → rättat till **`pycn- / pycno-`** (även pykn-/pykno-), grek. *pyknos* = tät/tjock. Var OCR-fel (n→l) i källistan.
+  - `pemi- / pemp-` → rättat till **`pemphig- / pemphigo-`**, grek. *pemphix* (stam *pemphig-*) = blåsa/pustel. Betydelsen stämde, formerna var korrupta.
+  - `parati- / paratio-` → **borttagen**; ingen attesterad kombineringsform (kontrollerat mot Wikipedias rotlista, prefix-ordböcker m.fl.). Parathyreoidea täcks redan av *para-* + *thyr-*.
+  - `medicinskordlista.html` omgenererad. SEO-meta orörd.
+- APP_VERSION/VERSION → 0.8.20 (cachebuster: app.js → 0.8.20, glossary.js → 0.8.20).
+
 ## 0.8.19
 - **Medicinska ordlistan: systematiska prefix-poster (latin/grekiska).** Hela listan av medicinska för- och kombineringsled införd som egna poster i streck-form (`a-`, `ab-`, `aden- / adeno-` …), var och en med betydelse, ursprung och exempel. Synliga termer: 4 701 → **5 295** (+652 prefix, −58 ersatta).
   - **Ersatta gamla poster:** de 58 tidigare versala prefix-posterna (Ab, Ad, Adeno, Di, Endo, Epi, Exo, Hyper, Para, Sub …) togs bort och ersattes av de nya streck-formerna. De fyra prefix-posterna utan motsvarighet i listan (Giga, Krikos, Mylo, Psoa) lämnades orörda.
