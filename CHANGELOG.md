@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.24
+- **Ordlistan: kvalitetskontroll av dubbletter – svensk/latinsk formpar sammanslagna.** 56 par där samma ord stod som två poster i olika form (svensk vs latinsk) slogs ihop till en post med det **latinska/medicinska ordet som uppslagsord** och den svenska formen invävd som `Svensk form: …`; allt innehåll bevarat. Adjektiv (`Frontal→Frontalis`, `Renal→Renalis`, `Nasal→Nasalis` m.fl.) och substantiv (`Membran→Membrana`, `Ligament→Ligamentum`, `Tonsill→Tonsilla` m.fl.).
+  - **4 par hölls medvetet isär** som falska vänner (lika form, olika ord): `Fibros`/`Fibrosus`, `Median`/`Medianus`, `Mental` (*mens*, psyket)/`Mentalis` (*mentum*, hakan), `Perone` (subst.)/`Peroneus` (adj.).
+  - **9 korsreferenser omdirigerade** till respektive latinskt huvudord (`Jfr Lumbal`→`Lumbalis` osv.); 0 dinglande hänvisningar kvar.
+  - Synliga termer: 5 447 → **5 391** (−56). Sidorna omgenererade.
+- APP_VERSION/VERSION → 0.8.24 (cachebuster: app.js → 0.8.24; glossary.css/js oförändrade, styles.css oförändrad 0.7.1).
+
 ## 0.8.23
 - **Alfabetsraden: tecken-/ändelsefacket märks "suffix" i stället för "#".** Facket innehåller bara suffix (poster som inleds med streck), så etiketten är nu uttrycklig. Speglat i `scripts/generate_glossary.py` (`group_label`) och `js/glossary.js` (sökträffarnas grupprubrik). Sidorna omgenererade.
 - APP_VERSION/VERSION → 0.8.23 (cachebuster: app.js → 0.8.23, glossary.css/js → 0.8.23; styles.css oförändrad 0.7.1).
