@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.27
+- **Flashcards avstängda för ämnet Tentaplugg (tillsvidare).** Ämnet innehåller frågor som inte fungerar som flashcards. Etiketten i ämnesvalet ändrad från "Tentaplugg (MC+FC)" till "Tentaplugg (MC)", vilket via den befintliga `updateStartButtons`-logiken automatiskt dimmar (inaktiverar) "Starta flashcards"-knappen när Tentaplugg är valt. Ingen kodlogik ändrad.
+- APP_VERSION/VERSION → 0.8.27 (cachebuster: app.js → 0.8.27; glossary oförändrad 0.8.26; styles.css 0.7.1).
+
 ## 0.8.26
 - **Ordlistan: Å och Ä fyllda (21 nya poster).** Tidigare tomma bokstäver; nu egna sidor (`ordlista-aa.html`, `ordlista-ae.html`) och aktiva i alfabetsraden. Posterna följer grundmallen och kopplas till latinska/moderna termer.
   - **Kliniskt etablerade:** ärr, ärrbildning, ärrvävnad, ärrbråck, ärrkontraktur, ätstörning; ångest, ångestsyndrom, åderbråck, åderförkalkning.
