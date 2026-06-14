@@ -1,5 +1,15 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.18
+- **Medicinska ordlistan: bokstäverna T–Ö (samt 5-ASA/5-FU) berikade** till fullt husformat. Synliga termer: 4 321 → **4 701**. Därmed är hela A–Ö berikat och 0 dolda stubbar återstår.
+  - **T:** 201 berikade, 20 sammanslagna/borttagna (bl.a. Tymus → Thymus, Trokanter/Trochanter major/minor → Trochanter, Thoracal → Thoracalis, Trendelenburgs läge → Trendelenburgläge, verbformer → substantiv); rubrikfix "tics och Tourettes syndrom" → Tourettes syndrom.
+  - **U:** 58 berikade, 1 sammanslagen (Undulans → Undulerande); källfel rättat: Urikosuri (var "urinsyraförgiftning" → korrekt = utsöndring av urinsyra i urinen).
+  - **V:** 100 berikade, 3 sammanslagna (Varikös ven → Varice, Vasektomera → Vasektomi, Vesikulös → Vesikulär); stavningsrättning Volvolus → Volvulus.
+  - **W/X/Y/Z/Ö + 5-ASA/5-FU:** 21 berikade.
+  - **Källflaggor att verifiera:** TAP (ovanlig förkortning för telangiopati) och VH (angavs som tillväxthormon; standard är GH/STH).
+- **SEO/meta:** Termantalet är nu helt borttaget ur head/SEO — `<title>`, og:/twitter:title och image:alt samt JSON-LD-beskrivningen säger "tusentals" (ingen siffra). Endast räknaren i sidans body (#termCount) är dynamisk. Källan satt i `scripts/generate_glossary.py` så framtida körningar aldrig återinför en siffra. `medicinskordlista.html` omgenererad.
+- APP_VERSION/VERSION → 0.8.18 (cachebuster: app.js → 0.8.18). Highscore-data orörd.
+
 ## 0.8.17
 - **SEO:** Meta-descriptions kortade till Bings krav (145–159 tecken) på resten av projektets sidor: index.html (204 → 150), info.html (169 → 148), case.html (162 → 149). Innehållet bevarat, bara putsat ned i längd. og:/twitter:description (sociala kort, ingen 159-gräns) orörda.
 - APP_VERSION/VERSION → 0.8.17 (cachebuster: app.js → 0.8.17).

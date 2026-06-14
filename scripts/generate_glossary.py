@@ -13,7 +13,9 @@ uppdaterar tre saker idempotent (kör om när som helst):
        den engelska termen. Gör hela ordlistan crawlbar utan JavaScript.
   2. JSON-LD DefinedTermSet med hasDefinedTerm mellan GENERATED:JSONLD:START/END
      — ger sökmotorer förståelse på term-nivå.
-  3. Termantalet i <title>, meta description, Open Graph och Twitter Card.
+  3. Titel/meta/Open Graph/Twitter Card sätts till fasta texter ("tusentals",
+     ingen siffra). Termantalet hålls statiskt i head/SEO; endast räknaren i
+     sidans body är dynamisk.
 
 glossary.js måste rendera identisk markup (samma slug-/format-logik) så att
 djuplänkar är stabila oavsett om sidan renderas statiskt eller av JS.
@@ -142,7 +144,7 @@ def build_jsonld(terms: list[dict], count: int) -> str:
         "@type": "DefinedTermSet",
         "name": "Medicinsk ordlista — latinska och anatomiska termer",
         "description": (
-            f"Komplett ordlista med {count} latinska och anatomiska termer på "
+            "Komplett ordlista med tusentals latinska och anatomiska termer på "
             "svenska, med definitioner, synonymer och etymologi."
         ),
         "inLanguage": "sv-SE",
@@ -221,12 +223,13 @@ def main() -> None:
         build_jsonld(terms, count),
     )
 
-    # 3. Termantal i titel + sociala metataggar
-    title = f"Medicinsk ordlista — {count} latinska och anatomiska termer | Anatomiquiz"
+    # 3. Titel + sociala metataggar. INGEN dynamisk siffra i head/SEO ("tusentals")
+    # — endast räknaren i sidans body får vara dynamisk (användarens uttryckliga krav).
+    title = "Medicinsk ordlista — tusentals latinska och anatomiska termer | Anatomiquiz"
     page = re.sub(r"(<title>)[^<]*(</title>)", rf"\g<1>{title}\g<2>", page)
 
-    social_title = f"Medicinsk ordlista — {count} latinska och anatomiska termer"
-    img_alt = f"Medicinsk ordlista — {count} latinska och anatomiska termer på Anatomiquiz"
+    social_title = "Medicinsk ordlista — tusentals latinska och anatomiska termer"
+    img_alt = "Medicinsk ordlista — tusentals latinska och anatomiska termer på Anatomiquiz"
     # Bing kräver 145–159 tecken; håll längden konstant (ingen {count}) så den inte driver.
     desc = (
         "Sökbar medicinsk ordlista på svenska med tusentals latinska och anatomiska "
