@@ -1,5 +1,16 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.45
+- **Ordlistan: latinska anatomitermer (TA98) – fas 14, matsmältningssystemet (A05), del 1: mun till tunntarm. 294 poster.**
+  - **Munhåla & spottkörtlar (43):** läppar, gom, tandkött och de tre stora spottkörtlarna med utförsgångar (Stensens, Whartons, Bartholins).
+  - **Tänderna (41):** tandtyper, tandens delar (krona, hals, rot, pulpa), tandvävnaderna (emalj, dentin), tandalveolen, mjölktänder/permanenta tänder.
+  - **Tungan (31):** tungans delar, smakpapillerna och tungmusklerna (genioglossus m.fl.).
+  - **Svalg & gomsegel (svalgmandlar, gombågar, svalgsnörarmusklerna) och matstrupen** med dess tre delar och förträngningar.
+  - **Magsäck & tunntarm:** magsäckens delar och portvaktsmuskeln; tunntarmens veck, tarmludd och körtlar; tolvfingertarmens fyra delar med Vaters papill, Treitz muskel och Meckels divertikel.
+  - Mag-tarmväggens generiska lager (tunica mucosa, tela submucosa, tunica muscularis, serosa m.fl.) infördes en gång som allmänna begrepp.
+- Synliga termer: 7 287 → **7 508** (+221 synliga; netto inkl. ompekade strukturord). Inga dubbletter. Granulära riktningsvarianter (kuspar/ytor/rötter, snörarmuskelns delar) utelämnade medvetet. Återstår av A05: tjocktarm, lever/galla/bukspott och bukhinnan.
+- APP_VERSION/VERSION → 0.8.45 (cachebuster: app.js → 0.8.45; glossary.css/js oförändrade 0.8.29; styles.css oförändrad 0.7.1).
+
 ## 0.8.44
 - **Ordlistan: latinska anatomitermer (TA98) – fas 13, musklerna (A04 Musculi), del 2. Hela muskelkapitlet klart (+465 totalt sedan A03).**
   - **Nedre extremiteten (91):** höft- och sätesmusklerna, de djupa utåtrotatorerna, fyrhövdade lårmuskeln, adduktorerna, hamstrings, underbenets loger (tibialis, fibularis, triceps surae med hälsenan) och fotens småmuskler; dessutom lårtriangeln, adduktorkanalen, lårkanalen och fotens retinakler.
