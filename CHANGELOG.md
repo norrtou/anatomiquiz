@@ -1,5 +1,18 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.43
+- **Ordlistan: latinska anatomitermer (TA98) – fas 12, musklerna (A04 Musculi), del 1: huvud till hand. 333 poster.**
+  - **Allmän muskellära (42):** muskeltyper (spol-, fjäder-, ring-, en-/två-/trehövdade …), funktionsnamn (flexor, extensor, abductor, sfinkter …), fästpunkter, muskelfascia, epimysium/perimysium och senstrukturer.
+  - **Huvudet (45):** mimiska muskler (occipitofrontalis, orbicularis oculi/oris, zygomaticus, buccinator, mentalis …), tuggmusklerna (masseter, temporalis, vingmusklerna) och senhjälmen.
+  - **Halsen (34):** nickmuskeln, trappmusklerna, för- och undertungbensmusklerna, nackgropsmusklerna, halsfascian och karotisskidan.
+  - **Ryggen (53):** kappmuskeln, breda ryggmuskeln, romboid- och sågmusklerna samt de djupa egentliga ryggmusklerna (erector spinae, transversospinala lagret) och torakolumbalfascian.
+  - **Bröstkorgen (34):** stora/lilla bröstmuskeln, främre sågmuskeln, intercostalmusklerna och diafragma med dess skänklar, öppningar och centralsena.
+  - **Buken & bäckenbotten (62):** raka och sneda bukmusklerna, transversus, ljumskbandet och ljumskkanalen, vita linjen, bäckenbotten (levator ani-gruppen) och yttre analsfinktern.
+  - **Övre extremiteten (63):** rotatorkuffen, biceps/triceps, underarmens böj- och sträckmuskler, handens småmuskler samt flexor- och extensorretinaklet.
+- Strukturord (musculus, ligamentum, tendo …) inverteras och filas på sitt egentliga namn; kompletta latinet står först i definitionen.
+- Synliga termer: 6 822 → **7 155** (+333). Inga dubbletter. Generiska upprepade deletiketter (caput/pars/lamina, upprepade fasciavarianter) utelämnade. Återstår av A04: nedre extremiteten samt yttre ögon-, hörselbens-, tung-, gom-, svalg- och struphuvudmuskler.
+- APP_VERSION/VERSION → 0.8.43 (cachebuster: app.js → 0.8.43; glossary.css/js oförändrade 0.8.29; styles.css oförändrad 0.7.1).
+
 ## 0.8.42
 - **Ordlistan: latinska anatomitermer (TA98) – fas 11, lederna och ledbanden (A03 Juncturae). Hela kapitlet klart, 342 poster.**
   - **Allmän ledlära (52):** fog-/ledtyper (synartros, syndesmos, synkondros, synovialled, kulled, sadelled, vridled, ellipsoidled m.fl.), ledkapselns och ledhålans delar (ledkapsel, ledhinna, ledskiva, menisk, ledläpp, slemsäck, senskida) samt ledrörelser (abduktion, adduktion, pro-/supination, opposition).
