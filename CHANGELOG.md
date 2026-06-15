@@ -1,5 +1,17 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.31
+- **Ordlistan: kompletterad mot externa medicinska ordlistor (117 nya poster).** Genomgång av källor (senioralert.se, cancercentrum.se, gyncancer.se, ibrancepatient.se, carpanet.se) – endast genuint saknade *medicinska* termer infördes enligt grundmallen, dubbletter och rena böjningsvarianter hoppades över, och eHälsomyndighetens IT-/förvaltningstermbank bedömdes ligga utanför ordlistans ram.
+  - Kärntermer som saknats: metastas, dottertumör, kirurgi, röntgen, mutation, vävnad, ultraljud, strålbehandling, datortomografi, kemoterapi, immunterapi, cellgift, fatigue, biverkning, livskvalitet, dos, screening, biomarkör, finnålspunktion, mellannålsbiopsi, miktion, morfologi m.fl.
+  - Endokrint (hormoner/tumörer): hormon, kortisol, serotonin, vasopressin, sköldkörtel, bisköldkörtel, parathormon, tyroxin/T3/T4, GH/tillväxthormon, bukspottkörtel, lever, adenohypofys/neurohypofys, carcinoid(syndrom), insulinom/gastrinom/glukagonom/prolaktinom/somatostatinom m.fl.
+  - Vård-/patientbegrepp och förkortningar (på användarens beslut): brytpunktssamtal, palliativ vård, kontaktsjuksköterska, fast vårdkontakt, prehabilitering, second opinion, evidens, morbiditet, mortalitet; RCC, MDK, SVF, PAD, HSL, IVO, SKR, NPÖ, INCA, PVK, PICC-line, RIK, BRCA, FIGO, GnRH, HER2, MR/MRT/DT/UL; bedömningsskalor (Nortonskala, MNA, DFRI, RAPS, ROAG). Läkemedels-varunamn uteslöts medvetet.
+- **Ordlistan: latinska anatomitermer från Terminologia Anatomica – fas 1 (138 poster).** Påbörjad systematisk import av kroppens latinska anatominamn region för region, med Terminologia Anatomica (TA98) som auktoritativ källa (äkta latin som uppslagsord, engelska som `Eng.`-alternativ, kort definition + ordförklaring av latinet; inget påhittat svenskt namn). Arbetsmall + status/logg i `scripts/anatomi_import_mall.md`.
+  - **A02 Ossa / skalle (27):** os frontale, parietale, occipitale, temporale, sphenoidale, ethmoidale … foramen magnum, fossa cranii anterior/media/posterior, sella turcica, suturae, cranium/neurocranium/viscerocranium.
+  - **A02.2 Columna vertebralis (70):** kotpelarens krökningar, kotans delar (corpus/arcus/processus …), halskotor, atlas, axis, bröst-/ländkotor, os sacrum med detaljer, os coccygis.
+  - **A02.3 Thorax (41):** costae (verae/spuriae/fluctuantes) med detaljer, bröstbenet (manubrium/corpus/processus xiphoideus), bröstkorgens öppningar och mått.
+- Synliga termer: 5 569 → **5 824** (+255). Inga dubbletter (befintliga former hoppades över vid kollision).
+- APP_VERSION/VERSION → 0.8.31 (cachebuster: app.js → 0.8.31; glossary.css/js oförändrade 0.8.29; styles.css oförändrad 0.7.1).
+
 ## 0.8.30
 - **Ordlistan: ålderdomliga och latinska sjukdoms-/anatominamn inarbetade (135 poster).** Material från fem källor (hhogman.se, slaktingar.se, kvalevaag.se ×2, Riksarkivets dödregister), egengranskat — den OCR-trasiga latin–svensk-listan importerades INTE rakt av utan latinet översattes korrekt.
   - **Fas 1 (39):** 14 `Ålderdomligt:`-noter sist i befintliga poster (sökbara via def): anemi←bleksot, epilepsi←fallandesot, dysenteri←rödsot, ödem←vattusot, apoplexi←slag, chorea←danssjuka, ergotism←dragsjuka, rakit, gangrän←benbrand, influensa←spanska sjukan, osteomyelit←benröta, diabetes←sockersjuka, hemorrojd←gyllenåder. + 25 nya poster (lungsot, tvinsot, hektik, vita pesten, pest, digerdöden, frossa, fläcktyfus, gulsot, franska sjukan, skörbjugg, gikt, barnsängsfeber, stenpassion, håll och styng, moderpassion m.fl.).
