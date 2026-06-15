@@ -41,11 +41,13 @@ börja om. Gör så här vid fortsättning:
 - 2026-06-15 — **A02.5 Nedre extremitet, del 1**: KLAR, 97 poster – höftben (os coxae:
   ilium/ischium/pubis + detaljer), bäcken som helhet + bäckenmått (conjugata m.fl.),
   lårben (femur). Committat 0.8.33.
-- NÄSTA: **A02.5 del 2** – patella (basis/apex patellae, facies articularis), tibia
-  (skenben), fibula (vadben), foten (ossa tarsi: talus, calcaneus, os naviculare,
-  ossa cuneiformia, os cuboideum; ossa metatarsi; falanger). Kör recept CH="02" och
-  filtrera bort redan tillagda. Därefter A02.1 cranium-resten (~427), A02.0, sedan
-  A03–A16.
+- 2026-06-15 — **A02.5 Nedre extremitet, del 2**: KLAR, 74 poster – knäskål, skenben,
+  vadben, fotrotsben (talus/calcaneus/naviculare/cuneiformia/cuboideum), mellanfotsben.
+  Committat 0.8.34. Hela extremitetsskelettet klart.
+- NÄSTA: **A02.1 cranium-resten** (~400 kvar – detaljer på enskilda skallben: maxilla,
+  mandibula, os sphenoidale/ethmoidale/temporale-detaljer, foramina, suturer m.m.) +
+  **A02.0** (allmänna benterm, ~29 kvar). Kör recept CH="02" och filtrera bort redan
+  tillagda. Därefter A03 (leder), A04 (muskler), A05–A16.
 
 ## Källa (auktoritativ)
 - **Terminologia Anatomica (TA)** – den internationella standarden (FIPAT/IFAA).

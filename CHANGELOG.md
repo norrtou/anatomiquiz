@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.34
+- **Ordlistan: latinska anatomitermer (TA98) – fas 4, underben och fot (74 poster).** Slutför nedre extremitetens skelett (A02.5).
+  - **A02.5 nedre extremitet, del 2 (74):** knäskålen (basis/apex patellae), skenbenet (tibia) med ledknölar, mellankondylytor, skenbensknöl och inre fotknöl, vadbenet (fibula) med huvud, hals och yttre fotknöl, samt foten – fotrotsbenen (språngben/talus, hälben/calcaneus, båtben, de tre kilbenen, tärningsben/cuboideum), mellanfotsben och deras knölar. Därmed är hela skelettets extremiteter klara.
+- Synliga termer: 6 037 → **6 111** (+74). Inga dubbletter.
+- APP_VERSION/VERSION → 0.8.34 (cachebuster: app.js → 0.8.34; glossary.css/js oförändrade 0.8.29; styles.css oförändrad 0.7.1).
+
 ## 0.8.33
 - **Ordlistan: latinska anatomitermer (TA98) – fas 3, bäcken och lårben (97 poster).** Fortsatt region-för-region-import enligt `scripts/anatomi_import_mall.md`.
   - **A02.5 nedre extremitet, del 1 (97):** höftbenet (os coxae) med tarmben, sittben och blygdben och alla detaljer (acetabulum, höftbenskam, höftbenstaggar, säteslinjer, foramen obturatum m.m.); bäckenet som helhet (stora/lilla bäckenet, bäckeningång/-utgång, gränslinje) och bäckenmåtten (conjugata vera/diagonalis/externa m.fl., diametrar, distantiae); lårbenet (femur) med huvud, hals, trochantrar, linea aspera, ledknölar och gropar.
