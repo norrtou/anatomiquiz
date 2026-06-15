@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.44
+- **Ordlistan: latinska anatomitermer (TA98) – fas 13, musklerna (A04 Musculi), del 2. Hela muskelkapitlet klart (+465 totalt sedan A03).**
+  - **Nedre extremiteten (91):** höft- och sätesmusklerna, de djupa utåtrotatorerna, fyrhövdade lårmuskeln, adduktorerna, hamstrings, underbenets loger (tibialis, fibularis, triceps surae med hälsenan) och fotens småmuskler; dessutom lårtriangeln, adduktorkanalen, lårkanalen och fotens retinakler.
+  - **Senskidor & slemsäckar (34):** senskidans uppbyggnad, fingrarnas ringband (pulley-systemet) samt de kliniskt vedertagna slemsäckarna (subakromiala, olekranon-, trokanter-, prepatellara, anserina, hälsene-bursan m.fl.).
+  - **Bäckenstöd (7):** pubovesikala/puboprostatiska banden, urinblåsans sidoband och de rektovaginala/rektoprostatiska fasciorna (Denonvilliers).
+- *Musculus flexor digiti minimi brevis* slogs ihop till en post (homonym i både hand och fot).
+- Synliga termer: 7 155 → **7 287** (+132 i denna commit; A04 totalt +465). Inga dubbletter. Den långa svansen av rent generiska deletiketter (caput/pars/lamina) och obskyra enskilda *bursa subtendinea musculi …* utelämnade medvetet. Näst på tur: A05 matsmältningssystemet.
+- APP_VERSION/VERSION → 0.8.44 (cachebuster: app.js → 0.8.44; glossary.css/js oförändrade 0.8.29; styles.css oförändrad 0.7.1).
+
 ## 0.8.43
 - **Ordlistan: latinska anatomitermer (TA98) – fas 12, musklerna (A04 Musculi), del 1: huvud till hand. 333 poster.**
   - **Allmän muskellära (42):** muskeltyper (spol-, fjäder-, ring-, en-/två-/trehövdade …), funktionsnamn (flexor, extensor, abductor, sfinkter …), fästpunkter, muskelfascia, epimysium/perimysium och senstrukturer.

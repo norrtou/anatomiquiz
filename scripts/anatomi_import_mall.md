@@ -64,9 +64,18 @@ börja om. Gör så här vid fortsättning:
   barntermer (ligamenta collateralia/palmaria/plantaria, ligamentum laterale/mediale,
   membrana synovialis superior/inferior, pars transversa/descendens, periodontium-subtyper)
   UTELÄMNADE medvetet. Committat 0.8.42. Ordlistan **6 822** termer.
-- NÄSTA: **A04 Musculi** (muskler, ~654, kör recept CH="04") – OBS invertera alla
-  `musculus …`→`…, musculus` och `tendo …`. Sedan A05–A16. Kom ihåg inv()-helpern
-  i varje batch.
+- 2026-06-15 — **A04 Musculi (muskler)**: ✅ **HELA KAPITLET KLART**, ~470 poster.
+  Batchar: allmän muskellära (42), huvud (45), hals (34), rygg (53), thorax/diafragma
+  (34), buk+bäckenbotten (62), övre extr. (63), nedre extr. (91), senskidor+slemsäckar
+  (34), bäckenstöd-komplettering (7). Committat 0.8.43 (huvud–hand) + 0.8.44 (resten).
+  Ordlistan **7 287** termer. Musculus/tendo inverterade; proper latin används som
+  uppslagsord även där TA alfabetiserar om (t.ex. `musculus flexor carpi radialis`,
+  ej TA:s `radialis flexor carpi`). MEDVETET UTELÄMNAT: generiska deletiketter
+  (caput/pars/lamina/venter), upprepade fasciavarianter och A04.8:s långa svans av
+  obskyra `bursa subtendinea musculi …` / enskilda fotledssenskidor (~200 TA-rader).
+  Homonymen flexor digiti minimi brevis (hand+fot) sammanslogs i en post.
+- NÄSTA: **A05 Systema digestorium** (matsmältningssystemet, kör recept CH="05").
+  Sedan A06–A16. Kom ihåg inv()-helpern i varje batch.
 
 ## Källa (auktoritativ)
 - **Terminologia Anatomica (TA)** – den internationella standarden (FIPAT/IFAA).
