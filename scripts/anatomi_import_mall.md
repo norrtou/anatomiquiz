@@ -38,8 +38,14 @@ börja om. Gör så här vid fortsättning:
 - 2026-06-15 — **A02.3 Thorax**: KLAR, 41 poster (skeleton thoracis … angulus infrasternalis).
 - 2026-06-15 — **A02.4 Övre extremitet**: KLAR, 116 poster (skuldergördel, humerus,
   radius, ulna, carpus, metacarpus, phalanges, ossa sesamoidea). Committat 0.8.32.
-- NÄSTA: A02.5 nedre extremitet (os coxae, femur, patella, tibia, fibula, tarsus,
-  metatarsus, falanger), sedan A02.1 cranium-resten (~427 kvar), A02.0. Kör recept CH="02".
+- 2026-06-15 — **A02.5 Nedre extremitet, del 1**: KLAR, 97 poster – höftben (os coxae:
+  ilium/ischium/pubis + detaljer), bäcken som helhet + bäckenmått (conjugata m.fl.),
+  lårben (femur). Committat 0.8.33.
+- NÄSTA: **A02.5 del 2** – patella (basis/apex patellae, facies articularis), tibia
+  (skenben), fibula (vadben), foten (ossa tarsi: talus, calcaneus, os naviculare,
+  ossa cuneiformia, os cuboideum; ossa metatarsi; falanger). Kör recept CH="02" och
+  filtrera bort redan tillagda. Därefter A02.1 cranium-resten (~427), A02.0, sedan
+  A03–A16.
 
 ## Källa (auktoritativ)
 - **Terminologia Anatomica (TA)** – den internationella standarden (FIPAT/IFAA).

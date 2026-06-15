@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.33
+- **Ordlistan: latinska anatomitermer (TA98) – fas 3, bäcken och lårben (97 poster).** Fortsatt region-för-region-import enligt `scripts/anatomi_import_mall.md`.
+  - **A02.5 nedre extremitet, del 1 (97):** höftbenet (os coxae) med tarmben, sittben och blygdben och alla detaljer (acetabulum, höftbenskam, höftbenstaggar, säteslinjer, foramen obturatum m.m.); bäckenet som helhet (stora/lilla bäckenet, bäckeningång/-utgång, gränslinje) och bäckenmåtten (conjugata vera/diagonalis/externa m.fl., diametrar, distantiae); lårbenet (femur) med huvud, hals, trochantrar, linea aspera, ledknölar och gropar.
+- Synliga termer: 5 940 → **6 037** (+97). Inga dubbletter. (A02.5 forts.: patella, skenben, vadben och foten återstår.)
+- APP_VERSION/VERSION → 0.8.33 (cachebuster: app.js → 0.8.33; glossary.css/js oförändrade 0.8.29; styles.css oförändrad 0.7.1).
+
 ## 0.8.32
 - **Ordlistan: latinska anatomitermer (TA98) – fas 2, övre extremiteten (116 poster).** Fortsatt region-för-region-import enligt `scripts/anatomi_import_mall.md`.
   - **A02.4 Övre extremitet (116):** skuldergördel (skulderblad med gropar/kam/utskott, nyckelben), överarmsben (caput/collum/tuberkler/epikondyler/trochlea/capitulum/gropar), strålben och armbågsben med alla detaljer, handlovsbenen (os scaphoideum, lunatum, triquetrum, pisiforme, trapezium, trapezoideum, capitatum, hamatum), mellanhandsben och fingerben (falanger), ossa sesamoidea.
