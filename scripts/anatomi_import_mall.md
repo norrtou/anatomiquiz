@@ -51,6 +51,9 @@ börja om. Gör så här vid fortsättning:
 - 2026-06-15 — **A02.1 pannben + hjässben**: KLAR, 41 poster (os frontale, os parietale).
   Committat 0.8.37.
 - 2026-06-15 — **A02.1 kilben**: KLAR, 44 poster (os sphenoidale). Committat 0.8.38.
+- 2026-06-15 — **SORTERINGSFIX**: 57 strukturnamn inverterade (`os frontale`→`frontale, os`
+  osv.) så de filas på rätt bokstav istället för att hopa sig på O. Regel + helper införd
+  ovan; ska användas i ALLA kommande batchar. Committas 0.8.39.
 - NÄSTA: **A02.1 resten av kraniet** (~140 kvar): A02.1.06 tinningben (os temporale,
   pars petrosa, ~62), A02.1.00 allmän skalle (norma-vyer,
   skallbas, fossae, foramina, suturer, fontaneller), A02.1.02 occipitale, A02.1.03
@@ -105,6 +108,37 @@ Delar i ordning:
 
 Frivilligt: `Jfr <Term>.`-korsreferenser, `Vardag.`-form. Ingen böjningsparentes behövs
 för latinska uppslagsord (de saknar svensk böjning).
+
+### SORTERING – invertera strukturnamn (VIKTIGT)
+Användaren vill INTE ha alla `os …` på O, alla `musculus …` på M osv. (absurt för ett
+lexikon). Därför **inverteras strukturnamn** så de filas på sitt egentliga namns bokstav,
+med kompletta latinet utskrivet (och sökbart) i definitionen:
+- Uppslagsord: `os frontale` → **`frontale, os`** (sida F); `musculus biceps brachii` →
+  `biceps brachii, musculus` (B); `nervus ulnaris` → `ulnaris, nervus` (U);
+  `arteria femoralis` → `femoralis, arteria` (F).
+- Definition: skriv in kompletta latinska namnet FÖRST (direkt efter ordklassen) så det
+  blir sökbart: `subst. os frontale; pannben; …`.
+- **Gäller strukturgenus:** os, ossa, musculus, musculi, nervus, nervi, arteria, arteriae,
+  vena, venae, ligamentum, ligamenta, glandula, glandulae, nodus, nodi, ganglion, ganglia,
+  articulatio, articulationes, ramus, rami, truncus, plexus, bursa, tendo.
+- **Inverteras INTE** (läses naturligt, står kvar på egen bokstav): topografiska detaljord
+  `fossa, sulcus, processus, facies, foramen, crista, tuberculum, incisura, linea, margo,
+  spina, sinus, canalis, pars, apertura, recessus …`. Tveka? Fråga användaren.
+- Enordsnamn (femur, patella, scapula, mandibula, atlas …) står redan rätt – ingen åtgärd.
+
+Använd denna helper i varje batch (kör term+def genom den innan append):
+```python
+import re
+INVERT={"os","ossa","musculus","musculi","nervus","nervi","arteria","arteriae","vena","venae","ligamentum","ligamenta","glandula","glandulae","nodus","nodi","ganglion","ganglia","articulatio","articulationes","ramus","rami","truncus","trunci","plexus","bursa","bursae","tendo"}
+_OK=re.compile(r'^(subst\.|adj\.|adv\.|verb|prefix|suffix|förk\.|pron\.|räkn\.|interj\.|konj\.|prep\.)\s+')
+def inv(term,defi):
+    w=term.split()
+    if "," in term or "(" in term or len(w)<2 or w[0].lower() not in INVERT or not re.match(r'^[A-Za-zÅÄÖåäö]',w[1]):
+        return term,defi
+    nt=" ".join(w[1:])+", "+w[0]
+    m=_OK.match(defi); nd=(defi[:m.end()]+term+"; "+defi[m.end():]) if m else term+"; "+defi
+    return nt,nd
+```
 
 ### Exempel (godkända av användaren)
 ```

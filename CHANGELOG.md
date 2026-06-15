@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.39
+- **Ordlistan: latinska strukturnamn sorteras nu på sitt egentliga namn, inte på genus-ordet.** Tidigare hamnade alla `os …` på bokstaven O, alla `musculus …` skulle hamnat på M osv. – olämpligt för ett lexikon. Nu inverteras strukturnamn: uppslagsordet visar det specifika namnet först och filas på dess bokstav, medan det kompletta latinska namnet skrivs ut först i definitionen (och förblir sökbart).
+  - Exempel: `os frontale` → **`frontale, os`** (sida F), `os coxae` → `coxae, os` (C), `os hyoideum` → `hyoideum, os` (H). Definition: `subst. os frontale; pannben; …`.
+  - Gäller strukturgenus (os, ossa, musculus, nervus, arteria, vena, ligamentum, glandula, nodus, ganglion, articulatio, ramus, truncus, plexus, bursa, tendo). Topografiska detaljord (fossa, sulcus, processus, facies, foramen m.fl.) lämnas som de är. 57 befintliga poster inverterade; regeln gäller alla kommande anatomibatchar (dokumenterat i `scripts/anatomi_import_mall.md`).
+- APP_VERSION/VERSION → 0.8.39 (cachebuster: app.js → 0.8.39; glossary.css/js oförändrade 0.8.29; styles.css oförändrad 0.7.1).
+
 ## 0.8.38
 - **Ordlistan: latinska anatomitermer (TA98) – fas 8, kilbenet (44 poster).** Fortsatt kraniedetalj-import (A02.1).
   - **Kilbenet (os sphenoidale, 44):** sella turcica-regionen (sadelknöl, hypofysgrop, sadelrygg, sadelutskott), lilla och stora vingen, synnervskanal, övre ögonhålespringan, skallbasens foramina (rotundum, ovale, spinosum m.fl.), vingutskotten med inre/yttre vingplatta och vingkrok, samt kilbenshålan (sinus sphenoidalis).
