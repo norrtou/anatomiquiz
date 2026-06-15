@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.41
+- **Ordlistan: latinska anatomitermer (TA98) – fas 10, allmänna skallstrukturer (73 poster). Därmed är hela skelettet (A02 Ossa) klart.**
+  - **Allmän skalle (73):** norma-vyer, kraniometriska punkter (nasion, bregma, lambda, pterion, asterion …), tinninggrop/okbåge/ving-gomgrop, fontaneller, skalltakets benlager, skallbasen med foramen jugulare och lacerum, hårda gommen, ögonhålan med dess väggar och öppningar, samt bennäshålan med näsgångar och öppningar.
+- Synliga termer: 6 407 → **6 480** (+73). Inga dubbletter. Skelettkapitlet (A02) fullständigt; näst på tur: A03 leder/ledband, A04 muskler.
+- APP_VERSION/VERSION → 0.8.41 (cachebuster: app.js → 0.8.41; glossary.css/js oförändrade 0.8.29; styles.css oförändrad 0.7.1).
+
 ## 0.8.40
 - **Ordlistan: latinska anatomitermer (TA98) – fas 9, tinningbenet (62 poster).** Fortsatt kraniedetalj-import (A02.1).
   - **Tinningbenet (os temporale, 62):** klippbenet (pars petrosa) med ansiktsnervkanal, halspulsåderkanal, muskel–rörkanal, inre hörselgång och fåror för stenbenssinus; trumdelen (pars tympanica) med yttre hörselgång och trumhinnefåra; fjälldelen (pars squamosa) med käkledsgrop och ledknöl; samt vårtutskottets strukturer och tinningbenets springor.

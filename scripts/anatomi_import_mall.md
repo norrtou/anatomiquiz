@@ -55,12 +55,12 @@ börja om. Gör så här vid fortsättning:
   osv.) så de filas på rätt bokstav istället för att hopa sig på O. Regel + helper införd
   ovan; ska användas i ALLA kommande batchar. Committas 0.8.39.
 - 2026-06-15 — **A02.1 tinningben**: KLAR, 62 poster (os temporale). Committat 0.8.40.
-- NÄSTA: **A02.1 allmän skalle** (~80 kvar, A02.1.00): A02.1.00 allmän skalle (norma-vyer,
-  skallbas, fossae, foramina, suturer, fontaneller), A02.1.02 occipitale, A02.1.03
-  frontale, A02.1.04 (kraniometriska punkter), A02.1.05 sphenoidale, A02.1.06 temporale
-  (pars petrosa m.m.), A02.1.07 ethmoidale, A02.1.08–11 (concha inf., lacrimale, nasale,
-  vomer). Kör recept CH="02", gruppera på A02.1.NN. Sedan A02.0, A03 (leder), A04
-  (muskler), A05–A16.
+- 2026-06-15 — **A02.1 allmän skalle**: KLAR, 73 poster. Committat 0.8.41.
+  ✅ **HELA A02 OSSA (skelettet) KLART.** Ordlistan 6 480 termer.
+- NÄSTA: **A03 Juncturae** (leder/ledband, ~383 totalt, kör recept CH="03") – OBS
+  invertera `articulatio …`→`…, articulatio` och `ligamentum …`→`…, ligamentum`.
+  Sedan A04 Musculi (~654, alla `musculus …` inverteras), A05–A16. Kom ihåg inv()-helpern
+  i varje batch.
 
 ## Källa (auktoritativ)
 - **Terminologia Anatomica (TA)** – den internationella standarden (FIPAT/IFAA).
