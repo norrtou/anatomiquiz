@@ -48,7 +48,10 @@ börja om. Gör så här vid fortsättning:
   hyoideum, os zygomaticum, os palatinum. Committat 0.8.35.
 - 2026-06-15 — **A02.1 nackben/silben/små ansiktsben**: KLAR, 57 poster (os occipitale,
   os ethmoidale, concha inf.-utskott, lacrimale, nasale, vomer). Committat 0.8.36.
-- NÄSTA: **A02.1 resten av kraniet** (~225 kvar): A02.1.00 allmän skalle (norma-vyer,
+- 2026-06-15 — **A02.1 pannben + hjässben**: KLAR, 41 poster (os frontale, os parietale).
+  Committat 0.8.37.
+- NÄSTA: **A02.1 resten av kraniet** (~185 kvar): A02.1.05 kilben (os sphenoidale, ~45),
+  A02.1.06 tinningben (os temporale, pars petrosa, ~62), A02.1.00 allmän skalle (norma-vyer,
   skallbas, fossae, foramina, suturer, fontaneller), A02.1.02 occipitale, A02.1.03
   frontale, A02.1.04 (kraniometriska punkter), A02.1.05 sphenoidale, A02.1.06 temporale
   (pars petrosa m.m.), A02.1.07 ethmoidale, A02.1.08–11 (concha inf., lacrimale, nasale,

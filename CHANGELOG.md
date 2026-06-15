@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.37
+- **Ordlistan: latinska anatomitermer (TA98) – fas 7, pannben och hjässben (41 poster).** Fortsatt kraniedetalj-import (A02.1).
+  - **Pannbenet (os frontale, 27):** pannbensfjäll, pannknöl, ögonbrynsbåge, glabella, ögonhålekant med supraorbitalhål, ögonhåledel med tårkörtelgrop, samt pannbihålan (sinus frontalis).
+  - **Hjässbenet (os parietale, 14):** hjässknöl, tinninglinjer, kanter och hörn, fåror för övre pilbladssinus och mellersta hjärnhinneartären.
+- Synliga termer: 6 260 → **6 301** (+41). Inga dubbletter. (A02.1 forts.: kilben, tinningben och allmän skalle/skallbas återstår.)
+- APP_VERSION/VERSION → 0.8.37 (cachebuster: app.js → 0.8.37; glossary.css/js oförändrade 0.8.29; styles.css oförändrad 0.7.1).
+
 ## 0.8.36
 - **Ordlistan: latinska anatomitermer (TA98) – fas 6, nackben, silben m.fl. (57 poster).** Fortsatt kraniedetalj-import (A02.1).
   - **Nackbenet (os occipitale, 31):** nackbensfjäll, nackbensknölar, hypoglossuskanal, nacklinjer, korsupphöjningen och sinusfårorna på insidan, samt de kraniometriska punkterna basion och opisthion.
