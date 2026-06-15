@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.36
+- **Ordlistan: latinska anatomitermer (TA98) – fas 6, nackben, silben m.fl. (57 poster).** Fortsatt kraniedetalj-import (A02.1).
+  - **Nackbenet (os occipitale, 31):** nackbensfjäll, nackbensknölar, hypoglossuskanal, nacklinjer, korsupphöjningen och sinusfårorna på insidan, samt de kraniometriska punkterna basion och opisthion.
+  - **Silbenet (os ethmoidale, 15):** silplattan, silbenslabyrinten med luftceller, övre och mellersta näsmusslan, krokutskott och hiatus semilunaris.
+  - **Små ansiktsben (11):** nedre näsmusslans utskott, tårbenet, näsbenet och plogbenet (vomer).
+- Synliga termer: 6 203 → **6 260** (+57). Inga dubbletter. (A02.1 forts.: pannben, kilben, tinningben och allmän skalle/skallbas återstår.)
+- APP_VERSION/VERSION → 0.8.36 (cachebuster: app.js → 0.8.36; glossary.css/js oförändrade 0.8.29; styles.css oförändrad 0.7.1).
+
 ## 0.8.35
 - **Ordlistan: latinska anatomitermer (TA98) – fas 5, ansiktsskelettet (92 poster).** Påbörjad kraniedetalj-import (A02.1).
   - **Ansiktsskelettet (92):** överkäken (maxilla) med käkhåla, ögonhåleyta, infraorbitalkanal, gomutskott och tandutskott; underkäken (mandibula) med kropp, gren, käkvinkel, hak- och muskelutskott, underkäkskanal; tungbenet (os hyoideum); okbenet (os zygomaticum); gombenet (os palatinum); samt gemensamma tandburande strukturer (alveoli dentales, septa interalveolaria m.m.).
