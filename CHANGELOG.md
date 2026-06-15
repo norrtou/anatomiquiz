@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.40
+- **Ordlistan: latinska anatomitermer (TA98) – fas 9, tinningbenet (62 poster).** Fortsatt kraniedetalj-import (A02.1).
+  - **Tinningbenet (os temporale, 62):** klippbenet (pars petrosa) med ansiktsnervkanal, halspulsåderkanal, muskel–rörkanal, inre hörselgång och fåror för stenbenssinus; trumdelen (pars tympanica) med yttre hörselgång och trumhinnefåra; fjälldelen (pars squamosa) med käkledsgrop och ledknöl; samt vårtutskottets strukturer och tinningbenets springor.
+- Synliga termer: 6 345 → **6 407** (+62). Inga dubbletter. (A02.1 forts.: allmän skalle/skallbas/fossae/foramina/fontaneller återstår, ~80 st.)
+- APP_VERSION/VERSION → 0.8.40 (cachebuster: app.js → 0.8.40; glossary.css/js oförändrade 0.8.29; styles.css oförändrad 0.7.1).
+
 ## 0.8.39
 - **Ordlistan: latinska strukturnamn sorteras nu på sitt egentliga namn, inte på genus-ordet.** Tidigare hamnade alla `os …` på bokstaven O, alla `musculus …` skulle hamnat på M osv. – olämpligt för ett lexikon. Nu inverteras strukturnamn: uppslagsordet visar det specifika namnet först och filas på dess bokstav, medan det kompletta latinska namnet skrivs ut först i definitionen (och förblir sökbart).
   - Exempel: `os frontale` → **`frontale, os`** (sida F), `os coxae` → `coxae, os` (C), `os hyoideum` → `hyoideum, os` (H). Definition: `subst. os frontale; pannben; …`.
