@@ -36,9 +36,10 @@ börja om. Gör så här vid fortsättning:
 - 2026-06-15 — **A02.2 Columna vertebralis**: KLAR, 70 poster (curvatura primaria …
   cornu coccygeum). atlas/axis fanns redan.
 - 2026-06-15 — **A02.3 Thorax**: KLAR, 41 poster (skeleton thoracis … angulus infrasternalis).
-- NÄSTA: A02.4 övre extremitet (clavicula, scapula, humerus, radius, ulna, carpus,
-  metacarpus, phalanges), sedan A02.5 nedre extremitet, A02.1 cranium-resten (427 kvar),
-  A02.0. Kör recepet med CH="02".
+- 2026-06-15 — **A02.4 Övre extremitet**: KLAR, 116 poster (skuldergördel, humerus,
+  radius, ulna, carpus, metacarpus, phalanges, ossa sesamoidea). Committat 0.8.32.
+- NÄSTA: A02.5 nedre extremitet (os coxae, femur, patella, tibia, fibula, tarsus,
+  metatarsus, falanger), sedan A02.1 cranium-resten (~427 kvar), A02.0. Kör recept CH="02".
 
 ## Källa (auktoritativ)
 - **Terminologia Anatomica (TA)** – den internationella standarden (FIPAT/IFAA).

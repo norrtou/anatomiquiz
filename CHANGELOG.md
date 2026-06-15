@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.32
+- **Ordlistan: latinska anatomitermer (TA98) – fas 2, övre extremiteten (116 poster).** Fortsatt region-för-region-import enligt `scripts/anatomi_import_mall.md`.
+  - **A02.4 Övre extremitet (116):** skuldergördel (skulderblad med gropar/kam/utskott, nyckelben), överarmsben (caput/collum/tuberkler/epikondyler/trochlea/capitulum/gropar), strålben och armbågsben med alla detaljer, handlovsbenen (os scaphoideum, lunatum, triquetrum, pisiforme, trapezium, trapezoideum, capitatum, hamatum), mellanhandsben och fingerben (falanger), ossa sesamoidea.
+- Synliga termer: 5 824 → **5 940** (+116). Inga dubbletter.
+- APP_VERSION/VERSION → 0.8.32 (cachebuster: app.js → 0.8.32; glossary.css/js oförändrade 0.8.29; styles.css oförändrad 0.7.1).
+
 ## 0.8.31
 - **Ordlistan: kompletterad mot externa medicinska ordlistor (117 nya poster).** Genomgång av källor (senioralert.se, cancercentrum.se, gyncancer.se, ibrancepatient.se, carpanet.se) – endast genuint saknade *medicinska* termer infördes enligt grundmallen, dubbletter och rena böjningsvarianter hoppades över, och eHälsomyndighetens IT-/förvaltningstermbank bedömdes ligga utanför ordlistans ram.
   - Kärntermer som saknats: metastas, dottertumör, kirurgi, röntgen, mutation, vävnad, ultraljud, strålbehandling, datortomografi, kemoterapi, immunterapi, cellgift, fatigue, biverkning, livskvalitet, dos, screening, biomarkör, finnålspunktion, mellannålsbiopsi, miktion, morfologi m.fl.
