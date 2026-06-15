@@ -57,9 +57,15 @@ börja om. Gör så här vid fortsättning:
 - 2026-06-15 — **A02.1 tinningben**: KLAR, 62 poster (os temporale). Committat 0.8.40.
 - 2026-06-15 — **A02.1 allmän skalle**: KLAR, 73 poster. Committat 0.8.41.
   ✅ **HELA A02 OSSA (skelettet) KLART.** Ordlistan 6 480 termer.
-- NÄSTA: **A03 Juncturae** (leder/ledband, ~383 totalt, kör recept CH="03") – OBS
-  invertera `articulatio …`→`…, articulatio` och `ligamentum …`→`…, ligamentum`.
-  Sedan A04 Musculi (~654, alla `musculus …` inverteras), A05–A16. Kom ihåg inv()-helpern
+- 2026-06-15 — **A03 Juncturae (leder/ledband)**: ✅ **HELA KAPITLET KLART**, 342 poster.
+  7 batchar: allmän ledlära (52), skallens fogar (54), kotpelaren (34), bröstkorgen (28),
+  övre extremiteten (69), nedre extremiteten utom fot (51), foten (54), + 3 efterskörd.
+  Strukturord (articulatio/ligamentum/bursa) inverterade. Rent generiska upprepade
+  barntermer (ligamenta collateralia/palmaria/plantaria, ligamentum laterale/mediale,
+  membrana synovialis superior/inferior, pars transversa/descendens, periodontium-subtyper)
+  UTELÄMNADE medvetet. Committat 0.8.42. Ordlistan **6 822** termer.
+- NÄSTA: **A04 Musculi** (muskler, ~654, kör recept CH="04") – OBS invertera alla
+  `musculus …`→`…, musculus` och `tendo …`. Sedan A05–A16. Kom ihåg inv()-helpern
   i varje batch.
 
 ## Källa (auktoritativ)

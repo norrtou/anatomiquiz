@@ -1,5 +1,17 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.42
+- **Ordlistan: latinska anatomitermer (TA98) – fas 11, lederna och ledbanden (A03 Juncturae). Hela kapitlet klart, 342 poster.**
+  - **Allmän ledlära (52):** fog-/ledtyper (synartros, syndesmos, synkondros, synovialled, kulled, sadelled, vridled, ellipsoidled m.fl.), ledkapselns och ledhålans delar (ledkapsel, ledhinna, ledskiva, menisk, ledläpp, slemsäck, senskida) samt ledrörelser (abduktion, adduktion, pro-/supination, opposition).
+  - **Skallens fogar (54):** bensömmar (sutura sphenofrontalis, frontonasalis, palatina mediana …), synkondroser i skallbasen, tandens stödjevävnad (periodontium, rotcement), käkleden (art. temporomandibularis) och övre nackleden (art. atlantooccipitalis).
+  - **Kotpelaren (34):** långa ryggradsbanden, gula ledbanden, nackbandet, mellankotskivan med fiberring och diskkärna, atlas–axis-lederna med vingband och tvärband, fasettlederna samt korsbens- och svansbensfogarna.
+  - **Bröstkorgen (28):** revben–kotleder, revben–tvärutskottsleder, bröstben–revbensleder och intercostalmembranen.
+  - **Övre extremiteten (69):** skuldergördelns leder (akromioklavikular- och sternoklavikularled, korakoklavikularband), axelled, armbågsled med ringband, handled och handens leder (karpaltunneln, Guyons kanal, tummens sadelled, knogleder).
+  - **Nedre extremiteten (105):** blygdbensfog, korsben–tarmbensled, höftled med iliofemoral-/runda ledbandet, knäled med korsband, sidoband, menisker och knäskålsband, samt fotens leder (övre/nedre fotled, deltaligament, Choparts och Lisfrancs leder, fjäderligament, långa fotsulebandet).
+- Strukturnamn (articulatio, ligamentum, bursa …) inverteras som i tidigare faser och filas på sitt egentliga namn; kompletta latinet står först i definitionen och är sökbart.
+- Synliga termer: 6 480 → **6 822** (+342). Inga dubbletter. Rent generiska, upprepade barntermer (ligamenta collateralia/palmaria/plantaria m.fl.) utelämnade medvetet. Näst på tur: A04 Musculi (muskler).
+- APP_VERSION/VERSION → 0.8.42 (cachebuster: app.js → 0.8.42; glossary.css/js oförändrade 0.8.29; styles.css oförändrad 0.7.1).
+
 ## 0.8.41
 - **Ordlistan: latinska anatomitermer (TA98) – fas 10, allmänna skallstrukturer (73 poster). Därmed är hela skelettet (A02 Ossa) klart.**
   - **Allmän skalle (73):** norma-vyer, kraniometriska punkter (nasion, bregma, lambda, pterion, asterion …), tinninggrop/okbåge/ving-gomgrop, fontaneller, skalltakets benlager, skallbasen med foramen jugulare och lacerum, hårda gommen, ögonhålan med dess väggar och öppningar, samt bennäshålan med näsgångar och öppningar.
