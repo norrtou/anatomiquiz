@@ -58,6 +58,62 @@ _SLUG_MAP = {"å": "a", "ä": "a", "ö": "o", "é": "e", "è": "e", "ü": "u"}
 # (Å/Ä→a krockar med A; Ö→o krockar med O). Måste matcha pageSlug() i JS.
 _PAGE_SLUG = {"Å": "aa", "Ä": "ae", "Ö": "oe"}
 
+# Unik <meta name="description"> per grupp-sida. Var och en är skriven för sin
+# bokstav (egen formulering, en fråga och äkta exempeltermer som verkligen finns
+# på sidan) för bättre SEO/CTR. HÅRD GRÄNS 157 tecken (kontrolleras i main()).
+# Landningssidan har sin egen i LANDING_DESC. Tomma grupper utan rad faller
+# tillbaka på en generisk text i group_description().
+GROUP_DESCRIPTIONS = {
+    "A": "Vad betyder abdomen, anemi eller atrofi? Bläddra bland medicinska termer på A – anatomiska och latinska ord med definition, uttal och etymologi.",
+    "B": "Undrar du vad bursit, bråck eller bakteriemi betyder? Medicinska ord på B förklarade på svenska – med ordklass, synonymer och etymologi.",
+    "C": "Vad är caecum, carcinoma och cor? Slå upp latinska och anatomiska termer på C med tydlig definition, lekmannauttryck och ordhistoria.",
+    "D": "Vill du veta vad diafragma, dyspné eller dysenteri betyder? Medicinska begrepp på D med förklaring, synonymer och etymologi på svenska.",
+    "E": "Vad döljer sig bakom eksem, emboli och endokardit? Anatomiska och latinska ord på E med definition, uttal och språkligt ursprung.",
+    "F": "Letar du efter betydelsen av facies, fraktur eller fagocytos? Medicinska termer på F förklarade enkelt – med ordklass och etymologi.",
+    "G": "Vad betyder ganglion, gangrän och gikt? Bläddra bland anatomiska och latinska ord på G med definition, synonymer och ordhistoria.",
+    "H": "Nyfiken på vad hematom, hallux eller habitus betyder? Medicinska och anatomiska termer på H med förklaring, uttal och etymologi.",
+    "I": "Vad är ikterus, infarkt och idiopatisk? Slå upp latinska medicinska ord på I med tydlig definition, lekmannauttryck och ordursprung.",
+    "J": "Vad betyder jejunum, jugularis eller jonisering? Få medicinska och anatomiska termer på J förklarade på svenska – med etymologi.",
+    "K": "Undrar du vad kakexi, karies eller kateter betyder? Medicinska begrepp på K med definition, ordklass, synonymer och språkligt ursprung.",
+    "L": "Vad är labialis, labyrintit och leukemi? Bläddra bland anatomiska och latinska termer på L med förklaring, uttal och etymologi på svenska.",
+    "M": "Vill du veta vad macula, malign eller meningit betyder? Medicinska ord på M förklarade enkelt – med ordklass, synonymer och ordhistoria.",
+    "N": "Vad betyder nekros, nefrit och neuralgi? Slå upp anatomiska och latinska termer på N med definition, lekmannauttryck och etymologi.",
+    "O": "Vad är obesitas, ocklusion och oblongatus? Medicinska och anatomiska ord på O med tydlig definition, synonymer och ordursprung.",
+    "P": "Vad döljer sig bakom palliativ, pares och pneumoni? Bläddra bland latinska medicinska termer på P med förklaring, uttal och etymologi.",
+    "Q": "Vad betyder quadriceps eller quadratus? Få medicinska och anatomiska termer på Q förklarade på svenska – med ordklass och etymologi.",
+    "R": "Letar du efter betydelsen av rabies, radius eller reflux? Medicinska ord på R med definition, synonymer, lekmannauttryck och ordhistoria.",
+    "S": "Vad är sacrum, sepsis och syfilis? Slå upp anatomiska och latinska termer på S med tydlig definition, uttal och språkligt ursprung.",
+    "T": "Undrar du vad tibia, trombos eller tuberkulos betyder? Medicinska begrepp på T förklarade enkelt – med ordklass, synonymer och etymologi.",
+    "U": "Vad betyder ulceration, uremi och urtikaria? Bläddra bland medicinska och anatomiska ord på U med definition, lekmannauttryck och ordhistoria.",
+    "V": "Vill du veta vad vagina, ventrikel eller vaskulit betyder? Anatomiska och latinska termer på V med förklaring, uttal och etymologi.",
+    "W": "Vad betyder warfarin och whiplash? Få medicinska termer på W förklarade på svenska – med definition, ordklass, synonymer och etymologi.",
+    "X": "Vad är xantom, xerostomi och xerodermi? Slå upp ovanliga medicinska ord på X med tydlig definition, uttal och språkligt ursprung.",
+    "Y": "Vad betyder yttre vändning? Medicinska och anatomiska termer på Y förklarade på svenska – med ordklass, synonym och etymologi.",
+    "Z": "Nyfiken på vad zoonos, zygoma eller zona betyder? Medicinska och anatomiska ord på Z med definition, uttal och språkligt ursprung.",
+    "Å": "Vad betyder åderbråck, åderförkalkning och åderlåtning? Medicinska ord på Å med förklaring, synonymer, lekmannauttryck och etymologi.",
+    "Ä": "Undrar du vad ärrbråck, ärrvävnad eller ätstörning betyder? Medicinska och anatomiska termer på Ä med definition, uttal och ordhistoria.",
+    "Ö": "Vad är ödem, östrogen och ödematös? Slå upp medicinska och anatomiska ord på Ö med tydlig definition, synonymer och språkligt ursprung.",
+    "siffror": "Vad betyder 5-ASA och 5-FU? Slå upp medicinska termer och förkortningar som börjar med en siffra – med definition och förklaring på svenska.",
+    "tecken": "Vad betyder ändelser som -it, -emi, -ektomi och -patia? Slå upp medicinska suffix och förstå hur latinska termer byggs ihop på svenska.",
+}
+
+LANDING_DESC = (
+    "Sökbar medicinsk ordlista på svenska: tusentals latinska och anatomiska "
+    "termer med definition, ordklass, synonymer, lekmannauttryck och etymologi."
+)
+
+# Hård gräns för meta-description (Google klipper ~155–160 tecken).
+DESC_MAX = 157
+
+
+def group_description(key: str, h1: str) -> str:
+    """Unik meta-description för en grupp; generisk fallback för nya bokstäver."""
+    return GROUP_DESCRIPTIONS.get(
+        key,
+        f"{h1}: latinska och anatomiska termer på svenska med definition, "
+        "ordklass, synonymer, lekmannauttryck och etymologi.",
+    )
+
 
 # ---------------------------------------------------------------------------
 # Gruppering & slugs
@@ -473,10 +529,7 @@ def page_file_key(filename: str) -> str:
 def write_landing(groups: dict[str, list[dict]]) -> str:
     url = f"{SITE}/{LANDING_FILE}"
     title = "Medicinsk ordlista — tusentals latinska och anatomiska termer | Anatomiquiz"
-    desc = (
-        "Sökbar medicinsk ordlista på svenska med tusentals latinska och anatomiska "
-        "termer: definition, ordklass, synonymer, lekmannauttryck och etymologi."
-    )
+    desc = LANDING_DESC
     page_obj = {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
@@ -527,10 +580,7 @@ def write_group(key: str, entries: list[dict], present: set[str]) -> str:
         h1 = f"Medicinska ord på {key}"
         label = key
     title = f"{h1} — ordlista med definition och etymologi | Anatomiquiz"
-    desc = (
-        f"{h1}: latinska och anatomiska termer på svenska med definition, "
-        "ordklass, synonymer, lekmannauttryck och etymologi."
-    )
+    desc = group_description(key, h1)
     page_obj = {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
@@ -621,6 +671,16 @@ def main() -> None:
         groups[key].sort(key=lambda e: sort_value(e).lower())
 
     present = set(groups)
+
+    # Säkra att varje sidas meta-description håller sig inom gränsen.
+    over = [("(landning)", len(LANDING_DESC))] if len(LANDING_DESC) > DESC_MAX else []
+    for key in present:
+        h1 = f"Medicinska ord på {key}" if key not in ("siffror", "tecken") else f"Medicinska {group_heading(key)}"
+        d = group_description(key, h1)
+        if len(d) > DESC_MAX:
+            over.append((key, len(d)))
+    if over:
+        raise SystemExit(f"FEL: meta-description >{DESC_MAX} tecken: {over}")
 
     # Rensa bort föräldralösa ordliste-sidor (grupp som tömts sedan förra körningen).
     for old in ROOT.glob("ordlista-*.html"):

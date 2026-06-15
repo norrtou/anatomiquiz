@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.30
+- **Ordlistan: ålderdomliga och latinska sjukdoms-/anatominamn inarbetade (135 poster).** Material från fem källor (hhogman.se, slaktingar.se, kvalevaag.se ×2, Riksarkivets dödregister), egengranskat — den OCR-trasiga latin–svensk-listan importerades INTE rakt av utan latinet översattes korrekt.
+  - **Fas 1 (39):** 14 `Ålderdomligt:`-noter sist i befintliga poster (sökbara via def): anemi←bleksot, epilepsi←fallandesot, dysenteri←rödsot, ödem←vattusot, apoplexi←slag, chorea←danssjuka, ergotism←dragsjuka, rakit, gangrän←benbrand, influensa←spanska sjukan, osteomyelit←benröta, diabetes←sockersjuka, hemorrojd←gyllenåder. + 25 nya poster (lungsot, tvinsot, hektik, vita pesten, pest, digerdöden, frossa, fläcktyfus, gulsot, franska sjukan, skörbjugg, gikt, barnsängsfeber, stenpassion, håll och styng, moderpassion m.fl.).
+  - **Fas 2 (96):** distinkta latinska/historiska namn + saknade ankare (tuberkulos, syfilis, malaria, difteri, kolera, scharlakansfeber, kikhosta, mässling, smittkoppor, hysteri, spetälska, stelkramp …), latinformer (morbilli, phthisis, skrofler, lupus vulgaris, mjältbrand, tabes dorsalis, paralysis agitans …), grundformer med organ-not (carcinoma, sarcoma, apoplexia, gangraena, embolia, thrombosis) och eponymer (Brights/Basedows/Ménières/Bantis/Littles sjukdom + Morbus-former).
+  - **Tolkningskonflikter flaggade** som historiska och ej förenliga med modern medicin (angina pectoris förr brett om bröst-/halssmärtor; gikt förr all ledvärk; moderpassion/hysteri tillskrivna livmodern).
+  - Synliga termer: 5 448 → **5 569** (+121 nya poster, 14 berikade). Inga dubbletter.
+- **Ordlistan: unik meta-description per bokstavssida.** Varje `ordlista-*.html` (A–Ö, siffror, suffix) + landningssidan har nu en egen, olika formulerad beskrivning med en fråga, äkta exempeltermer och relevanta nyckelord, alla ≤157 tecken. Datadrivet i `scripts/generate_glossary.py` (`GROUP_DESCRIPTIONS`/`LANDING_DESC`) med inbyggd längdkontroll; slår igenom på meta, og:/twitter: och JSON-LD. `sitemap.xml` och alla 31 sidor omgenererade.
+- APP_VERSION/VERSION → 0.8.30 (cachebuster: app.js → 0.8.30; glossary.css/js oförändrade 0.8.29; styles.css oförändrad 0.7.1).
+
 ## 0.8.29
 - **Ordlistan: grekiska termerna kompletterade och korrigerade.** Granskning av 0.8.28 mot ursprungslistan visade tappade detaljer som nu rättats:
   - **ε-kedja** (epsilon-kedja) tillagd under E — embryonal hemoglobinkedja som tidigare fallit bort. Synliga termer 5 447 → **5 448**.
