@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.38
+- **Ordlistan: latinska anatomitermer (TA98) – fas 8, kilbenet (44 poster).** Fortsatt kraniedetalj-import (A02.1).
+  - **Kilbenet (os sphenoidale, 44):** sella turcica-regionen (sadelknöl, hypofysgrop, sadelrygg, sadelutskott), lilla och stora vingen, synnervskanal, övre ögonhålespringan, skallbasens foramina (rotundum, ovale, spinosum m.fl.), vingutskotten med inre/yttre vingplatta och vingkrok, samt kilbenshålan (sinus sphenoidalis).
+- Synliga termer: 6 301 → **6 345** (+44). Inga dubbletter. (A02.1 forts.: tinningben och allmän skalle/skallbas återstår.)
+- APP_VERSION/VERSION → 0.8.38 (cachebuster: app.js → 0.8.38; glossary.css/js oförändrade 0.8.29; styles.css oförändrad 0.7.1).
+
 ## 0.8.37
 - **Ordlistan: latinska anatomitermer (TA98) – fas 7, pannben och hjässben (41 poster).** Fortsatt kraniedetalj-import (A02.1).
   - **Pannbenet (os frontale, 27):** pannbensfjäll, pannknöl, ögonbrynsbåge, glabella, ögonhålekant med supraorbitalhål, ögonhåledel med tårkörtelgrop, samt pannbihålan (sinus frontalis).
