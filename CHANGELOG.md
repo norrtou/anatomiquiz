@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.35
+- **Ordlistan: latinska anatomitermer (TA98) – fas 5, ansiktsskelettet (92 poster).** Påbörjad kraniedetalj-import (A02.1).
+  - **Ansiktsskelettet (92):** överkäken (maxilla) med käkhåla, ögonhåleyta, infraorbitalkanal, gomutskott och tandutskott; underkäken (mandibula) med kropp, gren, käkvinkel, hak- och muskelutskott, underkäkskanal; tungbenet (os hyoideum); okbenet (os zygomaticum); gombenet (os palatinum); samt gemensamma tandburande strukturer (alveoli dentales, septa interalveolaria m.m.).
+- Synliga termer: 6 111 → **6 203** (+92). Inga dubbletter. (A02.1 forts.: skalltakets ben, kilben, tinningben, silben, allmän skalle/fossor/foramina återstår.)
+- APP_VERSION/VERSION → 0.8.35 (cachebuster: app.js → 0.8.35; glossary.css/js oförändrade 0.8.29; styles.css oförändrad 0.7.1).
+
 ## 0.8.34
 - **Ordlistan: latinska anatomitermer (TA98) – fas 4, underben och fot (74 poster).** Slutför nedre extremitetens skelett (A02.5).
   - **A02.5 nedre extremitet, del 2 (74):** knäskålen (basis/apex patellae), skenbenet (tibia) med ledknölar, mellankondylytor, skenbensknöl och inre fotknöl, vadbenet (fibula) med huvud, hals och yttre fotknöl, samt foten – fotrotsbenen (språngben/talus, hälben/calcaneus, båtben, de tre kilbenen, tärningsben/cuboideum), mellanfotsben och deras knölar. Därmed är hela skelettets extremiteter klara.

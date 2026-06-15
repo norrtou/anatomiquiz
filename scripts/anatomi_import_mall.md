@@ -44,10 +44,14 @@ börja om. Gör så här vid fortsättning:
 - 2026-06-15 — **A02.5 Nedre extremitet, del 2**: KLAR, 74 poster – knäskål, skenben,
   vadben, fotrotsben (talus/calcaneus/naviculare/cuneiformia/cuboideum), mellanfotsben.
   Committat 0.8.34. Hela extremitetsskelettet klart.
-- NÄSTA: **A02.1 cranium-resten** (~400 kvar – detaljer på enskilda skallben: maxilla,
-  mandibula, os sphenoidale/ethmoidale/temporale-detaljer, foramina, suturer m.m.) +
-  **A02.0** (allmänna benterm, ~29 kvar). Kör recept CH="02" och filtrera bort redan
-  tillagda. Därefter A03 (leder), A04 (muskler), A05–A16.
+- 2026-06-15 — **A02.1 ansiktsskelett**: KLAR, 92 poster – maxilla, mandibula, os
+  hyoideum, os zygomaticum, os palatinum. Committat 0.8.35.
+- NÄSTA: **A02.1 resten av kraniet** (~280 kvar): A02.1.00 allmän skalle (norma-vyer,
+  skallbas, fossae, foramina, suturer, fontaneller), A02.1.02 occipitale, A02.1.03
+  frontale, A02.1.04 (kraniometriska punkter), A02.1.05 sphenoidale, A02.1.06 temporale
+  (pars petrosa m.m.), A02.1.07 ethmoidale, A02.1.08–11 (concha inf., lacrimale, nasale,
+  vomer). Kör recept CH="02", gruppera på A02.1.NN. Sedan A02.0, A03 (leder), A04
+  (muskler), A05–A16.
 
 ## Källa (auktoritativ)
 - **Terminologia Anatomica (TA)** – den internationella standarden (FIPAT/IFAA).
