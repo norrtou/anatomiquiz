@@ -171,12 +171,24 @@ börja om. Gör så här vid fortsättning:
   Virchow/supraklavikulära, jugulodigastriska/-omohyoidala, laterala hals-, trakeobronkiella, parasternala, celiakala,
   övre mesenteriella, para-aortala, gemensamma iliakala, ytliga/djupa ljumsk- inkl. Cloquet, knäveck). UTELÄMNAT
   medvetet: den uttömmande svansen av ~150 enskilda regionala nodgrupper. Committat 0.8.53. Ordlistan **8 470** termer.
-- NÄSTA: **A14 Systema nervosum** (nervsystemet – STÖRST, ≈1 750; recept CH="14"; flera sessioner). Strategi: ta CNS-
-  anatomin (medulla spinalis, hjärnstammen, lillhjärna, mellanhjärna, storhjärna m. lober/gyri/barkområden, basala
-  ganglier, ventriklar, hjärnhinnor, likvor) + de 12 kranialnerverna + de stora perifera nervplexa/nerver (plexus
-  cervicalis/brachialis/lumbosacralis m. n. medianus/ulnaris/radialis/ischiadicus/femoralis osv.) + autonoma
-  nervsystemet (sympatiska gränssträngen, ganglier, n. vagus). UTELÄMNA svansen av pyttesmå rami/kärnsubavdelningar.
-  SEDAN A15 sinnesorgan (460), A16 hud (50), A01 allmän anatomi (192). inv()-helpern i ALLA batchar.
+- 2026-06-16 — **A14 nervsystemet, fas 1–3: CENTRALA NERVSYSTEMET (grovanatomi)**, 116 poster (committat 0.8.54).
+  Fas 1: NS-översikt (neurofibra/synaps/glia), hjärnhinnor (dura/araknoidea/pia, falx/tentorium, epidural-/subdural-/
+  subaraknoidalrum, cisterner inkl. magna+lumbalis, araknoidalvilli, kärlnystan), ryggmärgen (förtjockningar, conus
+  medullaris, för-/bak-/sidohorn, strängar, grå/vit substans) + huvudbanorna (kortikospinala, spinotalamiska, gracilis/
+  cuneatus, spinocerebellära, rubrospinala, kommissurer). Fas 2: hjärnstammen (pyramider, oliv, lillhjärnsskänklar,
+  storhjärnsskänkel/crus, tektum, colliculi, substantia nigra, nucleus ruber, akvedukten), ventriklarna (3:e/4:e/sido,
+  fossa rhomboidea, Monros öppning), lillhjärnan (tonsill + funktionella delar), mellanhjärnan (epi-/hypo-/sub-/
+  metatalamus), capsula interna, främre/bakre kommissuren. Fas 3: storhjärnan (lober, centralfåra/Sylvii, primära
+  bark-gyri M1/S1/Broca/Wernicke, gyrus cinguli/parahippocampalis, hippocampus, amygdala, luktbulb/-stråk, basala
+  ganglierna [caudatus/putamen/pallidus/striatum/lentiformis], corona radiata, splenium, septum pellucidum). OBS:
+  nucleus inverteras EJ (ej i listan) – står naturligt; tonsilla inverteras. UTELÄMNAT: hundratals småkärnor/laminae/
+  fibertrakter. Ordlistan **8 586** termer.
+- NÄSTA (A14 forts., fas 4+): de **12 kranialnerverna** (A14.2.01), **spinalnerverna + plexus** (cervicalis/brachialis
+  m. n. medianus/ulnaris/radialis/axillaris/musculocutaneus; lumbosacralis m. n. femoralis/obturatorius/ischiadicus/
+  tibialis/fibularis/pudendus; interkostalnerver), och **autonoma nervsystemet** (sympatiska gränssträngen + ganglier,
+  splanchnicusnerver, n. vagus parasympatiskt, plexus viscerales: cardiacus/coeliacus/mesentericus/hypogastricus).
+  Recept CH="14", grupper A14.2.xx och A14.3.xx. inv() på nervus/nervi/truncus/plexus/ganglion/ramus.
+- SEDAN A14: A15 sinnesorgan (460), A16 hud (50), A01 allmän anatomi (192). inv()-helpern i ALLA batchar.
 
 ## Källa (auktoritativ)
 - **Terminologia Anatomica (TA)** – den internationella standarden (FIPAT/IFAA).

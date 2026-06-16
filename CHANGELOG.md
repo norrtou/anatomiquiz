@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.54
+- **Ordlistan: latinska anatomitermer (TA98) – fas 23, nervsystemet del 1: centrala nervsystemets grovanatomi. +116 poster.**
+  - **Nervsystemets byggstenar och hjärnhinnor:** nervtråd, perikaryon, synaps, gliavävnad; hårda/mjuka hjärnhinnor med hjärnskäran, tentoriet och sadeldiafragmat, epidural-, subdural- och subaraknoidalrummet, likvorcisternerna (cisterna magna, lumbalcisternen), araknoidalvilli och kärlnystanet (likvorproduktion).
+  - **Ryggmärgen:** cervikala/lumbosakrala förtjockningarna, märgkonen, fram-, bak- och sidohornen, strängarna, grå/vit substans samt huvudbanorna (kortikospinala, spinotalamiska, gracilis- och cuneatusbunten, spinocerebellära, rubrospinala) och kommissurerna.
+  - **Hjärnstammen och lillhjärnan:** pyramiderna, oliven, de tre lillhjärnsskänklarna, storhjärnsskänkeln, mellanhjärnans tak med fyrhögarna, svarta substansen, röda kärnan och akvedukten; ventrikelsystemet (3:e/4:e/sidoventrikeln, romboida gropen, Monros öppning); lillhjärnstonsillen och lillhjärnans funktionella delar.
+  - **Mellanhjärnan och storhjärnan:** epi-, hypo-, sub- och metatalamus, inre kapseln; loberna, central- och Sylvii-fåran, primära motor- och känselbarken, Brocas och Wernickes områden, gördel- och parahippocampala vindlingen, hippocampus, amygdala, luktbulben/-stråket samt basala ganglierna (svanskärna, putamen, bleka klotet, striatum) och strålkronan.
+- Synliga termer: 8 470 → **8 586** (+116). Inga dubbletter (insula fanns redan). Hundratals småkärnor, laminae och fibertrakter utelämnade medvetet. **Härnäst: kranialnerverna, de perifera nervplexa och autonoma nervsystemet.**
+- APP_VERSION/VERSION → 0.8.54 (cachebuster: app.js → 0.8.54; glossary.css/js oförändrade; styles.css oförändrad).
+
 ## 0.8.53
 - **Ordlistan: latinska anatomitermer (TA98) – fas 22, lymfsystemet (A13 + lymftrunci). +37 poster.**
   - **Lymftrunci och lymfgångar:** bröstgången, chylescisternen, högra lymfgången samt jugular-, subklavia-, bronkomediastinal-, lumbal- och tarmtrunci.
