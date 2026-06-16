@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.51
+- **Ordlistan: latinska anatomitermer (TA98) – fas 20, kärlen del 3: hela artärträdet (kropp och extremiteter). +121 poster.**
+  - **Nyckelbensartären och armen:** kotartären med lillhjärnsartärerna (PICA/AICA/SCA) och ryggmärgsartärerna, inre bröstkorgsartären, tyro- och kostocervikala stammarna; armhåle-, överarms-, djupa överarms-, strålbens- och armbågsbensartären med de interosseösa artärerna, handflatebågarna och fingerartärerna.
+  - **Bröst- och bukaorta:** bakre interkostal-, subkostal- och bronkialartärerna; buktruncus (vänster/höger magsäcks-, gemensam/egentlig leverartär, gastroduodenal-, gallblåse-, mjält-, gastroomentala och korta magsäcksartärer), övre tarmkäxartären (jejunal-/ileal-, ileokoliska, appendix-, höger/mellersta kolonartär, marginalartären), nedre tarmkäxartären (vänster kolon-, sigmoideum-, övre ändtarmsartären), samt njur-, binjure-, äggstocks-/testikel- och ländartärerna.
+  - **Bäcken och benet:** inre höftbensartären (säte-, obturator-, navel-, blås-, livmoder-, slid-, mellersta ändtarms- och inre blygdartären med dess gren- och köns/perineumgrenar); yttre höftbensartären med nedre epigastriska artären; lår-, djupa lår- (med cirkumflex- och perforantartärer), knävecks-, främre/bakre skenbens- och vadbensartären, fotryggsartären, fotsuleartärerna med fotsulebågen och tåartärerna.
+- Synliga termer: 8 232 → **8 353** (+121). Inga dubbletter. Recurrens-, genicular-, malleolar-, tarsal- och metatarsalsmågrenar samt segment-, ureter- och muskelrami utelämnade medvetet. Strukturord (arteria/truncus/ramus) inverterade. **Härnäst: vensystemet (v. cava sup./inf., porta, durasinus, extremitetsvener).**
+- APP_VERSION/VERSION → 0.8.51 (cachebuster: app.js → 0.8.51; glossary.css/js oförändrade; styles.css oförändrad).
+
 ## 0.8.50
 - **Ordlistan: latinska anatomitermer (TA98) – fas 19, kärlen del 2: huvudets, halsens och hjärnans artärer. +45 poster.**
   - **Yttre halspulsådern:** med dess namngivna huvudgrenar – övre sköldkörtel- och struphuvudsartären, uppåtstigande svalgartären, tung- och ansiktsartären (med läpp-, hak- och vinkelgrenar), nack- och bakre öronartären, ytliga tinningartären samt överkäksartären med nedre tandartären, mellersta hjärnhinneartären, kind-, infraorbital-, gom- och kilgomartären.

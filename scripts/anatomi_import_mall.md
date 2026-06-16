@@ -138,12 +138,25 @@ börja om. Gör så här vid fortsättning:
   hjärnartärerna (cerebri ant./media/post., communicans ant., basilaris, pericallosa) + Willis cirkel.
   UTELÄMNAT: mikrorami till enskilda tänder/kärnor/gyri, muskel-/tympaniska smågrenar. Committat 0.8.50.
   Ordlistan **8 232** termer.
-- **PÅGÅR — A12 KÄRLEN, forts. (≈1 075 kvar):** Recept CH="12". KVAR av artärer: a. subclavia + kotartär/
-  basilarisgrenar (PICA/AICA/SCA) + cerebellära, övre extremitet (axillaris→brachialis→radialis/ulnaris + handbågar),
-  aorta thoracica-grenar, aorta abdominalis (truncus coeliacus, aa. mesentericae sup./inf., renales, suprarenales,
-  gonadales, lumbales), a. iliaca communis/interna/externa→femoralis→poplitea→tibiales/fibularis + fotbågar.
-  KVAR av vener: v. cava sup. + brachiocephalica + jugularis (int./ext.) + hjärnvener/durasinus, v. azygos-systemet,
-  övre extr.-vener, v. cava inf. + dess tributärer, v. portae + porta-systemet, bäcken-/nedre extr.-vener (v. saphena).
+- 2026-06-16 — **A12 kärlen, fas C–E: ARTÄRTRÄDET (A12.2) i stort sett KLART**, 121 poster i 3 batchar.
+  Fas C: a. subclavia (vertebralis, PICA/AICA/SCA, spinalartärer, thoracica interna, thyrocervical/costocervical)
+  + övre extr. (axillaris→brachialis→profunda brachii→radialis/ulnaris, interosseae, handbågar, fingerartärer).
+  Fas D: bröstaorta (intercostales post., subcostalis, phrenicae sup., bronkialartärer, Adamkiewicz-konceptet)
+  + bukaorta (truncus coeliacus m. gastrica sin./dx, hepatica communis/propria, gastroduodenalis, cystica, splenica,
+  gastroomentales, gastricae breves; SMA m. jejunales/ileales/ileocolica/appendicularis/colica dx+media/marginalis;
+  IMA m. colica sin./sigmoideae/rectalis sup.; renales, suprarenales, ovarica/testicularis, lumbales, sacralis mediana).
+  Fas E: a. iliaca communis/interna (glutea sup./inf., obturatoria, umbilicalis, vesicales, uterina, vaginalis,
+  rectalis media, pudenda interna m. rectalis inf./perinealis/dorsalis+profunda penis/clitoridis) + iliaca externa
+  (epigastrica inf.) → femoralis → profunda femoris (circumflexa med./lat., perforantes) → poplitea → tibialis ant./post.
+  + fibularis → dorsalis pedis / plantares + fotsulebågen + tåartärer. Committat 0.8.51. Ordlistan **8 353**.
+  UTELÄMNAT genomgående: recurrens-/genicular-/malleolar-/tarsal-/metatarsal-smågrenar, segment-/ureter-/små
+  pankreasgrenar, enskilda muskelrami.
+- **PÅGÅR — A12 KÄRLEN: VENSYSTEMET (A12.3) KVAR.** Recept CH="12" / grupper A12.3.xx. Delregioner: v. cava sup.
+  + v. brachiocephalica + v. jugularis interna/externa + hjärnvener/durasinus (sinus durae matris!), v. azygos-systemet,
+  övre extr.-vener (ytliga: cephalica/basilica/mediana cubiti; djupa), v. cava inf. + tributärer (renales/hepaticae/
+  suprarenales/gonadales/lumbales), **v. portae hepatis + portasystemet** (v. splenica, v. mesenterica sup./inf.,
+  portakavala anastomoser), bäcken-/nedre extr.-vener (v. saphena magna/parva, djupa följevener). Sedan A12.4
+  lymf-trunci/ductus (litet). SEDAN A13 lymf, A14 nervsystem (störst), A15 sinnesorgan, A16 hud, A01 allmän anatomi.
   Strategi (följ A04-policyn): ta de namngivna huvudkärlen och kliniskt vedertagna grenarna; utelämna den
   långa svansen av pyttesmå rami/tributärer. Förslag på delregioner i tur: (1) lungkretsloppet + aortas delar
   & båge (truncus pulmonalis, aorta ascendens/arcus/descendens, ductus arteriosus-rest); (2) kranskärlen
