@@ -130,7 +130,20 @@ börja om. Gör så här vid fortsättning:
   kransvenerna (koronarsinus, v. cardiaca magna/media/parva, Thebesii/Marshalls vener), de fyra lungvenerna.
   UTELÄMNAT: alla numrerade segmentartärer/-vener (aa./vv. segmentales, rami ascendens/descendens,
   pars intra-/intersegmentalis) och de minsta atriala/ventrikulära kransvenerna. Committat 0.8.49. Ordlistan **8 187**.
-- **PÅGÅR — A12 KÄRLEN, forts. (≈1 120 kvar):** STOR, flera sessioner. Recept CH="12".
+- 2026-06-16 — **A12 kärlen, fas B: huvud–hals–hjärna (artärer)**: 45 poster. Yttre halspulsådern + dess
+  namngivna huvudgrenar (thyroidea/laryngea/pharyngea asc./lingualis/facialis m. läpp-/hak-/vinkelgren/
+  occipitalis/auricularis post./temporalis superficialis/maxillaris m. alveolaris inf./meningea media/buccalis/
+  infraorbitalis/palatina/sphenopalatina), inre halspulsådern (siphon, ophthalmica m. centralis retinae/lacrimalis/
+  supraorbitalis/ethmoidalis ant.+post./dorsalis nasi, hypophysialis sup.+inf., communicans post., choroidea ant.),
+  hjärnartärerna (cerebri ant./media/post., communicans ant., basilaris, pericallosa) + Willis cirkel.
+  UTELÄMNAT: mikrorami till enskilda tänder/kärnor/gyri, muskel-/tympaniska smågrenar. Committat 0.8.50.
+  Ordlistan **8 232** termer.
+- **PÅGÅR — A12 KÄRLEN, forts. (≈1 075 kvar):** Recept CH="12". KVAR av artärer: a. subclavia + kotartär/
+  basilarisgrenar (PICA/AICA/SCA) + cerebellära, övre extremitet (axillaris→brachialis→radialis/ulnaris + handbågar),
+  aorta thoracica-grenar, aorta abdominalis (truncus coeliacus, aa. mesentericae sup./inf., renales, suprarenales,
+  gonadales, lumbales), a. iliaca communis/interna/externa→femoralis→poplitea→tibiales/fibularis + fotbågar.
+  KVAR av vener: v. cava sup. + brachiocephalica + jugularis (int./ext.) + hjärnvener/durasinus, v. azygos-systemet,
+  övre extr.-vener, v. cava inf. + dess tributärer, v. portae + porta-systemet, bäcken-/nedre extr.-vener (v. saphena).
   Strategi (följ A04-policyn): ta de namngivna huvudkärlen och kliniskt vedertagna grenarna; utelämna den
   långa svansen av pyttesmå rami/tributärer. Förslag på delregioner i tur: (1) lungkretsloppet + aortas delar
   & båge (truncus pulmonalis, aorta ascendens/arcus/descendens, ductus arteriosus-rest); (2) kranskärlen

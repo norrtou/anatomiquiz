@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.50
+- **Ordlistan: latinska anatomitermer (TA98) – fas 19, kärlen del 2: huvudets, halsens och hjärnans artärer. +45 poster.**
+  - **Yttre halspulsådern:** med dess namngivna huvudgrenar – övre sköldkörtel- och struphuvudsartären, uppåtstigande svalgartären, tung- och ansiktsartären (med läpp-, hak- och vinkelgrenar), nack- och bakre öronartären, ytliga tinningartären samt överkäksartären med nedre tandartären, mellersta hjärnhinneartären, kind-, infraorbital-, gom- och kilgomartären.
+  - **Inre halspulsådern:** karotissifonen, ögonartären med centrala näthinneartären, tår-, supraorbital-, silbens- och näsryggsartärerna, övre och nedre hypofysartären samt bakre kommunikations- och främre koroidalartären.
+  - **Hjärnans artärer:** främre, mellersta och bakre hjärnartären, främre kommunikationsartären, basilarisartären och perikallösa artären – samt Willis artärring.
+- Synliga termer: 8 187 → **8 232** (+45). Inga dubbletter. Mikrogrenar till enskilda tänder, hjärnkärnor och gyri samt små muskel- och hörselgrenar utelämnade medvetet. Strukturord (arteria/truncus) inverterade. **A12 kärlträdet fortsätter (subclavia/extremiteter/buk/bäcken + vensystemen).**
+- APP_VERSION/VERSION → 0.8.50 (cachebuster: app.js → 0.8.50; glossary.css/js oförändrade; styles.css oförändrad).
+
 ## 0.8.49
 - **Ordlistan: latinska anatomitermer (TA98) – fas 18, kärlen del 1: allmän kärlterminologi och den centrala cirkulationen. +70 poster.**
   - **Allmän kärllära:** blodkärl, artär, ven, venol, kapillär, kärlväggens tre lager (tunica intima/media/externa), vasa vasorum, arteriovenösa anastomoser, rete mirabile, ven- och lymfklaffar, lymfkärl och lymfkapillärer.
