@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.53
+- **Ordlistan: latinska anatomitermer (TA98) – fas 22, lymfsystemet (A13 + lymftrunci). +37 poster.**
+  - **Lymftrunci och lymfgångar:** bröstgången, chylescisternen, högra lymfgången samt jugular-, subklavia-, bronkomediastinal-, lumbal- och tarmtrunci.
+  - **Lymfoida organ:** benmärgen, brässens (tymus) bark och märg, mjälten med röd och vit pulpa, Malpighiska kroppar, mjälthilus och bimjälte, Waldeyers svalgring, samt lymfknutans uppbyggnad (primära/sekundära lymfoida organ).
+  - **Kliniskt viktiga lymfknutestationer:** axillära, supraklavikulära (Virchows körtel), jugulodigastriska och jugulo-omohyoidala, laterala hals-, trakeobronkiella, parasternala, celiakala, övre mesenteriella, para-aortala (lumbala), gemensamma iliakala, ytliga och djupa ljumsk- (Cloquets knuta) och knävecksslymfknutorna.
+- Synliga termer: 8 433 → **8 470** (+37). Inga dubbletter. Den uttömmande svansen av ~150 enskilda regionala lymfknutegrupper utelämnad medvetet. **Härnäst: A14 nervsystemet (störst).**
+- APP_VERSION/VERSION → 0.8.53 (cachebuster: app.js → 0.8.53; glossary.css/js oförändrade; styles.css oförändrad).
+
 ## 0.8.52
 - **Ordlistan: latinska anatomitermer (TA98) – fas 21, kärlen del 4: hela vensystemet. +84 poster. Därmed är hjärt-kärlsystemet (A12) i praktiken klart.**
   - **Huvud, hals och hjärna:** övre hålvenen, brakiocefaliska venen, de inre/yttre/främre halsvenerna, ansikts-, vinkel- och retromandibularvenen, vingflätaden; hårda hjärnhinnans blodledare (durasinus) – övre/nedre sagittalsinus, raka sinus, sinusconfluensen, tvärgående och sigmoideumsinus, sinus cavernosus och de övre/nedre petrosalsinus; diploë- och emissarievener; hjärnvenerna (Galens, Rosenthals, Trolards och Labbés vener) samt ögonvenerna med Schlemms kanal.

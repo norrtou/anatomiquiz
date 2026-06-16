@@ -164,9 +164,19 @@ börja om. Gör så här vid fortsättning:
   "plexus venosus X" inverteras till "X, plexus venosus".
   ✅ **A12 SYSTEMA CARDIOVASCULARE I PRAKTIKEN KLART** (hjärta + artärträd + vensystem; den långa svansen av pyttesmå
   rami/tributärer/segmentkärl medvetet utelämnad). Kvar i A12: bara A12.4 lymf-trunci/ductus (tas med A13).
-- NÄSTA: **A13 Systema lymphoideum** (lymfsystemet, 191 + A12.4 lymftrunci/ductus; recept CH="13" + grupp A12.4).
-  SEDAN A14 nervsystem (1 753 – störst), A15 sinnesorgan (460), A16 hud (50), A01 allmän anatomi (192).
-  inv()-helpern i ALLA batchar; inverterade strukturord inkl. nodus/nodi/ganglion/truncus/plexus/tonsilla.
+- 2026-06-16 — **A13 Systema lymphoideum + A12.4 lymftrunci/-gångar**: ✅ KLAR (kuraterat), 37 poster. Lymftrunci/
+  -gångar (ductus thoracicus, cisterna chyli, ductus lymphaticus dexter, jugular/subclavia/bronchomediastinal/lumbal/
+  intestinal trunci), lymfoida organ (benmärg, tymusbark/-märg, mjälten m. röd/vit pulpa + Malpighiska kroppar +
+  bimjälte, Waldeyers svalgring, lymfknutans uppbyggnad) och de kliniskt centrala lymfknutestationerna (axillära,
+  Virchow/supraklavikulära, jugulodigastriska/-omohyoidala, laterala hals-, trakeobronkiella, parasternala, celiakala,
+  övre mesenteriella, para-aortala, gemensamma iliakala, ytliga/djupa ljumsk- inkl. Cloquet, knäveck). UTELÄMNAT
+  medvetet: den uttömmande svansen av ~150 enskilda regionala nodgrupper. Committat 0.8.53. Ordlistan **8 470** termer.
+- NÄSTA: **A14 Systema nervosum** (nervsystemet – STÖRST, ≈1 750; recept CH="14"; flera sessioner). Strategi: ta CNS-
+  anatomin (medulla spinalis, hjärnstammen, lillhjärna, mellanhjärna, storhjärna m. lober/gyri/barkområden, basala
+  ganglier, ventriklar, hjärnhinnor, likvor) + de 12 kranialnerverna + de stora perifera nervplexa/nerver (plexus
+  cervicalis/brachialis/lumbosacralis m. n. medianus/ulnaris/radialis/ischiadicus/femoralis osv.) + autonoma
+  nervsystemet (sympatiska gränssträngen, ganglier, n. vagus). UTELÄMNA svansen av pyttesmå rami/kärnsubavdelningar.
+  SEDAN A15 sinnesorgan (460), A16 hud (50), A01 allmän anatomi (192). inv()-helpern i ALLA batchar.
 
 ## Källa (auktoritativ)
 - **Terminologia Anatomica (TA)** – den internationella standarden (FIPAT/IFAA).
