@@ -151,22 +151,22 @@ börja om. Gör så här vid fortsättning:
   + fibularis → dorsalis pedis / plantares + fotsulebågen + tåartärer. Committat 0.8.51. Ordlistan **8 353**.
   UTELÄMNAT genomgående: recurrens-/genicular-/malleolar-/tarsal-/metatarsal-smågrenar, segment-/ureter-/små
   pankreasgrenar, enskilda muskelrami.
-- **PÅGÅR — A12 KÄRLEN: VENSYSTEMET (A12.3) KVAR.** Recept CH="12" / grupper A12.3.xx. Delregioner: v. cava sup.
-  + v. brachiocephalica + v. jugularis interna/externa + hjärnvener/durasinus (sinus durae matris!), v. azygos-systemet,
-  övre extr.-vener (ytliga: cephalica/basilica/mediana cubiti; djupa), v. cava inf. + tributärer (renales/hepaticae/
-  suprarenales/gonadales/lumbales), **v. portae hepatis + portasystemet** (v. splenica, v. mesenterica sup./inf.,
-  portakavala anastomoser), bäcken-/nedre extr.-vener (v. saphena magna/parva, djupa följevener). Sedan A12.4
-  lymf-trunci/ductus (litet). SEDAN A13 lymf, A14 nervsystem (störst), A15 sinnesorgan, A16 hud, A01 allmän anatomi.
-  Strategi (följ A04-policyn): ta de namngivna huvudkärlen och kliniskt vedertagna grenarna; utelämna den
-  långa svansen av pyttesmå rami/tributärer. Förslag på delregioner i tur: (1) lungkretsloppet + aortas delar
-  & båge (truncus pulmonalis, aorta ascendens/arcus/descendens, ductus arteriosus-rest); (2) kranskärlen
-  (aa./vv. cordis, sinus coronarius); (3) huvud-hals (a. carotis communis/externa/interna + grenar, v. jugularis);
-  (4) övre extremitet (a. subclavia→brachialis→radialis/ulnaris, vener); (5) thorax/aorta thoracica-grenar;
-  (6) buk: aorta abdominalis (truncus coeliacus, aa. mesentericae, renales), v. portae & v. cava inf.;
-  (7) bäcken + nedre extremitet (a. iliaca→femoralis→poplitea→tibiales, v. saphena m.m.). inv() på alla
-  arteria/vena/truncus/ramus/nodus.
-- SEDAN: A13 lymfsystem (191), A14 nervsystem (1 753 – störst), A15 sinnesorgan (460), A16 hud (50),
-  A01 allmän anatomi (192). Kom ihåg inv()-helpern i varje batch.
+- 2026-06-16 — **A12 kärlen, fas F: VENSYSTEMET (A12.3) i stort sett KLART**, 80 poster (3 batchar). Huvud/hals/
+  hjärna: v. cava sup., v. brachiocephalica, v. jugularis int./ext./ant., v. facialis/angularis/retromandibularis,
+  plexus pterygoideus, durasinus (sinus durae matris, sagittalis sup./inf., rectus, confluens, transversus, sigmoideus,
+  cavernosus, petrosus sup./inf.), diploë-/emissarievener, hjärnvener (Galen/Rosenthal/Trolard/Labbé), ögonvener +
+  Schlemms kanal. Bål/extremiteter: v. cava inf. m. lever-/njur-/binjure-/gonadvener (vänster-asymmetri, varikocele)
+  + plexus pampiniformis, azygos/hemiazygos + Batsons kotpelarvennät, armvener (subclavia/axillaris/cephalica/basilica/
+  mediana cubiti), höft-/bäckenvener m. kliniska vennät (rektala/prostatiska/vesikala/uterina), benvener (saphena magna/
+  parva, femoralis, poplitea, tibiales/fibulares, perforantes). PORTASYSTEMET: v. portae, splenica, mesenterica sup./inf.,
+  gastrica sin., paraumbilicales, rectalis sup. – med de tre portakavala anastomoserna (esofagus/rektum/caput medusae).
+  Committat 0.8.52. Ordlistan **8 433** termer. OBS: sinus inverteras EJ (ej i listan) – durasinus står naturligt;
+  "plexus venosus X" inverteras till "X, plexus venosus".
+  ✅ **A12 SYSTEMA CARDIOVASCULARE I PRAKTIKEN KLART** (hjärta + artärträd + vensystem; den långa svansen av pyttesmå
+  rami/tributärer/segmentkärl medvetet utelämnad). Kvar i A12: bara A12.4 lymf-trunci/ductus (tas med A13).
+- NÄSTA: **A13 Systema lymphoideum** (lymfsystemet, 191 + A12.4 lymftrunci/ductus; recept CH="13" + grupp A12.4).
+  SEDAN A14 nervsystem (1 753 – störst), A15 sinnesorgan (460), A16 hud (50), A01 allmän anatomi (192).
+  inv()-helpern i ALLA batchar; inverterade strukturord inkl. nodus/nodi/ganglion/truncus/plexus/tonsilla.
 
 ## Källa (auktoritativ)
 - **Terminologia Anatomica (TA)** – den internationella standarden (FIPAT/IFAA).

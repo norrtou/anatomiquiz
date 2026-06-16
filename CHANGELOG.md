@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.52
+- **Ordlistan: latinska anatomitermer (TA98) – fas 21, kärlen del 4: hela vensystemet. +84 poster. Därmed är hjärt-kärlsystemet (A12) i praktiken klart.**
+  - **Huvud, hals och hjärna:** övre hålvenen, brakiocefaliska venen, de inre/yttre/främre halsvenerna, ansikts-, vinkel- och retromandibularvenen, vingflätaden; hårda hjärnhinnans blodledare (durasinus) – övre/nedre sagittalsinus, raka sinus, sinusconfluensen, tvärgående och sigmoideumsinus, sinus cavernosus och de övre/nedre petrosalsinus; diploë- och emissarievener; hjärnvenerna (Galens, Rosenthals, Trolards och Labbés vener) samt ögonvenerna med Schlemms kanal.
+  - **Bål och extremiteter:** nedre hålvenen med lever-, njur-, binjure- och gonadvener (med vänster-sidans asymmetri och varikocele) och pampiniforma plexus; azygos- och hemiazygossystemet samt Batsons kotpelarvennät; armens ytliga vener (cefalika, basilika, armvecksvenen) och djupa vener; höft- och bäckenvenerna med de kliniska vennäten (rektalt, prostatiskt, vesikalt, uterint); benets rosenådror (stora/lilla) och djupa vener med perforantvenerna.
+  - **Portasystemet:** portådern, mjält-, övre/nedre tarmkäx- och vänstra magsäcksvenen, paraumbilikala och övre ändtarmsvenen – med de tre portakavala anastomoserna (matstrupe, ändtarm, caput medusae).
+- Synliga termer: 8 353 → **8 433** (+84, varav azygos/Batson +4). Inga dubbletter. Durasinus står naturligt (sinus inverteras ej); venösa plexus inverterades ("X, plexus venosus"). Den långa svansen av pyttesmå tributärer/segmentvener utelämnad. **A12 hjärt-kärlsystemet klart utom A12.4 lymf-trunci (tas med lymfsystemet). Härnäst: A13 lymfsystemet.**
+- APP_VERSION/VERSION → 0.8.52 (cachebuster: app.js → 0.8.52; glossary.css/js oförändrade; styles.css oförändrad).
+
 ## 0.8.51
 - **Ordlistan: latinska anatomitermer (TA98) – fas 20, kärlen del 3: hela artärträdet (kropp och extremiteter). +121 poster.**
   - **Nyckelbensartären och armen:** kotartären med lillhjärnsartärerna (PICA/AICA/SCA) och ryggmärgsartärerna, inre bröstkorgsartären, tyro- och kostocervikala stammarna; armhåle-, överarms-, djupa överarms-, strålbens- och armbågsbensartären med de interosseösa artärerna, handflatebågarna och fingerartärerna.
