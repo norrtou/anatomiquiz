@@ -88,8 +88,34 @@ börja om. Gör så här vid fortsättning:
   numrerade segmentbronkerna/lungsegmenten [B I]–[B X]/[S I]–[S X] (upprepade L/H med samma namn),
   generiska pars ant./post., små arytenoid-ytdetaljer. Conchae nasi finns redan som benformer
   (concha nasalis …). OCOMMITTAT i arbetsträdet tillsammans med A05 del 2. Ordlistan **7 707** termer.
-- NÄSTA: **A07 Cavitas thoracis** (brösthålan: mediastinum, pleura, pericardiums hålrum; kör recept
-  CH="07"). Sedan A08–A16. Kom ihåg inv()-helpern i varje batch.
+- 2026-06-16 — **A07 Cavitas thoracis (brösthålan)**: ✅ KLAR, 21 poster. Pleura (viscerala/parietala,
+  kupol, delar), lungsäcksrecesserna (kostodiafragmatiska m.fl.), lungbandet, suprapleurala membranet,
+  mediastinums 5 avdelningar, hjärtsäckshålan. Committat 0.8.46.
+- 2026-06-16 — **A08 Systema urinarium (urinvägarna)**: ✅ KLAR, 49 poster. Njure (hilus/sinus/bark/märg/
+  pyramider/papiller/kolumner/fascior), njurens kärlträd (afferent/efferent arteriol, vasa recta, stjärnvener),
+  njurbäcken/kalkar, urinblåsa (blåstriangel, detrusor, blåshals), urinrör (kvinnligt/manligt). Committat 0.8.46.
+  UTELÄMNAT: finhistologiska märgzoner, numrerade njursegment/kalkar, generiska pars/lager.
+- 2026-06-16 — **A09 Systemata genitalia (könsorganen + perineum)**: ✅ **HELA KAPITLET KLART**, 168 poster.
+  Kvinnligt inre (äggstock, äggledare, livmoder m. ligament, slida, vestigiala rester), kvinnligt yttre
+  (vulva, klitoris, vestibulum, Bartholin), manligt inre (testikel, bitestikel, sädesledare, sädesblåsa,
+  prostata, Cowper), manligt yttre (penis svällkroppar, scrotum), urinrörsdetaljer, perineum (perinealkropp,
+  ytliga/djupa perinealrummet, perinealmembran, ischiocavernosus/bulbospongiosus, ischioanala gropen, Alcocks
+  kanal). Strukturord (musculus/ligamentum/glandula/arteria/vena) inverterade; delade termer (tunica albuginea,
+  sphincter urethrae ext/int, crista urethralis, ostium urethrae externum, glandulae/lacunae urethrales) en gång.
+  UTELÄMNAT: pars/paries ant./post., prostatans lobulus-indelning, vestigiala gångdetaljer, funktionella
+  blåsmynningstillstånd. OCOMMITTAT (→ 0.8.47).
+- 2026-06-16 — **A10 Cavitas abdominopelvica (buk-/bäckenhåla + bukhinnan)**: ✅ **HELA KAPITLET KLART**, ~75 poster.
+  Peritoneum (parietale/viscerale), retroperitoneala/retropubiska rummet, mesenterier/mesokolon, oment (minus/majus)
+  och alla peritonealligament (hepato-/gastro-/spleno-/pancreatico-/phrenico-), leverband (coronarium/falciforme/
+  triangulare), omentalbursan + Winslows hål, kliniskt viktiga recesser/gropar (Morisons grop, Douglas/rektovesikala
+  fickan, paraduodenala, ileocekala, paracoliska fårorna, Calots & Hesselbachs triangel, ljumskgropar/navelveck),
+  breda livmoderbandet (mesometrium/-salpinx/-ovarium). OCOMMITTAT (→ 0.8.47).
+- 2026-06-16 — **A11 Glandulae endocrinae (endokrina körtlar)**: ✅ **HELA KAPITLET KLART**, ~19 poster.
+  Hypofys (adeno-/neurohypophysis + pars distalis/tuberalis/nervosa), tallkottkörtel, sköldkörtel (istmus,
+  pyramidlob, accessoriska), bisköldkörtlar (övre/nedre/accessoriska), binjurar (+ centralven, accessoriska).
+  UTELÄMNAT: generiska stroma/parenchyma/lobuli/hilum/facies renalis. OCOMMITTAT (→ 0.8.47). Ordlistan **8 034** termer.
+- NÄSTA: **A12 Systema cardiovasculare** (hjärta + kärl – stor; kör recept CH="12"). Sedan A13 lymf, A14 nervsystem
+  (störst), A15 sinnesorgan, A16 hud, A01 allmän anatomi. Kom ihåg inv()-helpern i varje batch.
 
 ## Källa (auktoritativ)
 - **Terminologia Anatomica (TA)** – den internationella standarden (FIPAT/IFAA).

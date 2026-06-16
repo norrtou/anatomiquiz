@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.47
+- **Ordlistan: latinska anatomitermer (TA98) – fas 16. Könsorganen, bukhinnan och de endokrina körtlarna. +257 poster.**
+  - **A09 könsorganen + perineum (168) – HELA A09 KLART:** kvinnligt inre (äggstock, äggledare med ampull/fimbrier, livmoder med dess ligament, slida, vestigiala rester som Gartners gång), kvinnligt yttre (vulva, klitoris, slidförgård, Bartholins körtel), manligt inre (testikel med sädeskanaler/rete testis, bitestikel, sädesledare, sädesblåsa, prostata med mellanlob/periurethral zon, Cowpers körtel), manligt yttre (penis svällkroppar, ollon, scrotum med dartos) samt mellangården (perinealkropp, ytliga/djupa perinealrummet, perinealmembran, ischiocavernosus/bulbospongiosus, ischioanala gropen, Alcocks kanal).
+  - **A10 bukhålan & bukhinnan (75) – HELA A10 KLART:** vägg- och organbukhinna, retroperitoneala/retropubiska rummet, mesenterier och mesokolon, lilla och stora omentet med samtliga peritonealligament (hepato-, gastro-, spleno-, pancreatico- och phrenico-banden), leverband (krans-, skär- och triangelbanden), omentalbursan med Winslows hål samt de kliniskt viktiga bukhinnefickorna och triangarna (Morisons grop, Douglas rum, paraduodenala/ileocekala fickor, paracoliska rännorna, Calots och Hesselbachs triangel, ljumskgropar och navelveck), breda livmoderbandet med meso-delarna.
+  - **A11 endokrina körtlar (19) – HELA A11 KLART:** hypofysens fram- och baklob med deras delar, tallkottkörteln, sköldkörteln (istmus, pyramidlob, accessoriska), bisköldkörtlarna (övre/nedre/accessoriska) och binjurarna (med centralven och accessoriska).
+- Synliga termer: 7 777 → **8 034** (+257). Inga dubbletter. Delade termer (tunica albuginea, sphincter urethrae externus/internus, crista urethralis m.fl.) infördes en gång. Medvetet utelämnat: generiska pars-/ytetiketter, prostatans lobulus-indelning, vestigiala gångdetaljer och finhistologiska underavdelningar. Strukturord inverterade enligt sorteringsregeln. Näst på tur: A12 hjärta och kärl.
+- APP_VERSION/VERSION → 0.8.47 (cachebuster: app.js → 0.8.47; glossary.css/js oförändrade; styles.css oförändrad).
+
 ## 0.8.46
 - **Ordlistan: latinska anatomitermer (TA98) – fas 15. Matsmältningssystemet klart + hela andnings-, brösthåle- och urinsystemet. +269 poster.**
   - **A05 matsmältningssystemet, del 2 (88) – HELA A05 KLART:** levern (lober, ytor, porta hepatis, nakna fältet, leverband), gallvägarna (gallblåsa, gall- och levergångar, ductus choledochus/cysticus), bukspottkörteln (huvud/kropp/svans, gångar, ölandskap), tjocktarmen (taenia/haustra/fettbihang, flexurer, blindtarm med appendix) och ändtarm/analkanal (ampulla recti, columnae anales, linea pectinata, slutmuskler).
