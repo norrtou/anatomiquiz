@@ -122,7 +122,15 @@ börja om. Gör så här vid fortsättning:
   UTELÄMNAT: facies pulmonalis dx/sin, margo dexter, pars muscularis/membranacea & lamina parietalis/visceralis
   (beskrivna i septum-/pericardium-posterna), obskyra tendo infundibuli / tendo valvulae / trigonum nodi SA.
   Committat 0.8.48. Ordlistan **8 117** termer.
-- **PÅGÅR — A12 Systema cardiovasculare, KÄRLEN (≈1 190 kvar):** STOR, flera sessioner. Recept CH="12".
+- 2026-06-16 — **A12 kärlen, fas A (nav): allmän kärlterminologi + central cirkulation**: 70 poster.
+  A12.0 (vas/arteria/vena/venula/kapillär, tunica intima/media/externa, vasa vasorum, anastomoser, rete mirabile,
+  venklaff, lymfkärl m.m.), lungartärstammen + höger/vänster lungartär + Botallis gång/artärbandet, aorta ascendens
+  med aortabukterna + kranskärlen (höger/vänster kransartär, LAD, Cx, PDA, marginal-/nod-/septalgrenar), aortabågen
+  (isthmus, brakiocefaliska stammen, a. carotis communis, karotissinus/-kropp, a. thyroidea ima, Zuckerkandl),
+  kransvenerna (koronarsinus, v. cardiaca magna/media/parva, Thebesii/Marshalls vener), de fyra lungvenerna.
+  UTELÄMNAT: alla numrerade segmentartärer/-vener (aa./vv. segmentales, rami ascendens/descendens,
+  pars intra-/intersegmentalis) och de minsta atriala/ventrikulära kransvenerna. Committat 0.8.49. Ordlistan **8 187**.
+- **PÅGÅR — A12 KÄRLEN, forts. (≈1 120 kvar):** STOR, flera sessioner. Recept CH="12".
   Strategi (följ A04-policyn): ta de namngivna huvudkärlen och kliniskt vedertagna grenarna; utelämna den
   långa svansen av pyttesmå rami/tributärer. Förslag på delregioner i tur: (1) lungkretsloppet + aortas delar
   & båge (truncus pulmonalis, aorta ascendens/arcus/descendens, ductus arteriosus-rest); (2) kranskärlen

@@ -1,5 +1,15 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.49
+- **Ordlistan: latinska anatomitermer (TA98) – fas 18, kärlen del 1: allmän kärlterminologi och den centrala cirkulationen. +70 poster.**
+  - **Allmän kärllära:** blodkärl, artär, ven, venol, kapillär, kärlväggens tre lager (tunica intima/media/externa), vasa vasorum, arteriovenösa anastomoser, rete mirabile, ven- och lymfklaffar, lymfkärl och lymfkapillärer.
+  - **Lungkretsloppet:** lungartärstammen med bukter och delning, höger och vänster lungartär, Botallis gång (ductus arteriosus) och artärbandet, samt de fyra lungvenerna.
+  - **Aorta ascendens och kranskärlen:** aortabukterna (Valsalva), höger och vänster kransartär med deras kliniska huvudgrenar (LAD, circumflex, bakre nedåtgående PDA, marginal-, nod- och septalgrenar).
+  - **Aortabågen:** aortaistmus, brakiocefaliska stammen, gemensamma halspulsådern med karotissinus och karotiskroppen, samt nedersta sköldkörtelartären.
+  - **Kransvenerna:** koronarsinus, stora/mellersta/lilla hjärtvenen, Thebesii och Marshalls vener.
+- Synliga termer: 8 117 → **8 187** (+70). Inga dubbletter. De numrerade segmentartärerna/-venerna och de minsta kransvenerna utelämnade medvetet (A04-policyn). Strukturord (arteria/vena/truncus/ramus/ligamentum) inverterade. **A12 kärlträdet fortsätter i kommande faser (huvud-hals, extremiteter, buk, bäcken).**
+- APP_VERSION/VERSION → 0.8.49 (cachebuster: app.js → 0.8.49; glossary.css/js oförändrade; styles.css oförändrad).
+
 ## 0.8.48
 - **Ordlistan: latinska anatomitermer (TA98) – fas 17, hjärtat (A12.1 Cor). +83 poster.**
   - **Hjärtats yttre:** bas, spets, framyta, kransfåran och de båda kammarskiljefårorna.
