@@ -74,8 +74,22 @@ börja om. Gör så här vid fortsättning:
   (caput/pars/lamina/venter), upprepade fasciavarianter och A04.8:s långa svans av
   obskyra `bursa subtendinea musculi …` / enskilda fotledssenskidor (~200 TA-rader).
   Homonymen flexor digiti minimi brevis (hand+fot) sammanslogs i en post.
-- NÄSTA: **A05 Systema digestorium** (matsmältningssystemet, kör recept CH="05").
-  Sedan A06–A16. Kom ihåg inv()-helpern i varje batch.
+- 2026-06-16 — **A05 Systema digestorium (matsmältningssystemet)**: ✅ **HELA KAPITLET KLART.**
+  Del 1 (mun–tunntarm, +294) committat 0.8.45. Del 2 (lever, gallvägar, pankreas, tjocktarm,
+  ändtarm/anus, 88 poster) i arbetsträdet OCOMMITTAT. UTELÄMNAT medvetet (generiska/upprepade
+  barntermer): tandkuspar/-rötter (cuspis/radix mesiobuccalis m.fl.), leverns segment-/divisio-
+  indelning (segmentum/divisio …), pars superficialis/profunda, paries ant./post., svalgknipernas
+  pars-varianter. Tonsilla palatina/lingualis/pharyngealis/tubaria fanns redan.
+- 2026-06-16 — **A06 Systema respiratorium (andningsorganen)**: ✅ **HELA KAPITLET KLART**, 111 poster.
+  Yttre näsa, näsbrosk, näshåla/bihålor, struphuvud (brosk/leder/membran/ligament/muskler/hålan),
+  luftstrupe, bronker (huvud- + lobbronker, bronkträd, bronkioler), lungor (lober, fåror, hilus,
+  lingula, hjärtinskärning), segmenta bronchopulmonalia. Musculus/articulatio/ligamentum/ligamenta/
+  plexus inverterade; cartilago/membrana/plica/sinus läses naturligt. UTELÄMNAT medvetet: de 40
+  numrerade segmentbronkerna/lungsegmenten [B I]–[B X]/[S I]–[S X] (upprepade L/H med samma namn),
+  generiska pars ant./post., små arytenoid-ytdetaljer. Conchae nasi finns redan som benformer
+  (concha nasalis …). OCOMMITTAT i arbetsträdet tillsammans med A05 del 2. Ordlistan **7 707** termer.
+- NÄSTA: **A07 Cavitas thoracis** (brösthålan: mediastinum, pleura, pericardiums hålrum; kör recept
+  CH="07"). Sedan A08–A16. Kom ihåg inv()-helpern i varje batch.
 
 ## Källa (auktoritativ)
 - **Terminologia Anatomica (TA)** – den internationella standarden (FIPAT/IFAA).

@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.46
+- **Ordlistan: latinska anatomitermer (TA98) – fas 15. Matsmältningssystemet klart + hela andnings-, brösthåle- och urinsystemet. +269 poster.**
+  - **A05 matsmältningssystemet, del 2 (88) – HELA A05 KLART:** levern (lober, ytor, porta hepatis, nakna fältet, leverband), gallvägarna (gallblåsa, gall- och levergångar, ductus choledochus/cysticus), bukspottkörteln (huvud/kropp/svans, gångar, ölandskap), tjocktarmen (taenia/haustra/fettbihang, flexurer, blindtarm med appendix) och ändtarm/analkanal (ampulla recti, columnae anales, linea pectinata, slutmuskler).
+  - **A06 andningsorganen (111) – HELA A06 KLART:** yttre näsa och näsbrosk, näshåla/bihålor, struphuvudet (brosk, leder, membran/ligament, de inre struphuvudsmusklerna, struphuvudshålan med ficke- och stämband), luftstrupen, bronkträdet (huvud- och lobbronker, bronkioler) och lungorna (lober, fåror, hilus, lingula, hjärtinskärning, bronkopulmonella segment).
+  - **A07 brösthålan (21) – HELA A07 KLART:** lungsäcken (viscerala/parietala pleura, kupol), lungsäcksvecken/recesserna (bl.a. det kostodiafragmatiska), lungbandet, suprapleurala membranet och mediastinums fem avdelningar samt hjärtsäckshålan.
+  - **A08 urinvägarna (49) – HELA A08 KLART:** njuren (hilus, sinus, bark/märg, pyramider, papiller, kolumner, fascior/kapslar), njurens kärlträd (interlobär-, båg- och barkartärer, afferent/efferent glomerulusarteriol, vasa recta, stjärnvener), njurbäcken och kalkar, urinblåsan (delar, blåstriangel, detrusor, blåshals) samt kvinnligt/manligt urinrör.
+- Synliga termer: 7 508 → **7 777** (+269). Inga dubbletter. Medvetet utelämnat (generiska/upprepade barntermer): tandkuspar/-rötter, leverns segmentindelning, finhistologiska njurmärgszoner, de numrerade segmentbronkerna/lungsegmenten och njursegmenten, samt generiska pars-/lager-etiketter. Strukturord (musculus/articulatio/ligamentum/arteria/vena/plexus m.fl.) inverterade enligt sorteringsregeln. Näst på tur: A09 könsorganen.
+- APP_VERSION/VERSION → 0.8.46 (cachebuster: app.js → 0.8.46; glossary.css/js oförändrade; styles.css oförändrad).
+
 ## 0.8.45
 - **Ordlistan: latinska anatomitermer (TA98) – fas 14, matsmältningssystemet (A05), del 1: mun till tunntarm. 294 poster.**
   - **Munhåla & spottkörtlar (43):** läppar, gom, tandkött och de tre stora spottkörtlarna med utförsgångar (Stensens, Whartons, Bartholins).
