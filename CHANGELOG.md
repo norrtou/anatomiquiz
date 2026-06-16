@@ -1,5 +1,16 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.48
+- **Ordlistan: latinska anatomitermer (TA98) – fas 17, hjärtat (A12.1 Cor). +83 poster.**
+  - **Hjärtats yttre:** bas, spets, framyta, kransfåran och de båda kammarskiljefårorna.
+  - **Rummen:** höger/vänster förmak och kammare, hjärtöron, för- och kammarskiljeväggar, gränskammen, kamtandsmusklerna, ovala gropen med fostrets ovala hål, hålvenernas och koronarsinus mynningar.
+  - **Klaffapparaten:** tricuspidalis-, pulmonalis-, mitralis- och aortaklaffen med segel, semilunarsegel (knottror/lunulor/kommissurer), papillarmuskler, senstrålar, moderatorbandet och utflödeskonen.
+  - **Hjärtskelettet:** höger/vänster fibrösa triangel och klaffringar.
+  - **Retledningssystemet:** sinusknutan (SA), AV-knutan, His bunt och Purkinjefibrerna; samt endokardiet.
+  - **Hjärtsäcken:** fibrösa och serösa perikardiet, transversella och oblika perikardsinus, sternoperikardiella banden och Marshalls veck.
+- Synliga termer: 8 034 → **8 117** (+83). Inga dubbletter. Upprepade generiska segel/papillarmuskler deduplicerade till en post var; ytetiketter och obskyra senor utelämnade. Strukturord (musculus/nodus/ligamenta/rami) inverterade. **Näst på tur: A12 kärlträdet (stort, flera kommande faser) – lungkretslopp och aorta först.**
+- APP_VERSION/VERSION → 0.8.48 (cachebuster: app.js → 0.8.48; glossary.css/js oförändrade; styles.css oförändrad).
+
 ## 0.8.47
 - **Ordlistan: latinska anatomitermer (TA98) – fas 16. Könsorganen, bukhinnan och de endokrina körtlarna. +257 poster.**
   - **A09 könsorganen + perineum (168) – HELA A09 KLART:** kvinnligt inre (äggstock, äggledare med ampull/fimbrier, livmoder med dess ligament, slida, vestigiala rester som Gartners gång), kvinnligt yttre (vulva, klitoris, slidförgård, Bartholins körtel), manligt inre (testikel med sädeskanaler/rete testis, bitestikel, sädesledare, sädesblåsa, prostata med mellanlob/periurethral zon, Cowpers körtel), manligt yttre (penis svällkroppar, ollon, scrotum med dartos) samt mellangården (perinealkropp, ytliga/djupa perinealrummet, perinealmembran, ischiocavernosus/bulbospongiosus, ischioanala gropen, Alcocks kanal).

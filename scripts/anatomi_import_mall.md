@@ -114,8 +114,25 @@ börja om. Gör så här vid fortsättning:
   Hypofys (adeno-/neurohypophysis + pars distalis/tuberalis/nervosa), tallkottkörtel, sköldkörtel (istmus,
   pyramidlob, accessoriska), bisköldkörtlar (övre/nedre/accessoriska), binjurar (+ centralven, accessoriska).
   UTELÄMNAT: generiska stroma/parenchyma/lobuli/hilum/facies renalis. OCOMMITTAT (→ 0.8.47). Ordlistan **8 034** termer.
-- NÄSTA: **A12 Systema cardiovasculare** (hjärta + kärl – stor; kör recept CH="12"). Sedan A13 lymf, A14 nervsystem
-  (störst), A15 sinnesorgan, A16 hud, A01 allmän anatomi. Kom ihåg inv()-helpern i varje batch.
+- 2026-06-16 — **A12.1 Cor (hjärtat)**: ✅ KLAR, 83 poster. Ytor/fåror, kamrar & förmak, septa, alla fyra
+  klaffar (tricuspidalis/pulmonalis/mitralis/aorta) med segel/papillarmuskler/senstrålar, hjärtskelettet
+  (trigona/anuli fibrosi), retledningssystemet (SA-/AV-knuta, His bunt, Purkinje), endokardiet, perikardiet
+  (fibrosum/serosum, transversella/oblika sinus, Marshalls veck). Generiska upprepade segel (cuspis ant./post.,
+  valvula semilunaris dx/sin/ant/post, musculus papillaris ant./post.) deduplicerade till en post var.
+  UTELÄMNAT: facies pulmonalis dx/sin, margo dexter, pars muscularis/membranacea & lamina parietalis/visceralis
+  (beskrivna i septum-/pericardium-posterna), obskyra tendo infundibuli / tendo valvulae / trigonum nodi SA.
+  Committat 0.8.48. Ordlistan **8 117** termer.
+- **PÅGÅR — A12 Systema cardiovasculare, KÄRLEN (≈1 190 kvar):** STOR, flera sessioner. Recept CH="12".
+  Strategi (följ A04-policyn): ta de namngivna huvudkärlen och kliniskt vedertagna grenarna; utelämna den
+  långa svansen av pyttesmå rami/tributärer. Förslag på delregioner i tur: (1) lungkretsloppet + aortas delar
+  & båge (truncus pulmonalis, aorta ascendens/arcus/descendens, ductus arteriosus-rest); (2) kranskärlen
+  (aa./vv. cordis, sinus coronarius); (3) huvud-hals (a. carotis communis/externa/interna + grenar, v. jugularis);
+  (4) övre extremitet (a. subclavia→brachialis→radialis/ulnaris, vener); (5) thorax/aorta thoracica-grenar;
+  (6) buk: aorta abdominalis (truncus coeliacus, aa. mesentericae, renales), v. portae & v. cava inf.;
+  (7) bäcken + nedre extremitet (a. iliaca→femoralis→poplitea→tibiales, v. saphena m.m.). inv() på alla
+  arteria/vena/truncus/ramus/nodus.
+- SEDAN: A13 lymfsystem (191), A14 nervsystem (1 753 – störst), A15 sinnesorgan (460), A16 hud (50),
+  A01 allmän anatomi (192). Kom ihåg inv()-helpern i varje batch.
 
 ## Källa (auktoritativ)
 - **Terminologia Anatomica (TA)** – den internationella standarden (FIPAT/IFAA).
