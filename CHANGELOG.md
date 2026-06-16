@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.55
+- **Ordlistan: latinska anatomitermer (TA98) – fas 24, nervsystemet del 2: kranialnerverna, de perifera nervflätorna och autonoma nervsystemet. +78 poster. Därmed är nervsystemet (A14) täckt på klinisk nivå.**
+  - **De tolv kranialnerverna (I–XII)** med deras kliniskt viktiga grenar och ganglier: lukt-, syn-, ögonrörelse-, trochlearis- och abducensnerven; trillingnerven med sina tre grenar (ögon-, överkäks-, underkäksnerven) och tung-, tand-, hak- och öron-tinningnerven; ansiktsnerven med chorda tympani; balans-hörselnerven; tung-svalgnerven; vagusnerven med övre och återvändande struphuvudsnerven; samt accessorius- och hypoglossusnerven.
+  - **Perifera nervflätor:** halsnervflätan (mellangärdesnerven), armnervflätan (median-, ulnaris-, radialis-, axillaris- och muskel-hudnerven m.fl.), mellanrevbensnerverna, ländnervflätan (lår-, saphenus- och obturatornerven m.fl.) och korsbensnervflätan (ischias-, skenbens-, vadbens-, säte-, vad- och blygdnerven).
+  - **Autonoma nervsystemet:** sympatiska gränssträngen med övre halsgangliet och ganglion impar, stora/lilla inälvsnerven, de fyra parasympatiska huvudganglierna i huvudet (ciliar-, vinggom-, underkäks- och örongangliet) samt hjärt-, buk- (solar plexus), tarmkäx- och underbuksnervflätorna.
+- Synliga termer: 8 586 → **8 664** (+78). Inga dubbletter. Den långa svansen av enskilda kärnor, fibertrakter och pyttesmå gren-nerver utelämnad medvetet. **Härnäst: A15 sinnesorganen (öga och öra).**
+- APP_VERSION/VERSION → 0.8.55 (cachebuster: app.js → 0.8.55; glossary.css/js oförändrade; styles.css oförändrad).
+
 ## 0.8.54
 - **Ordlistan: latinska anatomitermer (TA98) – fas 23, nervsystemet del 1: centrala nervsystemets grovanatomi. +116 poster.**
   - **Nervsystemets byggstenar och hjärnhinnor:** nervtråd, perikaryon, synaps, gliavävnad; hårda/mjuka hjärnhinnor med hjärnskäran, tentoriet och sadeldiafragmat, epidural-, subdural- och subaraknoidalrummet, likvorcisternerna (cisterna magna, lumbalcisternen), araknoidalvilli och kärlnystanet (likvorproduktion).

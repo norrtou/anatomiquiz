@@ -183,12 +183,23 @@ börja om. Gör så här vid fortsättning:
   ganglierna [caudatus/putamen/pallidus/striatum/lentiformis], corona radiata, splenium, septum pellucidum). OBS:
   nucleus inverteras EJ (ej i listan) – står naturligt; tonsilla inverteras. UTELÄMNAT: hundratals småkärnor/laminae/
   fibertrakter. Ordlistan **8 586** termer.
-- NÄSTA (A14 forts., fas 4+): de **12 kranialnerverna** (A14.2.01), **spinalnerverna + plexus** (cervicalis/brachialis
-  m. n. medianus/ulnaris/radialis/axillaris/musculocutaneus; lumbosacralis m. n. femoralis/obturatorius/ischiadicus/
-  tibialis/fibularis/pudendus; interkostalnerver), och **autonoma nervsystemet** (sympatiska gränssträngen + ganglier,
-  splanchnicusnerver, n. vagus parasympatiskt, plexus viscerales: cardiacus/coeliacus/mesentericus/hypogastricus).
-  Recept CH="14", grupper A14.2.xx och A14.3.xx. inv() på nervus/nervi/truncus/plexus/ganglion/ramus.
-- SEDAN A14: A15 sinnesorgan (460), A16 hud (50), A01 allmän anatomi (192). inv()-helpern i ALLA batchar.
+- 2026-06-16 — **A14 nervsystemet, fas 4–5: PERIFERA + AUTONOMA NERVSYSTEMET**, 78 poster (committat 0.8.55).
+  Fas 4: de 12 kranialnerverna (I–XII) + kliniska grenar/ganglier (trigeminusgangliet + V1/V2/V3 m. lingualis/
+  alveolaris inf./mentalis/infraorbitalis/auriculotemporalis, facialis + intermedius/chorda tympani/petrosus major,
+  vestibulo-/cochlearis, glossopharyngeus + petrosus minor, vagus + laryngeus sup./recurrens). Fas 5: cervikalplexus
+  (n. phrenicus m.fl.), brakialplexus (n. medianus/ulnaris/radialis/axillaris/musculocutaneus + dorsalis scapulae/
+  thoracicus longus/suprascapularis/thoracodorsalis), interkostalnerver, lumbalplexus (n. femoralis/saphenus/
+  obturatorius/iliohypogastricus/ilioinguinalis/genitofemoralis/cutaneus femoris lat.), sakralplexus (n. ischiadicus →
+  tibialis/fibularis communis+sup.+prof., gluteus sup./inf., cutaneus femoris post., suralis, pudendus), autonoma
+  (truncus sympathicus, ganglion cervicale sup./impar, splanchnicus major/minor, parasympatiska huvudganglier
+  ciliare/pterygopalatinum/submandibulare/oticum, plexus cardiacus/coeliacus/mesentericus sup./hypogastricus sup.+inf.).
+  inv() på nervus/truncus/plexus/ganglion. Ordlistan **8 664** termer.
+  ✅ **A14 SYSTEMA NERVOSUM TÄCKT PÅ INLÄRNINGS-/KLINISK NIVÅ** (CNS-grovanatomi + alla kranialnerver + perifera plexa/
+  huvudnerver + autonoma). UTELÄMNAT medvetet: den ~1 400 rader långa svansen av enskilda kärnor, laminae, fibertrakter
+  och pyttesmå muskel-/hudgrenar.
+- NÄSTA: **A15 Organa sensuum** (sinnesorganen, ≈460; recept CH="15") – öga (bulbus oculi, hinnor, lins, näthinna,
+  ögonmuskler, tårapparat), öra (ytter-/mellan-/inneröra, hörselben, snäcka, båggångar) + lukt/smak/hud-receptorer.
+  SEDAN A16 hud (50), A01 allmän anatomi (192). inv()-helpern i ALLA batchar.
 
 ## Källa (auktoritativ)
 - **Terminologia Anatomica (TA)** – den internationella standarden (FIPAT/IFAA).
