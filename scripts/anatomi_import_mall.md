@@ -197,9 +197,32 @@ börja om. Gör så här vid fortsättning:
   ✅ **A14 SYSTEMA NERVOSUM TÄCKT PÅ INLÄRNINGS-/KLINISK NIVÅ** (CNS-grovanatomi + alla kranialnerver + perifera plexa/
   huvudnerver + autonoma). UTELÄMNAT medvetet: den ~1 400 rader långa svansen av enskilda kärnor, laminae, fibertrakter
   och pyttesmå muskel-/hudgrenar.
-- NÄSTA: **A15 Organa sensuum** (sinnesorganen, ≈460; recept CH="15") – öga (bulbus oculi, hinnor, lins, näthinna,
-  ögonmuskler, tårapparat), öra (ytter-/mellan-/inneröra, hörselben, snäcka, båggångar) + lukt/smak/hud-receptorer.
-  SEDAN A16 hud (50), A01 allmän anatomi (192). inv()-helpern i ALLA batchar.
+- 2026-06-20 — **A15 Organa sensuum (sinnesorganen)**: ✅ **HELA KAPITLET KLART.** Kärnset (60 poster: ögongloben,
+  hinnorna, kammare, glaskropp, åderhinna; ytter-/mellan-/inneröra, trumhinna, hörselben, labyrint, snäcka, organum
+  spirale, smak-/luktorgan) låg redan OCOMMITTAT i arbetsträdet sedan föregående session; +161 detaljposter denna
+  session ovanpå: ögats substrukturer (limbus, trabekelverket, ciliarmuskeln, sphincter/dilatator pupillae,
+  synnervspapill+exkavation, nervus opticus m. hinnor, lins-/zonuladelar), 4 recti + 2 obliqui + levator palpebrae
+  + Zinns ring, ögonlock (tarsus, Meibom/Moll, konjunktiva), tårapparat, öronmusslans landmärken, mellanörats
+  väggar, hörselbenens delar + leder + ligg. + mm. tensor tympani/stapedius, örontrumpetsdelar, ben-/hinnlabyrint
+  (båggångar, modiolus, maculae, cupula ampullaris, scala media, lamina basilaris, ganglion spirale), lukt-/luktkörtlar.
+  UTELÄMNAT medvetet: mikroskopiska näthinnelager (stratum nucleare/plexiforme …), Cortis cellnivå, innerörats
+  småkärl (aa./vv. vestibulares/cochleares), numrerade retinala arterioler/venuler.
+- 2026-06-20 — **A16 Integumentum commune (huden)**: ✅ KLAR, 45 poster. Hud (epidermis/dermis-lager, hudåsar/fåror,
+  Langers linjer, retinacula cutis), hår (folliklar, m. arrector pili, capilli/supercilia/vibrissae/hirci, hårströmmar/
+  -virvlar), hudkörtlar (svett/talg), naglar (matrix/vallum/corpus/margo liber+occultus/perionyx), bröstet (glandula
+  mammaria, lobi/lobuli, ductus+sinus lactiferi, papilla/areola/Montgomery, Coopers ligg. suspensoria), underhud (tela
+  subcutanea, lös bindväv). inv() på musculus/glandula/ligamenta.
+- 2026-06-20 — **A01 Anatomia generalis (allmän anatomi)**: ✅ KLAR (kuraterat), 84 poster. 18 läges-/riktningsadjektiv
+  (medialis/lateralis/ventralis/dorsalis/cranialis/caudalis/rostralis/proximalis/distalis/transversalis m.fl.),
+  kroppsdelar+gördlar (membrum sup./inf., cingulum pectorale/pelvicum, dorsum manus/pedis, fingernamn, hypothenar),
+  referensplan (medianum/sagittalia/frontalia/transpyloricum/subcostale/supracristale/inter-tuberculare+spinale),
+  kroppslinjer (mediana ant./post., sternalis/parasternalis/medioclavicularis/axillares/scapularis/paravertebralis),
+  bukregioner (hypochondrium/hypogastrium), kliniskt namngivna trianglar/gropar/fåror (submandibulare/caroticum/
+  musculare/submentale/omoclaviculare/clavipectorale, fossa supraclavicularis major+minor/infraclavicularis/axillaris/
+  cubitalis/poplitea, trigonum femoris/auscultationis/lumbale inf.+sup., sulci bicipitales, crena analis, sulcus
+  glutealis, regio surae, fotvalv, sulcus naso-/mentolabialis, perineum-trianglar). UTELÄMNAT: den långa svansen av
+  predikterbara ytregioner (regio frontalis/parietalis … per-finger/per-tå-regioner, facies palmares/dorsales digitorum).
+  ✅ **HELA TA-IMPORTEN (A01–A16) KLAR** på inlärnings-/klinisk nivå. Ordlistan **9 020** termer. Committat 0.8.56.
 
 ## Källa (auktoritativ)
 - **Terminologia Anatomica (TA)** – den internationella standarden (FIPAT/IFAA).

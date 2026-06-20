@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.56
+- **Ordlistan: latinska anatomitermer (TA98) – slutfas, sinnesorganen (A15), huden (A16) och allmän anatomi (A01). +356 poster. Därmed är hela TA-importen täckt på inlärnings-/klinisk nivå.**
+  - **Sinnesorganen (A15):** ögat (ögongloben med poler, axlar och segment; senhinna/hornhinna med limbus och trabekelverket; druvhinnan med strålkroppen och ciliarmuskeln; regnbågshinnan med pupillförträngare/-vidgare; näthinnan med synnervspapillen och dess exkavation; synnerven med sina hinnor; linsen med kapsel, kärna och zonulatrådar; glaskroppen; ögonmusklerna med Zinns senring, ögonlock med Meibomska körtlar, bindehinna och tårapparat). Örat (öronmusslans landmärken; trumhinnan med umbo; mellanörats väggar, hörselbenen [hammare/städ/stigbygel] med leder, ligament och hörselbensmuskler; örontrumpeten; innerörats ben- och hinnlabyrint med båggångar, snäcka, modiolus, balansfläckar, ampullkammar och spiralgangliet). Samt lukt- och smakorganens slemhinnor.
+  - **Huden (A16):** överhud/läderhud med papiller och hudåsar (Langers linjer), hår och hårfolliklar med hårresarmuskeln, svett- och talgkörtlar, naglarna, bröstet med bröstkörtel, mjölkgångar, vårtgård och Coopers ligament, samt underhuden.
+  - **Allmän anatomi (A01):** läges- och riktningstermer (medial/lateral, ventral/dorsal, kranial/kaudal, proximal/distal m.fl.), referensplan (median-, sagittal-, frontal-, transpyloriska och suprakristala planet), kroppslinjer (medioklavikular-, axillarlinjerna m.fl.), kroppsdelar och gördlar, samt kliniskt namngivna trianglar, gropar och fåror (karotis-, submandibular-, femoraltriangeln, armvecket, knävecket, auskultationstriangeln m.fl.).
+- Synliga termer: 8 664 → **9 020** (+356). Inga dubbletter. Den långa svansen av mikroskopiska näthinne-/snäcklager, innerörats småkärl och de mest upprepade ytregionerna/per-finger-regionerna utelämnad medvetet. **Hela A01–A16 i Terminologia Anatomica är nu importerad.**
+- APP_VERSION/VERSION → 0.8.56 (cachebuster: app.js → 0.8.56; glossary.css/js oförändrade; styles.css oförändrad).
+
 ## 0.8.55
 - **Ordlistan: latinska anatomitermer (TA98) – fas 24, nervsystemet del 2: kranialnerverna, de perifera nervflätorna och autonoma nervsystemet. +78 poster. Därmed är nervsystemet (A14) täckt på klinisk nivå.**
   - **De tolv kranialnerverna (I–XII)** med deras kliniskt viktiga grenar och ganglier: lukt-, syn-, ögonrörelse-, trochlearis- och abducensnerven; trillingnerven med sina tre grenar (ögon-, överkäks-, underkäksnerven) och tung-, tand-, hak- och öron-tinningnerven; ansiktsnerven med chorda tympani; balans-hörselnerven; tung-svalgnerven; vagusnerven med övre och återvändande struphuvudsnerven; samt accessorius- och hypoglossusnerven.
