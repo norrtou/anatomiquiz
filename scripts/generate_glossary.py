@@ -45,7 +45,7 @@ LANDING_FILE = "medicinskordlista.html"
 
 # Cachebusters per asset — bumpa bara den som faktiskt ändrats.
 STYLES_V = "0.7.1"        # css/styles.css (oförändrad sedan tidigare)
-GLOSSARY_V = "0.8.59"     # css/glossary.css + js/glossary.js (denna release)
+GLOSSARY_V = "0.8.64"     # css/glossary.css + js/glossary.js (denna release)
 
 # Svenska alfabetet — fast ordning för alfabetsraden. Bokstäver utan poster
 # renderas nedtonade (icke-klickbara), så raden ser likadan ut oavsett innehåll.
@@ -550,7 +550,7 @@ def render_page(
         <em>Nomina Anatomica</em>
         och svensk medicinsk ordbok.
       </p>
-      <a href="./" class="btn glossary-back-btn">← Tillbaka till quizet</a>
+      <a href="medicinskordlista.html" class="btn glossary-back-btn">← Tillbaka till ordlistan</a>
     </footer>
 
   </main>

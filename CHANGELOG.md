@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.64
+- **Startsidans knapp till ordlistan heter nu "Medicinsk ordlista"** (tidigare bara "Ordlista").
+- **Knappen längst ner på ordlistesidorna går nu till ordlistans startsida** (`medicinskordlista.html`) i stället för quizets startsida, och heter "← Tillbaka till ordlistan" (tidigare "← Tillbaka till quizet" → `./`).
+- **Tydligare markering av söktermen i ordlistans träffar.** Den gröna markeringen (rank 3 – ordet finns bara i beskrivningen) var för svag (16 % emerald) och syntes knappt på desktop. Nu starkare ton (32 %), halvfet text och en svag understreckslinje, så den läses på alla skärmar. `css/glossary.css` + cachebuster `GLOSSARY_V` → 0.8.64, ordlistesidorna regenererade. APP_VERSION/VERSION → 0.8.64.
+
 ## 0.8.63
 - **Alla sidors `<title>` ned till ≤ 60 tecken (Bing "title too long").** Tre genererade ordlistesidor + en statisk sida var för långa: landningssidan `medicinskordlista.html` (75 → "Medicinsk ordlista – tusentals termer | Anatomiquiz", behåller "tusentals" utan siffra), `ordlista-b.html` (62 → "Medicinska B-ord: betydelse och ursprung | Anatomiquiz"), `ordlista-f.html` (62 → "Medicinska F-ord: definition och ursprung | Anatomiquiz") och `case.html` (63 → "Case – anatomi genom kliniska patientfall | Anatomiquiz").
 - `scripts/generate_glossary.py`: `TITLE_MAX` sänkt 160 → **60**, så generatorn nu **felar** om någon framtida titel överskrider Bing-gränsen. Landningstiteln uppdaterad på båda ställena (mall + guard).
