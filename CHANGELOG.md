@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.61
+- **Labbtermer i ordlistan har fått normalvärden (referensintervall) och flera saknade prover har lagts till.** 39 befintliga poster berikades med vuxenreferensintervall (Hb, CRP, SR, LPK, TPK, EVF, ALAT, ASAT, GFR, INR, APTT, glukos, D-dimer, ferritin, urea, albumin, kalium, kalcium, PSA, troponin, BNP, PTH, T4, T3, TSH, LD, GT, ALP, CK, urat, kolesterol, folat, laktat, TIBC, antitrombin, haptoglobin, amylas, homocystein, blodstatus) och 34 nya termer tillkom (Hb, HbA1c, kreatinin, Krea, eGFR, cystatin C, MCV, MCH, MCHC, RDW, EPK, retikulocyter, natrium, Na, K, klorid, magnesium, fosfat, kobalamin, B12, järn, transferrin, HDL, LDL, triglycerider, bilirubin, myoglobin, NT-proBNP, fibrinogen, pankreasamylas, hematokrit, folsyra, D-vitamin, provtagningsbeteckningar).
+- **Engelska labbförkortningar** lades till som notiser i de svenska posterna (WBC, RBC, PLT, HGB, HCT, CBC, Cr, ALT/AST, GGT, A1C, TG, TC m.fl.) och som egna poster där svensk motsvarighet saknas (BUN, BMP, CMP).
+- Värdena anges som vuxenintervall (källa: Region Kronoberg, Referensintervall Klinisk kemi, 2026; NORIP-baserat) med reservation för att de varierar mellan laboratorier/metod/ålder/kön. Tre felstavade dubblettposter städades bort (hb, HbA1C, Nt-proBNP → korrekt skiftläge).
+- Ordlistan: 9 020 → **9 054** live-termer. Endast `data/ordlista.json` + regenererade `medicinskordlista.html`/`ordlista-*.html` + `sitemap.xml` ändrade. Inga cachebusters för glossary.js/css bumpade (oförändrade).
+- APP_VERSION/VERSION → 0.8.61 (cachebuster: app.js → 0.8.61).
+
 ## 0.8.60
 - **Ingressen på ordlistans landningssida visar nu det faktiska antalet termer i stället för "tusentals"** — t.ex. "… hoppa till en bokstav i raden — **9 020** latinska och medicinska anatomiska, fysiologiska, patologiska, biologiska och tekniska termer." Talet räknas dynamiskt vid generering (`sum(len(grupp))`) med hårt mellanslag som tusentalsavgränsare, så det uppdateras automatiskt när ordlistan växer.
 - **Endast den synliga ingressen (body) ändrad** — `<head>` (title/meta-description/og/twitter) behåller "tusentals" utan siffra enligt SEO-policyn.
