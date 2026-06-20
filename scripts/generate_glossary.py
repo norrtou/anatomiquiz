@@ -517,15 +517,15 @@ def render_page(
         {breadcrumb_nav}
       </nav>
 
-      <h2 id="glossaryHeading" class="sr-only">Sök i lexikonet</h2>
+      <h2 id="glossaryHeading" class="sr-only">Sök i ordlistan</h2>
 
       <div class="glossary-toolbar">
         <input
           id="glossarySearch"
           type="search"
-          placeholder="Sök i hela lexikonet…"
+          placeholder="Sök i hela ordlistan…"
           class="glossary-search"
-          aria-label="Sök i hela lexikonet"
+          aria-label="Sök i hela ordlistan"
           aria-controls="searchResults"
           autocomplete="off"
           spellcheck="false"
@@ -550,7 +550,7 @@ def render_page(
         <em>Nomina Anatomica</em>
         och svensk medicinsk ordbok.
       </p>
-      <a href="medicinskordlista.html" class="btn glossary-back-btn">← Tillbaka till lexikonet</a>
+      <a href="medicinskordlista.html" class="btn glossary-back-btn">← Tillbaka till ordlistan</a>
     </footer>
 
   </main>
@@ -600,10 +600,10 @@ def write_landing(groups: dict[str, list[dict]]) -> str:
         filename=LANDING_FILE,
         title=title,
         description=desc,
-        h1="Medicinskt lexikon",
+        h1="Medicinsk ordlista",
         tagline=(
             "Medicinska ord, förkortningar och begrepp med definitioner, synonymer "
-            "och etymologi i ett sökbart lexikon. Sök i hela lexikonet ovan, eller "
+            "och etymologi i en sökbar ordlista. Sök i hela ordlistan ovan, eller "
             f"hoppa till en bokstav i raden — {total_str} latinska och medicinska "
             "anatomiska, fysiologiska, patologiska, biologiska och tekniska termer."
         ),
@@ -647,8 +647,8 @@ def write_group(key: str, entries: list[dict], present: set[str]) -> str:
         description=desc,
         h1=h1,
         tagline=(
-            f"Alla termer i lexikonet som börjar på {label.lower() if key not in ('siffror','tecken') else heading}. "
-            "Sök i hela lexikonet ovan, eller bläddra till en annan bokstav."
+            f"Alla termer i ordlistan som börjar på {label.lower() if key not in ('siffror','tecken') else heading}. "
+            "Sök i hela ordlistan ovan, eller bläddra till en annan bokstav."
         ),
         breadcrumb_label=label,
         page_jsonld=page_obj,
