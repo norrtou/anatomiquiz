@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.63
+- **Alla sidors `<title>` ned till ≤ 60 tecken (Bing "title too long").** Tre genererade ordlistesidor + en statisk sida var för långa: landningssidan `medicinskordlista.html` (75 → "Medicinsk ordlista – tusentals termer | Anatomiquiz", behåller "tusentals" utan siffra), `ordlista-b.html` (62 → "Medicinska B-ord: betydelse och ursprung | Anatomiquiz"), `ordlista-f.html` (62 → "Medicinska F-ord: definition och ursprung | Anatomiquiz") och `case.html` (63 → "Case – anatomi genom kliniska patientfall | Anatomiquiz").
+- `scripts/generate_glossary.py`: `TITLE_MAX` sänkt 160 → **60**, så generatorn nu **felar** om någon framtida titel överskrider Bing-gränsen. Landningstiteln uppdaterad på båda ställena (mall + guard).
+- Endast titlar ändrade; meta-descriptions, og/twitter (utom redan korta) och övrigt head orört. Ordlistesidorna regenererade. APP_VERSION/VERSION → 0.8.63.
+
 ## 0.8.62
 - **Kortare startsidetitel (Bing flaggade "title too long").** `<title>` på index.html ändrad från den 80 tecken långa "Anatomiquiz — Interaktiv anatomiquiz på svenska | Skelett, muskler & terminologi" till **"Anatomiquiz - Öva på anatomi och medicinsk terminologi"** (54 tecken); tar även bort dubbel-förekomsten av ordet "anatomiquiz".
 - `og:title` och `twitter:title` uppdaterade till samma nya titel.

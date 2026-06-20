@@ -104,11 +104,11 @@ GROUP_DESCRIPTIONS = {
 # utan rad faller tillbaka på fallbacken i write_group(). Gräns: TITLE_MAX.
 GROUP_TITLES = {
     "A": "Medicinska ord på A – förklaring och etymologi | Anatomiquiz",
-    "B": "Medicinska B-ord: betydelse, synonymer, ursprung | Anatomiquiz",
+    "B": "Medicinska B-ord: betydelse och ursprung | Anatomiquiz",
     "C": "Ordlista – medicinska ord på C med etymologi | Anatomiquiz",
     "D": "Medicinska termer på D förklarade på svenska | Anatomiquiz",
     "E": "E – latinska och anatomiska ord med förklaring | Anatomiquiz",
-    "F": "Slå upp medicinska F-ord – definition & ursprung | Anatomiquiz",
+    "F": "Medicinska F-ord: definition och ursprung | Anatomiquiz",
     "G": "Medicinska G-ord i ordlistan | Anatomiquiz",
     "H": "H-ord i medicinska ordlistan med etymologi | Anatomiquiz",
     "I": "Slå upp medicinska ord på I | Anatomiquiz",
@@ -144,10 +144,10 @@ LANDING_DESC = (
 # Hård gräns för meta-description (Google klipper ~155–160 tecken).
 DESC_MAX = 157
 
-# Hård gräns för <title> (användarkrav: max 160; Bing visar ~60). Vi håller
-# gruppernas titlar korta för bra visning men tillåter landningssidan att vara
-# lite längre. Kontrolleras i main().
-TITLE_MAX = 160
+# Hård gräns för <title>. Bing visar/klipper ~60 tecken och flaggar längre titlar
+# som "title too long", så ALLA sidor (även landningssidan) hålls inom 60. Gäller
+# raw-strängen (inte HTML-escapad). Kontrolleras i main().
+TITLE_MAX = 60
 
 
 def group_description(key: str, h1: str) -> str:
@@ -572,7 +572,7 @@ def page_file_key(filename: str) -> str:
 
 def write_landing(groups: dict[str, list[dict]]) -> str:
     url = f"{SITE}/{LANDING_FILE}"
-    title = "Medicinsk ordlista — tusentals latinska och anatomiska termer | Anatomiquiz"
+    title = "Medicinsk ordlista – tusentals termer | Anatomiquiz"
     desc = LANDING_DESC
     # Faktiskt antal live-termer, med hårt mellanslag som tusentalsavgränsare
     # (t.ex. 9 020). Används i den synliga ingressen (body) — head håller kvar
@@ -734,7 +734,7 @@ def main() -> None:
         raise SystemExit(f"FEL: meta-description >{DESC_MAX} tecken: {over}")
 
     # Säkra att varje sidas <title> håller sig inom gränsen.
-    landing_title = "Medicinsk ordlista — tusentals latinska och anatomiska termer | Anatomiquiz"
+    landing_title = "Medicinsk ordlista – tusentals termer | Anatomiquiz"
     too_long = [("(landning)", len(landing_title))] if len(landing_title) > TITLE_MAX else []
     for key in present:
         t = GROUP_TITLES.get(key, "x" * 40)  # fallback antas kort
