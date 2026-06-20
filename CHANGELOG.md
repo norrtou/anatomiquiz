@@ -1,5 +1,15 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.58
+- **Ordlistans sökning är nu relevansrankad istället för rent alfabetisk.** Träffarna sorteras efter hur väl de matchar söktermen:
+  1. Exakt uppslagsord (söker du `biceps` kommer **biceps** först).
+  2. Term som börjar med söktermen (`biceps brachii`, `biceps femoris` …).
+  3. Söktermen någon annanstans i termen (`musculus biceps …`).
+  4. Söktermen enbart i beskrivningen.
+  - Inom varje nivå sorteras träffarna alfabetiskt (svensk kollation). Tidigare grupperades alla träffar per begynnelsebokstav med `<h3>`-rubriker, vilket dolde vilken träff som var mest relevant; sökresultatet renderas nu som en enda platt lista i relevansordning. Filtreringen (term **eller** beskrivning) är oförändrad – inga träffar försvinner, de kommer bara i bättre ordning. Alfabetsraden tonas fortfarande efter vilka grupper som har träffar.
+- Endast `js/glossary.js` ändrat (logik); de förrenderade ordlistesidorna regenererades enbart för att bumpa glossary-cachebustern.
+- APP_VERSION/VERSION → 0.8.58 (cachebuster: app.js → 0.8.58; glossary.js → 0.8.58 via GLOSSARY_V; glossary.css/styles.css oförändrade).
+
 ## 0.8.57
 - **SEO: titlar och meta-descriptions på alla ordlistesidor omarbetade för Bings strängare kvalitetskrav (≤160 tecken + tillräcklig variation i formulering).**
   - **Titlar:** alla 31 gruppsidor delade tidigare exakt samma mall (`Medicinska ord på X — ordlista med definition och etymologi | Anatomiquiz`, bara bokstaven skilde) – vilket Bing flaggar som för lika titlar. Nu har varje sida en **egen, unik titel** med varierad struktur och ordval, och kortare (max 62 tecken, nära Bings visningsideal ~60).

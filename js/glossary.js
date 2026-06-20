@@ -22,8 +22,6 @@
 const DATA_URL = './data/ordlista.json'
 
 const SWEDISH_ALPHABET = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ']
-// Ordning för grupper i sökträffarna (matchar alfabetsraden).
-const GROUP_ORDER = [...SWEDISH_ALPHABET, 'siffror', 'tecken']
 const PAGE_SLUG = { Å: 'aa', Ä: 'ae', Ö: 'oe' }
 
 // ============================================================================
@@ -130,9 +128,23 @@ function loadTerms() {
 // ============================================================================
 
 /**
- * Renderar filtrerade träffar i #searchResults, grupperade per bokstav, med
- * varje term länkad till sin position. Döljer det statiska bläddringsinnehållet
- * så länge en sökning är aktiv.
+ * Relevansrang för en träff mot den (gemena, trimmade) söktermen. Lägre = mer
+ * relevant: exakt uppslagsord → term som börjar med söktermen → söktermen någon
+ * annanstans i termen → enbart i beskrivningen.
+ */
+function matchRank(entry, q) {
+  const term = entry.term.toLowerCase()
+  if (term === q) return 0
+  if (term.startsWith(q)) return 1
+  if (term.includes(q)) return 2
+  return 3
+}
+
+/**
+ * Renderar filtrerade träffar i #searchResults sorterade efter relevans (se
+ * matchRank), med varje term länkad till sin position. Inom samma rang sorteras
+ * alfabetiskt (svensk kollation). Döljer det statiska bläddringsinnehållet så
+ * länge en sökning är aktiv.
  */
 function renderResults(terms, query, currentPage) {
   const results = document.getElementById('searchResults')
@@ -163,28 +175,24 @@ function renderResults(terms, query, currentPage) {
     return
   }
 
-  const groups = {}
-  filtered.forEach(e => {
-    const key = pageKey(sortValue(e))
-    ;(groups[key] || (groups[key] = [])).push(e)
-  })
+  const ranked = filtered
+    .map(e => ({ entry: e, rank: matchRank(e, q) }))
+    .sort(
+      (a, b) => a.rank - b.rank || a.entry.term.localeCompare(b.entry.term, 'sv')
+    )
 
-  let html = ''
-  GROUP_ORDER.filter(k => groups[k]).forEach(key => {
-    const label = key === 'siffror' ? '0–9' : key === 'tecken' ? 'suffix' : key
-    html += `<h3 class="glossary-letter">${escapeHtml(label)}</h3>`
-    html += '<dl class="glossary-group">'
-    groups[key].forEach(e => {
-      const href = termHref(e.term, currentPage, e.slug, e.sort)
-      html += `<div class="glossary-entry"><dt class="glossary-term"><a href="${href}">${escapeHtml(
-        e.term
-      )}</a></dt><dd class="glossary-def">${formatDef(e.def)}</dd></div>`
-    })
-    html += '</dl>'
+  let html = '<dl class="glossary-group">'
+  ranked.forEach(({ entry: e }) => {
+    const href = termHref(e.term, currentPage, e.slug, e.sort)
+    html += `<div class="glossary-entry"><dt class="glossary-term"><a href="${href}">${escapeHtml(
+      e.term
+    )}</a></dt><dd class="glossary-def">${formatDef(e.def)}</dd></div>`
   })
+  html += '</dl>'
 
   results.innerHTML = html
-  updateAlphabet(new Set(Object.keys(groups)))
+  // Alfabetsraden speglar fortfarande vilka grupper som har träffar.
+  updateAlphabet(new Set(filtered.map(e => pageKey(sortValue(e)))))
   updateCount(filtered.length)
 }
 
