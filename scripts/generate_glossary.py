@@ -574,6 +574,11 @@ def write_landing(groups: dict[str, list[dict]]) -> str:
     url = f"{SITE}/{LANDING_FILE}"
     title = "Medicinsk ordlista — tusentals latinska och anatomiska termer | Anatomiquiz"
     desc = LANDING_DESC
+    # Faktiskt antal live-termer, med hårt mellanslag som tusentalsavgränsare
+    # (t.ex. 9 020). Används i den synliga ingressen (body) — head håller kvar
+    # "tusentals" utan siffra (SEO).
+    total = sum(len(v) for v in groups.values())
+    total_str = f"{total:,}".replace(",", " ")
     page_obj = {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
@@ -599,7 +604,7 @@ def write_landing(groups: dict[str, list[dict]]) -> str:
         tagline=(
             "Medicinska ord, förkortningar och begrepp med definitioner, synonymer "
             "och etymologi i en sökbar ordlista. Sök i hela ordlistan ovan, eller "
-            "hoppa till en bokstav i raden — tusentals latinska och medicinska "
+            f"hoppa till en bokstav i raden — {total_str} latinska och medicinska "
             "anatomiska, fysiologiska, patologiska, biologiska och tekniska termer."
         ),
         breadcrumb_label="Medicinsk ordlista",

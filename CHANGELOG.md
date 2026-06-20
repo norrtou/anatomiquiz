@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.60
+- **Ingressen på ordlistans landningssida visar nu det faktiska antalet termer i stället för "tusentals"** — t.ex. "… hoppa till en bokstav i raden — **9 020** latinska och medicinska anatomiska, fysiologiska, patologiska, biologiska och tekniska termer." Talet räknas dynamiskt vid generering (`sum(len(grupp))`) med hårt mellanslag som tusentalsavgränsare, så det uppdateras automatiskt när ordlistan växer.
+- **Endast den synliga ingressen (body) ändrad** — `<head>` (title/meta-description/og/twitter) behåller "tusentals" utan siffra enligt SEO-policyn.
+- Endast `scripts/generate_glossary.py` (ingresslogik) + `medicinskordlista.html` (regenererad ingress) ändrade. Inga cachebusters bumpade (glossary.js/css oförändrade).
+- APP_VERSION/VERSION → 0.8.60 (cachebuster: app.js → 0.8.60).
+
 ## 0.8.59
 - **Sökträffar där söktermen bara finns i beskrivningen markerar nu ordet med en svag, temahärledd ljusgrön bakgrund** (`<mark>` med `color-mix` av `--primary`), så det syns snabbt *varför* träffen kom med. Markeringen gäller enbart rank 3-träffar (söktermen saknas i termen); matchas något i själva termen markeras inget i beskrivningen. Skiftläge bevaras och `<em>`-taggar i definitionen lämnas orörda.
 - Endast `js/glossary.js` (markeringslogik) + `css/glossary.css` (`.glossary-hit`) ändrade; de förrenderade ordlistesidorna regenererades enbart för cachebustern.
