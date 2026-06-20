@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.57
+- **SEO: titlar och meta-descriptions på alla ordlistesidor omarbetade för Bings strängare kvalitetskrav (≤160 tecken + tillräcklig variation i formulering).**
+  - **Titlar:** alla 31 gruppsidor delade tidigare exakt samma mall (`Medicinska ord på X — ordlista med definition och etymologi | Anatomiquiz`, bara bokstaven skilde) – vilket Bing flaggar som för lika titlar. Nu har varje sida en **egen, unik titel** med varierad struktur och ordval, och kortare (max 62 tecken, nära Bings visningsideal ~60).
+  - **Meta-descriptions:** omformulerade med spridda inledningar (termuppräkning, "Letar du efter…", "Nyfiken på…", "Vad döljer sig bakom…", "Vill du veta…" m.fl.), varierade verb (slå upp/bläddra/utforska/reds ut/ta reda på/få förklarade/lär dig) och roterade avslutningar (etymologi/ordhistoria/ordursprung/språkligt ursprung/synonymer/lekmannaord). Alla unika, max 142 tecken.
+  - Generatorn (`scripts/generate_glossary.py`) fick en `GROUP_TITLES`-tabell och en `TITLE_MAX`-kontroll (≤160) vid sidan om den befintliga `DESC_MAX`-kontrollen (≤157). Inga termsiffror i head; landningssidan behåller "tusentals".
+- Påverkar enbart `<head>` (title/description + og/twitter som speglar dem) på `medicinskordlista.html` och `ordlista-*.html`. Inget innehåll, css eller js ändrat.
+- APP_VERSION/VERSION → 0.8.57 (cachebuster: app.js → 0.8.57; glossary.css/js oförändrade; styles.css oförändrad).
+
 ## 0.8.56
 - **Ordlistan: latinska anatomitermer (TA98) – slutfas, sinnesorganen (A15), huden (A16) och allmän anatomi (A01). +356 poster. Därmed är hela TA-importen täckt på inlärnings-/klinisk nivå.**
   - **Sinnesorganen (A15):** ögat (ögongloben med poler, axlar och segment; senhinna/hornhinna med limbus och trabekelverket; druvhinnan med strålkroppen och ciliarmuskeln; regnbågshinnan med pupillförträngare/-vidgare; näthinnan med synnervspapillen och dess exkavation; synnerven med sina hinnor; linsen med kapsel, kärna och zonulatrådar; glaskroppen; ögonmusklerna med Zinns senring, ögonlock med Meibomska körtlar, bindehinna och tårapparat). Örat (öronmusslans landmärken; trumhinnan med umbo; mellanörats väggar, hörselbenen [hammare/städ/stigbygel] med leder, ligament och hörselbensmuskler; örontrumpeten; innerörats ben- och hinnlabyrint med båggångar, snäcka, modiolus, balansfläckar, ampullkammar och spiralgangliet). Samt lukt- och smakorganens slemhinnor.
