@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.62
+- **Kortare startsidetitel (Bing flaggade "title too long").** `<title>` på index.html ändrad från den 80 tecken långa "Anatomiquiz — Interaktiv anatomiquiz på svenska | Skelett, muskler & terminologi" till **"Anatomiquiz - Öva på anatomi och medicinsk terminologi"** (54 tecken); tar även bort dubbel-förekomsten av ordet "anatomiquiz".
+- `og:title` och `twitter:title` uppdaterade till samma nya titel.
+- Endast index.html (head) + versionsbump. APP_VERSION/VERSION → 0.8.62 (cachebuster: app.js → 0.8.62).
+
 ## 0.8.61
 - **Labbtermer i ordlistan har fått normalvärden (referensintervall) och flera saknade prover har lagts till.** 39 befintliga poster berikades med vuxenreferensintervall (Hb, CRP, SR, LPK, TPK, EVF, ALAT, ASAT, GFR, INR, APTT, glukos, D-dimer, ferritin, urea, albumin, kalium, kalcium, PSA, troponin, BNP, PTH, T4, T3, TSH, LD, GT, ALP, CK, urat, kolesterol, folat, laktat, TIBC, antitrombin, haptoglobin, amylas, homocystein, blodstatus) och 34 nya termer tillkom (Hb, HbA1c, kreatinin, Krea, eGFR, cystatin C, MCV, MCH, MCHC, RDW, EPK, retikulocyter, natrium, Na, K, klorid, magnesium, fosfat, kobalamin, B12, järn, transferrin, HDL, LDL, triglycerider, bilirubin, myoglobin, NT-proBNP, fibrinogen, pankreasamylas, hematokrit, folsyra, D-vitamin, provtagningsbeteckningar).
 - **Engelska labbförkortningar** lades till som notiser i de svenska posterna (WBC, RBC, PLT, HGB, HCT, CBC, Cr, ALT/AST, GGT, A1C, TG, TC m.fl.) och som egna poster där svensk motsvarighet saknas (BUN, BMP, CMP).
