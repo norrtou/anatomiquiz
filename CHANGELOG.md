@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.59
+- **Sökträffar där söktermen bara finns i beskrivningen markerar nu ordet med en svag, temahärledd ljusgrön bakgrund** (`<mark>` med `color-mix` av `--primary`), så det syns snabbt *varför* träffen kom med. Markeringen gäller enbart rank 3-träffar (söktermen saknas i termen); matchas något i själva termen markeras inget i beskrivningen. Skiftläge bevaras och `<em>`-taggar i definitionen lämnas orörda.
+- Endast `js/glossary.js` (markeringslogik) + `css/glossary.css` (`.glossary-hit`) ändrade; de förrenderade ordlistesidorna regenererades enbart för cachebustern.
+- APP_VERSION/VERSION → 0.8.59 (cachebuster: app.js → 0.8.59; glossary.js/glossary.css → 0.8.59 via GLOSSARY_V; styles.css oförändrad).
+
 ## 0.8.58
 - **Ordlistans sökning är nu relevansrankad istället för rent alfabetisk.** Träffarna sorteras efter hur väl de matchar söktermen:
   1. Exakt uppslagsord (söker du `biceps` kommer **biceps** först).

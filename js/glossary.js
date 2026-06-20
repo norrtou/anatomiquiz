@@ -100,6 +100,27 @@ function formatDef(str) {
   )
 }
 
+/** Escapar regex-metatecken så söktermen kan matchas bokstavligt. */
+function escapeRegExp(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+}
+
+/**
+ * Markerar (med <mark>) varje förekomst av söktermen i redan HTML-formaterad
+ * text. Hoppar över taggar (<em>…</em>) så markeringen aldrig hamnar inuti en
+ * tagg. q måste vara gemen/trimmad; matchningen är skiftlägesokänslig och
+ * behåller originaltextens skiftläge.
+ */
+function highlightMatches(html, q) {
+  if (!q) return html
+  const re = new RegExp(escapeRegExp(escapeHtml(q)), 'gi')
+  return html.replace(/[^<]+|<[^>]*>/g, seg =>
+    seg.charAt(0) === '<'
+      ? seg
+      : seg.replace(re, m => `<mark class="glossary-hit">${m}</mark>`)
+  )
+}
+
 // ============================================================================
 // Datahämtning (lazy)
 // ============================================================================
@@ -182,11 +203,14 @@ function renderResults(terms, query, currentPage) {
     )
 
   let html = '<dl class="glossary-group">'
-  ranked.forEach(({ entry: e }) => {
+  ranked.forEach(({ entry: e, rank }) => {
     const href = termHref(e.term, currentPage, e.slug, e.sort)
+    // Rank 3 = söktermen finns bara i beskrivningen; markera den så det syns
+    // snabbt varför träffen kom med.
+    const def = rank === 3 ? highlightMatches(formatDef(e.def), q) : formatDef(e.def)
     html += `<div class="glossary-entry"><dt class="glossary-term"><a href="${href}">${escapeHtml(
       e.term
-    )}</a></dt><dd class="glossary-def">${formatDef(e.def)}</dd></div>`
+    )}</a></dt><dd class="glossary-def">${def}</dd></div>`
   })
   html += '</dl>'
 

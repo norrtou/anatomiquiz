@@ -173,6 +173,16 @@ a.glossary-alpha:focus-visible {
   text-decoration: underline;
 }
 
+/* Markering av söktermen i beskrivningen (träffar där ordet bara finns i
+   definitionen). Svag, temahärledd ljusgrön ton som syns snabbt utan att
+   skrika. Behåller textfärgen — annars gör <mark> texten svart/gul. */
+.glossary-results .glossary-def mark.glossary-hit {
+  background: color-mix(in srgb, var(--primary) 16%, transparent);
+  color: inherit;
+  padding: 0 0.12em;
+  border-radius: 3px;
+}
+
 /* ============================================================================
    Bläddringsrutnät på landningssidan — ett bokstavskort per grupp.
    Lugn, redaktionell uppslagsbokskänsla: stor bokstav, antal ord och ett
