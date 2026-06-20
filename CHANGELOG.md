@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.65
+- **Sjukdomar, skador och syndrom i ordlistan har fått diagnoskoder, och ~200 nya diagnoser har lagts till.** Ordlistan: 9 054 → **9 256 termer**. **406 poster bär nu svensk ICD-10-(SE)-kod**, ~330 även ICD-11 (samt enstaka U-koder, t.ex. covid-19 U07.1). Koden läggs in i definitionen efter det engelska namnet, före etymologin (`… Eng. asthma. ICD-10: J45 (J45.0 allergisk, J45.9 ospecificerad); ICD-11: CA23. Av gr. …`).
+- **Kapitelvis genomgång A00–T:** infektioner, tumörer, blod, endokrint/metabolt, psykiatri, nerv, öga/öra, cirkulation, andning, mage-tarm, hud, rörelseapparat, urin/genital, medfött (Q), graviditet (O) och de mest sökta symtomen (R). Dessutom en omgång tier-2 internmedicin/akutmedicin (kardiomyopati, klaffel, hjärtstopp, AKS, sarkoidos, leversvikt, Sjögrens syndrom, jättecellsarterit, Guillain-Barré, myastenia gravis, Huntingtons sjukdom, TBE, sorkfeber, vinterkräksjuka, njurcancer, hyponatremi m.fl.).
+- Latinskt kliniskt namn (`Lat.`) tillagt där det saknades; eponymer lagrade med versal (Downs/Klinefelters/Sjögrens/Huntingtons/Pagets/Wilsons/Barretts m.fl.). ICD-10-koderna är de svenska ICD-10-SE-kategorierna (3-tecken identiska med Socialstyrelsen/WHO; vanliga 4-tecken angivna); ett urval koder spot-verifierade mot Socialstyrelsen/Internetmedicin/1177/WHO.
+- Endast `data/ordlista.json` + regenererade `medicinskordlista.html`/`ordlista-*.html` + `sitemap.xml` ändrade (innehåll). Inga cachebusters för glossary.js/css bumpade (oförändrade). APP_VERSION/VERSION → 0.8.65 (cachebuster: app.js → 0.8.65).
+
 ## 0.8.64
 - **Startsidans knapp till ordlistan heter nu "Medicinsk ordlista"** (tidigare bara "Ordlista").
 - **Knappen längst ner på ordlistesidorna går nu till ordlistans startsida** (`medicinskordlista.html`) i stället för quizets startsida, och heter "← Tillbaka till ordlistan" (tidigare "← Tillbaka till quizet" → `./`).
