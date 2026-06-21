@@ -4,8 +4,8 @@ generate_glossary.py — förrenderar den medicinska ordlistan för SEO och no-J
 
 Källa: data/ordlista.json
 Mål:   medicinskordlista.html (landningssida) + en sida per icke-tom grupp:
-       ordlista-<a..z|aa|ae|oe>.html, ordlista-siffror.html, ordlista-tecken.html
-       samt sitemap.xml.
+       ordlista-<a..z|aa|ae|oe>.html, ordlista-siffror.html, ordlista-prefix.html
+       (förstavelser), ordlista-tecken.html (suffix/ändelser) samt sitemap.xml.
 
 Bakgrund: en enda ordliste-HTML växte till ~3,5 MB och fick katastrofal
 hastighet i Search Console (Core Web Vitals mäts per URL). Lösningen är att
@@ -45,11 +45,19 @@ LANDING_FILE = "medicinskordlista.html"
 
 # Cachebusters per asset — bumpa bara den som faktiskt ändrats.
 STYLES_V = "0.7.1"        # css/styles.css (oförändrad sedan tidigare)
-GLOSSARY_V = "0.8.64"     # css/glossary.css + js/glossary.js (denna release)
+GLOSSARY_V = "0.8.74"     # css/glossary.css + js/glossary.js (denna release)
 
 # Svenska alfabetet — fast ordning för alfabetsraden. Bokstäver utan poster
 # renderas nedtonade (icke-klickbara), så raden ser likadan ut oavsett innehåll.
 SWEDISH_ALPHABET = list("ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ")
+
+# Specialgrupper (egna sidor som inte är en begynnelsebokstav), i den ordning de
+# visas EFTER A–Ö i alfabetsraden och på landningssidan: siffror först, sedan
+# förstavelser (prefix) och ändelser (suffix). 'tecken' är av historiska skäl
+# filnamns-slug för suffix-sidan; 'prefix' är dess motsvarighet för prefix.
+SPECIAL_ORDER = ["siffror", "prefix", "tecken"]
+SPECIAL = set(SPECIAL_ORDER)
+GROUP_ORDER = SWEDISH_ALPHABET + SPECIAL_ORDER
 
 # Diakriter → ASCII för term-slugs (måste matcha slugifyBase i js/glossary.js)
 _SLUG_MAP = {"å": "a", "ä": "a", "ö": "o", "é": "e", "è": "e", "ü": "u"}
@@ -94,7 +102,8 @@ GROUP_DESCRIPTIONS = {
     "Ä": "Undrar du vad ärrbråck, ärrvävnad eller ätstörning betyder? Medicinska och anatomiska termer på Ä med definition, uttal och ordhistoria.",
     "Ö": "Vad är ödem, östrogen eller ödematös? Slå upp medicinska och anatomiska ord på Ö med tydlig definition, synonymer och språkligt ursprung.",
     "siffror": "Vad betyder 5-ASA eller 5-FU? Slå upp medicinska termer och förkortningar som inleds med en siffra – med definition och förklaring på svenska.",
-    "tecken": "Vad betyder ändelser som -it, -emi, -ektomi och -patia? Lär dig medicinska suffix och hur latinska termer byggs ihop på svenska.",
+    "prefix": "Vad betyder förstavelser som a-, hyper-, endo- och hemi-? Latinska och grekiska prefix i medicinska och anatomiska termer – med betydelse och exempel.",
+    "tecken": "Vad betyder ändelser som -it, -emi, -ektomi och -patia? Latinska och grekiska suffix i medicinska och anatomiska termer – med betydelse och exempel.",
 }
 
 # Unik <title> per grupp-sida. ALLA delade tidigare exakt samma mall (bara
@@ -133,6 +142,7 @@ GROUP_TITLES = {
     "Ä": "Ä – medicinska termer med förklaring | Anatomiquiz",
     "Ö": "Medicinska Ö-ord förklarade | Anatomiquiz",
     "siffror": "Medicinska termer som börjar med siffra | Anatomiquiz",
+    "prefix": "Medicinska förstavelser och prefix förklarade | Anatomiquiz",
     "tecken": "Medicinska ändelser och suffix förklarade | Anatomiquiz",
 }
 
@@ -175,13 +185,41 @@ def sort_value(entry: dict) -> str:
     return entry.get("sort") or entry["term"]
 
 
-def page_key(term: str) -> str:
-    """Vilken sida en term hör till. Måste matcha pageKey() i js/glossary.js.
+def is_suffix(entry: dict) -> bool:
+    """Är posten ett suffix (ändelse)? Måste matcha isSuffixEntry() i JS.
 
-    Siffror → 'siffror'; A–Ö → versal bokstav; allt annat (poster som inleds
-    med streck, dvs ändelser/suffix) → 'tecken'.
+    Suffix-poster inleds med streck (t.ex. -itis); de berikade affix-posterna
+    bär dessutom ordklassen 'suffix '/'Efterled' först i definitionen.
     """
-    c = term[0]
+    return entry["term"].startswith("-") or entry["def"].startswith(
+        ("suffix ", "Efterled")
+    )
+
+
+def is_prefix(entry: dict) -> bool:
+    """Är posten ett prefix (förstavelse)? Måste matcha isPrefixEntry() i JS.
+
+    Prefix-poster känns igen på ordklassen 'prefix '/'Förled' först i
+    definitionen (t.ex. a-, hyper-, cefalo-, giga). Streck-inledda poster är
+    suffix och räknas aldrig som prefix.
+    """
+    return not entry["term"].startswith("-") and entry["def"].startswith(
+        ("prefix ", "Förled")
+    )
+
+
+def page_key(entry: dict) -> str:
+    """Vilken sida en post hör till. Måste matcha pageKey() i js/glossary.js.
+
+    Suffix → 'tecken'; prefix → 'prefix'; siffror → 'siffror'; A–Ö → versal
+    bokstav. Affix avgörs av ordklassen (def) så att prefix samlas på en egen
+    sida i stället för att spridas ut bland bokstavssidorna.
+    """
+    if is_suffix(entry):
+        return "tecken"
+    if is_prefix(entry):
+        return "prefix"
+    c = sort_value(entry)[0]
     if c.isdigit():
         return "siffror"
     cu = c.upper()
@@ -192,7 +230,7 @@ def page_key(term: str) -> str:
 
 def page_slug(key: str) -> str:
     """Filnamns-slug för en grupp. Måste matcha pageSlug() i js/glossary.js."""
-    if key in ("siffror", "tecken"):
+    if key in SPECIAL:
         return key
     return _PAGE_SLUG.get(key, key.lower())
 
@@ -248,6 +286,8 @@ def group_label(key: str) -> str:
     """
     if key == "siffror":
         return "0–9"
+    if key == "prefix":
+        return "prefix"
     if key == "tecken":
         return "suffix"
     return key
@@ -257,6 +297,8 @@ def group_heading(key: str) -> str:
     """H1/rubrik-fras för gruppens egen sida."""
     if key == "siffror":
         return "siffror"
+    if key == "prefix":
+        return "förstavelser (prefix)"
     if key == "tecken":
         return "ändelser (suffix)"
     return key
@@ -291,9 +333,9 @@ def build_alphabet(present: set[str], current: str | None) -> str:
     Grupper med poster blir <a href="ordlista-x.html">; tomma blir nedtonade
     <span> (is-disabled). Den aktuella sidans chip markeras aria-current.
     glossary.js tonar dessutom ned bokstäver live efter sökträffar.
-    Ordning: A–Ö, därefter chips för siffror (0–9) och ändelser (–).
+    Ordning: A–Ö, därefter chips för siffror (0–9), prefix och suffix.
     """
-    order = SWEDISH_ALPHABET + ["siffror", "tecken"]
+    order = GROUP_ORDER
     lines: list[str] = []
     for key in order:
         label = escape_html(group_label(key))
@@ -341,16 +383,16 @@ def build_landing_index(groups: dict[str, list[dict]]) -> str:
     ett exempelord — tydlig ingång och riktigt (icke-tunt) innehåll. Antalen är
     dynamiska (i body — tillåtet; head håller 'tusentals' utan siffra).
     """
-    order = [k for k in (SWEDISH_ALPHABET + ["siffror", "tecken"]) if k in groups]
+    order = [k for k in GROUP_ORDER if k in groups]
     lines = ['        <ul class="glossary-index" aria-label="Bläddra efter bokstav">']
     for key in order:
         label = escape_html(group_label(key))
-        wide = " is-wide" if key in ("siffror", "tecken") else ""
+        wide = " is-wide" if key in SPECIAL else ""
         count = len(groups[key])
         example = escape_html(pick_example(groups[key]))
         aria_what = (
             f"Medicinska {group_heading(key)}"
-            if key in ("siffror", "tecken")
+            if key in SPECIAL
             else f"Medicinska ord på {key}"
         )
         lines.append(
@@ -594,7 +636,7 @@ def write_landing(groups: dict[str, list[dict]]) -> str:
     # som ordlistan såg ut förr, fast bara A laddas så sidan förblir lätt.
     # Övriga bokstäver nås via alfabetsraden (egna sidor) eller sökrutan.
     first_key = "A" if "A" in groups else next(
-        k for k in (SWEDISH_ALPHABET + ["siffror", "tecken"]) if k in groups
+        k for k in GROUP_ORDER if k in groups
     )
     page = render_page(
         filename=LANDING_FILE,
@@ -618,13 +660,36 @@ def write_landing(groups: dict[str, list[dict]]) -> str:
     return LANDING_FILE
 
 
+# Synliga ingresser (taglines) för specialsidorna. Prefix- och suffix-sidorna
+# nämner uttryckligen att affixen är BÅDE latinska OCH grekiska, för medicinska
+# och anatomiska termer (inte enbart latinska).
+SPECIAL_TAGLINES = {
+    "siffror": (
+        "Alla medicinska termer och förkortningar i ordlistan som inleds med en "
+        "siffra. Sök i hela ordlistan ovan, eller bläddra till en bokstav."
+    ),
+    "prefix": (
+        "Medicinska och anatomiska förstavelser (prefix) ur latinet och grekiskan "
+        "– som a-, hyper- och endo- – med betydelse, ursprung och exempel. "
+        "Sök i hela ordlistan ovan, eller bläddra vidare."
+    ),
+    "tecken": (
+        "Medicinska och anatomiska ändelser (suffix) ur latinet och grekiskan – "
+        "som -it, -emi och -ektomi – med betydelse, ursprung och exempel. "
+        "Sök i hela ordlistan ovan, eller bläddra vidare."
+    ),
+}
+
+SPECIAL_LABELS = {"siffror": "Siffror", "prefix": "Förstavelser", "tecken": "Ändelser"}
+
+
 def write_group(key: str, entries: list[dict], present: set[str]) -> str:
     filename = page_file(key)
     url = f"{SITE}/{filename}"
     heading = group_heading(key)
-    if key in ("siffror", "tecken"):
+    if key in SPECIAL:
         h1 = f"Medicinska {heading}"
-        label = "Siffror" if key == "siffror" else "Ändelser"
+        label = SPECIAL_LABELS[key]
     else:
         h1 = f"Medicinska ord på {key}"
         label = key
@@ -646,9 +711,10 @@ def write_group(key: str, entries: list[dict], present: set[str]) -> str:
         title=title,
         description=desc,
         h1=h1,
-        tagline=(
-            f"Alla termer i ordlistan som börjar på {label.lower() if key not in ('siffror','tecken') else heading}. "
-            "Sök i hela ordlistan ovan, eller bläddra till en annan bokstav."
+        tagline=SPECIAL_TAGLINES.get(
+            key,
+            f"Alla termer i ordlistan som börjar på {label.lower()}. "
+            "Sök i hela ordlistan ovan, eller bläddra till en annan bokstav.",
         ),
         breadcrumb_label=label,
         page_jsonld=page_obj,
@@ -717,7 +783,7 @@ def main() -> None:
     # Gruppera på sidnyckel; sortera varje grupp alfabetiskt på term.
     groups: dict[str, list[dict]] = {}
     for entry in terms:
-        groups.setdefault(page_key(sort_value(entry)), []).append(entry)
+        groups.setdefault(page_key(entry), []).append(entry)
     for key in groups:
         groups[key].sort(key=lambda e: sort_value(e).lower())
 
@@ -726,7 +792,7 @@ def main() -> None:
     # Säkra att varje sidas meta-description håller sig inom gränsen.
     over = [("(landning)", len(LANDING_DESC))] if len(LANDING_DESC) > DESC_MAX else []
     for key in present:
-        h1 = f"Medicinska ord på {key}" if key not in ("siffror", "tecken") else f"Medicinska {group_heading(key)}"
+        h1 = f"Medicinska {group_heading(key)}" if key in SPECIAL else f"Medicinska ord på {key}"
         d = group_description(key, h1)
         if len(d) > DESC_MAX:
             over.append((key, len(d)))
@@ -750,7 +816,7 @@ def main() -> None:
             old.unlink()
 
     group_files: list[str] = []
-    order = [k for k in (SWEDISH_ALPHABET + ["siffror", "tecken"]) if k in groups]
+    order = [k for k in GROUP_ORDER if k in groups]
     for key in order:
         group_files.append(write_group(key, groups[key], present))
 

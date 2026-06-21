@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.74
+- **Förstavelser (prefix) får en egen sida – `ordlista-prefix.html` – precis som suffixen.** Tidigare låg de 659 prefix-posterna (a-, hyper-, endo-, cefalo-, giga …) utspridda bland bokstavssidorna medan ändelserna (suffix) redan hade en samlad sida; det var inkonsekvent. Nu samlas alla prefix på en egen sida med eget chip ("prefix") i alfabetsraden, mellan siffror och suffix. Bokstavssidorna krymper i motsvarande mån (prefixen flyttas ut).
+- **Routing avgörs av ordklassen i definitionen**, inte av termens form: en post är prefix om def inleds med `prefix `/`Förled` (och inte är ett streck-suffix), suffix om den inleds med `-`, `suffix ` eller `Efterled`. `page_key()` i generatorn och `pageKey()`/`isPrefixEntry()`/`isSuffixEntry()` i `js/glossary.js` hålls byte-identiska så att sök-djuplänkar pekar rätt (verifierat: 659 prefix / 153 suffix i båda).
+- **Bing-vänlig meta, titel och ingress för prefix-sidan.** Egen `<title>` ("Medicinska förstavelser och prefix förklarade | Anatomiquiz", ≤60 tecken), unik `<meta name="description">` (≤157 tecken) och egen synlig ingress.
+- **Prefix- OCH suffix-sidorna säger nu uttryckligen att affixen är både latinska och grekiska** (för medicinska och anatomiska termer), inte enbart latinska – i description och ingress.
+- `scripts/generate_glossary.py` (ny `prefix`-grupp, `is_prefix`/`is_suffix`, `SPECIAL`-konstanter, taglines) + `js/glossary.js` (spegling). Ordlistan omgenererad (32 gruppsidor + landning + sitemap). APP_VERSION/VERSION → 0.8.74 (cachebuster: app.js → 0.8.74, glossary.css/glossary.js → 0.8.74).
+
 ## 0.8.73
 - **Utbildningar utan ämnen gråas ut i "Välj utbildning".** Yrken som ännu inte har något ämne taggat åt sig (Fysioterapeut, Läkare, Medicinsk sekreterare) visas nu som inaktiverade `<option>` med suffixet "(inga ämnen ännu)" och går inte att välja. Arbetsterapeut och Sjuksköterska (som har ämnen) är opåverkade. Datadrivet: byggs av vilka `data-edu` som faktiskt förekommer bland ämnesoptionerna, så ett yrke aktiveras automatiskt när dess första ämne läggs till.
 - En sparad men nu utgråad utbildning återställs inte längre vid inläsning (faller tillbaka på förvalet Arbetsterapeut).

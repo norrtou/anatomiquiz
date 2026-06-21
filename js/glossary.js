@@ -2,7 +2,8 @@
  * glossary.js — Medicinsk ordlista (global sökning över alla undersidor)
  *
  * Ordlistan är uppdelad i en sida per begynnelsegrupp (ordlista-a.html …,
- * ordlista-siffror.html, ordlista-tecken.html) plus en landningssida. Varje
+ * ordlista-siffror.html, ordlista-prefix.html, ordlista-tecken.html) plus en
+ * landningssida. Varje
  * sida levererar sitt innehåll FÖRRENDERAT som statisk <dl> — crawlbart och
  * läsbart helt utan JavaScript. Den här filen bygger INTE om listan; den lägger
  * bara till global sökning ovanpå det statiska innehållet:
@@ -37,9 +38,28 @@ function sortValue(entry) {
   return entry.sort || entry.term
 }
 
-/** Vilken sida en term hör till. */
-function pageKey(term) {
-  const c = term[0]
+/** Är posten ett suffix (ändelse)? Speglar is_suffix() i Python. */
+function isSuffixEntry(entry) {
+  return (
+    entry.term.charAt(0) === '-' ||
+    entry.def.startsWith('suffix ') ||
+    entry.def.startsWith('Efterled')
+  )
+}
+
+/** Är posten ett prefix (förstavelse)? Speglar is_prefix() i Python. */
+function isPrefixEntry(entry) {
+  return (
+    entry.term.charAt(0) !== '-' &&
+    (entry.def.startsWith('prefix ') || entry.def.startsWith('Förled'))
+  )
+}
+
+/** Vilken sida en post hör till. Speglar page_key() i Python. */
+function pageKey(entry) {
+  if (isSuffixEntry(entry)) return 'tecken'
+  if (isPrefixEntry(entry)) return 'prefix'
+  const c = sortValue(entry)[0]
   if (c >= '0' && c <= '9') return 'siffror'
   const cu = c.toUpperCase()
   return SWEDISH_ALPHABET.includes(cu) ? cu : 'tecken'
@@ -47,7 +67,7 @@ function pageKey(term) {
 
 /** Filnamns-slug för en grupp. */
 function pageSlug(key) {
-  if (key === 'siffror' || key === 'tecken') return key
+  if (key === 'siffror' || key === 'prefix' || key === 'tecken') return key
   return PAGE_SLUG[key] || key.toLowerCase()
 }
 
@@ -73,10 +93,10 @@ function slugify(term) {
  * Länk till en terms position. Är termen på den aktuella sidan används ett rent
  * #ankare (ingen omladdning); annars full sökväg till rätt undersida.
  */
-function termHref(term, currentPage, slugOverride, sortKey) {
-  const key = pageKey(sortKey || term)
+function termHref(entry, currentPage) {
+  const key = pageKey(entry)
   const slug = pageSlug(key)
-  const anchor = '#' + (slugOverride || slugify(term))
+  const anchor = '#' + (entry.slug || slugify(entry.term))
   return slug === currentPage ? anchor : `ordlista-${slug}.html${anchor}`
 }
 
@@ -204,7 +224,7 @@ function renderResults(terms, query, currentPage) {
 
   let html = '<dl class="glossary-group">'
   ranked.forEach(({ entry: e, rank }) => {
-    const href = termHref(e.term, currentPage, e.slug, e.sort)
+    const href = termHref(e, currentPage)
     // Rank 3 = söktermen finns bara i beskrivningen; markera den så det syns
     // snabbt varför träffen kom med.
     const def = rank === 3 ? highlightMatches(formatDef(e.def), q) : formatDef(e.def)
@@ -216,7 +236,7 @@ function renderResults(terms, query, currentPage) {
 
   results.innerHTML = html
   // Alfabetsraden speglar fortfarande vilka grupper som har träffar.
-  updateAlphabet(new Set(filtered.map(e => pageKey(sortValue(e)))))
+  updateAlphabet(new Set(filtered.map(e => pageKey(e))))
   updateCount(filtered.length)
 }
 
