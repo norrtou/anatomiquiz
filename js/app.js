@@ -18,6 +18,7 @@ function getQuestionsPath(topic) {
   if (topic === 'olika_aldrar') return './data/olika_aldrar.json'
   if (topic === 'medicinsk_latin') return './data/medicinsk_latin.json'
   if (topic === 'anatomi_fysiologi_flashcards') return './data/anatomi_fysiologi_flashcards.json'
+  if (topic === 'farmakologi') return './data/farmakologi.json'
   // 'blandade' uses loadQuestionsFromMultiplePaths() instead
   return './data/riktningar.json'
 }
@@ -62,7 +63,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.8'
+const APP_VERSION = '0.9.9'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'

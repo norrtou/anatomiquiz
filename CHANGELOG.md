@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.9
+- **Nytt flashcard-ämne "Farmakologi (FC)" under Allmänt.** 217 kort som täcker läkemedelsbegrepp/regelverk (FASS, ATC, godkännande, studiefaser), beredningsformer & administreringsvägar, farmakodynamik (ligand/receptor, agonist/antagonist, potens/efficacy, TI), farmakokinetik (ADME, metabolism, halveringstid, steady state) samt interaktioner och biverkningar. Ny datafil `data/farmakologi.json`, sökväg i `getQuestionsPath()` och `<option data-edu="allmant">`. Första ämnet under "Allmänt".
+- **Bildfråga borttagen.** Ett figurförklarande kort (legend A–F på en koncentration–tidkurva, utan textfråga) togs bort; inklistrad UI-text ("Not studied …") rensades. En exakt dubblettfråga ("Vad är farmakovigilans?") togs in en gång.
+- Endast `data/farmakologi.json` + inkoppling. APP_VERSION/VERSION → 0.9.9 (cachebuster: app.js → 0.9.9).
+
 ## 0.9.8
 - **371 nya flashcards i "Anatomi & fysiologi (FC)" under Sjuksköterska.** Deck 82 → 453 kort. Täcker näringslära/metabolism, andning, rörelseapparat & idrottsskador, njurar/urin, endokrina hormoner, blod/cirkulation, nervsystem och syra-bas/cellbiologi.
 - **Bildfrågor borttagna.** Två rena rita-frågor utan textsvar ("Rita en kurva över lungvolymerna", "Beskriv var njurarna sitter") togs bort. Kort av typen "Rita en skiss … samt beskriv" som hade fullständiga textsvar omformulerades till rena beskrivningsfrågor (korsbryggecykeln, motorisk enhet, urinbildningen). En exakt dubblettfråga ("Vad är en motorisk enhet?") togs in en gång.

@@ -1,0 +1,1955 @@
+[
+  {
+    "id": "fk_1",
+    "type": "fc",
+    "prompt": "Vad är ett läkemedel enligt definition?",
+    "correct": "En substans som används för att förebygga, påvisa, lindra eller bota sjukdom.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_2",
+    "type": "fc",
+    "prompt": "Vilka är de fyra huvudsakliga syftena med läkemedel?",
+    "correct": "Förebygga sjukdom (t.ex. vaccin)\nPåvisa/diagnostisera sjukdom (t.ex. kontrastmedel)\nLindra sjukdom (t.ex. smärtstillande)\nBota sjukdom (t.ex. antibiotika)",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_3",
+    "type": "fc",
+    "prompt": "Vad betyder ordet farmakologi?",
+    "correct": "Läran om läkemedel och deras effekter/verkningsmekanismer i kroppen. Delas in i farmakodynamik (vad ett läkemedel gör med kroppen) och farmakokinetik (vad kroppen gör med ett läkemedel).",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_4",
+    "type": "fc",
+    "prompt": "Vad innefattar begreppet farmaci?",
+    "correct": "Läkemedlets hantering: läkemedelsberedning, sammansättning, tillverkning, förvaring och kvalitetssäkring.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_5",
+    "type": "fc",
+    "prompt": "Vad är stereoisomeri?",
+    "correct": "Molekyler med samma kemiska formel men olik rumslig struktur.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_6",
+    "type": "fc",
+    "prompt": "Vad är en enantiomer?",
+    "correct": "En av två spegelbildsformer av samma molekyl.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_7",
+    "type": "fc",
+    "prompt": "Vad innebär kiralitet?",
+    "correct": "Att en molekyl inte kan överläggas på sin spegelbild, d.v.s. att det finns två enantiomerer.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_8",
+    "type": "fc",
+    "prompt": "Vad är skillnaden mellan optiskt aktiv och optiskt inaktiv?",
+    "correct": "Optiskt aktivt läkemedel/substans: enantiomerrent, vrider planpolariserat ljus.\nOptiskt inaktivt läkemedel/substans: ingen ljusvridning p.g.a. 50/50 av båda enantiomerer, kallas racemat.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_9",
+    "type": "fc",
+    "prompt": "Vad kallas en substans/läkemedel som enbart består av den ena stereoisomeren?",
+    "correct": "Enantiomerren substans. Optiskt aktiv/ren då den vrider planpolariserat ljus antingen:\n- Medurs/medsols = (+)-enantiomer\n- Moturs/motsols = (−)-enantiomer.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_10",
+    "type": "fc",
+    "prompt": "Vad är en racemat?",
+    "correct": "En blandning av två enantiomerer i förhållandet 1:1 och är optiskt inaktiv eftersom den inte vrider planpolariserat ljus då (+)- och (−)-enantiomer-effekten tar ut varandra.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_11",
+    "type": "fc",
+    "prompt": "Cahn-Ingold-Prelog (CIP)-prioriteringsregler: hur bestäms R- eller S-enantiomer?",
+    "correct": "Prioriteringsregler (1–4) som används för att rangordna substituenter runt ett kiralt centrum:\n- Högst atomnummer = högst prioritet\n- Lägst atomnummer = lägst prioritet\nBestämmandet av R eller S:\n- Lägst prioritet (1) bakåt\n- Följ → 2 → 3 → 4\n- medurs = R\n- moturs = S",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_12",
+    "type": "fc",
+    "prompt": "Hur avgör man om ett läkemedel är enantiomerrent och optiskt aktivt i FASS?",
+    "correct": "- (R) eller (S) i början på den aktiva substansens IUPAC-namn\n- Prefix såsom \"es-\", \"levo-\" eller \"dextro-\" före produktnamn",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_13",
+    "type": "fc",
+    "prompt": "Vad är farmakognosi?",
+    "correct": "Läran om biologiskt aktiva substanser från naturen (växter, mikroorganismer, marina organismer) och deras användning som läkemedel, naturprodukter och kosttillskott.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_14",
+    "type": "fc",
+    "prompt": "Vad är farmakovigilans?",
+    "correct": "Handlar om övervakning av läkemedelssäkerhet, biverkningar och risker efter godkännande.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_15",
+    "type": "fc",
+    "prompt": "Skillnad mellan växtbaserade läkemedel och traditionella växtbaserade läkemedel?",
+    "correct": "VBL: Fullständig dokumentation av effekt och säkerhet från kliniska studier.\nTVBL: Kräver inte fullständig dokumentation, det räcker med att produkten används under en lång tid (minst 30 år, varav 25 år i Sverige) och att säkerheten är god. Enklare registreringsprocess.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_16",
+    "type": "fc",
+    "prompt": "Vad kännetecknar receptfria läkemedel?",
+    "correct": "Kan köpas utan recept, avsedda för egenvård och relativt låg risk för allvarliga biverkningar. Säljs ofta i små paket med låg styrka. Märks med \"OTC\" (over the counter) i FASS.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_17",
+    "type": "fc",
+    "prompt": "Vad kännetecknar receptbelagda läkemedel?",
+    "correct": "Kräver recept, används vid tillstånd som kräver medicinsk bedömning och kräver individuell uppföljning.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_18",
+    "type": "fc",
+    "prompt": "Vad kännetecknar särskilda läkemedel?",
+    "correct": "Receptbelagda med extra restriktioner, ofta narkotikaklassade eller toxiska och kan kräva särskild förskrivningsrätt eller sjukhusmiljö.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_19",
+    "type": "fc",
+    "prompt": "Vad skall en receptförskrivning innehålla?",
+    "correct": "- Namn och personnummer\n- Läkemedel: administreringsform, styrka och dos\n- Hur många tabletter patienten kan ta ut och hur ofta\n- Indikation: anledning till medicinering\n- Läkarsignatur",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_20",
+    "type": "fc",
+    "prompt": "Vad är FASS?",
+    "correct": "= Farmacevtiska specialiteter i Sverige. Svensk läkemedelsdatabas med information om indikationer, dosering, biverkningar och interaktioner.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_21",
+    "type": "fc",
+    "prompt": "Vad är en farmakopé?",
+    "correct": "Officiell samling kvalitetskrav för läkemedel som beskriver hur läkemedel skall framställas och vilka krav som gäller för renhet och styrka. Idag används Europafarmakopén (Ph. Eur.) i Sverige, som är en bindande samling kvalitetsstandarder för läkemedel och substanser (fastställd av Läkemedelsverket).",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_22",
+    "type": "fc",
+    "prompt": "Vad är ATC-koder (Anatomical Therapeutic Chemical)?",
+    "correct": "System som klassificerar läkemedel i 14 huvudgrupper baserat på verkningsmekanism och indikation.\n- Vilket organ de verkar på\n- Terapeutisk effekt\n- Kemiska egenskaper",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_23",
+    "type": "fc",
+    "prompt": "Vad är ett naturläkemedel per definition?",
+    "correct": "Läkemedel där den verksamma beståndsdelen uteslutande består av naturliga substanser (t.ex. växter, djur, mineraler eller bakterier) och som inte är kemiskt modifierade (inga syntetiskt framställda substanser).",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_24",
+    "type": "fc",
+    "prompt": "Vad är ett biologiskt läkemedel?",
+    "correct": "Läkemedel framställt från biologiskt material, t.ex. proteiner eller antikroppar.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_25",
+    "type": "fc",
+    "prompt": "Vad skiljer utveckling och produktion av biologiska läkemedel från så kallade \"vanliga\" läkemedel?",
+    "correct": "Biologiska läkemedel:\n- Produceras i levande celler\n- Stora, komplexa molekyler\n- Känsliga, processen avgör produkten\n- Kopior (inte identiska) = biosimilar\nVanligt läkemedel:\n- Framställs via kemisk syntes\n- Små väldefinierade molekyler\n- Kopior = generika",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_26",
+    "type": "fc",
+    "prompt": "Skillnad mellan begreppen substansnamn, hjälpämne och produktnamn?",
+    "correct": "- Substansnamn: namn på aktiv substans (t.ex. paracetamol)\n- Hjälpämne: ämnen i läkemedel som inte är aktiv substans\n- Produktnamn: namn som läkemedelsföretaget har gett produkten (t.ex. Alvedon, Panodil)",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_27",
+    "type": "fc",
+    "prompt": "Vad menas med generika/generikum?",
+    "correct": "En preparatkopia av ursprungsläkemedlet med samma aktiva substans. Kan säljas då patent för ursprungsläkemedlet gått ut (t.ex. Alvedon, Panodil).",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_28",
+    "type": "fc",
+    "prompt": "Vad är en biosimilar?",
+    "correct": "En biologisk motsvarighet till ett biologiskt ursprungsläkemedel. Kan säljas då patent för ursprungsläkemedlet gått ut.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_29",
+    "type": "fc",
+    "prompt": "Vad är analoga läkemedel?",
+    "correct": "Läkemedel med liknande kemisk struktur och liknande effekt men inte identiska.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_30",
+    "type": "fc",
+    "prompt": "Vad är extempore läkemedel?",
+    "correct": "Läkemedel som tillverkas individuellt för en patient på apotek.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_31",
+    "type": "fc",
+    "prompt": "Vad är parallellimporterade läkemedel?",
+    "correct": "Läkemedel importerade från annat EU-land men med samma innehåll.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_32",
+    "type": "fc",
+    "prompt": "Vad innebär oregistrerat läkemedel?",
+    "correct": "Ett läkemedel utan marknadsföringstillstånd i Sverige.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_33",
+    "type": "fc",
+    "prompt": "När kan oregistrerade läkemedel användas?",
+    "correct": "Vid särskilt behov, t.ex. licensläkemedel.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_34",
+    "type": "fc",
+    "prompt": "När får oregistrerade läkemedel användas?",
+    "correct": "Om inget godkänt alternativ finns i Sverige. Kräver särskilt tillstånd (licens) från Läkemedelsverket och medicinsk motivering. Ansvarig läkare har särskilt ansvar för behandlingens säkerhet.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_35",
+    "type": "fc",
+    "prompt": "Vad är ett marknadsföringstillstånd för läkemedel?",
+    "correct": "Myndighetsgodkännande från Läkemedelsverket som krävs för att få sälja, marknadsföra och använda läkemedlet rutinmässigt. Bygger på dokumentation av kvalitet, säkerhet och effekt.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_36",
+    "type": "fc",
+    "prompt": "Vad är licensläkemedel?",
+    "correct": "Läkemedel som ej finns i FASS, som kräver särskild ansökan, som ev. finns utomlands.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_37",
+    "type": "fc",
+    "prompt": "Vad är pre-kliniska studier?",
+    "correct": "Djur- och laboratoriestudier före försök på människa. Utforskandet av tecken på önskad effekt och upptäckande av allvarliga biverkningar.\n- In vitro: provglas\n- In vivo: på djur",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_38",
+    "type": "fc",
+    "prompt": "Klinisk fas för nytt läkemedel: Vad består fas 1–4 av?",
+    "correct": "1. Säkerhet och dosering: undersöka säkerhet, hur läkemedlet tas upp/bryts ned (farmakokinetik) och övervaka biverkningar på en mindre grupp friska människor.\n2. Effekt och biverkningar: utvärdera effekt och optimal dos på en större grupp sjuka patienter, samt fortsatt övervakning av biverkningar.\n3. Bekräfta och jämföra: dubbelblinda RCT-studier med stort antal deltagare, upptäcka sällsynta biverkningar.\n4. Fortsatt övervakning av säkerhet och effekt: uppföljning efter godkännande, upptäcka mycket sällsynta biverkningar.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_39",
+    "type": "fc",
+    "prompt": "Vad är en RCT-studie?",
+    "correct": "Randomiserad kontrollerad studie där deltagare slumpmässigt delas in i behandlingsgrupp (läkemedel) eller kontrollgrupp (placebo).",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_40",
+    "type": "fc",
+    "prompt": "Vad är en dubbelblind studie?",
+    "correct": "Varken patient eller behandlare vet vem som får läkemedel/placebo.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_41",
+    "type": "fc",
+    "prompt": "Vilka krav måste uppfyllas för att ett läkemedel ska godkännas?",
+    "correct": "Kvalitet: Läkemedlet måste vara tillverkat enligt strikta standarder (Good Manufacturing Practice – GMP) och ha en stabil sammansättning.\nSäkerhet: Prekliniska studier (laboratorietester och djurförsök) måste visa att läkemedlet inte är oskäligt giftigt.\nEffekt: Kliniska prövningar (studier på människor) måste bevisa att läkemedlet faktiskt fungerar för den avsedda sjukdomen/indikationen.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_42",
+    "type": "fc",
+    "prompt": "Hur kan sjukhuspersonal minska läkemedels påverkan på miljö?",
+    "correct": "- Verka för rationell läkemedelsanvändning (rätt läkemedel, rätt dos, rätt tid)\n- Undvika överförskrivning och onödiga läkemedel\n- Säkerställa korrekt kassering av läkemedelsrester (inte i avloppet)\n- Följa lokala rutiner för miljöklassning och läkemedelsval när alternativ finns\n- Informera patienter om att lämna in överblivna läkemedel till apotek\n- Förklara varför läkemedel inte ska spolas ner i toalett eller vask",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_43",
+    "type": "fc",
+    "prompt": "Vad är biofas?",
+    "correct": "Målplatsen dit läkemedlet når efter distribution.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_44",
+    "type": "fc",
+    "prompt": "Beredningsform för olika biofaser: hud, ögon, luftvägar, näsa, magsäck och mun?",
+    "correct": "- Hud: kräm, salva\n- Ögon: ögondroppar, ögonsalva\n- Luftvägar: inhalationsspray, pulverinhalator\n- Näsa: nässpray\n- Magsäck: oral suspension, brustablett\n- Mun: resoribletter, sugtablett",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_45",
+    "type": "fc",
+    "prompt": "Skillnad på enteral, parenteral och lokal administrering?",
+    "correct": "Enteral: via mag-tarmkanalen (systemisk)\n- Tabletter och kapslar\n- Orallösning\n- Rektalt (men viss andel når systemkretsloppet utan förstapassagemetabolism)\nParenteral: förbi mag-tarmkanalen (systemisk)\n- Subkutana injektioner\n- Intramuskulära injektioner\n- Intravenösa injektioner/infusioner\n- Intraossös administrering\n- Transdermalt (plåster)\n- (Sublingualt)\nLokalt/topikal: via hud eller slemhinna\n- Krämer\n- Ögondroppar\n- Inhalation för lokal effekt på luftvägar, men viss systemisk effekt",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_46",
+    "type": "fc",
+    "prompt": "Vad är topikal administrering?",
+    "correct": "Läkemedlet appliceras lokalt på hud eller slemhinna för lokal effekt.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_47",
+    "type": "fc",
+    "prompt": "Vad är enhetsspruta?",
+    "correct": "Spruta fylld med förutbestämd dos läkemedel, t.ex. insulin, vaccin.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_48",
+    "type": "fc",
+    "prompt": "Vad avgör beredningsform?",
+    "correct": "- Substansens kemiska egenskaper\n- Önskad effekt (lokalt/systemiskt)\n- Patientens ålder, tillstånd och önskemål\n- Säkerhet och följsamhet",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_49",
+    "type": "fc",
+    "prompt": "Skillnad mellan peroral (per os) och oral administrering?",
+    "correct": "Peroral: läkemedlet sväljs, tas upp via mag-tarmkanalen, ger systemisk effekt och påverkas av förstapassagemetabolism i lever.\nOral: läkemedlet ges i munhålan, kan ge lokal effekt, sväljs inte nödvändigtvis.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_50",
+    "type": "fc",
+    "prompt": "Vad är en enterotablett?",
+    "correct": "Enteral tablett med tunn och slät beläggning på utsidan som skyddar läkemedlet mot magsyran och undviker irritation av slemhinnor. Löses upp först i tarmen. Skall inte krossas/delas.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_51",
+    "type": "fc",
+    "prompt": "Vad är depottabletter?",
+    "correct": "Enteral tablett där aktiv substans ger effekt över en längre tid, ger jämnare plasmakoncentration. Får inte krossas/delas.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_52",
+    "type": "fc",
+    "prompt": "Vad är en suspension?",
+    "correct": "Flytande beredning där fasta partiklar är uppslammade.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_53",
+    "type": "fc",
+    "prompt": "Vad är en resoriblett?",
+    "correct": "Tablett som smälter i munnen (sublingualt) och ger systemisk effekt. Undviker förstapassagemetabolism. Ska inte tuggas eller sväljas.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_54",
+    "type": "fc",
+    "prompt": "Vad är en kapsel?",
+    "correct": "Enteral kapsel som löser upp sig i mag-tarmkanalen.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_55",
+    "type": "fc",
+    "prompt": "Vilka fördelar och nackdelar är förknippade med rektal beredningsform för systemiskt bruk?",
+    "correct": "Fördelar:\n- Då peroralt intag inte är möjligt\n- Delvis förbi förstapassagemetabolism i lever\nNackdelar:\n- Osäker och varierande absorption\n- Obehaglig eller integritetskränkande\n- Risk för läckage",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_56",
+    "type": "fc",
+    "prompt": "Vad är suppositorium?",
+    "correct": "Fast rektal läkemedelsberedningsform som förs in i ändtarmen. Ger delvis systemisk och lokal effekt.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_57",
+    "type": "fc",
+    "prompt": "Vilka vaginala beredningsformer finns?",
+    "correct": "- Vagitorium (vaginaltablett / slidtablett)\n- Vaginalkräm\n- Vaginalgel\n- Vaginalring",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_58",
+    "type": "fc",
+    "prompt": "Vad används vaginala beredningsformer till?",
+    "correct": "Lokal behandling, t.ex.:\n- Infektioner (svamp, bakteriell vaginos)\n- Hormonell behandling (t.ex. östrogen vid slemhinneatrofi)\n- Preventivmedel (vaginalring)\n- Lokal symtomlindring (klåda, torrhet)",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_59",
+    "type": "fc",
+    "prompt": "Skillnad mellan kutan och dermal administrering?",
+    "correct": "Kutan = på huden, lokal effekt, t.ex. kräm.\nDermal = i huden, systemisk effekt, t.ex. transdermala plåster.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_60",
+    "type": "fc",
+    "prompt": "Exempel på transdermala plåster? Förhållningsregler?",
+    "correct": "- Smärtstillande: t.ex. opioider\n- Nikotinersättning: rökavvänjning\n- Hormoner: östrogen\nApplicera på ren, torr och oskadad hud. Byt appliceringsställe vid varje nytt plåster. Följ ordinerat bytesintervall. Tvätta händer före och efter applicering.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_61",
+    "type": "fc",
+    "prompt": "Läkemedel för ögat: vilket är samlingsnamnet?",
+    "correct": "Oftalmika.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_62",
+    "type": "fc",
+    "prompt": "Varför är oftalmika läkemedel alltid patientbundna?",
+    "correct": "Minska risken för smittspridning då ögat är mycket infektionskänsligt.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_63",
+    "type": "fc",
+    "prompt": "Vilka inhalationsberedningsformer finns och vilka fördelar/nackdelar har de?",
+    "correct": "Inhalationsläkemedel ges som spray, pulver eller via nebulisator. Spray kräver god koordination, pulver kräver kraftig inandning och nebulisator är lättast att använda men mer tidskrävande.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_64",
+    "type": "fc",
+    "prompt": "Vad är intraossös administrering och när är det aktuellt?",
+    "correct": "Intraossös administrering innebär att läkemedel ges i benmärgshålan (ofta proximala tibia, proximala humerus) och används vid akuta situationer när intravenös infart inte snabbt kan etableras.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_65",
+    "type": "fc",
+    "prompt": "Skillnad mellan injektion och infusion?",
+    "correct": "Injektion: snabb tillförsel (bolus), ofta 1–20 ml.\nInfusion: långsam tillförsel, mer än 50 ml.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_66",
+    "type": "fc",
+    "prompt": "Vilka muskler för intramuskulär administrering och hur stor volym kan de olika musklerna ta emot?",
+    "correct": "- m. deltoideus (axeln): ca 1 ml\n- m. vastus lateralis (lateralt om låret): ca 2–3 ml\n- m. gluteus medius (övre laterala kvadranten av skinkan): ca 3–5 ml\n- (m. gluteus maximus (mitten på skinkan): ca 4–5 ml)",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_67",
+    "type": "fc",
+    "prompt": "Vilken är administrationsvägen? a) s.c. b) i.m. c) i.v. d) i.a.",
+    "correct": "a) subkutant\nb) intramuskulärt\nc) intravenös\nd) intraarteriell",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_68",
+    "type": "fc",
+    "prompt": "Beskriv det som är karakteristiskt för injektionssubstans respektive injektionskoncentrat.",
+    "correct": "En injektionssubstans är färdig att använda och ges utan spädning, medan ett injektionskoncentrat är en koncentrerad beredning som måste spädas före administrering.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_69",
+    "type": "fc",
+    "prompt": "Vad betyder och innefattar farmakodynamik?",
+    "correct": "Vad läkemedlet gör med kroppen: hur läkemedlet utövar sin effekt, vilka biologiska målstrukturer det påverkar, vilken respons som uppstår på molekylär, cellulär och organnivå.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_70",
+    "type": "fc",
+    "prompt": "På vilka nivåer kan farmakodynamik studeras?",
+    "correct": "- Molekylär: ligand-receptor-interaktioner\n- Cellnivå: signaltransduktion och cellrespons\n- Vävnads/organnivå: t.ex. hjärtfrekvens, bronkdilatation\n- Helkroppsnivå: klinisk effekt och symptomlindring",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_71",
+    "type": "fc",
+    "prompt": "Vad är en ligand?",
+    "correct": "Ämne som binder till en receptor, kan vara kroppseget eller läkemedel. Kan aktivera, blockera eller modulera receptorn.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_72",
+    "type": "fc",
+    "prompt": "Vad är en naturlig/onaturlig ligand?",
+    "correct": "Naturlig ligand: kroppseget ämne som binder till en receptor och utlöser en fysiologisk effekt, t.ex. hormoner och neurotransmittorer.\nOnaturlig ligand: inte kroppsegna utan tillförs utifrån, t.ex. läkemedel (agonister och antagonister), syntetiska substanser, toxiner och droger.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_73",
+    "type": "fc",
+    "prompt": "Vad är en receptor?",
+    "correct": "Protein i cellmembran eller i cellen som binder till en ligand.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_74",
+    "type": "fc",
+    "prompt": "Vilken roll spelar en receptor?",
+    "correct": "Är målstruktur för ligander. Receptorn omvandlar ligandbindning till en biologisk respons, vilket benämns som effekt för onaturliga ligander inom farmakodynamiken. Kan aktiveras av agonister eller blockeras av antagonister.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_75",
+    "type": "fc",
+    "prompt": "Vad menas med bindningsställe?",
+    "correct": "Specifik del av receptor där en ligand kan binda in. Avgör vilka ligander som kan binda in (selektivitet, affinitet och effekt).",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_76",
+    "type": "fc",
+    "prompt": "Vad menas med affinitet och hur påverkar det ligandens bindning till receptorn?",
+    "correct": "Beskriver hur starkt en ligand binder till sin receptor, d.v.s. hur lätt receptorer ockuperas.\n- Hög affinitet: liganden binder lätt och sitter kvar länge (lägre koncentration krävs för hög receptorockupans)\n- Låg affinitet: liganden binder svagt och släpper lätt (högre koncentration krävs för samma receptorockupans)",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_77",
+    "type": "fc",
+    "prompt": "Vad menas med maximal effekt inom farmakodynamik?",
+    "correct": "Maximal effekt är den största biologiska effekt som ett specifikt läkemedel kan åstadkomma i kroppen, oavsett hur hög dos man ger. Betecknas som Emax och ses som maximivärdet i dos-responskurvan.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_78",
+    "type": "fc",
+    "prompt": "Skillnad mellan hög och låg affinitet?",
+    "correct": "Hög affinitet: stark receptorbindning, låg dos krävs.\nLåg affinitet: svag receptorbindning, högre dos krävs.\n(påverkar dosering och risk för biverkningar)",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_79",
+    "type": "fc",
+    "prompt": "Reversibel vs irreversibel bindning?",
+    "correct": "Reversibel: liganden kan släppa från receptorn (vanligast).\nIrreversibel bindning: liganden binder permanent, d.v.s. effekt kvarstår tills nya receptorer bildas, t.ex. vissa cytostatika.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_80",
+    "type": "fc",
+    "prompt": "Vad innebär lagen om massverkan?",
+    "correct": "Beskriver att graden av ligand-receptor-bindning beror på koncentrationen av både ligand och receptor, samt ligandens affinitet. Vid högre ligandkoncentration bildas fler ligand-receptor-komplex, vilket leder till ökad receptorockupans och effekt.\nDefinition: L + R ⇌ LR\n- L = ligand\n- R = receptor\n- LR = ligand-receptor-komplex",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_81",
+    "type": "fc",
+    "prompt": "Sambandet mellan koncentration och receptorbindning?",
+    "correct": "Ökad läkemedelskoncentration leder till ökad receptorockupans, men bara upp till en maximal nivå där alla tillgängliga receptorer är ockuperade.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_82",
+    "type": "fc",
+    "prompt": "Vad är ockupans?",
+    "correct": "Andelen receptorer som är bundna av ligand vid en viss koncentration. Ökad ockupans leder oftast till ökad effekt, men sambandet påverkas av ligandens efficacy.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_83",
+    "type": "fc",
+    "prompt": "Vad är receptorreserv?",
+    "correct": "Att det finns fler receptorer än vad som krävs för maximal effekt.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_84",
+    "type": "fc",
+    "prompt": "Är relationen ockupans-effekt alltid linjär?",
+    "correct": "Nej, p.g.a. receptorreserv kan maximal effekt uppnås innan alla receptorer är bundna.\n- Vid full agonist aktiveras receptorn maximalt, därför räcker det att en del av receptorerna binds för maximal effekt (hög efficacy)\n- Vid partiell agonist aktiveras receptorn svagare även när den binder, vilket innebär att den når en lägre maximal effekt (låg efficacy).",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_85",
+    "type": "fc",
+    "prompt": "Varför kan en maximal effekt uppnås även om inte alla receptorer är bundna?",
+    "correct": "Maximal effekt kan uppnås utan full receptorockupans eftersom det finns reservreceptorer och eftersom receptoraktivering leder till förstärkt signaltransduktion.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_86",
+    "type": "fc",
+    "prompt": "Vad menas med selektivitet?",
+    "correct": "Hur väl ett läkemedel föredrar en receptor framför andra. Selektivitet är dosberoende:\n- Låg koncentration = hög selektivitet\n- Hög koncentration = bindning även till andra receptorer",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_87",
+    "type": "fc",
+    "prompt": "Skillnad mellan selektivitet och specificitet?",
+    "correct": "Selektivitet: ligand föredrar en receptor, men binder även till andra vid hög koncentration.\nSpecificitet: ligand binder endast till en specifik receptor oavsett koncentration.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_88",
+    "type": "fc",
+    "prompt": "Kan ett läkemedel vara selektivt men inte specifikt?",
+    "correct": "Ja, de flesta läkemedel är selektiva vid låg dos, men binder till fler receptorer vid hög dos.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_89",
+    "type": "fc",
+    "prompt": "Hur påverkas selektivitet av dos?",
+    "correct": "Vid högre dos minskar selektiviteten eftersom läkemedlet börjar binda även till andra receptorer.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_90",
+    "type": "fc",
+    "prompt": "Klinisk betydelse av selektivitet och specificitet?",
+    "correct": "Hög selektivitet minskar biverkningar och interaktioner och låg selektivitet ökar risken för oönskade effekter, därför är dosering avgörande för att behålla selektivitet. Full specificitet är sällsynt.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_91",
+    "type": "fc",
+    "prompt": "Hur kan en receptor uppvisa olika respons beroende på vilken ligand som binder till den?",
+    "correct": "En receptor kan ge olika biologiska svar beroende på vilken ligand som binder, eftersom ligander kan påverka receptorn på olika sätt.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_92",
+    "type": "fc",
+    "prompt": "Vad är en full (ren) agonist?",
+    "correct": "Ger maximal effekt när den binder till receptorn.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_93",
+    "type": "fc",
+    "prompt": "Vad är en partiell agonist?",
+    "correct": "Ger lägre maximal effekt även vid full receptorbindning.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_94",
+    "type": "fc",
+    "prompt": "Vad är en antagonist?",
+    "correct": "Binder till receptorn men aktiverar den inte = blockerar.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_95",
+    "type": "fc",
+    "prompt": "Vad är en invers antagonist?",
+    "correct": "Ger motsatt effekt jämfört med agonist, d.v.s. minskar receptoraktiviteten under basallinjen (negativ effekt).",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_96",
+    "type": "fc",
+    "prompt": "Skillnad mellan kompetitiv och non-kompetitiv antagonism?",
+    "correct": "Kompetitiv antagonism (binder ortosteriskt): binder till samma bindningsställe som den naturliga agonisten, men då bindningen är reversibel så ökar sannolikheten att agonisten binder vid högre koncentration.\nNon-kompetitiv antagonist (binder allosteriskt): binder till annat bindningsställe (eller irreversibelt) och blockerar receptorfunktionen oberoende av agonistens koncentration.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_97",
+    "type": "fc",
+    "prompt": "Ortosteriskt vs allosteriskt bindningsställe?",
+    "correct": "Ortosteriskt bindningsställe: agonist-/antagonist-ligander binder där naturlig ligand binder.\nAllosteriskt bindningsställe: agonist-/antagonist-ligander binder till annat ställe, vilket kan modifiera receptorresponsen.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_98",
+    "type": "fc",
+    "prompt": "Vad är en modulator?",
+    "correct": "Påverkar receptorfunktionen utan att själv aktivera/stimulera (agonist) eller blockera/hämma (antagonist) receptorn direkt.\n- Positiv modulator: förstärker effekt av naturlig ligand eller agonist\n- Negativ modulator: minskar agonistens bindning och/eller receptoraktivering efter bindning\n- Aktiverar receptorn direkt även utan naturlig ligand (allosterisk agonist)",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_99",
+    "type": "fc",
+    "prompt": "Vad menas med potens?",
+    "correct": "Hur mycket läkemedel, dos eller koncentration, som krävs för att uppnå en viss effekt:\nHög potens → låg dos ger effekt\nLåg potens → högre dos krävs för samma effekt",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_100",
+    "type": "fc",
+    "prompt": "Hur avgör man vilket läkemedel som är mest potent?",
+    "correct": "Det läkemedel som ger effekt vid lägst dos är mest potent. Praktiskt görs detta genom att jämföra:\nEC₅₀ (koncentrationen som ger 50 % av maximal effekt). Lägre EC₅₀ = högre potens.\nI dos-responskurvan:\n- Hög potens = kurvan är vänsterförskjuten, d.v.s. lägre dos/koncentration (x-värde) krävs för att nå 50 % maximal effekt (y-värde)\n- Låg potens = kurvan är högerförskjuten, d.v.s. högre dos/koncentration (x-värde) krävs för att nå 50 % maximal effekt (y-värde)",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_101",
+    "type": "fc",
+    "prompt": "Vad är efficacy?",
+    "correct": "Efficacy (intrinsic efficacy) beskriver hur stor maximal effekt ett läkemedel kan ge när det binder till sin receptor.\n- Handlar om förmågan att aktivera receptorn\n- Oberoende av dos (när maximal effekt uppnåtts)",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_102",
+    "type": "fc",
+    "prompt": "Vad menas med efficacy (intrinsic efficacy) och hur skiljer det sig från potens?",
+    "correct": "Efficacy: läkemedlets maximala effekt vid receptoraktivering.\nPotens: den dos eller koncentration som krävs för att uppnå en viss effekt.\n- Full agonist = hög efficacy (full receptoraktivering)\n- Partiell agonist = lägre efficacy (delvis receptoraktivering)\n- Antagonist = har ingen efficacy (blockerar endast)",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_103",
+    "type": "fc",
+    "prompt": "Kan ett läkemedel ha hög potens med låg efficacy?",
+    "correct": "Ja. Exempelvis kan en partiell agonist:\n- Binda till receptorn mycket effektivt → hög affinitet → hög potens (liten dos krävs för effekt)\n- Men bara aktivera receptorn delvis → låg efficacy (maximal effekt är ändå begränsad)",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_104",
+    "type": "fc",
+    "prompt": "Vad är PAM (Positiv Allosterisk Modulation) och NAM (Negativ Allosterisk Modulation)?",
+    "correct": "Binder till ett annat bindningsställe än det ortosteriska och ändrar receptorns beteende.\nPAM: förstärker receptorns svar på den naturliga liganden/agonisten genom affinitet och/eller efficacy.\nNAM: försvagar receptorns svar på agonisten genom affinitet och/eller efficacy.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_105",
+    "type": "fc",
+    "prompt": "Vad är terapeutiskt index (TI) och hur beräknas det?",
+    "correct": "Kvoten mellan dödlig och terapeutisk dos för 50 % av populationen. Definition: TI = LD₅₀/ED₅₀\nHögt TI = säkrare läkemedel\nLågt TI = mindre säkert läkemedel",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_106",
+    "type": "fc",
+    "prompt": "Vad är terapeutisk bredd?",
+    "correct": "Kvoten mellan toxisk dos och terapeutisk dos för 50 % av populationen, vilket mäter säkerhetsmarginalen. Definition: TB = TD₅₀/ED₅₀\nHögt TB = säkrare läkemedel\nLågt TB = mindre säkert läkemedel",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_107",
+    "type": "fc",
+    "prompt": "Vad är ED₅₀?",
+    "correct": "Dos som ger 50 % av maximal effekt.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_108",
+    "type": "fc",
+    "prompt": "Vad är TD₅₀?",
+    "correct": "Dos som ger toxisk effekt hos 50 %.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_109",
+    "type": "fc",
+    "prompt": "Vad är LD₅₀?",
+    "correct": "Dos som orsakar död hos 50 % (används i djurförsök).",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_110",
+    "type": "fc",
+    "prompt": "Vad mäter LD₅₀/ED₅₀-kvoten?",
+    "correct": "= Terapeutiskt index (TI)\nHög kvot = säkrare läkemedel\nLåg kvot = mindre säkert",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_111",
+    "type": "fc",
+    "prompt": "Vad är MEC och MTC?",
+    "correct": "MEC = Minimum Effective Concentration\nMTC = Minimum Toxic Concentration\nTerapeutiskt område ligger mellan dessa.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_112",
+    "type": "fc",
+    "prompt": "Vad är terapeutiskt område?",
+    "correct": "Koncentrationsintervall mellan MEC och MTC där läkemedlet är effektivt utan att vara toxiskt.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_113",
+    "type": "fc",
+    "prompt": "Vad är Emax, Tmax och effektduration?",
+    "correct": "Emax = maximal effekt, oavsett dosökning. Bestäms av läkemedlets efficacy (receptoraktivering).\nTmax = tid till maxkoncentration efter administrering.\nEffektduration = hur länge klinisk effekt varar (påverkas av ADME, dos och beredningsform).",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_114",
+    "type": "fc",
+    "prompt": "Vad är toleransutveckling?",
+    "correct": "Minskad effekt vid upprepad användning av läkemedel.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_115",
+    "type": "fc",
+    "prompt": "Vilka mekanismer kan ligga bakom toleransutveckling?",
+    "correct": "Toleransutveckling kan bero på farmakodynamiska förändringar såsom receptoranpassning, samt fysiologiska eller beteendemässiga kompensationsmekanismer.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_116",
+    "type": "fc",
+    "prompt": "Farmakodynamisk vs farmakokinetisk tolerans?",
+    "correct": "Farmakodynamisk tolerans:\n- Receptornedreglering: färre receptorer uttrycks\n- Desensitering: receptorer blir mindre känsliga\n- Minskad signaltransduktion: svagare intracellulärt svar\nFarmakokinetisk tolerans:\n- Ökad metabolism eller elimination (enzyminduktion)\n- Lägre läkemedelskoncentration vid samma dos",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_117",
+    "type": "fc",
+    "prompt": "Vad är desensitisering?",
+    "correct": "Innebär att en receptor blir mindre känslig för sin ligand efter upprepad eller långvarig stimulering.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_118",
+    "type": "fc",
+    "prompt": "Vad är abstinens?",
+    "correct": "Abstinens (substantiv, härleds ur lat. abstinere) betyder i sin översättning 'avhållsamhet'. Det avser avhållsamhet från till exempel njutningsmedel och sexuell aktivitet. Som medicinsk term innebär det att en person upphör att använda läkemedel, alkohol, tobak eller narkotika.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_119",
+    "type": "fc",
+    "prompt": "Vad är rebound-fenomen?",
+    "correct": "Tillfällig överdriven återkomst av symptom efter utsättning av läkemedel.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_120",
+    "type": "fc",
+    "prompt": "Vad är takyfylaxi?",
+    "correct": "Snabb toleransutveckling efter upprepade doser på kort tid. T.ex. nästäppsmedel: ger snabb effektförlust vid upprepad användning, risk för rebound-nästäppa.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_121",
+    "type": "fc",
+    "prompt": "Hur kan man kliniskt hantera/förebygga toleransutveckling, rebound-fenomen och abstinensbesvär?",
+    "correct": "Abstinens:\n- Använda lägsta effektiva dos\n- Kortast möjliga behandlingstid\n- Regelbunden omprövning av behov\n- Tydlig patientinformation om risker och korrekt användning\nToleransutveckling:\n- Undvika kontinuerlig hög dos\n- Intermittent behandling (dosfria intervall)\n- Alternativt läkemedel\n- Kombinera med icke-farmakologiska åtgärder\nRebound-fenomen:\n- Gradvis nedtrappning\n- Begränsa behandlingstid\n- Ersätta med mildare alternativ vid utsättning\nAbstinensbesvär:\n- Långsam nedtrappning\n- Undvika abrupt utsättning\n- Ge stödjande behandling vid behov",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_122",
+    "type": "fc",
+    "prompt": "Vad betyder och innefattar farmakokinetik?",
+    "correct": "Beskriver läkemedlets koncentration i kroppen som funktion av tiden. Hur läkemedlet tas upp, fördelas, omvandlas och elimineras från kroppen.\nFunktion: y = plasmakoncentration, x = tid",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_123",
+    "type": "fc",
+    "prompt": "Skillnad mellan farmakodynamik och farmakokinetik?",
+    "correct": "Farmakodynamik: vad läkemedlet gör med kroppen.\nFarmakokinetik: vad kroppen gör med läkemedlet.\nDynamik: effekt av koncentration\nKinetik: koncentration över tid",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_124",
+    "type": "fc",
+    "prompt": "Vad står ADME för?",
+    "correct": "Absorption: upptag från administreringsstället till blodet.\nDistribution: fördelning från blodet till vävnader.\nMetabolism: kemisk omvandling (ofta förstapassagemetabolism i levern).\nElimination/Exkretion: utsöndring ur kroppen.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_125",
+    "type": "fc",
+    "prompt": "Vad kan påverka absorption av läkemedel?",
+    "correct": "Läkemedelsrelaterade faktorer:\n- Beredningsform\n- Löslighet (vatten-/fettlöslighet)\n- Joniseringsgrad (pKa och pH)\n- Partikelstorlek\nPatient- och fysiologiska faktorer:\n- pH i mag-tarmkanal\n- Ventrikeltömning\n- Tarmmotorik\n- Föda\n- Sjukdomstillstånd",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_126",
+    "type": "fc",
+    "prompt": "Varför påverkar aklorhydri absorption?",
+    "correct": "Aklorhydri = låg eller ingen magsyra\n- Försämrar upplösning av vissa läkemedel\n- Påverkar joniseringsgrad\n- Minskar absorptionen av läkemedel som kräver surt pH",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_127",
+    "type": "fc",
+    "prompt": "Varför påverkar illamående absorption?",
+    "correct": "Kräkning → läkemedlet hinner inte absorberas.\nFörändrad ventrikeltömning → långsammare eller oförutsägbar absorption.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_128",
+    "type": "fc",
+    "prompt": "Vad är passiv diffusion, faciliterad transport och aktiv transport?",
+    "correct": "Olika sätt för läkemedel att passera membran ut till blodet:\nPassiv diffusion: läkemedel som har liten molekylstorlek och är hydrofoba rör sig längs koncentrationsgradienten, kräver ingen energi.\nFaciliterad transport: läkemedel som har större molekylstorlek och är hydrofila transporteras via transportprotein, kräver ingen energi.\nAktiv transport: för läkemedel med större molekylstorlek som är hydrofila, energikrävande men kan gå mot koncentrationsgradienten.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_129",
+    "type": "fc",
+    "prompt": "Vad är syra-bas-fälla?",
+    "correct": "Syra-bas-fälla innebär att ett läkemedel joniseras i en miljö med annat pH och därför \"fastnar\" där. T.ex. i magsäcken.\nKlinisk betydelse:\n- Basiska läkemedel kan ansamlas i sur miljö (t.ex. magsäck, fostervatten)\n- Viktigt vid graviditet och intoxikationer",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_130",
+    "type": "fc",
+    "prompt": "Vad är förstapassagemetabolism?",
+    "correct": "Då läkemedel metaboliseras i levern och/eller tarmvägg innan de når systemkretsloppet.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_131",
+    "type": "fc",
+    "prompt": "Administreringsvägar som undviker förstapassagemetabolism?",
+    "correct": "- i.v.\n- i.m.\n- s.c.\n- Sublingual\n- Rektal (delvis)",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_132",
+    "type": "fc",
+    "prompt": "Vad betyder biotillgänglighet?",
+    "correct": "Den andel given dos som når systemkretsloppet.\nIntravenöst: 100 %\nPeroralt: < 100 % p.g.a. förstapassagemetabolism",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_133",
+    "type": "fc",
+    "prompt": "Vad betyder plasmaproteinbindningsgrad?",
+    "correct": "Den andel av läkemedlet som är bundet till plasmaproteiner (främst albumin). Endast fri (obunden) fraktion är farmakologiskt aktiv, d.v.s. kan passera membran ut till målvävnad.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_134",
+    "type": "fc",
+    "prompt": "Vad påverkar läkemedlets förmåga att ta sig ut ur blodbanan till målvävnad?",
+    "correct": "- Läkemedlets molekylära storlek\n- Molekylär laddning (oladdade molekyler passerar lättare)\n- Molekylens löslighet (fettlösliga passerar lättare)\n- Proteinbindning (endast fri andel passerar)\n- Blod-vävnadsbarriär (tight junctions i kapillärers endotel)\n- Blod-hjärnbarriär (astrocyter försvårar)",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_135",
+    "type": "fc",
+    "prompt": "Vad innebär displacement?",
+    "correct": "Displacement innebär att ett läkemedel tränger undan ett annat läkemedel från plasmaproteinbindning, vilket ökar den fria koncentrationen av det undanträngda läkemedlet. Kan leda till biverkningar.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_136",
+    "type": "fc",
+    "prompt": "Vad menas med fördelningsrum (compartments)?",
+    "correct": "Compartment är ett teoretiskt rum som används för att förenkla beskrivningen av hur läkemedel fördelas i kroppen. Det är inte anatomiska rum, utan en modell.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_137",
+    "type": "fc",
+    "prompt": "Vad är skenbar distributionsvolym (Vd)?",
+    "correct": "Vd är ett teoretiskt mått som beskriver hur utbrett ett läkemedel fördelas i kroppen. Definition: mängd läkemedel i kroppen/plasmakoncentration = Vd\nLåg Vd (<20 L) → stannar i blodet\nHög Vd (>42 L) → ansamlas i vävnader",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_138",
+    "type": "fc",
+    "prompt": "Elimination – vilka två faser finns?",
+    "correct": "1. Metabolism: kemisk omvandling i kroppen (förstapassagemetabolism)\n2. Exkretion: utsöndring ur kroppen (främst via njurar)",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_139",
+    "type": "fc",
+    "prompt": "Viktigaste organ för elimination?",
+    "correct": "Njurar, men även gallgångar ut till tarmen för fettlösliga läkemedel.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_140",
+    "type": "fc",
+    "prompt": "Vilka läkemedel reabsorberas respektive utsöndras i njurarnas tubulussystem?",
+    "correct": "Reabsorberas: fettlösliga läkemedel (fettlösliga behöver konjugeras av lever).\nUtsöndras: vattenlösliga läkemedel.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_141",
+    "type": "fc",
+    "prompt": "Metabolism – vilka faser finns?",
+    "correct": "Fas I: funktionalisering av CYP-enzymer i lever\n- Oxidation (avger elektroner)\n- Reduktion (tar upp elektroner)\n- Hydrolys (molekyl klyvs genom reaktion med vatten)\n- Vissa läkemedel blir tillräckligt vattenlösliga redan i fas I (= kan utsöndras med njurar), andra kräver ytterligare metabolisering genom:\nFas II: konjugering av UGT-enzymer i lever → mer vattenlösligt → lättare utsöndring",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_142",
+    "type": "fc",
+    "prompt": "Vad är enzyminduktion?",
+    "correct": "Ökad enzymaktivitet p.g.a. vissa läkemedel/ämnen → snabbare nedbrytning/metabolism.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_143",
+    "type": "fc",
+    "prompt": "Vad är enzyminhibition?",
+    "correct": "Minskad enzymaktivitet p.g.a. vissa läkemedel/ämnen → långsammare nedbrytning/metabolism.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_144",
+    "type": "fc",
+    "prompt": "Konsekvenser av enzyminduktion och inhibition?",
+    "correct": "Enzyminduktion → lägre läkemedelskoncentration → sämre effekt.\nEnzyminhibition → högre koncentration → ökad biverkningsrisk.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_145",
+    "type": "fc",
+    "prompt": "Vad är en prodrug?",
+    "correct": "Inaktiv substans som omvandlas till aktiv form i levern. T.ex. kodein → morfin",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_146",
+    "type": "fc",
+    "prompt": "Vilka läkemedel utsöndras genom gallgångarna till duodenum och sedan delvis återabsorberas igen? Vad kallas denna process?",
+    "correct": "= Enterohepatisk reabsorption.\nFettlösliga läkemedel med för stor molekylstorlek för att konjugeras av levern. Duodenum och intestinum tenue kommer dock att återabsorbera en andel av läkemedlet igen, så endast en liten mängd utsöndras.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_147",
+    "type": "fc",
+    "prompt": "Vad är enterohepatiska kretsloppet?",
+    "correct": "Innebär att ett läkemedel:\n1. Metaboliseras i levern\n2. Utsöndras i gallan till tarmen\n3. Återabsorberas i tarmen\n4. Transporteras tillbaka till levern genom vena porta\nLäkemedlet cirkulerar flera varv mellan lever och tarm, vilket förlänger effektduration.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_148",
+    "type": "fc",
+    "prompt": "Antibiotikans påverkan på enterohepatiska kretsloppet?",
+    "correct": "Antibiotika kan slå ut tarmfloran → minskad återabsorption → minskad effekt och kortare effektduration.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_149",
+    "type": "fc",
+    "prompt": "Vanligaste eliminationsvägarna?",
+    "correct": "- Njurar (urin)\n- Levern (galla/avföring)\n- Lungor (gasformiga ämnen)",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_150",
+    "type": "fc",
+    "prompt": "Vad är clearance (Cl) och hur kan det beräknas?",
+    "correct": "Mått på kroppens förmåga att eliminera läkemedel och anger den plasmavolym som helt renas från läkemedel per tidsenhet.\nDefinition: eliminerad mängd per tidsenhet / plasmakoncentration = Cl",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_151",
+    "type": "fc",
+    "prompt": "Hur påverkar njur- och leversjukdom elimination?",
+    "correct": "Njursjukdom → minskad utsöndring → förlängd halveringstid.\nLeversjukdom → minskad metabolism.\nKräver dosanpassning → förlängd halveringstid.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_152",
+    "type": "fc",
+    "prompt": "Vad innebär första ordningens kinetik?",
+    "correct": "Då en konstant andel av läkemedlet elimineras per tidsenhet = halveringstiden är konstant.\nKonsekvens:\nHög koncentration → snabb elimination\nLåg koncentration → långsammare elimination",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_153",
+    "type": "fc",
+    "prompt": "Vad är nollte ordningens kinetik?",
+    "correct": "En konstant mängd läkemedel elimineras per tidsenhet = halveringstiden är inte konstant.\nKonsekvens:\n- Små dosökningar kan ge kraftigt ökad plasmakoncentration\n- Hög risk för toxicitet",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_154",
+    "type": "fc",
+    "prompt": "Vad menas med att eliminationshastigheten mättas?",
+    "correct": "Kroppens system för att eliminera läkemedel är mättade. T.ex. metaboliserande enzymer är fullt upptagna och kan inte arbeta snabbare. Ökad risk för ackumulering och toxicitet.\nFörsta ordningens kinetik → nollte ordningens kinetik",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_155",
+    "type": "fc",
+    "prompt": "Vad är halveringstid (T½)?",
+    "correct": "Tid för läkemedlets plasmakoncentration att halveras. Olika lång tid för olika läkemedel.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_156",
+    "type": "fc",
+    "prompt": "Hur många halveringstider tar eliminering vid första ordningens kinetik?",
+    "correct": "1 t½ → 50 % kvar\n2 t½ → 25 % kvar\n3 t½ → 12,5 % kvar\n4 t½ → ~6 % kvar\n5 t½ → ~3 % kvar\nCa 4–5 halveringstider för nästan full elimination.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_157",
+    "type": "fc",
+    "prompt": "Vad säger formeln T½ = (0,693 × Vd) / Cl?",
+    "correct": "Formeln visar att halveringstiden är proportionell mot distributionsvolymen och omvänt proportionell mot clearance.\n- 0,693: matematisk konstant\n- Hur mycket läkemedel som finns \"utspritt\" i kroppen (Vd)\n- Hur snabbt kroppen kan göra sig av med det (Cl)",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_158",
+    "type": "fc",
+    "prompt": "Vad är steady state?",
+    "correct": "Steady state är det tillstånd där tillförseln av läkemedel per tidsenhet är lika stor som eliminationen per tidsenhet, vilket gör att plasmakoncentrationen blir stabil över tid. Alltså en jämviktskoncentration, när tillförsel = elimination.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_159",
+    "type": "fc",
+    "prompt": "Hur många halveringstider krävs för steady state?",
+    "correct": "1 t½ → ~50 % av steady state\n2 t½ → ~75 %\n3 t½ → ~87,5 %\n4 t½ → ~94 %\n5 t½ → ~97 %\nCa 4–5 halveringstider.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_160",
+    "type": "fc",
+    "prompt": "Vad är ackumulering?",
+    "correct": "Innebär att läkemedlet ansamlas i kroppen vid upprepad dosering. Kliniskt relevant vid:\n- Lång halveringstid\n- Njur- eller leversvikt",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_161",
+    "type": "fc",
+    "prompt": "Varför är steady state centralt vid långtidsbehandling?",
+    "correct": "- Effekten bedöms först vid steady state\n- Dosjusteringar baseras på stabil plasmakoncentration",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_162",
+    "type": "fc",
+    "prompt": "Vad är dalvärde?",
+    "correct": "Lägsta koncentrationen före nästa dos. Används för terapeutisk läkemedelsmonitorering.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_163",
+    "type": "fc",
+    "prompt": "Vad är bolusdos och underhållsdos?",
+    "correct": "Bolusdos: hög initial engångsdos som ges i början av behandling med syfte att snabbt nå plasmakoncentration med terapeutisk effekt.\nUnderhållsdos: dos som upprätthåller steady state.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_164",
+    "type": "fc",
+    "prompt": "Varför ges bolusdos före infusion?",
+    "correct": "För att snabbt nå terapeutisk plasmakoncentration.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_165",
+    "type": "fc",
+    "prompt": "Skillnad i tid till effekt: parenteralt vs enteralt?",
+    "correct": "Parenteralt: direkt till blodbanan = omedelbar effekt = 100 % biotillgänglighet.\nEnteralt: långsammare p.g.a. absorption och metabolism.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_166",
+    "type": "fc",
+    "prompt": "Vad menas med genetisk polymorfism och hur påverkar det läkemedel?",
+    "correct": "Att det finns ärftliga variationer i gener som kodar för t.ex. läkemedelsmetaboliserande CYP-enzymer, vilket kan leda till att individer metaboliserar läkemedel olika snabbt, vilket påverkar både effekt och biverkningsrisk.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_167",
+    "type": "fc",
+    "prompt": "Intraindividuella och interindividuella skillnader?",
+    "correct": "Intraindividuella skillnader: variation hos samma individ över tid, t.ex. faktorer som ålder, sjukdom eller graviditet.\nInterindividuella skillnader: variation mellan olika individer, t.ex. faktorer som genetik, kön, kroppsvikt.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_168",
+    "type": "fc",
+    "prompt": "Skillnad mellan snabba och långsamma metaboliserare?",
+    "correct": "Snabba: bryter ned läkemedel snabbt → risk för utebliven effekt.\nLångsamma: bryter ned läkemedel långsamt → risk för ackumulering och biverkningar.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_169",
+    "type": "fc",
+    "prompt": "Vad är farmakogenetik och varför är det viktigt?",
+    "correct": "Studerar hur genetiska variationer påverkar läkemedelsrespons och möjliggör individualiserad behandling med bättre effekt och färre biverkningar.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_170",
+    "type": "fc",
+    "prompt": "Vad är en läkemedelsinteraktion?",
+    "correct": "När ett läkemedel påverkar effekten, koncentrationen eller biverkningsprofilen av ett annat läkemedel.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_171",
+    "type": "fc",
+    "prompt": "Klinisk betydelse av interaktioner och klassificering?",
+    "correct": "Efter allvarlighetsgrad:\n- mindre betydelse\n- kliniskt betydelsefulla\n- bör undvikas\n- kontraindicerande (skadlig)\nTyp A (Augmented): dosrelaterade, förutsägbara.\nTyp B (Bizarre): icke-dosrelaterade, oförutsägbara, idiosynkratiska.\nTyp C (Chronic): dos- och tidsrelaterade.\nTyp D (Delayed): tidsrelaterade, fördröjda.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_172",
+    "type": "fc",
+    "prompt": "Vad är polyfarmaci?",
+    "correct": "Samtidig användning av flera läkemedel. Risken för interaktioner ökar exponentiellt med antalet läkemedel.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_173",
+    "type": "fc",
+    "prompt": "Vad betyder off-label användning?",
+    "correct": "Användning av läkemedel utanför godkänd indikation, dos eller ålder. Exempel: antidepressiva mot smärta.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_174",
+    "type": "fc",
+    "prompt": "Vad betyder att seponera ett läkemedel?",
+    "correct": "Avsluta läkemedelsbehandling, ibland gradvis.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_175",
+    "type": "fc",
+    "prompt": "Vad är läkemedelsgenomgång?",
+    "correct": "En systematisk genomgång av patientens läkemedel.\nEnkel: översiktlig\nUtökad: djup analys inkl. interaktioner, indikation och uppföljning",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_176",
+    "type": "fc",
+    "prompt": "Vem ska erbjudas en läkemedelsgenomgång?",
+    "correct": "Äldre patienter, särskilt med polyfarmaci, multisjuklighet eller återkommande vårdkontakter.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_177",
+    "type": "fc",
+    "prompt": "När ökar risken för interaktionseffekter?",
+    "correct": "Vid polyfarmaci, hög ålder, nedsatt lever-/njurfunktion, hög dos, smalt terapeutiskt fönster.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_178",
+    "type": "fc",
+    "prompt": "Hur delas det mänskliga åldrandet in?",
+    "correct": "Barn: 0–12 år\nUngdom: 13–18 år\nVuxen: 18–64 år\nÄldre: ≥ 65 år\nMycket gamla: ≥ 80–85 år",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_179",
+    "type": "fc",
+    "prompt": "Vilka är de åtta interaktionsklassificeringarna enligt FASS?",
+    "correct": "Klassificering enligt klinisk betydelse:\nA: Interaktion saknar klinisk betydelse\nB: Interaktionens kliniska betydelse är oklar/varierar\nC: Kliniskt betydelsefull interaktion som kan hanteras (t.ex. med dosjustering)\nD: Kliniskt betydelsefull interaktion som bör undvikas\nKlassificering efter dokumentationens art:\n0: Data från studier av andra läkemedel med liknande egenskaper\n1: Ofullständiga fallrapporter eller in vitro-studier\n2: Väldokumenterade fallrapporter\n3: Studier på friska personer och/eller pilotstudier\n4: Kontrollerade studier i relevant patientpopulation",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_180",
+    "type": "fc",
+    "prompt": "Vad definieras en farmakodynamisk interaktion som?",
+    "correct": "Då effekten av ett läkemedel förändras av ett annat läkemedel, utan att koncentrationen av läkemedlet i blodet påverkas. T.ex. läkemedel som verkar på samma receptor.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_181",
+    "type": "fc",
+    "prompt": "Vad definieras en farmakokinetisk interaktion som?",
+    "correct": "Interaktion som påverkar absorption, distribution, metabolism eller elimination, vilket resulterar i en ändrad koncentration av läkemedlet i kroppen. T.ex. läkemedel som hämmar ett enzym i levern, vilket gör att ett annat bryts ned långsammare.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_182",
+    "type": "fc",
+    "prompt": "Farmakokinetiska nivåer för interaktion?",
+    "correct": "Absorption\nDistribution\nMetabolism\nElimination",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_183",
+    "type": "fc",
+    "prompt": "Födans påverkan på absorption?",
+    "correct": "Kan fördröja magsäckstömning, påverka pH och komplexbinda läkemedel.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_184",
+    "type": "fc",
+    "prompt": "Beskriv hur farmakodynamiska interaktioner kan uppstå.",
+    "correct": "Additiv:\nAdditiv effekt uppstår när två läkemedel med liknande farmakologiska verkan tas tillsammans, och den totala effekten blir lika med summan av de individuella effekterna (1 + 1 = 2).\nSynergistisk:\nSynergism uppstår när kombinationen av två läkemedel ger en total effekt som är större än summan av de individuella effekterna (1 + 1 > 2).\nAntagonistisk:\nAntagonistisk effekt uppstår när ett läkemedel minskar eller blockerar effekten av ett annat läkemedel (1 + 1 = 0).",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_185",
+    "type": "fc",
+    "prompt": "Skillnad på farmakokinetiska och farmakodynamiska interaktioner?",
+    "correct": "Farmakokinetisk: ändrar koncentration.\nFarmakodynamisk: ändrar effekt.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_186",
+    "type": "fc",
+    "prompt": "Olika sätt läkemedel kan interagera?",
+    "correct": "- Kemiskt (in vitro)\n- Farmakodynamiskt (effekt)\n- Farmakokinetiskt (ADME)",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_187",
+    "type": "fc",
+    "prompt": "Om P-glykoproteinet induceras, hur påverkas läkemedelsabsorptionen och plasmakoncentrationen?",
+    "correct": "Ökar uttransport → minskad absorption → minskar biotillgänglighet → lägre plasmakoncentration.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_188",
+    "type": "fc",
+    "prompt": "Koncentrations-effekt begrepp: MEC",
+    "correct": "Lägsta effektiva koncentration.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_189",
+    "type": "fc",
+    "prompt": "Koncentrations-effekt begrepp: MTC",
+    "correct": "Lägsta toxiska koncentrationen.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_190",
+    "type": "fc",
+    "prompt": "Koncentrations-effekt begrepp: Terapeutiskt område",
+    "correct": "Mellan MEC och MTC.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_191",
+    "type": "fc",
+    "prompt": "Koncentrations-effekt begrepp: Cmax",
+    "correct": "Maxkoncentration.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_192",
+    "type": "fc",
+    "prompt": "Koncentrations-effekt begrepp: Tmax",
+    "correct": "Tid till Cmax.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_193",
+    "type": "fc",
+    "prompt": "Koncentrations-effekt begrepp: AUC",
+    "correct": "Total systemisk exponering.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_194",
+    "type": "fc",
+    "prompt": "Koncentrations-effekt begrepp: Effektstart",
+    "correct": "När effekten börjar.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_195",
+    "type": "fc",
+    "prompt": "Koncentrations-effekt begrepp: Effektduration",
+    "correct": "Hur länge effekten varar.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_196",
+    "type": "fc",
+    "prompt": "Vad är additiv, potentierad och synergistisk effekt?",
+    "correct": "Additiv: effekter summeras.\nPotentierad: ett läkemedel förstärker ett annat.\nSynergistisk: förstärkt effekt tillsammans.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_197",
+    "type": "fc",
+    "prompt": "Vad är en biverkan?",
+    "correct": "Oönskad effekt vid normal dosering.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_198",
+    "type": "fc",
+    "prompt": "Vad är symbolen för utökad övervakning?",
+    "correct": "En svart triangel (▼) – innebär att biverkningar ska rapporteras extra noggrant.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_199",
+    "type": "fc",
+    "prompt": "Varför utökad övervakning?",
+    "correct": "T.ex. vid nytt läkemedel, ny aktiv substans, begränsad erfarenhet eller biologiskt läkemedel.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_200",
+    "type": "fc",
+    "prompt": "Skillnad mellan typ A- och B-biverkningar?",
+    "correct": "Typ A: dosberoende, förutsägbara och relaterade till farmakologisk effekt.\nTyp B: dosoberoende, oförutsägbara, ovanliga, inte direkt kopplade till farmakologisk verkan, t.ex. allergiska reaktioner.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_201",
+    "type": "fc",
+    "prompt": "Organ som ofta drabbas av biverkningar?",
+    "correct": "Lever: p.g.a. förstapassagemetabolism.\nNjurar: huvudorgan för utsöndring, risk för att hög koncentration i tubuli skadar njurcellerna.\nCNS: känsligt för små koncentrationsförändringar.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_202",
+    "type": "fc",
+    "prompt": "Vad är Cotards syndrom?",
+    "correct": "En sällsynt psykotisk vanföreställning (\"jag är död\"), kan uppstå som CNS-biverkan av vissa läkemedel.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_203",
+    "type": "fc",
+    "prompt": "Vad är neutropeni och varför vid cytostatika?",
+    "correct": "Neutropeni = lågt antal neutrofila granulocyter. Det är en vanlig biverkan av cytostatika eftersom dessa läkemedel hämmar snabbt delande celler, inklusive benmärgens blodbildande celler.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_204",
+    "type": "fc",
+    "prompt": "Vad är urtikaria?",
+    "correct": "= nässelutslag = histaminmedierad hudreaktion. Vanlig allergisk biverkan (typ B-biverkan).",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_205",
+    "type": "fc",
+    "prompt": "Vad är förlängt QT-syndrom?",
+    "correct": "QT-intervall = tid för QRS-komplex och T-våg = tiden för hjärtats ventriklar att dra ihop sig och slappna av.\nFörlängt QT-intervall orsakas ofta av läkemedel som blockerar kaliumkanaler (t.ex. haloperidol) → risk för allvarliga arytmier som \"Torsades de Pointes\".",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_206",
+    "type": "fc",
+    "prompt": "Vad betyder CAVE och när används det?",
+    "correct": "Viktig varningsinformation i journalen om patienten har allergier, överkänslighet eller allvarlig biverkan för ett visst läkemedel.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_207",
+    "type": "fc",
+    "prompt": "Vilka biverkningar ska rapporteras?",
+    "correct": "Allvarliga, oväntade/nya som inte finns beskrivna i produktinformationen, hos barn/gravida/äldre eller för läkemedel med utökad övervakning (▼). Hälso- och sjukvårdspersonal har skyldighet, men även patienter kan rapportera till Läkemedelsverket.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_208",
+    "type": "fc",
+    "prompt": "Riskgrupper för biverkningar?",
+    "correct": "Äldre, barn, gravida, njur-/leversjuka, patienter med genetiska variationer (påverkar farmakokinetik) eller polyfarmaci-patienter.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_209",
+    "type": "fc",
+    "prompt": "Varför är dessa grupper mer benägna till biverkningar?",
+    "correct": "Barn: omogen lever → sämre metabolism, omogna njurar → långsammare elimination.\nÄldre: nedsatt njurfunktion → minskad clearance, minskad leverfunktion, mer kroppsfett → lipofila läkemedel lagras längre (vävnadsdistribution = Vd).\nPolyfarmaci → fler interaktioner: displacement och additiva effekter.\nGravida:\n- Ökad plasmavolym → spädningseffekt och minskad albuminkoncentration → mer fritt (aktivt) läkemedel vilket resulterar i lägre systemisk koncentration, men samtidigt mer aktivt läkemedel.\n- Ökad njurclearance\nFostret: omogna organ (lever, njurar och ofullständig blod-hjärnbarriär) → kan orsaka missbildningar.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_210",
+    "type": "fc",
+    "prompt": "Vanliga biverkningar hos hjärta/kärl?",
+    "correct": "- Hypotension (lågt blodtryck)\n- Hypertension (högt blodtryck)\n- Takykardi (snabb hjärtrytm) / bradykardi (långsam hjärtrytm)\n- Arytmier (QT-förlängning)\n- Perifera ödem",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_211",
+    "type": "fc",
+    "prompt": "Vanliga CNS-biverkningar?",
+    "correct": "- Trötthet och minskad reaktionsförmåga\n- Yrsel\n- Kognitiv påverkan: koncentrationssvårigheter, minnesproblem eller förvirring (särskilt hos äldre)",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_212",
+    "type": "fc",
+    "prompt": "Vad innebär antikolinerg biverkan, och ge exempel på läkemedel som kan orsaka det?",
+    "correct": "= då ett läkemedel blockerar acetylkolin-receptorer tillhörande parasympatiska nervsystemet.\nBiverkningar: muntorrhet, förstoppning, urinretention, takykardi.\nLäkemedel: t.ex. antipsykotika och vissa antidepressiva.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_213",
+    "type": "fc",
+    "prompt": "Vad är terapeutiskt fönster?",
+    "correct": "Koncentrationsintervall där läkemedlet är effektivt men inte toxiskt.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_214",
+    "type": "fc",
+    "prompt": "Risker för biverkningar/interaktioner vid leversjukdom/njursvikt?",
+    "correct": "Leversjukdom:\n- Minskad metabolism: t.ex. lägre aktivitet av nedbrytande CYP-enzymer\n- Förändrad förstapassagemetabolism → mer läkemedel når systemisk cirkulation\n- Minskad proteinbindning → ökad fri (aktiv) fraktion\nNjursvikt:\n- Minskad elimination: lägre clearance, förlängd halveringstid → ökad ackumulering\n- Aktiv metabolit kan ansamlas\nInteraktioner:\n- Små förändringar i metabolism → stora koncentrationsökningar\n- Enzymhämmare får större effekt\n- Displacement får större klinisk betydelse\n- Smalt terapeutiskt fönster → särskilt riskabelt",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_215",
+    "type": "fc",
+    "prompt": "Strategier för att förebygga biverkningar?",
+    "correct": "- Lägsta effektiva dos\n- Läkemedelsgenomgång\n- Uppföljning\n- Patientinformation",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_216",
+    "type": "fc",
+    "prompt": "Vad betyder compliance och adherence?",
+    "correct": "Compliance: hur väl patient följer ordination.\nAdherence: hur väl patient och vårdgivare gemensamt följer behandlingsplanen, ett mer modernt begrepp. God adherence = säkrare behandling.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  },
+  {
+    "id": "fk_217",
+    "type": "fc",
+    "prompt": "Vad innebär begreppet seponera?",
+    "correct": "Innebär att avsluta behandling med ett läkemedel, antingen direkt eller genom nedtrappning.",
+    "topic": "farmakologi",
+    "difficulty": "Normal",
+    "source": "Farmakologi (flashcards)"
+  }
+]
