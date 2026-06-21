@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.8
+- **371 nya flashcards i "Anatomi & fysiologi (FC)" under Sjuksköterska.** Deck 82 → 453 kort. Täcker näringslära/metabolism, andning, rörelseapparat & idrottsskador, njurar/urin, endokrina hormoner, blod/cirkulation, nervsystem och syra-bas/cellbiologi.
+- **Bildfrågor borttagna.** Två rena rita-frågor utan textsvar ("Rita en kurva över lungvolymerna", "Beskriv var njurarna sitter") togs bort. Kort av typen "Rita en skiss … samt beskriv" som hade fullständiga textsvar omformulerades till rena beskrivningsfrågor (korsbryggecykeln, motorisk enhet, urinbildningen). En exakt dubblettfråga ("Vad är en motorisk enhet?") togs in en gång.
+- Endast `data/anatomi_fysiologi_flashcards.json`. APP_VERSION/VERSION → 0.9.8 (cachebuster: app.js → 0.9.8).
+
 ## 0.9.7
 - **Tillägg i "Om Anatomiquiz"-intron.** Ny mening om att det utförligaste övningsmaterialet för närvarande finns inom arbetsterapi och att arbete pågår för att alla utbildningar ska få ett lika rikt material. Endast synlig brödtext i intro-sektionen (ingen meta/head rörd).
 - APP_VERSION/VERSION → 0.9.7 (cachebuster: app.js → 0.9.7).
