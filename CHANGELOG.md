@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.2
+- **ICD-koderna placeras nu sist i varje ordlistepost.** Klassificeringskoderna (ICD-10/ICD-11) låg tidigare mitt i definitionen – ofta före etymologin ("Av …") eller före ålderdomliga synonymer/korsreferenser – vilket var inkonsekvent. Nu står kod- och klassificeringsblocket alltid sist, efter betydelse, Sv./Eng./Vardag., etymologi, Ålderdomligt och Jfr/Se. 325 poster justerade. Ordningsföljden inom kodblocket bevaras (ICD-10 före ICD-11).
+- Endast omflyttning av befintlig text i `data/ordlista.json`; inga koder ändrade, lagda till eller borttagna (prosamentioner som "enligt DSM/ICD" rörs inte). Ordlistan omgenererad.
+- APP_VERSION/VERSION → 0.9.2 (cachebuster: app.js → 0.9.2, glossary.css/glossary.js → 0.9.2).
+
 ## 0.9.1
 - **"Sök i hela ordlistan ovan" → "nedan" på alla ordliste-sidor.** Sökfältet ligger under ingressen i sidmallen, så hänvisningen var felvänd. Rättat i landningssidans ingress och i alla gruppsidors taglines (bokstäver, siffror, prefix, suffix).
 - `scripts/generate_glossary.py` (taglines). Ordlistan omgenererad. APP_VERSION/VERSION → 0.9.1 (cachebuster: app.js → 0.9.1, glossary.css/glossary.js → 0.9.1).
