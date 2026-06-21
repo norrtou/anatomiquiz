@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.1
+- **"Sök i hela ordlistan ovan" → "nedan" på alla ordliste-sidor.** Sökfältet ligger under ingressen i sidmallen, så hänvisningen var felvänd. Rättat i landningssidans ingress och i alla gruppsidors taglines (bokstäver, siffror, prefix, suffix).
+- `scripts/generate_glossary.py` (taglines). Ordlistan omgenererad. APP_VERSION/VERSION → 0.9.1 (cachebuster: app.js → 0.9.1, glossary.css/glossary.js → 0.9.1).
+
 ## 0.9.0
 - **Ingressen på medicinska ordlistans landningssida omformulerad.** Den synliga ingressen säger nu "latinska och grekiska termer" (tidigare bara "latinska och medicinska") och beskriver vad listan faktiskt innehåller: "9 383 latinska och grekiska termer: anatomi, fysiologi, sjukdomar, labbprover, förkortningar samt för- och efterleder" (ersätter det vaga "anatomiska, fysiologiska, patologiska, biologiska och tekniska termer"). Endast den synliga `<p class="tagline">` (body) – meta/SEO orört. Antalet (9 383) är fortsatt dynamiskt.
 - `scripts/generate_glossary.py` (`write_landing`-tagline). Ordlistan omgenererad. APP_VERSION/VERSION → 0.9.0 (cachebuster: app.js → 0.9.0, glossary.css/glossary.js → 0.9.0).

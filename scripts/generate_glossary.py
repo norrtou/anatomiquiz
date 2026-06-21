@@ -45,7 +45,7 @@ LANDING_FILE = "medicinskordlista.html"
 
 # Cachebusters per asset — bumpa bara den som faktiskt ändrats.
 STYLES_V = "0.7.1"        # css/styles.css (oförändrad sedan tidigare)
-GLOSSARY_V = "0.9.0"      # css/glossary.css + js/glossary.js (denna release)
+GLOSSARY_V = "0.9.1"      # css/glossary.css + js/glossary.js (denna release)
 
 # Svenska alfabetet — fast ordning för alfabetsraden. Bokstäver utan poster
 # renderas nedtonade (icke-klickbara), så raden ser likadan ut oavsett innehåll.
@@ -645,7 +645,7 @@ def write_landing(groups: dict[str, list[dict]]) -> str:
         h1="Medicinsk ordlista",
         tagline=(
             "Medicinska ord, förkortningar och begrepp med definitioner, synonymer "
-            "och etymologi i en sökbar ordlista. Sök i hela ordlistan ovan, eller "
+            "och etymologi i en sökbar ordlista. Sök i hela ordlistan nedan, eller "
             f"hoppa till en bokstav i raden — {total_str} latinska och grekiska "
             "termer: anatomi, fysiologi, sjukdomar, labbprover, förkortningar samt "
             "för- och efterleder."
@@ -667,17 +667,17 @@ def write_landing(groups: dict[str, list[dict]]) -> str:
 SPECIAL_TAGLINES = {
     "siffror": (
         "Alla medicinska termer och förkortningar i ordlistan som inleds med en "
-        "siffra. Sök i hela ordlistan ovan, eller bläddra till en bokstav."
+        "siffra. Sök i hela ordlistan nedan, eller bläddra till en bokstav."
     ),
     "prefix": (
         "Medicinska och anatomiska förstavelser (prefix) ur latinet och grekiskan "
         "– som a-, hyper- och endo- – med betydelse, ursprung och exempel. "
-        "Sök i hela ordlistan ovan, eller bläddra vidare."
+        "Sök i hela ordlistan nedan, eller bläddra vidare."
     ),
     "tecken": (
         "Medicinska och anatomiska ändelser (suffix) ur latinet och grekiskan – "
         "som -it, -emi och -ektomi – med betydelse, ursprung och exempel. "
-        "Sök i hela ordlistan ovan, eller bläddra vidare."
+        "Sök i hela ordlistan nedan, eller bläddra vidare."
     ),
 }
 
@@ -715,7 +715,7 @@ def write_group(key: str, entries: list[dict], present: set[str]) -> str:
         tagline=SPECIAL_TAGLINES.get(
             key,
             f"Alla termer i ordlistan som börjar på {label.lower()}. "
-            "Sök i hela ordlistan ovan, eller bläddra till en annan bokstav.",
+            "Sök i hela ordlistan nedan, eller bläddra till en annan bokstav.",
         ),
         breadcrumb_label=label,
         page_jsonld=page_obj,
