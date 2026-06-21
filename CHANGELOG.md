@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.72
+- **Nytt ämne "Medicinsk latin" (MC) för Sjuksköterska.** Första ämnet under utbildningen Sjuksköterska: 138 multiple choice-frågor på vanliga anatomiska/medicinska latinska termer (förleder, riktningar, rörelser, strukturer, kroppsregioner). Varje term frågas som "Vad betyder …?" med ett korrekt svar + tre distraktorer plockade ur samma betydelsefamilj. Källa: 140 flashcards från ett Quizlet-set (anatomi & fysiologi för sjuksköterskor), kvalitetssäkrade vid import.
+- **Rättelser mot källan:** truncus = bål/stam (källan hade "tarm"; dubbletten "trancus = bål" sammanslagen); proximalt = närmare bålen (källan: "sämre mot bålen"); adduktion = mot mittlinjen/medialt (källan tog felaktigt även med "lateralt"); abdomen (källan felstavat "abdoment"); hyper-/hypo- = över/för mycket resp. under/för lite (källan: "överkant/underkant"); os förekom tre gånger → dubblett borttagen och betydelserna skilda med genitiv (os, oris = mun; os, ossis = ben). 140 källkort → 138 unika frågor.
+- **Ingressen uppdaterad** på startsidan: "Öva på funktionell anatomi med quiz och flashcards" → "Öva på anatomi och medicinsk terminologi med quiz och flashcards" (endast on-page `<p class="tagline">`; meta/SEO orört).
+- Ny `data/medicinsk_latin.json` + generator `scripts/generate_medicinsk_latin.py`. `index.html` (ny `<option data-edu="sjukskoterska">` + tagline) + `js/app.js` (sökväg i `getQuestionsPath`). APP_VERSION/VERSION → 0.8.72 (cachebuster: app.js → 0.8.72).
+
 ## 0.8.71
 - **Startvyn ryms utan scroll igen efter utbildningsväljaren.** Tog bort den kursiva "Inga ämnen för den här utbildningen ännu"-notisen (tom utbildning visas nu enbart genom tom ämneslista + skuggade Starta-knappar) och tajtade den vertikala rytmen i `#setup` (label/select-marginaler 16/8 → 10/4) så att Starta-knapparna får plats utan att man behöver scrolla på mobil. Övriga formulär orörda.
 - `index.html` (notis borttagen) + `js/app.js` (toggle-logiken borttagen) + `css/styles.css` (`#setup`-marginaler). APP_VERSION/VERSION → 0.8.71 (cachebuster: app.js → 0.8.71, styles.css → 0.7.3 på index.html).
