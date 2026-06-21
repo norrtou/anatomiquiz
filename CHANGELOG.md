@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.4
+- **Stickprovsverifiering av 0.9.3 års ICD-koder mot svenska källor.** 22 koder kontrollerade mot ICD-10-SE (Socialstyrelsen, Internetmedicin, ekg.nu, Region Kronoberg m.fl.) – samtliga korrekta. Bekräftat att kodningen genomgående följer **svensk ICD-10-SE/WHO**, inte amerikanska ICD-10-CM (t.ex. trombocytos D75.8, inte CM:s D75.83).
+- **Finputs:** SIRS-posten ändrad från kategorinivå `R65` till `R65.9` (ospecificerat systemiskt inflammatoriskt svarssyndrom) enligt ICD-10-SE.
+- Endast `data/ordlista.json` (en post). Ordlistan omgenererad. APP_VERSION/VERSION → 0.9.4 (cachebuster: app.js → 0.9.4, glossary.css/glossary.js → 0.9.4).
+
 ## 0.9.3
 - **ICD-koder tillagda på 354 sjukdoms-/diagnosposter som saknade kod.** Ordlistan gick från 594 till 948 poster med ICD-kod. Berikningen gjordes kapitelvis A–Ö och omfattar diagnoser, infektioner, tumörer, syndrom, skador och förgiftningar (t.ex. ALL C91.0, Sjögrens syndrom M35.0, tetanus A35, WPW I45.6, Fallots tetrad Q21.3). Koden står sist i posten enligt 0.9.2-mallen; där koden är lokal- eller orsaksberoende anges representativ kod med kvalificerare (t.ex. "kodas efter lokal").
 - **Endast äkta kodbara diagnoser kodades.** Adjektiv (t.ex. malign, idiopatisk), läkemedel (5-ASA, 5-FU), antikroppar/labbmarkörer (anti-GBM, CRP, ferritin), processer/procedurer (apoptos, debridering) och ren anatomi lämnades medvetet utan kod.

@@ -45,7 +45,7 @@ LANDING_FILE = "medicinskordlista.html"
 
 # Cachebusters per asset — bumpa bara den som faktiskt ändrats.
 STYLES_V = "0.7.1"        # css/styles.css (oförändrad sedan tidigare)
-GLOSSARY_V = "0.9.3"      # css/glossary.css + js/glossary.js (denna release)
+GLOSSARY_V = "0.9.4"      # css/glossary.css + js/glossary.js (denna release)
 
 # Svenska alfabetet — fast ordning för alfabetsraden. Bokstäver utan poster
 # renderas nedtonade (icke-klickbara), så raden ser likadan ut oavsett innehåll.
