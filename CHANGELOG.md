@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.69
+- **Kvalitetssäkring av hela ordlistan + omarbetad info-sida.** Maskinell genomgång av samtliga 9 383 poster: struktur (inga tomma/trasiga poster, inga dubbletter), slug/ankare (inga äkta kollisioner), ICD-koder (554 distinkta kategorier, alla formellt giltiga, 27/27 mot facit av kända koder), tecken/kodning (ingen mojibake; `<`/`>` escapas korrekt) och språk (inga dubbla blanksteg eller saknade slutpunkter; korrekt etikett-casing).
+- **18 nya diagnoser med ICD-koder** (tidigare luckor): testikeltorsion (N44.0), epiglottit (J05.1), invagination (K56.1), akut/kronisk njursvikt (N17/N18), trumhinneperforation (H72), retinitis pigmentosa (H35.5), mollusker (B08.1), non-Hodgkin-lymfom (C82–C85), klimakteriebesvär (N95.1), livmoderframfall (N81), ablatio placentae (O45), huvudlöss (B85.0), ringorm (B35), sängvätning (F98.0), gigantism (E22.0), överaktiv blåsa (N32.8), golfarmbåge (M77.0), frusen skuldra (M75.0), vaxpropp (H61.2). Tre befintliga poster (ibs K58, parodontit K05, karies K02) fick ICD-kod. 9 366 → **9 383 termer, 594 med ICD-10-kod**.
+- **Rättat:** fyra felaktiga interna länkmarkörer (`[[…]]`) i ordlistedefinitioner omgjorda till ordbokens "Jfr …"-form.
+- **info.html omskriven** med formell, informativ beskrivning av både quizet och den medicinska ordlistan, ett avsnitt om källor och kvalitetssäkring, samt notering att materialet är skapat och kvalitetssäkrat av en studerande i arbetsterapi vid Lunds universitet. Ny `.info-subheading`-stil (css cachebuster på info.html → 0.7.2). SEO/`<head>`/meta orörda.
+- `data/ordlista.json` + regenererade `medicinskordlista.html`/`ordlista-*.html` ändrade. APP_VERSION/VERSION → 0.8.69 (cachebuster: app.js → 0.8.69).
+
 ## 0.8.68
 - **Återställde namnet "Medicinsk ordlista" i UI (ångrade 0.8.67:s "lexikon"-byte).** Startsidans knapp + brödtext, ordlistans H1, sökrubrik/sökfält (placeholder + aria-label "Sök i hela ordlistan"), bakåtknappen ("← Tillbaka till ordlistan") och ingresstexterna heter åter "ordlista"/"ordlistan". Meta/title m.m. var redan oförändrade. Diagnos- och ICD-tilläggen (9 366 termer, 574 med ICD-10-kod) är orörda.
 - `scripts/generate_glossary.py` + `index.html` återställda; alla `ordlista-*.html`/`medicinskordlista.html` regenererade. APP_VERSION/VERSION → 0.8.68 (cachebuster: app.js → 0.8.68).
