@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.5
+- **Ny utbildning "Allmänt" i väljaren "Välj utbildning".** Placerad överst (före Arbetsterapeut) och avsedd att samla framtida ämnen som inte är yrkesspecifika. Inga ämnen kopplade ännu – ämnen knyts via `data-edu="allmant"` på respektive `<option>` när de flyttas in.
+- Endast `index.html` (ett nytt `<option>`). APP_VERSION/VERSION → 0.9.5 (cachebuster: app.js → 0.9.5).
+
 ## 0.9.4
 - **Stickprovsverifiering av 0.9.3 års ICD-koder mot svenska källor.** 22 koder kontrollerade mot ICD-10-SE (Socialstyrelsen, Internetmedicin, ekg.nu, Region Kronoberg m.fl.) – samtliga korrekta. Bekräftat att kodningen genomgående följer **svensk ICD-10-SE/WHO**, inte amerikanska ICD-10-CM (t.ex. trombocytos D75.8, inte CM:s D75.83).
 - **Finputs:** SIRS-posten ändrad från kategorinivå `R65` till `R65.9` (ospecificerat systemiskt inflammatoriskt svarssyndrom) enligt ICD-10-SE.
