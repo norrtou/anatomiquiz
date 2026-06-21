@@ -60,7 +60,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.8.70'
+const APP_VERSION = '0.8.71'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -968,8 +968,8 @@ function getSelectedEducation(){
 // Visa bara ämnen som hör till vald utbildning OCH har minst en av de valda
 // frågetyperna. Ämnen utan känd typtagg visas alltid (om utbildningen stämmer).
 // Bevarar valt ämne om det fortfarande finns, annars hoppar till första synliga
-// (och uppdaterar svårighetsvalen). Saknar utbildningen ämnen visas en notis och
-// ämnesväljaren töms (startknapparna skuggas då av updateStartButtons).
+// (och uppdaterar svårighetsvalen). Saknar utbildningen ämnen töms ämnesväljaren
+// och startknapparna skuggas (av updateStartButtons).
 function updateTopicOptions(){
   const topicEl = el('topic')
   if(!topicEl || !allTopicOptions.length) return
@@ -989,10 +989,7 @@ function updateTopicOptions(){
     if(o.edu) opt.dataset.edu = o.edu
     topicEl.appendChild(opt)
   })
-  // Visa "inga ämnen ännu"-notisen bara när utbildningen helt saknar ämnen.
-  // Förklaringen av MC/FC/TF döljs samtidigt eftersom den blir irrelevant.
-  const eduHasAnyTopic = allTopicOptions.some(o => !o.edu || o.edu === edu)
-  el('noTopicsMsg')?.classList.toggle('hidden', eduHasAnyTopic)
+  // Saknar utbildningen ämnen blir MC/FC/TF-förklaringen irrelevant — dölj den.
   el('topicLegend')?.classList.toggle('hidden', !visible.length)
   if(visible.some(o => o.value === prev)){
     topicEl.value = prev

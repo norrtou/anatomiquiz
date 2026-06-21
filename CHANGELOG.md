@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.71
+- **Startvyn ryms utan scroll igen efter utbildningsväljaren.** Tog bort den kursiva "Inga ämnen för den här utbildningen ännu"-notisen (tom utbildning visas nu enbart genom tom ämneslista + skuggade Starta-knappar) och tajtade den vertikala rytmen i `#setup` (label/select-marginaler 16/8 → 10/4) så att Starta-knapparna får plats utan att man behöver scrolla på mobil. Övriga formulär orörda.
+- `index.html` (notis borttagen) + `js/app.js` (toggle-logiken borttagen) + `css/styles.css` (`#setup`-marginaler). APP_VERSION/VERSION → 0.8.71 (cachebuster: app.js → 0.8.71, styles.css → 0.7.3 på index.html).
+
 ## 0.8.70
 - **Ny utbildningsväljare ovanför ämnet ("Välj utbildning").** Startvyn har fått en dropdown som delar upp ämnena per utbildning. **Arbetsterapeut** är förvald och har alla nuvarande ämnen; **Fysioterapeut, Läkare, Medicinsk sekreterare** och **Sjuksköterska** finns som val men har ännu inga ämnen (visar notisen "Inga ämnen för den här utbildningen ännu – de byggs ut efter hand"). Nya ämnen taggas bara med `data-edu="<utbildning>"` på sin `<option>` så fylls de på efter hand med samma system som arbetsterapeutämnena.
 - **Datadrivet, byggt ovanpå befintligt filter.** `captureTopicOptions`/`updateTopicOptions` filtrerar nu på utbildning **+** frågetyp; tom utbildning tömmer ämnesväljaren och skuggar startknapparna. Valet sparas i inställningarna (`education`) och överlever omladdning.
