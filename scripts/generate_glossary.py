@@ -45,7 +45,7 @@ LANDING_FILE = "medicinskordlista.html"
 
 # Cachebusters per asset — bumpa bara den som faktiskt ändrats.
 STYLES_V = "0.7.1"        # css/styles.css (oförändrad sedan tidigare)
-GLOSSARY_V = "0.8.74"     # css/glossary.css + js/glossary.js (denna release)
+GLOSSARY_V = "0.9.0"      # css/glossary.css + js/glossary.js (denna release)
 
 # Svenska alfabetet — fast ordning för alfabetsraden. Bokstäver utan poster
 # renderas nedtonade (icke-klickbara), så raden ser likadan ut oavsett innehåll.
@@ -646,8 +646,9 @@ def write_landing(groups: dict[str, list[dict]]) -> str:
         tagline=(
             "Medicinska ord, förkortningar och begrepp med definitioner, synonymer "
             "och etymologi i en sökbar ordlista. Sök i hela ordlistan ovan, eller "
-            f"hoppa till en bokstav i raden — {total_str} latinska och medicinska "
-            "anatomiska, fysiologiska, patologiska, biologiska och tekniska termer."
+            f"hoppa till en bokstav i raden — {total_str} latinska och grekiska "
+            "termer: anatomi, fysiologi, sjukdomar, labbprover, förkortningar samt "
+            "för- och efterleder."
         ),
         breadcrumb_label="Medicinsk ordlista",
         page_jsonld=page_obj,
