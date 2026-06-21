@@ -61,7 +61,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.8.72'
+const APP_VERSION = '0.8.73'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -919,9 +919,10 @@ function applySettings(){
   }
   if(typeof s.practiceWrong === 'boolean') el('practiceWrong').checked = s.practiceWrong
   if(typeof s.timerEnabled === 'boolean') el('timerEnabled').checked = s.timerEnabled
-  // Återställ vald utbildning om den fortfarande finns som alternativ.
+  // Återställ vald utbildning om den fortfarande finns som ett VALBART alternativ
+  // (inte utgråad pga saknade ämnen). Annars behålls förvalet (arbetsterapeut).
   const eduEl = el('education')
-  if(eduEl && typeof s.education === 'string' && Array.from(eduEl.options).some(o => o.value === s.education)){
+  if(eduEl && typeof s.education === 'string' && Array.from(eduEl.options).some(o => o.value === s.education && !o.disabled)){
     eduEl.value = s.education
   }
   updateTopicOptions()
@@ -998,6 +999,22 @@ function updateTopicOptions(){
     topicEl.value = visible[0].value
     updateDifficultyOptions()
   }
+}
+
+// Skugga (inaktivera) utbildningar i "Välj utbildning" som ännu inte har något
+// ämne taggat åt sig (ingen `<option data-edu>` pekar på utbildningen). Måste köras
+// EFTER captureTopicOptions. Lägger till "(inga ämnen ännu)" efter etiketten så det
+// framgår varför valet är gråat; originaltexten sparas i dataset.eduLabel.
+function updateEducationOptions(){
+  const eduEl = el('education')
+  if(!eduEl || !allTopicOptions.length) return
+  const withTopics = new Set(allTopicOptions.map(o => o.edu).filter(Boolean))
+  Array.from(eduEl.options).forEach(o => {
+    const hasTopics = withTopics.has(o.value)
+    const base = o.dataset.eduLabel || (o.dataset.eduLabel = o.textContent)
+    o.disabled = !hasTopics
+    o.textContent = hasTopics ? base : base + ' (inga ämnen ännu)'
+  })
 }
 
 // Skugga (inaktivera) en startknapp om det VALDA ämnet inte erbjuder det läget:
@@ -1260,6 +1277,7 @@ function init(){
   // Byte av utbildning bygger om ämneslistan (utbildning + frågetyp) och sparar valet.
   el('education')?.addEventListener('change', ()=>{ updateTopicOptions(); updateDifficultyOptions(); updateStartButtons(); saveSettings() })
   captureTopicOptions()     // Spara hela ämneslistan INNAN filtrering
+  updateEducationOptions()  // Gråa ut utbildningar utan ämnen (efter capture)
   updateDifficultyOptions() // Initial state
   applySettings()           // Läs in sparade inställningar (filtrerar ämnen + uppdaterar knapparna)
 }

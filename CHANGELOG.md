@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.73
+- **Utbildningar utan ämnen gråas ut i "Välj utbildning".** Yrken som ännu inte har något ämne taggat åt sig (Fysioterapeut, Läkare, Medicinsk sekreterare) visas nu som inaktiverade `<option>` med suffixet "(inga ämnen ännu)" och går inte att välja. Arbetsterapeut och Sjuksköterska (som har ämnen) är opåverkade. Datadrivet: byggs av vilka `data-edu` som faktiskt förekommer bland ämnesoptionerna, så ett yrke aktiveras automatiskt när dess första ämne läggs till.
+- En sparad men nu utgråad utbildning återställs inte längre vid inläsning (faller tillbaka på förvalet Arbetsterapeut).
+- `js/app.js`: ny `updateEducationOptions()` (körs efter `captureTopicOptions`), `applySettings` kräver nu valbart (ej `disabled`) alternativ. APP_VERSION/VERSION → 0.8.73 (cachebuster: app.js → 0.8.73).
+
 ## 0.8.72
 - **Nytt ämne "Medicinsk latin" (MC) för Sjuksköterska.** Första ämnet under utbildningen Sjuksköterska: 138 multiple choice-frågor på vanliga anatomiska/medicinska latinska termer (förleder, riktningar, rörelser, strukturer, kroppsregioner). Varje term frågas som "Vad betyder …?" med ett korrekt svar + tre distraktorer plockade ur samma betydelsefamilj. Källa: 140 flashcards från ett Quizlet-set (anatomi & fysiologi för sjuksköterskor), kvalitetssäkrade vid import.
 - **Rättelser mot källan:** truncus = bål/stam (källan hade "tarm"; dubbletten "trancus = bål" sammanslagen); proximalt = närmare bålen (källan: "sämre mot bålen"); adduktion = mot mittlinjen/medialt (källan tog felaktigt även med "lateralt"); abdomen (källan felstavat "abdoment"); hyper-/hypo- = över/för mycket resp. under/för lite (källan: "överkant/underkant"); os förekom tre gånger → dubblett borttagen och betydelserna skilda med genitiv (os, oris = mun; os, ossis = ben). 140 källkort → 138 unika frågor.
