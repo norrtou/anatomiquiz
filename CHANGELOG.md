@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.7
+- **Tillägg i "Om Anatomiquiz"-intron.** Ny mening om att det utförligaste övningsmaterialet för närvarande finns inom arbetsterapi och att arbete pågår för att alla utbildningar ska få ett lika rikt material. Endast synlig brödtext i intro-sektionen (ingen meta/head rörd).
+- APP_VERSION/VERSION → 0.9.7 (cachebuster: app.js → 0.9.7).
+
 ## 0.9.6
 - **Nytt flashcard-ämne "Anatomi & fysiologi (FC)" under Sjuksköterska.** 82 kort (term → definition) som täcker cell, nervsystem, hjärta/blod, andning, njurar, hormoner, matsmältning, muskler/skelett, immunförsvar och syra-basbalans. Ny datafil `data/anatomi_fysiologi_flashcards.json`, sökväg i `getQuestionsPath()` och `<option data-edu="sjukskoterska">` i ämnesväljaren. Rent FC-ämne → ingår inte i Slumpade frågor.
 - APP_VERSION/VERSION → 0.9.6 (cachebuster: app.js → 0.9.6).
