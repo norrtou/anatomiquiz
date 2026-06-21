@@ -121,29 +121,43 @@
 
       <h2 id="setupHeading" class="sr-only">Starta quiz eller flashcards</h2>
 
+      <!-- Välj utbildning: filtrerar ämneslistan nedan per utbildning. Arbetsterapeut
+           är förvald och har alla nuvarande ämnen; övriga byggs ut efter hand. Varje
+           ämne taggas med data-edu så samma datadrivna filter (captureTopicOptions/
+           updateTopicOptions) kombinerar utbildning + frågetyp. -->
+      <label for="education">Välj utbildning</label>
+      <select id="education">
+        <option value="arbetsterapeut" selected>Arbetsterapeut</option>
+        <option value="fysioterapeut">Fysioterapeut</option>
+        <option value="lakare">Läkare</option>
+        <option value="medicinsk_sekreterare">Medicinsk sekreterare</option>
+        <option value="sjukskoterska">Sjuksköterska</option>
+      </select>
+
       <label for="topic">Ämne</label>
       <select id="topic" aria-describedby="topicLegend">
-        <option value="tentaplugg" selected>Tentaplugg (MC)</option>
-        <option value="studenters_flashcards">ATP-studenters flashcards (FC)</option>
-        <option value="osteologi">Ben (MC+TF)</option>
-        <option value="blodomloppet">Blodomloppet (TF)</option>
-        <option value="ergonomi">Ergonomi (MC+FC)</option>
-        <option value="grepp">Grepp (MC+TF)</option>
-        <option value="handen">Handen (MC+TF)</option>
-        <option value="ledtyper">Ledtyper (MC)</option>
-        <option value="any_riktningar">Lägen &amp; riktningar (MC+TF)</option>
-        <option value="medicinsk_terminologi">Medicinsk terminologi (MC+FC)</option>
+        <option value="tentaplugg" data-edu="arbetsterapeut" selected>Tentaplugg (MC)</option>
+        <option value="studenters_flashcards" data-edu="arbetsterapeut">ATP-studenters flashcards (FC)</option>
+        <option value="osteologi" data-edu="arbetsterapeut">Ben (MC+TF)</option>
+        <option value="blodomloppet" data-edu="arbetsterapeut">Blodomloppet (TF)</option>
+        <option value="ergonomi" data-edu="arbetsterapeut">Ergonomi (MC+FC)</option>
+        <option value="grepp" data-edu="arbetsterapeut">Grepp (MC+TF)</option>
+        <option value="handen" data-edu="arbetsterapeut">Handen (MC+TF)</option>
+        <option value="ledtyper" data-edu="arbetsterapeut">Ledtyper (MC)</option>
+        <option value="any_riktningar" data-edu="arbetsterapeut">Lägen &amp; riktningar (MC+TF)</option>
+        <option value="medicinsk_terminologi" data-edu="arbetsterapeut">Medicinsk terminologi (MC+FC)</option>
         <!-- ATP-teori (ej anatomi) – dolda tills vidare, ska testas på annat sätt och återinföras senare:
-        <option value="moho_flashcards">Moho (FC)</option> -->
-        <option value="muskler_flashcards">Muskler (FC)</option>
-        <option value="muskler">Muskler (MC+TF)</option>
-        <option value="neurologi">Neurologi (TF)</option>
-        <option value="olika_aldrar">Olika åldrar (MC+FC)</option>
-        <option value="skuldran">Skuldra (MC+TF)</option>
+        <option value="moho_flashcards" data-edu="arbetsterapeut">Moho (FC)</option> -->
+        <option value="muskler_flashcards" data-edu="arbetsterapeut">Muskler (FC)</option>
+        <option value="muskler" data-edu="arbetsterapeut">Muskler (MC+TF)</option>
+        <option value="neurologi" data-edu="arbetsterapeut">Neurologi (TF)</option>
+        <option value="olika_aldrar" data-edu="arbetsterapeut">Olika åldrar (MC+FC)</option>
+        <option value="skuldran" data-edu="arbetsterapeut">Skuldra (MC+TF)</option>
         <!-- ATP-teori (ej anatomi) – dolda tills vidare, ska testas på annat sätt och återinföras senare:
-        <option value="otipm_flashcards">OTIPM (FC)</option> -->
-        <option value="blandade">Slumpade frågor (MC+TF)</option>
+        <option value="otipm_flashcards" data-edu="arbetsterapeut">OTIPM (FC)</option> -->
+        <option value="blandade" data-edu="arbetsterapeut">Slumpade frågor (MC+TF)</option>
       </select>
+      <p id="noTopicsMsg" class="topic-legend hidden">Inga ämnen för den här utbildningen ännu – de byggs ut efter hand.</p>
       <p id="topicLegend" class="topic-legend">MC = Multiple Choice-frågor för quiz, FC = Flashcards, TF = Sant eller falskt-frågor för quiz</p>
 
       <label for="numQuestions">Antal frågor</label>
@@ -369,6 +383,6 @@
   </main>
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
-  <script src="js/app.js?v=0.8.69" defer></script>
+  <script src="js/app.js?v=0.8.70" defer></script>
 </body>
 </html>

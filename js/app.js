@@ -60,7 +60,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.8.69'
+const APP_VERSION = '0.8.70'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -918,6 +918,11 @@ function applySettings(){
   }
   if(typeof s.practiceWrong === 'boolean') el('practiceWrong').checked = s.practiceWrong
   if(typeof s.timerEnabled === 'boolean') el('timerEnabled').checked = s.timerEnabled
+  // Återställ vald utbildning om den fortfarande finns som alternativ.
+  const eduEl = el('education')
+  if(eduEl && typeof s.education === 'string' && Array.from(eduEl.options).some(o => o.value === s.education)){
+    eduEl.value = s.education
+  }
   updateTopicOptions()
   updateStartButtons()
 }
@@ -927,7 +932,8 @@ function saveSettings(){
     name: el('playerName').value.trim(),
     types: getSelectedTypes(),
     practiceWrong: !!el('practiceWrong')?.checked,
-    timerEnabled: !!el('timerEnabled')?.checked
+    timerEnabled: !!el('timerEnabled')?.checked,
+    education: getSelectedEducation()
   }
   try{ localStorage.setItem(SETTINGS_KEY, JSON.stringify(s)) }catch{}
 }
@@ -951,18 +957,27 @@ function topicCapabilities(){
 let allTopicOptions = []
 function captureTopicOptions(){
   const topicEl = el('topic')
-  if(topicEl) allTopicOptions = Array.from(topicEl.options).map(o => ({ value:o.value, text:o.textContent }))
+  if(topicEl) allTopicOptions = Array.from(topicEl.options).map(o => ({ value:o.value, text:o.textContent, edu:o.dataset.edu || '' }))
 }
 
-// Visa bara ämnen som har minst en av de valda frågetyperna. Ämnen utan känd
-// typtagg visas alltid. Bevarar valt ämne om det fortfarande finns, annars
-// hoppar till första synliga (och uppdaterar svårighetsvalen).
+// Vald utbildning i "Välj utbildning" (arbetsterapeut som standard).
+function getSelectedEducation(){
+  return el('education')?.value || 'arbetsterapeut'
+}
+
+// Visa bara ämnen som hör till vald utbildning OCH har minst en av de valda
+// frågetyperna. Ämnen utan känd typtagg visas alltid (om utbildningen stämmer).
+// Bevarar valt ämne om det fortfarande finns, annars hoppar till första synliga
+// (och uppdaterar svårighetsvalen). Saknar utbildningen ämnen visas en notis och
+// ämnesväljaren töms (startknapparna skuggas då av updateStartButtons).
 function updateTopicOptions(){
   const topicEl = el('topic')
   if(!topicEl || !allTopicOptions.length) return
   const sel = getSelectedTypes()
+  const edu = getSelectedEducation()
   const prev = topicEl.value
   const visible = allTopicOptions.filter(o => {
+    if(o.edu && o.edu !== edu) return false
     const c = typeTagOf(o.text)
     return !c.hasTag || sel.some(t => c[t])
   })
@@ -971,8 +986,14 @@ function updateTopicOptions(){
     const opt = document.createElement('option')
     opt.value = o.value
     opt.textContent = o.text
+    if(o.edu) opt.dataset.edu = o.edu
     topicEl.appendChild(opt)
   })
+  // Visa "inga ämnen ännu"-notisen bara när utbildningen helt saknar ämnen.
+  // Förklaringen av MC/FC/TF döljs samtidigt eftersom den blir irrelevant.
+  const eduHasAnyTopic = allTopicOptions.some(o => !o.edu || o.edu === edu)
+  el('noTopicsMsg')?.classList.toggle('hidden', eduHasAnyTopic)
+  el('topicLegend')?.classList.toggle('hidden', !visible.length)
   if(visible.some(o => o.value === prev)){
     topicEl.value = prev
   } else if(visible.length){
@@ -1238,6 +1259,8 @@ function init(){
 
   // Uppdatera svårighetsval + startknapparnas av/på när ämnet byts.
   el('topic').addEventListener('change', ()=>{ updateDifficultyOptions(); updateStartButtons() })
+  // Byte av utbildning bygger om ämneslistan (utbildning + frågetyp) och sparar valet.
+  el('education')?.addEventListener('change', ()=>{ updateTopicOptions(); updateDifficultyOptions(); updateStartButtons(); saveSettings() })
   captureTopicOptions()     // Spara hela ämneslistan INNAN filtrering
   updateDifficultyOptions() // Initial state
   applySettings()           // Läs in sparade inställningar (filtrerar ämnen + uppdaterar knapparna)

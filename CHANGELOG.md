@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.8.70
+- **Ny utbildningsväljare ovanför ämnet ("Välj utbildning").** Startvyn har fått en dropdown som delar upp ämnena per utbildning. **Arbetsterapeut** är förvald och har alla nuvarande ämnen; **Fysioterapeut, Läkare, Medicinsk sekreterare** och **Sjuksköterska** finns som val men har ännu inga ämnen (visar notisen "Inga ämnen för den här utbildningen ännu – de byggs ut efter hand"). Nya ämnen taggas bara med `data-edu="<utbildning>"` på sin `<option>` så fylls de på efter hand med samma system som arbetsterapeutämnena.
+- **Datadrivet, byggt ovanpå befintligt filter.** `captureTopicOptions`/`updateTopicOptions` filtrerar nu på utbildning **+** frågetyp; tom utbildning tömmer ämnesväljaren och skuggar startknapparna. Valet sparas i inställningarna (`education`) och överlever omladdning.
+- `index.html` (utbildnings-`<select>`, `data-edu` på alla ämnen, tom-notis) + `js/app.js` ändrade. APP_VERSION/VERSION → 0.8.70 (cachebuster: app.js → 0.8.70).
+
 ## 0.8.69
 - **Kvalitetssäkring av hela ordlistan + omarbetad info-sida.** Maskinell genomgång av samtliga 9 383 poster: struktur (inga tomma/trasiga poster, inga dubbletter), slug/ankare (inga äkta kollisioner), ICD-koder (554 distinkta kategorier, alla formellt giltiga, 27/27 mot facit av kända koder), tecken/kodning (ingen mojibake; `<`/`>` escapas korrekt) och språk (inga dubbla blanksteg eller saknade slutpunkter; korrekt etikett-casing).
 - **18 nya diagnoser med ICD-koder** (tidigare luckor): testikeltorsion (N44.0), epiglottit (J05.1), invagination (K56.1), akut/kronisk njursvikt (N17/N18), trumhinneperforation (H72), retinitis pigmentosa (H35.5), mollusker (B08.1), non-Hodgkin-lymfom (C82–C85), klimakteriebesvär (N95.1), livmoderframfall (N81), ablatio placentae (O45), huvudlöss (B85.0), ringorm (B35), sängvätning (F98.0), gigantism (E22.0), överaktiv blåsa (N32.8), golfarmbåge (M77.0), frusen skuldra (M75.0), vaxpropp (H61.2). Tre befintliga poster (ibs K58, parodontit K05, karies K02) fick ICD-kod. 9 366 → **9 383 termer, 594 med ICD-10-kod**.
