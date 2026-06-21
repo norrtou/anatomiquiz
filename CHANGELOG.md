@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.3
+- **ICD-koder tillagda på 354 sjukdoms-/diagnosposter som saknade kod.** Ordlistan gick från 594 till 948 poster med ICD-kod. Berikningen gjordes kapitelvis A–Ö och omfattar diagnoser, infektioner, tumörer, syndrom, skador och förgiftningar (t.ex. ALL C91.0, Sjögrens syndrom M35.0, tetanus A35, WPW I45.6, Fallots tetrad Q21.3). Koden står sist i posten enligt 0.9.2-mallen; där koden är lokal- eller orsaksberoende anges representativ kod med kvalificerare (t.ex. "kodas efter lokal").
+- **Endast äkta kodbara diagnoser kodades.** Adjektiv (t.ex. malign, idiopatisk), läkemedel (5-ASA, 5-FU), antikroppar/labbmarkörer (anti-GBM, CRP, ferritin), processer/procedurer (apoptos, debridering) och ren anatomi lämnades medvetet utan kod.
+- Primärt svensk ICD-10(-SE); osäkra/sällsynta koder utelämnades hellre än gissades. Endast `data/ordlista.json` (textinnehåll); ordlistan omgenererad.
+- APP_VERSION/VERSION → 0.9.3 (cachebuster: app.js → 0.9.3, glossary.css/glossary.js → 0.9.3).
+
 ## 0.9.2
 - **ICD-koderna placeras nu sist i varje ordlistepost.** Klassificeringskoderna (ICD-10/ICD-11) låg tidigare mitt i definitionen – ofta före etymologin ("Av …") eller före ålderdomliga synonymer/korsreferenser – vilket var inkonsekvent. Nu står kod- och klassificeringsblocket alltid sist, efter betydelse, Sv./Eng./Vardag., etymologi, Ålderdomligt och Jfr/Se. 325 poster justerade. Ordningsföljden inom kodblocket bevaras (ICD-10 före ICD-11).
 - Endast omflyttning av befintlig text i `data/ordlista.json`; inga koder ändrade, lagda till eller borttagna (prosamentioner som "enligt DSM/ICD" rörs inte). Ordlistan omgenererad.
