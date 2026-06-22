@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.13
+- **Diskret kontaktformulär längst ner på info-sidan.** För rapportering av buggar, fel i innehåll och synpunkter. Fält: typ (Bugg/Fel i innehåll/Synpunkt/Övrigt) + meddelande. Vid skicka öppnas besökarens egen e-postklient via `mailto:` med färdigt ämne och brödtext (inkl. avsändarsida); fallback-länk finns under knappen. Mottagare: dedikerad adress `anatomiquizse@gmail.com`.
+- **Backend-fritt & CSP-säkert.** GitHub Pages saknar server, så submit fångas i `info.js` (preventDefault + `window.location`) i stället för en riktig form-submit – `form-action 'self'`/`script-src 'self'` är orörda. Ingen tredjepart, inga data passerar mellanled. Ingen meta/head (SEO) ändrad.
+- `info.html`, `js/info.js`, `css/styles.css` (diskret `.contact`-stil). Cachebusters bumpade: styles.css → 0.7.4 (index+info), info.js → 0.9.13. APP_VERSION/VERSION → 0.9.13 (cachebuster: app.js → 0.9.13).
+
 ## 0.9.12
 - **Export/import av topplistan.** Två nya knappar i topplistan: "Exportera resultat" laddar ner en JSON-backup (`anatomiquiz-resultat-ÅÅÅÅ-MM-DD.json`), "Importera resultat" läser tillbaka den och slår ihop med befintliga resultat. Eftersom `localStorage` är unikt per origin OCH per enhet/instans (flik, hemskärms-genväg, varje enhet) ger detta ett sätt att själv säkerhetskopiera och flytta historiken mellan fack – t.ex. efter ett domän- eller enhetsbyte.
 - **Dubblettskydd & validering.** Varje resultat får en signatur (datum+namn+ämne+poäng+total); återimport av samma backup dubblerar inte rader (rapporterar tillagda/överhoppade). Importen accepterar bara en äkta toppliste-export (`type: "anatomiquiz-highscores"`) eller en ren array och avvisar fel filtyp. Samma 50-tak och `getScores`/`saveScores`-fallback (privat läge) som vanlig sparning.

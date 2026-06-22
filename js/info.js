@@ -173,10 +173,38 @@ async function loadStats() {
 }
 
 // ============================================================================
+// Kontaktformulär
+// ============================================================================
+
+const CONTACT_EMAIL = 'anatomiquizse@gmail.com'
+
+/**
+ * Fångar formulärets submit och öppnar besökarens e-postklient via mailto:
+ * (GitHub Pages saknar backend; CSP form-action 'self' tillåter ingen riktig
+ * mailto-submit, därför preventDefault + window.location).
+ */
+function initContactForm() {
+  const form = document.getElementById('contactForm')
+  if (!form) return
+  form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const type = document.getElementById('contactType').value
+    const messageEl = document.getElementById('contactMessage')
+    const message = messageEl.value.trim()
+    if (!message) { messageEl.focus(); return }
+    const subject = `Anatomiquiz – ${type}`
+    const body = `${message}\n\n— Skickat från ${location.href}`
+    window.location.href =
+      `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  })
+}
+
+// ============================================================================
 // Init
 // ============================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
   loadStats()
   loadChangelog()
+  initContactForm()
 })
