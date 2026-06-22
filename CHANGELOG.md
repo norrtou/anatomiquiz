@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.12
+- **Export/import av topplistan.** Två nya knappar i topplistan: "Exportera resultat" laddar ner en JSON-backup (`anatomiquiz-resultat-ÅÅÅÅ-MM-DD.json`), "Importera resultat" läser tillbaka den och slår ihop med befintliga resultat. Eftersom `localStorage` är unikt per origin OCH per enhet/instans (flik, hemskärms-genväg, varje enhet) ger detta ett sätt att själv säkerhetskopiera och flytta historiken mellan fack – t.ex. efter ett domän- eller enhetsbyte.
+- **Dubblettskydd & validering.** Varje resultat får en signatur (datum+namn+ämne+poäng+total); återimport av samma backup dubblerar inte rader (rapporterar tillagda/överhoppade). Importen accepterar bara en äkta toppliste-export (`type: "anatomiquiz-highscores"`) eller en ren array och avvisar fel filtyp. Samma 50-tak och `getScores`/`saveScores`-fallback (privat läge) som vanlig sparning.
+- Endast `index.html` + `js/app.js`. Ingen meta/head rörd. APP_VERSION/VERSION → 0.9.12 (cachebuster: app.js → 0.9.12).
+
 ## 0.9.11
 - **`llms.txt` tillagd i domänroten (AI-/agentläsbarhet).** Ny fil `llms.txt` enligt llmstxt.org-standarden (H1, sammanfattande blockcitat, länkade nyckelsidor: quiz, case, medicinsk ordlista A–Ö + prefix, info, sitemap). Krävs av Google PageSpeed Insights/Lighthouse nya kategori **Agentic Browsing** – sajten går därmed från 2/3 till 3/3 (övriga kontroller, tillgänglighetsträd och CLS, klarades redan).
 - Ingen meta/head rörd. APP_VERSION/VERSION → 0.9.11 (cachebuster: app.js → 0.9.11).

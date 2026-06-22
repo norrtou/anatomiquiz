@@ -63,7 +63,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.11'
+const APP_VERSION = '0.9.12'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -785,6 +785,63 @@ function clearScores(){
   showHighscores()
 }
 
+// === Exportera / importera topplistan ===
+// localStorage är unikt per origin OCH per enhet/instans (egen flik, hemskärms-
+// genväg och varje enhet har skilda fack). Export/import låter användaren själv
+// säkerhetskopiera sina resultat och flytta dem mellan dessa fack, så att t.ex.
+// ett domän- eller enhetsbyte inte tyst tappar historiken.
+const SCORES_EXPORT_TYPE = 'anatomiquiz-highscores'
+
+function exportScores(){
+  const scores = getScores()
+  if(!scores.length){ alert('Det finns inga resultat att exportera än.'); return }
+  const payload = { type: SCORES_EXPORT_TYPE, version: 1, exported: new Date().toISOString(), scores }
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' })
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = `anatomiquiz-resultat-${new Date().toISOString().slice(0,10)}.json`
+  document.body.appendChild(a)
+  a.click()
+  a.remove()
+  setTimeout(()=>URL.revokeObjectURL(url), 1000)
+}
+
+// Unik signatur per resultat → import av samma backup två gånger dubblerar inte raderna.
+function scoreSignature(s){ return [s.date, s.name, s.topic, s.score, s.total].join('|') }
+
+function handleImportScores(ev){
+  const f = ev.target.files && ev.target.files[0]
+  if(!f){ return }
+  const reader = new FileReader()
+  reader.onload = ()=>{
+    try{
+      const parsed = JSON.parse(reader.result)
+      // Acceptera både inpackat format {type, scores:[...]} och en ren array.
+      const incoming = Array.isArray(parsed) ? parsed
+        : (parsed && parsed.type === SCORES_EXPORT_TYPE && Array.isArray(parsed.scores)) ? parsed.scores
+        : null
+      if(!incoming){ alert('Fel format: filen ser inte ut som en exporterad topplista.'); return }
+      const merged = getScores()
+      const seen = new Set(merged.map(scoreSignature))
+      let added = 0, skipped = 0
+      incoming.forEach(s=>{
+        if(!s || typeof s.date !== 'string' || typeof s.score !== 'number' || typeof s.total !== 'number'){ skipped++; return }
+        const sig = scoreSignature(s)
+        if(seen.has(sig)){ skipped++; return }
+        seen.add(sig); merged.push(s); added++
+      })
+      // Senaste först, behåll de 50 senaste (samma tak som vid vanlig sparning).
+      merged.sort((a,b)=> new Date(b.date) - new Date(a.date))
+      saveScores(merged.slice(0,50))
+      showHighscores()
+      alert(`Import klar. Tillagda: ${added}. Hoppade över (dubbletter/ogiltiga): ${skipped}.`)
+    }catch(e){ alert('Kunde inte läsa JSON: '+e.message) }
+  }
+  reader.readAsText(f, 'utf-8')
+  ev.target.value = '' // tillåt att samma fil väljs igen
+}
+
 // Render management UI for up to MAX_QUESTIONS questions
 function renderManage(){
   const container = el('manageList')
@@ -1262,6 +1319,10 @@ function init(){
   el('backToSetup').addEventListener('click', ()=>{el('highscores').classList.add('hidden');el('setup').classList.remove('hidden')})
   el('scoresCrumb')?.addEventListener('click', (e)=>{e.preventDefault();el('highscores').classList.add('hidden');el('setup').classList.remove('hidden')})
   el('clearScores').addEventListener('click', ()=>{ if(confirm('Är du säker? Hela topplistan och statistiken raderas permanent och kan inte återställas.')) clearScores() })
+  el('exportScores')?.addEventListener('click', exportScores)
+  const impScores = el('importScoresFile')
+  if(impScores) impScores.addEventListener('change', handleImportScores)
+  el('importScoresBtn')?.addEventListener('click', ()=> impScores?.click())
   el('scoreFilter')?.addEventListener('change', ()=>{ renderScoreList(); renderBestList() })
 
   // Inställningssida: öppna/spara/tillbaka + brödsmulelänk.
