@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.11
+- **`llms.txt` tillagd i domänroten (AI-/agentläsbarhet).** Ny fil `llms.txt` enligt llmstxt.org-standarden (H1, sammanfattande blockcitat, länkade nyckelsidor: quiz, case, medicinsk ordlista A–Ö + prefix, info, sitemap). Krävs av Google PageSpeed Insights/Lighthouse nya kategori **Agentic Browsing** – sajten går därmed från 2/3 till 3/3 (övriga kontroller, tillgänglighetsträd och CLS, klarades redan).
+- Ingen meta/head rörd. APP_VERSION/VERSION → 0.9.11 (cachebuster: app.js → 0.9.11).
+
 ## 0.9.10
 - **Egen domän: anatomiquiz.se.** Alla absoluta länkar i koden pekar nu på `https://anatomiquiz.se` istället för `https://norrtou.github.io/anatomiquiz`. Sidan ligger kvar på GitHub Pages – `CNAME`-fil (`anatomiquiz.se`) tillagd så Pages serverar från apex-roten istället för projektsökvägen `/anatomiquiz/`.
 - Uppdaterat: canonical, `og:url`, `og:image`, `twitter:image`, schema.org-URL:er och `<link rel="sitemap">` i samtliga HTML-sidor (index, info, case, medicinskordlista + alla `ordlista-*.html`). Rotrelativa sökvägar `/anatomiquiz/...` → `/...` för favicon/ikoner/manifest/sitemap.
