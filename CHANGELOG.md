@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.10
+- **Egen domän: anatomiquiz.se.** Alla absoluta länkar i koden pekar nu på `https://anatomiquiz.se` istället för `https://norrtou.github.io/anatomiquiz`. Sidan ligger kvar på GitHub Pages – `CNAME`-fil (`anatomiquiz.se`) tillagd så Pages serverar från apex-roten istället för projektsökvägen `/anatomiquiz/`.
+- Uppdaterat: canonical, `og:url`, `og:image`, `twitter:image`, schema.org-URL:er och `<link rel="sitemap">` i samtliga HTML-sidor (index, info, case, medicinskordlista + alla `ordlista-*.html`). Rotrelativa sökvägar `/anatomiquiz/...` → `/...` för favicon/ikoner/manifest/sitemap.
+- `robots.txt` (Sitemap-rad), `sitemap.xml` (alla `<loc>`), `manifest.json` (`start_url`/`scope`/`icons`) och generatorn `scripts/generate_glossary.py` (`SITE`-konstant + hårdkodade sökvägar) uppdaterade så regenerering ger korrekta URL:er.
+- APP_VERSION/VERSION → 0.9.10 (cachebuster: app.js → 0.9.10).
+
 ## 0.9.9
 - **Nytt flashcard-ämne "Farmakologi (FC)" under Allmänt.** 217 kort som täcker läkemedelsbegrepp/regelverk (FASS, ATC, godkännande, studiefaser), beredningsformer & administreringsvägar, farmakodynamik (ligand/receptor, agonist/antagonist, potens/efficacy, TI), farmakokinetik (ADME, metabolism, halveringstid, steady state) samt interaktioner och biverkningar. Ny datafil `data/farmakologi.json`, sökväg i `getQuestionsPath()` och `<option data-edu="allmant">`. Första ämnet under "Allmänt".
 - **Bildfråga borttagen.** Ett figurförklarande kort (legend A–F på en koncentration–tidkurva, utan textfråga) togs bort; inklistrad UI-text ("Not studied …") rensades. En exakt dubblettfråga ("Vad är farmakovigilans?") togs in en gång.

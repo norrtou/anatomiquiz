@@ -40,7 +40,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "ordlista.json"
 SITEMAP = ROOT / "sitemap.xml"
 
-SITE = "https://norrtou.github.io/anatomiquiz"
+SITE = "https://anatomiquiz.se"
 LANDING_FILE = "medicinskordlista.html"
 
 # Cachebusters per asset — bumpa bara den som faktiskt ändrats.
@@ -506,7 +506,7 @@ def render_page(
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 
   <link rel="canonical" href="{url}">
-  <link rel="sitemap" type="application/xml" href="/anatomiquiz/sitemap.xml">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="{url}">
@@ -532,10 +532,10 @@ def render_page(
   <meta name="theme-color" content="#10b981">
   <meta name="color-scheme" content="light">
 
-  <link rel="icon" type="image/svg+xml" href="/anatomiquiz/img/favicon.svg">
-  <link rel="icon" type="image/png" sizes="64x64" href="/anatomiquiz/img/favicon.png">
-  <link rel="apple-touch-icon" href="/anatomiquiz/img/icon-192.png">
-  <link rel="manifest" href="/anatomiquiz/manifest.json">
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon.png">
+  <link rel="apple-touch-icon" href="/img/icon-192.png">
+  <link rel="manifest" href="/manifest.json">
   <link rel="stylesheet" href="css/styles.css?v={STYLES_V}">
   <link rel="stylesheet" href="css/glossary.css?v={GLOSSARY_V}">
 </head>
