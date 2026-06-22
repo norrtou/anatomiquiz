@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.14
+- **Fix:** tog bort en lös textnod ("Byt ") som av misstag hamnat i `index.html` mellan inställnings- och flashcard-sektionen och syntes överst på framsidan.
+- Endast `index.html`. APP_VERSION/VERSION → 0.9.14 (cachebuster: app.js → 0.9.14).
+
 ## 0.9.13
 - **Diskret kontaktformulär längst ner på info-sidan.** För rapportering av buggar, fel i innehåll och synpunkter. Fält: typ (Bugg/Fel i innehåll/Synpunkt/Övrigt) + meddelande. Vid skicka öppnas besökarens egen e-postklient via `mailto:` med färdigt ämne och brödtext (inkl. avsändarsida); fallback-länk finns under knappen. Mottagare: dedikerad adress `anatomiquizse@gmail.com`.
 - **Backend-fritt & CSP-säkert.** GitHub Pages saknar server, så submit fångas i `info.js` (preventDefault + `window.location`) i stället för en riktig form-submit – `form-action 'self'`/`script-src 'self'` är orörda. Ingen tredjepart, inga data passerar mellanled. Ingen meta/head (SEO) ändrad.
