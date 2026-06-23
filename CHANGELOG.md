@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.18
+- **Länk till integritetspolicyn på info-sidan.** Diskret rad sist i "Om"-texten (`info.html`) som länkar till `integritet.html`, så att policyn nås från både framsidan och Om-sidan.
+- `info.html`. APP_VERSION/VERSION → 0.9.18 (cachebuster: app.js → 0.9.18). styles.css/info.js oförändrade.
+
 ## 0.9.17
 - **Ny integritetspolicy (GDPR).** Egen sida `integritet.html` med kort, juridiskt hållbar text på svenska: vad appen lagrar lokalt (localStorage: topplista, inställningar, framsteg), att inga kakor/spårning/analys används, när data lämnar enheten (export/import + mailto-kontaktformulär), GitHub Pages serverloggar, rättslig grund och rättigheter (GDPR/IMY), barn samt ändringar. Brödsmula överst tillbaka till framsidan, "Tillbaka"-knapp och `PrivacyPolicy`-JSON-LD – samma struktur som info-sidan.
 - **Sidfot på framsidan.** Diskret rad längst ner i `index.html` med kort integritetstext och länk till policyn (återanvänder befintlig `.footer`-stil).
