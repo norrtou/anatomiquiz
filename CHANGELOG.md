@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.16
+- **Fix:** topplistans dolda filväljare för import syntes som en extra "Choose file"-kontroll bredvid "Importera resultat"-knappen. Projektet saknar en generell `.hidden`-regel och `input { display: block }` tvingade fram den. Inför `.file-input-hidden` så att bara knappen visas (filväljaren triggas av knappen via JS som tidigare).
+- `index.html`, `css/styles.css`. Cachebuster: styles.css → 0.7.6. APP_VERSION/VERSION → 0.9.16 (cachebuster: app.js → 0.9.16).
+
 ## 0.9.15
 - **"Nyheter"-sektion på info-sidan.** Ny sektion (före kontaktformuläret) för korta notiser, nyaste överst. Första notisen sammanfattar dagens ändringar (kontaktformulär, egen domän, samt ursäkt för att gamla highscore-resultat gick förlorade vid domänbytet).
 - **"Antal frågor" omarbetad och korrekt.** Statistiken är nu indelad per utbildning (Allmänt, Arbetsterapeut, Sjuksköterska) med delsumma per utbildning och totalsumma – samma indelning som ämnesväljaren. Tidigare saknade ämnen är med: Farmakologi, Medicinsk latin och Anatomi & fysiologi (flashcards). Flashcard-ämnen visas med "—" i Normal/Svår. Siffrorna räknas dynamiskt ur datafilerna.

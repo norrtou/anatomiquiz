@@ -317,6 +317,11 @@ select::placeholder {
   color: var(--text-secondary);
 }
 
+/* Dold filväljare — triggas av en egen knapp via JS (overridar input{display:block}). */
+.file-input-hidden {
+  display: none;
+}
+
 option {
   color: var(--text-primary);
   background: var(--surface);
