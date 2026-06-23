@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.17
+- **Ny integritetspolicy (GDPR).** Egen sida `integritet.html` med kort, juridiskt hållbar text på svenska: vad appen lagrar lokalt (localStorage: topplista, inställningar, framsteg), att inga kakor/spårning/analys används, när data lämnar enheten (export/import + mailto-kontaktformulär), GitHub Pages serverloggar, rättslig grund och rättigheter (GDPR/IMY), barn samt ändringar. Brödsmula överst tillbaka till framsidan, "Tillbaka"-knapp och `PrivacyPolicy`-JSON-LD – samma struktur som info-sidan.
+- **Sidfot på framsidan.** Diskret rad längst ner i `index.html` med kort integritetstext och länk till policyn (återanvänder befintlig `.footer`-stil).
+- `sitemap.xml`: `integritet.html` tillagd. Ingen ändring av befintliga sidors meta/head.
+- `index.html`, ny `integritet.html`. APP_VERSION/VERSION → 0.9.17 (cachebuster: app.js → 0.9.17). styles.css oförändrad (0.7.6).
+
 ## 0.9.16
 - **Fix:** topplistans dolda filväljare för import syntes som en extra "Choose file"-kontroll bredvid "Importera resultat"-knappen. Projektet saknar en generell `.hidden`-regel och `input { display: block }` tvingade fram den. Inför `.file-input-hidden` så att bara knappen visas (filväljaren triggas av knappen via JS som tidigare).
 - `index.html`, `css/styles.css`. Cachebuster: styles.css → 0.7.6. APP_VERSION/VERSION → 0.9.16 (cachebuster: app.js → 0.9.16).
