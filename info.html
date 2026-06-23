@@ -84,7 +84,7 @@
   <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon.png">
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
-  <link rel="stylesheet" href="css/styles.css?v=0.7.4">
+  <link rel="stylesheet" href="css/styles.css?v=0.7.5">
 </head>
 <body>
 
@@ -122,11 +122,14 @@
         <p class="info-creator">Skapad och kvalitetssäkrad av en studerande i arbetsterapi vid Lunds universitet. Utgiven av <a href="https://github.com/norrtou" target="_blank" rel="noopener noreferrer" class="info-link">Norrtou Creations</a>.</p>
       </div>
 
-      <h2 class="changelog-heading">Antal frågor</h2>
-      <div id="statsContent"></div>
-
-      <h2 class="changelog-heading">Versionshistorik</h2>
-      <div id="changelogContent" class="changelog-list"></div>
+      <!-- Nyheter: korta notiser. Nyaste överst. -->
+      <section class="news" aria-labelledby="newsHeading">
+        <h2 id="newsHeading" class="news-heading">Nyheter</h2>
+        <article class="news-item">
+          <time class="news-date" datetime="2026-06-23">23 juni 2026</time>
+          <p class="news-text">Idag har flera viktiga förbättringar gjorts. Sajten har fått ett kontaktformulär för att rapportera buggar, fel och synpunkter. Anatomiquiz har dessutom flyttat till en egen domän – anatomiquiz.se – i stället för den tidigare adressen. Domänbytet innebar tyvärr att alla gamla highscore-resultat gick förlorade. Jag ber om ursäkt för det.</p>
+        </article>
+      </section>
 
       <!-- Diskret kontaktformulär. GitHub Pages saknar backend, så submit fångas i
            info.js och öppnar besökarens egen e-postklient via mailto: (ingen tredjepart,
@@ -151,6 +154,13 @@
         </form>
       </section>
 
+      <h2 class="changelog-heading">Antal frågor</h2>
+      <div id="statsContent"></div>
+      <p id="glossaryCount" class="glossary-count">Laddar ordlistans omfattning…</p>
+
+      <h2 class="changelog-heading">Versionshistorik</h2>
+      <div id="changelogContent" class="changelog-list"></div>
+
       <div class="actions">
         <a href="./" class="btn">← Tillbaka</a>
       </div>
@@ -159,6 +169,6 @@
 
   </main>
 
-  <script src="js/info.js?v=0.9.13" defer></script>
+  <script src="js/info.js?v=0.9.15" defer></script>
 </body>
 </html>

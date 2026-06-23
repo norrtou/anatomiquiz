@@ -944,6 +944,43 @@ select:focus-visible {
 }
 
 /* ============================================================================
+   NYHETER (info.html) — korta notiser, nyaste överst
+   ============================================================================ */
+.news {
+  margin-top: 26px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(16, 185, 129, 0.15);
+}
+
+.news-heading {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-deep);
+  margin: 0 0 10px 0;
+}
+
+.news-item + .news-item {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(16, 185, 129, 0.1);
+}
+
+.news-date {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.3px;
+  margin-bottom: 2px;
+}
+
+.news-text {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--text-primary);
+}
+
+/* ============================================================================
    KONTAKTFORMULÄR (info.html) — diskret, längst ner på sidan
    ============================================================================ */
 .contact {
@@ -1065,11 +1102,41 @@ select:focus-visible {
   font-style: italic;
 }
 
+.stats-intro {
+  color: var(--text-secondary);
+  font-size: 0.86rem;
+  margin: 0 0 14px 0;
+}
+
+/* Grupprubrik per utbildning inuti statistiktabellen */
+.stats-edu-row th {
+  text-align: left;
+  padding: 16px 12px 6px 12px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: var(--primary-deep);
+  border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.stats-subtotal-row td {
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-bottom: 2px solid rgba(16, 185, 129, 0.12);
+}
+
+.glossary-count {
+  margin: 0 0 28px 0;
+  font-size: 0.92rem;
+  color: var(--text-primary);
+}
+
 .changelog-heading {
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin: 0 0 16px 0;
+  margin: 28px 0 16px 0;
   padding-bottom: 10px;
   border-bottom: 2px solid rgba(16, 185, 129, 0.15);
   letter-spacing: 0.2px;

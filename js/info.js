@@ -83,92 +83,120 @@ function renderChangelog(text) {
 // Frågestatistik
 // ============================================================================
 
-const TOPICS = [
-  { label: 'Tentaplugg',           file: './data/tentaplugg.json' },
-  { label: 'Ben',                  file: './data/ben.json' },
-  { label: 'Muskler',              file: './data/muskler.json' },
-  { label: 'Skuldra',              file: './data/skuldran.json' },
-  { label: 'Grepp',                file: './data/grepp.json' },
-  { label: 'Ledtyper',             file: './data/ledtyper.json' },
-  { label: 'Handen',               file: './data/handen.json' },
-  { label: 'Lägen & riktningar',   file: './data/riktningar.json' },
-  { label: 'Medicinsk terminologi',file: './data/medicinsk_terminologi.json' },
-  { label: 'Neurologi',            file: './data/neurologi.json' },
-  { label: 'Blodomloppet',         file: './data/blodomloppet.json' },
-  { label: 'Ergonomi',             file: './data/ergonomi.json' },
-  { label: 'Olika åldrar',         file: './data/olika_aldrar.json' },
+// Ämnen grupperade per utbildning — samma indelning som ämnesväljaren på
+// startsidan (data-edu). fc: true = flashcard-ämne (kort utan svårighetsgrad →
+// visas som "—" i Normal/Svår). Håll i synk med getQuestionsPath() i app.js.
+const EDUCATIONS = [
+  { name: 'Allmänt', topics: [
+    { label: 'Farmakologi',                 file: './data/farmakologi.json', fc: true },
+  ]},
+  { name: 'Arbetsterapeut', topics: [
+    { label: 'Tentaplugg',                  file: './data/tentaplugg.json' },
+    { label: 'ATP-studenters flashcards',   file: './data/studenters_flashcards.json', fc: true },
+    { label: 'Ben',                         file: './data/ben.json' },
+    { label: 'Blodomloppet',                file: './data/blodomloppet.json' },
+    { label: 'Ergonomi',                    file: './data/ergonomi.json' },
+    { label: 'Grepp',                       file: './data/grepp.json' },
+    { label: 'Handen',                      file: './data/handen.json' },
+    { label: 'Ledtyper',                    file: './data/ledtyper.json' },
+    { label: 'Lägen & riktningar',          file: './data/riktningar.json' },
+    { label: 'Medicinsk terminologi',       file: './data/medicinsk_terminologi.json' },
+    { label: 'Muskler – flashcards',        file: './data/muskler_flashcards.json', fc: true },
+    { label: 'Muskler',                     file: './data/muskler.json' },
+    { label: 'Neurologi',                   file: './data/neurologi.json' },
+    { label: 'Olika åldrar',                file: './data/olika_aldrar.json' },
+    { label: 'Skuldra',                     file: './data/skuldran.json' },
+  ]},
+  { name: 'Sjuksköterska', topics: [
+    { label: 'Medicinsk latin',             file: './data/medicinsk_latin.json' },
+    { label: 'Anatomi & fysiologi – flashcards', file: './data/anatomi_fysiologi_flashcards.json', fc: true },
+  ]},
 ]
 
-const FC_TOPICS = [
-  { label: 'Studenters flashcards', file: './data/studenters_flashcards.json' },
-  { label: 'Muskler flashcards',    file: './data/muskler_flashcards.json' },
-]
+const ORDLISTA_URL = './data/ordlista.json'
+
+/** Räknar kort i en datafil → {total, normal, hard} (difficulty 'Hard' = svår). */
+function countCards(file) {
+  return fetch(file).then(r => r.json()).then(data => {
+    const items = Array.isArray(data) ? data : data.questions
+    const normal = items.filter(q => q.difficulty !== 'Hard').length
+    return { total: items.length, normal, hard: items.length - normal }
+  })
+}
 
 async function loadStats() {
   const container = document.getElementById('statsContent')
   container.innerHTML = '<p class="stats-loading">Laddar statistik…</p>'
 
   try {
-    const countCards = (file) =>
-      fetch(file).then(r => r.json()).then(data => {
-        const items = Array.isArray(data) ? data : data.questions
-        const normal = items.filter(q => q.difficulty !== 'Hard').length
-        const hard   = items.length - normal
-        return { total: items.length, normal, hard }
-      })
-
-    const [results, fcResults] = await Promise.all([
-      Promise.all(TOPICS.map(t => countCards(t.file).then(r => ({ label: t.label, ...r })))),
-      Promise.all(FC_TOPICS.map(t => countCards(t.file).then(r => ({ label: t.label, ...r })))),
-    ])
-
-    const totals = results.reduce((acc, r) => ({
-      total: acc.total + r.total,
-      normal: acc.normal + r.normal,
-      hard: acc.hard + r.hard,
-    }), { total: 0, normal: 0, hard: 0 })
-
     const dash = '<span class="stats-diff">—</span>'
 
-    const quizRows = results.map(r => `
-      <tr>
-        <td>${escapeHtml(r.label)}</td>
-        <td>${r.total}</td>
-        <td>${r.normal}</td>
-        <td>${r.hard > 0 ? r.hard : dash}</td>
-      </tr>`).join('')
+    // Hämta alla ämnens antal parallellt och bygg en grupp (med delsumma) per utbildning.
+    const groups = await Promise.all(EDUCATIONS.map(async edu => {
+      const rows = await Promise.all(edu.topics.map(async t => ({ ...t, ...(await countCards(t.file)) })))
+      const sub = rows.reduce((a, r) => ({
+        total: a.total + r.total, normal: a.normal + r.normal, hard: a.hard + r.hard,
+      }), { total: 0, normal: 0, hard: 0 })
+      return { name: edu.name, rows, sub }
+    }))
 
-    const fcRows = fcResults.map(r => `
-      <tr class="stats-fc-row">
-        <td>${escapeHtml(r.label)}</td>
-        <td>${r.total}</td>
-        <td>${dash}</td>
-        <td>${dash}</td>
-      </tr>`).join('')
+    const grand = groups.reduce((a, g) => ({
+      total: a.total + g.sub.total, normal: a.normal + g.sub.normal, hard: a.hard + g.sub.hard,
+    }), { total: 0, normal: 0, hard: 0 })
+
+    const tbody = groups.map(g => {
+      const rows = g.rows.map(r => `
+          <tr>
+            <td>${escapeHtml(r.label)}</td>
+            <td>${r.total}</td>
+            <td>${r.fc ? dash : r.normal}</td>
+            <td>${r.fc ? dash : (r.hard > 0 ? r.hard : dash)}</td>
+          </tr>`).join('')
+      return `
+          <tr class="stats-edu-row"><th colspan="4" scope="colgroup">${escapeHtml(g.name)}</th></tr>
+          ${rows}
+          <tr class="stats-subtotal-row">
+            <td>Summa ${escapeHtml(g.name.toLowerCase())}</td>
+            <td>${g.sub.total}</td>
+            <td>${g.sub.normal}</td>
+            <td>${g.sub.hard}</td>
+          </tr>`
+    }).join('')
 
     container.innerHTML = `
-      <table class="stats-table" aria-label="Frågestatistik per ämne">
+      <p class="stats-intro">Frågor och kort är indelade per utbildning, precis som i ämnesväljaren på startsidan. Flashcard-ämnen (kort) har ingen svårighetsgrad och visas med ”—”.</p>
+      <table class="stats-table" aria-label="Antal frågor och kort per utbildning och ämne">
         <thead>
-          <tr>
-            <th>Ämne</th>
-            <th>Totalt</th>
-            <th>Normal</th>
-            <th>Svår</th>
-          </tr>
+          <tr><th>Ämne</th><th>Totalt</th><th>Normal</th><th>Svår</th></tr>
         </thead>
         <tbody>
-          ${quizRows}
+          ${tbody}
           <tr class="stats-total-row">
-            <td>Totalt quiz</td>
-            <td>${totals.total}</td>
-            <td>${totals.normal}</td>
-            <td>${totals.hard}</td>
+            <td>Totalt</td>
+            <td>${grand.total}</td>
+            <td>${grand.normal}</td>
+            <td>${grand.hard}</td>
           </tr>
-          ${fcRows}
         </tbody>
       </table>`
   } catch {
     container.innerHTML = '<p class="stats-loading">Kunde inte ladda statistik.</p>'
+  }
+}
+
+/**
+ * Antal uppslagsord i medicinska ordlistan — live-termer (exkl. status "stub"),
+ * räknat på samma sätt som ordlistesidan. Visas i #glossaryCount.
+ */
+async function loadGlossaryCount() {
+  const elc = document.getElementById('glossaryCount')
+  if (!elc) return
+  try {
+    const data = await fetch(ORDLISTA_URL).then(r => r.json())
+    const live = data.filter(e => e.status !== 'stub').length
+    elc.innerHTML = `Den medicinska ordlistan innehåller <strong>${live.toLocaleString('sv-SE')}</strong> uppslagsord. <a class="info-link" href="medicinskordlista.html">Öppna ordlistan →</a>`
+  } catch {
+    elc.textContent = 'Kunde inte ladda ordlistans omfattning.'
   }
 }
 
@@ -205,6 +233,7 @@ function initContactForm() {
 
 document.addEventListener('DOMContentLoaded', () => {
   loadStats()
+  loadGlossaryCount()
   loadChangelog()
   initContactForm()
 })

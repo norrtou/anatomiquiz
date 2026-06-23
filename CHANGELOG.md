@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.15
+- **"Nyheter"-sektion på info-sidan.** Ny sektion (före kontaktformuläret) för korta notiser, nyaste överst. Första notisen sammanfattar dagens ändringar (kontaktformulär, egen domän, samt ursäkt för att gamla highscore-resultat gick förlorade vid domänbytet).
+- **"Antal frågor" omarbetad och korrekt.** Statistiken är nu indelad per utbildning (Allmänt, Arbetsterapeut, Sjuksköterska) med delsumma per utbildning och totalsumma – samma indelning som ämnesväljaren. Tidigare saknade ämnen är med: Farmakologi, Medicinsk latin och Anatomi & fysiologi (flashcards). Flashcard-ämnen visas med "—" i Normal/Svår. Siffrorna räknas dynamiskt ur datafilerna.
+- **Ordlistans omfattning visas.** Rad under tabellen: antal uppslagsord i medicinska ordlistan (live-termer, exkl. stubs), räknat som på ordlistesidan, med länk dit.
+- **Layout:** korrekt radbryt (luft) före "Antal frågor"/"Versionshistorik"; kontaktformuläret flyttat ovanför "Antal frågor"; kontakt-e-post bytt till dedikerad `anatomiquizse@gmail.com`.
+- `info.html`, `js/info.js`, `css/styles.css`. Cachebusters: styles.css → 0.7.5, info.js → 0.9.15. APP_VERSION/VERSION → 0.9.15 (cachebuster: app.js → 0.9.15).
+
 ## 0.9.14
 - **Fix:** tog bort en lös textnod ("Byt ") som av misstag hamnat i `index.html` mellan inställnings- och flashcard-sektionen och syntes överst på framsidan.
 - Endast `index.html`. APP_VERSION/VERSION → 0.9.14 (cachebuster: app.js → 0.9.14).
