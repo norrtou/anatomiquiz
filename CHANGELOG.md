@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.19
+- **Intern länk i info-texten.** "Ordlistan" i stycket om medicinska ordlistan (`info.html`) länkar nu till `medicinskordlista.html`.
+- `info.html`. APP_VERSION/VERSION → 0.9.19 (cachebuster: app.js → 0.9.19). styles.css/info.js oförändrade.
+
 ## 0.9.18
 - **Länk till integritetspolicyn på info-sidan.** Diskret rad sist i "Om"-texten (`info.html`) som länkar till `integritet.html`, så att policyn nås från både framsidan och Om-sidan.
 - `info.html`. APP_VERSION/VERSION → 0.9.18 (cachebuster: app.js → 0.9.18). styles.css/info.js oförändrade.
