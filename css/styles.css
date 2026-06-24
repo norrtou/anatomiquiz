@@ -1971,3 +1971,163 @@ ol li {
 }
 
 .case-empty.hidden { display: none; }
+
+/* =========================================================
+   Kunskapsbank — hub med kategorikort (rutnät av länkar).
+   Korten är <a>, hela kortet klickbart. Återanvänder case-
+   kortens gröna språk men i responsivt rutnät.
+   ========================================================= */
+.kb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.kb-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(16, 185, 129, 0.18);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.04) 0%, rgba(52, 211, 153, 0.04) 100%);
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+}
+
+.kb-card:hover,
+.kb-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.15);
+  outline: none;
+}
+
+/* Statusetikett: Live (klar) vs Snart (placeholder) */
+.kb-status {
+  align-self: flex-start;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 3px 10px;
+  margin-bottom: 10px;
+}
+
+.kb-status.is-live {
+  color: var(--primary-deep);
+  background: rgba(16, 185, 129, 0.12);
+}
+
+.kb-status.is-soon {
+  color: var(--text-secondary);
+  background: rgba(100, 116, 139, 0.12);
+}
+
+.kb-card-title {
+  margin: 0 0 6px 0;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.kb-card-desc {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Pilen längst ner skiljer klickbart kort från "snart"-kort */
+.kb-card-go {
+  margin-top: 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-deep);
+}
+
+.kb-card.is-placeholder {
+  cursor: default;
+  opacity: 0.92;
+}
+
+/* =========================================================
+   Kunskapsbankens innehållssidor — vänsterställda faktatabeller
+   (skiljt från .stats-table som högerställer sifferkolumner).
+   Vågrät scroll på små skärmar via .kb-table-wrap.
+   ========================================================= */
+.kb-table-wrap {
+  overflow-x: auto;
+  margin: 18px 0 8px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.kb-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.kb-table caption {
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.kb-table th {
+  text-align: left;
+  padding: 8px 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgba(16, 185, 129, 0.2);
+  white-space: nowrap;
+}
+
+.kb-table td {
+  padding: 9px 12px;
+  color: var(--text-primary);
+  border-bottom: 1px solid rgba(16, 185, 129, 0.08);
+  vertical-align: top;
+}
+
+.kb-table tbody tr:hover {
+  background: rgba(16, 185, 129, 0.04);
+}
+
+/* Ändelser i tabellen lyfts fram monospaceaktigt */
+.kb-end {
+  font-weight: 700;
+  color: var(--primary-deep);
+  white-space: nowrap;
+}
+
+/* Källförteckning på innehållssidor */
+.kb-sources {
+  margin-top: 28px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(16, 185, 129, 0.15);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.kb-sources h2 {
+  font-size: 0.8rem;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin: 0 0 8px;
+}
+
+.kb-sources ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.kb-sources li {
+  margin-bottom: 6px;
+}
