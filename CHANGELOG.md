@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.22
+- **Ny innehållssida: Uttalsregler.** `/kunskapsbank/uttalsregler.html` – hur medicinsk latin och grekiska uttalas. Tre uttalstraditioner (klassiskt/kyrkligt/nationellt) + jämförelsetabell klassiskt vs. medicinskt, varför vården valde det kyrkligt-medeltida uttalet, hur latinets ljud rekonstruerats (med *Caesar → Kaiser/tsar*-exemplet), vokaler & diftonger (ae/oe/au/eu, inkl. svensk *eu→ev*), konsonanttabell (c/g/ti/ch/ph/th/qu m.fl.), betoning (penultima-regeln) samt grekiskan i medicinen och **hela grekiska alfabetet i tabell** (tecken, namn med dubbelformer, omskrivning, uttal). Rejäl **Fråga & svar** (t.ex. *c* i biceps → "bi-seps") speglad i `FAQPage`-JSON-LD. Indexerbar, i sitemap, `Article`/`LearningResource`-JSON-LD. Länkad från terminologi-pillaren (punkten "Uttalsregler" är nu en länk).
+- `sitemap.xml`: `/kunskapsbank/uttalsregler.html` tillagd (priority 0.7).
+- APP_VERSION/VERSION → 0.9.22 (cachebuster: app.js → 0.9.22). Inga ändringar i befintliga sidors meta/head, styles.css oförändrad (0.7.8).
+
 ## 0.9.21
 - **Ny Kunskapsbank (innehållshub).** Egen hub-sida `/kunskapsbank/` (mapp med `index.html`) som samlar sajtens fördjupningsmaterial i ett kortrutnät: medicinsk ordlista, medicinsk terminologi, patientfall (case), samt "Listor & tabeller" och "Faktatexter" (under uppbyggnad) och en länk in i quizet. Brödsmula + `CollectionPage`/`LearningResource`-JSON-LD som övriga undersidor.
 - **Framsidans meny ommöblerad.** Accent-raden med separata knappar "Exempel med case" och "Medicinsk ordlista" ersatt av en knapp **"Kunskapsbank"**. Ordlistan och casen nås nu via hubben. **Inga URL:er ändrade** – `medicinskordlista.html`, `ordlista-*.html` och `case.html` ligger kvar på sina adresser (bara menyn pekar om).
