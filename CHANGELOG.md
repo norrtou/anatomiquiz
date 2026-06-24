@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.20
+- **IndexNow (snabbare omindexering på Bing m.fl.).** Sajten meddelar nu IndexNow-deltagande sökmotorer (Bing, Yandex, Seznam, Naver, Yep) direkt när innehåll ändrats, i stället för att vänta på att de crawlar om. Google deltar **inte** i IndexNow och påverkas inte; `sitemap.xml` är fortsatt huvudvägen mot Google.
+- Nyckelfil `ff1efd99d9aa024279a96e753a78c317.txt` i roten (bevisar domänägande, serveras av GitHub Pages).
+- Ny GitHub Action `.github/workflows/indexnow.yml`: triggas på `page_build` (dvs. efter att Pages-bygget är live, så Bing aldrig hämtar gammalt innehåll) och postar alla `<loc>`-URL:er ur `sitemap.xml` till `api.indexnow.org`. Kan även köras manuellt (`workflow_dispatch`).
+- **Ingen påverkan på sidladdning eller SEO-ranking** – allt sker utanför klienten; inga extra bytes, ingen JS för besökaren.
+- APP_VERSION/VERSION → 0.9.20 (cachebuster: app.js → 0.9.20). Inga ändringar i sidornas meta/head, styles.css eller innehåll.
+
 ## 0.9.19
 - **Intern länk i info-texten.** "Ordlistan" i stycket om medicinska ordlistan (`info.html`) länkar nu till `medicinskordlista.html`.
 - `info.html`. APP_VERSION/VERSION → 0.9.19 (cachebuster: app.js → 0.9.19). styles.css/info.js oförändrade.

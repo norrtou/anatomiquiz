@@ -1,0 +1,62 @@
+name: IndexNow
+
+# Körs när GitHub Pages-bygget är klart och det nya innehållet är live.
+# (build_type: legacy → page_build-eventet fyrar efter varje deploy från main.)
+# Pingar Bing/Yandex m.fl. via IndexNow så de hämtar om ändrade sidor snabbare.
+# Google deltar INTE i IndexNow och påverkas inte.
+on:
+  page_build:
+  # Kan även köras manuellt från Actions-fliken:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    # Hoppa över om Pages-bygget misslyckades.
+    if: github.event_name == 'workflow_dispatch' || github.event.build.status == 'built'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Submit sitemap-URL:er till IndexNow
+        env:
+          INDEXNOW_KEY: ff1efd99d9aa024279a96e753a78c317
+          HOST: anatomiquiz.se
+        run: |
+          set -euo pipefail
+
+          # Plocka alla <loc>-URL:er ur sitemap.xml.
+          mapfile -t URLS < <(grep -oP '(?<=<loc>)[^<]+' sitemap.xml)
+
+          if [ "${#URLS[@]}" -eq 0 ]; then
+            echo "Hittade inga URL:er i sitemap.xml — avbryter."
+            exit 1
+          fi
+
+          echo "Skickar ${#URLS[@]} URL:er till IndexNow..."
+
+          # Bygg JSON-payloaden.
+          URL_JSON=$(printf '%s\n' "${URLS[@]}" | jq -R . | jq -s .)
+          PAYLOAD=$(jq -n \
+            --arg host "$HOST" \
+            --arg key "$INDEXNOW_KEY" \
+            --arg keyLocation "https://$HOST/$INDEXNOW_KEY.txt" \
+            --argjson urlList "$URL_JSON" \
+            '{host: $host, key: $key, keyLocation: $keyLocation, urlList: $urlList}')
+
+          HTTP_CODE=$(curl -sS -o /tmp/indexnow_resp.txt -w '%{http_code}' \
+            -X POST 'https://api.indexnow.org/IndexNow' \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            --data "$PAYLOAD")
+
+          echo "IndexNow svarade: HTTP $HTTP_CODE"
+          cat /tmp/indexnow_resp.txt || true
+
+          # 200 = ok, 202 = accepted. Allt annat = fel.
+          case "$HTTP_CODE" in
+            200|202) echo "OK." ;;
+            *) echo "IndexNow-fel (HTTP $HTTP_CODE)"; exit 1 ;;
+          esac
