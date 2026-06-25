@@ -1,5 +1,15 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.24
+- **Ny bindande standard: `SEO_REGLER.md`.** Komplett SEO-/tillgänglighets-/prestanda-/agent-standard i repo-roten som MÅSTE följas av all HTML-/sitemap-/llms-/css-/JSON-LD-kod: den heliga `<head>`-mallen (matchar index.html), titel-/description-regler (Bing), OG/Twitter, JSON-LD per sidtyp, a11y-trädet, CLS 0, agent-kriterier, kod-dokumentation, **KEDJAN** (allt som måste uppdateras ihop) samt pre-flight-checklista med verifieringsskript. Inlänkad från `CLAUDE_REGLER.md` (båda bindande).
+- **Terminologisidorna SEO-härdade mot Bing & PageSpeed.** Alla sex sidor (pillaren + medicinskt latin, grekiska, deklinationer, uttalsregler, terminologins historia):
+  - **Titlar kortade till ≤65 tecken** (var 70–83), unika och utan repetition/boilerplate (t.ex. *uttal→uttalsregler*-dubbleringen och parentes-stuffing borttagna); `og:title`/`twitter:title` synkade med titel-core.
+  - **Descriptions kortade till 134–144 tecken** (var 186–236) → inom Bings 25–150 och husnormen; alla unika.
+  - **`<caption>` lades till på alla datatabeller** (18 st som saknade) → tillgänglighetsträdet helt grönt i PageSpeed.
+- **llms.txt:** ny **Kunskapsbank**-sektion (hub + de sex terminologisidorna) → uppfyller PageSpeeds agentiska kriterium om aktuell llms.txt.
+- Bekräftat via PageSpeed: tillgänglighetsträdet korrekt formaterat, **CLS = 0**, llms.txt följer rekommendationerna. Inga URL:er ändrade; endast meta/innehåll/dokumentation.
+- APP_VERSION/VERSION → 0.9.24 (cachebuster: app.js → 0.9.24). styles.css oförändrad (0.7.8).
+
 ## 0.9.23
 - **Tre nya innehållssidor – terminologi-pillaren komplett.** Avdelningen "Medicinsk terminologi" har nu alla fem områden som riktiga sidor:
   - `/kunskapsbank/medicinskt-latin.html` – hur anatomiska termer är byggda: latin vs. grekiska (anatomi vs. klinik), ordbildning (förled + rot + efterled + bindevokal) med uppdelningstabell, **riktnings- och lägestermer** (anterior/posterior, medial/lateral, proximal/distal, dexter/sinister m.fl.), rörelsetermer (flexio/extensio, pronatio/supinatio …), vanliga latinska rötter för kroppsdelar, latinska förled samt beskrivande adjektiv (form/storlek/antal/färg). FAQ (t.ex. *rectus abdominis*, *anterior/posterior*) speglad i `FAQPage`-JSON-LD.

@@ -3,6 +3,11 @@
 ## Övergripande Princip
 Detta dokument definierar ALLA regler och instruktioner för att bygga och underhålla anatomiquiz-databasen. Dessa regler gäller för ALL arbete på projektet - nuvarande och framtida ämnen/tillägg. Följ ALLTID dessa regler utan undantag.
 
+> **Webb / SEO / kod:** Allt som rör HTML, `<head>`, titlar, descriptions, sitemap, llms.txt,
+> CSS, JSON-LD, tillgänglighet, prestanda och agenter styrs av **[`SEO_REGLER.md`](SEO_REGLER.md)**.
+> Läs och följ den **innan** du rör någon sida, och bocka av dess pre-flight-checklista före commit.
+> CLAUDE_REGLER täcker innehåll/quiz/JSON; SEO_REGLER täcker koden runt omkring. Båda är bindande.
+
 ---
 
 ## 1. SPRÅK OCH TERMINOLOGI
