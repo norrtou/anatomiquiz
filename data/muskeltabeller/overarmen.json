@@ -1,0 +1,62 @@
+{
+  "region": "Överarmen",
+  "slug": "overarmen",
+  "rubrik": "Överarmens muskler",
+  "underrubrik": "Främre böjarloge och bakre sträckarloge – ursprung, fäste, innervation och funktion",
+  "kort_beskrivning": "Böjarna på framsidan (biceps, brachialis, coracobrachialis) och sträckarna på baksidan (triceps, anconeus).",
+  "kort_cta": "Visa överarmens muskler →",
+  "intro": "Överarmens (brachium) muskler verkar främst på armbågsleden och ligger i två loger åtskilda av mellanarmsseptum. Den främre logen innehåller böjarna och den bakre sträckarna. Flera av dem passerar även axelleden och bidrar därför till dess rörelser.",
+  "kallor": [
+    "Bojsen-Møller, F., Simonsen, E. B., & Tranum-Jensen, J. (2018). <em>Rörelseapparatens anatomi</em> (2:a uppl.). Liber.",
+    "Federative International Programme for Anatomical Terminology. (2019). <em>Terminologia anatomica</em> (2:a uppl.). FIPAT.",
+    "Paulsen, F., & Waschke, J. (Red.). (2018). <em>Sobotta atlas of human anatomy</em> (16:e uppl.). Elsevier.",
+    "Standring, S. (Red.). (2021). <em>Gray's anatomy: The anatomical basis of clinical practice</em> (42:a uppl.). Elsevier."
+  ],
+  "muskler": [
+    {
+      "latin": "Musculus biceps brachii",
+      "svenska": "Tvåhövdade armmuskeln",
+      "grupp": "Främre logen (böjare)",
+      "origo": "Caput longum: tuberculum supraglenoidale scapulae. Caput breve: processus coracoideus scapulae",
+      "insertio": "Tuberositas radii samt aponeurosis bicipitalis (lacertus fibrosus) ut i underarmsfascian",
+      "innervation": "Nervus musculocutaneus (C5–C6)",
+      "funktion": "Flekterar armbågen och supinerar underarmen (kraftigast vid flekterad armbåge); bidrar till axelns rörelser"
+    },
+    {
+      "latin": "Musculus brachialis",
+      "svenska": "Inre armmuskeln",
+      "grupp": "Främre logen (böjare)",
+      "origo": "Distala främre ytan av humerus",
+      "insertio": "Tuberositas ulnae och processus coronoideus ulnae",
+      "innervation": "Nervus musculocutaneus (C5–C6); en liten lateral del av nervus radialis",
+      "funktion": "Renodlad böjare i armbågsleden oavsett underarmens läge – armbågsflexionens \"arbetshäst\""
+    },
+    {
+      "latin": "Musculus coracobrachialis",
+      "svenska": "Korakobrakialmuskeln",
+      "grupp": "Främre logen (böjare)",
+      "origo": "Processus coracoideus scapulae",
+      "insertio": "Mediala mitten av humerus",
+      "innervation": "Nervus musculocutaneus (C5–C7)",
+      "funktion": "Flekterar och adducerar armen i axelleden"
+    },
+    {
+      "latin": "Musculus triceps brachii",
+      "svenska": "Trehövdade armmuskeln",
+      "grupp": "Bakre logen (sträckare)",
+      "origo": "Caput longum: tuberculum infraglenoidale scapulae. Caput laterale: humerus baksida ovan sulcus nervi radialis. Caput mediale: humerus baksida nedan sulcus nervi radialis",
+      "insertio": "Olecranon ulnae",
+      "innervation": "Nervus radialis (C6–C8)",
+      "funktion": "Sträcker armbågen (enda egentliga extensorn); caput longum extenderar och adducerar armen i axelleden"
+    },
+    {
+      "latin": "Musculus anconeus",
+      "svenska": "Lilla armbågsmuskeln",
+      "grupp": "Bakre logen (sträckare)",
+      "origo": "Epicondylus lateralis humeri (baksidan)",
+      "insertio": "Olecranon och proximala dorsala ytan av ulna",
+      "innervation": "Nervus radialis (C7–C8)",
+      "funktion": "Bistår armbågssträckning och stabiliserar leden; drar ledkapseln undan vid extension"
+    }
+  ]
+}

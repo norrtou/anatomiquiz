@@ -1,0 +1,134 @@
+{
+  "region": "Underbenet",
+  "slug": "underbenet",
+  "rubrik": "Underbenets muskler",
+  "underrubrik": "Främre, laterala och bakre logen (ytlig + djup) – ursprung, fäste, innervation och funktion",
+  "kort_beskrivning": "Vadmusklerna, de djupa tåböjarna, främre dorsalflexorerna och peroneus-musklerna på utsidan.",
+  "kort_cta": "Plugga underbenets muskler →",
+  "intro": "Underbenets (crus) muskler rör fotleden och tårna och ligger i fyra loger: en främre (dorsalflexorer), en lateral (peroneus/fibularis) samt en ytlig och en djup bakre loge (plantarflexorer och tåböjare). De ytliga vadmusklerna fäster via tendo calcaneus (akillessenan) på hälbenet.",
+  "kallor": [
+    "Bojsen-Møller, F., Simonsen, E. B., & Tranum-Jensen, J. (2018). <em>Rörelseapparatens anatomi</em> (2:a uppl.). Liber.",
+    "Federative International Programme for Anatomical Terminology. (2019). <em>Terminologia anatomica</em> (2:a uppl.). FIPAT.",
+    "Paulsen, F., & Waschke, J. (Red.). (2018). <em>Sobotta atlas of human anatomy</em> (16:e uppl.). Elsevier.",
+    "Standring, S. (Red.). (2021). <em>Gray's anatomy: The anatomical basis of clinical practice</em> (42:a uppl.). Elsevier."
+  ],
+  "muskler": [
+    {
+      "latin": "Musculus tibialis anterior",
+      "svenska": "Främre skenbensmuskeln",
+      "grupp": "Främre logen (dorsalflexorer)",
+      "origo": "Laterala condylus och proximala laterala ytan av tibia samt membrana interossea",
+      "insertio": "Os cuneiforme mediale och basis ossis metatarsalis I",
+      "innervation": "Nervus fibularis profundus (L4–L5)",
+      "funktion": "Dorsalflexion och inversion (supination) av foten"
+    },
+    {
+      "latin": "Musculus extensor digitorum longus",
+      "svenska": "Långa tåsträckaren",
+      "grupp": "Främre logen (dorsalflexorer)",
+      "origo": "Laterala condylus tibiae, främre ytan av fibula och membrana interossea",
+      "insertio": "Dorsalaponeurosen på tå 2–5",
+      "innervation": "Nervus fibularis profundus (L5–S1)",
+      "funktion": "Sträcker tårna 2–5; dorsalflexion av foten"
+    },
+    {
+      "latin": "Musculus extensor hallucis longus",
+      "svenska": "Långa stortåsträckaren",
+      "grupp": "Främre logen (dorsalflexorer)",
+      "origo": "Mellersta mediala ytan av fibula och membrana interossea",
+      "insertio": "Basis phalangis distalis hallucis (stortåns ytterfalang)",
+      "innervation": "Nervus fibularis profundus (L5–S1)",
+      "funktion": "Sträcker stortån; dorsalflexion av foten"
+    },
+    {
+      "latin": "Musculus fibularis tertius",
+      "svenska": "Tredje vadbensmuskeln",
+      "grupp": "Främre logen (dorsalflexorer)",
+      "origo": "Distala främre ytan av fibula (avknoppning från extensor digitorum longus)",
+      "insertio": "Basis ossis metatarsalis V (dorsalt)",
+      "innervation": "Nervus fibularis profundus (L5–S1)",
+      "funktion": "Dorsalflexion och eversion (pronation) av foten"
+    },
+    {
+      "latin": "Musculus fibularis longus",
+      "svenska": "Långa vadbensmuskeln",
+      "grupp": "Laterala logen (peroneusmuskler)",
+      "origo": "Caput fibulae och proximala laterala ytan av fibula",
+      "insertio": "Os cuneiforme mediale och basis ossis metatarsalis I (senan löper under fotsulan)",
+      "innervation": "Nervus fibularis superficialis (L5–S1)",
+      "funktion": "Eversion (pronation) och plantarflexion av foten; stödjer fotvalvet"
+    },
+    {
+      "latin": "Musculus fibularis brevis",
+      "svenska": "Korta vadbensmuskeln",
+      "grupp": "Laterala logen (peroneusmuskler)",
+      "origo": "Distala laterala ytan av fibula",
+      "insertio": "Tuberositas ossis metatarsalis V",
+      "innervation": "Nervus fibularis superficialis (L5–S1)",
+      "funktion": "Eversion (pronation) och plantarflexion av foten"
+    },
+    {
+      "latin": "Musculus gastrocnemius",
+      "svenska": "Tvillingvadmuskeln",
+      "grupp": "Ytliga bakre logen (vadmuskler)",
+      "origo": "Caput mediale och laterale ovan femurkondylerna på lårbenets baksida",
+      "insertio": "Tuber calcanei via tendo calcaneus (akillessenan)",
+      "innervation": "Nervus tibialis (S1–S2)",
+      "funktion": "Plantarflexion av foten och böjning av knät (tvåledsmuskel)"
+    },
+    {
+      "latin": "Musculus soleus",
+      "svenska": "Flundremuskeln",
+      "grupp": "Ytliga bakre logen (vadmuskler)",
+      "origo": "Caput fibulae och linea musculi solei på tibias baksida",
+      "insertio": "Tuber calcanei via tendo calcaneus",
+      "innervation": "Nervus tibialis (S1–S2)",
+      "funktion": "Kraftig plantarflexion; viktig hållnings- och stårmuskel"
+    },
+    {
+      "latin": "Musculus plantaris",
+      "svenska": "Smala vadmuskeln",
+      "grupp": "Ytliga bakre logen (vadmuskler)",
+      "origo": "Linea supracondylaris lateralis ovan laterala femurkondylen",
+      "insertio": "Tuber calcanei (medialt om akillessenan)",
+      "innervation": "Nervus tibialis (S1–S2)",
+      "funktion": "Svag plantarflexion och knäflexion; rik på proprioceptorer"
+    },
+    {
+      "latin": "Musculus popliteus",
+      "svenska": "Knävecksmuskeln",
+      "grupp": "Djupa bakre logen",
+      "origo": "Laterala condylus femoris och bakhornet av laterala menisken",
+      "insertio": "Bakre proximala ytan av tibia (ovan linea musculi solei)",
+      "innervation": "Nervus tibialis (L4–S1)",
+      "funktion": "Inåtroterar och böjer knät; \"låser upp\" det helt sträckta knät"
+    },
+    {
+      "latin": "Musculus tibialis posterior",
+      "svenska": "Bakre skenbensmuskeln",
+      "grupp": "Djupa bakre logen",
+      "origo": "Bakre ytan av membrana interossea samt tibia och fibula",
+      "insertio": "Tuberositas ossis navicularis och flera fotrots- och mellanfotsben",
+      "innervation": "Nervus tibialis (L4–L5)",
+      "funktion": "Plantarflexion och inversion (supination); stödjer fotvalvet"
+    },
+    {
+      "latin": "Musculus flexor digitorum longus",
+      "svenska": "Långa tåböjaren",
+      "grupp": "Djupa bakre logen",
+      "origo": "Bakre ytan av tibia",
+      "insertio": "Basis phalangis distalis på tå 2–5 (ytterfalangerna)",
+      "innervation": "Nervus tibialis (L5–S2)",
+      "funktion": "Böjer tårna 2–5; plantarflexion och inversion av foten"
+    },
+    {
+      "latin": "Musculus flexor hallucis longus",
+      "svenska": "Långa stortåböjaren",
+      "grupp": "Djupa bakre logen",
+      "origo": "Bakre ytan av fibula och membrana interossea",
+      "insertio": "Basis phalangis distalis hallucis (stortåns ytterfalang)",
+      "innervation": "Nervus tibialis (L5–S2)",
+      "funktion": "Böjer stortån; plantarflexion och inversion; central vid frånskjut i gången"
+    }
+  ]
+}

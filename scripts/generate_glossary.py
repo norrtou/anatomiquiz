@@ -44,7 +44,7 @@ SITE = "https://anatomiquiz.se"
 LANDING_FILE = "medicinskordlista.html"
 
 # Cachebusters per asset — bumpa bara den som faktiskt ändrats.
-STYLES_V = "0.7.1"        # css/styles.css (oförändrad sedan tidigare)
+STYLES_V = "0.7.9"        # css/styles.css (synkad med övriga sidor 2026-06-25)
 GLOSSARY_V = "0.9.4"      # css/glossary.css + js/glossary.js (denna release)
 
 # Svenska alfabetet — fast ordning för alfabetsraden. Bokstäver utan poster
@@ -593,6 +593,7 @@ def render_page(
         och svensk medicinsk ordbok.
       </p>
       <a href="medicinskordlista.html" class="btn glossary-back-btn">← Tillbaka till ordlistan</a>
+      <a href="/kunskapsbank/medicinsk-terminologi.html" class="btn glossary-back-btn">Förstå termerna: Medicinsk terminologi →</a>
     </footer>
 
   </main>
@@ -750,12 +751,28 @@ def write_sitemap(group_files: list[str]) -> None:
             "  </url>"
         )
 
+    # Kunskapsbanken (hub + indexerbara undersidor). Denna funktion skriver om
+    # HELA sitemap.xml, så ALLA indexerbara sidor måste listas här – annars
+    # tappas de vid nästa generering. Håll synkad med faktiska sidor.
+    kb_pages = [
+        "medicinsk-terminologi", "medicinskt-latin", "grekiska-i-medicinen",
+        "deklinationer-pluralformer", "uttalsregler", "terminologins-historia",
+    ]
+
     blocks = [url_block(f"{SITE}/", "weekly", "1.0")]
+    blocks.append(url_block(f"{SITE}/kunskapsbank/", "weekly", "0.8"))
+    for f in kb_pages:
+        blocks.append(url_block(f"{SITE}/kunskapsbank/{f}.html", "monthly", "0.7"))
+    # Muskeltabeller (under-pillar + regionsidor)
+    blocks.append(url_block(f"{SITE}/kunskapsbank/muskeltabeller.html", "weekly", "0.7"))
+    for f in ["handen", "skuldran", "overarmen", "laret", "underbenet"]:
+        blocks.append(url_block(f"{SITE}/kunskapsbank/muskeltabell-{f}.html", "monthly", "0.7"))
     blocks.append(url_block(f"{SITE}/{LANDING_FILE}", "weekly", "0.9"))
     for f in group_files:
         blocks.append(url_block(f"{SITE}/{f}", "monthly", "0.7"))
     blocks.append(url_block(f"{SITE}/case.html", "monthly", "0.7"))
     blocks.append(url_block(f"{SITE}/info.html", "monthly", "0.5"))
+    blocks.append(url_block(f"{SITE}/integritet.html", "yearly", "0.3"))
 
     body = (
         '<?xml version="1.0" encoding="UTF-8"?>\n'

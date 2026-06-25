@@ -1,0 +1,219 @@
+{
+  "region": "Handen",
+  "slug": "handen",
+  "rubrik": "Handens muskler",
+  "underrubrik": "Intrinsiska och extrinsiska muskler – ursprung, fäste, innervation och funktion",
+  "kort_beskrivning": "Tenarens, hypotenarens och mellanhandens egna muskler – plus de extrinsiska finger- och tummusklerna från underarmen.",
+  "kort_cta": "Öppna handtabellen →",
+  "omfattning": "intrinsiska och extrinsiska",
+  "intro": "Handens egna (intrinsiska) muskler ligger helt inom handen och finstyr fingrarnas och tummens rörelser. De delas in i tenarmuskler (tumvallen), hypotenarmuskler (lillfingervallen), de maskformiga lumbricalerna samt interosseerna mellan mellanhandsbenen. De grova böj- och sträckrörelserna sköts av de extrinsiska underarmsmusklerna, vars senor löper ut i handen (egen sida).",
+  "kallor": [
+    "Bojsen-Møller, F., Simonsen, E. B., & Tranum-Jensen, J. (2018). <em>Rörelseapparatens anatomi</em> (2:a uppl.). Liber.",
+    "Federative International Programme for Anatomical Terminology. (2019). <em>Terminologia anatomica</em> (2:a uppl.). FIPAT.",
+    "Paulsen, F., & Waschke, J. (Red.). (2018). <em>Sobotta atlas of human anatomy</em> (16:e uppl.). Elsevier.",
+    "Standring, S. (Red.). (2021). <em>Gray's anatomy: The anatomical basis of clinical practice</em> (42:a uppl.). Elsevier."
+  ],
+  "muskler": [
+    {
+      "latin": "Musculus abductor pollicis brevis",
+      "svenska": "Korta tumabduktorn",
+      "grupp": "Tenar",
+      "origo": "Retinaculum musculorum flexorum samt tuberculum ossis scaphoidei och os trapezium",
+      "insertio": "Radiala sidan av basis phalangis proximalis pollicis (tummens grundfalang)",
+      "innervation": "Nervus medianus (C8–T1)",
+      "funktion": "Abducerar tummen (palmar abduktion) i karpometakarpal- och grundleden",
+      "typ": "Intrinsisk"
+    },
+    {
+      "latin": "Musculus flexor pollicis brevis",
+      "svenska": "Korta tumböjaren",
+      "grupp": "Tenar",
+      "origo": "Ytliga huvudet: retinaculum flexorum och os trapezium. Djupa huvudet: os trapezoideum och os capitatum",
+      "insertio": "Radiala sesambenet och basis phalangis proximalis pollicis",
+      "innervation": "Ytliga huvudet: nervus medianus; djupa huvudet: nervus ulnaris (ramus profundus)",
+      "funktion": "Flekterar tummen i grundleden (MCP)",
+      "typ": "Intrinsisk"
+    },
+    {
+      "latin": "Musculus opponens pollicis",
+      "svenska": "Tummens motställare",
+      "grupp": "Tenar",
+      "origo": "Retinaculum flexorum och os trapezium",
+      "insertio": "Radiala kanten av os metacarpale I (tummens mellanhandsben)",
+      "innervation": "Nervus medianus (C8–T1)",
+      "funktion": "Opposition – för tummen mot handflatan (flexion, abduktion och rotation i CMC-leden)",
+      "typ": "Intrinsisk"
+    },
+    {
+      "latin": "Musculus adductor pollicis",
+      "svenska": "Tumadduktorn",
+      "grupp": "Tenar",
+      "origo": "Tvärgående huvudet: palmara ytan av os metacarpale III. Sneda huvudet: os capitatum samt basis av os metacarpale II–III",
+      "insertio": "Ulnara sesambenet och basis phalangis proximalis pollicis",
+      "innervation": "Nervus ulnaris (ramus profundus), C8–T1",
+      "funktion": "Adducerar tummen mot handflatan; bidrar till nyckelgrepp",
+      "typ": "Intrinsisk"
+    },
+    {
+      "latin": "Musculus abductor digiti minimi",
+      "svenska": "Lillfingrets abduktor",
+      "grupp": "Hypotenar",
+      "origo": "Os pisiforme och senan till musculus flexor carpi ulnaris",
+      "insertio": "Ulnara sidan av basis phalangis proximalis digiti minimi",
+      "innervation": "Nervus ulnaris (ramus profundus)",
+      "funktion": "Abducerar lillfingret från handens mittlinje",
+      "typ": "Intrinsisk"
+    },
+    {
+      "latin": "Musculus flexor digiti minimi brevis",
+      "svenska": "Lillfingrets korta böjare",
+      "grupp": "Hypotenar",
+      "origo": "Hamulus ossis hamati och retinaculum flexorum",
+      "insertio": "Basis phalangis proximalis digiti minimi",
+      "innervation": "Nervus ulnaris (ramus profundus)",
+      "funktion": "Flekterar lillfingret i grundleden (MCP)",
+      "typ": "Intrinsisk"
+    },
+    {
+      "latin": "Musculus opponens digiti minimi",
+      "svenska": "Lillfingrets motställare",
+      "grupp": "Hypotenar",
+      "origo": "Hamulus ossis hamati och retinaculum flexorum",
+      "insertio": "Ulnara kanten av os metacarpale V",
+      "innervation": "Nervus ulnaris (ramus profundus)",
+      "funktion": "Drar lillfingrets mellanhandsben framåt (opposition) och fördjupar handflatan",
+      "typ": "Intrinsisk"
+    },
+    {
+      "latin": "Musculus palmaris brevis",
+      "svenska": "Korta handflatemuskeln",
+      "grupp": "Hypotenar",
+      "origo": "Aponeurosis palmaris och retinaculum flexorum",
+      "insertio": "Huden på handens ulnara kant (hypotenar)",
+      "innervation": "Nervus ulnaris (ramus superficialis)",
+      "funktion": "Spänner och rynkar huden över hypotenar; fördjupar handflatan och stabiliserar greppet",
+      "typ": "Intrinsisk"
+    },
+    {
+      "latin": "Musculi lumbricales (I–IV)",
+      "svenska": "Maskformiga musklerna",
+      "grupp": "Mellanhand",
+      "origo": "Senorna till musculus flexor digitorum profundus i handflatan",
+      "insertio": "Radiala sidan av dorsalaponeurosen (extensorhuvan) på digiti II–V",
+      "innervation": "I–II (radiala): nervus medianus; III–IV (ulnara): nervus ulnaris (ramus profundus)",
+      "funktion": "Flekterar grundlederna (MCP) och sträcker mellan- och ytterlederna (PIP/DIP) på fingrarna",
+      "typ": "Intrinsisk"
+    },
+    {
+      "latin": "Musculi interossei dorsales (I–IV)",
+      "svenska": "Ryggsidans interosseer",
+      "grupp": "Mellanhand",
+      "origo": "Två huvuden från de mot varandra vända sidorna av angränsande ossa metacarpalia I–V",
+      "insertio": "Basis phalangis proximalis och dorsalaponeurosen på digiti II–IV",
+      "innervation": "Nervus ulnaris (ramus profundus)",
+      "funktion": "Abducerar fingrarna från handens mittlinje (långfingret); bidrar till MCP-flexion och IP-extension",
+      "typ": "Intrinsisk"
+    },
+    {
+      "latin": "Musculi interossei palmares (I–III)",
+      "svenska": "Handflatans interosseer",
+      "grupp": "Mellanhand",
+      "origo": "Palmara ytan av os metacarpale II, IV och V",
+      "insertio": "Basis phalangis proximalis och dorsalaponeurosen på digiti II, IV och V",
+      "innervation": "Nervus ulnaris (ramus profundus)",
+      "funktion": "Adducerar fingrarna mot handens mittlinje (långfingret); bidrar till MCP-flexion och IP-extension",
+      "typ": "Intrinsisk"
+    },
+    {
+      "latin": "Musculus flexor digitorum superficialis",
+      "svenska": "Ytliga fingerböjaren",
+      "typ": "Extrinsisk",
+      "grupp": "Extrinsiska fingerböjare (underarmens framsida)",
+      "origo": "Humeroulnara huvudet: epicondylus medialis humeri och processus coronoideus ulnae. Radiala huvudet: främre ytan av radius",
+      "insertio": "Sidorna av basis phalangis mediae (mellanfalangerna) på digiti II–V",
+      "innervation": "Nervus medianus (C8–T1)",
+      "funktion": "Flekterar mellanlederna (PIP) på digiti II–V; bidrar till MCP- och handledsflexion"
+    },
+    {
+      "latin": "Musculus flexor digitorum profundus",
+      "svenska": "Djupa fingerböjaren",
+      "typ": "Extrinsisk",
+      "grupp": "Extrinsiska fingerböjare (underarmens framsida)",
+      "origo": "Främre och mediala ytan av ulna samt membrana interossea",
+      "insertio": "Basis phalangis distalis (ytterfalangerna) på digiti II–V",
+      "innervation": "Radiala delen (dig. II–III): nervus medianus (nervus interosseus anterior); ulnara delen (dig. IV–V): nervus ulnaris",
+      "funktion": "Flekterar ytterlederna (DIP) på digiti II–V – enda muskeln som böjer DIP; bidrar till PIP/MCP- och handledsflexion"
+    },
+    {
+      "latin": "Musculus flexor pollicis longus",
+      "svenska": "Långa tumböjaren",
+      "typ": "Extrinsisk",
+      "grupp": "Extrinsiska fingerböjare (underarmens framsida)",
+      "origo": "Främre ytan av radius samt membrana interossea",
+      "insertio": "Basis phalangis distalis pollicis (tummens ytterfalang)",
+      "innervation": "Nervus medianus (nervus interosseus anterior)",
+      "funktion": "Flekterar tummens ytterled (IP) och grundled"
+    },
+    {
+      "latin": "Musculus extensor digitorum",
+      "svenska": "Fingersträckaren",
+      "typ": "Extrinsisk",
+      "grupp": "Extrinsiska finger- och tumsträckare (underarmens baksida)",
+      "origo": "Epicondylus lateralis humeri (gemensamma extensorsenan)",
+      "insertio": "Dorsalaponeurosen samt mellan- och ytterfalangerna på digiti II–V",
+      "innervation": "Nervus radialis (nervus interosseus posterior)",
+      "funktion": "Sträcker digiti II–V i grund-, mellan- och ytterleder; bidrar till handledsextension"
+    },
+    {
+      "latin": "Musculus extensor indicis",
+      "svenska": "Pekfingersträckaren",
+      "typ": "Extrinsisk",
+      "grupp": "Extrinsiska finger- och tumsträckare (underarmens baksida)",
+      "origo": "Dorsala ytan av ulna (distalt) samt membrana interossea",
+      "insertio": "Dorsalaponeurosen på pekfingret (digiti II)",
+      "innervation": "Nervus radialis (nervus interosseus posterior)",
+      "funktion": "Sträcker pekfingret självständigt"
+    },
+    {
+      "latin": "Musculus extensor digiti minimi",
+      "svenska": "Lillfingersträckaren",
+      "typ": "Extrinsisk",
+      "grupp": "Extrinsiska finger- och tumsträckare (underarmens baksida)",
+      "origo": "Gemensamma extensorsenan vid epicondylus lateralis humeri",
+      "insertio": "Dorsalaponeurosen på lillfingret (digiti V)",
+      "innervation": "Nervus radialis (nervus interosseus posterior)",
+      "funktion": "Sträcker lillfingret självständigt"
+    },
+    {
+      "latin": "Musculus extensor pollicis longus",
+      "svenska": "Långa tumsträckaren",
+      "typ": "Extrinsisk",
+      "grupp": "Extrinsiska finger- och tumsträckare (underarmens baksida)",
+      "origo": "Dorsala ytan av ulna samt membrana interossea",
+      "insertio": "Basis phalangis distalis pollicis (tummens ytterfalang)",
+      "innervation": "Nervus radialis (nervus interosseus posterior)",
+      "funktion": "Sträcker tummens ytterled (IP); bildar ulnara kanten av fovea radialis (snusgropen)"
+    },
+    {
+      "latin": "Musculus extensor pollicis brevis",
+      "svenska": "Korta tumsträckaren",
+      "typ": "Extrinsisk",
+      "grupp": "Extrinsiska finger- och tumsträckare (underarmens baksida)",
+      "origo": "Dorsala ytan av radius samt membrana interossea",
+      "insertio": "Basis phalangis proximalis pollicis (tummens grundfalang)",
+      "innervation": "Nervus radialis (nervus interosseus posterior)",
+      "funktion": "Sträcker tummens grundled (MCP)"
+    },
+    {
+      "latin": "Musculus abductor pollicis longus",
+      "svenska": "Långa tumabduktorn",
+      "typ": "Extrinsisk",
+      "grupp": "Extrinsiska finger- och tumsträckare (underarmens baksida)",
+      "origo": "Dorsala ytan av ulna och radius samt membrana interossea",
+      "insertio": "Basis ossis metacarpalis I (tummens mellanhandsben)",
+      "innervation": "Nervus radialis (nervus interosseus posterior)",
+      "funktion": "Abducerar och sträcker tummen i CMC-leden; bidrar till radial deviation av handleden"
+    }
+  ],
+  "typ_intro": "Handens muskler delas in i två slag. <strong>Intrinsiska</strong> muskler har både ursprung och fäste inom handen och står för finmotoriken och precisionen. <strong>Extrinsiska</strong> muskler har sitt ursprung i underarmen och verkar på handen via långa senor – de ger framför allt kraften i greppet och de grova böj- och sträckrörelserna."
+}

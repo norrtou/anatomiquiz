@@ -150,6 +150,33 @@ Regler:
 
 ---
 
+## 6b. Trovärdighet & referenser (E-E-A-T) — OBLIGATORISKT
+
+Trovärdighet är ett **krav** på allt innehåll i kunskapsbanken (YMYL). Därför:
+
+- **Varje innehållsdokument** (pillare OCH undersidor, faktatexter, tabeller, case) ska ha en
+  synlig **referenslista längst ner** med rubriken **"Referenser"**. Källor får ALDRIG bara
+  finnas på pillaren, i commit-meddelandet eller berättas i chatten – de ska stå **på sidan**.
+- **APA 7 (ordentlig citation).** Format: `Författare, A. A. (År). <em>Titel</em> (uppl.). Förlag.`
+  Redaktör: `(Red.)`. Standardverk/organisation som upphovsman när författare saknas
+  (t.ex. *Federative International Programme for Anatomical Terminology. (2019). Terminologia
+  anatomica (2:a uppl.). FIPAT.*). Listan **alfabetisk** på författare/titel. Titlar i `<em>`.
+- **Inga referenser i löpande text** om inte användaren uttryckligen ber om det. Hela
+  trovärdigheten bärs av referenslistan + att påståendena är faktakollade ([[feedback_trust_source_material]]).
+- Använd `.kb-sources`-blocket (finns redan). Markup:
+  ```html
+  <div class="kb-sources">
+    <h2>Referenser</h2>
+    <ul>
+      <li>Lindskog, B. I. (2008). <em>Medicinsk terminologi</em> (5:e uppl.). Nya Doxa.</li>
+      …
+    </ul>
+  </div>
+  ```
+- Endast källor som **faktiskt** ligger till grund för sidan ska anges (ljug inte om källor).
+
+---
+
 ## 7. Tillgänglighet (a11y-trädet MÅSTE vara grönt)
 
 PageSpeed-kravet "tillgänglighetsträdet korrekt formaterat" = **alla** a11y-granskningar gröna.
@@ -160,6 +187,12 @@ PageSpeed-kravet "tillgänglighetsträdet korrekt formaterat" = **alla** a11y-gr
 - Landmärken: `<main id="main">`, `<nav aria-label="…">`, `<header>`. Breadcrumb-`<nav>` med
   `aria-current="page"` på sista steget.
 - **Tabeller:** varje datatabell har `<caption>` **och** `<th scope="col">` (ev. `scope="row"`).
+- **Tabeller får ALDRIG kräva horisontell scroll/slider.** Breda tabeller (t.ex. muskeltabeller
+  med 6 kolumner) ska vara **responsiva**: fast kolumnlayout som ryms på desktop och **stackas
+  till kort på mobil** (≤720px) med fältetiketter via `data-label` + `td::before`. Använd klassen
+  `.kb-mtable` (ej `.kb-table-wrap` som har `overflow-x:auto`). Behåll tabellsemantiken med ARIA
+  (`role="table"/"rowgroup"/"row"/"columnheader"/"cell"`) eftersom `display:block` annars tar bort den.
+  Inga inline-`style`-attribut (CSP `style-src 'self'`) – kolumnbredder via CSS-klasser på `<col>`.
 - **Bilder:** alltid meningsfull `alt`. Dekorativa bilder: `alt=""`.
 - Kontrast ≥ WCAG AA. Synligt fokus. Klickbara ytor ≥ 24×24 px.
 - Inga `tabindex > 0`. Formulärfält har `<label>`.
