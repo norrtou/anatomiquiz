@@ -1,0 +1,152 @@
+{
+  "region": "Ryggen",
+  "slug": "ryggen",
+  "rubrik": "Ryggens muskler",
+  "underrubrik": "De egentliga (autoktona) ryggmusklerna – ursprung, fäste, innervation och funktion",
+  "kort_beskrivning": "De egentliga ryggmusklerna djupt om thorakolumbala fascian: splenius, erector spinae, det transversospinala systemet och de suboccipitala nackmusklerna – alla på rami dorsales.",
+  "kort_cta": "Visa ryggens muskler →",
+  "intro": "Ryggens egentliga (autoktona) muskler – musculi dorsi proprii – ligger djupt om den thorakolumbala fascian och innerveras alla av spinalnervernas bakre grenar (rami dorsales). De sträcker och stabiliserar ryggraden och håller bålen upprätt mot tyngdkraften. De ytliga ryggmuskler som syns i ytan (trapezius, latissimus dorsi, rhomboideerna och levator scapulae) är egentligen extremitetsmuskler som vandrat upp på ryggen under fosterutvecklingen; de innerveras av främre grenar och beskrivs på skuldersidan. De spinokostala serratus posterior-musklerna räknas hit topografiskt men är andningsmuskler och innerveras av interkostalnerver.",
+  "kallor": [
+    "Bojsen-Møller, F., Simonsen, E. B., & Tranum-Jensen, J. (2018). <em>Rörelseapparatens anatomi</em> (2:a uppl.). Liber.",
+    "Federative International Programme for Anatomical Terminology. (2019). <em>Terminologia anatomica</em> (2:a uppl.). FIPAT.",
+    "Paulsen, F., & Waschke, J. (Red.). (2018). <em>Sobotta atlas of human anatomy</em> (16:e uppl.). Elsevier.",
+    "Standring, S. (Red.). (2021). <em>Gray's anatomy: The anatomical basis of clinical practice</em> (42:a uppl.). Elsevier."
+  ],
+  "muskler": [
+    {
+      "latin": "Musculus splenius capitis",
+      "svenska": "Stora repmuskeln (huvuddelen)",
+      "grupp": "Spinotransversala systemet (splenius)",
+      "origo": "Nedre delen av ligamentum nuchae samt processus spinosi C7–T3",
+      "insertio": "Processus mastoideus och laterala delen av linea nuchalis superior",
+      "innervation": "Rami dorsales (laterala grenar) av mellersta cervikalnerverna",
+      "funktion": "Bilateralt: extenderar huvud och halsrygg. Ensidigt: roterar och lateralflekterar huvudet mot samma sida"
+    },
+    {
+      "latin": "Musculus splenius cervicis",
+      "svenska": "Stora repmuskeln (halsdelen)",
+      "grupp": "Spinotransversala systemet (splenius)",
+      "origo": "Processus spinosi T3–T6",
+      "insertio": "Processus transversi (tuberculum posterius) C1–C3",
+      "innervation": "Rami dorsales (laterala grenar) av nedre cervikalnerverna",
+      "funktion": "Bilateralt: extenderar halsryggen. Ensidigt: roterar och lateralflekterar halsen mot samma sida"
+    },
+    {
+      "latin": "Musculus iliocostalis",
+      "svenska": "Höft-revbensmuskeln (laterala pelaren)",
+      "grupp": "Erector spinae (sacrospinalis)",
+      "origo": "Crista iliaca, os sacrum och thorakolumbala fascian samt revbensvinklarna (anguli costae)",
+      "insertio": "Revbensvinklarna och processus transversi i halsryggen (C4–C6)",
+      "innervation": "Rami dorsales (laterala grenar) av spinalnerverna",
+      "funktion": "Bilateralt: extenderar ryggraden. Ensidigt: lateralflekterar bålen mot samma sida; sänker revbenen"
+    },
+    {
+      "latin": "Musculus longissimus",
+      "svenska": "Längsta ryggmuskeln (mellersta pelaren)",
+      "grupp": "Erector spinae (sacrospinalis)",
+      "origo": "Os sacrum, crista iliaca, processus spinosi (ländrygg) och processus transversi (bröstrygg)",
+      "insertio": "Processus transversi i hela bröst- och halsryggen, angränsande revben samt processus mastoideus (pars capitis)",
+      "innervation": "Rami dorsales (laterala grenar) av spinalnerverna",
+      "funktion": "Bilateralt: extenderar ryggrad och huvud. Ensidigt: lateralflexion mot samma sida; pars capitis roterar huvudet"
+    },
+    {
+      "latin": "Musculus spinalis",
+      "svenska": "Taggutskottsmuskeln (mediala pelaren)",
+      "grupp": "Erector spinae (sacrospinalis)",
+      "origo": "Processus spinosi i nedre bröst- och övre ländryggen",
+      "insertio": "Processus spinosi i övre bröstryggen och halsryggen",
+      "innervation": "Rami dorsales (mediala grenar) av spinalnerverna",
+      "funktion": "Bilateralt: extenderar bröst- och halsryggen; ligger närmast medellinjen av de tre pelarna"
+    },
+    {
+      "latin": "Musculus semispinalis",
+      "svenska": "Halvtaggmuskeln",
+      "grupp": "Transversospinala systemet",
+      "origo": "Processus transversi C7–T12",
+      "insertio": "Processus spinosi 4–6 segment ovanför ursprunget samt os occipitale mellan linea nuchalis superior och inferior (pars capitis)",
+      "innervation": "Rami dorsales (mediala grenar) av spinalnerverna; nervus occipitalis major (C2) löper genom semispinalis capitis",
+      "funktion": "Bilateralt: extenderar bröst-, hals- och huvudregionen. Ensidigt: liten rotation mot motsatt sida"
+    },
+    {
+      "latin": "Musculus multifidus",
+      "svenska": "Mångflikiga muskeln",
+      "grupp": "Transversospinala systemet",
+      "origo": "Os sacrum, processus mamillares (ländrygg), processus transversi (bröstrygg) och processus articulares (halsrygg)",
+      "insertio": "Processus spinosi 2–4 segment ovanför ursprunget",
+      "innervation": "Rami dorsales (mediala grenar) av spinalnerverna",
+      "funktion": "Stabiliserar kotpelaren segmentellt (kraftigast i ländryggen); bistår extension och rotation mot motsatt sida"
+    },
+    {
+      "latin": "Musculi rotatores (breves et longi)",
+      "svenska": "Vridmusklerna",
+      "grupp": "Transversospinala systemet",
+      "origo": "Processus transversus (tydligast i bröstryggen)",
+      "insertio": "Basen av processus spinosus närmast ovanför (breves) respektive 1–2 segment ovanför (longi)",
+      "innervation": "Rami dorsales (mediala grenar) av spinalnerverna",
+      "funktion": "Roterar kotan mot motsatt sida; segmentell stabilisering och proprioception"
+    },
+    {
+      "latin": "Musculi interspinales",
+      "svenska": "Mellantaggmusklerna",
+      "grupp": "Korta segmentella muskler",
+      "origo": "Processus spinosus (ovansidan av nedre kotan), tydligast i hals- och ländryggen",
+      "insertio": "Processus spinosus på närmast ovanförliggande kota",
+      "innervation": "Rami dorsales (mediala grenar) av spinalnerverna",
+      "funktion": "Bistår extension av ryggraden och ger segmentell stabilisering"
+    },
+    {
+      "latin": "Musculi intertransversarii",
+      "svenska": "Mellantvärmusklerna",
+      "grupp": "Korta segmentella muskler",
+      "origo": "Processus transversus (övre kanten av nedre kotan)",
+      "insertio": "Processus transversus på närmast ovanförliggande kota",
+      "innervation": "Rami dorsales (mediala intertransversarii); laterala lumbala innerveras av rami ventrales",
+      "funktion": "Lateralflekterar ryggraden och stabiliserar segmentet"
+    },
+    {
+      "latin": "Musculi levatores costarum",
+      "svenska": "Revbenslyftarna",
+      "grupp": "Korta segmentella muskler",
+      "origo": "Processus transversi C7–T11",
+      "insertio": "Angränsande revben (mellan tuberculum och angulus costae), närmast nedanför",
+      "innervation": "Rami dorsales av spinalnerverna (C8–T11)",
+      "funktion": "Lyfter revbenen (inandning); bistår extension och lateralflexion av bröstryggen"
+    },
+    {
+      "latin": "Musculus rectus capitis posterior major",
+      "svenska": "Bakre raka huvudmuskeln (stora)",
+      "grupp": "Suboccipitala muskler (djupa nackmuskler)",
+      "origo": "Processus spinosus axis (C2)",
+      "insertio": "Laterala delen av linea nuchalis inferior",
+      "innervation": "Nervus suboccipitalis (ramus dorsalis C1)",
+      "funktion": "Extenderar huvudet och roterar det mot samma sida; bildar trigonum suboccipitale"
+    },
+    {
+      "latin": "Musculus rectus capitis posterior minor",
+      "svenska": "Bakre raka huvudmuskeln (lilla)",
+      "grupp": "Suboccipitala muskler (djupa nackmuskler)",
+      "origo": "Tuberculum posterius atlantis (C1)",
+      "insertio": "Mediala delen av linea nuchalis inferior",
+      "innervation": "Nervus suboccipitalis (ramus dorsalis C1)",
+      "funktion": "Extenderar huvudet i atlanto-occipitalleden; spänner dura mater via den myodurala bryggan"
+    },
+    {
+      "latin": "Musculus obliquus capitis superior",
+      "svenska": "Övre sneda huvudmuskeln",
+      "grupp": "Suboccipitala muskler (djupa nackmuskler)",
+      "origo": "Processus transversus atlantis (C1)",
+      "insertio": "Os occipitale ovanför linea nuchalis inferior (lateralt)",
+      "innervation": "Nervus suboccipitalis (ramus dorsalis C1)",
+      "funktion": "Extenderar och lateralflekterar huvudet; bildar övre kanten av trigonum suboccipitale"
+    },
+    {
+      "latin": "Musculus obliquus capitis inferior",
+      "svenska": "Nedre sneda huvudmuskeln",
+      "grupp": "Suboccipitala muskler (djupa nackmuskler)",
+      "origo": "Processus spinosus axis (C2)",
+      "insertio": "Processus transversus atlantis (C1)",
+      "innervation": "Nervus suboccipitalis (ramus dorsalis C1)",
+      "funktion": "Roterar atlas och huvudet mot samma sida kring dens axis; bildar nedre kanten av trigonum suboccipitale"
+    }
+  ]
+}

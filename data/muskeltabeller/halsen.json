@@ -1,0 +1,170 @@
+{
+  "region": "Halsen",
+  "slug": "halsen",
+  "rubrik": "Halsens muskler",
+  "underrubrik": "Ytliga, supra- och infrahyoidala, prevertebrala muskler samt scalener – ursprung, fäste, innervation och funktion",
+  "kort_beskrivning": "Sternocleidomastoideus och platysma, de supra- och infrahyoidala tungbensmusklerna, scalenerna och de prevertebrala musklerna som böjer hals och huvud.",
+  "kort_cta": "Visa halsens muskler →",
+  "intro": "Halsens (collum) muskler ordnas i lager från ytan in mot kotpelaren. Ytligast ligger platysma och den kraftiga sternocleidomastoideus. Kring tungbenet (os hyoideum) sitter de supra- och infrahyoidala musklerna som styr tungben och struphuvud vid sväljning och tal. Djupt och lateralt ligger scalenerna, som höjer de översta revbenen och bildar passagen för plexus brachialis (skalenusporten), och längst in de prevertebrala musklerna som böjer hals och huvud. De ytliga muskler som rör skulderbladet (trapezius, levator scapulae) beskrivs på skuldersidan, och de djupa nacksträckarna (splenius, suboccipitala muskler) på ryggsidan.",
+  "kallor": [
+    "Bojsen-Møller, F., Simonsen, E. B., & Tranum-Jensen, J. (2018). <em>Rörelseapparatens anatomi</em> (2:a uppl.). Liber.",
+    "Federative International Programme for Anatomical Terminology. (2019). <em>Terminologia anatomica</em> (2:a uppl.). FIPAT.",
+    "Paulsen, F., & Waschke, J. (Red.). (2018). <em>Sobotta atlas of human anatomy</em> (16:e uppl.). Elsevier.",
+    "Standring, S. (Red.). (2021). <em>Gray's anatomy: The anatomical basis of clinical practice</em> (42:a uppl.). Elsevier."
+  ],
+  "muskler": [
+    {
+      "latin": "Platysma",
+      "svenska": "Halshudmuskeln",
+      "grupp": "Ytliga halsmuskler",
+      "origo": "Huden och subcutis över övre bröstkorgen samt fascian över deltoideus och pectoralis major",
+      "insertio": "Underkäkens nedre kant (basis mandibulae), mungipan och nedre ansiktshuden",
+      "innervation": "Nervus facialis (VII), ramus colli",
+      "funktion": "Mimisk muskel som spänner halshuden och drar ned mungipa och underläpp (uttrycker olust och ansträngning)"
+    },
+    {
+      "latin": "Musculus sternocleidomastoideus",
+      "svenska": "Nick-/huvudvridarmuskeln",
+      "grupp": "Ytliga halsmuskler",
+      "origo": "Caput sternale: manubrium sterni. Caput claviculare: mediala tredjedelen av clavicula",
+      "insertio": "Processus mastoideus och laterala delen av linea nuchalis superior",
+      "innervation": "Nervus accessorius (XI); proprioception via cervikalplexus (C2–C3)",
+      "funktion": "Ensidigt: vrider huvudet mot motsatt sida och lutar det mot samma sida. Bilateralt: böjer halsen framåt (eller extenderar huvudet) och bistår forcerad inandning"
+    },
+    {
+      "latin": "Musculus digastricus",
+      "svenska": "Tvåbukiga muskeln",
+      "grupp": "Suprahyoidala muskler (ovanför tungbenet)",
+      "origo": "Bakre buken: incisura mastoidea på os temporale. Främre buken: fossa digastrica på mandibula",
+      "insertio": "Mellansenan binds till os hyoideum via en bindvävsslynga",
+      "innervation": "Bakre buken: nervus facialis (VII). Främre buken: nervus mylohyoideus (V3, trigeminus)",
+      "funktion": "Höjer tungbenet vid sväljning; sänker och drar bak underkäken (öppnar munnen) när tungbenet är fixerat"
+    },
+    {
+      "latin": "Musculus stylohyoideus",
+      "svenska": "Griffel-tungbensmuskeln",
+      "grupp": "Suprahyoidala muskler (ovanför tungbenet)",
+      "origo": "Processus styloideus på os temporale",
+      "insertio": "Os hyoideum (vid övergången corpus–cornu majus)",
+      "innervation": "Nervus facialis (VII)",
+      "funktion": "Drar tungbenet uppåt och bakåt; förlänger munbotten vid sväljning"
+    },
+    {
+      "latin": "Musculus mylohyoideus",
+      "svenska": "Munbottenmuskeln",
+      "grupp": "Suprahyoidala muskler (ovanför tungbenet)",
+      "origo": "Linea mylohyoidea på underkäkens insida (mandibula)",
+      "insertio": "Mittsträngen raphe mylohyoidea och os hyoideum",
+      "innervation": "Nervus mylohyoideus (gren av nervus alveolaris inferior, V3)",
+      "funktion": "Bildar och lyfter munbotten; höjer tungben och tunga vid sväljning och tal"
+    },
+    {
+      "latin": "Musculus geniohyoideus",
+      "svenska": "Hak-tungbensmuskeln",
+      "grupp": "Suprahyoidala muskler (ovanför tungbenet)",
+      "origo": "Spina mentalis (geni) på underkäkens insida",
+      "insertio": "Framsidan av os hyoideums corpus",
+      "innervation": "Ramus anterior C1 via nervus hypoglossus (XII)",
+      "funktion": "Drar tungbenet framåt och uppåt; vidgar svalget vid sväljning"
+    },
+    {
+      "latin": "Musculus sternohyoideus",
+      "svenska": "Bröst-tungbensmuskeln",
+      "grupp": "Infrahyoidala muskler (nedanför tungbenet)",
+      "origo": "Baksidan av manubrium sterni och mediala delen av clavicula",
+      "insertio": "Nedre kanten av os hyoideums corpus",
+      "innervation": "Ansa cervicalis (C1–C3)",
+      "funktion": "Sänker tungbenet efter sväljning och tal"
+    },
+    {
+      "latin": "Musculus sternothyroideus",
+      "svenska": "Bröst-sköldbroskmuskeln",
+      "grupp": "Infrahyoidala muskler (nedanför tungbenet)",
+      "origo": "Baksidan av manubrium sterni",
+      "insertio": "Linea obliqua på sköldbrosket (cartilago thyroidea)",
+      "innervation": "Ansa cervicalis (C1–C3)",
+      "funktion": "Sänker struphuvudet (larynx) och sköldbrosket"
+    },
+    {
+      "latin": "Musculus thyrohyoideus",
+      "svenska": "Sköldbrosk-tungbensmuskeln",
+      "grupp": "Infrahyoidala muskler (nedanför tungbenet)",
+      "origo": "Linea obliqua på cartilago thyroidea",
+      "insertio": "Os hyoideum (cornu majus och nedre delen av corpus)",
+      "innervation": "Ramus anterior C1 via nervus hypoglossus (XII)",
+      "funktion": "Närmar tungben och struphuvud till varandra; höjer larynx vid sväljning"
+    },
+    {
+      "latin": "Musculus omohyoideus",
+      "svenska": "Skulderblads-tungbensmuskeln",
+      "grupp": "Infrahyoidala muskler (nedanför tungbenet)",
+      "origo": "Övre kanten av scapula nära incisura scapulae",
+      "insertio": "Nedre kanten av os hyoideums corpus (mellansenan bunden till clavicula via fascian)",
+      "innervation": "Ansa cervicalis (C1–C3)",
+      "funktion": "Sänker och fixerar tungbenet; spänner den mellersta halsfascian och håller vena jugularis interna öppen"
+    },
+    {
+      "latin": "Musculus scalenus anterior",
+      "svenska": "Främre trappmuskeln",
+      "grupp": "Djupa laterala muskler (scalener)",
+      "origo": "Processus transversi (tuberculum anterius) C3–C6",
+      "insertio": "Tuberculum musculi scaleni anterioris på första revbenet (costa I)",
+      "innervation": "Rami ventrales C4–C6",
+      "funktion": "Höjer första revbenet vid inandning; ensidigt lateralflexion och kontralateral rotation av halsen. Gränsar mot plexus brachialis och arteria subclavia"
+    },
+    {
+      "latin": "Musculus scalenus medius",
+      "svenska": "Mellersta trappmuskeln",
+      "grupp": "Djupa laterala muskler (scalener)",
+      "origo": "Processus transversi (tuberculum posterius) C2–C7",
+      "insertio": "Övre ytan av första revbenet (costa I), bakom sulcus arteriae subclaviae",
+      "innervation": "Rami ventrales C3–C8",
+      "funktion": "Höjer första revbenet vid inandning; ensidigt lateralflexion av halsryggen"
+    },
+    {
+      "latin": "Musculus scalenus posterior",
+      "svenska": "Bakre trappmuskeln",
+      "grupp": "Djupa laterala muskler (scalener)",
+      "origo": "Processus transversi (tuberculum posterius) C5–C7",
+      "insertio": "Laterala ytan av andra revbenet (costa II)",
+      "innervation": "Rami ventrales C6–C8",
+      "funktion": "Höjer andra revbenet vid inandning; ensidigt lateralflexion av halsryggen"
+    },
+    {
+      "latin": "Musculus longus colli",
+      "svenska": "Långa halsmuskeln",
+      "grupp": "Prevertebrala muskler (djupa främre halsmuskler)",
+      "origo": "Framsidan av kotkroppar och processus transversi C3–T3 (övre sneda, nedre sneda och vertikala delen)",
+      "insertio": "Tuberculum anterius atlantis (C1) samt kotkroppar och processus transversi C2–C6",
+      "innervation": "Rami ventrales C2–C6",
+      "funktion": "Böjer halsryggen framåt; bistår lätt rotation och lateralflexion; stabiliserar halskotpelaren"
+    },
+    {
+      "latin": "Musculus longus capitis",
+      "svenska": "Långa huvudmuskeln",
+      "grupp": "Prevertebrala muskler (djupa främre halsmuskler)",
+      "origo": "Processus transversi (tuberculum anterius) C3–C6",
+      "insertio": "Pars basilaris ossis occipitalis, framför foramen magnum",
+      "innervation": "Rami ventrales C1–C3",
+      "funktion": "Böjer huvudet framåt i atlanto-occipitalleden"
+    },
+    {
+      "latin": "Musculus rectus capitis anterior",
+      "svenska": "Främre raka huvudmuskeln",
+      "grupp": "Prevertebrala muskler (djupa främre halsmuskler)",
+      "origo": "Massa lateralis och processus transversus atlantis (C1)",
+      "insertio": "Pars basilaris ossis occipitalis, framför occipitalkondylen",
+      "innervation": "Rami ventrales C1–C2",
+      "funktion": "Böjer huvudet framåt i atlanto-occipitalleden"
+    },
+    {
+      "latin": "Musculus rectus capitis lateralis",
+      "svenska": "Laterala raka huvudmuskeln",
+      "grupp": "Prevertebrala muskler (djupa främre halsmuskler)",
+      "origo": "Processus transversus atlantis (C1)",
+      "insertio": "Processus jugularis ossis occipitalis",
+      "innervation": "Rami ventrales C1–C2",
+      "funktion": "Lateralflekterar huvudet i atlanto-occipitalleden och stabiliserar leden"
+    }
+  ]
+}

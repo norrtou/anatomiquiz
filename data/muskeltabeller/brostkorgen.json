@@ -1,0 +1,89 @@
+{
+  "region": "Bröstkorgen",
+  "slug": "brostkorgen",
+  "rubrik": "Bröstkorgens muskler",
+  "underrubrik": "Interkostalmuskler, diafragma och accessoriska andningsmuskler – ursprung, fäste, innervation och funktion",
+  "kort_beskrivning": "Bröstväggens interkostalmuskler i tre lager, transversus thoracis och subcostales, mellangärdet (diafragma) samt serratus posterior – musklerna som driver andningen.",
+  "kort_cta": "Visa bröstkorgens muskler →",
+  "intro": "Bröstkorgens (thorax) egna muskler spänner mellan revbenen och bildar bröstväggen tillsammans med revben, brosk och bröstben. De ändrar bröstkorgens volym vid andningen. Interkostalmusklerna fyller revbensmellanrummen i tre lager, och längst ned avgränsar diafragma (mellangärdet) bröst- från bukhåla – kroppens viktigaste inandningsmuskel. De spinokostala serratus posterior-musklerna räknas som accessoriska andningsmuskler. De stora ytliga muskler som korsar bröstkorgen för att röra arm och skulderblad (pectoralis major och minor, serratus anterior, subclavius) beskrivs på skuldersidan, halsens accessoriska inandningsmuskler (scalener, sternocleidomastoideus) på halssidan och bukväggens utandningsmuskler på bukväggssidan.",
+  "kallor": [
+    "Bojsen-Møller, F., Simonsen, E. B., & Tranum-Jensen, J. (2018). <em>Rörelseapparatens anatomi</em> (2:a uppl.). Liber.",
+    "Federative International Programme for Anatomical Terminology. (2019). <em>Terminologia anatomica</em> (2:a uppl.). FIPAT.",
+    "Paulsen, F., & Waschke, J. (Red.). (2018). <em>Sobotta atlas of human anatomy</em> (16:e uppl.). Elsevier.",
+    "Standring, S. (Red.). (2021). <em>Gray's anatomy: The anatomical basis of clinical practice</em> (42:a uppl.). Elsevier."
+  ],
+  "muskler": [
+    {
+      "latin": "Musculi intercostales externi",
+      "svenska": "Yttre revbensmusklerna",
+      "grupp": "Egentliga bröstväggsmuskler (interkostalmuskler)",
+      "origo": "Nedre kanten av ovanförliggande revben (costa)",
+      "insertio": "Övre kanten av närmast underliggande revben; fibrerna löper snett framåt-nedåt (\"händer i fickorna\")",
+      "innervation": "Nervi intercostales (Th1–Th11)",
+      "funktion": "Höjer revbenen vid inandning och stabiliserar bröstväggen; framtill ersätts de av membrana intercostalis externa"
+    },
+    {
+      "latin": "Musculi intercostales interni",
+      "svenska": "Inre revbensmusklerna",
+      "grupp": "Egentliga bröstväggsmuskler (interkostalmuskler)",
+      "origo": "Övre kanten av underliggande revben och dess kostalbrosk",
+      "insertio": "Nedre kanten av ovanförliggande revben; fibrerna löper vinkelrätt mot de yttre (snett framåt-uppåt)",
+      "innervation": "Nervi intercostales (Th1–Th11)",
+      "funktion": "Den interossala (bakre) delen sänker revbenen vid forcerad utandning; den interkondrala (främre) delen bistår inandning"
+    },
+    {
+      "latin": "Musculi intercostales intimi",
+      "svenska": "Innersta revbensmusklerna",
+      "grupp": "Egentliga bröstväggsmuskler (interkostalmuskler)",
+      "origo": "Inre ytan av underliggande revben",
+      "insertio": "Inre ytan av ovanförliggande revben (samma fiberriktning som intercostales interni)",
+      "innervation": "Nervi intercostales (Th1–Th11)",
+      "funktion": "Verkar med intercostales interni vid utandning; kärl-nervsträngen (vena, arteria och nervus intercostalis) löper mellan intimi och interni"
+    },
+    {
+      "latin": "Musculi subcostales",
+      "svenska": "Underrevbensmusklerna",
+      "grupp": "Egentliga bröstväggsmuskler (interkostalmuskler)",
+      "origo": "Inre ytan av de nedre revbenen nära revbensvinkeln (angulus costae)",
+      "insertio": "Inre ytan av andra eller tredje revbenet nedanför (överbryggar ett till två interstitier)",
+      "innervation": "Nervi intercostales",
+      "funktion": "Sänker revbenen vid utandning; bäst utvecklade i nedre, bakre bröstväggen"
+    },
+    {
+      "latin": "Musculus transversus thoracis",
+      "svenska": "Tvärgående bröstmuskeln",
+      "grupp": "Egentliga bröstväggsmuskler (interkostalmuskler)",
+      "origo": "Inre ytan av bröstbenets nedre del (corpus sterni) och processus xiphoideus",
+      "insertio": "Inre ytan av kostalbrosken II–VI (solfjäderformigt)",
+      "innervation": "Nervi intercostales",
+      "funktion": "Sänker kostalbrosken vid utandning; svag exspiratorisk muskel"
+    },
+    {
+      "latin": "Diaphragma",
+      "svenska": "Mellangärdet",
+      "grupp": "Diafragma (mellangärdet)",
+      "origo": "Pars sternalis: baksidan av processus xiphoideus. Pars costalis: insidan av de nedre sex revbenen och deras brosk. Pars lumbalis: crus dextrum och sinistrum från ländkotorna (L1–L3) samt ligamentum arcuatum mediale och laterale",
+      "insertio": "Centrum tendineum (den centrala senplattan)",
+      "innervation": "Nervus phrenicus (C3–C5)",
+      "funktion": "Kroppens viktigaste inandningsmuskel – plattas ut och sänks vid kontraktion så bröstkorgens volym ökar; höjer buktrycket (bukpress). Passager: foramen venae cavae (T8), hiatus oesophageus (T10) och hiatus aorticus (T12)"
+    },
+    {
+      "latin": "Musculus serratus posterior superior",
+      "svenska": "Övre bakre sågtandsmuskeln",
+      "grupp": "Accessoriska andningsmuskler (spinokostala)",
+      "origo": "Processus spinosi C7–T3 och nedre delen av ligamentum nuchae",
+      "insertio": "Övre ytan av revbenen II–V, lateralt om revbensvinklarna",
+      "innervation": "Nervi intercostales (Th1–Th4)",
+      "funktion": "Höjer de övre revbenen och bistår inandning (accessorisk inspirationsmuskel)"
+    },
+    {
+      "latin": "Musculus serratus posterior inferior",
+      "svenska": "Nedre bakre sågtandsmuskeln",
+      "grupp": "Accessoriska andningsmuskler (spinokostala)",
+      "origo": "Processus spinosi T11–L2 (via thorakolumbala fascian)",
+      "insertio": "Nedre kanten av de fyra nedersta revbenen (costae IX–XII)",
+      "innervation": "Nervi intercostales (Th9–Th12)",
+      "funktion": "Drar de nedre revbenen nedåt och bakåt och stabiliserar dem mot diafragmas drag (klassiskt räknad som exspiratorisk; funktionen är omdebatterad)"
+    }
+  ]
+}

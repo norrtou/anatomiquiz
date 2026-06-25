@@ -1,0 +1,134 @@
+{
+  "region": "Höften",
+  "slug": "hoften",
+  "rubrik": "Höftens och sätets muskler",
+  "underrubrik": "Iliopsoas, sätesmusklerna och de pelvitrokantära utåtrotatorerna – ursprung, fäste, innervation och funktion",
+  "kort_beskrivning": "De inre höftböjarna (iliopsoas), sätesmusklerna (gluteus maximus, medius, minimus + tensor fasciae latae) och de djupa pelvitrokantära utåtrotatorerna från piriformis till quadratus femoris.",
+  "kort_cta": "Visa höftens muskler →",
+  "intro": "Höftens muskler omger höftleden och rör lårbenet (femur) i bäckenet. De inre höftmusklerna (iliopsoas) ligger framtill på ländrygg och bäckeninsida och är kroppens kraftigaste höftböjare. På utsidan ligger de tre sätesmusklerna (gluteus maximus, medius och minimus) plus tensor fasciae latae, som extenderar, abducerar och stabiliserar bäckenet vid gång. Djupt under gluteus maximus ligger de små pelvitrokantära musklerna – en grupp utåtrotatorer från piriformis ned till quadratus femoris. Lårets egna muskler (quadriceps, adduktorerna och hamstrings) som också verkar över höften beskrivs på lårsidan.",
+  "kallor": [
+    "Bojsen-Møller, F., Simonsen, E. B., & Tranum-Jensen, J. (2018). <em>Rörelseapparatens anatomi</em> (2:a uppl.). Liber.",
+    "Federative International Programme for Anatomical Terminology. (2019). <em>Terminologia anatomica</em> (2:a uppl.). FIPAT.",
+    "Paulsen, F., & Waschke, J. (Red.). (2018). <em>Sobotta atlas of human anatomy</em> (16:e uppl.). Elsevier.",
+    "Standring, S. (Red.). (2021). <em>Gray's anatomy: The anatomical basis of clinical practice</em> (42:a uppl.). Elsevier."
+  ],
+  "muskler": [
+    {
+      "latin": "Musculus psoas major",
+      "svenska": "Stora ländmuskeln",
+      "grupp": "Inre höftmuskler (höftböjare)",
+      "origo": "Sidoytorna av kotkroppar och mellankotskivor T12–L4 samt processus costales på ländkotorna",
+      "insertio": "Trochanter minor femoris (via den gemensamma iliopsoassenan)",
+      "innervation": "Rami ventrales av plexus lumbalis (L1–L3)",
+      "funktion": "Kraftigaste höftböjaren; bistår lateralrotation och adduktion. Med fixerat ben böjer den bålen framåt och stabiliserar ländryggen"
+    },
+    {
+      "latin": "Musculus psoas minor",
+      "svenska": "Lilla ländmuskeln",
+      "grupp": "Inre höftmuskler (höftböjare)",
+      "origo": "Sidoytorna av kotkropparna T12–L1",
+      "insertio": "Eminentia iliopubica och fascia iliaca (arcus iliopectineus)",
+      "innervation": "Ramus ventralis L1",
+      "funktion": "Svag spännare av fascia iliaca och böjare av ländryggen; saknas hos cirka 40 %"
+    },
+    {
+      "latin": "Musculus iliacus",
+      "svenska": "Höftbensmuskeln",
+      "grupp": "Inre höftmuskler (höftböjare)",
+      "origo": "Fossa iliaca (höftbensskålens insida) och spina iliaca anterior inferior",
+      "insertio": "Trochanter minor femoris (gemensam iliopsoassena)",
+      "innervation": "Nervus femoralis (L2–L3)",
+      "funktion": "Böjer höften tillsammans med psoas major (iliopsoas); bistår lateralrotation; tippar bäckenet framåt vid fixerat ben"
+    },
+    {
+      "latin": "Musculus gluteus maximus",
+      "svenska": "Stora sätesmuskeln",
+      "grupp": "Yttre höftmuskler (sätesmuskler)",
+      "origo": "Os ilium bakom linea glutea posterior, fascia thoracolumbalis, os sacrum, os coccygis och ligamentum sacrotuberale",
+      "insertio": "Tuberositas glutea femoris och tractus iliotibialis (övre delen)",
+      "innervation": "Nervus gluteus inferior (L5–S2)",
+      "funktion": "Kraftfull höftextensor (resa sig, gå i trappa, springa) och lateralrotator; övre fibrer abducerar, nedre adducerar; spänner tractus iliotibialis och stabiliserar knät"
+    },
+    {
+      "latin": "Musculus gluteus medius",
+      "svenska": "Mellersta sätesmuskeln",
+      "grupp": "Yttre höftmuskler (sätesmuskler)",
+      "origo": "Facies glutea ossis ilii mellan linea glutea anterior och posterior",
+      "insertio": "Trochanter major femoris (laterala ytan)",
+      "innervation": "Nervus gluteus superior (L4–S1)",
+      "funktion": "Främsta höftabduktorn; främre fibrer medialroterar och flekterar, bakre lateralroterar. Stabiliserar bäckenet i frontalplanet vid gång (förhindrar Trendelenburg)"
+    },
+    {
+      "latin": "Musculus gluteus minimus",
+      "svenska": "Lilla sätesmuskeln",
+      "grupp": "Yttre höftmuskler (sätesmuskler)",
+      "origo": "Facies glutea ossis ilii mellan linea glutea anterior och inferior",
+      "insertio": "Trochanter major femoris (främre ytan)",
+      "innervation": "Nervus gluteus superior (L4–S1)",
+      "funktion": "Abducerar och medialroterar höften; bistår bäckenstabiliseringen vid gång tillsammans med gluteus medius"
+    },
+    {
+      "latin": "Musculus tensor fasciae latae",
+      "svenska": "Lårbindespännaren",
+      "grupp": "Yttre höftmuskler (sätesmuskler)",
+      "origo": "Spina iliaca anterior superior och främre delen av crista iliaca",
+      "insertio": "Tractus iliotibialis (övergår i den; når tuberculum laterale tibiae / Gerdys tuberkel)",
+      "innervation": "Nervus gluteus superior (L4–S1)",
+      "funktion": "Spänner tractus iliotibialis och stabiliserar knät i extension; bistår höftflexion, abduktion och medialrotation"
+    },
+    {
+      "latin": "Musculus piriformis",
+      "svenska": "Päronformiga muskeln",
+      "grupp": "Pelvitrokantära muskler (djupa utåtrotatorer)",
+      "origo": "Främre ytan av os sacrum (S2–S4), kring foramina sacralia anteriora",
+      "insertio": "Övre kanten av trochanter major femoris",
+      "innervation": "Plexus sacralis, rami ventrales (S1–S2)",
+      "funktion": "Lateralrotation av höften i extension, abduktion vid flekterad höft. Lämnar bäckenet via foramen ischiadicum majus och delar det i foramen supra- och infrapiriforme (nervus ischiadicus passerar oftast nedanför)"
+    },
+    {
+      "latin": "Musculus obturatorius internus",
+      "svenska": "Inre obturatormuskeln",
+      "grupp": "Pelvitrokantära muskler (djupa utåtrotatorer)",
+      "origo": "Insidan av membrana obturatoria och dess benramar kring foramen obturatum",
+      "insertio": "Mediala ytan av trochanter major (fossa trochanterica)",
+      "innervation": "Nervus musculi obturatorii interni (L5–S2)",
+      "funktion": "Lateralrotation av höften i extension och abduktion vid flekterad höft; vinklar runt incisura ischiadica minor ut ur bäckenet"
+    },
+    {
+      "latin": "Musculus gemellus superior",
+      "svenska": "Övre tvillingmuskeln",
+      "grupp": "Pelvitrokantära muskler (djupa utåtrotatorer)",
+      "origo": "Spina ischiadica",
+      "insertio": "Mediala ytan av trochanter major (med obturatorius internus-senan)",
+      "innervation": "Nervus musculi obturatorii interni (L5–S2)",
+      "funktion": "Lateralrotation av höften; bistår obturatorius internus"
+    },
+    {
+      "latin": "Musculus gemellus inferior",
+      "svenska": "Nedre tvillingmuskeln",
+      "grupp": "Pelvitrokantära muskler (djupa utåtrotatorer)",
+      "origo": "Tuber ischiadicum (övre delen)",
+      "insertio": "Mediala ytan av trochanter major (med obturatorius internus-senan)",
+      "innervation": "Nervus musculi quadrati femoris (L4–S1)",
+      "funktion": "Lateralrotation av höften; bistår obturatorius internus"
+    },
+    {
+      "latin": "Musculus quadratus femoris",
+      "svenska": "Fyrkantiga lårmuskeln",
+      "grupp": "Pelvitrokantära muskler (djupa utåtrotatorer)",
+      "origo": "Laterala kanten av tuber ischiadicum",
+      "insertio": "Crista intertrochanterica (tuberculum quadratum femoris)",
+      "innervation": "Nervus musculi quadrati femoris (L4–S1)",
+      "funktion": "Kraftig lateralrotator av höften; bistår adduktion"
+    },
+    {
+      "latin": "Musculus obturatorius externus",
+      "svenska": "Yttre obturatormuskeln",
+      "grupp": "Pelvitrokantära muskler (djupa utåtrotatorer)",
+      "origo": "Utsidan av membrana obturatoria och dess benramar",
+      "insertio": "Fossa trochanterica femoris",
+      "innervation": "Nervus obturatorius (L3–L4)",
+      "funktion": "Lateralrotation och stabilisering av höftleden; bistår adduktion"
+    }
+  ]
+}

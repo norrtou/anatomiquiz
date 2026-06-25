@@ -1,0 +1,188 @@
+{
+  "region": "Underarmen",
+  "slug": "underarmen",
+  "rubrik": "Underarmens muskler",
+  "underrubrik": "Främre böjarloge och bakre sträckarloge – ursprung, fäste, innervation och funktion",
+  "kort_beskrivning": "Flexorerna och pronatorerna på framsidan och extensorerna och supinatorn på baksidan – de extrinsiska musklerna som styr handled, fingrar och tumme.",
+  "kort_cta": "Visa underarmens muskler →",
+  "intro": "Underarmens (antebrachium) muskler delas i en främre böjarloge (flexorer och pronatorer) och en bakre sträckarloge (extensorer och supinator), åtskilda av radius, ulna och membrana interossea. De flesta är extrinsiska handmuskler – muskelbuken sitter i underarmen men senorna styr handled och fingrar. Som tumregel innerveras främre logen av nervus medianus (utom flexor carpi ulnaris och ulnara halvan av flexor digitorum profundus, som går på nervus ulnaris) och hela bakre logen av nervus radialis.",
+  "kallor": [
+    "Bojsen-Møller, F., Simonsen, E. B., & Tranum-Jensen, J. (2018). <em>Rörelseapparatens anatomi</em> (2:a uppl.). Liber.",
+    "Federative International Programme for Anatomical Terminology. (2019). <em>Terminologia anatomica</em> (2:a uppl.). FIPAT.",
+    "Paulsen, F., & Waschke, J. (Red.). (2018). <em>Sobotta atlas of human anatomy</em> (16:e uppl.). Elsevier.",
+    "Standring, S. (Red.). (2021). <em>Gray's anatomy: The anatomical basis of clinical practice</em> (42:a uppl.). Elsevier."
+  ],
+  "muskler": [
+    {
+      "latin": "Musculus pronator teres",
+      "svenska": "Runda pronatormuskeln",
+      "grupp": "Främre logen – ytliga lagret (böjare och pronatorer)",
+      "origo": "Caput humerale: epicondylus medialis humeri (caput commune flexorum). Caput ulnare: processus coronoideus ulnae",
+      "insertio": "Laterala mitten av radius (facies lateralis)",
+      "innervation": "Nervus medianus (C6–C7)",
+      "funktion": "Pronerar underarmen och bistår armbågsflexion"
+    },
+    {
+      "latin": "Musculus flexor carpi radialis",
+      "svenska": "Radiala handledsböjaren",
+      "grupp": "Främre logen – ytliga lagret (böjare och pronatorer)",
+      "origo": "Epicondylus medialis humeri (caput commune flexorum)",
+      "insertio": "Basen av os metacarpale II (och III), palmart",
+      "innervation": "Nervus medianus (C6–C7)",
+      "funktion": "Flekterar och abducerar handleden (radialdeviation)"
+    },
+    {
+      "latin": "Musculus palmaris longus",
+      "svenska": "Långa handflatemuskeln",
+      "grupp": "Främre logen – ytliga lagret (böjare och pronatorer)",
+      "origo": "Epicondylus medialis humeri (caput commune flexorum)",
+      "insertio": "Retinaculum flexorum och aponeurosis palmaris (palmaraponeurosen)",
+      "innervation": "Nervus medianus (C7–C8)",
+      "funktion": "Spänner palmaraponeurosen och bistår handledsflexion (saknas hos cirka 10 %)"
+    },
+    {
+      "latin": "Musculus flexor carpi ulnaris",
+      "svenska": "Ulnara handledsböjaren",
+      "grupp": "Främre logen – ytliga lagret (böjare och pronatorer)",
+      "origo": "Caput humerale: epicondylus medialis humeri. Caput ulnare: olecranon och proximala baksidan av ulna",
+      "insertio": "Os pisiforme, vidare via ligament till hamulus ossis hamati och basen av os metacarpale V",
+      "innervation": "Nervus ulnaris (C7–C8, T1)",
+      "funktion": "Flekterar och adducerar handleden (ulnardeviation)"
+    },
+    {
+      "latin": "Musculus flexor digitorum superficialis",
+      "svenska": "Ytliga fingerböjaren",
+      "grupp": "Främre logen – ytliga lagret (böjare och pronatorer)",
+      "origo": "Caput humeroulnare: epicondylus medialis humeri och processus coronoideus ulnae. Caput radiale: proximala främre ytan av radius",
+      "insertio": "Sidorna av mellanfalangerna (phalanx media) på dig II–V",
+      "innervation": "Nervus medianus (C7–C8, T1)",
+      "funktion": "Flekterar de proximala interfalangeallederna (PIP) och bistår flexion av grundleder (MCP) och handled"
+    },
+    {
+      "latin": "Musculus flexor digitorum profundus",
+      "svenska": "Djupa fingerböjaren",
+      "grupp": "Främre logen – djupa lagret",
+      "origo": "Proximala främre och mediala ytan av ulna samt angränsande membrana interossea",
+      "insertio": "Basen av ändfalangerna (phalanx distalis) på dig II–V",
+      "innervation": "Radiala halvan (dig II–III): nervus medianus via nervus interosseus anterior (C8–T1). Ulnara halvan (dig IV–V): nervus ulnaris (C8–T1)",
+      "funktion": "Enda böjaren av de distala interfalangeallederna (DIP); bistår flexion i PIP, MCP och handled"
+    },
+    {
+      "latin": "Musculus flexor pollicis longus",
+      "svenska": "Långa tumböjaren",
+      "grupp": "Främre logen – djupa lagret",
+      "origo": "Främre ytan av radius och angränsande membrana interossea",
+      "insertio": "Basen av tummens ändfalang (phalanx distalis pollicis)",
+      "innervation": "Nervus medianus via nervus interosseus anterior (C7–C8)",
+      "funktion": "Flekterar tummens ytterled (IP) och bistår flexion av tummens grundled och handleden"
+    },
+    {
+      "latin": "Musculus pronator quadratus",
+      "svenska": "Fyrkantiga pronatormuskeln",
+      "grupp": "Främre logen – djupa lagret",
+      "origo": "Distala främre ytan av ulna",
+      "insertio": "Distala främre ytan av radius",
+      "innervation": "Nervus medianus via nervus interosseus anterior (C7–C8)",
+      "funktion": "Primär pronator av underarmen; håller samman radius och ulna distalt"
+    },
+    {
+      "latin": "Musculus brachioradialis",
+      "svenska": "Käppmuskeln (radiala armmuskeln)",
+      "grupp": "Bakre logen – radiala gruppen",
+      "origo": "Crista supracondylaris lateralis humeri (övre delen)",
+      "insertio": "Processus styloideus radii (distalt på radius)",
+      "innervation": "Nervus radialis (C5–C6)",
+      "funktion": "Flekterar armbågen, kraftigast i mellanläge mellan pronation och supination; för underarmen mot neutralläge"
+    },
+    {
+      "latin": "Musculus extensor carpi radialis longus",
+      "svenska": "Långa radiala handledssträckaren",
+      "grupp": "Bakre logen – radiala gruppen",
+      "origo": "Crista supracondylaris lateralis humeri (nedre delen)",
+      "insertio": "Basen av os metacarpale II (dorsalt)",
+      "innervation": "Nervus radialis (C6–C7)",
+      "funktion": "Sträcker och abducerar handleden (radialdeviation)"
+    },
+    {
+      "latin": "Musculus extensor carpi radialis brevis",
+      "svenska": "Korta radiala handledssträckaren",
+      "grupp": "Bakre logen – radiala gruppen",
+      "origo": "Epicondylus lateralis humeri (caput commune extensorum)",
+      "insertio": "Basen av os metacarpale III (dorsalt)",
+      "innervation": "Nervus radialis, ramus profundus (C7–C8)",
+      "funktion": "Sträcker och abducerar handleden; stabiliserar handleden vid greppning"
+    },
+    {
+      "latin": "Musculus extensor digitorum",
+      "svenska": "Gemensamma fingersträckaren",
+      "grupp": "Bakre logen – ytliga lagret",
+      "origo": "Epicondylus lateralis humeri (caput commune extensorum)",
+      "insertio": "Dorsalaponeurosen (sträcksenehättan) på dig II–V, vidare till mellan- och ändfalang",
+      "innervation": "Nervus radialis via nervus interosseus posterior (C7–C8)",
+      "funktion": "Sträcker fingrarnas grund- och interfalangealleder (dig II–V) och bistår handledssträckning"
+    },
+    {
+      "latin": "Musculus extensor digiti minimi",
+      "svenska": "Lillfingersträckaren",
+      "grupp": "Bakre logen – ytliga lagret",
+      "origo": "Epicondylus lateralis humeri (caput commune extensorum)",
+      "insertio": "Dorsalaponeurosen på lillfingret (dig V)",
+      "innervation": "Nervus radialis via nervus interosseus posterior (C7–C8)",
+      "funktion": "Sträcker lillfingret (dig V) självständigt"
+    },
+    {
+      "latin": "Musculus extensor carpi ulnaris",
+      "svenska": "Ulnara handledssträckaren",
+      "grupp": "Bakre logen – ytliga lagret",
+      "origo": "Epicondylus lateralis humeri (caput commune extensorum) samt baksidan av ulna",
+      "insertio": "Basen av os metacarpale V (dorsalt)",
+      "innervation": "Nervus radialis via nervus interosseus posterior (C7–C8)",
+      "funktion": "Sträcker och adducerar handleden (ulnardeviation)"
+    },
+    {
+      "latin": "Musculus supinator",
+      "svenska": "Utåtvridarmuskeln",
+      "grupp": "Bakre logen – djupa lagret",
+      "origo": "Epicondylus lateralis humeri, ligamentum collaterale radiale, ligamentum anulare radii och crista musculi supinatoris ulnae",
+      "insertio": "Proximala laterala ytan av radius (mellan tuberositas radii och pronator teres-fästet)",
+      "innervation": "Nervus radialis, ramus profundus (C6–C7)",
+      "funktion": "Supinerar underarmen oberoende av armbågens läge; ramus profundus löper genom muskeln"
+    },
+    {
+      "latin": "Musculus abductor pollicis longus",
+      "svenska": "Långa tumabduktorn",
+      "grupp": "Bakre logen – djupa lagret",
+      "origo": "Baksidan av ulna och radius samt mellanliggande membrana interossea",
+      "insertio": "Basen av os metacarpale I",
+      "innervation": "Nervus radialis via nervus interosseus posterior (C7–C8)",
+      "funktion": "Abducerar och extenderar tummens carpometacarpalled; bistår radialdeviation av handleden"
+    },
+    {
+      "latin": "Musculus extensor pollicis brevis",
+      "svenska": "Korta tumsträckaren",
+      "grupp": "Bakre logen – djupa lagret",
+      "origo": "Baksidan av radius och angränsande membrana interossea",
+      "insertio": "Basen av tummens grundfalang (phalanx proximalis pollicis)",
+      "innervation": "Nervus radialis via nervus interosseus posterior (C7–C8)",
+      "funktion": "Sträcker tummens grund- och carpometacarpalled; bildar tabatièrens radiala kant"
+    },
+    {
+      "latin": "Musculus extensor pollicis longus",
+      "svenska": "Långa tumsträckaren",
+      "grupp": "Bakre logen – djupa lagret",
+      "origo": "Baksidan av ulna och angränsande membrana interossea",
+      "insertio": "Basen av tummens ändfalang (phalanx distalis pollicis)",
+      "innervation": "Nervus radialis via nervus interosseus posterior (C7–C8)",
+      "funktion": "Sträcker tummens ytterled (IP); vänder vid tuberculum dorsale radii (Listers tuberkel) och bildar tabatièrens ulnara kant"
+    },
+    {
+      "latin": "Musculus extensor indicis",
+      "svenska": "Pekfingersträckaren",
+      "grupp": "Bakre logen – djupa lagret",
+      "origo": "Baksidan av ulna (distalt) och angränsande membrana interossea",
+      "insertio": "Dorsalaponeurosen på pekfingret (dig II)",
+      "innervation": "Nervus radialis via nervus interosseus posterior (C7–C8)",
+      "funktion": "Sträcker pekfingret (dig II) oberoende av övriga fingrar"
+    }
+  ]
+}

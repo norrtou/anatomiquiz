@@ -1,0 +1,53 @@
+{
+  "region": "Käken",
+  "slug": "kaken",
+  "rubrik": "Käkens muskler",
+  "underrubrik": "Tuggmusklerna (masticatoriska muskler) – ursprung, fäste, innervation och funktion",
+  "kort_beskrivning": "Tuggmusklerna som rör underkäken i käkleden – masseter, temporalis samt pterygoideus medialis och lateralis – alla innerverade av nervus mandibularis (V3).",
+  "kort_cta": "Visa käkens muskler →",
+  "intro": "Tuggmusklerna (musculi masticatorii) rör underkäken (mandibula) i käkleden (articulatio temporomandibularis) och utvecklas alla ur den första gälbågen. Därför innerveras de samtliga av nervus mandibularis (V3), tredje grenen av nervus trigeminus. Tre av dem – masseter, temporalis och pterygoideus medialis – stänger käken med stor kraft, medan pterygoideus lateralis öppnar den och styr leddisken. Munöppningen understöds av de suprahyoidala musklerna (digastricus, mylohyoideus, geniohyoideus) som beskrivs på halssidan. De mimiska ansiktsmusklerna är en egen funktionsgrupp som fäster i huden och styrs av nervus facialis (VII) – de ingår inte i denna ursprung–fäste-tabell.",
+  "kallor": [
+    "Bojsen-Møller, F., Simonsen, E. B., & Tranum-Jensen, J. (2018). <em>Rörelseapparatens anatomi</em> (2:a uppl.). Liber.",
+    "Federative International Programme for Anatomical Terminology. (2019). <em>Terminologia anatomica</em> (2:a uppl.). FIPAT.",
+    "Paulsen, F., & Waschke, J. (Red.). (2018). <em>Sobotta atlas of human anatomy</em> (16:e uppl.). Elsevier.",
+    "Standring, S. (Red.). (2021). <em>Gray's anatomy: The anatomical basis of clinical practice</em> (42:a uppl.). Elsevier."
+  ],
+  "muskler": [
+    {
+      "latin": "Musculus masseter",
+      "svenska": "Tuggmuskeln",
+      "grupp": "Tuggmuskler (masticatoriska)",
+      "origo": "Pars superficialis: främre två tredjedelarna av arcus zygomaticus och os zygomaticum. Pars profunda: bakre delen av arcus zygomaticus",
+      "insertio": "Tuberositas masseterica på underkäksvinkeln och ramus mandibulae (utsidan)",
+      "innervation": "Nervus massetericus (nervus mandibularis, V3)",
+      "funktion": "Höjer underkäken med stor kraft (bett); den ytliga delen bistår protraktion av käken"
+    },
+    {
+      "latin": "Musculus temporalis",
+      "svenska": "Tinningmuskeln",
+      "grupp": "Tuggmuskler (masticatoriska)",
+      "origo": "Fossa temporalis (upp till linea temporalis inferior) och fascia temporalis",
+      "insertio": "Processus coronoideus mandibulae och främre kanten av ramus mandibulae",
+      "innervation": "Nervi temporales profundi (nervus mandibularis, V3)",
+      "funktion": "Höjer underkäken; de bakre, horisontella fibrerna drar käken bakåt (retraktion)"
+    },
+    {
+      "latin": "Musculus pterygoideus medialis",
+      "svenska": "Inre vingmuskeln",
+      "grupp": "Tuggmuskler (masticatoriska)",
+      "origo": "Fossa pterygoidea (mediala ytan av lamina lateralis processus pterygoidei); en mindre del från tuber maxillae",
+      "insertio": "Tuberositas pterygoidea på insidan av underkäksvinkeln (angulus mandibulae)",
+      "innervation": "Nervus pterygoideus medialis (nervus mandibularis, V3)",
+      "funktion": "Höjer och protraherar underkäken; ensidigt ger den malrörelse mot motsatt sida. Bildar med masseter en muskelslynga kring käkvinkeln"
+    },
+    {
+      "latin": "Musculus pterygoideus lateralis",
+      "svenska": "Yttre vingmuskeln",
+      "grupp": "Tuggmuskler (masticatoriska)",
+      "origo": "Caput superius: ala major ossis sphenoidalis (facies infratemporalis). Caput inferius: laterala ytan av lamina lateralis processus pterygoidei",
+      "insertio": "Fovea pterygoidea på collum mandibulae samt ledkapseln och discus articularis i käkleden",
+      "innervation": "Nervus pterygoideus lateralis (nervus mandibularis, V3)",
+      "funktion": "Öppnar munnen och protraherar underkäken (drar fram ledhuvudet och disken); ensidigt ger malrörelse mot motsatt sida. Enda tuggmuskeln som öppnar käken"
+    }
+  ]
+}

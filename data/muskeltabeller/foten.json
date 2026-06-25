@@ -1,0 +1,179 @@
+{
+  "region": "Foten",
+  "slug": "foten",
+  "rubrik": "Fotens muskler",
+  "underrubrik": "Intrinsiska och extrinsiska muskler – ursprung, fäste, innervation och funktion",
+  "kort_beskrivning": "Fotryggens och fotsulans fyra muskellager som bär upp fotvalven – plus de extrinsiska tåböjarna och tåsträckarna från underbenet.",
+  "kort_cta": "Öppna fottabellen →",
+  "omfattning": "intrinsiska och extrinsiska",
+  "intro": "Fotens egna (intrinsiska) muskler ligger helt inom foten och finstyr tårnas rörelser samtidigt som de bär upp fotvalven och stabiliserar foten vid stående och gång. På fotryggen (dorsum) finns bara ett tunt muskellager, medan fotsulan (planta) är uppbyggd av fyra lager. De grova rörelserna och kraften vid frånskjutet kommer från de extrinsiska underbensmusklerna, vars långa senor löper ner i foten (egen sida). Fotsulans intrinsiska muskler innerveras av nervus plantaris medialis och lateralis (grenar av nervus tibialis), medan fotryggens korta sträckare går på nervus fibularis profundus.",
+  "kallor": [
+    "Bojsen-Møller, F., Simonsen, E. B., & Tranum-Jensen, J. (2018). <em>Rörelseapparatens anatomi</em> (2:a uppl.). Liber.",
+    "Federative International Programme for Anatomical Terminology. (2019). <em>Terminologia anatomica</em> (2:a uppl.). FIPAT.",
+    "Paulsen, F., & Waschke, J. (Red.). (2018). <em>Sobotta atlas of human anatomy</em> (16:e uppl.). Elsevier.",
+    "Standring, S. (Red.). (2021). <em>Gray's anatomy: The anatomical basis of clinical practice</em> (42:a uppl.). Elsevier."
+  ],
+  "muskler": [
+    {
+      "latin": "Musculus extensor digitorum brevis",
+      "svenska": "Korta tåsträckaren",
+      "typ": "Intrinsisk",
+      "grupp": "Fotryggen (dorsum)",
+      "origo": "Dorsala ytan av calcaneus och retinaculum musculorum extensorum inferius",
+      "insertio": "De långa tåsträckarnas senor (dorsalaponeuroserna) på dig II–IV",
+      "innervation": "Nervus fibularis profundus (L5–S1)",
+      "funktion": "Sträcker grund- och mellanlederna (MTP/PIP) på dig II–IV"
+    },
+    {
+      "latin": "Musculus extensor hallucis brevis",
+      "svenska": "Korta stortåsträckaren",
+      "typ": "Intrinsisk",
+      "grupp": "Fotryggen (dorsum)",
+      "origo": "Dorsala ytan av calcaneus (mediala delen, gemensamt med extensor digitorum brevis)",
+      "insertio": "Basis phalangis proximalis hallucis (dorsalt)",
+      "innervation": "Nervus fibularis profundus (L5–S1)",
+      "funktion": "Sträcker stortåns grundled (MTP)"
+    },
+    {
+      "latin": "Musculus abductor hallucis",
+      "svenska": "Stortåns abduktor",
+      "typ": "Intrinsisk",
+      "grupp": "Fotsulan – första (ytliga) lagret",
+      "origo": "Processus medialis tuberis calcanei, retinaculum musculorum flexorum och aponeurosis plantaris",
+      "insertio": "Mediala sesambenet och basis phalangis proximalis hallucis (mediala sidan)",
+      "innervation": "Nervus plantaris medialis (S1–S2)",
+      "funktion": "Abducerar och flekterar stortån; stödjer det mediala längsgående fotvalvet"
+    },
+    {
+      "latin": "Musculus flexor digitorum brevis",
+      "svenska": "Korta tåböjaren",
+      "typ": "Intrinsisk",
+      "grupp": "Fotsulan – första (ytliga) lagret",
+      "origo": "Processus medialis tuberis calcanei och aponeurosis plantaris",
+      "insertio": "Sidorna av mellanfalangerna (phalanx media) på dig II–V",
+      "innervation": "Nervus plantaris medialis (S1–S2)",
+      "funktion": "Flekterar mellanlederna (PIP) på dig II–V; stödjer det längsgående fotvalvet"
+    },
+    {
+      "latin": "Musculus abductor digiti minimi",
+      "svenska": "Lilltåns abduktor",
+      "typ": "Intrinsisk",
+      "grupp": "Fotsulan – första (ytliga) lagret",
+      "origo": "Processus lateralis och medialis tuberis calcanei samt aponeurosis plantaris",
+      "insertio": "Laterala sidan av basis phalangis proximalis digiti minimi",
+      "innervation": "Nervus plantaris lateralis (S2–S3)",
+      "funktion": "Abducerar och flekterar lilltån; stödjer det laterala fotvalvet"
+    },
+    {
+      "latin": "Musculus quadratus plantae",
+      "svenska": "Fyrkantiga fotsulemuskeln (caro quadrata)",
+      "typ": "Intrinsisk",
+      "grupp": "Fotsulan – andra lagret",
+      "origo": "Mediala och laterala kanten av plantara ytan av calcaneus (två huvuden)",
+      "insertio": "Laterala kanten av senan till musculus flexor digitorum longus",
+      "innervation": "Nervus plantaris lateralis (S1–S3)",
+      "funktion": "Rätar upp den långa tåböjarens sneda dragriktning så tårna böjs rakt bakåt; bistår tåflexionen"
+    },
+    {
+      "latin": "Musculi lumbricales (I–IV)",
+      "svenska": "Maskformiga fotmusklerna",
+      "typ": "Intrinsisk",
+      "grupp": "Fotsulan – andra lagret",
+      "origo": "Senorna till musculus flexor digitorum longus",
+      "insertio": "Mediala sidan av dorsalaponeurosen (extensorhuvan) på dig II–V",
+      "innervation": "I: nervus plantaris medialis; II–IV: nervus plantaris lateralis (S2–S3)",
+      "funktion": "Flekterar grundlederna (MTP) och sträcker mellan- och ytterlederna (PIP/DIP); håller tårna mot underlaget"
+    },
+    {
+      "latin": "Musculus flexor hallucis brevis",
+      "svenska": "Korta stortåböjaren",
+      "typ": "Intrinsisk",
+      "grupp": "Fotsulan – tredje lagret",
+      "origo": "Plantara ytan av os cuboideum och os cuneiforme laterale samt senan till tibialis posterior",
+      "insertio": "Mediala och laterala sesambenet samt basis phalangis proximalis hallucis (två huvuden)",
+      "innervation": "Nervus plantaris medialis (S1–S2)",
+      "funktion": "Flekterar stortåns grundled (MTP); sesambenen leder senan och avlastar stortåshuvudet"
+    },
+    {
+      "latin": "Musculus adductor hallucis",
+      "svenska": "Stortåns adduktor",
+      "typ": "Intrinsisk",
+      "grupp": "Fotsulan – tredje lagret",
+      "origo": "Caput obliquum: baserna av os metatarsale II–IV samt os cuboideum och cuneiforme laterale. Caput transversum: plantara ledband vid grundlederna (MTP) på dig III–V",
+      "insertio": "Laterala sesambenet och basis phalangis proximalis hallucis (laterala sidan)",
+      "innervation": "Nervus plantaris lateralis, ramus profundus (S2–S3)",
+      "funktion": "Adducerar stortån mot andra tån; tvärgående huvudet stödjer det främre tvärvalvet"
+    },
+    {
+      "latin": "Musculus flexor digiti minimi brevis",
+      "svenska": "Lilltåns korta böjare",
+      "typ": "Intrinsisk",
+      "grupp": "Fotsulan – tredje lagret",
+      "origo": "Basis ossis metatarsalis V och det långa plantarligamentet",
+      "insertio": "Basis phalangis proximalis digiti minimi",
+      "innervation": "Nervus plantaris lateralis (S2–S3)",
+      "funktion": "Flekterar lilltåns grundled (MTP)"
+    },
+    {
+      "latin": "Musculi interossei plantares (I–III)",
+      "svenska": "Fotsulans interosseer",
+      "typ": "Intrinsisk",
+      "grupp": "Fotsulan – fjärde (djupa) lagret",
+      "origo": "Mediala sidan och basen av os metatarsale III–V",
+      "insertio": "Mediala sidan av basis phalangis proximalis på dig III–V samt dorsalaponeurosen",
+      "innervation": "Nervus plantaris lateralis (S2–S3)",
+      "funktion": "Adducerar dig III–V mot andra tåns axel (PAD); flekterar MTP och sträcker IP-lederna"
+    },
+    {
+      "latin": "Musculi interossei dorsales (I–IV)",
+      "svenska": "Fotryggens interosseer",
+      "typ": "Intrinsisk",
+      "grupp": "Fotsulan – fjärde (djupa) lagret",
+      "origo": "Två huvuden från de mot varandra vända sidorna av angränsande ossa metatarsalia I–V",
+      "insertio": "Baserna av proximala falangerna på dig II–IV samt dorsalaponeurosen",
+      "innervation": "Nervus plantaris lateralis (S2–S3); I–II även nervus fibularis profundus",
+      "funktion": "Abducerar tårna från andra tåns axel (DAB); flekterar MTP och sträcker IP-lederna"
+    },
+    {
+      "latin": "Musculus flexor digitorum longus",
+      "svenska": "Långa tåböjaren",
+      "typ": "Extrinsisk",
+      "grupp": "Extrinsiska tåböjare (vadens djupa loge)",
+      "origo": "Posteriora ytan av tibia (nedanför linea musculi solei)",
+      "insertio": "Basis phalangis distalis (ytterfalangerna) på dig II–V",
+      "innervation": "Nervus tibialis (S2–S3)",
+      "funktion": "Flekterar tårnas ytterleder (DIP) på dig II–V; plantarflekterar och inverterar foten; ger frånskjut i gången"
+    },
+    {
+      "latin": "Musculus flexor hallucis longus",
+      "svenska": "Långa stortåböjaren",
+      "typ": "Extrinsisk",
+      "grupp": "Extrinsiska tåböjare (vadens djupa loge)",
+      "origo": "Posteriora ytan av fibula och membrana interossea",
+      "insertio": "Basis phalangis distalis hallucis (stortåns ytterfalang)",
+      "innervation": "Nervus tibialis (S2–S3)",
+      "funktion": "Flekterar stortåns ytterled (IP); plantarflexion och inversion; central för tåhävning och frånskjut"
+    },
+    {
+      "latin": "Musculus extensor digitorum longus",
+      "svenska": "Långa tåsträckaren",
+      "typ": "Extrinsisk",
+      "grupp": "Extrinsiska tåsträckare (underbenets framsida)",
+      "origo": "Laterala tibiakondylen, främre kanten av fibula och membrana interossea",
+      "insertio": "Dorsalaponeurosen samt mellan- och ytterfalangerna på dig II–V",
+      "innervation": "Nervus fibularis profundus (L5–S1)",
+      "funktion": "Sträcker tårna (MTP/IP) på dig II–V; dorsalflekterar foten"
+    },
+    {
+      "latin": "Musculus extensor hallucis longus",
+      "svenska": "Långa stortåsträckaren",
+      "typ": "Extrinsisk",
+      "grupp": "Extrinsiska tåsträckare (underbenets framsida)",
+      "origo": "Mediala främre ytan av fibula och membrana interossea",
+      "insertio": "Basis phalangis distalis hallucis (stortåns ytterfalang)",
+      "innervation": "Nervus fibularis profundus (L5–S1)",
+      "funktion": "Sträcker stortåns ytter- och grundled; bistår dorsalflexion och inversion av foten"
+    }
+  ],
+  "typ_intro": "Fotens muskler delas in i två slag. <strong>Intrinsiska</strong> muskler har både ursprung och fäste inom foten – de finstyr tårna och håller uppe fotvalven. <strong>Extrinsiska</strong> muskler har sitt ursprung i underbenet och verkar på foten via långa senor; de ger kraften vid plantar- och dorsalflexion och vid frånskjutet i gången (de plantarflekterande vadmusklerna och fotens vridare beskrivs på underbenssidan)."
+}
