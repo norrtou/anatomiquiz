@@ -1,0 +1,136 @@
+#!/usr/bin/env python3
+"""Lägg in ordlistetooltips (kb-term) i kunskapsbankens HTML-sidor.
+
+Steg 2 efter sidgenerering: generatorerna (generate_glossary.py,
+generate_muskeltabeller.py m.fl.) skriver REN HTML utan tooltips. Detta skript
+wire:ar in `<a class="kb-term" …>`-länkar i löptext, rubriker, tabellceller och
+referenser – men ALDRIG i <head>/JSON-LD, brödsmulan eller befintliga <a>.
+
+Körs OM efter varje gång en sida regenererats (regenerering nollställer
+tooltipsen). Skriptet är idempotent: befintliga kb-term/<a> hoppas över, så en
+redan wirad sida ändras inte.
+
+Termkälla = `data/kb_glossary_terms.json` (term → href + kort definition).
+Den filen byggs av build_terms() ur de redan wirade sidorna (facit) + en
+kurerad utökning för anatomitermer som är nya för en sida. Håll href/def
+byte-identiska mot js/glossary.js-ankarna.
+
+Användning:
+    python3 scripts/wire_terms.py kunskapsbank/muskeltabell-foten.html ...
+    python3 scripts/wire_terms.py --all          # alla kunskapsbankssidor + case.html
+    python3 scripts/wire_terms.py --check FILE    # dry-run: rapportera utan att skriva
+"""
+import json, re, sys, pathlib
+
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+TERMS_FILE = ROOT / "data" / "kb_glossary_terms.json"
+
+# Svenska ordtecken (för ordgränser som respekterar åäö och bindestreck).
+WORD = r"[0-9A-Za-zÀ-ÖØ-öø-ÿ]"
+
+def load_terms():
+    data = json.load(open(TERMS_FILE, encoding="utf-8"))
+    # nyckel = gemener; värde = {"href":..., "def":...}
+    return {k.lower(): v for k, v in data.items()}
+
+def build_regex(terms):
+    # Längsta termer först → flerordsfraser vinner över enord på samma position.
+    keys = sorted(terms.keys(), key=len, reverse=True)
+    alt = "|".join(re.escape(k) for k in keys)
+    # Ordgräns som inte tillåter att matchen sitter inuti ett längre ord.
+    return re.compile(rf"(?<!{WORD})(?:{alt})(?!{WORD})", re.IGNORECASE)
+
+def wire_html(html, terms, rx, stats=None):
+    """Returnera html med kb-term-länkar inlagda i aktiv text.
+
+    Aktiv text = utanför <head>, <script>, <style>, brödsmule-<nav> och
+    befintliga <a>…</a>. Vi går igenom HTML token för token (text / tagg) och
+    håller koll på skyddade zoner.
+    """
+    out = []
+    i, n = 0, len(html)
+    protected = []        # stack av skyddande tag-namn (head/script/style/breadcrumb-nav)
+    in_anchor = False
+    tag_rx = re.compile(r"<(/?)([a-zA-Z0-9]+)([^>]*)>")
+    def active():
+        return not protected and not in_anchor
+    while i < n:
+        lt = html.find("<", i)
+        if lt == -1:
+            text = html[i:]
+            out.append(_sub(text, rx, terms, stats) if active() else text)
+            break
+        # text före nästa tagg
+        text = html[i:lt]
+        if text:
+            out.append(_sub(text, rx, terms, stats) if active() else text)
+        if html.startswith("<!--", lt):     # HTML-kommentar: kopiera ordagrant
+            end = html.find("-->", lt)
+            end = (end + 3) if end != -1 else n
+            out.append(html[lt:end])
+            i = end
+            continue
+        m = tag_rx.match(html, lt)
+        if not m:
+            out.append(html[lt])      # lös '<'
+            i = lt + 1
+            continue
+        closing, name, attrs = m.group(1), m.group(2).lower(), m.group(3)
+        self_closing = attrs.rstrip().endswith("/")
+        if closing:
+            # Vilken stängande tagg som helst poppar matchande skyddad zon.
+            if protected and protected[-1] == name:
+                protected.pop()
+            elif name == "a":
+                in_anchor = False
+        else:
+            is_breadcrumb_nav = (name == "nav" and 'class="breadcrumb"' in attrs)
+            if (name in ("head", "script", "style") or is_breadcrumb_nav) and not self_closing:
+                protected.append(name)        # öppna skyddad zon
+            elif name == "a" and not self_closing:
+                in_anchor = True
+        out.append(m.group(0))
+        i = m.end()
+    return "".join(out)
+
+def _sub(text, rx, terms, stats):
+    def repl(mo):
+        token = mo.group(0)
+        v = terms[token.lower()]
+        if stats is not None:
+            stats[token.lower()] = stats.get(token.lower(), 0) + 1
+        return (f'<a class="kb-term" href="{v["href"]}" '
+                f'data-def="{v["def"]}">{token}</a>')
+    return rx.sub(repl, text)
+
+def wire_file(path, terms, rx, write=True):
+    html = pathlib.Path(path).read_text(encoding="utf-8")
+    stats = {}
+    new = wire_html(html, terms, rx, stats)
+    n = sum(stats.values())
+    if write and new != html:
+        pathlib.Path(path).write_text(new, encoding="utf-8")
+    return n, stats
+
+def main(argv):
+    terms = load_terms()
+    rx = build_regex(terms)
+    if not argv:
+        print(__doc__); return
+    if argv[0] == "--all":
+        files = sorted((ROOT / "kunskapsbank").glob("*.html")) + [ROOT / "case.html"]
+    elif argv[0] == "--check":
+        n, stats = wire_file(ROOT / argv[1], terms, rx, write=False)
+        print(f"{argv[1]}: {n} kb-term-länkar skulle läggas ({len(stats)} unika)")
+        return
+    else:
+        files = [ROOT / a for a in argv]
+    tot = 0
+    for f in files:
+        n, _ = wire_file(f, terms, rx, write=True)
+        tot += n
+        print(f"  {f.relative_to(ROOT)}: {n} kb-term-länkar")
+    print(f"Totalt {tot} länkar i {len(files)} filer.")
+
+if __name__ == "__main__":
+    main(sys.argv[1:])
