@@ -35390,7 +35390,7 @@
   },
   {
     "term": "vas",
-    "def": "subst. kärl; t.ex. vas deferens (sädesledaren), vasa vasorum (kärl till kärl). Sv. kärl. Eng. vessel, vas. Av lat. vas = kärl, behållare."
+    "def": "subst. 1) kärl; t.ex. vas deferens (sädesledaren), vasa vasorum (kärl till kärl), av lat. vas = kärl; 2) VAS – visuell analog skala (eng. visual analogue scale), smärtskattning där patienten markerar smärtans styrka längs en linje från ingen till värsta tänkbara smärta. Jfr NRS."
   },
   {
     "term": "vas capillare",
@@ -38073,7 +38073,7 @@
   },
   {
     "term": "ESS",
-    "def": "förk. (eng.) endoskopisk sinuskirurgi; titthålskirurgi i näsans bihålor, t.ex. vid kronisk bihåleinflammation eller näspolyper. Eng. endoscopic sinus surgery."
+    "def": "förk. (eng.) 1) endoskopisk sinuskirurgi (endoscopic sinus surgery) – titthålskirurgi i näsans bihålor, t.ex. vid kronisk bihåleinflammation eller näspolyper; 2) Epworth Sleepiness Scale – skala som mäter dagtrötthet utifrån insomningsbenägenhet i vardagssituationer. Jfr OSA."
   },
   {
     "term": "EVAR",
@@ -40010,5 +40010,637 @@
   {
     "term": "ICPN",
     "def": "förk. (eng.) intracholecystisk papillär neoplasi; ovanlig förstadietumör med papillär växt i gallblåsans slemhinna. Eng. intracholecystic papillary neoplasm. Jfr ITPN."
+  },
+  {
+    "term": "EKG",
+    "def": "förk. elektrokardiogram/-grafi; registrering av hjärtats elektriska aktivitet via elektroder på huden. Eng. electrocardiogram. Jfr Holter-EKG."
+  },
+  {
+    "term": "ENG",
+    "def": "förk. elektroneurografi; mätning av nervernas ledningshastighet, ofta tillsammans med EMG. Eng. electroneurography. (ENG betecknar även elektronystagmografi, registrering av ögonrörelser vid balansutredning.) Jfr EMG, ENMG."
+  },
+  {
+    "term": "Peak Flow",
+    "def": "subst. (eng.) mätning av högsta utandningshastighet (PEF) med en handhållen mätare, används bl.a. vid astma. Eng. peak expiratory flow. Jfr spirometri."
+  },
+  {
+    "term": "Pulsoximeter",
+    "def": "subst. (-n, pl. -ar) apparat som via ljus genom huden mäter syremättnaden (SpO2) i blodet. Eng. pulse oximeter."
+  },
+  {
+    "term": "Blodtrycksmanschett",
+    "def": "subst. (-en, pl. -er) uppblåsbar manschett som tillsammans med en mätare registrerar det arteriella blodtrycket. Eng. blood pressure cuff (sphygmomanometer)."
+  },
+  {
+    "term": "Holter-EKG",
+    "def": "subst. (eng.) bärbar långtidsregistrering av hjärtrytmen under ett eller flera dygn. Eng. Holter monitor. Jfr EKG."
+  },
+  {
+    "term": "DEXA",
+    "def": "förk. (eng.) bentäthetsmätning med röntgen (DXA); mäter benmineraltäthet för att diagnostisera osteoporos. Eng. dual-energy X-ray absorptiometry. Jfr FRAX."
+  },
+  {
+    "term": "NIHSS",
+    "def": "förk. (eng.) NIH Stroke Scale; standardiserad skala som graderar neurologisk svårighetsgrad vid stroke. Eng. National Institutes of Health Stroke Scale. Jfr mRS."
+  },
+  {
+    "term": "ASA-klassifikation",
+    "def": "subst. (eng.) ASA-klass; skala (ASA I–VI) där American Society of Anesthesiologists graderar en patients allmäntillstånd och narkosrisk inför operation. Eng. ASA physical status classification."
+  },
+  {
+    "term": "SOFA",
+    "def": "förk. (eng.) Sequential Organ Failure Assessment; poängskala som graderar grad av svikt i sex organsystem hos intensivvårdspatienter. Eng. Sequential Organ Failure Assessment. Jfr qSOFA, APACHE II."
+  },
+  {
+    "term": "MEWS",
+    "def": "förk. (eng.) Modified Early Warning Score; poängsystem utifrån vitalparametrar som tidigt varnar för försämring. Eng. Modified Early Warning Score. Jfr NEWS2."
+  },
+  {
+    "term": "qSOFA",
+    "def": "förk. (eng.) quick SOFA; förenklad bedside-skattning (andningsfrekvens, blodtryck, medvetande) för att snabbt fånga risk för dålig prognos vid infektion/sepsis. Eng. quick Sequential Organ Failure Assessment. Jfr SOFA."
+  },
+  {
+    "term": "RASS",
+    "def": "förk. (eng.) Richmond Agitation–Sedation Scale; skala (−5 till +4) för att gradera sederings- och agitationsnivå hos intensivvårdspatienter. Eng. Richmond Agitation-Sedation Scale. Jfr CAM-ICU."
+  },
+  {
+    "term": "CAM-ICU",
+    "def": "förk. (eng.) Confusion Assessment Method for the ICU; instrument för att screena för delirium (akut förvirring) hos intensivvårdspatienter. Eng. Confusion Assessment Method for the Intensive Care Unit. Jfr delirium, RASS."
+  },
+  {
+    "term": "MMSE",
+    "def": "förk. (eng.) Mini Mental State Examination; kort kognitivt screeningtest (0–30 poäng) av bl.a. minne, orientering och språk. Eng. Mini-Mental State Examination. Jfr MoCA."
+  },
+  {
+    "term": "MoCA",
+    "def": "förk. (eng.) Montreal Cognitive Assessment; kognitivt screeningtest (0–30 poäng) som är känsligare för lindrig kognitiv svikt än MMSE. Eng. Montreal Cognitive Assessment. Jfr MMSE."
+  },
+  {
+    "term": "Clock Drawing Test",
+    "def": "subst. (eng.) klocktest; kognitivt test där patienten ritar en urtavla, känsligt för visuospatial och exekutiv svikt. Eng. Clock Drawing Test."
+  },
+  {
+    "term": "Trail Making Test",
+    "def": "subst. (eng.) test (del A och B) av uppmärksamhet, processhastighet och exekutiv förmåga där punkter kopplas samman i ordning. Eng. Trail Making Test."
+  },
+  {
+    "term": "Stroop-test",
+    "def": "subst. (eng.) test av kognitiv kontroll och inhibering där man ska benämna färgen på ord som stavar en annan färg. Eng. Stroop test."
+  },
+  {
+    "term": "WAIS",
+    "def": "förk. (eng.) Wechsler Adult Intelligence Scale; standardiserat begåvningstest för vuxna. Eng. Wechsler Adult Intelligence Scale. Jfr WISC."
+  },
+  {
+    "term": "WISC",
+    "def": "förk. (eng.) Wechsler Intelligence Scale for Children; standardiserat begåvningstest för barn. Eng. Wechsler Intelligence Scale for Children. Jfr WAIS."
+  },
+  {
+    "term": "RAVLT",
+    "def": "förk. (eng.) Rey Auditory Verbal Learning Test; test av verbal inlärning och minne genom upprepad ordlistinlärning. Eng. Rey Auditory Verbal Learning Test."
+  },
+  {
+    "term": "BDI",
+    "def": "förk. (eng.) Beck Depression Inventory; självskattningsformulär för depressionssymtom. Eng. Beck Depression Inventory. Jfr MADRS, PHQ-9."
+  },
+  {
+    "term": "HAM-D",
+    "def": "förk. (eng.) Hamiltons depressionsskala; klinikerskattad skala för depressionssymtom (även HDRS). Eng. Hamilton Depression Rating Scale. Jfr MADRS."
+  },
+  {
+    "term": "HADS",
+    "def": "förk. (eng.) Hospital Anxiety and Depression Scale; kort självskattning av ångest och nedstämdhet. Eng. Hospital Anxiety and Depression Scale."
+  },
+  {
+    "term": "GAD-7",
+    "def": "förk. (eng.) Generalized Anxiety Disorder 7; sjugradigt självskattningsformulär för ångestsymtom. Eng. Generalized Anxiety Disorder 7-item scale. Jfr PHQ-9."
+  },
+  {
+    "term": "PHQ-9",
+    "def": "förk. (eng.) Patient Health Questionnaire-9; niofrågors självskattning av depressionssymtom. Eng. Patient Health Questionnaire-9. Jfr GAD-7, BDI."
+  },
+  {
+    "term": "YMRS",
+    "def": "förk. (eng.) Young Mania Rating Scale; klinikerskattad skala för maniska symtom. Eng. Young Mania Rating Scale. Jfr mani."
+  },
+  {
+    "term": "PANSS",
+    "def": "förk. (eng.) Positive and Negative Syndrome Scale; skala som mäter positiva, negativa och allmänna symtom vid schizofreni. Eng. Positive and Negative Syndrome Scale. Jfr SAPS, SANS."
+  },
+  {
+    "term": "BPRS",
+    "def": "förk. (eng.) Brief Psychiatric Rating Scale; skala för att skatta svårighetsgraden av en rad psykiatriska symtom. Eng. Brief Psychiatric Rating Scale."
+  },
+  {
+    "term": "C-SSRS",
+    "def": "förk. (eng.) Columbia Suicide Severity Rating Scale; strukturerad skattning av suicidtankar och suicidalt beteende. Eng. Columbia-Suicide Severity Rating Scale. Jfr suicidalitet."
+  },
+  {
+    "term": "AUDIT",
+    "def": "förk. (eng.) Alcohol Use Disorders Identification Test; WHO:s tiofrågors screening för riskbruk av alkohol. Eng. Alcohol Use Disorders Identification Test. Jfr DUDIT."
+  },
+  {
+    "term": "DUDIT",
+    "def": "förk. (eng.) Drug Use Disorders Identification Test; screeningformulär för problematiskt drogbruk, motsvarighet till AUDIT. Eng. Drug Use Disorders Identification Test. Jfr AUDIT."
+  },
+  {
+    "term": "Fagerströmtest",
+    "def": "subst. test som graderar grad av nikotinberoende (FTND). Eng. Fagerström Test for Nicotine Dependence."
+  },
+  {
+    "term": "CIWA-Ar",
+    "def": "förk. (eng.) Clinical Institute Withdrawal Assessment for Alcohol, reviderad; skala som graderar svårighetsgraden av alkoholabstinens. Eng. Clinical Institute Withdrawal Assessment for Alcohol, revised. Jfr abstinens."
+  },
+  {
+    "term": "ASSIST",
+    "def": "förk. (eng.) WHO:s ASSIST; screeningformulär för bruk av alkohol, tobak och andra substanser. Eng. Alcohol, Smoking and Substance Involvement Screening Test."
+  },
+  {
+    "term": "SCL-90",
+    "def": "förk. (eng.) Symptom Checklist-90; självskattning av en bred rad psykiska symtom. Eng. Symptom Checklist-90."
+  },
+  {
+    "term": "Y-BOCS",
+    "def": "förk. (eng.) Yale–Brown Obsessive Compulsive Scale; skala som mäter svårighetsgraden av tvångstankar och tvångshandlingar. Eng. Yale-Brown Obsessive Compulsive Scale. Jfr tvångssyndrom."
+  },
+  {
+    "term": "CGI",
+    "def": "förk. (eng.) Clinical Global Impression; enkel klinikerskattning av sjukdomens svårighetsgrad och behandlingseffekt. Eng. Clinical Global Impression scale."
+  },
+  {
+    "term": "PANSS-EC",
+    "def": "förk. (eng.) PANSS Excited Component; den agitationsskattande delskalan av PANSS (fem items). Eng. PANSS Excited Component. Jfr PANSS."
+  },
+  {
+    "term": "SAPS",
+    "def": "förk. (eng.) Scale for the Assessment of Positive Symptoms; skala för positiva symtom vid schizofreni. Eng. Scale for the Assessment of Positive Symptoms. (SAPS betecknar inom intensivvården även Simplified Acute Physiology Score.) Jfr SANS, PANSS."
+  },
+  {
+    "term": "SANS",
+    "def": "förk. (eng.) Scale for the Assessment of Negative Symptoms; skala för negativa symtom vid schizofreni. Eng. Scale for the Assessment of Negative Symptoms. Jfr SAPS, PANSS."
+  },
+  {
+    "term": "Glasgow Outcome Scale",
+    "def": "subst. (eng.) skala (GOS) som graderar funktionsutfall efter svår hjärnskada, från död till god återhämtning. Eng. Glasgow Outcome Scale. Jfr GCS."
+  },
+  {
+    "term": "mRS",
+    "def": "förk. (eng.) modifierad Rankinskala; skala (0–6) som graderar funktionsnivå och beroende efter stroke. Eng. modified Rankin Scale. Jfr NIHSS."
+  },
+  {
+    "term": "Berg Balance Scale",
+    "def": "subst. (eng.) skala (BBS) som mäter balansförmåga genom 14 vardagsnära uppgifter. Eng. Berg Balance Scale. Jfr BBS, TUG."
+  },
+  {
+    "term": "WOMAC",
+    "def": "förk. (eng.) Western Ontario and McMaster Universities Osteoarthritis Index; självskattning av smärta, stelhet och funktion vid knä- och höftartros. Eng. WOMAC Osteoarthritis Index."
+  },
+  {
+    "term": "Oswestry Disability Index",
+    "def": "subst. (eng.) index (ODI) som mäter funktionsnedsättning vid ländryggssmärta. Eng. Oswestry Disability Index."
+  },
+  {
+    "term": "NRS",
+    "def": "förk. (eng.) numerisk skattningsskala; smärtskattning där patienten anger smärtan på en skala 0–10. Eng. Numeric Rating Scale. Jfr VAS."
+  },
+  {
+    "term": "McGill Pain Questionnaire",
+    "def": "subst. (eng.) frågeformulär som kartlägger smärtans kvalitet och intensitet med beskrivande ord. Eng. McGill Pain Questionnaire."
+  },
+  {
+    "term": "SF-36",
+    "def": "förk. (eng.) Short Form-36; allmänt frågeformulär som mäter hälsorelaterad livskvalitet i 36 frågor. Eng. 36-Item Short Form Health Survey. Jfr EQ-5D."
+  },
+  {
+    "term": "EQ-5D",
+    "def": "förk. (eng.) EuroQol 5 dimensioner; kort instrument för hälsorelaterad livskvalitet inom fem dimensioner. Eng. EuroQol-5 Dimension. Jfr SF-36."
+  },
+  {
+    "term": "WHOQOL-BREF",
+    "def": "förk. (eng.) WHO Quality of Life-BREF; WHO:s förkortade livskvalitetsformulär. Eng. World Health Organization Quality of Life, brief version."
+  },
+  {
+    "term": "ICF core sets",
+    "def": "subst. (eng.) ICF-kärnuppsättningar; standardiserade urval av ICF-koder anpassade för specifika diagnoser eller situationer. Eng. ICF core sets. Jfr ICF."
+  },
+  {
+    "term": "CPOT",
+    "def": "förk. (eng.) Critical-Care Pain Observation Tool; instrument för att skatta smärta hos icke kommunicerande intensivvårdspatienter utifrån beteende. Eng. Critical-Care Pain Observation Tool. Jfr FLACC."
+  },
+  {
+    "term": "FLACC",
+    "def": "förk. (eng.) FLACC-skala; beteendebaserad smärtskala för små barn (Face, Legs, Activity, Cry, Consolability). Eng. Face, Legs, Activity, Cry, Consolability scale. Jfr Wong-Baker Faces."
+  },
+  {
+    "term": "Wong-Baker Faces",
+    "def": "subst. (eng.) smärtskala där patienten väljer bland ansiktsuttryck från glad till gråtande, lämplig för barn. Eng. Wong-Baker FACES Pain Rating Scale. Jfr FLACC."
+  },
+  {
+    "term": "SOAPP",
+    "def": "förk. (eng.) Screener and Opioid Assessment for Patients with Pain; formulär som bedömer risk för missbruk inför opioidbehandling. Eng. Screener and Opioid Assessment for Patients with Pain."
+  },
+  {
+    "term": "ORTO-15",
+    "def": "förk. ORTO-15; femton frågors screeningformulär för ortorektiska ätbeteenden. Eng. ORTO-15. Jfr ortorexi."
+  },
+  {
+    "term": "STOP-Bang",
+    "def": "förk. (eng.) STOP-Bang; åttapunkts screening för risk för obstruktiv sömnapné (Snoring, Tiredness, Observed apnea, Pressure, BMI, Age, Neck, Gender). Eng. STOP-Bang questionnaire. Jfr OSA."
+  },
+  {
+    "term": "Epworth Sleepiness Scale",
+    "def": "subst. (eng.) skala (ESS) som mäter dagtrötthet utifrån insomningsbenägenhet i åtta vardagssituationer. Eng. Epworth Sleepiness Scale. Jfr OSA."
+  },
+  {
+    "term": "Pittsburgh Sleep Quality Index",
+    "def": "subst. (eng.) index (PSQI) som mäter sömnkvalitet under den senaste månaden. Eng. Pittsburgh Sleep Quality Index."
+  },
+  {
+    "term": "CHA2DS2-VASc",
+    "def": "förk. (eng.) riskskala som skattar risken för stroke vid förmaksflimmer och vägleder antikoagulation. Eng. CHA2DS2-VASc score. Jfr HAS-BLED."
+  },
+  {
+    "term": "HAS-BLED",
+    "def": "förk. (eng.) riskskala som skattar blödningsrisk vid antikoagulationsbehandling. Eng. HAS-BLED score. Jfr CHA2DS2-VASc."
+  },
+  {
+    "term": "Wells score",
+    "def": "subst. (eng.) poängbaserad sannolikhetsbedömning för djup ventrombos respektive lungemboli. Eng. Wells score. Jfr CTPA."
+  },
+  {
+    "term": "Centor criteria",
+    "def": "subst. (eng.) Centorkriterier; poängregel som skattar sannolikheten för streptokockorsakad halsfluss. Eng. Centor criteria."
+  },
+  {
+    "term": "CURB-65",
+    "def": "förk. (eng.) CURB-65; poängregel som graderar svårighetsgrad och vårdnivå vid lunginflammation (Confusion, Urea, Respiratory rate, Blood pressure, ålder ≥65). Eng. CURB-65 score. Jfr CAP."
+  },
+  {
+    "term": "APACHE II",
+    "def": "förk. (eng.) Acute Physiology and Chronic Health Evaluation II; poängsystem som skattar svårighetsgrad och prognos på intensivvård. Eng. Acute Physiology and Chronic Health Evaluation II. Jfr SOFA."
+  },
+  {
+    "term": "Child-Pugh score",
+    "def": "subst. (eng.) Child–Pugh-klassifikation; poängsystem (klass A–C) som graderar svårighetsgraden av levercirros. Eng. Child-Pugh score. Jfr MELD score."
+  },
+  {
+    "term": "MELD score",
+    "def": "förk. (eng.) Model for End-Stage Liver Disease; poängskala som graderar svårighetsgrad av leversjukdom och styr prioritering för levertransplantation. Eng. Model for End-Stage Liver Disease. Jfr Child-Pugh score."
+  },
+  {
+    "term": "FRAX",
+    "def": "förk. (eng.) FRAX; verktyg som skattar tioårsrisken för osteoporosfraktur utifrån riskfaktorer. Eng. Fracture Risk Assessment Tool. Jfr DEXA."
+  },
+  {
+    "term": "Skalpell",
+    "def": "subst. (-en, pl. -er) kirurgiskt instrument med vasst blad för precisa snitt i vävnad. Eng. scalpel. Jfr skalpellhandtag."
+  },
+  {
+    "term": "Skalpellhandtag",
+    "def": "subst. (-et) handtag som skalpellbladet fästs på. Eng. scalpel handle. Jfr skalpell."
+  },
+  {
+    "term": "Operationskniv",
+    "def": "subst. (-en, pl. -ar) annan benämning på skalpell. Eng. surgical knife. Jfr skalpell."
+  },
+  {
+    "term": "Kirurgsax",
+    "def": "subst. (-en, pl. -ar) sax för att klippa vävnad eller suturer under operation. Eng. surgical scissors. Jfr Metzenbaumsax, Mayo-sax."
+  },
+  {
+    "term": "Metzenbaumsax",
+    "def": "subst. (-en, pl. -ar) fin, böjd sax för dissektion av mjuk vävnad. Eng. Metzenbaum scissors. Jfr Mayo-sax."
+  },
+  {
+    "term": "Mayo-sax",
+    "def": "subst. (-en, pl. -ar) kraftig sax för tjockare vävnad och suturer. Eng. Mayo scissors. Jfr Metzenbaumsax."
+  },
+  {
+    "term": "Peang",
+    "def": "subst. (-en, pl. -ar) blodstillande klämma (hemostat) med lås som kläms om blodkärl (efter kirurgen Péan). Eng. hemostat (artery forceps). Jfr Mosquito-peang, Kocher-peang."
+  },
+  {
+    "term": "Mosquito-peang",
+    "def": "subst. (-en, pl. -ar) liten, fin peang för små kärl. Eng. mosquito forceps. Jfr peang."
+  },
+  {
+    "term": "Kocher-peang",
+    "def": "subst. (-en, pl. -ar) kraftig peang med taggar (tänder) för fast grepp i vävnad. Eng. Kocher forceps. Jfr peang."
+  },
+  {
+    "term": "Allis-klämma",
+    "def": "subst. (-n, pl. -or) tång med tandade grepp för att hålla i vävnad utan att skada den för mycket. Eng. Allis clamp. Jfr Kocher-peang."
+  },
+  {
+    "term": "Backhaus-tång",
+    "def": "subst. (-en, pl. -ar) tång (handduksklämma) som fäster sterila dukar vid operationsfältet. Eng. Backhaus towel clamp. Jfr steril duk."
+  },
+  {
+    "term": "Adson-pincett",
+    "def": "subst. (-en, pl. -er) fin pincett för hud och mjuk vävnad. Eng. Adson forceps. Jfr kirurgisk pincett."
+  },
+  {
+    "term": "Anatomisk pincett",
+    "def": "subst. (-en, pl. -er) pincett utan taggar för skonsamt grepp om vävnad. Eng. dissecting (non-toothed) forceps. Jfr kirurgisk pincett."
+  },
+  {
+    "term": "Kirurgisk pincett",
+    "def": "subst. (-en, pl. -er) pincett med taggar (tänder) för säkrare grepp om vävnad. Eng. toothed (surgical) forceps. Jfr anatomisk pincett."
+  },
+  {
+    "term": "DeBakey-pincett",
+    "def": "subst. (-en, pl. -er) atraumatisk pincett för skonsamt grepp om blodkärl vid kärlkirurgi. Eng. DeBakey forceps."
+  },
+  {
+    "term": "Langenbeck-retraktor",
+    "def": "subst. (-n, pl. -er) handhållen hake som drar isär och håller undan vävnad i ett sår. Eng. Langenbeck retractor. Jfr Farabeuf-retraktor."
+  },
+  {
+    "term": "Farabeuf-retraktor",
+    "def": "subst. (-n, pl. -er) handhållen dubbelhake för att hålla isär sårkanter. Eng. Farabeuf retractor. Jfr Langenbeck-retraktor."
+  },
+  {
+    "term": "Weitlaner-retraktor",
+    "def": "subst. (-n, pl. -er) självhållande retraktor med taggar som håller såret öppet utan assistent. Eng. Weitlaner retractor. Jfr Gelpi-retraktor."
+  },
+  {
+    "term": "Gelpi-retraktor",
+    "def": "subst. (-n, pl. -er) självhållande retraktor med spetsiga armar för djupa sår. Eng. Gelpi retractor. Jfr Weitlaner-retraktor."
+  },
+  {
+    "term": "Richardson-retraktor",
+    "def": "subst. (-n, pl. -er) djup, handhållen sårhake för buk- och thoraxkirurgi. Eng. Richardson retractor."
+  },
+  {
+    "term": "Balfour-retraktor",
+    "def": "subst. (-n, pl. -er) stor självhållande bukretraktor för laparotomi. Eng. Balfour retractor."
+  },
+  {
+    "term": "Finochietto-retraktor",
+    "def": "subst. (-n, pl. -er) självhållande retraktor med vev som håller isär revbenen vid thoraxkirurgi. Eng. Finochietto rib retractor."
+  },
+  {
+    "term": "Hohmann-retraktor",
+    "def": "subst. (-n, pl. -er) hävstångsformad benhake inom ortopedisk kirurgi. Eng. Hohmann retractor."
+  },
+  {
+    "term": "Bone hook",
+    "def": "subst. (eng.) benhake; hake för att gripa och manipulera ben under operation. Eng. bone hook."
+  },
+  {
+    "term": "Gigli-såg",
+    "def": "subst. (-en, pl. -ar) flexibel trådsåg för att kapa ben. Eng. Gigli saw."
+  },
+  {
+    "term": "Oscillerande såg",
+    "def": "subst. eldriven såg med fram- och återgående blad för bensågning inom ortopedi. Eng. oscillating saw."
+  },
+  {
+    "term": "Gipsåg",
+    "def": "subst. (-en, pl. -ar) oscillerande såg för att avlägsna gipsförband utan att skada huden. Eng. cast saw. Jfr gipsbandage."
+  },
+  {
+    "term": "Rongeur",
+    "def": "subst. (-en, pl. -er) tångliknande instrument som biter bort små bitar ben. Eng. rongeur."
+  },
+  {
+    "term": "Osteotom",
+    "def": "subst. (-en, pl. -er) mejselliknande verktyg för att dela eller forma ben. Eng. osteotome."
+  },
+  {
+    "term": "Kirurgisk borr",
+    "def": "subst. eldrivet borrverktyg för att borra i ben, t.ex. inför skruv- och implantatfixation. Eng. surgical drill."
+  },
+  {
+    "term": "Bentråd",
+    "def": "subst. (-en, pl. -ar) metalltråd (cerklage) som binder ihop benfragment vid fixation. Eng. cerclage wire. Jfr platta och skruvar."
+  },
+  {
+    "term": "Platta och skruvar",
+    "def": "subst. osteosyntesmaterial av metall som fixerar ben vid frakturer. Eng. plate and screws. Jfr extern fixator."
+  },
+  {
+    "term": "Extern fixator",
+    "def": "subst. yttre metallställning som via stift stabiliserar en fraktur utanför kroppen. Eng. external fixator."
+  },
+  {
+    "term": "Intramedullär märgspik",
+    "def": "subst. metallspik som förs in i benets märgkanal för att stabilisera en fraktur. Eng. intramedullary nail."
+  },
+  {
+    "term": "Suturnål",
+    "def": "subst. (-en, pl. -ar) böjd nål, oftast fäst vid suturtråden, för att sy ihop vävnad. Eng. suture needle. Jfr suturtråd."
+  },
+  {
+    "term": "Suturtråd",
+    "def": "subst. (-en, pl. -ar) tråd som används för att sluta sår och knyta vävnad. Eng. suture. Jfr resorberbar sutur."
+  },
+  {
+    "term": "Resorberbar sutur",
+    "def": "subst. suturtråd som bryts ned och tas upp av kroppen och inte behöver avlägsnas. Eng. absorbable suture. Jfr icke-resorberbar sutur."
+  },
+  {
+    "term": "Icke-resorberbar sutur",
+    "def": "subst. suturtråd som inte bryts ned och som måste tas bort efter läkning. Eng. non-absorbable suture. Jfr resorberbar sutur."
+  },
+  {
+    "term": "Hudsutur",
+    "def": "subst. sutur avsedd för att sy ihop huden. Eng. skin suture. Jfr stapler."
+  },
+  {
+    "term": "Stapler",
+    "def": "subst. (eng.) kirurgisk klammerapparat; sätter metallklamrar för snabb sårslutning (hudstapler) eller för att dela och foga samman vävnad vid anastomoser (inre stapler). Eng. surgical stapler. Jfr clip-applikator."
+  },
+  {
+    "term": "Clip-applikator",
+    "def": "subst. instrument som sätter små clips på blodkärl eller gångar. Eng. clip applier. Jfr hemostatiska clips."
+  },
+  {
+    "term": "Hemostatiska clips",
+    "def": "subst. små metallclips som stänger av blodkärl för att stoppa blödning. Eng. hemostatic clips. Jfr clip-applikator."
+  },
+  {
+    "term": "Bipolär diatermi",
+    "def": "subst. diatermi där strömmen går mellan två närliggande elektroder i en pincett, vilket ger precis koagulation med liten värmespridning. Eng. bipolar diathermy. Jfr diatermi, monopolär diatermi."
+  },
+  {
+    "term": "Monopolär diatermi",
+    "def": "subst. diatermi där strömmen går från ett aktivt instrument genom kroppen till en återföringsplatta, för skärning och koagulation. Eng. monopolar diathermy. Jfr diatermi, bipolär diatermi."
+  },
+  {
+    "term": "Ultraljudskniv",
+    "def": "subst. energiinstrument (Harmonic scalpel) som med ultraljudsvibrationer både skär och koagulerar vävnad. Eng. ultrasonic scalpel (Harmonic scalpel). Jfr LigaSure."
+  },
+  {
+    "term": "LigaSure",
+    "def": "subst. (eng.) energiinstrument som förseglar blodkärl med kontrollerad värme och tryck. Eng. LigaSure (vessel sealing device). Jfr ultraljudskniv."
+  },
+  {
+    "term": "Sugkateter",
+    "def": "subst. (-n, pl. -ar) tunn kateter som suger bort blod och vätska från operationsfältet eller luftvägarna. Eng. suction catheter. Jfr sugapparat."
+  },
+  {
+    "term": "Sugapparat",
+    "def": "subst. (-en, pl. -er) apparat som skapar vakuum för att aspirera vätska och sekret. Eng. suction unit. Jfr sugkateter."
+  },
+  {
+    "term": "Thoraxdrän",
+    "def": "subst. (-et, pl. -∅) dränageslang i lungsäcken som tömmer luft eller vätska ur brösthålan. Eng. chest tube (thoracic drain)."
+  },
+  {
+    "term": "Bukdrän",
+    "def": "subst. (-et, pl. -∅) drän som leder bort vätska från bukhålan efter operation. Eng. abdominal drain."
+  },
+  {
+    "term": "Redon-drän",
+    "def": "subst. (-et, pl. -∅) aktivt sugdrän som via undertryck tömmer ett operationssår. Eng. Redon drain. Jfr Penrosedrän."
+  },
+  {
+    "term": "Penrosedrän",
+    "def": "subst. (-et, pl. -∅) mjukt passivt gummidrän som låter sekret rinna ut längs slangen. Eng. Penrose drain. Jfr Redon-drän."
+  },
+  {
+    "term": "Jackson-Pratt-drän",
+    "def": "subst. (-et, pl. -∅) slutet sugdränagesystem med en hoppressbar behållare som ger undertryck. Eng. Jackson-Pratt drain."
+  },
+  {
+    "term": "VAC-system",
+    "def": "subst. (eng.) undertrycksbehandling av sår (vacuum assisted closure) där en förslutning med sug stimulerar läkning. Eng. vacuum-assisted closure (negative pressure wound therapy)."
+  },
+  {
+    "term": "Sårsköljningsset",
+    "def": "subst. utrustning för att rengöra och spola sår. Eng. wound irrigation set. Jfr koksaltlösning."
+  },
+  {
+    "term": "Koksaltlösning",
+    "def": "subst. steril fysiologisk natriumkloridlösning (0,9 %) för spolning och sköljning. Eng. saline solution."
+  },
+  {
+    "term": "Kompress",
+    "def": "subst. (-en, pl. -er) absorberande tygkudde för att täcka, rengöra eller trycka mot sår. Eng. gauze swab/compress."
+  },
+  {
+    "term": "Steril duk",
+    "def": "subst. operationsduk som läggs runt operationsfältet för att hålla det sterilt. Eng. sterile drape. Jfr Backhaus-tång."
+  },
+  {
+    "term": "Operationsrock",
+    "def": "subst. (-en, pl. -ar) steril rock som det kirurgiska teamet bär. Eng. surgical gown."
+  },
+  {
+    "term": "Operationshandskar",
+    "def": "subst. sterila engångshandskar som bärs vid operation. Eng. surgical gloves."
+  },
+  {
+    "term": "Munskydd",
+    "def": "subst. (-et, pl. -∅) ansiktsskydd som minskar spridning av droppsmitta. Eng. surgical mask."
+  },
+  {
+    "term": "Operationsmössa",
+    "def": "subst. (-n, pl. -or) huvudbonad som täcker håret i steril miljö. Eng. surgical cap."
+  },
+  {
+    "term": "Operationsbord",
+    "def": "subst. (-et, pl. -∅) justerbart bord som patienten ligger på under ingrepp. Eng. operating table."
+  },
+  {
+    "term": "Operationslampa",
+    "def": "subst. (-n, pl. -or) kraftig, riktbar lampa som lyser upp operationsfältet. Eng. surgical light."
+  },
+  {
+    "term": "Anestesimaskin",
+    "def": "subst. (-en, pl. -er) apparat som ger narkosgaser och sköter ventilationen under operation. Eng. anaesthesia machine."
+  },
+  {
+    "term": "Intubationstub",
+    "def": "subst. (-en, pl. -er) böjlig tub som förs ner i luftstrupen för att säkra fri luftväg. Eng. endotracheal tube. Jfr laryngoskop."
+  },
+  {
+    "term": "Videolaryngoskop",
+    "def": "subst. (-et, pl. -∅) laryngoskop med kamera som visar struphuvudet på en skärm och underlättar intubation. Eng. video laryngoscope. Jfr laryngoskop."
+  },
+  {
+    "term": "Magill-tång",
+    "def": "subst. (-en, pl. -ar) vinklad tång för att styra ner en tub eller plocka främmande föremål i svalget. Eng. Magill forceps."
+  },
+  {
+    "term": "Guedel-tub",
+    "def": "subst. (-en, pl. -er) böjd svalgtub som hålls i munnen och håller luftvägen fri. Eng. Guedel (oropharyngeal) airway."
+  },
+  {
+    "term": "Supraglottisk airway",
+    "def": "subst. (eng.) luftvägshjälpmedel (t.ex. larynxmask) som placeras ovanför struphuvudet utan intubation. Eng. supraglottic airway. Jfr intubationstub."
+  },
+  {
+    "term": "Syrgasmask",
+    "def": "subst. (-en, pl. -er) ansiktsmask för tillförsel av extra syrgas. Eng. oxygen mask."
+  },
+  {
+    "term": "Infusionspump",
+    "def": "subst. (-en, pl. -ar) pump som ger en kontrollerad mängd vätska eller läkemedel intravenöst. Eng. infusion pump. Jfr sprutpump."
+  },
+  {
+    "term": "Sprutpump",
+    "def": "subst. (-en, pl. -ar) pump som med hög precision ger små mängder läkemedel ur en spruta intravenöst. Eng. syringe pump. Jfr infusionspump."
+  },
+  {
+    "term": "Venkateter",
+    "def": "subst. (-n, pl. -ar) kateter som läggs in i en ven för intravenös tillförsel. Eng. venous catheter. Jfr PVK, CVK."
+  },
+  {
+    "term": "Dialyskateter",
+    "def": "subst. (-n, pl. -ar) grov central kateter för att leda blod till och från dialys. Eng. dialysis catheter. Jfr CVK."
+  },
+  {
+    "term": "Stetoskop",
+    "def": "subst. (-et, pl. -∅) instrument för att lyssna på hjärta, lungor och tarmar (auskultation). Eng. stethoscope."
+  },
+  {
+    "term": "Blodtrycksmätare",
+    "def": "subst. (-n, pl. -ar) apparat som mäter det arteriella blodtrycket (sfygmomanometer). Eng. sphygmomanometer. Jfr blodtrycksmanschett."
+  },
+  {
+    "term": "Termometer",
+    "def": "subst. (-n, pl. -ar) instrument som mäter kroppstemperaturen. Eng. thermometer."
+  },
+  {
+    "term": "Tourniquet",
+    "def": "subst. (eng.) avsnörande band som tillfälligt stoppar blodflödet till en extremitet, t.ex. vid kirurgi eller svår blödning. Eng. tourniquet."
+  },
+  {
+    "term": "Gipsbandage",
+    "def": "subst. (-t, pl. -∅) hårdnande förband som immobiliserar en kroppsdel, t.ex. vid fraktur. Eng. plaster cast. Jfr gipsåg."
+  },
+  {
+    "term": "Protes",
+    "def": "subst. (-en, pl. -er) konstgjord ersättning för en förlorad eller skadad kroppsdel. Eng. prosthesis. Jfr implantat."
+  },
+  {
+    "term": "Hjärt-lungmaskin",
+    "def": "subst. (-en, pl. -er) apparat som tar över hjärtats och lungornas funktion (syresätter och pumpar blodet) under hjärtkirurgi. Eng. heart-lung machine (cardiopulmonary bypass)."
+  },
+  {
+    "term": "Ballongkateter",
+    "def": "subst. (-n, pl. -ar) kateter med en uppblåsbar ballong i spetsen, bl.a. för att vidga förträngda kärl. Eng. balloon catheter. Jfr stent, angiografikateter."
+  },
+  {
+    "term": "Angiografikateter",
+    "def": "subst. (-n, pl. -ar) tunn kateter som förs in i blodkärl för kontraströntgen av kärlen. Eng. angiography catheter. Jfr angiografi."
+  },
+  {
+    "term": "Biopsipistol",
+    "def": "subst. (-en, pl. -er) fjäderbelastat instrument som snabbt skjuter in en nål och tar en vävnadscylinder. Eng. biopsy gun. Jfr biopsinål."
+  },
+  {
+    "term": "Biopsinål",
+    "def": "subst. (-en, pl. -ar) nål för att ta vävnadsprov (biopsi). Eng. biopsy needle. Jfr biopsipistol."
+  },
+  {
+    "term": "Troakar",
+    "def": "subst. (-en, pl. -er) spetsigt instrument med hylsa som skapar en arbetskanal in i en kroppshåla, bl.a. vid laparoskopi. Eng. trocar. Jfr laparoskop."
+  },
+  {
+    "term": "Laparoskop",
+    "def": "subst. (-et, pl. -∅) endoskop som förs in genom bukväggen för titthålskirurgi i buken. Eng. laparoscope. Jfr endoskop, troakar."
   }
 ]

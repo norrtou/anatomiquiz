@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.40
+- **Ordlistan: ~160 nya poster inom vårdinstrument/skalor och operationssal (9 983 → 10 141 poster, passerade 10 000).** Två faktagranskade temalistor; befintliga poster orörda, homonymer lösta som EN post med numrerade betydelser, inga slug-kollisioner, inga gissade ICD-koder.
+  - **Medicinska undersökningsinstrument & skalor (100):** 70 nya i grundmallsformat (avbildning, IVA-/sepsis-skalor, kognitiva test, psykiatriska skattningsskalor, smärt- och funktionsskalor, riskscorer m.m. – EKG, NIHSS, MMSE, MoCA, PHQ-9, GAD-7, PANSS, AUDIT, DUDIT, mRS, WOMAC, CHA2DS2-VASc, CURB-65, APACHE II, MELD, FRAX …). Homonymer utökade: VAS (kärl + visuell analog skala), ESS (endoskopisk sinuskirurgi + Epworth Sleepiness Scale). Noter om delade förkortningar: SAPS (även Simplified Acute Physiology Score), ENG (även elektronystagmografi). Hoppade nästan-dubbletter: ECHO (= Ekokardiografi), WHODAS 2.0 (= WHODAS).
+  - **Operationssal (100):** 88 nya kirurgiska instrument i grundmallsformat med eponymförklaring och Eng.-namn (skalpell, saxar, peanger, pincetter, retraktorer, bensåg/-instrument, suturer, staplers, diatermi/energiinstrument, drän, anestesi- och luftvägsutrustning, katetrar, proteser/implantat m.m.). #40+#41 Stapler sammanslagna till en post; Pulsoximeter/Ortos fanns redan.
+- APP_VERSION/VERSION → 0.9.40 (cachebuster: app.js → 0.9.40). styles.css oförändrad (0.7.10/0.7.9).
+
 ## 0.9.39
 - **Ordlistan: stor utbyggnad inom klinik, svensk vård/juridik, psykologi och arbetsterapi (9 594 → 9 983 poster).** Fyra faktagranskade temalistor inarbetade; befintliga poster lämnades orörda och homonymer löstes som EN post med numrerade betydelser (ingen dubblering, inga slug-kollisioner). Inga ICD-koder gissade.
   - **Kliniska akronymer (2 listor):** spann AAA–HUS och A1AT–MPN i STEMI-format. Homonymer ihopslagna: CHD, FAST, FAP (behåller ICD D12.6), CAPS, HP. Korrigerat: EHL = elektrohydraulisk litotripsi, CAS = karotisstenting.
