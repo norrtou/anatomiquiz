@@ -1,0 +1,80 @@
+{
+  "region": "Ögat",
+  "slug": "ogat",
+  "rubrik": "Ögats muskler",
+  "underrubrik": "Yttre ögonmuskler (mm. recti och obliqui) och ögonlockslyftaren – ursprung, fäste, innervation och funktion",
+  "kort_beskrivning": "Ögats yttre muskler – de fyra raka och två sneda ögonmusklerna samt levator palpebrae superioris – som rör ögongloben och lyfter ögonlocket, styrda av kranialnerverna III, IV och VI.",
+  "kort_cta": "Visa ögats muskler →",
+  "intro": "De yttre ögonmusklerna (musculi externi bulbi oculi) rör ögongloben i ögonhålan. Fyra raka muskler (mm. recti) och två sneda (mm. obliqui) styr blickriktningen, medan musculus levator palpebrae superioris lyfter det övre ögonlocket. De fyra raka musklerna och musculus obliquus superior utgår alla från en gemensam senring i ögonhålans spets – anulus tendineus communis (Zinns sena) – kring synnervskanalen. Innervationen följer minnesregeln \"LR6 SO4 – resten 3\": musculus rectus lateralis styrs av nervus abducens (VI), musculus obliquus superior av nervus trochlearis (IV) och de övriga av nervus oculomotorius (III). Ögongloben rörs alltså av egna kranialnerver och hör inte till den mimiska ansiktsmuskulaturen (nervus facialis), som beskrivs på ansiktssidan.",
+  "kallor": [
+    "Bojsen-Møller, F., Simonsen, E. B., & Tranum-Jensen, J. (2018). <em>Rörelseapparatens anatomi</em> (2:a uppl.). Liber.",
+    "Federative International Programme for Anatomical Terminology. (2019). <em>Terminologia anatomica</em> (2:a uppl.). FIPAT.",
+    "Paulsen, F., & Waschke, J. (Red.). (2018). <em>Sobotta atlas of human anatomy</em> (16:e uppl.). Elsevier.",
+    "Standring, S. (Red.). (2021). <em>Gray's anatomy: The anatomical basis of clinical practice</em> (42:a uppl.). Elsevier."
+  ],
+  "muskler": [
+    {
+      "latin": "Musculus rectus superior",
+      "svenska": "Övre raka ögonmuskeln",
+      "grupp": "Raka ögonmuskler (mm. recti)",
+      "origo": "Anulus tendineus communis (Zinns sena) kring canalis opticus, i ögonhålans spets",
+      "insertio": "Ögonglobens ovansida, framför ekvatorn (sclera)",
+      "innervation": "Nervus oculomotorius (III), övre grenen",
+      "funktion": "Höjer blicken (elevation); bidrar till adduktion och inåtrotation (intorsion)"
+    },
+    {
+      "latin": "Musculus rectus inferior",
+      "svenska": "Nedre raka ögonmuskeln",
+      "grupp": "Raka ögonmuskler (mm. recti)",
+      "origo": "Anulus tendineus communis (Zinns sena)",
+      "insertio": "Ögonglobens undersida, framför ekvatorn",
+      "innervation": "Nervus oculomotorius (III), nedre grenen",
+      "funktion": "Sänker blicken (depression); bidrar till adduktion och utåtrotation (extorsion)"
+    },
+    {
+      "latin": "Musculus rectus medialis",
+      "svenska": "Inre raka ögonmuskeln",
+      "grupp": "Raka ögonmuskler (mm. recti)",
+      "origo": "Anulus tendineus communis (Zinns sena)",
+      "insertio": "Ögonglobens mediala sida, framför ekvatorn",
+      "innervation": "Nervus oculomotorius (III), nedre grenen",
+      "funktion": "För blicken inåt mot näsan (adduktion)"
+    },
+    {
+      "latin": "Musculus rectus lateralis",
+      "svenska": "Yttre raka ögonmuskeln",
+      "grupp": "Raka ögonmuskler (mm. recti)",
+      "origo": "Anulus tendineus communis (Zinns sena)",
+      "insertio": "Ögonglobens laterala sida, framför ekvatorn",
+      "innervation": "Nervus abducens (VI)",
+      "funktion": "För blicken utåt (abduktion)"
+    },
+    {
+      "latin": "Musculus obliquus superior",
+      "svenska": "Övre sneda ögonmuskeln",
+      "grupp": "Sneda ögonmuskler (mm. obliqui)",
+      "origo": "Corpus ossis sphenoidalis, ovanför och medialt om anulus tendineus communis",
+      "insertio": "Senan löper genom trochlea (broskögla på os frontale) och fäster på ögonglobens ovansida bakom ekvatorn, lateralt",
+      "innervation": "Nervus trochlearis (IV)",
+      "funktion": "Inåtrotation (intorsion); sänker och abducerar blicken, mest vid adducerat öga"
+    },
+    {
+      "latin": "Musculus obliquus inferior",
+      "svenska": "Nedre sneda ögonmuskeln",
+      "grupp": "Sneda ögonmuskler (mm. obliqui)",
+      "origo": "Ögonhålans golv vid fossa lacrimalis på maxilla (anteromedialt)",
+      "insertio": "Ögonglobens undersida bakom ekvatorn, lateralt",
+      "innervation": "Nervus oculomotorius (III), nedre grenen",
+      "funktion": "Utåtrotation (extorsion); höjer och abducerar blicken, mest vid adducerat öga"
+    },
+    {
+      "latin": "Musculus levator palpebrae superioris",
+      "svenska": "Övre ögonlockslyftaren",
+      "grupp": "Ögonlocket",
+      "origo": "Ala minor ossis sphenoidalis, ovanför canalis opticus (framför Zinns sena)",
+      "insertio": "Övre ögonlockets hud, tarsus superior och övre fornix conjunctivae",
+      "innervation": "Nervus oculomotorius (III); den glatta tarsalmuskeln (Müllers muskel) sympatiskt",
+      "funktion": "Höjer det övre ögonlocket (öppnar ögat); motspelare till musculus orbicularis oculi"
+    }
+  ]
+}

@@ -9,8 +9,14 @@ Följer SEO_REGLER.md: full <head>, unik titel ≤65 / description ≤155, OG/Tw
 Article/CollectionPage + BreadcrumbList-JSON-LD, a11y (en h1, tabell-caption +
 th scope), APA-referenser längst ner, quiz-korslänk. Inga URL:er hårdkodas utanför
 SITE. sitemap.xml ägs av generate_glossary.py (lägg nya sidor i dess write_sitemap).
+
+Tooltip-wiring (kb-term) är INBYGGD: efter att varje sida skrivits wire:ar main()
+in ordlistetooltips via wire_terms på EXAKT de sidor som genererats (aldrig --all).
+Output blir därför alltid färdig och deterministisk – inget separat steg att glömma,
+ingen spill till orelaterade sidor. Omkörning ger byte-identiska sidor (idempotent).
 """
 import json, html, pathlib, re
+from wire_terms import load_terms, build_regex, wire_file
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "muskeltabeller"
@@ -119,7 +125,8 @@ def refs_html(kallor):
 def region_page(d):
     region = d["region"]; slug = d["slug"]
     canon = f"{SITE}/kunskapsbank/muskeltabell-{slug}.html"
-    title = f"{region}s muskler – ursprung, fäste, innervation | Anatomiquiz"
+    # Standardtitel; data får ange "titel" för långa regionnamn (≤65, §2).
+    title = d.get("titel") or f"{region}s muskler – ursprung, fäste, innervation | Anatomiquiz"
     desc = (f"Tabell över {region.lower()}s muskler: ursprung (origo), fäste (insertio), "
             f"innervation och funktion – för tentaplugg i anatomi.")
     crumbs = [("← Anatomiquiz", "/"), ("Kunskapsbank", "/kunskapsbank/"),
@@ -272,13 +279,79 @@ def pillar_page(regions):
 
 def main():
     regions = []
+    generated = []
     for f in sorted(DATA.glob("*.json")):
         d = json.load(open(f, encoding="utf-8"))
         r = region_page(d)
         regions.append(r)
+        generated.append(KB / f"muskeltabell-{r['slug']}.html")
         print(f"  muskeltabell-{r['slug']}.html ({r['region']}, {len(d['muskler'])} muskler)")
     pillar_page(regions)
+    generated.append(KB / "muskeltabeller.html")
     print(f"  muskeltabeller.html (under-pillar, {len(regions)} region(er))")
+
+    # Steg 2 inbyggt: wire:a kb-term-tooltips på exakt de sidor vi just skrev
+    # (aldrig --all → ingen spill till orelaterade sidor). Generatorn skriver ren
+    # HTML; utan detta nollas tooltipsen vid varje omkörning.
+    terms = load_terms(); rx = build_regex(terms)
+    tot = 0
+    for p in generated:
+        n, _ = wire_file(p, terms, rx)
+        tot += n
+    print(f"  tooltips wirade: {tot} kb-term-länkar i {len(generated)} sidor")
+
+    # Steg 3 inbyggt: SEO_REGLER.md §12-grind. Körbar regelefterlevnad – varje
+    # genererad sida MÅSTE klara checklistan, annars kastar bygget. Då kan ingen
+    # regelbrytande sida skapas tyst, oberoende av om någon "kommer ihåg" att läsa MD.
+    check_seo_compliance(generated)
+    print(f"  SEO §12: alla {len(generated)} sidor godkända")
+
+def check_seo_compliance(paths):
+    """SEO_REGLER.md §12 som kod. Kastar AssertionError som listar alla brott."""
+    titles, descs, problems = {}, {}, []
+    for p in paths:
+        h = p.read_text(encoding="utf-8")
+        name = p.name
+        is_hub = (name == "muskeltabeller.html")          # kortgrid, ej tabellsida
+        bad = []
+        t = re.search(r"<title>(.*?)</title>", h)
+        d = re.search(r'name="description" content="(.*?)"', h)
+        t = t.group(1) if t else ""; d = d.group(1) if d else ""
+        titles.setdefault(t, []).append(name); descs.setdefault(d, []).append(name)
+        if not (5 <= len(t) <= 65): bad.append(f"titel {len(t)} tecken (§2: ≤65)")
+        if not (25 <= len(d) <= 150): bad.append(f"description {len(d)} tecken (§3: 25–150)")
+        for b in re.findall(r'application/ld\+json">(.*?)</script>', h, re.S):
+            try: json.loads(b)
+            except Exception: bad.append("ogiltig JSON-LD (§6)")
+        if "BreadcrumbList" not in h: bad.append("saknar BreadcrumbList (§6)")
+        if h.count("<h1") != 1: bad.append(f"{h.count('<h1')} st <h1> (§7: exakt 1)")
+        if 'class="skip-link"' not in h: bad.append("saknar skip-länk (§7)")
+        if 'id="main"' not in h: bad.append("saknar <main id=main> (§7)")
+        if f'rel="canonical" href="{SITE}/kunskapsbank/{name}"' not in h:
+            bad.append("canonical ej självrefererande (§4)")
+        if "google-site-verification" in h: bad.append("google-site-verification på undersida (§4)")
+        core = t.rsplit(" | ", 1)[0]
+        ogt = re.search(r'property="og:title" content="(.*?)"', h)
+        twt = re.search(r'name="twitter:title" content="(.*?)"', h)
+        if not (ogt and twt and ogt.group(1) == twt.group(1) == esc(core)):
+            bad.append("og:title ≠ twitter:title ≠ titel-core (§5)")
+        for fld in ('og:url', 'og:image', 'og:image:alt', 'twitter:card', 'twitter:image'):
+            if fld not in h: bad.append(f"saknar {fld} (§5)")
+        if not ('kb-sources' in h and 'Referenser</h2>' in h):
+            bad.append("saknar Referenser-block (§6b)")
+        if h.count("<table") != h.count("<caption>"):
+            bad.append("tabell utan <caption> (§7)")
+        if not is_hub:
+            if "kb-mtable" not in h or "kb-table-wrap" in h:
+                bad.append("tabell ej responsiv .kb-mtable (§7)")
+            if 'style="' in h: bad.append("inline-style mot CSP (§7/§8)")
+        if bad: problems.append(f"  ✗ {name}:\n      - " + "\n      - ".join(bad))
+    for k, v in titles.items():
+        if len(v) > 1: problems.append(f"  ✗ DUBBLETT titel '{k}' på: {', '.join(v)} (§2)")
+    for k, v in descs.items():
+        if len(v) > 1: problems.append(f"  ✗ DUBBLETT description på: {', '.join(v)} (§3)")
+    if problems:
+        raise AssertionError("SEO_REGLER.md §12 BRUTEN – bygget stoppat:\n" + "\n".join(problems))
 
 if __name__ == "__main__":
     main()

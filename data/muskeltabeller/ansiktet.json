@@ -1,0 +1,179 @@
+{
+  "region": "Ansiktet",
+  "slug": "ansiktet",
+  "rubrik": "Ansiktets muskler",
+  "underrubrik": "Mimisk muskulatur (ansiktsuttryckens muskler) – ursprung, fäste, innervation och funktion",
+  "kort_beskrivning": "Den mimiska muskulaturen kring ögon, näsa och mun – occipitofrontalis, orbicularis oculi och oris, zygomaticus, buccinator m.fl. – som fäster i huden och alla styrs av nervus facialis (VII).",
+  "kort_cta": "Visa ansiktets muskler →",
+  "intro": "De mimiska musklerna (musculi faciei) skiljer sig från kroppens övriga skelettmuskler genom att de fäster i huden i stället för från ben till ben – därför rör de ansiktets hud och skapar mimik och ansiktsuttryck. De utvecklas alla ur den andra gälbågen och innerveras därför samtliga av nervus facialis (VII). Funktionellt bildar flera av dem ringmuskler (sfinktrar) kring kroppens öppningar – orbicularis oculi sluter ögat och orbicularis oris munnen – medan radiärt ställda muskler vidgar samma öppningar. Halsens hudmuskel platysma och tuggmusklerna (masseter, temporalis, pterygoideus) är också knutna till ansiktet men beskrivs på halssidan respektive käksidan; ögongloben rörs i sin tur av de yttre ögonmusklerna, som har egen innervation (III, IV och VI).",
+  "kallor": [
+    "Bojsen-Møller, F., Simonsen, E. B., & Tranum-Jensen, J. (2018). <em>Rörelseapparatens anatomi</em> (2:a uppl.). Liber.",
+    "Federative International Programme for Anatomical Terminology. (2019). <em>Terminologia anatomica</em> (2:a uppl.). FIPAT.",
+    "Paulsen, F., & Waschke, J. (Red.). (2018). <em>Sobotta atlas of human anatomy</em> (16:e uppl.). Elsevier.",
+    "Standring, S. (Red.). (2021). <em>Gray's anatomy: The anatomical basis of clinical practice</em> (42:a uppl.). Elsevier."
+  ],
+  "muskler": [
+    {
+      "latin": "Musculus occipitofrontalis",
+      "svenska": "Panne- och nackmuskeln",
+      "grupp": "Skalp och ögonbryn",
+      "origo": "Venter frontalis: huden i ögonbrynen och vid glabella. Venter occipitalis: linea nuchalis suprema på os occipitale och processus mastoideus på os temporale",
+      "insertio": "Galea aponeurotica – den senplatta som förbinder de båda muskelbukarna över skalltaket",
+      "innervation": "Venter frontalis: rami temporales; venter occipitalis: ramus auricularis posterior (nervus facialis, VII)",
+      "funktion": "Venter frontalis höjer ögonbrynen och rynkar pannan i horisontella veck (förvåning); venter occipitalis drar hårbotten bakåt och spänner galea aponeurotica"
+    },
+    {
+      "latin": "Musculus corrugator supercilii",
+      "svenska": "Ögonbrynsrynkaren",
+      "grupp": "Skalp och ögonbryn",
+      "origo": "Mediala delen av arcus superciliaris (pars nasalis ossis frontalis)",
+      "insertio": "Huden på mitten av ögonbrynet",
+      "innervation": "Rami temporales (nervus facialis, VII)",
+      "funktion": "Drar ögonbrynen nedåt och medialt; bildar vertikala veck mellan ögonbrynen (rynkar pannan vid koncentration eller missnöje)"
+    },
+    {
+      "latin": "Musculus orbicularis oculi",
+      "svenska": "Ringmuskeln kring ögat",
+      "grupp": "Ögonspringan",
+      "origo": "Pars orbitalis: pars nasalis ossis frontalis, processus frontalis maxillae och ligamentum palpebrale mediale. Pars palpebralis: ligamentum palpebrale mediale. Pars lacrimalis: crista lacrimalis posterior på os lacrimale",
+      "insertio": "Förlöper ringformigt kring ögonspringan; pars orbitalis i omgivande hud, pars palpebralis i ligamentum palpebrale laterale, pars lacrimalis i tarsalplattorna och tårsäcken",
+      "innervation": "Rami temporales och rami zygomatici (nervus facialis, VII)",
+      "funktion": "Sluter ögonlocken; pars palpebralis ger lätt blinkning, pars orbitalis kraftig blundning (kisning). Pars lacrimalis vidgar tårsäcken och pumpar tårvätska mot tårkanalerna"
+    },
+    {
+      "latin": "Musculus procerus",
+      "svenska": "Näsryggsmuskeln",
+      "grupp": "Näsan",
+      "origo": "Fascian över os nasale och övre delen av cartilago lateralis nasi",
+      "insertio": "Huden över glabella mellan ögonbrynen",
+      "innervation": "Rami temporales och rami zygomatici (nervus facialis, VII)",
+      "funktion": "Drar huden mellan ögonbrynen nedåt och bildar horisontella veck över näsroten (rynkar på näsan)"
+    },
+    {
+      "latin": "Musculus nasalis",
+      "svenska": "Näsmuskeln",
+      "grupp": "Näsan",
+      "origo": "Pars transversa (compressor naris): maxilla ovanför fossa canina. Pars alaris (dilator naris): maxilla över den laterala framtanden",
+      "insertio": "Pars transversa: aponeuros över näsryggen som förenas med motsidan. Pars alaris: huden vid näsvingen (ala nasi)",
+      "innervation": "Rami buccales och rami zygomatici (nervus facialis, VII)",
+      "funktion": "Pars transversa trycker ihop näsöppningarna; pars alaris vidgar näsborrarna genom att dra ala nasi nedåt och lateralt"
+    },
+    {
+      "latin": "Musculus depressor septi nasi",
+      "svenska": "Nässkiljeväggens sänkare",
+      "grupp": "Näsan",
+      "origo": "Maxilla ovanför den mellersta framtanden (jugum alveolare)",
+      "insertio": "Mjukdelarna i nässkiljeväggens rörliga nedre del och näsvingen",
+      "innervation": "Rami buccales (nervus facialis, VII)",
+      "funktion": "Drar nässkiljeväggen och nässpetsen nedåt och tränger ihop näsöppningen vid forcerad inandning"
+    },
+    {
+      "latin": "Musculus levator labii superioris alaeque nasi",
+      "svenska": "Höjare av överläpp och näsvinge",
+      "grupp": "Munnen och läpparna",
+      "origo": "Processus frontalis maxillae vid näsroten",
+      "insertio": "Delas i två buntar: huden vid näsvingen (ala nasi) och överläppens hud och muskulatur (orbicularis oris)",
+      "innervation": "Rami buccales och rami zygomatici (nervus facialis, VII)",
+      "funktion": "Höjer överläppen och vidgar näsborren; fördjupar nasolabialfåran (uttryck av missnöje)"
+    },
+    {
+      "latin": "Musculus levator labii superioris",
+      "svenska": "Överläppshöjaren",
+      "grupp": "Munnen och läpparna",
+      "origo": "Margo infraorbitalis på maxilla, ovanför foramen infraorbitale",
+      "insertio": "Överläppens hud och muskulatur (orbicularis oris)",
+      "innervation": "Rami buccales och rami zygomatici (nervus facialis, VII)",
+      "funktion": "Höjer och everterar överläppen och fördjupar nasolabialfåran"
+    },
+    {
+      "latin": "Musculus zygomaticus minor",
+      "svenska": "Lilla okmuskeln",
+      "grupp": "Munnen och läpparna",
+      "origo": "Os zygomaticum (laterala ytan, framför musculus zygomaticus major)",
+      "insertio": "Överläppens hud, medialt om munvinkeln",
+      "innervation": "Rami zygomatici och rami buccales (nervus facialis, VII)",
+      "funktion": "Höjer överläppen och fördjupar nasolabialfåran"
+    },
+    {
+      "latin": "Musculus zygomaticus major",
+      "svenska": "Stora okmuskeln",
+      "grupp": "Munnen och läpparna",
+      "origo": "Os zygomaticum (laterala ytan, framför sutura zygomaticotemporalis)",
+      "insertio": "Munvinkelns hud och muskelknut (modiolus vid angulus oris)",
+      "innervation": "Rami zygomatici och rami buccales (nervus facialis, VII)",
+      "funktion": "Drar munvinkeln uppåt och lateralt – leendets muskel"
+    },
+    {
+      "latin": "Musculus levator anguli oris",
+      "svenska": "Munvinkelhöjaren",
+      "grupp": "Munnen och läpparna",
+      "origo": "Fossa canina på maxilla, nedanför foramen infraorbitale",
+      "insertio": "Munvinkelns muskelknut (modiolus)",
+      "innervation": "Rami buccales och rami zygomatici (nervus facialis, VII)",
+      "funktion": "Höjer munvinkeln och fördjupar nasolabialfåran"
+    },
+    {
+      "latin": "Musculus risorius",
+      "svenska": "Skrattmuskeln",
+      "grupp": "Munnen och läpparna",
+      "origo": "Fascia parotidea och fascia masseterica (variabel)",
+      "insertio": "Munvinkelns hud (modiolus)",
+      "innervation": "Rami buccales (nervus facialis, VII)",
+      "funktion": "Drar munvinkeln rakt lateralt (brett, ansträngt leende)"
+    },
+    {
+      "latin": "Musculus depressor anguli oris",
+      "svenska": "Munvinkelsänkaren",
+      "grupp": "Munnen och läpparna",
+      "origo": "Tuberculum mentale och basen av mandibula (linea obliqua) nedanför munvinkeln",
+      "insertio": "Munvinkelns hud (modiolus)",
+      "innervation": "Ramus marginalis mandibulae och rami buccales (nervus facialis, VII)",
+      "funktion": "Drar munvinkeln nedåt och lateralt (uttryck av sorg och missnöje)"
+    },
+    {
+      "latin": "Musculus depressor labii inferioris",
+      "svenska": "Underläppssänkaren",
+      "grupp": "Munnen och läpparna",
+      "origo": "Basen av mandibula (linea obliqua) mellan symfysen och foramen mentale",
+      "insertio": "Underläppens hud och slemhinna; förenas med motsidan och orbicularis oris",
+      "innervation": "Ramus marginalis mandibulae (nervus facialis, VII)",
+      "funktion": "Drar underläppen nedåt och lateralt och everterar den"
+    },
+    {
+      "latin": "Musculus mentalis",
+      "svenska": "Hakmuskeln",
+      "grupp": "Munnen och läpparna",
+      "origo": "Juga alveolaria över de nedre framtänderna (fossa incisiva mandibulae)",
+      "insertio": "Hakans hud",
+      "innervation": "Ramus marginalis mandibulae (nervus facialis, VII)",
+      "funktion": "Höjer och skjuter fram underläppen och rynkar hakans hud (tjurande min)"
+    },
+    {
+      "latin": "Musculus orbicularis oris",
+      "svenska": "Ringmuskeln kring munnen",
+      "grupp": "Munnen och läpparna",
+      "origo": "Saknar rena benfästen; fibrer från omgivande mimiska muskler (bl.a. buccinator) samt från maxilla och mandibula i medellinjen",
+      "insertio": "Läpparnas hud och slemhinna; bildar en ringformig muskel kring munöppningen",
+      "innervation": "Rami buccales och ramus marginalis mandibulae (nervus facialis, VII)",
+      "funktion": "Sluter, spetsar och skjuter fram läpparna (kyss, vissling, tal); medverkar vid sugning och blåsning"
+    },
+    {
+      "latin": "Musculus buccinator",
+      "svenska": "Kindmuskeln (trumpetarmuskeln)",
+      "grupp": "Kinden",
+      "origo": "Processus alveolaris på maxilla och mandibula vid kindtänderna samt raphe pterygomandibularis",
+      "insertio": "Munvinkeln och läpparnas muskulatur (orbicularis oris, modiolus)",
+      "innervation": "Rami buccales (nervus facialis, VII)",
+      "funktion": "Pressar kinden mot tänderna, håller maten mellan tuggytorna och tömmer munhålans förgård; medverkar vid blåsning, sugning och vissling"
+    },
+    {
+      "latin": "Musculi auriculares (anterior, superior, posterior)",
+      "svenska": "Öronmusklerna",
+      "grupp": "Ytterörat",
+      "origo": "Anterior: fascia temporalis. Superior: galea aponeurotica. Posterior: processus mastoideus (linea nuchalis suprema)",
+      "insertio": "Ytteröronbrosket – anterior på spina helicis, superior på örats överkant, posterior på baksidan av concha auriculae",
+      "innervation": "Anterior och superior: rami temporales; posterior: ramus auricularis posterior (nervus facialis, VII)",
+      "funktion": "Rör ytterörat (rudimentärt hos människa): anterior drar örat framåt, superior uppåt och posterior bakåt"
+    }
+  ]
+}
