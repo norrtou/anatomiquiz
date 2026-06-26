@@ -111,8 +111,10 @@ def crumb(items):
     return f'      <nav class="breadcrumb" aria-label="Brödsmula">\n        {inner}\n      </nav>'
 
 def bc_jsonld(items):
+    # Google kräver absoluta URL:er i breadcrumb-strukturdata (HTML-länkarna får vara relativa)
     return {"@type": "BreadcrumbList", "itemListElement": [
-        {"@type": "ListItem", "position": i+1, "name": n, "item": u}
+        {"@type": "ListItem", "position": i+1, "name": n,
+         "item": (SITE + u if u.startswith("/") else u)}
         for i, (n, u) in enumerate(items)]}
 
 def refs_html(kallor):

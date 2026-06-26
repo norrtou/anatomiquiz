@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.42
+- **Fix: absoluta URL:er i breadcrumb-strukturdata på alla 17 muskeltabell-sidor.** Google flaggade "Ogiltig webbadress i fältet id" eftersom position 1–3 i `BreadcrumbList` använde relativa URL:er (`/`, `/kunskapsbank/`, `/kunskapsbank/listor-tabeller.html`). Nu absoluta (`https://anatomiquiz.se/…`). HTML-breadcrumbens länkar förblir relativa. Fixat vid källan i `scripts/generate_muskeltabeller.py` (`bc_jsonld` absolutiserar relativa URL:er) så det inte regrederar vid regenerering.
+- APP_VERSION/VERSION → 0.9.42 (cachebuster: app.js → 0.9.42). styles.css oförändrad (0.7.10/0.7.9).
+
 ## 0.9.41
 - **Fix: tog bort felaktig `noindex` på två kunskapsbank-pillarsidor.** `kunskapsbank/faktatexter.html` och `kunskapsbank/listor-tabeller.html` hade `robots: noindex, follow` (infört i 0.9.21, aldrig pushat). Båda satta till `index, follow, max-snippet:-1, max-image-preview:large` – matchar övriga kunskapsbank-sidor. Sidorna får nu indexeras av Google igen.
 - APP_VERSION/VERSION → 0.9.41 (cachebuster: app.js → 0.9.41). styles.css oförändrad (0.7.10/0.7.9).
