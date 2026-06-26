@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.41
+- **Fix: tog bort felaktig `noindex` på två kunskapsbank-pillarsidor.** `kunskapsbank/faktatexter.html` och `kunskapsbank/listor-tabeller.html` hade `robots: noindex, follow` (infört i 0.9.21, aldrig pushat). Båda satta till `index, follow, max-snippet:-1, max-image-preview:large` – matchar övriga kunskapsbank-sidor. Sidorna får nu indexeras av Google igen.
+- APP_VERSION/VERSION → 0.9.41 (cachebuster: app.js → 0.9.41). styles.css oförändrad (0.7.10/0.7.9).
+
 ## 0.9.40
 - **Ordlistan: ~160 nya poster inom vårdinstrument/skalor och operationssal (9 983 → 10 141 poster, passerade 10 000).** Två faktagranskade temalistor; befintliga poster orörda, homonymer lösta som EN post med numrerade betydelser, inga slug-kollisioner, inga gissade ICD-koder.
   - **Medicinska undersökningsinstrument & skalor (100):** 70 nya i grundmallsformat (avbildning, IVA-/sepsis-skalor, kognitiva test, psykiatriska skattningsskalor, smärt- och funktionsskalor, riskscorer m.m. – EKG, NIHSS, MMSE, MoCA, PHQ-9, GAD-7, PANSS, AUDIT, DUDIT, mRS, WOMAC, CHA2DS2-VASc, CURB-65, APACHE II, MELD, FRAX …). Homonymer utökade: VAS (kärl + visuell analog skala), ESS (endoskopisk sinuskirurgi + Epworth Sleepiness Scale). Noter om delade förkortningar: SAPS (även Simplified Acute Physiology Score), ENG (även elektronystagmografi). Hoppade nästan-dubbletter: ECHO (= Ekokardiografi), WHODAS 2.0 (= WHODAS).
