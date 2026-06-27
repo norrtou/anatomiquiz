@@ -1,0 +1,39 @@
+{
+  "slug": "overarmen",
+  "region": "Överarmen",
+  "underrubrik": "Överarmsbenet",
+  "kort_beskrivning": "Överarmsbenet med dess landmärken – från axelhuvud till armbågsknölar.",
+  "kort_cta": "Till överarmens ben →",
+  "intro": "Överarmen innehåller ett enda ben, överarmsbenet (humerus). Det är ett långt rörben med ett rundat huvud mot axelleden och en bred nedre ände med ledytor och epikondyler mot armbågsleden.",
+  "kallor": [
+    "Bojsen-Møller, F., Simonsen, E. B., & Tranum-Jensen, J. (2018). <em>Rörelseapparatens anatomi</em> (2:a uppl.). Liber.",
+    "Federative International Programme for Anatomical Terminology. (2019). <em>Terminologia anatomica</em> (2:a uppl.). FIPAT.",
+    "Paulsen, F., & Waschke, J. (Red.). (2018). <em>Sobotta atlas of human anatomy</em> (16:e uppl.). Elsevier."
+  ],
+  "ben": [
+    {
+      "latin": "Humerus",
+      "svenska": "Överarmsben",
+      "typ": "Långt rörben",
+      "landmarken": "Caput humeri, collum chirurgicum, tuberculum majus/minus, sulcus intertubercularis, tuberositas deltoidea, capitulum, trochlea, epicondylus medialis/lateralis, fossa olecrani",
+      "ledforbindelser": "Skulderbladet (axelleden) samt strålben och armbågsben (armbågsleden)",
+      "grupp": "Överarmsbenet"
+    }
+  ],
+  "leder": [
+    {
+      "namn": "Armbågsleden (överarm–armbågsben)",
+      "latin": "Articulatio humeroulnaris",
+      "fork": "—",
+      "typ": "Gångjärnsled",
+      "mellan": "Överarmsbenets trochlea och armbågsbenet (ulna)"
+    },
+    {
+      "namn": "Armbågsleden (överarm–strålben)",
+      "latin": "Articulatio humeroradialis",
+      "fork": "—",
+      "typ": "Kulled (funktionellt begränsad)",
+      "mellan": "Överarmsbenets capitulum och strålbenet (radius)"
+    }
+  ]
+}

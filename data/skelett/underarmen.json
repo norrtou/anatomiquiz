@@ -1,0 +1,47 @@
+{
+  "slug": "underarmen",
+  "region": "Underarmen",
+  "underrubrik": "Strålbenet och armbågsbenet",
+  "kort_beskrivning": "Strålbenet och armbågsbenet – de två ben som låter underarmen vridas.",
+  "kort_cta": "Till underarmens ben →",
+  "intro": "Underarmen har två ben: strålbenet på tumsidan och armbågsbenet på lillfingersidan. När de korsar varandra vrids handflatan nedåt (pronation) respektive uppåt (supination).",
+  "kallor": [
+    "Bojsen-Møller, F., Simonsen, E. B., & Tranum-Jensen, J. (2018). <em>Rörelseapparatens anatomi</em> (2:a uppl.). Liber.",
+    "Federative International Programme for Anatomical Terminology. (2019). <em>Terminologia anatomica</em> (2:a uppl.). FIPAT.",
+    "Paulsen, F., & Waschke, J. (Red.). (2018). <em>Sobotta atlas of human anatomy</em> (16:e uppl.). Elsevier."
+  ],
+  "ben": [
+    {
+      "latin": "Radius",
+      "svenska": "Strålben",
+      "typ": "Långt rörben",
+      "landmarken": "Caput radii, tuberositas radii, processus styloideus radii, incisura ulnaris",
+      "ledforbindelser": "Överarmsbenet (capitulum), armbågsbenet och handlovsbenen (radiokarpalleden)",
+      "grupp": "Underarmsbenen"
+    },
+    {
+      "latin": "Ulna",
+      "svenska": "Armbågsben",
+      "typ": "Långt rörben",
+      "landmarken": "Olecranon, processus coronoideus, incisura trochlearis, incisura radialis, caput ulnae, processus styloideus ulnae",
+      "ledforbindelser": "Överarmsbenet (trochlea) och strålbenet",
+      "grupp": "Underarmsbenen"
+    }
+  ],
+  "leder": [
+    {
+      "namn": "Övre strålben–armbågsbensleden",
+      "latin": "Articulatio radioulnaris proximalis",
+      "fork": "PRUJ",
+      "typ": "Vridled (trochoid)",
+      "mellan": "Strålbenet och armbågsbenet (proximalt)"
+    },
+    {
+      "namn": "Nedre strålben–armbågsbensleden",
+      "latin": "Articulatio radioulnaris distalis",
+      "fork": "DRUJ",
+      "typ": "Vridled (trochoid)",
+      "mellan": "Strålbenet och armbågsbenet (distalt)"
+    }
+  ]
+}

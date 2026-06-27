@@ -1,0 +1,70 @@
+{
+  "slug": "halsen",
+  "region": "Halsen",
+  "underrubrik": "Halskotpelaren – från atlas till vertebra prominens",
+  "kort_beskrivning": "Halskotorna C1–C7, inklusive atlas och axis – det som bär och vrider huvudet.",
+  "kort_cta": "Till halsens ben →",
+  "intro": "Halskotpelaren består av sju halskotor (C1–C7). De är de minsta och rörligaste kotorna och kännetecknas av ett hål i tvärutskotten (foramen transversarium) för kotartären. De två översta, atlas och axis, är särskilt utformade för att bära och vrida huvudet.",
+  "kallor": [
+    "Bojsen-Møller, F., Simonsen, E. B., & Tranum-Jensen, J. (2018). <em>Rörelseapparatens anatomi</em> (2:a uppl.). Liber.",
+    "Federative International Programme for Anatomical Terminology. (2019). <em>Terminologia anatomica</em> (2:a uppl.). FIPAT.",
+    "Paulsen, F., & Waschke, J. (Red.). (2018). <em>Sobotta atlas of human anatomy</em> (16:e uppl.). Elsevier."
+  ],
+  "ben": [
+    {
+      "latin": "Atlas (C1)",
+      "svenska": "Första halskotan",
+      "typ": "Oregelbundet",
+      "landmarken": "Saknar kotkropp; arcus anterior/posterior, massa lateralis, fovea dentis",
+      "ledforbindelser": "Nackbenets kondyler (atlanto-occipitalleden) och axis",
+      "grupp": "Halskotor (vertebrae cervicales, C1–C7)"
+    },
+    {
+      "latin": "Axis (C2)",
+      "svenska": "Andra halskotan",
+      "typ": "Oregelbundet",
+      "landmarken": "Dens axis (kottanden) som atlas vrider sig kring",
+      "ledforbindelser": "Atlas (atlanto-axialleden) och tredje halskotan (C3)",
+      "grupp": "Halskotor (vertebrae cervicales, C1–C7)"
+    },
+    {
+      "latin": "Vertebrae cervicales (C3–C6)",
+      "svenska": "Typiska halskotor",
+      "typ": "Oregelbundet",
+      "landmarken": "Foramen transversarium, kluven processus spinosus, uncus corporis",
+      "ledforbindelser": "Intilliggande kotor via disker och facettleder",
+      "grupp": "Halskotor (vertebrae cervicales, C1–C7)"
+    },
+    {
+      "latin": "Vertebra prominens (C7)",
+      "svenska": "Sjunde halskotan",
+      "typ": "Oregelbundet",
+      "landmarken": "Långt, ej kluvet taggutskott som tydligt känns i nacken",
+      "ledforbindelser": "Sjätte halskotan (C6) och första bröstkotan (T1)",
+      "grupp": "Halskotor (vertebrae cervicales, C1–C7)"
+    }
+  ],
+  "leder": [
+    {
+      "namn": "Övre nackleden",
+      "latin": "Articulatio atlantooccipitalis",
+      "fork": "—",
+      "typ": "Ellipsoidled (kondylled)",
+      "mellan": "Nackbenets kondyler och atlas (C1)"
+    },
+    {
+      "namn": "Nedre nackleden",
+      "latin": "Articulatio atlantoaxialis",
+      "fork": "—",
+      "typ": "Vridled (trochoid)",
+      "mellan": "Atlas (C1) och axis (C2)"
+    },
+    {
+      "namn": "Halskotlederna",
+      "latin": "Articulationes intervertebrales",
+      "fork": "—",
+      "typ": "Mellankotskivor (symfyser) + plana facettleder",
+      "mellan": "Mellan halskotorna (C2–C7)"
+    }
+  ]
+}

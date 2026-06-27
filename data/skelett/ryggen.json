@@ -1,0 +1,70 @@
+{
+  "slug": "ryggen",
+  "region": "Ryggen",
+  "underrubrik": "Bröst- och ländkotorna samt korsbenet och svansbenet",
+  "kort_beskrivning": "Bröstkotor, ländkotor, korsben och svansben – den nedre delen av kotpelaren.",
+  "kort_cta": "Till ryggens ben →",
+  "intro": "Nedanför halskotpelaren följer tolv bröstkotor som ledar mot revbenen, fem kraftiga ländkotor som bär den största belastningen, samt korsbenet och svansbenet där flera kotor smält samman. Tillsammans bildar de ryggens del av kotpelaren (columna vertebralis).",
+  "kallor": [
+    "Bojsen-Møller, F., Simonsen, E. B., & Tranum-Jensen, J. (2018). <em>Rörelseapparatens anatomi</em> (2:a uppl.). Liber.",
+    "Federative International Programme for Anatomical Terminology. (2019). <em>Terminologia anatomica</em> (2:a uppl.). FIPAT.",
+    "Paulsen, F., & Waschke, J. (Red.). (2018). <em>Sobotta atlas of human anatomy</em> (16:e uppl.). Elsevier."
+  ],
+  "ben": [
+    {
+      "latin": "Vertebrae thoracicae",
+      "svenska": "Bröstkotor (12 st)",
+      "typ": "Oregelbundet",
+      "landmarken": "Foveae costales (ledytor för revben), långt nedåtriktat taggutskott",
+      "ledforbindelser": "Intilliggande kotor och revbenen",
+      "grupp": "Bröstkotor (vertebrae thoracicae, T1–T12)"
+    },
+    {
+      "latin": "Vertebrae lumbales",
+      "svenska": "Ländkotor (5 st)",
+      "typ": "Oregelbundet",
+      "landmarken": "Stor kraftig kotkropp, kort kraftigt taggutskott, processus mammillaris",
+      "ledforbindelser": "Intilliggande kotor; L5 mot korsbenet",
+      "grupp": "Ländkotor (vertebrae lumbales, L1–L5)"
+    },
+    {
+      "latin": "Os sacrum",
+      "svenska": "Korsben",
+      "typ": "Oregelbundet (5 sammanvuxna kotor)",
+      "landmarken": "Promontorium, foramina sacralia, crista sacralis, facies auricularis, canalis sacralis",
+      "ledforbindelser": "Femte ländkotan (L5), höftbenen (SI-leden) och svansbenet",
+      "grupp": "Korsben och svansben"
+    },
+    {
+      "latin": "Os coccygis",
+      "svenska": "Svansben",
+      "typ": "Oregelbundet (3–5 sammanvuxna kotor)",
+      "landmarken": "Cornu coccygeum; rudimentärt 'svansben'",
+      "ledforbindelser": "Korsbenet",
+      "grupp": "Korsben och svansben"
+    }
+  ],
+  "leder": [
+    {
+      "namn": "Kotlederna",
+      "latin": "Articulationes intervertebrales",
+      "fork": "—",
+      "typ": "Mellankotskivor (symfyser) + plana facettleder",
+      "mellan": "Mellan bröst- och ländkotorna"
+    },
+    {
+      "namn": "Korsbensleden",
+      "latin": "Articulatio sacroiliaca",
+      "fork": "SI-led",
+      "typ": "Plan led/amfiartros (nästan orörlig)",
+      "mellan": "Korsbenet och tarmbenet (os ilium)"
+    },
+    {
+      "namn": "Ländrygg–korsbensleden",
+      "latin": "Articulatio lumbosacralis",
+      "fork": "—",
+      "typ": "Mellankotskiva + facettleder",
+      "mellan": "Femte ländkotan (L5) och korsbenet"
+    }
+  ]
+}

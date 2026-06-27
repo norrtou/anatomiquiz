@@ -783,6 +783,10 @@ def write_sitemap(group_files: list[str]) -> None:
     blocks.append(url_block(f"{SITE}/kunskapsbank/muskeltabeller.html", "weekly", "0.7"))
     for f in ["handen", "skuldran", "overarmen", "underarmen", "laret", "underbenet", "foten", "hoften", "bukvaggen", "ryggen", "halsen", "brostkorgen", "kaken", "ansiktet", "ogat", "backenbotten"]:
         blocks.append(url_block(f"{SITE}/kunskapsbank/muskeltabell-{f}.html", "monthly", "0.7"))
+    # Skelett-/bentabeller (under-pillar + regionsidor)
+    blocks.append(url_block(f"{SITE}/kunskapsbank/skelett.html", "weekly", "0.7"))
+    for f in ["skallen", "halsen", "ryggen", "brostkorgen", "skuldran", "overarmen", "underarmen", "handen", "hoften", "laret", "underbenet", "foten"]:
+        blocks.append(url_block(f"{SITE}/kunskapsbank/skelett-{f}.html", "monthly", "0.7"))
     blocks.append(url_block(f"{SITE}/{LANDING_FILE}", "weekly", "0.9"))
     for f in group_files:
         blocks.append(url_block(f"{SITE}/{f}", "monthly", "0.7"))

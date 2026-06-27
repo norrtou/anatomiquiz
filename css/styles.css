@@ -2391,6 +2391,20 @@ ol li {
 .kb-mtable .c-inn { width: 16%; }
 .kb-mtable .c-fun { width: 19%; }
 
+/* Skelett-/bentabeller (latin/svenska/bentyp smalare, landmärken bredast) */
+.kb-mtable .c-bla { width: 18%; }
+.kb-mtable .c-bsv { width: 14%; }
+.kb-mtable .c-bty { width: 12%; }
+.kb-mtable .c-blm { width: 34%; }
+.kb-mtable .c-bld { width: 22%; }
+
+/* Ledtabeller (skelettsidor): namn/latin, smal förkortning, ledtyp och ben */
+.kb-mtable .c-lnamn { width: 20%; }
+.kb-mtable .c-llat  { width: 24%; }
+.kb-mtable .c-lfork { width: 8%; }
+.kb-mtable .c-ltyp  { width: 22%; }
+.kb-mtable .c-lben  { width: 26%; }
+
 @media (max-width: 720px) {
   .kb-mtable, .kb-mtable tbody, .kb-mtable tr, .kb-mtable td { display: block; width: auto; }
   .kb-mtable colgroup { display: none; }

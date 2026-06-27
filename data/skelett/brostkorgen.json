@@ -1,0 +1,93 @@
+{
+  "slug": "brostkorgen",
+  "region": "Bröstkorgen",
+  "underrubrik": "Bröstbenet och de tolv revbensparen",
+  "kort_beskrivning": "Bröstbenets tre delar och de äkta, falska och flytande revbenen.",
+  "kort_cta": "Till bröstkorgens ben →",
+  "intro": "Bröstkorgen (thorax) skyddar hjärta och lungor. Den byggs av bröstbenet framtill, tolv par revben på sidorna och bröstkotorna baktill. Revbenen delas in efter hur de fäster framtill: äkta, falska och flytande.",
+  "kallor": [
+    "Bojsen-Møller, F., Simonsen, E. B., & Tranum-Jensen, J. (2018). <em>Rörelseapparatens anatomi</em> (2:a uppl.). Liber.",
+    "Federative International Programme for Anatomical Terminology. (2019). <em>Terminologia anatomica</em> (2:a uppl.). FIPAT.",
+    "Paulsen, F., & Waschke, J. (Red.). (2018). <em>Sobotta atlas of human anatomy</em> (16:e uppl.). Elsevier."
+  ],
+  "ben": [
+    {
+      "latin": "Manubrium sterni",
+      "svenska": "Bröstbenets handtag",
+      "typ": "Platt ben",
+      "landmarken": "Incisura jugularis, incisura clavicularis",
+      "ledforbindelser": "Nyckelbenen, första revbensparet och bröstbenets kropp",
+      "grupp": "Bröstbenet (sternum)"
+    },
+    {
+      "latin": "Corpus sterni",
+      "svenska": "Bröstbenets kropp",
+      "typ": "Platt ben",
+      "landmarken": "Ledytor (incisurae costales) för revbensbrosk 2–7",
+      "ledforbindelser": "Manubrium, svärdsutskottet och revbensbrosk 2–7",
+      "grupp": "Bröstbenet (sternum)"
+    },
+    {
+      "latin": "Processus xiphoideus",
+      "svenska": "Svärdsutskottet",
+      "typ": "Platt ben",
+      "landmarken": "Spetsig nedre del; förbenas sent",
+      "ledforbindelser": "Bröstbenets kropp (corpus sterni)",
+      "grupp": "Bröstbenet (sternum)"
+    },
+    {
+      "latin": "Costae verae (I–VII)",
+      "svenska": "Äkta revben",
+      "typ": "Platt ben (böjt)",
+      "landmarken": "Caput, collum, tuberculum, angulus, corpus; eget brosk till bröstbenet",
+      "ledforbindelser": "Bröstkotor baktill och bröstbenet framtill",
+      "grupp": "Revbenen (costae, 12 par)"
+    },
+    {
+      "latin": "Costae spuriae (VIII–X)",
+      "svenska": "Falska revben",
+      "typ": "Platt ben (böjt)",
+      "landmarken": "Brosket fäster i ovanliggande revbens brosk, ej direkt i bröstbenet",
+      "ledforbindelser": "Bröstkotor; gemensam broskbåge framtill",
+      "grupp": "Revbenen (costae, 12 par)"
+    },
+    {
+      "latin": "Costae fluitantes (XI–XII)",
+      "svenska": "Flytande revben",
+      "typ": "Platt ben (böjt)",
+      "landmarken": "Saknar främre fäste – fri spets i bukväggen",
+      "ledforbindelser": "Endast bröstkotor baktill",
+      "grupp": "Revbenen (costae, 12 par)"
+    }
+  ],
+  "leder": [
+    {
+      "namn": "Revben–kotlederna",
+      "latin": "Articulationes costovertebrales",
+      "fork": "—",
+      "typ": "Plana leder",
+      "mellan": "Revbenshuvudena och bröstkotorna"
+    },
+    {
+      "namn": "Revben–tvärutskottslederna",
+      "latin": "Articulationes costotransversariae",
+      "fork": "—",
+      "typ": "Plana leder",
+      "mellan": "Revbenens tuberkler och kotornas tvärutskott"
+    },
+    {
+      "namn": "Revben–bröstbenslederna",
+      "latin": "Articulationes sternocostales",
+      "fork": "—",
+      "typ": "Brosk-/plana leder",
+      "mellan": "Revbensbrosk 1–7 och bröstbenet"
+    },
+    {
+      "namn": "Bröstbensvinkeln",
+      "latin": "Symphysis manubriosternalis",
+      "fork": "—",
+      "typ": "Broskfog (symfys)",
+      "mellan": "Manubrium och bröstbenets kropp (corpus sterni)"
+    }
+  ]
+}

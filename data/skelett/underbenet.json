@@ -1,0 +1,47 @@
+{
+  "slug": "underbenet",
+  "region": "Underbenet",
+  "underrubrik": "Skenbenet och vadbenet",
+  "kort_beskrivning": "Skenbenet och vadbenet – de bärande respektive stabiliserande underbensbenen.",
+  "kort_cta": "Till underbenets ben →",
+  "intro": "Underbenet har två ben: det kraftiga skenbenet som bär kroppstyngden och det smala vadbenet på utsidan som främst ger fäste åt muskler och bildar yttre fotknölen. Tillsammans bildar de underbenets del av fotleden.",
+  "kallor": [
+    "Bojsen-Møller, F., Simonsen, E. B., & Tranum-Jensen, J. (2018). <em>Rörelseapparatens anatomi</em> (2:a uppl.). Liber.",
+    "Federative International Programme for Anatomical Terminology. (2019). <em>Terminologia anatomica</em> (2:a uppl.). FIPAT.",
+    "Paulsen, F., & Waschke, J. (Red.). (2018). <em>Sobotta atlas of human anatomy</em> (16:e uppl.). Elsevier."
+  ],
+  "ben": [
+    {
+      "latin": "Tibia",
+      "svenska": "Skenben",
+      "typ": "Långt rörben",
+      "landmarken": "Condylus medialis/lateralis, eminentia intercondylaris, tuberositas tibiae, margo anterior, malleolus medialis (inre fotknölen)",
+      "ledforbindelser": "Lårbenet (knäleden), vadbenet och språngbenet (fotleden)",
+      "grupp": "Underbenets ben"
+    },
+    {
+      "latin": "Fibula",
+      "svenska": "Vadben",
+      "typ": "Långt rörben",
+      "landmarken": "Caput fibulae, malleolus lateralis (yttre fotknölen)",
+      "ledforbindelser": "Skenbenet och språngbenet",
+      "grupp": "Underbenets ben"
+    }
+  ],
+  "leder": [
+    {
+      "namn": "Övre vadbensleden",
+      "latin": "Articulatio tibiofibularis",
+      "fork": "—",
+      "typ": "Plan led",
+      "mellan": "Skenbenet och vadbenets huvud"
+    },
+    {
+      "namn": "Nedre vadbensfogen",
+      "latin": "Syndesmosis tibiofibularis",
+      "fork": "—",
+      "typ": "Bindvävsfog (syndesmos)",
+      "mellan": "Skenbenet och vadbenet (distalt)"
+    }
+  ]
+}

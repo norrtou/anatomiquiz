@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.60
+- **Ny tabellsektion: Skelettet** (`kunskapsbank/skelett.html` + 12 regionsidor), datadriven via ny `scripts/generate_skelett.py` och `data/skelett/*.json` – speglar muskelgeneratorn (full SEO-head, JSON-LD Article/CollectionPage + BreadcrumbList, APA-referenser, inbyggd kb-term-tooltip-wiring och körbar SEO §12-grind).
+  - **Regioner (speglar muskelregionerna):** Skallen, Halsen, Ryggen, Bröstkorgen, Skuldran, Överarmen, Underarmen, Handen, Höften, Låret, Underbenet, Foten. De tre huvudregionerna slogs ihop till Skallen; benlösa bukväggen/bäckenbotten utgår (bäckenbenen under Höften).
+  - **Bentabell per region:** Ben (latin) · Svenska · Bentyp · Viktiga utskott & landmärken · Ledförbindelser, grupperad per delskelett (62 benrader).
+  - **Ledtabell per region:** Led · Latin · Förkortning · Ledtyp · Mellan vilka ben (40 leder). Förkortningar där de används kliniskt – handen: CMC, CMC I, MCP, PIP, DIP, IP; foten: MTP, PIP/DIP, IP; käkled (TMJ), axelled (GH), AC/SC, SI-led m.fl.
+  - **Integrerat:** Skelett-kortet i `listor-tabeller.html` satt till Live (+ uppdaterad intro), 13 URL:er i `sitemap.xml`, nya kolumnbredder i CSS (ben- och ledtabeller), CSS-cachebuster 0.7.14 för skelettsidorna.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.60.
+
 ## 0.9.59
 - **Ordlistan: 95 nya läror, specialiteter och discipliner** (10 202 → 10 297 poster). Inga dubbletter, inga slug-kollisioner. Källor: Socialstyrelsens specialitetsindelning, Wikipedias specialitetslista, regionernas laboratoriemedicin, de 23 legitimationsyrkena samt källor om komplementärmedicin.
   - **Läkarspecialiteter & kliniska fält (44):** akutsjukvård, allmänmedicin, internmedicin, infektionsmedicin, socialmedicin, rättsmedicin, rättspsykiatri, arbets- och miljömedicin, beroendemedicin, palliativ medicin, smärtmedicin, vårdhygien, skolhälsovård, nuklearmedicin, rehabiliteringsmedicin, idrottsmedicin, katastrofmedicin, flygmedicin, dykmedicin, anestesiologi, intensivvård, allmänkirurgi, barnkirurgi, handkirurgi, kärlkirurgi, thoraxkirurgi, neurokirurgi, plastikkirurgi, neuropsykiatri, äldrepsykiatri, njurmedicin, lungmedicin, klinisk farmakologi/genetik/kemi/mikrobiologi/patologi/fysiologi/neurofysiologi/immunologi, transfusionsmedicin, neuroradiologi, gynekologisk onkologi, vaccinologi.

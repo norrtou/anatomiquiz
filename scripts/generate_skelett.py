@@ -1,0 +1,339 @@
+#!/usr/bin/env python3
+"""Generera skelett-/bentabeller ur data/skelett/*.json.
+
+Bygger:
+  - kunskapsbank/skelett.html            (under-pillar: regionkort)
+  - kunskapsbank/skelett-<slug>.html     (en regionsida per datafil)
+
+Speglar generate_muskeltabeller.py: full <head>, unik titel ≤65 / description
+≤150, OG/Twitter, Article/CollectionPage + BreadcrumbList-JSON-LD, a11y (en h1,
+tabell-caption + th scope), APA-referenser, quiz-korslänk. Inga URL:er hårdkodas
+utanför SITE. sitemap.xml ägs av generate_glossary.py.
+
+Tooltip-wiring (kb-term) och SEO_REGLER.md §12-grinden är INBYGGDA i main():
+varje genererad sida wire:as och måste klara checklistan, annars kastar bygget.
+Omkörning ger byte-identiska sidor (idempotent).
+"""
+import json, html, pathlib, re
+from wire_terms import load_terms, build_regex, wire_file
+
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+DATA = ROOT / "data" / "skelett"
+KB = ROOT / "kunskapsbank"
+SITE = "https://anatomiquiz.se"
+CSS_V = "0.7.14"
+
+def esc(s): return html.escape(s, quote=True)
+
+# APA-referenser för under-pillaren (allmän grund för skelett-/bentabellerna).
+PILLAR_KALLOR = [
+    "Bojsen-Møller, F., Simonsen, E. B., & Tranum-Jensen, J. (2018). <em>Rörelseapparatens anatomi</em> (2:a uppl.). Liber.",
+    "Federative International Programme for Anatomical Terminology. (2019). <em>Terminologia anatomica</em> (2:a uppl.). FIPAT.",
+    "Paulsen, F., & Waschke, J. (Red.). (2018). <em>Sobotta atlas of human anatomy</em> (16:e uppl.). Elsevier.",
+    "Standring, S. (Red.). (2021). <em>Gray's anatomy: The anatomical basis of clinical practice</em> (42:a uppl.). Elsevier.",
+]
+
+def head(title, desc, canon, ogtype, jsonld):
+    assert len(title) <= 65, f"TITEL för lång ({len(title)}): {title}"
+    assert 25 <= len(desc) <= 150, f"DESC fel längd ({len(desc)}): {desc}"
+    core = title.rsplit(" | ", 1)[0]
+    return f"""<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+
+  <title>{esc(title)}</title>
+  <meta name="description" content="{esc(desc)}">
+  <meta name="author" content="Norrtou Creations">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+  <link rel="canonical" href="{canon}">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <meta property="og:type" content="{ogtype}">
+  <meta property="og:url" content="{canon}">
+  <meta property="og:title" content="{esc(core)}">
+  <meta property="og:description" content="{esc(desc)}">
+  <meta property="og:image" content="{SITE}/img/og-image.png">
+  <meta property="og:image:width" content="1518">
+  <meta property="og:image:height" content="864">
+  <meta property="og:image:alt" content="Anatomiquiz — skelettet och kroppens ben">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="Anatomiquiz">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{esc(core)}">
+  <meta name="twitter:description" content="{esc(desc)}">
+  <meta name="twitter:image" content="{SITE}/img/og-image.png">
+  <meta name="twitter:image:alt" content="Anatomiquiz — skelettet och kroppens ben">
+
+  <meta name="theme-color" content="#10b981">
+  <meta name="color-scheme" content="light">
+
+  <script type="application/ld+json">
+{json.dumps(jsonld, ensure_ascii=False, indent=2)}
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon.png">
+  <link rel="apple-touch-icon" href="/img/icon-192.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/css/styles.css?v={CSS_V}">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+  <main id="main" class="container" role="main">
+"""
+
+FOOT = """  </main>
+
+  <!-- Ordlistetooltips i löptexten (progressiv förbättring; .kb-term funkar som länk utan JS) -->
+  <script src="/js/kb-glossary.js" defer></script>
+  <!-- Skriv ut / ladda ner (CSV) för tabellerna (progressiv förbättring; CSP-säkert) -->
+  <script src="/js/kb-table-tools.js" defer></script>
+
+</body>
+</html>
+"""
+
+def crumb(items):
+    parts = []
+    for name, url in items:
+        if url:
+            parts.append(f'<a href="{url}" class="breadcrumb-link">{esc(name)}</a>')
+        else:
+            parts.append(f'<span class="breadcrumb-current" aria-current="page">{esc(name)}</span>')
+    sep = '\n        <span class="breadcrumb-sep" aria-hidden="true">/</span>\n        '
+    return f'      <nav class="breadcrumb" aria-label="Brödsmula">\n        {sep.join(parts)}\n      </nav>'
+
+def bc_jsonld(items):
+    return {"@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": i+1, "name": n,
+         "item": (SITE + u if u.startswith("/") else u)}
+        for i, (n, u) in enumerate(items)]}
+
+def refs_html(kallor):
+    lis = "\n".join(f"          <li>{k}</li>" for k in kallor)
+    return ('      <div class="kb-sources">\n        <h2>Referenser</h2>\n'
+            f'        <ul>\n{lis}\n        </ul>\n      </div>')
+
+# (etikett, kolumnklass, datafält)
+COLS = [("Ben (latin)", "c-bla", "latin"), ("Svenska", "c-bsv", "svenska"),
+        ("Bentyp", "c-bty", "typ"), ("Viktiga utskott & landmärken", "c-blm", "landmarken"),
+        ("Ledförbindelser", "c-bld", "ledforbindelser")]
+# Ledtabellens kolumner
+LCOLS = [("Led", "c-lnamn", "namn"), ("Latin", "c-llat", "latin"),
+         ("Förk.", "c-lfork", "fork"), ("Ledtyp", "c-ltyp", "typ"),
+         ("Mellan vilka ben", "c-lben", "mellan")]
+
+def region_page(d):
+    region = d["region"]; slug = d["slug"]
+    canon = f"{SITE}/kunskapsbank/skelett-{slug}.html"
+    title = d.get("titel") or f"{region}s ben – latin, bentyp och landmärken | Anatomiquiz"
+    desc = d.get("desc") or (f"Tabell över {region.lower()}s ben: latinska namn, bentyp, "
+            f"viktiga utskott och ledförbindelser – för tentaplugg i anatomi.")
+    crumbs = [("← Anatomiquiz", "/"), ("Kunskapsbank", "/kunskapsbank/"),
+              ("Listor & tabeller", "/kunskapsbank/listor-tabeller.html"),
+              ("Skelettet", "/kunskapsbank/skelett.html"),
+              (f"{region}s ben", None)]
+    jsonld = {"@context": "https://schema.org", "@type": ["Article", "LearningResource"],
+              "headline": f"{region}s ben – latin, bentyp, landmärken och ledförbindelser",
+              "description": desc, "inLanguage": "sv-SE", "isAccessibleForFree": True,
+              "learningResourceType": "table", "educationalUse": ["self study", "professional development"],
+              "author": {"@type": "Organization", "name": "Norrtou Creations"},
+              "publisher": {"@type": "Organization", "name": "Anatomiquiz", "url": f"{SITE}/"},
+              "isPartOf": {"@type": "WebSite", "name": "Anatomiquiz", "url": f"{SITE}/"},
+              "breadcrumb": bc_jsonld([(n if n != "← Anatomiquiz" else "Anatomiquiz", u or canon) for n, u in crumbs])}
+
+    out = [head(title, desc, canon, "article", jsonld)]
+    out.append(f"""    <header class="header">
+      <div class="header-title">
+        <h1>{esc(d.get("rubrik", region + "s ben"))}</h1>
+      </div>
+      <p class="tagline">{esc(d.get("underrubrik", ""))}</p>
+    </header>
+
+    <section class="card" aria-labelledby="stabHeading">
+""")
+    out.append(crumb(crumbs))
+    out.append(f'\n      <h2 id="stabHeading" class="sr-only">{esc(region)}s ben</h2>\n')
+    out.append(f'      <div class="info-about">\n        <p>{esc(d["intro"])}</p>\n      </div>\n')
+
+    def render_table(caption, rows, cols):
+        out.append('      <table class="kb-mtable" role="table">\n')
+        out.append(f'        <caption>{esc(caption)}</caption>\n')
+        out.append('        <colgroup>' + "".join(f'<col class="{c}">' for _, c, _ in cols) + '</colgroup>\n')
+        out.append('        <thead role="rowgroup">\n          <tr role="row">'
+                   + "".join(f'<th scope="col" role="columnheader">{esc(l)}</th>' for l, _, _ in cols)
+                   + '</tr>\n        </thead>\n')
+        out.append('        <tbody role="rowgroup">\n')
+        for r in rows:
+            tds = []
+            for label, _, key in cols:
+                val = esc(r.get(key, "") or "—")
+                if key == "latin":
+                    val = f"<em>{val}</em>"
+                tds.append(f'<td role="cell" data-label="{esc(label)}">{val}</td>')
+            out.append('          <tr role="row">' + "".join(tds) + '</tr>\n')
+        out.append('        </tbody>\n      </table>\n')
+
+    # Benen, grupperade på "grupp" i datafilens ordning
+    order = []
+    for b in d["ben"]:
+        g = b.get("grupp", "")
+        if g not in order: order.append(g)
+    for g in order:
+        render_table(g, [b for b in d["ben"] if b.get("grupp") == g], COLS)
+
+    # Lederna (om regionen har namngivna leder)
+    if d.get("leder"):
+        out.append('      <div class="info-about">\n        <h2>Leder</h2>\n'
+                   f'        <p>{esc(d.get("leder_intro", "Lederna i " + region.lower() + " – ledtyp och vilka ben som möts. Förkortningar (t.ex. DIP, PIP, CMC) anges där de används kliniskt."))}</p>\n      </div>\n')
+        render_table(f"Leder i {region.lower()}", d["leder"], LCOLS)
+
+    out.append(f"""      <div class="info-about">
+        <p>Vill du träna aktivt? <a href="/">Testa dig själv i quizet</a>. Slå upp enskilda termer i den <a href="/medicinskordlista.html">medicinska ordlistan</a>.</p>
+      </div>
+""")
+    out.append(refs_html(d["kallor"]))
+    out.append(f"""
+      <div class="actions">
+        <a href="/kunskapsbank/skelett.html" class="btn">← Skelettet</a>
+        <a href="/" class="btn primary">Till quizet</a>
+      </div>
+
+    </section>
+""")
+    out.append(FOOT)
+    (KB / f"skelett-{slug}.html").write_text("".join(out), encoding="utf-8")
+    return {
+        "slug": slug, "region": region,
+        "beskrivning": d.get("kort_beskrivning") or
+            f"Benen i {region.lower()} med latinska namn, bentyp och viktiga landmärken.",
+        "cta": d.get("kort_cta") or f"Till {region.lower()}s ben →",
+    }
+
+def pillar_page(regions):
+    canon = f"{SITE}/kunskapsbank/skelett.html"
+    title = "Skelettet – ben per kroppsregion | Anatomiquiz"
+    desc = ("Skelettets ben per kroppsregion: latinska namn, bentyp, viktiga utskott "
+            "och ledförbindelser – för tentaplugg i anatomi. Välj region nedan.")
+    crumbs = [("← Anatomiquiz", "/"), ("Kunskapsbank", "/kunskapsbank/"),
+              ("Listor & tabeller", "/kunskapsbank/listor-tabeller.html"),
+              ("Skelettet", None)]
+    jsonld = {"@context": "https://schema.org", "@type": ["CollectionPage", "LearningResource"],
+              "name": "Skelettet – ben per kroppsregion", "description": desc,
+              "inLanguage": "sv-SE", "isAccessibleForFree": True, "learningResourceType": "reference",
+              "isPartOf": {"@type": "WebSite", "name": "Anatomiquiz", "url": f"{SITE}/"},
+              "hasPart": [{"@type": "LearningResource", "name": f"{r['region']}s ben",
+                           "url": f"{SITE}/kunskapsbank/skelett-{r['slug']}.html"} for r in regions],
+              "breadcrumb": bc_jsonld([(n if n != "← Anatomiquiz" else "Anatomiquiz", u or canon) for n, u in crumbs])}
+    out = [head(title, desc, canon, "website", jsonld)]
+    out.append("""    <header class="header">
+      <div class="header-title">
+        <h1>Skelettet</h1>
+      </div>
+      <p class="tagline">Kroppens ben – latinska namn, bentyp och landmärken, per kroppsregion</p>
+    </header>
+
+    <section class="card" aria-labelledby="spHeading">
+""")
+    out.append(crumb(crumbs))
+    out.append('\n      <h2 id="spHeading" class="sr-only">Skelettet per region</h2>\n')
+    out.append('      <div class="info-about">\n        <p>Skelettets cirka 206 ben presenteras region för region, var och en med latinskt namn, bentyp, viktiga utskott och landmärken samt vilka ben de ledar mot. Välj en region för att se hela tabellen.</p>\n      </div>\n')
+    out.append('      <div class="kb-grid">\n')
+    for r in regions:
+        out.append(f"""        <a class="kb-card" href="/kunskapsbank/skelett-{r['slug']}.html">
+          <h3 class="kb-card-title">{esc(r['region'])}s ben</h3>
+          <p class="kb-card-desc">{esc(r['beskrivning'])}</p>
+          <span class="kb-card-go">{esc(r['cta'])}</span>
+        </a>
+""")
+    out.append('      </div>\n')
+    out.append(refs_html(PILLAR_KALLOR))
+    out.append("""
+      <div class="actions">
+        <a href="/kunskapsbank/listor-tabeller.html" class="btn">← Listor &amp; tabeller</a>
+      </div>
+
+    </section>
+""")
+    out.append(FOOT)
+    (KB / "skelett.html").write_text("".join(out), encoding="utf-8")
+
+def main():
+    # Bestämd regionordning (kraniokaudalt, axialt före appendikulärt)
+    ORDER = ["skallen", "halsen", "ryggen", "brostkorgen", "skuldran", "overarmen",
+             "underarmen", "handen", "hoften", "laret", "underbenet", "foten"]
+    files = {f.stem: f for f in DATA.glob("*.json")}
+    ordered = [files[s] for s in ORDER if s in files] + \
+              [files[s] for s in sorted(files) if s not in ORDER]
+    regions, generated = [], []
+    for f in ordered:
+        d = json.load(open(f, encoding="utf-8"))
+        r = region_page(d)
+        regions.append(r)
+        generated.append(KB / f"skelett-{r['slug']}.html")
+        print(f"  skelett-{r['slug']}.html ({r['region']}, {len(d['ben'])} ben)")
+    pillar_page(regions)
+    generated.append(KB / "skelett.html")
+    print(f"  skelett.html (under-pillar, {len(regions)} region(er))")
+
+    terms = load_terms(); rx = build_regex(terms)
+    tot = sum(wire_file(p, terms, rx)[0] for p in generated)
+    print(f"  tooltips wirade: {tot} kb-term-länkar i {len(generated)} sidor")
+
+    check_seo_compliance(generated)
+    print(f"  SEO §12: alla {len(generated)} sidor godkända")
+
+def check_seo_compliance(paths):
+    titles, descs, problems = {}, {}, []
+    for p in paths:
+        h = p.read_text(encoding="utf-8")
+        name = p.name
+        is_hub = (name == "skelett.html")
+        bad = []
+        t = re.search(r"<title>(.*?)</title>", h); d = re.search(r'name="description" content="(.*?)"', h)
+        t = t.group(1) if t else ""; d = d.group(1) if d else ""
+        titles.setdefault(t, []).append(name); descs.setdefault(d, []).append(name)
+        if not (5 <= len(t) <= 65): bad.append(f"titel {len(t)} tecken (§2: ≤65)")
+        if not (25 <= len(d) <= 150): bad.append(f"description {len(d)} tecken (§3: 25–150)")
+        for b in re.findall(r'application/ld\+json">(.*?)</script>', h, re.S):
+            try: json.loads(b)
+            except Exception: bad.append("ogiltig JSON-LD (§6)")
+        if "BreadcrumbList" not in h: bad.append("saknar BreadcrumbList (§6)")
+        if h.count("<h1") != 1: bad.append(f"{h.count('<h1')} st <h1> (§7: exakt 1)")
+        if 'class="skip-link"' not in h: bad.append("saknar skip-länk (§7)")
+        if 'id="main"' not in h: bad.append("saknar <main id=main> (§7)")
+        if f'rel="canonical" href="{SITE}/kunskapsbank/{name}"' not in h:
+            bad.append("canonical ej självrefererande (§4)")
+        if "google-site-verification" in h: bad.append("google-site-verification på undersida (§4)")
+        core = t.rsplit(" | ", 1)[0]
+        ogt = re.search(r'property="og:title" content="(.*?)"', h)
+        twt = re.search(r'name="twitter:title" content="(.*?)"', h)
+        if not (ogt and twt and ogt.group(1) == twt.group(1) == esc(core)):
+            bad.append("og:title ≠ twitter:title ≠ titel-core (§5)")
+        for fld in ('og:url', 'og:image', 'og:image:alt', 'twitter:card', 'twitter:image'):
+            if fld not in h: bad.append(f"saknar {fld} (§5)")
+        if not ('kb-sources' in h and 'Referenser</h2>' in h):
+            bad.append("saknar Referenser-block (§6b)")
+        if h.count("<table") != h.count("<caption>"):
+            bad.append("tabell utan <caption> (§7)")
+        if not is_hub:
+            if "kb-mtable" not in h or "kb-table-wrap" in h:
+                bad.append("tabell ej responsiv .kb-mtable (§7)")
+            if 'style="' in h: bad.append("inline-style mot CSP (§7/§8)")
+        if bad: problems.append(f"  ✗ {name}:\n      - " + "\n      - ".join(bad))
+    for k, v in titles.items():
+        if len(v) > 1: problems.append(f"  ✗ DUBBLETT titel '{k}' på: {', '.join(v)} (§2)")
+    for k, v in descs.items():
+        if len(v) > 1: problems.append(f"  ✗ DUBBLETT description på: {', '.join(v)} (§3)")
+    if problems:
+        raise AssertionError("SEO_REGLER.md §12 BRUTEN – bygget stoppat:\n" + "\n".join(problems))
+
+if __name__ == "__main__":
+    main()

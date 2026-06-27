@@ -1,0 +1,54 @@
+{
+  "slug": "skuldran",
+  "region": "Skuldran",
+  "underrubrik": "Nyckelbenet och skulderbladet",
+  "kort_beskrivning": "Nyckelbenet och skulderbladet – skuldergördeln som länkar armen till bålen.",
+  "kort_cta": "Till skuldrans ben →",
+  "intro": "Skuldergördeln förbinder den övre extremiteten med bålen. Den utgörs av nyckelbenet framtill och skulderbladet baktill. Den enda egentliga ledförbindelsen mot bålskelettet sker i bröstben–nyckelbensleden.",
+  "kallor": [
+    "Bojsen-Møller, F., Simonsen, E. B., & Tranum-Jensen, J. (2018). <em>Rörelseapparatens anatomi</em> (2:a uppl.). Liber.",
+    "Federative International Programme for Anatomical Terminology. (2019). <em>Terminologia anatomica</em> (2:a uppl.). FIPAT.",
+    "Paulsen, F., & Waschke, J. (Red.). (2018). <em>Sobotta atlas of human anatomy</em> (16:e uppl.). Elsevier."
+  ],
+  "ben": [
+    {
+      "latin": "Clavicula",
+      "svenska": "Nyckelben",
+      "typ": "Långt rörben (S-format)",
+      "landmarken": "Extremitas sternalis/acromialis, tuberculum conoideum",
+      "ledforbindelser": "Bröstbenet (SC-leden) och skulderbladets acromion (AC-leden)",
+      "grupp": "Skuldergördeln (cingulum pectorale)"
+    },
+    {
+      "latin": "Scapula",
+      "svenska": "Skulderblad",
+      "typ": "Platt ben",
+      "landmarken": "Spina scapulae, acromion, processus coracoideus, cavitas glenoidalis, fossa supraspinata/infraspinata, angulus inferior",
+      "ledforbindelser": "Nyckelbenet (AC-leden) och överarmsbenet (axelleden)",
+      "grupp": "Skuldergördeln (cingulum pectorale)"
+    }
+  ],
+  "leder": [
+    {
+      "namn": "Axelleden",
+      "latin": "Articulatio glenohumeralis",
+      "fork": "GH",
+      "typ": "Kulled",
+      "mellan": "Skulderbladets ledskål (cavitas glenoidalis) och överarmsbenets huvud"
+    },
+    {
+      "namn": "Nyckelben–skulderbladsleden",
+      "latin": "Articulatio acromioclavicularis",
+      "fork": "AC-led",
+      "typ": "Plan led",
+      "mellan": "Nyckelbenet och skulderbladets acromion"
+    },
+    {
+      "namn": "Bröstben–nyckelbensleden",
+      "latin": "Articulatio sternoclavicularis",
+      "fork": "SC-led",
+      "typ": "Sadelled (funktionell kulled, med diskus)",
+      "mellan": "Nyckelbenet och bröstbenet"
+    }
+  ]
+}

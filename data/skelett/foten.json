@@ -1,0 +1,122 @@
+{
+  "slug": "foten",
+  "region": "Foten",
+  "underrubrik": "Fotrotsben, mellanfotsben och tåben",
+  "kort_beskrivning": "De sju fotrotsbenen, fem mellanfotsben och tårnas falanger.",
+  "kort_cta": "Till fotens ben →",
+  "intro": "Foten byggs av sju fotrotsben, fem mellanfotsben och tårnas falanger. Språngbenet tar emot kroppstyngden från underbenet och hälbenet bildar hälen; tillsammans bär och fjädrar benen i fotvalven.",
+  "kallor": [
+    "Bojsen-Møller, F., Simonsen, E. B., & Tranum-Jensen, J. (2018). <em>Rörelseapparatens anatomi</em> (2:a uppl.). Liber.",
+    "Federative International Programme for Anatomical Terminology. (2019). <em>Terminologia anatomica</em> (2:a uppl.). FIPAT.",
+    "Paulsen, F., & Waschke, J. (Red.). (2018). <em>Sobotta atlas of human anatomy</em> (16:e uppl.). Elsevier."
+  ],
+  "ben": [
+    {
+      "latin": "Talus",
+      "svenska": "Språngben",
+      "typ": "Kort ben",
+      "landmarken": "Trochlea tali; överför kroppstyngden från underbenet",
+      "ledforbindelser": "Skenbenet och vadbenet (fotleden) samt hälbenet och båtbenet",
+      "grupp": "Fotrotsbenen (ossa tarsi)"
+    },
+    {
+      "latin": "Calcaneus",
+      "svenska": "Hälben",
+      "typ": "Kort ben (största fotrotsbenet)",
+      "landmarken": "Tuber calcanei (hälsenefäste), sustentaculum tali",
+      "ledforbindelser": "Språngbenet och tärningsbenet",
+      "grupp": "Fotrotsbenen (ossa tarsi)"
+    },
+    {
+      "latin": "Os naviculare",
+      "svenska": "Båtben",
+      "typ": "Kort ben",
+      "landmarken": "Tuberositas ossis navicularis",
+      "ledforbindelser": "Språngbenet och de tre kilbenen",
+      "grupp": "Fotrotsbenen (ossa tarsi)"
+    },
+    {
+      "latin": "Os cuboideum",
+      "svenska": "Tärningsben",
+      "typ": "Kort ben",
+      "landmarken": "Sulcus tendinis musculi fibularis longi",
+      "ledforbindelser": "Hälbenet och mellanfotsben IV–V",
+      "grupp": "Fotrotsbenen (ossa tarsi)"
+    },
+    {
+      "latin": "Ossa cuneiformia",
+      "svenska": "Kilbenen (tre: mediale, intermedium, laterale)",
+      "typ": "Kort ben",
+      "landmarken": "Kilformade; bildar fotens tvärvalv",
+      "ledforbindelser": "Båtbenet och mellanfotsben I–III",
+      "grupp": "Fotrotsbenen (ossa tarsi)"
+    },
+    {
+      "latin": "Ossa metatarsi I–V",
+      "svenska": "Mellanfotsben",
+      "typ": "Långt rörben (miniatyr)",
+      "landmarken": "Basis, corpus, caput; första är kraftigast",
+      "ledforbindelser": "Fotrotsbenen proximalt och tåbenen distalt",
+      "grupp": "Mellanfotsbenen (ossa metatarsi)"
+    },
+    {
+      "latin": "Phalanges",
+      "svenska": "Tåben (falanger)",
+      "typ": "Långt rörben (miniatyr)",
+      "landmarken": "Stortån har 2 falanger, övriga tår 3",
+      "ledforbindelser": "Mellanfotsben och intilliggande falanger (grund-, mellan- och ytterleder)",
+      "grupp": "Tåbenen (phalanges)"
+    }
+  ],
+  "leder": [
+    {
+      "namn": "Övre fotleden",
+      "latin": "Articulatio talocruralis",
+      "fork": "—",
+      "typ": "Gångjärnsled",
+      "mellan": "Skenbenet och vadbenet samt språngbenet (talus)"
+    },
+    {
+      "namn": "Nedre fotleden",
+      "latin": "Articulatio subtalaris",
+      "fork": "—",
+      "typ": "Plan-/vridled",
+      "mellan": "Språngbenet och hälbenet (calcaneus)"
+    },
+    {
+      "namn": "Tvärgående fotrotsleden",
+      "latin": "Articulatio tarsi transversa (Chopart)",
+      "fork": "—",
+      "typ": "Sammansatt led",
+      "mellan": "Språngben/hälben mot båtben/tärningsben"
+    },
+    {
+      "namn": "Fotrots–mellanfotslederna",
+      "latin": "Articulationes tarsometatarsales (Lisfranc)",
+      "fork": "—",
+      "typ": "Plana leder",
+      "mellan": "Kil-/tärningsben och mellanfotsbenen"
+    },
+    {
+      "namn": "Tåns grundleder",
+      "latin": "Articulationes metatarsophalangeae",
+      "fork": "MTP",
+      "typ": "Kulleder (begränsade)",
+      "mellan": "Mellanfotsbenen och grundfalangerna"
+    },
+    {
+      "namn": "Tålederna",
+      "latin": "Articulationes interphalangeae pedis",
+      "fork": "PIP/DIP",
+      "typ": "Gångjärnsleder",
+      "mellan": "Tårnas falanger"
+    },
+    {
+      "namn": "Stortåns tåled",
+      "latin": "Articulatio interphalangea hallucis",
+      "fork": "IP",
+      "typ": "Gångjärnsled",
+      "mellan": "Stortåns grund- och ytterfalang"
+    }
+  ]
+}

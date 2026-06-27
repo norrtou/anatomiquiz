@@ -1,0 +1,153 @@
+{
+  "slug": "handen",
+  "region": "Handen",
+  "underrubrik": "Handlovsben, mellanhandsben och fingerben",
+  "kort_beskrivning": "De åtta handlovsbenen, fem mellanhandsben och fingrarnas falanger.",
+  "kort_cta": "Till handens ben →",
+  "intro": "Handen byggs av åtta små handlovsben i två rader, fem mellanhandsben och fingrarnas falanger. Tillsammans ger de handen dess stora rörlighet och greppförmåga.",
+  "kallor": [
+    "Bojsen-Møller, F., Simonsen, E. B., & Tranum-Jensen, J. (2018). <em>Rörelseapparatens anatomi</em> (2:a uppl.). Liber.",
+    "Federative International Programme for Anatomical Terminology. (2019). <em>Terminologia anatomica</em> (2:a uppl.). FIPAT.",
+    "Paulsen, F., & Waschke, J. (Red.). (2018). <em>Sobotta atlas of human anatomy</em> (16:e uppl.). Elsevier."
+  ],
+  "ben": [
+    {
+      "latin": "Os scaphoideum",
+      "svenska": "Båtben",
+      "typ": "Kort ben",
+      "landmarken": "Tuberculum ossis scaphoidei; vanligaste frakturerade handlovsbenet",
+      "ledforbindelser": "Strålbenet och intilliggande handlovsben (proximala raden)",
+      "grupp": "Handlovsbenen (ossa carpi)"
+    },
+    {
+      "latin": "Os lunatum",
+      "svenska": "Månben",
+      "typ": "Kort ben",
+      "landmarken": "Halvmåneformat; kan luxera",
+      "ledforbindelser": "Strålbenet och grannbenen",
+      "grupp": "Handlovsbenen (ossa carpi)"
+    },
+    {
+      "latin": "Os triquetrum",
+      "svenska": "Tribergsben",
+      "typ": "Kort ben",
+      "landmarken": "Trekantigt",
+      "ledforbindelser": "Ärtbenet och grannbenen",
+      "grupp": "Handlovsbenen (ossa carpi)"
+    },
+    {
+      "latin": "Os pisiforme",
+      "svenska": "Ärtben",
+      "typ": "Sesamben",
+      "landmarken": "Inbäddat i senan till m. flexor carpi ulnaris",
+      "ledforbindelser": "Tribergsbenet (os triquetrum)",
+      "grupp": "Handlovsbenen (ossa carpi)"
+    },
+    {
+      "latin": "Os trapezium",
+      "svenska": "Stora månghörningsbenet",
+      "typ": "Kort ben",
+      "landmarken": "Tuberculum ossis trapezii; sadelyta mot tummen",
+      "ledforbindelser": "Mellanhandsben I (tummens sadelled) m.fl.",
+      "grupp": "Handlovsbenen (ossa carpi)"
+    },
+    {
+      "latin": "Os trapezoideum",
+      "svenska": "Lilla månghörningsbenet",
+      "typ": "Kort ben",
+      "landmarken": "Kilformat",
+      "ledforbindelser": "Mellanhandsben II och grannben",
+      "grupp": "Handlovsbenen (ossa carpi)"
+    },
+    {
+      "latin": "Os capitatum",
+      "svenska": "Huvudben",
+      "typ": "Kort ben",
+      "landmarken": "Största handlovsbenet; centralt placerat",
+      "ledforbindelser": "Mellanhandsben III och grannben",
+      "grupp": "Handlovsbenen (ossa carpi)"
+    },
+    {
+      "latin": "Os hamatum",
+      "svenska": "Krokben",
+      "typ": "Kort ben",
+      "landmarken": "Hamulus ossis hamati (kroken)",
+      "ledforbindelser": "Mellanhandsben IV–V och grannben",
+      "grupp": "Handlovsbenen (ossa carpi)"
+    },
+    {
+      "latin": "Ossa metacarpi I–V",
+      "svenska": "Mellanhandsben",
+      "typ": "Långt rörben (miniatyr)",
+      "landmarken": "Basis, corpus, caput (knogarna, articulationes metacarpophalangeae)",
+      "ledforbindelser": "Handlovsbenen proximalt och fingerbenen distalt",
+      "grupp": "Mellanhandsbenen (ossa metacarpi)"
+    },
+    {
+      "latin": "Phalanges",
+      "svenska": "Fingerben (falanger)",
+      "typ": "Långt rörben (miniatyr)",
+      "landmarken": "Tummen har 2 falanger (grund + ytter), övriga fingrar 3",
+      "ledforbindelser": "Mellanhandsben och intilliggande falanger (grund-, mellan- och ytterleder)",
+      "grupp": "Fingerbenen (phalanges)"
+    }
+  ],
+  "leder": [
+    {
+      "namn": "Handleden",
+      "latin": "Articulatio radiocarpalis",
+      "fork": "—",
+      "typ": "Ellipsoidled (kondylled)",
+      "mellan": "Strålbenet och proximala handlovsbenen"
+    },
+    {
+      "namn": "Mellanhandslovslederna",
+      "latin": "Articulationes intercarpales / mediocarpalis",
+      "fork": "—",
+      "typ": "Plana leder",
+      "mellan": "Mellan handlovsbenen"
+    },
+    {
+      "namn": "Handlovs–mellanhandslederna",
+      "latin": "Articulationes carpometacarpales",
+      "fork": "CMC",
+      "typ": "Plana leder (tummens är sadelled)",
+      "mellan": "Handlovsbenen och mellanhandsbenen"
+    },
+    {
+      "namn": "Tummens sadelled",
+      "latin": "Articulatio carpometacarpalis pollicis",
+      "fork": "CMC I",
+      "typ": "Sadelled",
+      "mellan": "Stora månghörningsbenet (trapezium) och mellanhandsben I"
+    },
+    {
+      "namn": "Knoglederna",
+      "latin": "Articulationes metacarpophalangeae",
+      "fork": "MCP",
+      "typ": "Kulleder (begränsade)",
+      "mellan": "Mellanhandsbenen och grundfalangerna"
+    },
+    {
+      "namn": "Proximala fingerlederna",
+      "latin": "Articulationes interphalangeae proximales",
+      "fork": "PIP",
+      "typ": "Gångjärnsleder",
+      "mellan": "Grund- och mellanfalangerna"
+    },
+    {
+      "namn": "Distala fingerlederna",
+      "latin": "Articulationes interphalangeae distales",
+      "fork": "DIP",
+      "typ": "Gångjärnsleder",
+      "mellan": "Mellan- och ytterfalangerna"
+    },
+    {
+      "namn": "Tummens fingerled",
+      "latin": "Articulatio interphalangea pollicis",
+      "fork": "IP",
+      "typ": "Gångjärnsled",
+      "mellan": "Tummens grund- och ytterfalang"
+    }
+  ]
+}

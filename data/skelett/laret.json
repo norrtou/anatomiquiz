@@ -1,0 +1,47 @@
+{
+  "slug": "laret",
+  "region": "Låret",
+  "underrubrik": "Lårbenet och knäskålen",
+  "kort_beskrivning": "Kroppens längsta ben och dess största sesamben – lårben och knäskål.",
+  "kort_cta": "Till lårets ben →",
+  "intro": "Låret innehåller lårbenet, kroppens längsta och starkaste ben, samt knäskålen som ligger inbäddad i lårmusklernas sena framför knäet och förbättrar deras kraft.",
+  "kallor": [
+    "Bojsen-Møller, F., Simonsen, E. B., & Tranum-Jensen, J. (2018). <em>Rörelseapparatens anatomi</em> (2:a uppl.). Liber.",
+    "Federative International Programme for Anatomical Terminology. (2019). <em>Terminologia anatomica</em> (2:a uppl.). FIPAT.",
+    "Paulsen, F., & Waschke, J. (Red.). (2018). <em>Sobotta atlas of human anatomy</em> (16:e uppl.). Elsevier."
+  ],
+  "ben": [
+    {
+      "latin": "Femur",
+      "svenska": "Lårben",
+      "typ": "Långt rörben",
+      "landmarken": "Caput femoris, collum femoris, trochanter major/minor, linea aspera, condylus medialis/lateralis, epicondyler",
+      "ledforbindelser": "Höftbenet (höftleden), knäskålen och skenbenet (knäleden)",
+      "grupp": "Lårben och knäskål"
+    },
+    {
+      "latin": "Patella",
+      "svenska": "Knäskål",
+      "typ": "Sesamben (kroppens största)",
+      "landmarken": "Basis och apex patellae, facies articularis; inbäddad i quadricepssenan",
+      "ledforbindelser": "Lårbenets framsida (facies patellaris femoris)",
+      "grupp": "Lårben och knäskål"
+    }
+  ],
+  "leder": [
+    {
+      "namn": "Knäleden",
+      "latin": "Articulatio genus",
+      "fork": "—",
+      "typ": "Sammansatt gångjärnsled (med menisker)",
+      "mellan": "Lårbenet, skenbenet och knäskålen"
+    },
+    {
+      "namn": "Knäskålsleden",
+      "latin": "Articulatio femoropatellaris",
+      "fork": "—",
+      "typ": "Glidled",
+      "mellan": "Knäskålen och lårbenets framsida"
+    }
+  ]
+}
