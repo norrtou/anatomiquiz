@@ -1438,5 +1438,245 @@
     "topic": "nervsystemet_aldrande",
     "difficulty": "Normal",
     "source": "Nervsystemet"
+  },
+  {
+    "id": "nervbanor_q1",
+    "type": "mc",
+    "prompt": "Vilken bana leder det viljemässiga kommandot för finkoordinerad rörelse i händer och fingrar?",
+    "correct": "Tractus corticospinalis lateralis",
+    "distractors": [
+      "Tractus rubrospinalis",
+      "Tractus spinothalamicus lateralis",
+      "Tractus vestibulospinalis"
+    ],
+    "topic": "nervsystemet_banor",
+    "difficulty": "Normal",
+    "source": "Nervbanor"
+  },
+  {
+    "id": "nervbanor_q2",
+    "type": "mc",
+    "prompt": "Var korsar de flesta fibrerna i den laterala kortikospinalbanan till motsatt sida?",
+    "correct": "I förlängda märgen (decussatio pyramidum)",
+    "distractors": [
+      "I ryggmärgen, segmentellt",
+      "I mellanhjärnan",
+      "I thalamus"
+    ],
+    "topic": "nervsystemet_banor",
+    "difficulty": "Normal",
+    "source": "Nervbanor"
+  },
+  {
+    "id": "nervbanor_q3",
+    "type": "mc",
+    "prompt": "Vilken bana leder smärta och temperatur?",
+    "correct": "Tractus spinothalamicus lateralis",
+    "distractors": [
+      "Tractus corticospinalis lateralis",
+      "Baksträngsbanan",
+      "Tractus tectospinalis"
+    ],
+    "topic": "nervsystemet_banor",
+    "difficulty": "Normal",
+    "source": "Nervbanor"
+  },
+  {
+    "id": "nervbanor_q4",
+    "type": "mc",
+    "prompt": "Diskriminativ beröring, vibration och medveten proprioception leds av:",
+    "correct": "Baksträngs–lemniscus medialis-systemet",
+    "distractors": [
+      "Tractus spinothalamicus lateralis",
+      "Tractus rubrospinalis",
+      "Tractus reticulospinalis"
+    ],
+    "topic": "nervsystemet_banor",
+    "difficulty": "Normal",
+    "source": "Nervbanor"
+  },
+  {
+    "id": "nervbanor_q5",
+    "type": "mc",
+    "prompt": "Var korsar smärt- och temperaturbanan (tractus spinothalamicus lateralis)?",
+    "correct": "I ryggmärgen, ett par segment ovanför inträdet",
+    "distractors": [
+      "I förlängda märgen",
+      "I thalamus",
+      "Den korsar inte alls"
+    ],
+    "topic": "nervsystemet_banor",
+    "difficulty": "Normal",
+    "source": "Nervbanor"
+  },
+  {
+    "id": "nervbanor_q6",
+    "type": "mc",
+    "prompt": "Vilken kombination av tecken talar för en skada i övre motorneuron (UMN)?",
+    "correct": "Spasticitet, stegrade reflexer och positiv Babinski",
+    "distractors": [
+      "Slapp pares och fascikulationer",
+      "Uttalad muskelatrofi",
+      "Nedsatta senreflexer"
+    ],
+    "topic": "nervsystemet_banor",
+    "difficulty": "Normal",
+    "source": "Nervbanor"
+  },
+  {
+    "id": "nervbanor_q7",
+    "type": "mc",
+    "prompt": "Var ligger cellkroppen för det nedre motorneuron som styr en skelettmuskel i armen?",
+    "correct": "I ryggmärgens framhorn",
+    "distractors": [
+      "I motorbarken",
+      "I thalamus",
+      "I lillhjärnan"
+    ],
+    "topic": "nervsystemet_banor",
+    "difficulty": "Normal",
+    "source": "Nervbanor"
+  },
+  {
+    "id": "nervbanor_q8",
+    "type": "mc",
+    "prompt": "Vilken struktur är den sista omkopplingsstationen innan de medvetna känselbanorna når känselbarken?",
+    "correct": "Thalamus",
+    "distractors": [
+      "Lillhjärnan",
+      "Nucleus ruber",
+      "Hypothalamus"
+    ],
+    "topic": "nervsystemet_banor",
+    "difficulty": "Normal",
+    "source": "Nervbanor"
+  },
+  {
+    "id": "nervbanor_q9",
+    "type": "mc",
+    "prompt": "Vad är typiskt för Brown-Séquards syndrom (halvsidig ryggmärgsskada)?",
+    "correct": "Bortfall av beröring och ledkänsla på samma sida, men av smärta och temperatur på motsatt sida",
+    "distractors": [
+      "Bortfall av all känsel på samma sida",
+      "Bortfall av all känsel på motsatt sida",
+      "Enbart motoriskt bortfall, ingen känselpåverkan"
+    ],
+    "topic": "nervsystemet_banor",
+    "difficulty": "Normal",
+    "source": "Nervbanor"
+  },
+  {
+    "id": "nervbanor_q10",
+    "type": "mc",
+    "prompt": "Vad reglerar de extrapyramidala banorna främst?",
+    "correct": "Hållning, muskeltonus och automatiska rörelser",
+    "distractors": [
+      "Finmotorik i fingrarna",
+      "Smärta och temperatur",
+      "Enbart synreflexer"
+    ],
+    "topic": "nervsystemet_banor",
+    "difficulty": "Normal",
+    "source": "Nervbanor"
+  },
+  {
+    "id": "nervbanor_q11",
+    "type": "mc",
+    "prompt": "Vart leder tractus spinocerebellaris sin information?",
+    "correct": "Till lillhjärnan",
+    "distractors": [
+      "Till känselbarken",
+      "Till thalamus",
+      "Till motorbarken"
+    ],
+    "topic": "nervsystemet_banor",
+    "difficulty": "Normal",
+    "source": "Nervbanor"
+  },
+  {
+    "id": "nervbanor_q12",
+    "type": "mc",
+    "prompt": "Var överförs den motoriska signalen från nerv till skelettmuskel med hjälp av acetylkolin?",
+    "correct": "Vid den motoriska ändplattan",
+    "distractors": [
+      "I ryggmärgens framhorn",
+      "I thalamus",
+      "Vid decussatio pyramidum"
+    ],
+    "topic": "nervsystemet_banor",
+    "difficulty": "Normal",
+    "source": "Nervbanor"
+  },
+  {
+    "id": "nervbanor_q13",
+    "type": "tf",
+    "prompt": "Den laterala kortikospinalbanan korsar till motsatt sida i förlängda märgen.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "nervsystemet_banor",
+    "difficulty": "Normal",
+    "source": "Nervbanor"
+  },
+  {
+    "id": "nervbanor_q14",
+    "type": "tf",
+    "prompt": "Smärt- och temperaturbanan (tractus spinothalamicus lateralis) korsar redan i ryggmärgen, nära inträdesnivån.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "nervsystemet_banor",
+    "difficulty": "Normal",
+    "source": "Nervbanor"
+  },
+  {
+    "id": "nervbanor_q15",
+    "type": "tf",
+    "prompt": "Vid skada på nedre motorneuron (LMN) ses spasticitet och stegrade senreflexer.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "nervsystemet_banor",
+    "difficulty": "Normal",
+    "source": "Nervbanor"
+  },
+  {
+    "id": "nervbanor_q16",
+    "type": "tf",
+    "prompt": "Baksträngsbanan leder smärta och temperatur till hjärnbarken.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "nervsystemet_banor",
+    "difficulty": "Normal",
+    "source": "Nervbanor"
+  },
+  {
+    "id": "nervbanor_q17",
+    "type": "tf",
+    "prompt": "Det nedre motorneuronet ligger i ryggmärgens framhorn eller i en motorisk kranialnervskärna.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "nervsystemet_banor",
+    "difficulty": "Normal",
+    "source": "Nervbanor"
+  },
+  {
+    "id": "nervbanor_q18",
+    "type": "tf",
+    "prompt": "De spinocerebellära banorna leder omedveten proprioception till lillhjärnan.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "nervsystemet_banor",
+    "difficulty": "Normal",
+    "source": "Nervbanor"
   }
 ]

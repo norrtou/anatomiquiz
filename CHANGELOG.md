@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.54
+- **Nervbanorna kopplade till quizet (arbetsterapeut-ämnet Neurologi).** 18 nya frågor (12 MC + 6 TF) om de motoriska och sensoriska banorna, faktagranskade mot kunskapsbankens ban-sidor: kortikospinalbanan och var den korsar (decussatio pyramidum), spinothalamicus (smärta/temperatur), baksträngsbanan (beröring/vibration/proprioception), UMN- vs LMN-tecken, framhornet, thalamus som omkopplingsstation, Brown-Séquard, extrapyramidala banor, spinocerebellaris och den motoriska ändplattan. Tillagda i `data/neurologi.json` (120 → 138 frågor; topic `nervsystemet_banor`, source "Nervbanor"); inga dubbletter, unika ID, format validerat.
+- Ämnesetiketten **"Neurologi (TF)" → "Neurologi (MC+TF)"** i `index.html` (ämnet har nu både MC och TF). Knyter ihop kunskapsbankens nervban-innehåll med aktiv träning i quizet.
+- APP_VERSION/VERSION → 0.9.54; app.js-cachebuster → 0.9.54.
+
 ## 0.9.53
 - **Parad faktatext: Så leds känseln (sensorisk princip).** Ny `kunskapsbank/sa-leds-kanseln.html` (Article+LearningResource), motsvarighet till "Så styrs en rörelse". Tre-neuronkedjan (receptor → spinalganglion → ryggmärg/förlängda märgen → thalamus → känselbark), en **jämförelsetabell baksträngsbanan kontra spinotalamusbanan** (modalitet, var de korsar, läge, bortfall), Brown-Séquard-dissociationen, medvetet kontra omedvetet samt receptortyperna. Strikt källförankrad (Fitzgerald, Guyton, Kandel, Gray's). Andra live-kortet på faktatexter-pillaren; korslänkad till Sensoriska nervbanor.
 - **Tooltips §6c (uttömmande):** 39 länkar, 0 medicinska ord utan tooltip. Ordlistan **+7 termer** (ganglion spinale, mekanoreceptor, termoreceptor, proprioceptor, muskelspole, Brown-Séquards syndrom, kontralateral → 10 158); facit → 721 inkl. plural-/bestämdformer (mekanoreceptorer, neuronet …). **Buggfix:** tre tooltipdefs var avhuggna mitt i ord (trim kapade vid 150 tecken) – brown-séquards syndrom, lemniscus medialis, medulla oblongata omskrivna till rena defs; berörda sidor om-wirade. 0 trasiga ankare (721/721).
