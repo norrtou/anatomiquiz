@@ -2405,6 +2405,13 @@ ol li {
 .kb-mtable .c-ltyp  { width: 22%; }
 .kb-mtable .c-lben  { width: 26%; }
 
+/* Kärltabeller (latin/svenska/typ smalare, avgång och försörjning bredast) */
+.kb-mtable .c-kla { width: 20%; }
+.kb-mtable .c-ksv { width: 14%; }
+.kb-mtable .c-kty { width: 8%; }
+.kb-mtable .c-kfr { width: 28%; }
+.kb-mtable .c-kom { width: 30%; }
+
 @media (max-width: 720px) {
   .kb-mtable, .kb-mtable tbody, .kb-mtable tr, .kb-mtable td { display: block; width: auto; }
   .kb-mtable colgroup { display: none; }

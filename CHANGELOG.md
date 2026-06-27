@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.62
+- **Ny tabellsektion: Kärl** (`kunskapsbank/karl.html` + 6 regionsidor), datadriven via ny `scripts/generate_karl.py` och `data/karl/*.json`. Därmed är alla fyra tabellsektioner klara (muskler, skelett, nerver, kärl) – inga platshållare kvar i Listor & tabeller.
+  - **Regioner (6, följer kärlträdet):** Huvudet och halsen, Armen, Bröstkorgen, Buken, Bäckenet, Benet (44 kärlrader). Grövre indelning än muskel-/skelettregionerna eftersom kärlträdet spänner större områden.
+  - **Tabell per region:** Kärl (latin) · Svenska · Typ · Avgår från / mynnar i · Försörjer / dränerar, grupperad i artärer/vener (och centrala kärl i thorax).
+  - **Binomial-korrekt från start:** 40 nya artär-/vennamn som äkta ordlisteposter + i `kb_glossary_terms.json` → hela namnen wiras som EN tooltip (Arteria carotis communis, Vena saphena magna …). 0 binomial-fel. Ordlistan 10 608 → **10 648**; termkälla → 1098.
+  - **Integrerat:** Kärl-kortet i `listor-tabeller.html` satt till Live (+ uppdaterad intro), 7 URL:er i `sitemap.xml`, nya kolumnbredder i CSS (`c-k*`), CSS-cachebuster 0.7.15 för kärlsidorna. SEO §12 grön på alla 7 sidor.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.62.
+
 ## 0.9.61
 - **Tooltip-fix: binomiala latinnamn = EN term (skelett + muskler + nerver).** Tidigare wirades bara det generiska/första ordet av flerords-latinnamn (t.ex. bara "Articulatio" i *Articulatio atlantooccipitalis*, ett mittord i *Musculus biceps brachii*, bara "Nervus" i *Nervus musculocutaneus*). Nu länkas hela namnet som **en sammanhållen tooltip** till sitt **eget** ordlisteuppslag.
   - **Fulla namnen tillagda som äkta ordlisteposter:** 66 ben-/lednamn + 179 muskelnamn + 43 nervtabell-nerver/banor + 23 nerver som bara fanns i muskeltabellernas innervationskolumn (t.ex. nervus thoracodorsalis, nervus interosseus posterior, tractus iliotibialis). Ordlistan 10 297 → **10 608**; `kb_glossary_terms.json` 721 → **1055**.
