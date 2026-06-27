@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.66
+- **Tooltips för anatomiska plan i led-/ROM-sidorna.** Sagittalplan, frontalplan, transversalplan (och medianplan) fanns som ordlisteposter men saknades i `kb_glossary_terms.json` → ingen tooltip i Rörelseplan-kolumnen. Nu inlagda i wire-källan (→ 1303) och led-sidorna om-wirade; planbegreppen får tooltip även på andra sidor vid nästa regenerering.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.66.
+
 ## 0.9.65
 - **Ordlistan: 21 AT/fysio-mätinstrument.** Instrument för rörlighet (goniometri, goniometer, inklinometer, elektrogoniometer, skoliometer), styrka (dynamometer, handdynamometer, vigorimeter, pinchmeter, myometer, isokinetisk dynamometer), fingerfärdighet/handfunktion (Nine Hole Peg Test, Box and Blocks Test, Purdue Pegboard, Jebsen-Taylor hand function test) samt närliggande (monofilament, aestesiometer + estesiometer, tvåpunktsdiskriminering, algometer, volumeter). Ordlistan 10 648 → **10 669**; även i `kb_glossary_terms.json` (1299) → "goniometri" m.fl. får nu tooltip där de nämns i ROM-sidorna.
 - VERSION/APP_VERSION/app.js-cachebuster → 0.9.65.
