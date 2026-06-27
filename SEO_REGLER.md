@@ -197,6 +197,11 @@ Tooltips är kärninnehåll i kunskapsbanken (tabeller OCH faktatexter), inte de
   ta ett av orden eller dela upp den i lösa intilliggande tooltips. Lägg multiordsnyckeln i
   facit; `wire_terms` väljer längsta match. Två **genuint separata** ord (t.ex.
   `abductor pollicis`) får däremot var sin tooltip.
+- **Kort (`.kb-card`) får ALDRIG innehålla tooltips.** En `kb-term`-länk inuti ett kort stör
+  klicket till målsidan – och blir en **nästlad `<a>`** i klickbara kort (ogiltig HTML). Gäller
+  både `<a class="kb-card">` och `<div class="kb-card">` (placeholders). `wire_terms.py`
+  skyddar `.kb-card` som zon; lägg heller aldrig in kb-term manuellt i ett kort. (Samma princip
+  som att navigeringsknappar/`.btn` hålls rena.)
 - **Svenska medicinska former får INTE hoppas över.** Ordlistan (`data/ordlista.json`) är
   **latin-/TA-nyckad**. Svenska sammansättningar och böjningar (framhorn, framhornet,
   ryggmärgen, kortikospinalbanan, motorbarken, lillhjärnan, muskeltonus) sträng-matchar

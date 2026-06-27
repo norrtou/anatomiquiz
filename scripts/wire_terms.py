@@ -85,7 +85,13 @@ def wire_html(html, terms, rx, stats=None):
                 in_anchor = False
         else:
             is_breadcrumb_nav = (name == "nav" and 'class="breadcrumb"' in attrs)
-            if (name in ("head", "script", "style") or is_breadcrumb_nav) and not self_closing:
+            # Kort (.kb-card) får ALDRIG tooltips inuti sig – en kb-term-länk där stör
+            # klicket på kortet (och blir nästlad <a> i klickbara kort). Matcha bara
+            # själva kort-behållaren (class börjar med kb-card följt av blank/citat),
+            # inte kb-card-desc/-title/-go. <a>-kort fångas redan av in_anchor nedan.
+            is_kb_card = bool(re.search(r'class="kb-card[ "]', attrs))
+            if (name in ("head", "script", "style") or is_breadcrumb_nav
+                    or (is_kb_card and name != "a")) and not self_closing:
                 protected.append(name)        # öppna skyddad zon
             elif name == "a" and not self_closing:
                 in_anchor = True

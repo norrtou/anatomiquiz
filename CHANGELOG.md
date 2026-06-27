@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.55
+- **Ny regel: kort (`.kb-card`) får aldrig innehålla tooltips.** En `kb-term`-länk i ett kort (knapp-länk) stör klicket till målsidan och blir en nästlad `<a>` i klickbara kort. Kodad i **SEO_REGLER §6c**.
+  - `scripts/wire_terms.py`: skyddar nu `.kb-card` som zon (både `<a>`- och `<div>`-kort/placeholders) – precis regex `class="kb-card[ "]` så `kb-card-desc/-title/-go` inte påverkas. Klickbara `<a>`-kort skyddades redan av `in_anchor`; gapet var div-placeholders.
+  - Fix: tog bort en felaktig tooltip ("ryggmärg") som wirats in i "Nervsystemet"-placeholderkortet på `faktatexter.html`. Verifierat: 0 kort med tooltip på hela sajten. Regressionstestat att vanlig tabell-/textwiring är oförändrad.
+- **Språkputs av "Så leds känseln" (`sa-leds-kanseln.html`).** Löptexten omarbetad till tydligare svenska (bl.a. "Känselns väg", "Ett känselintryck som ska nå medvetandet …", "korsar kroppens mittlinje"); tooltips återlagda med `wire_terms.py` ovanpå den nya texten (39 kb-term-länkar, 26 unika). Inga nästlade `<a>`, inga tooltips i kort.
+- APP_VERSION/VERSION → 0.9.55; app.js-cachebuster → 0.9.55.
+
 ## 0.9.54
 - **Nervbanorna kopplade till quizet (arbetsterapeut-ämnet Neurologi).** 18 nya frågor (12 MC + 6 TF) om de motoriska och sensoriska banorna, faktagranskade mot kunskapsbankens ban-sidor: kortikospinalbanan och var den korsar (decussatio pyramidum), spinothalamicus (smärta/temperatur), baksträngsbanan (beröring/vibration/proprioception), UMN- vs LMN-tecken, framhornet, thalamus som omkopplingsstation, Brown-Séquard, extrapyramidala banor, spinocerebellaris och den motoriska ändplattan. Tillagda i `data/neurologi.json` (120 → 138 frågor; topic `nervsystemet_banor`, source "Nervbanor"); inga dubbletter, unika ID, format validerat.
 - Ämnesetiketten **"Neurologi (TF)" → "Neurologi (MC+TF)"** i `index.html` (ämnet har nu både MC och TF). Knyter ihop kunskapsbankens nervban-innehåll med aktiv träning i quizet.
