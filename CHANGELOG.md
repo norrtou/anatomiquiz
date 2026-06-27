@@ -1,5 +1,15 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.56
+- **EEAT-lyft av "Om Anatomiquiz" (`info.html`).** Sidan tydligt namngiven "Om Anatomiquiz" (menyknapp `Info` → `Om Anatomiquiz`, brödsmula → "Om Anatomiquiz", fix av tidigare danglande `aria-labelledby="infoHeading"` med en sr-only `<h2>`).
+  - **Författaridentitet & trovärdighet:** nytt avsnitt "Vem ligger bakom Anatomiquiz?" namnger Daniel Medin (utbildad medicinsk sekreterare, arbetsterapeutstudent vid Lunds universitet, anatomiintresse) med länkar till norrtou.se, LinkedIn och GitHub. Ny ursprungsberättelse "Varför Anatomiquiz finns" (saknade gratis svenskt material → byggde eget).
+  - **Målgrupp:** nytt avsnitt "Vem har nytta av Anatomiquiz?" listar utbildningar (arbetsterapeut, fysioterapeut, sjuksköterska, läkare, medicinsk sekreterare, undersköterska, biomedicinsk analytiker, röntgensjuksköterska, naprapat/kiropraktor/osteopat, tandvård, dietist/logoped/audionom/optiker, **personlig tränare (PT)**, idrottsvetare).
+  - **Källor:** "Källor och kvalitetssäkring" fick en explicit APA-källista (Terminologia Anatomica, ICD-10-SE, ICD-11, Medibas). **Färskhet:** synlig "Senast uppdaterad"-rad.
+  - **Strukturerad data:** JSON-LD `AboutPage` utökad med `author` (Person Daniel Medin + `sameAs`), `publisher` (Norrtou Creations) och `dateModified`.
+  - **META:** title/description/OG/Twitter omskrivna att återanvända *anatomiquiz, anatomi, quiz, medicinsk ordbok* (ingen `meta keywords` – den är en död SEO-signal sedan 2009 och saknas på övriga sidor).
+- **`index.html`:** menyknappen → "Om Anatomiquiz"; description/OG/Twitter återanvänder nu *anatomiquiz* och *medicinsk ordbok*.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.56.
+
 ## 0.9.55
 - **Ny regel: kort (`.kb-card`) får aldrig innehålla tooltips.** En `kb-term`-länk i ett kort (knapp-länk) stör klicket till målsidan och blir en nästlad `<a>` i klickbara kort. Kodad i **SEO_REGLER §6c**.
   - `scripts/wire_terms.py`: skyddar nu `.kb-card` som zon (både `<a>`- och `<div>`-kort/placeholders) – precis regex `class="kb-card[ "]` så `kb-card-desc/-title/-go` inte påverkas. Klickbara `<a>`-kort skyddades redan av `in_anchor`; gapet var div-placeholders.
