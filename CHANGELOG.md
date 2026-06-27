@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.61
+- **Tooltip-fix: binomiala latinnamn = EN term (skelett + muskler + nerver).** Tidigare wirades bara det generiska/första ordet av flerords-latinnamn (t.ex. bara "Articulatio" i *Articulatio atlantooccipitalis*, ett mittord i *Musculus biceps brachii*, bara "Nervus" i *Nervus musculocutaneus*). Nu länkas hela namnet som **en sammanhållen tooltip** till sitt **eget** ordlisteuppslag.
+  - **Fulla namnen tillagda som äkta ordlisteposter:** 66 ben-/lednamn + 179 muskelnamn + 43 nervtabell-nerver/banor + 23 nerver som bara fanns i muskeltabellernas innervationskolumn (t.ex. nervus thoracodorsalis, nervus interosseus posterior, tractus iliotibialis). Ordlistan 10 297 → **10 608**; `kb_glossary_terms.json` 721 → **1055**.
+  - Definitioner härledda ur respektive tabellers data (svenska, bentyp/ledtyp/funktion, vilka ben/muskler). Nervsidorna (handbyggda, ingen generator) de-wirades och om-wirades med `wire_terms`; muskel- och skelettsidorna regenererades.
+  - **Verifierat: 0 "generisk-ord-ensam"-länkar kvar i hela /kunskapsbank/.** `Os coxae` vs `Articulatio coxae` får var sitt korrekta ankare; parenteser/romerska intervall hålls utanför länken.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.61.
+
 ## 0.9.60
 - **Ny tabellsektion: Skelettet** (`kunskapsbank/skelett.html` + 12 regionsidor), datadriven via ny `scripts/generate_skelett.py` och `data/skelett/*.json` – speglar muskelgeneratorn (full SEO-head, JSON-LD Article/CollectionPage + BreadcrumbList, APA-referenser, inbyggd kb-term-tooltip-wiring och körbar SEO §12-grind).
   - **Regioner (speglar muskelregionerna):** Skallen, Halsen, Ryggen, Bröstkorgen, Skuldran, Överarmen, Underarmen, Handen, Höften, Låret, Underbenet, Foten. De tre huvudregionerna slogs ihop till Skallen; benlösa bukväggen/bäckenbotten utgår (bäckenbenen under Höften).
