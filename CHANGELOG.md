@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.63
+- **"Listor & tabeller"-kortet på kunskapsbank-hubben satt till Live** (var "Snart"/förhandstitt) – hela tabellsektionen är klar (muskler, skelett, nerver, kärl). Uppdaterad beskrivning och CTA. Faktatexter kvar som "Snart" (genuint ej klar).
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.63.
+
 ## 0.9.62
 - **Ny tabellsektion: Kärl** (`kunskapsbank/karl.html` + 6 regionsidor), datadriven via ny `scripts/generate_karl.py` och `data/karl/*.json`. Därmed är alla fyra tabellsektioner klara (muskler, skelett, nerver, kärl) – inga platshållare kvar i Listor & tabeller.
   - **Regioner (6, följer kärlträdet):** Huvudet och halsen, Armen, Bröstkorgen, Buken, Bäckenet, Benet (44 kärlrader). Grövre indelning än muskel-/skelettregionerna eftersom kärlträdet spänner större områden.
