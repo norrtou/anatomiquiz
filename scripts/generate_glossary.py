@@ -768,6 +768,7 @@ def write_sitemap(group_files: list[str]) -> None:
     blocks.append(url_block(f"{SITE}/kunskapsbank/listor-tabeller.html", "weekly", "0.7"))
     blocks.append(url_block(f"{SITE}/kunskapsbank/faktatexter.html", "weekly", "0.7"))
     blocks.append(url_block(f"{SITE}/kunskapsbank/sa-styrs-en-rorelse.html", "monthly", "0.7"))
+    blocks.append(url_block(f"{SITE}/kunskapsbank/sa-leds-kanseln.html", "monthly", "0.7"))
     # Nervtabeller (under-pillar + nervsidor)
     blocks.append(url_block(f"{SITE}/kunskapsbank/nervtabeller.html", "weekly", "0.7"))
     blocks.append(url_block(f"{SITE}/kunskapsbank/kranialnerverna.html", "monthly", "0.7"))
