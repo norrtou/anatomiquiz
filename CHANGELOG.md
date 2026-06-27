@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.52
+- **Nya banor: Sensoriska nervbanor (ascenderande).** Ny tabellsida `kunskapsbank/nervtabell-sensorbanor.html` (Article+LearningResource), parallell till de motoriska. Två tabeller: **medvetna banor** till känselbarken (baksträngs–lemniscus medialis-systemet, tractus spinothalamicus lateralis/anterior) och **omedvetna banor** till lillhjärnan (tractus spinocerebellaris posterior/anterior) – kolumner bana, modalitet, korsning, mål. Intro tar upp den kliniska korsnings­dissociationen (Brown-Séquard). Strikt källförankrad (FIPAT, Fitzgerald, Kandel, Gray's). 47 ordlistetooltips enligt §6c – latinfraser (fasciculus gracilis/cuneatus, tractus spinothalamicus/spinocerebellaris, commissura alba anterior, pedunculus cerebellaris …) som EN tooltip, svenska former mappade (känselbark→gyrus postcentralis, baksträngsbanan→fasciculus gracilis). Titel 55 / desc 135.
+  - Ordlistan +2 termer (medulla oblongata, lemniscus medialis → 10 151); facit → 696; 0 trasiga ankare.
+  - Hub `nervtabeller.html`: kort "Sensoriska nervbanor" efter Motoriska, `hasPart`=8; reciprok korslänk motoriska↔sensoriska. Sitemap (73 URL:er) + llms.txt synkade.
+- APP_VERSION/VERSION → 0.9.52; app.js-cachebuster → 0.9.52. Nya sidan på styles.css 0.7.12.
+
 ## 0.9.51
 - **Pilot: nervbanor som parad faktatext + tabell (princip + komplett lista).** Första exemplet på två-pelar-mönstret för nervbaneinnehåll – en förklarande faktatext och en referenstabell, korslänkade.
   - **Faktatext `kunskapsbank/sa-styrs-en-rorelse.html`** (Article+LearningResource, under Faktatexter): förenklad princip för hur ett motoriskt kommando leds från motorbarken via övre/nedre motorneuron till muskeln (steg-för-steg), en **UMN- vs LMN-jämförelsetabell** (förlamningstyp, reflexer, tonus, atrofi, Babinski/fascikulationer), pyramidalt vs extrapyramidalt samt finjustering via basala ganglier, cerebellum och sensorisk återkoppling. Första live-kortet på faktatexter-pillaren.
