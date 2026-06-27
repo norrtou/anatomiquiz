@@ -177,6 +177,52 @@ Trovärdighet är ett **krav** på allt innehåll i kunskapsbanken (YMYL). Därf
 
 ---
 
+## 6c. Ordlistetooltips (`kb-term`) — KVALITETSKRAV, OBLIGATORISKT
+
+Tooltips är kärninnehåll i kunskapsbanken (tabeller OCH faktatexter), inte dekoration.
+**Slarv här är ett regelbrott.** Gäller både nya sidor och revidering av befintliga.
+
+**Grundkrav:**
+
+- **KRITERIET ÄR MEDICINSKT/LATINSKT INNEHÅLL – inte fetstil.** Varje facklatinsk och
+  medicinsk **term** ska ha en `kb-term`-tooltip, i löptext, listor, rubriker och tabellceller.
+  Var INTE snål; "facit-only-minimum" räcker inte. Hellre en för mycket än en missad.
+  **`<strong>` är INTE kriteriet** – fetstil används också för pedagogisk betoning (meningar,
+  FAQ-frågor, minnesramsor, personnamn) och de ska INTE wiras. Att alla missade ord råkade
+  vara fetmarkerade i en viss artikel var en tillfällighet. Använd `<strong>`-listan som ett
+  **spaningshjälpmedel** för att hitta glömda termer, inte som en regel om att all fetstil ska länkas.
+- **Flerordstermer = EN sammanhållen tooltip.** En term som hör ihop (`decussatio
+  pyramidum`, `gyrus precentralis`, `nucleus ruber`, `basala ganglierna`, `motoriska
+  ändplattan`, `sulcus nervi ulnaris`) länkas som **hela frasen** – aldrig genom att bara
+  ta ett av orden eller dela upp den i lösa intilliggande tooltips. Lägg multiordsnyckeln i
+  facit; `wire_terms` väljer längsta match. Två **genuint separata** ord (t.ex.
+  `abductor pollicis`) får däremot var sin tooltip.
+- **Svenska medicinska former får INTE hoppas över.** Ordlistan (`data/ordlista.json`) är
+  **latin-/TA-nyckad**. Svenska sammansättningar och böjningar (framhorn, framhornet,
+  ryggmärgen, kortikospinalbanan, motorbarken, lillhjärnan, muskeltonus) sträng-matchar
+  inte de latinska uppslagsorden och missas annars tyst. Default-felet "termen finns inte i
+  ordlistan" är oftast fel: **kontrollera först om konceptet finns under sitt latinska namn**
+  (grep både svensk och latinsk form + sök i definitionerna). Lös genom att (a) lägga
+  facit-nycklar för de svenska formerna/böjningarna som pekar på den befintliga **latinska**
+  posten (framhorn→cornu anterius, ryggmärgen→medulla spinalis, motorbarken→gyrus
+  precentralis), och (b) lägga in i `data/ordlista.json` endast det som **genuint saknas**.
+- **Hrefs ska peka på riktiga ankare.** Generera href via generatorns egna
+  `slugify`/`page_key`/`page_file` (hanterar å/ä/ö → ascii). 0 trasiga ankare är ett krav.
+- **Homonymer/korta ord-fällor** undantas medvetet (kasus, komplement, opposition, numerus,
+  genus, os, axis, romerska siffror) – se [`CLAUDE_REGLER.md`] / minnet.
+
+**Arbetsflöde vid revidering:** för att fånga flerordsfraser och missade ord rent –
+**av-wira** sidan (`re.sub(r'<a class="kb-term"[^>]*>(.*?)</a>', r'\1', html)`) och **om-wira**
+med `scripts/wire_terms.py`. Skriptet är idempotent och rör inte andra `<a>`-länkar.
+
+**Verifiering (krav före commit):** (1) **Hård regel:** varje facit-href ska matcha ett verkligt
+`id="term-…"` i ordlistesidorna (0 trasiga ankare). (2) **Spaningshjälpmedel (ej hård regel):**
+ett skript som listar `<strong>`-innehåll utan `class="kb-term"` hjälper att hitta glömda termer
+– men listan behöver INTE vara tom: gå igenom den och wira de poster som är **medicinska/latinska
+termer**, lämna pedagogisk betoning, FAQ-frågor, minnesramsor, personnamn, siffror och segment­intervall.
+
+---
+
 ## 7. Tillgänglighet (a11y-trädet MÅSTE vara grönt)
 
 PageSpeed-kravet "tillgänglighetsträdet korrekt formaterat" = **alla** a11y-granskningar gröna.
@@ -285,6 +331,8 @@ Detta är hjärtat i dokumentet: **inget led i kedjan får glömmas.**
       bilder har `alt`.
 - [ ] **Prestanda:** inga externa resurser; JS bara vid behov + `defer`; bilddimensioner satta (CLS 0).
 - [ ] **Kedjan (§11)** avbockad: VERSION + index.html + app.js + CHANGELOG (+ sitemap + llms.txt + korslänkar).
+- [ ] **Tooltips (§6c):** varje **medicinsk/latinsk term** har `kb-term` (fetstil är INTE kriteriet);
+      flerordstermer som EN tooltip; svenska former mappade; 0 trasiga facit-ankare.
 - [ ] Ingen intern "till mig"-text live.
 
 ### Verifieringssnutt (kör i repo-roten)
@@ -305,6 +353,22 @@ print("tabeller",h.count('<table'),"captions",h.count('<caption>'),
 print("JSON-LD: giltig")
 PY
 # (sätt F=… till filsökvägen)
+```
+
+```bash
+# Tooltip-koll (§6c): fetord utan kb-term + trasiga facit-ankare.
+python3 - "$F" <<'PY'
+import sys,re,json,pathlib,glob
+h=pathlib.Path(sys.argv[1]).read_text(encoding="utf-8")
+miss=[re.sub(r'<[^>]+>','',s).strip() for s in re.findall(r'<strong>(.*?)</strong>',h,re.S)
+      if 'class="kb-term"' not in s]
+print("<strong> UTAN tooltip:", miss if miss else "inga ✓")
+ids=set()
+for p in glob.glob('ordlista-*.html'): ids|=set(re.findall(r'id="(term-[^"]+)"',open(p).read()))
+f=json.load(open('data/kb_glossary_terms.json'))
+bad=[k for k,v in f.items() if v['href'].split('#')[1] not in ids]
+print("trasiga facit-ankare:", len(bad), bad[:5])
+PY
 ```
 
 ---
