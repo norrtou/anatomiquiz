@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.43
+- **Kunskapsbankens menysidor: bättre ingresser, omflyttad infotext och enhetlig kortstandard.** Innehållsändringar i body; ingen indexering påverkad (alla sidor `index, follow`).
+  - **Hubben (`kunskapsbank/index.html`):** ny ingress under h1 (handlingsinriktad istället för "Allt material samlat …"). Den beskrivande texten flyttad från ovanför korten till under dem – på mobil möts man av alternativen direkt, inte en textvägg. Texten omformulerad.
+  - **Medicinsk terminologi (`medicinsk-terminologi.html`):** beskrivande infotext flyttad till under områdeskorten (hängande "Områden som hör hit:"-inledning borttagen, sammanslagen med ordliste-hänvisningen).
+  - **Listor & tabeller (`listor-tabeller.html`):** textlistan med inbäddade hyperlänkar ersatt av samma kort-/knappstandard (`.kb-grid`/`.kb-card`) som hubben – live-kort för muskeltabellerna + tre `is-placeholder` "Snart"-kort (kranialnerver, kärl, skelett). Ny ingress under h1 ("Studielistor för anatomiplugget …"). Meta description omskriven med sökordet "plugglistor".
+  - **Muskeltabeller (`muskeltabeller.html`):** footern följer nu tvåknapps-standarden – primär CTA "Testa dig själv i quizet" + tillbaka-länk.
+- APP_VERSION/VERSION → 0.9.43 (cachebuster: app.js → 0.9.43). styles.css oförändrad (0.7.10/0.7.9).
+
 ## 0.9.42
 - **Fix: absoluta URL:er i breadcrumb-strukturdata på alla 17 muskeltabell-sidor.** Google flaggade "Ogiltig webbadress i fältet id" eftersom position 1–3 i `BreadcrumbList` använde relativa URL:er (`/`, `/kunskapsbank/`, `/kunskapsbank/listor-tabeller.html`). Nu absoluta (`https://anatomiquiz.se/…`). HTML-breadcrumbens länkar förblir relativa. Fixat vid källan i `scripts/generate_muskeltabeller.py` (`bc_jsonld` absolutiserar relativa URL:er) så det inte regrederar vid regenerering.
 - APP_VERSION/VERSION → 0.9.42 (cachebuster: app.js → 0.9.42). styles.css oförändrad (0.7.10/0.7.9).
