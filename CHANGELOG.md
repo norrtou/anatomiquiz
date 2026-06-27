@@ -1,5 +1,19 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.49
+- **Nytt nervområde: Bålens nerver (interkostalnerverna, T1–T12).** Ny tabellsida `kunskapsbank/nervtabell-balen.html` (Article+LearningResource). Huvudtabell över de thorakala nervernas främre grenar – nervi intercostales (T1–T11), nervus subcostalis (T12) och nervus intercostobrachialis (T2) – med rötter, motorik (interkostal-/bukväggsmuskler), sensoriska dermatom och bortfall. Plus en liten **dermatomtabell** med kliniska minnesmärken (T4 bröstvårtorna, T6 svärdsutskottet, T10 naveln). 18 ordlistetooltips. Titel 56 / desc 148.
+  - Facit utökad med 4 termer (dermatom, pyramidalis, umbilicus, xiphoideus) + flerordstermen *processus xiphoideus* som EN tooltip (596→600).
+  - Hub `nervtabeller.html`: nytt kort "Bålens nerver" (anatomisk ordning huvud→hals→bål→arm→ben), `hasPart`=5.
+  - Sitemap (69 URL:er) + llms.txt synkade.
+- Nervgrenen täcker nu kranialnerver, halsens/bålens segment och de tre stora flätorna. APP_VERSION/VERSION → 0.9.49; app.js-cachebuster → 0.9.49. Nya sidan på styles.css 0.7.12.
+
+## 0.9.48
+- **Nytt nervområde: Halsens nerver (plexus cervicalis, C1–C4).** Ny tabellsida `kunskapsbank/nervtabell-halsen.html` (Article+LearningResource) i två tabeller – **hudgrenar** (occipitalis minor, auricularis magnus, transversus colli, supraclaviculares) och **muskelgrenar** (ansa cervicalis, nervus phrenicus till diafragma, direkta grenar till prevertebrala muskler). Kolumner: nerv, rötter, motorisk, sensorisk, bortfall. Komplett SEO-mall, responsiv `.kb-mtable`, APA-referenser, skriv ut/CSV-verktyg + ren utskrift. 43 ordlistetooltips. Titel 48 / desc 145.
+  - Facit utökad med 3 termer (diafragma, parotis, pericardium → 593→596).
+  - Hub `nervtabeller.html`: nytt kort "Halsens nerver" (anatomiskt mellan Kranialnerverna och Armens nerver), `hasPart`=4.
+  - Sitemap (68 URL:er) + llms.txt synkade.
+- Med detta täcker nervgrenen alla tre stora somatiska flätorna (cervicalis, brachialis, lumbosacralis) + kranialnerverna. APP_VERSION/VERSION → 0.9.48; app.js-cachebuster → 0.9.48. Nya sidan på styles.css 0.7.12.
+
 ## 0.9.47
 - **Mobilvänligare punktlistor i löptext.** Content-`<ul>` i `.info-about` ärvde webbläsarens default-indrag (~40px), vilket inuti kortets + info-rutans egen padding gjorde textkolumnen smal och ihoptryckt på mobil (märktes mest på terminologisidorna). Nu egen regel: `.info-about ul/ol` med litet indrag (1,2rem, 1,05rem på mobil), luftigare radavstånd och samma typografi som styckena. På ≤640px krymps även `.info-about`-paddingen (20→15px) så spalten blir bredare. `<ol>` och `.kb-sources` var redan måttliga och är orörda.
 - styles.css-cachebuster → **0.7.12** på de 6 sidor som har content-listor (5 terminologisidor + integritet.html); additiv ändring, övriga sidor opåverkade. APP_VERSION/VERSION → 0.9.47; app.js-cachebuster → 0.9.47.
