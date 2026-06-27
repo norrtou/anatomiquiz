@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.50
+- **Autonoma nervsystemet – jämförelseöversikt (sympatikus vs parasympatikus).** Ny sida `kunskapsbank/nervtabell-autonoma.html` (Article+LearningResource) med ett annat format än de regionala nervsidorna: två jämförelsetabeller (Egenskap/Organ | Sympatikus | Parasympatikus). **Grundegenskaper** (roll, ursprung thorakolumbalt vs kraniosakralt, ganglier, pre-/postganglionära signalsubstanser) och **organeffekter** (pupill, hjärta, bronker, mag-tarm, spottkörtlar, urinblåsa, blodkärl, binjuremärg, könsorgan). 18 ordlistetooltips. Titel 63 / desc 141.
+  - Facit utökad med 8 fysiologitermer (adrenalin, noradrenalin, peristaltik, sekret/sekretion, sympaticus, vasokonstriktion, bronkdilatation → 600→608).
+  - Hub `nervtabeller.html`: nytt kort sist (systemöversikt, ej regional), `hasPart`=6; hubbtexten kompletterad med en mening om autonoma systemet.
+  - Sitemap (70 URL:er) + llms.txt synkade.
+- Nervgrenen är därmed komplett: kranialnerver, somatiska segment/flätor (hals, bål, arm, ben) och autonom översikt. APP_VERSION/VERSION → 0.9.50; app.js-cachebuster → 0.9.50. Nya sidan på styles.css 0.7.12.
+
 ## 0.9.49
 - **Nytt nervområde: Bålens nerver (interkostalnerverna, T1–T12).** Ny tabellsida `kunskapsbank/nervtabell-balen.html` (Article+LearningResource). Huvudtabell över de thorakala nervernas främre grenar – nervi intercostales (T1–T11), nervus subcostalis (T12) och nervus intercostobrachialis (T2) – med rötter, motorik (interkostal-/bukväggsmuskler), sensoriska dermatom och bortfall. Plus en liten **dermatomtabell** med kliniska minnesmärken (T4 bröstvårtorna, T6 svärdsutskottet, T10 naveln). 18 ordlistetooltips. Titel 56 / desc 148.
   - Facit utökad med 4 termer (dermatom, pyramidalis, umbilicus, xiphoideus) + flerordstermen *processus xiphoideus* som EN tooltip (596→600).

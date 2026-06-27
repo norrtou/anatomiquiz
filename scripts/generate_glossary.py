@@ -774,6 +774,7 @@ def write_sitemap(group_files: list[str]) -> None:
     blocks.append(url_block(f"{SITE}/kunskapsbank/nervtabell-benet.html", "monthly", "0.7"))
     blocks.append(url_block(f"{SITE}/kunskapsbank/nervtabell-halsen.html", "monthly", "0.7"))
     blocks.append(url_block(f"{SITE}/kunskapsbank/nervtabell-balen.html", "monthly", "0.7"))
+    blocks.append(url_block(f"{SITE}/kunskapsbank/nervtabell-autonoma.html", "monthly", "0.7"))
     # Muskeltabeller (under-pillar + regionsidor)
     blocks.append(url_block(f"{SITE}/kunskapsbank/muskeltabeller.html", "weekly", "0.7"))
     for f in ["handen", "skuldran", "overarmen", "underarmen", "laret", "underbenet", "foten", "hoften", "bukvaggen", "ryggen", "halsen", "brostkorgen", "kaken", "ansiktet", "ogat", "backenbotten"]:
