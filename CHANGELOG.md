@@ -1,5 +1,15 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.57
+- **Omdesign av "Om Anatomiquiz" (`info.html`) – överskådlig, kortbaserad layout.** Det enda jättekortet med ~10 likvärdiga `<h2>` på rad är uppdelat i åtta fristående `.card` (samma känsla som startsidan), ett kort per ämne med en tydlig rubrik var.
+  - **Ny, logisk ordning:** intro → *Vad är Anatomiquiz?* → *Vem har nytta?* → *Vem ligger bakom + varför* → *Källor* → *Nyheter* → *Omfattning & versionshistorik* → *Kontakt*. "Vad det är" kommer nu före författarbio (besökarperspektiv).
+  - **Rätt ramberättelse:** appen presenteras nu som *anatomiquiz + Kunskapsbanken* (inte "quiz + ordbok"). De två delarna visas som rutor sida vid sida, och ett nytt block "Vad finns i Kunskapsbanken?" listar dess delar – medicinsk ordlista (med etymologi, grekiska/latin, lekmannatermer, sjukdomar+ICD, labbvärden), medicinsk terminologi, listor & tabeller, patientfall och faktatexter – var och en länkad till sin sida.
+  - **Head uppdaterad till samma ramberättelse:** title/description/OG/Twitter + JSON-LD säger nu "anatomiquiz & kunskapsbank" i stället för "anatomiquiz & medicinsk ordbok" (sökterm "medicinsk ordlista" behållen). Längder inom gräns (title 61, desc 144).
+  - **"Senast uppdaterad / uppdateras löpande" flyttad** från mitt i introt till en diskret notis ovanför *Nyheter*, där den hör hemma.
+  - **Två visuella uppgraderingar:** quizet och ordboken visas som två rutor i ett responsivt grid; målgruppslistan bryts i två kolumner på större skärmar (kompakt i stället för en lång remsa). Allt rasar till en kolumn på mobil.
+  - All text bevarad ordagrant. Nya klasser: `.about-title`, `.info-prose`, `.about-lead`, `.about-grid`, `.about-feature`, `.about-cols`, `.about-update`. `.contact` tappar sin topp-kantlinje (eget kort nu). CSS-cachebuster för info.html → 0.7.13.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.57.
+
 ## 0.9.56
 - **EEAT-lyft av "Om Anatomiquiz" (`info.html`).** Sidan tydligt namngiven "Om Anatomiquiz" (menyknapp `Info` → `Om Anatomiquiz`, brödsmula → "Om Anatomiquiz", fix av tidigare danglande `aria-labelledby="infoHeading"` med en sr-only `<h2>`).
   - **Författaridentitet & trovärdighet:** nytt avsnitt "Vem ligger bakom Anatomiquiz?" namnger Daniel Medin (utbildad medicinsk sekreterare, arbetsterapeutstudent vid Lunds universitet, anatomiintresse) med länkar till norrtou.se, LinkedIn och GitHub. Ny ursprungsberättelse "Varför Anatomiquiz finns" (saknade gratis svenskt material → byggde eget).

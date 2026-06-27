@@ -984,6 +984,119 @@ select:focus-visible {
 }
 
 /* ============================================================================
+   OM-SIDAN (info.html) — kortbaserad, överskådlig layout
+   ============================================================================ */
+
+/* Sektionsrubrik överst i varje om-kort (en per kort i stället för många på rad) */
+.about-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary-deep);
+  margin: 0 0 12px 0;
+  letter-spacing: 0.2px;
+}
+
+/* Prosa direkt i ett vitt .card — samma typografi som .info-about, utan tonad platta */
+.info-prose p {
+  margin: 0 0 12px 0;
+  color: var(--text-primary);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.info-prose p:last-child {
+  margin-bottom: 0;
+}
+
+.info-prose ul,
+.info-prose ol {
+  margin: 4px 0 14px;
+  padding-left: 1.2rem;
+}
+
+.info-prose ul:last-child,
+.info-prose ol:last-child {
+  margin-bottom: 0;
+}
+
+.info-prose li {
+  margin-bottom: 8px;
+  padding-left: 3px;
+  color: var(--text-primary);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Lead-paragraf i intro-kortet — något större för tonvikt */
+.about-lead {
+  font-size: 1.02rem;
+}
+
+/* Underrubrik inuti ett om-kort (t.ex. "Varför Anatomiquiz finns") */
+.info-prose .info-subheading:first-child {
+  margin-top: 0;
+}
+
+/* Prosablock direkt efter produktrutorna (t.ex. "Vad finns i Kunskapsbanken?") */
+.about-grid + .info-prose {
+  margin-top: 22px;
+}
+
+/* De två produktdelarna (quizet + ordboken) sida vid sida */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.about-feature {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(52, 211, 153, 0.05) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+}
+
+.about-feature h3 {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--primary-deep);
+  margin: 0 0 8px 0;
+}
+
+.about-feature p {
+  margin: 0;
+  color: var(--text-primary);
+  line-height: 1.6;
+  font-size: 0.93rem;
+}
+
+/* Målgruppslistan i flera kolumner på större skärmar — kompakt och överskådlig */
+.about-cols {
+  columns: 2;
+  column-gap: 28px;
+}
+
+.about-cols li {
+  break-inside: avoid;
+}
+
+/* "Uppdateras löpande / senast uppdaterad" — diskret notis ovanför nyheterna */
+.about-update {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  margin: 0 0 14px 0;
+}
+
+@media (max-width: 640px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-cols {
+    columns: 1;
+  }
+}
+
+/* ============================================================================
    NYHETER (info.html) — korta notiser, nyaste överst
    ============================================================================ */
 .news {
@@ -1024,9 +1137,8 @@ select:focus-visible {
    KONTAKTFORMULÄR (info.html) — diskret, längst ner på sidan
    ============================================================================ */
 .contact {
-  margin-top: 26px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(16, 185, 129, 0.15);
+  /* Eget kort på om-sidan — kortet ger separationen, ingen egen topp-kantlinje behövs. */
+  margin: 0;
 }
 
 .contact-heading {

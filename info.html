@@ -9,8 +9,8 @@
   <!-- =========================================================
        Primär SEO
        ========================================================= -->
-  <title>Om Anatomiquiz — gratis anatomiquiz & medicinsk ordbok på svenska</title>
-  <meta name="description" content="Om Anatomiquiz – en gratis anatomiquiz och medicinsk ordbok på svenska, skapad av Daniel Medin: medicinsk sekreterare och arbetsterapeutstudent.">
+  <title>Om Anatomiquiz — gratis anatomiquiz & kunskapsbank på svenska</title>
+  <meta name="description" content="Om Anatomiquiz – en gratis anatomiquiz och kunskapsbank på svenska med sökbar medicinsk ordlista, skapad av Daniel Medin, medicinsk sekreterare.">
   <meta name="author" content="Daniel Medin (Norrtou Creations)">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 
@@ -22,8 +22,8 @@
        ========================================================= -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://anatomiquiz.se/info.html">
-  <meta property="og:title" content="Om Anatomiquiz — gratis anatomiquiz & medicinsk ordbok">
-  <meta property="og:description" content="En gratis anatomiquiz och medicinsk ordbok på svenska, skapad av Daniel Medin – medicinsk sekreterare och arbetsterapeutstudent. Läs om bakgrund och syfte.">
+  <meta property="og:title" content="Om Anatomiquiz — gratis anatomiquiz & kunskapsbank">
+  <meta property="og:description" content="En gratis anatomiquiz och kunskapsbank på svenska med sökbar medicinsk ordlista, skapad av Daniel Medin. Läs om bakgrund och syfte.">
   <meta property="og:image" content="https://anatomiquiz.se/img/og-image.png">
   <meta property="og:image:width" content="1518">
   <meta property="og:image:height" content="864">
@@ -35,8 +35,8 @@
        Twitter / X Card
        ========================================================= -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Om Anatomiquiz — gratis anatomiquiz & medicinsk ordbok">
-  <meta name="twitter:description" content="En gratis anatomiquiz och medicinsk ordbok på svenska, skapad av Daniel Medin – medicinsk sekreterare och arbetsterapeutstudent. Läs om bakgrund och syfte.">
+  <meta name="twitter:title" content="Om Anatomiquiz — gratis anatomiquiz & kunskapsbank">
+  <meta name="twitter:description" content="En gratis anatomiquiz och kunskapsbank på svenska med sökbar medicinsk ordlista, skapad av Daniel Medin. Läs om bakgrund och syfte.">
   <meta name="twitter:image" content="https://anatomiquiz.se/img/og-image.png">
   <meta name="twitter:image:alt" content="Om Anatomiquiz — interaktiv anatomiquiz på svenska">
 
@@ -54,7 +54,7 @@
     "@context": "https://schema.org",
     "@type": "AboutPage",
     "name": "Om Anatomiquiz",
-    "description": "Bakgrund, syfte och versionshistorik för Anatomiquiz — en gratis anatomiquiz och medicinsk ordbok i human anatomi på svenska.",
+    "description": "Bakgrund, syfte och versionshistorik för Anatomiquiz — en gratis anatomiquiz och kunskapsbank med sökbar medicinsk ordlista, på svenska.",
     "inLanguage": "sv-SE",
     "url": "https://anatomiquiz.se/info.html",
     "dateModified": "2026-06-27",
@@ -103,7 +103,7 @@
   <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon.png">
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
-  <link rel="stylesheet" href="css/styles.css?v=0.7.6">
+  <link rel="stylesheet" href="css/styles.css?v=0.7.13">
 </head>
 <body>
 
@@ -117,7 +117,8 @@
       </div>
     </header>
 
-    <section class="card" aria-labelledby="infoHeading">
+    <!-- Brödsmula + intro -->
+    <section class="card" aria-labelledby="introHeading">
 
       <!-- Brödsmula — identisk struktur med ordlistesidan -->
       <nav class="breadcrumb" aria-label="Brödsmula">
@@ -126,26 +127,45 @@
         <span class="breadcrumb-current" aria-current="page">Om Anatomiquiz</span>
       </nav>
 
-      <h2 id="infoHeading" class="sr-only">Om Anatomiquiz</h2>
+      <h2 id="introHeading" class="sr-only">Om Anatomiquiz</h2>
 
-      <div class="info-about">
-        <p>Anatomiquiz är en kostnadsfri webbapp för att studera och repetera human anatomi och medicinsk terminologi på svenska och medicinsk latin. Appen består av två delar: ett interaktivt <strong>anatomiquiz</strong> och en <strong>medicinsk ordbok</strong> – en sökbar ordlista med flera tusen anatomiska och medicinska termer. Materialet vänder sig i första hand till studerande och yrkesverksamma inom vård, rehabilitering och hälsa, men kan användas av var och en som vill befästa sina kunskaper i anatomi.</p>
-        <p class="info-creator">Senast uppdaterad <time datetime="2026-06-27">27 juni 2026</time>. Anatomiquiz uppdateras löpande – aktuell version och fullständig historik finns längst ner på sidan.</p>
+      <div class="info-prose">
+        <p class="about-lead">Anatomiquiz är en kostnadsfri webbapp för att studera och repetera human anatomi och medicinsk terminologi på svenska och medicinsk latin. Appen består av två delar: ett interaktivt <strong>anatomiquiz</strong> och <strong>Kunskapsbanken</strong> – en växande samling resurser för att slå upp, läsa och förstå anatomins och medicinens språk, däribland en sökbar medicinsk ordlista. Materialet vänder sig i första hand till studerande och yrkesverksamma inom vård, rehabilitering och hälsa, men kan användas av var och en som vill befästa sina kunskaper i anatomi.</p>
+      </div>
+    </section>
+
+    <!-- Vad är Anatomiquiz? — de två delarna sida vid sida -->
+    <section class="card" aria-labelledby="whatHeading">
+      <h2 id="whatHeading" class="about-title">Vad är Anatomiquiz?</h2>
+      <div class="about-grid">
+        <div class="about-feature">
+          <h3>Anatomiquizet</h3>
+          <p>Quizet prövar kunskaper inom bland annat skelett, muskler, anatomiska riktningar och medicinsk terminologi genom flervalsfrågor och påståenden av sant/falskt-typ. Frågorna är indelade i ämnesområden som kan väljas var för sig, och du pluggar aktivt med både quiz och flashcards. Planerade tillägg omfattar fler anatomiska och fysiologiska områden, fokusområden anpassade för olika professioner, ytterligare svårighetsnivåer samt frågor om vanliga besvär, skador och sjukdomar.</p>
+        </div>
+        <div class="about-feature">
+          <h3>Kunskapsbanken</h3>
+          <p><a href="kunskapsbank/" class="info-link">Kunskapsbanken</a> samlar appens referens- och fördjupningsmaterial på ett ställe: en sökbar medicinsk ordlista, språket bakom orden, anatomiska listor och tabeller, kliniska patientfall och fördjupande faktatexter. Den växer kontinuerligt i takt med att nya områden läggs till.</p>
+        </div>
       </div>
 
-      <div class="info-about">
-        <h2 class="info-subheading">Vem ligger bakom Anatomiquiz?</h2>
-        <p>Anatomiquiz skapas, underhålls och kvalitetssäkras av en enda person: <strong>Daniel Medin</strong>. Daniel är utbildad medicinsk sekreterare och studerar i dag till arbetsterapeut vid Lunds universitet. Anatomi är ett särskilt intresse – och det är den kombinationen, vårddokumentationens terminologi och arbetsterapeutens kunskap om kroppens funktion, som präglar innehållet och dess noggrannhet.</p>
-        <p>Appen ges ut under <a href="https://norrtou.se" target="_blank" rel="noopener noreferrer" class="info-link">Norrtou Creations</a>, Daniels enmansstudio med fokus på tillgängliga webbappar (WCAG). Du når honom via <a href="https://www.linkedin.com/in/danielmedin" target="_blank" rel="noopener noreferrer" class="info-link">LinkedIn</a> och <a href="https://github.com/norrtou" target="_blank" rel="noopener noreferrer" class="info-link">GitHub</a>, eller direkt genom kontaktformuläret längre ner på sidan.</p>
-      </div>
-
-      <div class="info-about">
-        <h2 class="info-subheading">Varför Anatomiquiz finns</h2>
-        <p>Idén föddes under studierna. Daniel saknade bra, kostnadsfritt övningsmaterial i anatomi på svenska – det mesta var antingen låst bakom betalväggar, skrivet på engelska eller alldeles för ytligt. I stället för att leta vidare byggde han sitt eget. Tanken var enkel: samla all relevant fakta på ett och samma ställe och göra den lätt att nå, repetera och söka i. Anatomiquiz är resultatet, och appen växer kontinuerligt i takt med att nya områden läggs till.</p>
-
-        <h2 class="info-subheading">Vem har nytta av Anatomiquiz?</h2>
-        <p>Innehållet är upplagt för alla som behöver kunna anatomi och medicinsk terminologi, oavsett utbildning. Det passar bland annat studerande och yrkesverksamma som:</p>
+      <div class="info-prose">
+        <h3 class="info-subheading">Vad finns i Kunskapsbanken?</h3>
         <ul>
+          <li><strong><a href="medicinskordlista.html" class="info-link">Medicinsk ordlista</a></strong> – flera tusen uppslagsord A–Ö på svenska och latin: termer med ordklass och böjning, ordets ursprung (etymologi), grekiska och latinska former, vardagliga lekmannatermer, sjukdomar och skador med ICD-kod samt laboratorieprover med referensvärden.</li>
+          <li><strong><a href="kunskapsbank/medicinsk-terminologi.html" class="info-link">Medicinsk terminologi</a></strong> – språket bakom orden: latin och grekiska i medicinen, ordbildning, deklinationer och pluralformer, uttalsregler och terminologins historia.</li>
+          <li><strong><a href="kunskapsbank/listor-tabeller.html" class="info-link">Listor och tabeller</a></strong> – muskler per kroppsregion (ursprung, fäste, innervation och funktion), kranialnerver, nervbanor, kärl och skelettben.</li>
+          <li><strong><a href="case.html" class="info-link">Patientfall (case)</a></strong> – verklighetsnära kliniska fall där anatomin sätts i sitt sammanhang med korrekt terminologi.</li>
+          <li><strong><a href="kunskapsbank/faktatexter.html" class="info-link">Faktatexter</a></strong> – fördjupande artiklar om kroppens strukturer: hur de hänger ihop och vad de gör.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Målgrupp -->
+    <section class="card" aria-labelledby="audienceHeading">
+      <h2 id="audienceHeading" class="about-title">Vem har nytta av Anatomiquiz?</h2>
+      <div class="info-prose">
+        <p>Innehållet är upplagt för alla som behöver kunna anatomi och medicinsk terminologi, oavsett utbildning. Det passar bland annat studerande och yrkesverksamma som:</p>
+        <ul class="about-cols">
           <li>arbetsterapeuter</li>
           <li>fysioterapeuter och sjukgymnaster</li>
           <li>sjuksköterskor och specialistsjuksköterskor</li>
@@ -160,15 +180,24 @@
           <li>idrottsvetare, tränare och andra med ett intresse för kroppen</li>
         </ul>
       </div>
+    </section>
 
-      <div class="info-about">
-        <h2 class="info-subheading">Anatomiquizet</h2>
-        <p>Quizet prövar kunskaper inom bland annat skelett, muskler, anatomiska riktningar och medicinsk terminologi genom flervalsfrågor och påståenden av sant/falskt-typ. Frågorna är indelade i ämnesområden som kan väljas var för sig. Planerade tillägg omfattar fler anatomiska och fysiologiska områden, fokusområden anpassade för olika professioner, ytterligare svårighetsnivåer samt frågor om vanliga besvär, skador och sjukdomar.</p>
+    <!-- Vem ligger bakom + varför -->
+    <section class="card" aria-labelledby="authorHeading">
+      <h2 id="authorHeading" class="about-title">Vem ligger bakom Anatomiquiz?</h2>
+      <div class="info-prose">
+        <p>Anatomiquiz skapas, underhålls och kvalitetssäkras av en enda person: <strong>Daniel Medin</strong>. Daniel är utbildad medicinsk sekreterare och studerar i dag till arbetsterapeut vid Lunds universitet. Anatomi är ett särskilt intresse – och det är den kombinationen, vårddokumentationens terminologi och arbetsterapeutens kunskap om kroppens funktion, som präglar innehållet och dess noggrannhet.</p>
+        <p>Appen ges ut under <a href="https://norrtou.se" target="_blank" rel="noopener noreferrer" class="info-link">Norrtou Creations</a>, Daniels enmansstudio med fokus på tillgängliga webbappar (WCAG). Du når honom via <a href="https://www.linkedin.com/in/danielmedin" target="_blank" rel="noopener noreferrer" class="info-link">LinkedIn</a> och <a href="https://github.com/norrtou" target="_blank" rel="noopener noreferrer" class="info-link">GitHub</a>, eller direkt genom kontaktformuläret längre ner på sidan.</p>
 
-        <h2 class="info-subheading">Medicinsk ordbok</h2>
-        <p>Den <a href="medicinskordlista.html" class="info-link">medicinska ordboken</a> är ett uppslagsverk med flera tusen medicinska och anatomiska termer. Varje post anges med ordklass, böjning och, där det är relevant, svensk, latinsk och engelsk form samt ordets ursprung. Innehållet omfattar den anatomiska nomenklaturen enligt Terminologia Anatomica, medicinsk terminologi, laboratorieprover med normala referensvärden samt sjukdomar, skador och syndrom. Diagnoser förses i tillämpliga fall med svensk ICD-10-kod, och vid behov även ICD-11. Termerna är sökbara och ordnade bokstavsvis. Vill du förstå systematiken bakom orden – latin och grekiska, ordbildning, böjning och uttal – finns fördjupning i <a href="kunskapsbank/" class="info-link">Kunskapsbanken</a>.</p>
+        <h3 class="info-subheading">Varför Anatomiquiz finns</h3>
+        <p>Idén föddes under studierna. Daniel saknade bra, kostnadsfritt övningsmaterial i anatomi på svenska – det mesta var antingen låst bakom betalväggar, skrivet på engelska eller alldeles för ytligt. I stället för att leta vidare byggde han sitt eget. Tanken var enkel: samla all relevant fakta på ett och samma ställe och göra den lätt att nå, repetera och söka i. Anatomiquiz är resultatet, och appen växer kontinuerligt i takt med att nya områden läggs till.</p>
+      </div>
+    </section>
 
-        <h2 class="info-subheading">Källor och kvalitetssäkring</h2>
+    <!-- Källor -->
+    <section class="card" aria-labelledby="sourcesHeading">
+      <h2 id="sourcesHeading" class="about-title">Källor och kvalitetssäkring</h2>
+      <div class="info-prose">
         <p>Innehållet är sammanställt och kvalitetssäkrat mot beprövat referensmaterial inom medicin och språk. Trots detta arbete kan materialet innehålla fel och brister. Det är avsett som ett komplement till studier och ersätter inte kurslitteratur, läromedel eller annan auktoritativ källa. Centrala källor:</p>
         <ul>
           <li>Federative International Programme for Anatomical Terminology (FIPAT). (2019). <em>Terminologia Anatomica</em> (2:a uppl.).</li>
@@ -181,51 +210,55 @@
 
         <p class="info-creator">Läs om hur dina uppgifter hanteras i <a href="integritet.html" class="info-link">integritetspolicyn</a>.</p>
       </div>
+    </section>
 
-      <!-- Nyheter: korta notiser. Nyaste överst. -->
-      <section class="news" aria-labelledby="newsHeading">
-        <h2 id="newsHeading" class="news-heading">Nyheter</h2>
-        <article class="news-item">
-          <time class="news-date" datetime="2026-06-23">23 juni 2026</time>
-          <p class="news-text">Idag har flera viktiga förbättringar gjorts. Sajten har fått ett kontaktformulär för att rapportera buggar, fel och synpunkter. Anatomiquiz har dessutom flyttat till en egen domän – anatomiquiz.se – i stället för den tidigare adressen. Domänbytet innebar tyvärr att alla gamla highscore-resultat gick förlorade. Jag ber om ursäkt för det.</p>
-        </article>
-      </section>
+    <!-- Nyheter: korta notiser. Nyaste överst. -->
+    <section class="card" aria-labelledby="newsHeading">
+      <h2 id="newsHeading" class="about-title">Nyheter</h2>
+      <p class="about-update">Anatomiquiz uppdateras löpande. Senast uppdaterad <time datetime="2026-06-27">27 juni 2026</time>. Aktuell version och fullständig historik finns längst ner på sidan.</p>
+      <article class="news-item">
+        <time class="news-date" datetime="2026-06-23">23 juni 2026</time>
+        <p class="news-text">Idag har flera viktiga förbättringar gjorts. Sajten har fått ett kontaktformulär för att rapportera buggar, fel och synpunkter. Anatomiquiz har dessutom flyttat till en egen domän – anatomiquiz.se – i stället för den tidigare adressen. Domänbytet innebar tyvärr att alla gamla highscore-resultat gick förlorade. Jag ber om ursäkt för det.</p>
+      </article>
+    </section>
 
-      <!-- Diskret kontaktformulär. GitHub Pages saknar backend, så submit fångas i
-           info.js och öppnar besökarens egen e-postklient via mailto: (ingen tredjepart,
-           inga data passerar något mellanled). Mottagare: anatomiquizse@gmail.com. -->
-      <section class="contact" aria-labelledby="contactHeading">
-        <h2 id="contactHeading" class="contact-heading">Rapportera fel &amp; synpunkter</h2>
-        <p class="contact-intro">Hittat en bugg, ett fel i innehållet eller har en synpunkt? Skriv några rader – ditt e-postprogram öppnas med ett färdigt meddelande.</p>
-        <form id="contactForm" novalidate>
-          <label for="contactType">Typ</label>
-          <select id="contactType">
-            <option value="Bugg">Bugg</option>
-            <option value="Fel i innehåll">Fel i innehåll</option>
-            <option value="Synpunkt">Synpunkt</option>
-            <option value="Övrigt">Övrigt</option>
-          </select>
-          <label for="contactMessage">Meddelande</label>
-          <textarea id="contactMessage" rows="4" placeholder="Beskriv felet eller din synpunkt…" required></textarea>
-          <div class="actions">
-            <button type="submit" class="btn primary">Skicka via e-post</button>
-          </div>
-          <p class="contact-fallback">Fungerar inte knappen? Mejla <a class="info-link" href="mailto:anatomiquizse@gmail.com">anatomiquizse@gmail.com</a> direkt.</p>
-        </form>
-      </section>
-
-      <h2 class="changelog-heading">Antal frågor</h2>
+    <!-- Omfattning & versionshistorik -->
+    <section class="card" aria-labelledby="historyHeading">
+      <h2 id="historyHeading" class="about-title">Omfattning och versionshistorik</h2>
+      <h3 class="changelog-heading">Antal frågor</h3>
       <div id="statsContent"></div>
       <p id="glossaryCount" class="glossary-count">Laddar ordlistans omfattning…</p>
 
-      <h2 class="changelog-heading">Versionshistorik</h2>
+      <h3 class="changelog-heading">Versionshistorik</h3>
       <div id="changelogContent" class="changelog-list"></div>
-
-      <div class="actions">
-        <a href="./" class="btn">← Tillbaka</a>
-      </div>
-
     </section>
+
+    <!-- Diskret kontaktformulär. GitHub Pages saknar backend, så submit fångas i
+         info.js och öppnar besökarens egen e-postklient via mailto: (ingen tredjepart,
+         inga data passerar något mellanled). Mottagare: anatomiquizse@gmail.com. -->
+    <section class="card contact" aria-labelledby="contactHeading">
+      <h2 id="contactHeading" class="about-title">Rapportera fel &amp; synpunkter</h2>
+      <p class="contact-intro">Hittat en bugg, ett fel i innehållet eller har en synpunkt? Skriv några rader – ditt e-postprogram öppnas med ett färdigt meddelande.</p>
+      <form id="contactForm" novalidate>
+        <label for="contactType">Typ</label>
+        <select id="contactType">
+          <option value="Bugg">Bugg</option>
+          <option value="Fel i innehåll">Fel i innehåll</option>
+          <option value="Synpunkt">Synpunkt</option>
+          <option value="Övrigt">Övrigt</option>
+        </select>
+        <label for="contactMessage">Meddelande</label>
+        <textarea id="contactMessage" rows="4" placeholder="Beskriv felet eller din synpunkt…" required></textarea>
+        <div class="actions">
+          <button type="submit" class="btn primary">Skicka via e-post</button>
+        </div>
+        <p class="contact-fallback">Fungerar inte knappen? Mejla <a class="info-link" href="mailto:anatomiquizse@gmail.com">anatomiquizse@gmail.com</a> direkt.</p>
+      </form>
+    </section>
+
+    <div class="actions">
+      <a href="./" class="btn">← Tillbaka</a>
+    </div>
 
   </main>
 
