@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.65
+- **Ordlistan: 21 AT/fysio-mätinstrument.** Instrument för rörlighet (goniometri, goniometer, inklinometer, elektrogoniometer, skoliometer), styrka (dynamometer, handdynamometer, vigorimeter, pinchmeter, myometer, isokinetisk dynamometer), fingerfärdighet/handfunktion (Nine Hole Peg Test, Box and Blocks Test, Purdue Pegboard, Jebsen-Taylor hand function test) samt närliggande (monofilament, aestesiometer + estesiometer, tvåpunktsdiskriminering, algometer, volumeter). Ordlistan 10 648 → **10 669**; även i `kb_glossary_terms.json` (1299) → "goniometri" m.fl. får nu tooltip där de nämns i ROM-sidorna.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.65.
+
 ## 0.9.64
 - **Ny tabellsektion: Leder och rörelser (ROM)** (`kunskapsbank/leder.html` + 4 regionsidor), datadriven via ny `scripts/generate_leder.py` och `data/leder_rom/*.json`. Femte Live-kortet i Listor & tabeller.
   - **Regioner:** Övre extremiteten, Nedre extremiteten, Rygg och nacke, Käken (38 ledrörelser). Per led: Rörelse · Rörelseplan · Normalt rörelseomfång (ROM) · Huvudsakliga muskler, grupperad per led (caption = svenskt namn + latin).
