@@ -1,5 +1,21 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.46
+- **Tabellverktyg: Skriv ut + Ladda ner (CSV) på alla kunskapsbankstabeller.** Ny `js/kb-table-tools.js` (deferred, CSP-säker, **inga beroenden**) injicerar en diskret, tematisk verktygsrad underst (ovanför navigeringsknapparna) på varje sida med `.kb-mtable`/`.kb-table`. Två knappar:
+  - **Skriv ut** → `window.print()`. Liten hjälptext under knapparna förklarar pedagogiskt att man i utskriftsrutan kan välja **Spara som PDF** i stället för skrivare (ingen tung PDF-motor behövs).
+  - **Ladda ner (CSV)** → läser tabellernas `textContent` ur DOM:en (flera tabeller per sida slås ihop med rubrik/caption), bygger CSV med UTF-8-BOM (å/ä/ö i Excel) och laddar ner via `Blob`/`URL.createObjectURL`. Öppnas i Excel och Google Kalkylark.
+  - Progressiv förbättring: utan JS visas tabellerna som vanligt, bara verktygsraden uteblir.
+- **CSS:** nya `.kb-tabletools*`-stilar (diskret emerald-pillerknapp) + ett `@media print`-block som ger en **ren tabellutskrift**: bara `<h1>` + tabellerna (med grupprubriker och captions, tunna cellramar, upprepad kolumnrubrik per sida, ingen radbrytning mitt i en rad). Allt övrigt döljs – brödsmula, ingress/förklaringar/CTA (`.info-about:has(p)`), referenser, verktygsrad och navigeringsknappar – och ordlistelänkarna i cellerna skrivs ut som vanlig text. Tabellgruppernas rubriker (`.info-about` med enbart `<h2>`, t.ex. "Intrinsiska muskler") behålls. styles.css-cachebuster **0.7.10 → 0.7.11** på de 24 tabellsidorna (additivt tillägg → övriga sidor påverkas ej).
+- **Mallar:** `generate_muskeltabeller.py` (CSS_V 0.7.11 + script i FOOT) → 16 muskelsidor regenererade och om-wirade (2105 tooltips intakta). De 3 nervsidorna + 5 terminologisidorna handuppdaterade. Verktyget täcker nu alla 24 tabellsidor (1 script-tagg/sida verifierat).
+- **`listor-tabeller.html`:** infotexten kompletterad med en ärlig notis om att tabellerna kommer bäst till sin rätt på större skärm (dator/laptop) och att delar kan vara svårare att överblicka på mobil – samt att varje tabell går att skriva ut/ladda ner.
+- Inga nya URL:er (sitemap oförändrad, 67). APP_VERSION/VERSION → 0.9.46; app.js-cachebuster → 0.9.46. styles.css → 0.7.11 (tabellsidorna).
+
+## 0.9.45
+- **Tooltip-kvalitetspass på muskeltabellerna (efter feedback om snåla tabell-tooltips).** Gap-analys visade att ~100 äkta anatomiska termer i muskeltabellerna fanns i ordlistan men saknades i facit-dicten – därav glesa tooltips. Facit `data/kb_glossary_terms.json` utökad **489 → 593 termer** (+104: bl.a. facialis, linea, tuberculum, maxilla, mandibula, sacrum, arcus, crista, temporalis, pterygoideus, zygomaticus, sphincter, cartilago, manubrium, incisura, lateralflexion, inåtrotation …). Hrefs genererade via generatorns egna `slugify`/`page_key`/`page_file` (auktoritativa ankare, hanterar å/ä/ö → ascii); 0 trasiga ankare i hela facit (593/593 verifierade mot riktiga `id="term-…"`).
+  - **Muskeltabellerna re-wirade:** kb-term-länkar **1751 → 2105** (+354). Mest på ansikts-, käk-, ög-, hals-, rygg-, höft-, bäckenbotten- och bröstkorgssidorna (de nya termerna är mest huvud/hals/bäcken).
+  - **`wire_terms.py --all`** kört för konsekvens (delad facit) → +20 på övriga kunskapsbankssidor (nervtabeller, kranialnerverna, faktatexter, medicinskt-latin m.fl.). JSON-LD validerad, ingen kb-term i `<head>`, flerordstermer som EN tooltip (longest-match).
+- Inga nya sidor/URL:er (sitemap oförändrad, 67). APP_VERSION/VERSION → 0.9.45 (cachebuster: app.js → 0.9.45). styles.css oförändrad (0.7.10/0.7.9).
+
 ## 0.9.44
 - **Ny nervgren i plugglistorna: Nervtabeller-hub + Kranialnerverna (I–XII).** Speglar muskelstrukturen: Listor & tabeller → **Nervtabeller** (hub) → nervsidor (precis som → Muskeltabeller → regionsidor).
   - **Hub `kunskapsbank/nervtabeller.html`** (CollectionPage+LearningResource, `hasPart`=3): kort-grid med Kranialnerverna + Armens nerver + Benets nerver (alla live). Förklarar uppdelningen kranialnerver (fast set I–XII) vs. perifera nerver (per region via plexus).

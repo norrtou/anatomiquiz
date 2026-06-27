@@ -2272,3 +2272,88 @@ ol li {
     margin-bottom: 2px;
   }
 }
+
+/* =========================================================
+   Tabellverktyg (.kb-tabletools) — diskret Skriv ut-/CSV-rad under tabeller.
+   Injiceras av js/kb-table-tools.js (progressiv förbättring; CSP-säkert, inga
+   beroenden). PDF nås via webbläsarens utskriftsdialog ("Spara som PDF").
+   ========================================================= */
+.kb-tabletools {
+  margin: 26px 0 4px;
+  text-align: center;
+}
+.kb-tabletools-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.kb-tabletools-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-deep);
+  background: rgba(16, 185, 129, 0.06);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  border-radius: 999px;
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: background 0.12s ease, border-color 0.12s ease, transform 0.12s ease;
+}
+.kb-tabletools-btn:hover,
+.kb-tabletools-btn:focus-visible {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: var(--primary);
+  transform: translateY(-1px);
+  outline: none;
+}
+.kb-tabletools-btn svg { flex: 0 0 auto; }
+.kb-tabletools-hint {
+  margin: 10px auto 0;
+  max-width: 52ch;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* =========================================================
+   Utskrift / "Spara som PDF" — bara tabellerna, rent.
+   Dölj allt utom rubriken och tabellerna (med deras grupprubriker
+   och captions). Prosa-rutor (ingress, förklaringar, CTA) känns igen
+   som .info-about SOM innehåller ett <p>; tabellgruppernas rubriker är
+   .info-about med ENBART <h2> och behålls. Länkar i celler blir text.
+   ========================================================= */
+@page { margin: 1.4cm; }
+
+@media print {
+  .skip-link,
+  .breadcrumb,
+  .tagline,
+  .version,
+  .info-about:has(p),
+  .kb-sources,
+  .kb-tabletools,
+  .actions { display: none !important; }
+
+  body { background: #fff; color: #000; }
+  .container, main, .card {
+    max-width: none; width: auto; margin: 0; padding: 0;
+    background: none; border: 0; box-shadow: none;
+  }
+  h1 { font-size: 18pt; margin: 0 0 12px; }
+  .info-about h2 { font-size: 13pt; margin: 14px 0 6px; }   /* tabellgruppernas rubriker */
+
+  .kb-mtable, .kb-table { width: 100%; font-size: 10pt; border-collapse: collapse; }
+  .kb-mtable caption, .kb-table caption {
+    font-weight: 700; text-align: left; margin: 6px 0 4px; color: #000;
+  }
+  .kb-mtable th, .kb-mtable td,
+  .kb-table th, .kb-table td { border: 1px solid #bbb; padding: 5px 7px; }
+  .kb-mtable th, .kb-table th { background: #eee; color: #000; }
+  thead { display: table-header-group; }                    /* upprepa kolumnrubrik på ny sida */
+  .kb-mtable tr, .kb-table tr { break-inside: avoid; }      /* bryt inte mitt i en rad */
+  .kb-term { color: inherit; text-decoration: none; border: 0; }
+}
