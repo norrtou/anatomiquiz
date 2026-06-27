@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.47
+- **Mobilvänligare punktlistor i löptext.** Content-`<ul>` i `.info-about` ärvde webbläsarens default-indrag (~40px), vilket inuti kortets + info-rutans egen padding gjorde textkolumnen smal och ihoptryckt på mobil (märktes mest på terminologisidorna). Nu egen regel: `.info-about ul/ol` med litet indrag (1,2rem, 1,05rem på mobil), luftigare radavstånd och samma typografi som styckena. På ≤640px krymps även `.info-about`-paddingen (20→15px) så spalten blir bredare. `<ol>` och `.kb-sources` var redan måttliga och är orörda.
+- styles.css-cachebuster → **0.7.12** på de 6 sidor som har content-listor (5 terminologisidor + integritet.html); additiv ändring, övriga sidor opåverkade. APP_VERSION/VERSION → 0.9.47; app.js-cachebuster → 0.9.47.
+
 ## 0.9.46
 - **Tabellverktyg: Skriv ut + Ladda ner (CSV) på alla kunskapsbankstabeller.** Ny `js/kb-table-tools.js` (deferred, CSP-säker, **inga beroenden**) injicerar en diskret, tematisk verktygsrad underst (ovanför navigeringsknapparna) på varje sida med `.kb-mtable`/`.kb-table`. Två knappar:
   - **Skriv ut** → `window.print()`. Liten hjälptext under knapparna förklarar pedagogiskt att man i utskriftsrutan kan välja **Spara som PDF** i stället för skrivare (ingen tung PDF-motor behövs).

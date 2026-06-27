@@ -277,6 +277,15 @@ main {
   .card {
     padding: 16px;
   }
+  /* På mobil: krymp info-rutans padding och listindraget ytterligare så att
+     textkolumnen blir så bred som möjligt (mot ihoptryckta, smala spalter). */
+  .info-about {
+    padding: 15px;
+  }
+  .info-about ul,
+  .info-about ol {
+    padding-left: 1.05rem;
+  }
 }
 
 /* ============================================================================
@@ -913,6 +922,32 @@ select:focus-visible {
 }
 
 .info-about p:last-child {
+  margin-bottom: 0;
+}
+
+/* Punktlistor i löptext: håll indraget litet så textkolumnen inte blir smal och
+   ihoptryckt på mobil (webbläsarens default-padding på ~40px är för stort inuti
+   kortets/info-rutans egen padding). Punkten sitter nära texten, raderna luftiga. */
+.info-about ul,
+.info-about ol {
+  margin: 4px 0 14px;
+  padding-left: 1.2rem;
+}
+
+.info-about ul:last-child,
+.info-about ol:last-child {
+  margin-bottom: 0;
+}
+
+.info-about li {
+  margin-bottom: 8px;
+  padding-left: 3px;
+  color: var(--text-primary);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.info-about li:last-child {
   margin-bottom: 0;
 }
 
