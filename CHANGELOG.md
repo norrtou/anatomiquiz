@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.58
+- **Ordlistan: nya "läran om"-begrepp.** Tillagt **funktionell anatomi** samt **43 `-logi`-termer** inom medicin, anatomi, psykologi och vård (44 nya poster, 10 158 → 10 202). Inga dubbletter mot befintliga `-logi`-termer (kardiologi, neurologi, fysiologi m.fl.).
+  - **Specialiteter/fält:** farmakologi, nefrologi, reumatologi, dermatologi, mikrobiologi, bakteriologi, virologi, mykologi, hepatologi, pneumologi, venereologi, andrologi, gerontologi, neonatologi, allergologi, diabetologi, audiologi, sexologi, nosologi, semiologi, somnologi, teratologi, embryologi, angiologi, tanatologi, balneologi, biologi.
+  - **Anatomins underavdelningar:** osteologi, myologi, artrologi (syndesmologi), splanknologi.
+  - **Psykologi:** psykopatologi, psykofarmakologi, psykofysiologi, socialpsykologi, utvecklingspsykologi, etologi, kinesiologi.
+  - **Flaggade som ej erkända / icke fullt vetenskapliga:** iridologi, reflexologi (zonterapi), grafologi, frenologi, parapsykologi – samt reservationer för balneologi och för *tillämpad* kinesiologi (skild från kinesiologi som rörelselära).
+  - Posterna följer grundmallen. `data/ordlista.json` ändrad additivt (inga befintliga poster omflyttade); `ordlista-*.html` + termräknaren omgenererade via `scripts/generate_glossary.py`.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.58.
+
 ## 0.9.57
 - **Omdesign av "Om Anatomiquiz" (`info.html`) – överskådlig, kortbaserad layout.** Det enda jättekortet med ~10 likvärdiga `<h2>` på rad är uppdelat i åtta fristående `.card` (samma känsla som startsidan), ett kort per ämne med en tydlig rubrik var.
   - **Ny, logisk ordning:** intro → *Vad är Anatomiquiz?* → *Vem har nytta?* → *Vem ligger bakom + varför* → *Källor* → *Nyheter* → *Omfattning & versionshistorik* → *Kontakt*. "Vad det är" kommer nu före författarbio (besökarperspektiv).
