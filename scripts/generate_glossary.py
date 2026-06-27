@@ -791,6 +791,10 @@ def write_sitemap(group_files: list[str]) -> None:
     blocks.append(url_block(f"{SITE}/kunskapsbank/karl.html", "weekly", "0.7"))
     for f in ["huvud-hals", "armen", "brostkorgen", "buken", "backenet", "benet"]:
         blocks.append(url_block(f"{SITE}/kunskapsbank/karl-{f}.html", "monthly", "0.7"))
+    # Leder och rörelser (ROM) (under-pillar + regionsidor)
+    blocks.append(url_block(f"{SITE}/kunskapsbank/leder.html", "weekly", "0.7"))
+    for f in ["overextremitet", "nedreextremitet", "bal-nacke", "kaken"]:
+        blocks.append(url_block(f"{SITE}/kunskapsbank/leder-{f}.html", "monthly", "0.7"))
     blocks.append(url_block(f"{SITE}/{LANDING_FILE}", "weekly", "0.9"))
     for f in group_files:
         blocks.append(url_block(f"{SITE}/{f}", "monthly", "0.7"))

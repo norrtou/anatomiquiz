@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.64
+- **Ny tabellsektion: Leder och rörelser (ROM)** (`kunskapsbank/leder.html` + 4 regionsidor), datadriven via ny `scripts/generate_leder.py` och `data/leder_rom/*.json`. Femte Live-kortet i Listor & tabeller.
+  - **Regioner:** Övre extremiteten, Nedre extremiteten, Rygg och nacke, Käken (38 ledrörelser). Per led: Rörelse · Rörelseplan · Normalt rörelseomfång (ROM) · Huvudsakliga muskler, grupperad per led (caption = svenskt namn + latin).
+  - **Riktad SEO mot fysio/AT:** title/description med *rörelseomfång (ROM), grader, flexion/extension/abduktion, fysioterapi, arbetsterapi*. JSON-LD LearningResource (professional development). Brasklapp att ROM-värden varierar (goniometri); källa Norkin & White.
+  - **Flerords-tooltips korrekta:** lednamn (articulatio …) och rörelsetermer wirade som hela termer; muskelnamnen i muskelkolumnen wiras som hela "m. X" (180 nya "m. X"-alias i `kb_glossary_terms.json` som pekar på de fulla muskelposterna; datan rensad från snedstreck/halva namn). 0 fragment.
+  - Integrerat: 5 URL:er i sitemap, CSS-kolumner (`c-r*`), cachebuster 0.7.16, SEO §12 grön.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.64.
+
 ## 0.9.63
 - **"Listor & tabeller"-kortet på kunskapsbank-hubben satt till Live** (var "Snart"/förhandstitt) – hela tabellsektionen är klar (muskler, skelett, nerver, kärl). Uppdaterad beskrivning och CTA. Faktatexter kvar som "Snart" (genuint ej klar).
 - VERSION/APP_VERSION/app.js-cachebuster → 0.9.63.

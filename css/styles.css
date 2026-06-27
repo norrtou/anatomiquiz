@@ -2412,6 +2412,12 @@ ol li {
 .kb-mtable .c-kfr { width: 28%; }
 .kb-mtable .c-kom { width: 30%; }
 
+/* Ledrörelse-/ROM-tabeller (rörelse, plan, rörelseomfång, muskler) */
+.kb-mtable .c-rror { width: 20%; }
+.kb-mtable .c-rpl  { width: 15%; }
+.kb-mtable .c-rom  { width: 18%; }
+.kb-mtable .c-rmus { width: 47%; }
+
 @media (max-width: 720px) {
   .kb-mtable, .kb-mtable tbody, .kb-mtable tr, .kb-mtable td { display: block; width: auto; }
   .kb-mtable colgroup { display: none; }
