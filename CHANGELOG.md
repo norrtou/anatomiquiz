@@ -1,5 +1,16 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.59
+- **Ordlistan: 95 nya läror, specialiteter och discipliner** (10 202 → 10 297 poster). Inga dubbletter, inga slug-kollisioner. Källor: Socialstyrelsens specialitetsindelning, Wikipedias specialitetslista, regionernas laboratoriemedicin, de 23 legitimationsyrkena samt källor om komplementärmedicin.
+  - **Läkarspecialiteter & kliniska fält (44):** akutsjukvård, allmänmedicin, internmedicin, infektionsmedicin, socialmedicin, rättsmedicin, rättspsykiatri, arbets- och miljömedicin, beroendemedicin, palliativ medicin, smärtmedicin, vårdhygien, skolhälsovård, nuklearmedicin, rehabiliteringsmedicin, idrottsmedicin, katastrofmedicin, flygmedicin, dykmedicin, anestesiologi, intensivvård, allmänkirurgi, barnkirurgi, handkirurgi, kärlkirurgi, thoraxkirurgi, neurokirurgi, plastikkirurgi, neuropsykiatri, äldrepsykiatri, njurmedicin, lungmedicin, klinisk farmakologi/genetik/kemi/mikrobiologi/patologi/fysiologi/neurofysiologi/immunologi, transfusionsmedicin, neuroradiologi, gynekologisk onkologi, vaccinologi.
+  - **Laboratoriemedicin & biomedicin (11):** laboratoriemedicin, biomedicin, molekylärbiologi, molekylärmedicin, cytogenetik, genomik, proteomik, bioinformatik, biokemi, farmakogenetik, farmakognosi.
+  - **Anatomins underområden (5):** neuroanatomi, jämförande anatomi, mikroskopisk anatomi, patologisk anatomi, ytanatomi.
+  - **Rehab, terapi & legitimationsyrkens ämnen (21):** fysioterapi, sjukgymnastik, dietetik, klinisk nutrition, optometri, ortoptik, kiropraktik, naprapati, osteopati, podiatri, psykoanalys, beteendeterapi, psykodynamisk terapi, fysikalisk medicin, musikterapi, bildterapi, dansterapi, hippoterapi, trädgårdsterapi, idrottsfysiologi, arbetsfysiologi.
+  - **Psykologins grenar (6):** klinisk psykologi, biologisk psykologi, kognitiv psykologi, hälsopsykologi, neurovetenskap, psykofysik.
+  - **Komplementär/alternativ, flaggade (8):** homeopati, naturopati, akupunktur, antroposofisk medicin, aromaterapi, ayurveda, traditionell kinesisk medicin, zonterapi – med nyanserade reservationer (t.ex. viss evidens för akupunktur vid vissa tillstånd men ej för qi-teorin; kiropraktik/osteopati-nyanser).
+  - `data/ordlista.json` ändrad additivt (inga poster omflyttade); `ordlista-*.html` + termräknaren omgenererade.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.59.
+
 ## 0.9.58
 - **Ordlistan: nya "läran om"-begrepp.** Tillagt **funktionell anatomi** samt **43 `-logi`-termer** inom medicin, anatomi, psykologi och vård (44 nya poster, 10 158 → 10 202). Inga dubbletter mot befintliga `-logi`-termer (kardiologi, neurologi, fysiologi m.fl.).
   - **Specialiteter/fält:** farmakologi, nefrologi, reumatologi, dermatologi, mikrobiologi, bakteriologi, virologi, mykologi, hepatologi, pneumologi, venereologi, andrologi, gerontologi, neonatologi, allergologi, diabetologi, audiologi, sexologi, nosologi, semiologi, somnologi, teratologi, embryologi, angiologi, tanatologi, balneologi, biologi.
