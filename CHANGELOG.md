@@ -1,5 +1,18 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.44
+- **Ny nervgren i plugglistorna: Nervtabeller-hub + Kranialnerverna (I–XII).** Speglar muskelstrukturen: Listor & tabeller → **Nervtabeller** (hub) → nervsidor (precis som → Muskeltabeller → regionsidor).
+  - **Hub `kunskapsbank/nervtabeller.html`** (CollectionPage+LearningResource, `hasPart`=3): kort-grid med Kranialnerverna + Armens nerver + Benets nerver (alla live). Förklarar uppdelningen kranialnerver (fast set I–XII) vs. perifera nerver (per region via plexus).
+  - **Tabellsida `kunskapsbank/nervtabell-armen.html`** (Article+LearningResource): plexus brachialis fem terminala nerver (musculocutaneus, medianus, ulnaris, radialis, axillaris) – kolumner nerv, rötter (C5–T1), motorisk innervation, sensorisk innervation, bortfall. 73 ordlistetooltips. Titel 47 / desc 139.
+  - **Tabellsida `kunskapsbank/nervtabell-benet.html`** (Article+LearningResource): plexus lumbosacralis i två tabeller – lumbalis (L1–L4: iliohypogastricus, ilioinguinalis, genitofemoralis, cutaneus femoris lateralis, femoralis, obturatorius) och sacralis (L4–S4: gluteus superior/inferior, ischiadicus, tibialis, fibularis communis, pudendus, cutaneus femoris posterior). 110 ordlistetooltips. Titel 50 / desc 145.
+  - **Tooltip-kvalitet (efter feedback):** facit-dicten `data/kb_glossary_terms.json` utökad med 20 termer (470 → 489) – bl.a. cutaneus, fasciculus, supinator, truncus, anus, ischias, perineum, scrotum, tensor, medius, ljumskbråck samt flerords­termerna *collum chirurgicum*, *sulcus nervi ulnaris/radialis*, *collum fibulae*, *cauda equina*. Flerordstermer wire:as som EN sammanhållen tooltip (longest-match), inte som lösa ord bredvid varann.
+  - **Tabellsida `kunskapsbank/kranialnerverna.html`** (Article+LearningResource): komplett kolumnuppsättning – nr, nerv (latin/svenska), typ (sensorisk/motorisk/blandad + parasympatisk markerad), funktion, utträde ur skallen (foramen) och bortfall vid skada. Responsiv `.kb-mtable` (caption + `th scope`, stackas på mobil). 43 ordlistetooltips via `wire_terms.py`. Titel 63 / desc 130 tecken.
+  - Båda enligt SEO_REGLER §1 (komplett head, OG/Twitter, BreadcrumbList) och §6b (APA-referenser: Terminologia Anatomica, Fitzgerald m.fl., Sobotta, Gray's). Brödsmula kranialnerverna = 5 nivåer (… / Nervtabeller / Kranialnerverna).
+  - `listor-tabeller.html`: kortet "Kranialnerverna" → **"Nerver"** som pekar på nerv-hubben (speglar "Muskler per region").
+  - `scripts/generate_glossary.py` (`write_sitemap`): la in `nervtabeller` + `kranialnerverna` samt de tidigare saknade `listor-tabeller` och `faktatexter` (båda index sedan 0.9.41 men utanför sitemap) → sitemap regenererad (67 URL:er).
+  - `llms.txt`: nya rader för nerv-hubben och kranialnerverna under "Listor och tabeller".
+- APP_VERSION/VERSION → 0.9.44 (cachebuster: app.js → 0.9.44). styles.css oförändrad (0.7.10/0.7.9).
+
 ## 0.9.43
 - **Kunskapsbankens menysidor: bättre ingresser, omflyttad infotext och enhetlig kortstandard.** Innehållsändringar i body; ingen indexering påverkad (alla sidor `index, follow`).
   - **Hubben (`kunskapsbank/index.html`):** ny ingress under h1 (handlingsinriktad istället för "Allt material samlat …"). Den beskrivande texten flyttad från ovanför korten till under dem – på mobil möts man av alternativen direkt, inte en textvägg. Texten omformulerad.

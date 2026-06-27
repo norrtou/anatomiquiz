@@ -763,6 +763,15 @@ def write_sitemap(group_files: list[str]) -> None:
     blocks.append(url_block(f"{SITE}/kunskapsbank/", "weekly", "0.8"))
     for f in kb_pages:
         blocks.append(url_block(f"{SITE}/kunskapsbank/{f}.html", "monthly", "0.7"))
+    # Listor & tabeller-pillaren + faktatexter-pillaren + fristående tabeller
+    # (utanför muskel-serien). Båda pillarna är index,follow sedan 0.9.41.
+    blocks.append(url_block(f"{SITE}/kunskapsbank/listor-tabeller.html", "weekly", "0.7"))
+    blocks.append(url_block(f"{SITE}/kunskapsbank/faktatexter.html", "weekly", "0.7"))
+    # Nervtabeller (under-pillar + nervsidor)
+    blocks.append(url_block(f"{SITE}/kunskapsbank/nervtabeller.html", "weekly", "0.7"))
+    blocks.append(url_block(f"{SITE}/kunskapsbank/kranialnerverna.html", "monthly", "0.7"))
+    blocks.append(url_block(f"{SITE}/kunskapsbank/nervtabell-armen.html", "monthly", "0.7"))
+    blocks.append(url_block(f"{SITE}/kunskapsbank/nervtabell-benet.html", "monthly", "0.7"))
     # Muskeltabeller (under-pillar + regionsidor)
     blocks.append(url_block(f"{SITE}/kunskapsbank/muskeltabeller.html", "weekly", "0.7"))
     for f in ["handen", "skuldran", "overarmen", "underarmen", "laret", "underbenet", "foten", "hoften", "bukvaggen", "ryggen", "halsen", "brostkorgen", "kaken", "ansiktet", "ogat", "backenbotten"]:
