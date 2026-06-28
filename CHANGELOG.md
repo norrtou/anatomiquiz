@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.73
+- **Ny ingresstext på medicinska ordlistan.** Tydligare och mer användarnära tagline: "Medicinska ord, förkortningar och begrepp med definitioner, synonymer och etymologi i en sökbar ordlista med {antal} ord. Ta reda på vad olika begrepp, förkortningar, för- och efterled betyder inom anatomi, fysiologi, sjukdomar, labbprover, farmakologi och omvårdnad." Antalet fylls i dynamiskt av generatorn.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.73.
+
 ## 0.9.72
 - **Felrapportering i ordlistans sidfot.** Ny rad efter källattributionen: "Rapportera in eventuella fel till mig." där *mig* länkar till e-post (anatomiquizse@gmail.com). Gäller alla ordlistesidor (genererat).
 - VERSION/APP_VERSION/app.js-cachebuster → 0.9.72.

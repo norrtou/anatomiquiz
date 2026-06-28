@@ -656,11 +656,9 @@ def write_landing(groups: dict[str, list[dict]]) -> str:
         h1="Medicinsk ordlista",
         tagline=(
             "Medicinska ord, förkortningar och begrepp med definitioner, synonymer "
-            "och etymologi i en sökbar ordlista. Sök i hela ordlistan nedan, eller "
-            f"hoppa till en bokstav i raden — {total_str} latinska och grekiska "
-            "termer, plus franska, tyska och italienska medicinska lånord: "
-            "anatomi, fysiologi, sjukdomar, labbprover, förkortningar samt "
-            "för- och efterleder."
+            f"och etymologi i en sökbar ordlista med {total_str} ord. Ta reda på "
+            "vad olika begrepp, förkortningar, för- och efterled betyder inom "
+            "anatomi, fysiologi, sjukdomar, labbprover, farmakologi och omvårdnad."
         ),
         breadcrumb_label="Medicinsk ordlista",
         page_jsonld=page_obj,
