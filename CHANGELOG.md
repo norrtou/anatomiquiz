@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.72
+- **Felrapportering i ordlistans sidfot.** Ny rad efter källattributionen: "Rapportera in eventuella fel till mig." där *mig* länkar till e-post (anatomiquizse@gmail.com). Gäller alla ordlistesidor (genererat).
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.72.
+
 ## 0.9.71
 - **Ordlistans källattribution kompletterad.** Sidfoten anger nu att diagnoser, koder och läkemedelsuppgifter även stämts av mot **Socialstyrelsens klassifikationer (ICD-10-SE)** och **FASS**, utöver de anatomiska/terminologiska standardverken. Gäller alla ordlistesidor (genererat).
 - VERSION/APP_VERSION/app.js-cachebuster → 0.9.71.
