@@ -124,15 +124,35 @@
       <!-- Välj utbildning: filtrerar ämneslistan nedan per utbildning. Arbetsterapeut
            är förvald och har alla nuvarande ämnen; övriga byggs ut efter hand. Varje
            ämne taggas med data-edu så samma datadrivna filter (captureTopicOptions/
-           updateTopicOptions) kombinerar utbildning + frågetyp. -->
-      <label for="education">Välj utbildning</label>
+           updateTopicOptions) kombinerar utbildning + frågetyp.
+           Utbildningar utan eget data-edu-ämne gråas automatiskt av
+           updateEducationOptions() med "(inga ämnen ännu)" – det är platshållaren,
+           inga fejkade ämnen skapas. Listan är sorterad alfabetiskt (svensk ordning:
+           å/ä/ö efter z). Allmänt är förvalt (default) och den ämnesövergripande
+           startpunkten. Detaljerade anatomi/fysiologi-stjärnvärden per utbildning
+           finns i minnesfilen project_education_split.md. Yrkesnamn används, inte
+           "...programmet". -->
+      <label for="education">Utbildning och antal tillgängliga ämnen</label>
       <select id="education">
-        <option value="allmant">Allmänt</option>
-        <option value="arbetsterapeut" selected>Arbetsterapeut</option>
+        <option value="allmant" selected>Allmänt</option>
+        <option value="apotekare">Apotekare</option>
+        <option value="arbetsterapeut">Arbetsterapeut</option>
+        <option value="audionom">Audionom</option>
+        <option value="barnmorska">Barnmorska</option>
+        <option value="biomedicin">Biomedicinare</option>
+        <option value="biomedicinsk_analytiker">Biomedicinsk analytiker</option>
+        <option value="dietist">Dietist</option>
         <option value="fysioterapeut">Fysioterapeut</option>
+        <option value="logoped">Logoped</option>
         <option value="lakare">Läkare</option>
         <option value="medicinsk_sekreterare">Medicinsk sekreterare</option>
+        <option value="medicintekniker">Medicintekniker</option>
+        <option value="optiker">Optiker</option>
+        <option value="receptarie">Receptarie</option>
+        <option value="rontgensjukskoterska">Röntgensjuksköterska</option>
         <option value="sjukskoterska">Sjuksköterska</option>
+        <option value="tandhygienist">Tandhygienist</option>
+        <option value="tandlakare">Tandläkare</option>
       </select>
 
       <label for="topic">Ämne</label>
@@ -147,15 +167,15 @@
         <option value="ledtyper" data-edu="arbetsterapeut">Ledtyper (MC)</option>
         <option value="any_riktningar" data-edu="arbetsterapeut">Lägen &amp; riktningar (MC+TF)</option>
         <option value="medicinsk_terminologi" data-edu="arbetsterapeut">Medicinsk terminologi (MC+FC)</option>
-        <!-- ATP-teori (ej anatomi) – dolda tills vidare, ska testas på annat sätt och återinföras senare:
-        <option value="moho_flashcards" data-edu="arbetsterapeut">Moho (FC)</option> -->
+        <!-- data-nonmedical: ej anatomi/fysiologi (ATP-teori). Döljs om inte
+             "Visa även icke-medicinska ämnen" är ibockat i inställningarna. -->
+        <option value="moho_flashcards" data-edu="arbetsterapeut" data-nonmedical="1">Moho (FC)</option>
         <option value="muskler_flashcards" data-edu="arbetsterapeut">Muskler (FC)</option>
         <option value="muskler" data-edu="arbetsterapeut">Muskler (MC+TF)</option>
         <option value="neurologi" data-edu="arbetsterapeut">Neurologi (MC+TF)</option>
         <option value="olika_aldrar" data-edu="arbetsterapeut">Olika åldrar (MC+FC)</option>
         <option value="skuldran" data-edu="arbetsterapeut">Skuldra (MC+TF)</option>
-        <!-- ATP-teori (ej anatomi) – dolda tills vidare, ska testas på annat sätt och återinföras senare:
-        <option value="otipm_flashcards" data-edu="arbetsterapeut">OTIPM (FC)</option> -->
+        <option value="otipm_flashcards" data-edu="arbetsterapeut" data-nonmedical="1">OTIPM (FC)</option>
         <option value="blandade" data-edu="arbetsterapeut">Slumpade frågor (MC+TF)</option>
         <option value="medicinsk_latin" data-edu="sjukskoterska">Medicinsk latin (MC)</option>
         <option value="anatomi_fysiologi_flashcards" data-edu="sjukskoterska">Anatomi &amp; fysiologi (FC)</option>
@@ -236,6 +256,10 @@
         <label class="checkbox-row" for="timerEnabled">
           <input type="checkbox" id="timerEnabled" checked />
           <span>Visa tid <small>(Tid räknas alltid, men du vill kanske inte stressas av att se räknaren)</small></span>
+        </label>
+        <label class="checkbox-row" for="showNonMedical">
+          <input type="checkbox" id="showNonMedical" />
+          <span>Visa även icke-medicinska ämnen <small>(specialämnen som inte rör anatomi eller fysiologi, t.ex. Moho och OTIPM, visas under den utbildning de hör till)</small></span>
         </label>
       </div>
       <div class="actions">
@@ -402,6 +426,6 @@
   </main>
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
-  <script src="js/app.js?v=0.9.80" defer></script>
+  <script src="js/app.js?v=0.9.81" defer></script>
 </body>
 </html>

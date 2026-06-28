@@ -65,7 +65,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.80'
+const APP_VERSION = '0.9.81'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -1008,8 +1008,13 @@ function applySettings(){
   }
   if(typeof s.practiceWrong === 'boolean') el('practiceWrong').checked = s.practiceWrong
   if(typeof s.timerEnabled === 'boolean') el('timerEnabled').checked = s.timerEnabled
+  if(typeof s.showNonMedical === 'boolean' && el('showNonMedical')) el('showNonMedical').checked = s.showNonMedical
+  // Bygg om utbildningsräkningen EFTER att icke-medicinska-bocken återställts, så
+  // antalen i parentes stämmer innan vi återställer valet (disabled-state nedan
+  // beror på antalet).
+  updateEducationOptions()
   // Återställ vald utbildning om den fortfarande finns som ett VALBART alternativ
-  // (inte utgråad pga saknade ämnen). Annars behålls förvalet (arbetsterapeut).
+  // (inte utgråad pga saknade ämnen). Annars behålls förvalet (Allmänt).
   const eduEl = el('education')
   if(eduEl && typeof s.education === 'string' && Array.from(eduEl.options).some(o => o.value === s.education && !o.disabled)){
     eduEl.value = s.education
@@ -1019,11 +1024,15 @@ function applySettings(){
 }
 
 function saveSettings(){
+  // Null-säker fältläsning: tidigare kunde t.ex. el('playerName').value kasta om
+  // ett fält saknades, vilket fick HELA sparningen (inkl. vald utbildning) att tyst
+  // misslyckas. Nu sparas alltid det som finns.
   const s = {
-    name: el('playerName').value.trim(),
+    name: (el('playerName')?.value || '').trim(),
     types: getSelectedTypes(),
     practiceWrong: !!el('practiceWrong')?.checked,
     timerEnabled: !!el('timerEnabled')?.checked,
+    showNonMedical: !!el('showNonMedical')?.checked,
     education: getSelectedEducation()
   }
   try{ localStorage.setItem(SETTINGS_KEY, JSON.stringify(s)) }catch{}
@@ -1048,12 +1057,19 @@ function topicCapabilities(){
 let allTopicOptions = []
 function captureTopicOptions(){
   const topicEl = el('topic')
-  if(topicEl) allTopicOptions = Array.from(topicEl.options).map(o => ({ value:o.value, text:o.textContent, edu:o.dataset.edu || '' }))
+  if(topicEl) allTopicOptions = Array.from(topicEl.options).map(o => ({ value:o.value, text:o.textContent, edu:o.dataset.edu || '', nonmedical: o.dataset.nonmedical === '1' }))
 }
 
-// Vald utbildning i "Välj utbildning" (arbetsterapeut som standard).
+// Ska icke-medicinska specialämnen (data-nonmedical, t.ex. Moho/OTIPM) visas?
+// Styrs av kryssrutan "Visa även icke-medicinska ämnen" i inställningarna.
+// Avstängt som standard.
+function showNonMedical(){
+  return !!el('showNonMedical')?.checked
+}
+
+// Vald utbildning i "Välj utbildning" (Allmänt som standard).
 function getSelectedEducation(){
-  return el('education')?.value || 'arbetsterapeut'
+  return el('education')?.value || 'allmant'
 }
 
 // Visa bara ämnen som hör till vald utbildning OCH har minst en av de valda
@@ -1069,6 +1085,7 @@ function updateTopicOptions(){
   const prev = topicEl.value
   const visible = allTopicOptions.filter(o => {
     if(o.edu && o.edu !== edu) return false
+    if(o.nonmedical && !showNonMedical()) return false
     const c = typeTagOf(o.text)
     return !c.hasTag || sel.some(t => c[t])
   })
@@ -1097,12 +1114,24 @@ function updateTopicOptions(){
 function updateEducationOptions(){
   const eduEl = el('education')
   if(!eduEl || !allTopicOptions.length) return
-  const withTopics = new Set(allTopicOptions.map(o => o.edu).filter(Boolean))
+  // Räkna antal ämnen per utbildning ur den faktiska ämneslistan (allTopicOptions,
+  // utkommenterade ämnen ingår inte). Skriv ut antalet i parentes efter varje
+  // utbildning, t.ex. "Läkare (1)". Saknas ämnen visas "(inga ämnen ännu)" och
+  // alternativet gråas. Antalet är typ-oberoende (ändras inte av MC/FC/TF-bocken)
+  // men följer "Visa även icke-medicinska ämnen" så det speglar vad som faktiskt
+  // går att välja.
+  const inclNonMed = showNonMedical()
+  const perEdu = {}
+  allTopicOptions.forEach(o => {
+    if(!o.edu) return
+    if(o.nonmedical && !inclNonMed) return
+    perEdu[o.edu] = (perEdu[o.edu] || 0) + 1
+  })
   Array.from(eduEl.options).forEach(o => {
-    const hasTopics = withTopics.has(o.value)
     const base = o.dataset.eduLabel || (o.dataset.eduLabel = o.textContent)
-    o.disabled = !hasTopics
-    o.textContent = hasTopics ? base : base + ' (inga ämnen ännu)'
+    const count = perEdu[o.value] || 0
+    o.disabled = count === 0
+    o.textContent = count === 0 ? base + ' (inga ämnen ännu)' : base + ' (' + count + ')'
   })
 }
 
@@ -1357,7 +1386,7 @@ function init(){
 
   // Inställningssida: öppna/spara/tillbaka + brödsmulelänk.
   el('openSettings')?.addEventListener('click', showSettings)
-  el('saveSettings')?.addEventListener('click', ()=>{ saveSettings(); updateTopicOptions(); updateStartButtons(); hideSettings() })
+  el('saveSettings')?.addEventListener('click', ()=>{ saveSettings(); updateEducationOptions(); updateTopicOptions(); updateStartButtons(); hideSettings() })
   el('backFromSettings')?.addEventListener('click', ()=>{ applySettings(); hideSettings() })
   el('settingsCrumb')?.addEventListener('click', (e)=>{ e.preventDefault(); applySettings(); hideSettings() })
   // Frågetyps-kryssrutor: håll knapparnas av/på i synk medan man bockar.
