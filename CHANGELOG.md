@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.69
+- **Ordlistan: 200 medicinalväxter (örtmedicinens historia).** Inlagda under sina **latinska namn** som uppslagsord, var och en enligt grundmallen: ordklass `(lat.)` → svenskt namn + växtfamilj → historisk medicinsk användning och aktiv substans → giftvarning där det behövs → etymologi (genus + artepitet). Grupperna spänner från köksväxter (vitlök, ingefära, dill) till de farligaste gifterna (stormhatt, odört, fingerborgsblomma, oleander, hösttidlösa).
+  - Täcker smärta/sömn, hjärta/cirkulation, feber/malaria, matsmältning/lever/laxermedel, luftvägar, sår/hud, kvinnohälsa, stimulantia/tonika, mask-/parasitmedel, gikt/reuma, urinvägar, klassiska växtgifter, psykoaktiva/rituella örter samt aromatiska kryddor.
+  - 0 slug-kollisioner; sökbara även på svenska trivialnamn (namnet inleder definitionen). Ordlistan 10 763 → **10 963**.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.69.
+
 ## 0.9.68
 - **Snyggare källattribution i ordlistans sidfot.** "Termer baserade på …" ersatt med en mer professionell formulering som listar tunga standardverk: *Terminologia Anatomica* (FIPAT/IFAA), *Nomina Anatomica*, *Gray's Anatomy*, *Sobotta – Atlas of Human Anatomy*, *Svenska Akademiens ordbok* (SAOB) samt etablerade svenska medicinska uppslagsverk. Gäller alla ordlistesidor (genererat).
 - VERSION/APP_VERSION/app.js-cachebuster → 0.9.68.
