@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.68
+- **Snyggare källattribution i ordlistans sidfot.** "Termer baserade på …" ersatt med en mer professionell formulering som listar tunga standardverk: *Terminologia Anatomica* (FIPAT/IFAA), *Nomina Anatomica*, *Gray's Anatomy*, *Sobotta – Atlas of Human Anatomy*, *Svenska Akademiens ordbok* (SAOB) samt etablerade svenska medicinska uppslagsverk. Gäller alla ordlistesidor (genererat).
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.68.
+
 ## 0.9.67
 - **Ordlistan: 94 franska, tyska och italienska medicinska ord.** Lånord och eponymer ur de tre språken, var och en med språkmarkör (`(fr.)`/`(ty.)`/`(it.)`) efter ordklassen och etymologi precis som övriga poster.
   - **Franska (29):** Débridement, Curettage, Bruit, Râle, Souffle, Frottement, Tamponade, Bougie, Malaise, Tic douloureux, Fontanelle, Chancre, Peau d'orange, Café au lait, Coup/contrecoup, Cul-de-sac, Trocar, Bistouri, Garrot, Ballottement, Drainage, Massage, Pipette, Plaque, Rapport, Crétin, Accoucheur, Cœur en sabot, Frisson. Befintliga *Tourniquet* rättad: ordet är franskt (av *tourner* = vrida), inte engelskt.
