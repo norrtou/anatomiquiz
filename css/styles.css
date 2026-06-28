@@ -2421,6 +2421,16 @@ ol li {
 @media (max-width: 720px) {
   .kb-mtable, .kb-mtable tbody, .kb-mtable tr, .kb-mtable td { display: block; width: auto; }
   .kb-mtable colgroup { display: none; }
+  /* Caption måste bli block här – annars krymper den till min-content och bryter
+     ord-per-rad. Full bredd + större grad så tabellrubriken syns som en rubrik. */
+  .kb-mtable caption {
+    display: block;
+    width: auto;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--primary-deep);
+    margin-bottom: 10px;
+  }
   .kb-mtable thead {
     position: absolute; width: 1px; height: 1px;
     padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;

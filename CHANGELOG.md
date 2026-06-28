@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.77
+- **Fix: tabellrubriker (`<caption>`) bröts ord-per-rad på mobil.** I mobil-layouten (≤720px) blir `.kb-mtable` `display:block`, men `<caption>` lämnades som `table-caption` och krympte då till min-content → varje ord på egen rad. Nu sätts captionen till `display:block` med full bredd och större grad (1,05rem, fet) så att tabellrubriken syns som en rubrik. Gäller alla `.kb-mtable` i hela kunskapsbanken.
+- **Kortare tabellrubriker** på `lakemedelsberakning-omvandlingar.html` (t.ex. "Massa (vikt)", "Tid", "Procent till mg/ml", "Droppfaktor (droppar/ml)") så att de får plats på en rad.
+- **CSS-cachebuster enhetlig:** alla sidor refererar nu `styles.css?v=0.7.17` (löser den fragmenterade versionen i SEO_REGLER §14).
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.77.
+
 ## 0.9.76
 - **Faktatexter-kortet på kunskapsbankens hub satt till "Live".** Pillaren har live-innehåll sedan tidigare; kortet i `kunskapsbank/index.html` uppdaterat från "Snart"/"Förhandstitt →" till "Live"/"Öppna faktatexterna →".
 - VERSION/APP_VERSION/app.js-cachebuster → 0.9.76.
