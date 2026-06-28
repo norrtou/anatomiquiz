@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.70
+- **Ordlistan: 164 historiskt viktiga läkemedelssubstanser.** Generiska namn som uppslagsord enligt grundmallen: ordklass → kort definition med användningsområde (och svenskt handelsnamn där det belyser) → `Eng.` generiskt namn → `Av …`-etymologi med **fokus på ordens betydelse** (vad namndelarna faktiskt betyder), inte bara den kemiska sammandragningen. T.ex. *Atropin* efter ödesgudinnan Atropos ("den som inte kan vändas"), *Morfin* efter drömguden Morfeus, *Salvarsan* av lat. *salvare* = frälsa + arsenik, *Penicillin* av *penicillus* = liten pensel.
+  - Täcker antibiotika, cytostatika, psykofarmaka, hjärt-/kärlmedel, diuretika, hormoner, narkos/lokalbedövning, opioider, antivirala, svampmedel, antiepileptika m.m. – från ur-läkemedlen (opium, kinin, eter) till moderna milstolpar (omeprazol, fluoxetin, ciklosporin).
+  - Korsreferenser (`Jfr …`) mellan besläktade substanser (Levodopa↔Karbidopa, Morfin↔Morfinsulfat, betablockerarnas `-olol`-familj m.fl.). Dubbletter mot redan befintliga poster uteslutna; sammanslagna varianter (Brom→Kaliumbromid, Eter→Dietyleter, AZT→Azidotymidin, Penicillin G→Bensylpenicillin). En källkritiskt tveksam (fabricerad) rad utelämnad.
+  - 0 slug-kollisioner. Ordlistan 10 963 → **11 127**.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.70.
+
 ## 0.9.69
 - **Ordlistan: 200 medicinalväxter (örtmedicinens historia).** Inlagda under sina **latinska namn** som uppslagsord, var och en enligt grundmallen: ordklass `(lat.)` → svenskt namn + växtfamilj → historisk medicinsk användning och aktiv substans → giftvarning där det behövs → etymologi (genus + artepitet). Grupperna spänner från köksväxter (vitlök, ingefära, dill) till de farligaste gifterna (stormhatt, odört, fingerborgsblomma, oleander, hösttidlösa).
   - Täcker smärta/sömn, hjärta/cirkulation, feber/malaria, matsmältning/lever/laxermedel, luftvägar, sår/hud, kvinnohälsa, stimulantia/tonika, mask-/parasitmedel, gikt/reuma, urinvägar, klassiska växtgifter, psykoaktiva/rituella örter samt aromatiska kryddor.
