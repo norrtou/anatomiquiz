@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.78
+- **Ordlistetooltips i muskeltabellerna – täckningslyft (batch 1).** Många medicinska ord i tabellerna saknade tooltip eftersom `wire_terms.py` bara länkar exakta ordlisteuppslag; böjda former matchade aldrig (därav "första ordet länkat, resten missat"). Lade till **129 kurerade alias** i `data/kb_glossary_terms.json`, alla pekande på redan kurerade ordlistedefinitioner (inget nyskrivet faktainnehåll):
+  - Latinska böjningar → grundform: *rami→ramus, humeri→humerus, femoris→femur, scapulae→scapula, ventrales/dorsales, capitis→caput, pollicis→pollex, hallucis→hallux, ossis/oris→os, anterius→anterior* m.fl.
+  - Svenska/förkortningsformer: *bäckenet, falangerna, akillessenan, dip/pip/mcp/cmc* m.fl.
+  - Blockerade felvänner med fel betydelse i tabellkontext: *iii (=evidensnivå), cav, pad, rik, ten*; rättade *recti→rectus*.
+- **Resultat:** muskeltabellerna gick från ~1 900 till **2 461** kb-term-länkar. Verifierat på halsens scalentabell (*Rami ventrales* m.m. nu fullt länkade).
+- Återstår (kommande batchar): nyskrivna källförankrade ordlisteposter för helt saknade medicinska termer (*metacarpale, anserinus, dorsalaponeuros, sesamben, ytterfalang, trappmuskel* m.fl.) samt nerv-/skelett-/led-/kärltabeller och faktatexter.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.78.
+
 ## 0.9.77
 - **Fix: tabellrubriker (`<caption>`) bröts ord-per-rad på mobil.** I mobil-layouten (≤720px) blir `.kb-mtable` `display:block`, men `<caption>` lämnades som `table-caption` och krympte då till min-content → varje ord på egen rad. Nu sätts captionen till `display:block` med full bredd och större grad (1,05rem, fet) så att tabellrubriken syns som en rubrik. Gäller alla `.kb-mtable` i hela kunskapsbanken.
 - **Kortare tabellrubriker** på `lakemedelsberakning-omvandlingar.html` (t.ex. "Massa (vikt)", "Tid", "Procent till mg/ml", "Droppfaktor (droppar/ml)") så att de får plats på en rad.
