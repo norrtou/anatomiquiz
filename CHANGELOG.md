@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.71
+- **Ordlistans källattribution kompletterad.** Sidfoten anger nu att diagnoser, koder och läkemedelsuppgifter även stämts av mot **Socialstyrelsens klassifikationer (ICD-10-SE)** och **FASS**, utöver de anatomiska/terminologiska standardverken. Gäller alla ordlistesidor (genererat).
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.71.
+
 ## 0.9.70
 - **Ordlistan: 164 historiskt viktiga läkemedelssubstanser.** Generiska namn som uppslagsord enligt grundmallen: ordklass → kort definition med användningsområde (och svenskt handelsnamn där det belyser) → `Eng.` generiskt namn → `Av …`-etymologi med **fokus på ordens betydelse** (vad namndelarna faktiskt betyder), inte bara den kemiska sammandragningen. T.ex. *Atropin* efter ödesgudinnan Atropos ("den som inte kan vändas"), *Morfin* efter drömguden Morfeus, *Salvarsan* av lat. *salvare* = frälsa + arsenik, *Penicillin* av *penicillus* = liten pensel.
   - Täcker antibiotika, cytostatika, psykofarmaka, hjärt-/kärlmedel, diuretika, hormoner, narkos/lokalbedövning, opioider, antivirala, svampmedel, antiepileptika m.m. – från ur-läkemedlen (opium, kinin, eter) till moderna milstolpar (omeprazol, fluoxetin, ciklosporin).
