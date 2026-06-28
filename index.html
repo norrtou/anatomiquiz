@@ -159,6 +159,7 @@
         <option value="blandade" data-edu="arbetsterapeut">Slumpade frågor (MC+TF)</option>
         <option value="medicinsk_latin" data-edu="sjukskoterska">Medicinsk latin (MC)</option>
         <option value="anatomi_fysiologi_flashcards" data-edu="sjukskoterska">Anatomi &amp; fysiologi (FC)</option>
+        <option value="lakemedelsrakning" data-edu="sjukskoterska">Läkemedelsräkning (MC)</option>
         <option value="farmakologi" data-edu="allmant">Farmakologi (FC)</option>
       </select>
       <p id="topicLegend" class="topic-legend">MC = Multiple Choice-frågor för quiz, FC = Flashcards, TF = Sant eller falskt-frågor för quiz</p>
@@ -332,6 +333,8 @@
     <section id="result" class="card hidden" aria-labelledby="resultHeading">
       <h2 id="resultHeading">Resultat</h2>
       <p id="resultText"></p>
+      <!-- Ämnesrelaterade fördjupningslänkar (fylls av finishQuiz när ämnet har material i kunskapsbanken) -->
+      <p id="resultLinks" class="hidden"></p>
       <div class="actions">
         <button id="finishBtn" class="btn primary">Avsluta</button>
         <button id="restart" class="btn">Spela igen</button>
@@ -398,6 +401,6 @@
   </main>
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
-  <script src="js/app.js?v=0.9.73" defer></script>
+  <script src="js/app.js?v=0.9.76" defer></script>
 </body>
 </html>

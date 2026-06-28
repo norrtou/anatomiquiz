@@ -1,5 +1,22 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.76
+- **Faktatexter-kortet på kunskapsbankens hub satt till "Live".** Pillaren har live-innehåll sedan tidigare; kortet i `kunskapsbank/index.html` uppdaterat från "Snart"/"Förhandstitt →" till "Live"/"Öppna faktatexterna →".
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.76.
+
+## 0.9.75
+- **Ny faktatext + tabellmaterial: Läkemedelsberäkning.** Två nya kunskapsbankssidor som kompletterar quizet Läkemedelsräkning (0.9.74):
+  - `kunskapsbank/lakemedelsberakning.html` – faktatext "Läkemedelsberäkning – så räknar du rätt dos": begreppen ordination/styrka/dos, enhetsomvandling, de tre grundformlerna, infusionshastighet och dropptakt, dosering per kg, procentlösningar och spädning samt säker kontrollräkning. Article+LearningResource + FAQPage (speglar synlig FAQ) + BreadcrumbList. Inlagd som live-kort i `faktatexter.html`.
+  - `kunskapsbank/lakemedelsberakning-omvandlingar.html` – tabellmaterial "Omvandlingar & formler": massa, volym, tid, procent→mg/ml, droppfaktor och formelsamling som responsiva `.kb-mtable` (skriv ut/CSV). Inlagd som live-kort i `listor-tabeller.html`.
+  - **Trippelkoppling:** faktatext ↔ tabell ↔ quiz korslänkade åt båda håll; båda sidorna länkar till ordlistan. Alla påståenden faktakollade (1 g = 1000 mg, 1 % = 10 mg/ml, 0,9 % NaCl = 9 mg/ml, droppfaktor ≈ 20 dr/ml m.m.).
+  - SEO/kedjan enligt SEO_REGLER: unika titlar/descriptions, OG/Twitter, JSON-LD, kb-term-tooltips mot verifierade ordlisteankare, sitemap.xml + llms.txt uppdaterade.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.75.
+
+## 0.9.74
+- **Nytt ämne: Läkemedelsräkning (MC) för sjuksköterskor.** 100 nya flervalsfrågor i `data/lakemedelsrakning.json`, taggade `data-edu="sjukskoterska"`. 50 faktafrågor (enheter, begrepp, förkortningar p.o./i.v./s.c./i.m., formler, säkerhet/dubbelkontroll, rimlighetsbedömning) och 50 beräkningsfrågor anpassade för MC-format så de går att räkna i huvudet: enhetsomvandling (g↔mg↔µg, l↔ml), tablettberäkning (ordination ÷ styrka), dosvolym (mg ÷ mg/ml), mängd substans (mg/ml × ml), dygnsdos, infusionshastighet (ml/h), droppräkning (20 dr/ml), mg/kg-dosering samt procent-/spädningslösningar. Nivå och innehåll kalibrerade mot svensk sjuksköterskekurslitteratur (Läkemedelsräkning för sjuksköterskor, Studentlitteratur).
+- Inkopplat i ämnesväljaren (index.html), `getQuestionsPath()` (app.js) och ämneslistan på info-sidan (info.js).
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.74.
+
 ## 0.9.73
 - **Ny ingresstext på medicinska ordlistan.** Tydligare och mer användarnära tagline: "Medicinska ord, förkortningar och begrepp med definitioner, synonymer och etymologi i en sökbar ordlista med {antal} ord. Ta reda på vad olika begrepp, förkortningar, för- och efterled betyder inom anatomi, fysiologi, sjukdomar, labbprover, farmakologi och omvårdnad." Antalet fylls i dynamiskt av generatorn.
 - VERSION/APP_VERSION/app.js-cachebuster → 0.9.73.

@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "lkr_f1",
+    "type": "mc",
+    "prompt": "Hur många milligram (mg) går det på 1 gram (g)?",
+    "correct": "1000 mg",
+    "distractors": ["100 mg", "10 mg", "10 000 mg"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f2",
+    "type": "mc",
+    "prompt": "Hur många mikrogram (µg) går det på 1 milligram (mg)?",
+    "correct": "1000 µg",
+    "distractors": ["100 µg", "10 µg", "1 000 000 µg"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f3",
+    "type": "mc",
+    "prompt": "Hur många milliliter (ml) går det på 1 liter (l)?",
+    "correct": "1000 ml",
+    "distractors": ["100 ml", "10 ml", "500 ml"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f4",
+    "type": "mc",
+    "prompt": "Vilken enhet är störst?",
+    "correct": "gram (g)",
+    "distractors": ["milligram (mg)", "mikrogram (µg)", "nanogram (ng)"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f5",
+    "type": "mc",
+    "prompt": "Vad betyder beteckningen \"mg/ml\" på en läkemedelsförpackning?",
+    "correct": "milligram aktiv substans per milliliter lösning",
+    "distractors": ["milliliter lösning per milligram substans", "milligram per tablett", "antal milliliter i förpackningen"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f6",
+    "type": "mc",
+    "prompt": "Vad menas med \"ordination\" i läkemedelsräkning?",
+    "correct": "den mängd aktiv substans som patienten ska få",
+    "distractors": ["läkemedlets fysiska form", "antalet tabletter i förpackningen", "tidpunkten då läkemedlet ges"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f7",
+    "type": "mc",
+    "prompt": "Vad menas med ett läkemedels \"styrka\"?",
+    "correct": "mängden aktiv substans per enhet, t.ex. per tablett eller per ml",
+    "distractors": ["den totala mängden i förpackningen", "hur snabbt läkemedlet verkar", "dosen per dygn"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f8",
+    "type": "mc",
+    "prompt": "Vad menas med \"dos\" (dosvolym) i läkemedelsräkning?",
+    "correct": "den volym läkemedel som ska ges, t.ex. antal ml eller tabletter",
+    "distractors": ["mängden aktiv substans per ml", "läkemedlets hållbarhetstid", "antalet doser per dygn"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f9",
+    "type": "mc",
+    "prompt": "Vilken formel ger antalet tabletter som ska ges?",
+    "correct": "ordinerad dos ÷ tablettens styrka",
+    "distractors": ["tablettens styrka ÷ ordinerad dos", "ordinerad dos × tablettens styrka", "ordinerad dos + tablettens styrka"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f10",
+    "type": "mc",
+    "prompt": "Vilken formel ger dosvolymen (ml) av en flytande beredning?",
+    "correct": "ordination (mg) ÷ styrka (mg/ml)",
+    "distractors": ["styrka (mg/ml) ÷ ordination (mg)", "ordination (mg) × styrka (mg/ml)", "styrka (mg/ml) × volym (ml)"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f11",
+    "type": "mc",
+    "prompt": "Hur räknar man ut mängden aktiv substans i en given volym?",
+    "correct": "styrka (mg/ml) × volym (ml)",
+    "distractors": ["styrka (mg/ml) ÷ volym (ml)", "volym (ml) ÷ styrka (mg/ml)", "volym (ml) + styrka (mg/ml)"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f12",
+    "type": "mc",
+    "prompt": "Vad betyder förkortningen \"p.o.\" i en ordination?",
+    "correct": "per os – via munnen",
+    "distractors": ["intravenöst", "vid behov", "subkutant"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f13",
+    "type": "mc",
+    "prompt": "Vad betyder förkortningen \"i.v.\" i en ordination?",
+    "correct": "intravenöst – i en ven",
+    "distractors": ["i en muskel", "under huden", "via munnen"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f14",
+    "type": "mc",
+    "prompt": "Vad betyder förkortningen \"s.c.\" i en ordination?",
+    "correct": "subkutant – under huden",
+    "distractors": ["intravenöst", "intramuskulärt", "via ändtarmen"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f15",
+    "type": "mc",
+    "prompt": "Vad betyder förkortningen \"i.m.\" i en ordination?",
+    "correct": "intramuskulärt – i en muskel",
+    "distractors": ["intravenöst", "subkutant", "via munnen"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f16",
+    "type": "mc",
+    "prompt": "Vad betyder \"vid behov\" (v.b. / prn) i en ordination?",
+    "correct": "läkemedlet ges endast när det behövs, inte på fasta tider",
+    "distractors": ["läkemedlet ges varje timme", "läkemedlet ges en gång per vecka", "läkemedlet ges före varje måltid"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f17",
+    "type": "mc",
+    "prompt": "Vad betyder doseringen \"1 × 3\"?",
+    "correct": "en enhet tre gånger per dygn",
+    "distractors": ["tre enheter en gång per dygn", "en enhet var tredje dag", "tre enheter tre gånger per dygn"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f18",
+    "type": "mc",
+    "prompt": "Vad menas med \"dygnsdos\"?",
+    "correct": "den totala mängd läkemedel som ges under ett dygn (24 timmar)",
+    "distractors": ["mängden per enskild dos", "mängden per vecka", "den högsta dos som någonsin får ges"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f19",
+    "type": "mc",
+    "prompt": "Vad innebär \"spädning\" av ett läkemedel?",
+    "correct": "att sänka koncentrationen genom att tillsätta vätska",
+    "distractors": ["att höja koncentrationen genom att tillsätta substans", "att värma upp lösningen", "att dela en tablett i två"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f20",
+    "type": "mc",
+    "prompt": "Vilken enhet anges en intravenös infusionshastighet oftast i?",
+    "correct": "milliliter per timme (ml/h)",
+    "distractors": ["milligram per timme (mg/h)", "liter per dygn (l/dygn)", "gram per minut (g/min)"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f21",
+    "type": "mc",
+    "prompt": "I ett vanligt droppaggregat för klara lösningar motsvarar 1 ml ungefär hur många droppar?",
+    "correct": "cirka 20 droppar",
+    "distractors": ["cirka 2 droppar", "cirka 60 droppar", "cirka 100 droppar"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f22",
+    "type": "mc",
+    "prompt": "Hur många mg/ml motsvarar en 1-procentig (1 %) lösning?",
+    "correct": "10 mg/ml",
+    "distractors": ["1 mg/ml", "100 mg/ml", "0,1 mg/ml"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f23",
+    "type": "mc",
+    "prompt": "Hur mycket aktiv substans innehåller 100 ml av en 1-procentig (1 %) lösning?",
+    "correct": "1 g",
+    "distractors": ["1 mg", "10 g", "100 mg"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f24",
+    "type": "mc",
+    "prompt": "Hur skrivs en dosering per kilo kroppsvikt?",
+    "correct": "mg/kg",
+    "distractors": ["kg/mg", "mg/ml", "mg/dygn"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f25",
+    "type": "mc",
+    "prompt": "Hur räknar man ut dosen när ordinationen anges som mg/kg?",
+    "correct": "dos per kg × patientens vikt i kg",
+    "distractors": ["dos per kg ÷ patientens vikt i kg", "patientens vikt ÷ dos per kg", "dos per kg + patientens vikt"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f26",
+    "type": "mc",
+    "prompt": "Varför bör man inte avrunda i mellanstegen av en läkemedelsberäkning?",
+    "correct": "avrundningsfel kan byggas på och göra slutsvaret felaktigt – avrunda sist",
+    "distractors": ["det går snabbare att avrunda tidigt", "mellansvaren ska alltid vara heltal", "decimaler är inte tillåtna i vården"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f27",
+    "type": "mc",
+    "prompt": "Vad innebär dubbelkontroll vid läkemedelshantering?",
+    "correct": "två personer kontrollerar beräkning och beredning oberoende av varandra",
+    "distractors": ["man räknar igenom samma uträkning två gånger själv", "man kontrollerar dosen två gånger per dygn", "läkemedlet ges i dubbel dos för säkerhets skull"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f28",
+    "type": "mc",
+    "prompt": "Vad bör man alltid göra med sitt uträknade svar innan läkemedlet ges?",
+    "correct": "göra en rimlighetsbedömning av svaret",
+    "distractors": ["avrunda till närmaste tiotal", "alltid runda uppåt", "lita på första uträkningen utan kontroll"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f29",
+    "type": "mc",
+    "prompt": "Du räknar ut att en patient ska få 20 tabletter i en enda dos. Vad är rimligast?",
+    "correct": "svaret är troligen felräknat och bör kontrolleras",
+    "distractors": ["ge alla 20 tabletterna som ordinerat", "halvera antalet på eget bevåg", "ge tabletterna utspritt över dygnet ändå"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f30",
+    "type": "mc",
+    "prompt": "Var hittar man tillförlitlig information om ett läkemedels styrka och dosering?",
+    "correct": "FASS",
+    "distractors": ["ICD-10-SE", "Socialstyrelsens dödsorsaksregister", "Terminologia Anatomica"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f31",
+    "type": "mc",
+    "prompt": "Vad betyder \"enteral\" tillförsel av läkemedel?",
+    "correct": "via mag–tarmkanalen, t.ex. via munnen eller sond",
+    "distractors": ["direkt i blodbanan", "genom huden", "via lungorna"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f32",
+    "type": "mc",
+    "prompt": "Vad betyder \"parenteral\" tillförsel av läkemedel?",
+    "correct": "förbi mag–tarmkanalen, t.ex. via injektion eller infusion",
+    "distractors": ["via munnen", "via ändtarmen", "via en sond till magsäcken"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f33",
+    "type": "mc",
+    "prompt": "Vad anger spädningsformeln C₁ × V₁ = C₂ × V₂?",
+    "correct": "sambandet mellan koncentration och volym före och efter spädning",
+    "distractors": ["dygnsdosen vid intravenös behandling", "antal droppar per minut", "dosen per kilo kroppsvikt"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f34",
+    "type": "mc",
+    "prompt": "Hur många timmar är ett dygn?",
+    "correct": "24 timmar",
+    "distractors": ["12 timmar", "48 timmar", "10 timmar"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f35",
+    "type": "mc",
+    "prompt": "Hur många minuter är en timme?",
+    "correct": "60 minuter",
+    "distractors": ["100 minuter", "30 minuter", "120 minuter"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f36",
+    "type": "mc",
+    "prompt": "Hur många gram (g) går det på 1 kilogram (kg)?",
+    "correct": "1000 g",
+    "distractors": ["100 g", "10 g", "10 000 g"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f37",
+    "type": "mc",
+    "prompt": "Vad är skillnaden mellan generiskt namn och produktnamn på ett läkemedel?",
+    "correct": "generiskt namn är substansens namn, produktnamnet är tillverkarens varumärke",
+    "distractors": ["generiskt namn är varumärket, produktnamnet är substansen", "de betyder alltid exakt samma sak", "generiskt namn anger styrkan, produktnamnet anger formen"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f38",
+    "type": "mc",
+    "prompt": "Vad menas med \"beredningsform\"?",
+    "correct": "läkemedlets fysiska form, t.ex. tablett, kapsel, lösning eller salva",
+    "distractors": ["mängden aktiv substans per enhet", "tidpunkten då läkemedlet bereds", "antalet doser per förpackning"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f39",
+    "type": "mc",
+    "prompt": "Hur skriver man \"en halv\" som decimaltal (svensk skrivning)?",
+    "correct": "0,5",
+    "distractors": ["0,05", "5,0", "1,5"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f40",
+    "type": "mc",
+    "prompt": "Hur förkortas mikrogram korrekt?",
+    "correct": "µg (eller mikrog)",
+    "distractors": ["mg", "mcgr alltid med stort M", "g"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f41",
+    "type": "mc",
+    "prompt": "En patient ska få en tablett som innehåller 500 mg. Hur uttrycks detta?",
+    "correct": "styrkan är 500 mg per tablett",
+    "distractors": ["dosvolymen är 500 ml", "koncentrationen är 500 mg/ml", "dygnsdosen är 500 mg"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f42",
+    "type": "mc",
+    "prompt": "Varför är det viktigt att enheter (mg, g, ml) är desamma innan man räknar?",
+    "correct": "annars blir kvoten eller produkten fel – t.ex. mg och g måste göras lika först",
+    "distractors": ["enheter saknar betydelse vid division", "man kan blanda enheter fritt så länge talen stämmer", "endast volymen behöver ha rätt enhet"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f43",
+    "type": "mc",
+    "prompt": "Vad menas med \"maxdos\" (maximal dygnsdos)?",
+    "correct": "den högsta tillåtna mängden av ett läkemedel under ett dygn",
+    "distractors": ["den vanliga rekommenderade engångsdosen", "den minsta verksamma dosen", "dosen som alltid ska ges"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f44",
+    "type": "mc",
+    "prompt": "Vad bör du göra om en ordination eller uträkning verkar oklar eller orimlig?",
+    "correct": "kontrollera med kollega och/eller ordinerande läkare innan läkemedlet ges",
+    "distractors": ["gissa dig fram till den troligaste dosen", "ge den lägsta tänkbara dosen utan att fråga", "hoppa över dosen helt utan dokumentation"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f45",
+    "type": "mc",
+    "prompt": "Hur många milligram är 0,5 g?",
+    "correct": "500 mg",
+    "distractors": ["50 mg", "5 mg", "5000 mg"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f46",
+    "type": "mc",
+    "prompt": "Hur många gram är 250 mg?",
+    "correct": "0,25 g",
+    "distractors": ["2,5 g", "25 g", "0,025 g"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f47",
+    "type": "mc",
+    "prompt": "Vad menas med en infusion?",
+    "correct": "tillförsel av större vätskevolym i en ven under en viss tid",
+    "distractors": ["en enstaka snabb injektion i en muskel", "en tablett som löses i munnen", "en salva som stryks på huden"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f48",
+    "type": "mc",
+    "prompt": "Vilken uppgift behöver du oftast känna till för att räkna ut en dosvolym i ml?",
+    "correct": "ordinationen (mg) och lösningens styrka (mg/ml)",
+    "distractors": ["endast patientens ålder", "endast förpackningens volym", "endast antalet doser per dygn"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f49",
+    "type": "mc",
+    "prompt": "Vad betyder doseringen \"2 × 1\"?",
+    "correct": "två enheter en gång per dygn",
+    "distractors": ["en enhet två gånger per dygn", "två enheter två gånger per dygn", "en enhet varannan dag"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_f50",
+    "type": "mc",
+    "prompt": "Vilket av följande är en av de \"rätta\" kontrollerna inför läkemedelsadministrering?",
+    "correct": "rätt patient, rätt läkemedel, rätt dos, rätt tid och rätt administreringssätt",
+    "distractors": ["rätt färg, rätt smak och rätt förpackning", "rätt veckodag och rätt rumstemperatur", "rätt tillverkare och rätt pris"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c1",
+    "type": "mc",
+    "prompt": "Hur många milligram är 2 g?",
+    "correct": "2000 mg",
+    "distractors": ["200 mg", "20 000 mg", "20 mg"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c2",
+    "type": "mc",
+    "prompt": "Hur många gram är 500 mg?",
+    "correct": "0,5 g",
+    "distractors": ["5 g", "0,05 g", "50 g"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c3",
+    "type": "mc",
+    "prompt": "Hur många milligram är 0,75 g?",
+    "correct": "750 mg",
+    "distractors": ["75 mg", "7,5 mg", "7500 mg"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c4",
+    "type": "mc",
+    "prompt": "Hur många milligram är 1500 µg?",
+    "correct": "1,5 mg",
+    "distractors": ["15 mg", "0,15 mg", "150 mg"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c5",
+    "type": "mc",
+    "prompt": "Hur många milliliter är 0,5 l?",
+    "correct": "500 ml",
+    "distractors": ["50 ml", "5000 ml", "5 ml"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c6",
+    "type": "mc",
+    "prompt": "Hur många liter är 250 ml?",
+    "correct": "0,25 l",
+    "distractors": ["2,5 l", "0,025 l", "25 l"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c7",
+    "type": "mc",
+    "prompt": "Hur många milligram är 3 g?",
+    "correct": "3000 mg",
+    "distractors": ["300 mg", "30 mg", "30 000 mg"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c8",
+    "type": "mc",
+    "prompt": "Hur många mikrogram är 0,2 mg?",
+    "correct": "200 µg",
+    "distractors": ["20 µg", "2000 µg", "2 µg"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c9",
+    "type": "mc",
+    "prompt": "Hur många gram är 4000 mg?",
+    "correct": "4 g",
+    "distractors": ["0,4 g", "40 g", "400 g"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c10",
+    "type": "mc",
+    "prompt": "Hur många milligram är 1,25 g?",
+    "correct": "1250 mg",
+    "distractors": ["125 mg", "12,5 mg", "12 500 mg"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c11",
+    "type": "mc",
+    "prompt": "En patient ordineras 1000 mg. Tabletterna har styrkan 500 mg. Hur många tabletter ska ges?",
+    "correct": "2 tabletter",
+    "distractors": ["1 tablett", "4 tabletter", "0,5 tablett"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c12",
+    "type": "mc",
+    "prompt": "En patient ordineras 750 mg. Tabletterna har styrkan 250 mg. Hur många tabletter ska ges?",
+    "correct": "3 tabletter",
+    "distractors": ["2 tabletter", "1,5 tabletter", "4 tabletter"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c13",
+    "type": "mc",
+    "prompt": "En patient ordineras 50 mg. Tabletterna har styrkan 25 mg. Hur många tabletter ska ges?",
+    "correct": "2 tabletter",
+    "distractors": ["1 tablett", "0,5 tablett", "3 tabletter"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c14",
+    "type": "mc",
+    "prompt": "En patient ordineras 1,5 g. Tabletterna har styrkan 500 mg. Hur många tabletter ska ges?",
+    "correct": "3 tabletter",
+    "distractors": ["2 tabletter", "1,5 tabletter", "6 tabletter"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c15",
+    "type": "mc",
+    "prompt": "En patient ordineras 20 mg. Tabletterna har styrkan 5 mg. Hur många tabletter ska ges?",
+    "correct": "4 tabletter",
+    "distractors": ["2 tabletter", "5 tabletter", "1 tablett"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c16",
+    "type": "mc",
+    "prompt": "En patient ordineras 30 mg. Tabletterna har styrkan 10 mg. Hur många tabletter ska ges?",
+    "correct": "3 tabletter",
+    "distractors": ["2 tabletter", "1 tablett", "4 tabletter"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c17",
+    "type": "mc",
+    "prompt": "En patient ordineras 7,5 mg. Tabletterna har styrkan 2,5 mg. Hur många tabletter ska ges?",
+    "correct": "3 tabletter",
+    "distractors": ["2 tabletter", "1,5 tabletter", "5 tabletter"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c18",
+    "type": "mc",
+    "prompt": "En patient ordineras 2 g. Tabletterna har styrkan 500 mg. Hur många tabletter ska ges?",
+    "correct": "4 tabletter",
+    "distractors": ["2 tabletter", "3 tabletter", "8 tabletter"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c19",
+    "type": "mc",
+    "prompt": "En patient ordineras 100 mg. Tabletterna har styrkan 50 mg. Hur många tabletter ska ges?",
+    "correct": "2 tabletter",
+    "distractors": ["1 tablett", "4 tabletter", "0,5 tablett"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c20",
+    "type": "mc",
+    "prompt": "En patient ordineras 500 mg men tabletterna har styrkan 250 mg. Hur många tabletter ska ges?",
+    "correct": "2 tabletter",
+    "distractors": ["1 tablett", "3 tabletter", "0,5 tablett"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c21",
+    "type": "mc",
+    "prompt": "Ordination 50 mg. Lösningens styrka är 10 mg/ml. Hur många ml ska ges?",
+    "correct": "5 ml",
+    "distractors": ["0,5 ml", "10 ml", "2 ml"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c22",
+    "type": "mc",
+    "prompt": "Ordination 100 mg. Lösningens styrka är 25 mg/ml. Hur många ml ska ges?",
+    "correct": "4 ml",
+    "distractors": ["2 ml", "5 ml", "0,25 ml"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c23",
+    "type": "mc",
+    "prompt": "Ordination 30 mg. Lösningens styrka är 10 mg/ml. Hur många ml ska ges?",
+    "correct": "3 ml",
+    "distractors": ["0,3 ml", "30 ml", "10 ml"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c24",
+    "type": "mc",
+    "prompt": "Ordination 500 mg. Lösningens styrka är 100 mg/ml. Hur många ml ska ges?",
+    "correct": "5 ml",
+    "distractors": ["50 ml", "0,5 ml", "2 ml"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c25",
+    "type": "mc",
+    "prompt": "Ordination 20 mg. Lösningens styrka är 5 mg/ml. Hur många ml ska ges?",
+    "correct": "4 ml",
+    "distractors": ["2 ml", "0,25 ml", "5 ml"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c26",
+    "type": "mc",
+    "prompt": "Ordination 250 mg. Lösningens styrka är 50 mg/ml. Hur många ml ska ges?",
+    "correct": "5 ml",
+    "distractors": ["2 ml", "10 ml", "0,2 ml"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c27",
+    "type": "mc",
+    "prompt": "Ordination 15 mg. Lösningens styrka är 5 mg/ml. Hur många ml ska ges?",
+    "correct": "3 ml",
+    "distractors": ["0,3 ml", "5 ml", "1,5 ml"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c28",
+    "type": "mc",
+    "prompt": "Ordination 1 g. Lösningens styrka är 200 mg/ml. Hur många ml ska ges?",
+    "correct": "5 ml",
+    "distractors": ["0,5 ml", "2 ml", "50 ml"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c29",
+    "type": "mc",
+    "prompt": "Ordination 40 mg. Lösningens styrka är 20 mg/ml. Hur många ml ska ges?",
+    "correct": "2 ml",
+    "distractors": ["4 ml", "0,5 ml", "1 ml"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c30",
+    "type": "mc",
+    "prompt": "Ordination 60 mg. Lösningens styrka är 10 mg/ml. Hur många ml ska ges?",
+    "correct": "6 ml",
+    "distractors": ["0,6 ml", "10 ml", "16 ml"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c31",
+    "type": "mc",
+    "prompt": "Hur mycket aktiv substans finns i 5 ml av en lösning med styrkan 10 mg/ml?",
+    "correct": "50 mg",
+    "distractors": ["2 mg", "15 mg", "500 mg"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c32",
+    "type": "mc",
+    "prompt": "Hur mycket aktiv substans finns i 10 ml av en lösning med styrkan 2 mg/ml?",
+    "correct": "20 mg",
+    "distractors": ["5 mg", "12 mg", "200 mg"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c33",
+    "type": "mc",
+    "prompt": "En patient får tabletter à 500 mg, dosering 1 × 3. Vad blir dygnsdosen?",
+    "correct": "1500 mg",
+    "distractors": ["500 mg", "1000 mg", "3000 mg"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c34",
+    "type": "mc",
+    "prompt": "En patient får 250 mg fyra gånger per dygn. Vad blir dygnsdosen?",
+    "correct": "1000 mg (1 g)",
+    "distractors": ["500 mg", "750 mg", "1250 mg"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c35",
+    "type": "mc",
+    "prompt": "Hur mycket aktiv substans finns i 4 ml av en lösning med styrkan 5 mg/ml?",
+    "correct": "20 mg",
+    "distractors": ["9 mg", "1,25 mg", "200 mg"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c36",
+    "type": "mc",
+    "prompt": "En patient får 2 tabletter à 1 g tre gånger per dygn. Vad blir dygnsdosen?",
+    "correct": "6 g",
+    "distractors": ["3 g", "2 g", "12 g"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c37",
+    "type": "mc",
+    "prompt": "Hur mycket aktiv substans finns i 2 ml av en lösning med styrkan 50 mg/ml?",
+    "correct": "100 mg",
+    "distractors": ["25 mg", "52 mg", "10 mg"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c38",
+    "type": "mc",
+    "prompt": "En patient får tabletter à 200 mg, dosering 1 × 4. Vad blir dygnsdosen?",
+    "correct": "800 mg",
+    "distractors": ["200 mg", "400 mg", "1200 mg"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c39",
+    "type": "mc",
+    "prompt": "1000 ml infusionslösning ska ges på 5 timmar. Vilken hastighet blir det i ml/h?",
+    "correct": "200 ml/h",
+    "distractors": ["100 ml/h", "250 ml/h", "500 ml/h"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c40",
+    "type": "mc",
+    "prompt": "500 ml infusionslösning ska ges på 4 timmar. Vilken hastighet blir det i ml/h?",
+    "correct": "125 ml/h",
+    "distractors": ["100 ml/h", "200 ml/h", "250 ml/h"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c41",
+    "type": "mc",
+    "prompt": "1000 ml infusionslösning ska ges på 8 timmar. Vilken hastighet blir det i ml/h?",
+    "correct": "125 ml/h",
+    "distractors": ["80 ml/h", "100 ml/h", "150 ml/h"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c42",
+    "type": "mc",
+    "prompt": "600 ml infusionslösning ska ges på 3 timmar. Vilken hastighet blir det i ml/h?",
+    "correct": "200 ml/h",
+    "distractors": ["150 ml/h", "300 ml/h", "180 ml/h"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c43",
+    "type": "mc",
+    "prompt": "900 ml ska ges på 5 timmar med ett droppaggregat där 1 ml = 20 droppar. Hur många droppar per minut blir det?",
+    "correct": "60 droppar/min",
+    "distractors": ["30 droppar/min", "90 droppar/min", "180 droppar/min"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c44",
+    "type": "mc",
+    "prompt": "360 ml ska ges på 2 timmar med ett droppaggregat där 1 ml = 20 droppar. Hur många droppar per minut blir det?",
+    "correct": "60 droppar/min",
+    "distractors": ["30 droppar/min", "40 droppar/min", "120 droppar/min"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c45",
+    "type": "mc",
+    "prompt": "Ett barn på 20 kg ska få 10 mg/kg av ett läkemedel. Vilken dos blir det?",
+    "correct": "200 mg",
+    "distractors": ["20 mg", "100 mg", "2000 mg"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c46",
+    "type": "mc",
+    "prompt": "Ett barn på 10 kg ska få 15 mg/kg av ett läkemedel. Vilken dos blir det?",
+    "correct": "150 mg",
+    "distractors": ["15 mg", "25 mg", "1500 mg"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c47",
+    "type": "mc",
+    "prompt": "Ett barn på 8 kg ska få 5 mg/kg av ett läkemedel. Vilken dos blir det?",
+    "correct": "40 mg",
+    "distractors": ["13 mg", "20 mg", "400 mg"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c48",
+    "type": "mc",
+    "prompt": "En vuxen på 70 kg ska få 20 mg/kg av ett läkemedel. Vilken dos blir det?",
+    "correct": "1400 mg",
+    "distractors": ["140 mg", "900 mg", "3500 mg"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c49",
+    "type": "mc",
+    "prompt": "Hur många mg/ml innehåller en 2-procentig (2 %) lösning?",
+    "correct": "20 mg/ml",
+    "distractors": ["2 mg/ml", "200 mg/ml", "0,2 mg/ml"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  },
+  {
+    "id": "lkr_c50",
+    "type": "mc",
+    "prompt": "Hur mycket aktiv substans finns i 500 ml av en 5-procentig (5 %) lösning?",
+    "correct": "25 g",
+    "distractors": ["5 g", "2,5 g", "50 g"],
+    "topic": "lakemedelsrakning",
+    "difficulty": "Normal",
+    "source": "Läkemedelsräkning för sjuksköterskor"
+  }
+]

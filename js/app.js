@@ -19,6 +19,7 @@ function getQuestionsPath(topic) {
   if (topic === 'medicinsk_latin') return './data/medicinsk_latin.json'
   if (topic === 'anatomi_fysiologi_flashcards') return './data/anatomi_fysiologi_flashcards.json'
   if (topic === 'farmakologi') return './data/farmakologi.json'
+  if (topic === 'lakemedelsrakning') return './data/lakemedelsrakning.json'
   // 'blandade' uses loadQuestionsFromMultiplePaths() instead
   return './data/riktningar.json'
 }
@@ -63,7 +64,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.73'
+const APP_VERSION = '0.9.76'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -540,6 +541,15 @@ function startCountUp(){
 
 function clearTimer(){ if(timerInterval){clearInterval(timerInterval);timerInterval=null} }
 
+// Fördjupningsmaterial i kunskapsbanken per ämne. Visas på resultatskärmen så att
+// quiz, faktatext och tabell länkar till varandra. Bygg ut när fler ämnen får material.
+const TOPIC_RESOURCES = {
+  lakemedelsrakning: [
+    { href: '/kunskapsbank/lakemedelsberakning.html', label: 'Faktatext: Läkemedelsberäkning' },
+    { href: '/kunskapsbank/lakemedelsberakning-omvandlingar.html', label: 'Tabell: Omvandlingar & formler' }
+  ]
+}
+
 function finishQuiz(){
   el('quiz').classList.add('hidden')
   el('result').classList.remove('hidden')
@@ -547,6 +557,23 @@ function finishQuiz(){
   saveScore()
   el('resultText').textContent = `Du fick ${score} av ${quizQuestions.length} rätt. Resultatet sparades i topplistan.`
   el('resultText').setAttribute('aria-live','polite')
+  renderResultLinks()
+}
+
+// Visar ämnesrelaterade fördjupningslänkar (faktatext/tabell) på resultatskärmen.
+function renderResultLinks(){
+  const box = el('resultLinks')
+  if(!box) return
+  const res = TOPIC_RESOURCES[el('topic').value]
+  if(!res || !res.length){ box.classList.add('hidden'); box.textContent = ''; return }
+  box.textContent = 'Fördjupa dig: '
+  res.forEach((r, i) => {
+    const a = document.createElement('a')
+    a.href = r.href; a.textContent = r.label
+    box.appendChild(a)
+    if(i < res.length - 1) box.appendChild(document.createTextNode(' · '))
+  })
+  box.classList.remove('hidden')
 }
 
 // Hämta läsbart ämnesnamn från <select>-alternativet, t.ex. 'osteologi' → 'Ben'
