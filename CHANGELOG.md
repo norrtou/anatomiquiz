@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.80
+- **Nytt quiz för läkarstudenter: Anatomi & fysiologi (MC, 100 frågor).** Ny datafil `data/lakare_anatomi_fysiologi.json` med 100 flervalsfrågor (4 svarsalternativ) på normal svårighet, kalibrerade mot läkarprogrammets prekliniska termin 1–6. Faktakontrollerat mot standardlitteraturen (Guyton & Hall samt Lännergren m.fl. i fysiologi; Gray's/Moore samt Sand & Bjålie i anatomi); originalformulerade frågor, inga verbatimkopierade tentafrågor.
+  - **Fördelning 50 fysiologi / 50 anatomi.** Fysiologi: cell-/membranfysiologi, nerv & muskel, autonoma nervsystemet, hjärta, cirkulation, blod, respiration, njure & syra-bas, mag-tarm/lever, endokrinologi, sinnen. Anatomi: övre & nedre extremitet (nerver/muskler), skelett, thorax & hjärta, buk & bäcken med kärl, samt neuroanatomi.
+  - **Wiring:** ny option `Anatomi & fysiologi (MC)` under utbildningsväljarens `data-edu="lakare"` (tidigare tom) i `index.html`; sökvägsmappning i `js/app.js` (`getQuestionsPath`). Inga befintliga ämnen eller filer rörda.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.80.
+
 ## 0.9.79
 - **Ordlistetooltips – heltäckande lyft över ALLA tabeller och faktatexter (batch 2, slutför 0.9.78).** Gick igenom samtliga 65 kunskapsbankssidor + case.html. kb-term-länkarna gick från ~4 700 till **6 582**.
   - **Aliaslager (inget nyskrivet faktainnehåll):** ytterligare kurerade alias i `data/kb_glossary_terms.json` som pekar på redan befintliga ordliste-/kb-definitioner. Tre källor: (1) latinska böjningar → grundform, (2) korta-def-poster (ol) → samma ankare, (3) **svenska synonymer → latinsk grundpost** (skenbenet→tibia, nyckelbenet→clavicula, korsbenet→sacrum, axelleden→articulatio glenohumeralis osv.), extraherade ur ordlistans egna "Sv."-fält.
