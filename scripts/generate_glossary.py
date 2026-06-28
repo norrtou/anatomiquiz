@@ -44,7 +44,7 @@ SITE = "https://anatomiquiz.se"
 LANDING_FILE = "medicinskordlista.html"
 
 # Cachebusters per asset — bumpa bara den som faktiskt ändrats.
-STYLES_V = "0.7.9"        # css/styles.css (synkad med övriga sidor 2026-06-25)
+STYLES_V = "0.7.17"       # css/styles.css (synkad med övriga sidor 2026-06-28)
 GLOSSARY_V = "0.9.4"      # css/glossary.css + js/glossary.js (denna release)
 
 # Svenska alfabetet — fast ordning för alfabetsraden. Bokstäver utan poster
@@ -778,6 +778,8 @@ def write_sitemap(group_files: list[str]) -> None:
     blocks.append(url_block(f"{SITE}/kunskapsbank/faktatexter.html", "weekly", "0.7"))
     blocks.append(url_block(f"{SITE}/kunskapsbank/sa-styrs-en-rorelse.html", "monthly", "0.7"))
     blocks.append(url_block(f"{SITE}/kunskapsbank/sa-leds-kanseln.html", "monthly", "0.7"))
+    blocks.append(url_block(f"{SITE}/kunskapsbank/lakemedelsberakning.html", "monthly", "0.7"))
+    blocks.append(url_block(f"{SITE}/kunskapsbank/lakemedelsberakning-omvandlingar.html", "monthly", "0.7"))
     # Nervtabeller (under-pillar + nervsidor)
     blocks.append(url_block(f"{SITE}/kunskapsbank/nervtabeller.html", "weekly", "0.7"))
     blocks.append(url_block(f"{SITE}/kunskapsbank/kranialnerverna.html", "monthly", "0.7"))

@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.79
+- **Ordlistetooltips – heltäckande lyft över ALLA tabeller och faktatexter (batch 2, slutför 0.9.78).** Gick igenom samtliga 65 kunskapsbankssidor + case.html. kb-term-länkarna gick från ~4 700 till **6 582**.
+  - **Aliaslager (inget nyskrivet faktainnehåll):** ytterligare kurerade alias i `data/kb_glossary_terms.json` som pekar på redan befintliga ordliste-/kb-definitioner. Tre källor: (1) latinska böjningar → grundform, (2) korta-def-poster (ol) → samma ankare, (3) **svenska synonymer → latinsk grundpost** (skenbenet→tibia, nyckelbenet→clavicula, korsbenet→sacrum, axelleden→articulatio glenohumeralis osv.), extraherade ur ordlistans egna "Sv."-fält.
+  - **44 nya källförankrade ordlisteposter** för medicinska termer som helt saknade förklaring: *dorsalaponeuros, palmaraponeuros, känselbortfall, fotvalv, framhornsneuron, hypotenar, facettled, hörselben, grundled/mellanled/ytterled, munvinkel, lateralrotation, radialdeviation, iliopsoas, kontinens, hals-/bröst-/ländrygg, ledskål, glidled, kondylled, prevertebral, suboccipital, bilateral, palmar, plantar, mesencefalon, hjärnstam, musculus, intercostal, anserinus, ischiopubicus, transversospinal* m.fl. Ordlistan 11 127 → 11 171 ord.
+  - **Säkerhetsspärrar:** blockerade vardagssvenska ord som krockar med medicinska förkortningar/latin (*men*=MEN, *veta*=vetus, *vara*=varus, *bra*=BRA, *vila*, *ring*, *bana/banan*, *stor* m.fl.) så de aldrig wiras felaktigt.
+- **Buggfix i `scripts/generate_glossary.py`:** `STYLES_V` låg kvar på `0.7.9` och nollställde ordlistesidornas CSS-cachebuster vid varje regenerering – nu `0.7.17` i linje med övriga sidor.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.79.
+
 ## 0.9.78
 - **Ordlistetooltips i muskeltabellerna – täckningslyft (batch 1).** Många medicinska ord i tabellerna saknade tooltip eftersom `wire_terms.py` bara länkar exakta ordlisteuppslag; böjda former matchade aldrig (därav "första ordet länkat, resten missat"). Lade till **129 kurerade alias** i `data/kb_glossary_terms.json`, alla pekande på redan kurerade ordlistedefinitioner (inget nyskrivet faktainnehåll):
   - Latinska böjningar → grundform: *rami→ramus, humeri→humerus, femoris→femur, scapulae→scapula, ventrales/dorsales, capitis→caput, pollicis→pollex, hallucis→hallux, ossis/oris→os, anterius→anterior* m.fl.
