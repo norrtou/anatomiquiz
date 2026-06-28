@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.67
+- **Ordlistan: 94 franska, tyska och italienska medicinska ord.** Lånord och eponymer ur de tre språken, var och en med språkmarkör (`(fr.)`/`(ty.)`/`(it.)`) efter ordklassen och etymologi precis som övriga poster.
+  - **Franska (29):** Débridement, Curettage, Bruit, Râle, Souffle, Frottement, Tamponade, Bougie, Malaise, Tic douloureux, Fontanelle, Chancre, Peau d'orange, Café au lait, Coup/contrecoup, Cul-de-sac, Trocar, Bistouri, Garrot, Ballottement, Drainage, Massage, Pipette, Plaque, Rapport, Crétin, Accoucheur, Cœur en sabot, Frisson. Befintliga *Tourniquet* rättad: ordet är franskt (av *tourner* = vrida), inte engelskt.
+  - **Tyska (33):** Mittelschmerz, Anlage, Gestalt, Angst, Bremsstrahlung, Kernicterus, Spinnbarkeit, Zeitgeber, Bereitschaftspotential, Gegenhalten, Mitgehen, Mitmachen, Witzelsucht, Vorbeireden, Wahn, Zwang, Wahnstimmung, Gedankenlautwerden, Verstimmung, Umwelt, Eigengrau, Mastzelle, Schwannom, Quaddel, Trieb, Verdrängung, Fehlleistung, Besetzung, Schub, Reiz, Doppelgänger, Magenstrasse, Erlebnis.
+  - **Italienska (32):** Influenza, Pellagra, Scarlattina, Belladonna, Quarantena, Lazzaretto, Tarantismo, Petecchie, Galvanismo samt eponymerna Eustachio, Falloppio, Malpighi, Golgi, Pacini, Ruffini, Sertoli, Morgagni, Valsalva, Scarpa, Botallo, Negri, Monteggia, Galeazzi, Aselli, Santorini, Aranzio, Varolio, Corti, Fontana, Pacchioni, Mondini, Marchiafava–Bignami.
+  - Redan befintliga med språk/etymologi (oförändrade): triage, grand mal, petit mal, lavage, malaria. Ordlistan 10 669 → **10 763**.
+  - Landningssidans ingress uppdaterad: nämner nu att ordlistan även rymmer franska, tyska och italienska medicinska lånord.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.67.
+
 ## 0.9.66
 - **Tooltips för anatomiska plan i led-/ROM-sidorna.** Sagittalplan, frontalplan, transversalplan (och medianplan) fanns som ordlisteposter men saknades i `kb_glossary_terms.json` → ingen tooltip i Rörelseplan-kolumnen. Nu inlagda i wire-källan (→ 1303) och led-sidorna om-wirade; planbegreppen får tooltip även på andra sidor vid nästa regenerering.
 - VERSION/APP_VERSION/app.js-cachebuster → 0.9.66.
