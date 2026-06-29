@@ -121,37 +121,32 @@
 
       <h2 id="setupHeading" class="sr-only">Starta quiz eller flashcards</h2>
 
-      <!-- Välj utbildning: filtrerar ämneslistan nedan per utbildning. Arbetsterapeut
-           är förvald och har alla nuvarande ämnen; övriga byggs ut efter hand. Varje
-           ämne taggas med data-edu så samma datadrivna filter (captureTopicOptions/
+      <!-- Välj utbildning: filtrerar ämneslistan nedan per utbildning. Allmänt är
+           förvalt (default) och den ämnesövergripande startpunkten. Varje ämne taggas
+           med data-edu så samma datadrivna filter (captureTopicOptions/
            updateTopicOptions) kombinerar utbildning + frågetyp.
-           Utbildningar utan eget data-edu-ämne gråas automatiskt av
+           Utbildningar utan eget (synligt) data-edu-ämne gråas automatiskt av
            updateEducationOptions() med "(inga ämnen ännu)" – det är platshållaren,
-           inga fejkade ämnen skapas. Listan är sorterad alfabetiskt (svensk ordning:
-           å/ä/ö efter z). Allmänt är förvalt (default) och den ämnesövergripande
-           startpunkten. Detaljerade anatomi/fysiologi-stjärnvärden per utbildning
-           finns i minnesfilen project_education_split.md. Yrkesnamn används, inte
-           "...programmet". -->
+           inga fejkade ämnen skapas. Tomma, ej byggda ämnen ligger som UTKOMMENTERAD
+           scaffold i #topic nedan (osynliga för användaren) tills de byggs.
+           Vilka utbildningar som ska finnas, deras ämnesindelning och linser styrs av
+           UTBILDNINGAR_REGLER.md. Listan är sorterad alfabetiskt (svensk ordning:
+           å/ä/ö efter z). Arbetsterapeut hanteras separat (egen ämnesmodell).
+           Yrkesnamn används, inte "...programmet". -->
       <label for="education">Utbildning och antal tillgängliga ämnen</label>
       <select id="education">
         <option value="allmant" selected>Allmänt</option>
         <option value="apotekare">Apotekare</option>
         <option value="arbetsterapeut">Arbetsterapeut</option>
         <option value="audionom">Audionom</option>
-        <option value="barnmorska">Barnmorska</option>
-        <option value="biomedicin">Biomedicinare</option>
         <option value="biomedicinsk_analytiker">Biomedicinsk analytiker</option>
-        <option value="dietist">Dietist</option>
         <option value="fysioterapeut">Fysioterapeut</option>
         <option value="logoped">Logoped</option>
         <option value="lakare">Läkare</option>
         <option value="medicinsk_sekreterare">Medicinsk sekreterare</option>
-        <option value="medicintekniker">Medicintekniker</option>
         <option value="optiker">Optiker</option>
-        <option value="receptarie">Receptarie</option>
         <option value="rontgensjukskoterska">Röntgensjuksköterska</option>
         <option value="sjukskoterska">Sjuksköterska</option>
-        <option value="tandhygienist">Tandhygienist</option>
         <option value="tandlakare">Tandläkare</option>
       </select>
 
@@ -178,10 +173,155 @@
         <option value="otipm_flashcards" data-edu="arbetsterapeut" data-nonmedical="1">OTIPM (FC)</option>
         <option value="blandade" data-edu="arbetsterapeut">Slumpade frågor (MC+TF)</option>
         <option value="medicinsk_latin" data-edu="sjukskoterska">Medicinsk latin (MC)</option>
-        <option value="anatomi_fysiologi_flashcards" data-edu="sjukskoterska">Anatomi &amp; fysiologi (FC)</option>
+        <option value="anatomi_fysiologi_flashcards" data-edu="sjukskoterska">Blandad anatomi/fysiologi (FC)</option>
         <option value="lakemedelsrakning" data-edu="sjukskoterska">Läkemedelsräkning (MC)</option>
         <option value="farmakologi" data-edu="allmant">Farmakologi (FC)</option>
-        <option value="lakare_anatomi_fysiologi" data-edu="lakare">Anatomi &amp; fysiologi (MC)</option>
+        <option value="lakare_anatomi_fysiologi" data-edu="lakare">Blandad anatomi/fysiologi (MC)</option>
+
+        <!-- =========================================================
+             PLATSHÅLLAR-SCAFFOLD per utbildning (ej byggda ämnen ännu).
+             Avsiktligt UTKOMMENTERAT: tomma ämnen ska INTE synas för
+             användaren. Kommenterade <option> renderas aldrig, fångas
+             inte av captureTopicOptions() och räknas inte – utbildningen
+             gråas som "(inga ämnen ännu)" tills riktigt innehåll finns.
+             Full ämnesindelning & linser: UTBILDNINGAR_REGLER.md.
+             När ett ämne byggs: avkommentera raden, lägg till frågefilen
+             i getQuestionsPath() och sätt rätt typtagg (MC/FC/TF) i texten.
+             Allmänt och arbetsterapeut hanteras separat – ingen scaffold här.
+             ========================================================= -->
+
+        <!-- Fysioterapeut -->
+        <!-- <option value="fysio_axel_skulder" data-edu="fysioterapeut">Axel/skulderkomplex</option> -->
+        <!-- <option value="fysio_armbage_underarm" data-edu="fysioterapeut">Armbåge &amp; underarm</option> -->
+        <!-- <option value="fysio_hand_handled" data-edu="fysioterapeut">Hand &amp; handled</option> -->
+        <!-- <option value="fysio_hoft_backen" data-edu="fysioterapeut">Höft &amp; bäcken</option> -->
+        <!-- <option value="fysio_kna" data-edu="fysioterapeut">Knä</option> -->
+        <!-- <option value="fysio_fot_fotled" data-edu="fysioterapeut">Fot &amp; fotled</option> -->
+        <!-- <option value="fysio_columna" data-edu="fysioterapeut">Columna/ryggrad</option> -->
+        <!-- <option value="fysio_nervsystemet" data-edu="fysioterapeut">Nervsystemet</option> -->
+        <!-- <option value="fysio_muskelfysiologi" data-edu="fysioterapeut">Muskelfysiologi</option> -->
+        <!-- <option value="fysio_kardio_resp" data-edu="fysioterapeut">Kardiovaskulär &amp; respiratorisk fysiologi</option> -->
+        <!-- <option value="fysio_led_skelett" data-edu="fysioterapeut">Led- &amp; skelettlära</option> -->
+        <!-- <option value="fysio_smartfysiologi" data-edu="fysioterapeut">Smärtfysiologi</option> -->
+        <!-- <option value="fysio_motorisk_utv_aldrande" data-edu="fysioterapeut">Motorisk utveckling &amp; åldrande</option> -->
+        <!-- <option value="fysio_traning_arbetsfys" data-edu="fysioterapeut">Tränings-/arbetsfysiologi</option> -->
+
+        <!-- Läkare (har redan: Blandad anatomi/fysiologi) -->
+        <!-- <option value="lakare_ovre_extremitet" data-edu="lakare">Övre extremitet</option> -->
+        <!-- <option value="lakare_nedre_extremitet" data-edu="lakare">Nedre extremitet</option> -->
+        <!-- <option value="lakare_thorax" data-edu="lakare">Thorax</option> -->
+        <!-- <option value="lakare_buk" data-edu="lakare">Buk/abdomen</option> -->
+        <!-- <option value="lakare_backen_perineum" data-edu="lakare">Bäcken &amp; perineum</option> -->
+        <!-- <option value="lakare_rygg_columna" data-edu="lakare">Rygg &amp; columna</option> -->
+        <!-- <option value="lakare_huvud_hals" data-edu="lakare">Huvud &amp; hals</option> -->
+        <!-- <option value="lakare_neuroanatomi" data-edu="lakare">Neuroanatomi (CNS)</option> -->
+        <!-- <option value="lakare_kardiovaskular" data-edu="lakare">Kardiovaskulära systemet</option> -->
+        <!-- <option value="lakare_respiration" data-edu="lakare">Respirationssystemet</option> -->
+        <!-- <option value="lakare_njure_vatska" data-edu="lakare">Njure &amp; vätskebalans</option> -->
+        <!-- <option value="lakare_gastro_amnesoms" data-edu="lakare">Gastrointestinalt &amp; ämnesomsättning</option> -->
+        <!-- <option value="lakare_endokrina" data-edu="lakare">Endokrina systemet</option> -->
+        <!-- <option value="lakare_blod_immun" data-edu="lakare">Blod &amp; immunförsvar</option> -->
+        <!-- <option value="lakare_reproduktion" data-edu="lakare">Reproduktion</option> -->
+        <!-- <option value="lakare_histologi" data-edu="lakare">Histologi</option> -->
+        <!-- <option value="lakare_embryologi" data-edu="lakare">Embryologi</option> -->
+        <!-- <option value="lakare_cell_membranfys" data-edu="lakare">Cell- &amp; membranfysiologi</option> -->
+
+        <!-- Sjuksköterska (har redan: Medicinsk latin, Blandad anatomi/fysiologi, Läkemedelsräkning) -->
+        <!-- <option value="ssk_cell_vavnad_homeostas" data-edu="sjukskoterska">Cell, vävnad &amp; homeostas</option> -->
+        <!-- <option value="ssk_vitalparametrar" data-edu="sjukskoterska">Vitalparametrar &amp; normalvärden</option> -->
+        <!-- <option value="ssk_cirkulation" data-edu="sjukskoterska">Cirkulationssystemet</option> -->
+        <!-- <option value="ssk_blodet" data-edu="sjukskoterska">Blodet</option> -->
+        <!-- <option value="ssk_respiration" data-edu="sjukskoterska">Respirationssystemet</option> -->
+        <!-- <option value="ssk_nervsystemet" data-edu="sjukskoterska">Nervsystemet</option> -->
+        <!-- <option value="ssk_rorelseapparaten" data-edu="sjukskoterska">Rörelseapparaten</option> -->
+        <!-- <option value="ssk_matsmaltning_naring" data-edu="sjukskoterska">Matsmältning &amp; näringslära</option> -->
+        <!-- <option value="ssk_njurar_urinvagar" data-edu="sjukskoterska">Njurar &amp; urinvägar</option> -->
+        <!-- <option value="ssk_endokrina" data-edu="sjukskoterska">Endokrina systemet</option> -->
+        <!-- <option value="ssk_huden" data-edu="sjukskoterska">Huden (integumentet)</option> -->
+        <!-- <option value="ssk_immun_lymf" data-edu="sjukskoterska">Immunförsvar &amp; lymfsystem</option> -->
+        <!-- <option value="ssk_reproduktion_graviditet" data-edu="sjukskoterska">Reproduktion, graviditet &amp; förlossning</option> -->
+        <!-- <option value="ssk_vatska_elektrolyt_syrabas" data-edu="sjukskoterska">Vätske-, elektrolyt- &amp; syra-basbalans</option> -->
+        <!-- <option value="ssk_aldrande_livscykel" data-edu="sjukskoterska">Åldrande &amp; livscykelperspektiv</option> -->
+
+        <!-- Biomedicinsk analytiker -->
+        <!-- <option value="bma_cell_vavnad" data-edu="biomedicinsk_analytiker">Cell &amp; vävnad (morfologi)</option> -->
+        <!-- <option value="bma_blod_blodbildning" data-edu="biomedicinsk_analytiker">Blod &amp; blodbildning</option> -->
+        <!-- <option value="bma_hjarta_cirkulation" data-edu="biomedicinsk_analytiker">Hjärta &amp; cirkulation</option> -->
+        <!-- <option value="bma_respiration_lungor" data-edu="biomedicinsk_analytiker">Respiration &amp; lungor</option> -->
+        <!-- <option value="bma_nervsystem_muskler" data-edu="biomedicinsk_analytiker">Nervsystem &amp; muskler</option> -->
+        <!-- <option value="bma_njurar_urinvagar" data-edu="biomedicinsk_analytiker">Njurar &amp; urinvägar</option> -->
+        <!-- <option value="bma_matsmaltning_lever" data-edu="biomedicinsk_analytiker">Matsmältning, lever &amp; ämnesomsättning</option> -->
+        <!-- <option value="bma_endokrina" data-edu="biomedicinsk_analytiker">Endokrina systemet</option> -->
+        <!-- <option value="bma_immun_lymfatiska" data-edu="biomedicinsk_analytiker">Immunsystem &amp; lymfatiska organ</option> -->
+        <!-- <option value="bma_ekg_elektrofys" data-edu="biomedicinsk_analytiker">Hjärtats elektrofysiologi &amp; EKG</option> -->
+        <!-- <option value="bma_spirometri" data-edu="biomedicinsk_analytiker">Respirationsfysiologi &amp; spirometri</option> -->
+        <!-- <option value="bma_karl_cirkulationsfys" data-edu="biomedicinsk_analytiker">Kärl- &amp; cirkulationsfysiologi</option> -->
+        <!-- <option value="bma_neurofysiologi" data-edu="biomedicinsk_analytiker">Klinisk neurofysiologi</option> -->
+        <!-- <option value="bma_njur_gastro_nuklear" data-edu="biomedicinsk_analytiker">Njur-, gastrofysiologi &amp; nuklearmedicin</option> -->
+        <!-- <option value="bma_klinisk_kemi" data-edu="biomedicinsk_analytiker">Klinisk kemi &amp; organmarkörer</option> -->
+        <!-- <option value="bma_hematologi_transfusion" data-edu="biomedicinsk_analytiker">Hematologi &amp; transfusionsmedicin</option> -->
+        <!-- <option value="bma_mikrobiologi_immunologi" data-edu="biomedicinsk_analytiker">Mikrobiologi &amp; immunologi</option> -->
+        <!-- <option value="bma_patologi" data-edu="biomedicinsk_analytiker">Patologi &amp; histopatologisk morfologi</option> -->
+
+        <!-- Röntgensjuksköterska -->
+        <!-- <option value="rtg_thorax" data-edu="rontgensjukskoterska">Thorax</option> -->
+        <!-- <option value="rtg_buk_retroperitoneum" data-edu="rontgensjukskoterska">Buk &amp; retroperitoneum</option> -->
+        <!-- <option value="rtg_skelett_extremiteter" data-edu="rontgensjukskoterska">Skelett &amp; extremiteter</option> -->
+        <!-- <option value="rtg_columna" data-edu="rontgensjukskoterska">Columna/ryggrad</option> -->
+        <!-- <option value="rtg_skalle_hjarna" data-edu="rontgensjukskoterska">Skalle &amp; hjärna</option> -->
+        <!-- <option value="rtg_huvud_hals" data-edu="rontgensjukskoterska">Huvud-hals &amp; ansiktsskelett</option> -->
+        <!-- <option value="rtg_backen_hoft" data-edu="rontgensjukskoterska">Bäcken &amp; höft</option> -->
+        <!-- <option value="rtg_karlanatomi" data-edu="rontgensjukskoterska">Kärlanatomi</option> -->
+        <!-- <option value="rtg_cirkulation_hjarta" data-edu="rontgensjukskoterska">Cirkulation &amp; hjärtfunktion</option> -->
+        <!-- <option value="rtg_njurfunktion" data-edu="rontgensjukskoterska">Njurfunktion &amp; utsöndring</option> -->
+        <!-- <option value="rtg_andning_rorelse" data-edu="rontgensjukskoterska">Andning &amp; rörelse</option> -->
+        <!-- <option value="rtg_snittanatomi" data-edu="rontgensjukskoterska">Snittanatomi</option> -->
+        <!-- <option value="rtg_projektionslara" data-edu="rontgensjukskoterska">Projektionslära &amp; lägesterminologi</option> -->
+        <!-- <option value="rtg_modalitetsspecifik" data-edu="rontgensjukskoterska">Modalitetsspecifik bildanatomi</option> -->
+        <!-- <option value="rtg_kontrastmedel" data-edu="rontgensjukskoterska">Kontrastmedel &amp; fördelning</option> -->
+
+        <!-- Medicinsk sekreterare -->
+        <!-- <option value="medsek_termens_byggstenar" data-edu="medicinsk_sekreterare">Termens byggstenar</option> -->
+        <!-- <option value="medsek_lages_riktning_rorelse" data-edu="medicinsk_sekreterare">Läges-, riktnings- &amp; rörelsetermer</option> -->
+        <!-- <option value="medsek_organsystemen_terminologi" data-edu="medicinsk_sekreterare">Organsystemen &amp; deras terminologi</option> -->
+        <!-- <option value="medsek_sjukdom_symtom_atgard" data-edu="medicinsk_sekreterare">Sjukdoms-, symtom- &amp; åtgärdstermer</option> -->
+        <!-- <option value="medsek_diagnoskodning" data-edu="medicinsk_sekreterare">Diagnosklassificering &amp; kodning</option> -->
+
+        <!-- Logoped -->
+        <!-- <option value="logoped_andningsapparaten" data-edu="logoped">Andningsapparaten</option> -->
+        <!-- <option value="logoped_larynx_fonation" data-edu="logoped">Röst-/fonationsapparaten (larynx)</option> -->
+        <!-- <option value="logoped_artikulation_resonans" data-edu="logoped">Artikulation &amp; resonans (ansatsröret)</option> -->
+        <!-- <option value="logoped_svaljning" data-edu="logoped">Sväljningsapparaten</option> -->
+        <!-- <option value="logoped_neuroanatomi_tal" data-edu="logoped">Neuroanatomi för tal &amp; språk</option> -->
+        <!-- <option value="logoped_orat_horsel" data-edu="logoped">Örat &amp; hörselsystemet</option> -->
+
+        <!-- Apotekare -->
+        <!-- <option value="apotekare_cell_receptorer" data-edu="apotekare">Cell, receptorer &amp; signalering</option> -->
+        <!-- <option value="apotekare_nervsystem_autonom" data-edu="apotekare">Nervsystemet &amp; autonom fysiologi</option> -->
+        <!-- <option value="apotekare_hjarta_cirkulation" data-edu="apotekare">Hjärta &amp; cirkulation</option> -->
+        <!-- <option value="apotekare_magtarm_lever" data-edu="apotekare">Mag-tarmkanal &amp; lever</option> -->
+        <!-- <option value="apotekare_njurar_utsondring" data-edu="apotekare">Njurar &amp; utsöndring</option> -->
+
+        <!-- Optiker -->
+        <!-- <option value="optiker_framre_segmentet" data-edu="optiker">Främre segmentet</option> -->
+        <!-- <option value="optiker_lins_ackommodation" data-edu="optiker">Lins &amp; ackommodation</option> -->
+        <!-- <option value="optiker_bakre_segmentet" data-edu="optiker">Bakre segmentet</option> -->
+        <!-- <option value="optiker_synfysiologi" data-edu="optiker">Synfysiologi &amp; perception</option> -->
+        <!-- <option value="optiker_ogonrorelser_binokular" data-edu="optiker">Ögonrörelser &amp; binokulärseende</option> -->
+
+        <!-- Tandläkare -->
+        <!-- <option value="tandlakare_tand_parodontium" data-edu="tandlakare">Tand &amp; parodontium</option> -->
+        <!-- <option value="tandlakare_kakar_kakled" data-edu="tandlakare">Käkar &amp; käkled (TMJ)</option> -->
+        <!-- <option value="tandlakare_munhala_munbotten" data-edu="tandlakare">Munhåla &amp; munbotten</option> -->
+        <!-- <option value="tandlakare_huvud_hals_karl_nerver" data-edu="tandlakare">Huvud-hals: kärl &amp; nerver</option> -->
+        <!-- <option value="tandlakare_salivkortlar_oral_fys" data-edu="tandlakare">Salivkörtlar &amp; oral fysiologi</option> -->
+
+        <!-- Audionom -->
+        <!-- <option value="audionom_ytter_mellanora" data-edu="audionom">Ytter- &amp; mellanöra</option> -->
+        <!-- <option value="audionom_innerorat_cochlea" data-edu="audionom">Innerörat – cochlea</option> -->
+        <!-- <option value="audionom_balansorganet" data-edu="audionom">Balansorganet (vestibularis)</option> -->
+        <!-- <option value="audionom_horselnerven_central" data-edu="audionom">Hörselnerven &amp; centrala hörselbanan</option> -->
+        <!-- <option value="audionom_ljud_horselfysiologi" data-edu="audionom">Ljud- &amp; hörselfysiologi</option> -->
       </select>
       <p id="topicLegend" class="topic-legend">MC = Multiple Choice-frågor för quiz, FC = Flashcards, TF = Sant eller falskt-frågor för quiz</p>
 
@@ -426,6 +566,6 @@
   </main>
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
-  <script src="js/app.js?v=0.9.81" defer></script>
+  <script src="js/app.js?v=0.9.82" defer></script>
 </body>
 </html>

@@ -109,7 +109,7 @@ const EDUCATIONS = [
   ]},
   { name: 'Sjuksköterska', topics: [
     { label: 'Medicinsk latin',             file: './data/medicinsk_latin.json' },
-    { label: 'Anatomi & fysiologi – flashcards', file: './data/anatomi_fysiologi_flashcards.json', fc: true },
+    { label: 'Blandad anatomi/fysiologi – flashcards', file: './data/anatomi_fysiologi_flashcards.json', fc: true },
     { label: 'Läkemedelsräkning',           file: './data/lakemedelsrakning.json' },
   ]},
 ]

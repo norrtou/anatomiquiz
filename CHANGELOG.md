@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.82
+- **Ombyggd utbildnings- & ämneslista enligt nytt regeldokument `UTBILDNINGAR_REGLER.md`.** Det dokumentet (repo-roten) är nu källan för vilka utbildningar som ska finnas, deras ämnesindelning och pedagogiska "linser" per program.
+  - **Utbildningsväljaren bantad från 19 → 13 + Allmänt.** Raderade tomma alternativ: Barnmorska, Biomedicinare, Dietist, Medicintekniker, Receptarie, Tandhygienist. Kvar: Allmänt + Apotekare, Arbetsterapeut, Audionom, Biomedicinsk analytiker, Fysioterapeut, Logoped, Läkare, Medicinsk sekreterare, Optiker, Röntgensjuksköterska, Sjuksköterska, Tandläkare.
+  - **"Anatomi & fysiologi" omdöpt → "Blandad anatomi/fysiologi"** för de utbildningar som redan hade ämnet: Sjuksköterska (FC) och Läkare (MC). Endast visningstext; `value` (`anatomi_fysiologi_flashcards`, `lakare_anatomi_fysiologi`) och datafiler oförändrade. Statistiklistans etikett i `js/info.js` omdöpt på samma sätt.
+  - **Platshållarämnen som UTKOMMENTERAD scaffold.** De ej byggda ämnena per utbildning (~111 st) ligger som kommenterade `<option>` i `#topic`, grupperade per utbildning. Kravet är att tomma ämnen INTE ska synas för användaren – kommenterade options renderas aldrig och fångas inte av `captureTopicOptions()`, så varje ännu obyggd utbildning gråas automatiskt som "(inga ämnen ännu)". När ett ämne byggs: avkommentera raden, lägg datafilen i `getQuestionsPath()` och sätt rätt typtagg (MC/FC/TF).
+  - **Allmänt och Arbetsterapeut är helt orörda** av ombyggnaden. Arbetsterapeutens ämnesmodell skiljer sig och hanteras separat (finns endast som referens i regeldokumentet).
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.82.
+
 ## 0.9.81
 - **Många fler utbildningar i "Välj utbildning" + platshållare.** Utbildningsväljaren utökades från 6 till **19 alternativ** (yrkesnamn, inte "...programmet"). Nya: **Tandläkare, Fysioterapeut* , Biomedicinsk analytiker, Biomedicinare, Röntgensjuksköterska, Audionom, Logoped, Dietist, Optiker, Barnmorska, Tandhygienist, Apotekare, Receptarie och Medicintekniker** (Fysioterapeut fanns sedan tidigare).
   - **Platshållarmekanik:** utbildningar utan eget ämne (ingen `data-edu`-taggad option) gråas automatiskt av `updateEducationOptions()` med "(inga ämnen ännu)" – samma beteende som Medicinsk sekreterare. Inga fejkade/platshållar­ämnen skapas; ämnen taggas med `data-edu` när de byggs.
