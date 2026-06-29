@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.91
+- **Språkfix i ledquizet: konsekvent latin.** Översiktslederna (CMC, MCP, PIP, DIP) använde pluralformen "Articulationes …" som rätt svar medan distraktorerna var singular "Articulatio …" – samma fråga blandade alltså två former. Alla latinsvar är nu singular "Articulatio …". (Bildregistrets beskrivande alt-texter behåller pluralformen där den beskriver en bild med flera leder.) Inga dubbelrätt-fall, verifierat.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.91.
+
 ## 0.9.90
 - **Fix: inget "Avsluta"/resultat efter sista frågan i bildquiz.** Resultatskärmen visades men hamnade utanför vyn: bildquizets fokusläge dolde sidrubriken och `scrollIntoView` hade pinnat kortet högst upp, så när rubriken kom tillbaka vid avslut låg resultatet (med Avsluta/Spela igen) nedanför skärmkanten – det såg ut som att appen låste sig.
   - `finishQuiz` scrollar nu upp till toppen, städar fokusläges-klassen och sätter resultattexten först + kapslar in sparning/länkar i try/catch så resultatskärmen alltid visas även om något delmoment fel.
