@@ -717,6 +717,23 @@ body:has(#quiz:not(.hidden)) {
   display: none;
 }
 
+/* Tidräknare + frågeräknare grupperas i footerns mitt (mellan Avbryt och Nästa). */
+.footer-center {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+/* Frågeräknaren visas bara i fokusvyn (i textquiz finns den i quiz-header). */
+.footer-progress {
+  display: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+.quiz-image .footer-progress {
+  display: block;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }

@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.89
+- **Frågeräknare i footern under bildfrågor.** Frågeräknaren ("Fråga X/Y") visas nu bredvid tidräknaren i footerns mitt (mellan Avbryt och Nästa) i bildfrågornas fokusvy – så man ser var i quizet man är utan att spelarnamn/poäng-raden behöver ta plats överst. Vanliga textquiz har kvar sin fullständiga rad (med poäng) i quiz-header.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.89; styles.css → 0.7.22.
+
 ## 0.9.88
 - **Bildfrågornas fokusvy: dölj spelarnamn + poäng-raden.** Hela quiz-header-raden (spelarnamn och "Fråga X/Y — Poäng") döljs nu under bildfrågor, så Nästa-knappen flyttas upp och bilden får mer plats. (Behövs inte i fokusvyn; visas fortfarande i vanliga textquiz.)
 - VERSION/APP_VERSION/app.js-cachebuster → 0.9.88; styles.css → 0.7.21.

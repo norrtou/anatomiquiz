@@ -94,7 +94,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="css/styles.css?v=0.7.21">
+  <link rel="stylesheet" href="css/styles.css?v=0.7.22">
 </head>
 <body>
 
@@ -472,7 +472,12 @@
 
       <div class="quiz-footer">
         <button id="cancelBtn" class="btn btn-cancel">Avbryt</button>
-        <div id="timer" class="timer" role="timer"></div>
+        <div class="footer-center">
+          <div id="timer" class="timer" role="timer"></div>
+          <!-- Frågeräknare som visas i bildfrågornas fokusvy (där quiz-header är dold),
+               bredvid tidräknaren mellan Avbryt och Nästa. Döljs i vanliga textquiz. -->
+          <div id="footerProgress" class="footer-progress" aria-live="polite"></div>
+        </div>
         <div class="quiz-actions">
           <button id="nextBtn" class="btn primary">Nästa</button>
         </div>
@@ -569,6 +574,6 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.88" defer></script>
+  <script src="js/app.js?v=0.9.89" defer></script>
 </body>
 </html>
