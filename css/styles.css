@@ -583,9 +583,15 @@ select:focus-visible {
 
 /* Förklaring av MC/FC/TF under ämnesväljaren på startsidan */
 .topic-legend {
-  font-size: 0.75em;
+  font-size: 0.9rem;
   font-style: italic;
   margin: 0.25em 0 0;
+}
+/* Mindre än dropdown-texten på mobil (var tidigare i samma storlek). */
+@media (max-width: 640px) {
+  .topic-legend {
+    font-size: 0.7rem;
+  }
 }
 
 /* Startvyn har fyra dropdowns (utbildning, ämne, antal, svårighet) + knappar.

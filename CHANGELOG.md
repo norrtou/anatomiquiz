@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.94
+- **Teckenförklaringen: storlek + "Bild".** Förklaringsraden under ämnesväljaren ("MC = …, Bild = fråga med bild") är nu något större på dator (0.9rem) och mindre på mobil (0.7rem, var tidigare i samma storlek som dropdown-texten). Taggen "bild" skrevs om till **"Bild"** både i förklaringen och i dropdown-alternativet "Slumpade frågor (MC+TF+Bild)".
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.94; styles.css → 0.7.24.
+
 ## 0.9.93
 - **Ny logga + enhetliga ikoner (skeletthand).** En liten skelett-"metal horn"-hand är nu logga i sidrubriken (till vänster om "Anatomiquiz") och används som favicon/PWA-ikoner.
   - **Logga:** `img/anatomiquiz-logo.webp` (transparent svart silhuett, beskuren och nedskalad), visas höjdstyrt (44 px desktop / 34 px mobil) i `.header-title`. Transparent → blandar in på headerns bakgrund utan färgskarv.
