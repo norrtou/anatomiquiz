@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.93
+- **Ny logga + enhetliga ikoner (skeletthand).** En liten skelett-"metal horn"-hand är nu logga i sidrubriken (till vänster om "Anatomiquiz") och används som favicon/PWA-ikoner.
+  - **Logga:** `img/anatomiquiz-logo.webp` (transparent svart silhuett, beskuren och nedskalad), visas höjdstyrt (44 px desktop / 34 px mobil) i `.header-title`. Transparent → blandar in på headerns bakgrund utan färgskarv.
+  - **Ikoner samlade till ETT motiv:** `favicon.svg` (var ett grönt "H"), `icon-192.png` och `icon-512.png` (var gröna "H") gjordes om till skeletthanden på ljus mintplatta (`#ecfdf5`). `favicon.png` regenererades i samma stil. Filnamnen behölls, så `<head>`/manifest/undersidor rör sig inte. PNG-ikonerna är solida (utan transparens) för säker apple-touch/iOS-rendering.
+  - Borttagen oanvänd källfil `img/anatomiquizmetalhorn.webp`. `og-image.png` (delningsbild) orörd.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.93; styles.css → 0.7.23.
+
 ## 0.9.92
 - **Bildfrågor i "Slumpade frågor" + tydlig märkning.** Ben- och led-bildfrågorna plockas in i Slumpade frågor (de samlas redan in automatiskt eftersom de är arbetsterapeut-ämnen med MC-tagg – verifierat). Dropdown-alternativet heter nu **"Slumpade frågor (MC+TF+bild)"** och teckenförklaringen utökades med "bild = fråga med bild" så det framgår att blandade quiz kan innehålla bildfrågor.
 - VERSION/APP_VERSION/app.js-cachebuster → 0.9.92.

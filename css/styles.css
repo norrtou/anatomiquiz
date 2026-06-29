@@ -187,6 +187,19 @@ main {
   flex-wrap: nowrap;
 }
 
+/* Liten logga (transparent skelett-metalhorn) till vänster om "Anatomiquiz". */
+.header-logo {
+  height: 44px;
+  width: auto;
+  align-self: center;
+  flex-shrink: 0;
+}
+@media (max-width: 640px) {
+  .header-logo {
+    height: 34px;
+  }
+}
+
 .header h1 {
   margin: 0;
   font-size: 2.5rem;
