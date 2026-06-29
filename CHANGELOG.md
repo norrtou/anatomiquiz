@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.84
+- **Nytt bildquiz: "Handens ben (bilder, MC)" (97 frågor) under Arbetsterapeut.** Första ämnet som använder det nya bildsystemet – **bilden ÄR frågan, ingen frågetext alls**: bara bilden + fyra svarsalternativ.
+  - **Tre svarsstilar per bild** (~33 av varje, oannonserade – framgår av alternativen): svenskt namn (t.ex. *Båtbenet*), latinskt namn (*Os scaphoideum*, *Phalanx media*) och kortform (*Scaphoideum*, *Dig 3 distal falang*, *MC III*). Alla 33 bilder används; fler frågor än bilder. 4 svarsalternativ, distraktorer ur samma bengrupp (karpalben, mellanhandsben, falanger, översiktsbilder) för rimlig svårighet.
+  - **Tillgänglighet:** ingen synlig prompt, men bilden får en neutral alt ("Vilket ben visas på bilden?") så skärmläsare får en rättvis fråga utan att registrets beskrivande alt (facit) avslöjas.
+  - **Datafil** `data/handens_ben_bilder.json` (varje fråga bär `"image": "<id>"` som slår upp bilden i registret `data/bilder.json`). Wirad i `getQuestionsPath()` och som `<option data-edu="arbetsterapeut">` i `#topic`.
+  - **Bildrendering inkopplad i quizet (tidigare förberett).** `js/images.js` laddas nu i `index.html`; `app.js` laddar bildregistret vid quizstart om någon fråga har bild och renderar `<figure>` med lazy-laddad `<img>` + alt ovanför frågetexten (`showQuestion`). Ny CSS för `.content-image` (responsiv, vit platta, max-höjd så svaren ryms på mobil).
+  - **33 handbens-bilder** (560×700 webp, egen licens CC BY 4.0 m. hänvisning till Anatomiquiz) registrerade i `data/bilder.json` under `img/media/anatomi/ovre-extremitet/hand|underarm/`.
+- VERSION/APP_VERSION/app.js+images.js-cachebuster → 0.9.84; styles.css → 0.7.18.
+
 ## 0.9.83
 - **Bildsystem för innehållsbilder (förberedelse).** Infört en smart lagrings- och hanteringslösning så anatomibilder kan återanvändas i flera utbildningars quiz och faktatexter UTAN dubletter. Inga bilder ännu – detta är infrastrukturen.
   - **En fil per motiv + centralt register.** Bilder lagras EN gång i en mappstruktur under `img/media/` (kategori → region/organsystem: `anatomi/`, `patologi/`, `histologi/`, `embryologi/`, `radiologi/` med regionundermappar), aldrig i projektroten. Registret `data/bilder.json` är enda källan; varje bild = en post med `id`, `file`, obligatorisk svensk `alt`, kategori/region/taggar/källa/licens. Återanvändning sker via bildens `id` (quiz: `"image":"<id>"`; faktatext: `<img src="/img/media/<file>">`) – samma id ger samma fil, ingen kopia.

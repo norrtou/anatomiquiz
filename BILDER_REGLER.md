@@ -72,9 +72,14 @@ SEO-nackdelen.
 - Dekorbild utan informationsvärde: tom `alt=""` (men sådana hör sällan hemma här).
 
 ## Rättigheter
-- Registrera `source` och `license` för varje bild. Egna foton/illustrationer =
-  `"eget verk"`. Tredjepartsbild: säkerställ licens och fyll i `credit` om den
-  kräver synlig kreditering (visas som `<figcaption>`).
+- Registrera `source` och `license` för varje bild.
+- **Standard för egna bilder (default):** `source: "Eget verk (Anatomiquiz)"`,
+  `license: "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"`. Dvs fria
+  att återanvändas av andra med hänvisning till Anatomiquiz. Ingen synlig `credit`
+  behövs på den egna sajten (självkreditering är onödig); attributionskravet gäller
+  externt återbruk.
+- Tredjepartsbild: säkerställ licens och fyll i `credit` om den kräver synlig
+  kreditering (visas som `<figcaption>`).
 - Ladda aldrig upp bild utan klarlagd licens.
 
 ## Arbetsflöde när en ny bild kommer in

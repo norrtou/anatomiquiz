@@ -21,6 +21,7 @@ function getQuestionsPath(topic) {
   if (topic === 'farmakologi') return './data/farmakologi.json'
   if (topic === 'lakemedelsrakning') return './data/lakemedelsrakning.json'
   if (topic === 'lakare_anatomi_fysiologi') return './data/lakare_anatomi_fysiologi.json'
+  if (topic === 'handens_ben_bilder') return './data/handens_ben_bilder.json'
   // 'blandade' uses loadQuestionsFromMultiplePaths() instead
   return './data/riktningar.json'
 }
@@ -65,7 +66,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.83'
+const APP_VERSION = '0.9.84'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -76,6 +77,9 @@ const el = id => document.getElementById(id)
 
 let allQuestions = []
 let quizQuestions = []
+// Bildregister (data/bilder.json) – laddas vid behov när ett quiz har bildfrågor.
+// Upplösning/rendering via js/images.js. Se BILDER_REGLER.md.
+let imageRegistry = null
 let currentIdx = 0
 let score = 0
 let timerInterval = null
@@ -336,6 +340,9 @@ async function startQuiz(allowedTypes){
     await loadQuestions(qsPath)
   }
 
+  // Bildfrågor (bilden är frågan): ladda bildregistret en gång inför rendering.
+  if(allQuestions.some(q => q.image)) imageRegistry = await loadImageRegistry()
+
   const flags = loadFlags()
 
   // Debug info
@@ -462,7 +469,22 @@ async function startQuiz(allowedTypes){
 function showQuestion(){
   clearTimer()
   const q = quizQuestions[currentIdx]
-  el('questionArea').textContent = q.prompt
+  // Bygg om frågevyn: om frågan har en bild (bilden ÄR frågan) renderas den först,
+  // sedan promptexten. Annars bara texten. textContent töms via innerHTML.
+  const area = el('questionArea')
+  area.innerHTML = ''
+  if(q.image && imageRegistry){
+    // Bilden ÄR frågan – neutral alt så skärmläsare inte får facit serverat.
+    const fig = buildImageFigure(imageRegistry, q.image, 'Vilket ben visas på bilden?')
+    if(fig) area.appendChild(fig)
+  }
+  // Visa promptext bara om den finns (bildfrågor saknar prompt – då bara bilden).
+  if(q.prompt){
+    const promptEl = document.createElement('p')
+    promptEl.className = 'question-prompt'
+    promptEl.textContent = q.prompt
+    area.appendChild(promptEl)
+  }
   el('answers').innerHTML = ''
   const options = shuffle([q.correct, ...q.distractors])
   options.forEach((opt, i)=>{

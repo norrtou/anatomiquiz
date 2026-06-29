@@ -7,7 +7,9 @@
     "depicts": "vad bilden föreställer (struktur/vy)",
     "category": "anatomi | patologi | histologi | embryologi | radiologi (= första mappnivån)",
     "region": "region/organsystem (= andra mappnivån under anatomi/patologi), t.ex. ovre_extremitet, hjarta_karl, nervsystem",
-    "tags": ["fria sökord, latinska + svenska"],
+    "tags": [
+      "fria sökord, latinska + svenska"
+    ],
     "source": "ursprung (eget foto/illustration, verk, databas)",
     "license": "licens/rättigheter (t.ex. 'eget verk', 'CC BY-SA 4.0', 'public domain')",
     "credit": "synlig bildtext-kredit OM licensen kräver det (annars utelämnas)"
@@ -19,11 +21,686 @@
       "depicts": "Humerus, dorsalvy",
       "category": "anatomi",
       "region": "ovre_extremitet",
-      "tags": ["humerus", "överarmsben", "skelett", "dorsal"],
+      "tags": [
+        "humerus",
+        "överarmsben",
+        "skelett",
+        "dorsal"
+      ],
       "source": "eget foto",
       "license": "eget verk"
     }
   },
   "images": {
+    "carpus-distala-raden": {
+      "file": "anatomi/ovre-extremitet/hand/carpus-distala-raden.webp",
+      "alt": "Distala karpalbensraden: os trapezium, trapezoideum, capitatum och hamatum",
+      "depicts": "Distala karpalbensraden: os trapezium, trapezoideum, capitatum och hamatum",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "carpalben",
+        "carpus",
+        "distala raden",
+        "handben",
+        "handlovsben",
+        "ossa carpi",
+        "skelett",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "carpus-proximala-raden": {
+      "file": "anatomi/ovre-extremitet/hand/carpus-proximala-raden.webp",
+      "alt": "Proximala karpalbensraden: os scaphoideum, lunatum, triquetrum och pisiforme",
+      "depicts": "Proximala karpalbensraden: os scaphoideum, lunatum, triquetrum och pisiforme",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "carpalben",
+        "carpus",
+        "handben",
+        "handlovsben",
+        "ossa carpi",
+        "proximala raden",
+        "skelett",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "os-capitatum": {
+      "file": "anatomi/ovre-extremitet/hand/os-capitatum.webp",
+      "alt": "Os capitatum (huvudbenet), ett av handlovens åtta ben (carpus)",
+      "depicts": "Os capitatum",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "carpalben",
+        "carpus",
+        "handben",
+        "handlovsben",
+        "huvudbenet",
+        "os capitatum",
+        "ossa carpi",
+        "skelett",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "os-hamatum": {
+      "file": "anatomi/ovre-extremitet/hand/os-hamatum.webp",
+      "alt": "Os hamatum (krokbenet), ett av handlovens åtta ben (carpus)",
+      "depicts": "Os hamatum",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "carpalben",
+        "carpus",
+        "handben",
+        "handlovsben",
+        "krokbenet",
+        "os hamatum",
+        "ossa carpi",
+        "skelett",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "os-lunatum": {
+      "file": "anatomi/ovre-extremitet/hand/os-lunatum.webp",
+      "alt": "Os lunatum (månbenet), ett av handlovens åtta ben (carpus)",
+      "depicts": "Os lunatum",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "carpalben",
+        "carpus",
+        "handben",
+        "handlovsben",
+        "månbenet",
+        "os lunatum",
+        "ossa carpi",
+        "skelett",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "os-metacarpale-1": {
+      "file": "anatomi/ovre-extremitet/hand/os-metacarpale-1.webp",
+      "alt": "Os metacarpale I – tummens mellanhandsben",
+      "depicts": "Os metacarpale I",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "handben",
+        "mellanhandsben",
+        "metakarpalben",
+        "os metacarpale",
+        "ossa metacarpi",
+        "skelett",
+        "tummen",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "os-metacarpale-2": {
+      "file": "anatomi/ovre-extremitet/hand/os-metacarpale-2.webp",
+      "alt": "Os metacarpale II – pekfingrets mellanhandsben",
+      "depicts": "Os metacarpale II",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "handben",
+        "mellanhandsben",
+        "metakarpalben",
+        "os metacarpale",
+        "ossa metacarpi",
+        "pekfingret",
+        "skelett",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "os-metacarpale-3": {
+      "file": "anatomi/ovre-extremitet/hand/os-metacarpale-3.webp",
+      "alt": "Os metacarpale III – långfingrets mellanhandsben",
+      "depicts": "Os metacarpale III",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "handben",
+        "långfingret",
+        "mellanhandsben",
+        "metakarpalben",
+        "os metacarpale",
+        "ossa metacarpi",
+        "skelett",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "os-metacarpale-4": {
+      "file": "anatomi/ovre-extremitet/hand/os-metacarpale-4.webp",
+      "alt": "Os metacarpale IV – ringfingrets mellanhandsben",
+      "depicts": "Os metacarpale IV",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "handben",
+        "mellanhandsben",
+        "metakarpalben",
+        "os metacarpale",
+        "ossa metacarpi",
+        "ringfingret",
+        "skelett",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "os-metacarpale-5": {
+      "file": "anatomi/ovre-extremitet/hand/os-metacarpale-5.webp",
+      "alt": "Os metacarpale V – lillfingrets mellanhandsben",
+      "depicts": "Os metacarpale V",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "handben",
+        "lillfingret",
+        "mellanhandsben",
+        "metakarpalben",
+        "os metacarpale",
+        "ossa metacarpi",
+        "skelett",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "os-pisiforme": {
+      "file": "anatomi/ovre-extremitet/hand/os-pisiforme.webp",
+      "alt": "Os pisiforme (ärtbenet), ett av handlovens åtta ben (carpus)",
+      "depicts": "Os pisiforme",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "carpalben",
+        "carpus",
+        "handben",
+        "handlovsben",
+        "os pisiforme",
+        "ossa carpi",
+        "skelett",
+        "ärtbenet",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "os-scaphoideum": {
+      "file": "anatomi/ovre-extremitet/hand/os-scaphoideum.webp",
+      "alt": "Os scaphoideum (båtbenet), ett av handlovens åtta ben (carpus)",
+      "depicts": "Os scaphoideum",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "båtbenet",
+        "carpalben",
+        "carpus",
+        "handben",
+        "handlovsben",
+        "os scaphoideum",
+        "ossa carpi",
+        "skelett",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "os-trapezium": {
+      "file": "anatomi/ovre-extremitet/hand/os-trapezium.webp",
+      "alt": "Os trapezium (stora trapetsbenet), ett av handlovens åtta ben (carpus)",
+      "depicts": "Os trapezium",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "carpalben",
+        "carpus",
+        "handben",
+        "handlovsben",
+        "os trapezium",
+        "ossa carpi",
+        "skelett",
+        "stora trapetsbenet",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "os-trapezoideum": {
+      "file": "anatomi/ovre-extremitet/hand/os-trapezoideum.webp",
+      "alt": "Os trapezoideum (lilla trapetsbenet), ett av handlovens åtta ben (carpus)",
+      "depicts": "Os trapezoideum",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "carpalben",
+        "carpus",
+        "handben",
+        "handlovsben",
+        "lilla trapetsbenet",
+        "os trapezoideum",
+        "ossa carpi",
+        "skelett",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "os-triquetrum": {
+      "file": "anatomi/ovre-extremitet/hand/os-triquetrum.webp",
+      "alt": "Os triquetrum (trekantbenet), ett av handlovens åtta ben (carpus)",
+      "depicts": "Os triquetrum",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "carpalben",
+        "carpus",
+        "handben",
+        "handlovsben",
+        "os triquetrum",
+        "ossa carpi",
+        "skelett",
+        "trekantbenet",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "ossa-carpi": {
+      "file": "anatomi/ovre-extremitet/hand/ossa-carpi.webp",
+      "alt": "Ossa carpi – handlovens åtta ben (carpus)",
+      "depicts": "Ossa carpi",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "carpalben",
+        "carpus",
+        "handben",
+        "handlovsben",
+        "ossa carpi",
+        "skelett",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "ossa-metacarpi": {
+      "file": "anatomi/ovre-extremitet/hand/ossa-metacarpi.webp",
+      "alt": "Ossa metacarpi – mellanhandens fem ben (I–V)",
+      "depicts": "Ossa metacarpi",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "handben",
+        "mellanhandsben",
+        "metakarpalben",
+        "ossa metacarpi",
+        "skelett",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "phalanx-distalis-digitus-1": {
+      "file": "anatomi/ovre-extremitet/hand/phalanx-distalis-digitus-1.webp",
+      "alt": "Phalanx distalis, digit 1 – tummens ytterfalang",
+      "depicts": "Phalanx distalis, digit 1",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "digit 1",
+        "digitus 1",
+        "falang",
+        "fingerben",
+        "handben",
+        "phalanx",
+        "phalanx distalis",
+        "skelett",
+        "tummen",
+        "ytterfalang",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "phalanx-distalis-digitus-2": {
+      "file": "anatomi/ovre-extremitet/hand/phalanx-distalis-digitus-2.webp",
+      "alt": "Phalanx distalis, digit 2 – pekfingrets ytterfalang",
+      "depicts": "Phalanx distalis, digit 2",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "digit 2",
+        "digitus 2",
+        "falang",
+        "fingerben",
+        "handben",
+        "pekfingret",
+        "phalanx",
+        "phalanx distalis",
+        "skelett",
+        "ytterfalang",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "phalanx-distalis-digitus-3": {
+      "file": "anatomi/ovre-extremitet/hand/phalanx-distalis-digitus-3.webp",
+      "alt": "Phalanx distalis, digit 3 – långfingrets ytterfalang",
+      "depicts": "Phalanx distalis, digit 3",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "digit 3",
+        "digitus 3",
+        "falang",
+        "fingerben",
+        "handben",
+        "långfingret",
+        "phalanx",
+        "phalanx distalis",
+        "skelett",
+        "ytterfalang",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "phalanx-distalis-digitus-4": {
+      "file": "anatomi/ovre-extremitet/hand/phalanx-distalis-digitus-4.webp",
+      "alt": "Phalanx distalis, digit 4 – ringfingrets ytterfalang",
+      "depicts": "Phalanx distalis, digit 4",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "digit 4",
+        "digitus 4",
+        "falang",
+        "fingerben",
+        "handben",
+        "phalanx",
+        "phalanx distalis",
+        "ringfingret",
+        "skelett",
+        "ytterfalang",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "phalanx-distalis-digitus-5": {
+      "file": "anatomi/ovre-extremitet/hand/phalanx-distalis-digitus-5.webp",
+      "alt": "Phalanx distalis, digit 5 – lillfingrets ytterfalang",
+      "depicts": "Phalanx distalis, digit 5",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "digit 5",
+        "digitus 5",
+        "falang",
+        "fingerben",
+        "handben",
+        "lillfingret",
+        "phalanx",
+        "phalanx distalis",
+        "skelett",
+        "ytterfalang",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "phalanx-media-digitus-2": {
+      "file": "anatomi/ovre-extremitet/hand/phalanx-media-digitus-2.webp",
+      "alt": "Phalanx media, digit 2 – pekfingrets mellanfalang",
+      "depicts": "Phalanx media, digit 2",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "digit 2",
+        "digitus 2",
+        "falang",
+        "fingerben",
+        "handben",
+        "mellanfalang",
+        "pekfingret",
+        "phalanx",
+        "phalanx media",
+        "skelett",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "phalanx-media-digitus-3": {
+      "file": "anatomi/ovre-extremitet/hand/phalanx-media-digitus-3.webp",
+      "alt": "Phalanx media, digit 3 – långfingrets mellanfalang",
+      "depicts": "Phalanx media, digit 3",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "digit 3",
+        "digitus 3",
+        "falang",
+        "fingerben",
+        "handben",
+        "långfingret",
+        "mellanfalang",
+        "phalanx",
+        "phalanx media",
+        "skelett",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "phalanx-media-digitus-4": {
+      "file": "anatomi/ovre-extremitet/hand/phalanx-media-digitus-4.webp",
+      "alt": "Phalanx media, digit 4 – ringfingrets mellanfalang",
+      "depicts": "Phalanx media, digit 4",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "digit 4",
+        "digitus 4",
+        "falang",
+        "fingerben",
+        "handben",
+        "mellanfalang",
+        "phalanx",
+        "phalanx media",
+        "ringfingret",
+        "skelett",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "phalanx-media-digitus-5": {
+      "file": "anatomi/ovre-extremitet/hand/phalanx-media-digitus-5.webp",
+      "alt": "Phalanx media, digit 5 – lillfingrets mellanfalang",
+      "depicts": "Phalanx media, digit 5",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "digit 5",
+        "digitus 5",
+        "falang",
+        "fingerben",
+        "handben",
+        "lillfingret",
+        "mellanfalang",
+        "phalanx",
+        "phalanx media",
+        "skelett",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "phalanx-proximalis-digitus-1": {
+      "file": "anatomi/ovre-extremitet/hand/phalanx-proximalis-digitus-1.webp",
+      "alt": "Phalanx proximalis, digit 1 – tummens grundfalang",
+      "depicts": "Phalanx proximalis, digit 1",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "digit 1",
+        "digitus 1",
+        "falang",
+        "fingerben",
+        "grundfalang",
+        "handben",
+        "phalanx",
+        "phalanx proximalis",
+        "skelett",
+        "tummen",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "phalanx-proximalis-digitus-2": {
+      "file": "anatomi/ovre-extremitet/hand/phalanx-proximalis-digitus-2.webp",
+      "alt": "Phalanx proximalis, digit 2 – pekfingrets grundfalang",
+      "depicts": "Phalanx proximalis, digit 2",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "digit 2",
+        "digitus 2",
+        "falang",
+        "fingerben",
+        "grundfalang",
+        "handben",
+        "pekfingret",
+        "phalanx",
+        "phalanx proximalis",
+        "skelett",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "phalanx-proximalis-digitus-3": {
+      "file": "anatomi/ovre-extremitet/hand/phalanx-proximalis-digitus-3.webp",
+      "alt": "Phalanx proximalis, digit 3 – långfingrets grundfalang",
+      "depicts": "Phalanx proximalis, digit 3",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "digit 3",
+        "digitus 3",
+        "falang",
+        "fingerben",
+        "grundfalang",
+        "handben",
+        "långfingret",
+        "phalanx",
+        "phalanx proximalis",
+        "skelett",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "phalanx-proximalis-digitus-4": {
+      "file": "anatomi/ovre-extremitet/hand/phalanx-proximalis-digitus-4.webp",
+      "alt": "Phalanx proximalis, digit 4 – ringfingrets grundfalang",
+      "depicts": "Phalanx proximalis, digit 4",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "digit 4",
+        "digitus 4",
+        "falang",
+        "fingerben",
+        "grundfalang",
+        "handben",
+        "phalanx",
+        "phalanx proximalis",
+        "ringfingret",
+        "skelett",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "phalanx-proximalis-digitus-5": {
+      "file": "anatomi/ovre-extremitet/hand/phalanx-proximalis-digitus-5.webp",
+      "alt": "Phalanx proximalis, digit 5 – lillfingrets grundfalang",
+      "depicts": "Phalanx proximalis, digit 5",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "digit 5",
+        "digitus 5",
+        "falang",
+        "fingerben",
+        "grundfalang",
+        "handben",
+        "lillfingret",
+        "phalanx",
+        "phalanx proximalis",
+        "skelett",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "radius": {
+      "file": "anatomi/ovre-extremitet/underarm/radius.webp",
+      "alt": "Radius (strålbenet), underarmsben på tumsidan",
+      "depicts": "Radius",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "handben",
+        "radius",
+        "skelett",
+        "strålbenet",
+        "underarmsben",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    },
+    "ulna": {
+      "file": "anatomi/ovre-extremitet/underarm/ulna.webp",
+      "alt": "Ulna (armbågsbenet), underarmsben på lillfingersidan",
+      "depicts": "Ulna",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": [
+        "armbågsbenet",
+        "handben",
+        "skelett",
+        "ulna",
+        "underarmsben",
+        "övre extremitet"
+      ],
+      "source": "Eget verk (Anatomiquiz)",
+      "license": "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"
+    }
   }
 }

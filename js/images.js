@@ -40,14 +40,18 @@ function imageSrc(registry, id){
 // Bygger ett <figure> med lazy-laddad <img> (alt ur registret) och, om licensen
 // kräver kredit, en <figcaption>. Returnerar null + varnar om id saknas, så en
 // felstavad referens aldrig renderar en trasig bild.
-function buildImageFigure(registry, id){
+// altOverride: när bilden ÄR frågan (quiz) ska alt INTE avslöja svaret. Skicka då
+// en neutral fråge-alt (t.ex. "Vilket ben visas på bilden?") så skärmläsare får en
+// rättvis fråga i stället för registrets beskrivande alt (som är facit). I faktatext
+// utelämnas altOverride och registrets beskrivande alt används.
+function buildImageFigure(registry, id, altOverride){
   const m = imageMeta(registry, id)
   if(!m){ console.warn('Bild saknas i registret (data/bilder.json):', id); return null }
   const fig = document.createElement('figure')
   fig.className = 'content-image'
   const img = document.createElement('img')
   img.src = IMAGE_BASE + m.file
-  img.alt = m.alt || ''
+  img.alt = altOverride || m.alt || ''
   img.loading = 'lazy'
   img.decoding = 'async'
   fig.appendChild(img)

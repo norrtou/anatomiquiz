@@ -627,6 +627,33 @@ select:focus-visible {
   box-shadow: var(--shadow);
 }
 
+/* Bildfrågor: bilden ÄR frågan (se js/images.js + BILDER_REGLER.md). Renderas i
+   .question ovanför promptexten. Vit platta så transparenta PNG/WebP syns mot den
+   gröna frågerutan; responsiv höjd så den ryms utan att tränga ut svaren på mobil. */
+.question .content-image {
+  margin: 0 0 14px;
+  text-align: center;
+}
+.question .content-image img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  max-height: min(46vh, 360px);
+  background: #fff;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+.question .image-credit {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-top: 6px;
+}
+.question .question-prompt {
+  margin: 0;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
