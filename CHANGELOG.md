@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.87
+- **Större bilder i bildquizen + fokusläge under spel.** Bilderna krympte för mycket i 0.9.85; nu är de större igen (bas upp till min(56vh, 460px); mobil 48vh, små skärmar 42vh).
+  - **Fokusläge:** medan ett quiz körs döljs sidrubriken (titel/tagline ovanför spelarraden) och footern, och den gröna sidbakgrunden bakom kortet tas bort – sådant behöver inte ta plats under spel, så bilden får mer yta. Återkommer automatiskt på inställnings-/resultatvyn. (CSS via `:has(#quiz:not(.hidden))`; degraderar tyst på äldre webbläsare.)
+  - **Trimmad kort-krom:** mindre padding ovanför spelarraden och under Nästa-knappen samt tätare quiz-header/footer på mobil, så att bild + svar + Nästa ryms trots den större bilden.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.87; styles.css → 0.7.20.
+
 ## 0.9.86
 - **Fix: sidan hoppade till toppen vid "Nästa".** Vid varje ny fråga fokuserades första svarsknappen, vilket fick webbläsaren att auto-scrolla upp till den (man "hoppade" och fick scrolla ner igen – särskilt märkbart i bildquizen). Nu fokuseras svaret med `preventScroll`, och frågekortet läggs överst i vyn (`scrollIntoView`) så att bild + svarsalternativ + Nästa-knapp hamnar synliga på samma skärm vid varje frågebyte.
 - VERSION/APP_VERSION/app.js-cachebuster → 0.9.86.
