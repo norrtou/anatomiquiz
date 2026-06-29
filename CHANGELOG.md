@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.92
+- **Bildfrågor i "Slumpade frågor" + tydlig märkning.** Ben- och led-bildfrågorna plockas in i Slumpade frågor (de samlas redan in automatiskt eftersom de är arbetsterapeut-ämnen med MC-tagg – verifierat). Dropdown-alternativet heter nu **"Slumpade frågor (MC+TF+bild)"** och teckenförklaringen utökades med "bild = fråga med bild" så det framgår att blandade quiz kan innehålla bildfrågor.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.92.
+
 ## 0.9.91
 - **Språkfix i ledquizet: konsekvent latin.** Översiktslederna (CMC, MCP, PIP, DIP) använde pluralformen "Articulationes …" som rätt svar medan distraktorerna var singular "Articulatio …" – samma fråga blandade alltså två former. Alla latinsvar är nu singular "Articulatio …". (Bildregistrets beskrivande alt-texter behåller pluralformen där den beskriver en bild med flera leder.) Inga dubbelrätt-fall, verifierat.
 - VERSION/APP_VERSION/app.js-cachebuster → 0.9.91.
