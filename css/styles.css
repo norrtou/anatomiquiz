@@ -590,7 +590,7 @@ select:focus-visible {
 /* Mindre än dropdown-texten på mobil (var tidigare i samma storlek). */
 @media (max-width: 640px) {
   .topic-legend {
-    font-size: 0.7rem;
+    font-size: 0.62rem;
   }
 }
 

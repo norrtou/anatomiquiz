@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.95
+- Teckenförklaringen under ämnesväljaren något mindre på mobil (0.62rem, var 0.7rem).
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.95; styles.css → 0.7.25.
+
 ## 0.9.94
 - **Teckenförklaringen: storlek + "Bild".** Förklaringsraden under ämnesväljaren ("MC = …, Bild = fråga med bild") är nu något större på dator (0.9rem) och mindre på mobil (0.7rem, var tidigare i samma storlek som dropdown-texten). Taggen "bild" skrevs om till **"Bild"** både i förklaringen och i dropdown-alternativet "Slumpade frågor (MC+TF+Bild)".
 - VERSION/APP_VERSION/app.js-cachebuster → 0.9.94; styles.css → 0.7.24.
