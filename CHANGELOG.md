@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.90
+- **Fix: inget "Avsluta"/resultat efter sista frågan i bildquiz.** Resultatskärmen visades men hamnade utanför vyn: bildquizets fokusläge dolde sidrubriken och `scrollIntoView` hade pinnat kortet högst upp, så när rubriken kom tillbaka vid avslut låg resultatet (med Avsluta/Spela igen) nedanför skärmkanten – det såg ut som att appen låste sig.
+  - `finishQuiz` scrollar nu upp till toppen, städar fokusläges-klassen och sätter resultattexten först + kapslar in sparning/länkar i try/catch så resultatskärmen alltid visas även om något delmoment fel.
+  - Sista frågans knapp heter nu **"Visa resultat"** (i stället för "Nästa") i alla quiz, så det är tydligt att den avslutar. Gäller generellt – även bildfrågor inbakade i vanliga/blandade quiz.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.90.
+
 ## 0.9.89
 - **Frågeräknare i footern under bildfrågor.** Frågeräknaren ("Fråga X/Y") visas nu bredvid tidräknaren i footerns mitt (mellan Avbryt och Nästa) i bildfrågornas fokusvy – så man ser var i quizet man är utan att spelarnamn/poäng-raden behöver ta plats överst. Vanliga textquiz har kvar sin fullständiga rad (med poäng) i quiz-header.
 - VERSION/APP_VERSION/app.js-cachebuster → 0.9.89; styles.css → 0.7.22.

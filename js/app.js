@@ -67,7 +67,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.89'
+const APP_VERSION = '0.9.90'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -502,6 +502,8 @@ function showQuestion(){
   el('progress').textContent = `Fråga ${currentIdx+1}/${quizQuestions.length} — Poäng: ${score}`
   // Footer-räknare (visas bara i bildfrågornas fokusvy där quiz-header är dold).
   const fp = el('footerProgress'); if(fp) fp.textContent = `Fråga ${currentIdx+1}/${quizQuestions.length}`
+  // På sista frågan: gör tydligt att knappen avslutar quizet och visar resultatet.
+  el('nextBtn').textContent = (currentIdx === quizQuestions.length - 1) ? 'Visa resultat' : 'Nästa'
   questionStartTime = Date.now()
   if(quizTimerOn) startCountUp(); else el('timer').textContent = ''
   // Vid "Nästa": lägg den nya frågan (kortet/bilden) överst i vyn så att bild +
@@ -590,12 +592,19 @@ const TOPIC_RESOURCES = {
 
 function finishQuiz(){
   el('quiz').classList.add('hidden')
+  // Städa fokusläget (bildfrågornas kompaktläge) så det inte hänger kvar.
+  el('quiz').classList.remove('quiz-image')
   el('result').classList.remove('hidden')
-  // Resultatet sparas automatiskt i topplistan när quizet är klart
-  saveScore()
+  // Sätt resultattexten FÖRST, och kapsla in sparning/länkar som kan kasta, så att
+  // resultatskärmen (med Avsluta/Spela igen) ALLTID visas även om något fel uppstår.
   el('resultText').textContent = `Du fick ${score} av ${quizQuestions.length} rätt. Resultatet sparades i topplistan.`
   el('resultText').setAttribute('aria-live','polite')
-  renderResultLinks()
+  try { saveScore() } catch(e){ console.error('saveScore misslyckades:', e) }
+  try { renderResultLinks() } catch(e){ console.error('renderResultLinks misslyckades:', e) }
+  // Bildquizets fokusläge dolde sidrubriken och scrollIntoView pinnade kortet högst
+  // upp; när rubriken kommer tillbaka måste vi scrolla upp så resultatet garanterat
+  // syns, annars ser det ut som att appen låser sig (inget "Avsluta" dyker upp).
+  window.scrollTo({ top: 0 })
 }
 
 // Visar ämnesrelaterade fördjupningslänkar (faktatext/tabell) på resultatskärmen.
