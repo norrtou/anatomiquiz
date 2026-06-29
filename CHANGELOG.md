@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.86
+- **Fix: sidan hoppade till toppen vid "Nästa".** Vid varje ny fråga fokuserades första svarsknappen, vilket fick webbläsaren att auto-scrolla upp till den (man "hoppade" och fick scrolla ner igen – särskilt märkbart i bildquizen). Nu fokuseras svaret med `preventScroll`, och frågekortet läggs överst i vyn (`scrollIntoView`) så att bild + svarsalternativ + Nästa-knapp hamnar synliga på samma skärm vid varje frågebyte.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.86.
+
 ## 0.9.85
 - **Nytt bildquiz: "Handens leder (bilder, MC)" (58 frågor) under Arbetsterapeut.** Samma mönster som handens ben – bilden ÄR frågan, ingen frågetext, fyra svarsalternativ.
   - **21 egna ledbilder** (560×700 webp, egen licens CC BY 4.0 m. hänvisning till Anatomiquiz) i `img/media/anatomi/ovre-extremitet/handleder/`, registrerade i `data/bilder.json`. Omfattar handleden (radiocarpea), DRUJ, mediocarpea, CMC, MCP (översikt + I–V), PIP (översikt + dig 2–5), DIP (översikt + dig 2–5) samt tummens IP-led.
