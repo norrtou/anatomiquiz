@@ -654,6 +654,47 @@ select:focus-visible {
   margin: 0;
 }
 
+/* Bildfrågor på mobil: kompaktare layout (klassen .quiz-image sätts i app.js när
+   frågan har bild) så bild + svarsalternativ + Nästa-knapp ryms på samma skärm
+   utan scroll. Krymper bildhöjd, paddings och knapphöjd – men knapparna hålls
+   ≥44px (touch-vänligt) och texten läsbar. Textquiz påverkas inte. */
+@media (max-width: 640px) {
+  .quiz-image .quiz-header {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+  }
+  .quiz-image .question {
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+  }
+  .quiz-image .question .content-image {
+    margin-bottom: 8px;
+  }
+  .quiz-image .question .content-image img {
+    max-height: 32vh;
+  }
+  .quiz-image .answers {
+    margin: 10px 0;
+    gap: 8px;
+  }
+  .quiz-image .answer-btn {
+    min-height: 46px;
+    padding: 10px 14px;
+  }
+  .quiz-image .quiz-footer {
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+}
+
+/* Mycket små skärmar (t.ex. iPhone SE): krymp bilden lite till. */
+@media (max-width: 400px) {
+  .quiz-image .question .content-image img {
+    max-height: 28vh;
+  }
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }

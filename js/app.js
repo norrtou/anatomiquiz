@@ -22,6 +22,7 @@ function getQuestionsPath(topic) {
   if (topic === 'lakemedelsrakning') return './data/lakemedelsrakning.json'
   if (topic === 'lakare_anatomi_fysiologi') return './data/lakare_anatomi_fysiologi.json'
   if (topic === 'handens_ben_bilder') return './data/handens_ben_bilder.json'
+  if (topic === 'handens_leder_bilder') return './data/handens_leder_bilder.json'
   // 'blandade' uses loadQuestionsFromMultiplePaths() instead
   return './data/riktningar.json'
 }
@@ -66,7 +67,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.84'
+const APP_VERSION = '0.9.85'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -473,6 +474,9 @@ function showQuestion(){
   // sedan promptexten. Annars bara texten. textContent töms via innerHTML.
   const area = el('questionArea')
   area.innerHTML = ''
+  // Bildfrågor får en kompaktare mobillayout (CSS .quiz-image) så att bild +
+  // svar + Nästa-knapp ryms på samma skärm utan att man måste scrolla.
+  el('quiz').classList.toggle('quiz-image', !!q.image)
   if(q.image && imageRegistry){
     // Bilden ÄR frågan – neutral alt så skärmläsare inte får facit serverat.
     const fig = buildImageFigure(imageRegistry, q.image, 'Vilket ben visas på bilden?')

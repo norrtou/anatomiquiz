@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.85
+- **Nytt bildquiz: "Handens leder (bilder, MC)" (58 frågor) under Arbetsterapeut.** Samma mönster som handens ben – bilden ÄR frågan, ingen frågetext, fyra svarsalternativ.
+  - **21 egna ledbilder** (560×700 webp, egen licens CC BY 4.0 m. hänvisning till Anatomiquiz) i `img/media/anatomi/ovre-extremitet/handleder/`, registrerade i `data/bilder.json`. Omfattar handleden (radiocarpea), DRUJ, mediocarpea, CMC, MCP (översikt + I–V), PIP (översikt + dig 2–5), DIP (översikt + dig 2–5) samt tummens IP-led.
+  - **Adaptivt antal svarsstilar per led** (latin alltid; förkortning DIP/PIP/MCP/CMC/DRUJ/IP; lekman bara där verkligt vardagsnamn finns – handleden, knogled, fingerledernas mellan-/ytterled). Leder utan förkortning/vardagsnamn (mediocarpea m.fl.) får färre varianter. Distraktorer väljs i samma stil och i första hand ur samma ledfamilj.
+  - **Datafil** `data/handens_leder_bilder.json` (`"image":"<id>"`); wirad i `getQuestionsPath()` + `<option data-edu="arbetsterapeut">`. Ingen ny renderingskod – återanvänder bildhooken från 0.9.84.
+- **Buggfix: distraktorer kunde innehålla ett gruppnamn som också var korrekt.** En bild på t.ex. DIP3 fick "DIP" som felalternativ, fast gruppnamnet alltid också gäller (två korrekta svar). Infört regel i båda bildquizen: ett förälder-/översiktsnamn (DIP/PIP/MCP-översikt; Ossa carpi/karpalbensrad) får aldrig vara distraktor till en mer specifik bild av samma sak. Gäller alla tre svarsstilar. Även ben-quizet (0.9.84) regenererades – karpalbensraderna hade motsvarande fel med "Ossa carpi". Verifierat: 0 dubbelrätt-fall i 97 + 58 frågor.
+- **Kompaktare mobillayout för bildfrågor.** Bild + svarsalternativ + Nästa-knapp ryms nu på samma mobilskärm utan att man måste scrolla (gäller alla bildquiz – ben & leder). `app.js` sätter klassen `.quiz-image` på quizet när frågan har bild; ny CSS krymper bildhöjd (≤32vh, ≤28vh på mycket små skärmar), paddings och knapphöjd (≥46px, fortsatt touch-vänligt) enbart för bildfrågor – textquiz behåller sin luftiga layout.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.85; styles.css → 0.7.19.
+
 ## 0.9.84
 - **Nytt bildquiz: "Handens ben (bilder, MC)" (97 frågor) under Arbetsterapeut.** Första ämnet som använder det nya bildsystemet – **bilden ÄR frågan, ingen frågetext alls**: bara bilden + fyra svarsalternativ.
   - **Tre svarsstilar per bild** (~33 av varje, oannonserade – framgår av alternativen): svenskt namn (t.ex. *Båtbenet*), latinskt namn (*Os scaphoideum*, *Phalanx media*) och kortform (*Scaphoideum*, *Dig 3 distal falang*, *MC III*). Alla 33 bilder används; fler frågor än bilder. 4 svarsalternativ, distraktorer ur samma bengrupp (karpalben, mellanhandsben, falanger, översiktsbilder) för rimlig svårighet.
