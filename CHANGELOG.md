@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.83
+- **Bildsystem för innehållsbilder (förberedelse).** Infört en smart lagrings- och hanteringslösning så anatomibilder kan återanvändas i flera utbildningars quiz och faktatexter UTAN dubletter. Inga bilder ännu – detta är infrastrukturen.
+  - **En fil per motiv + centralt register.** Bilder lagras EN gång i en mappstruktur under `img/media/` (kategori → region/organsystem: `anatomi/`, `patologi/`, `histologi/`, `embryologi/`, `radiologi/` med regionundermappar), aldrig i projektroten. Registret `data/bilder.json` är enda källan; varje bild = en post med `id`, `file`, obligatorisk svensk `alt`, kategori/region/taggar/källa/licens. Återanvändning sker via bildens `id` (quiz: `"image":"<id>"`; faktatext: `<img src="/img/media/<file>">`) – samma id ger samma fil, ingen kopia.
+  - **Rot-absoluta sökvägar** (`/img/media/…`) så samma referens fungerar från både rotsidor och `/kunskapsbank/` (egen domän).
+  - **Hjälpmodul `js/images.js`** (`loadImageRegistry`, `imageMeta`, `imageSrc`, `buildImageFigure`) – laddar/cachar registret och bygger `<figure>` med lazy-laddad `<img>`, alt och ev. kreditbildtext. Ej inwirad i quizrenderingen än; kopplas in när första bild-frågan byggs (då även CSS för `.content-image`).
+  - **Format/SEO-rekommendation dokumenterad:** SVG för diagram, WebP som default för foton/renderingar, AVIF för enstaka stora tunga foton; codec påverkar inte ranking direkt, men liten/snabb fil + `alt`/filnamn/lazy-load gör det.
+  - **Nytt regeldokument `BILDER_REGLER.md`** styr allt ovan; `img/media/README.md` dokumenterar mappträdet.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.83.
+
 ## 0.9.82
 - **Ombyggd utbildnings- & ämneslista enligt nytt regeldokument `UTBILDNINGAR_REGLER.md`.** Det dokumentet (repo-roten) är nu källan för vilka utbildningar som ska finnas, deras ämnesindelning och pedagogiska "linser" per program.
   - **Utbildningsväljaren bantad från 19 → 13 + Allmänt.** Raderade tomma alternativ: Barnmorska, Biomedicinare, Dietist, Medicintekniker, Receptarie, Tandhygienist. Kvar: Allmänt + Apotekare, Arbetsterapeut, Audionom, Biomedicinsk analytiker, Fysioterapeut, Logoped, Läkare, Medicinsk sekreterare, Optiker, Röntgensjuksköterska, Sjuksköterska, Tandläkare.

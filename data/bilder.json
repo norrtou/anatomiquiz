@@ -1,0 +1,29 @@
+{
+  "_doc": "Centralt bildregister – ENDA källan för innehållsbilder (anatomi, patologi, histologi, embryologi, radiologi). Varje bild registreras EN gång här och refereras via sin id-nyckel från quiz (data/*.json) och faktatexter. Återanvändning skapar ALDRIG en kopia – samma id pekar på samma fil. Filerna ligger i en mappstruktur under img/media/ (per kategori + region/organsystem) – ALDRIG i projektroten. Regler & arbetsflöde: BILDER_REGLER.md. Site-chrome (favicon/ikoner/og-image) hör INTE hit, de ligger kvar i img/.",
+  "_schema": {
+    "id": "= nyckeln nedan. kebab-case, unik, lika med filnamnet utan ändelse (det användaren döper bilden till)",
+    "file": "sökväg relativt /img/media/, inkl. kategori + region, t.ex. anatomi/ovre-extremitet/humerus-dorsalvy.webp. Refereras alltid rot-absolut: /img/media/<file>. Format: diagram=.svg, foto/render=.webp (default), stora tunga foton ev. .avif",
+    "alt": "OBLIGATORISK beskrivande svensk alt-text (tillgänglighet + SEO)",
+    "depicts": "vad bilden föreställer (struktur/vy)",
+    "category": "anatomi | patologi | histologi | embryologi | radiologi (= första mappnivån)",
+    "region": "region/organsystem (= andra mappnivån under anatomi/patologi), t.ex. ovre_extremitet, hjarta_karl, nervsystem",
+    "tags": ["fria sökord, latinska + svenska"],
+    "source": "ursprung (eget foto/illustration, verk, databas)",
+    "license": "licens/rättigheter (t.ex. 'eget verk', 'CC BY-SA 4.0', 'public domain')",
+    "credit": "synlig bildtext-kredit OM licensen kräver det (annars utelämnas)"
+  },
+  "_example": {
+    "humerus-dorsalvy": {
+      "file": "anatomi/ovre-extremitet/humerus-dorsalvy.webp",
+      "alt": "Höger överarmsben (humerus) sett bakifrån med markerade utskott",
+      "depicts": "Humerus, dorsalvy",
+      "category": "anatomi",
+      "region": "ovre_extremitet",
+      "tags": ["humerus", "överarmsben", "skelett", "dorsal"],
+      "source": "eget foto",
+      "license": "eget verk"
+    }
+  },
+  "images": {
+  }
+}
