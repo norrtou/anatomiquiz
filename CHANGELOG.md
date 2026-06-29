@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.88
+- **Bildfrågornas fokusvy: dölj spelarnamn + poäng-raden.** Hela quiz-header-raden (spelarnamn och "Fråga X/Y — Poäng") döljs nu under bildfrågor, så Nästa-knappen flyttas upp och bilden får mer plats. (Behövs inte i fokusvyn; visas fortfarande i vanliga textquiz.)
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.88; styles.css → 0.7.21.
+
 ## 0.9.87
 - **Större bilder i bildquizen + fokusläge under spel.** Bilderna krympte för mycket i 0.9.85; nu är de större igen (bas upp till min(56vh, 460px); mobil 48vh, små skärmar 42vh).
   - **Fokusläge:** medan ett quiz körs döljs sidrubriken (titel/tagline ovanför spelarraden) och footern, och den gröna sidbakgrunden bakom kortet tas bort – sådant behöver inte ta plats under spel, så bilden får mer yta. Återkommer automatiskt på inställnings-/resultatvyn. (CSS via `:has(#quiz:not(.hidden))`; degraderar tyst på äldre webbläsare.)

@@ -711,6 +711,12 @@ body:has(#quiz:not(.hidden)) {
   background: var(--surface);
 }
 
+/* I bildfrågornas fokusvy behövs varken spelarnamn eller poäng – dölj hela
+   quiz-header-raden så Nästa-knappen flyttas upp och bilden får ännu mer plats. */
+.quiz-image .quiz-header {
+  display: none;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
