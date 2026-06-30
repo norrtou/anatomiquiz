@@ -2798,5 +2798,4205 @@
     "topic": "fysio_armbage_underarm",
     "difficulty": "Normal",
     "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_1",
+    "type": "mc",
+    "prompt": "Hur många karpalben (handlovsben) finns det i varje hand?",
+    "correct": "Åtta, ordnade i två rader",
+    "distractors": [
+      "Fem, en per finger",
+      "Sex, i en rad",
+      "Tio, i tre rader"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_2",
+    "type": "mc",
+    "prompt": "Vilka ben tillhör karpalbenens proximala rad (från radialt till ulnart)?",
+    "correct": "Os scaphoideum, os lunatum, os triquetrum och os pisiforme",
+    "distractors": [
+      "Os trapezium, os trapezoideum, os capitatum och os hamatum",
+      "Os scaphoideum, os capitatum, os hamatum och os pisiforme",
+      "Os lunatum, os trapezium, os capitatum och os triquetrum"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_3",
+    "type": "mc",
+    "prompt": "Vilka ben tillhör karpalbenens distala rad (från radialt till ulnart)?",
+    "correct": "Os trapezium, os trapezoideum, os capitatum och os hamatum",
+    "distractors": [
+      "Os scaphoideum, os lunatum, os triquetrum och os pisiforme",
+      "Os capitatum, os hamatum, os lunatum och os scaphoideum",
+      "Os trapezium, os capitatum, os pisiforme och os hamatum"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_4",
+    "type": "mc",
+    "prompt": "Vilket är det största karpalbenet och ligger centralt i handloven?",
+    "correct": "Os capitatum",
+    "distractors": [
+      "Os scaphoideum",
+      "Os lunatum",
+      "Os hamatum"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_5",
+    "type": "mc",
+    "prompt": "Den egentliga handleden (radiokarpalleden) bildas av distala radius (med ledskiva) mot vilka karpalben?",
+    "correct": "Os scaphoideum, os lunatum och os triquetrum",
+    "distractors": [
+      "Os trapezium och os trapezoideum",
+      "Os capitatum och os hamatum",
+      "Samtliga åtta karpalben samtidigt"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_hand_6",
+    "type": "mc",
+    "prompt": "Vilken ledtyp är radiokarpalleden?",
+    "correct": "Ellipsoid-/kondylled (art. ellipsoidea)",
+    "distractors": [
+      "Kulled",
+      "Gångjärnsled",
+      "Vridled"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_hand_7",
+    "type": "mc",
+    "prompt": "Varför ledar ulna inte direkt mot karpalbenen i handleden?",
+    "correct": "En ledskiva/diskus (del av TFCC) skiljer ulna från karpus",
+    "distractors": [
+      "Ulna är för kort och når inte fram",
+      "Ulna slutar redan vid armbågen",
+      "Karpus ledar bara mot radius via ett ligament"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_8",
+    "type": "mc",
+    "prompt": "Vad står TFCC för, den struktur som stabiliserar distala radioulnarleden och den ulnara handleden?",
+    "correct": "Triangular fibrocartilage complex (triangulära broskkomplexet)",
+    "distractors": [
+      "Transverse flexor carpal compartment",
+      "Total flexor carpal complex",
+      "Triceps fascia cubiti complex"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_9",
+    "type": "mc",
+    "prompt": "Tummens karpometakarpalled (mellan os trapezium och metakarpale I) är vilken ledtyp och möjliggör opposition?",
+    "correct": "Sadelled (art. sellaris)",
+    "distractors": [
+      "Gångjärnsled",
+      "Kulled",
+      "Plan led"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_hand_10",
+    "type": "mc",
+    "prompt": "Vilken ledtyp är fingrarnas metakarpofalangealleder (MCP, knogar) dig II–V?",
+    "correct": "Kondylleder (tillåter flexion/extension samt abduktion/adduktion)",
+    "distractors": [
+      "Rena gångjärnsleder utan sidorörelse",
+      "Sadelleder",
+      "Vridleder"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_hand_11",
+    "type": "mc",
+    "prompt": "Vilken ledtyp är fingrarnas interfalangealleder (PIP och DIP)?",
+    "correct": "Gångjärnsleder (ginglymus)",
+    "distractors": [
+      "Sadelleder",
+      "Kondylleder med sidorörelse",
+      "Kulleder"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_hand_12",
+    "type": "mc",
+    "prompt": "Taket över karpaltunneln bildas av vilket ligament?",
+    "correct": "Retinaculum flexorum (lig. carpi transversum)",
+    "distractors": [
+      "Retinaculum extensorum",
+      "Lig. anulare radii",
+      "Palmaraponeurosen"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_13",
+    "type": "mc",
+    "prompt": "Vilka strukturer passerar genom karpaltunneln?",
+    "correct": "N. medianus samt nio flexorsenor (4 FDS, 4 FDP och FPL)",
+    "distractors": [
+      "N. ulnaris och a. ulnaris",
+      "N. medianus och samtliga extensorsenor",
+      "Endast n. medianus, utan några senor"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_14",
+    "type": "mc",
+    "prompt": "Flexor digitorum superficialis (FDS) böjer fingret framför allt i vilken led?",
+    "correct": "Proximala interfalangealleden (PIP)",
+    "distractors": [
+      "Distala interfalangealleden (DIP)",
+      "Metakarpofalangealleden enbart",
+      "Handleden enbart"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_hand_15",
+    "type": "mc",
+    "prompt": "Flexor digitorum profundus (FDP) är den enda muskel som kan böja vilken led?",
+    "correct": "Distala interfalangealleden (DIP)",
+    "distractors": [
+      "Proximala interfalangealleden (PIP)",
+      "Handleden",
+      "Tummens IP-led"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_hand_16",
+    "type": "mc",
+    "prompt": "Vilka tre muskler bygger upp tenarvallen (tummens muskelvall)?",
+    "correct": "Abductor pollicis brevis, flexor pollicis brevis och opponens pollicis",
+    "distractors": [
+      "Abductor digiti minimi, flexor digiti minimi och opponens digiti minimi",
+      "Adductor pollicis, palmaris longus och flexor carpi radialis",
+      "Lumbricaler och interosséer"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_17",
+    "type": "mc",
+    "prompt": "Vilka muskler bygger upp hypotenarvallen (lillfingrets muskelvall)?",
+    "correct": "Abductor digiti minimi, flexor digiti minimi brevis och opponens digiti minimi",
+    "distractors": [
+      "Tenarmusklerna",
+      "Lumbricaler och adductor pollicis",
+      "De dorsala interosséerna"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_18",
+    "type": "mc",
+    "prompt": "Vad är funktionen hos handens lumbrikaler?",
+    "correct": "Flexion i MCP-lederna och samtidig extension i IP-lederna",
+    "distractors": [
+      "Extension i MCP och flexion i IP",
+      "Endast abduktion av fingrarna",
+      "Opposition av tummen"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hand_19",
+    "type": "mc",
+    "prompt": "Minnesregeln \"PAD och DAB\" beskriver interosséernas funktion. Vad gör de palmara interosséerna?",
+    "correct": "Adducerar fingrarna (drar dem mot mittfingret) – Palmar ADduct",
+    "distractors": [
+      "Abducerar fingrarna – Palmar ABduct",
+      "Flekterar handleden",
+      "Opponerar lillfingret"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hand_20",
+    "type": "mc",
+    "prompt": "Vad gör de dorsala interosséerna enligt \"PAD och DAB\"?",
+    "correct": "Abducerar fingrarna (sprider dem från mittfingret) – Dorsal ABduct",
+    "distractors": [
+      "Adducerar fingrarna – Dorsal ADduct",
+      "Extenderar handleden",
+      "Flekterar tummen"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hand_21",
+    "type": "mc",
+    "prompt": "Den anatomiska \"snusgropen\" (tabatière) på handryggens radiala sida har sin botten mot vilket karpalben?",
+    "correct": "Os scaphoideum (och os trapezium)",
+    "distractors": [
+      "Os lunatum",
+      "Os pisiforme",
+      "Os hamatum"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_22",
+    "type": "mc",
+    "prompt": "Vilken artär passerar genom den anatomiska snusgropen?",
+    "correct": "A. radialis",
+    "distractors": [
+      "A. ulnaris",
+      "A. brachialis",
+      "A. interossea anterior"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_23",
+    "type": "mc",
+    "prompt": "Vilka senor bildar snusgropens kanter?",
+    "correct": "EPL (ulnart) samt APL och EPB (radialt)",
+    "distractors": [
+      "FDS och FDP",
+      "FCR och FCU",
+      "ECRL och ECRB"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_24",
+    "type": "mc",
+    "prompt": "Flexorsenorna hålls intill fingerbenen av en serie ringband (pulleys). Vilket ringband är oftast involverat vid \"triggerfinger\"?",
+    "correct": "A1-pulleyn vid MCP-leden",
+    "distractors": [
+      "A5-pulleyn vid DIP",
+      "Retinaculum extensorum",
+      "Det oblika ringbandet vid tummens IP"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_25",
+    "type": "mc",
+    "prompt": "Vilken bindvävsstruktur i handflatan blir förtjockad och drar fingrar i flexion vid Dupuytrens kontraktur?",
+    "correct": "Palmaraponeurosen (aponeurosis palmaris)",
+    "distractors": [
+      "Retinaculum flexorum",
+      "TFCC",
+      "Den dorsala fingerfascian"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_26",
+    "type": "mc",
+    "prompt": "Ungefär hur stort är normalt rörelseomfång för handledsflexion (palmarflexion)?",
+    "correct": "Cirka 80°",
+    "distractors": [
+      "Cirka 20°",
+      "Cirka 45°",
+      "Cirka 120°"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_27",
+    "type": "mc",
+    "prompt": "Ungefär hur stort är normalt rörelseomfång för handledsextension (dorsalflexion)?",
+    "correct": "Cirka 70°",
+    "distractors": [
+      "Cirka 30°",
+      "Cirka 100°",
+      "Cirka 10°"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_28",
+    "type": "mc",
+    "prompt": "Handledens sidledsrörelser är ojämnt stora. Vilken är störst?",
+    "correct": "Ulnardeviation (cirka 30°) är större än radialdeviation (cirka 20°)",
+    "distractors": [
+      "Radialdeviation är klart störst (cirka 45°)",
+      "De är exakt lika stora",
+      "Endast radialdeviation är möjlig"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_29",
+    "type": "mc",
+    "prompt": "Vad menas med tenodeseffekten (tenodesgrepp) i handen?",
+    "correct": "Att handledsextension passivt drar åt flexorsenorna så fingrarna böjs till ett grepp",
+    "distractors": [
+      "Att handledsflexion sträcker fingrarna aktivt",
+      "Att tummen opponeras av handledens rörelse",
+      "Att senorna slits av vid sträckning"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hand_30",
+    "type": "mc",
+    "prompt": "Tenodesgreppet är särskilt viktigt i rehabilitering vid vilken skada?",
+    "correct": "Cervikal ryggmärgsskada (t.ex. C6-tetraplegi) där aktiv fingerflexion saknas",
+    "distractors": [
+      "Lateral epikondylit",
+      "Fotledsdistorsion",
+      "Frozen shoulder"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hand_31",
+    "type": "mc",
+    "prompt": "Vilken tumrörelse är avgörande för de flesta grepp och innebär att tumblomman förs mot fingerblommorna?",
+    "correct": "Opposition",
+    "distractors": [
+      "Reposition",
+      "Adduktion",
+      "Extension"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hand_32",
+    "type": "mc",
+    "prompt": "Vad kännetecknar ett kraftgrepp (power grip)?",
+    "correct": "Föremålet hålls mot handflatan med böjda fingrar medan tummen låser greppet",
+    "distractors": [
+      "Föremålet hålls mellan tumme och fingerblommor med fin kontroll",
+      "Endast fingertopparna används utan tumme",
+      "Handen är helt öppen och plan"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hand_33",
+    "type": "mc",
+    "prompt": "Vad kännetecknar ett precisionsgrepp?",
+    "correct": "Föremålet hålls och manipuleras mellan tummen och fingerblommorna",
+    "distractors": [
+      "Föremålet pressas mot handflatan med full kraft",
+      "Endast handleden används",
+      "Föremålet hakas fast med böjda fingrar utan tumme"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hand_34",
+    "type": "mc",
+    "prompt": "Vilket grepp använder vi för att bära en kasse i handen utan att tummen behövs?",
+    "correct": "Krokgrepp (hook grip)",
+    "distractors": [
+      "Nyckelgrepp (lateral pinch)",
+      "Spetsgrepp (tip pinch)",
+      "Sfäriskt grepp"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hand_35",
+    "type": "mc",
+    "prompt": "Att vrida om en nyckel görs med vilket grepp?",
+    "correct": "Nyckelgrepp/lateralt nyp (tumblomman mot pekfingrets sida)",
+    "distractors": [
+      "Spetsgrepp (tip-to-tip)",
+      "Krokgrepp",
+      "Cylindriskt kraftgrepp"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hand_36",
+    "type": "mc",
+    "prompt": "Att plocka upp en nål görs typiskt med vilket nyp?",
+    "correct": "Spetsnyp (tip pinch, topp mot topp)",
+    "distractors": [
+      "Lateralt nyp",
+      "Krokgrepp",
+      "Sfäriskt grepp"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hand_37",
+    "type": "mc",
+    "prompt": "Handen har flera valv (arcader) som anpassar greppet. Vilka är de tvärgående valven?",
+    "correct": "Det proximala (karpala) och det distala (metakarpala) tvärvalvet",
+    "distractors": [
+      "Det longitudinella och det oblika valvet",
+      "Tummens och lillfingrets längsvalv",
+      "Endast ett enda platt valv"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hand_38",
+    "type": "mc",
+    "prompt": "Vilken nerv innerverar de flesta av tenarmusklerna och är därför avgörande för tummens opposition?",
+    "correct": "N. medianus",
+    "distractors": [
+      "N. ulnaris",
+      "N. radialis",
+      "N. musculocutaneus"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_39",
+    "type": "mc",
+    "prompt": "Minnesregeln LOAF beskriver n. medianus handmuskler. Vilka muskler ingår?",
+    "correct": "Lumbricaler 1–2, opponens pollicis, abductor pollicis brevis och flexor pollicis brevis (ytliga huvudet)",
+    "distractors": [
+      "Alla lumbricaler och interosséer",
+      "Hypotenarmusklerna och adductor pollicis",
+      "Samtliga handmuskler"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_40",
+    "type": "mc",
+    "prompt": "Vilken nerv innerverar de flesta av handens småmuskler (interosséer, hypotenar, adductor pollicis, lumbrikaler 3–4)?",
+    "correct": "N. ulnaris",
+    "distractors": [
+      "N. medianus",
+      "N. radialis",
+      "N. interosseus posterior"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_41",
+    "type": "mc",
+    "prompt": "Vilken nerv ger känsel åt handflatans radiala del, tummen, pekfingret, långfingret och halva ringfingret?",
+    "correct": "N. medianus",
+    "distractors": [
+      "N. ulnaris",
+      "N. radialis",
+      "N. axillaris"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_42",
+    "type": "mc",
+    "prompt": "Vilken nerv ger känsel åt lillfingret och den ulnara halvan av ringfingret?",
+    "correct": "N. ulnaris",
+    "distractors": [
+      "N. medianus",
+      "N. radialis",
+      "N. interosseus anterior"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_43",
+    "type": "mc",
+    "prompt": "Vilken nerv ger känsel åt handryggens radiala del men saknar motorisk funktion i handen?",
+    "correct": "N. radialis (ytliga grenen)",
+    "distractors": [
+      "N. medianus",
+      "N. ulnaris",
+      "N. musculocutaneus"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_44",
+    "type": "mc",
+    "prompt": "Adductor pollicis innerveras av vilken nerv (testas med Froments tecken)?",
+    "correct": "N. ulnaris",
+    "distractors": [
+      "N. medianus",
+      "N. radialis",
+      "N. interosseus anterior"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_45",
+    "type": "mc",
+    "prompt": "Genom vilken kanal passerar n. ulnaris och a. ulnaris vid handleden?",
+    "correct": "Guyons kanal (canalis ulnaris)",
+    "distractors": [
+      "Karpaltunneln",
+      "Snusgropen",
+      "Radialtunneln"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_46",
+    "type": "mc",
+    "prompt": "Karpaltunnelsyndrom orsakas av kompression av vilken nerv?",
+    "correct": "N. medianus",
+    "distractors": [
+      "N. ulnaris",
+      "N. radialis",
+      "N. interosseus posterior"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_47",
+    "type": "mc",
+    "prompt": "Vilket är ett typiskt tidigt symtom vid karpaltunnelsyndrom?",
+    "correct": "Nattliga domningar och stickningar i tummen, pek- och långfingret",
+    "distractors": [
+      "Domning enbart i lillfingret",
+      "Dropphand",
+      "Smärta enbart i armbågen"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_48",
+    "type": "mc",
+    "prompt": "Vid långvarigt svårt karpaltunnelsyndrom ses muskelförtvining i?",
+    "correct": "Tenarvallen (särskilt abductor pollicis brevis)",
+    "distractors": [
+      "Hypotenarvallen",
+      "Underarmens extensorer",
+      "Deltoideus"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_49",
+    "type": "mc",
+    "prompt": "Vilket test framkallar symtom genom att hålla handlederna maximalt flekterade mot varandra i en minut?",
+    "correct": "Phalens test",
+    "distractors": [
+      "Finkelsteins test",
+      "Froments test",
+      "Allens test"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_50",
+    "type": "mc",
+    "prompt": "Vad innebär ett positivt Tinels tecken över karpaltunneln?",
+    "correct": "Lätt knackning över nerven ger utstrålande stickningar i medianusområdet",
+    "distractors": [
+      "Tummen kan inte opponeras alls",
+      "Handen blir blek vid tryck mot artären",
+      "Smärta vid passiv tumsträckning"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_51",
+    "type": "mc",
+    "prompt": "Vid total n. medianus-skada uppstår en typisk handställning som kallas?",
+    "correct": "Aphand (oförmåga att opponera tummen, platt tenar)",
+    "distractors": [
+      "Klohand",
+      "Dropphand",
+      "Svanhalshand"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_52",
+    "type": "mc",
+    "prompt": "Vilket är det vanligast frakturerade karpalbenet?",
+    "correct": "Os scaphoideum (båtbenet)",
+    "distractors": [
+      "Os lunatum",
+      "Os pisiforme",
+      "Os trapezium"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_53",
+    "type": "mc",
+    "prompt": "Varför riskerar en skafoideumfraktur (särskilt proximalt) avaskulär nekros?",
+    "correct": "Blodförsörjningen går retrograd (distalt → proximalt), så proximala delen kan bli utan blod",
+    "distractors": [
+      "Benet saknar helt blodkärl",
+      "Blodet kommer bara från ulna",
+      "Benet läker alltid snabbt utan risk"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_54",
+    "type": "mc",
+    "prompt": "Var är palpationsömheten typiskt lokaliserad vid en skafoideumfraktur?",
+    "correct": "I den anatomiska snusgropen",
+    "distractors": [
+      "Över os pisiforme",
+      "Mitt i handflatan",
+      "Vid laterala epikondylen"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_55",
+    "type": "mc",
+    "prompt": "De Quervains tendinos engagerar senorna i första dorsala senfacket. Vilka senor är det?",
+    "correct": "Abductor pollicis longus (APL) och extensor pollicis brevis (EPB)",
+    "distractors": [
+      "FDS och FDP",
+      "Extensor pollicis longus och extensor indicis",
+      "FCR och FCU"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_56",
+    "type": "mc",
+    "prompt": "Vilket test är positivt vid De Quervains tendinos?",
+    "correct": "Finkelsteins test (tummen i knuten näve, ulnardeviation framkallar smärta)",
+    "distractors": [
+      "Phalens test",
+      "Froments test",
+      "Apprehension test"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_57",
+    "type": "mc",
+    "prompt": "Vilka fingrar drabbas oftast av Dupuytrens kontraktur?",
+    "correct": "Ring- och lillfingret",
+    "distractors": [
+      "Tummen och pekfingret",
+      "Enbart långfingret",
+      "Alla fingrar utom tummen lika"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_58",
+    "type": "mc",
+    "prompt": "Vad är \"malletfinger\" (droppfinger)?",
+    "correct": "Avslitning av den distala extensorsenan så att DIP-leden inte kan sträckas och hänger ned",
+    "distractors": [
+      "Oförmåga att böja DIP-leden",
+      "Sidledsinstabilitet i MCP-leden",
+      "Kompression av n. medianus"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_59",
+    "type": "mc",
+    "prompt": "Vad är \"jersey finger\"?",
+    "correct": "Avslitning av FDP-senan från ändfalangen så att DIP-leden inte kan böjas aktivt",
+    "distractors": [
+      "Avslitning av extensorsenan vid DIP",
+      "Fraktur i metakarpalbenet",
+      "Ruptur av tummens UCL"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_60",
+    "type": "mc",
+    "prompt": "Boutonnière-deformitet uppstår vid skada på extensormekanismens centralslip och ger?",
+    "correct": "Flexion i PIP och hyperextension i DIP",
+    "distractors": [
+      "Hyperextension i PIP och flexion i DIP",
+      "Flexion i både PIP och DIP",
+      "Extension i hela fingret"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_61",
+    "type": "mc",
+    "prompt": "Svanhalsdeformitet (swan neck) kännetecknas av?",
+    "correct": "Hyperextension i PIP och flexion i DIP",
+    "distractors": [
+      "Flexion i PIP och hyperextension i DIP",
+      "Flexion i MCP och extension i PIP",
+      "Total stelhet i hela fingret"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_62",
+    "type": "mc",
+    "prompt": "\"Skidåkartumme\" (gamekeeper's/skier's thumb) är en skada på vilket ligament?",
+    "correct": "Tummens ulnara kollateralligament (UCL) vid MCP-leden",
+    "distractors": [
+      "Tummens radiala kollateralligament",
+      "Lig. anulare radii",
+      "TFCC"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_63",
+    "type": "mc",
+    "prompt": "\"Boxarfraktur\" är en fraktur på?",
+    "correct": "Halsen av metakarpale V (lillfingrets mellanhandsben)",
+    "distractors": [
+      "Os scaphoideum",
+      "Distala radius",
+      "Tummens grundfalang"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_64",
+    "type": "mc",
+    "prompt": "Vad är en ganglion(cysta) vid handleden?",
+    "correct": "En vätskefylld utbuktning från ledkapsel eller senskida, oftast på handryggen",
+    "distractors": [
+      "En godartad bentumör",
+      "En nervinklämning",
+      "En förkalkad sena"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_65",
+    "type": "mc",
+    "prompt": "Vad orsakar låsningen vid triggerfinger (stenoserande tendovaginit)?",
+    "correct": "En förtjockning/knöl på flexorsenan fastnar i A1-pulleyn",
+    "distractors": [
+      "En fraktur i grundfalangen",
+      "Inklämning av n. medianus",
+      "Ruptur av extensorsenan"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_66",
+    "type": "mc",
+    "prompt": "Vid en svår n. ulnaris-skada uppstår en klohand. Varför ses klotställningen mest i ring- och lillfinger?",
+    "correct": "Förlamning av deras lumbrikaler/interosséer ger hyperextension i MCP och flexion i IP-lederna",
+    "distractors": [
+      "FDP slits av i dessa fingrar",
+      "Extensorsenorna brister",
+      "N. medianus tar över deras funktion"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_67",
+    "type": "mc",
+    "prompt": "Vad testar Allens test vid handleden?",
+    "correct": "Att både a. radialis och a. ulnaris försörjer handen (kollateral cirkulation)",
+    "distractors": [
+      "N. medianus motorik",
+      "Senglid i karpaltunneln",
+      "Ligamentstabilitet i tummen"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_68",
+    "type": "mc",
+    "prompt": "Vad är ett positivt Froments tecken ett uttryck för?",
+    "correct": "Svaghet i adductor pollicis (n. ulnaris) som kompenseras av FPL (n. medianus)",
+    "distractors": [
+      "Svaghet i abductor pollicis brevis",
+      "Inklämd n. radialis",
+      "Ruptur av FDP"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_69",
+    "type": "mc",
+    "prompt": "Hur skiljer man kliniskt FDS från FDP vid undersökning av ett finger?",
+    "correct": "FDS testas genom att böja PIP medan övriga fingrar hålls raka; FDP genom isolerad DIP-flexion",
+    "distractors": [
+      "Det går inte att skilja dem åt kliniskt",
+      "FDS testas vid handleden, FDP vid armbågen",
+      "Bägge testas enbart med tummen"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_70",
+    "type": "mc",
+    "prompt": "Vilket är ett centralt fysioterapeutiskt mål efter immobilisering av handen?",
+    "correct": "Att tidigt återfå rörlighet och senglid samt motverka ödem och stelhet",
+    "distractors": [
+      "Att hålla handen orörlig så länge som möjligt",
+      "Att enbart träna axeln",
+      "Att undvika all aktiv rörelse"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_71",
+    "type": "mc",
+    "prompt": "Vilken position kallas handens \"funktionsställning\" och eftersträvas ofta vid skenbehandling?",
+    "correct": "Lätt handledsextension, lätt böjda MCP/IP och tummen i opposition",
+    "distractors": [
+      "Full handledsflexion med raka fingrar",
+      "Maximal ulnardeviation",
+      "Helt knuten näve"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hand_72",
+    "type": "mc",
+    "prompt": "Vilken muskel testas särskilt vid misstänkt n. medianus-skada i handen?",
+    "correct": "Abductor pollicis brevis (palmar abduktion av tummen mot motstånd)",
+    "distractors": [
+      "Abductor digiti minimi",
+      "Första dorsala interosséen",
+      "Extensor digitorum"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_73",
+    "type": "mc",
+    "prompt": "Vilken muskel testas typiskt för n. ulnaris-funktion i handen?",
+    "correct": "Första dorsala interosséen (abduktion av pekfingret) eller abductor digiti minimi",
+    "distractors": [
+      "Abductor pollicis brevis",
+      "Opponens pollicis",
+      "Extensor pollicis longus"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_74",
+    "type": "mc",
+    "prompt": "Extensor pollicis longus (EPL) är särskilt utsatt för senruptur efter vilken skada?",
+    "correct": "Distal radiusfraktur (senan kan nötas av mot tuberculum dorsale)",
+    "distractors": [
+      "Skafoideumfraktur",
+      "Boxarfraktur",
+      "Armbågsluxation"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_75",
+    "type": "mc",
+    "prompt": "Vilket nervrotsbortfall (myotom) testas främst vid fingerabduktion/-adduktion (interosséer)?",
+    "correct": "T1",
+    "distractors": [
+      "C5",
+      "C6",
+      "C7"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_76",
+    "type": "mc",
+    "prompt": "Vilket dermatom motsvarar typiskt lillfingret?",
+    "correct": "C8",
+    "distractors": [
+      "C6",
+      "C7",
+      "T2"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_77",
+    "type": "mc",
+    "prompt": "Vilket dermatom motsvarar typiskt tummen?",
+    "correct": "C6",
+    "distractors": [
+      "C8",
+      "T1",
+      "C5"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_78",
+    "type": "mc",
+    "prompt": "Karpalbenen förbenas successivt efter födseln. Vilka två förbenas först (under första levnadsåret)?",
+    "correct": "Os capitatum och os hamatum",
+    "distractors": [
+      "Os scaphoideum och os lunatum",
+      "Os pisiforme och os trapezium",
+      "Os triquetrum och os trapezoideum"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_79",
+    "type": "mc",
+    "prompt": "Varför används röntgen av handens karpalben för att bedöma \"benålder\" hos barn?",
+    "correct": "Karpalbenen förbenas i en förutsägbar ordning som speglar skelettmognaden",
+    "distractors": [
+      "Karpalbenen växer fortare än längden",
+      "Antalet karpalben ökar med åldern",
+      "Karpalbenen krymper med åldern"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_80",
+    "type": "mc",
+    "prompt": "Vilket karpalben är sist att förbenas (runt 10–12 års ålder)?",
+    "correct": "Os pisiforme",
+    "distractors": [
+      "Os capitatum",
+      "Os scaphoideum",
+      "Os hamatum"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_81",
+    "type": "mc",
+    "prompt": "Vilken led drabbas särskilt ofta av artros hos äldre, framför allt kvinnor, och ger ont vid nyp och grepp?",
+    "correct": "Tummens karpometakarpalled (tumbasartros, rizartros)",
+    "distractors": [
+      "Handledens radiokarpalled",
+      "Lillfingrets DIP-led enbart",
+      "Distala radioulnarleden"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_82",
+    "type": "mc",
+    "prompt": "Heberdens knutor vid artros sitter på vilka leder?",
+    "correct": "DIP-lederna (distala interfalangeallederna)",
+    "distractors": [
+      "PIP-lederna",
+      "MCP-lederna",
+      "Handleden"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_83",
+    "type": "mc",
+    "prompt": "Bouchards knutor vid artros sitter på vilka leder?",
+    "correct": "PIP-lederna (proximala interfalangeallederna)",
+    "distractors": [
+      "DIP-lederna",
+      "MCP-lederna",
+      "Tummens CMC-led"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_84",
+    "type": "mc",
+    "prompt": "Reumatoid artrit drabbar typiskt vilka leder i handen tidigt och kan ge ulnardeviation?",
+    "correct": "MCP- och PIP-lederna (DIP brukar sparas)",
+    "distractors": [
+      "Enbart DIP-lederna",
+      "Enbart handleden",
+      "Enbart tummens IP-led"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_85",
+    "type": "mc",
+    "prompt": "Greppstyrka används kliniskt som en markör för?",
+    "correct": "Allmän muskelstyrka, funktion och hälsa (lägre styrka vid sarkopeni/skörhet)",
+    "distractors": [
+      "Enbart handledens rörlighet",
+      "Hjärtfrekvens",
+      "Synskärpa"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hand_86",
+    "type": "mc",
+    "prompt": "Hur förändras finmotorik och greppstyrka typiskt med stigande ålder?",
+    "correct": "Båda avtar gradvis, delvis på grund av muskelförlust och nedsatt sensorik",
+    "distractors": [
+      "Båda ökar med åldern",
+      "Endast greppstyrkan ökar",
+      "De påverkas inte alls av ålder"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hand_87",
+    "type": "mc",
+    "prompt": "Vilken extrinsisk muskel är ensam om att böja tummens ytterled (IP-leden)?",
+    "correct": "Flexor pollicis longus (FPL)",
+    "distractors": [
+      "Flexor pollicis brevis",
+      "Adductor pollicis",
+      "Opponens pollicis"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_88",
+    "type": "mc",
+    "prompt": "Vilken muskel sträcker tummens ytterled (IP) och bildar snusgropens ulnara kant?",
+    "correct": "Extensor pollicis longus (EPL)",
+    "distractors": [
+      "Extensor pollicis brevis",
+      "Abductor pollicis longus",
+      "Extensor indicis"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_89",
+    "type": "mc",
+    "prompt": "Vilka tre muskler sträcker handleden på den radiala/dorsala sidan?",
+    "correct": "Extensor carpi radialis longus, extensor carpi radialis brevis och extensor carpi ulnaris",
+    "distractors": [
+      "Flexor carpi radialis, palmaris longus och flexor carpi ulnaris",
+      "Pronator teres, supinator och brachioradialis",
+      "FDS, FDP och FPL"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_90",
+    "type": "mc",
+    "prompt": "Vilka muskler böjer handleden på den volara sidan?",
+    "correct": "Flexor carpi radialis, palmaris longus och flexor carpi ulnaris",
+    "distractors": [
+      "Extensor carpi radialis longus/brevis och extensor carpi ulnaris",
+      "Supinator och pronator teres",
+      "Lumbricaler och interosséer"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hand_91",
+    "type": "mc",
+    "prompt": "Radial- och ulnardeviation av handleden uppstår genom samverkan mellan vilka muskelgrupper?",
+    "correct": "Samtidig aktivering av handledens flexorer och extensorer på samma sida (radialt eller ulnart)",
+    "distractors": [
+      "Endast flexorerna",
+      "Endast tummens muskler",
+      "Endast lumbrikalerna"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hand_92",
+    "type": "mc",
+    "prompt": "Vad är \"dart thrower's motion\", ett funktionellt rörelseplan för handleden?",
+    "correct": "En diagonal rörelse från radialextension till ulnarflexion, vanlig i vardagliga grepp",
+    "distractors": [
+      "Ren flexion–extension i sagittalplanet",
+      "Ren pronation–supination",
+      "Cirkumduktion i full cirkel"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hand_93",
+    "type": "mc",
+    "prompt": "Varför försvagas fingerflexionen om handleden hålls i full flexion (aktiv-insufficiens)?",
+    "correct": "Flexorerna förkortas över både handled och fingrar och kan inte generera full kraft",
+    "distractors": [
+      "Senorna slits av",
+      "Nerven kläms automatiskt",
+      "Extensorerna tar över greppet"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hand_94",
+    "type": "mc",
+    "prompt": "Vilket grepp används för att hålla en boll eller ett äpple, med fingrarna spridda runt föremålet?",
+    "correct": "Sfäriskt grepp (spherical grip)",
+    "distractors": [
+      "Krokgrepp",
+      "Lateralt nyp",
+      "Spetsnyp"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hand_95",
+    "type": "mc",
+    "prompt": "Vilket grepp används kring ett cylindriskt föremål som ett glas eller ett verktygsskaft?",
+    "correct": "Cylindriskt kraftgrepp",
+    "distractors": [
+      "Spetsnyp",
+      "Lateralt nyp",
+      "Krokgrepp utan tumme"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hand_96",
+    "type": "mc",
+    "prompt": "Varför är tummen funktionellt sett ungefär lika viktig som de övriga fingrarna tillsammans?",
+    "correct": "Tummens opposition är en förutsättning för nästan alla precisions- och kraftgrepp",
+    "distractors": [
+      "Tummen har flest falanger",
+      "Tummen är längst",
+      "Tummen saknar betydelse för grepp"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hand_97",
+    "type": "mc",
+    "prompt": "Vid en akut handledsdistorsion med smärta ulnart och klick vid rotation bör man misstänka skada på?",
+    "correct": "TFCC (triangulära broskkomplexet)",
+    "distractors": [
+      "Tummens UCL",
+      "Karpaltunneln",
+      "Palmaraponeurosen"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_98",
+    "type": "mc",
+    "prompt": "Varför ger ödem i handen särskilt stor risk för stelhet och nedsatt funktion?",
+    "correct": "Ödem gör att MCP-lederna lätt stelnar i extension och IP-lederna i flexion (felställning)",
+    "distractors": [
+      "Ödem ökar greppstyrkan",
+      "Ödem påverkar bara huden",
+      "Ödem har ingen funktionell betydelse"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_99",
+    "type": "mc",
+    "prompt": "Vad är syftet med senglidningsövningar (\"tendon gliding\") efter handskada?",
+    "correct": "Att bevara senornas glid mot varandra och förhindra sammanväxningar (adherenser)",
+    "distractors": [
+      "Att bygga maximal muskelmassa snabbt",
+      "Att låsa lederna i ett läge",
+      "Att enbart minska smärta utan rörelse"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_100",
+    "type": "mc",
+    "prompt": "Vilken är en vanlig konsekvens om karpaltunnelsyndrom lämnas obehandlat under lång tid?",
+    "correct": "Bestående tenaratrofi och nedsatt finmotorik/känsel i tummen och pekfingret",
+    "distractors": [
+      "Spontan total läkning utan följder",
+      "Förlamning av hela armen",
+      "Ökad greppstyrka"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_1",
+    "type": "mc",
+    "prompt": "Höftbenet (os coxae) bildas av tre sammanvuxna ben. Vilka?",
+    "correct": "Os ilium, os ischii och os pubis",
+    "distractors": [
+      "Os ilium, os sacrum och os pubis",
+      "Os ischii, os sacrum och os coccygis",
+      "Os femoris, os ilium och os pubis"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_2",
+    "type": "mc",
+    "prompt": "Vad kallas den ledpanna i höftbenet där lårbenshuvudet ledar?",
+    "correct": "Acetabulum",
+    "distractors": [
+      "Cavitas glenoidalis",
+      "Incisura trochlearis",
+      "Fovea capitis"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_3",
+    "type": "mc",
+    "prompt": "Vilken ledtyp är höftleden (art. coxae)?",
+    "correct": "Kulled (art. spheroidea/cotylica)",
+    "distractors": [
+      "Gångjärnsled",
+      "Sadelled",
+      "Plan led"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_hoft_4",
+    "type": "mc",
+    "prompt": "Vad fördjupar acetabulum och ökar ledytan kring lårbenshuvudet?",
+    "correct": "Labrum acetabulare (broskläppen)",
+    "distractors": [
+      "Ligamentum teres",
+      "Bursa trochanterica",
+      "Membrana obturatoria"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_5",
+    "type": "mc",
+    "prompt": "Vilket är kroppens starkaste ligament, som förstärker höftledens framsida och begränsar extension?",
+    "correct": "Lig. iliofemorale (Y-ligamentet/Bigelows ligament)",
+    "distractors": [
+      "Lig. pubofemorale",
+      "Lig. ischiofemorale",
+      "Lig. capitis femoris"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_hoft_6",
+    "type": "mc",
+    "prompt": "Ligamentum capitis femoris (lig. teres) har vilken funktion, särskilt hos barn?",
+    "correct": "Det bär en artär (a. för caput femoris) som bidrar till lårbenshuvudets blodförsörjning",
+    "distractors": [
+      "Det är höftledens starkaste stabiliserande ligament",
+      "Det begränsar all flexion",
+      "Det fäster gluteus maximus"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_7",
+    "type": "mc",
+    "prompt": "Vad heter de två benutskotten på proximala femur där höftens muskler fäster?",
+    "correct": "Trochanter major och trochanter minor",
+    "distractors": [
+      "Epicondylus medialis och lateralis",
+      "Tuberositas major och minor",
+      "Condylus medialis och lateralis"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_8",
+    "type": "mc",
+    "prompt": "Vad är den normala vinkeln mellan lårbenshalsen och lårbensskaftet (CCD-vinkeln) hos en vuxen?",
+    "correct": "Cirka 125°",
+    "distractors": [
+      "Cirka 90°",
+      "Cirka 160°",
+      "Cirka 180° (rak)"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hoft_9",
+    "type": "mc",
+    "prompt": "En minskad collum-diafysvinkel (under cirka 120°) kallas?",
+    "correct": "Coxa vara",
+    "distractors": [
+      "Coxa valga",
+      "Genu varum",
+      "Cubitus valgus"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hoft_10",
+    "type": "mc",
+    "prompt": "En ökad collum-diafysvinkel (över cirka 135°) kallas?",
+    "correct": "Coxa valga",
+    "distractors": [
+      "Coxa vara",
+      "Genu valgum",
+      "Pes planus"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hoft_11",
+    "type": "mc",
+    "prompt": "Vad menas med femoral anteversion?",
+    "correct": "Lårbenshalsens framåtvridning i förhållande till femurkondylerna (normalt cirka 15° hos vuxna)",
+    "distractors": [
+      "Lårbenets längdtillväxt",
+      "Höftledens flexionsförmåga",
+      "Acetabulums djup"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hoft_12",
+    "type": "mc",
+    "prompt": "Vilken typ av led är sakroiliakaleden (SI-leden)?",
+    "correct": "En delvis broskklädd led med mycket liten rörlighet (amfiartros), byggd för kraftöverföring",
+    "distractors": [
+      "En kulled med stor rörlighet",
+      "En gångjärnsled",
+      "En ren fibrös fog utan ledyta"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_hoft_13",
+    "type": "mc",
+    "prompt": "Vad är SI-ledens viktigaste funktion?",
+    "correct": "Att överföra last mellan bålen/sacrum och de nedre extremiteterna",
+    "distractors": [
+      "Att ge stor rörlighet åt bäckenet",
+      "Att rotera höftleden",
+      "Att böja ländryggen"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hoft_14",
+    "type": "mc",
+    "prompt": "Vad heter fogen framtill i bäckenet mellan de två blygdbenen?",
+    "correct": "Symfysen (symphysis pubica)",
+    "distractors": [
+      "Sakroiliakaleden",
+      "Acetabulum",
+      "Foramen obturatum"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_15",
+    "type": "mc",
+    "prompt": "Hur skiljer sig det typiska kvinnliga bäckenet (gynekoitt) från det manliga?",
+    "correct": "Bredare och rundare bäckeningång, större vinkel i arcus pubis – anpassat för förlossning",
+    "distractors": [
+      "Smalare och högre med spetsig pubisvinkel",
+      "Det finns inga könsskillnader i bäckenet",
+      "Kvinnans bäcken saknar symfys"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_16",
+    "type": "mc",
+    "prompt": "Vilken muskel är höftens kraftfullaste extensor, särskilt vid kraftansträngning som att resa sig och springa uppför?",
+    "correct": "Gluteus maximus",
+    "distractors": [
+      "Gluteus medius",
+      "Iliopsoas",
+      "Tensor fasciae latae"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_hoft_17",
+    "type": "mc",
+    "prompt": "Vilka muskler är höftens viktigaste abduktorer och stabiliserar bäckenet vid gång på ett ben?",
+    "correct": "Gluteus medius och gluteus minimus",
+    "distractors": [
+      "Adductor longus och gracilis",
+      "Gluteus maximus och piriformis",
+      "Iliopsoas och rectus femoris"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hoft_18",
+    "type": "mc",
+    "prompt": "Vilken muskel (egentligen två: iliacus och psoas major) är höftens starkaste flexor?",
+    "correct": "Iliopsoas",
+    "distractors": [
+      "Gluteus maximus",
+      "Sartorius",
+      "Adductor magnus"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_hoft_19",
+    "type": "mc",
+    "prompt": "Adduktormuskulaturen (adductor longus/brevis/magnus, gracilis, pectineus) innerveras huvudsakligen av?",
+    "correct": "N. obturatorius",
+    "distractors": [
+      "N. femoralis",
+      "N. ischiadicus",
+      "N. gluteus superior"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_20",
+    "type": "mc",
+    "prompt": "Vilken muskel spänner tractus iliotibialis och hjälper till med höftflexion och -abduktion?",
+    "correct": "Tensor fasciae latae (TFL)",
+    "distractors": [
+      "Sartorius",
+      "Pectineus",
+      "Quadratus femoris"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_21",
+    "type": "mc",
+    "prompt": "Vilken är kroppens längsta muskel, som flekterar och utåtroterar höften (\"skräddarmuskeln\")?",
+    "correct": "Sartorius",
+    "distractors": [
+      "Gracilis",
+      "Rectus femoris",
+      "Semitendinosus"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_22",
+    "type": "mc",
+    "prompt": "Vilka tre muskler bildar hamstrings, som extenderar höften och böjer knät?",
+    "correct": "Biceps femoris, semitendinosus och semimembranosus",
+    "distractors": [
+      "Rectus femoris, vastus medialis och vastus lateralis",
+      "Adductor longus, brevis och magnus",
+      "Gluteus maximus, medius och minimus"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_hoft_23",
+    "type": "mc",
+    "prompt": "Var har hamstrings sitt gemensamma ursprung på bäckenet?",
+    "correct": "Tuber ischiadicum (sittbensknölen)",
+    "distractors": [
+      "Spina iliaca anterior superior",
+      "Trochanter major",
+      "Symfysen"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_24",
+    "type": "mc",
+    "prompt": "Vilken av lårets framsidemuskler är en tvåledsmuskel som både flekterar höften och sträcker knät?",
+    "correct": "Rectus femoris",
+    "distractors": [
+      "Vastus medialis",
+      "Vastus intermedius",
+      "Vastus lateralis"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_hoft_25",
+    "type": "mc",
+    "prompt": "De små djupa höftmusklerna (piriformis, gemelli, obturatorius internus/externus, quadratus femoris) har vilken huvudfunktion?",
+    "correct": "Utåtrotation och stabilisering av höftleden",
+    "distractors": [
+      "Inåtrotation och flexion",
+      "Ren abduktion",
+      "Knäextension"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_hoft_26",
+    "type": "mc",
+    "prompt": "Gluteus maximus innerveras av?",
+    "correct": "N. gluteus inferior",
+    "distractors": [
+      "N. gluteus superior",
+      "N. femoralis",
+      "N. obturatorius"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_27",
+    "type": "mc",
+    "prompt": "Gluteus medius, gluteus minimus och tensor fasciae latae innerveras av?",
+    "correct": "N. gluteus superior",
+    "distractors": [
+      "N. gluteus inferior",
+      "N. ischiadicus",
+      "N. obturatorius"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_28",
+    "type": "mc",
+    "prompt": "Ungefär hur stor är normal höftflexion (med böjt knä)?",
+    "correct": "Cirka 120°",
+    "distractors": [
+      "Cirka 45°",
+      "Cirka 90°",
+      "Cirka 180°"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_29",
+    "type": "mc",
+    "prompt": "Ungefär hur stor är normal höftabduktion?",
+    "correct": "Cirka 45°",
+    "distractors": [
+      "Cirka 10°",
+      "Cirka 90°",
+      "Cirka 120°"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_30",
+    "type": "mc",
+    "prompt": "Höftens extension är förhållandevis liten. Ungefär hur stor är den normalt?",
+    "correct": "Cirka 10–20°",
+    "distractors": [
+      "Cirka 45°",
+      "Cirka 70°",
+      "Cirka 90°"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_31",
+    "type": "mc",
+    "prompt": "Vad är gluteus medius huvudsakliga roll under gångens stödfas på ett ben?",
+    "correct": "Att stabilisera bäckenet i frontalplanet så att det inte tippar mot svingbenets sida",
+    "distractors": [
+      "Att flektera höften framåt",
+      "Att sträcka knät",
+      "Att rotera bålen"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hoft_32",
+    "type": "mc",
+    "prompt": "Vad är ett positivt Trendelenburgs tecken ett uttryck för?",
+    "correct": "Svaghet i höftabduktorerna (gluteus medius/minimus) på stödbenets sida",
+    "distractors": [
+      "Svaghet i höftflexorerna",
+      "Knäextensorsvaghet",
+      "Fotledsinstabilitet"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_33",
+    "type": "mc",
+    "prompt": "Vid Trendelenburgs tecken (positivt) – vad händer med bäckenet när patienten står på det svaga benet?",
+    "correct": "Bäckenet sjunker ned på motsatt (svingande) sida",
+    "distractors": [
+      "Bäckenet lyfts på motsatt sida",
+      "Bäckenet roterar bakåt",
+      "Ingenting händer med bäckenet"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_34",
+    "type": "mc",
+    "prompt": "Gångcykeln delas in i två huvudfaser. Vilka?",
+    "correct": "Stödfas (stance) och svingfas (swing)",
+    "distractors": [
+      "Flexionsfas och extensionsfas",
+      "Acceleration och retardation",
+      "Statisk och dynamisk fas"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hoft_35",
+    "type": "mc",
+    "prompt": "Hur fördelar sig stöd- och svingfas ungefär under en normal gångcykel?",
+    "correct": "Stödfas cirka 60 % och svingfas cirka 40 %",
+    "distractors": [
+      "Stödfas cirka 40 % och svingfas cirka 60 %",
+      "Exakt 50 % vardera",
+      "Stödfas cirka 80 % och svingfas cirka 20 %"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hoft_36",
+    "type": "mc",
+    "prompt": "Vad inleder stödfasen i en normal gångcykel?",
+    "correct": "Hälisättning (initial contact / heel strike)",
+    "distractors": [
+      "Tåfrånskjut (toe off)",
+      "Mittsving (midswing)",
+      "Mittstöd (midstance)"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hoft_37",
+    "type": "mc",
+    "prompt": "Varför rekommenderas en käpp i handen på motsatt sida om den artrosdrabbade höften?",
+    "correct": "Den minskar belastningen på höften genom att avlasta abduktorernas kraftbehov",
+    "distractors": [
+      "Den ökar belastningen för att stärka höften",
+      "Den har ingen effekt på höftbelastningen",
+      "Den används bara för balans, inte avlastning"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hoft_38",
+    "type": "mc",
+    "prompt": "Ungefär hur stor ledkraft kan höftleden utsättas för vid normal gång?",
+    "correct": "Cirka 3–4 gånger kroppsvikten",
+    "distractors": [
+      "Mindre än kroppsvikten",
+      "Exakt en kroppsvikt",
+      "Cirka 10 gånger kroppsvikten"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hoft_39",
+    "type": "mc",
+    "prompt": "Vilken nerv från plexus lumbalis innerverar quadriceps femoris och ger känsel åt lårets framsida?",
+    "correct": "N. femoralis",
+    "distractors": [
+      "N. obturatorius",
+      "N. ischiadicus",
+      "N. gluteus superior"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_40",
+    "type": "mc",
+    "prompt": "Vilken nerv är kroppens största och försörjer baksidan av låret samt hela underbenet och foten?",
+    "correct": "N. ischiadicus",
+    "distractors": [
+      "N. femoralis",
+      "N. obturatorius",
+      "N. pudendus"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_41",
+    "type": "mc",
+    "prompt": "N. ischiadicus delar sig (oftast i knävecket) i vilka två nerver?",
+    "correct": "N. tibialis och n. fibularis (peroneus) communis",
+    "distractors": [
+      "N. femoralis och n. obturatorius",
+      "N. saphenus och n. suralis",
+      "N. gluteus superior och inferior"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_42",
+    "type": "mc",
+    "prompt": "Var lämnar n. ischiadicus bäckenet?",
+    "correct": "Genom foramen ischiadicum majus, oftast nedanför piriformis",
+    "distractors": [
+      "Genom foramen obturatum",
+      "Genom canalis femoralis",
+      "Genom symfysen"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_43",
+    "type": "mc",
+    "prompt": "Plexus lumbalis bildas huvudsakligen av vilka ryggmärgsrötter?",
+    "correct": "L1–L4 (med bidrag från T12)",
+    "distractors": [
+      "L4–S4",
+      "S1–S4",
+      "T6–T12"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_44",
+    "type": "mc",
+    "prompt": "Inklämning av n. cutaneus femoris lateralis vid ljumsken ger ett tillstånd som kallas?",
+    "correct": "Meralgia paresthetica (domning/brännande känsla på lårets utsida)",
+    "distractors": [
+      "Piriformissyndrom",
+      "Karpaltunnelsyndrom",
+      "Ischias"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_45",
+    "type": "mc",
+    "prompt": "Höftartros (coxartros) ger ofta tidig inskränkning av vilken rörelse?",
+    "correct": "Inåtrotation (och extension)",
+    "distractors": [
+      "Endast abduktion",
+      "Endast flexion",
+      "Knäextension"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_46",
+    "type": "mc",
+    "prompt": "Var lokaliseras smärtan typiskt vid höftartros?",
+    "correct": "I ljumsken, ibland utstrålande mot lår och knä",
+    "distractors": [
+      "Enbart i ländryggen",
+      "Enbart i vaden",
+      "Enbart över sittbensknölen"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_47",
+    "type": "mc",
+    "prompt": "Vad är förstahandsbehandling vid höftartros enligt artrosriktlinjer?",
+    "correct": "Information/utbildning, anpassad fysisk träning och vid behov viktnedgång",
+    "distractors": [
+      "Omedelbar höftprotes i alla lägen",
+      "Total vila tills smärtan upphör",
+      "Enbart smärtstillande utan träning"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_48",
+    "type": "mc",
+    "prompt": "Varför riskerar en collum femoris-fraktur (cervikal höftfraktur) avaskulär nekros av lårbenshuvudet?",
+    "correct": "Frakturen kan slita av de retinakulära kärlen som försörjer caput retrograt",
+    "distractors": [
+      "Lårbenshuvudet saknar helt blodkärl",
+      "Blodet kommer enbart från ligamentum teres hos vuxna",
+      "Frakturen påverkar aldrig blodförsörjningen"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_49",
+    "type": "mc",
+    "prompt": "Hur ligger benet typiskt vid en dislocerad collum femoris-fraktur?",
+    "correct": "Förkortat och utåtroterat",
+    "distractors": [
+      "Förlängt och inåtroterat",
+      "Rakt och oförändrat",
+      "Kraftigt abducerat"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_50",
+    "type": "mc",
+    "prompt": "Vilken är den vanligaste underliggande orsaken till höftfraktur hos äldre?",
+    "correct": "Osteoporos i kombination med fall",
+    "distractors": [
+      "Idrottsskada",
+      "Medfödd missbildning",
+      "Tumör i de flesta fall"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_51",
+    "type": "mc",
+    "prompt": "Greater trochanteric pain syndrome (trokanterit) beror oftast på?",
+    "correct": "Gluteal sentendinopati och/eller bursit vid trochanter major",
+    "distractors": [
+      "Artros i själva höftleden",
+      "Diskbråck i ländryggen",
+      "Ruptur av ligamentum teres"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_52",
+    "type": "mc",
+    "prompt": "Vad innebär femoroacetabulärt impingement (FAI) av cam-typ?",
+    "correct": "En benpålagring vid övergången lårbenshals–huvud som kläms mot acetabulum vid flexion",
+    "distractors": [
+      "Överdjup acetabulär ledpanna",
+      "Avsaknad av labrum",
+      "Förkortning av lårbenshalsen"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_53",
+    "type": "mc",
+    "prompt": "Vilket test (flexion, adduktion, inåtrotation) provocerar smärta vid FAI och främre labrumskada?",
+    "correct": "FADIR-testet",
+    "distractors": [
+      "Trendelenburgs test",
+      "Lachmans test",
+      "Thompsons test"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_54",
+    "type": "mc",
+    "prompt": "Vad testar FABER-testet (flexion, abduktion, utåtrotation) framför allt?",
+    "correct": "Höftled och sakroiliakaled (kan provocera smärta från endera)",
+    "distractors": [
+      "Korsbanden i knät",
+      "Akillessenan",
+      "Rotatorkuffen"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_55",
+    "type": "mc",
+    "prompt": "Hos idrottare är \"ljumsksmärta\" ofta relaterad till?",
+    "correct": "Adduktor- eller iliopsoasrelaterad senöverbelastning",
+    "distractors": [
+      "Akillestendinos",
+      "Plantarfasciit",
+      "Rotatorkuffruptur"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_56",
+    "type": "mc",
+    "prompt": "En kraftig hamstringssträckning eller avulsion sker oftast vid?",
+    "correct": "Snabb excentrisk belastning, t.ex. sprint, med smärta vid sittbensknölen",
+    "distractors": [
+      "Långsam statisk stretching",
+      "Stillasittande",
+      "Lätt promenad"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_57",
+    "type": "mc",
+    "prompt": "Vad kännetecknar piriformissyndrom?",
+    "correct": "Ischiasliknande smärta då piriformis irriterar/komprimerar n. ischiadicus i sätet",
+    "distractors": [
+      "Smärta i ljumsken vid inåtrotation",
+      "Domning på lårets utsida",
+      "Knäsmärta vid trappgång"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_58",
+    "type": "mc",
+    "prompt": "I vilken riktning sker en traumatisk höftledsluxation oftast (t.ex. vid \"dashboard injury\")?",
+    "correct": "Bakåt (posterior), med benet flekterat, adducerat och inåtroterat",
+    "distractors": [
+      "Framåt (anterior), med benet abducerat och utåtroterat",
+      "Rakt nedåt",
+      "Höftleden luxerar i princip aldrig"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_59",
+    "type": "mc",
+    "prompt": "Vilken nerv riskerar att skadas vid en bakre höftledsluxation?",
+    "correct": "N. ischiadicus",
+    "distractors": [
+      "N. femoralis",
+      "N. obturatorius",
+      "N. pudendus"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_60",
+    "type": "mc",
+    "prompt": "Vad utmärker en Trendelenburggång (abduktorsvaghet)?",
+    "correct": "Bålen lutar mot stödbenets sida för att kompensera bäckentippningen",
+    "distractors": [
+      "Knät överextenderas vid varje steg",
+      "Foten slår i golvet (droppfot)",
+      "Patienten går på tå"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_61",
+    "type": "mc",
+    "prompt": "Legg-Calvé-Perthes sjukdom innebär?",
+    "correct": "Idiopatisk avaskulär nekros av lårbenshuvudet hos barn (oftast 4–8 år)",
+    "distractors": [
+      "Glidning i tillväxtzonen hos tonåringar",
+      "Medfödd höftledsluxation hos nyfödda",
+      "Höftartros hos äldre"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_62",
+    "type": "mc",
+    "prompt": "Fyseolys (SCFE, glidning i lårbenshuvudets tillväxtzon) drabbar typiskt?",
+    "correct": "Överviktiga tonåringar, ofta med höft- eller knäsmärta och hälta",
+    "distractors": [
+      "Nyfödda flickor",
+      "Barn 4–8 år",
+      "Äldre med osteoporos"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_63",
+    "type": "mc",
+    "prompt": "Höftledsdysplasi/medfödd höftluxation (DDH) screenas hos nyfödda med vilka tester?",
+    "correct": "Ortolanis och Barlows test",
+    "distractors": [
+      "Lachmans och McMurrays test",
+      "Phalens och Tinels test",
+      "Thompsons och Simmonds test"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_64",
+    "type": "mc",
+    "prompt": "Övergående höftledsinflammation (coxitis simplex/transient synovit) hos barn kännetecknas av?",
+    "correct": "Akut hälta och höftsmärta som ofta går över spontant inom någon vecka",
+    "distractors": [
+      "Kronisk progressiv ledförstörelse",
+      "Permanent benförlust",
+      "Medfödd missbildning"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_65",
+    "type": "mc",
+    "prompt": "Acetabulum bildas under uppväxten av tre ben som möts i ett brosk. Vad heter detta brosk?",
+    "correct": "Y-brosket (cartilago triradiata)",
+    "distractors": [
+      "Symfysbrosket",
+      "Epifysplattan i femur",
+      "Labrum acetabulare"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_66",
+    "type": "mc",
+    "prompt": "Hur förändras femoral anteversion typiskt från barndom till vuxen ålder?",
+    "correct": "Den minskar (från cirka 30–40° hos små barn till cirka 15° hos vuxna)",
+    "distractors": [
+      "Den ökar kraftigt med åldern",
+      "Den är konstant hela livet",
+      "Den försvinner helt"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hoft_67",
+    "type": "mc",
+    "prompt": "Ökad femoral anteversion hos barn ger ofta vilket gångmönster?",
+    "correct": "Inåtroterade fötter (\"intoeing\"), barnet går med tårna inåt",
+    "distractors": [
+      "Kraftigt utåtroterade fötter",
+      "Tågång",
+      "Hälgång"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hoft_68",
+    "type": "mc",
+    "prompt": "Hur förändras gångmönstret typiskt hos äldre?",
+    "correct": "Kortare steglängd, lägre gånghastighet och längre dubbelstödsfas",
+    "distractors": [
+      "Längre steg och högre hastighet",
+      "Ökad svingfas och kortare stödfas",
+      "Inga förändringar med åldern"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hoft_69",
+    "type": "mc",
+    "prompt": "Varför är fallprevention och styrketräning av höft/ben särskilt viktigt hos äldre?",
+    "correct": "För att minska risken för höftfraktur, som ofta beror på fall vid osteoporos",
+    "distractors": [
+      "För att öka anteversionen",
+      "För att förhindra Perthes sjukdom",
+      "För att bota DDH"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_70",
+    "type": "mc",
+    "prompt": "Vilken rörelse bör ofta undvikas tidigt efter en höftprotesoperation med bakre snitt (luxationsrisk)?",
+    "correct": "Kombinationen flexion över 90°, adduktion och inåtrotation",
+    "distractors": [
+      "Lätt abduktion",
+      "Stående med rakt ben",
+      "Lugn promenad"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_71",
+    "type": "mc",
+    "prompt": "Vilket framträdande bäckenlandmärke palperas främst och används som referens vid undersökning?",
+    "correct": "Spina iliaca anterior superior (SIAS)",
+    "distractors": [
+      "Trochanter minor",
+      "Symphysis pubica enbart",
+      "Foramen obturatum"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_72",
+    "type": "mc",
+    "prompt": "Vad är iliopsoas distala fäste?",
+    "correct": "Trochanter minor på femur",
+    "distractors": [
+      "Trochanter major",
+      "Tuberositas tibiae",
+      "Tuber ischiadicum"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_73",
+    "type": "mc",
+    "prompt": "Tractus iliotibialis löper längs lårets utsida och fäster distalt på?",
+    "correct": "Tuberculum (Gerdys) på laterala tibia",
+    "distractors": [
+      "Mediala femurkondylen",
+      "Patella",
+      "Caput fibulae enbart"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_74",
+    "type": "mc",
+    "prompt": "Vid stramt tractus iliotibialis kan vilket test påvisa nedsatt höftadduktion?",
+    "correct": "Obers test",
+    "distractors": [
+      "Thomas test",
+      "Lachmans test",
+      "Phalens test"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_75",
+    "type": "mc",
+    "prompt": "Vad påvisar Thomas test?",
+    "correct": "Höftflexionskontraktur (stram iliopsoas/rectus femoris)",
+    "distractors": [
+      "Korsbandsskada",
+      "Meniskskada",
+      "Akillesseneruptur"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_76",
+    "type": "mc",
+    "prompt": "Vilken muskelgrupp behöver ofta stärkas vid både höftartros och Trendelenburggång?",
+    "correct": "Höftabduktorerna (gluteus medius/minimus)",
+    "distractors": [
+      "Vadmuskulaturen",
+      "Handledsextensorerna",
+      "Bröstmuskulaturen"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hoft_77",
+    "type": "mc",
+    "prompt": "Vad är den primära funktionella konsekvensen av nedsatt höftextension (t.ex. flexionskontraktur)?",
+    "correct": "Försämrad gång med minskad steglängd och kompenserande ökad ländryggssvank",
+    "distractors": [
+      "Förbättrad gånghastighet",
+      "Ökad knästabilitet",
+      "Ingen påverkan på gång"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hoft_78",
+    "type": "mc",
+    "prompt": "Vilket myotom testas främst vid höftflexion?",
+    "correct": "L2",
+    "distractors": [
+      "S1",
+      "L5",
+      "L4"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_79",
+    "type": "mc",
+    "prompt": "Vilket myotom testas främst vid höftextension/knäflexion (gluteus maximus, hamstrings)?",
+    "correct": "L5–S1",
+    "distractors": [
+      "L1–L2",
+      "C7–C8",
+      "T10–T12"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_80",
+    "type": "mc",
+    "prompt": "Bäckenbotten (diaphragma pelvis) byggs framför allt upp av vilken muskel?",
+    "correct": "Levator ani",
+    "distractors": [
+      "Gluteus maximus",
+      "Piriformis",
+      "Obturatorius externus"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_81",
+    "type": "mc",
+    "prompt": "Vilken funktion har bäckenbottenmuskulaturen?",
+    "correct": "Stöd åt bäckenorganen samt kontroll av kontinens",
+    "distractors": [
+      "Höftens utåtrotation",
+      "Knäextension",
+      "Andningsarbete enbart"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_82",
+    "type": "mc",
+    "prompt": "Vilken fysioterapeutisk åtgärd har god evidens vid ansträngningsinkontinens?",
+    "correct": "Bäckenbottenträning",
+    "distractors": [
+      "Enbart sängläge",
+      "Vadmuskelträning",
+      "Axelträning"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hoft_83",
+    "type": "mc",
+    "prompt": "Under graviditet bidrar hormonet relaxin till?",
+    "correct": "Ökad ledlaxitet i bäckenets leder (SI-leder och symfys)",
+    "distractors": [
+      "Stelhet i alla leder",
+      "Ökad bentäthet",
+      "Minskad rörlighet i höften"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hoft_84",
+    "type": "mc",
+    "prompt": "Foramen obturatum i bäckenet är till största delen täckt av en hinna men släpper igenom?",
+    "correct": "Kärl och n. obturatorius",
+    "distractors": [
+      "N. ischiadicus",
+      "A. femoralis",
+      "N. femoralis"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_85",
+    "type": "mc",
+    "prompt": "Vilket kärl passerar under ligamentum inguinale lateralt om venen och nerven i lacuna vasorum?",
+    "correct": "A. femoralis",
+    "distractors": [
+      "A. iliaca interna",
+      "A. obturatoria",
+      "A. glutea superior"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_86",
+    "type": "mc",
+    "prompt": "Vilka två muskler räknas till de djupa utåtrotatorerna men kan vid >90° höftflexion i stället bli inåtrotatorer/abduktorer?",
+    "correct": "Piriformis (och delvis de övriga djupa rotatorerna)",
+    "distractors": [
+      "Iliopsoas",
+      "Gluteus maximus",
+      "Adductor longus"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hoft_87",
+    "type": "mc",
+    "prompt": "Den del av adductor magnus som fäster vid tuberculum adductorium innerveras (till skillnad från resten) av?",
+    "correct": "N. ischiadicus (tibiala delen)",
+    "distractors": [
+      "N. femoralis",
+      "N. gluteus superior",
+      "N. pudendus"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_88",
+    "type": "mc",
+    "prompt": "Vid en framåttippning av bäckenet (anterior pelvic tilt) ökar typiskt?",
+    "correct": "Ländryggens svank (lumbal lordos)",
+    "distractors": [
+      "Bröstryggens kyfos minskar till noll",
+      "Höftextensionen",
+      "Knäflexionen i stående"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hoft_89",
+    "type": "mc",
+    "prompt": "Vilka muskler tippar bäckenet framåt (anteriort) när de är strama/överaktiva?",
+    "correct": "Höftflexorerna (iliopsoas, rectus femoris) och ländryggssträckarna",
+    "distractors": [
+      "Hamstrings och buksmusklerna",
+      "Gluteus maximus och buken",
+      "Vadmusklerna"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hoft_90",
+    "type": "mc",
+    "prompt": "Vilka muskler tippar bäckenet bakåt (posteriort)?",
+    "correct": "Gluteus maximus, hamstrings och bukmusklerna",
+    "distractors": [
+      "Iliopsoas och rectus femoris",
+      "Ländryggssträckarna",
+      "Höftadduktorerna"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hoft_91",
+    "type": "mc",
+    "prompt": "Vilken muskel testas med \"resisted hip flexion\" i sittande och är ofta inblandad vid främre ljumsksmärta?",
+    "correct": "Iliopsoas",
+    "distractors": [
+      "Gluteus maximus",
+      "Biceps femoris",
+      "Gastrocnemius"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_92",
+    "type": "mc",
+    "prompt": "Vad innebär en \"antalgisk gång\"?",
+    "correct": "Förkortad stödfas på det smärtande benet för att minska belastningstiden",
+    "distractors": [
+      "Förlängd stödfas på det smärtande benet",
+      "Gång helt utan stödfas",
+      "Tågång på båda fötterna"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_93",
+    "type": "mc",
+    "prompt": "Vilken muskelgrupp arbetar excentriskt strax efter hälisättning för att bromsa höftflexion och kontrollera bålen?",
+    "correct": "Höftextensorerna (gluteus maximus och hamstrings)",
+    "distractors": [
+      "Höftflexorerna",
+      "Vadmusklerna enbart",
+      "Handledsflexorerna"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_hoft_94",
+    "type": "mc",
+    "prompt": "Varför ger en höftprotes (artroplastik) ofta god smärtlindring vid svår coxartros?",
+    "correct": "De förstörda ledytorna ersätts med konstgjorda glidytor",
+    "distractors": [
+      "Nerven till höften tas bort",
+      "Höftleden steloperas",
+      "Benet förlängs kraftigt"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_95",
+    "type": "mc",
+    "prompt": "Vad är ett rimligt tidigt rehabiliteringsmål efter en höftfraktur hos en äldre patient?",
+    "correct": "Tidig mobilisering och belastning för att återfå gångförmåga och förebygga komplikationer",
+    "distractors": [
+      "Strikt sängläge i flera veckor",
+      "Att undvika all belastning i tre månader",
+      "Enbart armträning"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_96",
+    "type": "mc",
+    "prompt": "Vid SI-ledsrelaterad smärta används ofta ett kluster av provokationstester. Varför kombineras flera tester?",
+    "correct": "Enskilda SI-tester har låg tillförlitlighet; flera positiva tillsammans ökar säkerheten",
+    "distractors": [
+      "Ett enda test räcker alltid",
+      "Tester behövs aldrig vid SI-smärta",
+      "För att utesluta höftartros enbart"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_97",
+    "type": "mc",
+    "prompt": "Vilken struktur skiljer det stora och det lilla sittbenshålet (foramen ischiadicum majus/minus)?",
+    "correct": "Lig. sacrospinale (tillsammans med lig. sacrotuberale)",
+    "distractors": [
+      "Lig. inguinale",
+      "Lig. iliofemorale",
+      "Membrana obturatoria"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_98",
+    "type": "mc",
+    "prompt": "Vad är en vanlig orsak till att caput femoris hos vuxna är mer skyddat mot avaskulär nekros än hos små barn?",
+    "correct": "Hos vuxna försörjs caput främst av retinakulära kärl, medan barn är mer beroende av ligamentum teres-kärlet",
+    "distractors": [
+      "Barn har fler kärl till caput än vuxna",
+      "Vuxnas caput saknar blodförsörjning",
+      "Det finns ingen skillnad mellan barn och vuxna"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_hoft_99",
+    "type": "mc",
+    "prompt": "Vilket gångmönster ses vid bilateral abduktorsvaghet (t.ex. vid myopati)?",
+    "correct": "Vaggande \"ankgång\" (waddling gait) med bäckentippning åt båda håll",
+    "distractors": [
+      "Saxgång",
+      "Stäppgång",
+      "Tågång"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hoft_100",
+    "type": "mc",
+    "prompt": "Vilken är en central princip i fysioterapeutisk behandling av höftartros enligt aktuella riktlinjer?",
+    "correct": "Handledd, anpassad träning är en grundbehandling oavsett artrosgrad",
+    "distractors": [
+      "Vila är alltid bästa behandlingen",
+      "Träning är kontraindicerat vid artros",
+      "Endast operation hjälper"
+    ],
+    "topic": "fysio_hoft_backen",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_1",
+    "type": "mc",
+    "prompt": "Vilken typ av led är knäleden (art. genus) huvudsakligen?",
+    "correct": "En modifierad gångjärnsled som även tillåter viss rotation",
+    "distractors": [
+      "En ren kulled",
+      "En sadelled",
+      "En vridled"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_kna_2",
+    "type": "mc",
+    "prompt": "Vilka två ledförbindelser ingår i knäleden?",
+    "correct": "Den femorotibiala och den femoropatellara leden",
+    "distractors": [
+      "Den tibiofibulara och den femoropatellara leden",
+      "Den femorotibiala och den tibiofibulara leden",
+      "Den patellofibulara och den femorotibiala leden"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_kna_3",
+    "type": "mc",
+    "prompt": "Vilket är kroppens största sesamben, inbäddat i quadricepssenan?",
+    "correct": "Patella (knäskålen)",
+    "distractors": [
+      "Os pisiforme",
+      "Fabella",
+      "Os trigonum"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_kna_4",
+    "type": "mc",
+    "prompt": "Patellarsenan (lig. patellae) förbinder patella med?",
+    "correct": "Tuberositas tibiae",
+    "distractors": [
+      "Caput fibulae",
+      "Mediala femurkondylen",
+      "Tuberositas ischiadicum"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_kna_5",
+    "type": "mc",
+    "prompt": "Vad är meniskernas huvudsakliga funktion i knäleden?",
+    "correct": "Att fördela last, dämpa stötar och förbättra ledytornas passform",
+    "distractors": [
+      "Att producera ledvätska",
+      "Att böja knät aktivt",
+      "Att fästa korsbanden vid patella"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_kna_6",
+    "type": "mc",
+    "prompt": "Hur skiljer sig den mediala menisken från den laterala vad gäller form och rörlighet?",
+    "correct": "Den mediala är mer C-formad, fäster vid mediala kollateralligamentet och är mindre rörlig",
+    "distractors": [
+      "Den mediala är mer cirkulär och mycket rörlig",
+      "Den laterala är fast förankrad och orörlig",
+      "De är helt identiska"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_kna_7",
+    "type": "mc",
+    "prompt": "Vilken menisk skadas oftast, delvis på grund av sin fastare förankring?",
+    "correct": "Den mediala menisken",
+    "distractors": [
+      "Den laterala menisken",
+      "Båda skadas lika ofta",
+      "Menisker skadas i princip aldrig"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_8",
+    "type": "mc",
+    "prompt": "Hur ser meniskernas blodförsörjning ut?",
+    "correct": "Endast den perifera tredjedelen (röda zonen) är välförsörjd; den inre delen är kärlfattig",
+    "distractors": [
+      "Hela menisken är rikligt kärlförsörjd",
+      "Endast den inre delen har kärl",
+      "Menisken saknar helt blodkärl"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_9",
+    "type": "mc",
+    "prompt": "Varför läker en bristning i meniskens inre del (vita zonen) dåligt?",
+    "correct": "Den saknar blodförsörjning och därmed läkningskapacitet",
+    "distractors": [
+      "Den belastas aldrig",
+      "Den är gjord av ben",
+      "Den läker snabbare än andra delar"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_10",
+    "type": "mc",
+    "prompt": "Vad förhindrar främre korsbandet (ACL)?",
+    "correct": "Att tibia glider för långt framåt i förhållande till femur",
+    "distractors": [
+      "Att tibia glider för långt bakåt",
+      "Att knät böjs för mycket",
+      "Att patella luxerar lateralt"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_kna_11",
+    "type": "mc",
+    "prompt": "Vad förhindrar bakre korsbandet (PCL)?",
+    "correct": "Att tibia glider för långt bakåt i förhållande till femur",
+    "distractors": [
+      "Att tibia glider för långt framåt",
+      "Valgusrörelse i knät",
+      "Varusrörelse i knät"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_kna_12",
+    "type": "mc",
+    "prompt": "Vilket av knäts korsband är kraftigast?",
+    "correct": "Bakre korsbandet (PCL)",
+    "distractors": [
+      "Främre korsbandet (ACL)",
+      "De är exakt lika starka",
+      "Mediala kollateralligamentet är kraftigast"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_kna_13",
+    "type": "mc",
+    "prompt": "Vilket ligament motstår valgusbelastning (knät pressas inåt) på knäts insida?",
+    "correct": "Mediala kollateralligamentet (MCL)",
+    "distractors": [
+      "Laterala kollateralligamentet (LCL)",
+      "Främre korsbandet",
+      "Patellarsenan"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_14",
+    "type": "mc",
+    "prompt": "Vilket ligament motstår varusbelastning på knäts utsida?",
+    "correct": "Laterala kollateralligamentet (LCL)",
+    "distractors": [
+      "Mediala kollateralligamentet (MCL)",
+      "Bakre korsbandet",
+      "Lig. patellae"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_15",
+    "type": "mc",
+    "prompt": "Mediala menisken har en känd koppling som ökar dess skaderisk. Vilken?",
+    "correct": "Den är sammanvuxen med mediala kollateralligamentet (MCL)",
+    "distractors": [
+      "Den är fäst vid patella",
+      "Den sitter ihop med laterala menisken",
+      "Den fäster vid fibula"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_kna_16",
+    "type": "mc",
+    "prompt": "Vilka tre muskler bildar pes anserinus på tibias mediala sida?",
+    "correct": "Sartorius, gracilis och semitendinosus",
+    "distractors": [
+      "Rectus femoris, vastus medialis och gracilis",
+      "Semimembranosus, biceps femoris och sartorius",
+      "Gastrocnemius, popliteus och plantaris"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_kna_17",
+    "type": "mc",
+    "prompt": "Vilka fyra muskler bildar quadriceps femoris?",
+    "correct": "Rectus femoris, vastus medialis, vastus lateralis och vastus intermedius",
+    "distractors": [
+      "Rectus femoris, sartorius, gracilis och vastus lateralis",
+      "Biceps femoris, semitendinosus, semimembranosus och popliteus",
+      "Vastus medialis, lateralis, intermedius och sartorius"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_kna_18",
+    "type": "mc",
+    "prompt": "Vilken del av quadriceps är särskilt viktig för patellas spårning (medial stabilisering)?",
+    "correct": "Vastus medialis (särskilt dess sneda fibrer, VMO)",
+    "distractors": [
+      "Vastus lateralis",
+      "Rectus femoris",
+      "Vastus intermedius"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_19",
+    "type": "mc",
+    "prompt": "Vilken muskelgrupp är knäts huvudsakliga böjare?",
+    "correct": "Hamstrings (biceps femoris, semitendinosus, semimembranosus)",
+    "distractors": [
+      "Quadriceps femoris",
+      "Adduktorerna",
+      "Glutealmuskulaturen"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_kna_20",
+    "type": "mc",
+    "prompt": "Vilken liten muskel \"låser upp\" det fullt extenderade knät genom att inåtrotera tibia, så att flexion kan inledas?",
+    "correct": "Popliteus",
+    "distractors": [
+      "Plantaris",
+      "Gracilis",
+      "Sartorius"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_kna_21",
+    "type": "mc",
+    "prompt": "Vad innebär \"screw-home\"-mekanismen i knät?",
+    "correct": "Tibia utåtroterar lätt mot slutet av extensionen, vilket låser knät i en stabil ställning",
+    "distractors": [
+      "Patella roterar runt sin axel vid flexion",
+      "Femur glider framåt vid full flexion",
+      "Menisken vrider sig 90° vid extension"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_kna_22",
+    "type": "mc",
+    "prompt": "Vad är patellas viktigaste biomekaniska funktion?",
+    "correct": "Att öka quadriceps hävarm och därmed kraften vid knäextension",
+    "distractors": [
+      "Att producera ledvätska",
+      "Att förhindra knäflexion",
+      "Att stabilisera fotleden"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_kna_23",
+    "type": "mc",
+    "prompt": "Ungefär hur stort är normalt rörelseomfång för knäflexion?",
+    "correct": "Cirka 135°",
+    "distractors": [
+      "Cirka 70°",
+      "Cirka 90°",
+      "Cirka 180°"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_24",
+    "type": "mc",
+    "prompt": "Vad menas med Q-vinkeln (quadricepsvinkeln)?",
+    "correct": "Vinkeln mellan quadriceps dragriktning och patellarsenan, som påverkar patellas sidobelastning",
+    "distractors": [
+      "Vinkeln mellan femur och tibia i sidled",
+      "Knäts flexionsvinkel i vila",
+      "Vinkeln mellan patellarsenan och vaden"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_25",
+    "type": "mc",
+    "prompt": "Hur skiljer sig Q-vinkeln typiskt mellan könen?",
+    "correct": "Den är ofta större hos kvinnor på grund av bredare bäcken",
+    "distractors": [
+      "Den är alltid större hos män",
+      "Den är exakt lika hos alla",
+      "Kvinnor saknar Q-vinkel"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_26",
+    "type": "mc",
+    "prompt": "Under knäflexion kombinerar femurkondylerna två rörelser mot tibia. Vilka?",
+    "correct": "Rullning och glidning",
+    "distractors": [
+      "Endast ren rullning",
+      "Endast ren glidning",
+      "Endast rotation kring patella"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_kna_27",
+    "type": "mc",
+    "prompt": "Vilken tvåledsmuskel korsar både knä- och fotled och bidrar till knäflexion?",
+    "correct": "Gastrocnemius",
+    "distractors": [
+      "Soleus",
+      "Vastus intermedius",
+      "Popliteus"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_kna_28",
+    "type": "mc",
+    "prompt": "Vad menas med en sluten kinetisk kedja vid knäträning?",
+    "correct": "Foten är fixerad mot underlaget, t.ex. vid knäböj",
+    "distractors": [
+      "Foten rör sig fritt, t.ex. vid sittande benspark",
+      "Endast överkroppen arbetar",
+      "Knät är helt orörligt"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_kna_29",
+    "type": "mc",
+    "prompt": "Var sker knäts rotation huvudsakligen?",
+    "correct": "I flekterat läge (i full extension är knät i princip låst)",
+    "distractors": [
+      "I full extension",
+      "Knät kan inte roteras alls",
+      "Endast i hyperextension"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_kna_30",
+    "type": "mc",
+    "prompt": "Varför avlastar starka quadriceps knäleden vid gång och landning?",
+    "correct": "De bromsar (excentriskt) knäflexionen och dämpar belastningen på leden",
+    "distractors": [
+      "De låser knät i extension hela tiden",
+      "De ersätter korsbandens funktion helt",
+      "De producerar mer ledvätska"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_kna_31",
+    "type": "mc",
+    "prompt": "Quadriceps femoris innerveras av?",
+    "correct": "N. femoralis",
+    "distractors": [
+      "N. ischiadicus",
+      "N. obturatorius",
+      "N. tibialis"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_kna_32",
+    "type": "mc",
+    "prompt": "Hamstrings innerveras huvudsakligen av?",
+    "correct": "N. ischiadicus (tibiala delen; bicepsens korta huvud av fibulara delen)",
+    "distractors": [
+      "N. femoralis",
+      "N. obturatorius",
+      "N. gluteus inferior"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_kna_33",
+    "type": "mc",
+    "prompt": "Vilka strukturer passerar genom knävecket (fossa poplitea)?",
+    "correct": "A. och v. poplitea samt n. tibialis och n. fibularis communis",
+    "distractors": [
+      "A. femoralis och n. femoralis",
+      "N. obturatorius och a. obturatoria",
+      "N. saphenus enbart"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_kna_34",
+    "type": "mc",
+    "prompt": "Vilken nerv löper ytligt runt fibulahalsen och kan lätt skadas vid trauma eller hårt tryck?",
+    "correct": "N. fibularis (peroneus) communis",
+    "distractors": [
+      "N. tibialis",
+      "N. femoralis",
+      "N. saphenus"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_kna_35",
+    "type": "mc",
+    "prompt": "Vad blir följden av en skada på n. fibularis communis vid fibulahalsen?",
+    "correct": "Droppfot (oförmåga till dorsalflexion och tåextension)",
+    "distractors": [
+      "Klohand",
+      "Oförmåga till knäextension",
+      "Domning i ljumsken"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_36",
+    "type": "mc",
+    "prompt": "Vilken nerv ger känsel åt knäts och underbenets mediala sida (en gren av n. femoralis)?",
+    "correct": "N. saphenus",
+    "distractors": [
+      "N. suralis",
+      "N. tibialis",
+      "N. obturatorius"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_kna_37",
+    "type": "mc",
+    "prompt": "Patellarsenereflexen (knäreflexen) testar främst vilken nervrotsnivå?",
+    "correct": "L3–L4",
+    "distractors": [
+      "L5–S1",
+      "S1–S2",
+      "L1–L2"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_38",
+    "type": "mc",
+    "prompt": "Vilket myotom testas främst vid knäextension?",
+    "correct": "L3–L4",
+    "distractors": [
+      "S1",
+      "L5",
+      "S2"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_39",
+    "type": "mc",
+    "prompt": "Genom vilken mekanism skadas främre korsbandet (ACL) oftast?",
+    "correct": "Vridvåld utan kontakt, ofta vid inbromsning/landning med knät i valgus och inåtrotation",
+    "distractors": [
+      "Direkt slag mot patella framifrån",
+      "Långsam stretching",
+      "Statiskt stående"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_40",
+    "type": "mc",
+    "prompt": "Vad är typiska akuta symtom vid en främre korsbandsruptur?",
+    "correct": "Ett \"poppande\" ljud, snabb svullnad (hemartros) och känsla av instabilitet",
+    "distractors": [
+      "Smärtfri full funktion direkt",
+      "Långsam svullnad efter flera veckor utan smärta",
+      "Domning i foten utan svullnad"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_41",
+    "type": "mc",
+    "prompt": "Vilket test anses känsligast för att påvisa främre korsbandsskada?",
+    "correct": "Lachmans test",
+    "distractors": [
+      "McMurrays test",
+      "Thompsons test",
+      "Trendelenburgs test"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_42",
+    "type": "mc",
+    "prompt": "Vad bedömer främre draglådetestet (anterior drawer)?",
+    "correct": "Främre korsbandets stabilitet (tibias glidning framåt i 90° flexion)",
+    "distractors": [
+      "Meniskens kondition",
+      "Patellas spårning",
+      "Bakre korsbandet enbart"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_43",
+    "type": "mc",
+    "prompt": "Hur skadas bakre korsbandet (PCL) klassiskt?",
+    "correct": "Slag mot främre tibia med böjt knä (t.ex. \"dashboard injury\" eller fall på böjt knä)",
+    "distractors": [
+      "Vridvåld vid landning",
+      "Direkt valgusvåld",
+      "Överextension utan kontakt"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_44",
+    "type": "mc",
+    "prompt": "Vilket test påvisar bakre korsbandsskada?",
+    "correct": "Bakre draglådetest (posterior drawer) och \"posterior sag\"",
+    "distractors": [
+      "Lachmans test",
+      "Finkelsteins test",
+      "Phalens test"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_45",
+    "type": "mc",
+    "prompt": "Hur skadas mediala kollateralligamentet (MCL) typiskt?",
+    "correct": "Genom valgusvåld mot knäts utsida",
+    "distractors": [
+      "Genom varusvåld mot insidan",
+      "Genom direkt slag mot patella",
+      "Genom överextension"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_46",
+    "type": "mc",
+    "prompt": "Vad ingår i den klassiska \"olyckliga triaden\" (unhappy triad) vid knäskada?",
+    "correct": "Främre korsbandet, mediala kollateralligamentet och mediala menisken",
+    "distractors": [
+      "Bakre korsbandet, LCL och laterala menisken",
+      "Patellarsenan, MCL och ACL",
+      "ACL, PCL och patella"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_47",
+    "type": "mc",
+    "prompt": "Hur skadas en menisk oftast?",
+    "correct": "Genom vridvåld på ett belastat, böjt knä",
+    "distractors": [
+      "Genom direkt slag mot vaden",
+      "Genom långvarigt stillasittande",
+      "Genom överextension i fotleden"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_48",
+    "type": "mc",
+    "prompt": "Vilket symtom är typiskt vid en meniskskada med en lös flik (t.ex. \"bucket-handle\")?",
+    "correct": "Låsningar eller upphakningar där knät inte kan sträckas helt",
+    "distractors": [
+      "Total känselbortfall i foten",
+      "Droppfot",
+      "Smärtfri hyperextension"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_49",
+    "type": "mc",
+    "prompt": "Vilket test används för att provocera meniskskada genom rotation och extension av det böjda knät?",
+    "correct": "McMurrays test",
+    "distractors": [
+      "Lachmans test",
+      "Obers test",
+      "Thomas test"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_50",
+    "type": "mc",
+    "prompt": "Ömhet längs ledspringan (joint line tenderness) talar främst för?",
+    "correct": "Meniskskada",
+    "distractors": [
+      "Korsbandsskada",
+      "Patellofemoralt smärtsyndrom",
+      "Trokanterit"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_51",
+    "type": "mc",
+    "prompt": "Vad kännetecknar patellofemoralt smärtsyndrom (\"löparknä\")?",
+    "correct": "Diffus smärta runt/bakom patella, värre vid trappor, knäböj och långvarigt sittande",
+    "distractors": [
+      "Akut låsning av knät",
+      "Instabilitet vid vridning",
+      "Smärta enbart i vila på natten"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_52",
+    "type": "mc",
+    "prompt": "I vilken riktning luxerar patella oftast?",
+    "correct": "Lateralt (utåt)",
+    "distractors": [
+      "Medialt (inåt)",
+      "Uppåt",
+      "Nedåt"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_53",
+    "type": "mc",
+    "prompt": "En stor Q-vinkel ökar risken för?",
+    "correct": "Lateral patellaluxation och patellofemoral smärta",
+    "distractors": [
+      "Bakre korsbandsskada",
+      "Akillesseneruptur",
+      "Höftartros"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_54",
+    "type": "mc",
+    "prompt": "Patellarsenetendinopati (\"jumper's knee\") ger smärta var?",
+    "correct": "Vid patellas nedre pol/patellarsenan, särskilt vid hopp och landning",
+    "distractors": [
+      "I knävecket baktill",
+      "På fibulahalsen",
+      "Vid pes anserinus"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_55",
+    "type": "mc",
+    "prompt": "Iliotibialbandssyndrom (löparens knä lateralt) ger smärta var?",
+    "correct": "På knäts utsida, vid laterala femurkondylen",
+    "distractors": [
+      "På knäts insida vid pes anserinus",
+      "Bakom patella",
+      "I knävecket"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_56",
+    "type": "mc",
+    "prompt": "Prepatellär bursit (\"housemaid's knee\") orsakas typiskt av?",
+    "correct": "Upprepat tryck/knästående mot underlaget",
+    "distractors": [
+      "Vridvåld",
+      "Överextension",
+      "Korsbandsskada"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_57",
+    "type": "mc",
+    "prompt": "En Bakercysta är en vätskefylld utbuktning som sitter var?",
+    "correct": "I knävecket (fossa poplitea), baktill",
+    "distractors": [
+      "Framför patella",
+      "På fibulahalsen",
+      "Vid mediala malleolen"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_58",
+    "type": "mc",
+    "prompt": "Vad är chondromalacia patellae?",
+    "correct": "Uppmjukning och skada på ledbrosket på patellas baksida",
+    "distractors": [
+      "Avlossning av patellarsenan",
+      "Förkalkning av menisken",
+      "Ruptur av korsbandet"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_59",
+    "type": "mc",
+    "prompt": "Vad bedömer valgus- och varusstresstest av knät?",
+    "correct": "Kollateralligamentens (MCL/LCL) stabilitet",
+    "distractors": [
+      "Meniskernas kondition",
+      "Korsbandens funktion",
+      "Patellas spårning"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_60",
+    "type": "mc",
+    "prompt": "Vad talar ett positivt \"patellar apprehension\"-test för?",
+    "correct": "Benägenhet för lateral patellaluxation/instabilitet",
+    "distractors": [
+      "Meniskskada",
+      "Korsbandsruptur",
+      "Bakercysta"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_61",
+    "type": "mc",
+    "prompt": "Vad är Osgood-Schlatters sjukdom?",
+    "correct": "Smärta/apofysit vid tuberositas tibiae hos växande ungdomar, ofta idrottande",
+    "distractors": [
+      "Artros i knäleden hos äldre",
+      "Avaskulär nekros av lårbenshuvudet",
+      "Meniskdegeneration"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_62",
+    "type": "mc",
+    "prompt": "Sinding-Larsen-Johanssons sjukdom hos ungdomar drabbar?",
+    "correct": "Patellas nedre pol (apofysit vid patellarsenans fäste)",
+    "distractors": [
+      "Tuberositas tibiae",
+      "Mediala menisken",
+      "Fibulahalsen"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_63",
+    "type": "mc",
+    "prompt": "Varför är Osgood-Schlatter typiskt självbegränsande?",
+    "correct": "Besvären avtar när tillväxtzonen vid tuberositas tibiae slutit sig",
+    "distractors": [
+      "Brosket återbildas aldrig",
+      "Det leder alltid till operation",
+      "Det orsakas av infektion som läker ut"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_64",
+    "type": "mc",
+    "prompt": "Vilken benvinkel kallas \"kobenthet\" och innebär att knäna pekar inåt?",
+    "correct": "Genu valgum",
+    "distractors": [
+      "Genu varum",
+      "Coxa vara",
+      "Pes planus"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_65",
+    "type": "mc",
+    "prompt": "Vilken benvinkel kallas \"hjulbenthet\" och innebär att knäna bågnar utåt?",
+    "correct": "Genu varum",
+    "distractors": [
+      "Genu valgum",
+      "Coxa valga",
+      "Genu recurvatum"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_66",
+    "type": "mc",
+    "prompt": "Hur utvecklas benvinklarna typiskt hos barn?",
+    "correct": "Småbarn är ofta hjulbenta (varum), blir kobenta (valgum) vid 3–4 år och rätar ut sig mot skolåldern",
+    "distractors": [
+      "Barn är alltid raka i benen",
+      "Valgum kommer först, varum sist",
+      "Vinklarna ändras aldrig under uppväxten"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_kna_67",
+    "type": "mc",
+    "prompt": "Vid medial knäartros (gonartros) är benstället ofta?",
+    "correct": "Varus (hjulbent), vilket ökar belastningen på mediala ledspringan",
+    "distractors": [
+      "Valgus (kobent)",
+      "Helt neutralt alltid",
+      "Genu recurvatum"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_68",
+    "type": "mc",
+    "prompt": "Vilken är förstahandsbehandlingen vid knäartros?",
+    "correct": "Anpassad träning, information och vid behov viktnedgång",
+    "distractors": [
+      "Omedelbar knäprotes",
+      "Strikt vila",
+      "Enbart smärtstillande utan träning"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_69",
+    "type": "mc",
+    "prompt": "Hur förändras meniskerna med stigande ålder?",
+    "correct": "De blir stelare och mer kärlfattiga, vilket ger ökad risk för degenerativa bristningar",
+    "distractors": [
+      "De blir mer elastiska och kärlrika",
+      "De växer i storlek",
+      "De påverkas inte alls av ålder"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_70",
+    "type": "mc",
+    "prompt": "Vilka individer har högre risk för främre korsbandsskada vid idrott?",
+    "correct": "Unga idrottare, med högre relativ risk hos kvinnor",
+    "distractors": [
+      "Endast äldre över 70 år",
+      "Endast män",
+      "Stillasittande personer"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_71",
+    "type": "mc",
+    "prompt": "Varför kan en quadricepssvaghet uppstå snabbt efter knäskada eller operation?",
+    "correct": "Artrogen muskelinhibition – ledsvullnad/smärta hämmar reflexmässigt quadriceps",
+    "distractors": [
+      "Muskeln slits av automatiskt",
+      "Nerven dör direkt",
+      "Quadriceps förbenas"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_kna_72",
+    "type": "mc",
+    "prompt": "Vad är ett viktigt tidigt mål i rehabilitering efter knäskada/operation?",
+    "correct": "Att återfå full extension samt aktivera och stärka quadriceps",
+    "distractors": [
+      "Att undvika all extension",
+      "Att enbart träna fotleden",
+      "Att hålla knät immobiliserat i flexion"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_73",
+    "type": "mc",
+    "prompt": "Varför kan icke-kirurgisk (rehabiliterande) behandling vara ett fullgott alternativ vid många ACL-skador?",
+    "correct": "Med god neuromuskulär träning kan många återfå funktionell stabilitet utan operation",
+    "distractors": [
+      "Korsbandet läker alltid ihop av sig självt",
+      "Knät behöver aldrig stabilitet",
+      "Träning saknar effekt vid ACL-skada"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_74",
+    "type": "mc",
+    "prompt": "Vad är syftet med neuromuskulär knäkontrollträning i skadeförebyggande program?",
+    "correct": "Att förbättra landnings- och vridteknik och minska valgusbelastning för att förebygga ACL-skada",
+    "distractors": [
+      "Att maximera Q-vinkeln",
+      "Att öka knäts hyperextension",
+      "Att försvaga hamstrings"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_75",
+    "type": "mc",
+    "prompt": "Varför är starka hamstrings viktiga för ACL-skadade/-rekonstruerade knän?",
+    "correct": "Hamstrings motverkar tibias framåtglidning och avlastar därmed främre korsbandet",
+    "distractors": [
+      "Hamstrings ökar tibias framåtglidning",
+      "Hamstrings saknar betydelse för korsbandet",
+      "Hamstrings ersätter quadriceps helt"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_kna_76",
+    "type": "mc",
+    "prompt": "Vilken muskel testas och stärks särskilt vid patellofemoralt smärtsyndrom för bättre patellaspårning?",
+    "correct": "Vastus medialis (VMO) samt höftens utåtrotatorer/abduktorer",
+    "distractors": [
+      "Vadmuskulaturen enbart",
+      "Handledsextensorerna",
+      "Bröstmuskulaturen"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_77",
+    "type": "mc",
+    "prompt": "Vad menas med genu recurvatum?",
+    "correct": "Översträckning (hyperextension) av knät bakåt",
+    "distractors": [
+      "Kobenthet",
+      "Hjulbenthet",
+      "Permanent böjt knä"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_78",
+    "type": "mc",
+    "prompt": "Vad är en \"stäppgång\" som kan ses vid n. fibularis-skada?",
+    "correct": "Patienten lyfter benet högt för att den hängande foten (droppfot) inte ska släpa",
+    "distractors": [
+      "Patienten vaggar i sidled",
+      "Patienten går på tå",
+      "Patienten drar benet stelt rakt"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_79",
+    "type": "mc",
+    "prompt": "Vilken muskel är knäts svagaste men funktionellt viktiga rotator som styr meniskens läge baktill?",
+    "correct": "Popliteus (drar tillbaka laterala menisken vid flexion)",
+    "distractors": [
+      "Sartorius",
+      "Gastrocnemius",
+      "Vastus lateralis"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_kna_80",
+    "type": "mc",
+    "prompt": "Vad bedömer Apleys kompressionstest?",
+    "correct": "Meniskskada (smärta vid kompression och rotation i magliggande)",
+    "distractors": [
+      "Korsbandsstabilitet",
+      "Patellas spårning",
+      "Höftrörlighet"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_81",
+    "type": "mc",
+    "prompt": "Vad är en \"pivot shift\" ett tecken på?",
+    "correct": "Rotatorisk instabilitet vid främre korsbandsskada",
+    "distractors": [
+      "Meniskdegeneration",
+      "Patellaluxation",
+      "Bakre korsbandsskada"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_82",
+    "type": "mc",
+    "prompt": "Hur skiljer man kliniskt hemartros (blod i leden) inom timmar från en långsammare ledsvullnad?",
+    "correct": "Snabb svullnad inom timmar talar för blödning, ofta ACL-ruptur eller fraktur",
+    "distractors": [
+      "Långsam svullnad betyder alltid blödning",
+      "Det går aldrig att skilja dem åt",
+      "Snabb svullnad utesluter allvarlig skada"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_83",
+    "type": "mc",
+    "prompt": "Vilken struktur bidrar mest till knäts statiska stabilitet i sidled medialt?",
+    "correct": "Mediala kollateralligamentet (MCL)",
+    "distractors": [
+      "Quadriceps",
+      "Laterala menisken",
+      "Patellarsenan"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_kna_84",
+    "type": "mc",
+    "prompt": "Vad är retropatellär smärta?",
+    "correct": "Smärta bakom knäskålen, typisk vid patellofemoralt smärtsyndrom",
+    "distractors": [
+      "Smärta i knävecket",
+      "Smärta vid fibulahalsen",
+      "Smärta i vaden"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_85",
+    "type": "mc",
+    "prompt": "Vad menas med en \"closed-chain\"-övning som knäböj jämfört med öppen kedja för knärehab?",
+    "correct": "Sluten kedja belastar leden mer funktionellt och fördelar kraften över flera leder",
+    "distractors": [
+      "Sluten kedja belastar bara en muskel",
+      "Sluten kedja sker alltid utan belastning",
+      "Det är ingen skillnad mot öppen kedja"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_kna_86",
+    "type": "mc",
+    "prompt": "Vilken muskel är aktiv för att förhindra att knät \"viker sig\" i valgus vid landning?",
+    "correct": "Höftens abduktorer/utåtrotatorer (gluteus medius) tillsammans med quadriceps",
+    "distractors": [
+      "Enbart vadmuskulaturen",
+      "Bröstmuskulaturen",
+      "Handens muskler"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_kna_87",
+    "type": "mc",
+    "prompt": "Varför är den distala femurepifysen ett kliniskt tecken på fullgången graviditet hos nyfödda?",
+    "correct": "Dess benkärna finns normalt redan vid födseln (term), vilket syns på röntgen",
+    "distractors": [
+      "Den förbenas först vid 5 års ålder",
+      "Den saknas hos alla nyfödda",
+      "Den växer bort efter födseln"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_kna_88",
+    "type": "mc",
+    "prompt": "Vilket är ett vanligt belastningsrelaterat knäbesvär hos medelålders motionärer?",
+    "correct": "Degenerativ meniskskada och begynnande knäartros",
+    "distractors": [
+      "Osgood-Schlatter",
+      "Medfödd patellaluxation",
+      "DDH"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_89",
+    "type": "mc",
+    "prompt": "Vad är aktuell evidensbaserad rekommendation vid degenerativ meniskskada hos medelålders/äldre utan låsning?",
+    "correct": "Strukturerad träning prövas i första hand framför artroskopisk kirurgi",
+    "distractors": [
+      "Omedelbar artroskopi alltid",
+      "Strikt vila i tre månader",
+      "Knäprotes direkt"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_90",
+    "type": "mc",
+    "prompt": "Vilken roll har patellas läge (patella alta/baja) för knäfunktionen?",
+    "correct": "Onormalt högt (alta) eller lågt (baja) läge kan störa patellaspårning och stabilitet",
+    "distractors": [
+      "Patellas läge saknar betydelse",
+      "Det påverkar endast hudkänseln",
+      "Det avgör meniskens blodförsörjning"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_91",
+    "type": "mc",
+    "prompt": "Vilken muskel är en ren knäböjare i knävecket och kan, om förkortad, ge knäflexionskontraktur?",
+    "correct": "Hamstrings (t.ex. semimembranosus/semitendinosus)",
+    "distractors": [
+      "Vastus intermedius",
+      "Rectus femoris",
+      "Tibialis anterior"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_kna_92",
+    "type": "mc",
+    "prompt": "Varför svarar rectus femoris funktion på höftens läge (tvåledsmuskel)?",
+    "correct": "Den korsar både höft och knä, så höftläget påverkar dess längd och kraft vid knäextension",
+    "distractors": [
+      "Den korsar bara knät",
+      "Den verkar enbart på höften",
+      "Den påverkas inte av höftläget"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_kna_93",
+    "type": "mc",
+    "prompt": "Vad bör misstänkas vid akut hemartros, oförmåga att belasta och positivt Lachman efter en vridskada?",
+    "correct": "Främre korsbandsruptur",
+    "distractors": [
+      "Prepatellär bursit",
+      "Bakercysta",
+      "Osgood-Schlatter"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_94",
+    "type": "mc",
+    "prompt": "Vilken är en vanlig långsiktig följd efter en korsbands- och/eller meniskskada?",
+    "correct": "Ökad risk för knäartros senare i livet",
+    "distractors": [
+      "Garanterat full återhämtning utan följder",
+      "Minskad artrosrisk",
+      "Ökad bentäthet i knät"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_95",
+    "type": "mc",
+    "prompt": "Varför är knäkontroll i frontalplanet (undvika dynamisk valgus) central i knärehab?",
+    "correct": "Dynamisk valgus ökar belastningen på ACL och patellofemoralleden",
+    "distractors": [
+      "Den avlastar korsbanden helt",
+      "Den saknar betydelse för skaderisk",
+      "Den stärker enbart vaden"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_96",
+    "type": "mc",
+    "prompt": "Vilken struktur skyddar och styr quadricepssenan/patella i fåran mellan femurkondylerna?",
+    "correct": "Trochlea femoris (den femoropatellara fåran)",
+    "distractors": [
+      "Eminentia intercondylaris",
+      "Fossa poplitea",
+      "Tuberositas tibiae"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_kna_97",
+    "type": "mc",
+    "prompt": "Vad är en \"locking\" (låsning) i knät vanligen ett tecken på?",
+    "correct": "En mekanisk blockering, ofta av en meniskflik i leden",
+    "distractors": [
+      "Patellofemoral smärta",
+      "Quadricepssvaghet",
+      "Höftartros"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_98",
+    "type": "mc",
+    "prompt": "Vilken roll spelar propriocepsträning (balans) i knärehabilitering?",
+    "correct": "Den förbättrar ledkänsla och neuromuskulär kontroll och minskar återskaderisken",
+    "distractors": [
+      "Den har ingen effekt på knäfunktionen",
+      "Den ersätter behovet av styrka helt",
+      "Den ökar ledsvullnaden"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_kna_99",
+    "type": "mc",
+    "prompt": "Varför är knäleden relativt instabil benmässigt och beroende av mjukdelar?",
+    "correct": "Femurkondylerna och den ganska platta tibiaplatån ger liten benstabilitet; ligament, menisker och muskler står för stabiliteten",
+    "distractors": [
+      "Knät har en djup ledpanna som höftleden",
+      "Knät stabiliseras helt av patella",
+      "Knät behöver ingen stabilisering"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_kna_100",
+    "type": "mc",
+    "prompt": "Vad är en central princip i evidensbaserad fysioterapi vid knäartros?",
+    "correct": "Handledd träning är en grundbehandling som kan minska smärta och förbättra funktion",
+    "distractors": [
+      "Vila och avlastning är alltid bäst",
+      "Träning förvärrar alltid artros",
+      "Endast kirurgi har effekt"
+    ],
+    "topic": "fysio_kna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
   }
 ]
