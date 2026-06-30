@@ -226,28 +226,18 @@
       </div>
     </section>
 
-    <!-- Omfattning & versionshistorik -->
-    <section class="card" aria-labelledby="historyHeading">
-      <h2 id="historyHeading" class="about-title">Omfattning och versionshistorik</h2>
-      <h3 class="changelog-heading">Antal frågor</h3>
-      <div id="statsContent"></div>
-      <p id="glossaryCount" class="glossary-count">Laddar ordlistans omfattning…</p>
-
-      <h3 class="changelog-heading">Versionshistorik</h3>
-      <div id="changelogContent" class="changelog-list"></div>
-    </section>
-
     <!-- Diskret kontaktformulär. GitHub Pages saknar backend, så submit fångas i
          info.js och öppnar besökarens egen e-postklient via mailto: (ingen tredjepart,
          inga data passerar något mellanled). Mottagare: anatomiquizse@gmail.com. -->
     <section class="card contact" aria-labelledby="contactHeading">
       <h2 id="contactHeading" class="about-title">Rapportera fel &amp; synpunkter</h2>
-      <p class="contact-intro">Hittat en bugg, ett fel i innehållet eller har en synpunkt? Skriv några rader – ditt e-postprogram öppnas med ett färdigt meddelande.</p>
+      <p class="contact-intro">Hittat en bugg, ett fel i innehållet eller har en synpunkt? Skriv några rader – ditt e-postprogram öppnas med ett färdigt meddelande. Jag tar också gärna emot förslag på ämnen för quiz som du saknar.</p>
       <form id="contactForm" novalidate>
         <label for="contactType">Typ</label>
         <select id="contactType">
           <option value="Bugg">Bugg</option>
           <option value="Fel i innehåll">Fel i innehåll</option>
+          <option value="Förslag på ämne">Förslag på ämne</option>
           <option value="Synpunkt">Synpunkt</option>
           <option value="Övrigt">Övrigt</option>
         </select>
@@ -258,6 +248,17 @@
         </div>
         <p class="contact-fallback">Fungerar inte knappen? Mejla <a class="info-link" href="mailto:anatomiquizse@gmail.com">anatomiquizse@gmail.com</a> direkt.</p>
       </form>
+    </section>
+
+    <!-- Omfattning & versionshistorik -->
+    <section class="card" aria-labelledby="historyHeading">
+      <h2 id="historyHeading" class="about-title">Omfattning och versionshistorik</h2>
+      <h3 class="changelog-heading">Antal frågor</h3>
+      <div id="statsContent"></div>
+      <p id="glossaryCount" class="glossary-count">Laddar ordlistans omfattning…</p>
+
+      <h3 class="changelog-heading">Versionshistorik</h3>
+      <div id="changelogContent" class="changelog-list"></div>
     </section>
 
     <div class="actions">

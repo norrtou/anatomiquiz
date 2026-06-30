@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.106
+- **Om Anatomiquiz: kontaktsektionen flyttad upp.** "Rapportera fel & synpunkter" ligger nu före "Omfattning och versionshistorik" (tabellen med antal frågor), så kontaktvägen syns tidigare.
+- **Inbjudan till ämnesförslag.** Kontaktintron nämner nu att förslag på quiz-ämnen som saknas tas emot gärna, och formulärets typ-meny har fått alternativet "Förslag på ämne".
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.106.
+
 ## 0.9.105
 - **Om Anatomiquiz: nyhetssektionen flyttad överst.** "Nyheter"-kortet ligger nu direkt efter intro-ledet (först bland innehållskorten) i stället för längst ner före versionshistoriken, så besökaren möts av det senaste först.
 - **Ny nyhetsnotis (1 juli 2026).** Kort notis om de två viktigaste pågående satsningarna: bilder har börjat läggas in i materialet, och arbetet med quiz anpassade för olika vårdutbildningar har inletts. "Senast uppdaterad" → 1 juli 2026.
