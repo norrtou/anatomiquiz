@@ -6998,5 +6998,2805 @@
     "topic": "fysio_kna",
     "difficulty": "Normal",
     "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_1",
+    "type": "mc",
+    "prompt": "Hur många ben finns det totalt i en fot?",
+    "correct": "26 (7 fotrotsben, 5 mellanfotsben och 14 tåben)",
+    "distractors": [
+      "20",
+      "30",
+      "24"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_fot_2",
+    "type": "mc",
+    "prompt": "Vilka ben bildar den övre språngleden (talocruralleden)?",
+    "correct": "Tibia och fibula (malleolerna) mot talus",
+    "distractors": [
+      "Talus mot calcaneus",
+      "Calcaneus mot os naviculare",
+      "Tibia mot calcaneus"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_fot_3",
+    "type": "mc",
+    "prompt": "Vilken typ av led är talocruralleden, och vilka rörelser tillåter den?",
+    "correct": "En gångjärnsled som tillåter dorsalflexion och plantarflexion",
+    "distractors": [
+      "En kulled som tillåter alla rörelser",
+      "En vridled för inversion/eversion",
+      "En plan led utan egentlig rörelse"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_fot_4",
+    "type": "mc",
+    "prompt": "Vilken led ligger mellan talus och calcaneus och svarar för inversion och eversion?",
+    "correct": "Subtalarleden (art. subtalaris/talocalcanea)",
+    "distractors": [
+      "Talocruralleden",
+      "Choparts led",
+      "Lisfrancs led"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_fot_5",
+    "type": "mc",
+    "prompt": "Vilket fotben ligger direkt under talus och bildar hälen?",
+    "correct": "Calcaneus (hälbenet)",
+    "distractors": [
+      "Os naviculare",
+      "Os cuboideum",
+      "Os cuneiforme mediale"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_fot_6",
+    "type": "mc",
+    "prompt": "Den transversala tarsalleden (Choparts led) består av vilka två delleder?",
+    "correct": "Talonavicularleden och calcaneocuboidleden",
+    "distractors": [
+      "Subtalarleden och talocruralleden",
+      "Tarsometatarsallederna",
+      "Metatarsofalangeallederna"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_fot_7",
+    "type": "mc",
+    "prompt": "Vad heter lederna mellan fotrotsbenen och mellanfotsbenen (kliniskt viktig vid Lisfrancskada)?",
+    "correct": "Tarsometatarsallederna (Lisfrancs led)",
+    "distractors": [
+      "Choparts led",
+      "Subtalarleden",
+      "Interfalangeallederna"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_fot_8",
+    "type": "mc",
+    "prompt": "Vilken benstruktur bildar den mediala malleolen (inre fotknölen)?",
+    "correct": "Tibia",
+    "distractors": [
+      "Fibula",
+      "Talus",
+      "Calcaneus"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_fot_9",
+    "type": "mc",
+    "prompt": "Vilken benstruktur bildar den laterala malleolen (yttre fotknölen)?",
+    "correct": "Fibula",
+    "distractors": [
+      "Tibia",
+      "Talus",
+      "Os naviculare"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_fot_10",
+    "type": "mc",
+    "prompt": "Vilket av fotledens laterala ligament skadas oftast vid en stukning?",
+    "correct": "Lig. talofibulare anterius (ATFL)",
+    "distractors": [
+      "Lig. calcaneofibulare (CFL)",
+      "Lig. talofibulare posterius (PTFL)",
+      "Lig. deltoideum"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_11",
+    "type": "mc",
+    "prompt": "Vilket kraftigt ligament på fotledens insida motstår eversion?",
+    "correct": "Lig. deltoideum (mediala kollateralligamentet)",
+    "distractors": [
+      "Lig. talofibulare anterius",
+      "Lig. calcaneofibulare",
+      "Plantarfascian"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_fot_12",
+    "type": "mc",
+    "prompt": "Vad kallas den ligamentförbindelse mellan tibia och fibula strax ovanför fotleden som skadas vid \"high ankle sprain\"?",
+    "correct": "Syndesmosen (den distala tibiofibulara förbindelsen)",
+    "distractors": [
+      "Subtalarleden",
+      "Plantarfascian",
+      "Spring-ligamentet"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_13",
+    "type": "mc",
+    "prompt": "Hur många längsgående valv har foten?",
+    "correct": "Två – ett medialt (högre) och ett lateralt (lägre) längsvalv",
+    "distractors": [
+      "Ett enda längsvalv",
+      "Tre längsvalv",
+      "Inga valv alls"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_fot_14",
+    "type": "mc",
+    "prompt": "Vilken bindvävsstruktur löper under fotsulan från hälbenet till tårna och stöttar längsvalvet?",
+    "correct": "Plantaraponeurosen (plantarfascian)",
+    "distractors": [
+      "Akillessenan",
+      "Lig. deltoideum",
+      "Retinaculum extensorum"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_fot_15",
+    "type": "mc",
+    "prompt": "Vilket ligament (\"spring ligament\") stöttar talushuvudet och det mediala längsvalvet underifrån?",
+    "correct": "Lig. calcaneonaviculare plantare",
+    "distractors": [
+      "Lig. talofibulare anterius",
+      "Lig. deltoideum",
+      "Lig. plantare longum enbart"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_fot_16",
+    "type": "mc",
+    "prompt": "Vilken muskelsena är särskilt viktig för att aktivt stötta det mediala längsvalvet?",
+    "correct": "Tibialis posterior",
+    "distractors": [
+      "Fibularis longus",
+      "Extensor digitorum longus",
+      "Gastrocnemius"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_fot_17",
+    "type": "mc",
+    "prompt": "Vilka muskler bildar triceps surae (vadens trehövdade muskel)?",
+    "correct": "Gastrocnemius (två huvuden) och soleus",
+    "distractors": [
+      "Tibialis posterior och anterior",
+      "Fibularis longus och brevis",
+      "Flexor och extensor digitorum longus"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_fot_18",
+    "type": "mc",
+    "prompt": "Via vilken sena fäster triceps surae på hälbenet?",
+    "correct": "Akillessenan (tendo calcaneus) på tuber calcanei",
+    "distractors": [
+      "Plantarfascian",
+      "Tibialis posterior-senan",
+      "Patellarsenan"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_fot_19",
+    "type": "mc",
+    "prompt": "Vad är triceps surae huvudfunktion?",
+    "correct": "Plantarflexion i fotleden (avgörande vid frånskjut i gång)",
+    "distractors": [
+      "Dorsalflexion",
+      "Eversion",
+      "Tåextension"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_fot_20",
+    "type": "mc",
+    "prompt": "Vad skiljer gastrocnemius från soleus funktionellt?",
+    "correct": "Gastrocnemius korsar även knät och påverkas av knäläget; soleus korsar bara fotleden",
+    "distractors": [
+      "Soleus korsar knät men inte gastrocnemius",
+      "Båda korsar knät",
+      "Ingen av dem korsar fotleden"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_fot_21",
+    "type": "mc",
+    "prompt": "Vilken muskel är fotledens viktigaste dorsalflexor?",
+    "correct": "Tibialis anterior",
+    "distractors": [
+      "Tibialis posterior",
+      "Gastrocnemius",
+      "Fibularis longus"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_fot_22",
+    "type": "mc",
+    "prompt": "Vilka muskler är fotens huvudsakliga evertorer?",
+    "correct": "Fibularis (peroneus) longus och brevis",
+    "distractors": [
+      "Tibialis anterior och posterior",
+      "Gastrocnemius och soleus",
+      "Flexor hallucis longus och brevis"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_fot_23",
+    "type": "mc",
+    "prompt": "Vilka två muskler är fotens huvudsakliga invertorer?",
+    "correct": "Tibialis anterior och tibialis posterior",
+    "distractors": [
+      "Fibularis longus och brevis",
+      "Gastrocnemius och soleus",
+      "Extensor digitorum longus och brevis"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_fot_24",
+    "type": "mc",
+    "prompt": "Underbenet delas in i muskelloger (kompartment). Vilken loge innehåller dorsalflexorerna?",
+    "correct": "Främre logen (anteriora kompartmentet)",
+    "distractors": [
+      "Laterala logen",
+      "Bakre ytliga logen",
+      "Bakre djupa logen"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_fot_25",
+    "type": "mc",
+    "prompt": "Vilken muskel böjer stortåns ytterled och löper i underbenets bakre djupa loge?",
+    "correct": "Flexor hallucis longus",
+    "distractors": [
+      "Extensor hallucis longus",
+      "Fibularis brevis",
+      "Tibialis anterior"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_fot_26",
+    "type": "mc",
+    "prompt": "Ungefär hur stort är normalt rörelseomfång för dorsalflexion i fotleden?",
+    "correct": "Cirka 20°",
+    "distractors": [
+      "Cirka 50°",
+      "Cirka 5°",
+      "Cirka 70°"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_27",
+    "type": "mc",
+    "prompt": "Ungefär hur stort är normalt rörelseomfång för plantarflexion i fotleden?",
+    "correct": "Cirka 50°",
+    "distractors": [
+      "Cirka 20°",
+      "Cirka 10°",
+      "Cirka 90°"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_28",
+    "type": "mc",
+    "prompt": "I vilket läge är talocruralleden mest stabil?",
+    "correct": "I dorsalflexion, då den bredare främre delen av talus kilas fast i gaffeln (mortise)",
+    "distractors": [
+      "I full plantarflexion",
+      "I neutralläge endast",
+      "Vid full inversion"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_fot_29",
+    "type": "mc",
+    "prompt": "Varför sker fotledsstukningar oftast i plantarflexerat läge?",
+    "correct": "Talus smalare bakre del ger mindre stabilitet i gaffeln, så foten kan lättare invertera",
+    "distractors": [
+      "Talus är bredast baktill",
+      "Ligamenten är som starkast i plantarflexion",
+      "Plantarflexion låser leden helt"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_fot_30",
+    "type": "mc",
+    "prompt": "Vad innebär \"windlass-mekanismen\" i foten?",
+    "correct": "När tårna extenderas spänns plantarfascian och längsvalvet höjs, vilket gör foten stel inför frånskjut",
+    "distractors": [
+      "När hälen sätts i marken plattas valvet ut helt",
+      "Vadmuskeln drar ihop valvet vid vila",
+      "Talus roterar 90° vid eversion"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_fot_31",
+    "type": "mc",
+    "prompt": "Vad är pronationens funktion i fotens stödfas?",
+    "correct": "Att göra foten rörlig och stötdämpande vid belastning efter hälisättning",
+    "distractors": [
+      "Att göra foten stel inför frånskjut",
+      "Att låsa subtalarleden helt",
+      "Att lyfta tårna"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_fot_32",
+    "type": "mc",
+    "prompt": "Vad är supinationens funktion sent i stödfasen?",
+    "correct": "Att göra foten till en stel hävarm för ett effektivt frånskjut",
+    "distractors": [
+      "Att maximera stötdämpningen",
+      "Att platta ut längsvalvet",
+      "Att inleda svingfasen"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_fot_33",
+    "type": "mc",
+    "prompt": "Vid hälisättning (heel strike) arbetar tibialis anterior excentriskt. Varför?",
+    "correct": "För att bromsa fotens plantarflexion så att framfoten inte slår i marken (\"foot slap\")",
+    "distractors": [
+      "För att lyfta hela kroppen",
+      "För att inleda frånskjut",
+      "För att evertera foten"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_fot_34",
+    "type": "mc",
+    "prompt": "I vilken fas av gångcykeln är triceps surae som mest aktiv?",
+    "correct": "Sent i stödfasen vid frånskjutet (push-off)",
+    "distractors": [
+      "Vid hälisättning",
+      "Mitt i svingfasen",
+      "Vid initial kontakt enbart"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_fot_35",
+    "type": "mc",
+    "prompt": "Vilken nerv innerverar underbenets bakre muskler (vadmuskulatur, tå-/fotböjare) och fotsulan?",
+    "correct": "N. tibialis",
+    "distractors": [
+      "N. fibularis profundus",
+      "N. fibularis superficialis",
+      "N. saphenus"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_fot_36",
+    "type": "mc",
+    "prompt": "Vilken nerv innerverar fotledens dorsalflexorer i främre logen?",
+    "correct": "N. fibularis (peroneus) profundus",
+    "distractors": [
+      "N. fibularis superficialis",
+      "N. tibialis",
+      "N. suralis"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_fot_37",
+    "type": "mc",
+    "prompt": "Vilken nerv innerverar evertorerna (fibularis longus/brevis) i laterala logen?",
+    "correct": "N. fibularis (peroneus) superficialis",
+    "distractors": [
+      "N. fibularis profundus",
+      "N. tibialis",
+      "N. saphenus"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_fot_38",
+    "type": "mc",
+    "prompt": "Vilken nerv kan klämmas i tarsaltunneln bakom mediala malleolen?",
+    "correct": "N. tibialis",
+    "distractors": [
+      "N. fibularis communis",
+      "N. suralis",
+      "N. femoralis"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_39",
+    "type": "mc",
+    "prompt": "Vilken nerv ger känsel åt fotens laterala kant och löper längs vaden?",
+    "correct": "N. suralis",
+    "distractors": [
+      "N. saphenus",
+      "N. fibularis profundus",
+      "N. plantaris medialis"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_fot_40",
+    "type": "mc",
+    "prompt": "Akillesreflexen testar främst vilken nervrotsnivå?",
+    "correct": "S1",
+    "distractors": [
+      "L4",
+      "L5",
+      "L2"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_41",
+    "type": "mc",
+    "prompt": "Vilket myotom testas främst vid plantarflexion (tågång)?",
+    "correct": "S1–S2",
+    "distractors": [
+      "L2–L3",
+      "L4",
+      "L5"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_42",
+    "type": "mc",
+    "prompt": "Vilket myotom testas främst vid dorsalflexion av fotleden?",
+    "correct": "L4",
+    "distractors": [
+      "S1",
+      "S2",
+      "L2"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_43",
+    "type": "mc",
+    "prompt": "Vilket myotom testas främst vid stortåextension (extensor hallucis longus)?",
+    "correct": "L5",
+    "distractors": [
+      "S1",
+      "L4",
+      "L3"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_44",
+    "type": "mc",
+    "prompt": "Genom vilken mekanism uppstår den vanligaste fotledsstukningen?",
+    "correct": "Inversion (med plantarflexion), som belastar de laterala ligamenten",
+    "distractors": [
+      "Eversion som belastar deltoideusligamentet",
+      "Ren dorsalflexion",
+      "Direkt slag uppifrån"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_45",
+    "type": "mc",
+    "prompt": "Vilka regler/kriterier hjälper till att avgöra om en stukad fotled behöver röntgas?",
+    "correct": "Ottawa ankle rules",
+    "distractors": [
+      "Wells score",
+      "Glasgow Coma Scale",
+      "Apgar score"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_46",
+    "type": "mc",
+    "prompt": "Vilket test bedömer den främre stabiliteten i fotleden (ATFL) genom att dra hälen framåt?",
+    "correct": "Främre draglådetest (anterior drawer) av fotleden",
+    "distractors": [
+      "Thompsons test",
+      "McMurrays test",
+      "Lachmans test"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_47",
+    "type": "mc",
+    "prompt": "Hur klassificeras en lateral fotledsstukning vanligen i grad I–III?",
+    "correct": "Efter ligamentets skadegrad: töjning (I), partiell ruptur (II) och total ruptur (III)",
+    "distractors": [
+      "Efter svullnadens färg",
+      "Efter hur länge man haltat",
+      "Efter skostorlek"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_48",
+    "type": "mc",
+    "prompt": "Vad är förstahandsbehandling och rehabilitering vid en lateral fotledsstukning?",
+    "correct": "Tidig kontrollerad belastning, rörelseträning och balans-/proprioceptionsträning",
+    "distractors": [
+      "Lång total immobilisering i gips",
+      "Strikt sängläge i flera veckor",
+      "Omedelbar operation i de flesta fall"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_49",
+    "type": "mc",
+    "prompt": "Varför är balans-/proprioceptionsträning central efter en fotledsstukning?",
+    "correct": "Den minskar risken för återkommande stukningar och kronisk instabilitet",
+    "distractors": [
+      "Den bygger enbart muskelmassa",
+      "Den saknar evidens",
+      "Den ökar ligamentens längd permanent"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_50",
+    "type": "mc",
+    "prompt": "Vad innebär en syndesmosskada (\"high ankle sprain\")?",
+    "correct": "Skada på den tibiofibulara förbindelsen ovanför fotleden, ofta med längre läkningstid",
+    "distractors": [
+      "Skada på ATFL enbart",
+      "Ruptur av akillessenan",
+      "Fraktur i calcaneus"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_51",
+    "type": "mc",
+    "prompt": "Webers klassifikation av fotledsfrakturer bygger på?",
+    "correct": "Fibulafrakturens läge i förhållande till syndesmosen (A nedanför, B i nivå, C ovanför)",
+    "distractors": [
+      "Antalet frakturlinjer",
+      "Patientens ålder",
+      "Hur lång tid skadan funnits"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_52",
+    "type": "mc",
+    "prompt": "Vad är en Maisonneuve-skada?",
+    "correct": "Fraktur högt på fibula i kombination med syndesmos-/fotledsskada",
+    "distractors": [
+      "Stressfraktur i mellanfoten",
+      "Avlossning av akillessenan",
+      "Fraktur i stortåns grundfalang"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_53",
+    "type": "mc",
+    "prompt": "Vilket test (klämmer på vaden i magliggande) påvisar en komplett akillesseneruptur?",
+    "correct": "Thompsons (Simmonds) test – ingen plantarflexion vid kompression talar för ruptur",
+    "distractors": [
+      "Lachmans test",
+      "Phalens test",
+      "Trendelenburgs test"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_54",
+    "type": "mc",
+    "prompt": "Var lokaliseras smärtan typiskt vid plantarfasciit?",
+    "correct": "Under hälen vid plantarfascians fäste, värst vid de första stegen på morgonen",
+    "distractors": [
+      "På fotens utsida vid femte metatarsalen",
+      "Över akillessenan",
+      "I stortåns grundled"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_55",
+    "type": "mc",
+    "prompt": "Akillestendinopati ger oftast smärta var?",
+    "correct": "I eller strax ovanför akillessenan vid belastning",
+    "distractors": [
+      "Under hälen",
+      "På fotryggen",
+      "Vid mediala malleolen"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_56",
+    "type": "mc",
+    "prompt": "Vilken träningsform har god evidens vid akillestendinopati?",
+    "correct": "Tung, långsam (ofta excentrisk) vadträning",
+    "distractors": [
+      "Total vila tills smärtan försvinner",
+      "Enbart stretching",
+      "Omedelbar operation"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_57",
+    "type": "mc",
+    "prompt": "Vad är ett Mortons neurom?",
+    "correct": "En smärtsam förtjockning av en intermetatarsal nerv, oftast i tredje tåmellanrummet",
+    "distractors": [
+      "En godartad bentumör i hälen",
+      "En inflammation i akillessenan",
+      "En fraktur i mellanfoten"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_58",
+    "type": "mc",
+    "prompt": "Vad är hallux valgus?",
+    "correct": "En sned stortå som vinklar sig mot de andra tårna, ofta med knöl (bunion) medialt",
+    "distractors": [
+      "Stelhet i stortåns grundled",
+      "Nedsjunket tvärvalv enbart",
+      "En böjd lilltå"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_59",
+    "type": "mc",
+    "prompt": "Vad är hallux rigidus?",
+    "correct": "Artros och stelhet i stortåns grundled (MTP I)",
+    "distractors": [
+      "Sned stortå",
+      "Nedsjunket längsvalv",
+      "Nervinklämning i tarsaltunneln"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_60",
+    "type": "mc",
+    "prompt": "Vad kallas en fot med onormalt lågt eller utplånat längsvalv?",
+    "correct": "Pes planus (plattfot)",
+    "distractors": [
+      "Pes cavus",
+      "Pes equinus",
+      "Hallux valgus"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_61",
+    "type": "mc",
+    "prompt": "Vad kallas en fot med onormalt högt längsvalv?",
+    "correct": "Pes cavus (högt fotvalv)",
+    "distractors": [
+      "Pes planus",
+      "Pes valgus",
+      "Talipes equinovarus"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_62",
+    "type": "mc",
+    "prompt": "Dysfunktion i tibialis posterior-senan hos vuxna leder ofta till?",
+    "correct": "Förvärvad plattfot med nedsjunket medialt längsvalv",
+    "distractors": [
+      "Högt fotvalv (pes cavus)",
+      "Droppfot",
+      "Hallux rigidus"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_63",
+    "type": "mc",
+    "prompt": "Vad är en marschfraktur (\"march fracture\")?",
+    "correct": "En stressfraktur, oftast i ett mellanfotsben, efter upprepad belastning",
+    "distractors": [
+      "En akut fraktur i calcaneus efter fall",
+      "En fraktur i fibulahalsen",
+      "En avlossning av akillessenan"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_64",
+    "type": "mc",
+    "prompt": "Var sitter en Jones-fraktur?",
+    "correct": "Vid basen av femte mellanfotsbenet (metatarsale V)",
+    "distractors": [
+      "I calcaneus",
+      "I talushalsen",
+      "I stortåns grundfalang"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_65",
+    "type": "mc",
+    "prompt": "Varför läker en Jones-fraktur ofta långsamt?",
+    "correct": "Området har sämre blodförsörjning (en så kallad vattendelarzon)",
+    "distractors": [
+      "Benet belastas aldrig",
+      "Benet är helt broskigt",
+      "Frakturen sitter i en led"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_66",
+    "type": "mc",
+    "prompt": "Vad är ett akut kompartmentsyndrom i underbenet?",
+    "correct": "Ett akut tillstånd där svullnad i en muskelloge ger högt tryck som hotar nerver och cirkulation",
+    "distractors": [
+      "En kronisk seninflammation",
+      "En lindrig muskelbristning",
+      "En nervinklämning i foten"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_67",
+    "type": "mc",
+    "prompt": "Vad är \"turf toe\"?",
+    "correct": "En skada på stortåns grundled (MTP I) vid kraftig överextension",
+    "distractors": [
+      "En stressfraktur i hälen",
+      "En nervinklämning mellan tårna",
+      "En akillesseneruptur"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_68",
+    "type": "mc",
+    "prompt": "Vad är Severs sjukdom?",
+    "correct": "Apofysit i hälbenet (calcaneus) hos växande barn, ofta idrottande",
+    "distractors": [
+      "Artros i fotleden hos äldre",
+      "Plattfot hos vuxna",
+      "Nervinklämning i tarsaltunneln"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_69",
+    "type": "mc",
+    "prompt": "Varför har små barn ofta platt fot som inte behöver behandlas?",
+    "correct": "Valvet är ännu inte färdigutvecklat och döljs delvis av fettkudde; det formas oftast till cirka 6 års ålder",
+    "distractors": [
+      "De saknar fotvalvsben permanent",
+      "Det beror alltid på sjukdom",
+      "Valvet försvinner med åldern"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_fot_70",
+    "type": "mc",
+    "prompt": "Hur skiljer man en flexibel plattfot från en stel (rigid) plattfot?",
+    "correct": "Vid flexibel plattfot återkommer valvet vid tåhävning eller avlastning",
+    "distractors": [
+      "Den stela plattfoten får valv vid belastning",
+      "Det går inte att skilja dem åt",
+      "Flexibel plattfot saknar alltid valv"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_71",
+    "type": "mc",
+    "prompt": "Hur påverkas akillessenan och vadmuskulaturen typiskt av åldrande?",
+    "correct": "Senan blir styvare och mer degenererad, vilket ökar risken för tendinopati och ruptur",
+    "distractors": [
+      "Den blir mer elastisk och tålig",
+      "Den växer i storlek",
+      "Den påverkas inte av ålder"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_72",
+    "type": "mc",
+    "prompt": "Varför ökar risken för fotsår hos äldre med diabetes?",
+    "correct": "Perifer neuropati gör att tryck och småskador inte känns, och nedsatt cirkulation försämrar läkning",
+    "distractors": [
+      "Foten blir mer känslig för smärta",
+      "Blodflödet ökar onormalt",
+      "Huden blir tjockare och tåligare"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_73",
+    "type": "mc",
+    "prompt": "Vad är Charcot-fot?",
+    "correct": "Progressiv ledförstörelse i foten vid nedsatt känsel (oftast diabetesneuropati)",
+    "distractors": [
+      "En akut fotledsstukning",
+      "Artros i stortåns grundled",
+      "En medfödd klumpfot"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_74",
+    "type": "mc",
+    "prompt": "Varför är fotens känsel och balans viktiga för fallprevention hos äldre?",
+    "correct": "Nedsatt fotkänsel och fotledsstabilitet försämrar balansen och ökar fallrisken",
+    "distractors": [
+      "Foten har ingen roll för balansen",
+      "Endast synen styr balansen",
+      "Fötternas känsel ökar med åldern"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_fot_75",
+    "type": "mc",
+    "prompt": "Vad är pes equinovarus (klumpfot, talipes equinovarus)?",
+    "correct": "En medfödd felställning där foten är plantarflekterad och inåtvriden",
+    "distractors": [
+      "En förvärvad plattfot hos vuxna",
+      "Artros i fotleden",
+      "En stressfraktur"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_76",
+    "type": "mc",
+    "prompt": "Vilken muskel kan vid svaghet (n. fibularis-skada) ge droppfot och stäppgång?",
+    "correct": "Tibialis anterior (och övriga dorsalflexorer)",
+    "distractors": [
+      "Gastrocnemius",
+      "Fibularis longus",
+      "Flexor hallucis longus"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_77",
+    "type": "mc",
+    "prompt": "Fibularis longus-senan korsar fotsulan och fäster medialt. Vilken funktion ger det utöver eversion?",
+    "correct": "Den stöttar tvärvalvet och bidrar till frånskjut genom att stabilisera första strålen",
+    "distractors": [
+      "Den lyfter tårna",
+      "Den dorsalflekterar foten",
+      "Den böjer knät"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_fot_78",
+    "type": "mc",
+    "prompt": "Vad bedömer Ottawa ankle rules bland annat?",
+    "correct": "Ömhet över malleolerna/vissa fotben och oförmåga att belasta – för att avgöra röntgenbehov",
+    "distractors": [
+      "Ledband i knät",
+      "Nervledning i foten",
+      "Blodtryck i benet"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_79",
+    "type": "mc",
+    "prompt": "Vilken är den huvudsakliga funktionen hos fotens intrinsiska (inre) muskler?",
+    "correct": "Att finjustera tårnas läge och aktivt stötta fotvalven vid belastning",
+    "distractors": [
+      "Att böja knät",
+      "Att rotera höften",
+      "Att dorsalflektera fotleden kraftfullt"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_fot_80",
+    "type": "mc",
+    "prompt": "Varför kan svaga fotledsevertorer (fibularis) bidra till återkommande stukningar?",
+    "correct": "De bromsar inversion och stabiliserar fotleden lateralt; svaghet ökar instabiliteten",
+    "distractors": [
+      "De lyfter fotvalvet enbart",
+      "De saknar betydelse för stabilitet",
+      "De orsakar plattfot"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_81",
+    "type": "mc",
+    "prompt": "Vad är en vanlig orsak till hälsmärta hos en medelålders person som börjat löpträna mycket?",
+    "correct": "Plantarfasciit",
+    "distractors": [
+      "Severs sjukdom",
+      "Klumpfot",
+      "Charcot-fot"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_82",
+    "type": "mc",
+    "prompt": "Vilken behandling har god effekt vid plantarfasciit?",
+    "correct": "Töjning av plantarfascia/vad, belastningsträning och vid behov inlägg",
+    "distractors": [
+      "Omedelbar operation",
+      "Total avlastning i flera månader",
+      "Enbart kortison utan träning"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_83",
+    "type": "mc",
+    "prompt": "Vilken roll har fotens fettkudde under hälen?",
+    "correct": "Den dämpar stötar vid hälisättning; den tunnas ut med åldern och ger ökad hälsmärta",
+    "distractors": [
+      "Den producerar ledvätska",
+      "Den böjer tårna",
+      "Den saknar funktion"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_fot_84",
+    "type": "mc",
+    "prompt": "Hur påverkas gångmönstret av nedsatt dorsalflexion i fotleden?",
+    "correct": "Frånskjutet och steget försämras, och kompensationer som ökad knä-/höftflexion eller utåtroterad fot kan uppstå",
+    "distractors": [
+      "Gången blir snabbare och effektivare",
+      "Ingen påverkan alls",
+      "Endast armrörelserna ändras"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_fot_85",
+    "type": "mc",
+    "prompt": "Vad är en vanlig långsiktig följd efter upprepade fotledsstukningar?",
+    "correct": "Kronisk fotledsinstabilitet med ökad risk för nya stukningar och artros",
+    "distractors": [
+      "Helt återställd och starkare fotled",
+      "Minskad artrosrisk",
+      "Permanent stelhet i full extension"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_86",
+    "type": "mc",
+    "prompt": "Vilken sena löper bakom mediala malleolen och kan drabbas av tendinopati vid plattfotsutveckling?",
+    "correct": "Tibialis posterior-senan",
+    "distractors": [
+      "Fibularis brevis-senan",
+      "Extensor hallucis longus-senan",
+      "Akillessenan"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_fot_87",
+    "type": "mc",
+    "prompt": "Vilka senor löper bakom laterala malleolen?",
+    "correct": "Fibularis longus och brevis",
+    "distractors": [
+      "Tibialis anterior och posterior",
+      "Flexor hallucis longus och flexor digitorum longus",
+      "Extensor digitorum longus"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_fot_88",
+    "type": "mc",
+    "prompt": "Vad menas med att foten fungerar som en \"stel hävarm\" vid frånskjut?",
+    "correct": "Supination och windlass-mekanismen gör foten stabil så att vadmuskelns kraft överförs effektivt",
+    "distractors": [
+      "Foten blir helt slapp vid frånskjut",
+      "Foten plattas ut maximalt",
+      "Tårna lyfts från marken"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_fot_89",
+    "type": "mc",
+    "prompt": "Vilken är talus särskilda egenskap vad gäller muskelfästen?",
+    "correct": "Ingen muskel fäster på talus – den styrs helt av omgivande ben, ligament och senor",
+    "distractors": [
+      "Alla vadmuskler fäster på talus",
+      "Talus är fäste för plantarfascian",
+      "Akillessenan fäster på talus"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_fot_90",
+    "type": "mc",
+    "prompt": "Varför är talushalsfraktur förenad med risk för avaskulär nekros?",
+    "correct": "Talus har sparsam blodförsörjning som lätt skadas vid fraktur",
+    "distractors": [
+      "Talus saknar helt blodkärl",
+      "Talus försörjs bara av plantarfascian",
+      "Talus läker alltid snabbt"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_91",
+    "type": "mc",
+    "prompt": "Vad innebär \"pronation\" av foten egentligen (sammansatt rörelse)?",
+    "correct": "En kombination av eversion, abduktion och dorsalflexion",
+    "distractors": [
+      "En kombination av inversion, adduktion och plantarflexion",
+      "Ren dorsalflexion",
+      "Endast eversion i subtalarleden"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_fot_92",
+    "type": "mc",
+    "prompt": "Vad innebär \"supination\" av foten?",
+    "correct": "En kombination av inversion, adduktion och plantarflexion",
+    "distractors": [
+      "En kombination av eversion, abduktion och dorsalflexion",
+      "Ren plantarflexion",
+      "Endast inversion i talocruralleden"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_fot_93",
+    "type": "mc",
+    "prompt": "Vilken sena används ibland i kirurgi som \"transfer\" och böjer stortån, men löper bakom mediala malleolen i tarsaltunneln?",
+    "correct": "Flexor hallucis longus",
+    "distractors": [
+      "Extensor hallucis longus",
+      "Fibularis longus",
+      "Tibialis anterior"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_fot_94",
+    "type": "mc",
+    "prompt": "Vilken är en typisk kompensation i gången vid svag triceps surae (plantarflexorsvaghet)?",
+    "correct": "Försvagat frånskjut och kortare steglängd med det motsatta benet",
+    "distractors": [
+      "Kraftfullare frånskjut",
+      "Droppfot i svingfasen",
+      "Ökad steglängd"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_fot_95",
+    "type": "mc",
+    "prompt": "Vad är syftet med fotledsortos (t.ex. AFO) vid droppfot?",
+    "correct": "Att hålla foten i neutralläge så att tårna inte släpar i svingfasen",
+    "distractors": [
+      "Att låsa knät",
+      "Att öka plantarflexionen",
+      "Att förkorta vadmuskeln"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_96",
+    "type": "mc",
+    "prompt": "Varför rekommenderas ofta excentrisk vadträning vid både akillestendinopati och som förebyggande?",
+    "correct": "Den belastar och stärker senan gradvis och förbättrar dess belastningstålighet",
+    "distractors": [
+      "Den immobiliserar senan",
+      "Den förkortar senan permanent",
+      "Den saknar effekt men gör ingen skada"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_97",
+    "type": "mc",
+    "prompt": "Vad kan en mycket stram triceps surae (kort vadmuskel) bidra till i foten?",
+    "correct": "Ökad belastning på framfoten och plantarfascian, kopplat till bl.a. plantarfasciit",
+    "distractors": [
+      "Minskad belastning på hela foten",
+      "Högt fotvalv enbart",
+      "Förbättrad dorsalflexion"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_fot_98",
+    "type": "mc",
+    "prompt": "Vilken struktur håller fast (stabiliserar) fibularissenorna bakom laterala malleolen?",
+    "correct": "Retinaculum musculorum fibularium (peroneusretinaklet)",
+    "distractors": [
+      "Plantarfascian",
+      "Lig. deltoideum",
+      "Akillessenan"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_fot_99",
+    "type": "mc",
+    "prompt": "Varför är fotleden (talocrural) generellt stabilare än många andra leder vid normal belastning?",
+    "correct": "Den benbildade gaffeln (mortise) av tibia och fibula omsluter talus tätt, särskilt i dorsalflexion",
+    "distractors": [
+      "Den har en djup kulledspanna",
+      "Den saknar ligament och är därför rörlig",
+      "Talus är fastvuxen vid tibia"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_fot_100",
+    "type": "mc",
+    "prompt": "Vad är en central princip i fysioterapeutisk rehabilitering efter fotledsstukning?",
+    "correct": "Tidig rörelse, gradvis belastning och balans-/styrketräning för att återfå funktion och förebygga återfall",
+    "distractors": [
+      "Lång immobilisering och total avlastning",
+      "Att undvika all balansträning",
+      "Att enbart vila tills smärtan helt försvinner"
+    ],
+    "topic": "fysio_fot_fotled",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_1",
+    "type": "mc",
+    "prompt": "Hur många kotor har ryggraden totalt (inklusive sammanvuxna)?",
+    "correct": "33 (7 hals-, 12 bröst-, 5 länd-, 5 kors- och 4 svanskotor)",
+    "distractors": [
+      "24",
+      "26",
+      "30"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_2",
+    "type": "mc",
+    "prompt": "Hur många halskotor (cervikalkotor) har människan?",
+    "correct": "Sju",
+    "distractors": [
+      "Fem",
+      "Tolv",
+      "Åtta"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_3",
+    "type": "mc",
+    "prompt": "Vad heter den första halskotan (C1) som bär upp huvudet?",
+    "correct": "Atlas",
+    "distractors": [
+      "Axis",
+      "Vertebra prominens",
+      "Dens"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_4",
+    "type": "mc",
+    "prompt": "Vad är utmärkande för atlas (C1)?",
+    "correct": "Den saknar egentlig kotkropp och är ringformad",
+    "distractors": [
+      "Den har en stor tagg (dens)",
+      "Den ledar direkt med revben",
+      "Den är den största kotan"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_5",
+    "type": "mc",
+    "prompt": "Vad heter den andra halskotan (C2) och dess uppåtstickande tapp?",
+    "correct": "Axis, med tappen dens (densutskottet)",
+    "distractors": [
+      "Atlas, med dens",
+      "Vertebra prominens, med processus uncinatus",
+      "Sacrum, med promontorium"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_6",
+    "type": "mc",
+    "prompt": "Vilken rörelse sker huvudsakligen i atlanto-occipitalleden (mellan skalle och C1)?",
+    "correct": "Flexion och extension (nickning, \"ja\")",
+    "distractors": [
+      "Rotation (\"nej\")",
+      "Ren lateralflexion",
+      "Ingen rörelse alls"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_rygg_7",
+    "type": "mc",
+    "prompt": "Vilken rörelse sker huvudsakligen i atlanto-axialleden (mellan C1 och C2)?",
+    "correct": "Rotation kring dens (\"nej\")",
+    "distractors": [
+      "Flexion/extension (\"ja\")",
+      "Ren lateralflexion",
+      "Plantarflexion"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_rygg_8",
+    "type": "mc",
+    "prompt": "Vad löper genom foramen transversarium i halskotorna?",
+    "correct": "A. vertebralis",
+    "distractors": [
+      "Ryggmärgen",
+      "A. carotis interna",
+      "N. vagus"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_9",
+    "type": "mc",
+    "prompt": "Vilken kota kallas vertebra prominens på grund av sin långa, lätt palperade tagg?",
+    "correct": "C7",
+    "distractors": [
+      "C1",
+      "T12",
+      "L5"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_10",
+    "type": "mc",
+    "prompt": "Vad är utmärkande för bröstkotorna (torakalkotorna)?",
+    "correct": "De ledar med revbenen (costovertebrala och costotransversala leder)",
+    "distractors": [
+      "De har foramen transversarium",
+      "De saknar kotkropp",
+      "De är ringformade"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_11",
+    "type": "mc",
+    "prompt": "Vad kännetecknar ländkotorna (lumbalkotorna)?",
+    "correct": "Stora, kraftiga kotkroppar anpassade för tung belastning",
+    "distractors": [
+      "Mycket små kotkroppar",
+      "Revbensleder",
+      "Foramen transversarium"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_12",
+    "type": "mc",
+    "prompt": "Vad heter lederna mellan kotbågarnas ledutskott (de små lederna baktill mellan kotorna)?",
+    "correct": "Fasettleder (zygapofyseala leder)",
+    "distractors": [
+      "Uncovertebralleder",
+      "Costovertebralleder",
+      "Sakroiliakaleder"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Bojsen-Møller, Rörelseapparatens anatomi"
+  },
+  {
+    "id": "fys_rygg_13",
+    "type": "mc",
+    "prompt": "Vilka två huvuddelar bygger upp en mellankotskiva (disk)?",
+    "correct": "Nucleus pulposus (gelékärna) och anulus fibrosus (fiberring)",
+    "distractors": [
+      "Kompakt ben och rött benmärg",
+      "Ledbrosk och menisk",
+      "Ligamentum flavum och nuchae"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_14",
+    "type": "mc",
+    "prompt": "Vad är mellankotskivans (diskens) huvudsakliga funktion?",
+    "correct": "Att dämpa stötar och fördela tryck mellan kotkropparna",
+    "distractors": [
+      "Att producera ryggmärgsvätska",
+      "Att leda nervimpulser",
+      "Att fästa revbenen"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_rygg_15",
+    "type": "mc",
+    "prompt": "Vilket ligament löper på kotkropparnas baksida (framför ryggmärgskanalen) och begränsar flexion?",
+    "correct": "Lig. longitudinale posterius",
+    "distractors": [
+      "Lig. longitudinale anterius",
+      "Lig. flavum",
+      "Lig. supraspinale"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_16",
+    "type": "mc",
+    "prompt": "Vilket elastiska, gulaktiga ligament förbinder kotbågarnas laminae och kan vid förtjockning bidra till spinal stenos?",
+    "correct": "Lig. flavum",
+    "distractors": [
+      "Lig. longitudinale anterius",
+      "Lig. nuchae",
+      "Lig. interspinale"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_17",
+    "type": "mc",
+    "prompt": "Hur ser ryggradens normala kurvaturer ut från sidan?",
+    "correct": "Halslordos, bröstkyfos, ländlordos och sakralkyfos",
+    "distractors": [
+      "Halskyfos, bröstlordos, ländkyfos",
+      "Helt rak hela vägen",
+      "Endast en enda lång lordos"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_rygg_18",
+    "type": "mc",
+    "prompt": "Vilka av ryggradens kurvaturer är primära (finns redan vid födseln)?",
+    "correct": "Bröstkyfosen och sakralkyfosen",
+    "distractors": [
+      "Halslordosen och ländlordosen",
+      "Endast halslordosen",
+      "Alla fyra är primära"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_rygg_19",
+    "type": "mc",
+    "prompt": "När utvecklas halslordosen hos ett spädbarn?",
+    "correct": "När barnet börjar lyfta och hålla upp huvudet",
+    "distractors": [
+      "Redan i fosterlivet",
+      "Först i tonåren",
+      "Aldrig – den är medfödd"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_rygg_20",
+    "type": "mc",
+    "prompt": "När utvecklas ländlordosen typiskt?",
+    "correct": "När barnet börjar sitta, stå och gå",
+    "distractors": [
+      "Redan vid födseln",
+      "Först i vuxen ålder",
+      "Den utvecklas aldrig"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_rygg_21",
+    "type": "mc",
+    "prompt": "Vad bildar kotornas foramina vertebralia tillsammans?",
+    "correct": "Ryggradskanalen (canalis vertebralis) som rymmer ryggmärgen",
+    "distractors": [
+      "Bröstkorgen",
+      "Bäckenhålan",
+      "Foramen magnum"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_22",
+    "type": "mc",
+    "prompt": "Var lämnar spinalnerverna ryggradskanalen?",
+    "correct": "Genom intervertebralforamina (mellan intilliggande kotor)",
+    "distractors": [
+      "Genom foramen transversarium",
+      "Genom diskens mitt",
+      "Genom processus spinosus"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_23",
+    "type": "mc",
+    "prompt": "Var slutar ryggmärgen (conus medullaris) hos en vuxen?",
+    "correct": "Ungefär vid nivå L1–L2",
+    "distractors": [
+      "Vid svanskotan",
+      "Vid nivå T6",
+      "Vid nivå L5"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_24",
+    "type": "mc",
+    "prompt": "Vad kallas knippet av nervrötter som löper nedanför ryggmärgens slut i ländryggskanalen?",
+    "correct": "Cauda equina (\"hästsvansen\")",
+    "distractors": [
+      "Conus medullaris",
+      "Plexus sacralis",
+      "Filum terminale enbart"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_25",
+    "type": "mc",
+    "prompt": "Hur många par spinalnerver har människan?",
+    "correct": "31 par",
+    "distractors": [
+      "12 par",
+      "24 par",
+      "33 par"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_26",
+    "type": "mc",
+    "prompt": "Hur kan det finnas 8 cervikala spinalnerver trots bara 7 halskotor?",
+    "correct": "De sju översta lämnar ovanför sin kota och C8 lämnar mellan C7 och T1",
+    "distractors": [
+      "Det finns i själva verket 8 halskotor",
+      "C8 saknas hos de flesta",
+      "Två nerver delar på samma foramen i halsen genomgående"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_27",
+    "type": "mc",
+    "prompt": "Vad är ett dermatom?",
+    "correct": "Det hudområde som försörjs av en enskild spinalnervs sensoriska rot",
+    "distractors": [
+      "Den muskelgrupp en nerv styr",
+      "Ett område av benvävnad",
+      "En reflexbåge"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_28",
+    "type": "mc",
+    "prompt": "Vad är ett myotom?",
+    "correct": "De muskler som försörjs motoriskt av en enskild spinalnervrot",
+    "distractors": [
+      "Ett hudområde",
+      "Ett område av ledbrosk",
+      "En grupp blodkärl"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_29",
+    "type": "mc",
+    "prompt": "Vilket dermatom motsvarar typiskt naveln?",
+    "correct": "T10",
+    "distractors": [
+      "T4",
+      "L1",
+      "T7"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_30",
+    "type": "mc",
+    "prompt": "Vilket dermatom motsvarar typiskt bröstvårtsnivån?",
+    "correct": "T4",
+    "distractors": [
+      "T10",
+      "T1",
+      "C7"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_31",
+    "type": "mc",
+    "prompt": "Vilket dermatom motsvarar typiskt fotryggen och stortån?",
+    "correct": "L5",
+    "distractors": [
+      "S1",
+      "L3",
+      "L1"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_32",
+    "type": "mc",
+    "prompt": "Vilket dermatom motsvarar typiskt fotens laterala kant och hälen?",
+    "correct": "S1",
+    "distractors": [
+      "L5",
+      "L4",
+      "L2"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_33",
+    "type": "mc",
+    "prompt": "I vilken del av ryggraden sker den största rotationen?",
+    "correct": "Cervikalt (halsryggen), särskilt mellan C1 och C2",
+    "distractors": [
+      "Lumbalt (ländryggen)",
+      "Sakralt",
+      "I svanskotorna"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_rygg_34",
+    "type": "mc",
+    "prompt": "Vilken rörelse är ländryggen (lumbalt) relativt bra på, men sämre på rotation?",
+    "correct": "Flexion och extension",
+    "distractors": [
+      "Ren axial rotation",
+      "Ingen rörelse alls",
+      "Endast lateralflexion"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_rygg_35",
+    "type": "mc",
+    "prompt": "Vad menas med en funktionell rörelsesegment (motion segment) i ryggraden?",
+    "correct": "Två intilliggande kotor med disk, leder och ligament som rör sig som en enhet",
+    "distractors": [
+      "En enda kota",
+      "Hela ländryggen",
+      "Endast disken"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_rygg_36",
+    "type": "mc",
+    "prompt": "Varför begränsar bröstryggens revbensleder dess rörlighet jämfört med halsen?",
+    "correct": "Revbenen och bröstkorgen stabiliserar och låser delvis bröstkotorna",
+    "distractors": [
+      "Bröstkotorna saknar leder",
+      "Bröstkotorna är hopväxta",
+      "Det finns inga diskar i bröstryggen"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_rygg_37",
+    "type": "mc",
+    "prompt": "Vilka tre muskler bildar erector spinae (den ytligare djupryggsmuskeln), från lateralt till medialt?",
+    "correct": "Iliocostalis, longissimus och spinalis",
+    "distractors": [
+      "Multifidus, rotatores och semispinalis",
+      "Trapezius, latissimus och rhomboideus",
+      "Psoas, quadratus lumborum och iliacus"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_38",
+    "type": "mc",
+    "prompt": "Vilken djup, segmentell ryggmuskel är en viktig stabilisator i ländryggen?",
+    "correct": "Multifidus",
+    "distractors": [
+      "Latissimus dorsi",
+      "Trapezius",
+      "Rhomboideus major"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_rygg_39",
+    "type": "mc",
+    "prompt": "Hur skiljer sig innervationen av de djupa (autoktona) ryggmusklerna från de ytliga?",
+    "correct": "De djupa innerveras av spinalnervernas dorsala grenar (rami dorsales), de ytliga av ventrala grenar",
+    "distractors": [
+      "Båda grupperna innerveras enbart av n. accessorius",
+      "De djupa saknar innervation",
+      "De ytliga innerveras av dorsala grenar"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_40",
+    "type": "mc",
+    "prompt": "Vilka muskler räknas till de ytliga ryggmusklerna (extrinsiska), som egentligen rör armen?",
+    "correct": "Trapezius, latissimus dorsi och rhomboideerna",
+    "distractors": [
+      "Multifidus, rotatores och longissimus",
+      "Iliocostalis, spinalis och semispinalis",
+      "Psoas och quadratus lumborum"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_41",
+    "type": "mc",
+    "prompt": "Vilka muskler räknas ofta in i bålens \"core\" (djupa stabiliseringssystem)?",
+    "correct": "Transversus abdominis, multifidus, diafragma och bäckenbotten",
+    "distractors": [
+      "Latissimus dorsi, deltoideus och biceps",
+      "Quadriceps, hamstrings och vad",
+      "Trapezius, rhomboideer och levator scapulae"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_rygg_42",
+    "type": "mc",
+    "prompt": "Vilken djup bukmuskel fungerar som ett \"korsett\" runt bålen och aktiveras vid bålstabilisering?",
+    "correct": "Transversus abdominis",
+    "distractors": [
+      "Rectus abdominis",
+      "Latissimus dorsi",
+      "Erector spinae"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_rygg_43",
+    "type": "mc",
+    "prompt": "Vilken muskel mellan revben, ländkotor och höftbenskam bidrar till lateralflexion och stabiliserar ländryggen?",
+    "correct": "Quadratus lumborum",
+    "distractors": [
+      "Multifidus",
+      "Psoas minor",
+      "Serratus anterior"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_44",
+    "type": "mc",
+    "prompt": "Vilket starkt ligament i nacken förbinder taggutskotten och hjälper till att hålla huvudet upprätt?",
+    "correct": "Lig. nuchae",
+    "distractors": [
+      "Lig. flavum",
+      "Lig. longitudinale anterius",
+      "Lig. iliolumbale"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_45",
+    "type": "mc",
+    "prompt": "Vad innebär ett diskbråck (diskprolaps)?",
+    "correct": "Nucleus pulposus buktar/pressar ut genom anulus fibrosus",
+    "distractors": [
+      "En kota glider framför nästa",
+      "En fasettled inflammeras",
+      "En kotkropp trycks ihop på höjden"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_46",
+    "type": "mc",
+    "prompt": "I vilken riktning sker ett diskbråck oftast, och varför?",
+    "correct": "Posterolateralt, där anulus är tunnare och bakre längsligamentet smalare",
+    "distractors": [
+      "Rakt framåt, mot bukhålan",
+      "Uppåt in i kotkroppen alltid",
+      "Lateralt in i revbenen"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_47",
+    "type": "mc",
+    "prompt": "På vilka nivåer är diskbråck i ländryggen vanligast?",
+    "correct": "L4–L5 och L5–S1",
+    "distractors": [
+      "L1–L2 och L2–L3",
+      "T1–T2 och T2–T3",
+      "C1–C2 och C2–C3"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_48",
+    "type": "mc",
+    "prompt": "Vad kallas det när ett diskbråck trycker på en nervrot och ger utstrålande bensmärta?",
+    "correct": "Radikulopati (ofta ischias vid lumbalt bråck)",
+    "distractors": [
+      "Myelopati",
+      "Lumbago utan utstrålning",
+      "Fibromyalgi"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_49",
+    "type": "mc",
+    "prompt": "Ett paracentralt diskbråck på nivå L4–L5 trycker oftast på vilken nervrot?",
+    "correct": "L5-roten",
+    "distractors": [
+      "L4-roten",
+      "S1-roten",
+      "L2-roten"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_50",
+    "type": "mc",
+    "prompt": "Vilket test (passiv höjning av sträckt ben i ryggläge) provocerar nervrotssmärta vid lumbalt diskbråck?",
+    "correct": "Straight leg raise (Lasègues test)",
+    "distractors": [
+      "Thomas test",
+      "McMurrays test",
+      "Trendelenburgs test"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_51",
+    "type": "mc",
+    "prompt": "Vilken försvagning talar för påverkan på S1-roten?",
+    "correct": "Nedsatt plantarflexion (tåhävning) och nedsatt akillesreflex",
+    "distractors": [
+      "Nedsatt knäextension",
+      "Nedsatt stortåextension",
+      "Nedsatt höftflexion"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_52",
+    "type": "mc",
+    "prompt": "Vilken försvagning talar för påverkan på L5-roten?",
+    "correct": "Nedsatt stortåextension och dorsalflexion",
+    "distractors": [
+      "Nedsatt plantarflexion",
+      "Nedsatt knäextension",
+      "Nedsatt fingerabduktion"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_53",
+    "type": "mc",
+    "prompt": "Vilka är varningstecknen (\"red flags\") för cauda equina-syndrom?",
+    "correct": "Ridbyxeanestesi, blås-/tarmpåverkan och bilateral bensvaghet/-smärta",
+    "distractors": [
+      "Lokal muskelömhet utan utstrålning",
+      "Lindrig morgonstelhet",
+      "Smärta enbart vid djup andning"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_54",
+    "type": "mc",
+    "prompt": "Varför är cauda equina-syndrom ett akut tillstånd?",
+    "correct": "Det kräver snabb utredning/operation för att undvika bestående nerv-, blås- och tarmskada",
+    "distractors": [
+      "Det läker alltid spontant",
+      "Det är ofarligt och behöver bara vila",
+      "Det är aldrig brådskande"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_55",
+    "type": "mc",
+    "prompt": "Vad är ospecifik ländryggssmärta (lumbago) ofta ett uttryck för?",
+    "correct": "Smärta utan tydlig allvarlig orsak, där struktur sällan kan pekas ut exakt",
+    "distractors": [
+      "Alltid ett diskbråck med nervpåverkan",
+      "Alltid en kotfraktur",
+      "Alltid en tumör"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_56",
+    "type": "mc",
+    "prompt": "Vad är förstahandsråd vid akut ospecifik ländryggssmärta utan röda flaggor?",
+    "correct": "Hålla sig i rörelse och fortsätta vardagsaktivitet så långt smärtan tillåter",
+    "distractors": [
+      "Strikt sängläge i flera veckor",
+      "Omedelbar röntgen och operation",
+      "Total vila tills smärtan helt försvunnit"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_57",
+    "type": "mc",
+    "prompt": "Vad är spinal stenos?",
+    "correct": "En förträngning av ryggradskanalen eller nervrotskanalerna som klämmer nervstrukturer",
+    "distractors": [
+      "En kotglidning framåt",
+      "En sidledskrökning av ryggen",
+      "En inflammation i disken"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_58",
+    "type": "mc",
+    "prompt": "Vad är typiskt för lumbal spinal stenos (neurogen claudicatio)?",
+    "correct": "Bensmärta/tyngdkänsla vid gång och stående som lindras av att luta sig framåt eller sitta",
+    "distractors": [
+      "Smärta som lindras av att svanka bakåt",
+      "Smärta enbart i vila på natten",
+      "Akut debut efter vridvåld"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_59",
+    "type": "mc",
+    "prompt": "Vad är spondylolys?",
+    "correct": "En defekt/spricka i pars interarticularis på en kotbåge",
+    "distractors": [
+      "En kotglidning framåt",
+      "Ett diskbråck",
+      "En kotkompression"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_60",
+    "type": "mc",
+    "prompt": "Vad är spondylolistes?",
+    "correct": "Att en kota glider framåt i förhållande till kotan under",
+    "distractors": [
+      "En sidledskrökning av ryggen",
+      "En inflammation i fasettlederna",
+      "En förträngning av diskens höjd enbart"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_61",
+    "type": "mc",
+    "prompt": "Vad är skolios?",
+    "correct": "En sidledskrökning av ryggraden, ofta med samtidig kotrotation",
+    "distractors": [
+      "En ökad bröstkyfos",
+      "En minskad ländlordos",
+      "Ett diskbråck"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_62",
+    "type": "mc",
+    "prompt": "Vilket kliniskt tecken framträder vid framåtböjning hos en person med skolios?",
+    "correct": "En kostal puckel (ryggradsrotationen lyfter ena sidan av bröstkorgen)",
+    "distractors": [
+      "Att ryggen blir helt symmetrisk",
+      "Att ländlordosen försvinner",
+      "Att benen blir olika långa garanterat"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_63",
+    "type": "mc",
+    "prompt": "Vad är hyperkyfos?",
+    "correct": "En ökad (förstärkt) framåtböjning av bröstryggen",
+    "distractors": [
+      "En ökad ländlordos",
+      "En sidledskrökning",
+      "En rak rygg utan kurvor"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_64",
+    "type": "mc",
+    "prompt": "Scheuermanns sjukdom hos ungdomar ger?",
+    "correct": "En strukturell ökad bröstkyfos på grund av kilformade kotor under tillväxten",
+    "distractors": [
+      "En sidledskrökning",
+      "Ett diskbråck",
+      "En spinal stenos"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_65",
+    "type": "mc",
+    "prompt": "Vad är whiplash (pisksnärtskada)?",
+    "correct": "En accelerations-/retardationsskada i halsryggen, ofta vid påkörning bakifrån",
+    "distractors": [
+      "En kotkompression i ländryggen",
+      "Ett diskbråck i bröstryggen",
+      "En fraktur i svanskotan"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_66",
+    "type": "mc",
+    "prompt": "Vad rekommenderas oftast tidigt efter en whiplashskada (WAD) utan allvarliga fynd?",
+    "correct": "Hålla nacken i rörelse och återgå till normal aktivitet successivt",
+    "distractors": [
+      "Lång användning av stel halskrage",
+      "Strikt orörlighet i flera veckor",
+      "Omedelbar operation"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_67",
+    "type": "mc",
+    "prompt": "Vad är ankyloserande spondylit (Bechterews sjukdom)?",
+    "correct": "En inflammatorisk reumatisk sjukdom som med tiden kan stelopera (förbena) ryggraden",
+    "distractors": [
+      "En akut diskskada",
+      "En åldersrelaterad artros enbart",
+      "En medfödd skolios"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_68",
+    "type": "mc",
+    "prompt": "Vad är typiskt för inflammatorisk ryggsmärta (t.ex. vid Bechterew) jämfört med mekanisk?",
+    "correct": "Morgonstelhet som lindras av rörelse och försämras av vila",
+    "distractors": [
+      "Smärta som förvärras av rörelse och lindras av vila",
+      "Akut debut efter lyft",
+      "Smärta enbart vid hosta"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_69",
+    "type": "mc",
+    "prompt": "Vilken fraktur är vanlig i ryggraden hos äldre med osteoporos?",
+    "correct": "Kotkompressionsfraktur (sammanpressning av kotkroppen)",
+    "distractors": [
+      "Densfraktur efter idrott",
+      "Spondylolys hos unga",
+      "Revbensfraktur"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_70",
+    "type": "mc",
+    "prompt": "Hur kan upprepade osteoporotiska kotkompressioner påverka hållningen?",
+    "correct": "De kan ge ökad bröstkyfos (\"änkepuckel\") och minskad kroppslängd",
+    "distractors": [
+      "De ger ökad ländlordos",
+      "De rätar ut hela ryggen",
+      "De påverkar inte hållningen"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_71",
+    "type": "mc",
+    "prompt": "Hur förändras mellankotskivorna med åldern?",
+    "correct": "De förlorar vatten och höjd, vilket bidrar till stelhet och minskad kroppslängd",
+    "distractors": [
+      "De ökar i vattenhalt och höjd",
+      "De förbenas helt vid 30 års ålder",
+      "De påverkas inte alls av ålder"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_rygg_72",
+    "type": "mc",
+    "prompt": "Varför minskar många människor i längd med stigande ålder?",
+    "correct": "Disksänkning, kotkompressioner och ökad bröstkyfos",
+    "distractors": [
+      "Benen i låren krymper",
+      "Skallen minskar i storlek",
+      "Antalet kotor minskar"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_rygg_73",
+    "type": "mc",
+    "prompt": "Hur varierar det intradiskala trycket i ländryggen med kroppsställning?",
+    "correct": "Det är lägre i ryggliggande och högre vid framåtböjt sittande och tunga lyft",
+    "distractors": [
+      "Det är högst i ryggliggande",
+      "Det är konstant oavsett ställning",
+      "Det är lägst vid tunga lyft"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_rygg_74",
+    "type": "mc",
+    "prompt": "Varför rekommenderas ofta lyftteknik med rak rygg och böjda knän?",
+    "correct": "Den håller lasten nära kroppen och minskar belastningen på ländryggens diskar",
+    "distractors": [
+      "Den ökar trycket i disken avsiktligt",
+      "Den belastar knäna i stället för att skydda ryggen",
+      "Den saknar betydelse för ryggen"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_rygg_75",
+    "type": "mc",
+    "prompt": "Vilken roll har buktrycket (intraabdominellt tryck) för ryggen vid lyft?",
+    "correct": "Det bildar ett inre stöd som avlastar ländryggen tillsammans med bålmuskulaturen",
+    "distractors": [
+      "Det försvagar ryggen",
+      "Det saknar betydelse",
+      "Det ökar diskens vattenhalt"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_rygg_76",
+    "type": "mc",
+    "prompt": "Vilken är en central, evidensbaserad behandling vid långvarig ospecifik ländryggssmärta?",
+    "correct": "Handledd, anpassad fysisk träning och fortsatt aktivitet",
+    "distractors": [
+      "Långvarig sängvila",
+      "Permanent användning av stödkorsett",
+      "Att undvika all rörelse"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_77",
+    "type": "mc",
+    "prompt": "Vad är syftet med segmentell stabiliseringsträning (t.ex. multifidus/transversus abdominis) vid ländryggsbesvär?",
+    "correct": "Att förbättra den lokala muskelkontrollen och stödet kring rörelsesegmenten",
+    "distractors": [
+      "Att låsa ryggen helt",
+      "Att maximera ländlordosen",
+      "Att enbart öka rörligheten"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_rygg_78",
+    "type": "mc",
+    "prompt": "Vad menas med \"red flags\" vid ryggsmärta?",
+    "correct": "Varningstecken som kan tyda på allvarlig bakomliggande sjukdom (t.ex. tumör, infektion, fraktur, cauda equina)",
+    "distractors": [
+      "Tecken på god prognos",
+      "Psykosociala riskfaktorer",
+      "Normala fynd utan betydelse"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_79",
+    "type": "mc",
+    "prompt": "Vad menas med \"yellow flags\" vid ländryggssmärta?",
+    "correct": "Psykosociala faktorer (t.ex. rörelserädsla, katastroftankar) som ökar risken för långvariga besvär",
+    "distractors": [
+      "Tecken på allvarlig sjukdom",
+      "Tecken på akut fraktur",
+      "Normala röntgenfynd"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_80",
+    "type": "mc",
+    "prompt": "Vad är cervikal radikulopati?",
+    "correct": "Nervrotspåverkan i halsryggen med utstrålande symtom i arm/hand",
+    "distractors": [
+      "Smärta enbart lokalt i nacken",
+      "Påverkan på ryggmärgen i bröstryggen",
+      "Smärta i ländryggen"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_81",
+    "type": "mc",
+    "prompt": "På vilka nivåer är cervikalt diskbråck vanligast?",
+    "correct": "C5–C6 och C6–C7",
+    "distractors": [
+      "C1–C2 och C2–C3",
+      "C7–T1 och T1–T2",
+      "C3–C4 och C4–C5"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_82",
+    "type": "mc",
+    "prompt": "Vad är myelopati (t.ex. cervikal myelopati)?",
+    "correct": "Påverkan på själva ryggmärgen, som kan ge gång- och balansstörning samt finmotorikproblem",
+    "distractors": [
+      "Påverkan på en enskild nervrot",
+      "En muskelinflammation",
+      "En diskdegeneration utan symtom"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_83",
+    "type": "mc",
+    "prompt": "Vilket dermatom motsvarar typiskt långfingret?",
+    "correct": "C7",
+    "distractors": [
+      "C6",
+      "C8",
+      "T1"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_84",
+    "type": "mc",
+    "prompt": "Vilket myotom testas främst vid axelabduktion och armbågsflexion?",
+    "correct": "C5",
+    "distractors": [
+      "C7",
+      "C8",
+      "T1"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_85",
+    "type": "mc",
+    "prompt": "Vilket myotom testas främst vid armbågsextension (triceps)?",
+    "correct": "C7",
+    "distractors": [
+      "C5",
+      "C6",
+      "T1"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_86",
+    "type": "mc",
+    "prompt": "Varför kan ländryggssmärta ibland stråla ut i benet utan att vara nervrotssmärta?",
+    "correct": "Strukturer som fasettleder och muskler kan ge refererad smärta som inte följer ett dermatom",
+    "distractors": [
+      "All utstrålande smärta beror på diskbråck",
+      "Refererad smärta finns inte",
+      "Smärtan kommer alltid från höften"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_87",
+    "type": "mc",
+    "prompt": "Vad är facettledssyndrom (fasettledsrelaterad smärta)?",
+    "correct": "Smärta som utgår från de små lederna mellan kotbågarna, ofta värre vid extension/rotation",
+    "distractors": [
+      "Smärta från disken enbart",
+      "En kotglidning",
+      "En nervrotsskada i benet"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_88",
+    "type": "mc",
+    "prompt": "Hur påverkas diskens näringsförsörjning av rörelse och belastning?",
+    "correct": "Disken saknar egna blodkärl hos vuxna och får näring via diffusion som gynnas av växlande belastning/rörelse",
+    "distractors": [
+      "Disken har gott om blodkärl",
+      "Disken får näring enbart i vila",
+      "Disken behöver ingen näring"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_rygg_89",
+    "type": "mc",
+    "prompt": "Vilken är prognosen för de flesta akuta ospecifika ländryggsbesvär?",
+    "correct": "Goda – majoriteten förbättras tydligt inom några veckor",
+    "distractors": [
+      "Mycket dålig – blir oftast kroniska",
+      "Kräver nästan alltid operation",
+      "Förvärras alltid med rörelse"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_90",
+    "type": "mc",
+    "prompt": "Vad är en vanlig prognos för lumbalt diskbråck med ischias utan röda flaggor?",
+    "correct": "Många förbättras med tiden och konservativ behandling; bråcket kan dessutom krympa spontant",
+    "distractors": [
+      "Kräver alltid akut operation",
+      "Läker aldrig utan kirurgi",
+      "Förvärras alltid trots behandling"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_91",
+    "type": "mc",
+    "prompt": "Varför har röntgenfynd som diskdegeneration begränsad betydelse vid ländryggssmärta?",
+    "correct": "Sådana förändringar är vanliga även hos smärtfria personer och korrelerar dåligt med besvär",
+    "distractors": [
+      "De bevisar alltid orsaken till smärtan",
+      "De finns aldrig hos friska",
+      "De kräver alltid operation"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_92",
+    "type": "mc",
+    "prompt": "Vilken muskel är en viktig höftflexor men fäster också på ländkotorna och kan påverka ländlordosen?",
+    "correct": "Psoas major",
+    "distractors": [
+      "Gluteus maximus",
+      "Multifidus",
+      "Latissimus dorsi"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_93",
+    "type": "mc",
+    "prompt": "Hur samverkar bål- och höftmuskler för att kontrollera bäckenets och ländryggens läge?",
+    "correct": "De balanserar bäckentippning och ländlordos genom samspel mellan buk, rygg, höftflexorer och -extensorer",
+    "distractors": [
+      "Endast bukmusklerna styr ländryggen",
+      "Höftmusklerna saknar betydelse för ryggen",
+      "Ländlordosen kan inte påverkas av muskler"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_rygg_94",
+    "type": "mc",
+    "prompt": "Vad menas med \"neutral zone\" i ett ryggsegment?",
+    "correct": "Det rörelseintervall nära mittläget där lederna ger lågt motstånd och muskulär kontroll är viktig",
+    "distractors": [
+      "Det yttersta läget vid full flexion",
+      "Ett område helt utan rörelse",
+      "Diskens kärlförsörjda del"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_rygg_95",
+    "type": "mc",
+    "prompt": "Vilken är en lämplig fysioterapeutisk åtgärd vid lumbal spinal stenos?",
+    "correct": "Flexionsbaserad träning och konditionsträning (t.ex. cykel) som öppnar kanalen och förbättrar gångsträcka",
+    "distractors": [
+      "Enbart extensionsövningar i ytterläge",
+      "Strikt sängläge",
+      "Att undvika all rörelse"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_96",
+    "type": "mc",
+    "prompt": "Varför är patientutbildning och lugnande besked centralt vid ländryggssmärta?",
+    "correct": "Förståelse och minskad rörelserädsla främjar aktivitet och bättre återhämtning",
+    "distractors": [
+      "Det får patienten att vila mer",
+      "Det ersätter all annan behandling",
+      "Det saknar effekt"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_97",
+    "type": "mc",
+    "prompt": "Vilken muskel(grupp) förlänger (extenderar) ryggraden och håller bålen upprätt?",
+    "correct": "Erector spinae",
+    "distractors": [
+      "Rectus abdominis",
+      "Transversus abdominis",
+      "Psoas major"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Sobotta, Atlas of Anatomy"
+  },
+  {
+    "id": "fys_rygg_98",
+    "type": "mc",
+    "prompt": "Vilken är en typisk följd av långvarig immobilisering/sängläge för ryggen?",
+    "correct": "Försvagad bålmuskulatur, stelhet och ofta förvärrade besvär",
+    "distractors": [
+      "Snabbare läkning än vid aktivitet",
+      "Starkare muskler",
+      "Bättre diskhälsa"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_rygg_99",
+    "type": "mc",
+    "prompt": "Varför kan halsryggen vara särskilt känslig vid trauma jämfört med bröstryggen?",
+    "correct": "Den är rörlig och saknar bröstkorgens stabiliserande stöd, vilket gör den mer utsatt",
+    "distractors": [
+      "Den är hopväxt och helt orörlig",
+      "Den saknar ryggmärg",
+      "Den skyddas av revbenen"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Neumann, Kinesiology of the Musculoskeletal System"
+  },
+  {
+    "id": "fys_rygg_100",
+    "type": "mc",
+    "prompt": "Vad är en central, evidensbaserad princip i fysioterapi vid de flesta ryggbesvär?",
+    "correct": "Att främja rörelse, aktivitet och anpassad träning snarare än vila",
+    "distractors": [
+      "Att ordinera långvarig vila",
+      "Att alltid avråda från fysisk aktivitet",
+      "Att i första hand rekommendera operation"
+    ],
+    "topic": "fysio_columna",
+    "difficulty": "Normal",
+    "source": "Magee, Orthopedic Physical Assessment"
   }
 ]
