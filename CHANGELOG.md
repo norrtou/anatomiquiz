@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.105
+- **Om Anatomiquiz: nyhetssektionen flyttad överst.** "Nyheter"-kortet ligger nu direkt efter intro-ledet (först bland innehållskorten) i stället för längst ner före versionshistoriken, så besökaren möts av det senaste först.
+- **Ny nyhetsnotis (1 juli 2026).** Kort notis om de två viktigaste pågående satsningarna: bilder har börjat läggas in i materialet, och arbetet med quiz anpassade för olika vårdutbildningar har inletts. "Senast uppdaterad" → 1 juli 2026.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.105.
+
 ## 0.9.104
 - **Fysioterapeut, ämne 8/14: Nervsystemet (100 MC-frågor).** Första ämnet i de fysiologiska systemen; lins anpassad till struktur → funktion → banor/reflexer → lesion → åldersutveckling. Täcker CNS/PNS, neuron/gliaceller/myelin, hjärnans och ryggmärgens uppbyggnad, hjärnhinnor/likvor, aktionspotential (vilopotential, Na⁺/K⁺, saltatorisk ledning), synaps/signalsubstanser (ACh, dopamin, GABA, glutamat), motorisk enhet/neuromuskulär förbindelse, banor (corticospinalis/pyramidbanan, baksträng-lemniscus medialis, spinothalamicus + korsningsnivåer), reflexbåge/sträckreflex/muskelspole/Golgi, **UMN vs LMN** (spasticitet/hyperreflexi/Babinski/klonus vs slapp pares/atrofi/fascikulationer), plegi/pares-terminologi (hemi-/para-/tetraplegi), autonoma nervsystemet (sympatikus/parasympatikus), kliniska tillstånd (stroke/TIA, MS, Parkinson, Guillain-Barré, cerebellär ataxi, afasi/neglekt/apraxi, polyneuropati, spinal chock), neuroplasticitet/neurorehab samt åldersaspekter (myelinisering, primitiva reflexer, nervledning, fallrisk, demens). Källor: Lännergren m.fl. (Fysiologi), Purves (Neuroscience), FitzGerald (Clinical Neuroanatomy), Lundy-Ekman (Neuroscience: Fundamentals for Rehabilitation). Tillagt i `data/fysioterapeut.json` (`fysio_nervsystemet`), option avkommenterad med `(MC)`-tagg.
 - VERSION/APP_VERSION/app.js-cachebuster → 0.9.104.
