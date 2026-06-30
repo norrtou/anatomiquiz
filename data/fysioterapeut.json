@@ -9798,5 +9798,305 @@
     "topic": "fysio_columna",
     "difficulty": "Normal",
     "source": "Magee, Orthopedic Physical Assessment"
+  },
+  {
+    "id": "fys_hand_img_01",
+    "type": "mc",
+    "image": "os-scaphoideum",
+    "prompt": "",
+    "correct": "Os scaphoideum (båtbenet)",
+    "distractors": [
+      "Os lunatum (månbenet)",
+      "Os triquetrum (trekantbenet)",
+      "Os trapezium (stora trapetsbenet)"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Eget bildmaterial (Anatomiquiz)"
+  },
+  {
+    "id": "fys_hand_img_02",
+    "type": "mc",
+    "image": "os-lunatum",
+    "prompt": "",
+    "correct": "Os lunatum (månbenet)",
+    "distractors": [
+      "Os scaphoideum (båtbenet)",
+      "Os capitatum (huvudbenet)",
+      "Os pisiforme (ärtbenet)"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Eget bildmaterial (Anatomiquiz)"
+  },
+  {
+    "id": "fys_hand_img_03",
+    "type": "mc",
+    "image": "os-triquetrum",
+    "prompt": "",
+    "correct": "Os triquetrum (trekantbenet)",
+    "distractors": [
+      "Os pisiforme (ärtbenet)",
+      "Os hamatum (krokbenet)",
+      "Os lunatum (månbenet)"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Eget bildmaterial (Anatomiquiz)"
+  },
+  {
+    "id": "fys_hand_img_04",
+    "type": "mc",
+    "image": "os-pisiforme",
+    "prompt": "",
+    "correct": "Os pisiforme (ärtbenet)",
+    "distractors": [
+      "Os triquetrum (trekantbenet)",
+      "Os trapezoideum (lilla trapetsbenet)",
+      "Os capitatum (huvudbenet)"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Eget bildmaterial (Anatomiquiz)"
+  },
+  {
+    "id": "fys_hand_img_05",
+    "type": "mc",
+    "image": "os-trapezium",
+    "prompt": "",
+    "correct": "Os trapezium (stora trapetsbenet)",
+    "distractors": [
+      "Os trapezoideum (lilla trapetsbenet)",
+      "Os scaphoideum (båtbenet)",
+      "Os capitatum (huvudbenet)"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Eget bildmaterial (Anatomiquiz)"
+  },
+  {
+    "id": "fys_hand_img_06",
+    "type": "mc",
+    "image": "os-trapezoideum",
+    "prompt": "",
+    "correct": "Os trapezoideum (lilla trapetsbenet)",
+    "distractors": [
+      "Os trapezium (stora trapetsbenet)",
+      "Os capitatum (huvudbenet)",
+      "Os hamatum (krokbenet)"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Eget bildmaterial (Anatomiquiz)"
+  },
+  {
+    "id": "fys_hand_img_07",
+    "type": "mc",
+    "image": "os-capitatum",
+    "prompt": "",
+    "correct": "Os capitatum (huvudbenet)",
+    "distractors": [
+      "Os hamatum (krokbenet)",
+      "Os trapezoideum (lilla trapetsbenet)",
+      "Os lunatum (månbenet)"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Eget bildmaterial (Anatomiquiz)"
+  },
+  {
+    "id": "fys_hand_img_08",
+    "type": "mc",
+    "image": "os-hamatum",
+    "prompt": "",
+    "correct": "Os hamatum (krokbenet)",
+    "distractors": [
+      "Os capitatum (huvudbenet)",
+      "Os triquetrum (trekantbenet)",
+      "Os pisiforme (ärtbenet)"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Eget bildmaterial (Anatomiquiz)"
+  },
+  {
+    "id": "fys_hand_img_09",
+    "type": "mc",
+    "image": "ossa-carpi",
+    "prompt": "",
+    "correct": "Ossa carpi (handlovsbenen)",
+    "distractors": [
+      "Ossa metacarpi (mellanhandsbenen)",
+      "Phalanges (fingerbenen)",
+      "Ossa tarsi (fotrotsbenen)"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Eget bildmaterial (Anatomiquiz)"
+  },
+  {
+    "id": "fys_hand_img_10",
+    "type": "mc",
+    "image": "ossa-metacarpi",
+    "prompt": "",
+    "correct": "Ossa metacarpi (mellanhandsbenen)",
+    "distractors": [
+      "Ossa carpi (handlovsbenen)",
+      "Phalanges (fingerbenen)",
+      "Ossa tarsi (fotrotsbenen)"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Eget bildmaterial (Anatomiquiz)"
+  },
+  {
+    "id": "fys_hand_img_11",
+    "type": "mc",
+    "image": "os-metacarpale-1",
+    "prompt": "",
+    "correct": "Os metacarpale I (tummens mellanhandsben)",
+    "distractors": [
+      "Os metacarpale II (pekfingrets mellanhandsben)",
+      "Os metacarpale V (lillfingrets mellanhandsben)",
+      "Phalanx proximalis pollicis (tummens grundfalang)"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Eget bildmaterial (Anatomiquiz)"
+  },
+  {
+    "id": "fys_hand_img_12",
+    "type": "mc",
+    "image": "articulatio-radiocarpea",
+    "prompt": "",
+    "correct": "Articulatio radiocarpea (radiokarpalleden)",
+    "distractors": [
+      "Articulatio mediocarpea (mediokarpalleden)",
+      "Articulatio radioulnaris distalis (distala radioulnarleden)",
+      "Articulationes carpometacarpeae (karpometakarpallederna)"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Eget bildmaterial (Anatomiquiz)"
+  },
+  {
+    "id": "fys_hand_img_13",
+    "type": "mc",
+    "image": "articulatio-radioulnaris-distalis",
+    "prompt": "",
+    "correct": "Articulatio radioulnaris distalis (distala radioulnarleden)",
+    "distractors": [
+      "Articulatio radiocarpea (radiokarpalleden)",
+      "Articulatio mediocarpea (mediokarpalleden)",
+      "Articulatio interphalangea pollicis (tummens IP-led)"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Eget bildmaterial (Anatomiquiz)"
+  },
+  {
+    "id": "fys_hand_img_14",
+    "type": "mc",
+    "image": "articulatio-mediocarpea",
+    "prompt": "",
+    "correct": "Articulatio mediocarpea (mediokarpalleden)",
+    "distractors": [
+      "Articulatio radiocarpea (radiokarpalleden)",
+      "Articulationes carpometacarpeae (karpometakarpallederna)",
+      "Articulatio radioulnaris distalis (distala radioulnarleden)"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Eget bildmaterial (Anatomiquiz)"
+  },
+  {
+    "id": "fys_hand_img_15",
+    "type": "mc",
+    "image": "articulationes-carpometacarpeae",
+    "prompt": "",
+    "correct": "Articulationes carpometacarpeae (karpometakarpallederna)",
+    "distractors": [
+      "Articulationes metacarpophalangeae (MCP-lederna)",
+      "Articulatio mediocarpea (mediokarpalleden)",
+      "Articulationes interphalangeae proximales (PIP-lederna)"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Eget bildmaterial (Anatomiquiz)"
+  },
+  {
+    "id": "fys_hand_img_16",
+    "type": "mc",
+    "image": "articulationes-metacarpophalangeae",
+    "prompt": "",
+    "correct": "Articulationes metacarpophalangeae (MCP-lederna, knogarna)",
+    "distractors": [
+      "Articulationes interphalangeae proximales (PIP-lederna)",
+      "Articulationes carpometacarpeae (karpometakarpallederna)",
+      "Articulationes interphalangeae distales (DIP-lederna)"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Eget bildmaterial (Anatomiquiz)"
+  },
+  {
+    "id": "fys_hand_img_17",
+    "type": "mc",
+    "image": "articulationes-interphalangeae-proximales",
+    "prompt": "",
+    "correct": "Articulationes interphalangeae proximales (PIP-lederna)",
+    "distractors": [
+      "Articulationes interphalangeae distales (DIP-lederna)",
+      "Articulationes metacarpophalangeae (MCP-lederna)",
+      "Articulationes carpometacarpeae (karpometakarpallederna)"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Eget bildmaterial (Anatomiquiz)"
+  },
+  {
+    "id": "fys_hand_img_18",
+    "type": "mc",
+    "image": "articulationes-interphalangeae-distales",
+    "prompt": "",
+    "correct": "Articulationes interphalangeae distales (DIP-lederna)",
+    "distractors": [
+      "Articulationes interphalangeae proximales (PIP-lederna)",
+      "Articulationes metacarpophalangeae (MCP-lederna)",
+      "Articulatio radiocarpea (radiokarpalleden)"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Eget bildmaterial (Anatomiquiz)"
+  },
+  {
+    "id": "fys_hand_img_19",
+    "type": "mc",
+    "image": "articulatio-interphalangea-pollicis",
+    "prompt": "",
+    "correct": "Articulatio interphalangea pollicis (tummens IP-led)",
+    "distractors": [
+      "Articulatio metacarpophalangea I (tummens grundled)",
+      "Articulationes interphalangeae proximales (PIP-lederna)",
+      "Articulationes interphalangeae distales (DIP-lederna)"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Eget bildmaterial (Anatomiquiz)"
+  },
+  {
+    "id": "fys_hand_img_20",
+    "type": "mc",
+    "image": "articulatio-metacarpophalangea-1",
+    "prompt": "",
+    "correct": "Articulatio metacarpophalangea I (tummens grundled, MCP I)",
+    "distractors": [
+      "Articulatio interphalangea pollicis (tummens IP-led)",
+      "Articulatio carpometacarpea pollicis (tummens karpometakarpalled)",
+      "Articulatio metacarpophalangea II (pekfingrets grundled)"
+    ],
+    "topic": "fysio_hand_handled",
+    "difficulty": "Normal",
+    "source": "Eget bildmaterial (Anatomiquiz)"
   }
 ]

@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.103
+- **Fysioterapeut, Hand & handled: +20 bildfrågor (nu 120 frågor).** Lade till 20 MC-bildfrågor i `fysio_hand_handled` som återanvänder befintliga handbilder ur registret `data/bilder.json` (11 handlovsben + 9 leder, refererade via `image`-id). Latinsk+svensk benämning på svarsalternativen. **Tom `prompt`** (som arbetsterapeutens bildfrågor) – den kompakta `.quiz-image`-mobillayouten förutsätter att bilden ÄR frågan, så en synlig prompt skulle knuffa svaren/Nästa under fold. Alla bild-id verifierade mot registret och filerna mot disk.
+  - Option-etiketten uppdaterad till **"Hand & handled (MC+bild)"** (typtaggen läser fortf. MC → Starta-knappen aktiv).
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.103.
+
 ## 0.9.102
 - **Fysioterapeut, ämne 7/14: Columna/ryggrad (100 MC-frågor).** Byggt enligt linsen (struktur → biomekanik/funktion → innervation → vanlig skada → åldersutveckling). Täcker kotpelarens 33 kotor (cervikal/torakal/lumbal/sacral), atlas/axis + kraniocervikala leder, foramen transversarium, fasett-/uncovertebralleder, disk (nucleus/anulus), ligament (longitudinale, flavum, nuchae), kurvaturer (primära/sekundära), ryggmärgskanal/cauda equina, djup (erector spinae/multifidus, rami dorsales) vs ytlig muskulatur + core/transversus/quadratus lumborum, 31 spinalnervpar, dermatom/myotom, biomekanik (rörelseregioner, motion segment, intradiskalt tryck, lyftteknik), skador (lumbalt/cervikalt diskbråck + Lasègue/radikulopati, cauda equina-red flags, spinal stenos, spondylolys/-listes, skolios, hyperkyfos/Scheuermann, whiplash, Bechterew, osteoporotisk kotkompression, facettledssyndrom, yellow flags) samt åldersaspekter (kurvaturernas utveckling, diskdegeneration, längdminskning). Källor: Bojsen-Møller, Sobotta, Neumann, Magee. Tillagt i `data/fysioterapeut.json` (`fysio_columna`), option avkommenterad med `(MC)`-tagg.
 - VERSION/APP_VERSION/app.js-cachebuster → 0.9.102.
