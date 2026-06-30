@@ -98,6 +98,8 @@ const EDUCATIONS = [
     { label: 'Ergonomi',                    file: './data/ergonomi.json' },
     { label: 'Grepp',                       file: './data/grepp.json' },
     { label: 'Handen',                      file: './data/handen.json' },
+    { label: 'Handens ben (bilder)',        file: './data/handens_ben_bilder.json' },
+    { label: 'Handens leder (bilder)',      file: './data/handens_leder_bilder.json' },
     { label: 'Ledtyper',                    file: './data/ledtyper.json' },
     { label: 'Lägen & riktningar',          file: './data/riktningar.json' },
     { label: 'Medicinsk terminologi',       file: './data/medicinsk_terminologi.json' },
@@ -112,14 +114,35 @@ const EDUCATIONS = [
     { label: 'Blandad anatomi/fysiologi – flashcards', file: './data/anatomi_fysiologi_flashcards.json', fc: true },
     { label: 'Läkemedelsräkning',           file: './data/lakemedelsrakning.json' },
   ]},
+  { name: 'Läkare', topics: [
+    { label: 'Blandad anatomi/fysiologi',   file: './data/lakare_anatomi_fysiologi.json' },
+  ]},
+  // Fysioterapeut-ämnena ligger alla i en delad fil (data/fysioterapeut.json),
+  // åtskilda av postens topic-fält → varje rad filtreras via `topic`.
+  { name: 'Fysioterapeut', topics: [
+    { label: 'Axel/skulderkomplex',         file: './data/fysioterapeut.json', topic: 'fysio_axel_skulder' },
+    { label: 'Armbåge & underarm',          file: './data/fysioterapeut.json', topic: 'fysio_armbage_underarm' },
+    { label: 'Hand & handled',              file: './data/fysioterapeut.json', topic: 'fysio_hand_handled' },
+    { label: 'Höft & bäcken',               file: './data/fysioterapeut.json', topic: 'fysio_hoft_backen' },
+    { label: 'Knä',                         file: './data/fysioterapeut.json', topic: 'fysio_kna' },
+    { label: 'Fot & fotled',                file: './data/fysioterapeut.json', topic: 'fysio_fot_fotled' },
+    { label: 'Columna/ryggrad',             file: './data/fysioterapeut.json', topic: 'fysio_columna' },
+    { label: 'Nervsystemet',                file: './data/fysioterapeut.json', topic: 'fysio_nervsystemet' },
+  ]},
 ]
 
 const ORDLISTA_URL = './data/ordlista.json'
 
-/** Räknar kort i en datafil → {total, normal, hard} (difficulty 'Hard' = svår). */
-function countCards(file) {
+/**
+ * Räknar kort i en datafil → {total, normal, hard} (difficulty 'Hard' = svår).
+ * @param {string} file   Sökväg till JSON-fil.
+ * @param {string} [topic] Om satt: räkna bara poster med q.topic === topic
+ *   (flera ämnen kan dela en fil, t.ex. data/fysioterapeut.json).
+ */
+function countCards(file, topic) {
   return fetch(file).then(r => r.json()).then(data => {
-    const items = Array.isArray(data) ? data : data.questions
+    let items = Array.isArray(data) ? data : data.questions
+    if (topic) items = items.filter(q => q.topic === topic)
     const normal = items.filter(q => q.difficulty !== 'Hard').length
     return { total: items.length, normal, hard: items.length - normal }
   })
@@ -134,7 +157,7 @@ async function loadStats() {
 
     // Hämta alla ämnens antal parallellt och bygg en grupp (med delsumma) per utbildning.
     const groups = await Promise.all(EDUCATIONS.map(async edu => {
-      const rows = await Promise.all(edu.topics.map(async t => ({ ...t, ...(await countCards(t.file)) })))
+      const rows = await Promise.all(edu.topics.map(async t => ({ ...t, ...(await countCards(t.file, t.topic)) })))
       const sub = rows.reduce((a, r) => ({
         total: a.total + r.total, normal: a.normal + r.normal, hard: a.hard + r.hard,
       }), { total: 0, normal: 0, hard: 0 })

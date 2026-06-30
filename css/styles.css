@@ -1404,6 +1404,37 @@ body:has(#quiz:not(.hidden)) {
   border-bottom: 2px solid rgba(16, 185, 129, 0.12);
 }
 
+/* Mobil: tabellen blev för bred. Krymp cellpadding, font och rubrikernas
+   versalspärr, och låt sifferkolumnerna bli så smala som innehållet kräver
+   så ämneskolumnen får utrymmet och radbryter i stället för att tränga ut. */
+@media (max-width: 640px) {
+  .stats-table {
+    font-size: 0.82rem;
+    table-layout: fixed;
+  }
+  .stats-table th,
+  .stats-table td {
+    padding: 8px 5px;
+    word-break: break-word;
+  }
+  .stats-table th:first-child,
+  .stats-table td:first-child {
+    padding-left: 2px;
+  }
+  .stats-table th {
+    font-size: 0.62rem;
+    letter-spacing: 0.2px;
+  }
+  /* Sifferkolumnerna: smala, fast bredd. Ämneskolumnen tar resten. */
+  .stats-table th:not(:first-child),
+  .stats-table td:not(:first-child) {
+    width: 3.4rem;
+  }
+  .stats-edu-row th {
+    padding: 14px 2px 5px 2px;
+  }
+}
+
 .glossary-count {
   margin: 0 0 28px 0;
   font-size: 0.92rem;

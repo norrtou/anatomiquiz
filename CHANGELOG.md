@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.107
+- **Frågestatistiken på Om-sidan uppdaterad.** Tabellen "Antal frågor" listade bara Allmänt, Arbetsterapeut och Sjuksköterska. Nu ingår även **Läkare** och hela **Fysioterapeut** (8 ämnen: axel, armbåge, hand & handled, höft, knä, fot, columna, nervsystemet), plus de två AT-bildämnena Handens ben och Handens leder. Fysio-ämnena delar en datafil (`data/fysioterapeut.json`), så `countCards()` tar nu ett valfritt `topic`-filter och räknar per ämne via `topic`-fältet.
+- **Mobil-layout för statistiktabellen.** Tabellen blev för bred på små skärmar. Ny `@media (max-width: 640px)`: mindre cellpadding, kompaktare rubriker (mindre versalspärr/font), `table-layout: fixed` med smala sifferkolumner så ämneskolumnen får utrymmet och radbryter i stället för att tränga ut sidan.
+- styles.css-cachebustern enad sitewide → 0.7.26 (var 0.7.17/0.7.25) så CSS-fixen når besökarna; info.js-cachebuster → 0.9.107.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.107.
+
 ## 0.9.106
 - **Om Anatomiquiz: kontaktsektionen flyttad upp.** "Rapportera fel & synpunkter" ligger nu före "Omfattning och versionshistorik" (tabellen med antal frågor), så kontaktvägen syns tidigare.
 - **Inbjudan till ämnesförslag.** Kontaktintron nämner nu att förslag på quiz-ämnen som saknas tas emot gärna, och formulärets typ-meny har fått alternativet "Förslag på ämne".
