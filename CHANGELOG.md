@@ -1,5 +1,16 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.97
+- **Fysioterapeut, ämne 2/14: Armbåge & underarm (100 MC-frågor).** Byggt enligt `UTBILDNINGAR_REGLER.md` och linsen (struktur → biomekanik/funktion → innervation → vanlig skada → åldersutveckling). Täcker armbågens tre delleder, ben/ligament, flexorer/extensorer/pronatorer/supinatorer, pron-/supinationsmekanik, bärvinkel, n. medianus/ulnaris/radialis (inkl. interosseus-grenar och inklämningar), vanliga skador (lateral/medial epikondylit, olekranonbursit, pulled elbow, suprakondylär fraktur, radiushuvudsfraktur, Colles/Smith, Monteggia/Galeazzi) samt åldersaspekter (CRITOE-ossifikation, artros). Källor: Bojsen-Møller, Sobotta, Neumann, Magee. Tillagt i `data/fysioterapeut.json` (`fysio_armbage_underarm`), option avkommenterad med `(MC)`-tagg.
+- **Fix:** fysio-ämnenas option-etiketter får nu `(MC)`-taggen som start-knappen kräver (utan tagg gråades "Starta quiz" trots att frågor fanns). Gällde Axel/skulderkomplex i 0.9.96 och framåt.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.97.
+
+## 0.9.96
+- **Fysioterapeut-quizet startar: Axel/skulderkomplex (100 MC-frågor).** Första ämnet i fysioterapeututbildningen byggt enligt `UTBILDNINGAR_REGLER.md` och dess lins (struktur → biomekanik/funktion → innervation → vanlig skada → åldersutveckling). 100 unika MC-frågor som täcker glenohumeral-/AC-/SC-/skapulotorakalled, rotatorkuffen, skapulohumeral rytm, plexus brachialis och nervförsörjning, vanliga skador (luxation/Bankart/Hill-Sachs/SLAP/impingement/kuffruptur/AC-separation/kalkaxel/TOS) samt åldersrelaterade tillstånd (frozen shoulder, degeneration). Källor: Bojsen-Møller (Rörelseapparatens anatomi), Sobotta, Neumann (Kinesiology of the Musculoskeletal System), Magee (Orthopedic Physical Assessment).
+  - Ny datafil `data/fysioterapeut.json` (alla fysio-ämnen samlas här, taggade per `fysio_*`-topic). `js/app.js` `getQuestionsPath()` routar alla `fysio_*` → filen; exakt topic-match sköts av default-grenen.
+  - `#topic`-optionen `fysio_axel_skulder` avkommenterad (syns nu → fysioterapeut gråas inte längre). Övriga 13 fysio-ämnen ligger kvar som utkommenterad scaffold tills de byggs.
+- VERSION/APP_VERSION/app.js-cachebuster → 0.9.96.
+
 ## 0.9.95
 - Teckenförklaringen under ämnesväljaren något mindre på mobil (0.62rem, var 0.7rem).
 - VERSION/APP_VERSION/app.js-cachebuster → 0.9.95; styles.css → 0.7.25.
