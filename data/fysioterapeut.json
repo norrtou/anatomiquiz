@@ -10098,5 +10098,1405 @@
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
     "source": "Eget bildmaterial (Anatomiquiz)"
+  },
+  {
+    "id": "fys_nerv_1",
+    "type": "mc",
+    "prompt": "Vad omfattar det centrala nervsystemet (CNS)?",
+    "correct": "Hjärnan och ryggmärgen",
+    "distractors": [
+      "Kranialnerver och spinalnerver",
+      "De autonoma ganglierna",
+      "Endast hjärnan"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_2",
+    "type": "mc",
+    "prompt": "Vad räknas till det perifera nervsystemet (PNS)?",
+    "correct": "Kranial- och spinalnerver samt perifera ganglier",
+    "distractors": [
+      "Hjärnan och ryggmärgen",
+      "Endast ryggmärgen",
+      "Storhjärnsbarken"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_3",
+    "type": "mc",
+    "prompt": "Vilka delar har en typisk nervcell (neuron)?",
+    "correct": "Cellkropp (soma), dendriter och axon",
+    "distractors": [
+      "Endast en cellkropp utan utskott",
+      "Cellkropp och två kärnor",
+      "Bara axon och myelin"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_4",
+    "type": "mc",
+    "prompt": "Vilken cell bildar myelin runt axoner i det perifera nervsystemet?",
+    "correct": "Schwann-cellen",
+    "distractors": [
+      "Oligodendrocyten",
+      "Astrocyten",
+      "Mikroglian"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Purves, Neuroscience"
+  },
+  {
+    "id": "fys_nerv_5",
+    "type": "mc",
+    "prompt": "Vilken cell bildar myelin i det centrala nervsystemet?",
+    "correct": "Oligodendrocyten",
+    "distractors": [
+      "Schwann-cellen",
+      "Satellitcellen",
+      "Ependymcellen"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Purves, Neuroscience"
+  },
+  {
+    "id": "fys_nerv_6",
+    "type": "mc",
+    "prompt": "Vad är funktionen hos myelinskidan?",
+    "correct": "Att öka nervimpulsens ledningshastighet (saltatorisk ledning)",
+    "distractors": [
+      "Att producera signalsubstanser",
+      "Att bromsa impulsen",
+      "Att lagra kalcium"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_7",
+    "type": "mc",
+    "prompt": "Vad kallas avbrotten i myelinet där aktionspotentialen \"hoppar\" fram?",
+    "correct": "Ranviers noder",
+    "distractors": [
+      "Synapsklyftor",
+      "Dendritryggar",
+      "Nisslkroppar"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_8",
+    "type": "mc",
+    "prompt": "Vad innehåller den grå substansen i nervsystemet huvudsakligen?",
+    "correct": "Nervcellkroppar",
+    "distractors": [
+      "Myeliniserade axon",
+      "Blodkärl enbart",
+      "Ledvätska"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "FitzGerald, Clinical Neuroanatomy and Neuroscience"
+  },
+  {
+    "id": "fys_nerv_9",
+    "type": "mc",
+    "prompt": "Vad utgör den vita substansen?",
+    "correct": "Myeliniserade nervtrådar (axon)",
+    "distractors": [
+      "Nervcellkroppar",
+      "Gliaceller enbart",
+      "Synapser"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "FitzGerald, Clinical Neuroanatomy and Neuroscience"
+  },
+  {
+    "id": "fys_nerv_10",
+    "type": "mc",
+    "prompt": "Vilka är hjärnstammens tre huvuddelar?",
+    "correct": "Mesencefalon (mitthjärnan), pons (bryggan) och medulla oblongata (förlängda märgen)",
+    "distractors": [
+      "Thalamus, hypothalamus och epifys",
+      "Frontal-, parietal- och temporallob",
+      "Storhjärna, lillhjärna och ryggmärg"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "FitzGerald, Clinical Neuroanatomy and Neuroscience"
+  },
+  {
+    "id": "fys_nerv_11",
+    "type": "mc",
+    "prompt": "Vilken del av hjärnan ansvarar främst för koordination, balans och finjustering av rörelser?",
+    "correct": "Cerebellum (lillhjärnan)",
+    "distractors": [
+      "Hypothalamus",
+      "Medulla oblongata",
+      "Hippocampus"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "FitzGerald, Clinical Neuroanatomy and Neuroscience"
+  },
+  {
+    "id": "fys_nerv_12",
+    "type": "mc",
+    "prompt": "I vilken hjärnvindling ligger den primära motoriska barken?",
+    "correct": "Gyrus precentralis (i frontalloben)",
+    "distractors": [
+      "Gyrus postcentralis (i parietalloben)",
+      "Occipitalpolen",
+      "Gyrus temporalis superior"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "FitzGerald, Clinical Neuroanatomy and Neuroscience"
+  },
+  {
+    "id": "fys_nerv_13",
+    "type": "mc",
+    "prompt": "Var ligger den primära somatosensoriska barken?",
+    "correct": "I gyrus postcentralis (parietalloben)",
+    "distractors": [
+      "I gyrus precentralis (frontalloben)",
+      "I occipitalloben",
+      "I lillhjärnan"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "FitzGerald, Clinical Neuroanatomy and Neuroscience"
+  },
+  {
+    "id": "fys_nerv_14",
+    "type": "mc",
+    "prompt": "Vilken lob bearbetar främst synintryck?",
+    "correct": "Occipitalloben",
+    "distractors": [
+      "Frontalloben",
+      "Temporalloben",
+      "Parietalloben"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "FitzGerald, Clinical Neuroanatomy and Neuroscience"
+  },
+  {
+    "id": "fys_nerv_15",
+    "type": "mc",
+    "prompt": "Hur är ryggmärgens grå substans organiserad?",
+    "correct": "Som ett fjärilsformat område med fram- (motoriska) och bakhorn (sensoriska)",
+    "distractors": [
+      "Som ett yttre skikt runt vit substans",
+      "Som spridda öar utan mönster",
+      "Den saknas i ryggmärgen"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "FitzGerald, Clinical Neuroanatomy and Neuroscience"
+  },
+  {
+    "id": "fys_nerv_16",
+    "type": "mc",
+    "prompt": "Var ligger de nedre motorneuronens cellkroppar i ryggmärgen?",
+    "correct": "I framhornet (ventralhornet)",
+    "distractors": [
+      "I bakhornet (dorsalhornet)",
+      "I den vita substansen",
+      "I ryggmärgskanalen"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "FitzGerald, Clinical Neuroanatomy and Neuroscience"
+  },
+  {
+    "id": "fys_nerv_17",
+    "type": "mc",
+    "prompt": "Vilka tre hjärnhinnor omger CNS, utifrån och in?",
+    "correct": "Dura mater, arachnoidea och pia mater",
+    "distractors": [
+      "Pia mater, dura mater och arachnoidea",
+      "Epineurium, perineurium och endoneurium",
+      "Kortex, märg och bark"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "FitzGerald, Clinical Neuroanatomy and Neuroscience"
+  },
+  {
+    "id": "fys_nerv_18",
+    "type": "mc",
+    "prompt": "I vilket rum cirkulerar cerebrospinalvätskan (likvor)?",
+    "correct": "I subaraknoidalrummet och hjärnans ventriklar",
+    "distractors": [
+      "I epiduralrummet enbart",
+      "Inuti axonen",
+      "I blodbanan"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "FitzGerald, Clinical Neuroanatomy and Neuroscience"
+  },
+  {
+    "id": "fys_nerv_19",
+    "type": "mc",
+    "prompt": "Hur många par kranialnerver finns det?",
+    "correct": "12 par",
+    "distractors": [
+      "31 par",
+      "8 par",
+      "10 par"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "FitzGerald, Clinical Neuroanatomy and Neuroscience"
+  },
+  {
+    "id": "fys_nerv_20",
+    "type": "mc",
+    "prompt": "Vad är vilomembranpotentialen i en typisk nervcell ungefär?",
+    "correct": "Cirka −70 mV",
+    "distractors": [
+      "Cirka 0 mV",
+      "Cirka +30 mV",
+      "Cirka −20 mV"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_21",
+    "type": "mc",
+    "prompt": "Vad orsakar depolarisationsfasen i en aktionspotential?",
+    "correct": "Inflöde av natriumjoner (Na⁺) genom spänningsstyrda kanaler",
+    "distractors": [
+      "Utflöde av natrium",
+      "Inflöde av klorid",
+      "Utflöde av kalcium"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_22",
+    "type": "mc",
+    "prompt": "Vad orsakar repolarisationen efter en aktionspotentials topp?",
+    "correct": "Utflöde av kaliumjoner (K⁺)",
+    "distractors": [
+      "Fortsatt inflöde av natrium",
+      "Inflöde av kalium",
+      "Utflöde av natrium via pumpen enbart"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_23",
+    "type": "mc",
+    "prompt": "Vad innebär att aktionspotentialen följer \"allt-eller-inget\"-principen?",
+    "correct": "Antingen utlöses en fullständig aktionspotential eller ingen alls",
+    "distractors": [
+      "Den blir starkare ju större stimulus",
+      "Den kan vara halv",
+      "Den fortplantas bara baklänges"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_24",
+    "type": "mc",
+    "prompt": "Hur överförs signalen oftast mellan två neuron i en kemisk synaps?",
+    "correct": "Via signalsubstanser (neurotransmittorer) som frisätts i synapsklyftan",
+    "distractors": [
+      "Genom direkt elektrisk kontakt alltid",
+      "Via blodet",
+      "Genom myelinet"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_25",
+    "type": "mc",
+    "prompt": "Vilken signalsubstans frisätts vid den neuromuskulära förbindelsen (motoriska ändplattan)?",
+    "correct": "Acetylkolin",
+    "distractors": [
+      "Dopamin",
+      "Serotonin",
+      "Noradrenalin"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_26",
+    "type": "mc",
+    "prompt": "Vad menas med en motorisk enhet?",
+    "correct": "Ett motorneuron och alla muskelfibrer det innerverar",
+    "distractors": [
+      "En enda muskelfiber",
+      "En grupp sensoriska nerver",
+      "En reflexbåge"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_27",
+    "type": "mc",
+    "prompt": "Vilken bana leder de viljemässiga motoriska signalerna från barken till ryggmärgen?",
+    "correct": "Tractus corticospinalis (pyramidbanan)",
+    "distractors": [
+      "Tractus spinothalamicus",
+      "Baksträngsbanan",
+      "Tractus spinocerebellaris"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "FitzGerald, Clinical Neuroanatomy and Neuroscience"
+  },
+  {
+    "id": "fys_nerv_28",
+    "type": "mc",
+    "prompt": "Var korsar huvuddelen av pyramidbanans fibrer till motsatt sida?",
+    "correct": "I förlängda märgen (decussatio pyramidum i medulla oblongata)",
+    "distractors": [
+      "I ryggmärgens varje segment",
+      "I thalamus",
+      "Den korsar aldrig"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "FitzGerald, Clinical Neuroanatomy and Neuroscience"
+  },
+  {
+    "id": "fys_nerv_29",
+    "type": "mc",
+    "prompt": "Vilken sensorisk bana leder finberöring, vibration och ledkänsla (proprioception)?",
+    "correct": "Baksträngsbanan – lemniscus medialis-systemet",
+    "distractors": [
+      "Tractus spinothalamicus",
+      "Tractus corticospinalis",
+      "Tractus rubrospinalis"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "FitzGerald, Clinical Neuroanatomy and Neuroscience"
+  },
+  {
+    "id": "fys_nerv_30",
+    "type": "mc",
+    "prompt": "Vilken bana leder smärta och temperatur?",
+    "correct": "Tractus spinothalamicus",
+    "distractors": [
+      "Baksträngsbanan",
+      "Tractus corticospinalis",
+      "Tractus spinocerebellaris"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "FitzGerald, Clinical Neuroanatomy and Neuroscience"
+  },
+  {
+    "id": "fys_nerv_31",
+    "type": "mc",
+    "prompt": "Var korsar tractus spinothalamicus (smärta/temperatur) till motsatt sida?",
+    "correct": "Redan i ryggmärgen, nära inträdessegmentet",
+    "distractors": [
+      "I förlängda märgen",
+      "I thalamus",
+      "Den korsar aldrig"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "FitzGerald, Clinical Neuroanatomy and Neuroscience"
+  },
+  {
+    "id": "fys_nerv_32",
+    "type": "mc",
+    "prompt": "Vilken är hjärnans viktiga \"omkopplingsstation\" för nästan all sensorisk information på väg till barken?",
+    "correct": "Thalamus",
+    "distractors": [
+      "Hypothalamus",
+      "Lillhjärnan",
+      "Hippocampus"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "FitzGerald, Clinical Neuroanatomy and Neuroscience"
+  },
+  {
+    "id": "fys_nerv_33",
+    "type": "mc",
+    "prompt": "Vilka komponenter ingår i en enkel reflexbåge, i rätt ordning?",
+    "correct": "Receptor → afferent (sensorisk) nerv → centrum → efferent (motorisk) nerv → effektor",
+    "distractors": [
+      "Effektor → motorisk nerv → receptor → centrum",
+      "Receptor → motorisk nerv → centrum → sensorisk nerv",
+      "Centrum → receptor → effektor → afferent nerv"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_34",
+    "type": "mc",
+    "prompt": "Patellarreflexen (knäreflexen) är ett exempel på vilken typ av reflex?",
+    "correct": "En monosynaptisk sträckreflex",
+    "distractors": [
+      "En polysynaptisk flexorreflex",
+      "En autonom reflex",
+      "En betingad reflex"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_35",
+    "type": "mc",
+    "prompt": "Vilken receptor känner av muskelns längd och utlöser sträckreflexen?",
+    "correct": "Muskelspolen",
+    "distractors": [
+      "Golgi senorgan",
+      "Pacinikroppen",
+      "Fria nervändar"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_36",
+    "type": "mc",
+    "prompt": "Vad känner Golgi senorgan av?",
+    "correct": "Spänning (kraft) i senan",
+    "distractors": [
+      "Muskelns längd",
+      "Temperatur",
+      "Ledvinkel enbart"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_37",
+    "type": "mc",
+    "prompt": "Vad menas med ett övre motorneuron (UMN)?",
+    "correct": "En neuron från motorbarken/hjärnstammen ned till ryggmärgen, som styr det nedre motorneuronet",
+    "distractors": [
+      "Neuronet från ryggmärgens framhorn ut till muskeln",
+      "En sensorisk neuron",
+      "En autonom neuron"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_38",
+    "type": "mc",
+    "prompt": "Vad menas med ett nedre motorneuron (LMN)?",
+    "correct": "Neuronet från ryggmärgens framhorn (eller hjärnstamskärna) ut till muskeln",
+    "distractors": [
+      "Neuronet från barken till ryggmärgen",
+      "En sensorisk bakhornsneuron",
+      "En interneuron i hjärnan"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_39",
+    "type": "mc",
+    "prompt": "Vad är typiskt för en övre motorneuronlesion (UMN)?",
+    "correct": "Spasticitet, ökade reflexer (hyperreflexi) och positivt Babinski-tecken",
+    "distractors": [
+      "Slapp pares och uttalad muskelatrofi",
+      "Försvunna reflexer och fascikulationer",
+      "Enbart känselbortfall"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_40",
+    "type": "mc",
+    "prompt": "Vad är typiskt för en nedre motorneuronlesion (LMN)?",
+    "correct": "Slapp (hypoton) pares, försvagade/utsläckta reflexer, uttalad muskelatrofi och fascikulationer",
+    "distractors": [
+      "Spasticitet och hyperreflexi",
+      "Positivt Babinski och klonus",
+      "Ökad muskeltonus utan svaghet"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_41",
+    "type": "mc",
+    "prompt": "Vad innebär ett positivt Babinski-tecken hos en vuxen?",
+    "correct": "Stortån böjs uppåt (dorsalflekteras) vid stimulering av fotsulan – tecken på UMN-skada",
+    "distractors": [
+      "Stortån böjs nedåt – ett normalfynd",
+      "Hela foten blir känsellös",
+      "Tecken på nedre motorneuronskada"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_42",
+    "type": "mc",
+    "prompt": "Vad är spasticitet?",
+    "correct": "Hastighetsberoende ökad muskeltonus vid passiv töjning, typiskt vid UMN-skada",
+    "distractors": [
+      "Slapp muskulatur utan tonus",
+      "Smärta vid vila",
+      "Snabb muskelförtvining"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_43",
+    "type": "mc",
+    "prompt": "Vad är klonus?",
+    "correct": "Rytmiska, ofrivilliga muskelryckningar vid snabb töjning, ett tecken på UMN-skada",
+    "distractors": [
+      "En enstaka muskelryckning vid LMN-skada",
+      "Total avsaknad av reflexer",
+      "En sensorisk störning"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_44",
+    "type": "mc",
+    "prompt": "Vad är fascikulationer, som ses vid LMN-skada?",
+    "correct": "Spontana, synliga små muskelryckningar från enskilda motoriska enheter",
+    "distractors": [
+      "Stora viljemässiga rörelser",
+      "Hastighetsberoende tonusökning",
+      "Känselbortfall"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_45",
+    "type": "mc",
+    "prompt": "Varför ger en LMN-skada uttalad muskelatrofi medan en UMN-skada oftast inte gör det (tidigt)?",
+    "correct": "LMN-skadan bryter muskelns nervförsörjning (denervation); vid UMN-skada är muskeln fortfarande innerverad",
+    "distractors": [
+      "UMN-skadan klipper av muskelns blodkärl",
+      "LMN-muskler får för mycket nervsignaler",
+      "Det finns ingen skillnad i atrofi"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_46",
+    "type": "mc",
+    "prompt": "Vilken typ av motorneuronlesion ger en stroke i motorbarken eller pyramidbanan?",
+    "correct": "Övre motorneuronlesion (UMN)",
+    "distractors": [
+      "Nedre motorneuronlesion (LMN)",
+      "En ren sensorisk lesion",
+      "En autonom lesion"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_47",
+    "type": "mc",
+    "prompt": "Varför ger en stroke i ena hjärnhalvan oftast symtom på motsatt (kontralateral) sida av kroppen?",
+    "correct": "Pyramidbanan korsar till motsatt sida i förlängda märgen",
+    "distractors": [
+      "Nerverna korsar aldrig",
+      "Symtomen kommer alltid på samma sida",
+      "Ryggmärgen styr båda sidor lika"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_48",
+    "type": "mc",
+    "prompt": "En perifer nervskada (t.ex. avskuren nerv) ger vilken typ av motorbild?",
+    "correct": "Nedre motorneuronbild – slapp pares, areflexi och atrofi i nervens muskler",
+    "distractors": [
+      "Övre motorneuronbild med spasticitet",
+      "Positivt Babinski",
+      "Hyperreflexi"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_49",
+    "type": "mc",
+    "prompt": "Vad menas med plegi respektive pares?",
+    "correct": "Plegi = fullständig förlamning; pares = partiell (försvagad) muskelkraft",
+    "distractors": [
+      "Plegi = lätt svaghet; pares = total förlamning",
+      "Båda betyder känselbortfall",
+      "Plegi gäller bara armar, pares bara ben"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_50",
+    "type": "mc",
+    "prompt": "Vad innebär hemiplegi?",
+    "correct": "Förlamning av ena kroppshalvan (arm och ben på samma sida)",
+    "distractors": [
+      "Förlamning av båda benen",
+      "Förlamning av alla fyra extremiteter",
+      "Förlamning av bålen enbart"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_51",
+    "type": "mc",
+    "prompt": "Vad innebär paraplegi?",
+    "correct": "Förlamning av båda benen (och ev. nedre bålen)",
+    "distractors": [
+      "Förlamning av ena kroppshalvan",
+      "Förlamning av alla fyra extremiteter",
+      "Förlamning av en arm"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_52",
+    "type": "mc",
+    "prompt": "Vad innebär tetraplegi (kvadriplegi)?",
+    "correct": "Förlamning av alla fyra extremiteterna, vid hög ryggmärgsskada (cervikalt)",
+    "distractors": [
+      "Förlamning av båda benen",
+      "Förlamning av ena kroppshalvan",
+      "Förlamning av enbart händerna"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_53",
+    "type": "mc",
+    "prompt": "En komplett ryggmärgsskada på cervikal nivå ger typiskt?",
+    "correct": "Tetraplegi med bortfall under skadenivån",
+    "distractors": [
+      "Endast lätt benförsvagning",
+      "Enbart känselbortfall i händerna",
+      "Symtom bara på ena sidan"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_54",
+    "type": "mc",
+    "prompt": "Vilken är skillnaden mellan det somatiska och det autonoma nervsystemet?",
+    "correct": "Det somatiska styr viljemässig skelettmuskulatur; det autonoma styr ofrivilliga funktioner (hjärta, körtlar, glatt muskulatur)",
+    "distractors": [
+      "Det somatiska styr inre organ, det autonoma skelettmuskler",
+      "De gör exakt samma sak",
+      "Det autonoma är bara sensoriskt"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_55",
+    "type": "mc",
+    "prompt": "Vilka är det autonoma nervsystemets två huvuddelar?",
+    "correct": "Det sympatiska och det parasympatiska nervsystemet",
+    "distractors": [
+      "Det motoriska och det sensoriska",
+      "Det centrala och det perifera",
+      "Det viljemässiga och det reflexstyrda"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_56",
+    "type": "mc",
+    "prompt": "Vad dominerar det sympatiska nervsystemet (\"fight or flight\")?",
+    "correct": "Det förbereder kroppen för aktivitet – ökar puls och vidgar luftvägar",
+    "distractors": [
+      "Det främjar vila och matsmältning",
+      "Det sänker pulsen kraftigt",
+      "Det styr viljemässig muskelkraft"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_57",
+    "type": "mc",
+    "prompt": "Vad främjar det parasympatiska nervsystemet (\"rest and digest\")?",
+    "correct": "Vila, matsmältning och energisparande – sänker bl.a. pulsen",
+    "distractors": [
+      "Stresspåslag och ökad puls",
+      "Viljemässig rörelse",
+      "Smärtledning"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_58",
+    "type": "mc",
+    "prompt": "Varifrån utgår de sympatiska nervtrådarna från ryggmärgen?",
+    "correct": "Från bröst- och ländregionen (torakolumbalt, ungefär T1–L2)",
+    "distractors": [
+      "Från hjärnstam och korsrygg (kraniosakralt)",
+      "Endast från halsryggen",
+      "Endast från svanskotorna"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_59",
+    "type": "mc",
+    "prompt": "Var har det parasympatiska nervsystemet sitt ursprung?",
+    "correct": "Kraniosakralt – från vissa kranialnerver (bl.a. vagus) och korsryggssegment (S2–S4)",
+    "distractors": [
+      "Torakolumbalt (T1–L2)",
+      "Enbart i lillhjärnan",
+      "Enbart i halsryggen"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_60",
+    "type": "mc",
+    "prompt": "Vilken kranialnerv är den viktigaste parasympatiska nerven till inre organ?",
+    "correct": "N. vagus (kranialnerv X)",
+    "distractors": [
+      "N. opticus (II)",
+      "N. trigeminus (V)",
+      "N. accessorius (XI)"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "FitzGerald, Clinical Neuroanatomy and Neuroscience"
+  },
+  {
+    "id": "fys_nerv_61",
+    "type": "mc",
+    "prompt": "Vid en stroke – vad innebär ischemisk stroke?",
+    "correct": "En blodpropp eller förträngning stänger av blodflödet till ett hjärnområde",
+    "distractors": [
+      "En blödning i hjärnan",
+      "En infektion i hjärnhinnorna",
+      "En tumör som trycker på hjärnan"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_62",
+    "type": "mc",
+    "prompt": "Vad står AKUT-testet (motsv. FAST) för vid misstänkt stroke?",
+    "correct": "Tecken som ansiktsförlamning, armsvaghet och talsvårigheter – och att larma akut",
+    "distractors": [
+      "En metod för att mäta blodtryck",
+      "En reflexundersökning av knät",
+      "Ett test för balans i örat"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_63",
+    "type": "mc",
+    "prompt": "Vad kännetecknar en skada i lillhjärnan (cerebellär lesion)?",
+    "correct": "Bristande koordination (ataxi), dysmetri och intentionstremor",
+    "distractors": [
+      "Spasticitet och hyperreflexi",
+      "Total förlamning av ena sidan",
+      "Enbart känselbortfall"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_64",
+    "type": "mc",
+    "prompt": "Vad är ataxi?",
+    "correct": "Störd koordination av rörelser, t.ex. ostadig och bredspårig gång",
+    "distractors": [
+      "Total muskelförlamning",
+      "Ökad muskeltonus",
+      "Förlust av all känsel"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_65",
+    "type": "mc",
+    "prompt": "Vilken struktur är drabbad vid Parkinsons sjukdom?",
+    "correct": "Dopaminproducerande celler i basala ganglierna (substantia nigra)",
+    "distractors": [
+      "Lillhjärnans bark",
+      "De perifera nerverna",
+      "Ryggmärgens framhorn"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_66",
+    "type": "mc",
+    "prompt": "Vilken symtomtriad är typisk för Parkinsons sjukdom?",
+    "correct": "Vilotremor, rigiditet och bradykinesi (rörelsefattigdom)",
+    "distractors": [
+      "Spasticitet, hyperreflexi och Babinski",
+      "Ataxi, dysmetri och nystagmus",
+      "Slapp pares, atrofi och fascikulationer"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_67",
+    "type": "mc",
+    "prompt": "Vad kännetecknar multipel skleros (MS)?",
+    "correct": "Skovvis demyelinisering i det centrala nervsystemet",
+    "distractors": [
+      "Demyelinisering enbart i perifera nerver",
+      "Dopaminbrist i basala ganglierna",
+      "Avslitna muskelsenor"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_68",
+    "type": "mc",
+    "prompt": "Vad kännetecknar Guillain-Barrés syndrom?",
+    "correct": "Akut, ofta uppåtstigande demyelinisering av perifera nerver med slapp svaghet",
+    "distractors": [
+      "Långsam demyelinisering i CNS",
+      "Dopaminbrist",
+      "En blödning i hjärnan"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_69",
+    "type": "mc",
+    "prompt": "Vad är afasi?",
+    "correct": "En störd förmåga att förstå eller producera språk, ofta efter skada i vänster hjärnhalva",
+    "distractors": [
+      "Oförmåga att svälja",
+      "Förlust av balans",
+      "Dubbelseende"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_70",
+    "type": "mc",
+    "prompt": "Vad är neglekt (neglect) efter en stroke?",
+    "correct": "Bristande uppmärksamhet på ena kroppshalvan/rummet, ofta vänster sida vid höger hjärnskada",
+    "distractors": [
+      "Total blindhet",
+      "Förlamning av båda benen",
+      "Oförmåga att tala"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_71",
+    "type": "mc",
+    "prompt": "Vad är apraxi?",
+    "correct": "Svårighet att utföra inlärda, viljemässiga rörelser trots bevarad kraft och känsel",
+    "distractors": [
+      "Förlamning på grund av muskelskada",
+      "Förlust av känsel",
+      "Ofrivilliga ryckningar"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_72",
+    "type": "mc",
+    "prompt": "Vad är neuroplasticitet?",
+    "correct": "Nervsystemets förmåga att förändras och omorganiseras, t.ex. vid inlärning och efter skada",
+    "distractors": [
+      "Att nerver aldrig kan förändras",
+      "Att muskler byggs om",
+      "Att ben läker"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_73",
+    "type": "mc",
+    "prompt": "Varför är neuroplasticitet central för fysioterapeutisk neurorehabilitering?",
+    "correct": "Upprepad, uppgiftsspecifik träning kan driva omorganisation och återvinning av funktion",
+    "distractors": [
+      "Den gör all träning onödig",
+      "Den gäller bara barn",
+      "Den påverkar bara muskler, inte hjärnan"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_74",
+    "type": "mc",
+    "prompt": "Varför kan perifera nerver återhämta sig bättre än centrala efter skada?",
+    "correct": "Perifera axon kan regenerera längs Schwann-cellernas banor; i CNS hämmas regenerationen",
+    "distractors": [
+      "Centrala nerver läker alltid snabbast",
+      "Perifera nerver saknar axon",
+      "Det finns ingen skillnad"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_75",
+    "type": "mc",
+    "prompt": "Vad är proprioception?",
+    "correct": "Sinnet för kroppsdelarnas läge och rörelse (led- och muskelkänsla)",
+    "distractors": [
+      "Förmågan att känna smärta",
+      "Förmågan att se",
+      "Förmågan att höra"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_76",
+    "type": "mc",
+    "prompt": "Hur testas baksträngsfunktion (proprioception/vibration) kliniskt?",
+    "correct": "Med ledlägeskänsla och stämgaffel (vibrationssinne)",
+    "distractors": [
+      "Med nål och temperaturrör",
+      "Med reflexhammare enbart",
+      "Med syntavla"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_77",
+    "type": "mc",
+    "prompt": "Vilka tre system samverkar för balans och hållning?",
+    "correct": "Syn, balansorganet (vestibulära systemet) och proprioception",
+    "distractors": [
+      "Hörsel, smak och lukt",
+      "Andning, cirkulation och matsmältning",
+      "Endast synen"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_78",
+    "type": "mc",
+    "prompt": "Var sitter balansorganet (det vestibulära systemet)?",
+    "correct": "I innerörat (båggångar och otolitorgan)",
+    "distractors": [
+      "I lillhjärnan",
+      "I ögat",
+      "I ryggmärgen"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "FitzGerald, Clinical Neuroanatomy and Neuroscience"
+  },
+  {
+    "id": "fys_nerv_79",
+    "type": "mc",
+    "prompt": "Vad är en transitorisk ischemisk attack (TIA)?",
+    "correct": "Övergående strokeliknande symtom som går tillbaka, ofta inom kort tid",
+    "distractors": [
+      "En permanent förlamning",
+      "En hjärnblödning",
+      "En epileptisk kramp"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_80",
+    "type": "mc",
+    "prompt": "Vad är en typisk gångavvikelse efter stroke med spastisk benpares?",
+    "correct": "Cirkumduktion – benet förs i en båge utåt eftersom knät/foten inte böjs normalt",
+    "distractors": [
+      "Vaggande ankgång",
+      "Bredspårig ataktisk gång",
+      "Stäppgång på båda ben"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_81",
+    "type": "mc",
+    "prompt": "Hur fortleds en aktionspotential snabbare?",
+    "correct": "Med tjockare axon och myelin (saltatorisk ledning)",
+    "distractors": [
+      "Med tunnare omyeliniserade axon",
+      "Genom att sänka temperaturen",
+      "Genom färre jonkanaler"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_82",
+    "type": "mc",
+    "prompt": "Vad gör natrium-kaliumpumpen (Na⁺/K⁺-ATPas) i nervcellen?",
+    "correct": "Pumpar natrium ut och kalium in för att upprätthålla jongradienterna",
+    "distractors": [
+      "Pumpar natrium in och kalium ut",
+      "Frisätter signalsubstanser",
+      "Bildar myelin"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_83",
+    "type": "mc",
+    "prompt": "Vad är en signalsubstans (neurotransmittor)?",
+    "correct": "En kemisk budbärare som överför signalen mellan neuron i synapsen",
+    "distractors": [
+      "En jon som bildar myelin",
+      "Ett protein i benvävnad",
+      "Ett hormon från binjuren enbart"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_84",
+    "type": "mc",
+    "prompt": "Vilken signalsubstans är särskilt kopplad till basala gangliernas rörelsekontroll och brister vid Parkinson?",
+    "correct": "Dopamin",
+    "distractors": [
+      "Acetylkolin",
+      "GABA",
+      "Glutamat"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_85",
+    "type": "mc",
+    "prompt": "Vilken är hjärnans viktigaste hämmande (inhibitoriska) signalsubstans?",
+    "correct": "GABA",
+    "distractors": [
+      "Glutamat",
+      "Dopamin",
+      "Noradrenalin"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_86",
+    "type": "mc",
+    "prompt": "Vilken är hjärnans viktigaste retande (excitatoriska) signalsubstans?",
+    "correct": "Glutamat",
+    "distractors": [
+      "GABA",
+      "Glycin",
+      "Acetylkolin i CNS enbart"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_87",
+    "type": "mc",
+    "prompt": "Vad innebär den korsade sträckreflexen (vid att trampa på något vasst)?",
+    "correct": "Det skadade benet dras tillbaka (flexion) samtidigt som motsatt ben sträcks för att bära kroppen",
+    "distractors": [
+      "Båda benen sträcks samtidigt",
+      "Båda benen böjs samtidigt",
+      "Endast armarna reagerar"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lännergren m.fl., Fysiologi"
+  },
+  {
+    "id": "fys_nerv_88",
+    "type": "mc",
+    "prompt": "Hur utvecklas myeliniseringen av nervsystemet?",
+    "correct": "Den pågår från fosterlivet och fortsätter under barndomen upp i ung vuxen ålder",
+    "distractors": [
+      "Den är helt färdig vid födseln",
+      "Den startar först i tonåren",
+      "Den sker bara i ryggmärgen"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_89",
+    "type": "mc",
+    "prompt": "Varför kan ett positivt Babinski-tecken vara normalt hos ett spädbarn men onormalt hos en vuxen?",
+    "correct": "Pyramidbanan är ännu inte färdigmyeliniserad hos spädbarnet",
+    "distractors": [
+      "Spädbarn saknar ryggmärg",
+      "Vuxna saknar fotsulereflex",
+      "Det är aldrig normalt"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_90",
+    "type": "mc",
+    "prompt": "Vad är en primitiv reflex (t.ex. Moro- eller gripreflex)?",
+    "correct": "En medfödd reflex hos spädbarn som normalt försvinner när nervsystemet mognar",
+    "distractors": [
+      "En reflex som bara finns hos vuxna",
+      "En inlärd reflex",
+      "En autonom hjärtreflex"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_91",
+    "type": "mc",
+    "prompt": "Hur påverkas nervledningshastigheten typiskt av åldrande?",
+    "correct": "Den minskar något, vilket bidrar till långsammare reaktioner och reflexer",
+    "distractors": [
+      "Den ökar med åldern",
+      "Den är oförändrad hela livet",
+      "Den upphör helt"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_92",
+    "type": "mc",
+    "prompt": "Varför ökar fallrisken hos äldre ur ett nervsystemsperspektiv?",
+    "correct": "Nedsatt proprioception, balans, reaktionstid och syn försämrar tillsammans den posturala kontrollen",
+    "distractors": [
+      "Reflexerna blir för snabba",
+      "Musklerna blir för starka",
+      "Nervledningen blir snabbare"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_93",
+    "type": "mc",
+    "prompt": "Vad är demens?",
+    "correct": "Ett samlingsnamn för förvärvad, fortskridande nedsättning av kognitiva funktioner",
+    "distractors": [
+      "En övergående minnesförlust som alltid läker",
+      "En muskelsjukdom",
+      "En störning enbart i balansorganet"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_94",
+    "type": "mc",
+    "prompt": "Vad menas med polyneuropati?",
+    "correct": "En utbredd skada på perifera nerver, ofta med symmetriska känsel- och kraftbortfall i fötter/händer",
+    "distractors": [
+      "En enstaka nervinklämning",
+      "En skada i lillhjärnan",
+      "En hjärnblödning"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_95",
+    "type": "mc",
+    "prompt": "Vilken vanlig sjukdom är en viktig orsak till perifer polyneuropati?",
+    "correct": "Diabetes mellitus",
+    "distractors": [
+      "Astma",
+      "Migrän",
+      "Artros"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_96",
+    "type": "mc",
+    "prompt": "Varför är tidig mobilisering och uppgiftsinriktad träning viktig efter stroke?",
+    "correct": "Den utnyttjar neuroplasticiteten och förbättrar funktionell återhämtning",
+    "distractors": [
+      "Den motverkar all återhämtning",
+      "Den behövs bara vid perifera skador",
+      "Vila ger alltid bättre resultat"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_97",
+    "type": "mc",
+    "prompt": "Vad är spinal chock direkt efter en akut ryggmärgsskada?",
+    "correct": "Ett övergående tillstånd med slappa, utsläckta reflexer nedanför skadan innan spasticitet utvecklas",
+    "distractors": [
+      "Omedelbar spasticitet",
+      "Ett permanent tillstånd",
+      "Enbart känselbortfall utan motorpåverkan"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_98",
+    "type": "mc",
+    "prompt": "Vad bedömer man med ett myotom vid neurologisk undersökning?",
+    "correct": "Muskelkraften kopplad till en viss nervrotsnivå",
+    "distractors": [
+      "Hudkänseln för en nervrot",
+      "Reflexhastigheten i hjärnan",
+      "Synfältet"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_99",
+    "type": "mc",
+    "prompt": "Vad skiljer en radikulopati från en perifer nervskada?",
+    "correct": "Radikulopati drabbar en nervrot (dermatom/myotom-mönster); perifer nervskada följer den enskilda nervens utbredning",
+    "distractors": [
+      "De är exakt samma sak",
+      "Radikulopati drabbar bara hjärnan",
+      "Perifer nervskada följer ett dermatom"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
+  },
+  {
+    "id": "fys_nerv_100",
+    "type": "mc",
+    "prompt": "Vilken är en central princip i fysioterapeutisk neurorehabilitering?",
+    "correct": "Aktiv, uppgiftsspecifik och repetitiv träning som utnyttjar nervsystemets plasticitet",
+    "distractors": [
+      "Passiv vila tills nerven läkt av sig själv",
+      "Att undvika all rörelse",
+      "Att enbart behandla med läkemedel"
+    ],
+    "topic": "fysio_nervsystemet",
+    "difficulty": "Normal",
+    "source": "Lundy-Ekman, Neuroscience: Fundamentals for Rehabilitation"
   }
 ]
