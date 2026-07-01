@@ -1,5 +1,19 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.110
+- **Alt-text saknades på logotypen** (`img/anatomiquiz-logo.webp`, flaggad av ahrefs). Bilden är avsiktligt dekorativ (`aria-hidden="true"`, döljs för skärmläsare eftersom `<h1>Anatomiquiz</h1>` bredvid redan säger namnet) men saknade ändå `alt`, vilket SEO-verktyg tolkar som ett fel. Lade till `alt="Anatomiquiz logotyp"` — påverkar inte skärmläsarbeteendet (aria-hidden gäller oavsett) men ger bilden text för bildsök/crawlers.
+- VERSION/APP_VERSION/app.js- och info.js-cachebuster → 0.9.110.
+
+## 0.9.109
+- **OG/Twitter Card + JSON-LD saknades helt på två kunskapsbanks-hubbar.** `kunskapsbank/listor-tabeller.html` och `kunskapsbank/faktatexter.html` byggdes uppenbarligen innan sid-mallen (sitemap-länk, Open Graph, Twitter Card, `CollectionPage`/`LearningResource`-JSON-LD + separat `BreadcrumbList`) fanns på plats — de andra kunskapsbankssidorna hade redan allt detta. Kompletterat enligt samma mönster som `muskeltabeller.html`/`skelett.html`, inkl. `hasPart` mot de undersidor som faktiskt är live (t.ex. faktatexter-hubben listar bara de 3 publicerade texterna, inte "Snart"-korten).
+- VERSION/APP_VERSION/app.js- och info.js-cachebuster → 0.9.109.
+
+## 0.9.108
+- **Schema.org-fel i JSON-LD rättat på 65 sidor.** Ahrefs flaggade "Unexpected property" för `breadcrumb` nästlad inuti kombinerade `@type`-arrayer (`Article`/`LearningResource`, `CollectionPage`/`LearningResource` m.fl.) — validatorn känner inte alltid igen att `LearningResource` ärver `breadcrumb` från `CreativeWork`. `BreadcrumbList` ligger nu i ett **eget separat** `<script type="application/ld+json">`-block på alla kunskapsbankssidor + `case.html` (matchar även Googles rekommenderade mönster för brödsmule-rich-results).
+- **`integritet.html` använde en påhittad schema.org-typ.** `"@type": "PrivacyPolicy"` finns inte i schema.org-vokabuläret (404 på schema.org) → bytt till `WebPage`.
+- De fyra generatorerna (`generate_muskeltabeller.py`, `generate_skelett.py`, `generate_karl.py`, `generate_leder.py`) uppdaterade så framtida regenerering producerar samma korrekta mönster automatiskt. `SEO_REGLER.md` §6 skärpt: breadcrumb ska ALDRIG nästlas i ett multi-typ-block, och bara riktiga schema.org-typer får användas.
+- VERSION/APP_VERSION/app.js- och info.js-cachebuster → 0.9.108.
+
 ## 0.9.107
 - **Frågestatistiken på Om-sidan uppdaterad.** Tabellen "Antal frågor" listade bara Allmänt, Arbetsterapeut och Sjuksköterska. Nu ingår även **Läkare** och hela **Fysioterapeut** (8 ämnen: axel, armbåge, hand & handled, höft, knä, fot, columna, nervsystemet), plus de två AT-bildämnena Handens ben och Handens leder. Fysio-ämnena delar en datafil (`data/fysioterapeut.json`), så `countCards()` tar nu ett valfritt `topic`-filter och räknar per ämne via `topic`-fältet.
 - **Mobil-layout för statistiktabellen.** Tabellen blev för bred på små skärmar. Ny `@media (max-width: 640px)`: mindre cellpadding, kompaktare rubriker (mindre versalspärr/font), `table-layout: fixed` med smala sifferkolumner så ämneskolumnen får utrymmet och radbryter i stället för att tränga ut sidan.

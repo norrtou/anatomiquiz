@@ -37,6 +37,14 @@ def head(title, desc, canon, ogtype, jsonld):
     assert len(title) <= 65, f"TITEL för lång ({len(title)}): {title}"
     assert 25 <= len(desc) <= 150, f"DESC fel längd ({len(desc)}): {desc}"
     core = title.rsplit(" | ", 1)[0]
+    jsonld = dict(jsonld)
+    bc = jsonld.pop("breadcrumb", None)
+    bc_script = ""
+    if bc is not None:
+        bc_full = {"@context": "https://schema.org", **bc}
+        bc_script = ('  <script type="application/ld+json">\n'
+                     + json.dumps(bc_full, ensure_ascii=False, indent=2)
+                     + '\n  </script>')
     return f"""<!doctype html>
 <html lang="sv">
 <head>
@@ -75,6 +83,7 @@ def head(title, desc, canon, ogtype, jsonld):
   <script type="application/ld+json">
 {json.dumps(jsonld, ensure_ascii=False, indent=2)}
   </script>
+{bc_script}
 
   <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
   <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon.png">

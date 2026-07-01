@@ -50,61 +50,104 @@
        Strukturerad data — schema.org (JSON-LD)
        ========================================================= -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": ["CollectionPage", "LearningResource"],
-    "name": "Case — lär dig anatomi genom kliniska patientfall",
-    "description": "Plugga anatomi med kliniska case: lär dig handens muskler, leder och nerver genom verklighetsnära patientfall med korrekt medicinsk terminologi. Tentaplugg för vård- och medicinstudenter.",
-    "inLanguage": "sv-SE",
-    "isAccessibleForFree": true,
-    "learningResourceType": "case study",
-    "educationalUse": ["self study", "professional development"],
-    "audience": {
-      "@type": "EducationalAudience",
-      "educationalRole": "student",
-      "audienceType": "Arbetsterapeuter, fysioterapeuter, sjuksköterskor, läkare och medicinstudenter"
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "CollectionPage",
+    "LearningResource"
+  ],
+  "name": "Case — lär dig anatomi genom kliniska patientfall",
+  "description": "Plugga anatomi med kliniska case: lär dig handens muskler, leder och nerver genom verklighetsnära patientfall med korrekt medicinsk terminologi. Tentaplugg för vård- och medicinstudenter.",
+  "inLanguage": "sv-SE",
+  "isAccessibleForFree": true,
+  "learningResourceType": "case study",
+  "educationalUse": [
+    "self study",
+    "professional development"
+  ],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "student",
+    "audienceType": "Arbetsterapeuter, fysioterapeuter, sjuksköterskor, läkare och medicinstudenter"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Anatomiquiz",
+    "url": "https://anatomiquiz.se/"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Human anatomi"
     },
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "Anatomiquiz",
-      "url": "https://anatomiquiz.se/"
+    {
+      "@type": "Thing",
+      "name": "Handens anatomi"
     },
-    "about": [
-      { "@type": "Thing", "name": "Human anatomi" },
-      { "@type": "Thing", "name": "Handens anatomi" },
-      { "@type": "Thing", "name": "Medicinsk terminologi" }
-    ],
-    "mainEntity": {
-      "@type": "ItemList",
-      "name": "Kliniska case — Handen",
-      "numberOfItems": 5,
-      "itemListOrder": "https://schema.org/ItemListOrderAscending",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Birgitta, 52 år — karpalkanalsyndrom", "url": "https://anatomiquiz.se/case.html#case-1" },
-        { "@type": "ListItem", "position": 2, "name": "Daniel, 38 år — Guyons kanalsyndrom och klohand", "url": "https://anatomiquiz.se/case.html#case-2" },
-        { "@type": "ListItem", "position": 3, "name": "Margareta, 68 år — rhizartros", "url": "https://anatomiquiz.se/case.html#case-3" },
-        { "@type": "ListItem", "position": 4, "name": "Karl-Erik, 60 år — Dupuytrens kontraktur", "url": "https://anatomiquiz.se/case.html#case-4" },
-        { "@type": "ListItem", "position": 5, "name": "Sofia, 24 år — buttoniere deformitet", "url": "https://anatomiquiz.se/case.html#case-5" }
-      ]
-    },
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Anatomiquiz",
-          "item": "https://anatomiquiz.se/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Case",
-          "item": "https://anatomiquiz.se/case.html"
-        }
-      ]
+    {
+      "@type": "Thing",
+      "name": "Medicinsk terminologi"
     }
+  ],
+  "mainEntity": {
+    "@type": "ItemList",
+    "name": "Kliniska case — Handen",
+    "numberOfItems": 5,
+    "itemListOrder": "https://schema.org/ItemListOrderAscending",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Birgitta, 52 år — karpalkanalsyndrom",
+        "url": "https://anatomiquiz.se/case.html#case-1"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Daniel, 38 år — Guyons kanalsyndrom och klohand",
+        "url": "https://anatomiquiz.se/case.html#case-2"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Margareta, 68 år — rhizartros",
+        "url": "https://anatomiquiz.se/case.html#case-3"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Karl-Erik, 60 år — Dupuytrens kontraktur",
+        "url": "https://anatomiquiz.se/case.html#case-4"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "Sofia, 24 år — buttoniere deformitet",
+        "url": "https://anatomiquiz.se/case.html#case-5"
+      }
+    ]
   }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Anatomiquiz",
+      "item": "https://anatomiquiz.se/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Case",
+      "item": "https://anatomiquiz.se/case.html"
+    }
+  ]
+}
   </script>
 
   <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">

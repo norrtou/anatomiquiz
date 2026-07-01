@@ -140,12 +140,20 @@ Varje indexerbar sida följer **samma ordning och samma element som `index.html`
 | Faktatext/artikel | `["Article", "LearningResource"]` + separat `FAQPage` om sidan har FAQ |
 | Hub / pillar / index | `["CollectionPage", "LearningResource"]` med `hasPart` (länkade undersidor) |
 | Startsidan | `["WebApplication", "LearningResource"]` |
-| Alla undersidor | inkludera `BreadcrumbList` (i artikel-blocket eller separat) |
+| Alla undersidor | inkludera `BreadcrumbList` i **ett eget separat** `<script type="application/ld+json">`-block |
 
 Regler:
 
 - **FAQPage måste spegla en synlig FAQ** på sidan, ord för ord i sak (annars policybrott).
 - `inLanguage: "sv-SE"`, `isAccessibleForFree: true`, `publisher`/`author` = Norrtou Creations / Anatomiquiz.
+- **`breadcrumb` ska ALDRIG nästlas som property inuti Article/LearningResource/CollectionPage-blocket**
+  när `@type` är en array (flera typer). Ahrefs schema.org-validator (och andra strikta validatorer)
+  flaggar det som "Unexpected property" eftersom LearningResource-egenskapen inte alltid ärver
+  CreativeWork korrekt i deras vokabulär. Lägg alltid `BreadcrumbList` som ett **eget**
+  `{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[...]}`-script,
+  direkt efter huvud-JSON-LD:t. (Rättat i 0.9.108 på 63 sidor.)
+- Använd bara **riktiga** schema.org-typer (kontrollera på schema.org om osäker) — t.ex. finns
+  INGEN typ som heter `PrivacyPolicy`; integritetspolicyn ska använda `WebPage`.
 - **Validera all JSON-LD** (giltig JSON) före commit (§12).
 
 ---
