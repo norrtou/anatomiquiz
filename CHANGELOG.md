@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.119
+- **Sökfält "Sök ämne i alla utbildningar" på startsidan.** Diskret sökruta ovanför Ämne-dropdownen. Filtrerar `#topic`-listan i bakgrunden medan man skriver (fortsatt en helt vanlig native `<select>`, ingen custom dropdown-komponent) och söker då tvärs över ALLA utbildningar oavsett vald Utbildning, inte bara det aktuella urvalet. Ämnen från en annan utbildning än den valda får utbildningsnamnet inom parentes i etiketten, t.ex. "Andningsapparaten (Logoped) (MC)" — infogat FÖRE MC/FC/TF-taggen så `typeTagOf()` fortsatt läser rätt tagg och Starta-knapparna inte skuggas felaktigt. Väljer man en träff från en annan utbildning synkas Utbildning-dropdownen automatiskt dit och sökfältet töms (`syncEducationToSelectedTopic()`). Sökningen matchar både ämnesnamn och utbildningsnamn, case-/å-ä-ö-okänslig (`toLocaleLowerCase('sv-SE')`), och visar "Inga ämnen matchar sökningen" vid nollträff. Helt dynamisk: listan byggs ur samma `allTopicOptions` som redan fylls från `#topic`-markupen vid start (`captureTopicOptions()`), så nya ämnen som byggs in i appen dyker automatiskt upp i sökningen utan någon egen underhållslista. Testat headless (Playwright) mot flera scenarier: korsutbildningsträff + auto-synk, tom sökning, nollträff, versaler/gemener, sökning på utbildningsnamn — inga JS-fel.
+- styles.css-cachebustern sitewide → 0.7.28 (alla 101 HTML-sidor); VERSION/APP_VERSION/app.js- och info.js-cachebuster → 0.9.119.
+
 ## 0.9.118
 - **Antal frågor + Svårighetsgrad på samma rad på startsidan.** De två dropdownarna låg tidigare staplade var för sig under varandra; nu wrappas de i `.setup-row` (flex, två `.setup-field`-kolumner) så de delar rad. `el('numQuestions')`/`el('difficulty')` läses fortfarande via id, så JS-logiken är opåverkad.
 - styles.css-cachebustern sitewide → 0.7.27 (alla 101 HTML-sidor); VERSION/APP_VERSION/app.js- och info.js-cachebuster → 0.9.118.

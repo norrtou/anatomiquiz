@@ -69,7 +69,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.118'
+const APP_VERSION = '0.9.119'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -1118,24 +1118,74 @@ function getSelectedEducation(){
   return el('education')?.value || 'allmant'
 }
 
+// Utbildningens etikett utan räkne-/"(inga ämnen ännu)"-tillägget som
+// updateEducationOptions() skriver in (basetexten sparas i dataset.eduLabel).
+function eduLabelOf(eduValue){
+  const opt = Array.from(el('education')?.options || []).find(o => o.value === eduValue)
+  if(!opt) return eduValue
+  return opt.dataset.eduLabel || opt.textContent.replace(/\s*\([^)]*\)\s*$/, '')
+}
+
+// Text att söka i: ämnesnamnet (utan MC/FC/TF-taggen) + utbildningens namn,
+// så en sökning på t.ex. "fysioterapeut" också ger träff på alla dess ämnen.
+// toLocaleLowerCase('sv-SE') hanterar å/ä/ö korrekt.
+function topicSearchHaystack(o){
+  const bareText = o.text.replace(/\s*\([^)]*\)\s*$/, '')
+  return (bareText + ' ' + eduLabelOf(o.edu)).toLocaleLowerCase('sv-SE')
+}
+
+// Sätter in "(Utbildning)" i ämnesetiketten precis FÖRE sista parentesen
+// (typtaggen), t.ex. "Nervsystemet (MC)" → "Nervsystemet (Fysioterapeut) (MC)".
+// Måste hamna före taggen — annars läser typeTagOf() in utbildningsnamnet som
+// sista parentes och tror ämnet saknar MC/FC/TF, vilket skuggar båda
+// Starta-knapparna för sökträffen.
+function withEduLabel(text, eduLabel){
+  const m = text.match(/^(.*?)(\s*\([^)]*\)\s*)$/)
+  return m ? `${m[1]} (${eduLabel})${m[2]}` : `${text} (${eduLabel})`
+}
+
 // Visa bara ämnen som hör till vald utbildning OCH har minst en av de valda
 // frågetyperna. Ämnen utan känd typtagg visas alltid (om utbildningen stämmer).
 // Bevarar valt ämne om det fortfarande finns, annars hoppar till första synliga
 // (och uppdaterar svårighetsvalen). Saknar utbildningen ämnen töms ämnesväljaren
 // och startknapparna skuggas (av updateStartButtons).
+//
+// Sökläge (#topicSearch har text): utbildningsfiltret kopplas bort och listan
+// söks igenom ALLA utbildningars ämnen (fortfarande med typ-/icke-medicinsk-
+// filtret), med utbildningsnamnet inom parentes i etiketten. Ämneslistan byggs
+// alltid ur allTopicOptions (fyllt av captureTopicOptions vid start) — nya
+// ämnen som läggs till i #topic-markupen dyker därför automatiskt upp i
+// sökningen utan någon egen underhållslista.
 function updateTopicOptions(){
   const topicEl = el('topic')
   if(!topicEl || !allTopicOptions.length) return
   const sel = getSelectedTypes()
   const edu = getSelectedEducation()
+  const query = (el('topicSearch')?.value || '').trim().toLocaleLowerCase('sv-SE')
   const prev = topicEl.value
-  const visible = allTopicOptions.filter(o => {
-    if(o.edu && o.edu !== edu) return false
+
+  const typeOk = o => {
     if(o.nonmedical && !showNonMedical()) return false
     const c = typeTagOf(o.text)
     return !c.hasTag || sel.some(t => c[t])
-  })
+  }
+
+  let visible
+  if(query){
+    visible = allTopicOptions
+      .filter(o => typeOk(o) && topicSearchHaystack(o).includes(query))
+      .map(o => ({ ...o, text: withEduLabel(o.text, eduLabelOf(o.edu)) }))
+  } else {
+    visible = allTopicOptions.filter(o => (!o.edu || o.edu === edu) && typeOk(o))
+  }
+
   topicEl.innerHTML = ''
+  if(query && !visible.length){
+    const opt = document.createElement('option')
+    opt.disabled = true
+    opt.textContent = 'Inga ämnen matchar sökningen'
+    topicEl.appendChild(opt)
+  }
   visible.forEach(o => {
     const opt = document.createElement('option')
     opt.value = o.value
@@ -1151,6 +1201,23 @@ function updateTopicOptions(){
     topicEl.value = visible[0].value
     updateDifficultyOptions()
   }
+}
+
+// I sökläge kan valt ämne höra till en annan utbildning än den som står vald i
+// "Utbildning". Synka då Utbildning till ämnets egen utbildning och töm
+// sökfältet, så appen hamnar i samma normala läge som om utbildningen valts
+// manuellt (ämnet i sig behålls — updateTopicOptions() bevarar valt värde när
+// det finns kvar i den ombyggda listan).
+function syncEducationToSelectedTopic(){
+  const searchEl = el('topicSearch')
+  if(!searchEl || !searchEl.value.trim()) return
+  const targetEdu = el('topic')?.selectedOptions?.[0]?.dataset.edu
+  if(!targetEdu) return
+  searchEl.value = ''
+  const eduEl = el('education')
+  if(eduEl && eduEl.value !== targetEdu) eduEl.value = targetEdu
+  updateTopicOptions()
+  saveSettings()
 }
 
 // Skugga (inaktivera) utbildningar i "Välj utbildning" som ännu inte har något
@@ -1440,10 +1507,16 @@ function init(){
     c.addEventListener('change', updateStartButtons)
   })
 
-  // Uppdatera svårighetsval + startknapparnas av/på när ämnet byts.
-  el('topic').addEventListener('change', ()=>{ updateDifficultyOptions(); updateStartButtons() })
+  // Uppdatera svårighetsval + startknapparnas av/på när ämnet byts. I sökläge
+  // (#topicSearch ifyllt) synkas Utbildning också till det valda ämnets egen
+  // utbildning, och sökfältet töms.
+  el('topic').addEventListener('change', ()=>{ syncEducationToSelectedTopic(); updateDifficultyOptions(); updateStartButtons() })
   // Byte av utbildning bygger om ämneslistan (utbildning + frågetyp) och sparar valet.
   el('education')?.addEventListener('change', ()=>{ updateTopicOptions(); updateDifficultyOptions(); updateStartButtons(); saveSettings() })
+  // Sök ämne i alla utbildningar: filtrerar #topic-listan medan man skriver
+  // (se updateTopicOptions). Tom sökruta återställer den vanliga, utbildnings-
+  // filtrerade listan.
+  el('topicSearch')?.addEventListener('input', ()=>{ updateTopicOptions(); updateDifficultyOptions(); updateStartButtons() })
   captureTopicOptions()     // Spara hela ämneslistan INNAN filtrering
   updateEducationOptions()  // Gråa ut utbildningar utan ämnen (efter capture)
   updateDifficultyOptions() // Initial state

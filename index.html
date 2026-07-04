@@ -94,7 +94,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="css/styles.css?v=0.7.27">
+  <link rel="stylesheet" href="css/styles.css?v=0.7.28">
 </head>
 <body>
 
@@ -150,6 +150,16 @@
         <option value="sjukskoterska">Sjuksköterska</option>
         <option value="tandlakare">Tandläkare</option>
       </select>
+
+      <!-- Diskret "genväg" utöver Utbildning+Ämne: skriv ett ord för att söka
+           bland ALLA utbildningars ämnen (inte bara det som står valt ovan).
+           Filtrerar #topic-listan i bakgrunden (js/app.js: updateTopicOptions),
+           så det är fortsatt en helt vanlig, native <select> som öppnas – inga
+           nya dropdown-komponenter. Träffar från andra utbildningar än den
+           valda får utbildningsnamnet inom parentes i etiketten. Väljer man en
+           sådan träff synkas Utbildning automatiskt och sökfältet töms. -->
+      <label for="topicSearch">Sök ämne i alla utbildningar</label>
+      <input type="search" id="topicSearch" placeholder="t.ex. hjärtat, njurar, larynx …" autocomplete="off" autocapitalize="off" spellcheck="false">
 
       <label for="topic">Ämne</label>
       <select id="topic" aria-describedby="topicLegend">
@@ -580,6 +590,6 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.118" defer></script>
+  <script src="js/app.js?v=0.9.119" defer></script>
 </body>
 </html>

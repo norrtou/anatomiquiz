@@ -610,6 +610,18 @@ select:focus-visible {
   margin-bottom: 2px;
 }
 
+/* Sökfält för ämne (alla utbildningar) — diskret genväg, ska synas mindre
+   framträdande än Utbildning/Ämne så den inte konkurrerar med huvudflödet. */
+#setup label[for="topicSearch"] {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin: 8px 0 4px;
+}
+#setup input#topicSearch {
+  margin-bottom: 4px;
+}
+
 /* Antal frågor + Svårighetsgrad på samma rad. */
 .setup-row {
   display: flex;
