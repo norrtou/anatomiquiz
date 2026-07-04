@@ -135,6 +135,11 @@ const EDUCATIONS = [
     { label: 'Motorisk utveckling & åldrande', file: './data/fysioterapeut.json', topic: 'fysio_motorisk_utv_aldrande' },
     { label: 'Tränings-/arbetsfysiologi',   file: './data/fysioterapeut.json', topic: 'fysio_traning_arbetsfys' },
   ]},
+  // Logoped-ämnena ligger alla i en delad fil (data/logoped.json),
+  // åtskilda av postens topic-fält → varje rad filtreras via `topic`.
+  { name: 'Logoped', topics: [
+    { label: 'Andningsapparaten',           file: './data/logoped.json', topic: 'logoped_andningsapparaten' },
+  ]},
 ]
 
 const ORDLISTA_URL = './data/ordlista.json'

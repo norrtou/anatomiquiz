@@ -94,7 +94,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="css/styles.css?v=0.7.26">
+  <link rel="stylesheet" href="css/styles.css?v=0.7.27">
 </head>
 <body>
 
@@ -291,7 +291,7 @@
         <!-- <option value="medsek_diagnoskodning" data-edu="medicinsk_sekreterare">Diagnosklassificering &amp; kodning</option> -->
 
         <!-- Logoped -->
-        <!-- <option value="logoped_andningsapparaten" data-edu="logoped">Andningsapparaten</option> -->
+        <option value="logoped_andningsapparaten" data-edu="logoped">Andningsapparaten (MC)</option>
         <!-- <option value="logoped_larynx_fonation" data-edu="logoped">Röst-/fonationsapparaten (larynx)</option> -->
         <!-- <option value="logoped_artikulation_resonans" data-edu="logoped">Artikulation &amp; resonans (ansatsröret)</option> -->
         <!-- <option value="logoped_svaljning" data-edu="logoped">Sväljningsapparaten</option> -->
@@ -328,20 +328,25 @@
       </select>
       <p id="topicLegend" class="topic-legend">MC = Multiple Choice-frågor för quiz, FC = Flashcards, TF = Sant eller falskt-frågor för quiz, Bild = fråga med bild</p>
 
-      <label for="numQuestions">Antal frågor</label>
-      <select id="numQuestions">
-        <option value="10">10</option>
-        <option value="20">20</option>
-        <option value="50">50</option>
-        <option value="100">100</option>
-      </select>
-
-      <label for="difficulty">Svårighetsgrad</label>
-      <select id="difficulty">
-        <option value="any" selected>Blandat</option>
-        <option value="Normal">Normal</option>
-        <option value="Hard">Svår</option>
-      </select>
+      <div class="setup-row">
+        <div class="setup-field">
+          <label for="numQuestions">Antal frågor</label>
+          <select id="numQuestions">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+        </div>
+        <div class="setup-field">
+          <label for="difficulty">Svårighetsgrad</label>
+          <select id="difficulty">
+            <option value="any" selected>Blandat</option>
+            <option value="Normal">Normal</option>
+            <option value="Hard">Svår</option>
+          </select>
+        </div>
+      </div>
 
       <div class="setup-actions">
         <div class="primary-actions">
@@ -575,6 +580,6 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.116" defer></script>
+  <script src="js/app.js?v=0.9.118" defer></script>
 </body>
 </html>

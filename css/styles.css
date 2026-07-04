@@ -610,6 +610,19 @@ select:focus-visible {
   margin-bottom: 2px;
 }
 
+/* Antal frågor + Svårighetsgrad på samma rad. */
+.setup-row {
+  display: flex;
+  gap: 12px;
+}
+.setup-row .setup-field {
+  flex: 1;
+  min-width: 0;
+}
+.setup-row label {
+  margin: 10px 0 4px;
+}
+
 /* ============================================================================
    QUIZ SECTION STYLES
    ============================================================================ */
