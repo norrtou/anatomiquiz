@@ -128,6 +128,12 @@ const EDUCATIONS = [
     { label: 'Fot & fotled',                file: './data/fysioterapeut.json', topic: 'fysio_fot_fotled' },
     { label: 'Columna/ryggrad',             file: './data/fysioterapeut.json', topic: 'fysio_columna' },
     { label: 'Nervsystemet',                file: './data/fysioterapeut.json', topic: 'fysio_nervsystemet' },
+    { label: 'Muskelfysiologi',             file: './data/fysioterapeut.json', topic: 'fysio_muskelfysiologi' },
+    { label: 'Kardiovaskulär & respiratorisk fysiologi', file: './data/fysioterapeut.json', topic: 'fysio_kardio_resp' },
+    { label: 'Led- & skelettlära',          file: './data/fysioterapeut.json', topic: 'fysio_led_skelett' },
+    { label: 'Smärtfysiologi',              file: './data/fysioterapeut.json', topic: 'fysio_smartfysiologi' },
+    { label: 'Motorisk utveckling & åldrande', file: './data/fysioterapeut.json', topic: 'fysio_motorisk_utv_aldrande' },
+    { label: 'Tränings-/arbetsfysiologi',   file: './data/fysioterapeut.json', topic: 'fysio_traning_arbetsfys' },
   ]},
 ]
 
