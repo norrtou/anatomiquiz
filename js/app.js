@@ -69,7 +69,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.119'
+const APP_VERSION = '0.9.120'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -707,14 +707,15 @@ function renderScoreList(){
     const pct = Math.round((s.score/s.total)*100)
     // Endast i highscore: korta bort förkortningsparentesen, t.ex. "Handen (MC+TF)" → "Handen".
     const label = (s.topicLabel || 'Okänt ämne').replace(/\s*\([^)]*\)\s*$/, '')
+    const abbrev = eduAbbrevFor(s.topic)
     const d = new Date(s.date)
-    const dateStr = d.toLocaleDateString('sv-SE') + ' ' + d.toLocaleTimeString('sv-SE', { hour: '2-digit', minute: '2-digit' })
+    const dateStr = d.toLocaleDateString('sv-SE')
     // Procenttexten färgas grönt vid klarat (≥ 75 %) och rött vid ej klarat
     // (< 75 %), samma tröskel och röda ton som statistikens svaga ämnen.
     li.append(
       mk('sr-rank', (i+1) + '.'),
       mk('sr-name', s.name),
-      mk('sr-topic', label),
+      mk('sr-topic', abbrev ? `${label} (${abbrev})` : label),
       mk('sr-score', `${s.score}/${s.total}`),
       mk(pct < 75 ? 'sr-pct weak' : 'sr-pct', `${pct}%`),
       mk('sr-time', formatDuration(s.durationMs)),
@@ -759,14 +760,15 @@ function renderBestList(){
     li.className = 'score-row'
     const pct = Math.round((s.score/s.total)*100)
     const label = (s.topicLabel || 'Okänt ämne').replace(/\s*\([^)]*\)\s*$/, '')
+    const abbrev = eduAbbrevFor(s.topic)
     const d = new Date(s.date)
-    const dateStr = d.toLocaleDateString('sv-SE') + ' ' + d.toLocaleTimeString('sv-SE', { hour: '2-digit', minute: '2-digit' })
+    const dateStr = d.toLocaleDateString('sv-SE')
     // Procenttexten färgas grönt vid klarat (≥ 75 %) och rött vid ej klarat
     // (< 75 %), samma som i "Senaste resultaten".
     li.append(
       mk('sr-rank', (i+1) + '.'),
       mk('sr-name', s.name),
-      mk('sr-topic', label),
+      mk('sr-topic', abbrev ? `${label} (${abbrev})` : label),
       mk('sr-score', `${s.score}/${s.total}`),
       mk(pct < 75 ? 'sr-pct weak' : 'sr-pct', `${pct}%`),
       mk('sr-time', formatDuration(s.durationMs)),
@@ -1116,6 +1118,37 @@ function showNonMedical(){
 // Vald utbildning i "Välj utbildning" (Allmänt som standard).
 function getSelectedEducation(){
   return el('education')?.value || 'allmant'
+}
+
+// Logiska trebokstavsförkortningar per utbildning, till högst upp i topplistan
+// (t.ex. "Axel/skulderkomplex (FYS)"). SSK/RSK följer den vedertagna svenska
+// sköterske-förkortningsmönstret (sista bokstäverna "SK"); övriga är egna,
+// konsekventa 3-bokstavsval. Statisk lista eftersom utbildningarna själva är
+// en manuellt kurerad, fast uppsättning (UTBILDNINGAR_REGLER.md).
+const EDU_ABBREV = {
+  allmant: 'ALM',
+  apotekare: 'APO',
+  arbetsterapeut: 'ATB',
+  audionom: 'AUD',
+  biomedicinsk_analytiker: 'BMA',
+  fysioterapeut: 'FYS',
+  logoped: 'LOG',
+  lakare: 'LÄK',
+  medicinsk_sekreterare: 'MSK',
+  optiker: 'OPT',
+  rontgensjukskoterska: 'RSK',
+  sjukskoterska: 'SSK',
+  tandlakare: 'TLK'
+}
+
+// Utbildningsförkortning för ett sparat highscore-resultats ämnesvärde.
+// Slår upp ämnets utbildning i allTopicOptions (samma data #topic redan
+// fyllts med) — funkar alltså automatiskt för nya ämnen utan egen ämne-till-
+// utbildning-lista. Saknas ämnet (borttaget/döpt om sedan resultatet sparades)
+// eller utbildningen returneras tom sträng, och ingen förkortning visas.
+function eduAbbrevFor(topicValue){
+  const o = allTopicOptions.find(o => o.value === topicValue)
+  return (o && EDU_ABBREV[o.edu]) || ''
 }
 
 // Utbildningens etikett utan räkne-/"(inga ämnen ännu)"-tillägget som
