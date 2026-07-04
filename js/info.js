@@ -139,6 +139,11 @@ const EDUCATIONS = [
   // åtskilda av postens topic-fält → varje rad filtreras via `topic`.
   { name: 'Logoped', topics: [
     { label: 'Andningsapparaten',           file: './data/logoped.json', topic: 'logoped_andningsapparaten' },
+    { label: 'Röst-/fonationsapparaten (larynx)', file: './data/logoped.json', topic: 'logoped_larynx_fonation' },
+    { label: 'Artikulation & resonans (ansatsröret)', file: './data/logoped.json', topic: 'logoped_artikulation_resonans' },
+    { label: 'Sväljningsapparaten',                  file: './data/logoped.json', topic: 'logoped_svaljning' },
+    { label: 'Neuroanatomi för tal & språk',          file: './data/logoped.json', topic: 'logoped_neuroanatomi_tal' },
+    { label: 'Örat & hörselsystemet',                 file: './data/logoped.json', topic: 'logoped_orat_horsel' },
   ]},
 ]
 

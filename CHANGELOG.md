@@ -1,5 +1,21 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.124
+- **Logoped klart, alla 6 ämnen.** De tre sista ämnena i logoped-utbildningen byggda, 300 nya MC-frågor i `data/logoped.json` (totalt 600 frågor, 100/ämne × 6):
+  - **Sväljningsapparaten** (`logoped_svaljning`) — sväljningens tre faser (oral, faryngeal, esofageal), struphuvudets trippelskydd av luftvägen, UES/cricopharyngeus, esofagusanatomi och peristaltik, sväljningscentrum i hjärnstammen (nucleus tractus solitarius/ambiguus), inblandade kranialnerver (V, VII, IX, X, XII), samt dysfagi (aspiration/penetration, Zenkers divertikel, VFSS/FEES). Källa bl.a. Logemann, Evaluation and Treatment of Swallowing Disorders.
+  - **Neuroanatomi för tal & språk** (`logoped_neuroanatomi_tal`) — hjärnans lober, Brocas/Wernickes område, fasciculus arcuatus, hemisfärlateralisering, afasityper (Broca/Wernicke/global/konduktion/anomisk/transkortikal), corticobulbära banan och övre/nedre motorneuron, dysartrityper (spastisk/slapp/ataktisk/hypokinetisk/hyperkinetisk), samt hjärnans kärlförsörjning (a. cerebri media, Willis ring) kopplat till stroke/afasi. Källor bl.a. Kandel/Schwartz/Jessell, Duffy (Motor Speech Disorders).
+  - **Örat & hörselsystemet** (`logoped_orat_horsel`) — ytteröra, mellanöra (hörselben, örontrumpet, m. tensor tympani/stapedius), innerörats cochlea (Cortis organ, tonotopi, hårceller) och vestibularapparat (båggångar, otoliter), hela hörselbanan (cochleariskärnor → övre olivkomplexet → inferior colliculus → hörselcortex), samt klinik (konduktiv/sensorineural hörselnedsättning, otoskleros, Menieres sjukdom, cochleaimplantat). Källor bl.a. Gelfand (Hearing), Kandel/Schwartz/Jessell.
+  - Alla tre avkommenterade i `index.html` (`#topic`, med `(MC)`-tagg) och tillagda i `js/info.js`.
+- VERSION/APP_VERSION/app.js- och info.js-cachebuster → 0.9.124.
+
+## 0.9.123
+- **Logoped: Artikulation & resonans (ansatsröret) klart.** Tredje ämnet i logoped-utbildningen, 100 nya MC-frågor i `data/logoped.json` (topic `logoped_artikulation_resonans`) om ansatsröret som helhet, läppar/kinder (m. orbicularis oris, m. buccinator), tänder och käkar (TMJ, tuggmuskulatur, n. trigeminus), tungan (yttre/inre muskler, n. hypoglossus, sensorisk innervation per tungtredjedel), mjuka gommen och velofaryngeal funktion (m. levator/tensor veli palatini, Passavants list, hyper-/hyponasalitet), hårda gommen, svalgets tre delar och muskellager, näshåla/bihålor samt mimisk muskulatur (n. facialis). Ämnet avkommenterat i `index.html` (`#topic`, med `(MC)`-tagg) och tillagt i `js/info.js`.
+- VERSION/APP_VERSION/app.js- och info.js-cachebuster → 0.9.123.
+
+## 0.9.122
+- **Logoped: Röst-/fonationsapparaten (larynx) klart.** Andra ämnet i logoped-utbildningen (efter Andningsapparaten), 100 nya MC-frågor i `data/logoped.json` (topic `logoped_larynx_fonation`) om struphuvudets brosk (sköld-, ring-, arytenoid-, corniculat-, kuneiform- och epiglottisbrosket), membran/ligament (conus elasticus, membrana quadrangularis, cricothyroidligamentet), stämbandens uppbyggnad (Hiranos cover-body-modell, Reinkes rum), inre och yttre struphuvudmuskler med innervation (n. laryngeus superior/recurrens), fonationsfysiologi (myoelastisk-aerodynamisk teori) och vanliga röststörningar (knutor, polyper, Reinkes ödem, recurrenspares, spasmodisk dysfoni). Ämnet avkommenterat i `index.html` (`#topic`) och tillagt i `js/info.js` (ämneslistan på infosidan).
+- VERSION/APP_VERSION/app.js- och info.js-cachebuster → 0.9.122.
+
 ## 0.9.121
 - **Sökfältet "Sök ämne i alla utbildningar" flyttat.** Låg tidigare ovanför Ämne-rubriken/dropdownen, vilket kändes fel eftersom det bröt av flödet Utbildning → Ämne. Ligger nu under `#topic`-selecten och MC/FC/TF-förklaringen (`#topicLegend`), som en tydligare egen genväg efter huvudvalen. Ingen logikändring — bara flyttad markup i `index.html`.
 - VERSION/APP_VERSION/app.js- och info.js-cachebuster → 0.9.121.
