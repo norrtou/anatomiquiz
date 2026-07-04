@@ -151,16 +151,6 @@
         <option value="tandlakare">Tandläkare</option>
       </select>
 
-      <!-- Diskret "genväg" utöver Utbildning+Ämne: skriv ett ord för att söka
-           bland ALLA utbildningars ämnen (inte bara det som står valt ovan).
-           Filtrerar #topic-listan i bakgrunden (js/app.js: updateTopicOptions),
-           så det är fortsatt en helt vanlig, native <select> som öppnas – inga
-           nya dropdown-komponenter. Träffar från andra utbildningar än den
-           valda får utbildningsnamnet inom parentes i etiketten. Väljer man en
-           sådan träff synkas Utbildning automatiskt och sökfältet töms. -->
-      <label for="topicSearch">Sök ämne i alla utbildningar</label>
-      <input type="search" id="topicSearch" placeholder="t.ex. hjärtat, njurar, larynx …" autocomplete="off" autocapitalize="off" spellcheck="false">
-
       <label for="topic">Ämne</label>
       <select id="topic" aria-describedby="topicLegend">
         <option value="tentaplugg" data-edu="arbetsterapeut" selected>Tentaplugg (MC)</option>
@@ -337,6 +327,16 @@
         <!-- <option value="audionom_ljud_horselfysiologi" data-edu="audionom">Ljud- &amp; hörselfysiologi</option> -->
       </select>
       <p id="topicLegend" class="topic-legend">MC = Multiple Choice-frågor för quiz, FC = Flashcards, TF = Sant eller falskt-frågor för quiz, Bild = fråga med bild</p>
+
+      <!-- Diskret "genväg" utöver Utbildning+Ämne: skriv ett ord för att söka
+           bland ALLA utbildningars ämnen (inte bara det som står valt ovan).
+           Filtrerar #topic-listan i bakgrunden (js/app.js: updateTopicOptions),
+           så det är fortsatt en helt vanlig, native <select> som öppnas – inga
+           nya dropdown-komponenter. Träffar från andra utbildningar än den
+           valda får utbildningsnamnet inom parentes i etiketten. Väljer man en
+           sådan träff synkas Utbildning automatiskt och sökfältet töms. -->
+      <label for="topicSearch">Sök ämne i alla utbildningar</label>
+      <input type="search" id="topicSearch" placeholder="t.ex. hjärtat, njurar, larynx …" autocomplete="off" autocapitalize="off" spellcheck="false">
 
       <div class="setup-row">
         <div class="setup-field">
@@ -590,6 +590,6 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.120" defer></script>
+  <script src="js/app.js?v=0.9.121" defer></script>
 </body>
 </html>

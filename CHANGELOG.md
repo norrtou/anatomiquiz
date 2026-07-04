@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.121
+- **Sökfältet "Sök ämne i alla utbildningar" flyttat.** Låg tidigare ovanför Ämne-rubriken/dropdownen, vilket kändes fel eftersom det bröt av flödet Utbildning → Ämne. Ligger nu under `#topic`-selecten och MC/FC/TF-förklaringen (`#topicLegend`), som en tydligare egen genväg efter huvudvalen. Ingen logikändring — bara flyttad markup i `index.html`.
+- VERSION/APP_VERSION/app.js- och info.js-cachebuster → 0.9.121.
+
 ## 0.9.120
 - **Topplistan: utbildning efter ämnet + klockslag borttaget.** Varje rad i "Senaste resultaten" och "Bästa resultat" visar nu utbildningen som en trebokstavsförkortning i parentes efter ämnesnamnet, t.ex. "Axel/skulderkomplex (FYS)". Löses dynamiskt via `eduAbbrevFor()` som slår upp resultatets sparade ämnesvärde i `allTopicOptions` (samma data `#topic` redan fyllts med) → ingen egen ämne-till-utbildning-lista att underhålla; nya ämnen får automatiskt rätt förkortning. Saknas ämnet (borttaget/omdöpt sedan resultatet sparades) visas bara ämnesnamnet, ingen förkortning. Datumkolumnen visar nu bara datum (t.ex. "2026-07-03"), klockslaget är borttaget.
   - Förkortningar: ALM (Allmänt), APO (Apotekare), ATB (Arbetsterapeut), AUD (Audionom), BMA (Biomedicinsk analytiker), FYS (Fysioterapeut), LOG (Logoped), LÄK (Läkare), MSK (Medicinsk sekreterare), OPT (Optiker), RSK (Röntgensjuksköterska), SSK (Sjuksköterska), TLK (Tandläkare).
