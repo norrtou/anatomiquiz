@@ -145,6 +145,15 @@ const EDUCATIONS = [
     { label: 'Neuroanatomi för tal & språk',          file: './data/logoped.json', topic: 'logoped_neuroanatomi_tal' },
     { label: 'Örat & hörselsystemet',                 file: './data/logoped.json', topic: 'logoped_orat_horsel' },
   ]},
+  // Tandläkare-ämnena ligger alla i en delad fil (data/tandlakare.json),
+  // åtskilda av postens topic-fält → varje rad filtreras via `topic`.
+  { name: 'Tandläkare', topics: [
+    { label: 'Tand & parodontium',          file: './data/tandlakare.json', topic: 'tandlakare_tand_parodontium' },
+    { label: 'Käkar & käkled (TMJ)',        file: './data/tandlakare.json', topic: 'tandlakare_kakar_kakled' },
+    { label: 'Munhåla & munbotten',         file: './data/tandlakare.json', topic: 'tandlakare_munhala_munbotten' },
+    { label: 'Huvud-hals: kärl & nerver',   file: './data/tandlakare.json', topic: 'tandlakare_huvud_hals_karl_nerver' },
+    { label: 'Salivkörtlar & oral fysiologi', file: './data/tandlakare.json', topic: 'tandlakare_salivkortlar_oral_fys' },
+  ]},
 ]
 
 const ORDLISTA_URL = './data/ordlista.json'
