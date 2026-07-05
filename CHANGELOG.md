@@ -1,5 +1,18 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.129
+- **Utbildningsförkortning flyttad i topplistan.** I "Senaste resultaten" och "Bästa resultat" stod utbildningsförkortningen tidigare EFTER ämnesnamnet, t.ex. "Handen (FYS)". Nu står den FÖRE i stället: "(FYS) Handen". Ändrat i `renderScoreList()` och `renderBestList()` i `js/app.js`.
+- VERSION/APP_VERSION/app.js- och info.js-cachebuster → 0.9.129.
+
+## 0.9.128
+- **Biomedicinsk analytiker: Blod & blodbildning klart.** Andra ämnet i BMA-utbildningen, 100 nya MC-frågor i `data/biomedicinsk_analytiker.json` (topic `bma_blod_blodbildning`) om blodets sammansättning (plasma, plasmaproteiner, hematokrit), erytrocyter (struktur, hemoglobin, erytropoes/EPO, nedbrytning, anemityper, MCV/MCH), leukocyter (granulocyter/agranulocyter, funktioner, differentialräkning), trombocyter/megakaryocyter, hematopoes (benmärg, stamcellslinjer, fostrets blodbildning, tillväxtfaktorer, leukemi/aplastisk anemi), hemostas (primär/sekundär hemostas, koagulationskaskaden, fibrinolys) samt blodgrupper (ABO, Rh, korstest) och vanliga labmetoder/referensvärden (blodstatus, blodutstryk, PK/INR, APTT). Källor bl.a. Junqueira & Mescher (Basic Histology), Ross & Pawlina (Histology: A Text and Atlas), Guyton & Hall (Textbook of Medical Physiology), Hoffbrand & Moss (Essential Haematology). Ämnet avkommenterat i `index.html` (`#topic`, med `(MC)`-tagg) och tillagt i `js/info.js`. Alla 200 frågor i filen kontrollerade unika (inga dubbletter av id eller frågetext).
+- VERSION/APP_VERSION/app.js- och info.js-cachebuster → 0.9.128.
+
+## 0.9.127
+- **Biomedicinsk analytiker påbörjad: Cell & vävnad (morfologi) klart.** Första ämnet i BMA-utbildningen, 100 nya MC-frågor i `data/biomedicinsk_analytiker.json` (topic `bma_cell_vavnad`) om cellbiologi (cellmembran/transport, organeller, cellkärna/DNA-RNA, cellcykel/mitos/meios/apoptos) och kroppens fyra vävnadsslag (epitel, bindväv, muskelvävnad, nervvävnad) samt grundläggande histologiska tekniker (HE-färgning, mikrotom, elektronmikroskopi, immunohistokemi). Källor bl.a. Junqueira & Mescher (Basic Histology), Ross & Pawlina (Histology: A Text and Atlas), Alberts m.fl. (Molecular Biology of the Cell). Ämnet avkommenterat i `index.html` (`#topic`, med `(MC)`-tagg) och tillagt i `js/info.js`. Testat end-to-end headless (puppeteer-core mot google-chrome): Starta fungerar, fråga+4 svarsalternativ renderas, svar går att klicka, inga konsolfel.
+  - Byggordningen i `UTBILDNINGAR_REGLER.md` omstrukturerad på begäran: Läkare och Sjuksköterska flyttade till näst sist respektive näst näst sist (direkt före Arbetsterapeut-referensavsnittet, som alltid ligger sist). Ingen innehållsändring, bara omflyttning.
+- VERSION/APP_VERSION/app.js- och info.js-cachebuster → 0.9.127.
+
 ## 0.9.126
 - **Tandläkare klart, alla 5 ämnen.** De fyra sista ämnena i tandläkarutbildningen byggda, 400 nya MC-frågor i `data/tandlakare.json` (totalt 500 frågor, 100/ämne × 5):
   - **Käkar & käkled (TMJ)** (`tandlakare_kakar_kakled`) — maxillans och mandibelns anatomi (foramen/utskott/kanaler), käkledens uppbyggnad (discus articularis, ledrum, ligament, bilaminära zonen), tuggmusklerna (temporalis/masseter/pterygoideus medialis/lateralis) med innervation och rörelsemönster, ocklusionsbegrepp (centrisk relation/ocklusion, Bennett-rörelse, incisal/kondylär styrning) samt klinisk koppling (TMD, luxation, ankylos, mandibelfraktur). Källor bl.a. Moore/Dalley/Agur, Netter (Head and Neck Anatomy for Dentistry), Okeson (Management of TMD and Occlusion), Gray's Anatomy.

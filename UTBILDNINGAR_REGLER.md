@@ -86,66 +86,6 @@ Fysiologiska system
 13. Motorisk utveckling & åldrande – motoriska milstolpar och åldersrelaterade förändringar i muskel, skelett, balans.
 14. Tränings-/arbetsfysiologi – kondition vs styrka, superkompensation, laktattröskel, träningsprinciper.
 
-### Läkare
-Sexårigt sammanhållet program (360 hp), 7 lärosäten. Topografisk fullständig
-anatomi + organsystemsfysiologi + basvetenskapliga tvärsnitt.
-*Linser: makroanatomi → kärl & innervation → histologi → fysiologi → embryologi → klinisk korrelation.*
-
-Befintligt ämne: **Blandad anatomi/fysiologi (MC)** (omdöpt från "Anatomi & fysiologi (MC)").
-
-Topografisk anatomi (regionalt)
-1. Övre extremitet – axel/arm/hand, plexus brachialis, kärl, nervskador (radialis/ulnaris/medianus).
-2. Nedre extremitet – höft/knä/fot, plexus lumbosacralis, n. ischiadicus/femoralis, gångfunktion.
-3. Thorax – bröstkorg, hjärta, lungor, mediastinum, pleura, diafragma.
-4. Buk/abdomen – bukväggens lager, peritoneum, GI-organ, lever/pankreas/mjälte, kärl.
-5. Bäcken & perineum – bäckenbotten, urogenitala och reproduktiva organ, kärl och nerver.
-6. Rygg & columna – kotpelarens segment, ryggmärgens nivåer, spinalnerver, dermatom/myotom.
-7. Huvud & hals – kraniet, ansiktsmuskler, de tolv kranialnerverna, spottkörtlar, svalg/larynx, kärl.
-8. Neuroanatomi (CNS) – storhjärna, hjärnstam, lillhjärna, banor, kärlförsörjning, ventrikelsystem.
-
-Organsystem (fysiologi + integrerad anatomi)
-9. Kardiovaskulära systemet – hjärtcykeln, retledning/EKG, hemodynamik, blodtrycksreglering.
-10. Respirationssystemet – ventilation, gasutbyte, syra-bas, syrgastransport, lungvolymer.
-11. Njure & vätskebalans – filtration/reabsorption, elektrolyt-/syra-basreglering, RAAS.
-12. Gastrointestinalt & ämnesomsättning – digestion, absorption, levermetabolism, energireglering.
-13. Endokrina systemet – hypofys-/sköldkörtel-/binjureaxlar, insulin/glukagon, feedbackloopar.
-14. Blod & immunförsvar – blodkroppar, hemostas, immunceller, medfött vs adaptivt försvar.
-15. Reproduktion – manliga/kvinnliga organ, menscykel, hormonell styrning, befruktning, graviditet.
-
-Basvetenskapliga tvärsnitt
-16. Histologi – epitel, bind-/stödjevävnad, muskel- och nervvävnad.
-17. Embryologi – groddblad, organogenes, vanliga missbildningar.
-18. Cell- & membranfysiologi – membranpotential, transportmekanismer, signalering.
-
-### Sjuksköterska
-Treårigt program (180 hp), ~20 lärosäten. Organsystemsbaserat med
-omvårdnadsprägel.
-*Linser: struktur → fysiologi → normalvärden & mätning → omvårdnadskoppling → förändring vid åldrande/sjukdom.*
-
-Befintliga ämnen: **Medicinsk latin (MC)**, **Blandad anatomi/fysiologi (FC)**
-(omdöpt från "Anatomi & fysiologi (FC)"), **Läkemedelsräkning (MC)**.
-
-Grundläggande
-1. Cell, vävnad & homeostas – celltyper, fyra vävnadsslag, homeostasbegreppet.
-2. Vitalparametrar & normalvärden – puls, blodtryck, andningsfrekvens, temperatur, saturation, medvetandegrad.
-
-Organsystem
-3. Cirkulationssystemet – hjärtanatomi, hjärtcykel, blodkärl, blodtrycksreglering, EKG-grunder.
-4. Blodet – blodkroppar, hemoglobin, koagulation, blodgrupper, anemi.
-5. Respirationssystemet – luftvägar, gasutbyte, andningsreglering, syra-bas, pulsoximetri.
-6. Nervsystemet – CNS/PNS, autonoma nervsystemet, sinnesorgan, reflexer.
-7. Rörelseapparaten – skelett, leder, muskler – mobilisering och fallprevention.
-8. Matsmältning & näringslära – GI-organ, lever/pankreas, näringsämnen, nutritions-/vätskebedömning.
-9. Njurar & urinvägar – urinproduktion, filtration, vätske- och elektrolytbalans.
-10. Endokrina systemet – hormonaxlar, insulin/blodsockerreglering, diabetesomvårdnad.
-11. Huden (integumentet) – hudens lager, temperaturreglering, sårläkning, trycksår.
-12. Immunförsvar & lymfsystem – medfött och förvärvat försvar, inflammation.
-13. Reproduktion, graviditet & förlossning – reproduktiva organ, menscykel, normal graviditet/förlossning.
-
-Kliniknära tvärsnitt
-14. Vätske-, elektrolyt- & syra-basbalans – binder ihop njure, andning och cirkulation.
-15. Åldrande & livscykelperspektiv – fysiologiska förändringar från barn till äldre.
-
 ### Biomedicinsk analytiker
 Treårigt program (180 hp). Två inriktningar: laboratoriemedicin och klinisk
 fysiologi.
@@ -266,6 +206,66 @@ och balansens anatomi/fysiologi.
 3. Balansorganet (vestibularis) – båggångar och otolitorgan; registrering av rörelse och läge.
 4. Hörselnerven & centrala hörselbanan – n. vestibulocochlearis, hörselbanan upp till hörselbarken, central bearbetning.
 5. Ljud- & hörselfysiologi – akustikens grunder, ljudtransmission, lednings- vs sensorineural hörselnedsättning.
+
+### Sjuksköterska
+Treårigt program (180 hp), ~20 lärosäten. Organsystemsbaserat med
+omvårdnadsprägel.
+*Linser: struktur → fysiologi → normalvärden & mätning → omvårdnadskoppling → förändring vid åldrande/sjukdom.*
+
+Befintliga ämnen: **Medicinsk latin (MC)**, **Blandad anatomi/fysiologi (FC)**
+(omdöpt från "Anatomi & fysiologi (FC)"), **Läkemedelsräkning (MC)**.
+
+Grundläggande
+1. Cell, vävnad & homeostas – celltyper, fyra vävnadsslag, homeostasbegreppet.
+2. Vitalparametrar & normalvärden – puls, blodtryck, andningsfrekvens, temperatur, saturation, medvetandegrad.
+
+Organsystem
+3. Cirkulationssystemet – hjärtanatomi, hjärtcykel, blodkärl, blodtrycksreglering, EKG-grunder.
+4. Blodet – blodkroppar, hemoglobin, koagulation, blodgrupper, anemi.
+5. Respirationssystemet – luftvägar, gasutbyte, andningsreglering, syra-bas, pulsoximetri.
+6. Nervsystemet – CNS/PNS, autonoma nervsystemet, sinnesorgan, reflexer.
+7. Rörelseapparaten – skelett, leder, muskler – mobilisering och fallprevention.
+8. Matsmältning & näringslära – GI-organ, lever/pankreas, näringsämnen, nutritions-/vätskebedömning.
+9. Njurar & urinvägar – urinproduktion, filtration, vätske- och elektrolytbalans.
+10. Endokrina systemet – hormonaxlar, insulin/blodsockerreglering, diabetesomvårdnad.
+11. Huden (integumentet) – hudens lager, temperaturreglering, sårläkning, trycksår.
+12. Immunförsvar & lymfsystem – medfött och förvärvat försvar, inflammation.
+13. Reproduktion, graviditet & förlossning – reproduktiva organ, menscykel, normal graviditet/förlossning.
+
+Kliniknära tvärsnitt
+14. Vätske-, elektrolyt- & syra-basbalans – binder ihop njure, andning och cirkulation.
+15. Åldrande & livscykelperspektiv – fysiologiska förändringar från barn till äldre.
+
+### Läkare
+Sexårigt sammanhållet program (360 hp), 7 lärosäten. Topografisk fullständig
+anatomi + organsystemsfysiologi + basvetenskapliga tvärsnitt.
+*Linser: makroanatomi → kärl & innervation → histologi → fysiologi → embryologi → klinisk korrelation.*
+
+Befintligt ämne: **Blandad anatomi/fysiologi (MC)** (omdöpt från "Anatomi & fysiologi (MC)").
+
+Topografisk anatomi (regionalt)
+1. Övre extremitet – axel/arm/hand, plexus brachialis, kärl, nervskador (radialis/ulnaris/medianus).
+2. Nedre extremitet – höft/knä/fot, plexus lumbosacralis, n. ischiadicus/femoralis, gångfunktion.
+3. Thorax – bröstkorg, hjärta, lungor, mediastinum, pleura, diafragma.
+4. Buk/abdomen – bukväggens lager, peritoneum, GI-organ, lever/pankreas/mjälte, kärl.
+5. Bäcken & perineum – bäckenbotten, urogenitala och reproduktiva organ, kärl och nerver.
+6. Rygg & columna – kotpelarens segment, ryggmärgens nivåer, spinalnerver, dermatom/myotom.
+7. Huvud & hals – kraniet, ansiktsmuskler, de tolv kranialnerverna, spottkörtlar, svalg/larynx, kärl.
+8. Neuroanatomi (CNS) – storhjärna, hjärnstam, lillhjärna, banor, kärlförsörjning, ventrikelsystem.
+
+Organsystem (fysiologi + integrerad anatomi)
+9. Kardiovaskulära systemet – hjärtcykeln, retledning/EKG, hemodynamik, blodtrycksreglering.
+10. Respirationssystemet – ventilation, gasutbyte, syra-bas, syrgastransport, lungvolymer.
+11. Njure & vätskebalans – filtration/reabsorption, elektrolyt-/syra-basreglering, RAAS.
+12. Gastrointestinalt & ämnesomsättning – digestion, absorption, levermetabolism, energireglering.
+13. Endokrina systemet – hypofys-/sköldkörtel-/binjureaxlar, insulin/glukagon, feedbackloopar.
+14. Blod & immunförsvar – blodkroppar, hemostas, immunceller, medfött vs adaptivt försvar.
+15. Reproduktion – manliga/kvinnliga organ, menscykel, hormonell styrning, befruktning, graviditet.
+
+Basvetenskapliga tvärsnitt
+16. Histologi – epitel, bind-/stödjevävnad, muskel- och nervvävnad.
+17. Embryologi – groddblad, organogenes, vanliga missbildningar.
+18. Cell- & membranfysiologi – membranpotential, transportmekanismer, signalering.
 
 ---
 

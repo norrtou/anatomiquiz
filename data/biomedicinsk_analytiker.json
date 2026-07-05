@@ -1,0 +1,2802 @@
+[
+  {
+    "id": "bma_cell_1",
+    "type": "mc",
+    "prompt": "Vilken grundstruktur har cellmembranet enligt den vedertagna modellen?",
+    "correct": "En fosfolipid-dubbelskikt med inbäddade proteiner (fluid mosaic-modellen)",
+    "distractors": [
+      "Ett enkelt proteinskikt utan lipider",
+      "Ett rent kolhydratskikt",
+      "Ett homogent kolesterolskikt"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_2",
+    "type": "mc",
+    "prompt": "Vilken del av fosfolipiden är hydrofil och vetter mot vattenmiljön?",
+    "correct": "Huvudgruppen (fosfatdelen)",
+    "distractors": [
+      "Fettsyrasvansarna",
+      "Kolesterolmolekylen",
+      "Glykoproteinerna"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_3",
+    "type": "mc",
+    "prompt": "Vilken del av fosfolipiden är hydrofob och bildar membranets inre?",
+    "correct": "Fettsyrasvansarna",
+    "distractors": [
+      "Fosfathuvudet",
+      "Glykokalyx",
+      "Membranproteinerna"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_4",
+    "type": "mc",
+    "prompt": "Vad kallas membranproteiner som går genom hela lipiddubbelskiktet?",
+    "correct": "Integrala membranproteiner",
+    "distractors": [
+      "Perifera membranproteiner",
+      "Glykolipider",
+      "Kolesterolmolekyler"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_5",
+    "type": "mc",
+    "prompt": "Vad kallas membranproteiner som endast är löst bundna till membranets yta?",
+    "correct": "Perifera membranproteiner",
+    "distractors": [
+      "Integrala membranproteiner",
+      "Transmembrana kanaler",
+      "Receptorproteiner uteslutande"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_6",
+    "type": "mc",
+    "prompt": "Vilket lipidmolekyl reglerar membranets flytbarhet (fluiditet)?",
+    "correct": "Kolesterol",
+    "distractors": [
+      "Glykogen",
+      "Triglycerider",
+      "Fosfatidylkolin ensamt"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_7",
+    "type": "mc",
+    "prompt": "Vad kallas passiv transport av ämnen längs en koncentrationsgradient utan energiåtgång?",
+    "correct": "Diffusion",
+    "distractors": [
+      "Aktiv transport",
+      "Endocytos",
+      "Exocytos"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_8",
+    "type": "mc",
+    "prompt": "Vad kallas diffusion av vatten genom ett semipermeabelt membran?",
+    "correct": "Osmos",
+    "distractors": [
+      "Filtration",
+      "Fagocytos",
+      "Pinocytos"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_9",
+    "type": "mc",
+    "prompt": "Vad krävs för aktiv transport av ämnen mot koncentrationsgradienten?",
+    "correct": "Energi i form av ATP",
+    "distractors": [
+      "Enbart en koncentrationsskillnad",
+      "Enbart temperaturskillnad",
+      "Ingen energi alls behövs"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_10",
+    "type": "mc",
+    "prompt": "Vad kallas processen då cellen tar in stora partiklar eller vätska genom att membranet buktar inåt?",
+    "correct": "Endocytos",
+    "distractors": [
+      "Exocytos",
+      "Diffusion",
+      "Osmos"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_11",
+    "type": "mc",
+    "prompt": "Vad kallas processen då cellen utsöndrar material genom att en vesikel smälter samman med cellmembranet?",
+    "correct": "Exocytos",
+    "distractors": [
+      "Endocytos",
+      "Fagocytos",
+      "Osmos"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_12",
+    "type": "mc",
+    "prompt": "Vad kallas cellens 'ätande' upptag av stora partiklar, t.ex. bakterier?",
+    "correct": "Fagocytos",
+    "distractors": [
+      "Pinocytos",
+      "Exocytos",
+      "Diffusion"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_13",
+    "type": "mc",
+    "prompt": "Vilken organell är cellens huvudsakliga energiproducent (ATP)?",
+    "correct": "Mitokondrien",
+    "distractors": [
+      "Golgiapparaten",
+      "Lysosomen",
+      "Endoplasmatiska nätverket"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_14",
+    "type": "mc",
+    "prompt": "Vad kallas mitokondriens invikta innermembran som ökar ytan för energiproduktion?",
+    "correct": "Cristae",
+    "distractors": [
+      "Cisterner",
+      "Ribosomer",
+      "Tubuli"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_15",
+    "type": "mc",
+    "prompt": "Vad är unikt för mitokondrien jämfört med de flesta andra organeller?",
+    "correct": "Den har eget DNA och egna ribosomer",
+    "distractors": [
+      "Den saknar helt membran",
+      "Den finns bara i muskelceller",
+      "Den kan bara bildas i cellkärnan"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_16",
+    "type": "mc",
+    "prompt": "Vilken organell fortsätter proteinsyntesen och har ribosomer bundna till sin yta?",
+    "correct": "Grovt (ruggat) endoplasmatiskt nätverk",
+    "distractors": [
+      "Slätt endoplasmatiskt nätverk",
+      "Golgiapparaten",
+      "Lysosomen"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_17",
+    "type": "mc",
+    "prompt": "Vilken organell saknar ribosomer och är central för lipidsyntes samt avgiftning?",
+    "correct": "Slätt endoplasmatiskt nätverk",
+    "distractors": [
+      "Grovt endoplasmatiskt nätverk",
+      "Cellkärnan",
+      "Peroxisomen"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_18",
+    "type": "mc",
+    "prompt": "Vilken organell modifierar, sorterar och paketerar proteiner för transport ut ur cellen?",
+    "correct": "Golgiapparaten",
+    "distractors": [
+      "Lysosomen",
+      "Mitokondrien",
+      "Peroxisomen"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_19",
+    "type": "mc",
+    "prompt": "Vilken organell innehåller nedbrytande enzymer och sköter intracellulär nedbrytning av material?",
+    "correct": "Lysosomen",
+    "distractors": [
+      "Golgiapparaten",
+      "Peroxisomen",
+      "Ribosomen"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_20",
+    "type": "mc",
+    "prompt": "Vilken organell bryter ner långa fettsyror och avgiftar bland annat väteperoxid?",
+    "correct": "Peroxisomen",
+    "distractors": [
+      "Lysosomen",
+      "Golgiapparaten",
+      "Mitokondrien"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_21",
+    "type": "mc",
+    "prompt": "Var sker proteinsyntesen (translation) rent konkret i cellen?",
+    "correct": "I ribosomerna",
+    "distractors": [
+      "I cellkärnan",
+      "I mitokondriens matrix",
+      "I Golgiapparaten"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_22",
+    "type": "mc",
+    "prompt": "Vad kallas ribosomer som ligger fritt i cytoplasman snarare än bundna till endoplasmatiskt nätverk?",
+    "correct": "Fria ribosomer",
+    "distractors": [
+      "Bundna ribosomer",
+      "Cisternala ribosomer",
+      "Cristae"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_23",
+    "type": "mc",
+    "prompt": "Vilka strukturer bygger upp cellens cytoskelett?",
+    "correct": "Mikrotubuli, mikrofilament (aktin) och intermediärfilament",
+    "distractors": [
+      "Endast mikrotubuli",
+      "Endast kollagenfibrer",
+      "Endast DNA-strängar"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_24",
+    "type": "mc",
+    "prompt": "Vilken cytoskelettkomponent är huvudsakligen uppbyggd av aktin?",
+    "correct": "Mikrofilament",
+    "distractors": [
+      "Mikrotubuli",
+      "Intermediärfilament",
+      "Cristae"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_25",
+    "type": "mc",
+    "prompt": "Vilken cytoskelettkomponent bygger upp cellens spindelapparat vid celldelning?",
+    "correct": "Mikrotubuli",
+    "distractors": [
+      "Mikrofilament",
+      "Intermediärfilament",
+      "Kollagenfibrer"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_26",
+    "type": "mc",
+    "prompt": "Vilken organell organiserar mikrotubuli och spindelapparaten vid celldelning?",
+    "correct": "Centriolerna (centrosomen)",
+    "distractors": [
+      "Golgiapparaten",
+      "Lysosomen",
+      "Peroxisomen"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_27",
+    "type": "mc",
+    "prompt": "Vad kallas de hårlika utskotten på vissa celler som rör partiklar/vätska längs cellytan, t.ex. i luftvägarna?",
+    "correct": "Cilier (flimmerhår)",
+    "distractors": [
+      "Mikrovilli",
+      "Pseudopodier",
+      "Desmosomer"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_28",
+    "type": "mc",
+    "prompt": "Vad kallas de fingerliknande utskotten som ökar cellytans area för upptag, t.ex. i tarmslemhinnan?",
+    "correct": "Mikrovilli",
+    "distractors": [
+      "Cilier",
+      "Flageller",
+      "Pseudopodier"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_29",
+    "type": "mc",
+    "prompt": "Vad kallas det membranklädda utrymmet inuti cellen som håller organellerna åtskilda från cytosolen?",
+    "correct": "Cytoplasman (med cytosol + organeller)",
+    "distractors": [
+      "Extracellulärmatrix",
+      "Interstitiet",
+      "Glykokalyx"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_30",
+    "type": "mc",
+    "prompt": "Vilken organell innehåller cellens genetiska material (arvsmassa)?",
+    "correct": "Cellkärnan (nucleus)",
+    "distractors": [
+      "Mitokondrien",
+      "Golgiapparaten",
+      "Lysosomen"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_31",
+    "type": "mc",
+    "prompt": "Vad kallas den struktur inuti cellkärnan där ribosomalt RNA (rRNA) bildas?",
+    "correct": "Nukleolen (kärnkroppen)",
+    "distractors": [
+      "Kromatinet",
+      "Kärnhöljet",
+      "Kärnporen"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_32",
+    "type": "mc",
+    "prompt": "Genom vilka strukturer transporteras molekyler in och ut ur cellkärnan?",
+    "correct": "Kärnporer",
+    "distractors": [
+      "Cristae",
+      "Mikrovilli",
+      "Desmosomer"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_33",
+    "type": "mc",
+    "prompt": "Vad kallas den kondenserade formen av DNA tillsammans med proteiner inuti kärnan?",
+    "correct": "Kromatin",
+    "distractors": [
+      "Nukleolen",
+      "Cytoskelettet",
+      "Ribosomen"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_34",
+    "type": "mc",
+    "prompt": "Vilken molekylär grundstruktur har DNA?",
+    "correct": "En dubbelspiral (dubbelhelix) av nukleotider",
+    "distractors": [
+      "En enkel proteinkedja",
+      "Ett förgrenat kolhydrat",
+      "En cirkulär lipidstruktur"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_35",
+    "type": "mc",
+    "prompt": "Vilka tre huvudtyper av RNA medverkar i proteinsyntesen?",
+    "correct": "mRNA, tRNA och rRNA",
+    "distractors": [
+      "Endast mRNA",
+      "DNA, RNA och protein",
+      "mRNA och DNA enbart"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_36",
+    "type": "mc",
+    "prompt": "Vad kallas processen då DNA:s information kopieras till mRNA?",
+    "correct": "Transkription",
+    "distractors": [
+      "Translation",
+      "Replikation",
+      "Mitos"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_37",
+    "type": "mc",
+    "prompt": "Vad kallas processen då mRNA:s kod översätts till en aminosyrasekvens (protein)?",
+    "correct": "Translation",
+    "distractors": [
+      "Transkription",
+      "Replikation",
+      "Meios"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_38",
+    "type": "mc",
+    "prompt": "Vad kallas celler som kan utvecklas till alla celltyper i kroppen, inklusive extraembryonala vävnader?",
+    "correct": "Totipotenta stamceller",
+    "distractors": [
+      "Pluripotenta stamceller",
+      "Multipotenta stamceller",
+      "Differentierade celler"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_39",
+    "type": "mc",
+    "prompt": "Vilka huvudfaser ingår i cellcykeln?",
+    "correct": "G1, S, G2 och M-fasen",
+    "distractors": [
+      "Endast S och M-fasen",
+      "Endast G1 och G2",
+      "Profas, metafas, anafas och telofas enbart"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_40",
+    "type": "mc",
+    "prompt": "Under vilken fas av cellcykeln sker DNA-replikationen?",
+    "correct": "S-fasen (syntesfasen)",
+    "distractors": [
+      "G1-fasen",
+      "G2-fasen",
+      "M-fasen"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_41",
+    "type": "mc",
+    "prompt": "Vad kallas fasen av celldelning då kromosomerna kondenseras och blir synliga?",
+    "correct": "Profas",
+    "distractors": [
+      "Metafas",
+      "Anafas",
+      "Telofas"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_42",
+    "type": "mc",
+    "prompt": "Vad kallas fasen då kromosomerna radas upp i cellens ekvatorialplan?",
+    "correct": "Metafas",
+    "distractors": [
+      "Profas",
+      "Anafas",
+      "Telofas"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_43",
+    "type": "mc",
+    "prompt": "Vad kallas fasen då systerkromatiderna separeras och dras mot varsin cellpol?",
+    "correct": "Anafas",
+    "distractors": [
+      "Profas",
+      "Metafas",
+      "Telofas"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_44",
+    "type": "mc",
+    "prompt": "Vad kallas den sista fasen av mitosen då kärnhöljet återbildas kring de nya kromosomuppsättningarna?",
+    "correct": "Telofas",
+    "distractors": [
+      "Profas",
+      "Metafas",
+      "Anafas"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_45",
+    "type": "mc",
+    "prompt": "Vad är den biologiska funktionen med meios, till skillnad från mitos?",
+    "correct": "Att halvera kromosomtalet och skapa genetisk variation vid bildning av könsceller (gameter)",
+    "distractors": [
+      "Att bilda identiska kroppsceller",
+      "Att enbart reparera DNA-skador",
+      "Att öka cellens storlek"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_46",
+    "type": "mc",
+    "prompt": "Vad kallas programmerad, kontrollerad celldöd som inte utlöser inflammation?",
+    "correct": "Apoptos",
+    "distractors": [
+      "Nekros",
+      "Mitos",
+      "Meios"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_47",
+    "type": "mc",
+    "prompt": "Vad kallas okontrollerad celldöd orsakad av t.ex. syrebrist eller skada, som ofta utlöser inflammation?",
+    "correct": "Nekros",
+    "distractors": [
+      "Apoptos",
+      "Mitos",
+      "Differentiering"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_48",
+    "type": "mc",
+    "prompt": "Vilken typ av stamceller kan utvecklas till flera men inte alla celltyper, t.ex. blodstamceller?",
+    "correct": "Multipotenta stamceller",
+    "distractors": [
+      "Totipotenta stamceller",
+      "Pluripotenta stamceller",
+      "Differentierade celler"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Alberts m.fl., Molecular Biology of the Cell"
+  },
+  {
+    "id": "bma_cell_49",
+    "type": "mc",
+    "prompt": "Vilka är kroppens fyra grundläggande vävnadstyper?",
+    "correct": "Epitelvävnad, bindväv, muskelvävnad och nervvävnad",
+    "distractors": [
+      "Epitelvävnad, benvävnad, blodvävnad och fettvävnad",
+      "Bindväv, broskvävnad, muskelvävnad och blodvävnad",
+      "Epitelvävnad, bindväv och muskelvävnad (endast tre typer)"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_50",
+    "type": "mc",
+    "prompt": "Vilken vävnadstyp täcker kroppens yttre och inre ytor samt bildar körtlar?",
+    "correct": "Epitelvävnad",
+    "distractors": [
+      "Bindväv",
+      "Muskelvävnad",
+      "Nervvävnad"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_51",
+    "type": "mc",
+    "prompt": "Hur beskrivs epitel med ett enda lager celler, alla i kontakt med basalmembranet?",
+    "correct": "Enkelt (simpelt) epitel",
+    "distractors": [
+      "Flerskiktat epitel",
+      "Pseudostratifierat epitel",
+      "Övergångsepitel"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_52",
+    "type": "mc",
+    "prompt": "Hur beskrivs epitel med flera cellager, där bara det basala lagret vilar mot basalmembranet?",
+    "correct": "Flerskiktat (stratifierat) epitel",
+    "distractors": [
+      "Enkelt epitel",
+      "Pseudostratifierat epitel",
+      "Endotel"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_53",
+    "type": "mc",
+    "prompt": "Vilken epiteltyp har platta, tunna celler och underlättar snabb diffusion, t.ex. i alveoler och kärlendotel?",
+    "correct": "Enkelt skivepitel (squamöst epitel)",
+    "distractors": [
+      "Enkelt kubiskt epitel",
+      "Enkelt cylinderepitel",
+      "Flerskiktat skivepitel"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_54",
+    "type": "mc",
+    "prompt": "Vilken epiteltyp har kubformade celler och finns bland annat i njurtubuli och körtelgångar?",
+    "correct": "Enkelt kubiskt epitel",
+    "distractors": [
+      "Enkelt skivepitel",
+      "Flerskiktat skivepitel",
+      "Övergångsepitel"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_55",
+    "type": "mc",
+    "prompt": "Vilken epiteltyp har avlånga, pelarliknande celler och kantar t.ex. tarmslemhinnan?",
+    "correct": "Enkelt cylinderepitel (kolumnärt epitel)",
+    "distractors": [
+      "Enkelt skivepitel",
+      "Enkelt kubiskt epitel",
+      "Flerskiktat kubiskt epitel"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_56",
+    "type": "mc",
+    "prompt": "Vilken epiteltyp skyddar mot mekaniskt slitage och finns t.ex. i huden (förhornat) och matstrupen (oförhornat)?",
+    "correct": "Flerskiktat skivepitel",
+    "distractors": [
+      "Enkelt skivepitel",
+      "Pseudostratifierat epitel",
+      "Övergångsepitel"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_57",
+    "type": "mc",
+    "prompt": "Vad kännetecknar pseudostratifierat epitel, t.ex. i luftvägarna?",
+    "correct": "Alla celler vilar mot basalmembranet men når inte alla ytan, vilket ger ett falskt intryck av flera lager",
+    "distractors": [
+      "Det har verkligen flera separata cellager",
+      "Det saknar helt basalmembran",
+      "Det finns bara i njurarna"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_58",
+    "type": "mc",
+    "prompt": "Vilken epiteltyp finns i urinvägarna och kan tänjas ut avsevärt utan att skadas?",
+    "correct": "Övergångsepitel (urotel)",
+    "distractors": [
+      "Enkelt skivepitel",
+      "Flerskiktat kubiskt epitel",
+      "Pseudostratifierat epitel"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_59",
+    "type": "mc",
+    "prompt": "Vad kallas den tunna, icke-cellulära strukturen som epitel alltid vilar på?",
+    "correct": "Basalmembranet",
+    "distractors": [
+      "Glykokalyx",
+      "Extracellulärmatrix i bindväven enbart",
+      "Cytoskelettet"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_60",
+    "type": "mc",
+    "prompt": "Är epitelvävnad vaskulariserad (försedd med egna blodkärl)?",
+    "correct": "Nej, epitel är avaskulärt och får näring via diffusion från underliggande bindväv",
+    "distractors": [
+      "Ja, rikligt vaskulariserat",
+      "Endast flerskiktat epitel har kärl",
+      "Endast körtelepitel har kärl"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_61",
+    "type": "mc",
+    "prompt": "Vad kallas körtlar som utsöndrar sina produkter via en utförsgång till en yta (t.ex. svettkörtlar)?",
+    "correct": "Exokrina körtlar",
+    "distractors": [
+      "Endokrina körtlar",
+      "Parakrina körtlar",
+      "Autokrina körtlar"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_62",
+    "type": "mc",
+    "prompt": "Vad kallas körtlar som utsöndrar sina produkter (hormoner) direkt till blodet, utan utförsgång?",
+    "correct": "Endokrina körtlar",
+    "distractors": [
+      "Exokrina körtlar",
+      "Merokrina körtlar",
+      "Holokrina körtlar"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_63",
+    "type": "mc",
+    "prompt": "Vilken sekretionsform innebär att körtelcellen frisätter sin produkt via exocytos utan att förlora cellmaterial?",
+    "correct": "Merokrin sekretion",
+    "distractors": [
+      "Apokrin sekretion",
+      "Holokrin sekretion",
+      "Parakrin sekretion"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_64",
+    "type": "mc",
+    "prompt": "Vilken sekretionsform innebär att hela cellen bryts ner och blir en del av sekretet, t.ex. i talgkörtlar?",
+    "correct": "Holokrin sekretion",
+    "distractors": [
+      "Merokrin sekretion",
+      "Apokrin sekretion",
+      "Endokrin sekretion"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_65",
+    "type": "mc",
+    "prompt": "Vilken vävnadstyp binder samman, stödjer och skyddar kroppens övriga vävnader?",
+    "correct": "Bindväv",
+    "distractors": [
+      "Epitelvävnad",
+      "Muskelvävnad",
+      "Nervvävnad"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_66",
+    "type": "mc",
+    "prompt": "Vilken typ av bindväv är löst uppbyggd och finns t.ex. under epitel, rik på celler och kärl?",
+    "correct": "Lös bindväv (areolär bindväv)",
+    "distractors": [
+      "Tät regelbunden bindväv",
+      "Tät oregelbunden bindväv",
+      "Broskvävnad"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_67",
+    "type": "mc",
+    "prompt": "Vilken typ av bindväv har parallellt ordnade kollagenfibrer och finns i senor och ligament?",
+    "correct": "Tät regelbunden bindväv",
+    "distractors": [
+      "Tät oregelbunden bindväv",
+      "Lös bindväv",
+      "Fettvävnad"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_68",
+    "type": "mc",
+    "prompt": "Vilken typ av bindväv har oregelbundet ordnade kollagenfibrer och finns t.ex. i läderhuden (dermis)?",
+    "correct": "Tät oregelbunden bindväv",
+    "distractors": [
+      "Tät regelbunden bindväv",
+      "Lös bindväv",
+      "Broskvävnad"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_69",
+    "type": "mc",
+    "prompt": "Vilken vävnadstyp lagrar energi i form av fett och isolerar kroppen?",
+    "correct": "Fettvävnad (adipös vävnad)",
+    "distractors": [
+      "Broskvävnad",
+      "Benvävnad",
+      "Epitelvävnad"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_70",
+    "type": "mc",
+    "prompt": "Vilken celltyp i bindväv producerar kollagen och andra extracellulära fibrer?",
+    "correct": "Fibroblaster",
+    "distractors": [
+      "Osteocyter",
+      "Kondrocyter",
+      "Myocyter"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_71",
+    "type": "mc",
+    "prompt": "Vilken fibertyp i bindväv ger draghållfasthet och är den vanligaste proteinfibern i kroppen?",
+    "correct": "Kollagena fibrer",
+    "distractors": [
+      "Elastiska fibrer",
+      "Retikulära fibrer",
+      "Muskelfibrer"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_72",
+    "type": "mc",
+    "prompt": "Vilken fibertyp i bindväv gör att vävnaden kan tänjas ut och sedan återgå till ursprungsform, t.ex. i stora artärer?",
+    "correct": "Elastiska fibrer",
+    "distractors": [
+      "Kollagena fibrer",
+      "Retikulära fibrer",
+      "Aktinfilament"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_73",
+    "type": "mc",
+    "prompt": "Vilken fibertyp bildar ett finmaskigt nätverk som stödjer bland annat lever, mjälte och lymfkörtlar?",
+    "correct": "Retikulära fibrer",
+    "distractors": [
+      "Kollagena fibrer",
+      "Elastiska fibrer",
+      "Myosinfilament"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_74",
+    "type": "mc",
+    "prompt": "Vad kallas den geléliknande, icke-fibrösa substansen mellan bindvävens celler och fibrer?",
+    "correct": "Grundsubstansen (matrix)",
+    "distractors": [
+      "Cytosolen",
+      "Sarkoplasman",
+      "Kromatinet"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_75",
+    "type": "mc",
+    "prompt": "Vilka broskvävnadstyper finns i kroppen?",
+    "correct": "Hyalint, elastiskt och fibröst brosk",
+    "distractors": [
+      "Endast hyalint brosk",
+      "Kompakt och spongiöst brosk",
+      "Rött och gult brosk"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_76",
+    "type": "mc",
+    "prompt": "Vilken broskvävnad är vanligast och finns bland annat i ledytor och luftrörsringar?",
+    "correct": "Hyalint brosk",
+    "distractors": [
+      "Elastiskt brosk",
+      "Fibröst brosk",
+      "Kompakt ben"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_77",
+    "type": "mc",
+    "prompt": "Vilken broskvävnad finns i örats yttre del (pinna) och epiglottis, och är särskilt böjlig?",
+    "correct": "Elastiskt brosk",
+    "distractors": [
+      "Hyalint brosk",
+      "Fibröst brosk",
+      "Spongiöst ben"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_78",
+    "type": "mc",
+    "prompt": "Vilken broskvävnad är särskilt tålig mot tryck och finns i mellankotskivor och menisker?",
+    "correct": "Fibröst brosk (fibrocartilago)",
+    "distractors": [
+      "Hyalint brosk",
+      "Elastiskt brosk",
+      "Spongiöst ben"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_79",
+    "type": "mc",
+    "prompt": "Räknas blod som en typ av bindväv, och i så fall varför?",
+    "correct": "Ja, eftersom det består av celler i en flytande grundsubstans (plasma) och har gemensamt embryonalt ursprung med annan bindväv",
+    "distractors": [
+      "Nej, blod räknas som en egen, femte vävnadstyp",
+      "Nej, blod klassas som muskelvävnad",
+      "Nej, blod klassas som epitelvävnad"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_80",
+    "type": "mc",
+    "prompt": "Vilka tre typer av muskelvävnad finns i kroppen?",
+    "correct": "Skelettmuskulatur, hjärtmuskulatur och glatt muskulatur",
+    "distractors": [
+      "Skelettmuskulatur, glatt muskulatur och bindvävsmuskulatur",
+      "Röd och vit muskulatur samt hjärtmuskulatur",
+      "Endast skelett- och hjärtmuskulatur"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_81",
+    "type": "mc",
+    "prompt": "Vilken muskeltyp är tvärstrimmig, viljestyrd och har flerkärniga celler?",
+    "correct": "Skelettmuskulatur",
+    "distractors": [
+      "Hjärtmuskulatur",
+      "Glatt muskulatur",
+      "Ingen av dessa"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_82",
+    "type": "mc",
+    "prompt": "Vilken muskeltyp är tvärstrimmig men ofrivilligt styrd, med specialiserade cell-cellförbindelser?",
+    "correct": "Hjärtmuskulatur",
+    "distractors": [
+      "Skelettmuskulatur",
+      "Glatt muskulatur",
+      "Ingen av dessa"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_83",
+    "type": "mc",
+    "prompt": "Vad kallas de specialiserade cellförbindelserna mellan hjärtmuskelceller som möjliggör snabb elektrisk kommunikation?",
+    "correct": "Interkalerade skivor (discus intercalaris)",
+    "distractors": [
+      "Desmosomer i skelettmuskulatur",
+      "Sarkomerer",
+      "Motoriska ändplattor"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_84",
+    "type": "mc",
+    "prompt": "Vilken muskeltyp saknar tvärstrimmighet, är ofrivilligt styrd och har en enda cellkärna per cell?",
+    "correct": "Glatt muskulatur",
+    "distractors": [
+      "Skelettmuskulatur",
+      "Hjärtmuskulatur",
+      "Ingen av dessa"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_85",
+    "type": "mc",
+    "prompt": "Var finns glatt muskulatur typiskt i kroppen?",
+    "correct": "I väggarna av inre organ och blodkärl (t.ex. tarm, livmoder, kärlväggar)",
+    "distractors": [
+      "Endast i extremiteternas skelettmuskler",
+      "Endast i hjärtat",
+      "Endast i ansiktets mimiska muskler"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_86",
+    "type": "mc",
+    "prompt": "Vad kallas den funktionella grundenheten i den tvärstrimmiga muskelns kontraktila apparat?",
+    "correct": "Sarkomeren",
+    "distractors": [
+      "Sarkolemma",
+      "Sarkoplasman",
+      "Myofibrillen (som helhet)"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_87",
+    "type": "mc",
+    "prompt": "Vilka två huvudsakliga kontraktila proteiner bygger upp sarkomeren?",
+    "correct": "Aktin och myosin",
+    "distractors": [
+      "Kollagen och elastin",
+      "Keratin och aktin",
+      "Tubulin och dynein"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_88",
+    "type": "mc",
+    "prompt": "Vilken vävnadstyp är specialiserad på att motta, bearbeta och skicka elektriska signaler?",
+    "correct": "Nervvävnad",
+    "distractors": [
+      "Muskelvävnad",
+      "Bindväv",
+      "Epitelvävnad"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_89",
+    "type": "mc",
+    "prompt": "Vilka huvuddelar har en typisk neuron?",
+    "correct": "Cellkropp (soma), dendriter och axon",
+    "distractors": [
+      "Endast cellkropp och axon",
+      "Endast dendriter",
+      "Cellkropp, sarkomer och myelinskida"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_90",
+    "type": "mc",
+    "prompt": "Vilken del av neuronen tar huvudsakligen emot signaler från andra celler?",
+    "correct": "Dendriterna",
+    "distractors": [
+      "Axonet",
+      "Cellkroppen (soma) uteslutande",
+      "Myelinskidan"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_91",
+    "type": "mc",
+    "prompt": "Vilken del av neuronen leder signalen bort från cellkroppen till nästa cell?",
+    "correct": "Axonet",
+    "distractors": [
+      "Dendriterna",
+      "Nukleolen",
+      "Golgiapparaten"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_92",
+    "type": "mc",
+    "prompt": "Vad kallas stödjecellerna i nervsystemet som inte själva leder nervimpulser men stödjer neuronerna?",
+    "correct": "Gliaceller",
+    "distractors": [
+      "Osteocyter",
+      "Kondrocyter",
+      "Fibroblaster"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_93",
+    "type": "mc",
+    "prompt": "Vilka gliaceller bildar myelinskidan runt axon i det centrala nervsystemet?",
+    "correct": "Oligodendrocyter",
+    "distractors": [
+      "Schwannceller",
+      "Astrocyter",
+      "Mikroglia"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_94",
+    "type": "mc",
+    "prompt": "Vilka gliaceller bildar myelinskidan runt axon i det perifera nervsystemet?",
+    "correct": "Schwannceller",
+    "distractors": [
+      "Oligodendrocyter",
+      "Astrocyter",
+      "Ependymceller"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_95",
+    "type": "mc",
+    "prompt": "Vad kallas kontaktstället där en neuron överför signal till en annan cell?",
+    "correct": "Synapsen",
+    "distractors": [
+      "Sarkomeren",
+      "Desmosomen",
+      "Nukleolen"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_cell_96",
+    "type": "mc",
+    "prompt": "Vilken vanlig histologisk färgningsmetod används för att visualisera cellkärnor (basofilt, blått/lila) och cytoplasma (acidofilt, rosa)?",
+    "correct": "Hematoxylin-eosinfärgning (HE)",
+    "distractors": [
+      "PAS-färgning enbart",
+      "Gramfärgning",
+      "Immunofluorescens enbart"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology: A Text and Atlas"
+  },
+  {
+    "id": "bma_cell_97",
+    "type": "mc",
+    "prompt": "Vad krävs innan en vävnadsprovbit kan snittas tunt för mikroskopi?",
+    "correct": "Fixering (t.ex. i formalin) och inbäddning (t.ex. i paraffin)",
+    "distractors": [
+      "Endast infrysning, aldrig kemisk fixering",
+      "Ingen förberedelse alls behövs",
+      "Endast färgning utan fixering"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology: A Text and Atlas"
+  },
+  {
+    "id": "bma_cell_98",
+    "type": "mc",
+    "prompt": "Vilket instrument används för att skära mycket tunna vävnadssnitt för mikroskopi?",
+    "correct": "Mikrotom",
+    "distractors": [
+      "Centrifug",
+      "Spektrofotometer",
+      "Autoklav"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology: A Text and Atlas"
+  },
+  {
+    "id": "bma_cell_99",
+    "type": "mc",
+    "prompt": "Vilken mikroskopityp ger högst upplösning och kan visualisera organeller i detalj, t.ex. mitokondriers cristae?",
+    "correct": "Elektronmikroskopi (TEM/SEM)",
+    "distractors": [
+      "Ljusmikroskopi",
+      "Stereomikroskopi",
+      "Mörkfältsmikroskopi enbart"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology: A Text and Atlas"
+  },
+  {
+    "id": "bma_cell_100",
+    "type": "mc",
+    "prompt": "Vilken metod används för att specifikt identifiera ett protein i en vävnadssnitt med hjälp av antikroppar?",
+    "correct": "Immunohistokemi",
+    "distractors": [
+      "Enkel HE-färgning",
+      "Gramfärgning",
+      "Osmiumfixering enbart"
+    ],
+    "topic": "bma_cell_vavnad",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology: A Text and Atlas"
+  },
+  {
+    "id": "bma_blod_1",
+    "type": "mc",
+    "prompt": "Vad utgör den flytande, icke-cellulära delen av blodet?",
+    "correct": "Plasma",
+    "distractors": [
+      "Serum",
+      "Hematokrit",
+      "Lymfa"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_blod_2",
+    "type": "mc",
+    "prompt": "Ungefär hur stor andel av blodvolymen utgörs normalt av formade element (celler), uttryckt som hematokrit hos en vuxen man?",
+    "correct": "Ca 40–50 %",
+    "distractors": [
+      "Ca 10–15 %",
+      "Ca 70–80 %",
+      "Ca 90–100 %"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_3",
+    "type": "mc",
+    "prompt": "Vilket är det vanligaste proteinet i blodplasman?",
+    "correct": "Albumin",
+    "distractors": [
+      "Fibrinogen",
+      "Globulin",
+      "Hemoglobin"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_4",
+    "type": "mc",
+    "prompt": "Vilket plasmaproteins huvudfunktion är att upprätthålla det kolloidosmotiska trycket i blodet?",
+    "correct": "Albumin",
+    "distractors": [
+      "Fibrinogen",
+      "Gammaglobuliner",
+      "Transferrin"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_5",
+    "type": "mc",
+    "prompt": "Vilket plasmaprotein omvandlas till fibrin i koagulationens slutsteg?",
+    "correct": "Fibrinogen",
+    "distractors": [
+      "Albumin",
+      "Globulin",
+      "Haptoglobin"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_6",
+    "type": "mc",
+    "prompt": "Vad kallas plasma sedan koagulationsfaktorerna (bl.a. fibrinogen) avlägsnats, t.ex. efter att blodet koagulerat?",
+    "correct": "Serum",
+    "distractors": [
+      "Lymfa",
+      "Hematokrit",
+      "Buffy coat"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_blod_7",
+    "type": "mc",
+    "prompt": "Vilka är blodets tre huvudsakliga formade element (cellulära beståndsdelar)?",
+    "correct": "Erytrocyter, leukocyter och trombocyter",
+    "distractors": [
+      "Endast erytrocyter och leukocyter",
+      "Plasmaproteiner, erytrocyter och lymfa",
+      "Neutrofiler, lymfocyter och monocyter"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_blod_8",
+    "type": "mc",
+    "prompt": "Vad kallas det tunna, gulvita skiktet av leukocyter och trombocyter som bildas mellan plasma och erytrocyter vid centrifugering av blod?",
+    "correct": "Buffy coat (leukocyt-trombocytskiktet)",
+    "distractors": [
+      "Hematokrit",
+      "Serum",
+      "Plasma"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology: A Text and Atlas"
+  },
+  {
+    "id": "bma_blod_9",
+    "type": "mc",
+    "prompt": "Vad anger hematokritvärdet (Hct/EVF)?",
+    "correct": "Andelen erytrocyter av blodets totala volym",
+    "distractors": [
+      "Hemoglobinkoncentrationen i plasma",
+      "Totala antalet leukocyter",
+      "Plasmans proteininnehåll"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_10",
+    "type": "mc",
+    "prompt": "Vilket är det ungefärliga normala hematokritvärdet för en vuxen kvinna?",
+    "correct": "Ca 36–46 %",
+    "distractors": [
+      "Ca 60–70 %",
+      "Ca 10–20 %",
+      "Ca 90–100 %"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_11",
+    "type": "mc",
+    "prompt": "Vad kallas de röda blodkropparna?",
+    "correct": "Erytrocyter",
+    "distractors": [
+      "Leukocyter",
+      "Trombocyter",
+      "Retikulocyter"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_blod_12",
+    "type": "mc",
+    "prompt": "Vilken form har en mogen, human erytrocyt?",
+    "correct": "En bikonkav skiva",
+    "distractors": [
+      "En perfekt sfär",
+      "En stjärnformad cell",
+      "En flerlobad cell"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology: A Text and Atlas"
+  },
+  {
+    "id": "bma_blod_13",
+    "type": "mc",
+    "prompt": "Varför saknar mogna erytrocyter cellkärna och organeller?",
+    "correct": "Det maximerar utrymmet för hemoglobin och ökar deformerbarheten i smala kapillärer",
+    "distractors": [
+      "De behöver ingen energi alls",
+      "De ska inte kunna transportera syre",
+      "Det förhindrar att de bildas i benmärgen"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_blod_14",
+    "type": "mc",
+    "prompt": "Vad kallas processen då erytrocyter bildas och mognar?",
+    "correct": "Erytropoes",
+    "distractors": [
+      "Trombopoes",
+      "Leukopoes",
+      "Hematopoes (som generell term, ej specifik för erytrocyter)"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology: A Text and Atlas"
+  },
+  {
+    "id": "bma_blod_15",
+    "type": "mc",
+    "prompt": "Vilket hormon stimulerar erytropoesen i benmärgen?",
+    "correct": "Erytropoetin (EPO)",
+    "distractors": [
+      "Trombopoetin",
+      "G-CSF",
+      "Angiotensin II"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_16",
+    "type": "mc",
+    "prompt": "Var produceras erytropoetin huvudsakligen hos en frisk vuxen?",
+    "correct": "Njurarna (peritubulära interstitiella celler)",
+    "distractors": [
+      "Levern uteslutande",
+      "Mjälten",
+      "Binjurarna"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_17",
+    "type": "mc",
+    "prompt": "Vad är hemoglobinets huvudsakliga fysiologiska uppgift?",
+    "correct": "Att transportera syre (och delvis koldioxid) i blodet",
+    "distractors": [
+      "Att bilda antikroppar",
+      "Att katalysera koagulationen",
+      "Att transportera lipider"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_18",
+    "type": "mc",
+    "prompt": "Hur många hemgrupper innehåller en normal hemoglobinmolekyl (HbA)?",
+    "correct": "Fyra",
+    "distractors": [
+      "En",
+      "Två",
+      "Åtta"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_19",
+    "type": "mc",
+    "prompt": "Vilket grundämne finns centralt i varje hemgrupp och binder reversibelt syre?",
+    "correct": "Järn (Fe²⁺)",
+    "distractors": [
+      "Koppar",
+      "Zink",
+      "Magnesium"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_20",
+    "type": "mc",
+    "prompt": "Vad kallas den omogna erytrocytföregångaren som fortfarande innehåller RNA-rester och används kliniskt för att bedöma erytropoesaktivitet?",
+    "correct": "Retikulocyt",
+    "distractors": [
+      "Normoblast enbart",
+      "Myeloblast",
+      "Proerytroblast enbart"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_21",
+    "type": "mc",
+    "prompt": "Ungefär hur lång är en normal erytrocyts livslängd i blodet?",
+    "correct": "Ca 120 dagar",
+    "distractors": [
+      "Ca 10 dagar",
+      "Ca 7 timmar",
+      "Ca 5 år"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_22",
+    "type": "mc",
+    "prompt": "Var bryts uttjänta erytrocyter huvudsakligen ner?",
+    "correct": "I mjälten (och till viss del levern), av makrofager",
+    "distractors": [
+      "I benmärgen enbart",
+      "I lungorna",
+      "I njurarna"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_blod_23",
+    "type": "mc",
+    "prompt": "Vad kallas den gröna nedbrytningsprodukten av hem som senare omvandlas till bilirubin?",
+    "correct": "Biliverdin",
+    "distractors": [
+      "Hemosiderin",
+      "Ferritin",
+      "Transferrin"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_24",
+    "type": "mc",
+    "prompt": "Vilket plasmaprotein binder fritt hemoglobin som frisätts vid hemolys, för att förhindra njurskada?",
+    "correct": "Haptoglobin",
+    "distractors": [
+      "Albumin",
+      "Fibrinogen",
+      "Transferrin"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_25",
+    "type": "mc",
+    "prompt": "Vad kallas ett tillstånd med brist på erytrocyter/hemoglobin i blodet?",
+    "correct": "Anemi",
+    "distractors": [
+      "Polycytemi",
+      "Trombocytos",
+      "Leukocytos"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_26",
+    "type": "mc",
+    "prompt": "Vilken typ av anemi orsakas typiskt av järnbrist och ger mikrocytära, hypokroma erytrocyter?",
+    "correct": "Järnbristanemi",
+    "distractors": [
+      "Megaloblastisk anemi",
+      "Aplastisk anemi",
+      "Hemolytisk anemi"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_27",
+    "type": "mc",
+    "prompt": "Vilken typ av anemi orsakas av brist på vitamin B12 eller folat och ger makrocytära erytrocyter?",
+    "correct": "Megaloblastisk anemi",
+    "distractors": [
+      "Järnbristanemi",
+      "Sicklecellanemi",
+      "Talassemi"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_28",
+    "type": "mc",
+    "prompt": "Vad kallas ett tillstånd med onormalt förhöjt antal erytrocyter/förhöjd hematokrit, t.ex. vid kronisk hypoxi eller polycytemia vera?",
+    "correct": "Polycytemi",
+    "distractors": [
+      "Anemi",
+      "Leukopeni",
+      "Trombocytopeni"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_29",
+    "type": "mc",
+    "prompt": "Vad mäter blodvärdet MCV (mean corpuscular volume)?",
+    "correct": "Erytrocyternas genomsnittliga storlek (volym)",
+    "distractors": [
+      "Genomsnittlig mängd hemoglobin per erytrocyt",
+      "Total mängd hemoglobin i blodet",
+      "Andelen retikulocyter"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_30",
+    "type": "mc",
+    "prompt": "Vad mäter blodvärdet MCH (mean corpuscular hemoglobin)?",
+    "correct": "Genomsnittlig mängd hemoglobin per erytrocyt",
+    "distractors": [
+      "Erytrocyternas genomsnittliga volym",
+      "Hematokritvärdet",
+      "Antalet leukocyter per erytrocyt"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_31",
+    "type": "mc",
+    "prompt": "Vilka är de två huvudgrupperna av leukocyter, baserat på förekomst av cytoplasmatiska granula?",
+    "correct": "Granulocyter och agranulocyter",
+    "distractors": [
+      "Myeloblaster och lymfoblaster",
+      "Fagocyter och trombocyter",
+      "Erytroider och myeloider"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_blod_32",
+    "type": "mc",
+    "prompt": "Vilka tre celltyper räknas som granulocyter?",
+    "correct": "Neutrofiler, eosinofiler och basofiler",
+    "distractors": [
+      "Lymfocyter, monocyter och neutrofiler",
+      "Neutrofiler, monocyter och basofiler",
+      "Eosinofiler, lymfocyter och basofiler"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_blod_33",
+    "type": "mc",
+    "prompt": "Vilka två celltyper räknas som agranulocyter?",
+    "correct": "Lymfocyter och monocyter",
+    "distractors": [
+      "Neutrofiler och eosinofiler",
+      "Basofiler och neutrofiler",
+      "Monocyter och basofiler"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_blod_34",
+    "type": "mc",
+    "prompt": "Vilken leukocyt är vanligast i blodet och utgör kroppens första cellulära försvar mot bakteriella infektioner?",
+    "correct": "Neutrofil",
+    "distractors": [
+      "Eosinofil",
+      "Basofil",
+      "Lymfocyt"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_blod_35",
+    "type": "mc",
+    "prompt": "Vad kallas neutrofilens karakteristiska flerlobade cellkärna?",
+    "correct": "Segmenterad (polymorf) kärna",
+    "distractors": [
+      "Njurformad kärna",
+      "Rund, enkel kärna",
+      "Hästskoformad kärna"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_blod_36",
+    "type": "mc",
+    "prompt": "Vilken leukocyt ökar typiskt i antal vid parasitinfektioner och allergiska reaktioner?",
+    "correct": "Eosinofil",
+    "distractors": [
+      "Neutrofil",
+      "Basofil",
+      "Monocyt"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_blod_37",
+    "type": "mc",
+    "prompt": "Vilken leukocyt innehåller granula med histamin och heparin och medverkar i allergiska/inflammatoriska reaktioner?",
+    "correct": "Basofil",
+    "distractors": [
+      "Neutrofil",
+      "Eosinofil",
+      "Lymfocyt"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_blod_38",
+    "type": "mc",
+    "prompt": "Vilken leukocyt är den minsta agranulocyten och central i det adaptiva immunförsvaret (antikroppsbildning och cellmedierad immunitet)?",
+    "correct": "Lymfocyt",
+    "distractors": [
+      "Monocyt",
+      "Neutrofil",
+      "Eosinofil"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_blod_39",
+    "type": "mc",
+    "prompt": "Vilka tre huvudtyper av lymfocyter finns?",
+    "correct": "B-celler, T-celler och NK-celler (naturliga mördarceller)",
+    "distractors": [
+      "Endast B- och T-celler",
+      "Neutrofiler, B-celler och T-celler",
+      "Makrofager, B-celler och T-celler"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_blod_40",
+    "type": "mc",
+    "prompt": "Vilken leukocyt är störst i blodet och differentierar till makrofager ute i vävnaden?",
+    "correct": "Monocyt",
+    "distractors": [
+      "Lymfocyt",
+      "Neutrofil",
+      "Basofil"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_blod_41",
+    "type": "mc",
+    "prompt": "Vad kallas processen då leukocyter tar sig ut ur blodkärlen och in i infekterad/skadad vävnad?",
+    "correct": "Diapedes (extravasation)",
+    "distractors": [
+      "Fagocytos",
+      "Opsonisering",
+      "Kemotaxi enbart"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_blod_42",
+    "type": "mc",
+    "prompt": "Vad kallas ett förhöjt antal vita blodkroppar i blodet, ofta vid infektion?",
+    "correct": "Leukocytos",
+    "distractors": [
+      "Leukopeni",
+      "Neutropeni",
+      "Lymfopeni"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_43",
+    "type": "mc",
+    "prompt": "Vad kallas ett sänkt antal vita blodkroppar i blodet?",
+    "correct": "Leukopeni",
+    "distractors": [
+      "Leukocytos",
+      "Polycytemi",
+      "Trombocytos"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_44",
+    "type": "mc",
+    "prompt": "Ungefär hur stor andel av leukocyterna utgörs normalt av neutrofiler vid en differentialräkning?",
+    "correct": "Ca 50–70 %",
+    "distractors": [
+      "Ca 1–4 %",
+      "Ca 90–95 %",
+      "Ca 20–25 %"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_45",
+    "type": "mc",
+    "prompt": "Vad kallas den kliniska laboratorieanalys som räknar och klassificerar de olika typerna av leukocyter i ett blodprov/utstryk?",
+    "correct": "Differentialräkning (LPK-differentialräkning)",
+    "distractors": [
+      "Blodgruppering",
+      "Korstest",
+      "Reticulocyträkning"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_46",
+    "type": "mc",
+    "prompt": "Vad kallas blodplättarna?",
+    "correct": "Trombocyter",
+    "distractors": [
+      "Erytrocyter",
+      "Leukocyter",
+      "Retikulocyter"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_blod_47",
+    "type": "mc",
+    "prompt": "Från vilken stor benmärgscell bildas trombocyter genom fragmentering av cytoplasman?",
+    "correct": "Megakaryocyten",
+    "distractors": [
+      "Myeloblasten",
+      "Proerytroblasten",
+      "Monoblasten"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology: A Text and Atlas"
+  },
+  {
+    "id": "bma_blod_48",
+    "type": "mc",
+    "prompt": "Var finns megakaryocyter huvudsakligen belägna?",
+    "correct": "I benmärgen",
+    "distractors": [
+      "I mjälten enbart",
+      "I levern enbart",
+      "I lymfkörtlarna"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology: A Text and Atlas"
+  },
+  {
+    "id": "bma_blod_49",
+    "type": "mc",
+    "prompt": "Är cirkulerande trombocyter kärnförsedda celler?",
+    "correct": "Nej, de saknar cellkärna – de är cellfragment",
+    "distractors": [
+      "Ja, de har en enkel, rund kärna",
+      "Ja, de har en flerlobad kärna",
+      "Ja, men bara i benmärgen"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology: A Text and Atlas"
+  },
+  {
+    "id": "bma_blod_50",
+    "type": "mc",
+    "prompt": "Ungefär hur lång är trombocyternas normala livslängd i blodet?",
+    "correct": "Ca 7–10 dagar",
+    "distractors": [
+      "Ca 120 dagar",
+      "Ca 24 timmar",
+      "Ca 1 år"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_51",
+    "type": "mc",
+    "prompt": "Vilket hormon reglerar huvudsakligen produktionen av trombocyter (megakaryopoesen)?",
+    "correct": "Trombopoetin (TPO)",
+    "distractors": [
+      "Erytropoetin",
+      "G-CSF",
+      "Interleukin-2"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_52",
+    "type": "mc",
+    "prompt": "Var produceras trombopoetin huvudsakligen?",
+    "correct": "Levern",
+    "distractors": [
+      "Njurarna",
+      "Mjälten",
+      "Benmärgen"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_53",
+    "type": "mc",
+    "prompt": "Vad kallas ett tillstånd med onormalt lågt antal trombocyter i blodet?",
+    "correct": "Trombocytopeni",
+    "distractors": [
+      "Trombocytos",
+      "Leukopeni",
+      "Anemi"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_54",
+    "type": "mc",
+    "prompt": "Vad kallas ett tillstånd med onormalt högt antal trombocyter i blodet?",
+    "correct": "Trombocytos",
+    "distractors": [
+      "Trombocytopeni",
+      "Polycytemi",
+      "Leukocytos"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_55",
+    "type": "mc",
+    "prompt": "Vad är trombocyternas primära funktion direkt efter en kärlskada?",
+    "correct": "Att adherera till skadeytan och aggregera till en primär hemostatisk plugg",
+    "distractors": [
+      "Att fagocytera bakterier",
+      "Att bilda antikroppar mot skadan",
+      "Att transportera syre till skadeområdet"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_56",
+    "type": "mc",
+    "prompt": "Vad kallas den samlade processen där alla blodceller bildas?",
+    "correct": "Hematopoes",
+    "distractors": [
+      "Hemostas",
+      "Fibrinolys",
+      "Hemolys"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology: A Text and Atlas"
+  },
+  {
+    "id": "bma_blod_57",
+    "type": "mc",
+    "prompt": "Var sker hematopoesen huvudsakligen hos en frisk vuxen människa?",
+    "correct": "I det röda benmärgen (t.ex. bäckenben, sternum, kotor)",
+    "distractors": [
+      "I levern",
+      "I mjälten",
+      "I lymfkörtlarna"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology: A Text and Atlas"
+  },
+  {
+    "id": "bma_blod_58",
+    "type": "mc",
+    "prompt": "Vilken typ av cell ger, via successiv differentiering, upphov till samtliga blodkroppstyper?",
+    "correct": "Den hematopoetiska stamcellen (multipotent/pluripotent)",
+    "distractors": [
+      "Myeloblasten enbart",
+      "Megakaryocyten",
+      "Fibroblasten"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology: A Text and Atlas"
+  },
+  {
+    "id": "bma_blod_59",
+    "type": "mc",
+    "prompt": "Vilka är de två huvudsakliga cellinjer som hematopoetiska stamceller differentierar till?",
+    "correct": "Myeloisk linje och lymfoid linje",
+    "distractors": [
+      "Erytroid linje och trombocytär linje enbart",
+      "Granulocytär linje och monocytär linje enbart",
+      "Endotelial linje och mesenkymal linje"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology: A Text and Atlas"
+  },
+  {
+    "id": "bma_blod_60",
+    "type": "mc",
+    "prompt": "Vilka celltyper härstammar från den myeloiska stamcellslinjen?",
+    "correct": "Erytrocyter, granulocyter, monocyter och trombocyter (via megakaryocyter)",
+    "distractors": [
+      "Enbart lymfocyter",
+      "Enbart B- och T-celler",
+      "Enbart NK-celler"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology: A Text and Atlas"
+  },
+  {
+    "id": "bma_blod_61",
+    "type": "mc",
+    "prompt": "Vilka celltyper härstammar från den lymfoida stamcellslinjen?",
+    "correct": "Lymfocyter (B-celler, T-celler och NK-celler)",
+    "distractors": [
+      "Neutrofiler och eosinofiler",
+      "Erytrocyter och trombocyter",
+      "Monocyter och makrofager"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology: A Text and Atlas"
+  },
+  {
+    "id": "bma_blod_62",
+    "type": "mc",
+    "prompt": "Var sker hematopoesen hos embryot under de allra första graviditetsveckorna?",
+    "correct": "I gulesäcken",
+    "distractors": [
+      "I benmärgen",
+      "I mjälten",
+      "I thymus"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology: A Text and Atlas"
+  },
+  {
+    "id": "bma_blod_63",
+    "type": "mc",
+    "prompt": "Vilka organ är huvudsakliga hematopoesplatser hos fostret under mellersta delen av graviditeten (fetal period)?",
+    "correct": "Levern och mjälten",
+    "distractors": [
+      "Benmärgen enbart",
+      "Thymus enbart",
+      "Njurarna"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology: A Text and Atlas"
+  },
+  {
+    "id": "bma_blod_64",
+    "type": "mc",
+    "prompt": "Vad kallas den åldersrelaterade omvandlingen av aktivt, blodbildande rött benmärg till inaktiv, fettrik gul benmärg?",
+    "correct": "Fettinvolution (gulmärgsomvandling)",
+    "distractors": [
+      "Myelofibros",
+      "Aplasi",
+      "Metaplasi"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology: A Text and Atlas"
+  },
+  {
+    "id": "bma_blod_65",
+    "type": "mc",
+    "prompt": "Vilken tillväxtfaktor stimulerar specifikt produktionen och mognaden av granulocyter (särskilt neutrofiler) i benmärgen?",
+    "correct": "G-CSF (granulocyt-kolonistimulerande faktor)",
+    "distractors": [
+      "Erytropoetin",
+      "Trombopoetin",
+      "Interleukin-4"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_66",
+    "type": "mc",
+    "prompt": "Vad kallas den stödjande cellulära och extracellulära miljön i benmärgen som reglerar de hematopoetiska stamcellernas överlevnad och differentiering?",
+    "correct": "Stamcellsnischen (benmärgsstroma)",
+    "distractors": [
+      "Retikulocytmembranet",
+      "Buffy coat",
+      "Endostet enbart utan stroma"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology: A Text and Atlas"
+  },
+  {
+    "id": "bma_blod_67",
+    "type": "mc",
+    "prompt": "Vad kallas den kliniska provtagningsmetoden där benmärg utvinns (t.ex. via höftbenskammen) för att bedöma hematopoesen, t.ex. vid utredning av leukemi?",
+    "correct": "Benmärgsaspiration/benmärgsbiopsi",
+    "distractors": [
+      "Lumbalpunktion",
+      "Korstest",
+      "Venpunktion"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_68",
+    "type": "mc",
+    "prompt": "Vilken sjukdomsgrupp kännetecknas av okontrollerad, malign proliferation av omogna blodceller (blaster) i benmärgen?",
+    "correct": "Leukemi",
+    "distractors": [
+      "Anemi",
+      "Trombocytopeni",
+      "Polycytemi vera"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_69",
+    "type": "mc",
+    "prompt": "Vad kallas ett tillstånd där benmärgen inte längre producerar tillräckligt med blodceller, t.ex. till följd av toxisk skada eller läkemedel?",
+    "correct": "Aplastisk anemi",
+    "distractors": [
+      "Järnbristanemi",
+      "Sicklecellanemi",
+      "Polycytemi"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_70",
+    "type": "mc",
+    "prompt": "Vilken ytmarkör (kluster av differentiering) används för att identifiera hematopoetiska stamceller, t.ex. vid stamcellstransplantation?",
+    "correct": "CD34",
+    "distractors": [
+      "CD4",
+      "CD19",
+      "CD8"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_71",
+    "type": "mc",
+    "prompt": "Vad kallas kroppens samlade process för att stoppa blödning vid en kärlskada?",
+    "correct": "Hemostas",
+    "distractors": [
+      "Fibrinolys",
+      "Hematopoes",
+      "Diapedes"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_72",
+    "type": "mc",
+    "prompt": "Vilka tre huvudfaser brukar hemostasen delas in i?",
+    "correct": "Vaskulär spasm, primär hemostas (trombocytplugg) och sekundär hemostas (koagulation)",
+    "distractors": [
+      "Enbart koagulation och fibrinolys",
+      "Vasodilation, diapedes och fagocytos",
+      "Endast trombocytaggregation"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_73",
+    "type": "mc",
+    "prompt": "Vad kallas den omedelbara sammandragningen av ett skadat blodkärl direkt efter skadan?",
+    "correct": "Vaskulär spasm (vasokonstriktion)",
+    "distractors": [
+      "Trombocytaggregation",
+      "Fibrinolys",
+      "Diapedes"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_74",
+    "type": "mc",
+    "prompt": "Vilket protein i subendotelet binder trombocyter vid kärlskada och möjliggör deras adhesion till skadeytan?",
+    "correct": "von Willebrand-faktor (vWF)",
+    "distractors": [
+      "Fibrinogen enbart",
+      "Trombin",
+      "Plasmin"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_75",
+    "type": "mc",
+    "prompt": "Vad kallas processen då aktiverade trombocyter binder till varandra och bildar en plugg vid kärlskadan?",
+    "correct": "Trombocytaggregation",
+    "distractors": [
+      "Trombocytadhesion enbart",
+      "Diapedes",
+      "Opsonisering"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_76",
+    "type": "mc",
+    "prompt": "Vilka två huvudvägar ingår klassiskt i koagulationskaskaden fram till gemensam slutväg?",
+    "correct": "Den extrinsiska vägen och den intrinsiska vägen",
+    "distractors": [
+      "Den arteriella och den venösa vägen",
+      "Den primära och den sekundära vägen (samma sak som hemostasfaserna)",
+      "Den myeloida och den lymfoida vägen"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_77",
+    "type": "mc",
+    "prompt": "Vilken koagulationsfaktor initierar, tillsammans med vävnadsfaktor (tissue factor), den extrinsiska koagulationsvägen?",
+    "correct": "Faktor VII",
+    "distractors": [
+      "Faktor VIII",
+      "Faktor XII",
+      "Faktor V"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_78",
+    "type": "mc",
+    "prompt": "Vilka koagulationsfaktorer ingår i den intrinsiska vägens initiala aktivering?",
+    "correct": "Faktor XII, XI, IX och VIII",
+    "distractors": [
+      "Faktor II, V och X",
+      "Faktor VII och vävnadsfaktor",
+      "Faktor XIII enbart"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_79",
+    "type": "mc",
+    "prompt": "Vad kallas koagulationskaskadens gemensamma slutväg, där faktor X aktiveras och protrombin omvandlas till trombin?",
+    "correct": "Den gemensamma vägen (common pathway)",
+    "distractors": [
+      "Den extrinsiska vägen",
+      "Den intrinsiska vägen",
+      "Fibrinolysvägen"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_80",
+    "type": "mc",
+    "prompt": "Vilket enzym omvandlar i koagulationens slutsteg fibrinogen till fibrin?",
+    "correct": "Trombin",
+    "distractors": [
+      "Plasmin",
+      "Trombopoetin",
+      "Protrombinas enbart utan trombinbildning"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_81",
+    "type": "mc",
+    "prompt": "Vilken koagulationsfaktor stabiliserar det slutliga fibrinnätverket genom tvärbindning (kovalenta bindningar) mellan fibrintrådarna?",
+    "correct": "Faktor XIII",
+    "distractors": [
+      "Faktor VII",
+      "Faktor IX",
+      "Faktor II"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_82",
+    "type": "mc",
+    "prompt": "Vilket vitamin krävs i levern för syntesen av koagulationsfaktorerna II, VII, IX och X?",
+    "correct": "Vitamin K",
+    "distractors": [
+      "Vitamin B12",
+      "Vitamin C",
+      "Vitamin D"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_83",
+    "type": "mc",
+    "prompt": "Vad kallas processen då ett bildat fibrinkoagel gradvis bryts ner igen, t.ex. efter att kärlet läkt?",
+    "correct": "Fibrinolys",
+    "distractors": [
+      "Trombopoes",
+      "Erytropoes",
+      "Hemolys"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_84",
+    "type": "mc",
+    "prompt": "Vilket enzym bryter ner fibrin till nedbrytningsprodukter (bl.a. D-dimer) under fibrinolysen?",
+    "correct": "Plasmin",
+    "distractors": [
+      "Trombin",
+      "Plasminogen (i sin inaktiva form)",
+      "Faktor XIII"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_85",
+    "type": "mc",
+    "prompt": "Vilket protein aktiverar plasminogen till aktivt plasmin och används även kliniskt vid trombolysbehandling?",
+    "correct": "Vävnadsplasminogenaktivator (tPA)",
+    "distractors": [
+      "Vitamin K",
+      "Von Willebrand-faktor",
+      "Trombopoetin"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_blod_86",
+    "type": "mc",
+    "prompt": "Vilket antigensystem definierar de klassiska blodgrupperna A, B, AB och O?",
+    "correct": "ABO-systemet",
+    "distractors": [
+      "Rh-systemet",
+      "HLA-systemet",
+      "MN-systemet"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_87",
+    "type": "mc",
+    "prompt": "Vilka antikroppar finns naturligt (utan föregående exponering) i plasman hos en person med blodgrupp O?",
+    "correct": "Anti-A och anti-B",
+    "distractors": [
+      "Endast anti-A",
+      "Endast anti-B",
+      "Anti-D"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_88",
+    "type": "mc",
+    "prompt": "Vilken blodgrupp (särskilt Rh-negativ) kan i nödsituationer användas som erytrocytgivare till mottagare av alla ABO-grupper (\"universell givare\")?",
+    "correct": "Blodgrupp O",
+    "distractors": [
+      "Blodgrupp AB",
+      "Blodgrupp A",
+      "Blodgrupp B"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_89",
+    "type": "mc",
+    "prompt": "Vilken blodgrupp kallas den \"universella mottagaren\" av erytrocyter inom ABO-systemet?",
+    "correct": "Blodgrupp AB",
+    "distractors": [
+      "Blodgrupp O",
+      "Blodgrupp A",
+      "Blodgrupp B"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_90",
+    "type": "mc",
+    "prompt": "Vad avgör om en person är Rh-positiv eller Rh-negativ?",
+    "correct": "Förekomsten av D-antigenet på erytrocyternas yta",
+    "distractors": [
+      "Förekomsten av A- eller B-antigen",
+      "Antalet erytrocyter i blodet",
+      "Plasmans albuminhalt"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_91",
+    "type": "mc",
+    "prompt": "Vad riskerar att inträffa om en Rh-negativ gravid kvinna exponeras för Rh-positivt fosterblod (t.ex. vid förlossning)?",
+    "correct": "Hon kan bilda anti-D-antikroppar, vilket vid en senare graviditet kan ge hemolytisk sjukdom hos fostret/nyfödda",
+    "distractors": [
+      "Hon utvecklar omedelbart järnbristanemi",
+      "Fostret får omedelbart leukemi",
+      "Inget riskeras, Rh-systemet saknar klinisk betydelse"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_92",
+    "type": "mc",
+    "prompt": "Vilken profylax ges rutinmässigt till Rh-negativa gravida kvinnor för att förhindra immunisering mot D-antigenet?",
+    "correct": "Anti-D-immunglobulin",
+    "distractors": [
+      "Vitamin K-injektion",
+      "Erytropoetin",
+      "Trombopoetin"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_93",
+    "type": "mc",
+    "prompt": "Vad kallas det laboratorietest som utförs före en blodtransfusion för att säkerställa att givarens och mottagarens blod är kompatibla?",
+    "correct": "Korstest (bastest, cross-match)",
+    "distractors": [
+      "Differentialräkning",
+      "Reticulocyträkning",
+      "Hematokritmätning"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_94",
+    "type": "mc",
+    "prompt": "Vad kan bli följden om ABO-inkompatibelt blod felaktigt transfunderas till en patient?",
+    "correct": "En akut hemolytisk transfusionsreaktion med agglutination och hemolys av erytrocyter",
+    "distractors": [
+      "Ingen effekt, ABO-systemet saknar klinisk relevans vid transfusion",
+      "Enbart en lindrig hudreaktion",
+      "En omedelbar ökning av trombocytantalet"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_95",
+    "type": "mc",
+    "prompt": "Vilken laboratoriemetod används rutinmässigt för att bestämma en persons blodgrupp genom att blanda blodprov med kända antisera (anti-A, anti-B, anti-D)?",
+    "correct": "Blodgruppering (agglutinationstest)",
+    "distractors": [
+      "Blodutstryk med HE-färgning",
+      "Elektronmikroskopi",
+      "PCR-baserad DNA-sekvensering enbart"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_96",
+    "type": "mc",
+    "prompt": "Vad kallas det vanligaste laboratorieprovet som ger en samlad bild av blodets cellulära sammansättning (bl.a. antal erytrocyter, leukocyter, trombocyter, Hb och hematokrit)?",
+    "correct": "Blodstatus (CBC, complete blood count)",
+    "distractors": [
+      "Korstest",
+      "Benmärgsbiopsi",
+      "APTT"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_97",
+    "type": "mc",
+    "prompt": "Vilket ungefärligt referensintervall gäller normalt för hemoglobin (Hb) hos en vuxen man?",
+    "correct": "Ca 130–170 g/L",
+    "distractors": [
+      "Ca 30–50 g/L",
+      "Ca 200–250 g/L",
+      "Ca 60–90 g/L"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_98",
+    "type": "mc",
+    "prompt": "Vad används ett färgat, perifert blodutstryk (t.ex. med May-Grünwald-Giemsa-färgning) kliniskt främst till?",
+    "correct": "Att morfologiskt bedöma erytrocyter, leukocyter och trombocyter i mikroskop",
+    "distractors": [
+      "Att mäta koagulationstiden",
+      "Att bestämma blodgrupp",
+      "Att odla bakterier från blodet"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_99",
+    "type": "mc",
+    "prompt": "Vilken typ av instrument används rutinmässigt på hematologilaboratorier för att automatiskt räkna och klassificera blodkroppar?",
+    "correct": "Hematologianalysator (automatisk cellräknare)",
+    "distractors": [
+      "Spektrofotometer enbart",
+      "Mikrotom",
+      "Autoklav"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_blod_100",
+    "type": "mc",
+    "prompt": "Vilka två vanliga koagulationsprover används kliniskt för att bedöma funktionen hos den extrinsiska respektive intrinsiska koagulationsvägen?",
+    "correct": "PK/INR (protrombintid) och APTT (aktiverad partiell tromboplastintid)",
+    "distractors": [
+      "Hematokrit och MCV",
+      "Reticulocyträkning och differentialräkning",
+      "Blodgruppering och korstest"
+    ],
+    "topic": "bma_blod_blodbildning",
+    "difficulty": "Normal",
+    "source": "Hoffbrand & Moss, Essential Haematology"
+  }
+]

@@ -154,6 +154,12 @@ const EDUCATIONS = [
     { label: 'Huvud-hals: kärl & nerver',   file: './data/tandlakare.json', topic: 'tandlakare_huvud_hals_karl_nerver' },
     { label: 'Salivkörtlar & oral fysiologi', file: './data/tandlakare.json', topic: 'tandlakare_salivkortlar_oral_fys' },
   ]},
+  // Biomedicinsk analytiker-ämnena ligger alla i en delad fil
+  // (data/biomedicinsk_analytiker.json), åtskilda av postens topic-fält.
+  { name: 'Biomedicinsk analytiker', topics: [
+    { label: 'Cell & vävnad (morfologi)',   file: './data/biomedicinsk_analytiker.json', topic: 'bma_cell_vavnad' },
+    { label: 'Blod & blodbildning',         file: './data/biomedicinsk_analytiker.json', topic: 'bma_blod_blodbildning' },
+  ]},
 ]
 
 const ORDLISTA_URL = './data/ordlista.json'
