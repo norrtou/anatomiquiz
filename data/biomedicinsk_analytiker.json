@@ -2798,5 +2798,5605 @@
     "topic": "bma_blod_blodbildning",
     "difficulty": "Normal",
     "source": "Hoffbrand & Moss, Essential Haematology"
+  },
+  {
+    "id": "bma_hjarta_1",
+    "type": "mc",
+    "prompt": "Var i thorax är hjärtat huvudsakligen beläget?",
+    "correct": "I mediastinum, mellan de två lungorna och bakom sternum",
+    "distractors": [
+      "Helt inne i höger lungas underlob",
+      "Bakom kotpelaren, utanför mediastinum",
+      "I bukhålan strax under diafragma"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_hjarta_2",
+    "type": "mc",
+    "prompt": "Hjärtsäcken (perikardiet) består av vilka huvuddelar?",
+    "correct": "Ett yttre fibröst perikard och ett inre seröst perikard (med parietalt och visceralt blad)",
+    "distractors": [
+      "Enbart ett enda muskulärt lager",
+      "Två fibrösa lager utan seröst blad",
+      "Endast det viscerala bladet"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_hjarta_3",
+    "type": "mc",
+    "prompt": "Vad kallas det seröst perikardbladet som ligger direkt an mot hjärtmuskeln?",
+    "correct": "Epikardiet (viscerala bladet)",
+    "distractors": [
+      "Endokardiet",
+      "Det parietala bladet",
+      "Myokardiet"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_hjarta_4",
+    "type": "mc",
+    "prompt": "Vilka tre lager bygger upp hjärtväggen, räknat inifrån och ut?",
+    "correct": "Endokardium, myokardium och epikardium",
+    "distractors": [
+      "Intima, media och adventitia",
+      "Mukosa, submukosa och serosa",
+      "Periost, kortikalis och märg"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_hjarta_5",
+    "type": "mc",
+    "prompt": "Hur många kammare (hålrum) har det normala hjärtat?",
+    "correct": "Fyra – två förmak och två kammare",
+    "distractors": [
+      "Två – ett förmak och en kammare",
+      "Tre – två förmak och en kammare",
+      "Sex – tre förmak och tre kammare"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_hjarta_6",
+    "type": "mc",
+    "prompt": "Vad kallas skiljeväggen mellan de två förmaken?",
+    "correct": "Septum interatriale",
+    "distractors": [
+      "Septum interventriculare",
+      "Septum membranaceum enbart",
+      "Crista terminalis"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_hjarta_7",
+    "type": "mc",
+    "prompt": "Vad kallas skiljeväggen mellan de två kamrarna?",
+    "correct": "Septum interventriculare",
+    "distractors": [
+      "Septum interatriale",
+      "Septum primum",
+      "Trabecula septomarginalis enbart"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_hjarta_8",
+    "type": "mc",
+    "prompt": "Vilka kärl mynnar normalt i höger förmak?",
+    "correct": "Vena cava superior, vena cava inferior och sinus coronarius",
+    "distractors": [
+      "De fyra lungvenerna",
+      "Aorta och truncus pulmonalis",
+      "Enbart vena cava superior"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_hjarta_9",
+    "type": "mc",
+    "prompt": "Vilka kärl mynnar normalt i vänster förmak?",
+    "correct": "De fyra lungvenerna (vv. pulmonales)",
+    "distractors": [
+      "Vena cava superior och inferior",
+      "Truncus pulmonalis",
+      "Sinus coronarius"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_hjarta_10",
+    "type": "mc",
+    "prompt": "Vad heter klaffen mellan höger förmak och höger kammare?",
+    "correct": "Trikuspidalklaffen (tre flikar)",
+    "distractors": [
+      "Mitralisklaffen",
+      "Pulmonalisklaffen",
+      "Aortaklaffen"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_hjarta_11",
+    "type": "mc",
+    "prompt": "Vad heter klaffen mellan vänster förmak och vänster kammare?",
+    "correct": "Mitralisklaffen/bikuspidalklaffen (två flikar)",
+    "distractors": [
+      "Trikuspidalklaffen",
+      "Aortaklaffen",
+      "Pulmonalisklaffen"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_hjarta_12",
+    "type": "mc",
+    "prompt": "Vilken klaff sitter mellan höger kammare och truncus pulmonalis?",
+    "correct": "Pulmonalisklaffen",
+    "distractors": [
+      "Trikuspidalklaffen",
+      "Mitralisklaffen",
+      "Aortaklaffen"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_hjarta_13",
+    "type": "mc",
+    "prompt": "Vilken klaff sitter mellan vänster kammare och aorta?",
+    "correct": "Aortaklaffen",
+    "distractors": [
+      "Mitralisklaffen",
+      "Pulmonalisklaffen",
+      "Trikuspidalklaffen"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_hjarta_14",
+    "type": "mc",
+    "prompt": "Vad förankrar AV-klaffarnas fribräddar och förhindrar att de slås upp i förmaken under systole?",
+    "correct": "Chordae tendineae fästa i papillarmusklerna",
+    "distractors": [
+      "Trabecula septomarginalis",
+      "Perikardiets fibrösa blad",
+      "Crista terminalis"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_hjarta_15",
+    "type": "mc",
+    "prompt": "Varför är väggen i vänster kammare betydligt tjockare än i höger kammare?",
+    "correct": "Vänster kammare måste pumpa mot det högre trycket i det systemiska kretsloppet",
+    "distractors": [
+      "Vänster kammare innehåller mer blod totalt",
+      "Höger kammare saknar myokardium",
+      "Vänster kammare slår långsammare"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_hjarta_16",
+    "type": "mc",
+    "prompt": "Vad kallas hjärtats spets, som riktas nedåt-framåt-vänster och bildas av vänster kammare?",
+    "correct": "Apex cordis",
+    "distractors": [
+      "Basis cordis",
+      "Crux cordis",
+      "Auricula cordis"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_hjarta_17",
+    "type": "mc",
+    "prompt": "Vad kallas hjärtats bas, som bildas huvudsakligen av vänster förmak och riktas bakåt-uppåt?",
+    "correct": "Basis cordis",
+    "distractors": [
+      "Apex cordis",
+      "Sulcus coronarius",
+      "Trabecula carnea"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_hjarta_18",
+    "type": "mc",
+    "prompt": "Varifrån utgår de båda kranskärlen (höger och vänster koronarartär)?",
+    "correct": "Från aortarotens sinuser (sinus aortae/Valsalvas sinus), strax ovanför aortaklaffen",
+    "distractors": [
+      "Från truncus pulmonalis",
+      "Direkt från vänster kammares kavitet",
+      "Från arcus aortae, långt distalt om klaffen"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_hjarta_19",
+    "type": "mc",
+    "prompt": "Vilka två huvudgrenar delar sig vänster kranskärl (LCA) vanligen i?",
+    "correct": "Ramus interventricularis anterior (LAD) och ramus circumflexus (Cx)",
+    "distractors": [
+      "Ramus marginalis och ramus septalis enbart",
+      "Höger marginalgren och AV-nodalgren",
+      "Sinusknuteartären och AV-nodalartären enbart"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_hjarta_20",
+    "type": "mc",
+    "prompt": "Hjärtats venösa blod samlas huvudsakligen i vilken struktur innan det mynnar i höger förmak?",
+    "correct": "Sinus coronarius",
+    "distractors": [
+      "Vena cava inferior direkt",
+      "Truncus pulmonalis",
+      "Ductus thoracicus"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_hjarta_21",
+    "type": "mc",
+    "prompt": "Vilken struktur utgör hjärtats normala (primära) pacemaker?",
+    "correct": "Sinusknutan (SA-noden)",
+    "distractors": [
+      "AV-noden",
+      "His-bunten",
+      "Purkinjefibrerna"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_22",
+    "type": "mc",
+    "prompt": "Var är sinusknutan (SA-noden) belägen?",
+    "correct": "I väggen av höger förmak, nära mynningen av vena cava superior",
+    "distractors": [
+      "I det interventrikulära septum",
+      "I vänster förmaks vägg",
+      "I hjärtats apex"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_23",
+    "type": "mc",
+    "prompt": "Vilken frekvens genererar SA-noden normalt hos en vuxen i vila?",
+    "correct": "Cirka 60–100 slag/minut",
+    "distractors": [
+      "Cirka 20–40 slag/minut",
+      "Cirka 150–200 slag/minut",
+      "Cirka 300 slag/minut"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_24",
+    "type": "mc",
+    "prompt": "Hur sprids impulsen från SA-noden till AV-noden?",
+    "correct": "Genom förmaksmuskulaturen (internodala banor) till AV-noden",
+    "distractors": [
+      "Direkt via blodbanan",
+      "Via nervus vagus enbart",
+      "Via chordae tendineae"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_25",
+    "type": "mc",
+    "prompt": "Var är AV-noden belägen?",
+    "correct": "I nedre delen av septum interatriale, nära mynningen av sinus coronarius",
+    "distractors": [
+      "I väggen av höger förmak vid v. cava superior",
+      "I vänster kammarens fria vägg",
+      "I hjärtats apex"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_26",
+    "type": "mc",
+    "prompt": "Vilken funktion har fördröjningen av impulsen i AV-noden?",
+    "correct": "Den ger förmaken tid att tömma sitt blod i kamrarna innan dessa kontraherar",
+    "distractors": [
+      "Den ökar hjärtfrekvensen",
+      "Den förhindrar all förmakskontraktion",
+      "Den stänger AV-klaffarna permanent"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_27",
+    "type": "mc",
+    "prompt": "Vilken struktur leder impulsen vidare från AV-noden ner i det interventrikulära septum?",
+    "correct": "His-bunten (AV-bunten)",
+    "distractors": [
+      "Sinusknutan",
+      "Bachmanns bunte",
+      "Vena cava superior"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_28",
+    "type": "mc",
+    "prompt": "Vad delar His-bunten upp sig i längre ner i septum?",
+    "correct": "Höger och vänster skänkel (grenar)",
+    "distractors": [
+      "Höger och vänster förmaksbana",
+      "Fyra separata Purkinjeknutar",
+      "Två parallella sinusknutor"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_29",
+    "type": "mc",
+    "prompt": "Vad kallas retledningssystemets sista förgreningar som sprider impulsen i kammarmuskulaturen?",
+    "correct": "Purkinjefibrerna",
+    "distractors": [
+      "Internodala banorna",
+      "Bachmanns bunte",
+      "Crista terminalis"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_30",
+    "type": "mc",
+    "prompt": "Hur förhåller sig ledningshastigheten i Purkinjefibrerna till den i vanlig kammarmuskulatur?",
+    "correct": "Den är betydligt snabbare",
+    "distractors": [
+      "Den är betydligt långsammare",
+      "Den är exakt densamma",
+      "Purkinjefibrer leder inte alls impulser"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_31",
+    "type": "mc",
+    "prompt": "Vad händer med hjärtrytmen om SA-noden slutar fungera?",
+    "correct": "AV-noden tar över som pacemaker, med lägre egen frekvens (ca 40–60/min)",
+    "distractors": [
+      "Hjärtat stannar omedelbart utan undantag",
+      "Frekvensen ökar till över 150/min",
+      "Purkinjefibrerna tar genast över med normal frekvens"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_32",
+    "type": "mc",
+    "prompt": "Vad händer om även AV-noden sviktar helt?",
+    "correct": "Ett ventrikulärt \"escape\"-fokus (ofta i Purkinjesystemet) kan ta över, med en mycket låg egen frekvens (ca 20–40/min)",
+    "distractors": [
+      "Kamrarna slutar för alltid att kontrahera",
+      "SA-nodens frekvens fördubblas kompensatoriskt",
+      "Förmaken tar över kammarnas pumpfunktion"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_33",
+    "type": "mc",
+    "prompt": "Vilket jonflöde svarar för den snabba depolarisationen (fas 0) i vanliga arbetsmyokardceller?",
+    "correct": "Snabb inström av Na+",
+    "distractors": [
+      "Utström av K+",
+      "Inström av Ca2+ enbart",
+      "Utström av Cl-"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_34",
+    "type": "mc",
+    "prompt": "Vad orsakar platåfasen (fas 2) i aktionspotentialen hos arbetsmyokardceller?",
+    "correct": "Inström av Ca2+ genom L-typ-kalciumkanaler, balanserat mot viss K+-utström",
+    "distractors": [
+      "Total jonkanalvila",
+      "Snabb Na+-inström",
+      "Enbart passiv diffusion av vatten"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_35",
+    "type": "mc",
+    "prompt": "Vad ligger bakom repolarisationen (fas 3) i arbetsmyokardcellens aktionspotential?",
+    "correct": "Utström av K+",
+    "distractors": [
+      "Inström av Na+",
+      "Inström av Ca2+",
+      "Utström av Cl-"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_36",
+    "type": "mc",
+    "prompt": "Vad kännetecknar pacemakercellernas (t.ex. SA-nodens) aktionspotential jämfört med arbetsmyokardceller?",
+    "correct": "En spontan, långsam diastolisk depolarisation (\"pacemakerpotential\") som når tröskeln utan yttre stimulus",
+    "distractors": [
+      "En helt stabil vilomembranpotential utan spontan aktivitet",
+      "Frånvaro av kalciumkanaler helt och hållet",
+      "Identisk kurvform som i skelettmuskelceller"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_37",
+    "type": "mc",
+    "prompt": "Hur påverkar sympatikusaktivering hjärtfrekvensen?",
+    "correct": "Den ökar hjärtfrekvensen (positiv kronotrop effekt), bland annat via noradrenalin på β1-receptorer",
+    "distractors": [
+      "Den sänker alltid hjärtfrekvensen",
+      "Den har ingen effekt på SA-noden",
+      "Den blockerar all AV-ledning"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_38",
+    "type": "mc",
+    "prompt": "Hur påverkar parasympatisk aktivering (vagusnerven) hjärtfrekvensen?",
+    "correct": "Den minskar hjärtfrekvensen, via acetylkolin på muskarina receptorer",
+    "distractors": [
+      "Den ökar hjärtfrekvensen kraftigt",
+      "Den påverkar enbart kamrarnas kontraktionskraft",
+      "Den saknar effekt på SA- och AV-noden"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_39",
+    "type": "mc",
+    "prompt": "Vilken kranialnerv förmedlar den parasympatiska innervationen av hjärtat?",
+    "correct": "Vagusnerven (n. vagus, X)",
+    "distractors": [
+      "Nervus facialis (VII)",
+      "Nervus glossopharyngeus (IX)",
+      "Nervus phrenicus"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_40",
+    "type": "mc",
+    "prompt": "Vilket nervsystem dominerar normalt över hjärtfrekvensen i vila och håller den lägre än hjärtats inneboende egen frekvens?",
+    "correct": "Det parasympatiska (vagala) systemet, s.k. vagal tonus",
+    "distractors": [
+      "Det sympatiska nervsystemet",
+      "Det enteriska nervsystemet",
+      "Det somatiska nervsystemet"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_41",
+    "type": "mc",
+    "prompt": "Vilka är de två huvudfaserna i hjärtcykeln?",
+    "correct": "Systole och diastole",
+    "distractors": [
+      "Depolarisation och repolarisation",
+      "Preload och afterload",
+      "Kontraktion och konduktion"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_42",
+    "type": "mc",
+    "prompt": "Vad innebär kamrarnas systole?",
+    "correct": "Kontraktionsfasen, då kamrarna drar ihop sig och pumpar ut blod",
+    "distractors": [
+      "Vilofasen då kamrarna fylls med blod",
+      "Förmakens kontraktion",
+      "Klaffarnas öppningsfas enbart"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_43",
+    "type": "mc",
+    "prompt": "Vad innebär kamrarnas diastole?",
+    "correct": "Vilo-/fyllnadsfasen, då kamrarna slappnar av och fylls med blod",
+    "distractors": [
+      "Kontraktionsfasen",
+      "Enbart den isovolumetriska fasen",
+      "Förmakens tömningsfas enbart"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_44",
+    "type": "mc",
+    "prompt": "Vad kännetecknar den isovolumetriska kontraktionsfasen?",
+    "correct": "Alla klaffar är stängda och trycket i kammaren stiger utan att volymen förändras",
+    "distractors": [
+      "Aorta- och pulmonalisklaffarna är öppna",
+      "Kammarvolymen ökar kraftigt",
+      "AV-klaffarna är öppna"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_45",
+    "type": "mc",
+    "prompt": "Vad krävs för att aorta- respektive pulmonalisklaffen ska öppnas?",
+    "correct": "Att trycket i kammaren överstiger trycket i aorta respektive truncus pulmonalis",
+    "distractors": [
+      "Att förmaken kontraherar",
+      "Att AV-noden depolariserar",
+      "Att kammarvolymen är som lägst"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_46",
+    "type": "mc",
+    "prompt": "Vad sker under ejektionsfasen av hjärtcykeln?",
+    "correct": "Blod pumpas ut ur kamrarna till aorta respektive truncus pulmonalis",
+    "distractors": [
+      "Kamrarna fylls passivt med blod",
+      "AV-klaffarna öppnas för fyllnad",
+      "Kranskärlen fylls maximalt"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_47",
+    "type": "mc",
+    "prompt": "Vad kännetecknar den isovolumetriska relaxationsfasen?",
+    "correct": "Alla klaffar är stängda och trycket i kammaren faller utan att volymen förändras",
+    "distractors": [
+      "AV-klaffarna är öppna och blod strömmar in",
+      "Aortaklaffen är öppen",
+      "Kammarens volym ökar kraftigt"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_48",
+    "type": "mc",
+    "prompt": "Vad orsakar den första hjärttonen (S1)?",
+    "correct": "Stängningen av AV-klaffarna (mitralis och trikuspidalis) vid systolens start",
+    "distractors": [
+      "Stängningen av aorta- och pulmonalisklaffen",
+      "Öppning av AV-klaffarna",
+      "Förmakens kontraktion"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_49",
+    "type": "mc",
+    "prompt": "Vad orsakar den andra hjärttonen (S2)?",
+    "correct": "Stängningen av aorta- och pulmonalisklaffen vid diastolens start",
+    "distractors": [
+      "Stängningen av AV-klaffarna",
+      "Öppning av aortaklaffen",
+      "Blodflödet genom kapillärerna"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_50",
+    "type": "mc",
+    "prompt": "Hur definieras slagvolymen (stroke volume)?",
+    "correct": "Skillnaden mellan slutdiastolisk och slutsystolisk kammarvolym",
+    "distractors": [
+      "Den totala blodvolymen i kroppen",
+      "Hjärtfrekvensen multiplicerad med kroppsvikt",
+      "Volymen i förmaken vid systole"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_51",
+    "type": "mc",
+    "prompt": "Ungefär hur stor är slagvolymen hos en vuxen i vila?",
+    "correct": "Cirka 70 ml",
+    "distractors": [
+      "Cirka 5 ml",
+      "Cirka 500 ml",
+      "Cirka 5 000 ml"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_52",
+    "type": "mc",
+    "prompt": "Hur beräknas ejektionsfraktionen (EF)?",
+    "correct": "Slagvolym dividerat med slutdiastolisk volym, angivet i procent",
+    "distractors": [
+      "Hjärtfrekvens dividerat med slagvolym",
+      "Slutsystolisk volym dividerat med slagvolym",
+      "Blodtryck dividerat med hjärtfrekvens"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_53",
+    "type": "mc",
+    "prompt": "Vad räknas som ett normalt ejektionsfraktionsvärde hos en frisk vuxen?",
+    "correct": "Cirka 55–70 %",
+    "distractors": [
+      "Cirka 10–20 %",
+      "Cirka 30–40 %",
+      "Cirka 90–100 %"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_54",
+    "type": "mc",
+    "prompt": "Hur beräknas hjärtminutvolymen (cardiac output)?",
+    "correct": "Slagvolym multiplicerat med hjärtfrekvens",
+    "distractors": [
+      "Slagvolym dividerat med hjärtfrekvens",
+      "Blodtryck multiplicerat med kroppsyta",
+      "Slutdiastolisk volym minus slutsystolisk volym"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_55",
+    "type": "mc",
+    "prompt": "Vad är ett normalt värde för hjärtminutvolymen i vila hos en vuxen?",
+    "correct": "Cirka 5 liter/minut",
+    "distractors": [
+      "Cirka 0,5 liter/minut",
+      "Cirka 15 liter/minut",
+      "Cirka 50 liter/minut"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_56",
+    "type": "mc",
+    "prompt": "Vad innebär Frank–Starlings lag?",
+    "correct": "Ökad fyllnad (preload) av kammaren ger, inom fysiologiska gränser, ökad kontraktionskraft och slagvolym",
+    "distractors": [
+      "Hjärtfrekvensen styr alltid slagvolymen oberoende av fyllnad",
+      "Ökad fyllnad minskar alltid slagvolymen",
+      "Kontraktionskraften är oberoende av muskelfiberlängden"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_57",
+    "type": "mc",
+    "prompt": "Vad avses med preload?",
+    "correct": "Kammarens fyllnad/sträckning precis före kontraktion, huvudsakligen bestämd av det venösa återflödet",
+    "distractors": [
+      "Det motstånd kammaren måste övervinna för att pumpa ut blod",
+      "Hjärtfrekvensen vid vila",
+      "Kranskärlens genomblödning"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_58",
+    "type": "mc",
+    "prompt": "Vad avses med afterload?",
+    "correct": "Det tryck/motstånd som kammaren måste övervinna för att pumpa ut blod, t.ex. aortatryck och perifert kärlmotstånd",
+    "distractors": [
+      "Kammarens fyllnadsvolym före kontraktion",
+      "Förmakens kontraktionskraft",
+      "Slagvolymens andel av hjärtminutvolymen"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_59",
+    "type": "mc",
+    "prompt": "Vad kallas en ökad kontraktionskraft hos hjärtmuskeln som är oberoende av förändringar i preload och afterload?",
+    "correct": "Positiv inotropi (ökad kontraktilitet)",
+    "distractors": [
+      "Positiv kronotropi",
+      "Negativ dromotropi",
+      "Positiv lusitropi"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_60",
+    "type": "mc",
+    "prompt": "Vad illustrerar en tryck–volymkurva (loop) för vänster kammare?",
+    "correct": "Förhållandet mellan kammarens tryck och volym under en hel hjärtcykel",
+    "distractors": [
+      "Enbart hjärtfrekvensen över tid",
+      "Enbart det systemiska blodtrycket",
+      "Endast förmakens elektriska aktivitet"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_61",
+    "type": "mc",
+    "prompt": "Hur definieras (artärt) blodtryck?",
+    "correct": "Den kraft blodet utövar mot kärlväggens insida",
+    "distractors": [
+      "Blodets totala volym i kärlsystemet",
+      "Antalet röda blodkroppar per volymenhet blod",
+      "Hjärtfrekvensen uttryckt i mmHg"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_62",
+    "type": "mc",
+    "prompt": "Vad räknas som ett normalt blodtryck hos en vuxen i vila?",
+    "correct": "Cirka 120/80 mmHg",
+    "distractors": [
+      "Cirka 80/40 mmHg",
+      "Cirka 180/120 mmHg",
+      "Cirka 200/150 mmHg"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_63",
+    "type": "mc",
+    "prompt": "Hur beräknas medelartärtrycket (MAP), ungefär?",
+    "correct": "Diastoliskt tryck + en tredjedel av pulstrycket",
+    "distractors": [
+      "Systoliskt tryck minus diastoliskt tryck",
+      "Systoliskt tryck dividerat med två",
+      "Hjärtfrekvens multiplicerat med slagvolym"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_64",
+    "type": "mc",
+    "prompt": "Vad avses med pulstryck?",
+    "correct": "Skillnaden mellan systoliskt och diastoliskt blodtryck",
+    "distractors": [
+      "Summan av systoliskt och diastoliskt blodtryck",
+      "Medelartärtrycket",
+      "Hjärtfrekvensen per minut"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_65",
+    "type": "mc",
+    "prompt": "Var är baroreceptorerna, som snabbt reglerar blodtrycket, huvudsakligen belägna?",
+    "correct": "I sinus caroticus och i arcus aortae",
+    "distractors": [
+      "I njurarnas glomeruli",
+      "I benmärgen",
+      "I levern"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_66",
+    "type": "mc",
+    "prompt": "Vilken typ av reglering står baroreceptorreflexen för?",
+    "correct": "Kortsiktig, nervös reglering av blodtrycket via det autonoma nervsystemet",
+    "distractors": [
+      "Långsiktig hormonell reglering via njurarna",
+      "Reglering av blodets syrgashalt",
+      "Reglering av kroppstemperaturen"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_67",
+    "type": "mc",
+    "prompt": "Vad händer via baroreceptorreflexen om blodtrycket sjunker plötsligt?",
+    "correct": "Minskad receptoraktivering leder till ökad sympatikusaktivitet, med ökad hjärtfrekvens, kontraktilitet och vasokonstriktion",
+    "distractors": [
+      "Ökad receptoraktivering leder till bradykardi och vasodilatation",
+      "Reflexen har ingen effekt på hjärta eller kärl",
+      "Enbart njurarna aktiveras, utan effekt på hjärtat"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_68",
+    "type": "mc",
+    "prompt": "Vad initierar RAAS-systemet (renin-angiotensin-aldosteronsystemet)?",
+    "correct": "Renin frisätts från njurarnas juxtaglomerulära celler vid lågt blodtryck eller lågt Na+",
+    "distractors": [
+      "Aldosteron frisätts direkt från hypofysen",
+      "Angiotensin II bildas först i levern utan föregångare",
+      "ADH utsöndras från förmaksväggen"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_69",
+    "type": "mc",
+    "prompt": "Vilka är angiotensin II:s huvudsakliga effekter?",
+    "correct": "Kraftig vasokonstriktion samt stimulering av aldosteronfrisättning från binjurebarken",
+    "distractors": [
+      "Kraftig vasodilatation och ökad diures",
+      "Hämning av sympatikusaktivitet",
+      "Direkt ökning av hjärtfrekvensen utan kärleffekt"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_70",
+    "type": "mc",
+    "prompt": "Vad är aldosteronets huvudsakliga effekt på njurarna?",
+    "correct": "Ökad återresorption av Na+ och vatten, vilket ökar blodvolymen",
+    "distractors": [
+      "Ökad utsöndring av Na+ och vatten",
+      "Minskad återresorption av K+",
+      "Ökad glomerulär filtration enbart"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_71",
+    "type": "mc",
+    "prompt": "Vad är ADH:s (vasopressins) huvudsakliga effekt?",
+    "correct": "Ökad vattenåterresorption i njurens samlingsrör, samt vasokonstriktion vid höga koncentrationer",
+    "distractors": [
+      "Ökad utsöndring av vatten i urinen",
+      "Minskad Na+-återresorption",
+      "Sänkning av blodtrycket via kärldilatation enbart"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_72",
+    "type": "mc",
+    "prompt": "Vilken vävnad producerar huvudsakligen den natriuretiska peptiden ANP?",
+    "correct": "Förmaksmyokardiet, vid ökad förmaksdilatation/volymbelastning",
+    "distractors": [
+      "Njurbarken",
+      "Binjuremärgen",
+      "Levern"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_73",
+    "type": "mc",
+    "prompt": "Vad är ANP:s huvudsakliga fysiologiska effekt?",
+    "correct": "Ökad natrium- och vattenutsöndring samt vasodilatation – motverkar RAAS",
+    "distractors": [
+      "Kraftig vasokonstriktion",
+      "Ökad Na+-återresorption i njuren",
+      "Minskad urinproduktion"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_74",
+    "type": "mc",
+    "prompt": "Vad avgör i huvudsak det totala perifera kärlmotståndet (TPR)?",
+    "correct": "Arteriolernas diameter/tonus",
+    "distractors": [
+      "Antalet röda blodkroppar i blodet",
+      "Hjärtfrekvensen",
+      "Storleken på hjärtats förmak"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_75",
+    "type": "mc",
+    "prompt": "Hur uttrycks Ohms lag tillämpad på cirkulationen, i förenklad form?",
+    "correct": "Medelartärtryck = hjärtminutvolym × totalt perifert kärlmotstånd",
+    "distractors": [
+      "Medelartärtryck = slagvolym / hjärtfrekvens",
+      "Hjärtminutvolym = blodtryck / blodvolym",
+      "Kärlmotstånd = hjärtfrekvens × slagvolym"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_76",
+    "type": "mc",
+    "prompt": "Vilka tre lager bygger upp väggen i artärer och vener?",
+    "correct": "Tunica intima, tunica media och tunica externa (adventitia)",
+    "distractors": [
+      "Epikardium, myokardium och endokardium",
+      "Mukosa, submukosa och muskularis",
+      "Periost, kortikalis och benmärg"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_hjarta_77",
+    "type": "mc",
+    "prompt": "Vilket väggslager är generellt tjockare och mer muskulöst i artärer jämfört med vener av motsvarande storlek?",
+    "correct": "Tunica media",
+    "distractors": [
+      "Tunica intima",
+      "Tunica externa",
+      "Endotelet enbart"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_hjarta_78",
+    "type": "mc",
+    "prompt": "Vad kännetecknar elastiska artärer, t.ex. aorta, funktionellt?",
+    "correct": "De har rikligt med elastiska fibrer i media och jämnar ut det pulsatila trycket (\"windkessel\"-funktion)",
+    "distractors": [
+      "De saknar helt glatt muskulatur",
+      "De reglerar huvudsakligen det lokala blodflödet till enskilda organ",
+      "De utgör kroppens främsta plats för gasutbyte"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_hjarta_79",
+    "type": "mc",
+    "prompt": "Vad kännetecknar muskulära artärer, t.ex. a. femoralis, funktionellt?",
+    "correct": "De har rikligt med glatt muskulatur i media och reglerar blodflödet genom att ändra kärldiameter",
+    "distractors": [
+      "De saknar tunica media helt",
+      "De har endast ett endotelcellslager i väggen",
+      "De fungerar som kroppens huvudsakliga blodreservoar"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_hjarta_80",
+    "type": "mc",
+    "prompt": "Vilken kärltyp utgör den huvudsakliga platsen för perifert kärlmotstånd?",
+    "correct": "Arterioler",
+    "distractors": [
+      "Elastiska artärer",
+      "Kapillärer",
+      "Stora vener"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_hjarta_81",
+    "type": "mc",
+    "prompt": "Hur ser kapillärväggen ut histologiskt?",
+    "correct": "Ett enda lager endotelceller omgivet av ett basalmembran",
+    "distractors": [
+      "Tre fullständiga lager som i artärer",
+      "Ett tjockt lager glatt muskulatur",
+      "Ett lager tvärstrimmig muskulatur"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_hjarta_82",
+    "type": "mc",
+    "prompt": "Vad är kapillärernas huvudsakliga funktion?",
+    "correct": "Utbyte av gaser, näringsämnen och avfallsprodukter mellan blod och vävnad",
+    "distractors": [
+      "Att generera det systemiska blodtrycket",
+      "Att pumpa blod tillbaka till hjärtat",
+      "Att lagra syresatt blod"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_hjarta_83",
+    "type": "mc",
+    "prompt": "Hur skiljer sig venväggen generellt från artärväggen vid samma kärlstorlek?",
+    "correct": "Venväggen är tunnare, har mindre glatt muskulatur och ett större lumen",
+    "distractors": [
+      "Venväggen är alltid tjockare och mer muskulös",
+      "Venväggen saknar helt tunica intima",
+      "Venväggen innehåller mer elastin än artärväggen"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_hjarta_84",
+    "type": "mc",
+    "prompt": "Vilken struktur finns i många vener, särskilt i extremiteterna, men saknas i artärer?",
+    "correct": "Venklaffar, som förhindrar backflöde av blod",
+    "distractors": [
+      "Chordae tendineae",
+      "Vasa vasorum enbart",
+      "Pacemakerceller"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_hjarta_85",
+    "type": "mc",
+    "prompt": "Vad kallas den mekanism där skelettmuskelkontraktioner pressar venöst blod mot hjärtat, understödd av venklaffarna?",
+    "correct": "Muskelpumpen (den perifera venpumpen)",
+    "distractors": [
+      "Baroreceptorreflexen",
+      "Frank–Starlings mekanism",
+      "Windkessel-effekten"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_hjarta_86",
+    "type": "mc",
+    "prompt": "Vad kännetecknar ett portasystem i kärlträdet?",
+    "correct": "Blod passerar genom två kapillärnät i serie (kopplade via en ven) innan det når hjärtat, t.ex. i v. portae hepatis",
+    "distractors": [
+      "Blodet kringgår alla kapillärer helt",
+      "Systemet innehåller enbart artärer",
+      "Blodet passerar direkt genom hjärtat mellan de två näten"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_hjarta_87",
+    "type": "mc",
+    "prompt": "Vilken väg följer blodet i det lilla kretsloppet (lungkretsloppet)?",
+    "correct": "Höger kammare → truncus pulmonalis → lungorna → vv. pulmonales → vänster förmak",
+    "distractors": [
+      "Vänster kammare → aorta → lungorna → höger förmak",
+      "Höger förmak → höger kammare → aorta → lungorna",
+      "Vänster förmak → truncus pulmonalis → lungorna"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_hjarta_88",
+    "type": "mc",
+    "prompt": "Vilken väg följer blodet i det stora kretsloppet (systemkretsloppet)?",
+    "correct": "Vänster kammare → aorta → kroppens vävnader → vv. cavae → höger förmak",
+    "distractors": [
+      "Höger kammare → truncus pulmonalis → kroppens vävnader",
+      "Vänster förmak → aorta → höger kammare",
+      "Höger förmak → aorta → vänster kammare"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_hjarta_89",
+    "type": "mc",
+    "prompt": "Vad kallas kärlförbindelser som leder blod direkt från arterioler till venoler utan att passera en kapillärbädd?",
+    "correct": "Arteriovenösa anastomoser (shuntar)",
+    "distractors": [
+      "Portasystem",
+      "Vasa vasorum",
+      "Windkesselkärl"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_hjarta_90",
+    "type": "mc",
+    "prompt": "Vad kallas den lokala regleringen av genomblödning i en vävnad som sker oberoende av nerver och cirkulerande hormoner, t.ex. styrd av lokal CO2- eller O2-nivå?",
+    "correct": "Lokal autoreglering av blodflödet",
+    "distractors": [
+      "Baroreceptorreflexen",
+      "RAAS-systemet",
+      "Frank–Starlings lag"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_hjarta_91",
+    "type": "mc",
+    "prompt": "Vilket protein är idag den mest specifika och känsliga blodmarkören för akut hjärtmuskelskada?",
+    "correct": "Kardiellt troponin (troponin T eller troponin I)",
+    "distractors": [
+      "CK-MB enbart",
+      "Myoglobin enbart",
+      "LDH enbart"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_hjarta_92",
+    "type": "mc",
+    "prompt": "Varför har kardiellt troponin i stort sett ersatt CK-MB som förstahandsmarkör vid misstänkt hjärtinfarkt?",
+    "correct": "Troponin har högre hjärtspecificitet och känslighet för myokardskada",
+    "distractors": [
+      "Troponin är billigare att analysera",
+      "Troponin stiger snabbare än alla andra markörer utan undantag",
+      "CK-MB kan inte längre mätas med moderna metoder"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_hjarta_93",
+    "type": "mc",
+    "prompt": "Ungefär hur snabbt efter en akut hjärtinfarkt börjar troponin stiga mätbart i blodet?",
+    "correct": "Inom cirka 3–6 timmar",
+    "distractors": [
+      "Inom några sekunder",
+      "Först efter cirka två veckor",
+      "Efter cirka fem minuter"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_hjarta_94",
+    "type": "mc",
+    "prompt": "Vad används NT-proBNP/BNP kliniskt huvudsakligen till att bedöma?",
+    "correct": "Hjärtsvikt och graden av belastning/sträckning på kammarväggen",
+    "distractors": [
+      "Akut njursvikt",
+      "Blodgruppstillhörighet",
+      "Infektionsgrad vid sepsis"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_hjarta_95",
+    "type": "mc",
+    "prompt": "Från vilka celler frisätts natriuretiska peptider som BNP huvudsakligen vid ökad väggspänning?",
+    "correct": "Kammarmyocyter, särskilt vid volym- eller tryckbelastning",
+    "distractors": [
+      "Erytrocyter",
+      "Trombocyter",
+      "Neutrofila granulocyter"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_hjarta_96",
+    "type": "mc",
+    "prompt": "Vad står förkortningen CK-MB för, och vad indikerar en förhöjd nivå?",
+    "correct": "Kreatinkinas MB-isoenzym – en äldre, mindre specifik markör för hjärtmuskelskada",
+    "distractors": [
+      "Kalciumkanal-markör – indikerar arytmirisk",
+      "Kolesterol-metabolit B – indikerar ateroskleros",
+      "Koagulationsmarkör B – indikerar blödningsrisk"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_hjarta_97",
+    "type": "mc",
+    "prompt": "Vilka fyra huvudparametrar ingår typiskt i ett lipidstatus (lipidprofil)?",
+    "correct": "Totalkolesterol, LDL-kolesterol, HDL-kolesterol och triglycerider",
+    "distractors": [
+      "Troponin, CK-MB, myoglobin och BNP",
+      "Hemoglobin, hematokrit, MCV och MCH",
+      "Natrium, kalium, klorid och bikarbonat"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_hjarta_98",
+    "type": "mc",
+    "prompt": "Vilket lipoprotein brukar populärt kallas \"det onda kolesterolet\" på grund av sin koppling till ateroskleros?",
+    "correct": "LDL (low density lipoprotein)",
+    "distractors": [
+      "HDL (high density lipoprotein)",
+      "Kylomikroner",
+      "Albumin"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_hjarta_99",
+    "type": "mc",
+    "prompt": "Vilket lipoprotein anses ha en skyddande effekt mot ateroskleros genom omvänd kolesteroltransport?",
+    "correct": "HDL (high density lipoprotein)",
+    "distractors": [
+      "LDL (low density lipoprotein)",
+      "VLDL (very low density lipoprotein)",
+      "Fibrinogen"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_hjarta_100",
+    "type": "mc",
+    "prompt": "Vad kallas den process där fett och andra ämnen lagras in i kärlväggen och bildar plack som kan trånga av eller täppa till kärlet?",
+    "correct": "Ateroskleros",
+    "distractors": [
+      "Trombocytos",
+      "Vaskulit",
+      "Angiogenes"
+    ],
+    "topic": "bma_hjarta_cirkulation",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_resp_1",
+    "type": "mc",
+    "prompt": "Var går den anatomiska gränsen mellan övre och nedre luftvägarna?",
+    "correct": "Vid struphuvudet (larynx) – övre luftvägarna sträcker sig från näsan till larynx, nedre från trakea och nedåt",
+    "distractors": [
+      "Vid näsborrarna",
+      "Vid alveolerna",
+      "Vid huvudbronkernas delning"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_resp_2",
+    "type": "mc",
+    "prompt": "Vilken funktion har näshålans slemhinna avseende den inandade luften?",
+    "correct": "Den värmer, fuktar och filtrerar luften innan den når de nedre luftvägarna",
+    "distractors": [
+      "Den syresätter blodet direkt",
+      "Den producerar surfaktant",
+      "Den reglerar andningsfrekvensen"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_resp_3",
+    "type": "mc",
+    "prompt": "Vilket epitel klär huvuddelen av de nedre luftvägarna?",
+    "correct": "Cilierat, pseudostratifierat cylinderepitel med bägarceller (respiratoriskt epitel)",
+    "distractors": [
+      "Enkelt skivepitel",
+      "Flerskiktat skivepitel",
+      "Övergångsepitel (urotel)"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_resp_4",
+    "type": "mc",
+    "prompt": "Vilken funktion har bägarcellerna i luftvägsepitelet?",
+    "correct": "De producerar slem som fångar upp partiklar och mikroorganismer",
+    "distractors": [
+      "De genererar aktionspotentialer",
+      "De bildar surfaktant",
+      "De fagocyterar bakterier direkt"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_resp_5",
+    "type": "mc",
+    "prompt": "Vilken funktion har flimmerhåren (cilierna) i luftvägsepitelet?",
+    "correct": "De transporterar slemskiktet med fångade partiklar uppåt mot svalget (\"mukociliär transport\")",
+    "distractors": [
+      "De producerar surfaktant",
+      "De reglerar bronkernas diameter",
+      "De genererar andningsrörelserna"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_resp_6",
+    "type": "mc",
+    "prompt": "Vilka är struphuvudets (larynx) huvudsakliga funktioner?",
+    "correct": "Luftpassage, skydd av nedre luftvägarna vid sväljning samt röstbildning (fonation)",
+    "distractors": [
+      "Enbart gasutbyte",
+      "Enbart temperaturreglering av inandningsluften",
+      "Enbart produktion av slem"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_resp_7",
+    "type": "mc",
+    "prompt": "Vad kännetecknar luftstrupens (trakeas) väggstöd?",
+    "correct": "Hästskoformade broskringar som håller luftvägen öppen",
+    "distractors": [
+      "Ett sammanhängande, cirkulärt broskrör",
+      "Fullständig avsaknad av brosk",
+      "Enbart glatt muskulatur utan broskstöd"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_resp_8",
+    "type": "mc",
+    "prompt": "Var delar sig trakea i höger och vänster huvudbronk?",
+    "correct": "Vid carina, ungefär i nivå med fjärde–femte bröstkotan",
+    "distractors": [
+      "Redan vid struphuvudet",
+      "Först inne i respektive lunglob",
+      "I nivå med halskotpelaren"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_resp_9",
+    "type": "mc",
+    "prompt": "Varför hamnar aspirerat material oftare i höger lunga än i vänster?",
+    "correct": "Höger huvudbronk är kortare, brantare och vidare än den vänstra",
+    "distractors": [
+      "Vänster huvudbronk är helt tilltäppt av hjärtat",
+      "Höger lunga saknar skyddande slemhinna",
+      "Vänster huvudbronk är alltid längre och trängre"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_resp_10",
+    "type": "mc",
+    "prompt": "Hur många lober har höger respektive vänster lunga?",
+    "correct": "Höger lunga har tre lober, vänster lunga har två",
+    "distractors": [
+      "Båda lungorna har tre lober vardera",
+      "Höger lunga har två lober, vänster har tre",
+      "Båda lungorna har en enda odelad lob"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_resp_11",
+    "type": "mc",
+    "prompt": "Vad kallas den fåran på lungans mediala yta där bronk, kärl och nerver passerar in och ut?",
+    "correct": "Lunghilus (hilum pulmonis)",
+    "distractors": [
+      "Lungpleuran",
+      "Carina",
+      "Mediastinum"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_resp_12",
+    "type": "mc",
+    "prompt": "Vilka membran omger lungan och bildar tillsammans pleurahålan?",
+    "correct": "Pleura visceralis (lungsäcken) och pleura parietalis (revbenssäcken)",
+    "distractors": [
+      "Endokardium och epikardium",
+      "Peritoneum viscerale och parietale",
+      "Dura mater och arachnoidea"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_resp_13",
+    "type": "mc",
+    "prompt": "Vad finns normalt i pleurahålan, och vilken funktion har det?",
+    "correct": "En liten mängd pleuravätska som minskar friktionen mellan lungan och bröstkorgsväggen vid andningsrörelser",
+    "distractors": [
+      "Luft, som normalt håller lungan utspänd",
+      "Cerebrospinalvätska",
+      "Lymfa i stora mängder"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_resp_14",
+    "type": "mc",
+    "prompt": "Vad kallas lungans luftvägar mellan de mindre bronkerna och alveolerna?",
+    "correct": "Bronkioler (inklusive respiratoriska bronkioler)",
+    "distractors": [
+      "Alveolarsäckar",
+      "Huvudbronker",
+      "Trakealringar"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_resp_15",
+    "type": "mc",
+    "prompt": "Vad skiljer bronkiolernas väggstruktur histologiskt från de större bronkernas?",
+    "correct": "Bronkiolerna saknar broskstöd i väggen",
+    "distractors": [
+      "Bronkiolerna har tjockare broskringar",
+      "Bronkiolerna saknar helt glatt muskulatur",
+      "Bronkiolerna är klädda med flerskiktat skivepitel"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_resp_16",
+    "type": "mc",
+    "prompt": "Vad kallas de små luftfyllda säckarna i lungan där själva gasutbytet sker?",
+    "correct": "Alveoler",
+    "distractors": [
+      "Bronkioler",
+      "Pleurablad",
+      "Bronkopulmonella segment"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_resp_17",
+    "type": "mc",
+    "prompt": "Vilken celltyp täcker huvuddelen (ca 95 %) av alveolarytan och möjliggör snabb gasdiffusion?",
+    "correct": "Typ I-pneumocyter (alveolarceller typ I)",
+    "distractors": [
+      "Typ II-pneumocyter",
+      "Alveolarmakrofager",
+      "Bägarceller"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_resp_18",
+    "type": "mc",
+    "prompt": "Vilken celltyp i alveolerna producerar surfaktant?",
+    "correct": "Typ II-pneumocyter",
+    "distractors": [
+      "Typ I-pneumocyter",
+      "Alveolarmakrofager",
+      "Endotelceller"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_resp_19",
+    "type": "mc",
+    "prompt": "Vad är surfaktantens huvudsakliga fysiologiska funktion?",
+    "correct": "Att sänka ytspänningen i alveolerna och förhindra att de kollapsar vid utandning",
+    "distractors": [
+      "Att fånga upp inandade partiklar",
+      "Att transportera koldioxid ut ur blodet",
+      "Att bilda hemoglobin"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_resp_20",
+    "type": "mc",
+    "prompt": "Vilka lager utgör den s.k. blod-luftbarriären mellan alveolarluft och kapillärblod?",
+    "correct": "Alveolarepitel, ett sammansmält basalmembran och kapillärendotel",
+    "distractors": [
+      "Enbart ett tjockt broskskikt",
+      "Enbart glatt muskulatur",
+      "Slemhinnans bägarceller"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_resp_21",
+    "type": "mc",
+    "prompt": "Vilka celler i alveolerna fagocyterar inandade partiklar och mikroorganismer?",
+    "correct": "Alveolarmakrofager (\"dammceller\")",
+    "distractors": [
+      "Typ I-pneumocyter",
+      "Typ II-pneumocyter",
+      "Bägarceller"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_resp_22",
+    "type": "mc",
+    "prompt": "Vad driver diffusionen av syre från alveolerna till lungkapillärernas blod?",
+    "correct": "Partialtrycksgradienten – högre pO2 i alveolluften än i det inkommande blodet",
+    "distractors": [
+      "En aktiv, ATP-beroende transportprocess",
+      "Skillnader i blodets pH",
+      "Hemoglobinets molekylvikt"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_23",
+    "type": "mc",
+    "prompt": "Vad driver diffusionen av koldioxid från blodet till alveolerna?",
+    "correct": "Partialtrycksgradienten – högre pCO2 i blodet än i alveolluften",
+    "distractors": [
+      "Aktiv transport via karbanhydras",
+      "Skillnader i alveolarytans temperatur",
+      "Surfaktantens ytspänning"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_24",
+    "type": "mc",
+    "prompt": "Vad kallas förhållandet mellan ventilation och genomblödning i en lungdel, avgörande för en effektiv gasväxling?",
+    "correct": "Ventilations-perfusionskvoten (V/Q-kvoten)",
+    "distractors": [
+      "Compliance-kvoten",
+      "Diffusionskvoten",
+      "Residualkvoten"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_25",
+    "type": "mc",
+    "prompt": "Vad blir följden om en lungdel har god ventilation men dålig perfusion?",
+    "correct": "Ventilerad luft deltar inte fullt ut i gasutbytet – en dead space-liknande effekt",
+    "distractors": [
+      "Blodet syresätts extra effektivt",
+      "Koldioxidutsöndringen ökar kraftigt",
+      "Alveolerna kollapsar omedelbart"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_26",
+    "type": "mc",
+    "prompt": "Vad blir följden om en lungdel har god perfusion men dålig ventilation?",
+    "correct": "Blod passerar utan att syresättas ordentligt – en shuntliknande effekt",
+    "distractors": [
+      "Gasutbytet blir maximalt effektivt",
+      "Koldioxid diffunderar snabbare än normalt",
+      "Alveolarytan ökar kompensatoriskt"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_27",
+    "type": "mc",
+    "prompt": "Ungefär hur stor är den totala alveolarytan som är tillgänglig för gasutbyte hos en vuxen?",
+    "correct": "Cirka 70 kvadratmeter",
+    "distractors": [
+      "Cirka 0,7 kvadratmeter",
+      "Cirka 7 kvadratmeter",
+      "Cirka 700 kvadratmeter"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_28",
+    "type": "mc",
+    "prompt": "Hur påverkas diffusionshastigheten över blod-luftbarriären av dess tjocklek, enligt Ficks diffusionslag?",
+    "correct": "Diffusionshastigheten är omvänt proportionell mot barriärens tjocklek – en tjockare barriär ger långsammare diffusion",
+    "distractors": [
+      "Barriärens tjocklek påverkar inte diffusionen alls",
+      "En tjockare barriär ger snabbare diffusion",
+      "Diffusionen styrs enbart av andningsfrekvensen"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_29",
+    "type": "mc",
+    "prompt": "Vad kan en förtjockad blod-luftbarriär, t.ex. vid lungfibros, leda till?",
+    "correct": "Försämrad diffusionskapacitet och nedsatt syresättning av blodet",
+    "distractors": [
+      "Ökad syrgasdiffusion",
+      "Minskad koldioxidproduktion",
+      "Ökad alveolar surfaktantproduktion"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_30",
+    "type": "mc",
+    "prompt": "Vad kallas den luftvolym som når alveolerna och faktiskt deltar i gasutbytet?",
+    "correct": "Alveolär ventilation",
+    "distractors": [
+      "Anatomiskt dead space",
+      "Residualvolym",
+      "Minutventilation"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_31",
+    "type": "mc",
+    "prompt": "Vad kallas luftvägsvolymen som fylls med luft men inte deltar i gasutbytet?",
+    "correct": "Anatomiskt dead space",
+    "distractors": [
+      "Alveolär ventilation",
+      "Funktionell residualkapacitet",
+      "Vitalkapacitet"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_32",
+    "type": "mc",
+    "prompt": "Ungefär hur stort är det anatomiska dead space hos en vuxen?",
+    "correct": "Cirka 150 ml",
+    "distractors": [
+      "Cirka 15 ml",
+      "Cirka 1500 ml",
+      "Cirka 500 ml"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_33",
+    "type": "mc",
+    "prompt": "Vad kallas det täta kapillärnät som omger varje enskild alveol?",
+    "correct": "Det alveolokapillära nätet",
+    "distractors": [
+      "Vasa vasorum",
+      "Portasystemet",
+      "Lymfkapillärnätet"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_resp_34",
+    "type": "mc",
+    "prompt": "Vilket enzym katalyserar reaktionen mellan koldioxid och vatten till kolsyra (H2CO3)?",
+    "correct": "Karbanhydras",
+    "distractors": [
+      "Karboxylas",
+      "Laktatdehydrogenas",
+      "Alkaliskt fosfatas"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_35",
+    "type": "mc",
+    "prompt": "I vilken celltyp sker huvuddelen av reaktionen mellan koldioxid och vatten, katalyserad av karbanhydras?",
+    "correct": "I erytrocyten (den röda blodkroppen)",
+    "distractors": [
+      "I typ I-pneumocyten",
+      "I alveolarmakrofagen",
+      "I trombocyten"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_36",
+    "type": "mc",
+    "prompt": "Vilken är den viktigaste andningsmuskeln vid normal, lugn inandning?",
+    "correct": "Diafragma",
+    "distractors": [
+      "Yttre interkostalmusklerna",
+      "Bukmuskulaturen",
+      "Sternocleidomastoideus"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_resp_37",
+    "type": "mc",
+    "prompt": "Vad händer med diafragma vid inandning?",
+    "correct": "Den kontraherar och sänks/plattas till, vilket ökar brösthålans volym",
+    "distractors": [
+      "Den slappnar av och höjs, vilket minskar brösthålans volym",
+      "Den förblir helt orörlig",
+      "Den kontraherar men lämnar brösthålans volym oförändrad"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_resp_38",
+    "type": "mc",
+    "prompt": "Vilka muskler bidrar ytterligare vid ansträngd, forcerad inandning?",
+    "correct": "Yttre interkostalmusklerna samt hjälpandningsmuskler som scalenus och sternocleidomastoideus",
+    "distractors": [
+      "Enbart bukmuskulaturen",
+      "Enbart de inre interkostalmusklerna",
+      "Enbart diafragma, ensam"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_resp_39",
+    "type": "mc",
+    "prompt": "Är normal, lugn utandning i vila en aktiv eller passiv process?",
+    "correct": "Passiv – den beror på lungornas och bröstkorgens elastiska återfjädring",
+    "distractors": [
+      "Aktiv, kräver alltid muskelkontraktion",
+      "Delvis reflexmässigt styrd av hjärtat",
+      "Den sker enbart via bukmuskulaturen"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_40",
+    "type": "mc",
+    "prompt": "Vilka muskler används vid forcerad, aktiv utandning?",
+    "correct": "Inre interkostalmusklerna och bukmuskulaturen",
+    "distractors": [
+      "Diafragma och yttre interkostalmusklerna",
+      "Enbart scalenusmusklerna",
+      "Enbart sternocleidomastoideus"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_41",
+    "type": "mc",
+    "prompt": "Hur förhåller sig trycket i pleurahålan (det intrapleurala trycket) normalt till atmosfärstrycket?",
+    "correct": "Det är normalt negativt/subatmosfäriskt",
+    "distractors": [
+      "Det är normalt kraftigt positivt",
+      "Det är exakt lika med atmosfärstrycket",
+      "Det varierar slumpmässigt utan mönster"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_42",
+    "type": "mc",
+    "prompt": "Vad händer med lungan om det negativa trycket i pleurahålan upphävs, t.ex. vid en pneumothorax?",
+    "correct": "Lungan faller samman/kollapsar",
+    "distractors": [
+      "Lungan expanderar ytterligare",
+      "Lungans compliance ökar direkt",
+      "Ingen förändring sker"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_43",
+    "type": "mc",
+    "prompt": "Vad kallas den luftvolym som andas in och ut vid normal, lugn andning?",
+    "correct": "Tidalvolym",
+    "distractors": [
+      "Vitalkapacitet",
+      "Residualvolym",
+      "Total lungkapacitet"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_44",
+    "type": "mc",
+    "prompt": "Ungefär hur stor är tidalvolymen hos en vuxen i vila?",
+    "correct": "Cirka 500 ml",
+    "distractors": [
+      "Cirka 50 ml",
+      "Cirka 1 500 ml",
+      "Cirka 3 000 ml"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_45",
+    "type": "mc",
+    "prompt": "Vad kallas den extra luftvolym som kan andas in utöver en normal, lugn inandning?",
+    "correct": "Inspiratorisk reservvolym (IRV)",
+    "distractors": [
+      "Expiratorisk reservvolym (ERV)",
+      "Residualvolym (RV)",
+      "Tidalvolym"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_46",
+    "type": "mc",
+    "prompt": "Vad kallas den extra luftvolym som kan andas ut utöver en normal, lugn utandning?",
+    "correct": "Expiratorisk reservvolym (ERV)",
+    "distractors": [
+      "Inspiratorisk reservvolym (IRV)",
+      "Residualvolym (RV)",
+      "Total lungkapacitet"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_47",
+    "type": "mc",
+    "prompt": "Vad kallas den luftvolym som alltid finns kvar i lungorna efter en maximal utandning?",
+    "correct": "Residualvolym (RV)",
+    "distractors": [
+      "Tidalvolym",
+      "Vitalkapacitet",
+      "Inspiratorisk reservvolym"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_48",
+    "type": "mc",
+    "prompt": "Vad kallas summan av tidalvolym, inspiratorisk reservvolym och expiratorisk reservvolym?",
+    "correct": "Vitalkapacitet (VC)",
+    "distractors": [
+      "Total lungkapacitet (TLC)",
+      "Funktionell residualkapacitet (FRC)",
+      "Residualvolym (RV)"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_49",
+    "type": "mc",
+    "prompt": "Vad kallas summan av alla fyra lungvolymerna tillsammans?",
+    "correct": "Total lungkapacitet (TLC)",
+    "distractors": [
+      "Vitalkapacitet (VC)",
+      "Funktionell residualkapacitet (FRC)",
+      "Alveolär ventilation"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_50",
+    "type": "mc",
+    "prompt": "Vad kallas luftvolymen som finns kvar i lungorna efter en normal, passiv utandning?",
+    "correct": "Funktionell residualkapacitet (FRC), lika med ERV + RV",
+    "distractors": [
+      "Vitalkapacitet (VC)",
+      "Tidalvolym",
+      "Total lungkapacitet (TLC)"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_51",
+    "type": "mc",
+    "prompt": "Vad kallas lungvävnadens och bröstkorgens förmåga att töjas ut vid en given tryckförändring?",
+    "correct": "Compliance",
+    "distractors": [
+      "Residualkapacitet",
+      "Diffusionskapacitet",
+      "Ventilationskvot"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_52",
+    "type": "mc",
+    "prompt": "Vad händer med lungans compliance vid lungfibros?",
+    "correct": "Den minskar – lungan blir stelare och svårare att töja ut",
+    "distractors": [
+      "Den ökar kraftigt",
+      "Den påverkas inte alls",
+      "Den blir oändligt stor"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_53",
+    "type": "mc",
+    "prompt": "Vad händer med lungans compliance vid emfysem?",
+    "correct": "Den ökar – lungvävnaden förlorar sin elastiska återfjädringsförmåga",
+    "distractors": [
+      "Den minskar kraftigt",
+      "Den blir helt noll",
+      "Den påverkas inte alls"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_54",
+    "type": "mc",
+    "prompt": "Hur beräknas minutventilationen?",
+    "correct": "Tidalvolym multiplicerat med andningsfrekvens",
+    "distractors": [
+      "Vitalkapacitet dividerat med andningsfrekvens",
+      "Residualvolym multiplicerat med hjärtfrekvens",
+      "Total lungkapacitet minus dead space"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_55",
+    "type": "mc",
+    "prompt": "Ungefär hur stor är den normala andningsfrekvensen hos en vuxen i vila?",
+    "correct": "Cirka 12–16 andetag per minut",
+    "distractors": [
+      "Cirka 1–2 andetag per minut",
+      "Cirka 40–60 andetag per minut",
+      "Cirka 100 andetag per minut"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_56",
+    "type": "mc",
+    "prompt": "Var i hjärnan finns det primära andningscentret som genererar den grundläggande andningsrytmen?",
+    "correct": "I förlängda märgen (medulla oblongata)",
+    "distractors": [
+      "I hjässloben (lobus parietalis)",
+      "I lillhjärnan (cerebellum)",
+      "I ryggmärgens bakhorn"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_57",
+    "type": "mc",
+    "prompt": "Vilken del av hjärnstammen bidrar till att finjustera andningsmönstret, bl.a. via den pneumotaxiska regionen?",
+    "correct": "Pons",
+    "distractors": [
+      "Mesencephalon (mitthjärnan)",
+      "Thalamus",
+      "Hypofysen"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_58",
+    "type": "mc",
+    "prompt": "Var sitter de centrala kemoreceptorerna som huvudsakligen reglerar andningen?",
+    "correct": "I förlängda märgen, känsliga för förändringar i cerebrospinalvätskans pH/koldioxidhalt",
+    "distractors": [
+      "I aortabågen",
+      "I karotiskropparna",
+      "I njurbarken"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_59",
+    "type": "mc",
+    "prompt": "Vad är den viktigaste fysiologiska stimulansen för de centrala kemoreceptorerna?",
+    "correct": "Förhöjd koldioxidhalt, via sänkt pH i cerebrospinalvätskan",
+    "distractors": [
+      "Sänkt kroppstemperatur",
+      "Förhöjt blodtryck",
+      "Ökad hjärtfrekvens"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_60",
+    "type": "mc",
+    "prompt": "Var sitter de perifera kemoreceptorerna?",
+    "correct": "I karotiskropparna och aortakropparna",
+    "distractors": [
+      "I förlängda märgen",
+      "I lungans alveoler",
+      "I njurarnas juxtaglomerulära celler"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_61",
+    "type": "mc",
+    "prompt": "Vad är de perifera kemoreceptorerna främst känsliga för?",
+    "correct": "Sänkt syrgaspartialtryck (hypoxi), samt förändringar i koldioxid och pH",
+    "distractors": [
+      "Enbart förändringar i kroppstemperatur",
+      "Enbart blodets glukoshalt",
+      "Enbart blodtrycket"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_62",
+    "type": "mc",
+    "prompt": "Vad kallas fenomenet där en patient med kroniskt kraftigt förhöjt koldioxidtryck (t.ex. vid svår KOL) i stället huvudsakligen drivs av låg syrgashalt för sin andningsstimulans?",
+    "correct": "Hypoxisk drivkraft (\"hypoxic drive\")",
+    "distractors": [
+      "Hering–Breuers reflex",
+      "Bohreffekten",
+      "Kloridskiftet"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_63",
+    "type": "mc",
+    "prompt": "Vad kallas reflexen som förhindrar överdriven lunginflation via sträckreceptorer i lungvävnaden?",
+    "correct": "Hering–Breuers reflex",
+    "distractors": [
+      "Baroreceptorreflexen",
+      "Bohreffekten",
+      "Frank–Starlings lag"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_64",
+    "type": "mc",
+    "prompt": "Vilken nerv förmedlar merparten av den sensoriska informationen från lungornas sträckreceptorer till hjärnstammen?",
+    "correct": "Vagusnerven (n. vagus)",
+    "distractors": [
+      "Nervus phrenicus",
+      "Nervus glossopharyngeus",
+      "Nervus accessorius"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_65",
+    "type": "mc",
+    "prompt": "Vad är den huvudsakliga effekten av förhöjd koldioxidhalt i blodet på andningen?",
+    "correct": "Ökad andningsfrekvens och andningsdjup (hyperventilation)",
+    "distractors": [
+      "Minskad andningsfrekvens och andningsdjup",
+      "Ingen effekt på andningen",
+      "Omedelbart andningsstillestånd"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_66",
+    "type": "mc",
+    "prompt": "Vad är den huvudsakliga effekten av kraftigt sänkt syrgashalt i blodet på andningen, förmedlat via perifera kemoreceptorer?",
+    "correct": "Ökad ventilation",
+    "distractors": [
+      "Minskad ventilation",
+      "Ingen mätbar effekt",
+      "Enbart en ökning av hjärtfrekvensen, utan andningspåverkan"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_67",
+    "type": "mc",
+    "prompt": "Vad kallas frivillig, medveten kontroll av andningen, t.ex. vid tal eller simning?",
+    "correct": "Kortikal kontroll av andningen, utgående från hjärnbarken",
+    "distractors": [
+      "Central kemoreceptorreglering",
+      "Hering–Breuers reflex",
+      "Baroreceptorreflexen"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_68",
+    "type": "mc",
+    "prompt": "Vilken nerv innerverar diafragma motoriskt?",
+    "correct": "Nervus phrenicus",
+    "distractors": [
+      "Nervus vagus",
+      "Nervus intercostalis",
+      "Nervus accessorius"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_resp_69",
+    "type": "mc",
+    "prompt": "Från vilka spinalnervnivåer utgår nervus phrenicus?",
+    "correct": "C3–C5",
+    "distractors": [
+      "Th1–Th5",
+      "L1–L3",
+      "C7–Th1"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_resp_70",
+    "type": "mc",
+    "prompt": "Vad kan en ryggmärgsskada ovanför nivå C3 leda till avseende andningen?",
+    "correct": "Upphävd diafragmafunktion, med risk för andningsstillestånd utan respiratorstöd",
+    "distractors": [
+      "Ingen påverkan på andningen alls",
+      "Enbart en lätt sänkning av andningsfrekvensen",
+      "Enbart bortfall av hostreflexen"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_resp_71",
+    "type": "mc",
+    "prompt": "I vilken form transporteras merparten av syret i blodet?",
+    "correct": "Bundet till hemoglobin, som oxyhemoglobin",
+    "distractors": [
+      "Löst direkt i plasman",
+      "Bundet till albumin",
+      "Bundet till bikarbonat"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_72",
+    "type": "mc",
+    "prompt": "Ungefär hur stor andel av syret i blodet transporteras löst i plasman, i stället för bundet till hemoglobin?",
+    "correct": "Endast en liten andel, cirka 1–2 %",
+    "distractors": [
+      "Ungefär hälften",
+      "Nästan allt syre, cirka 95 %",
+      "Ingen alls – allt syre är bundet till hemoglobin"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_73",
+    "type": "mc",
+    "prompt": "Vad visar syrgasdissociationskurvan?",
+    "correct": "Sambandet mellan syrgaspartialtrycket (pO2) och hemoglobinets syrgasmättnad",
+    "distractors": [
+      "Sambandet mellan koldioxidtryck och pH",
+      "Sambandet mellan hjärtfrekvens och blodtryck",
+      "Sambandet mellan lungvolym och andningsfrekvens"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_74",
+    "type": "mc",
+    "prompt": "Vilken form har den normala syrgasdissociationskurvan, och varför är det fysiologiskt fördelaktigt?",
+    "correct": "Sigmoid (S-formad) – vilket möjliggör effektivt syreupptag i lungorna och effektiv syreavgivning i vävnaderna",
+    "distractors": [
+      "Rakt linjär, för konstant syreavgivning oavsett pO2",
+      "U-formad, utan fysiologisk fördel",
+      "Cirkulär, utan biologisk betydelse"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_75",
+    "type": "mc",
+    "prompt": "Vad kallas fenomenet där ökad temperatur, sänkt pH och förhöjd koldioxidhalt förskjuter syrgasdissociationskurvan åt höger?",
+    "correct": "Bohreffekten",
+    "distractors": [
+      "Hamburgers fenomen (kloridskiftet)",
+      "Frank–Starlings lag",
+      "Hering–Breuers reflex"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_76",
+    "type": "mc",
+    "prompt": "Vad innebär en högerförskjutning av syrgasdissociationskurvan för hemoglobinets syreaffinitet?",
+    "correct": "Affiniteten minskar – hemoglobin släpper lättare ifrån sig syret till vävnaderna",
+    "distractors": [
+      "Affiniteten ökar – hemoglobin håller kvar syret hårdare",
+      "Ingen förändring av affiniteten sker",
+      "Hemoglobin slutar helt att binda syre"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_77",
+    "type": "mc",
+    "prompt": "I vilka tre huvudsakliga former transporteras koldioxid i blodet?",
+    "correct": "Löst i plasman, bundet som karbaminohemoglobin, samt som bikarbonat (HCO3-)",
+    "distractors": [
+      "Enbart löst i plasman",
+      "Enbart bundet till albumin",
+      "Enbart som fritt gasformigt CO2 i erytrocyten"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_78",
+    "type": "mc",
+    "prompt": "Vilken transportform står för den största andelen av koldioxidtransporten i blodet?",
+    "correct": "Bikarbonat (HCO3-)",
+    "distractors": [
+      "Karbaminohemoglobin",
+      "Fritt löst koldioxid i plasman",
+      "Koldioxid bundet till albumin"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_79",
+    "type": "mc",
+    "prompt": "Vad kallas jonutväxlingen där bikarbonat lämnar erytrocyten i utbyte mot klorid, för att upprätthålla elektroneutralitet?",
+    "correct": "Kloridskiftet (Hamburgers fenomen)",
+    "distractors": [
+      "Bohreffekten",
+      "Frank–Starlings mekanism",
+      "Hering–Breuers reflex"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_80",
+    "type": "mc",
+    "prompt": "Vad kallas hemoglobin som är bundet till koldioxid?",
+    "correct": "Karbaminohemoglobin",
+    "distractors": [
+      "Oxyhemoglobin",
+      "Karboxihemoglobin",
+      "Methemoglobin"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_81",
+    "type": "mc",
+    "prompt": "Vad kallas hemoglobin som är bundet till kolmonoxid i stället för syre?",
+    "correct": "Karboxihemoglobin",
+    "distractors": [
+      "Karbaminohemoglobin",
+      "Deoxihemoglobin",
+      "Methemoglobin"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_82",
+    "type": "mc",
+    "prompt": "Varför är kolmonoxidförgiftning särskilt farlig trots att en vanlig pulsoximeter kan visa en till synes normal mätning?",
+    "correct": "Kolmonoxid binder hemoglobin med mycket högre affinitet än syre, och vissa pulsoximetrar kan feltolka karboxihemoglobin som oxyhemoglobin",
+    "distractors": [
+      "Kolmonoxid syns alltid tydligt som en kraftigt sänkt mätning",
+      "Kolmonoxid påverkar aldrig hemoglobinets syrebindning",
+      "Pulsoximetrar mäter enbart koldioxidhalten"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_83",
+    "type": "mc",
+    "prompt": "Vad kallas hemoglobin utan bundet syre?",
+    "correct": "Deoxihemoglobin",
+    "distractors": [
+      "Oxyhemoglobin",
+      "Karbaminohemoglobin",
+      "Karboxihemoglobin"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_84",
+    "type": "mc",
+    "prompt": "Förutom syrgaspartialtrycket, vad avgör i hög grad blodets totala syrgasinnehåll?",
+    "correct": "Den totala hemoglobinkoncentrationen i blodet",
+    "distractors": [
+      "Blodets viskositet",
+      "Blodets totala volym enbart",
+      "Kroppstemperaturen enbart"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_85",
+    "type": "mc",
+    "prompt": "Vad kallas den samlade processen där syre transporteras från lungorna och avges till kroppens vävnader?",
+    "correct": "Syrgastransport (den systemiska syrgasleveransen)",
+    "distractors": [
+      "Hematopoes",
+      "Hemostas",
+      "Fibrinolys"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_86",
+    "type": "mc",
+    "prompt": "Vad kallas det vanligaste laboratorieprovet för att direkt mäta syrgas-, koldioxid- och syra-basstatus i blodet?",
+    "correct": "Arteriell blodgas",
+    "distractors": [
+      "Blodstatus",
+      "Lipidstatus",
+      "Elektrolytstatus"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_resp_87",
+    "type": "mc",
+    "prompt": "Vilka huvudparametrar ingår typiskt i en arteriell blodgasanalys?",
+    "correct": "pH, pO2, pCO2, HCO3- och base excess (BE)",
+    "distractors": [
+      "Hemoglobin, hematokrit, MCV och MCH",
+      "LDL, HDL, triglycerider och totalkolesterol",
+      "Troponin, CK-MB, myoglobin och BNP"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_resp_88",
+    "type": "mc",
+    "prompt": "Vad mäter pulsoximetri?",
+    "correct": "Den perifera syrgasmättnaden (SpO2), icke-invasivt via ljusabsorption i vävnaden",
+    "distractors": [
+      "Koldioxidhalten i utandningsluften",
+      "Hemoglobinkoncentrationen i blodet",
+      "Blodets pH-värde direkt"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_resp_89",
+    "type": "mc",
+    "prompt": "Vilket ungefärligt referensintervall gäller normalt för arteriellt pO2 hos en frisk vuxen?",
+    "correct": "Cirka 10–13 kPa",
+    "distractors": [
+      "Cirka 1–2 kPa",
+      "Cirka 20–25 kPa",
+      "Cirka 40–50 kPa"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_resp_90",
+    "type": "mc",
+    "prompt": "Vilket ungefärligt referensintervall gäller normalt för arteriellt pCO2 hos en frisk vuxen?",
+    "correct": "Cirka 4,7–6,0 kPa",
+    "distractors": [
+      "Cirka 0,5–1,0 kPa",
+      "Cirka 10–15 kPa",
+      "Cirka 20–25 kPa"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_resp_91",
+    "type": "mc",
+    "prompt": "Vad kallas ett tillstånd med onormalt lågt syrgaspartialtryck i det arteriella blodet?",
+    "correct": "Hypoxemi",
+    "distractors": [
+      "Hyperkapni",
+      "Hypokapni",
+      "Polycytemi"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_resp_92",
+    "type": "mc",
+    "prompt": "Vad kallas ett tillstånd med otillräckligt syrgasutbud till kroppens vävnader, oavsett bakomliggande orsak?",
+    "correct": "Hypoxi",
+    "distractors": [
+      "Hyperkapni",
+      "Hyperoxi",
+      "Anemi"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_resp_93",
+    "type": "mc",
+    "prompt": "Vad kallas ett tillstånd med onormalt förhöjd koldioxidhalt i blodet?",
+    "correct": "Hyperkapni",
+    "distractors": [
+      "Hypokapni",
+      "Hypoxemi",
+      "Hyperoxi"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_resp_94",
+    "type": "mc",
+    "prompt": "Vad orsakar en respiratorisk acidos?",
+    "correct": "Otillräcklig ventilation som leder till ansamling av koldioxid och sänkt pH",
+    "distractors": [
+      "Hyperventilation som leder till för låg koldioxidhalt",
+      "Överdriven njurutsöndring av bikarbonat",
+      "Kraftig förlust av magsyra"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_resp_95",
+    "type": "mc",
+    "prompt": "Vad orsakar en respiratorisk alkalos?",
+    "correct": "Hyperventilation som leder till för låg koldioxidhalt och förhöjt pH",
+    "distractors": [
+      "Otillräcklig ventilation med koldioxidretention",
+      "Njursvikt med bikarbonatretention",
+      "Kraftig diarré med bikarbonatförlust"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_resp_96",
+    "type": "mc",
+    "prompt": "Vad kännetecknar den kroniskt obstruktiva lungsjukdomen (KOL)?",
+    "correct": "Kronisk bronkit och/eller emfysem med begränsat, delvis irreversibelt luftflödeshinder",
+    "distractors": [
+      "Fullt reversibel bronkkonstriktion utan vävnadsskada",
+      "Enbart en akut, övergående luftvägsinfektion",
+      "En medfödd missbildning av bronkträdet"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_97",
+    "type": "mc",
+    "prompt": "Vad kännetecknar emfysem histologiskt och funktionellt?",
+    "correct": "Förstörelse av alveolarväggar med förlust av gasutbytesyta och minskad elastisk återfjädring",
+    "distractors": [
+      "Kraftig förtjockning av alveolarväggarna med bevarad elasticitet",
+      "Total avsaknad av inflammation",
+      "Ökad mängd fungerande alveolarkapillärer"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_98",
+    "type": "mc",
+    "prompt": "Vad kännetecknar astma patofysiologiskt?",
+    "correct": "Kronisk luftvägsinflammation med reversibel bronkkonstriktion och luftvägshyperreaktivitet",
+    "distractors": [
+      "Irreversibel förstörelse av alveolarväggarna",
+      "Total avsaknad av luftvägsinflammation",
+      "Enbart en strukturell missbildning av trakea"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_99",
+    "type": "mc",
+    "prompt": "Vad kallas ett tillstånd med kollaberad lunga orsakad av luft i pleurahålan?",
+    "correct": "Pneumothorax",
+    "distractors": [
+      "Pleurit",
+      "Atelektas orsakad av slempropp",
+      "Lungemboli"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_resp_100",
+    "type": "mc",
+    "prompt": "Vad mäts i grova drag med spirometri?",
+    "correct": "Lungvolymer och luftflödeshastigheter under in- och utandning",
+    "distractors": [
+      "Blodets syrgasmättnad",
+      "Hjärtats elektriska aktivitet",
+      "Blodets koagulationsförmåga"
+    ],
+    "topic": "bma_respiration_lungor",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_nerv_1",
+    "type": "mc",
+    "prompt": "Vilka är storhjärnans (cerebrums) två huvudsakliga vävnadstyper, sett i tvärsnitt?",
+    "correct": "Barken (cortex, grå substans) och den underliggande vita substansen",
+    "distractors": [
+      "Enbart grå substans, helt utan vit substans",
+      "Enbart vit substans, helt utan bark",
+      "Meninger och cerebrospinalvätska"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_nerv_2",
+    "type": "mc",
+    "prompt": "Vilka tre huvuddelar brukar hjärnan delas in i?",
+    "correct": "Storhjärnan (cerebrum), hjärnstammen och lillhjärnan (cerebellum)",
+    "distractors": [
+      "Ryggmärgen, hjärnbarken och hypofysen",
+      "Storhjärnan, ryggmärgen och de perifera nerverna",
+      "Hjärnstammen, meningerna och ventrikelsystemet"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_nerv_3",
+    "type": "mc",
+    "prompt": "Vilka tre delar ingår i hjärnstammen?",
+    "correct": "Mitthjärnan (mesencephalon), pons och den förlängda märgen (medulla oblongata)",
+    "distractors": [
+      "Talamus, hypotalamus och hypofysen",
+      "Cerebellum, cortex och basala ganglierna",
+      "Ryggmärgen, dura mater och pia mater"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_nerv_4",
+    "type": "mc",
+    "prompt": "Hur är den grå och vita substansen fördelad i ryggmärgen, till skillnad från i storhjärnan?",
+    "correct": "I ryggmärgen ligger den grå substansen centralt och den vita substansen perifert – omvänt mot storhjärnan",
+    "distractors": [
+      "Ryggmärgen saknar helt vit substans",
+      "Fördelningen är identisk med storhjärnans",
+      "Ryggmärgen saknar helt grå substans"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_nerv_5",
+    "type": "mc",
+    "prompt": "Vad kallas den främre (ventrala) delen av ryggmärgens grå substans, som huvudsakligen innehåller motoriska nervceller?",
+    "correct": "Framhornet (cornu anterius)",
+    "distractors": [
+      "Bakhornet (cornu posterius)",
+      "Sidohornet (cornu laterale)",
+      "Centralkanalen"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_nerv_6",
+    "type": "mc",
+    "prompt": "Vad kallas den bakre (dorsala) delen av ryggmärgens grå substans, som huvudsakligen tar emot sensorisk information?",
+    "correct": "Bakhornet (cornu posterius)",
+    "distractors": [
+      "Framhornet (cornu anterius)",
+      "Sidohornet (cornu laterale)",
+      "Ryggmärgskanalen"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_nerv_7",
+    "type": "mc",
+    "prompt": "Vilken rot ansluter till ryggmärgen med motoriska (efferenta) fibrer?",
+    "correct": "Den ventrala (främre) nervroten",
+    "distractors": [
+      "Den dorsala (bakre) nervroten",
+      "Den autonoma grenen enbart",
+      "Recurrensgrenen"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_nerv_8",
+    "type": "mc",
+    "prompt": "Vilken rot ansluter till ryggmärgen med sensoriska (afferenta) fibrer och bär spinalganglion?",
+    "correct": "Den dorsala (bakre) nervroten",
+    "distractors": [
+      "Den ventrala (främre) nervroten",
+      "Ramus communicans",
+      "Ramus meningeus"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_nerv_9",
+    "type": "mc",
+    "prompt": "Vad kallas de tre hinnorna (meningerna) som omger hjärnan och ryggmärgen, räknat utifrån och in?",
+    "correct": "Dura mater, arachnoidea mater och pia mater",
+    "distractors": [
+      "Endokardium, myokardium och epikardium",
+      "Periost, kortikalis och märg",
+      "Sklera, kärlhinna och näthinna"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_nerv_10",
+    "type": "mc",
+    "prompt": "Var bildas huvuddelen av cerebrospinalvätskan (likvor)?",
+    "correct": "I plexus choroideus i hjärnans ventriklar",
+    "distractors": [
+      "I ryggmärgens centralkanal enbart",
+      "I subarachnoidalrummet enbart",
+      "I det perifera nervsystemet"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_nerv_11",
+    "type": "mc",
+    "prompt": "Vilken funktion har cerebrospinalvätskan?",
+    "correct": "Den skyddar hjärnan och ryggmärgen mekaniskt, transporterar näringsämnen/avfall och ger flytkraft åt hjärnan",
+    "distractors": [
+      "Den överför enbart elektriska signaler mellan neuroner",
+      "Den bildar myelinskidan runt axon",
+      "Den fungerar som blodets huvudsakliga syrebärare"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_nerv_12",
+    "type": "mc",
+    "prompt": "Vad kallas den selektiva barriären mellan blodet och hjärnvävnaden som skyddar CNS från många ämnen i blodet?",
+    "correct": "Blod-hjärnbarriären",
+    "distractors": [
+      "Blod-luftbarriären",
+      "Blod-testikelbarriären",
+      "Placentabarriären"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_13",
+    "type": "mc",
+    "prompt": "Vilka celler i kapillärväggen bidrar huvudsakligen till blod-hjärnbarriärens täta struktur?",
+    "correct": "Endotelceller sammankopplade med tight junctions",
+    "distractors": [
+      "Fritt liggande erytrocyter",
+      "Skelettmuskelceller",
+      "Alveolarmakrofager"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_14",
+    "type": "mc",
+    "prompt": "Hur många par spinalnerver har människan normalt?",
+    "correct": "31 par",
+    "distractors": [
+      "12 par",
+      "43 par",
+      "8 par"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_nerv_15",
+    "type": "mc",
+    "prompt": "Vad kallas det hudområde som försörjs sensoriskt av en enskild spinalnervrot?",
+    "correct": "Ett dermatom",
+    "distractors": [
+      "Ett myotom",
+      "Ett sklerotom",
+      "Ett plexus"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_nerv_16",
+    "type": "mc",
+    "prompt": "Vad kallas bindvävshöljet som omger en enskild nervfiber (axon med dess Schwannceller) i en perifer nerv?",
+    "correct": "Endoneurium",
+    "distractors": [
+      "Perineurium",
+      "Epineurium",
+      "Periost"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_nerv_17",
+    "type": "mc",
+    "prompt": "Vad kallas bindvävshöljet som omger en grupp nervfibrer (en fascikel) i en perifer nerv?",
+    "correct": "Perineurium",
+    "distractors": [
+      "Endoneurium",
+      "Epineurium",
+      "Pleura"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_nerv_18",
+    "type": "mc",
+    "prompt": "Vad kallas det yttersta bindvävshöljet som omsluter hela den perifera nerven med alla dess fasciklar?",
+    "correct": "Epineurium",
+    "distractors": [
+      "Endoneurium",
+      "Perineurium",
+      "Perikardium"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_nerv_19",
+    "type": "mc",
+    "prompt": "Vilka celler bildar myelinskidan runt axon i det perifera nervsystemet?",
+    "correct": "Schwannceller",
+    "distractors": [
+      "Oligodendrocyter",
+      "Astrocyter",
+      "Mikroglia"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_nerv_20",
+    "type": "mc",
+    "prompt": "Vilka celler bildar myelinskidan runt axon i det centrala nervsystemet?",
+    "correct": "Oligodendrocyter",
+    "distractors": [
+      "Schwannceller",
+      "Astrocyter",
+      "Ependymceller"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_nerv_21",
+    "type": "mc",
+    "prompt": "Vad kallas de regelbundna avbrotten i myelinskidan längs ett myeliniserat axon?",
+    "correct": "Ranviers knutpunkter (noduli)",
+    "distractors": [
+      "Synapsklyftor",
+      "Dendritspiggar",
+      "Sarkomerer"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_nerv_22",
+    "type": "mc",
+    "prompt": "Hur förhåller sig ledningshastigheten i grova, myeliniserade nervfibrer till den i tunna, omyeliniserade fibrer?",
+    "correct": "Den är betydligt snabbare i grova, myeliniserade fibrer",
+    "distractors": [
+      "Den är alltid långsammare i myeliniserade fibrer",
+      "Myelinisering påverkar inte ledningshastigheten",
+      "Omyeliniserade fibrer leder alltid snabbast"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_23",
+    "type": "mc",
+    "prompt": "Vilken typ av nervfibrer förmedlar snabb, väl lokaliserad smärta (t.ex. vid ett akut sting)?",
+    "correct": "Tunna, myeliniserade A-delta-fibrer",
+    "distractors": [
+      "Tjocka, kraftigt myeliniserade A-alfa-fibrer",
+      "Omyeliniserade C-fibrer enbart",
+      "Autonoma B-fibrer"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_24",
+    "type": "mc",
+    "prompt": "Vilken typ av nervfibrer förmedlar långsam, dov och mer diffus smärta?",
+    "correct": "Omyeliniserade C-fibrer",
+    "distractors": [
+      "Tjocka A-alfa-fibrer",
+      "Tunna A-delta-fibrer enbart",
+      "Autonoma B-fibrer enbart"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_25",
+    "type": "mc",
+    "prompt": "Vad kallas nerver som huvudsakligen leder impulser mot CNS (inåtledande)?",
+    "correct": "Afferenta (sensoriska) nerver",
+    "distractors": [
+      "Efferenta (motoriska) nerver",
+      "Interneuron",
+      "Kommissurfibrer"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_26",
+    "type": "mc",
+    "prompt": "Vad kallas nerver som huvudsakligen leder impulser bort från CNS till muskler/körtlar (utåtledande)?",
+    "correct": "Efferenta (motoriska) nerver",
+    "distractors": [
+      "Afferenta (sensoriska) nerver",
+      "Associationsfibrer",
+      "Projektionsfibrer"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_27",
+    "type": "mc",
+    "prompt": "Var i ryggmärgen har det sympatiska nervsystemets förgangliniska nervceller sitt ursprung?",
+    "correct": "I sido­hornet i de torakala och övre lumbala segmenten (thorakolumbalt utflöde)",
+    "distractors": [
+      "I sakrala segmenten enbart",
+      "I kranialnerverna enbart",
+      "I cervikala segmenten enbart"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_nerv_28",
+    "type": "mc",
+    "prompt": "Varifrån utgår det parasympatiska nervsystemets förgangliniska fibrer?",
+    "correct": "Från vissa kranialnerver (bl.a. n. vagus) samt de sakrala ryggmärgssegmenten (kraniosakralt utflöde)",
+    "distractors": [
+      "Enbart från torakala ryggmärgssegment",
+      "Enbart från lumbala ryggmärgssegment",
+      "Enbart från cervikala ryggmärgssegment"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_nerv_29",
+    "type": "mc",
+    "prompt": "Vad kallas ett nätverk av spinalnervrötter som flätas samman och bildar perifera nerver till en extremitet, t.ex. plexus brachialis?",
+    "correct": "Ett nervplexus",
+    "distractors": [
+      "Ett dermatom",
+      "Ett myotom",
+      "Ett ganglion enbart"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_nerv_30",
+    "type": "mc",
+    "prompt": "Vilket plexus bildar de perifera nerverna till den övre extremiteten?",
+    "correct": "Plexus brachialis",
+    "distractors": [
+      "Plexus lumbosacralis",
+      "Plexus cervicalis",
+      "Plexus coeliacus"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_nerv_31",
+    "type": "mc",
+    "prompt": "Ungefär vilket värde har en typisk neurons vilomembranpotential?",
+    "correct": "Cirka -70 mV",
+    "distractors": [
+      "Cirka 0 mV",
+      "Cirka +40 mV",
+      "Cirka -200 mV"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_32",
+    "type": "mc",
+    "prompt": "Vilket enzym/pump upprätthåller huvudsakligen den ojämna fördelningen av Na+ och K+ över neuronens cellmembran i vila?",
+    "correct": "Na+/K+-ATPas (natrium-kaliumpumpen)",
+    "distractors": [
+      "Kalciumpumpen (SERCA)",
+      "Karbanhydras",
+      "Trombopoetinreceptorn"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_33",
+    "type": "mc",
+    "prompt": "Vad kallas den snabba förändringen mot ett mindre negativt (eller positivt) membranpotentialvärde vid en nervimpuls?",
+    "correct": "Depolarisation",
+    "distractors": [
+      "Repolarisation",
+      "Hyperpolarisation",
+      "Refraktäritet"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_34",
+    "type": "mc",
+    "prompt": "Vad kallas återgången till vilopotentialen efter en depolarisation?",
+    "correct": "Repolarisation",
+    "distractors": [
+      "Depolarisation",
+      "Hyperpolarisation",
+      "Summation"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_35",
+    "type": "mc",
+    "prompt": "Vad kallas en membranpotential som blir mer negativ än vilopotentialen?",
+    "correct": "Hyperpolarisation",
+    "distractors": [
+      "Depolarisation",
+      "Repolarisation",
+      "Facilitering"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_36",
+    "type": "mc",
+    "prompt": "Vilket jonflöde svarar huvudsakligen för den snabba depolarisationen (uppåtfasen) i en neurons aktionspotential?",
+    "correct": "Snabb inström av Na+ genom spänningsstyrda natriumkanaler",
+    "distractors": [
+      "Utström av K+",
+      "Inström av Ca2+ enbart",
+      "Utström av Cl-"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_37",
+    "type": "mc",
+    "prompt": "Vilket jonflöde svarar huvudsakligen för repolarisationen i en neurons aktionspotential?",
+    "correct": "Utström av K+ genom spänningsstyrda kaliumkanaler",
+    "distractors": [
+      "Inström av Na+",
+      "Inström av Ca2+",
+      "Utström av Cl-"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_38",
+    "type": "mc",
+    "prompt": "Vad kallas den membranpotentialnivå som måste nås för att en aktionspotential ska utlösas?",
+    "correct": "Tröskelvärdet (den elektriska tröskeln)",
+    "distractors": [
+      "Vilopotentialen",
+      "Jämviktspotentialen för kalium",
+      "Platåfasen"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_39",
+    "type": "mc",
+    "prompt": "Vad innebär \"allt-eller-inget\"-principen för en aktionspotential?",
+    "correct": "Om tröskelvärdet nås utlöses en fullständig aktionspotential med alltid samma amplitud, annars uppstår ingen alls",
+    "distractors": [
+      "Aktionspotentialens amplitud är alltid proportionell mot stimulusstyrkan",
+      "Aktionspotentialen kan bara vara partiell vid svaga stimuli",
+      "Tröskelvärdet varierar slumpmässigt för varje impuls"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_40",
+    "type": "mc",
+    "prompt": "Vad kallas perioden direkt efter en aktionspotential då ingen ny aktionspotential alls kan utlösas, oavsett stimulusstyrka?",
+    "correct": "Den absoluta refraktärperioden",
+    "distractors": [
+      "Den relativa refraktärperioden",
+      "Den pneumotaxiska perioden",
+      "Den isovolumetriska perioden"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_41",
+    "type": "mc",
+    "prompt": "Vad kännetecknar den relativa refraktärperioden?",
+    "correct": "En ny aktionspotential kan utlösas, men enbart av ett starkare stimulus än normalt",
+    "distractors": [
+      "Ingen som helst nervimpuls kan utlösas",
+      "Membranet är permanent depolariserat",
+      "Aktionspotentialens amplitud fördubblas alltid"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_42",
+    "type": "mc",
+    "prompt": "Vad kallas den impulsledning där aktionspotentialen \"hoppar\" mellan Ranviers knutpunkter i en myeliniserad fiber?",
+    "correct": "Saltatorisk ledning",
+    "distractors": [
+      "Kontinuerlig ledning",
+      "Retrograd transport",
+      "Elektroton spridning enbart"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_43",
+    "type": "mc",
+    "prompt": "Varför är saltatorisk ledning betydligt snabbare än kontinuerlig ledning i en omyeliniserad fiber?",
+    "correct": "Aktionspotentialen behöver bara nygenereras vid Ranviers knutpunkter i stället för längs hela membranet",
+    "distractors": [
+      "Myelin ökar antalet natriumkanaler jämnt längs hela axonet",
+      "Myelin gör att inga joner alls passerar membranet",
+      "Myelin ökar axonets diameter kraftigt utan att påverka ledningen"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_44",
+    "type": "mc",
+    "prompt": "Vilka faktorer ökar generellt en nervfibers ledningshastighet?",
+    "correct": "Större fiberdiameter och tjockare myelinisering",
+    "distractors": [
+      "Mindre fiberdiameter och avsaknad av myelin",
+      "Enbart fiberns längd, oavsett diameter eller myelin",
+      "Antalet Schwannceller har ingen betydelse alls"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_45",
+    "type": "mc",
+    "prompt": "Vad kallas fenomenet där flera svaga, subtröskelnära signaler tillsammans i tid kan nå tröskelvärdet och utlösa en aktionspotential?",
+    "correct": "(Temporal) summation",
+    "distractors": [
+      "Saltatorisk ledning",
+      "Hyperpolarisation",
+      "Refraktäritet"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_46",
+    "type": "mc",
+    "prompt": "Vad kallas fenomenet där signaler från flera olika synapser samtidigt tillsammans kan nå tröskelvärdet?",
+    "correct": "Spatial summation",
+    "distractors": [
+      "Temporal summation enbart",
+      "Saltatorisk ledning",
+      "Repolarisation"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_47",
+    "type": "mc",
+    "prompt": "Vad kallas den korta fördröjning som uppstår när en signal passerar en synaps, jämfört med ledning längs ett axon?",
+    "correct": "Synaptisk fördröjning",
+    "distractors": [
+      "Refraktärperiod",
+      "Saltatorisk fördröjning",
+      "Myelinfördröjning"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_48",
+    "type": "mc",
+    "prompt": "Vad kallas det korta segmentet av axonet närmast cellkroppen där aktionspotentialer normalt initieras först?",
+    "correct": "Axonkullen (axonhillock)",
+    "distractors": [
+      "Telodendronet",
+      "Dendritspiggen",
+      "Synapsklyftan"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_49",
+    "type": "mc",
+    "prompt": "Vad avgör i hög grad hur stor amplitud en enskild aktionspotential har?",
+    "correct": "Amplituden är i det närmaste konstant och oberoende av stimulusstyrkan, enligt allt-eller-inget-principen",
+    "distractors": [
+      "Amplituden ökar linjärt med stimulusstyrkan",
+      "Amplituden bestäms av antalet Schwannceller",
+      "Amplituden minskar alltid med ökande stimulusstyrka"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_50",
+    "type": "mc",
+    "prompt": "Vad kallas informationskodningen där stimulusstyrkan i stället avspeglas i frekvensen av aktionspotentialer, snarare än i deras amplitud?",
+    "correct": "Frekvenskodning",
+    "distractors": [
+      "Amplitudkodning",
+      "Saltatorisk kodning",
+      "Refraktärkodning"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_51",
+    "type": "mc",
+    "prompt": "Vad kallas kontaktstället där en presynaptisk neuron kemiskt överför en signal till en postsynaptisk cell?",
+    "correct": "En kemisk synaps",
+    "distractors": [
+      "Ett ganglion",
+      "Ett plexus",
+      "Ett dermatom"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_52",
+    "type": "mc",
+    "prompt": "Vad utlöser frisättningen av neurotransmittor från den presynaptiska nervänden?",
+    "correct": "Inflöde av Ca2+ genom spänningsstyrda kalciumkanaler när en aktionspotential når nervänden",
+    "distractors": [
+      "Utflöde av Na+ enbart",
+      "En direkt elektrisk koppling utan jonflöde",
+      "Frisättning av acetylkolinesteras"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_53",
+    "type": "mc",
+    "prompt": "I vilka strukturer i den presynaptiska nervänden lagras neurotransmittorn innan frisättning?",
+    "correct": "Synaptiska vesiklar",
+    "distractors": [
+      "Mitokondrier",
+      "Ranviers knutpunkter",
+      "Myelinskidan"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_54",
+    "type": "mc",
+    "prompt": "Vad händer när neurotransmittorn har frisatts i synapsklyftan?",
+    "correct": "Den diffunderar över klyftan och binder till receptorer på den postsynaptiska membranet",
+    "distractors": [
+      "Den återgår omedelbart in i den presynaptiska cellen utan effekt",
+      "Den bryts alltid ner innan den når postsynapsen",
+      "Den passerar direkt in i blodbanan"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_55",
+    "type": "mc",
+    "prompt": "Vad kallas en postsynaptisk potentialförändring som gör cellen mer benägen att generera en aktionspotential?",
+    "correct": "En excitatorisk postsynaptisk potential (EPSP), oftast en depolarisation",
+    "distractors": [
+      "En inhibitorisk postsynaptisk potential (IPSP)",
+      "En absolut refraktärperiod",
+      "En saltatorisk potential"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_56",
+    "type": "mc",
+    "prompt": "Vad kallas en postsynaptisk potentialförändring som gör cellen mindre benägen att generera en aktionspotential?",
+    "correct": "En inhibitorisk postsynaptisk potential (IPSP), oftast en hyperpolarisation",
+    "distractors": [
+      "En excitatorisk postsynaptisk potential (EPSP)",
+      "En depolarisation mot tröskeln",
+      "Saltatorisk ledning"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_57",
+    "type": "mc",
+    "prompt": "Vilken neurotransmittor frisätts vid den neuromuskulära synapsen mellan motorneuron och skelettmuskelfiber?",
+    "correct": "Acetylkolin",
+    "distractors": [
+      "Noradrenalin",
+      "GABA",
+      "Dopamin"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_58",
+    "type": "mc",
+    "prompt": "Vilken är den huvudsakliga inhibitoriska neurotransmittorn i det centrala nervsystemet?",
+    "correct": "GABA (gamma-aminosmörsyra)",
+    "distractors": [
+      "Glutamat",
+      "Acetylkolin",
+      "Adrenalin"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_59",
+    "type": "mc",
+    "prompt": "Vilken är den huvudsakliga excitatoriska neurotransmittorn i det centrala nervsystemet?",
+    "correct": "Glutamat",
+    "distractors": [
+      "GABA",
+      "Glycin",
+      "Serotonin enbart"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_60",
+    "type": "mc",
+    "prompt": "Vad kallas enzymet som snabbt bryter ner acetylkolin i synapsklyftan efter dess frisättning?",
+    "correct": "Acetylkolinesteras",
+    "distractors": [
+      "Karbanhydras",
+      "Monoaminoxidas",
+      "Kolinacetyltransferas enbart"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_61",
+    "type": "mc",
+    "prompt": "Vad kallas den specialiserade synapsen mellan ett motorneuron och en skelettmuskelfiber?",
+    "correct": "Den neuromuskulära synapsen (motorändplattan)",
+    "distractors": [
+      "Sarkomeren",
+      "Z-skivan",
+      "T-tubulussystemet"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_62",
+    "type": "mc",
+    "prompt": "Vilken typ av receptor på muskelfiberns membran binder acetylkolin vid den neuromuskulära synapsen?",
+    "correct": "Nikotinerga acetylkolinreceptorer",
+    "distractors": [
+      "Muskarinerga acetylkolinreceptorer enbart",
+      "Adrenerga beta-receptorer",
+      "GABA-receptorer"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_63",
+    "type": "mc",
+    "prompt": "Vad kallas den kontraktila grundenheten i en tvärstrimmig muskelfiber, avgränsad av två Z-skivor?",
+    "correct": "Sarkomeren",
+    "distractors": [
+      "Myofibrillen",
+      "Sarkolemmat",
+      "T-tubulussystemet"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_nerv_64",
+    "type": "mc",
+    "prompt": "Vilka två huvudsakliga kontraktila proteiner utgör sarkomerens tjocka respektive tunna filament?",
+    "correct": "Myosin (tjockt filament) och aktin (tunt filament)",
+    "distractors": [
+      "Kollagen och elastin",
+      "Titin och nebulin enbart",
+      "Tubulin och aktin"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_nerv_65",
+    "type": "mc",
+    "prompt": "Vad kallas teorin som beskriver hur aktin- och myosinfilamenten glider förbi varandra och förkortar sarkomeren vid kontraktion?",
+    "correct": "Sliding filament-teorin (glidfilamentsteorin)",
+    "distractors": [
+      "Allt-eller-inget-principen",
+      "Frank–Starlings lag",
+      "Saltatorisk kontraktion"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_66",
+    "type": "mc",
+    "prompt": "Vilka två regulatoriska proteiner sitter på aktinfilamentet och styr om tvärbryggor kan bildas?",
+    "correct": "Troponin och tropomyosin",
+    "distractors": [
+      "Myosin och titin",
+      "Aktin och dystrofin enbart",
+      "Kollagen och laminin"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_nerv_67",
+    "type": "mc",
+    "prompt": "Vad händer när Ca2+ binder till troponin under muskelkontraktion?",
+    "correct": "Tropomyosinet flyttas undan, vilket exponerar bindningsställena för myosin på aktinfilamentet",
+    "distractors": [
+      "Kalcium hämmar all kontraktion",
+      "Aktinfilamenten bryts ner permanent",
+      "Myosinfilamenten depolymeriseras"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_68",
+    "type": "mc",
+    "prompt": "Varifrån frisätts det kalcium som utlöser skelettmuskelns kontraktion?",
+    "correct": "Från det sarkoplasmatiska retiklet",
+    "distractors": [
+      "Från mitokondrierna enbart",
+      "Direkt från extracellulärvätskan enbart",
+      "Från Golgiapparaten"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_69",
+    "type": "mc",
+    "prompt": "Vilken struktur leder aktionspotentialen snabbt från muskelfiberns yta ner till det sarkoplasmatiska retiklets djupare delar?",
+    "correct": "T-tubulussystemet (transversella tubuli)",
+    "distractors": [
+      "Sarkomeren",
+      "Z-skivan",
+      "Endomysiet"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_nerv_70",
+    "type": "mc",
+    "prompt": "Vad kallas den cykliska process där myosinhuvudet binder till aktin, drar sig samman och lossnar upprepade gånger under kontraktion?",
+    "correct": "Tvärbryggscykeln (cross-bridge cycling)",
+    "distractors": [
+      "Sliding filament-teorin i sig",
+      "Saltatorisk ledning",
+      "Refraktärperioden"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_71",
+    "type": "mc",
+    "prompt": "Vad krävs för att myosinhuvudet ska kunna lossna från aktinfilamentet efter ett kontraktionssteg?",
+    "correct": "Bindning av ATP till myosinhuvudet",
+    "distractors": [
+      "Enbart närvaro av Ca2+, utan ATP",
+      "Nedbrytning av tropomyosin",
+      "Frisättning av acetylkolinesteras"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_72",
+    "type": "mc",
+    "prompt": "Vad kallas det stela tillstånd som uppstår i muskler efter döden när ATP-tillgången tar slut och myosin förblir bundet till aktin?",
+    "correct": "Likstelhet (rigor mortis)",
+    "distractors": [
+      "Tetanus (sammansmält kontraktion)",
+      "Muskeldystrofi",
+      "Refraktärperiod"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_73",
+    "type": "mc",
+    "prompt": "Vad kallas ett motorneuron tillsammans med alla de muskelfibrer det innerverar?",
+    "correct": "En motorenhet",
+    "distractors": [
+      "En sarkomer",
+      "Ett myofibrillbunt",
+      "Ett dermatom"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_74",
+    "type": "mc",
+    "prompt": "Hur skiljer sig motorenheter som styr fin, precis motorik (t.ex. ögonmuskler) från de som styr kraftfulla, grova rörelser (t.ex. lårmuskler)?",
+    "correct": "De finmotoriska motorenheterna innerverar få muskelfibrer per neuron, medan de kraftfulla innerverar många fler",
+    "distractors": [
+      "De finmotoriska innerverar alltid fler fibrer än de kraftfulla",
+      "Antalet muskelfibrer per motorneuron är alltid identiskt oavsett funktion",
+      "Finmotoriska motorenheter saknar helt motorneuron"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_75",
+    "type": "mc",
+    "prompt": "Vad kännetecknar typ I-muskelfibrer (\"långsamma\" fibrer)?",
+    "correct": "Hög uthållighet, huvudsakligen oxidativ energiomsättning och relativt långsam kontraktionshastighet",
+    "distractors": [
+      "Mycket snabb kontraktion men snabb uttröttbarhet",
+      "Total avsaknad av mitokondrier",
+      "Enbart anaerob energiomsättning"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_nerv_76",
+    "type": "mc",
+    "prompt": "Vad kännetecknar typ IIx-muskelfibrer (\"snabba\" fibrer)?",
+    "correct": "Snabb kontraktionshastighet, huvudsakligen glykolytisk energiomsättning och relativt snabb uttröttbarhet",
+    "distractors": [
+      "Mycket hög uthållighet och långsam kontraktion",
+      "Enbart aerob energiomsättning",
+      "Total avsaknad av myofibriller"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_nerv_77",
+    "type": "mc",
+    "prompt": "Vilken muskelfibertyp räknas som en mellantyp med både god uthållighet och relativt snabb kontraktion?",
+    "correct": "Typ IIa-fibrer",
+    "distractors": [
+      "Typ I-fibrer enbart",
+      "Typ IIx-fibrer enbart",
+      "Glatta muskelfibrer"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_nerv_78",
+    "type": "mc",
+    "prompt": "Vad kallas det fenomen där upprepade, tätt sittande aktionspotentialer leder till en sammanhållen, förstärkt muskelkontraktion utan mellanliggande avslappning?",
+    "correct": "Tetanisk kontraktion (tetanus)",
+    "distractors": [
+      "Rigor mortis",
+      "Refraktärperiod",
+      "Saltatorisk kontraktion"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_79",
+    "type": "mc",
+    "prompt": "Vad kallas fenomenet där en muskel som stimuleras kraftigare (fler aktiva motorenheter) genererar starkare kontraktionskraft?",
+    "correct": "Rekrytering av motorenheter",
+    "distractors": [
+      "Saltatorisk ledning",
+      "Tetanisk fusion enbart",
+      "Refraktäritet"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_80",
+    "type": "mc",
+    "prompt": "Vad orsakar i hög grad den gradvisa muskeltrötthet som uppstår vid långvarigt, intensivt muskelarbete?",
+    "correct": "Ansamling av metaboliska biprodukter (t.ex. laktat och vätejoner) samt uttömning av energidepåer",
+    "distractors": [
+      "En permanent förlust av alla muskelfibrer",
+      "Total avsaknad av kalciumjoner i muskeln",
+      "Överskott av syrgas i muskelvävnaden"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_81",
+    "type": "mc",
+    "prompt": "Vilket enzym är en central blodmarkör för muskelskada och mäts ofta vid misstänkt muskelsjukdom eller hjärtinfarkt?",
+    "correct": "Kreatinkinas (CK)",
+    "distractors": [
+      "Alkaliskt fosfatas",
+      "Amylas",
+      "Lipas"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_nerv_82",
+    "type": "mc",
+    "prompt": "Vilken isoform av kreatinkinas är mest specifik för skelettmuskelskada, till skillnad från hjärtmuskelskada?",
+    "correct": "CK-MM",
+    "distractors": [
+      "CK-MB",
+      "CK-BB",
+      "Kolinesteras"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_nerv_83",
+    "type": "mc",
+    "prompt": "Vad frisätts i stora mängder till blodet vid omfattande muskelnedbrytning (rabdomyolys) och kan ge akut njurskada?",
+    "correct": "Myoglobin",
+    "distractors": [
+      "Surfaktant",
+      "Bikarbonat",
+      "Aldosteron"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_nerv_84",
+    "type": "mc",
+    "prompt": "Varför är kraftigt förhöjt myoglobin i blodet vid rabdomyolys farligt för njurarna?",
+    "correct": "Myoglobinet kan fälla ut och skada njurtubuli, vilket kan orsaka akut njursvikt",
+    "distractors": [
+      "Myoglobin har ingen koppling alls till njurfunktionen",
+      "Myoglobin bryts alltid ner helt innan det når njurarna",
+      "Myoglobin stimulerar ökad erytropoetinproduktion"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_nerv_85",
+    "type": "mc",
+    "prompt": "Vad kallas den autoimmuna sjukdom där antikroppar riktas mot acetylkolinreceptorer vid den neuromuskulära synapsen, vilket ger muskeltrötthet?",
+    "correct": "Myasthenia gravis",
+    "distractors": [
+      "Duchennes muskeldystrofi",
+      "Guillain-Barrés syndrom",
+      "Amyotrofisk lateralskleros (ALS)"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_nerv_86",
+    "type": "mc",
+    "prompt": "Vad är den huvudsakliga patofysiologiska konsekvensen av antikroppar mot acetylkolinreceptorer vid myasthenia gravis?",
+    "correct": "Nedsatt neuromuskulär överföring, med muskelsvaghet som förvärras vid upprepad aktivering",
+    "distractors": [
+      "Total förlust av alla motorneuron i ryggmärgen",
+      "Överdriven frisättning av acetylkolin utan hämning",
+      "Permanent kontraktur av alla skelettmuskler"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_nerv_87",
+    "type": "mc",
+    "prompt": "Vilket protein saknas eller är defekt vid Duchennes muskeldystrofi?",
+    "correct": "Dystrofin",
+    "distractors": [
+      "Titin",
+      "Troponin",
+      "Myoglobin"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_nerv_88",
+    "type": "mc",
+    "prompt": "Vilken funktion har dystrofin normalt i skelettmuskelfibern?",
+    "correct": "Det stabiliserar muskelcellmembranet (sarkolemmat) genom att koppla samman det kontraktila cytoskelettet med den extracellulära matrixen",
+    "distractors": [
+      "Det katalyserar ATP-nedbrytning vid tvärbryggscykeln",
+      "Det bildar myelinskidan runt perifera nerver",
+      "Det utgör huvudkomponenten i synaptiska vesiklar"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_nerv_89",
+    "type": "mc",
+    "prompt": "Vad kallas den neurologiska undersökningsmetod som registrerar elektrisk aktivitet direkt från skelettmuskulatur, t.ex. vid misstänkt nerv- eller muskelsjukdom?",
+    "correct": "Elektromyografi (EMG)",
+    "distractors": [
+      "Elektroencefalografi (EEG)",
+      "Ekokardiografi",
+      "Spirometri"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_nerv_90",
+    "type": "mc",
+    "prompt": "Vad kallas undersökningsmetoden som mäter ledningshastigheten i perifera nerver?",
+    "correct": "Neurografi (nervledningsundersökning)",
+    "distractors": [
+      "Elektroencefalografi (EEG)",
+      "Elektromyografi (EMG) enbart",
+      "Audiometri"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_nerv_91",
+    "type": "mc",
+    "prompt": "Vad kallas processen där en perifer nervfiber bryts ner distalt om en skada medan cellkroppen överlever?",
+    "correct": "Wallerisk degeneration",
+    "distractors": [
+      "Saltatorisk degeneration",
+      "Rigor mortis",
+      "Tetanisk degeneration"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_92",
+    "type": "mc",
+    "prompt": "Vad krävs generellt för att en skadad perifer nervfiber ska kunna växa ut igen och återinnervera muskeln?",
+    "correct": "Att Schwannceller bildar en ledande kanal och att nervcellskroppen överlever skadan",
+    "distractors": [
+      "Att myelinskidan omedelbart försvinner permanent",
+      "Att muskelfibern dör och ersätts av bindväv",
+      "Att acetylkolinreceptorerna försvinner permanent"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_93",
+    "type": "mc",
+    "prompt": "Vad kallas muskelatrofin som uppstår när en muskel förlorar sin nervförsörjning?",
+    "correct": "Denervationsatrofi",
+    "distractors": [
+      "Hypertrofisk kompensation",
+      "Tetanisk fusion",
+      "Rigor mortis"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_94",
+    "type": "mc",
+    "prompt": "Vad kallas den kompensatoriska tillväxten av en muskelfiber i storlek som svar på upprepad, kraftig belastning (t.ex. styrketräning)?",
+    "correct": "Muskelhypertrofi",
+    "distractors": [
+      "Muskelatrofi",
+      "Denervation",
+      "Rabdomyolys"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_95",
+    "type": "mc",
+    "prompt": "Vad kallas det centrala nervsystemets förmåga att i viss mån ombilda och anpassa sina kopplingar över tid, t.ex. efter skada eller inlärning?",
+    "correct": "Neuroplasticitet",
+    "distractors": [
+      "Saltatorisk ledning",
+      "Wallerisk degeneration",
+      "Rigor mortis"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_nerv_96",
+    "type": "mc",
+    "prompt": "Vad kallas gliacellerna som fungerar som det centrala nervsystemets primära immunförsvarsceller?",
+    "correct": "Mikroglia",
+    "distractors": [
+      "Astrocyter",
+      "Oligodendrocyter",
+      "Ependymceller"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_nerv_97",
+    "type": "mc",
+    "prompt": "Vilken huvudfunktion har astrocyter i det centrala nervsystemet?",
+    "correct": "Metaboliskt och strukturellt stöd åt neuronerna samt bidrag till blod-hjärnbarriären",
+    "distractors": [
+      "Bildning av myelin runt CNS-axon",
+      "Immunförsvar mot mikroorganismer",
+      "Produktion av cerebrospinalvätska uteslutande"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_nerv_98",
+    "type": "mc",
+    "prompt": "Vilka celler klär ventrikelsystemets insida och bidrar till cerebrospinalvätskans cirkulation?",
+    "correct": "Ependymceller",
+    "distractors": [
+      "Mikroglia",
+      "Schwannceller",
+      "Astrocyter enbart"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_nerv_99",
+    "type": "mc",
+    "prompt": "Vad kallas det tillstånd med generell muskelsvaghet och trötthet som ofta är ett tidigt tecken vid flera neuromuskulära sjukdomar?",
+    "correct": "Myopatisk/neuromuskulär trötthet (muskeltrötthet av patologisk grad)",
+    "distractors": [
+      "Rigor mortis",
+      "Tetanisk fusion",
+      "Saltatorisk trötthet"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_nerv_100",
+    "type": "mc",
+    "prompt": "Vilket prov är ofta första steget i laboratorieutredningen vid misstänkt muskelsjukdom, innan eventuell EMG eller muskelbiopsi?",
+    "correct": "Kreatinkinas (CK) i blodet",
+    "distractors": [
+      "Troponin i blodet",
+      "NT-proBNP i blodet",
+      "Lipidstatus"
+    ],
+    "topic": "bma_nervsystem_muskler",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_1",
+    "type": "mc",
+    "prompt": "Var i bukhålan är njurarna belägna?",
+    "correct": "Retroperitonealt, på bakre bukväggen",
+    "distractors": [
+      "Fritt hängande i peritonealhålan",
+      "Inuti bäckenhålan enbart",
+      "Direkt under diafragma i thorax"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_njure_2",
+    "type": "mc",
+    "prompt": "Vilka två huvudregioner delas njurens vävnad in i, sett i genomskärning?",
+    "correct": "Njurbarken (cortex renalis) och njurmärgen (medulla renalis)",
+    "distractors": [
+      "Epikardium och myokardium",
+      "Perineurium och epineurium",
+      "Mukosa och submukosa"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_njure_3",
+    "type": "mc",
+    "prompt": "Vad kallas de koniska strukturerna i njurmärgen som mynnar ut i njurbäckenet?",
+    "correct": "Njurpyramiderna (pyramides renales)",
+    "distractors": [
+      "Njurpapillerna enbart",
+      "Calyx renalis minor enbart",
+      "Glomeruli"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_njure_4",
+    "type": "mc",
+    "prompt": "Vad kallas de småfickor som samlar upp urin från njurpapillerna innan den når njurbäckenet?",
+    "correct": "Calyces renales (mindre och större njurkalkar)",
+    "distractors": [
+      "Njurpyramiderna",
+      "Ureteren",
+      "Trigonum vesicae"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_njure_5",
+    "type": "mc",
+    "prompt": "Vad kallas den tratformade strukturen där calyces samlas innan urinen leds vidare till uretären?",
+    "correct": "Njurbäckenet (pelvis renalis)",
+    "distractors": [
+      "Njurhilum",
+      "Urinblåsans trigonum",
+      "Bowmans kapsel"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_njure_6",
+    "type": "mc",
+    "prompt": "Vilket rör transporterar urin från njurbäckenet till urinblåsan?",
+    "correct": "Uretären",
+    "distractors": [
+      "Uretra",
+      "Vas deferens",
+      "Ductus choledochus"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_njure_7",
+    "type": "mc",
+    "prompt": "Vilken typ av muskulatur finns i uretärens vägg och driver urinen framåt med peristaltiska vågor?",
+    "correct": "Glatt muskulatur",
+    "distractors": [
+      "Tvärstrimmig, viljestyrd muskulatur uteslutande",
+      "Hjärtmuskulatur",
+      "Ingen muskulatur alls – enbart tyngdkraften"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_njure_8",
+    "type": "mc",
+    "prompt": "Vilket organ lagrar urinen tillfälligt innan miktion?",
+    "correct": "Urinblåsan (vesica urinaria)",
+    "distractors": [
+      "Uretären",
+      "Njurbäckenet",
+      "Uretra"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_njure_9",
+    "type": "mc",
+    "prompt": "Vad kallas röret som leder urin från urinblåsan ut ur kroppen?",
+    "correct": "Uretra",
+    "distractors": [
+      "Uretären",
+      "Ductus deferens",
+      "Vas afferens"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_njure_10",
+    "type": "mc",
+    "prompt": "Hur skiljer sig uretrans längd generellt mellan könen?",
+    "correct": "Uretra är betydligt kortare hos kvinnor än hos män",
+    "distractors": [
+      "Uretra är alltid längre hos kvinnor än hos män",
+      "Uretra har exakt samma längd hos båda könen",
+      "Endast män har en uretra"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_njure_11",
+    "type": "mc",
+    "prompt": "Vilket artärkärl försörjer njuren med blod direkt från aorta?",
+    "correct": "Njurartären (a. renalis)",
+    "distractors": [
+      "Njurvenen (v. renalis)",
+      "A. mesenterica superior",
+      "A. iliaca communis"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_njure_12",
+    "type": "mc",
+    "prompt": "Vad kallas den lilla arteriol som leder blod in till glomerulus?",
+    "correct": "Den afferenta arteriolen (vas afferens)",
+    "distractors": [
+      "Den efferenta arteriolen (vas efferens)",
+      "Njurvenen",
+      "Njurartären direkt"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_njure_13",
+    "type": "mc",
+    "prompt": "Vad kallas den lilla arteriol som leder blod ut från glomerulus?",
+    "correct": "Den efferenta arteriolen (vas efferens)",
+    "distractors": [
+      "Den afferenta arteriolen (vas afferens)",
+      "Njurartären",
+      "Njurvenen"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_njure_14",
+    "type": "mc",
+    "prompt": "Vad är det funktionella och strukturella grundelementet i njuren som ansvarar för urinbildning?",
+    "correct": "Nefronet",
+    "distractors": [
+      "Njurpyramiden",
+      "Calyx renalis",
+      "Njurhilum"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Moore, Dalley & Agur, Clinically Oriented Anatomy"
+  },
+  {
+    "id": "bma_njure_15",
+    "type": "mc",
+    "prompt": "Ungefär hur många nefron finns det normalt i en njure?",
+    "correct": "Cirka en miljon",
+    "distractors": [
+      "Cirka hundra",
+      "Cirka tusen",
+      "Cirka hundra miljoner"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_16",
+    "type": "mc",
+    "prompt": "Vad kallas det nystan av kapillärer där den glomerulära filtrationen sker?",
+    "correct": "Glomerulus",
+    "distractors": [
+      "Bowmans kapsel enbart",
+      "Henles slynga",
+      "Samlingsröret"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_njure_17",
+    "type": "mc",
+    "prompt": "Vad kallas den kapselstruktur som omsluter glomerulus och samlar upp filtratet?",
+    "correct": "Bowmans kapsel",
+    "distractors": [
+      "Henles slynga",
+      "Distala tubuli",
+      "Calyx renalis"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_njure_18",
+    "type": "mc",
+    "prompt": "Vad kallas det utrymme mellan Bowmans kapsels två blad, dit det glomerulära filtratet först samlas?",
+    "correct": "Bowmans kapselrum (rymden mellan visceralt och parietalt blad)",
+    "distractors": [
+      "Njurbäckenet",
+      "Vas afferens",
+      "Peritubulära kapillärnätet"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_njure_19",
+    "type": "mc",
+    "prompt": "Vad kallas den tubulussegment som direkt fortsätter från Bowmans kapsel och där merparten av reabsorptionen sker?",
+    "correct": "Proximala tubuli",
+    "distractors": [
+      "Distala tubuli",
+      "Samlingsröret",
+      "Henles slynga uteslutande"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_njure_20",
+    "type": "mc",
+    "prompt": "Vilket epitel klär den proximala tubulins insida, anpassat för omfattande reabsorption?",
+    "correct": "Kubiskt epitel med tät mikrovillibård (borstbräm)",
+    "distractors": [
+      "Enkelt skivepitel utan mikrovilli",
+      "Flerskiktat skivepitel",
+      "Övergångsepitel (urotel)"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_njure_21",
+    "type": "mc",
+    "prompt": "Vad kallas den U-formade tubulussegment som sträcker sig ner i njurmärgen mellan proximala och distala tubuli?",
+    "correct": "Henles slynga",
+    "distractors": [
+      "Bowmans kapsel",
+      "Samlingsröret",
+      "Vas efferens"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_njure_22",
+    "type": "mc",
+    "prompt": "Vilka två huvuddelar har Henles slynga?",
+    "correct": "En nedåtgående (tunn) del och en uppåtgående del (med en tunn och en tjock del)",
+    "distractors": [
+      "Enbart en enda odelad rak del",
+      "Ett proximalt och ett distalt glomerulus",
+      "Ett aferent och ett efferent blad"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_njure_23",
+    "type": "mc",
+    "prompt": "Vad kallas tubulussegmentet som följer efter Henles slynga och där finregleringen av elektrolyter sker?",
+    "correct": "Distala tubuli",
+    "distractors": [
+      "Proximala tubuli",
+      "Samlingsröret uteslutande",
+      "Bowmans kapsel"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_njure_24",
+    "type": "mc",
+    "prompt": "Vad kallas det rörsystem dit flera nefrons distala tubuli mynnar, och som slutligen leder urinen ner mot njurpapillen?",
+    "correct": "Samlingsröret (ductus colligens)",
+    "distractors": [
+      "Henles slynga",
+      "Bowmans kapsel",
+      "Vas afferens"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_njure_25",
+    "type": "mc",
+    "prompt": "Vad kallas den specialiserade strukturen där distala tubuli kommer i nära kontakt med sitt eget nefrons afferenta arteriol, viktig för reglering av GFR?",
+    "correct": "Juxtaglomerulära apparaten",
+    "distractors": [
+      "Bowmans kapsel",
+      "Vas efferens",
+      "Njurpapillen"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_26",
+    "type": "mc",
+    "prompt": "Vilka celltyper ingår i den juxtaglomerulära apparaten?",
+    "correct": "Juxtaglomerulära celler (i vas afferens) och macula densa-celler (i distala tubuli)",
+    "distractors": [
+      "Enbart podocyter",
+      "Enbart mesangialceller",
+      "Enbart samlingsrörsceller"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_27",
+    "type": "mc",
+    "prompt": "Vilken funktion har macula densa-cellerna i den juxtaglomerulära apparaten?",
+    "correct": "De känner av natriumkloridkoncentrationen i tubulivätskan och bidrar till reglering av GFR (tubuloglomerulär feedback)",
+    "distractors": [
+      "De producerar erytropoetin uteslutande",
+      "De bildar urinblåsans slemhinna",
+      "De fagocyterar bakterier i urinen"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_28",
+    "type": "mc",
+    "prompt": "Vad kallas nefron vars glomeruli ligger djupt nära märgen och vars långa Henle-slyngor är viktiga för urinkoncentreringen?",
+    "correct": "Juxtamedullära nefron",
+    "distractors": [
+      "Kortikala nefron",
+      "Aferenta nefron",
+      "Efferenta nefron"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_29",
+    "type": "mc",
+    "prompt": "Vad kännetecknar kortikala nefron, till skillnad från juxtamedullära nefron?",
+    "correct": "De har glomeruli belägna ytligt i barken och kortare Henle-slyngor",
+    "distractors": [
+      "De saknar helt Henle-slynga",
+      "De utgör majoriteten av nefron och har alltid de längsta slyngorna",
+      "De saknar glomerulus helt"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_30",
+    "type": "mc",
+    "prompt": "Vilka celler i glomerulus har fotutskott (podocyter) som bildar en del av filtrationsbarriären?",
+    "correct": "Podocyter (viscerala epitelceller i Bowmans kapsel)",
+    "distractors": [
+      "Mesangialceller enbart",
+      "Juxtaglomerulära celler",
+      "Macula densa-celler"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_njure_31",
+    "type": "mc",
+    "prompt": "Vilken funktion har mesangialcellerna i glomerulus?",
+    "correct": "Strukturellt stöd åt kapillärnystanet samt viss kontraktil reglering av den glomerulära filtrationsytan",
+    "distractors": [
+      "De bildar urinblåsans epitel",
+      "De producerar renin uteslutande",
+      "De transporterar syre i blodet"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_njure_32",
+    "type": "mc",
+    "prompt": "Vad kallas det kapillärnät som omger de proximala och distala tubuli i njurbarken och möjliggör reabsorption/sekretion?",
+    "correct": "Peritubulära kapillärnätet",
+    "distractors": [
+      "Vasa recta",
+      "Glomerulus",
+      "Bowmans kapselrum"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_33",
+    "type": "mc",
+    "prompt": "Vad kallas de raka kapillärer som löper parallellt med Henles slynga ner i njurmärgen?",
+    "correct": "Vasa recta",
+    "distractors": [
+      "Peritubulära kapillärer",
+      "Vas afferens",
+      "Vas efferens"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_34",
+    "type": "mc",
+    "prompt": "Vilken huvudsaklig funktion har vasa recta?",
+    "correct": "De bidrar till att upprätthålla den osmotiska koncentrationsgradienten i njurmärgen utan att \"skölja bort\" den",
+    "distractors": [
+      "De bildar filtrationsbarriären i glomerulus",
+      "De producerar urin direkt",
+      "De transporterar urin till urinblåsan"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_35",
+    "type": "mc",
+    "prompt": "Vad kallas den samlade processen där nefronet bildar den slutgiltiga urinen genom tre huvudsteg?",
+    "correct": "Glomerulär filtration, tubulär reabsorption och tubulär sekretion",
+    "distractors": [
+      "Enbart glomerulär filtration",
+      "Enbart tubulär reabsorption",
+      "Diffusion och osmos uteslutande"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_36",
+    "type": "mc",
+    "prompt": "Vilka tre lager utgör den glomerulära filtrationsbarriären?",
+    "correct": "Det fenestrerade kapillärendotelet, det glomerulära basalmembranet och podocyternas fotutskott",
+    "distractors": [
+      "Enbart ett enkelt kapillärendotel",
+      "Enbart podocyternas fotutskott",
+      "Tunica intima, media och adventitia"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_njure_37",
+    "type": "mc",
+    "prompt": "Vad kännetecknar det glomerulära kapillärendotelet, som underlättar filtration?",
+    "correct": "Det är fenestrerat (har små porer)",
+    "distractors": [
+      "Det saknar helt porer",
+      "Det är flerskiktat",
+      "Det innehåller tvärstrimmig muskulatur"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Junqueira & Mescher, Basic Histology: Text and Atlas"
+  },
+  {
+    "id": "bma_njure_38",
+    "type": "mc",
+    "prompt": "Vad förhindrar normalt de flesta plasmaproteiner (t.ex. albumin) från att passera filtrationsbarriären?",
+    "correct": "Barriärens storleks- och laddningsselektivitet, bl.a. genom basalmembranet och podocyternas fotutskott",
+    "distractors": [
+      "Filtrationsbarriären saknar helt selektivitet",
+      "Proteinerna binds aktivt av erytrocyterna",
+      "Njurartären blockerar allt proteinflöde"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_39",
+    "type": "mc",
+    "prompt": "Hur definieras glomerulär filtrationshastighet (GFR)?",
+    "correct": "Den volym plasma som filtreras genom samtliga glomeruli per tidsenhet",
+    "distractors": [
+      "Den totala urinvolymen som utsöndras per dygn",
+      "Blodflödet genom njurartären per minut",
+      "Mängden reabsorberat natrium per timme"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_40",
+    "type": "mc",
+    "prompt": "Ungefär hur stor är den normala GFR hos en frisk vuxen?",
+    "correct": "Cirka 120–125 ml/min",
+    "distractors": [
+      "Cirka 1–2 ml/min",
+      "Cirka 500 ml/min",
+      "Cirka 1 ml/min"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_41",
+    "type": "mc",
+    "prompt": "Vilka Starling-krafter driver filtrationen i glomerulus, förutom det hydrostatiska trycket i kapillären?",
+    "correct": "Det hydrostatiska trycket i Bowmans kapsel samt det kolloidosmotiska trycket i glomeruluskapillären, vilka motverkar filtrationen",
+    "distractors": [
+      "Enbart gravitationen",
+      "Enbart aktiv transport via ATP",
+      "Enbart temperaturskillnader"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_42",
+    "type": "mc",
+    "prompt": "Vad händer med GFR om det hydrostatiska trycket i den afferenta arteriolen sjunker kraftigt, t.ex. vid lågt blodtryck?",
+    "correct": "GFR sjunker",
+    "distractors": [
+      "GFR ökar kraftigt",
+      "GFR påverkas inte alls",
+      "GFR blir oändligt hög"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_43",
+    "type": "mc",
+    "prompt": "Vad kallas njurens förmåga att hålla GFR och renalt blodflöde relativt konstanta trots variationer i systemiskt blodtryck?",
+    "correct": "Renal autoreglering",
+    "distractors": [
+      "Tubuloglomerulär sekretion",
+      "Osmotisk diures",
+      "Kloridskiftet"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_44",
+    "type": "mc",
+    "prompt": "Vilka två huvudmekanismer bidrar till njurens autoreglering av GFR?",
+    "correct": "Den myogena responsen i afferenta arteriolen och tubuloglomerulär feedback via macula densa",
+    "distractors": [
+      "Enbart hormonell reglering via ADH",
+      "Enbart sympatikusaktivering",
+      "Enbart förändringar i plasmaproteinkoncentration"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_45",
+    "type": "mc",
+    "prompt": "Vad innebär den myogena responsen i den afferenta arteriolen?",
+    "correct": "Kärlväggens glatta muskulatur kontraherar automatiskt vid ökad sträckning (högre tryck), vilket begränsar ökningen av blodflöde och GFR",
+    "distractors": [
+      "Kärlet vidgas alltid oavsett trycket",
+      "Reflexen styrs enbart av hormonet aldosteron",
+      "Reflexen kräver alltid extern nervstimulering"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_46",
+    "type": "mc",
+    "prompt": "Vad händer med den afferenta arteriolens diameter vid tubuloglomerulär feedback om natriumkloridkoncentrationen vid macula densa ökar?",
+    "correct": "Den afferenta arteriolen kontraherar, vilket minskar GFR",
+    "distractors": [
+      "Den afferenta arteriolen vidgas kraftigt, vilket ökar GFR",
+      "Diametern påverkas inte alls",
+      "Den efferenta arteriolen stängs helt"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_47",
+    "type": "mc",
+    "prompt": "Vad kallas den andel av plasmaflödet genom njuren som faktiskt filtreras i glomerulus?",
+    "correct": "Filtrationsfraktionen",
+    "distractors": [
+      "Clearance",
+      "Reabsorptionsfraktionen",
+      "Sekretionsfraktionen"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_48",
+    "type": "mc",
+    "prompt": "Vad är en normal, ungefärlig filtrationsfraktion i njuren?",
+    "correct": "Cirka 20 %",
+    "distractors": [
+      "Cirka 1 %",
+      "Cirka 80 %",
+      "100 %"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_49",
+    "type": "mc",
+    "prompt": "Vad kan ett kraftigt förhöjt tryck i Bowmans kapsel, t.ex. vid avflödeshinder i urinvägarna, orsaka för GFR?",
+    "correct": "En minskning av GFR",
+    "distractors": [
+      "En kraftig ökning av GFR",
+      "Ingen effekt alls på GFR",
+      "En omedelbar fördubbling av GFR"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_50",
+    "type": "mc",
+    "prompt": "Vad kallas ämnen som filtreras fritt i glomerulus men varken reabsorberas eller sekreras i tubuli, och därför används för att uppskatta GFR?",
+    "correct": "Filtrationsmarkörer (t.ex. inulin eller kreatinin i klinisk approximation)",
+    "distractors": [
+      "Reabsorptionsmarkörer",
+      "Sekretionsmarkörer",
+      "Osmotiska diuretika"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_51",
+    "type": "mc",
+    "prompt": "Ungefär hur stor andel av det glomerulära filtratet reabsorberas normalt i den proximala tubulin?",
+    "correct": "Cirka två tredjedelar (ca 65–70 %)",
+    "distractors": [
+      "Cirka 1 %",
+      "Cirka 99 %",
+      "Ingenting alls"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_52",
+    "type": "mc",
+    "prompt": "Vilka ämnen reabsorberas nästan fullständigt i den proximala tubulin under normala förhållanden?",
+    "correct": "Glukos och aminosyror",
+    "distractors": [
+      "Urea och kreatinin",
+      "Vätejoner",
+      "Kalium uteslutande"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_53",
+    "type": "mc",
+    "prompt": "Vad kallas den maximala mängd glukos som njurtubuli kan reabsorbera per tidsenhet, och vad händer om denna överskrids?",
+    "correct": "Den tubulära transportmaximum (Tm) för glukos – överskrids den uppstår glukosuri (glukos i urinen)",
+    "distractors": [
+      "Filtrationsfraktionen – överskrids den upphör filtrationen helt",
+      "GFR – överskrids den stannar njuren",
+      "Clearance – överskrids den bildas ingen urin"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_54",
+    "type": "mc",
+    "prompt": "Vid vilket ungefärligt blodglukosvärde överskrids normalt njurens reabsorptionskapacitet för glukos (den renala tröskeln)?",
+    "correct": "Cirka 10 mmol/l",
+    "distractors": [
+      "Cirka 1 mmol/l",
+      "Cirka 25 mmol/l",
+      "Cirka 50 mmol/l"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_55",
+    "type": "mc",
+    "prompt": "Vad kallas mekanismen där ett ämne aktivt transporteras från tubulivätskan tillbaka till blodet?",
+    "correct": "Tubulär reabsorption",
+    "distractors": [
+      "Tubulär sekretion",
+      "Glomerulär filtration",
+      "Osmotisk diures"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_56",
+    "type": "mc",
+    "prompt": "Vad kallas mekanismen där ett ämne aktivt transporteras från peritubulärt blod in i tubulivätskan?",
+    "correct": "Tubulär sekretion",
+    "distractors": [
+      "Tubulär reabsorption",
+      "Glomerulär filtration",
+      "Autoreglering"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_57",
+    "type": "mc",
+    "prompt": "Vilka ämnen är typiska exempel på substanser som aktivt sekreras i njurtubuli, t.ex. för att elimineras snabbt?",
+    "correct": "Vätejoner, kalium och många läkemedel/organiska syror",
+    "distractors": [
+      "Glukos och aminosyror uteslutande",
+      "Plasmaproteiner",
+      "Erytrocyter"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_58",
+    "type": "mc",
+    "prompt": "Vad kallas mekanismen i Henles slynga där motriktade flöden i den nedåtgående och uppåtgående delen bygger upp en stark osmotisk koncentrationsgradient i njurmärgen?",
+    "correct": "Countercurrent-multiplikation (motströmsmultiplikation)",
+    "distractors": [
+      "Tubuloglomerulär feedback",
+      "Myogen respons",
+      "Filtrationsfraktion"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_59",
+    "type": "mc",
+    "prompt": "Vilken del av Henles slynga är i huvudsak vattengenomsläpplig men relativt ogenomsläpplig för salter?",
+    "correct": "Den nedåtgående (tunna) delen",
+    "distractors": [
+      "Den tjocka, uppåtgående delen",
+      "Distala tubuli",
+      "Samlingsröret utan ADH"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_60",
+    "type": "mc",
+    "prompt": "Vilken del av Henles slynga aktivt transporterar ut natrium och klorid men är i det närmaste vattenogenomsläpplig?",
+    "correct": "Den tjocka, uppåtgående delen",
+    "distractors": [
+      "Den nedåtgående (tunna) delen",
+      "Proximala tubuli enbart",
+      "Bowmans kapsel"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_61",
+    "type": "mc",
+    "prompt": "Var i nefronet utövar hormonet aldosteron sin huvudsakliga effekt på natrium- och kaliumtransport?",
+    "correct": "I distala tubuli och samlingsröret",
+    "distractors": [
+      "I glomerulus",
+      "I proximala tubuli enbart",
+      "I Bowmans kapsel"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_62",
+    "type": "mc",
+    "prompt": "Vilka specifika membrankanaler i samlingsrörets celler regleras av ADH för att öka vattenreabsorptionen?",
+    "correct": "Akvaporin-kanaler (särskilt akvaporin-2)",
+    "distractors": [
+      "Natriumkanaler (ENaC) enbart",
+      "Kaliumkanaler enbart",
+      "Karbanhydraskanaler"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_63",
+    "type": "mc",
+    "prompt": "Vad händer med samlingsrörets vattengenomsläpplighet i frånvaro av ADH?",
+    "correct": "Den är låg, vilket leder till utsöndring av stora mängder utspädd urin",
+    "distractors": [
+      "Den är maximal, vilket ger starkt koncentrerad urin",
+      "Vattengenomsläppligheten påverkas inte alls av ADH",
+      "Samlingsröret stängs helt för allt flöde"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_64",
+    "type": "mc",
+    "prompt": "Vad kallas den mekanism som gör att njurmärgens interstitium blir alltmer hyperton ju djupare ner mot papillen man kommer?",
+    "correct": "Den medullära (kortikomedullära) osmotiska gradienten, uppbyggd av countercurrent-multiplikation",
+    "distractors": [
+      "Tubuloglomerulär feedback",
+      "Filtrationsfraktionen",
+      "Myogen respons"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_65",
+    "type": "mc",
+    "prompt": "Vad kallas urea:s bidrag till njurmärgens osmotiska gradient, där urea återcirkuleras mellan samlingsrör och Henles slynga?",
+    "correct": "Urearecirkulation (urea-cykling)",
+    "distractors": [
+      "Glukosuri",
+      "Tubuloglomerulär feedback",
+      "Filtrationsfraktion"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_66",
+    "type": "mc",
+    "prompt": "Vad kallas den process där bikarbonat reabsorberas och vätejoner sekreras i njurtubuli för att reglera kroppens syra-basbalans?",
+    "correct": "Renal syra-basreglering (tubulär bikarbonatreabsorption och vätejonsekretion)",
+    "distractors": [
+      "Countercurrent-multiplikation",
+      "Tubuloglomerulär feedback",
+      "Filtrationsfraktion"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_67",
+    "type": "mc",
+    "prompt": "Vilket organ, förutom lungorna, är huvudansvarigt för kroppens långsiktiga syra-basreglering?",
+    "correct": "Njurarna",
+    "distractors": [
+      "Levern",
+      "Mjälten",
+      "Hjärtat"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_68",
+    "type": "mc",
+    "prompt": "Vad kallas urinens koncentrationsförmåga när kroppen är uttorkad och ADH-nivåerna är höga?",
+    "correct": "Maximal urinkoncentrering (starkt hyperton urin)",
+    "distractors": [
+      "Maximal urinutspädning",
+      "Total anuri",
+      "Glukosuri"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_69",
+    "type": "mc",
+    "prompt": "Vad kallas tillståndet med onormalt stora mängder utspädd urin, t.ex. vid bristande ADH-effekt (diabetes insipidus)?",
+    "correct": "Polyuri med utspädd urin",
+    "distractors": [
+      "Oliguri med koncentrerad urin",
+      "Anuri",
+      "Hematuri"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_70",
+    "type": "mc",
+    "prompt": "Vad kallas det tillstånd med kraftigt minskad urinproduktion, ofta ett tecken på akut njurpåverkan?",
+    "correct": "Oliguri",
+    "distractors": [
+      "Polyuri",
+      "Glukosuri",
+      "Proteinuri"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_71",
+    "type": "mc",
+    "prompt": "Hur definieras renal clearance för en substans?",
+    "correct": "Den plasmavolym som helt renas från substansen per tidsenhet av njurarna",
+    "distractors": [
+      "Den totala mängden substans som filtreras i glomerulus",
+      "Den mängd substans som reabsorberas per dygn",
+      "Blodflödet genom njurartären per minut"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_72",
+    "type": "mc",
+    "prompt": "Vilket endogent ämne används oftast kliniskt för att skatta GFR via clearance, trots att det både filtreras och i viss mån sekreras?",
+    "correct": "Kreatinin",
+    "distractors": [
+      "Glukos",
+      "Albumin",
+      "Urea"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_73",
+    "type": "mc",
+    "prompt": "Varifrån härstammar kreatinin i blodet, vilket gör nivån relativt stabil och användbar som njurfunktionsmått?",
+    "correct": "Nedbrytning av kreatinfosfat i skelettmuskulaturen",
+    "distractors": [
+      "Nedbrytning av hemoglobin",
+      "Nedbrytning av glukos i levern",
+      "Nedbrytning av surfaktant i lungorna"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_74",
+    "type": "mc",
+    "prompt": "Vad kallas det beräknade måttet på njurfunktion som i klinisk rutin ofta ersätter en fullständig kreatininclearance-mätning?",
+    "correct": "Skattad GFR (eGFR), beräknad från plasmakreatinin, ålder, kön m.m.",
+    "distractors": [
+      "Filtrationsfraktionen",
+      "Osmolalitetsgapet",
+      "Anjongapet"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_75",
+    "type": "mc",
+    "prompt": "Vad händer generellt med plasmakreatinin när njurfunktionen (GFR) försämras?",
+    "correct": "Plasmakreatinin stiger",
+    "distractors": [
+      "Plasmakreatinin sjunker",
+      "Plasmakreatinin påverkas inte alls",
+      "Plasmakreatinin normaliseras alltid automatiskt"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_76",
+    "type": "mc",
+    "prompt": "Vilket annat kväveinnehållande ämne, förutom kreatinin, mäts ofta i blodet som ett (mindre specifikt) mått på njurfunktion?",
+    "correct": "Urea (blodurea, ofta angivet som BUN)",
+    "distractors": [
+      "Glukos",
+      "Bilirubin",
+      "Albumin"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_77",
+    "type": "mc",
+    "prompt": "Varför anses urea vara ett mindre pålitligt njurfunktionsmått än kreatinin?",
+    "correct": "Ureanivån påverkas även kraftigt av kostens proteininnehåll, katabolism, leverfunktion och hydreringsgrad",
+    "distractors": [
+      "Urea filtreras aldrig i glomerulus",
+      "Urea bildas uteslutande i njurarna själva",
+      "Urea reabsorberas aldrig i tubuli"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_78",
+    "type": "mc",
+    "prompt": "Vilken alternativ endogen markör för njurfunktion anses vara mindre påverkad av muskelmassa än kreatinin?",
+    "correct": "Cystatin C",
+    "distractors": [
+      "Urea",
+      "Albumin",
+      "Natriuretisk peptid"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_79",
+    "type": "mc",
+    "prompt": "Vad kallas kvoten mellan urinkoncentrationen och plasmakoncentrationen av en substans, använd för att bedöma njurens koncentreringsförmåga?",
+    "correct": "U/P-kvoten (urin/plasma-kvoten)",
+    "distractors": [
+      "Filtrationsfraktionen",
+      "Clearance",
+      "Anjongapet"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_80",
+    "type": "mc",
+    "prompt": "Vad kan ett lågt kreatininclearance/eGFR tillsammans med förhöjt plasmakreatinin indikera?",
+    "correct": "Nedsatt njurfunktion (sänkt GFR)",
+    "distractors": [
+      "Förbättrad njurfunktion",
+      "En akut infektion i urinblåsan enbart",
+      "Ett normalt fysiologiskt tillstånd"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_81",
+    "type": "mc",
+    "prompt": "Vad kallas det kroniska tillstånd med bestående, progredierande nedsättning av njurfunktionen över tid?",
+    "correct": "Kronisk njursjukdom (kronisk njursvikt)",
+    "distractors": [
+      "Akut cystit",
+      "Nefrolitiasis (njursten)",
+      "Glukosuri"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_82",
+    "type": "mc",
+    "prompt": "Vad kallas det snabbt insättande tillståndet med akut försämrad njurfunktion, t.ex. vid kraftigt blodtrycksfall eller läkemedelstoxicitet?",
+    "correct": "Akut njursvikt (akut njurskada)",
+    "distractors": [
+      "Kronisk njursjukdom",
+      "Diabetes insipidus",
+      "Nefrotiskt syndrom uteslutande"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_83",
+    "type": "mc",
+    "prompt": "Vad kallas njurfunktionsmåttet som beskriver hur väl njurarna renar blodet från en specifik substans per tidsenhet, uttryckt i ml/min?",
+    "correct": "Clearance",
+    "distractors": [
+      "Filtrationsfraktionen",
+      "Osmolaliteten",
+      "Reabsorptionskvoten"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_84",
+    "type": "mc",
+    "prompt": "Om en substans clearas snabbare än inulin/kreatinin (dvs. clearance > GFR), vad indikerar det?",
+    "correct": "Att substansen även sekreras aktivt i tubuli, utöver att filtreras",
+    "distractors": [
+      "Att substansen enbart filtreras utan reabsorption eller sekretion",
+      "Att substansen reabsorberas fullständigt",
+      "Att njuren har slutat fungera helt"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_85",
+    "type": "mc",
+    "prompt": "Om en substans clearas långsammare än GFR, vad indikerar det?",
+    "correct": "Att substansen reabsorberas i tubuli efter filtrationen",
+    "distractors": [
+      "Att substansen enbart sekreras, utan filtration",
+      "Att substansen inte alls filtreras i glomerulus",
+      "Att GFR är onormalt hög"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_86",
+    "type": "mc",
+    "prompt": "Vilka ämnen ingår normalt i betydande mängd i den slutgiltiga urinen?",
+    "correct": "Vatten, urea, kreatinin och diverse elektrolyter (t.ex. natrium, kalium, klorid)",
+    "distractors": [
+      "Stora mängder glukos",
+      "Stora mängder plasmaprotein",
+      "Stora mängder erytrocyter"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_87",
+    "type": "mc",
+    "prompt": "Vad kallas fyndet av protein i urinen, vilket normalt inte ska förekomma i mer än spårmängder?",
+    "correct": "Proteinuri",
+    "distractors": [
+      "Glukosuri",
+      "Hematuri",
+      "Polyuri"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_88",
+    "type": "mc",
+    "prompt": "Vad kallas fyndet av glukos i urinen, som normalt inte ska förekomma vid normal blodsockernivå?",
+    "correct": "Glukosuri",
+    "distractors": [
+      "Proteinuri",
+      "Hematuri",
+      "Ketonuri"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_89",
+    "type": "mc",
+    "prompt": "Vad kallas fyndet av blod (erytrocyter) i urinen?",
+    "correct": "Hematuri",
+    "distractors": [
+      "Glukosuri",
+      "Proteinuri",
+      "Pyuri"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_90",
+    "type": "mc",
+    "prompt": "Vad kallas fyndet av vita blodkroppar i urinen, ofta tecken på urinvägsinfektion?",
+    "correct": "Pyuri (leukocyturi)",
+    "distractors": [
+      "Hematuri",
+      "Glukosuri",
+      "Proteinuri"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_91",
+    "type": "mc",
+    "prompt": "Vad kallas ett vanligt, snabbt kemiskt screeningtest av urinen som direkt kan påvisa bl.a. protein, glukos, blod och nitrit?",
+    "correct": "Urinsticka (urinstickeanalys)",
+    "distractors": [
+      "Kreatininclearance",
+      "Blodgasanalys",
+      "Lipidstatus"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_92",
+    "type": "mc",
+    "prompt": "Vad indikerar positivt nitrit på en urinsticka, oftast?",
+    "correct": "Bakteriell urinvägsinfektion (många vanliga urinvägsbakterier omvandlar nitrat till nitrit)",
+    "distractors": [
+      "Diabetes mellitus",
+      "Njursten",
+      "Akut glomerulonefrit uteslutande"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_93",
+    "type": "mc",
+    "prompt": "Vad kallas den nervösa reflexen som utlöser tömning av urinblåsan?",
+    "correct": "Miktionsreflexen",
+    "distractors": [
+      "Hering–Breuers reflex",
+      "Baroreceptorreflexen",
+      "Frank–Starlings mekanism"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_94",
+    "type": "mc",
+    "prompt": "Vilken typ av muskulatur i urinblåsans vägg kontraherar vid miktion för att pressa ut urinen?",
+    "correct": "Detrusormuskeln (glatt muskulatur i blåsväggen)",
+    "distractors": [
+      "Den yttre uretrasfinktern (tvärstrimmig) enbart",
+      "Diafragma",
+      "Analsfinktern"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_95",
+    "type": "mc",
+    "prompt": "Vilken sfinkter i urinvägarna står under viljemässig (somatisk) kontroll?",
+    "correct": "Den yttre uretrasfinktern",
+    "distractors": [
+      "Den inre uretrasfinktern",
+      "Detrusormuskeln",
+      "Pylorussfinktern"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "Guyton & Hall, Textbook of Medical Physiology"
+  },
+  {
+    "id": "bma_njure_96",
+    "type": "mc",
+    "prompt": "Vad kallas mikroskopisk undersökning av urinsediment, t.ex. för att påvisa celler, cylindrar eller kristaller?",
+    "correct": "Urinmikroskopi (sedimentundersökning)",
+    "distractors": [
+      "Urinsticka enbart",
+      "Kreatininclearance",
+      "Blodgasanalys"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_97",
+    "type": "mc",
+    "prompt": "Vad kallas cylindriska avgjutningar av njurtubuli som kan påvisas i urinsediment och indikerar njurpatologi?",
+    "correct": "Cylindrar (urincylindrar)",
+    "distractors": [
+      "Kristaller",
+      "Erytrocyter fria i urinen",
+      "Nitritpartiklar"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_98",
+    "type": "mc",
+    "prompt": "Vad kallas det kliniska syndromet med kraftig proteinuri, lågt plasmaalbumin och ödem, orsakat av glomerulär skada?",
+    "correct": "Nefrotiskt syndrom",
+    "distractors": [
+      "Nefritiskt syndrom uteslutande",
+      "Diabetes insipidus",
+      "Akut cystit"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_99",
+    "type": "mc",
+    "prompt": "Vad kallas det kliniska syndromet med hematuri, viss proteinuri, hypertoni och nedsatt GFR, typiskt vid akut glomerulär inflammation?",
+    "correct": "Nefritiskt syndrom",
+    "distractors": [
+      "Nefrotiskt syndrom",
+      "Diabetes insipidus",
+      "Polycystisk njursjukdom"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
+  },
+  {
+    "id": "bma_njure_100",
+    "type": "mc",
+    "prompt": "Vad kallas stenbildning i njure eller urinvägar, som kan orsaka akut, svår flanksmärta?",
+    "correct": "Nefrolitiasis (njursten/urinvägssten)",
+    "distractors": [
+      "Glomerulonefrit",
+      "Nefrotiskt syndrom",
+      "Diabetes insipidus"
+    ],
+    "topic": "bma_njurar_urinvagar",
+    "difficulty": "Normal",
+    "source": "McPherson & Pincus, Henry's Clinical Diagnosis and Management by Laboratory Methods"
   }
 ]

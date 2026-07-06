@@ -159,6 +159,10 @@ const EDUCATIONS = [
   { name: 'Biomedicinsk analytiker', topics: [
     { label: 'Cell & vävnad (morfologi)',   file: './data/biomedicinsk_analytiker.json', topic: 'bma_cell_vavnad' },
     { label: 'Blod & blodbildning',         file: './data/biomedicinsk_analytiker.json', topic: 'bma_blod_blodbildning' },
+    { label: 'Hjärta & cirkulation',        file: './data/biomedicinsk_analytiker.json', topic: 'bma_hjarta_cirkulation' },
+    { label: 'Respiration & lungor',        file: './data/biomedicinsk_analytiker.json', topic: 'bma_respiration_lungor' },
+    { label: 'Nervsystem & muskler',        file: './data/biomedicinsk_analytiker.json', topic: 'bma_nervsystem_muskler' },
+    { label: 'Njurar & urinvägar',          file: './data/biomedicinsk_analytiker.json', topic: 'bma_njurar_urinvagar' },
   ]},
 ]
 
