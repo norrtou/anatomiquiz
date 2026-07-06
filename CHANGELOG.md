@@ -1,5 +1,16 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.136
+- **Biomedicinsk analytiker klart – alla 18 ämnen byggda** (600 nya MC-frågor i `data/biomedicinsk_analytiker.json`, nu 1800 frågor totalt över 18 ämnen):
+  - **Klinisk neurofysiologi** (`bma_neurofysiologi`) – EEG (frekvensband, sömnstadier, epileptiforma mönster), EMG (motorenhet, insertionsaktivitet, denervering), neurografi (F-våg, H-reflex, demyelinisering vs. axonal skada, karpaltunnelsyndrom, Guillain-Barré), framkallade svar (VEP/BAEP/SEP) samt myastenia gravis/repetitiv nervstimulering.
+  - **Njur-, gastrofysiologi & nuklearmedicin** (`bma_njur_gastro_nuklear`) – nuklearmedicinska grunder (radiofarmaka, gammakamera, SPECT/PET, strålskydd), njurscintigrafi/GFR-mätning, skelett-, lung- (V/Q-scan), lever- (HIDA) och sköldkörtelscintigrafi, myokardperfusion samt teranostik.
+  - **Klinisk kemi & organmarkörer** (`bma_klinisk_kemi`) – lever- (ALAT/ASAT/ALP/GT/bilirubin), njur- (kreatinin/cystatin C/eGFR) och hjärtmarkörer (troponin/NT-proBNP), elektrolyter, blodfetter, glukos/HbA1c, proteiner/elfores, enzymkinetik/referensintervall, pankreasmarkörer, preanalytik och blodgas.
+  - **Hematologi & transfusionsmedicin** (`bma_hematologi_transfusion`) – fördjupad anemidiagnostik (ferritin/transferrin, hemolysparametrar, Coombs test), hemoglobinopatier och membran-/enzymopatier, leukemi-/lymfomklassifikation (flödescytometri, cytogenetik, Philadelphiakromosom), myeloproliferativa sjukdomar, koagulationsutredning (hemofili, von Willebrand, DIC, trombofili, D-dimer) samt transfusionsmedicin (blodkomponenter, transfusionsreaktioner, aferes).
+  - **Mikrobiologi & immunologi** (`bma_mikrobiologi_immunologi`) – bakteriologi (cellväggsstruktur, odling/resistensbestämning, antibiotikaklasser/-resistens), virologi (replikation, PCR/serologi/serokonversion), mykologi och parasitologi, samt sterilisering/desinfektion och vårdhygien. Avgränsat mot den redan djupgående immunologin i `bma_immun_lymfatiska` för att undvika dubbletter.
+  - **Patologi & histopatologisk morfologi** (`bma_patologi`) – cellulär adaptation (hypertrofi/hyperplasi/atrofi/metaplasi/dysplasi), nekrostyper, inflammations- och sårläkningsmorfologi, neoplasi (nomenklatur, gradering/TNM-stadieindelning, metastasvägar), histopatologiska tekniker (HE/immunhistokemi/specialfärgningar/fryssnitt) samt cytologi och obduktionspatologi.
+  - Alla sex ämnen avkommenterade i `index.html` (`#topic`, med `(MC)`-tagg) och tillagda i `js/info.js`. Samtliga 1800 frågor i filen kontrollerade unika inom respektive ämne (inga dubbletter av id eller frågetext).
+- VERSION/APP_VERSION/index.html- och info.html-cachebuster → 0.9.136.
+
 ## 0.9.135
 - **Biomedicinsk analytiker: sex nya ämnen klara** (600 nya MC-frågor i `data/biomedicinsk_analytiker.json`, nu 1200 frågor över 12 ämnen totalt):
   - **Matsmältning, lever & ämnesomsättning** (`bma_matsmaltning_lever`) – GI-kanalens och leverns/pankreas/gallvägarnas grovanatomi och histologi, digestions- och absorptionsfysiologi (GI-hormoner, enzymer, galla), leverns metabolism (glukoneogenes, ureacykeln, bilirubin/ikterus, detox) samt leverstatus/pankreasenzymer och vanliga GI-/leversjukdomar.

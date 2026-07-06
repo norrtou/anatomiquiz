@@ -169,6 +169,12 @@ const EDUCATIONS = [
     { label: 'Hjärtats elektrofysiologi & EKG', file: './data/biomedicinsk_analytiker.json', topic: 'bma_ekg_elektrofys' },
     { label: 'Respirationsfysiologi & spirometri', file: './data/biomedicinsk_analytiker.json', topic: 'bma_spirometri' },
     { label: 'Kärl- & cirkulationsfysiologi', file: './data/biomedicinsk_analytiker.json', topic: 'bma_karl_cirkulationsfys' },
+    { label: 'Klinisk neurofysiologi', file: './data/biomedicinsk_analytiker.json', topic: 'bma_neurofysiologi' },
+    { label: 'Njur-, gastrofysiologi & nuklearmedicin', file: './data/biomedicinsk_analytiker.json', topic: 'bma_njur_gastro_nuklear' },
+    { label: 'Klinisk kemi & organmarkörer', file: './data/biomedicinsk_analytiker.json', topic: 'bma_klinisk_kemi' },
+    { label: 'Hematologi & transfusionsmedicin', file: './data/biomedicinsk_analytiker.json', topic: 'bma_hematologi_transfusion' },
+    { label: 'Mikrobiologi & immunologi', file: './data/biomedicinsk_analytiker.json', topic: 'bma_mikrobiologi_immunologi' },
+    { label: 'Patologi & histopatologisk morfologi', file: './data/biomedicinsk_analytiker.json', topic: 'bma_patologi' },
   ]},
 ]
 
