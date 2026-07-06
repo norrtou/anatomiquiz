@@ -163,6 +163,12 @@ const EDUCATIONS = [
     { label: 'Respiration & lungor',        file: './data/biomedicinsk_analytiker.json', topic: 'bma_respiration_lungor' },
     { label: 'Nervsystem & muskler',        file: './data/biomedicinsk_analytiker.json', topic: 'bma_nervsystem_muskler' },
     { label: 'Njurar & urinvägar',          file: './data/biomedicinsk_analytiker.json', topic: 'bma_njurar_urinvagar' },
+    { label: 'Matsmältning, lever & ämnesomsättning', file: './data/biomedicinsk_analytiker.json', topic: 'bma_matsmaltning_lever' },
+    { label: 'Endokrina systemet',          file: './data/biomedicinsk_analytiker.json', topic: 'bma_endokrina' },
+    { label: 'Immunsystem & lymfatiska organ', file: './data/biomedicinsk_analytiker.json', topic: 'bma_immun_lymfatiska' },
+    { label: 'Hjärtats elektrofysiologi & EKG', file: './data/biomedicinsk_analytiker.json', topic: 'bma_ekg_elektrofys' },
+    { label: 'Respirationsfysiologi & spirometri', file: './data/biomedicinsk_analytiker.json', topic: 'bma_spirometri' },
+    { label: 'Kärl- & cirkulationsfysiologi', file: './data/biomedicinsk_analytiker.json', topic: 'bma_karl_cirkulationsfys' },
   ]},
 ]
 
