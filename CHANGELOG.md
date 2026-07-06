@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.130
+- **Knapp för medicinsk ordlista på framsidan.** Ny knapp "Medicinsk ordlista" (länk till `medicinskordlista.html`) tillagd i samma rad som "Kunskapsbank" i `index.html`, placerad till vänster om den.
+- VERSION/APP_VERSION/app.js- och info.js-cachebuster → 0.9.130.
+
 ## 0.9.129
 - **Utbildningsförkortning flyttad i topplistan.** I "Senaste resultaten" och "Bästa resultat" stod utbildningsförkortningen tidigare EFTER ämnesnamnet, t.ex. "Handen (FYS)". Nu står den FÖRE i stället: "(FYS) Handen". Ändrat i `renderScoreList()` och `renderBestList()` i `js/app.js`.
 - VERSION/APP_VERSION/app.js- och info.js-cachebuster → 0.9.129.
