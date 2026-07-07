@@ -189,6 +189,11 @@ const EDUCATIONS = [
     { label: 'Kärlanatomi',                 file: './data/rontgensjukskoterska.json', topic: 'rtg_karlanatomi' },
     { label: 'Cirkulation & hjärtfunktion', file: './data/rontgensjukskoterska.json', topic: 'rtg_cirkulation_hjarta' },
     { label: 'Njurfunktion & utsöndring',   file: './data/rontgensjukskoterska.json', topic: 'rtg_njurfunktion' },
+    { label: 'Andning & rörelse',           file: './data/rontgensjukskoterska.json', topic: 'rtg_andning_rorelse' },
+    { label: 'Snittanatomi',                file: './data/rontgensjukskoterska.json', topic: 'rtg_snittanatomi' },
+    { label: 'Projektionslära & lägesterminologi', file: './data/rontgensjukskoterska.json', topic: 'rtg_projektionslara' },
+    { label: 'Modalitetsspecifik bildanatomi', file: './data/rontgensjukskoterska.json', topic: 'rtg_modalitetsspecifik' },
+    { label: 'Kontrastmedel & fördelning',  file: './data/rontgensjukskoterska.json', topic: 'rtg_kontrastmedel' },
   ]},
 ]
 

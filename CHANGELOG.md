@@ -1,5 +1,15 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.138
+- **Röntgensjuksköterska klart – alla 15 ämnen byggda** (500 nya MC-frågor i `data/rontgensjukskoterska.json`, nu 1500 frågor totalt över 15 ämnen):
+  - **Andning & rörelse** (`rtg_andning_rorelse`) – andningsmuskulatur/-fysiologi, andhållningsteknik och Valsalvamanöver, andnings-/EKG-gating vid CT/MR, 4D-CT och DIBH inför strålbehandling, frenikuspares/sniff test, lungultraljud (A-/B-linjer, lung sliding), rörelseartefakter (peristaltik, sväljning, tremor) och hantering av dem.
+  - **Snittanatomi** (`rtg_snittanatomi`) – kardinalplanen och radiologisk konvention, MPR/MIP/MinIP/VRT, isotropiska voxlar och partial volume-effekt, typiska strukturer på namngivna axiala nivåer (carina, njurhilum, aortabifurkation m.fl.), plansval för specifika leder/organ (knäets ledband, hjärtats kort-/långaxelvyer, prostata), BI-/PI-/TI-/LI-RADS.
+  - **Projektionslära & lägesterminologi** (`rtg_projektionslara`) – patientlägen (supint/pront/decubitus/Trendelenburg/Fowler/Sims), projektionsnomenklatur (AP/PA/lateral/oblik/axial/tangentiell) och obliksförkortningar (RAO/LPO m.fl.), SID/OID och geometrisk distorsion, kroppstyper (sthenisk–astenisk), grid/kollimering, strålskyddets tre grundprinciper.
+  - **Modalitetsspecifik bildanatomi** (`rtg_modalitetsspecifik`) – hur samma vävnad (ben, vätska, luft, fett, metall, kalk, blod) framställs på röntgen/CT vs. MR vs. ultraljud, kontrastmekanismer per modalitet, artefakter (susceptibilitet, chemical shift, anisotropi, akustisk skugga/förstärkning), grå/vit substans-kontrast, nuklearmedicinska hot/cold spots.
+  - **Kontrastmedel & fördelning** (`rtg_kontrastmedel`) – jod/gadolinium/mikrobubbel-kontrast, NSF och gadoliniumretention, distributionsfaser (artär/portovenös/sen), oral/rektal/intraartikulär/intratekal administrering, bariumkontraindikation vid perforation, reaktionsklassificering och premedicinering, extravasering, dual-energy CT (VNC/jodkartor).
+  - Alla fem ämnen avkommenterade i `index.html` (`#topic`, med `(MC)`-tagg) och tillagda i `js/info.js`. Samtliga 1500 frågor i filen kontrollerade unika (inga dubbletter av id eller frågetext, ingen överlappning mellan ämnena).
+- VERSION/APP_VERSION/index.html- och info.html-cachebuster → 0.9.138.
+
 ## 0.9.137
 - **Röntgensjuksköterska: tio ämnen byggda** (1000 nya MC-frågor i ny fil `data/rontgensjukskoterska.json`, topografisk och funktionell bildanatomi):
   - **Thorax** (`rtg_thorax`) – lung- och mediastinallobering/fissurer, hilumanatomi, hjärtsilhuettens konturer och cardiothoracic ratio, revben/sternum, PA/lateral/lordotisk/decubitusprojektion, normala varianter och fallgropar (companion shadow, azygoslob, sail sign, silhouette sign).
