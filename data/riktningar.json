@@ -1247,7 +1247,7 @@
     "id": "q93",
     "type": "mc",
     "prompt": "Handflatan är på den sidan som kallas?",
-    "correct": "Palmar / Volar",
+    "correct": "Palmar",
     "distractors": [
       "Dorsal",
       "Tibial",
@@ -2434,9 +2434,9 @@
     "prompt": "Vad betyder 'Pronation'?",
     "correct": "Rotationen av hand eller fot nedåt",
     "distractors": [
-      "En muskelgrupp",
-      "En benstruktur",
-      "En nervväg"
+      "En muskelgrupp i underarmen",
+      "En benstruktur i handleden",
+      "En nervväg till foten"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2448,9 +2448,9 @@
     "prompt": "Vad betyder 'Supination'?",
     "correct": "Rotationen av hand eller fot uppåt",
     "distractors": [
-      "En muskelgrupp",
-      "En benstruktur",
-      "En nervväg"
+      "En muskelgrupp i underarmen",
+      "En benstruktur i handleden",
+      "En nervväg till foten"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -3114,11 +3114,11 @@
     "id": "q237",
     "type": "mc",
     "prompt": "En punkt som är både distal och profundus är _____",
-    "correct": "Både längre från ursprung och långt från ytan",
+    "correct": "Längre från ursprung och ytan",
     "distractors": [
-      "Närmare ursprung",
-      "Nära ytan",
-      "I centrum"
+      "Närmare ursprung och ytan",
+      "Nära ytan och centrum",
+      "Mitt i centrum av strukturen"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -3538,7 +3538,7 @@
     "id": "q268",
     "type": "mc",
     "prompt": "Handflatan är den ____ sidan av handen",
-    "correct": "Palmara/volara",
+    "correct": "Palmara",
     "distractors": [
       "Dorsala",
       "Radial",
@@ -3870,9 +3870,9 @@
     "prompt": "Trendelenburgläge används för att",
     "correct": "Förbättra blodflödet till huvudet",
     "distractors": [
-      "Låta benen vila",
-      "Underlätta andning",
-      "Lindra ryggvärk"
+      "Låta benen vila och avlastas",
+      "Underlätta andning vid vila",
+      "Lindra ryggvärk vid sittande"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -3884,9 +3884,9 @@
     "prompt": "Fowlerläge är användbart för",
     "correct": "Cirkulationen och andningen",
     "distractors": [
-      "Vila",
-      "Undersökning",
-      "Operation"
+      "Vila och avslappning",
+      "Undersökning av buken",
+      "Operation av foten"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -5486,11 +5486,11 @@
     "id": "q415",
     "type": "mc",
     "prompt": "Inåtrotation betyder rotation",
-    "correct": "Mot mittlinjen",
+    "correct": "Mot kroppens mittlinje",
     "distractors": [
-      "Utåt",
-      "Uppåt",
-      "Nedåt"
+      "Bort från kroppens mittlinje",
+      "Uppåt mot huvudet",
+      "Nedåt mot fötterna"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -5642,9 +5642,9 @@
     "prompt": "Opposition av tummen betyder",
     "correct": "Tummen möter fingrarnas toppar",
     "distractors": [
-      "Tummen dras ut",
-      "Tummen böjs",
-      "Tummen roteras"
+      "Tummen dras rakt ut åt sidan",
+      "Tummen böjs mot handflatan",
+      "Tummen roteras runt sin egen axel"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -5900,7 +5900,7 @@
     "prompt": "En översträckning av en led kallas",
     "correct": "Hyperextension",
     "distractors": [
-      "Flexion"
+      "Flexion av leden"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -6094,7 +6094,7 @@
     "prompt": "I vilken position är M. teres major när man gör koncentrisk inåtrotation och adduktion?",
     "correct": "Överarmen dras bakåt och inåt mot kroppen",
     "distractors": [
-      "Armen lyfts rakt upp"
+      "Armen lyfts rakt upp ovanför huvudet"
     ],
     "topic": "rörelser",
     "difficulty": "Hard",
@@ -6140,9 +6140,9 @@
     "id": "q466",
     "type": "mc",
     "prompt": "I vilken position är M. serratus anterior när man gör koncentrisk protraktion?",
-    "correct": "Axeln och skulderbladet skjuts fram framåt",
+    "correct": "Axeln och skulderbladet skjuts framåt",
     "distractors": [
-      "Axlarna dras bak"
+      "Axlarna dras bakåt och ihop"
     ],
     "topic": "rörelser",
     "difficulty": "Hard",
@@ -6454,7 +6454,7 @@
     "prompt": "I vilken position är M. rectus abdominis när man gör statisk (isometrisk) kontraktion?",
     "correct": "Magmusklerna spänns utan ryggradsrörelse",
     "distractors": [
-      "Magen slappnar helt av"
+      "Magen slappnar helt av utan spänning"
     ],
     "topic": "rörelser",
     "difficulty": "Hard",
@@ -6526,7 +6526,7 @@
     "prompt": "I vilken position är M. transversus abdominis när man gör statisk (isometrisk) stabilisering?",
     "correct": "De djupa magmusklerna aktiveras och naveln sugs in",
     "distractors": [
-      "Magen pressas ut maximalt"
+      "Magen pressas ut maximalt utan aktivering"
     ],
     "topic": "rörelser",
     "difficulty": "Hard",
@@ -6538,7 +6538,7 @@
     "prompt": "I vilken position är M. quadratus lumborum när man gör koncentrisk lateralflexion?",
     "correct": "Bäckenet lyfts och dras upp på ena sidan",
     "distractors": [
-      "Nacken böjs framåt"
+      "Nacken böjs framåt mot bröstet"
     ],
     "topic": "rörelser",
     "difficulty": "Hard",
@@ -6730,7 +6730,7 @@
     "prompt": "I vilken position är M. sartorius när man gör koncentrisk flexion, abduktion och utåtrotation?",
     "correct": "Benet lyfts och vrids så vristen kan läggas på andra knät",
     "distractors": [
-      "Benet sträcks helt spikrakt"
+      "Benet sträcks helt spikrakt utan rotation"
     ],
     "topic": "rörelser",
     "difficulty": "Hard",
@@ -6850,7 +6850,7 @@
     "prompt": "I vilken position är M. semitendinosus (Hamstrings) när man gör koncentrisk flexion och inåtrotation?",
     "correct": "Knät böjs och underbenet vrids något inåt",
     "distractors": [
-      "Benet sträcks maximalt"
+      "Benet sträcks maximalt utan rotation"
     ],
     "topic": "rörelser",
     "difficulty": "Hard",

@@ -103,9 +103,9 @@
     "prompt": "Enligt glidfilamentteorin förkortas sarkomeren vid kontraktion genom att:",
     "correct": "Aktin- och myosinfilamenten glider mot varandra",
     "distractors": [
-      "Aktinfilamenten förkortas",
-      "Myosinfilamenten förkortas",
-      "Z-skivorna blir tjockare"
+      "Aktinfilamenten själva förkortas och krymper",
+      "Myosinfilamenten själva förkortas och krymper",
+      "Z-skivorna blir tjockare och stelare"
     ],
     "topic": "fysiologi_muskel",
     "difficulty": "Normal",
@@ -131,9 +131,9 @@
     "prompt": "Stimulering av β1-adrenerga receptorer i hjärtat leder till:",
     "correct": "Ökad hjärtfrekvens och ökad kontraktionskraft",
     "distractors": [
-      "Minskad hjärtfrekvens",
-      "Bronkdilatation",
-      "Pupillförträngning"
+      "Minskad hjärtfrekvens och kontraktionskraft",
+      "Bronkdilatation utan hjärteffekt",
+      "Pupillförträngning utan hjärteffekt"
     ],
     "topic": "fysiologi_ans",
     "difficulty": "Normal",
@@ -381,7 +381,7 @@
     "id": "lak_f37",
     "type": "mc",
     "prompt": "Vad händer vid en normal inandning (inspiration) i vila?",
-    "correct": "Diafragma kontraherar och sänks, vilket minskar det intrathorakala trycket",
+    "correct": "Diafragma kontraherar och sänks",
     "distractors": [
       "Diafragma slappnar av och höjs",
       "Det intrathorakala trycket ökar",
@@ -395,7 +395,7 @@
     "id": "lak_f38",
     "type": "mc",
     "prompt": "Vilken roll har surfaktant i lungorna?",
-    "correct": "Sänker alveolernas ytspänning och motverkar att de faller ihop",
+    "correct": "Sänker alveolernas ytspänning",
     "distractors": [
       "Ökar ytspänningen i alveolerna",
       "Orsakar bronkkonstriktion",
@@ -579,9 +579,9 @@
     "prompt": "Vilken funktion har bikarbonatet i pankreas exokrina sekret?",
     "correct": "Neutraliserar det sura maginnehållet i duodenum",
     "distractors": [
-      "Surgör tarminnehållet",
-      "Aktiverar pepsin",
-      "Emulgerar fett"
+      "Surgör tarminnehållet ytterligare",
+      "Aktiverar pepsin i magsäcken",
+      "Emulgerar fett i tunntarmen"
     ],
     "topic": "fysiologi_gi",
     "difficulty": "Normal",
@@ -591,7 +591,7 @@
     "id": "lak_f55",
     "type": "mc",
     "prompt": "Insulin, som sänker blodsockret, produceras av:",
-    "correct": "Betacellerna i de Langerhanska öarna",
+    "correct": "Betacellerna",
     "distractors": [
       "Alfacellerna",
       "Deltacellerna",
@@ -605,7 +605,7 @@
     "id": "lak_f56",
     "type": "mc",
     "prompt": "Glukagon, som höjer blodsockret, produceras av:",
-    "correct": "Alfacellerna i de Langerhanska öarna",
+    "correct": "Alfacellerna",
     "distractors": [
       "Betacellerna",
       "Deltacellerna",
@@ -661,7 +661,7 @@
     "id": "lak_f62",
     "type": "mc",
     "prompt": "Var sitter hörselns receptorceller (hårceller)?",
-    "correct": "I snäckan, i Cortis organ",
+    "correct": "I Cortis organ",
     "distractors": [
       "I båggångarna",
       "I trumhinnan",
@@ -675,7 +675,7 @@
     "id": "lak_f63",
     "type": "mc",
     "prompt": "Skarpt färgseende i dagsljus förmedlas främst av:",
-    "correct": "Tapparna, tätast i gula fläcken",
+    "correct": "Tapparna",
     "distractors": [
       "Stavarna",
       "Gangliecellerna",
@@ -983,7 +983,7 @@
     "id": "lak_a21",
     "type": "mc",
     "prompt": "Hjärtmuskeln (myokardiet) försörjs med blod av:",
-    "correct": "Kranskärlen som avgår från aorta",
+    "correct": "Kranskärlen",
     "distractors": [
       "Lungartärerna",
       "Vena cava",
@@ -1011,7 +1011,7 @@
     "id": "lak_a23",
     "type": "mc",
     "prompt": "Vad är mediastinum?",
-    "correct": "Utrymmet mellan lungorna i bröstkorgen, som bl.a. innehåller hjärtat",
+    "correct": "Utrymmet mellan lungorna i bröstkorgen",
     "distractors": [
       "Lungsäcken runt varje lunga",
       "Översta delen av bukhålan",
@@ -1249,7 +1249,7 @@
     "id": "lak_a40",
     "type": "mc",
     "prompt": "Var bildas cerebrospinalvätskan (likvor)?",
-    "correct": "I plexus choroideus i hjärnans ventriklar",
+    "correct": "I plexus choroideus",
     "distractors": [
       "I subaraknoidalrummet",
       "I dura mater",
@@ -1361,7 +1361,7 @@
     "id": "lak_a48",
     "type": "mc",
     "prompt": "Blod-hjärnbarriären bildas främst av:",
-    "correct": "Tätt förbundna endotelceller i hjärnans kapillärer",
+    "correct": "Tätt förbundna endotelceller",
     "distractors": [
       "Neuronernas cellmembran",
       "Pia mater",

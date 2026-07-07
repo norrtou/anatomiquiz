@@ -389,7 +389,7 @@
     "id": "q30",
     "type": "mc",
     "prompt": "Vilka är skulderkomplexets fyra leder?",
-    "correct": "Art. glenohumerale, art. acromioclavicularis, art. sternoclavicularis och den skapulotorakala leden",
+    "correct": "Glenohumeralleden, AC-leden, SC-leden och den skapulotorakala leden",
     "distractors": [
       "Art. glenohumerale, art. cubiti, art. radioulnaris och AC-leden",
       "Axelleden, armbågsleden, handleden och AC-leden",
@@ -509,9 +509,9 @@
     "prompt": "Vilka rörelser kan utföras i art. glenohumerale?",
     "correct": "Flexion, extension, abduktion, adduktion samt in- och utåtrotation",
     "distractors": [
-      "Endast flexion och extension",
-      "Endast abduktion och adduktion",
-      "Endast in- och utåtrotation"
+      "Endast flexion och extension, inga andra rörelser möjliga",
+      "Endast abduktion och adduktion, inga andra rörelser möjliga",
+      "Endast in- och utåtrotation, inga andra rörelser möjliga"
     ],
     "topic": "skuldra_leder",
     "difficulty": "Normal",
@@ -521,7 +521,7 @@
     "id": "q40",
     "type": "mc",
     "prompt": "Varför är axelleden förhållandevis instabil?",
-    "correct": "Ledpannan är liten och grund i förhållande till det stora ledhuvudet",
+    "correct": "Ledpannan är liten och grund",
     "distractors": [
       "Ledhuvudet är ovanligt litet",
       "Ledkapseln är delvis förbenad",
@@ -751,9 +751,9 @@
     "prompt": "Vilka rörelser kan skulderbladet göra mot bröstkorgen i den skapulotorakala leden?",
     "correct": "Elevation/depression, protraktion/retraktion samt uppåt- och nedåtrotation",
     "distractors": [
-      "Endast flexion och extension",
-      "Endast in- och utåtrotation",
-      "Inga rörelser alls"
+      "Endast flexion och extension, inga andra rörelser möjliga",
+      "Endast in- och utåtrotation, inga andra rörelser möjliga",
+      "Inga rörelser alls, skulderbladet sitter helt fixerat"
     ],
     "topic": "skuldra_leder",
     "difficulty": "Normal",
@@ -791,9 +791,9 @@
     "prompt": "Var har m. deltoideus sitt ursprung?",
     "correct": "Claviculas laterala tredjedel, acromion och spina scapulae",
     "distractors": [
-      "Endast på humerus",
-      "Processus coracoideus",
-      "Margo medialis scapulae"
+      "Endast på humerus, ingen annanstans",
+      "Endast på processus coracoideus",
+      "Endast på margo medialis scapulae"
     ],
     "topic": "skuldra_muskler",
     "difficulty": "Normal",
@@ -1249,7 +1249,7 @@
     "id": "q94",
     "type": "mc",
     "prompt": "Vad menas med skapulohumeral rytm?",
-    "correct": "Samspelet mellan rörelse i axelleden och skulderbladets rörelse vid armlyft",
+    "correct": "Samspelet mellan axelledens och skulderbladets rörelse",
     "distractors": [
       "Att armen och benet rör sig i takt",
       "Rytmen mellan andning och axelrörelse",
@@ -1275,7 +1275,7 @@
     "id": "q96",
     "type": "mc",
     "prompt": "Hur fördelas rörelsen ungefär vid full abduktion mellan axelleden och skulderbladet?",
-    "correct": "Cirka två delar i axelleden mot en del skulderbladsrörelse",
+    "correct": "Ungefär 2:1 mellan axelled och skulderblad",
     "distractors": [
       "Lika delar",
       "All rörelse sker i axelleden",
@@ -1315,7 +1315,7 @@
     "id": "q99",
     "type": "mc",
     "prompt": "Vad är den huvudsakliga nackdelen med axelledens stora rörlighet?",
-    "correct": "Den blir lätt instabil och kan gå ur led",
+    "correct": "Den blir lätt instabil",
     "distractors": [
       "Den blir lätt stel",
       "Den saknar ledvätska",

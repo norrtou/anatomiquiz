@@ -467,9 +467,9 @@
     "prompt": "Vad innehåller pulpan förutom bindväv och celler?",
     "correct": "Blodkärl, lymfkärl och nerver",
     "distractors": [
-      "Endast blodkärl",
-      "Endast nerver",
-      "Muskelfibrer"
+      "Endast blodkärl utan nerver",
+      "Endast nerver utan kärl",
+      "Muskelfibrer i ligamentet"
     ],
     "topic": "tandlakare_tand_parodontium",
     "difficulty": "Normal",
@@ -565,9 +565,9 @@
     "prompt": "Var ligger cementocyterna i cellulärt cement?",
     "correct": "I lakuner, med utskott i kanalikuli",
     "distractors": [
-      "Fritt i pulpan",
-      "I dentintubuli",
-      "I emaljprismorna"
+      "Fritt flytande i pulpans vävnad",
+      "Inne i dentintubuli enbart",
+      "Instängda i emaljprismorna"
     ],
     "topic": "tandlakare_tand_parodontium",
     "difficulty": "Normal",
@@ -691,9 +691,9 @@
     "prompt": "Vilka funktioner har parodontalligamentet, förutom mekanisk förankring?",
     "correct": "Stötdämpning, proprioception och näringsförsörjning till cement/ben",
     "distractors": [
-      "Endast mekanisk förankring",
-      "Blodbildning",
-      "Hormonproduktion"
+      "Endast mekanisk förankring av tanden i alveolen, utan andra funktioner",
+      "Blodbildning i ligamentets vävnad, likt benmärgen",
+      "Hormonproduktion från ligamentets celler"
     ],
     "topic": "tandlakare_tand_parodontium",
     "difficulty": "Normal",
@@ -705,9 +705,9 @@
     "prompt": "Vad möjliggör parodontalligamentets kontinuerliga ombyggnad (remodellering)?",
     "correct": "Fibroblaster och celler som bryter ner/bygger om kollagen samt ben- och cementceller",
     "distractors": [
-      "Ameloblasternas aktivitet",
-      "Enbart passiv elasticitet i fibrerna",
-      "Odontoblasternas aktivitet"
+      "Enbart ameloblasternas aktivitet vid emaljbildning",
+      "Enbart passiv elasticitet i de omogna kollagenfibrerna",
+      "Enbart odontoblasternas aktivitet vid dentinbildning"
     ],
     "topic": "tandlakare_tand_parodontium",
     "difficulty": "Normal",
@@ -999,9 +999,9 @@
     "prompt": "Vad blir Hertwigs epitelskida till efter att roten bildats?",
     "correct": "Den fragmenteras till epitelresterna av Malassez",
     "distractors": [
-      "Den blir till fästepitelet",
-      "Den blir till ameloblaster",
-      "Den försvinner spårlöst"
+      "Den utvecklas till fästepitelet",
+      "Den omvandlas till nya ameloblaster",
+      "Den försvinner helt spårlöst"
     ],
     "topic": "tandlakare_tand_parodontium",
     "difficulty": "Normal",
@@ -1179,11 +1179,11 @@
     "id": "tlk_tand_85",
     "type": "mc",
     "prompt": "Vad baseras Angles klassifikation av bettfel på?",
-    "correct": "Relationen mellan permanenta första molarernas mesiobukkala cusp och bukkala fåran på underkäkens första molar",
+    "correct": "Relationen mellan första molarernas mesiobukkala cusp och underkäkens bukkala fåra",
     "distractors": [
-      "Antalet tänder i bettet",
-      "Rotlängden på incisiverna",
-      "Emaljens tjocklek"
+      "Antalet tänder som finns i hela det permanenta bettet",
+      "Rotlängden på de permanenta framtändernas rötter",
+      "Emaljens tjocklek på molarernas tuggyta"
     ],
     "topic": "tandlakare_tand_parodontium",
     "difficulty": "Normal",
@@ -1293,9 +1293,9 @@
     "prompt": "Vad skiljer parodontit från gingivit?",
     "correct": "Parodontit ger fästeförlust och benförlust, gingivit är begränsad till gingivan och reversibel",
     "distractors": [
-      "Parodontit är alltid smärtfri, gingivit smärtsam",
-      "Gingivit drabbar bara barn",
-      "Parodontit uppstår enbart av trauma"
+      "Parodontit är alltid helt smärtfri, gingivit är alltid smärtsam",
+      "Gingivit drabbar enbart barn och unga patienter",
+      "Parodontit uppstår enbart till följd av trauma mot tanden"
     ],
     "topic": "tandlakare_tand_parodontium",
     "difficulty": "Normal",
@@ -1307,9 +1307,9 @@
     "prompt": "Vad kännetecknar en gingival ficka (pseudoficka) till skillnad från en parodontal ficka?",
     "correct": "Ökat fickdjup utan apikal migration av fästepitelet eller fästeförlust",
     "distractors": [
-      "Fästeförlust och benresorption",
-      "Alltid närvaro av var",
-      "Total avsaknad av inflammation"
+      "Fästeförlust och benresorption sker",
+      "Alltid närvaro av var i fickan",
+      "Total avsaknad av inflammation i vävnaden"
     ],
     "topic": "tandlakare_tand_parodontium",
     "difficulty": "Normal",
@@ -1434,8 +1434,8 @@
     "correct": "Nära premolarernas och molarernas rötter, ibland i direkt kontakt",
     "distractors": [
       "Långt ovanför tändernas rötter",
-      "Endast i kontakt med incisiverna",
-      "Endast i kontakt med hörntänderna"
+      "Endast i kontakt med incisivernas rötter",
+      "Endast i kontakt med hörntändernas rötter"
     ],
     "topic": "tandlakare_kakar_kakled",
     "difficulty": "Normal",
@@ -1769,9 +1769,9 @@
     "prompt": "Vilken typ av rörelse sker huvudsakligen i käkledens undre ledrum?",
     "correct": "Rotation mellan caput mandibulae och disken",
     "distractors": [
-      "Ren glidning",
-      "Ingen rörelse alls",
-      "Endast protrusion"
+      "Ren glidning utan rotation",
+      "Ingen rörelse alls i leden",
+      "Endast protrusion utan rotation"
     ],
     "topic": "tandlakare_kakar_kakled",
     "difficulty": "Normal",
@@ -1881,9 +1881,9 @@
     "prompt": "Vilka rörelser kan mandibeln utföra i käkleden?",
     "correct": "Depression, elevation, protrusion, retrusion och lateral excursion",
     "distractors": [
-      "Endast depression och elevation",
-      "Endast rotation utan translation",
-      "Endast protrusion och retrusion"
+      "Endast depression och elevation av mandibeln",
+      "Endast rotation utan translation i leden",
+      "Endast protrusion och retrusion av mandibeln"
     ],
     "topic": "tandlakare_kakar_kakled",
     "difficulty": "Normal",
@@ -1895,9 +1895,9 @@
     "prompt": "Vad kallas ett klickljud i käkleden som ofta kopplas till diskförskjutning?",
     "correct": "Käkledsklick, kan bero på diskdisplacering med reduktion",
     "distractors": [
-      "Krepitation enbart",
-      "Trismus",
-      "Bruxism"
+      "Krepitation utan diskdisplacering",
+      "Trismus i tuggmuskulaturen",
+      "Bruxism under sömnen"
     ],
     "topic": "tandlakare_kakar_kakled",
     "difficulty": "Normal",
@@ -1951,9 +1951,9 @@
     "prompt": "Vilken funktion har m. temporalis huvudsakligen?",
     "correct": "Elevation av mandibeln; bakre fibrer bidrar även till retrusion",
     "distractors": [
-      "Endast protrusion",
-      "Endast lateral excursion",
-      "Depression av mandibeln"
+      "Endast protrusion av mandibeln",
+      "Endast lateral excursion av mandibeln",
+      "Depression av mandibeln nedåt"
     ],
     "topic": "tandlakare_kakar_kakled",
     "difficulty": "Normal",
@@ -1979,9 +1979,9 @@
     "prompt": "Var fäster m. masseter?",
     "correct": "Angulus mandibulae och ramus mandibulae",
     "distractors": [
-      "Processus coronoideus",
-      "Collum mandibulae",
-      "Fossa pterygoidea"
+      "Processus coronoideus framtill",
+      "Collum mandibulae vid ledhuvudet",
+      "Fossa pterygoidea på insidan"
     ],
     "topic": "tandlakare_kakar_kakled",
     "difficulty": "Normal",
@@ -2035,8 +2035,8 @@
     "prompt": "Hur många huvuden har m. pterygoideus lateralis och vilka fäster de vid?",
     "correct": "Två huvuden: övre huvudet fäster vid disken/kapseln, undre huvudet vid collum mandibulae",
     "distractors": [
-      "Ett huvud som fäster vid angulus mandibulae",
-      "Tre huvuden som alla fäster vid caput mandibulae",
+      "Ett enda huvud som fäster vid angulus mandibulae",
+      "Tre separata huvuden som alla fäster vid caput mandibulae",
       "Två huvuden som båda fäster vid processus coronoideus"
     ],
     "topic": "tandlakare_kakar_kakled",
@@ -2271,11 +2271,11 @@
     "id": "tlk_kakled_63",
     "type": "mc",
     "prompt": "Varför räknas käkleden som embryologiskt ovanlig jämfört med andra synovialleder?",
-    "correct": "Den bildas av två separata mesenkymkondensationer som växer samman, med disken emellan, i stället för att uppstå ur ett enda broskanlag",
+    "correct": "Den bildas av två separata mesenkymkondensationer som växer samman med disken emellan",
     "distractors": [
-      "Den saknar ledkapsel helt",
-      "Den bildas enbart av neuralryggsceller",
-      "Den saknar synovialmembran genom hela livet"
+      "Den saknar helt ledkapsel under hela utvecklingen",
+      "Den bildas enbart av celler från neurallisten",
+      "Den saknar synovialmembran genom hela livet och utvecklingen"
     ],
     "topic": "tandlakare_kakar_kakled",
     "difficulty": "Normal",
@@ -2327,11 +2327,11 @@
     "id": "tlk_kakled_67",
     "type": "mc",
     "prompt": "Varför kan käkledsbesvär (TMD) ge öronsmärta som symtom?",
-    "correct": "N. auriculotemporalis innerverar både käkleden och delar av örat/hörselgången, vilket kan ge refererad smärta",
+    "correct": "N. auriculotemporalis innerverar käkleden och örat, vilket ger refererad smärta",
     "distractors": [
-      "Käkleden ligger inuti mellanörat",
-      "Trumhinnan är en del av discus articularis",
-      "Örats hörselben rör vid mandibeln direkt"
+      "Käkleden ligger anatomiskt inuti mellanörats hålrum",
+      "Trumhinnan utgör en del av discus articularis i leden",
+      "Örats hörselben har direkt benkontakt med mandibeln"
     ],
     "topic": "tandlakare_kakar_kakled",
     "difficulty": "Normal",
@@ -2581,9 +2581,9 @@
     "prompt": "Vad kallas samlingsnamnet för smärt- och funktionstillstånd i käkleden och tuggmuskulaturen?",
     "correct": "Temporomandibulär dysfunktion",
     "distractors": [
-      "Trismus",
-      "Bruxism",
-      "Ankylos"
+      "Trismus i käkmuskulaturen",
+      "Bruxism under sömnen",
+      "Ankylos i käkleden"
     ],
     "topic": "tandlakare_kakar_kakled",
     "difficulty": "Normal",
@@ -2693,9 +2693,9 @@
     "prompt": "Vilket landmärke används kliniskt för att lokalisera n. alveolaris inferior inför mandibulär nervblockad?",
     "correct": "Foramen mandibulae, strax bakom lingula",
     "distractors": [
-      "Foramen mentale",
-      "Foramen infraorbitale",
-      "Tuberculum articulare"
+      "Foramen mentale på hakan",
+      "Foramen infraorbitale under ögat",
+      "Tuberculum articulare vid leden"
     ],
     "topic": "tandlakare_kakar_kakled",
     "difficulty": "Normal",
@@ -2735,9 +2735,9 @@
     "prompt": "Vilken avbildningsmetod visar bäst käkledens benstrukturer vid t.ex. misstänkt fraktur eller artros?",
     "correct": "Datortomografi, samt konventionell röntgen/OPG för översikt",
     "distractors": [
-      "Enbart MRT",
-      "Enbart ultraljud",
-      "Enbart sialografi"
+      "Enbart MRT används som förstahandsundersökning",
+      "Enbart ultraljud av ledens mjukdelar",
+      "Enbart sialografi av spottkörtelns gångsystem"
     ],
     "topic": "tandlakare_kakar_kakled",
     "difficulty": "Normal",
@@ -2764,8 +2764,8 @@
     "correct": "Hyaluronsyrarik vätska som smörjer och närer broskytorna",
     "distractors": [
       "Ren blodplasma utan tillsatser",
-      "Enbart lymfa",
-      "Cerebrospinalvätska"
+      "Enbart lymfa från körtlarna",
+      "Cerebrospinalvätska från hjärnan"
     ],
     "topic": "tandlakare_kakar_kakled",
     "difficulty": "Normal",
@@ -2791,9 +2791,9 @@
     "prompt": "Vad kallas det tandlösa käkläget som uppstår efter tandförlust och kan påverka käkledens belastning?",
     "correct": "Ocklusionskollaps / minskad ocklusal vertikaldimension",
     "distractors": [
-      "Centrisk relation",
-      "Gruppfunktion",
-      "Hörntandsledd"
+      "Centrisk relation i käkleden",
+      "Gruppfunktion vid lateralrörelse",
+      "Hörntandsledd vid excursion"
     ],
     "topic": "tandlakare_kakar_kakled",
     "difficulty": "Normal",
@@ -3085,9 +3085,9 @@
     "prompt": "Vilka fyra inre (intrinsic) tungmuskler finns?",
     "correct": "M. longitudinalis superior, m. longitudinalis inferior, m. transversus linguae och m. verticalis linguae",
     "distractors": [
-      "M. genioglossus, m. hyoglossus, m. styloglossus och m. palatoglossus",
-      "Endast m. transversus och m. verticalis linguae",
-      "M. longitudinalis superior och inferior enbart"
+      "M. genioglossus, m. hyoglossus, m. styloglossus och m. palatoglossus enbart",
+      "Endast m. transversus och m. verticalis linguae, inga andra",
+      "M. longitudinalis superior och inferior enbart, utan övriga"
     ],
     "topic": "tandlakare_munhala_munbotten",
     "difficulty": "Normal",
@@ -3197,9 +3197,9 @@
     "prompt": "Vilken nerv förmedlar sensorik från tungans allra bakersta del och epiglottisregionen?",
     "correct": "N. vagus, via n. laryngeus internus",
     "distractors": [
-      "N. glossopharyngeus",
-      "N. lingualis",
-      "N. facialis"
+      "N. glossopharyngeus enbart",
+      "N. lingualis enbart",
+      "N. facialis enbart"
     ],
     "topic": "tandlakare_munhala_munbotten",
     "difficulty": "Normal",
@@ -3309,9 +3309,9 @@
     "prompt": "Vilka ben bildar hårda gommens benstomme?",
     "correct": "Processus palatinus maxillae och lamina horizontalis ossis palatini",
     "distractors": [
-      "Endast maxillan",
-      "Endast os palatinum",
-      "Mandibeln och maxillan"
+      "Endast maxillans processus palatinus, utan andra ben",
+      "Endast os palatinum ensamt, utan maxillan",
+      "Mandibeln och maxillan tillsammans bildar gommen"
     ],
     "topic": "tandlakare_munhala_munbotten",
     "difficulty": "Normal",
@@ -3813,9 +3813,9 @@
     "prompt": "Varför är tungans lymfdränering kliniskt viktig vid tungcancer?",
     "correct": "Den kan sprida sig bilateralt tidigt, särskilt från medellinjenära strukturer",
     "distractors": [
-      "Tungan saknar helt lymfdränering",
-      "Lymfan går alltid enbart till motsatt sida",
-      "Lymfan stannar alltid lokalt i tungan"
+      "Tungan saknar helt lymfdränering till halsens körtlar",
+      "Lymfan från tungan går alltid enbart till motsatt sida",
+      "Lymfan från tungan stannar alltid kvar lokalt i tungan"
     ],
     "topic": "tandlakare_munhala_munbotten",
     "difficulty": "Normal",
@@ -3897,9 +3897,9 @@
     "prompt": "Vilken funktion har de tre konstriktormusklerna gemensamt vid sväljning?",
     "correct": "De kontraherar sekventiellt uppifrån och ner och pressar bolusen nedåt mot matstrupen",
     "distractors": [
-      "De håller alltid svalget öppet passivt",
-      "De bildar enbart smakreceptorer",
-      "De styr enbart andningen"
+      "De håller alltid svalget helt öppet och passivt under sväljning",
+      "De bildar enbart smakreceptorer i slemhinnan",
+      "De styr enbart andningen och har ingen roll vid sväljning"
     ],
     "topic": "tandlakare_munhala_munbotten",
     "difficulty": "Normal",
@@ -4037,9 +4037,9 @@
     "prompt": "Vad kan en skada på n. lingualis under kirurgi i munbotten (t.ex. visdomstandsoperation) ge för symtom?",
     "correct": "Nedsatt känsel och smak i tungans främre 2/3 på samma sida",
     "distractors": [
-      "Förlamning av tungmusklerna",
-      "Total anosmi",
-      "Dövhet på samma sida"
+      "Förlamning av tungans egna muskler på samma sida",
+      "Total anosmi, fullständig avsaknad av luktsinne",
+      "Dövhet på samma sida som nervskadan"
     ],
     "topic": "tandlakare_munhala_munbotten",
     "difficulty": "Normal",
@@ -4161,11 +4161,11 @@
     "id": "tlk_munhala_98",
     "type": "mc",
     "prompt": "Var bildas oftast spottstenar (sialolitiasis) i munbottens körtelsystem, och varför?",
-    "correct": "I ductus submandibularis, eftersom saliven där är trögflytande och gången löper delvis uppåt mot tyngdkraften",
+    "correct": "I ductus submandibularis, eftersom saliven är trögflytande och gången löper uppåt",
     "distractors": [
-      "I ductus parotideus, pga tunn saliv",
-      "I tungans slemhinna",
-      "I tonsilla palatina"
+      "I ductus parotideus, på grund av tunn och vattnig saliv",
+      "I tungans slemhinna, oberoende av körtelgångarna",
+      "I tonsilla palatina, som saknar körtelgångar helt"
     ],
     "topic": "tandlakare_munhala_munbotten",
     "difficulty": "Normal",
@@ -4177,9 +4177,9 @@
     "prompt": "Vad kan en perifer förlamning av n. facialis (Bells pares) ge för symtom kopplat till kinden/munhålan?",
     "correct": "Nedsatt tonus i m. buccinator, vilket gör att mat samlas i kindfickan vid tuggning",
     "distractors": [
-      "Total avsaknad av smak i hela tungan",
-      "Förlamning av alla tungmuskler",
-      "Bortfall av allmän känsel i tungans främre 2/3"
+      "Total avsaknad av smak i hela tungans slemhinna",
+      "Förlamning av samtliga tungmuskler på båda sidor",
+      "Bortfall av allmän känsel i tungans främre delar"
     ],
     "topic": "tandlakare_munhala_munbotten",
     "difficulty": "Normal",
@@ -4247,9 +4247,9 @@
     "prompt": "Vilken muskel drar ögonbrynen nedåt och medialt vid rynkning ('bekymrad min')?",
     "correct": "M. corrugator supercilii",
     "distractors": [
-      "M. frontalis",
-      "M. procerus",
-      "M. nasalis"
+      "M. frontalis i pannan",
+      "M. procerus mellan ögonbrynen",
+      "M. nasalis vid näsan"
     ],
     "topic": "tandlakare_huvud_hals_karl_nerver",
     "difficulty": "Normal",
@@ -4499,9 +4499,9 @@
     "prompt": "Var ligger n. trigeminus sensoriska ganglion (ganglion trigeminale/Gasseri)?",
     "correct": "I cavum Meckeli, på os temporales framsida i mellersta skallgropen",
     "distractors": [
-      "I inneröra",
-      "I glandula parotidea",
-      "I fossa pterygopalatina"
+      "I inneröra bakom trumhinnan",
+      "I glandula parotidea framför örat",
+      "I fossa pterygopalatina bakom kindbenet"
     ],
     "topic": "tandlakare_huvud_hals_karl_nerver",
     "difficulty": "Normal",
@@ -4569,9 +4569,9 @@
     "prompt": "Förutom tuggmusklerna, vilka övriga muskler innerveras motoriskt av n. mandibularis (V3)?",
     "correct": "M. tensor tympani, m. tensor veli palatini, m. mylohyoideus och digastricus främre buk",
     "distractors": [
-      "M. stapedius och m. stylohyoideus",
-      "Alla mimiska ansiktsmuskler",
-      "M. stylopharyngeus"
+      "M. stapedius och m. stylohyoideus, andra muskelgrupper helt",
+      "Alla mimiska ansiktsmuskler, oavsett ursprungsbåge",
+      "M. stylopharyngeus, en muskel från en annan gälbåge"
     ],
     "topic": "tandlakare_huvud_hals_karl_nerver",
     "difficulty": "Normal",
@@ -4819,11 +4819,11 @@
     "id": "tlk_huvudhals_45",
     "type": "mc",
     "prompt": "Vad kan orsaka en central (UMN) skillnad jämfört med en perifer (LMN) facialispares vid klinisk undersökning?",
-    "correct": "Vid central skada sparas pannan/ögonlocksslutning pga bilateral kortikal representation, vid perifer skada drabbas hela ansiktshalvan",
+    "correct": "Central skada sparar pannan, perifer skada drabbar hela ansiktshalvan",
     "distractors": [
-      "Central skada ger alltid total förlamning, perifer ingen alls",
-      "Perifer skada drabbar aldrig munnen",
-      "Det finns ingen klinisk skillnad"
+      "Central skada ger alltid total förlamning av hela ansiktshalvan",
+      "Perifer skada drabbar aldrig munnens muskulatur, bara ögat",
+      "Det finns ingen klinisk skillnad mellan central och perifer skada"
     ],
     "topic": "tandlakare_huvud_hals_karl_nerver",
     "difficulty": "Normal",
@@ -5211,11 +5211,11 @@
     "id": "tlk_huvudhals_73",
     "type": "mc",
     "prompt": "Varför är kunskap om huvud-halsens lymfdränering kliniskt central inom odontologin?",
-    "correct": "Infektioner och tumörer i mun/tänder kan spridas via specifika lymfkörtelstationer, vilket styr klinisk undersökning och stadieindelning",
+    "correct": "Infektioner och tumörer i munnen sprids via specifika lymfkörtelstationer, vilket styr klinisk undersökning",
     "distractors": [
-      "Lymfsystemet i huvudet är helt isolerat från resten av kroppen",
-      "Munhålan saknar lymfdränering",
-      "Lymfkörtlarna i halsen påverkas aldrig av dentala infektioner"
+      "Lymfsystemet i huvudet är helt isolerat från resten av kroppens lymfbanor",
+      "Munhålan saknar helt lymfdränering till halsens körtelstationer",
+      "Lymfkörtlarna på halsen påverkas aldrig av dentala infektioner"
     ],
     "topic": "tandlakare_huvud_hals_karl_nerver",
     "difficulty": "Normal",
@@ -5253,11 +5253,11 @@
     "id": "tlk_huvudhals_76",
     "type": "mc",
     "prompt": "Vilken nervbana ger parasympatisk (sekretorisk) innervation till öronspottkörteln (glandula parotidea)?",
-    "correct": "N. glossopharyngeus → n. tympanicus → n. petrosus minor → ganglion oticum → n. auriculotemporalis",
+    "correct": "N. glossopharyngeus, n. tympanicus, n. petrosus minor, ganglion oticum, n. auriculotemporalis",
     "distractors": [
-      "N. facialis → chorda tympani → ganglion submandibulare",
-      "N. trigeminus direkt utan ganglion",
-      "N. vagus → plexus pharyngeus"
+      "N. facialis, via chorda tympani, till ganglion submandibulare",
+      "N. trigeminus, direkt till körteln utan något ganglion",
+      "N. vagus, via plexus pharyngeus, utan ganglion oticum"
     ],
     "topic": "tandlakare_huvud_hals_karl_nerver",
     "difficulty": "Normal",
@@ -5365,11 +5365,11 @@
     "id": "tlk_huvudhals_84",
     "type": "mc",
     "prompt": "Varifrån kommer den sympatiska innervationen till spottkörtlarna, och vilken effekt har den?",
-    "correct": "Från ganglion cervicale superius, via plexus kring a. carotis externa; ger mer slemrik/trögflytande sekretion och viss kärlsammandragning",
+    "correct": "Från ganglion cervicale superius via plexus kring a. carotis externa, ger trögflytande sekretion",
     "distractors": [
-      "Från ganglion oticum; ger riklig vattnig sekretion",
-      "Direkt från ryggmärgen utan ganglion; stoppar all sekretion helt",
-      "Från n. facialis; ger identisk effekt som parasympatikus"
+      "Från ganglion oticum, via parasympatiska banor, ger riklig vattnig sekretion",
+      "Direkt från ryggmärgen utan ganglion, stoppar all sekretion helt och hållet",
+      "Från n. facialis, ger identisk effekt som den parasympatiska innervationen"
     ],
     "topic": "tandlakare_huvud_hals_karl_nerver",
     "difficulty": "Normal",
@@ -5393,11 +5393,11 @@
     "id": "tlk_huvudhals_86",
     "type": "mc",
     "prompt": "Vad är den underliggande mekanismen bakom Freys syndrom?",
-    "correct": "Skadade parasympatiska sekretoriska fibrer till parotiskörteln växer felaktigt in i närliggande svettkörtlars sympatiska banor vid läkning",
+    "correct": "Skadade parasympatiska fibrer till parotis växer in i svettkörtlarnas sympatiska banor",
     "distractors": [
-      "En autoimmun reaktion som förstör spottkörtlarna helt",
-      "En bakteriell infektion i chorda tympani",
-      "En allergisk reaktion mot saliv"
+      "En autoimmun reaktion som förstör spottkörtlarnas vävnad helt",
+      "En bakteriell infektion lokaliserad till chorda tympani",
+      "En allergisk reaktion riktad mot patientens egen saliv"
     ],
     "topic": "tandlakare_huvud_hals_karl_nerver",
     "difficulty": "Normal",
@@ -5633,9 +5633,9 @@
     "prompt": "Vilken typ av körtel är glandula submandibularis histologiskt sett?",
     "correct": "Blandad sero-mukös körtel, men övervägande serös",
     "distractors": [
-      "Renodlat serös körtel",
-      "Renodlat mukös körtel",
-      "En körtel helt utan acini"
+      "Renodlat serös körtel utan mukösa acini",
+      "Renodlat mukös körtel utan serösa acini",
+      "En körtel helt utan acini alls"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -5732,8 +5732,8 @@
     "correct": "Cylindriska celler med basala inveckningar och rikligt med mitokondrier",
     "distractors": [
       "Plattepitel utan organeller",
-      "Enbart myoepitelceller",
-      "Broskvävnad"
+      "Enbart myoepitelceller utan körtelceller",
+      "Broskvävnad i körtelgången"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -5801,9 +5801,9 @@
     "prompt": "Var är glandula submandibularis belägen i förhållande till m. mylohyoideus?",
     "correct": "Den ligger 'hästskoformat' kring musklens bakre fria kant, med en ytlig och en djup del",
     "distractors": [
-      "Helt ovanför musklen, i sublinguala rummet enbart",
-      "Helt utanför munbotten, i halsen nedanför hyoidbenet",
-      "Inuti själva mandibelbenet"
+      "Helt ovanför muskeln, belägen i det sublinguala rummet enbart",
+      "Helt utanför munbotten, nere i halsen nedanför hyoidbenet",
+      "Inuti själva mandibelbenets benvävnad"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -5871,9 +5871,9 @@
     "prompt": "Vilken cellgrupp i körtelvävnaden fungerar som stamceller/förnyelsekälla för acini och gångepitel?",
     "correct": "Basalceller/progenitorceller i gångsystemet",
     "distractors": [
-      "Enbart myoepitelceller",
-      "Enbart serösa celler",
-      "Odontoblaster"
+      "Enbart myoepitelceller i gången",
+      "Enbart serösa celler i gången",
+      "Odontoblaster i tandpulpan"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -5885,9 +5885,9 @@
     "prompt": "Var finns de mindre spottkörtlarna huvudsakligen belägna?",
     "correct": "Utspridda i munslemhinnan förutom gingiva och främre hårda gommen",
     "distractors": [
-      "Enbart i gingiva",
-      "Enbart i tandpulpan",
-      "Enbart i käkbenet"
+      "Enbart i gingivan, runt tändernas hals",
+      "Enbart i tandpulpan, inuti tandens kärna",
+      "Enbart i käkbenet, under tändernas rötter"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -5925,11 +5925,11 @@
     "id": "tlk_saliv_24",
     "type": "mc",
     "prompt": "Var är von Ebners körtlar belägna och vilken funktion har de?",
-    "correct": "Kring papillae vallatae och foliatae; spolar bort smakämnen så nya smaker kan uppfattas",
+    "correct": "Kring papillae vallatae; spolar bort smakämnen så nya smaker kan uppfattas",
     "distractors": [
-      "I läpparna; smörjer läpparna",
-      "I gommen; producerar mucin för sväljning",
-      "I käkbenet; ger näring åt tänderna"
+      "I läpparna, där de håller läpparnas yta smord",
+      "I gommen, där de bildar mucin för sväljningen",
+      "I käkbenet, där de ger näring åt tandrötterna"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -6011,9 +6011,9 @@
     "prompt": "Vilken funktion har de mindre spottkörtlarnas kontinuerliga, låggradiga sekretion?",
     "correct": "Att hålla slemhinnan fuktig och skyddad även mellan måltider",
     "distractors": [
-      "Att bryta ner emalj",
-      "Att producera magsyra",
-      "Att reglera kroppstemperaturen"
+      "Att bryta ner tandens hårda emaljyta",
+      "Att producera magsyra i magsäckens slemhinna",
+      "Att reglera kroppens temperatur via huden"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -6205,11 +6205,11 @@
     "id": "tlk_saliv_44",
     "type": "mc",
     "prompt": "Vilken funktion har saliv för talet och artikulationen?",
-    "correct": "Den smörjer läppar, tunga och slemhinna så att artikulationsrörelser blir mjuka och obehindrade",
+    "correct": "Den smörjer läppar, tunga och slemhinna så artikulationen blir mjuk och obehindrad",
     "distractors": [
-      "Saliv har ingen betydelse för talet",
-      "Saliv försämrar alltid artikulationen",
-      "Saliv styr stämbandens vibrationer direkt"
+      "Saliv har ingen som helst betydelse för talförmågan",
+      "Saliv försämrar alltid artikulationsrörelserna vid tal",
+      "Saliv styr stämbandens vibrationer direkt under fonation"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -6443,11 +6443,11 @@
     "id": "tlk_saliv_61",
     "type": "mc",
     "prompt": "Vad händer med salivens sammansättning vid ökat (stimulerat) flöde jämfört med vilonivå?",
-    "correct": "Den blir mer utspädd på vissa elektrolyter men totalt sett rikare på bikarbonat/buffertkapacitet",
+    "correct": "Den blir mer utspädd på vissa elektrolyter men rikare på bikarbonat och buffertkapacitet",
     "distractors": [
-      "Den blir identisk med vilonivå i alla avseenden",
-      "Den innehåller aldrig några elektrolyter vid stimulering",
-      "Den stimulerade saliven saknar helt protein"
+      "Den blir identisk med vilonivån i samtliga avseenden",
+      "Den innehåller aldrig några elektrolyter alls vid stimulering",
+      "Den stimulerade saliven saknar helt protein och enzymer"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -6485,11 +6485,11 @@
     "id": "tlk_saliv_64",
     "type": "mc",
     "prompt": "Varför minskar salivproduktionen ofta som en normal del av åldrandet?",
-    "correct": "Körtelparenkym kan gradvis ersättas av fett- och bindväv, samt fler mediciner med antikolinerg biverkan används",
+    "correct": "Körtelparenkym ersätts gradvis av fett och bindväv, samt fler antikolinerga mediciner används",
     "distractors": [
-      "Salivkörtlarna växer och blir mer aktiva med åldern",
-      "Åldrande påverkar aldrig salivkörtlarna",
-      "Smaklökarna tar över salivproduktionen med åldern"
+      "Salivkörtlarnas parenkym växer och blir mer aktivt med stigande ålder",
+      "Åldrande påverkar aldrig salivkörtlarnas struktur eller funktion",
+      "Smaklökarna tar successivt över salivproduktionen med åldern"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -6515,9 +6515,9 @@
     "prompt": "Var sitter smakreceptorcellerna?",
     "correct": "I smaklökar, huvudsakligen i tungans papiller men även i gom, epiglottis och svalg",
     "distractors": [
-      "Enbart i näsan",
-      "Enbart i tandpulpan",
-      "Enbart i läpparnas hud"
+      "Enbart i näsans slemhinna, utan koppling till munhålan",
+      "Enbart i tandpulpan, inuti tandens innersta del",
+      "Enbart i läpparnas yttre hud, utan körtelvävnad"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -6641,9 +6641,9 @@
     "prompt": "Var ligger den primära gustatoriska cortex i hjärnan?",
     "correct": "Insula och angränsande frontal operculum",
     "distractors": [
-      "Occipitalloben",
-      "Cerebellum",
-      "Hippocampus"
+      "Occipitalloben längst bak",
+      "Cerebellum vid hjärnstammen",
+      "Hippocampus i tinningloben"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -6669,9 +6669,9 @@
     "prompt": "Varför känns maten ofta smaklös vid nästäppa (t.ex. förkylning)?",
     "correct": "Den retronasala doftinformationen uteblir, vilket kraftigt försämrar den upplevda smaken",
     "distractors": [
-      "Smaklökarna slutar fungera helt vid nästäppa",
-      "Saliven slutar produceras vid förkylning",
-      "Tungan förlorar all känsel vid nästäppa"
+      "Smaklökarna slutar fungera helt vid en vanlig nästäppa",
+      "Saliven slutar produceras helt vid en förkylning",
+      "Tungan förlorar all känsel vid nästäppa och förkylning"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -6793,11 +6793,11 @@
     "id": "tlk_saliv_86",
     "type": "mc",
     "prompt": "Varför är oral stereognosi kliniskt relevant vid protetisk tandvård (t.ex. nya tandproteser)?",
-    "correct": "Patienter behöver anpassa sig till förändrad känsel/form i munnen, vilket kan påverka tal och tuggfunktion inledningsvis",
+    "correct": "Patienter behöver anpassa sig till förändrad känsel i munnen, vilket kan påverka tal och tuggning",
     "distractors": [
-      "Det saknar helt klinisk betydelse för proteser",
-      "Stereognosi finns bara i fingrarna, inte i munnen",
-      "Proteser förbättrar alltid stereognosin direkt utan anpassningstid"
+      "Det saknar helt klinisk betydelse för hur proteser upplevs",
+      "Stereognosi finns enbart i fingrarna, aldrig i munhålan",
+      "Proteser förbättrar alltid stereognosin direkt utan någon anpassningstid"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -6823,9 +6823,9 @@
     "prompt": "Vad kan minskad oral sensorik (t.ex. vid nervskada eller nedsatt känsel) leda till kliniskt?",
     "correct": "Ökad risk för att bita sig själv i kind/tunga och sämre kontroll vid tuggning/tal",
     "distractors": [
-      "Alltid förbättrad tuggförmåga",
-      "Ingen praktisk konsekvens alls",
-      "Automatiskt ökad smakupplevelse"
+      "Alltid en förbättrad tuggförmåga jämfört med tidigare",
+      "Ingen praktisk konsekvens alls för patientens vardag",
+      "Automatiskt en ökad och förstärkt smakupplevelse"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -6837,9 +6837,9 @@
     "prompt": "Vilken typ av oral sensorik är särskilt viktig för att styra tuggkraften och undvika för hårt bett?",
     "correct": "Mekanoreceptorer/proprioception i mun-, käk- och tandregionen",
     "distractors": [
-      "Enbart smaksinnet",
-      "Enbart doftsinnet",
-      "Enbart temperatursinnet"
+      "Enbart smaksinnet, lokaliserat till tungans smaklökar",
+      "Enbart doftsinnet, lokaliserat till näsans slemhinna",
+      "Enbart temperatursinnet, lokaliserat i huden"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -6992,8 +6992,8 @@
     "correct": "Sockerfritt tuggummi/sugtabletter och riklig vätskeintag",
     "distractors": [
       "Att undvika all tuggning helt",
-      "Att sluta borsta tänderna",
-      "Att minska vätskeintaget"
+      "Att sluta borsta tänderna helt",
+      "Att minska vätskeintaget kraftigt"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",

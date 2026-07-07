@@ -217,9 +217,9 @@
     "prompt": "Var sitter hjässbenet?",
     "correct": "På sidan och toppen av skallen",
     "distractors": [
-      "I näsan",
-      "På käken",
-      "Under nackbenet"
+      "I näsans mittparti",
+      "På käkens underkant",
+      "Under nackbenets fäste"
     ],
     "topic": "osteologi_kranium",
     "difficulty": "Normal",
@@ -271,11 +271,11 @@
     "id": "q21",
     "type": "mc",
     "prompt": "Var sitter näsbenet?",
-    "correct": "I centrum av ansiktet mellan ögonen",
+    "correct": "Mellan ögonen",
     "distractors": [
-      "På kinderna",
-      "På halsen",
-      "På tinningen"
+      "På kindernas utsida",
+      "Nedtill på halsen",
+      "Uppe vid tinningen"
     ],
     "topic": "osteologi_kranium",
     "difficulty": "Normal",
@@ -287,9 +287,9 @@
     "prompt": "Var sitter kindbenet?",
     "correct": "På sidorna av ansiktet under ögonen",
     "distractors": [
-      "På pannan",
-      "På käkarna",
-      "På halsen"
+      "Uppe på pannans mitt",
+      "Nertill på käkarna",
+      "Framtill på halsen"
     ],
     "topic": "osteologi_kranium",
     "difficulty": "Normal",
@@ -301,9 +301,9 @@
     "prompt": "Vad är processus mastoideus?",
     "correct": "Mastoidutskottet på tinningbenet",
     "distractors": [
-      "Näsans ben",
-      "Underkäkens spets",
-      "Ett revben"
+      "Näsans ben på ansiktets front",
+      "Underkäkens spets vid hakan",
+      "Ett revben i bröstkorgen"
     ],
     "topic": "osteologi_kranium",
     "difficulty": "Normal",
@@ -327,9 +327,9 @@
     "prompt": "Var ligger mastoidutskottet?",
     "correct": "Bakom örat på tinningbenet",
     "distractors": [
-      "Framför örat",
-      "Under näsan",
-      "På pannan"
+      "Framför örat och käken",
+      "Under näsans spets",
+      "Uppe på pannans mitt"
     ],
     "topic": "osteologi_kranium",
     "difficulty": "Normal",
@@ -585,9 +585,9 @@
     "prompt": "Vad är processus transversus?",
     "correct": "En process som pekar åt sidorna",
     "distractors": [
-      "En process bakåt",
-      "Själva kotkroppen",
-      "Ett hål i kotan"
+      "En process som pekar bakåt",
+      "Själva kotkroppens front",
+      "Ett hål mitt i kotan"
     ],
     "topic": "osteologi_columna",
     "difficulty": "Normal",
@@ -853,9 +853,9 @@
     "prompt": "Vad är processus xiphoideus?",
     "correct": "Det svärdformade utskottet på bröstbenet",
     "distractors": [
-      "Ett revben",
-      "En kota",
-      "En process på höften"
+      "Ett revben på sidan",
+      "En kota i ryggraden",
+      "En process på höftbenet"
     ],
     "topic": "osteologi_thorax",
     "difficulty": "Normal",
@@ -931,9 +931,9 @@
     "prompt": "Vilka ben utgör höftbenet?",
     "correct": "Tarmbenet, pubisbenet och sittbenet",
     "distractors": [
-      "Bara tarmbenet",
-      "Bara pubisbenet",
-      "Bara sittbenet"
+      "Bara tarmbenet ensamt",
+      "Bara pubisbenet ensamt",
+      "Bara sittbenet ensamt"
     ],
     "topic": "osteologi_pelvis",
     "difficulty": "Normal",
@@ -1073,11 +1073,11 @@
     "id": "q83",
     "type": "mc",
     "prompt": "Vad är acetabulum?",
-    "correct": "Höftledskål eller höftens ledyta",
+    "correct": "Höftledskål, höftens ledyta",
     "distractors": [
-      "Höftbenskammen",
-      "Sittbensknölen",
-      "Ett ben i foten"
+      "Höftbenskammen upptill",
+      "Sittbensknölen nedtill",
+      "Ett ben nere i foten"
     ],
     "topic": "osteologi_pelvis",
     "difficulty": "Normal",
@@ -1189,9 +1189,9 @@
     "prompt": "Vad är acromion?",
     "correct": "Akromion, ett utskott på skulderbladet",
     "distractors": [
-      "Spina scapulae",
-      "Processus coracoideus",
-      "Ett ben i armen"
+      "Spina scapulae på skulderbladet",
+      "Processus coracoideus framtill",
+      "Ett ben i underarmen"
     ],
     "topic": "osteologi_upper",
     "difficulty": "Normal",
@@ -1215,9 +1215,9 @@
     "prompt": "Vad är processus coracoideus?",
     "correct": "Korpnäbbsutskottet på skulderbladet",
     "distractors": [
-      "Acromion",
-      "Spina scapulae",
-      "Ett ben i handen"
+      "Acromion på skulderbladets topp",
+      "Spina scapulae på baksidan",
+      "Ett ben i handloven"
     ],
     "topic": "osteologi_upper",
     "difficulty": "Normal",
@@ -1317,11 +1317,11 @@
     "id": "q102",
     "type": "mc",
     "prompt": "Vad är caput humeri?",
-    "correct": "Överarmsbenets huvud som sitter i axelleden",
+    "correct": "Överarmsbenets ledhuvud",
     "distractors": [
-      "Ett eget ben",
-      "Epicondylus",
-      "Olecranon"
+      "Ett eget ben i handloven",
+      "Epicondylus på benänden",
+      "Olecranon på armbågsspetsen"
     ],
     "topic": "osteologi_upper",
     "difficulty": "Normal",
@@ -1589,7 +1589,7 @@
     "id": "q123",
     "type": "mc",
     "prompt": "Vad är caput femoris?",
-    "correct": "Lårbenshuvud som sitter i höftledskål",
+    "correct": "Lårbenshuvud i höftledskål",
     "distractors": [
       "Ett eget ben",
       "Lårbenskransen",
@@ -1829,9 +1829,9 @@
     "prompt": "Vilka regioner har ryggraden?",
     "correct": "Cervical, thoracal, lumbal, sakral, coccygeal",
     "distractors": [
-      "Bara cervical och lumbal",
-      "Bara två regioner",
-      "Endast lumbal"
+      "Bara cervical och lumbal region",
+      "Bara två av regionerna",
+      "Endast den lumbala regionen"
     ],
     "topic": "osteologi_columna",
     "difficulty": "Normal",
@@ -1879,11 +1879,11 @@
     "id": "q145",
     "type": "mc",
     "prompt": "Vilka ben utgör övre extremiteten?",
-    "correct": "Överarmsben, underarmsben, handben och fingerben",
+    "correct": "Överarmsben, underarmsben och handben",
     "distractors": [
-      "Bara överarmsben",
-      "Bara handben",
-      "Bara fingerben"
+      "Bara överarmsbenet ensamt",
+      "Bara handbenen ensamma",
+      "Bara fingerbenen ensamma"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -1893,11 +1893,11 @@
     "id": "q146",
     "type": "mc",
     "prompt": "Vilka ben utgör nedre extremiteten?",
-    "correct": "Lårbenet, underbensben, fotben och tåben",
+    "correct": "Lårbenet, underbensben och fotben",
     "distractors": [
-      "Bara lårbenet",
-      "Bara fotben",
-      "Bara tåben"
+      "Bara lårbenet ensamt",
+      "Bara fotbenen ensamma",
+      "Bara tåbenen ensamma"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -1909,9 +1909,9 @@
     "prompt": "Vilka ben utgör skulderregionen?",
     "correct": "Scapula, clavicula och överarmsbenen",
     "distractors": [
-      "Bara scapula",
-      "Bara clavicula",
-      "Bara överarmsbenen"
+      "Bara scapula ensam",
+      "Bara clavicula ensam",
+      "Bara överarmsbenen ensamma"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -1923,9 +1923,9 @@
     "prompt": "Vilka ben utgör höftregionen?",
     "correct": "Höftbenet, korsbenet och svansbenet",
     "distractors": [
-      "Bara höftbenet",
-      "Bara lårbenet",
-      "Bara underbensben"
+      "Bara höftbenet ensamt",
+      "Bara lårbenet i regionen",
+      "Bara underbensbenen i regionen"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -1951,9 +1951,9 @@
     "prompt": "Vilka ben utgör fotbågen?",
     "correct": "Talus, naviculare och övriga tarsalben",
     "distractors": [
-      "Bara hälbenet",
-      "Bara metatarsalbenen",
-      "Bara phalanger"
+      "Bara hälbenet ensamt",
+      "Bara metatarsalbenen ensamma",
+      "Bara phalangerna ensamma"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -1993,9 +1993,9 @@
     "prompt": "Vilket av dessa ben sitter i kraniet?",
     "correct": "Pannbenet och nackbenet",
     "distractors": [
-      "Revben",
-      "Lårbenet",
-      "Höftbenet"
+      "Revben i bröstkorgen",
+      "Lårbenet i benet",
+      "Höftbenet i bäckenet"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -2093,9 +2093,9 @@
     "prompt": "Vilka ben förbinder skuldergördeln med kroppen?",
     "correct": "Clavicula och sternum",
     "distractors": [
-      "Scapula",
-      "Humerus",
-      "Revben"
+      "Scapula ensam utan clavicula",
+      "Humerus ensam i överarmen",
+      "Revbenen i bröstkorgen"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -2107,9 +2107,9 @@
     "prompt": "Vilka ben förbinder överarmen med underarmen?",
     "correct": "Humerus, ulna och radius via armbågsleden",
     "distractors": [
-      "Scapula",
-      "Carpalbenen",
-      "Metacarpalbenen"
+      "Scapula i skulderregionen",
+      "Carpalbenen i handloven",
+      "Metacarpalbenen i handen"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -2121,9 +2121,9 @@
     "prompt": "Vilka ben förbinder lårbenet med underbensben?",
     "correct": "Femur och tibia/fibula via knäleden",
     "distractors": [
-      "Höftbenet",
-      "Tarsalbenen",
-      "Metatarsalbenen"
+      "Höftbenet vid bäckenet",
+      "Tarsalbenen i foten",
+      "Metatarsalbenen i foten"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -2207,9 +2207,9 @@
     "prompt": "Vilka av dessa ben sitter i handloven?",
     "correct": "Scaphoideum, lunatum, triquetrum, pisiforme, trapezium, trapezoideum, capitatum, hamatum",
     "distractors": [
-      "Bara de fyra proximala",
-      "Bara de fyra distala",
-      "Bara fem av åtta"
+      "Bara scaphoideum, lunatum, triquetrum och pisiforme av åtta",
+      "Bara trapezium, trapezoideum, capitatum och hamatum av åtta",
+      "Bara fem slumpmässiga ben av de totalt åtta"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -2287,9 +2287,9 @@
     "prompt": "Vilken typ av ben är vertebra?",
     "correct": "Oregelbundet ben",
     "distractors": [
-      "Rörben",
-      "Kortben",
-      "Plattben"
+      "Ett typiskt rörben",
+      "Ett typiskt kortben",
+      "Ett typiskt plattben"
     ],
     "topic": "osteologi_types",
     "difficulty": "Normal",
@@ -2347,11 +2347,11 @@
     "id": "q181",
     "type": "mc",
     "prompt": "Vilka ben är rörben?",
-    "correct": "Humerus, radius, ulna, femur, tibia, fibula, metacarpalben, metatarsalbenen",
+    "correct": "Humerus, radius, ulna, femur, tibia och fibula",
     "distractors": [
-      "Kotorna",
-      "Revben",
-      "Höftbenet"
+      "Kotorna i hela ryggraden",
+      "Revbenen i hela bröstkorgen",
+      "Höftbenet i hela bäckenet"
     ],
     "topic": "osteologi_types",
     "difficulty": "Normal",
@@ -2377,9 +2377,9 @@
     "prompt": "Vilka ben är platta ben?",
     "correct": "Skallen, revbenen, scapula, sternum, höftbenen",
     "distractors": [
-      "Rörben",
-      "Kortben",
-      "Oregelbundna ben"
+      "Rörben i extremiteterna",
+      "Kortben i handloven",
+      "Oregelbundna ben i ryggraden"
     ],
     "topic": "osteologi_types",
     "difficulty": "Normal",
@@ -2391,9 +2391,9 @@
     "prompt": "Vilka ben är oregelbundna ben?",
     "correct": "Vertebrorna och ansiktets ben",
     "distractors": [
-      "Rörben",
-      "Kortben",
-      "Plattben"
+      "Rörben i extremiteterna",
+      "Kortben i handloven",
+      "Plattben i skallen"
     ],
     "topic": "osteologi_types",
     "difficulty": "Normal",
@@ -2469,9 +2469,9 @@
     "prompt": "Vad är en vridled?",
     "correct": "En led som tillåter rotation omkring en axel",
     "distractors": [
-      "En kulled",
-      "En gångjärnsled",
-      "En glidled"
+      "En kulled med fri rörlighet",
+      "En gångjärnsled i ett plan",
+      "En glidled med liten rörlighet"
     ],
     "topic": "osteologi_joints",
     "difficulty": "Normal",
@@ -2481,11 +2481,11 @@
     "id": "q191",
     "type": "mc",
     "prompt": "Vad är en glidled?",
-    "correct": "En led där ben glider mot varandra med liten rörlighet",
+    "correct": "En led där ben glider mot varandra",
     "distractors": [
-      "En kulled",
-      "En gångjärnsled",
-      "En vridled"
+      "En kulled med fri rörlighet",
+      "En gångjärnsled i ett plan",
+      "En vridled kring en axel"
     ],
     "topic": "osteologi_joints",
     "difficulty": "Normal",
@@ -2531,11 +2531,11 @@
     "id": "q195",
     "type": "mc",
     "prompt": "Vilka leder är gångjärnsleder?",
-    "correct": "Armbågsleden, knäleden, fingerlederna",
+    "correct": "Armbågsleden, knäleden och fingerlederna",
     "distractors": [
-      "Höftleden",
-      "Axelleden",
-      "Höftlederna"
+      "Höftleden som kulled",
+      "Axelleden som kulled",
+      "Höftlederna på båda sidor"
     ],
     "topic": "osteologi_joints",
     "difficulty": "Normal",
@@ -2561,9 +2561,9 @@
     "prompt": "Vilka leder är vridleder?",
     "correct": "Atlantoaxialleden",
     "distractors": [
-      "Axelleden",
-      "Höftleden",
-      "Knäleden"
+      "Höftleden med stor rörlighet",
+      "Axelleden med stor rörlighet",
+      "Höftlederna på båda sidor"
     ],
     "topic": "osteologi_joints",
     "difficulty": "Normal",
@@ -2767,9 +2767,9 @@
     "prompt": "Vad är spongös benvävnad?",
     "correct": "Lös benvävnad med märgfyllda hålrum",
     "distractors": [
-      "Tät benvävnad",
-      "Benmärgsvävnad",
-      "Bindvävnad"
+      "Tät benvävnad i benets skal",
+      "Benmärgsvävnad inuti benet",
+      "Bindvävnad runt benet"
     ],
     "topic": "osteologi_cells",
     "difficulty": "Normal",
@@ -2817,11 +2817,11 @@
     "id": "q217",
     "type": "mc",
     "prompt": "Vad är endosteum?",
-    "correct": "Membran på insidan av benet som omger benmärgen",
+    "correct": "Membran som omger benmärgen",
     "distractors": [
-      "Membran utanpå benet",
-      "Själva benmärgen",
-      "Själva benvävnaden"
+      "Membran utanpå benytan",
+      "Själva benmärgen inuti",
+      "Själva benvävnaden i sig"
     ],
     "topic": "osteologi_cells",
     "difficulty": "Normal",
@@ -2981,7 +2981,7 @@
     "id": "q230",
     "type": "mc",
     "prompt": "Vad betyder proximalt?",
-    "correct": "Närmast kroppen eller utgångspunkten",
+    "correct": "Närmast kroppen",
     "distractors": [
       "Långt från kroppen",
       "Mot sidan",
@@ -2995,7 +2995,7 @@
     "id": "q231",
     "type": "mc",
     "prompt": "Vad betyder distalt?",
-    "correct": "Långt från kroppen eller utgångspunkten",
+    "correct": "Långt från kroppen",
     "distractors": [
       "Närmast kroppen",
       "Mot sidan",
@@ -3009,7 +3009,7 @@
     "id": "q232",
     "type": "mc",
     "prompt": "Vad betyder medial?",
-    "correct": "Mot centerlinjen/mittlinjen av kroppen",
+    "correct": "Mot centerlinjen av kroppen",
     "distractors": [
       "Långt från mittlinjen",
       "Mot sidan",
@@ -3023,7 +3023,7 @@
     "id": "q233",
     "type": "mc",
     "prompt": "Vad betyder lateral?",
-    "correct": "Långt från centerlinjen/mittlinjen av kroppen",
+    "correct": "Långt från centerlinjen",
     "distractors": [
       "Mot mittlinjen",
       "Nedåt",
@@ -3135,9 +3135,9 @@
     "prompt": "Vilka ben utgör huvudsakligen skelettet?",
     "correct": "Axial skelett och appendikulärt skelett",
     "distractors": [
-      "Bara rörben",
-      "Bara kortben",
-      "Bara plattben"
+      "Bara rörben i skelettet",
+      "Bara kortben i skelettet",
+      "Bara plattben i skelettet"
     ],
     "topic": "osteologi_summary",
     "difficulty": "Normal",
@@ -3209,11 +3209,11 @@
     "id": "q248",
     "type": "mc",
     "prompt": "Vilka är de viktigaste funktionerna av skelettbenen?",
-    "correct": "Stödja kroppen, skydda organ, möjliggöra rörelse, producera blodceller",
+    "correct": "Stödja, skydda, röra och producera blodceller",
     "distractors": [
-      "Bara stöd",
-      "Bara skydd",
-      "Bara rörelse"
+      "Bara stöd åt hela kroppen",
+      "Bara skydd åt de inre organen",
+      "Bara möjliggöra kroppens rörelse"
     ],
     "topic": "osteologi_summary",
     "difficulty": "Normal",
@@ -3281,9 +3281,9 @@
     "prompt": "Vilka ben sitter i knäregionen?",
     "correct": "Femur, tibia, fibula och patella",
     "distractors": [
-      "Bara tibia",
-      "Bara patella",
-      "Bara femur"
+      "Bara tibia i knäregionen",
+      "Bara patella i knäregionen",
+      "Bara femur i knäregionen"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -3323,9 +3323,9 @@
     "prompt": "Vilka ben sitter i foten?",
     "correct": "Tarsalbenen, metatarsalbenen och phalanger",
     "distractors": [
-      "Bara tarsalbenen",
-      "Bara metatarsalbenen",
-      "Bara phalanger"
+      "Bara tarsalbenen i foten",
+      "Bara metatarsalbenen i foten",
+      "Bara phalangerna i foten"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -3513,9 +3513,9 @@
     "prompt": "Vilket av dessa ben utgör det axiala skelettet?",
     "correct": "Kranium, ryggrad och bröstkorg",
     "distractors": [
-      "Extremiteterna",
-      "Höftbenen",
-      "Skulderbladet"
+      "Extremiteterna och deras leder",
+      "Höftbenen och bäckenringen",
+      "Skulderbladet och nyckelbenet"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -3527,9 +3527,9 @@
     "prompt": "Vilket av dessa ben utgör det appendikulära skelettet?",
     "correct": "Extremiteterna och deras gördlar",
     "distractors": [
-      "Kranium",
-      "Ryggrad",
-      "Bröstkorg"
+      "Kranium och ansiktets ben",
+      "Ryggraden och dess kotor",
+      "Bröstkorgen och revbenen"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -3829,9 +3829,9 @@
     "prompt": "Vilka ben följer på varandra från proximalt till distalt i övre extremiteten?",
     "correct": "Humerus - radius/ulna - carpalben - metacarpalben - phalanger",
     "distractors": [
-      "Carpalben - humerus - phalanger",
-      "Scapula - humerus - femur",
-      "Clavicula - radius - tarsalbenen"
+      "Carpalben - humerus - phalanger i fel ordning",
+      "Scapula - humerus - femur, tre olika regioner",
+      "Clavicula - radius - tarsalbenen, blandade regioner"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -3843,9 +3843,9 @@
     "prompt": "Vilka ben följer på varandra från proximalt till distalt i nedre extremiteten?",
     "correct": "Femur - tibia/fibula - tarsalbenen - metatarsalbenen - phalanger",
     "distractors": [
-      "Tarsalbenen - femur - phalanger",
-      "Höftbenet - femur - humerus",
-      "Höftbenet - tibia - radius"
+      "Tarsalbenen - femur - phalanger i fel ordning",
+      "Höftbenet - femur - humerus, blandade regioner",
+      "Höftbenet - tibia - radius, blandade regioner"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -3855,11 +3855,11 @@
     "id": "q297",
     "type": "mc",
     "prompt": "Vilka ben utgör greppet när man tar något?",
-    "correct": "Carpalbenen för stabilitet, metacarpalben och phalanger för rörelse",
+    "correct": "Carpalbenen stabiliserar, resten rör sig",
     "distractors": [
-      "Bara phalanger",
-      "Bara carpalben",
-      "Bara metacarpalben"
+      "Bara phalangerna för rörelse",
+      "Bara carpalbenen för stabilitet",
+      "Bara metacarpalbenen i handen"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -3869,11 +3869,11 @@
     "id": "q298",
     "type": "mc",
     "prompt": "Vilka ben är viktigast för att stå och gå?",
-    "correct": "Femur, tibia, fibula, tarsalbenen för stöd och rörelse",
+    "correct": "Femur, tibia, fibula och tarsalbenen",
     "distractors": [
-      "Bara femur",
-      "Bara tarsalbenen",
-      "Bara höftbenen"
+      "Bara femur för stöd",
+      "Bara tarsalbenen för stöd",
+      "Bara höftbenen för stöd"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -4115,9 +4115,9 @@
     "prompt": "Vilka ligament stabiliserar knäleden?",
     "correct": "Kollateralligamenten, korsbanden och patellarligamentet",
     "distractors": [
-      "Bara kollateralligamenten",
-      "Bara korsbanden",
-      "Bara patellarligamentet"
+      "Bara kollateralligamenten ensamma",
+      "Bara korsbanden ensamma",
+      "Bara patellarligamentet ensamt"
     ],
     "topic": "osteologi_ligaments",
     "difficulty": "Normal",
@@ -4129,9 +4129,9 @@
     "prompt": "Vilka ligament stabiliserar höftleden?",
     "correct": "Lig. iliofemorale, lig. pubofemorale och lig. ischiofemorale",
     "distractors": [
-      "Bara lig. iliofemorale",
-      "Bara ett ligament",
-      "Inga ligament"
+      "Bara lig. iliofemorale, inga andra ligament",
+      "Bara ett enda ligament håller ihop leden",
+      "Inga ligament stabiliserar leden alls"
     ],
     "topic": "osteologi_ligaments",
     "difficulty": "Normal",
@@ -4207,9 +4207,9 @@
     "prompt": "Vad gör benen mest motståndskraftiga mot brott?",
     "correct": "Kollagen- och mineralinnehållet tillsammans",
     "distractors": [
-      "Bara mineraler",
-      "Bara kollagen",
-      "Bara vatten"
+      "Bara mineraler i benet",
+      "Bara kollagen i benet",
+      "Bara vatten i benvävnaden"
     ],
     "topic": "osteologi_summary",
     "difficulty": "Normal",
@@ -4358,9 +4358,9 @@
     "correct": "Vertebrae cervicales",
     "type": "mc",
     "distractors": [
-      "Femur",
-      "Vertebra",
-      "Processus"
+      "Femur i benet",
+      "Vertebra i allmänhet",
+      "Processus på kotan"
     ],
     "id": "q335",
     "topic": "osteologi_columna",
@@ -4386,9 +4386,9 @@
     "correct": "Vertebrae thoracicae",
     "type": "mc",
     "distractors": [
-      "Femur",
-      "Vertebra",
-      "Processus"
+      "Femur i benet",
+      "Vertebra i allmänhet",
+      "Processus på kotan"
     ],
     "id": "q337",
     "topic": "osteologi_columna",
@@ -4414,9 +4414,9 @@
     "correct": "Vertebrae lumbales",
     "type": "mc",
     "distractors": [
-      "Fibula",
-      "Vertebra",
-      "Processus"
+      "Fibula i underbenet",
+      "Vertebra i allmänhet",
+      "Processus på kotan"
     ],
     "id": "q339",
     "topic": "osteologi_columna",

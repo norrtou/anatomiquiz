@@ -257,9 +257,9 @@
     "prompt": "Vad betyder prefixet \"supra-\"/\"super-\"?",
     "correct": "Ovanför, över",
     "distractors": [
-      "Under",
-      "Bakom",
-      "Inuti"
+      "Under, för lite av något",
+      "Bakom, längre bort bakåt",
+      "Inuti, längre in i något"
     ],
     "topic": "medsek_termens_byggstenar",
     "difficulty": "Normal",
@@ -271,9 +271,9 @@
     "prompt": "Vad betyder prefixet \"pre-\"/\"ante-\"?",
     "correct": "Före, framför",
     "distractors": [
-      "Efter",
-      "Ovanför",
-      "Under"
+      "Efter, senare i tiden",
+      "Ovanför, högre upp än",
+      "Under, lägre ner än"
     ],
     "topic": "medsek_termens_byggstenar",
     "difficulty": "Normal",
@@ -355,9 +355,9 @@
     "prompt": "Vad betyder prefixet \"peri-\"?",
     "correct": "Runt omkring",
     "distractors": [
-      "Inuti",
-      "Under",
-      "Mellan"
+      "Inuti, längre in i något",
+      "Under, lägre ner än",
+      "Mellan, i mitten av två"
     ],
     "topic": "medsek_termens_byggstenar",
     "difficulty": "Normal",
@@ -369,9 +369,9 @@
     "prompt": "Vad betyder prefixet \"para-\"?",
     "correct": "Bredvid, vid sidan av",
     "distractors": [
-      "Inuti",
-      "Ovanpå",
-      "Mellan"
+      "Inuti, längre in i något",
+      "Ovanpå, högst upp på",
+      "Mellan, i mitten av två"
     ],
     "topic": "medsek_termens_byggstenar",
     "difficulty": "Normal",
@@ -383,9 +383,9 @@
     "prompt": "Vad betyder prefixet \"trans-\"?",
     "correct": "Genom, tvärs över",
     "distractors": [
-      "Bredvid",
-      "Under",
-      "Ovanför"
+      "Bredvid, vid sidan av",
+      "Under, lägre ner än",
+      "Ovanför, högre upp än"
     ],
     "topic": "medsek_termens_byggstenar",
     "difficulty": "Normal",
@@ -439,9 +439,9 @@
     "prompt": "Vad betyder suffixet \"-os\" (-osis)?",
     "correct": "Sjukligt tillstånd, ofta kroniskt",
     "distractors": [
-      "Inflammation",
-      "Tumör",
-      "Nedskärning"
+      "Inflammation i en vävnad",
+      "Tumör eller svulst",
+      "Nedskärning eller kirurgiskt snitt"
     ],
     "topic": "medsek_termens_byggstenar",
     "difficulty": "Normal",
@@ -495,9 +495,9 @@
     "prompt": "Vad betyder suffixet \"-pati\"?",
     "correct": "Sjukdom, sjuklig förändring",
     "distractors": [
-      "Smärta",
-      "Förlamning",
-      "Blödning"
+      "Smärta i en kroppsdel",
+      "Förlamning av en muskel",
+      "Blödning från ett kärl"
     ],
     "topic": "medsek_termens_byggstenar",
     "difficulty": "Normal",
@@ -733,9 +733,9 @@
     "prompt": "Vad betyder ordstammen \"osteo-\"?",
     "correct": "Ben, skelett",
     "distractors": [
-      "Muskel",
-      "Nerv",
-      "Hud"
+      "Muskel som rör en led",
+      "Nerv som leder signaler",
+      "Hud som täcker kroppen"
     ],
     "topic": "medsek_termens_byggstenar",
     "difficulty": "Normal",
@@ -999,9 +999,9 @@
     "prompt": "Vad betyder ordstammen \"geronto-\"/\"geriatr-\"?",
     "correct": "Åldring, hög ålder",
     "distractors": [
-      "Barn",
-      "Kvinna",
-      "Man"
+      "Barn i tidig ålder",
+      "Kvinna i fertil ålder",
+      "Man i vuxen ålder"
     ],
     "topic": "medsek_termens_byggstenar",
     "difficulty": "Normal",
@@ -1013,9 +1013,9 @@
     "prompt": "Vad betyder ordstammen \"onko-\"?",
     "correct": "Tumör, cancer",
     "distractors": [
-      "Blod",
-      "Ben",
-      "Nerv"
+      "Blod och dess celler",
+      "Ben och skelettvävnad",
+      "Nerv och dess signaler"
     ],
     "topic": "medsek_termens_byggstenar",
     "difficulty": "Normal",
@@ -1041,9 +1041,9 @@
     "prompt": "Vad betyder ordstammen \"immuno-\"?",
     "correct": "Immunsystem, motståndskraft",
     "distractors": [
-      "Blod",
-      "Tumör",
-      "Nerv"
+      "Blod och dess celler",
+      "Tumör eller svulst",
+      "Nerv och dess signaler"
     ],
     "topic": "medsek_termens_byggstenar",
     "difficulty": "Normal",
@@ -1125,9 +1125,9 @@
     "prompt": "Vad heter urinblåsa på latin?",
     "correct": "Vesica urinaria",
     "distractors": [
-      "Ren",
-      "Hepar",
-      "Pulmo"
+      "Ren, njuren i kroppen",
+      "Hepar, levern i kroppen",
+      "Pulmo, lungan i kroppen"
     ],
     "topic": "medsek_termens_byggstenar",
     "difficulty": "Normal",
@@ -1195,9 +1195,9 @@
     "prompt": "Vad heter mage/magsäck på latin?",
     "correct": "Gaster / ventriculus",
     "distractors": [
-      "Hepar",
-      "Splen",
-      "Ren"
+      "Hepar, levern i kroppen",
+      "Splen, mjälten i kroppen",
+      "Ren, njuren i kroppen"
     ],
     "topic": "medsek_termens_byggstenar",
     "difficulty": "Normal",
@@ -1293,9 +1293,9 @@
     "prompt": "Varför använder svensk medicinsk fackterminologi ofta både ett latinskt/grekiskt fackord och ett svenskt vardagsord för samma struktur (t.ex. \"ren\"/\"njure\")?",
     "correct": "Fackordet ger en entydig, internationellt gångbar term för journaler och facklitteratur, medan vardagsordet används i samtal med patienter",
     "distractors": [
-      "Vardagsordet är alltid det medicinskt korrekta och fackordet är föråldrat",
-      "Det finns ingen anledning, det är bara en slump",
-      "Fackordet används bara i tandvården, aldrig inom övrig sjukvård"
+      "Vardagsordet är alltid det medicinskt korrekta och fackordet räknas som helt föråldrat och onödigt",
+      "Det finns ingen egentlig anledning, valet mellan orden är bara en ren slump utan mönster",
+      "Fackordet används bara inom tandvården och förekommer aldrig inom övrig sjukvård"
     ],
     "topic": "medsek_termens_byggstenar",
     "difficulty": "Normal",
@@ -1307,9 +1307,9 @@
     "prompt": "Varför är det viktigt för en medicinsk sekreterare att känna igen både den svenska och den latinska/grekiska termen för samma struktur eller sjukdom?",
     "correct": "Läkare dikterar och skriver ofta journaltext med fackterm, medan sekreteraren ibland behöver återge eller slå upp innebörden på svenska, t.ex. vid kodning eller sammanfattning",
     "distractors": [
-      "Endast den svenska termen förekommer någonsin i journaler",
-      "Endast den latinska termen förekommer någonsin i journaler",
-      "Det är aldrig nödvändigt att kunna båda formerna"
+      "Endast den svenska termen förekommer någonsin i journaler, den latinska används aldrig alls",
+      "Endast den latinska termen förekommer någonsin i journaler, den svenska används aldrig alls",
+      "Det är aldrig nödvändigt för en sekreterare att kunna båda formerna av samma term"
     ],
     "topic": "medsek_termens_byggstenar",
     "difficulty": "Normal",
@@ -1391,9 +1391,9 @@
     "prompt": "Vad betyder suffixet \"-fagi\" (t.ex. i \"dysfagi\")?",
     "correct": "Sväljning, ätande",
     "distractors": [
-      "Andning",
-      "Hörsel",
-      "Syn"
+      "Andning genom luftvägarna",
+      "Hörsel genom örat",
+      "Syn genom ögat"
     ],
     "topic": "medsek_termens_byggstenar",
     "difficulty": "Normal",
@@ -1587,9 +1587,9 @@
     "prompt": "Varför heter det \"collum ossis femoris\" och inte \"collum os femur\" när man talar om lårbenshalsen?",
     "correct": "\"Ossis\" och \"femoris\" står i genitiv eftersom genitiv används för att uttrycka tillhörighet mellan substantiv",
     "distractors": [
-      "Genitiv används bara i plural, aldrig i singular",
-      "Ordföljden är fri och formen har ingen grammatisk betydelse",
-      "\"Ossis\" och \"femoris\" är nominativformer"
+      "Genitiv används enbart i pluralform, aldrig i singularform på latin",
+      "Ordföljden i frasen är fri och kasusformen har ingen egentlig grammatisk betydelse",
+      "\"Ossis\" och \"femoris\" är i själva verket vanliga nominativformer"
     ],
     "topic": "medsek_latin_deklinationer",
     "difficulty": "Normal",
@@ -1671,9 +1671,9 @@
     "prompt": "Varför skiljer sig ofta stammen i böjda kasus från nominativformen i tredje deklinationen, t.ex. \"pes\" → \"pedis\"?",
     "correct": "Tredje deklinationens substantiv har en konsonantstam som ibland förändras eller döljs i nominativ singular, men syns tydligt i genitivstammen",
     "distractors": [
-      "Det är alltid samma stam i alla kasus utan undantag",
-      "Nominativformen är alltid den grammatiskt \"riktiga\" stammen",
-      "Latin saknar helt stamväxlingar"
+      "Det är alltid exakt samma stam i samtliga kasus utan några undantag",
+      "Nominativformen är alltid den grammatiskt mest korrekta och ursprungliga stammen",
+      "Latin saknar helt fenomenet med stamväxlingar mellan olika kasusformer"
     ],
     "topic": "medsek_latin_deklinationer",
     "difficulty": "Normal",
@@ -1867,9 +1867,9 @@
     "prompt": "Varför räcker det oftast med att en medicinsk sekreterare känner igen nominativ- och genitivformerna väl, snarare än alla fem latinska kasus?",
     "correct": "Nominativ och genitiv är de kasus som dominerar i anatomiska och diagnostiska termer i journaler",
     "distractors": [
-      "Genitiv förekommer aldrig i medicinska termer",
-      "Alla fem kasus används lika ofta i journaltext",
-      "Nominativ används aldrig i medicinsk terminologi"
+      "Genitiv förekommer aldrig i medicinska fackterm eller diagnoser överhuvudtaget",
+      "Alla fem latinska kasus används lika ofta och jämnt i vanlig journaltext",
+      "Nominativ används aldrig alls inom medicinsk terminologi eller journalföring"
     ],
     "topic": "medsek_latin_deklinationer",
     "difficulty": "Normal",
@@ -1895,9 +1895,9 @@
     "prompt": "Varför heter det \"arteria carotis communis\" och inte \"arteria carotis communus\"?",
     "correct": "\"Communis\" böjs i tredje deklinationens adjektivmönster och kongruerar i femininum med \"arteria\", inte enligt \"-us/-a/-um\"-mönstret",
     "distractors": [
-      "Det är en felstavning som ändå accepteras kliniskt",
-      "\"Communis\" är alltid en oböjlig form",
-      "Adjektiv behöver aldrig kongruera med sitt substantiv på latin"
+      "Det är helt enkelt en felstavning som ändå råkar accepteras i klinisk praxis",
+      "\"Communis\" är alltid en helt oböjlig form oavsett genus eller sammanhang",
+      "Adjektiv behöver aldrig kongruera med sitt substantiv alls på latin"
     ],
     "topic": "medsek_latin_deklinationer",
     "difficulty": "Normal",
@@ -1979,9 +1979,9 @@
     "prompt": "Varför heter det \"musculus gluteus maximus\" med just den ändelsen på \"maximus\"?",
     "correct": "\"Musculus\" är maskulinum, så adjektivet \"maximus\" böjs i maskulin form för att kongruera",
     "distractors": [
-      "Adjektiv anpassas aldrig efter substantivets genus",
-      "\"Maximus\" är den enda formen som finns oavsett genus",
-      "\"Gluteus\" avgör adjektivets form, inte \"musculus\""
+      "Adjektiv anpassas aldrig efter substantivets genus i latinsk grammatik",
+      "\"Maximus\" är den enda formen som finns, oavsett vilket genus substantivet har",
+      "\"Gluteus\" avgör adjektivets form i frasen, inte huvudordet \"musculus\""
     ],
     "topic": "medsek_latin_deklinationer",
     "difficulty": "Normal",
@@ -2021,9 +2021,9 @@
     "prompt": "Varför är verbkonjugationer generellt mindre viktiga än substantivens deklinationer för en medicinsk sekreterare?",
     "correct": "Medicinsk fackterminologi domineras av substantiviska och adjektiviska fraser, medan hela böjda verbfraser sällan förekommer i journaltext",
     "distractors": [
-      "Latinska verb förekommer aldrig i medicinska sammanhang",
-      "Deklinationer är mindre viktiga än konjugationer i detta yrke",
-      "Det finns ingen skillnad i hur ofta de förekommer"
+      "Latinska verb förekommer aldrig alls i medicinska sammanhang eller journaler",
+      "Deklinationer är mindre viktiga än verbkonjugationer i det här yrket",
+      "Det finns ingen som helst skillnad i hur ofta substantiv och verb förekommer"
     ],
     "topic": "medsek_latin_deklinationer",
     "difficulty": "Normal",
@@ -2301,9 +2301,9 @@
     "prompt": "Vilket genus har substantivet \"cavum\", och varför skiljer det sig från \"cavitas\"?",
     "correct": "\"Cavum\" är neutrum, medan \"cavitas\" är femininum – två olika ord för besläktade begrepp med olika böjningsmönster",
     "distractors": [
-      "De är exakt samma ord med olika stavning utan grammatisk skillnad",
-      "Båda orden är maskulina",
-      "Genus har ingen betydelse för hur orden böjs"
+      "De är exakt samma ord, bara med olika stavning utan grammatisk skillnad alls",
+      "Båda orden räknas som maskulina i den latinska grammatiken",
+      "Genus har ingen som helst betydelse för hur latinska ord böjs"
     ],
     "topic": "medsek_latin_deklinationer",
     "difficulty": "Normal",
@@ -2329,9 +2329,9 @@
     "prompt": "Varför heter det ofta \"...-itis\" i diagnostermer men substantivet i sig (t.ex. \"gaster\", \"hepar\") har en helt annan grundform i nominativ?",
     "correct": "Suffixet \"-itis\" fogas till den grekiska ordstammen, inte alltid identisk med nominativformens hela ord",
     "distractors": [
-      "\"-itis\" har ingen koppling till ordets grundform",
-      "Nominativformen och stammen är alltid identiska i grekiska lånord",
-      "\"-itis\" ersätter alltid hela ordets betydelse"
+      "Suffixet \"-itis\" har ingen som helst koppling till ordets ursprungliga grundform",
+      "Nominativformen och böjningsstammen är alltid identiska i grekiska lånord",
+      "Suffixet \"-itis\" ersätter alltid hela ordets ursprungliga betydelse"
     ],
     "topic": "medsek_latin_deklinationer",
     "difficulty": "Normal",
@@ -2385,9 +2385,9 @@
     "prompt": "Varför heter magsäcksinflammation \"gastrit\" (från stammen \"gastr-\") och inte \"gasterit\"?",
     "correct": "Suffixet fogas till den grekiska stammen \"gastr-\" som syns i böjda former, inte till hela nominativordet \"gaster\"",
     "distractors": [
-      "Det är felstavat men accepteras ändå",
-      "\"Gaster\" har ingen böjningsstam alls",
-      "Suffixet kräver alltid hela nominativordet oavsett stam"
+      "Det är felstavat men har ändå kommit att accepteras i språkbruket",
+      "\"Gaster\" saknar helt en egen böjningsstam i den grekiska grammatiken",
+      "Suffixet kräver alltid hela nominativordet, oavsett vilken stam som finns"
     ],
     "topic": "medsek_latin_deklinationer",
     "difficulty": "Normal",
@@ -2455,9 +2455,9 @@
     "prompt": "Varför heter hjärtmuskelinflammation \"myokardit\" med \"kard-\" och inte \"kor-\" eller \"kordit\"?",
     "correct": "Suffixet \"-itis\" fogas här till den grekiska stammen \"kardia\"/\"card-\", som är ett annat lånord än det latinska \"cor/cordis\"",
     "distractors": [
-      "\"Cor\" och \"kardia\" är exakt samma ord på olika språk med identisk stam",
-      "Det är en ren slump att grekiskan och latinet skiljer sig åt",
-      "\"Myokardit\" bygger på det latinska ordet \"cor\", inte grekiskans \"kardia\""
+      "\"Cor\" och \"kardia\" är exakt samma ord på två olika språk med identisk stam",
+      "Det är bara en ren slump att grekiskan och latinet skiljer sig åt här",
+      "\"Myokardit\" bygger faktiskt på det latinska ordet \"cor\", inte grekiskans \"kardia\""
     ],
     "topic": "medsek_latin_deklinationer",
     "difficulty": "Normal",
@@ -2623,9 +2623,9 @@
     "prompt": "Varför är det viktigt för en medicinsk sekreterare att kunna känna igen genitivformer som \"ossis\", \"cordis\", \"hepatis\" i löpande text, trots att dessa avviker från nominativformen?",
     "correct": "Diagnoser och anatomiska beskrivningar i journaler använder ofta genitiv för att koppla samman strukturer, så igenkänning av stammen underlättar korrekt tolkning och sökning/kodning",
     "distractors": [
-      "Genitivformer förekommer aldrig i praktiska journaltexter",
-      "Nominativformen räcker alltid för att förstå diagnosen",
-      "Genitivböjning är enbart ett teoretiskt akademiskt begrepp utan praktisk nytta"
+      "Genitivformer förekommer aldrig alls i praktiska, verkliga journaltexter",
+      "Nominativformen räcker alltid ensam för att förstå hela diagnosen",
+      "Genitivböjning är enbart ett teoretiskt begrepp utan någon praktisk nytta"
     ],
     "topic": "medsek_latin_deklinationer",
     "difficulty": "Normal",
@@ -2679,9 +2679,9 @@
     "prompt": "Varför heter struphuvudsinflammation \"laryngit\" och inte \"larynxit\"?",
     "correct": "Suffixet \"-itis\" fogas till stammen \"laryng-\" som framgår av genitivformen \"laryngis\", inte till nominativens \"larynx\"",
     "distractors": [
-      "Det är felstavat men vedertaget",
-      "\"Larynx\" saknar böjningsstam",
-      "Suffix fogas alltid till hela nominativordet"
+      "Det är felstavat men har ändå blivit vedertaget i klinisk praxis",
+      "\"Larynx\" saknar helt en egen böjningsstam i den grekiska grammatiken",
+      "Suffix fogas alltid till hela nominativordet, oavsett vilken stam som finns"
     ],
     "topic": "medsek_latin_deklinationer",
     "difficulty": "Normal",
@@ -3141,9 +3141,9 @@
     "prompt": "Vad betyder rörelsetermen \"rotatio\" på svenska?",
     "correct": "Rotation, vridning kring en axel",
     "distractors": [
-      "Böjning",
-      "Sträckning",
-      "Bortförande"
+      "Böjning av en led",
+      "Sträckning av en led",
+      "Bortförande från mittlinjen"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",
@@ -3561,9 +3561,9 @@
     "prompt": "Varför är det viktigt att en medicinsk sekreterare känner till regionnamnen på latin, t.ex. \"regio inguinalis\"?",
     "correct": "Läkare beskriver ofta undersökningsfynd, ingrepp och smärtlokalisation med latinska regionnamn i journaltext, vilket sekreteraren behöver kunna tolka eller återge korrekt",
     "distractors": [
-      "Regionnamn på latin förekommer aldrig i svensk sjukvårdsdokumentation",
-      "Endast de svenska vardagsorden används i journaler",
-      "Regionnamn är enbart relevanta inom veterinärmedicin"
+      "Regionnamn på latin förekommer aldrig alls i svensk sjukvårdsdokumentation",
+      "Endast de svenska vardagsorden används någonsin i journaler och remisser",
+      "Regionnamn på latin är enbart relevanta inom veterinärmedicinen"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",
@@ -3687,9 +3687,9 @@
     "prompt": "Vad betyder adjektivet \"transversus\" på svenska?",
     "correct": "Tvärgående, tvärs över",
     "distractors": [
-      "Längsgående",
-      "Cirkelformad",
-      "Spiralformad"
+      "Längsgående i kroppens axel",
+      "Cirkelformad rörelse",
+      "Spiralformad rörelse"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",
@@ -3743,9 +3743,9 @@
     "prompt": "Vad betyder adjektivet \"propria\" (proprius) på svenska, t.ex. i \"ligamentum capitis femoris proprium\"?",
     "correct": "Egen, specifik för strukturen",
     "distractors": [
-      "Gemensam",
-      "Yttre",
-      "Tvärgående"
+      "Gemensam för flera strukturer",
+      "Yttre, utanför strukturen",
+      "Tvärgående, tvärs över"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",
@@ -3869,9 +3869,9 @@
     "prompt": "Vad betyder termen \"corpus\" i anatomiska termer, t.ex. \"corpus vertebrae\"?",
     "correct": "Kropp, huvuddel av en struktur",
     "distractors": [
-      "Spets",
-      "Kant",
-      "Bas"
+      "Spets, den yttersta delen",
+      "Kant, den yttre randen",
+      "Bas, den nedre grunden"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",
@@ -3939,9 +3939,9 @@
     "prompt": "Vad betyder termen \"tuberculum\" på svenska?",
     "correct": "Liten knöl, upphöjning",
     "distractors": [
-      "Grop",
-      "Öppning",
-      "Fåra"
+      "Grop, en fördjupning i benet",
+      "Öppning, ett hål i benet",
+      "Fåra, en ränna i benet"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",
@@ -3967,9 +3967,9 @@
     "prompt": "Vad betyder termen \"foramen\" på svenska, t.ex. \"foramen magnum\"?",
     "correct": "Öppning, hål",
     "distractors": [
-      "Kam",
-      "Grop",
-      "Kant"
+      "Kam, en benad upphöjning",
+      "Grop, en fördjupning",
+      "Kant, en rand på benet"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",
@@ -3995,9 +3995,9 @@
     "prompt": "Vad betyder termen \"fissura\" på svenska, t.ex. \"fissura orbitalis superior\"?",
     "correct": "Spricka, springa",
     "distractors": [
-      "Kanal",
-      "Kam",
-      "Knöl"
+      "Kanal, en gång genom benet",
+      "Kam, en benad upphöjning",
+      "Knöl, en rundad upphöjning"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",
@@ -4009,9 +4009,9 @@
     "prompt": "Vad betyder termen \"incisura\" på svenska, t.ex. \"incisura ischiadica\"?",
     "correct": "Inskärning, hack",
     "distractors": [
-      "Kanal",
-      "Kam",
-      "Knöl"
+      "Kanal, en gång genom benet",
+      "Kam, en benad upphöjning",
+      "Knöl, en rundad upphöjning"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",
@@ -4023,9 +4023,9 @@
     "prompt": "Vad betyder termen \"processus\" på svenska, t.ex. \"processus spinosus\"?",
     "correct": "Utskott, utstickande del",
     "distractors": [
-      "Grop",
-      "Kanal",
-      "Öppning"
+      "Grop, en fördjupning i benet",
+      "Kanal, en gång genom benet",
+      "Öppning, ett hål i benet"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",
@@ -4037,9 +4037,9 @@
     "prompt": "Vad betyder termen \"spina\" på svenska i skelettsammanhang, t.ex. \"spina scapulae\"?",
     "correct": "Taggformigt utskott",
     "distractors": [
-      "Grop",
-      "Kanal",
-      "Rund knöl"
+      "Grop, en fördjupning i benet",
+      "Kanal, en gång genom benet",
+      "Rund knöl på benytan"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",
@@ -4065,9 +4065,9 @@
     "prompt": "Vad betyder termen \"epicondylus\" på svenska, t.ex. \"epicondylus medialis humeri\"?",
     "correct": "Utskott ovanför/vid en ledknöl",
     "distractors": [
-      "Ledknölen själv",
-      "Fördjupning",
-      "Kanal"
+      "Ledknölen själv, hela strukturen",
+      "Fördjupning i benet",
+      "Kanal genom benet"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",
@@ -4079,9 +4079,9 @@
     "prompt": "Vad betyder termen \"linea\" på svenska, t.ex. \"linea alba\"?",
     "correct": "Linje, sträng",
     "distractors": [
-      "Grop",
-      "Kam",
-      "Öppning"
+      "Grop, en fördjupning i benet",
+      "Kam, en benad upphöjning",
+      "Öppning, ett hål i benet"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",
@@ -4261,9 +4261,9 @@
     "prompt": "Vad heter en kapillär på latin?",
     "correct": "Vas capillare",
     "distractors": [
-      "Arteria",
-      "Vena",
-      "Truncus"
+      "Arteria, en kärltyp",
+      "Vena, en kärltyp",
+      "Truncus, en kärlstam"
     ],
     "topic": "medsek_organsystemen_terminologi",
     "difficulty": "Normal",
@@ -4751,9 +4751,9 @@
     "prompt": "Vad heter urinblåsan på latin?",
     "correct": "Vesica urinaria",
     "distractors": [
-      "Ureter",
-      "Urethra",
-      "Ren"
+      "Ureter, urinledaren",
+      "Urethra, urinröret",
+      "Ren, njuren"
     ],
     "topic": "medsek_organsystemen_terminologi",
     "difficulty": "Normal",
@@ -5157,9 +5157,9 @@
     "prompt": "Vad heter en lymfkörtel på latin?",
     "correct": "Nodus lymphaticus",
     "distractors": [
-      "Glandula",
-      "Ganglion",
-      "Plexus"
+      "Glandula, en körtel",
+      "Ganglion, en nervknuta",
+      "Plexus, ett nervnätverk"
     ],
     "topic": "medsek_organsystemen_terminologi",
     "difficulty": "Normal",
@@ -5577,9 +5577,9 @@
     "prompt": "Varför räknas urinvägssystemet och fortplantningssystemet ofta samman under samlingsbeteckningen \"urogenitalsystemet\"?",
     "correct": "Organen ligger anatomiskt nära varandra i bäckenet och delar delvis embryologiskt ursprung, även om deras funktioner skiljer sig åt",
     "distractors": [
-      "De har identisk funktion",
-      "De är samma organsystem med olika namn utan anledning",
-      "Termen används aldrig i praktiken"
+      "De har identisk funktion trots att de tillhör olika organsystem",
+      "De är egentligen samma organsystem fast med två olika namn utan anledning",
+      "Termen \"urogenitalsystemet\" används aldrig i praktiken av vårdpersonal"
     ],
     "topic": "medsek_organsystemen_terminologi",
     "difficulty": "Normal",
@@ -6165,9 +6165,9 @@
     "prompt": "Vad heter stroke/slaganfall som fackterm?",
     "correct": "Cerebrovaskulär insult",
     "distractors": [
-      "Migrän",
-      "Epilepsi",
-      "Encefalit"
+      "Migrän med huvudvärk",
+      "Epilepsi med kramper",
+      "Encefalit, hjärninflammation"
     ],
     "topic": "medsek_sjukdom_symtom_atgard",
     "difficulty": "Normal",
@@ -6529,9 +6529,9 @@
     "prompt": "Vad heter förstoppning som fackterm?",
     "correct": "Konstipation",
     "distractors": [
-      "Diarré",
-      "Emesis",
-      "Nausea"
+      "Diarré, lös avföring",
+      "Emesis, kräkning",
+      "Nausea, illamående"
     ],
     "topic": "medsek_sjukdom_symtom_atgard",
     "difficulty": "Normal",
@@ -6767,9 +6767,9 @@
     "prompt": "Vad kallas processen att väga olika möjliga diagnoser mot varandra innan en slutgiltig diagnos ställs?",
     "correct": "Differentialdiagnostik",
     "distractors": [
-      "Anamnes",
-      "Epikris",
-      "Prognos"
+      "Anamnes, sjukdomshistoria",
+      "Epikris, sammanfattning",
+      "Prognos, förväntat förlopp"
     ],
     "topic": "medsek_sjukdom_symtom_atgard",
     "difficulty": "Normal",
@@ -7061,9 +7061,9 @@
     "prompt": "Vad används KVÅ till, till skillnad från ICD-10?",
     "correct": "KVÅ kodar utförda vårdåtgärder/ingrepp, medan ICD-10 kodar diagnoser/sjukdomstillstånd",
     "distractors": [
-      "KVÅ och ICD-10 kodar exakt samma sak",
-      "KVÅ kodar enbart läkemedel",
-      "ICD-10 kodar enbart kirurgiska ingrepp"
+      "KVÅ och ICD-10 kodar exakt samma sak fast med olika bokstäver och siffror",
+      "KVÅ kodar enbart läkemedel som patienten fått ordinerat",
+      "ICD-10 kodar enbart kirurgiska ingrepp som utförts på patienten"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7075,9 +7075,9 @@
     "prompt": "Hur är en ICD-10-kod grundläggande uppbyggd (antal tecken och typ)?",
     "correct": "En bokstav följd av två siffror, ibland med ytterligare siffror efter en punkt för mer specificering",
     "distractors": [
-      "Enbart fyra siffror utan bokstav",
-      "Enbart en bokstav utan siffror",
-      "Alltid exakt sex siffror"
+      "Enbart fyra siffror i rad, helt utan någon inledande bokstav",
+      "Enbart en ensam bokstav, helt utan några siffror alls",
+      "Alltid exakt sex siffror oavsett vilket kapitel diagnosen tillhör"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7369,9 +7369,9 @@
     "prompt": "Varför är det viktigt att skilja huvuddiagnos från bidiagnos vid kodning?",
     "correct": "Det påverkar bland annat statistik, ersättningssystem och vilken information som prioriteras vid uppföljning av vårdtillfället",
     "distractors": [
-      "Det har ingen praktisk betydelse alls",
-      "Bidiagnoser registreras aldrig i praktiken",
-      "Endast bidiagnoser används för ersättning, aldrig huvuddiagnosen"
+      "Det har ingen som helst praktisk betydelse för vården eller statistiken",
+      "Bidiagnoser registreras aldrig i praktiken av vårdpersonalen",
+      "Endast bidiagnoser används någonsin för ersättning, aldrig huvuddiagnosen"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7397,9 +7397,9 @@
     "prompt": "Vad används DRG-systemet till inom svensk sjukvård?",
     "correct": "Att gruppera vårdtillfällen med likartat resursbehov, bland annat för ersättning och jämförelser mellan vårdgivare",
     "distractors": [
-      "Att ersätta ICD-10 helt",
-      "Att enbart registrera patientkontaktuppgifter",
-      "Att enbart klassificera läkemedel"
+      "Att helt ersätta ICD-10-systemet med ett nytt system",
+      "Att enbart registrera patientens kontaktuppgifter i journalen",
+      "Att enbart klassificera vilka läkemedel patienten använder"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7411,9 +7411,9 @@
     "prompt": "Varför krävs korrekt och fullständig ICD-10-kodning för att DRG-systemet ska fungera väl?",
     "correct": "DRG-grupperingen baseras på registrerade diagnos- och åtgärdskoder, så felaktig kodning ger felaktig gruppering och missvisande statistik/ersättning",
     "distractors": [
-      "DRG-systemet använder aldrig diagnoskoder",
-      "Kodningens kvalitet påverkar aldrig DRG-utfallet",
-      "DRG bygger enbart på patientens ålder"
+      "DRG-systemet använder aldrig några diagnoskoder överhuvudtaget",
+      "Kodningens kvalitet påverkar aldrig alls det slutliga DRG-utfallet",
+      "DRG-grupperingen bygger enbart på patientens ålder och kön"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7439,9 +7439,9 @@
     "prompt": "Vad innebär det att en diagnoskod har fler siffror efter en punkt, t.ex. \"S72.0\" jämfört med \"S72\"?",
     "correct": "Ytterligare specificering av tillståndet inom samma diagnosgrupp, t.ex. exakt frakturtyp eller lokalisation",
     "distractors": [
-      "Att koden är felaktig och behöver korrigeras",
-      "Att det rör sig om en helt annan diagnosgrupp",
-      "Att koden enbart används för statistik utan klinisk betydelse"
+      "Att den registrerade koden är felaktig och måste korrigeras omedelbart",
+      "Att det i själva verket rör sig om en helt annan diagnosgrupp",
+      "Att koden enbart används för statistik utan någon klinisk betydelse alls"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7467,9 +7467,9 @@
     "prompt": "Varför registreras ofta både en skadekod (t.ex. från S00–T98) och en yttre orsakskod (V01–Y98) tillsammans vid en olycksfallsskada?",
     "correct": "Skadekoden beskriver själva skadan, medan den yttre orsakskoden beskriver hur skadan uppstod, vilket ger fullständigare statistik",
     "distractors": [
-      "Endast en av koderna behövs någonsin",
-      "Yttre orsakskoder ersätter alltid skadekoden",
-      "De två kodtyperna är identiska i praktiken"
+      "Endast en av de två koderna behövs någonsin vid registrering",
+      "Yttre orsakskoder ersätter alltid själva skadekoden helt och hållet",
+      "De två kodtyperna är i praktiken helt identiska med varandra"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7495,9 +7495,9 @@
     "prompt": "Ge ett exempel på när en Z-kod skulle kunna användas som huvuddiagnos.",
     "correct": "Vid ett besök som enbart gäller t.ex. en hälsoundersökning eller vaccination utan att patienten har en aktiv sjukdom",
     "distractors": [
-      "Endast vid akut hjärtinfarkt",
-      "Endast vid cancerdiagnos",
-      "Z-koder används aldrig som huvuddiagnos"
+      "Endast vid ett akut och livshotande hjärtinfarktstillstånd",
+      "Endast vid en redan bekräftad cancerdiagnos hos patienten",
+      "Z-koder används aldrig alls som huvuddiagnos vid något tillfälle"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7509,9 +7509,9 @@
     "prompt": "Hur är en KVÅ-kod uppbyggd, till skillnad från en ICD-10-kod?",
     "correct": "KVÅ-koder följer ett eget kodschema med bokstäver som anger åtgärdsområde, skilt från ICD-10:s diagnosstruktur",
     "distractors": [
-      "KVÅ-koder är identiska i format med ICD-10-koder",
-      "KVÅ har inga bokstäver alls, bara siffror",
-      "KVÅ-koder är alltid längre än tio tecken"
+      "KVÅ-koder är helt identiska i format med ICD-10-koderna",
+      "KVÅ saknar helt bokstäver i sin kodstruktur, bara siffror används",
+      "KVÅ-koder är alltid betydligt längre än tio tecken totalt"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7523,9 +7523,9 @@
     "prompt": "Ge ett exempel på en typ av åtgärd som skulle kodas med en KVÅ-kod snarare än en ICD-10-kod.",
     "correct": "Ett kirurgiskt ingrepp eller en specifik undersökning/behandling som utförts, t.ex. en operation",
     "distractors": [
-      "Patientens ålder",
-      "Patientens allmänna sjukdomshistoria",
-      "Patientens bostadsort"
+      "Enbart patientens ålder vid tidpunkten för vårdtillfället",
+      "Enbart patientens allmänna sjukdomshistoria sedan tidigare",
+      "Enbart patientens folkbokförda bostadsort i kommunen"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7537,9 +7537,9 @@
     "prompt": "Varför behöver en medicinsk sekreterare kunna både ICD-10 och KVÅ, inte bara en av dem?",
     "correct": "Ett vårdtillfälle dokumenteras oftast med både en diagnos och utförda åtgärder, vilka kodas i två olika system",
     "distractors": [
-      "Endast ICD-10 används i praktiken, KVÅ är överflödigt",
-      "Endast KVÅ används i praktiken, ICD-10 är överflödigt",
-      "De två systemen är utbytbara och identiska"
+      "Endast ICD-10 används i praktiken, KVÅ-systemet är helt överflödigt",
+      "Endast KVÅ används i praktiken, ICD-10-systemet är helt överflödigt",
+      "De två kodsystemen är fullt utbytbara och räknas som identiska"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7565,9 +7565,9 @@
     "prompt": "Varför är noggrann kodning viktig ur ett patientsäkerhetsperspektiv, utöver ekonomi och statistik?",
     "correct": "Felaktig kodning kan ge missvisande bild av patientens sjukdomshistoria vid framtida vårdkontakter och påverka beslutsstöd/uppföljning",
     "distractors": [
-      "Kodningen påverkar aldrig patientens fortsatta vård",
-      "Kodning är enbart en administrativ formalitet utan klinisk relevans",
-      "Felkodning upptäcks alltid automatiskt utan konsekvens"
+      "Kodningen påverkar aldrig alls patientens fortsatta vård eller behandling",
+      "Kodning är enbart en administrativ formalitet utan någon klinisk relevans",
+      "Felkodning upptäcks alltid automatiskt utan några som helst konsekvenser"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7579,9 +7579,9 @@
     "prompt": "Vad innebär det att ICD-10-SE är en \"nationell anpassning\" av WHO:s originalversion?",
     "correct": "Sverige har lagt till viss ytterligare detaljeringsgrad och nationella tilläggskoder anpassade efter svensk sjukvård, utöver WHO:s grundstruktur",
     "distractors": [
-      "Sverige använder en helt egen klassifikation utan koppling till WHO",
-      "ICD-10-SE är identisk med originalversionen utan några ändringar",
-      "Anpassningen gäller bara läkemedelsklassificering"
+      "Sverige använder en helt egen klassifikation utan någon koppling till WHO",
+      "ICD-10-SE är fullständigt identisk med originalversionen, utan några ändringar",
+      "Anpassningen till svenska förhållanden gäller bara läkemedelsklassificering"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7621,9 +7621,9 @@
     "prompt": "Vad kallas den enhet inom en vårdorganisation som ofta har särskilt ansvar för kvalitetssäkring av diagnos- och åtgärdskodning?",
     "correct": "Medicinska sekreterare/kodningsfunktionen",
     "distractors": [
-      "Vaktmästeriet",
+      "Vaktmästeriet på sjukhuset",
       "IT-supporten enbart",
-      "Städenheten"
+      "Städenheten på kliniken"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7635,9 +7635,9 @@
     "prompt": "Vad innebär principen att en diagnos ska vara så specifik som möjligt vid kodning (undvika onödigt ospecificerade koder)?",
     "correct": "Man ska välja den mest detaljerade tillgängliga koden som stämmer med den dokumenterade informationen, istället för en bredare \"ospecificerad\"-kod om mer detaljer finns",
     "distractors": [
-      "Ospecificerade koder ska alltid användas i första hand",
-      "Specificitet har ingen betydelse för kodningskvaliteten",
-      "Alla diagnoser kodas alltid med samma generella kod oavsett detaljnivå"
+      "Ospecificerade koder ska alltid användas i första hand, oavsett detaljnivå",
+      "Specificitetsgraden har ingen som helst betydelse för kodningskvaliteten",
+      "Alla diagnoser kodas alltid med samma generella kod oavsett vilken detaljnivå"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7649,9 +7649,9 @@
     "prompt": "Vad kan bristfällig dokumentation i journalen (t.ex. vag frågeställning) leda till vid kodning?",
     "correct": "Svårighet att välja en tillräckligt specifik kod, vilket kan tvinga fram en mer ospecificerad kod än vad som egentligen är korrekt",
     "distractors": [
-      "Det påverkar aldrig kodningsmöjligheterna",
-      "Det gör alltid kodningen enklare",
-      "Bristfällig dokumentation kräver aldrig komplettering"
+      "Det påverkar aldrig alls de faktiska kodningsmöjligheterna för sekreteraren",
+      "Det gör alltid kodningsarbetet betydligt enklare och snabbare att utföra",
+      "Bristfällig dokumentation kräver aldrig någon komplettering från läkaren"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7663,9 +7663,9 @@
     "prompt": "Vad innebär det att fråga en läkare om komplettering/förtydligande när en diagnostext är otydlig inför kodning?",
     "correct": "En del av kvalitetssäkringen i kodningsarbetet, för att säkerställa att rätt och tillräckligt specifik kod registreras",
     "distractors": [
-      "Något som aldrig ska göras, sekreteraren ska alltid gissa",
+      "Något som aldrig någonsin ska göras, sekreteraren ska istället alltid gissa",
       "En uppgift som enbart läkare får utföra sinsemellan utan sekreterarens inblandning",
-      "Ett brott mot sekretessen"
+      "Ett brott mot sekretessen som aldrig är tillåtet enligt lag"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7691,9 +7691,9 @@
     "prompt": "Varför är sekretess särskilt viktig i arbetet med diagnos- och åtgärdskodning?",
     "correct": "Diagnoskoder är känsliga personuppgifter som avslöjar patientens hälsotillstånd, och obehörig åtkomst eller spridning kan skada patientens integritet",
     "distractors": [
-      "Diagnoskoder räknas aldrig som känsliga uppgifter",
-      "Sekretess gäller bara för patientens namn, inte diagnoser",
-      "Kodningsarbete omfattas aldrig av sekretesslagstiftning"
+      "Diagnoskoder räknas aldrig alls som känsliga personuppgifter enligt lag",
+      "Sekretess gäller enbart för patientens namn, aldrig för dennes diagnoser",
+      "Kodningsarbete omfattas aldrig alls av sekretesslagstiftningen"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7719,9 +7719,9 @@
     "prompt": "Vad innebär skillnaden mellan öppenvårdsbesök och slutenvårdstillfälle vad gäller kodningsrutiner?",
     "correct": "Båda kodas med diagnos-/åtgärdskoder, men slutenvårdstillfällen har ofta en mer omfattande sammanfattning och kan generera fler bidiagnoser",
     "distractors": [
-      "Endast slutenvård kodas någonsin",
-      "Endast öppenvård kodas någonsin",
-      "Det finns ingen skillnad i rutiner mellan vårdformerna"
+      "Endast slutenvårdstillfällen kodas någonsin med diagnos- och åtgärdskoder",
+      "Endast öppenvårdsbesök kodas någonsin med diagnos- och åtgärdskoder",
+      "Det finns ingen som helst skillnad i kodningsrutiner mellan vårdformerna"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7733,9 +7733,9 @@
     "prompt": "Vad kallas den nationella statistikmyndighet/databas dit aggregerad diagnosstatistik från svensk sjukvård rapporteras?",
     "correct": "Socialstyrelsens patientregister",
     "distractors": [
-      "Skatteverket",
-      "Bolagsverket",
-      "Lantmäteriet"
+      "Skatteverket i Sverige",
+      "Bolagsverket i Sverige",
+      "Lantmäteriet i Sverige"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7747,9 +7747,9 @@
     "prompt": "Varför är enhetlig kodning över hela landet viktig för Socialstyrelsens patientregister?",
     "correct": "Det möjliggör jämförbar nationell statistik om sjukdomsförekomst, vårdkonsumtion och resursbehov mellan olika regioner och sjukhus",
     "distractors": [
-      "Enhetlighet är irrelevant eftersom varje sjukhus har sitt eget system",
-      "Patientregistret används aldrig för statistik",
-      "Kodning behöver bara vara korrekt lokalt, aldrig nationellt jämförbar"
+      "Enhetlighet är irrelevant eftersom varje enskilt sjukhus har sitt eget system",
+      "Patientregistret används aldrig alls för nationell statistik eller uppföljning",
+      "Kodning behöver bara vara korrekt lokalt, aldrig jämförbar nationellt"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7775,9 +7775,9 @@
     "prompt": "Varför baseras den kirurgiska delen av KVÅ på en nordisk (inte enbart svensk) klassifikation?",
     "correct": "Det möjliggör jämförbarhet mellan de nordiska länderna vad gäller kirurgisk statistik och vårdproduktion",
     "distractors": [
-      "De nordiska länderna har identiska sjukvårdssystem i alla avseenden",
-      "Sverige saknar egen förmåga att klassificera kirurgi",
-      "NCSP är endast en historisk kuriositet utan aktuell användning"
+      "De nordiska länderna har helt identiska sjukvårdssystem i alla avseenden",
+      "Sverige saknar egen förmåga att klassificera kirurgiska ingrepp självständigt",
+      "NCSP är enbart en historisk kuriositet utan någon aktuell användning idag"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7789,9 +7789,9 @@
     "prompt": "Utöver den kirurgiska (NCSP-baserade) delen, vad omfattar KVÅ:s övriga (nationella) del?",
     "correct": "Icke-kirurgiska åtgärder som exempelvis undersökningar, behandlingar och administrativa vårdåtgärder som är specifika för Sverige",
     "distractors": [
-      "Enbart läkemedelsnamn",
-      "Enbart patientens symtom",
-      "Enbart diagnoskoder"
+      "Enbart namnen på läkemedel som patienten fått under vårdtillfället",
+      "Enbart en beskrivning av patientens symtom vid ankomst",
+      "Enbart diagnoskoder utan någon koppling till utförda åtgärder"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7817,9 +7817,9 @@
     "prompt": "Varför kan samma kirurgiska ingrepp behöva registreras med både en ICD-10-kod och en KVÅ-kod vid samma vårdtillfälle?",
     "correct": "ICD-10-koden anger diagnosen/orsaken till ingreppet, medan KVÅ-koden anger själva åtgärden som utfördes – de svarar på olika frågor",
     "distractors": [
-      "De två koderna är utbytbara och det räcker med en av dem",
-      "KVÅ-koder ersätter alltid ICD-10-koder vid kirurgi",
-      "Endast ICD-10 används någonsin vid kirurgiska ingrepp"
+      "De två koderna är fullt utbytbara och det räcker att registrera en av dem",
+      "KVÅ-koder ersätter alltid ICD-10-koderna helt vid kirurgiska ingrepp",
+      "Endast ICD-10 används någonsin vid registrering av kirurgiska ingrepp"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7831,9 +7831,9 @@
     "prompt": "Vad kan bli en konsekvens om en medicinsk sekreterare registrerar en KVÅ-kod som inte stämmer med det som faktiskt är dokumenterat i journalen?",
     "correct": "Missvisande vårdstatistik, felaktig ersättning till vårdgivaren och risk för felaktiga slutsatser vid framtida uppföljning",
     "distractors": [
-      "Ingen konsekvens alls eftersom KVÅ-koder saknar praktisk betydelse",
-      "Det korrigeras alltid automatiskt av journalsystemet utan mänsklig inblandning",
-      "Det påverkar enbart IT-avdelningens statistik, aldrig vården"
+      "Ingen konsekvens alls, eftersom KVÅ-koder saknar all praktisk betydelse",
+      "Det korrigeras alltid helt automatiskt av journalsystemet utan mänsklig insats",
+      "Det påverkar enbart IT-avdelningens interna statistik, aldrig den faktiska vården"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7845,9 +7845,9 @@
     "prompt": "Vad innebär \"kodningskvalitet\" som begrepp inom vårdadministration?",
     "correct": "Hur väl de registrerade diagnos- och åtgärdskoderna stämmer överens med den faktiska kliniska verkligheten enligt journaldokumentationen",
     "distractors": [
-      "Hur snabbt koderna matas in, oavsett korrekthet",
-      "Hur många koder som registreras totalt, oavsett relevans",
-      "Ett begrepp som saknar definition inom vården"
+      "Hur snabbt de olika koderna matas in i systemet, oavsett hur korrekta de är",
+      "Hur många koder som totalt registreras, oavsett hur relevanta de faktiskt är",
+      "Ett begrepp som helt saknar definition eller innebörd inom sjukvården"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7873,9 +7873,9 @@
     "prompt": "Vad är ett vanligt exempel på ett kodningsfel som beror på otillräcklig specificering?",
     "correct": "Att en ospecificerad kod används trots att journaltexten innehåller information som hade räckt för en mer specifik kod",
     "distractors": [
-      "Att fel patient kopplas till rätt kod",
-      "Att koden har för många siffror",
-      "Att koden skrivs med små bokstäver istället för stora"
+      "Att fel patient av misstag kopplas till en i övrigt korrekt kod",
+      "Att den registrerade koden råkar innehålla för många siffror totalt",
+      "Att koden av misstag skrivs med gemener istället för versaler"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7887,9 +7887,9 @@
     "prompt": "Vad är ett vanligt exempel på ett kodningsfel som beror på förväxling mellan huvud- och bidiagnos?",
     "correct": "Att en bidiagnos felaktigt registreras som huvuddiagnos för det aktuella vårdtillfället",
     "distractors": [
-      "Att för många KVÅ-koder registreras",
-      "Att koden innehåller för många bokstäver",
-      "Att en Z-kod används vid en hälsokontroll"
+      "Att alldeles för många KVÅ-koder registreras vid samma vårdtillfälle",
+      "Att den registrerade koden innehåller för många bokstäver totalt",
+      "Att en Z-kod av misstag används vid en enkel hälsokontroll"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7901,9 +7901,9 @@
     "prompt": "Varför uppdateras ICD-10-SE och KVÅ regelbundet av Socialstyrelsen?",
     "correct": "För att fånga upp nya sjukdomstillstånd, medicinska framsteg, förändrade vårdrutiner och rätta till identifierade brister i klassifikationen",
     "distractors": [
-      "Klassifikationerna uppdateras aldrig efter första publicering",
-      "Uppdateringar görs enbart av estetiska skäl",
-      "Uppdateringar sker enbart vart femtionde år"
+      "Klassifikationerna uppdateras aldrig alls efter sin första ursprungliga publicering",
+      "Uppdateringar av klassifikationerna görs enbart av rent estetiska skäl",
+      "Uppdateringar av klassifikationerna sker enbart en gång vart femtionde år"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7929,9 +7929,9 @@
     "prompt": "Vad kallas det praktiska IT-stöd (sökverktyg/kodlexikon) som ofta används i journalsystem för att slå upp rätt ICD-10- eller KVÅ-kod?",
     "correct": "Kodverk/kodlexikon integrerat i journalsystemet",
     "distractors": [
-      "Anamnesmall",
-      "Remissmall",
-      "Epikrismall"
+      "Anamnesmallen som används vid patientens första besök hos läkaren",
+      "Remissmallen som skickas mellan olika vårdgivare i systemet",
+      "Epikrismallen som skrivs vid patientens utskrivning från vården"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7943,9 +7943,9 @@
     "prompt": "Varför räcker det ofta inte att bara söka på ett enda svenskt ord i ett kodverktyg för att hitta rätt diagnoskod?",
     "correct": "Samma tillstånd kan beskrivas med flera synonymer eller den latinska/grekiska fackterm som läkaren använt, så sökningen kan behöva göras på flera sätt",
     "distractors": [
-      "Kodverktyg innehåller aldrig svenska ord",
-      "Det finns alltid exakt en unik sökterm för varje diagnos",
-      "Sökfunktionen fungerar aldrig i praktiken"
+      "Kodverktyget innehåller aldrig alls några svenska ord i sin databas",
+      "Det finns alltid exakt en enda unik sökterm för varje given diagnos",
+      "Sökfunktionen i kodverktyget fungerar aldrig i praktiken för sekreterare"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7957,9 +7957,9 @@
     "prompt": "Varför är det värdefullt att en medicinsk sekreterare kan känna igen både den svenska och den latinska termen för en diagnos vid kodningsarbete (koppling till de tidigare ämnena i utbildningen)?",
     "correct": "Läkarens diktat använder ofta facktermen, medan kodverktyget kan vara sökbart på både fackterm och den svenska beskrivningen",
     "distractors": [
-      "Latinska termer förekommer aldrig i diagnostexter",
-      "Kodverktyg är alltid enbart sökbara på engelska",
-      "Denna koppling saknar praktisk relevans"
+      "Latinska facktermer förekommer aldrig alls i läkares diktat eller journaltexter",
+      "Kodverktyg är alltid enbart sökbara på engelska, aldrig på svenska",
+      "Denna koppling mellan fackterm och svensk term saknar all praktisk relevans"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7971,9 +7971,9 @@
     "prompt": "Vad innebär \"bokstavsmässig\" skillnad mellan en KVÅ-kod och en ICD-10-kod som kan förväxlas av en ovan användare?",
     "correct": "Båda kan inledas med en bokstav följt av siffror, men de tillhör helt olika kodsystem med olika betydelse trots ytligt liknande format",
     "distractors": [
-      "De är alltid identiska i format och betydelse",
-      "KVÅ-koder innehåller aldrig bokstäver",
-      "ICD-10-koder innehåller aldrig bokstäver"
+      "De är alltid helt identiska både i format och i faktisk betydelse",
+      "KVÅ-koder innehåller aldrig några bokstäver i sin kodstruktur alls",
+      "ICD-10-koder innehåller aldrig några bokstäver i sin kodstruktur alls"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7985,9 +7985,9 @@
     "prompt": "Vad kallas den handling där en patient (eller vårdnadshavare) har rätt att begära ut information om vilka uppgifter, inklusive diagnoskoder, som registrerats om dem?",
     "correct": "Registerutdrag/journalutlämnande enligt patientdatalagen",
     "distractors": [
-      "Remiss",
-      "Epikris",
-      "KVÅ-kodning"
+      "En vanlig remiss som skickas mellan olika vårdgivare",
+      "En epikris som skrivs vid patientens utskrivning",
+      "KVÅ-kodning av de åtgärder som utförts under vårdtillfället"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -8013,9 +8013,9 @@
     "prompt": "Vad kallas den situation där en patient har flera samtidiga sjukdomar (t.ex. diabetes och hjärtsvikt) som alla behöver registreras vid ett vårdtillfälle?",
     "correct": "Multisjuklighet/komorbiditet, som ofta ger flera bidiagnoser",
     "distractors": [
-      "Differentialdiagnostik",
-      "Yttre orsak",
-      "Z-kodning"
+      "Differentialdiagnostik, att väga flera möjliga diagnoser mot varandra",
+      "En yttre orsak till en skada, exempelvis en olycka",
+      "Z-kodning som används vid enkla hälsokontroller"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -8027,9 +8027,9 @@
     "prompt": "Hur påverkar komorbiditet (flera samtidiga sjukdomar) kodningsarbetet vid ett vårdtillfälle?",
     "correct": "Fler bidiagnoser kan behöva registreras utöver huvuddiagnosen för att ge en rättvisande bild av patientens totala hälsotillstånd",
     "distractors": [
-      "Endast huvuddiagnosen registreras någonsin, oavsett antal sjukdomar",
-      "Komorbiditet kan aldrig kodas i ICD-10",
-      "Alla samtidiga sjukdomar slås alltid ihop till en enda kod"
+      "Endast huvuddiagnosen registreras någonsin, oavsett hur många sjukdomar patienten har",
+      "Komorbiditet kan aldrig alls kodas inom ramen för ICD-10-systemet",
+      "Alla samtidiga sjukdomar slås alltid samman till en enda gemensam kod"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -8055,9 +8055,9 @@
     "prompt": "Varför ska en misstänkt men inte bekräftad diagnos hanteras varsamt vid kodning (t.ex. inte kodas som en säker diagnos)?",
     "correct": "En obekräftad misstanke som kodas som säker diagnos kan ge en felaktig, potentiellt stigmatiserande eller medicinskt missvisande journalhistorik",
     "distractors": [
-      "Misstänkta diagnoser ska alltid kodas exakt som bekräftade diagnoser",
-      "Det saknar betydelse hur osäkra diagnoser hanteras",
-      "Alla diagnoser är per definition säkra så snart de nämns i journalen"
+      "Misstänkta diagnoser ska alltid kodas exakt som om de vore fullt bekräftade",
+      "Det saknar all betydelse hur osäkra, obekräftade diagnoser hanteras i journalen",
+      "Alla diagnoser räknas som säkra så fort de överhuvudtaget nämns i journalen"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -8069,9 +8069,9 @@
     "prompt": "Vad kan symtomkoder (t.ex. från kapitlet R00–R99) användas till när en säker diagnos ännu inte kunnat ställas?",
     "correct": "De kan registreras som huvuddiagnos i väntan på vidare utredning, t.ex. \"bröstsmärta UNS\" istället för en förhastad specifik diagnos",
     "distractors": [
-      "Symtomkoder får aldrig användas som huvuddiagnos",
-      "Symtomkoder ersätter alltid KVÅ-koder",
-      "Symtomkoder används enbart för yttre orsaker"
+      "Symtomkoder får aldrig alls användas som huvuddiagnos i något sammanhang",
+      "Symtomkoder ersätter alltid KVÅ-koderna helt och hållet i systemet",
+      "Symtomkoder används enbart för att beskriva yttre orsaker till skador"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -8097,9 +8097,9 @@
     "prompt": "Hur kan kodningen skilja sig åt mellan ett akut nyinsjuknande och ett planerat uppföljningsbesök för samma grundsjukdom?",
     "correct": "Vid uppföljning kan en Z-kod eller en kod som markerar kontrollbesök användas i kombination med grunddiagnosen, medan akutbesöket kodas mer direkt efter det akuta tillståndet",
     "distractors": [
-      "Det finns aldrig någon skillnad i kodningsprinciper",
-      "Uppföljningsbesök kodas alltid identiskt med det första akuta besöket",
-      "Endast akuta besök kodas någonsin"
+      "Det finns aldrig någon som helst skillnad i kodningsprinciper mellan besökstyperna",
+      "Uppföljningsbesök kodas alltid helt identiskt med det allra första akuta besöket",
+      "Endast akuta förstagångsbesök kodas någonsin i journalsystemet"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -8125,9 +8125,9 @@
     "prompt": "Varför är det viktigt att en medicinsk sekreterare har grundläggande kunskap om organsystemens sv/latin-terminologi (från tidigare ämnen) när ICD-10-koder ska slås upp?",
     "correct": "Sökning i kodverket underlättas avsevärt om man känner igen vilket organsystem/sjukdomsgrupp en fackterm hör till, vilket snabbar upp och kvalitetssäkrar kodvalet",
     "distractors": [
-      "Organsystemens terminologi saknar koppling till kodningsarbetet",
-      "ICD-10-koder är alltid sökbara enbart på kodnummer utan text",
-      "Kodning kräver ingen anatomisk eller terminologisk förförståelse"
+      "Organsystemens terminologi saknar all koppling till det praktiska kodningsarbetet",
+      "ICD-10-koder är alltid sökbara enbart på kodnummer, aldrig på fritext",
+      "Kodning kräver ingen som helst anatomisk eller terminologisk förförståelse alls"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -8139,9 +8139,9 @@
     "prompt": "Vad innebär \"multiaxial\" klassificering som princip i vissa delar av ICD-10 (t.ex. inom barn- och ungdomspsykiatrin)?",
     "correct": "Att flera olika aspekter av ett tillstånd kodas parallellt på olika \"axlar\" istället för med en enda kod",
     "distractors": [
-      "Att endast en enda kod någonsin används oavsett sammanhang",
-      "Ett begrepp som enbart gäller kirurgisk kodning",
-      "Ett begrepp som ersätter hela ICD-10-systemet"
+      "Att endast en enda kod någonsin används, oavsett hur komplext sammanhanget är",
+      "Ett begrepp som enbart gäller vid ren kirurgisk kodning i KVÅ-systemet",
+      "Ett begrepp som helt ersätter hela ICD-10-systemet i sin helhet"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -8181,9 +8181,9 @@
     "prompt": "Vad kallas den grundläggande skillnaden mellan en \"kod\" och en \"klassifikation\" i detta sammanhang?",
     "correct": "En kod är den enskilda beteckningen, medan en klassifikation är hela det strukturerade systemet av koder och kategorier",
     "distractors": [
-      "Termerna är fullständigt utbytbara utan skillnad",
-      "En klassifikation är alltid kortare än en enskild kod",
-      "Koder existerar oberoende av alla klassifikationssystem"
+      "Termerna är fullständigt utbytbara sinsemellan utan någon egentlig skillnad alls",
+      "En klassifikation är alltid kortare i sin helhet än en enskild kod",
+      "Koder existerar helt oberoende av alla klassifikationssystem som helhet"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -8195,9 +8195,9 @@
     "prompt": "Vad kallas den övergripande arbetsuppgiften att sammanställa och kvalitetssäkra en patients samlade diagnos- och åtgärdshistorik inför t.ex. en försäkringsmedicinsk bedömning?",
     "correct": "Journalsammanställning/kodgranskning inför bedömning",
     "distractors": [
-      "Triagering",
-      "Anamnesupptagning",
-      "Remissbedömning"
+      "Triagering av patienter",
+      "Anamnesupptagning av läkare",
+      "Remissbedömning av vårdgivare"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -8209,9 +8209,9 @@
     "prompt": "Varför samarbetar medicinska sekreterare ofta nära med läkare och vårdadministrativ personal kring kodningsfrågor, snarare än att arbeta helt isolerat?",
     "correct": "Korrekt kodning kräver både medicinsk sakkunskap och administrativ/kodningsteknisk kompetens, vilket gör samarbete nödvändigt",
     "distractors": [
-      "Kodning är en uppgift som alltid sköts helt automatiskt utan mänsklig inblandning",
-      "Läkare ansvarar aldrig för underlaget till kodningen",
-      "Sekreterare arbetar alltid helt utan kontakt med övrig vårdpersonal"
+      "Kodning är en uppgift som alltid sköts helt automatiskt utan mänsklig inblandning alls",
+      "Läkare ansvarar aldrig alls för det medicinska underlaget till kodningen",
+      "Sekreterare arbetar alltid helt isolerat utan någon kontakt med övrig vårdpersonal"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -8223,9 +8223,9 @@
     "prompt": "Vad innebär det praktiskt att \"koda efter journalen, inte efter minnet\", en grundregel inom kodningsarbete?",
     "correct": "Kodvalet ska alltid grunda sig på vad som faktiskt står dokumenterat i patientens journal för det aktuella tillfället, inte på vad sekreteraren minns eller antar från tidigare besök",
     "distractors": [
-      "Journalen är irrelevant, kodning baseras på muntliga uppgifter",
-      "Minnet av tidigare vårdtillfällen ska alltid väga tyngre än aktuell dokumentation",
-      "Regeln gäller enbart vid psykiatriska diagnoser"
+      "Journalen är helt irrelevant, kodningen ska istället baseras på muntliga uppgifter",
+      "Minnet av tidigare vårdtillfällen ska alltid väga tyngre än aktuell journaldokumentation",
+      "Regeln om att koda efter journalen gäller enbart vid rent psykiatriska diagnoser"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -8237,9 +8237,9 @@
     "prompt": "Vad kan vara en lämplig första åtgärd om en medicinsk sekreterare upptäcker att en tidigare registrerad kod verkar felaktig i efterhand?",
     "correct": "Följa verksamhetens rutin för rättelse, vilket ofta innebär att stämma av med ansvarig läkare innan koden korrigeras",
     "distractors": [
-      "Ändra koden direkt på eget bevåg utan att informera någon",
-      "Lämna den felaktiga koden orörd för alltid",
-      "Radera hela journalanteckningen"
+      "Att ändra koden direkt på eget bevåg utan att informera någon annan alls",
+      "Att lämna den felaktiga koden helt orörd i journalen för alltid",
+      "Att radera hela den ursprungliga journalanteckningen istället för att rätta koden"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -8251,9 +8251,9 @@
     "prompt": "Vad kallas det breda samlingsbegreppet för allt arbete som handlar om att omvandla klinisk information till strukturerade, sökbara koder för uppföljning, ersättning och statistik?",
     "correct": "Medicinsk klassificering och kodning",
     "distractors": [
-      "Anamnesupptagning",
-      "Perkussion",
-      "Auskultation"
+      "Anamnesupptagning av patienten",
+      "Perkussion vid undersökning",
+      "Auskultation med stetoskop"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -8307,9 +8307,9 @@
     "prompt": "Varför har ögon- respektive öronsjukdomar egna kapitel (H00–H59 och H60–H95) skilda från det allmänna nervsystemskapitlet (G00–G99) i ICD-10, trots att syn och hörsel är sinnesfunktioner kopplade till nervsystemet?",
     "correct": "ICD-10:s kapitelindelning följer i hög grad organsystem/anatomisk lokalisation snarare än enbart funktionell koppling, så öga och öra får egna kapitel",
     "distractors": [
-      "Ögon- och öronsjukdomar kodas aldrig i praktiken",
-      "Kapitelindelningen är helt slumpmässig utan någon systematik",
-      "H-kapitlen avser uteslutande hudsjukdomar"
+      "Ögon- och öronsjukdomar kodas aldrig alls i den praktiska sjukvårdsverksamheten",
+      "ICD-10:s kapitelindelning är helt slumpmässig utan någon underliggande systematik",
+      "H-kapitlen i ICD-10 avser uteslutande olika typer av hudsjukdomar"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -8335,9 +8335,9 @@
     "prompt": "Vad innebär det att vissa KVÅ-koder är kopplade till specifika ersättningsnivåer inom en region eller ett landsting?",
     "correct": "Utförda åtgärder som kodas korrekt kan ligga till grund för hur mycket vårdgivaren ersätts ekonomiskt för det utförda arbetet",
     "distractors": [
-      "KVÅ-koder har aldrig någon koppling till ekonomisk ersättning",
-      "Ersättning baseras uteslutande på patientens ålder",
-      "Alla KVÅ-koder ger alltid identisk ersättning oavsett åtgärd"
+      "KVÅ-koder har aldrig alls någon koppling till den ekonomiska ersättningen",
+      "Ersättningen till vårdgivaren baseras uteslutande på patientens ålder",
+      "Alla KVÅ-koder ger alltid exakt identisk ersättning oavsett vilken åtgärd som utförts"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -8349,9 +8349,9 @@
     "prompt": "Vad bör en medicinsk sekreterare vara särskilt uppmärksam på när en patient bytt vårdgivare och tidigare journaluppgifter/koder ska sammanställas?",
     "correct": "Att skilja på vad som är historisk information och vad som är aktuellt för det pågående vårdtillfället, för att undvika felaktig sammanblandning",
     "distractors": [
-      "All historisk information ska alltid raderas vid vårdgivarbyte",
-      "Endast den senaste koden någonsin är relevant, oavsett sammanhang",
-      "Tidigare vårdgivares kodning är alltid irrelevant"
+      "All historisk information ska alltid raderas helt vid ett vårdgivarbyte",
+      "Endast den allra senaste koden är någonsin relevant, oavsett sammanhang",
+      "Tidigare vårdgivares kodning är alltid fullständigt irrelevant för den nya vårdgivaren"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -8391,9 +8391,9 @@
     "prompt": "Vad kallas den handling där flera olika yrkesgrupper (läkare, sekreterare, verksamhetschef) tillsammans går igenom och förbättrar rutinerna för diagnos- och åtgärdskodning på en klinik?",
     "correct": "Kodningsronder/kvalitetsuppföljning av kodning",
     "distractors": [
-      "Anamnesupptagning",
-      "Triagering",
-      "Remissgranskning"
+      "Anamnesupptagning av patienten",
+      "Triagering på akuten",
+      "Remissgranskning av vårdgivare"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",

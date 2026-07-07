@@ -593,7 +593,7 @@
     "id": "studier_q47",
     "type": "mc",
     "prompt": "Vad händer med det syrefattiga blodet när det passerar lungkretsloppet?",
-    "correct": "Syrefattigt blod flödar in i lungkapillärerna där syre diffunderar in i blodet och koldioxid diffunderar ut, varvid blodet syresätts och återvänder via lungvenerna till vänster förmak.",
+    "correct": "Syrefattigt blod flödar in i lungkapillärerna där syre diffunderar in och koldioxid ut, varvid blodet syresätts och återvänder via lungvenerna till vänster förmak.",
     "distractors": [
       "Syrefattigt blod pumpas direkt till kroppens organ via aorta utan att passera lungorna, och syresätts istället av leverns metabola processer."
     ],
@@ -927,7 +927,7 @@
     "id": "studier_q73",
     "type": "mc",
     "prompt": "Vad är en synaps?",
-    "correct": "Kontaktställe mellan nervcellen och andra celler",
+    "correct": "Kontaktställe mellan nervceller",
     "distractors": [
       "En aktionspotential",
       "Ett neuronalt nätverk",
@@ -1358,7 +1358,7 @@
     "id": "studier_q108",
     "type": "mc",
     "prompt": "Hur ser rekommendationerna för aerob fysisk aktivitet ut för vuxna från 18 år och uppåt?",
-    "correct": "Minst 150–300 minuter per vecka med måttlig intensitet, eller 75–150 minuter per vecka med hög intensitet, samt muskelstärkande aktivitet minst 2 dagar per vecka.",
+    "correct": "Minst 150–300 min/vecka måttlig intensitet, eller 75–150 min/vecka hög intensitet, samt muskelstärkande träning minst 2 dagar/vecka.",
     "distractors": [
       "Minst 60 minuter daglig fysisk aktivitet med hög intensitet varje dag i veckan, utan specifika krav på muskelstärkande träning."
     ],
@@ -1749,7 +1749,7 @@
     "id": "studier_q139",
     "type": "mc",
     "prompt": "Var i hjärnan är thalamus belägen?",
-    "correct": "I diencephalon, centralt i hjärnan",
+    "correct": "I diencephalon",
     "distractors": [
       "I lobus frontalis",
       "I cerebellum",
@@ -1918,11 +1918,11 @@
     "id": "studier_q152",
     "type": "mc",
     "prompt": "Vilket av följande ben är ett kortben (os breve)?",
-    "correct": "Os scaphoideum",
+    "correct": "Os scaphoideum i handloven",
     "distractors": [
-      "Humerus",
-      "Scapula",
-      "Sternum"
+      "Humerus, ett långt rörben",
+      "Scapula, ett platt ben",
+      "Sternum, ett platt ben"
     ],
     "topic": "studier_osteologi",
     "difficulty": "Normal"
@@ -2035,7 +2035,7 @@
     "id": "studier_q161",
     "type": "mc",
     "prompt": "Vad är en aktionspotential?",
-    "correct": "En snabb elektrisk impuls längs nervfibern som uppstår vid depolarisation och repolarisation av cellmembranet",
+    "correct": "En snabb elektrisk impuls längs nervfibern vid depolarisation",
     "distractors": [
       "En synaptisk koppling mellan neuroner",
       "En myelinskida runt axonet",
@@ -2061,7 +2061,7 @@
     "id": "studier_q163",
     "type": "mc",
     "prompt": "Vad är telomerer och varför är de relevanta för biologiskt åldrande?",
-    "correct": "Skyddande sekvenser i ändarna på kromosomerna som förkortas vid varje celldelning och bidrar till åldringsprocessen",
+    "correct": "Skyddande DNA-sekvenser i kromosomernas ändar som förkortas vid celldelning",
     "distractors": [
       "Enzymer som reparerar DNA-skador och förhindrar åldrande",
       "Mitokondriella proteiner som producerar energi",
@@ -2189,7 +2189,7 @@
     "id": "studier_q173",
     "type": "mc",
     "prompt": "Vad är myokiner?",
-    "correct": "Signalmolekyler som frisätts av muskelvävnad vid kontraktion och har positiva effekter på bl.a. metabolism och inflammation",
+    "correct": "Signalmolekyler som frisätts av muskelvävnad vid kontraktion",
     "distractors": [
       "Enzymer som bryter ned muskelfibrer",
       "Hormoner som produceras i binjurarna",
@@ -2304,7 +2304,7 @@
     "id": "studier_q182",
     "type": "mc",
     "prompt": "Vad är en neurotransmittor (transmittorsubstans)?",
-    "correct": "En kemisk signalmolekyl som frisätts i synapsen och förmedlar nervsignalen till nästa cell eller målvävnad",
+    "correct": "En kemisk signalmolekyl som förmedlar nervsignalen i synapsen",
     "distractors": [
       "En elektrisk impuls längs axonet",
       "En myelinskida som omger nervfibern",
@@ -2421,7 +2421,7 @@
     "id": "studier_q191",
     "type": "mc",
     "prompt": "Vad kallas den skillnad i funktion som finns mellan intrinsiska och extrinsiska muskler i handen?",
-    "correct": "Intrinsiska muskler har ursprung och fäste i handen, medan extrinsiska muskler har ursprung i underarmen och fäste i handen",
+    "correct": "Intrinsiska muskler har ursprung och fäste i handen, extrinsiska i underarmen",
     "distractors": [
       "Intrinsiska muskler innerveras av N. radialis, extrinsiska av N. medianus",
       "Intrinsiska muskler flekterar, extrinsiska extenderar alltid",
@@ -2447,7 +2447,7 @@
     "id": "studier_q193",
     "type": "mc",
     "prompt": "Vad kallas den process vid vilken osteoblaster omvandlas till osteocyter?",
-    "correct": "De inneslutas i den nybildade benmatrixen och övergår till osteocyter som upprätthåller vävnaden",
+    "correct": "De inneslutas i benmatrixen och övergår till osteocyter",
     "distractors": [
       "De apoptoserar",
       "De omvandlas till osteoklaster för att bryta ner äldre ben",
@@ -2629,9 +2629,9 @@
     "prompt": "Vilken ytterligare faktor påverkar belastningen på nacke och rygg i arbetet?",
     "correct": "Varaktigheten av statisk arbetsställning och tyngden som hålls",
     "distractors": [
-      "Arbetskollegornas antal",
-      "Kontorsstolens färg",
-      "Arbetsplatsens geografiska läge"
+      "Arbetskollegornas antal i rummet",
+      "Kontorsstolens färg och design",
+      "Arbetsplatsens geografiska läge i landet"
     ],
     "topic": "studier_ergonomi",
     "id": "studier_q207",
@@ -3149,7 +3149,7 @@
   },
   {
     "prompt": "Vad är skillnaden mellan dynamiskt och statiskt muskelarbete?",
-    "correct": "Vid dynamiskt muskelarbete växlar muskeln mellan kontraktion och avslappning och skapar rörelse; vid statiskt arbete kontraherar muskeln och genererar kraft utan att rörelse sker.",
+    "correct": "Dynamiskt arbete växlar mellan kontraktion och avslappning och skapar rörelse; statiskt arbete kontraherar utan rörelse.",
     "distractors": [
       "Vid dynamiskt muskelarbete kontraherar muskeln utan rörelse; vid statiskt arbete växlar muskeln för att skapa rörelse."
     ],
@@ -3343,9 +3343,9 @@
     "prompt": "Vilka rörelser kan utföras i articulatio glenohumerale (axelleden)?",
     "correct": "Flexion, extension, abduktion, adduktion, inåtrotation, utåtrotation och cirkumduktion",
     "distractors": [
-      "Flexion och extension enbart",
-      "Flexion, extension och rotation enbart",
-      "Supination och pronation"
+      "Flexion och extension enbart, utan andra rörelser i leden",
+      "Flexion, extension och rotation enbart, inget annat",
+      "Endast supination och pronation, inga andra rörelser"
     ],
     "topic": "studier_led",
     "id": "studier_q266",
@@ -3380,7 +3380,7 @@
   },
   {
     "prompt": "Var har m. trapezius sitt ursprung?",
-    "correct": "Protuberantia occipitalis externa, ligamentum nuchae och spinae vertebrarum C7–T12",
+    "correct": "Occipitalbenet och ligamentum nuchae",
     "distractors": [
       "Clavicula och acromion",
       "Fossa supraspinata scapulae",
@@ -3964,9 +3964,9 @@
     "prompt": "Vilken daglig aktivitet kan vara svår om man inte kan palmarabducera tummen?",
     "correct": "Greppa om en kaffekopp eller ett dricksglas",
     "distractors": [
-      "Gå i trappor",
-      "Läsa en text",
-      "Knyta skoband"
+      "Gå uppför en trappa utan stöd",
+      "Läsa en text högt för någon",
+      "Knyta skoband på båda skorna"
     ],
     "topic": "studier_hand",
     "id": "studier_q316",

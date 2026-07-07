@@ -87,7 +87,7 @@
     "id": "lkr_f7",
     "type": "mc",
     "prompt": "Vad menas med ett läkemedels \"styrka\"?",
-    "correct": "mängden aktiv substans per enhet, t.ex. per tablett eller per ml",
+    "correct": "mängden aktiv substans per enhet",
     "distractors": [
       "den totala mängden i förpackningen",
       "hur snabbt läkemedlet verkar",
@@ -101,7 +101,7 @@
     "id": "lkr_f8",
     "type": "mc",
     "prompt": "Vad menas med \"dos\" (dosvolym) i läkemedelsräkning?",
-    "correct": "den volym läkemedel som ska ges, t.ex. antal ml eller tabletter",
+    "correct": "den volym läkemedel som ska ges",
     "distractors": [
       "mängden aktiv substans per ml",
       "läkemedlets hållbarhetstid",
@@ -171,7 +171,7 @@
     "id": "lkr_f13",
     "type": "mc",
     "prompt": "Vad betyder förkortningen \"i.v.\" i en ordination?",
-    "correct": "intravenöst – i en ven",
+    "correct": "intravenöst",
     "distractors": [
       "i en muskel",
       "under huden",
@@ -199,7 +199,7 @@
     "id": "lkr_f15",
     "type": "mc",
     "prompt": "Vad betyder förkortningen \"i.m.\" i en ordination?",
-    "correct": "intramuskulärt – i en muskel",
+    "correct": "intramuskulärt",
     "distractors": [
       "intravenöst",
       "subkutant",
@@ -353,7 +353,7 @@
     "id": "lkr_f26",
     "type": "mc",
     "prompt": "Varför bör man inte avrunda i mellanstegen av en läkemedelsberäkning?",
-    "correct": "avrundningsfel kan byggas på och göra slutsvaret felaktigt – avrunda sist",
+    "correct": "avrundningsfel byggs på och gör slutsvaret felaktigt",
     "distractors": [
       "det går snabbare att avrunda tidigt",
       "mellansvaren ska alltid vara heltal",
@@ -423,7 +423,7 @@
     "id": "lkr_f31",
     "type": "mc",
     "prompt": "Vad betyder \"enteral\" tillförsel av läkemedel?",
-    "correct": "via mag–tarmkanalen, t.ex. via munnen eller sond",
+    "correct": "via mag-tarmkanalen",
     "distractors": [
       "direkt i blodbanan",
       "genom huden",
@@ -437,7 +437,7 @@
     "id": "lkr_f32",
     "type": "mc",
     "prompt": "Vad betyder \"parenteral\" tillförsel av läkemedel?",
-    "correct": "förbi mag–tarmkanalen, t.ex. via injektion eller infusion",
+    "correct": "förbi mag-tarmkanalen",
     "distractors": [
       "via munnen",
       "via ändtarmen",
@@ -521,7 +521,7 @@
     "id": "lkr_f38",
     "type": "mc",
     "prompt": "Vad menas med \"beredningsform\"?",
-    "correct": "läkemedlets fysiska form, t.ex. tablett, kapsel, lösning eller salva",
+    "correct": "läkemedlets fysiska form",
     "distractors": [
       "mängden aktiv substans per enhet",
       "tidpunkten då läkemedlet bereds",
@@ -691,9 +691,9 @@
     "prompt": "Vilket av följande är en av de \"rätta\" kontrollerna inför läkemedelsadministrering?",
     "correct": "rätt patient, rätt läkemedel, rätt dos, rätt tid och rätt administreringssätt",
     "distractors": [
-      "rätt färg, rätt smak och rätt förpackning",
-      "rätt veckodag och rätt rumstemperatur",
-      "rätt tillverkare och rätt pris"
+      "rätt färg, rätt smak, rätt förpackning och rätt lukt",
+      "rätt veckodag, rätt rumstemperatur och rätt belysning",
+      "rätt tillverkare, rätt pris och rätt lagerhylla"
     ],
     "topic": "lakemedelsrakning",
     "difficulty": "Normal",

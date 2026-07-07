@@ -185,7 +185,7 @@
     "id": "q14",
     "type": "mc",
     "prompt": "Vad menas med att en led är tvåaxlad, som handleden?",
-    "correct": "Den kan röras i två plan men inte roteras fritt åt alla håll",
+    "correct": "Den kan röras i två plan",
     "distractors": [
       "Den har två ledhuvuden",
       "Den kan bara böjas",
@@ -215,9 +215,9 @@
     "prompt": "Vad är gemensamt för synovialleder (äkta leder)?",
     "correct": "De har ledbrosk, ledkapsel och ledvätska och är rörliga",
     "distractors": [
-      "De saknar ledvätska",
-      "De är helt orörliga",
-      "De är hopväxta med ben"
+      "De saknar ledvätska, ledbrosk och ledkapsel",
+      "De är helt orörliga och saknar ledhålighet",
+      "De är hopväxta med angränsande ben utan ledspalt"
     ],
     "topic": "ledtyper_synovial",
     "difficulty": "Normal",
@@ -269,7 +269,7 @@
     "id": "q20",
     "type": "mc",
     "prompt": "Vad är ledbroskets uppgift i en led?",
-    "correct": "Gör att benens ytor lätt glider mot varandra utan att slitas",
+    "correct": "Gör att benens ytor glider lätt mot varandra",
     "distractors": [
       "Producerar blodceller",
       "Håller ihop benen som ett band",
@@ -285,9 +285,9 @@
     "prompt": "Vad gör ledkapseln?",
     "correct": "Sitter runt hela leden och håller ledvätskan på plats",
     "distractors": [
-      "Producerar röda blodkroppar",
-      "Sträcker ut leden",
-      "Förbinder muskeln med benet"
+      "Producerar röda blodkroppar i benmärgen",
+      "Sträcker ut leden maximalt vid varje rörelse",
+      "Förbinder muskeln direkt med benet utan sena"
     ],
     "topic": "ledtyper_synovial",
     "difficulty": "Normal",
@@ -577,7 +577,7 @@
     "id": "q42",
     "type": "mc",
     "prompt": "Vilken rörelse möjliggör atlantoaxialleden (vridled) i nacken?",
-    "correct": "Att vrida huvudet i sidled, som när man skakar på huvudet",
+    "correct": "Att vrida huvudet i sidled",
     "distractors": [
       "Att böja huvudet framåt",
       "Att glida i sidled",
@@ -621,9 +621,9 @@
     "prompt": "Vilka rörelser tillåter höftleden som kulled?",
     "correct": "Böjning, sträckning, abduktion, adduktion och rotation",
     "distractors": [
-      "Endast böjning",
-      "Endast vridning",
-      "Endast glidning"
+      "Endast böjning och sträckning, inga andra rörelser",
+      "Endast vridning kring en fast axel, inget annat",
+      "Endast glidande rörelse mellan ledytorna, inget annat"
     ],
     "topic": "ledtyper_rorelse",
     "difficulty": "Normal",
@@ -703,7 +703,7 @@
     "id": "q51",
     "type": "mc",
     "prompt": "Varför kan du röra armen åt alla håll i axelleden men bara böja och sträcka i armbågen?",
-    "correct": "Axelleden är en kulled medan armbågens gångjärnsled bara tillåter rörelse i en riktning",
+    "correct": "Axelleden är en kulled, armbågen en gångjärnsled",
     "distractors": [
       "Båda är kulleder",
       "Axelleden är en gångjärnsled",
