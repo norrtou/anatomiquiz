@@ -7,7 +7,7 @@
     "distractors": [
       "djup",
       "närmare bålen",
-      "nedre (hela kroppen)"
+      "nedre"
     ],
     "topic": "medicinsk_latin",
     "difficulty": "Normal",
@@ -48,7 +48,7 @@
     "correct": "nedåtgående",
     "distractors": [
       "ytlig",
-      "främre (hela kroppen)",
+      "främre",
       "utåtledande"
     ],
     "topic": "medicinsk_latin",
@@ -61,8 +61,8 @@
     "prompt": "Vad betyder den medicinska termen \"medial\"?",
     "correct": "åt mitten",
     "distractors": [
-      "övre (inom bålen)",
-      "nedre (hela kroppen)",
+      "övre",
+      "nedre",
       "båda sidor"
     ],
     "topic": "medicinsk_latin",
@@ -90,7 +90,7 @@
     "correct": "motsatt sida",
     "distractors": [
       "åt höger",
-      "nedre (hela kroppen)",
+      "nedre",
       "närmare bålen"
     ],
     "topic": "medicinsk_latin",
@@ -104,8 +104,8 @@
     "correct": "båda sidor",
     "distractors": [
       "motsatt sida",
-      "främre (inom bålen)",
-      "övre (inom bålen)"
+      "främre",
+      "övre"
     ],
     "topic": "medicinsk_latin",
     "difficulty": "Normal",
@@ -119,7 +119,7 @@
     "distractors": [
       "åt mitten",
       "tumsidan",
-      "främre (inom bålen)"
+      "främre"
     ],
     "topic": "medicinsk_latin",
     "difficulty": "Normal",
@@ -133,7 +133,7 @@
     "distractors": [
       "tumsidan",
       "ytlig",
-      "främre (hela kroppen)"
+      "främre"
     ],
     "topic": "medicinsk_latin",
     "difficulty": "Normal",
@@ -143,7 +143,7 @@
     "id": "medlatin_q11",
     "type": "mc",
     "prompt": "Vad betyder den medicinska termen \"superior\"?",
-    "correct": "övre (hela kroppen)",
+    "correct": "övre",
     "distractors": [
       "motsatt sida",
       "båda sidor",
@@ -157,11 +157,11 @@
     "id": "medlatin_q12",
     "type": "mc",
     "prompt": "Vad betyder den medicinska termen \"inferior\"?",
-    "correct": "nedre (hela kroppen)",
+    "correct": "nedre",
     "distractors": [
       "motsatt sida",
       "inåtledande",
-      "övre (inom bålen)"
+      "övre"
     ],
     "topic": "medicinsk_latin",
     "difficulty": "Normal",
@@ -171,9 +171,9 @@
     "id": "medlatin_q13",
     "type": "mc",
     "prompt": "Vad betyder den medicinska termen \"cranial\"?",
-    "correct": "övre (inom bålen)",
+    "correct": "övre",
     "distractors": [
-      "nedre (hela kroppen)",
+      "nedre",
       "tumsidan",
       "åt vänster"
     ],
@@ -185,11 +185,11 @@
     "id": "medlatin_q14",
     "type": "mc",
     "prompt": "Vad betyder den medicinska termen \"caudal\"?",
-    "correct": "nedre (inom bålen)",
+    "correct": "nedre inom bålen",
     "distractors": [
-      "främre (hela kroppen)",
+      "främre hela kroppen",
       "ytlig",
-      "främre (inom bålen)"
+      "främre inom bålen"
     ],
     "topic": "medicinsk_latin",
     "difficulty": "Normal",
@@ -199,10 +199,10 @@
     "id": "medlatin_q15",
     "type": "mc",
     "prompt": "Vad betyder den medicinska termen \"anterior\"?",
-    "correct": "främre (hela kroppen)",
+    "correct": "främre",
     "distractors": [
       "tumsidan",
-      "övre (inom bålen)",
+      "övre",
       "lillfingersidan"
     ],
     "topic": "medicinsk_latin",
@@ -213,10 +213,10 @@
     "id": "medlatin_q16",
     "type": "mc",
     "prompt": "Vad betyder den medicinska termen \"posterior\"?",
-    "correct": "bakre (hela kroppen)",
+    "correct": "bakre",
     "distractors": [
       "lillfingersidan",
-      "främre (hela kroppen)",
+      "främre",
       "motsatt sida"
     ],
     "topic": "medicinsk_latin",
@@ -227,10 +227,10 @@
     "id": "medlatin_q17",
     "type": "mc",
     "prompt": "Vad betyder den medicinska termen \"ventral\"?",
-    "correct": "främre (inom bålen)",
+    "correct": "främre",
     "distractors": [
       "djup",
-      "övre (inom bålen)",
+      "övre",
       "tumsidan"
     ],
     "topic": "medicinsk_latin",
@@ -241,11 +241,11 @@
     "id": "medlatin_q18",
     "type": "mc",
     "prompt": "Vad betyder den medicinska termen \"dorsal\"?",
-    "correct": "bakre (inom bålen)",
+    "correct": "bakre",
     "distractors": [
       "motsatt sida",
       "lillfingersidan",
-      "nedre (inom bålen)"
+      "nedre"
     ],
     "topic": "medicinsk_latin",
     "difficulty": "Normal",
@@ -257,7 +257,7 @@
     "prompt": "Vad betyder den medicinska termen \"proximalt\"?",
     "correct": "närmare bålen",
     "distractors": [
-      "övre (inom bålen)",
+      "övre",
       "uppåtstigande",
       "åt höger"
     ],
@@ -271,7 +271,7 @@
     "prompt": "Vad betyder den medicinska termen \"distalt\"?",
     "correct": "längre bort från bålen",
     "distractors": [
-      "främre (hela kroppen)",
+      "främre",
       "båda sidor",
       "inåtledande"
     ],
@@ -285,8 +285,8 @@
     "prompt": "Vad betyder den medicinska termen \"radialt\"?",
     "correct": "tumsidan",
     "distractors": [
-      "bakre (hela kroppen)",
-      "övre (inom bålen)",
+      "bakre",
+      "övre",
       "åt mitten"
     ],
     "topic": "medicinsk_latin",
@@ -299,7 +299,7 @@
     "prompt": "Vad betyder den medicinska termen \"ulnart\"?",
     "correct": "lillfingersidan",
     "distractors": [
-      "nedre (inom bålen)",
+      "nedre",
       "båda sidor",
       "åt sidan"
     ],
@@ -313,7 +313,7 @@
     "prompt": "Vad betyder den medicinska termen \"profundus\"?",
     "correct": "djup",
     "distractors": [
-      "bakre (inom bålen)",
+      "bakre",
       "längre bort från bålen",
       "lillfingersidan"
     ],
@@ -329,7 +329,7 @@
     "distractors": [
       "närmare bålen",
       "inåtledande",
-      "nedre (hela kroppen)"
+      "nedre"
     ],
     "topic": "medicinsk_latin",
     "difficulty": "Normal",
@@ -635,7 +635,7 @@
     "prompt": "Vad betyder den medicinska termen \"extension\"?",
     "correct": "sträcka ut",
     "distractors": [
-      "förande mot kroppens mittlinje (medialt)",
+      "förande mot kroppens mittlinje",
       "böjer mot handflatan",
       "muskel som åstadkommer en rörelse"
     ],
@@ -661,7 +661,7 @@
     "id": "medlatin_q48",
     "type": "mc",
     "prompt": "Vad betyder den medicinska termen \"adduktion\"?",
-    "correct": "förande mot kroppens mittlinje (medialt)",
+    "correct": "förande mot kroppens mittlinje",
     "distractors": [
       "sträcka ut",
       "inåtvridning",
@@ -677,7 +677,7 @@
     "prompt": "Vad betyder den medicinska termen \"rotation\"?",
     "correct": "vridning",
     "distractors": [
-      "förande mot kroppens mittlinje (medialt)",
+      "förande mot kroppens mittlinje",
       "nervförsörjning",
       "sträcka ut"
     ],
@@ -720,7 +720,7 @@
     "correct": "böjer åt fotsulan",
     "distractors": [
       "medverkande, samverkande muskel",
-      "förande mot kroppens mittlinje (medialt)",
+      "förande mot kroppens mittlinje",
       "böjer mot handryggen"
     ],
     "topic": "medicinsk_latin",
@@ -748,7 +748,7 @@
     "correct": "utåtvridning",
     "distractors": [
       "medverkande, samverkande muskel",
-      "förande mot kroppens mittlinje (medialt)",
+      "förande mot kroppens mittlinje",
       "vridning"
     ],
     "topic": "medicinsk_latin",
@@ -762,7 +762,7 @@
     "correct": "inåtvridning",
     "distractors": [
       "böjer åt fotryggen",
-      "förande mot kroppens mittlinje (medialt)",
+      "förande mot kroppens mittlinje",
       "sträcka ut"
     ],
     "topic": "medicinsk_latin",
@@ -775,7 +775,7 @@
     "prompt": "Vad betyder den medicinska termen \"anus\"?",
     "correct": "ändtarmsöppning",
     "distractors": [
-      "muskler (plural)",
+      "muskler",
       "utskott",
       "båge"
     ],
@@ -789,9 +789,9 @@
     "prompt": "Vad betyder den medicinska termen \"apex\"?",
     "correct": "spets",
     "distractors": [
-      "ben (skelett)",
+      "ben",
       "ven",
-      "artärer (plural)"
+      "artärer"
     ],
     "topic": "medicinsk_latin",
     "difficulty": "Normal",
@@ -829,7 +829,7 @@
     "id": "medlatin_q60",
     "type": "mc",
     "prompt": "Vad betyder den medicinska termen \"arteriae\"?",
-    "correct": "artärer (plural)",
+    "correct": "artärer",
     "distractors": [
       "magsäcken",
       "spets",
@@ -875,7 +875,7 @@
     "distractors": [
       "ledhuvud",
       "bindvävshinna",
-      "kropp (cellkropp)"
+      "kropp"
     ],
     "topic": "medicinsk_latin",
     "difficulty": "Normal",
@@ -888,7 +888,7 @@
     "correct": "svans",
     "distractors": [
       "gång",
-      "ben (skelett)",
+      "ben",
       "märg"
     ],
     "topic": "medicinsk_latin",
@@ -929,7 +929,7 @@
     "prompt": "Vad betyder den medicinska termen \"corpus\"?",
     "correct": "kropp",
     "distractors": [
-      "vener (plural)",
+      "vener",
       "led",
       "brosk"
     ],
@@ -985,7 +985,7 @@
     "prompt": "Vad betyder den medicinska termen \"epicondylus\"?",
     "correct": "utbuktning på ledhuvudet",
     "distractors": [
-      "artärer (plural)",
+      "artärer",
       "bindvävshinna",
       "artär"
     ],
@@ -1029,7 +1029,7 @@
     "distractors": [
       "märg",
       "ihåligt rum i körtel eller kanal",
-      "nerver (plural)"
+      "nerver"
     ],
     "topic": "medicinsk_latin",
     "difficulty": "Normal",
@@ -1042,7 +1042,7 @@
     "correct": "körtel",
     "distractors": [
       "ihåligt rum i körtel eller kanal",
-      "kropp (cellkropp)",
+      "kropp",
       "hålrum"
     ],
     "topic": "medicinsk_latin",
@@ -1070,7 +1070,7 @@
     "correct": "ihåligt rum i körtel eller kanal",
     "distractors": [
       "märg",
-      "flera ben (skelett)",
+      "flera ben",
       "hål"
     ],
     "topic": "medicinsk_latin",
@@ -1099,7 +1099,7 @@
     "distractors": [
       "ledhuvud",
       "kanal",
-      "kropp (cellkropp)"
+      "kropp"
     ],
     "topic": "medicinsk_latin",
     "difficulty": "Normal",
@@ -1123,7 +1123,7 @@
     "id": "medlatin_q81",
     "type": "mc",
     "prompt": "Vad betyder den medicinska termen \"musculi\"?",
-    "correct": "muskler (plural)",
+    "correct": "muskler",
     "distractors": [
       "brosk",
       "bunt",
@@ -1151,7 +1151,7 @@
     "id": "medlatin_q83",
     "type": "mc",
     "prompt": "Vad betyder den medicinska termen \"nervi\"?",
-    "correct": "nerver (plural)",
+    "correct": "nerver",
     "distractors": [
       "utskott",
       "kärna",
@@ -1169,7 +1169,7 @@
     "distractors": [
       "fotknöl",
       "skiljevägg",
-      "artärer (plural)"
+      "artärer"
     ],
     "topic": "medicinsk_latin",
     "difficulty": "Normal",
@@ -1182,7 +1182,7 @@
     "correct": "mun",
     "distractors": [
       "båge",
-      "artärer (plural)",
+      "artärer",
       "kanal"
     ],
     "topic": "medicinsk_latin",
@@ -1193,7 +1193,7 @@
     "id": "medlatin_q86",
     "type": "mc",
     "prompt": "Vad betyder den medicinska termen \"os, ossis\"?",
-    "correct": "ben (skelett)",
+    "correct": "ben",
     "distractors": [
       "nerv",
       "kärl",
@@ -1207,9 +1207,9 @@
     "id": "medlatin_q87",
     "type": "mc",
     "prompt": "Vad betyder den medicinska termen \"ossa\"?",
-    "correct": "flera ben (skelett)",
+    "correct": "flera ben",
     "distractors": [
-      "nerver (plural)",
+      "nerver",
       "sena",
       "ledband"
     ],
@@ -1223,7 +1223,7 @@
     "prompt": "Vad betyder den medicinska termen \"processus\"?",
     "correct": "utskott",
     "distractors": [
-      "nerver (plural)",
+      "nerver",
       "skiljevägg",
       "muskel"
     ],
@@ -1253,7 +1253,7 @@
     "distractors": [
       "fotknöl",
       "bindvävshinna",
-      "blåsa (urinblåsa)"
+      "blåsa"
     ],
     "topic": "medicinsk_latin",
     "difficulty": "Normal",
@@ -1263,7 +1263,7 @@
     "id": "medlatin_q91",
     "type": "mc",
     "prompt": "Vad betyder den medicinska termen \"soma\"?",
-    "correct": "kropp (cellkropp)",
+    "correct": "kropp",
     "distractors": [
       "körtel",
       "kanal",
@@ -1293,7 +1293,7 @@
     "prompt": "Vad betyder den medicinska termen \"sulcus\"?",
     "correct": "fåra",
     "distractors": [
-      "kropp (cellkropp)",
+      "kropp",
       "fotknöl",
       "kärl"
     ],
@@ -1322,7 +1322,7 @@
     "correct": "bål / stam",
     "distractors": [
       "kärl",
-      "flera ben (skelett)",
+      "flera ben",
       "märg"
     ],
     "topic": "medicinsk_latin",
@@ -1349,7 +1349,7 @@
     "prompt": "Vad betyder den medicinska termen \"vas\"?",
     "correct": "kärl",
     "distractors": [
-      "artärer (plural)",
+      "artärer",
       "båge",
       "ledhuvud"
     ],
@@ -1365,7 +1365,7 @@
     "distractors": [
       "kärna",
       "bindvävshinna",
-      "blåsa (urinblåsa)"
+      "blåsa"
     ],
     "topic": "medicinsk_latin",
     "difficulty": "Normal",
@@ -1375,10 +1375,10 @@
     "id": "medlatin_q99",
     "type": "mc",
     "prompt": "Vad betyder den medicinska termen \"venae\"?",
-    "correct": "vener (plural)",
+    "correct": "vener",
     "distractors": [
       "utbuktning på ledhuvudet",
-      "blåsa (urinblåsa)",
+      "blåsa",
       "svans"
     ],
     "topic": "medicinsk_latin",
@@ -1403,7 +1403,7 @@
     "id": "medlatin_q101",
     "type": "mc",
     "prompt": "Vad betyder den medicinska termen \"vesica\"?",
-    "correct": "blåsa (urinblåsa)",
+    "correct": "blåsa",
     "distractors": [
       "kropp",
       "bentagg / ryggrad",
@@ -1421,7 +1421,7 @@
     "distractors": [
       "ihåligt rum i körtel eller kanal",
       "fotknöl",
-      "ben (skelett)"
+      "ben"
     ],
     "topic": "medicinsk_latin",
     "difficulty": "Normal",
