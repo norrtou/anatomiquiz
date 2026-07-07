@@ -1472,7 +1472,7 @@
   {
     "id": "medsek_latin_deklinationer_6",
     "type": "mc",
-    "prompt": "Vad blir genitiv plural av \"vertebra\" (t.ex. i \"columna vertebrarum\")?",
+    "prompt": "Vad blir genitiv plural av \"vertebra\" (ryggkota)?",
     "correct": "Vertebrarum",
     "distractors": [
       "Vertebraeum",
@@ -1528,7 +1528,7 @@
   {
     "id": "medsek_latin_deklinationer_10",
     "type": "mc",
-    "prompt": "Vad blir genitiv plural av \"nervus\" (t.ex. \"plexus nervorum\")?",
+    "prompt": "Vad blir genitiv plural av \"nervus\" (nerv)?",
     "correct": "Nervorum",
     "distractors": [
       "Nervi",
@@ -1626,7 +1626,7 @@
   {
     "id": "medsek_latin_deklinationer_17",
     "type": "mc",
-    "prompt": "Vad blir nominativ plural av \"os\" (ben), t.ex. i \"ossa cranii\"?",
+    "prompt": "Vad blir nominativ plural av \"os\" (ben)?",
     "correct": "Ossa",
     "distractors": [
       "Ossi",
@@ -1654,7 +1654,7 @@
   {
     "id": "medsek_latin_deklinationer_19",
     "type": "mc",
-    "prompt": "Vad blir genitiv singular av \"pes\" (fot), t.ex. i \"dorsum pedis\" (fotryggen)?",
+    "prompt": "Vad blir genitiv singular av \"pes\" (fot)?",
     "correct": "Pedis",
     "distractors": [
       "Pedae",
@@ -1696,7 +1696,7 @@
   {
     "id": "medsek_latin_deklinationer_22",
     "type": "mc",
-    "prompt": "Vad blir genitiv singular av \"articulatio\" (led), t.ex. i \"capsula articulationis\"?",
+    "prompt": "Vad blir genitiv singular av \"articulatio\" (led)?",
     "correct": "Articulationis",
     "distractors": [
       "Articulatii",
@@ -1752,12 +1752,10 @@
   {
     "id": "medsek_latin_deklinationer_26",
     "type": "mc",
-    "prompt": "Vad blir genitiv singular av \"plexus\" (nervflätning), fjärde deklinationen?",
-    "correct": "Plexus",
+    "prompt": "Sant eller falskt: Genitiv singular av \"plexus\" (nervflätning) är identisk med nominativ singular, eftersom det är ett fjärde deklinationens u-stamsord.",
+    "correct": "Sant",
     "distractors": [
-      "Plexi",
-      "Plexae",
-      "Plexorum"
+      "Falskt"
     ],
     "topic": "medsek_latin_deklinationer",
     "difficulty": "Normal",
@@ -2032,7 +2030,7 @@
   {
     "id": "medsek_latin_deklinationer_46",
     "type": "mc",
-    "prompt": "Vad blir pluralformen av \"diagnosis\" om ordet följer det grekisk-latinska tredje deklinationsmönstret, jfr \"diagnosis\"/\"diagnoses\"?",
+    "prompt": "Vad blir pluralformen av \"diagnosis\" om ordet följer det grekisk-latinska tredje deklinationsmönstret?",
     "correct": "Diagnoses",
     "distractors": [
       "Diagnosi",
@@ -2116,12 +2114,10 @@
   {
     "id": "medsek_latin_deklinationer_52",
     "type": "mc",
-    "prompt": "Vad blir pluralformen av \"sinus\" (fjärde deklinationen)?",
-    "correct": "Sinus",
+    "prompt": "Sant eller falskt: Pluralformen av \"sinus\" (fjärde deklinationen) är identisk med singularformen \"sinus\".",
+    "correct": "Sant",
     "distractors": [
-      "Sinusi",
-      "Sini",
-      "Sinusar"
+      "Falskt"
     ],
     "topic": "medsek_latin_deklinationer",
     "difficulty": "Normal",
@@ -2172,7 +2168,7 @@
   {
     "id": "medsek_latin_deklinationer_56",
     "type": "mc",
-    "prompt": "Vad blir genitiv singular av \"cortex\", t.ex. i \"substantia corticis\"?",
+    "prompt": "Vad blir genitiv singular av \"cortex\" (bark, t.ex. hjärnbark/njurbark)?",
     "correct": "Corticis",
     "distractors": [
       "Cortexis",
@@ -2200,7 +2196,7 @@
   {
     "id": "medsek_latin_deklinationer_58",
     "type": "mc",
-    "prompt": "Vad blir genitiv singular av \"foramen\", t.ex. i \"nervus foraminis\"?",
+    "prompt": "Vad blir genitiv singular av \"foramen\" (hål, öppning)?",
     "correct": "Foraminis",
     "distractors": [
       "Foramenis",
@@ -2228,7 +2224,7 @@
   {
     "id": "medsek_latin_deklinationer_60",
     "type": "mc",
-    "prompt": "Vad blir genitiv singular av \"caput\", t.ex. i \"collum capitis\" (halsen vid huvudet, t.ex. femurhalsen)?",
+    "prompt": "Vad blir genitiv singular av \"caput\" (huvud)?",
     "correct": "Capitis",
     "distractors": [
       "Caputis",
@@ -2256,7 +2252,7 @@
   {
     "id": "medsek_latin_deklinationer_62",
     "type": "mc",
-    "prompt": "Vad blir genitiv singular av \"corpus\", t.ex. i \"cavitas corporis\"?",
+    "prompt": "Vad blir genitiv singular av \"corpus\" (kropp)?",
     "correct": "Corporis",
     "distractors": [
       "Corpusis",
@@ -2410,7 +2406,7 @@
   {
     "id": "medsek_latin_deklinationer_73",
     "type": "mc",
-    "prompt": "Vad blir pluralformen av \"vas\" (kärl), t.ex. i \"vasa sanguinea\" (blodkärl)?",
+    "prompt": "Vad blir pluralformen av \"vas\" (kärl)?",
     "correct": "Vasa",
     "distractors": [
       "Vasus",
@@ -2438,7 +2434,7 @@
   {
     "id": "medsek_latin_deklinationer_75",
     "type": "mc",
-    "prompt": "Vad blir genitiv singular av \"cor\" (hjärta, tredje deklinationen, neutrum, stam \"cord-\"), t.ex. i \"apex cordis\"?",
+    "prompt": "Vad blir genitiv singular av \"cor\" (hjärta, tredje deklinationen, neutrum, stam \"cord-\")?",
     "correct": "Cordis",
     "distractors": [
       "Coris",
@@ -2480,7 +2476,7 @@
   {
     "id": "medsek_latin_deklinationer_78",
     "type": "mc",
-    "prompt": "Vad blir pluralformen av \"ren\" (njure), t.ex. \"renes\" i vissa fraser?",
+    "prompt": "Vad blir pluralformen av \"ren\" (njure)?",
     "correct": "Renes",
     "distractors": [
       "Rena",
@@ -2522,7 +2518,7 @@
   {
     "id": "medsek_latin_deklinationer_81",
     "type": "mc",
-    "prompt": "Vad blir pluralformen av \"pulmo\", t.ex. i \"pulmones\" (lungorna)?",
+    "prompt": "Vad blir pluralformen av \"pulmo\" (lunga)?",
     "correct": "Pulmones",
     "distractors": [
       "Pulmona",
@@ -2536,12 +2532,10 @@
   {
     "id": "medsek_latin_deklinationer_82",
     "type": "mc",
-    "prompt": "Vad blir genitiv singular av \"cutis\" (hud, tredje deklinationen, femininum)?",
-    "correct": "Cutis",
+    "prompt": "Sant eller falskt: Genitiv singular av \"cutis\" (hud, tredje deklinationen, femininum) är identisk med nominativ singular.",
+    "correct": "Sant",
     "distractors": [
-      "Cuti",
-      "Cutorum",
-      "Cutae"
+      "Falskt"
     ],
     "topic": "medsek_latin_deklinationer",
     "difficulty": "Normal",
@@ -2564,7 +2558,7 @@
   {
     "id": "medsek_latin_deklinationer_84",
     "type": "mc",
-    "prompt": "Vad blir genitiv plural av \"musculus\", t.ex. i \"fascia musculorum\"?",
+    "prompt": "Vad blir genitiv plural av \"musculus\" (muskel)?",
     "correct": "Musculorum",
     "distractors": [
       "Musculi",
@@ -2746,7 +2740,7 @@
   {
     "id": "medsek_latin_deklinationer_97",
     "type": "mc",
-    "prompt": "Vad blir pluralformen av \"radix\", t.ex. \"radices nervorum spinalium\" (spinalnervernas rötter)?",
+    "prompt": "Vad blir pluralformen av \"radix\" (rot)?",
     "correct": "Radices",
     "distractors": [
       "Radixes",
@@ -3362,7 +3356,7 @@
   {
     "id": "medsek_lages_riktning_rorelse_41",
     "type": "mc",
-    "prompt": "Vad heter en kroppshålighet på latin, t.ex. \"cavitas thoracis\"?",
+    "prompt": "Vad heter en kroppshålighet på latin?",
     "correct": "Cavitas",
     "distractors": [
       "Regio",
@@ -7478,7 +7472,7 @@
   {
     "id": "medsek_diagnoskodning_35",
     "type": "mc",
-    "prompt": "Vad kallas de Z-koder i ICD-10 som exempelvis används vid hälsokontroller utan sjukdom eller vid uppföljningsbesök?",
+    "prompt": "Vad kallas de koder i ICD-10 som exempelvis används vid hälsokontroller utan sjukdom eller vid uppföljningsbesök?",
     "correct": "Z-koder",
     "distractors": [
       "Huvuddiagnoskoder för akuta sjukdomar",
