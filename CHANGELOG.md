@@ -1,5 +1,20 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.137
+- **Röntgensjuksköterska: tio ämnen byggda** (1000 nya MC-frågor i ny fil `data/rontgensjukskoterska.json`, topografisk och funktionell bildanatomi):
+  - **Thorax** (`rtg_thorax`) – lung- och mediastinallobering/fissurer, hilumanatomi, hjärtsilhuettens konturer och cardiothoracic ratio, revben/sternum, PA/lateral/lordotisk/decubitusprojektion, normala varianter och fallgropar (companion shadow, azygoslob, sail sign, silhouette sign).
+  - **Buk & retroperitoneum** (`rtg_buk_retroperitoneum`) – lever-/pankreas-/mjältanatomi, retro- vs. intraperitoneala organ, portakärlens anatomi, ligament och bukhinnerecesser (Morisons ficka, bursa omentalis), CT-kontrastfaser, urografins faser.
+  - **Skelett & extremiteter** (`rtg_skelett_extremiteter`) – karpal-/tarsalben, armbågens fettpad-tecken, frakturklassifikation (Salter-Harris, Colles/Smiths/Monteggia/Galeazzi, Bennetts/Rolando, Jones/Lisfranc), DXA/osteoporosdiagnostik, ledtyper.
+  - **Columna/ryggrad** (`rtg_columna`) – kotanatomi per region, ryggmärgens/cauda equinas anatomi, scottie dog-tecknet, spondylolys/-listes, traumaklassifikation (Jefferson/Hangman's/Chance/burst), spinal stenos och Modic-liknande degenerativa fynd.
+  - **Skalle & hjärna** (`rtg_skalle_hjarna`) – kraniets ben/suturer/foramina, ventrikelsystem, Willis kärlring, epi-/subduralhematomens form, Hounsfield-enheter och fönsterinställningar, standardprojektioner (Towne/Caldwell/Waters/SMV).
+  - **Huvud-hals & ansiktsskelett** (`rtg_huvud_hals`) – bihålor, käkled, spott-/sköldkörtel, larynxbrosk, carotis-/jugularisanatomi, ansiktsfrakturer (Le Fort, blow-out, ZMC), temporalben/hörselorgan.
+  - **Bäcken & höft** (`rtg_backen_hoft`) – höftbenets tre delar, bäckenmått och pelvimetri, urogenitala organ, bäckenringsskador, Perthes/SCFE, spädbarnshöftultraljud (Graf-metoden).
+  - **Kärlanatomi** (`rtg_karlanatomi`) – perifer artär-/venanatomi för angiografi, Seldingerteknik och interventionella grundbegrepp (PTA, stent, embolisering, TIPS, TACE, EVAR), aortadissektion/aneurysm, ABI.
+  - **Cirkulation & hjärtfunktion** (`rtg_cirkulation_hjarta`) – hjärtcykelns fysiologi, retledningssystemet och EKG, EKG-gating/bolustracking vid hjärt-CT, myokardscintigrafi, klaffhemodynamik, koronardominans.
+  - **Njurfunktion & utsöndring** (`rtg_njurfunktion`) – nefronets funktion, GFR/clearance, kontrastmedelshantering och post-kontrast njurskada, renografi (statisk/dynamisk/diures), njurpatologi (hydronefros, njursten, njurartärstenos).
+  - Alla tio ämnen avkommenterade i `index.html` (`#topic`, med `(MC)`-tagg), tillagda i `js/info.js`, samt ny path-mapping (`rtg_`-prefix) i `js/app.js`. Kvarstår: Andning & rörelse, Snittanatomi, Projektionslära & lägesterminologi, Modalitetsspecifik bildanatomi, Kontrastmedel & fördelning. Samtliga 1000 frågor kontrollerade unika (inga dubbletter av id eller frågetext, ingen överlappning mellan ämnena).
+- VERSION/APP_VERSION/index.html- och info.html-cachebuster → 0.9.137.
+
 ## 0.9.136
 - **Biomedicinsk analytiker klart – alla 18 ämnen byggda** (600 nya MC-frågor i `data/biomedicinsk_analytiker.json`, nu 1800 frågor totalt över 18 ämnen):
   - **Klinisk neurofysiologi** (`bma_neurofysiologi`) – EEG (frekvensband, sömnstadier, epileptiforma mönster), EMG (motorenhet, insertionsaktivitet, denervering), neurografi (F-våg, H-reflex, demyelinisering vs. axonal skada, karpaltunnelsyndrom, Guillain-Barré), framkallade svar (VEP/BAEP/SEP) samt myastenia gravis/repetitiv nervstimulering.

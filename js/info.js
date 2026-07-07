@@ -176,6 +176,20 @@ const EDUCATIONS = [
     { label: 'Mikrobiologi & immunologi', file: './data/biomedicinsk_analytiker.json', topic: 'bma_mikrobiologi_immunologi' },
     { label: 'Patologi & histopatologisk morfologi', file: './data/biomedicinsk_analytiker.json', topic: 'bma_patologi' },
   ]},
+  // Röntgensjuksköterska-ämnena ligger alla i en delad fil
+  // (data/rontgensjukskoterska.json), åtskilda av postens topic-fält.
+  { name: 'Röntgensjuksköterska', topics: [
+    { label: 'Thorax',                      file: './data/rontgensjukskoterska.json', topic: 'rtg_thorax' },
+    { label: 'Buk & retroperitoneum',       file: './data/rontgensjukskoterska.json', topic: 'rtg_buk_retroperitoneum' },
+    { label: 'Skelett & extremiteter',      file: './data/rontgensjukskoterska.json', topic: 'rtg_skelett_extremiteter' },
+    { label: 'Columna/ryggrad',             file: './data/rontgensjukskoterska.json', topic: 'rtg_columna' },
+    { label: 'Skalle & hjärna',             file: './data/rontgensjukskoterska.json', topic: 'rtg_skalle_hjarna' },
+    { label: 'Huvud-hals & ansiktsskelett', file: './data/rontgensjukskoterska.json', topic: 'rtg_huvud_hals' },
+    { label: 'Bäcken & höft',               file: './data/rontgensjukskoterska.json', topic: 'rtg_backen_hoft' },
+    { label: 'Kärlanatomi',                 file: './data/rontgensjukskoterska.json', topic: 'rtg_karlanatomi' },
+    { label: 'Cirkulation & hjärtfunktion', file: './data/rontgensjukskoterska.json', topic: 'rtg_cirkulation_hjarta' },
+    { label: 'Njurfunktion & utsöndring',   file: './data/rontgensjukskoterska.json', topic: 'rtg_njurfunktion' },
+  ]},
 ]
 
 const ORDLISTA_URL = './data/ordlista.json'
