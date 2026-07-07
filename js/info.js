@@ -195,6 +195,16 @@ const EDUCATIONS = [
     { label: 'Modalitetsspecifik bildanatomi', file: './data/rontgensjukskoterska.json', topic: 'rtg_modalitetsspecifik' },
     { label: 'Kontrastmedel & fördelning',  file: './data/rontgensjukskoterska.json', topic: 'rtg_kontrastmedel' },
   ]},
+  // Medicinsk sekreterare-ämnena ligger alla i en delad fil
+  // (data/medicinsk_sekreterare.json), åtskilda av postens topic-fält.
+  { name: 'Medicinsk sekreterare', topics: [
+    { label: 'Termens byggstenar',                          file: './data/medicinsk_sekreterare.json', topic: 'medsek_termens_byggstenar' },
+    { label: 'Medicinsk latin: grammatik & deklinationer',  file: './data/medicinsk_sekreterare.json', topic: 'medsek_latin_deklinationer' },
+    { label: 'Läges-, riktnings- & rörelsetermer',          file: './data/medicinsk_sekreterare.json', topic: 'medsek_lages_riktning_rorelse' },
+    { label: 'Organsystemen & deras terminologi',           file: './data/medicinsk_sekreterare.json', topic: 'medsek_organsystemen_terminologi' },
+    { label: 'Sjukdoms-, symtom- & åtgärdstermer',          file: './data/medicinsk_sekreterare.json', topic: 'medsek_sjukdom_symtom_atgard' },
+    { label: 'Diagnosklassificering & kodning',             file: './data/medicinsk_sekreterare.json', topic: 'medsek_diagnoskodning' },
+  ]},
 ]
 
 const ORDLISTA_URL = './data/ordlista.json'

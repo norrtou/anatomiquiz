@@ -145,11 +145,14 @@ Snitt-, projektions- & modalitetslära
 400 YH-poäng (~2 år). Fokus terminologi, inte djup anatomi.
 *Linser: ordbildning/stavning → anatomisk struktur → vanliga termer & diagnoser → skrivregler/kodning.*
 
-1. Termens byggstenar – prefix, suffix, ordstam, latinsk/grekisk grammatik, singular/plural, försvenskning.
-2. Läges-, riktnings- & rörelsetermer – anatomisk grundposition, kroppsplan, riktningar, regioner, kroppshåligheter.
-3. Organsystemen & deras terminologi – organens namn och strukturer system för system (det tyngsta blocket; kan delas per organsystem).
-4. Sjukdoms-, symtom- & åtgärdstermer – ändelser (-it, -om, -os, -ektomi, -tomi, -skopi), vanliga diagnoser och ingrepp.
-5. Diagnosklassificering & kodning – ICD-10 och KVÅ enligt Socialstyrelsens anvisningar.
+**UPPDATERAD (2026-07-07) på användarens uttryckliga direktiv:** genomgående fokus på vad saker heter på **svenska respektive latin**, kompletterat med resonerande frågor, grundläggande diagnosmetodik och vanliga journalförkortningar vävda in i de relevanta ämnena. Deklinationsgrammatiken (en klassiker för med sek) får ett eget renodlat ämne istället för att bara nämnas kort under ämne 1. **6 ämnen istället för 5:**
+
+1. Termens byggstenar – prefix, suffix, ordstam, singular/plural, försvenskning, sv↔latin-namngivning av vanliga strukturer.
+2. Medicinsk latin: grammatik & deklinationer – substantivens fem deklinationer, genus, kasusböjning (nominativ/genitiv m.fl.), adjektivkongruens, hur böjda latinska termer används korrekt i diagnoser/journaltext.
+3. Läges-, riktnings- & rörelsetermer – anatomisk grundposition, kroppsplan, riktningar, regioner, kroppshåligheter.
+4. Organsystemen & deras terminologi – organens namn och strukturer system för system, sv/latin (det tyngsta blocket; kan delas per organsystem).
+5. Sjukdoms-, symtom- & åtgärdstermer – ändelser (-it, -om, -os, -ektomi, -tomi, -skopi), vanliga diagnoser och ingrepp, grundläggande diagnosmetodik, vanliga journalförkortningar.
+6. Diagnosklassificering & kodning – ICD-10 och KVÅ enligt Socialstyrelsens anvisningar.
 
 ### Logoped
 Fyraårigt program (240 hp), legitimationsyrke. Anatomin inriktad på

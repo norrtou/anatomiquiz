@@ -1,5 +1,16 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.139
+- **Medicinsk sekreterare klart – alla 6 ämnen byggda** (600 nya MC-frågor i ny fil `data/medicinsk_sekreterare.json`, terminologifokus enligt användarens direktiv: sv/latin-namngivning, resonemang, grundläggande diagnosmetodik och journalförkortningar):
+  - **Termens byggstenar** (`medsek_termens_byggstenar`) – prefix (hypo-/hyper-, brady-/tachy-, poly-/oligo- m.fl.), suffix (-itis, -om, -os, -ektomi, -tomi, -skopi, -algi, -plegi m.fl.), ordstammar, bindevokal, försvenskningsregler (ph→f, ae→e, c→k) samt sv/latin-glosor för grundorgan.
+  - **Medicinsk latin: grammatik & deklinationer** (`medsek_latin_deklinationer`) – nytt renodlat ämne (utökning från 5 till 6 ämnen på användarens uttryckliga begäran): substantivens fem deklinationer, genus, kasusböjning (nominativ/genitiv, t.ex. "ossis", "cordis", "hepatis"), adjektivkongruens (t.ex. "arteria carotis communis", "musculus gluteus maximus"), grekisk-latinska lånord.
+  - **Läges-, riktnings- & rörelsetermer** (`medsek_lages_riktning_rorelse`) – anatomisk grundposition, kroppsplan, riktningstermer (medial/lateral, proximal/distal m.fl.), rörelsetermer (flexio/extensio, abductio/adductio m.fl.), kroppsregioner och kroppshåligheter, samt vanliga latinska strukturbeskrivande termer (fossa, sulcus, crista, foramen, processus m.fl.) – genomgående sv/latin-par.
+  - **Organsystemen & deras terminologi** (`medsek_organsystemen_terminologi`) – organnamn sv/latin system för system (cirkulation, andning, matsmältning, urinvägar, nervsystem, rörelseapparat, hormonsystem, fortplantning, hud, immunsystem).
+  - **Sjukdoms-, symtom- & åtgärdstermer** (`medsek_sjukdom_symtom_atgard`) – vanliga diagnoser/ingrepp (appendicit, kolecystit, artros, trombos m.fl.), symtomtermer (dyspné, ikterus, hematuri m.fl.), grundläggande diagnosmetodik (anamnes, status, differentialdiagnos, auskultation/palpation/perkussion/inspektion) samt vanliga journalförkortningar (p.o., i.v., vb, u.a., AT, BT m.fl.).
+  - **Diagnosklassificering & kodning** (`medsek_diagnoskodning`) – ICD-10(-SE) kapitelstruktur (A00–Z99), huvud-/bidiagnos, Z-koder och yttre orsakskoder, KVÅ och dess NCSP-baserade kirurgidel, DRG-systemet, kodningskvalitet och sekretess enligt Socialstyrelsens klassifikationer och patientdatalagen.
+  - `UTBILDNINGAR_REGLER.md` uppdaterat med det utökade 6-ämnesupplägget. Alla sex ämnen avkommenterade i `index.html` (`#topic`, med `(MC)`-tagg), tillagda i `js/info.js`, samt ny path-mapping (`medsek_`-prefix) i `js/app.js`. Samtliga 600 frågor kontrollerade unika (inga dubbletter av id eller frågetext, ingen överlappning mellan ämnena).
+- VERSION/APP_VERSION/index.html- och info.html-cachebuster → 0.9.139.
+
 ## 0.9.138
 - **Röntgensjuksköterska klart – alla 15 ämnen byggda** (500 nya MC-frågor i `data/rontgensjukskoterska.json`, nu 1500 frågor totalt över 15 ämnen):
   - **Andning & rörelse** (`rtg_andning_rorelse`) – andningsmuskulatur/-fysiologi, andhållningsteknik och Valsalvamanöver, andnings-/EKG-gating vid CT/MR, 4D-CT och DIBH inför strålbehandling, frenikuspares/sniff test, lungultraljud (A-/B-linjer, lung sliding), rörelseartefakter (peristaltik, sväljning, tremor) och hantering av dem.
