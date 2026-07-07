@@ -3,7 +3,7 @@
     "id": "medsek_termens_byggstenar_1",
     "type": "mc",
     "prompt": "Vad kallas den orörliga, betydelsebärande kärnan i en medicinsk term som prefix och suffix fogas till, t.ex. \"cardi-\" i \"cardiologi\"?",
-    "correct": "Ordstammen (rotmorfemet)",
+    "correct": "Ordstammen",
     "distractors": [
       "Prefixet",
       "Suffixet",
@@ -59,7 +59,7 @@
     "id": "medsek_termens_byggstenar_5",
     "type": "mc",
     "prompt": "Vad betyder prefixet \"hypo-\"?",
-    "correct": "Under, för lite (t.ex. hypoglykemi = för lågt blodsocker)",
+    "correct": "Under, för lite",
     "distractors": [
       "Över, för mycket",
       "Runt omkring",
@@ -73,7 +73,7 @@
     "id": "medsek_termens_byggstenar_6",
     "type": "mc",
     "prompt": "Vad betyder prefixet \"hyper-\"?",
-    "correct": "Över, för mycket (t.ex. hypertoni = förhöjt blodtryck)",
+    "correct": "Över, för mycket",
     "distractors": [
       "Under, för lite",
       "Bredvid",
@@ -87,7 +87,7 @@
     "id": "medsek_termens_byggstenar_7",
     "type": "mc",
     "prompt": "Vad betyder prefixet \"brady-\"?",
-    "correct": "Långsam (t.ex. bradykardi = långsam hjärtrytm)",
+    "correct": "Långsam",
     "distractors": [
       "Snabb",
       "Oregelbunden",
@@ -101,7 +101,7 @@
     "id": "medsek_termens_byggstenar_8",
     "type": "mc",
     "prompt": "Vad betyder prefixet \"tachy-\"?",
-    "correct": "Snabb (t.ex. takykardi = snabb hjärtrytm)",
+    "correct": "Snabb",
     "distractors": [
       "Långsam",
       "Oregelbunden",
@@ -115,7 +115,7 @@
     "id": "medsek_termens_byggstenar_9",
     "type": "mc",
     "prompt": "Vad betyder prefixet \"poly-\"?",
-    "correct": "Många, mycket (t.ex. polyuri = riklig urinmängd)",
+    "correct": "Många, mycket",
     "distractors": [
       "Få, lite",
       "En, enda",
@@ -129,7 +129,7 @@
     "id": "medsek_termens_byggstenar_10",
     "type": "mc",
     "prompt": "Vad betyder prefixet \"oligo-\"?",
-    "correct": "Få, lite (t.ex. oliguri = knapp urinmängd)",
+    "correct": "Få, lite",
     "distractors": [
       "Många, mycket",
       "Alla",
@@ -143,7 +143,7 @@
     "id": "medsek_termens_byggstenar_11",
     "type": "mc",
     "prompt": "Vad betyder prefixet \"an-\"/\"a-\" framför konsonant respektive vokal?",
-    "correct": "Utan, brist på (t.ex. anemi = brist på blod/blodbrist)",
+    "correct": "Utan, brist på",
     "distractors": [
       "Med, tillsammans med",
       "Inuti",
@@ -157,7 +157,7 @@
     "id": "medsek_termens_byggstenar_12",
     "type": "mc",
     "prompt": "Vad betyder prefixet \"dys-\"?",
-    "correct": "Svårighet, störd funktion (t.ex. dyspné = andningssvårighet)",
+    "correct": "Svårighet, störd funktion",
     "distractors": [
       "Lätt, normal funktion",
       "God, väl fungerande",
@@ -171,7 +171,7 @@
     "id": "medsek_termens_byggstenar_13",
     "type": "mc",
     "prompt": "Vad betyder prefixet \"endo-\"?",
-    "correct": "Inuti, inre (t.ex. endoskopi = titta inuti)",
+    "correct": "Inuti, inre",
     "distractors": [
       "Utanför, yttre",
       "Ovanpå",
@@ -199,7 +199,7 @@
     "id": "medsek_termens_byggstenar_15",
     "type": "mc",
     "prompt": "Vad betyder prefixet \"intra-\"?",
-    "correct": "Inom, inuti (t.ex. intravenös = inuti en ven)",
+    "correct": "Inom, inuti",
     "distractors": [
       "Mellan",
       "Utanför",
@@ -213,7 +213,7 @@
     "id": "medsek_termens_byggstenar_16",
     "type": "mc",
     "prompt": "Vad betyder prefixet \"inter-\"?",
-    "correct": "Mellan (t.ex. intercostal = mellan revbenen)",
+    "correct": "Mellan",
     "distractors": [
       "Inuti",
       "Utanför",
@@ -227,7 +227,7 @@
     "id": "medsek_termens_byggstenar_17",
     "type": "mc",
     "prompt": "Vad betyder prefixet \"extra-\"?",
-    "correct": "Utanför (t.ex. extraperitoneal = utanför bukhinnan)",
+    "correct": "Utanför",
     "distractors": [
       "Inuti",
       "Mellan",
@@ -241,7 +241,7 @@
     "id": "medsek_termens_byggstenar_18",
     "type": "mc",
     "prompt": "Vad betyder prefixet \"sub-\"?",
-    "correct": "Under (t.ex. subkutan = under huden)",
+    "correct": "Under",
     "distractors": [
       "Ovanpå",
       "Bredvid",
@@ -255,7 +255,7 @@
     "id": "medsek_termens_byggstenar_19",
     "type": "mc",
     "prompt": "Vad betyder prefixet \"supra-\"/\"super-\"?",
-    "correct": "Ovanför, över (t.ex. suprarenal = ovanför njuren)",
+    "correct": "Ovanför, över",
     "distractors": [
       "Under",
       "Bakom",
@@ -269,7 +269,7 @@
     "id": "medsek_termens_byggstenar_20",
     "type": "mc",
     "prompt": "Vad betyder prefixet \"pre-\"/\"ante-\"?",
-    "correct": "Före, framför (t.ex. prenatal = före födseln)",
+    "correct": "Före, framför",
     "distractors": [
       "Efter",
       "Ovanför",
@@ -283,7 +283,7 @@
     "id": "medsek_termens_byggstenar_21",
     "type": "mc",
     "prompt": "Vad betyder prefixet \"post-\"?",
-    "correct": "Efter, bakom (t.ex. postoperativ = efter operationen)",
+    "correct": "Efter, bakom",
     "distractors": [
       "Före",
       "Ovanför",
@@ -297,7 +297,7 @@
     "id": "medsek_termens_byggstenar_22",
     "type": "mc",
     "prompt": "Vad betyder prefixet \"bi-\"?",
-    "correct": "Två, dubbel (t.ex. bilateral = på båda sidor)",
+    "correct": "Två, dubbel",
     "distractors": [
       "En, enkel",
       "Många",
@@ -311,7 +311,7 @@
     "id": "medsek_termens_byggstenar_23",
     "type": "mc",
     "prompt": "Vad betyder prefixet \"uni-\"?",
-    "correct": "En, enkel (t.ex. unilateral = på en sida)",
+    "correct": "En, enkel",
     "distractors": [
       "Två, dubbel",
       "Många",
@@ -325,7 +325,7 @@
     "id": "medsek_termens_byggstenar_24",
     "type": "mc",
     "prompt": "Vad betyder prefixet \"macro-\"?",
-    "correct": "Stor (t.ex. makrocytos = onormalt stora celler)",
+    "correct": "Stor",
     "distractors": [
       "Liten",
       "Medelstor",
@@ -339,7 +339,7 @@
     "id": "medsek_termens_byggstenar_25",
     "type": "mc",
     "prompt": "Vad betyder prefixet \"micro-\"?",
-    "correct": "Liten (t.ex. mikrocytos = onormalt små celler)",
+    "correct": "Liten",
     "distractors": [
       "Stor",
       "Medelstor",
@@ -353,7 +353,7 @@
     "id": "medsek_termens_byggstenar_26",
     "type": "mc",
     "prompt": "Vad betyder prefixet \"peri-\"?",
-    "correct": "Runt omkring (t.ex. perikardiet = runt hjärtat)",
+    "correct": "Runt omkring",
     "distractors": [
       "Inuti",
       "Under",
@@ -367,7 +367,7 @@
     "id": "medsek_termens_byggstenar_27",
     "type": "mc",
     "prompt": "Vad betyder prefixet \"para-\"?",
-    "correct": "Bredvid, vid sidan av (t.ex. paranasal = bredvid näsan)",
+    "correct": "Bredvid, vid sidan av",
     "distractors": [
       "Inuti",
       "Ovanpå",
@@ -381,7 +381,7 @@
     "id": "medsek_termens_byggstenar_28",
     "type": "mc",
     "prompt": "Vad betyder prefixet \"trans-\"?",
-    "correct": "Genom, tvärs över (t.ex. transdermal = genom huden)",
+    "correct": "Genom, tvärs över",
     "distractors": [
       "Bredvid",
       "Under",
@@ -395,7 +395,7 @@
     "id": "medsek_termens_byggstenar_29",
     "type": "mc",
     "prompt": "Vad betyder prefixet \"anti-\"?",
-    "correct": "Mot, motverkande (t.ex. antibiotika = mot liv/mikroorganismer)",
+    "correct": "Mot, motverkande",
     "distractors": [
       "För, gynnande",
       "Bredvid",
@@ -409,10 +409,10 @@
     "id": "medsek_termens_byggstenar_30",
     "type": "mc",
     "prompt": "Vad betyder suffixet \"-itis\"?",
-    "correct": "Inflammation (t.ex. gastrit = magsäcksinflammation)",
+    "correct": "Inflammation",
     "distractors": [
       "Tumör/svullnad",
-      "Sjukligt tillstånd (icke-inflammatoriskt)",
+      "Sjukligt tillstånd",
       "Kirurgiskt avlägsnande"
     ],
     "topic": "medsek_termens_byggstenar",
@@ -423,7 +423,7 @@
     "id": "medsek_termens_byggstenar_31",
     "type": "mc",
     "prompt": "Vad betyder suffixet \"-om\" (-oma)?",
-    "correct": "Tumör, svulst (t.ex. lipom = fettvävnadstumör)",
+    "correct": "Tumör, svulst",
     "distractors": [
       "Inflammation",
       "Kirurgisk öppning",
@@ -437,7 +437,7 @@
     "id": "medsek_termens_byggstenar_32",
     "type": "mc",
     "prompt": "Vad betyder suffixet \"-os\" (-osis)?",
-    "correct": "Sjukligt (icke-inflammatoriskt) tillstånd, ofta kroniskt (t.ex. artros = ledsjukdom)",
+    "correct": "Sjukligt tillstånd, ofta kroniskt",
     "distractors": [
       "Inflammation",
       "Tumör",
@@ -451,7 +451,7 @@
     "id": "medsek_termens_byggstenar_33",
     "type": "mc",
     "prompt": "Vad betyder suffixet \"-ektomi\"?",
-    "correct": "Kirurgiskt (borttagande) avlägsnande (t.ex. appendektomi = borttagande av blindtarmsbihanget)",
+    "correct": "Kirurgiskt avlägsnande",
     "distractors": [
       "Kirurgisk öppning/snitt",
       "Undersökning med instrument",
@@ -465,7 +465,7 @@
     "id": "medsek_termens_byggstenar_34",
     "type": "mc",
     "prompt": "Vad betyder suffixet \"-tomi\"?",
-    "correct": "Kirurgiskt snitt, öppning (t.ex. trakeotomi = snitt i luftstrupen)",
+    "correct": "Kirurgiskt snitt, öppning",
     "distractors": [
       "Kirurgiskt avlägsnande",
       "Undersökning med instrument",
@@ -479,7 +479,7 @@
     "id": "medsek_termens_byggstenar_35",
     "type": "mc",
     "prompt": "Vad betyder suffixet \"-skopi\"?",
-    "correct": "Undersökning med (kikar-)instrument (t.ex. gastroskopi = titta i magsäcken)",
+    "correct": "Undersökning med instrument",
     "distractors": [
       "Kirurgiskt snitt",
       "Kirurgiskt avlägsnande",
@@ -493,7 +493,7 @@
     "id": "medsek_termens_byggstenar_36",
     "type": "mc",
     "prompt": "Vad betyder suffixet \"-pati\"?",
-    "correct": "Sjukdom, sjuklig förändring (t.ex. neuropati = nervsjukdom)",
+    "correct": "Sjukdom, sjuklig förändring",
     "distractors": [
       "Smärta",
       "Förlamning",
@@ -507,7 +507,7 @@
     "id": "medsek_termens_byggstenar_37",
     "type": "mc",
     "prompt": "Vad betyder suffixet \"-algi\"?",
-    "correct": "Smärta (t.ex. artralgi = ledsmärta)",
+    "correct": "Smärta",
     "distractors": [
       "Sjukdom generellt",
       "Förlamning",
@@ -521,7 +521,7 @@
     "id": "medsek_termens_byggstenar_38",
     "type": "mc",
     "prompt": "Vad betyder suffixet \"-plegi\"?",
-    "correct": "Förlamning (t.ex. hemiplegi = halvsidig förlamning)",
+    "correct": "Förlamning",
     "distractors": [
       "Smärta",
       "Blödning",
@@ -535,7 +535,7 @@
     "id": "medsek_termens_byggstenar_39",
     "type": "mc",
     "prompt": "Vad betyder suffixet \"-emi\"?",
-    "correct": "Tillstånd i blodet (t.ex. anemi = blodbrist, uremi = urinämnen i blodet)",
+    "correct": "Tillstånd i blodet",
     "distractors": [
       "Tillstånd i urinen",
       "Tillstånd i huden",
@@ -549,7 +549,7 @@
     "id": "medsek_termens_byggstenar_40",
     "type": "mc",
     "prompt": "Vad betyder suffixet \"-uri\"?",
-    "correct": "Tillstånd i urinen (t.ex. hematuri = blod i urinen)",
+    "correct": "Tillstånd i urinen",
     "distractors": [
       "Tillstånd i blodet",
       "Tillstånd i huden",
@@ -563,7 +563,7 @@
     "id": "medsek_termens_byggstenar_41",
     "type": "mc",
     "prompt": "Vad betyder suffixet \"-rragi\" (-rrhagi)?",
-    "correct": "Kraftig blödning (t.ex. hemorragi = kraftig blödning)",
+    "correct": "Kraftig blödning",
     "distractors": [
       "Inflammation",
       "Tumör",
@@ -577,7 +577,7 @@
     "id": "medsek_termens_byggstenar_42",
     "type": "mc",
     "prompt": "Vad betyder suffixet \"-cele\"?",
-    "correct": "Bråck, utbuktning (t.ex. hydrocele = vätskefylld pungbråck)",
+    "correct": "Bråck, utbuktning",
     "distractors": [
       "Inflammation",
       "Smärta",
@@ -591,7 +591,7 @@
     "id": "medsek_termens_byggstenar_43",
     "type": "mc",
     "prompt": "Vad betyder suffixet \"-plasti\"?",
-    "correct": "Kirurgisk (om-)formning (t.ex. rinoplastik = näsplastik)",
+    "correct": "Kirurgisk formning",
     "distractors": [
       "Kirurgiskt avlägsnande",
       "Undersökning",
@@ -605,7 +605,7 @@
     "id": "medsek_termens_byggstenar_44",
     "type": "mc",
     "prompt": "Vad betyder suffixet \"-grafi\"?",
-    "correct": "Avbildning, registrering (t.ex. angiografi = kärlavbildning)",
+    "correct": "Avbildning, registrering",
     "distractors": [
       "Undersökning med kikarinstrument",
       "Kirurgiskt snitt",
@@ -619,7 +619,7 @@
     "id": "medsek_termens_byggstenar_45",
     "type": "mc",
     "prompt": "Vad betyder suffixet \"-logi\"?",
-    "correct": "Läran om (t.ex. kardiologi = läran om hjärtat)",
+    "correct": "Läran om",
     "distractors": [
       "Sjukdom i",
       "Avbildning av",
@@ -633,7 +633,7 @@
     "id": "medsek_termens_byggstenar_46",
     "type": "mc",
     "prompt": "Vad betyder suffixet \"-stomi\"?",
-    "correct": "Ny (konstgjord) mynningsöppning (t.ex. kolostomi = konstgjord tarmöppning)",
+    "correct": "Ny mynningsöppning",
     "distractors": [
       "Kirurgiskt avlägsnande",
       "Undersökning",
@@ -647,7 +647,7 @@
     "id": "medsek_termens_byggstenar_47",
     "type": "mc",
     "prompt": "Vad betyder suffixet \"-centes\" (t.ex. i \"paracentes\")?",
-    "correct": "Punktion (instick för att tömma vätska)",
+    "correct": "Punktion",
     "distractors": [
       "Kirurgiskt avlägsnande helt",
       "Avbildning",
@@ -661,7 +661,7 @@
     "id": "medsek_termens_byggstenar_48",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"cardio-\"?",
-    "correct": "Hjärta (t.ex. kardiologi)",
+    "correct": "Hjärta",
     "distractors": [
       "Lever",
       "Njure",
@@ -675,7 +675,7 @@
     "id": "medsek_termens_byggstenar_49",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"hepato-\"?",
-    "correct": "Lever (t.ex. hepatit)",
+    "correct": "Lever",
     "distractors": [
       "Hjärta",
       "Njure",
@@ -689,7 +689,7 @@
     "id": "medsek_termens_byggstenar_50",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"nephro-\"/\"reno-\"?",
-    "correct": "Njure (t.ex. nefrit, renal insufficiens)",
+    "correct": "Njure",
     "distractors": [
       "Lever",
       "Lunga",
@@ -703,7 +703,7 @@
     "id": "medsek_termens_byggstenar_51",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"gastro-\"?",
-    "correct": "Magsäck (t.ex. gastrit)",
+    "correct": "Magsäck",
     "distractors": [
       "Tarm",
       "Lever",
@@ -717,7 +717,7 @@
     "id": "medsek_termens_byggstenar_52",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"dermato-\"?",
-    "correct": "Hud (t.ex. dermatit)",
+    "correct": "Hud",
     "distractors": [
       "Muskel",
       "Nerv",
@@ -731,7 +731,7 @@
     "id": "medsek_termens_byggstenar_53",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"osteo-\"?",
-    "correct": "Ben, skelett (t.ex. osteoporos)",
+    "correct": "Ben, skelett",
     "distractors": [
       "Muskel",
       "Nerv",
@@ -745,7 +745,7 @@
     "id": "medsek_termens_byggstenar_54",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"myo-\"?",
-    "correct": "Muskel (t.ex. myokardit = hjärtmuskelinflammation)",
+    "correct": "Muskel",
     "distractors": [
       "Ben",
       "Nerv",
@@ -759,7 +759,7 @@
     "id": "medsek_termens_byggstenar_55",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"neuro-\"?",
-    "correct": "Nerv (t.ex. neurologi)",
+    "correct": "Nerv",
     "distractors": [
       "Muskel",
       "Ben",
@@ -773,7 +773,7 @@
     "id": "medsek_termens_byggstenar_56",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"angio-\"?",
-    "correct": "Kärl (t.ex. angiografi)",
+    "correct": "Kärl",
     "distractors": [
       "Nerv",
       "Ben",
@@ -787,7 +787,7 @@
     "id": "medsek_termens_byggstenar_57",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"arthro-\"?",
-    "correct": "Led (t.ex. artrit)",
+    "correct": "Led",
     "distractors": [
       "Ben, skelett",
       "Muskel",
@@ -801,7 +801,7 @@
     "id": "medsek_termens_byggstenar_58",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"cyto-\"?",
-    "correct": "Cell (t.ex. cytologi)",
+    "correct": "Cell",
     "distractors": [
       "Vävnad",
       "Organ",
@@ -815,7 +815,7 @@
     "id": "medsek_termens_byggstenar_59",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"histo-\"?",
-    "correct": "Vävnad (t.ex. histologi)",
+    "correct": "Vävnad",
     "distractors": [
       "Cell",
       "Organ",
@@ -829,7 +829,7 @@
     "id": "medsek_termens_byggstenar_60",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"pneumo-\"/\"pulmo-\"?",
-    "correct": "Lunga (t.ex. pneumoni, pulmonell hypertoni)",
+    "correct": "Lunga",
     "distractors": [
       "Hjärta",
       "Lever",
@@ -843,7 +843,7 @@
     "id": "medsek_termens_byggstenar_61",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"entero-\"?",
-    "correct": "Tarm (t.ex. enterit)",
+    "correct": "Tarm",
     "distractors": [
       "Magsäck",
       "Lever",
@@ -857,7 +857,7 @@
     "id": "medsek_termens_byggstenar_62",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"cholecyst-\"?",
-    "correct": "Gallblåsa (t.ex. kolecystit)",
+    "correct": "Gallblåsa",
     "distractors": [
       "Lever",
       "Njure",
@@ -871,7 +871,7 @@
     "id": "medsek_termens_byggstenar_63",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"splen-\"?",
-    "correct": "Mjälte (t.ex. splenektomi)",
+    "correct": "Mjälte",
     "distractors": [
       "Lever",
       "Njure",
@@ -885,7 +885,7 @@
     "id": "medsek_termens_byggstenar_64",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"otho-\"/\"oto-\"?",
-    "correct": "Öra (t.ex. otit)",
+    "correct": "Öra",
     "distractors": [
       "Öga",
       "Näsa",
@@ -899,7 +899,7 @@
     "id": "medsek_termens_byggstenar_65",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"ophthalmo-\"?",
-    "correct": "Öga (t.ex. oftalmologi)",
+    "correct": "Öga",
     "distractors": [
       "Öra",
       "Näsa",
@@ -913,7 +913,7 @@
     "id": "medsek_termens_byggstenar_66",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"rhino-\"?",
-    "correct": "Näsa (t.ex. rinit)",
+    "correct": "Näsa",
     "distractors": [
       "Öra",
       "Öga",
@@ -927,7 +927,7 @@
     "id": "medsek_termens_byggstenar_67",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"pharyngo-\"?",
-    "correct": "Svalg (t.ex. faryngit)",
+    "correct": "Svalg",
     "distractors": [
       "Struphuvud",
       "Luftstrupe",
@@ -941,7 +941,7 @@
     "id": "medsek_termens_byggstenar_68",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"laryngo-\"?",
-    "correct": "Struphuvud (t.ex. laryngit)",
+    "correct": "Struphuvud",
     "distractors": [
       "Svalg",
       "Luftstrupe",
@@ -955,7 +955,7 @@
     "id": "medsek_termens_byggstenar_69",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"dento-\"/\"odonto-\"?",
-    "correct": "Tand (t.ex. ortodonti)",
+    "correct": "Tand",
     "distractors": [
       "Käke",
       "Gom",
@@ -969,7 +969,7 @@
     "id": "medsek_termens_byggstenar_70",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"gyneko-\"?",
-    "correct": "Kvinna (t.ex. gynekologi)",
+    "correct": "Kvinna",
     "distractors": [
       "Man",
       "Barn",
@@ -983,7 +983,7 @@
     "id": "medsek_termens_byggstenar_71",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"pedo-\"/\"pediatr-\"?",
-    "correct": "Barn (t.ex. pediatrik)",
+    "correct": "Barn",
     "distractors": [
       "Kvinna",
       "Man",
@@ -997,7 +997,7 @@
     "id": "medsek_termens_byggstenar_72",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"geronto-\"/\"geriatr-\"?",
-    "correct": "Åldring, hög ålder (t.ex. geriatrik)",
+    "correct": "Åldring, hög ålder",
     "distractors": [
       "Barn",
       "Kvinna",
@@ -1011,7 +1011,7 @@
     "id": "medsek_termens_byggstenar_73",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"onko-\"?",
-    "correct": "Tumör, cancer (t.ex. onkologi)",
+    "correct": "Tumör, cancer",
     "distractors": [
       "Blod",
       "Ben",
@@ -1025,7 +1025,7 @@
     "id": "medsek_termens_byggstenar_74",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"hemato-\"/\"hema-\"?",
-    "correct": "Blod (t.ex. hematologi)",
+    "correct": "Blod",
     "distractors": [
       "Tumör",
       "Ben",
@@ -1039,7 +1039,7 @@
     "id": "medsek_termens_byggstenar_75",
     "type": "mc",
     "prompt": "Vad betyder ordstammen \"immuno-\"?",
-    "correct": "Immunsystem, motståndskraft (t.ex. immunologi)",
+    "correct": "Immunsystem, motståndskraft",
     "distractors": [
       "Blod",
       "Tumör",
@@ -1067,7 +1067,7 @@
     "id": "medsek_termens_byggstenar_77",
     "type": "mc",
     "prompt": "Vilken försvenskad stavning motsvarar den latinska ändelsen \"-tia\" i t.ex. \"dementia\"?",
-    "correct": "\"-ti\" (demens)",
+    "correct": "\"-ti\"",
     "distractors": [
       "\"-tium\"",
       "\"-tias\"",
@@ -1081,7 +1081,7 @@
     "id": "medsek_termens_byggstenar_78",
     "type": "mc",
     "prompt": "Hur försvenskas ofta den grekiska bokstavskombinationen \"ph\" i medicinska termer, t.ex. \"nephros\" → ?",
-    "correct": "Till \"f\" (nefros)",
+    "correct": "Till \"f\"",
     "distractors": [
       "Till \"v\"",
       "Till \"p\"",
@@ -1095,7 +1095,7 @@
     "id": "medsek_termens_byggstenar_79",
     "type": "mc",
     "prompt": "Hur försvenskas ofta den latinska diftongen \"ae\", t.ex. i \"anaemia\" → ?",
-    "correct": "Till \"e\" (anemi)",
+    "correct": "Till \"e\"",
     "distractors": [
       "Till \"ä\"",
       "Till \"a\"",
@@ -1109,7 +1109,7 @@
     "id": "medsek_termens_byggstenar_80",
     "type": "mc",
     "prompt": "Hur försvenskas ofta bokstaven \"c\" när den uttalas som \"k\" i latinska/grekiska termer, t.ex. \"cardia\" → ?",
-    "correct": "Till \"k\" (kardia, jfr kardiologi)",
+    "correct": "Till \"k\"",
     "distractors": [
       "Till \"s\"",
       "Till \"ts\"",
@@ -1151,7 +1151,7 @@
     "id": "medsek_termens_byggstenar_83",
     "type": "mc",
     "prompt": "Vad heter lever på latin?",
-    "correct": "Hepar (jecur)",
+    "correct": "Hepar",
     "distractors": [
       "Ren",
       "Cor",
@@ -1193,7 +1193,7 @@
     "id": "medsek_termens_byggstenar_86",
     "type": "mc",
     "prompt": "Vad heter mage/magsäck på latin?",
-    "correct": "Gaster (grekiska) / ventriculus (latin)",
+    "correct": "Gaster / ventriculus",
     "distractors": [
       "Hepar",
       "Splen",
@@ -1207,7 +1207,7 @@
     "id": "medsek_termens_byggstenar_87",
     "type": "mc",
     "prompt": "Vad heter mjälte på latin?",
-    "correct": "Splen (lien)",
+    "correct": "Splen",
     "distractors": [
       "Hepar",
       "Ren",
@@ -1221,7 +1221,7 @@
     "id": "medsek_termens_byggstenar_88",
     "type": "mc",
     "prompt": "Vad heter hud på latin?",
-    "correct": "Cutis (derma på grekiska)",
+    "correct": "Cutis",
     "distractors": [
       "Musculus",
       "Os",
@@ -1319,7 +1319,7 @@
     "id": "medsek_termens_byggstenar_95",
     "type": "mc",
     "prompt": "Vad kallas ordled som i sig själva inte kan stå ensamma som ord utan alltid kombineras med andra led, t.ex. \"cardi-\", \"-itis\"?",
-    "correct": "Bundna morfem (t.ex. prefix, suffix och de flesta grekiska ordstammar)",
+    "correct": "Bundna morfem",
     "distractors": [
       "Fria morfem",
       "Homonymer",
@@ -1431,7 +1431,7 @@
     "id": "medsek_latin_deklinationer_3",
     "type": "mc",
     "prompt": "Vilket genus har nästan alla substantiv i första deklinationen?",
-    "correct": "Femininum (kvinnligt genus)",
+    "correct": "Femininum",
     "distractors": [
       "Maskulinum",
       "Neutrum",
@@ -1557,7 +1557,7 @@
     "id": "medsek_latin_deklinationer_12",
     "type": "mc",
     "prompt": "Vad blir nominativ/ackusativ plural av neutrala substantiv som \"ligamentum\", t.ex. i \"ligamenta flava\"?",
-    "correct": "-a (ligamenta)",
+    "correct": "-a",
     "distractors": [
       "-i",
       "-us",
@@ -1574,7 +1574,7 @@
     "correct": "Ligamenti",
     "distractors": [
       "Ligamentae",
-      "Ligamentum (oförändrat)",
+      "Ligamentum",
       "Ligamentorum"
     ],
     "topic": "medsek_latin_deklinationer",
@@ -1585,7 +1585,7 @@
     "id": "medsek_latin_deklinationer_14",
     "type": "mc",
     "prompt": "Varför heter det \"collum ossis femoris\" och inte \"collum os femur\" när man talar om lårbenshalsen?",
-    "correct": "\"Ossis\" och \"femoris\" står i genitiv (\"av benet\"/\"av lårbenet\") eftersom genitiv används för att uttrycka tillhörighet mellan substantiv",
+    "correct": "\"Ossis\" och \"femoris\" står i genitiv eftersom genitiv används för att uttrycka tillhörighet mellan substantiv",
     "distractors": [
       "Genitiv används bara i plural, aldrig i singular",
       "Ordföljden är fri och formen har ingen grammatisk betydelse",
@@ -1739,9 +1739,9 @@
     "id": "medsek_latin_deklinationer_25",
     "type": "mc",
     "prompt": "Vilken ändelse har nominativ/genitiv singular hos substantiv i fjärde deklinationen, t.ex. \"meatus\" (gång/kanal)?",
-    "correct": "-us i båda formerna (meatus/meatus), skiljs åt av sammanhanget/övriga ord i frasen",
+    "correct": "-us i båda formerna, skiljs åt av sammanhanget/övriga ord i frasen",
     "distractors": [
-      "-us i nominativ, -i i genitiv (som andra deklinationen)",
+      "-us i nominativ, -i i genitiv",
       "-us i nominativ, -us i genitiv men med annan stamvokal",
       "-a i nominativ, -ae i genitiv"
     ],
@@ -1753,7 +1753,7 @@
     "id": "medsek_latin_deklinationer_26",
     "type": "mc",
     "prompt": "Vad blir genitiv singular av \"plexus\" (nervflätning), fjärde deklinationen?",
-    "correct": "Plexus (oförändrad form, endast sammanhanget avgör kasus)",
+    "correct": "Plexus",
     "distractors": [
       "Plexi",
       "Plexae",
@@ -1865,7 +1865,7 @@
     "id": "medsek_latin_deklinationer_34",
     "type": "mc",
     "prompt": "Varför räcker det oftast med att en medicinsk sekreterare känner igen nominativ- och genitivformerna väl, snarare än alla fem latinska kasus?",
-    "correct": "Nominativ (namnform) och genitiv (\"av\"-relationen mellan strukturer) är de kasus som dominerar i anatomiska och diagnostiska termer i journaler",
+    "correct": "Nominativ och genitiv är de kasus som dominerar i anatomiska och diagnostiska termer i journaler",
     "distractors": [
       "Genitiv förekommer aldrig i medicinska termer",
       "Alla fem kasus används lika ofta i journaltext",
@@ -1879,7 +1879,7 @@
     "id": "medsek_latin_deklinationer_35",
     "type": "mc",
     "prompt": "Vad kallas fenomenet att ett adjektiv måste böjas i samma genus, numerus och kasus som det substantiv det beskriver, t.ex. i \"musculus biceps brachii\"?",
-    "correct": "Kongruens (adjektivkongruens)",
+    "correct": "Kongruens",
     "distractors": [
       "Deklination",
       "Konjugation",
@@ -1921,7 +1921,7 @@
     "id": "medsek_latin_deklinationer_38",
     "type": "mc",
     "prompt": "Hur böjs adjektiv av typen \"communis\" (tredje deklinationens adjektiv) i maskulinum/femininum jämfört med neutrum?",
-    "correct": "Samma form (\"communis\") i maskulinum och femininum, men \"commune\" i neutrum",
+    "correct": "Samma form i maskulinum och femininum, men \"commune\" i neutrum",
     "distractors": [
       "Tre helt olika former för alla tre genus",
       "En enda oböjlig form för alla genus och kasus",
@@ -1977,7 +1977,7 @@
     "id": "medsek_latin_deklinationer_42",
     "type": "mc",
     "prompt": "Varför heter det \"musculus gluteus maximus\" med just den ändelsen på \"maximus\"?",
-    "correct": "\"Musculus\" är maskulinum, så adjektivet \"maximus\" (störst) böjs i maskulin form för att kongruera",
+    "correct": "\"Musculus\" är maskulinum, så adjektivet \"maximus\" böjs i maskulin form för att kongruera",
     "distractors": [
       "Adjektiv anpassas aldrig efter substantivets genus",
       "\"Maximus\" är den enda formen som finns oavsett genus",
@@ -2019,7 +2019,7 @@
     "id": "medsek_latin_deklinationer_45",
     "type": "mc",
     "prompt": "Varför är verbkonjugationer generellt mindre viktiga än substantivens deklinationer för en medicinsk sekreterare?",
-    "correct": "Medicinsk fackterminologi domineras av substantiviska och adjektiviska fraser (diagnoser, strukturnamn), medan hela böjda verbfraser sällan förekommer i journaltext",
+    "correct": "Medicinsk fackterminologi domineras av substantiviska och adjektiviska fraser, medan hela böjda verbfraser sällan förekommer i journaltext",
     "distractors": [
       "Latinska verb förekommer aldrig i medicinska sammanhang",
       "Deklinationer är mindre viktiga än konjugationer i detta yrke",
@@ -2117,7 +2117,7 @@
     "id": "medsek_latin_deklinationer_52",
     "type": "mc",
     "prompt": "Vad blir pluralformen av \"sinus\" (fjärde deklinationen)?",
-    "correct": "Sinus (oförändrad form i plural)",
+    "correct": "Sinus",
     "distractors": [
       "Sinusi",
       "Sini",
@@ -2287,7 +2287,7 @@
     "prompt": "Vad blir genitiv singular av \"cavum\"?",
     "correct": "Cavi",
     "distractors": [
-      "Cavum (oförändrad)",
+      "Cavum",
       "Cavae",
       "Cavorum"
     ],
@@ -2299,7 +2299,7 @@
     "id": "medsek_latin_deklinationer_65",
     "type": "mc",
     "prompt": "Vilket genus har substantivet \"cavum\", och varför skiljer det sig från \"cavitas\"?",
-    "correct": "\"Cavum\" är neutrum (andra deklinationen), medan \"cavitas\" är femininum (tredje deklinationen) – två olika ord för besläktade begrepp med olika böjningsmönster",
+    "correct": "\"Cavum\" är neutrum, medan \"cavitas\" är femininum – två olika ord för besläktade begrepp med olika böjningsmönster",
     "distractors": [
       "De är exakt samma ord med olika stavning utan grammatisk skillnad",
       "Båda orden är maskulina",
@@ -2327,7 +2327,7 @@
     "id": "medsek_latin_deklinationer_67",
     "type": "mc",
     "prompt": "Varför heter det ofta \"...-itis\" i diagnostermer men substantivet i sig (t.ex. \"gaster\", \"hepar\") har en helt annan grundform i nominativ?",
-    "correct": "Suffixet \"-itis\" fogas till den grekiska ordstammen (ofta genitivstammen), inte alltid identisk med nominativformens hela ord",
+    "correct": "Suffixet \"-itis\" fogas till den grekiska ordstammen, inte alltid identisk med nominativformens hela ord",
     "distractors": [
       "\"-itis\" har ingen koppling till ordets grundform",
       "Nominativformen och stammen är alltid identiska i grekiska lånord",
@@ -2355,7 +2355,7 @@
     "id": "medsek_latin_deklinationer_69",
     "type": "mc",
     "prompt": "Varför heter inflammation i levern \"hepatit\" och inte \"heparit\"?",
-    "correct": "Suffixet \"-itis\" fogas till stammen \"hepat-\" (synlig i genitiven \"hepatis\"), inte till nominativformen \"hepar\"",
+    "correct": "Suffixet \"-itis\" fogas till stammen \"hepat-\", inte till nominativformen \"hepar\"",
     "distractors": [
       "Det är en ren slump utan grammatisk grund",
       "\"Hepar\" och \"hepat-\" är olika ord utan koppling",
@@ -2415,7 +2415,7 @@
     "distractors": [
       "Vasus",
       "Vases",
-      "Vasorum (det är genitiv plural, inte nominativ plural)"
+      "Vasorum"
     ],
     "topic": "medsek_latin_deklinationer",
     "difficulty": "Normal",
@@ -2453,7 +2453,7 @@
     "id": "medsek_latin_deklinationer_76",
     "type": "mc",
     "prompt": "Varför heter hjärtmuskelinflammation \"myokardit\" med \"kard-\" och inte \"kor-\" eller \"kordit\"?",
-    "correct": "Suffixet \"-itis\" fogas här till den grekiska stammen \"kardia\"/\"card-\" (hjärta på grekiska), som är ett annat lånord än det latinska \"cor/cordis\"",
+    "correct": "Suffixet \"-itis\" fogas här till den grekiska stammen \"kardia\"/\"card-\", som är ett annat lånord än det latinska \"cor/cordis\"",
     "distractors": [
       "\"Cor\" och \"kardia\" är exakt samma ord på olika språk med identisk stam",
       "Det är en ren slump att grekiskan och latinet skiljer sig åt",
@@ -2527,7 +2527,7 @@
     "distractors": [
       "Pulmona",
       "Pulmoi",
-      "Pulmonorum (det är genitiv plural)"
+      "Pulmonorum"
     ],
     "topic": "medsek_latin_deklinationer",
     "difficulty": "Normal",
@@ -2537,7 +2537,7 @@
     "id": "medsek_latin_deklinationer_82",
     "type": "mc",
     "prompt": "Vad blir genitiv singular av \"cutis\" (hud, tredje deklinationen, femininum)?",
-    "correct": "Cutis (oförändrad i genitiv, samma form som nominativ)",
+    "correct": "Cutis",
     "distractors": [
       "Cuti",
       "Cutorum",
@@ -2553,7 +2553,7 @@
     "prompt": "Vad blir genitiv singular av \"musculus\" (muskel, andra deklinationen, maskulinum), t.ex. i \"tendo musculi\"?",
     "correct": "Musculi",
     "distractors": [
-      "Musculus (oförändrad)",
+      "Musculus",
       "Musculorum",
       "Musculae"
     ],
@@ -2621,7 +2621,7 @@
     "id": "medsek_latin_deklinationer_88",
     "type": "mc",
     "prompt": "Varför är det viktigt för en medicinsk sekreterare att kunna känna igen genitivformer som \"ossis\", \"cordis\", \"hepatis\" i löpande text, trots att dessa avviker från nominativformen?",
-    "correct": "Diagnoser och anatomiska beskrivningar i journaler använder ofta genitiv för att koppla samman strukturer (t.ex. \"fraktur på collum ossis\"), så igenkänning av stammen underlättar korrekt tolkning och sökning/kodning",
+    "correct": "Diagnoser och anatomiska beskrivningar i journaler använder ofta genitiv för att koppla samman strukturer, så igenkänning av stammen underlättar korrekt tolkning och sökning/kodning",
     "distractors": [
       "Genitivformer förekommer aldrig i praktiska journaltexter",
       "Nominativformen räcker alltid för att förstå diagnosen",
@@ -2635,7 +2635,7 @@
     "id": "medsek_latin_deklinationer_89",
     "type": "mc",
     "prompt": "Vad kallas de latinska substantiv och adjektiv som ursprungligen är grekiska lånord men böjs enligt latinska mönster i medicinsk terminologi (t.ex. \"thorax\", \"larynx\")?",
-    "correct": "Grekisk-latinska lånord (grecolatinismer)",
+    "correct": "Grekisk-latinska lånord",
     "distractors": [
       "Rena nybildningar utan språkligt ursprung",
       "Endast svenska nybildningar",
@@ -2845,7 +2845,7 @@
     "id": "medsek_lages_riktning_rorelse_4",
     "type": "mc",
     "prompt": "Vad heter det plan som delar kroppen i en främre och en bakre del på latin?",
-    "correct": "Planum coronale (frontale)",
+    "correct": "Planum coronale",
     "distractors": [
       "Planum sagittale",
       "Planum transversale",
@@ -2859,7 +2859,7 @@
     "id": "medsek_lages_riktning_rorelse_5",
     "type": "mc",
     "prompt": "Vad heter det plan som delar kroppen i en övre och en nedre del på latin?",
-    "correct": "Planum transversale (horizontale)",
+    "correct": "Planum transversale",
     "distractors": [
       "Planum sagittale",
       "Planum coronale",
@@ -2887,11 +2887,11 @@
     "id": "medsek_lages_riktning_rorelse_7",
     "type": "mc",
     "prompt": "Vad betyder riktningstermen \"medialis\" på svenska?",
-    "correct": "Medial (mot mittlinjen)",
+    "correct": "Medial",
     "distractors": [
-      "Lateral (bort från mittlinjen)",
-      "Proximal (närmare fästet)",
-      "Distal (längre bort från fästet)"
+      "Lateral",
+      "Proximal",
+      "Distal"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",
@@ -2901,11 +2901,11 @@
     "id": "medsek_lages_riktning_rorelse_8",
     "type": "mc",
     "prompt": "Vad betyder riktningstermen \"lateralis\" på svenska?",
-    "correct": "Lateral (bort från mittlinjen)",
+    "correct": "Lateral",
     "distractors": [
-      "Medial (mot mittlinjen)",
-      "Anterior (framtill)",
-      "Posterior (baktill)"
+      "Medial",
+      "Anterior",
+      "Posterior"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",
@@ -2915,11 +2915,11 @@
     "id": "medsek_lages_riktning_rorelse_9",
     "type": "mc",
     "prompt": "Vad betyder riktningstermen \"proximalis\" på svenska?",
-    "correct": "Proximal (närmare fästet/bålen)",
+    "correct": "Proximal",
     "distractors": [
-      "Distal (längre bort från fästet)",
-      "Superior (högre upp)",
-      "Inferior (längre ned)"
+      "Distal",
+      "Superior",
+      "Inferior"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",
@@ -2929,11 +2929,11 @@
     "id": "medsek_lages_riktning_rorelse_10",
     "type": "mc",
     "prompt": "Vad betyder riktningstermen \"distalis\" på svenska?",
-    "correct": "Distal (längre bort från fästet/bålen)",
+    "correct": "Distal",
     "distractors": [
-      "Proximal (närmare fästet)",
-      "Medial (mot mittlinjen)",
-      "Lateral (bort från mittlinjen)"
+      "Proximal",
+      "Medial",
+      "Lateral"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",
@@ -2999,9 +2999,9 @@
     "id": "medsek_lages_riktning_rorelse_15",
     "type": "mc",
     "prompt": "Vad betyder riktningstermen \"superficialis\" på svenska?",
-    "correct": "Ytlig (närmare kroppsytan)",
+    "correct": "Ytlig",
     "distractors": [
-      "Djup (längre in i kroppen)",
+      "Djup",
       "Medial",
       "Lateral"
     ],
@@ -3013,9 +3013,9 @@
     "id": "medsek_lages_riktning_rorelse_16",
     "type": "mc",
     "prompt": "Vad betyder riktningstermen \"profundus\" på svenska?",
-    "correct": "Djup (längre in i kroppen)",
+    "correct": "Djup",
     "distractors": [
-      "Ytlig (närmare kroppsytan)",
+      "Ytlig",
       "Proximal",
       "Distal"
     ],
@@ -3083,9 +3083,9 @@
     "id": "medsek_lages_riktning_rorelse_21",
     "type": "mc",
     "prompt": "Vad betyder rörelsetermen \"flexio\" på svenska?",
-    "correct": "Böjning (minskad ledvinkel)",
+    "correct": "Böjning",
     "distractors": [
-      "Sträckning (ökad ledvinkel)",
+      "Sträckning",
       "Bortförande från mittlinjen",
       "Tillförande mot mittlinjen"
     ],
@@ -3097,9 +3097,9 @@
     "id": "medsek_lages_riktning_rorelse_22",
     "type": "mc",
     "prompt": "Vad betyder rörelsetermen \"extensio\" på svenska?",
-    "correct": "Sträckning (ökad ledvinkel)",
+    "correct": "Sträckning",
     "distractors": [
-      "Böjning (minskad ledvinkel)",
+      "Böjning",
       "Vridning inåt",
       "Vridning utåt"
     ],
@@ -3153,9 +3153,9 @@
     "id": "medsek_lages_riktning_rorelse_26",
     "type": "mc",
     "prompt": "Vad betyder rörelsetermen \"supinatio\" på svenska?",
-    "correct": "Supination (t.ex. att vrida underarmen så handflatan vänds uppåt)",
+    "correct": "Supination",
     "distractors": [
-      "Pronation (handflatan vänds nedåt)",
+      "Pronation",
       "Böjning",
       "Sträckning"
     ],
@@ -3167,9 +3167,9 @@
     "id": "medsek_lages_riktning_rorelse_27",
     "type": "mc",
     "prompt": "Vad betyder rörelsetermen \"pronatio\" på svenska?",
-    "correct": "Pronation (t.ex. att vrida underarmen så handflatan vänds nedåt)",
+    "correct": "Pronation",
     "distractors": [
-      "Supination (handflatan vänds uppåt)",
+      "Supination",
       "Böjning",
       "Sträckning"
     ],
@@ -3181,9 +3181,9 @@
     "id": "medsek_lages_riktning_rorelse_28",
     "type": "mc",
     "prompt": "Vad betyder rörelsetermen \"inversio\" (om foten) på svenska?",
-    "correct": "Inversion (fotsulan vänds inåt)",
+    "correct": "Inversion",
     "distractors": [
-      "Eversion (fotsulan vänds utåt)",
+      "Eversion",
       "Dorsalflexion",
       "Plantarflexion"
     ],
@@ -3195,9 +3195,9 @@
     "id": "medsek_lages_riktning_rorelse_29",
     "type": "mc",
     "prompt": "Vad betyder rörelsetermen \"eversio\" (om foten) på svenska?",
-    "correct": "Eversion (fotsulan vänds utåt)",
+    "correct": "Eversion",
     "distractors": [
-      "Inversion (fotsulan vänds inåt)",
+      "Inversion",
       "Dorsalflexion",
       "Plantarflexion"
     ],
@@ -3213,7 +3213,7 @@
     "distractors": [
       "Collum",
       "Truncus",
-      "Cranium (endast skallbenet, inte hela huvudet)"
+      "Cranium"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",
@@ -3223,7 +3223,7 @@
     "id": "medsek_lages_riktning_rorelse_31",
     "type": "mc",
     "prompt": "Vad heter halsen på latin?",
-    "correct": "Collum (cervix)",
+    "correct": "Collum",
     "distractors": [
       "Caput",
       "Truncus",
@@ -3265,7 +3265,7 @@
     "id": "medsek_lages_riktning_rorelse_34",
     "type": "mc",
     "prompt": "Vad heter armen (övre extremiteten) på latin?",
-    "correct": "Membrum superius (brachium avser specifikt överarmen)",
+    "correct": "Membrum superius",
     "distractors": [
       "Membrum inferius",
       "Truncus",
@@ -3349,7 +3349,7 @@
     "id": "medsek_lages_riktning_rorelse_40",
     "type": "mc",
     "prompt": "Vad heter kroppens framsida (buksidan) på latin, ofta i uttryck som \"facies ventralis\"?",
-    "correct": "Venter (ventralis som adjektiv)",
+    "correct": "Venter",
     "distractors": [
       "Dorsum",
       "Latus",
@@ -3367,7 +3367,7 @@
     "distractors": [
       "Regio",
       "Zona",
-      "Spatium (används i vissa specifika sammanhang, men \"cavitas\" är grundtermen)"
+      "Spatium"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",
@@ -3391,7 +3391,7 @@
     "id": "medsek_lages_riktning_rorelse_43",
     "type": "mc",
     "prompt": "Vad heter bukhålan på latin?",
-    "correct": "Cavitas abdominis (cavitas peritonealis avser specifikt bukhinnehålan)",
+    "correct": "Cavitas abdominis",
     "distractors": [
       "Cavitas thoracis",
       "Cavitas pelvis",
@@ -3475,7 +3475,7 @@
     "id": "medsek_lages_riktning_rorelse_49",
     "type": "mc",
     "prompt": "Vad heter armhålan (regionen) på latin?",
-    "correct": "Regio axillaris (axilla)",
+    "correct": "Regio axillaris",
     "distractors": [
       "Regio inguinalis",
       "Regio poplitea",
@@ -3489,7 +3489,7 @@
     "id": "medsek_lages_riktning_rorelse_50",
     "type": "mc",
     "prompt": "Vad heter ljumsken (regionen) på latin?",
-    "correct": "Regio inguinalis (inguen)",
+    "correct": "Regio inguinalis",
     "distractors": [
       "Regio axillaris",
       "Regio poplitea",
@@ -3503,7 +3503,7 @@
     "id": "medsek_lages_riktning_rorelse_51",
     "type": "mc",
     "prompt": "Vad heter knävecket (regionen bakom knäet) på latin?",
-    "correct": "Regio poplitea (fossa poplitea)",
+    "correct": "Regio poplitea",
     "distractors": [
       "Regio axillaris",
       "Regio inguinalis",
@@ -3517,7 +3517,7 @@
     "id": "medsek_lages_riktning_rorelse_52",
     "type": "mc",
     "prompt": "Vad heter armvecket (regionen framför armbågen) på latin?",
-    "correct": "Regio cubitalis (fossa cubitalis)",
+    "correct": "Regio cubitalis",
     "distractors": [
       "Regio poplitea",
       "Regio axillaris",
@@ -3629,9 +3629,9 @@
     "id": "medsek_lages_riktning_rorelse_60",
     "type": "mc",
     "prompt": "Hur böjs \"dexter\" (höger) för att kongruera med ett femininumsubstantiv som \"arteria\"?",
-    "correct": "Dextra (arteria dextra)",
+    "correct": "Dextra",
     "distractors": [
-      "Dexter (oförändrat)",
+      "Dexter",
       "Dextrum",
       "Dextri"
     ],
@@ -3643,10 +3643,10 @@
     "id": "medsek_lages_riktning_rorelse_61",
     "type": "mc",
     "prompt": "Hur böjs \"dexter\" för att kongruera med ett neutrumsubstantiv som \"cor\"?",
-    "correct": "Dextrum (i vissa fraser; \"cor\" beskrivs dock oftast med andra adjektiv)",
+    "correct": "Dextrum",
     "distractors": [
       "Dextra",
-      "Dexter (oförändrat)",
+      "Dexter",
       "Dextri"
     ],
     "topic": "medsek_lages_riktning_rorelse",
@@ -3783,9 +3783,9 @@
     "id": "medsek_lages_riktning_rorelse_71",
     "type": "mc",
     "prompt": "Vad betyder adjektivet \"superficialis\" i kontrast till \"profundus\" när det gäller muskler, t.ex. \"flexor digitorum superficialis\"?",
-    "correct": "Ytlig (belägen närmare huden)",
+    "correct": "Ytlig",
     "distractors": [
-      "Djup (belägen längre in)",
+      "Djup",
       "Störst",
       "Minst"
     ],
@@ -3881,7 +3881,7 @@
     "id": "medsek_lages_riktning_rorelse_78",
     "type": "mc",
     "prompt": "Vad betyder termen \"collum\" i anatomiska termer, t.ex. \"collum femoris\"?",
-    "correct": "Hals (den smalare delen mellan huvud och kropp av en struktur)",
+    "correct": "Hals",
     "distractors": [
       "Spets",
       "Bas",
@@ -3923,7 +3923,7 @@
     "id": "medsek_lages_riktning_rorelse_81",
     "type": "mc",
     "prompt": "Vad betyder termen \"crista\" på svenska, t.ex. \"crista iliaca\"?",
-    "correct": "Kam, ås (benutskott)",
+    "correct": "Kam, ås",
     "distractors": [
       "Grop",
       "Öppning",
@@ -3951,7 +3951,7 @@
     "id": "medsek_lages_riktning_rorelse_83",
     "type": "mc",
     "prompt": "Vad betyder termen \"tuberositas\" på svenska, t.ex. \"tuberositas tibiae\"?",
-    "correct": "Skrovlig upphöjning (för senfäste)",
+    "correct": "Skrovlig upphöjning",
     "distractors": [
       "Slät fördjupning",
       "Öppning",
@@ -3981,7 +3981,7 @@
     "prompt": "Vad betyder termen \"canalis\" på svenska, t.ex. \"canalis vertebralis\"?",
     "correct": "Kanal",
     "distractors": [
-      "Öppning (enskild punkt)",
+      "Öppning",
       "Kam",
       "Grop"
     ],
@@ -4049,7 +4049,7 @@
     "id": "medsek_lages_riktning_rorelse_90",
     "type": "mc",
     "prompt": "Vad betyder termen \"condylus\" på svenska, t.ex. \"condylus lateralis femoris\"?",
-    "correct": "Ledknöl (rundad ledyta)",
+    "correct": "Ledknöl",
     "distractors": [
       "Fördjupning",
       "Kanal",
@@ -4147,7 +4147,7 @@
     "id": "medsek_lages_riktning_rorelse_97",
     "type": "mc",
     "prompt": "Vad betyder termen \"truncus\" i kärl-/nervsammanhang, t.ex. \"truncus coeliacus\"?",
-    "correct": "Stam (huvudgren innan förgrening)",
+    "correct": "Stam",
     "distractors": [
       "Den minsta grenen",
       "En enskild ände",
@@ -4161,7 +4161,7 @@
     "id": "medsek_lages_riktning_rorelse_98",
     "type": "mc",
     "prompt": "Vad betyder termen \"plexus\" på svenska, t.ex. \"plexus brachialis\"?",
-    "correct": "Fläta, nätverk (av nerver eller kärl)",
+    "correct": "Fläta, nätverk",
     "distractors": [
       "En enskild rak nerv",
       "En muskel",
@@ -4175,7 +4175,7 @@
     "id": "medsek_lages_riktning_rorelse_99",
     "type": "mc",
     "prompt": "Vad betyder termen \"ganglion\" på svenska?",
-    "correct": "Nervknuta (samling nervcellskroppar utanför CNS)",
+    "correct": "Nervknuta",
     "distractors": [
       "En muskel",
       "En sena",
@@ -4189,7 +4189,7 @@
     "id": "medsek_lages_riktning_rorelse_100",
     "type": "mc",
     "prompt": "Vad betyder termen \"fasciculus\" på svenska, t.ex. \"fasciculus gracilis\"?",
-    "correct": "Liten bunt (av nervtrådar eller muskelfibrer)",
+    "correct": "Liten bunt",
     "distractors": [
       "Ett helt organ",
       "En enskild cell",
@@ -4276,8 +4276,8 @@
     "correct": "Sanguis",
     "distractors": [
       "Lympha",
-      "Plasma (ett annat, specifikt begrepp)",
-      "Serum (ett annat, specifikt begrepp)"
+      "Plasma",
+      "Serum"
     ],
     "topic": "medsek_organsystemen_terminologi",
     "difficulty": "Normal",
@@ -4315,7 +4315,7 @@
     "id": "medsek_organsystemen_terminologi_9",
     "type": "mc",
     "prompt": "Vad heter blodplättar på latin?",
-    "correct": "Thrombocytus (plural: thrombocyti)",
+    "correct": "Thrombocytus",
     "distractors": [
       "Erythrocytus",
       "Leucocytus",
@@ -4457,7 +4457,7 @@
     "prompt": "Vad heter näsan på latin?",
     "correct": "Nasus",
     "distractors": [
-      "Os (mun)",
+      "Os",
       "Auris",
       "Oculus"
     ],
@@ -4497,7 +4497,7 @@
     "id": "medsek_organsystemen_terminologi_22",
     "type": "mc",
     "prompt": "Vad heter munnen på latin?",
-    "correct": "Os (oris i genitiv)",
+    "correct": "Os",
     "distractors": [
       "Nasus",
       "Auris",
@@ -4525,7 +4525,7 @@
     "id": "medsek_organsystemen_terminologi_24",
     "type": "mc",
     "prompt": "Vad heter magsäcken på latin?",
-    "correct": "Ventriculus (gaster på grekiska)",
+    "correct": "Ventriculus",
     "distractors": [
       "Intestinum",
       "Hepar",
@@ -4641,7 +4641,7 @@
     "distractors": [
       "Colon",
       "Caecum",
-      "Anus (endast själva öppningen)"
+      "Anus"
     ],
     "topic": "medsek_organsystemen_terminologi",
     "difficulty": "Normal",
@@ -4651,7 +4651,7 @@
     "id": "medsek_organsystemen_terminologi_33",
     "type": "mc",
     "prompt": "Vad heter levern på latin?",
-    "correct": "Hepar (jecur)",
+    "correct": "Hepar",
     "distractors": [
       "Ren",
       "Pancreas",
@@ -4665,7 +4665,7 @@
     "id": "medsek_organsystemen_terminologi_34",
     "type": "mc",
     "prompt": "Vad heter gallblåsan på latin?",
-    "correct": "Vesica biliaris (fellea)",
+    "correct": "Vesica biliaris",
     "distractors": [
       "Vesica urinaria",
       "Ventriculus",
@@ -4693,7 +4693,7 @@
     "id": "medsek_organsystemen_terminologi_36",
     "type": "mc",
     "prompt": "Vad heter mjälten på latin?",
-    "correct": "Splen (lien)",
+    "correct": "Splen",
     "distractors": [
       "Hepar",
       "Pancreas",
@@ -4819,7 +4819,7 @@
     "id": "medsek_organsystemen_terminologi_45",
     "type": "mc",
     "prompt": "Vad heter hjärnan på latin?",
-    "correct": "Cerebrum (encephalon på grekiska)",
+    "correct": "Cerebrum",
     "distractors": [
       "Cerebellum",
       "Medulla spinalis",
@@ -4931,7 +4931,7 @@
     "id": "medsek_organsystemen_terminologi_53",
     "type": "mc",
     "prompt": "Vad heter rörelseapparaten (muskler och skelett tillsammans) som samlingsterm på latin?",
-    "correct": "Systema musculoskeletale (systema locomotorium)",
+    "correct": "Systema musculoskeletale",
     "distractors": [
       "Systema nervosum",
       "Systema endocrinum",
@@ -4945,7 +4945,7 @@
     "id": "medsek_organsystemen_terminologi_54",
     "type": "mc",
     "prompt": "Vad heter skelettet på latin?",
-    "correct": "Skeleton (systema skeletale)",
+    "correct": "Skeleton",
     "distractors": [
       "Systema musculare",
       "Systema nervosum",
@@ -5085,7 +5085,7 @@
     "id": "medsek_organsystemen_terminologi_64",
     "type": "mc",
     "prompt": "Vad heter hypofysen på latin?",
-    "correct": "Glandula pituitaria (hypophysis)",
+    "correct": "Glandula pituitaria",
     "distractors": [
       "Glandula thyroidea",
       "Glandula suprarenalis",
@@ -5127,7 +5127,7 @@
     "id": "medsek_organsystemen_terminologi_67",
     "type": "mc",
     "prompt": "Vad heter binjuren på latin?",
-    "correct": "Glandula suprarenalis (adrenalis)",
+    "correct": "Glandula suprarenalis",
     "distractors": [
       "Glandula thyroidea",
       "Glandula parathyroidea",
@@ -5169,7 +5169,7 @@
     "id": "medsek_organsystemen_terminologi_70",
     "type": "mc",
     "prompt": "Vad heter fortplantningssystemet som samlingsterm på latin?",
-    "correct": "Systema genitale (reproductivum)",
+    "correct": "Systema genitale",
     "distractors": [
       "Systema urinarium",
       "Systema endocrinum",
@@ -5211,7 +5211,7 @@
     "id": "medsek_organsystemen_terminologi_73",
     "type": "mc",
     "prompt": "Vad heter äggledaren på latin?",
-    "correct": "Tuba uterina (salpinx)",
+    "correct": "Tuba uterina",
     "distractors": [
       "Ovarium",
       "Uterus",
@@ -5267,7 +5267,7 @@
     "id": "medsek_organsystemen_terminologi_77",
     "type": "mc",
     "prompt": "Vad heter sädesledaren på latin?",
-    "correct": "Ductus deferens (vas deferens)",
+    "correct": "Ductus deferens",
     "distractors": [
       "Epididymis",
       "Urethra",
@@ -5295,7 +5295,7 @@
     "id": "medsek_organsystemen_terminologi_79",
     "type": "mc",
     "prompt": "Vad heter huden som organ på latin?",
-    "correct": "Cutis (derma på grekiska)",
+    "correct": "Cutis",
     "distractors": [
       "Fascia",
       "Periosteum",
@@ -5309,7 +5309,7 @@
     "id": "medsek_organsystemen_terminologi_80",
     "type": "mc",
     "prompt": "Vad heter hudens hinnliknande skyddande yta i slemhinnesammanhang (t.ex. i munhålan) på latin?",
-    "correct": "Mucosa (tunica mucosa)",
+    "correct": "Mucosa",
     "distractors": [
       "Cutis",
       "Fascia",
@@ -5323,7 +5323,7 @@
     "id": "medsek_organsystemen_terminologi_81",
     "type": "mc",
     "prompt": "Vad heter det tunna, glatta hinnskiktet som klär bukhålans organ och innervägg (t.ex. peritoneum, pleura) generellt på latin?",
-    "correct": "Serosa (tunica serosa)",
+    "correct": "Serosa",
     "distractors": [
       "Mucosa",
       "Cutis",
@@ -5393,7 +5393,7 @@
     "id": "medsek_organsystemen_terminologi_86",
     "type": "mc",
     "prompt": "Vad heter immunsystemet som samlingsterm på latin?",
-    "correct": "Systema immunicum (lymphaticum)",
+    "correct": "Systema immunicum",
     "distractors": [
       "Systema endocrinum",
       "Systema nervosum",
@@ -5435,7 +5435,7 @@
     "id": "medsek_organsystemen_terminologi_89",
     "type": "mc",
     "prompt": "Vilket organsystem tillhör hjärta, artärer, vener och kapillärer?",
-    "correct": "Cirkulationssystemet (systema cardiovasculare)",
+    "correct": "Cirkulationssystemet",
     "distractors": [
       "Andningssystemet",
       "Matsmältningssystemet",
@@ -5449,7 +5449,7 @@
     "id": "medsek_organsystemen_terminologi_90",
     "type": "mc",
     "prompt": "Vilket organsystem tillhör lungor, luftstrupe, bronker och alveoler?",
-    "correct": "Andningssystemet (systema respiratorium)",
+    "correct": "Andningssystemet",
     "distractors": [
       "Cirkulationssystemet",
       "Urinvägssystemet",
@@ -5463,7 +5463,7 @@
     "id": "medsek_organsystemen_terminologi_91",
     "type": "mc",
     "prompt": "Vilket organsystem tillhör magsäck, tarmar, lever, gallblåsa och bukspottkörtel?",
-    "correct": "Matsmältningssystemet (systema digestorium)",
+    "correct": "Matsmältningssystemet",
     "distractors": [
       "Andningssystemet",
       "Urinvägssystemet",
@@ -5477,7 +5477,7 @@
     "id": "medsek_organsystemen_terminologi_92",
     "type": "mc",
     "prompt": "Vilket organsystem tillhör njurar, urinledare, urinblåsa och urinrör?",
-    "correct": "Urinvägssystemet (systema urinarium)",
+    "correct": "Urinvägssystemet",
     "distractors": [
       "Matsmältningssystemet",
       "Fortplantningssystemet",
@@ -5491,7 +5491,7 @@
     "id": "medsek_organsystemen_terminologi_93",
     "type": "mc",
     "prompt": "Vilket organsystem tillhör hjärna, ryggmärg och perifera nerver?",
-    "correct": "Nervsystemet (systema nervosum)",
+    "correct": "Nervsystemet",
     "distractors": [
       "Rörelseapparaten",
       "Hormonsystemet",
@@ -5505,7 +5505,7 @@
     "id": "medsek_organsystemen_terminologi_94",
     "type": "mc",
     "prompt": "Vilket organsystem tillhör skelett, leder, muskler, ledband och senor?",
-    "correct": "Rörelseapparaten (systema musculoskeletale)",
+    "correct": "Rörelseapparaten",
     "distractors": [
       "Nervsystemet",
       "Hormonsystemet",
@@ -5519,7 +5519,7 @@
     "id": "medsek_organsystemen_terminologi_95",
     "type": "mc",
     "prompt": "Vilket organsystem tillhör hypofys, sköldkörtel, bisköldkörtel och binjurar?",
-    "correct": "Hormonsystemet (systema endocrinum)",
+    "correct": "Hormonsystemet",
     "distractors": [
       "Nervsystemet",
       "Urinvägssystemet",
@@ -5533,7 +5533,7 @@
     "id": "medsek_organsystemen_terminologi_96",
     "type": "mc",
     "prompt": "Vilket organsystem tillhör livmoder, äggstockar, testiklar och prostata?",
-    "correct": "Fortplantningssystemet (systema genitale)",
+    "correct": "Fortplantningssystemet",
     "distractors": [
       "Urinvägssystemet",
       "Hormonsystemet",
@@ -5547,7 +5547,7 @@
     "id": "medsek_organsystemen_terminologi_97",
     "type": "mc",
     "prompt": "Vilket organsystem tillhör hud, hår och naglar?",
-    "correct": "Hudorganet/integumentet (integumentum commune)",
+    "correct": "Hudorganet/integumentet",
     "distractors": [
       "Rörelseapparaten",
       "Nervsystemet",
@@ -5561,7 +5561,7 @@
     "id": "medsek_organsystemen_terminologi_98",
     "type": "mc",
     "prompt": "Vilket organsystem tillhör mjälte, lymfkörtlar, tymus och tonsiller?",
-    "correct": "Immun-/lymfsystemet (systema lymphaticum/immunicum)",
+    "correct": "Immun-/lymfsystemet",
     "distractors": [
       "Cirkulationssystemet",
       "Hormonsystemet",
@@ -5967,7 +5967,7 @@
     "id": "medsek_sjukdom_symtom_atgard_27",
     "type": "mc",
     "prompt": "Vad heter förhöjt blodtryck som fackterm?",
-    "correct": "Hypertoni (hypertension)",
+    "correct": "Hypertoni",
     "distractors": [
       "Hypotoni",
       "Takykardi",
@@ -5981,7 +5981,7 @@
     "id": "medsek_sjukdom_symtom_atgard_28",
     "type": "mc",
     "prompt": "Vad heter för lågt blodtryck som fackterm?",
-    "correct": "Hypotoni (hypotension)",
+    "correct": "Hypotoni",
     "distractors": [
       "Hypertoni",
       "Takykardi",
@@ -6069,7 +6069,7 @@
     "distractors": [
       "Myokardit",
       "Arytmi",
-      "Hjärtinfarkt (annat tillstånd, se separat term)"
+      "Hjärtinfarkt"
     ],
     "topic": "medsek_sjukdom_symtom_atgard",
     "difficulty": "Normal",
@@ -6121,7 +6121,7 @@
     "id": "medsek_sjukdom_symtom_atgard_38",
     "type": "mc",
     "prompt": "Vad heter en lös blodpropp/partikel som förts med blodströmmen och fastnat på annan plats?",
-    "correct": "Embolism (emboli)",
+    "correct": "Embolism",
     "distractors": [
       "Trombos",
       "Aneurysm",
@@ -6163,7 +6163,7 @@
     "id": "medsek_sjukdom_symtom_atgard_41",
     "type": "mc",
     "prompt": "Vad heter stroke/slaganfall som fackterm?",
-    "correct": "Cerebrovaskulär insult (apoplexi)",
+    "correct": "Cerebrovaskulär insult",
     "distractors": [
       "Migrän",
       "Epilepsi",
@@ -6219,9 +6219,9 @@
     "id": "medsek_sjukdom_symtom_atgard_45",
     "type": "mc",
     "prompt": "Vad heter förlamning som fackterm?",
-    "correct": "Paralys (plegi)",
+    "correct": "Paralys",
     "distractors": [
-      "Pares (partiell förlamning)",
+      "Pares",
       "Ataxi",
       "Afasi"
     ],
@@ -6235,7 +6235,7 @@
     "prompt": "Vad heter partiell (ofullständig) förlamning som fackterm?",
     "correct": "Pares",
     "distractors": [
-      "Paralys (fullständig förlamning)",
+      "Paralys",
       "Ataxi",
       "Dysartri"
     ],
@@ -6527,7 +6527,7 @@
     "id": "medsek_sjukdom_symtom_atgard_67",
     "type": "mc",
     "prompt": "Vad heter förstoppning som fackterm?",
-    "correct": "Konstipation (obstipation)",
+    "correct": "Konstipation",
     "distractors": [
       "Diarré",
       "Emesis",
@@ -6597,7 +6597,7 @@
     "id": "medsek_sjukdom_symtom_atgard_72",
     "type": "mc",
     "prompt": "Vad heter feber som fackterm?",
-    "correct": "Febris (pyrexi)",
+    "correct": "Febris",
     "distractors": [
       "Hypotermi",
       "Rigor",
@@ -6683,7 +6683,7 @@
     "prompt": "Vad heter kirurgiskt snitt i luftstrupen (t.ex. för att säkra luftväg) som ingrepp?",
     "correct": "Trakeotomi",
     "distractors": [
-      "Trakeostomi (den bestående öppningen, ett relaterat men annat begrepp)",
+      "Trakeostomi",
       "Laryngektomi",
       "Bronkoskopi"
     ],
@@ -6751,7 +6751,7 @@
     "id": "medsek_sjukdom_symtom_atgard_83",
     "type": "mc",
     "prompt": "Vad kallas den samlade bedömningen av patientens aktuella fysiska/psykiska tillstånd vid en undersökning (t.ex. \"AT gott, cor/pulm ua\")?",
-    "correct": "Status (statuspresens)",
+    "correct": "Status",
     "distractors": [
       "Anamnes",
       "Epikris",
@@ -6877,7 +6877,7 @@
     "id": "medsek_sjukdom_symtom_atgard_92",
     "type": "mc",
     "prompt": "Vad betyder den vanliga journalförkortningen \"p.o.\" vid läkemedelsordination?",
-    "correct": "Per oralt (genom munnen)",
+    "correct": "Per oralt",
     "distractors": [
       "Per okulärt",
       "Parenteralt",
@@ -7017,7 +7017,7 @@
     "id": "medsek_diagnoskodning_2",
     "type": "mc",
     "prompt": "Vem publicerar och underhåller den internationella grundversionen av ICD?",
-    "correct": "Världshälsoorganisationen (WHO)",
+    "correct": "Världshälsoorganisationen",
     "distractors": [
       "Socialstyrelsen ensamt",
       "EU-kommissionen",
@@ -7035,7 +7035,7 @@
     "distractors": [
       "Läkemedelsverket",
       "Försäkringskassan",
-      "Inspektionen för vård och omsorg (IVO)"
+      "Inspektionen för vård och omsorg"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7073,7 +7073,7 @@
     "id": "medsek_diagnoskodning_6",
     "type": "mc",
     "prompt": "Hur är en ICD-10-kod grundläggande uppbyggd (antal tecken och typ)?",
-    "correct": "En bokstav följd av två siffror, ibland med ytterligare siffror efter en punkt för mer specificering (t.ex. A00.1)",
+    "correct": "En bokstav följd av två siffror, ibland med ytterligare siffror efter en punkt för mer specificering",
     "distractors": [
       "Enbart fyra siffror utan bokstav",
       "Enbart en bokstav utan siffror",
@@ -7353,7 +7353,7 @@
     "id": "medsek_diagnoskodning_26",
     "type": "mc",
     "prompt": "Vad kallas övriga diagnoser som registreras utöver huvuddiagnosen vid samma vårdtillfälle?",
-    "correct": "Bidiagnos(er)",
+    "correct": "Bidiagnos",
     "distractors": [
       "Huvuddiagnos",
       "Differentialdiagnos",
@@ -7367,7 +7367,7 @@
     "id": "medsek_diagnoskodning_27",
     "type": "mc",
     "prompt": "Varför är det viktigt att skilja huvuddiagnos från bidiagnos vid kodning?",
-    "correct": "Det påverkar bland annat statistik, ersättningssystem (t.ex. DRG) och vilken information som prioriteras vid uppföljning av vårdtillfället",
+    "correct": "Det påverkar bland annat statistik, ersättningssystem och vilken information som prioriteras vid uppföljning av vårdtillfället",
     "distractors": [
       "Det har ingen praktisk betydelse alls",
       "Bidiagnoser registreras aldrig i praktiken",
@@ -7381,7 +7381,7 @@
     "id": "medsek_diagnoskodning_28",
     "type": "mc",
     "prompt": "Vad står förkortningen DRG för, ett system som bland annat använder diagnoskoder för att gruppera vårdtillfällen?",
-    "correct": "Diagnosis-Related Groups (diagnosrelaterade grupper)",
+    "correct": "Diagnosis-Related Groups",
     "distractors": [
       "Direct Reporting Guidelines",
       "Digital Record Grouping",
@@ -7423,9 +7423,9 @@
     "id": "medsek_diagnoskodning_31",
     "type": "mc",
     "prompt": "Vad kallas den nationella webbtjänst där Socialstyrelsens klassifikationer (ICD-10-SE, KVÅ m.fl.) finns sökbara?",
-    "correct": "Klassifikationer och koder (Socialstyrelsens sökverktyg)",
+    "correct": "Klassifikationer och koder",
     "distractors": [
-      "Vårdhandboken (ett annat, kliniskt uppslagsverk)",
+      "Vårdhandboken",
       "Läkemedelsboken",
       "1177 Vårdguiden"
     ],
@@ -7451,7 +7451,7 @@
     "id": "medsek_diagnoskodning_33",
     "type": "mc",
     "prompt": "Vad kallas de tilläggskoder i ICD-10 som anger yttre orsak till en skada (t.ex. fallolycka, trafikolycka)?",
-    "correct": "Yttre orsakskoder (V01–Y98)",
+    "correct": "Yttre orsakskoder",
     "distractors": [
       "Huvuddiagnoskoder",
       "KVÅ-koder",
@@ -7465,7 +7465,7 @@
     "id": "medsek_diagnoskodning_34",
     "type": "mc",
     "prompt": "Varför registreras ofta både en skadekod (t.ex. från S00–T98) och en yttre orsakskod (V01–Y98) tillsammans vid en olycksfallsskada?",
-    "correct": "Skadekoden beskriver själva skadan (t.ex. fraktur), medan den yttre orsakskoden beskriver hur skadan uppstod (t.ex. fallolycka), vilket ger fullständigare statistik",
+    "correct": "Skadekoden beskriver själva skadan, medan den yttre orsakskoden beskriver hur skadan uppstod, vilket ger fullständigare statistik",
     "distractors": [
       "Endast en av koderna behövs någonsin",
       "Yttre orsakskoder ersätter alltid skadekoden",
@@ -7479,7 +7479,7 @@
     "id": "medsek_diagnoskodning_35",
     "type": "mc",
     "prompt": "Vad kallas de Z-koder i ICD-10 som exempelvis används vid hälsokontroller utan sjukdom eller vid uppföljningsbesök?",
-    "correct": "Z-koder (faktorer av betydelse för hälsotillståndet och vårdkontakter)",
+    "correct": "Z-koder",
     "distractors": [
       "Huvuddiagnoskoder för akuta sjukdomar",
       "KVÅ-koder",
@@ -7535,7 +7535,7 @@
     "id": "medsek_diagnoskodning_39",
     "type": "mc",
     "prompt": "Varför behöver en medicinsk sekreterare kunna både ICD-10 och KVÅ, inte bara en av dem?",
-    "correct": "Ett vårdtillfälle dokumenteras oftast med både en diagnos (varför patienten vårdas) och utförda åtgärder (vad som gjordes), vilka kodas i två olika system",
+    "correct": "Ett vårdtillfälle dokumenteras oftast med både en diagnos och utförda åtgärder, vilka kodas i två olika system",
     "distractors": [
       "Endast ICD-10 används i praktiken, KVÅ är överflödigt",
       "Endast KVÅ används i praktiken, ICD-10 är överflödigt",
@@ -7549,7 +7549,7 @@
     "id": "medsek_diagnoskodning_40",
     "type": "mc",
     "prompt": "Vad kallas processen där en medicinsk sekreterare tolkar läkarens diktat/journaltext och omsätter diagnoser/åtgärder till korrekta koder?",
-    "correct": "Diagnos-/åtgärdskodning (klinisk kodning)",
+    "correct": "Diagnos-/åtgärdskodning",
     "distractors": [
       "Anamnesupptagning",
       "Remissbedömning",
@@ -7594,8 +7594,8 @@
     "correct": "ICD-11",
     "distractors": [
       "ICD-9",
-      "ICD-10-SE (det är den svenska varianten av ICD-10, inte en efterföljare)",
-      "DSM-5 (ett annat, psykiatriskt klassifikationssystem)"
+      "ICD-10-SE",
+      "DSM-5"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7605,7 +7605,7 @@
     "id": "medsek_diagnoskodning_44",
     "type": "mc",
     "prompt": "Vad kallas det amerikanska klassifikationssystemet för psykiatriska diagnoser som ibland nämns vid sidan av ICD, men som inte är det system som används för svensk officiell diagnosstatistik?",
-    "correct": "DSM (Diagnostic and Statistical Manual of Mental Disorders)",
+    "correct": "DSM",
     "distractors": [
       "ICD-10",
       "KVÅ",
@@ -7619,7 +7619,7 @@
     "id": "medsek_diagnoskodning_45",
     "type": "mc",
     "prompt": "Vad kallas den enhet inom en vårdorganisation som ofta har särskilt ansvar för kvalitetssäkring av diagnos- och åtgärdskodning?",
-    "correct": "Medicinska sekreterare/kodningsfunktionen (ofta i samarbete med KVÅ-/ICD-10-ansvariga och verksamhetens läkare)",
+    "correct": "Medicinska sekreterare/kodningsfunktionen",
     "distractors": [
       "Vaktmästeriet",
       "IT-supporten enbart",
@@ -7675,7 +7675,7 @@
     "id": "medsek_diagnoskodning_49",
     "type": "mc",
     "prompt": "Vad kallas den lagstiftning som reglerar hur patientuppgifter (inklusive diagnoskoder) får hanteras och lagras i Sverige?",
-    "correct": "Patientdatalagen (samt GDPR/dataskyddsförordningen)",
+    "correct": "Patientdatalagen",
     "distractors": [
       "Socialförsäkringsbalken enbart",
       "Arbetsmiljölagen",
@@ -7705,7 +7705,7 @@
     "prompt": "Vad kallas den grundläggande enhet av vårdkontakt (t.ex. ett besök eller en vårdperiod) som diagnos- och åtgärdskoder knyts till?",
     "correct": "Vårdtillfälle/vårdkontakt",
     "distractors": [
-      "Patientjournal (den samlade dokumentationen över tid, ett bredare begrepp)",
+      "Patientjournal",
       "Remiss",
       "Epikris"
     ],
@@ -7717,7 +7717,7 @@
     "id": "medsek_diagnoskodning_52",
     "type": "mc",
     "prompt": "Vad innebär skillnaden mellan öppenvårdsbesök och slutenvårdstillfälle vad gäller kodningsrutiner?",
-    "correct": "Båda kodas med diagnos-/åtgärdskoder, men slutenvårdstillfällen har ofta en mer omfattande sammanfattning (epikris) och kan generera fler bidiagnoser",
+    "correct": "Båda kodas med diagnos-/åtgärdskoder, men slutenvårdstillfällen har ofta en mer omfattande sammanfattning och kan generera fler bidiagnoser",
     "distractors": [
       "Endast slutenvård kodas någonsin",
       "Endast öppenvård kodas någonsin",
@@ -7759,11 +7759,11 @@
     "id": "medsek_diagnoskodning_55",
     "type": "mc",
     "prompt": "Vilken internationell klassifikation ligger till grund för den kirurgiska delen av KVÅ?",
-    "correct": "NCSP (Nordic Classification of Surgical Procedures/Nordisk klassifikation av kirurgiska åtgärder)",
+    "correct": "NCSP",
     "distractors": [
       "ICD-11",
       "DSM-5",
-      "SNOMED CT (ett annat, bredare terminologisystem)"
+      "SNOMED CT"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -7803,7 +7803,7 @@
     "prompt": "Vad kallas den bokstav som i en KVÅ-kod ofta anger vilket åtgärdsområde (t.ex. kirurgi på ett visst organsystem) koden tillhör?",
     "correct": "Kapitelbokstaven i KVÅ-kodens struktur",
     "distractors": [
-      "ICD-kapitlets bokstav (ett annat system)",
+      "ICD-kapitlets bokstav",
       "Patientens diagnosbokstav",
       "Vårdgivarkoden"
     ],
@@ -7857,7 +7857,7 @@
     "id": "medsek_diagnoskodning_62",
     "type": "mc",
     "prompt": "Vad kallas den granskning som ibland görs i efterhand för att kontrollera att kodningen av ett urval journaler är korrekt?",
-    "correct": "Kodningsgranskning (kodrevision)",
+    "correct": "Kodningsgranskning",
     "distractors": [
       "Anamnesupptagning",
       "Triagering",
@@ -7871,9 +7871,9 @@
     "id": "medsek_diagnoskodning_63",
     "type": "mc",
     "prompt": "Vad är ett vanligt exempel på ett kodningsfel som beror på otillräcklig specificering?",
-    "correct": "Att en ospecificerad kod (t.ex. \"sjukdom UNS\") används trots att journaltexten innehåller information som hade räckt för en mer specifik kod",
+    "correct": "Att en ospecificerad kod används trots att journaltexten innehåller information som hade räckt för en mer specifik kod",
     "distractors": [
-      "Att fel patient kopplas till rätt kod (detta är ett annat typ av fel, identitetsfel)",
+      "Att fel patient kopplas till rätt kod",
       "Att koden har för många siffror",
       "Att koden skrivs med små bokstäver istället för stora"
     ],
@@ -7885,7 +7885,7 @@
     "id": "medsek_diagnoskodning_64",
     "type": "mc",
     "prompt": "Vad är ett vanligt exempel på ett kodningsfel som beror på förväxling mellan huvud- och bidiagnos?",
-    "correct": "Att en bidiagnos (t.ex. en kronisk bakomliggande sjukdom) felaktigt registreras som huvuddiagnos för det aktuella vårdtillfället",
+    "correct": "Att en bidiagnos felaktigt registreras som huvuddiagnos för det aktuella vårdtillfället",
     "distractors": [
       "Att för många KVÅ-koder registreras",
       "Att koden innehåller för många bokstäver",
@@ -7955,7 +7955,7 @@
     "id": "medsek_diagnoskodning_69",
     "type": "mc",
     "prompt": "Varför är det värdefullt att en medicinsk sekreterare kan känna igen både den svenska och den latinska termen för en diagnos vid kodningsarbete (koppling till de tidigare ämnena i utbildningen)?",
-    "correct": "Läkarens diktat använder ofta facktermen (t.ex. \"appendicit\"), medan kodverktyget kan vara sökbart på både fackterm och den svenska beskrivningen (\"blindtarmsinflammation\")",
+    "correct": "Läkarens diktat använder ofta facktermen, medan kodverktyget kan vara sökbart på både fackterm och den svenska beskrivningen",
     "distractors": [
       "Latinska termer förekommer aldrig i diagnostexter",
       "Kodverktyg är alltid enbart sökbara på engelska",
@@ -8081,7 +8081,7 @@
     "id": "medsek_diagnoskodning_78",
     "type": "mc",
     "prompt": "Vad kallas det tillfälle då en patient återkommer för uppföljning av en tidigare behandlad/utredd sjukdom, vilket kan påverka val av diagnoskod?",
-    "correct": "Uppföljningsbesök (kontrollbesök)",
+    "correct": "Uppföljningsbesök",
     "distractors": [
       "Akutbesök",
       "Remissbesök",
@@ -8111,9 +8111,9 @@
     "prompt": "Vad kallas den övergripande termen för de administrativa system (t.ex. journalsystem, vårdadministrativa system) där kodning registreras och lagras?",
     "correct": "Vårdinformationssystem",
     "distractors": [
-      "Kollimator (ett radiologiskt begrepp, inte administrativt)",
-      "Grid (ett radiologiskt begrepp)",
-      "Bolustracking (ett radiologiskt begrepp)"
+      "Kollimator",
+      "Grid",
+      "Bolustracking"
     ],
     "topic": "medsek_diagnoskodning",
     "difficulty": "Normal",
@@ -8137,7 +8137,7 @@
     "id": "medsek_diagnoskodning_82",
     "type": "mc",
     "prompt": "Vad innebär \"multiaxial\" klassificering som princip i vissa delar av ICD-10 (t.ex. inom barn- och ungdomspsykiatrin)?",
-    "correct": "Att flera olika aspekter av ett tillstånd (t.ex. psykiatrisk diagnos, utvecklingsnivå, psykosociala faktorer) kodas parallellt på olika \"axlar\" istället för med en enda kod",
+    "correct": "Att flera olika aspekter av ett tillstånd kodas parallellt på olika \"axlar\" istället för med en enda kod",
     "distractors": [
       "Att endast en enda kod någonsin används oavsett sammanhang",
       "Ett begrepp som enbart gäller kirurgisk kodning",
@@ -8151,7 +8151,7 @@
     "id": "medsek_diagnoskodning_83",
     "type": "mc",
     "prompt": "Vad kallas den etiska/juridiska princip att endast personal med tjänsteligt behov får ta del av en patients diagnos- och åtgärdskoder?",
-    "correct": "Behovs- och behörighetsstyrd åtkomst (del av sekretess-/patientdatalagstiftningen)",
+    "correct": "Behovs- och behörighetsstyrd åtkomst",
     "distractors": [
       "Öppen åtkomst för alla anställda oavsett roll",
       "Fri åtkomst för allmänheten",
@@ -8179,7 +8179,7 @@
     "id": "medsek_diagnoskodning_85",
     "type": "mc",
     "prompt": "Vad kallas den grundläggande skillnaden mellan en \"kod\" och en \"klassifikation\" i detta sammanhang?",
-    "correct": "En kod är den enskilda beteckningen (t.ex. \"A09\"), medan en klassifikation är hela det strukturerade systemet av koder och kategorier (t.ex. ICD-10 i sin helhet)",
+    "correct": "En kod är den enskilda beteckningen, medan en klassifikation är hela det strukturerade systemet av koder och kategorier",
     "distractors": [
       "Termerna är fullständigt utbytbara utan skillnad",
       "En klassifikation är alltid kortare än en enskild kod",
@@ -8207,7 +8207,7 @@
     "id": "medsek_diagnoskodning_87",
     "type": "mc",
     "prompt": "Varför samarbetar medicinska sekreterare ofta nära med läkare och vårdadministrativ personal kring kodningsfrågor, snarare än att arbeta helt isolerat?",
-    "correct": "Korrekt kodning kräver både medicinsk sakkunskap (läkarens bedömning) och administrativ/kodningsteknisk kompetens (sekreterarens roll), vilket gör samarbete nödvändigt",
+    "correct": "Korrekt kodning kräver både medicinsk sakkunskap och administrativ/kodningsteknisk kompetens, vilket gör samarbete nödvändigt",
     "distractors": [
       "Kodning är en uppgift som alltid sköts helt automatiskt utan mänsklig inblandning",
       "Läkare ansvarar aldrig för underlaget till kodningen",
@@ -8319,7 +8319,7 @@
     "id": "medsek_diagnoskodning_95",
     "type": "mc",
     "prompt": "Vad kallas den etiska grundprincipen att en patients diagnoskoder aldrig ska användas i syften som patienten inte känner till eller samtyckt till (utöver vårdens egna ändamål)?",
-    "correct": "Ändamålsbegränsning (en grundprincip inom dataskydd/patientdatalagen)",
+    "correct": "Ändamålsbegränsning",
     "distractors": [
       "Öppenhetsprincipen för allmänheten",
       "Meddelarfriheten",
@@ -8347,7 +8347,7 @@
     "id": "medsek_diagnoskodning_97",
     "type": "mc",
     "prompt": "Vad bör en medicinsk sekreterare vara särskilt uppmärksam på när en patient bytt vårdgivare och tidigare journaluppgifter/koder ska sammanställas?",
-    "correct": "Att skilja på vad som är historisk information (tidigare diagnoser) och vad som är aktuellt för det pågående vårdtillfället, för att undvika felaktig sammanblandning",
+    "correct": "Att skilja på vad som är historisk information och vad som är aktuellt för det pågående vårdtillfället, för att undvika felaktig sammanblandning",
     "distractors": [
       "All historisk information ska alltid raderas vid vårdgivarbyte",
       "Endast den senaste koden någonsin är relevant, oavsett sammanhang",
@@ -8361,7 +8361,7 @@
     "id": "medsek_diagnoskodning_98",
     "type": "mc",
     "prompt": "Vad kallas den kvalitetsindikator som mäter hur stor andel av vårdtillfällena som har en tillräckligt specifik (icke-ospecificerad) huvuddiagnoskod?",
-    "correct": "Specificeringsgrad (kodningskvalitetsmått)",
+    "correct": "Specificeringsgrad",
     "distractors": [
       "Triagegrad",
       "Remissfrekvens",
