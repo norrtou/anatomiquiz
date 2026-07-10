@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.141
+- **Längdbias-fix i fysioterapeut, forts.**: tre ämnen till färdigsvepta – `fysio_muskelfysiologi` (56→0), `fysio_fot_fotled` (55→0) och `fysio_led_skelett` (50→0). Totalt nu 9 av 14 ämnen klara; hela filen 57 % → 16 % rätt-svar-längst. Kvar: hand/handled, höft/bäcken, axel/skuldra, kardio/resp, armbåge/underarm.
+- VERSION/APP_VERSION/index.html-cachebuster → 0.9.141.
+
 ## 0.9.140
 - **Längdbias-fix i fysioterapeut, forts.**: sex ämnen färdigsvepta så rätt svar inte längre är systematiskt längst – `fysio_traning_arbetsfys` (91→0), `fysio_motorisk_utv_aldrande` (87→0), `fysio_smartfysiologi` (70→0), `fysio_kna` (59→0), `fysio_nervsystemet` (58→0) och `fysio_columna` (56→0). Metod: utbyggda distraktorer till jämförbar längd + nedkortade (kompletta) rätt svar; numeriska frågor fick formatsymmetri. Hela filen: 57 % → 28 % rätt-svar-längst. Övriga 8 ämnen kvarstår (muskelfysiologi, fot/fotled, led/skelett, hand/handled, höft/bäcken, axel/skuldra, kardio/resp, armbåge/underarm).
 - **Quiz-regler kodifierade i `CLAUDE_REGLER.md` (v1.1)**: nio regler som tidigare bara fanns i arbetsminnet skrevs in i regelfilen – §1.5 korrekt/pedagogisk svenska, §2.9 svarsalternativens form får aldrig avslöja svaret (längdparitet, inga avslöjande parenteser, ej självbesvarande, numerisk-/format-paritet, språkparitet), §2.10 bildfrågor tom prompt, §2.11 dubbletter/unikhet, §3.2b kursunderlaget vinner, §3.2c skyddad källfil, §7.1 ämnesöverlapp i delad JSON. QA-checklista och känt-fel-lista uppdaterade.
