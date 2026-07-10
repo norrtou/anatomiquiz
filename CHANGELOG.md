@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.142
+- **Längdbias i fysioterapeut helt åtgärdad – alla 14 ämnen klara.** De fem sista ämnena färdigsvepta så rätt svar inte längre är systematiskt längst: `fysio_hand_handled` (49→0), `fysio_hoft_backen` (49→0), `fysio_axel_skulder` (48→0), `fysio_kardio_resp` (45→0) och `fysio_armbage_underarm` (41→0). **Hela fysioterapeut.json: 815/1420 (57 %) → 0/1420 (0 %) rätt-svar-längst**, alla 1420 frågor intakta. Metod genomgående: utbyggda distraktorer till jämförbar längd och nedkortade (kompletta) rätt svar; term-/enordssvar fick en jämförbart lång distraktor.
+- VERSION/APP_VERSION/index.html-cachebuster → 0.9.142.
+
 ## 0.9.141
 - **Längdbias-fix i fysioterapeut, forts.**: tre ämnen till färdigsvepta – `fysio_muskelfysiologi` (56→0), `fysio_fot_fotled` (55→0) och `fysio_led_skelett` (50→0). Totalt nu 9 av 14 ämnen klara; hela filen 57 % → 16 % rätt-svar-längst. Kvar: hand/handled, höft/bäcken, axel/skuldra, kardio/resp, armbåge/underarm.
 - VERSION/APP_VERSION/index.html-cachebuster → 0.9.141.

@@ -19,9 +19,9 @@
     "prompt": "Vad förklarar att glenohumeralleden är kroppens rörligaste led men samtidigt en av de mest luxationsbenägna?",
     "correct": "Den lilla, grunda ledpannan ger stor rörlighet men låg benstabilitet",
     "distractors": [
-      "Ett mycket kort och spänt ledband som stramar åt leden ordentligt",
-      "Att ledhuvudet är alldeles platt och helt saknar ledbrosk",
-      "Att leden helt saknar både ledkapsel och ledband"
+      "Ett mycket kort och spänt ledband som stramar åt hela leden ordentligt",
+      "Att själva ledhuvudet är alldeles platt och helt saknar ledbrosk",
+      "Att leden helt saknar både egen ledkapsel och stabiliserande ledband"
     ],
     "topic": "fysio_axel_skulder",
     "difficulty": "Normal",
@@ -173,9 +173,9 @@
     "prompt": "En skada på n. axillaris ger nedsatt känsel framför allt över vilket hudområde?",
     "correct": "Laterala delen av axeln, det så kallade epålettområdet",
     "distractors": [
-      "Handflatans radiala del vid tumbasen",
-      "Lillfingersidan av underarmen och handen",
-      "Den främre delen av bröstkorgen och nyckelbensområdet"
+      "Handflatans radiala del nere vid själva tumbasen",
+      "Lillfingersidan av hela underarmen och handen",
+      "Den främre delen av bröstkorgen och hela nyckelbensområdet"
     ],
     "topic": "fysio_axel_skulder",
     "difficulty": "Normal",
@@ -201,7 +201,7 @@
     "prompt": "I vilken riktning sker den absolut vanligaste axelluxationen?",
     "correct": "Framåt och nedåt",
     "distractors": [
-      "Rakt bakåt",
+      "Rakt bakåt och uppåt",
       "Rakt uppåt",
       "Rakt nedåt"
     ],
@@ -215,9 +215,9 @@
     "prompt": "Vad innebär subakromiellt impingement i axeln?",
     "correct": "Inklämning av supraspinatussenan och bursa subacromialis under akromion",
     "distractors": [
-      "Inklämning av plexus brachialis mellan de främre halsmusklerna",
-      "Urkalkning och nedbrytning av ledhuvudet i glenohumeralleden",
-      "Avslitning av labrum glenoidale från ledpannans kant"
+      "Inklämning av plexus brachialis mellan de främre och mellersta halsmusklerna",
+      "Urkalkning och nedbrytning av ledhuvudet i själva glenohumeralleden",
+      "Avslitning av labrum glenoidale från ledpannans kant framtill"
     ],
     "topic": "fysio_axel_skulder",
     "difficulty": "Normal",
@@ -271,9 +271,9 @@
     "prompt": "Varför ökar degenerativa rotatorkuffrupturer med stigande ålder?",
     "correct": "Senans kvalitet och blodförsörjning försämras, vilket ökar rupturrisken",
     "distractors": [
-      "Ledhuvudet växer stadigt och tränger undan senan mer och mer",
-      "Rotatorkuffen förbenas helt och blir stel efter 60 års ålder",
-      "Antalet muskler i kuffen minskar gradvis med stigande ålder"
+      "Själva ledhuvudet växer stadigt och tränger undan senan mer och mer med åren",
+      "Rotatorkuffen förbenas helt och blir stel efter 60 års ålder hos alla",
+      "Antalet muskler i kuffen minskar gradvis med stigande ålder hos alla"
     ],
     "topic": "fysio_axel_skulder",
     "difficulty": "Normal",
@@ -287,7 +287,7 @@
     "distractors": [
       "Två",
       "Tre",
-      "Fem"
+      "Åtta"
     ],
     "topic": "fysio_axel_skulder",
     "difficulty": "Normal",
@@ -357,7 +357,7 @@
     "distractors": [
       "På den nedre vinkeln",
       "På den mediala kanten",
-      "På spina scapulae"
+      "På spina scapulae baktill"
     ],
     "topic": "fysio_axel_skulder",
     "difficulty": "Normal",
@@ -395,10 +395,10 @@
     "id": "fys_axel_29",
     "type": "mc",
     "prompt": "Tuberculum majus på humerus är fäste för vilka muskler?",
-    "correct": "Supraspinatus, infraspinatus och teres minor",
+    "correct": "Supraspinatus, infraspinatus, teres minor",
     "distractors": [
       "Subscapularis och teres major",
-      "Deltoideus och pectoralis major",
+      "Deltoideus, pectoralis major och latissimus",
       "Biceps och coracobrachialis"
     ],
     "topic": "fysio_axel_skulder",
@@ -439,7 +439,7 @@
     "prompt": "Collum chirurgicum (kirurgiska halsen) på humerus är frakturbenägen och ligger nära vilken nerv?",
     "correct": "N. axillaris",
     "distractors": [
-      "N. radialis",
+      "N. radialis baktill",
       "N. medianus",
       "N. ulnaris"
     ],
@@ -453,7 +453,7 @@
     "prompt": "Vilka ligament förstärker glenohumeralledens kapsel framtill?",
     "correct": "Ligamenta glenohumeralia",
     "distractors": [
-      "Ligamenta collateralia",
+      "Ligamenta collateralia i leden",
       "Lig. cruciatum",
       "Lig. anulare"
     ],
@@ -495,7 +495,7 @@
     "prompt": "Vilken funktion har den främre (klavikulära) delen av deltoideus?",
     "correct": "Flexion och inåtrotation i axeln",
     "distractors": [
-      "Extension och utåtrotation",
+      "Extension och utåtrotation i axelleden",
       "Ren adduktion",
       "Endast abduktion"
     ],
@@ -509,7 +509,7 @@
     "prompt": "Vilken funktion har den bakre (spinala) delen av deltoideus?",
     "correct": "Extension och utåtrotation i axeln",
     "distractors": [
-      "Flexion och inåtrotation",
+      "Flexion och inåtrotation i axelleden",
       "Ren adduktion",
       "Pronation av underarmen"
     ],
@@ -537,7 +537,7 @@
     "prompt": "Latissimus dorsi verkar i axelleden framför allt som?",
     "correct": "Extension, adduktion och inåtrotation",
     "distractors": [
-      "Flexion, abduktion och utåtrotation",
+      "Flexion, abduktion och full utåtrotation",
       "Ren abduktion",
       "Uppåtrotation av skapula"
     ],
@@ -551,7 +551,7 @@
     "prompt": "Teres major samverkar nära med latissimus dorsi och ger i axeln?",
     "correct": "Inåtrotation, adduktion och extension",
     "distractors": [
-      "Utåtrotation och abduktion",
+      "Utåtrotation och kraftig abduktion i axeln",
       "Flexion och uppåtrotation",
       "Protraktion av skapula"
     ],
@@ -566,7 +566,7 @@
     "correct": "Coracobrachialis",
     "distractors": [
       "Brachialis",
-      "Supraspinatus",
+      "Supraspinatus i kuffen",
       "Teres minor"
     ],
     "topic": "fysio_axel_skulder",
@@ -579,7 +579,7 @@
     "prompt": "Vilken muskel håller skulderbladet stadigt mot bröstkorgen och förhindrar vingscapula?",
     "correct": "Serratus anterior",
     "distractors": [
-      "Levator scapulae",
+      "Levator scapulae upptill",
       "Teres major",
       "Pectoralis minor"
     ],
@@ -594,7 +594,7 @@
     "correct": "Lyfter det och bidrar till uppåtrotation",
     "distractors": [
       "Drar det rakt nedåt mot bäckenet",
-      "Drar det rakt framåt mot bröstkorgen",
+      "Drar det rakt framåt mot bröstkorgen och framåt",
       "Roterar det nedåt och inåt"
     ],
     "topic": "fysio_axel_skulder",
@@ -609,7 +609,7 @@
     "distractors": [
       "Drar det rakt framåt och utåt",
       "Uppåtroterar det kraftigt",
-      "Lyfter det rakt uppåt mot nacken"
+      "Lyfter det rakt uppåt mot nacken och skuldran"
     ],
     "topic": "fysio_axel_skulder",
     "difficulty": "Normal",
@@ -621,7 +621,7 @@
     "prompt": "Pectoralis minor drar skulderbladet i vilken riktning?",
     "correct": "Framåt och nedåt",
     "distractors": [
-      "Bakåt och uppåt",
+      "Rakt bakåt och uppåt",
       "Rakt uppåt",
       "Uppåtrotation"
     ],
@@ -635,7 +635,7 @@
     "prompt": "Vad är rotatorkuffens viktigaste dynamiska uppgift under armrörelser?",
     "correct": "Att centrera caput humeri i cavitas glenoidalis",
     "distractors": [
-      "Att vara armens kraftfullaste abduktor",
+      "Att vara armens allra kraftfullaste abduktor i axeln",
       "Att rotera skulderbladet uppåt",
       "Att stabilisera klavikeln"
     ],
@@ -649,7 +649,7 @@
     "prompt": "Vid abduktion bildar deltoideus och rotatorkuffen ett kraftpar. Vad förhindrar kuffen i det samspelet?",
     "correct": "Att caput humeri glider uppåt mot akromion",
     "distractors": [
-      "Att skapula roterar för långt uppåt",
+      "Att skapula roterar alldeles för långt uppåt vid lyft",
       "Att klavikeln eleveras för mycket",
       "Att armen proneras i onödan"
     ],
@@ -677,7 +677,7 @@
     "prompt": "För att nå full armelevation över huvudet måste humerus samtidigt göra vilken rotation?",
     "correct": "Utåtrotation, så att tuberculum majus inte fastnar under akromion",
     "distractors": [
-      "Inåtrotation, som är den rörelse armen normalt gör vid elevation",
+      "Inåtrotation, som är den rörelse armen normalt utför vid all elevation",
       "Pronation av underarmen, som saknar betydelse för axelleden",
       "Ingen rotation alls krävs för att nå fullt rörelseomfång"
     ],
@@ -749,7 +749,7 @@
     "distractors": [
       "Pectoralis major och främre deltoideus",
       "Subscapularis och teres major",
-      "Serratus anterior tillsammans med pectoralis minor"
+      "Serratus anterior tillsammans med pectoralis minor framtill"
     ],
     "topic": "fysio_axel_skulder",
     "difficulty": "Normal",
@@ -803,7 +803,7 @@
     "prompt": "Serratus anterior innerveras av?",
     "correct": "N. thoracicus longus",
     "distractors": [
-      "N. thoracodorsalis",
+      "N. thoracodorsalis baktill",
       "N. accessorius",
       "N. axillaris"
     ],
@@ -833,7 +833,7 @@
     "distractors": [
       "N. radialis",
       "N. medianus",
-      "N. axillaris"
+      "N. axillaris i axeln"
     ],
     "topic": "fysio_axel_skulder",
     "difficulty": "Normal",
@@ -873,7 +873,7 @@
     "prompt": "Hur bildas plexus brachialis trunkar av rötterna C5–T1?",
     "correct": "Truncus superior C5–C6, medius C7 och inferior C8–T1",
     "distractors": [
-      "Truncus superior C5, medius C6–C7 och inferior C8",
+      "Truncus superior C5, medius C6–C7 och inferior C8–T1",
       "Truncus superior C5–C7, inferior C8–T1",
       "En enda gemensam trunk för alla rötter"
     ],
@@ -888,7 +888,7 @@
     "correct": "A. brachialis",
     "distractors": [
       "A. radialis",
-      "A. subclavia",
+      "A. subclavia proximalt",
       "A. ulnaris"
     ],
     "topic": "fysio_axel_skulder",
@@ -915,7 +915,7 @@
     "prompt": "Vad är en Bankart-skada vid främre axelluxation?",
     "correct": "Avslitning av främre-nedre labrum glenoidale",
     "distractors": [
-      "Inpressningsfraktur baktill på caput humeri",
+      "En inpressningsfraktur baktill på själva caput humeri",
       "Ruptur av supraspinatussenan",
       "Fraktur i klavikelns mellersta tredjedel"
     ],
@@ -931,7 +931,7 @@
     "distractors": [
       "Avslitning av främre labrum från ledpannan",
       "Kalkinlagring i supraspinatussenans fäste",
-      "Ruptur av lig. coracoclaviculare vid axelledsseparation"
+      "Ruptur av lig. coracoclaviculare vid en akut axelledsseparation uppe"
     ],
     "topic": "fysio_axel_skulder",
     "difficulty": "Normal",
@@ -943,7 +943,7 @@
     "prompt": "En SLAP-lesion drabbar vilken struktur?",
     "correct": "Övre delen av labrum, anteriort-posteriort, vid bicepsens långa senfäste",
     "distractors": [
-      "Främre-nedre delen av labrum, vid ledkapselns svagaste punkt",
+      "Den främre-nedre delen av labrum glenoidale, vid ledkapselns svagaste punkt",
       "Subscapularissenan, vid dess fäste på tuberculum minus",
       "Akromioklavikularleden, vid dess ledbrosk"
     ],
@@ -999,7 +999,7 @@
     "prompt": "Bicepstendinit i axeln engagerar oftast vilken sena?",
     "correct": "Senan från bicepsens långa huvud i sulcus intertubercularis",
     "distractors": [
-      "Senan från bicepsens korta huvud vid processus coracoideus",
+      "Senan från bicepsens korta huvud vid själva processus coracoideus",
       "Supraspinatussenan under akromion",
       "Triceps långa huvud vid tuberculum infraglenoidale"
     ],
@@ -1014,7 +1014,7 @@
     "correct": "Plexus brachialis och/eller a./v. subclavia",
     "distractors": [
       "N. axillaris i quadrilaterala rummet",
-      "N. suprascapularis i incisura scapulae",
+      "N. suprascapularis i själva incisura scapulae",
       "Rotatorkuffen under akromion"
     ],
     "topic": "fysio_axel_skulder",
@@ -1027,7 +1027,7 @@
     "prompt": "Efter en axelluxation bör n. axillaris kontrolleras genom att bedöma?",
     "correct": "Känsel över laterala axeln och deltoideus förmåga att kontrahera",
     "distractors": [
-      "Greppstyrka och känsel i lillfingret och ringfingret",
+      "Greppstyrkan och känseln i både lillfingret och ringfingret nedtill",
       "Tummens oppositionsförmåga mot lillfingret",
       "Bicepsreflexen enbart, utan känselkontroll"
     ],
@@ -1069,7 +1069,7 @@
     "prompt": "Artros i akromioklavikularleden ger typiskt smärta vid vilken rörelse?",
     "correct": "Horisontaladduktion och arbete med armen högt",
     "distractors": [
-      "Ren utåtrotation med armen längs sidan",
+      "Ren utåtrotation med armen hängande längs sidan",
       "Pronation av underarmen",
       "Handledsflexion"
     ],
@@ -1084,7 +1084,7 @@
     "correct": "Serratus anterior",
     "distractors": [
       "Trapezius",
-      "Rhomboideerna",
+      "Rhomboideerna baktill",
       "Deltoideus"
     ],
     "topic": "fysio_axel_skulder",
@@ -1112,7 +1112,7 @@
     "correct": "Oförmåga att aktivt hålla armen abducerad",
     "distractors": [
       "Klohand med sammansjunkna fingrar",
-      "Vingscapula som sticker ut vid armlyft",
+      "Vingscapula som sticker ut tydligt vid armlyft framåt",
       "Droppfot vid gång på hälen"
     ],
     "topic": "fysio_axel_skulder",
@@ -1127,7 +1127,7 @@
     "distractors": [
       "Det sista benet i kroppen som börjar förbenas",
       "Det enda ben i kroppen som aldrig förbenas helt",
-      "Ett ben som förblir helt broskigt fram till puberteten"
+      "Ett ben som förblir helt broskigt ända fram till puberteten hos alla"
     ],
     "topic": "fysio_axel_skulder",
     "difficulty": "Normal",
@@ -1167,7 +1167,7 @@
     "prompt": "Med stigande ålder minskar axelns aktiva rörlighet framför allt på grund av?",
     "correct": "Kapselstelhet och degeneration i senor och muskler",
     "distractors": [
-      "Att antalet leder i axeln minskar med åldern",
+      "Att antalet leder i själva axeln minskar med stigande ålder",
       "Att klavikeln börjar tillväxa på nytt",
       "Att labrum gradvis förstoras och förtjockas"
     ],
@@ -1181,8 +1181,8 @@
     "prompt": "Det subakromiella utrymmet minskar med åldern bland annat på grund av?",
     "correct": "Osteofyter och förtjockad bursa/sena",
     "distractors": [
-      "Att akromion krymper",
-      "Att caput humeri minskar i storlek",
+      "Att själva akromion krymper",
+      "Att caput humeri gradvis minskar i storlek",
       "Att labrum försvinner"
     ],
     "topic": "fysio_axel_skulder",
@@ -1210,7 +1210,7 @@
     "correct": "Diabetes mellitus",
     "distractors": [
       "Astma",
-      "Järnbristanemi",
+      "Kronisk järnbristanemi",
       "Migrän"
     ],
     "topic": "fysio_axel_skulder",
@@ -1223,7 +1223,7 @@
     "prompt": "Sarkopeni (åldersrelaterad muskelförlust) påverkar axeln genom?",
     "correct": "Minskad kraft och stabilitet, särskilt i kuff- och skapulastabiliserande muskler",
     "distractors": [
-      "Ökad ledrörlighet och större rörelseomfång i alla riktningar under åldrandet",
+      "Ökad ledrörlighet och ett större rörelseomfång i alla riktningar under själva åldrandet",
       "Förstärkt labrum och en tjockare, mer stabil ledkapsel med åren",
       "Snabbare senläkning och bättre blodförsörjning till rotatorkuffen"
     ],
@@ -1238,7 +1238,7 @@
     "correct": "Subakromiella smärttillstånd / rotatorkuffrelaterad smärta",
     "distractors": [
       "Glenohumeral artros med broskförslitning",
-      "Septisk artrit orsakad av bakterieinfektion",
+      "Septisk artrit orsakad av en akut bakterieinfektion i själva leden",
       "Tumör i humerus eller skulderbladet"
     ],
     "topic": "fysio_axel_skulder",
@@ -1253,7 +1253,7 @@
     "distractors": [
       "Klavikeln",
       "Spina scapulae",
-      "Tuberculum majus"
+      "Tuberculum majus humeri"
     ],
     "topic": "fysio_axel_skulder",
     "difficulty": "Normal",
@@ -1267,7 +1267,7 @@
     "distractors": [
       "Vid full adduktion",
       "Vid ren flexion framåt",
-      "När armen hänger avslappnad"
+      "När armen hänger helt avslappnad längs sidan"
     ],
     "topic": "fysio_axel_skulder",
     "difficulty": "Normal",
@@ -1335,7 +1335,7 @@
     "prompt": "Vad menas med skapuladyskinesi?",
     "correct": "Ett avvikande rörelse- och positionsmönster för skulderbladet, ofta med störd skapulohumeral rytm",
     "distractors": [
-      "Ett brutet ben i skulderbladet, som oftast kräver gipsning eller till och med operation",
+      "Ett brutet ben i själva skulderbladet, som oftast kräver gipsning eller till och med en operation direkt",
       "En medfödd avsaknad av hela skulderbladet på ena eller båda sidor av kroppen",
       "En kronisk inflammation i glenohumeralleden med svullnad, värme och stelhet"
     ],
@@ -1351,7 +1351,7 @@
     "distractors": [
       "Lång immobilisering i mitella under flera månader utan någon rörelse",
       "Enbart vila och passiv väntan tills smärtan försvinner av sig själv",
-      "Omedelbar operation som förstahandsval, oavsett symtomens svårighetsgrad"
+      "Omedelbar operation som absolut förstahandsval, oavsett symtomens svårighetsgrad och art"
     ],
     "topic": "fysio_axel_skulder",
     "difficulty": "Normal",
@@ -1364,7 +1364,7 @@
     "correct": "Mellan teres minor, teres major, caput longum av triceps och humerus",
     "distractors": [
       "I incisura scapulae under lig. transversum scapulae superius",
-      "I sulcus intertubercularis mellan tuberkelnabbarna på humerus",
+      "I sulcus intertubercularis mellan de båda tuberkelnabbarna högt på humerus",
       "I karpaltunneln vid handleden, tillsammans med medianusnerven"
     ],
     "topic": "fysio_axel_skulder",
@@ -1392,7 +1392,7 @@
     "correct": "Att förbättra skulderbladets uppåtrotation och stabilitet och därmed öka det subakromiella utrymmet",
     "distractors": [
       "Att minska glenohumeralledens rörlighet permanent och göra axeln stel för alltid",
-      "Att öka axelns inåtrotation så mycket som det någonsin går, oavsett smärta eller motstånd",
+      "Att öka axelns inåtrotation så mycket som det bara någonsin går, oavsett all smärta eller allt motstånd",
       "Att förkorta klavikeln kirurgiskt för att minska belastningen på hela axelleden"
     ],
     "topic": "fysio_axel_skulder",
@@ -1421,7 +1421,7 @@
     "distractors": [
       "Kulled",
       "Vridled",
-      "Plan led"
+      "Enkel plan led"
     ],
     "topic": "fysio_armbage_underarm",
     "difficulty": "Normal",
@@ -1515,7 +1515,7 @@
     "id": "fys_armb_9",
     "type": "mc",
     "prompt": "Mediala epikondylen på humerus är gemensamt ursprung (common flexor origin) för vilken muskelgrupp?",
-    "correct": "Underarmens ytliga flexorer och pronator teres",
+    "correct": "Underarmens flexorer och pronator teres",
     "distractors": [
       "Underarmens ytliga extensorer och supinator",
       "Tenarmuskulaturen i handens tumbas",
@@ -1587,7 +1587,7 @@
     "prompt": "Vilken muskel förbinder radius och ulna och hindrar att de glider isär längs underarmen?",
     "correct": "Membrana interossea antebrachii",
     "distractors": [
-      "Pronator quadratus",
+      "Pronator quadratus vid handleden",
       "Supinator",
       "Anconeus"
     ],
@@ -1627,7 +1627,7 @@
     "id": "fys_armb_17",
     "type": "mc",
     "prompt": "Vilka två muskler är de huvudsakliga pronatorerna av underarmen?",
-    "correct": "Pronator teres och pronator quadratus",
+    "correct": "Pronator teres och quadratus",
     "distractors": [
       "Supinator och biceps brachii",
       "Brachialis och brachioradialis",
@@ -1655,10 +1655,10 @@
     "id": "fys_armb_19",
     "type": "mc",
     "prompt": "Varför är biceps brachii en särskilt kraftfull supinator när armbågen är böjd 90°?",
-    "correct": "Senan lindar runt radius så att supinationsmomentet blir störst i böjt läge",
+    "correct": "Senan lindar runt radius; supinationskraften blir störst böjt",
     "distractors": [
       "Den fäster enbart på ulna och vrider därifrån hela underarmen",
-      "Den verkar bara vid fullständig extension av armbågen",
+      "Den verkar bara vid en fullständig extension av armbågen",
       "Den proneras samtidigt som den kontraherar och ökar kraften"
     ],
     "topic": "fysio_armbage_underarm",
@@ -1672,7 +1672,7 @@
     "correct": "Triceps brachii",
     "distractors": [
       "Anconeus",
-      "Brachialis",
+      "Brachialis framtill",
       "Supinator"
     ],
     "topic": "fysio_armbage_underarm",
@@ -1700,7 +1700,7 @@
     "correct": "Cirka 80–90° pronation och 80–90° supination",
     "distractors": [
       "Cirka 30° pronation och 30° supination",
-      "Cirka 180° pronation och 180° supination",
+      "Cirka 180° pronation och 180° supination fullt ut",
       "Endast supination är möjlig i det läget"
     ],
     "topic": "fysio_armbage_underarm",
@@ -1711,9 +1711,9 @@
     "id": "fys_armb_23",
     "type": "mc",
     "prompt": "Varför mäts pronation/supination med armbågen böjd 90° och intill kroppen?",
-    "correct": "För att utesluta rotation i axelleden som annars skulle tas för pron-/supination",
+    "correct": "För att utesluta axelrotation som annars tas för pron-/supination",
     "distractors": [
-      "För att låsa handleden helt så att den inte bidrar till rörelsen",
+      "För att låsa handleden helt så att den inte bidrar till själva rörelsen",
       "För att radius lättare ska kunna brytas av vid en eventuell provokation",
       "Det har ingen praktisk betydelse alls för mätningens tillförlitlighet"
     ],
@@ -1725,9 +1725,9 @@
     "id": "fys_armb_24",
     "type": "mc",
     "prompt": "Vad menas med armbågens bärvinkel (\"carrying angle\")?",
-    "correct": "Den naturliga vinkel underarmen bildar utåt mot överarmen i extenderat läge",
+    "correct": "Vinkeln underarmen bildar utåt mot överarmen i extenderat läge",
     "distractors": [
-      "Vinkeln mellan radius och ulna vid full pronation av underarmen",
+      "Vinkeln mellan radius och ulna vid full pronation av hela underarmen",
       "Vinkeln mellan handleden och underarmens längdaxel",
       "Den vinkel som triceps senfäste bildar med olecranon"
     ],
@@ -1743,7 +1743,7 @@
     "distractors": [
       "Cirka 45°, lika hos båda könen",
       "Cirka 0° hos alla",
-      "Cirka 30°, större hos män"
+      "Cirka 30°, tydligt större hos män än kvinnor"
     ],
     "topic": "fysio_armbage_underarm",
     "difficulty": "Normal",
@@ -1755,7 +1755,7 @@
     "prompt": "En onormalt ökad bärvinkel kallas?",
     "correct": "Cubitus valgus",
     "distractors": [
-      "Cubitus varus",
+      "Bilateralt cubitus varus",
       "Genu valgum",
       "Coxa vara"
     ],
@@ -1795,10 +1795,10 @@
     "id": "fys_armb_29",
     "type": "mc",
     "prompt": "Brachialis kallas armbågsflexorernas \"arbetshäst\" eftersom den?",
-    "correct": "Flekterar armbågen oavsett underarmens pron-/supinationsläge",
+    "correct": "Flekterar armbågen oavsett pron-/supinationsläge",
     "distractors": [
-      "Endast verkar vid fullständig supination av underarmen",
-      "Endast verkar vid fullständig pronation av underarmen",
+      "Endast verkar vid en fullständig supination av underarmen",
+      "Endast verkar vid en fullständig pronation av underarmen",
       "Bara stabiliserar armbågen utan att aktivt flektera den"
     ],
     "topic": "fysio_armbage_underarm",
@@ -1811,9 +1811,9 @@
     "prompt": "Membrana interossea har även en kraftöverförande funktion. Hur?",
     "correct": "Den överför last från radius vidare till ulna och armbågen",
     "distractors": [
-      "Den böjer armbågen aktivt vid kontraktion",
-      "Den proneras och supineras helt självständigt",
-      "Den saknar all mekanisk betydelse för armbågen"
+      "Den böjer armbågen aktivt vid varje kontraktion",
+      "Den proneras och supineras helt självständigt av sig själv",
+      "Den saknar all mekanisk betydelse för själva armbågen"
     ],
     "topic": "fysio_armbage_underarm",
     "difficulty": "Normal",
@@ -1853,7 +1853,7 @@
     "prompt": "Vilken trång passage bakom mediala epikondylen kan klämma n. ulnaris (cubital tunnel-syndrom)?",
     "correct": "Cubitaltunneln",
     "distractors": [
-      "Karpaltunneln",
+      "Karpaltunneln volart",
       "Radialtunneln",
       "Guyons kanal"
     ],
@@ -1865,7 +1865,7 @@
     "id": "fys_armb_34",
     "type": "mc",
     "prompt": "Vilka underarmsmuskler innerveras av n. ulnaris?",
-    "correct": "Flexor carpi ulnaris och den ulnara halvan av flexor digitorum profundus",
+    "correct": "Flexor carpi ulnaris och ulnara FDP-halvan",
     "distractors": [
       "Alla underarmens flexorer, inklusive de radiala musklerna",
       "Samtliga extensorer på underarmens baksida och handrygg",
@@ -2007,7 +2007,7 @@
     "prompt": "Brachialis innerveras huvudsakligen av?",
     "correct": "N. musculocutaneus",
     "distractors": [
-      "N. radialis ensam",
+      "Enbart n. radialis ensam",
       "N. ulnaris",
       "N. medianus"
     ],
@@ -2065,7 +2065,7 @@
     "distractors": [
       "A. radialis",
       "A. ulnaris",
-      "A. axillaris"
+      "A. axillaris proximalt"
     ],
     "topic": "fysio_armbage_underarm",
     "difficulty": "Normal",
@@ -2105,7 +2105,7 @@
     "prompt": "Lateral epikondylit (\"tennisarmbåge\") är en degenerativ tendinopati i ursprunget för vilken muskel?",
     "correct": "Extensor carpi radialis brevis",
     "distractors": [
-      "Flexor carpi radialis",
+      "Musculus flexor carpi radialis",
       "Pronator teres",
       "Biceps brachii"
     ],
@@ -2117,7 +2117,7 @@
     "id": "fys_armb_52",
     "type": "mc",
     "prompt": "Vid lateral epikondylit provoceras smärtan typiskt av?",
-    "correct": "Motstånd mot handledsextension och fast grepp",
+    "correct": "Motstånd mot handledsextension",
     "distractors": [
       "Motstånd mot handledsflexion",
       "Passiv supination utan belastning",
@@ -2131,7 +2131,7 @@
     "id": "fys_armb_53",
     "type": "mc",
     "prompt": "Medial epikondylit (\"golfarmbåge\") engagerar ursprunget för vilken muskelgrupp?",
-    "correct": "Underarmens flexorer/pronatorer vid mediala epikondylen",
+    "correct": "Flexorer/pronatorer vid mediala epikondylen",
     "distractors": [
       "Underarmens extensorer vid laterala epikondylen",
       "Tricepssenan vid olecranon",
@@ -2145,7 +2145,7 @@
     "id": "fys_armb_54",
     "type": "mc",
     "prompt": "Vilken behandling är förstahandsval inom fysioterapi vid lateral epikondylit?",
-    "correct": "Progressiv belastningsträning av handledsextensorerna",
+    "correct": "Progressiv styrketräning av handledsextensorerna",
     "distractors": [
       "Långvarig total immobilisering i gips eller skena",
       "Omedelbar operation utan föregående träningsförsök",
@@ -2173,7 +2173,7 @@
     "id": "fys_armb_56",
     "type": "mc",
     "prompt": "\"Pulled elbow\" (nursemaid's elbow) hos småbarn beror på?",
-    "correct": "Subluxation av caput radii ur lig. anulare vid drag i pronerad, sträckt arm",
+    "correct": "Subluxation av caput radii ur lig. anulare vid drag i armen",
     "distractors": [
       "Fraktur genom olecranon efter ett direkt slag mot armbågen",
       "Luxation av hela humeroulnarleden vid högenergivåld eller fall",
@@ -2190,7 +2190,7 @@
     "correct": "Småbarn, ungefär 1–4 år",
     "distractors": [
       "Tonåringar",
-      "Medelålders vuxna",
+      "Medelålders vuxna, 40–60 år",
       "Äldre över 70 år"
     ],
     "topic": "fysio_armbage_underarm",
@@ -2205,7 +2205,7 @@
     "distractors": [
       "Olecranonfraktur",
       "Radiushuvudsfraktur",
-      "Monteggia-fraktur"
+      "Monteggia-fraktur i underarmen"
     ],
     "topic": "fysio_armbage_underarm",
     "difficulty": "Normal",
@@ -2275,7 +2275,7 @@
     "distractors": [
       "Tummen och pekfingret",
       "Hela handflatan jämnt",
-      "Underarmens dorsala sida"
+      "Underarmens dorsala baksida upptill"
     ],
     "topic": "fysio_armbage_underarm",
     "difficulty": "Normal",
@@ -2327,7 +2327,7 @@
     "id": "fys_armb_67",
     "type": "mc",
     "prompt": "En Monteggia-skada innebär?",
-    "correct": "Fraktur på proximala ulna i kombination med luxation av radiushuvudet",
+    "correct": "Fraktur på proximala ulna med luxation av radiushuvudet",
     "distractors": [
       "Fraktur på distala radius med luxation i distala radioulnarleden",
       "Isolerad olecranonfraktur",
@@ -2341,7 +2341,7 @@
     "id": "fys_armb_68",
     "type": "mc",
     "prompt": "En Galeazzi-skada innebär?",
-    "correct": "Fraktur på distala radius med luxation i den distala radioulnarleden",
+    "correct": "Distal radiusfraktur med luxation i distala radioulnarleden",
     "distractors": [
       "Fraktur på proximala ulna med tillhörande radiushuvudsluxation",
       "Fraktur genom olecranon utan någon luxation",
@@ -2355,7 +2355,7 @@
     "id": "fys_armb_69",
     "type": "mc",
     "prompt": "Distal bicepssenruptur (avslitning vid tuberositas radii) ger framför allt nedsatt kraft i?",
-    "correct": "Supination och, i mindre grad, armbågsflexion",
+    "correct": "Supination och viss armbågsflexion",
     "distractors": [
       "Handledsextension och fingerextension",
       "Fingerflexion i alla fingrar",
@@ -2383,7 +2383,7 @@
     "id": "fys_armb_71",
     "type": "mc",
     "prompt": "Vilket fynd talar för en komplett tricepssenruptur?",
-    "correct": "Oförmåga till aktiv extension mot motstånd i armbågen",
+    "correct": "Oförmåga till aktiv extension mot motstånd",
     "distractors": [
       "Oförmåga att supinera underarmen mot motstånd",
       "Domning i lillfingret och ringfingret",
@@ -2442,7 +2442,7 @@
     "correct": "Mediala epikondylen, laterala epikondylen och olecranon",
     "distractors": [
       "Caput radii, olecranon och processus styloideus",
-      "Tuberositas radii, olecranon och epicondylus medialis",
+      "Tuberositas radii, olecranon och epicondylus medialis humeri",
       "Caput radii, caput ulnae och olecranon"
     ],
     "topic": "fysio_armbage_underarm",
@@ -2495,7 +2495,7 @@
     "id": "fys_armb_79",
     "type": "mc",
     "prompt": "Pronator quadratus är den primära pronatorn vid?",
-    "correct": "Långsam, lågbelastad pronation; pronator teres tillkommer vid snabb/kraftig pronation",
+    "correct": "Långsam, lågbelastad pronation; pronator teres vid kraftig pronation",
     "distractors": [
       "All supination, oavsett hastighet, belastning eller armbågens ställning",
       "Endast handledsflexion, helt utan bidrag till någon rotation av underarmen",
@@ -2537,9 +2537,9 @@
     "id": "fys_armb_82",
     "type": "mc",
     "prompt": "Varför är kunskapen om ossifikationsordningen (CRITOE) viktig vid bedömning av barns armbågsröntgen?",
-    "correct": "Centra som dyker upp i fel ordning kan avslöja en fraktur eller avlossning",
+    "correct": "Centra som dyker upp i fel ordning kan avslöja fraktur eller avlossning",
     "distractors": [
-      "Den avgör barnets slutliga kroppslängd som fullvuxen",
+      "Den avgör barnets slutliga kroppslängd som fullvuxen vuxen",
       "Den styr armbågens bärvinkel permanent, redan från födseln",
       "Den har ingen klinisk betydelse alls vid bedömning av barns röntgenbilder"
     ],
@@ -2553,8 +2553,8 @@
     "prompt": "Barns ben är mer elastiska än vuxnas, vilket gör att frakturer ofta blir?",
     "correct": "Gröngölefrakturer, ofullständiga genom benet",
     "distractors": [
-      "Alltid komminuta, med flera bendelar",
-      "Alltid öppna frakturer genom huden",
+      "Alltid komminuta frakturer med många lösa bendelar",
+      "Alltid öppna frakturer rakt genom huden",
       "Patologiska frakturer i redan sjukt ben"
     ],
     "topic": "fysio_armbage_underarm",
@@ -2565,7 +2565,7 @@
     "id": "fys_armb_84",
     "type": "mc",
     "prompt": "Varför är \"pulled elbow\" ovanlig hos barn över cirka fem år?",
-    "correct": "Lig. anulare och radiushuvudet har mognat och blivit stadigare med åldern",
+    "correct": "Lig. anulare och radiushuvudet har mognat och blivit stadigare",
     "distractors": [
       "Barn slutar dra i armarna på samma vårdslösa sätt som småbarn gör",
       "Radius slutar växa i längd och blir därför mindre känsligt för drag",
@@ -2607,9 +2607,9 @@
     "id": "fys_armb_87",
     "type": "mc",
     "prompt": "Varför ökar risken för sen- och muskelbesvär kring armbågen vid repetitivt arbete med åldern?",
-    "correct": "Senvävnadens kvalitet och läkningsförmåga försämras gradvis",
+    "correct": "Senvävnadens kvalitet och läkningsförmåga försämras",
     "distractors": [
-      "Antalet muskler i underarmen minskar med åldern",
+      "Antalet muskler i underarmen minskar med stigande ålder",
       "Nervledningen upphör helt efter medelåldern",
       "Bärvinkeln blir negativ med stigande ålder"
     ],
@@ -2635,10 +2635,10 @@
     "id": "fys_armb_89",
     "type": "mc",
     "prompt": "Vid pronator teres-syndrom kläms n. medianus, vilket ger symtom som liknar?",
-    "correct": "Karpaltunnelsyndrom, men ofta även ömhet i proximala underarmen",
+    "correct": "Karpaltunnelsyndrom, ofta med ömhet i underarmen",
     "distractors": [
       "Cubital tunnel-syndrom, med domning i lillfingret",
-      "Dropphand, orsakad av radialisskada",
+      "Dropphand, orsakad av en radialisskada",
       "Lateral epikondylit, med smärta över laterala epikondylen"
     ],
     "topic": "fysio_armbage_underarm",
@@ -2677,7 +2677,7 @@
     "id": "fys_armb_92",
     "type": "mc",
     "prompt": "Biceps brachii korsar både axel- och armbågsled. Vilken roll har det för dess funktion?",
-    "correct": "Den är en tvåledsmuskel vars armbågseffekt påverkas av axelns läge",
+    "correct": "Tvåledsmuskel; armbågseffekten beror på axelns läge",
     "distractors": [
       "Den verkar bara på axeln, inte alls på armbågen",
       "Den verkar bara på handleden, inte på armbågen",
@@ -2719,7 +2719,7 @@
     "id": "fys_armb_95",
     "type": "mc",
     "prompt": "Vilket av följande beskriver bäst varför handens grepp försvagas vid lateral epikondylit?",
-    "correct": "Handledsextensorerna stabiliserar handleden vid grepp, vilket gör ont vid tendinopatin",
+    "correct": "Extensorerna stabiliserar handleden vid grepp och gör ont vid tendinopati",
     "distractors": [
       "Fingerflexorerna är helt avslitna från sitt ursprung på mediala epikondylen",
       "N. medianus är komprimerad i karpaltunneln, vilket ger domning i handen",
@@ -2733,7 +2733,7 @@
     "id": "fys_armb_96",
     "type": "mc",
     "prompt": "Vad är syftet med en epikondylit-ortos (\"counterforce brace\") strax distalt om epikondylen?",
-    "correct": "Att avlasta senans ursprung genom att fördela dragkraften längre ned",
+    "correct": "Att avlasta senfästet och fördela dragkraften längre ned",
     "distractors": [
       "Att helt immobilisera armbågen i ett fixerat, orörligt läge",
       "Att låsa pronationen helt så att underarmen inte kan rotera",
@@ -2761,7 +2761,7 @@
     "id": "fys_armb_98",
     "type": "mc",
     "prompt": "Vilket är det vanligaste symtomet tidigt vid cubital tunnel-syndrom?",
-    "correct": "Stickningar/domning i lill- och ringfinger, ofta värre med böjd armbåge",
+    "correct": "Stickningar/domning i lill- och ringfinger, värre med böjd armbåge",
     "distractors": [
       "Dropphand, orsakad av en skada högre upp på nerven n. radialis",
       "Smärta enbart vid supination av underarmen mot kraftigt motstånd",
@@ -2789,9 +2789,9 @@
     "id": "fys_armb_100",
     "type": "mc",
     "prompt": "Vad är ett centralt mål i fysioterapeutisk rehabilitering efter en armbågsfraktur eller -immobilisering?",
-    "correct": "Att tidigt återställa rörlighet och förebygga kontraktur",
+    "correct": "Att tidigt återställa rörlighet och undvika kontraktur",
     "distractors": [
-      "Att förlänga immobiliseringen så länge som möjligt",
+      "Att förlänga immobiliseringen så länge som det bara går",
       "Att enbart träna greppstyrka",
       "Att undvika all rörelse tills smärtan är helt borta"
     ],
@@ -2805,9 +2805,9 @@
     "prompt": "Hur många karpalben (handlovsben) finns det i varje hand?",
     "correct": "Åtta, ordnade i två rader",
     "distractors": [
-      "Fem, en per finger",
-      "Sex, i en rad",
-      "Tio, i tre rader"
+      "Fem stycken, en per finger",
+      "Sex stycken, i en enda rad",
+      "Tio stycken, i tre rader"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -2861,9 +2861,9 @@
     "prompt": "Den egentliga handleden (radiokarpalleden) bildas av distala radius (med ledskiva) mot vilka karpalben?",
     "correct": "Os scaphoideum, os lunatum och os triquetrum",
     "distractors": [
-      "Os trapezium och os trapezoideum",
-      "Os capitatum och os hamatum",
-      "Samtliga åtta karpalben samtidigt"
+      "Os trapezium och os trapezoideum radialt",
+      "Os capitatum och os hamatum distalt",
+      "Samtliga åtta karpalben på en och samma gång"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -2875,9 +2875,9 @@
     "prompt": "Vilken ledtyp är radiokarpalleden?",
     "correct": "Ellipsoid-/kondylled",
     "distractors": [
-      "Kulled",
-      "Gångjärnsled",
-      "Vridled"
+      "Ren kulled",
+      "Sammansatt gångjärnsled",
+      "Ren vridled"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -3027,10 +3027,10 @@
     "id": "fys_hand_17",
     "type": "mc",
     "prompt": "Vilka muskler bygger upp hypotenarvallen (lillfingrets muskelvall)?",
-    "correct": "Abductor digiti minimi, flexor digiti minimi brevis och opponens digiti minimi",
+    "correct": "Abductor digiti minimi, flexor och opponens digiti minimi",
     "distractors": [
       "Tenarmusklerna på tummens sida av handen, på motsatt sida av handflatan",
-      "Lumbricaler tillsammans med adductor pollicis djupt i mellanhanden",
+      "Lumbricalerna tillsammans med adductor pollicis djupt i mellanhanden",
       "De dorsala interosséerna som ligger mellan mellanhandsbenens skaft"
     ],
     "topic": "fysio_hand_handled",
@@ -3043,9 +3043,9 @@
     "prompt": "Vad är funktionen hos handens lumbrikaler?",
     "correct": "Flexion i MCP-lederna och samtidig extension i IP-lederna",
     "distractors": [
-      "Extension i MCP-lederna och flexion i IP-lederna",
-      "Endast abduktion av fingrarna i MCP-lederna",
-      "Opposition av tummen mot lillfingret och pekfingret"
+      "Extension i MCP-lederna och samtidig flexion i IP-lederna",
+      "Endast abduktion av fingrarna i själva MCP-lederna",
+      "Opposition av tummen mot lillfingret och pekfingret samtidigt"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -3086,7 +3086,7 @@
     "correct": "Os scaphoideum",
     "distractors": [
       "Os lunatum",
-      "Os pisiforme",
+      "Os pisiforme ulnart",
       "Os hamatum"
     ],
     "topic": "fysio_hand_handled",
@@ -3113,9 +3113,9 @@
     "prompt": "Vilka senor bildar snusgropens kanter?",
     "correct": "EPL samt APL och EPB",
     "distractors": [
-      "FDS och FDP",
-      "FCR och FCU",
-      "ECRL och ECRB"
+      "FDS och FDP djupt",
+      "FCR och FCU volart",
+      "ECRL och ECRB samt ECU"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -3183,9 +3183,9 @@
     "prompt": "Handledens sidledsrörelser är ojämnt stora. Vilken är störst?",
     "correct": "Ulnardeviation är större än radialdeviation",
     "distractors": [
-      "Radialdeviation är klart störst",
-      "De är exakt lika stora",
-      "Endast radialdeviation är möjlig"
+      "Radialdeviation är i stället klart störst",
+      "De är i själva verket exakt lika stora",
+      "Endast radialdeviation är över huvud taget möjlig"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -3197,9 +3197,9 @@
     "prompt": "Vad menas med tenodeseffekten (tenodesgrepp) i handen?",
     "correct": "Att handledsextension passivt drar åt flexorsenorna så fingrarna böjs till ett grepp",
     "distractors": [
-      "Att handledsflexion passivt sträcker ut fingrarna helt raka i stället",
-      "Att tummen automatiskt opponeras varje gång handleden rör sig",
-      "Att senorna gradvis slits av vid upprepad kraftig sträckning av handleden"
+      "Att handledsflexion passivt sträcker ut fingrarna helt raka i stället för att böja dem",
+      "Att tummen automatiskt opponeras varje gång som handleden alls rör sig",
+      "Att senorna gradvis slits av vid upprepad och kraftig sträckning av handleden"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -3211,9 +3211,9 @@
     "prompt": "Tenodesgreppet är särskilt viktigt i rehabilitering vid vilken skada?",
     "correct": "Cervikal ryggmärgsskada där aktiv fingerflexion saknas",
     "distractors": [
-      "Lateral epikondylit med smärta över armbågen",
-      "Fotledsdistorsion efter en vanlig stukning av foten",
-      "Frozen shoulder med uttalad stelhet i axelleden"
+      "Lateral epikondylit med smärta över själva armbågen och underarmen",
+      "Fotledsdistorsion efter en helt vanlig stukning av foten och fotleden",
+      "Frozen shoulder med uttalad stelhet i själva axelleden och skuldran"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -3237,11 +3237,11 @@
     "id": "fys_hand_32",
     "type": "mc",
     "prompt": "Vad kännetecknar ett kraftgrepp (power grip)?",
-    "correct": "Föremålet hålls mot handflatan med böjda fingrar medan tummen låser greppet",
+    "correct": "Föremålet hålls mot handflatan med böjda fingrar medan tummen låser",
     "distractors": [
-      "Föremålet hålls mellan tumme och fingerblommor med fin kontroll",
-      "Endast fingertopparna används utan tumme",
-      "Handen är helt öppen och plan"
+      "Föremålet hålls mellan tumme och fingerblommor med mycket fin kontroll",
+      "Endast själva fingertopparna används, helt utan hjälp av tummen",
+      "Handen hålls helt öppen och plan under hela greppet"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -3281,9 +3281,9 @@
     "prompt": "Att vrida om en nyckel görs med vilket grepp?",
     "correct": "Nyckelgrepp/lateralt nyp",
     "distractors": [
-      "Spetsgrepp",
-      "Krokgrepp",
-      "Cylindriskt kraftgrepp"
+      "Rent spetsgrepp",
+      "Rent krokgrepp",
+      "Cylindriskt kraftgrepp med tumme"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -3335,7 +3335,7 @@
     "id": "fys_hand_39",
     "type": "mc",
     "prompt": "Minnesregeln LOAF beskriver n. medianus handmuskler. Vilka muskler ingår?",
-    "correct": "Lumbricaler 1–2, opponens pollicis, abductor pollicis brevis och flexor pollicis brevis",
+    "correct": "Lumbricaler 1–2, opponens pollicis, abductor och flexor pollicis brevis",
     "distractors": [
       "Alla lumbricaler och samtliga interosséer, både dorsala och palmara i handen",
       "Hypotenarmusklerna tillsammans med adductor pollicis och alla interosséer",
@@ -3449,9 +3449,9 @@
     "prompt": "Vilket är ett typiskt tidigt symtom vid karpaltunnelsyndrom?",
     "correct": "Nattliga domningar och stickningar i tummen, pek- och långfingret",
     "distractors": [
-      "Domning enbart i lillfingret och ringfingret, aldrig i tummen",
-      "Dropphand, orsakad av en skada på n. radialis högre upp",
-      "Smärta enbart i armbågen, helt utan utstrålning till handen"
+      "Domning enbart i lillfingret och ringfingret, och aldrig alls i tummen",
+      "Dropphand, orsakad av en skada på n. radialis högre upp i armen",
+      "Smärta enbart i själva armbågen, helt utan någon utstrålning till handen"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -3491,9 +3491,9 @@
     "prompt": "Vad innebär ett positivt Tinels tecken över karpaltunneln?",
     "correct": "Lätt knackning över nerven ger utstrålande stickningar i medianusområdet",
     "distractors": [
-      "Tummen kan inte opponeras alls mot lillfingret eller ringfingret",
-      "Handen blir helt blek vid tryck mot handledens båda artärer",
-      "Smärta vid passiv sträckning av tummens senskida och muskler"
+      "Tummen kan inte opponeras alls mot vare sig lillfingret eller ringfingret",
+      "Handen blir helt blek vid tryck mot handledens båda pulsådror samtidigt",
+      "Smärta vid passiv sträckning av tummens senskida och omgivande muskler"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -3521,7 +3521,7 @@
     "distractors": [
       "Os lunatum",
       "Os pisiforme",
-      "Os trapezium"
+      "Os trapezium radialt"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -3533,9 +3533,9 @@
     "prompt": "Varför riskerar en skafoideumfraktur (särskilt proximalt) avaskulär nekros?",
     "correct": "Blodförsörjningen går retrograd, så proximala delen kan bli utan blod",
     "distractors": [
-      "Benet saknar helt egna blodkärl någonstans i benvävnaden",
-      "Blodet kommer bara från ulnas kärlgrenar, aldrig från radius",
-      "Benet läker alltid snabbt och helt utan några komplikationer"
+      "Benet saknar helt egna blodkärl någonstans alls i sin benvävnad",
+      "Blodet kommer enbart från ulnas kärlgrenar, och aldrig från radius",
+      "Benet läker alltid snabbt och helt utan några som helst komplikationer"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -3547,9 +3547,9 @@
     "prompt": "Var är palpationsömheten typiskt lokaliserad vid en skafoideumfraktur?",
     "correct": "I den anatomiska snusgropen",
     "distractors": [
-      "Över os pisiforme",
-      "Mitt i handflatan",
-      "Vid laterala epikondylen"
+      "Över själva os pisiforme",
+      "Mitt inne i handflatan",
+      "Vid den laterala epikondylen"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -3562,7 +3562,7 @@
     "correct": "Abductor pollicis longus och extensor pollicis brevis",
     "distractors": [
       "FDS och FDP",
-      "Extensor pollicis longus och extensor indicis",
+      "Extensor pollicis longus och extensor indicis proprius",
       "FCR och FCU"
     ],
     "topic": "fysio_hand_handled",
@@ -3603,9 +3603,9 @@
     "prompt": "Vad är \"malletfinger\" (droppfinger)?",
     "correct": "Avslitning av den distala extensorsenan så att DIP-leden inte kan sträckas och hänger ned",
     "distractors": [
-      "Oförmåga att böja DIP-leden aktivt mot minsta motstånd, till skillnad från sträckning",
+      "Oförmåga att böja DIP-leden aktivt mot minsta motstånd, till skillnad från själva sträckningen",
       "Sidledsinstabilitet i MCP-leden efter en skada på sidoligamenten vid grundleden",
-      "Kompression av n. medianus i karpaltunneln, med domning i fingrarna"
+      "Kompression av n. medianus i karpaltunneln, med domning ute i fingrarna"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -3617,9 +3617,9 @@
     "prompt": "Vad är \"jersey finger\"?",
     "correct": "Avslitning av FDP-senan från ändfalangen så att DIP-leden inte kan böjas aktivt",
     "distractors": [
-      "Avslitning av extensorsenan vid DIP-leden, som vid malletfinger i stället",
-      "Fraktur i metakarpalbenet efter ett direkt slag mot hela handryggen",
-      "Ruptur av tummens UCL vid ett kraftigt skidtumme-trauma mot tummen"
+      "Avslitning av extensorsenan vid DIP-leden, precis som vid ett malletfinger i stället",
+      "Fraktur i själva metakarpalbenet efter ett direkt slag mot hela handryggen",
+      "Ruptur av tummens UCL vid ett kraftigt skidtumme-trauma direkt mot tummen"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -3659,7 +3659,7 @@
     "prompt": "\"Skidåkartumme\" (gamekeeper's/skier's thumb) är en skada på vilket ligament?",
     "correct": "Tummens ulnara kollateralligament vid MCP-leden",
     "distractors": [
-      "Tummens radiala kollateralligament",
+      "Tummens radiala kollateralligament vid MCP-leden",
       "Lig. anulare radii",
       "TFCC"
     ],
@@ -3673,9 +3673,9 @@
     "prompt": "\"Boxarfraktur\" är en fraktur på?",
     "correct": "Halsen av metakarpale V",
     "distractors": [
-      "Os scaphoideum",
-      "Distala radius",
-      "Tummens grundfalang"
+      "Själva os scaphoideum",
+      "Den distala radius",
+      "Tummens proximala grundfalang"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -3685,11 +3685,11 @@
     "id": "fys_hand_64",
     "type": "mc",
     "prompt": "Vad är en ganglion(cysta) vid handleden?",
-    "correct": "En vätskefylld utbuktning från ledkapsel eller senskida, oftast på handryggen",
+    "correct": "En vätskefylld utbuktning från ledkapsel eller senskida",
     "distractors": [
-      "En godartad bentumör som växer långsamt inuti handledens skelett",
-      "En nervinklämning i karpaltunneln som ger domning i fingrarna",
-      "En förkalkad sena efter en gammal, sedan länge läkt seninflammation"
+      "En godartad bentumör som växer långsamt inuti själva handledens skelett",
+      "En nervinklämning i karpaltunneln som ger domning ute i fingrarna",
+      "En förkalkad sena efter en gammal, sedan länge utläkt seninflammation"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -3701,9 +3701,9 @@
     "prompt": "Vad orsakar låsningen vid triggerfinger (stenoserande tendovaginit)?",
     "correct": "En förtjockning/knöl på flexorsenan fastnar i A1-pulleyn",
     "distractors": [
-      "En fraktur i grundfalangen efter ett slag",
-      "Inklämning av n. medianus i karpaltunneln",
-      "Ruptur av extensorsenan vid fingrets grundled"
+      "En fraktur i grundfalangen efter ett direkt slag mot fingret",
+      "Inklämning av n. medianus i själva karpaltunneln vid handleden",
+      "Ruptur av extensorsenan vid fingrets grundled i handryggen"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -3713,10 +3713,10 @@
     "id": "fys_hand_66",
     "type": "mc",
     "prompt": "Vid en svår n. ulnaris-skada uppstår en klohand. Varför ses klotställningen mest i ring- och lillfinger?",
-    "correct": "Förlamning av lumbrikaler/interosséer ger hyperextension i MCP och flexion i IP",
+    "correct": "Förlamning av lumbrikaler/interosséer ger MCP-hyperextension och IP-flexion",
     "distractors": [
-      "FDP slits av helt i just dessa två fingrar, men aldrig i de andra",
-      "Extensorsenorna brister i samtliga fingrar samtidigt, inte bara i två",
+      "FDP slits av helt i just dessa två fingrar, men aldrig i något av de andra",
+      "Extensorsenorna brister i samtliga fingrar samtidigt, inte bara i två av dem",
       "N. medianus tar över helt och hållet deras normala gripfunktion i handen"
     ],
     "topic": "fysio_hand_handled",
@@ -3729,9 +3729,9 @@
     "prompt": "Vad testar Allens test vid handleden?",
     "correct": "Att både a. radialis och a. ulnaris försörjer handen",
     "distractors": [
-      "N. medianus motorik i tenarmusklerna",
-      "Senglid i karpaltunneln vid fingerrörelse",
-      "Ligamentstabilitet i tummens grundled och MCP-led"
+      "N. medianus motorik i själva tenarmusklerna",
+      "Senglid i karpaltunneln vid aktiv fingerrörelse",
+      "Ligamentstabiliteten i både tummens grundled och MCP-led"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -3755,10 +3755,10 @@
     "id": "fys_hand_69",
     "type": "mc",
     "prompt": "Hur skiljer man kliniskt FDS från FDP vid undersökning av ett finger?",
-    "correct": "FDS testas genom att böja PIP medan övriga fingrar hålls raka; FDP genom isolerad DIP-flexion",
+    "correct": "FDS testas genom att böja PIP med övriga fingrar raka; FDP via isolerad DIP-flexion",
     "distractors": [
       "Det går aldrig att skilja dem åt kliniskt, det kräver alltid röntgen eller MR-undersökning",
-      "FDS testas vid handleden i vila, FDP testas i stället under armbågens fria rörelse",
+      "FDS testas vid handleden i vila, medan FDP testas under armbågens fria rörelse",
       "Bägge senorna testas enbart genom att be patienten aktivt röra på hela tummen"
     ],
     "topic": "fysio_hand_handled",
@@ -3771,9 +3771,9 @@
     "prompt": "Vilket är ett centralt fysioterapeutiskt mål efter immobilisering av handen?",
     "correct": "Att tidigt återfå rörlighet och senglid samt motverka ödem och stelhet",
     "distractors": [
-      "Att hålla handen helt orörlig så länge som det någonsin går",
-      "Att enbart träna axeln och helt glömma bort handens rörlighet",
-      "Att undvika all aktiv rörelse under så lång tid som möjligt"
+      "Att hålla hela handen helt orörlig så länge som det över huvud taget går",
+      "Att enbart träna axeln och helt glömma bort hela handens egen rörlighet",
+      "Att undvika all form av aktiv rörelse under så lång tid som det bara går"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -3785,9 +3785,9 @@
     "prompt": "Vilken position kallas handens \"funktionsställning\" och eftersträvas ofta vid skenbehandling?",
     "correct": "Lätt handledsextension, lätt böjda MCP/IP och tummen i opposition",
     "distractors": [
-      "Full handledsflexion med helt raka, sträckta fingrar",
-      "Maximal ulnardeviation av handleden åt lillfingersidan",
-      "Helt knuten näve med alla fingrar hårt böjda mot handflatan"
+      "Full handledsflexion i kombination med helt raka, sträckta fingrar",
+      "Maximal ulnardeviation av handleden ända åt lillfingersidan",
+      "Helt knuten näve med alla fingrarna hårt böjda mot handflatan"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -3813,7 +3813,7 @@
     "prompt": "Vilken muskel testas typiskt för n. ulnaris-funktion i handen?",
     "correct": "Första dorsala interosséen eller abductor digiti minimi",
     "distractors": [
-      "Abductor pollicis brevis i tumvallens tenarmuskulatur",
+      "Abductor pollicis brevis i tumvallens ytliga tenarmuskulatur",
       "Opponens pollicis djupt i tummens tenarmuskulatur",
       "Extensor pollicis longus på underarmens baksida"
     ],
@@ -3827,7 +3827,7 @@
     "prompt": "Extensor pollicis longus (EPL) är särskilt utsatt för senruptur efter vilken skada?",
     "correct": "Distal radiusfraktur",
     "distractors": [
-      "Skafoideumfraktur",
+      "Skafoideumfraktur radialt",
       "Boxarfraktur",
       "Armbågsluxation"
     ],
@@ -3895,11 +3895,11 @@
     "id": "fys_hand_79",
     "type": "mc",
     "prompt": "Varför används röntgen av handens karpalben för att bedöma \"benålder\" hos barn?",
-    "correct": "Karpalbenen förbenas i en förutsägbar ordning som speglar skelettmognaden",
+    "correct": "Karpalbenen förbenas i en ordning som speglar skelettmognaden",
     "distractors": [
-      "Karpalbenen växer fortare i storlek än vad kroppslängden gör",
-      "Antalet karpalben ökar stadigt genom hela barndomen och ungdomen",
-      "Karpalbenen krymper gradvis i storlek ju äldre barnet blir"
+      "Karpalbenen växer i storlek betydligt fortare än vad kroppslängden gör",
+      "Antalet karpalben ökar stadigt genom hela barndomen och ungdomstiden",
+      "Karpalbenen krymper i stället gradvis i storlek ju äldre barnet blir"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -3981,9 +3981,9 @@
     "prompt": "Greppstyrka används kliniskt som en markör för?",
     "correct": "Allmän muskelstyrka, funktion och hälsa",
     "distractors": [
-      "Enbart handledens rörlighet",
-      "Hjärtfrekvens",
-      "Synskärpa"
+      "Enbart handledens passiva rörelseomfång",
+      "Enbart personens hjärtfrekvens",
+      "Enbart personens synskärpa"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -3995,9 +3995,9 @@
     "prompt": "Hur förändras finmotorik och greppstyrka typiskt med stigande ålder?",
     "correct": "Båda avtar gradvis, delvis på grund av muskelförlust och nedsatt sensorik",
     "distractors": [
-      "Båda ökar stadigt och blir allt bättre ju äldre personen blir",
-      "Endast greppstyrkan ökar kontinuerligt genom hela vuxenlivet",
-      "De påverkas inte alls av stigande ålder eller några livsstilsfaktorer"
+      "Båda ökar tvärtom stadigt och blir allt bättre ju äldre personen blir",
+      "Endast greppstyrkan ökar kontinuerligt genom hela det vuxna livet",
+      "De påverkas inte alls av vare sig stigande ålder eller några livsstilsfaktorer"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -4035,7 +4035,7 @@
     "id": "fys_hand_89",
     "type": "mc",
     "prompt": "Vilka tre muskler sträcker handleden på den radiala/dorsala sidan?",
-    "correct": "Extensor carpi radialis longus, extensor carpi radialis brevis och extensor carpi ulnaris",
+    "correct": "Extensor carpi radialis longus och brevis samt extensor carpi ulnaris",
     "distractors": [
       "Flexor carpi radialis, palmaris longus samt flexor carpi ulnaris på handledens böjsida",
       "Pronator teres, supinator samt brachioradialis, underarmens rotationsmuskler",
@@ -4065,9 +4065,9 @@
     "prompt": "Radial- och ulnardeviation av handleden uppstår genom samverkan mellan vilka muskelgrupper?",
     "correct": "Samtidig aktivering av handledens flexorer och extensorer på samma sida",
     "distractors": [
-      "Endast flexorerna, helt utan hjälp av handledens extensorer",
-      "Endast tummens muskler, helt utan handledens egna muskler",
-      "Endast lumbrikalerna djupt inne i handflatan, utan andra muskler"
+      "Endast flexorerna, helt utan hjälp av handledens egna extensorer",
+      "Endast tummens muskler, helt utan handledens egna böj- och sträckmuskler",
+      "Endast lumbrikalerna djupt inne i handflatan, utan några andra muskler"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -4077,10 +4077,10 @@
     "id": "fys_hand_92",
     "type": "mc",
     "prompt": "Vad är \"dart thrower's motion\", ett funktionellt rörelseplan för handleden?",
-    "correct": "En diagonal rörelse från radialextension till ulnarflexion, vanlig i vardagliga grepp",
+    "correct": "En diagonal rörelse från radialextension till ulnarflexion, vanlig i grepp",
     "distractors": [
-      "Ren flexion–extension rakt i sagittalplanet, helt utan någon sidledsrörelse",
-      "Ren pronation–supination av hela underarmen, helt utan handledsrörelse",
+      "Ren flexion–extension rakt i sagittalplanet, helt utan någon rörelse i sidled",
+      "Ren pronation–supination av hela underarmen, helt utan någon handledsrörelse",
       "Cirkumduktion i en full cirkel runt hela handleden, åt alla håll samtidigt"
     ],
     "topic": "fysio_hand_handled",
@@ -4093,9 +4093,9 @@
     "prompt": "Varför försvagas fingerflexionen om handleden hålls i full flexion (aktiv-insufficiens)?",
     "correct": "Flexorerna förkortas över både handled och fingrar och kan inte generera full kraft",
     "distractors": [
-      "Senorna slits gradvis av vid upprepad och kraftig belastning över tid",
-      "Nerven kläms automatiskt fast varje gång handleden böjs helt och hållet",
-      "Extensorerna tar över hela greppfunktionen i stället för flexorerna helt"
+      "Senorna slits gradvis av vid upprepad och kraftig belastning under lång tid",
+      "Nerven kläms automatiskt fast varje gång som handleden böjs helt och hållet",
+      "Extensorerna tar över hela greppfunktionen i stället för flexorerna helt och hållet"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -4107,9 +4107,9 @@
     "prompt": "Vilket grepp används för att hålla en boll eller ett äpple, med fingrarna spridda runt föremålet?",
     "correct": "Sfäriskt grepp",
     "distractors": [
-      "Krokgrepp",
-      "Lateralt nyp",
-      "Spetsnyp"
+      "Rent krokgrepp",
+      "Rent lateralt nyp",
+      "Rent spetsnyp"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -4121,9 +4121,9 @@
     "prompt": "Vilket grepp används kring ett cylindriskt föremål som ett glas eller ett verktygsskaft?",
     "correct": "Cylindriskt kraftgrepp",
     "distractors": [
-      "Spetsnyp",
-      "Lateralt nyp",
-      "Krokgrepp utan tumme"
+      "Rent spetsnyp",
+      "Rent lateralt nyp",
+      "Krokgrepp helt utan tumme"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -4133,10 +4133,10 @@
     "id": "fys_hand_96",
     "type": "mc",
     "prompt": "Varför är tummen funktionellt sett ungefär lika viktig som de övriga fingrarna tillsammans?",
-    "correct": "Tummens opposition är en förutsättning för nästan alla precisions- och kraftgrepp",
+    "correct": "Tummens opposition är en förutsättning för nästan alla grepp",
     "distractors": [
       "Tummen har flest falanger av samtliga fem fingrar på hela handen",
-      "Tummen är längst och starkast av alla fem fingrarna på handen",
+      "Tummen är längst och starkast av alla de fem fingrarna på handen",
       "Tummen saknar all praktisk betydelse för såväl precisions- som kraftgrepp"
     ],
     "topic": "fysio_hand_handled",
@@ -4163,9 +4163,9 @@
     "prompt": "Varför ger ödem i handen särskilt stor risk för stelhet och nedsatt funktion?",
     "correct": "Ödem gör att MCP-lederna lätt stelnar i extension och IP-lederna i flexion",
     "distractors": [
-      "Ödem ökar greppstyrkan markant redan under de första dagarna",
-      "Ödem påverkar bara huden, aldrig lederna eller senskidorna i handen",
-      "Ödem har ingen funktionell betydelse alls för handens rörlighet"
+      "Ödem ökar tvärtom greppstyrkan markant redan under de första dagarna",
+      "Ödem påverkar bara själva huden, aldrig lederna eller senskidorna i handen",
+      "Ödem har ingen som helst funktionell betydelse alls för handens rörlighet"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -4189,11 +4189,11 @@
     "id": "fys_hand_100",
     "type": "mc",
     "prompt": "Vilken är en vanlig konsekvens om karpaltunnelsyndrom lämnas obehandlat under lång tid?",
-    "correct": "Bestående tenaratrofi och nedsatt finmotorik/känsel i tummen och pekfingret",
+    "correct": "Bestående tenaratrofi och nedsatt finmotorik i tumme och pekfinger",
     "distractors": [
-      "Spontan total läkning helt utan några som helst bestående följder",
-      "Förlamning av hela armen, ända från axeln ner till fingertopparna",
-      "Ökad greppstyrka och förbättrad känsel i hela handen över tid"
+      "Spontan och total läkning helt utan några som helst bestående följder",
+      "Förlamning av hela armen, ända från axeln och ner till fingertopparna",
+      "Ökad greppstyrka och tydligt förbättrad känsel i hela handen över tid"
     ],
     "topic": "fysio_hand_handled",
     "difficulty": "Normal",
@@ -4273,11 +4273,11 @@
     "id": "fys_hoft_6",
     "type": "mc",
     "prompt": "Ligamentum capitis femoris (lig. teres) har vilken funktion, särskilt hos barn?",
-    "correct": "Det bär en artär som bidrar till lårbenshuvudets blodförsörjning",
+    "correct": "Bär en artär som bidrar till lårbenshuvudets blodförsörjning",
     "distractors": [
-      "Det är höftledens starkaste stabiliserande ligament",
-      "Det begränsar all flexion",
-      "Det fäster gluteus maximus"
+      "Det är höftledens starkaste stabiliserande ligament framtill",
+      "Det begränsar all flexion i leden",
+      "Det utgör fästet för gluteus maximus"
     ],
     "topic": "fysio_hoft_backen",
     "difficulty": "Normal",
@@ -4289,7 +4289,7 @@
     "prompt": "Vad heter de två benutskotten på proximala femur där höftens muskler fäster?",
     "correct": "Trochanter major och trochanter minor",
     "distractors": [
-      "Epicondylus medialis och lateralis",
+      "Epicondylus femoris medialis och lateralis",
       "Tuberositas major och minor",
       "Condylus medialis och lateralis"
     ],
@@ -4343,10 +4343,10 @@
     "id": "fys_hoft_11",
     "type": "mc",
     "prompt": "Vad menas med femoral anteversion?",
-    "correct": "Lårbenshalsens framåtvridning i förhållande till femurkondylerna",
+    "correct": "Lårbenshalsens framåtvridning mot femurkondylerna",
     "distractors": [
       "Lårbenets längdtillväxt under hela uppväxtperioden",
-      "Höftledens flexionsförmåga i sagittalplanet framåt",
+      "Höftledens flexionsförmåga i själva sagittalplanet framåt",
       "Acetabulums djup i förhållande till caput femoris storlek"
     ],
     "topic": "fysio_hoft_backen",
@@ -4357,10 +4357,10 @@
     "id": "fys_hoft_12",
     "type": "mc",
     "prompt": "Vilken typ av led är sakroiliakaleden (SI-leden)?",
-    "correct": "En delvis broskklädd led med mycket liten rörlighet, byggd för kraftöverföring",
+    "correct": "En broskklädd led med liten rörlighet, byggd för kraftöverföring",
     "distractors": [
-      "En kulled med mycket stor rörlighet åt alla håll, likt höftleden",
-      "En gångjärnsled med rörelse enbart i ett enda rörelseplan, som knäleden",
+      "En kulled med mycket stor rörlighet åt alla håll, precis likt höftleden",
+      "En gångjärnsled med rörelse i enbart ett enda rörelseplan, som knäleden",
       "En ren fibrös fog helt utan broskklädd ledyta eller egen ledhåla"
     ],
     "topic": "fysio_hoft_backen",
@@ -4373,9 +4373,9 @@
     "prompt": "Vad är SI-ledens viktigaste funktion?",
     "correct": "Att överföra last mellan bålen/sacrum och de nedre extremiteterna",
     "distractors": [
-      "Att ge bäckenet stor rörlighet i alla tänkbara riktningar",
-      "Att rotera höftleden fritt vid varje steg under gång",
-      "Att böja ländryggen framåt och bakåt vid bålrörelser"
+      "Att ge hela bäckenet stor rörlighet i alla tänkbara riktningar",
+      "Att rotera höftleden helt fritt vid varje enskilt steg under gång",
+      "Att böja hela ländryggen framåt och bakåt vid olika bålrörelser"
     ],
     "topic": "fysio_hoft_backen",
     "difficulty": "Normal",
@@ -4399,11 +4399,11 @@
     "id": "fys_hoft_15",
     "type": "mc",
     "prompt": "Hur skiljer sig det typiska kvinnliga bäckenet (gynekoitt) från det manliga?",
-    "correct": "Bredare och rundare bäckeningång, större vinkel i arcus pubis – anpassat för förlossning",
+    "correct": "Bredare och rundare bäckeningång, större pubisvinkel – anpassat för förlossning",
     "distractors": [
-      "Smalare och högre bäckeningång med en spetsig, mycket trång pubisvinkel",
+      "Smalare och högre bäckeningång med en spetsig och mycket trång pubisvinkel",
       "Det finns inga anatomiska könsskillnader i bäckenet över huvud taget mellan könen",
-      "Kvinnans bäcken saknar helt en symfys mellan de båda blygdbenshalvorna"
+      "Kvinnans bäcken saknar helt en symfys mellan de båda blygdbenshalvorna framtill"
     ],
     "topic": "fysio_hoft_backen",
     "difficulty": "Normal",
@@ -4429,9 +4429,9 @@
     "prompt": "Vilka muskler är höftens viktigaste abduktorer och stabiliserar bäckenet vid gång på ett ben?",
     "correct": "Gluteus medius och gluteus minimus",
     "distractors": [
-      "Adductor longus och gracilis",
-      "Gluteus maximus och piriformis",
-      "Iliopsoas och rectus femoris"
+      "Adductor longus och gracilis medialt",
+      "Gluteus maximus och piriformis baktill",
+      "Iliopsoas och rectus femoris framtill"
     ],
     "topic": "fysio_hoft_backen",
     "difficulty": "Normal",
@@ -4473,7 +4473,7 @@
     "distractors": [
       "Sartorius",
       "Pectineus",
-      "Quadratus femoris"
+      "Quadratus femoris djupt"
     ],
     "topic": "fysio_hoft_backen",
     "difficulty": "Normal",
@@ -4539,11 +4539,11 @@
     "id": "fys_hoft_25",
     "type": "mc",
     "prompt": "De små djupa höftmusklerna (piriformis, gemelli, obturatorius internus/externus, quadratus femoris) har vilken huvudfunktion?",
-    "correct": "Utåtrotation och stabilisering av höftleden",
+    "correct": "Utåtrotation och stabilisering av leden",
     "distractors": [
-      "Inåtrotation och flexion av höftleden",
+      "Inåtrotation och flexion av hela höftleden",
       "Ren abduktion av höftleden åt sidan",
-      "Knäextension via patellarsenan"
+      "Knäextension via själva patellarsenan"
     ],
     "topic": "fysio_hoft_backen",
     "difficulty": "Normal",
@@ -4611,7 +4611,7 @@
     "prompt": "Höftens extension är förhållandevis liten. Ungefär hur stor är den normalt?",
     "correct": "Cirka 10–20°",
     "distractors": [
-      "Cirka 45°",
+      "Cirka 40–50°",
       "Cirka 70°",
       "Cirka 90°"
     ],
@@ -4623,9 +4623,9 @@
     "id": "fys_hoft_31",
     "type": "mc",
     "prompt": "Vad är gluteus medius huvudsakliga roll under gångens stödfas på ett ben?",
-    "correct": "Att stabilisera bäckenet i frontalplanet så att det inte tippar mot svingbenets sida",
+    "correct": "Att stabilisera bäckenet i frontalplanet så det inte tippar mot svingbenet",
     "distractors": [
-      "Att flektera höften kraftigt framåt vid varje enskilt steg i gångcykeln",
+      "Att flektera höften kraftigt framåt vid varje enskilt steg i hela gångcykeln",
       "Att sträcka knät helt rakt genom hela stödfasen, från häl- till tåfrånskjut",
       "Att rotera bålen kraftigt åt sidan vid varje enskilt steg som tas under gång"
     ],
@@ -4637,11 +4637,11 @@
     "id": "fys_hoft_32",
     "type": "mc",
     "prompt": "Vad är ett positivt Trendelenburgs tecken ett uttryck för?",
-    "correct": "Svaghet i höftabduktorerna på stödbenets sida",
+    "correct": "Svaghet i höftabduktorerna på stödbenssidan",
     "distractors": [
       "Svaghet i höftflexorerna på svingbenets sida",
-      "Knäextensorsvaghet på stödbenets sida",
-      "Fotledsinstabilitet på svingbenets sida"
+      "Svaghet i knäextensorerna på stödbenets sida",
+      "Fotledsinstabilitet på svingbenets egen sida"
     ],
     "topic": "fysio_hoft_backen",
     "difficulty": "Normal",
@@ -4653,9 +4653,9 @@
     "prompt": "Vid Trendelenburgs tecken (positivt) – vad händer med bäckenet när patienten står på det svaga benet?",
     "correct": "Bäckenet sjunker ned på motsatt sida",
     "distractors": [
-      "Bäckenet lyfts på motsatt sida",
-      "Bäckenet roterar bakåt",
-      "Ingenting händer med bäckenet"
+      "Bäckenet lyfts i stället på motsatt sida",
+      "Bäckenet roterar bakåt i stället",
+      "Ingenting alls händer med bäckenet"
     ],
     "topic": "fysio_hoft_backen",
     "difficulty": "Normal",
@@ -4695,7 +4695,7 @@
     "prompt": "Vad inleder stödfasen i en normal gångcykel?",
     "correct": "Hälisättning",
     "distractors": [
-      "Tåfrånskjut",
+      "Tåfrånskjutet",
       "Mittsving",
       "Mittstöd"
     ],
@@ -4707,7 +4707,7 @@
     "id": "fys_hoft_37",
     "type": "mc",
     "prompt": "Varför rekommenderas en käpp i handen på motsatt sida om den artrosdrabbade höften?",
-    "correct": "Den minskar belastningen på höften genom att avlasta abduktorernas kraftbehov",
+    "correct": "Den minskar höftbelastningen genom att avlasta abduktorernas kraftbehov",
     "distractors": [
       "Den ökar belastningen medvetet för att stärka höftmuskulaturen snabbare",
       "Den har absolut ingen som helst effekt på höftens totala belastning",
@@ -4765,7 +4765,7 @@
     "prompt": "N. ischiadicus delar sig (oftast i knävecket) i vilka två nerver?",
     "correct": "N. tibialis och n. fibularis communis",
     "distractors": [
-      "N. femoralis och n. obturatorius",
+      "N. femoralis och n. obturatorius framtill",
       "N. saphenus och n. suralis",
       "N. gluteus superior och inferior"
     ],
@@ -4777,10 +4777,10 @@
     "id": "fys_hoft_42",
     "type": "mc",
     "prompt": "Var lämnar n. ischiadicus bäckenet?",
-    "correct": "Genom foramen ischiadicum majus, oftast nedanför piriformis",
+    "correct": "Genom foramen ischiadicum majus, nedanför piriformis",
     "distractors": [
       "Genom foramen obturatum tillsammans med n. obturatorius",
-      "Genom canalis femoralis tillsammans med kärlen",
+      "Genom canalis femoralis tillsammans med kärlen framtill",
       "Genom symfysen mellan de båda blygdbenshalvorna framtill"
     ],
     "topic": "fysio_hoft_backen",
@@ -4808,7 +4808,7 @@
     "correct": "Meralgia paresthetica",
     "distractors": [
       "Piriformissyndrom",
-      "Karpaltunnelsyndrom",
+      "Karpaltunnelsyndrom i handen",
       "Ischias"
     ],
     "topic": "fysio_hoft_backen",
@@ -4847,11 +4847,11 @@
     "id": "fys_hoft_47",
     "type": "mc",
     "prompt": "Vad är förstahandsbehandling vid höftartros enligt artrosriktlinjer?",
-    "correct": "Information/utbildning, anpassad fysisk träning och vid behov viktnedgång",
+    "correct": "Information, anpassad fysisk träning och vid behov viktnedgång",
     "distractors": [
       "Omedelbar höftprotes i alla lägen, oavsett artrosgrad eller ålder",
-      "Total vila tills smärtan helt upphör av sig själv, utan träning",
-      "Enbart smärtstillande läkemedel utan någon träning alls involverad"
+      "Total vila tills smärtan helt upphör av sig själv, utan någon träning",
+      "Enbart smärtstillande läkemedel utan någon form av träning involverad"
     ],
     "topic": "fysio_hoft_backen",
     "difficulty": "Normal",
@@ -4861,11 +4861,11 @@
     "id": "fys_hoft_48",
     "type": "mc",
     "prompt": "Varför riskerar en collum femoris-fraktur (cervikal höftfraktur) avaskulär nekros av lårbenshuvudet?",
-    "correct": "Frakturen kan slita av de retinakulära kärlen som försörjer caput retrograt",
+    "correct": "Frakturen kan slita av de retinakulära kärlen till caput retrograt",
     "distractors": [
       "Lårbenshuvudet saknar helt egna blodkärl redan från fosterstadiet",
-      "Blodet kommer enbart från ligamentum teres-kärlet, oavsett ålder",
-      "Frakturen påverkar aldrig blodförsörjningen till caput femoris"
+      "Blodet kommer enbart från ligamentum teres-kärlet, helt oavsett ålder",
+      "Frakturen påverkar aldrig blodförsörjningen till själva caput femoris"
     ],
     "topic": "fysio_hoft_backen",
     "difficulty": "Normal",
@@ -4877,8 +4877,8 @@
     "prompt": "Hur ligger benet typiskt vid en dislocerad collum femoris-fraktur?",
     "correct": "Förkortat och utåtroterat",
     "distractors": [
-      "Förlängt och inåtroterat",
-      "Rakt och oförändrat",
+      "Förlängt och kraftigt inåtroterat",
+      "Rakt och helt oförändrat",
       "Kraftigt abducerat"
     ],
     "topic": "fysio_hoft_backen",
@@ -4893,7 +4893,7 @@
     "distractors": [
       "Idrottsskada",
       "Medfödd missbildning",
-      "Tumör i de flesta fall"
+      "Skelettumör i de allra flesta fall"
     ],
     "topic": "fysio_hoft_backen",
     "difficulty": "Normal",
@@ -4905,8 +4905,8 @@
     "prompt": "Greater trochanteric pain syndrome (trokanterit) beror oftast på?",
     "correct": "Gluteal sentendinopati och/eller bursit vid trochanter major",
     "distractors": [
-      "Artros djupt inne i själva höftleden, långt från trochanter",
-      "Diskbråck i ländryggens nedre del med nervpåverkan",
+      "Artros djupt inne i själva höftleden, långt från trochanter major",
+      "Diskbråck i ländryggens nedre del med tydlig nervpåverkan",
       "Ruptur av ligamentum teres inne i själva höftledskapseln"
     ],
     "topic": "fysio_hoft_backen",
@@ -4917,11 +4917,11 @@
     "id": "fys_hoft_52",
     "type": "mc",
     "prompt": "Vad innebär femoroacetabulärt impingement (FAI) av cam-typ?",
-    "correct": "En benpålagring vid övergången lårbenshals–huvud som kläms mot acetabulum vid flexion",
+    "correct": "En benpålagring vid lårbenshals–huvud som kläms mot acetabulum vid flexion",
     "distractors": [
       "Överdjup acetabulär ledpanna som täcker caput femoris alldeles för mycket",
       "Avsaknad av labrum runt hela ledpannans kant efter en tidigare allvarlig skada",
-      "Förkortning av lårbenshalsen efter en gammal, sedan länge läkt fraktur"
+      "Förkortning av lårbenshalsen efter en gammal, sedan länge utläkt fraktur"
     ],
     "topic": "fysio_hoft_backen",
     "difficulty": "Normal",
@@ -4947,9 +4947,9 @@
     "prompt": "Vad testar FABER-testet (flexion, abduktion, utåtrotation) framför allt?",
     "correct": "Höftled och sakroiliakaled",
     "distractors": [
-      "Korsbanden i knät",
-      "Akillessenan",
-      "Rotatorkuffen"
+      "Korsbanden inne i knäleden",
+      "Akillessenan i vaden",
+      "Rotatorkuffen i axeln"
     ],
     "topic": "fysio_hoft_backen",
     "difficulty": "Normal",
@@ -4973,11 +4973,11 @@
     "id": "fys_hoft_56",
     "type": "mc",
     "prompt": "En kraftig hamstringssträckning eller avulsion sker oftast vid?",
-    "correct": "Snabb excentrisk belastning, t.ex. sprint, med smärta vid sittbensknölen",
+    "correct": "Snabb excentrisk belastning, t.ex. sprint, med smärta vid sittbenet",
     "distractors": [
       "Långsam statisk stretching helt utan någon belastning eller kraft alls",
-      "Stillasittande under mycket lång tid helt utan någon som helst rörelse",
-      "Lätt promenad i lugnt tempo helt utan ansträngning eller kraft"
+      "Stillasittande under mycket lång tid, helt utan någon som helst rörelse",
+      "Lätt promenad i lugnt tempo, helt utan ansträngning eller någon kraft"
     ],
     "topic": "fysio_hoft_backen",
     "difficulty": "Normal",
@@ -4987,7 +4987,7 @@
     "id": "fys_hoft_57",
     "type": "mc",
     "prompt": "Vad kännetecknar piriformissyndrom?",
-    "correct": "Ischiasliknande smärta då piriformis irriterar/komprimerar n. ischiadicus i sätet",
+    "correct": "Ischiasliknande smärta då piriformis klämmer n. ischiadicus i sätet",
     "distractors": [
       "Smärta i ljumsken enbart vid kraftig inåtrotation av hela höftleden",
       "Domning enbart på lårets yttre sida, helt utan någon smärta i sätet",
@@ -5003,7 +5003,7 @@
     "prompt": "I vilken riktning sker en traumatisk höftledsluxation oftast (t.ex. vid \"dashboard injury\")?",
     "correct": "Bakåt, med benet flekterat, adducerat och inåtroterat",
     "distractors": [
-      "Framåt, med benet abducerat och utåtroterat",
+      "Framåt, med benet flekterat, abducerat och utåtroterat",
       "Rakt nedåt",
       "Höftleden luxerar i princip aldrig"
     ],
@@ -5029,10 +5029,10 @@
     "id": "fys_hoft_60",
     "type": "mc",
     "prompt": "Vad utmärker en Trendelenburggång (abduktorsvaghet)?",
-    "correct": "Bålen lutar mot stödbenets sida för att kompensera bäckentippningen",
+    "correct": "Bålen lutar mot stödbenet för att kompensera bäckentippningen",
     "distractors": [
       "Knät överextenderas kraftigt vid varje enskilt steg som tas",
-      "Foten slår hårt i golvet vid varje steg som tas under gång",
+      "Foten slår hårt i golvet vid varje enskilt steg under gång",
       "Patienten går enbart på tå genom hela steget utan hälisättning"
     ],
     "topic": "fysio_hoft_backen",
@@ -5045,7 +5045,7 @@
     "prompt": "Legg-Calvé-Perthes sjukdom innebär?",
     "correct": "Idiopatisk avaskulär nekros av lårbenshuvudet hos barn",
     "distractors": [
-      "Glidning i tillväxtzonen hos tonåringar",
+      "Glidning i lårbenshalsens tillväxtzon hos växande tonåringar",
       "Medfödd höftledsluxation hos nyfödda",
       "Höftartros hos äldre"
     ],
@@ -5059,8 +5059,8 @@
     "prompt": "Fyseolys (SCFE, glidning i lårbenshuvudets tillväxtzon) drabbar typiskt?",
     "correct": "Överviktiga tonåringar, ofta med höft- eller knäsmärta och hälta",
     "distractors": [
-      "Nyfödda flickor med en medfödd, instabil höftled vid födseln",
-      "Barn i åldern 4–8 år med hög feber och akut ledsmärta",
+      "Nyfödda flickor med en medfödd, instabil höftled redan vid födseln",
+      "Barn i åldern 4–8 år med hög feber och akut, kraftig ledsmärta",
       "Äldre med osteoporos och en lång rad tidigare fallolyckor"
     ],
     "topic": "fysio_hoft_backen",
@@ -5141,11 +5141,11 @@
     "id": "fys_hoft_68",
     "type": "mc",
     "prompt": "Hur förändras gångmönstret typiskt hos äldre?",
-    "correct": "Kortare steglängd, lägre gånghastighet och längre dubbelstödsfas",
+    "correct": "Kortare steglängd, lägre gånghastighet, längre dubbelstödsfas",
     "distractors": [
-      "Längre steg och en betydligt högre gånghastighet överlag",
-      "Ökad svingfas och en märkbart kortare stödfas i gången",
-      "Inga förändringar alls i gångmönstret oavsett stigande ålder"
+      "Längre steg och en betydligt högre gånghastighet rent generellt",
+      "Ökad svingfas och en märkbart kortare stödfas i själva gången",
+      "Inga förändringar alls i gångmönstret, oavsett stigande ålder"
     ],
     "topic": "fysio_hoft_backen",
     "difficulty": "Normal",
@@ -5155,9 +5155,9 @@
     "id": "fys_hoft_69",
     "type": "mc",
     "prompt": "Varför är fallprevention och styrketräning av höft/ben särskilt viktigt hos äldre?",
-    "correct": "För att minska risken för höftfraktur, som ofta beror på fall vid osteoporos",
+    "correct": "För att minska risken för höftfraktur, som ofta beror på fall",
     "distractors": [
-      "För att öka anteversionen i lårbenshalsen så mycket som möjligt",
+      "För att öka anteversionen i lårbenshalsen så mycket som det bara går",
       "För att förhindra Perthes sjukdom, som annars ofta drabbar äldre",
       "För att bota medfödd DDH som annars kvarstår hos vuxna patienter"
     ],
@@ -5171,9 +5171,9 @@
     "prompt": "Vilken rörelse bör ofta undvikas tidigt efter en höftprotesoperation med bakre snitt (luxationsrisk)?",
     "correct": "Kombinationen flexion över 90°, adduktion och inåtrotation",
     "distractors": [
-      "Lätt abduktion av det nyligen opererade benet",
-      "Stående stilla med ett helt rakt, avlastat ben",
-      "Lugn promenad i ett lågt, kontrollerat tempo"
+      "Lätt abduktion av det nyligen opererade och läkande benet",
+      "Att stå helt stilla med ett rakt, avlastat och opererat ben",
+      "Lugn promenad i ett lågt och väl kontrollerat tempo"
     ],
     "topic": "fysio_hoft_backen",
     "difficulty": "Normal",
@@ -5186,7 +5186,7 @@
     "correct": "Spina iliaca anterior superior",
     "distractors": [
       "Trochanter minor",
-      "Symphysis pubica enbart",
+      "Symphysis pubica framtill enbart",
       "Foramen obturatum"
     ],
     "topic": "fysio_hoft_backen",
@@ -5200,7 +5200,7 @@
     "correct": "Trochanter minor på femur",
     "distractors": [
       "Trochanter major",
-      "Tuberositas tibiae",
+      "Tuberositas tibiae på skenbenet",
       "Tuber ischiadicum"
     ],
     "topic": "fysio_hoft_backen",
@@ -5211,9 +5211,9 @@
     "id": "fys_hoft_73",
     "type": "mc",
     "prompt": "Tractus iliotibialis löper längs lårets utsida och fäster distalt på?",
-    "correct": "Tuberculum på laterala tibia",
+    "correct": "Tuberculum på tibia",
     "distractors": [
-      "Mediala femurkondylen",
+      "Den mediala femurkondylen",
       "Patella",
       "Caput fibulae enbart"
     ],
@@ -5243,7 +5243,7 @@
     "distractors": [
       "Korsbandsskada",
       "Meniskskada",
-      "Akillesseneruptur"
+      "Akillesseneruptur i vaden"
     ],
     "topic": "fysio_hoft_backen",
     "difficulty": "Normal",
@@ -5267,11 +5267,11 @@
     "id": "fys_hoft_77",
     "type": "mc",
     "prompt": "Vad är den primära funktionella konsekvensen av nedsatt höftextension (t.ex. flexionskontraktur)?",
-    "correct": "Försämrad gång med minskad steglängd och kompenserande ökad ländryggssvank",
+    "correct": "Försämrad gång med kortare steglängd och ökad ländryggssvank",
     "distractors": [
       "Förbättrad gånghastighet och en betydligt längre steglängd",
       "Ökad knästabilitet vid varje enskilt steg som patienten tar",
-      "Ingen påverkan alls på varken gång eller ländryggens hållning"
+      "Ingen påverkan alls på vare sig gång eller ländryggens hållning"
     ],
     "topic": "fysio_hoft_backen",
     "difficulty": "Normal",
@@ -5340,7 +5340,7 @@
     "correct": "Bäckenbottenträning",
     "distractors": [
       "Enbart sängläge",
-      "Vadmuskelträning",
+      "Isolerad vadmuskelträning",
       "Axelträning"
     ],
     "topic": "fysio_hoft_backen",
@@ -5353,9 +5353,9 @@
     "prompt": "Under graviditet bidrar hormonet relaxin till?",
     "correct": "Ökad ledlaxitet i bäckenets leder",
     "distractors": [
-      "Stelhet i alla leder",
-      "Ökad bentäthet",
-      "Minskad rörlighet i höften"
+      "Uttalad stelhet i alla kroppens leder",
+      "Kraftigt ökad bentäthet",
+      "Kraftigt minskad rörlighet i höften"
     ],
     "topic": "fysio_hoft_backen",
     "difficulty": "Normal",
@@ -5367,7 +5367,7 @@
     "prompt": "Foramen obturatum i bäckenet är till största delen täckt av en hinna men släpper igenom?",
     "correct": "Kärl och n. obturatorius",
     "distractors": [
-      "N. ischiadicus",
+      "N. ischiadicus och n. gluteus",
       "A. femoralis",
       "N. femoralis"
     ],
@@ -5437,7 +5437,7 @@
     "prompt": "Vilka muskler tippar bäckenet framåt (anteriort) när de är strama/överaktiva?",
     "correct": "Höftflexorerna och ländryggssträckarna",
     "distractors": [
-      "Hamstrings och buksmusklerna",
+      "Hamstrings tillsammans med bukmusklerna",
       "Gluteus maximus och buken",
       "Vadmusklerna"
     ],
@@ -5451,7 +5451,7 @@
     "prompt": "Vilka muskler tippar bäckenet bakåt (posteriort)?",
     "correct": "Gluteus maximus, hamstrings och bukmusklerna",
     "distractors": [
-      "Iliopsoas och rectus femoris tillsammans",
+      "Iliopsoas och rectus femoris tillsammans framtill",
       "Ländryggssträckarna på ryggens baksida",
       "Höftadduktorerna på lårets insida"
     ],
@@ -5509,7 +5509,7 @@
     "distractors": [
       "Nerven till höften tas helt bort kirurgiskt",
       "Höftleden steloperas helt i ett fast läge",
-      "Benet förlängs kraftigt med flera centimeter"
+      "Hela benet förlängs kraftigt med flera centimeter kirurgiskt"
     ],
     "topic": "fysio_hoft_backen",
     "difficulty": "Normal",
@@ -5519,10 +5519,10 @@
     "id": "fys_hoft_95",
     "type": "mc",
     "prompt": "Vad är ett rimligt tidigt rehabiliteringsmål efter en höftfraktur hos en äldre patient?",
-    "correct": "Tidig mobilisering och belastning för att återfå gångförmåga och förebygga komplikationer",
+    "correct": "Tidig mobilisering och belastning för snabb gång och färre komplikationer",
     "distractors": [
       "Strikt sängläge i flera veckor helt utan någon som helst belastning på benet",
-      "Att undvika all belastning i minst tre hela månader efter operationen helt",
+      "Att undvika all belastning i minst tre hela månader efter själva operationen",
       "Enbart armträning utan att någonsin belasta det nyopererade benet alls"
     ],
     "topic": "fysio_hoft_backen",
@@ -5533,11 +5533,11 @@
     "id": "fys_hoft_96",
     "type": "mc",
     "prompt": "Vid SI-ledsrelaterad smärta används ofta ett kluster av provokationstester. Varför kombineras flera tester?",
-    "correct": "Enskilda SI-tester har låg tillförlitlighet; flera positiva tillsammans ökar säkerheten",
+    "correct": "Enskilda SI-tester har låg tillförlitlighet; flera positiva ökar säkerheten",
     "distractors": [
       "Ett enda test räcker alltid för att ställa en helt säker klinisk diagnos",
       "Tester behövs aldrig alls vid misstänkt SI-ledsrelaterad smärta hos patienten",
-      "För att enbart utesluta höftartros, och absolut inget annat i utredningen"
+      "För att enbart utesluta höftartros, och absolut inget annat i hela utredningen"
     ],
     "topic": "fysio_hoft_backen",
     "difficulty": "Normal",
@@ -5561,7 +5561,7 @@
     "id": "fys_hoft_98",
     "type": "mc",
     "prompt": "Vad är en vanlig orsak till att caput femoris hos vuxna är mer skyddat mot avaskulär nekros än hos små barn?",
-    "correct": "Vuxna försörjs främst av retinakulära kärl, barn mer av ligamentum teres-kärlet",
+    "correct": "Vuxna försörjs främst av retinakulära kärl, barn mer av ligamentum teres",
     "distractors": [
       "Barn har betydligt fler blodkärl till caput femoris än vad vuxna har",
       "Vuxnas caput femoris saknar praktiskt taget all blodförsörjning helt",
@@ -5591,9 +5591,9 @@
     "prompt": "Vilken är en central princip i fysioterapeutisk behandling av höftartros enligt aktuella riktlinjer?",
     "correct": "Handledd, anpassad träning är en grundbehandling oavsett artrosgrad",
     "distractors": [
-      "Vila är alltid den bästa behandlingen vid all form av artros",
-      "Träning är helt kontraindicerat vid alla former av artros",
-      "Endast operation hjälper mot artros, oavsett svårighetsgrad"
+      "Vila är alltid den allra bästa behandlingen vid all form av artros",
+      "Träning är helt kontraindicerat vid i stort sett alla former av artros",
+      "Endast operation hjälper mot artros, oavsett dess svårighetsgrad"
     ],
     "topic": "fysio_hoft_backen",
     "difficulty": "Normal",
@@ -9807,7 +9807,7 @@
     "correct": "Os scaphoideum",
     "distractors": [
       "Os lunatum",
-      "Os triquetrum",
+      "Os triquetrum ulnart",
       "Os trapezium"
     ],
     "topic": "fysio_hand_handled",
@@ -9836,7 +9836,7 @@
     "prompt": "",
     "correct": "Os triquetrum",
     "distractors": [
-      "Os pisiforme",
+      "Os pisiforme volart",
       "Os hamatum",
       "Os lunatum"
     ],
@@ -9881,7 +9881,7 @@
     "prompt": "",
     "correct": "Os trapezoideum",
     "distractors": [
-      "Os trapezium",
+      "Os trapezium radialt",
       "Os capitatum",
       "Os hamatum"
     ],
@@ -9941,7 +9941,7 @@
     "prompt": "",
     "correct": "Ossa metacarpi",
     "distractors": [
-      "Ossa carpi",
+      "Ossa carpi proximalt",
       "Phalanges",
       "Ossa tarsi"
     ],
@@ -10046,7 +10046,7 @@
     "prompt": "",
     "correct": "Articulationes interphalangeae proximales",
     "distractors": [
-      "Articulationes interphalangeae distales",
+      "Articulationes interphalangeae distales i fingrarna",
       "Articulationes metacarpophalangeae",
       "Articulationes carpometacarpeae"
     ],
@@ -12905,8 +12905,8 @@
     "prompt": "Hur många kammare (hålrum) har det mänskliga hjärtat?",
     "correct": "Fyra – två förmak och två kamrar",
     "distractors": [
-      "Två – ett förmak och en kammare",
-      "Tre – två förmak och en kammare",
+      "Två – ett enda förmak och en kammare",
+      "Tre – två förmak och en enda kammare",
       "Sex – tre förmak och tre kamrar"
     ],
     "topic": "fysio_kardio_resp",
@@ -12919,9 +12919,9 @@
     "prompt": "Vilken klaff sitter mellan höger förmak och höger kammare?",
     "correct": "Trikuspidalisklaffen",
     "distractors": [
-      "Mitralisklaffen",
+      "Mitralisklaffen till vänster",
       "Aortaklaffen",
-      "Pulmonalisklaffen"
+      "Pulmonalisklaffen till höger"
     ],
     "topic": "fysio_kardio_resp",
     "difficulty": "Normal",
@@ -12961,7 +12961,7 @@
     "prompt": "Vilken kammare har generellt tjockast muskelvägg (myokard)?",
     "correct": "Vänster kammare",
     "distractors": [
-      "Höger kammare",
+      "Höger kammare nedtill",
       "Vänster förmak",
       "Höger förmak"
     ],
@@ -12973,10 +12973,10 @@
     "id": "fys_kardioresp_6",
     "type": "mc",
     "prompt": "Varför har vänster kammare en tjockare vägg än höger kammare?",
-    "correct": "Den måste generera ett mycket högre tryck för att pumpa blod mot ett högre perifert motstånd",
+    "correct": "Den måste generera mycket högre tryck för att pumpa blod mot högre perifert motstånd",
     "distractors": [
-      "Den pumpar en betydligt större blodvolym per slag, jämfört med höger kammare varje gång",
-      "Den saknar klaffar helt och hållet och behöver därför betydligt extra muskulatur",
+      "Den pumpar en betydligt större blodvolym per slag jämfört med höger kammare varje gång",
+      "Den saknar klaffar helt och hållet och behöver därför betydligt mer extra muskulatur",
       "Den innehåller hela retledningssystemets huvuddel, inte höger kammare alls längre"
     ],
     "topic": "fysio_kardio_resp",
@@ -13073,9 +13073,9 @@
     "prompt": "Vad utlöser att atrioventrikulärklaffarna (mitralis/trikuspidalis) stängs?",
     "correct": "Att trycket i kamrarna stiger över trycket i förmaken när kamrarna börjar kontrahera",
     "distractors": [
-      "Att förmaken fylls fullständigt med venöst blod från hela kroppen igen",
-      "Att aortaklaffen öppnas samtidigt i vänster kammare, före kontraktionen",
-      "Att hjärtfrekvensen sjunker kraftigt under fullständig vila och avslappning"
+      "Att förmaken fylls fullständigt med venöst blod från hela kroppen igen och igen",
+      "Att aortaklaffen öppnas samtidigt i vänster kammare, redan före själva kontraktionen",
+      "Att hjärtfrekvensen sjunker kraftigt under fullständig vila och total avslappning"
     ],
     "topic": "fysio_kardio_resp",
     "difficulty": "Normal",
@@ -13087,7 +13087,7 @@
     "prompt": "Vad kallas fasen då kamrarna kontraherar med stängda klaffar åt båda hållen, innan aorta-/pulmonalisklaffarna öppnas?",
     "correct": "Isovolumetrisk kontraktion",
     "distractors": [
-      "Isovolumetrisk relaxation",
+      "Isovolumetrisk relaxationsfas",
       "Ejektionsfasen",
       "Diastasfasen"
     ],
@@ -13101,7 +13101,7 @@
     "prompt": "Vad krävs för att aortaklaffen ska öppnas under systole?",
     "correct": "Att trycket i vänster kammare överstiger trycket i aorta",
     "distractors": [
-      "Att förmaksklaffarna öppnas samtidigt under systole",
+      "Att förmaksklaffarna öppnas samtidigt under hela systole",
       "Att hjärtfrekvensen ökar kraftigt under fysiskt arbete",
       "Att vänster förmak kontraherar kraftigt en gång till"
     ],
@@ -13127,7 +13127,7 @@
     "id": "fys_kardioresp_17",
     "type": "mc",
     "prompt": "Vad orsakar det andra hjärtljudet ('dupp')?",
-    "correct": "Stängningen av aorta- och pulmonalisklaffen vid diastolens start",
+    "correct": "Stängningen av aorta- och pulmonalisklaffen",
     "distractors": [
       "Stängningen av mitralis- och trikuspidalisklaffen",
       "Öppningen av atrioventrikulärklaffarna",
@@ -13155,7 +13155,7 @@
     "id": "fys_kardioresp_19",
     "type": "mc",
     "prompt": "Hur beräknas ejektionsfraktionen?",
-    "correct": "Slagvolymen dividerat med kammarens fyllda volym i slutet av diastole",
+    "correct": "Slagvolymen delat med kammarvolymen vid diastoleslut",
     "distractors": [
       "Hjärtfrekvensen multiplicerat med slagvolymen per minut",
       "Slutsystolisk volym dividerat med den totala slagvolymen",
@@ -13211,7 +13211,7 @@
     "id": "fys_kardioresp_23",
     "type": "mc",
     "prompt": "Vad är sinusknutans (SA-nodens) funktion?",
-    "correct": "Den genererar spontant de elektriska impulser som normalt styr hjärtrytmen",
+    "correct": "Den genererar spontant de impulser som normalt styr hjärtrytmen",
     "distractors": [
       "Den fördröjer i stället impulsen mellan förmak och kammare",
       "Den leder i stället impulsen snabbt genom kammarväggarna",
@@ -13239,7 +13239,7 @@
     "id": "fys_kardioresp_25",
     "type": "mc",
     "prompt": "Vad är den fysiologiska funktionen hos AV-nodens fördröjning av impulsen?",
-    "correct": "Den ger förmaken tid att fullborda sin kontraktion innan kamrarna kontraherar",
+    "correct": "Den ger förmaken tid att kontrahera klart före kammarkontraktionen",
     "distractors": [
       "Den ökar i stället hjärtfrekvensen till sitt allra högsta maximum",
       "Den förhindrar helt och hållet all vidare ledning till kamrarna",
@@ -13269,9 +13269,9 @@
     "prompt": "Vad förgrenar sig His bunt till innan impulsen sprids i kammarväggarna via Purkinjefibrerna?",
     "correct": "En höger och en vänster skänkel",
     "distractors": [
-      "Fyra separata sinusknutor",
+      "Fyra helt separata sinusknutor",
       "Kranskärlens grenar",
-      "Aortabågens tre huvudgrenar"
+      "Aortabågens tre stora huvudgrenar"
     ],
     "topic": "fysio_kardio_resp",
     "difficulty": "Normal",
@@ -13365,11 +13365,11 @@
     "id": "fys_kardioresp_34",
     "type": "mc",
     "prompt": "Vad innebär Frank-Starlings lag om hjärtat?",
-    "correct": "Ju mer kammaren fylls, desto kraftigare kontraherar den och pumpar ut mer blod",
+    "correct": "Ju mer kammaren fylls, desto kraftigare kontraherar den och pumpar mer blod",
     "distractors": [
       "Hjärtfrekvensen ökar alltid kraftigt varje gång slagvolymen minskar",
       "Slagvolymen är helt oberoende av hur mycket blod som faktiskt fyller kammaren",
-      "En mindre fylld kammare pumpar alltid ut betydligt mer blod totalt"
+      "En mindre fylld kammare pumpar alltid ut betydligt mer blod totalt sett"
     ],
     "topic": "fysio_kardio_resp",
     "difficulty": "Normal",
@@ -13463,11 +13463,11 @@
     "id": "fys_kardioresp_41",
     "type": "mc",
     "prompt": "Vad händer generellt med slagvolymen vid fysiskt arbete, upp till en viss intensitet, jämfört med i vila?",
-    "correct": "Den ökar, delvis genom ökat venöst återflöde och ökad kontraktilitet",
+    "correct": "Den ökar, via ökat återflöde och ökad kontraktilitet",
     "distractors": [
-      "Den minskar alltid vid arbete",
+      "Den minskar tvärtom alltid vid fysiskt arbete",
       "Den förblir exakt oförändrad oavsett arbetsintensitet",
-      "Den blir noll vid måttlig arbetsintensitet"
+      "Den blir noll redan vid måttlig arbetsintensitet"
     ],
     "topic": "fysio_kardio_resp",
     "difficulty": "Normal",
@@ -13491,10 +13491,10 @@
     "id": "fys_kardioresp_43",
     "type": "mc",
     "prompt": "Hur hänger medelartärtrycket ihop med hjärtminutvolym och perifert kärlmotstånd?",
-    "correct": "MAP är approximativt hjärtminutvolym × totalt perifert motstånd",
+    "correct": "MAP ≈ hjärtminutvolym × totalt perifert motstånd",
     "distractors": [
       "MAP är helt oberoende av både hjärtminutvolym och kärlmotstånd",
-      "MAP bestäms enbart av hjärtfrekvensen",
+      "MAP bestäms i praktiken enbart av hjärtfrekvensen",
       "MAP är omvänt proportionellt mot hjärtminutvolymen"
     ],
     "topic": "fysio_kardio_resp",
@@ -13507,7 +13507,7 @@
     "prompt": "Var sitter de baroreceptorer som är viktigast för den kortsiktiga blodtrycksregleringen?",
     "correct": "I karotissinus och aortabågen",
     "distractors": [
-      "I njurarnas glomeruli enbart",
+      "I njurarnas glomeruli enbart nedtill",
       "I lungornas alveoler",
       "I binjuremärgen"
     ],
@@ -13519,11 +13519,11 @@
     "id": "fys_kardioresp_45",
     "type": "mc",
     "prompt": "Vad händer med baroreceptorernas signalering när blodtrycket stiger?",
-    "correct": "Deras urladdningsfrekvens ökar, vilket dämpar sympatikus och ökar parasympatikus",
+    "correct": "Frekvensen ökar, vilket dämpar sympatikus och ökar parasympatikus",
     "distractors": [
-      "Deras urladdningsfrekvens upphör helt och hållet, oavsett blodtrycket",
+      "Deras urladdningsfrekvens upphör helt och hållet, helt oavsett blodtrycket",
       "De ökar i stället sympatikusaktiviteten ytterligare för att höja trycket mer",
-      "De påverkar bara andningsfrekvensen direkt, aldrig alls blodtrycket"
+      "De påverkar bara andningsfrekvensen direkt, aldrig alls själva blodtrycket"
     ],
     "topic": "fysio_kardio_resp",
     "difficulty": "Normal",
@@ -13535,7 +13535,7 @@
     "prompt": "Vad heter det hormonsystem som aktiveras vid lågt blodtryck/lågt blodvolym och som via flera steg leder till kärlsammandragning och ökad natrium-/vätskeretention?",
     "correct": "Renin-angiotensin-aldosteronsystemet",
     "distractors": [
-      "Insulin-glukagonsystemet",
+      "Insulin- och glukagonsystemet i pankreas",
       "Hypofys-tyreoideaaxeln",
       "Koagulationskaskaden"
     ],
@@ -13561,7 +13561,7 @@
     "id": "fys_kardioresp_48",
     "type": "mc",
     "prompt": "Vad är angiotensin IIs huvudsakliga effekter på blodtrycket?",
-    "correct": "Kraftig kärlsammandragning och stimulering av aldosteronfrisättning, vilket höjer blodtrycket",
+    "correct": "Kraftig kärlsammandragning och aldosteronfrisättning, vilket höjer blodtrycket",
     "distractors": [
       "Kärlvidgning och kraftigt ökad natriumutsöndring, vilket sänker blodtrycket avsevärt",
       "Ingen effekt alls på blodkärlen eller blodtrycket över huvud taget någonsin alls",
@@ -13575,10 +13575,10 @@
     "id": "fys_kardioresp_49",
     "type": "mc",
     "prompt": "Vad gör hormonet aldosteron för att påverka blodtrycket?",
-    "correct": "Ökar njurens återupptag av natrium, vilket ökar blodvolymen och blodtrycket",
+    "correct": "Ökar njurens natriumåterupptag, vilket ökar blodvolym och blodtryck",
     "distractors": [
-      "Ökar i stället utsöndringen av natrium och sänker blodtrycket",
-      "Vidgar blodkärlen direkt och kraftigt över hela kroppen genast",
+      "Ökar i stället utsöndringen av natrium och sänker därmed blodtrycket",
+      "Vidgar blodkärlen direkt och kraftigt över hela kroppen på en gång",
       "Minskar hjärtats slagvolym markant vid varje enda hjärtslag som sker"
     ],
     "topic": "fysio_kardio_resp",
@@ -13633,9 +13633,9 @@
     "prompt": "Vilka strukturer räknas till de övre luftvägarna?",
     "correct": "Näshåla, munhåla, svalg och struphuvud ner till stämbanden",
     "distractors": [
-      "Luftstrupen, huvudbronkerna och alveolerna längre ner",
-      "Enbart alveolerna djupt nere i lungvävnaden",
-      "Lungvävnaden och pleura som omger lungorna"
+      "Luftstrupen, huvudbronkerna och alveolerna längre ner i lungan",
+      "Enbart alveolerna djupt nere i själva lungvävnaden",
+      "Lungvävnaden och den pleura som omger lungorna"
     ],
     "topic": "fysio_kardio_resp",
     "difficulty": "Normal",
@@ -13661,9 +13661,9 @@
     "prompt": "Var sker det egentliga gasutbytet i lungorna?",
     "correct": "I alveolerna, över den alveolokapillära membranen",
     "distractors": [
-      "I bronkerna, långt innan luften når alveolerna",
+      "I bronkerna, långt innan luften alls når fram till alveolerna",
       "I luftstrupen, högt upp i de övre luftvägarna",
-      "I struphuvudet, precis vid stämbanden"
+      "I struphuvudet, precis vid själva stämbanden"
     ],
     "topic": "fysio_kardio_resp",
     "difficulty": "Normal",
@@ -13687,11 +13687,11 @@
     "id": "fys_kardioresp_57",
     "type": "mc",
     "prompt": "Vad händer med diafragman vid inandning?",
-    "correct": "Den kontraherar och sänks/plattas till, vilket ökar bröstkorgens volym",
+    "correct": "Den kontraherar och plattas ut, vilket ökar bröstvolymen",
     "distractors": [
-      "Den slappnar helt av och höjs mot lungorna",
+      "Den slappnar helt av och höjs upp mot lungorna",
       "Den förblir helt orörlig",
-      "Den kontraherar men lämnar bröstkorgens volym oförändrad"
+      "Den kontraherar men lämnar bröstkorgens volym helt oförändrad"
     ],
     "topic": "fysio_kardio_resp",
     "difficulty": "Normal",
@@ -13701,9 +13701,9 @@
     "id": "fys_kardioresp_58",
     "type": "mc",
     "prompt": "Vilka muskler bidrar vid forcerad, kraftig utandning?",
-    "correct": "Bukmuskulaturen och de inre interkostalmusklerna",
+    "correct": "Buk- och inre interkostalmuskler",
     "distractors": [
-      "Enbart diafragman",
+      "Enbart själva diafragman",
       "De yttre interkostalmusklerna enbart",
       "Musklerna i struphuvudet"
     ],
@@ -13715,9 +13715,9 @@
     "id": "fys_kardioresp_59",
     "type": "mc",
     "prompt": "Är normal, lugn utandning i vila vanligtvis en aktiv eller passiv process?",
-    "correct": "Passiv – den sker huvudsakligen genom lungornas och bröstkorgens elastiska återfjädring",
+    "correct": "Passiv – sker via lungornas och bröstkorgens elastiska återfjädring",
     "distractors": [
-      "Alltid en aktiv process som kräver kraftig muskelkontraktion i bröstkorgen",
+      "Alltid en aktiv process som kräver en kraftig muskelkontraktion i bröstkorgen",
       "Den sker enbart genom hjärtats egen kraftiga pumpverkan, inte via muskler alls",
       "Den kräver alltid diafragmans aktiva och kraftiga kontraktion varje gång"
     ],
@@ -13757,11 +13757,11 @@
     "id": "fys_kardioresp_62",
     "type": "mc",
     "prompt": "Vad kan hända om luft läcker in i pleurahålan, t.ex. vid en penetrerande skada på bröstkorgen?",
-    "correct": "Lungan kan kollapsa eftersom det negativa trycket i pleurahålan går förlorat",
+    "correct": "Lungan kan kollapsa när det negativa trycket i pleurahålan går förlorat",
     "distractors": [
-      "Lungan expanderar permanent mer än normalt utan negativa effekter",
-      "Diafragman slutar fungera helt",
-      "Hjärtat stannar omedelbart"
+      "Lungan expanderar permanent mer än normalt utan några negativa effekter",
+      "Diafragman slutar plötsligt fungera helt",
+      "Hjärtat stannar omedelbart av detta"
     ],
     "topic": "fysio_kardio_resp",
     "difficulty": "Normal",
@@ -13787,7 +13787,7 @@
     "prompt": "Vad kallas den extra luftvolym som maximalt kan andas in utöver en normal inandning?",
     "correct": "Inspiratorisk reservvolym",
     "distractors": [
-      "Expiratorisk reservvolym",
+      "Expiratorisk reservvolym nedtill",
       "Residualvolym",
       "Tidalvolym"
     ],
@@ -13827,7 +13827,7 @@
     "id": "fys_kardioresp_67",
     "type": "mc",
     "prompt": "Hur definieras vitalkapaciteten?",
-    "correct": "Den maximala luftvolym som kan andas ut efter en maximal inandning",
+    "correct": "Maximal utandningsvolym efter en maximal inandning",
     "distractors": [
       "Enbart tidalvolymen under helt lugn och avslappnad vila",
       "Residualvolymen plus den vanliga vilotidalvolymen",
@@ -13841,7 +13841,7 @@
     "id": "fys_kardioresp_68",
     "type": "mc",
     "prompt": "Hur definieras total lungkapacitet?",
-    "correct": "Vitalkapaciteten plus residualvolymen – den maximala volym lungorna kan innehålla",
+    "correct": "Vitalkapacitet plus residualvolym – max volym lungorna kan innehålla",
     "distractors": [
       "Enbart residualvolymen, helt utan någon vitalkapacitet inräknad alls",
       "Tidalvolymen multiplicerad med den totala andningsfrekvensen per minut",
@@ -13855,10 +13855,10 @@
     "id": "fys_kardioresp_69",
     "type": "mc",
     "prompt": "Varför kan residualvolymen inte andas ut, oavsett hur kraftigt man försöker?",
-    "correct": "Luftvägarna kollapsar innan lungorna helt tömts på luft",
+    "correct": "Luftvägarna kollapsar innan lungorna tömts på luft",
     "distractors": [
-      "Diafragman blockerar all vidare utandning fysiskt",
-      "Alveolerna sväller och blockerar utandningen",
+      "Diafragman blockerar all vidare utandning helt fysiskt",
+      "Alveolerna sväller och blockerar utandningen helt",
       "Hjärtat trycker undan lungorna innan de töms"
     ],
     "topic": "fysio_kardio_resp",
@@ -13883,10 +13883,10 @@
     "id": "fys_kardioresp_71",
     "type": "mc",
     "prompt": "Vad skiljer alveolarventilation från den totala minutventilationen?",
-    "correct": "Alveolarventilationen räknar bort luften som stannar i den anatomiska dödrymden",
+    "correct": "Alveolarventilationen räknar bort luften i den anatomiska dödrymden",
     "distractors": [
       "De är exakt samma sak och benämns bara olika i den medicinska litteraturen",
-      "Alveolarventilationen är alltid betydligt större än minutventilationen",
+      "Alveolarventilationen är alltid betydligt större än själva minutventilationen",
       "Alveolarventilationen mäter enbart den totalt utandade luftens volym"
     ],
     "topic": "fysio_kardio_resp",
@@ -13911,7 +13911,7 @@
     "id": "fys_kardioresp_73",
     "type": "mc",
     "prompt": "Enligt vilken princip sker gasutbytet mellan alveolerna och lungkapillärerna?",
-    "correct": "Passiv diffusion längs partialtrycksgradienter för syre och koldioxid",
+    "correct": "Passiv diffusion längs partialtrycksgradienter för syre/koldioxid",
     "distractors": [
       "Aktiv transport som kräver mycket ATP-energi hela tiden",
       "Osmos av vatten mellan alveol och blodet hela tiden kontinuerligt",
@@ -13953,7 +13953,7 @@
     "id": "fys_kardioresp_76",
     "type": "mc",
     "prompt": "Vilka faktorer, enligt Ficks diffusionslag, ökar hastigheten för gasutbyte över en membran?",
-    "correct": "Stor diffusionsyta, kort diffusionsavstånd och stor partialtrycksskillnad",
+    "correct": "Stor diffusionsyta, kort avstånd och stor partialtrycksskillnad",
     "distractors": [
       "Liten diffusionsyta och ett mycket långt diffusionsavstånd",
       "Enbart den allmänna kroppstemperaturen, inget annat spelar in",
@@ -13981,11 +13981,11 @@
     "id": "fys_kardioresp_78",
     "type": "mc",
     "prompt": "Vad händer normalt med lungkärlen i ett alveolområde med lågt syrepartialtryck (dåligt ventilerat område)?",
-    "correct": "De sammandras, vilket omdirigerar blodflöde till bättre ventilerade områden",
+    "correct": "De sammandras och styr blodflödet till bättre ventilerade områden",
     "distractors": [
       "De vidgas kraftigt för att öka blodflödet dit ytterligare",
       "De påverkas inte alls av det lokala syrepartialtrycket",
-      "De sammandras i systemkretsloppet men inte i lungkretsloppet"
+      "De sammandras i systemkretsloppet men inte alls i lungkretsloppet"
     ],
     "topic": "fysio_kardio_resp",
     "difficulty": "Normal",
@@ -13997,9 +13997,9 @@
     "prompt": "Vad innebär hypoxemi?",
     "correct": "Sänkt syrepartialtryck/syrehalt i det arteriella blodet",
     "distractors": [
-      "Förhöjd koldioxidhalt i blodet utan att syret påverkas",
-      "Ett normalt fysiologiskt tillstånd i vila",
-      "Förhöjd hemoglobinkoncentration"
+      "Förhöjd koldioxidhalt i blodet utan att syret alls påverkas",
+      "Ett helt normalt fysiologiskt tillstånd i vila",
+      "Förhöjd hemoglobinkoncentration i blodet"
     ],
     "topic": "fysio_kardio_resp",
     "difficulty": "Normal",
@@ -14037,7 +14037,7 @@
     "id": "fys_kardioresp_82",
     "type": "mc",
     "prompt": "Hur mycket av transporterat syre i blodet löser sig fritt i plasman jämfört med det som är bundet till hemoglobin?",
-    "correct": "Endast en mycket liten andel löses fritt i plasman – huvuddelen är bundet till hemoglobin",
+    "correct": "En liten andel löses fritt i plasman; huvuddelen binds till hemoglobin",
     "distractors": [
       "Ungefär hälften löses fritt direkt i själva blodplasman, resten är bundet",
       "Allt syre transporteras helt fritt löst i själva blodplasman, aldrig bundet",
@@ -14051,7 +14051,7 @@
     "id": "fys_kardioresp_83",
     "type": "mc",
     "prompt": "Vad beskriver syrgasdissociationskurvan?",
-    "correct": "Sambandet mellan syrepartialtrycket och hur stor andel av hemoglobinet som är mättat",
+    "correct": "Sambandet mellan syrepartialtrycket och hur mättat hemoglobinet är",
     "distractors": [
       "Sambandet mellan hjärtfrekvens och det systemiska blodtrycket i kroppen",
       "Sambandet mellan andningsfrekvens och blodets koldioxidhalt vid arbete",
@@ -14163,7 +14163,7 @@
     "id": "fys_kardioresp_91",
     "type": "mc",
     "prompt": "Var i hjärnan finns de centrum som huvudsakligen styr den grundläggande andningsrytmen?",
-    "correct": "I förlängda märgen och delar av pons i hjärnstammen",
+    "correct": "I förlängda märgen och delar av pons",
     "distractors": [
       "I lillhjärnan, långt ifrån själva hjärnstammen",
       "I hypofysen, djupt nere i hjärnans mitt",
@@ -14205,7 +14205,7 @@
     "id": "fys_kardioresp_94",
     "type": "mc",
     "prompt": "Var sitter de perifera kemoreceptorer (karotiskropparna och aortakropparna) som huvudsakligen känner av sänkt syrepartialtryck?",
-    "correct": "Vid förgreningen av halspulsådern och i aortabågen",
+    "correct": "Vid halspulsåderns förgrening och i aortabågen",
     "distractors": [
       "I hjärnbarken, långt ifrån hjärtat och halsen",
       "I diafragman, nedanför hela bröstkorgen",
@@ -14219,11 +14219,11 @@
     "id": "fys_kardioresp_95",
     "type": "mc",
     "prompt": "Vad händer med andningen vid en akut, kraftig sänkning av blodets syrepartialtryck (hypoxi)?",
-    "correct": "De perifera kemoreceptorerna aktiveras och ökar andningsfrekvensen/-djupet",
+    "correct": "De perifera kemoreceptorerna aktiveras och ökar andningen",
     "distractors": [
-      "Andningen hämmas helt och hållet, oavsett syrenivåns storlek",
+      "Andningen hämmas helt och hållet, helt oavsett syrenivåns storlek",
       "Enbart hjärtfrekvensen påverkas då, aldrig andningen över huvud taget",
-      "Andningscentrum stänger helt av sig vid akut hypoxi, utan varning"
+      "Andningscentrum stänger helt av sig vid akut hypoxi, helt utan varning"
     ],
     "topic": "fysio_kardio_resp",
     "difficulty": "Normal",
@@ -14233,11 +14233,11 @@
     "id": "fys_kardioresp_96",
     "type": "mc",
     "prompt": "Vad händer generellt med andningsfrekvens och tidalvolym vid start av fysiskt arbete?",
-    "correct": "Båda ökar för att möta kroppens ökade syrebehov och koldioxidproduktion",
+    "correct": "Båda ökar för att möta ökat syrebehov och koldioxidproduktion",
     "distractors": [
-      "Båda minskar direkt vid arbete",
+      "Båda minskar tvärtom direkt vid fysiskt arbete",
       "Andningsfrekvensen ökar men tidalvolymen minskar alltid till noll",
-      "Ingen förändring sker förrän arbetet avslutats"
+      "Ingen förändring alls sker förrän arbetet helt avslutats"
     ],
     "topic": "fysio_kardio_resp",
     "difficulty": "Normal",
@@ -14247,7 +14247,7 @@
     "id": "fys_kardioresp_97",
     "type": "mc",
     "prompt": "Vad händer med hjärtminutvolymen vid ökande fysisk arbetsintensitet, från vila upp mot maximal ansträngning?",
-    "correct": "Den ökar successivt genom både stigande hjärtfrekvens och ökande slagvolym",
+    "correct": "Den ökar successivt genom stigande hjärtfrekvens och slagvolym",
     "distractors": [
       "Den förblir helt konstant oavsett arbetets intensitet eller varaktighet",
       "Den minskar linjärt med ständigt ökande arbetsintensitet över tid",
@@ -14263,9 +14263,9 @@
     "prompt": "Vad kallas den maximala mängd syre kroppen kan ta upp och omsätta per tidsenhet vid maximalt fysiskt arbete?",
     "correct": "Maximal syreupptagningsförmåga",
     "distractors": [
-      "Vitalkapacitet",
-      "Residualvolym",
-      "Ejektionsfraktion"
+      "Forcerad vitalkapacitet",
+      "Lungornas residualvolym",
+      "Vänsterkammarens ejektionsfraktion"
     ],
     "topic": "fysio_kardio_resp",
     "difficulty": "Normal",
@@ -14275,11 +14275,11 @@
     "id": "fys_kardioresp_99",
     "type": "mc",
     "prompt": "Vilka faktorer bidrar huvudsakligen till VO2 max?",
-    "correct": "Hjärtats maximala minutvolym, blodets syrekapacitet och musklernas syreupptagning",
+    "correct": "Hjärtats maxminutvolym, blodets syrekapacitet och musklernas syreupptag",
     "distractors": [
       "Enbart lungornas totala volym, inget annat spelar in alls i sammanhanget",
-      "Enbart hemoglobinkoncentrationen i hela blodet, inget annat alls",
-      "Enbart muskelmassans totala vikt i hela kroppen, inget annat alls"
+      "Enbart hemoglobinkoncentrationen i hela blodet, och inget annat alls",
+      "Enbart muskelmassans totala vikt i hela kroppen, och inget annat alls"
     ],
     "topic": "fysio_kardio_resp",
     "difficulty": "Normal",
@@ -14289,7 +14289,7 @@
     "id": "fys_kardioresp_100",
     "type": "mc",
     "prompt": "Varför omdirigeras blodflödet vid fysiskt arbete från t.ex. mag-tarmkanalen till den arbetande skelettmuskulaturen?",
-    "correct": "Genom lokal vasodilatation i muskler och vasokonstriktion i mindre prioriterade organ",
+    "correct": "Lokal vasodilatation i muskler och vasokonstriktion i mindre prioriterade organ",
     "distractors": [
       "Blodflödet är alltid exakt jämnt fördelat, oavsett all fysisk aktivitet",
       "Hjärtat pumpar bara till musklerna och stänger helt av flödet till alla andra organ",
