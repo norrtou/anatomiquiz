@@ -14005,9 +14005,9 @@
     "prompt": "Vad mäter spirometri i grunden?",
     "correct": "Luftvolymer och luftflödeshastigheter under en forcerad in- och utandning",
     "distractors": [
-      "Blodets syrgasmättnad, uppmätt med en pulsoximeter",
-      "Hjärtats elektriska aktivitet, registrerad med EKG",
-      "Blodets pH-värde, uppmätt i en blodgas"
+      "Blodets syrgasmättnad och pulsfrekvens, uppmätt kontinuerligt med en pulsoximeter",
+      "Hjärtats elektriska retledning och rytm, registrerad med ett tolvavlednings-EKG",
+      "Blodets pH-värde och gasstatus, uppmätt i ett arteriellt blodgasprov"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14061,9 +14061,9 @@
     "prompt": "Vad används FEV1/FVC-kvoten huvudsakligen till att avgöra?",
     "correct": "Om det föreligger ett obstruktivt luftflödeshinder",
     "distractors": [
-      "Blodets syra-basstatus, uppmätt i en blodgas",
-      "Njurfunktionen, uppmätt via kreatinin",
-      "Hjärtats pumpförmåga, uppmätt med ekokardiografi"
+      "Blodets syra-basstatus och buffertkapacitet, uppmätt i en arteriell blodgas",
+      "Njurfunktionen och filtrationsförmågan, uppmätt via kreatininclearance",
+      "Hjärtats pumpförmåga och ejektionsfraktion, uppmätt med ekokardiografi"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14089,9 +14089,9 @@
     "prompt": "Vad kallas skillnaden mellan dynamisk och statisk spirometri?",
     "correct": "Dynamisk spirometri mäter flöden och volymer under forcerad in-/utandning, medan statisk spirometri även kan mäta volymer som inte kräver forcerad andning",
     "distractors": [
-      "De är exakt samma undersökning, bara med olika namn",
-      "Statisk spirometri mäter enbart hjärtfrekvensen, inget annat",
-      "Dynamisk spirometri kan aldrig mäta FEV1 överhuvudtaget"
+      "De är i grunden exakt samma undersökningsmetod, bara med två olika historiska namn",
+      "Statisk spirometri mäter enbart patientens hjärtfrekvens i fullständig vila och har ingenting alls att göra med lungvolymer, flöden eller andningsmanövrar",
+      "Dynamisk spirometri kan aldrig mäta FEV1, utan enbart de statiska lungvolymerna"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14103,9 +14103,9 @@
     "prompt": "Vad krävs av patienten tekniskt för att en spirometriundersökning ska bli godkänd och tillförlitlig?",
     "correct": "En maximal inandning följt av en snabb, kraftfull och tillräckligt långvarig utandning, upprepad med god reproducerbarhet mellan försöken",
     "distractors": [
-      "Enbart en enda, lugn normal andning utan ansträngning",
-      "Att patienten håller andan så länge som möjligt utan att andas ut",
-      "Att patienten hyperventilerar kraftigt före mätningen startar"
+      "Enbart en enda lugn, normal andning i vila utan någon som helst forcerad ansträngning, upprepning, kontroll eller reproducerbarhet mellan försöken",
+      "Att patienten håller andan så länge som möjligt och sedan andas ut mycket långsamt",
+      "Att patienten hyperventilerar kraftigt under några minuter innan mätningen startar"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14117,9 +14117,9 @@
     "prompt": "Varför krävs vanligen minst tre godkända, reproducerbara spirometriförsök vid en undersökning?",
     "correct": "För att säkerställa att resultaten är tillförlitliga och inte beror på tekniska brister eller bristande ansträngning",
     "distractors": [
-      "Ett enda försök är alltid tillräckligt oavsett kvalitet",
-      "Fler försök krävs enbart för att träna patienten inför nästa besök",
-      "Reproducerbarhet saknar helt klinisk betydelse för resultatet"
+      "Ett enda försök är alltid fullt tillräckligt, oavsett hur låg kvaliteten är",
+      "Fler försök krävs enbart för att träna patienten inför kommande kliniska besök, aldrig för att bedöma tillförlitligheten i resultatet",
+      "Reproducerbarhet mellan försöken saknar helt klinisk betydelse för tolkningen"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14131,9 +14131,9 @@
     "prompt": "Vad kan en alltför kort utandningstid vid spirometri leda till för mätfel?",
     "correct": "En underskattning av FVC, eftersom inte all luft hinner andas ut",
     "distractors": [
-      "En överskattning av FVC utan risk för underskattning",
-      "Ingen påverkan alls på resultatet",
-      "En automatisk korrigering utan felkälla"
+      "En överskattning av FVC, helt utan risk för någon underskattning",
+      "Ingen som helst påverkan alls på det uppmätta resultatet",
+      "En automatisk korrigering av mätvärdet utan någon felkälla"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14145,9 +14145,9 @@
     "prompt": "Vad kan en långsam eller tveksam start på utandningen (dålig \"back-extrapolation\") leda till för mätfel vid spirometri?",
     "correct": "En felaktig, oftast underskattad, FEV1-mätning",
     "distractors": [
-      "Ingen påverkan på mätningen",
-      "En automatisk förbättring av FEV1-värdet",
-      "Enbart en påverkan på FVC, aldrig på FEV1"
+      "Ingen som helst påverkan på mätningens resultat",
+      "En automatisk och alltid tillförlitlig förbättring av FEV1-värdet",
+      "Enbart en påverkan på FVC-värdet, men aldrig på FEV1"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14159,9 +14159,9 @@
     "prompt": "Varför kalibreras en spirometer regelbundet, t.ex. med en kalibreringsspruta av känd volym?",
     "correct": "För att säkerställa att instrumentet mäter volymer och flöden korrekt över tid",
     "distractors": [
-      "Kalibrering behövs bara en gång vid inköpet av apparaten",
-      "Kalibrering påverkar enbart apparatens utseende, inte mätningen",
-      "Spirometrar kräver aldrig någon kalibrering alls"
+      "Kalibrering behövs enbart en gång, vid själva inköpet av apparaten",
+      "Kalibrering påverkar enbart apparatens utseende och yta, aldrig själva mätningen",
+      "Spirometrar kräver aldrig någon kalibrering alls under sin livstid"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14173,9 +14173,9 @@
     "prompt": "Vilka patientfaktorer måste beaktas vid tolkning av ett spirometriresultat?",
     "correct": "Ålder, kön, längd och etnicitet, eftersom dessa påverkar de förväntade normalvärdena",
     "distractors": [
-      "Enbart patientens kroppsvikt, inget annat",
-      "Enbart patientens blodgrupp, inget annat",
-      "Inga patientfaktorer behöver beaktas alls vid tolkningen"
+      "Enbart patientens kroppsvikt vid undersökningstillfället, inget annat",
+      "Enbart patientens blodgrupp och Rh-faktor, inget annat behöver någonsin beaktas vid tolkningen av resultatet",
+      "Inga patientfaktorer alls behöver beaktas vid tolkning av resultatet"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14187,9 +14187,9 @@
     "prompt": "Vad kan felaktig munstyckesteknik (t.ex. läckage runt munstycket) orsaka vid spirometri?",
     "correct": "En falskt sänkt uppmätt volym/flöde på grund av luftläckage",
     "distractors": [
-      "En falskt förhöjd FEV1 utan någon felkälla alls",
-      "Ingen som helst påverkan alls på mätningens resultat",
-      "Enbart en förändring av andningsfrekvensen, inget annat"
+      "En falskt förhöjd FEV1-mätning helt utan någon egentlig felkälla",
+      "Ingen som helst påverkan alls på det slutgiltiga mätresultatet",
+      "Enbart en förändring av andningsfrekvensen, men aldrig av volymen"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14201,9 +14201,9 @@
     "prompt": "Varför bör spirometri om möjligt undvikas direkt efter en måltid eller kraftig fysisk ansträngning?",
     "correct": "Det kan påverka patientens förmåga att prestera en maximal, tillförlitlig forcerad andningsmanöver",
     "distractors": [
-      "Måltider och ansträngning påverkar aldrig spirometriresultatet alls",
-      "Det är enbart en administrativ rutin utan fysiologisk grund",
-      "Det påverkar enbart blodtrycket, inte lungfunktionen"
+      "Måltider och fysisk ansträngning påverkar aldrig spirometriresultatet i något avseende, oavsett tidpunkt eller intensitet",
+      "Det är enbart en administrativ rutin på kliniken, helt utan fysiologisk grund",
+      "Det påverkar enbart det uppmätta blodtrycket, aldrig själva lungfunktionen"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14229,9 +14229,9 @@
     "prompt": "Vad innebär det att ett spirometriförsök bedöms som \"tekniskt godkänt\"?",
     "correct": "Att försöket uppfyller fastställda kvalitetskriterier för start, varaktighet och reproducerbarhet",
     "distractors": [
-      "Att patienten enbart andats in en gång, utan utandning",
-      "Att resultatet alltid visar normal lungfunktion oavsett",
-      "Att undersökningen tagit mindre än en sekund totalt"
+      "Att patienten enbart andats in djupt en gång, helt utan någon utandning",
+      "Att resultatet alltid visar en helt normal lungfunktion, oavsett bakomliggande sjukdom eller patientens ansträngning",
+      "Att hela undersökningen tagit mindre än en sekund totalt att genomföra"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14243,9 +14243,9 @@
     "prompt": "Vilken yrkesgrupp utför ofta spirometriundersökningar inom klinisk fysiologi i Sverige?",
     "correct": "Biomedicinska analytiker",
     "distractors": [
-      "Optiker",
-      "Logopeder",
-      "Farmaceuter"
+      "Optiker på en optikermottagning",
+      "Logopeder inom röst- och talrubbningar",
+      "Farmaceuter på ett apotek"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14285,9 +14285,9 @@
     "prompt": "Hur ser en normal flow-volymkurva ut under den forcerade utandningen?",
     "correct": "Ett snabbt initialt toppflöde följt av en jämn, lätt konkav minskning av flödet",
     "distractors": [
-      "En helt platt linje utan någon variation alls",
-      "Ett flöde som ökar linjärt genom hela utandningen",
-      "En kurva som helt saknar toppflöde"
+      "En helt platt linje utan någon som helst variation i flödet",
+      "Ett flöde som ökar linjärt genom hela den forcerade utandningen utan att någonsin plana ut",
+      "En kurva som helt saknar ett tydligt initialt toppflöde"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14299,9 +14299,9 @@
     "prompt": "Vad kännetecknar ett obstruktivt spirometrimönster?",
     "correct": "En sänkt FEV1/FVC-kvot, ofta med en konkav expiratorisk flow-volymkurva",
     "distractors": [
-      "En normal eller förhöjd FEV1/FVC-kvot med sänkt FVC",
-      "En helt normal kurva utan några avvikelser alls",
-      "Enbart en förhöjd PEF utan några andra förändringar"
+      "En normal eller till och med förhöjd FEV1/FVC-kvot tillsammans med en tydligt sänkt FVC-nivå",
+      "En helt normal flow-volymkurva utan några avvikelser alls",
+      "Enbart en förhöjd PEF-topp utan några andra mätbara förändringar"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14313,9 +14313,9 @@
     "prompt": "Vad kännetecknar ett restriktivt spirometrimönster?",
     "correct": "En sänkt FVC men en normal eller till och med förhöjd FEV1/FVC-kvot",
     "distractors": [
-      "En sänkt FEV1/FVC-kvot med normal FVC-nivå",
-      "En förhöjd FVC med sänkt FEV1/FVC-kvot",
-      "Ingen skillnad alls mot ett helt normalt mönster"
+      "En sänkt FEV1/FVC-kvot men med en helt normal FVC-nivå",
+      "En förhöjd FVC tillsammans med en sänkt FEV1/FVC-kvot",
+      "Ingen skillnad alls mot ett helt normalt spirometrimönster, oavsett vilka mått som granskas"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14341,9 +14341,9 @@
     "prompt": "Ge exempel på tillstånd som typiskt ger ett restriktivt spirometrimönster.",
     "correct": "Lungfibros samt vissa neuromuskulära eller bröstkorgsdeformerande sjukdomar",
     "distractors": [
-      "KOL och astma, som ger obstruktion snarare än restriktion",
-      "Hjärtsvikt utan någon lungpåverkan alls",
-      "Njursvikt, som saknar koppling till lungvolymerna"
+      "KOL och astma, som istället ger obstruktion snarare än restriktion",
+      "Hjärtsvikt, som saknar all direkt påverkan på lungvolymerna",
+      "Njursvikt, som helt saknar koppling till de uppmätta lungvolymerna eller flödena"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14355,9 +14355,9 @@
     "prompt": "Vad kallas ett spirometrimönster där både en sänkt FEV1/FVC-kvot och en sänkt FVC/TLC förekommer samtidigt?",
     "correct": "Ett blandat obstruktivt-restriktivt mönster",
     "distractors": [
-      "Ett rent obstruktivt mönster",
-      "Ett rent restriktivt mönster",
-      "Ett helt normalt mönster"
+      "Ett rent obstruktivt mönster utan restriktion",
+      "Ett rent restriktivt mönster utan obstruktion",
+      "Ett helt normalt spirometrimönster utan avvikelse"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14383,9 +14383,9 @@
     "prompt": "Hur skiljer sig ofta den maximala inspiratoriska flow-volymkurvan hos en patient med extratorakal luftvägsobstruktion (t.ex. stämbandspares) från den expiratoriska?",
     "correct": "Den inspiratoriska kurvan visar en tydlig platå medan den expiratoriska kan vara relativt normal",
     "distractors": [
-      "Båda kurvorna är alltid identiskt påverkade av tillståndet",
-      "Enbart den expiratoriska kurvan påverkas, aldrig den inspiratoriska",
-      "Extratorakal obstruktion syns aldrig på flow-volymkurvan"
+      "Båda kurvorna är alltid identiskt och lika kraftigt påverkade av tillståndet",
+      "Enbart den expiratoriska kurvan påverkas av tillståndet, aldrig den inspiratoriska kurvans utseende eller form",
+      "Extratorakal obstruktion syns aldrig alls på flow-volymkurvans utseende"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14397,9 +14397,9 @@
     "prompt": "Vad kan en kraftigt sänkt PEF i förhållande till FEV1 ibland tyda på?",
     "correct": "Ett tekniskt problem med mätningen eller ett ovanligt obstruktionsmönster, och bör tolkas med försiktighet",
     "distractors": [
-      "Alltid en fullständigt normal lungfunktion utan avvikelser",
-      "Alltid en ren restriktiv sjukdom utan undantag",
-      "Ingen klinisk betydelse alls, oavsett sammanhang"
+      "Alltid en fullständigt normal lungfunktion helt utan några avvikelser, oavsett PEF- eller FEV1-värdets nivå vid mätningen",
+      "Alltid en ren restriktiv lungsjukdom, helt utan undantag",
+      "Ingen klinisk betydelse alls, oavsett det kliniska sammanhanget"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14411,9 +14411,9 @@
     "prompt": "Vad avgör i första hand om ett spirometrimönster klassas som obstruktivt eller restriktivt vid tolkning?",
     "correct": "Först bedöms FEV1/FVC-kvoten, därefter nivån på FVC/TLC för att bedöma eventuell restriktion",
     "distractors": [
-      "Enbart PEF-värdet, oberoende av övriga uppmätta mått",
-      "Enbart patientens ålder, inget annat mått",
-      "Enbart andningsfrekvensen vid vila, inget annat mått"
+      "Enbart PEF-värdet ensamt, helt oberoende av alla övriga uppmätta mått som FEV1, FVC eller TLC vid tolkningen",
+      "Enbart patientens ålder vid undersökningen, inget annat mått",
+      "Enbart andningsfrekvensen uppmätt i vila, inget annat mått"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14425,9 +14425,9 @@
     "prompt": "Vad innebär \"air trapping\" (luftinneslutning) vid obstruktiv lungsjukdom?",
     "correct": "Luft blir kvar i lungorna efter utandning på grund av för tidig kollaps av luftvägarna, vilket ökar residualvolymen",
     "distractors": [
-      "All luft andas alltid ut fullständigt vid obstruktion",
-      "Fenomenet förekommer enbart vid ren restriktiv sjukdom",
-      "Det innebär att FVC alltid ökar kraftigt vid obstruktion"
+      "All luft andas alltid ut fullständigt, även vid uttalad obstruktion",
+      "Fenomenet förekommer enbart vid ren restriktiv lungsjukdom, aldrig vid någon form av luftvägsobstruktion, oavsett svårighetsgrad",
+      "Det innebär att FVC alltid ökar kraftigt vid obstruktiv lungsjukdom"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14439,9 +14439,9 @@
     "prompt": "Varför kan FVC vara sänkt även vid en i grunden obstruktiv sjukdom som svår KOL?",
     "correct": "På grund av air trapping och för tidig luftvägskollaps hinner inte all luft andas ut under den tid testet pågår",
     "distractors": [
-      "FVC kan aldrig påverkas av obstruktiv sjukdom alls",
-      "Obstruktiv sjukdom ökar alltid FVC kraftigt istället",
-      "FVC mäter enbart hjärtfunktionen, inte lungvolymen"
+      "FVC kan aldrig påverkas av obstruktiv lungsjukdom alls, oavsett hur svår eller långvarig sjukdomen är hos patienten",
+      "Obstruktiv sjukdom ökar alltid FVC kraftigt istället för att sänka den",
+      "FVC mäter enbart hjärtats pumpförmåga, aldrig den faktiska lungvolymen"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14453,9 +14453,9 @@
     "prompt": "Vad kallas fenomenet där en patient med långt gången KOL har en kraftigt förskjuten och nedsänkt flow-volymkurva jämfört med det predikterade normalmönstret?",
     "correct": "Ett uttalat obstruktivt mönster med kraftigt nedsatt flöde och volym",
     "distractors": [
-      "Ett helt normalt spirometrimönster utan avvikelser",
-      "Ett rent restriktivt mönster helt utan obstruktion",
-      "Ett tekniskt ogiltigt försök per automatisk definition"
+      "Ett helt normalt spirometrimönster helt utan några som helst avvikelser",
+      "Ett rent restriktivt mönster helt utan inslag av obstruktion",
+      "Ett tekniskt ogiltigt försök enligt automatisk definition"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14467,9 +14467,9 @@
     "prompt": "Vad innebär det om FEV1/FVC-kvoten är normal men både FEV1 och FVC är proportionellt sänkta?",
     "correct": "Det talar för ett restriktivt mönster snarare än obstruktion",
     "distractors": [
-      "Det innebär alltid ett obstruktivt mönster",
-      "Det innebär alltid en helt normal lungfunktion",
-      "Kvoten kan aldrig tolkas i det sammanhanget"
+      "Det innebär alltid ett obstruktivt mönster, aldrig restriktion",
+      "Det innebär alltid en helt normal, frisk lungfunktion",
+      "Kvoten kan aldrig tolkas alls i det sammanhanget"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14495,9 +14495,9 @@
     "prompt": "Varför är PEF-mätning i hemmet ett bra komplement men inte en fullständig ersättning för spirometri på klinik?",
     "correct": "PEF är mer flödesberoende och ansträngningsberoende och ger mindre detaljerad information än en fullständig spirometri",
     "distractors": [
-      "PEF ger alltid mer information än en fullständig spirometri",
-      "PEF kan mäta lungvolymer som TLC direkt, utan pletysmografi",
-      "PEF och spirometri mäter exakt samma sak med samma precision"
+      "PEF ger alltid mer detaljerad information än en fullständig spirometri",
+      "PEF kan mäta absoluta lungvolymer som TLC direkt, helt utan behov av kroppspletysmografi, oavsett patientens tillstånd",
+      "PEF och fullständig spirometri mäter exakt samma sak med samma precision"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14509,9 +14509,9 @@
     "prompt": "Vad kan en dag-till-dag-variabilitet i PEF-värden hos en patient med misstänkt astma tala för?",
     "correct": "Variabel luftvägsobstruktion, vilket stödjer astmadiagnosen",
     "distractors": [
-      "En helt stabil, frisk lungfunktion utan variation",
-      "Alltid en ren restriktiv lungsjukdom, inte astma",
-      "Ingen klinisk relevans alls för diagnosen"
+      "En helt stabil och frisk lungfunktion helt utan någon variation alls",
+      "Alltid en ren restriktiv lungsjukdom, aldrig astma",
+      "Ingen klinisk relevans alls för astmadiagnosen"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14523,9 +14523,9 @@
     "prompt": "Vad kallas den situation där spirometrivärden är svåra att tolka på grund av dålig patientmedverkan, t.ex. hos små barn eller kognitivt påverkade patienter?",
     "correct": "Ett tekniskt begränsat eller icke bedömbart test",
     "distractors": [
-      "Ett alltid fullt tillförlitligt resultat",
-      "Ett automatiskt bevis på obstruktiv sjukdom",
-      "Ett automatiskt bevis på restriktiv sjukdom"
+      "Ett alltid fullt tillförlitligt och bedömbart resultat",
+      "Ett säkert automatiskt bevis på obstruktiv lungsjukdom",
+      "Ett säkert automatiskt bevis på restriktiv lungsjukdom"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14537,9 +14537,9 @@
     "prompt": "Vad kan omfattande övervikt/fetma typiskt ge för spirometrimönster, utan att egentlig lungsjukdom föreligger?",
     "correct": "Ett lindrigt restriktivt mönster på grund av nedsatt bröstkorgs- och diafragmarörlighet",
     "distractors": [
-      "Alltid ett kraftigt obstruktivt mönster istället",
-      "Ingen som helst påverkan alls på lungvolymerna",
-      "Alltid en förhöjd total lungkapacitet istället"
+      "Alltid ett kraftigt obstruktivt mönster istället för restriktion, oavsett grad av övervikt",
+      "Ingen som helst påverkan alls på de uppmätta lungvolymerna",
+      "Alltid en förhöjd total lungkapacitet istället för sänkt"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14551,9 +14551,9 @@
     "prompt": "Vad innebär det att spirometri är ansträngningsberoende, till skillnad från vissa andra fysiologiska mätningar?",
     "correct": "Resultatet påverkas direkt av hur väl och kraftfullt patienten kan utföra manövern, inte enbart av lungans egenskaper",
     "distractors": [
-      "Spirometriresultatet är helt oberoende av patientens medverkan",
-      "Ansträngning har ingen betydelse alls för resultatet",
-      "Spirometri kräver aldrig aktiv medverkan från patienten"
+      "Spirometriresultatet är helt oberoende av patientens egen medverkan, ansträngning eller teknik vid utförandet av manövern",
+      "Ansträngning har ingen betydelse alls för det uppmätta resultatet",
+      "Spirometri kräver aldrig någon aktiv medverkan alls från patienten"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14565,9 +14565,9 @@
     "prompt": "Vad är syftet med ett bronkodilatationstest (reversibilitetstest) vid spirometri?",
     "correct": "Att undersöka om luftvägsobstruktionen förbättras signifikant efter inhalation av ett snabbverkande luftrörsvidgande läkemedel",
     "distractors": [
-      "Att mäta blodets syrgasmättnad med en pulsoximeter",
-      "Att mäta hjärtats pumpförmåga med ekokardiografi",
-      "Att mäta njurfunktionen via kreatininclearance"
+      "Att mäta blodets syrgasmättnad och puls med en pulsoximeter",
+      "Att mäta hjärtats pumpförmåga, ejektionsfraktion och slagvolym med hjälp av ekokardiografi, en i grunden helt annan typ av undersökning",
+      "Att mäta njurfunktionen och filtrationsförmågan via kreatininclearance"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14593,9 +14593,9 @@
     "prompt": "Vad räknas kliniskt ofta som en signifikant (positiv) reversibilitet vid ett bronkodilatationstest?",
     "correct": "En förbättring av FEV1 med en viss fastställd relativ och absolut minsta ökning efter luftrörsvidgande behandling",
     "distractors": [
-      "Ingen förändring alls av FEV1 efter behandlingen",
-      "En sänkning av FEV1 efter luftrörsvidgande behandling",
-      "En förändring enbart av hjärtfrekvensen, inte FEV1"
+      "Ingen förändring alls av FEV1 efter given luftrörsvidgande behandling, oavsett dos eller vilket preparat som används",
+      "En tydlig sänkning av FEV1 efter given luftrörsvidgande behandling",
+      "En förändring enbart av hjärtfrekvensen, men aldrig av FEV1"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14607,9 +14607,9 @@
     "prompt": "Vad talar en påtaglig, positiv reversibilitet vid bronkodilatationstest typiskt för?",
     "correct": "Astma, eller i vissa fall en delvis reversibel komponent vid KOL",
     "distractors": [
-      "Alltid en ren, irreversibel lungfibros",
-      "Alltid ett helt friskt luftvägssystem utan sjukdom",
-      "Alltid en hjärtsjukdom"
+      "Alltid en ren, helt irreversibel lungfibros utan komponent",
+      "Alltid ett helt friskt luftvägssystem, helt utan sjukdom",
+      "Alltid en bakomliggande hjärtsjukdom, aldrig en lungsjukdom av något slag"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14621,9 +14621,9 @@
     "prompt": "Vad innebär avsaknad av signifikant reversibilitet vid ett bronkodilatationstest hos en patient med obstruktivt mönster?",
     "correct": "Att luftvägsobstruktionen är mindre reversibel, vilket är vanligare vid KOL än vid astma",
     "distractors": [
-      "Att patienten definitivt inte har någon lungsjukdom alls",
-      "Att patienten definitivt har astma, inte KOL",
-      "Att testet alltid är tekniskt ogiltigt oavsett resultat"
+      "Att patienten definitivt inte har någon lungsjukdom alls överhuvudtaget, oavsett symtombild",
+      "Att patienten definitivt har astma och inte alls KOL",
+      "Att testet alltid är tekniskt ogiltigt, oavsett vad resultatet visar"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14635,9 +14635,9 @@
     "prompt": "Vad är syftet med ett bronkiellt provokationstest (t.ex. med metakolin)?",
     "correct": "Att undersöka luftvägarnas känslighet genom att framkalla en kontrollerad, mätbar bronkkonstriktion",
     "distractors": [
-      "Att bota luftvägsobstruktion permanent hos patienten",
-      "Att mäta hjärtats elektriska aktivitet med EKG",
-      "Att mäta blodets kalciumnivå i ett blodprov"
+      "Att bota luftvägsobstruktionen permanent och helt hos patienten, utan behov av vidare behandling eller uppföljning",
+      "Att mäta hjärtats elektriska aktivitet med ett vilo-EKG",
+      "Att mäta blodets kalcium- och magnesiumnivå i ett blodprov"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14649,9 +14649,9 @@
     "prompt": "Vad mäts under ett metakolinprovokationstest för att avgöra resultatet?",
     "correct": "Fallet i FEV1 efter stigande doser av metakolin, jämfört med utgångsvärdet",
     "distractors": [
-      "Blodtrycket enbart, oberoende av FEV1",
-      "Kroppstemperaturen enbart, oberoende av FEV1",
-      "Hjärtfrekvensen enbart, oberoende av FEV1"
+      "Blodtrycket enbart, helt oberoende av eventuella FEV1-förändringar under testet",
+      "Kroppstemperaturen enbart, helt oberoende av FEV1-förändringar",
+      "Hjärtfrekvensen enbart, helt oberoende av FEV1-förändringar"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14663,9 +14663,9 @@
     "prompt": "Vad indikerar ett positivt (avvikande) metakolinprovokationstest?",
     "correct": "Ökad luftvägshyperreaktivitet, vilket stödjer en astmadiagnos",
     "distractors": [
-      "En fullständigt frisk lungfunktion utan reaktivitet",
-      "En ren restriktiv lungsjukdom",
-      "En hjärtsjukdom"
+      "En fullständigt frisk lungfunktion helt utan någon reaktivitet alls",
+      "En ren restriktiv lungsjukdom, aldrig hyperreaktivitet",
+      "En bakomliggande hjärtsjukdom, aldrig en luftvägssjukdom"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14677,9 +14677,9 @@
     "prompt": "Varför genomförs bronkiella provokationstest under noggrann övervakning och med akutberedskap?",
     "correct": "Testet kan framkalla en kraftig, ibland svår bronkkonstriktion hos känsliga patienter",
     "distractors": [
-      "Testet innebär aldrig någon risk alls för patienten",
-      "Testet kräver aldrig någon övervakning under tiden",
-      "Testet utförs alltid helt utan läkemedel"
+      "Testet innebär aldrig någon risk alls för den undersökta patienten, oavsett hur känslig patienten är",
+      "Testet kräver aldrig någon övervakning alls under tiden det pågår",
+      "Testet utförs alltid helt utan inblandning av läkemedel"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14691,9 +14691,9 @@
     "prompt": "Vad kan ansträngningsutlöst bronkkonstriktion (exercise-induced bronchoconstriction) testas med, som ett alternativ till metakolintest?",
     "correct": "Ett standardiserat ansträngningsprovokationstest med spirometri före och efter fysisk ansträngning",
     "distractors": [
-      "Enbart ett vilo-EKG, utan spirometri",
-      "Enbart en blodgasanalys, utan spirometri",
-      "Enbart ett bilirubinprov, utan spirometri"
+      "Enbart ett vilo-EKG, helt utan någon spirometri alls före, under eller efter given fysisk ansträngning",
+      "Enbart en arteriell blodgasanalys, helt utan spirometri",
+      "Enbart ett bilirubinprov i blod, helt utan spirometri"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14705,9 +14705,9 @@
     "prompt": "Vad kan en falskt negativ reversibilitet vid bronkodilatationstest bero på, förutom avsaknad av verklig reversibilitet?",
     "correct": "Att patienten redan står på luftrörsvidgande behandling vid testtillfället",
     "distractors": [
-      "Att testet alltid är fullständigt oberoende av aktuell medicinering",
-      "Att patienten andats för snabbt",
-      "Att spirometern är felaktigt kalibrerad i alla lägen"
+      "Att testet alltid är fullständigt oberoende av patientens aktuella medicinering",
+      "Att patienten andat för snabbt och alldeles för ytligt under testet",
+      "Att spirometern är felaktigt kalibrerad i samtliga tänkbara lägen"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14719,9 +14719,9 @@
     "prompt": "Vad kallas den kliniska situationen där spirometri visar ett normalt mönster i vila trots att patienten har symtom som tyder på astma?",
     "correct": "Normal spirometri mellan attacker/episoder, vilket kan kräva provokationstest för att fastställa diagnosen",
     "distractors": [
-      "Ett bevis på att patienten aldrig kan ha astma",
-      "Ett bevis på svår, kronisk KOL istället",
-      "Ett tekniskt ogiltigt test per automatik"
+      "Ett definitivt och helt slutgiltigt bevis på att patienten aldrig någonsin kan ha astma, oavsett symtom eller sjukdomshistoria",
+      "Ett definitivt bevis på svår, kronisk KOL istället för astma",
+      "Ett tekniskt ogiltigt test per automatik, oavsett omständigheter"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14733,9 +14733,9 @@
     "prompt": "Varför är upprepad spirometri över tid användbar vid uppföljning av KOL?",
     "correct": "Den kan visa den långsiktiga förändringen i lungfunktion och behandlingssvar",
     "distractors": [
-      "Spirometri kan bara mätas en enda gång i en patients hela liv",
-      "Upprepad mätning saknar all klinisk nytta",
-      "Den mäter enbart hjärtfunktionen över tid, inte lungan"
+      "Spirometri kan bara mätas en enda gång under en patients hela livstid",
+      "Upprepad mätning över tid saknar helt och hållet all klinisk nytta för patienten",
+      "Den mäter enbart hjärtfunktionen över tid, aldrig lungfunktionen"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14747,9 +14747,9 @@
     "prompt": "Vad kan ett kraftigt förbättrat FEV1 efter en kur med perorala kortikosteroider (steroidtest), snarare än enbart bronkodilaterare, indikera?",
     "correct": "En steroidkänslig komponent i luftvägsobstruktionen, vilket stödjer astma eller astma-KOL-överlapp",
     "distractors": [
-      "Att patienten inte har någon luftvägssjukdom alls",
-      "Att steroider aldrig kan påverka lungfunktionen",
-      "Att FEV1 alltid är helt opåverkbart av läkemedel"
+      "Att patienten inte har någon luftvägssjukdom alls, varken astma, KOL eller andra liknande tillstånd",
+      "Att steroider aldrig någonsin kan påverka lungfunktionen",
+      "Att FEV1-värdet alltid är helt opåverkbart av alla läkemedel"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14761,9 +14761,9 @@
     "prompt": "Vad är den övergripande kliniska nyttan med reversibilitets- och provokationstest tillsammans med basal spirometri?",
     "correct": "De hjälper till att skilja astma från KOL och bedöma graden av luftvägshyperreaktivitet, vilket styr diagnos och behandling",
     "distractors": [
-      "De ersätter helt behovet av basal spirometri",
-      "De ger aldrig någon klinisk vägledning alls",
-      "De mäter enbart patientens kroppslängd, inget annat"
+      "De ersätter helt och hållet behovet av en basal spirometri",
+      "De ger faktiskt aldrig någon klinisk vägledning alls för diagnos, behandling eller uppföljning, oavsett vilket resultat testerna visar",
+      "De mäter enbart patientens kroppslängd och vikt, inget annat"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14775,9 +14775,9 @@
     "prompt": "Vad kan kroppspletysmografi mäta som en vanlig spirometri inte kan mäta direkt?",
     "correct": "Absoluta lungvolymer som total lungkapacitet, residualvolym och funktionell residualkapacitet",
     "distractors": [
-      "FEV1 och FVC, som enbart pletysmografi kan mäta",
-      "Blodets syrgasmättnad, uppmätt med pulsoximeter",
-      "Hjärtats slagvolym, uppmätt med ekokardiografi"
+      "FEV1 och FVC, mått som enbart kroppspletysmografi kan mäta",
+      "Blodets syrgasmättnad och puls, uppmätt med en pulsoximeter",
+      "Hjärtats slagvolym, minutvolym och ejektionsfraktion, uppmätt med ekokardiografi, inte med spirometri"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14803,9 +14803,9 @@
     "prompt": "Hur genomförs en kroppspletysmografisk mätning rent praktiskt?",
     "correct": "Patienten sitter i en tät, kalibrerad kammare och andas mot en tillfälligt stängd ventil medan tryck- och flödesförändringar registreras",
     "distractors": [
-      "Patienten andas fritt i ett öppet rum utan mätutrustning",
-      "Patienten får en injektion av kontrastmedel i blodet",
-      "Patienten genomgår enbart ett vanligt blodprov"
+      "Patienten andas helt fritt i ett öppet rum utan någon mätutrustning, kammare eller sluten ventil, vilket inte alls stämmer med hur testet genomförs",
+      "Patienten får en intravenös injektion av kontrastmedel i blodet",
+      "Patienten genomgår enbart ett vanligt venöst blodprov"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14817,9 +14817,9 @@
     "prompt": "Varför är kroppspletysmografi särskilt värdefull vid svår luftvägsobstruktion, jämfört med gasspädningsmetoder?",
     "correct": "Den fångar även luft som är \"instängd\" bakom helt stängda luftvägar, vilket gasspädningsmetoder kan underskatta",
     "distractors": [
-      "Den kan bara mäta FEV1, inget annat mått",
-      "Den kräver ingen som helst patientmedverkan alls",
-      "Den är alltid mindre exakt än enkel spirometri"
+      "Den kan bara mäta FEV1, inget annat lungfunktionsmått",
+      "Den kräver ingen som helst aktiv patientmedverkan alls",
+      "Den är alltid mindre exakt än en enkel basal spirometri, oavsett hur svår obstruktionen är eller hur mycket luft som är instängd"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14831,9 +14831,9 @@
     "prompt": "Vad kallas gasen som normalt används för att mäta lungans diffusionskapacitet (DLCO)?",
     "correct": "Kolmonoxid, i en mycket liten, ofarlig testdos",
     "distractors": [
-      "Syrgas, i en betydligt högre koncentration",
-      "Koldioxid, i en mätbar testdos",
-      "Kväve, i en spårmängd som testgas"
+      "Syrgas, i en betydligt högre koncentration än normalt",
+      "Koldioxid, i en liten men fullt mätbar testdos",
+      "Kväve, i en liten spårmängd som separat testgas"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14845,9 +14845,9 @@
     "prompt": "Varför lämpar sig kolmonoxid särskilt väl för att mäta lungans diffusionskapacitet?",
     "correct": "Kolmonoxid binder mycket starkt till hemoglobin, vilket gör att upptaget i blodet huvudsakligen begränsas av diffusionen genom blod-luftbarriären, inte av blodflödet",
     "distractors": [
-      "Kolmonoxid diffunderar aldrig genom lungvävnaden alls",
-      "Kolmonoxid binder inte alls till hemoglobinet",
-      "Kolmonoxid är identisk med syrgas i sina bindningsegenskaper"
+      "Kolmonoxid diffunderar aldrig genom lungvävnaden alls, oavsett koncentration",
+      "Kolmonoxid binder inte alls till hemoglobinet i de röda blodkropparna",
+      "Kolmonoxid är helt identisk med syrgas i sina bindningsegenskaper till hemoglobin och i sin förmåga att diffundera genom blod-luftbarriären, vilket gör dem utbytbara"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14859,9 +14859,9 @@
     "prompt": "Vad avspeglar ett nedsatt DLCO-värde, i grova drag?",
     "correct": "En försämrad förmåga hos lungorna att överföra gas från alveolerna till blodet, t.ex. på grund av förtjockad blod-luftbarriär eller förlorad alveolaryta",
     "distractors": [
-      "Alltid en normal, frisk lungfunktion utan avvikelser",
-      "Enbart en förändring i hjärtfrekvensen, inget annat",
-      "Enbart en förändring i njurfunktionen, inget annat"
+      "Alltid en normal, frisk lungfunktion helt utan några mätbara avvikelser, oavsett vilka andra kliniska undersökningsfynd eller symtom som föreligger hos patienten",
+      "Enbart en förändring i hjärtfrekvensen vid vila, inget annat",
+      "Enbart en förändring i njurfunktionen och kreatininnivån, inget annat"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14887,9 +14887,9 @@
     "prompt": "Varför kan DLCO vara relativt normalt vid ren astma, till skillnad från vid emfysem?",
     "correct": "Astma ger huvudsakligen luftvägsobstruktion utan att förstöra alveolarytan eller förtjocka blod-luftbarriären",
     "distractors": [
-      "Astma förstör alltid alveolarytan lika mycket som emfysem gör",
-      "DLCO påverkas aldrig av någon lungsjukdom alls",
-      "Astma ökar alltid DLCO kraftigt, tvärtemot verkligheten"
+      "Astma förstör alltid alveolarytan precis lika mycket som emfysem gör",
+      "DLCO påverkas aldrig av någon lungsjukdom alls, oavsett typ",
+      "Astma ökar alltid DLCO-värdet kraftigt och tydligt, tvärtemot den verkliga kliniska bilden och forskningen vid sjukdomen"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14901,9 +14901,9 @@
     "prompt": "Vad kan ett förhöjt DLCO-värde ibland ses vid, t.ex. vid vissa fall av lungblödning?",
     "correct": "Ökat kapillärblodvolym eller extra hemoglobin i alveolerna som binder mer kolmonoxid",
     "distractors": [
-      "Ett förhöjt DLCO förekommer aldrig alls i praktiken",
-      "Det innebär alltid en total avsaknad av gasutbyte",
-      "Det är alltid ett säkert tecken på KOL"
+      "Ett förhöjt DLCO-värde förekommer aldrig alls i klinisk praktik",
+      "Det innebär alltid en total och fullständig avsaknad av allt gasutbyte i hela lungan",
+      "Det är alltid ett fullständigt säkert tecken på KOL"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14915,9 +14915,9 @@
     "prompt": "Vad krävs av patienten för att kunna genomföra ett tillförlitligt DLCO-test?",
     "correct": "En snabb, maximal inandning av testgasen, en kort andningsuppehållsperiod och en jämn utandning",
     "distractors": [
-      "Enbart en enda, ytlig normal inandning utan uppehåll",
-      "Att patienten hyperventilerar kraftigt under hela testet",
-      "Ingen samverkan alls krävs från patienten under testet"
+      "Enbart en enda ytlig, normal inandning helt utan andningsuppehåll eller någon jämn utandning efteråt",
+      "Att patienten hyperventilerar kraftigt under hela testets gång",
+      "Ingen aktiv samverkan alls krävs från patienten under testet"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14929,9 +14929,9 @@
     "prompt": "Hur korrigeras ofta DLCO-resultatet för att göra det mer rättvisande hos anemiska patienter?",
     "correct": "Genom att korrigera värdet för patientens hemoglobinkoncentration",
     "distractors": [
-      "DLCO korrigeras aldrig för hemoglobin i praktiken",
-      "DLCO korrigeras enbart för patientens kroppsvikt",
-      "DLCO påverkas aldrig av hemoglobinnivån i blodet"
+      "DLCO korrigeras aldrig för hemoglobin i klinisk praktik",
+      "DLCO korrigeras enbart för patientens kroppsvikt och längd, aldrig för hemoglobin",
+      "DLCO påverkas aldrig alls av hemoglobinnivån i blodet"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14957,9 +14957,9 @@
     "prompt": "Varför kompletteras spirometri ofta med kroppspletysmografi och DLCO vid utredning av oklar andfåddhet?",
     "correct": "Tillsammans ger de en betydligt mer komplett bild av både lungvolymer, luftflöde och gasutbytesförmåga än spirometri ensamt",
     "distractors": [
-      "Spirometri ensamt ger alltid en fullständig bild utan behov av komplettering",
-      "Kroppspletysmografi och DLCO ersätter aldrig varandra i klinisk nytta",
-      "Dessa metoder mäter exakt samma sak som enkel spirometri"
+      "Spirometri ensamt ger alltid en fullständigt komplett bild av lungfunktionen, gasutbytet och volymerna utan behov av komplettering",
+      "Kroppspletysmografi och DLCO ersätter dock aldrig varandra i klinisk nytta",
+      "Dessa två metoder mäter exakt samma sak som en enkel spirometri"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14971,9 +14971,9 @@
     "prompt": "Vad kallas den samlade termen för undersökningar som mäter lungornas volymer, flöden och gasutbytesförmåga, ofta utförda av biomedicinska analytiker inom klinisk fysiologi?",
     "correct": "Lungfunktionsundersökning",
     "distractors": [
-      "Ekokardiografi",
-      "Elektroencefalografi",
-      "Urinsticka"
+      "Ekokardiografi av hjärtat",
+      "Elektroencefalografi av hjärnan",
+      "Urinsticka vid urinanalys"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -14985,9 +14985,9 @@
     "prompt": "Varför baseras spirometriska referensvärden (predikterade värden) på ålder, kön, längd och etnicitet?",
     "correct": "Dessa faktorer påverkar naturligt lungornas storlek och funktion hos friska individer, vilket måste beaktas för en rättvisande jämförelse",
     "distractors": [
-      "Referensvärden är alltid identiska för alla individer oavsett bakgrund",
-      "Enbart kroppsvikt påverkar referensvärdena, inget annat",
-      "Etnicitet och längd saknar helt betydelse för lungfunktionen"
+      "Referensvärden är alltid exakt identiska för alla individer, oavsett bakgrund, ålder, kön eller kroppslängd, vilket saknar vetenskapligt stöd",
+      "Enbart patientens kroppsvikt påverkar referensvärdena, inget annat alls",
+      "Etnicitet och kroppslängd saknar helt och hållet betydelse för lungfunktionen"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -15041,9 +15041,9 @@
     "prompt": "Varför föredras ofta Z-score framför en enkel procentandel av predikterat värde vid modern spirometritolkning?",
     "correct": "Z-score tar bättre hänsyn till den naturliga variationen kring referensvärdet vid olika ålder, längd och kön",
     "distractors": [
-      "Z-score är alltid identisk med procentandelen av predikterat värde",
-      "Z-score kan bara användas för barn, aldrig för vuxna patienter",
-      "Z-score mäter enbart hjärtfrekvens, inte lungfunktion"
+      "Z-score är alltid exakt identisk med procentandelen av det predikterade värdet, oavsett ålder, längd eller kön",
+      "Z-score kan bara användas hos barn, aldrig hos vuxna patienter",
+      "Z-score mäter enbart hjärtfrekvensen i vila, inte lungfunktionen"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -15055,9 +15055,9 @@
     "prompt": "Vilket steg tas normalt först vid strukturerad tolkning av ett spirometriresultat?",
     "correct": "Att bedöma om FEV1/FVC-kvoten är sänkt eller normal, för att avgöra om obstruktion föreligger",
     "distractors": [
-      "Att enbart titta på patientens ålder, inget annat",
-      "Att enbart titta på PEF-värdet, inget annat",
-      "Att enbart titta på andningsfrekvensen, inget annat"
+      "Att enbart titta på patientens ålder och kön, inget annat mått eller värde alls vid tolkningen",
+      "Att enbart titta på det uppmätta PEF-värdet, inget annat",
+      "Att enbart titta på andningsfrekvensen i vila, inget annat"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -15069,9 +15069,9 @@
     "prompt": "Vad görs som nästa steg om FEV1/FVC-kvoten är sänkt vid tolkning av spirometri?",
     "correct": "Man bedömer graden av obstruktion utifrån hur mycket FEV1 avviker från predikterat värde",
     "distractors": [
-      "Man avslutar tolkningen utan vidare bedömning alls",
-      "Man mäter enbart blodtrycket, inte FEV1-avvikelsen",
-      "Man antar automatiskt att FVC är normal utan att kontrollera"
+      "Man avslutar hela tolkningen direkt, utan vidare bedömning alls",
+      "Man mäter enbart blodtrycket istället, inte FEV1-avvikelsen",
+      "Man antar då automatiskt att FVC är helt normal, utan att någonsin kontrollera det faktiska värdet"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -15083,9 +15083,9 @@
     "prompt": "Vad görs om FEV1/FVC-kvoten är normal men FVC är sänkt vid tolkning av spirometri?",
     "correct": "Man misstänker ett restriktivt mönster, som vid behov kan bekräftas med kroppspletysmografi",
     "distractors": [
-      "Man utesluter automatiskt all lungsjukdom direkt",
-      "Man drar automatiskt slutsatsen att patienten har KOL",
-      "Man behöver aldrig göra någon ytterligare utredning alls"
+      "Man utesluter då automatiskt all form av lungsjukdom direkt, utan vidare utredning eller uppföljning",
+      "Man drar då automatiskt slutsatsen att patienten har KOL",
+      "Man behöver då aldrig göra någon ytterligare utredning alls"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -15097,9 +15097,9 @@
     "prompt": "Vad kallas den svårighetsgradering av luftflödesobstruktion vid KOL som baseras på FEV1 i procent av predikterat värde (t.ex. GOLD-klassifikationen)?",
     "correct": "GOLD-stadieindelning",
     "distractors": [
-      "APACHE II-poäng",
-      "CHA2DS2-VASc-poäng",
-      "MELD-poäng"
+      "APACHE II-poäng vid IVA",
+      "CHA2DS2-VASc-poäng vid förmaksflimmer",
+      "MELD-poäng vid leversjukdom"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -15111,9 +15111,9 @@
     "prompt": "Varför är det viktigt att jämföra ett spirometriresultat mot rätt referenspopulation, t.ex. vid en patient med en ovanlig kroppslängd?",
     "correct": "Fel referensvärden kan leda till felaktig över- eller underdiagnostik av lungsjukdom",
     "distractors": [
-      "Referenspopulationen har ingen betydelse alls för tolkningen",
-      "Alla patienter jämförs alltid mot exakt samma enda referensvärde",
-      "Kroppslängd påverkar aldrig lungvolymerna alls"
+      "Referenspopulationen har ingen som helst betydelse alls för tolkningen",
+      "Alla patienter jämförs alltid mot exakt samma enda referensvärde, oavsett längd, ålder eller kön",
+      "Kroppslängd påverkar aldrig de uppmätta lungvolymerna alls"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -15125,9 +15125,9 @@
     "prompt": "Vad innebär det om ett spirometriresultat ligger inom det statistiskt definierade normalintervallet (t.ex. inom ±1,64 Z-score) men patienten ändå har uttalade symtom?",
     "correct": "Att en normal spirometri inte utesluter sjukdom, och vidare utredning kan behövas",
     "distractors": [
-      "Att patienten garanterat är helt frisk utan undantag",
-      "Att spirometri alltid är den enda nödvändiga undersökningen",
-      "Att symtomen alltid är inbillade om spirometrin är normal"
+      "Att patienten garanterat är helt frisk, helt utan undantag",
+      "Att spirometri alltid är den enda nödvändiga undersökningen som någonsin krävs vid utredning",
+      "Att symtomen alltid är inbillade om spirometrin visar sig normal"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -15139,9 +15139,9 @@
     "prompt": "Vad kan en spirometri som visar både lägre FEV1 och lägre FVC än predikterat, men med bevarad kvot, initialt tala för, innan TLC bekräftats?",
     "correct": "Ett möjligt restriktivt mönster, som bör bekräftas med mätning av TLC",
     "distractors": [
-      "Ett säkert obstruktivt mönster utan vidare behov av utredning",
-      "En helt normal lungfunktion utan avvikelse",
-      "Alltid en hjärtsjukdom snarare än en lungsjukdom"
+      "Ett helt säkert obstruktivt mönster utan något som helst vidare behov av utredning",
+      "En helt normal lungfunktion helt utan någon avvikelse",
+      "Alltid en bakomliggande hjärtsjukdom snarare än en lungsjukdom"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -15153,9 +15153,9 @@
     "prompt": "Varför anges normalt både ett absolut värde (t.ex. i liter) och ett relativt värde (% av predikterat) i ett spirometrisvar?",
     "correct": "Det absoluta värdet visar den faktiska uppmätta volymen/flödet, medan det relativa värdet gör det möjligt att jämföra med vad som är förväntat för just den patienten",
     "distractors": [
-      "Enbart det absoluta värdet har någon klinisk betydelse alls",
-      "Enbart det relativa värdet behöver anges, aldrig det absoluta",
-      "De två värdena är alltid identiska för alla patienter"
+      "Enbart det absoluta värdet i liter har någon klinisk betydelse alls",
+      "Enbart det relativa värdet i procent behöver någonsin anges, aldrig det absoluta värdet i liter, vilket gör det svårt att förstå hur mycket luft patienten faktiskt andades ut",
+      "De två värdena är alltid exakt identiska för samtliga patienter"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -15167,9 +15167,9 @@
     "prompt": "Vad kan systematiska fel i en spirometers kalibrering leda till vid tolkning av serieundersökningar över tid hos samma patient?",
     "correct": "Falska förändringar i lungfunktionen som i själva verket beror på mätfel snarare än verklig sjukdomsprogress",
     "distractors": [
-      "Kalibreringsfel påverkar aldrig tolkningen av resultaten alls",
-      "Kalibrering behövs bara för nya patienter, inte vid uppföljning",
-      "Systematiska fel korrigerar sig alltid automatiskt av sig själva"
+      "Kalibreringsfel påverkar aldrig alls tolkningen av de uppmätta resultaten, oavsett hur stort felet är eller hur länge det pågått",
+      "Kalibrering behövs bara inför nya patienter, aldrig vid uppföljningsbesök",
+      "Systematiska mätfel korrigerar sig alltid automatiskt helt av sig själva"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -15181,9 +15181,9 @@
     "prompt": "Varför rapporteras spirometriresultat ofta tillsammans med en bedömning av testets tekniska kvalitet (t.ex. \"godkänt\"/\"tveksamt\")?",
     "correct": "Så att den kliniska tolkningen kan väga in hur tillförlitligt resultatet är, inte bara siffervärdena i sig",
     "distractors": [
-      "Kvalitetsbedömningen saknar all betydelse för den kliniska tolkningen",
-      "Ett tekniskt tveksamt test ska alltid tolkas som helt normalt",
-      "Kvalitetsbedömning görs enbart för forskningssyfte, aldrig kliniskt"
+      "Kvalitetsbedömningen saknar helt all betydelse för den kliniska tolkningen",
+      "Ett tekniskt tveksamt test ska alltid tolkas som ett helt normalt resultat",
+      "Kvalitetsbedömning görs enbart i forskningssyfte, aldrig i klinisk verksamhet eller vid patientnära vård, oavsett sammanhang"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -15195,9 +15195,9 @@
     "prompt": "Vad används spirometri ofta till vid preoperativ bedömning inför större kirurgi?",
     "correct": "Att bedöma patientens lungfunktionsreserv och risk för postoperativa lungkomplikationer",
     "distractors": [
-      "Att mäta blodgruppen inför en operation",
-      "Att mäta njurfunktionen inför en operation",
-      "Att mäta blodsockernivån inför en operation"
+      "Att mäta blodgruppen och Rh-faktorn inför en operation",
+      "Att mäta njurfunktionen och kreatininvärdet inför en operation, aldrig lungfunktionen alls",
+      "Att mäta blodsockernivån och HbA1c inför en operation"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -15223,9 +15223,9 @@
     "prompt": "Vad mäts vanligen under ett sex-minuters gångtest, förutom gångsträckan?",
     "correct": "Syrgasmättnad och grad av upplevd andfåddhet",
     "distractors": [
-      "Enbart blodtrycket",
-      "Enbart hjärtats elektriska aktivitet",
-      "Enbart blodsockernivån"
+      "Enbart det uppmätta blodtrycket, inget annat",
+      "Enbart hjärtats elektriska aktivitet via EKG",
+      "Enbart den uppmätta blodsockernivån i blodet"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -15251,9 +15251,9 @@
     "prompt": "Vad kan spiroergometri hjälpa till att skilja mellan vid oklar ansträngningsutlöst andfåddhet?",
     "correct": "Om begränsningen huvudsakligen beror på en lung-, hjärt- eller muskulär orsak",
     "distractors": [
-      "Enbart om patienten har en bruten arm, utan koppling",
-      "Enbart blodgruppstillhörighet, utan koppling",
-      "Enbart om patienten har allergi mot pollen, utan koppling"
+      "Enbart om patienten har en bruten arm, helt utan koppling",
+      "Enbart patientens blodgruppstillhörighet, helt utan koppling",
+      "Enbart om patienten har allergi mot pollen eller pälsdjur, helt utan koppling till andfåddheten"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -15265,9 +15265,9 @@
     "prompt": "Vad kan regelbunden spirometri användas till inom arbets- och miljömedicin?",
     "correct": "Att övervaka lungfunktionen hos personer exponerade för skadliga ämnen i arbetsmiljön, t.ex. damm eller kemikalier",
     "distractors": [
-      "Att mäta blodtrycket hos arbetare på arbetsplatsen",
-      "Att mäta hörseln hos arbetare på arbetsplatsen",
-      "Att mäta synen hos arbetare på arbetsplatsen"
+      "Att mäta blodtrycket och pulsen hos samtliga arbetare på arbetsplatsen regelbundet, inte deras lungfunktion över tid",
+      "Att mäta hörseln och balansen hos arbetare på arbetsplatsen",
+      "Att mäta synen och färgseendet hos arbetare på arbetsplatsen"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -15279,9 +15279,9 @@
     "prompt": "Varför är longitudinell (upprepad) spirometri särskilt värdefull inom arbetsmiljöövervakning?",
     "correct": "Den kan avslöja en snabbare-än-normal nedgång i lungfunktion innan symtom uppstår, vilket möjliggör tidig åtgärd",
     "distractors": [
-      "Ett enda spirometritillfälle ger alltid tillräcklig information för hela arbetslivet",
-      "Lungfunktionen förändras aldrig till följd av arbetsmiljöexponering",
-      "Upprepad mätning saknar helt värde inom arbetsmedicin"
+      "Ett enda spirometritillfälle ger alltid tillräcklig information för hela arbetslivets längd, oavsett exponeringens omfattning",
+      "Lungfunktionen förändras aldrig alls till följd av arbetsmiljöexponering",
+      "Upprepad mätning över tid saknar helt värde inom arbetsmedicinen"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -15293,9 +15293,9 @@
     "prompt": "Vad är den kliniska nyttan av att kombinera spirometri med en strukturerad symtomskattning (t.ex. andfåddhetsskala) vid uppföljning av KOL?",
     "correct": "Det ger en mer heltäckande bild av sjukdomens påverkan på patienten, inte bara den rena lungfunktionen",
     "distractors": [
-      "Symtomskattning är alltid irrelevant om spirometrin är normal",
-      "Spirometri ensamt fångar alltid hela sjukdomsbilden",
-      "Symtomskattning ersätter alltid behovet av spirometri helt"
+      "Symtomskattning är alltid helt irrelevant om spirometrin visar sig normal, oavsett hur patienten faktiskt mår",
+      "Spirometri ensamt fångar alltid hela den kompletta sjukdomsbilden",
+      "Symtomskattning ersätter alltid behovet av spirometri helt och hållet"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -15307,9 +15307,9 @@
     "prompt": "Vad kan en oväntat kraftig försämring i FEV1 vid uppföljande spirometri hos en KOL-patient tala för, förutom naturlig sjukdomsprogress?",
     "correct": "En akut exacerbation, samsjuklighet eller ett tekniskt fel vid mätningen som bör utredas vidare",
     "distractors": [
-      "Det är alltid en helt ofarlig, förväntad variation",
-      "Det innebär alltid att patienten blivit botad fullständigt",
-      "FEV1 kan aldrig försämras snabbt av någon orsak"
+      "Det är alltid en helt ofarlig och fullt förväntad variation",
+      "Det innebär alltid att patienten har blivit botad helt fullständigt utan några kvarstående besvär alls",
+      "FEV1-värdet kan aldrig försämras snabbt av någon som helst orsak"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -15321,9 +15321,9 @@
     "prompt": "Vad kan spirometri, tillsammans med klinisk bild, bidra med vid utredning av misstänkt astma-KOL-överlappssyndrom (ACOS)?",
     "correct": "Att identifiera drag av både obstruktion med viss reversibilitet och en mer fixerad komponent",
     "distractors": [
-      "Spirometri kan aldrig bidra till denna diagnos alls",
-      "ACOS kan enbart diagnostiseras med ett blodprov",
-      "Spirometri utesluter alltid astma helt och hållet"
+      "Spirometri kan aldrig bidra till denna diagnos alls, oavsett vilka fynd som föreligger vid undersökningen",
+      "ACOS kan enbart diagnostiseras med hjälp av ett enkelt blodprov",
+      "Spirometri utesluter alltid astma helt och hållet som diagnos"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -15335,9 +15335,9 @@
     "prompt": "Varför är det viktigt att en patient med misstänkt yrkesrelaterad astma testas både på och utanför sin arbetsplats (t.ex. med seriella PEF-mätningar)?",
     "correct": "För att se om lungfunktionen försämras i samband med exponering på arbetsplatsen och förbättras vid frånvaro",
     "distractors": [
-      "Arbetsmiljön har aldrig någon koppling till lungfunktionen alls",
-      "Ett enda spirometritillfälle på kliniken är alltid tillräckligt för denna diagnos",
-      "PEF-mätningar utanför sjukhus saknar all klinisk relevans"
+      "Arbetsmiljön har aldrig någon som helst koppling till lungfunktionen",
+      "Ett enda spirometritillfälle på kliniken är alltid fullt tillräckligt för att ställa denna diagnos, oavsett exponering",
+      "PEF-mätningar utanför sjukhuset saknar helt och hållet klinisk relevans"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -15349,9 +15349,9 @@
     "prompt": "Vad kan en restriktiv spirometribild i kombination med kraftigt sänkt DLCO tala för, specifikt?",
     "correct": "En parenkymatös lungsjukdom, t.ex. lungfibros, snarare än en enbart bröstkorgs-/muskelbetingad restriktion",
     "distractors": [
-      "Det utesluter alltid all form av lungsjukdom",
-      "Det talar alltid specifikt för astma istället",
-      "Det innebär alltid ett obstruktivt mönster i stället"
+      "Det utesluter alltid helt och hållet all form av lungsjukdom",
+      "Det talar alltid specifikt för astma istället för fibros",
+      "Det innebär alltid ett obstruktivt mönster i stället för restriktivt, oavsett vilket DLCO-värde som uppmätts"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -15363,9 +15363,9 @@
     "prompt": "Vad kan en restriktiv spirometribild med normalt DLCO i stället tala för?",
     "correct": "En extrapulmonell orsak till restriktionen, t.ex. en neuromuskulär sjukdom eller bröstkorgsdeformitet, snarare än sjukdom i själva lungvävnaden",
     "distractors": [
-      "Det innebär alltid lungfibros specifikt",
-      "Det innebär alltid KOL specifikt",
-      "DLCO saknar all relevans för denna bedömning"
+      "Det innebär alltid specifikt lungfibros i lungvävnaden",
+      "Det innebär alltid specifikt KOL som bakomliggande sjukdom",
+      "DLCO saknar helt och hållet all relevans för denna bedömning, oavsett vilket mönster spirometrin visar eller vilka andra undersökningsfynd som föreligger"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -15377,9 +15377,9 @@
     "prompt": "Vad är den övergripande rollen för klinisk fysiologi och biomedicinska analytiker i utredningen av lungsjukdom?",
     "correct": "Att genomföra och kvalitetssäkra de objektiva funktionsundersökningarna som ligger till grund för diagnos och uppföljning",
     "distractors": [
-      "Att enbart ordinera läkemedel utan att mäta något",
-      "Att enbart utföra kirurgiska ingrepp på patienten",
-      "Att enbart tolka röntgenbilder av bröstkorgen"
+      "Att enbart ordinera läkemedel till patienten utan att någonsin mäta eller undersöka något alls som rör lungfunktionen överhuvudtaget",
+      "Att enbart utföra kirurgiska ingrepp direkt på patienten",
+      "Att enbart tolka röntgenbilder och CT-bilder av bröstkorgen"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -15391,9 +15391,9 @@
     "prompt": "Varför kompletteras ofta lungfunktionsundersökningar med bilddiagnostik (t.ex. lungröntgen eller datortomografi) vid oklar lungsjukdom?",
     "correct": "Funktionsundersökningar visar HUR lungan fungerar, medan bilddiagnostik visar den strukturella bilden av lungvävnaden, och tillsammans ger de en mer komplett bedömning",
     "distractors": [
-      "Bilddiagnostik ersätter alltid behovet av funktionsundersökningar helt",
-      "Funktionsundersökningar ger alltid en fullständig strukturell bild utan behov av bilddiagnostik",
-      "De två metoderna mäter exakt samma sak"
+      "Bilddiagnostik ersätter alltid helt och hållet behovet av funktionsundersökningar",
+      "Funktionsundersökningar ger alltid en fullständig strukturell bild av lungvävnaden utan något behov alls av bilddiagnostik, oavsett hur oklar bilden är för den enskilda patienten",
+      "De två metoderna mäter faktiskt exakt samma sak i alla avseenden"
     ],
     "topic": "bma_spirometri",
     "difficulty": "Normal",
@@ -18206,7 +18206,7 @@
     "correct": "Man tillför en radioaktiv substans i kroppen och avbildar dess fördelning, istället för att skicka strålning genom kroppen utifrån",
     "distractors": [
       "Man mäter enbart ljudvågor som studsar genom kroppen",
-      "Man använder starka magnetfält, helt utan radioaktivitet",
+      "Man använder starka magnetfält och radiovågor för avbildning, helt utan att någon radioaktiv substans någonsin tillförs till patienten",
       "Man mäter enbart hudens yttemperatur"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -18235,7 +18235,7 @@
     "distractors": [
       "Jod-131",
       "Kol-14",
-      "Uran-235"
+      "Uran-235, en instabil isotop som används i kärnkraft"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -18248,7 +18248,7 @@
     "correct": "Lämplig halveringstid och gammastrålningsenergi för avbildning, samt lätt tillgängligt via generator",
     "distractors": [
       "Den avger enbart alfastrålning, olämplig för avbildning",
-      "Den har en halveringstid på flera år, för lång för klinik",
+      "Den har en halveringstid på flera år, vilket gör den alldeles för långsam och opraktisk för klinisk rutinanvändning",
       "Den är inte alls radioaktiv"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -18261,7 +18261,7 @@
     "prompt": "Vad är halveringstid?",
     "correct": "Den tid det tar för hälften av atomerna i ett radioaktivt ämne att sönderfalla",
     "distractors": [
-      "Tiden det tar för hela dosen att lämna kroppen helt",
+      "Tiden det tar för hela den administrerade dosen att lämna kroppen helt via urin och avföring",
       "Tiden för en gammakamera att ta en enda bild",
       "Tiden för kontrastmedel att nå fram till njuren"
     ],
@@ -18289,7 +18289,7 @@
     "prompt": "Vad står SPECT för och vad innebär tekniken?",
     "correct": "Single Photon Emission Computed Tomography – tredimensionell avbildning genom att gammakameran roterar runt patienten",
     "distractors": [
-      "En tvådimensionell röntgenbild utan rotation",
+      "En tvådimensionell röntgenbild tagen på ett enda ögonblick, helt utan att gammakameran roterar runt patienten alls under undersökningen",
       "En ultraljudsteknik utan gammakamera",
       "En MR-teknik helt utan joniserande strålning"
     ],
@@ -18303,7 +18303,7 @@
     "prompt": "Vad kännetecknar PET (positronemissionstomografi) jämfört med SPECT?",
     "correct": "PET använder positronemitterande radionuklider, där annihilationsfotoner detekteras i koincidens",
     "distractors": [
-      "PET använder ingen radioaktivitet alls i undersökningen",
+      "PET använder ingen radioaktivitet alls i undersökningen, till skillnad från SPECT och andra nuklearmedicinska metoder",
       "PET mäter enbart blodtrycket hos patienten",
       "PET är helt identiskt med vanlig röntgen"
     ],
@@ -18331,7 +18331,7 @@
     "prompt": "Varför tas FDG (fluorodeoxiglukos) upp i högre grad av många tumörceller än normal vävnad?",
     "correct": "Tumörceller har ofta en hög glukosmetabolism/glukosupptag",
     "distractors": [
-      "Tumörceller saknar cellmembran som annan vävnad",
+      "Tumörceller saknar helt och hållet cellmembran, till skillnad från normal frisk vävnad",
       "Tumörceller har alltid lägre ämnesomsättning",
       "FDG binder specifikt till DNA i tumörceller"
     ],
@@ -18361,7 +18361,7 @@
     "distractors": [
       "Det halverar stråldosen helt vid undersökningen",
       "Det tar bort behovet av radiofarmaka helt",
-      "Det ersätter alla andra röntgenundersökningar helt"
+      "Det ersätter alla andra röntgenundersökningar helt, så att inga fler bilddiagnostiska metoder behövs"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -18402,7 +18402,7 @@
     "correct": "Radioaktivitet, dvs. antal sönderfall per sekund",
     "distractors": [
       "Absorberad stråldos i vävnaden",
-      "Biologisk effekt av strålningen på cellerna",
+      "Biologisk effekt av strålningen på cellerna och vävnaden i kroppen",
       "Ljusintensitet från gammakameran"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -18415,7 +18415,7 @@
     "prompt": "Vad innebär ALARA-principen inom strålskydd?",
     "correct": "\"As Low As Reasonably Achievable\" – att hålla stråldosen så låg som rimligen är möjligt utan att äventyra undersökningens kvalitet",
     "distractors": [
-      "Att alltid använda högsta möjliga dos för bästa bildkvalitet",
+      "Att alltid använda högsta möjliga stråldos för att garantera bästa möjliga bildkvalitet vid varje enskild undersökning, oavsett patient",
       "Att aldrig använda radioaktiva ämnen i undersökningen",
       "Att enbart gälla för barn, inte vuxna patienter"
     ],
@@ -18429,7 +18429,7 @@
     "prompt": "Vilka tre grundläggande strålskyddsprinciper brukar nämnas för personal som arbetar med joniserande strålning?",
     "correct": "Tid, avstånd och avskärmning",
     "distractors": [
-      "Temperatur, tryck och volym",
+      "Temperatur, tryck och volym i rummet",
       "Ljus, ljud och rörelse",
       "Frekvens, amplitud och fas"
     ],
@@ -18443,7 +18443,7 @@
     "prompt": "Vad kallas apparaten som lokalt på en avdelning genererar Tc-99m från en moderisotop (Mo-99)?",
     "correct": "Teknetiumgenerator",
     "distractors": [
-      "Gammakamera",
+      "Gammakamera för bildtagning",
       "Cyklotron",
       "PET-scanner"
     ],
@@ -18458,7 +18458,7 @@
     "correct": "Att bedöma njurarnas funktion och avflödet av urin",
     "distractors": [
       "Att enbart mäta njurarnas storlek i centimeter",
-      "Att enbart diagnostisera njursten i njurbäckenet",
+      "Att enbart diagnostisera njursten i njurbäckenet och urinledaren",
       "Att helt ersätta blodprovstagning"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -18499,7 +18499,7 @@
     "prompt": "Vad kallas den grafiska kurvan över radioaktivitet i njuren över tid vid njurscintigrafi?",
     "correct": "Renogramkurva",
     "distractors": [
-      "Spirogram",
+      "Spirogram vid andning",
       "EKG-kurva",
       "Audiogram"
     ],
@@ -18513,7 +18513,7 @@
     "prompt": "Vad avspeglar den initiala uppåtgående (vaskulära/uptake-) fasen av renogramkurvan?",
     "correct": "Blodflödet till och upptaget i njuren",
     "distractors": [
-      "Urinens utsöndring från blåsan",
+      "Urinens utsöndring och tömning från urinblåsan",
       "Njurstenens storlek",
       "Hjärtats pumpförmåga"
     ],
@@ -18528,7 +18528,7 @@
     "correct": "Ett avflödeshinder i urinvägarna",
     "distractors": [
       "Normalt urinflöde",
-      "En särskilt god njurfunktion",
+      "En särskilt god och välfungerande njurfunktion",
       "En hjärtsjukdom"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -18543,7 +18543,7 @@
     "distractors": [
       "Adrenalin",
       "Insulin",
-      "Jodkontrast"
+      "Jodkontrast för konventionell röntgen"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -18556,7 +18556,7 @@
     "correct": "Captoprilrenogram",
     "distractors": [
       "Diuresrenogram",
-      "MIBG-scintigrafi",
+      "MIBG-scintigrafi av binjuren",
       "HIDA-scan"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -18569,7 +18569,7 @@
     "prompt": "Varför kan ett captoprilrenogram avslöja njurartärstenos?",
     "correct": "ACE-hämning minskar den kompensatoriska efferenta vasokonstriktionen i den drabbade njuren, vilket sänker filtrationen mätbart mer på den sidan",
     "distractors": [
-      "Captopril färgar njuren radioaktiv utan fysiologisk effekt",
+      "Captopril färgar njuren radioaktiv utan att ha någon som helst fysiologisk effekt på blodflödet eller filtrationen i den drabbade njuren alls",
       "Captopril stoppar allt blodflöde till båda njurarna helt",
       "Captopril mäter direkt njurstenens storlek"
     ],
@@ -18583,7 +18583,7 @@
     "prompt": "Vad menas med \"differentierad\" eller \"relativ\" njurfunktion vid njurscintigrafi?",
     "correct": "Hur stor andel av den totala njurfunktionen respektive njure bidrar med",
     "distractors": [
-      "Den absoluta storleken på njuren mätt i centimeter",
+      "Den absoluta storleken på njuren mätt i centimeter vid ultraljud eller röntgen",
       "Blodtrycket i njurartären, inte funktionsandelen",
       "Urinens pH-värde, inte funktionsandelen"
     ],
@@ -18626,7 +18626,7 @@
     "correct": "Den plasmavolym som helt renas från ett ämne per tidsenhet, oftast uttryckt i mL/min",
     "distractors": [
       "Den totala mängden urin producerad per dygn",
-      "Blodtrycket i njurartären, inte reningshastigheten",
+      "Blodtrycket i njurartären uppmätt med Doppler-ultraljud, inte den faktiska reningshastigheten",
       "Njurens vikt i gram, inte reningshastigheten"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -18640,7 +18640,7 @@
     "correct": "Kreatinin utsöndras, förutom genom glomerulär filtration, även i viss mån via tubulär sekretion",
     "distractors": [
       "Kreatinin filtreras aldrig alls glomerulärt",
-      "Kreatinin reabsorberas nästan helt i tubuli",
+      "Kreatinin reabsorberas nästan helt tillbaka i njurtubuli efter att redan ha filtrerats glomerulärt",
       "Kreatinin bildas i njuren och inte i muskeln"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -18653,7 +18653,7 @@
     "prompt": "Vad krävs för en korrekt kreatininclearance-mätning, utöver ett blodprov?",
     "correct": "En tidsbestämd urinsamling",
     "distractors": [
-      "Enbart ett enda blodprov",
+      "Enbart ett enda venöst blodprov utan urinsamling",
       "En röntgenundersökning",
       "Ett EKG"
     ],
@@ -18695,7 +18695,7 @@
     "prompt": "Vad är fördelen med DMSA-scintigrafi jämfört med MAG3/DTPA vid frågeställning om njurärr?",
     "correct": "DMSA binder till fungerande njurbarksvävnad, vilket ger tydlig avbildning av kortikala defekter/ärr",
     "distractors": [
-      "DMSA mäter enbart avflödeshinder, inte parenkymet",
+      "DMSA mäter enbart avflödeshinder i de övre urinvägarna, inte själva njurparenkymets funktion eller struktur",
       "DMSA ger ingen bildinformation alls om njuren",
       "DMSA används bara för lungundersökningar"
     ],
@@ -18751,7 +18751,7 @@
     "prompt": "Vad är en vanlig klinisk indikation för helkroppsskelettscintigrafi?",
     "correct": "Att söka efter skelettmetastaser vid känd cancersjukdom",
     "distractors": [
-      "Att diagnostisera hjärtinfarkt med isotopmärkning",
+      "Att diagnostisera akut hjärtinfarkt med isotopmärkt spårämne",
       "Att mäta lungfunktionen med spirometri",
       "Att bedöma leverfunktionen med blodprov"
     ],
@@ -18766,7 +18766,7 @@
     "correct": "Avaskulärt/nekrotiskt ben eller vissa aggressiva litiska processer med lite osteoblastisk reaktion",
     "distractors": [
       "Alltid en helt normal variant utan patologi",
-      "Ökad benläkning med kraftig osteoblastisk aktivitet",
+      "Ökad benläkning med kraftig osteoblastisk aktivitet, vilket istället ger ett hot spot vid avbildningen",
       "En artefakt helt utan klinisk betydelse"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -18781,7 +18781,7 @@
     "distractors": [
       "Den är specifik för enbart en enda diagnos",
       "Den mäter enbart blodvärden, inte benomsättning",
-      "Den kräver aldrig komplettering med andra undersökningar"
+      "Den kräver aldrig komplettering med andra undersökningar, oavsett hur oklart fyndet visar sig vara"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -18794,7 +18794,7 @@
     "correct": "Efter några timmar, för att mjukdelsaktiviteten ska hinna klinga av",
     "distractors": [
       "Omedelbart efter injektion, inom någon sekund",
-      "Efter flera veckor, långt senare än nödvändigt",
+      "Efter flera veckor, betydligt längre tid än vad som egentligen behövs",
       "Efter ett helt dygn krävs det alltid"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -18808,7 +18808,7 @@
     "correct": "En undersökning som registrerar flödesfas, blodpoolsfas och sen benfas, användbar t.ex. vid misstänkt infektion",
     "distractors": [
       "En undersökning med enbart en enda bildtagning",
-      "En undersökning av tre olika skelettdelar samtidigt utan tidsskillnad",
+      "En undersökning av tre olika skelettdelar samtidigt, helt utan någon tidsmässig skillnad alls mellan de olika faserna",
       "Ett annat namn för en PET-CT-undersökning"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -18821,7 +18821,7 @@
     "prompt": "Vad står förkortningen V/Q-scan för?",
     "correct": "Ventilations-/perfusionsscintigrafi av lungorna",
     "distractors": [
-      "Volym-/kvalitetsscintigrafi av lungorna",
+      "Volym-/kvalitetsscintigrafi av lungornas vävnad",
       "Ven-/artärscintigrafi av lungorna",
       "Vener-/quotient-scintigrafi av lungorna"
     ],
@@ -18835,7 +18835,7 @@
     "prompt": "Vilket radiofarmakon används vid perfusionsdelen av en V/Q-scan?",
     "correct": "Tc-99m-märkta makroaggregat av albumin, injicerat intravenöst",
     "distractors": [
-      "Tc-99m-DTPA som aerosol, inhalerad av patienten",
+      "Tc-99m-DTPA som aerosol, inhalerad av patienten via en nebulisator",
       "Xenon-133-gas, inandad av patienten",
       "F-18-FDG, injicerad intravenöst"
     ],
@@ -18851,7 +18851,7 @@
     "distractors": [
       "Partiklarna andas in och fastnar i alveolerna",
       "Partiklarna binder till hemoglobin i erytrocyterna",
-      "Partiklarna passerar helt fritt genom lungorna"
+      "Partiklarna passerar helt fritt genom lungorna utan att någonsin fastna i några kapillärer eller arterioler alls, oavsett storlek"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -18865,7 +18865,7 @@
     "distractors": [
       "Intravenös injektion av Tc-99m-MAA i en ven",
       "Oral administrering av jodkontrast",
-      "Enbart en vanlig konventionell lungröntgen"
+      "Enbart en vanlig konventionell lungröntgen utan radioaktivt spårämne"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -18906,7 +18906,7 @@
     "correct": "Parenkymatös lungsjukdom snarare än ren lungemboli",
     "distractors": [
       "Alltid lungemboli med fullständig säkerhet",
-      "En teknisk artefakt helt utan bakomliggande orsak",
+      "En teknisk artefakt helt utan någon bakomliggande fysiologisk orsak",
       "Hjärtsvikt uteslutet med fullständig säkerhet"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -18919,7 +18919,7 @@
     "prompt": "Varför har V/Q-scan delvis fått minskad användning till förmån för DT-lungangiografi vid misstänkt lungemboli på många håll?",
     "correct": "DT-lungangiografi ger ofta snabbare svar och bättre anatomisk upplösning, särskilt vid samtidig lungsjukdom som gör V/Q svårtolkad",
     "distractors": [
-      "V/Q-scan är förbjuden av strålskyddsskäl enligt lag",
+      "V/Q-scan är helt förbjuden av strålskyddsskäl enligt gällande svensk lagstiftning på de allra flesta sjukhus och kliniker i landet",
       "V/Q-scan kan inte längre utföras tekniskt idag",
       "DT-lungangiografi kräver ingen kontrast alls"
     ],
@@ -18935,7 +18935,7 @@
     "distractors": [
       "Patienter med normal njurfunktion enbart",
       "Barn kan aldrig undersökas med V/Q-scan",
-      "Gravida kan aldrig undersökas med V/Q-scan"
+      "Gravida kan aldrig undersökas med V/Q-scan under några omständigheter"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -18947,7 +18947,7 @@
     "prompt": "Vad bedöms resultatet av en V/Q-scan traditionellt utifrån?",
     "correct": "En sannolikhetsbedömning baserat på antal och storlek av mismatch-defekter",
     "distractors": [
-      "Ett absolut ja/nej-svar helt utan gradering",
+      "Ett absolut ja/nej-svar helt utan någon som helst gradering av sannolikheten",
       "Enbart lungans totala volym, inte defekterna",
       "Enbart hjärtats storlek, inte defekterna"
     ],
@@ -18963,7 +18963,7 @@
     "distractors": [
       "Magsäckens syraproduktion, inte tömningshastigheten",
       "Tarmens bakterieflora, inte tömningshastigheten",
-      "Leverns avgiftningsförmåga, inte tömningshastigheten"
+      "Leverns avgiftningsförmåga och enzymproduktion, inte tömningshastigheten"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -18976,7 +18976,7 @@
     "correct": "Med Tc-99m-märkt svavelkolloid inblandat i t.ex. ett ägg eller annan fast föda",
     "distractors": [
       "Genom att injicera radiofarmakon direkt i magsäcken med spruta",
-      "Genom att patienten dricker ett radioaktivt kontrastmedel avsett för röntgen",
+      "Genom att patienten dricker ett radioaktivt kontrastmedel som normalt är avsett för konventionell röntgen",
       "Genom inhalation av radioaktiv gas"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -19017,7 +19017,7 @@
     "prompt": "Vad är en fördel med scintigrafisk mätning av magsäckstömning jämfört med t.ex. ultraljud?",
     "correct": "Den ger ett kvantitativt, reproducerbart mått på tömningshastigheten över tid för både fast och flytande föda",
     "distractors": [
-      "Den kräver ingen radioaktivitet alls i undersökningen",
+      "Den kräver ingen radioaktivitet alls i undersökningen, till skillnad från scintigrafisk mätning av tömningshastigheten",
       "Den kan bara mäta tömning av flytande föda",
       "Den ger ingen kvantitativ information alls"
     ],
@@ -19033,7 +19033,7 @@
     "distractors": [
       "Några sekunder",
       "En hel vecka",
-      "Undersökningen görs utan tidsuppföljning alls"
+      "Undersökningen görs helt utan någon tidsuppföljning alls under förloppet"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19045,7 +19045,7 @@
     "prompt": "Vad kan en onormalt snabb magsäckstömning (dumping) i vissa fall vara relaterad till?",
     "correct": "Tidigare magsäcks-/gastric bypass-kirurgi",
     "distractors": [
-      "Alltid diabetesrelaterad gastropares",
+      "Alltid diabetesrelaterad gastropares, aldrig kirurgi eller annan orsak",
       "Alltid normal fysiologi utan orsak",
       "Alltid celiaki"
     ],
@@ -19059,7 +19059,7 @@
     "prompt": "Varför är det viktigt att patienten fastar inför en magsäckstömningsscintigrafi?",
     "correct": "Kvarvarande föda i magsäcken skulle störa tolkningen av tömningshastigheten för den standardiserade testmåltiden",
     "distractors": [
-      "Fasta krävs för att aktivera radiofarmakonet kemiskt",
+      "Fasta krävs för att aktivera radiofarmakonet kemiskt, innan det överhuvudtaget kan tas upp av den tomma magsäcken",
       "Fasta har ingen betydelse alls för undersökningen",
       "Fasta krävs enbart av strålskyddsskäl"
     ],
@@ -19073,7 +19073,7 @@
     "prompt": "Vad står HIDA-scan för i vardagligt tal och vad undersöker den?",
     "correct": "Hepatobiliär scintigrafi – undersöker leverns upptag och utsöndring av galla samt gallvägarnas/gallblåsans funktion",
     "distractors": [
-      "En undersökning av hjärtats pumpförmåga med isotop",
+      "En undersökning av hjärtats pumpförmåga med isotopmärkt spårämne, inte av levern eller gallvägarnas funktion alls överhuvudtaget",
       "En undersökning av njurarnas filtrationsförmåga",
       "En undersökning av lungornas ventilationsförmåga"
     ],
@@ -19088,7 +19088,7 @@
     "correct": "Tc-99m-märkta iminodiättiksyraanaloger, som tas upp av hepatocyter och utsöndras i gallan",
     "distractors": [
       "Tc-99m-MAA, som används vid lungscintigrafi",
-      "Tc-99m-MDP, som används vid skelettscintigrafi",
+      "Tc-99m-MDP, som istället används vid vanlig helkroppsskelettscintigrafi, inte vid undersökning av gallvägarna",
       "F-18-FDG, som används vid PET-undersökningar"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -19116,7 +19116,7 @@
     "correct": "Kolecystokinin eller ett fettrikt måltidssubstitut",
     "distractors": [
       "Adrenalin, för att öka hjärtfrekvensen",
-      "Furosemid, för att öka urinproduktionen",
+      "Furosemid, för att öka urinproduktionen från njurarna markant",
       "Captopril, för att sänka blodtrycket"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -19129,7 +19129,7 @@
     "prompt": "Vad avser gallblåsans ejektionsfraktion vid en HIDA-scan med CCK-stimulering?",
     "correct": "Hur stor andel av gallan i gallblåsan som töms ut efter stimulering, som mått på gallblåsans motorik",
     "distractors": [
-      "Hur mycket galla levern producerar per dygn totalt",
+      "Hur mycket galla som levern totalt sett producerar under ett helt dygn, helt oberoende av gallblåsan",
       "Blodflödet genom levern, inte gallblåsans tömning",
       "Leverns totala storlek, inte gallblåsans tömning"
     ],
@@ -19158,7 +19158,7 @@
     "correct": "Leverns syntes av koagulationsfaktorer",
     "distractors": [
       "Leverns upptag av spårämnet",
-      "Gallvägarnas genomgänglighet",
+      "Gallvägarnas genomgänglighet och flöde av galla",
       "Gallblåsans tömningsförmåga"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -19173,7 +19173,7 @@
     "distractors": [
       "Alltid en helt normal gallvägsfunktion",
       "Enbart njursvikt, utan koppling till gallvägarna",
-      "Enbart hjärtsvikt, utan koppling till gallvägarna"
+      "Enbart hjärtsvikt, helt utan koppling till gallvägarnas funktion"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19187,7 +19187,7 @@
     "distractors": [
       "Enbart vid frakturdiagnostik i skelettet",
       "Enbart vid graviditetstest med blodprov",
-      "Enbart vid hörselutredning med audiometri"
+      "Enbart vid hörselutredning med audiometri, en metod som helt saknar koppling till PET"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19199,7 +19199,7 @@
     "prompt": "Varför måste patienten vanligen fasta inför en FDG-PET-undersökning?",
     "correct": "Högt blodsocker/insulin konkurrerar med FDG-upptaget och kan försämra bildkvaliteten, särskilt i tumörvävnad",
     "distractors": [
-      "Fasta krävs för att aktivera radioaktiviteten i FDG kemiskt",
+      "Fasta krävs för att aktivera radioaktiviteten i FDG kemiskt, innan den överhuvudtaget kan injiceras i patienten",
       "Fasta har ingen betydelse alls för undersökningen",
       "Fasta krävs enbart av strålskyddsskäl"
     ],
@@ -19215,7 +19215,7 @@
     "distractors": [
       "HIDA-scan av gallvägarna",
       "V/Q-scan av lungorna",
-      "DMSA-scintigrafi av njurarna"
+      "DMSA-scintigrafi av njurarnas kortikala vävnad"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19228,7 +19228,7 @@
     "correct": "En autonomt fungerande nodulus med hög hormonproduktion",
     "distractors": [
       "Alltid malignitet i sköldkörteln",
-      "Alltid en cysta helt utan hormonell aktivitet",
+      "Alltid en enkel cysta helt utan någon hormonell aktivitet",
       "Alltid helt normal vävnad utan avvikelse"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -19241,7 +19241,7 @@
     "prompt": "Vad kan ett \"kallt\" (icke-upptagande) område i sköldkörteln vid scintigrafi innebära, och varför är detta kliniskt viktigt?",
     "correct": "Noduli som inte tar upp spårämnet kan vara maligna och behöver ofta utredas vidare, t.ex. med finnålspunktion",
     "distractors": [
-      "Alltid en godartad cysta helt utan vidare utredningsbehov",
+      "Alltid en godartad cysta helt utan något som helst behov av vidare utredning, punktion eller uppföljning alls",
       "Alltid en toxisk nodulus med hög hormonproduktion",
       "Alltid normal körtelvävnad utan avvikelse"
     ],
@@ -19256,7 +19256,7 @@
     "correct": "Tc-99m-sestamibi",
     "distractors": [
       "Tc-99m-MDP",
-      "Tc-99m-DTPA",
+      "Tc-99m-DTPA för avbildning av njurarna",
       "F-18-FDG enbart"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -19271,7 +19271,7 @@
     "distractors": [
       "Hjärtats storlek före och efter en måltid",
       "Lungfunktionen vid vila och vid ansträngning",
-      "Njurfunktionen vid vila och vid ansträngning"
+      "Njurfunktionen mätt vid vila och vid fysisk ansträngning, istället för hjärtat"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19299,7 +19299,7 @@
     "distractors": [
       "Reversibel ischemi som förbättras i vila",
       "En helt normal hjärtmuskel utan defekt",
-      "En teknisk artefakt helt utan klinisk betydelse"
+      "En teknisk artefakt helt utan någon klinisk betydelse alls för patienten"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19325,7 +19325,7 @@
     "prompt": "Vad kallas den kombinerade tekniken där man mäter både hjärtats perfusion och pumpfunktion (ejektionsfraktion) med isotop, synkroniserat med EKG?",
     "correct": "Gated myokardscintigrafi",
     "distractors": [
-      "HIDA-scan",
+      "HIDA-scan av lever och galla",
       "Renogram",
       "V/Q-scan"
     ],
@@ -19353,7 +19353,7 @@
     "prompt": "Vilken egenskap hos MIBG gör den lämplig för att avbilda feokromocytom och neuroblastom?",
     "correct": "MIBG liknar noradrenalin strukturellt och tas upp av samma transportörer i vävnad med sympatikoadrenergt ursprung",
     "distractors": [
-      "MIBG binder specifikt till benvävnad, inte adrenerg vävnad",
+      "MIBG binder specifikt till benvävnad i skelettet, inte till den adrenerga vävnad som finns i feokromocytom eller neuroblastom",
       "MIBG filtreras enbart glomerulärt i njuren",
       "MIBG tas upp av alla celltyper lika mycket"
     ],
@@ -19369,7 +19369,7 @@
     "distractors": [
       "HIDA-scan av lever och gallvägar",
       "Renogram av njurarnas funktion",
-      "Skelettscintigrafi av hela kroppen"
+      "Skelettscintigrafi av hela kroppens skelett för att hitta metastaser, inte lymfkörtlar"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19383,7 +19383,7 @@
     "distractors": [
       "Den botar cancern direkt utan behov av kirurgi",
       "Den ersätter helt all vidare cancerbehandling",
-      "Den mäter enbart hjärtfunktionen, inte lymfspridning"
+      "Den mäter enbart hjärtfunktionen med isotopmärkning, och saknar helt koppling till lymfspridning eller tumörens faktiska utbredning i kroppen"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19396,7 +19396,7 @@
     "correct": "Att samma eller liknande målmolekyl används både för diagnostik och efterföljande radionuklidbehandling",
     "distractors": [
       "Att enbart diagnostisera, helt utan behandlingsmöjlighet",
-      "Ett annat namn för PET-CT utan koppling till behandling",
+      "Ett annat namn för en vanlig PET-CT-undersökning, helt utan koppling till någon efterföljande behandling",
       "En metod som enbart används inom kardiologin"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -19425,7 +19425,7 @@
     "distractors": [
       "Jod tas upp lika mycket av alla vävnader i kroppen",
       "Jod binder specifikt till benvävnad, inte sköldkörteln",
-      "Jod har ingen affinitet alls till sköldkörteln"
+      "Jod binder specifikt till benvävnad i skelettet, inte alls till sköldkörtelns hormonproducerande celler eller vävnad"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19438,7 +19438,7 @@
     "correct": "Riktad radionuklidbehandling som utnyttjar preparatets benaffinitet för att lindra smärta och bromsa metastasernas tillväxt",
     "distractors": [
       "En ren diagnostisk metod helt utan terapeutisk effekt",
-      "En behandling som enbart ges oralt, helt utan radioaktivitet",
+      "En behandling som enbart ges oralt i tablettform, helt utan någon som helst radioaktiv komponent eller joniserande strålning",
       "En metod som enbart används vid njursvikt"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -19451,7 +19451,7 @@
     "prompt": "Vilken typ av behandling avses med lutetium-177-DOTATATE vid vissa neuroendokrina tumörer?",
     "correct": "Peptidreceptor-radionuklidterapi, riktad mot somatostatinreceptorer på tumörcellerna",
     "distractors": [
-      "Konventionell cellgiftsbehandling utan radioaktiv komponent",
+      "Konventionell cellgiftsbehandling given intravenöst, helt utan någon radioaktiv komponent",
       "Strålbehandling utifrån med en extern strålkälla",
       "Kirurgisk behandling av tumören"
     ],
@@ -19466,7 +19466,7 @@
     "correct": "Undersökningen görs bara om den är starkt indicerad, och man väljer om möjligt radiofarmaka och doser som minimerar stråldos till fostret",
     "distractors": [
       "Gravida kan alltid undersökas helt utan restriktioner",
-      "Nuklearmedicinska undersökningar är helt förbjudna oavsett indikation",
+      "Nuklearmedicinska undersökningar är helt förbjudna oavsett indikation eller hur akut situationen än är för patienten och det väntade fostret",
       "Graviditet påverkar aldrig valet av undersökning"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -19479,7 +19479,7 @@
     "prompt": "Vilka råd ges ofta ammande kvinnor efter vissa nuklearmedicinska undersökningar, beroende på radiofarmakon?",
     "correct": "Att tillfälligt avbryta amningen under en period tills radioaktiviteten klingat av",
     "distractors": [
-      "Att amningen aldrig påverkas oavsett vilket preparat som ges",
+      "Att amningen aldrig påverkas alls, helt oavsett vilket radiofarmakon som administreras till patienten",
       "Att amningen alltid måste avslutas permanent",
       "Att undersökningen aldrig kan göras om patienten ammar"
     ],
@@ -19509,7 +19509,7 @@
     "distractors": [
       "Att man ökar den administrerade dosen radiofarmakon",
       "Att man förlänger undersökningstiden avsevärt",
-      "Att man byter ut gammakameran mot en ultraljudsapparat"
+      "Att man byter ut hela gammakameran mot en vanlig ultraljudsapparat under hela undersökningens förlopp och efterarbete"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19523,7 +19523,7 @@
     "distractors": [
       "Attenuering",
       "Comptonspridning",
-      "Halveringstidsfel"
+      "Halveringstidsfel vid beräkning av dosen"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19536,7 +19536,7 @@
     "correct": "För att säkerställa att bildkvalitet och kvantitativa mätningar förblir tillförlitliga över tid",
     "distractors": [
       "Det krävs enbart en gång vid inköp av utrustningen",
-      "Kvalitetskontroll är enbart ett lagkrav utan praktisk betydelse",
+      "Kvalitetskontroll är enbart ett formellt lagkrav utan någon praktisk klinisk betydelse alls för patienten",
       "Det påverkar inte bildkvaliteten alls"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -19550,7 +19550,7 @@
     "correct": "De ger information om vävnadens funktion/metabolism, inte enbart dess anatomiska utseende",
     "distractors": [
       "De ger alltid bättre anatomisk upplösning än CT/MR",
-      "De använder aldrig joniserande strålning i undersökningen",
+      "De använder aldrig joniserande strålning i undersökningen, till skillnad från röntgen och CT",
       "De kräver aldrig samtycke från patienten"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -19563,7 +19563,7 @@
     "prompt": "Vad är en generell nackdel med nuklearmedicinska bilder jämfört med CT/MR vad gäller anatomisk detaljrikedom?",
     "correct": "Lägre rumslig upplösning, vilket är en anledning till att de ofta kombineras med CT",
     "distractors": [
-      "De saknar helt möjlighet att visa anatomi över huvud taget",
+      "De saknar helt möjlighet att visa någon anatomi över huvud taget, till skillnad från CT",
       "De kräver alltid kirurgisk exponering av organet",
       "De kan bara avbilda skelettet, inget annat organ"
     ],
@@ -19578,7 +19578,7 @@
     "correct": "Biomedicinska analytiker/röntgensjuksköterskor specialiserade inom nuklearmedicin",
     "distractors": [
       "Enbart kirurger utan nuklearmedicinsk specialisering",
-      "Enbart barnmorskor utan nuklearmedicinsk specialisering",
+      "Enbart barnmorskor utan någon nuklearmedicinsk specialisering eller utbildning alls",
       "Enbart farmaceuter på apotek utan klinisk roll"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -19591,7 +19591,7 @@
     "prompt": "Sammanfattningsvis: vilka två huvudsakliga kliniska användningsområden har nuklearmedicin, utöver ren diagnostik av njur- och gallvägsfunktion?",
     "correct": "Onkologisk avbildning/stadieindelning samt riktad radionuklidbehandling",
     "distractors": [
-      "Enbart benfrakturdiagnostik med vanlig röntgen",
+      "Enbart benfrakturdiagnostik med vanlig konventionell röntgen av skelettet",
       "Enbart graviditetstest med urinprov",
       "Enbart hörselscreening med audiometri"
     ],
