@@ -1,3 +1,6 @@
 # Python build-artefakter (scripts/)
 __pycache__/
 *.pyc
+
+# Personliga Claude Code-permissions (ej team)
+.claude/settings.local.json

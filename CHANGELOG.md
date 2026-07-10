@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.140
+- **Längdbias-fix i fysioterapeut, forts.**: sex ämnen färdigsvepta så rätt svar inte längre är systematiskt längst – `fysio_traning_arbetsfys` (91→0), `fysio_motorisk_utv_aldrande` (87→0), `fysio_smartfysiologi` (70→0), `fysio_kna` (59→0), `fysio_nervsystemet` (58→0) och `fysio_columna` (56→0). Metod: utbyggda distraktorer till jämförbar längd + nedkortade (kompletta) rätt svar; numeriska frågor fick formatsymmetri. Hela filen: 57 % → 28 % rätt-svar-längst. Övriga 8 ämnen kvarstår (muskelfysiologi, fot/fotled, led/skelett, hand/handled, höft/bäcken, axel/skuldra, kardio/resp, armbåge/underarm).
+- **Quiz-regler kodifierade i `CLAUDE_REGLER.md` (v1.1)**: nio regler som tidigare bara fanns i arbetsminnet skrevs in i regelfilen – §1.5 korrekt/pedagogisk svenska, §2.9 svarsalternativens form får aldrig avslöja svaret (längdparitet, inga avslöjande parenteser, ej självbesvarande, numerisk-/format-paritet, språkparitet), §2.10 bildfrågor tom prompt, §2.11 dubbletter/unikhet, §3.2b kursunderlaget vinner, §3.2c skyddad källfil, §7.1 ämnesöverlapp i delad JSON. QA-checklista och känt-fel-lista uppdaterade.
+- **Maskinell håndhävning av quiz-reglerna**: ny `scripts/validate_quiz.py` (bildprompt, dubblett-id, tomma/duplicerade alternativ, MC-antal, äkta dubblettfrågor = FEL; längdbias, parentes-asymmetri, självbesvarande, numerisk asymmetri = VARNING). Kopplad som git pre-commit-grind (`.githooks/pre-commit` + `core.hooksPath`, kollar bara stageade filer) och som Claude Code PostToolUse-hook (`scripts/quiz_hook.sh` i `.claude/settings.json`). Verktyget `scripts/apply_distractor_patch.py` för längdbias-svepet. `.claude/settings.local.json` gitignoread.
+- VERSION/APP_VERSION/index.html-cachebuster → 0.9.140.
+
 ## 0.9.139
 - **Medicinsk sekreterare klart – alla 6 ämnen byggda** (600 nya MC-frågor i ny fil `data/medicinsk_sekreterare.json`, terminologifokus enligt användarens direktiv: sv/latin-namngivning, resonemang, grundläggande diagnosmetodik och journalförkortningar):
   - **Termens byggstenar** (`medsek_termens_byggstenar`) – prefix (hypo-/hyper-, brady-/tachy-, poly-/oligo- m.fl.), suffix (-itis, -om, -os, -ektomi, -tomi, -skopi, -algi, -plegi m.fl.), ordstammar, bindevokal, försvenskningsregler (ph→f, ae→e, c→k) samt sv/latin-glosor för grundorgan.

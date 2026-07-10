@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Quiz-regelgrind (CLAUDE_REGLER.md §2.9–2.11). Blockerar commit om en STAGEAD
+# quiz-datafil bryter mot en maskinellt kontrollerbar regel.
+# Kollar bara stageade data/*.json – gammal skuld i orörda filer blockerar inte.
+# Kringgå medvetet vid behov med:  git commit --no-verify
+set -euo pipefail
+
+staged=$(git diff --cached --name-only --diff-filter=ACM | grep -E '^data/.*\.json$' || true)
+[ -z "$staged" ] && exit 0
+
+echo "🔍 Quiz-regelkontroll av stageade datafiler…"
+if ! python3 scripts/validate_quiz.py $staged; then
+  echo ""
+  echo "⛔ Commit stoppad: åtgärda FELen ovan, eller kör 'git commit --no-verify' om du medvetet vill hoppa över."
+  exit 1
+fi
