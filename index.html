@@ -9,8 +9,8 @@
   <!-- =========================================================
        Primär SEO
        ========================================================= -->
-  <title>Anatomiquiz - Öva på anatomi och medicinsk terminologi</title>
-  <meta name="description" content="Gratis anatomiquiz och medicinsk ordbok på svenska. Träna inför tentan med frågor om skelett, muskler, leder, neurologi och medicinsk terminologi.">
+  <title>Anatomiquiz – öva anatomi, fysiologi och medicinsk terminologi</title>
+  <meta name="description" content="Gratis quiz och flashcards i anatomi och fysiologi på svenska. Öva skelett, muskler, nerver och medicinsk terminologi – med ordlista och pluggtabeller.">
   <meta name="author" content="Daniel Medin (Norrtou Creations)">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <meta name="google-site-verification" content="smalkweCXCWhHIr3nwW1A4Sp7k6jqf6O1bcg0cK6UK4">
@@ -29,8 +29,8 @@
        ========================================================= -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://anatomiquiz.se/">
-  <meta property="og:title" content="Anatomiquiz - Öva på anatomi och medicinsk terminologi">
-  <meta property="og:description" content="Gratis anatomiquiz och medicinsk ordbok på svenska. Träna skelett, muskler, neurologi och medicinsk terminologi. Passar studenter inom vård och medicin.">
+  <meta property="og:title" content="Anatomiquiz – öva anatomi, fysiologi och medicinsk terminologi">
+  <meta property="og:description" content="Gratis quiz och flashcards i anatomi och fysiologi på svenska – skelett, muskler, leder, nerver och medicinsk terminologi. Med medicinsk ordlista och pluggtabeller för dig som pluggar vård eller medicin.">
   <meta property="og:image" content="https://anatomiquiz.se/img/og-image.png">
   <meta property="og:image:width" content="1518">
   <meta property="og:image:height" content="864">
@@ -42,8 +42,8 @@
        Twitter / X Card
        ========================================================= -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Anatomiquiz - Öva på anatomi och medicinsk terminologi">
-  <meta name="twitter:description" content="Gratis anatomiquiz och medicinsk ordbok på svenska. Träna skelett, muskler, neurologi och medicinsk terminologi.">
+  <meta name="twitter:title" content="Anatomiquiz – öva anatomi, fysiologi och medicinsk terminologi">
+  <meta name="twitter:description" content="Gratis quiz och flashcards i anatomi och fysiologi på svenska. Skelett, muskler, nerver och medicinsk terminologi – med ordlista och pluggtabeller.">
   <meta name="twitter:image" content="https://anatomiquiz.se/img/og-image.png">
   <meta name="twitter:image:alt" content="Anatomiquiz — en fråga om plattben visas på skärmen">
 
@@ -57,13 +57,13 @@
     "@context": "https://schema.org",
     "@type": ["WebApplication", "LearningResource"],
     "name": "Anatomiquiz",
-    "description": "Gratis interaktiv anatomiquiz på svenska med frågor om skelett, muskler, neurologi, blodomloppet och medicinsk terminologi.",
+    "description": "Gratis quiz och flashcards i anatomi och fysiologi på svenska – skelett, muskler, leder, nerver, cirkulation och medicinsk terminologi. Kompletteras av en medicinsk ordlista och pluggtabeller över muskler, skelett, nerver och kärl.",
     "applicationCategory": "EducationApplication",
     "operatingSystem": "Web",
     "inLanguage": "sv-SE",
     "isAccessibleForFree": true,
     "educationalUse": "practice",
-    "learningResourceType": "quiz",
+    "learningResourceType": ["quiz", "flashcard", "reference"],
     "author": {
       "@type": "Organization",
       "name": "Norrtou Creations",
@@ -72,20 +72,32 @@
     "audience": {
       "@type": "EducationalAudience",
       "educationalRole": "student",
-      "audienceType": "Arbetsterapeuter, fysioterapeuter, sjuksköterskor, läkare och medicinstudenter"
+      "audienceType": "Arbetsterapeuter, fysioterapeuter, sjuksköterskor, läkare, biomedicinska analytiker och andra vård- och medicinstudenter"
     },
     "about": [
       { "@type": "Thing", "name": "Human anatomi" },
+      { "@type": "Thing", "name": "Fysiologi" },
       { "@type": "Thing", "name": "Medicinsk terminologi" },
       { "@type": "Thing", "name": "Osteologi" },
-      { "@type": "Thing", "name": "Neurologi" },
+      { "@type": "Thing", "name": "Myologi" },
+      { "@type": "Thing", "name": "Artrologi" },
+      { "@type": "Thing", "name": "Neuroanatomi" },
       { "@type": "Thing", "name": "Blodomloppet" }
     ],
-    "hasPart": {
-      "@type": "DefinedTermSet",
-      "name": "Medicinsk ordlista",
-      "url": "https://anatomiquiz.se/medicinskordlista.html"
-    }
+    "hasPart": [
+      {
+        "@type": "DefinedTermSet",
+        "name": "Medicinsk ordlista",
+        "url": "https://anatomiquiz.se/medicinskordlista.html"
+      },
+      {
+        "@type": "LearningResource",
+        "name": "Kunskapsbanken",
+        "description": "Studietabeller över muskler, skelett, leder, nerver och kärl samt faktatexter och medicinsk terminologi.",
+        "learningResourceType": "reference",
+        "url": "https://anatomiquiz.se/kunskapsbank/"
+      }
+    ]
   }
   </script>
 
@@ -94,7 +106,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="css/styles.css?v=0.7.28">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.143">
 </head>
 <body>
 
@@ -567,17 +579,88 @@
     <section class="card intro" aria-labelledby="introHeading">
       <h2 id="introHeading">Om Anatomiquiz</h2>
       <p>
-        Anatomiquiz är ett gratis, interaktivt quiz på svenska för dig som pluggar anatomi.
-        Träna skelett, muskler, neurologi, blodomloppet och medicinsk terminologi inför tentan
-        – som arbetsterapeut, fysioterapeut, sjuksköterska eller läkarstudent. Slå upp begrepp
-        i den <a href="medicinskordlista.html">medicinska ordlistan</a> eller öva med quiz och
-        flashcards ovan.
+        Anatomiquiz är ett gratis studieverktyg på svenska för dig som läser anatomi och
+        fysiologi på en vård- eller medicinutbildning. Här kan du träna med quiz och flashcards,
+        slå upp begrepp i den <a href="medicinskordlista.html">medicinska ordlistan</a> och
+        plugga med tabeller över muskler, skelett, leder, nerver och kärl. Allt fungerar direkt
+        i webbläsaren, i mobilen som på datorn, utan konto och utan kostnad.
+      </p>
+
+      <h3>Quiz och flashcards</h3>
+      <p>
+        Frågorna är sorterade efter utbildning och ämne, så att du kan öva på just det som
+        ingår i din kurs – arbetsterapeut, fysioterapeut, sjuksköterska, läkare, biomedicinsk
+        analytiker och flera andra program. Ämnena spänner från rörelseapparaten, osteologi och
+        ledlära till neuroanatomi, muskelfysiologi, cirkulation och respiration, smärtfysiologi,
+        läkemedelsräkning och medicinsk terminologi. Du väljer antal frågor och svårighetsgrad
+        och kan blanda flervalsfrågor, sant/falskt, bildfrågor och flashcards – användbart både
+        för snabb repetition mellan föreläsningar och för tentaplugg i slutet av kursen.
       </p>
       <p>
-        Det utförligaste övningsmaterialet finns för närvarande inom arbetsterapi, men vi
-        bygger kontinuerligt vidare så att varje utbildning ska få ett lika rikt material att
-        träna på.
+        Materialet byggs ut löpande. Mest omfattande är i dag arbetsterapi och fysioterapi, och
+        övriga utbildningar fylls på efter hand.
       </p>
+
+      <h3>Pluggtabeller och listor</h3>
+      <p>
+        I <a href="kunskapsbank/">kunskapsbanken</a> finns strukturerade studietabeller att läsa
+        och repetera från, region för region, med latinska namn och kliniskt relevanta detaljer:
+      </p>
+      <ul>
+        <li>
+          <a href="kunskapsbank/muskeltabeller.html">Muskeltabeller</a> – ursprung, fäste,
+          funktion och innervation för musklerna i skuldra, överarm, underarm, hand, höft, lår,
+          underben, fot, rygg, bålvägg, hals, ansikte och käke.
+        </li>
+        <li>
+          Tabeller över <a href="kunskapsbank/skelett.html">skelettet</a> och
+          <a href="kunskapsbank/leder.html">lederna</a> – benens delar och landmärken samt
+          ledtyp, rörelseriktningar och ledband.
+        </li>
+        <li>
+          <a href="kunskapsbank/nervtabeller.html">Nervtabeller</a> – perifera nerver, plexus,
+          <a href="kunskapsbank/kranialnerverna.html">kranialnerverna</a>, motoriska och
+          sensoriska banor samt det autonoma nervsystemet.
+        </li>
+        <li>
+          <a href="kunskapsbank/karl.html">Kärltabeller</a> – artärer och vener per kroppsregion.
+        </li>
+        <li>
+          <a href="kunskapsbank/faktatexter.html">Faktatexter</a> och
+          <a href="kunskapsbank/lakemedelsberakning.html">läkemedelsberäkning</a> – fördjupning
+          i hur systemen hänger ihop, respektive räknesätt, enheter och omvandlingar.
+        </li>
+      </ul>
+
+      <h3>Medicinsk ordlista och terminologi</h3>
+      <p>
+        Den <a href="medicinskordlista.html">medicinska ordlistan</a> innehåller tusentals
+        uppslagsord A–Ö: anatomiska termer på latin och svenska, sjukdomar med ICD-koder,
+        förkortningar, labbprover med referensvärden samt prefix och suffix. Vill du förstå
+        varför orden ser ut som de gör förklarar avdelningen
+        <a href="kunskapsbank/medicinsk-terminologi.html">medicinsk terminologi</a> ordbildning,
+        <a href="kunskapsbank/medicinskt-latin.html">medicinskt latin</a>,
+        <a href="kunskapsbank/deklinationer-pluralformer.html">deklinationer och pluralformer</a>
+        samt <a href="kunskapsbank/uttalsregler.html">uttal</a>. I
+        <a href="case.html">patientfallen</a> används terminologin i sitt kliniska sammanhang.
+      </p>
+
+      <h3>Vem ligger bakom sidan?</h3>
+      <p>
+        Anatomiquiz är utvecklat av Norrtou Creations. Mer om bakgrunden och källorna finns
+        under <a href="info.html">Om Anatomiquiz</a>. Andra projekt därifrån:
+      </p>
+      <ul>
+        <li>
+          <a href="https://norrtou.github.io/activitydiary/" rel="noopener">Aktivitetsdagboken</a>
+          – ett digitalt verktyg för arbetsterapeuter och deras klienter som kartlägger dygnets
+          aktiviteter och hur de ger eller tar energi.
+        </li>
+        <li>
+          <a href="https://norrtou.github.io/HEC/" rel="noopener">HEC</a> – tolv webbaserade
+          övningar som mäter öga–hand-koordination, reaktionstid och motorisk precision.
+        </li>
+      </ul>
     </section>
 
     <!-- =========================================================
@@ -591,6 +674,6 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.142" defer></script>
+  <script src="js/app.js?v=0.9.143" defer></script>
 </body>
 </html>

@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.143
+- **Startsidans Om-sektion utbyggd och sökordsbreddad.** Texten gick från två stycken till fyra avsnitt (Quiz och flashcards, Pluggtabeller och listor, Medicinsk ordlista och terminologi, Vem ligger bakom sidan?) i sakligt, icke-säljande tonläge. Termer som tidigare saknades helt på startsidan täcks nu: fysiologi (muskel-, smärt-, arbets- och elektrofysiologi), osteologi, ledlära, neuroanatomi, innervation, ursprung och fäste, kranialnerver, ICD-koder, referensvärden, pluggtabeller/studietabeller, tentaplugg och biomedicinsk analytiker.
+- **Intern länkning från startsidan: 5 → 17 länkar** – muskeltabeller, skelett, leder, nervtabeller, kranialnerverna, kärltabeller, faktatexter, läkemedelsberäkning, medicinsk terminologi, medicinskt latin, deklinationer/pluralformer, uttalsregler, patientfall, ordlistan, kunskapsbanken och info. Samtliga mål verifierade att de finns.
+- **Norrtou Creations namngivet på startsidan** med korta beskrivningar av och länkar till Aktivitetsdagboken och HEC.
+- **SEO-meta uppdaterad så den matchar innehållet** (efter godkännande): `<title>`/`og:title`/`twitter:title` → "Anatomiquiz – öva anatomi, fysiologi och medicinsk terminologi" (62 tecken, inom Bings ~65-teckensideal, unik, nyckelord tidigt); description/og/twitter omskrivna med fysiologi, flashcards, ordlista och pluggtabeller (151/203/147 tecken). JSON-LD: bredare `description`, `learningResourceType` → `["quiz","flashcard","reference"]`, `about` utökad med Fysiologi/Myologi/Artrologi/Neuroanatomi (Neurologi → Neuroanatomi), biomedicinska analytiker i `audience`, och `hasPart` som array med både ordlistan och kunskapsbanken.
+- **CSS**: `.intro` fick regler för `h3`, `ul` och `li` med litet listindrag (samma mobilfix som `.info-about`, även i 640px-brytpunkten).
+- **CSS-cachebustern synkad över hela sajten** – låg tidigare på två olika värden (33 sidor på 0.7.17, 68 på 0.7.28). Alla 101 sidor + `STYLES_V` i `scripts/generate_glossary.py` → 0.9.143, så generatorn fortsatt skriver byte-identiska ordlistesidor.
+- VERSION/APP_VERSION/index.html-cachebuster → 0.9.143.
+
 ## 0.9.142
 - **Längdbias i fysioterapeut helt åtgärdad – alla 14 ämnen klara.** De fem sista ämnena färdigsvepta så rätt svar inte längre är systematiskt längst: `fysio_hand_handled` (49→0), `fysio_hoft_backen` (49→0), `fysio_axel_skulder` (48→0), `fysio_kardio_resp` (45→0) och `fysio_armbage_underarm` (41→0). **Hela fysioterapeut.json: 815/1420 (57 %) → 0/1420 (0 %) rätt-svar-längst**, alla 1420 frågor intakta. Metod genomgående: utbyggda distraktorer till jämförbar längd och nedkortade (kompletta) rätt svar; term-/enordssvar fick en jämförbart lång distraktor.
 - VERSION/APP_VERSION/index.html-cachebuster → 0.9.142.

@@ -49,7 +49,7 @@ SITE = "https://anatomiquiz.se"
 LANDING_FILE = "medicinskordlista.html"
 
 # Cachebusters per asset — bumpa bara den som faktiskt ändrats.
-STYLES_V = "0.7.17"       # css/styles.css (synkad med övriga sidor 2026-06-28)
+STYLES_V = "0.9.143"       # css/styles.css (synkad med övriga sidor 2026-07-12)
 GLOSSARY_V = "0.9.4"      # css/glossary.css + js/glossary.js (denna release)
 
 # Svenska alfabetet — fast ordning för alfabetsraden. Bokstäver utan poster
