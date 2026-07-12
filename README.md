@@ -31,7 +31,3 @@ Sajten använder [IndexNow](https://www.indexnow.org/) för att meddela Bing/Yan
 - **Nyckelfil:** `ff1efd99d9aa024279a96e753a78c317.txt` i roten (måste ligga kvar; bevisar domänägande).
 - **Automatik:** `.github/workflows/indexnow.yml` körs när GitHub Pages-bygget är live (`page_build`) och postar URL:erna ur `sitemap.xml`. Inget manuellt steg behövs.
 - **Manuell körning:** Actions-fliken → *IndexNow* → *Run workflow* (`workflow_dispatch`).
-
-## 📄 Licens
-
-Fritt att använda och modifiera för utbildningsändamål.
