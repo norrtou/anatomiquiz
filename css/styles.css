@@ -275,6 +275,27 @@ main {
   font-weight: 600;
 }
 
+/* Hopfälld fördjupning: håller startsidan kort på mobil (hela texten ryms annars
+   inte på en iPhone-skärm). Innehållet ligger kvar i DOM:en och indexeras. */
+.intro-more > summary {
+  cursor: pointer;
+  color: var(--primary-deep);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 6px 0;
+  list-style-position: inside;
+}
+
+.intro-more > summary:focus-visible {
+  outline: 2px solid var(--primary-deep);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.intro-more[open] > summary {
+  margin-bottom: 6px;
+}
+
 /* Dölj Om-sektionen när startvyn är dold (under quiz/flashcards/resultat) */
 #setup.hidden ~ .intro {
   display: none;
@@ -769,6 +790,38 @@ select:focus-visible {
 @media (max-width: 400px) {
   .quiz-image .question .content-image img {
     max-height: 42vh;
+  }
+}
+
+/* TEXTQUIZ PÅ MOBIL — autoanpassad storlek (--quiz-fit).
+   Långa frågor med långa svarsalternativ knuffade Nästa-knappen under fold.
+   fitQuizToViewport() i app.js mäter kortets höjd mot den synliga viewporten
+   (visualViewport, dvs Safaris verkliga yta med adressfältet framme) och drar
+   ned --quiz-fit från 1 tills allt ryms. Skalan påverkar text, paddings och
+   mellanrum – men träffytan hålls ≥44px och texten ≥0.82rem (WCAG). Bildfrågor
+   har sin egen tunade layout (.quiz-image) och rörs inte. */
+@media (max-width: 640px) {
+  #quiz:not(.quiz-image) .question {
+    font-size: max(0.95rem, calc(1.25rem * var(--quiz-fit, 1)));
+    padding: calc(20px * var(--quiz-fit, 1));
+    margin-bottom: calc(24px * var(--quiz-fit, 1));
+  }
+  #quiz:not(.quiz-image) .quiz-header {
+    margin-bottom: calc(24px * var(--quiz-fit, 1));
+    padding-bottom: calc(16px * var(--quiz-fit, 1));
+  }
+  #quiz:not(.quiz-image) .answers {
+    margin: calc(24px * var(--quiz-fit, 1)) 0;
+    gap: max(8px, calc(12px * var(--quiz-fit, 1)));
+  }
+  #quiz:not(.quiz-image) .answer-btn {
+    font-size: max(0.82rem, calc(1rem * var(--quiz-fit, 1)));
+    padding: calc(16px * var(--quiz-fit, 1)) calc(20px * var(--quiz-fit, 1));
+    min-height: max(44px, calc(60px * var(--quiz-fit, 1)));
+  }
+  #quiz:not(.quiz-image) .quiz-footer {
+    margin-top: calc(24px * var(--quiz-fit, 1));
+    padding-top: calc(16px * var(--quiz-fit, 1));
   }
 }
 

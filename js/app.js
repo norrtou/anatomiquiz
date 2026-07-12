@@ -73,7 +73,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.143'
+const APP_VERSION = '0.9.144'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -518,10 +518,41 @@ function showQuestion(){
   // browsern upp till knappen och man "hoppar" runt på sidan.
   setTimeout(()=>{
     el('quiz').scrollIntoView({ block: 'start' })
+    fitQuizToViewport()
     const first = el('answers').querySelector('button')
     if(first) first.focus({ preventScroll: true })
   }, 50)
 }
+
+// Krymp textquizet tills fråga + svarsalternativ + Nästa ryms på en mobilskärm.
+// Långa frågor med långa svar knuffade annars Nästa-knappen under fold, särskilt
+// i Safari på iPhone där adressfältet äter ~100px av höjden (visualViewport ger
+// den verkliga ytan, innerHeight gör inte det). CSS-variabeln --quiz-fit skalar
+// text, paddings och mellanrum; golv på 44px träffyta och 0.82rem text i CSS.
+const QUIZ_FIT_MIN = 0.7
+const QUIZ_FIT_STEP = 0.04
+
+function fitQuizToViewport(){
+  const quiz = el('quiz')
+  if(!quiz || quiz.classList.contains('hidden')) return
+  // Bara mobil (matchar CSS-brytpunkten); bildfrågor har sin egen tunade layout.
+  if(window.innerWidth > 640 || quiz.classList.contains('quiz-image')){
+    quiz.style.removeProperty('--quiz-fit')
+    return
+  }
+  const avail = (window.visualViewport && window.visualViewport.height) || window.innerHeight
+  let fit = 1
+  quiz.style.setProperty('--quiz-fit', '1')
+  // Kortets underkant (Nästa-knappen) ska ligga innanför den synliga ytan.
+  while(fit > QUIZ_FIT_MIN && quiz.getBoundingClientRect().bottom > avail - 8){
+    fit = Math.round((fit - QUIZ_FIT_STEP) * 100) / 100
+    quiz.style.setProperty('--quiz-fit', String(fit))
+  }
+}
+
+// Rotation, adressfält som fälls in/ut, textstorleksändring – mät om.
+window.addEventListener('resize', fitQuizToViewport)
+if(window.visualViewport) window.visualViewport.addEventListener('resize', fitQuizToViewport)
 
 // Markera en svarsknapp som rätt/fel med färg + ✓/✗ + dold skärmläsartext,
 // så att utfallet inte förmedlas med enbart färg (WCAG 1.4.1).

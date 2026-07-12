@@ -107,7 +107,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="css/styles.css?v=0.9.143">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.144">
 </head>
 <body>
 
@@ -576,6 +576,9 @@
          Om-sektion — beskrivande text sist på sidan.
          Döljs automatiskt när startvyn (#setup) är dold, dvs under
          pågående quiz/flashcards, via CSS (#setup.hidden ~ .intro).
+         Allt utom inledningsstycket ligger i en hopfälld <details> så att
+         startsidan förblir kort på mobil (iPhone-höjd). Texten finns kvar i
+         DOM:en och indexeras – den är dold för ögat, inte för crawlern.
          ========================================================= -->
     <section class="card intro" aria-labelledby="introHeading">
       <h2 id="introHeading">Om Anatomiquiz</h2>
@@ -586,6 +589,9 @@
         plugga med tabeller över muskler, skelett, leder, nerver och kärl. Allt fungerar direkt
         i webbläsaren, i mobilen som på datorn, utan konto och utan kostnad.
       </p>
+
+      <details class="intro-more">
+      <summary>Läs mer om quizet, pluggtabellerna och ordlistan</summary>
 
       <h3>Quiz och flashcards</h3>
       <p>
@@ -665,6 +671,7 @@
           precision.
         </li>
       </ul>
+      </details>
     </section>
 
     <!-- =========================================================
@@ -678,6 +685,6 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.143" defer></script>
+  <script src="js/app.js?v=0.9.144" defer></script>
 </body>
 </html>
