@@ -2,7 +2,7 @@
  * glossary.js — Medicinsk ordlista (global sökning över alla undersidor)
  *
  * Ordlistan är uppdelad i en sida per begynnelsegrupp (ordlista-a.html …,
- * ordlista-siffror.html, ordlista-prefix.html, ordlista-tecken.html) plus en
+ * ordlista-siffror.html, ordlista-prefix.html, ordlista-suffix.html) plus en
  * landningssida. Varje
  * sida levererar sitt innehåll FÖRRENDERAT som statisk <dl> — crawlbart och
  * läsbart helt utan JavaScript. Den här filen bygger INTE om listan; den lägger
@@ -57,17 +57,17 @@ function isPrefixEntry(entry) {
 
 /** Vilken sida en post hör till. Speglar page_key() i Python. */
 function pageKey(entry) {
-  if (isSuffixEntry(entry)) return 'tecken'
+  if (isSuffixEntry(entry)) return 'suffix'
   if (isPrefixEntry(entry)) return 'prefix'
   const c = sortValue(entry)[0]
   if (c >= '0' && c <= '9') return 'siffror'
   const cu = c.toUpperCase()
-  return SWEDISH_ALPHABET.includes(cu) ? cu : 'tecken'
+  return SWEDISH_ALPHABET.includes(cu) ? cu : 'suffix'
 }
 
 /** Filnamns-slug för en grupp. */
 function pageSlug(key) {
-  if (key === 'siffror' || key === 'prefix' || key === 'tecken') return key
+  if (key === 'siffror' || key === 'prefix' || key === 'suffix') return key
   return PAGE_SLUG[key] || key.toLowerCase()
 }
 

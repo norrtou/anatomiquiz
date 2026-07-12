@@ -5,7 +5,12 @@ generate_glossary.py — förrenderar den medicinska ordlistan för SEO och no-J
 Källa: data/ordlista.json
 Mål:   medicinskordlista.html (landningssida) + en sida per icke-tom grupp:
        ordlista-<a..z|aa|ae|oe>.html, ordlista-siffror.html, ordlista-prefix.html
-       (förstavelser), ordlista-tecken.html (suffix/ändelser) samt sitemap.xml.
+       (förstavelser), ordlista-suffix.html (ändelser) samt sitemap.xml.
+
+       ordlista-tecken.html är den GAMLA filnamns-sluggen för suffix-sidan
+       (bytt namn 2026-07-12) och underhålls nu för hand som en ren
+       klient-redirect till ordlista-suffix.html, för att inte tappa den sidans
+       indexering. Se LEGACY_REDIRECT_FILES nedan.
 
 Bakgrund: en enda ordliste-HTML växte till ~3,5 MB och fick katastrofal
 hastighet i Search Console (Core Web Vitals mäts per URL). Lösningen är att
@@ -53,11 +58,15 @@ SWEDISH_ALPHABET = list("ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ")
 
 # Specialgrupper (egna sidor som inte är en begynnelsebokstav), i den ordning de
 # visas EFTER A–Ö i alfabetsraden och på landningssidan: siffror först, sedan
-# förstavelser (prefix) och ändelser (suffix). 'tecken' är av historiska skäl
-# filnamns-slug för suffix-sidan; 'prefix' är dess motsvarighet för prefix.
-SPECIAL_ORDER = ["siffror", "prefix", "tecken"]
+# förstavelser (prefix) och ändelser (suffix).
+SPECIAL_ORDER = ["siffror", "prefix", "suffix"]
 SPECIAL = set(SPECIAL_ORDER)
 GROUP_ORDER = SWEDISH_ALPHABET + SPECIAL_ORDER
+
+# Gamla filnamn som ska finnas kvar som permanenta klient-redirects till en
+# nyare slug, i stället för att raderas av föräldralös-städningen i main().
+# Underhålls för hand (INTE av render_page/write_group) — se toppdocstring.
+LEGACY_REDIRECT_FILES = {"ordlista-tecken.html"}
 
 # Diakriter → ASCII för term-slugs (måste matcha slugifyBase i js/glossary.js)
 _SLUG_MAP = {"å": "a", "ä": "a", "ö": "o", "é": "e", "è": "e", "ü": "u"}
@@ -103,7 +112,7 @@ GROUP_DESCRIPTIONS = {
     "Ö": "Vad är ödem, östrogen eller ödematös? Slå upp medicinska och anatomiska ord på Ö med tydlig definition, synonymer och språkligt ursprung.",
     "siffror": "Vad betyder 5-ASA eller 5-FU? Slå upp medicinska termer och förkortningar som inleds med en siffra – med definition och förklaring på svenska.",
     "prefix": "Vad betyder förstavelser som a-, hyper-, endo- och hemi-? Latinska och grekiska prefix i medicinska och anatomiska termer – med betydelse och exempel.",
-    "tecken": "Vad betyder ändelser som -it, -emi, -ektomi och -patia? Latinska och grekiska suffix i medicinska och anatomiska termer – med betydelse och exempel.",
+    "suffix": "Vad betyder ändelser som -it, -emi, -ektomi och -patia? Latinska och grekiska suffix i medicinska och anatomiska termer – med betydelse och exempel.",
 }
 
 # Unik <title> per grupp-sida. ALLA delade tidigare exakt samma mall (bara
@@ -143,7 +152,7 @@ GROUP_TITLES = {
     "Ö": "Medicinska Ö-ord förklarade | Anatomiquiz",
     "siffror": "Medicinska termer som börjar med siffra | Anatomiquiz",
     "prefix": "Medicinska förstavelser och prefix förklarade | Anatomiquiz",
-    "tecken": "Medicinska ändelser och suffix förklarade | Anatomiquiz",
+    "suffix": "Medicinska ändelser och suffix förklarade | Anatomiquiz",
 }
 
 LANDING_DESC = (
@@ -211,12 +220,12 @@ def is_prefix(entry: dict) -> bool:
 def page_key(entry: dict) -> str:
     """Vilken sida en post hör till. Måste matcha pageKey() i js/glossary.js.
 
-    Suffix → 'tecken'; prefix → 'prefix'; siffror → 'siffror'; A–Ö → versal
+    Suffix → 'suffix'; prefix → 'prefix'; siffror → 'siffror'; A–Ö → versal
     bokstav. Affix avgörs av ordklassen (def) så att prefix samlas på en egen
     sida i stället för att spridas ut bland bokstavssidorna.
     """
     if is_suffix(entry):
-        return "tecken"
+        return "suffix"
     if is_prefix(entry):
         return "prefix"
     c = sort_value(entry)[0]
@@ -225,7 +234,7 @@ def page_key(entry: dict) -> str:
     cu = c.upper()
     if cu in SWEDISH_ALPHABET:
         return cu
-    return "tecken"
+    return "suffix"
 
 
 def page_slug(key: str) -> str:
@@ -279,16 +288,12 @@ def format_def(text: str) -> str:
 # ---------------------------------------------------------------------------
 
 def group_label(key: str) -> str:
-    """Kort etikett för alfabetsraden (chip-text).
-
-    'tecken'-facket innehåller bara suffix (poster som inleds med streck), så
-    chippet märks "suffix" i stället för en generisk symbol.
-    """
+    """Kort etikett för alfabetsraden (chip-text)."""
     if key == "siffror":
         return "0–9"
     if key == "prefix":
         return "prefix"
-    if key == "tecken":
+    if key == "suffix":
         return "suffix"
     return key
 
@@ -299,7 +304,7 @@ def group_heading(key: str) -> str:
         return "siffror"
     if key == "prefix":
         return "förstavelser (prefix)"
-    if key == "tecken":
+    if key == "suffix":
         return "ändelser (suffix)"
     return key
 
@@ -684,14 +689,14 @@ SPECIAL_TAGLINES = {
         "– som a-, hyper- och endo- – med betydelse, ursprung och exempel. "
         "Sök i hela ordlistan nedan, eller bläddra vidare."
     ),
-    "tecken": (
+    "suffix": (
         "Medicinska och anatomiska ändelser (suffix) ur latinet och grekiskan – "
         "som -it, -emi och -ektomi – med betydelse, ursprung och exempel. "
         "Sök i hela ordlistan nedan, eller bläddra vidare."
     ),
 }
 
-SPECIAL_LABELS = {"siffror": "Siffror", "prefix": "Förstavelser", "tecken": "Ändelser"}
+SPECIAL_LABELS = {"siffror": "Siffror", "prefix": "Förstavelser", "suffix": "Ändelser"}
 
 
 def write_group(key: str, entries: list[dict], present: set[str]) -> str:
@@ -867,7 +872,11 @@ def main() -> None:
         raise SystemExit(f"FEL: <title> >{TITLE_MAX} tecken: {too_long}")
 
     # Rensa bort föräldralösa ordliste-sidor (grupp som tömts sedan förra körningen).
+    # Undantag: LEGACY_REDIRECT_FILES underhålls för hand som redirects och ska
+    # aldrig raderas här.
     for old in ROOT.glob("ordlista-*.html"):
+        if old.name in LEGACY_REDIRECT_FILES:
+            continue
         key_slug = old.name.removeprefix("ordlista-").removesuffix(".html")
         if key_slug not in {page_slug(k) for k in present}:
             old.unlink()
