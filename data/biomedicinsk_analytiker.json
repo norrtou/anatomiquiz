@@ -3,9 +3,9 @@
     "id": "bma_cell_1",
     "type": "mc",
     "prompt": "Vilken grundstruktur har cellmembranet enligt den vedertagna modellen?",
-    "correct": "En fosfolipid-dubbelskikt med inbäddade proteiner",
+    "correct": "Ett fosfolipid-dubbelskikt med inbäddade proteiner",
     "distractors": [
-      "Ett enkelt proteinskikt utan lipider",
+      "Ett enkelt proteinskikt helt utan lipider eller fetter",
       "Ett rent kolhydratskikt",
       "Ett homogent kolesterolskikt"
     ],
@@ -47,7 +47,7 @@
     "prompt": "Vad kallas membranproteiner som går genom hela lipiddubbelskiktet?",
     "correct": "Integrala membranproteiner",
     "distractors": [
-      "Perifera membranproteiner",
+      "Perifera membranproteiner på ytan",
       "Glykolipider",
       "Kolesterolmolekyler"
     ],
@@ -203,7 +203,7 @@
     "distractors": [
       "Den saknar helt membran",
       "Den finns bara i muskelceller",
-      "Den kan bara bildas i cellkärnan"
+      "Den kan bara nybildas inne i cellkärnan"
     ],
     "topic": "bma_cell_vavnad",
     "difficulty": "Normal",
@@ -244,7 +244,7 @@
     "correct": "Golgiapparaten",
     "distractors": [
       "Lysosomen",
-      "Mitokondrien",
+      "Mitokondrien i cellen",
       "Peroxisomen"
     ],
     "topic": "bma_cell_vavnad",
@@ -313,9 +313,9 @@
     "prompt": "Vilka strukturer bygger upp cellens cytoskelett?",
     "correct": "Mikrotubuli, mikrofilament och intermediärfilament",
     "distractors": [
-      "Endast mikrotubuli, utan andra filamenttyper",
-      "Endast kollagenfibrer i extracellulär matrix",
-      "Endast DNA-strängar inne i cellkärnan"
+      "Endast mikrotubuli, mikrofilament och kollagena fibrer",
+      "Kollagenfibrer, elastin och retikulära fibrer i matrix",
+      "DNA-strängar, RNA och ribosomer i cellkärnan"
     ],
     "topic": "bma_cell_vavnad",
     "difficulty": "Normal",
@@ -469,7 +469,7 @@
     "distractors": [
       "En enkel proteinkedja",
       "Ett förgrenat kolhydrat",
-      "En cirkulär lipidstruktur"
+      "En cirkulär lipidstruktur i cellen"
     ],
     "topic": "bma_cell_vavnad",
     "difficulty": "Normal",
@@ -495,7 +495,7 @@
     "prompt": "Vad kallas processen då DNA:s information kopieras till mRNA?",
     "correct": "Transkription",
     "distractors": [
-      "Translation",
+      "Translation i ribosomen",
       "Replikation",
       "Mitos"
     ],
@@ -621,7 +621,7 @@
     "prompt": "Vad är den biologiska funktionen med meios, till skillnad från mitos?",
     "correct": "Att halvera kromosomtalet och skapa genetisk variation vid bildning av könsceller",
     "distractors": [
-      "Att bilda identiska kroppsceller vid vanlig mitotisk celldelning",
+      "Att bilda genetiskt identiska kroppsceller vid en vanlig mitotisk celldelning i vävnaden",
       "Att enbart reparera skadat DNA i cellens kromosomer",
       "Att öka cellens totala storlek inför en kommande delning"
     ],
@@ -635,7 +635,7 @@
     "prompt": "Vad kallas programmerad, kontrollerad celldöd som inte utlöser inflammation?",
     "correct": "Apoptos",
     "distractors": [
-      "Nekros",
+      "Nekrotisk celldöd",
       "Mitos",
       "Meios"
     ],
@@ -789,7 +789,7 @@
     "prompt": "Vad kännetecknar pseudostratifierat epitel, t.ex. i luftvägarna?",
     "correct": "Alla celler vilar mot basalmembranet men når inte alla ytan, vilket ger ett falskt intryck av flera lager",
     "distractors": [
-      "Det har verkligen flera separata cellager staplade ovanpå varandra",
+      "Det har verkligen flera helt separata cellager staplade ovanpå varandra, där bara det understa når basalmembranet",
       "Det saknar helt basalmembran, så cellerna glider fritt",
       "Det finns bara i njurarnas tubuli och ingen annanstans i kroppen"
     ],
@@ -831,7 +831,7 @@
     "prompt": "Är epitelvävnad vaskulariserad (försedd med egna blodkärl)?",
     "correct": "Nej, epitel är avaskulärt och får näring via diffusion från underliggande bindväv",
     "distractors": [
-      "Ja, rikligt vaskulariserat via ett tätt nätverk av egna kapillärer",
+      "Ja, rikligt vaskulariserat via ett tätt nätverk av egna kapillärer i vävnaden under ytan",
       "Endast flerskiktat epitel har egna blodkärl som når ytan",
       "Endast körtelepitel har egna blodkärl som försörjer det"
     ],
@@ -943,7 +943,7 @@
     "prompt": "Vilken typ av bindväv har oregelbundet ordnade kollagenfibrer och finns t.ex. i läderhuden (dermis)?",
     "correct": "Tät oregelbunden bindväv",
     "distractors": [
-      "Tät regelbunden bindväv",
+      "Tät regelbunden bindväv i sena",
       "Lös bindväv",
       "Broskvävnad"
     ],
@@ -972,7 +972,7 @@
     "correct": "Fibroblaster",
     "distractors": [
       "Osteocyter",
-      "Kondrocyter",
+      "Kondrocyter i brosk",
       "Myocyter"
     ],
     "topic": "bma_cell_vavnad",
@@ -1013,7 +1013,7 @@
     "prompt": "Vilken fibertyp bildar ett finmaskigt nätverk som stödjer bland annat lever, mjälte och lymfkörtlar?",
     "correct": "Retikulära fibrer",
     "distractors": [
-      "Kollagena fibrer",
+      "Kollagena fibrer typ I",
       "Elastiska fibrer",
       "Myosinfilament"
     ],
@@ -1028,7 +1028,7 @@
     "correct": "Grundsubstansen",
     "distractors": [
       "Cytosolen",
-      "Sarkoplasman",
+      "Sarkoplasman i muskeln",
       "Kromatinet"
     ],
     "topic": "bma_cell_vavnad",
@@ -1041,9 +1041,9 @@
     "prompt": "Vilka broskvävnadstyper finns i kroppen?",
     "correct": "Hyalint, elastiskt och fibröst brosk",
     "distractors": [
-      "Endast hyalint brosk",
-      "Kompakt och spongiöst brosk",
-      "Rött och gult brosk"
+      "Kompakt, spongiöst och elastiskt brosk",
+      "Rött, gult och vitt brosk",
+      "Hyalint, kompakt och spongiöst brosk"
     ],
     "topic": "bma_cell_vavnad",
     "difficulty": "Normal",
@@ -1069,7 +1069,7 @@
     "prompt": "Vilken broskvävnad finns i örats yttre del (pinna) och epiglottis, och är särskilt böjlig?",
     "correct": "Elastiskt brosk",
     "distractors": [
-      "Hyalint brosk",
+      "Hyalint ledbrosk",
       "Fibröst brosk",
       "Spongiöst ben"
     ],
@@ -1097,7 +1097,7 @@
     "prompt": "Räknas blod som en typ av bindväv, och i så fall varför?",
     "correct": "Ja, eftersom det består av celler i en flytande grundsubstans och har gemensamt embryonalt ursprung med annan bindväv",
     "distractors": [
-      "Nej, blod räknas som en egen, femte vävnadstyp utan gemensamt ursprung med bindväven",
+      "Nej, blod räknas som en helt egen, femte vävnadstyp helt utan något gemensamt embryonalt ursprung med bindväven i kroppen",
       "Nej, blod klassas som en typ av muskelvävnad på grund av sin ständiga rörlighet",
       "Nej, blod klassas som epitelvävnad eftersom det bildar kärlens innersta beklädnad"
     ],
@@ -1126,7 +1126,7 @@
     "correct": "Skelettmuskulatur",
     "distractors": [
       "Hjärtmuskulatur",
-      "Glatt muskulatur",
+      "Glatt muskulatur i tarm",
       "Ingen av dessa"
     ],
     "topic": "bma_cell_vavnad",
@@ -1293,7 +1293,7 @@
     "prompt": "Vilka gliaceller bildar myelinskidan runt axon i det centrala nervsystemet?",
     "correct": "Oligodendrocyter",
     "distractors": [
-      "Schwannceller",
+      "Schwannceller i PNS",
       "Astrocyter",
       "Mikroglia"
     ],
@@ -1337,7 +1337,7 @@
     "distractors": [
       "PAS-färgning enbart",
       "Gramfärgning",
-      "Immunofluorescens enbart"
+      "Immunofluorescens med antikroppar"
     ],
     "topic": "bma_cell_vavnad",
     "difficulty": "Normal",
@@ -1489,7 +1489,7 @@
     "prompt": "Vilka är blodets tre huvudsakliga formade element (cellulära beståndsdelar)?",
     "correct": "Erytrocyter, leukocyter och trombocyter",
     "distractors": [
-      "Endast erytrocyter och leukocyter",
+      "Erytrocyter, leukocyter och plasmaproteiner",
       "Plasmaproteiner, erytrocyter och lymfa",
       "Neutrofiler, lymfocyter och monocyter"
     ],
@@ -1517,7 +1517,7 @@
     "prompt": "Vad anger hematokritvärdet (Hct/EVF)?",
     "correct": "Andelen erytrocyter av blodets totala volym",
     "distractors": [
-      "Hemoglobinkoncentrationen i plasma",
+      "Hemoglobinkoncentrationen i blodets plasmadel",
       "Totala antalet leukocyter",
       "Plasmans proteininnehåll"
     ],
@@ -1575,7 +1575,7 @@
     "distractors": [
       "De behöver ingen energi alls under sin livslängd i blodbanan",
       "De ska inte kunna transportera syre till kroppens vävnader",
-      "Det förhindrar att de någonsin bildas i benmärgens stamceller"
+      "Det förhindrar att de någonsin kan bildas i benmärgens hematopoetiska stamceller i kroppen"
     ],
     "topic": "bma_blod_blodbildning",
     "difficulty": "Normal",
@@ -1630,7 +1630,7 @@
     "correct": "Att transportera syre i blodet",
     "distractors": [
       "Att bilda antikroppar",
-      "Att katalysera koagulationen",
+      "Att katalysera koagulationen i blodet",
       "Att transportera lipider"
     ],
     "topic": "bma_blod_blodbildning",
@@ -1685,7 +1685,7 @@
     "prompt": "Ungefär hur lång är en normal erytrocyts livslängd i blodet?",
     "correct": "Ca 120 dagar",
     "distractors": [
-      "Ca 10 dagar",
+      "Ca 10–14 dagar",
       "Ca 7 timmar",
       "Ca 5 år"
     ],
@@ -1699,7 +1699,7 @@
     "prompt": "Var bryts uttjänta erytrocyter huvudsakligen ner?",
     "correct": "I mjälten, av makrofager",
     "distractors": [
-      "I benmärgen enbart",
+      "I benmärgen, av makrofager",
       "I lungorna",
       "I njurarna"
     ],
@@ -1770,7 +1770,7 @@
     "correct": "Megaloblastisk anemi",
     "distractors": [
       "Järnbristanemi",
-      "Sicklecellanemi",
+      "Sicklecellanemi hos barn",
       "Talassemi"
     ],
     "topic": "bma_blod_blodbildning",
@@ -1811,7 +1811,7 @@
     "prompt": "Vad mäter blodvärdet MCH (mean corpuscular hemoglobin)?",
     "correct": "Genomsnittlig mängd hemoglobin per erytrocyt",
     "distractors": [
-      "Erytrocyternas genomsnittliga volym",
+      "Erytrocyternas genomsnittliga cellvolym i blodet",
       "Hematokritvärdet",
       "Antalet leukocyter per erytrocyt"
     ],
@@ -1825,7 +1825,7 @@
     "prompt": "Vilka är de två huvudgrupperna av leukocyter, baserat på förekomst av cytoplasmatiska granula?",
     "correct": "Granulocyter och agranulocyter",
     "distractors": [
-      "Myeloblaster och lymfoblaster",
+      "Myeloblaster och lymfoblaster i märgen",
       "Fagocyter och trombocyter",
       "Erytroider och myeloider"
     ],
@@ -1839,7 +1839,7 @@
     "prompt": "Vilka tre celltyper räknas som granulocyter?",
     "correct": "Neutrofiler, eosinofiler och basofiler",
     "distractors": [
-      "Lymfocyter, monocyter och neutrofiler",
+      "Lymfocyter, monocyter och neutrofila celler",
       "Neutrofiler, monocyter och basofiler",
       "Eosinofiler, lymfocyter och basofiler"
     ],
@@ -2023,7 +2023,7 @@
     "distractors": [
       "Blodgruppering",
       "Korstest",
-      "Reticulocyträkning"
+      "Retikulocyträkning i blodet"
     ],
     "topic": "bma_blod_blodbildning",
     "difficulty": "Normal",
@@ -2077,7 +2077,7 @@
     "prompt": "Är cirkulerande trombocyter kärnförsedda celler?",
     "correct": "Nej, de saknar cellkärna – de är cellfragment",
     "distractors": [
-      "Ja, de har en enkel, rund kärna",
+      "Ja, de har en enkel, rund cellkärna mitt i cellen",
       "Ja, de har en flerlobad kärna",
       "Ja, men bara i benmärgen"
     ],
@@ -2091,7 +2091,7 @@
     "prompt": "Ungefär hur lång är trombocyternas normala livslängd i blodet?",
     "correct": "Ca 7–10 dagar",
     "distractors": [
-      "Ca 120 dagar",
+      "Ca 120–140 dagar",
       "Ca 24 timmar",
       "Ca 1 år"
     ],
@@ -2133,7 +2133,7 @@
     "prompt": "Vad kallas ett tillstånd med onormalt lågt antal trombocyter i blodet?",
     "correct": "Trombocytopeni",
     "distractors": [
-      "Trombocytos",
+      "Trombocytos i blodet",
       "Leukopeni",
       "Anemi"
     ],
@@ -2163,7 +2163,7 @@
     "distractors": [
       "Att fagocytera bakterier som trängt in vid skadan",
       "Att bilda antikroppar riktade specifikt mot skadan",
-      "Att transportera syre till det skadade vävnadsområdet"
+      "Att transportera syre och näring till det skadade vävnadsområdet i kärlväggen"
     ],
     "topic": "bma_blod_blodbildning",
     "difficulty": "Normal",
@@ -2187,11 +2187,11 @@
     "id": "bma_blod_57",
     "type": "mc",
     "prompt": "Var sker hematopoesen huvudsakligen hos en frisk vuxen människa?",
-    "correct": "I det röda benmärgen",
+    "correct": "I den röda benmärgen",
     "distractors": [
       "I levern",
       "I mjälten",
-      "I lymfkörtlarna"
+      "I lymfkörtlarnas cortex"
     ],
     "topic": "bma_blod_blodbildning",
     "difficulty": "Normal",
@@ -2203,7 +2203,7 @@
     "prompt": "Vilken typ av cell ger, via successiv differentiering, upphov till samtliga blodkroppstyper?",
     "correct": "Den hematopoetiska stamcellen",
     "distractors": [
-      "Myeloblasten enbart",
+      "Myeloblasten i benmärgen enbart",
       "Megakaryocyten",
       "Fibroblasten"
     ],
@@ -2231,9 +2231,9 @@
     "prompt": "Vilka celltyper härstammar från den myeloiska stamcellslinjen?",
     "correct": "Erytrocyter, granulocyter, monocyter och trombocyter",
     "distractors": [
-      "Enbart lymfocyter från den lymfoida linjen",
-      "Enbart B- och T-celler från tymus och benmärg",
-      "Enbart NK-celler från den lymfoida stamcellslinjen"
+      "Lymfocyter, plasmaceller, NK-celler och minnesceller från lymfoida linjen",
+      "B-celler, T-celler, NK-celler och plasmaceller",
+      "NK-celler, T-celler, B-celler och lymfoblaster"
     ],
     "topic": "bma_blod_blodbildning",
     "difficulty": "Normal",
@@ -2259,7 +2259,7 @@
     "prompt": "Var sker hematopoesen hos embryot under de allra första graviditetsveckorna?",
     "correct": "I gulesäcken",
     "distractors": [
-      "I benmärgen",
+      "I benmärgen enbart",
       "I mjälten",
       "I thymus"
     ],
@@ -2273,7 +2273,7 @@
     "prompt": "Vilka organ är huvudsakliga hematopoesplatser hos fostret under mellersta delen av graviditeten (fetal period)?",
     "correct": "Levern och mjälten",
     "distractors": [
-      "Benmärgen enbart",
+      "Benmärgen och thymus",
       "Thymus enbart",
       "Njurarna"
     ],
@@ -2287,7 +2287,7 @@
     "prompt": "Vad kallas den åldersrelaterade omvandlingen av aktivt, blodbildande rött benmärg till inaktiv, fettrik gul benmärg?",
     "correct": "Fettinvolution",
     "distractors": [
-      "Myelofibros",
+      "Myelofibros i märgen",
       "Aplasi",
       "Metaplasi"
     ],
@@ -2331,7 +2331,7 @@
     "distractors": [
       "Lumbalpunktion av spinalvätska",
       "Korstest inför blodtransfusion",
-      "Venpunktion för blodprovtagning"
+      "Venpunktion för vanlig blodprovtagning"
     ],
     "topic": "bma_blod_blodbildning",
     "difficulty": "Normal",
@@ -2399,9 +2399,9 @@
     "prompt": "Vilka tre huvudfaser brukar hemostasen delas in i?",
     "correct": "Vaskulär spasm, primär hemostas och sekundär hemostas",
     "distractors": [
-      "Enbart koagulation och fibrinolys, utan vaskulär fas",
+      "Koagulation, fibrinolys och trombocytadhesion, utan vaskulär fas",
       "Vasodilation, diapedes och fagocytos vid infektion",
-      "Endast trombocytaggregation, utan koagulationsfas"
+      "Trombocytaggregation, fibrinolys och diapedes, utan koagulationsfas"
     ],
     "topic": "bma_blod_blodbildning",
     "difficulty": "Normal",
@@ -2427,7 +2427,7 @@
     "prompt": "Vilket protein i subendotelet binder trombocyter vid kärlskada och möjliggör deras adhesion till skadeytan?",
     "correct": "von Willebrand-faktor",
     "distractors": [
-      "Fibrinogen enbart",
+      "Fibrinogen i plasman enbart",
       "Trombin",
       "Plasmin"
     ],
@@ -2455,7 +2455,7 @@
     "prompt": "Vilka två huvudvägar ingår klassiskt i koagulationskaskaden fram till gemensam slutväg?",
     "correct": "Den extrinsiska vägen och den intrinsiska vägen",
     "distractors": [
-      "Den arteriella och den venösa vägen",
+      "Den arteriella och den venösa koagulationsvägen i kärlen",
       "Den primära och den sekundära vägen",
       "Den myeloida och den lymfoida vägen"
     ],
@@ -2527,7 +2527,7 @@
     "distractors": [
       "Faktor VII",
       "Faktor IX",
-      "Faktor II"
+      "Protrombin, faktor II"
     ],
     "topic": "bma_blod_blodbildning",
     "difficulty": "Normal",
@@ -2582,7 +2582,7 @@
     "correct": "Vävnadsplasminogenaktivator",
     "distractors": [
       "Vitamin K",
-      "Von Willebrand-faktor",
+      "Von Willebrand-faktor i plasma",
       "Trombopoetin"
     ],
     "topic": "bma_blod_blodbildning",
@@ -2609,9 +2609,9 @@
     "prompt": "Vilka antikroppar finns naturligt (utan föregående exponering) i plasman hos en person med blodgrupp O?",
     "correct": "Anti-A och anti-B",
     "distractors": [
-      "Endast anti-A",
-      "Endast anti-B",
-      "Anti-D"
+      "Endast anti-A, inga andra",
+      "Endast anti-B, inga andra",
+      "Anti-D och anti-C"
     ],
     "topic": "bma_blod_blodbildning",
     "difficulty": "Normal",
@@ -2637,7 +2637,7 @@
     "prompt": "Vilken blodgrupp kallas den \"universella mottagaren\" av erytrocyter inom ABO-systemet?",
     "correct": "Blodgrupp AB",
     "distractors": [
-      "Blodgrupp O",
+      "Blodgrupp O negativ",
       "Blodgrupp A",
       "Blodgrupp B"
     ],
@@ -2651,7 +2651,7 @@
     "prompt": "Vad avgör om en person är Rh-positiv eller Rh-negativ?",
     "correct": "Förekomsten av D-antigenet på erytrocyternas yta",
     "distractors": [
-      "Förekomsten av A- eller B-antigen",
+      "Förekomsten av A- eller B-antigen på erytrocyterna",
       "Antalet erytrocyter i blodet",
       "Plasmans albuminhalt"
     ],
@@ -2667,7 +2667,7 @@
     "distractors": [
       "Hon utvecklar omedelbart en svår, akut järnbristanemi",
       "Fostret drabbas omedelbart av en akut form av leukemi",
-      "Inget riskeras alls, eftersom Rh-systemet saknar klinisk betydelse"
+      "Inget riskeras alls, eftersom Rh-systemet helt saknar klinisk betydelse vid graviditet och förlossning hos kvinnan"
     ],
     "topic": "bma_blod_blodbildning",
     "difficulty": "Normal",
@@ -2679,7 +2679,7 @@
     "prompt": "Vilken profylax ges rutinmässigt till Rh-negativa gravida kvinnor för att förhindra immunisering mot D-antigenet?",
     "correct": "Anti-D-immunglobulin",
     "distractors": [
-      "Vitamin K-injektion",
+      "Vitamin K-injektion i muskeln",
       "Erytropoetin",
       "Trombopoetin"
     ],
@@ -2707,7 +2707,7 @@
     "prompt": "Vad kan bli följden om ABO-inkompatibelt blod felaktigt transfunderas till en patient?",
     "correct": "En akut hemolytisk transfusionsreaktion med agglutination och hemolys av erytrocyter",
     "distractors": [
-      "Ingen effekt, ABO-systemet saknar klinisk relevans vid transfusion",
+      "Ingen effekt alls, eftersom ABO-systemet saknar all klinisk relevans vid en transfusion",
       "Enbart en lindrig, övergående hudreaktion utan andra symtom",
       "En omedelbar och kraftig ökning av trombocytantalet i blodet"
     ],
@@ -2764,7 +2764,7 @@
     "correct": "Att morfologiskt bedöma erytrocyter, leukocyter och trombocyter i mikroskop",
     "distractors": [
       "Att mäta koagulationstiden med hjälp av ett citratrör",
-      "Att bestämma patientens blodgrupp inför en transfusion",
+      "Att bestämma patientens blodgrupp och Rh-faktor inför en transfusion av blod",
       "Att odla bakterier från blodet vid misstänkt sepsis"
     ],
     "topic": "bma_blod_blodbildning",
@@ -5605,7 +5605,7 @@
     "prompt": "Vilka är storhjärnans (cerebrums) två huvudsakliga vävnadstyper, sett i tvärsnitt?",
     "correct": "Barken och den underliggande vita substansen",
     "distractors": [
-      "Enbart grå substans, helt utan vit substans",
+      "Enbart grå substans, helt utan någon vit substans",
       "Enbart vit substans, helt utan bark",
       "Meninger och cerebrospinalvätska"
     ],
@@ -5634,7 +5634,7 @@
     "correct": "Mitthjärnan, pons och den förlängda märgen",
     "distractors": [
       "Talamus, hypotalamus och hypofysen",
-      "Cerebellum, cortex och basala ganglierna",
+      "Lillhjärnan, cortex och de basala ganglierna",
       "Ryggmärgen, dura mater och pia mater"
     ],
     "topic": "bma_nervsystem_muskler",
@@ -5648,7 +5648,7 @@
     "correct": "I ryggmärgen ligger den grå substansen centralt och den vita substansen perifert – omvänt mot storhjärnan",
     "distractors": [
       "Ryggmärgen saknar helt vit substans i sitt tvärsnitt",
-      "Fördelningen är exakt identisk med storhjärnans uppbyggnad",
+      "Fördelningen är exakt identisk med storhjärnans uppbyggnad, med grå substans perifert och vit substans centralt i båda",
       "Ryggmärgen saknar helt grå substans i centrum"
     ],
     "topic": "bma_nervsystem_muskler",
@@ -5717,7 +5717,7 @@
     "prompt": "Vad kallas de tre hinnorna (meningerna) som omger hjärnan och ryggmärgen, räknat utifrån och in?",
     "correct": "Dura mater, arachnoidea mater och pia mater",
     "distractors": [
-      "Endokardium, myokardium och epikardium",
+      "Endokardium, myokardium och det yttre epikardiet",
       "Periost, kortikalis och märg",
       "Sklera, kärlhinna och näthinna"
     ],
@@ -5731,7 +5731,7 @@
     "prompt": "Var bildas huvuddelen av cerebrospinalvätskan (likvor)?",
     "correct": "I plexus choroideus i hjärnans ventriklar",
     "distractors": [
-      "I ryggmärgens centralkanal enbart",
+      "I ryggmärgens centralkanal, uteslutande där",
       "I subarachnoidalrummet enbart",
       "I det perifera nervsystemet"
     ],
@@ -5747,7 +5747,7 @@
     "distractors": [
       "Den överför enbart elektriska signaler mellan enskilda neuroner",
       "Den bildar myelinskidan runt perifera axon",
-      "Den fungerar som blodets huvudsakliga syrebärare i cirkulationen"
+      "Den fungerar som blodets huvudsakliga syrebärare i den cerebrala cirkulationen och ersätter hemoglobinet helt"
     ],
     "topic": "bma_nervsystem_muskler",
     "difficulty": "Normal",
@@ -5773,7 +5773,7 @@
     "prompt": "Vilka celler i kapillärväggen bidrar huvudsakligen till blod-hjärnbarriärens täta struktur?",
     "correct": "Endotelceller sammankopplade med tight junctions",
     "distractors": [
-      "Fritt liggande erytrocyter i kapillärens lumen",
+      "Fritt liggande erytrocyter inuti kapillärens lumen",
       "Skelettmuskelceller i kapillärväggen",
       "Alveolarmakrofager i kapillärens vägg"
     ],
@@ -5871,7 +5871,7 @@
     "prompt": "Vilka celler bildar myelinskidan runt axon i det centrala nervsystemet?",
     "correct": "Oligodendrocyter",
     "distractors": [
-      "Schwannceller",
+      "Schwannceller i PNS",
       "Astrocyter",
       "Ependymceller"
     ],
@@ -5886,7 +5886,7 @@
     "correct": "Ranviers knutpunkter",
     "distractors": [
       "Synapsklyftor",
-      "Dendritspiggar",
+      "Dendritspiggar på cellen",
       "Sarkomerer"
     ],
     "topic": "bma_nervsystem_muskler",
@@ -5899,7 +5899,7 @@
     "prompt": "Hur förhåller sig ledningshastigheten i grova, myeliniserade nervfibrer till den i tunna, omyeliniserade fibrer?",
     "correct": "Den är betydligt snabbare i grova, myeliniserade fibrer",
     "distractors": [
-      "Den är alltid långsammare i myeliniserade fibrer",
+      "Den är alltid betydligt långsammare i myeliniserade fibrer",
       "Myelinisering påverkar inte ledningshastigheten",
       "Omyeliniserade fibrer leder alltid snabbast"
     ],
@@ -6081,7 +6081,7 @@
     "prompt": "Vad kallas en membranpotential som blir mer negativ än vilopotentialen?",
     "correct": "Hyperpolarisation",
     "distractors": [
-      "Depolarisation",
+      "Depolarisation mot tröskeln",
       "Repolarisation",
       "Facilitering"
     ],
@@ -6095,7 +6095,7 @@
     "prompt": "Vilket jonflöde svarar huvudsakligen för den snabba depolarisationen (uppåtfasen) i en neurons aktionspotential?",
     "correct": "Snabb inström av Na+ genom spänningsstyrda natriumkanaler",
     "distractors": [
-      "Utström av K+ genom spänningsstyrda kaliumkanaler",
+      "Utström av K+ genom spänningsstyrda kaliumkanaler i membranet",
       "Inström av Ca2+ enbart, utan natriuminström",
       "Utström av Cl- genom ligandstyrda kloridkanaler"
     ],
@@ -6137,7 +6137,7 @@
     "prompt": "Vad innebär \"allt-eller-inget\"-principen för en aktionspotential?",
     "correct": "Om tröskelvärdet nås utlöses en fullständig aktionspotential med alltid samma amplitud, annars uppstår ingen alls",
     "distractors": [
-      "Aktionspotentialens amplitud är alltid proportionell mot stimulusstyrkans grad",
+      "Aktionspotentialens amplitud är alltid direkt proportionell mot stimulusstyrkans grad och ökar därför gradvis med stimulus",
       "Aktionspotentialen kan bara vara partiell vid mycket svaga stimuli",
       "Tröskelvärdet varierar helt slumpmässigt för varje enskild impuls"
     ],
@@ -6166,7 +6166,7 @@
     "correct": "En ny aktionspotential kan utlösas, men enbart av ett starkare stimulus än normalt",
     "distractors": [
       "Ingen som helst nervimpuls kan utlösas under denna period",
-      "Membranet är permanent depolariserat och kan inte återhämta sig",
+      "Membranet är permanent depolariserat och kan därför aldrig återhämta sig igen efteråt",
       "Aktionspotentialens amplitud fördubblas alltid under perioden"
     ],
     "topic": "bma_nervsystem_muskler",
@@ -6195,7 +6195,7 @@
     "distractors": [
       "Myelin ökar antalet natriumkanaler jämnt längs hela axonets membran",
       "Myelin gör att inga joner alls kan passera membranet",
-      "Myelin ökar axonets diameter kraftigt, utan att påverka ledningshastigheten"
+      "Myelin ökar axonets diameter kraftigt utan att på något sätt påverka själva ledningshastigheten i fibern"
     ],
     "topic": "bma_nervsystem_muskler",
     "difficulty": "Normal",
@@ -6278,7 +6278,7 @@
     "correct": "Amplituden är i det närmaste konstant och oberoende av stimulusstyrkan, enligt allt-eller-inget-principen",
     "distractors": [
       "Amplituden ökar linjärt i takt med stimulusstyrkan",
-      "Amplituden bestäms huvudsakligen av antalet Schwannceller",
+      "Amplituden bestäms huvudsakligen av antalet Schwannceller längs axonet och ökar med myeliniseringen av fibern",
       "Amplituden minskar alltid när stimulusstyrkan ökar"
     ],
     "topic": "bma_nervsystem_muskler",
@@ -6305,7 +6305,7 @@
     "prompt": "Vad kallas kontaktstället där en presynaptisk neuron kemiskt överför en signal till en postsynaptisk cell?",
     "correct": "En kemisk synaps",
     "distractors": [
-      "Ett ganglion",
+      "Ett spinalt ganglion",
       "Ett plexus",
       "Ett dermatom"
     ],
@@ -6320,7 +6320,7 @@
     "correct": "Inflöde av Ca2+ genom spänningsstyrda kalciumkanaler när en aktionspotential når nervänden",
     "distractors": [
       "Utflöde av Na+ enbart, utan inflöde av kalcium",
-      "En direkt elektrisk koppling utan något jonflöde alls",
+      "En direkt elektrisk koppling mellan de två cellerna, helt utan något jonflöde alls i synapsen",
       "Frisättning av acetylkolinesteras från nervänden"
     ],
     "topic": "bma_nervsystem_muskler",
@@ -6345,9 +6345,9 @@
     "id": "bma_nerv_54",
     "type": "mc",
     "prompt": "Vad händer när neurotransmittorn har frisatts i synapsklyftan?",
-    "correct": "Den diffunderar över klyftan och binder till receptorer på den postsynaptiska membranet",
+    "correct": "Den diffunderar över klyftan och binder till receptorer på det postsynaptiska membranet",
     "distractors": [
-      "Den återgår omedelbart in i den presynaptiska cellen, utan effekt",
+      "Den återgår omedelbart in i den presynaptiska cellen igen, helt utan någon effekt på cellen",
       "Den bryts alltid ner helt innan den hinner nå postsynapsen",
       "Den passerar direkt in i blodbanan och lämnar synapsen"
     ],
@@ -6375,7 +6375,7 @@
     "prompt": "Vad kallas en postsynaptisk potentialförändring som gör cellen mindre benägen att generera en aktionspotential?",
     "correct": "En inhibitorisk postsynaptisk potential, oftast en hyperpolarisation",
     "distractors": [
-      "En excitatorisk postsynaptisk potential, oftast en depolarisation",
+      "En excitatorisk postsynaptisk potential, oftast i form av en depolarisation",
       "En depolarisation mot tröskeln utan hyperpolarisation",
       "Saltatorisk ledning längs det myeliniserade axonet"
     ],
@@ -6447,7 +6447,7 @@
     "distractors": [
       "Sarkomeren",
       "Z-skivan",
-      "T-tubulussystemet"
+      "T-tubulussystemet i muskelfibern"
     ],
     "topic": "bma_nervsystem_muskler",
     "difficulty": "Normal",
@@ -6531,7 +6531,7 @@
     "distractors": [
       "Kalcium hämmar all kontraktion genom att blockera aktinfilamenten",
       "Aktinfilamenten bryts permanent ner av det inströmmande kalciumet",
-      "Myosinfilamenten depolymeriseras helt av det inströmmande kalciumet"
+      "Myosinfilamenten depolymeriseras helt och hållet av det inströmmande kalciumet under kontraktionen"
     ],
     "topic": "bma_nervsystem_muskler",
     "difficulty": "Normal",
@@ -6557,7 +6557,7 @@
     "prompt": "Vilken struktur leder aktionspotentialen snabbt från muskelfiberns yta ner till det sarkoplasmatiska retiklets djupare delar?",
     "correct": "T-tubulussystemet",
     "distractors": [
-      "Sarkomeren",
+      "Sarkomeren i fibern",
       "Z-skivan",
       "Endomysiet"
     ],
@@ -6587,7 +6587,7 @@
     "distractors": [
       "Enbart närvaro av Ca2+, utan ATP",
       "Nedbrytning av tropomyosin",
-      "Frisättning av acetylkolinesteras"
+      "Frisättning av acetylkolinesteras i synapsen"
     ],
     "topic": "bma_nervsystem_muskler",
     "difficulty": "Normal",
@@ -6628,7 +6628,7 @@
     "correct": "De finmotoriska motorenheterna innerverar få muskelfibrer per neuron, medan de kraftfulla innerverar många fler",
     "distractors": [
       "De finmotoriska innerverar alltid fler fibrer per neuron än de kraftfulla",
-      "Antalet muskelfibrer per motorneuron är alltid identiskt, oavsett funktion",
+      "Antalet muskelfibrer per motorneuron är alltid exakt identiskt, oavsett vilken funktion muskeln har i kroppens olika delar",
       "Finmotoriska motorenheter saknar helt eget motorneuron"
     ],
     "topic": "bma_nervsystem_muskler",
@@ -6641,7 +6641,7 @@
     "prompt": "Vad kännetecknar typ I-muskelfibrer (\"långsamma\" fibrer)?",
     "correct": "Hög uthållighet, huvudsakligen oxidativ energiomsättning och relativt långsam kontraktionshastighet",
     "distractors": [
-      "Mycket snabb kontraktionshastighet men snabb uttröttbarhet",
+      "Mycket snabb kontraktionshastighet men samtidigt mycket snabb uttröttbarhet vid längre tids arbete i muskeln",
       "Total avsaknad av mitokondrier i muskelfibern",
       "Enbart anaerob energiomsättning utan syrgasberoende"
     ],
@@ -6655,7 +6655,7 @@
     "prompt": "Vad kännetecknar typ IIx-muskelfibrer (\"snabba\" fibrer)?",
     "correct": "Snabb kontraktionshastighet, huvudsakligen glykolytisk energiomsättning och relativt snabb uttröttbarhet",
     "distractors": [
-      "Mycket hög uthållighet och långsam kontraktionshastighet",
+      "Mycket hög uthållighet, oxidativ energiomsättning och långsam kontraktionshastighet i den arbetande muskeln",
       "Enbart aerob energiomsättning utan glykolytiskt bidrag",
       "Total avsaknad av myofibriller i muskelfibern"
     ],
@@ -6698,7 +6698,7 @@
     "correct": "Rekrytering av motorenheter",
     "distractors": [
       "Saltatorisk ledning",
-      "Tetanisk fusion enbart",
+      "Tetanisk fusion av kontraktioner",
       "Refraktäritet"
     ],
     "topic": "bma_nervsystem_muskler",
@@ -6711,7 +6711,7 @@
     "prompt": "Vad orsakar i hög grad den gradvisa muskeltrötthet som uppstår vid långvarigt, intensivt muskelarbete?",
     "correct": "Ansamling av metaboliska biprodukter samt uttömning av energidepåer",
     "distractors": [
-      "En permanent förlust av alla muskelfibrer i den arbetande muskeln",
+      "En permanent förlust av samtliga muskelfibrer i den arbetande muskeln",
       "Total avsaknad av kalciumjoner i muskelcellen",
       "Ett kraftigt överskott av syrgas i muskelvävnaden"
     ],
@@ -6769,7 +6769,7 @@
     "distractors": [
       "Myoglobin har ingen koppling alls till njurarnas funktion",
       "Myoglobin bryts alltid ner helt innan det når njurarna",
-      "Myoglobin stimulerar i stället ökad erytropoetinproduktion"
+      "Myoglobin stimulerar i stället en ökad erytropoetinproduktion i njuren och skyddar den"
     ],
     "topic": "bma_nervsystem_muskler",
     "difficulty": "Normal",
@@ -6796,7 +6796,7 @@
     "correct": "Nedsatt neuromuskulär överföring, med muskelsvaghet som förvärras vid upprepad aktivering",
     "distractors": [
       "Total förlust av samtliga motorneuron i ryggmärgen",
-      "Överdriven frisättning av acetylkolin utan någon hämning",
+      "Överdriven frisättning av acetylkolin i synapsen, helt utan någon hämning alls av receptorn",
       "Permanent kontraktur av samtliga skelettmuskler"
     ],
     "topic": "bma_nervsystem_muskler",
@@ -6823,7 +6823,7 @@
     "prompt": "Vilken funktion har dystrofin normalt i skelettmuskelfibern?",
     "correct": "Det stabiliserar muskelcellmembranet genom att koppla samman det kontraktila cytoskelettet med den extracellulära matrixen",
     "distractors": [
-      "Det katalyserar ATP-nedbrytningen vid tvärbryggscykeln i sarkomeren",
+      "Det katalyserar ATP-nedbrytningen vid tvärbryggscykeln i sarkomeren och driver därmed kontraktionen framåt i hela muskelfibern",
       "Det bildar myelinskidan runt de perifera nervernas axon",
       "Det utgör huvudkomponenten i de synaptiska vesiklarna"
     ],
@@ -6881,7 +6881,7 @@
     "distractors": [
       "Att myelinskidan omedelbart och permanent försvinner",
       "Att muskelfibern dör och helt ersätts av bindväv",
-      "Att acetylkolinreceptorerna permanent försvinner från muskelfibern"
+      "Att acetylkolinreceptorerna permanent försvinner helt från muskelfiberns membran efter skadan"
     ],
     "topic": "bma_nervsystem_muskler",
     "difficulty": "Normal",
@@ -6907,7 +6907,7 @@
     "prompt": "Vad kallas den kompensatoriska tillväxten av en muskelfiber i storlek som svar på upprepad, kraftig belastning (t.ex. styrketräning)?",
     "correct": "Muskelhypertrofi",
     "distractors": [
-      "Muskelatrofi",
+      "Muskelatrofi vid inaktivitet",
       "Denervation",
       "Rabdomyolys"
     ],
@@ -6951,7 +6951,7 @@
     "distractors": [
       "Bildning av myelin runt det centrala nervsystemets axon",
       "Immunförsvar mot inträngande mikroorganismer i hjärnan",
-      "Produktion av cerebrospinalvätska, uteslutande denna funktion"
+      "Produktion av cerebrospinalvätska i ventriklarna, uteslutande denna funktion i hjärnan"
     ],
     "topic": "bma_nervsystem_muskler",
     "difficulty": "Normal",
@@ -6979,7 +6979,7 @@
     "distractors": [
       "Rigor mortis",
       "Tetanisk fusion",
-      "Saltatorisk trötthet"
+      "Saltatorisk trötthet i nervfibern"
     ],
     "topic": "bma_nervsystem_muskler",
     "difficulty": "Normal",
@@ -6992,7 +6992,7 @@
     "correct": "Kreatinkinas i blodet",
     "distractors": [
       "Troponin i blodet",
-      "NT-proBNP i blodet",
+      "NT-proBNP i blodet och plasma",
       "Lipidstatus"
     ],
     "topic": "bma_nervsystem_muskler",
@@ -7005,7 +7005,7 @@
     "prompt": "Var i bukhålan är njurarna belägna?",
     "correct": "Retroperitonealt, på bakre bukväggen",
     "distractors": [
-      "Fritt hängande i peritonealhålan",
+      "Fritt hängande inne i peritonealhålan",
       "Inuti bäckenhålan enbart",
       "Direkt under diafragma i thorax"
     ],
@@ -7131,7 +7131,7 @@
     "prompt": "Hur skiljer sig uretrans längd generellt mellan könen?",
     "correct": "Uretra är betydligt kortare hos kvinnor än hos män",
     "distractors": [
-      "Uretra är alltid längre hos kvinnor än hos män",
+      "Uretra är alltid betydligt längre hos kvinnor än hos män",
       "Uretra har exakt samma längd hos båda könen",
       "Endast män har en uretra"
     ],
@@ -7268,10 +7268,10 @@
   {
     "id": "bma_njure_20",
     "type": "mc",
-    "prompt": "Vilket epitel klär den proximala tubulins insida, anpassat för omfattande reabsorption?",
+    "prompt": "Vilket epitel klär de proximala tubulis insida, anpassat för omfattande reabsorption?",
     "correct": "Kubiskt epitel med tät mikrovillibård",
     "distractors": [
-      "Enkelt skivepitel utan mikrovilli",
+      "Enkelt skivepitel helt utan mikrovillibård",
       "Flerskiktat skivepitel",
       "Övergångsepitel"
     ],
@@ -7300,7 +7300,7 @@
     "correct": "En nedåtgående del och en uppåtgående del",
     "distractors": [
       "Enbart en enda odelad rak del",
-      "Ett proximalt och ett distalt glomerulus",
+      "Ett proximalt och ett distalt glomerulusblad",
       "Ett aferent och ett efferent blad"
     ],
     "topic": "bma_njurar_urinvagar",
@@ -7341,7 +7341,7 @@
     "prompt": "Vad kallas den specialiserade strukturen där distala tubuli kommer i nära kontakt med sitt eget nefrons afferenta arteriol, viktig för reglering av GFR?",
     "correct": "Juxtaglomerulära apparaten",
     "distractors": [
-      "Bowmans kapsel",
+      "Bowmans kapsel och kapselrum",
       "Vas efferens",
       "Njurpapillen"
     ],
@@ -7355,9 +7355,9 @@
     "prompt": "Vilka celltyper ingår i den juxtaglomerulära apparaten?",
     "correct": "Juxtaglomerulära celler och macula densa-celler",
     "distractors": [
-      "Enbart podocyter i Bowmans kapsel",
-      "Enbart mesangialceller i glomerulus",
-      "Enbart samlingsrörsceller i märgen"
+      "Podocyter och mesangialceller i Bowmans kapselrum",
+      "Mesangialceller och endotelceller i glomerulus",
+      "Samlingsrörsceller och podocyter i märgen"
     ],
     "topic": "bma_njurar_urinvagar",
     "difficulty": "Normal",
@@ -7369,7 +7369,7 @@
     "prompt": "Vilken funktion har macula densa-cellerna i den juxtaglomerulära apparaten?",
     "correct": "De känner av natriumkloridkoncentrationen i tubulivätskan och bidrar till reglering av GFR",
     "distractors": [
-      "De producerar erytropoetin, uteslutande denna uppgift",
+      "De producerar erytropoetin och renin, uteslutande dessa båda uppgifter i njuren och inget annat",
       "De bildar urinblåsans slemhinna, inget annat",
       "De fagocyterar bakterier som kommit in i urinen"
     ],
@@ -7383,7 +7383,7 @@
     "prompt": "Vad kallas nefron vars glomeruli ligger djupt nära märgen och vars långa Henle-slyngor är viktiga för urinkoncentreringen?",
     "correct": "Juxtamedullära nefron",
     "distractors": [
-      "Kortikala nefron",
+      "Kortikala ytliga nefron",
       "Aferenta nefron",
       "Efferenta nefron"
     ],
@@ -7425,7 +7425,7 @@
     "prompt": "Vilken funktion har mesangialcellerna i glomerulus?",
     "correct": "Strukturellt stöd åt kapillärnystanet samt viss kontraktil reglering av den glomerulära filtrationsytan",
     "distractors": [
-      "De bildar urinblåsans epitel, långt ifrån glomerulus",
+      "De bildar urinblåsans epitel och slemhinna, alltså långt ifrån själva glomerulus i njurbarken och märgen",
       "De producerar renin, uteslutande denna uppgift",
       "De transporterar syre i blodet genom hela kroppen"
     ],
@@ -7441,7 +7441,7 @@
     "distractors": [
       "Vasa recta",
       "Glomerulus",
-      "Bowmans kapselrum"
+      "Bowmans kapselrum i njurbarken"
     ],
     "topic": "bma_njurar_urinvagar",
     "difficulty": "Normal",
@@ -7467,7 +7467,7 @@
     "prompt": "Vilken huvudsaklig funktion har vasa recta?",
     "correct": "De bidrar till att upprätthålla den osmotiska koncentrationsgradienten i njurmärgen utan att \"skölja bort\" den",
     "distractors": [
-      "De bildar filtrationsbarriären inne i glomerulus",
+      "De bildar filtrationsbarriären inne i glomerulus tillsammans med podocyterna och basalmembranet i njurbarkens glomeruli",
       "De producerar urin direkt i njurmärgen",
       "De transporterar urin vidare till urinblåsan"
     ],
@@ -7481,9 +7481,9 @@
     "prompt": "Vad kallas den samlade processen där nefronet bildar den slutgiltiga urinen genom tre huvudsteg?",
     "correct": "Glomerulär filtration, tubulär reabsorption och tubulär sekretion",
     "distractors": [
-      "Enbart glomerulär filtration, utan reabsorption",
-      "Enbart tubulär reabsorption, utan filtration",
-      "Diffusion och osmos uteslutande, utan aktiv transport"
+      "Glomerulär filtration, passiv diffusion och osmos i njurens kapillärer",
+      "Tubulär reabsorption, aktiv transport och osmos",
+      "Diffusion, osmos och aktiv transport uteslutande"
     ],
     "topic": "bma_njurar_urinvagar",
     "difficulty": "Normal",
@@ -7495,8 +7495,8 @@
     "prompt": "Vilka tre lager utgör den glomerulära filtrationsbarriären?",
     "correct": "Det fenestrerade kapillärendotelet, det glomerulära basalmembranet och podocyternas fotutskott",
     "distractors": [
-      "Enbart ett enkelt kapillärendotel, utan basalmembran",
-      "Enbart podocyternas fotutskott, utan endotel",
+      "Ett enkelt kapillärendotel, ett tunt lager glatt muskulatur och ett yttre hölje av bindväv runt kapillären",
+      "Podocyternas fotutskott, mesangialceller och kapselns yttre blad",
       "Tunica intima, media och adventitia, som i en artär"
     ],
     "topic": "bma_njurar_urinvagar",
@@ -7524,7 +7524,7 @@
     "correct": "Barriärens storleks- och laddningsselektivitet, bl.a. genom basalmembranet och podocyternas fotutskott",
     "distractors": [
       "Filtrationsbarriären saknar helt selektivitet mot proteiner",
-      "Proteinerna binds aktivt av de förbipasserande erytrocyterna",
+      "Proteinerna binds aktivt av de förbipasserande erytrocyterna och kan därför aldrig nå filtrationsbarriären",
       "Njurartären blockerar helt allt proteinflöde till njuren"
     ],
     "topic": "bma_njurar_urinvagar",
@@ -7538,7 +7538,7 @@
     "correct": "Den volym plasma som filtreras genom samtliga glomeruli per tidsenhet",
     "distractors": [
       "Den totala urinvolym som utsöndras per dygn",
-      "Blodflödet genom njurartären, mätt per minut",
+      "Det totala blodflödet genom njurartären, mätt i milliliter per minut hos en vuxen",
       "Mängden natrium som reabsorberas per timme"
     ],
     "topic": "bma_njurar_urinvagar",
@@ -7552,7 +7552,7 @@
     "correct": "Cirka 120–125 ml/min",
     "distractors": [
       "Cirka 1–2 ml/min",
-      "Cirka 500 ml/min",
+      "Cirka 500–600 ml/min",
       "Cirka 1 ml/min"
     ],
     "topic": "bma_njurar_urinvagar",
@@ -7565,9 +7565,9 @@
     "prompt": "Vilka Starling-krafter driver filtrationen i glomerulus, förutom det hydrostatiska trycket i kapillären?",
     "correct": "Det hydrostatiska trycket i Bowmans kapsel samt det kolloidosmotiska trycket i glomeruluskapillären, vilka motverkar filtrationen",
     "distractors": [
-      "Enbart gravitationens inverkan på kapillärblodet",
-      "Enbart aktiv transport av vätska via ATP-pumpar",
-      "Enbart temperaturskillnader mellan blod och kapsel"
+      "Gravitationens inverkan på kapillärblodet samt blodets viskositet",
+      "Aktiv transport av vätska via ATP-pumpar i podocyterna samt det osmotiska trycket i Bowmans kapselrum, vilka båda driver filtrationen",
+      "Temperaturskillnader mellan blod och kapsel samt kapillärens diameter"
     ],
     "topic": "bma_njurar_urinvagar",
     "difficulty": "Normal",
@@ -7607,9 +7607,9 @@
     "prompt": "Vilka två huvudmekanismer bidrar till njurens autoreglering av GFR?",
     "correct": "Den myogena responsen i afferenta arteriolen och tubuloglomerulär feedback via macula densa",
     "distractors": [
-      "Enbart hormonell reglering via ADH från hypofysen",
-      "Enbart sympatikusaktivering av njurens kärl",
-      "Enbart förändringar i plasmaproteinkoncentrationen"
+      "Hormonell reglering via ADH från hypofysen samt via aldosteron från binjurebarken, helt utan lokal reglering",
+      "Sympatikusaktivering av njurens kärl och direkt tryckreglering i njurvenen",
+      "Förändringar i plasmaproteinkoncentrationen och i blodets viskositet"
     ],
     "topic": "bma_njurar_urinvagar",
     "difficulty": "Normal",
@@ -7623,7 +7623,7 @@
     "distractors": [
       "Kärlet vidgas alltid, oavsett hur högt trycket blir",
       "Reflexen styrs enbart av hormonet aldosteron",
-      "Reflexen kräver alltid extern nervstimulering för att utlösas"
+      "Reflexen kräver alltid extern nervstimulering från sympatikus för att över huvud taget kunna utlösas i kärlväggen i arteriolen"
     ],
     "topic": "bma_njurar_urinvagar",
     "difficulty": "Normal",
@@ -7702,11 +7702,11 @@
   {
     "id": "bma_njure_51",
     "type": "mc",
-    "prompt": "Ungefär hur stor andel av det glomerulära filtratet reabsorberas normalt i den proximala tubulin?",
+    "prompt": "Ungefär hur stor andel av det glomerulära filtratet reabsorberas normalt i de proximala tubuli?",
     "correct": "Cirka två tredjedelar",
     "distractors": [
-      "Cirka 1 %",
-      "Cirka 99 %",
+      "Cirka en hundradel",
+      "Nästan allt, cirka 99 procent",
       "Ingenting alls"
     ],
     "topic": "bma_njurar_urinvagar",
@@ -7716,10 +7716,10 @@
   {
     "id": "bma_njure_52",
     "type": "mc",
-    "prompt": "Vilka ämnen reabsorberas nästan fullständigt i den proximala tubulin under normala förhållanden?",
+    "prompt": "Vilka ämnen reabsorberas nästan fullständigt i de proximala tubuli under normala förhållanden?",
     "correct": "Glukos och aminosyror",
     "distractors": [
-      "Urea och kreatinin",
+      "Urea och kreatinin uteslutande",
       "Vätejoner",
       "Kalium uteslutande"
     ],
@@ -7731,9 +7731,9 @@
     "id": "bma_njure_53",
     "type": "mc",
     "prompt": "Vad kallas den maximala mängd glukos som njurtubuli kan reabsorbera per tidsenhet, och vad händer om denna överskrids?",
-    "correct": "Den tubulära transportmaximum för glukos – överskrids den uppstår glukosuri",
+    "correct": "Det tubulära transportmaximum för glukos – överskrids det uppstår glukosuri",
     "distractors": [
-      "Filtrationsfraktionen – överskrids den upphör filtrationen helt",
+      "Filtrationsfraktionen – överskrids den upphör den glomerulära filtrationen helt i njuren",
       "GFR – överskrids den stannar njuren",
       "Clearance – överskrids den bildas ingen urin"
     ],
@@ -7789,9 +7789,9 @@
     "prompt": "Vilka ämnen är typiska exempel på substanser som aktivt sekreras i njurtubuli, t.ex. för att elimineras snabbt?",
     "correct": "Vätejoner, kalium och många läkemedel/organiska syror",
     "distractors": [
-      "Glukos och aminosyror uteslutande, inget annat",
-      "Plasmaproteiner, som normalt aldrig filtreras",
-      "Erytrocyter, som normalt stannar kvar i blodet"
+      "Glukos, aminosyror och bikarbonat uteslutande",
+      "Plasmaproteiner, albumin och globuliner, som normalt aldrig filtreras",
+      "Erytrocyter, trombocyter och leukocyter, som stannar kvar i blodet"
     ],
     "topic": "bma_njurar_urinvagar",
     "difficulty": "Normal",
@@ -7803,7 +7803,7 @@
     "prompt": "Vad kallas mekanismen i Henles slynga där motriktade flöden i den nedåtgående och uppåtgående delen bygger upp en stark osmotisk koncentrationsgradient i njurmärgen?",
     "correct": "Countercurrent-multiplikation",
     "distractors": [
-      "Tubuloglomerulär feedback",
+      "Tubuloglomerulär feedback via macula densa",
       "Myogen respons",
       "Filtrationsfraktion"
     ],
@@ -7832,7 +7832,7 @@
     "correct": "Den tjocka, uppåtgående delen",
     "distractors": [
       "Den nedåtgående delen",
-      "Proximala tubuli enbart",
+      "De proximala tubuli uteslutande",
       "Bowmans kapsel"
     ],
     "topic": "bma_njurar_urinvagar",
@@ -7846,7 +7846,7 @@
     "correct": "I distala tubuli och samlingsröret",
     "distractors": [
       "I glomerulus",
-      "I proximala tubuli enbart",
+      "I de proximala tubuli och i Henles slynga",
       "I Bowmans kapsel"
     ],
     "topic": "bma_njurar_urinvagar",
@@ -7874,7 +7874,7 @@
     "correct": "Den är låg, vilket leder till utsöndring av stora mängder utspädd urin",
     "distractors": [
       "Den är maximal, vilket ger starkt koncentrerad urin",
-      "Vattengenomsläppligheten påverkas aldrig av ADH-nivån",
+      "Vattengenomsläppligheten påverkas aldrig av ADH-nivån i blodet hos personen",
       "Samlingsröret stängs helt för allt vattenflöde"
     ],
     "topic": "bma_njurar_urinvagar",
@@ -7888,7 +7888,7 @@
     "correct": "Den medullära osmotiska gradienten, uppbyggd av countercurrent-multiplikation",
     "distractors": [
       "Tubuloglomerulär feedback via macula densa",
-      "Filtrationsfraktionen mellan GFR och plasmaflöde",
+      "Filtrationsfraktionen mellan GFR och det renala plasmaflödet genom njurarnas kärlbädd",
       "Myogen respons i den afferenta arteriolen"
     ],
     "topic": "bma_njurar_urinvagar",
@@ -7930,7 +7930,7 @@
     "correct": "Njurarna",
     "distractors": [
       "Levern",
-      "Mjälten",
+      "Bukspottkörteln",
       "Hjärtat"
     ],
     "topic": "bma_njurar_urinvagar",
@@ -7943,7 +7943,7 @@
     "prompt": "Vad kallas urinens koncentrationsförmåga när kroppen är uttorkad och ADH-nivåerna är höga?",
     "correct": "Maximal urinkoncentrering",
     "distractors": [
-      "Maximal urinutspädning",
+      "Maximal urinutspädning i njuren",
       "Total anuri",
       "Glukosuri"
     ],
@@ -7986,7 +7986,7 @@
     "correct": "Den plasmavolym som helt renas från substansen per tidsenhet av njurarna",
     "distractors": [
       "Den totala mängd substans som filtreras i glomerulus",
-      "Den mängd substans som reabsorberas per dygn i tubuli",
+      "Den mängd substans som reabsorberas per dygn i njurens tubuli och samlingsrör",
       "Blodflödet genom njurartären, mätt per minut"
     ],
     "topic": "bma_njurar_urinvagar",
@@ -8000,7 +8000,7 @@
     "correct": "Kreatinin",
     "distractors": [
       "Glukos",
-      "Albumin",
+      "Albumin i plasma",
       "Urea"
     ],
     "topic": "bma_njurar_urinvagar",
@@ -8015,7 +8015,7 @@
     "distractors": [
       "Nedbrytning av hemoglobin",
       "Nedbrytning av glukos i levern",
-      "Nedbrytning av surfaktant i lungorna"
+      "Nedbrytning av surfaktant i lungornas alveolarväggar"
     ],
     "topic": "bma_njurar_urinvagar",
     "difficulty": "Normal",
@@ -8028,7 +8028,7 @@
     "correct": "Skattad GFR, beräknad från plasmakreatinin, ålder, kön m.m.",
     "distractors": [
       "Filtrationsfraktionen mellan GFR och renalt plasmaflöde",
-      "Osmolalitetsgapet mellan uppmätt och beräknad osmolalitet",
+      "Osmolalitetsgapet mellan uppmätt och beräknad osmolalitet i serum",
       "Anjongapet beräknat från elektrolytvärdena"
     ],
     "topic": "bma_njurar_urinvagar",
@@ -8071,7 +8071,7 @@
     "distractors": [
       "Urea filtreras aldrig alls i glomerulus",
       "Urea bildas uteslutande i njurarna själva, inte i levern",
-      "Urea reabsorberas aldrig i tubuli, till skillnad från kreatinin"
+      "Urea reabsorberas aldrig i njurens tubuli, till skillnad från kreatinin, och påverkas därför inte av hydreringsgraden"
     ],
     "topic": "bma_njurar_urinvagar",
     "difficulty": "Normal",
@@ -8126,7 +8126,7 @@
     "correct": "Kronisk njursjukdom",
     "distractors": [
       "Akut cystit",
-      "Nefrolitiasis",
+      "Nefrolitiasis med njursten",
       "Glukosuri"
     ],
     "topic": "bma_njurar_urinvagar",
@@ -8167,7 +8167,7 @@
     "prompt": "Om en substans clearas snabbare än inulin/kreatinin (dvs. clearance > GFR), vad indikerar det?",
     "correct": "Att substansen även sekreras aktivt i tubuli, utöver att filtreras",
     "distractors": [
-      "Att substansen enbart filtreras utan reabsorption eller sekretion",
+      "Att substansen enbart filtreras, helt utan reabsorption eller sekretion",
       "Att substansen reabsorberas fullständigt",
       "Att njuren har slutat fungera helt"
     ],
@@ -8181,7 +8181,7 @@
     "prompt": "Om en substans clearas långsammare än GFR, vad indikerar det?",
     "correct": "Att substansen reabsorberas i tubuli efter filtrationen",
     "distractors": [
-      "Att substansen enbart sekreras, utan filtration",
+      "Att substansen enbart sekreras aktivt, helt utan filtration",
       "Att substansen inte alls filtreras i glomerulus",
       "Att GFR är onormalt hög"
     ],
@@ -8209,7 +8209,7 @@
     "prompt": "Vad kallas fyndet av protein i urinen, vilket normalt inte ska förekomma i mer än spårmängder?",
     "correct": "Proteinuri",
     "distractors": [
-      "Glukosuri",
+      "Glukosuri i urinen",
       "Hematuri",
       "Polyuri"
     ],
@@ -8321,7 +8321,7 @@
     "prompt": "Vilken sfinkter i urinvägarna står under viljemässig (somatisk) kontroll?",
     "correct": "Den yttre uretrasfinktern",
     "distractors": [
-      "Den inre uretrasfinktern",
+      "Den inre, glatta uretrasfinktern",
       "Detrusormuskeln",
       "Pylorussfinktern"
     ],
@@ -18569,7 +18569,7 @@
     "prompt": "Varför kan ett captoprilrenogram avslöja njurartärstenos?",
     "correct": "ACE-hämning minskar den kompensatoriska efferenta vasokonstriktionen i den drabbade njuren, vilket sänker filtrationen mätbart mer på den sidan",
     "distractors": [
-      "Captopril färgar njuren radioaktiv utan att ha någon som helst fysiologisk effekt på blodflödet eller filtrationen i den drabbade njuren alls",
+      "Captopril färgar njuren radioaktiv utan att ha någon som helst fysiologisk effekt på vare sig blodflödet eller filtrationen i den drabbade njuren alls",
       "Captopril stoppar allt blodflöde till båda njurarna helt",
       "Captopril mäter direkt njurstenens storlek"
     ],
@@ -22407,7 +22407,7 @@
     "distractors": [
       "Gram-negativa saknar cellvägg helt och hållet",
       "Gram-positiva saknar peptidoglykan helt och hållet",
-      "Det finns ingen skillnad alls i cellväggens uppbyggnad"
+      "Det finns ingen skillnad alls i cellväggens uppbyggnad mellan gram-positiva och gram-negativa bakterier, båda har identiskt tjocka peptidoglykanlager och yttre membran"
     ],
     "topic": "bma_mikrobiologi_immunologi",
     "difficulty": "Normal",
@@ -22420,7 +22420,7 @@
     "correct": "Om bakteriens cellvägg behåller det violetta kristallviolettfärgämnet eller inte",
     "distractors": [
       "Bakteriens exakta artnamn och stam",
-      "Bakteriens antibiotikakänslighet direkt vid färgning",
+      "Bakteriens antibiotikakänslighet, direkt avläsbar redan vid själva färgningen i mikroskop",
       "Bakteriens virulensgener och toxinproduktion"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -22477,7 +22477,7 @@
     "distractors": [
       "Vid rörelse genom en vätskemiljö",
       "Vid vanlig energiproduktion i cellen",
-      "Vid nedbrytning av antibiotika i cellen"
+      "Vid nedbrytning av antibiotika inuti bakteriecellen, med hjälp av enzymer i cytoplasman"
     ],
     "topic": "bma_mikrobiologi_immunologi",
     "difficulty": "Normal",
@@ -22490,7 +22490,7 @@
     "correct": "Endospor",
     "distractors": [
       "Kapsel",
-      "Plasmid",
+      "Plasmider",
       "Fimbrie"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -22503,7 +22503,7 @@
     "prompt": "Varför är bakteriella endosporer kliniskt viktiga att känna till vid sterilisering?",
     "correct": "De är extremt resistenta mot värme, uttorkning och många desinfektionsmedel, vilket kräver särskilt effektiva steriliseringsmetoder för att avdödas",
     "distractors": [
-      "De gör bakterien känsligare för alla antibiotika",
+      "De gör bakterien känsligare för alla antibiotika och desinfektionsmedel, vilket gör att helt vanlig rengöring alltid räcker för att avdöda dem fullständigt",
       "De förhindrar all bakterietillväxt permanent",
       "De saknar all klinisk betydelse"
     ],
@@ -22559,7 +22559,7 @@
     "prompt": "Vad kallas testet som avgör vilka antibiotika en odlad bakterie är känslig respektive resistent mot?",
     "correct": "Resistensbestämning",
     "distractors": [
-      "Gramfärgning",
+      "Gramfärgning i mikroskop",
       "Blododling",
       "PCR"
     ],
@@ -22575,7 +22575,7 @@
     "distractors": [
       "Halveringstid",
       "Referensintervall",
-      "Sedimentationsvärde"
+      "Sedimentationsvärde vid odling"
     ],
     "topic": "bma_mikrobiologi_immunologi",
     "difficulty": "Normal",
@@ -22587,7 +22587,7 @@
     "prompt": "Vad kallas den klassiska metoden där antibiotikaimpregnerade lappar placeras på en bakterieodlad agarplatta och hämningszonens storlek avläses?",
     "correct": "Lappdiffusionstest",
     "distractors": [
-      "E-test enbart",
+      "E-test på agarplatta",
       "PCR",
       "ELISA"
     ],
@@ -22616,7 +22616,7 @@
     "correct": "Det ökar sannolikheten att fånga bakterien och hjälper till att skilja en verklig infektion från kontamination med hudbakterier",
     "distractors": [
       "Det krävs enbart av administrativa skäl",
-      "Fler flaskor sänker alltid den diagnostiska känsligheten",
+      "Fler flaskor sänker alltid den diagnostiska känsligheten och ökar därmed risken för att bakterien missas helt i odlingen vid sepsis",
       "En enda flaska ger alltid det säkraste svaret"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -22645,7 +22645,7 @@
     "distractors": [
       "Mikroorganismens fysiska storlek i mikrometer",
       "Mikroorganismens känslighet för antibiotika",
-      "Mikroorganismens färgningsegenskaper i Gramfärgning"
+      "Mikroorganismens färgningsegenskaper vid en vanlig gramfärgning i mikroskop"
     ],
     "topic": "bma_mikrobiologi_immunologi",
     "difficulty": "Normal",
@@ -22671,7 +22671,7 @@
     "prompt": "Vad skiljer endotoxin (LPS) från exotoxin vad gäller ursprung och egenskaper?",
     "correct": "Endotoxin är en del av gram-negativa bakteriers cellvägg och frisätts vid celllys, medan exotoxin aktivt utsöndras av levande bakterier",
     "distractors": [
-      "Endotoxin utsöndras aktivt av gram-positiva bakterier",
+      "Endotoxin utsöndras aktivt av levande gram-positiva bakterier, medan exotoxin utgör en fast del av den gram-negativa cellväggen och frisätts vid lys",
       "Exotoxin är alltid en del av bakteriens cellvägg",
       "Det finns ingen skillnad alls mellan begreppen"
     ],
@@ -22715,7 +22715,7 @@
     "distractors": [
       "Endogen infektion",
       "Zoonos",
-      "Kongenital infektion"
+      "Kongenital infektion hos barn"
     ],
     "topic": "bma_mikrobiologi_immunologi",
     "difficulty": "Normal",
@@ -22770,7 +22770,7 @@
     "correct": "Fakultativt anaeroba bakterier",
     "distractors": [
       "Obligat aeroba bakterier",
-      "Obligat anaeroba bakterier",
+      "Strikt obligat anaeroba bakterier",
       "Mikroaerofila bakterier"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -22798,7 +22798,7 @@
     "correct": "Deras cellvägg innehåller mycolsyror med hög lipidhalt, vilket gör dem \"syrafasta\" och kräver särskild färgningsteknik",
     "distractors": [
       "De saknar cellvägg helt och hållet",
-      "De är för stora för att synas i ett mikroskop",
+      "De är alldeles för stora för att kunna synas i ett vanligt ljusmikroskop, och saknar dessutom lipider och mycolsyror i cellväggen helt",
       "De är virus och inte bakterier"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -22811,7 +22811,7 @@
     "prompt": "Vilken metod anses vara referensmetoden (guldstandard) för att diagnostisera aktiv tuberkulos, trots att den tar flera veckor?",
     "correct": "Odling av Mycobacterium tuberculosis",
     "distractors": [
-      "Snabbtest för antigen enbart",
+      "Snabbtest för antigen i sputum enbart",
       "Enbart lungröntgen",
       "Enbart hudtest"
     ],
@@ -22854,7 +22854,7 @@
     "correct": "En gram-positiv bakterie som utvecklat resistens mot meticillin/penicillinasstabila penicilliner samt oftast flera andra antibiotikaklasser",
     "distractors": [
       "En virusstam som muterat kraftigt",
-      "En svamp som blivit resistent mot antibiotika",
+      "En svamp som blivit resistent mot antibiotika och sprider sig snabbt i vårdmiljö, särskilt bland immunsupprimerade patienter på sjukhusens avdelningar",
       "En parasit som smittar via förorenat vatten"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -22867,7 +22867,7 @@
     "prompt": "Vilken resistensmekanism ligger bakom MRSA:s motståndskraft mot betalaktamantibiotika?",
     "correct": "Ett förändrat penicillinbindande protein med lägre affinitet för betalaktamantibiotika",
     "distractors": [
-      "Nedbrytning av antibiotikat med enbart betalaktamas",
+      "Nedbrytning av antibiotikat med hjälp av enbart betalaktamas, utan förändrat bindningsprotein",
       "Total avsaknad av cellvägg hos bakterien",
       "Ökad kapselbildning enbart, utan proteinförändring"
     ],
@@ -22923,7 +22923,7 @@
     "prompt": "Vad kallas det fenomen där bakterier kan överföra resistensgener till varandra via plasmider, transposoner eller bakteriofager, oberoende av celldelning?",
     "correct": "Horisontell genöverföring",
     "distractors": [
-      "Vertikal genöverföring",
+      "Vertikal genöverföring vid celldelning",
       "Mutation enbart",
       "Fagocytos"
     ],
@@ -22966,7 +22966,7 @@
     "correct": "Transformation",
     "distractors": [
       "Konjugation",
-      "Transduktion",
+      "Transduktion via fag",
       "Fagocytos"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -22979,7 +22979,7 @@
     "prompt": "Vilken antibiotikaklass verkar genom att hämma bakteriens cellväggssyntes och inkluderar penicilliner och cefalosporiner?",
     "correct": "Betalaktamantibiotika",
     "distractors": [
-      "Aminoglykosider",
+      "Aminoglykosider och kinoloner",
       "Makrolider",
       "Tetracykliner"
     ],
@@ -22994,7 +22994,7 @@
     "correct": "Aminoglykosider",
     "distractors": [
       "Betalaktamer",
-      "Glykopeptider",
+      "Glykopeptider som vankomycin",
       "Kinoloner"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -23008,7 +23008,7 @@
     "correct": "Fluorokinoloner",
     "distractors": [
       "Makrolider",
-      "Tetracykliner",
+      "Tetracykliner som doxycyklin",
       "Glykopeptider"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -23036,7 +23036,7 @@
     "correct": "Clostridioides difficile",
     "distractors": [
       "Escherichia coli",
-      "Helicobacter pylori",
+      "Helicobacter pylori i magsäcken",
       "Salmonella enterica"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -23050,7 +23050,7 @@
     "correct": "Bakterien bildar mycket resistenta endosporer som klarar vanlig alkoholbaserad handdesinfektion och kräver tvål/vatten samt särskild rengöring",
     "distractors": [
       "Bakterien är resistent mot all antibiotika utan undantag",
-      "Bakterien smittar aldrig mellan patienter på en avdelning",
+      "Bakterien smittar aldrig mellan patienter på en vårdavdelning och kräver därför inga särskilda hygien- eller rengöringsrutiner alls i vårdmiljön",
       "Bakterien är ett virus och kräver antivirala läkemedel"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -23077,7 +23077,7 @@
     "prompt": "Vad utnyttjar ureasandningstestet för att påvisa Helicobacter pylori-infektion?",
     "correct": "Bakteriens enzym ureas bryter ner tillförd märkt urea till koldioxid, som sedan detekteras i utandningsluften",
     "distractors": [
-      "Bakteriens förmåga att bilda skyddande endosporer",
+      "Bakteriens förmåga att bilda skyddande endosporer i magsäckens sura miljö, vilka sedan kan påvisas i utandningsluften",
       "Bakteriens grad av antibiotikaresistens",
       "Bakteriens rörelseförmåga med hjälp av flageller"
     ],
@@ -23148,7 +23148,7 @@
     "correct": "Staphylococcus epidermidis",
     "distractors": [
       "Staphylococcus aureus",
-      "Streptococcus pyogenes",
+      "Streptococcus pyogenes grupp A",
       "Enterococcus faecalis"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -23231,7 +23231,7 @@
     "prompt": "Vad gör att influensavirus kan orsaka stora pandemier via s.k. antigenskifte (antigenic shift)?",
     "correct": "Det segmenterade RNA-genomet gör att olika influensastammar kan blanda om sina gensegment vid samtidig infektion av en cell",
     "distractors": [
-      "Viruset saknar arvsmassa och kan därför aldrig muta",
+      "Viruset saknar helt arvsmassa och kan därför aldrig mutera eller byta gensegment med andra influensastammar vid en infektion",
       "Viruset infekterar aldrig andra djurarter",
       "Antigenskifte förekommer aldrig hos influensavirus"
     ],
@@ -23273,7 +23273,7 @@
     "prompt": "Vilket enzym, unikt för retrovirus som HIV, omvandlar virusets RNA-genom till DNA som sedan kan integreras i värdcellens arvsmassa?",
     "correct": "Omvänt transkriptas",
     "distractors": [
-      "DNA-girastas",
+      "DNA-girastas i bakterier",
       "Betalaktamas",
       "Neuraminidas"
     ],
@@ -23302,7 +23302,7 @@
     "correct": "RNA måste först omvandlas till komplementärt DNA med omvänt transkriptas innan den vanliga PCR-amplifieringen kan ske",
     "distractors": [
       "RNA-virus kan aldrig detekteras med någon PCR-metod",
-      "DNA-virus kräver alltid omvänd transkription men inte RNA-virus",
+      "DNA-virus kräver alltid omvänd transkription före PCR, medan RNA-virus kan amplifieras direkt utan detta steg i labbet",
       "PCR fungerar bara på bakterier, aldrig på virus"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -23329,7 +23329,7 @@
     "prompt": "Vad kallas ett test som istället påvisar patientens egna antikroppar mot ett virus, användbart för att avgöra genomgången eller pågående infektion?",
     "correct": "Serologiskt test",
     "distractors": [
-      "Antigentest",
+      "Antigentest i näsan",
       "PCR",
       "Odling"
     ],
@@ -23343,7 +23343,7 @@
     "prompt": "Vad kallas processen då kroppen efter en infektion eller vaccination övergår från att sakna mätbara antikroppar till att ha detekterbara antikroppar?",
     "correct": "Serokonversion",
     "distractors": [
-      "Antigenskifte",
+      "Antigenskifte hos virus",
       "Transduktion",
       "Fagocytos"
     ],
@@ -23359,7 +23359,7 @@
     "distractors": [
       "IgM och IgG mäter alltid exakt samma sak i blodet",
       "IgG stiger alltid före IgM vid samtliga infektioner",
-      "Endast IgG har någon klinisk betydelse vid infektionsdiagnostik"
+      "Endast IgG har någon som helst klinisk betydelse vid infektionsdiagnostik, medan IgM helt saknar värde och aldrig behöver analyseras i något skede av infektionen"
     ],
     "topic": "bma_mikrobiologi_immunologi",
     "difficulty": "Normal",
@@ -23373,7 +23373,7 @@
     "distractors": [
       "ELISA",
       "Odling",
-      "Koagulastest"
+      "Koagulastest på plattan"
     ],
     "topic": "bma_mikrobiologi_immunologi",
     "difficulty": "Normal",
@@ -23387,7 +23387,7 @@
     "distractors": [
       "Kemotaxi",
       "Fagocytos",
-      "Serokonversion"
+      "Serokonversion i serum"
     ],
     "topic": "bma_mikrobiologi_immunologi",
     "difficulty": "Normal",
@@ -23413,7 +23413,7 @@
     "prompt": "Vad kallas den grupp läkemedel som specifikt hämmar HIV:s omvända transkriptas, en av flera klasser i kombinationsbehandling mot HIV?",
     "correct": "Omvänt transkriptashämmare",
     "distractors": [
-      "Betalaktamantibiotika",
+      "Betalaktamantibiotika mot bakterier",
       "Antimykotika",
       "Antihelmintika"
     ],
@@ -23457,7 +23457,7 @@
     "distractors": [
       "Candida albicans",
       "Malassezia furfur",
-      "Trichophyton species"
+      "Trichophyton rubrum-species"
     ],
     "topic": "bma_mikrobiologi_immunologi",
     "difficulty": "Normal",
@@ -23470,7 +23470,7 @@
     "correct": "Cryptococcus neoformans",
     "distractors": [
       "Candida albicans",
-      "Aspergillus fumigatus",
+      "Aspergillus fumigatus i lungan",
       "Dermatofyter"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -23525,7 +23525,7 @@
     "prompt": "Vilken klassisk mikroskopisk metod används för att diagnostisera malaria genom att undersöka färgade blodutstryk för parasiter inuti erytrocyterna?",
     "correct": "Tjock och tunn bloddroppe färgad med t.ex. Giemsa",
     "distractors": [
-      "Ureasandningstest för att påvisa magbakterier",
+      "Ureasandningstest för att påvisa bakterier i magsäcken",
       "KOH-preparat för att påvisa svamphyfer",
       "Koagulastest för att särskilja stafylokocker"
     ],
@@ -23568,7 +23568,7 @@
     "correct": "Mikroskopisk undersökning av avföringsprov för att påvisa ägg eller maskdelar",
     "distractors": [
       "Enbart blododling, utan avföringsprov",
-      "Enbart PCR på urin, utan avföringsprov",
+      "Enbart PCR på ett urinprov, helt utan mikroskopi av avföringsprov från patienten",
       "Enbart hudbiopsi, utan avföringsprov"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -23581,7 +23581,7 @@
     "prompt": "Vad kallas processen att fullständigt avdöda alla mikroorganismer, inklusive endosporer, på ett föremål eller en yta?",
     "correct": "Sterilisering",
     "distractors": [
-      "Desinfektion",
+      "Desinfektion av ytor",
       "Antisepsis",
       "Sanering"
     ],
@@ -23597,7 +23597,7 @@
     "distractors": [
       "Desinfektion och sterilisering är exakt samma sak",
       "Desinfektion är alltid effektivare än sterilisering",
-      "Sterilisering används enbart på hud, aldrig på instrument"
+      "Sterilisering används enbart på hud och slemhinnor, aldrig på kirurgiska instrument, medan desinfektion tvärtom enbart används på instrument och aldrig på hud eller slemhinnor i vården"
     ],
     "topic": "bma_mikrobiologi_immunologi",
     "difficulty": "Normal",
@@ -23651,7 +23651,7 @@
     "prompt": "Varför räcker inte alkoholbaserad handdesinfektion vid misstänkt Clostridioides difficile-infektion, utan tvål och vatten krävs?",
     "correct": "Alkohol avdödar inte bakteriens resistenta endosporer effektivt, medan mekanisk tvättning med tvål och vatten sköljer bort dem",
     "distractors": [
-      "Alkohol är alltid effektivast mot alla mikroorganismer",
+      "Alkohol är alltid effektivast mot alla mikroorganismer, inklusive resistenta endosporer, medan tvål och vatten saknar effekt helt",
       "C. difficile bildar inga sporer alls",
       "Handhygien saknar helt betydelse för denna bakterie"
     ],
@@ -23679,7 +23679,7 @@
     "prompt": "Vad kallas ett odlingsmedium som är berikat med näringsämnen (t.ex. blod) för att gynna tillväxt av bakterier som är svåra att odla på enklare medium?",
     "correct": "Berikat odlingsmedium, t.ex. blodagar eller chokladagar",
     "distractors": [
-      "Selektivt medium enbart, utan berikning",
+      "Selektivt medium enbart, helt utan någon näringsberikning",
       "Kromogent medium enbart, utan berikning",
       "Transportmedium, utan odlingsförmåga"
     ],
@@ -23721,7 +23721,7 @@
     "prompt": "Varför bedöms sputumprovets kvalitet (t.ex. andel skivepitelceller och vita blodkroppar) innan odlingssvaret tolkas kliniskt?",
     "correct": "För att avgöra om provet verkligen kommer från de nedre luftvägarna eller huvudsakligen är kontaminerat med saliv från munhålan",
     "distractors": [
-      "Kvaliteten på provet saknar all betydelse för tolkningen",
+      "Kvaliteten på provet saknar all betydelse för tolkningen av odlingssvaret, oavsett hur mycket saliv det innehåller från munhålan",
       "Skivepitelceller visar alltid en allvarlig infektion",
       "Bedömningen görs enbart av kostnadsskäl"
     ],
@@ -23737,7 +23737,7 @@
     "distractors": [
       "MIC-värde",
       "Antigentest",
-      "Serokonversion"
+      "Asymtomatisk bakteriuri"
     ],
     "topic": "bma_mikrobiologi_immunologi",
     "difficulty": "Normal",
@@ -23791,7 +23791,7 @@
     "prompt": "Varför är tiden till adekvat antibiotikabehandling särskilt kritisk vid misstänkt sepsis?",
     "correct": "Risken för organsvikt och död ökar snabbt för varje timme adekvat behandling fördröjs",
     "distractors": [
-      "Antibiotika har ingen effekt vid sepsis oavsett tidpunkt",
+      "Antibiotika har ingen som helst effekt vid sepsis, oavsett hur tidigt behandlingen sätts in",
       "Sepsis läker alltid ut spontant utan behandling",
       "Tidsaspekten saknar helt klinisk betydelse vid sepsis"
     ],
@@ -23861,7 +23861,7 @@
     "prompt": "Varför anses metaplasi vara en adaptiv, potentiellt skyddande förändring på kort sikt?",
     "correct": "Den nya celltypen tål ofta den skadliga retningen bättre än den ursprungliga, t.ex. tåligare skivepitel mot mekanisk/kemisk retning",
     "distractors": [
-      "Metaplasi innebär alltid en direkt canceromvandling",
+      "Metaplasi innebär alltid en direkt canceromvandling av den drabbade vävnaden och är därför aldrig en skyddande anpassning hos patienten",
       "Metaplasi är alltid helt irreversibel",
       "Metaplasi förekommer enbart i benvävnaden"
     ],
@@ -23959,7 +23959,7 @@
     "prompt": "Vad kallas kalkinlagring i normal, frisk vävnad till följd av förhöjda kalcium-/fosfatnivåer i blodet, t.ex. vid hyperparatyreoidism?",
     "correct": "Metastatisk kalcifiering",
     "distractors": [
-      "Dystrofisk kalcifiering",
+      "Dystrofisk kalcifiering i skadad vävnad",
       "Amyloidos",
       "Steatos"
     ],
@@ -23975,7 +23975,7 @@
     "distractors": [
       "Vävnaden omvandlas helt till flytande, purulent material",
       "Vävnaden förkalkas omedelbart efter celldöden",
-      "Vävnaden ersätts direkt av bindväv utan föregående celldöd"
+      "Vävnaden ersätts direkt av fibrös bindväv utan någon föregående celldöd eller strukturförlust i det drabbade området"
     ],
     "topic": "bma_patologi",
     "difficulty": "Normal",
@@ -23988,7 +23988,7 @@
     "correct": "Den döda vävnaden bryts ner av enzymer till en mjuk, flytande massa",
     "distractors": [
       "Vävnadens arkitektur bevaras helt skuggartat",
-      "Vävnaden blir ostliknande och grynig i konsistensen",
+      "Vävnaden blir ostliknande och grynig i konsistensen, som vid tuberkulos",
       "Vävnaden förkalkas direkt utan nedbrytning"
     ],
     "topic": "bma_patologi",
@@ -24003,7 +24003,7 @@
     "distractors": [
       "Ren flytande, purulent vävnad utan grynighet",
       "Fullständigt bevarad vävnadsarkitektur trots celldöd",
-      "Direkt förkalkning av vävnaden utan föregående celldöd"
+      "Direkt förkalkning av vävnaden utan någon föregående celldöd eller nedbrytning av strukturen i det drabbade området"
     ],
     "topic": "bma_patologi",
     "difficulty": "Normal",
@@ -24017,7 +24017,7 @@
     "distractors": [
       "Vävnaden blir helt flytande och purulent",
       "Vävnaden förblir helt opåverkad av processen",
-      "Vävnaden omvandlas direkt till fibrös bindväv"
+      "Vävnaden omvandlas direkt till fibrös bindväv utan att något kalcium binds av fettsyrorna i området"
     ],
     "topic": "bma_patologi",
     "difficulty": "Normal",
@@ -24029,7 +24029,7 @@
     "prompt": "Vad kännetecknar fibrinoid nekros, som ofta ses i kärlväggar vid vissa autoimmuna sjukdomar och malign hypertoni?",
     "correct": "Immunkomplex och fibrin avlagras i kärlväggen, vilket ger ett homogent, ljust rosa utseende i mikroskop",
     "distractors": [
-      "Vävnaden blir ostliknande och grynig i konsistensen",
+      "Vävnaden blir ostliknande och grynig i konsistensen, precis som vid kaseös nekros vid tuberkulos i lungvävnaden",
       "Vävnaden omvandlas helt till flytande var",
       "Vävnaden förkalkas helt utan någon inflammation"
     ],
@@ -24057,7 +24057,7 @@
     "prompt": "Vad skiljer torr gangrän från våt gangrän?",
     "correct": "Torr gangrän är i grunden koagulativ nekros utan bakteriell superinfektion, medan våt gangrän innebär bakteriell infektion och likvefaktion",
     "distractors": [
-      "Torr gangrän innebär alltid bakterieinfektion, våt gangrän aldrig",
+      "Torr gangrän innebär alltid en bakteriell infektion med likvefaktion, medan våt gangrän aldrig innebär någon infektion alls i den drabbade vävnaden",
       "Det finns ingen skillnad alls mellan de två formerna",
       "Våt gangrän uppstår enbart i hjärnvävnad"
     ],
@@ -24127,7 +24127,7 @@
     "prompt": "Vad kännetecknar akut inflammation histopatologiskt, till skillnad från kronisk inflammation?",
     "correct": "Dominans av neutrofila granulocyter samt vaskulära förändringar",
     "distractors": [
-      "Dominans av lymfocyter, plasmaceller och makrofager",
+      "Dominans av lymfocyter, plasmaceller och makrofager i den drabbade vävnaden",
       "Total avsaknad av celler",
       "Enbart fibros utan cellinfiltrat"
     ],
@@ -24142,7 +24142,7 @@
     "correct": "Infiltrat av lymfocyter, plasmaceller och makrofager, ofta tillsammans med vävnadsdestruktion och samtidiga läkningsförsök",
     "distractors": [
       "Enbart neutrofiler, helt utan andra celltyper",
-      "Total avsaknad av inflammatoriska celler i vävnaden",
+      "Total avsaknad av inflammatoriska celler i den drabbade vävnaden, helt utan några som helst vävnadsdestruktion eller läkningsförsök",
       "Enbart eosinofiler, helt utan andra celltyper"
     ],
     "topic": "bma_patologi",
@@ -24184,7 +24184,7 @@
     "correct": "Granulationsvävnad",
     "distractors": [
       "Ärrvävnad",
-      "Nekrotisk vävnad",
+      "Nekrotisk, död vävnad",
       "Kaseöst material"
     ],
     "topic": "bma_patologi",
@@ -24197,7 +24197,7 @@
     "prompt": "Vilka celltyper dominerar granulationsvävnad?",
     "correct": "Nybildade kapillärer, fibroblaster och inflammatoriska celler",
     "distractors": [
-      "Enbart mogna kollagenfibrer, helt utan celler",
+      "Enbart mogna kollagenfibrer och elastin, helt utan celler eller kärl",
       "Enbart keratinocyter, utan kärlbildning",
       "Enbart adipocyter, utan kärlbildning"
     ],
@@ -24239,7 +24239,7 @@
     "prompt": "Vad kallas sårläkning i ett stort, öppet sår med betydande vävnadsförlust, som läker via riklig granulationsvävnad och sammandragning?",
     "correct": "Läkning per secundam",
     "distractors": [
-      "Läkning per primam",
+      "Läkning per primam intentionem",
       "Fibrinoid läkning",
       "Kaseös läkning"
     ],
@@ -24295,7 +24295,7 @@
     "prompt": "Vad kallas en godartad tumör som växer som fingerlika eller vårtlika utskott från ett epitel?",
     "correct": "Papillom",
     "distractors": [
-      "Adenom",
+      "Cystadenom",
       "Fibrom",
       "Lipom"
     ],
@@ -24309,7 +24309,7 @@
     "prompt": "Vad kallas en malign tumör som utgår från epitelvävnad, den vanligaste typen av cancer hos vuxna?",
     "correct": "Karcinom",
     "distractors": [
-      "Sarkom",
+      "Osteosarkom",
       "Lymfom",
       "Leukemi"
     ],
@@ -24351,7 +24351,7 @@
     "prompt": "Vad kallas en malign tumör som utgår från skivepitel (t.ex. i hud, matstrupe eller livmoderhals)?",
     "correct": "Skivepitelcancer",
     "distractors": [
-      "Adenokarcinom",
+      "Adenokarcinom i körtel",
       "Liposarkom",
       "Kondrosarkom"
     ],
@@ -24421,7 +24421,7 @@
     "prompt": "Vad kallas den grundläggande skillnaden mellan en benign och en malign tumör vad gäller växtsätt?",
     "correct": "Benigna tumörer växer expansivt och avgränsat, medan maligna tumörer växer infiltrativt/invasivt in i omgivande vävnad",
     "distractors": [
-      "Benigna tumörer växer alltid snabbare än maligna tumörer",
+      "Benigna tumörer växer alltid snabbare och betydligt mer invasivt än maligna tumörer gör i den omgivande vävnaden hos patienten",
       "Maligna tumörer växer alltid expansivt och avgränsat",
       "Det finns ingen skillnad alls i växtsätt mellan formerna"
     ],
@@ -24435,7 +24435,7 @@
     "prompt": "Vad är den avgörande egenskapen som skiljer en malign tumör från en benign, oavsett växthastighet?",
     "correct": "Förmågan att metastasera till andra delar av kroppen",
     "distractors": [
-      "Att tumören är smärtsam för patienten",
+      "Att tumören är smärtsam och ömmar för patienten vid beröring",
       "Att tumören är stor i storlek",
       "Att tumören är rikligt vaskulariserad"
     ],
@@ -24449,7 +24449,7 @@
     "prompt": "Vad kallas graden av likhet mellan tumörceller och den normala vävnad de utgår ifrån?",
     "correct": "Differentieringsgrad",
     "distractors": [
-      "Tumörstadium",
+      "Tumörstadium enligt TNM",
       "Tumörvolym",
       "Mitosindex"
     ],
@@ -24464,7 +24464,7 @@
     "correct": "Cellerna liknar fortfarande den ursprungliga vävnaden strukturellt och funktionellt, vilket ofta ger en bättre prognos",
     "distractors": [
       "Cellerna saknar helt likhet med ursprungsvävnaden",
-      "Tumören är alltid malign oavsett differentieringsgrad",
+      "Tumören är alltid malign oavsett differentieringsgrad, och graden saknar därför helt betydelse för prognosen hos patienten",
       "Differentieringsgrad saknar all prognostisk betydelse"
     ],
     "topic": "bma_patologi",
@@ -24478,7 +24478,7 @@
     "correct": "Tumörgradering",
     "distractors": [
       "Tumörstadium",
-      "Metastasering",
+      "Metastasering till lymfkörtlar",
       "Angiogenes"
     ],
     "topic": "bma_patologi",
@@ -24492,7 +24492,7 @@
     "correct": "Gradering beskriver hur avvikande cellerna ser ut mikroskopiskt, medan stadieindelning beskriver tumörens utbredning i kroppen",
     "distractors": [
       "Grad och stadium mäter exakt samma sak i praktiken",
-      "Stadium beskriver enbart cellernas mikroskopiska utseende",
+      "Stadium beskriver enbart cellernas mikroskopiska utseende, medan gradering i stället beskriver hur långt tumören spridit sig i kroppen",
       "Grad beskriver enbart tumörens fysiska storlek"
     ],
     "topic": "bma_patologi",
@@ -24505,7 +24505,7 @@
     "prompt": "Vad står bokstäverna T, N och M för i det internationellt använda TNM-systemet för tumörstadieindelning?",
     "correct": "Tumörstorlek/utbredning, regional lymfkörtelspridning och fjärrmetastaser",
     "distractors": [
-      "Typ, Nekros och Malignitetsgrad, ett annat klassifikationssystem",
+      "Typ, Nekros och Malignitetsgrad, som utgör ett helt annat klassifikationssystem",
       "Tid, Näring och Metabolism, utan koppling till TNM",
       "Temperatur, Nivå och Mängd, utan koppling till TNM"
     ],
@@ -24533,7 +24533,7 @@
     "prompt": "Vad kallas processen där tumörceller lossnar från primärtumören och sprider sig till andra delar av kroppen och etablerar nya tumörer?",
     "correct": "Metastasering",
     "distractors": [
-      "Angiogenes",
+      "Angiogenes i tumören",
       "Dysplasi",
       "Fibros"
     ],
@@ -24577,7 +24577,7 @@
     "distractors": [
       "Hematogen spridning",
       "Lymfogen spridning",
-      "Perineural spridning"
+      "Perineural spridning längs nerver"
     ],
     "topic": "bma_patologi",
     "difficulty": "Normal",
@@ -24603,7 +24603,7 @@
     "prompt": "Vad kallas cancerns förmåga att undgå kroppens normala reglering av celldelning och programmerad celldöd (apoptos)?",
     "correct": "Undandragande från apoptos och okontrollerad proliferation",
     "distractors": [
-      "Metaplasi, en omvandling till en annan mogen celltyp",
+      "Metaplasi, alltså en omvandling till en annan mogen celltyp i vävnaden",
       "Dystrofisk kalcifiering i skadad vävnad",
       "Serös exsudation vid akut inflammation"
     ],
@@ -24659,7 +24659,7 @@
     "prompt": "Vad färgar hematoxylin respektive eosin i en HE-färgning?",
     "correct": "Hematoxylin färgar cellkärnor blåvioletta, eosin färgar cytoplasma och bindväv rosa",
     "distractors": [
-      "Hematoxylin färgar enbart fett, eosin färgar enbart protein",
+      "Hematoxylin färgar enbart fettvävnad, medan eosin färgar enbart proteiner i cellen och kärnan",
       "Båda färgämnena färgar enbart cellkärnan",
       "Eosin färgar enbart bakterier i preparatet"
     ],
@@ -24688,7 +24688,7 @@
     "correct": "Att avgöra tumörens ursprung samt påvisa specifika markörer som styr val av riktad behandling, t.ex. hormonreceptorer eller HER2",
     "distractors": [
       "Att enbart mäta tumörens fysiska storlek",
-      "Att enbart avgöra patientens blodgruppstillhörighet",
+      "Att enbart avgöra patientens blodgruppstillhörighet och Rh-faktor inför en eventuell transfusion i samband med operationen av tumören",
       "Att helt ersätta all vanlig mikroskopi"
     ],
     "topic": "bma_patologi",
@@ -24717,7 +24717,7 @@
     "distractors": [
       "PAS-färgning",
       "Kongorött-färgning",
-      "Ziehl-Neelsen-färgning"
+      "Ziehl-Neelsen-färgning för syrafasta stavar"
     ],
     "topic": "bma_patologi",
     "difficulty": "Normal",
@@ -24772,7 +24772,7 @@
     "correct": "Sämre morfologisk detaljupplösning och högre risk för tolkningsfel, då metoden prioriterar snabbhet",
     "distractors": [
       "Fryssnitt tar alltid flera dagar att analysera",
-      "Fryssnitt kan aldrig visa tumörvävnad över huvud taget",
+      "Fryssnitt kan aldrig visa tumörvävnad över huvud taget och är därför oanvändbart under operationen på patienten",
       "Fryssnitt kräver alltid immunhistokemi för att fungera"
     ],
     "topic": "bma_patologi",
@@ -24785,7 +24785,7 @@
     "prompt": "Vad innebär processen att bädda in ett vävnadsprov i paraffin inför rutinmässig histopatologisk snittning?",
     "correct": "Vävnaden fixeras, dehydreras och genomsyras med paraffin för att bli tillräckligt fast för att skäras i mycket tunna snitt",
     "distractors": [
-      "Vävnaden fryses direkt utan någon kemisk behandling",
+      "Vävnaden fryses direkt utan någon som helst kemisk behandling, dehydrering eller fixering före själva snittningen i laboratoriet",
       "Vävnaden löses upp helt i en stark syra",
       "Vävnaden färgas direkt utan föregående preparation"
     ],
@@ -24815,7 +24815,7 @@
     "distractors": [
       "Fixering påverkar aldrig vävnadens utseende i mikroskop",
       "Fixering krävs enbart för att vävnaden ska få rätt färg",
-      "Fixering är enbart relevant vid immunhistokemisk färgning"
+      "Fixering är enbart relevant vid immunhistokemisk färgning, aldrig vid vanlig HE-färgning eller vid morfologisk bedömning av snittet"
     ],
     "topic": "bma_patologi",
     "difficulty": "Normal",
@@ -24884,7 +24884,7 @@
     "correct": "Finnålspunktion visar enbart lösa celler och deras utseende, medan en kärnbiopsi bevarar vävnadens arkitektur och möjliggör bedömning av t.ex. invasion i omgivande vävnad",
     "distractors": [
       "Metoderna ger exakt samma diagnostiska information alltid",
-      "Finnålspunktion visar alltid vävnadsarkitektur bättre än biopsi",
+      "Finnålspunktion visar alltid vävnadsarkitekturen betydligt bättre än en kärnbiopsi, eftersom cellerna bevaras i sitt ursprungliga sammanhang i den omgivande vävnaden runt tumören",
       "Kärnbiopsi kan aldrig användas vid misstänkt cancer"
     ],
     "topic": "bma_patologi",
@@ -24926,7 +24926,7 @@
     "correct": "Cervikal intraepitelial neoplasi, gradvis dysplasi",
     "distractors": [
       "Adenom, en godartad körteltumör",
-      "Fibrom, en godartad bindvävstumör",
+      "Fibrom, en helt godartad bindvävstumör i livmoderväggen",
       "Lipom, en godartad fettvävstumör"
     ],
     "topic": "bma_patologi",
@@ -24997,7 +24997,7 @@
     "distractors": [
       "Klinisk obduktion",
       "Fryssnitt",
-      "Cytologisk undersökning"
+      "Cytologisk undersökning av prov"
     ],
     "topic": "bma_patologi",
     "difficulty": "Normal",
@@ -25009,7 +25009,7 @@
     "prompt": "Vad skiljer en klinisk obduktion från en rättsmedicinsk obduktion vad gäller huvudsyfte?",
     "correct": "Klinisk obduktion syftar främst till att öka den medicinska kunskapen om sjukdomsförlopp och behandlingseffekt, medan rättsmedicinsk obduktion syftar till att fastställa dödsorsak/dödssätt inför en rättslig process",
     "distractors": [
-      "De har exakt samma syfte och genomförs på exakt samma sätt",
+      "De har exakt samma syfte och genomförs på exakt samma sätt, av samma läkare, med samma frågeställning och samma rättsliga status, oavsett om dödsfallet i det enskilda fallet bedöms som helt naturligt eller onaturligt",
       "Klinisk obduktion görs alltid på begäran av polisen",
       "Rättsmedicinsk obduktion görs aldrig vid misstänkt brott"
     ],
@@ -25123,7 +25123,7 @@
     "distractors": [
       "Metaplasi",
       "Anaplasi enbart",
-      "Fibrinoid nekros"
+      "Fibrinoid nekros i kärl"
     ],
     "topic": "bma_patologi",
     "difficulty": "Normal",
@@ -25135,7 +25135,7 @@
     "prompt": "Vad kallas den bedömning där en patolog utifrån en biopsi eller ett operationspreparat sammanfattar diagnos, typ, grad och eventuell spridning av en tumör i ett skriftligt utlåtande?",
     "correct": "Patologutlåtande",
     "distractors": [
-      "Antibiogram",
+      "Antibiogram från odling",
       "Blodstatus",
       "Renogram"
     ],
