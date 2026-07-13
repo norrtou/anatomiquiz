@@ -9805,7 +9805,7 @@
     "prompt": "Var är hypofysen belägen?",
     "correct": "I sella turcica, en fördjupning i os sphenoidale vid skallbasen",
     "distractors": [
-      "I halsens framsida, framför luftstrupen, inte vid skallbasen",
+      "I halsens framsida, framför luftstrupen, långt från själva skallbasen",
       "I bukhålan, ovanför njurarna, långt från skallbasen",
       "I bröstkorgen, bakom sternum, långt från skallbasen"
     ],
@@ -9849,7 +9849,7 @@
     "distractors": [
       "I bukhålan, bredvid pankreas, långt från halsen",
       "I mediastinum, bakom hjärtat, långt från halsen",
-      "I skallbasen, i sella turcica, långt från halsen"
+      "I skallbasen, i sella turcica, alltså långt från halsen och luftstrupen"
     ],
     "topic": "bma_endokrina",
     "difficulty": "Normal",
@@ -9861,7 +9861,7 @@
     "prompt": "Vilka delar har sköldkörteln?",
     "correct": "Två laterala lober förbundna av en isthmus",
     "distractors": [
-      "Fyra separata, små körtlar utan isthmus",
+      "Fyra separata, små körtlar helt utan isthmus",
       "En bark- och en märgdel, som i binjuren",
       "Framlob och baklob, som i hypofysen"
     ],
@@ -9876,7 +9876,7 @@
     "correct": "Vanligen fyra körtlar, belägna på sköldkörtelns baksida",
     "distractors": [
       "Två körtlar i buken, nära njurarna",
-      "Sex körtlar i halsen, framför luftstrupen",
+      "Sex körtlar i halsen, belägna framför luftstrupen och struphuvudet",
       "En enda körtel i hjärnan"
     ],
     "topic": "bma_endokrina",
@@ -9889,7 +9889,7 @@
     "prompt": "Var är binjurarna (glandulae suprarenales) belägna?",
     "correct": "Ovanpå/vid njurarnas övre pol, retroperitonealt",
     "distractors": [
-      "Nedanför njurarna, ner i bäckenet",
+      "Nedanför njurarna, en bit ner i bäckenet, intraperitonealt",
       "I halsen, bredvid sköldkörteln",
       "I bröstkorgen, bredvid hjärtat"
     ],
@@ -9918,7 +9918,7 @@
     "correct": "Langerhans öar",
     "distractors": [
       "Acinusceller",
-      "Kupfferceller",
+      "Kupfferceller i levern",
       "Paneth-celler"
     ],
     "topic": "bma_endokrina",
@@ -9932,7 +9932,7 @@
     "correct": "Testiklarna hos man och ovarierna hos kvinna",
     "distractors": [
       "Binjurarna hos båda könen, inte gonaderna",
-      "Sköldkörteln hos båda könen, inte gonaderna",
+      "Sköldkörteln hos båda könen, alltså inte gonaderna",
       "Hypofysen hos båda könen, inte gonaderna"
     ],
     "topic": "bma_endokrina",
@@ -9947,7 +9947,7 @@
     "distractors": [
       "I halsen; den producerar tyroxin istället",
       "I buken; den producerar insulin istället",
-      "I binjuren; den producerar kortisol istället"
+      "I binjurebarken; den producerar i stället kortisol och aldosteron i kroppen"
     ],
     "topic": "bma_endokrina",
     "difficulty": "Normal",
@@ -9960,7 +9960,7 @@
     "correct": "I främre mediastinum; den spelar en central roll i T-cellers mognad, särskilt under barndomen",
     "distractors": [
       "I buken; den producerar galla, inte immunceller",
-      "I halsen; den producerar kalcitonin, inte T-celler",
+      "I halsen; den producerar kalcitonin och tyroxin, alltså inte immunceller som T-celler i kroppen",
       "I bäckenet; den producerar östrogen, inte T-celler"
     ],
     "topic": "bma_endokrina",
@@ -10003,7 +10003,7 @@
     "distractors": [
       "Vasa recta",
       "Sinus coronarius",
-      "Ductus pancreaticus"
+      "Ductus pancreaticus i pankreas"
     ],
     "topic": "bma_endokrina",
     "difficulty": "Normal",
@@ -10017,7 +10017,7 @@
     "distractors": [
       "Enbart ADH och oxytocin",
       "Enbart insulin och glukagon",
-      "Enbart adrenalin och noradrenalin"
+      "Enbart adrenalin och noradrenalin, från binjuremärgen"
     ],
     "topic": "bma_endokrina",
     "difficulty": "Normal",
@@ -10071,7 +10071,7 @@
     "prompt": "Vad kallas hormonet från hypofysens framlob som stimulerar sköldkörtelns hormonproduktion?",
     "correct": "Tyreoideastimulerande hormon",
     "distractors": [
-      "Tillväxthormon",
+      "Tillväxthormon från framloben",
       "Follikelstimulerande hormon",
       "Oxytocin"
     ],
@@ -10100,7 +10100,7 @@
     "correct": "Follikelstimulerande hormon och luteiniserande hormon",
     "distractors": [
       "ACTH och TSH, som styr andra körtlar",
-      "GH och prolaktin, utan koppling till gonaderna",
+      "GH och prolaktin, vilka saknar koppling till gonadernas funktion",
       "ADH och oxytocin, från neurohypofysen"
     ],
     "topic": "bma_endokrina",
@@ -10183,9 +10183,9 @@
     "prompt": "Vilket hypotalamushormon hämmar i stället frisättningen av tillväxthormon (GH)?",
     "correct": "Somatostatin",
     "distractors": [
-      "GHRH",
-      "TRH",
-      "GnRH"
+      "GHRH från hypotalamus",
+      "TRH från hypotalamus",
+      "GnRH från hypotalamus"
     ],
     "topic": "bma_endokrina",
     "difficulty": "Normal",
@@ -10239,7 +10239,7 @@
     "prompt": "Ge ett exempel på positiv återkoppling i det endokrina systemet.",
     "correct": "LH-toppen som utlöser ägglossning under menstruationscykeln",
     "distractors": [
-      "Kortisolets hämning av CRH och ACTH i binjurebarken",
+      "Kortisolets hämning av CRH och ACTH i hypotalamus och hypofysen",
       "T4/T3:s hämning av TSH i sköldkörtelaxeln",
       "Insulinets hämning av glukagon i bukspottkörteln"
     ],
@@ -10253,9 +10253,9 @@
     "prompt": "Vad kallas de vanligaste huvudkategorierna hormoner utifrån kemisk struktur?",
     "correct": "Peptid-/proteinhormoner, steroidhormoner och aminosyrederiverade hormoner",
     "distractors": [
-      "Enbart proteinhormoner, utan andra hormontyper",
-      "Enbart lipider, utan proteinbaserade hormoner",
-      "Enbart kolhydrater, utan hormonell aktivitet"
+      "Kolhydrathormoner, lipidbaserade hormoner och nukleinsyrederiverade hormoner",
+      "Enzymhormoner, vitaminhormoner och mineralhormoner",
+      "Proteinhormoner, kolhydrathormoner och nukleotidhormoner"
     ],
     "topic": "bma_endokrina",
     "difficulty": "Normal",
@@ -10282,7 +10282,7 @@
     "correct": "De är oftast vattenlösliga och kan därför inte lätt passera det lipidbaserade cellmembranet",
     "distractors": [
       "De är alltid för små för att behöva någon receptor alls",
-      "De reagerar direkt med DNA utan att behöva någon receptor",
+      "De reagerar direkt med cellkärnans DNA utan att behöva någon receptor alls, vare sig på cellytan eller inne i cellen",
       "De är fettlösliga och passerar membranet helt obehindrat"
     ],
     "topic": "bma_endokrina",
@@ -10297,7 +10297,7 @@
     "distractors": [
       "Kalcitonin och PTH",
       "Insulin och glukagon",
-      "Kortisol och aldosteron"
+      "Kortisol och aldosteron från binjuren"
     ],
     "topic": "bma_endokrina",
     "difficulty": "Normal",
@@ -10325,7 +10325,7 @@
     "distractors": [
       "Albumin",
       "Ferritin",
-      "Transferrin"
+      "Transferrin i plasma"
     ],
     "topic": "bma_endokrina",
     "difficulty": "Normal",
@@ -10365,7 +10365,7 @@
     "prompt": "Var omvandlas en stor del av T4 till det mer aktiva T3 i kroppen?",
     "correct": "I perifer vävnad, bland annat i levern och njurarna",
     "distractors": [
-      "Enbart i sköldkörteln själv, aldrig perifert",
+      "Enbart i sköldkörteln själv, aldrig ute i perifer vävnad",
       "Enbart i hjärnan, aldrig i lever eller njure",
       "T4 omvandlas aldrig till T3 i kroppen"
     ],
@@ -10393,7 +10393,7 @@
     "prompt": "Hur regleras sköldkörtelns hormonproduktion via negativ återkoppling?",
     "correct": "Förhöjda T3/T4-nivåer hämmar TSH-frisättning från hypofysen och TRH-frisättning från hypotalamus",
     "distractors": [
-      "Förhöjda T3/T4-nivåer ökar alltid TSH-frisättningen ytterligare",
+      "Förhöjda T3/T4-nivåer ökar alltid TSH-frisättningen från hypofysen ytterligare, i en positiv spiral",
       "TSH påverkas inte alls av T3/T4-nivåerna i blodet",
       "Regleringen sker enbart via binjuren, inte hypofysen"
     ],
@@ -10421,7 +10421,7 @@
     "prompt": "Vilka celler i sköldkörteln producerar kalcitonin?",
     "correct": "De parafollikulära cellerna",
     "distractors": [
-      "Follikelcellerna",
+      "Follikelcellerna i kolloiden",
       "Kupfferceller",
       "Podocyter"
     ],
@@ -10437,7 +10437,7 @@
     "distractors": [
       "En solid vävnad helt utan folliklar eller kolloid",
       "Flerskiktat skivepitel utan kolloid, som i huden",
-      "Alveolliknande luftfyllda strukturer, som i lungan"
+      "Alveolliknande, luftfyllda strukturer helt utan kolloid, precis som i lungans vävnad och luftvägar"
     ],
     "topic": "bma_endokrina",
     "difficulty": "Normal",
@@ -10492,7 +10492,7 @@
     "correct": "Hashimotos tyreoidit",
     "distractors": [
       "Graves sjukdom",
-      "Cushings syndrom",
+      "Cushings syndrom i binjuren",
       "Conns syndrom"
     ],
     "topic": "bma_endokrina",
@@ -10519,9 +10519,9 @@
     "prompt": "Genom vilka tre huvudsakliga mekanismer höjer PTH blodets kalciumnivå?",
     "correct": "Ökad benresorption, ökad kalciumreabsorption i njurarna och ökad aktivering av vitamin D",
     "distractors": [
-      "Enbart genom ökad benresorption, utan andra effekter",
-      "Enbart genom minskad kalciumutsöndring i urinen",
-      "Enbart genom ökad tarmabsorption, utan njureffekt"
+      "Ökad benresorption, ökad kalciumutsöndring i urinen och hämmad aktivering av vitamin D",
+      "Minskad benresorption, minskad kalciumreabsorption i njurarna och hämmad aktivering av vitamin D",
+      "Ökad tarmabsorption, minskad benresorption och ökad kalciumutsöndring i njurarna"
     ],
     "topic": "bma_endokrina",
     "difficulty": "Normal",
@@ -10533,7 +10533,7 @@
     "prompt": "Vad krävs för att vitamin D ska bli fullt aktivt och kunna öka kalciumabsorptionen i tarmen?",
     "correct": "Hydroxylering, som sker delvis i levern och delvis i njurarna",
     "distractors": [
-      "Enbart solljusexponering av huden, utan vidare omvandling",
+      "Enbart solljusexponering av huden, helt utan vidare omvandling i kroppen",
       "Enbart intag via kosten, utan omvandling i kroppen",
       "Aktivering i sköldkörteln"
     ],
@@ -10547,7 +10547,7 @@
     "prompt": "Hur påverkar kalcitonin (från sköldkörteln) blodets kalciumnivå, i motsats till PTH?",
     "correct": "Det sänker blodkalciumnivån, bland annat genom att hämma benresorption",
     "distractors": [
-      "Det höjer blodkalciumnivån på samma sätt som PTH gör",
+      "Det höjer blodkalciumnivån på precis samma sätt som PTH gör i skelettet",
       "Det påverkar enbart fosfatnivån, aldrig kalciumnivån",
       "Det har ingen effekt alls på kalciumbalansen"
     ],
@@ -10561,7 +10561,7 @@
     "prompt": "Vad kallas ett tillstånd med överproduktion av PTH, t.ex. vid ett bisköldkörteladenom?",
     "correct": "Hyperparatyreoidism",
     "distractors": [
-      "Hypoparatyreoidism",
+      "Sekundär hypoparatyreoidism",
       "Hypertyreos",
       "Cushings syndrom"
     ],
@@ -10576,7 +10576,7 @@
     "correct": "Hyperkalcemi samt ökad benresorption med risk för skelettskörhet",
     "distractors": [
       "Hypokalcemi och ökad bentäthet i skelettet",
-      "Ingen påverkan alls på kalcium eller skelettet",
+      "Ingen påverkan alls på vare sig kalciumnivån eller skelettet i kroppen",
       "Enbart en effekt på blodsockret, inte kalcium"
     ],
     "topic": "bma_endokrina",
@@ -10590,7 +10590,7 @@
     "correct": "Hypokalcemi, som obehandlad kan ge muskelkramper och kramper",
     "distractors": [
       "Hyperkalcemi med risk för njursten istället",
-      "Kraftigt förhöjt blodsocker, inte kalciumrubbning",
+      "Kraftigt förhöjt blodsocker, i stället för någon kalciumrubbning",
       "Kraftigt förhöjt blodtryck, inte kalciumrubbning"
     ],
     "topic": "bma_endokrina",
@@ -10647,7 +10647,7 @@
     "distractors": [
       "Cortex, medulla och pelvis, som i njuren",
       "Framlob, mellanlob och baklob, som i hypofysen",
-      "Epitel, lamina propria och muscularis, som i tarmen"
+      "Epitel, lamina propria och muscularis mucosae, som i tarmen"
     ],
     "topic": "bma_endokrina",
     "difficulty": "Normal",
@@ -10699,9 +10699,9 @@
     "id": "bma_endo_65",
     "type": "mc",
     "prompt": "Vad producerar binjuremärgen (medulla)?",
-    "correct": "Katekolaminer, huvudsakligen adrenalin och viss noradrenalin",
+    "correct": "Katekolaminer, huvudsakligen adrenalin men även noradrenalin",
     "distractors": [
-      "Aldosteron och kortisol, från binjurebarken",
+      "Aldosteron och kortisol, som i stället bildas i binjurebarken",
       "PTH och kalcitonin, som reglerar kalcium",
       "Insulin och glukagon, från bukspottkörteln"
     ],
@@ -10729,9 +10729,9 @@
     "prompt": "Vilka är kortisolets huvudsakliga generella metabola effekter?",
     "correct": "Ökad glukoneogenes, viss insulinresistens och nedbrytning av protein/fett för energi",
     "distractors": [
-      "Enbart ökad insulinkänslighet, utan andra effekter",
-      "Enbart ökad glykogeninlagring, utan nedbrytning",
-      "Enbart sänkt blodsocker, det motsatta av verkligheten"
+      "Ökad insulinkänslighet, ökad glykogeninlagring och ökad proteinsyntes i muskulaturen",
+      "Sänkt blodsocker, minskad glukoneogenes och ökad fettinlagring",
+      "Minskad glukoneogenes, minskad insulinresistens och ökad proteinsyntes"
     ],
     "topic": "bma_endokrina",
     "difficulty": "Normal",
@@ -10743,7 +10743,7 @@
     "prompt": "Vilka ytterligare effekter, förutom metabola, har kortisol i höga doser?",
     "correct": "Immunsupprimerande och antiinflammatoriska effekter",
     "distractors": [
-      "Kraftigt immunstimulerande effekter, det motsatta",
+      "Kraftigt immunstimulerande effekter, alltså det motsatta",
       "Enbart effekter på kalciumbalansen, inget annat",
       "Enbart effekter på hjärtfrekvensen, inget annat"
     ],
@@ -10759,7 +10759,7 @@
     "distractors": [
       "Kortisol regleras enbart av njurarna, utan hypofysen",
       "Kortisol regleras enbart av sköldkörteln, utan hypofysen",
-      "Kortisol produceras helt oberoende av hypofysens signaler"
+      "Kortisol produceras helt oberoende av både hypofysens och hypotalamus signaler, utan någon överordnad reglering alls i kroppen"
     ],
     "topic": "bma_endokrina",
     "difficulty": "Normal",
@@ -10771,7 +10771,7 @@
     "prompt": "Vad kännetecknar kortisolets normala dygnsrytm?",
     "correct": "Nivåerna är som högst på morgonen och som lägst sent på kvällen/natten",
     "distractors": [
-      "Nivåerna är konstanta dygnet runt, utan variation",
+      "Nivåerna är helt konstanta dygnet runt, utan någon variation alls över dygnet",
       "Nivåerna är som högst mitt i natten istället",
       "Kortisol saknar helt en egen dygnsrytm"
     ],
@@ -10815,7 +10815,7 @@
     "distractors": [
       "Addisons sjukdom",
       "Cushings syndrom",
-      "Hypoparatyreoidism"
+      "Sekundär hypoparatyreoidism"
     ],
     "topic": "bma_endokrina",
     "difficulty": "Normal",
@@ -10841,7 +10841,7 @@
     "prompt": "Vad är den övergripande fysiologiska funktionen med binjuremärgens katekolaminfrisättning?",
     "correct": "Att förbereda kroppen för akut stress genom \"kamp-eller-flykt\"-responsen",
     "distractors": [
-      "Att sänka hjärtfrekvensen och blodtrycket i vila",
+      "Att sänka både hjärtfrekvensen och blodtrycket under vila och vid djup sömn",
       "Att reglera kalciumbalansen i blodet",
       "Att styra tarmens peristaltik uteslutande"
     ],
@@ -10870,7 +10870,7 @@
     "correct": "Fenyletanolamin-N-metyltransferas, stimulerat av höga lokala kortisolnivåer",
     "distractors": [
       "Karbanhydras, som normalt reglerar syra-basbalans",
-      "Acetylkolinesteras, som normalt bryter ner acetylkolin",
+      "Acetylkolinesteras, som normalt bryter ner acetylkolin ute i nervsystemets synapser",
       "Laktatdehydrogenas, som normalt omvandlar laktat"
     ],
     "topic": "bma_endokrina",
@@ -10883,7 +10883,7 @@
     "prompt": "Varför är binjuremärgens läge, nära binjurebarken, funktionellt fördelaktigt för adrenalinsyntesen?",
     "correct": "Höga lokala kortisolkoncentrationer från barken stimulerar det enzym som omvandlar noradrenalin till adrenalin i märgen",
     "distractors": [
-      "Det saknar all funktionell betydelse för hormonproduktionen",
+      "Det saknar all funktionell betydelse för hormonproduktionen, eftersom barken och märgen arbetar helt oberoende av varandra",
       "Binjurebarken producerar själv allt adrenalin, utan märgen",
       "Läget påverkar enbart njurens filtration, inte hormonerna"
     ],
@@ -10913,7 +10913,7 @@
     "distractors": [
       "Ökad utsöndring av natrium och vatten i urinen",
       "Minskad kaliumutsöndring, utan effekt på natrium",
-      "Ingen effekt alls på njurfunktionen eller blodtrycket"
+      "Ingen effekt alls på njurfunktionen, blodvolymen eller blodtrycket hos patienten, oavsett natriumnivån i blodet"
     ],
     "topic": "bma_endokrina",
     "difficulty": "Normal",
@@ -10939,7 +10939,7 @@
     "prompt": "Vad är insulinets huvudsakliga effekt på blodsockret?",
     "correct": "Det sänker blodsockret genom att öka cellernas glukosupptag och glykogeninlagring",
     "distractors": [
-      "Det höjer blodsockret genom ökad glukoneogenes i levern",
+      "Det höjer blodsockret genom ökad glukoneogenes och glykogenolys i levern och njuren",
       "Det har ingen effekt alls på blodsockernivån",
       "Det sänker enbart blodtrycket, inte blodsockret"
     ],
@@ -10955,7 +10955,7 @@
     "distractors": [
       "Det sänker blodsockret på samma sätt som insulin gör",
       "Det har ingen effekt alls på blodsockernivån",
-      "Det stimulerar enbart fettinlagring, inte blodsockret"
+      "Det stimulerar enbart fettinlagringen ute i vävnaderna, inte blodsockret i levern"
     ],
     "topic": "bma_endokrina",
     "difficulty": "Normal",
@@ -10967,7 +10967,7 @@
     "prompt": "Vilken celltyp i Langerhans öar producerar somatostatin, som lokalt hämmar både insulin- och glukagonfrisättning?",
     "correct": "Deltaceller",
     "distractors": [
-      "Betaceller",
+      "Betaceller i öarna",
       "Alfaceller",
       "PP-celler"
     ],
@@ -11009,7 +11009,7 @@
     "prompt": "Vad kännetecknar typ 1-diabetes patofysiologiskt?",
     "correct": "En autoimmun destruktion av betacellerna, vilket ger absolut insulinbrist",
     "distractors": [
-      "Enbart nedsatt känslighet för insulin med bevarad insulinproduktion",
+      "Enbart en nedsatt känslighet för insulin, med helt bevarad insulinproduktion",
       "Överproduktion av glukagon utan påverkan på insulin",
       "En primär störning i sköldkörtelfunktionen"
     ],
@@ -11023,7 +11023,7 @@
     "prompt": "Vad kännetecknar typ 2-diabetes patofysiologiskt?",
     "correct": "Insulinresistens i vävnaderna, ofta i kombination med relativ insulinbrist över tid",
     "distractors": [
-      "En fullständig autoimmun förstörelse av betacellerna redan från start",
+      "En fullständig autoimmun förstörelse av samtliga betaceller redan från sjukdomens start",
       "En brist på glukagon",
       "En primär binjurebarkssvikt"
     ],
@@ -11039,7 +11039,7 @@
     "distractors": [
       "Natriuretiska hormoner",
       "Gonadotropiner",
-      "Katekolaminer uteslutande"
+      "Katekolaminer uteslutande, inget annat"
     ],
     "topic": "bma_endokrina",
     "difficulty": "Normal",
@@ -11107,7 +11107,7 @@
     "prompt": "Vad mäter HbA1c (glykerat hemoglobin) kliniskt?",
     "correct": "Den genomsnittliga blodsockernivån under de senaste cirka 2–3 månaderna",
     "distractors": [
-      "Blodsockernivån vid exakt provtagningstillfället, ögonblicksbilden",
+      "Blodsockernivån vid exakt provtagningstillfället, alltså en ren ögonblicksbild",
       "Njurfunktionen, uppmätt via kreatinin",
       "Leverfunktionen, uppmätt via leverenzymer"
     ],
@@ -11123,7 +11123,7 @@
     "distractors": [
       "Glukosbelastningstest",
       "Kreatininclearance",
-      "Vattendeprivationstest"
+      "Vattendeprivationstest över natten"
     ],
     "topic": "bma_endokrina",
     "difficulty": "Normal",
@@ -11149,7 +11149,7 @@
     "prompt": "Vilket test används för att diagnostisera diabetes mellitus genom att mäta blodsocker före och efter intag av en given mängd glukos?",
     "correct": "Oralt glukosbelastningstest",
     "distractors": [
-      "Dexametasonhämningstest",
+      "Dexametasonhämningstest över natten",
       "Vattendeprivationstest",
       "ACTH-stimuleringstest"
     ],
@@ -11163,7 +11163,7 @@
     "prompt": "Vad kallas tillståndet med kraftigt förhöjda urinmängder orsakat av bristande ADH-effekt på njuren?",
     "correct": "Diabetes insipidus",
     "distractors": [
-      "Diabetes mellitus",
+      "Diabetes mellitus typ 2",
       "SIADH",
       "Cushings syndrom"
     ],
@@ -11192,7 +11192,7 @@
     "correct": "Eftersom kombinationen av ett överordnat hormon och det perifera hormonet avslöjar var i axeln felet sitter",
     "distractors": [
       "Feedback-mekanismer är enbart teoretiska och saknar klinisk betydelse",
-      "Alla hormonprover tolkas alltid isolerat, utan hänsyn till andra hormoner",
+      "Alla hormonprover tolkas alltid isolerat, helt utan hänsyn till andra hormoner i samma axel eller till feedback",
       "Negativ feedback gäller enbart för kalciumreglering, inget annat"
     ],
     "topic": "bma_endokrina",
@@ -11205,7 +11205,7 @@
     "prompt": "Vad är lymfsystemets huvudsakliga uppgift, förutom immunförsvar?",
     "correct": "Att samla upp överskottsvätska från vävnaderna och återföra den till blodbanan",
     "distractors": [
-      "Att pumpa syresatt blod till kroppens alla organ",
+      "Att pumpa ut syresatt blod till kroppens alla organ och vävnader via artärer och kapillärer",
       "Att producera magsyra i magsäckens körtlar",
       "Att bilda urin i njurarnas nefron"
     ],
@@ -11233,7 +11233,7 @@
     "prompt": "Vad kallas de organ där mogna lymfocyter möter antigen och det adaptiva immunsvaret aktiveras (sekundära lymfatiska organ)?",
     "correct": "Lymfkörtlar, mjälte och slemhinneassocierad lymfoid vävnad",
     "distractors": [
-      "Benmärgen och thymus, de primära lymfoida organen",
+      "Benmärgen och thymus, som i stället är de primära lymfoida organen",
       "Levern och njurarna, som saknar lymfoid vävnad",
       "Hjärtat och lungorna, som saknar lymfoid vävnad"
     ],
@@ -11289,7 +11289,7 @@
     "prompt": "Var i lymfkörteln är B-cellerna huvudsakligen belägna, ofta organiserade i tydliga strukturer?",
     "correct": "I cortex, organiserade i lymfoida folliklar med germinalcentra",
     "distractors": [
-      "I parakortex, utan folliklar eller germinalcentra",
+      "I parakortex och medulla, helt utan folliklar eller germinalcentra",
       "I medulla, långt från cortex",
       "I kapseln enbart, utan lymfoid vävnad"
     ],
@@ -11317,7 +11317,7 @@
     "prompt": "Vad kallas de strukturer i en aktiverad lymfkörtels cortex där B-celler proliferar och genomgår affinitetsmognad?",
     "correct": "Germinalcentra",
     "distractors": [
-      "Parakortex",
+      "Parakortexzonen",
       "Sinusoider",
       "Trabekler"
     ],
@@ -11331,7 +11331,7 @@
     "prompt": "Hur når lymfan en lymfkörtel, och hur lämnar den den?",
     "correct": "Via flera tillförande lymfkärl in i kapseln, och via ett fåtal bortförande lymfkärl vid hilus",
     "distractors": [
-      "Via blodkärl uteslutande, utan några lymfkärl alls",
+      "Via blodkärl uteslutande, helt utan några tillförande eller bortförande lymfkärl alls vid hilus",
       "Via ett enda kärl som både för in och ut lymfa",
       "Lymfan stannar permanent kvar i lymfkörteln"
     ],
@@ -11373,7 +11373,7 @@
     "prompt": "Vilken huvudsaklig funktion har mjältens vita pulpa?",
     "correct": "Den innehåller lymfoid vävnad och deltar i immunresponsen mot blodburna antigen",
     "distractors": [
-      "Den filtrerar enbart åldrade erytrocyter, utan immunfunktion",
+      "Den filtrerar enbart bort åldrade erytrocyter i mjälten, helt utan någon immunfunktion alls",
       "Den lagrar galla, precis som gallblåsan",
       "Den producerar erytropoetin, precis som njuren"
     ],
@@ -11415,7 +11415,7 @@
     "prompt": "Vad kallas den ring av lymfoid vävnad (tonsiller) som omger svalgets ingång och skyddar mot inandade/intagna mikroorganismer?",
     "correct": "Waldeyers tonsillring",
     "distractors": [
-      "Peyers plaques",
+      "Peyers plaques i ileum",
       "MALT",
       "Germinalcentra"
     ],
@@ -11430,7 +11430,7 @@
     "correct": "Sinusmakrofager",
     "distractors": [
       "Podocyter",
-      "Kupfferceller",
+      "Kupfferceller i levern",
       "Hepatocyter"
     ],
     "topic": "bma_immun_lymfatiska",
@@ -11443,7 +11443,7 @@
     "prompt": "Vad kallas de karakteristiska epitelialstrukturerna i thymus märg som anses spela en roll i T-cellsselektionen?",
     "correct": "Hassalls korpuskler",
     "distractors": [
-      "Germinalcentra",
+      "Germinalcentra i cortex",
       "Peyers plaques",
       "Langerhans öar"
     ],
@@ -11457,7 +11457,7 @@
     "prompt": "Vad kallas processen i thymus där omogna T-celler selekteras för att varken vara oreaktiva mot eget MHC eller reagera mot kroppsegna antigen?",
     "correct": "Positiv och negativ selektion",
     "distractors": [
-      "Klonal expansion",
+      "Klonal expansion i lymfkörteln",
       "Affinitetsmognad",
       "Diapedes"
     ],
@@ -11469,11 +11469,11 @@
     "id": "bma_immun_20",
     "type": "mc",
     "prompt": "Var i kroppen sker huvuddelen av den nybildning (hematopoes) av lymfocyters förstadier hos en vuxen?",
-    "correct": "I det röda benmärgen",
+    "correct": "I den röda benmärgen",
     "distractors": [
       "I mjälten",
       "I thymus",
-      "I lymfkörtlarna"
+      "I lymfkörtlarnas cortex"
     ],
     "topic": "bma_immun_lymfatiska",
     "difficulty": "Normal",
@@ -11485,7 +11485,7 @@
     "prompt": "Vilka utgör kroppens första försvarslinje mot mikroorganismer?",
     "correct": "Fysiska och kemiska barriärer, t.ex. huden, slemhinnor och magsyra",
     "distractors": [
-      "Enbart specifika antikroppar mot ett visst antigen",
+      "Enbart specifika antikroppar riktade mot ett visst antigen i blodbanan",
       "Enbart T-celler riktade mot ett specifikt antigen",
       "Enbart komplementsystemet, utan barriärer"
     ],
@@ -11501,7 +11501,7 @@
     "distractors": [
       "Det är långsamt men mycket antigenspecifikt",
       "Det bygger enbart på antikroppar",
-      "Det kräver alltid tidigare exponering för antigenet"
+      "Det kräver alltid en tidigare exponering för samma antigen"
     ],
     "topic": "bma_immun_lymfatiska",
     "difficulty": "Normal",
@@ -11513,9 +11513,9 @@
     "prompt": "Vilka celltyper räknas till det medfödda immunförsvarets huvudsakliga cellulära komponenter?",
     "correct": "Neutrofiler, makrofager, NK-celler och dendritiska celler",
     "distractors": [
-      "Enbart B-lymfocyter, utan andra cellslag",
-      "Enbart plasmaceller, utan andra cellslag",
-      "Enbart eosinofiler, utan andra cellslag"
+      "B-lymfocyter, plasmaceller, T-hjälparceller och minnesceller",
+      "Plasmaceller, B-celler, T-hjälparceller och minnesceller",
+      "Erytrocyter, trombocyter, plasmaceller och minnesceller"
     ],
     "topic": "bma_immun_lymfatiska",
     "difficulty": "Normal",
@@ -11555,9 +11555,9 @@
     "prompt": "Vilka steg ingår i den klassiska fagocytosprocessen?",
     "correct": "Kemotaxi, adherens/igenkänning, uppslukning och intracellulär nedbrytning",
     "distractors": [
-      "Enbart antikroppsbindning, utan någon uppslukning",
-      "Enbart komplementaktivering, utan fagocytos",
-      "Enbart cellulär mognad i benmärgen, utan fagocytos"
+      "Kemotaxi, antikroppsbindning, komplementaktivering och celldelning",
+      "Adherens, komplementaktivering, celldelning och antikroppsutsöndring",
+      "Cellulär mognad i benmärgen, migration, antikroppsbindning och programmerad apoptos"
     ],
     "topic": "bma_immun_lymfatiska",
     "difficulty": "Normal",
@@ -11612,7 +11612,7 @@
     "correct": "Den klassiska, den alternativa och lektinvägen",
     "distractors": [
       "Den centrala, perifera och autonoma vägen",
-      "Den orala, faryngeala och esofageala vägen",
+      "Den orala, den faryngeala och den esofageala vägen",
       "Den primära, sekundära och tertiära vägen"
     ],
     "topic": "bma_immun_lymfatiska",
@@ -11625,7 +11625,7 @@
     "prompt": "Vad är komplementsystemets huvudsakliga slutgemensamma effekt när det aktiveras fullt ut?",
     "correct": "Bildning av membranattackkomplexet, som gör hål i mikroorganismens cellmembran",
     "distractors": [
-      "Direkt antikroppsproduktion mot mikroorganismen",
+      "Direkt produktion av specifika antikroppar riktade mot mikroorganismen i blodbanan",
       "Produktion av interferon mot viruset",
       "Aktivering av benmärgens stamceller"
     ],
@@ -11681,7 +11681,7 @@
     "prompt": "Vad orsakar den lokala vasodilatationen och ökade kärlpermeabiliteten vid akut inflammation?",
     "correct": "Frisättning av inflammatoriska mediatorer, t.ex. histamin och prostaglandiner",
     "distractors": [
-      "En direkt bakteriell invasion av kärlväggen själv",
+      "En direkt bakteriell invasion av själva kärlväggen i det drabbade området i vävnaden",
       "Minskad blodtillförsel till det drabbade området",
       "Ökad muskelaktivitet i det drabbade området"
     ],
@@ -11765,7 +11765,7 @@
     "prompt": "Vad kännetecknar det adaptiva (förvärvade) immunförsvaret, till skillnad från det medfödda?",
     "correct": "Det är antigenspecifikt, långsammare vid första exponering och bygger upp ett immunologiskt minne",
     "distractors": [
-      "Det är snabbt och helt ospecifikt, utan minnesfunktion",
+      "Det är snabbt och helt ospecifikt, helt utan någon minnesfunktion, precis som det medfödda försvaret",
       "Det saknar helt cellulära komponenter av betydelse",
       "Det kräver aldrig någon antigenigenkänning alls"
     ],
@@ -11809,7 +11809,7 @@
     "distractors": [
       "De producerar enbart komplement, utan minnesfunktion",
       "De fagocyterar mikroorganismer direkt, utan minne",
-      "De styr benmärgens erytropoes, utan koppling till minne"
+      "De styr benmärgens erytropoes och trombopoes, helt utan koppling till immunologiskt minne alls"
     ],
     "topic": "bma_immun_lymfatiska",
     "difficulty": "Normal",
@@ -11849,7 +11849,7 @@
     "prompt": "Vilken huvudfunktion har regulatoriska T-celler?",
     "correct": "De dämpar/reglerar immunsvaret och bidrar till att förhindra autoimmunitet",
     "distractors": [
-      "De producerar antikroppar direkt mot antigenet",
+      "De producerar antikroppar direkt riktade mot antigenet, precis som B-celler",
       "De fagocyterar bakterier direkt i vävnaden",
       "De bildar komplementfaktorer i levern"
     ],
@@ -11863,7 +11863,7 @@
     "prompt": "Vad kallas de specialiserade celler vars huvuduppgift är att processa antigen och presentera det för T-celler?",
     "correct": "Antigenpresenterande celler, t.ex. dendritiska celler, makrofager och B-celler",
     "distractors": [
-      "Erytrocyter, som saknar antigenpresenterande förmåga",
+      "Erytrocyter och trombocyter, som helt saknar antigenpresenterande förmåga i kroppen",
       "Trombocyter, som saknar antigenpresenterande förmåga",
       "Hepatocyter, som saknar antigenpresenterande förmåga"
     ],
@@ -11905,7 +11905,7 @@
     "prompt": "Vilka celler uttrycker normalt MHC klass I på sin yta?",
     "correct": "I princip alla kroppens kärnförsedda celler",
     "distractors": [
-      "Enbart antigenpresenterande celler",
+      "Enbart antigenpresenterande celler, inga andra",
       "Enbart erytrocyter",
       "Enbart lymfocyter"
     ],
@@ -11919,7 +11919,7 @@
     "prompt": "Vilka celler uttrycker huvudsakligen MHC klass II?",
     "correct": "Antigenpresenterande celler, t.ex. dendritiska celler, makrofager och B-celler",
     "distractors": [
-      "Alla kroppens celler utan undantag, oavsett typ",
+      "Alla kroppens celler helt utan undantag, oavsett vilken typ det gäller i vävnaden",
       "Enbart erytrocyter, som saknar denna förmåga",
       "Enbart hepatocyter, som saknar denna förmåga"
     ],
@@ -11948,7 +11948,7 @@
     "correct": "Det är snabbare, kraftigare och ger högre antikroppsnivåer, tack vare minnesceller",
     "distractors": [
       "Det är alltid långsammare än det primära svaret var",
-      "Det är identiskt med det primära svaret i styrka och hastighet",
+      "Det är helt identiskt med det primära svaret i både styrka och hastighet, utan minnesceller",
       "Det involverar aldrig några antikroppar alls"
     ],
     "topic": "bma_immun_lymfatiska",
@@ -11989,7 +11989,7 @@
     "prompt": "Vad kallas fenomenet där immunsystemet normalt inte reagerar mot kroppens egna antigen?",
     "correct": "Immunologisk tolerans",
     "distractors": [
-      "Klonal expansion",
+      "Klonal expansion av B-celler",
       "Opsonisering",
       "Kemotaxi"
     ],
@@ -12017,7 +12017,7 @@
     "prompt": "Vad kallas de celler som specifikt processar och transporterar antigen från perifer vävnad till lymfkörtlar för att aktivera T-celler?",
     "correct": "Dendritiska celler",
     "distractors": [
-      "Neutrofiler",
+      "Neutrofila granulocyter",
       "Erytrocyter",
       "Trombocyter"
     ],
@@ -12045,9 +12045,9 @@
     "prompt": "Vilka två huvudsakliga typer av polypeptidkedjor bygger upp en antikropp (immunglobulin)?",
     "correct": "Två tunga kedjor och två lätta kedjor",
     "distractors": [
-      "Enbart tunga kedjor",
-      "Enbart lätta kedjor",
-      "En enda odelad polypeptidkedja"
+      "Två tunga kedjor och två identiska enzymkedjor",
+      "Två lätta kedjor och två korta signalkedjor",
+      "En tung kedja och en enda lätt kedja"
     ],
     "topic": "bma_immun_lymfatiska",
     "difficulty": "Normal",
@@ -12171,7 +12171,7 @@
     "prompt": "Vad menas med \"klassbyte\" (class switching) hos en aktiverad B-cell?",
     "correct": "Cellen byter vilken immunglobulinklass den producerar, utan att ändra antigenspecificitet",
     "distractors": [
-      "Cellen byter helt antigenspecificitet vid processen",
+      "Cellen byter helt antigenspecificitet under själva processen, utan att byta klass av immunglobulin",
       "Cellen slutar helt producera antikroppar efteråt",
       "Cellen omvandlas fullständigt till en T-cell"
     ],
@@ -12199,7 +12199,7 @@
     "prompt": "Vad kallas antikroppar som ges direkt till en person för omedelbart, men tillfälligt, skydd (t.ex. efter exponering för stelkramp)?",
     "correct": "Passiv immunisering",
     "distractors": [
-      "Aktiv immunisering",
+      "Aktiv immunisering med vaccin",
       "Central tolerans",
       "Klonal expansion"
     ],
@@ -12227,7 +12227,7 @@
     "prompt": "Vad är den grundläggande principen bakom vaccination?",
     "correct": "Att exponera immunförsvaret för ett ofarligt eller försvagat antigen så att minnesceller bildas inför en framtida verklig infektion",
     "distractors": [
-      "Att direkt tillföra färdiga antikroppar från en annan individ",
+      "Att direkt tillföra färdiga antikroppar från en annan individ, så att skyddet blir omedelbart men helt kortvarigt och utan minnesceller",
       "Att stänga av det medfödda immunförsvaret helt och hållet",
       "Att förhindra all lymfocytproduktion i kroppen"
     ],
@@ -12255,7 +12255,7 @@
     "prompt": "Vad kännetecknar en typ I-överkänslighetsreaktion (t.ex. vid allergi och anafylaxi)?",
     "correct": "En IgE-medierad reaktion där mastceller/basofiler snabbt frisätter histamin vid förnyad antigenexponering",
     "distractors": [
-      "En reaktion medierad av cytotoxiska T-celler utan antikroppsinblandning",
+      "En fördröjd reaktion medierad av cytotoxiska T-celler, helt utan inblandning av antikroppar eller mastceller",
       "En reaktion orsakad av immunkomplexavlagring i vävnaden",
       "En reaktion helt utan inblandning av immunsystemet"
     ],
@@ -12269,7 +12269,7 @@
     "prompt": "Vad kännetecknar en typ II-överkänslighetsreaktion?",
     "correct": "Antikroppar riktas direkt mot antigen på kroppens egna celler eller vävnader, vilket leder till cellskada",
     "distractors": [
-      "En fördröjd, cellmedierad reaktion helt utan antikroppar",
+      "En fördröjd, cellmedierad reaktion helt utan inblandning av antikroppar eller immunkomplex i vävnaden alls",
       "En IgE-medierad, omedelbar reaktion mot allergenet",
       "En reaktion som helt saknar immunologisk komponent"
     ],
@@ -12285,7 +12285,7 @@
     "distractors": [
       "En direkt IgE-medierad reaktion mot allergenet",
       "En reaktion medierad enbart av cytotoxiska T-celler",
-      "En reaktion helt utan antikroppar eller immunkomplex"
+      "En reaktion helt utan inblandning av vare sig antikroppar eller immunkomplex i vävnaderna alls"
     ],
     "topic": "bma_immun_lymfatiska",
     "difficulty": "Normal",
@@ -12298,7 +12298,7 @@
     "correct": "En fördröjd, cellmedierad reaktion driven av T-celler, utan att primärt bero på antikroppar",
     "distractors": [
       "En omedelbar, IgE-medierad reaktion mot allergenet",
-      "En reaktion medierad av immunkomplexavlagring i vävnaden",
+      "En omedelbar reaktion medierad av immunkomplexavlagring i vävnaden, inom några minuter efter kontakt",
       "En reaktion som uppstår inom några sekunder"
     ],
     "topic": "bma_immun_lymfatiska",
@@ -12313,7 +12313,7 @@
     "distractors": [
       "Anafylaxi mot jordnötter",
       "Kontaktallergi mot nickel",
-      "Serumsjuka efter immunkomplexbildning"
+      "Serumsjuka orsakad av immunkomplexbildning i vävnaden"
     ],
     "topic": "bma_immun_lymfatiska",
     "difficulty": "Normal",
@@ -12340,7 +12340,7 @@
     "correct": "Immunförsvaret angriper felaktigt kroppens egna celler eller vävnader, som om de vore främmande",
     "distractors": [
       "En total avsaknad av immunförsvar i kroppen",
-      "En överproduktion av enbart röda blodkroppar",
+      "En kraftig överproduktion av enbart röda blodkroppar i benmärgen, utan immunologisk komponent alls",
       "En brist på lymfoid vävnad i kroppen"
     ],
     "topic": "bma_immun_lymfatiska",
@@ -12367,7 +12367,7 @@
     "prompt": "Ge ett exempel på en orsak till sekundär (förvärvad) immunbrist.",
     "correct": "HIV-infektion, cytostatikabehandling eller immunsuppressiv medicinering",
     "distractors": [
-      "En medfödd genmutation som ger avsaknad av T-celler",
+      "En medfödd genmutation som ger fullständig avsaknad av T-celler redan från födseln",
       "Normal åldrande av thymus, utan någon sjukdom",
       "Vaccination mot en specifik sjukdom"
     ],
@@ -12396,7 +12396,7 @@
     "correct": "En uttalad immunbrist med kraftigt ökad mottaglighet för opportunistiska infektioner och vissa tumörer",
     "distractors": [
       "Ett kraftigt förstärkt immunförsvar mot infektioner",
-      "En övergående, mild förkylning utan vidare konsekvens",
+      "En övergående och mild förkylning helt utan vidare konsekvenser för vare sig immunförsvaret eller patienten",
       "En isolerad brist på enbart röda blodkroppar"
     ],
     "topic": "bma_immun_lymfatiska",
@@ -12437,7 +12437,7 @@
     "prompt": "Vilken roll spelar HLA (humant leukocytantigen, kroppens MHC) vid organtransplantation?",
     "correct": "Graden av HLA-matchning mellan givare och mottagare påverkar risken för avstötning",
     "distractors": [
-      "HLA har ingen betydelse alls för transplantationsutfallet",
+      "HLA har ingen som helst betydelse för transplantationsutfallet eller avstötningsrisken",
       "HLA avgör enbart blodgruppstillhörighet, inte avstötning",
       "HLA styr enbart hemoglobinsyntesen, inte avstötning"
     ],
@@ -12452,7 +12452,7 @@
     "correct": "Oral/mukosal tolerans",
     "distractors": [
       "Anafylaxi",
-      "Klonal expansion",
+      "Klonal expansion av T-celler",
       "Serumsjuka"
     ],
     "topic": "bma_immun_lymfatiska",
@@ -12465,7 +12465,7 @@
     "prompt": "Vad mäter CRP (C-reaktivt protein) kliniskt, och vad indikerar ett förhöjt värde?",
     "correct": "Ett akutfasprotein från levern vars nivå stiger snabbt vid inflammation eller infektion",
     "distractors": [
-      "Blodets syrgasmättnad, uppmätt med pulsoximeter",
+      "Blodets syrgasmättnad perifert, uppmätt med en pulsoximeter på patientens finger under vila",
       "Njurfunktionen direkt, uppmätt med kreatinin",
       "Blodsockernivån, uppmätt med glukosmätare"
     ],
@@ -12479,7 +12479,7 @@
     "prompt": "Vad mäter sänkningsreaktionen (SR/ESR)?",
     "correct": "Hur snabbt röda blodkroppar sedimenterar i ett rör under en timme, ett indirekt och ospecifikt mått på inflammation",
     "distractors": [
-      "Blodets exakta syrgasinnehåll, uppmätt i en blodgas",
+      "Blodets exakta syrgasinnehåll och koldioxidhalt, uppmätt i en arteriell blodgas på laboratoriets instrument under en timme",
       "Blodsockernivån, uppmätt med en glukosmätare",
       "Njurfunktionen direkt, uppmätt via kreatinin"
     ],
@@ -12495,7 +12495,7 @@
     "distractors": [
       "Blodsockernivån, uppmätt med en glukosmätare",
       "Njurfunktionen, uppmätt via kreatininclearance",
-      "Blodgasstatus, uppmätt i en arteriell provtagning"
+      "Blodgasstatus och syra-basbalans, uppmätt genom en arteriell provtagning i patientens handled på akuten"
     ],
     "topic": "bma_immun_lymfatiska",
     "difficulty": "Normal",
@@ -12507,7 +12507,7 @@
     "prompt": "Vad används flödescytometri ofta till inom klinisk immunologi/hematologi?",
     "correct": "Att identifiera och räkna olika celltyper baserat på ytmarkörer",
     "distractors": [
-      "Att mäta blodets pH direkt i en blodgas",
+      "Att mäta blodets pH-värde direkt i en arteriell blodgas på labbet",
       "Att mäta leverenzymer i ett blodprov",
       "Att mäta njurfunktionen via kreatinin"
     ],
@@ -12537,7 +12537,7 @@
     "distractors": [
       "Blodsockernivån, uppmätt med en glukosmätare",
       "Njurfunktionen direkt, uppmätt via kreatinin",
-      "Leverfunktionen direkt, uppmätt via leverenzymer"
+      "Leverfunktionen direkt, uppmätt via leverenzymerna ALAT och ASAT i ett vanligt blodprov analyserat på laboratoriet"
     ],
     "topic": "bma_immun_lymfatiska",
     "difficulty": "Normal",
@@ -12549,7 +12549,7 @@
     "prompt": "Vad kallas det specifika blodprov som mäter allergenspecifikt IgE för att utreda misstänkt allergi?",
     "correct": "Specifikt IgE-test",
     "distractors": [
-      "ANA-test",
+      "ANA-test för autoantikroppar",
       "CRP",
       "SR"
     ],
@@ -12563,9 +12563,9 @@
     "prompt": "Vilka två huvudtyper av tester används kliniskt för att diagnostisera HIV-infektion?",
     "correct": "Antikroppstest och antigentest, ofta med efterföljande bekräftande test",
     "distractors": [
-      "Enbart mätning av blodsocker, utan antikroppstest",
-      "Enbart mätning av hemoglobin, utan antikroppstest",
-      "Enbart mätning av kreatinin, utan antikroppstest"
+      "Mätning av blodsocker och hemoglobin i serum, helt utan antikropps- eller antigentest",
+      "Mätning av hemoglobin och kreatinin, utan antigentest",
+      "Mätning av kreatinin och leverenzymer, utan antikroppstest"
     ],
     "topic": "bma_immun_lymfatiska",
     "difficulty": "Normal",
@@ -12577,7 +12577,7 @@
     "prompt": "Vad kan ett kraftigt förhöjt totalt IgE i blodet ofta tyda på?",
     "correct": "Allergisk sjukdom eller vissa parasitinfektioner",
     "distractors": [
-      "En akut bakteriell hjärtinfektion",
+      "En akut bakteriell hjärtinfektion, t.ex. endokardit",
       "Nedsatt njurfunktion",
       "Järnbristanemi"
     ],
@@ -12592,7 +12592,7 @@
     "correct": "De stiger vid många olika typer av inflammation och infektion utan att peka ut en specifik orsak eller lokalisation",
     "distractors": [
       "De är helt specifika för en enda sjukdom och orsak",
-      "De mäter enbart njurfunktionen, inget om inflammation",
+      "De mäter enbart njurfunktionen och säger ingenting alls om vare sig inflammation eller infektion i kroppen hos patienten",
       "De påverkas aldrig av infektion, enbart av trauma"
     ],
     "topic": "bma_immun_lymfatiska",
@@ -21005,7 +21005,7 @@
     "prompt": "Vad talar ett lågt retikulocytantal vid samtidig anemi för?",
     "correct": "Nedsatt produktion av röda blodkroppar i benmärgen",
     "distractors": [
-      "Ökad nedbrytning som enda orsak till anemin",
+      "Ökad nedbrytning av erytrocyter som enda orsak till anemin",
       "Alltid en helt normal benmärgsfunktion",
       "Akut blödning som enda orsak till anemin"
     ],
@@ -21019,7 +21019,7 @@
     "prompt": "Vad talar ett högt retikulocytantal vid samtidig anemi för?",
     "correct": "Ökad kompensatorisk produktion, t.ex. vid hemolys eller blödning",
     "distractors": [
-      "Nedsatt benmärgsproduktion, motsatt den verkliga orsaken",
+      "Nedsatt benmärgsproduktion, alltså motsatsen till den verkliga orsaken",
       "Alltid järnbrist, oavsett kliniskt sammanhang",
       "Alltid B12-brist, oavsett kliniskt sammanhang"
     ],
@@ -21061,7 +21061,7 @@
     "prompt": "Vad kallas andelen av transferrinets bindningsplatser för järn som är upptagna, ett mått vid järnbristutredning?",
     "correct": "Transferrinmättnad",
     "distractors": [
-      "Retikulocytindex",
+      "Retikulocytindex i blodet",
       "Hematokrit",
       "Erytrocytindex"
     ],
@@ -21089,7 +21089,7 @@
     "prompt": "Varför kan ferritin vara falskt normalt eller förhöjt vid samtidig järnbrist och inflammation?",
     "correct": "Ferritin är även en akutfasreaktant och stiger vid inflammation, oavsett järnstatus",
     "distractors": [
-      "Ferritin påverkas aldrig av inflammation i kroppen",
+      "Ferritin påverkas aldrig av inflammation i kroppen, utan speglar alltid exakt järndepåerna",
       "Inflammation sänker alltid ferritinnivån",
       "Ferritin mäter enbart hemoglobinkoncentrationen"
     ],
@@ -21105,7 +21105,7 @@
     "distractors": [
       "Transferrin",
       "Haptoglobin",
-      "Erytropoetin"
+      "Erytropoetin från njuren"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -21174,7 +21174,7 @@
     "correct": "Nedsatt eller utebliven syntes av en eller flera globinkedjor i hemoglobinmolekylen",
     "distractors": [
       "Brist på järn i kosten, inte en genetisk orsak",
-      "Brist på vitamin B12 i kosten, inte en genetisk orsak",
+      "Brist på vitamin B12 och folat i kosten, alltså ingen genetisk orsak i hemoglobinsyntesen",
       "Autoimmun nedbrytning av röda blodkroppar"
     ],
     "topic": "bma_hematologi_transfusion",
@@ -21189,7 +21189,7 @@
     "distractors": [
       "Talassemi",
       "Hemofili A",
-      "Perniciös anemi"
+      "Perniciös anemi vid B12-brist"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -21203,7 +21203,7 @@
     "distractors": [
       "Direkt Coombs test",
       "D-dimertest",
-      "Osmolalitetstest av urin"
+      "Osmolalitetstest av urin och plasma"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -21215,7 +21215,7 @@
     "prompt": "Vilken enzymbrist i erytrocyten kan orsaka akut hemolys vid oxidativ stress, t.ex. efter vissa läkemedel eller favabönor?",
     "correct": "Glukos-6-fosfatdehydrogenasbrist",
     "distractors": [
-      "Pyruvatkinasbrist",
+      "Pyruvatkinasbrist i röda blodkroppar",
       "Faktor VIII-brist",
       "Protein C-brist"
     ],
@@ -21230,7 +21230,7 @@
     "correct": "Paroxysmal nokturn hemoglobinuri",
     "distractors": [
       "Talassemi",
-      "Hereditär sfärocytos",
+      "Hereditär sfärocytos med kronisk hemolys",
       "Sideroblastisk anemi"
     ],
     "topic": "bma_hematologi_transfusion",
@@ -21245,7 +21245,7 @@
     "distractors": [
       "Total avsaknad av järn i hela benmärgen",
       "Enbart omogna lymfoblaster, utan järninlagring",
-      "Reed-Sternberg-celler, som vid Hodgkins lymfom"
+      "Reed-Sternberg-celler, precis som man ser vid Hodgkins lymfom"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -21258,7 +21258,7 @@
     "correct": "Myelodysplastiskt syndrom",
     "distractors": [
       "Myelom",
-      "Polycytemia vera",
+      "Polycytemia vera i benmärgen",
       "Hemofili"
     ],
     "topic": "bma_hematologi_transfusion",
@@ -21272,7 +21272,7 @@
     "correct": "Autoimmun hemolytisk anemi",
     "distractors": [
       "Perniciös anemi",
-      "Sideroblastisk anemi",
+      "Sideroblastisk anemi i benmärgen",
       "Aplastisk anemi"
     ],
     "topic": "bma_hematologi_transfusion",
@@ -21285,7 +21285,7 @@
     "prompt": "Vad kännetecknar vänsterförskjutning i ett blodstatus?",
     "correct": "Ökad andel omogna, stavkärniga neutrofiler i blodet",
     "distractors": [
-      "Ökad andel mogna lymfocyter i blodet",
+      "Ökad andel fullt mogna lymfocyter i det perifera blodet",
       "Ökad andel eosinofiler i blodet",
       "Minskat totalt LPK i blodet"
     ],
@@ -21313,7 +21313,7 @@
     "prompt": "Vad är den huvudsakliga skillnaden mellan akut och kronisk leukemi vad gäller celltyp och sjukdomsförlopp?",
     "correct": "Akut leukemi domineras av omogna blaster och har snabbt förlopp, kronisk leukemi av mognare celler och långsammare förlopp",
     "distractors": [
-      "Akut leukemi förekommer enbart hos barn, aldrig hos vuxna",
+      "Akut leukemi förekommer enbart hos barn och aldrig hos vuxna, medan kronisk leukemi uteslutande drabbar äldre personer i hög ålder",
       "Kronisk leukemi ger alltid uttalad pancytopeni",
       "Det finns ingen skillnad alls i celltyp mellan formerna"
     ],
@@ -21355,7 +21355,7 @@
     "prompt": "Vad avses med CD-markörer (t.ex. CD19, CD34) vid flödescytometrisk analys av blodceller?",
     "correct": "Ytantigener som används för att identifiera och klassificera olika celltyper och deras mognadsstadium",
     "distractors": [
-      "Blodgruppsantigener på erytrocyternas yta",
+      "Blodgruppsantigener på erytrocyternas yta, som används vid blodgruppering inför transfusion av patienten",
       "Koagulationsfaktorer i plasman",
       "Hemoglobinvarianter inuti erytrocyten"
     ],
@@ -21383,7 +21383,7 @@
     "prompt": "Vilken typ av leukemi är vanligast hos äldre och kännetecknas ofta av en långsam ansamling av mogna, men funktionsodugliga, lymfocyter?",
     "correct": "Kronisk lymfatisk leukemi",
     "distractors": [
-      "Akut lymfatisk leukemi",
+      "Akut lymfatisk leukemi hos barn",
       "Akut myeloisk leukemi",
       "Hårcellsleukemi"
     ],
@@ -21440,7 +21440,7 @@
     "correct": "Mjälten har en viktig roll i immunförsvaret, bland annat mot inkapslade bakterier, och avlägsnande ökar infektionskänsligheten",
     "distractors": [
       "Splenektomi påverkar aldrig immunförsvaret alls",
-      "Mjälten producerar enbart trombocyter, utan immunfunktion",
+      "Mjälten producerar enbart trombocyter och saknar helt immunfunktion, varför avlägsnandet inte påverkar infektionsrisken hos patienten",
       "Splenektomi minskar alltid infektionsrisken"
     ],
     "topic": "bma_hematologi_transfusion",
@@ -21451,11 +21451,11 @@
     "id": "bma_hema_33",
     "type": "mc",
     "prompt": "Vilken specifik kromosomavvikelse (translokation) är kännetecknande för kronisk myeloisk leukemi (KML)?",
-    "correct": "Philadelphiakromosomen, t, som ger BCR-ABL-fusionsgenen",
+    "correct": "Philadelphiakromosomen, translokation 9;22, som ger BCR-ABL-fusionsgenen",
     "distractors": [
       "Trisomi 21, som ger Downs syndrom",
-      "Monosomi X, som ger Turners syndrom",
-      "Deletion av kromosom 5, en annan kromosomavvikelse"
+      "Trisomi 13, som ger Pataus syndrom",
+      "Deletion av hela kromosom 5, en helt annan typ av kromosomavvikelse i benmärgen"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -21495,7 +21495,7 @@
     "prompt": "Vad kallas lätta immunglobulinkedjor som vid myelom kan filtreras ut och detekteras i urinen?",
     "correct": "Bence Jones-protein",
     "distractors": [
-      "Haptoglobin",
+      "Haptoglobin i blodplasman",
       "Transferrin",
       "Fibrinogen"
     ],
@@ -21525,7 +21525,7 @@
     "distractors": [
       "Multipelt myelom",
       "Hodgkins lymfom",
-      "Kronisk myeloisk leukemi"
+      "Kronisk myeloisk leukemi med BCR-ABL"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -21552,7 +21552,7 @@
     "correct": "Förekomst av Reed-Sternberg-celler",
     "distractors": [
       "Förekomst av Auerstavar",
-      "Förekomst av sicklade erytrocyter",
+      "Förekomst av sicklade, halvmåneformade erytrocyter",
       "Förekomst av megaloblaster"
     ],
     "topic": "bma_hematologi_transfusion",
@@ -21664,7 +21664,7 @@
     "correct": "För att provsvar från olika laboratorier och reagens ska kunna jämföras och tolkas på samma sätt, särskilt vid warfarinbehandling",
     "distractors": [
       "För att helt ersätta behovet av provtagning",
-      "För att INR alltid ska visa samma siffra som APTT",
+      "För att INR alltid ska visa exakt samma siffra som APTT, oavsett vilket reagens eller instrument laboratoriet använder vid analysen",
       "INR har ingen koppling alls till PK-provet"
     ],
     "topic": "bma_hematologi_transfusion",
@@ -21691,7 +21691,7 @@
     "prompt": "Varför är D-dimer en känslig men ospecifik markör vid misstänkt lungemboli/djup ventrombos?",
     "correct": "D-dimer stiger vid många tillstånd med ökad koagulation/fibrinolys, men ett normalt värde talar starkt emot trombos",
     "distractors": [
-      "D-dimer är helt specifikt enbart för lungemboli",
+      "D-dimer är helt specifikt enbart för lungemboli och kan aldrig vara förhöjt vid något annat tillstånd hos patienten",
       "D-dimer är alltid helt normalt vid trombos",
       "D-dimer mäter enbart trombocytantalet i blodet"
     ],
@@ -21735,7 +21735,7 @@
     "distractors": [
       "Hemofili A",
       "Hemofili B",
-      "Trombocytopeni"
+      "Trombocytopeni med blödning"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -21749,7 +21749,7 @@
     "distractors": [
       "Bryter ner redan bildat fibrin",
       "Bildar nya erytrocyter i benmärgen",
-      "Reglerar det systemiska blodtrycket"
+      "Reglerar det systemiska blodtrycket i hela kroppens kärlbädd"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -21786,12 +21786,12 @@
   {
     "id": "bma_hema_57",
     "type": "mc",
-    "prompt": "Vilka två naturliga antikoagulantia, vars brist ökar risken för trombos, bildas normalt i levern och är vitamin K-beroende respektive vitamin K-oberoende?",
+    "prompt": "Vilka naturliga antikoagulantia, vars brist ökar risken för trombos, bildas normalt i levern – varav några är vitamin K-beroende?",
     "correct": "Protein C och protein S samt antitrombin",
     "distractors": [
-      "Fibrinogen och albumin",
-      "Ferritin och transferrin",
-      "Haptoglobin och ceruloplasmin"
+      "Fibrinogen, albumin och protrombin",
+      "Ferritin, transferrin och haptoglobin",
+      "Haptoglobin, ceruloplasmin och alfa-1-antitrypsin"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -21818,7 +21818,7 @@
     "correct": "Disseminerad intravasal koagulation",
     "distractors": [
       "Hemofili A",
-      "Von Willebrands sjukdom",
+      "Von Willebrands ärftliga blödningssjukdom",
       "Trombocytopeni"
     ],
     "topic": "bma_hematologi_transfusion",
@@ -21831,9 +21831,9 @@
     "prompt": "Vilka laboratoriefynd är typiska vid DIC?",
     "correct": "Förbrukning av koagulationsfaktorer och trombocyter, förlängd PK/APTT och kraftigt förhöjt D-dimer",
     "distractors": [
-      "Helt normala koagulationsprover trots sjukdomen",
-      "Enbart förhöjt hemoglobin, inget om koagulationen",
-      "Enbart lågt kalium, inget om koagulationen"
+      "Helt normala koagulationsprover, normalt D-dimer och helt normalt trombocytantal trots sjukdomen hos patienten",
+      "Förhöjt hemoglobin, normalt D-dimer och normal PK/APTT",
+      "Lågt kalium, normalt D-dimer och normal PK/APTT"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -21845,7 +21845,7 @@
     "prompt": "Vilken blodgrupp anses vara den universella plasmagivaren, till skillnad från erytrocyter där O är universell givare?",
     "correct": "Blodgrupp AB",
     "distractors": [
-      "Blodgrupp O",
+      "Blodgrupp O negativ",
       "Blodgrupp A",
       "Blodgrupp B"
     ],
@@ -21901,7 +21901,7 @@
     "prompt": "Vad undersöker det indirekta antiglobulintestet (indirekt Coombs test), till skillnad från det direkta?",
     "correct": "Om det finns fria irreguljära antikroppar mot erytrocytantigen i patientens serum/plasma",
     "distractors": [
-      "Om erytrocyterna redan är belagda med antikroppar",
+      "Om patientens erytrocyter redan är belagda med antikroppar in vivo, som vid direkt Coombs test",
       "Trombocytfunktionen hos patienten",
       "Koagulationsfaktornivåerna hos patienten"
     ],
@@ -21929,7 +21929,7 @@
     "prompt": "Vad kallas en vanlig, mildare transfusionsreaktion med feber och frossa utan hemolys, ofta orsakad av antikroppar mot leukocyter i blodprodukten?",
     "correct": "Febril icke-hemolytisk transfusionsreaktion",
     "distractors": [
-      "Akut hemolytisk transfusionsreaktion",
+      "Akut hemolytisk transfusionsreaktion med AB0-inkompatibilitet",
       "Anafylaktisk reaktion",
       "TRALI"
     ],
@@ -21945,7 +21945,7 @@
     "distractors": [
       "Transfusionsrelaterad allergi",
       "Total röd-/lymfocytindex",
-      "Trombocytrelaterad akut leukemi"
+      "Trombocytrelaterad akut leukemiutveckling"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -21973,7 +21973,7 @@
     "distractors": [
       "TRALI",
       "TACO",
-      "Akut hemolytisk transfusionsreaktion"
+      "Akut hemolytisk transfusionsreaktion med njursvikt"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -21986,7 +21986,7 @@
     "correct": "För att inaktivera givarens lymfocyter och förhindra transfusionsassocierad graft-versus-host-sjukdom",
     "distractors": [
       "För att öka blodets syrebärande förmåga",
-      "För att förlänga blodets hållbarhet helt obegränsat",
+      "För att förlänga blodprodukternas hållbarhet helt obegränsat i blodbanken, helt utan förlust av kvalitet",
       "För att ändra patientens blodgruppstillhörighet"
     ],
     "topic": "bma_hematologi_transfusion",
@@ -21999,7 +21999,7 @@
     "prompt": "Varför leukocytreduceras (filtreras) många blodprodukter rutinmässigt?",
     "correct": "För att minska risken för febrila transfusionsreaktioner, HLA-alloimmunisering och vissa virusöverföringar",
     "distractors": [
-      "För att öka mängden trombocyter i produkten",
+      "För att öka mängden trombocyter och erytrocyter i den färdiga blodprodukten inför transfusionen till patienten",
       "För att ändra blodgruppen på produkten",
       "Det saknar helt klinisk betydelse"
     ],
@@ -22069,7 +22069,7 @@
     "prompt": "Vad kallas den rekommenderade transfusionsstrategin vid massiv blödning där erytrocyter, plasma och trombocyter ges i ett fast förhållande (t.ex. 1:1:1)?",
     "correct": "Massivt transfusionsprotokoll",
     "distractors": [
-      "Autotransfusion",
+      "Autotransfusion med patientens eget blod",
       "Bedside-test",
       "Korstest"
     ],
@@ -22097,7 +22097,7 @@
     "prompt": "Vad kallas provet som tas för att kontrollera att rätt blodpåse verkligen är avsedd för rätt patient direkt innan transfusion (sängkantskontroll)?",
     "correct": "Bedside-test/ABO-kontroll vid sängkant",
     "distractors": [
-      "Korstest i laboratoriet",
+      "Korstest utfört i laboratoriet före transfusion",
       "Flödescytometri",
       "D-dimertest"
     ],
@@ -22111,7 +22111,7 @@
     "prompt": "Varför utvecklar patienter med kronisk njursvikt ofta anemi?",
     "correct": "Nedsatt produktion av erytropoetin i de sjuka njurarna",
     "distractors": [
-      "Alltid samtidig järnbrist utan koppling till njurarna",
+      "Alltid en samtidig järnbrist, helt utan koppling till njurarna",
       "Ökad nedbrytning av röda blodkroppar i njuren",
       "Njursvikt påverkar aldrig blodbildningen"
     ],
@@ -22153,7 +22153,7 @@
     "prompt": "Varför kompletteras ofta benmärgsaspiration med en benmärgsbiopsi vid utredning av t.ex. lymfom, myelofibros eller aplastisk anemi?",
     "correct": "Biopsin visar benmärgens vävnadsarkitektur och cellularitet, information som ett aspirat inte fullt ut ger",
     "distractors": [
-      "Biopsin är alltid överflödig om ett aspirat redan tagits",
+      "Biopsin är alltid helt överflödig om ett benmärgsaspirat redan har tagits från patienten tidigare vid utredningen",
       "Aspirat kan aldrig visa cellmorfologin",
       "Biopsin ersätter blodstatus helt och hållet"
     ],
@@ -22167,7 +22167,7 @@
     "prompt": "Vad kallas anemi som beror på nedsatt förmåga att utnyttja tillgängligt järn trots normala eller höga järndepåer, t.ex. vid kronisk inflammation?",
     "correct": "Anemi vid kronisk sjukdom",
     "distractors": [
-      "Järnbristanemi",
+      "Järnbristanemi med lågt ferritin",
       "Sicklecellanemi",
       "Aplastisk anemi"
     ],
@@ -22183,7 +22183,7 @@
     "distractors": [
       "Ferritin är alltid lågt i båda tillstånden",
       "Ferritin är alltid förhöjt vid järnbrist",
-      "Ferritin skiljer aldrig mellan de två tillstånden"
+      "Ferritin skiljer aldrig mellan de två tillstånden och är därför helt oanvändbart vid anemiutredning hos patienten"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -22280,7 +22280,7 @@
     "correct": "Heparininducerad trombocytopeni",
     "distractors": [
       "DIC",
-      "Von Willebrands sjukdom",
+      "Von Willebrands ärftliga sjukdom",
       "TTP"
     ],
     "topic": "bma_hematologi_transfusion",
@@ -22308,7 +22308,7 @@
     "correct": "Protrombinkomplexkoncentrat",
     "distractors": [
       "Protamin",
-      "Trombocytkoncentrat enbart",
+      "Trombocytkoncentrat enbart, utan plasma",
       "Järnkelat"
     ],
     "topic": "bma_hematologi_transfusion",
@@ -22351,7 +22351,7 @@
     "distractors": [
       "Trombocytferes ger alltid fler röda blodkroppar",
       "Metoden är alltid snabbare än vanlig blodgivning",
-      "Det saknar helt klinisk betydelse vilken metod som används"
+      "Det saknar helt klinisk betydelse vilken av metoderna som används vid transfusionen till den enskilda patienten"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -22365,7 +22365,7 @@
     "distractors": [
       "Genotypning kan bara avgöra AB0, aldrig Rh-systemet",
       "Genotypning kräver alltid en blodtransfusion först",
-      "Serologisk gruppering och genotypning mäter exakt samma molekyl"
+      "Serologisk gruppering och genotypning mäter exakt samma molekyl i provet och ger därför alltid helt identiska svar"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -22391,7 +22391,7 @@
     "prompt": "Varför screenas gravida kvinnor rutinmässigt för irreguljära erytrocytantikroppar tidigt i graviditeten, utöver den grundläggande blodgrupperingen?",
     "correct": "För att i god tid upptäcka antikroppar som kan orsaka hemolytisk sjukdom hos fostret/den nyfödda och planera uppföljning",
     "distractors": [
-      "Antikroppsscreening görs enbart vid själva förlossningen",
+      "Antikroppsscreening görs enbart vid själva förlossningen, eftersom antikroppar aldrig hinner bildas tidigare under graviditeten",
       "Screeningen avgör enbart barnets blodgrupp",
       "Irreguljära antikroppar kan aldrig påverka fostret"
     ],
