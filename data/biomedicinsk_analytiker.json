@@ -2805,7 +2805,7 @@
     "prompt": "Var i thorax är hjärtat huvudsakligen beläget?",
     "correct": "I mediastinum, mellan de två lungorna och bakom sternum",
     "distractors": [
-      "Helt inne i höger lungas underlob, långt från mitten",
+      "Helt inne i höger lungas underlob, långt från kroppens mittlinje",
       "Bakom kotpelaren, helt utanför mediastinum",
       "I bukhålan strax under diafragma, inte i bröstkorgen"
     ],
@@ -2821,7 +2821,7 @@
     "distractors": [
       "Enbart ett enda muskulärt lager, utan seröst blad",
       "Två fibrösa lager, helt utan seröst blad",
-      "Endast det viscerala bladet, utan fibröst perikard"
+      "Endast det viscerala serösa bladet, helt utan fibröst perikard"
     ],
     "topic": "bma_hjarta_cirkulation",
     "difficulty": "Normal",
@@ -2847,7 +2847,7 @@
     "prompt": "Vilka tre lager bygger upp hjärtväggen, räknat inifrån och ut?",
     "correct": "Endokardium, myokardium och epikardium",
     "distractors": [
-      "Intima, media och adventitia",
+      "Tunica intima, tunica media och adventitia",
       "Mukosa, submukosa och serosa",
       "Periost, kortikalis och märg"
     ],
@@ -2862,7 +2862,7 @@
     "correct": "Fyra – två förmak och två kammare",
     "distractors": [
       "Två – ett förmak och en kammare",
-      "Tre – två förmak och en kammare",
+      "Tre – två förmak och en gemensam kammare",
       "Sex – tre förmak och tre kammare"
     ],
     "topic": "bma_hjarta_cirkulation",
@@ -2903,7 +2903,7 @@
     "prompt": "Vilka kärl mynnar normalt i höger förmak?",
     "correct": "Vena cava superior, vena cava inferior och sinus coronarius",
     "distractors": [
-      "De fyra lungvenerna, som mynnar i vänster förmak",
+      "De fyra lungvenerna, som i själva verket mynnar i vänster förmak",
       "Aorta och truncus pulmonalis, som lämnar hjärtat",
       "Enbart vena cava superior, utan de andra kärlen"
     ],
@@ -2931,7 +2931,7 @@
     "prompt": "Vad heter klaffen mellan höger förmak och höger kammare?",
     "correct": "Trikuspidalklaffen",
     "distractors": [
-      "Mitralisklaffen",
+      "Mitralisklaffen/bikuspidalklaffen",
       "Pulmonalisklaffen",
       "Aortaklaffen"
     ],
@@ -2945,7 +2945,7 @@
     "prompt": "Vad heter klaffen mellan vänster förmak och vänster kammare?",
     "correct": "Mitralisklaffen/bikuspidalklaffen",
     "distractors": [
-      "Trikuspidalklaffen",
+      "Trikuspidalklaffen/högersidiga AV-klaffen",
       "Aortaklaffen",
       "Pulmonalisklaffen"
     ],
@@ -2987,7 +2987,7 @@
     "prompt": "Vad förankrar AV-klaffarnas fribräddar och förhindrar att de slås upp i förmaken under systole?",
     "correct": "Chordae tendineae fästa i papillarmusklerna",
     "distractors": [
-      "Trabecula septomarginalis i höger kammare",
+      "Trabecula septomarginalis i höger kammares vägg",
       "Perikardiets fibrösa blad utanför hjärtat",
       "Crista terminalis i höger förmak"
     ],
@@ -3003,7 +3003,7 @@
     "distractors": [
       "Vänster kammare innehåller mer blod totalt sett",
       "Höger kammare saknar myokardium helt och hållet",
-      "Vänster kammare slår betydligt långsammare än höger"
+      "Vänster kammare slår betydligt långsammare än höger kammare och behöver därför mer muskel"
     ],
     "topic": "bma_hjarta_cirkulation",
     "difficulty": "Normal",
@@ -3045,7 +3045,7 @@
     "distractors": [
       "Från truncus pulmonalis",
       "Direkt från vänster kammares kavitet",
-      "Från arcus aortae, långt distalt om klaffen"
+      "Från arcus aortae, långt distalt om själva aortaklaffen"
     ],
     "topic": "bma_hjarta_cirkulation",
     "difficulty": "Normal",
@@ -3059,7 +3059,7 @@
     "distractors": [
       "Ramus marginalis och ramus septalis enbart",
       "Höger marginalgren och AV-nodalgren",
-      "Sinusknuteartären och AV-nodalartären enbart"
+      "Sinusknuteartären och AV-nodalartären, enbart dessa båda grenar"
     ],
     "topic": "bma_hjarta_cirkulation",
     "difficulty": "Normal",
@@ -3099,7 +3099,7 @@
     "prompt": "Var är sinusknutan (SA-noden) belägen?",
     "correct": "I väggen av höger förmak, nära mynningen av vena cava superior",
     "distractors": [
-      "I det interventrikulära septum, långt från förmaken",
+      "I det interventrikulära septum, en bra bit nedanför båda förmaken",
       "I vänster förmaks vägg, på motsatt sida",
       "I hjärtats apex, långt från förmaken"
     ],
@@ -3141,7 +3141,7 @@
     "prompt": "Var är AV-noden belägen?",
     "correct": "I nedre delen av septum interatriale, nära mynningen av sinus coronarius",
     "distractors": [
-      "I väggen av höger förmak vid v. cava superior, motsatt läge",
+      "I väggen av höger förmak, precis vid mynningen av vena cava superior, alltså i motsatt läge",
       "I vänster kammarens fria vägg, långt från förmaken",
       "I hjärtats apex, långt från septum"
     ],
@@ -3157,7 +3157,7 @@
     "distractors": [
       "Den ökar hjärtfrekvensen kraftigt under vila",
       "Den förhindrar all förmakskontraktion permanent",
-      "Den stänger AV-klaffarna permanent under hela cykeln"
+      "Den håller AV-klaffarna helt stängda under hela hjärtcykelns förlopp, i båda faserna"
     ],
     "topic": "bma_hjarta_cirkulation",
     "difficulty": "Normal",
@@ -3227,7 +3227,7 @@
     "distractors": [
       "Hjärtat stannar omedelbart utan undantag",
       "Frekvensen ökar till över 150/min",
-      "Purkinjefibrerna tar genast över med normal frekvens"
+      "Purkinjefibrerna tar genast över taktgivningen med helt normal frekvens"
     ],
     "topic": "bma_hjarta_cirkulation",
     "difficulty": "Normal",
@@ -3240,8 +3240,8 @@
     "correct": "Ett ventrikulärt \"escape\"-fokus kan ta över, med en mycket låg egen frekvens",
     "distractors": [
       "Kamrarna slutar för alltid att kontrahera helt",
-      "SA-nodens frekvens fördubblas kompensatoriskt vid blockering",
-      "Förmaken tar över kammarnas pumpfunktion helt"
+      "SA-nodens egen frekvens fördubblas kompensatoriskt vid varje blockering i AV-noden",
+      "Förmaken tar över kamrarnas pumpfunktion helt"
     ],
     "topic": "bma_hjarta_cirkulation",
     "difficulty": "Normal",
@@ -3269,7 +3269,7 @@
     "distractors": [
       "Total jonkanalvila, utan någon jonrörelse alls",
       "Snabb Na+-inström, som i arbetsmyokardiet",
-      "Enbart passiv diffusion av vatten genom membranet"
+      "Enbart passiv diffusion av vatten genom cellmembranet, helt utan öppna jonkanaler"
     ],
     "topic": "bma_hjarta_cirkulation",
     "difficulty": "Normal",
@@ -3295,7 +3295,7 @@
     "prompt": "Vad kännetecknar pacemakercellernas (t.ex. SA-nodens) aktionspotential jämfört med arbetsmyokardceller?",
     "correct": "En spontan, långsam diastolisk depolarisation som når tröskeln utan yttre stimulus",
     "distractors": [
-      "En helt stabil vilomembranpotential, utan spontan aktivitet",
+      "En helt stabil vilomembranpotential, helt utan någon spontan elektrisk aktivitet i cellen",
       "Frånvaro av kalciumkanaler helt och hållet i cellen",
       "En kurvform identisk med skelettmuskelcellens"
     ],
@@ -3309,7 +3309,7 @@
     "prompt": "Hur påverkar sympatikusaktivering hjärtfrekvensen?",
     "correct": "Den ökar hjärtfrekvensen, bland annat via noradrenalin på β1-receptorer",
     "distractors": [
-      "Den sänker alltid hjärtfrekvensen, oavsett receptor",
+      "Den sänker alltid hjärtfrekvensen kraftigt, oavsett vilken receptor som aktiveras",
       "Den har ingen effekt alls på SA-noden",
       "Den blockerar all AV-ledning fullständigt"
     ],
@@ -3323,7 +3323,7 @@
     "prompt": "Hur påverkar parasympatisk aktivering (vagusnerven) hjärtfrekvensen?",
     "correct": "Den minskar hjärtfrekvensen, via acetylkolin på muskarina receptorer",
     "distractors": [
-      "Den ökar hjärtfrekvensen kraftigt via adrenalin",
+      "Den ökar hjärtfrekvensen kraftigt, via adrenalin på hjärtats β1-receptorer",
       "Den påverkar enbart kamrarnas kontraktionskraft",
       "Den saknar helt effekt på SA- och AV-noden"
     ],
@@ -3380,7 +3380,7 @@
     "correct": "Kontraktionsfasen, då kamrarna drar ihop sig och pumpar ut blod",
     "distractors": [
       "Vilofasen då kamrarna passivt fylls med blod",
-      "Förmakens kontraktion, precis före kammarsystole",
+      "Förmakens kontraktion, som sker precis före själva kammarsystolen",
       "Klaffarnas öppningsfas enbart, utan kontraktion"
     ],
     "topic": "bma_hjarta_cirkulation",
@@ -3393,7 +3393,7 @@
     "prompt": "Vad innebär kamrarnas diastole?",
     "correct": "Vilo-/fyllnadsfasen, då kamrarna slappnar av och fylls med blod",
     "distractors": [
-      "Kontraktionsfasen, då kamrarna aktivt pumpar ut blod",
+      "Kontraktionsfasen, då kamrarna aktivt pumpar ut blodet i kärlen",
       "Enbart den isovolumetriska fasen, utan fyllnad",
       "Förmakens tömningsfas enbart, inte kamrarnas"
     ],
@@ -3407,7 +3407,7 @@
     "prompt": "Vad kännetecknar den isovolumetriska kontraktionsfasen?",
     "correct": "Alla klaffar är stängda och trycket i kammaren stiger utan att volymen förändras",
     "distractors": [
-      "Aorta- och pulmonalisklaffarna är vidöppna hela tiden",
+      "Aorta- och pulmonalisklaffarna står vidöppna under hela fasen och blod strömmar ut",
       "Kammarvolymen ökar kraftigt under denna fas",
       "AV-klaffarna är öppna och blod strömmar fritt in"
     ],
@@ -3422,7 +3422,7 @@
     "correct": "Att trycket i kammaren överstiger trycket i aorta respektive truncus pulmonalis",
     "distractors": [
       "Att förmaken kontraherar strax innan kammarsystole",
-      "Att AV-noden depolariserar precis före kontraktionen",
+      "Att AV-noden depolariserar precis innan kammarkontraktionen inleds, helt oberoende av trycket",
       "Att kammarvolymen är som lägst under denna fas"
     ],
     "topic": "bma_hjarta_cirkulation",
@@ -3436,7 +3436,7 @@
     "correct": "Blod pumpas ut ur kamrarna till aorta respektive truncus pulmonalis",
     "distractors": [
       "Kamrarna fylls passivt med blod från förmaken",
-      "AV-klaffarna öppnas för att möjliggöra fyllnad",
+      "AV-klaffarna öppnas för att möjliggöra den passiva fyllnaden av kamrarna",
       "Kranskärlen fylls maximalt under denna fas"
     ],
     "topic": "bma_hjarta_cirkulation",
@@ -3449,7 +3449,7 @@
     "prompt": "Vad kännetecknar den isovolumetriska relaxationsfasen?",
     "correct": "Alla klaffar är stängda och trycket i kammaren faller utan att volymen förändras",
     "distractors": [
-      "AV-klaffarna är öppna och blod strömmar fritt in",
+      "AV-klaffarna står öppna och blod strömmar fritt in i kamrarna under hela denna fas",
       "Aortaklaffen är öppen och blod strömmar ut",
       "Kammarens volym ökar kraftigt under fasen"
     ],
@@ -3463,9 +3463,9 @@
     "prompt": "Vad orsakar den första hjärttonen (S1)?",
     "correct": "Stängningen av AV-klaffarna vid systolens start",
     "distractors": [
-      "Stängningen av aorta- och pulmonalisklaffen",
-      "Öppning av AV-klaffarna",
-      "Förmakens kontraktion"
+      "Stängningen av aorta- och pulmonalisklaffen vid diastolens start",
+      "Öppningen av AV-klaffarna vid diastolens start",
+      "Förmakens kontraktion strax före systole"
     ],
     "topic": "bma_hjarta_cirkulation",
     "difficulty": "Normal",
@@ -3477,7 +3477,7 @@
     "prompt": "Vad orsakar den andra hjärttonen (S2)?",
     "correct": "Stängningen av aorta- och pulmonalisklaffen vid diastolens start",
     "distractors": [
-      "Stängningen av AV-klaffarna vid systolens start",
+      "Stängningen av AV-klaffarna precis vid den systoliska fasens start",
       "Öppningen av aortaklaffen vid utdrivningsfasen",
       "Blodflödet genom kapillärerna i vävnaden"
     ],
@@ -3492,7 +3492,7 @@
     "correct": "Skillnaden mellan slutdiastolisk och slutsystolisk kammarvolym",
     "distractors": [
       "Den totala blodvolymen i hela kroppen",
-      "Hjärtfrekvensen multiplicerad med kroppsvikten",
+      "Hjärtfrekvensen multiplicerad med patientens kroppsvikt i kilogram",
       "Volymen i förmaken vid systolens start"
     ],
     "topic": "bma_hjarta_cirkulation",
@@ -3520,7 +3520,7 @@
     "correct": "Slagvolym dividerat med slutdiastolisk volym, angivet i procent",
     "distractors": [
       "Hjärtfrekvens dividerat med slagvolym, i liter",
-      "Slutsystolisk volym dividerat med slagvolym, i procent",
+      "Slutsystolisk volym dividerat med slagvolymen, angivet i procent av totalen",
       "Blodtryck dividerat med hjärtfrekvens, i mmHg"
     ],
     "topic": "bma_hjarta_cirkulation",
@@ -3575,7 +3575,7 @@
     "prompt": "Vad innebär Frank–Starlings lag?",
     "correct": "Ökad fyllnad av kammaren ger, inom fysiologiska gränser, ökad kontraktionskraft och slagvolym",
     "distractors": [
-      "Hjärtfrekvensen styr alltid slagvolymen, oberoende av fyllnaden",
+      "Hjärtfrekvensen styr alltid slagvolymen helt och hållet, oberoende av hur mycket kammaren fylls",
       "Ökad fyllnad minskar alltid slagvolymen kraftigt",
       "Kontraktionskraften är helt oberoende av muskelfiberns längd"
     ],
@@ -3589,7 +3589,7 @@
     "prompt": "Vad avses med preload?",
     "correct": "Kammarens fyllnad/sträckning precis före kontraktion, huvudsakligen bestämd av det venösa återflödet",
     "distractors": [
-      "Det motstånd kammaren måste övervinna för att pumpa ut blodet",
+      "Det motstånd som kammaren måste övervinna för att över huvud taget kunna pumpa ut blodet i aorta under systole",
       "Hjärtfrekvensen vid vila, oberoende av fyllnad",
       "Kranskärlens genomblödning under diastole"
     ],
@@ -3603,7 +3603,7 @@
     "prompt": "Vad avses med afterload?",
     "correct": "Det tryck/motstånd som kammaren måste övervinna för att pumpa ut blod, t.ex. aortatryck och perifert kärlmotstånd",
     "distractors": [
-      "Kammarens fyllnadsvolym precis före kontraktionen börjar",
+      "Kammarens fyllnadsvolym och sträckning precis innan kontraktionen börjar, huvudsakligen bestämd av det venösa återflödet till hjärtat",
       "Förmakens kontraktionskraft strax före kammarsystole",
       "Slagvolymens andel av den totala hjärtminutvolymen"
     ],
@@ -3633,7 +3633,7 @@
     "distractors": [
       "Enbart hjärtfrekvensens förändring över tid",
       "Enbart det systemiska blodtrycket, utan volym",
-      "Endast förmakens elektriska aktivitet, inte kamrarnas"
+      "Endast förmakens elektriska aktivitet över tid, inte kamrarnas tryck eller volym"
     ],
     "topic": "bma_hjarta_cirkulation",
     "difficulty": "Normal",
@@ -3646,7 +3646,7 @@
     "correct": "Den kraft blodet utövar mot kärlväggens insida",
     "distractors": [
       "Blodets totala volym i kärlsystemet",
-      "Antalet röda blodkroppar per volymenhet blod",
+      "Antalet röda blodkroppar per volymenhet blod i kärlet",
       "Hjärtfrekvensen uttryckt i mmHg"
     ],
     "topic": "bma_hjarta_cirkulation",
@@ -3675,7 +3675,7 @@
     "distractors": [
       "Systoliskt tryck minus diastoliskt tryck",
       "Systoliskt tryck dividerat med två",
-      "Hjärtfrekvens multiplicerat med slagvolym"
+      "Hjärtfrekvensen multiplicerad med slagvolymen i vila"
     ],
     "topic": "bma_hjarta_cirkulation",
     "difficulty": "Normal",
@@ -3687,8 +3687,8 @@
     "prompt": "Vad avses med pulstryck?",
     "correct": "Skillnaden mellan systoliskt och diastoliskt blodtryck",
     "distractors": [
-      "Summan av systoliskt och diastoliskt blodtryck",
-      "Medelartärtrycket",
+      "Summan av det systoliska och det diastoliska blodtrycket i vila",
+      "Medelartärtrycket under en hjärtcykel",
       "Hjärtfrekvensen per minut"
     ],
     "topic": "bma_hjarta_cirkulation",
@@ -3701,9 +3701,9 @@
     "prompt": "Var är baroreceptorerna, som snabbt reglerar blodtrycket, huvudsakligen belägna?",
     "correct": "I sinus caroticus och i arcus aortae",
     "distractors": [
-      "I njurarnas glomeruli",
-      "I benmärgen",
-      "I levern"
+      "I njurarnas glomeruli och i njurbarken",
+      "I benmärgen och mjälten",
+      "I leverns portaåder"
     ],
     "topic": "bma_hjarta_cirkulation",
     "difficulty": "Normal",
@@ -3715,7 +3715,7 @@
     "prompt": "Vilken typ av reglering står baroreceptorreflexen för?",
     "correct": "Kortsiktig, nervös reglering av blodtrycket via det autonoma nervsystemet",
     "distractors": [
-      "Långsiktig hormonell reglering av blodtrycket via njurarna",
+      "Långsiktig hormonell reglering av blodtrycket via njurarna och RAAS-systemet",
       "Reglering av blodets syrgashalt via andningscentrum",
       "Reglering av kroppstemperaturen via hypotalamus"
     ],
@@ -3729,7 +3729,7 @@
     "prompt": "Vad händer via baroreceptorreflexen om blodtrycket sjunker plötsligt?",
     "correct": "Minskad receptoraktivering leder till ökad sympatikusaktivitet, med ökad hjärtfrekvens, kontraktilitet och vasokonstriktion",
     "distractors": [
-      "Ökad receptoraktivering leder till bradykardi och kraftig vasodilatation",
+      "Ökad receptoraktivering leder till uttalad bradykardi och kraftig vasodilatation i hela kroppens kärlbädd, med sjunkande tryck",
       "Reflexen saknar helt effekt på både hjärta och kärl",
       "Enbart njurarna aktiveras, utan någon effekt på hjärtat"
     ],
@@ -3743,7 +3743,7 @@
     "prompt": "Vad initierar RAAS-systemet (renin-angiotensin-aldosteronsystemet)?",
     "correct": "Renin frisätts från njurarnas juxtaglomerulära celler vid lågt blodtryck eller lågt Na+",
     "distractors": [
-      "Aldosteron frisätts direkt från hypofysen vid lågt blodtryck",
+      "Aldosteron frisätts direkt från hypofysens framlob vid lågt blodtryck eller lågt Na+ i blodet",
       "Angiotensin II bildas först i levern, utan föregångare",
       "ADH utsöndras från förmaksväggen vid lågt Na+"
     ],
@@ -3759,7 +3759,7 @@
     "distractors": [
       "Kraftig vasodilatation och kraftigt ökad diures",
       "Hämning av sympatikusaktivitet i hela kroppen",
-      "Direkt ökning av hjärtfrekvensen, utan någon kärleffekt"
+      "Direkt ökning av hjärtfrekvensen och kontraktiliteten, helt utan effekt på kärlen eller på binjurarna"
     ],
     "topic": "bma_hjarta_cirkulation",
     "difficulty": "Normal",
@@ -3772,7 +3772,7 @@
     "correct": "Ökad återresorption av Na+ och vatten, vilket ökar blodvolymen",
     "distractors": [
       "Ökad utsöndring av Na+ och vatten i urinen",
-      "Minskad återresorption av K+ i samlingsröret",
+      "Minskad återresorption av kalium i njurens samlingsrör, enbart det",
       "Ökad glomerulär filtration, enbart det"
     ],
     "topic": "bma_hjarta_cirkulation",
@@ -3785,7 +3785,7 @@
     "prompt": "Vad är ADH:s (vasopressins) huvudsakliga effekt?",
     "correct": "Ökad vattenåterresorption i njurens samlingsrör, samt vasokonstriktion vid höga koncentrationer",
     "distractors": [
-      "Ökad utsöndring av vatten i urinen, utan vasokonstriktion",
+      "Ökad utsöndring av vatten i urinen och sänkt blodvolym, helt utan vasokonstriktion vid höga koncentrationer",
       "Minskad Na+-återresorption i njurens tubuli",
       "Sänkning av blodtrycket via kärldilatation, enbart det"
     ],
@@ -3800,7 +3800,7 @@
     "correct": "Förmaksmyokardiet, vid ökad förmaksdilatation/volymbelastning",
     "distractors": [
       "Njurbarken, vid lågt blodtryck i njurartären",
-      "Binjuremärgen, vid kraftig sympatikusaktivering",
+      "Binjuremärgen, vid kraftig sympatikusaktivering och akut fysisk stress",
       "Levern, vid ökad proteinsyntes"
     ],
     "topic": "bma_hjarta_cirkulation",
@@ -3813,7 +3813,7 @@
     "prompt": "Vad är ANP:s huvudsakliga fysiologiska effekt?",
     "correct": "Ökad natrium- och vattenutsöndring samt vasodilatation – motverkar RAAS",
     "distractors": [
-      "Kraftig vasokonstriktion i hela kroppens kärlbädd",
+      "Kraftig vasokonstriktion i hela kroppens kärlbädd – förstärker därmed RAAS",
       "Ökad Na+-återresorption i njurens samlingsrör",
       "Minskad urinproduktion trots hög blodvolym"
     ],
@@ -3843,7 +3843,7 @@
     "distractors": [
       "Medelartärtryck = slagvolym dividerat med hjärtfrekvens",
       "Hjärtminutvolym = blodtryck dividerat med blodvolym",
-      "Kärlmotstånd = hjärtfrekvens multiplicerat med slagvolym"
+      "Totalt kärlmotstånd = hjärtfrekvensen multiplicerad med slagvolymen"
     ],
     "topic": "bma_hjarta_cirkulation",
     "difficulty": "Normal",
@@ -3855,8 +3855,8 @@
     "prompt": "Vilka tre lager bygger upp väggen i artärer och vener?",
     "correct": "Tunica intima, tunica media och tunica externa",
     "distractors": [
-      "Epikardium, myokardium och endokardium",
-      "Mukosa, submukosa och muskularis",
+      "Endokardium, myokardium och epikardium",
+      "Tunica mukosa, submukosa och muskularis externa",
       "Periost, kortikalis och benmärg"
     ],
     "topic": "bma_hjarta_cirkulation",
@@ -3884,7 +3884,7 @@
     "correct": "De har rikligt med elastiska fibrer i media och jämnar ut det pulsatila trycket",
     "distractors": [
       "De saknar helt glatt muskulatur",
-      "De reglerar huvudsakligen det lokala blodflödet till enskilda organ",
+      "De reglerar huvudsakligen det lokala blodflödet till enskilda organ genom att ändra sin diameter",
       "De utgör kroppens främsta plats för gasutbyte"
     ],
     "topic": "bma_hjarta_cirkulation",
@@ -3897,7 +3897,7 @@
     "prompt": "Vad kännetecknar muskulära artärer, t.ex. a. femoralis, funktionellt?",
     "correct": "De har rikligt med glatt muskulatur i media och reglerar blodflödet genom att ändra kärldiameter",
     "distractors": [
-      "De saknar tunica media helt, till skillnad från artärer",
+      "De saknar tunica media helt och hållet, till skillnad från alla andra artärer i kroppens kärlträd",
       "De har endast ett endotelcellslager i hela väggen",
       "De fungerar som kroppens huvudsakliga blodreservoar"
     ],
@@ -3925,7 +3925,7 @@
     "prompt": "Hur ser kapillärväggen ut histologiskt?",
     "correct": "Ett enda lager endotelceller omgivet av ett basalmembran",
     "distractors": [
-      "Tre fullständiga lager, precis som i artärer",
+      "Tre fullständiga vägglager, precis som i de större artärernas vägg",
       "Ett tjockt lager glatt muskulatur runt lumen",
       "Ett lager tvärstrimmig muskulatur i väggen"
     ],
@@ -3939,7 +3939,7 @@
     "prompt": "Vad är kapillärernas huvudsakliga funktion?",
     "correct": "Utbyte av gaser, näringsämnen och avfallsprodukter mellan blod och vävnad",
     "distractors": [
-      "Att generera det systemiska blodtrycket i kärlbädden",
+      "Att generera och upprätthålla hela det systemiska blodtrycket i kroppens kärlbädd",
       "Att pumpa blod tillbaka till hjärtat via klaffar",
       "Att lagra syresatt blod inför ansträngning"
     ],
@@ -3954,7 +3954,7 @@
     "correct": "Venväggen är tunnare, har mindre glatt muskulatur och ett större lumen",
     "distractors": [
       "Venväggen är alltid tjockare och mer muskulös än artärens",
-      "Venväggen saknar helt tunica intima, till skillnad från artären",
+      "Venväggen saknar helt tunica intima och endotel, till skillnad från artären",
       "Venväggen innehåller mer elastin än artärväggen gör"
     ],
     "topic": "bma_hjarta_cirkulation",
@@ -3995,7 +3995,7 @@
     "prompt": "Vad kännetecknar ett portasystem i kärlträdet?",
     "correct": "Blod passerar genom två kapillärnät i serie innan det når hjärtat, t.ex. i v. portae hepatis",
     "distractors": [
-      "Blodet kringgår alla kapillärer helt på vägen till hjärtat",
+      "Blodet kringgår alla kapillärnät helt och hållet på sin väg tillbaka till hjärtat, t.ex. i levern",
       "Systemet innehåller enbart artärer, inga kapillärer alls",
       "Blodet passerar direkt genom hjärtat mellan de två näten"
     ],
@@ -4010,7 +4010,7 @@
     "correct": "Höger kammare → truncus pulmonalis → lungorna → vv. pulmonales → vänster förmak",
     "distractors": [
       "Vänster kammare → aorta → lungorna → höger förmak, fel ordning",
-      "Höger förmak → höger kammare → aorta → lungorna, hoppar över truncus",
+      "Höger förmak → höger kammare → aorta → lungorna → vänster förmak, hoppar över truncus",
       "Vänster förmak → truncus pulmonalis → lungorna, fel startpunkt"
     ],
     "topic": "bma_hjarta_cirkulation",
@@ -4023,7 +4023,7 @@
     "prompt": "Vilken väg följer blodet i det stora kretsloppet (systemkretsloppet)?",
     "correct": "Vänster kammare → aorta → kroppens vävnader → vv. cavae → höger förmak",
     "distractors": [
-      "Höger kammare → truncus pulmonalis → kroppens vävnader, fel kärl",
+      "Höger kammare → truncus pulmonalis → kroppens vävnader → vänster förmak, fel kärl",
       "Vänster förmak → aorta → höger kammare, fel ordning",
       "Höger förmak → aorta → vänster kammare, fel riktning"
     ],
@@ -4037,9 +4037,9 @@
     "prompt": "Vad kallas kärlförbindelser som leder blod direkt från arterioler till venoler utan att passera en kapillärbädd?",
     "correct": "Arteriovenösa anastomoser",
     "distractors": [
-      "Portasystem",
-      "Vasa vasorum",
-      "Windkesselkärl"
+      "Portasystem i levern",
+      "Vasa vasorum i kärlväggen",
+      "Windkesselfenomenet i aorta"
     ],
     "topic": "bma_hjarta_cirkulation",
     "difficulty": "Normal",
@@ -4051,7 +4051,7 @@
     "prompt": "Vad kallas den lokala regleringen av genomblödning i en vävnad som sker oberoende av nerver och cirkulerande hormoner, t.ex. styrd av lokal CO2- eller O2-nivå?",
     "correct": "Lokal autoreglering av blodflödet",
     "distractors": [
-      "Baroreceptorreflexen",
+      "Baroreceptorreflexen i sinus caroticus",
       "RAAS-systemet",
       "Frank–Starlings lag"
     ],
@@ -4066,7 +4066,7 @@
     "correct": "Kardiellt troponin",
     "distractors": [
       "CK-MB enbart",
-      "Myoglobin enbart",
+      "Myoglobin i serum enbart",
       "LDH enbart"
     ],
     "topic": "bma_hjarta_cirkulation",
@@ -4080,7 +4080,7 @@
     "correct": "Troponin har högre hjärtspecificitet och känslighet för myokardskada",
     "distractors": [
       "Troponin är billigare att analysera",
-      "Troponin stiger snabbare än alla andra markörer utan undantag",
+      "Troponin stiger alltid snabbare än alla andra markörer, helt utan undantag",
       "CK-MB kan inte längre mätas med moderna metoder"
     ],
     "topic": "bma_hjarta_cirkulation",
@@ -4108,7 +4108,7 @@
     "correct": "Hjärtsvikt och graden av belastning/sträckning på kammarväggen",
     "distractors": [
       "Akut njursvikt, utan koppling till kammarväggen",
-      "Blodgruppstillhörighet, som saknar koppling till hjärtat",
+      "Blodgruppstillhörighet, som helt saknar koppling till hjärtats funktion",
       "Infektionsgrad vid sepsis, utan koppling till kammaren"
     ],
     "topic": "bma_hjarta_cirkulation",
@@ -4121,7 +4121,7 @@
     "prompt": "Från vilka celler frisätts natriuretiska peptider som BNP huvudsakligen vid ökad väggspänning?",
     "correct": "Kammarmyocyter, särskilt vid volym- eller tryckbelastning",
     "distractors": [
-      "Erytrocyter i det cirkulerande blodet",
+      "Erytrocyter i det cirkulerande blodet, särskilt vid syrebrist",
       "Trombocyter vid kärlskada",
       "Neutrofila granulocyter vid infektion"
     ],
@@ -4136,7 +4136,7 @@
     "correct": "Kreatinkinas MB-isoenzym – en äldre, mindre specifik markör för hjärtmuskelskada",
     "distractors": [
       "Kalciumkanal-markör, som indikerar arytmirisk",
-      "Kolesterol-metabolit B, som indikerar ateroskleros",
+      "Kolesterol-metabolit B – en markör som indikerar begynnande ateroskleros i kranskärlen",
       "Koagulationsmarkör B, som indikerar blödningsrisk"
     ],
     "topic": "bma_hjarta_cirkulation",
@@ -4151,7 +4151,7 @@
     "distractors": [
       "Troponin, CK-MB, myoglobin och BNP, som mäter hjärtskada",
       "Hemoglobin, hematokrit, MCV och MCH, som mäter blodstatus",
-      "Natrium, kalium, klorid och bikarbonat, som mäter elektrolyter"
+      "Natrium, kalium, klorid och bikarbonat, som tillsammans mäter elektrolytstatus"
     ],
     "topic": "bma_hjarta_cirkulation",
     "difficulty": "Normal",
@@ -4191,7 +4191,7 @@
     "prompt": "Vad kallas den process där fett och andra ämnen lagras in i kärlväggen och bildar plack som kan trånga av eller täppa till kärlet?",
     "correct": "Ateroskleros",
     "distractors": [
-      "Trombocytos",
+      "Trombocytopeni",
       "Vaskulit",
       "Angiogenes"
     ],
@@ -12606,7 +12606,7 @@
     "correct": "Elektrokardiogram",
     "distractors": [
       "Ekokardiogram",
-      "Elektromyogram",
+      "Elektroencefalogram",
       "Fonokardiogram"
     ],
     "topic": "bma_ekg_elektrofys",
@@ -12663,7 +12663,7 @@
     "distractors": [
       "Förmaken repolariserar aldrig under hela hjärtcykeln",
       "Förmaken saknar elektrisk aktivitet helt och hållet",
-      "Repolarisation sker enbart i kamrarna, aldrig i förmaken"
+      "Repolarisation sker enbart i kamrarna och aldrig i förmaken, oavsett hjärtrytm"
     ],
     "topic": "bma_ekg_elektrofys",
     "difficulty": "Normal",
@@ -12676,7 +12676,7 @@
     "correct": "Tiden från förmakens depolarisation till kamrarnas depolarisation",
     "distractors": [
       "Tiden för hela hjärtcykeln, från slag till slag",
-      "Tiden för kamrarnas repolarisation enbart, inte förmaken",
+      "Tiden för kamrarnas repolarisation enbart, inte förmakens depolarisation",
       "Tiden mellan två på varandra följande T-vågor"
     ],
     "topic": "bma_ekg_elektrofys",
@@ -12717,7 +12717,7 @@
     "prompt": "Vad mäter QT-intervallet i EKG?",
     "correct": "Tiden från kamrarnas depolarisation till att kamrarnas repolarisation är avslutad",
     "distractors": [
-      "Tiden för enbart förmakens depolarisation, inte kamrarnas",
+      "Tiden för enbart förmakens depolarisation och repolarisation, inte kamrarnas aktivitet",
       "Tiden mellan två P-vågor, inte QT-intervallet",
       "Tiden för AV-nodens ledning enbart, inte hela cykeln"
     ],
@@ -12732,7 +12732,7 @@
     "correct": "Eftersom QT-intervallets längd normalt varierar med hjärtfrekvensen, och en korrigering gör värdet jämförbart oavsett puls",
     "distractors": [
       "QT-intervallet påverkas aldrig av hjärtfrekvensen alls",
-      "Korrigering görs enbart för att förenkla utskrift av kurvan på papper",
+      "Korrigering görs enbart för att förenkla utskriften av kurvan på papper i standardiserad hastighet, inte av fysiologiska skäl",
       "QTc mäter i stället PR-intervallets längd"
     ],
     "topic": "bma_ekg_elektrofys",
@@ -12789,7 +12789,7 @@
     "distractors": [
       "Alltid en helt normal variant",
       "Förmaksflimmer specifikt",
-      "Ett tecken på övertränad, frisk hjärtmuskulatur"
+      "Ett tecken på en övertränad men helt frisk hjärtmuskulatur"
     ],
     "topic": "bma_ekg_elektrofys",
     "difficulty": "Normal",
@@ -12817,7 +12817,7 @@
     "distractors": [
       "ST-sträckan",
       "QT-intervallet",
-      "PR-intervallet"
+      "Den depolariserade linjen"
     ],
     "topic": "bma_ekg_elektrofys",
     "difficulty": "Normal",
@@ -12843,7 +12843,7 @@
     "prompt": "Vad krävs för att en rytm ska kunna kallas \"sinusrytm\" på EKG?",
     "correct": "Att varje QRS-komplex föregås av en normalt utseende P-våg med ett regelbundet, normalt PR-intervall",
     "distractors": [
-      "Att hjärtfrekvensen är exakt 72 slag per minut",
+      "Att hjärtfrekvensen ligger på exakt 72 slag per minut och att QRS-komplexen är helt jämnt fördelade över kurvan",
       "Att QRS-komplexet saknas helt i kurvan",
       "Att T-vågen kommer före P-vågen i cykeln"
     ],
@@ -12857,9 +12857,9 @@
     "prompt": "Vad kallas det diagram som visar den elektriska aktiviteten i flera avledningar samtidigt för en fullständig klinisk EKG-registrering?",
     "correct": "12-avlednings-EKG",
     "distractors": [
-      "Ekokardiografi",
-      "Spirometri",
-      "EMG"
+      "3-avlednings-EKG",
+      "24-timmars-EEG",
+      "6-kanals-ekokardiografi"
     ],
     "topic": "bma_ekg_elektrofys",
     "difficulty": "Normal",
@@ -12914,7 +12914,7 @@
     "correct": "aVR, aVL och aVF",
     "distractors": [
       "V1, V2 och V3",
-      "I, II och III",
+      "Einthoven I, II och III",
       "P, T och U"
     ],
     "topic": "bma_ekg_elektrofys",
@@ -12955,9 +12955,9 @@
     "prompt": "Vilka avledningar speglar huvudsakligen hjärtats undervägg (den diafragmala ytan)?",
     "correct": "II, III och aVF",
     "distractors": [
-      "V1 och V2",
-      "aVR och aVL",
-      "V5 och V6"
+      "V1, V2 och V3",
+      "I, aVL, V5 och V6",
+      "V4, V5 och V6"
     ],
     "topic": "bma_ekg_elektrofys",
     "difficulty": "Normal",
@@ -12970,8 +12970,8 @@
     "correct": "I, aVL, V5 och V6",
     "distractors": [
       "II, III och aVF",
-      "V1 och V2 enbart",
-      "aVR enbart"
+      "V1, V2, V3 och aVR",
+      "aVR och aVL"
     ],
     "topic": "bma_ekg_elektrofys",
     "difficulty": "Normal",
@@ -12985,7 +12985,7 @@
     "distractors": [
       "PR-intervallet",
       "QT-intervallet",
-      "ST-sträckan"
+      "Den isoelektriska linjen"
     ],
     "topic": "bma_ekg_elektrofys",
     "difficulty": "Normal",
@@ -13025,7 +13025,7 @@
     "prompt": "Vad kan en kraftig högerställning av hjärtats elaxel (högeraxeldeviation) bland annat bero på?",
     "correct": "Högerkammarhypertrofi eller vissa lungsjukdomar med förhöjt tryck i lilla kretsloppet",
     "distractors": [
-      "Alltid ett tecken på en frisk, vältränad hjärtmuskulatur",
+      "Alltid ett säkert tecken på en frisk och vältränad hjärtmuskulatur hos den undersökta patienten",
       "Enbart förmaksflimmer, utan koppling till lungorna",
       "Enbart normal sömn, utan patologisk betydelse"
     ],
@@ -13041,7 +13041,7 @@
     "distractors": [
       "Frank–Starlings lag om hjärtats fyllnad",
       "Bohreffekten i syrgasbindningskurvan",
-      "Hering–Breuers reflex i andningsregleringen"
+      "Hering–Breuers reflex i den centrala andningsregleringen"
     ],
     "topic": "bma_ekg_elektrofys",
     "difficulty": "Normal",
@@ -13053,7 +13053,7 @@
     "prompt": "Varför registrerar avledning aVR normalt ett övervägande negativt QRS-komplex?",
     "correct": "Eftersom den normala depolarisationsvågen rör sig bort från höger arm, mot hjärtats vänstersidiga massa",
     "distractors": [
-      "Eftersom hjärtat saknar elektrisk aktivitet i den riktningen",
+      "Eftersom hjärtat helt saknar elektrisk aktivitet i just den riktningen, mot höger arm, under hela hjärtcykeln",
       "Eftersom aVR alltid registrerar enbart förmaksaktivitet",
       "Eftersom aVR är identisk med avledning II i utseende"
     ],
@@ -13081,7 +13081,7 @@
     "prompt": "Vad kan en helt platt eller mycket lågamplitudig QRS i flera avledningar bero på tekniskt, förutom hjärtsjukdom?",
     "correct": "Felaktig elektrodplacering eller dålig elektrodkontakt",
     "distractors": [
-      "Alltid en pågående hjärtinfarkt, utan andra orsaker",
+      "Alltid en pågående, akut hjärtinfarkt utan några andra möjliga orsaker",
       "Alltid ett tecken på förmaksflimmer specifikt",
       "Alltid ett tecken på hypertyreos specifikt"
     ],
@@ -13097,7 +13097,7 @@
     "distractors": [
       "P-vågor",
       "QRS-komplex",
-      "U-vågor"
+      "Fysiologiska U-vågor i kurvan"
     ],
     "topic": "bma_ekg_elektrofys",
     "difficulty": "Normal",
@@ -13109,7 +13109,7 @@
     "prompt": "Varför är korrekt elektrodplacering avgörande vid tolkning av ett 12-avlednings-EKG?",
     "correct": "Felplacerade elektroder kan simulera axeldeviation, infarktmönster eller andra falska avvikelser",
     "distractors": [
-      "Elektrodplacering saknar all betydelse för tolkningen av kurvan",
+      "Elektrodplaceringen saknar all betydelse för tolkningen av kurvan, oavsett vilken avledning som studeras",
       "Elektroder påverkar enbart pappershastigheten, inte kurvan",
       "Elektrodplacering påverkar enbart patientens hjärtfrekvens"
     ],
@@ -13153,7 +13153,7 @@
     "distractors": [
       "Arbets-EKG ersätter alltid behovet av vilo-EKG helt och hållet",
       "Vilo-EKG är alltid mer känsligt än arbets-EKG för ischemi",
-      "Arbets-EKG mäter enbart blodtrycket, inte den elektriska aktiviteten"
+      "Arbets-EKG mäter enbart blodtrycket under belastning, inte hjärtats elektriska aktivitet i kurvan"
     ],
     "topic": "bma_ekg_elektrofys",
     "difficulty": "Normal",
@@ -13179,7 +13179,7 @@
     "prompt": "Vad kännetecknar förmaksflimmer (AF) på EKG?",
     "correct": "Frånvaro av tydliga, organiserade P-vågor samt en oregelbunden, ofta snabb kammarrytm",
     "distractors": [
-      "Regelbundna P-vågor med normalt PR-intervall, som vid sinusrytm",
+      "Regelbundna P-vågor med ett normalt PR-intervall före varje QRS, precis som vid sinusrytm",
       "Ett helt regelbundet QRS-mönster med breda komplex",
       "Total frånvaro av all elektrisk aktivitet i hjärtat"
     ],
@@ -13194,7 +13194,7 @@
     "correct": "Multipla, kaotiska elektriska impulser som cirkulerar i förmaken i stället för en ordnad depolarisationsvåg från SA-noden",
     "distractors": [
       "En total avsaknad av elektrisk aktivitet i förmaken",
-      "En enda, mycket långsam impuls från AV-noden istället",
+      "En enda, mycket långsam impuls som utgår från AV-noden i stället för från SA-noden, med regelbunden rytm som följd i förmaken",
       "En helt normal sinusrytm med extra P-vågor"
     ],
     "topic": "bma_ekg_elektrofys",
@@ -13207,7 +13207,7 @@
     "prompt": "Vad ökar risken för hos patienter med kroniskt förmaksflimmer, på grund av stillastående blod i förmaken?",
     "correct": "Bildning av blodproppar, med risk för embolisering",
     "distractors": [
-      "Minskad risk för alla typer av blodproppar",
+      "Minskad risk för alla typer av blodproppar i förmaken",
       "Ökad produktion av erytrocyter",
       "Minskad risk för hjärtsvikt"
     ],
@@ -13221,7 +13221,7 @@
     "prompt": "Vad kännetecknar förmaksfladder på EKG, till skillnad från förmaksflimmer?",
     "correct": "En mer organiserad, sågtandsliknande förmaksaktivitet med en regelbunden, snabb förmaksfrekvens",
     "distractors": [
-      "En total avsaknad av P-vågor och en helt oregelbunden aktivitet",
+      "En total avsaknad av P-vågor och en helt oregelbunden förmaksaktivitet utan sågtandsmönster i kurvan",
       "Ett helt normalt sinusmönster utan avvikelser",
       "En långsam kammarfrekvens under 40 slag/minut alltid"
     ],
@@ -13250,7 +13250,7 @@
     "correct": "Ett progressivt förlängt PR-intervall tills en kammarimpuls helt uteblir",
     "distractors": [
       "Ett konstant, normalt PR-intervall utan blockerade slag",
-      "Total frånkoppling mellan förmak och kammare hela tiden",
+      "Total frånkoppling mellan förmak och kammare under hela EKG-registreringen",
       "Enbart breda QRS-komplex utan förekomst av P-vågor"
     ],
     "topic": "bma_ekg_elektrofys",
@@ -13263,7 +13263,7 @@
     "prompt": "Vad kännetecknar AV-block grad III (totalt AV-block)?",
     "correct": "Fullständig frånkoppling mellan förmakens och kamrarnas elektriska aktivitet, med en egen, långsammare kammarrytm",
     "distractors": [
-      "Ett enstaka, blockerat slag med i övrigt helt normal ledning",
+      "Ett enstaka, blockerat slag med i övrigt helt normal ledning mellan förmak och kammare i hela resten av registreringen",
       "Ett förlängt men i övrigt fungerande PR-intervall",
       "En helt normal sinusrytm utan blockering"
     ],
@@ -13277,7 +13277,7 @@
     "prompt": "Vad kallas en extra, tidig hjärtcykel som utgår från förmaken, utanför den normala sinusrytmen?",
     "correct": "Supraventrikulärt extraslag",
     "distractors": [
-      "Ventrikulärt extraslag",
+      "Ventrikulärt extraslag från kammaren",
       "Sinusarrest",
       "AV-block grad III"
     ],
@@ -13306,7 +13306,7 @@
     "correct": "En snabb, regelbunden rytm med breda QRS-komplex som utgår från kamrarna",
     "distractors": [
       "Smala QRS-komplex med normala, föregående P-vågor",
-      "En total avsaknad av all elektrisk aktivitet i hjärtat",
+      "En total avsaknad av all elektrisk aktivitet i hela hjärtat, utan några komplex alls",
       "En mycket långsam kammarfrekvens under 40 slag/minut"
     ],
     "topic": "bma_ekg_elektrofys",
@@ -13319,7 +13319,7 @@
     "prompt": "Vad kännetecknar kammarflimmer (VF) på EKG, och varför är det en akut livshotande rytm?",
     "correct": "En helt kaotisk, oorganiserad elektrisk aktivitet i kamrarna utan effektiv pumpfunktion, vilket ger hjärtstillestånd",
     "distractors": [
-      "En helt regelbunden, effektiv kammarrytm med god pumpfunktion",
+      "En helt regelbunden och effektiv kammarrytm med god pumpfunktion och bevarat blodtryck hos patienten under hela förloppet",
       "Ett normalt sinusmönster med ovanligt hög frekvens",
       "Ett harmlöst, symtomfritt fynd utan klinisk betydelse"
     ],
@@ -13348,7 +13348,7 @@
     "correct": "Torsades de pointes",
     "distractors": [
       "Sinusarrest",
-      "Wenckebach-block",
+      "Wenckebach-blockering",
       "Förmaksfladder"
     ],
     "topic": "bma_ekg_elektrofys",
@@ -13375,7 +13375,7 @@
     "prompt": "Vad kan svår hypokalemi (sänkt kalium) typiskt orsaka i EKG?",
     "correct": "Flackare T-vågor, framträdande U-vågor och i vissa fall ST-sänkning",
     "distractors": [
-      "Alltid helt spetsiga T-vågor identiska med hyperkalemi",
+      "Alltid helt spetsiga, höga T-vågor identiska med dem vid hyperkalemi i alla avledningar",
       "Alltid en fullständig avsaknad av P-vågor",
       "Alltid ett förkortat QT-intervall utan andra tecken"
     ],
@@ -13432,7 +13432,7 @@
     "correct": "Ledningen genom höger respektive vänster skänkel i His-bunte-systemet är fördröjd eller avbruten",
     "distractors": [
       "Störningen sitter alltid i SA-noden, inte skänklarna",
-      "Störningen sitter alltid i förmaksmuskulaturen, inte skänklarna",
+      "Störningen sitter alltid i förmaksmuskulaturen och aldrig i skänklarna i His-bunte-systemet hos patienten",
       "Grenblock innebär alltid ett totalt hjärtstillestånd"
     ],
     "topic": "bma_ekg_elektrofys",
@@ -13445,7 +13445,7 @@
     "prompt": "Vad kallas en implanterbar anordning som kan känna av farliga kammararytmier och avge en intern elchock för att avbryta dem?",
     "correct": "Implanterbar defibrillator",
     "distractors": [
-      "Extern pacemaker enbart",
+      "Extern pacemaker enbart, utan chock",
       "Holter-EKG",
       "Arbets-EKG"
     ],
@@ -13459,7 +13459,7 @@
     "prompt": "Vad är den huvudsakliga funktionen hos en pacemaker vid t.ex. symtomgivande AV-block grad III?",
     "correct": "Att elektriskt stimulera hjärtat med en regelbunden frekvens när den egna retledningen sviktar",
     "distractors": [
-      "Att enbart registrera hjärtats aktivitet utan att stimulera det",
+      "Att enbart registrera hjärtats elektriska aktivitet utan att någonsin stimulera det med impulser",
       "Att enbart mäta blodtrycket, inte hjärtats elektriska aktivitet",
       "Att ersätta hjärtats klaffar kirurgiskt"
     ],
@@ -13473,7 +13473,7 @@
     "prompt": "Vad kallas den procedur där ett onormalt retledningsfokus eller en kort-slutningsbana i hjärtat förstörs med värme eller kyla via en kateter, t.ex. vid vissa arytmier?",
     "correct": "Kateterablation",
     "distractors": [
-      "Defibrillering",
+      "Defibrillering med chock",
       "Arbets-EKG",
       "Holter-EKG"
     ],
@@ -13503,7 +13503,7 @@
     "distractors": [
       "P-vågor",
       "U-vågor",
-      "ST-sträckor"
+      "ST-höjningar i kurvan"
     ],
     "topic": "bma_ekg_elektrofys",
     "difficulty": "Normal",
@@ -13515,7 +13515,7 @@
     "prompt": "Varför används EKG-avledningarnas mönster för att gruppera en misstänkt hjärtinfarkt som t.ex. \"framväggsinfarkt\" eller \"underväggsinfarkt\"?",
     "correct": "Eftersom olika avledningsgrupper speglar den elektriska aktiviteten i olika delar av hjärtat, vilket avslöjar var skadan sitter",
     "distractors": [
-      "Eftersom alla avledningar alltid visar exakt samma mönster oavsett infarktens läge",
+      "Eftersom alla avledningar alltid visar exakt samma mönster oavsett var infarkten sitter i hjärtat, vilket gör lokalisation omöjlig",
       "Eftersom EKG inte kan skilja på hjärtats olika väggar överhuvudtaget",
       "Eftersom infarktens läge aldrig påverkar EKG-mönstret alls"
     ],
@@ -13529,9 +13529,9 @@
     "prompt": "Vad kallas det diagnostiska test som i praktiken alltid är förstahandsundersökning vid misstänkt akut hjärtinfarkt på akutmottagningen?",
     "correct": "12-avlednings-EKG",
     "distractors": [
-      "Spirometri",
-      "EMG",
-      "Urinsticka"
+      "24-timmars-blodtrycksmätning",
+      "2-timmars glukosbelastning",
+      "6-minuters gångtest"
     ],
     "topic": "bma_ekg_elektrofys",
     "difficulty": "Normal",
@@ -13543,7 +13543,7 @@
     "prompt": "Vilket blodprov kompletterar EKG vid misstänkt akut hjärtinfarkt för att bekräfta myokardskada?",
     "correct": "Kardiellt troponin",
     "distractors": [
-      "Kreatinin",
+      "Kreatinin i serum enbart",
       "Amylas",
       "TSH"
     ],
@@ -13557,7 +13557,7 @@
     "prompt": "Varför räcker inte enbart ett normalt EKG för att utesluta pågående hjärtinfarkt?",
     "correct": "Vissa infarkter ger inte tydliga EKG-förändringar, varför troponin och klinisk bild behövs för att bekräfta eller utesluta diagnosen",
     "distractors": [
-      "Ett normalt EKG utesluter alltid infarkt fullständigt och säkert",
+      "Ett normalt EKG utesluter alltid en pågående hjärtinfarkt fullständigt och säkert, oavsett patientens symtom, riskfaktorer och troponinvärde",
       "EKG mäter enbart blodtrycket, inte hjärtats elektriska aktivitet",
       "Troponin är alltid helt irrelevant vid akut bröstsmärta"
     ],
@@ -13572,7 +13572,7 @@
     "correct": "STEMI kännetecknas av ST-höjning på EKG, medan NSTEMI saknar denna ST-höjning trots positiv troponin",
     "distractors": [
       "STEMI och NSTEMI är exakt samma tillstånd, bara med olika namn",
-      "NSTEMI innebär alltid en mildare, ofarlig hjärtmuskelskada utan troponinstegring",
+      "NSTEMI innebär alltid en mildare och helt ofarlig hjärtmuskelskada helt utan någon troponinstegring alls",
       "STEMI innebär alltid ett helt normalt troponinvärde"
     ],
     "topic": "bma_ekg_elektrofys",
@@ -13587,7 +13587,7 @@
     "distractors": [
       "Det innebär att ingen ytterligare behandling alls behövs",
       "Det utesluter behovet av troponinmätning helt och hållet",
-      "Det innebär alltid en kronisk, stabil kärlkramp utan akut åtgärdsbehov"
+      "Det innebär alltid en kronisk och stabil kärlkramp helt utan något akut åtgärdsbehov hos patienten"
     ],
     "topic": "bma_ekg_elektrofys",
     "difficulty": "Normal",
@@ -13613,7 +13613,7 @@
     "prompt": "Varför är EKG i sig otillräckligt för att direkt bedöma hjärtats pumpfunktion (t.ex. ejektionsfraktion)?",
     "correct": "EKG registrerar enbart hjärtats elektriska aktivitet, inte dess mekaniska rörelse eller pumpförmåga direkt",
     "distractors": [
-      "EKG mäter alltid ejektionsfraktionen med hög exakthet",
+      "EKG mäter alltid ejektionsfraktionen och kammarens pumpförmåga med hög exakthet, bättre än ekokardiografi gör",
       "EKG och ekokardiografi mäter exakt samma sak",
       "Ejektionsfraktion kan enbart mätas med ett blodprov"
     ],
@@ -13642,7 +13642,7 @@
     "correct": "Nya, jämfört med gamla, förändringar är ofta mer diagnostiskt betydelsefulla än ett enskilt EKG isolerat",
     "distractors": [
       "Gamla EKG saknar all relevans för den aktuella tolkningen",
-      "Ett enda EKG är alltid tillräckligt utan jämförelse med tidigare",
+      "Ett enda EKG är alltid helt tillräckligt, utan någon jämförelse med tidigare registreringar hos patienten",
       "EKG-mönster förändras aldrig över tid hos samma person"
     ],
     "topic": "bma_ekg_elektrofys",
@@ -13655,7 +13655,7 @@
     "prompt": "Vad kan felaktig hudpreparation (t.ex. smuts, hår eller fuktig hud) orsaka vid EKG-registrering?",
     "correct": "Dålig elektrodkontakt med brus eller artefakter i kurvan som kan försvåra tolkningen",
     "distractors": [
-      "Alltid ett falskt STEMI-mönster utan undantag i kurvan",
+      "Alltid ett falskt STEMI-mönster i kurvan, utan några undantag alls vid registreringen",
       "Ingen som helst påverkan alls på registreringen",
       "En permanent förändring av patientens verkliga hjärtrytm"
     ],
@@ -13697,7 +13697,7 @@
     "prompt": "Vad innebär det om QRS-komplexet är breddökat (över det normala referensvärdet)?",
     "correct": "Att kammardepolarisationen sker långsammare eller via en onormal väg, t.ex. vid grenblock eller ventrikulärt ursprung",
     "distractors": [
-      "Att hjärtat alltid slår snabbare än normalt vid detta fynd",
+      "Att hjärtat alltid slår snabbare än normalt vid detta fynd, oavsett var i retledningssystemet störningen sitter hos patienten",
       "Att förmaken inte längre depolariserar överhuvudtaget",
       "Att patienten alltid har en helt frisk, normal hjärtrytm"
     ],
@@ -13713,7 +13713,7 @@
     "distractors": [
       "Förmaksflimmer",
       "AV-block grad III",
-      "Torsades de pointes"
+      "Torsades de pointes-arytmi"
     ],
     "topic": "bma_ekg_elektrofys",
     "difficulty": "Normal",
@@ -13725,7 +13725,7 @@
     "prompt": "Varför räknas respiratorisk sinusarytmi normalt som ett benignt fynd?",
     "correct": "Det är en normal fysiologisk variation kopplad till andningen och det autonoma nervsystemets inverkan på SA-noden, utan koppling till hjärtsjukdom",
     "distractors": [
-      "Det är alltid ett tecken på allvarlig, bakomliggande hjärtsjukdom",
+      "Det är alltid ett säkert tecken på en allvarlig, bakomliggande hjärtsjukdom som kräver akut utredning, även hos unga och i övrigt helt friska personer",
       "Det innebär alltid ett totalt AV-block av tredje graden",
       "Det förekommer enbart hos svårt sjuka, kritiska patienter"
     ],
@@ -13753,7 +13753,7 @@
     "prompt": "Vad kännetecknar EKG-bilden vid preexcitation (WPW-syndrom)?",
     "correct": "Ett kort PR-intervall och en \"delta-våg\" i början av QRS-komplexet",
     "distractors": [
-      "Ett förlängt PR-intervall med i övrigt helt normalt QRS",
+      "Ett förlängt PR-intervall med ett i övrigt helt normalt QRS-komplex",
       "Total frånvaro av P-vågor",
       "Enbart breda, regelbundna QRS utan P-vågor"
     ],
@@ -13767,7 +13767,7 @@
     "prompt": "Varför är EKG-tolkning en central arbetsuppgift inom klinisk fysiologi?",
     "correct": "Metoden är billig, snabb, icke-invasiv och ger direkt information om hjärtats retledning och rytm, vilket styr akut och långsiktig handläggning",
     "distractors": [
-      "EKG används enbart inom kirurgi, aldrig inom klinisk fysiologi",
+      "EKG används enbart inom kirurgin och aldrig inom klinisk fysiologi, eftersom metoden är alltför invasiv, dyr och tidskrävande i den kliniska vardagen",
       "EKG kan bara tolkas av patienten själv, inte av personal",
       "EKG ersätter alltid behovet av all annan diagnostik helt"
     ],
@@ -13781,7 +13781,7 @@
     "prompt": "Vad innebär det att EKG är en icke-invasiv undersökningsmetod?",
     "correct": "Den kräver inga instrument som förs in i kroppen, utan mäts via elektroder placerade på huden",
     "distractors": [
-      "Den kräver alltid ett blodprov för att kunna genomföras korrekt",
+      "Den kräver alltid ett blodprov och en kateter för att kunna genomföras på ett korrekt sätt på patienten",
       "Den kräver alltid narkos innan undersökningen kan starta",
       "Den innebär alltid en kirurgisk åtgärd i bröstkorgen"
     ],
@@ -13810,7 +13810,7 @@
     "correct": "Barn har normalt en högre vilopuls än vuxna, vilket måste beaktas vid EKG-tolkning",
     "distractors": [
       "Barn och vuxna har alltid identiska referensvärden på EKG",
-      "Barn har alltid lägre vilopuls än vuxna, tvärtemot verkligheten",
+      "Barn har alltid en lägre vilopuls än vuxna, tvärtemot hur det förhåller sig i verkligheten",
       "Hjärtfrekvens hos barn kan inte alls mätas med EKG"
     ],
     "topic": "bma_ekg_elektrofys",
@@ -13837,7 +13837,7 @@
     "prompt": "Varför är det viktigt att skilja tekniska artefakter från en verklig arytmi vid EKG-tolkning?",
     "correct": "Artefakter kan efterlikna allvarliga rytmrubbningar och leda till felaktig diagnos eller onödig behandling om de feltolkas",
     "distractors": [
-      "Artefakter är alltid kliniskt betydelsefulla och ska behandlas som en arytmi",
+      "Artefakter är alltid kliniskt betydelsefulla och ska alltid behandlas som om de vore en verklig arytmi hos patienten i journalen",
       "Artefakter förekommer aldrig i praktiken vid EKG-registrering",
       "Artefakter påverkar aldrig tolkningen av kurvan alls"
     ],
@@ -13851,7 +13851,7 @@
     "prompt": "Vad är den generella definitionen av en arytmi?",
     "correct": "En avvikelse från normal hjärtrytm, avseende frekvens, regelbundenhet eller ursprung",
     "distractors": [
-      "Enbart en förhöjd hjärtfrekvens, inget annat avvikande",
+      "Enbart en förhöjd hjärtfrekvens över referensvärdet, inget annat avvikande i rytmen eller ursprunget",
       "Enbart en sänkt hjärtfrekvens, inget annat avvikande",
       "Enbart en total avsaknad av hjärtslag, inget annat"
     ],
@@ -13865,7 +13865,7 @@
     "prompt": "Hur skiljer sig i regel sinustakykardi från en supraventrikulär takykardi (SVT) med annat ursprung än SA-noden?",
     "correct": "Vid sinustakykardi föregås varje QRS av en normal P-våg med successivt ökande/minskande frekvens, medan SVT ofta har en abrupt start/stopp och avvikande eller dolda P-vågor",
     "distractors": [
-      "De är alltid identiska på EKG utan någon som helst skillnad",
+      "De är alltid identiska på EKG, utan någon som helst skillnad i P-vågornas utseende, frekvensens förlopp eller rytmens start och stopp, vilket gör dem omöjliga att skilja åt",
       "SVT har alltid en lägre frekvens än sinustakykardi har",
       "Sinustakykardi saknar alltid P-vågor helt och hållet"
     ],
@@ -13879,7 +13879,7 @@
     "prompt": "Vad kan göra det svårt att på EKG skilja en ventrikeltakykardi (VT) från en supraventrikulär takykardi med aberrant (breddökad) ledning?",
     "correct": "Båda kan ge en snabb rytm med breda QRS-komplex, vilket kräver ytterligare kliniska och EKG-kriterier för att särskilja",
     "distractors": [
-      "De två tillstånden ger alltid helt olika, lätt särskiljbara QRS-bredder",
+      "De två tillstånden ger alltid helt olika och lätt särskiljbara QRS-bredder, vilket gör att de enkelt kan skiljas åt på EKG utan andra kriterier",
       "SVT ger alltid smala QRS-komplex, helt utan undantag",
       "VT förekommer aldrig med breda QRS-komplex överhuvudtaget"
     ],
@@ -13907,7 +13907,7 @@
     "prompt": "Varifrån kan en escaperytm utgå om både SA-noden och AV-noden sviktar?",
     "correct": "Från ett fokus längre ner i retledningssystemet, t.ex. i Purkinjefibrerna, med en långsammare egen frekvens",
     "distractors": [
-      "Enbart från förmaksmuskulaturen, inte retledningssystemet",
+      "Enbart från förmaksmuskulaturen och aldrig från retledningssystemet längre ner i hjärtat, med normal frekvens",
       "Escaperytm kan aldrig uppstå i hjärtat överhuvudtaget",
       "Enbart från binjuremärgen, långt ifrån hjärtat"
     ],
@@ -13921,7 +13921,7 @@
     "prompt": "Vad analyserar en automatisk, extern defibrillator (hjärtstartare, AED) innan den rekommenderar en elchock?",
     "correct": "Hjärtrytmen, för att avgöra om den är en \"stötbar\" rytm som kammarflimmer eller pulslös ventrikeltakykardi",
     "distractors": [
-      "Enbart patientens kroppstemperatur, inte hjärtrytmen",
+      "Enbart patientens kroppstemperatur och andning, aldrig hjärtrytmen eller dess eventuella stötbarhet i kurvan",
       "Enbart patientens blodsocker, inte hjärtrytmen",
       "Enbart patientens andningsfrekvens, inte hjärtrytmen"
     ],
@@ -13935,7 +13935,7 @@
     "prompt": "Varför ger en AED ingen elchock vid t.ex. asystoli (total avsaknad av elektrisk hjärtaktivitet)?",
     "correct": "Defibrillering kan bara \"återställa\" en kaotisk men elektriskt aktiv rytm, inte starta ett hjärta som helt saknar elektrisk aktivitet",
     "distractors": [
-      "En elchock hjälper alltid lika bra vid asystoli som vid kammarflimmer",
+      "En elchock hjälper alltid lika bra vid asystoli som vid kammarflimmer, eftersom den startar om hjärtat oavsett elektrisk aktivitet i kamrarna",
       "Asystoli kräver alltid en högre chockenergi än kammarflimmer gör",
       "AED kan inte identifiera asystoli över huvud taget"
     ],
@@ -13963,7 +13963,7 @@
     "prompt": "Vad är den övergripande kliniska poängen med att kombinera flera undersökningsmetoder (EKG, troponin, ekokardiografi) vid utredning av bröstsmärta?",
     "correct": "Varje metod ger olika, kompletterande information, och tillsammans ökar de träffsäkerheten i diagnosen",
     "distractors": [
-      "Enbart en av metoderna behövs alltid, de andra är helt överflödiga",
+      "Enbart en av metoderna behövs alltid, medan de båda andra är helt överflödiga vid utredning av bröstsmärta",
       "Metoderna mäter alltid exakt samma sak utan skillnad",
       "Kombinationen försämrar alltid diagnostiken jämfört med en enda metod"
     ],
@@ -13979,7 +13979,7 @@
     "distractors": [
       "EKG-data har ingen relevans alls efter registreringstillfället",
       "EKG kan bara tolkas en enda gång och sedan kasseras direkt",
-      "Sparade EKG används enbart för administrativa syften, inget annat"
+      "Sparade EKG används enbart för administrativa och juridiska syften i journalsystemet, inget annat alls"
     ],
     "topic": "bma_ekg_elektrofys",
     "difficulty": "Normal",
@@ -13992,7 +13992,7 @@
     "correct": "Biomedicinsk analytiker med inriktning klinisk fysiologi",
     "distractors": [
       "Farmaceut med inriktning läkemedelshantering",
-      "Logoped med inriktning tal- och språkstörningar",
+      "Logoped med inriktning på tal- och språkstörningar hos barn",
       "Optiker med inriktning synundersökningar"
     ],
     "topic": "bma_ekg_elektrofys",
@@ -15447,7 +15447,7 @@
     "prompt": "Vilka faktorer ökar generellt risken för turbulent flöde, enligt Reynolds tal?",
     "correct": "Hög flödeshastighet, stor kärldiameter och låg blodviskositet",
     "distractors": [
-      "Låg flödeshastighet och hög viskositet enbart, utan diameter",
+      "Låg flödeshastighet och hög blodviskositet enbart, utan betydelse av diametern",
       "Enbart kärlets längd, utan de andra faktorerna",
       "Enbart blodets temperatur, utan de andra faktorerna"
     ],
@@ -15463,7 +15463,7 @@
     "distractors": [
       "I kapillärerna, som regel alltid, aldrig i stora kärl",
       "I vener med mycket lågt flöde, aldrig i artärer",
-      "Aldrig någonstans i det friska kärlsystemet, oavsett flöde"
+      "Aldrig någonstans i det friska kärlsystemet, oavsett flödeshastighet eller kärlets storlek"
     ],
     "topic": "bma_karl_cirkulationsfys",
     "difficulty": "Normal",
@@ -15490,7 +15490,7 @@
     "correct": "Sambandet mellan flöde, tryckskillnad, kärlradie, kärllängd och vätskans viskositet i ett rakt rör med laminärt flöde",
     "distractors": [
       "Sambandet mellan hjärtfrekvens och slagvolym i hjärtcykeln",
-      "Sambandet mellan syrgastryck och hemoglobinmättnad i blodet",
+      "Sambandet mellan syrgastryck och hemoglobinets syremättnad i blodet, vid olika pH-värden och temperaturer i vävnaden och lungan",
       "Sambandet mellan tryck och volym i en sluten gas"
     ],
     "topic": "bma_karl_cirkulationsfys",
@@ -15503,7 +15503,7 @@
     "prompt": "Hur påverkar en fördubbling av kärlradien flödet genom kärlet, enligt Poiseuilles lag (vid oförändrat tryck)?",
     "correct": "Flödet ökar kraftigt, eftersom flödet är proportionellt mot radien upphöjt till fyra",
     "distractors": [
-      "Flödet fördubblas exakt, proportionellt mot radien i linjär skala",
+      "Flödet fördubblas exakt, eftersom flödet är proportionellt mot radien i en linjär skala utan potens",
       "Flödet halveras, tvärtemot den verkliga effekten",
       "Flödet påverkas inte alls av radiens storlek"
     ],
@@ -15519,7 +15519,7 @@
     "distractors": [
       "Arteriolernas diameter har ingen betydelse alls för motståndet",
       "Motståndet beror enbart på kärlets längd, aldrig på radien",
-      "Motståndet är proportionellt mot radien i första potens, precis som flödet"
+      "Motståndet är proportionellt mot radien i första potens, precis som flödet är, vilket gör att även stora diameterförändringar ger små effekter på det totala kärlmotståndet"
     ],
     "topic": "bma_karl_cirkulationsfys",
     "difficulty": "Normal",
@@ -15531,9 +15531,9 @@
     "prompt": "Hur påverkar ökad blodviskositet flödet genom ett kärl, vid i övrigt oförändrade förhållanden?",
     "correct": "Flödet minskar, eftersom motståndet ökar med ökad viskositet",
     "distractors": [
-      "Flödet ökar",
+      "Flödet ökar, eftersom motståndet sjunker",
       "Viskositeten påverkar aldrig flödet",
-      "Flödet blir helt oberoende av tryckskillnaden"
+      "Flödet blir helt oberoende av både tryckskillnaden och motståndet i kärlet"
     ],
     "topic": "bma_karl_cirkulationsfys",
     "difficulty": "Normal",
@@ -15561,7 +15561,7 @@
     "distractors": [
       "Viskositeten sjunker kraftigt, tvärtemot verkligheten",
       "Viskositeten påverkas inte alls av hematokritens nivå",
-      "Flödesmotståndet minskar, tvärtemot den verkliga effekten"
+      "Flödesmotståndet minskar kraftigt, tvärtemot den verkliga effekten på hjärtat"
     ],
     "topic": "bma_karl_cirkulationsfys",
     "difficulty": "Normal",
@@ -15588,7 +15588,7 @@
     "correct": "Det totala motståndet blir lägre än något av de enskilda motstånden, enligt samma princip som parallellkopplade elektriska motstånd",
     "distractors": [
       "Motstånden summeras direkt, som vid seriekoppling",
-      "Det totala motståndet blir alltid högre än det högsta enskilda motståndet",
+      "Det totala motståndet blir alltid högre än det högsta enskilda motståndet, eftersom motstånden adderas på samma sätt som vid seriekoppling",
       "Parallellkoppling saknar helt betydelse för det totala motståndet"
     ],
     "topic": "bma_karl_cirkulationsfys",
@@ -15603,7 +15603,7 @@
     "distractors": [
       "Blodtrycket är exakt detsamma i alla kärl i hela kroppen",
       "Trycket ökar i stället längs hela kretsloppet",
-      "Tryckfallet beror enbart på blodets temperatur, inte motståndet"
+      "Tryckfallet beror enbart på blodets temperatur och viskositet, inte på motståndet i kärlen"
     ],
     "topic": "bma_karl_cirkulationsfys",
     "difficulty": "Normal",
@@ -15629,7 +15629,7 @@
     "prompt": "Vad kallas den fysiologiska princip som beskriver att flöde = tryckskillnad / motstånd, analogt med Ohms lag för elektricitet?",
     "correct": "Den hemodynamiska grundekvationen",
     "distractors": [
-      "Frank–Starlings lag",
+      "Frank–Starlings lag om kammarfyllnad",
       "Ficks diffusionslag",
       "Boyles lag"
     ],
@@ -15643,7 +15643,7 @@
     "prompt": "Vad innebär det att kärlväggen har en viss \"compliance\" (eftergivlighet)?",
     "correct": "Förmågan hos kärlväggen att töjas ut vid en given tryckökning, vilket är särskilt uttalat i vener",
     "distractors": [
-      "Kärlväggens tjocklek i sig, helt oberoende av dess töjbarhet",
+      "Kärlväggens tjocklek och stelhet i sig, helt oberoende av hur mycket den kan töjas ut vid tryckökning",
       "Kärlets totala längd, oberoende av dess töjbarhet",
       "Blodets viskositet, oberoende av kärlväggens egenskaper"
     ],
@@ -15658,7 +15658,7 @@
     "correct": "Venerna har en mycket högre compliance och kan därför lagra en stor blodvolym vid relativt liten tryckökning",
     "distractors": [
       "Vener har alltid en lägre compliance än artärer har",
-      "Vener saknar helt förmåga att töjas ut vid tryckökning",
+      "Vener saknar helt förmåga att töjas ut vid en tryckökning och kan därför aldrig lagra någon blodvolym alls i kroppen",
       "Artärer lagrar alltid mer blod än vener gör"
     ],
     "topic": "bma_karl_cirkulationsfys",
@@ -15701,7 +15701,7 @@
     "distractors": [
       "Pulsvågen och blodflödet har alltid exakt samma hastighet",
       "Pulsvågen är alltid långsammare än blodets flödeshastighet",
-      "Pulsvågen fortplantar sig aldrig snabbare än blodflödet gör"
+      "Pulsvågen fortplantar sig aldrig snabbare än blodets egen flödeshastighet gör i något kärl"
     ],
     "topic": "bma_karl_cirkulationsfys",
     "difficulty": "Normal",
@@ -15757,7 +15757,7 @@
     "distractors": [
       "A. radialis",
       "A. brachialis",
-      "A. carotis"
+      "A. carotis communis"
     ],
     "topic": "bma_karl_cirkulationsfys",
     "difficulty": "Normal",
@@ -15784,7 +15784,7 @@
     "correct": "Perifer artärsjukdom med nedsatt blodflöde till extremiteten",
     "distractors": [
       "Alltid en helt normal cirkulation",
-      "Alltid ett tecken på hjärtsvikt utan kärlpåverkan",
+      "Alltid ett säkert tecken på hjärtsvikt, helt utan kärlpåverkan i benet",
       "Alltid ett tecken på anemi utan kärlpåverkan"
     ],
     "topic": "bma_karl_cirkulationsfys",
@@ -15797,7 +15797,7 @@
     "prompt": "Vad kan en ovanligt kraftig, \"studsande\" puls med brett pulstryck ibland ses vid, t.ex. vid svår aortainsufficiens?",
     "correct": "En kraftig systolisk uppgång kombinerad med ett snabbt diastoliskt tryckfall",
     "distractors": [
-      "En helt normal, frisk cirkulation utan några avvikelser",
+      "En helt normal, frisk cirkulation helt utan avvikelser i tryck eller puls hos patienten",
       "Alltid enbart ett tecken på anemi, inget annat",
       "Alltid enbart ett tecken på hypotyreos, inget annat"
     ],
@@ -15813,7 +15813,7 @@
     "distractors": [
       "Pulsdeficit",
       "Pulstryck",
-      "Ankel-brachialindex"
+      "Ankel-brachialindex vid vila"
     ],
     "topic": "bma_karl_cirkulationsfys",
     "difficulty": "Normal",
@@ -15825,7 +15825,7 @@
     "prompt": "Vad kan en betydande blodtrycksskillnad mellan höger och vänster arm ge misstanke om?",
     "correct": "En förträngning eller sjukdom i en av de stora artärerna som försörjer armen",
     "distractors": [
-      "Alltid en helt normal fysiologisk variation utan klinisk betydelse",
+      "Alltid en helt normal fysiologisk variation helt utan någon klinisk betydelse för patienten",
       "Alltid en hjärtklaffsjukdom",
       "Alltid en njursjukdom"
     ],
@@ -15853,7 +15853,7 @@
     "prompt": "Vad mäts vid palpation av \"kapillär återfyllnadstid\" (capillary refill), och vad kan en förlängd tid indikera?",
     "correct": "Hur snabbt hudfärgen återgår efter kompression av en nagelbädd/finger; en förlängd tid kan indikera nedsatt perifer cirkulation",
     "distractors": [
-      "Blodets exakta syrgasmättnad, uppmätt med pulsoximeter",
+      "Blodets exakta syrgasmättnad, uppmätt med en pulsoximeter på fingret; ett lågt värde kan indikera nedsatt syresättning i blodet",
       "Hjärtats elektriska aktivitet, registrerad med EKG",
       "Njurfunktionen direkt, uppmätt via kreatinin"
     ],
@@ -15867,7 +15867,7 @@
     "prompt": "Vad kallas det fenomen där blodtrycket normalt är något högre i benen än i armarna hos en stående person, delvis på grund av hydrostatiskt tryck?",
     "correct": "Den hydrostatiska tryckskillnaden mellan kroppsdelar i förhållande till hjärtnivå",
     "distractors": [
-      "Pulsdeficit, skillnaden mellan hjärtfrekvens och pulsfrekvens",
+      "Pulsdeficit, alltså skillnaden mellan uppmätt hjärtfrekvens och palperad pulsfrekvens i handleden",
       "Dikrot inskärning, en liten böj i tryckkurvan",
       "Reynolds tal, ett mått på flödets turbulens"
     ],
@@ -15882,7 +15882,7 @@
     "correct": "För att undvika ett hydrostatiskt mätfel som annars skulle ge ett falskt högt eller lågt värde",
     "distractors": [
       "Hjärthöjd har ingen betydelse alls för blodtrycksmätningen",
-      "Manschetten ska alltid placeras vid fotleden för korrekt mätning",
+      "Manschetten ska alltid placeras vid fotleden för att en korrekt blodtrycksmätning ska kunna göras",
       "Blodtrycket är identiskt oavsett vilken höjd som mäts"
     ],
     "topic": "bma_karl_cirkulationsfys",
@@ -15895,7 +15895,7 @@
     "prompt": "Vad kallas det tryck som driver blodet tillbaka till hjärtat genom venerna?",
     "correct": "Det venösa trycket, understött av muskelpumpen och andningsrörelserna",
     "distractors": [
-      "Det diastoliska aortatrycket enbart, utan venöst bidrag",
+      "Det diastoliska aortatrycket enbart, helt utan bidrag från vener eller muskler",
       "Kapillärtrycket enbart, utan venöst bidrag",
       "Pulstrycket enbart, utan venöst bidrag"
     ],
@@ -15911,7 +15911,7 @@
     "distractors": [
       "Andning har ingen som helst effekt på venöst återflöde",
       "Inandning minskar alltid venöst återflöde kraftigt",
-      "Enbart utandning påverkar venöst återflöde, inte inandning"
+      "Enbart utandningen påverkar det venösa återflödet till hjärtat, medan inandningen helt saknar effekt på tryckgradienten i bröstkorgen"
     ],
     "topic": "bma_karl_cirkulationsfys",
     "difficulty": "Normal",
@@ -15925,7 +15925,7 @@
     "distractors": [
       "Återflödet ökar alltid kraftigt vid stillastående",
       "Stillastående saknar all effekt på venöst återflöde",
-      "Muskelpumpen aktiveras alltid maximalt vid stillastående"
+      "Muskelpumpen i benen aktiveras alltid maximalt vid stillastående arbete, vilket ökar återflödet till hjärtat kraftigt hela tiden"
     ],
     "topic": "bma_karl_cirkulationsfys",
     "difficulty": "Normal",
@@ -15937,7 +15937,7 @@
     "prompt": "Vad kallas det tillstånd där venklaffarna i benens ytliga vener blir otillräckliga, vilket leder till backflöde och åderbråck?",
     "correct": "Kronisk venös insufficiens",
     "distractors": [
-      "Perifer artärsjukdom",
+      "Perifer artärsjukdom i benen",
       "Pulmonell hypertension",
       "Aortainsufficiens"
     ],
@@ -15979,9 +15979,9 @@
     "prompt": "Vilka tre huvudsakliga faktorer (Virchows triad) bidrar till ökad risk för trombosbildning?",
     "correct": "Blodstas, kärlväggsskada och ökad koagulationsbenägenhet",
     "distractors": [
-      "Enbart hög fysisk aktivitet, utan de andra faktorerna",
-      "Enbart lågt blodtryck, utan de andra faktorerna",
-      "Enbart hög kroppstemperatur, utan de andra faktorerna"
+      "Hög fysisk aktivitet, lågt blodtryck och hög kroppstemperatur",
+      "Lågt blodtryck, låg puls och sänkt kroppstemperatur",
+      "Hög kroppstemperatur, snabb andning och lågt blodsocker"
     ],
     "topic": "bma_karl_cirkulationsfys",
     "difficulty": "Normal",
@@ -15993,7 +15993,7 @@
     "prompt": "Vad är den mest fruktade akuta komplikationen till en djup ventrombos i benet?",
     "correct": "Lungemboli, om tromben lossnar och förs med blodet till lungans kärl",
     "distractors": [
-      "Akut hjärtinfarkt uteslutande, inte lungemboli",
+      "Akut hjärtinfarkt uteslutande, om tromben förs till hjärtats kranskärl",
       "Stroke uteslutande, inte lungemboli",
       "Njursvikt uteslutande, inte lungemboli"
     ],
@@ -16036,7 +16036,7 @@
     "correct": "Övervätskning, högerkammarsvikt eller hinder för venöst återflöde",
     "distractors": [
       "Alltid uttorkning, aldrig övervätskning",
-      "Alltid en frisk, normal cirkulation utan orsak",
+      "Alltid en frisk och helt normal cirkulation, utan bakomliggande orsak",
       "Alltid ett tecken på anemi, inget annat"
     ],
     "topic": "bma_karl_cirkulationsfys",
@@ -16051,7 +16051,7 @@
     "distractors": [
       "Alltid övervätskning, aldrig minskad blodvolym",
       "Alltid hjärtsvikt, aldrig minskad blodvolym",
-      "Alltid högt blodtryck, aldrig minskad blodvolym"
+      "Alltid ett kraftigt förhöjt blodtryck, aldrig en minskad cirkulerande blodvolym"
     ],
     "topic": "bma_karl_cirkulationsfys",
     "difficulty": "Normal",
@@ -16065,7 +16065,7 @@
     "distractors": [
       "Flygresor ökar alltid blodflödet i benen kraftigt",
       "Stillasittande har ingen koppling alls till trombosrisk",
-      "Risken beror enbart på flyghöjden, inte på stillasittandet"
+      "Risken beror enbart på flyghöjden och kabintrycket, inte alls på stillasittandet under resan i sittande"
     ],
     "topic": "bma_karl_cirkulationsfys",
     "difficulty": "Normal",
@@ -16077,7 +16077,7 @@
     "prompt": "Vad kan komprimerande stödstrumpor användas till att förebygga hos patienter med ökad trombosrisk?",
     "correct": "De förbättrar det venösa återflödet och minskar risken för blodstas och trombosbildning",
     "distractors": [
-      "De ökar alltid risken för trombos, tvärtemot syftet",
+      "De ökar alltid risken för trombos i benens vener, tvärtemot det avsedda syftet med behandlingen",
       "De har ingen effekt alls på det venösa systemet",
       "De används enbart för att värma benen, inget annat"
     ],
@@ -16091,7 +16091,7 @@
     "prompt": "Vad kallas den ytliga veninflammation som ibland kan uppstå tillsammans med en lokal, ytlig trombbildning, till skillnad från djup ventrombos?",
     "correct": "Ytlig tromboflebit",
     "distractors": [
-      "Djup ventrombos",
+      "Djup ventrombos i vaden",
       "Lungemboli",
       "Aortadissektion"
     ],
@@ -16119,7 +16119,7 @@
     "prompt": "Vad avgör storleken och riktningen på frekvensskiftet (Dopplerskiftet) vid ultraljudsundersökning av blodflöde?",
     "correct": "Hastigheten och riktningen hos de rörliga blodkropparna i förhållande till ultraljudsstrålen",
     "distractors": [
-      "Enbart patientens kroppstemperatur, inte blodflödet",
+      "Enbart patientens kroppstemperatur vid undersökningen, inte blodkropparnas hastighet eller riktning",
       "Enbart undersökarens erfarenhet, inte blodflödet",
       "Enbart tidpunkten på dygnet, inte blodflödet"
     ],
@@ -16135,7 +16135,7 @@
     "distractors": [
       "Frekvensen minskar alltid oavsett flödesriktning",
       "Frekvensen förblir helt oförändrad",
-      "Dopplereffekten uppstår enbart vid flöde bort från proben"
+      "Dopplereffekten uppstår enbart vid flöde bort från ultraljudsproben och aldrig mot den"
     ],
     "topic": "bma_karl_cirkulationsfys",
     "difficulty": "Normal",
@@ -16148,7 +16148,7 @@
     "correct": "Kontinuerlig Doppler",
     "distractors": [
       "Pulsad Doppler",
-      "Färgdoppler enbart",
+      "Färgdoppler enbart i B-mode",
       "B-mode"
     ],
     "topic": "bma_karl_cirkulationsfys",
@@ -16203,7 +16203,7 @@
     "prompt": "Vad visar en spektral Doppler-kurva, till skillnad från färgdoppler?",
     "correct": "En detaljerad graf över flödeshastigheten över tid i en specifik, vald punkt i kärlet",
     "distractors": [
-      "Enbart en färgkodad överblick utan några siffervärden",
+      "Enbart en färgkodad överblick av flödet, helt utan några exakta siffervärden över tid i kärlet",
       "Enbart kärlets diameter, inte flödeshastigheten",
       "Enbart kärlväggens tjocklek, inte flödeshastigheten"
     ],
@@ -16233,7 +16233,7 @@
     "distractors": [
       "Vinkeln saknar all betydelse alls för mätningen",
       "Ett större vinkelfel ger alltid ett mer exakt värde",
-      "Vinkeln påverkar enbart bildens färg, inte hastighetsvärdet"
+      "Vinkeln påverkar enbart färgen i bilden, aldrig det uppmätta hastighetsvärdet, eftersom Dopplerskiftet är oberoende av vinkeln"
     ],
     "topic": "bma_karl_cirkulationsfys",
     "difficulty": "Normal",
@@ -16246,7 +16246,7 @@
     "correct": "En så liten vinkel som möjligt, helst under cirka 60 grader",
     "distractors": [
       "Exakt 90 grader, rakt vinkelrätt mot kärlet",
-      "Vinkeln spelar ingen roll så länge kärlet syns",
+      "Vinkeln spelar ingen roll alls, så länge kärlet syns tydligt i bilden",
       "Alltid över 90 grader"
     ],
     "topic": "bma_karl_cirkulationsfys",
@@ -16287,7 +16287,7 @@
     "prompt": "Vad kan en avsaknad av flödessignal i en ven vid komprimering med ultraljudsproben (icke-komprimerbar ven) tyda på?",
     "correct": "Förekomst av en trombos som fyller venens lumen",
     "distractors": [
-      "Alltid en helt normal, frisk ven",
+      "Alltid en helt normal och frisk ven utan någon trombos",
       "Alltid ett tecken på uttorkning",
       "Alltid ett tecken på hjärtsvikt"
     ],
@@ -16302,7 +16302,7 @@
     "correct": "Den är icke-invasiv, saknar joniserande strålning och ger direkt information om både kärlstruktur och blodflödesdynamik",
     "distractors": [
       "Metoden kräver alltid kirurgisk friläggning av kärlet",
-      "Metoden innebär alltid strålningsexponering, precis som röntgen",
+      "Metoden innebär alltid en betydande strålningsexponering för patienten, precis som en vanlig röntgenundersökning av kroppen",
       "Metoden kan bara användas på hjärtat, aldrig på perifera kärl"
     ],
     "topic": "bma_karl_cirkulationsfys",
@@ -16357,7 +16357,7 @@
     "prompt": "Vad är den huvudsakliga tekniska principen bakom att diagnostisera djup ventrombos med ultraljud?",
     "correct": "Att en normal ven ska gå att komprimera helt med ultraljudsproben; en ven som inte går att komprimera talar för trombos",
     "distractors": [
-      "Att mäta venens temperatur med en termometer",
+      "Att mäta venens temperatur med en termometer och jämföra värdet med den friska sidans temperatur i det andra benet, eftersom en trombos värmer upp venen",
       "Att mäta venens elektriska aktivitet med EKG",
       "Att mäta blodets pH-värde direkt i venen"
     ],
@@ -16373,7 +16373,7 @@
     "distractors": [
       "Karotisduplex",
       "Venduplex",
-      "B-mode utan Doppler"
+      "B-mode helt utan Doppler"
     ],
     "topic": "bma_karl_cirkulationsfys",
     "difficulty": "Normal",
@@ -16385,7 +16385,7 @@
     "prompt": "Vad används dopplerekokardiografi till för att bedöma en förträngd (stenotisk) hjärtklaff?",
     "correct": "Att mäta den ökade flödeshastigheten och det beräknade tryckfallet över den förträngda klaffen",
     "distractors": [
-      "Att mäta blodets syrgasmättnad med pulsoximeter",
+      "Att mäta blodets syrgasmättnad med en pulsoximeter på patientens finger under vila och ansträngning",
       "Att mäta hjärtats elektriska retledning med EKG",
       "Att mäta njurfunktionen via kreatininclearance"
     ],
@@ -16400,7 +16400,7 @@
     "correct": "Ett backflöde av blod genom klaffen under den fas då den borde vara stängd",
     "distractors": [
       "Enbart klaffens exakta tjocklek, inte blodflödet",
-      "Enbart hjärtats elektriska aktivitet, inte klaffunktionen",
+      "Enbart hjärtats elektriska aktivitet och rytm, inte klaffarnas funktion alls",
       "Enbart hjärtfrekvensen, inte klaffunktionen"
     ],
     "topic": "bma_karl_cirkulationsfys",
@@ -16455,7 +16455,7 @@
     "prompt": "Varför kan ett mycket högt ABI-värde (t.ex. över 1,4) ibland vara missvisande snarare än ett tecken på god cirkulation?",
     "correct": "Det kan bero på kärl som är så förkalkade och stela att de inte går att komprimera fullständigt, vilket ger ett falskt förhöjt tryckvärde",
     "distractors": [
-      "Ett högt ABI innebär alltid en garanterat frisk cirkulation utan undantag",
+      "Ett högt ABI-värde innebär alltid en garanterat frisk och normal cirkulation i benet, helt utan undantag och oavsett hur stela och förkalkade kärlen är",
       "ABI kan aldrig bli missvisande högt av något skäl",
       "Ett högt ABI innebär alltid venös insufficiens i stället"
     ],
@@ -16469,7 +16469,7 @@
     "prompt": "Vad kan Dopplerultraljud av njurartärerna användas till att bedöma?",
     "correct": "Eventuell njurartärstenos, som kan orsaka sekundär hypertoni",
     "distractors": [
-      "Enbart blodsockernivån, utan koppling till njurartären",
+      "Enbart blodsockernivån i plasma, utan någon koppling till njurartären",
       "Enbart urinproduktionen direkt, utan flödesbedömning",
       "Enbart njurens storlek, utan flödesbedömning"
     ],
@@ -16484,7 +16484,7 @@
     "correct": "Bedömning av portaflödets riktning och hastighet samt tecken på portal hypertension",
     "distractors": [
       "Mätning av leverenzymer direkt i ett blodprov",
-      "Mätning av blodgruppen inför en eventuell transfusion",
+      "Mätning av blodgruppen och antikroppar inför en eventuell blodtransfusion till patienten",
       "Mätning av hjärtats elektriska aktivitet med EKG"
     ],
     "topic": "bma_karl_cirkulationsfys",
@@ -16512,7 +16512,7 @@
     "correct": "Att bedöma blodflödet till fostret och upptäcka tecken på nedsatt placentafunktion",
     "distractors": [
       "Att mäta moderns blodsocker under graviditeten",
-      "Att mäta moderns hjärtfrekvens uteslutande, inte fostrets",
+      "Att mäta enbart moderns hjärtfrekvens och blodtryck, aldrig fostrets blodflöde i navelsträngen",
       "Att mäta fostrets hörsel, inte blodflödet"
     ],
     "topic": "bma_karl_cirkulationsfys",
@@ -16525,7 +16525,7 @@
     "prompt": "Vad kan transkraniell Doppler (TCD) användas till att mäta?",
     "correct": "Blodflödeshastigheten i hjärnans stora artärer genom skallbenet",
     "distractors": [
-      "Blodflödet i benens vener, långt från hjärnan",
+      "Blodflödet i benens djupa vener, alltså långt från hjärnans kärl och skallbenet",
       "Hjärtats klaffunktion, inte hjärnans kärl",
       "Njurens filtration, inte hjärnans kärl"
     ],
@@ -16554,7 +16554,7 @@
     "correct": "Att fisteln har ett fungerande, tillräckligt flöde och att den inte är förträngd eller tilltäppt",
     "distractors": [
       "Blodets pH-värde, inte fistelns flöde",
-      "Njurens exakta storlek, inte fistelns flöde",
+      "Njurens exakta storlek och struktur, inte fistelns flöde eller en eventuell förträngning i armen",
       "Hjärtats klaffunktion, inte fistelns flöde"
     ],
     "topic": "bma_karl_cirkulationsfys",
@@ -16567,7 +16567,7 @@
     "prompt": "Vad kallas det tillstånd med lokal, ballongliknande vidgning av en artärvägg, som kan upptäckas och följas med ultraljud (t.ex. bukaortaaneurysm)?",
     "correct": "Aneurysm",
     "distractors": [
-      "Trombos",
+      "Tromboflebit",
       "Stenos",
       "Emboli"
     ],
@@ -16581,7 +16581,7 @@
     "prompt": "Varför är ultraljudsscreening för bukaortaaneurysm värdefull hos riskgrupper (t.ex. äldre rökande män)?",
     "correct": "Aneurysmet är ofta symtomfritt tills det eventuellt brister, och tidig upptäckt möjliggör planerad behandling innan en akut, livshotande ruptur",
     "distractors": [
-      "Aneurysm ger alltid tydliga symtom långt innan det kan bli farligt",
+      "Aneurysm ger alltid tydliga och kraftiga symtom långt innan det kan hinna bli farligt, vilket gör att screening är helt onödig i alla riskgrupper",
       "Screening saknar all klinisk nytta för denna riskgrupp",
       "Aneurysm kan bara upptäckas med ett enkelt blodprov"
     ],
@@ -16596,7 +16596,7 @@
     "correct": "En mer detaljerad lokalisation och gradering av eventuella stenoser längs artärträdet",
     "distractors": [
       "Ingen ytterligare information alls utöver ABI-värdet",
-      "Enbart en bedömning av venklaffarnas funktion, inte artärerna",
+      "Enbart en bedömning av venklaffarnas funktion i benet, inte av artärerna eller stenoserna",
       "Enbart en bedömning av lungfunktionen, inte artärerna"
     ],
     "topic": "bma_karl_cirkulationsfys",
@@ -16611,7 +16611,7 @@
     "distractors": [
       "En helt normal, frisk artär utan förträngning",
       "Alltid ett tecken på venös insufficiens i stället",
-      "Alltid ett tekniskt fel utan någon klinisk betydelse"
+      "Alltid ett tekniskt fel i mätningen, helt utan någon klinisk betydelse"
     ],
     "topic": "bma_karl_cirkulationsfys",
     "difficulty": "Normal",
@@ -16637,7 +16637,7 @@
     "prompt": "Vad kan komplettera kärlultraljud vid oklara eller svårbedömda fynd, t.ex. vid misstänkt central kärlsjukdom?",
     "correct": "Datortomografiangiografi eller magnetresonansangiografi",
     "distractors": [
-      "Enbart ett blodstatus, utan bildgivande metod",
+      "Enbart ett blodstatus och ett CRP, utan bildgivande metod",
       "Enbart en urinsticka, utan bildgivande metod",
       "Enbart ett EKG, utan bildgivande metod"
     ],
@@ -16651,7 +16651,7 @@
     "prompt": "Varför föredras ofta ultraljud med Doppler som förstahandsundersökning framför CT-/MR-angiografi vid många kärlfrågeställningar?",
     "correct": "Det är billigare, snabbare, saknar joniserande strålning och ger samtidigt dynamisk flödesinformation",
     "distractors": [
-      "Ultraljud ger alltid sämre information än CT-angiografi i alla lägen",
+      "Ultraljud ger alltid sämre och mindre tillförlitlig information än CT-angiografi, i alla kliniska lägen",
       "Ultraljud kräver alltid kontrastmedel, precis som CT gör",
       "Ultraljud kan aldrig visa flödesriktning i kärlet"
     ],
@@ -16681,7 +16681,7 @@
     "distractors": [
       "Blodets syrgasmättnad, uppmätt med pulsoximeter",
       "Njurfunktionen direkt, uppmätt via kreatinin",
-      "Leverfunktionen direkt, uppmätt via leverenzymer"
+      "Leverfunktionen direkt, uppmätt via leverenzymer i plasma; ett normalt värde utesluter då en trombos hos patienten"
     ],
     "topic": "bma_karl_cirkulationsfys",
     "difficulty": "Normal",
@@ -16694,7 +16694,7 @@
     "correct": "Nivån kan vara förhöjd av många andra orsaker än trombos, t.ex. infektion, graviditet, cancer eller nyligen genomgången operation",
     "distractors": [
       "D-dimer är alltid absolut specifik enbart för DVT",
-      "D-dimer förhöjs aldrig av andra orsaker än trombos",
+      "D-dimer förhöjs aldrig av några andra orsaker än en pågående trombos, vilket gör markören helt specifik för både DVT och lungemboli",
       "D-dimer mäter direkt kärlets diameter i ultraljud"
     ],
     "topic": "bma_karl_cirkulationsfys",
@@ -16707,7 +16707,7 @@
     "prompt": "Vad kan kombinationen av en klinisk sannolikhetsbedömning (t.ex. Wells score) och D-dimer användas till vid misstänkt DVT eller lungemboli?",
     "correct": "Att avgöra vilka patienter som säkert kan uteslutas från trombos utan vidare bilddiagnostik, och vilka som behöver kärlultraljud eller CT",
     "distractors": [
-      "De ersätter alltid behovet av all bilddiagnostik permanent",
+      "De ersätter alltid behovet av all bilddiagnostik permanent, oavsett vilken klinisk sannolikhet patienten bedöms ha för trombos eller lungemboli",
       "De ger ingen som helst vägledning alls i handläggningen",
       "De mäter enbart blodgruppen, inget om trombosrisk"
     ],
@@ -16737,7 +16737,7 @@
     "distractors": [
       "Hastighetsvärden saknar all koppling till stenosgrad",
       "Alla stenoser ger exakt samma flödeshastighet oavsett grad",
-      "Endast kärlets diameter mätt i B-mode används, aldrig hastigheten"
+      "Endast kärlets diameter mätt i B-mode används för graderingen, aldrig flödeshastigheten eller några tröskelvärden angivna i cm/sekund"
     ],
     "topic": "bma_karl_cirkulationsfys",
     "difficulty": "Normal",
@@ -16749,7 +16749,7 @@
     "prompt": "Vad kan en asymmetrisk blodtrycksmätning i armarna, tillsammans med avvikande kärlultraljudsfynd, sammantaget bidra till att diagnostisera?",
     "correct": "Storkärlssjukdom, t.ex. subklaviastenos eller vissa vaskuliter",
     "distractors": [
-      "Alltid enbart normal fysiologisk variation utan sjukdomsvärde",
+      "Alltid enbart en normal fysiologisk variation, helt utan sjukdomsvärde",
       "Enbart en njursjukdom",
       "Enbart en lungsjukdom"
     ],
@@ -16764,7 +16764,7 @@
     "correct": "Att genomföra och kvalitetssäkra dessa icke-invasiva flödes- och strukturundersökningar som underlag för diagnos av kärlsjukdom",
     "distractors": [
       "Att enbart utföra kärlkirurgi på patienten",
-      "Att enbart ordinera blodförtunnande läkemedel",
+      "Att enbart ordinera blodförtunnande läkemedel och besluta om kirurgisk behandling av patientens kärlsjukdom, utan att utföra några undersökningar",
       "Att enbart tolka lungröntgen hos patienten"
     ],
     "topic": "bma_karl_cirkulationsfys",
@@ -16779,7 +16779,7 @@
     "distractors": [
       "Inställningarna saknar all betydelse för resultatets tolkning",
       "Vinkelkorrigering påverkar aldrig det uppmätta hastighetsvärdet",
-      "Dokumentation krävs enbart av administrativa skäl utan klinisk relevans"
+      "Dokumentationen krävs enbart av administrativa och juridiska skäl, helt utan någon klinisk relevans för tolkningen av hastighetsvärdena"
     ],
     "topic": "bma_karl_cirkulationsfys",
     "difficulty": "Normal",
@@ -16792,7 +16792,7 @@
     "correct": "Tillsammans ger de en stegvis, alltmer detaljerad bild – från enkel screening till exakt lokalisation och gradering av kärlpåverkan",
     "distractors": [
       "Enbart pulspalpation räcker alltid för en fullständig utredning",
-      "Metoderna ger alltid motsägelsefull och oanvändbar information tillsammans",
+      "Metoderna ger alltid motsägelsefull och helt oanvändbar information när de kombineras, och bör därför användas var för sig i utredningen",
       "Blodtrycksmätning saknar all koppling till kärlsjukdom"
     ],
     "topic": "bma_karl_cirkulationsfys",
@@ -16805,9 +16805,9 @@
     "prompt": "Vad mäter EEG (elektroencefalografi)?",
     "correct": "Hjärnans elektriska aktivitet, registrerad med elektroder på hårbotten",
     "distractors": [
-      "Hjärnans blodflöde, uppmätt med Doppler",
-      "Muskelns elektriska aktivitet, uppmätt med EMG",
-      "Ögonens rörelser, registrerade med EOG"
+      "Hjärnans blodflöde, registrerat med transkraniell Doppler",
+      "Muskelns elektriska aktivitet, registrerad med nålelektroder införda i muskeln",
+      "Ögonens rörelser, registrerade med elektroder placerade runt ögat"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -16819,9 +16819,9 @@
     "prompt": "Vilket internationellt system används för att placera EEG-elektroder på hårbotten?",
     "correct": "10–20-systemet",
     "distractors": [
-      "ASA-systemet",
-      "SI-systemet",
-      "Bishop-skalan"
+      "30–60-systemet",
+      "5–15-systemet",
+      "40–80-systemet"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -16889,9 +16889,9 @@
     "prompt": "Vilka EEG-mönster är typiska för sömnstadium N2?",
     "correct": "Sömnspolar och K-komplex",
     "distractors": [
-      "Enbart deltavågor",
-      "Enbart REM-aktivitet",
-      "Enbart alfavågor"
+      "Enbart högamplitudiga deltavågor",
+      "Sågtandsvågor och REM-aktivitet",
+      "Enbart alfavågor och betavågor"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -16918,7 +16918,7 @@
     "correct": "Snabb, lågamplitudig aktivitet som liknar vaket tillstånd, trots att personen sover",
     "distractors": [
       "Enbart deltavågor, som vid djup sömn",
-      "Total EEG-tystnad, utan någon aktivitet alls",
+      "Total EEG-tystnad utan någon mätbar aktivitet alls, på samma sätt som under djup narkos",
       "Enbart sömnspolar, utan snabb aktivitet"
     ],
     "topic": "bma_neurofysiologi",
@@ -16931,9 +16931,9 @@
     "prompt": "Vilket klassiskt EEG-mönster ses vid absensepilepsi (petit mal)?",
     "correct": "3 Hz spik-våg-komplex",
     "distractors": [
-      "Kontinuerlig deltaaktivitet",
-      "Burst suppression",
-      "Enbart betaaktivitet"
+      "1 Hz kontinuerlig deltaaktivitet",
+      "20 Hz burst suppression-mönster",
+      "30 Hz enbart betaaktivitet"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -16947,7 +16947,7 @@
     "distractors": [
       "K-komplex under djup sömn",
       "Sömnspindel under lätt sömn",
-      "Artefakt orsakad av muskelrörelse"
+      "Artefakt orsakad av muskelrörelser i tuggmuskulaturen"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -16961,7 +16961,7 @@
     "distractors": [
       "Ett normalt sömnmönster hos friska vuxna",
       "Ett tecken på normal vakenhet hos patienten",
-      "Ett artefaktmönster helt utan klinisk betydelse"
+      "Ett artefaktmönster helt utan klinisk betydelse, som uppstår när elektroderna sitter löst mot hårbotten och ger en växlande signalstyrka i registreringen"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -16973,7 +16973,7 @@
     "prompt": "Vilken typ av elektrod används oftast vid rutin-EEG?",
     "correct": "Ytelektroder fästa på hårbotten med ledande pasta",
     "distractors": [
-      "Nålelektroder införda direkt i hjärnan",
+      "Nålelektroder införda direkt i hjärnvävnaden via ett borrhål i skallbenet",
       "Intramuskulära elektroder i skelettmuskeln",
       "Implanterade chip under huden"
     ],
@@ -17003,7 +17003,7 @@
     "distractors": [
       "För att mäta hjärntrycket direkt",
       "För att mäta hörseln hos patienten",
-      "För att helt ersätta EEG-registreringen"
+      "För att helt ersätta EEG-registreringen och göra den överflödig under sömnundersökningen"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -17030,7 +17030,7 @@
     "correct": "Muskelns elektriska aktivitet, i vila och vid kontraktion",
     "distractors": [
       "Nervledningshastighet i en perifer nerv",
-      "Hjärnaktivitet registrerad med elektroder",
+      "Hjärnans elektriska aktivitet, registrerad med ytelektroder på hårbotten",
       "Blodflöde i muskeln, mätt med Doppler"
     ],
     "topic": "bma_neurofysiologi",
@@ -17087,7 +17087,7 @@
     "distractors": [
       "Normal muskelfunktion",
       "Övermedicinering",
-      "Ren muskelsjukdom utan nervpåverkan"
+      "En ren muskelsjukdom helt utan någon påverkan på nerverna"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -17127,7 +17127,7 @@
     "prompt": "Vad mäter nervledningsstudier (neurografi, NCS)?",
     "correct": "Hur snabbt och hur väl elektriska signaler leds i perifera nerver",
     "distractors": [
-      "Hjärnans elektriska aktivitet på hårbotten",
+      "Hjärnans elektriska aktivitet, registrerad med ytelektroder på hårbotten",
       "Muskelns kontraktionskraft vid belastning",
       "Blodflödet i nerven, mätt med Doppler"
     ],
@@ -17143,7 +17143,7 @@
     "distractors": [
       "Millivolt",
       "Hertz",
-      "Millisekunder"
+      "Millivolt per sekund"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -17197,7 +17197,7 @@
     "prompt": "Vad motsvarar H-reflexen elektrofysiologiskt?",
     "correct": "Ett elektriskt framkallat, monosynaptiskt sträckreflexsvar",
     "distractors": [
-      "En viljemässig muskelkontraktion utan reflex",
+      "En viljemässig muskelkontraktion helt utan inblandning av reflexbågar",
       "En EEG-våg registrerad på hårbotten",
       "Ett mått på hjärnaktivitet, inte reflexen"
     ],
@@ -17209,7 +17209,7 @@
     "id": "bma_neurofys_30",
     "type": "mc",
     "prompt": "Vilken nerv drabbas vid karpaltunnelsyndrom?",
-    "correct": "Nervus medianus, vid handleden",
+    "correct": "Nervus medianus",
     "distractors": [
       "Nervus ulnaris",
       "Nervus radialis",
@@ -17227,7 +17227,7 @@
     "distractors": [
       "Förkortad latens i nervus medianus",
       "Ökad amplitud utan någon latenspåverkan",
-      "Ett helt normalt fynd trots patientens symtom"
+      "Ett helt normalt neurografifynd trots patientens uttalade nattliga symtom från handen"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -17268,8 +17268,8 @@
     "correct": "Guillain-Barrés syndrom",
     "distractors": [
       "Myastenia gravis",
-      "Karpaltunnelsyndrom",
-      "ALS"
+      "Lambert-Eatons myastena syndrom",
+      "Amyotrofisk lateralskleros"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -17282,7 +17282,7 @@
     "correct": "Kraftigt sänkta ledningshastigheter och blockering av impulsledning, pga demyelinisering",
     "distractors": [
       "En helt normal neurografi utan avvikelser",
-      "Enbart sänkt amplitud utan någon hastighetspåverkan",
+      "Enbart sänkt amplitud på svaren, helt utan påverkan på ledningshastigheten i de undersökta nerverna",
       "Enbart EEG-förändringar, inte neurografiska fynd"
     ],
     "topic": "bma_neurofysiologi",
@@ -17309,7 +17309,7 @@
     "prompt": "Varför används både nervledningsstudier och nål-EMG ofta tillsammans kliniskt?",
     "correct": "De ger kompletterande information om var i det perifera nervsystemet en skada sitter",
     "distractors": [
-      "De mäter exakt samma sak och är helt utbytbara",
+      "De mäter exakt samma sak och är därför helt utbytbara mot varandra i alla kliniska sammanhang",
       "NCS ersätter helt behovet av EMG-undersökning",
       "EMG används enbart vid skador i hjärnan"
     ],
@@ -17339,7 +17339,7 @@
     "distractors": [
       "BAEP, som mäter hörselbanans respons",
       "SEP, som mäter känselbanans respons",
-      "H-reflex, som mäter en spinal reflexbåge"
+      "H-reflex, som mäter en monosynaptisk spinal reflexbåge i vadmuskulaturen"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -17367,7 +17367,7 @@
     "distractors": [
       "VEP, som mäter synbanans respons",
       "SEP, som mäter känselbanans respons",
-      "EMG, som mäter muskelns elektriska aktivitet"
+      "EMG, som mäter muskelns elektriska aktivitet i vila"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -17380,7 +17380,7 @@
     "correct": "En perifer nerv, varefter svaret registreras centralt",
     "distractors": [
       "Näthinnan med ljus, som vid VEP",
-      "Snäckan med klickljud, som vid BAEP",
+      "Snäckan med upprepade klickljud i hörlurar, som vid BAEP",
       "Muskeln direkt med nål, som vid EMG"
     ],
     "topic": "bma_neurofysiologi",
@@ -17395,7 +17395,7 @@
     "distractors": [
       "Normal nervfunktion utan patologiska fynd",
       "En perifer muskelsjukdom, inte en CNS-sjukdom",
-      "Enbart en åldersrelaterad förändring utan sjukdomsvärde"
+      "Enbart en normal åldersrelaterad förändring helt utan sjukdomsvärde hos patienten"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -17409,7 +17409,7 @@
     "distractors": [
       "De kräver full vakenhet hos patienten",
       "De mäter enbart viljemässig muskelaktivitet",
-      "De kan bara utföras på helt vakna patienter"
+      "De kan bara utföras på helt vakna patienter som aktivt kan medverka och följa instruktioner under undersökningen"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -17422,7 +17422,7 @@
     "correct": "Romerska siffror I–V",
     "distractors": [
       "P100 och N20",
-      "Alfa till gamma",
+      "Grekiska bokstäver alfa–gamma",
       "QRS och T"
     ],
     "topic": "bma_neurofysiologi",
@@ -17435,7 +17435,7 @@
     "prompt": "Vad avser man med \"central ledningstid\" vid SEP-mätning?",
     "correct": "Tiden det tar för signalen att fortledas mellan en perifer och en central registreringspunkt",
     "distractors": [
-      "Total tid från stimulus till muskelkontraktion sker",
+      "Den totala tiden från givet stimulus till dess att en synlig muskelkontraktion uppträder i den undersökta muskeln",
       "Tid för hjärtats retledning genom AV-noden",
       "Tid för blodet att nå hjärnan från hjärtat"
     ],
@@ -17451,7 +17451,7 @@
     "distractors": [
       "VEP",
       "SEP",
-      "H-reflex"
+      "H-reflextest"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -17465,7 +17465,7 @@
     "distractors": [
       "Demyelinisering av perifera nervers axon",
       "Degeneration av motorneuron i ryggmärgen",
-      "Muskeldystrofi orsakad av en ärftlig gendefekt"
+      "En muskeldystrofi orsakad av en ärftlig gendefekt i muskelfibrernas strukturproteiner"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -17479,7 +17479,7 @@
     "distractors": [
       "Ett tilltagande svar vid upprepad stimulering",
       "Helt oförändrad amplitud genom hela testet",
-      "Total avsaknad av svar redan vid det första stimulus"
+      "Total avsaknad av muskelsvar redan vid det allra första stimulus, innan någon uttröttning hunnit ske"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -17492,7 +17492,7 @@
     "correct": "Lambert-Eatons myastena syndrom",
     "distractors": [
       "Myastenia gravis",
-      "Guillain-Barrés syndrom",
+      "Guillain-Barrés polyradikuloneuropati",
       "Karpaltunnelsyndrom"
     ],
     "topic": "bma_neurofysiologi",
@@ -17505,7 +17505,7 @@
     "prompt": "Var sitter felet vid Lambert-Eatons syndrom rent patofysiologiskt?",
     "correct": "Presynaptiskt, i frisättningen av acetylkolin från nervändan",
     "distractors": [
-      "Postsynaptiskt på muskelns acetylkolinreceptorer",
+      "Postsynaptiskt, på muskelmembranets acetylkolinreceptorer i ändplattan",
       "I själva muskelfibern",
       "I det centrala nervsystemet"
     ],
@@ -17534,7 +17534,7 @@
     "correct": "Antalet fungerande acetylkolinreceptorer är reducerat, vilket gör att signalöverföringen sviktar snabbare vid upprepad stimulering",
     "distractors": [
       "Musklerna får för lite syresatt blod",
-      "Nerverna leder impulsen alldeles för snabbt",
+      "Nerverna leder impulserna alldeles för snabbt, vilket gör att muskeln hinner tröttas ut långt innan den har aktiverats fullt ut av signalen",
       "Kalcium ansamlas alltför mycket i muskeln"
     ],
     "topic": "bma_neurofysiologi",
@@ -17562,7 +17562,7 @@
     "correct": "Ökad \"jitter\" vid single fiber-EMG",
     "distractors": [
       "Minskad jitter",
-      "Total avsaknad av signal",
+      "Total avsaknad av signal vid single fiber-EMG",
       "Förkortad distal latens"
     ],
     "topic": "bma_neurofysiologi",
@@ -17577,7 +17577,7 @@
     "distractors": [
       "För att stimulera nerven elektriskt",
       "För att mäta blodtrycket i armen",
-      "För att helt ersätta referenselektroden"
+      "För att helt kunna ersätta referenselektroden under registreringen"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -17590,7 +17590,7 @@
     "correct": "Artefakter som stör tolkningen av den underliggande hjärnaktiviteten",
     "distractors": [
       "En förbättrad signal utan störningar",
-      "En sänkt frekvens i samtliga registrerade vågor",
+      "En jämnt sänkt frekvens i samtliga registrerade vågformer under undersökningen",
       "Ingen påverkan alls på tolkningen"
     ],
     "topic": "bma_neurofysiologi",
@@ -17605,7 +17605,7 @@
     "distractors": [
       "Högpassfilter på 500 Hz",
       "Lågpassfilter på 1 Hz",
-      "Inget filter behövs alls"
+      "Inget filter behövs, störningarna försvinner ändå"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -17618,7 +17618,7 @@
     "correct": "Metoder för att framkalla eller förstärka epileptiforma EEG-förändringar hos disponerade patienter",
     "distractors": [
       "Metoder för att mäta nervledningshastigheten",
-      "Metoder för att bedöva patienten inför ingreppet",
+      "Metoder för att bedöva patienten inför ingreppet så att registreringen kan genomföras helt smärtfritt och utan obehag",
       "Metoder för att kalibrera EMG-nålen"
     ],
     "topic": "bma_neurofysiologi",
@@ -17633,7 +17633,7 @@
     "distractors": [
       "Att mäta muskelstyrkan hos patienten",
       "Att bedöma synskärpan hos patienten",
-      "Att helt ersätta en MR-undersökning av hjärnan"
+      "Att helt ersätta en MR-undersökning av hjärnan, eftersom EEG ger samma detaljerade bild av hjärnans anatomiska strukturer"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -17645,7 +17645,7 @@
     "prompt": "Vad kan ett \"flatt\"/isoelektriskt EEG (efter uteslutande av teknisk artefakt och läkemedelspåverkan) tala för?",
     "correct": "Total hjärnelektrisk tystnad, som kan förekomma vid hjärndöd",
     "distractors": [
-      "Normal djup sömn hos en frisk person",
+      "Ett tecken på normal djup sömn hos en frisk och opåverkad person",
       "Lätt sedering utan påverkan på EEG",
       "Ett vanligt migränanfall"
     ],
@@ -17687,7 +17687,7 @@
     "prompt": "Vilket EEG-fynd är typiskt vid ett fokalt (partiellt) epileptiskt anfall?",
     "correct": "Epileptiform aktivitet begränsad till ett avgränsat område i en hjärnhalva",
     "distractors": [
-      "Symmetrisk generaliserad spik-våg över hela hjärnan",
+      "Symmetrisk generaliserad spik-våg-aktivitet över båda hjärnhalvorna samtidigt och synkront",
       "Total EEG-tystnad utan någon aktivitet",
       "Enbart förändringar i EMG, inte i EEG"
     ],
@@ -17701,7 +17701,7 @@
     "prompt": "Vad är en vanlig orsak till att EEG används vid diagnostik av oklara medvetandesänkningar/koma?",
     "correct": "För att upptäcka icke-konvulsivt status epilepticus eller bedöma graden av hjärnpåverkan",
     "distractors": [
-      "För att mäta hjärtats retledning genom AV-noden",
+      "För att mäta hjärtats retledning genom AV-noden och vidare ut i kammarnas retledningssystem",
       "För att bedöma njurfunktionen hos patienten",
       "För att diagnostisera karpaltunnelsyndrom"
     ],
@@ -17716,7 +17716,7 @@
     "correct": "Tiden mellan en given stimulering och det uppmätta svaret",
     "distractors": [
       "Amplituden på det uppmätta svaret",
-      "Antalet elektroder som används vid registreringen",
+      "Antalet elektroder som används vid själva registreringstillfället",
       "Frekvensen av bakgrundsaktiviteten i EEG"
     ],
     "topic": "bma_neurofysiologi",
@@ -17729,7 +17729,7 @@
     "prompt": "Vad avgör amplituden på en sammansatt muskelaktionspotential (CMAP) vid motorisk neurografi främst?",
     "correct": "Antalet fungerande muskelfibrer/axon som deltar i svaret",
     "distractors": [
-      "Enbart avståndet mellan de placerade elektroderna",
+      "Enbart avståndet mellan de placerade registreringselektroderna",
       "Enbart patientens kroppstemperatur vid mätningen",
       "Enbart hudens fuktighet under elektroderna"
     ],
@@ -17759,7 +17759,7 @@
     "distractors": [
       "Temperaturen påverkar inte mätningen alls",
       "Kyla gör alltid mätningen mer exakt och pålitlig",
-      "Värme förhindrar all elektrisk aktivitet i nerven"
+      "Värme förhindrar all elektrisk aktivitet i nerven och gör undersökningen omöjlig att genomföra i praktiken"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -17785,7 +17785,7 @@
     "prompt": "Vad kännetecknar EMG-fynd vid ALS (amyotrofisk lateralskleros)?",
     "correct": "Utbredda tecken på pågående denervering och kronisk reinnervering i flera muskelgrupper/nivåer",
     "distractors": [
-      "Enbart demyeliniserande neurografifynd utan EMG-förändringar",
+      "Enbart demyeliniserande neurografifynd, helt utan några som helst förändringar vid nål-EMG-undersökningen",
       "Ett helt normalt EMG trots patientens kliniska symtom",
       "Enbart förändringar i EEG, inte i EMG"
     ],
@@ -17799,7 +17799,7 @@
     "prompt": "Vad mäter man vid autonom funktionstestning, t.ex. \"tilt table test\" i kombination med hjärtfrekvensvariabilitet?",
     "correct": "Det autonoma nervsystemets förmåga att reglera t.ex. blodtryck och hjärtfrekvens",
     "distractors": [
-      "Motorisk nervledningshastighet i en perifer nerv",
+      "Motorisk nervledningshastighet i en perifer nerv i armen eller benet som stimuleras elektriskt",
       "Kognitiv förmåga hos patienten",
       "Syreupptagningsförmåga i lungorna"
     ],
@@ -17813,7 +17813,7 @@
     "prompt": "Vad kan onormalt låg hjärtfrekvensvariabilitet vid djupandning tyda på?",
     "correct": "Autonom neuropati som påverkar den parasympatiska regleringen av hjärtat",
     "distractors": [
-      "En fullt normal autonom funktion utan avvikelser",
+      "En fullt normal autonom funktion, helt utan avvikelser vid själva testningen",
       "En ren muskelsjukdom utan autonom påverkan",
       "Ett isolerat EEG-fynd utan koppling till hjärtat"
     ],
@@ -17841,7 +17841,7 @@
     "prompt": "Varför fångar vanlig neurografi (NCS) ofta inte upp en ren småfiberneuropati?",
     "correct": "Konventionell NCS mäter framför allt stora, snabbledande myeliniserade fibrer, inte de tunna, långsamledande fibrer som drabbas vid småfiberneuropati",
     "distractors": [
-      "NCS mäter enbart hjärnaktivitet, inte perifera nerver alls",
+      "NCS mäter enbart hjärnans aktivitet och säger därför ingenting alls om de perifera nervernas funktion, oavsett vilken fibertyp som är drabbad av sjukdom",
       "Småfiberneuropati ger alltid extremt tydliga NCS-fynd",
       "NCS kan bara utföras på motoriska nerver"
     ],
@@ -17855,7 +17855,7 @@
     "prompt": "Vad kan polysomnografi, utöver EEG och EOG, även registrera för att diagnostisera sömnapné?",
     "correct": "Andningsrörelser, luftflöde och syremättnad, ofta även EKG och benrörelser",
     "distractors": [
-      "Enbart hjärnans blodflöde, inget om andningen",
+      "Enbart hjärnans blodflöde och puls, ingenting alls om andningen under natten",
       "Enbart tarmljud, inget om andningen",
       "Enbart ögonfärg, inget om andningen"
     ],
@@ -17884,7 +17884,7 @@
     "correct": "Multipel sömnlatenstest",
     "distractors": [
       "BAEP",
-      "H-reflex",
+      "Kontinuerlig EEG-övervakning",
       "RNS"
     ],
     "topic": "bma_neurofysiologi",
@@ -17899,7 +17899,7 @@
     "distractors": [
       "Ett helt normalt vaket EEG-mönster",
       "Ett tecken på vanlig barnepilepsi",
-      "Ett mönster som enbart ses under REM-sömn"
+      "Ett mönster som enbart ses under REM-sömn hos helt friska personer och som därför saknar klinisk betydelse"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -17911,7 +17911,7 @@
     "prompt": "Varför undersöks paraspinala muskler ofta med nål-EMG vid misstänkt radikulopati?",
     "correct": "De innerveras direkt av nervrötterna, utan att passera perifera nerver, vilket hjälper till att lokalisera skadan till en nervrot",
     "distractors": [
-      "De är lättast att komma åt tekniskt, utan annan orsak",
+      "De är rent tekniskt lättast att komma åt med nålelektrod, utan att det finns någon annan medicinsk orsak till att just de väljs ut",
       "De påverkas aldrig vid en radikulopati",
       "De ersätter helt behovet av en neurografi"
     ],
@@ -17925,7 +17925,7 @@
     "prompt": "Vad kallas en aktionspotential med två respektive tre faser i EMG-sammanhang?",
     "correct": "Bifasisk respektive trifasisk vågform",
     "distractors": [
-      "Enbart mono- och polyfasisk",
+      "Monofasisk respektive polyfasisk vågform",
       "Alfa- och betavåg",
       "P- och T-våg"
     ],
@@ -17940,7 +17940,7 @@
     "correct": "Ojämn/asynkron aktivering av muskelfibrerna inom motorenheten",
     "distractors": [
       "Enbart teknisk artefakt utan klinisk betydelse",
-      "Alltid en normal variant utan koppling till sjukdom",
+      "Alltid en normal variant helt utan koppling till någon sjukdom hos den undersökta patienten",
       "Enbart hög kroppstemperatur"
     ],
     "topic": "bma_neurofysiologi",
@@ -17953,7 +17953,7 @@
     "prompt": "Vad kan kvantitativ EEG-analys (qEEG) användas till, utöver visuell granskning av kurvan?",
     "correct": "Datorbaserad analys av frekvensinnehåll och mönster, t.ex. för forskning eller vissa kliniska frågeställningar",
     "distractors": [
-      "Att helt ersätta behovet av elektroder vid EEG",
+      "Att helt ersätta behovet av elektroder vid EEG, eftersom datorn själv kan räkna fram hjärnans elektriska aktivitet utan registrering",
       "Att mäta muskelstyrka hos patienten",
       "Att diagnostisera frakturer i skelettet"
     ],
@@ -17969,7 +17969,7 @@
     "distractors": [
       "Barnets EEG är alltid helt identiskt med en vuxens",
       "Barn har aldrig någon alfaaktivitet i EEG",
-      "EEG kan över huvud taget inte registreras hos barn"
+      "EEG kan över huvud taget inte registreras hos små barn och spädbarn på ett tillförlitligt sätt"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -17981,7 +17981,7 @@
     "prompt": "Vad kan kontinuerlig EEG-övervakning (cEEG) på en intensivvårdsavdelning användas för att upptäcka?",
     "correct": "Icke-konvulsivt status epilepticus hos medvetandesänkta patienter",
     "distractors": [
-      "En akut hjärtinfarkt hos den medvetandesänkta patienten",
+      "En akut hjärtinfarkt hos den medvetandesänkta patienten på avdelningen",
       "En akut njursvikt hos den medvetandesänkta patienten",
       "Elektrolytrubbningar direkt, utan epileptisk aktivitet"
     ],
@@ -17995,7 +17995,7 @@
     "prompt": "Varför räcker det oftast inte med enbart klinisk observation för att upptäcka icke-konvulsiva anfall?",
     "correct": "De saknar synliga kramper men ger ändå epileptiform aktivitet i hjärnan, som bara syns med EEG",
     "distractors": [
-      "De ger alltid tydliga, synliga kramper hos patienten",
+      "De ger alltid tydliga, synliga kramper hos patienten och kan därför upptäckas med blotta ögat av personalen",
       "De syns bättre med ett vanligt blodprov",
       "De kan bara upptäckas med en MR-undersökning"
     ],
@@ -18023,7 +18023,7 @@
     "prompt": "Vilken typ av framkallade svar kan användas för intraoperativ övervakning av ryggmärgens funktion vid t.ex. skoliosoperation?",
     "correct": "Somatosensoriskt och/eller motoriskt framkallade svar",
     "distractors": [
-      "BAEP enbart, utan somatosensorisk komponent",
+      "BAEP enbart, helt utan somatosensorisk eller motorisk komponent",
       "VEP enbart, utan motorisk komponent",
       "Rutin-EEG enbart, utan framkallade svar"
     ],
@@ -18038,7 +18038,7 @@
     "correct": "Motoriskt framkallade svar, t.ex. via transkraniell magnet- eller elektrisk stimulering",
     "distractors": [
       "BAEP, som mäter hörselbanans funktion",
-      "H-reflex, som mäter en spinal reflexbåge",
+      "H-reflex, som mäter en monosynaptisk spinal reflexbåge i vadmuskulaturen via nervstimulering",
       "EOG, som mäter ögonrörelser"
     ],
     "topic": "bma_neurofysiologi",
@@ -18051,7 +18051,7 @@
     "prompt": "Vad kan en förlängd F-vågslatens tala för, jämfört med normal distal ledningshastighet?",
     "correct": "En skada eller påverkan på nervens proximala delar, t.ex. nära nervroten",
     "distractors": [
-      "En ren muskelsjukdom helt utan nervpåverkan",
+      "En ren muskelsjukdom i muskeln, helt utan någon som helst påverkan på nerverna",
       "Enbart en teknisk artefakt i registreringen",
       "Normal nervfunktion utan patologiska fynd"
     ],
@@ -18067,7 +18067,7 @@
     "distractors": [
       "H-reflexen kan bara mätas i armen, inte i benet",
       "H-reflexen mäter enbart hjärnaktivitet, inte reflexen",
-      "H-reflexen kräver ingen som helst elektrisk stimulering"
+      "H-reflexen kräver ingen som helst elektrisk stimulering utan framkallas enbart med ett reflexhammarslag"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -18081,7 +18081,7 @@
     "distractors": [
       "H-reflexen finns aldrig i benens muskler",
       "H-reflexen kräver alltid fullständig narkos",
-      "Armmusklerna saknar reflexbågar helt och hållet"
+      "Armmusklerna saknar helt och hållet reflexbågar, vilket gör att någon reflex över huvud taget inte kan framkallas där hos vuxna personer, vare sig i vila eller vid aktivering"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -18109,7 +18109,7 @@
     "distractors": [
       "Misstänkt hjärtinfarkt, inte karpaltunnelsyndrom",
       "Misstänkt njursvikt, inte karpaltunnelsyndrom",
-      "Misstänkt gallstensanfall, inte karpaltunnelsyndrom"
+      "Misstänkt gallstensanfall med utstrålande smärta, inte karpaltunnelsyndrom"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -18121,7 +18121,7 @@
     "prompt": "Vad kan asymmetriskt nedsatt amplitud vid BAEP på ena sidan tyda på?",
     "correct": "En retrokokleär skada, t.ex. ett akustikusneurinom, på den påverkade sidan",
     "distractors": [
-      "En normal variant helt utan klinisk betydelse",
+      "En helt normal sidoskillnad i hörseln utan någon som helst klinisk betydelse",
       "Ett tecken på bakomliggande hjärtsjukdom",
       "Ett tecken på bakomliggande njursjukdom"
     ],
@@ -18136,7 +18136,7 @@
     "correct": "Asymmetri mellan sidorna är ofta mer specifikt patologiskt än enbart avvikande absolutvärden",
     "distractors": [
       "Det saknar all klinisk betydelse vid tolkningen",
-      "Man jämför aldrig sidorna med varandra i praktiken",
+      "Man jämför i praktiken aldrig höger och vänster sida med varandra vid den här typen av undersökningar",
       "Det görs enbart av tidsmässiga skäl"
     ],
     "topic": "bma_neurofysiologi",
@@ -18150,7 +18150,7 @@
     "correct": "Hur motorenheter successivt aktiveras och ökar i antal och frekvens vid tilltagande viljemässig muskelkraft",
     "distractors": [
       "Hur snabbt en nål förs in i muskelvävnaden",
-      "Hur många elektroder som används vid en EEG-registrering",
+      "Hur många elektroder och nålar som sammanlagt används vid en fullständig EEG- och EMG-registrering av patienten",
       "Hur en nerv stimuleras med en elektrisk impuls"
     ],
     "topic": "bma_neurofysiologi",
@@ -18165,7 +18165,7 @@
     "distractors": [
       "Ren myopati helt utan nervpåverkan",
       "Helt normal muskelfunktion utan fynd",
-      "Enbart en teknisk artefakt i registreringen"
+      "Enbart en teknisk artefakt i själva registreringen av signalen"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",
@@ -18177,7 +18177,7 @@
     "prompt": "Vad kallas det när motorenheter vid myopati måste \"avfyra\" snabbare än normalt för en given kraft, eftersom varje enhet bidrar med mindre kraft?",
     "correct": "Tidig/ökad rekrytering",
     "distractors": [
-      "Minskad rekrytering",
+      "Fördröjd och minskad rekrytering",
       "Refraktärperiod",
       "Insertionsaktivitet"
     ],
@@ -18193,7 +18193,7 @@
     "distractors": [
       "Enbart EEG, utan nervledningsstudier",
       "Enbart blodprover, utan neurofysiologisk undersökning",
-      "Enbart bildgivande diagnostik, utan neurofysiologisk undersökning"
+      "Enbart bildgivande diagnostik som MR och DT, utan neurofysiologisk undersökning"
     ],
     "topic": "bma_neurofysiologi",
     "difficulty": "Normal",

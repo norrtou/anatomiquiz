@@ -132,6 +132,9 @@ En fråga utan relevanta alternativ är värdelös och förstör quizet. Inga fi
 - **Inga avslöjande parenteser:** Lägg ALDRIG extra förklaring/exempel inom parentes enbart på rätt svar. Asymmetrin mot distraktorerna avslöjar svaret. Håll rätt svar lika kortfattat som distraktorerna.
 - **Rätt svar får inte ekas i frågan:** Frågetexten får inte innehålla svarstermen verbatim så att frågan blir självbesvarande. Skräckexempel: `medsek_diagnoskodning`-frågan "Vad kallas de Z-koder…" med `correct: "Z-koder"` – svaret stod redan i frågan. Symmetriska antingen/eller-frågor där båda kandidaterna nämns är OK.
 - **Numerisk-/format-paritet:** Rätt svar får inte vara det enda alternativet som är numeriskt eller format-mässigt korrekt. Efterfrågas ett antal/en siffra ska ALLA alternativ vara tal. Efterfrågas ett visst antal saker (plural) ska ALLA alternativ innehålla exakt lika många – t.ex. om rätt svar listar tre strukturer måste varje distraktor också lista tre, aldrig två eller fyra. Annars kan man räkna sig fram till svaret utan sakkunskap.
+  - ⚠️ **Antals-asymmetri fångas INTE av `validate_quiz.py` – den måste kontrolleras för hand.** Skräckexempel (hittat 2026-07-13 i `bma_karlfys_42`): frågan löd "Vilka **tre** huvudsakliga faktorer (Virchows triad) …", rätt svar listade tre faktorer medan alla tre distraktorer började med "Enbart …" och listade EN. Då räcker det att räkna för att hitta rätt. Fix: skriv om distraktorerna så att de också listar tre (fortsatt fel) faktorer.
+  - När du bygger/rättar ett ämne: sök aktivt efter frågor vars prompt innehåller ett räkneord (två/tre/fyra/tre huvudsakliga …) och kontrollera antalet poster i VARJE alternativ.
+- **Inga extra kvalificerare enbart på rätt svar:** Rätt svar får inte vara det enda alternativet som bär en extra precisering (plats, tidpunkt, orsak), även utan parentes. Skräckexempel (`bma_hjarta_30`): `correct: "Nervus medianus, vid handleden"` mot de nakna distraktorerna "Nervus ulnaris" / "Nervus radialis" / "Nervus axillaris" – tillägget "vid handleden" pekar ut svaret. Fix: stryk kvalificeraren från rätt svar (→ "Nervus medianus") eller ge alla alternativ en likvärdig precisering. Samma familj som parentes-regeln ovan.
 - **Språkparitet (latin/svenska):** Alla alternativ ska ligga i samma språkregister. Rätt svar får inte vara det enda på latin (eller det enda på svenska) och sticka ut så. Antingen alla alternativ på latin eller alla på svenska.
 
 ### 2.10 BILDFRÅGOR MÅSTE HA TOM PROMPT
@@ -378,6 +381,8 @@ Dessa fel ska ALDRIG upprepas:
 - **Längdbias:** rätt svar systematiskt längre/mer detaljerat än distraktorerna (avslöjar svaret på längden) – se §2.9
 - **Avslöjande parenteser:** extra förklaring/exempel inom parentes enbart på rätt svar – se §2.9
 - **Självbesvarande frågor:** frågetexten ekar svarstermen verbatim – se §2.9
+- **Antals-asymmetri:** frågan ber om tre saker men bara rätt svar listar tre (distraktorerna en) – se §2.9. Fångas inte av validatorn
+- **Extra kvalificerare enbart på rätt svar:** "Nervus medianus, vid handleden" bland nakna nervnamn – se §2.9
 - **Maskinell trimning av rätt svar** som stympar meningen ("En automatisk", "Ja") – skriv alltid om för hand
 
 ### 10.2 Lyckade Lösningar
