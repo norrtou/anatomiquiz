@@ -12239,11 +12239,11 @@
     "id": "rtg_cirkulation_hjarta_75",
     "type": "mc",
     "prompt": "Vad beskriver Poiseuilles lag om flöde genom ett kärl?",
-    "correct": "Flödet beror starkt på radien, samt tryck och viskositet",
+    "correct": "Flödet är starkt beroende av kärlets radie upphöjd till fyra, samt av tryckskillnaden, viskositeten och kärlets längd",
     "distractors": [
-      "Flödet beror enbart på hjärtfrekvensen",
-      "Flödet är oberoende av kärlets radie",
-      "Flödet beror enbart på blodets temperatur"
+      "Flödet beror enbart på hjärtfrekvensen och är helt oberoende av kärlets radie, tryckskillnaden och blodets viskositet",
+      "Flödet är helt oberoende av kärlets radie och styrs i stället enbart av blodets temperatur",
+      "Flödet beror enbart på blodets temperatur och kärlets längd, aldrig på radien"
     ],
     "topic": "rtg_cirkulation_hjarta",
     "difficulty": "Normal",
@@ -13783,7 +13783,7 @@
     "distractors": [
       "0 mmol/l alltid",
       "50 mmol/l alltid",
-      "Glukos filtreras aldrig i njuren"
+      "Cirka 2 mmol/l"
     ],
     "topic": "rtg_njurfunktion",
     "difficulty": "Normal",
@@ -14243,9 +14243,9 @@
     "prompt": "Vad kallas den avancerade CT-teknik som samlar in bilddata genom hela andningscykeln för att kartlägga tumörrörelse, t.ex. inför strålbehandling av lungtumörer?",
     "correct": "4D-CT",
     "distractors": [
-      "Dual-energy CT",
-      "Spektral CT",
-      "Perfusions-CT"
+      "Dual-energy CT med 2 olika rörspänningar",
+      "3D-rotationsangiografi",
+      "Perfusions-CT med 1 enda fas"
     ],
     "topic": "rtg_andning_rorelse",
     "difficulty": "Normal",
@@ -15952,8 +15952,8 @@
     "correct": "3D-sekvens med multiplanar rekonstruktion",
     "distractors": [
       "2D-sekvens med enbart ett fast snittplan",
-      "Diffusionsviktad enkel-snittsekvens",
-      "Time-of-flight-angiografi enbart"
+      "Diffusionsviktad 2D-sekvens i ett enda plan",
+      "Time-of-flight-angiografi i 1 plan"
     ],
     "topic": "rtg_snittanatomi",
     "difficulty": "Normal",
@@ -19588,10 +19588,10 @@
   {
     "id": "rtg_modalitetsspecifik_100",
     "type": "mc",
-    "prompt": "Hur ser en fettrik binjureadenom typiskt ut på nativ CT jämfört med en fettfattig lesion, vilket används diagnostiskt för att skilja godartat från misstänkt?",
-    "correct": "En fettrik adenom har låg densitet, medan en fettfattig lesion har högre densitet",
+    "prompt": "Hur ser ett fettrikt binjureadenom typiskt ut på nativ CT jämfört med en fettfattig lesion, vilket används diagnostiskt för att skilja godartat från misstänkt?",
+    "correct": "Ett fettrikt adenom har låg densitet, medan en fettfattig lesion har högre densitet",
     "distractors": [
-      "Fettrika och fettfattiga lesioner har alltid identisk densitet",
+      "Fettrika och fettfattiga lesioner har alltid exakt identisk densitet på nativ CT, oavsett innehåll",
       "Fettrika lesioner har alltid högre densitet än ben",
       "Densitetsmätning ger aldrig diagnostisk vägledning för binjurelesioner"
     ],
