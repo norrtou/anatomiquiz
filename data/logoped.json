@@ -47,7 +47,7 @@
     "prompt": "Vad kännetecknar luftstrupens (trakeas) väggstruktur?",
     "correct": "C-formade hyalina broskringar, öppna baktill mot matstrupen",
     "distractors": [
-      "Helt slutna broskringar utan någon öppning alls",
+      "Helt slutna, cirkulära broskringar utan någon öppning alls baktill",
       "Enbart glatt muskulatur helt utan broskstöd",
       "Ett enda sammanhängande broskrör utan segment"
     ],
@@ -75,7 +75,7 @@
     "prompt": "Varför hamnar inandrade främmande föremål oftare i höger huvudbronk än i vänster?",
     "correct": "Höger huvudbronk är brantare, kortare och vidare än den vänstra",
     "distractors": [
-      "Höger huvudbronk är smalare och längre",
+      "Höger huvudbronk är smalare, längre och mer horisontell än den vänstra",
       "Vänster huvudbronk saknar broskringar",
       "Höger lunga har lägre luftflöde"
     ],
@@ -104,7 +104,7 @@
     "correct": "Höger lunga har tre lober, vänster lunga har två",
     "distractors": [
       "Båda lungorna har tre lober",
-      "Höger lunga har två lober, vänster har tre",
+      "Höger lunga har två lober, medan vänster lunga har tre",
       "Båda lungorna har två lober"
     ],
     "topic": "logoped_andningsapparaten",
@@ -132,7 +132,7 @@
     "correct": "Det håller lungan expanderad mot bröstkorgsväggen",
     "distractors": [
       "Det driver gasutbytet i alveolerna",
-      "Det stänger struphuvudet vid sväljning",
+      "Det stänger struphuvudets ingång vid varje sväljning",
       "Det reglerar bronkernas diameter"
     ],
     "topic": "logoped_andningsapparaten",
@@ -145,7 +145,7 @@
     "prompt": "Vilken funktion har surfaktant i alveolerna?",
     "correct": "Minskar ytspänningen och förhindrar att alveolerna faller samman",
     "distractors": [
-      "Ökar syrgastransporten aktivt genom membranet",
+      "Ökar syrgastransporten aktivt genom alveolarmembranet till blodet",
       "Bildar brosk i alveolväggen",
       "Producerar slem som fångar partiklar"
     ],
@@ -161,7 +161,7 @@
     "distractors": [
       "Enbart hjärtat och lungvenerna",
       "Diafragma och magsäcken",
-      "De två huvudbronkerna men inget annat"
+      "De två huvudbronkerna, men inga andra strukturer"
     ],
     "topic": "logoped_andningsapparaten",
     "difficulty": "Normal",
@@ -174,7 +174,7 @@
     "correct": "Värmer, fuktar och filtrerar luften",
     "distractors": [
       "Syresätter luften direkt",
-      "Reglerar andningsfrekvensen",
+      "Reglerar andningsfrekvensen i hjärnstammen",
       "Producerar surfaktant"
     ],
     "topic": "logoped_andningsapparaten",
@@ -187,7 +187,7 @@
     "prompt": "Var befinner sig mjuka gommen (velum) vid vanlig andning genom näsan i vila?",
     "correct": "Nedsänkt, så att luft kan passera fritt genom näsan ner till svalget",
     "distractors": [
-      "Helt sammandragen mot den bakre svalgväggen",
+      "Helt sammandragen och tryckt hårt mot den bakre svalgväggen hela tiden",
       "Indragen och sluten i näshålans öppning",
       "Fastvuxen fast vid tungbenets undersida"
     ],
@@ -203,7 +203,7 @@
     "distractors": [
       "Reglerar enbart stämläpparnas spänningsgrad",
       "Fuktar och värmer enbart inandningsluften",
-      "Delar luftstrupen i två separata huvudbronker"
+      "Delar luftstrupen i två separata huvudbronker vid carina nere i bröstkorgen"
     ],
     "topic": "logoped_andningsapparaten",
     "difficulty": "Normal",
@@ -215,7 +215,7 @@
     "prompt": "Vad kan kraftigt förstorad adenoid (svalgmandel) ge upphov till hos barn?",
     "correct": "Nasal luftvägsobstruktion och hyponasalt tal",
     "distractors": [
-      "Hypernasalt tal utan andra symtom",
+      "Hypernasalt tal och öppen nasalitet utan andra symtom",
       "Förlamning av stämläpparna",
       "Ökad lungvolym"
     ],
@@ -229,7 +229,7 @@
     "prompt": "Varför kan en person med öppen (oblockerad) trakeostomi inte tala normalt?",
     "correct": "Luften leds ut genom stomat, inte genom struphuvudet, så stämläpparna passeras inte",
     "distractors": [
-      "Trakeostomin skadar alltid stämläpparna direkt vid inläggning",
+      "Trakeostomin skadar alltid stämläpparna direkt vid själva inläggningen av trakealkanylen",
       "Diafragma kan inte längre kontrahera med en trakeostomi",
       "Trakeostomin stänger näshålan permanent och helt"
     ],
@@ -244,7 +244,7 @@
     "correct": "Driver den passiva utandningen utan muskelarbete",
     "distractors": [
       "Driver den aktiva inandningen",
-      "Ökar lungans totala volym permanent",
+      "Ökar lungans totala volym permanent under hela vilan",
       "Stänger stämläpparna vid utandning"
     ],
     "topic": "logoped_andningsapparaten",
@@ -271,7 +271,7 @@
     "prompt": "Vilket av följande räknas till de nedre luftvägarna?",
     "correct": "Bronkerna",
     "distractors": [
-      "Näshålan",
+      "Näshålan och bihålorna",
       "Farynx",
       "Larynx"
     ],
@@ -299,7 +299,7 @@
     "prompt": "Vad händer med diafragmans kupolform när muskeln kontraherar vid inandning?",
     "correct": "Kupolen plattas ut och sänks, vilket ökar brösthålans volym vertikalt",
     "distractors": [
-      "Kupolen höjs ytterligare och trycker ihop lungorna",
+      "Kupolen höjs ytterligare uppåt och trycker ihop lungorna högt upp i thorax",
       "Diafragma vrider sig i sidled utan höjdförändring",
       "Diafragma förblir helt orörlig"
     ],
@@ -341,7 +341,7 @@
     "prompt": "Vilken roll spelar bukmusklerna (t.ex. rectus abdominis, obliqui, transversus abdominis) vid tal?",
     "correct": "De ger extra kraft åt en forcerad, kontrollerad utandning och stödjer talandningen",
     "distractors": [
-      "De är de huvudsakliga musklerna för själva inandningen",
+      "De är de huvudsakliga musklerna för själva inandningen i vila och vid ansträngt tal",
       "De styr enbart stämläppssvängningens frekvens",
       "De har ingen som helst funktion vid andning eller tal"
     ],
@@ -356,7 +356,7 @@
     "correct": "Sternocleidomastoideus och scalenimusklerna",
     "distractors": [
       "Interna interkostalmusklerna",
-      "Rectus abdominis och transversus abdominis",
+      "Rectus abdominis och transversus abdominis i buken",
       "Diafragma och externa interkostalmusklerna"
     ],
     "topic": "logoped_andningsapparaten",
@@ -370,7 +370,7 @@
     "correct": "I princip inget muskelarbete – lungornas och bröstkorgens elastiska återfjädring räcker",
     "distractors": [
       "Kraftig aktivering av bukmusklerna",
-      "Samtidig kontraktion av diafragma och interkostalmuskler",
+      "Samtidig kraftig kontraktion av både diafragma och de externa interkostalmusklerna hela tiden",
       "Aktivering av sternocleidomastoideus"
     ],
     "topic": "logoped_andningsapparaten",
@@ -385,7 +385,7 @@
     "distractors": [
       "För att öka den totala lungvolymen under pågående tal",
       "För att aktivt stänga struphuvudet mellan varje ord",
-      "För att luften annars inte alls skulle nå stämläpparna"
+      "För att luften annars inte alls skulle nå upp till stämläpparna i struphuvudet"
     ],
     "topic": "logoped_andningsapparaten",
     "difficulty": "Normal",
@@ -397,7 +397,7 @@
     "prompt": "Vad innebär begreppet 'checking action' i talandning?",
     "correct": "Inandningsmusklerna förblir delvis aktiva i utandningens början för att bromsa återfjädringen",
     "distractors": [
-      "Stämläpparna kontrollerar luftflödet helt utan hjälp av andningsmuskler",
+      "Stämläpparna kontrollerar hela luftflödet helt på egen hand, utan någon hjälp av andningsmusklerna",
       "Diafragma stängs av helt under hela talyttrandet",
       "Bukmusklerna slappnar av fullständigt under tal"
     ],
@@ -411,7 +411,7 @@
     "prompt": "Vilka två klassiska rörelsemönster beskriver hur revbenen rör sig vid inandning?",
     "correct": "Pumphandtagsrörelse och skopskaftsrörelse",
     "distractors": [
-      "Enbart rotation kring bröstryggraden",
+      "Enbart rotation kring hela bröstryggradens axel",
       "Enbart glidning nedåt mot bäckenet",
       "Enbart sidoböjning åt vänster"
     ],
@@ -425,7 +425,7 @@
     "prompt": "Vilka tre delar består bröstbenet (sternum) av?",
     "correct": "Manubrium, corpus och processus xiphoideus",
     "distractors": [
-      "Manubrium, angulus och lamina",
+      "Manubrium, angulus sterni och lamina externa",
       "Corpus, hiatus och crus",
       "Manubrium, xiphoid och costa"
     ],
@@ -439,7 +439,7 @@
     "prompt": "Vad händer med lungan vid en pneumothorax (luft läcker in i pleurahålan)?",
     "correct": "Undertrycket i pleurahålan går förlorat och lungan kollapsar helt eller delvis",
     "distractors": [
-      "Lungan expanderar ytterligare bortom sin normala volym",
+      "Lungan expanderar ytterligare, långt bortom sin normala volym inne i bröstkorgen",
       "Diafragma förlamas permanent på båda sidor",
       "Bröstkorgen blir helt orörlig och stel"
     ],
@@ -455,7 +455,7 @@
     "distractors": [
       "Klavikulär andning ger alltid störst möjliga lungvolym",
       "Diafragmatisk andning innebär att enbart axlarna rör sig",
-      "Klavikulär andning är den mest energieffektiva andningsformen"
+      "Klavikulär andning är den mest energieffektiva andningsformen för både tal och vila"
     ],
     "topic": "logoped_andningsapparaten",
     "difficulty": "Normal",
@@ -467,7 +467,7 @@
     "prompt": "Vad avser begreppet 'andningsstöd' (breath support) inom röst- och talpedagogik?",
     "correct": "Förmågan att upprätthålla ett jämnt subglottiskt tryck under utandning",
     "distractors": [
-      "Enbart storleken på den maximala inandningsvolymen som uppnås",
+      "Enbart storleken på den maximala inandningsvolymen som uppnås vid tal och sång",
       "Enbart stämläppernas slutningsgrad under fonation",
       "Enbart näshålans luftmotstånd vid andning"
     ],
@@ -482,7 +482,7 @@
     "correct": "Den luftvolym som alltid finns kvar i lungorna efter en maximal utandning",
     "distractors": [
       "Den volym som andas in och ut vid varje normalt andetag",
-      "Den maximala volym som kan andas in efter en normal inandning",
+      "Den maximala volym som kan andas in efter en helt normal inandning i vila och vid tal",
       "Den totala lungkapaciteten"
     ],
     "topic": "logoped_andningsapparaten",
@@ -495,7 +495,7 @@
     "prompt": "Vad mäter vitalkapaciteten (VC)?",
     "correct": "Den maximala volym luft som kan andas ut efter en maximal inandning",
     "distractors": [
-      "Volymen luft som finns kvar efter en normal utandning",
+      "Volymen luft som finns kvar i lungorna efter en normal, passiv utandning",
       "Andningsfrekvensen per minut",
       "Den luft som aldrig kan andas ut"
     ],
@@ -523,7 +523,7 @@
     "prompt": "Vad kännetecknar funktionell residualkapacitet (FRC)?",
     "correct": "Den luftvolym som finns kvar i lungorna efter en normal, passiv utandning i vila",
     "distractors": [
-      "Den volym som andas in vid maximal ansträngning",
+      "Den volym som andas in vid en maximal ansträngning och mycket djup inandning i vila",
       "Volymen som alltid är noll vid utandning",
       "Den volym man andas ut vid tal enbart"
     ],
@@ -538,7 +538,7 @@
     "correct": "Vid tal andas man in till högre volym och ut till lägre volym än i vila",
     "distractors": [
       "Vid tal används exakt samma volymintervall som i vanlig vila",
-      "Vid tal andas man aldrig ner under funktionell residualkapacitet",
+      "Vid tal andas man aldrig ner under den funktionella residualkapaciteten i lungorna",
       "Vid tal används enbart den kvarvarande residualvolymen"
     ],
     "topic": "logoped_andningsapparaten",
@@ -553,7 +553,7 @@
     "distractors": [
       "Vid tal är inandning och utandning ungefär lika långa som i vila",
       "Vid tal är själva utandningen kortare än inandningen",
-      "Andningsfrekvensen ökar kraftigt och märkbart vid tal jämfört med vila"
+      "Andningsfrekvensen ökar kraftigt och märkbart vid tal jämfört med i vanlig vila, med fler andetag"
     ],
     "topic": "logoped_andningsapparaten",
     "difficulty": "Normal",
@@ -593,7 +593,7 @@
     "prompt": "Varifrån utgår de nerver som försörjer interkostalmusklerna?",
     "correct": "De thorakala spinalnervernas främre grenar",
     "distractors": [
-      "Halsryggens spinalnerver",
+      "Halsryggens spinalnervers främre och bakre grenar",
       "N. vagus enbart",
       "Ländryggens spinalnerver"
     ],
@@ -607,7 +607,7 @@
     "prompt": "Vad händer med muskelaktiveringen i andningsmuskulaturen när andningsansträngningen ökar (t.ex. vid forcerad andning)?",
     "correct": "Fler muskler rekryteras successivt utöver diafragma och interkostalmuskler",
     "distractors": [
-      "Enbart diafragma arbetar hårdare, inga andra muskler tillkommer",
+      "Enbart diafragma arbetar hårdare, och inga andra muskler tillkommer över huvud taget",
       "Interkostalmusklerna kopplas helt bort",
       "Bukmusklerna är alltid maximalt aktiverade redan i vila"
     ],
@@ -622,7 +622,7 @@
     "correct": "Sammandragning av bukmusklerna som ökar det intraabdominella trycket",
     "distractors": [
       "En teknik för att aktivt öppna struphuvudet vid sväljning",
-      "Ett annat namn för det subglottiska trycket under fonation",
+      "Ett annat namn för det subglottiska trycket under pågående fonation och tal",
       "En reflex som stänger näsöppningarna vid ansträngning"
     ],
     "topic": "logoped_andningsapparaten",
@@ -651,7 +651,7 @@
     "distractors": [
       "Total förlamning av båda lungorna samtidigt",
       "Förlust av röstläppsfunktionen på båda sidor",
-      "Ingen som helst märkbar påverkan på andningen"
+      "Ingen som helst märkbar påverkan på andningen eller talet hos patienten"
     ],
     "topic": "logoped_andningsapparaten",
     "difficulty": "Normal",
@@ -691,7 +691,7 @@
     "prompt": "Vilken roll tillskrivs pons i den klassiska modellen för andningsreglering?",
     "correct": "Modifierar andningsdjup och -frekvens via det pneumotaxiska området",
     "distractors": [
-      "Genererar helt själv den grundläggande andningsrytmen utan medulla",
+      "Genererar helt själv den grundläggande andningsrytmen, helt utan medulla",
       "Styr enbart stämläppsslutning",
       "Har ingen koppling till andning"
     ],
@@ -705,7 +705,7 @@
     "prompt": "Vad skiljer centrala kemoreceptorer från perifera kemoreceptorer i andningsregleringen?",
     "correct": "Centrala reagerar på CO2/pH i likvor, perifera reagerar även på syrgasbrist",
     "distractors": [
-      "Perifera kemoreceptorer finns enbart inuti själva lungvävnaden",
+      "Perifera kemoreceptorer finns enbart inuti själva lungvävnaden, inte i kärlen",
       "Centrala kemoreceptorer reagerar enbart på syrgashalten",
       "Det finns ingen sådan skillnad, båda mäter exakt samma sak"
     ],
@@ -721,7 +721,7 @@
     "distractors": [
       "Talandning styrs enbart av enkla ryggmärgsreflexer",
       "Vilandning kräver mer aktiv kortikal kontroll än talandning",
-      "Det finns ingen skillnad alls i styrning mellan de två andningsformerna"
+      "Det finns ingen som helst skillnad i styrning mellan de två andningsformerna"
     ],
     "topic": "logoped_andningsapparaten",
     "difficulty": "Normal",
@@ -789,7 +789,7 @@
     "prompt": "Vad menas med att talandning är mer 'frivillig' (viljestyrd) än vilandning?",
     "correct": "Talaren medvetet justerar andningsdjup, -frekvens och muskelaktivitet för att passa det som ska sägas",
     "distractors": [
-      "Andningscentrum i hjärnstammen kopplas helt bort under pågående tal",
+      "Andningscentrum i hjärnstammen kopplas helt bort under pågående tal, vilket gör andningen helt viljestyrd",
       "Talandning kan inte påverkas medvetet alls av talaren",
       "Vilandning kräver lika mycket viljestyrning som talandning"
     ],
@@ -803,7 +803,7 @@
     "prompt": "Vad krävs för att andning och stämläppsaktivitet ska samordnas korrekt under tal?",
     "correct": "Central koordinering mellan andningsmuskulaturens och struphuvudets motorneuron",
     "distractors": [
-      "Enbart lokal reflexstyrning i struphuvudet, utan hjärnans inblandning",
+      "Enbart lokal reflexstyrning i struphuvudet, helt utan hjärnans inblandning alls",
       "Ingen samordning behövs, systemen arbetar helt oberoende",
       "Enbart diafragma styr stämläpparnas rörelse direkt"
     ],
@@ -831,7 +831,7 @@
     "prompt": "Varför kan en person med ryggmärgsskada strax nedanför C5 ofta andas spontant utan respirator, trots nedsatt andningsfunktion?",
     "correct": "Diafragma kan fortfarande fungera helt eller delvis, även om interkostal- och bukmuskulaturen är påverkad",
     "distractors": [
-      "Diafragma försörjs från ländryggen och påverkas aldrig av halsryggsskador",
+      "Diafragma försörjs från ländryggens nerver och påverkas därför aldrig av skador i halsryggens olika nivåer",
       "Interkostalmusklerna tar helt över diafragmas funktion",
       "N. vagus kompenserar helt för bortfallet"
     ],
@@ -859,7 +859,7 @@
     "prompt": "Hur kan ett astmaanfall påverka rösten och talet akut?",
     "correct": "Bronkokonstriktionen minskar luftflödet och ger svagare, ansträngd röst",
     "distractors": [
-      "Astma påverkar aldrig stämläpparnas funktion eller svängning",
+      "Astma påverkar aldrig stämläpparnas funktion eller deras svängningsmönster",
       "Astma ger alltid en högre och starkare röst än normalt",
       "Astma påverkar enbart näsandningen, aldrig själva talet"
     ],
@@ -873,7 +873,7 @@
     "prompt": "Vad kännetecknar paradoxal andningsrörelse, t.ex. vid diafragmapares?",
     "correct": "Bröstkorgen/buken sjunker in vid inandning istället för att lyftas/expandera",
     "distractors": [
-      "Bröstkorgen expanderar kraftigare än normalt vid inandning",
+      "Bröstkorgen expanderar kraftigare än normalt vid varje inandning och utandning",
       "Andningsfrekvensen blir helt regelbunden",
       "Utandningen blir längre än normalt utan ansträngning"
     ],
@@ -889,7 +889,7 @@
     "distractors": [
       "Talet blir opåverkat så länge stämläpparna fungerar",
       "Andningsfrekvensen minskar men talet blir starkare",
-      "Andningssvaghet påverkar enbart artikulationen, inte rösten"
+      "Andningssvaghet påverkar enbart artikulationen, aldrig själva rösten"
     ],
     "topic": "logoped_andningsapparaten",
     "difficulty": "Normal",
@@ -901,7 +901,7 @@
     "prompt": "Vad kan en ojämn, 'hackig' talandning med oregelbundna utandningsutbrott vara tecken på?",
     "correct": "Ataktisk dysartri till följd av cerebellär skada",
     "distractors": [
-      "Normal variation utan klinisk betydelse",
+      "En helt normal variation helt utan klinisk betydelse",
       "Enbart perifer diafragmapares",
       "Enbart en skada på n. trigeminus"
     ],
@@ -929,7 +929,7 @@
     "prompt": "Vad avser den kliniska mätningen 'maximal fonationstid' (MPT)?",
     "correct": "Hur länge en person kan hålla ut en vokal på en enda utandning",
     "distractors": [
-      "Hur många ord personen kan säga per minut",
+      "Hur många ord personen hinner säga per minut vid löpande, spontant tal",
       "Personens totala lungkapacitet i liter",
       "Tiden det tar att andas in maximalt"
     ],
@@ -943,7 +943,7 @@
     "prompt": "Vad jämför den kliniska s/z-kvoten (s/z-ratio)?",
     "correct": "Hur länge man kan hålla ut ett tonlöst 's' jämfört med ett tonande 'z'",
     "distractors": [
-      "Röstens ljudstyrka mätt i decibel jämfört med normalvärden",
+      "Röstens ljudstyrka mätt i decibel jämfört med åldersnormerade normalvärden för gruppen",
       "Andningsfrekvensen i vila jämfört med under pågående tal",
       "Lungvolymen jämfört med bröstkorgens yttre omkrets"
     ],
@@ -957,7 +957,7 @@
     "prompt": "Hur fungerar en enkelriktad talventil (t.ex. Passy-Muir) för en person med trakeostomi?",
     "correct": "Den öppnas vid inandning men stängs vid utandning, vilket möjliggör fonation",
     "distractors": [
-      "Den håller stomat helt öppet i båda riktningarna hela tiden",
+      "Den håller stomat helt öppet i båda riktningarna under hela andningscykeln hos patienten",
       "Den ersätter stämläpparnas funktion helt och hållet",
       "Den stänger av andningen genom trakeostomat permanent"
     ],
@@ -973,7 +973,7 @@
     "distractors": [
       "Inget behöver anpassas alls",
       "De kan aldrig producera fonation",
-      "De måste andas enbart genom näsan"
+      "De måste alltid andas enbart genom näsan under allt tal"
     ],
     "topic": "logoped_andningsapparaten",
     "difficulty": "Normal",
@@ -985,7 +985,7 @@
     "prompt": "Hur kan svår skolios (sidokrökning av ryggraden) påverka andningen och talet?",
     "correct": "Nedsatt revbensrörlighet och minskad lungvolym kan ge sämre uthållighet för tal",
     "distractors": [
-      "Skolios påverkar aldrig andningsfunktionen eller lungvolymen",
+      "Skolios påverkar aldrig andningsfunktionen eller lungvolymen hos den drabbade personen",
       "Skolios ökar alltid den totala vitalkapaciteten",
       "Skolios påverkar enbart stämläpparnas funktion"
     ],
@@ -999,7 +999,7 @@
     "prompt": "Vad är syftet med särskild andningsträning (t.ex. kontrollerad bukmuskelaktivering) hos sångare och skådespelare?",
     "correct": "Att optimera och stabilisera andningsstödet för röst och tal",
     "distractors": [
-      "Att minska lungvolymen så mycket som möjligt",
+      "Att minska den totala lungvolymen så mycket som det över huvud taget går",
       "Att undvika all användning av diafragma",
       "Att enbart träna näsandning"
     ],
@@ -1013,7 +1013,7 @@
     "prompt": "Hur påverkar emfysem (förlust av lungans elasticitet) förutsättningarna för talandning?",
     "correct": "Den passiva utandningskraften minskar, vilket ger svagare andningsstöd",
     "distractors": [
-      "Lungans elasticitet ökar tvärtom och ger starkare utandning",
+      "Lungans elasticitet ökar tvärtom och ger en betydligt starkare utandning",
       "Emfysem påverkar enbart de aktiva inandningsmusklerna",
       "Emfysem förbättrar tvärtom den maximala fonationstiden"
     ],
@@ -1028,7 +1028,7 @@
     "correct": "Minskad vitalkapacitet ger kortare andetagsgrupper vid tal",
     "distractors": [
       "Ökad vitalkapacitet ger längre yttranden",
-      "Ingen påverkan på talandningen förekommer",
+      "Ingen som helst påverkan på talandningen förekommer över huvud taget",
       "Enbart röstens tonhöjd påverkas"
     ],
     "topic": "logoped_andningsapparaten",
@@ -1042,7 +1042,7 @@
     "correct": "Att stärka andningsstödet och förbättra kontrollen över utandningsluften för tal",
     "distractors": [
       "Att minska lungvolymen permanent",
-      "Att enbart träna stämläppsslutning utan koppling till andning",
+      "Att enbart träna stämläppsslutningen utan någon som helst koppling till andningen",
       "Att öka andningsfrekvensen i vila så mycket som möjligt"
     ],
     "topic": "logoped_andningsapparaten",
@@ -1057,7 +1057,7 @@
     "distractors": [
       "Barn saknar helt fungerande interkostalmuskler vid födseln",
       "Barns diafragma är generellt mindre aktiv än hos vuxna",
-      "Barn har proportionerligt betydligt större lungvolym än vuxna"
+      "Barn har proportionerligt betydligt större lungvolym än vuxna personer har"
     ],
     "topic": "logoped_andningsapparaten",
     "difficulty": "Normal",
@@ -1069,7 +1069,7 @@
     "prompt": "Hur påverkar normalt åldrande lungornas elasticitet och därmed talandningen?",
     "correct": "Minskad elasticitet och ökad residualvolym kan ge kortare taluthållighet per andetag",
     "distractors": [
-      "Lungans elasticitet ökar tvärtom med stigande ålder",
+      "Lungans elasticitet ökar tvärtom med stigande ålder, vilket förlänger taluthålligheten",
       "Residualvolymen minskar tvärtom med stigande ålder",
       "Åldrande påverkar aldrig andningsstödet för tal"
     ],
@@ -1085,7 +1085,7 @@
     "distractors": [
       "FRC ökar kraftigt i liggande ställning",
       "Kroppsställning påverkar inte FRC alls",
-      "FRC blir störst i ryggliggande jämfört med sittande"
+      "FRC blir störst i ryggliggande jämfört med både sittande och stående ställning"
     ],
     "topic": "logoped_andningsapparaten",
     "difficulty": "Normal",
@@ -1097,7 +1097,7 @@
     "prompt": "Vilka tre delar brukar diafragmans ursprung delas in i?",
     "correct": "En kostal del, en sternal del och en lumbal del",
     "distractors": [
-      "En enda sammanhängande del utan indelning",
+      "En enda sammanhängande del helt utan någon indelning",
       "En cervikal och en torakal del",
       "En anterior och en posterior lob"
     ],
@@ -1153,7 +1153,7 @@
     "prompt": "Vad kan ett ökat andningsarbete (t.ex. vid luftvägsobstruktion) innebära för talförmågan?",
     "correct": "Mindre muskelkraft och kontroll finns kvar att avsätta för andningsstöd till tal",
     "distractors": [
-      "Talförmågan förbättras eftersom fler muskler tränas",
+      "Talförmågan förbättras i stället, eftersom fler muskler tränas upp vid ansträngning",
       "Andningsarbetet påverkar aldrig talet",
       "Röststyrkan ökar automatiskt"
     ],
@@ -1167,7 +1167,7 @@
     "prompt": "Hur samverkar glottal resistans (stämläppsslutning) och subglottiskt tryck för att styra röststyrkan (loudness)?",
     "correct": "En högre glottal resistans i kombination med högre subglottiskt tryck ger en starkare, mer högljudd röst",
     "distractors": [
-      "Enbart subglottiskt tryck avgör röststyrkan, glottal resistans saknar betydelse",
+      "Enbart det subglottiska trycket avgör röststyrkan, medan glottal resistans helt saknar betydelse för styrkan",
       "Glottal resistans styr enbart tonhöjden, aldrig styrkan",
       "Röststyrkan avgörs enbart av lungvolymen, inte av trycket"
     ],
@@ -1181,7 +1181,7 @@
     "prompt": "Vad beskriver begreppet lungcompliance?",
     "correct": "Hur lätt lungan expanderar vid en given tryckförändring",
     "distractors": [
-      "Lungans totala volym vid maximal inandning",
+      "Lungans totala volym vid en maximal, djup inandning i vila",
       "Andningsfrekvensen i vila",
       "Mängden syre som tas upp per andetag"
     ],
@@ -1195,7 +1195,7 @@
     "prompt": "Vad kännetecknar jämviktsläget vid funktionell residualkapacitet (FRC)?",
     "correct": "Bröstkorgens och lungans motriktade elastiska krafter tar ut varandra",
     "distractors": [
-      "Samtliga andningsmuskler är maximalt aktiverade samtidigt",
+      "Samtliga andningsmuskler är maximalt aktiverade samtidigt i detta läge",
       "Lungan är helt tömd på all luft i detta läge",
       "Diafragma befinner sig i sitt mest kontraherade läge"
     ],
@@ -1209,7 +1209,7 @@
     "prompt": "Hur skiljer sig förhållandet mellan in- och utandningstid vid tal jämfört med i vila?",
     "correct": "Vid tal är inandningen kort och utandningen lång, jämfört med en jämnare fördelning i vila",
     "distractors": [
-      "Förhållandet är helt identiskt vid tal jämfört med i vila",
+      "Förhållandet mellan in- och utandningstid är helt identiskt vid tal och i vila hos talaren",
       "Vid tal är själva inandningen längre än utandningen",
       "I vila är utandningen alltid kortare än inandningen"
     ],
@@ -1223,7 +1223,7 @@
     "prompt": "Var tenderar talare oftast att ta andningspauser under sammanhängande tal?",
     "correct": "Vid syntaktiska gränser, som mellan satser eller meningar",
     "distractors": [
-      "Helt slumpmässigt, oavsett grammatisk struktur",
+      "Helt slumpmässigt, oavsett meningens grammatiska struktur eller innehåll",
       "Alltid mitt i enskilda ord",
       "Enbart var femte sekund, oavsett innehåll"
     ],
@@ -1238,7 +1238,7 @@
     "correct": "Mer horisontellt, vilket bidrar till en mer bukdominant andning hos spädbarn",
     "distractors": [
       "Mer nedåtvinklade och brantare än hos vuxna",
-      "Precis som hos vuxna, utan någon egentlig skillnad",
+      "Precis som hos vuxna, utan någon egentlig skillnad i själva andningsmönstret",
       "Saknar helt broskförbindelse till bröstbenet"
     ],
     "topic": "logoped_andningsapparaten",
@@ -1251,7 +1251,7 @@
     "prompt": "Vad innebär ett hiatusbråck (diafragmabråck)?",
     "correct": "Del av magsäcken tränger upp genom matstrupens öppning i diafragma",
     "distractors": [
-      "Diafragma spricker helt och separerar thorax från buken",
+      "Diafragma spricker helt och separerar thorax från bukhålan fullständigt",
       "Diafragma saknar helt sin lumbala del",
       "Lungan tränger ner genom diafragma till buken"
     ],
@@ -1266,7 +1266,7 @@
     "correct": "Hjärtkirurgi, på grund av nervens nära läge till hjärtsäcken",
     "distractors": [
       "Vid en vanlig tandextraktion hos tandläkaren",
-      "Vid mindre handkirurgiska ingrepp på fingrarna",
+      "Vid mindre handkirurgiska ingrepp på fingrar och handled hos patienten",
       "Vid en enklare starroperation på ögat"
     ],
     "topic": "logoped_andningsapparaten",
@@ -1279,7 +1279,7 @@
     "prompt": "Hur beskrivs ofta 'klavikulär andning' inom röstpedagogik, jämfört med diafragmatisk andning?",
     "correct": "Ytlig andning i övre bröstkorgen, ofta kopplad till spänning och mindre effektivt andningsstöd",
     "distractors": [
-      "Den mest avslappnade och energieffektiva andningsformen för tal",
+      "Den mest avslappnade och energieffektiva andningsformen för både tal och sång, helt utan spänning",
       "I princip identisk med diafragmatisk andning",
       "En andningsform som enbart förekommer naturligt hos spädbarn"
     ],
@@ -1307,7 +1307,7 @@
     "prompt": "Vad avses med det anatomiska 'dead space' i luftvägarna?",
     "correct": "De luftvägar som leder luft men inte deltar i gasutbytet",
     "distractors": [
-      "Alveolerna, eftersom de är för små för gasutbyte",
+      "Alveolerna, eftersom de är alldeles för små för gasutbyte",
       "Hela lungan vid en pneumothorax",
       "Luftvägarna hos personer med KOL enbart"
     ],
@@ -1335,7 +1335,7 @@
     "prompt": "Vad stödjer bronkiolernas väggar, eftersom de saknar brosk?",
     "correct": "Glatt muskulatur och elastisk bindväv",
     "distractors": [
-      "Hyalint brosk, precis som i trakea",
+      "Hyalint brosk, precis som i luftstrupen",
       "Benvävnad",
       "Tvärstrimmig skelettmuskulatur"
     ],
@@ -1349,7 +1349,7 @@
     "prompt": "Vilken grundläggande, evolutionärt ursprunglig funktion har struphuvudet (larynx) utöver fonation?",
     "correct": "Att skydda de nedre luftvägarna genom att stänga till vid sväljning",
     "distractors": [
-      "Att enbart reglera kroppens temperatur via luftvägarna",
+      "Att enbart reglera kroppens temperatur via de övre luftvägarna och näsan",
       "Att producera surfaktant för lungblåsorna",
       "Att filtrera och rengöra inandningsluften"
     ],
@@ -1364,7 +1364,7 @@
     "correct": "Skratt sker som korta forcerade utandningspulser, tal som en lång jämn utandning",
     "distractors": [
       "Skratt och tal använder ett i princip identiskt andningsmönster",
-      "Skratt kräver en enda mycket lång inandning utan någon utandning",
+      "Skratt kräver en enda mycket lång inandning helt utan någon utandning alls mellan",
       "Tal sker alltid i korta pulser, precis som vid skratt"
     ],
     "topic": "logoped_andningsapparaten",
@@ -1378,7 +1378,7 @@
     "correct": "Som ett mått på andningsstödet och talandningens effektivitet",
     "distractors": [
       "Som ett mått på röstens tonhöjd",
-      "Som ett mått på artikulationens precision enbart",
+      "Som ett mått på enbart artikulationens precision och tydlighet",
       "Det saknar klinisk relevans"
     ],
     "topic": "logoped_andningsapparaten",
@@ -1391,7 +1391,7 @@
     "prompt": "Vad är den mest grundläggande skillnaden mellan vilandning och talandning?",
     "correct": "Talandning är viljestyrd med jämnt luftflöde, vilandning är automatisk",
     "distractors": [
-      "Det finns ingen egentlig skillnad mellan de två andningsformerna",
+      "Det finns ingen som helst egentlig skillnad mellan de två andningsformerna",
       "Talandning styrs enbart av enkla ryggmärgsreflexer",
       "Vilandning kräver mer aktiv muskelkontroll än talandning"
     ],
@@ -4262,8 +4262,8 @@
     "correct": "Cirka 1–2 sekunder för den oral-faryngeala transporten",
     "distractors": [
       "Cirka 10–15 minuter",
-      "Cirka 8–20 sekunder enbart för den orala fasen",
-      "Mindre än en tiondels sekund totalt"
+      "Cirka 8–20 sekunder enbart för den orala fasen av sväljningen",
+      "Mindre än 0,1 sekund totalt"
     ],
     "topic": "logoped_svaljning",
     "difficulty": "Normal",
@@ -4290,7 +4290,7 @@
     "correct": "I medulla oblongata, i hjärnstammen",
     "distractors": [
       "I lillhjärnan",
-      "I storhjärnsbarken enbart",
+      "I storhjärnsbarkens motoriska område",
       "I ryggmärgens halsdel"
     ],
     "topic": "logoped_svaljning",
@@ -4304,7 +4304,7 @@
     "correct": "Nucleus tractus solitarius och nucleus ambiguus",
     "distractors": [
       "Nucleus ruber och substantia nigra",
-      "Nucleus cochlearis och nucleus vestibularis",
+      "Nucleus cochlearis och nucleus vestibularis superior",
       "Nucleus gracilis och nucleus cuneatus"
     ],
     "topic": "logoped_svaljning",
@@ -4317,7 +4317,7 @@
     "prompt": "Vad triggar normalt övergången från oral till faryngeal fas?",
     "correct": "Att bolusen passerar tungroten och stimulerar sensoriska receptorer där",
     "distractors": [
-      "Att stämbanden plötsligt börjar vibrera kraftigt",
+      "Att stämbanden plötsligt börjar vibrera kraftigt under själva sväljningen av bolusen",
       "Att magsäcken skickar en signal om hunger",
       "Att andningsfrekvensen ökar plötsligt i takt"
     ],
@@ -4375,7 +4375,7 @@
     "distractors": [
       "Sväljningen blir snabbare och mer kraftfull",
       "Sväljningsreflexen försvinner helt hos alla äldre",
-      "Enbart smaksinnet påverkas, inte själva sväljningsmekaniken"
+      "Enbart smaksinnet påverkas, aldrig själva sväljningsmekaniken hos den äldre personen"
     ],
     "topic": "logoped_svaljning",
     "difficulty": "Normal",
@@ -4387,7 +4387,7 @@
     "prompt": "Vad skiljer sig åt mellan sväljning av vätska och sväljning av fast föda, anatomiskt/motoriskt sett?",
     "correct": "Fast föda kräver mer oral bearbetning, vätska kräver snabbare faryngeal transport",
     "distractors": [
-      "Vätska kräver alltid längre tuggning än vad fast föda gör",
+      "Vätska kräver alltid betydligt längre tuggning än vad fast föda gör inne i munhålan",
       "Det finns ingen skillnad alls i den motoriska hanteringen",
       "Fast föda sväljs uteslutande genom näshålan istället"
     ],
@@ -4430,7 +4430,7 @@
     "correct": "Håller maten mellan tandraderna och förhindrar att den samlas i kindfickorna",
     "distractors": [
       "Formar istället bolusen till en jämn, rund klump",
-      "Stänger istället luftvägen mot aspiration under tuggning",
+      "Stänger istället luftvägen mot aspiration under hela tuggningen av den fasta födan",
       "Öppnar istället den övre esofagussfinktern"
     ],
     "topic": "logoped_svaljning",
@@ -4445,7 +4445,7 @@
     "distractors": [
       "Den stänger struphuvudets ingång",
       "Den utlöser direkt den faryngeala reflexen",
-      "Den sänker pH i munhålan för att bryta ner benvävnad"
+      "Den sänker pH kraftigt i munhålan för att bryta ner både benvävnad och tandemalj"
     ],
     "topic": "logoped_svaljning",
     "difficulty": "Normal",
@@ -4459,7 +4459,7 @@
     "distractors": [
       "Struplocket, genom att vika sig framåt och nedåt",
       "Cricopharyngeus-muskeln, genom att slappna av i förtid",
-      "Näsmusslorna, genom att vibrera och driva bolusen bakåt"
+      "Näsmusslorna, genom att vibrera och driva bolusen bakåt mot svalget"
     ],
     "topic": "logoped_svaljning",
     "difficulty": "Normal",
@@ -4471,7 +4471,7 @@
     "prompt": "Vad krävs av läpparna under hela den orala fasen?",
     "correct": "En sluten läppförsegling för att förhindra läckage av mat/dryck",
     "distractors": [
-      "Att läpparna hålls helt avslappnade och öppna",
+      "Att läpparna hålls helt avslappnade och öppna under hela den orala fasen",
       "Att läpparna rundas maximalt hela tiden",
       "Att läpparna dras kraftigt isär i ett leende"
     ],
@@ -4485,7 +4485,7 @@
     "prompt": "Vad händer med mjuka gommens position i slutet av den orala fasen, innan bolusen når svalget?",
     "correct": "Den börjar höjas för att förbereda avstängningen mot nasopharynx",
     "distractors": [
-      "Den sänks helt och hålls nere under hela sväljningen",
+      "Den sänks helt och hålls nere under hela sväljningsförloppet i svalget",
       "Den vibrerar i takt med tungan",
       "Den saknar betydelse förrän i den esofageala fasen"
     ],
@@ -4500,7 +4500,7 @@
     "correct": "Vid de främre gombågarna och tungroten",
     "distractors": [
       "Vid läpparna",
-      "Vid struplockets spets enbart",
+      "Vid struplockets yttersta spets enbart",
       "Vid magsäcksmynningen"
     ],
     "topic": "logoped_svaljning",
@@ -4513,7 +4513,7 @@
     "prompt": "Vad kännetecknar den orala fasens tidslängd jämfört med övriga faser?",
     "correct": "Den är mest variabel i längd, eftersom den är viljestyrd och beror på matens konsistens",
     "distractors": [
-      "Den är alltid exakt en sekund lång oavsett matens konsistens",
+      "Den är alltid exakt en sekund lång, helt oavsett matens konsistens och mängd i munhålan",
       "Den är alltid längre i tid än den esofageala fasen",
       "Den saknar helt en mätbar, meningsfull tidslängd"
     ],
@@ -4527,7 +4527,7 @@
     "prompt": "Vad blir en vanlig konsekvens i den orala fasen om tungmotoriken är nedsatt, t.ex. vid en tungpares?",
     "correct": "Svårighet att bilda och transportera bolusen, med matrester kvar i munhålan",
     "distractors": [
-      "Total oförmåga att andas under själva sväljningen",
+      "En total oförmåga att andas alls under själva sväljningen av bolusen i munnen",
       "Ökad och förstärkt smakupplevelse av maten",
       "Snabbare sväljning genom munhålan än normalt"
     ],
@@ -4542,7 +4542,7 @@
     "correct": "Nedsatt läppslutning, till exempel vid en facialispares",
     "distractors": [
       "Nedsatt funktion i cricopharyngeus-muskeln",
-      "Nedsatt funktion i esofagus glatta muskulatur",
+      "Nedsatt funktion i esofagus glatta muskulatur längst ned",
       "Förstorade halsmandlar"
     ],
     "topic": "logoped_svaljning",
@@ -4583,7 +4583,7 @@
     "prompt": "Vilka muskler ansvarar huvudsakligen för larynxelevationen under sväljning?",
     "correct": "De suprahyoidala musklerna, t.ex. m. mylohyoideus, m. geniohyoideus, m. digastricus och m. stylohyoideus",
     "distractors": [
-      "De infrahyoidala musklerna helt ensamma, utan bidrag från andra muskelgrupper",
+      "De infrahyoidala musklerna helt ensamma, utan något bidrag alls från andra muskelgrupper i halsen eller käken",
       "De inre struphuvudmusklerna, alltså inte de yttre halsmusklerna",
       "Tuggmusklerna i käken, inte de egentliga halsmusklerna"
     ],
@@ -4597,7 +4597,7 @@
     "prompt": "Varför är larynxelevationen viktig för luftvägsskyddet vid sväljning?",
     "correct": "Den för struphuvudet bort från bolusens väg och hjälper struplocket vika sig",
     "distractors": [
-      "Den ökar istället lufttrycket nere i lungorna",
+      "Den ökar istället lufttrycket nere i lungorna och luftvägarna under sväljningen",
       "Den stänger istället näsborrarna helt",
       "Den sänker istället tonhöjden permanent"
     ],
@@ -4611,7 +4611,7 @@
     "prompt": "Vad händer med struplocket (epiglottis) specifikt under sväljning?",
     "correct": "Det viks bakåt/nedåt och täcker till stor del ingången till struphuvudet",
     "distractors": [
-      "Det lossnar och följer med bolusen ner i matstrupen",
+      "Det lossnar helt och följer med bolusen ner i matstrupen mot magsäcken nedtill",
       "Det reser sig maximalt för att öppna luftvägen",
       "Det vibrerar för att skapa ett skyddande ljud"
     ],
@@ -4625,7 +4625,7 @@
     "prompt": "Räcker struplockets nedvikning ensam för att skydda luftvägen vid sväljning?",
     "correct": "Nej, stämbandens adduktion och larynxelevationen bidrar också, hela mekanismen samverkar",
     "distractors": [
-      "Ja, struplocket är faktiskt den enda skyddsmekanismen som behövs",
+      "Ja, struplocket är faktiskt den enda skyddsmekanism som över huvud taget behövs vid sväljning",
       "Nej, enbart mjuka gommens höjning ensam skyddar luftvägen",
       "Ja, men bara hos små barn, inte alls hos vuxna"
     ],
@@ -4653,7 +4653,7 @@
     "prompt": "Vilka muskler bidrar till adduktionen av de äkta stämbanden vid sväljning?",
     "correct": "Bland annat m. cricoarytenoideus lateralis och m. interarytenoideus",
     "distractors": [
-      "Enbart den bakre muskeln m. cricoarytenoideus posterior",
+      "Enbart den bakre muskeln m. cricoarytenoideus posterior, som abducerar",
       "Enbart den spännande muskeln m. cricothyroideus",
       "M. genioglossus och m. hyoglossus i tungan"
     ],
@@ -4667,7 +4667,7 @@
     "prompt": "Vad händer med mjuka gommen under den faryngeala fasen, och varför?",
     "correct": "Den höjs för att stänga av nasopharynx och förhindra att mat/dryck tar sig upp i näsan",
     "distractors": [
-      "Den sänks helt för att öppna nässgångarna för luftflöde",
+      "Den sänks helt för att öppna näsgångarna för fritt luftflöde under sväljningen av bolusen",
       "Den vibrerar för att skapa nasalt ljud",
       "Den saknar funktion i denna fas"
     ],
@@ -4695,7 +4695,7 @@
     "prompt": "Vilka muskler driver bolusen genom svalget under den faryngeala fasen?",
     "correct": "Svalgsammandragarna, som kontraherar sekventiellt uppifrån och ned",
     "distractors": [
-      "Tuggmusklerna, som pressar bolusen bakåt",
+      "Tuggmusklerna i käken, som pressar bolusen bakåt mot svalget och tungroten",
       "De inre struphuvudmusklerna ensamma",
       "Tungans intrinsiska muskler ensamma"
     ],
@@ -4709,7 +4709,7 @@
     "prompt": "Vilka muskler lyfter svalget/struphuvudet under sväljning, utöver de suprahyoidala musklerna?",
     "correct": "De längsgående svalgmusklerna: m. stylopharyngeus, m. palatopharyngeus och m. salpingopharyngeus",
     "distractors": [
-      "Svalgets ringformade sammandragarmuskler, helt ensamma utan andra bidrag",
+      "Svalgets ringformade sammandragarmuskler, helt ensamma och utan några bidrag alls från andra muskler",
       "M. orbicularis oris och m. buccinator, musklerna kring munnen",
       "M. tensor och m. levator veli palatini, musklerna kring mjuka gommen"
     ],
@@ -4725,7 +4725,7 @@
     "distractors": [
       "Den nedre delen av m. cricothyroideus",
       "Struplockets bas",
-      "Den övre delen av magsäckens muskulatur"
+      "Den övre delen av magsäckens glatta muskulatur vid mynningen till esofagus"
     ],
     "topic": "logoped_svaljning",
     "difficulty": "Normal",
@@ -4737,7 +4737,7 @@
     "prompt": "Hur beter sig UES i vila jämfört med under en sväljning?",
     "correct": "I vila är den toniskt kontraherad; under sväljning relaxerar/öppnas den",
     "distractors": [
-      "I vila är den helt öppen; under sväljning stängs den permanent",
+      "I vila är den helt öppen; under en sväljning stängs den däremot permanent",
       "Den är alltid öppen, oavsett fas",
       "Den saknar tonus både i vila och vid sväljning"
     ],
@@ -4751,7 +4751,7 @@
     "prompt": "Vad bidrar, förutom aktiv muskelrelaxation, till att UES öppnas vid sväljning?",
     "correct": "Larynxelevationen, som mekaniskt drar upp cricopharyngeus och vidgar öppningen",
     "distractors": [
-      "En separat, oberoende reflex som utgår från magsäcken",
+      "En separat, helt oberoende reflex som utgår från magsäckens övre mynning nedtill",
       "En allmän sänkning av blodtrycket i kroppen",
       "En ökning av salivens pH-värde"
     ],
@@ -4766,7 +4766,7 @@
     "correct": "Mycket kort, ungefär en sekund",
     "distractors": [
       "Ungefär en minut",
-      "Ungefär 8–20 sekunder",
+      "Ungefär 8–20 sekunder per sväljning",
       "Flera minuter"
     ],
     "topic": "logoped_svaljning",
@@ -4780,7 +4780,7 @@
     "correct": "Reflexiv – den kan inte medvetet stoppas när den väl påbörjats",
     "distractors": [
       "Helt viljestyrd genom hela förloppet",
-      "Delvis viljestyrd, kan pausas fritt mitt i",
+      "Delvis viljestyrd, kan pausas helt fritt mitt i själva förloppet",
       "Den startar och avslutas helt slumpmässigt"
     ],
     "topic": "logoped_svaljning",
@@ -4807,7 +4807,7 @@
     "prompt": "Vad kallas det när mat eller dryck når vestibulum laryngis (ovanför stämbanden) men inte passerar nedanför dem?",
     "correct": "Penetration",
     "distractors": [
-      "Aspiration",
+      "Aspiration nedåt",
       "Achalasi",
       "Presbyfagi"
     ],
@@ -4835,8 +4835,8 @@
     "prompt": "Varför är tyst aspiration särskilt farlig kliniskt?",
     "correct": "Den upptäcks inte vid klinisk observation och ökar risken för aspirationspneumoni",
     "distractors": [
-      "Den orsakar alltid en omedelbar och tydlig kvävningskänsla",
-      "Den är helt ofarlig och kräver ingen som helst uppmärksamhet",
+      "Den orsakar alltid en omedelbar och tydlig kvävningskänsla hos patienten",
+      "Den är helt ofarlig och kräver ingen som helst uppmärksamhet i vården av patienten",
       "Den förekommer enbart hos i övrigt friska spädbarn"
     ],
     "topic": "logoped_svaljning",
@@ -4849,7 +4849,7 @@
     "prompt": "Vad kan otillräcklig velofaryngeal stängning under faryngeal fas orsaka?",
     "correct": "Nasal regurgitation – att mat/dryck tar sig upp i näshålan",
     "distractors": [
-      "Aspiration nedanför stämbanden enbart",
+      "Aspiration nedanför stämbanden och ner i luftstrupen enbart",
       "En förbättrad smakupplevelse",
       "Ökad salivproduktion"
     ],
@@ -4864,7 +4864,7 @@
     "correct": "Glossopharyngeusnerven och vagusnerven, samt trigeminus för mer främre strukturer",
     "distractors": [
       "Enbart facialisnerven, utan bidrag från andra nerver",
-      "Enbart hypoglossusnerven, utan bidrag från andra nerver",
+      "Enbart hypoglossusnerven, helt utan bidrag från några andra nerver i huvudet och halsen",
       "Enbart synnerven, n. opticus"
     ],
     "topic": "logoped_svaljning",
@@ -4877,7 +4877,7 @@
     "prompt": "Vilken nerv innerverar merparten av de muskler i svalg och struphuvud som deltar aktivt i den faryngeala fasen?",
     "correct": "Vagusnerven, via pharynxplexus samt n. laryngeus recurrens/superior",
     "distractors": [
-      "Trigeminusnerven helt ensam, utan bidrag från vagus",
+      "Trigeminusnerven helt ensam, helt utan bidrag från vagusnerven alls",
       "Facialisnerven helt ensam, utan bidrag från vagus",
       "Den motoriska ögonnerven, abducensnerven"
     ],
@@ -4893,7 +4893,7 @@
     "distractors": [
       "Total förlust av smaksinnet på tungan",
       "Enbart en mild heshetskänsla utan sväljpåverkan",
-      "Förbättrad sväljfunktion på grund av avslappning"
+      "Förbättrad sväljfunktion på grund av allmän avslappning i svalget och struphuvudet"
     ],
     "topic": "logoped_svaljning",
     "difficulty": "Normal",
@@ -4933,7 +4933,7 @@
     "prompt": "Vilka vävnadslager bygger upp esofagusväggen, inifrån och ut?",
     "correct": "Slemhinna, submucosa, muskellager och yttre bindväv",
     "distractors": [
-      "Enbart slemhinna och muskel, inga andra lager",
+      "Enbart slemhinna och muskel, utan några andra vävnadslager",
       "Broskring, muskel och slemhinna",
       "Epitel, ben och senvävnad"
     ],
@@ -4948,7 +4948,7 @@
     "correct": "Den övre tredjedelen är tvärstrimmig, de nedre två tredjedelarna glatt muskulatur",
     "distractors": [
       "Hela esofagus består uteslutande av glatt muskulatur",
-      "Hela esofagus består uteslutande av tvärstrimmig muskulatur",
+      "Hela esofagus består uteslutande av tvärstrimmig skelettmuskulatur hela vägen ner",
       "Övre halvan är glatt muskulatur, nedre halvan tvärstrimmig"
     ],
     "topic": "logoped_svaljning",
@@ -4962,7 +4962,7 @@
     "correct": "Den är kontinuerlig med svalget och möjliggör en snabb, koordinerad transportstart",
     "distractors": [
       "För att öka och förstärka smakupplevelsen av födan",
-      "För att stämbanden ska kunna vibrera fritt vid sväljning",
+      "För att stämbanden ska kunna vibrera helt fritt vid varje enskild sväljning av föda",
       "För att helt undvika reflux tillbaka till magsäcken"
     ],
     "topic": "logoped_svaljning",
@@ -4976,7 +4976,7 @@
     "correct": "Ett inre cirkulärt lager och ett yttre longitudinellt lager",
     "distractors": [
       "Enbart ett enda cirkulärt lager",
-      "Ett inre longitudinellt och ett yttre cirkulärt lager",
+      "Ett inre longitudinellt lager och ett yttre cirkulärt muskellager",
       "Tre lager, alla longitudinella"
     ],
     "topic": "logoped_svaljning",
@@ -4990,7 +4990,7 @@
     "correct": "Nedre esofagussfinktern – förhindrar reflux av magsyra upp i esofagus",
     "distractors": [
       "Cricopharyngeus – öppnar luftvägen vid andning",
-      "Pylorussfinktern – reglerar magsäckens tömning till tolvfingertarmen",
+      "Pylorussfinktern – reglerar magsäckens tömning av föda ner i tolvfingertarmen",
       "Ileocekalklaffen – reglerar passage mellan tunn- och tjocktarm"
     ],
     "topic": "logoped_svaljning",
@@ -5004,7 +5004,7 @@
     "correct": "Nej, LES är främst en funktionell sfinkter, mindre anatomiskt avgränsad än UES",
     "distractors": [
       "Ja, den är identisk i uppbyggnad med cricopharyngeus",
-      "Ja, den består av tvärstrimmig muskulatur precis som UES",
+      "Ja, den består av tvärstrimmig muskulatur precis som den övre esofagussfinktern gör",
       "Nej, den saknar helt muskulatur och är enbart slemhinna"
     ],
     "topic": "logoped_svaljning",
@@ -5017,7 +5017,7 @@
     "prompt": "Vad driver bolusen genom esofagus ner till magsäcken under den esofageala fasen?",
     "correct": "Peristaltiska muskelvågor, initierade av sväljningen",
     "distractors": [
-      "Enbart tyngdkraften, oavsett kroppsläge",
+      "Enbart tyngdkraften, helt oavsett vilket kroppsläge man har",
       "Kontraktion av mjuka gommen",
       "Diafragmans andningsrörelser enbart"
     ],
@@ -5031,7 +5031,7 @@
     "prompt": "Vad kallas de peristaltiska vågor som kan uppstå lokalt i esofagus om bolusrester finns kvar, utan att en ny sväljning skett?",
     "correct": "Sekundär peristaltik",
     "distractors": [
-      "Primär peristaltik",
+      "Primär peristaltik i esofagus",
       "Retroperistaltik",
       "Antiperistaltik"
     ],
@@ -5046,7 +5046,7 @@
     "correct": "Cirka 8–20 sekunder",
     "distractors": [
       "Cirka 1 sekund",
-      "Cirka 1–2 minuter",
+      "Cirka 1–2 minuter totalt",
       "Cirka 1 timme"
     ],
     "topic": "logoped_svaljning",
@@ -5061,7 +5061,7 @@
     "distractors": [
       "Ja, helt och hållet viljestyrd",
       "Ja, men bara hos barn",
-      "Den saknar all reglering, varken viljestyrd eller autonom"
+      "Den saknar all reglering och är varken viljestyrd eller autonomt styrd i esofagus"
     ],
     "topic": "logoped_svaljning",
     "difficulty": "Normal",
@@ -5075,7 +5075,7 @@
     "distractors": [
       "Vid struplocket, vid tungroten och vid mjuka gommen",
       "Vid magsäcken, tolvfingertarmen och tunntarmen",
-      "Enbart en förträngning, vid övergången till magsäcken"
+      "Vid tungroten, vid magsäckens övre mynning och vid tolvfingertarmens allra första del"
     ],
     "topic": "logoped_svaljning",
     "difficulty": "Normal",
@@ -5087,7 +5087,7 @@
     "prompt": "Varför är esofagus fysiologiska förträngningar kliniskt relevanta?",
     "correct": "De är vanliga ställen där föremål fastnar och strikturer/tumörer ofta uppstår",
     "distractors": [
-      "De saknar helt klinisk betydelse och är rent teoretiska begrepp",
+      "De saknar helt klinisk betydelse och är enbart rent teoretiska begrepp i anatomin",
       "De förekommer uteslutande hos små spädbarn",
       "De är de enda ställena i kroppen där smak kan uppfattas"
     ],
@@ -5101,7 +5101,7 @@
     "prompt": "Vilken nerv styr huvudsakligen esofagus peristaltik och sfinkterfunktion?",
     "correct": "Vagusnerven, med bidrag från esofagus eget enteriska nervsystem",
     "distractors": [
-      "Hypoglossusnerven, helt utan bidrag från andra system",
+      "Hypoglossusnerven, helt utan bidrag från några andra nervsystem",
       "Facialisnerven, helt utan bidrag från andra system",
       "Enbart n. accessorius, utan bidrag från vagus"
     ],
@@ -5117,7 +5117,7 @@
     "distractors": [
       "Ansa cervicalis",
       "Pharynxplexus",
-      "Plexus brachialis"
+      "Det brachiala plexus i armen"
     ],
     "topic": "logoped_svaljning",
     "difficulty": "Normal",
@@ -5143,7 +5143,7 @@
     "prompt": "Var uppstår Zenkers divertikel anatomiskt (den svaga triangeln)?",
     "correct": "I Killians triangel, mellan m. cricopharyngeus och m. constrictor pharyngis inferior",
     "distractors": [
-      "I recessus piriformis, den päronformade fickan i svalget",
+      "I recessus piriformis, alltså den päronformade fickan nedtill i svalget bredvid struphuvudet",
       "I Passavants list, den muskulära åsen bakom mjuka gommen",
       "Vid näsans sfenoetmoidala recess längst bak"
     ],
@@ -5158,7 +5158,7 @@
     "correct": "Matrester som fastnar/regurgiterar, dysfagi, dålig andedräkt och ökad aspirationsrisk",
     "distractors": [
       "Enbart nedsatt hörsel utan några andra symtom alls",
-      "Enbart en förändrad hudfärg i ansiktet utan andra tecken",
+      "Enbart en förändrad hudfärg i ansiktet, helt utan andra tecken eller besvär vid måltid",
       "Enbart en total och isolerad förlust av smaksinnet"
     ],
     "topic": "logoped_svaljning",
@@ -5199,7 +5199,7 @@
     "prompt": "Vilken roll spelar trigeminusnerven (V) i sväljning?",
     "correct": "Motorik till tuggmusklerna samt sensorik från munhåla och tungans framdel",
     "distractors": [
-      "Motorik enbart till svalgets sammandragande muskler",
+      "Motorik enbart till svalgets sammandragande muskler nedtill i svalgväggen och esofagus",
       "Motorik enbart till esofagus glatta muskulatur",
       "Sensorik enbart från det inre örat"
     ],
@@ -5215,7 +5215,7 @@
     "distractors": [
       "Motorik enbart till tuggmusklerna i käken",
       "Sensorik enbart från oropharynx bakre del",
-      "Motorik enbart till esofagus glatta muskulatur"
+      "Motorik enbart till esofagus glatta muskulatur nedtill mot magsäcken"
     ],
     "topic": "logoped_svaljning",
     "difficulty": "Normal",
@@ -5228,7 +5228,7 @@
     "correct": "Sensorik från tungans bakdel och oropharynx, triggar den faryngeala reflexen",
     "distractors": [
       "Motorik till samtliga tuggmuskler i käken",
-      "Motorik enbart till läpparnas ringformade muskel",
+      "Motorik enbart till läpparnas ringformade muskel m. orbicularis oris i ansiktet",
       "Sensorik enbart från näshålans slemhinna"
     ],
     "topic": "logoped_svaljning",
@@ -5241,7 +5241,7 @@
     "prompt": "Vilken roll spelar vagusnerven (X) i sväljning?",
     "correct": "Motorik till svalg och struphuvud, samt esofagus peristaltik och sfinkter",
     "distractors": [
-      "Motorik enbart till tungans egna, intrinsiska muskler",
+      "Motorik enbart till tungans egna, intrinsiska muskler i munhålan och gommen",
       "Sensorik enbart från den hårda gommens slemhinna",
       "Motorik enbart till käkens tuggmuskler"
     ],
@@ -5256,7 +5256,7 @@
     "correct": "Motorik till nästan alla tungmuskler, avgörande för bolusformning i oral fas",
     "distractors": [
       "Sensorik enbart från tungans smaklökar",
-      "Motorik enbart till mjuka gommens egna muskler",
+      "Motorik enbart till mjuka gommens egna muskler och till gomseglets inre muskler",
       "Motorik enbart till struphuvudets inre muskler"
     ],
     "topic": "logoped_svaljning",
@@ -5311,7 +5311,7 @@
     "prompt": "Kan den faryngeala sväljreflexen fungera utan input från storhjärnsbarken?",
     "correct": "Ja, mönstret genereras i hjärnstammen, men kortikal input modulerar den frivilliga delen",
     "distractors": [
-      "Nej, hela sväljningen kräver medveten kortikal styrning vid varje enskilt tillfälle",
+      "Nej, hela sväljningen kräver medveten kortikal styrning vid varje enskilt tillfälle och steg",
       "Nej, reflexen styrs enbart av ryggmärgen, helt utan hjärnstammens inblandning",
       "Ja, men detta gäller enbart hos nyfödda barn"
     ],
@@ -5325,7 +5325,7 @@
     "prompt": "Vad kan en hjärnstamsskada (t.ex. stroke i medulla oblongata) medföra för sväljningsfunktionen?",
     "correct": "Allvarlig dysfagi på grund av skadad reflexkoordination, med hög risk för aspiration",
     "distractors": [
-      "Ingen som helst påverkan alls på själva sväljfunktionen",
+      "Ingen som helst påverkan alls på själva sväljfunktionen hos patienten efter stroken i märgen",
       "Enbart en lätt, övergående smakförändring",
       "En förbättrad och snabbare sväljhastighet"
     ],
@@ -5339,7 +5339,7 @@
     "prompt": "Vad kan en ensidig kortikal stroke (t.ex. i motorcortex) medföra för sväljningen, jämfört med en hjärnstamsskada?",
     "correct": "Ofta en mildare dysfagi, eftersom sväljcentrum får bilateral kortikal input",
     "distractors": [
-      "Alltid en total och bestående oförmåga att svälja över huvud taget",
+      "Alltid en total och bestående oförmåga att svälja någonting alls över huvud taget",
       "Ingen skillnad alls jämfört med en direkt hjärnstamsskada",
       "Enbart en påverkan på hörseln, aldrig på själva sväljningen"
     ],
@@ -5355,7 +5355,7 @@
     "distractors": [
       "Total förlamning av tungans samtliga muskler",
       "Total förlust av förmågan att sluta läpparna",
-      "Ingen påverkan alls, nerven saknar helt sväljfunktion"
+      "Ingen påverkan alls, eftersom nerven helt saknar sväljfunktion i svalget och munnen"
     ],
     "topic": "logoped_svaljning",
     "difficulty": "Normal",
@@ -5367,7 +5367,7 @@
     "prompt": "Varför innebär en bilateral skada på vagusnerven särskilt stor risk vid sväljning?",
     "correct": "Nedsatt faryngeal kontraktion och luftvägsskydd ger en kraftigt ökad aspirationsrisk",
     "distractors": [
-      "Den påverkar enbart smaksinnet, inte luftvägsskyddet",
+      "Den påverkar enbart smaksinnet på tungan, aldrig luftvägsskyddet vid själva sväljningen",
       "Den ger enbart en lätt heshet utan sväljpåverkan",
       "Den förbättrar paradoxalt sväljfunktionen"
     ],
@@ -5381,7 +5381,7 @@
     "prompt": "Vad kan en skada på hypoglossusnerven (XII) ge för sväljningssymtom?",
     "correct": "Nedsatt tungrörlighet, med svårighet att transportera bolusen",
     "distractors": [
-      "Total förlamning av struphuvudets samtliga inre muskler",
+      "Total förlamning av struphuvudets samtliga inre muskler bilateralt",
       "Total förlust av hörseln på den drabbade sidan",
       "Ingen effekt alls på den orala fasen av sväljningen"
     ],
@@ -5466,7 +5466,7 @@
     "correct": "Aspirationspneumoni",
     "distractors": [
       "Karies",
-      "Hörselnedsättning",
+      "Hörselnedsättning på ena örat",
       "Migrän"
     ],
     "topic": "logoped_svaljning",
@@ -5479,7 +5479,7 @@
     "prompt": "Vilka kliniska tecken vid måltid kan tyda på dysfagi?",
     "correct": "Hosta vid sväljning, gurglig röst efteråt, matrester i munnen och viktnedgång",
     "distractors": [
-      "Ökad aptit och betydligt snabbare måltider utan några besvär",
+      "Ökad aptit och betydligt snabbare måltider helt utan några besvär alls vid måltid",
       "En förbättrad och tydligt ökad smakupplevelse",
       "En påtagligt ökad tårproduktion under måltiden"
     ],
@@ -5494,7 +5494,7 @@
     "correct": "\"Wet voice\"/gurglig röst",
     "distractors": [
       "Falsettröst",
-      "Hypernasal röst",
+      "Hypernasal röstkvalitet vid tal",
       "Afon röst"
     ],
     "topic": "logoped_svaljning",
@@ -5509,7 +5509,7 @@
     "distractors": [
       "Datortomografi av buken",
       "Vanlig lungröntgen",
-      "Ultraljud av halsen enbart"
+      "Ultraljud av halsen och svalgets muskulatur"
     ],
     "topic": "logoped_svaljning",
     "difficulty": "Normal",
@@ -5521,7 +5521,7 @@
     "prompt": "Vad kallas den endoskopiska metod där ett fiberoptiskt instrument förs in via näsan för att bedöma svalget under sväljning?",
     "correct": "Fiberoptisk endoskopisk utvärdering av sväljning",
     "distractors": [
-      "Videofluoroskopisk sväljningsundersökning",
+      "Videofluoroskopisk sväljningsundersökning med röntgen",
       "Elektromyografi",
       "Audiometri"
     ],
@@ -5549,7 +5549,7 @@
     "prompt": "Vad innebär en \"chin-tuck\"-position (hakan mot bröstet) vid sväljning, och varför används den ibland kliniskt?",
     "correct": "Den vidgar vallecula-utrymmena och kan förändra bolusens väg för att skydda luftvägen bättre",
     "distractors": [
-      "Den öppnar struphuvudet maximalt för snabbare, friare andning",
+      "Den öppnar struphuvudet maximalt för att ge en snabbare och friare andning under hela sväljningen",
       "Den stänger näsborrarna helt och hållet",
       "Den förlänger esofagus tillfälligt under sväljningen"
     ],
@@ -5577,7 +5577,7 @@
     "prompt": "Vad innebär begreppet \"trippelskydd\" av luftvägen vid sväljning?",
     "correct": "Den samverkande stängningen av äkta stämband, falska stämband och struplock",
     "distractors": [
-      "Att struplocket ensamt stänger luftvägen tre separata gånger i rad",
+      "Att struplocket ensamt stänger luftvägen tre separata gånger i rad vid varje sväljning",
       "Att tre olika hjärnnerver tillsammans styr enbart smaksinnet",
       "Att esofagus har tre helt separata, egna sfinktrar"
     ],
@@ -5593,7 +5593,7 @@
     "distractors": [
       "Eftersom enbart hörseln ensam avgör hela sväljningsförmågan",
       "Eftersom sväljningen helt saknar koppling till nervsystemet",
-      "Eftersom enbart esofagus muskulatur någonsin kan orsaka dysfagi"
+      "Eftersom enbart esofagus egen muskulatur någonsin kan orsaka dysfagi hos en enskild patient"
     ],
     "topic": "logoped_svaljning",
     "difficulty": "Normal",
