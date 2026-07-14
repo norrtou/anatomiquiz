@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.147
+- **Formtells-svepet fortsätter i biomedicinsk analytiker: 13 av 18 ämnen rena.** Med de nya kontrollerna från 0.9.146 larmade filen på 657 punkter. Nu är cell/vävnad, blod, hjärta, respiration, nervsystem, njurar, matsmältning, endokrina, immunförsvar, EKG, spirometri, kärlfysiologi och neurofysiologi genomgångna – cirka 480 frågor omskrivna. Kvar: klinisk kemi, njur/gastro/nuklearmedicin, hematologi/transfusion, mikrobiologi och patologi.
+- **Absolut-ords-tellen var den dominerande skulden.** Distraktorer som "Endast filtration och sekretion", "Alltid ett tecken på hjärtsvikt" och "Aldrig i förmaken" gick att stryka utan sakkunskap eftersom rätt svar aldrig bar ett sådant ord. Samtliga omskrivna till konkreta, trovärdiga fel: "Endast njurbäckenet, inte parenkymet" blev "Njurbäckenet och kalkarna med tät kontrast".
+- **Förbjudna filler-alternativ borttagna**: "Ingen av dessa" fanns som svarsalternativ på tre muskelfrågor i cell/vävnad (`bma_cell_81`, `_82`, `_84`).
+- **Ja/nej- och format-asymmetrier rättade.** `bma_cell_60` frågade "Är epitelvävnad vaskulariserad?" där rätt svar var det enda som började med "Nej" – frågan är omskriven till "Hur försörjs epitelvävnad med näring?" så att alla alternativ är påståenden. Samma sak i `bma_ekg_26`, där rätt svar var det enda alternativet utan siffra.
+- **Självutpekande distraktorer** som negerade med rätt svarets egna nyckelord ("Bara EEG, inte nervledningsstudier") omformulerade så att de läses som trovärdiga alternativ.
+- VERSION/APP_VERSION/index.html-cachebuster → 0.9.147.
+
 ## 0.9.146
 - **Röntgensjuksköterska klar – och svepet visade sig ha mätt fel sak.** Alla 15 ämnen (1500 frågor) är genomgångna och filen ger nu **0 fel och 0 varningar** i `validate_quiz.py`. Utgångspunkten var längdbias (rätt svar längst i 664 frågor, 44 %), men vid genomläsning framkom att formen avslöjade svaret på fem ytterligare sätt. Cirka 900 frågor omskrivna.
 - **Absolut-ords-tellen – minst lika avslöjande som längdbias, och den fanns i hela projektet.** 565 av 1500 röntgenfrågor (38 %) hade distraktorer som bar "Endast", "Enbart", "Alltid" eller "Aldrig" medan rätt svar aldrig gjorde det; 504 distraktorer *började* med ett sådant ord. Man stryker dem utan att kunna ämnet. Samtliga omskrivna till konkreta, trovärdiga fel. Exempel: `rtg_njurfunktion_11` bad om tre processer i urinbildningen och hade distraktorerna "Endast filtration och sekretion, ingen reabsorption" / "Endast reabsorption, ingen filtration eller sekretion" – två tells i samma fråga.
