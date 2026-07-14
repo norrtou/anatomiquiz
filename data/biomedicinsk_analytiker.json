@@ -18205,9 +18205,9 @@
     "prompt": "Vad är grundprincipen inom nuklearmedicin, till skillnad från konventionell röntgen?",
     "correct": "Man tillför en radioaktiv substans i kroppen och avbildar dess fördelning, istället för att skicka strålning genom kroppen utifrån",
     "distractors": [
-      "Man mäter enbart ljudvågor som studsar genom kroppen",
+      "Man registrerar ljudvågor som studsar mot vävnadsgränser inuti kroppen",
       "Man använder starka magnetfält och radiovågor för avbildning, helt utan att någon radioaktiv substans någonsin tillförs till patienten",
-      "Man mäter enbart hudens yttemperatur"
+      "Man registrerar värmestrålning från hudytan med en infraröd kamera"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -18247,7 +18247,7 @@
     "prompt": "Varför är just Tc-99m så vanligt förekommande i klinisk nuklearmedicin?",
     "correct": "Lämplig halveringstid och gammastrålningsenergi för avbildning, samt lätt tillgängligt via generator",
     "distractors": [
-      "Den avger enbart alfastrålning, olämplig för avbildning",
+      "Den avger huvudsakligen alfastrålning, som lämpar sig dåligt för avbildning",
       "Den har en halveringstid på flera år, vilket gör den alldeles för långsam och opraktisk för klinisk rutinanvändning",
       "Den är inte alls radioaktiv"
     ],
@@ -18303,8 +18303,8 @@
     "prompt": "Vad kännetecknar PET (positronemissionstomografi) jämfört med SPECT?",
     "correct": "PET använder positronemitterande radionuklider, där annihilationsfotoner detekteras i koincidens",
     "distractors": [
-      "PET använder ingen radioaktivitet alls i undersökningen, till skillnad från SPECT och andra nuklearmedicinska metoder",
-      "PET mäter enbart blodtrycket hos patienten",
+      "PET bygger på starka magnetfält och radiovågor, likt MR, i stället för radioaktivitet",
+      "PET registrerar tryckförändringar i patientens blodkärl under undersökningen",
       "PET är helt identiskt med vanlig röntgen"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -18332,7 +18332,7 @@
     "correct": "Tumörceller har ofta en hög glukosmetabolism/glukosupptag",
     "distractors": [
       "Tumörceller saknar helt och hållet cellmembran, till skillnad från normal frisk vävnad",
-      "Tumörceller har alltid lägre ämnesomsättning",
+      "Tumörceller har genomgående lägre ämnesomsättning än normal vävnad",
       "FDG binder specifikt till DNA i tumörceller"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -18361,7 +18361,7 @@
     "distractors": [
       "Det halverar stråldosen helt vid undersökningen",
       "Det tar bort behovet av radiofarmaka helt",
-      "Det ersätter alla andra röntgenundersökningar helt, så att inga fler bilddiagnostiska metoder behövs"
+      "Det gör att övriga bilddiagnostiska undersökningar som DT och MR blir överflödiga"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -18415,9 +18415,9 @@
     "prompt": "Vad innebär ALARA-principen inom strålskydd?",
     "correct": "\"As Low As Reasonably Achievable\" – att hålla stråldosen så låg som rimligen är möjligt utan att äventyra undersökningens kvalitet",
     "distractors": [
-      "Att alltid använda högsta möjliga stråldos för att garantera bästa möjliga bildkvalitet vid varje enskild undersökning, oavsett patient",
-      "Att aldrig använda radioaktiva ämnen i undersökningen",
-      "Att enbart gälla för barn, inte vuxna patienter"
+      "Att använda högsta möjliga stråldos för att garantera bästa bildkvalitet vid varje undersökning",
+      "Att helt avstå från radioaktiva ämnen i undersökningen",
+      "Att principen gäller barn men inte vuxna patienter"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -18457,8 +18457,8 @@
     "prompt": "Vilka två huvudsyften har njurscintigrafi kliniskt?",
     "correct": "Att bedöma njurarnas funktion och avflödet av urin",
     "distractors": [
-      "Att enbart mäta njurarnas storlek i centimeter",
-      "Att enbart diagnostisera njursten i njurbäckenet och urinledaren",
+      "Att mäta njurarnas storlek i centimeter",
+      "Att diagnostisera njursten i njurbäcken och urinledare",
       "Att helt ersätta blodprovstagning"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -18584,8 +18584,8 @@
     "correct": "Hur stor andel av den totala njurfunktionen respektive njure bidrar med",
     "distractors": [
       "Den absoluta storleken på njuren mätt i centimeter vid ultraljud eller röntgen",
-      "Blodtrycket i njurartären, inte funktionsandelen",
-      "Urinens pH-värde, inte funktionsandelen"
+      "Blodtrycket i njurartären mätt med doppler",
+      "Urinens pH-värde uppmätt vid provtagning"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -18639,7 +18639,7 @@
     "prompt": "Varför ger kreatininclearance ofta en viss överskattning av den sanna GFR:n?",
     "correct": "Kreatinin utsöndras, förutom genom glomerulär filtration, även i viss mån via tubulär sekretion",
     "distractors": [
-      "Kreatinin filtreras aldrig alls glomerulärt",
+      "Kreatinin passerar filtret långsammare än vatten och underskattar därför GFR",
       "Kreatinin reabsorberas nästan helt tillbaka i njurtubuli efter att redan ha filtrerats glomerulärt",
       "Kreatinin bildas i njuren och inte i muskeln"
     ],
@@ -18653,7 +18653,7 @@
     "prompt": "Vad krävs för en korrekt kreatininclearance-mätning, utöver ett blodprov?",
     "correct": "En tidsbestämd urinsamling",
     "distractors": [
-      "Enbart ett enda venöst blodprov utan urinsamling",
+      "Ett upprepat venöst blodprov taget vid två separata tillfällen",
       "En röntgenundersökning",
       "Ett EKG"
     ],
@@ -18695,8 +18695,8 @@
     "prompt": "Vad är fördelen med DMSA-scintigrafi jämfört med MAG3/DTPA vid frågeställning om njurärr?",
     "correct": "DMSA binder till fungerande njurbarksvävnad, vilket ger tydlig avbildning av kortikala defekter/ärr",
     "distractors": [
-      "DMSA mäter enbart avflödeshinder i de övre urinvägarna, inte själva njurparenkymets funktion eller struktur",
-      "DMSA ger ingen bildinformation alls om njuren",
+      "DMSA mäter avflödeshinder i övre urinvägarna snarare än parenkymets funktion",
+      "DMSA ger enkla funktionssiffror utan att avbilda njuren",
       "DMSA används bara för lungundersökningar"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -18765,7 +18765,7 @@
     "prompt": "Vad kan ett \"cold spot\" (minskat upptag) vid skelettscintigrafi tala för?",
     "correct": "Avaskulärt/nekrotiskt ben eller vissa aggressiva litiska processer med lite osteoblastisk reaktion",
     "distractors": [
-      "Alltid en helt normal variant utan patologi",
+      "En normal variant utan patologisk betydelse",
       "Ökad benläkning med kraftig osteoblastisk aktivitet, vilket istället ger ett hot spot vid avbildningen",
       "En artefakt helt utan klinisk betydelse"
     ],
@@ -18779,9 +18779,9 @@
     "prompt": "Varför är skelettscintigrafi känslig men ospecifik för att upptäcka benförändringar?",
     "correct": "Den fångar upp ökad benomsättning oavsett orsak, utan att i sig säga vad som orsakar den",
     "distractors": [
-      "Den är specifik för enbart en enda diagnos",
-      "Den mäter enbart blodvärden, inte benomsättning",
-      "Den kräver aldrig komplettering med andra undersökningar, oavsett hur oklart fyndet visar sig vara"
+      "Den pekar specifikt ut en enskild diagnos",
+      "Den mäter blodvärden snarare än benomsättning",
+      "Den ger ett färdigt svar som sällan behöver kompletteras med andra undersökningar"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -18795,7 +18795,7 @@
     "distractors": [
       "Omedelbart efter injektion, inom någon sekund",
       "Efter flera veckor, betydligt längre tid än vad som egentligen behövs",
-      "Efter ett helt dygn krävs det alltid"
+      "Först efter ett helt dygn"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -18807,9 +18807,9 @@
     "prompt": "Vad kallas en trefasstudie vid skelettscintigrafi?",
     "correct": "En undersökning som registrerar flödesfas, blodpoolsfas och sen benfas, användbar t.ex. vid misstänkt infektion",
     "distractors": [
-      "En undersökning med enbart en enda bildtagning",
+      "En undersökning med en enda sen bildtagning",
       "En undersökning av tre olika skelettdelar samtidigt, helt utan någon tidsmässig skillnad alls mellan de olika faserna",
-      "Ett annat namn för en PET-CT-undersökning"
+      "Benämningen på en kombinerad PET-CT-undersökning"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -18865,7 +18865,7 @@
     "distractors": [
       "Intravenös injektion av Tc-99m-MAA i en ven",
       "Oral administrering av jodkontrast",
-      "Enbart en vanlig konventionell lungröntgen utan radioaktivt spårämne"
+      "En vanlig konventionell lungröntgen utan radioaktivt spårämne"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -18893,7 +18893,7 @@
     "distractors": [
       "Normal lungfunktion",
       "Pneumoni utan embolisering",
-      "Enbart astma"
+      "Ett akut astmaanfall"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -18905,7 +18905,7 @@
     "prompt": "Vad talar ett \"matchat\" defekt (nedsatt både ventilation och perfusion i samma område) snarare för?",
     "correct": "Parenkymatös lungsjukdom snarare än ren lungemboli",
     "distractors": [
-      "Alltid lungemboli med fullständig säkerhet",
+      "Lungemboli med hög sannolikhet",
       "En teknisk artefakt helt utan någon bakomliggande fysiologisk orsak",
       "Hjärtsvikt uteslutet med fullständig säkerhet"
     ],
@@ -18921,7 +18921,7 @@
     "distractors": [
       "V/Q-scan är helt förbjuden av strålskyddsskäl enligt gällande svensk lagstiftning på de allra flesta sjukhus och kliniker i landet",
       "V/Q-scan kan inte längre utföras tekniskt idag",
-      "DT-lungangiografi kräver ingen kontrast alls"
+      "DT-lungangiografi utförs helt utan kontrastmedel"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -18933,9 +18933,9 @@
     "prompt": "Vilken patientgrupp kan V/Q-scan vara särskilt fördelaktig för jämfört med DT-lungangiografi, med tanke på kontrastmedel?",
     "correct": "Patienter med nedsatt njurfunktion eller kontrastallergi",
     "distractors": [
-      "Patienter med normal njurfunktion enbart",
-      "Barn kan aldrig undersökas med V/Q-scan",
-      "Gravida kan aldrig undersökas med V/Q-scan under några omständigheter"
+      "Patienter med normal njurfunktion och god kontrasttolerans",
+      "Små barn där DT-undersökning är tekniskt svårgenomförd",
+      "Gravida kvinnor, där DT är helt kontraindicerat"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -18948,8 +18948,8 @@
     "correct": "En sannolikhetsbedömning baserat på antal och storlek av mismatch-defekter",
     "distractors": [
       "Ett absolut ja/nej-svar helt utan någon som helst gradering av sannolikheten",
-      "Enbart lungans totala volym, inte defekterna",
-      "Enbart hjärtats storlek, inte defekterna"
+      "Lungans totala volym uppmätt med spirometri",
+      "Hjärtats storlek bedömd på samma bilder"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19017,9 +19017,9 @@
     "prompt": "Vad är en fördel med scintigrafisk mätning av magsäckstömning jämfört med t.ex. ultraljud?",
     "correct": "Den ger ett kvantitativt, reproducerbart mått på tömningshastigheten över tid för både fast och flytande föda",
     "distractors": [
-      "Den kräver ingen radioaktivitet alls i undersökningen, till skillnad från scintigrafisk mätning av tömningshastigheten",
+      "Metoden använder magnetfält i stället för radiofarmaka",
       "Den kan bara mäta tömning av flytande föda",
-      "Den ger ingen kvantitativ information alls"
+      "Metoden ger bara en subjektiv ögonblicksbild av magsäcken"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19045,9 +19045,9 @@
     "prompt": "Vad kan en onormalt snabb magsäckstömning (dumping) i vissa fall vara relaterad till?",
     "correct": "Tidigare magsäcks-/gastric bypass-kirurgi",
     "distractors": [
-      "Alltid diabetesrelaterad gastropares, aldrig kirurgi eller annan orsak",
-      "Alltid normal fysiologi utan orsak",
-      "Alltid celiaki"
+      "Diabetesrelaterad gastropares",
+      "Ett normalt fysiologiskt fynd utan bakomliggande orsak",
+      "Obehandlad celiaki"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19060,8 +19060,8 @@
     "correct": "Kvarvarande föda i magsäcken skulle störa tolkningen av tömningshastigheten för den standardiserade testmåltiden",
     "distractors": [
       "Fasta krävs för att aktivera radiofarmakonet kemiskt, innan det överhuvudtaget kan tas upp av den tomma magsäcken",
-      "Fasta har ingen betydelse alls för undersökningen",
-      "Fasta krävs enbart av strålskyddsskäl"
+      "Fastan görs främst av praktiska schemaskäl",
+      "Fastan krävs av strålskyddsskäl"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19130,8 +19130,8 @@
     "correct": "Hur stor andel av gallan i gallblåsan som töms ut efter stimulering, som mått på gallblåsans motorik",
     "distractors": [
       "Hur mycket galla som levern totalt sett producerar under ett helt dygn, helt oberoende av gallblåsan",
-      "Blodflödet genom levern, inte gallblåsans tömning",
-      "Leverns totala storlek, inte gallblåsans tömning"
+      "Blodflödet genom levern mätt med doppler",
+      "Leverns totala storlek på bilderna"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19145,7 +19145,7 @@
     "distractors": [
       "Normal gallblåsefunktion utan patologi",
       "Akut hepatit, inte en motorikrubbning",
-      "Njursten, inte en gallblåserelaterad orsak"
+      "Njursten med avflödeshinder"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19171,9 +19171,9 @@
     "prompt": "Vad kan förlångsammad passage av spårämne från lever till tarm vid HIDA-scan, utan utebliven gallblåsevisualisering, tyda på?",
     "correct": "Gallvägsobstruktion nedströms eller nedsatt leverfunktion",
     "distractors": [
-      "Alltid en helt normal gallvägsfunktion",
-      "Enbart njursvikt, utan koppling till gallvägarna",
-      "Enbart hjärtsvikt, helt utan koppling till gallvägarnas funktion"
+      "En normal gallvägsfunktion utan patologi",
+      "Isolerad njursvikt utan gallvägspåverkan",
+      "Isolerad hjärtsvikt utan gallvägspåverkan"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19185,9 +19185,9 @@
     "prompt": "Inom vilket annat medicinskt område, utöver onkologi, används FDG-PET kliniskt?",
     "correct": "Vid utredning av demenssjukdomar samt vissa infektions-/inflammationsutredningar",
     "distractors": [
-      "Enbart vid frakturdiagnostik i skelettet",
-      "Enbart vid graviditetstest med blodprov",
-      "Enbart vid hörselutredning med audiometri, en metod som helt saknar koppling till PET"
+      "Vid frakturdiagnostik i skelettet",
+      "Vid graviditetstest med blodprov",
+      "Vid hörselutredning med audiometri"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19200,8 +19200,8 @@
     "correct": "Högt blodsocker/insulin konkurrerar med FDG-upptaget och kan försämra bildkvaliteten, särskilt i tumörvävnad",
     "distractors": [
       "Fasta krävs för att aktivera radioaktiviteten i FDG kemiskt, innan den överhuvudtaget kan injiceras i patienten",
-      "Fasta har ingen betydelse alls för undersökningen",
-      "Fasta krävs enbart av strålskyddsskäl"
+      "Fastan görs främst av logistiska schemaskäl",
+      "Fastan krävs av strålskyddsskäl"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19227,9 +19227,9 @@
     "prompt": "Vad kan ett fokalt \"hett\" (kraftigt upptagande) område i sköldkörteln vid scintigrafi tala för?",
     "correct": "En autonomt fungerande nodulus med hög hormonproduktion",
     "distractors": [
-      "Alltid malignitet i sköldkörteln",
-      "Alltid en enkel cysta helt utan någon hormonell aktivitet",
-      "Alltid helt normal vävnad utan avvikelse"
+      "Sköldkörtelcancer",
+      "En enkel vätskefylld cysta utan hormonproduktion",
+      "Helt normal körtelvävnad utan avvikelse"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19241,9 +19241,9 @@
     "prompt": "Vad kan ett \"kallt\" (icke-upptagande) område i sköldkörteln vid scintigrafi innebära, och varför är detta kliniskt viktigt?",
     "correct": "Noduli som inte tar upp spårämnet kan vara maligna och behöver ofta utredas vidare, t.ex. med finnålspunktion",
     "distractors": [
-      "Alltid en godartad cysta helt utan något som helst behov av vidare utredning, punktion eller uppföljning alls",
-      "Alltid en toxisk nodulus med hög hormonproduktion",
-      "Alltid normal körtelvävnad utan avvikelse"
+      "En godartad cysta utan behov av vidare uppföljning",
+      "En toxisk nodulus med hög hormonproduktion",
+      "Helt normal körtelvävnad utan avvikelse"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19257,7 +19257,7 @@
     "distractors": [
       "Tc-99m-MDP",
       "Tc-99m-DTPA för avbildning av njurarna",
-      "F-18-FDG enbart"
+      "F-18-FDG"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19354,7 +19354,7 @@
     "correct": "MIBG liknar noradrenalin strukturellt och tas upp av samma transportörer i vävnad med sympatikoadrenergt ursprung",
     "distractors": [
       "MIBG binder specifikt till benvävnad i skelettet, inte till den adrenerga vävnad som finns i feokromocytom eller neuroblastom",
-      "MIBG filtreras enbart glomerulärt i njuren",
+      "MIBG filtreras ut via njurarna utan vävnadsupptag",
       "MIBG tas upp av alla celltyper lika mycket"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -19383,7 +19383,7 @@
     "distractors": [
       "Den botar cancern direkt utan behov av kirurgi",
       "Den ersätter helt all vidare cancerbehandling",
-      "Den mäter enbart hjärtfunktionen med isotopmärkning, och saknar helt koppling till lymfspridning eller tumörens faktiska utbredning i kroppen"
+      "Den mäter hjärtfunktionen med isotopmärkning och saknar koppling till lymfspridning"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19395,9 +19395,9 @@
     "prompt": "Vad innebär \"teranostik\" inom nuklearmedicin?",
     "correct": "Att samma eller liknande målmolekyl används både för diagnostik och efterföljande radionuklidbehandling",
     "distractors": [
-      "Att enbart diagnostisera, helt utan behandlingsmöjlighet",
-      "Ett annat namn för en vanlig PET-CT-undersökning, helt utan koppling till någon efterföljande behandling",
-      "En metod som enbart används inom kardiologin"
+      "Att ställa diagnos utan efterföljande behandling",
+      "Benämningen på en vanlig PET-CT-undersökning utan efterföljande behandling",
+      "En metod förbehållen kardiologin"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19438,8 +19438,8 @@
     "correct": "Riktad radionuklidbehandling som utnyttjar preparatets benaffinitet för att lindra smärta och bromsa metastasernas tillväxt",
     "distractors": [
       "En ren diagnostisk metod helt utan terapeutisk effekt",
-      "En behandling som enbart ges oralt i tablettform, helt utan någon som helst radioaktiv komponent eller joniserande strålning",
-      "En metod som enbart används vid njursvikt"
+      "En behandling som ges oralt i tablettform utan radioaktiv komponent",
+      "En metod förbehållen njursviktspatienter"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19465,9 +19465,9 @@
     "prompt": "Vilka särskilda försiktighetsåtgärder gäller ofta för gravida kvinnor inför nuklearmedicinska undersökningar?",
     "correct": "Undersökningen görs bara om den är starkt indicerad, och man väljer om möjligt radiofarmaka och doser som minimerar stråldos till fostret",
     "distractors": [
-      "Gravida kan alltid undersökas helt utan restriktioner",
+      "Gravida undersöks rutinmässigt utan särskilda restriktioner",
       "Nuklearmedicinska undersökningar är helt förbjudna oavsett indikation eller hur akut situationen än är för patienten och det väntade fostret",
-      "Graviditet påverkar aldrig valet av undersökning"
+      "Graviditet saknar betydelse för valet av undersökning"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19479,9 +19479,9 @@
     "prompt": "Vilka råd ges ofta ammande kvinnor efter vissa nuklearmedicinska undersökningar, beroende på radiofarmakon?",
     "correct": "Att tillfälligt avbryta amningen under en period tills radioaktiviteten klingat av",
     "distractors": [
-      "Att amningen aldrig påverkas alls, helt oavsett vilket radiofarmakon som administreras till patienten",
-      "Att amningen alltid måste avslutas permanent",
-      "Att undersökningen aldrig kan göras om patienten ammar"
+      "Att amningen kan fortsätta oförändrat oavsett radiofarmakon",
+      "Att amningen måste avslutas permanent",
+      "Att undersökningen är utesluten för ammande kvinnor"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19493,9 +19493,9 @@
     "prompt": "Vad kallas artefakter i SPECT/PET-bilder som uppstår om patienten rör sig under den relativt långa insamlingstiden?",
     "correct": "Rörelseartefakter",
     "distractors": [
-      "Enbart attenueringsartefakter",
-      "Enbart partiell volymseffekt",
-      "Enbart Comptonspridning"
+      "Attenueringsartefakter",
+      "Partiell volymseffekt",
+      "Comptonspridning"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19535,8 +19535,8 @@
     "prompt": "Varför krävs regelbunden kvalitetskontroll (t.ex. dagliga kameratester) av gammakameror och PET-scanners?",
     "correct": "För att säkerställa att bildkvalitet och kvantitativa mätningar förblir tillförlitliga över tid",
     "distractors": [
-      "Det krävs enbart en gång vid inköp av utrustningen",
-      "Kvalitetskontroll är enbart ett formellt lagkrav utan någon praktisk klinisk betydelse alls för patienten",
+      "Kontrollen behöver bara göras en gång vid installationen",
+      "Kontrollen är främst ett formellt lagkrav utan praktisk klinisk betydelse",
       "Det påverkar inte bildkvaliteten alls"
     ],
     "topic": "bma_njur_gastro_nuklear",
@@ -19564,8 +19564,8 @@
     "correct": "Lägre rumslig upplösning, vilket är en anledning till att de ofta kombineras med CT",
     "distractors": [
       "De saknar helt möjlighet att visa någon anatomi över huvud taget, till skillnad från CT",
-      "De kräver alltid kirurgisk exponering av organet",
-      "De kan bara avbilda skelettet, inget annat organ"
+      "De kräver kirurgisk exponering av organet",
+      "De kan avbilda skelettet men inte mjukdelar"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19577,9 +19577,9 @@
     "prompt": "Vilken yrkesgrupp arbetar ofta kliniskt med att administrera radiofarmaka och utföra nuklearmedicinska undersökningar under ansvar av nuklearmedicinsk läkare?",
     "correct": "Biomedicinska analytiker/röntgensjuksköterskor specialiserade inom nuklearmedicin",
     "distractors": [
-      "Enbart kirurger utan nuklearmedicinsk specialisering",
-      "Enbart barnmorskor utan någon nuklearmedicinsk specialisering eller utbildning alls",
-      "Enbart farmaceuter på apotek utan klinisk roll"
+      "Kirurger utan nuklearmedicinsk specialisering",
+      "Barnmorskor utan nuklearmedicinsk utbildning",
+      "Apoteksfarmaceuter utan klinisk patientroll"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19591,9 +19591,9 @@
     "prompt": "Sammanfattningsvis: vilka två huvudsakliga kliniska användningsområden har nuklearmedicin, utöver ren diagnostik av njur- och gallvägsfunktion?",
     "correct": "Onkologisk avbildning/stadieindelning samt riktad radionuklidbehandling",
     "distractors": [
-      "Enbart benfrakturdiagnostik med vanlig konventionell röntgen av skelettet",
-      "Enbart graviditetstest med urinprov",
-      "Enbart hörselscreening med audiometri"
+      "Benfrakturdiagnostik med konventionell röntgen",
+      "Graviditetstest med urinprov",
+      "Hörselscreening med audiometri"
     ],
     "topic": "bma_njur_gastro_nuklear",
     "difficulty": "Normal",
@@ -19633,9 +19633,9 @@
     "prompt": "Varför är ASAT mindre leverspecifikt än ALAT?",
     "correct": "ASAT finns i högre grad även i andra vävnader, t.ex. hjärtmuskel och skelettmuskel",
     "distractors": [
-      "ASAT finns enbart i njurarna, inte i muskler",
-      "ASAT bildas enbart i benmärgen, inte i muskler",
-      "ASAT är helt vävnadsspecifikt och finns enbart i levern, inte i någon annan vävnad i kroppen"
+      "ASAT förekommer främst i njurvävnad och saknar muskelförekomst",
+      "ASAT bildas främst i benmärgen och saknar muskelförekomst",
+      "ASAT är helt leverspecifikt och saknar förekomst i andra vävnader"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -19689,8 +19689,8 @@
     "prompt": "Varför är GT (gamma-GT) särskilt användbart för att bekräfta att en förhöjd ALP kommer från levern/gallvägarna?",
     "correct": "GT finns i lever och gallvägar men inte i ben, så samtidig förhöjning av GT talar för hepatobiliärt ursprung",
     "distractors": [
-      "GT finns enbart i benvävnaden och aldrig i lever eller gallvägar, vilket gör markören oanvändbar vid leverfrågeställningar",
-      "GT är alltid helt normalt vid leversjukdom",
+      "GT finns främst i benvävnad och saknar förekomst i lever och gallvägar",
+      "GT sjunker vid leversjukdom och blir omätbart lågt",
       "GT mäter direkt bilirubinnivån i blodet"
     ],
     "topic": "bma_klinisk_kemi",
@@ -19745,9 +19745,9 @@
     "prompt": "Vad talar en dominerande förhöjning av konjugerat (direkt) bilirubin för?",
     "correct": "Hinder i gallavflödet, t.ex. gallsten eller tumör i gallvägarna",
     "distractors": [
-      "Enbart hemolys, utan koppling till gallvägarna",
-      "Enbart en muskelskada, helt utan koppling till gallvägarna eller levern",
-      "Enbart njurskada, utan koppling till gallvägarna"
+      "Ökad hemolys av röda blodkroppar",
+      "En omfattande muskelskada",
+      "En akut njurskada"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -19787,7 +19787,7 @@
     "prompt": "Varför kan PK/INR användas som markör för leverfunktion, utöver dess vanliga användning vid antikoagulantiabehandling?",
     "correct": "Levern syntetiserar flera koagulationsfaktorer, och nedsatt syntesförmåga vid leversvikt förlänger koagulationstiden",
     "distractors": [
-      "INR mäter enbart njurfunktionen och säger ingenting alls om koagulationen eller om leverns syntesförmåga hos patienten",
+      "INR speglar främst njurarnas utsöndringsförmåga",
       "INR är helt opåverkat av leverfunktionen",
       "INR mäter direkt bilirubinnivån i blodet"
     ],
@@ -19829,7 +19829,7 @@
     "prompt": "Varför påverkas kreatininnivån relativt lite av kost och hydreringsstatus jämfört med urea?",
     "correct": "Kreatinin bildas i en relativt jämn takt från kreatinfosfat i muskulaturen, oberoende av proteinintag",
     "distractors": [
-      "Kreatinin bildas enbart utifrån proteinintaget i kosten och varierar därför kraftigt från dag till dag hos patienten",
+      "Kreatinin bildas direkt ur kostens proteiner och varierar kraftigt med intaget",
       "Kreatinin påverkas kraftigt av dagsvätskeintaget",
       "Kreatinin bildas i levern på samma sätt som urea"
     ],
@@ -19914,7 +19914,7 @@
     "correct": "Nefrotiskt syndrom",
     "distractors": [
       "Prerenal njursvikt utan proteinuri",
-      "Enbart urinvägsinfektion",
+      "En okomplicerad nedre urinvägsinfektion",
       "Hemolytisk anemi"
     ],
     "topic": "bma_klinisk_kemi",
@@ -19941,9 +19941,9 @@
     "prompt": "Varför föredras ofta en albumin/kreatinin-kvot i ett stickprov framför en fullständig dygnsurinsamling kliniskt?",
     "correct": "Den är enklare att genomföra för patienten och korrigerar samtidigt för urinens koncentration",
     "distractors": [
-      "Den är alltid betydligt mer exakt än en fullständig dygnsurinsamling under alla omständigheter",
-      "Dygnsurin kan aldrig mäta albumin över huvud taget",
-      "Kvoten kräver inget urinprov alls från patienten"
+      "Den ger ett betydligt mer exakt värde än en fullständig dygnsurinsamling",
+      "Dygnsurinsamling kan inte mäta albumin över huvud taget",
+      "Kvoten beräknas helt utan urinprov från patienten"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -19956,8 +19956,8 @@
     "correct": "Njurarnas nedsatta förmåga att utsöndra kalium i urinen",
     "distractors": [
       "Ökad kaliumutsöndring via njurarna",
-      "Minskat kaliumintag i kosten enbart",
-      "Alltid samtidig hypokalcemi utan koppling till njurfunktion"
+      "Minskat kaliumintag via kosten",
+      "Samtidig hypokalcemi utan koppling till njurfunktionen"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -19969,9 +19969,9 @@
     "prompt": "Varför är hyperkalemi vid njursvikt kliniskt särskilt farligt att övervaka?",
     "correct": "Kraftigt förhöjt kalium kan orsaka livshotande hjärtarytmier",
     "distractors": [
-      "Det påverkar enbart muskelstyrkan i armarna",
+      "Det påverkar främst muskelstyrkan i armarna",
       "Det saknar all klinisk betydelse för patienten och behöver inte övervakas",
-      "Det påverkar enbart synen, inte hjärtat"
+      "Det påverkar främst synen snarare än hjärtat"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -20013,7 +20013,7 @@
     "distractors": [
       "Omedelbart inom sekunder",
       "Först efter en vecka",
-      "Troponin stiger aldrig efter hjärtinfarkt"
+      "Troponin sjunker snabbt efter en hjärtinfarkt"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -20027,7 +20027,7 @@
     "distractors": [
       "Mindre än en timme",
       "Troponin normaliseras direkt efter smärtdebut",
-      "Troponin stiger aldrig tillräckligt för att mätas"
+      "Troponin är omätbart lågt redan efter smärtdebut"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -20067,9 +20067,9 @@
     "prompt": "Vad mäts framförallt vid misstanke om hjärtsvikt, snarare än vid akut hjärtinfarkt?",
     "correct": "Natriuretiska peptider, t.ex. BNP eller NT-proBNP",
     "distractors": [
-      "Enbart troponin, utan natriuretiska peptider",
-      "Enbart CK-MB, utan natriuretiska peptider",
-      "Enbart myoglobin i serum, utan några natriuretiska peptider"
+      "Troponin I eller T i serum",
+      "Hjärtenzymet CK-MB",
+      "Myoglobin i serum"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -20095,8 +20095,8 @@
     "prompt": "Varför är BNP/NT-proBNP användbart för att skilja hjärtsvikt från andra orsaker till andfåddhet, t.ex. lungsjukdom?",
     "correct": "Ett lågt värde talar starkt emot hjärtsvikt som orsak, medan ett högt värde stödjer misstanken",
     "distractors": [
-      "BNP är alltid helt normalt vid hjärtsvikt",
-      "BNP mäter enbart lungfunktionen, inte hjärtat",
+      "BNP sjunker vid hjärtsvikt och blir omätbart lågt",
+      "BNP speglar främst lungfunktionen snarare än hjärtat",
       "BNP kan inte alls särskilja mellan olika orsaker till andfåddhet och saknar därför kliniskt värde"
     ],
     "topic": "bma_klinisk_kemi",
@@ -20109,9 +20109,9 @@
     "prompt": "Vad kan falskt förhöjda troponinvärden, utan akut hjärtinfarkt, bero på?",
     "correct": "Andra tillstånd som påverkar hjärtat, t.ex. njursvikt, lungemboli eller myokardit, som ger viss läckage utan ischemisk infarkt",
     "distractors": [
-      "Troponin kan aldrig vara förhöjt av någon annan orsak än en akut hjärtinfarkt, oavsett patientens övriga sjukdomar och njurfunktion",
-      "Troponin påverkas enbart av leverfunktionen",
-      "Troponin är alltid helt normalt vid njursvikt"
+      "Troponin stiger bara vid en akut hjärtinfarkt",
+      "Troponin styrs främst av leverfunktionen",
+      "Troponin sjunker vid njursvikt"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -20123,8 +20123,8 @@
     "prompt": "Vad kallas den seriella provtagning av troponin som ofta görs för att fastställa eller utesluta hjärtinfarkt?",
     "correct": "Troponin-seriemätning",
     "distractors": [
-      "Enstaka troponinprov är alltid tillräckligt",
-      "Troponin mäts aldrig mer än en gång",
+      "Ett enstaka troponinprov räcker för diagnos",
+      "Troponin mäts vid ett enda tillfälle",
       "Seriemätning avser upprepad EKG-tagning, inte blodprov"
     ],
     "topic": "bma_klinisk_kemi",
@@ -20137,9 +20137,9 @@
     "prompt": "Vad innebär det att man tittar på förändringen (deltavärdet) mellan två troponinprov snarare än enbart absolutvärdet?",
     "correct": "En tydlig stigning eller sjunkning talar för en akut process, medan ett stabilt förhöjt värde kan bero på kronisk hjärtpåverkan",
     "distractors": [
-      "Förändringen mellan de två proverna saknar all klinisk betydelse, eftersom endast absolutvärdet avgör om en infarkt verkligen föreligger",
-      "Man tittar aldrig på mer än ett enda prov",
-      "Deltavärdet mäter enbart njurfunktionen"
+      "Förändringen saknar betydelse eftersom absolutvärdet ensamt avgör diagnosen",
+      "Man använder rutinmässigt bara ett enda prov",
+      "Deltavärdet speglar njurfunktionen"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -20179,9 +20179,9 @@
     "prompt": "Vad kan kraftigt förhöjt kalium (hyperkalemi) orsaka i värsta fall?",
     "correct": "Livshotande hjärtarytmier, inklusive hjärtstillestånd",
     "distractors": [
-      "Enbart lindrig huvudvärk, utan hjärtpåverkan",
-      "Enbart muskelkramp helt utan hjärtpåverkan",
-      "Enbart en ökad urinproduktion, helt utan påverkan på hjärtat"
+      "Lindrig övergående huvudvärk utan hjärtpåverkan",
+      "Enstaka muskelkramper utan hjärtpåverkan",
+      "Ökad urinproduktion utan påverkan på hjärtat"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -20221,8 +20221,8 @@
     "prompt": "Varför är det ibland viktigt att mäta joniserat (fritt) kalcium snarare än enbart totalt kalcium?",
     "correct": "Totalt kalcium påverkas av albuminnivån, medan joniserat kalcium speglar den fysiologiskt aktiva fraktionen mer direkt",
     "distractors": [
-      "Joniserat kalcium mäter enbart benmineraliseringen",
-      "Totalt kalcium är alltid det mest exakta måttet på fritt kalcium, oavsett patientens albuminnivå i plasma vid provtagningen",
+      "Joniserat kalcium speglar benmineraliseringen",
+      "Totalt kalcium ger det mest exakta måttet på fritt kalcium oavsett albumin",
       "Joniserat kalcium kan inte alls mätas kliniskt"
     ],
     "topic": "bma_klinisk_kemi",
@@ -20279,7 +20279,7 @@
     "distractors": [
       "Hyperkalemi och metabol acidos, alltså den motsatta förändringen",
       "Hypernatremi helt utan andra rubbningar",
-      "Enbart hyperkalcemi, utan andra rubbningar"
+      "Isolerad hyperkalcemi utan andra rubbningar"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -20333,9 +20333,9 @@
     "prompt": "Vad kan höga triglyceridnivåer i blodet, utöver kardiovaskulär risk, i extrema fall ge ökad risk för?",
     "correct": "Akut pankreatit",
     "distractors": [
-      "Akut hjärtinfarkt enbart",
-      "Njursten enbart",
-      "Gallsten enbart"
+      "Akut hjärtinfarkt",
+      "Njursten",
+      "Gallsten"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -20348,8 +20348,8 @@
     "correct": "Triglyceridnivån stiger tillfälligt kraftigt efter en måltid, vilket kan ge missvisande höga värden",
     "distractors": [
       "Fasta krävs för att kolesterolet i provet ska kunna aktiveras kemiskt inför analysen i laboratoriet",
-      "Fasta har ingen betydelse alls för lipidvärdena",
-      "Fasta krävs enbart för glukosprov, aldrig för lipider"
+      "Fastan görs främst av praktiska schemaskäl",
+      "Fastan krävs för glukosprov men saknar värde för lipider"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -20389,9 +20389,9 @@
     "prompt": "Varför blir Friedewalds formel för att beräkna LDL opålitlig vid kraftigt förhöjda triglycerider?",
     "correct": "Formeln bygger på ett antaget förhållande mellan triglycerider och VLDL-kolesterol som inte längre stämmer vid mycket höga triglyceridnivåer",
     "distractors": [
-      "Formeln fungerar alltid oavsett triglyceridnivå",
+      "Formeln ger korrekt LDL oavsett triglyceridnivå",
       "Höga triglycerider påverkar inte beräkningen alls",
-      "Formeln bygger inte på triglycerider över huvud taget, utan enbart på totalkolesterol och HDL, och påverkas därför aldrig av triglyceridnivån"
+      "Formeln bygger på totalkolesterol och HDL och påverkas inte av triglyceridnivån"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -20418,8 +20418,8 @@
     "correct": "Glukos binder icke-enzymatiskt till hemoglobin i röda blodkroppar under deras livslängd, proportionellt mot glukosnivån",
     "distractors": [
       "HbA1c mäter glukoskoncentrationen direkt i plasma vid själva provtagningstillfället, precis som ett fasteglukos gör hos patienten",
-      "HbA1c speglar enbart njurfunktionen, inte glukosnivån",
-      "HbA1c mäter insulinnivån, inte glukosnivån"
+      "HbA1c speglar främst njurfunktionen",
+      "HbA1c mäter kroppens aktuella insulinnivå"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -20459,7 +20459,7 @@
     "prompt": "Vad mäter C-peptid, och varför är det kliniskt användbart vid diabetesutredning?",
     "correct": "C-peptid frisätts i lika mängd som insulin från betacellerna och speglar kroppens egen insulinproduktion, även hos patienter som får insulinbehandling",
     "distractors": [
-      "C-peptid mäter enbart glukosupptaget i muskler",
+      "C-peptid speglar glukosupptaget i muskulaturen",
       "C-peptid är helt identiskt med HbA1c",
       "C-peptid mäter njurfunktionen och glukosupptaget, men säger ingenting alls om kroppens egen insulinproduktion hos en insulinbehandlad patient med diabetes"
     ],
@@ -20473,8 +20473,8 @@
     "prompt": "Varför kan HbA1c ge missvisande resultat hos patienter med kraftigt förkortad erytrocytöverlevnad, t.ex. hemolytisk anemi?",
     "correct": "Eftersom HbA1c bygger på att glukos ackumuleras under erytrocyternas normala livslängd, blir måttet opålitligt om denna livslängd är onormal",
     "distractors": [
-      "HbA1c påverkas aldrig av erytrocyternas livslängd",
-      "Hemoglobinopatier och hemolytisk anemi höjer alltid HbA1c oavsett patientens verkliga glukosnivå, vilket i praktiken gör måttet mer tillförlitligt",
+      "HbA1c är oberoende av erytrocyternas livslängd",
+      "Hemolytisk anemi höjer HbA1c och gör måttet mer tillförlitligt",
       "HbA1c mäter direkt antalet röda blodkroppar"
     ],
     "topic": "bma_klinisk_kemi",
@@ -20529,9 +20529,9 @@
     "prompt": "Varför kan ett kapillärt (stickprov från fingret) glukosvärde skilja sig något från ett venöst plasmaglukosvärde?",
     "correct": "Kapillärblod innehåller en blandning av arteriellt och venöst blod med viss glukosskillnad, samt andra metodskillnader",
     "distractors": [
-      "Kapillärt blod innehåller aldrig något glukos alls",
-      "Venöst och kapillärt blod är alltid helt identiska i alla avseenden, oavsett metod och provtagningsteknik på laboratoriet",
-      "Skillnaden beror enbart på patientens ålder"
+      "Kapillärblod saknar mätbart glukos",
+      "Venöst och kapillärt blod ger identiska glukosvärden",
+      "Skillnaden beror på patientens ålder"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -20557,9 +20557,9 @@
     "prompt": "Vad kan lågt serumalbumin bero på, förutom nedsatt leversyntes?",
     "correct": "Förlust via njurarna, malnutrition eller kronisk inflammation",
     "distractors": [
-      "Enbart för högt vätskeintag",
-      "Enbart hög muskelmassa",
-      "Albumin kan aldrig vara lågt av någon annan orsak än en bakomliggande leversjukdom"
+      "Ett för högt vätskeintag",
+      "Hög muskelmassa",
+      "En bakomliggande leversjukdom som enda möjliga orsak"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -20572,7 +20572,7 @@
     "correct": "Proteinelfores",
     "distractors": [
       "Spektrofotometri",
-      "Enbart kromatografi",
+      "Kromatografi",
       "PCR"
     ],
     "topic": "bma_klinisk_kemi",
@@ -20586,7 +20586,7 @@
     "correct": "Monoklonal gammopati, t.ex. vid myelom",
     "distractors": [
       "En helt normal variant hos friska personer",
-      "Akut infektion enbart",
+      "En akut bakteriell infektion",
       "Leverstas"
     ],
     "topic": "bma_klinisk_kemi",
@@ -20599,8 +20599,8 @@
     "prompt": "Vilka globulinfraktioner brukar man vanligen dela in proteinelfores i, utöver albumin?",
     "correct": "Alfa-1-, alfa-2-, beta- och gammaglobuliner",
     "distractors": [
-      "Enbart alfa och beta, utan gammaglobuliner",
-      "Enbart gamma, utan alfa- och betaglobuliner",
+      "Alfa- och betaglobuliner tillsammans med albumin",
+      "Gammaglobuliner tillsammans med fibrinogen",
       "A, B, O och AB, blodgruppsantigen"
     ],
     "topic": "bma_klinisk_kemi",
@@ -20628,7 +20628,7 @@
     "correct": "Akutfasreaktant",
     "distractors": [
       "Strukturprotein",
-      "Enbart transportprotein",
+      "Transportprotein",
       "Enzymkofaktor"
     ],
     "topic": "bma_klinisk_kemi",
@@ -20655,9 +20655,9 @@
     "prompt": "Vad innebär det att mäta ett enzyms \"aktivitet\" i klinisk kemi, till skillnad från att mäta dess koncentration direkt?",
     "correct": "Man mäter hur snabbt enzymet omvandlar ett substrat till produkt under standardiserade betingelser, uttryckt t.ex. i enheter per liter",
     "distractors": [
-      "Man mäter enzymets molekylvikt och koncentration i provet med hjälp av en våg, uttryckt i gram per liter, utan att omvandla något substrat",
+      "Man mäter enzymets molekylvikt och koncentration i gram per liter med hjälp av en våg",
       "Man mäter enzymets färg med blotta ögat",
-      "Man mäter enzymets pH-optimum enbart"
+      "Man mäter enzymets pH-optimum i provet"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -20669,8 +20669,8 @@
     "prompt": "Vilken fysikalisk-kemisk metod, baserad på hur mycket ljus av en viss våglängd som absorberas av en lösning, används brett inom klinisk kemi?",
     "correct": "Spektrofotometri",
     "distractors": [
-      "Enbart kromatografi",
-      "Enbart masspektrometri",
+      "Kromatografi",
+      "Masspektrometri",
       "PCR"
     ],
     "topic": "bma_klinisk_kemi",
@@ -20684,7 +20684,7 @@
     "correct": "Sambandet mellan ljusabsorbans och koncentrationen av ett ämne i en lösning",
     "distractors": [
       "Sambandet mellan tryck och volym i en sluten gas",
-      "Sambandet mellan temperaturen och enzymaktiviteten i en lösning, enbart det i provet",
+      "Sambandet mellan temperatur och enzymaktivitet i en lösning",
       "Sambandet mellan pH och koncentration av vätejoner"
     ],
     "topic": "bma_klinisk_kemi",
@@ -20697,7 +20697,7 @@
     "prompt": "Hur definieras vanligtvis ett laboratoriums referensintervall för ett prov?",
     "correct": "Det intervall inom vilket ca 95 % av en frisk referenspopulation hamnar",
     "distractors": [
-      "Det intervall som 100 % av alla människor, sjuka som friska, alltid hamnar inom",
+      "Det intervall som rymmer 100 % av både sjuka och friska personer",
       "Ett fast intervall som är identiskt på alla laboratorier i världen",
       "Det intervall en enskild patient hade vid en tidigare mätning"
     ],
@@ -20711,9 +20711,9 @@
     "prompt": "Varför kan referensintervall skilja sig något mellan olika laboratorier för samma analys?",
     "correct": "Skillnader i analysmetod, kalibrering och referenspopulation kan påverka vilket intervall som anses normalt",
     "distractors": [
-      "Referensintervall är alltid identiska oavsett analysmetod",
-      "Referensintervall bestäms enbart av patientens ålder",
-      "Referensintervall är en internationell, orubblig standard som aldrig varierar mellan laboratorier, metoder eller populationer"
+      "Referensintervall är identiska oavsett analysmetod",
+      "Referensintervall bestäms av patientens ålder",
+      "Referensintervall följer en fast internationell standard som inte varierar mellan labb"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -20725,7 +20725,7 @@
     "prompt": "Vad innebär analytisk känslighet (sensitivitet) hos ett laboratorietest, i strikt analytisk mening?",
     "correct": "Testets förmåga att detektera även mycket små mängder av det ämne som mäts",
     "distractors": [
-      "Testets förmåga att alltid ge samma svar oavsett prov",
+      "Testets förmåga att ge samma svar oavsett prov",
       "Testets förmåga att särskilja olika bakomliggande sjukdomar från varandra hos patienten",
       "Testets förmåga att mäta snabbt utan väntetid"
     ],
@@ -20767,8 +20767,8 @@
     "prompt": "Vad kallas det när ett laboratorieresultat regelbundet kontrolleras mot kända kontrollprov för att säkerställa tillförlitlighet över tid?",
     "correct": "Intern kvalitetskontroll",
     "distractors": [
-      "Preanalytisk fas enbart",
-      "Referensintervall enbart",
+      "Preanalytisk hantering av provet",
+      "Fastställande av referensintervall",
       "Diagnostisk specificitet"
     ],
     "topic": "bma_klinisk_kemi",
@@ -20781,8 +20781,8 @@
     "prompt": "Vad kallas jämförelse av ett laboratoriums resultat mot andra laboratorier via externa, \"blinda\" kontrollprov?",
     "correct": "Extern kvalitetssäkring",
     "distractors": [
-      "Enbart intern kvalitetskontroll",
-      "Enbart kalibrering",
+      "Intern kvalitetskontroll",
+      "Kalibrering av instrumentet",
       "Referensintervall"
     ],
     "topic": "bma_klinisk_kemi",
@@ -20811,7 +20811,7 @@
     "distractors": [
       "Amylas",
       "Båda är exakt lika specifika",
-      "Ingen av dem är specifik för pankreas"
+      "Kreatinkinas (CK)"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -20837,9 +20837,9 @@
     "prompt": "Ungefär hur länge brukar lipas vara förhöjt vid akut pankreatit, jämfört med amylas som ofta normaliseras snabbare?",
     "correct": "Lipas är oftast förhöjt under en längre period",
     "distractors": [
-      "Lipas normaliseras alltid inom någon timme",
-      "Lipas stiger aldrig vid pankreatit",
-      "Lipas och amylas normaliseras alltid exakt samtidigt"
+      "Lipas normaliseras inom någon timme",
+      "Lipas sjunker under referensvärdet vid pankreatit",
+      "Lipas och amylas normaliseras samtidigt"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -20865,8 +20865,8 @@
     "prompt": "Varför kan hemolys (sönderfall av röda blodkroppar) i ett blodprov ge falskt förhöjt kaliumvärde?",
     "correct": "Kalium finns i hög koncentration inuti röda blodkroppar och frisätts till plasman/serum när cellerna går sönder",
     "distractors": [
-      "Hemolys frisätter enbart natrium, inte kalium",
-      "Hemolys sänker alltid det uppmätta kaliumvärdet, eftersom kalium binds till de sönderfallna cellernas membran i provröret",
+      "Hemolys frisätter främst natrium från cellerna",
+      "Hemolys sänker kaliumvärdet eftersom kalium binds till cellmembranen",
       "Hemolys påverkar inte elektrolytvärdena alls"
     ],
     "topic": "bma_klinisk_kemi",
@@ -20879,9 +20879,9 @@
     "prompt": "Vad kan för lång stas (åtdragen manschett) vid venprovtagning orsaka för preanalytisk felkälla?",
     "correct": "Lokal hemokoncentration som kan ge falskt förhöjda värden på vissa analyter",
     "distractors": [
-      "Det sänker alltid samtliga provvärden",
-      "Det påverkar enbart blodsockervärdet i det tagna provet, och inget annat analysvärde",
-      "Det har ingen effekt alls på provresultatet"
+      "Det ger genomgående lägre provvärden",
+      "Det påverkar främst blodsockervärdet i provet",
+      "Det saknar effekt på provresultatet"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -20894,7 +20894,7 @@
     "correct": "Olika tillsatser krävs eller måste undvikas beroende på vilken analys som ska göras, för att inte störa resultatet",
     "distractors": [
       "Alla provrör är funktionellt identiska oavsett tillsats",
-      "Tillsatserna i rören påverkar enbart korkens färg och saknar helt analytisk betydelse för resultatet av själva analysen",
+      "Tillsatserna styr bara korkens färg och saknar analytisk betydelse",
       "Provrörets storlek är den enda relevanta skillnaden"
     ],
     "topic": "bma_klinisk_kemi",
@@ -20907,9 +20907,9 @@
     "prompt": "Varför bör vissa prover, t.ex. fasteglukos och lipidstatus, tas efter en period av fasta?",
     "correct": "Nyligen intagen föda kan tillfälligt påverka nivåerna och ge missvisande resultat",
     "distractors": [
-      "Fasta krävs enbart av praktiska bekvämlighetsskäl och saknar helt analytisk betydelse",
-      "Fasta påverkar aldrig något provresultat alls",
-      "Fasta krävs enbart för hormonprover, aldrig för glukos/lipider"
+      "Fastan krävs främst av praktiska bekvämlighetsskäl",
+      "Fastan saknar effekt på provresultaten",
+      "Fastan behövs för hormonprover men saknar värde för glukos och lipider"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -20921,9 +20921,9 @@
     "prompt": "Vilka tre huvudparametrar mäts typiskt i ett arteriellt blodgasprov för att bedöma syra-basstatus?",
     "correct": "pH, koldioxidpartialtryck och bikarbonat",
     "distractors": [
-      "Natrium, kalium och klorid enbart",
-      "Glukos, laktat och kreatinin enbart",
-      "Hemoglobin, hematokrit och trombocyter enbart"
+      "Natrium, kalium och klorid",
+      "Glukos, laktat och kreatinin",
+      "Hemoglobin, hematokrit och trombocyter"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -20977,9 +20977,9 @@
     "prompt": "Vad kan förhöjt laktat i ett blodgasprov ofta indikera kliniskt?",
     "correct": "Vävnadshypoxi/otillräcklig syresättning, t.ex. vid chock eller kraftig muskelansträngning",
     "distractors": [
-      "Alltid en ren andningsrubbning helt utan någon koppling till vävnadernas syresättning i kroppen",
-      "Alltid en helt normal cirkulation",
-      "Enbart njursvikt utan koppling till syrgastillförsel"
+      "En ren andningsrubbning utan koppling till syresättningen",
+      "En fullt normal cirkulation",
+      "Isolerad njursvikt utan syrgaskoppling"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -20992,8 +20992,8 @@
     "correct": "Det andra systemet justerar sin funktion för att motverka och delvis normalisera pH",
     "distractors": [
       "Kroppen saknar helt förmåga att kompensera för syra-basrubbningar",
-      "Kompensation sker enbart via levern",
-      "Kompensation innebär att pH alltid blir exakt normalt igen omedelbart, helt utan fördröjning"
+      "Kompensationen sker via levern",
+      "Kompensationen återställer pH exakt till normalvärdet omedelbart"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -21006,7 +21006,7 @@
     "correct": "Nedsatt produktion av röda blodkroppar i benmärgen",
     "distractors": [
       "Ökad nedbrytning av erytrocyter som enda orsak till anemin",
-      "Alltid en helt normal benmärgsfunktion",
+      "En fullt normal benmärgsfunktion",
       "Akut blödning som enda orsak till anemin"
     ],
     "topic": "bma_hematologi_transfusion",
@@ -21020,8 +21020,8 @@
     "correct": "Ökad kompensatorisk produktion, t.ex. vid hemolys eller blödning",
     "distractors": [
       "Nedsatt benmärgsproduktion, alltså motsatsen till den verkliga orsaken",
-      "Alltid järnbrist, oavsett kliniskt sammanhang",
-      "Alltid B12-brist, oavsett kliniskt sammanhang"
+      "Underliggande järnbrist",
+      "Underliggande B12-brist"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -21089,9 +21089,9 @@
     "prompt": "Varför kan ferritin vara falskt normalt eller förhöjt vid samtidig järnbrist och inflammation?",
     "correct": "Ferritin är även en akutfasreaktant och stiger vid inflammation, oavsett järnstatus",
     "distractors": [
-      "Ferritin påverkas aldrig av inflammation i kroppen, utan speglar alltid exakt järndepåerna",
-      "Inflammation sänker alltid ferritinnivån",
-      "Ferritin mäter enbart hemoglobinkoncentrationen"
+      "Ferritin är opåverkat av inflammation och speglar exakt järndepåerna",
+      "Inflammation sänker ferritinnivån",
+      "Ferritin speglar hemoglobinkoncentrationen"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -21174,7 +21174,7 @@
     "correct": "Nedsatt eller utebliven syntes av en eller flera globinkedjor i hemoglobinmolekylen",
     "distractors": [
       "Brist på järn i kosten, inte en genetisk orsak",
-      "Brist på vitamin B12 och folat i kosten, alltså ingen genetisk orsak i hemoglobinsyntesen",
+      "Brist på vitamin B12 och folat i kosten",
       "Autoimmun nedbrytning av röda blodkroppar"
     ],
     "topic": "bma_hematologi_transfusion",
@@ -21244,7 +21244,7 @@
     "correct": "Järnbeladdade mitokondrier runt kärnan i erytroblaster",
     "distractors": [
       "Total avsaknad av järn i hela benmärgen",
-      "Enbart omogna lymfoblaster, utan järninlagring",
+      "Ansamling av omogna lymfoblaster utan järninlagring",
       "Reed-Sternberg-celler, precis som man ser vid Hodgkins lymfom"
     ],
     "topic": "bma_hematologi_transfusion",
@@ -21313,9 +21313,9 @@
     "prompt": "Vad är den huvudsakliga skillnaden mellan akut och kronisk leukemi vad gäller celltyp och sjukdomsförlopp?",
     "correct": "Akut leukemi domineras av omogna blaster och har snabbt förlopp, kronisk leukemi av mognare celler och långsammare förlopp",
     "distractors": [
-      "Akut leukemi förekommer enbart hos barn och aldrig hos vuxna, medan kronisk leukemi uteslutande drabbar äldre personer i hög ålder",
-      "Kronisk leukemi ger alltid uttalad pancytopeni",
-      "Det finns ingen skillnad alls i celltyp mellan formerna"
+      "Akut leukemi drabbar bara barn medan kronisk leukemi drabbar äldre",
+      "Kronisk leukemi ger uttalad pancytopeni redan tidigt",
+      "Formerna skiljer sig inte åt i celltyp"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -21327,9 +21327,9 @@
     "prompt": "Vilken undersökning krävs oftast för att säkert diagnostisera och klassificera en leukemi?",
     "correct": "Benmärgsundersökning",
     "distractors": [
-      "Enbart perifert blodstatus",
-      "Enbart urinprov",
-      "Enbart röntgen"
+      "Perifert blodstatus",
+      "Ett urinprov",
+      "Slätröntgen"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -21439,9 +21439,9 @@
     "prompt": "Varför ökar risken för vissa allvarliga infektioner efter splenektomi (avlägsnande av mjälten)?",
     "correct": "Mjälten har en viktig roll i immunförsvaret, bland annat mot inkapslade bakterier, och avlägsnande ökar infektionskänsligheten",
     "distractors": [
-      "Splenektomi påverkar aldrig immunförsvaret alls",
-      "Mjälten producerar enbart trombocyter och saknar helt immunfunktion, varför avlägsnandet inte påverkar infektionsrisken hos patienten",
-      "Splenektomi minskar alltid infektionsrisken"
+      "Splenektomi lämnar immunförsvaret oförändrat",
+      "Mjälten bildar främst trombocyter och saknar immunfunktion",
+      "Splenektomi minskar infektionsrisken"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -21455,7 +21455,7 @@
     "distractors": [
       "Trisomi 21, som ger Downs syndrom",
       "Trisomi 13, som ger Pataus syndrom",
-      "Deletion av hela kromosom 5, en helt annan typ av kromosomavvikelse i benmärgen"
+      "Deletion av kromosom 5q, som ses vid myelodysplastiskt syndrom"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -21467,9 +21467,9 @@
     "prompt": "Vad kallas cytogenetisk/molekylär analys av leukemiceller för att identifiera specifika kromosomavvikelser?",
     "correct": "Karyotypering och molekylärgenetisk analys",
     "distractors": [
-      "Flödescytometri enbart, utan genetisk analys",
-      "Blodutstryk enbart, utan genetisk analys",
-      "Elektrofores enbart, utan genetisk analys"
+      "Flödescytometrisk immunfenotypning",
+      "Morfologisk bedömning av blodutstryk",
+      "Proteinelektrofores av serum"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -21664,8 +21664,8 @@
     "correct": "För att provsvar från olika laboratorier och reagens ska kunna jämföras och tolkas på samma sätt, särskilt vid warfarinbehandling",
     "distractors": [
       "För att helt ersätta behovet av provtagning",
-      "För att INR alltid ska visa exakt samma siffra som APTT, oavsett vilket reagens eller instrument laboratoriet använder vid analysen",
-      "INR har ingen koppling alls till PK-provet"
+      "För att INR ska visa samma siffra som APTT oavsett reagens",
+      "INR saknar koppling till PK-provet"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -21691,9 +21691,9 @@
     "prompt": "Varför är D-dimer en känslig men ospecifik markör vid misstänkt lungemboli/djup ventrombos?",
     "correct": "D-dimer stiger vid många tillstånd med ökad koagulation/fibrinolys, men ett normalt värde talar starkt emot trombos",
     "distractors": [
-      "D-dimer är helt specifikt enbart för lungemboli och kan aldrig vara förhöjt vid något annat tillstånd hos patienten",
-      "D-dimer är alltid helt normalt vid trombos",
-      "D-dimer mäter enbart trombocytantalet i blodet"
+      "D-dimer är specifikt för lungemboli och stiger sällan vid andra tillstånd",
+      "D-dimer är normalt vid pågående trombos",
+      "D-dimer speglar trombocytantalet i blodet"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -21859,9 +21859,9 @@
     "prompt": "Utöver AB0 och Rh(D), vilka är exempel på andra kliniskt betydelsefulla blodgruppssystem (minor blood group-system) som kan ge upphov till transfusionsreaktioner vid tidigare sensibilisering?",
     "correct": "Kell-, Duffy- och Kidd-systemen",
     "distractors": [
-      "Endast HLA-systemet",
-      "Endast MN-systemet",
-      "Det finns inga andra blodgruppssystem än AB0 och Rh"
+      "HLA-systemet på vita blodkroppar",
+      "MN-systemet på erytrocyterna",
+      "AB0 och Rh är de enda blodgruppssystem som finns"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -21875,7 +21875,7 @@
     "distractors": [
       "Naturliga antikroppar",
       "Autoantikroppar mot trombocyter",
-      "HLA-antikroppar mot leukocyter enbart"
+      "HLA-antikroppar riktade mot leukocyter"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -22111,9 +22111,9 @@
     "prompt": "Varför utvecklar patienter med kronisk njursvikt ofta anemi?",
     "correct": "Nedsatt produktion av erytropoetin i de sjuka njurarna",
     "distractors": [
-      "Alltid en samtidig järnbrist, helt utan koppling till njurarna",
+      "En samtidig järnbrist utan koppling till njurarna",
       "Ökad nedbrytning av röda blodkroppar i njuren",
-      "Njursvikt påverkar aldrig blodbildningen"
+      "Njursvikt lämnar blodbildningen opåverkad"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -22153,8 +22153,8 @@
     "prompt": "Varför kompletteras ofta benmärgsaspiration med en benmärgsbiopsi vid utredning av t.ex. lymfom, myelofibros eller aplastisk anemi?",
     "correct": "Biopsin visar benmärgens vävnadsarkitektur och cellularitet, information som ett aspirat inte fullt ut ger",
     "distractors": [
-      "Biopsin är alltid helt överflödig om ett benmärgsaspirat redan har tagits från patienten tidigare vid utredningen",
-      "Aspirat kan aldrig visa cellmorfologin",
+      "Biopsin är överflödig när ett aspirat redan tagits",
+      "Aspiratet kan inte visa cellmorfologin",
       "Biopsin ersätter blodstatus helt och hållet"
     ],
     "topic": "bma_hematologi_transfusion",
@@ -22181,9 +22181,9 @@
     "prompt": "Hur skiljer sig ferritin typiskt vid anemi vid kronisk sjukdom jämfört med vid ren järnbristanemi?",
     "correct": "Ferritin är normalt eller förhöjt vid anemi vid kronisk sjukdom, till skillnad från lågt ferritin vid järnbrist",
     "distractors": [
-      "Ferritin är alltid lågt i båda tillstånden",
-      "Ferritin är alltid förhöjt vid järnbrist",
-      "Ferritin skiljer aldrig mellan de två tillstånden och är därför helt oanvändbart vid anemiutredning hos patienten"
+      "Ferritin är lågt i båda tillstånden",
+      "Ferritin är förhöjt vid ren järnbrist",
+      "Ferritin kan inte skilja tillstånden och saknar värde vid anemiutredning"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -22237,7 +22237,7 @@
     "prompt": "Vad kallas retikulinfärgning av en benmärgsbiopsi använd för att bedöma graden av?",
     "correct": "Benmärgsfibros",
     "distractors": [
-      "Cellularitet enbart",
+      "Benmärgens cellularitet",
       "Järninnehåll",
       "Antal blaster"
     ],
@@ -22308,7 +22308,7 @@
     "correct": "Protrombinkomplexkoncentrat",
     "distractors": [
       "Protamin",
-      "Trombocytkoncentrat enbart, utan plasma",
+      "Trombocytkoncentrat",
       "Järnkelat"
     ],
     "topic": "bma_hematologi_transfusion",
@@ -22349,8 +22349,8 @@
     "prompt": "Vad är fördelen med att kunna donera enbart trombocyter via trombocytferes från en enda givare, jämfört med att slå samman trombocyter från flera vanliga blodgivningar?",
     "correct": "Mottagaren exponeras för färre givare, vilket minskar risken för alloimmunisering och vissa smittor",
     "distractors": [
-      "Trombocytferes ger alltid fler röda blodkroppar",
-      "Metoden är alltid snabbare än vanlig blodgivning",
+      "Trombocytferes ger samtidigt fler röda blodkroppar",
+      "Metoden är snabbare än vanlig blodgivning",
       "Det saknar helt klinisk betydelse vilken av metoderna som används vid transfusionen till den enskilda patienten"
     ],
     "topic": "bma_hematologi_transfusion",
@@ -22363,9 +22363,9 @@
     "prompt": "Vad innebär molekylär blodgruppsgenotypning, till skillnad från traditionell serologisk blodgruppering?",
     "correct": "Blodgruppsantigenen bestäms genom att analysera arvsmassan istället för att blanda blodprov med kända antisera",
     "distractors": [
-      "Genotypning kan bara avgöra AB0, aldrig Rh-systemet",
-      "Genotypning kräver alltid en blodtransfusion först",
-      "Serologisk gruppering och genotypning mäter exakt samma molekyl i provet och ger därför alltid helt identiska svar"
+      "Genotypning kan bara avgöra AB0 men inte Rh",
+      "Genotypning kräver en föregående blodtransfusion",
+      "Serologi och genotypning mäter samma molekyl och ger identiska svar"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -22391,9 +22391,9 @@
     "prompt": "Varför screenas gravida kvinnor rutinmässigt för irreguljära erytrocytantikroppar tidigt i graviditeten, utöver den grundläggande blodgrupperingen?",
     "correct": "För att i god tid upptäcka antikroppar som kan orsaka hemolytisk sjukdom hos fostret/den nyfödda och planera uppföljning",
     "distractors": [
-      "Antikroppsscreening görs enbart vid själva förlossningen, eftersom antikroppar aldrig hinner bildas tidigare under graviditeten",
-      "Screeningen avgör enbart barnets blodgrupp",
-      "Irreguljära antikroppar kan aldrig påverka fostret"
+      "Screeningen görs först vid förlossningen då antikroppar bildas sent",
+      "Screeningen avgör barnets blodgrupp",
+      "Irreguljära antikroppar lämnar fostret opåverkat"
     ],
     "topic": "bma_hematologi_transfusion",
     "difficulty": "Normal",
@@ -22407,7 +22407,7 @@
     "distractors": [
       "Gram-negativa saknar cellvägg helt och hållet",
       "Gram-positiva saknar peptidoglykan helt och hållet",
-      "Det finns ingen skillnad alls i cellväggens uppbyggnad mellan gram-positiva och gram-negativa bakterier, båda har identiskt tjocka peptidoglykanlager och yttre membran"
+      "Gram-positiva och gram-negativa bakterier har identisk cellväggsuppbyggnad"
     ],
     "topic": "bma_mikrobiologi_immunologi",
     "difficulty": "Normal",
@@ -22503,7 +22503,7 @@
     "prompt": "Varför är bakteriella endosporer kliniskt viktiga att känna till vid sterilisering?",
     "correct": "De är extremt resistenta mot värme, uttorkning och många desinfektionsmedel, vilket kräver särskilt effektiva steriliseringsmetoder för att avdödas",
     "distractors": [
-      "De gör bakterien känsligare för alla antibiotika och desinfektionsmedel, vilket gör att helt vanlig rengöring alltid räcker för att avdöda dem fullständigt",
+      "De gör bakterien känsligare så att vanlig rengöring räcker för att avdöda dem",
       "De förhindrar all bakterietillväxt permanent",
       "De saknar all klinisk betydelse"
     ],
@@ -22545,8 +22545,8 @@
     "prompt": "Vad kallas ett odlingsmedium som innehåller ämnen som gynnar tillväxt av en viss bakterieart och/eller hämmar andra, t.ex. för att odla fram en specifik patogen ur normalflora?",
     "correct": "Selektivt odlingsmedium",
     "distractors": [
-      "Blodagar enbart",
-      "Kromogent medium enbart",
+      "Blodagar",
+      "Kromogent medium",
       "Antibiogram"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -22615,9 +22615,9 @@
     "prompt": "Varför tas vanligen flera blododlingsflaskor (aerob och anaerob) från olika venpunktionsställen vid misstänkt sepsis?",
     "correct": "Det ökar sannolikheten att fånga bakterien och hjälper till att skilja en verklig infektion från kontamination med hudbakterier",
     "distractors": [
-      "Det krävs enbart av administrativa skäl",
-      "Fler flaskor sänker alltid den diagnostiska känsligheten och ökar därmed risken för att bakterien missas helt i odlingen vid sepsis",
-      "En enda flaska ger alltid det säkraste svaret"
+      "Det görs främst av administrativa skäl",
+      "Fler flaskor sänker känsligheten och gör att bakterien missas",
+      "En enda flaska ger det mest tillförlitliga svaret"
     ],
     "topic": "bma_mikrobiologi_immunologi",
     "difficulty": "Normal",
@@ -22672,8 +22672,8 @@
     "correct": "Endotoxin är en del av gram-negativa bakteriers cellvägg och frisätts vid celllys, medan exotoxin aktivt utsöndras av levande bakterier",
     "distractors": [
       "Endotoxin utsöndras aktivt av levande gram-positiva bakterier, medan exotoxin utgör en fast del av den gram-negativa cellväggen och frisätts vid lys",
-      "Exotoxin är alltid en del av bakteriens cellvägg",
-      "Det finns ingen skillnad alls mellan begreppen"
+      "Exotoxin utgör en fast del av bakteriens cellvägg",
+      "Endotoxin och exotoxin betecknar samma sak"
     ],
     "topic": "bma_mikrobiologi_immunologi",
     "difficulty": "Normal",
@@ -22700,7 +22700,7 @@
     "correct": "Endogen infektion",
     "distractors": [
       "Exogen infektion",
-      "Nosokomial infektion enbart",
+      "Nosokomial vårdrelaterad infektion",
       "Zoonos"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -22811,9 +22811,9 @@
     "prompt": "Vilken metod anses vara referensmetoden (guldstandard) för att diagnostisera aktiv tuberkulos, trots att den tar flera veckor?",
     "correct": "Odling av Mycobacterium tuberculosis",
     "distractors": [
-      "Snabbtest för antigen i sputum enbart",
-      "Enbart lungröntgen",
-      "Enbart hudtest"
+      "Snabbtest för antigen i sputum",
+      "Lungröntgen",
+      "Tuberkulinhudtest (PPD)"
     ],
     "topic": "bma_mikrobiologi_immunologi",
     "difficulty": "Normal",
@@ -22825,8 +22825,8 @@
     "prompt": "Vad kallas det snabba molekylära testet som kan påvisa tuberkulosbakteriens arvsmassa och samtidigt vissa resistensgener direkt i ett sputumprov?",
     "correct": "PCR-baserat test",
     "distractors": [
-      "Ziehl-Neelsen-färgning enbart",
-      "Serologi enbart",
+      "Ziehl-Neelsen-färgning av utstryk",
+      "Serologisk antikroppsanalys",
       "Blododling"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -22867,9 +22867,9 @@
     "prompt": "Vilken resistensmekanism ligger bakom MRSA:s motståndskraft mot betalaktamantibiotika?",
     "correct": "Ett förändrat penicillinbindande protein med lägre affinitet för betalaktamantibiotika",
     "distractors": [
-      "Nedbrytning av antibiotikat med hjälp av enbart betalaktamas, utan förändrat bindningsprotein",
+      "Nedbrytning av antibiotikat med hjälp av betalaktamas",
       "Total avsaknad av cellvägg hos bakterien",
-      "Ökad kapselbildning enbart, utan proteinförändring"
+      "Ökad kapselbildning kring bakterien"
     ],
     "topic": "bma_mikrobiologi_immunologi",
     "difficulty": "Normal",
@@ -22896,8 +22896,8 @@
     "correct": "Karbapenemaser",
     "distractors": [
       "Vanliga penicillinaser",
-      "Cefalosporinaser enbart",
-      "Aminoglykosidmodifierande enzym enbart"
+      "Cefalosporinaser",
+      "Aminoglykosidmodifierande enzymer"
     ],
     "topic": "bma_mikrobiologi_immunologi",
     "difficulty": "Normal",
@@ -22924,7 +22924,7 @@
     "correct": "Horisontell genöverföring",
     "distractors": [
       "Vertikal genöverföring vid celldelning",
-      "Mutation enbart",
+      "Spontan punktmutation i bakteriens arvsmassa",
       "Fagocytos"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -23050,7 +23050,7 @@
     "correct": "Bakterien bildar mycket resistenta endosporer som klarar vanlig alkoholbaserad handdesinfektion och kräver tvål/vatten samt särskild rengöring",
     "distractors": [
       "Bakterien är resistent mot all antibiotika utan undantag",
-      "Bakterien smittar aldrig mellan patienter på en vårdavdelning och kräver därför inga särskilda hygien- eller rengöringsrutiner alls i vårdmiljön",
+      "Bakterien sprids inte mellan patienter och kräver därför enkla rutiner",
       "Bakterien är ett virus och kräver antivirala läkemedel"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -23133,7 +23133,7 @@
     "prompt": "Vad kallas det snabbtest som ofta används på vårdcentraler för att direkt påvisa antigen från grupp A-streptokocker vid misstänkt halsfluss?",
     "correct": "Strep A-snabbtest",
     "distractors": [
-      "PCR enbart",
+      "PCR-analys av svalgprov",
       "Blododling",
       "Ureasandningstest"
     ],
@@ -23161,7 +23161,7 @@
     "prompt": "Vilket laboratorietest används klassiskt för att skilja Staphylococcus aureus (koagulaspositiv) från andra, mindre virulenta stafylokocker (koagulasnegativa)?",
     "correct": "Koagulastest",
     "distractors": [
-      "Katalastest enbart",
+      "Katalastest",
       "Oxidastest",
       "Ureastest"
     ],
@@ -23218,7 +23218,7 @@
     "correct": "Ett RNA-virus",
     "distractors": [
       "Ett DNA-virus",
-      "Ett retrovirus med enbart dubbelsträngat DNA",
+      "Ett retrovirus med dubbelsträngat DNA",
       "En bakteriofag"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -23231,9 +23231,9 @@
     "prompt": "Vad gör att influensavirus kan orsaka stora pandemier via s.k. antigenskifte (antigenic shift)?",
     "correct": "Det segmenterade RNA-genomet gör att olika influensastammar kan blanda om sina gensegment vid samtidig infektion av en cell",
     "distractors": [
-      "Viruset saknar helt arvsmassa och kan därför aldrig mutera eller byta gensegment med andra influensastammar vid en infektion",
-      "Viruset infekterar aldrig andra djurarter",
-      "Antigenskifte förekommer aldrig hos influensavirus"
+      "Viruset saknar arvsmassa och kan därför inte byta gensegment",
+      "Viruset infekterar bara människa och sprids inte via djur",
+      "Antigenskifte saknas helt hos influensavirus"
     ],
     "topic": "bma_mikrobiologi_immunologi",
     "difficulty": "Normal",
@@ -23247,7 +23247,7 @@
     "distractors": [
       "Antigen shift",
       "Serokonversion",
-      "Reassortment enbart hos bakterier"
+      "Reassortment som förekommer hos bakterier"
     ],
     "topic": "bma_mikrobiologi_immunologi",
     "difficulty": "Normal",
@@ -23301,9 +23301,9 @@
     "prompt": "Varför krävs ett extra steg (omvänd transkription) vid PCR-diagnostik av RNA-virus jämfört med DNA-virus?",
     "correct": "RNA måste först omvandlas till komplementärt DNA med omvänt transkriptas innan den vanliga PCR-amplifieringen kan ske",
     "distractors": [
-      "RNA-virus kan aldrig detekteras med någon PCR-metod",
-      "DNA-virus kräver alltid omvänd transkription före PCR, medan RNA-virus kan amplifieras direkt utan detta steg i labbet",
-      "PCR fungerar bara på bakterier, aldrig på virus"
+      "RNA-virus kan inte detekteras med PCR",
+      "DNA-virus kräver omvänd transkription medan RNA-virus amplifieras direkt",
+      "PCR fungerar bara på bakterier och inte på virus"
     ],
     "topic": "bma_mikrobiologi_immunologi",
     "difficulty": "Normal",
@@ -23357,9 +23357,9 @@
     "prompt": "Varför analyseras ofta både IgM och IgG vid serologisk diagnostik av en infektion?",
     "correct": "IgM stiger tidigt och talar för en färsk/pågående infektion, medan IgG stiger senare och kvarstår längre, vilket talar för genomgången infektion eller immunitet",
     "distractors": [
-      "IgM och IgG mäter alltid exakt samma sak i blodet",
-      "IgG stiger alltid före IgM vid samtliga infektioner",
-      "Endast IgG har någon som helst klinisk betydelse vid infektionsdiagnostik, medan IgM helt saknar värde och aldrig behöver analyseras i något skede av infektionen"
+      "IgM och IgG mäter samma sak i blodet",
+      "IgG stiger före IgM vid alla infektioner",
+      "Bara IgG har klinisk betydelse medan IgM saknar värde"
     ],
     "topic": "bma_mikrobiologi_immunologi",
     "difficulty": "Normal",
@@ -23427,8 +23427,8 @@
     "prompt": "Vad kallas svampar som orsakar ytliga infektioner i hud, hår och naglar genom att bryta ner keratin?",
     "correct": "Dermatofyter",
     "distractors": [
-      "Jästsvampar enbart",
-      "Mögelsvampar enbart",
+      "Jästsvampar",
+      "Mögelsvampar",
       "Protozoer"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -23541,7 +23541,7 @@
     "distractors": [
       "Plasmodium falciparum",
       "Toxoplasma gondii",
-      "Entamoeba histolytica enbart"
+      "Entamoeba histolytica"
     ],
     "topic": "bma_mikrobiologi_immunologi",
     "difficulty": "Normal",
@@ -23567,9 +23567,9 @@
     "prompt": "Hur diagnostiseras vanligen en infektion med tarmparasiter som mask- eller bandmaskägg?",
     "correct": "Mikroskopisk undersökning av avföringsprov för att påvisa ägg eller maskdelar",
     "distractors": [
-      "Enbart blododling, utan avföringsprov",
-      "Enbart PCR på ett urinprov, helt utan mikroskopi av avföringsprov från patienten",
-      "Enbart hudbiopsi, utan avföringsprov"
+      "Blododling i aeroba och anaeroba flaskor",
+      "PCR-analys av ett urinprov",
+      "Histologisk undersökning av en hudbiopsi"
     ],
     "topic": "bma_mikrobiologi_immunologi",
     "difficulty": "Normal",
@@ -23610,7 +23610,7 @@
     "correct": "Autoklavering",
     "distractors": [
       "Alkoholdesinfektion",
-      "UV-bestrålning enbart",
+      "UV-bestrålning av ytan",
       "Kokning i öppet kärl"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -23638,7 +23638,7 @@
     "correct": "Handhygien",
     "distractors": [
       "Antibiotikaprofylax till alla patienter",
-      "Isolering av samtliga patienter",
+      "Isolering av inneliggande patienter",
       "Sterilisering av all mat"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -23651,8 +23651,8 @@
     "prompt": "Varför räcker inte alkoholbaserad handdesinfektion vid misstänkt Clostridioides difficile-infektion, utan tvål och vatten krävs?",
     "correct": "Alkohol avdödar inte bakteriens resistenta endosporer effektivt, medan mekanisk tvättning med tvål och vatten sköljer bort dem",
     "distractors": [
-      "Alkohol är alltid effektivast mot alla mikroorganismer, inklusive resistenta endosporer, medan tvål och vatten saknar effekt helt",
-      "C. difficile bildar inga sporer alls",
+      "Alkohol är effektivast mot alla mikroorganismer medan tvål och vatten saknar effekt",
+      "C. difficile bildar inte några sporer",
       "Handhygien saknar helt betydelse för denna bakterie"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -23679,8 +23679,8 @@
     "prompt": "Vad kallas ett odlingsmedium som är berikat med näringsämnen (t.ex. blod) för att gynna tillväxt av bakterier som är svåra att odla på enklare medium?",
     "correct": "Berikat odlingsmedium, t.ex. blodagar eller chokladagar",
     "distractors": [
-      "Selektivt medium enbart, helt utan någon näringsberikning",
-      "Kromogent medium enbart, utan berikning",
+      "Selektivt medium med tillväxthämmande tillsatser",
+      "Kromogent medium för artidentifiering",
       "Transportmedium, utan odlingsförmåga"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -23722,8 +23722,8 @@
     "correct": "För att avgöra om provet verkligen kommer från de nedre luftvägarna eller huvudsakligen är kontaminerat med saliv från munhålan",
     "distractors": [
       "Kvaliteten på provet saknar all betydelse för tolkningen av odlingssvaret, oavsett hur mycket saliv det innehåller från munhålan",
-      "Skivepitelceller visar alltid en allvarlig infektion",
-      "Bedömningen görs enbart av kostnadsskäl"
+      "Skivepitelceller visar en allvarlig luftvägsinfektion",
+      "Bedömningen görs främst av kostnadsskäl"
     ],
     "topic": "bma_mikrobiologi_immunologi",
     "difficulty": "Normal",
@@ -23791,8 +23791,8 @@
     "prompt": "Varför är tiden till adekvat antibiotikabehandling särskilt kritisk vid misstänkt sepsis?",
     "correct": "Risken för organsvikt och död ökar snabbt för varje timme adekvat behandling fördröjs",
     "distractors": [
-      "Antibiotika har ingen som helst effekt vid sepsis, oavsett hur tidigt behandlingen sätts in",
-      "Sepsis läker alltid ut spontant utan behandling",
+      "Antibiotika saknar effekt vid sepsis oavsett tidpunkt",
+      "Sepsis läker spontant utan behandling",
       "Tidsaspekten saknar helt klinisk betydelse vid sepsis"
     ],
     "topic": "bma_mikrobiologi_immunologi",
@@ -23861,9 +23861,9 @@
     "prompt": "Varför anses metaplasi vara en adaptiv, potentiellt skyddande förändring på kort sikt?",
     "correct": "Den nya celltypen tål ofta den skadliga retningen bättre än den ursprungliga, t.ex. tåligare skivepitel mot mekanisk/kemisk retning",
     "distractors": [
-      "Metaplasi innebär alltid en direkt canceromvandling av den drabbade vävnaden och är därför aldrig en skyddande anpassning hos patienten",
-      "Metaplasi är alltid helt irreversibel",
-      "Metaplasi förekommer enbart i benvävnaden"
+      "Metaplasi innebär en direkt canceromvandling av den drabbade vävnaden",
+      "Metaplasi är en helt irreversibel förändring",
+      "Metaplasi förekommer bara i benvävnad"
     ],
     "topic": "bma_patologi",
     "difficulty": "Normal",
@@ -24057,9 +24057,9 @@
     "prompt": "Vad skiljer torr gangrän från våt gangrän?",
     "correct": "Torr gangrän är i grunden koagulativ nekros utan bakteriell superinfektion, medan våt gangrän innebär bakteriell infektion och likvefaktion",
     "distractors": [
-      "Torr gangrän innebär alltid en bakteriell infektion med likvefaktion, medan våt gangrän aldrig innebär någon infektion alls i den drabbade vävnaden",
-      "Det finns ingen skillnad alls mellan de två formerna",
-      "Våt gangrän uppstår enbart i hjärnvävnad"
+      "Torr gangrän innebär bakteriell infektion medan våt gangrän saknar infektion",
+      "De två formerna skiljer sig inte åt",
+      "Våt gangrän uppstår bara i hjärnvävnad"
     ],
     "topic": "bma_patologi",
     "difficulty": "Normal",
@@ -24129,7 +24129,7 @@
     "distractors": [
       "Dominans av lymfocyter, plasmaceller och makrofager i den drabbade vävnaden",
       "Total avsaknad av celler",
-      "Enbart fibros utan cellinfiltrat"
+      "Uttalad fibros utan cellinfiltrat"
     ],
     "topic": "bma_patologi",
     "difficulty": "Normal",
@@ -24141,9 +24141,9 @@
     "prompt": "Vad kännetecknar kronisk inflammation histopatologiskt?",
     "correct": "Infiltrat av lymfocyter, plasmaceller och makrofager, ofta tillsammans med vävnadsdestruktion och samtidiga läkningsförsök",
     "distractors": [
-      "Enbart neutrofiler, helt utan andra celltyper",
+      "Dominans av neutrofila granulocyter",
       "Total avsaknad av inflammatoriska celler i den drabbade vävnaden, helt utan några som helst vävnadsdestruktion eller läkningsförsök",
-      "Enbart eosinofiler, helt utan andra celltyper"
+      "Dominans av eosinofila granulocyter"
     ],
     "topic": "bma_patologi",
     "difficulty": "Normal",
@@ -24171,7 +24171,7 @@
     "distractors": [
       "Reed-Sternberg-celler",
       "Megakaryocyter",
-      "Osteoklaster enbart"
+      "Osteoklaster"
     ],
     "topic": "bma_patologi",
     "difficulty": "Normal",
@@ -24197,9 +24197,9 @@
     "prompt": "Vilka celltyper dominerar granulationsvävnad?",
     "correct": "Nybildade kapillärer, fibroblaster och inflammatoriska celler",
     "distractors": [
-      "Enbart mogna kollagenfibrer och elastin, helt utan celler eller kärl",
-      "Enbart keratinocyter, utan kärlbildning",
-      "Enbart adipocyter, utan kärlbildning"
+      "Mogna kollagenfibrer och elastin utan celler",
+      "Täta lager av keratinocyter utan kärlbildning",
+      "Ansamlingar av adipocyter utan kärlbildning"
     ],
     "topic": "bma_patologi",
     "difficulty": "Normal",
@@ -24421,9 +24421,9 @@
     "prompt": "Vad kallas den grundläggande skillnaden mellan en benign och en malign tumör vad gäller växtsätt?",
     "correct": "Benigna tumörer växer expansivt och avgränsat, medan maligna tumörer växer infiltrativt/invasivt in i omgivande vävnad",
     "distractors": [
-      "Benigna tumörer växer alltid snabbare och betydligt mer invasivt än maligna tumörer gör i den omgivande vävnaden hos patienten",
-      "Maligna tumörer växer alltid expansivt och avgränsat",
-      "Det finns ingen skillnad alls i växtsätt mellan formerna"
+      "Benigna tumörer växer snabbare och mer invasivt än maligna",
+      "Maligna tumörer växer expansivt och väl avgränsat",
+      "Formerna skiljer sig inte åt i växtsätt"
     ],
     "topic": "bma_patologi",
     "difficulty": "Normal",
@@ -24464,7 +24464,7 @@
     "correct": "Cellerna liknar fortfarande den ursprungliga vävnaden strukturellt och funktionellt, vilket ofta ger en bättre prognos",
     "distractors": [
       "Cellerna saknar helt likhet med ursprungsvävnaden",
-      "Tumören är alltid malign oavsett differentieringsgrad, och graden saknar därför helt betydelse för prognosen hos patienten",
+      "Tumören är malign oavsett differentieringsgrad och graden saknar prognosbetydelse",
       "Differentieringsgrad saknar all prognostisk betydelse"
     ],
     "topic": "bma_patologi",
@@ -24492,8 +24492,8 @@
     "correct": "Gradering beskriver hur avvikande cellerna ser ut mikroskopiskt, medan stadieindelning beskriver tumörens utbredning i kroppen",
     "distractors": [
       "Grad och stadium mäter exakt samma sak i praktiken",
-      "Stadium beskriver enbart cellernas mikroskopiska utseende, medan gradering i stället beskriver hur långt tumören spridit sig i kroppen",
-      "Grad beskriver enbart tumörens fysiska storlek"
+      "Stadium beskriver cellernas mikroskopiska utseende medan gradering beskriver spridningen",
+      "Grad beskriver tumörens fysiska storlek"
     ],
     "topic": "bma_patologi",
     "difficulty": "Normal",
@@ -24505,7 +24505,7 @@
     "prompt": "Vad står bokstäverna T, N och M för i det internationellt använda TNM-systemet för tumörstadieindelning?",
     "correct": "Tumörstorlek/utbredning, regional lymfkörtelspridning och fjärrmetastaser",
     "distractors": [
-      "Typ, Nekros och Malignitetsgrad, som utgör ett helt annat klassifikationssystem",
+      "Typ, Nekros och Malignitetsgrad",
       "Tid, Näring och Metabolism, utan koppling till TNM",
       "Temperatur, Nivå och Mängd, utan koppling till TNM"
     ],
@@ -24563,7 +24563,7 @@
     "distractors": [
       "Lymfogen spridning",
       "Transcoelomisk spridning",
-      "Direkt kontaktspridning enbart"
+      "Direkt kontaktspridning till angränsande organ"
     ],
     "topic": "bma_patologi",
     "difficulty": "Normal",
@@ -24603,7 +24603,7 @@
     "prompt": "Vad kallas cancerns förmåga att undgå kroppens normala reglering av celldelning och programmerad celldöd (apoptos)?",
     "correct": "Undandragande från apoptos och okontrollerad proliferation",
     "distractors": [
-      "Metaplasi, alltså en omvandling till en annan mogen celltyp i vävnaden",
+      "Metaplasi, omvandling till en mogen ersättningscelltyp",
       "Dystrofisk kalcifiering i skadad vävnad",
       "Serös exsudation vid akut inflammation"
     ],
@@ -24659,9 +24659,9 @@
     "prompt": "Vad färgar hematoxylin respektive eosin i en HE-färgning?",
     "correct": "Hematoxylin färgar cellkärnor blåvioletta, eosin färgar cytoplasma och bindväv rosa",
     "distractors": [
-      "Hematoxylin färgar enbart fettvävnad, medan eosin färgar enbart proteiner i cellen och kärnan",
-      "Båda färgämnena färgar enbart cellkärnan",
-      "Eosin färgar enbart bakterier i preparatet"
+      "Hematoxylin färgar fettvävnad medan eosin färgar proteiner",
+      "Båda färgämnena färgar cellkärnan",
+      "Eosin färgar bakterier i preparatet"
     ],
     "topic": "bma_patologi",
     "difficulty": "Normal",
@@ -24687,8 +24687,8 @@
     "prompt": "Vad kan immunhistokemi kliniskt användas till vid cancerdiagnostik, utöver att bekräfta tumörtyp?",
     "correct": "Att avgöra tumörens ursprung samt påvisa specifika markörer som styr val av riktad behandling, t.ex. hormonreceptorer eller HER2",
     "distractors": [
-      "Att enbart mäta tumörens fysiska storlek",
-      "Att enbart avgöra patientens blodgruppstillhörighet och Rh-faktor inför en eventuell transfusion i samband med operationen av tumören",
+      "Att mäta tumörens fysiska storlek",
+      "Att avgöra patientens blodgrupp inför en transfusion",
       "Att helt ersätta all vanlig mikroskopi"
     ],
     "topic": "bma_patologi",
@@ -24771,9 +24771,9 @@
     "prompt": "Vad är den huvudsakliga nackdelen med fryssnitt jämfört med den vanliga, paraffininbäddade preparationen av vävnad?",
     "correct": "Sämre morfologisk detaljupplösning och högre risk för tolkningsfel, då metoden prioriterar snabbhet",
     "distractors": [
-      "Fryssnitt tar alltid flera dagar att analysera",
-      "Fryssnitt kan aldrig visa tumörvävnad över huvud taget och är därför oanvändbart under operationen på patienten",
-      "Fryssnitt kräver alltid immunhistokemi för att fungera"
+      "Fryssnitt tar flera dagar att analysera",
+      "Fryssnitt kan inte visa tumörvävnad och är oanvändbart under operation",
+      "Fryssnitt kräver immunhistokemi för att fungera"
     ],
     "topic": "bma_patologi",
     "difficulty": "Normal",
@@ -24799,7 +24799,7 @@
     "prompt": "Vilket kemikalie används vanligen för att fixera (bevara) ett vävnadsprov innan histopatologisk bearbetning?",
     "correct": "Formalin",
     "distractors": [
-      "Etanol enbart",
+      "Etanol",
       "Kaliumhydroxid",
       "Natriumklorid"
     ],
@@ -24813,9 +24813,9 @@
     "prompt": "Varför är korrekt fixering av ett vävnadsprov (rätt tid, rätt fixeringsmedel) avgörande för den histopatologiska bedömningen?",
     "correct": "Otillräcklig eller felaktig fixering kan ge autolys, artefakter och förvanskad morfologi som försvårar eller förfalskar diagnosen",
     "distractors": [
-      "Fixering påverkar aldrig vävnadens utseende i mikroskop",
-      "Fixering krävs enbart för att vävnaden ska få rätt färg",
-      "Fixering är enbart relevant vid immunhistokemisk färgning, aldrig vid vanlig HE-färgning eller vid morfologisk bedömning av snittet"
+      "Fixering lämnar vävnadens utseende opåverkat",
+      "Fixering behövs främst för att ge vävnaden rätt färg",
+      "Fixering är relevant bara vid immunhistokemi och inte vid HE-färgning"
     ],
     "topic": "bma_patologi",
     "difficulty": "Normal",
@@ -24939,9 +24939,9 @@
     "prompt": "Vad kallas den histopatologiska undersökningen som görs efter en operation för att kontrollera om tumörvävnad finns kvar i kanten av det bortopererade preparatet?",
     "correct": "Marginalbedömning",
     "distractors": [
-      "Fryssnitt enbart",
-      "Cytologi enbart",
-      "Immunhistokemi enbart"
+      "Fryssnittsundersökning",
+      "Cytologisk undersökning",
+      "Immunhistokemisk färgning"
     ],
     "topic": "bma_patologi",
     "difficulty": "Normal",
@@ -25010,8 +25010,8 @@
     "correct": "Klinisk obduktion syftar främst till att öka den medicinska kunskapen om sjukdomsförlopp och behandlingseffekt, medan rättsmedicinsk obduktion syftar till att fastställa dödsorsak/dödssätt inför en rättslig process",
     "distractors": [
       "De har exakt samma syfte och genomförs på exakt samma sätt, av samma läkare, med samma frågeställning och samma rättsliga status, oavsett om dödsfallet i det enskilda fallet bedöms som helt naturligt eller onaturligt",
-      "Klinisk obduktion görs alltid på begäran av polisen",
-      "Rättsmedicinsk obduktion görs aldrig vid misstänkt brott"
+      "Klinisk obduktion görs på begäran av polisen",
+      "Rättsmedicinsk obduktion undviks vid misstänkt brott"
     ],
     "topic": "bma_patologi",
     "difficulty": "Normal",
@@ -25080,7 +25080,7 @@
     "correct": "Mitosindex",
     "distractors": [
       "Tumörstadium",
-      "Differentieringsgrad enbart",
+      "Differentieringsgrad",
       "Angiogenesindex"
     ],
     "topic": "bma_patologi",
@@ -25122,7 +25122,7 @@
     "correct": "Tumörheterogenitet",
     "distractors": [
       "Metaplasi",
-      "Anaplasi enbart",
+      "Anaplasi",
       "Fibrinoid nekros i kärl"
     ],
     "topic": "bma_patologi",
@@ -25164,7 +25164,7 @@
     "correct": "Perineural växt",
     "distractors": [
       "Transcoelomisk spridning",
-      "Lymfogen spridning enbart",
+      "Lymfogen spridning",
       "Angiogenes"
     ],
     "topic": "bma_patologi",

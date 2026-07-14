@@ -1,5 +1,15 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.148
+- **Formtells-svepet klart i fem hela utbildningar till – biomedicinsk analytiker, medicinsk sekreterare, läkare, tandläkare och logoped ger nu alla 0 fel och 0 varningar i `validate_quiz.py`.** Kvar av svepet står bara fysioterapeut (586 varningar).
+- **Biomedicinsk analytiker färdig (18/18 ämnen).** De sista fem ämnena – klinisk kemi, njur/gastro/nuklearmedicin, hematologi/transfusion, mikrobiologi och patologi – rensades på absolut-ords-tellen och självutpekande distraktorer; 320 distraktorer i 163 frågor omskrivna till konkreta, trovärdiga fel. Exempel: "Enbart hemolys, utan koppling till gallvägarna" → "Ökad hemolys av röda blodkroppar".
+- **Logoped färdig (alla sex ämnen).** 343 distraktorer i 203 frågor omskrivna. Genomgående "Enbart X"/"Aldrig Y"-distraktorer gjorda till raka felalternativ, t.ex. "Enbart facialisnerven, utan bidrag från andra nerver" → "Facialisnerven ensam".
+- **Tandläkare färdig (alla fem ämnen).** 169 distraktorer i 98 frågor omskrivna, bl.a. anatomiska uppräkningar där distraktorerna bar "Endast"/"Enbart" som rätt svar aldrig gjorde.
+- **Medicinsk sekreterare färdig.** 141 distraktorer i 69 frågor omskrivna. Här steg dessutom längdbias i diagnoskodnings-ämnet över gränsen (44 % → 56 %) när distraktorerna kortades – rättat med 19 genuint fylligare felförklaringar tillbaka till under 40 %.
+- **Läkare (anatomi/fysiologi) färdig.** De sex sista absolut-orden borta, plus tre frågor med pre-existerande längdbias (i ans/njure/gi) utjämnade.
+- **Metod:** distraktorerna skrevs om för hand till konkreta fel; en index-baserad patch rörde bara de flaggade alternativen så att övriga förblev byte-identiska. Validatorn kördes efter varje fil och fångade även längdbias som infördes vid förkortning.
+- VERSION/APP_VERSION/index.html-cachebuster → 0.9.148.
+
 ## 0.9.147
 - **Formtells-svepet fortsätter i biomedicinsk analytiker: 13 av 18 ämnen rena.** Med de nya kontrollerna från 0.9.146 larmade filen på 657 punkter. Nu är cell/vävnad, blod, hjärta, respiration, nervsystem, njurar, matsmältning, endokrina, immunförsvar, EKG, spirometri, kärlfysiologi och neurofysiologi genomgångna – cirka 480 frågor omskrivna. Kvar: klinisk kemi, njur/gastro/nuklearmedicin, hematologi/transfusion, mikrobiologi och patologi.
 - **Absolut-ords-tellen var den dominerande skulden.** Distraktorer som "Endast filtration och sekretion", "Alltid ett tecken på hjärtsvikt" och "Aldrig i förmaken" gick att stryka utan sakkunskap eftersom rätt svar aldrig bar ett sådant ord. Samtliga omskrivna till konkreta, trovärdiga fel: "Endast njurbäckenet, inte parenkymet" blev "Njurbäckenet och kalkarna med tät kontrast".

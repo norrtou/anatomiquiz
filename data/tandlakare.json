@@ -342,7 +342,7 @@
     "correct": "Dentintubuli innerveras och vätskerörelser i dem retar nervändar",
     "distractors": [
       "Dentin innehåller betydligt fler blodkärl än vad emalj gör i tanden",
-      "Dentin har ingen mineralisering alls",
+      "Dentin är helt omineraliserat till skillnad från emalj",
       "Dentin ligger ytligare än emalj"
     ],
     "topic": "tandlakare_tand_parodontium",
@@ -439,9 +439,9 @@
     "prompt": "Vilka nervfibertyper förmedlar smärta från pulpan?",
     "correct": "A-delta- och C-fibrer",
     "distractors": [
-      "Endast A-alfa-fibrer",
-      "Endast B-fibrer",
-      "Endast autonoma fibrer"
+      "A-alfa-fibrer",
+      "B-fibrer",
+      "Autonoma sympatiska fibrer"
     ],
     "topic": "tandlakare_tand_parodontium",
     "difficulty": "Normal",
@@ -467,8 +467,8 @@
     "prompt": "Vad innehåller pulpan förutom bindväv och celler?",
     "correct": "Blodkärl, lymfkärl och nerver",
     "distractors": [
-      "Endast blodkärl, helt utan nerver",
-      "Endast nerver utan kärl",
+      "Blodkärl utan nervförsörjning",
+      "Nerver utan blodkärl",
       "Muskelfibrer i ligamentet"
     ],
     "topic": "tandlakare_tand_parodontium",
@@ -566,7 +566,7 @@
     "correct": "I lakuner, med utskott i kanalikuli",
     "distractors": [
       "Fritt flytande i pulpans mjuka vävnad",
-      "Inne i dentintubuli enbart",
+      "Inne i dentintubuli",
       "Instängda i emaljprismorna"
     ],
     "topic": "tandlakare_tand_parodontium",
@@ -691,7 +691,7 @@
     "prompt": "Vilka funktioner har parodontalligamentet, förutom mekanisk förankring?",
     "correct": "Stötdämpning, proprioception och näringsförsörjning till cement/ben",
     "distractors": [
-      "Endast mekanisk förankring av tanden i alveolen, utan andra funktioner",
+      "Ren mekanisk förankring av tanden i alveolen utan andra funktioner",
       "Blodbildning i ligamentets vävnad, likt benmärgen",
       "Hormonproduktion från ligamentets celler"
     ],
@@ -705,9 +705,9 @@
     "prompt": "Vad möjliggör parodontalligamentets kontinuerliga ombyggnad (remodellering)?",
     "correct": "Fibroblaster och celler som bryter ner/bygger om kollagen samt ben- och cementceller",
     "distractors": [
-      "Enbart ameloblasternas aktivitet vid emaljbildning",
-      "Enbart en passiv elasticitet i de omogna kollagenfibrerna i ligamentet, helt utan celler",
-      "Enbart odontoblasternas aktivitet vid dentinbildning"
+      "Ameloblasternas aktivitet vid emaljbildning",
+      "En passiv elasticitet i omogna kollagenfibrer utan cellinblandning",
+      "Odontoblasternas aktivitet vid dentinbildning"
     ],
     "topic": "tandlakare_tand_parodontium",
     "difficulty": "Normal",
@@ -1293,9 +1293,9 @@
     "prompt": "Vad skiljer parodontit från gingivit?",
     "correct": "Parodontit ger fästeförlust och benförlust, gingivit är begränsad till gingivan och reversibel",
     "distractors": [
-      "Parodontit är alltid helt smärtfri, medan gingivit alltid är mycket smärtsam för patienten i munnen",
-      "Gingivit drabbar enbart barn och unga patienter",
-      "Parodontit uppstår enbart till följd av trauma mot tanden"
+      "Parodontit är smärtfri medan gingivit är mycket smärtsam",
+      "Gingivit drabbar bara barn och unga patienter",
+      "Parodontit uppstår bara till följd av trauma mot tanden"
     ],
     "topic": "tandlakare_tand_parodontium",
     "difficulty": "Normal",
@@ -1308,7 +1308,7 @@
     "correct": "Ökat fickdjup utan apikal migration av fästepitelet eller fästeförlust",
     "distractors": [
       "Fästeförlust och benresorption sker",
-      "Alltid närvaro av var i fickan",
+      "Närvaro av var i fickan",
       "En total avsaknad av all inflammation i vävnaden runt tanden och gingivan"
     ],
     "topic": "tandlakare_tand_parodontium",
@@ -1434,8 +1434,8 @@
     "correct": "Nära premolarernas och molarernas rötter, ibland i direkt kontakt",
     "distractors": [
       "Långt ovanför tändernas rötter",
-      "Endast i kontakt med incisivernas rötter",
-      "Endast i direkt kontakt med hörntändernas rötter, aldrig molarernas"
+      "I kontakt med incisivernas rötter",
+      "I direkt kontakt med hörntändernas rötter"
     ],
     "topic": "tandlakare_kakar_kakled",
     "difficulty": "Normal",
@@ -1545,8 +1545,8 @@
     "prompt": "Vilka huvuddelar består mandibeln av?",
     "correct": "Corpus mandibulae och två rami mandibulae",
     "distractors": [
-      "Corpus och processus alveolaris, endast dessa",
-      "Ramus och condylus endast",
+      "Corpus och processus alveolaris",
+      "Ramus och condylus",
       "Corpus, ramus och maxilla"
     ],
     "topic": "tandlakare_kakar_kakled",
@@ -1756,8 +1756,8 @@
     "correct": "Glidande rörelse",
     "distractors": [
       "Ren rotation",
-      "Ingen rörelse alls",
-      "Endast lateral rörelse"
+      "En låst led utan rörelse",
+      "Ren lateral rörelse"
     ],
     "topic": "tandlakare_kakar_kakled",
     "difficulty": "Normal",
@@ -1770,8 +1770,8 @@
     "correct": "Rotation mellan caput mandibulae och disken",
     "distractors": [
       "Ren glidning utan rotation",
-      "Ingen rörelse alls i leden",
-      "Endast protrusion framåt utan någon rotation"
+      "En låst led utan rörelse",
+      "Ren protrusion framåt utan rotation"
     ],
     "topic": "tandlakare_kakar_kakled",
     "difficulty": "Normal",
@@ -1881,9 +1881,9 @@
     "prompt": "Vilka rörelser kan mandibeln utföra i käkleden?",
     "correct": "Depression, elevation, protrusion, retrusion och lateral excursion",
     "distractors": [
-      "Endast depression och elevation av mandibeln nedåt och uppåt i leden",
-      "Endast rotation utan translation i leden",
-      "Endast protrusion och retrusion av mandibeln"
+      "Depression och elevation av mandibeln",
+      "Rotation utan translation i leden",
+      "Protrusion och retrusion av mandibeln"
     ],
     "topic": "tandlakare_kakar_kakled",
     "difficulty": "Normal",
@@ -1951,8 +1951,8 @@
     "prompt": "Vilken funktion har m. temporalis huvudsakligen?",
     "correct": "Elevation av mandibeln; bakre fibrer bidrar även till retrusion",
     "distractors": [
-      "Endast protrusion av mandibeln",
-      "Endast lateral excursion av mandibeln åt sidorna i själva käkleden",
+      "Protrusion av mandibeln",
+      "Lateral excursion av mandibeln åt sidorna",
       "Depression av mandibeln nedåt"
     ],
     "topic": "tandlakare_kakar_kakled",
@@ -1995,7 +1995,7 @@
     "distractors": [
       "Depression av mandibeln",
       "Retrusion av mandibeln",
-      "Lateral excursion ensidigt endast"
+      "Ensidig lateral excursion"
     ],
     "topic": "tandlakare_kakar_kakled",
     "difficulty": "Normal",
@@ -2023,7 +2023,7 @@
     "distractors": [
       "Processus coronoideus framtill; bildar en sling tillsammans med m. temporalis och masseter",
       "Collum mandibulae; bildar sling med lateralis",
-      "Caput mandibulae; ingen sling bildas"
+      "Caput mandibulae; utan att bilda någon sling"
     ],
     "topic": "tandlakare_kakar_kakled",
     "difficulty": "Normal",
@@ -2093,7 +2093,7 @@
     "distractors": [
       "Båda caput translaterar lika mycket framåt",
       "Höger caput mandibulae translaterar framåt medan vänster roterar kvar på plats i fossan",
-      "Ingen rörelse sker i någon led"
+      "Båda sidor står helt stilla"
     ],
     "topic": "tandlakare_kakar_kakled",
     "difficulty": "Normal",
@@ -2274,7 +2274,7 @@
     "correct": "Den bildas av två separata mesenkymkondensationer som växer samman med disken emellan",
     "distractors": [
       "Den saknar helt ledkapsel under hela utvecklingen",
-      "Den bildas enbart av celler från neurallisten",
+      "Den bildas av celler från neurallisten",
       "Den saknar helt synovialmembran genom hela livet och under hela utvecklingen av leden i käken"
     ],
     "topic": "tandlakare_kakar_kakled",
@@ -2357,7 +2357,7 @@
     "prompt": "Vilka fiberriktningar/delar brukar m. temporalis delas in i funktionellt?",
     "correct": "Främre, mellersta och bakre fibrer med delvis olika dragriktning",
     "distractors": [
-      "Endast en enhetlig fiberriktning",
+      "En enda enhetlig fiberriktning",
       "Ytlig och djup del, som masseter",
       "Övre och undre huvud, precis som hos m. pterygoideus lateralis i leden"
     ],
@@ -2386,7 +2386,7 @@
     "correct": "Ansiktsbåge och rörelseregistrering",
     "distractors": [
       "Endoskop",
-      "Elektromyografi av tuggmuskulaturen enbart",
+      "Elektromyografi av tuggmuskulaturen",
       "Sialografi"
     ],
     "topic": "tandlakare_kakar_kakled",
@@ -2413,7 +2413,7 @@
     "prompt": "Vad krävs för att munnen ska kunna öppnas maximalt, förutom rotation i käkleden?",
     "correct": "Translation av caput mandibulae framåt längs tuberculum articulare",
     "distractors": [
-      "Enbart rotation utan translation",
+      "Ren rotation utan translation",
       "Kontraktion av m. temporalis bakre fibrer",
       "Fullständig avslappning av alla n. facialis-innerverade muskler i ansiktet"
     ],
@@ -2639,7 +2639,7 @@
     "distractors": [
       "Corpus mandibulae mitt fram",
       "Processus coronoideus",
-      "Angulus mandibulae uteslutande"
+      "Angulus mandibulae"
     ],
     "topic": "tandlakare_kakar_kakled",
     "difficulty": "Normal",
@@ -2722,8 +2722,8 @@
     "correct": "Magnetresonanstomografi",
     "distractors": [
       "Vanlig slätröntgen",
-      "Datortomografi av benet enbart",
-      "Ultraljud enbart"
+      "Datortomografi av benstrukturerna",
+      "Ultraljud"
     ],
     "topic": "tandlakare_kakar_kakled",
     "difficulty": "Normal",
@@ -2735,9 +2735,9 @@
     "prompt": "Vilken avbildningsmetod visar bäst käkledens benstrukturer vid t.ex. misstänkt fraktur eller artros?",
     "correct": "Datortomografi, samt konventionell röntgen/OPG för översikt",
     "distractors": [
-      "Enbart MRT används alltid som förstahandsundersökning vid fraktur",
-      "Enbart ultraljud av ledens mjukdelar",
-      "Enbart sialografi av spottkörtelns gångsystem"
+      "MRT som förstahandsundersökning vid fraktur",
+      "Ultraljud av ledens mjukdelar",
+      "Sialografi av spottkörtelns gångsystem"
     ],
     "topic": "tandlakare_kakar_kakled",
     "difficulty": "Normal",
@@ -2764,7 +2764,7 @@
     "correct": "Hyaluronsyrarik vätska som smörjer och närer broskytorna",
     "distractors": [
       "Ren blodplasma helt utan några tillsatser alls i käkleden",
-      "Enbart lymfa från de omgivande lymfkörtlarna i halsen",
+      "Lymfa från de omgivande lymfkörtlarna i halsen",
       "Cerebrospinalvätska direkt från hjärnans ventriklar"
     ],
     "topic": "tandlakare_kakar_kakled",
@@ -2807,7 +2807,7 @@
     "distractors": [
       "Apex, corpus och cauda linguae",
       "Corpus, cauda och radix linguae",
-      "Endast apex och corpus"
+      "Apex och corpus linguae"
     ],
     "topic": "tandlakare_munhala_munbotten",
     "difficulty": "Normal",
@@ -2848,7 +2848,7 @@
     "correct": "Papillae filiformes, fungiformes, vallatae och foliatae",
     "distractors": [
       "Papillae filiformes, fungiformes, circumferentes och coronatae",
-      "Endast papillae fungiformes och vallatae",
+      "Papillae fungiformes och vallatae",
       "Papillae vallatae, foliatae och coronatae"
     ],
     "topic": "tandlakare_munhala_munbotten",
@@ -2876,8 +2876,8 @@
     "correct": "I en rad direkt framför sulcus terminalis",
     "distractors": [
       "Spritt jämnt över hela tungryggens övre yta",
-      "Endast på tungspetsen",
-      "Endast på tungans undersida"
+      "På tungspetsen",
+      "På tungans undersida"
     ],
     "topic": "tandlakare_munhala_munbotten",
     "difficulty": "Normal",
@@ -3030,7 +3030,7 @@
     "correct": "Tungan deviera mot den förlamade sidan",
     "distractors": [
       "Tungan deviera bort från den förlamade sidan",
-      "Ingen synlig effekt alls",
+      "Utebliven synlig avvikelse",
       "Tungan kan inte alls stickas ut"
     ],
     "topic": "tandlakare_munhala_munbotten",
@@ -3045,7 +3045,7 @@
     "distractors": [
       "De ändrar bara tungans form utan att flytta den",
       "De producerar saliv",
-      "De ger enbart smaksensorik"
+      "De ger smaksensorik"
     ],
     "topic": "tandlakare_munhala_munbotten",
     "difficulty": "Normal",
@@ -3057,9 +3057,9 @@
     "prompt": "Varifrån har alla yttre tungmuskler sitt ursprung (namnkonvention '-glossus')?",
     "correct": "Utanför tungan",
     "distractors": [
-      "Alltid från tungspetsen",
-      "Alltid från septum linguae",
-      "Alltid från sulcus terminalis"
+      "Från tungspetsen",
+      "Från septum linguae",
+      "Från sulcus terminalis"
     ],
     "topic": "tandlakare_munhala_munbotten",
     "difficulty": "Normal",
@@ -3085,9 +3085,9 @@
     "prompt": "Vilka fyra inre (intrinsic) tungmuskler finns?",
     "correct": "M. longitudinalis superior, m. longitudinalis inferior, m. transversus linguae och m. verticalis linguae",
     "distractors": [
-      "M. genioglossus, m. hyoglossus, m. styloglossus och m. palatoglossus, alltså de yttre tungmusklerna enbart",
-      "Endast m. transversus och m. verticalis linguae, inga andra",
-      "M. longitudinalis superior och inferior enbart, utan övriga"
+      "M. genioglossus, m. hyoglossus, m. styloglossus och m. palatoglossus",
+      "M. transversus och m. verticalis linguae",
+      "M. longitudinalis superior och inferior"
     ],
     "topic": "tandlakare_munhala_munbotten",
     "difficulty": "Normal",
@@ -3197,9 +3197,9 @@
     "prompt": "Vilken nerv förmedlar sensorik från tungans allra bakersta del och epiglottisregionen?",
     "correct": "N. vagus, via n. laryngeus internus",
     "distractors": [
-      "N. glossopharyngeus, uteslutande den",
-      "N. lingualis enbart",
-      "N. facialis enbart"
+      "N. glossopharyngeus",
+      "N. lingualis",
+      "N. facialis"
     ],
     "topic": "tandlakare_munhala_munbotten",
     "difficulty": "Normal",
@@ -3225,9 +3225,9 @@
     "prompt": "Vad innebär det att tungans sensoriska innervation följer 'tre nerver för känsel, tre för smak'-principen?",
     "correct": "Allmän känsel: V3, IX, X; smak: VII, IX, X",
     "distractors": [
-      "Allt sköts av enbart n. hypoglossus",
-      "Endast n. facialis ansvarar för både känsel och smak i hela tungan",
-      "Endast n. vagus ansvarar för hela tungans innervation"
+      "Allt sköts av n. hypoglossus",
+      "N. facialis ansvarar för både känsel och smak i hela tungan",
+      "N. vagus ansvarar för hela tungans innervation"
     ],
     "topic": "tandlakare_munhala_munbotten",
     "difficulty": "Normal",
@@ -3295,8 +3295,8 @@
     "prompt": "Vilka två huvuddelar består gommen av?",
     "correct": "Hårda gommen och mjuka gommen",
     "distractors": [
-      "Endast hårda gommen",
-      "Endast mjuka gommen",
+      "Bara hårda gommen",
+      "Bara mjuka gommen",
       "Palatum durum och palatum tertium"
     ],
     "topic": "tandlakare_munhala_munbotten",
@@ -3309,8 +3309,8 @@
     "prompt": "Vilka ben bildar hårda gommens benstomme?",
     "correct": "Processus palatinus maxillae och lamina horizontalis ossis palatini",
     "distractors": [
-      "Endast maxillans processus palatinus, helt utan andra ben i hårda gommen",
-      "Endast os palatinum ensamt, utan maxillan",
+      "Maxillans processus palatinus ensamt",
+      "Os palatinum ensamt",
       "Mandibeln och maxillan tillsammans bildar gommen"
     ],
     "topic": "tandlakare_munhala_munbotten",
@@ -3325,7 +3325,7 @@
     "distractors": [
       "Ben",
       "Brosk",
-      "Fettvävnad enbart, utan muskler"
+      "Ren fettvävnad utan muskulatur"
     ],
     "topic": "tandlakare_munhala_munbotten",
     "difficulty": "Normal",
@@ -3814,8 +3814,8 @@
     "correct": "Den kan sprida sig bilateralt tidigt, särskilt från medellinjenära strukturer",
     "distractors": [
       "Tungan saknar helt lymfdränering till halsens körtlar",
-      "Lymfan från tungan går alltid enbart till den motsatta sidans körtlar på halsen",
-      "Lymfan från tungan stannar alltid kvar lokalt i tungan"
+      "Lymfan från tungan går bara till motsatta sidans halskörtlar",
+      "Lymfan från tungan stannar kvar lokalt i tungan"
     ],
     "topic": "tandlakare_munhala_munbotten",
     "difficulty": "Normal",
@@ -3897,9 +3897,9 @@
     "prompt": "Vilken funktion har de tre konstriktormusklerna gemensamt vid sväljning?",
     "correct": "De kontraherar sekventiellt uppifrån och ner och pressar bolusen nedåt mot matstrupen",
     "distractors": [
-      "De håller alltid svalget helt öppet och helt passivt under hela sväljningsförloppet av maten",
-      "De bildar enbart smakreceptorer i slemhinnan",
-      "De styr enbart andningen och har ingen roll vid sväljning"
+      "De håller svalget öppet och passivt under sväljningen",
+      "De bildar smakreceptorer i slemhinnan",
+      "De styr andningen utan roll vid sväljning"
     ],
     "topic": "tandlakare_munhala_munbotten",
     "difficulty": "Normal",
@@ -4023,9 +4023,9 @@
     "prompt": "Vilken risk är förknippad med Ludwigs angina om den inte behandlas snabbt?",
     "correct": "Svullnaden kan trycka undan tungan bakåt och hota fri luftväg",
     "distractors": [
-      "Den orsakar alltid dövhet",
-      "Den påverkar aldrig andningen",
-      "Den läker alltid spontant helt utan behandling inom några dagar"
+      "Den orsakar bestående dövhet",
+      "Den lämnar andningen opåverkad",
+      "Den läker spontant utan behandling inom några dagar"
     ],
     "topic": "tandlakare_munhala_munbotten",
     "difficulty": "Normal",
@@ -4066,8 +4066,8 @@
     "correct": "Tredje grenbågen",
     "distractors": [
       "Första grenbågen",
-      "Enbart andra grenbågen",
-      "Enbart fjärde grenbågen"
+      "Andra grenbågen",
+      "Fjärde grenbågen"
     ],
     "topic": "tandlakare_munhala_munbotten",
     "difficulty": "Normal",
@@ -4079,7 +4079,7 @@
     "prompt": "Varför skiljer sig innerveringen mellan tungans främre 2/3 (V/VII) och bakre 1/3 (IX), embryologiskt sett?",
     "correct": "De utvecklas från olika grenbågar, som var och en har sin egen kranialnerv",
     "distractors": [
-      "Det finns ingen embryologisk förklaring, bara slumpmässig variation",
+      "Det beror på slumpmässig variation utan embryologisk grund",
       "Hela tungan kommer från samma grenbåge men delas av misstag under utvecklingen",
       "Bakre tungan bildas efter födseln, främre delen före"
     ],
@@ -4178,7 +4178,7 @@
     "correct": "Nedsatt tonus i m. buccinator, vilket gör att mat samlas i kindfickan vid tuggning",
     "distractors": [
       "Total avsaknad av all smak i hela tungans slemhinna, gommen och svalget hos patienten",
-      "Förlamning av samtliga tungmuskler på båda sidor",
+      "Förlamning av tungmusklerna på båda sidor",
       "Bortfall av allmän känsel i tungans främre delar"
     ],
     "topic": "tandlakare_munhala_munbotten",
@@ -4430,8 +4430,8 @@
     "correct": "Temporala, zygomatiska, buckala, mandibulära och cervikala grenar",
     "distractors": [
       "Oftalmiska, maxillära, mandibulära, buckala och cervikala grenar i ansiktet",
-      "Endast temporala och cervikala grenar",
-      "Endast buckala och mandibulära grenar"
+      "Temporala och cervikala grenar",
+      "Buckala och mandibulära grenar"
     ],
     "topic": "tandlakare_huvud_hals_karl_nerver",
     "difficulty": "Normal",
@@ -4443,9 +4443,9 @@
     "prompt": "Vad kännetecknar en perifer (nedre motorneuron) n. facialis-pares (Bells pares)?",
     "correct": "Hela ena ansiktshalvan drabbas, inklusive pannan",
     "distractors": [
-      "Endast nedre ansiktshalvan drabbas, pannan sparas",
-      "Endast ögat på motsatt sida drabbas",
-      "Enbart smaksinnet påverkas, inga muskler"
+      "Nedre ansiktshalvan drabbas medan pannan sparas",
+      "Ögat på motsatt sida drabbas",
+      "Smaksinnet påverkas utan muskelbortfall"
     ],
     "topic": "tandlakare_huvud_hals_karl_nerver",
     "difficulty": "Normal",
@@ -4459,7 +4459,7 @@
     "distractors": [
       "M. frontalis innerveras av n. trigeminus i stället för av n. facialis i ansiktet",
       "M. frontalis saknar helt kortikal innervation",
-      "Skadan påverkar aldrig hjärnnerv VII vid stroke"
+      "Skadan lämnar hjärnnerv VII opåverkad vid stroke"
     ],
     "topic": "tandlakare_huvud_hals_karl_nerver",
     "difficulty": "Normal",
@@ -4569,9 +4569,9 @@
     "prompt": "Förutom tuggmusklerna, vilka övriga muskler innerveras motoriskt av n. mandibularis (V3)?",
     "correct": "M. tensor tympani, m. tensor veli palatini, m. mylohyoideus och digastricus främre buk",
     "distractors": [
-      "M. stapedius och m. stylohyoideus, som i stället tillhör en helt annan muskelgrupp och gälbåge",
+      "M. stapedius och m. stylohyoideus från andra gälbågen",
       "Alla mimiska ansiktsmuskler, oavsett ursprungsbåge",
-      "M. stylopharyngeus, en muskel från en annan gälbåge"
+      "M. stylopharyngeus från tredje gälbågen"
     ],
     "topic": "tandlakare_huvud_hals_karl_nerver",
     "difficulty": "Normal",
@@ -4696,7 +4696,7 @@
     "correct": "M. stapedius, m. stylohyoideus och digastricus bakre buk",
     "distractors": [
       "M. tensor tympani och m. mylohyoideus i munbottens muskulatur",
-      "Samtliga tuggmuskler",
+      "Tuggmusklerna gemensamt",
       "M. stylopharyngeus"
     ],
     "topic": "tandlakare_huvud_hals_karl_nerver",
@@ -4821,9 +4821,9 @@
     "prompt": "Vad kan orsaka en central (UMN) skillnad jämfört med en perifer (LMN) facialispares vid klinisk undersökning?",
     "correct": "Central skada sparar pannan, perifer skada drabbar hela ansiktshalvan",
     "distractors": [
-      "Central skada ger alltid total förlamning av hela ansiktshalvan",
-      "Perifer skada drabbar aldrig munnens muskulatur, bara ögat",
-      "Det finns ingen som helst klinisk skillnad mellan central och perifer skada"
+      "Central skada ger total förlamning av hela ansiktshalvan",
+      "Perifer skada drabbar bara ögat och inte munnens muskulatur",
+      "Central och perifer skada ger identiska kliniska fynd"
     ],
     "topic": "tandlakare_huvud_hals_karl_nerver",
     "difficulty": "Normal",
@@ -4837,7 +4837,7 @@
     "distractors": [
       "Vid arcus aortae",
       "Vid clavikeln",
-      "Vid hyoidbenet ensamt, alltid exakt vid C6"
+      "Vid hyoidbenets nivå, ungefär vid C6"
     ],
     "topic": "tandlakare_huvud_hals_karl_nerver",
     "difficulty": "Normal",
@@ -5087,7 +5087,7 @@
     "prompt": "Vilken nerv förmedlar huvuddelen av den sensoriska informationen från sinus caroticus och glomus caroticum?",
     "correct": "N. glossopharyngeus",
     "distractors": [
-      "N. vagus uteslutande",
+      "N. vagus",
       "N. hypoglossus",
       "N. facialis"
     ],
@@ -5129,9 +5129,9 @@
     "prompt": "Vilka fyra tonsillgrupper ingår i Waldeyers svalgring?",
     "correct": "Tonsilla pharyngea, tonsilla tubaria, tonsilla palatina och tonsilla lingualis",
     "distractors": [
-      "Endast tonsilla palatina och lingualis",
+      "Tonsilla palatina och lingualis",
       "Tonsilla palatina, cervikala, axillära och inguinala tonsiller i hela kroppens lymfsystem",
-      "Endast tonsilla pharyngea"
+      "Tonsilla pharyngea ensam"
     ],
     "topic": "tandlakare_huvud_hals_karl_nerver",
     "difficulty": "Normal",
@@ -5215,7 +5215,7 @@
     "distractors": [
       "Lymfsystemet i huvudet är helt isolerat från resten av kroppens lymfbanor och körtelstationer på halsen och bålen",
       "Munhålan saknar helt lymfdränering till halsens körtelstationer",
-      "Lymfkörtlarna på halsen påverkas aldrig av dentala infektioner"
+      "Lymfkörtlarna på halsen påverkas inte av dentala infektioner"
     ],
     "topic": "tandlakare_huvud_hals_karl_nerver",
     "difficulty": "Normal",
@@ -5257,7 +5257,7 @@
     "distractors": [
       "N. facialis, via chorda tympani och n. lingualis, till ganglion submandibulare nere i munbotten",
       "N. trigeminus, direkt till körteln utan något ganglion",
-      "N. vagus, via plexus pharyngeus, utan ganglion oticum"
+      "N. vagus via plexus pharyngeus till körteln"
     ],
     "topic": "tandlakare_huvud_hals_karl_nerver",
     "difficulty": "Normal",
@@ -5313,7 +5313,7 @@
     "distractors": [
       "N. glossopharyngeus → ganglion oticum",
       "N. vagus → plexus pharyngeus",
-      "N. trigeminus direkt till körteln, utan chorda tympani eller ganglion"
+      "N. trigeminus direkt till körteln via n. lingualis"
     ],
     "topic": "tandlakare_huvud_hals_karl_nerver",
     "difficulty": "Normal",
@@ -5354,8 +5354,8 @@
     "correct": "Riklig, vattnig salivsekretion",
     "distractors": [
       "Kraftig minskning av all salivsekretion",
-      "Endast slemrik, trögflytande sekretion",
-      "Ingen effekt på sekretionen"
+      "Slemrik, trögflytande sekretion",
+      "Utebliven effekt på sekretionen"
     ],
     "topic": "tandlakare_huvud_hals_karl_nerver",
     "difficulty": "Normal",
@@ -5438,8 +5438,8 @@
     "correct": "Skada på inblandade nerver kan ge nedsatt salivsekretion eller Freys syndrom",
     "distractors": [
       "Det saknar helt klinisk relevans vid dentala ingrepp",
-      "Salivsekretionen styrs enbart lokalt i körteln, helt utan nervinflytande alls",
-      "Skador där påverkar aldrig salivkörtlarna"
+      "Salivsekretionen styrs lokalt i körteln utan nervinflytande",
+      "Skador där lämnar salivkörtlarna opåverkade"
     ],
     "topic": "tandlakare_huvud_hals_karl_nerver",
     "difficulty": "Normal",
@@ -5453,7 +5453,7 @@
     "distractors": [
       "De ökar salivproduktionen kraftigt",
       "De påverkar bara tårproduktionen, inte saliv",
-      "De har ingen effekt på körtlarna"
+      "De lämnar körtlarna opåverkade"
     ],
     "topic": "tandlakare_huvud_hals_karl_nerver",
     "difficulty": "Normal",
@@ -5537,7 +5537,7 @@
     "distractors": [
       "Övre, mellersta och nedre delen",
       "Den anteriora, den mediala och den posteriora delen",
-      "Endast två delar: proximal och distal"
+      "Två delar: en proximal och en distal"
     ],
     "topic": "tandlakare_huvud_hals_karl_nerver",
     "difficulty": "Normal",
@@ -5621,7 +5621,7 @@
     "distractors": [
       "Mukösa acini",
       "Blandade sero-mukösa acini i lika delar",
-      "Endast myoepitelceller utan acini"
+      "Myoepitelceller utan acini"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -5649,7 +5649,7 @@
     "distractors": [
       "Renodlat serös körtel",
       "En renodlat mukös körtel helt utan serösa inslag alls",
-      "En körtel med enbart myoepitelceller"
+      "En körtel uppbyggd av myoepitelceller"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -5662,7 +5662,7 @@
     "correct": "Rundade kärnor, mörkfärgad cytoplasma med zymogengranula; producerar en vattnig, enzymrik sekretion",
     "distractors": [
       "Plattade kärnor och ljus cytoplasma; producerar en trögflytande, mucinrik sekretion helt utan enzymer",
-      "Inga kärnor alls; producerar enbart vatten",
+      "Otydliga kärnor; producerar en tunn, vattnig sekretion",
       "Stjärnformade celler utan sekretorisk funktion"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
@@ -5677,7 +5677,7 @@
     "distractors": [
       "Rundade kärnor och mörk cytoplasma med zymogengranula; producerar en vattnig, enzymrik sekretion utan mucin",
       "Cellerna saknar cytoplasma helt",
-      "De bildar enbart bindväv, ingen sekretion"
+      "De bildar stödjande bindväv utan sekretion"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -5732,7 +5732,7 @@
     "correct": "Cylindriska celler med basala inveckningar och rikligt med mitokondrier",
     "distractors": [
       "Plattepitel utan organeller",
-      "Enbart myoepitelceller helt utan körtelceller eller några organeller alls",
+      "Myoepitelceller utan inre organeller",
       "Broskvävnad i körtelgången"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
@@ -5745,7 +5745,7 @@
     "prompt": "Vilken funktion har den sträckta gångens celler för salivens elektrolytsammansättning?",
     "correct": "De återupptar Na+ och Cl- samt utsöndrar K+ och HCO3-, vilket gör slutlig saliv hypoton",
     "distractors": [
-      "De tillför enbart mer vatten utan att på något sätt ändra jonhalten i den färdiga saliven alls",
+      "De tillför mer vatten utan att ändra salivens jonhalt",
       "De gör saliven isoton med plasma",
       "De bryter ner alla enzymer i saliven"
     ],
@@ -5801,7 +5801,7 @@
     "prompt": "Var är glandula submandibularis belägen i förhållande till m. mylohyoideus?",
     "correct": "Den ligger 'hästskoformat' kring musklens bakre fria kant, med en ytlig och en djup del",
     "distractors": [
-      "Helt ovanför muskeln, belägen enbart i det sublinguala rummet i munbottens allra främre del",
+      "Helt ovanför muskeln, i det sublinguala rummet i främre munbotten",
       "Helt utanför munbotten, nere i halsen nedanför hyoidbenet",
       "Inuti själva mandibelbenets benvävnad"
     ],
@@ -5843,8 +5843,8 @@
     "prompt": "Hur många utförsgångar har glandula sublingualis vanligen, till skillnad från de andra storspottkörtlarna som har en huvudgång?",
     "correct": "Flera små gångar",
     "distractors": [
-      "Endast en enda huvudgång, precis som de andra",
-      "Ingen gång alls, enbart diffus sekretion",
+      "En enda huvudgång, precis som de andra körtlarna",
+      "En diffus sekretion utan egentlig utförsgång",
       "Tio identiska huvudgångar"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
@@ -5871,8 +5871,8 @@
     "prompt": "Vilken cellgrupp i körtelvävnaden fungerar som stamceller/förnyelsekälla för acini och gångepitel?",
     "correct": "Basalceller/progenitorceller i gångsystemet",
     "distractors": [
-      "Enbart myoepitelcellerna runt acinus i gången",
-      "Enbart serösa celler i gången",
+      "Myoepitelcellerna runt acinus",
+      "De serösa acinuscellerna",
       "Odontoblaster i tandpulpan"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
@@ -5885,9 +5885,9 @@
     "prompt": "Var finns de mindre spottkörtlarna huvudsakligen belägna?",
     "correct": "Utspridda i munslemhinnan förutom gingiva och främre hårda gommen",
     "distractors": [
-      "Enbart i gingivan, runt tändernas hals",
-      "Enbart i tandpulpan, inuti tandens kärna",
-      "Enbart i käkbenet, en bit under tändernas rötter och deras alveoler"
+      "I gingivan, runt tändernas hals",
+      "I tandpulpan, inuti tandens kärna",
+      "I käkbenet, under tändernas rötter"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -5900,8 +5900,8 @@
     "correct": "Övervägande mukös sekretion",
     "distractors": [
       "Övervägande serös sekretion",
-      "Enbart blodplasma",
-      "Ingen sekretion alls, bara stödjevävnad"
+      "Ren blodplasma",
+      "Bara stödjevävnad utan sekretion"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -6111,7 +6111,7 @@
     "distractors": [
       "IgG",
       "IgE",
-      "IgM i saliven enbart"
+      "IgM"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -6179,9 +6179,9 @@
     "prompt": "Vilka joner bidrar saliven med som är centrala för emaljens remineralisering?",
     "correct": "Kalcium- och fosfatjoner",
     "distractors": [
-      "Kalium- och magnesiumjoner enbart",
-      "Järn- och zinkjoner enbart",
-      "Natrium- och kloridjoner enbart"
+      "Kalium- och magnesiumjoner",
+      "Järn- och zinkjoner",
+      "Natrium- och kloridjoner"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -6194,8 +6194,8 @@
     "correct": "Ökad kariesrisk, pga sämre buffring, sköljning och remineralisering",
     "distractors": [
       "Minskad kariesrisk",
-      "Ingen effekt alls på kariesrisken",
-      "Kariesrisken påverkas bara av kosten, aldrig av saliven som finns i munnen"
+      "Utebliven effekt på kariesrisken",
+      "Kariesrisken påverkas bara av kosten och inte av saliven"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -6207,8 +6207,8 @@
     "prompt": "Vilken funktion har saliv för talet och artikulationen?",
     "correct": "Den smörjer läppar, tunga och slemhinna så artikulationen blir mjuk och obehindrad",
     "distractors": [
-      "Saliv har ingen som helst betydelse för talförmågan",
-      "Saliv försämrar alltid artikulationsrörelserna vid tal",
+      "Saliv saknar betydelse för talförmågan",
+      "Saliv försämrar artikulationsrörelserna vid tal",
       "Saliv styr stämbandens vibrationer direkt under all fonation och allt tal i struphuvudet"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
@@ -6221,9 +6221,9 @@
     "prompt": "Vilken funktion har saliv vid sårläkning i munhålan?",
     "correct": "Innehåller tillväxtfaktorer och antimikrobiella ämnen som påskyndar läkning",
     "distractors": [
-      "Saliv fördröjer alltid läkning",
-      "Saliv har ingen effekt på läkning",
-      "Saliv verkar enbart genom att torka ut såret i munhålans slemhinna vid läkning"
+      "Saliv fördröjer sårläkningen",
+      "Saliv saknar effekt på läkningen",
+      "Saliv verkar genom att torka ut såret i slemhinnan"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -6235,7 +6235,7 @@
     "prompt": "Varför löser sig smakämnen lättare och når smaklökarna effektivt?",
     "correct": "Saliv fungerar som lösningsmedel för smakämnen",
     "distractors": [
-      "Smakämnen behöver aldrig lösas upp för att kännas",
+      "Smakämnen behöver inte lösas upp för att kännas",
       "Saliv blockerar smakämnen från att nå smaklökarna",
       "Smak uppfattas helt oberoende av saliv"
     ],
@@ -6263,9 +6263,9 @@
     "prompt": "Vilken effekt har saliv på bakteriell vidhäftning (utöver direkt antibakteriell verkan)?",
     "correct": "Vissa salivproteiner kan binda bakterier och underlätta att de sköljs bort",
     "distractors": [
-      "Saliv ökar alltid bakteriernas vidhäftning permanent till tandytan i munnen",
-      "Saliv har ingen inverkan på bakteriers vidhäftning",
-      "Saliv dödar samtliga bakterier i munhålan direkt"
+      "Saliv ökar bakteriernas vidhäftning permanent till tandytan",
+      "Saliv saknar inverkan på bakteriers vidhäftning",
+      "Saliv dödar alla bakterier i munhålan direkt"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -6279,7 +6279,7 @@
     "distractors": [
       "Acinusceller tillsätter extra salt",
       "Vatten avdunstar i munhålan redan innan sekretionen",
-      "Saliv är alltid isoton, aldrig hypoton"
+      "Saliv förblir isoton med plasma"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -6292,7 +6292,7 @@
     "correct": "Ovillkorligt salivflöde",
     "distractors": [
       "Stimulerat salivflöde",
-      "Reflektoriskt betingat flöde enbart",
+      "Reflektoriskt betingat flöde",
       "Sialorré"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
@@ -6390,8 +6390,8 @@
     "correct": "Flödet minskar",
     "distractors": [
       "Flödet ökar kraftigt",
-      "Ingen påverkan alls",
-      "Endast smaksinnet påverkas, inte flödet"
+      "Utebliven påverkan på flödet",
+      "Främst smaksinnet påverkas"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -6404,7 +6404,7 @@
     "correct": "Antikolinerga läkemedel",
     "distractors": [
       "Kolinerga agonister",
-      "Betablockerare enbart",
+      "Betablockerare",
       "Antihistaminer utan antikolinerg effekt"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
@@ -6432,7 +6432,7 @@
     "correct": "Ökar salivflödet reflektoriskt",
     "distractors": [
       "Minskar salivflödet",
-      "Ingen effekt alls",
+      "Utebliven effekt på flödet",
       "Stoppar flödet helt under tuggning"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
@@ -6445,8 +6445,8 @@
     "prompt": "Vad händer med salivens sammansättning vid ökat (stimulerat) flöde jämfört med vilonivå?",
     "correct": "Den blir mer utspädd på vissa elektrolyter men rikare på bikarbonat och buffertkapacitet",
     "distractors": [
-      "Den blir identisk med vilonivån i samtliga avseenden",
-      "Den innehåller aldrig några elektrolyter alls vid ett stimulerat salivflöde från körtlarna",
+      "Den blir identisk med vilonivån i alla avseenden",
+      "Den saknar elektrolyter vid stimulerat salivflöde",
       "Den stimulerade saliven saknar helt protein och enzymer"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
@@ -6473,8 +6473,8 @@
     "prompt": "Vilken effekt kan svår ångest eller stress ha på salivsekretionen?",
     "correct": "Minskad sekretion",
     "distractors": [
-      "Alltid kraftigt ökad sekretion",
-      "Ingen effekt alls",
+      "Kraftigt ökad sekretion",
+      "Utebliven effekt på sekretionen",
       "Total avstängning av alla körtlar permanent"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
@@ -6488,7 +6488,7 @@
     "correct": "Körtelparenkym ersätts gradvis av fett och bindväv, samt fler antikolinerga mediciner används",
     "distractors": [
       "Salivkörtlarnas parenkym växer och blir mer aktivt med stigande ålder hos alla friska personer",
-      "Åldrande påverkar aldrig salivkörtlarnas struktur eller funktion",
+      "Åldrandet lämnar salivkörtlarnas struktur och funktion oförändrad",
       "Smaklökarna tar successivt över salivproduktionen med åldern"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
@@ -6502,7 +6502,7 @@
     "correct": "Sött, salt, surt, beskt och umami",
     "distractors": [
       "Sött, salt, surt, kryddstarkt och kallt",
-      "Endast sött, salt och surt",
+      "Bara sött, salt och surt",
       "Sött, beskt, umami och mentolsvalka"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
@@ -6515,9 +6515,9 @@
     "prompt": "Var sitter smakreceptorcellerna?",
     "correct": "I smaklökar, huvudsakligen i tungans papiller men även i gom, epiglottis och svalg",
     "distractors": [
-      "Enbart i näsans slemhinna, helt utan någon koppling till munhålan eller tungans papiller",
-      "Enbart i tandpulpan, inuti tandens innersta del",
-      "Enbart i läpparnas yttre hud, utan körtelvävnad"
+      "I näsans slemhinna, utan koppling till munhålan",
+      "I tandpulpan, inuti tandens innersta del",
+      "I läpparnas yttre hud"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -6529,8 +6529,8 @@
     "prompt": "Vilka papilltyper på tungan innehåller smaklökar?",
     "correct": "Papillae fungiformes, vallatae och foliatae",
     "distractors": [
-      "Enbart papillae filiformes",
-      "Enbart papillae vallatae",
+      "Papillae filiformes",
+      "Papillae vallatae ensamma",
       "Alla fyra papilltyper i lika stor utsträckning"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
@@ -6600,7 +6600,7 @@
     "correct": "Via vätejoner som påverkar jonkanaler i smakreceptorcellen",
     "distractors": [
       "Via samma mekanism som söt smak",
-      "Via temperaturreceptorer enbart",
+      "Via temperaturreceptorer i slemhinnan",
       "Sur smak kan över huvud taget inte uppfattas fysiologiskt av människan"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
@@ -6711,8 +6711,8 @@
     "prompt": "Vilka receptortyper i munslemhinnan registrerar beröring, tryck och vibration?",
     "correct": "Mekanoreceptorer",
     "distractors": [
-      "Nociceptorer enbart",
-      "Kemoreceptorer enbart",
+      "Nociceptorer",
+      "Kemoreceptorer",
       "Fotoreceptorer"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
@@ -6725,7 +6725,7 @@
     "prompt": "Vilka receptorer i munhålan gör att man kan känna om mat/dryck är varm eller kall?",
     "correct": "Termoreceptorer",
     "distractors": [
-      "Mekanoreceptorer enbart",
+      "Mekanoreceptorer",
       "Gustatoriska receptorer",
       "Proprioceptorer"
     ],
@@ -6796,8 +6796,8 @@
     "correct": "Patienter behöver anpassa sig till förändrad känsel i munnen, vilket kan påverka tal och tuggning",
     "distractors": [
       "Det saknar helt klinisk betydelse för hur proteser upplevs",
-      "Stereognosi finns enbart i fingrarna, aldrig i munhålan",
-      "Proteser förbättrar alltid stereognosin direkt, helt utan någon anpassningstid alls för patienten"
+      "Stereognosi finns bara i fingrarna och inte i munhålan",
+      "Proteser förbättrar stereognosin direkt utan anpassningstid"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -6823,8 +6823,8 @@
     "prompt": "Vad kan minskad oral sensorik (t.ex. vid nervskada eller nedsatt känsel) leda till kliniskt?",
     "correct": "Ökad risk för att bita sig själv i kind/tunga och sämre kontroll vid tuggning/tal",
     "distractors": [
-      "Alltid en tydligt förbättrad tuggförmåga jämfört med hur det var tidigare hos patienten",
-      "Ingen praktisk konsekvens alls för patientens vardag",
+      "En tydligt förbättrad tuggförmåga jämfört med tidigare",
+      "Utebliven praktisk konsekvens för patientens vardag",
       "Automatiskt en ökad och förstärkt smakupplevelse"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
@@ -6837,9 +6837,9 @@
     "prompt": "Vilken typ av oral sensorik är särskilt viktig för att styra tuggkraften och undvika för hårt bett?",
     "correct": "Mekanoreceptorer/proprioception i mun-, käk- och tandregionen",
     "distractors": [
-      "Enbart smaksinnet, lokaliserat till tungans egna smaklökar och papiller",
-      "Enbart doftsinnet, lokaliserat till näsans slemhinna",
-      "Enbart temperatursinnet, lokaliserat i huden"
+      "Smaksinnet, lokaliserat till tungans smaklökar",
+      "Doftsinnet, lokaliserat till näsans slemhinna",
+      "Temperatursinnet, lokaliserat i huden"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -6935,8 +6935,8 @@
     "prompt": "Varför ökar risken för karies och parodontal sjukdom vid långvarig xerostomi?",
     "correct": "Minskad sköljning, buffring och remineraliserande effekt av saliven",
     "distractors": [
-      "Minskat salivflöde har ingen som helst effekt på tändernas hälsa alls",
-      "Xerostomi ökar alltid salivens buffringsförmåga",
+      "Minskat salivflöde saknar effekt på tändernas hälsa",
+      "Xerostomi ökar salivens buffringsförmåga",
       "Xerostomi dödar automatiskt alla kariesbakterier"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
@@ -6949,9 +6949,9 @@
     "prompt": "Vilka patientgrupper löper särskilt hög risk för strålningsinducerad xerostomi?",
     "correct": "Patienter som fått strålbehandling mot huvud-halsregionen",
     "distractors": [
-      "Endast barn under 5 år",
-      "Endast personer som naturligt har mycket torr hud och slemhinna",
-      "Ingen patientgrupp löper förhöjd risk"
+      "Barn under fem år",
+      "Personer med naturligt torr hud och slemhinna",
+      "Patienter som genomgått bukkirurgi"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -6963,9 +6963,9 @@
     "prompt": "Vilken salivkomponent minskar särskilt mycket vid Sjögrens syndrom och bidrar till ökad kariesrisk hos dessa patienter?",
     "correct": "Vattenhaltig, serös sekretion samt antimikrobiella/buffrande proteiner",
     "distractors": [
-      "Endast mucinet, medan resten av saliven är helt opåverkad i alla övriga avseenden",
+      "Mucinet, medan resten av saliven förblir opåverkad",
       "Ingenting minskar, bara smaken förändras",
-      "Endast amylas, medan flödet i övrigt är normalt"
+      "Amylas, medan flödet i övrigt är normalt"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
@@ -6979,7 +6979,7 @@
     "distractors": [
       "Salivens färg",
       "Salivens temperatur",
-      "Salivens smak enbart"
+      "Salivens smak"
     ],
     "topic": "tandlakare_salivkortlar_oral_fys",
     "difficulty": "Normal",
