@@ -9,7 +9,9 @@ ERROR (avslutkod 1, blockerar commit): bildfråga med icke-tom prompt, dubblett-
 tomt/duplicerat svarsalternativ, rätt svar bland distraktorerna, fel antal MC-alternativ,
 dubblerad frågetext inom ett ämne.
 
-WARNING (blockerar inte): längdbias, parentes-asymmetri, självbesvarande fråga.
+WARNING (blockerar inte): längdbias, parentes-asymmetri, självbesvarande fråga,
+numerisk asymmetri, absolut-ord enbart i distraktorerna, självutpekande distraktor,
+förbjudet filler-alternativ.
 Dessa kräver omdöme att åtgärda men rapporteras så de aldrig glöms bort.
 """
 import json, sys, glob, re, os
@@ -19,6 +21,21 @@ from collections import defaultdict, Counter
 SKIP = {"ordlista.json", "ordlista_import_raw.json", "kb_glossary_terms.json",
         "bilder.json", "handens_ben_bilder.json", "handens_leder_bilder.json"}
 LEN_BIAS_LIMIT = 40  # % frågor där correct är längst, per ämne, innan varning
+
+# §2.9: absoluta ord gör en distraktor strykbar utan sakkunskap om rätt svar aldrig bär dem
+ABSOLUTE = re.compile(r"\b(endast|enbart|alltid|aldrig|inga|ingen|inget|samtliga|uteslutande)\b", re.I)
+# §2.2: distraktorn skyltar med att den är fel i stället för att vara ett trovärdigt alternativ
+SELF_LABEL = re.compile(r"\b(en|ett)\s+(helt\s+)?(annan|annat)\b|vilket är felaktigt|"
+                        r"vilket inte stämmer|är felaktigt påstått|en påhittad benämning", re.I)
+FILLER = re.compile(r"(ing[ae]n av dessa|inget av dessa|inget alternativ|annat ben|annan struktur)", re.I)
+
+def _negates_correct(distractor, correct):
+    """True om distraktorn negerar med rätt svarets egna nyckelord ('Levern, inte pankreas')."""
+    m = re.search(r",\s*(?:inte|utan)\s+(.{3,40})$", distractor, re.I)
+    if not m:
+        return False
+    tail = m.group(1).lower()
+    return any(t in tail for t in re.findall(r"\w{5,}", correct.lower()))
 
 def load(path):
     try:
@@ -98,6 +115,21 @@ def check_file(path, errors, warnings):
             if re.match(r"^\s*(cirka|ca|c:a|ungefär|omkring|drygt|knappt|minst|högst|>|<|~)?\s*\d", c, re.I) and len(c.split()) <= 4:
                 if any(not re.search(r"\d", str(x)) for x in q["distractors"]):
                     warnings.append(f"{name}:{q.get('id')} numerisk asymmetri: rätt svar '{c}' är ett tal men någon distraktor saknar siffra")
+            # absolut-ords-tell (§2.9): distraktorerna bär "endast/enbart/alltid/aldrig …"
+            # men rätt svar gör det aldrig → går att stryka utan sakkunskap
+            if any(ABSOLUTE.search(str(x)) for x in q["distractors"]) and not ABSOLUTE.search(q["correct"]):
+                warnings.append(f"{name}:{q.get('id')} absolut-ord enbart i distraktorerna (går att stryka utan sakkunskap)")
+            # självutpekande distraktor (§2.2): talar om att den är fel, eller negerar med
+            # rätt svarets egna nyckelord ("Levern, inte pankreas")
+            for x in q["distractors"]:
+                if SELF_LABEL.search(str(x)) or _negates_correct(str(x), q["correct"]):
+                    warnings.append(f"{name}:{q.get('id')} självutpekande distraktor: '{str(x)[:60]}…'")
+                    break
+            # förbjudna filler-alternativ (§2.2)
+            for x in q["distractors"]:
+                if FILLER.search(str(x)):
+                    warnings.append(f"{name}:{q.get('id')} förbjudet filler-alternativ: '{str(x)[:60]}…'")
+                    break
 
 def main():
     args = [a for a in sys.argv[1:] if a.endswith(".json")]

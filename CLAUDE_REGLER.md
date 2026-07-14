@@ -62,8 +62,14 @@ En fråga utan relevanta alternativ är värdelös och förstör quizet. Inga fi
 
 ### 2.2 Förbjudna Alternativtyper
 - **ALDRIG:** "Annat ben", "Ingen av dessa", "Annan struktur", "Inget alternativ"
-- **ALDRIG:** Helt irrelevanta ord för att fylla ut
+- **ALDRIG:** Helt irrelevanta ord för att fylla ut ("Patientens skostorlek", "Patientens favoritfärg")
 - Alla alternativ måste kunna motiveras med "detta är också ett ben/en muskel/en riktning"
+- **ALDRIG självutpekande distraktorer.** En distraktor får inte skylta med att den är fel. Den ska läsas som ett trovärdigt svar, inte som en markerad felaktighet. Skräckexempel funna 2026-07-14 i röntgenfilen:
+  - `"Ductus thoracicus, en helt annan struktur"` – "en (helt) annan struktur/nerv/gren" talar om att alternativet är fel.
+  - `"Right Posterior Orientation, en påhittad benämning"` – erkänner öppet att den är påhittad.
+  - `"MR kan inte visa någon blödning över huvud taget, vilket är felaktigt"` – dömer ut sig själv i samma mening.
+  - `"Levern, inte pankreas"` / `"Mjälten, inte pankreas"` (`rtg_buk_retroperitoneum_5`) – **alla tre distraktorerna namngav rätt svar.** Negera aldrig en distraktor med rätt svarets egna nyckelord.
+- **ALDRIG kontextberoende frågetext.** Frågorna blandas – en prompt får aldrig syfta på föregående fråga ("det motsatta läget", "samma klassificering", "motsvarande felställning", "dessa två ligament"). Varje fråga ska stå för sig själv.
 
 ### 2.3 Multiple Choice (MC) Struktur
 **Format:** 1 korrekt svar + 1-3 distraktorer (TOTALT 2-4 alternativ efter behov)
@@ -136,6 +142,11 @@ En fråga utan relevanta alternativ är värdelös och förstör quizet. Inga fi
   - När du bygger/rättar ett ämne: sök aktivt efter frågor vars prompt innehåller ett räkneord (två/tre/fyra/tre huvudsakliga …) och kontrollera antalet poster i VARJE alternativ.
 - **Inga extra kvalificerare enbart på rätt svar:** Rätt svar får inte vara det enda alternativet som bär en extra precisering (plats, tidpunkt, orsak), även utan parentes. Skräckexempel (`bma_hjarta_30`): `correct: "Nervus medianus, vid handleden"` mot de nakna distraktorerna "Nervus ulnaris" / "Nervus radialis" / "Nervus axillaris" – tillägget "vid handleden" pekar ut svaret. Fix: stryk kvalificeraren från rätt svar (→ "Nervus medianus") eller ge alla alternativ en likvärdig precisering. Samma familj som parentes-regeln ovan.
 - **Språkparitet (latin/svenska):** Alla alternativ ska ligga i samma språkregister. Rätt svar får inte vara det enda på latin (eller det enda på svenska) och sticka ut så. Antingen alla alternativ på latin eller alla på svenska.
+- **Absolut-ords-tell – minst lika avslöjande som längdbias:** Distraktorer får inte bära absoluta ord (**endast, enbart, alltid, aldrig, ingen/inget/inga, samtliga, uteslutande**) när rätt svar aldrig gör det. Varje van tentaskrivare stryker "Endast X" och "Alltid Y" utan att kunna ämnet – då är frågan värdelös oavsett hur bra faktan är.
+  - Skräckexempel (`rtg_njurfunktion_11`): frågan bad om tre processer i urinbildningen; rätt svar listade tre, medan distraktorerna löd "Endast filtration och sekretion, ingen reabsorption" / "Endast reabsorption, ingen filtration eller sekretion". Två tells på en gång (absolut-ord + antals-asymmetri).
+  - **Fix:** skriv om distraktorn till ett konkret, specifikt och trovärdigt fel påstående i stället för ett absolut. "Endast njurbäckenet, inte parenkymet" → "Njurbäckenet och kalkarna med tät kontrast".
+  - ⚠️ **Fällan när du bygger ut distraktorer för längdparitet:** det är frestande att fylla ut med "…, alltid oavsett …" eller "… helt utan …". Då fixar du längdbiasen och inför absolut-tellen i samma andetag. Det hände i fysio-svepet (35 % → 38 %). Kontrollera med validatorn efter varje patch.
+- **Omvänd längdbias räknas också:** rätt svar får inte heller vara det enda *mycket korta* alternativet. `rtg_columna_55` hade `correct: "CT"` (2 tecken) mot en 62 teckens distraktor – lika avslöjande som motsatsen. Håll alla alternativ i samma storleksordning.
 
 ### 2.10 BILDFRÅGOR MÅSTE HA TOM PROMPT
 **STÅENDE REGEL (påtalad flera gånger – får ALDRIG upprepas).** Varje bildfråga (quiz-objekt med `"image": "<id>"`) ska ha **tom `prompt`** (`""`). Lägg ALDRIG en synlig prompt på en bildfråga.
@@ -384,6 +395,10 @@ Dessa fel ska ALDRIG upprepas:
 - **Antals-asymmetri:** frågan ber om tre saker men bara rätt svar listar tre (distraktorerna en) – se §2.9. Fångas inte av validatorn
 - **Extra kvalificerare enbart på rätt svar:** "Nervus medianus, vid handleden" bland nakna nervnamn – se §2.9
 - **Maskinell trimning av rätt svar** som stympar meningen ("En automatisk", "Ja") – skriv alltid om för hand
+- **Absolut-ords-tell:** distraktorer med "Endast/Enbart/Alltid/Aldrig …" när rätt svar aldrig bär dem – se §2.9. Låg dolt i HELA projektet medan vi bara mätte längdbias (röntgen 38 %, fysio 38 %, BMA 32 %, logoped 34 %, tandläkare 19 %)
+- **Självutpekande distraktorer:** "en helt annan struktur", "en påhittad benämning", "vilket är felaktigt", "Levern, inte pankreas" – se §2.2
+- **Kontextberoende frågetext:** "det motsatta läget", "dessa två ligament" – bryts när frågorna blandas, se §2.2
+- **LÄRDOM (2026-07-14): att mäta ETT mått är inte samma sak som att frågan är bra.** Röntgen gick från 44 % längdbias till 0 % – men bar samtidigt 565 frågor med absolut-tell, 34 självutpekande distraktorer och en handfull självbesvarande frågor som ingen mätning fångade. Läs alltid igenom alternativen som en student som vill gissa sig fram, inte bara som en faktagranskare.
 
 ### 10.2 Lyckade Lösningar
 - Separera frågor i tre JSON-filer (ben.json, muskler.json, riktningar.json)
