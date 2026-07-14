@@ -206,6 +206,13 @@
              ========================================================= -->
 
         <!-- Fysioterapeut -->
+        <!-- TILLFÄLLIGT DOLD (0.9.149, 2026-07-14): fysioterapeut-ämnena är
+             utkommenterade tills formtells-svepet av data/fysioterapeut.json
+             (586 validator-varningar) är klart. Med 0 synliga ämnen gråas
+             utbildningen "Fysioterapeut" automatiskt i väljaren. ÅTERSTÄLL genom
+             att ta bort detta kommentarshölje (och radera denna not) NÄR
+             validate_quiz.py ger 0 varningar för filen. Rör inte option-raderna. -->
+        <!--
         <option value="fysio_axel_skulder" data-edu="fysioterapeut">Axel/skulderkomplex (MC)</option>
         <option value="fysio_armbage_underarm" data-edu="fysioterapeut">Armbåge &amp; underarm (MC)</option>
         <option value="fysio_hand_handled" data-edu="fysioterapeut">Hand &amp; handled (MC+bild)</option>
@@ -220,6 +227,7 @@
         <option value="fysio_smartfysiologi" data-edu="fysioterapeut">Smärtfysiologi (MC)</option>
         <option value="fysio_motorisk_utv_aldrande" data-edu="fysioterapeut">Motorisk utveckling &amp; åldrande (MC)</option>
         <option value="fysio_traning_arbetsfys" data-edu="fysioterapeut">Tränings-/arbetsfysiologi (MC)</option>
+        -->
 
         <!-- Läkare (har redan: Blandad anatomi/fysiologi) -->
         <!-- <option value="lakare_ovre_extremitet" data-edu="lakare">Övre extremitet</option> -->
@@ -685,6 +693,6 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.148" defer></script>
+  <script src="js/app.js?v=0.9.149" defer></script>
 </body>
 </html>

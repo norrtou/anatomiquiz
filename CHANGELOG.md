@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.149
+- **Fysioterapeut tillfälligt dold i utbildningsväljaren.** Utbildningens 14 ämnen är utkommenterade i `#topic` tills formtells-svepet av `data/fysioterapeut.json` (586 validator-varningar) är klart. Med 0 synliga ämnen gråas "Fysioterapeut" automatiskt och visas som "(inga ämnen ännu)" – inget ogranskat fysio-quiz går att öppna eller söka fram. Ämnesraderna är bevarade i kommentar och återställs (avkommenteras) när `validate_quiz.py` ger 0 varningar för filen. Ingen datafil ändrad.
+- VERSION/APP_VERSION/index.html-cachebuster → 0.9.149.
+
 ## 0.9.148
 - **Formtells-svepet klart i fem hela utbildningar till – biomedicinsk analytiker, medicinsk sekreterare, läkare, tandläkare och logoped ger nu alla 0 fel och 0 varningar i `validate_quiz.py`.** Kvar av svepet står bara fysioterapeut (586 varningar).
 - **Biomedicinsk analytiker färdig (18/18 ämnen).** De sista fem ämnena – klinisk kemi, njur/gastro/nuklearmedicin, hematologi/transfusion, mikrobiologi och patologi – rensades på absolut-ords-tellen och självutpekande distraktorer; 320 distraktorer i 163 frågor omskrivna till konkreta, trovärdiga fel. Exempel: "Enbart hemolys, utan koppling till gallvägarna" → "Ökad hemolys av röda blodkroppar".
