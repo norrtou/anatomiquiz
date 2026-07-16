@@ -435,65 +435,74 @@ def strip_tags(markup: str) -> str:
 # sökintention kring "medicinsk ordlista/termer", inte fyllnad.
 LANDING_FAQ: list[dict[str, str]] = [
     {
-        "q": "Vad är en medicinsk ordlista och vad kan jag använda den till?",
+        "q": "Vad är en medicinsk ordlista och vad har jag för nytta av den?",
         "a": (
-            "En medicinsk ordlista förklarar de latinska, grekiska och "
-            "fackspråkliga ord, förkortningar och begrepp som används inom vården. "
-            "Den här ordlistan täcker anatomi, fysiologi, sjukdomar och skador, "
-            "labbprover, farmakologi och omvårdnad, och riktar sig till studenter "
-            "och yrkesverksamma inom vård och medicin – men fungerar för alla som "
-            "vill förstå ett medicinskt ord."
+            "En medicinsk ordlista översätter och förklarar vårdens fackspråk – de "
+            "latinska, grekiska och kliniska ord, förkortningar och begrepp du möter "
+            "i studier och arbete. Den här ordlistan spänner över anatomi, fysiologi, "
+            "sjukdomar och skador, labbprover, farmakologi och omvårdnad, och är lika "
+            "användbar för vårdstudenten som slår upp en tentaterm som för patienten "
+            "som vill förstå ett ord i sitt journalutdrag."
         ),
     },
     {
-        "q": "Varför är så många medicinska termer på latin och grekiska?",
+        "q": "Varför är medicinska termer på latin och grekiska?",
         "a": (
-            "Latinet och grekiskan har varit vetenskapens gemensamma språk sedan "
-            "antiken och renässansen och ger ett internationellt entydigt fackspråk: "
-            "samma term betyder samma sak oavsett modersmål. Latinet dominerar "
-            "anatomins namn (som <em>musculus</em> och <em>vena</em>), medan "
-            "grekiskan är vanligast i ord för sjukdom och funktion (som <em>-it</em> "
-            "för inflammation och <em>-emi</em> för blod)."
+            "Latinet och grekiskan blev vetenskapens gemensamma språk – latinet via "
+            "antikens Rom och medeltidens lärda, grekiskan via den antika läkekonsten "
+            "– och de ger ett entydigt fackspråk där en term betyder samma sak oavsett "
+            "modersmål. Grovt sett kommer anatomins namn oftast från "
+            "<a href=\"/kunskapsbank/medicinskt-latin.html\">latinet</a> "
+            "(<em>musculus</em>, <em>vena</em>), medan ord för sjukdom och funktion "
+            "oftast är <a href=\"/kunskapsbank/grekiska-i-medicinen.html\">grekiska</a> "
+            "(<em>-it</em> för inflammation, <em>-emi</em> för blod). Hur det blev så "
+            "berättar vi i <a href=\"/kunskapsbank/terminologins-historia.html\">"
+            "terminologins historia</a>."
         ),
     },
     {
         "q": "Hur är ett medicinskt ord uppbyggt?",
         "a": (
-            "De flesta medicinska ord byggs av ett förled (prefix), en ordstam och "
-            "ett efterled (suffix). <em>Endo-</em> betyder ’inuti’, <em>card</em> "
-            "’hjärta’ och <em>-it</em> ’inflammation’ – tillsammans endokardit, "
-            "inflammation i hjärtats innersida. Lär du dig de vanligaste "
+            "Nästan alla medicinska ord kan delas i förled (prefix), ordstam och "
+            "efterled (suffix). <em>Endokardit</em> blir <em>endo-</em> ’inuti’ + "
+            "<em>card</em> ’hjärta’ + <em>-it</em> ’inflammation’ = inflammation i "
+            "hjärtats innersida. Kan du de vanligaste "
             "<a href=\"/ordlista-prefix.html\">förstavelserna</a> och "
             "<a href=\"/ordlista-suffix.html\">ändelserna</a> kan du tyda ord du "
-            "aldrig sett förut."
+            "aldrig sett. Ändelserna växlar dessutom med kasus och antal – varför det "
+            "heter en <em>musculus</em> men flera <em>musculi</em> reder vi ut i "
+            "<a href=\"/kunskapsbank/deklinationer-pluralformer.html\">deklinationer "
+            "&amp; pluralformer</a>."
         ),
     },
     {
         "q": "Hur hittar jag ett visst ord i ordlistan?",
         "a": (
-            "Skriv ordet i sökrutan högst upp – sökningen letar i hela ordlistan på "
-            "en gång och tar dig direkt till rätt post. Du kan också bläddra via "
-            "bokstavskorten eller alfabetsraden; varje bokstav har en egen sida "
-            "(A–Ö), plus sidor för siffror, förstavelser och ändelser. Sökningen "
-            "hittar även ord som bara nämns i en förklaring."
+            "Snabbast är sökrutan högst upp: den söker igenom hela ordlistan på en "
+            "gång och tar dig rakt till posten – och hittar även ord som bara nämns "
+            "inuti en förklaring. Vill du hellre bläddra har varje begynnelsebokstav "
+            "en egen sida (A–Ö), plus särskilda sidor för siffror, förstavelser och "
+            "ändelser."
         ),
     },
     {
-        "q": "Vad innehåller varje post i ordlistan?",
+        "q": "Vad innehåller varje post, och hur uttalas orden?",
         "a": (
-            "Varje uppslagsord ges med sin betydelse och, där det är relevant, "
-            "ordklass, böjningsform, svensk motsvarighet, lekmannauttryck, engelsk "
-            "förkortning och etymologi (ordets ursprung). För sjukdomar anges ofta "
-            "ICD-10-koden och för labbprover normala referensvärden."
+            "Varje uppslagsord ger betydelsen och, där det är relevant, ordklass, "
+            "böjningsform, svensk motsvarighet, vardaglig synonym, engelsk förkortning "
+            "och etymologi. Sjukdomar får ofta sin ICD-10-kod och labbprover sina "
+            "normala referensvärden. Osäker på hur ett latinskt ord ska sägas – varför "
+            "<em>c</em> i <em>cochlea</em> blir k men mjukt i <em>cerebrum</em>? Det "
+            "reder <a href=\"/kunskapsbank/uttalsregler.html\">uttalsreglerna</a> ut."
         ),
     },
     {
-        "q": "Är ordlistan gratis, och vem ligger bakom den?",
+        "q": "Är ordlistan gratis, och vem står bakom den?",
         "a": (
-            "Ja, hela ordlistan är gratis att använda. Den är framtagen och "
-            "kvalitetsgranskad av Anatomiquiz mot vedertagna standardverk inom "
-            "anatomi och medicinsk terminologi. Läs mer om källorna och personen "
-            "bakom sidan under <a href=\"/info.html\">Om Anatomiquiz</a>."
+            "Ja, ordlistan är helt gratis. Den är sammanställd och kvalitetsgranskad "
+            "av Anatomiquiz mot vedertagna standardverk inom anatomi och medicinsk "
+            "terminologi. Mer om källorna och personen bakom sidan finns under "
+            "<a href=\"/info.html\">Om Anatomiquiz</a>."
         ),
     },
 ]

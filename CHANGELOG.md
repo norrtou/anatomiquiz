@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.152
+- **Ordlistans FAQ berikad och korslänkad till terminologi-avdelningen.** Alla 6 FAQ-svar på `medicinskordlista.html` omskrivna till fylligare, mer sökintentions-riktad text med interna länkar till undersidorna i terminologi-avdelningen: `medicinskt-latin`, `grekiska-i-medicinen`, `terminologins-historia`, `deklinationer-pluralformer` och `uttalsregler`. Två delfrågor (uttal, kasus/pluralformer) täcker fler long-tail-sökningar. Källan (`LANDING_FAQ` i `scripts/generate_glossary.py`) och den handhållna landningssidan hålls byte-synkade, och FAQ-schemat härleds fortfarande ur synlig HTML så det inte kan divergera.
+- VERSION/APP_VERSION/index.html-cachebuster → 0.9.152.
+
 ## 0.9.151
 - **Landningssidan `medicinskordlista.html` slutar dubblera A-listan – blir en riktig beskrivande hubb.** Sidan bar tidigare hela bokstaven A:s poster inbäddade (999 st), byte-identiska med `ordlista-a.html` → dubblettinnehåll där båda sidorna var self-canonical. Nu visar landningssidan set-nivå: bokstavsrutnätet (A–Ö + siffror/förstavelser/ändelser) + ny beskrivande om-text, en FAQ (6 frågor) och en APA-referenslista. A-posterna är oförändrade kvar på `ordlista-a.html` (0 ändrade term-rader).
 - **Strukturerad data uppgraderad för Bing/agent-inläsning.** Landningssidans typ `CollectionPage` → `DefinedTermSet` (rätt semantisk typ för en ordlista), men medvetet lätt: `hasPart` pekar bara på de 32 bokstavssidorna, aldrig på varje term (per-term-varianten gav förr ~1,8 MB). Ny `FAQPage`-schema där svarstexten härleds ur den synliga HTML:en (en källa → schema och sida kan aldrig divergera). Bokstavssidornas `isPartOf` följer med till `DefinedTermSet`.
