@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.150
+- **Formtells-svepet är HELT klart – fysioterapeut var sista filen.** Alla 14 fysio-ämnen (1420 frågor) ger nu 0 fel och 0 varningar i `validate_quiz.py`. Skulden var mekanisk: 546 distraktorer med absolut-ord ("Endast/Aldrig/uteslutande …" som rätt svar aldrig bar) och 40 självutpekande distraktorer, alla omskrivna för hand till konkreta, trovärdiga fel. **985 distraktorrader** ändrade i en byte-ren diff – frågetexter och rätta svar är helt orörda (0 rader rör `prompt`/`correct`/`id`/`topic`).
+- **Fysioterapeut åter synlig i utbildningsväljaren.** De 14 ämnesraderna i `#topic` är avkommenterade och den tillfälliga noten borttagen (dolda sedan 0.9.149) – utbildningen är valbar igen nu när quizet är granskat.
+- **Fällor som fångades och rättades under svepet:** förkortade distraktorer införde 49 % längdbias i träningsämnet (13 frågor flippade genom att förlänga längsta distraktorn med genuint innehåll → alla ämnen < 40 %); några omskrivningar råkade återinföra absolut-ord eller skapa nya ", inte/utan …"-självutpekningar – alla åtgärdade till 0 varningar.
+- **CLAUDE_REGLER.md → v1.2.** Svep-lärdomarna kodifierade som bindande regler (inte bara i minnet): §2.12 positiv mall för hur en bra distraktor skrivs (konkret fel + gissa-testet + före→efter-exempel), §2.13 "validatorn är facit / bygg rätt från början / kör skriptet efter varje ändring", §2.9 utökad med de tre fällorna när man rättar en tell, samt utökad QA-checklista (§8) och fellista (§10.1).
+- VERSION/APP_VERSION/index.html-cachebuster → 0.9.150.
+
 ## 0.9.149
 - **Fysioterapeut tillfälligt dold i utbildningsväljaren.** Utbildningens 14 ämnen är utkommenterade i `#topic` tills formtells-svepet av `data/fysioterapeut.json` (586 validator-varningar) är klart. Med 0 synliga ämnen gråas "Fysioterapeut" automatiskt och visas som "(inga ämnen ännu)" – inget ogranskat fysio-quiz går att öppna eller söka fram. Ämnesraderna är bevarade i kommentar och återställs (avkommenteras) när `validate_quiz.py` ger 0 varningar för filen. Ingen datafil ändrad.
 - VERSION/APP_VERSION/index.html-cachebuster → 0.9.149.

@@ -146,6 +146,10 @@ En fråga utan relevanta alternativ är värdelös och förstör quizet. Inga fi
   - Skräckexempel (`rtg_njurfunktion_11`): frågan bad om tre processer i urinbildningen; rätt svar listade tre, medan distraktorerna löd "Endast filtration och sekretion, ingen reabsorption" / "Endast reabsorption, ingen filtration eller sekretion". Två tells på en gång (absolut-ord + antals-asymmetri).
   - **Fix:** skriv om distraktorn till ett konkret, specifikt och trovärdigt fel påstående i stället för ett absolut. "Endast njurbäckenet, inte parenkymet" → "Njurbäckenet och kalkarna med tät kontrast".
   - ⚠️ **Fällan när du bygger ut distraktorer för längdparitet:** det är frestande att fylla ut med "…, alltid oavsett …" eller "… helt utan …". Då fixar du längdbiasen och inför absolut-tellen i samma andetag. Det hände i fysio-svepet (35 % → 38 %). Kontrollera med validatorn efter varje patch.
+- **⚠️ Att RÄTTA en tell skapar lätt en NY tell – tre återkommande fällor (fysio-svepet 2026-07-16):**
+  1. **Negations-svansen.** När du stryker ett absolut-ord genom att lägga till en kontrast som slutar med rätt svarets nyckelord ("…, inte ligament eller kapsel", "…, utan bestäms av kostens sammansättning") blir distraktorn *självutpekande* i stället (validatorn flaggar `,\s*(inte|utan)\s+<rätt-svarets ord>$`). Fix: avsluta INTE distraktorn med ", inte/utan <det rätt svaret handlar om>". Skriv om till ett fristående felpåstående.
+  2. **Omvänd längdbias vid förkortning.** När du kortar bort utfyllnad ur distraktorerna blir `correct` plötsligt längst i för många frågor (fysio-träning gick till 49 % längdbias). Fix: efter att ha kortat distraktorer, **mät längdbias per ämne igen** och förläng vid behov den längsta distraktorn i några frågor med genuint innehåll (inte fyllnadsord) tills andelen ligger < 40 %.
+  3. **Nytt absolut-ord i omskrivningen.** "uteslutande" och "samtliga" glöms lätt bort som absolut-ord (de ÄR med i validatorns lista). En omskrivning som "…för samtliga deltagare" återinför tellen. Fix: läs listan i §2.13 och kör validatorn efter patchen.
 - **Omvänd längdbias räknas också:** rätt svar får inte heller vara det enda *mycket korta* alternativet. `rtg_columna_55` hade `correct: "CT"` (2 tecken) mot en 62 teckens distraktor – lika avslöjande som motsatsen. Håll alla alternativ i samma storleksordning.
 
 ### 2.10 BILDFRÅGOR MÅSTE HA TOM PROMPT
@@ -159,6 +163,41 @@ En fråga utan relevanta alternativ är värdelös och förstör quizet. Inga fi
 ### 2.11 INGA DUBLETTFRÅGOR – MEN UNIKHET GÄLLER BARA INOM ÄMNET
 - **Aldrig duplicera hela frågor** (samma id eller samma frågetext) utan explicit tillåtelse. Kopiera/`cp`/copypasta ALDRIG frågor mellan filer för att fylla på antal. Ladda aldrig samma fil två gånger för samma quiz.
 - **Men unikhetskravet gäller bara inom det ämne som byggs**, inte mot andra ämnen eller andra utbildningar. Skriv INTE i CHANGELOG/commit att frågor jämförts mot "hela filen" eller mot andra namngivna ämnen – skriv bara "alla X frågor i ämnet kontrollerade unika". Att aktivt leta efter och narrativisera cross-ämnes-överlapp är inte efterfrågat.
+
+### 2.12 SÅ HÄR SKRIVS EN BRA DISTRAKTOR (positiv mall – följ FÖRSTA gången)
+Reglerna ovan (§2.2, §2.9) listar mest vad man INTE får göra. Det här är den positiva mallen: så *ska* en distraktor se ut. Följ den när frågan skrivs, så slipper du saneringssvep senare (se §2.13).
+
+**En bra distraktor är ett konkret, specifikt och trovärdigt FEL – i samma register, längd och form som rätt svar.**
+
+Bygg felet ur en verklig missuppfattning som en halvkunnig student faktiskt kan göra – byt ut EN sak mot rätt svaret:
+- **byt mekanism/riktning:** dorsal ↔ volar, flexion ↔ extension, inåt- ↔ utåtrotation, afferent ↔ efferent, filtration ↔ reabsorption.
+- **byt nivå/struktur:** en grannstruktur, granne-nerv (medianus→ulnaris), granne-artär, angränsande kota/led.
+- **byt ordning/timing:** kasta om faserna (superkompensation före belastning), fel tidsprofil, fel fas i gångcykeln.
+- **byt magnitud/tal:** ett annat men rimligt intervall/antal – och ge det **samma talformat** som rätt svar.
+- **vänd orsakssambandet:** "ökar" i stället för "minskar", "tvärtom …".
+
+**Gissa-testet (kör mentalt på varje fråga):** täck över rätt svar och läs distraktorerna som en student som vill chansa utan att kunna ämnet. Kan hen stryka en distraktor på FORMEN – för att den är kortare/längre, absolut ("Endast/Aldrig"), självdömande ("… en helt annan struktur"), fel talformat, eller för att den upprepar rätt svarets ord ("…, inte pankreas")? Då är distraktorn trasig, oavsett hur bra faktan i frågan är. Skriv om den.
+
+**Konkreta före→efter (ur fysio-svepet 2026-07-16 – gör så här direkt):**
+| Trasig distraktor (tell) | Fixad distraktor (konkret fel) |
+|---|---|
+| "Endast abduktion" | "Abduktion och utåtrotation i axeln" |
+| "Menisker skadas i princip aldrig" | "Menisker skadas mycket sällan" |
+| "Den har ingen som helst koppling till belastningen" | "Den har liten koppling till belastningen på lederna" |
+| "Ett annat namn för perifer sensitisering, utan skillnad" | "Samma fenomen som perifer sensitisering, utan egentlig skillnad" |
+| "Bara brosket påverkas, inte ligament eller kapsel" | "Bara själva brosket påverkas vid en luxation" |
+
+Nyckelgreppet: byt det absoluta/självdömande ordet mot ett **hedgat men fortfarande felaktigt** påstående ("mycket sällan", "liten", "främst", "snarare än"), eller skriv ett helt konkret alternativt fel. Ta INTE bort själva feluppfattningen – den ska finnas kvar, bara sluta skylta med formen.
+
+### 2.13 VALIDATORN ÄR FACIT – BYGG RÄTT FRÅN BÖRJAN, KÖR SKRIPTET EFTER VARJE ÄNDRING
+**KRITISKT (kostnadsregel). Att sanera formtells i efterhand, fil för fil, bränner enorma mängder av användarens tokens/pengar. Preventionen är gratis; saneringen är dyr.**
+
+- **`scripts/validate_quiz.py <fil>` är facit, inte mitt omdöme.** Kör den och åtgärda till **0 varningar och 0 fel** INNAN en fil/ett ämne levereras. Gissa aldrig – skriptet räknar.
+- Den fångar: längdbias, parentes-asymmetri, självbesvarande, numerisk asymmetri, **absolut-ord enbart i distraktorerna**, **självutpekande distraktor** (inkl. `,\s*(inte|utan)\s+<rätt-svarets ord>`), förbjudet filler, dubbletter, tomt svar, rätt svar bland distraktorerna. Den absoluta ordlistan är exakt: **endast, enbart, alltid, aldrig, inga, ingen, inget, samtliga, uteslutande** (matcha den, inte en egen ungefärlig lista).
+- **Antals-asymmetri (§2.9) fångas INTE av skriptet** – den kontrolleras för hand.
+- **Kör validatorn efter VARJE patch, inte bara till slut.** Under fysio-svepet fångade den mina egna slipups om och om igen: att jag råkade återinföra "inget/alltid/uteslutande/samtliga" i en omskrivning, och att jag skapade nya självutpekande distraktorer (se §2.9 om ", inte/utan"-fällan).
+- **Diagnostisera skulden innan metod väljs (billigaste vägen först):** ren mekanisk tell (absolut-ord/filler) → EN samlad dump-och-patch över hela filen, inte ämne för ämne. Äkta sakfel gömda i `correct` → full genomläsning krävs. Låt ett skript räkna stränglängder och fylla ut distraktorn tills den slår `correct` – gissa ALDRIG längder för hand (jag underskattar konsekvent 15–30 tecken).
+- **Rör bara de flaggade fälten.** Index-patcha distraktorer (`{id:{"idx":ny}}`) så att prompt/correct/orörda distraktorer förblir byte-identiska → ren diff, inga oavsiktliga faktaändringar.
 
 ---
 
@@ -349,12 +388,17 @@ Före varje session/commit, kontrollera:
 - [ ] INGA dubbletter mellan "correct" och "distractors"
 - [ ] INGA filler-alternativ ("Annat", "Ingen av dessa", osv)
 - [ ] ALLA alternativ är semantiskt relevanta för frågan
-- [ ] Rätt svar är INTE systematiskt längst (ingen längdbias); distraktorer jämförbart långa (§2.9)
-- [ ] INGA avslöjande parenteser enbart på rätt svar (§2.9)
+- [ ] Rätt svar är INTE systematiskt längst ELLER kortast (ingen längdbias, per ämne < 40 %); distraktorer jämförbart långa (§2.9)
+- [ ] INGA avslöjande parenteser eller extra kvalificerare enbart på rätt svar (§2.9)
 - [ ] Frågetexten ekar inte svaret verbatim (ej självbesvarande) (§2.9)
+- [ ] INGA absolut-ord (endast/enbart/alltid/aldrig/inga/ingen/inget/samtliga/uteslutande) enbart i distraktorerna (§2.9)
+- [ ] INGA självutpekande distraktorer, inkl. ", inte/utan <rätt-svarets ord>" och "ett annat namn för …" (§2.2)
+- [ ] Varje distraktor klarar gissa-testet: går inte att stryka på formen (§2.12)
+- [ ] Antals-paritet kontrollerad för hand på frågor med räkneord (tre/fyra …) (§2.9)
 - [ ] INGA incompleta meningar i frågorna
 - [ ] ALLA termer är verifierade mot anatomisk litteratur
 - [ ] Filstruktur är korrekt (JSON, topics, IDs)
+- [ ] **`python3 scripts/validate_quiz.py <fil>` ger 0 varningar och 0 fel** – körd EFTER sista ändringen (§2.13)
 
 ---
 
@@ -399,6 +443,10 @@ Dessa fel ska ALDRIG upprepas:
 - **Självutpekande distraktorer:** "en helt annan struktur", "en påhittad benämning", "vilket är felaktigt", "Levern, inte pankreas" – se §2.2
 - **Kontextberoende frågetext:** "det motsatta läget", "dessa två ligament" – bryts när frågorna blandas, se §2.2
 - **LÄRDOM (2026-07-14): att mäta ETT mått är inte samma sak som att frågan är bra.** Röntgen gick från 44 % längdbias till 0 % – men bar samtidigt 565 frågor med absolut-tell, 34 självutpekande distraktorer och en handfull självbesvarande frågor som ingen mätning fångade. Läs alltid igenom alternativen som en student som vill gissa sig fram, inte bara som en faktagranskare.
+- **Negations-svans skapad vid rättning:** att stryka ett absolut-ord genom att lägga ", inte/utan <rätt-svarets ord>" skapar en självutpekande distraktor i stället – se §2.9-fällan.
+- **Omvänd längdbias skapad vid förkortning:** förkortade distraktorer gjorde `correct` längst i 49 % av träningsfrågorna – mät längdbias igen efter förkortning, se §2.9.
+- **Återinfört absolut-ord i egen omskrivning:** "uteslutande"/"samtliga" glömdes som absolut-ord flera gånger under fysio-svepet – kör validatorn efter varje patch, se §2.13.
+- **LÄRDOM (2026-07-16): hela formtells-svepet är klart** (röntgen, BMA, med.sekr, läkare, tandläkare, logoped, fysioterapeut – alla 0 varningar). Skulden fanns bara för att frågorna genererades i strid med §2.2/§2.9 från början. **Bygg rätt första gången (§2.12–2.13); saneringen kostade användaren enorma mängder tokens och stort missnöje.** Detta får inte upprepas när nya ämnen byggs.
 
 ### 10.2 Lyckade Lösningar
 - Separera frågor i tre JSON-filer (ben.json, muskler.json, riktningar.json)
@@ -424,8 +472,15 @@ När nya ämnen läggs till:
 
 **DESSA REGLER ÄR BINDANDE FÖR ALL ARBETE PÅ ANATOMIQUIZ.**
 
-**Senast uppdaterad:** 2026-07-10
-**Version:** 1.1 – kodifierade nio quiz-regler som tidigare bara låg i Claudes minne:
+**Senast uppdaterad:** 2026-07-16
+**Version:** 1.2 – kodifierade svep-lärdomarna som tidigare bara låg i Claudes minne (minnet räcker inte – reglerna är facit):
+- §2.12 positiv mall: så här skrivs en bra distraktor (konkret fel + gissa-testet + före→efter-tabell)
+- §2.13 validatorn är facit + bygg rätt från början + kör skriptet efter varje ändring (kostnadsregel)
+- §2.9 utökad: tre fällor när man RÄTTAR en tell (negations-svans, omvänd längdbias, återinfört absolut-ord)
+- §8 checklistan utökad med absolut-ord, självutpekande, gissa-test, antals-paritet och validator-körning
+- §10.1 lärdomarna från fysio-svepet 2026-07-16 (hela svepet klart)
+
+**Version 1.1** (2026-07-10) – kodifierade nio quiz-regler ur minnet:
 - §1.5 korrekt & pedagogisk svenska (räknebarhet m.m.)
 - §2.9 svarsalternativens form får aldrig avslöja svaret (längdparitet, inga avslöjande parenteser, ej självbesvarande)
 - §2.10 bildfrågor måste ha tom prompt
