@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.151
+- **Landningssidan `medicinskordlista.html` slutar dubblera A-listan – blir en riktig beskrivande hubb.** Sidan bar tidigare hela bokstaven A:s poster inbäddade (999 st), byte-identiska med `ordlista-a.html` → dubblettinnehåll där båda sidorna var self-canonical. Nu visar landningssidan set-nivå: bokstavsrutnätet (A–Ö + siffror/förstavelser/ändelser) + ny beskrivande om-text, en FAQ (6 frågor) och en APA-referenslista. A-posterna är oförändrade kvar på `ordlista-a.html` (0 ändrade term-rader).
+- **Strukturerad data uppgraderad för Bing/agent-inläsning.** Landningssidans typ `CollectionPage` → `DefinedTermSet` (rätt semantisk typ för en ordlista), men medvetet lätt: `hasPart` pekar bara på de 32 bokstavssidorna, aldrig på varje term (per-term-varianten gav förr ~1,8 MB). Ny `FAQPage`-schema där svarstexten härleds ur den synliga HTML:en (en källa → schema och sida kan aldrig divergera). Bokstavssidornas `isPartOf` följer med till `DefinedTermSet`.
+- **Allt genererat, inget handredigerat.** Byggt i `scripts/generate_glossary.py`; bokstavssidorna ändrades bara i cachebuster (`glossary.css`/`glossary.js` 0.9.4→0.9.5) och isPartOf-typ. Ny scoped CSS i `glossary.css` (ramfri innehållsdiv + rubriker) som bara laddas på ordlistesidorna. Verifierat: tagg-balanserad HTML, alla 3 JSON-LD-block parsar, idempotent bygge.
+- VERSION/APP_VERSION/index.html-cachebuster → 0.9.151.
+
 ## 0.9.150
 - **Formtells-svepet är HELT klart – fysioterapeut var sista filen.** Alla 14 fysio-ämnen (1420 frågor) ger nu 0 fel och 0 varningar i `validate_quiz.py`. Skulden var mekanisk: 546 distraktorer med absolut-ord ("Endast/Aldrig/uteslutande …" som rätt svar aldrig bar) och 40 självutpekande distraktorer, alla omskrivna för hand till konkreta, trovärdiga fel. **985 distraktorrader** ändrade i en byte-ren diff – frågetexter och rätta svar är helt orörda (0 rader rör `prompt`/`correct`/`id`/`topic`).
 - **Fysioterapeut åter synlig i utbildningsväljaren.** De 14 ämnesraderna i `#topic` är avkommenterade och den tillfälliga noten borttagen (dolda sedan 0.9.149) – utbildningen är valbar igen nu när quizet är granskat.

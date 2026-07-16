@@ -28,9 +28,11 @@ först när användaren börjar söka, och länkar träffar till rätt sida + an
 Därför måste page_slug()/slugify() här spegla motsvarande logik i glossary.js
 byte för byte, så att djuplänkar är stabila oavsett rendering.
 
-JSON-LD: medvetet LÄTT (WebPage/CollectionPage + BreadcrumbList). Den tidigare
-DefinedTermSet:en med samtliga termers URL:er stod för ~1,8 MB och gav minimal
-rich-result-nytta — innehållet är ändå fullt crawlbart som semantisk <dl>.
+JSON-LD: medvetet LÄTT. Bokstavssidorna är CollectionPage; landningssidan är en
+DefinedTermSet på SET-nivå (namn + länkar till bokstavssidorna, INGA per-term-
+URL:er) plus en FAQPage. Den tidigare DefinedTermSet:en med SAMTLIGA termers
+URL:er stod för ~1,8 MB och gav minimal rich-result-nytta och återinförs INTE —
+per-term-innehållet är ändå fullt crawlbart som semantisk <dl>.
 """
 
 from __future__ import annotations
@@ -50,7 +52,7 @@ LANDING_FILE = "medicinskordlista.html"
 
 # Cachebusters per asset — bumpa bara den som faktiskt ändrats.
 STYLES_V = "0.9.144"       # css/styles.css (synkad med övriga sidor 2026-07-12)
-GLOSSARY_V = "0.9.4"      # css/glossary.css + js/glossary.js (denna release)
+GLOSSARY_V = "0.9.5"      # css/glossary.css + js/glossary.js (denna release)
 
 # Svenska alfabetet — fast ordning för alfabetsraden. Bokstäver utan poster
 # renderas nedtonade (icke-klickbara), så raden ser likadan ut oavsett innehåll.
@@ -411,6 +413,193 @@ def build_landing_index(groups: dict[str, list[dict]]) -> str:
     return "\n".join(lines)
 
 
+# ---------------------------------------------------------------------------
+# Landningssidans beskrivande innehåll — om-text, FAQ och referenser.
+# Detta ger sidan egen, unik brödtext (EEAT + Bing gynnar substantiell text) i
+# stället för den A-lista som förr dubblerade ordlista-a.html. A-posterna finns
+# oförändrade kvar på ordlista-a.html; här visas bara set-nivå: rutnät + prosa.
+# ---------------------------------------------------------------------------
+
+_TAG_RE = re.compile(r"<[^>]+>")
+
+
+def strip_tags(markup: str) -> str:
+    """Ren text ur enkel inline-HTML (endast <a>/<em> förekommer). Används för
+    FAQ-schemats text så att den ALLTID matchar den synliga texten (en källa,
+    kan aldrig divergera)."""
+    return html.unescape(_TAG_RE.sub("", markup)).strip()
+
+
+# FAQ: EN källa för både synlig text och FAQPage-schemat. Svaren får innehålla
+# <a>/<em>; schematexten härleds via strip_tags(). Frågorna är valda efter äkta
+# sökintention kring "medicinsk ordlista/termer", inte fyllnad.
+LANDING_FAQ: list[dict[str, str]] = [
+    {
+        "q": "Vad är en medicinsk ordlista och vad kan jag använda den till?",
+        "a": (
+            "En medicinsk ordlista förklarar de latinska, grekiska och "
+            "fackspråkliga ord, förkortningar och begrepp som används inom vården. "
+            "Den här ordlistan täcker anatomi, fysiologi, sjukdomar och skador, "
+            "labbprover, farmakologi och omvårdnad, och riktar sig till studenter "
+            "och yrkesverksamma inom vård och medicin – men fungerar för alla som "
+            "vill förstå ett medicinskt ord."
+        ),
+    },
+    {
+        "q": "Varför är så många medicinska termer på latin och grekiska?",
+        "a": (
+            "Latinet och grekiskan har varit vetenskapens gemensamma språk sedan "
+            "antiken och renässansen och ger ett internationellt entydigt fackspråk: "
+            "samma term betyder samma sak oavsett modersmål. Latinet dominerar "
+            "anatomins namn (som <em>musculus</em> och <em>vena</em>), medan "
+            "grekiskan är vanligast i ord för sjukdom och funktion (som <em>-it</em> "
+            "för inflammation och <em>-emi</em> för blod)."
+        ),
+    },
+    {
+        "q": "Hur är ett medicinskt ord uppbyggt?",
+        "a": (
+            "De flesta medicinska ord byggs av ett förled (prefix), en ordstam och "
+            "ett efterled (suffix). <em>Endo-</em> betyder ’inuti’, <em>card</em> "
+            "’hjärta’ och <em>-it</em> ’inflammation’ – tillsammans endokardit, "
+            "inflammation i hjärtats innersida. Lär du dig de vanligaste "
+            "<a href=\"/ordlista-prefix.html\">förstavelserna</a> och "
+            "<a href=\"/ordlista-suffix.html\">ändelserna</a> kan du tyda ord du "
+            "aldrig sett förut."
+        ),
+    },
+    {
+        "q": "Hur hittar jag ett visst ord i ordlistan?",
+        "a": (
+            "Skriv ordet i sökrutan högst upp – sökningen letar i hela ordlistan på "
+            "en gång och tar dig direkt till rätt post. Du kan också bläddra via "
+            "bokstavskorten eller alfabetsraden; varje bokstav har en egen sida "
+            "(A–Ö), plus sidor för siffror, förstavelser och ändelser. Sökningen "
+            "hittar även ord som bara nämns i en förklaring."
+        ),
+    },
+    {
+        "q": "Vad innehåller varje post i ordlistan?",
+        "a": (
+            "Varje uppslagsord ges med sin betydelse och, där det är relevant, "
+            "ordklass, böjningsform, svensk motsvarighet, lekmannauttryck, engelsk "
+            "förkortning och etymologi (ordets ursprung). För sjukdomar anges ofta "
+            "ICD-10-koden och för labbprover normala referensvärden."
+        ),
+    },
+    {
+        "q": "Är ordlistan gratis, och vem ligger bakom den?",
+        "a": (
+            "Ja, hela ordlistan är gratis att använda. Den är framtagen och "
+            "kvalitetsgranskad av Anatomiquiz mot vedertagna standardverk inom "
+            "anatomi och medicinsk terminologi. Läs mer om källorna och personen "
+            "bakom sidan under <a href=\"/info.html\">Om Anatomiquiz</a>."
+        ),
+    },
+]
+
+# Referenser i APA 7-format (stående regel: varje kunskapsbanksdokument har en
+# synlig referenslista). Speglar verken som anges i sidfoten.
+LANDING_REFERENCES: list[str] = [
+    "Federative International Programme for Anatomical Terminology. (2019). "
+    "<em>Terminologia anatomica</em> (2:a uppl.). FIPAT.",
+    "Lindskog, B. I. (2008). <em>Medicinsk terminologi</em> (5:e uppl.). Nya Doxa.",
+    "Standring, S. (Red.). (2020). <em>Gray’s anatomy: The anatomical basis of "
+    "clinical practice</em> (42:a uppl.). Elsevier.",
+    "Paulsen, F., & Waschke, J. (2018). <em>Sobotta atlas of human anatomy</em> "
+    "(16:e uppl.). Elsevier.",
+    "Socialstyrelsen. (2023). <em>Internationell statistisk klassifikation av "
+    "sjukdomar och relaterade hälsoproblem – systematisk förteckning "
+    "(ICD-10-SE)</em>. Socialstyrelsen.",
+    "Svenska Akademien. (2009). <em>Svenska Akademiens ordbok</em> (SAOB). "
+    "Hämtad från https://www.saob.se",
+]
+
+
+def build_faq_html(faq: list[dict[str, str]]) -> str:
+    """Synlig FAQ: <h3>-fråga + <p>-svar, öppet (ej hopfällt) så skärmläsare och
+    crawlers får hela texten direkt."""
+    lines = [
+        '        <section class="info-about glossary-about glossary-faq" id="faq">',
+        "          <h2>Frågor och svar om medicinska termer</h2>",
+    ]
+    for item in faq:
+        lines.append(f"          <h3>{escape_html(item['q'])}</h3>")
+        lines.append(f"          <p>{item['a']}</p>")
+    lines.append("        </section>")
+    return "\n".join(lines)
+
+
+def faq_jsonld(faq: list[dict[str, str]]) -> dict:
+    """FAQPage-schema. Svarstexten härleds ur den synliga HTML:en (strip_tags),
+    så schema och sida aldrig kan skilja sig åt."""
+    return {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": item["q"],
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": strip_tags(item["a"]),
+                },
+            }
+            for item in faq
+        ],
+    }
+
+
+def build_landing_about() -> str:
+    """Beskrivande om-text (unik brödtext för SEO/EEAT)."""
+    return (
+        '        <section class="info-about glossary-about">\n'
+        "          <h2>Om den medicinska ordlistan</h2>\n"
+        "          <p>Anatomiquiz medicinska ordlista är ett svenskt uppslagsverk "
+        "för medicinska och anatomiska termer. Här förklaras latinska och grekiska "
+        "ord, förkortningar, för- och efterled samt kliniska begrepp inom anatomi, "
+        "fysiologi, sjukdomar och skador, labbprover, farmakologi och omvårdnad. "
+        "Varje post ger en tydlig definition på svenska och, där det hjälper, "
+        "ordklass, böjning, synonymer, vardagsuttryck och ordets etymologi.</p>\n"
+        "          <p>Ordlistan är uppdelad i en sida per begynnelsebokstav (A–Ö) "
+        "plus egna sidor för siffror, förstavelser och ändelser, så att varje sida "
+        "laddar snabbt. Använd sökrutan för att slå upp ett enskilt ord, eller "
+        "bläddra via bokstavskorten ovan. Termer, stavning och koder följer "
+        "vedertagna standardverk och Socialstyrelsens klassifikationer – se "
+        "referenserna längst ner.</p>\n"
+        "        </section>"
+    )
+
+
+def build_landing_references(refs: list[str]) -> str:
+    lines = [
+        '        <section class="info-about glossary-about">',
+        "          <h2>Referenser</h2>",
+        "          <ul>",
+    ]
+    for ref in refs:
+        lines.append(f"            <li>{ref}</li>")
+    lines.append("          </ul>")
+    lines.append("        </section>")
+    return "\n".join(lines)
+
+
+def build_landing_content(
+    groups: dict[str, list[dict]], faq: list[dict[str, str]]
+) -> str:
+    """Hela landningssidans statiska innehåll (inuti #glossaryContent):
+    bokstavsrutnät + om-text + FAQ + referenser."""
+    return "\n".join(
+        [
+            '        <h2 class="glossary-browse-title">Bläddra efter bokstav</h2>',
+            build_landing_index(groups),
+            build_landing_about(),
+            build_faq_html(faq),
+            build_landing_references(LANDING_REFERENCES),
+        ]
+    )
+
+
 def jsonld(obj: dict) -> str:
     body = json.dumps(obj, ensure_ascii=False, indent=2)
     return f'  <script type="application/ld+json">\n{body}\n  </script>'
@@ -464,6 +653,7 @@ def render_page(
     alphabet_html: str,
     content_html: str,
     is_landing: bool,
+    extra_jsonld: list[dict] | None = None,
 ) -> str:
     """Bygg en komplett HTML-sida från den gemensamma mallen."""
     url = f"{SITE}/{filename}"
@@ -474,6 +664,19 @@ def render_page(
     # data-page-key låter glossary.js veta vilken grupp sidan visar, så att
     # sökträffar på samma sida länkas med rent #ankare i stället för full URL.
     page_attr = "" if is_landing else f' data-page="{page_file_key(filename)}"'
+
+    # Extra JSON-LD (t.ex. FAQPage på landningssidan) läggs efter brödsmulan.
+    extra_jsonld_html = (
+        "\n" + "\n".join(jsonld(obj) for obj in extra_jsonld) if extra_jsonld else ""
+    )
+
+    # Landningssidan bär rutnät + info-rutor (inte en <dl>) i #glossaryContent →
+    # ta bort listramen så info-rutorna inte dubbelinramas. Gruppsidor behåller.
+    content_class = (
+        "glossary-content glossary-content--plain"
+        if is_landing
+        else "glossary-content"
+    )
 
     breadcrumb_nav = (
         '<span class="breadcrumb-current" aria-current="page">Medicinsk ordlista</span>'
@@ -532,7 +735,7 @@ def render_page(
 
   <!-- Strukturerad data — AUTO-GENERERAD av scripts/generate_glossary.py, redigera ej för hand. -->
 {jsonld(page_jsonld)}
-{jsonld(breadcrumb_obj)}
+{jsonld(breadcrumb_obj)}{extra_jsonld_html}
 
   <meta name="theme-color" content="#10b981">
   <meta name="color-scheme" content="light">
@@ -585,7 +788,7 @@ def render_page(
       <div id="searchResults" class="glossary-results" hidden aria-live="polite"></div>
 
       <!-- Statiskt innehåll: bläddring/förrendering (crawlbar utan JavaScript). -->
-      <div id="glossaryContent" class="glossary-content">
+      <div id="glossaryContent" class="{content_class}">
 {content_html}
       </div>
     </section>
@@ -637,23 +840,24 @@ def write_landing(groups: dict[str, list[dict]]) -> str:
     # "tusentals" utan siffra (SEO).
     total = sum(len(v) for v in groups.values())
     total_str = f"{total:,}".replace(",", " ")
+    # Landningssidan är en DefinedTermSet på SET-nivå: den korrekta semantiska
+    # typen för en ordlista, men LÄTT — hasPart pekar bara på bokstavssidorna
+    # (~35 URL:er), aldrig på varje term (det gav förr ~1,8 MB, se docstring).
+    order = [k for k in GROUP_ORDER if k in groups]
     page_obj = {
         "@context": "https://schema.org",
-        "@type": "CollectionPage",
+        "@type": "DefinedTermSet",
         "name": "Medicinsk ordlista",
         "description": (
-            "Komplett medicinsk ordlista med latinska och anatomiska termer på "
-            "svenska, uppdelad per bokstav."
+            "Sökbar medicinsk ordlista på svenska med latinska och anatomiska "
+            "termer, förkortningar samt för- och efterled – uppdelad per bokstav."
         ),
         "inLanguage": "sv-SE",
         "url": url,
+        "hasPart": [
+            {"@type": "CreativeWork", "url": f"{SITE}/{page_file(k)}"} for k in order
+        ],
     }
-    # Index visar bokstaven A:s innehåll (eller första gruppen om A saknas) —
-    # som ordlistan såg ut förr, fast bara A laddas så sidan förblir lätt.
-    # Övriga bokstäver nås via alfabetsraden (egna sidor) eller sökrutan.
-    first_key = "A" if "A" in groups else next(
-        k for k in GROUP_ORDER if k in groups
-    )
     page = render_page(
         filename=LANDING_FILE,
         title=title,
@@ -669,8 +873,9 @@ def write_landing(groups: dict[str, list[dict]]) -> str:
         page_jsonld=page_obj,
         breadcrumb_obj=breadcrumb_jsonld(None, url),
         alphabet_html=build_alphabet(set(groups), None),
-        content_html=build_group_dl(groups[first_key]),
+        content_html=build_landing_content(groups, LANDING_FAQ),
         is_landing=True,
+        extra_jsonld=[faq_jsonld(LANDING_FAQ)],
     )
     (ROOT / LANDING_FILE).write_text(page, encoding="utf-8")
     return LANDING_FILE
@@ -720,7 +925,7 @@ def write_group(key: str, entries: list[dict], present: set[str]) -> str:
         "description": desc,
         "inLanguage": "sv-SE",
         "url": url,
-        "isPartOf": {"@type": "CollectionPage", "url": f"{SITE}/{LANDING_FILE}"},
+        "isPartOf": {"@type": "DefinedTermSet", "url": f"{SITE}/{LANDING_FILE}"},
     }
     page = render_page(
         filename=filename,

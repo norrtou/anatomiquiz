@@ -185,6 +185,56 @@ a.glossary-alpha:focus-visible {
   box-shadow: inset 0 -0.08em 0 color-mix(in srgb, var(--primary-deep) 45%, transparent);
 }
 
+/* Landningssidan: #glossaryContent bär här bokstavsrutnät + beskrivande
+   sektioner (om-text, FAQ, referenser) i stället för den inramade <dl>-listan.
+   Ta bort listramen så info-rutorna nedan inte dubbelinramas. Gruppsidorna
+   behåller sin ram (de visar en <dl>). */
+.glossary-content--plain {
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  margin-bottom: 0;
+}
+
+/* Rubrik ovanför bokstavsrutnätet. */
+.glossary-browse-title {
+  font-size: 1.15rem;
+  color: var(--primary-deep);
+  margin: 4px 0 16px;
+  line-height: 1.3;
+}
+
+/* Landningssidans beskrivande .info-about-sektioner (om-text, FAQ, referenser).
+   glossary.css laddas BARA på ordlistesidorna, så dessa regler kan aldrig
+   påverka .info-about-block på andra sidor (t.ex. kunskapsbanken). */
+.glossary-about {
+  margin-top: 28px;
+}
+.glossary-about h2 {
+  font-size: 1.15rem;
+  color: var(--primary-deep);
+  margin: 0 0 12px;
+  line-height: 1.3;
+}
+.glossary-faq h3 {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin: 20px 0 4px;
+  line-height: 1.35;
+}
+.glossary-faq h3:first-of-type {
+  margin-top: 0;
+}
+.glossary-about a {
+  color: var(--primary-deep);
+  font-weight: 600;
+  text-decoration: none;
+}
+.glossary-about a:hover,
+.glossary-about a:focus-visible {
+  text-decoration: underline;
+}
+
 /* ============================================================================
    Bläddringsrutnät på landningssidan — ett bokstavskort per grupp.
    Lugn, redaktionell uppslagsbokskänsla: stor bokstav, antal ord och ett
