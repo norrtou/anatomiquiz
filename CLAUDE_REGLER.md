@@ -135,7 +135,8 @@ En fråga utan relevanta alternativ är värdelös och förstör quizet. Inga fi
   - **Åtgärda i första hand** genom att bygga ut distraktorerna till jämförbar längd (fortsatt faktamässigt fel, inte fyllnadsord). I andra hand korta ner rätt svar – och då till en **komplett, kortare mening**, aldrig en avhuggen fras.
   - Numeriska frågor ("Cirka 6–8 månader"): ge minst en distraktor samma format (ett intervall), så längden inte skiljer.
   - ⛔ Korta ALDRIG rätt svar maskinellt/automatiskt (t.ex. klipp vid kommatecken) – det stympar meningen ("En automatisk", "Ja"). Skriv om för hand och läs igenom.
-- **Inga avslöjande parenteser:** Lägg ALDRIG extra förklaring/exempel inom parentes enbart på rätt svar. Asymmetrin mot distraktorerna avslöjar svaret. Håll rätt svar lika kortfattat som distraktorerna.
+  - **⚠️ Kunskaps-/förklaringsfrågor drar systematisk längdbias – bygg emot det FRÅN START.** När rätt svar är ett påstående eller en förklaring (inte ett enda ord/term) blir det nästan ALLTID längst om distraktorerna skrivs som korta etiketter → 50–60 % längdbias per ämne. Prevention: skriv distraktorerna som **fullständiga, konkret felaktiga påståenden i samma längd och register som rätt svar redan när frågan skapas** – ett halvkunnigt fel, inte en kort etikett. Detta återkom ämne för ämne i sjuksköterske-bygget (2026-07-18) och tvingade fram dyra saneringssvep (strippa parenteser + förlänga distraktorer ämne för ämne) trots att lärdomen redan låg i minnet. Därför står den nu här: minnet räcker inte.
+- **Inga avslöjande parenteser ELLER synonymer enbart på rätt svar:** Lägg ALDRIG extra förklaring/exempel/synonym inom parentes enbart på rätt svar – varken en fri förklaring ELLER en term-synonym av typen `Glomerulus (kapselnystanet)`, `Hypotyreos (underfunktion)`, `Flexion (böjning)`, `Diabetes (sockersjuka)`. Asymmetrin mot distraktorerna avslöjar svaret OCH gör det längst (dubbel tell). Regel: utelämna parentesen (skriv bara `Glomerulus`, `Hypotyreos`, `Flexion`) ELLER ge alla alternativ samma form. Håll rätt svar lika kortfattat som distraktorerna. Detta var den enskilt vanligaste tellen i sjuksköterske-bygget.
 - **Rätt svar får inte ekas i frågan:** Frågetexten får inte innehålla svarstermen verbatim så att frågan blir självbesvarande. Skräckexempel: `medsek_diagnoskodning`-frågan "Vad kallas de Z-koder…" med `correct: "Z-koder"` – svaret stod redan i frågan. Symmetriska antingen/eller-frågor där båda kandidaterna nämns är OK.
 - **Numerisk-/format-paritet:** Rätt svar får inte vara det enda alternativet som är numeriskt eller format-mässigt korrekt. Efterfrågas ett antal/en siffra ska ALLA alternativ vara tal. Efterfrågas ett visst antal saker (plural) ska ALLA alternativ innehålla exakt lika många – t.ex. om rätt svar listar tre strukturer måste varje distraktor också lista tre, aldrig två eller fyra. Annars kan man räkna sig fram till svaret utan sakkunskap.
   - ⚠️ **Antals-asymmetri fångas INTE av `validate_quiz.py` – den måste kontrolleras för hand.** Skräckexempel (hittat 2026-07-13 i `bma_karlfys_42`): frågan löd "Vilka **tre** huvudsakliga faktorer (Virchows triad) …", rätt svar listade tre faktorer medan alla tre distraktorer började med "Enbart …" och listade EN. Då räcker det att räkna för att hitta rätt. Fix: skriv om distraktorerna så att de också listar tre (fortsatt fel) faktorer.
@@ -472,7 +473,11 @@ När nya ämnen läggs till:
 
 **DESSA REGLER ÄR BINDANDE FÖR ALL ARBETE PÅ ANATOMIQUIZ.**
 
-**Senast uppdaterad:** 2026-07-16
+**Senast uppdaterad:** 2026-07-18
+**Version:** 1.3 – §2.9 utökad med längdbias-lärdomen från sjuksköterske-bygget (2026-07-18), på uttrycklig begäran ("minnet räcker ej"):
+- §2.9 längdparitet: kunskaps-/förklaringsfrågor drar systematisk längdbias – skriv distraktorerna som fullständiga, konkret felaktiga påståenden i samma längd FRÅN START (inte korta etiketter)
+- §2.9 parentesregeln utökad: gäller även term-synonymer enbart på rätt svar (`Glomerulus (kapselnystanet)` osv) – dubbel tell (avslöjar + gör längst)
+
 **Version:** 1.2 – kodifierade svep-lärdomarna som tidigare bara låg i Claudes minne (minnet räcker inte – reglerna är facit):
 - §2.12 positiv mall: så här skrivs en bra distraktor (konkret fel + gissa-testet + före→efter-tabell)
 - §2.13 validatorn är facit + bygg rätt från början + kör skriptet efter varje ändring (kostnadsregel)

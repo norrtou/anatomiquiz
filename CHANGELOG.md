@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.155
+- **Rättad utbildningsförkortning: arbetsterapeut visas nu som ATP, inte ATB.** `EDU_ABBREV` i `js/app.js` hade fel förkortning, som bland annat syntes i topplistan (t.ex. "Ben (ATB)"). Förkortningen slås upp live vid visning och lagras inte i sparade highscore-resultat, så rättelsen slår igenom direkt på befintliga topplistor utan datamigrering.
+- **CLAUDE_REGLER.md → v1.3.** §2.9 utökad med längdbias-lärdomen från sjuksköterske-bygget: kunskaps-/förklaringsfrågor drar systematisk längdbias – distraktorerna ska skrivas som fullständiga, konkret felaktiga påståenden i samma längd som rätt svar FRÅN START. Parentesregeln utökad till att även gälla term-synonymer enbart på rätt svar (`Glomerulus (kapselnystanet)` osv).
+- VERSION/APP_VERSION/index.html-cachebuster → 0.9.155.
+
 ## 0.9.154
 - **Sjuksköterska batch 2 – ämne 6–10, 500 nya MC-frågor.** *Nervsystemet*, *Rörelseapparaten*, *Matsmältning & näringslära*, *Njurar & urinvägar* och *Endokrina systemet* – 100 frågor styck, appenderade i `data/sjukskoterska.json` (nu 1000 frågor totalt). De fem tidigare byggda ämnena (0.9.153) ligger byte-identiska kvar; batch 2 lade bara till nya poster. Fem nya live-options i `#topic` och sitemap-rader i `js/info.js`; app.js-routningen (`topic.startsWith('ssk_')`) fanns redan.
 - **0 fel och 0 varningar i `validate_quiz.py`.** Distraktorerna byggda i samma längd och register som rätt svar, förtydligande parenteser strukna från rätt svar, inga absolut-ord/självutpekande/självbesvarande. Antals-paritet handkollad på räkneords-frågor. Alla 100 frågor i varje ämne kontrollerade unika inom ämnet. Omvårdnadslinsen invävd (t.ex. AKUT-testet vid stroke, fallprevention, vätskebalans, blodsocker- och diabetesomvårdnad).
