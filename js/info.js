@@ -119,6 +119,11 @@ const EDUCATIONS = [
     { label: 'Cirkulationssystemet',        file: './data/sjukskoterska.json', topic: 'ssk_cirkulation' },
     { label: 'Blodet',                      file: './data/sjukskoterska.json', topic: 'ssk_blodet' },
     { label: 'Respirationssystemet',        file: './data/sjukskoterska.json', topic: 'ssk_respiration' },
+    { label: 'Nervsystemet',                file: './data/sjukskoterska.json', topic: 'ssk_nervsystemet' },
+    { label: 'Rörelseapparaten',            file: './data/sjukskoterska.json', topic: 'ssk_rorelseapparaten' },
+    { label: 'Matsmältning & näringslära',  file: './data/sjukskoterska.json', topic: 'ssk_matsmaltning_naring' },
+    { label: 'Njurar & urinvägar',          file: './data/sjukskoterska.json', topic: 'ssk_njurar_urinvagar' },
+    { label: 'Endokrina systemet',          file: './data/sjukskoterska.json', topic: 'ssk_endokrina' },
   ]},
   { name: 'Läkare', topics: [
     { label: 'Blandad anatomi/fysiologi',   file: './data/lakare_anatomi_fysiologi.json' },
