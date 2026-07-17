@@ -34,6 +34,44 @@ Tekniskt sitter listan som två kopplade `<select>` i `index.html`
 
 ---
 
+## Slumpade frågor per utbildning (återanvändbart mönster)
+
+Varje utbildning kan få ett **"Slumpade frågor"-val** som dynamiskt drar ett
+slumpurval ur ALLA utbildningens ämnen (inte en egen frågelista). Det byggdes
+först för arbetsterapeut (`blandade`) och sjuksköterska (`blandade_sjukskoterska`,
+0.9.156). **Återanvänd detta – bygg aldrig en ny lösning.**
+
+**Så lägger du till det för en ny utbildning – enda steget som behövs:**
+lägg en `<option>` i `#topic` i `index.html`:
+```html
+<option value="blandade_<utbildning>" data-edu="<utbildning>">Slumpade frågor (MC)</option>
+```
+Inga `app.js`-ändringar behövs – mekaniken är redan generisk (se nedan).
+
+**Regler & varför:**
+1. **Eget `value` per utbildning (`blandade_<utbildning>`), ALDRIG återanvänd bara
+   `blandade`.** Samma värde skulle ge delad topplista mellan utbildningarna och
+   fel utbildningsförkortning (`eduAbbrevFor()` tar första träffen i
+   `allTopicOptions`). Eget värde → egen topplista + rätt förkortning.
+2. **`data-edu` måste matcha utbildningen.** `updateTopicOptions()` visar bara den
+   valda utbildningens ämnen, och slump-valet samlar frågefiler från just de
+   synliga ämnena → automatiskt rätt pool, och den **växer när nya ämnen läggs
+   till** utan underhåll.
+3. **Bara MC/TF kommer med – rena flashcard-ämnen (FC) exkluderas** (path-samlingen
+   filtrerar på typtaggen i etiketten). Sätt etiketten efter poolen: `(MC)` om alla
+   ämnen är MC, annars t.ex. `(MC+TF+Bild)`.
+4. **Svårighetsgrad:** valet ger bara `Normal` om det inte står i
+   `topicsWithHardQuestions` i `app.js`. Lägg bara till det där om utbildningens
+   ämnen faktiskt har `Hard`-frågor.
+
+**Hur mekaniken funkar (redan generisk, rör inte i onödan):** i `app.js` triggar
+`topic.startsWith('blandade')` `loadQuestionsFromMultiplePaths()`, som samlar
+`getQuestionsPath()` för alla synliga `#topic`-options utom disabled och de vars
+`value.startsWith('blandade')`. Alla `blandade*`-värden matchar därför utan att
+någon lista behöver utökas.
+
+---
+
 ## Utbildningar som ska finnas (12)
 
 | Utbildning | `value` (data-edu) | Status idag |
