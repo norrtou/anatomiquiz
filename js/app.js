@@ -74,7 +74,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.155'
+const APP_VERSION = '0.9.156'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -330,13 +330,13 @@ async function startQuiz(allowedTypes){
   const practiceWrong = !!el('practiceWrong')?.checked
 
   // Load questions based on topic
-  if(topic === 'blandade'){
+  if(topic.startsWith('blandade')){
     // Slumpade frågor = bara quiz-ämnen (MC/TF). Rena flashcard-ämnen (FC) tas
     // aldrig in, så slumpade frågor innehåller aldrig flashcards.
     const paths = [...new Set(
       Array.from(el('topic').options)
         .filter(o => {
-          if(o.disabled || o.value === 'blandade') return false
+          if(o.disabled || o.value.startsWith('blandade')) return false
           const t = typeTagOf(o.textContent)
           return t.mc || t.tf
         })
@@ -396,7 +396,7 @@ async function startQuiz(allowedTypes){
       topicMatch = q.topic.startsWith('blodomloppet_')
     } else if(topic === 'lakare_anatomi_fysiologi') {
       topicMatch = q.topic.startsWith('fysiologi_') || q.topic.startsWith('anatomi_')
-    } else if(topic === 'blandade') {
+    } else if(topic.startsWith('blandade')) {
       // Blandade questions include all topics
       topicMatch = true
     } else {
@@ -1346,13 +1346,13 @@ async function startFlashcards() {
   const diff    = el('difficulty').value
   fcTimerOn = !!el('timerEnabled')?.checked
 
-  if (topic === 'blandade') {
+  if (topic.startsWith('blandade')) {
     // Slumpade frågor erbjuder inte flashcards (knappen är skuggad). Skulle detta
     // ändå nås laddas bara MC/TF-ämnen, så inga flashcards kan komma med.
     const paths = [...new Set(
       Array.from(el('topic').options)
         .filter(o => {
-          if(o.disabled || o.value === 'blandade') return false
+          if(o.disabled || o.value.startsWith('blandade')) return false
           const t = typeTagOf(o.textContent)
           return t.mc || t.tf
         })
@@ -1381,7 +1381,7 @@ async function startFlashcards() {
     else if (topic === 'tentaplugg') topicMatch = q.topic.startsWith('studier_')
     else if (topic === 'neurologi')  topicMatch = q.topic.startsWith('nervsystemet_')
     else if (topic === 'blodomloppet') topicMatch = q.topic.startsWith('blodomloppet_')
-    else if (topic === 'blandade')   topicMatch = true
+    else if (topic.startsWith('blandade')) topicMatch = true
     else topicMatch = q.topic === topic
 
     let diffMatch = true

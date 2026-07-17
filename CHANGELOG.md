@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.156
+- **Sjuksköterska får "Slumpade frågor" (MC) – ett dynamiskt urval ur alla utbildningens ämnen, inte en egen lista.** Nytt val i `#topic` (`blandade_sjukskoterska`) som vid start hämtar frågor från alla sjuksköterske-ämnen som är MC/TF just då och slumpar fram valt antal (t.ex. 100). Rena flashcard-ämnen (FC) tas aldrig med. Poolen är ~1238 MC-frågor (medicinsk latin, läkemedelsräkning + de tio organsystems-ämnena) och **växer automatiskt** när nya ämnen läggs till – ingen lista att underhålla.
+- **Återanvänder befintlig "Slumpade frågor"-mekanik (arbetsterapeutens `blandade`) i stället för en ny lösning.** De hårdkodade `topic === 'blandade'`-kontrollerna i `app.js` är generaliserade till `topic.startsWith('blandade')` (och path-exkluderingen till `value.startsWith('blandade')`), så varje utbildning kan få ett eget `blandade_<utbildning>`-val. Eget värde per utbildning ger separat topplista och rätt utbildningsförkortning (SSK), i stället för att krocka med arbetsterapeutens.
+- VERSION/APP_VERSION/index.html-cachebuster → 0.9.156.
+
 ## 0.9.155
 - **Rättad utbildningsförkortning: arbetsterapeut visas nu som ATP, inte ATB.** `EDU_ABBREV` i `js/app.js` hade fel förkortning, som bland annat syntes i topplistan (t.ex. "Ben (ATB)"). Förkortningen slås upp live vid visning och lagras inte i sparade highscore-resultat, så rättelsen slår igenom direkt på befintliga topplistor utan datamigrering.
 - **CLAUDE_REGLER.md → v1.3.** §2.9 utökad med längdbias-lärdomen från sjuksköterske-bygget: kunskaps-/förklaringsfrågor drar systematisk längdbias – distraktorerna ska skrivas som fullständiga, konkret felaktiga påståenden i samma längd som rätt svar FRÅN START. Parentesregeln utökad till att även gälla term-synonymer enbart på rätt svar (`Glomerulus (kapselnystanet)` osv).
