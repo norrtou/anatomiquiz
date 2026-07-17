@@ -113,6 +113,12 @@ const EDUCATIONS = [
     { label: 'Medicinsk latin',             file: './data/medicinsk_latin.json' },
     { label: 'Blandad anatomi/fysiologi – flashcards', file: './data/anatomi_fysiologi_flashcards.json', fc: true },
     { label: 'Läkemedelsräkning',           file: './data/lakemedelsrakning.json' },
+    // Organsystems-ämnena ligger i en delad fil (data/sjukskoterska.json), åtskilda av topic.
+    { label: 'Cell, vävnad & homeostas',    file: './data/sjukskoterska.json', topic: 'ssk_cell_vavnad' },
+    { label: 'Vitalparametrar & normalvärden', file: './data/sjukskoterska.json', topic: 'ssk_vitalparametrar' },
+    { label: 'Cirkulationssystemet',        file: './data/sjukskoterska.json', topic: 'ssk_cirkulation' },
+    { label: 'Blodet',                      file: './data/sjukskoterska.json', topic: 'ssk_blodet' },
+    { label: 'Respirationssystemet',        file: './data/sjukskoterska.json', topic: 'ssk_respiration' },
   ]},
   { name: 'Läkare', topics: [
     { label: 'Blandad anatomi/fysiologi',   file: './data/lakare_anatomi_fysiologi.json' },

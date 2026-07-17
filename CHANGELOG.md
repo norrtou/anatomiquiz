@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.153
+- **Sjuksköterska får sina fem första organsystems-/omvårdnadsämnen – 500 nya MC-frågor.** Batch 1 av utbyggnaden enligt `UTBILDNINGAR_REGLER.md` §Sjuksköterska: *Cell, vävnad & homeostas*, *Vitalparametrar & normalvärden*, *Cirkulationssystemet*, *Blodet* och *Respirationssystemet* – 100 frågor styck. Alla ämnen ligger i en delad fil `data/sjukskoterska.json` (topic-prefix `ssk_`), inkopplad via `js/app.js` (`topic.startsWith('ssk_')`), med live-options i `#topic` (data-edu="sjukskoterska") och sitemap-rader i `js/info.js`. De tre befintliga ämnena (medicinsk latin, blandad anatomi/fysiologi-FC, läkemedelsräkning) är orörda.
+- **Byggt rätt från början enligt §2.9/§2.12–2.13.** `validate_quiz.py data/sjukskoterska.json` ger 0 fel och 0 varningar: distraktorerna är konkreta, trovärdiga fel i samma längd och register som rätt svar, förtydligande parenteser är strukna från rätt svar, inga absolut-ord/självutpekande/självbesvarande frågor. Antals-paritet handkollad på alla räkneords-frågor (fyra vävnadsslag, tre GCS-reaktioner, fyra blodgrupper m.fl.). Alla 100 frågor i varje ämne kontrollerade unika inom ämnet. Omvårdnadslinsen invävd (normalvärden, RLS/GCS/NEWS2, kliniska kopplingar).
+- Sjuksköterskans fem byggda ämnesrader avkommenterade i `#topic`-scaffolden; de tio kvarvarande ämnena ligger kvar som utkommenterade platshållare.
+- VERSION/APP_VERSION/index.html-cachebuster → 0.9.153 (app.js + info.js).
+
 ## 0.9.152
 - **Ordlistans FAQ berikad och korslänkad till terminologi-avdelningen.** Alla 6 FAQ-svar på `medicinskordlista.html` omskrivna till fylligare, mer sökintentions-riktad text med interna länkar till undersidorna i terminologi-avdelningen: `medicinskt-latin`, `grekiska-i-medicinen`, `terminologins-historia`, `deklinationer-pluralformer` och `uttalsregler`. Två delfrågor (uttal, kasus/pluralformer) täcker fler long-tail-sökningar. Källan (`LANDING_FAQ` i `scripts/generate_glossary.py`) och den handhållna landningssidan hålls byte-synkade, och FAQ-schemat härleds fortfarande ur synlig HTML så det inte kan divergera.
 - VERSION/APP_VERSION/index.html-cachebuster → 0.9.152.
