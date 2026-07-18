@@ -41,6 +41,12 @@ slumpurval ur ALLA utbildningens ämnen (inte en egen frågelista). Det byggdes
 först för arbetsterapeut (`blandade`) och sjuksköterska (`blandade_sjukskoterska`,
 0.9.156). **Återanvänd detta – bygg aldrig en ny lösning.**
 
+Finns idag för: arbetsterapeut, sjuksköterska, fysioterapeut, biomedicinsk
+analytiker, röntgensjuksköterska, medicinsk sekreterare, logoped, tandläkare.
+Saknas medvetet för läkare (bara ett ämne – slumpvalet vore samma ämne) och
+Allmänt (bara FC-ämnen → tom pool). Lägg till valet så snart utbildningen har
+minst två MC/TF-ämnen.
+
 **Så lägger du till det för en ny utbildning – enda steget som behövs:**
 lägg en `<option>` i `#topic` i `index.html`:
 ```html
@@ -63,6 +69,13 @@ Inga `app.js`-ändringar behövs – mekaniken är redan generisk (se nedan).
 4. **Svårighetsgrad:** valet ger bara `Normal` om det inte står i
    `topicsWithHardQuestions` i `app.js`. Lägg bara till det där om utbildningens
    ämnen faktiskt har `Hard`-frågor.
+5. **Placering: överst i utbildningens ämnesgrupp.** `#topic` renderas i
+   DOM-ordning (`updateTopicOptions()` bygger om listan i `allTopicOptions`-
+   ordning), så ordningen i `index.html` ÄR den användaren ser. Per utbildning
+   gäller: `Slumpade frågor` först, sedan övriga ämnen i **bokstavsordning**
+   (svensk kollation: å/ä/ö sist, skiljetecken ignoreras). Följd att känna till:
+   slumpvalet blir utbildningens förvalda ämne när man byter utbildning
+   (`topicEl.value = visible[0].value`). Håll ordningen när nya ämnen läggs till.
 
 **Hur mekaniken funkar (redan generisk, rör inte i onödan):** i `app.js` triggar
 `topic.startsWith('blandade')` `loadQuestionsFromMultiplePaths()`, som samlar
