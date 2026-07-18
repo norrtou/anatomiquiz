@@ -299,7 +299,18 @@
         <option value="tandlakare_tand_parodontium" data-edu="tandlakare">Tand &amp; parodontium (MC)</option>
 
         <!-- Läkare -->
+        <option value="blandade_lakare" data-edu="lakare">Slumpade frågor (MC)</option>
         <option value="lakare_anatomi_fysiologi" data-edu="lakare">Blandad anatomi/fysiologi (MC)</option>
+        <option value="lakare_buk" data-edu="lakare">Buk/abdomen (MC)</option>
+        <option value="lakare_backen_perineum" data-edu="lakare">Bäcken &amp; perineum (MC)</option>
+        <option value="lakare_huvud_hals" data-edu="lakare">Huvud &amp; hals (MC)</option>
+        <option value="lakare_kardiovaskular" data-edu="lakare">Kardiovaskulära systemet (MC)</option>
+        <option value="lakare_nedre_extremitet" data-edu="lakare">Nedre extremitet (MC)</option>
+        <option value="lakare_neuroanatomi" data-edu="lakare">Neuroanatomi (CNS) (MC)</option>
+        <option value="lakare_respiration" data-edu="lakare">Respirationssystemet (MC)</option>
+        <option value="lakare_rygg_columna" data-edu="lakare">Rygg &amp; columna (MC)</option>
+        <option value="lakare_thorax" data-edu="lakare">Thorax (MC)</option>
+        <option value="lakare_ovre_extremitet" data-edu="lakare">Övre extremitet (MC)</option>
 
         <!-- Allmänt -->
         <option value="farmakologi" data-edu="allmant">Farmakologi (FC)</option>
@@ -315,17 +326,9 @@
              i getQuestionsPath() och sätt rätt typtagg (MC/FC/TF) i texten.
              Allmänt och arbetsterapeut hanteras separat – ingen scaffold här.
              ========================================================= -->
-        <!-- Läkare (har redan: Blandad anatomi/fysiologi) -->
-        <!-- <option value="lakare_ovre_extremitet" data-edu="lakare">Övre extremitet</option> -->
-        <!-- <option value="lakare_nedre_extremitet" data-edu="lakare">Nedre extremitet</option> -->
-        <!-- <option value="lakare_thorax" data-edu="lakare">Thorax</option> -->
-        <!-- <option value="lakare_buk" data-edu="lakare">Buk/abdomen</option> -->
-        <!-- <option value="lakare_backen_perineum" data-edu="lakare">Bäcken &amp; perineum</option> -->
-        <!-- <option value="lakare_rygg_columna" data-edu="lakare">Rygg &amp; columna</option> -->
-        <!-- <option value="lakare_huvud_hals" data-edu="lakare">Huvud &amp; hals</option> -->
-        <!-- <option value="lakare_neuroanatomi" data-edu="lakare">Neuroanatomi (CNS)</option> -->
-        <!-- <option value="lakare_kardiovaskular" data-edu="lakare">Kardiovaskulära systemet</option> -->
-        <!-- <option value="lakare_respiration" data-edu="lakare">Respirationssystemet</option> -->
+        <!-- Läkare (byggda: Blandad anatomi/fysiologi, Övre/Nedre extremitet,
+             Thorax, Buk/abdomen, Bäcken & perineum, Rygg & columna,
+             Huvud & hals, Neuroanatomi, Kardiovaskulära, Respiration) -->
         <!-- <option value="lakare_njure_vatska" data-edu="lakare">Njure &amp; vätskebalans</option> -->
         <!-- <option value="lakare_gastro_amnesoms" data-edu="lakare">Gastrointestinalt &amp; ämnesomsättning</option> -->
         <!-- <option value="lakare_endokrina" data-edu="lakare">Endokrina systemet</option> -->
@@ -699,6 +702,6 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.158" defer></script>
+  <script src="js/app.js?v=0.9.159" defer></script>
 </body>
 </html>

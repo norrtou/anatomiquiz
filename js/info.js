@@ -130,8 +130,20 @@ const EDUCATIONS = [
     { label: 'Vätske-, elektrolyt- & syra-basbalans', file: './data/sjukskoterska.json', topic: 'ssk_vatska_elektrolyt_syrabas' },
     { label: 'Åldrande & livscykelperspektiv', file: './data/sjukskoterska.json', topic: 'ssk_aldrande_livscykel' },
   ]},
+  // De topografiska läkarämnena ligger i en delad fil (data/lakare.json),
+  // åtskilda av postens topic-fält → varje rad filtreras via `topic`.
   { name: 'Läkare', topics: [
     { label: 'Blandad anatomi/fysiologi',   file: './data/lakare_anatomi_fysiologi.json' },
+    { label: 'Övre extremitet',             file: './data/lakare.json', topic: 'lakare_ovre_extremitet' },
+    { label: 'Nedre extremitet',            file: './data/lakare.json', topic: 'lakare_nedre_extremitet' },
+    { label: 'Thorax',                      file: './data/lakare.json', topic: 'lakare_thorax' },
+    { label: 'Buk/abdomen',                 file: './data/lakare.json', topic: 'lakare_buk' },
+    { label: 'Bäcken & perineum',           file: './data/lakare.json', topic: 'lakare_backen_perineum' },
+    { label: 'Rygg & columna',              file: './data/lakare.json', topic: 'lakare_rygg_columna' },
+    { label: 'Huvud & hals',                file: './data/lakare.json', topic: 'lakare_huvud_hals' },
+    { label: 'Neuroanatomi (CNS)',          file: './data/lakare.json', topic: 'lakare_neuroanatomi' },
+    { label: 'Kardiovaskulära systemet',    file: './data/lakare.json', topic: 'lakare_kardiovaskular' },
+    { label: 'Respirationssystemet',        file: './data/lakare.json', topic: 'lakare_respiration' },
   ]},
   // Fysioterapeut-ämnena ligger alla i en delad fil (data/fysioterapeut.json),
   // åtskilda av postens topic-fält → varje rad filtreras via `topic`.

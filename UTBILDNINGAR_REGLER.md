@@ -42,10 +42,10 @@ först för arbetsterapeut (`blandade`) och sjuksköterska (`blandade_sjukskoter
 0.9.156). **Återanvänd detta – bygg aldrig en ny lösning.**
 
 Finns idag för: arbetsterapeut, sjuksköterska, fysioterapeut, biomedicinsk
-analytiker, röntgensjuksköterska, medicinsk sekreterare, logoped, tandläkare.
-Saknas medvetet för läkare (bara ett ämne – slumpvalet vore samma ämne) och
-Allmänt (bara FC-ämnen → tom pool). Lägg till valet så snart utbildningen har
-minst två MC/TF-ämnen.
+analytiker, röntgensjuksköterska, medicinsk sekreterare, logoped, tandläkare,
+läkare (tillagt i 0.9.159 när utbildningen fick sina tio första byggda
+ämnen). Saknas medvetet för Allmänt (bara FC-ämnen → tom pool). Lägg till valet
+så snart utbildningen har minst två MC/TF-ämnen.
 
 **Så lägger du till det för en ny utbildning – enda steget som behövs:**
 lägg en `<option>` i `#topic` i `index.html`:
@@ -95,7 +95,7 @@ någon lista behöver utökas.
 | Biomedicinsk analytiker | `biomedicinsk_analytiker` | tom → platshållare |
 | Fysioterapeut | `fysioterapeut` | tom → platshållare |
 | Logoped | `logoped` | tom → platshållare |
-| Läkare | `lakare` | har 1 ämne + platshållare |
+| Läkare | `lakare` | 1 tidigare ämne + 10 byggda ämnen (av 18) |
 | Medicinsk sekreterare | `medicinsk_sekreterare` | tom → platshållare |
 | Optiker | `optiker` | tom → platshållare |
 | Röntgensjuksköterska | `rontgensjukskoterska` | tom → platshållare |
