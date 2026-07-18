@@ -124,6 +124,11 @@ const EDUCATIONS = [
     { label: 'Matsmältning & näringslära',  file: './data/sjukskoterska.json', topic: 'ssk_matsmaltning_naring' },
     { label: 'Njurar & urinvägar',          file: './data/sjukskoterska.json', topic: 'ssk_njurar_urinvagar' },
     { label: 'Endokrina systemet',          file: './data/sjukskoterska.json', topic: 'ssk_endokrina' },
+    { label: 'Huden (integumentet)',        file: './data/sjukskoterska.json', topic: 'ssk_huden' },
+    { label: 'Immunförsvar & lymfsystem',   file: './data/sjukskoterska.json', topic: 'ssk_immun_lymf' },
+    { label: 'Reproduktion, graviditet & förlossning', file: './data/sjukskoterska.json', topic: 'ssk_reproduktion_graviditet' },
+    { label: 'Vätske-, elektrolyt- & syra-basbalans', file: './data/sjukskoterska.json', topic: 'ssk_vatska_elektrolyt_syrabas' },
+    { label: 'Åldrande & livscykelperspektiv', file: './data/sjukskoterska.json', topic: 'ssk_aldrande_livscykel' },
   ]},
   { name: 'Läkare', topics: [
     { label: 'Blandad anatomi/fysiologi',   file: './data/lakare_anatomi_fysiologi.json' },

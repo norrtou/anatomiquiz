@@ -86,7 +86,7 @@ någon lista behöver utökas.
 | Medicinsk sekreterare | `medicinsk_sekreterare` | tom → platshållare |
 | Optiker | `optiker` | tom → platshållare |
 | Röntgensjuksköterska | `rontgensjukskoterska` | tom → platshållare |
-| Sjuksköterska | `sjukskoterska` | har 3 ämnen + platshållare |
+| Sjuksköterska | `sjukskoterska` | KLAR – 3 tidigare ämnen + 15 byggda ämnen |
 | Tandläkare | `tandlakare` | tom → platshållare |
 
 Plus **Allmänt** (`allmant`) som separat, orörd kategori.
