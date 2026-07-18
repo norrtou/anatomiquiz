@@ -149,6 +149,9 @@ const EDUCATIONS = [
     { label: 'Endokrina systemet',          file: './data/lakare.json', topic: 'lakare_endokrina' },
     { label: 'Blod & immunförsvar',         file: './data/lakare.json', topic: 'lakare_blod_immun' },
     { label: 'Reproduktion',                file: './data/lakare.json', topic: 'lakare_reproduktion' },
+    { label: 'Histologi',                   file: './data/lakare.json', topic: 'lakare_histologi' },
+    { label: 'Embryologi',                  file: './data/lakare.json', topic: 'lakare_embryologi' },
+    { label: 'Cell- & membranfysiologi',    file: './data/lakare.json', topic: 'lakare_cell_membranfys' },
   ]},
   // Fysioterapeut-ämnena ligger alla i en delad fil (data/fysioterapeut.json),
   // åtskilda av postens topic-fält → varje rad filtreras via `topic`.

@@ -20998,5 +20998,4205 @@
     "topic": "lakare_reproduktion",
     "difficulty": "Normal",
     "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_histo_1",
+    "type": "mc",
+    "prompt": "Vilka fyra grundvävnader byggs kroppen upp av?",
+    "correct": "Epitel-, bind-, muskel- och nervvävnad",
+    "distractors": [
+      "Epitel-, brosk-, ben- och blodvävnad",
+      "Bind-, fett-, muskel- och lymfvävnad",
+      "Epitel-, körtel-, kärl- och nervvävnad"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_2",
+    "type": "mc",
+    "prompt": "Vad kännetecknar epitelvävnad?",
+    "correct": "Tätt packade celler på ett basalmembran utan egna blodkärl",
+    "distractors": [
+      "Glest liggande celler i riklig mellansubstans med egna kärl",
+      "Långa sammansmälta celler med tvärstrimmig struktur",
+      "Utskottsförsedda celler som leder elektriska impulser"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_3",
+    "type": "mc",
+    "prompt": "Hur får epitelceller sin näring?",
+    "correct": "Genom diffusion från underliggande bindväv",
+    "distractors": [
+      "Genom egna kapillärer mellan cellerna",
+      "Genom lymfkärl som löper i epitelet",
+      "Genom direkt upptag från kroppsytan"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_4",
+    "type": "mc",
+    "prompt": "Vilken epiteltyp klär alveolerna och möjliggör snabb diffusion?",
+    "correct": "Enkelt skivepitel",
+    "distractors": [
+      "Flerskiktat skivepitel",
+      "Enkelt cylinderepitel",
+      "Övergångsepitel"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_5",
+    "type": "mc",
+    "prompt": "Vilken epiteltyp klär urinblåsan?",
+    "correct": "Övergångsepitel",
+    "distractors": [
+      "Enkelt skivepitel",
+      "Flerskiktat skivepitel med förhorning",
+      "Flerradigt cilierat cylinderepitel"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_6",
+    "type": "mc",
+    "prompt": "Varför är övergångsepitelet lämpligt i urinvägarna?",
+    "correct": "Det kan tänjas ut när blåsan fylls utan att brista",
+    "distractors": [
+      "Det producerar slem som skyddar mot urinen",
+      "Det har cilier som driver urinen framåt",
+      "Det tar upp vatten och koncentrerar urinen"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_7",
+    "type": "mc",
+    "prompt": "Vilken epiteltyp klär huden ytterst?",
+    "correct": "Flerskiktat skivepitel med förhorning",
+    "distractors": [
+      "Flerskiktat skivepitel utan förhorning",
+      "Enkelt kubiskt epitel",
+      "Flerradigt cilierat epitel"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_8",
+    "type": "mc",
+    "prompt": "Vilken epiteltyp klär tunntarmens yta?",
+    "correct": "Enkelt cylinderepitel med mikrovilli",
+    "distractors": [
+      "Flerskiktat skivepitel utan förhorning",
+      "Enkelt skivepitel utan utskott",
+      "Övergångsepitel med kupolceller"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_9",
+    "type": "mc",
+    "prompt": "Vad kallas mikrovilli-bården i ljusmikroskop?",
+    "correct": "Borstbräm",
+    "distractors": [
+      "Basalmembran",
+      "Glykokalyx på cellytan",
+      "Terminalnät"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_10",
+    "type": "mc",
+    "prompt": "Vilken cellkontakt förhindrar att ämnen läcker mellan epitelceller?",
+    "correct": "Tight junction",
+    "distractors": [
+      "Desmosom",
+      "Gap junction",
+      "Hemidesmosom"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_11",
+    "type": "mc",
+    "prompt": "Vilken cellkontakt fäster cellen vid basalmembranet?",
+    "correct": "Hemidesmosom",
+    "distractors": [
+      "Desmosom",
+      "Tight junction",
+      "Gap junction"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_12",
+    "type": "mc",
+    "prompt": "Vilken cellkontakt tillåter direkt utbyte av joner mellan celler?",
+    "correct": "Gap junction",
+    "distractors": [
+      "Tight junction",
+      "Desmosom",
+      "Hemidesmosom"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_13",
+    "type": "mc",
+    "prompt": "Vilken struktur angrips av autoantikroppar vid pemfigus?",
+    "correct": "Desmosomerna mellan epidermis celler",
+    "distractors": [
+      "Hemidesmosomerna mot basalmembranet",
+      "Tight junctions i tarmepitelet",
+      "Gap junctions i hjärtmuskeln"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_14",
+    "type": "mc",
+    "prompt": "Vad kallas en körtel som tömmer sitt sekret via en utförsgång?",
+    "correct": "Exokrin körtel",
+    "distractors": [
+      "Endokrin körtel",
+      "Parakrin körtel",
+      "Autokrin körtel"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_15",
+    "type": "mc",
+    "prompt": "Vilken sekretionstyp innebär att hela cellen går under med sitt innehåll?",
+    "correct": "Holokrin sekretion",
+    "distractors": [
+      "Merokrin sekretion",
+      "Apokrin sekretion",
+      "Ekkrin sekretion"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_16",
+    "type": "mc",
+    "prompt": "Vilken körtel i huden har holokrin sekretion?",
+    "correct": "Talgkörteln",
+    "distractors": [
+      "Svettkörteln",
+      "Tårkörteln",
+      "Bröstkörteln"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_17",
+    "type": "mc",
+    "prompt": "Vilken cell producerar kollagen i bindväven?",
+    "correct": "Fibroblasten",
+    "distractors": [
+      "Mastcellen",
+      "Makrofagen",
+      "Plasmacellen"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_18",
+    "type": "mc",
+    "prompt": "Vilken kollagentyp dominerar i senor och benvävnad?",
+    "correct": "Typ I",
+    "distractors": [
+      "Typ II",
+      "Typ III",
+      "Typ IV"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_19",
+    "type": "mc",
+    "prompt": "Vilken kollagentyp dominerar i hyalint brosk?",
+    "correct": "Typ II",
+    "distractors": [
+      "Typ I",
+      "Typ III",
+      "Typ IV"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_20",
+    "type": "mc",
+    "prompt": "Vilken kollagentyp bygger upp basalmembranet?",
+    "correct": "Typ IV",
+    "distractors": [
+      "Typ I",
+      "Typ II",
+      "Typ III"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_21",
+    "type": "mc",
+    "prompt": "Vilken kollagentyp bildar retikulära fibrer i lymfoida organ?",
+    "correct": "Typ III",
+    "distractors": [
+      "Typ I",
+      "Typ II",
+      "Typ IV"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_22",
+    "type": "mc",
+    "prompt": "Vilket vitamin krävs för kollagenets hydroxylering?",
+    "correct": "Vitamin C",
+    "distractors": [
+      "Vitamin A",
+      "Vitamin D",
+      "Vitamin K"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_23",
+    "type": "mc",
+    "prompt": "Vilka symtom ger skörbjugg på grund av bristande kollagensyntes?",
+    "correct": "Blödande tandkött, dålig sårläkning och lösa tänder",
+    "distractors": [
+      "Nattblindhet, torr hud och nedsatt immunförsvar",
+      "Muskelkramper, stickningar och benskörhet",
+      "Blodbrist, trötthet och stickningar i benen"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_24",
+    "type": "mc",
+    "prompt": "Vilket protein ger vävnaden dess elastiska återfjädring?",
+    "correct": "Elastin",
+    "distractors": [
+      "Kollagen typ I",
+      "Fibronektin",
+      "Laminin"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_25",
+    "type": "mc",
+    "prompt": "Vilken bindvävscell frisätter histamin och heparin?",
+    "correct": "Mastcellen",
+    "distractors": [
+      "Fibroblasten",
+      "Plasmacellen",
+      "Adipocyten"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_26",
+    "type": "mc",
+    "prompt": "Vad kännetecknar tät regelbunden bindväv?",
+    "correct": "Parallella kollagenbuntar som i senor",
+    "distractors": [
+      "Oregelbundet flätade kollagenbuntar som i läderhuden",
+      "Glest liggande fibrer i riklig grundsubstans",
+      "Nätverk av retikulära fibrer utan kollagen"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_27",
+    "type": "mc",
+    "prompt": "Vilken vävnadstyp är vit fettväv?",
+    "correct": "Specialiserad bindväv",
+    "distractors": [
+      "Epitelvävnad",
+      "Muskelvävnad",
+      "Nervvävnad"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_28",
+    "type": "mc",
+    "prompt": "Vad skiljer brun fettväv från vit i mikroskop?",
+    "correct": "Många små fettdroppar och rikligt med mitokondrier",
+    "distractors": [
+      "En enda stor fettdroppe och få mitokondrier",
+      "Avsaknad av cellkärna i de mogna cellerna",
+      "Tvärstrimmig struktur i cytoplasman"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_29",
+    "type": "mc",
+    "prompt": "Vilken brosktyp finns i ledytorna?",
+    "correct": "Hyalint brosk",
+    "distractors": [
+      "Elastiskt brosk",
+      "Fibröst brosk",
+      "Kalcifierat brosk"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_30",
+    "type": "mc",
+    "prompt": "Vilken brosktyp finns i ytterörat och struplocket?",
+    "correct": "Elastiskt brosk",
+    "distractors": [
+      "Hyalint brosk",
+      "Fibröst brosk",
+      "Benvävnad av lamellär typ"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_31",
+    "type": "mc",
+    "prompt": "Vilken brosktyp finns i disken mellan kotorna?",
+    "correct": "Fibröst brosk",
+    "distractors": [
+      "Hyalint brosk",
+      "Elastiskt brosk",
+      "Retikulär bindväv"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_32",
+    "type": "mc",
+    "prompt": "Varför läker broskskador dåligt?",
+    "correct": "Brosk saknar blodkärl och nutrieras genom diffusion",
+    "distractors": [
+      "Brosk har för hög celldelningstakt för ordnad läkning",
+      "Brosk saknar celler helt i vuxen ålder",
+      "Brosk bryts ned av ledvätskan vid skada"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_33",
+    "type": "mc",
+    "prompt": "Vad kallas de hålrum där broskceller ligger?",
+    "correct": "Lakuner",
+    "distractors": [
+      "Kanalikuli",
+      "Haverska kanaler",
+      "Trabekler"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_34",
+    "type": "mc",
+    "prompt": "Vad kallas den strukturella enheten i kompakt benvävnad?",
+    "correct": "Osteon",
+    "distractors": [
+      "Trabekel",
+      "Lakun",
+      "Sarkomer"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_35",
+    "type": "mc",
+    "prompt": "Vad löper i osteonets centrala kanal?",
+    "correct": "Blodkärl och nerver",
+    "distractors": [
+      "Benmärg med fettceller",
+      "Ledvätska",
+      "Lymfa utan kärlvägg"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_36",
+    "type": "mc",
+    "prompt": "Vad kallas de tunna kanaler som förbinder benceller med varandra?",
+    "correct": "Kanalikuli",
+    "distractors": [
+      "Volkmannska kanaler",
+      "Haverska kanaler",
+      "Sinusoider"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_37",
+    "type": "mc",
+    "prompt": "Vilken cell är en inmurad osteoblast som känner av mekanisk belastning?",
+    "correct": "Osteocyten",
+    "distractors": [
+      "Osteoklasten",
+      "Kondrocyten",
+      "Fibrocyten"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_38",
+    "type": "mc",
+    "prompt": "Från vilken cellinje härstammar osteoklasten?",
+    "correct": "Från den monocytära cellinjen",
+    "distractors": [
+      "Från den lymfoida cellinjen",
+      "Från mesenkymala stamceller i periostet",
+      "Från erytroida förstadier i benmärgen"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_39",
+    "type": "mc",
+    "prompt": "Vad kallas den benbildning som sker direkt i bindväv, som i skallens tak?",
+    "correct": "Desmal benbildning",
+    "distractors": [
+      "Enkondral benbildning",
+      "Appositionell brosktillväxt",
+      "Interstitiell brosktillväxt"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_40",
+    "type": "mc",
+    "prompt": "Vad kallas den benbildning som sker via en broskmodell i rörbenen?",
+    "correct": "Enkondral benbildning",
+    "distractors": [
+      "Desmal benbildning",
+      "Appositionell benpålagring från periostet",
+      "Remodellering genom osteoner"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_41",
+    "type": "mc",
+    "prompt": "Var sker rörbenens längdtillväxt?",
+    "correct": "I epifysplattan",
+    "distractors": [
+      "I periostet",
+      "I benmärgshålan",
+      "I ledbrosket"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_42",
+    "type": "mc",
+    "prompt": "Var sker rörbenens tjockleksökning?",
+    "correct": "Genom pålagring från periostet",
+    "distractors": [
+      "Genom celldelning i epifysplattan",
+      "Genom osteoklasternas arbete i endostet",
+      "Genom brosktillväxt i ledytan"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_43",
+    "type": "mc",
+    "prompt": "Vilken muskeltyp är tvärstrimmig och styrs viljemässigt?",
+    "correct": "Skelettmuskulatur",
+    "distractors": [
+      "Hjärtmuskulatur",
+      "Glatt muskulatur",
+      "Myoepitelial vävnad"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_44",
+    "type": "mc",
+    "prompt": "Vilken muskeltyp är tvärstrimmig men styrs autonomt?",
+    "correct": "Hjärtmuskulatur",
+    "distractors": [
+      "Skelettmuskulatur",
+      "Glatt muskulatur",
+      "Muskelvävnad i mjälten"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_45",
+    "type": "mc",
+    "prompt": "Hur ser skelettmuskelcellens kärnor ut och var ligger de?",
+    "correct": "Många kärnor som ligger perifert i cellen",
+    "distractors": [
+      "En central kärna per cell",
+      "Många kärnor som ligger centralt i cellen",
+      "Två kärnor i varje cells mittparti"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_46",
+    "type": "mc",
+    "prompt": "Vad kallas den funktionella kontraktila enheten i en muskelfibrill?",
+    "correct": "Sarkomeren",
+    "distractors": [
+      "Myofibrillen",
+      "Sarkolemmat",
+      "Triaden"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_47",
+    "type": "mc",
+    "prompt": "Vad avgränsar sarkomeren i vardera änden?",
+    "correct": "Z-skivorna",
+    "distractors": [
+      "A-banden",
+      "H-zonerna",
+      "M-linjerna"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_48",
+    "type": "mc",
+    "prompt": "Vilket band i sarkomeren behåller sin längd under kontraktionen?",
+    "correct": "A-bandet",
+    "distractors": [
+      "I-bandet",
+      "H-zonen",
+      "Området mellan Z-skivorna"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_49",
+    "type": "mc",
+    "prompt": "Vad består de tunna filamenten huvudsakligen av?",
+    "correct": "Aktin",
+    "distractors": [
+      "Myosin",
+      "Titin",
+      "Dystrofin"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_50",
+    "type": "mc",
+    "prompt": "Vilket protein saknas vid Duchennes muskeldystrofi?",
+    "correct": "Dystrofin",
+    "distractors": [
+      "Titin",
+      "Troponin C",
+      "Tropomyosin"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_51",
+    "type": "mc",
+    "prompt": "Vad kallas strukturen där ett T-rör möter två cisterner i skelettmuskeln?",
+    "correct": "Triaden",
+    "distractors": [
+      "Diaden",
+      "Sarkomeren",
+      "Disci intercalares"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_52",
+    "type": "mc",
+    "prompt": "Vad kännetecknar typ 1-muskelfibrer?",
+    "correct": "Uthålliga, rika på mitokondrier och myoglobin",
+    "distractors": [
+      "Snabba, fattiga på mitokondrier och lätt uttröttbara",
+      "Snabba, rika på mitokondrier men fattiga på myoglobin",
+      "Uthålliga men utan blodkärl i muskelvävnaden"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_53",
+    "type": "mc",
+    "prompt": "Vad kallas den bindvävshinna som omger hela muskeln?",
+    "correct": "Epimysium",
+    "distractors": [
+      "Perimysium",
+      "Endomysium",
+      "Periost"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_54",
+    "type": "mc",
+    "prompt": "Vad omger perimysiet?",
+    "correct": "Muskelbuntar",
+    "distractors": [
+      "Enskilda muskelfibrer",
+      "Hela muskeln",
+      "Senans kollagenbuntar"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_55",
+    "type": "mc",
+    "prompt": "Vilken cell möjliggör regeneration av skelettmuskelvävnad?",
+    "correct": "Satellitcellen",
+    "distractors": [
+      "Fibroblasten",
+      "Myofibroblasten",
+      "Perikapillära pericyten"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_56",
+    "type": "mc",
+    "prompt": "Hur skiljer sig glatt muskulatur från skelettmuskulatur i mikroskop?",
+    "correct": "Spolformade celler med en central kärna och utan tvärstrimmighet",
+    "distractors": [
+      "Cylindriska celler med perifera kärnor och tvärstrimmighet",
+      "Grenade celler med disci intercalares",
+      "Runda celler utan kärna i mogen form"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_57",
+    "type": "mc",
+    "prompt": "Vad ersätter Z-skivorna i glatt muskulatur?",
+    "correct": "Täta kroppar i cytoplasman",
+    "distractors": [
+      "Disci intercalares mellan cellerna",
+      "T-rörsystemet längs membranet",
+      "Sarkoplasmatiska cisterner"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_58",
+    "type": "mc",
+    "prompt": "Vilken struktur i hjärtmuskeln innehåller både desmosomer och gap junctions?",
+    "correct": "Disci intercalares",
+    "distractors": [
+      "Triaden",
+      "Z-skivan",
+      "Sarkolemmats kaveolae"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_59",
+    "type": "mc",
+    "prompt": "Vilken cell är nervsystemets signalledande enhet?",
+    "correct": "Neuronet",
+    "distractors": [
+      "Astrocyten",
+      "Oligodendrocyten",
+      "Ependymcellen"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_60",
+    "type": "mc",
+    "prompt": "Vad kallas de basofila ansamlingarna av grovt endoplasmatiskt nätverk i nervcellskroppen?",
+    "correct": "Nisslsubstans",
+    "distractors": [
+      "Lipofuscin",
+      "Neurofibriller",
+      "Golgifält"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_61",
+    "type": "mc",
+    "prompt": "Vilken neurontyp är typisk för spinalganglier?",
+    "correct": "Pseudounipolärt neuron",
+    "distractors": [
+      "Multipolärt neuron",
+      "Bipolärt neuron",
+      "Anaxonalt neuron"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_62",
+    "type": "mc",
+    "prompt": "Vilken neurontyp finns i näthinnan och luktepitelet?",
+    "correct": "Bipolärt neuron",
+    "distractors": [
+      "Pseudounipolärt neuron",
+      "Multipolärt motorneuron",
+      "Purkinjecell"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_63",
+    "type": "mc",
+    "prompt": "Vad kallas bindvävshinnan runt en hel perifer nerv?",
+    "correct": "Epineurium",
+    "distractors": [
+      "Perineurium",
+      "Endoneurium",
+      "Epimysium"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_64",
+    "type": "mc",
+    "prompt": "Vilken hinna bildar blod-nervbarriären i perifera nerver?",
+    "correct": "Perineurium",
+    "distractors": [
+      "Epineurium",
+      "Endoneurium",
+      "Myelinskidan"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_65",
+    "type": "mc",
+    "prompt": "Vad kallas nedbrytningen av axonet distalt om en nervskada?",
+    "correct": "Wallersk degeneration",
+    "distractors": [
+      "Retrograd kromatolys",
+      "Apoptos i nervcellskroppen",
+      "Demyelinisering av central typ"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_66",
+    "type": "mc",
+    "prompt": "Varför kan perifera nerver regenerera bättre än centrala banor?",
+    "correct": "Schwannceller bildar ledande band som axonet växer längs",
+    "distractors": [
+      "Perifera axoner växer utan stödjande celler",
+      "Centrala axoner saknar cellkropp att växa ifrån",
+      "Perifera nerver saknar myelin och växer snabbare"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_67",
+    "type": "mc",
+    "prompt": "Vilken struktur i tarmens vägg innehåller körtlar och större kärl?",
+    "correct": "Submukosan",
+    "distractors": [
+      "Mukosans epitel",
+      "Muscularis externa",
+      "Serosan"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_68",
+    "type": "mc",
+    "prompt": "Vilka lager ingår i mag-tarmkanalens vägg inifrån och ut?",
+    "correct": "Mukosa, submukosa, muscularis externa och serosa",
+    "distractors": [
+      "Submukosa, mukosa, serosa och muscularis externa",
+      "Mukosa, muscularis externa, submukosa och serosa",
+      "Serosa, submukosa, mukosa och muscularis externa"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_69",
+    "type": "mc",
+    "prompt": "Vilken celltyp i luftvägsepitelet producerar slem?",
+    "correct": "Bägarcellen",
+    "distractors": [
+      "Cilierade cellen",
+      "Basalcellen",
+      "Klara-cellen i alveolen"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_70",
+    "type": "mc",
+    "prompt": "Vad händer med luftvägsepitelet vid långvarig rökning?",
+    "correct": "Det omvandlas till skivepitel genom metaplasi",
+    "distractors": [
+      "Det omvandlas till körtelepitel genom hyperplasi",
+      "Det förtjockas med bevarade cilier",
+      "Det ersätts av bindväv utan epitel"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_71",
+    "type": "mc",
+    "prompt": "Vad menas med metaplasi?",
+    "correct": "En mogen vävnadstyp ersätts av en annan mogen vävnadstyp",
+    "distractors": [
+      "Cellerna ökar i antal utan typförändring",
+      "Cellerna ökar i storlek utan att bli fler",
+      "Cellerna förlorar sin differentiering helt"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_72",
+    "type": "mc",
+    "prompt": "Vad menas med hypertrofi?",
+    "correct": "Cellerna blir större utan att bli fler",
+    "distractors": [
+      "Cellerna blir fler utan att bli större",
+      "Cellerna ersätts av mogna celler av nytt slag",
+      "Cellerna minskar i antal och storlek"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_73",
+    "type": "mc",
+    "prompt": "Vad menas med dysplasi?",
+    "correct": "Störd cellmognad med avvikande kärnor utan invasion",
+    "distractors": [
+      "Normal vävnad som bytt typ men behållit mognaden",
+      "Invasiv tillväxt genom basalmembranet",
+      "Ökat antal normalt mogna celler"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_74",
+    "type": "mc",
+    "prompt": "Vad skiljer cancer in situ från invasiv cancer?",
+    "correct": "Vid cancer in situ är basalmembranet intakt",
+    "distractors": [
+      "Vid cancer in situ har cellerna normala kärnor",
+      "Vid cancer in situ finns redan fjärrmetastaser",
+      "Vid cancer in situ saknas celldelning helt"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_75",
+    "type": "mc",
+    "prompt": "Vad kallas en malign tumör som utgår från epitelvävnad?",
+    "correct": "Karcinom",
+    "distractors": [
+      "Sarkom",
+      "Lymfom",
+      "Gliom"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_76",
+    "type": "mc",
+    "prompt": "Vad kallas en malign tumör som utgår från bind- eller stödjevävnad?",
+    "correct": "Sarkom",
+    "distractors": [
+      "Karcinom",
+      "Adenom",
+      "Papillom"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_77",
+    "type": "mc",
+    "prompt": "Vad betyder ändelsen -om i en tumörbenämning som lipom?",
+    "correct": "Godartad tumör",
+    "distractors": [
+      "Elakartad tumör",
+      "Inflammation i vävnaden",
+      "Bristande utveckling av vävnaden"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_78",
+    "type": "mc",
+    "prompt": "Vilken färgningsmetod är rutin inom histopatologi?",
+    "correct": "Hematoxylin och eosin",
+    "distractors": [
+      "Gramfärgning",
+      "Ziehl-Neelsen",
+      "May-Grünwald-Giemsa"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_79",
+    "type": "mc",
+    "prompt": "Vad färgas blått av hematoxylin?",
+    "correct": "Cellkärnornas nukleinsyror",
+    "distractors": [
+      "Cytoplasmans proteiner",
+      "Fettdropparna i cellen",
+      "Kollagenet i bindväven"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_80",
+    "type": "mc",
+    "prompt": "Vad innebär att en struktur är eosinofil i färgningen?",
+    "correct": "Den färgas rosa av eosin och är basisk",
+    "distractors": [
+      "Den färgas blå av hematoxylin och är sur",
+      "Den tar inte upp färg alls",
+      "Den innehåller eosinofila granulocyter"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_81",
+    "type": "mc",
+    "prompt": "Vilken metod använder märkta antikroppar för att påvisa specifika proteiner i vävnad?",
+    "correct": "Immunhistokemi",
+    "distractors": [
+      "Vanlig rutinfärgning",
+      "Polarisationsmikroskopi",
+      "Elektronmikroskopi utan märkning"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_82",
+    "type": "mc",
+    "prompt": "Vilket fixeringsmedel används rutinmässigt för vävnadsprover?",
+    "correct": "Formalin",
+    "distractors": [
+      "Etanol i 70-procentig lösning",
+      "Fysiologisk koksaltlösning",
+      "Glycerol"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_83",
+    "type": "mc",
+    "prompt": "Varför används fryssnitt under pågående operation?",
+    "correct": "Svaret kan ges inom minuter och styra ingreppet",
+    "distractors": [
+      "Snittkvaliteten blir bättre än vid paraffin",
+      "Metoden kräver varken paraffininbäddning eller uttorkning",
+      "Undersökningen kan göras utan patologisk bedömning"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_84",
+    "type": "mc",
+    "prompt": "Vilken vävnad kläder lungsäckens och bukhinnans inre yta?",
+    "correct": "Mesotel",
+    "distractors": [
+      "Endotel",
+      "Flerskiktat skivepitel",
+      "Övergångsepitel"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_85",
+    "type": "mc",
+    "prompt": "Vilken vävnad kläder blodkärlens insida?",
+    "correct": "Endotel",
+    "distractors": [
+      "Mesotel",
+      "Enkelt kubiskt epitel",
+      "Flerradigt cilierat epitel"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_86",
+    "type": "mc",
+    "prompt": "Vilka tre lager har artärväggen?",
+    "correct": "Intima, media och adventitia",
+    "distractors": [
+      "Mukosa, submukosa och serosa",
+      "Epidermis, dermis och subcutis",
+      "Endomysium, perimysium och epimysium"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_87",
+    "type": "mc",
+    "prompt": "Vad skiljer en ven från en artär av samma storlek i mikroskop?",
+    "correct": "Venen har tunnare vägg och vidare lumen",
+    "distractors": [
+      "Venen har tjockare vägg och trängre lumen",
+      "Venen saknar endotel i sin intima",
+      "Venen har tvärstrimmig muskulatur i media"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_88",
+    "type": "mc",
+    "prompt": "Vilken kapillärtyp har porer och finns i njurens glomerulus?",
+    "correct": "Fenestrerad kapillär",
+    "distractors": [
+      "Kontinuerlig kapillär",
+      "Sinusoidal kapillär",
+      "Kapillär utan endotel"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_89",
+    "type": "mc",
+    "prompt": "Vilken kapillärtyp finns i lever och benmärg?",
+    "correct": "Sinusoid",
+    "distractors": [
+      "Kontinuerlig kapillär",
+      "Fenestrerad kapillär med basalmembran",
+      "Lymfkapillär"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_90",
+    "type": "mc",
+    "prompt": "Vilken kapillärtyp finns i hjärnan och bidrar till blod-hjärnbarriären?",
+    "correct": "Kontinuerlig kapillär med tight junctions",
+    "distractors": [
+      "Fenestrerad kapillär med porer",
+      "Sinusoid med stora luckor",
+      "Lymfkapillär med blindslut"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_91",
+    "type": "mc",
+    "prompt": "Vilket lager i huden innehåller de delande basalcellerna?",
+    "correct": "Stratum basale",
+    "distractors": [
+      "Stratum corneum",
+      "Stratum granulosum",
+      "Stratum lucidum"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_92",
+    "type": "mc",
+    "prompt": "Vilken cell i epidermis producerar pigment?",
+    "correct": "Melanocyten",
+    "distractors": [
+      "Keratinocyten",
+      "Langerhanscellen",
+      "Merkelcellen"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_93",
+    "type": "mc",
+    "prompt": "Vilken cell i epidermis är en antigenpresenterande immuncell?",
+    "correct": "Langerhanscellen",
+    "distractors": [
+      "Merkelcellen",
+      "Melanocyten",
+      "Keratinocyten"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_94",
+    "type": "mc",
+    "prompt": "Vilken cell i huden fungerar som mekanoreceptor?",
+    "correct": "Merkelcellen",
+    "distractors": [
+      "Langerhanscellen",
+      "Melanocyten",
+      "Fibroblasten i dermis"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_95",
+    "type": "mc",
+    "prompt": "Vilken receptor i huden känner av vibration och djupt tryck?",
+    "correct": "Vater-Pacinis kropp",
+    "distractors": [
+      "Meissners kropp",
+      "Ruffinis ändorgan",
+      "Fria nervändslut"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_96",
+    "type": "mc",
+    "prompt": "Vilken struktur i lymfkörteln innehåller prolifererande B-celler?",
+    "correct": "Groddcentrum i follikeln",
+    "distractors": [
+      "Parakortikala området",
+      "Märgsträngarna",
+      "Subkapsulära sinus"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_97",
+    "type": "mc",
+    "prompt": "Vilket område i lymfkörteln domineras av T-celler?",
+    "correct": "Parakortex",
+    "distractors": [
+      "Follikelns groddcentrum",
+      "Märgsträngarna",
+      "Kapseln"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_98",
+    "type": "mc",
+    "prompt": "Vad omger den vita pulpan i mjälten?",
+    "correct": "En centralarteriol med lymfocytmantel",
+    "distractors": [
+      "En centralven med erytrocyter",
+      "Ett nätverk av gallkanalikuli",
+      "Ett lager av mesotel"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_99",
+    "type": "mc",
+    "prompt": "Vad kallas de kroppar i tymus märg som är typiska i mikroskop?",
+    "correct": "Hassalls kroppar",
+    "distractors": [
+      "Malpighis kroppar",
+      "Nissls kroppar",
+      "Russells kroppar"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_histo_100",
+    "type": "mc",
+    "prompt": "Vad händer med tymus efter puberteten?",
+    "correct": "Den tillbakabildas och ersätts delvis av fettväv",
+    "distractors": [
+      "Den växer till och blir mest aktiv i vuxen ålder",
+      "Den omvandlas till en lymfkörtel",
+      "Den flyttar ned till bukhålan"
+    ],
+    "topic": "lakare_histologi",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_embryo_1",
+    "type": "mc",
+    "prompt": "Vad kallas den befruktade äggcellen?",
+    "correct": "Zygot",
+    "distractors": [
+      "Morula",
+      "Blastocyst",
+      "Gastrula"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_2",
+    "type": "mc",
+    "prompt": "Vad kallas den kompakta cellklump som bildas efter några delningar?",
+    "correct": "Morula",
+    "distractors": [
+      "Zygot",
+      "Blastocyst",
+      "Neurula"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_3",
+    "type": "mc",
+    "prompt": "Vad kännetecknar de första delningarna efter befruktningen?",
+    "correct": "Cellerna blir fler utan att den totala volymen ökar",
+    "distractors": [
+      "Cellerna blir fler och den totala volymen ökar snabbt",
+      "Cellerna växer i storlek utan att dela sig",
+      "Cellerna differentieras direkt till organanlag"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_4",
+    "type": "mc",
+    "prompt": "När uppstår enäggstvillingar?",
+    "correct": "När en befruktad äggcell delar sig i två anlag",
+    "distractors": [
+      "När två äggceller befruktas av varsin spermie",
+      "När en äggcell befruktas av två spermier",
+      "När två blastocyster smälter samman"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_5",
+    "type": "mc",
+    "prompt": "Vad avgör om enäggstvillingar delar fosterhinnor?",
+    "correct": "Vid vilken tidpunkt delningen sker",
+    "distractors": [
+      "Vilket kön tvillingarna har",
+      "Var i livmodern implantationen sker",
+      "Moderns ålder vid befruktningen"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_6",
+    "type": "mc",
+    "prompt": "Vad kallas den process i vecka 3 där de tre groddbladen bildas?",
+    "correct": "Gastrulation",
+    "distractors": [
+      "Neurulation",
+      "Segmentering",
+      "Implantation"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_7",
+    "type": "mc",
+    "prompt": "Vilken struktur markerar starten på gastrulationen?",
+    "correct": "Primitivstrimman",
+    "distractors": [
+      "Neuralröret",
+      "Chorda dorsalis",
+      "Somiterna"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_8",
+    "type": "mc",
+    "prompt": "Vilka tre groddblad bildas vid gastrulationen?",
+    "correct": "Ektoderm, mesoderm och endoderm",
+    "distractors": [
+      "Ektoderm, mesenkym och trofoblast",
+      "Endoderm, amnion och chorion",
+      "Mesoderm, neuralrör och somiter"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_9",
+    "type": "mc",
+    "prompt": "Vad utvecklas ur ektodermet?",
+    "correct": "Nervsystemet och överhuden",
+    "distractors": [
+      "Skelettet och muskulaturen",
+      "Tarmkanalens epitel och lungorna",
+      "Njurarna och könskörtlarna"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_10",
+    "type": "mc",
+    "prompt": "Vad utvecklas ur mesodermet?",
+    "correct": "Skelett, muskler, hjärta och njurar",
+    "distractors": [
+      "Nervsystem, överhud och tandemalj",
+      "Tarmepitel, lever och bukspottkörtel",
+      "Fosterhinnorna och navelsträngens kärl"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_11",
+    "type": "mc",
+    "prompt": "Vad utvecklas ur endodermet?",
+    "correct": "Mag-tarmkanalens epitel, lungorna och levern",
+    "distractors": [
+      "Hjärtat, njurarna och skelettet",
+      "Hjärnan, ryggmärgen och näthinnan",
+      "Bindväven, blodet och lymfkärlen"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_12",
+    "type": "mc",
+    "prompt": "Vilken struktur inducerar bildningen av neuralplattan?",
+    "correct": "Chorda dorsalis",
+    "distractors": [
+      "Primitivstrimman",
+      "Somiterna",
+      "Amnionhålan"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_13",
+    "type": "mc",
+    "prompt": "Vad bildas när neuralplattans kanter viker sig och sluter sig?",
+    "correct": "Neuralröret",
+    "distractors": [
+      "Chorda dorsalis",
+      "Tarmröret",
+      "Coelomhålan"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_14",
+    "type": "mc",
+    "prompt": "När sluter sig neuralröret normalt?",
+    "correct": "Under fjärde graviditetsveckan",
+    "distractors": [
+      "Under andra graviditetsveckan",
+      "Under åttonde graviditetsveckan",
+      "Under andra trimestern"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_15",
+    "type": "mc",
+    "prompt": "Vad blir följden om neuralrörets främre ände inte sluter sig?",
+    "correct": "Anencefali",
+    "distractors": [
+      "Spina bifida i ländryggen",
+      "Hydrocefalus utan missbildning",
+      "Gomspalt"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_16",
+    "type": "mc",
+    "prompt": "Vad blir följden om neuralrörets bakre ände inte sluter sig?",
+    "correct": "Spina bifida",
+    "distractors": [
+      "Anencefali",
+      "Encefalocele i pannan",
+      "Mikrocefali"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_17",
+    "type": "mc",
+    "prompt": "Vilket prov i moderns blod kan tala för en öppen neuralrörsdefekt?",
+    "correct": "Förhöjt alfafetoprotein",
+    "distractors": [
+      "Förhöjt humant koriongonadotropin",
+      "Sänkt östriol",
+      "Förhöjt kreatinin"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_18",
+    "type": "mc",
+    "prompt": "Vilken struktur ger upphov till binjuremärgen och melanocyterna?",
+    "correct": "Neurallisten",
+    "distractors": [
+      "Neuralrörets tak",
+      "Somiternas sklerotom",
+      "Ytektodermet"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_19",
+    "type": "mc",
+    "prompt": "Vilken sjukdom beror på utebliven inflyttning av neurallistceller till tarmväggen?",
+    "correct": "Hirschsprungs sjukdom",
+    "distractors": [
+      "Celiaki",
+      "Pylorusstenos",
+      "Meckels divertikel"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_20",
+    "type": "mc",
+    "prompt": "Vad bildas ur somiterna?",
+    "correct": "Kotor, ryggmuskulatur och underhud",
+    "distractors": [
+      "Njurar, urinledare och könskörtlar",
+      "Hjärta, kärl och blodkroppar",
+      "Tarmepitel, lever och pankreas"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_21",
+    "type": "mc",
+    "prompt": "Vad utvecklas myotomet i somiten till?",
+    "correct": "Skelettmuskulatur",
+    "distractors": [
+      "Kotkroppar och kotbågar",
+      "Underhudens bindväv",
+      "Ryggmärgens nervceller"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_22",
+    "type": "mc",
+    "prompt": "Varför följer dermatomen ett segmentellt mönster på huden?",
+    "correct": "Varje somit får sin nerv från motsvarande ryggmärgssegment",
+    "distractors": [
+      "Huden bildas efter att nerverna vuxit ut slumpmässigt",
+      "Varje somit vandrar till en egen kroppsdel utan nerv",
+      "Nervsystemet segmenteras efter att huden bildats"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_23",
+    "type": "mc",
+    "prompt": "Vilken embryologisk struktur ger upphov till njurens definitiva form?",
+    "correct": "Metanefros",
+    "distractors": [
+      "Pronefros",
+      "Mesonefros",
+      "Allantois"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_24",
+    "type": "mc",
+    "prompt": "Vad bildar urinledaren och njurbäckenet?",
+    "correct": "Uretärknoppen från den mesonefriska gången",
+    "distractors": [
+      "Metanefrogena blastemet",
+      "Allantois nedre del",
+      "Sinus urogenitalis övre del"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_25",
+    "type": "mc",
+    "prompt": "Var anläggs njurarna innan de stiger uppåt?",
+    "correct": "I bäckenet",
+    "distractors": [
+      "I bröstkorgen",
+      "I halsregionen",
+      "Utanför bukhålan i pungen"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_26",
+    "type": "mc",
+    "prompt": "Vad kallas missbildningen där njurarnas nedre poler växt samman?",
+    "correct": "Hästskonjure",
+    "distractors": [
+      "Njuragenesi",
+      "Polycystisk njursjukdom",
+      "Dubbla uretärer"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_27",
+    "type": "mc",
+    "prompt": "Varför fastnar en hästskonjure under uppstigningen?",
+    "correct": "Den hakar upp sig på a. mesenterica inferior",
+    "distractors": [
+      "Den hakar upp sig på diafragmas crus",
+      "Den fastnar i bäckenets ligament",
+      "Den hindras av binjurarnas läge"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_28",
+    "type": "mc",
+    "prompt": "Vad kallas den vanliga fetala hjärtstrukturen som bildas när hjärtröret böjer sig?",
+    "correct": "Hjärtslingan",
+    "distractors": [
+      "Endokardiekuddarna",
+      "Sinus venosus",
+      "Truncus arteriosus"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_29",
+    "type": "mc",
+    "prompt": "När börjar det embryonala hjärtat slå?",
+    "correct": "I fjärde graviditetsveckan",
+    "distractors": [
+      "I andra graviditetsveckan",
+      "I tolfte graviditetsveckan",
+      "Först efter första trimestern"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_30",
+    "type": "mc",
+    "prompt": "Vilka strukturer delar upp kammarna och utflödesbanorna i hjärtat?",
+    "correct": "Endokardiekuddarna och konotrunkalsepta",
+    "distractors": [
+      "Somiterna tillsammans med neurallisten",
+      "Chorda dorsalis och primitivstrimman",
+      "Sinus venosus och ductus venosus"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_31",
+    "type": "mc",
+    "prompt": "Vilken är den vanligaste medfödda hjärtmissbildningen?",
+    "correct": "Kammarseptumdefekt",
+    "distractors": [
+      "Förmaksseptumdefekt",
+      "Fallots tetrad",
+      "Transposition av de stora kärlen"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_32",
+    "type": "mc",
+    "prompt": "Vad ingår i Fallots tetrad?",
+    "correct": "Pulmonalstenos, kammarseptumdefekt, ryttande aorta och högerkammarhypertrofi",
+    "distractors": [
+      "Aortastenos, förmaksseptumdefekt, öppen ductus och vänsterkammarhypertrofi",
+      "Pulmonalstenos, öppen ductus, coarctatio och mitralisstenos",
+      "Kammarseptumdefekt, mitralisinsufficiens, aortastenos och förmaksflimmer"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_33",
+    "type": "mc",
+    "prompt": "Vad kallas ett hjärtfel där syrefattigt blod shuntas ut i kroppskretsloppet?",
+    "correct": "Cyanotiskt hjärtfel",
+    "distractors": [
+      "Acyanotiskt hjärtfel",
+      "Klaffvitium utan shunt",
+      "Perikardiell defekt"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_34",
+    "type": "mc",
+    "prompt": "Vad kallas det när en vänster-högershunt med tiden vänder riktning?",
+    "correct": "Eisenmengers syndrom",
+    "distractors": [
+      "Marfans syndrom",
+      "Kawasakis sjukdom",
+      "Ebsteins anomali"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_35",
+    "type": "mc",
+    "prompt": "Ur vilken struktur utvecklas lungorna?",
+    "correct": "En knopp från förtarmens framvägg",
+    "distractors": [
+      "En knopp från mellantarmens bakvägg",
+      "Neuralrörets övre del",
+      "Somiternas mesoderm"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_36",
+    "type": "mc",
+    "prompt": "Vad orsakar esofagusatresi med trakeoesofageal fistel?",
+    "correct": "Ofullständig delning mellan luftstrupe och matstrupe",
+    "distractors": [
+      "Utebliven rotation av magsäcken",
+      "Bristande slutning av diafragma",
+      "För tidig tillbakabildning av gulesäcken"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_37",
+    "type": "mc",
+    "prompt": "Vilket fynd hos den nyfödde väcker misstanke om esofagusatresi?",
+    "correct": "Skummande saliv och svårighet att föra ned sond",
+    "distractors": [
+      "Gallfärgade kräkningar första dygnet",
+      "Uppspänd buk utan kräkning",
+      "Cyanos som försvinner vid gråt"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_38",
+    "type": "mc",
+    "prompt": "Var uppstår ett medfött diafragmabråck vanligen?",
+    "correct": "Posterolateralt på vänster sida",
+    "distractors": [
+      "Anteromedialt på höger sida",
+      "Genom esofagushiatus i mittlinjen",
+      "Genom aortaöppningen bakåt"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_39",
+    "type": "mc",
+    "prompt": "Vilken allvarlig följd har ett stort medfött diafragmabråck?",
+    "correct": "Lunghypoplasi eftersom bukorganen tar plats i brösthålan",
+    "distractors": [
+      "Hjärtmissbildning eftersom hjärtat inte kan bildas",
+      "Njursvikt eftersom njurarna trycks samman",
+      "Tarmatresi eftersom tarmen kläms av helt"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_40",
+    "type": "mc",
+    "prompt": "Vad kallas ett bukväggsbråck där tarmen ligger utanför buken utan täckande hinna?",
+    "correct": "Gastroschisis",
+    "distractors": [
+      "Omfalocele",
+      "Navelbråck",
+      "Ljumskbråck"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_41",
+    "type": "mc",
+    "prompt": "Vad skiljer omfalocele från gastroschisis?",
+    "correct": "Omfalocele är täckt av en hinna och sitter i navelsträngen",
+    "distractors": [
+      "Omfalocele saknar täckande hinna och sitter till höger om naveln",
+      "Omfalocele innehåller bara tarm utan andra organ",
+      "Omfalocele uppstår efter födelsen"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_42",
+    "type": "mc",
+    "prompt": "Vad kallas den fysiologiska process där tarmen tillfälligt ligger i navelsträngen?",
+    "correct": "Fysiologiskt navelbråck",
+    "distractors": [
+      "Patologiskt omfalocele",
+      "Gastroschisis av tidig typ",
+      "Malrotation med volvulus"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_43",
+    "type": "mc",
+    "prompt": "Vad orsakar analatresi?",
+    "correct": "Bristande genombrott av kloakmembranet",
+    "distractors": [
+      "Utebliven rotation av mellantarmen",
+      "Bristande tillbakabildning av allantois",
+      "För tidig slutning av neuralröret"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_44",
+    "type": "mc",
+    "prompt": "Vad kallas den rest av urachus som kan ge urinläckage från naveln?",
+    "correct": "Urachusfistel",
+    "distractors": [
+      "Meckels divertikel",
+      "Ductus omphaloentericus-cysta",
+      "Vitellinkärlsrest"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_45",
+    "type": "mc",
+    "prompt": "Vilken regel beskriver Meckels divertikel?",
+    "correct": "Cirka 2 procent av befolkningen, 2 tum lång, 2 fot från ileocekalvalvet",
+    "distractors": [
+      "Cirka 20 procent av befolkningen, 5 tum lång, 5 fot från valvet",
+      "Cirka 2 promille av befolkningen, 10 tum lång, 1 fot från valvet",
+      "Cirka 12 procent av befolkningen, 1 tum lång, 3 fot från valvet"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_46",
+    "type": "mc",
+    "prompt": "Ur vilken gälbåge utvecklas underkäken?",
+    "correct": "Den första gälbågen",
+    "distractors": [
+      "Den andra gälbågen",
+      "Den tredje gälbågen",
+      "Den fjärde gälbågen"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_47",
+    "type": "mc",
+    "prompt": "Vilken struktur utvecklas ur den tredje gälfickan?",
+    "correct": "Tymus och de nedre bisköldkörtlarna",
+    "distractors": [
+      "Mellanörat och örontrumpeten",
+      "Gomtonsillen",
+      "Sköldkörtelns follikelceller"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_48",
+    "type": "mc",
+    "prompt": "Vad kännetecknar DiGeorges syndrom embryologiskt?",
+    "correct": "Bristande utveckling av tredje och fjärde gälfickan",
+    "distractors": [
+      "Bristande slutning av neuralröret",
+      "Utebliven rotation av hjärtröret",
+      "Bristande delning av förtarmen"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_49",
+    "type": "mc",
+    "prompt": "Vilka symtom följer av DiGeorges syndrom?",
+    "correct": "Hypokalcemi, nedsatt T-cellsfunktion och hjärtmissbildning",
+    "distractors": [
+      "Hyperkalcemi, ökad T-cellsfunktion och njurmissbildning",
+      "Anemi, blödningsbenägenhet och leverpåverkan",
+      "Kortvuxenhet, dövhet och gomspalt utan immunpåverkan"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_50",
+    "type": "mc",
+    "prompt": "Var anläggs sköldkörteln innan den vandrar ned?",
+    "correct": "Vid tungbasen",
+    "distractors": [
+      "Vid struphuvudets nedre kant",
+      "I bröstkorgens övre öppning",
+      "Bakom matstrupen"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_51",
+    "type": "mc",
+    "prompt": "Vad kallas den kvarvarande öppningen vid tungbasen efter sköldkörtelns vandring?",
+    "correct": "Foramen caecum",
+    "distractors": [
+      "Foramen ovale",
+      "Foramen cecum coli",
+      "Ductus arteriosus"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_52",
+    "type": "mc",
+    "prompt": "När sluter sig gommen normalt under fosterutvecklingen?",
+    "correct": "I vecka 8–12",
+    "distractors": [
+      "I vecka 3–4",
+      "I vecka 20–24",
+      "Först efter födelsen"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_53",
+    "type": "mc",
+    "prompt": "Vad orsakar läppspalt embryologiskt?",
+    "correct": "Bristande sammansmältning mellan maxillar- och medial nasalutskott",
+    "distractors": [
+      "Bristande sammansmältning av gomplattorna baktill",
+      "Bristande tillbakabildning av gälfickorna",
+      "För tidig slutning av neuralrörets främre del"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_54",
+    "type": "mc",
+    "prompt": "Vilka funktionsproblem ger en obehandlad gomspalt?",
+    "correct": "Svårighet att suga och läckage av luft vid tal",
+    "distractors": [
+      "Svårighet att svälja fast föda men normalt tal",
+      "Nedsatt hörsel utan påverkan på talet",
+      "Uttalad andnöd direkt efter födelsen"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_55",
+    "type": "mc",
+    "prompt": "Ur vilken struktur utvecklas ögats lins?",
+    "correct": "Ytektodermets linsplakod",
+    "distractors": [
+      "Neuralrörets ögonblåsa",
+      "Neurallistens mesenkym",
+      "Mesodermets somiter"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_56",
+    "type": "mc",
+    "prompt": "Ur vilken struktur utvecklas näthinnan?",
+    "correct": "Utbuktningen från mellanhjärnblåsan",
+    "distractors": [
+      "Ytektodermets linsplakod",
+      "Neurallistens celler",
+      "Mesodermets ögonmuskelanlag"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_57",
+    "type": "mc",
+    "prompt": "Vad kallas den missbildning där ögats fissur inte sluter sig?",
+    "correct": "Kolobom",
+    "distractors": [
+      "Katarakt",
+      "Glaukom",
+      "Ptos"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_58",
+    "type": "mc",
+    "prompt": "Vilken infektion hos modern tidigt i graviditeten kan ge katarakt och dövhet hos barnet?",
+    "correct": "Röda hund",
+    "distractors": [
+      "Influensa",
+      "Vattkoppor efter vecka 30",
+      "Streptokockinfektion i halsen"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_59",
+    "type": "mc",
+    "prompt": "Vad står TORCH för i sammanhanget fosterinfektioner?",
+    "correct": "En grupp infektioner som kan skada fostret",
+    "distractors": [
+      "En grupp kromosomavvikelser hos fostret",
+      "En grupp läkemedel som är fosterskadande",
+      "En serie ultraljudsundersökningar under graviditeten"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_60",
+    "type": "mc",
+    "prompt": "Vilket läkemedel är känt för att ge svåra extremitetsmissbildningar?",
+    "correct": "Talidomid",
+    "distractors": [
+      "Paracetamol",
+      "Penicillin",
+      "Insulin"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_61",
+    "type": "mc",
+    "prompt": "Vad kännetecknar fetalt alkoholsyndrom?",
+    "correct": "Tillväxthämning, typiska ansiktsdrag och kognitiv påverkan",
+    "distractors": [
+      "Överdriven tillväxt, normala ansiktsdrag och normal kognition",
+      "Isolerad hjärtmissbildning utan andra fynd",
+      "För tidig födsel utan bestående påverkan"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_62",
+    "type": "mc",
+    "prompt": "Vilket läkemedel mot akne är starkt fosterskadande?",
+    "correct": "Isotretinoin",
+    "distractors": [
+      "Klindamycin i kräm",
+      "Bensoylperoxid",
+      "Azelainsyra"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_63",
+    "type": "mc",
+    "prompt": "Vilken sorts fosterskada ger warfarin i första trimestern?",
+    "correct": "Skelettmissbildningar med underutvecklad näsrygg",
+    "distractors": [
+      "Njuragenesi med uttalad oligohydramnios",
+      "Neuralrörsdefekt i ländryggen",
+      "Gomspalt utan andra fynd"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_64",
+    "type": "mc",
+    "prompt": "Vilken antiepileptika är särskilt förknippad med neuralrörsdefekter?",
+    "correct": "Valproat",
+    "distractors": [
+      "Lamotrigin",
+      "Levetiracetam",
+      "Gabapentin"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_65",
+    "type": "mc",
+    "prompt": "Varför ges ACE-hämmare inte under graviditet?",
+    "correct": "De skadar fostrets njurar och ger för lite fostervatten",
+    "distractors": [
+      "De ökar fostrets blodtryck kraftigt",
+      "De hämmar fostrets skelettillväxt via kalcium",
+      "De blockerar moderkakans hormonproduktion"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_66",
+    "type": "mc",
+    "prompt": "Under vilken vecka anläggs armarnas och benens knoppar?",
+    "correct": "Vecka 4–5",
+    "distractors": [
+      "Vecka 2–3",
+      "Vecka 10–12",
+      "Vecka 16–18"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_67",
+    "type": "mc",
+    "prompt": "Vilken process skapar mellanrummen mellan fingrarna?",
+    "correct": "Programmerad celldöd i vävnaden mellan fingeranlagen",
+    "distractors": [
+      "Snabb celldelning i själva fingeranlagen",
+      "Mekanisk uttänjning av handplattan",
+      "Nedbrytning av brosk i handleden"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_68",
+    "type": "mc",
+    "prompt": "Vad kallas missbildningen med sammanvuxna fingrar?",
+    "correct": "Syndaktyli",
+    "distractors": [
+      "Polydaktyli",
+      "Brakydaktyli",
+      "Klinodaktyli"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_69",
+    "type": "mc",
+    "prompt": "Vad kallas missbildningen med extra fingrar eller tår?",
+    "correct": "Polydaktyli",
+    "distractors": [
+      "Syndaktyli",
+      "Ektrodaktyli",
+      "Amelia"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_70",
+    "type": "mc",
+    "prompt": "Vad avgör extremitetens dorsala och ventrala uppdelning under utvecklingen?",
+    "correct": "Signalcentrum i extremitetsknoppens ektoderm och mesenkym",
+    "distractors": [
+      "Fostervattnets tryck mot knoppen",
+      "Moderns hormonnivåer i tredje trimestern",
+      "Slumpmässig celldelning utan styrning"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_71",
+    "type": "mc",
+    "prompt": "Varför roterar de nedre extremiteterna medialt under utvecklingen?",
+    "correct": "För att knäna ska peka framåt vid upprätt gång",
+    "distractors": [
+      "För att höftleden ska bli mer rörlig",
+      "För att nerverna ska nå fram till foten",
+      "För att blodkärlen ska bli kortare"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_72",
+    "type": "mc",
+    "prompt": "Vad kallas den period då organanlagen bildas?",
+    "correct": "Embryonalperioden",
+    "distractors": [
+      "Fetalperioden",
+      "Preembryonala perioden",
+      "Perinatalperioden"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_73",
+    "type": "mc",
+    "prompt": "Vad kännetecknar fetalperioden från vecka 9?",
+    "correct": "Tillväxt och mognad av redan anlagda organ",
+    "distractors": [
+      "Bildning av de tre groddbladen",
+      "Anläggning av alla organsystem",
+      "Implantation i livmoderslemhinnan"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_74",
+    "type": "mc",
+    "prompt": "Vid vilken vecka kan könet vanligen ses på ultraljud?",
+    "correct": "Kring vecka 18",
+    "distractors": [
+      "Kring vecka 6",
+      "Kring vecka 10",
+      "Kring vecka 34"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_75",
+    "type": "mc",
+    "prompt": "När räknas ett foster som livsdugligt utanför livmodern med intensivvård?",
+    "correct": "Från omkring vecka 22",
+    "distractors": [
+      "Från omkring vecka 16",
+      "Från omkring vecka 30",
+      "Först vid fullgången tid"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_76",
+    "type": "mc",
+    "prompt": "Vilken struktur bildar amnionhålans vägg?",
+    "correct": "Amnion",
+    "distractors": [
+      "Chorion",
+      "Decidua basalis",
+      "Gulesäcken"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_77",
+    "type": "mc",
+    "prompt": "Vilken funktion har gulesäcken tidigt i utvecklingen?",
+    "correct": "Den bildar de första blodkropparna och könscellerna",
+    "distractors": [
+      "Den producerar fostervatten under hela graviditeten",
+      "Den bildar moderkakans moderdel",
+      "Den skyddar embryot mekaniskt i tredje trimestern"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_78",
+    "type": "mc",
+    "prompt": "Var anläggs urkönscellerna innan de vandrar till gonadanlagen?",
+    "correct": "I gulesäckens vägg",
+    "distractors": [
+      "I neuralrörets tak",
+      "I somiternas myotom",
+      "I moderkakans trofoblast"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_79",
+    "type": "mc",
+    "prompt": "Vad kallas den del av livmoderslemhinnan som bildar moderkakans moderdel?",
+    "correct": "Decidua basalis",
+    "distractors": [
+      "Decidua capsularis",
+      "Decidua parietalis",
+      "Chorion laeve"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_80",
+    "type": "mc",
+    "prompt": "Vilken celltyp i trofoblasten invaderar livmoderslemhinnan?",
+    "correct": "Syncytiotrofoblasten",
+    "distractors": [
+      "Cytotrofoblasten i sitt vilande läge",
+      "Amnionepitelet",
+      "Decidualcellerna"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_81",
+    "type": "mc",
+    "prompt": "Vilket hormon producerar syncytiotrofoblasten tidigt?",
+    "correct": "Humant koriongonadotropin",
+    "distractors": [
+      "Follikelstimulerande hormon",
+      "Tyreoideastimulerande hormon",
+      "Parathormon"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_82",
+    "type": "mc",
+    "prompt": "Vad kallas moderkakans funktionella enhet där utbytet sker?",
+    "correct": "Villus",
+    "distractors": [
+      "Kotyledon utan villi",
+      "Decidualcell",
+      "Amnionveck"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_83",
+    "type": "mc",
+    "prompt": "Blandas moderns och fostrets blod normalt i moderkakan?",
+    "correct": "Nej, de skiljs av en barriär men ligger nära varandra",
+    "distractors": [
+      "Ja, blodet blandas fritt i de intervillösa rummen",
+      "Ja, men i begränsad omfattning under förlossningen",
+      "Nej, de hålls helt åtskilda i skilda kärlbäddar"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_84",
+    "type": "mc",
+    "prompt": "Vilken ämnestransport över moderkakan sker med aktiv transport?",
+    "correct": "Aminosyror",
+    "distractors": [
+      "Syrgas",
+      "Koldioxid",
+      "Fettlösliga läkemedel"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_85",
+    "type": "mc",
+    "prompt": "Hur passerar syrgas över moderkakan?",
+    "correct": "Genom passiv diffusion",
+    "distractors": [
+      "Genom aktiv transport med bärarprotein",
+      "Genom pinocytos i syncytiotrofoblasten",
+      "Genom direkt blodblandning"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_86",
+    "type": "mc",
+    "prompt": "Vad kallas ett kromosomfel som uppstår när kromosomerna inte separeras vid meiosen?",
+    "correct": "Nondisjunktion",
+    "distractors": [
+      "Translokation",
+      "Deletion",
+      "Inversion"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_87",
+    "type": "mc",
+    "prompt": "Vad innebär en balanserad translokation hos en förälder?",
+    "correct": "Bäraren är frisk men risken för obalans hos barnet ökar",
+    "distractors": [
+      "Bäraren är sjuk men barnen blir friska",
+      "Både bärare och barn drabbas med säkerhet",
+      "Tillståndet påverkar varken bärare eller barn"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_88",
+    "type": "mc",
+    "prompt": "Vilken undersökning ger fosterceller för kromosomanalys från fostervattnet?",
+    "correct": "Amniocentes",
+    "distractors": [
+      "Korionvillusbiopsi",
+      "Kombinerat ultraljud och blodprov",
+      "Fosterljudsregistrering"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_89",
+    "type": "mc",
+    "prompt": "Vad undersöker en korionvillusbiopsi?",
+    "correct": "Celler från moderkakans fosterdel",
+    "distractors": [
+      "Celler i fostervattnet",
+      "Fostrets blod från navelsträngen",
+      "Moderns livmoderslemhinna"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_90",
+    "type": "mc",
+    "prompt": "Vilken fördel har korionvillusbiopsi jämfört med amniocentes?",
+    "correct": "Den kan göras tidigare i graviditeten",
+    "distractors": [
+      "Den medför lägre risk för missfall",
+      "Den ger säkrare svar om neuralrörsdefekter",
+      "Den utförs utan samtidig ultraljudsledning"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_91",
+    "type": "mc",
+    "prompt": "Vad analyserar ett icke-invasivt prenatalt test i moderns blod?",
+    "correct": "Cellfritt foster-DNA från moderkakan",
+    "distractors": [
+      "Fostrets hela celler i moderns cirkulation",
+      "Moderns egna kromosomer",
+      "Fostervattnets proteinhalt"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_92",
+    "type": "mc",
+    "prompt": "Vad mäts vid nackuppklarningsundersökning?",
+    "correct": "Vätskeansamlingen i fostrets nacke",
+    "distractors": [
+      "Fostrets hjässa-säte-längd",
+      "Moderkakans tjocklek",
+      "Fostervattenmängden i fyra kvadranter"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_93",
+    "type": "mc",
+    "prompt": "Vad talar en ökad nackuppklarning för?",
+    "correct": "Ökad risk för kromosomavvikelse eller hjärtfel",
+    "distractors": [
+      "Säkerställd kromosomavvikelse hos fostret",
+      "Normal utveckling utan vidare utredning",
+      "Risk för graviditetsdiabetes hos modern"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_94",
+    "type": "mc",
+    "prompt": "Vilken struktur är embryots första blodbildande organ efter gulesäcken?",
+    "correct": "Levern",
+    "distractors": [
+      "Mjälten",
+      "Benmärgen i rörbenen",
+      "Tymus"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_95",
+    "type": "mc",
+    "prompt": "Ur vilken struktur utvecklas hypofysens framlob?",
+    "correct": "Rathkes ficka från munhålans tak",
+    "distractors": [
+      "En utbuktning från mellanhjärnans golv",
+      "Neurallistens celler i sella turcica",
+      "Endodermets förtarm"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_96",
+    "type": "mc",
+    "prompt": "Ur vilken struktur utvecklas hypofysens baklob?",
+    "correct": "En nedväxt från mellanhjärnans golv",
+    "distractors": [
+      "Rathkes ficka från munhålans tak",
+      "Andra gälfickan",
+      "Somiternas mesoderm"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_97",
+    "type": "mc",
+    "prompt": "Vad kallas den tumör som kan utgå från rester av Rathkes ficka?",
+    "correct": "Kraniofaryngeom",
+    "distractors": [
+      "Prolaktinom",
+      "Meningeom",
+      "Gliom"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_98",
+    "type": "mc",
+    "prompt": "Vad kallas den asymmetriska tillväxthämning som drabbar fostret sent i graviditeten?",
+    "correct": "Placentainsufficiens med bevarad huvudtillväxt",
+    "distractors": [
+      "Symmetrisk tillväxthämning från tidig graviditet",
+      "Överväxt av alla kroppsmått",
+      "Normal tillväxt med minskad fostervattenmängd"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_99",
+    "type": "mc",
+    "prompt": "Vilken struktur i fostercirkulationen tillbakabildas till lig. teres hepatis?",
+    "correct": "Navelvenen",
+    "distractors": [
+      "Ductus venosus",
+      "Ductus arteriosus",
+      "Navelartärerna"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_embryo_100",
+    "type": "mc",
+    "prompt": "Vad blir ductus venosus efter födelsen?",
+    "correct": "Lig. venosum",
+    "distractors": [
+      "Lig. teres hepatis",
+      "Lig. arteriosum",
+      "Lig. falciforme"
+    ],
+    "topic": "lakare_embryologi",
+    "difficulty": "Normal",
+    "source": "Moore, The Developing Human"
+  },
+  {
+    "id": "lak_cell_1",
+    "type": "mc",
+    "prompt": "Vad bygger upp cellmembranets grundstruktur?",
+    "correct": "Ett dubbelskikt av fosfolipider",
+    "distractors": [
+      "Ett enkelskikt av fosfolipider",
+      "Ett nätverk av kollagenfibrer",
+      "Ett lager av glykogen"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_2",
+    "type": "mc",
+    "prompt": "Varför vänder fosfolipidernas svansar in mot varandra i membranet?",
+    "correct": "Svansarna är hydrofoba och undviker vatten",
+    "distractors": [
+      "Svansarna är hydrofila och söker sig till vatten",
+      "Huvudena är hydrofoba och stöts bort av vatten",
+      "Svansarna är negativt laddade och stöter bort varandra"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_3",
+    "type": "mc",
+    "prompt": "Vilken molekyl gör cellmembranet mer stabilt vid temperaturväxlingar?",
+    "correct": "Kolesterol",
+    "distractors": [
+      "Glykogen",
+      "Kollagen",
+      "Aktin"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_4",
+    "type": "mc",
+    "prompt": "Vilka ämnen passerar cellmembranet lättast genom enkel diffusion?",
+    "correct": "Små fettlösliga molekyler och gaser",
+    "distractors": [
+      "Stora vattenlösliga proteiner",
+      "Laddade joner utan kanal",
+      "Glukos och aminosyror"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_5",
+    "type": "mc",
+    "prompt": "Vad kännetecknar underlättad diffusion?",
+    "correct": "Transport med bärarprotein längs koncentrationsgradienten utan energi",
+    "distractors": [
+      "Transport med bärarprotein mot koncentrationsgradienten med energi",
+      "Transport genom membranet utan protein",
+      "Transport genom att cellen sväljer partikeln"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_6",
+    "type": "mc",
+    "prompt": "Vad kännetecknar primär aktiv transport?",
+    "correct": "Transport mot gradienten med ATP som direkt energikälla",
+    "distractors": [
+      "Transport mot gradienten driven av natriumgradienten",
+      "Transport längs gradienten genom en kanal",
+      "Transport genom membranblåsor som knoppas av"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_7",
+    "type": "mc",
+    "prompt": "Vad kännetecknar sekundär aktiv transport?",
+    "correct": "Transport mot gradienten driven av en annan jons gradient",
+    "distractors": [
+      "Transport mot gradienten driven direkt av ATP",
+      "Transport längs gradienten utan bärarprotein",
+      "Transport genom fagocytos av partikeln"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_8",
+    "type": "mc",
+    "prompt": "Vilken transportör tar upp glukos från tarmlumen med hjälp av natriumgradienten?",
+    "correct": "Natrium-glukossymporten",
+    "distractors": [
+      "GLUT2 i basolaterala membranet",
+      "Natrium-kaliumpumpen",
+      "Natrium-vätejonutbytaren"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_9",
+    "type": "mc",
+    "prompt": "Vad kallas transport där två ämnen förs åt samma håll av samma protein?",
+    "correct": "Symport",
+    "distractors": [
+      "Antiport",
+      "Uniport",
+      "Endocytos"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_10",
+    "type": "mc",
+    "prompt": "Vad kallas transport där två ämnen förs åt motsatt håll av samma protein?",
+    "correct": "Antiport",
+    "distractors": [
+      "Symport",
+      "Uniport",
+      "Exocytos"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_11",
+    "type": "mc",
+    "prompt": "Hur många natriumjoner pumpar natrium-kaliumpumpen ut per cykel?",
+    "correct": "3",
+    "distractors": [
+      "1",
+      "2",
+      "4"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_12",
+    "type": "mc",
+    "prompt": "Varför är natrium-kaliumpumpen elektrogen?",
+    "correct": "Den flyttar fler positiva laddningar ut än in",
+    "distractors": [
+      "Den flyttar fler positiva laddningar in än ut",
+      "Den flyttar lika många laddningar åt båda håll",
+      "Den transporterar bara oladdade molekyler"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_13",
+    "type": "mc",
+    "prompt": "Vilken pump hämmas av digitalis?",
+    "correct": "Natrium-kaliumpumpen",
+    "distractors": [
+      "Kalciumpumpen i sarkoplasmatiska retiklet",
+      "Protonpumpen i magsäcken",
+      "Natrium-kalium-kloridsymporten"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_14",
+    "type": "mc",
+    "prompt": "Varför ökar hjärtats kontraktionskraft när natrium-kaliumpumpen hämmas?",
+    "correct": "Natriumgradienten minskar så att kalcium byts ut sämre och stannar i cellen",
+    "distractors": [
+      "Kaliumgradienten ökar och driver in mer kalcium",
+      "Pumpen transporterar kalcium direkt in i cellen",
+      "Cellen depolariseras och stänger kalciumkanalerna"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_15",
+    "type": "mc",
+    "prompt": "Vad menas med osmos?",
+    "correct": "Vattnets rörelse över ett membran mot högre partikelkoncentration",
+    "distractors": [
+      "Partiklarnas rörelse över ett membran mot lägre koncentration",
+      "Vattnets rörelse med hjälp av ATP",
+      "Partiklarnas rörelse med hjälp av bärarprotein"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_16",
+    "type": "mc",
+    "prompt": "Vilka kanaler underlättar vattnets passage genom cellmembranet?",
+    "correct": "Akvaporiner",
+    "distractors": [
+      "Natriumkanaler av snabb typ",
+      "Kloridkanaler av CFTR-typ",
+      "Kaliumkanaler av läckagetyp"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_17",
+    "type": "mc",
+    "prompt": "Vad händer med en cell som placeras i en hypoton lösning?",
+    "correct": "Den sväller när vatten strömmar in",
+    "distractors": [
+      "Den skrumpnar när vatten strömmar ut",
+      "Den behåller sin volym oförändrad",
+      "Den spricker direkt utan vattenrörelse"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_18",
+    "type": "mc",
+    "prompt": "Vad händer med en cell i en hyperton lösning?",
+    "correct": "Den skrumpnar när vatten strömmar ut",
+    "distractors": [
+      "Den sväller när vatten strömmar in",
+      "Den behåller sin volym oförändrad",
+      "Den tar upp salt tills jämvikt uppnås"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_19",
+    "type": "mc",
+    "prompt": "Vad kallas cellens upptag av vätska i små blåsor?",
+    "correct": "Pinocytos",
+    "distractors": [
+      "Fagocytos",
+      "Exocytos",
+      "Diffusion"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_20",
+    "type": "mc",
+    "prompt": "Vilken process använder makrofagen för att svälja bakterier?",
+    "correct": "Fagocytos",
+    "distractors": [
+      "Pinocytos",
+      "Exocytos",
+      "Underlättad diffusion"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_21",
+    "type": "mc",
+    "prompt": "Vilken receptor styr upptaget av kolesterolbärande partiklar till levern?",
+    "correct": "LDL-receptorn",
+    "distractors": [
+      "Insulinreceptorn",
+      "Transferrinreceptorn",
+      "Acetylkolinreceptorn"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_22",
+    "type": "mc",
+    "prompt": "Vad orsakar familjär hyperkolesterolemi?",
+    "correct": "Defekta LDL-receptorer som ger nedsatt upptag",
+    "distractors": [
+      "Överskott på LDL-receptorer med ökat upptag",
+      "Bristande produktion av kolesterol i levern",
+      "Nedsatt bildning av gallsalter i tarmen"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_23",
+    "type": "mc",
+    "prompt": "Vilken jon har högst koncentration inne i cellen?",
+    "correct": "Kalium",
+    "distractors": [
+      "Natrium",
+      "Klorid",
+      "Kalcium"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_24",
+    "type": "mc",
+    "prompt": "Vilken jon har mycket låg koncentration i cytosolen jämfört med utanför?",
+    "correct": "Kalcium",
+    "distractors": [
+      "Kalium",
+      "Magnesium",
+      "Fosfat"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_25",
+    "type": "mc",
+    "prompt": "Vad beskriver Nernstekvationen?",
+    "correct": "Jämviktspotentialen för en enskild jon",
+    "distractors": [
+      "Membranpotentialen med alla joner samtidigt",
+      "Diffusionshastigheten över ett membran",
+      "Osmotiska trycket i en lösning"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_26",
+    "type": "mc",
+    "prompt": "Vilken jämviktspotential har kalium ungefär i en nervcell?",
+    "correct": "Omkring −90 mV",
+    "distractors": [
+      "Omkring −70 mV",
+      "Omkring +60 mV",
+      "Omkring 0 mV"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_27",
+    "type": "mc",
+    "prompt": "Vilken jämviktspotential har natrium ungefär i en nervcell?",
+    "correct": "Omkring +60 mV",
+    "distractors": [
+      "Omkring −90 mV",
+      "Omkring −70 mV",
+      "Omkring −30 mV"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_28",
+    "type": "mc",
+    "prompt": "Varför ligger vilomembranpotentialen närmare kaliums jämviktspotential än natriums?",
+    "correct": "Membranet är i vila mest genomsläppligt för kalium",
+    "distractors": [
+      "Membranet är i vila mest genomsläppligt för natrium",
+      "Kalium finns i högre koncentration utanför cellen",
+      "Natriumpumpen är avstängd i vila"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_29",
+    "type": "mc",
+    "prompt": "Vad händer med vilomembranpotentialen vid hyperkalemi?",
+    "correct": "Cellen depolariseras och blir initialt mer retbar",
+    "distractors": [
+      "Cellen hyperpolariseras och blir mindre retbar",
+      "Potentialen förblir oförändrad",
+      "Cellen förlorar all elektrisk aktivitet direkt"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_30",
+    "type": "mc",
+    "prompt": "Vad krävs för att en aktionspotential ska utlösas?",
+    "correct": "Att membranpotentialen når tröskelvärdet",
+    "distractors": [
+      "Att membranpotentialen blir mer negativ än i vila",
+      "Att natriumpumpen tillfälligt stängs av",
+      "Att kalciumnivån utanför cellen sjunker"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_31",
+    "type": "mc",
+    "prompt": "Vad menas med att aktionspotentialen följer allt-eller-inget-principen?",
+    "correct": "Den utlöses med full amplitud när tröskeln nås, oavsett stimulusstyrka",
+    "distractors": [
+      "Den blir kraftigare ju starkare stimulus som ges",
+      "Den utlöses bara om flera stimuli ges samtidigt",
+      "Den varierar i amplitud beroende på cellens storlek"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_32",
+    "type": "mc",
+    "prompt": "Hur kodas ett starkare stimulus i en nervcell?",
+    "correct": "Med högre frekvens av aktionspotentialer",
+    "distractors": [
+      "Med större amplitud på varje aktionspotential",
+      "Med längre varaktighet på varje aktionspotential",
+      "Med omvänd polaritet på signalen"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_33",
+    "type": "mc",
+    "prompt": "Vad orsakar repolarisationsfasen i nervcellens aktionspotential?",
+    "correct": "Utflöde av kalium när kaliumkanalerna öppnas",
+    "distractors": [
+      "Inflöde av kalium när kaliumkanalerna öppnas",
+      "Utflöde av natrium genom snabba kanaler",
+      "Inflöde av klorid genom spänningsstyrda kanaler"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_34",
+    "type": "mc",
+    "prompt": "Vad orsakar den efterföljande hyperpolarisationen?",
+    "correct": "Kaliumkanalerna stänger långsamt och kalium fortsätter läcka ut",
+    "distractors": [
+      "Natriumkanalerna öppnas på nytt",
+      "Kloridkanalerna stängs helt",
+      "Natriumpumpen slutar arbeta tillfälligt"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_35",
+    "type": "mc",
+    "prompt": "Vad kännetecknar den absoluta refraktärperioden?",
+    "correct": "Ingen ny aktionspotential kan utlösas oavsett stimulusstyrka",
+    "distractors": [
+      "En ny aktionspotential kan utlösas med starkare stimulus",
+      "Cellen är extra känslig för svaga stimuli",
+      "Membranpotentialen ligger stabilt på tröskelvärdet"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_36",
+    "type": "mc",
+    "prompt": "Vilken funktion har refraktärperioden?",
+    "correct": "Den säkrar att impulsen går åt ett håll och begränsar frekvensen",
+    "distractors": [
+      "Den ökar impulsens hastighet längs axonet",
+      "Den förstärker signalens amplitud vid varje nod",
+      "Den möjliggör att impulsen går åt båda håll"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_37",
+    "type": "mc",
+    "prompt": "Vad kallas impulsledningen som hoppar mellan nodierna på ett myeliniserat axon?",
+    "correct": "Saltatorisk ledning",
+    "distractors": [
+      "Kontinuerlig ledning",
+      "Elektrotonisk spridning",
+      "Synaptisk transmission"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_38",
+    "type": "mc",
+    "prompt": "Vilken faktor ökar ledningshastigheten i ett omyeliniserat axon?",
+    "correct": "Större axondiameter",
+    "distractors": [
+      "Mindre axondiameter",
+      "Lägre temperatur",
+      "Färre jonkanaler i membranet"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_39",
+    "type": "mc",
+    "prompt": "Hur verkar lokalanestetika på nervcellen?",
+    "correct": "De blockerar spänningsstyrda natriumkanaler",
+    "distractors": [
+      "De blockerar spänningsstyrda kaliumkanaler",
+      "De öppnar kloridkanaler och hyperpolariserar",
+      "De hämmar natrium-kaliumpumpen"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_40",
+    "type": "mc",
+    "prompt": "Varför blockeras tunna smärtfibrer före tjocka motoriska fibrer vid lokalbedövning?",
+    "correct": "Tunna och myeliniserade fibrer nås lättare av bedövningsmedlet",
+    "distractors": [
+      "Tjocka fibrer saknar natriumkanaler",
+      "Smärtfibrer leder impulser snabbare",
+      "Motoriska fibrer saknar myelin"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_41",
+    "type": "mc",
+    "prompt": "Vilken jon strömmar in i nervändslutet och utlöser transmittorfrisättning?",
+    "correct": "Kalcium",
+    "distractors": [
+      "Natrium",
+      "Kalium",
+      "Magnesium"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_42",
+    "type": "mc",
+    "prompt": "Hur frisätts signalsubstansen i synapsen?",
+    "correct": "Genom exocytos av vesiklar",
+    "distractors": [
+      "Genom diffusion rakt genom membranet",
+      "Genom aktiv transport med bärarprotein",
+      "Genom att hela nervändslutet bryts ned"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_43",
+    "type": "mc",
+    "prompt": "Vad kännetecknar en jonotrop receptor?",
+    "correct": "Receptorn är själv en jonkanal och verkar snabbt",
+    "distractors": [
+      "Receptorn verkar via G-protein och andra budbärare",
+      "Receptorn ligger inne i cellkärnan",
+      "Receptorn transporterar transmittorn in i cellen"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_44",
+    "type": "mc",
+    "prompt": "Vad kännetecknar en metabotrop receptor?",
+    "correct": "Receptorn verkar via G-protein och intracellulära budbärare",
+    "distractors": [
+      "Receptorn är själv en jonkanal med snabb effekt",
+      "Receptorn binder DNA direkt i kärnan",
+      "Receptorn kräver ATP för att binda sin ligand"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_45",
+    "type": "mc",
+    "prompt": "Vilken signalsubstans är den viktigaste excitatoriska i centrala nervsystemet?",
+    "correct": "Glutamat",
+    "distractors": [
+      "GABA",
+      "Glycin",
+      "Acetylkolin"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_46",
+    "type": "mc",
+    "prompt": "Vilken signalsubstans är den viktigaste hämmande i hjärnan?",
+    "correct": "GABA",
+    "distractors": [
+      "Glutamat",
+      "Dopamin",
+      "Noradrenalin"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_47",
+    "type": "mc",
+    "prompt": "Hur verkar bensodiazepiner på GABA-receptorn?",
+    "correct": "De förstärker GABA:s effekt på kloridkanalen",
+    "distractors": [
+      "De blockerar GABA:s effekt på kloridkanalen",
+      "De öppnar natriumkanaler direkt",
+      "De hämmar återupptaget av glutamat"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_48",
+    "type": "mc",
+    "prompt": "Vad händer med målcellen när kloridkanaler öppnas?",
+    "correct": "Den hyperpolariseras och blir svårare att excitera",
+    "distractors": [
+      "Den depolariseras och blir lättare att excitera",
+      "Den förlorar sin vilomembranpotential helt",
+      "Den börjar frisätta egen transmittor"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_49",
+    "type": "mc",
+    "prompt": "Vad kallas summering av flera signaler som anländer samtidigt från olika synapser?",
+    "correct": "Rumslig summering",
+    "distractors": [
+      "Temporal summering",
+      "Presynaptisk hämning",
+      "Långtidspotentiering"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_50",
+    "type": "mc",
+    "prompt": "Vad kallas summering av signaler som anländer tätt efter varandra i samma synaps?",
+    "correct": "Temporal summering",
+    "distractors": [
+      "Rumslig summering",
+      "Lateral hämning",
+      "Refraktär blockad"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_51",
+    "type": "mc",
+    "prompt": "Var i nervcellen utlöses aktionspotentialen vanligen?",
+    "correct": "I axonets initialsegment",
+    "distractors": [
+      "I dendriternas yttersta grenar",
+      "I nervcellskroppens mitt",
+      "I nervändslutets synaps"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_52",
+    "type": "mc",
+    "prompt": "Vilket enzym bryter ned acetylkolin i synapsklyftan?",
+    "correct": "Acetylkolinesteras",
+    "distractors": [
+      "Monoaminoxidas",
+      "Katekol-O-metyltransferas",
+      "Karbanhydras"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_53",
+    "type": "mc",
+    "prompt": "Vad blir effekten av att hämma acetylkolinesteras?",
+    "correct": "Acetylkolinets verkan förlängs i synapsen",
+    "distractors": [
+      "Acetylkolinets verkan avbryts snabbare",
+      "Acetylkolin slutar frisättas från nervändslutet",
+      "Receptorerna för acetylkolin bryts ned"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_54",
+    "type": "mc",
+    "prompt": "Hur verkar botulinumtoxin?",
+    "correct": "Det hindrar frisättningen av acetylkolin från nervändslutet",
+    "distractors": [
+      "Det blockerar acetylkolinreceptorn på muskelcellen",
+      "Det bryter ned acetylkolin i synapsklyftan",
+      "Det öppnar natriumkanaler i muskelmembranet"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_55",
+    "type": "mc",
+    "prompt": "Vad kallas den process där kalcium binder till troponin och frilägger aktinets bindningsställen?",
+    "correct": "Excitations-kontraktionskopplingen",
+    "distractors": [
+      "Glidfilamentmekanismen i sig",
+      "Refraktärperiodens återhämtning",
+      "Rigor mortis"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_56",
+    "type": "mc",
+    "prompt": "Varför blir musklerna stela vid rigor mortis?",
+    "correct": "ATP saknas så att myosinet inte kan släppa aktinet",
+    "distractors": [
+      "Kalcium pumpas tillbaka för snabbt",
+      "Aktinet bryts ned direkt efter döden",
+      "Muskelcellerna fylls med vätska och sväller"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_57",
+    "type": "mc",
+    "prompt": "Vilken organell producerar merparten av cellens ATP?",
+    "correct": "Mitokondrien",
+    "distractors": [
+      "Lysosomen",
+      "Golgiapparaten",
+      "Peroxisomen"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_cell_58",
+    "type": "mc",
+    "prompt": "Varför nedärvs mitokondriella sjukdomar bara från modern?",
+    "correct": "Mitokondrierna kommer från äggcellen och inte från spermien",
+    "distractors": [
+      "Mitokondrierna finns bara i kvinnliga celler",
+      "Faderns mitokondrier saknar eget DNA",
+      "Mitokondrie-DNA finns i cellkärnan hos män"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_59",
+    "type": "mc",
+    "prompt": "Vilken organell bryter ned cellens avfall med sura enzymer?",
+    "correct": "Lysosomen",
+    "distractors": [
+      "Mitokondrien",
+      "Ribosomen",
+      "Centriolen"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_cell_60",
+    "type": "mc",
+    "prompt": "Vad kännetecknar en lysosomal inlagringssjukdom?",
+    "correct": "Ett enzym saknas och obearbetat material ansamlas i cellen",
+    "distractors": [
+      "Cellen producerar för mycket enzym och bryter ned sig själv",
+      "Cellmembranet blir genomsläppligt för alla ämnen",
+      "Mitokondrierna slutar producera ATP"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_61",
+    "type": "mc",
+    "prompt": "Vilken organell modifierar och sorterar proteiner för transport?",
+    "correct": "Golgiapparaten",
+    "distractors": [
+      "Lysosomen",
+      "Peroxisomen",
+      "Cellkärnan"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_cell_62",
+    "type": "mc",
+    "prompt": "Var sker syntesen av proteiner som ska utsöndras ur cellen?",
+    "correct": "På det grova endoplasmatiska nätverket",
+    "distractors": [
+      "På det glatta endoplasmatiska nätverket",
+      "I cellkärnans nukleol",
+      "I mitokondriematrix"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_cell_63",
+    "type": "mc",
+    "prompt": "Vilken funktion har det glatta endoplasmatiska nätverket?",
+    "correct": "Lipidsyntes och avgiftning av läkemedel",
+    "distractors": [
+      "Proteinsyntes för utsöndring",
+      "Nedbrytning av cellens avfall",
+      "Bildning av ribosomer"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_cell_64",
+    "type": "mc",
+    "prompt": "Var bildas ribosomerna?",
+    "correct": "I nukleolen",
+    "distractors": [
+      "I Golgiapparaten",
+      "I mitokondrien",
+      "I lysosomen"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_cell_65",
+    "type": "mc",
+    "prompt": "Vilken struktur i cytoskelettet ger cellen dess dragtåliga stöd i epitel?",
+    "correct": "Intermediärfilament",
+    "distractors": [
+      "Mikrotubuli",
+      "Aktinfilament",
+      "Kollagenfibrer"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_cell_66",
+    "type": "mc",
+    "prompt": "Vilken struktur bildar kärnspolen vid celldelning?",
+    "correct": "Mikrotubuli",
+    "distractors": [
+      "Aktinfilament",
+      "Intermediärfilament",
+      "Kollagen typ I"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_cell_67",
+    "type": "mc",
+    "prompt": "Vilka cellgifter verkar genom att störa mikrotubuli?",
+    "correct": "Vinkaalkaloider och taxaner",
+    "distractors": [
+      "Antimetaboliter som metotrexat",
+      "Alkylerande medel som cyklofosfamid",
+      "Antibiotika som penicillin"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_68",
+    "type": "mc",
+    "prompt": "Vilken fas i cellcykeln innebär DNA-replikation?",
+    "correct": "S-fasen",
+    "distractors": [
+      "G1-fasen",
+      "G2-fasen",
+      "M-fasen"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_69",
+    "type": "mc",
+    "prompt": "Vad kallas det vilande stadium som celler kan gå in i utanför cellcykeln?",
+    "correct": "G0-fasen",
+    "distractors": [
+      "S-fasen",
+      "G2-fasen",
+      "Profasen"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_70",
+    "type": "mc",
+    "prompt": "Vilket protein kallas genomets väktare och stoppar cellcykeln vid DNA-skada?",
+    "correct": "p53",
+    "distractors": [
+      "Insulinlik tillväxtfaktor 1",
+      "Aktin",
+      "Kollagen typ IV"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_71",
+    "type": "mc",
+    "prompt": "Vad blir följden av en muterad p53-gen?",
+    "correct": "Skadade celler kan fortsätta dela sig",
+    "distractors": [
+      "Alla celler slutar dela sig helt",
+      "Cellerna dör omedelbart vid minsta skada",
+      "DNA-replikationen upphör i vävnaden"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_72",
+    "type": "mc",
+    "prompt": "Vad kännetecknar apoptos jämfört med nekros?",
+    "correct": "Cellen bryts ned ordnat utan att utlösa inflammation",
+    "distractors": [
+      "Cellen sväller och spricker med inflammation som följd",
+      "Cellen delar sig okontrollerat",
+      "Cellen förlorar sin kärna men fortsätter fungera"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_73",
+    "type": "mc",
+    "prompt": "Vilka enzymer utför nedbrytningen vid apoptos?",
+    "correct": "Kaspaser",
+    "distractors": [
+      "Kinaser",
+      "Ligaser",
+      "Polymeraser"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_74",
+    "type": "mc",
+    "prompt": "Vilken organell frisätter cytokrom c och startar den inre apoptosvägen?",
+    "correct": "Mitokondrien",
+    "distractors": [
+      "Lysosomen",
+      "Golgiapparaten",
+      "Cellkärnan"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_75",
+    "type": "mc",
+    "prompt": "Vad menas med att en cell är terminalt differentierad?",
+    "correct": "Den har slutat dela sig och utför en specialiserad funktion",
+    "distractors": [
+      "Den delar sig snabbare än andra celler",
+      "Den kan omvandlas till vilken celltyp som helst",
+      "Den saknar cellkärna och organeller"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_cell_76",
+    "type": "mc",
+    "prompt": "Vilken vävnad har högst celldelningstakt i kroppen?",
+    "correct": "Tarmslemhinnans epitel",
+    "distractors": [
+      "Hjärtmuskelvävnaden",
+      "Nervvävnaden i hjärnan",
+      "Ledbrosket"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Ross & Pawlina, Histology"
+  },
+  {
+    "id": "lak_cell_77",
+    "type": "mc",
+    "prompt": "Varför drabbas slemhinnor och benmärg först av cytostatika?",
+    "correct": "Deras celler delar sig snabbt och är känsligast",
+    "distractors": [
+      "Deras celler saknar reparationsmekanismer helt",
+      "Läkemedlet ansamlas fysiskt i dessa vävnader",
+      "Deras celler saknar cellmembran av vanlig typ"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_78",
+    "type": "mc",
+    "prompt": "Vad kallas processen där DNA skrivs av till RNA?",
+    "correct": "Transkription",
+    "distractors": [
+      "Translation",
+      "Replikation",
+      "Rekombination"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_79",
+    "type": "mc",
+    "prompt": "Vad kallas processen där RNA översätts till protein?",
+    "correct": "Translation",
+    "distractors": [
+      "Transkription",
+      "Replikation",
+      "Splitsning"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_80",
+    "type": "mc",
+    "prompt": "Var sker translationen i cellen?",
+    "correct": "På ribosomerna",
+    "distractors": [
+      "I cellkärnan",
+      "I mitokondriens innermembran",
+      "I Golgiapparatens cisterner"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_81",
+    "type": "mc",
+    "prompt": "Vad kallas de icke-kodande avsnitt som klipps bort ur ett primärt RNA?",
+    "correct": "Introner",
+    "distractors": [
+      "Exoner",
+      "Kodoner",
+      "Telomerer"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_82",
+    "type": "mc",
+    "prompt": "Hur många baser kodar för en aminosyra?",
+    "correct": "3",
+    "distractors": [
+      "1",
+      "2",
+      "4"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_83",
+    "type": "mc",
+    "prompt": "Vad kallas en mutation som byter en enda bas utan att ändra aminosyran?",
+    "correct": "Tyst mutation",
+    "distractors": [
+      "Missensmutation",
+      "Nonsensmutation",
+      "Läsramsförskjutning"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_84",
+    "type": "mc",
+    "prompt": "Vad kallas en mutation som skapar ett för tidigt stoppkodon?",
+    "correct": "Nonsensmutation",
+    "distractors": [
+      "Missensmutation",
+      "Tyst mutation",
+      "Duplikation"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_85",
+    "type": "mc",
+    "prompt": "Varför blir en läsramsförskjutning ofta allvarligare än ett basbyte?",
+    "correct": "Alla efterföljande kodon läses fel",
+    "distractors": [
+      "Bara den muterade aminosyran byts ut",
+      "Genen slutar transkriberas direkt",
+      "Mutationen påverkar bara introner"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_86",
+    "type": "mc",
+    "prompt": "Vad kännetecknar autosomalt dominant nedärvning?",
+    "correct": "Ett anlag räcker och sjukdomen finns i varje generation",
+    "distractors": [
+      "Två anlag krävs och sjukdomen hoppar över generationer",
+      "Sjukdomen drabbar bara pojkar",
+      "Anlaget finns på X-kromosomen"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_87",
+    "type": "mc",
+    "prompt": "Vilken risk finns att få ett sjukt barn om båda föräldrarna bär på ett recessivt anlag?",
+    "correct": "25 procent",
+    "distractors": [
+      "50 procent",
+      "75 procent",
+      "100 procent"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_88",
+    "type": "mc",
+    "prompt": "Vilket protein är defekt vid cystisk fibros?",
+    "correct": "En kloridkanal i cellmembranet",
+    "distractors": [
+      "En natriumpump i cellmembranet",
+      "Ett kollagen i bindväven",
+      "En receptor för tillväxthormon"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_89",
+    "type": "mc",
+    "prompt": "Hur nedärvs cystisk fibros?",
+    "correct": "Autosomalt recessivt",
+    "distractors": [
+      "Autosomalt dominant",
+      "X-bundet recessivt",
+      "Mitokondriellt"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_90",
+    "type": "mc",
+    "prompt": "Vilket diagnostiskt prov används vid misstänkt cystisk fibros?",
+    "correct": "Svettest med kloridbestämning",
+    "distractors": [
+      "Blodgas med koldioxidbestämning",
+      "Urinsticka med proteinbestämning",
+      "Faecesodling"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_91",
+    "type": "mc",
+    "prompt": "Vad kallas de repetitiva ändarna på kromosomerna som kortas vid varje delning?",
+    "correct": "Telomerer",
+    "distractors": [
+      "Centromerer",
+      "Kromatider",
+      "Introner"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_92",
+    "type": "mc",
+    "prompt": "Vilket enzym förlänger telomererna i stamceller och många tumörceller?",
+    "correct": "Telomeras",
+    "distractors": [
+      "DNA-polymeras",
+      "Helikas",
+      "Ligas"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_93",
+    "type": "mc",
+    "prompt": "Vad menas med en onkogen?",
+    "correct": "En muterad gen som driver på celldelningen",
+    "distractors": [
+      "En gen som bromsar celldelningen",
+      "En gen som reparerar DNA-skador",
+      "En gen som styr cellens rörelseförmåga"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_94",
+    "type": "mc",
+    "prompt": "Vad menas med en tumörsuppressorgen?",
+    "correct": "En gen som normalt bromsar celldelningen",
+    "distractors": [
+      "En gen som normalt driver på celldelningen",
+      "En gen som bildar cellmembranets lipider",
+      "En gen som styr blodkärlens vidd"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_95",
+    "type": "mc",
+    "prompt": "Vilken gen ökar risken för bröst- och äggstockscancer när den är muterad?",
+    "correct": "BRCA1",
+    "distractors": [
+      "CFTR",
+      "SRY",
+      "HFE"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_96",
+    "type": "mc",
+    "prompt": "Vad kallas cellens svar på syrebrist där genuttrycket ställs om?",
+    "correct": "Hypoxiinducerad faktorsignalering",
+    "distractors": [
+      "Apoptotisk kaspadkaskad",
+      "Komplementaktivering",
+      "Osmotisk anpassning"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_97",
+    "type": "mc",
+    "prompt": "Vad händer med cellens ATP-produktion vid syrebrist?",
+    "correct": "Den ställer om till anaerob glykolys med laktatbildning",
+    "distractors": [
+      "Den ökar den oxidativa fosforyleringen",
+      "Den upphör helt inom några sekunder",
+      "Den övergår till betaoxidation av fettsyror"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_98",
+    "type": "mc",
+    "prompt": "Varför sväller cellen vid uttalad ATP-brist?",
+    "correct": "Natrium-kaliumpumpen slutar arbeta och natrium drar in vatten",
+    "distractors": [
+      "Kaliumpumpen slutar arbeta och kalium drar in vatten",
+      "Cellmembranet blir ogenomträngligt för vatten",
+      "Osmolaliteten utanför cellen stiger kraftigt"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_99",
+    "type": "mc",
+    "prompt": "Vilken jon strömmar in i cellen vid irreversibel cellskada och aktiverar nedbrytande enzymer?",
+    "correct": "Kalcium",
+    "distractors": [
+      "Kalium",
+      "Magnesium",
+      "Klorid"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
+  },
+  {
+    "id": "lak_cell_100",
+    "type": "mc",
+    "prompt": "Vad kallas de skadliga syreradikaler som bildas vid reperfusion av ischemisk vävnad?",
+    "correct": "Fria syreradikaler",
+    "distractors": [
+      "Ketonkroppar",
+      "Laktatjoner",
+      "Fria fettsyror"
+    ],
+    "topic": "lakare_cell_membranfys",
+    "difficulty": "Normal",
+    "source": "Boron & Boulpaep, Medical Physiology"
   }
 ]
