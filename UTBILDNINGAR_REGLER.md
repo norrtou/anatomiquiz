@@ -95,7 +95,7 @@ någon lista behöver utökas.
 | Biomedicinsk analytiker | `biomedicinsk_analytiker` | tom → platshållare |
 | Fysioterapeut | `fysioterapeut` | tom → platshållare |
 | Logoped | `logoped` | tom → platshållare |
-| Läkare | `lakare` | 1 tidigare ämne + 10 byggda ämnen (av 18) |
+| Läkare | `lakare` | 1 tidigare ämne + 15 byggda ämnen (av 18) |
 | Medicinsk sekreterare | `medicinsk_sekreterare` | tom → platshållare |
 | Optiker | `optiker` | tom → platshållare |
 | Röntgensjuksköterska | `rontgensjukskoterska` | tom → platshållare |

@@ -144,6 +144,11 @@ const EDUCATIONS = [
     { label: 'Neuroanatomi (CNS)',          file: './data/lakare.json', topic: 'lakare_neuroanatomi' },
     { label: 'Kardiovaskulära systemet',    file: './data/lakare.json', topic: 'lakare_kardiovaskular' },
     { label: 'Respirationssystemet',        file: './data/lakare.json', topic: 'lakare_respiration' },
+    { label: 'Njure & vätskebalans',        file: './data/lakare.json', topic: 'lakare_njure_vatska' },
+    { label: 'Gastrointestinalt & ämnesomsättning', file: './data/lakare.json', topic: 'lakare_gastro_amnesoms' },
+    { label: 'Endokrina systemet',          file: './data/lakare.json', topic: 'lakare_endokrina' },
+    { label: 'Blod & immunförsvar',         file: './data/lakare.json', topic: 'lakare_blod_immun' },
+    { label: 'Reproduktion',                file: './data/lakare.json', topic: 'lakare_reproduktion' },
   ]},
   // Fysioterapeut-ämnena ligger alla i en delad fil (data/fysioterapeut.json),
   // åtskilda av postens topic-fält → varje rad filtreras via `topic`.
