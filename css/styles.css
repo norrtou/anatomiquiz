@@ -631,16 +631,24 @@ select:focus-visible {
   line-height: 1.5;
 }
 
-/* Förklaring av MC/FC/TF under ämnesväljaren på startsidan */
+/* Finstilta raderna på startsidan: noten under utbildningsväljaren
+   (#educationNote) och förklaringen av MC/FC/TF under ämnesväljaren.
+   Ska läsas vid behov, inte konkurrera med dropdownarna. */
 .topic-legend {
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   font-style: italic;
   margin: 0.25em 0 0;
+}
+/* Appen döljer MC/FC/TF-raden med .hidden (updateTopicOptions) när en utbildning
+   saknar ämnen. Det finns ingen generisk .hidden-regel i appen – varje komponent
+   bär sin egen – så utan den här raden blir toggle('hidden') en nullhandling. */
+.topic-legend.hidden {
+  display: none;
 }
 /* Mindre än dropdown-texten på mobil (var tidigare i samma storlek). */
 @media (max-width: 640px) {
   .topic-legend {
-    font-size: 0.62rem;
+    font-size: 0.56rem;
   }
 }
 

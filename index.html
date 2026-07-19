@@ -107,7 +107,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="css/styles.css?v=0.9.145">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.167">
 </head>
 <body>
 
@@ -148,7 +148,7 @@
            å/ä/ö efter z). Arbetsterapeut hanteras separat (egen ämnesmodell).
            Yrkesnamn används, inte "...programmet". -->
       <label for="education">Utbildning och antal tillgängliga ämnen</label>
-      <select id="education">
+      <select id="education" aria-describedby="educationNote">
         <option value="allmant" selected>Allmänt</option>
         <option value="apotekare">Apotekare</option>
         <option value="arbetsterapeut">Arbetsterapeut</option>
@@ -163,6 +163,9 @@
         <option value="sjukskoterska">Sjuksköterska</option>
         <option value="tandlakare">Tandläkare</option>
       </select>
+
+      <!-- Står kvar för ALLA utbildningar, inte bara Allmänt. -->
+      <p id="educationNote" class="topic-legend">Material baserat på officiella läroplaner. ”Allmänt” innehåller slumpmässigt hämtade frågor från alla utbildningar och kan därför variera i svårighetsgrad.</p>
 
       <label for="topic">Ämne</label>
       <select id="topic" aria-describedby="topicLegend">
@@ -331,16 +334,20 @@
         <!-- Allmänt. Linserna (lins_*) har INGA egna frågor: de slumpar ur alla
              utbildningars frågefiler via topic-mönster i ALLMANT_LENSES i
              js/app.js. Lägg till/ändra en lins där – här står bara etiketten.
+             Alla linser heter "Blandat – …" så att det syns i dropdownen att
+             frågorna är hämtade tvärs utbildningarna; Farmakologi är ett vanligt
+             ämne med egna frågor och bär därför inte prefixet (och hamnar sist,
+             ämnena står i bokstavsordning).
              Se UTBILDNINGAR_REGLER.md, "Allmänt — tvärgående ämnen". -->
-        <option value="lins_alla" data-edu="allmant">Slumpade frågor – alla utbildningar (MC+TF+Bild)</option>
-        <option value="lins_bal_inre_organ" data-edu="allmant">Bål &amp; inre organ (MC+TF)</option>
-        <option value="lins_cell_vavnad" data-edu="allmant">Cellen, vävnaden &amp; histologi (MC+TF)</option>
+        <option value="lins_alla" data-edu="allmant">Blandat – alla utbildningar (MC+TF+Bild)</option>
+        <option value="lins_bal_inre_organ" data-edu="allmant">Blandat – bål &amp; inre organ (MC+TF)</option>
+        <option value="lins_cell_vavnad" data-edu="allmant">Blandat – cellen, vävnaden &amp; histologi (MC+TF)</option>
+        <option value="lins_hormoner_biokemi" data-edu="allmant">Blandat – hormoner, biokemi &amp; ämnesomsättning (MC)</option>
+        <option value="lins_terminologi" data-edu="allmant">Blandat – medicinsk terminologi &amp; latin (MC+TF)</option>
+        <option value="lins_nedre_extremitet" data-edu="allmant">Blandat – nedre extremitet &amp; bäcken (MC+TF)</option>
+        <option value="lins_nervsystemet" data-edu="allmant">Blandat – nervsystemet &amp; sinnesorganen (MC+TF)</option>
+        <option value="lins_ovre_extremitet" data-edu="allmant">Blandat – övre extremitet (MC+TF+Bild)</option>
         <option value="farmakologi" data-edu="allmant">Farmakologi (FC)</option>
-        <option value="lins_hormoner_biokemi" data-edu="allmant">Hormoner, biokemi &amp; ämnesomsättning (MC)</option>
-        <option value="lins_terminologi" data-edu="allmant">Medicinsk terminologi &amp; latin (MC+TF)</option>
-        <option value="lins_nedre_extremitet" data-edu="allmant">Nedre extremitet &amp; bäcken (MC+TF)</option>
-        <option value="lins_nervsystemet" data-edu="allmant">Nervsystemet &amp; sinnesorganen (MC+TF)</option>
-        <option value="lins_ovre_extremitet" data-edu="allmant">Övre extremitet (MC+TF+Bild)</option>
 
         <!-- =========================================================
              PLATSHÅLLAR-SCAFFOLD per utbildning (ej byggda ämnen ännu).
@@ -710,6 +717,6 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.166" defer></script>
+  <script src="js/app.js?v=0.9.167" defer></script>
 </body>
 </html>

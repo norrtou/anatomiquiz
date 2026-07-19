@@ -120,16 +120,22 @@ utbildning som byggs ut växer automatiskt.
 ### De sju linserna (+ slumpval)
 Uppmätt pool i det byggda läget (0.9.166) mot planens uppskattning:
 
-| Lins | `value` | plan | uppmätt |
+| Lins (etikett i `#topic`) | `value` | plan | uppmätt |
 |---|---|---|---|
-| Medicinsk terminologi & latin | `lins_terminologi` | 1 800 | 1 799 |
-| Cellen, vävnaden & histologi | `lins_cell_vavnad` | 720 | 724 |
-| Nervsystemet & sinnesorganen (CNS/PNS + öga/öra) | `lins_nervsystemet` | 2 250 | 2 246 |
-| Hormoner, biokemi & ämnesomsättning | `lins_hormoner_biokemi` | 1 400 | 1 309 |
-| Övre extremitet | `lins_ovre_extremitet` | 1 340 | 1 344 |
-| Nedre extremitet & bäcken | `lins_nedre_extremitet` | 660 | 663 |
-| Bål & inre organ (hjärta, blod, andning, buk, njurar) | `lins_bal_inre_organ` | 2 500 | 3 156 |
-| **Slumpade frågor (alla utbildningar)** | `lins_alla` | hela poolen | 14 851 |
+| Blandat – medicinsk terminologi & latin | `lins_terminologi` | 1 800 | 1 799 |
+| Blandat – cellen, vävnaden & histologi | `lins_cell_vavnad` | 720 | 724 |
+| Blandat – nervsystemet & sinnesorganen (CNS/PNS + öga/öra) | `lins_nervsystemet` | 2 250 | 2 246 |
+| Blandat – hormoner, biokemi & ämnesomsättning | `lins_hormoner_biokemi` | 1 400 | 1 309 |
+| Blandat – övre extremitet | `lins_ovre_extremitet` | 1 340 | 1 344 |
+| Blandat – nedre extremitet & bäcken | `lins_nedre_extremitet` | 660 | 663 |
+| Blandat – bål & inre organ (hjärta, blod, andning, buk, njurar) | `lins_bal_inre_organ` | 2 500 | 3 156 |
+| **Blandat – alla utbildningar** | `lins_alla` | hela poolen | 14 851 |
+
+**Namngivning:** varje lins heter `Blandat – …` i dropdownen, så att det syns
+att frågorna hämtas tvärs utbildningarna. Farmakologi är ett vanligt ämne med
+egna frågor och bär därför INTE prefixet. Ämnesordningen inom Allmänt är ren
+bokstavsordning (alla `Blandat – …` först, Farmakologi sist) – Allmänt har inget
+separat "Slumpade frågor"-val överst, eftersom `lins_alla` är just det valet.
 
 Farmakologi (FC) ligger kvar oförändrat vid sidan av linserna.
 
