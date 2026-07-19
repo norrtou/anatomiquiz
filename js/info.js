@@ -199,6 +199,15 @@ const EDUCATIONS = [
     { label: 'Mag-tarmkanal & lever',       file: './data/apotekare.json', topic: 'apotekare_magtarm_lever' },
     { label: 'Njurar & utsöndring',         file: './data/apotekare.json', topic: 'apotekare_njurar_utsondring' },
   ]},
+  // Audionom-ämnena ligger alla i en delad fil (data/audionom.json),
+  // åtskilda av postens topic-fält → varje rad filtreras via `topic`.
+  { name: 'Audionom', topics: [
+    { label: 'Ytter- & mellanöra',          file: './data/audionom.json', topic: 'audionom_ytter_mellanora' },
+    { label: 'Innerörat – cochlea',         file: './data/audionom.json', topic: 'audionom_innerorat_cochlea' },
+    { label: 'Balansorganet (vestibularis)', file: './data/audionom.json', topic: 'audionom_balansorganet' },
+    { label: 'Hörselnerven & centrala hörselbanan', file: './data/audionom.json', topic: 'audionom_horselnerven_central' },
+    { label: 'Ljud- & hörselfysiologi',     file: './data/audionom.json', topic: 'audionom_ljud_horselfysiologi' },
+  ]},
   // Biomedicinsk analytiker-ämnena ligger alla i en delad fil
   // (data/biomedicinsk_analytiker.json), åtskilda av postens topic-fält.
   { name: 'Biomedicinsk analytiker', topics: [
