@@ -31,6 +31,7 @@ function getQuestionsPath(topic) {
   if (topic.startsWith('medsek_')) return './data/medicinsk_sekreterare.json'
   if (topic.startsWith('apotekare_')) return './data/apotekare.json'
   if (topic.startsWith('audionom_')) return './data/audionom.json'
+  if (topic.startsWith('optiker_')) return './data/optiker.json'
   if (topic === 'handens_ben_bilder') return './data/handens_ben_bilder.json'
   if (topic === 'handens_leder_bilder') return './data/handens_leder_bilder.json'
   // 'blandade' uses loadQuestionsFromMultiplePaths() instead
@@ -77,7 +78,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.163'
+const APP_VERSION = '0.9.164'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'

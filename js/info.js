@@ -208,6 +208,15 @@ const EDUCATIONS = [
     { label: 'Hörselnerven & centrala hörselbanan', file: './data/audionom.json', topic: 'audionom_horselnerven_central' },
     { label: 'Ljud- & hörselfysiologi',     file: './data/audionom.json', topic: 'audionom_ljud_horselfysiologi' },
   ]},
+  // Optiker-ämnena ligger alla i en delad fil (data/optiker.json),
+  // åtskilda av postens topic-fält → varje rad filtreras via `topic`.
+  { name: 'Optiker', topics: [
+    { label: 'Främre segmentet',            file: './data/optiker.json', topic: 'optiker_framre_segmentet' },
+    { label: 'Lins & ackommodation',        file: './data/optiker.json', topic: 'optiker_lins_ackommodation' },
+    { label: 'Bakre segmentet',             file: './data/optiker.json', topic: 'optiker_bakre_segmentet' },
+    { label: 'Synfysiologi & perception',   file: './data/optiker.json', topic: 'optiker_synfysiologi' },
+    { label: 'Ögonrörelser & binokulärseende', file: './data/optiker.json', topic: 'optiker_ogonrorelser_binokular' },
+  ]},
   // Biomedicinsk analytiker-ämnena ligger alla i en delad fil
   // (data/biomedicinsk_analytiker.json), åtskilda av postens topic-fält.
   { name: 'Biomedicinsk analytiker', topics: [

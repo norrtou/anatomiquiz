@@ -45,7 +45,8 @@ Finns idag för: arbetsterapeut, sjuksköterska, fysioterapeut, biomedicinsk
 analytiker, röntgensjuksköterska, medicinsk sekreterare, logoped, tandläkare,
 läkare (tillagt i 0.9.159; utbildningen är färdigbyggd sedan 0.9.161),
 apotekare (tillagt i 0.9.162, utbildningen färdigbyggd samtidigt), audionom (tillagt
-när utbildningen byggdes, 5 ämnen). Saknas medvetet för Allmänt (bara FC-ämnen → tom pool). Lägg till valet
+när utbildningen byggdes, 5 ämnen), optiker (tillagt i 0.9.164 när utbildningen
+byggdes, 5 ämnen). Saknas medvetet för Allmänt (bara FC-ämnen → tom pool). Lägg till valet
 så snart utbildningen har minst två MC/TF-ämnen.
 
 **Så lägger du till det för en ny utbildning – enda steget som behövs:**
@@ -98,7 +99,7 @@ någon lista behöver utökas.
 | Logoped | `logoped` | tom → platshållare |
 | Läkare | `lakare` | KLAR – 1 tidigare ämne + 18 byggda ämnen |
 | Medicinsk sekreterare | `medicinsk_sekreterare` | tom → platshållare |
-| Optiker | `optiker` | tom → platshållare |
+| Optiker | `optiker` | KLAR – 5 byggda ämnen |
 | Röntgensjuksköterska | `rontgensjukskoterska` | tom → platshållare |
 | Sjuksköterska | `sjukskoterska` | KLAR – 3 tidigare ämnen + 15 byggda ämnen |
 | Tandläkare | `tandlakare` | tom → platshållare |
