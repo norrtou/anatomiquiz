@@ -16,8 +16,10 @@ Tekniskt sitter listan som två kopplade `<select>` i `index.html`
 1. **Utbildningar som ska finnas** = de 12 nedan. Övriga tomma utbildningar i
    dropdownen raderas (barnmorska, biomedicinare, dietist, medicintekniker,
    receptarie, tandhygienist).
-2. **Allmänt rörs INTE.** Kategorin "Allmänt" (med ämnet Farmakologi) är helt
-   separat från detta och lämnas precis som den är.
+2. **Allmänt byggs separat.** Kategorin "Allmänt" ingår inte i denna
+   utbyggnadsordning — den har en egen plan med tvärgående linser, se avsnittet
+   "Allmänt — tvärgående ämnen" nedan. (Fram till 2026-07-19 löd regeln
+   "Allmänt rörs INTE"; den är upphävd i och med att linsplanen beslutades.)
 3. **Arbetsterapeut rörs INTE här.** Arbetsterapeutens ämnesindelning är
    annorlunda än underlaget i detta dokument och hanteras separat vid ett annat
    tillfälle. Lägg inte till eller ta bort något på arbetsterapeut utifrån detta
@@ -31,6 +33,13 @@ Tekniskt sitter listan som två kopplade `<select>` i `index.html`
 6. **Tomma platshållare** = ämnesrader utan riktigt frågeunderlag ännu. De får
    aldrig kunna laddas som vanliga ämnen (skulle annars falla tillbaka på
    `riktningar.json`). Mekaniken för hur de visas/spärras beslutas separat.
+7. **Svårighetsgrad finns inte.** Begreppet är helt borttaget (2026-07-19): vad
+   som är "svårt" är godtyckligt inom en utbildning. De 248 frågor som var
+   märkta `Hard` (handen, muskler, riktningar — alla arbetsterapeut) är
+   omskrivna till `Normal`, väljaren är borta ur `index.html` och all
+   filtreringslogik är utriven ur `app.js`. Fältet `"difficulty": "Normal"`
+   ligger kvar i datafilerna men läses inte av appen. **Inför inte
+   svårighetsgrader igen** och lägg inte till `Hard` i nya frågor.
 
 ---
 
@@ -46,8 +55,11 @@ analytiker, röntgensjuksköterska, medicinsk sekreterare, logoped, tandläkare,
 läkare (tillagt i 0.9.159; utbildningen är färdigbyggd sedan 0.9.161),
 apotekare (tillagt i 0.9.162, utbildningen färdigbyggd samtidigt), audionom (tillagt
 när utbildningen byggdes, 5 ämnen), optiker (tillagt i 0.9.164 när utbildningen
-byggdes, 5 ämnen). Saknas medvetet för Allmänt (bara FC-ämnen → tom pool). Lägg till valet
-så snart utbildningen har minst två MC/TF-ämnen.
+byggdes, 5 ämnen). Lägg till valet så snart utbildningen har minst två MC/TF-ämnen.
+
+Allmänt saknar det än så länge (bara FC-ämnet Farmakologi → tom pool), men ska
+få ett slumpval av en **annan** typ: över alla utbildningar, inte inom en. Det
+kräver egen mekanik — se "Allmänt — tvärgående ämnen" nedan.
 
 **Så lägger du till det för en ny utbildning – enda steget som behövs:**
 lägg en `<option>` i `#topic` i `index.html`:
@@ -68,9 +80,8 @@ Inga `app.js`-ändringar behövs – mekaniken är redan generisk (se nedan).
 3. **Bara MC/TF kommer med – rena flashcard-ämnen (FC) exkluderas** (path-samlingen
    filtrerar på typtaggen i etiketten). Sätt etiketten efter poolen: `(MC)` om alla
    ämnen är MC, annars t.ex. `(MC+TF+Bild)`.
-4. **Svårighetsgrad:** valet ger bara `Normal` om det inte står i
-   `topicsWithHardQuestions` i `app.js`. Lägg bara till det där om utbildningens
-   ämnen faktiskt har `Hard`-frågor.
+4. **Svårighetsgrad finns inte längre** – se grundregel 7. Inget att ta ställning
+   till här.
 5. **Placering: överst i utbildningens ämnesgrupp.** `#topic` renderas i
    DOM-ordning (`updateTopicOptions()` bygger om listan i `allTopicOptions`-
    ordning), så ordningen i `index.html` ÄR den användaren ser. Per utbildning
@@ -84,6 +95,67 @@ Inga `app.js`-ändringar behövs – mekaniken är redan generisk (se nedan).
 `getQuestionsPath()` för alla synliga `#topic`-options utom disabled och de vars
 `value.startsWith('blandade')`. Alla `blandade*`-värden matchar därför utan att
 någon lista behöver utökas.
+
+---
+
+## Allmänt — tvärgående ämnen (PLANERAT, ej byggt)
+
+**Status 2026-07-19: beslutad plan, inget byggt ännu.** Idag har Allmänt bara
+ämnet Farmakologi (FC).
+
+### Idén
+Allmänt ska INTE ha egna frågor. Dess ämnen är **linser över hela korpusen** —
+varje lins plockar slumpmässigt ur de befintliga utbildningsfilerna genom att
+matcha mönster mot frågornas `topic`-nyckel. Alltså: `optiker_synfysiologi`,
+`ssk_nervsystemet`, `nervsystemet_synaps` och `lakare_neuroanatomi` matas alla
+in i samma lins "Nervsystemet & sinnesorganen".
+
+Inga nya frågor skrivs. Inga nya datafiler skapas. En lins som pekar på en
+utbildning som byggs ut växer automatiskt.
+
+### De sju linserna (+ slumpval)
+Ungefärlig pool räknad 2026-07-19 (korpusen: 14 951 MC/TF-frågor totalt):
+
+| Lins | ca antal |
+|---|---|
+| Medicinsk terminologi & latin | 1 800 |
+| Cellen, vävnaden & histologi | 720 |
+| Nervsystemet & sinnesorganen (CNS/PNS + öga/öra) | 2 250 |
+| Hormoner, biokemi & ämnesomsättning | 1 400 |
+| Övre extremitet | 1 340 |
+| Nedre extremitet & bäcken | 660 |
+| Bål & inre organ (hjärta, blod, andning, buk, njurar) | 2 500 |
+| **Slumpade frågor (alla utbildningar)** | hela poolen |
+
+Farmakologi (FC) ligger kvar oförändrat vid sidan av linserna.
+
+### Varför just dessa
+- **Slumpvalet över allt gör att linserna inte behöver vara heltäckande.** Hud,
+  reproduktion, åldrande, tandanatomi, röntgenteknik och logopedens
+  tal/sväljning nås via slumpvalet i stället för att pressas in i en konstig
+  restkategori. Allmänt = "igenkännbara ingångar + allt", inte en taxonomi som
+  måste gå ihop.
+- **CNS/PNS slås ihop med sinnesorganen** eftersom audionom (500) och optiker
+  (500) är ren sinnesfysiologi och annars blir föräldralösa.
+- Linserna får gärna överlappa varandra. Det är inget fel.
+
+### Regler för bygget
+1. **Dubbletter mellan utbildningar är FÖRVÄNTADE och helt OK.** Att
+   `ssk_nervsystemet` och `fysio_nervsystemet` båda täcker aktionspotentialen är
+   designen — varje utbildning ska stå på egna ben. Ingen deduplicering, ingen
+   varning, ingen "att lösa"-punkt om detta. Se minnesfilen
+   `feedback_uniqueness_scope_per_topic.md`.
+2. **Ingen svårighetsgrad.** Begreppet är borttaget ur hela appen (se
+   grundregel 7). Linserna blandar fritt — arbetsterapeutens enklare TF-
+   påståenden ligger sida vid sida med läkarämnets MC. Det är avsiktligt.
+3. **Mekaniken kan INTE återanvända `blandade_*` rakt av.** Det mönstret läser
+   `el('topic').options`, som redan är filtrerad på vald utbildning — precis
+   tvärtom mot vad en Allmänt-lins behöver. Linserna kräver en egen explicit
+   mappning `lins → [filsökvägar] + [topic-mönster]`, som sedan matas till
+   `loadQuestionsFromMultiplePaths()`. Slumpvalet "alla utbildningar" behöver
+   samma sak (hela `allTopicOptions`, inte den filtrerade listan).
+4. **Eget `value` per lins** och egen topplista, samma skäl som i avsnittet om
+   slumpade frågor ovan (punkt 1 där).
 
 ---
 
@@ -104,7 +176,8 @@ någon lista behöver utökas.
 | Sjuksköterska | `sjukskoterska` | KLAR – 3 tidigare ämnen + 15 byggda ämnen |
 | Tandläkare | `tandlakare` | tom → platshållare |
 
-Plus **Allmänt** (`allmant`) som separat, orörd kategori.
+Plus **Allmänt** (`allmant`) som separat kategori med egen plan — se "Allmänt —
+tvärgående ämnen" ovan.
 
 ### Utbildningar som raderas ur dropdownen
 barnmorska, biomedicin (Biomedicinare), dietist, medicintekniker, receptarie,

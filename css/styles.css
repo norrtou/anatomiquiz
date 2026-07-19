@@ -644,7 +644,7 @@ select:focus-visible {
   }
 }
 
-/* Startvyn har fyra dropdowns (utbildning, ämne, antal, svårighet) + knappar.
+/* Startvyn har tre dropdowns (utbildning, ämne, antal) + knappar.
    Tajta den vertikala rytmen så att Starta-knapparna ryms utan att man behöver
    scrolla på mobil. Gäller bara #setup; övriga formulär (inställningar) orörda. */
 #setup label {
@@ -672,7 +672,7 @@ select:focus-visible {
   margin-bottom: 4px;
 }
 
-/* Antal frågor + Svårighetsgrad på samma rad. */
+/* Radlayout för fälten under ämnesvalet (i dag bara Antal frågor). */
 .setup-row {
   display: flex;
   gap: 12px;
@@ -1474,11 +1474,6 @@ body:has(#quiz:not(.hidden)) {
   border-top: 2px solid rgba(16, 185, 129, 0.1);
   color: var(--text-secondary);
   font-style: italic;
-}
-
-.stats-diff {
-  font-size: 0.75rem;
-  color: var(--text-secondary);
 }
 
 .stats-loading {

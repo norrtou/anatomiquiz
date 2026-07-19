@@ -84,8 +84,8 @@ function renderChangelog(text) {
 // ============================================================================
 
 // Ämnen grupperade per utbildning — samma indelning som ämnesväljaren på
-// startsidan (data-edu). fc: true = flashcard-ämne (kort utan svårighetsgrad →
-// visas som "—" i Normal/Svår). Håll i synk med getQuestionsPath() i app.js.
+// startsidan (data-edu). fc: true = flashcard-ämne (kort i stället för frågor).
+// Håll i synk med getQuestionsPath() i app.js.
 const EDUCATIONS = [
   { name: 'Allmänt', topics: [
     { label: 'Farmakologi',                 file: './data/farmakologi.json', fc: true },
@@ -273,7 +273,7 @@ const EDUCATIONS = [
 const ORDLISTA_URL = './data/ordlista.json'
 
 /**
- * Räknar kort i en datafil → {total, normal, hard} (difficulty 'Hard' = svår).
+ * Räknar frågor/kort i en datafil → {total}.
  * @param {string} file   Sökväg till JSON-fil.
  * @param {string} [topic] Om satt: räkna bara poster med q.topic === topic
  *   (flera ämnen kan dela en fil, t.ex. data/fysioterapeut.json).
@@ -282,8 +282,7 @@ function countCards(file, topic) {
   return fetch(file).then(r => r.json()).then(data => {
     let items = Array.isArray(data) ? data : data.questions
     if (topic) items = items.filter(q => q.topic === topic)
-    const normal = items.filter(q => q.difficulty !== 'Hard').length
-    return { total: items.length, normal, hard: items.length - normal }
+    return { total: items.length }
   })
 }
 
@@ -292,53 +291,41 @@ async function loadStats() {
   container.innerHTML = '<p class="stats-loading">Laddar statistik…</p>'
 
   try {
-    const dash = '<span class="stats-diff">—</span>'
-
     // Hämta alla ämnens antal parallellt och bygg en grupp (med delsumma) per utbildning.
     const groups = await Promise.all(EDUCATIONS.map(async edu => {
       const rows = await Promise.all(edu.topics.map(async t => ({ ...t, ...(await countCards(t.file, t.topic)) })))
-      const sub = rows.reduce((a, r) => ({
-        total: a.total + r.total, normal: a.normal + r.normal, hard: a.hard + r.hard,
-      }), { total: 0, normal: 0, hard: 0 })
+      const sub = rows.reduce((a, r) => ({ total: a.total + r.total }), { total: 0 })
       return { name: edu.name, rows, sub }
     }))
 
-    const grand = groups.reduce((a, g) => ({
-      total: a.total + g.sub.total, normal: a.normal + g.sub.normal, hard: a.hard + g.sub.hard,
-    }), { total: 0, normal: 0, hard: 0 })
+    const grand = groups.reduce((a, g) => ({ total: a.total + g.sub.total }), { total: 0 })
 
     const tbody = groups.map(g => {
       const rows = g.rows.map(r => `
           <tr>
             <td>${escapeHtml(r.label)}</td>
             <td>${r.total}</td>
-            <td>${r.fc ? dash : r.normal}</td>
-            <td>${r.fc ? dash : (r.hard > 0 ? r.hard : dash)}</td>
           </tr>`).join('')
       return `
-          <tr class="stats-edu-row"><th colspan="4" scope="colgroup">${escapeHtml(g.name)}</th></tr>
+          <tr class="stats-edu-row"><th colspan="2" scope="colgroup">${escapeHtml(g.name)}</th></tr>
           ${rows}
           <tr class="stats-subtotal-row">
             <td>Summa ${escapeHtml(g.name.toLowerCase())}</td>
             <td>${g.sub.total}</td>
-            <td>${g.sub.normal}</td>
-            <td>${g.sub.hard}</td>
           </tr>`
     }).join('')
 
     container.innerHTML = `
-      <p class="stats-intro">Frågor och kort är indelade per utbildning, precis som i ämnesväljaren på startsidan. Flashcard-ämnen (kort) har ingen svårighetsgrad och visas med ”—”.</p>
+      <p class="stats-intro">Frågor och kort är indelade per utbildning, precis som i ämnesväljaren på startsidan.</p>
       <table class="stats-table" aria-label="Antal frågor och kort per utbildning och ämne">
         <thead>
-          <tr><th>Ämne</th><th>Totalt</th><th>Normal</th><th>Svår</th></tr>
+          <tr><th>Ämne</th><th>Antal</th></tr>
         </thead>
         <tbody>
           ${tbody}
           <tr class="stats-total-row">
             <td>Totalt</td>
             <td>${grand.total}</td>
-            <td>${grand.normal}</td>
-            <td>${grand.hard}</td>
           </tr>
         </tbody>
       </table>`

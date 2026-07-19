@@ -38,31 +38,9 @@ function getQuestionsPath(topic) {
   return './data/riktningar.json'
 }
 
-// Topics that have Hard difficulty questions
-const topicsWithHardQuestions = ['handen', 'muskler', 'any_riktningar', 'blandade']
-
-function updateDifficultyOptions() {
-  const topic = el('topic').value
-  const difficultySelect = el('difficulty')
-  const hardOption = difficultySelect.querySelector('option[value="Hard"]')
-  const anyOption = difficultySelect.querySelector('option[value="any"]')
-
-  if (topicsWithHardQuestions.includes(topic)) {
-    // This topic has Hard questions - enable both Blandat and Svår
-    anyOption.disabled = false
-    hardOption.disabled = false
-    if (difficultySelect.value !== 'any' && difficultySelect.value !== 'Normal' && difficultySelect.value !== 'Hard') {
-      difficultySelect.value = 'any'
-    }
-  } else {
-    // This topic doesn't have Hard questions - only Normal is available
-    anyOption.disabled = true
-    hardOption.disabled = true
-    if (difficultySelect.value !== 'Normal') {
-      difficultySelect.value = 'Normal'
-    }
-  }
-}
+// Svårighetsgrad är borttaget som begrepp: vad som är "svårt" är godtyckligt
+// inom en utbildning, så alla frågor behandlas lika. Fältet "difficulty" ligger
+// kvar i datafilerna (alltid "Normal") men läses inte längre av appen.
 
 // NOTE: This app will ensure up to MAX_QUESTIONS questions exist by generating
 // placeholders for missing entries. Real questions should be imported later
@@ -78,7 +56,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.164'
+const APP_VERSION = '0.9.165'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -330,7 +308,6 @@ async function startQuiz(allowedTypes){
   const num = parseInt(el('numQuestions').value,10)
   quizTimerOn = !!el('timerEnabled')?.checked
   const topic = el('topic').value
-  const difficulty = el('difficulty').value
   const practiceWrong = !!el('practiceWrong')?.checked
 
   // Load questions based on topic
@@ -364,7 +341,6 @@ async function startQuiz(allowedTypes){
 
   // Exclude questions that are explicitly marked as placeholders so they
   // are not used in quizzes until replaced with real, fact-checked content.
-  // Filter by difficulty: 'any' (all), 'Normal' (normal questions), 'Hard' (difficult questions)
   const filtered = allQuestions.filter(q=> {
     const isPlaceholderSource = !!(q.source && String(q.source).toLowerCase()==='placeholder')
     const isPlaceholderId = /^ph\d{3}$/.test(String(q.id))
@@ -407,16 +383,7 @@ async function startQuiz(allowedTypes){
       topicMatch = q.topic === topic
     }
 
-    // Handle difficulty filtering
-    let difficultyMatch = true
-    if(difficulty === 'Normal') {
-      difficultyMatch = q.difficulty === 'Normal'
-    } else if(difficulty === 'Hard') {
-      difficultyMatch = q.difficulty === 'Hard'
-    }
-    // 'any' means all difficulties
-
-    return topicMatch && difficultyMatch && !(flags[q.id] && flags[q.id].excluded)
+    return topicMatch && !(flags[q.id] && flags[q.id].excluded)
   })
   if(filtered.length===0){
     const msg = realQuestions.length === 0
@@ -1219,9 +1186,9 @@ function withEduLabel(text, eduLabel){
 
 // Visa bara ämnen som hör till vald utbildning OCH har minst en av de valda
 // frågetyperna. Ämnen utan känd typtagg visas alltid (om utbildningen stämmer).
-// Bevarar valt ämne om det fortfarande finns, annars hoppar till första synliga
-// (och uppdaterar svårighetsvalen). Saknar utbildningen ämnen töms ämnesväljaren
-// och startknapparna skuggas (av updateStartButtons).
+// Bevarar valt ämne om det fortfarande finns, annars hoppar till första synliga.
+// Saknar utbildningen ämnen töms ämnesväljaren och startknapparna skuggas
+// (av updateStartButtons).
 //
 // Sökläge (#topicSearch har text): utbildningsfiltret kopplas bort och listan
 // söks igenom ALLA utbildningars ämnen (fortfarande med typ-/icke-medicinsk-
@@ -1272,7 +1239,6 @@ function updateTopicOptions(){
     topicEl.value = prev
   } else if(visible.length){
     topicEl.value = visible[0].value
-    updateDifficultyOptions()
   }
 }
 
@@ -1347,7 +1313,6 @@ async function startFlashcards() {
   const name    = el('playerName').value.trim() || 'Spelare'
   const num     = parseInt(el('numQuestions').value, 10)
   const topic   = el('topic').value
-  const diff    = el('difficulty').value
   fcTimerOn = !!el('timerEnabled')?.checked
 
   if (topic.startsWith('blandade')) {
@@ -1388,11 +1353,7 @@ async function startFlashcards() {
     else if (topic.startsWith('blandade')) topicMatch = true
     else topicMatch = q.topic === topic
 
-    let diffMatch = true
-    if (diff === 'Normal') diffMatch = q.difficulty === 'Normal'
-    else if (diff === 'Hard') diffMatch = q.difficulty === 'Hard'
-
-    return topicMatch && diffMatch && !(flags[q.id] && flags[q.id].excluded)
+    return topicMatch && !(flags[q.id] && flags[q.id].excluded)
   })
 
   if (!filtered.length) {
@@ -1580,19 +1541,18 @@ function init(){
     c.addEventListener('change', updateStartButtons)
   })
 
-  // Uppdatera svårighetsval + startknapparnas av/på när ämnet byts. I sökläge
-  // (#topicSearch ifyllt) synkas Utbildning också till det valda ämnets egen
-  // utbildning, och sökfältet töms.
-  el('topic').addEventListener('change', ()=>{ syncEducationToSelectedTopic(); updateDifficultyOptions(); updateStartButtons() })
+  // Uppdatera startknapparnas av/på när ämnet byts. I sökläge (#topicSearch
+  // ifyllt) synkas Utbildning också till det valda ämnets egen utbildning, och
+  // sökfältet töms.
+  el('topic').addEventListener('change', ()=>{ syncEducationToSelectedTopic(); updateStartButtons() })
   // Byte av utbildning bygger om ämneslistan (utbildning + frågetyp) och sparar valet.
-  el('education')?.addEventListener('change', ()=>{ updateTopicOptions(); updateDifficultyOptions(); updateStartButtons(); saveSettings() })
+  el('education')?.addEventListener('change', ()=>{ updateTopicOptions(); updateStartButtons(); saveSettings() })
   // Sök ämne i alla utbildningar: filtrerar #topic-listan medan man skriver
   // (se updateTopicOptions). Tom sökruta återställer den vanliga, utbildnings-
   // filtrerade listan.
-  el('topicSearch')?.addEventListener('input', ()=>{ updateTopicOptions(); updateDifficultyOptions(); updateStartButtons() })
+  el('topicSearch')?.addEventListener('input', ()=>{ updateTopicOptions(); updateStartButtons() })
   captureTopicOptions()     // Spara hela ämneslistan INNAN filtrering
   updateEducationOptions()  // Gråa ut utbildningar utan ämnen (efter capture)
-  updateDifficultyOptions() // Initial state
   applySettings()           // Läs in sparade inställningar (filtrerar ämnen + uppdaterar knapparna)
 }
 
