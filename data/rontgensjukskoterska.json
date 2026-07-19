@@ -33,7 +33,7 @@
     "prompt": "Vad är lingula i vänster lunga?",
     "correct": "En tungliknande del av vänster överlob, likt höger mellanlob",
     "distractors": [
-      "En egen tredje lob i vänster lunga, vilket inte finns i verkligheten",
+      "En egen tredje lob i vänster lunga, mellan över- och underlob",
       "Del av underloben, närmast hjärtats vänstra kontur",
       "Ett segment i höger underlob, nära hilusregionen"
     ],
@@ -299,7 +299,7 @@
     "prompt": "Hur skiljer sig höger huvudbronks vinkel mot trachea från vänster?",
     "correct": "Höger huvudbronk går brantare/mer vertikalt, med mindre vinkel",
     "distractors": [
-      "Höger huvudbronk avgår i cirka 45 graders vinkel, brantare än vänster",
+      "Höger huvudbronk avgår i cirka 45 graders vinkel från trachea",
       "Vänster huvudbronk går brantare och mer vertikalt än den högra",
       "Båda huvudbronkerna avgår i samma vinkel från carina"
     ],
@@ -380,12 +380,12 @@
   {
     "id": "rtg_thorax_28",
     "type": "mc",
-    "prompt": "Hur stor är diafragmas normala rörelseomfång vid andning?",
-    "correct": "Cirka 3-5 cm vid lugn andning, mer vid djupandning",
+    "prompt": "Hur stort är diafragmas normala rörelseomfång mellan ut- och inandning?",
+    "correct": "Cirka 3-5 cm, och mer vid djup maximal inandning",
     "distractors": [
-      "Cirka 10-15 cm vid lugn andning, mindre vid djupandning",
-      "Cirka 1 mm vid lugn andning, knappt mätbar vid djupandning",
-      "Cirka 20-25 cm vid lugn andning, samma vid djupandning"
+      "Cirka 10-15 cm, och mindre vid djup maximal inandning",
+      "Cirka 1 mm, och knappt mätbart vid djup inandning",
+      "Cirka 20-25 cm, och oförändrat vid djup inandning"
     ],
     "topic": "rtg_thorax",
     "difficulty": "Normal",
@@ -422,7 +422,7 @@
   {
     "id": "rtg_thorax_31",
     "type": "mc",
-    "prompt": "Hur delas mediastinum in klassiskt?",
+    "prompt": "Hur delas det inferiora mediastinum in klassiskt?",
     "correct": "Främre, mellersta och bakre",
     "distractors": [
       "Höger, vänster och central del",
@@ -525,7 +525,7 @@
     "distractors": [
       "I vena cava inferior, nedanför hjärtat",
       "Direkt i höger förmak, utan att passera vener",
-      "I lungartären, inte i en ven"
+      "I lungvenerna på höger sida, före hjärtat"
     ],
     "topic": "rtg_thorax",
     "difficulty": "Normal",
@@ -1192,7 +1192,7 @@
   {
     "id": "rtg_thorax_86",
     "type": "mc",
-    "prompt": "Hur kan en normal tymus hos spädbarn te sig på lateralbild?",
+    "prompt": "Hur kan en normal tymus hos spädbarn te sig på frontalbild?",
     "correct": "Som ett brett övre mediastinum med \"segelformat\" utseende",
     "distractors": [
       "Som ett smalt övre mediastinum med skarpt avgränsad kontur",
@@ -1615,9 +1615,9 @@
     "prompt": "Var ligger binjurarna i förhållande till njurarna?",
     "correct": "Superomedialt på njurarnas övre pol",
     "distractors": [
-      "Nedanför njurarna, inte ovanför",
-      "Lateralt om mjälten, inte vid njuren",
-      "Nere i bäckenet, inte vid njuren"
+      "Nedanför njurarnas nedre pol, mot uretären",
+      "Lateralt om mjältens övre pol",
+      "I bäckenet, ovanför urinblåsan"
     ],
     "topic": "rtg_buk_retroperitoneum",
     "difficulty": "Normal",
@@ -1836,7 +1836,7 @@
   {
     "id": "rtg_buk_retroperitoneum_32",
     "type": "mc",
-    "prompt": "Vilken bukvägglinje/struktur syns som en tunn linje mellan lever och njure på ultraljud/CT och används för att bedöma fri vätska?",
+    "prompt": "Vilken struktur syns som en tunn linje mellan lever och njure på ultraljud/CT och används för att bedöma fri vätska?",
     "correct": "Morisons ficka",
     "distractors": [
       "Ligamentum teres",
@@ -1920,7 +1920,7 @@
   {
     "id": "rtg_buk_retroperitoneum_38",
     "type": "mc",
-    "prompt": "Vilket organ ligger mellan magsäcken och colon transversum, och hänger ner som ett förkläde?",
+    "prompt": "Vilken bukhinnestruktur ligger mellan magsäcken och colon transversum, och hänger ner som ett förkläde?",
     "correct": "Omentum majus",
     "distractors": [
       "Omentum minus",
@@ -2116,12 +2116,12 @@
   {
     "id": "rtg_buk_retroperitoneum_52",
     "type": "mc",
-    "prompt": "Vad kallas den solida vävnaden i mjälten som syns homogen på kontrast-CT i tidig fas men ofta \"marmorerad\"?",
-    "correct": "Mjältparenkymet i den arteriella tidiga fasen",
+    "prompt": "Hur ser mjältparenkymet normalt ut på kontrast-CT i tidig artärfas?",
+    "correct": "Marmorerat och ojämnt, vilket är ett normalfynd i den fasen",
     "distractors": [
-      "Ett patologiskt tecken på skada i mjältparenkymet",
-      "Ett säkert tecken på pågående mjältruptur",
-      "En artefakt som uppträder vid MR-undersökning"
+      "Helt homogent, och all ojämnhet talar för skada i parenkymet",
+      "Marmorerat, vilket är ett säkert tecken på pågående mjältruptur",
+      "Marmorerat, men bara som artefakt vid magnetkameraundersökning"
     ],
     "topic": "rtg_buk_retroperitoneum",
     "difficulty": "Normal",
@@ -2240,20 +2240,6 @@
     "source": "Möller & Reif, Pocket Atlas of Radiographic Anatomy"
   },
   {
-    "id": "rtg_buk_retroperitoneum_61",
-    "type": "mc",
-    "prompt": "Vad kännetecknar binjurarnas form på CT?",
-    "correct": "Höger binjure triangulär, vänster ofta Y-formad",
-    "distractors": [
-      "Höger binjure Y-formad, vänster ofta triangulär",
-      "Båda binjurarna har en rund, väl avgränsad form",
-      "Båda binjurarna framträder som platta, bandformade"
-    ],
-    "topic": "rtg_buk_retroperitoneum",
-    "difficulty": "Normal",
-    "source": "Möller & Reif, Pocket Atlas of Radiographic Anatomy"
-  },
-  {
     "id": "rtg_buk_retroperitoneum_62",
     "type": "mc",
     "prompt": "Vilket kärl ligger till vänster om aorta i övre buken och kan förväxlas med en förstorad lymfkörtel om det snittas snett?",
@@ -2287,9 +2273,9 @@
     "prompt": "Vad kallas den så kallade \"nutcracker\"-passagen där vänster njurven kan komprimeras?",
     "correct": "Mellan aorta och arteria mesenterica superior",
     "distractors": [
-      "Mellan lever och mjälte, inte kring dessa kärl",
-      "Mellan pankreas och duodenum, inte kring dessa kärl",
-      "Mellan colon och tunntarmen, inte kring dessa kärl"
+      "Mellan levern och mjälten högt upp i övre buken",
+      "Mellan pankreas caput och duodenums C-krök",
+      "Mellan colon transversum och tunntarmens slyngor"
     ],
     "topic": "rtg_buk_retroperitoneum",
     "difficulty": "Normal",
@@ -2382,7 +2368,7 @@
   {
     "id": "rtg_buk_retroperitoneum_71",
     "type": "mc",
-    "prompt": "Vilket organ ligger allra mest posteriort av bukorganen, nära ryggraden?",
+    "prompt": "Vilket av matsmältningsorganen i övre buken ligger mest posteriort, närmast ryggraden?",
     "correct": "Pankreas",
     "distractors": [
       "Magsäcken",
@@ -2718,7 +2704,7 @@
   {
     "id": "rtg_buk_retroperitoneum_95",
     "type": "mc",
-    "prompt": "Vilken struktur syns som en tunn, slingrande kärlstruktur framför vena cava inferior som kan misstas för lymfkörtel vid CT-buk?",
+    "prompt": "Vilken struktur syns som en tunn, slingrande kärlstruktur mellan aorta och vena cava inferior som kan misstas för lymfkörtel vid CT-buk?",
     "correct": "Vena renalis sinistra i sitt förlopp framför aorta",
     "distractors": [
       "Arteria mesenterica inferior i sitt förlopp nedåt mot bäckenet",
@@ -2943,11 +2929,11 @@
     "id": "rtg_skelett_extremiteter_11",
     "type": "mc",
     "prompt": "Vad kallas den distala delen av radius som ledar mot karpalbenen?",
-    "correct": "Radius distala ledyta",
+    "correct": "Facies articularis carpalis",
     "distractors": [
-      "Styloidutskottet på ulna",
-      "Olecranon",
-      "Coronoidutskottet"
+      "Processus styloideus ulnae",
+      "Olecranon ulnae",
+      "Processus coronoideus"
     ],
     "topic": "rtg_skelett_extremiteter",
     "difficulty": "Normal",
@@ -3180,7 +3166,7 @@
   {
     "id": "rtg_skelett_extremiteter_28",
     "type": "mc",
-    "prompt": "Vilka ben ingår i lårbenet och underbenet (fotens ben oräknade)?",
+    "prompt": "Vilka ben bygger upp lår, knä och underben (fotens ben oräknade)?",
     "correct": "Femur, tibia, fibula och patella",
     "distractors": [
       "Femur, tibia, fibula och calcaneus",
@@ -3362,7 +3348,7 @@
   {
     "id": "rtg_skelett_extremiteter_41",
     "type": "mc",
-    "prompt": "Vilka ben bildar den distala tarsalraden (utöver naviculare)?",
+    "prompt": "Vilka ben bildar den distala tarsalraden i foten?",
     "correct": "Tre cuneiforma-ben och cuboideum",
     "distractors": [
       "Talus och calcaneus i bakfoten",
@@ -3432,7 +3418,7 @@
   {
     "id": "rtg_skelett_extremiteter_46",
     "type": "mc",
-    "prompt": "Vilket ben har flest ossifikationscentra att bedöma vid barnröntgen av handled (viktigt för åldersbedömning)?",
+    "prompt": "Vilka ben ger flest ossifikationscentra att bedöma vid barnröntgen av handled (viktigt för åldersbedömning)?",
     "correct": "Karpalbenen, som ossifierar i förutsägbar ordning",
     "distractors": [
       "Radius distala epifys, som ossifierar tidigt i livet",
@@ -3548,7 +3534,7 @@
     "correct": "Greenstick-fraktur",
     "distractors": [
       "Spiralfraktur",
-      "Trattfraktur",
+      "Tvärfraktur",
       "Kompressionsfraktur"
     ],
     "topic": "rtg_skelett_extremiteter",
@@ -3629,7 +3615,7 @@
     "id": "rtg_skelett_extremiteter_60",
     "type": "mc",
     "prompt": "Vad kallas en fraktur med flera benfragment (mer än två delar)?",
-    "correct": "Kominut fraktur",
+    "correct": "Komminut fraktur",
     "distractors": [
       "Enkel fraktur",
       "Greenstick-fraktur",
@@ -4160,7 +4146,7 @@
   {
     "id": "rtg_skelett_extremiteter_98",
     "type": "mc",
-    "prompt": "Vad kallas den vanliga avulsionsfrakturen vid basen av femte metatarsalbenet, vanlig vid fotledsstukning?",
+    "prompt": "Vad kallas frakturen i övergången mellan bas och skaft på femte metatarsalbenet, ökänd för dålig läkning?",
     "correct": "Jones-fraktur",
     "distractors": [
       "Lisfranc-fraktur",
@@ -4426,7 +4412,7 @@
   {
     "id": "rtg_columna_17",
     "type": "mc",
-    "prompt": "Vilka lumbalkotornas karakteristiska utskott används ofta som markörer på tvärsnitt?",
+    "prompt": "Vilket karakteristiskt utskott på lumbalkotorna används ofta som markör på tvärsnitt?",
     "correct": "Processus mammillaris",
     "distractors": [
       "Uncinatusutskott",
@@ -4930,8 +4916,8 @@
   {
     "id": "rtg_columna_53",
     "type": "mc",
-    "prompt": "Vad motsvarar hundens 'hals' i scottie dog-figuren, viktig vid spondylolys?",
-    "correct": "Pars interarticularis",
+    "prompt": "Vad motsvarar hundens 'öga' i scottie dog-figuren vid oblik ländryggsbild?",
+    "correct": "Pediculus arcus vertebrae",
     "distractors": [
       "Processus transversus",
       "Foramen intervertebrale",
@@ -5168,7 +5154,7 @@
   {
     "id": "rtg_columna_70",
     "type": "mc",
-    "prompt": "Vad kallas ledytorna på revbenen mot kotkropparna?",
+    "prompt": "Vad kallas lederna mellan revbenshuvudena och kotkropparna?",
     "correct": "Costovertebralleder",
     "distractors": [
       "Costotransversalleder",
@@ -5350,7 +5336,7 @@
   {
     "id": "rtg_columna_83",
     "type": "mc",
-    "prompt": "Vad kallas den bilddiagnostiska bedömningen av diskhöjdsminskning vid degeneration?",
+    "prompt": "Vad kallas det tillstånd där mellankotskivans höjd minskar och vätskeinnehållet avtar?",
     "correct": "Diskdegeneration",
     "distractors": [
       "Spondylolys",
@@ -5588,12 +5574,12 @@
   {
     "id": "rtg_columna_100",
     "type": "mc",
-    "prompt": "Var i spinalkanalen (centralt eller perifert) sitter en central spinal stenos?",
-    "correct": "Centralt i spinalkanalen, pga förtjockat ligamentum flavum",
+    "prompt": "Vilken struktur bidrar oftast till förträngningen vid spinal stenos av central typ?",
+    "correct": "Förtjockat ligamentum flavum baktill i spinalkanalen",
     "distractors": [
-      "I foramen intervertebrale, pga förtjockat ligamentum flavum",
-      "Utanför kotpelaren, pga förtjockade paraspinala muskler",
-      "I sacrums kanal, pga förtjockat ligamentum longitudinale"
+      "Förtjockat ligamentum longitudinale anterius framför kotkropparna",
+      "Förtjockade paraspinala muskler utanför kotpelaren",
+      "Förtjockat periost längs kotbågarnas insida"
     ],
     "topic": "rtg_columna",
     "difficulty": "Normal",
@@ -5784,7 +5770,7 @@
   {
     "id": "rtg_skalle_hjarna_14",
     "type": "mc",
-    "prompt": "Vilken nerv och vilket kärl passerar genom foramen jugulare tillsammans med v. jugularis interna?",
+    "prompt": "Vilka kranialnerver passerar genom foramen jugulare tillsammans med vena jugularis interna?",
     "correct": "Nervus glossopharyngeus, nervus vagus och nervus accessorius",
     "distractors": [
       "Nervus opticus, nervus oculomotorius och nervus trochlearis",
@@ -6333,7 +6319,7 @@
     "prompt": "Varför är CT (inte MR) förstahandsval vid akut misstänkt hjärnblödning?",
     "correct": "CT är snabbare och mer tillgängligt akut, känsligt för färsk blödning",
     "distractors": [
-      "MR visar färsk blödning sämre än CT och tar dessutom längre tid att utföra",
+      "MR kräver kontrastmedel för att en färsk blödning alls ska framträda",
       "CT ger lägre stråldos än MR och är därför att föredra i akutskedet",
       "MR är kontraindicerat hos patienter med akut stroke enligt riktlinjerna"
     ],
@@ -6498,7 +6484,7 @@
   {
     "id": "rtg_skalle_hjarna_65",
     "type": "mc",
-    "prompt": "Vad kallas det hinnklädda hålrum där hypofysen sitter, täckt av en durafålla?",
+    "prompt": "Vad kallas den durafålla som bildar tak över hypofysen i sella turcica?",
     "correct": "Diaphragma sellae",
     "distractors": [
       "Falx cerebri",
@@ -6554,7 +6540,7 @@
   {
     "id": "rtg_skalle_hjarna_69",
     "type": "mc",
-    "prompt": "Vilken standardprojektion vid konventionell skallröntgen visar bäst frontal-/etmoidalsinus och orbitas väggar?",
+    "prompt": "Vilken standardprojektion vid konventionell skallröntgen visar bäst sinus maxillaris och orbitas botten?",
     "correct": "Waters-projektion",
     "distractors": [
       "Towne-projektion",
@@ -6890,7 +6876,7 @@
   {
     "id": "rtg_skalle_hjarna_93",
     "type": "mc",
-    "prompt": "Vilken struktur skiljer den grå och vita substansen åt anatomiskt/funktionellt i storhjärnan?",
+    "prompt": "Hur är grå och vit substans fördelade i storhjärnan?",
     "correct": "Grå substansen ligger ytligt, vit substans ligger djupare centralt",
     "distractors": [
       "Grå substansen ligger djupast centralt, vit substans ytligt i barken",
@@ -6960,7 +6946,7 @@
   {
     "id": "rtg_skalle_hjarna_98",
     "type": "mc",
-    "prompt": "Vad kallas den bilddiagnostiska bedömningen av mittlinjeförskjutning (t.ex. vid stor blödning eller svullnad) på CT/MR?",
+    "prompt": "Vad kallas fyndet där septum pellucidum och tredje ventrikeln trycks över åt ena sidan av en expansiv process?",
     "correct": "Midline shift",
     "distractors": [
       "Ventrikelvidgning",
@@ -7103,9 +7089,9 @@
     "prompt": "Hur många bihålepar (paranasala sinus) har människan?",
     "correct": "Fyra par: frontal-, maxillar-, etmoidal- och sfenoidalsinus",
     "distractors": [
-      "Tre par bihålor totalt, ett för få jämfört med verkligheten",
-      "Fem par bihålor totalt, ett för många jämfört med verkligheten",
-      "Två par bihålor totalt, alldeles för få jämfört med verkligheten"
+      "Tre par: frontal-, maxillar- och etmoidalsinus",
+      "Fem par: frontal-, maxillar-, etmoidal-, sfenoidal- och mastoidalsinus",
+      "Två par: frontal- och maxillarsinus i ansiktsskelettet"
     ],
     "topic": "rtg_huvud_hals",
     "difficulty": "Normal",
@@ -7170,12 +7156,12 @@
   {
     "id": "rtg_huvud_hals_13",
     "type": "mc",
-    "prompt": "Vilken bihåla är vanligen först att utvecklas och redan synlig vid födseln?",
-    "correct": "Sinus ethmoidalis",
+    "prompt": "Vilka bihålor är normalt redan urskiljbara vid födseln?",
+    "correct": "Etmoidal- och maxillarsinus",
     "distractors": [
-      "Sinus frontalis",
-      "Sinus sphenoidalis",
-      "Sinus maxillaris"
+      "Frontal- och sfenoidalsinus",
+      "Frontal- och maxillarsinus",
+      "Sfenoidal- och etmoidalsinus"
     ],
     "topic": "rtg_huvud_hals",
     "difficulty": "Normal",
@@ -7226,7 +7212,7 @@
   {
     "id": "rtg_huvud_hals_17",
     "type": "mc",
-    "prompt": "Vad kallas den vanliga radiologiska bedömningen av vätskenivå (luft-vätskespegel) i en bihåla?",
+    "prompt": "Vad talar en luft-vätskespegel i en bihåla för?",
     "correct": "Tecken på sinuit/bihåleinflammation eller blödning",
     "distractors": [
       "Ett normalfynd som ses hos de flesta friska vuxna personer",
@@ -7548,7 +7534,7 @@
   {
     "id": "rtg_huvud_hals_40",
     "type": "mc",
-    "prompt": "Vilket brosklockslika struktur skyddar luftvägen vid sväljning?",
+    "prompt": "Vilken brosklocksliknande struktur skyddar luftvägen vid sväljning?",
     "correct": "Epiglottis",
     "distractors": [
       "Cartilago cricoidea",
@@ -7562,7 +7548,7 @@
   {
     "id": "rtg_huvud_hals_41",
     "type": "mc",
-    "prompt": "Vilka brosk i larynx är parade och rör stämläpparna via muskelfästen?",
+    "prompt": "Vilket parigt brosk i larynx rör stämläpparna via muskelfästen?",
     "correct": "Cartilago arytenoidea",
     "distractors": [
       "Cartilago thyroidea",
@@ -7593,7 +7579,7 @@
     "prompt": "Vilken bilddiagnostisk metod är vanligast vid akut utredning av främmande kropp eller mjukdelssvullnad i halsen hos barn?",
     "correct": "Konventionell mjukdelsröntgen av halsen i sidled",
     "distractors": [
-      "Magnetkamera akut i sidled, oavsett tillgänglighet",
+      "Magnetkamera av halsens mjukdelar i sidled akut",
       "PET-CT, en nukleärmedicinsk kartläggning",
       "Angiografi via kateter, en kärlundersökning"
     ],
@@ -7646,7 +7632,7 @@
   {
     "id": "rtg_huvud_hals_47",
     "type": "mc",
-    "prompt": "Vilket vaskulärt huvudkärl försörjer huvud och hals på vardera sidan?",
+    "prompt": "Vilket huvudkärl försörjer huvud och hals på vardera sidan?",
     "correct": "Arteria carotis communis, som delas i interna och externa",
     "distractors": [
       "Arteria subclavia, som delas i vertebralis och thoracica",
@@ -7800,7 +7786,7 @@
   {
     "id": "rtg_huvud_hals_58",
     "type": "mc",
-    "prompt": "Vilken vägg i orbita är tunnast och drabbas oftast vid en blow-out-fraktur?",
+    "prompt": "Vilken vägg i orbita drabbas oftast vid en blow-out-fraktur?",
     "correct": "Orbitagolvet, bildat av maxillans orbitalyta",
     "distractors": [
       "Orbitans tak, bildat av pannbenets orbitaldel",
@@ -7828,7 +7814,7 @@
   {
     "id": "rtg_huvud_hals_60",
     "type": "mc",
-    "prompt": "Vad kallas den vanligaste ansiktsfrakturen, ofta vid trubbigt våld mot kindpartiet, som involverar zygomaticus-komplexet?",
+    "prompt": "Vad kallas ansiktsfrakturen vid trubbigt våld mot kindpartiet som involverar zygomaticus-komplexet?",
     "correct": "Tripod-/zygomaticomaxillär komplex-fraktur",
     "distractors": [
       "Le Fort I-fraktur genom maxillans nedre del",
@@ -7969,7 +7955,7 @@
     "id": "rtg_huvud_hals_70",
     "type": "mc",
     "prompt": "Vilken bilddiagnostisk metod ger bäst detaljupplösning av de tre hörselbenen och innerörats benstrukturer?",
-    "correct": "Höjupplösande CT av temporalbenet",
+    "correct": "Högupplösande CT av temporalbenet",
     "distractors": [
       "MR i första hand för benstrukturer",
       "Konventionell röntgen",
@@ -8027,7 +8013,7 @@
     "prompt": "Vilket är det mest lateralt belägna benet i ansiktet som bildar kindbågen tillsammans med os temporale?",
     "correct": "Os zygomaticum",
     "distractors": [
-      "Os maxillare",
+      "Maxilla",
       "Os frontale",
       "Os sphenoidale"
     ],
@@ -8136,7 +8122,7 @@
   {
     "id": "rtg_huvud_hals_82",
     "type": "mc",
-    "prompt": "Vad kallas frontalbenets utskott som bildar den övre ytterkanten av orbitan?",
+    "prompt": "Vad kallas frontalbenets kant som bildar orbitans övre begränsning?",
     "correct": "Margo supraorbitalis",
     "distractors": [
       "Margo infraorbitalis",
@@ -8150,7 +8136,7 @@
   {
     "id": "rtg_huvud_hals_83",
     "type": "mc",
-    "prompt": "Vad kallas nerven och kärlet som passerar genom foramen infraorbitale?",
+    "prompt": "Vilken nerv träder ut på kindens framsida strax under orbitakanten och försörjer huden där?",
     "correct": "Nervus infraorbitalis och tillhörande kärl",
     "distractors": [
       "Nervus mentalis och tillhörande kärl i hakan",
@@ -8220,12 +8206,12 @@
   {
     "id": "rtg_huvud_hals_88",
     "type": "mc",
-    "prompt": "Vilket brosk bildar ytterörats (auricula) form?",
-    "correct": "Broskvävnad i ytterörat, täckt av hud",
+    "prompt": "Vilket brosk ger ytterörat (auricula) dess form?",
+    "correct": "Cartilago auriculae",
     "distractors": [
-      "Cartilago thyroidea, i struphuvudet inte ytterörat",
-      "Cartilago cricoidea, i struphuvudet inte ytterörat",
-      "Cartilago arytenoidea, i struphuvudet inte ytterörat"
+      "Cartilago thyroidea",
+      "Cartilago cricoidea",
+      "Cartilago arytenoidea"
     ],
     "topic": "rtg_huvud_hals",
     "difficulty": "Normal",
@@ -8500,7 +8486,7 @@
   {
     "id": "rtg_backen_hoft_8",
     "type": "mc",
-    "prompt": "Vad kallas den stora, halvmånformade uroskärningen baktill på os ilium/ischii där n. ischiadicus passerar ut?",
+    "prompt": "Vad kallas den stora, halvmånformade inskärningen baktill på os ilium/ischii där n. ischiadicus passerar ut?",
     "correct": "Incisura ischiadica major",
     "distractors": [
       "Foramen obturatum",
@@ -8906,7 +8892,7 @@
   {
     "id": "rtg_backen_hoft_37",
     "type": "mc",
-    "prompt": "Var ligger testiklarna normalt, utanför bukhålan?",
+    "prompt": "Var ligger testiklarna normalt hos en vuxen man?",
     "correct": "I pungen",
     "distractors": [
       "I bäckenhålan permanent hos vuxna",
@@ -9074,7 +9060,7 @@
   {
     "id": "rtg_backen_hoft_49",
     "type": "mc",
-    "prompt": "Vad avslutar tarmkanalen nedtill i bäckenet, framför sacrum/coccyx?",
+    "prompt": "Vilken del av tjocktarmen ligger i bäckenet framför sacrum och coccyx?",
     "correct": "Rektum",
     "distractors": [
       "Sigmoideum",
@@ -9326,7 +9312,7 @@
   {
     "id": "rtg_backen_hoft_67",
     "type": "mc",
-    "prompt": "Vad kallas den vanligaste bäckenringsskadan vid höggradigt trauma som klassificeras enligt Young-Burgess eller Tile?",
+    "prompt": "Vilken skadetyp i bäckenet efter höggradigt trauma klassificeras enligt Young-Burgess eller Tile?",
     "correct": "Bäckenringsfraktur",
     "distractors": [
       "Acetabulumfraktur",
@@ -9368,7 +9354,7 @@
   {
     "id": "rtg_backen_hoft_70",
     "type": "mc",
-    "prompt": "Vilken avulsionsfraktur ses hos unga sprintare när rectus femoris raka huvud slitar loss sitt fäste på höftbenet?",
+    "prompt": "Vilken avulsionsfraktur ses hos unga sprintare när rectus femoris raka huvud sliter loss sitt fäste på höftbenet?",
     "correct": "Avulsionsfraktur av spina iliaca anterior inferior",
     "distractors": [
       "Avulsionsfraktur av spina iliaca anterior superior",
@@ -9411,11 +9397,11 @@
     "id": "rtg_backen_hoft_73",
     "type": "mc",
     "prompt": "Varför föredras ultraljud framför röntgen vid utredning av höftledsdysplasi hos spädbarn?",
-    "correct": "Höftledens brosk är oförbenat och syns bara på ultraljud",
+    "correct": "Höftledens brosk är ännu oförbenat och avbildas väl med ultraljud",
     "distractors": [
       "Röntgen kan inte visa höftleden alls hos någon åldersgrupp",
       "Ultraljud ger bättre bendetalj än röntgen generellt",
-      "Röntgen är förbjudet hos barn av lag"
+      "Röntgen visar det oförbenade ledbrosket lika bra som ultraljud"
     ],
     "topic": "rtg_backen_hoft",
     "difficulty": "Normal",
@@ -9564,12 +9550,12 @@
   {
     "id": "rtg_backen_hoft_84",
     "type": "mc",
-    "prompt": "Vad kallas den bilddiagnostiska bedömningen av \"fri vätska\" i cavum Douglasi hos kvinnor på ultraljud, som kan vara ett normalt fynd i liten mängd?",
-    "correct": "Fysiologisk fri vätska i cavum Douglasi",
+    "prompt": "Vad talar en liten mängd fri vätska i cavum Douglasi hos en kvinna oftast för?",
+    "correct": "Ett fysiologiskt normalfynd utan sjuklig betydelse",
     "distractors": [
-      "Tecken på blödning eller infektion i buken",
-      "Tecken på spridd cancer i bukhålan",
-      "Ett fynd som saknar motsvarighet hos friska"
+      "En pågående blödning eller infektion i lilla bäckenet",
+      "Spridd cancer med metastaser på bukhinnan",
+      "En bristning i urinblåsans bakre vägg"
     ],
     "topic": "rtg_backen_hoft",
     "difficulty": "Normal",
@@ -9578,7 +9564,7 @@
   {
     "id": "rtg_backen_hoft_85",
     "type": "mc",
-    "prompt": "Vilken standardprojektion av bäckenet (\"inlet view\") visar bäckenringen uppifrån och ned, användbar vid rotationsfelställningar?",
+    "prompt": "Vilken standardprojektion av bäckenet visar bäckenringen uppifrån och ned, användbar vid rotationsfelställningar?",
     "correct": "Inlet-projektion",
     "distractors": [
       "Outlet-projektion",
@@ -9592,7 +9578,7 @@
   {
     "id": "rtg_backen_hoft_86",
     "type": "mc",
-    "prompt": "Vilken standardprojektion (\"outlet view\") visar bäckenet med kaudokranial vinkling, användbar för att bedöma vertikal felställning?",
+    "prompt": "Vilken standardprojektion visar bäckenet med kaudokranial vinkling, användbar för att bedöma vertikal felställning?",
     "correct": "Outlet-projektion",
     "distractors": [
       "Inlet-projektion",
@@ -9704,7 +9690,7 @@
   {
     "id": "rtg_backen_hoft_94",
     "type": "mc",
-    "prompt": "Vad kallas den vanligaste medfödda missbildningen i bäckenets urinvägar, med dubblerat uretärsystem?",
+    "prompt": "Vad kallas den vanligaste medfödda missbildningen i urinvägarna, där en njure har två separata avflödessystem?",
     "correct": "Dubbel uretär",
     "distractors": [
       "Hästskonjure",
@@ -9732,12 +9718,12 @@
   {
     "id": "rtg_backen_hoft_96",
     "type": "mc",
-    "prompt": "Var i buken/bäckenet ligger en hästskonjure ofta lägre än normala njurar, och varför?",
-    "correct": "Lägre än normalt, eftersom uppstigningen hindras",
+    "prompt": "Vad förklarar hästskonjurens avvikande läge i buken?",
+    "correct": "Den ligger lägre eftersom uppstigningen under fosterlivet hindras",
     "distractors": [
-      "Högre än normalt, eftersom uppstigningen påskyndas",
-      "I brösthålan, eftersom njuren vandrat för högt upp",
-      "På exakt samma nivå som en normal njure på båda sidor"
+      "Den ligger högre eftersom uppstigningen under fosterlivet påskyndas",
+      "Den ligger i brösthålan eftersom njuren vandrat genom diafragma",
+      "Den ligger på normal nivå eftersom sammanväxningen sker sent"
     ],
     "topic": "rtg_backen_hoft",
     "difficulty": "Normal",
@@ -9849,7 +9835,7 @@
     "distractors": [
       "Arteria radialis direkt",
       "Arteria ulnaris direkt",
-      "Arteria axillaris fortsätter oförändrad namngivning"
+      "Arteria axillaris behåller sitt namn ned till armbågen"
     ],
     "topic": "rtg_karlanatomi",
     "difficulty": "Normal",
@@ -9984,7 +9970,7 @@
   {
     "id": "rtg_karlanatomi_14",
     "type": "mc",
-    "prompt": "Vad kallas kärlet som bildas när arteria femoralis superficialis passerar genom hiatus adductorius bakom knäet?",
+    "prompt": "Vad kallas kärlet som bildas när arteria femoralis superficialis passerar genom hiatus adductorius i distala låret?",
     "correct": "Arteria poplitea",
     "distractors": [
       "Arteria tibialis anterior",
@@ -10031,7 +10017,7 @@
     "distractors": [
       "Arteria tibialis anterior",
       "Arteria dorsalis pedis",
-      "Arteria fibularis posterior"
+      "Arteria plantaris lateralis"
     ],
     "topic": "rtg_karlanatomi",
     "difficulty": "Normal",
@@ -10278,7 +10264,7 @@
   {
     "id": "rtg_karlanatomi_35",
     "type": "mc",
-    "prompt": "Vad står förkortningen TIPS för och vad görs vid ingreppet?",
+    "prompt": "Vad görs vid ett TIPS-ingrepp?",
     "correct": "En shunt mellan portavenen och levervenen via halsvenen",
     "distractors": [
       "En perkutan dränagemetod för njurbäckenet",
@@ -10390,7 +10376,7 @@
   {
     "id": "rtg_karlanatomi_43",
     "type": "mc",
-    "prompt": "Vad kallas en behandlingsmetod där ultraljudsstyrd kompression eller trombininjektion används för att sluta en pseudoaneurysm?",
+    "prompt": "Hur behandlas en pseudoaneurysm i ljumsken vanligen utan kirurgi?",
     "correct": "Kompression eller trombininjektion i pseudoaneurysmsäcken",
     "distractors": [
       "Ballongangioplastik av det förträngda kärlsegmentet i ljumsken",
@@ -10614,7 +10600,7 @@
   {
     "id": "rtg_karlanatomi_59",
     "type": "mc",
-    "prompt": "Vad kallas den perkutana behandlingen där en kateter placeras i vena cava inferior för att fånga upp embolier vid kontraindikation mot blodförtunnande läkemedel?",
+    "prompt": "Vad kallas den anordning som placeras perkutant i vena cava inferior för att fånga upp embolier vid kontraindikation mot blodförtunnande läkemedel?",
     "correct": "Vena cava-filter",
     "distractors": [
       "Stentgraft i kärlet",
@@ -10628,7 +10614,7 @@
   {
     "id": "rtg_karlanatomi_60",
     "type": "mc",
-    "prompt": "Vilket kärl förser den övre extremitetens vener huvudsakligen och mynnar tillsammans med motsatt sida i vena cava superior?",
+    "prompt": "Vilken ven tar emot blodet från övre extremiteten och halsen och mynnar tillsammans med motsatt sida i vena cava superior?",
     "correct": "Vena brachiocephalica",
     "distractors": [
       "Vena azygos i thorax",
@@ -10754,7 +10740,7 @@
   {
     "id": "rtg_karlanatomi_69",
     "type": "mc",
-    "prompt": "Vad kallas den procedur där man mäter tryckskillnaden (gradienten) över en förträngning i ett kärl vid angiografi/intervention?",
+    "prompt": "Hur bedöms en förträngnings hemodynamiska betydelse under en angiografisk intervention?",
     "correct": "Tryckmätning över stenosen",
     "distractors": [
       "Dopplerflödesmätning i kärlet",
@@ -10894,7 +10880,7 @@
   {
     "id": "rtg_karlanatomi_79",
     "type": "mc",
-    "prompt": "Vad kallas den kirurgiska/interventionella bypass-metoden där ett graft leder blodflödet förbi en ockluderad artärsegment i benet?",
+    "prompt": "Vad kallas den kirurgiska/interventionella bypass-metoden där ett graft leder blodflödet förbi ett ockluderat artärsegment i benet?",
     "correct": "Perifer bypass",
     "distractors": [
       "Angioplastik utan graft",
@@ -11076,7 +11062,7 @@
   {
     "id": "rtg_karlanatomi_92",
     "type": "mc",
-    "prompt": "Vad kallas det vaskulära ingrepp där man perkutant lägger in en filter/stent i en dialysfistel som blivit trång?",
+    "prompt": "Vad kallas det ingrepp där en dialysfistel som blivit trång vidgas perkutant?",
     "correct": "Angioplastik av en trång AV-fistel eller graft",
     "distractors": [
       "Transarteriell kemoembolisering av lever",
@@ -11356,7 +11342,7 @@
   {
     "id": "rtg_cirkulation_hjarta_12",
     "type": "mc",
-    "prompt": "Vad kallas trycket i artärsystemet mitt emellan systole och diastole, viktigt för organens genomblödning?",
+    "prompt": "Vad kallas det genomsnittliga trycket i artärsystemet under en hjärtcykel, viktigt för organens genomblödning?",
     "correct": "Medelartärtryck",
     "distractors": [
       "Pulstryck",
@@ -11776,7 +11762,7 @@
   {
     "id": "rtg_cirkulation_hjarta_42",
     "type": "mc",
-    "prompt": "Vad kallas det fenomen där blodflödet i en artär med kraftig stenos blir turbulent och kan detekteras som ett sus (bruit) eller på doppler?",
+    "prompt": "Vad kallas flödesmönstret som ger upphov till ett blåsljud (bruit) över en kraftig kärlförträngning?",
     "correct": "Turbulent flöde vid stenos",
     "distractors": [
       "Laminärt flöde i kärlet",
@@ -12001,7 +11987,7 @@
     "id": "rtg_cirkulation_hjarta_58",
     "type": "mc",
     "prompt": "Vad kallas en onormal ansamling av vätska i hjärtsäcken (perikardiet), som kan ses på ekokardiografi/CT?",
-    "correct": "Perikardvätska",
+    "correct": "Perikardutgjutning",
     "distractors": [
       "Pleuraeffusion",
       "Ascites",
@@ -12045,7 +12031,7 @@
     "prompt": "Vad kallas den nuklearmedicinska metod (numera mindre använd) som mäter hjärtats ejektionsfraktion genom att märka patientens egna röda blodkroppar radioaktivt?",
     "correct": "MUGA-scintigrafi",
     "distractors": [
-      "PET-DG helkropp",
+      "PET-FDG helkropp",
       "Skelettscintigrafi",
       "Sentinel node-scintigrafi"
     ],
@@ -12350,11 +12336,11 @@
   {
     "id": "rtg_cirkulation_hjarta_83",
     "type": "mc",
-    "prompt": "Vad kallas den vänstra kranskärlsgrenen som förser framre delen av septum och vänster kammares framvägg, ofta kallad \"widow maker\" vid total ocklusion?",
+    "prompt": "Vad kallas den vänstra kranskärlsgrenen som förser främre delen av septum och vänster kammares framvägg, ofta kallad \"widow maker\" vid total ocklusion?",
     "correct": "Arteria descendens anterior",
     "distractors": [
       "Arteria circumflexa",
-      "Arteria coronaria dexter",
+      "Arteria coronaria dextra",
       "Arteria descendens posterior"
     ],
     "topic": "rtg_cirkulation_hjarta",
@@ -12378,7 +12364,7 @@
   {
     "id": "rtg_cirkulation_hjarta_85",
     "type": "mc",
-    "prompt": "Vad kallas fenomenet där en total, långsamt utvecklad kranskärlsocklusion ändå inte ger infarkt tack vare god kollateralcirkulation?",
+    "prompt": "Varför kan en långsamt utvecklad total kranskärlsocklusion ibland förlöpa utan att ge infarkt?",
     "correct": "Väl utvecklad kollateralcirkulation som kompenserar för ocklusionen",
     "distractors": [
       "Ett bevis på att kärlet i själva verket inte varit fullständigt ockluderat",
@@ -12392,7 +12378,7 @@
   {
     "id": "rtg_cirkulation_hjarta_86",
     "type": "mc",
-    "prompt": "Vad kallas den procent av hjärtminutvolymen som normalt går till hjärnan i vila?",
+    "prompt": "Hur stor andel av hjärtminutvolymen går normalt till hjärnan i vila?",
     "correct": "Ungefär 15 %",
     "distractors": [
       "Ungefär 50 %",
@@ -12406,7 +12392,7 @@
   {
     "id": "rtg_cirkulation_hjarta_87",
     "type": "mc",
-    "prompt": "Vad kallas den andel av hjärtminutvolymen som normalt går till njurarna i vila, relevant för kontrastutsöndring?",
+    "prompt": "Hur stor andel av hjärtminutvolymen går normalt till njurarna i vila, relevant för kontrastutsöndring?",
     "correct": "Ungefär 20–25 %",
     "distractors": [
       "Ungefär 1–2 %",
@@ -12532,7 +12518,7 @@
   {
     "id": "rtg_cirkulation_hjarta_96",
     "type": "mc",
-    "prompt": "Vad kallas det fenomen där kraftig förkalkning i ett kranskärl försvårar bedömning av den underliggande lumen vid CT-angiografi (\"blooming\")?",
+    "prompt": "Vad kallas det fenomen där kraftig förkalkning i ett kranskärl skenbart breder ut sig och skymmer den underliggande lumen vid CT-angiografi?",
     "correct": "Blooming-artefakt från kalk",
     "distractors": [
       "Beam hardening från benstruktur",
@@ -12578,7 +12564,7 @@
     "correct": "Arteria circumflexa",
     "distractors": [
       "Arteria descendens anterior",
-      "Arteria coronaria dexter",
+      "Arteria coronaria dextra",
       "Arteria descendens posterior"
     ],
     "topic": "rtg_cirkulation_hjarta",
@@ -12621,7 +12607,7 @@
     "distractors": [
       "Renalt plasmaflöde",
       "Tubulär transportmax",
-      "Clearance av kreatinin utan koppling till GFR"
+      "Urinens osmolala clearance"
     ],
     "topic": "rtg_njurfunktion",
     "difficulty": "Normal",
@@ -13251,7 +13237,7 @@
     "distractors": [
       "Nefrit",
       "Nefros",
-      "Nefropati generellt utan stenbegrepp"
+      "Nefroskleros"
     ],
     "topic": "rtg_njurfunktion",
     "difficulty": "Normal",
@@ -13316,7 +13302,7 @@
   {
     "id": "rtg_njurfunktion_52",
     "type": "mc",
-    "prompt": "Vad kallas de blodkroppsbaserade eller molekylära markörer i urin/blod som används tillsammans med bilddiagnostik för att bedöma njurfunktion (utöver kreatinin)?",
+    "prompt": "Vilka markörer i blod och urin används tillsammans med bilddiagnostik för att bedöma njurfunktion, utöver kreatinin?",
     "correct": "Cystatin C och urinprotein/albumin",
     "distractors": [
       "Hemoglobinvärdet och fullständig blodstatus",
@@ -13470,7 +13456,7 @@
   {
     "id": "rtg_njurfunktion_63",
     "type": "mc",
-    "prompt": "Vad kallas njurfunktionens förmåga att utsöndra vätejoner och reglera syra-basbalansen?",
+    "prompt": "Vad kallas njurens förmåga att utsöndra vätejoner och återbilda bikarbonat?",
     "correct": "Renal syra-basreglering",
     "distractors": [
       "Respiratorisk kompensation",
@@ -13526,7 +13512,7 @@
   {
     "id": "rtg_njurfunktion_67",
     "type": "mc",
-    "prompt": "Vad kallas den fysiologiska kaskad av kärl blodet passerar i njuren, från interlobar- till afferent arteriol?",
+    "prompt": "I vilken ordning passerar blodet njurens artärgrenar fram till glomerulus?",
     "correct": "Arteria interlobaris, arciformis, interlobularis, afferent arteriol och glomerulus",
     "distractors": [
       "Njurartären går direkt till glomerulus, utan några mellanliggande arteriella grenar",
@@ -13680,7 +13666,7 @@
   {
     "id": "rtg_njurfunktion_78",
     "type": "mc",
-    "prompt": "Vilket enkelt bilddiagnostiskt test kan ofta vägleda vidare utredning vid oklar hematuri innan CT-urografi?",
+    "prompt": "Vilken enkel undersökning vägleder ofta vidare utredning vid oklar hematuri innan CT-urografi?",
     "correct": "Urinsticka och urinmikroskopi/odling",
     "distractors": [
       "Skelettscintigrafi av hela skelettet",
@@ -13764,7 +13750,7 @@
   {
     "id": "rtg_njurfunktion_84",
     "type": "mc",
-    "prompt": "Vad kallas det njurfysiologiska begreppet för den maximala mängd av ett ämne som tubuli kan reabsorbera eller sekrerera per tidsenhet (t.ex. relevant för glukos vid diabetes)?",
+    "prompt": "Vad kallas det njurfysiologiska begreppet för den maximala mängd av ett ämne som tubuli kan reabsorbera eller sekretera per tidsenhet (t.ex. relevant för glukos vid diabetes)?",
     "correct": "Tubulärt transportmaximum",
     "distractors": [
       "Filtrationsfraktion",
@@ -13862,7 +13848,7 @@
   {
     "id": "rtg_njurfunktion_91",
     "type": "mc",
-    "prompt": "Vad kallas den bilddiagnostiska bedömningen av njurstorlek (längd) som del av den grundläggande ultraljudsundersökningen av njurarna?",
+    "prompt": "Vilket grundläggande mått registreras rutinmässigt vid ultraljudsundersökning av njurarna?",
     "correct": "Njurlängdsmätning",
     "distractors": [
       "Njurdensitetsmätning",
@@ -13993,7 +13979,7 @@
     "distractors": [
       "Anatomisk bedömning utan funktion",
       "Funktionell bedömning utan anatomi",
-      "Blodtrycksmätning i båda armarna"
+      "Njurbiopsi som enda underlag för beslut"
     ],
     "topic": "rtg_njurfunktion",
     "difficulty": "Normal",
@@ -14142,7 +14128,7 @@
   {
     "id": "rtg_andning_rorelse_11",
     "type": "mc",
-    "prompt": "Varför tas vissa buk-CT-snitt (t.ex. vid HRCT-lunga eller uppföljning) istället i utandning?",
+    "prompt": "Varför tas vissa CT-thorax-snitt (t.ex. vid HRCT-lunga) i stället i utandning?",
     "correct": "För att bättre visa vissa patologiska mönster som bara syns vid utandning",
     "distractors": [
       "Utandning ger generellt bättre bildkvalitet vid alla CT-undersökningar",
@@ -14268,7 +14254,7 @@
   {
     "id": "rtg_andning_rorelse_20",
     "type": "mc",
-    "prompt": "Vad kallas andningstekniken där patienten andas in och håller andan vid en bestämd lungvolym, ofta använd vid strålbehandling för att minska rörelse och sprida stråldos från hjärtat (t.ex. vid bröstcancer)?",
+    "prompt": "Vad kallas andningstekniken där patienten andas in och håller andan vid en bestämd lungvolym, ofta använd vid strålbehandling för att minska rörelse och stråldosen till hjärtat (t.ex. vid bröstcancer)?",
     "correct": "Djupinandningsandhållning",
     "distractors": [
       "Valsalvamanöver med tryckökning",
@@ -14702,7 +14688,7 @@
   {
     "id": "rtg_andning_rorelse_51",
     "type": "mc",
-    "prompt": "Vad kallas den teknik där sedering eller generell anestesi används för att möjliggöra kontrollerad andhållning eller minimera rörelse vid bildgivning hos små barn?",
+    "prompt": "Vad tillgrips hos små barn som inte kan medverka till stillaliggande eller andhållning under en bildundersökning?",
     "correct": "Sedering/narkos för bildgivning",
     "distractors": [
       "Andningsgating under undersökningen",
@@ -14801,7 +14787,7 @@
     "id": "rtg_andning_rorelse_58",
     "type": "mc",
     "prompt": "Vad ges ibland till patienten före en buk-MR för att minska artefakter från tarmperistaltik?",
-    "correct": "Ett antiperistaltiskt medel",
+    "correct": "Butylskopolamin",
     "distractors": [
       "Jodkontrastmedel",
       "Ett diuretikum",
@@ -14856,7 +14842,7 @@
   {
     "id": "rtg_andning_rorelse_62",
     "type": "mc",
-    "prompt": "Vad kallas den kliniska bedömningen av hur många andetag per minut en patient tar, en av de fyra klassiska vitalparametrarna, relevant innan en undersökning påbörjas?",
+    "prompt": "Vad kallas den kliniska bedömningen av hur många andetag per minut en patient tar, en av de klassiska vitalparametrarna, relevant innan en undersökning påbörjas?",
     "correct": "Andningsfrekvens",
     "distractors": [
       "Blodtryck",
@@ -15151,7 +15137,7 @@
     "id": "rtg_andning_rorelse_83",
     "type": "mc",
     "prompt": "Vad kallas den typ av artefakt vid genomlysning eller CT som uppstår när patienten ofrivilligt darrar (t.ex. pga Parkinsons sjukdom eller frossa)?",
-    "correct": "Skakningsartefakt",
+    "correct": "Rörelseartefakt från tremor",
     "distractors": [
       "Beam hardening",
       "Metallartefakt",
@@ -15207,7 +15193,7 @@
     "id": "rtg_andning_rorelse_87",
     "type": "mc",
     "prompt": "Vad kallas den ökade andningsfrekvensen och andningsdjupet som normalt uppstår vid fysisk ansträngning, relevant vid stresstest med samtidig bildgivning (t.ex. myokardscintigrafi)?",
-    "correct": "Hyperventilation/ökad ventilation vid ansträngning",
+    "correct": "Hyperpné, ökad ventilation vid ansträngning",
     "distractors": [
       "Hypoventilation, minskad ventilation trots ansträngning",
       "Apné, ett längre andningsuppehåll under ansträngning",
@@ -15262,7 +15248,7 @@
   {
     "id": "rtg_andning_rorelse_91",
     "type": "mc",
-    "prompt": "Vad kallas den teknik vid PET-CT där man kombinerar en snabb, lågdos-CT (för attenueringskorrigering) med en längre PET-insamling, vilket gör dem känsliga för andningsmissmatch?",
+    "prompt": "Vad kallas problemet som uppstår när den snabba lågdos-CT:n och den längre PET-insamlingen vid PET-CT fångar olika andningslägen?",
     "correct": "PET/CT-andningsmissmatch",
     "distractors": [
       "EKG-gating vid hjärt-CT",
@@ -15906,7 +15892,7 @@
   {
     "id": "rtg_snittanatomi_37",
     "type": "mc",
-    "prompt": "Vad kallas det referensplan som traditionellt användes för att vinkla axiala skallundersökningar, draget mellan yttre hörselgången och nedre orbitakanten?",
+    "prompt": "Vad kallas det referensplan som traditionellt användes för att vinkla axiala skallundersökningar, draget mellan yttre hörselgången och yttre ögonvrån?",
     "correct": "Orbitomeatallinjen",
     "distractors": [
       "Frankfurtplanet",
@@ -16018,8 +16004,8 @@
   {
     "id": "rtg_snittanatomi_45",
     "type": "mc",
-    "prompt": "Vad kallas den term som beskriver ett snittplan som ligger snett i förhållande till en anatomisk struktur men ändå är kliniskt standardiserat, t.ex. vid MR av hjärtat (kort- och långaxelvyer)?",
-    "correct": "Kardiell specifik snittorientering, som korta axeln",
+    "prompt": "Vad kallas ett snittplan som ligger snett mot kroppens huvudplan men är standardiserat efter ett organs egna axlar, t.ex. vid MR av hjärtat?",
+    "correct": "Organspecifikt oblikt snittplan",
     "distractors": [
       "Ett rent transversalt kroppsplan, helt utan någon vinkling",
       "Ett rent koronalt kroppsplan utan vinkling",
@@ -16089,7 +16075,7 @@
     "id": "rtg_snittanatomi_50",
     "type": "mc",
     "prompt": "Vad krävs tekniskt för att skapa en virtuell CT-koloskopi?",
-    "correct": "Tunt kolimerade axiala CT-snitt av väl preparerad tjocktarm",
+    "correct": "Tunt kollimerade axiala CT-snitt av väl preparerad tjocktarm",
     "distractors": [
       "En vanlig buköversikt i stående, helt utan någon tarmförberedelse",
       "Ultraljud av buken helt utan CT-data",
@@ -16130,7 +16116,7 @@
   {
     "id": "rtg_snittanatomi_53",
     "type": "mc",
-    "prompt": "Vad kallas den teknik där man i efterhand ändrar \"fönsterinställningen\" (window width/level) på en redan insamlad CT-bild utan att undersöka patienten igen?",
+    "prompt": "Vad kallas det när man i efterhand ändrar hur gråskalan mappas på en redan insamlad CT-bild, utan ny skanning?",
     "correct": "Fönstring av redan insamlad Hounsfield-data",
     "distractors": [
       "En helt ny datainsamling från patienten",
@@ -16200,7 +16186,7 @@
   {
     "id": "rtg_snittanatomi_58",
     "type": "mc",
-    "prompt": "Vad kallas den standardiserade termen för ett snitt som är parallellt med fotsulan i foten/underbenet, analogt med ett transversalplan för kroppen som helhet?",
+    "prompt": "Vad kallas snittplanet genom foten som ligger vinkelrätt mot fotens längdaxel?",
     "correct": "Transversalt fotsnitt",
     "distractors": [
       "Sagittalt fotsnitt",
@@ -16382,7 +16368,7 @@
   {
     "id": "rtg_snittanatomi_71",
     "type": "mc",
-    "prompt": "Vad kallas snittekniken där man vid ett CT-thorax gör tunna axiala snitt genom hela lungorna för att i efterhand skapa högupplösta rekonstruktioner av lungparenkymet (HRCT)?",
+    "prompt": "Vilken CT-teknik krävs för att kunna bedöma lungparenkymets finstruktur, t.ex. vid interstitiell lungsjukdom?",
     "correct": "Högupplösande CT-teknik med tunna snitt och skarpt rekonstruktionsfilter",
     "distractors": [
       "Standardsnitt med tjocka tiomillimetersskivor och mjukt rekonstruktionsfilter",
@@ -16396,10 +16382,10 @@
   {
     "id": "rtg_snittanatomi_72",
     "type": "mc",
-    "prompt": "Vad kallas den rekonstruktionsalgoritm/filter (kernel) som används för att framhäva fina lungstrukturer respektive mjukdelskontrast vid CT?",
+    "prompt": "Vad kallas det filter som vid CT-rekonstruktion avgör om fina lungstrukturer eller mjukdelskontrast framhävs?",
     "correct": "Rekonstruktionskärna",
     "distractors": [
-      "Fönsterbredd är samma sak som filterval",
+      "Fönsterbredd",
       "Bolustracking",
       "Andningsgating"
     ],
@@ -16606,7 +16592,7 @@
   {
     "id": "rtg_snittanatomi_87",
     "type": "mc",
-    "prompt": "Vad kallas begreppet \"pitch\" vid spiral-CT och hur relaterar det till bildkvaliteten vid rekonstruktion i andra plan?",
+    "prompt": "Vad anger begreppet \"pitch\" vid spiral-CT?",
     "correct": "Förhållandet mellan bordsförflyttning och snittkollimering",
     "distractors": [
       "Pitch avser kontrastinjektionens hastighet i millilitrar per sekund",
@@ -17309,7 +17295,7 @@
     "prompt": "Vad kallas den standardiserade termen för graden av rotation vid en oblik projektion, t.ex. \"45° RPO\"?",
     "correct": "Rotationsgrad angiven i grader tillsammans med riktning",
     "distractors": [
-      "Ett odefinierat och icke-standardiserat mått",
+      "Ett mått som anges som andel av ett halvvarv",
       "En vinkel som är exakt 90 grader oavsett projektion",
       "Ett mått som anges i centimeter i stället för i grader och riktning"
     ],
@@ -17323,7 +17309,7 @@
     "prompt": "Vad betyder förkortningen RPO vid en oblik projektion?",
     "correct": "Right Posterior Oblique – patientens högra baksida vetter mot bildmottagaren",
     "distractors": [
-      "Right Posterior Orientation, en beskrivning av bordet utan koppling till oblik vinkel",
+      "Right Posterior Orientation, patientens högra sida mot bordet",
       "Radiologic Positioning Outline, ett mått på bildens skärpa",
       "Rear Patient Orientation, patientens rygg mot röntgenröret"
     ],
@@ -17463,7 +17449,7 @@
     "prompt": "Vad kallas raster (grid) i sammanhanget radiografisk teknik?",
     "correct": "En anordning mellan patient och bildmottagare som minskar spridd strålning",
     "distractors": [
-      "En anordning mellan rör och patient som avsiktligt ökar den spridda strålningen",
+      "En anordning mellan rör och patient som formar strålknippet",
       "En typ av kontrastmedel som ges intravenöst före bilden",
       "En digital bildbehandlingsalgoritm som körs i efterhand"
     ],
@@ -17713,7 +17699,7 @@
     "id": "rtg_projektionslara_66",
     "type": "mc",
     "prompt": "Vad kallas den term som beskriver hur nära det verkliga anatomiska läget en avbildad struktur representeras, dvs. avsaknad av geometrisk distorsion?",
-    "correct": "Anatomisk sanningsenlighet",
+    "correct": "Geometrisk noggrannhet",
     "distractors": [
       "Kontrastupplösning",
       "Temporal upplösning i bilden",
@@ -17936,7 +17922,7 @@
   {
     "id": "rtg_projektionslara_82",
     "type": "mc",
-    "prompt": "Vad kallas den axiolaterala projektionstypen där centralstrålen riktas i vinkel både i sidled och längsled samtidigt, t.ex. vid vissa höft- eller axelprojektioner?",
+    "prompt": "Vad kallas projektionstypen där centralstrålen riktas i vinkel både i sidled och längsled samtidigt, t.ex. vid vissa höft- eller axelprojektioner?",
     "correct": "Axiolateral projektion",
     "distractors": [
       "Ren PA-projektion",
@@ -18007,7 +17993,7 @@
     "id": "rtg_projektionslara_87",
     "type": "mc",
     "prompt": "Vad kallas det system av standardiserade förkortningar (t.ex. RAO, LPO) som beskriver kombinationen av kroppssida och obliksriktning?",
-    "correct": "Positionsförkortningar för obliksprojektioner",
+    "correct": "Positionsförkortningar för oblika projektioner",
     "distractors": [
       "Kollimatorkoder för strålfältets storlek och form",
       "Rasterfaktorer för spridd strålning",
@@ -18118,12 +18104,12 @@
   {
     "id": "rtg_projektionslara_95",
     "type": "mc",
-    "prompt": "Vad kallas den europeiska/svenska standarden för remisser och motivering av joniserande undersökningar, som en radiograf/röntgensjuksköterska ska kontrollera innan exponering?",
-    "correct": "Berättigandeprincipen",
+    "prompt": "Vad ska en röntgensjuksköterska kontrollera på remissen innan exponering med joniserande strålning?",
+    "correct": "Frågeställning, kroppsdel, sida och att undersökningen är berättigad",
     "distractors": [
-      "Kollimeringsprincipen",
-      "Rasterprincipen",
-      "Distorsionsprincipen"
+      "Patientens personnummer och undersökningsdatum",
+      "Rasterförhållandet och kollimatoröppningen inför exponeringen",
+      "Bildmottagarens kalibrering och exponeringsindex"
     ],
     "topic": "rtg_projektionslara",
     "difficulty": "Normal",
@@ -18793,7 +18779,7 @@
     "prompt": "Hur skiljer sig kontrastmedlens verkningsmekanism mellan CT och MR?",
     "correct": "CT-kontrast ökar röntgenattenueringen, medan MR-kontrast förkortar T1-relaxationstiden och ger ökad signal på T1-bilder",
     "distractors": [
-      "Båda kontrastmedlen fungerar på ett i grunden identiskt fysikaliskt sätt oavsett vilken av de 2 modaliteterna som används",
+      "Båda kontrastmedlen fungerar på ett i grunden identiskt fysikaliskt sätt oavsett vilken av de två modaliteterna som används",
       "CT-kontrast fungerar genom att ändra vävnadens protontäthet lokalt i kroppen, precis som ett MR-kontrastmedel gör",
       "MR-kontrast fungerar genom att ändra vävnadens röntgenattenuering lokalt, precis som ett CT-kontrastmedel gör"
     ],
@@ -18804,7 +18790,7 @@
   {
     "id": "rtg_modalitetsspecifik_44",
     "type": "mc",
-    "prompt": "Vad kallas det kontrastmedel som består av mikrobubblor och används vid ultraljud för att förstärka blodflödessignalen (t.ex. vid leverlesionskarakterisering)?",
+    "prompt": "Vad kallas det kontrastmedel som består av mikrobubblor och används för att förstärka blodflödessignalen vid leverlesionskarakterisering?",
     "correct": "Ultraljudskontrastmedel",
     "distractors": [
       "Jodkontrastmedel",
@@ -19113,11 +19099,11 @@
     "id": "rtg_modalitetsspecifik_66",
     "type": "mc",
     "prompt": "Ungefär hur stor andel av gallstenar är röntgentäta (synliga på vanlig röntgen utan kontrast)?",
-    "correct": "En minoritet av stenarna",
+    "correct": "Ungefär 10–15 procent",
     "distractors": [
-      "Praktiskt taget alla stenar",
-      "Ungefär hälften av stenarna",
-      "Ytterst få av stenarna"
+      "Ungefär 80–90 procent",
+      "Ungefär 50 procent",
+      "Under 1 procent"
     ],
     "topic": "rtg_modalitetsspecifik",
     "difficulty": "Normal",
@@ -19966,7 +19952,7 @@
   {
     "id": "rtg_kontrastmedel_27",
     "type": "mc",
-    "prompt": "Vad kallas den gasformiga negativa kontrast (t.ex. koldioxid eller luft) som kan användas vid dubbelkontrastundersökning av kolon eller vid vissa angiografier hos patienter med jodallergi?",
+    "prompt": "Vad kallas den gasformiga negativa kontrast som kan användas vid dubbelkontrastundersökning av kolon eller vid vissa angiografier hos patienter med jodallergi?",
     "correct": "Koldioxid som negativt/gasformigt kontrastmedel",
     "distractors": [
       "Bariumsulfat som positivt kontrastmedel i tarmen",
@@ -20288,7 +20274,7 @@
   {
     "id": "rtg_kontrastmedel_50",
     "type": "mc",
-    "prompt": "Vad kallas den typ av jodkontrastmedel som specifikt tas upp av levern (hepatocytspecifik) och utsöndras delvis via gallan, användbart för att karakterisera leverlesioner på MR?",
+    "prompt": "Vad kallas den typ av MR-kontrastmedel som specifikt tas upp av levercellerna och utsöndras delvis via gallan, användbart för att karakterisera leverlesioner?",
     "correct": "Hepatobiliärt gadoliniumkontrastmedel",
     "distractors": [
       "Extracellulärt gadoliniumkontrastmedel",
@@ -20587,7 +20573,7 @@
     "distractors": [
       "Oförändrad risk jämfört med en manuell injektion för hand",
       "Minskad risk för alla typer av komplikationer vid injektionen av kontrast",
-      "Risk för att kontrastmedlet fryser till is inuti sprutan"
+      "Risk för att kontrastbolusen blir längre och mindre kompakt"
     ],
     "topic": "rtg_kontrastmedel",
     "difficulty": "Normal",
@@ -20666,12 +20652,12 @@
   {
     "id": "rtg_kontrastmedel_77",
     "type": "mc",
-    "prompt": "Hur lång tid bör det normalt gå mellan en jodkontrastundersökning och en efterföljande undersökning av sköldkörtelns jodupptag (t.ex. inför radiojodbehandling)?",
-    "correct": "En viss karenstid eftersom jodkontrast kan mätta sköldkörteln med stabilt jod och störa upptagsmätningen",
+    "prompt": "Hur lång karenstid rekommenderas normalt mellan en jodkontrastundersökning och en mätning av sköldkörtelns jodupptag?",
+    "correct": "Flera veckor, ofta i storleksordningen 1–2 månader",
     "distractors": [
-      "Undersökningarna kan följa direkt på varandra utan någon väntetid, eftersom jodkontrasten inte påverkar sköldkörteln",
-      "Undersökningarna kan göras samma dag utan att resultatet påverkas",
-      "Karenstiden är exakt en timme oavsett vilken situation det gäller"
+      "Några minuter, direkt efter kontrastundersökningen",
+      "Ungefär ett dygn efter kontrastundersökningen",
+      "Ungefär en timme efter kontrastundersökningen"
     ],
     "topic": "rtg_kontrastmedel",
     "difficulty": "Normal",
@@ -20988,7 +20974,7 @@
   {
     "id": "rtg_kontrastmedel_100",
     "type": "mc",
-    "prompt": "Vad kallas den engångskontroll av injektionsstället som görs strax efter avslutad kontrastinjektion, innan patienten lämnar avdelningen?",
+    "prompt": "Vad kallas den kontroll av injektionsstället som görs strax efter avslutad kontrastinjektion, innan patienten lämnar avdelningen?",
     "correct": "Efterkontroll av insticksstället",
     "distractors": [
       "Bolustracking av kontrast",
