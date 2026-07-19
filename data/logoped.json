@@ -17,11 +17,11 @@
     "id": "log_andning_2",
     "type": "mc",
     "prompt": "Vilken struktur skiljer höger och vänster näshåla åt?",
-    "correct": "Nässkiljeväggen",
+    "correct": "Septum nasi",
     "distractors": [
       "Concha nasalis inferior",
       "Processus palatinus maxillae",
-      "Vomer allena"
+      "Lamina cribrosa"
     ],
     "topic": "logoped_andningsapparaten",
     "difficulty": "Normal",
@@ -117,7 +117,7 @@
     "prompt": "Vilka två blad utgör lungsäcken (pleura)?",
     "correct": "Visceral pleura och parietal pleura",
     "distractors": [
-      "Yttre pleura och inre pleura utan namnskillnad",
+      "Yttre pleura och inre pleura",
       "Mediastinal och kostal pleura",
       "Apikal pleura och basal pleura"
     ],
@@ -173,9 +173,9 @@
     "prompt": "Vilka tre funktioner fyller näshålans slemhinna för inandningsluften?",
     "correct": "Värmer, fuktar och filtrerar luften",
     "distractors": [
-      "Syresätter luften direkt",
-      "Reglerar andningsfrekvensen i hjärnstammen",
-      "Producerar surfaktant"
+      "Syresätter, kyler och torkar luften",
+      "Värmer, syresätter och komprimerar luften",
+      "Fuktar, kyler och trycksätter luften"
     ],
     "topic": "logoped_andningsapparaten",
     "difficulty": "Normal",
@@ -268,12 +268,12 @@
   {
     "id": "log_andning_20",
     "type": "mc",
-    "prompt": "Vilket av följande räknas till de nedre luftvägarna?",
+    "prompt": "Vilken struktur räknas till de nedre luftvägarna?",
     "correct": "Bronkerna",
     "distractors": [
       "Näshålan och bihålorna",
       "Farynx",
-      "Larynx"
+      "Munhålan"
     ],
     "topic": "logoped_andningsapparaten",
     "difficulty": "Normal",
@@ -427,7 +427,7 @@
     "distractors": [
       "Manubrium, angulus sterni och lamina externa",
       "Corpus, hiatus och crus",
-      "Manubrium, xiphoid och costa"
+      "Manubrium, sternebra och costa"
     ],
     "topic": "logoped_andningsapparaten",
     "difficulty": "Normal",
@@ -538,7 +538,7 @@
     "correct": "Vid tal andas man in till högre volym och ut till lägre volym än i vila",
     "distractors": [
       "Vid tal används exakt samma volymintervall som i vanlig vila",
-      "Vid tal håller man sig ovanför den funktionella residualkapaciteten",
+      "Vid tal andas man in till lägre volym och ut till högre volym än i vila",
       "Vid tal används den kvarvarande residualvolymen"
     ],
     "topic": "logoped_andningsapparaten",
@@ -651,7 +651,7 @@
     "distractors": [
       "Total förlamning av båda lungorna samtidigt",
       "Förlust av röstläppsfunktionen på båda sidor",
-      "En utebliven påverkan på andning och tal"
+      "Andning och tal påverkas inte"
     ],
     "topic": "logoped_andningsapparaten",
     "difficulty": "Normal",
@@ -660,7 +660,7 @@
   {
     "id": "log_andning_48",
     "type": "mc",
-    "prompt": "Interkostalnerverna är exempel på nerver som löper:",
+    "prompt": "Hur löper interkostalnerverna i bröstkorgen?",
     "correct": "Segmentellt, en nerv per mellanrevbensrum",
     "distractors": [
       "Som en gemensam nervstam till hela bröstkorgen",
@@ -749,7 +749,7 @@
     "distractors": [
       "Bronkokonstriktion",
       "Ökad slemproduktion",
-      "Utebliven effekt på bronkerna"
+      "Bronkerna påverkas inte"
     ],
     "topic": "logoped_andningsapparaten",
     "difficulty": "Normal",
@@ -1028,7 +1028,7 @@
     "correct": "Minskad vitalkapacitet ger kortare andetagsgrupper vid tal",
     "distractors": [
       "Ökad vitalkapacitet ger längre yttranden",
-      "Utebliven påverkan på talandningen",
+      "Talandningen påverkas inte",
       "Bara röstens tonhöjd påverkas"
     ],
     "topic": "logoped_andningsapparaten",
@@ -1109,7 +1109,7 @@
     "id": "log_andning_80",
     "type": "mc",
     "prompt": "Vilka tre stora genomgångar (hiatus/foramen) finns i diafragma?",
-    "correct": "Hiatus oesophagus, hiatus aorticus och foramen för v. cava inferior",
+    "correct": "Hiatus oesophageus, hiatus aorticus och foramen venae cavae",
     "distractors": [
       "En enda öppning för matstrupen",
       "Foramen för n. vagus, n. phrenicus och truncus sympathicus",
@@ -1294,7 +1294,7 @@
     "correct": "En svag, andfådd röst",
     "distractors": [
       "En onaturligt hög och stark röst",
-      "Utebliven hörbar skillnad i röstkvalitet",
+      "Röstkvaliteten påverkas inte hörbart",
       "Bara förändrad tonhöjd och inte förändrad styrka"
     ],
     "topic": "logoped_andningsapparaten",
@@ -1304,7 +1304,7 @@
   {
     "id": "log_andning_94",
     "type": "mc",
-    "prompt": "Vad avses med det anatomiska 'dead space' i luftvägarna?",
+    "prompt": "Vad avses med det anatomiska dödrummet i luftvägarna?",
     "correct": "De luftvägar som leder luft men inte deltar i gasutbytet",
     "distractors": [
       "Alveolerna, eftersom de är alldeles för små för gasutbyte",
@@ -1419,8 +1419,8 @@
     "prompt": "Vilka är struphuvudets tre huvudfunktioner?",
     "correct": "Luftvägsskydd, andning och röstbildning",
     "distractors": [
-      "Röstbildning",
-      "Sväljning och luktsinne",
+      "Röstbildning, luktsinne och smak",
+      "Sväljning, luktsinne och hörsel",
       "Blodtrycksreglering, andning och hörsel"
     ],
     "topic": "logoped_larynx_fonation",
@@ -1459,7 +1459,7 @@
     "id": "log_larynx_5",
     "type": "mc",
     "prompt": "Vilken roll har tungbenet (os hyoideum) i förhållande till struphuvudet?",
-    "correct": "Det är inte en del av larynx men fjädrar/upphänger larynx via muskler och membran",
+    "correct": "Det ingår inte i larynx men bär upp struphuvudet via muskler och membran",
     "distractors": [
       "Det är den mest kaudala delen av larynxbrosken i halsen",
       "Det bildar stämbandens direkta infästningspunkt",
@@ -1573,7 +1573,7 @@
     "prompt": "Vad är unikt med ringbrosket jämfört med övriga brosk i luftvägen?",
     "correct": "Det är den enda helt slutna broskringen i hela luftvägen",
     "distractors": [
-      "Det är det enda brosket som saknar brosk",
+      "Det är det enda brosket som är elastiskt",
       "Det är det enda parbrosket i larynx",
       "Det är det enda brosket som rör sig vid stämbandsvibration"
     ],
@@ -1630,7 +1630,7 @@
     "correct": "Rotation och glidning",
     "distractors": [
       "Böjning framåt",
-      "En låst led utan rörelse",
+      "Ren glidning i sidled",
       "Sidvridning av hela larynx"
     ],
     "topic": "logoped_larynx_fonation",
@@ -1641,9 +1641,9 @@
     "id": "log_larynx_18",
     "type": "mc",
     "prompt": "Vilken vävnadstyp utgör struplocket (epiglottis), till skillnad från sköld- och ringbrosket?",
-    "correct": "Elastisk brosk",
+    "correct": "Elastiskt brosk",
     "distractors": [
-      "Hyalin brosk",
+      "Hyalint brosk",
       "Fibrös bindväv utan brosk",
       "Benvävnad"
     ],
@@ -1697,10 +1697,10 @@
     "id": "log_larynx_22",
     "type": "mc",
     "prompt": "Vilken vävnadstyp har de korniculata brosken?",
-    "correct": "Elastisk brosk",
+    "correct": "Elastiskt brosk",
     "distractors": [
-      "Hyalin brosk",
-      "Fibrös brosk utan celler",
+      "Hyalint brosk",
+      "Fibröst brosk",
       "Benvävnad"
     ],
     "topic": "logoped_larynx_fonation",
@@ -1727,9 +1727,9 @@
     "prompt": "Hur många brosk ingår totalt i struphuvudets skelett?",
     "correct": "Nio – tre oparade och tre parade",
     "distractors": [
-      "Sex – tre oparade och tre parade",
+      "Sex – två oparade och två parade",
       "Tolv – fyra oparade och fyra parade",
-      "Fyra – bara de oparade"
+      "Tre – bara de oparade"
     ],
     "topic": "logoped_larynx_fonation",
     "difficulty": "Normal",
@@ -1934,7 +1934,7 @@
   {
     "id": "log_larynx_39",
     "type": "mc",
-    "prompt": "Vad kallas den vävnadsveck som går från arytenoidbrosket till struplockets sidokant och innehåller kuneiform- och delar av korniculatbrosket?",
+    "prompt": "Vad kallas det veck som går från arytenoidbrosket till struplockets sidokant och innehåller kuneiform- och delar av korniculatbrosket?",
     "correct": "Det aryepiglottiska vecket",
     "distractors": [
       "Rima glottidis",
@@ -2107,7 +2107,7 @@
     "distractors": [
       "Barns stämband vibrerar långsammare på grund av tjockare vokalligament",
       "Barn saknar m. vocalis fram till puberteten",
-      "Barns struphuvude sitter längre ner i halsen än hos vuxna"
+      "Barns struphuvud sitter längre ner i halsen än hos vuxna"
     ],
     "topic": "logoped_larynx_fonation",
     "difficulty": "Normal",
@@ -2117,7 +2117,7 @@
     "id": "log_larynx_52",
     "type": "mc",
     "prompt": "Hur ser friska äkta stämband oftast ut vid klinisk undersökning (t.ex. laryngoskopi)?",
-    "correct": "Pärlvita/blekt på grund av det tunna, kärlfattiga epitelet och ligamentet under",
+    "correct": "Pärlvita på grund av det tunna, kärlfattiga epitelet och ligamentet under",
     "distractors": [
       "Klarröda på grund av en mycket riklig blodförsörjning i epitelet och slemhinnan",
       "Mörkblå på grund av venös stas",
@@ -2327,9 +2327,9 @@
     "id": "log_larynx_67",
     "type": "mc",
     "prompt": "Vad kallas den oparade muskeln som förbinder arytenoidbroskens bakre ytor med varandra?",
-    "correct": "M. interarytenoideus transversus",
+    "correct": "M. arytenoideus transversus",
     "distractors": [
-      "M. interarytenoideus obliquus",
+      "M. arytenoideus obliquus",
       "M. cricoarytenoideus posterior bak",
       "M. aryepiglotticus"
     ],
@@ -2340,7 +2340,7 @@
   {
     "id": "log_larynx_68",
     "type": "mc",
-    "prompt": "Vilken effekt har m. transversus arytenoideus?",
+    "prompt": "Vilken effekt har m. arytenoideus transversus?",
     "correct": "Adducerar arytenoidbrosken och sluter glottis bakre del",
     "distractors": [
       "Abducerar arytenoidbrosken",
@@ -2354,8 +2354,8 @@
   {
     "id": "log_larynx_69",
     "type": "mc",
-    "prompt": "Vad kännetecknar de sneda (oblique) arytenoidmusklerna anatomiskt?",
-    "correct": "De är parade och korsar varandra i ett X-mönster ytligt om transversus arytenoideus",
+    "prompt": "Vad kännetecknar de sneda arytenoidmusklerna anatomiskt?",
+    "correct": "De är parade och korsar varandra i ett X-mönster ytligt om m. arytenoideus transversus",
     "distractors": [
       "De är oparade och ligger djupast av de inre struphuvudmusklerna",
       "De fäster på tungbenet",
@@ -2383,11 +2383,11 @@
     "id": "log_larynx_71",
     "type": "mc",
     "prompt": "Vilka muskler räknas som de huvudsakliga adduktorerna av stämbanden?",
-    "correct": "M. cricoarytenoideus lateralis, m. interarytenoideus och m. thyroarytenoideus",
+    "correct": "M. cricoarytenoideus lateralis, m. arytenoideus transversus och m. thyroarytenoideus",
     "distractors": [
-      "Den bakre muskeln m. cricoarytenoideus posterior",
-      "M. cricothyroideus tillsammans med m. thyrohyoideus",
-      "De sneda arytenoidmusklerna, m. arytenoideus obliquus"
+      "M. cricoarytenoideus posterior, m. cricothyroideus och m. thyrohyoideus",
+      "M. cricothyroideus, m. thyrohyoideus och m. sternothyroideus",
+      "M. arytenoideus obliquus, m. aryepiglotticus och m. digastricus"
     ],
     "topic": "logoped_larynx_fonation",
     "difficulty": "Normal",
@@ -2399,7 +2399,7 @@
     "prompt": "Vilka muskler räknas som de huvudsakliga spännarna (tensorerna) av stämbanden?",
     "correct": "M. cricothyroideus och m. vocalis",
     "distractors": [
-      "M. cricoarytenoideus posterior och m. interarytenoideus",
+      "M. cricoarytenoideus posterior och m. arytenoideus transversus",
       "M. thyrohyoideus och m. sternothyroideus",
       "M. digastricus och m. mylohyoideus"
     ],
@@ -2427,9 +2427,9 @@
     "prompt": "Vilka aktiviteter kräver adduktion av stämbanden?",
     "correct": "Röstbildning, sväljning och krystning",
     "distractors": [
-      "Under djup, drömlös sömn",
-      "Vid en kraftig nysning",
-      "Vid en djup, avslappnad gäspning"
+      "Tyst andning, gäspning och djupandning",
+      "Djup sömn, gäspning och forcerad inandning",
+      "Vila, avslappnad utandning och tyst andning"
     ],
     "topic": "logoped_larynx_fonation",
     "difficulty": "Normal",
@@ -2541,7 +2541,7 @@
     "distractors": [
       "Trigeminusnerven",
       "Facialisnerven",
-      "Glossopharyngeusnerven ensam"
+      "Glossopharyngeusnerven"
     ],
     "topic": "logoped_larynx_fonation",
     "difficulty": "Normal",
@@ -2579,10 +2579,10 @@
     "id": "log_larynx_85",
     "type": "mc",
     "prompt": "Vad försörjer den externa grenen av n. laryngeus superior?",
-    "correct": "Motorik enbart till m. cricothyroideus",
+    "correct": "Motorik till m. cricothyroideus",
     "distractors": [
       "Sensorik ovanför stämbanden",
-      "Motorik till samtliga inre struphuvudmuskler utom cricothyroideus",
+      "Motorik till de inre struphuvudmusklerna utom cricothyroideus",
       "Sensorik nedanför stämbanden"
     ],
     "topic": "logoped_larynx_fonation",
@@ -2663,7 +2663,7 @@
     "id": "log_larynx_91",
     "type": "mc",
     "prompt": "Varför är en bilateral skada på n. laryngeus recurrens potentiellt livshotande?",
-    "correct": "Båda stämbanden hamnar nära mittlinjen, vilket trängs ihop luftvägen",
+    "correct": "Båda stämbanden hamnar nära mittlinjen, vilket tränger ihop luftvägen",
     "distractors": [
       "Båda stämbanden faller helt isär och orsakar okontrollerad hyperventilation",
       "Rösten försvinner helt medan andningen förblir helt opåverkad",
@@ -2971,7 +2971,7 @@
     "id": "log_artik_13",
     "type": "mc",
     "prompt": "Vilka ljud kräver att läpparna rundas (labialisering)?",
-    "correct": "Vokaler som svenskans /u/ och /o/ samt konsonanten /v/ i vissa språk",
+    "correct": "Vokaler som svenskans /u/, /o/ och /y/",
     "distractors": [
       "Tandljud av typen /s/ och /t/",
       "Nasala ljud som svenskans /ŋ/",
@@ -3491,9 +3491,9 @@
     "prompt": "Vilken muskel är den huvudsakliga höjaren av mjuka gommen (velum) och avgörande för velofaryngeal stängning?",
     "correct": "M. levator veli palatini",
     "distractors": [
-      "M. tensor veli palatini spänner",
+      "M. tensor veli palatini",
       "M. palatoglossus",
-      "M. musculus uvulae"
+      "M. uvulae"
     ],
     "topic": "logoped_artikulation_resonans",
     "difficulty": "Normal",
@@ -3503,7 +3503,7 @@
     "id": "log_artik_51",
     "type": "mc",
     "prompt": "Varifrån utgår m. levator veli palatini?",
-    "correct": "Från tinningbenets pyramid och bruskdelen av örontrumpeten",
+    "correct": "Från tinningbenets pyramid och broskdelen av örontrumpeten",
     "distractors": [
       "Från processus styloideus nedtill på tinningbenets nedre bas",
       "Från tungbenets kropp och horn",
@@ -3521,7 +3521,7 @@
     "distractors": [
       "M. levator veli palatini",
       "M. palatopharyngeus",
-      "M. musculus uvulae"
+      "M. uvulae"
     ],
     "topic": "logoped_artikulation_resonans",
     "difficulty": "Normal",
@@ -3547,9 +3547,9 @@
     "prompt": "Vilket nervnätverk innerverar de flesta av mjuka gommens och svalgets muskler (utom m. tensor veli palatini och m. stylopharyngeus)?",
     "correct": "Pharynxplexus",
     "distractors": [
-      "Trigeminusnerven ensam",
-      "Hypoglossusnerven ensam",
-      "Facialisnerven ensam"
+      "Trigeminusnerven",
+      "Hypoglossusnerven",
+      "Facialisnerven"
     ],
     "topic": "logoped_artikulation_resonans",
     "difficulty": "Normal",
@@ -3559,7 +3559,7 @@
     "id": "log_artik_55",
     "type": "mc",
     "prompt": "Vilken muskel förkortar och förtjockar uvulan och bidrar till velofaryngeal stängning?",
-    "correct": "M. musculus uvulae",
+    "correct": "M. uvulae",
     "distractors": [
       "M. palatoglossus",
       "M. palatopharyngeus",
@@ -3591,7 +3591,7 @@
     "distractors": [
       "M. palatoglossus",
       "M. levator veli palatini",
-      "M. musculus uvulae"
+      "M. uvulae"
     ],
     "topic": "logoped_artikulation_resonans",
     "difficulty": "Normal",
@@ -3757,7 +3757,7 @@
     "prompt": "Vilken vävnad täcker hårda gommen och skiljer den från den mjukare, muskulösa mjuka gommen bakom?",
     "correct": "Tät, keratiniserad slemhinna direkt över benet, utan underliggande muskulatur",
     "distractors": [
-      "Löst bindväv med riklig muskulatur, precis som i den mjuka gommen längre bakåt",
+      "Lös bindväv med riklig muskulatur, precis som i den mjuka gommen längre bakåt",
       "Broskvävnad likt struphuvudets brosk",
       "Fettvävnad utan slemhinneöverdrag"
     ],
@@ -3895,7 +3895,7 @@
     "id": "log_artik_79",
     "type": "mc",
     "prompt": "Vilken nerv förmedlar allmän sensorik från nasopharynx?",
-    "correct": "Maxillargrenen av trigeminusnerven, samt viss gren av glossopharyngeus mer kaudalt",
+    "correct": "Maxillargrenen av trigeminusnerven, med bidrag från glossopharyngeus längre kaudalt",
     "distractors": [
       "Hypoglossusnerven, den tolfte kranialnerven",
       "Facialisnerven, den sjunde kranialnerven",
@@ -3925,9 +3925,9 @@
     "prompt": "Vilken nerv förmedlar sensorik från laryngopharynx?",
     "correct": "Vagusnerven, via interna grenen av n. laryngeus superior",
     "distractors": [
-      "Glossopharyngeusnerven helt ensam, utan bidrag från vagus",
-      "Trigeminusnerven helt ensam, utan bidrag från vagus",
-      "Hypoglossusnerven helt ensam, utan bidrag från vagus"
+      "Glossopharyngeusnerven, via dess faryngeala grenar",
+      "Trigeminusnervens mandibulargren",
+      "Hypoglossusnerven, via dess grenar till tungbasen"
     ],
     "topic": "logoped_artikulation_resonans",
     "difficulty": "Normal",
@@ -3950,8 +3950,8 @@
   {
     "id": "log_artik_83",
     "type": "mc",
-    "prompt": "Vad kallas den bruskiga och beniga struktur som delar näshålan i en höger och en vänster del?",
-    "correct": "Nässkiljeväggen",
+    "prompt": "Vad kallas den broskiga och beniga struktur som delar näshålan i en höger och en vänster del?",
+    "correct": "Septum nasi",
     "distractors": [
       "Concha nasalis media",
       "Processus palatinus",
@@ -3993,7 +3993,7 @@
     "id": "log_artik_86",
     "type": "mc",
     "prompt": "Vad kallas utrymmet nedanför varje näsmussla?",
-    "correct": "Nässgången",
+    "correct": "Näsgången",
     "distractors": [
       "Näsmusslan",
       "Sinus sphenoidalis",
@@ -4006,7 +4006,7 @@
   {
     "id": "log_artik_87",
     "type": "mc",
-    "prompt": "Vilken bihåla är störst och mynnar i mellersta nässgången?",
+    "prompt": "Vilken bihåla är störst och mynnar i mellersta näsgången?",
     "correct": "Käkhålan",
     "distractors": [
       "Pannhålan",
@@ -4021,10 +4021,10 @@
     "id": "log_artik_88",
     "type": "mc",
     "prompt": "Var mynnar de flesta av bihålorna (käk-, pann- och främre silbenshålorna)?",
-    "correct": "I mellersta nässgången",
+    "correct": "I mellersta näsgången",
     "distractors": [
-      "I övre nässgången",
-      "I nedre nässgången",
+      "I övre näsgången",
+      "I nedre näsgången",
       "Direkt i nasopharynx bakåt"
     ],
     "topic": "logoped_artikulation_resonans",
@@ -4035,10 +4035,10 @@
     "id": "log_artik_89",
     "type": "mc",
     "prompt": "Vart mynnar tårkanalen (ductus nasolacrimalis)?",
-    "correct": "I nedre nässgången",
+    "correct": "I nedre näsgången",
     "distractors": [
-      "I mellersta nässgången",
-      "I övre nässgången",
+      "I mellersta näsgången",
+      "I övre näsgången",
       "Direkt i käkhålan"
     ],
     "topic": "logoped_artikulation_resonans",
@@ -4051,8 +4051,8 @@
     "prompt": "Vart mynnar kilbenshålan (sinus sphenoidalis)?",
     "correct": "I den sfenoetmoidala recessen, bakom övre näsmusslan",
     "distractors": [
-      "I mellersta nässgången",
-      "I nedre nässgången",
+      "I mellersta näsgången",
+      "I nedre näsgången",
       "Direkt i nasopharynx, helt utan någon egen mynning bakåt"
     ],
     "topic": "logoped_artikulation_resonans",
@@ -4104,7 +4104,7 @@
   {
     "id": "log_artik_94",
     "type": "mc",
-    "prompt": "Vilken hjärnnerv delas in i fem huvudgrenar (tinning-, kind-, käk-, hals- och den bakre örongrenen) som försörjer ansiktets mimiska muskulatur?",
+    "prompt": "Vilken hjärnnerv delas in i fem huvudgrenar (tinning-, ok-, kind-, käk- och halsgrenen) som försörjer ansiktets mimiska muskulatur?",
     "correct": "Facialisnerven",
     "distractors": [
       "Trigeminusnerven",
@@ -4175,7 +4175,7 @@
     "id": "log_artik_99",
     "type": "mc",
     "prompt": "Vilka strukturer i ansatsröret är typiskt påverkade vid en spastisk dysartri med otydlig artikulation?",
-    "correct": "Läppar, tunga, käke och mjuka gommen, pga nedsatt precision och koordination",
+    "correct": "Läppar, tunga, käke och mjuka gommen, på grund av nedsatt precision och koordination",
     "distractors": [
       "Innerörats små hårceller",
       "Ögonens yttre rörelsemuskler",
@@ -4221,7 +4221,7 @@
     "distractors": [
       "Den faryngeala fasen",
       "Den esofageala fasen",
-      "Alla faser sker ofrivilligt"
+      "Den faryngeala och den esofageala fasen"
     ],
     "topic": "logoped_svaljning",
     "difficulty": "Normal",
@@ -4235,7 +4235,7 @@
     "distractors": [
       "Den orala fasen",
       "Den esofageala fasen",
-      "Alla faser är lika viljestyrda"
+      "Den orala och den esofageala fasen"
     ],
     "topic": "logoped_svaljning",
     "difficulty": "Normal",
@@ -4249,7 +4249,7 @@
     "distractors": [
       "Den orala fasen",
       "Den faryngeala fasen",
-      "Alla faser styrs viljemässigt"
+      "Den orala och den faryngeala fasen"
     ],
     "topic": "logoped_svaljning",
     "difficulty": "Normal",
@@ -4259,11 +4259,11 @@
     "id": "log_svalj_5",
     "type": "mc",
     "prompt": "Ungefär hur lång tid tar hela sväljningsprocessen, oral och faryngeal fas sammantaget?",
-    "correct": "Cirka 1–2 sekunder för den oral-faryngeala transporten",
+    "correct": "Cirka 1–2 sekunder",
     "distractors": [
       "Cirka 10–15 minuter",
-      "Cirka 8–20 sekunder för den orala fasen",
-      "Mindre än 0,1 sekund totalt"
+      "Cirka 8–20 sekunder",
+      "Mindre än 0,1 sekund"
     ],
     "topic": "logoped_svaljning",
     "difficulty": "Normal",
@@ -4333,7 +4333,7 @@
     "distractors": [
       "Andningsfrekvensen fördubblas",
       "Andningen övergår till näsandning permanent",
-      "Utebliven påverkan på andningen"
+      "Andningen påverkas inte"
     ],
     "topic": "logoped_svaljning",
     "difficulty": "Normal",
@@ -4401,9 +4401,9 @@
     "prompt": "Vilken är bolusens övergripande väg genom ansatsröret vid en normal sväljning?",
     "correct": "Munhåla → svalg → matstrupe → magsäck",
     "distractors": [
-      "Munhåla → näshåla → struphuvude → lungor",
-      "Näshåla → munhåla → struphuvude → matstrupe",
-      "Munhåla → struphuvude → luftstrupe → lungor"
+      "Munhåla → näshåla → struphuvud → lungor",
+      "Näshåla → munhåla → struphuvud → matstrupe",
+      "Munhåla → struphuvud → luftstrupe → lungor"
     ],
     "topic": "logoped_svaljning",
     "difficulty": "Normal",
@@ -4416,7 +4416,7 @@
     "correct": "Tungan",
     "distractors": [
       "Struplocket",
-      "Mjuka gommen ensam",
+      "Mjuka gommen",
       "Käkleden"
     ],
     "topic": "logoped_svaljning",
@@ -4636,7 +4636,7 @@
   {
     "id": "log_svalj_32",
     "type": "mc",
-    "prompt": "Vad kallas den tillfälliga slutningen av stämbanden (glottis) under sväljning?",
+    "prompt": "Vad kallas den mekanism där stämbanden pressas samman och tätar luftvägen under sväljning?",
     "correct": "Glottisstängning",
     "distractors": [
       "Glottisöppning",
@@ -4807,7 +4807,7 @@
     "prompt": "Vad kallas det när mat eller dryck når vestibulum laryngis (ovanför stämbanden) men inte passerar nedanför dem?",
     "correct": "Penetration",
     "distractors": [
-      "Aspiration nedåt",
+      "Aspiration",
       "Achalasi",
       "Presbyfagi"
     ],
@@ -4863,8 +4863,8 @@
     "prompt": "Vilka nerver signalerar bolusens ankomst i svalget och bidrar till att trigga den faryngeala reflexen?",
     "correct": "Glossopharyngeusnerven och vagusnerven, samt trigeminus för mer främre strukturer",
     "distractors": [
-      "Facialisnerven ensam",
-      "Hypoglossusnerven ensam",
+      "Facialisnerven",
+      "Hypoglossusnerven",
       "Synnerven, n. opticus"
     ],
     "topic": "logoped_svaljning",
@@ -4877,8 +4877,8 @@
     "prompt": "Vilken nerv innerverar merparten av de muskler i svalg och struphuvud som deltar aktivt i den faryngeala fasen?",
     "correct": "Vagusnerven, via pharynxplexus samt n. laryngeus recurrens/superior",
     "distractors": [
-      "Trigeminusnerven helt ensam, helt utan bidrag från vagusnerven alls",
-      "Facialisnerven helt ensam, utan bidrag från vagus",
+      "Trigeminusnerven, via dess mandibulargren till svalget",
+      "Facialisnerven, via dess grenar till svalgets muskulatur",
       "Den motoriska ögonnerven, abducensnerven"
     ],
     "topic": "logoped_svaljning",
@@ -5185,9 +5185,9 @@
     "prompt": "Vilka kranialnerver är huvudsakligen involverade i sväljningsprocessen?",
     "correct": "V, VII, IX, X och XII",
     "distractors": [
-      "Kranialnerv I, II och III",
-      "Kranialnerv VI och VIII",
-      "Kranialnerv III, IV och VI"
+      "Kranialnerv I, II, III, IV och VI",
+      "Kranialnerv II, IV, VI, VIII och XI",
+      "Kranialnerv III, IV, VI, VIII och XI"
     ],
     "topic": "logoped_svaljning",
     "difficulty": "Normal",
@@ -5325,7 +5325,7 @@
     "prompt": "Vad kan en hjärnstamsskada (t.ex. stroke i medulla oblongata) medföra för sväljningsfunktionen?",
     "correct": "Allvarlig dysfagi på grund av skadad reflexkoordination, med hög risk för aspiration",
     "distractors": [
-      "Utebliven påverkan på sväljfunktionen efter stroken",
+      "Sväljfunktionen påverkas inte av stroken",
       "En lätt, övergående smakförändring",
       "En förbättrad och snabbare sväljhastighet"
     ],
@@ -5340,7 +5340,7 @@
     "correct": "Ofta en mildare dysfagi, eftersom sväljcentrum får bilateral kortikal input",
     "distractors": [
       "En total och bestående oförmåga att svälja",
-      "Utebliven skillnad jämfört med en hjärnstamsskada",
+      "Samma grad av påverkan som vid en hjärnstamsskada",
       "Bara en påverkan på hörseln och inte på sväljningen"
     ],
     "topic": "logoped_svaljning",
@@ -5355,7 +5355,7 @@
     "distractors": [
       "Total förlamning av tungans muskler",
       "Total förlust av förmågan att sluta läpparna",
-      "Utebliven påverkan, eftersom nerven saknar sväljfunktion"
+      "Oförändrad sväljning, eftersom nerven saknar sväljfunktion"
     ],
     "topic": "logoped_svaljning",
     "difficulty": "Normal",
@@ -5383,7 +5383,7 @@
     "distractors": [
       "Total förlamning av struphuvudets inre muskler bilateralt",
       "Total förlust av hörseln på den drabbade sidan",
-      "Utebliven effekt på den orala fasen"
+      "Oförändrad funktion i den orala fasen"
     ],
     "topic": "logoped_svaljning",
     "difficulty": "Normal",
@@ -5423,9 +5423,9 @@
     "prompt": "Vilka är de vanligaste övergripande orsakskategorierna till dysfagi?",
     "correct": "Neurologiska, strukturella/mekaniska och muskulära orsaker",
     "distractors": [
-      "Psykologiska orsaker utan fysisk grund",
-      "Genetiska hudsjukdomar utan koppling till sväljning",
-      "Brist på vitamin C i kosten"
+      "Psykologiska, kosmetiska och ärftliga orsaker",
+      "Hudsjukdomar, allergier och infektioner i huden",
+      "Vitaminbrist, uttorkning och lågt blodtryck"
     ],
     "topic": "logoped_svaljning",
     "difficulty": "Normal",
@@ -5479,9 +5479,9 @@
     "prompt": "Vilka kliniska tecken vid måltid kan tyda på dysfagi?",
     "correct": "Hosta vid sväljning, gurglig röst efteråt, matrester i munnen och viktnedgång",
     "distractors": [
-      "Ökad aptit och betydligt snabbare måltider helt utan några besvär alls vid måltid",
-      "En förbättrad och tydligt ökad smakupplevelse",
-      "En påtagligt ökad tårproduktion under måltiden"
+      "Ökad aptit, snabbare måltider, färre pauser och viktuppgång",
+      "Förstärkt smak, ökad aptit, kortare måltider och bättre aptitreglering",
+      "Ökad tårproduktion, rodnad, svettning och nästäppa vid måltid"
     ],
     "topic": "logoped_svaljning",
     "difficulty": "Normal",
@@ -5491,7 +5491,7 @@
     "id": "log_svalj_93",
     "type": "mc",
     "prompt": "Vad kallas en gurglig eller \"våt\" röstkvalitet efter sväljning, som kan tyda på kvarvarande material i svalget?",
-    "correct": "\"Wet voice\"/gurglig röst",
+    "correct": "Gurglig röst",
     "distractors": [
       "Falsettröst",
       "Hypernasal röstkvalitet vid tal",
@@ -5606,7 +5606,7 @@
     "correct": "Storhjärnsbarken",
     "distractors": [
       "Ryggmärgen",
-      "Lillhjärnan ensam",
+      "Lillhjärnan",
       "Det perifera nervsystemet"
     ],
     "topic": "logoped_neuroanatomi_tal",
@@ -5771,10 +5771,10 @@
     "id": "log_neuro_13",
     "type": "mc",
     "prompt": "Var ligger Brocas område, i vilken lob och gyrus?",
-    "correct": "I frontalloben, i inferior frontal gyrus",
+    "correct": "I frontalloben, i gyrus frontalis inferior",
     "distractors": [
-      "I temporalloben, i superior temporal gyrus",
-      "I parietalloben, i angulära gyruset",
+      "I temporalloben, i gyrus temporalis superior",
+      "I parietalloben, i gyrus angularis",
       "I occipitalloben, i cuneus"
     ],
     "topic": "logoped_neuroanatomi_tal",
@@ -5813,10 +5813,10 @@
     "id": "log_neuro_16",
     "type": "mc",
     "prompt": "Var ligger Wernickes område, i vilken lob och gyrus?",
-    "correct": "I temporalloben, i posteriora delen av superior temporal gyrus",
+    "correct": "I temporalloben, i bakre delen av gyrus temporalis superior",
     "distractors": [
-      "I frontalloben, i precentrala gyrus",
-      "I parietalloben, i den postcentrala gyrus strax bakom sulcus centralis",
+      "I frontalloben, i gyrus precentralis",
+      "I parietalloben, i gyrus postcentralis",
       "I occipitalloben"
     ],
     "topic": "logoped_neuroanatomi_tal",
@@ -5952,7 +5952,7 @@
   {
     "id": "log_neuro_26",
     "type": "mc",
-    "prompt": "Vad kallas den anatomiska asymmetri där vänster planum temporale (bakre delen av superior temporal gyrus) ofta är större än höger, kopplat till språkdominans?",
+    "prompt": "Vad kallas den anatomiska asymmetri där vänster planum temporale ofta är större än höger, kopplat till språkdominans?",
     "correct": "Planum temporale-asymmetri",
     "distractors": [
       "Sulcus terminalis-asymmetri",
@@ -5984,7 +5984,7 @@
     "correct": "Aprosodi",
     "distractors": [
       "Anomi",
-      "Agrafi vid skrift",
+      "Agrafi",
       "Alexi"
     ],
     "topic": "logoped_neuroanatomi_tal",
@@ -6069,7 +6069,7 @@
     "distractors": [
       "Wernickes afasi – flytande men innehållslöst tal",
       "Global afasi – total förlust av allt språk",
-      "Anomisk afasi – med lätta ordmobiliseringssvårigheter"
+      "Anomisk afasi – lätta ordmobiliseringssvårigheter"
     ],
     "topic": "logoped_neuroanatomi_tal",
     "difficulty": "Normal",
@@ -6097,7 +6097,7 @@
     "distractors": [
       "Helt intakt och opåverkad",
       "Bättre än normalt",
-      "Omöjlig att bedöma över huvud taget vid Brocas afasi hos patienten"
+      "Omöjlig att bedöma vid Brocas afasi"
     ],
     "topic": "logoped_neuroanatomi_tal",
     "difficulty": "Normal",
@@ -6120,7 +6120,7 @@
   {
     "id": "log_neuro_38",
     "type": "mc",
-    "prompt": "Vad kallas afasityypen som uppstår vid skada specifikt på fasciculus arcuatus, med relativt bevarad spontan förståelse/produktion men kraftigt nedsatt repetitionsförmåga?",
+    "prompt": "Vad kallas afasitypen som uppstår vid skada specifikt på fasciculus arcuatus, med relativt bevarad spontan förståelse/produktion men kraftigt nedsatt repetitionsförmåga?",
     "correct": "Konduktionsafasi",
     "distractors": [
       "Global afasi",
@@ -6233,7 +6233,7 @@
     "id": "log_neuro_46",
     "type": "mc",
     "prompt": "Vad kallas det när ett korrekt ord ersätts med ett annat, relaterat eller felaktigt ord (t.ex. \"stol\" i stället för \"bord\")?",
-    "correct": "parafasi",
+    "correct": "Parafasi",
     "distractors": [
       "Neologism",
       "Anomi",
@@ -6415,7 +6415,7 @@
     "id": "log_neuro_59",
     "type": "mc",
     "prompt": "Vad innebär det att den corticobulbära innervationen till de flesta kranialnervskärnor för tal är bilateral (från båda hemisfärerna)?",
-    "correct": "En ensidig kortikal skada ger ofta bara mild talpåverkan pga kompensation",
+    "correct": "En ensidig kortikal skada ger ofta bara mild talpåverkan på grund av kompensation",
     "distractors": [
       "En ensidig kortikal skada ger en total och permanent talförlamning",
       "Bilateral innervation saknar helt klinisk betydelse i sammanhanget",
@@ -6613,9 +6613,9 @@
     "prompt": "Vilka kranialnerver räknas som de huvudsakliga \"talnerverna\" för artikulation, röst och resonans sammantaget?",
     "correct": "V, VII, IX, X och XII",
     "distractors": [
-      "I, II och III",
-      "VI och VIII",
-      "Kranialnerv II, IV och VI"
+      "I, II, IV, VI och VIII",
+      "II, III, IV, VI och VIII",
+      "III, IV, VI, VIII och XI"
     ],
     "topic": "logoped_neuroanatomi_tal",
     "difficulty": "Normal",
@@ -6809,9 +6809,9 @@
     "prompt": "Vilka artärer bidrar till att bilda Willis ring?",
     "correct": "Arteria cerebri anterior, communicans anterior, carotis interna, cerebri posterior och communicans posterior",
     "distractors": [
-      "Arteria carotis externa på båda sidor av halsen",
-      "Arteria subclavia tillsammans med arteria axillaris i armen",
-      "Arteria pulmonalis tillsammans med arteria coronaria vid hjärtat"
+      "Arteria carotis externa, facialis, lingualis, maxillaris och temporalis superficialis",
+      "Arteria subclavia, axillaris, brachialis, radialis och ulnaris",
+      "Arteria pulmonalis, coronaria dextra, coronaria sinistra, aorta och truncus brachiocephalicus"
     ],
     "topic": "logoped_neuroanatomi_tal",
     "difficulty": "Normal",
@@ -6837,9 +6837,9 @@
     "prompt": "Vilket artärsystem försörjer hjärnstammen och lillhjärnan, strukturer viktiga för talmotorik och dysartri?",
     "correct": "Det vertebrobasilära systemet",
     "distractors": [
-      "Det karotida systemet ensamt",
-      "Arteria cerebri anterior ensam",
-      "Arteria communicans posterior ensam"
+      "Det karotida systemet",
+      "Arteria cerebri anterior",
+      "Arteria communicans posterior"
     ],
     "topic": "logoped_neuroanatomi_tal",
     "difficulty": "Normal",
@@ -6848,7 +6848,7 @@
   {
     "id": "log_neuro_90",
     "type": "mc",
-    "prompt": "Vad kallas de \"vattendelarzoner\" mellan olika artärers försörjningsområden, där syrebrist vid lågt blodtryck ofta ger transkortikala afasier?",
+    "prompt": "Vad kallas gränsområdena mellan olika hjärnartärers försörjningsområden, där syrebrist vid lågt blodtryck ofta ger transkortikala afasier?",
     "correct": "Vattendelarterritorier",
     "distractors": [
       "Willis ring",
@@ -6894,7 +6894,7 @@
     "correct": "Ischemisk stroke",
     "distractors": [
       "Hemorragisk stroke",
-      "Båda typerna är exakt lika vanliga i alla populationer",
+      "Båda typerna är ungefär lika vanliga",
       "Varken ischemisk eller hemorragisk stroke orsakar afasi"
     ],
     "topic": "logoped_neuroanatomi_tal",
@@ -7003,7 +7003,7 @@
     "id": "log_horsel_1",
     "type": "mc",
     "prompt": "Vilka två huvuddelar utgör ytterörat?",
-    "correct": "Örat och yttre hörselgången",
+    "correct": "Öronmusslan och yttre hörselgången",
     "distractors": [
       "Trumhinnan och hörselbenen",
       "Cochlean och vestibularapparaten",
@@ -7031,9 +7031,9 @@
     "id": "log_horsel_3",
     "type": "mc",
     "prompt": "Vilken vävnad bygger upp huvuddelen av auricula (ytterörat)?",
-    "correct": "Elastisk brosk täckt av hud",
+    "correct": "Elastiskt brosk täckt av hud",
     "distractors": [
-      "Hyalin brosk utan hudtäckning",
+      "Hyalint brosk utan hudtäckning",
       "Ren fettvävnad",
       "Benvävnad"
     ],
@@ -7175,7 +7175,7 @@
     "distractors": [
       "Städet",
       "Stigbygeln",
-      "Trumhinnan saknar kontakt med hörselbenen"
+      "Stigbygelns fotplatta"
     ],
     "topic": "logoped_orat_horsel",
     "difficulty": "Normal",
@@ -7189,7 +7189,7 @@
     "distractors": [
       "Hammaren",
       "Städet",
-      "Ovala fönstret saknar kontakt med hörselbenen"
+      "Hammarens skaft"
     ],
     "topic": "logoped_orat_horsel",
     "difficulty": "Normal",
@@ -7412,7 +7412,7 @@
     "correct": "Mastoidit",
     "distractors": [
       "Otoskleros",
-      "Presbyacusis",
+      "Presbyakusis",
       "Menieres sjukdom"
     ],
     "topic": "logoped_orat_horsel",
@@ -7441,7 +7441,7 @@
     "distractors": [
       "Akut mastoidit",
       "Vestibularisschwannom på hörselnerven",
-      "Presbyacusis"
+      "Presbyakusis"
     ],
     "topic": "logoped_orat_horsel",
     "difficulty": "Normal",
@@ -7469,7 +7469,7 @@
     "distractors": [
       "Sensorineural hörselnedsättning",
       "Central hörselbearbetningssvårighet",
-      "Utebliven hörselpåverkan"
+      "Hörseln påverkas inte"
     ],
     "topic": "logoped_orat_horsel",
     "difficulty": "Normal",
@@ -7481,7 +7481,7 @@
     "prompt": "Vad kallas ett tillstånd med onormal benbildning kring stigbygelns fotplatta som fixerar den och ger progredierande konduktiv hörselnedsättning?",
     "correct": "Otoskleros",
     "distractors": [
-      "Presbyacusis",
+      "Presbyakusis",
       "Menieres sjukdom",
       "Akustikusneurinom"
     ],
@@ -7507,7 +7507,7 @@
     "id": "log_horsel_37",
     "type": "mc",
     "prompt": "Vad kallas det system av benkanaler som omger innerörats mjukdelsstrukturer?",
-    "correct": "Det benhinniga labyrintsystemet",
+    "correct": "Det beniga labyrintsystemet",
     "distractors": [
       "Det membranösa labyrintsystemet",
       "Trumhålan",
@@ -7523,7 +7523,7 @@
     "prompt": "Vad kallas de mjukdelsstrukturer inuti det beniga labyrintsystemet, fyllda med endolymfa?",
     "correct": "Det membranösa labyrintsystemet",
     "distractors": [
-      "Det benhinniga labyrintsystemet",
+      "Det beniga labyrintsystemet",
       "Mastoidcellerna",
       "Trumhålan"
     ],
@@ -7958,7 +7958,7 @@
     "correct": "Godartad lägesyrsel",
     "distractors": [
       "Otoskleros",
-      "Presbyacusis hos äldre",
+      "Presbyakusis hos äldre",
       "Mastoidit"
     ],
     "topic": "logoped_orat_horsel",
@@ -8083,9 +8083,9 @@
     "prompt": "Var i storhjärnsbarken finns det primära hörselcortex?",
     "correct": "I temporalloben, i Heschls gyrus",
     "distractors": [
-      "I frontalloben, i precentrala gyrus",
+      "I frontalloben, i gyrus precentralis",
       "I occipitalloben",
-      "I parietalloben, i postcentrala gyrus"
+      "I parietalloben, i gyrus postcentralis"
     ],
     "topic": "logoped_orat_horsel",
     "difficulty": "Normal",
@@ -8167,7 +8167,7 @@
     "prompt": "Vad kallas ett samlingsbegrepp för svårigheter i den centrala bearbetningen av hörselinformation, trots normal perifer hörsel?",
     "correct": "Central hörselbearbetningssvårighet",
     "distractors": [
-      "Presbyacusis, den åldersrelaterade hörselnedsättningen",
+      "Presbyakusis, den åldersrelaterade hörselnedsättningen",
       "Otoskleros, förbening av hörselbenskedjan",
       "Mastoidit, en infektion i mastoidutskottet"
     ],
@@ -8197,7 +8197,7 @@
     "distractors": [
       "Sensorineural hörselnedsättning",
       "Central hörselbearbetningssvårighet",
-      "Presbyacusis"
+      "Presbyakusis"
     ],
     "topic": "logoped_orat_horsel",
     "difficulty": "Normal",
@@ -8224,7 +8224,7 @@
     "correct": "Blandad hörselnedsättning",
     "distractors": [
       "Central hörselnedsättning",
-      "Presbyacusis",
+      "Presbyakusis",
       "Otoskleros"
     ],
     "topic": "logoped_orat_horsel",
@@ -8235,7 +8235,7 @@
     "id": "log_horsel_89",
     "type": "mc",
     "prompt": "Vad kallas den vanliga, åldersrelaterade sensorineurala hörselnedsättningen som främst drabbar höga frekvenser?",
-    "correct": "Presbyacusis",
+    "correct": "Presbyakusis",
     "distractors": [
       "Otoskleros",
       "Menieres sjukdom",
@@ -8266,7 +8266,7 @@
     "correct": "Menieres sjukdom",
     "distractors": [
       "Otoskleros",
-      "Presbyacusis",
+      "Presbyakusis",
       "Akut mastoidit i benet"
     ],
     "topic": "logoped_orat_horsel",
@@ -8295,7 +8295,7 @@
     "distractors": [
       "Otoskleros",
       "Menieres sjukdom med yrsel",
-      "Presbyacusis"
+      "Presbyakusis"
     ],
     "topic": "logoped_orat_horsel",
     "difficulty": "Normal",
@@ -8351,7 +8351,7 @@
     "distractors": [
       "Sensorineural hörselnedsättning",
       "Central hörselbearbetningssvårighet",
-      "Utebliven hörselpåverkan"
+      "Hörseln påverkas inte"
     ],
     "topic": "logoped_orat_horsel",
     "difficulty": "Normal",
@@ -8365,7 +8365,7 @@
     "distractors": [
       "Permanent förlust av luktsinnet",
       "Ökad risk för myopi",
-      "Utebliven risk, eftersom tillståndet saknar koppling till språkutvecklingen"
+      "Oförändrad risk, eftersom tillståndet saknar koppling till språkutvecklingen"
     ],
     "topic": "logoped_orat_horsel",
     "difficulty": "Normal",
