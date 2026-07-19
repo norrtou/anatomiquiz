@@ -34,8 +34,79 @@ function getQuestionsPath(topic) {
   if (topic.startsWith('optiker_')) return './data/optiker.json'
   if (topic === 'handens_ben_bilder') return './data/handens_ben_bilder.json'
   if (topic === 'handens_leder_bilder') return './data/handens_leder_bilder.json'
-  // 'blandade' uses loadQuestionsFromMultiplePaths() instead
+  // 'blandade*' och 'lins_*' använder loadQuestionsFromMultiplePaths() i stället
   return './data/riktningar.json'
+}
+
+// ---------------------------------------------------------------------------
+// Allmänt – tvärgående linser (UTBILDNINGAR_REGLER.md, "Allmänt — tvärgående
+// ämnen"). En lins har INGA egna frågor och ingen egen datafil: den slumpar ur
+// de befintliga utbildningsfilerna genom att matcha ett mönster mot frågans
+// `topic`-nyckel. `optiker_synfysiologi`, `ssk_nervsystemet` och
+// `nervsystemet_synaps` hamnar alltså i samma lins.
+//
+// Varför inte `blandade_*`-mekaniken: den samlar sina filer ur #topic-listan,
+// som redan är filtrerad på VALD utbildning – precis tvärtom mot vad en lins
+// behöver. Linserna har därför en explicit mappning lins → filer + topic-mönster.
+//
+// Regler att hålla: dubbletter mellan utbildningar är förväntade och ska INTE
+// byggas bort, linserna får överlappa varandra, och en lins som pekar på en
+// utbildning som byggs ut växer automatiskt. Lägger du till en ny utbildningsfil
+// räcker det att lägga in dess sökväg + topic-prefix i de linser den hör hemma i.
+const ALLMANT_LENSES = {
+  lins_terminologi: {
+    paths: ['./data/medicinsk_terminologi.json','./data/medicinsk_latin.json','./data/medicinsk_sekreterare.json','./data/riktningar.json','./data/tentaplugg.json'],
+    match: /^(medicinsk_terminologi|medicinsk_latin|medsek_|begrepp|planer|positioner|riktningar|ytor|rörelser|studier_terminologi)/
+  },
+  lins_cell_vavnad: {
+    paths: ['./data/apotekare.json','./data/biomedicinsk_analytiker.json','./data/lakare.json','./data/sjukskoterska.json','./data/lakare_anatomi_fysiologi.json','./data/ben.json'],
+    match: /^(apotekare_cell_receptorer|bma_(cell_vavnad|patologi)|lakare_(cell_membranfys|histologi|embryologi)|ssk_cell_vavnad|fysiologi_cell|osteologi_cells)/
+  },
+  lins_nervsystemet: {
+    paths: ['./data/audionom.json','./data/optiker.json','./data/apotekare.json','./data/biomedicinsk_analytiker.json','./data/fysioterapeut.json','./data/lakare.json','./data/logoped.json','./data/rontgensjukskoterska.json','./data/sjukskoterska.json','./data/neurologi.json','./data/tentaplugg.json','./data/lakare_anatomi_fysiologi.json'],
+    match: /^(audionom_|optiker_|apotekare_nervsystem_autonom|bma_(nervsystem_muskler|neurofysiologi)|fysio_(nervsystemet|smartfysiologi)|lakare_neuroanatomi|logoped_(neuroanatomi_tal|orat_horsel)|rtg_skalle_hjarna|ssk_nervsystemet|nervsystemet_|studier_neurologi|anatomi_neuro|fysiologi_(ans|sinnen))/
+  },
+  lins_hormoner_biokemi: {
+    paths: ['./data/apotekare.json','./data/biomedicinsk_analytiker.json','./data/lakare.json','./data/sjukskoterska.json','./data/tandlakare.json','./data/fysioterapeut.json','./data/lakare_anatomi_fysiologi.json'],
+    match: /^(apotekare_magtarm_lever|bma_(endokrina|klinisk_kemi|matsmaltning_lever|njur_gastro_nuklear)|lakare_(endokrina|gastro_amnesoms|cell_membranfys)|ssk_(endokrina|matsmaltning_naring|vatska_elektrolyt_syrabas)|tandlakare_salivkortlar_oral_fys|fysio_traning_arbetsfys|fysiologi_(endokrin|gi))/
+  },
+  lins_ovre_extremitet: {
+    paths: ['./data/fysioterapeut.json','./data/lakare.json','./data/handen.json','./data/handens_ben_bilder.json','./data/handens_leder_bilder.json','./data/skuldran.json','./data/grepp.json','./data/ben.json','./data/tentaplugg.json','./data/lakare_anatomi_fysiologi.json'],
+    match: /^(fysio_(armbage_underarm|axel_skulder|hand_handled)|lakare_ovre_extremitet|handen_|handens_|skuldra_|grepp_|osteologi_upper|studier_hand|anatomi_ovre_extremitet)/
+  },
+  lins_nedre_extremitet: {
+    paths: ['./data/fysioterapeut.json','./data/lakare.json','./data/rontgensjukskoterska.json','./data/ben.json','./data/lakare_anatomi_fysiologi.json'],
+    match: /^(fysio_(fot_fotled|hoft_backen|kna)|lakare_(nedre_extremitet|backen_perineum)|rtg_backen_hoft|osteologi_(lower|pelvis)|anatomi_nedre_extremitet)/
+  },
+  lins_bal_inre_organ: {
+    paths: ['./data/apotekare.json','./data/biomedicinsk_analytiker.json','./data/fysioterapeut.json','./data/lakare.json','./data/logoped.json','./data/rontgensjukskoterska.json','./data/sjukskoterska.json','./data/blodomloppet.json','./data/tentaplugg.json','./data/lakare_anatomi_fysiologi.json'],
+    match: /^(apotekare_(hjarta_cirkulation|njurar_utsondring)|bma_(hjarta_cirkulation|karl_cirkulationsfys|ekg_elektrofys|blod_blodbildning|hematologi_transfusion|immun_lymfatiska|respiration_lungor|spirometri|njurar_urinvagar)|fysio_kardio_resp|lakare_(kardiovaskular|blod_immun|respiration|buk|njure_vatska|thorax)|logoped_andningsapparaten|rtg_(cirkulation_hjarta|karlanatomi|andning_rorelse|thorax|buk_retroperitoneum|njurfunktion)|ssk_(cirkulation|blodet|immun_lymf|respiration|njurar_urinvagar)|blodomloppet_|studier_kardiologi|anatomi_(buk|thorax)|fysiologi_(hjarta|cirkulation|blod|respiration|njure))/
+  },
+  // Slumpade frågor över ALLA utbildningar. paths: null = räknas fram ur hela
+  // allTopicOptions (den ofiltrerade ämneslistan), så nya ämnen kommer med
+  // automatiskt. Alla topics matchar.
+  lins_alla: { paths: null, match: /./ }
+}
+
+// Alla frågefiler som hör till ett riktigt quiz-ämne (MC/TF), oavsett
+// utbildning. Rena flashcard-ämnen (FC) och samlingsvalen själva utesluts.
+// Läser allTopicOptions (den kompletta listan från captureTopicOptions), INTE
+// #topic – den senare är filtrerad på vald utbildning.
+function allEducationQuestionPaths(){
+  return [...new Set(
+    allTopicOptions
+      .filter(o => {
+        if(o.value.startsWith('blandade') || o.value.startsWith('lins_')) return false
+        const t = typeTagOf(o.text)
+        return t.mc || t.tf
+      })
+      .map(o => getQuestionsPath(o.value))
+  )]
+}
+
+// Filerna en lins ska ladda (linsens egna, eller hela korpusen för lins_alla).
+function lensPaths(lens){
+  return lens.paths || allEducationQuestionPaths()
 }
 
 // Svårighetsgrad är borttaget som begrepp: vad som är "svårt" är godtyckligt
@@ -56,7 +127,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.165'
+const APP_VERSION = '0.9.166'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -311,7 +382,13 @@ async function startQuiz(allowedTypes){
   const practiceWrong = !!el('practiceWrong')?.checked
 
   // Load questions based on topic
-  if(topic.startsWith('blandade')){
+  const lens = ALLMANT_LENSES[topic]
+  if(lens){
+    // Allmänt-lins: läser flera utbildningsfiler och filtrerar på topic-mönster
+    // längre ned. Måste testas FÖRE blandade-grenen, som utgår från den
+    // utbildningsfiltrerade #topic-listan.
+    await loadQuestionsFromMultiplePaths(lensPaths(lens))
+  } else if(topic.startsWith('blandade')){
     // Slumpade frågor = bara quiz-ämnen (MC/TF). Rena flashcard-ämnen (FC) tas
     // aldrig in, så slumpade frågor innehåller aldrig flashcards.
     const paths = [...new Set(
@@ -352,7 +429,9 @@ async function startQuiz(allowedTypes){
 
     // Handle topic filtering
     let topicMatch = false
-    if(topic === 'any') {
+    if(lens) {
+      topicMatch = lens.match.test(q.topic)
+    } else if(topic === 'any') {
       topicMatch = true
     } else if(topic === 'any_riktningar') {
       topicMatch = q.topic === 'riktningar'

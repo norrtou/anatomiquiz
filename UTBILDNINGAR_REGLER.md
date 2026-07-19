@@ -57,9 +57,10 @@ apotekare (tillagt i 0.9.162, utbildningen färdigbyggd samtidigt), audionom (ti
 när utbildningen byggdes, 5 ämnen), optiker (tillagt i 0.9.164 när utbildningen
 byggdes, 5 ämnen). Lägg till valet så snart utbildningen har minst två MC/TF-ämnen.
 
-Allmänt saknar det än så länge (bara FC-ämnet Farmakologi → tom pool), men ska
-få ett slumpval av en **annan** typ: över alla utbildningar, inte inom en. Det
-kräver egen mekanik — se "Allmänt — tvärgående ämnen" nedan.
+Allmänt har i stället ett slumpval av en **annan** typ: `lins_alla`, över alla
+utbildningar i stället för inom en. Det har egen mekanik (`ALLMANT_LENSES`) och
+byggdes i 0.9.166 — se "Allmänt — tvärgående ämnen" nedan. Använd alltså inte
+`blandade_*`-mönstret för Allmänt.
 
 **Så lägger du till det för en ny utbildning – enda steget som behövs:**
 lägg en `<option>` i `#topic` i `index.html`:
@@ -98,10 +99,13 @@ någon lista behöver utökas.
 
 ---
 
-## Allmänt — tvärgående ämnen (PLANERAT, ej byggt)
+## Allmänt — tvärgående ämnen (BYGGT 0.9.166)
 
-**Status 2026-07-19: beslutad plan, inget byggt ännu.** Idag har Allmänt bara
-ämnet Farmakologi (FC).
+**Status 2026-07-19: byggt och verifierat.** Allmänt har nu de sju linserna +
+slumpvalet över alla utbildningar, vid sidan av Farmakologi (FC).
+Linstabellen ligger i `ALLMANT_LENSES` i `js/app.js`; `index.html` bär bara
+etiketterna. Lägg till en ny utbildningsfil genom att föra in dess sökväg och
+`topic`-prefix i de linser den hör hemma i — inget annat behövs.
 
 ### Idén
 Allmänt ska INTE ha egna frågor. Dess ämnen är **linser över hela korpusen** —
@@ -114,18 +118,18 @@ Inga nya frågor skrivs. Inga nya datafiler skapas. En lins som pekar på en
 utbildning som byggs ut växer automatiskt.
 
 ### De sju linserna (+ slumpval)
-Ungefärlig pool räknad 2026-07-19 (korpusen: 14 951 MC/TF-frågor totalt):
+Uppmätt pool i det byggda läget (0.9.166) mot planens uppskattning:
 
-| Lins | ca antal |
-|---|---|
-| Medicinsk terminologi & latin | 1 800 |
-| Cellen, vävnaden & histologi | 720 |
-| Nervsystemet & sinnesorganen (CNS/PNS + öga/öra) | 2 250 |
-| Hormoner, biokemi & ämnesomsättning | 1 400 |
-| Övre extremitet | 1 340 |
-| Nedre extremitet & bäcken | 660 |
-| Bål & inre organ (hjärta, blod, andning, buk, njurar) | 2 500 |
-| **Slumpade frågor (alla utbildningar)** | hela poolen |
+| Lins | `value` | plan | uppmätt |
+|---|---|---|---|
+| Medicinsk terminologi & latin | `lins_terminologi` | 1 800 | 1 799 |
+| Cellen, vävnaden & histologi | `lins_cell_vavnad` | 720 | 724 |
+| Nervsystemet & sinnesorganen (CNS/PNS + öga/öra) | `lins_nervsystemet` | 2 250 | 2 246 |
+| Hormoner, biokemi & ämnesomsättning | `lins_hormoner_biokemi` | 1 400 | 1 309 |
+| Övre extremitet | `lins_ovre_extremitet` | 1 340 | 1 344 |
+| Nedre extremitet & bäcken | `lins_nedre_extremitet` | 660 | 663 |
+| Bål & inre organ (hjärta, blod, andning, buk, njurar) | `lins_bal_inre_organ` | 2 500 | 3 156 |
+| **Slumpade frågor (alla utbildningar)** | `lins_alla` | hela poolen | 14 851 |
 
 Farmakologi (FC) ligger kvar oförändrat vid sidan av linserna.
 
@@ -138,6 +142,10 @@ Farmakologi (FC) ligger kvar oförändrat vid sidan av linserna.
 - **CNS/PNS slås ihop med sinnesorganen** eftersom audionom (500) och optiker
   (500) är ren sinnesfysiologi och annars blir föräldralösa.
 - Linserna får gärna överlappa varandra. Det är inget fel.
+
+Bål-linsen blev större än planens uppskattning eftersom hjärta/kärl, blod/immun,
+andning, buk/njure och thorax alla ryms i den — det är avsiktligt och inget att
+kapa. Övre extremitet och slumpvalet drar även in bildfrågorna (handens ben/leder).
 
 ### Regler för bygget
 1. **Dubbletter mellan utbildningar är FÖRVÄNTADE och helt OK.** Att
@@ -155,7 +163,11 @@ Farmakologi (FC) ligger kvar oförändrat vid sidan av linserna.
    `loadQuestionsFromMultiplePaths()`. Slumpvalet "alla utbildningar" behöver
    samma sak (hela `allTopicOptions`, inte den filtrerade listan).
 4. **Eget `value` per lins** och egen topplista, samma skäl som i avsnittet om
-   slumpade frågor ovan (punkt 1 där).
+   slumpade frågor ovan (punkt 1 där). Prefixet är `lins_` — det får ALDRIG
+   krocka med `blandade`, eftersom `startQuiz()` testar linserna först och
+   `blandade`-grenen därefter.
+5. **Linserna hör inte hemma i `js/info.js` statistiklista.** Den listar riktiga
+   frågefiler; en lins har inga egna frågor och skulle dubbelräkna korpusen.
 
 ---
 

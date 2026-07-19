@@ -328,8 +328,19 @@
         <option value="apotekare_nervsystem_autonom" data-edu="apotekare">Nervsystemet &amp; autonom fysiologi (MC)</option>
         <option value="apotekare_njurar_utsondring" data-edu="apotekare">Njurar &amp; utsöndring (MC)</option>
 
-        <!-- Allmänt -->
+        <!-- Allmänt. Linserna (lins_*) har INGA egna frågor: de slumpar ur alla
+             utbildningars frågefiler via topic-mönster i ALLMANT_LENSES i
+             js/app.js. Lägg till/ändra en lins där – här står bara etiketten.
+             Se UTBILDNINGAR_REGLER.md, "Allmänt — tvärgående ämnen". -->
+        <option value="lins_alla" data-edu="allmant">Slumpade frågor – alla utbildningar (MC+TF+Bild)</option>
+        <option value="lins_bal_inre_organ" data-edu="allmant">Bål &amp; inre organ (MC+TF)</option>
+        <option value="lins_cell_vavnad" data-edu="allmant">Cellen, vävnaden &amp; histologi (MC+TF)</option>
         <option value="farmakologi" data-edu="allmant">Farmakologi (FC)</option>
+        <option value="lins_hormoner_biokemi" data-edu="allmant">Hormoner, biokemi &amp; ämnesomsättning (MC)</option>
+        <option value="lins_terminologi" data-edu="allmant">Medicinsk terminologi &amp; latin (MC+TF)</option>
+        <option value="lins_nedre_extremitet" data-edu="allmant">Nedre extremitet &amp; bäcken (MC+TF)</option>
+        <option value="lins_nervsystemet" data-edu="allmant">Nervsystemet &amp; sinnesorganen (MC+TF)</option>
+        <option value="lins_ovre_extremitet" data-edu="allmant">Övre extremitet (MC+TF+Bild)</option>
 
         <!-- =========================================================
              PLATSHÅLLAR-SCAFFOLD per utbildning (ej byggda ämnen ännu).
@@ -699,6 +710,6 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.165" defer></script>
+  <script src="js/app.js?v=0.9.166" defer></script>
 </body>
 </html>
