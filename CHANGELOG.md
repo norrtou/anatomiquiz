@@ -1,5 +1,15 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.171
+- **Åtta självbesvarande frågor i medicinsk sekreterare omgjorda.** I ämnet Lägen, riktningar & rörelser (nr 7–10, 26–29) var rätt svar frågans egen term med svensk ändelse: "Vad betyder riktningstermen *medialis* på svenska?" → `Medial`, *supinatio* → `Supination`, *eversio* → `Eversion`. Frågorna gick att lösa på ren ordlikhet, utan ämneskunskap. Rätt svar är nu termens faktiska betydelse (*medialis* → "Närmare kroppens mittlinje, inåt"), och distraktorerna är de andra riktningarnas och rörelsernas riktiga definitioner – alla alternativ är alltså sanna påståenden om någon term, så det enda sättet att välja rätt är att veta vilken. Motsatsparen (supination/pronation, inversion/eversion) står mot varandra.
+- **Längdbias kontrollerad i samma veva:** nyskrivna facit blir lätt längre än distraktorerna. Rätt svar är inte längst i någon av de åtta; paret supinatio/pronatio har exakt lika långa huvudalternativ (52 tecken).
+- **`CLAUDE_REGLER.md` → version 1.4**, på uttrycklig begäran ("minnet räcker ej"):
+  - §2.9 ekoregeln utökad: ekot räknas även när ordet böjts om, med de trasiga och de rätt byggda exemplen. Undantaget utskrivet – böjningsfrågor (*vertebra* → "Vertebrae") är korrekta, där är formen det som testas.
+  - §2.12b ny sektion: sju feltyper som validatorn INTE fångar, var och en med verkliga fråge-id – distraktorer som råkar vara sanna (två rätta svar), uppfunna fackuttryck, distraktorer från fel ämnesområde, sammanblandade grannbegrepp, fel premiss i frågetexten, genusfel på lånord och osynliga tecken.
+  - §5.6 ny stående regel: ny sorts fel upptäckt → kodifiera den i dokumentet samma arbetspass, med verkligt fråge-id, och överväg alltid om den går att fånga maskinellt.
+- **Ny automatisk kontroll i `scripts/validate_quiz.py`:** flaggar när rätt svar är en citerad term ur frågetexten med bytt ändelse. Böjningsfrågor undantas via nyckelord (genitiv, nominativ, plural, kasus, deklination, böjs, kongruera), och definitionssvar med flera ord ignoreras. Enhetstestad mot 14 fall (5 defekter, 4 böjningsfrågor, 5 korrekt byggda betydelsefrågor) – rätt utfall på samtliga. Noll nya varningar över hela korpusen, alltså inga falska positiva; totalen ligger kvar på 126, alla i de gamla arbetsterapeut-filerna.
+- VERSION/APP_VERSION/index.html- och info.html-cachebuster → 0.9.171.
+
 ## 0.9.170
 - **Medicinsk sekreterare faktagranskad i sin helhet – 6 ämnen, 600 frågor, 8 rättningar.** Tredje utbildningen i granskningssvepet. `scripts/validate_quiz.py` ger 0 varningar. Ämnet är till sin natur ordlisteartat (term → betydelse) och innehöll få sakfel: deklinationerna, stamväxlingarna (hepar/hepat-, gaster/gastr-, larynx/laryng-), kongruensreglerna, ICD-10:s kapitelintervall, KVÅ/NCSP, DRG och journalförkortningarna stämde genomgående.
 - **Termfel rättade:** prostata kallades "blygdkörteln", ett ord som inte finns – rättat till blåshalskörteln; exemplet för adjektivet *proprius* var "ligamentum capitis femoris proprium", en term som inte existerar – bytt till *arteria hepatica propria*; ordstammen för öra angavs som "otho-" – rättat till "ot-".

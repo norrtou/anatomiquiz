@@ -138,6 +138,19 @@ En fråga utan relevanta alternativ är värdelös och förstör quizet. Inga fi
   - **⚠️ Kunskaps-/förklaringsfrågor drar systematisk längdbias – bygg emot det FRÅN START.** När rätt svar är ett påstående eller en förklaring (inte ett enda ord/term) blir det nästan ALLTID längst om distraktorerna skrivs som korta etiketter → 50–60 % längdbias per ämne. Prevention: skriv distraktorerna som **fullständiga, konkret felaktiga påståenden i samma längd och register som rätt svar redan när frågan skapas** – ett halvkunnigt fel, inte en kort etikett. Detta återkom ämne för ämne i sjuksköterske-bygget (2026-07-18) och tvingade fram dyra saneringssvep (strippa parenteser + förlänga distraktorer ämne för ämne) trots att lärdomen redan låg i minnet. Därför står den nu här: minnet räcker inte.
 - **Inga avslöjande parenteser ELLER synonymer enbart på rätt svar:** Lägg ALDRIG extra förklaring/exempel/synonym inom parentes enbart på rätt svar – varken en fri förklaring ELLER en term-synonym av typen `Glomerulus (kapselnystanet)`, `Hypotyreos (underfunktion)`, `Flexion (böjning)`, `Diabetes (sockersjuka)`. Asymmetrin mot distraktorerna avslöjar svaret OCH gör det längst (dubbel tell). Regel: utelämna parentesen (skriv bara `Glomerulus`, `Hypotyreos`, `Flexion`) ELLER ge alla alternativ samma form. Håll rätt svar lika kortfattat som distraktorerna. Detta var den enskilt vanligaste tellen i sjuksköterske-bygget.
 - **Rätt svar får inte ekas i frågan:** Frågetexten får inte innehålla svarstermen verbatim så att frågan blir självbesvarande. Skräckexempel: `medsek_diagnoskodning`-frågan "Vad kallas de Z-koder…" med `correct: "Z-koder"` – svaret stod redan i frågan. Symmetriska antingen/eller-frågor där båda kandidaterna nämns är OK.
+- **⚠️ Ekot räknas även när ordet BÖJTS om – "term → samma term med svensk ändelse" (hittat 2026-07-19).** Det räcker inte att svaret undviker att stå ordagrant i frågan. Är svaret samma ord med bytt ändelse går frågan att lösa på ren ordlikhet, utan ett uns ämneskunskap. Skräckexempel ur `medsek_lages_riktning_rorelse`:
+
+  | Trasig fråga | `correct` | Varför den är trasig |
+  |---|---|---|
+  | Vad betyder riktningstermen "medialis" på svenska? | `Medial` | Alternativen var Medial/Lateral/Proximal/Distal – man matchar bokstäver |
+  | Vad betyder rörelsetermen "supinatio" på svenska? | `Supination` | Samma sak; distraktorn "Pronation" hjälper inte |
+  | Vad betyder rörelsetermen "eversio" (om foten) på svenska? | `Eversion` | Samma sak |
+
+  **Regel:** när frågan lyder "Vad betyder termen X?" ska `correct` vara **vad termen betyder**, inte X i svensk språkdräkt. Distraktorerna ska vara de *andra* termernas riktiga definitioner – då är alla alternativ sanna påståenden om någon term, och det enda sättet att välja rätt är att veta vilken.
+  - Rätt byggt (samma ämne, oförändrat): "Vad betyder riktningstermen `anterior` (ventralis)?" → `Främre, mot buksidan`, med `Bakre, mot ryggsidan` / `Övre` / `Nedre` som distraktorer. "anterior" liknar inte "främre" – man måste kunna det.
+  - Fixade varianten: "medialis" → `Närmare kroppens mittlinje, inåt`, mot `Längre ut från mittlinjen, utåt` / `Närmare bålen räknat längs extremiteten` / `Längre bort från bålen längs extremiteten`.
+  - **UNDANTAG – böjningsfrågor är inte detta fel.** "Vad blir genitiv singular av `vertebra`?" → `Vertebrae` är helt korrekt: där ÄR den böjda formen det som testas, och distraktorerna är felaktiga böjningar. Skilj på *betydelsefrågor* (svaret ska vara betydelsen) och *formfrågor* (svaret ska vara formen).
+  - **Sök aktivt efter mönstret** – validatorn fångar det inte. Jämför normaliserad `correct` mot termer inom citattecken i `prompt`; flagga när de delar ordstam. Kör på varje utbildningsfil, och undanta ämnen som handlar om böjning.
 - **Numerisk-/format-paritet:** Rätt svar får inte vara det enda alternativet som är numeriskt eller format-mässigt korrekt. Efterfrågas ett antal/en siffra ska ALLA alternativ vara tal. Efterfrågas ett visst antal saker (plural) ska ALLA alternativ innehålla exakt lika många – t.ex. om rätt svar listar tre strukturer måste varje distraktor också lista tre, aldrig två eller fyra. Annars kan man räkna sig fram till svaret utan sakkunskap.
   - ⚠️ **Antals-asymmetri fångas INTE av `validate_quiz.py` – den måste kontrolleras för hand.** Skräckexempel (hittat 2026-07-13 i `bma_karlfys_42`): frågan löd "Vilka **tre** huvudsakliga faktorer (Virchows triad) …", rätt svar listade tre faktorer medan alla tre distraktorer började med "Enbart …" och listade EN. Då räcker det att räkna för att hitta rätt. Fix: skriv om distraktorerna så att de också listar tre (fortsatt fel) faktorer.
   - När du bygger/rättar ett ämne: sök aktivt efter frågor vars prompt innehåller ett räkneord (två/tre/fyra/tre huvudsakliga …) och kontrollera antalet poster i VARJE alternativ.
@@ -189,6 +202,30 @@ Bygg felet ur en verklig missuppfattning som en halvkunnig student faktiskt kan 
 | "Bara brosket påverkas, inte ligament eller kapsel" | "Bara själva brosket påverkas vid en luxation" |
 
 Nyckelgreppet: byt det absoluta/självdömande ordet mot ett **hedgat men fortfarande felaktigt** påstående ("mycket sällan", "liten", "främst", "snarare än"), eller skriv ett helt konkret alternativt fel. Ta INTE bort själva feluppfattningen – den ska finnas kvar, bara sluta skylta med formen.
+
+### 2.12b FEL SOM VALIDATORN INTE FÅNGAR – LETA EFTER DEM FÖR HAND
+Skriptet är facit för *formtells* (§2.13), men följande feltyper är osynliga för det och måste hittas genom att faktiskt läsa varje fråga med prompt + `correct` + samtliga distraktorer. Alla är verkliga fynd ur granskningssvepet 2026-07 (fysioterapeut, BMA, medicinsk sekreterare).
+
+**1. Distraktorn råkar vara SANN → frågan har två rätta svar.** Den överlägset vanligaste äkta defekten. Uppstår när distraktorn skrivs som "ett annat rimligt påstående" utan att kontrolleras mot verkligheten.
+  - `fys_ledsk_25` "Varför läker ledbrosk dåligt?" hade distraktorn "Brosk innehåller mycket få levande celler" – brosk *är* hypocellulärt, och det är en äkta lärobokförklaring till dålig läkning.
+  - `fys_musk_37` "Vilka muskler domineras av typ I-fibrer?" hade "Andningsmuskulaturens diafragma" som distraktor – diafragma är en klassisk typ I-dominerad muskel.
+  - `fys_smarta_24` "trolig bidragande mekanism bakom fantomsmärta" hade "kvarvarande nervändar i stumpen" – neurom är en erkänd bidragande mekanism.
+  - `fys_axel_81` om klavikeln hade distraktorn "det ben vars förbening avslutas allra sist" – vilket är rätt svar på NÄSTA fråga i samma ämne.
+  - **Test:** läs varje distraktor som ett fristående påstående och fråga "är detta sant?". Är svaret ja eller "delvis" → skriv om den. Var extra vaksam på frågor som söker "en bidragande orsak" / "bland annat" – där kvalificerar flera sanna svar.
+
+**2. Uppfunna eller felstavade fackuttryck som ser rimliga ut.** Passerar validatorn och läses lätt förbi.
+  - "gröngölefraktur" (heter grönpinnefraktur), "blygdkörteln" om prostata (heter blåshalskörteln), "ligamentum capitis femoris proprium" (existerar inte), "otho-" (heter ot-), "DNA-girastas" (heter DNA-gyras), "His-bunte-systemet" (heter His–Purkinje), "förgangliniska" (heter preganglionära), "vilomatsomsättningen" (heter viloämnesomsättningen), "tuberkelnabbarna", "kolliqvationsnekros".
+  - **Test:** varje fackterm och varje namngivet exempel ska gå att slå upp. Känns ett ord "nästan rätt" – slå upp det.
+
+**3. Distraktorer från fel ämnesområde (copy-paste-rester).** `medsek_diagnoskodning_80` frågade om vårdadministrativa system och hade "Kollimator / Grid / Bolustracking" som alternativ – röntgenutrustning, uppenbart kvarlämnat från röntgenfilen. Bryter mot §2.1. **Test:** hör alla fyra alternativen hemma i samma ämne?
+
+**4. Sammanblandade begrepp som är varandras grannar.** Sug-/sökreflex, tendinit/tendinopati ("seninflammation" om ett icke-inflammatoriskt tillstånd), stelopera/ankylosera, trakeotomi/trakeostomi. **Test:** läs frågan mot filens *egna* andra frågor – ofta lär ett annat ämne i samma fil ut motsatsen.
+
+**5. Faktiskt fel premiss i frågetexten.** Själva frågan bär felet, inte alternativen: "impulsen når kamrarna snabbare via AV-noden" (WPW går ju *förbi* noden), "Vilken **muskel** förbinder radius och ulna" med svaret membrana interossea (ingen muskel), "Vilka **två** muskler …" med ett enda svar, "referensintervall för joniserat/totalt kalcium" med bara totalvärdets intervall.
+
+**6. Genus- och kongruensfel på latinska/grekiska lånord.** Återkommer i alla filer: *ett* membran (inte "den alveolokapillära membranen"), *ett* neuron (inte "en neuron"), *ett* taggutskott, *ett* rörelsesegment, *ett* tubulussegment. Se §1.3.
+
+**7. Osynliga tecken.** Mjukt bindestreck (U+00AD) hittades inuti svarsalternativ i fyra datafiler ("Sakrokoccygeal­leden", "Grupp­funktion"). Syns inte men bryter sökning och strängmatchning. **Test:** `grep -c $'\xc2\xad' data/*.json` efter varje större redigering.
 
 ### 2.13 VALIDATORN ÄR FACIT – BYGG RÄTT FRÅN BÖRJAN, KÖR SKRIPTET EFTER VARJE ÄNDRING
 **KRITISKT (kostnadsregel). Att sanera formtells i efterhand, fil för fil, bränner enorma mängder av användarens tokens/pengar. Preventionen är gratis; saneringen är dyr.**
@@ -302,6 +339,14 @@ Nyckelgreppet: byt det absoluta/självdömande ordet mot ett **hedgat men fortfa
 ### 5.5 Parallell Processing
 - Jobba på alla tre filerna samtidigt när möjligt
 - Inte sekventiell bearbetning av en fil åt gången
+
+### 5.6 NY SORTS FEL UPPTÄCKT → SKRIV IN DEN HÄR, INTE BARA I MINNET
+**STÅENDE REGEL (påtalad flera gånger: "minnet räcker ej").** Så fort en *ny sorts* fel hittas – en feltyp, inte en enskild felaktig fråga – ska den kodifieras i det här dokumentet i samma arbetspass som den upptäcks.
+
+- **Varför:** minnesanteckningar är kontextberoende och kan missas i en framtida session. Reglerna är facit och läses varje gång innehåll byggs eller granskas. Flera dyra saneringssvep har uppstått just för att en lärdom bara låg i minnet.
+- **Så här:** lägg feltypen under §2.12b (fel som validatorn inte fångar) eller §2.9 (formtells), med **ett verkligt exempel med fråge-id**, varför det är fel, och hur man testar för det. Ett påhittat exempel duger inte – ta det som faktiskt hittades.
+- **Överväg alltid om felet går att fånga maskinellt.** Kan det uttryckas som en regel över `prompt`/`correct`/`distractors` hör det hemma i `scripts/validate_quiz.py`, inte bara i prosa. Går det inte att automatisera – skriv ut testet som en manuell kontroll.
+- Notera det i minnet också, men minnet är kopian och dokumentet är originalet.
 
 ---
 
@@ -473,7 +518,12 @@ När nya ämnen läggs till:
 
 **DESSA REGLER ÄR BINDANDE FÖR ALL ARBETE PÅ ANATOMIQUIZ.**
 
-**Senast uppdaterad:** 2026-07-18
+**Senast uppdaterad:** 2026-07-19
+**Version:** 1.4 – kodifierade feltyperna ur granskningssvepet (fysioterapeut, BMA, medicinsk sekreterare), på uttrycklig begäran ("minnet räcker ej"):
+- §2.9 ekoregeln utökad: ekot räknas även när ordet böjts om (*medialis* → "Medial", *supinatio* → "Supination") – svaret ska vara termens BETYDELSE, inte termen i svensk språkdräkt. Med undantaget att böjningsfrågor (*vertebra* → "Vertebrae") är korrekta
+- §2.12b ny: sju feltyper som validatorn INTE fångar, med verkliga fråge-id – framför allt distraktorer som råkar vara sanna (två rätta svar), uppfunna fackuttryck, distraktorer från fel ämnesområde och osynliga tecken
+- §5.6 ny stående regel: ny sorts fel upptäckt → skriv in den i det här dokumentet i samma arbetspass, inte bara i minnet; överväg alltid om den går att fånga i `validate_quiz.py`
+
 **Version:** 1.3 – §2.9 utökad med längdbias-lärdomen från sjuksköterske-bygget (2026-07-18), på uttrycklig begäran ("minnet räcker ej"):
 - §2.9 längdparitet: kunskaps-/förklaringsfrågor drar systematisk längdbias – skriv distraktorerna som fullständiga, konkret felaktiga påståenden i samma längd FRÅN START (inte korta etiketter)
 - §2.9 parentesregeln utökad: gäller även term-synonymer enbart på rätt svar (`Glomerulus (kapselnystanet)` osv) – dubbel tell (avslöjar + gör längst)

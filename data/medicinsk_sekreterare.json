@@ -2881,11 +2881,11 @@
     "id": "medsek_lages_riktning_rorelse_7",
     "type": "mc",
     "prompt": "Vad betyder riktningstermen \"medialis\" på svenska?",
-    "correct": "Medial",
+    "correct": "Närmare kroppens mittlinje, inåt",
     "distractors": [
-      "Lateral",
-      "Proximal",
-      "Distal"
+      "Längre ut från mittlinjen, utåt",
+      "Närmare bålen räknat längs extremiteten",
+      "Längre bort från bålen längs extremiteten"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",
@@ -2895,11 +2895,11 @@
     "id": "medsek_lages_riktning_rorelse_8",
     "type": "mc",
     "prompt": "Vad betyder riktningstermen \"lateralis\" på svenska?",
-    "correct": "Lateral",
+    "correct": "Längre ut från mittlinjen, utåt",
     "distractors": [
-      "Medial",
-      "Anterior",
-      "Posterior"
+      "Närmare kroppens mittlinje, inåt",
+      "Mot kroppens framsida, buksidan",
+      "Mot kroppens baksida, ryggsidan"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",
@@ -2909,11 +2909,11 @@
     "id": "medsek_lages_riktning_rorelse_9",
     "type": "mc",
     "prompt": "Vad betyder riktningstermen \"proximalis\" på svenska?",
-    "correct": "Proximal",
+    "correct": "Närmare bålen räknat längs extremiteten",
     "distractors": [
-      "Distal",
-      "Superior",
-      "Inferior"
+      "Längre bort från bålen längs extremiteten",
+      "Närmare huvudet i kroppens längdriktning",
+      "Närmare fötterna, längre ned i kroppen"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",
@@ -2923,11 +2923,11 @@
     "id": "medsek_lages_riktning_rorelse_10",
     "type": "mc",
     "prompt": "Vad betyder riktningstermen \"distalis\" på svenska?",
-    "correct": "Distal",
+    "correct": "Längre bort från bålen längs extremiteten",
     "distractors": [
-      "Proximal",
-      "Medial",
-      "Lateral"
+      "Närmare bålen räknat längs extremiteten",
+      "Längre ut från mittlinjen, utåt",
+      "Närmare kroppens mittlinje sett i frontalplanet"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",
@@ -3147,11 +3147,11 @@
     "id": "medsek_lages_riktning_rorelse_26",
     "type": "mc",
     "prompt": "Vad betyder rörelsetermen \"supinatio\" på svenska?",
-    "correct": "Supination",
+    "correct": "Vridning av underarmen så att handflatan vänds uppåt",
     "distractors": [
-      "Pronation",
-      "Böjning",
-      "Sträckning"
+      "Vridning av underarmen så att handflatan vänds nedåt",
+      "Böjning i en led så att ledvinkeln minskar",
+      "Sträckning i en led så att ledvinkeln ökar"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",
@@ -3161,11 +3161,11 @@
     "id": "medsek_lages_riktning_rorelse_27",
     "type": "mc",
     "prompt": "Vad betyder rörelsetermen \"pronatio\" på svenska?",
-    "correct": "Pronation",
+    "correct": "Vridning av underarmen så att handflatan vänds nedåt",
     "distractors": [
-      "Supination",
-      "Böjning",
-      "Sträckning"
+      "Vridning av underarmen så att handflatan vänds uppåt",
+      "Böjning i en led så att ledvinkeln minskar",
+      "Sträckning i en led så att ledvinkeln ökar"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",
@@ -3175,11 +3175,11 @@
     "id": "medsek_lages_riktning_rorelse_28",
     "type": "mc",
     "prompt": "Vad betyder rörelsetermen \"inversio\" (om foten) på svenska?",
-    "correct": "Inversion",
+    "correct": "Fotsulan vrids inåt, mot kroppens mittlinje",
     "distractors": [
-      "Eversion",
-      "Dorsalflexion",
-      "Plantarflexion"
+      "Fotsulan vrids utåt, bort från mittlinjen",
+      "Foten lyfts uppåt mot skenbenet i fotleden",
+      "Foten pekar nedåt i fotleden, som vid tåhävning"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",
@@ -3189,11 +3189,11 @@
     "id": "medsek_lages_riktning_rorelse_29",
     "type": "mc",
     "prompt": "Vad betyder rörelsetermen \"eversio\" (om foten) på svenska?",
-    "correct": "Eversion",
+    "correct": "Fotsulan vrids utåt, bort från mittlinjen",
     "distractors": [
-      "Inversion",
-      "Dorsalflexion",
-      "Plantarflexion"
+      "Fotsulan vrids inåt, mot kroppens mittlinje",
+      "Foten lyfts uppåt mot skenbenet i fotleden",
+      "Foten pekar nedåt i fotleden, som vid tåhävning"
     ],
     "topic": "medsek_lages_riktning_rorelse",
     "difficulty": "Normal",

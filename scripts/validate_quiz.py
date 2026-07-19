@@ -29,6 +29,31 @@ SELF_LABEL = re.compile(r"\b(en|ett)\s+(helt\s+)?(annan|annat)\b|vilket är fela
                         r"vilket inte stämmer|är felaktigt påstått|en påhittad benämning", re.I)
 FILLER = re.compile(r"(ing[ae]n av dessa|inget av dessa|inget alternativ|annat ben|annan struktur)", re.I)
 
+# §2.9: frågor som testar BÖJNING – där ska svaret vara den böjda formen av frågans ord,
+# så morfologiskt eko är korrekt och ska inte flaggas.
+FORM_Q = re.compile(r"\b(genitiv|nominativ|ackusativ|dativ|ablativ|kasus|deklination|"
+                    r"pluralform|singularform|plural|singular|böjs|böjning|kongruer)", re.I)
+
+def _morphological_echo(prompt, correct):
+    """True om svaret är frågans egen citerade term med bytt ändelse (§2.9).
+
+    Fångar 'Vad betyder riktningstermen "medialis"?' -> correct "Medial", som går att
+    lösa på ren ordlikhet. Böjningsfrågor undantas via FORM_Q.
+    """
+    if FORM_Q.search(prompt) or " " in correct.strip():
+        return None            # formfråga, eller ett svar som är en definition (flera ord)
+    c = re.sub(r"[^a-zåäö]", "", correct.lower())
+    if len(c) < 5:
+        return None
+    for term in re.findall(r"[\"'«»]([A-Za-zÅÄÖåäö-]{4,})[\"'«»]", prompt):
+        t = re.sub(r"[^a-zåäö]", "", term.lower())
+        if not t or t == c:
+            continue           # ordagrant eko fångas redan av kontrollen ovan
+        stem = min(len(c), len(t)) - 2      # tillåt att ändelsen skiljer
+        if stem >= 4 and c[:stem] == t[:stem]:
+            return term
+    return None
+
 def _negates_correct(distractor, correct):
     """True om distraktorn negerar med rätt svarets egna nyckelord ('Levern, inte pankreas')."""
     m = re.search(r",\s*(?:inte|utan)\s+(.{3,40})$", distractor, re.I)
@@ -109,6 +134,10 @@ def check_file(path, errors, warnings):
             if re.search(r"\b" + re.escape(c) + r"\b", q["prompt"], re.I):
                 if not any(re.search(r"\b" + re.escape(str(x).strip().rstrip(".?!")) + r"\b", q["prompt"], re.I) for x in q["distractors"]):
                     warnings.append(f"{name}:{q.get('id')} självbesvarande: '{c}' står i frågetexten")
+            # självbesvarande variant: svaret är frågans term med bytt ändelse (§2.9)
+            term = _morphological_echo(q["prompt"], c)
+            if term:
+                warnings.append(f"{name}:{q.get('id')} självbesvarande: svaret '{c}' är frågans term '{term}' med bytt ändelse")
             # numerisk-/format-paritet (§2.9): rätt svar är ett ANTAL/tal (börjar med en siffra,
             # ev. efter cirka/ca/~) men någon distraktor saknar siffra. Börjar svaret med en
             # bokstav (t.ex. "A1-pulleyn") räknas siffran som del av ett namn, inte ett antal.
