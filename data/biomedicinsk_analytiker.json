@@ -72,7 +72,7 @@
   {
     "id": "bma_cell_6",
     "type": "mc",
-    "prompt": "Vilket lipidmolekyl reglerar membranets flytbarhet (fluiditet)?",
+    "prompt": "Vilken lipidmolekyl reglerar membranets flytbarhet (fluiditet)?",
     "correct": "Kolesterol",
     "distractors": [
       "Glykogen",
@@ -394,7 +394,7 @@
   {
     "id": "bma_cell_29",
     "type": "mc",
-    "prompt": "Vad kallas det membranklädda utrymmet inuti cellen som håller organellerna åtskilda från cytosolen?",
+    "prompt": "Vad kallas allt innehåll innanför cellmembranet utanför cellkärnan, där organellerna ligger?",
     "correct": "Cytoplasman",
     "distractors": [
       "Extracellulärmatrix",
@@ -1248,7 +1248,7 @@
   {
     "id": "bma_cell_90",
     "type": "mc",
-    "prompt": "Vilken del av neuronen tar huvudsakligen emot signaler från andra celler?",
+    "prompt": "Vilken del av neuronet tar huvudsakligen emot signaler från andra celler?",
     "correct": "Dendriterna",
     "distractors": [
       "Axonet",
@@ -1262,7 +1262,7 @@
   {
     "id": "bma_cell_91",
     "type": "mc",
-    "prompt": "Vilken del av neuronen leder signalen bort från cellkroppen till nästa cell?",
+    "prompt": "Vilken del av neuronet leder signalen bort från cellkroppen till nästa cell?",
     "correct": "Axonet",
     "distractors": [
       "Dendriterna",
@@ -1318,7 +1318,7 @@
   {
     "id": "bma_cell_95",
     "type": "mc",
-    "prompt": "Vad kallas kontaktstället där en neuron överför signal till en annan cell?",
+    "prompt": "Vad kallas kontaktstället där ett neuron överför signal till en annan cell?",
     "correct": "Synapsen",
     "distractors": [
       "Sarkomeren",
@@ -1389,7 +1389,7 @@
     "id": "bma_cell_100",
     "type": "mc",
     "prompt": "Vilken metod används för att specifikt identifiera ett protein i ett vävnadssnitt med hjälp av antikroppar?",
-    "correct": "Immunohistokemi",
+    "correct": "Immunhistokemi",
     "distractors": [
       "Enkel HE-färgning",
       "Gramfärgning",
@@ -2694,7 +2694,7 @@
     "correct": "Korstest",
     "distractors": [
       "Differentialräkning",
-      "Reticulocyträkning",
+      "Retikulocyträkning",
       "Hematokritmätning"
     ],
     "topic": "bma_blod_blodbildning",
@@ -2792,7 +2792,7 @@
     "correct": "PK/INR och APTT",
     "distractors": [
       "Hematokrit och MCV",
-      "Reticulocyträkning och differentialräkning",
+      "Retikulocyträkning och differentialräkning",
       "Blodgruppering och korstest"
     ],
     "topic": "bma_blod_blodbildning",
@@ -5966,8 +5966,8 @@
   {
     "id": "bma_nerv_27",
     "type": "mc",
-    "prompt": "Var i ryggmärgen har det sympatiska nervsystemets förgangliniska nervceller sitt ursprung?",
-    "correct": "I sido­hornet i de torakala och övre lumbala segmenten",
+    "prompt": "Var i ryggmärgen har det sympatiska nervsystemets preganglionära nervceller sitt ursprung?",
+    "correct": "I sidohornet i de torakala och övre lumbala segmenten",
     "distractors": [
       "I de sakrala segmenten, utan någon torakal representation",
       "I kranialnerverna, utan spinal representation",
@@ -5980,7 +5980,7 @@
   {
     "id": "bma_nerv_28",
     "type": "mc",
-    "prompt": "Varifrån utgår det parasympatiska nervsystemets förgangliniska fibrer?",
+    "prompt": "Varifrån utgår det parasympatiska nervsystemets preganglionära fibrer?",
     "correct": "Från vissa kranialnerver samt de sakrala ryggmärgssegmenten",
     "distractors": [
       "Från de torakala ryggmärgssegmenten, utan något kranialt bidrag",
@@ -6219,7 +6219,7 @@
     "id": "bma_nerv_45",
     "type": "mc",
     "prompt": "Vad kallas fenomenet där flera svaga, subtröskelnära signaler tillsammans i tid kan nå tröskelvärdet och utlösa en aktionspotential?",
-    "correct": "summation",
+    "correct": "Temporal summation",
     "distractors": [
       "Saltatorisk ledning",
       "Hyperpolarisation",
@@ -7254,7 +7254,7 @@
   {
     "id": "bma_njure_19",
     "type": "mc",
-    "prompt": "Vad kallas den tubulussegment som direkt fortsätter från Bowmans kapsel och där merparten av reabsorptionen sker?",
+    "prompt": "Vad kallas det tubulussegment som direkt fortsätter från Bowmans kapsel och där merparten av reabsorptionen sker?",
     "correct": "Proximala tubuli",
     "distractors": [
       "Distala tubuli",
@@ -7282,7 +7282,7 @@
   {
     "id": "bma_njure_21",
     "type": "mc",
-    "prompt": "Vad kallas den U-formade tubulussegment som sträcker sig ner i njurmärgen mellan proximala och distala tubuli?",
+    "prompt": "Vad kallas det U-formade tubulussegment som sträcker sig ner i njurmärgen mellan proximala och distala tubuli?",
     "correct": "Henles slynga",
     "distractors": [
       "Bowmans kapsel",
@@ -9452,8 +9452,8 @@
   {
     "id": "bma_mag_76",
     "type": "mc",
-    "prompt": "Vad indikerar ett förhöjt ALT (alaninaminotransferas) i blodet, oftast?",
-    "correct": "Hepatocellulär skada – ALT är ett relativt leverspecifikt enzym",
+    "prompt": "Vad indikerar ett förhöjt ALAT (alaninaminotransferas) i blodet, oftast?",
+    "correct": "Hepatocellulär skada – ALAT är ett relativt leverspecifikt enzym",
     "distractors": [
       "Kolestas specifikt, uppmätt med andra enzym",
       "Akut pankreatit, som i stället mäts med amylas och lipas i serum hos patienten",
@@ -9466,12 +9466,12 @@
   {
     "id": "bma_mag_77",
     "type": "mc",
-    "prompt": "Hur skiljer sig AST (aspartataminotransferas) från ALT som markör för leverskada?",
-    "correct": "AST är mindre leverspecifikt, eftersom det även finns i bland annat hjärt- och skelettmuskulatur",
+    "prompt": "Hur skiljer sig ASAT (aspartataminotransferas) från ALAT som markör för leverskada?",
+    "correct": "ASAT är mindre leverspecifikt, eftersom det även finns i bland annat hjärt- och skelettmuskulatur",
     "distractors": [
-      "AST finns bara i levern, till skillnad från ALT",
-      "AST mäter gallvägsfunktion snarare än leverskada",
-      "AST och ALT mäter exakt samma sak och är helt utbytbara, utan någon som helst skillnad i specificitet"
+      "ASAT finns bara i levern, till skillnad från ALAT",
+      "ASAT mäter gallvägsfunktion snarare än leverskada",
+      "ASAT och ALAT mäter exakt samma sak och är helt utbytbara, utan någon som helst skillnad i specificitet"
     ],
     "topic": "bma_matsmaltning_lever",
     "difficulty": "Normal",
@@ -9592,7 +9592,7 @@
   {
     "id": "bma_mag_86",
     "type": "mc",
-    "prompt": "Vad kallas det vanliga samlingsbegreppet för blodprover (ALT, AST, ALP, GGT, bilirubin m.fl.) som används för att bedöma leverfunktion/-skada?",
+    "prompt": "Vad kallas det vanliga samlingsbegreppet för blodprover (ALAT, ASAT, ALP, GGT, bilirubin m.fl.) som används för att bedöma leverfunktion/-skada?",
     "correct": "Leverstatus",
     "distractors": [
       "Blodstatus",
@@ -10614,7 +10614,7 @@
   {
     "id": "bma_endo_59",
     "type": "mc",
-    "prompt": "Vad är det ungefärliga normala referensintervallet för joniserat/totalt kalcium i blodet hos en vuxen?",
+    "prompt": "Vad är det ungefärliga normala referensintervallet för totalt kalcium i blodet hos en vuxen?",
     "correct": "Cirka 2,2–2,6 mmol/l",
     "distractors": [
       "Cirka 0,2–0,6 mmol/l",
@@ -10824,7 +10824,7 @@
   {
     "id": "bma_endo_74",
     "type": "mc",
-    "prompt": "Vilka receptorer på binjuremärgens målorgan aktiveras huvudsakligen av adrenalin och noradrenalin?",
+    "prompt": "Vilka receptorer på katekolaminernas målorgan aktiveras huvudsakligen av adrenalin och noradrenalin?",
     "correct": "Adrenerga receptorer",
     "distractors": [
       "Muskarina acetylkolinreceptorer",
@@ -12154,7 +12154,7 @@
   {
     "id": "bma_immun_69",
     "type": "mc",
-    "prompt": "Vad kallas de gener/varianter som gör att en antikropps antigenbindande region kan variera enormt mellan olika kloner?",
+    "prompt": "Vad kallas den del av antikroppen vars aminosyrasekvens varierar enormt mellan olika kloner och avgör antigenspecificiteten?",
     "correct": "Den variabla regionen",
     "distractors": [
       "Den konstanta regionen",
@@ -13037,7 +13037,7 @@
     "id": "bma_ekg_32",
     "type": "mc",
     "prompt": "Vad kallas den princip som gör att en depolarisationsvåg som rör sig mot en positiv elektrod ger ett positivt (uppåtriktat) utslag?",
-    "correct": "Einthovens grundprincip för avledningars polaritet",
+    "correct": "Vektorprincipen för EKG-avledningar",
     "distractors": [
       "Frank–Starlings lag om hjärtats fyllnad",
       "Bohreffekten i syrgasbindningskurvan",
@@ -13429,10 +13429,10 @@
     "id": "bma_ekg_60",
     "type": "mc",
     "prompt": "Vad innebär skillnaden mellan höger- och vänstergrenblock avseende var i retledningssystemet störningen sitter?",
-    "correct": "Ledningen genom höger respektive vänster skänkel i His-bunte-systemet är fördröjd eller avbruten",
+    "correct": "Ledningen genom höger respektive vänster skänkel i His-Purkinje-systemet är fördröjd eller avbruten",
     "distractors": [
       "Störningen sitter i SA-noden snarare än i skänklarna",
-      "Störningen sitter i förmaksmuskulaturen och inte i skänklarna i His-bunte-systemet hos den undersökta patienten",
+      "Störningen sitter i förmaksmuskulaturen och inte i skänklarna i His-Purkinje-systemet hos den undersökta patienten",
       "Grenblock innebär ett totalt hjärtstillestånd"
     ],
     "topic": "bma_ekg_elektrofys",
@@ -13470,7 +13470,7 @@
   {
     "id": "bma_ekg_63",
     "type": "mc",
-    "prompt": "Vad kallas den procedur där ett onormalt retledningsfokus eller en kort-slutningsbana i hjärtat förstörs med värme eller kyla via en kateter, t.ex. vid vissa arytmier?",
+    "prompt": "Vad kallas den procedur där ett onormalt retledningsfokus eller en kortslutningsbana i hjärtat förstörs med värme eller kyla via en kateter, t.ex. vid vissa arytmier?",
     "correct": "Kateterablation",
     "distractors": [
       "Defibrillering med chock",
@@ -13736,7 +13736,7 @@
   {
     "id": "bma_ekg_82",
     "type": "mc",
-    "prompt": "Vad kallas det tillstånd där en extra, medfödd retledningsbana (t.ex. vid WPW-syndrom) gör att impulsen når kamrarna snabbare än normalt via AV-noden?",
+    "prompt": "Vad kallas det tillstånd där en extra, medfödd retledningsbana (t.ex. vid WPW-syndrom) gör att impulsen når kamrarna snabbare än normalt genom att gå förbi AV-noden?",
     "correct": "Preexcitation",
     "distractors": [
       "AV-block grad III",
@@ -17012,7 +17012,7 @@
   {
     "id": "bma_neurofys_16",
     "type": "mc",
-    "prompt": "Vad kallas en motorneuron tillsammans med alla muskelfibrer den innerverar?",
+    "prompt": "Vad kallas ett motorneuron tillsammans med alla muskelfibrer det innerverar?",
     "correct": "En motorenhet",
     "distractors": [
       "En sarkomer",
@@ -18468,7 +18468,7 @@
   {
     "id": "bma_nuklear_20",
     "type": "mc",
-    "prompt": "Vilket radiofarmakon binds och filtreras huvudsakligen glomerulärt och används därför för att mäta glomerulär filtrationshastighet (GFR)?",
+    "prompt": "Vilket radiofarmakon filtreras fritt och huvudsakligen glomerulärt och används därför för att mäta glomerulär filtrationshastighet (GFR)?",
     "correct": "Tc-99m-DTPA",
     "distractors": [
       "Tc-99m-MAG3",
@@ -19379,7 +19379,7 @@
     "id": "bma_nuklear_85",
     "type": "mc",
     "prompt": "Varför är sentinel node-tekniken kliniskt värdefull vid t.ex. bröstcanceroperation?",
-    "correct": "Den identifierar den/de första lymfkörtel dit tumören sannolikt sprider sig, vilket kan minska behovet av mer omfattande lymfkörtelutrymning",
+    "correct": "Den identifierar den eller de första lymfkörtlar dit tumören sannolikt sprider sig, vilket kan minska behovet av mer omfattande lymfkörtelutrymning",
     "distractors": [
       "Den botar cancern direkt utan behov av kirurgi",
       "Den ersätter helt all vidare cancerbehandling",
@@ -20123,9 +20123,9 @@
     "prompt": "Vad kallas den seriella provtagning av troponin som ofta görs för att fastställa eller utesluta hjärtinfarkt?",
     "correct": "Troponin-seriemätning",
     "distractors": [
-      "Ett enstaka troponinprov räcker för diagnos",
-      "Troponin mäts vid ett enda tillfälle",
-      "Seriemätning avser upprepad EKG-tagning, inte blodprov"
+      "Enstaka referensmätning",
+      "Troponinkalibrering",
+      "Kvalitativ snabbanalys"
     ],
     "topic": "bma_klinisk_kemi",
     "difficulty": "Normal",
@@ -22234,7 +22234,7 @@
   {
     "id": "bma_hema_89",
     "type": "mc",
-    "prompt": "Vad kallas retikulinfärgning av en benmärgsbiopsi använd för att bedöma graden av?",
+    "prompt": "Retikulinfärgning av en benmärgsbiopsi används framför allt för att bedöma graden av vad?",
     "correct": "Benmärgsfibros",
     "distractors": [
       "Benmärgens cellularitet",
@@ -23004,7 +23004,7 @@
   {
     "id": "bma_mikro_44",
     "type": "mc",
-    "prompt": "Vilken antibiotikaklass hämmar bakteriens DNA-girastas (topoisomeras) och inkluderar ciprofloxacin?",
+    "prompt": "Vilken antibiotikaklass hämmar bakteriens DNA-gyras (topoisomeras) och inkluderar ciprofloxacin?",
     "correct": "Fluorokinoloner",
     "distractors": [
       "Makrolider",
@@ -23214,7 +23214,7 @@
   {
     "id": "bma_mikro_59",
     "type": "mc",
-    "prompt": "Vilken typ av virus är influensavirus, klassificerat utifrån sitt arvsmassa?",
+    "prompt": "Vilken typ av virus är influensavirus, klassificerat utifrån sin arvsmassa?",
     "correct": "Ett RNA-virus",
     "distractors": [
       "Ett DNA-virus",
@@ -23243,9 +23243,9 @@
     "id": "bma_mikro_61",
     "type": "mc",
     "prompt": "Vad kallas de mindre förändringar i virusets ytantigen som sker successivt genom mutation och som ligger bakom behovet av årlig influensavaccinuppdatering?",
-    "correct": "Antigen drift",
+    "correct": "Antigendrift",
     "distractors": [
-      "Antigen shift",
+      "Antigenskifte",
       "Serokonversion",
       "Reassortment som förekommer hos bakterier"
     ],
@@ -23273,7 +23273,7 @@
     "prompt": "Vilket enzym, unikt för retrovirus som HIV, omvandlar virusets RNA-genom till DNA som sedan kan integreras i värdcellens arvsmassa?",
     "correct": "Omvänt transkriptas",
     "distractors": [
-      "DNA-girastas i bakterier",
+      "DNA-gyras i bakterier",
       "Betalaktamas",
       "Neuraminidas"
     ],
@@ -23480,7 +23480,7 @@
   {
     "id": "bma_mikro_78",
     "type": "mc",
-    "prompt": "Vad kallas den mikroskopiska metod där en svampprovtagning (t.ex. hud- eller naglskrap) behandlas med kaliumhydroxid för att lösa upp keratin och underlätta svampidentifiering?",
+    "prompt": "Vad kallas den mikroskopiska metod där en svampprovtagning (t.ex. hud- eller nagelskrap) behandlas med kaliumhydroxid för att lösa upp keratin och underlätta svampidentifiering?",
     "correct": "KOH-preparat",
     "distractors": [
       "Ziehl-Neelsen-färgning",
@@ -23606,7 +23606,7 @@
   {
     "id": "bma_mikro_87",
     "type": "mc",
-    "prompt": "Vilken metod, baserad på högt tryck och temperatur i mättad vattenånga, är standard för sterilisering av värmetåligt medicinskt instrument?",
+    "prompt": "Vilken metod, baserad på högt tryck och temperatur i mättad vattenånga, är standard för sterilisering av värmetåliga medicinska instrument?",
     "correct": "Autoklavering",
     "distractors": [
       "Alkoholdesinfektion",
@@ -23984,7 +23984,7 @@
   {
     "id": "bma_pato_14",
     "type": "mc",
-    "prompt": "Vad kännetecknar likvefaktionsnekros (kolliqvationsnekros), typisk vid hjärninfarkt och bakteriella abscesser?",
+    "prompt": "Vad kännetecknar likvefaktionsnekros (kollikvationsnekros), typisk vid hjärninfarkt och bakteriella abscesser?",
     "correct": "Den döda vävnaden bryts ner av enzymer till en mjuk, flytande massa",
     "distractors": [
       "Vävnadens arkitektur bevaras helt skuggartat",
@@ -24796,7 +24796,7 @@
   {
     "id": "bma_pato_72",
     "type": "mc",
-    "prompt": "Vilket kemikalie används vanligen för att fixera (bevara) ett vävnadsprov innan histopatologisk bearbetning?",
+    "prompt": "Vilken kemikalie används vanligen för att fixera (bevara) ett vävnadsprov innan histopatologisk bearbetning?",
     "correct": "Formalin",
     "distractors": [
       "Etanol",
@@ -24894,7 +24894,7 @@
   {
     "id": "bma_pato_79",
     "type": "mc",
-    "prompt": "Vad kallas ett kirurgiskt ingrepp där hela den misstänkta förändringen (t.ex. ett hudmen) avlägsnas och skickas för histopatologisk analys?",
+    "prompt": "Vad kallas ett kirurgiskt ingrepp där hela den misstänkta förändringen (t.ex. en hudförändring) avlägsnas och skickas för histopatologisk analys?",
     "correct": "Excisionsbiopsi",
     "distractors": [
       "Finnålspunktion",
@@ -24923,7 +24923,7 @@
     "id": "bma_pato_81",
     "type": "mc",
     "prompt": "Vad kallas den mikroskopiska bedömning av cellförändringar i ett cervixcytologiskt prov, gradvis från lätt till uttalad, som ett förstadium till cervixcancer?",
-    "correct": "Cervikal intraepitelial neoplasi, gradvis dysplasi",
+    "correct": "Cervikal intraepitelial neoplasi (CIN)",
     "distractors": [
       "Adenom, en godartad körteltumör",
       "Fibrom, en helt godartad bindvävstumör i livmoderväggen",
