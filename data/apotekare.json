@@ -33,7 +33,7 @@
     "prompt": "Vilken molekyl gör cellmembranet mindre rörligt vid kroppstemperatur?",
     "correct": "Kolesterol",
     "distractors": [
-      "Sfingomyelin",
+      "Fosfatidylkolin",
       "Fosfatidylserin",
       "Kardiolipin"
     ],
@@ -45,7 +45,7 @@
     "id": "apo_cell_4",
     "type": "mc",
     "prompt": "Vad kallas membranmodellen där proteiner flyter i ett rörligt lipidhav?",
-    "correct": "Vätske-mosaikmodellen",
+    "correct": "Vätskemosaikmodellen",
     "distractors": [
       "Enhetsmembranmodellen",
       "Den statiska sandwichmodellen",
@@ -189,7 +189,7 @@
     "distractors": [
       "Symportör",
       "Uniportör",
-      "Poringång"
+      "Jonpump"
     ],
     "topic": "apotekare_cell_receptorer",
     "difficulty": "Normal",
@@ -384,7 +384,7 @@
     "correct": "Hyperpolarisering",
     "distractors": [
       "Depolarisering",
-      "Långvarig repolariseringsblockad",
+      "Ökad retbarhet i cellen",
       "Ökad kalciumfrisättning"
     ],
     "topic": "apotekare_cell_receptorer",
@@ -804,7 +804,7 @@
     "correct": "Kväveoxid",
     "distractors": [
       "Koldioxid",
-      "Kolmonoxid",
+      "Vätesulfid",
       "Syrgas"
     ],
     "topic": "apotekare_cell_receptorer",
@@ -898,7 +898,7 @@
   {
     "id": "apo_cell_65",
     "type": "mc",
-    "prompt": "Vad kallas receptorreserven som gör att maximal effekt nås utan att alla receptorer binds?",
+    "prompt": "Vad kallas de receptorer som inte behöver bindas för att maximal effekt ska uppnås?",
     "correct": "Reservreceptorer",
     "distractors": [
       "Tysta receptorer",
@@ -916,7 +916,7 @@
     "correct": "Beta-arrestin",
     "distractors": [
       "Kalmodulin",
-      "Ubikvitinligas E1",
+      "Dynamin",
       "Klatrin"
     ],
     "topic": "apotekare_cell_receptorer",
@@ -1449,7 +1449,7 @@
     "distractors": [
       "Det somatiska nervsystemet",
       "Pyramidbanan",
-      "Bakstemsbanan"
+      "Baksträngsbanan"
     ],
     "topic": "apotekare_nervsystem_autonom",
     "difficulty": "Normal",
@@ -1463,7 +1463,7 @@
     "distractors": [
       "Autonoma gränssträngen",
       "Somatiska reflexbågen",
-      "Parasympatiska plexus sacralis"
+      "Parasympatiska bäckennerverna"
     ],
     "topic": "apotekare_nervsystem_autonom",
     "difficulty": "Normal",
@@ -1990,7 +1990,7 @@
   {
     "id": "apo_nerv_43",
     "type": "mc",
-    "prompt": "Vilken sjukdom behandlas med kolinesterashämmare på grund av brist på nikotinreceptorer i muskeln?",
+    "prompt": "Vilken sjukdom behandlas med kolinesterashämmare därför att antikroppar slår ut muskelns nikotinreceptorer?",
     "correct": "Myasthenia gravis",
     "distractors": [
       "Parkinsons sjukdom",
@@ -2639,7 +2639,7 @@
     "distractors": [
       "Flumazenil",
       "Atropin",
-      "Naltrexonsyra"
+      "Acetylcystein"
     ],
     "topic": "apotekare_nervsystem_autonom",
     "difficulty": "Normal",
@@ -2779,7 +2779,7 @@
     "distractors": [
       "Muskarinreceptorn på muskelfibern",
       "Ryanodinreceptorn i muskelcellens inre",
-      "Dihydropyridinreceptorn i muskelfiberns kärna"
+      "Dihydropyridinreceptorn i T-tubulusmembranet"
     ],
     "topic": "apotekare_nervsystem_autonom",
     "difficulty": "Normal",
@@ -2886,7 +2886,7 @@
   {
     "id": "apo_hjarta_7",
     "type": "mc",
-    "prompt": "Vilket kärl för syrerikt blod från lungorna till vänster förmak?",
+    "prompt": "Vilka kärl för syrerikt blod från lungorna till vänster förmak?",
     "correct": "Lungvenerna",
     "distractors": [
       "Lungartärerna",
@@ -2961,7 +2961,7 @@
     "distractors": [
       "Sinusknutan",
       "Atrioventrikulära knutan",
-      "Skänkelbenens ursprung"
+      "Skänklarnas ursprung"
     ],
     "topic": "apotekare_hjarta_cirkulation",
     "difficulty": "Normal",
@@ -3045,7 +3045,7 @@
     "distractors": [
       "Diastole",
       "Isovolumetrisk relaxation",
-      "Ejektionsfraktion"
+      "Fyllnadsfasen"
     ],
     "topic": "apotekare_hjarta_cirkulation",
     "difficulty": "Normal",
@@ -3171,7 +3171,7 @@
     "distractors": [
       "Ökad fyllnad ger svagare sammandragning",
       "Ökad frekvens ger större slagvolym",
-      "Ökat efterbelastning ger snabbare hjärtfrekvens"
+      "Ökad efterbelastning ger snabbare hjärtfrekvens"
     ],
     "topic": "apotekare_hjarta_cirkulation",
     "difficulty": "Normal",
@@ -3390,7 +3390,7 @@
   {
     "id": "apo_hjarta_43",
     "type": "mc",
-    "prompt": "Vilket hormon frisätts från binjurebarken på stimulering av angiotensin II?",
+    "prompt": "Vilket hormon frisätts från binjurebarken när angiotensin II stimulerar den?",
     "correct": "Aldosteron",
     "distractors": [
       "Adrenalin",
@@ -3993,11 +3993,11 @@
     "id": "apo_hjarta_86",
     "type": "mc",
     "prompt": "Vilken distributionsvolym har ett läkemedel som stannar i blodbanan?",
-    "correct": "Liten",
+    "correct": "Cirka 5 liter",
     "distractors": [
-      "Mycket stor",
-      "Måttligt stor",
-      "Oberäknelig"
+      "Cirka 15 liter",
+      "Cirka 40 liter",
+      "Cirka 200 liter"
     ],
     "topic": "apotekare_hjarta_cirkulation",
     "difficulty": "Normal",
@@ -4426,7 +4426,7 @@
   {
     "id": "apo_gi_17",
     "type": "mc",
-    "prompt": "Vad heter tunntarmens veckade slemhinneutskott?",
+    "prompt": "Vad heter tunntarmens fingerlika slemhinneutskott?",
     "correct": "Villi",
     "distractors": [
       "Kryptor",
@@ -4762,7 +4762,7 @@
   {
     "id": "apo_gi_41",
     "type": "mc",
-    "prompt": "Vad heter leverns funktionella enhet?",
+    "prompt": "Vad heter leverns minsta strukturella enhet?",
     "correct": "Leverlobulus",
     "distractors": [
       "Nefronet",
@@ -5015,7 +5015,7 @@
     "id": "apo_gi_59",
     "type": "mc",
     "prompt": "Vad kallas ett läkemedel vars nedbrytning nästan helt begränsas av leverns blodflöde?",
-    "correct": "Höggradigt extraherat läkemedel",
+    "correct": "Högextraherat läkemedel",
     "distractors": [
       "Lågextraherat läkemedel",
       "Nollte ordningens läkemedel",
@@ -5607,7 +5607,7 @@
     "distractors": [
       "Leverlobulus",
       "Alveolen",
-      "Nefrostomat"
+      "Njurpapillen"
     ],
     "topic": "apotekare_njurar_utsondring",
     "difficulty": "Normal",
@@ -5635,7 +5635,7 @@
     "distractors": [
       "Vasa recta",
       "Peritubulära nätverket",
-      "Arcuata-kärlen"
+      "Bågartärerna"
     ],
     "topic": "apotekare_njurar_utsondring",
     "difficulty": "Normal",
@@ -5784,7 +5784,7 @@
   {
     "id": "apo_njure_14",
     "type": "mc",
-    "prompt": "Vilket vitamin aktiverar njuren i sitt sista steg?",
+    "prompt": "Vilket vitamin får sitt sista aktiveringssteg i njuren?",
     "correct": "D-vitamin",
     "distractors": [
       "K-vitamin",
@@ -5826,12 +5826,12 @@
   {
     "id": "apo_njure_17",
     "type": "mc",
-    "prompt": "Vilken storlek på molekyler filtreras fritt i njurens kärlnystan?",
-    "correct": "Molekyler under ungefär 5000 dalton",
+    "prompt": "Var går den ungefärliga övre gränsen i molekylvikt för fri filtration i njurens kärlnystan?",
+    "correct": "Ungefär 5000 dalton",
     "distractors": [
-      "Molekyler över ungefär 70000 dalton",
-      "Molekyler över ungefär 40000 dalton",
-      "Molekyler över ungefär 100000 dalton"
+      "Ungefär 200 dalton",
+      "Ungefär 70000 dalton",
+      "Ungefär 500000 dalton"
     ],
     "topic": "apotekare_njurar_utsondring",
     "difficulty": "Normal",
