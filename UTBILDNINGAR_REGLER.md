@@ -43,7 +43,8 @@ först för arbetsterapeut (`blandade`) och sjuksköterska (`blandade_sjukskoter
 
 Finns idag för: arbetsterapeut, sjuksköterska, fysioterapeut, biomedicinsk
 analytiker, röntgensjuksköterska, medicinsk sekreterare, logoped, tandläkare,
-läkare (tillagt i 0.9.159; utbildningen är färdigbyggd sedan 0.9.161). Saknas medvetet för Allmänt (bara FC-ämnen → tom pool). Lägg till valet
+läkare (tillagt i 0.9.159; utbildningen är färdigbyggd sedan 0.9.161),
+apotekare (tillagt i 0.9.162, utbildningen färdigbyggd samtidigt). Saknas medvetet för Allmänt (bara FC-ämnen → tom pool). Lägg till valet
 så snart utbildningen har minst två MC/TF-ämnen.
 
 **Så lägger du till det för en ny utbildning – enda steget som behövs:**
@@ -88,7 +89,7 @@ någon lista behöver utökas.
 
 | Utbildning | `value` (data-edu) | Status idag |
 |---|---|---|
-| Apotekare | `apotekare` | tom → platshållare |
+| Apotekare | `apotekare` | KLAR – 5 byggda ämnen |
 | Arbetsterapeut | `arbetsterapeut` | **rörs ej** (separat) |
 | Audionom | `audionom` | tom → platshållare |
 | Biomedicinsk analytiker | `biomedicinsk_analytiker` | tom → platshållare |

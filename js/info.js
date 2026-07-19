@@ -190,6 +190,15 @@ const EDUCATIONS = [
     { label: 'Huvud-hals: kärl & nerver',   file: './data/tandlakare.json', topic: 'tandlakare_huvud_hals_karl_nerver' },
     { label: 'Salivkörtlar & oral fysiologi', file: './data/tandlakare.json', topic: 'tandlakare_salivkortlar_oral_fys' },
   ]},
+  // Apotekar-ämnena ligger alla i en delad fil (data/apotekare.json),
+  // åtskilda av postens topic-fält → varje rad filtreras via `topic`.
+  { name: 'Apotekare', topics: [
+    { label: 'Cell, receptorer & signalering', file: './data/apotekare.json', topic: 'apotekare_cell_receptorer' },
+    { label: 'Nervsystemet & autonom fysiologi', file: './data/apotekare.json', topic: 'apotekare_nervsystem_autonom' },
+    { label: 'Hjärta & cirkulation',        file: './data/apotekare.json', topic: 'apotekare_hjarta_cirkulation' },
+    { label: 'Mag-tarmkanal & lever',       file: './data/apotekare.json', topic: 'apotekare_magtarm_lever' },
+    { label: 'Njurar & utsöndring',         file: './data/apotekare.json', topic: 'apotekare_njurar_utsondring' },
+  ]},
   // Biomedicinsk analytiker-ämnena ligger alla i en delad fil
   // (data/biomedicinsk_analytiker.json), åtskilda av postens topic-fält.
   { name: 'Biomedicinsk analytiker', topics: [

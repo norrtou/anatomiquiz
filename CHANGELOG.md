@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.162
+- **Apotekare byggd i sin helhet – alla 5 ämnen, 500 nya MC-frågor.** *Cell, receptorer & signalering*, *Nervsystemet & autonom fysiologi*, *Hjärta & cirkulation*, *Mag-tarmkanal & lever* och *Njurar & utsöndring* – 100 frågor styck i den nya delade filen `data/apotekare.json` (prefix `apotekare_`). Ämnesindelningen följer `UTBILDNINGAR_REGLER.md` och linserna fysiologi/struktur → läkemedelsmål → ADME-relevans → effekt & biverkan.
+- **0 fel och 0 varningar i `validate_quiz.py`.** Längdbias per ämne 13–28 %, omvänd längdbias 15–29 %. Distraktorerna skrevs som konkreta, trovärdiga fel i samma längd och register som rätt svar redan från start (§2.12) – inga saneringssvep behövdes i efterhand. Antals-paritet handkollad på alla 14 frågor med räkneord (tre subenheter i G-proteinet, två budbärare från fosfolipas C, tre processer i renal utsöndring m.fl.). Alla 100 frågor i varje ämne kontrollerade unika inom ämnet.
+- **Ämnena byggda för apotekare, inte som allmän organanatomi.** Anatomin ligger som underlag för farmakologin genomgående: receptorklasserna kopplas till svarens tidsskala och till kända läkemedel, cirkulationsämnet bär även distribution och plasmaproteinbindning, mag-tarm/lever bär absorption, förstapassagemetabolism och CYP-interaktioner, och njurämnet bär clearance, halveringstid, laddnings-/underhållsdos och dosjustering vid njursvikt.
+- `getQuestionsPath()` fick regeln `topic.startsWith('apotekare_')` → `./data/apotekare.json`. Fem nya rader i `js/info.js` statistiklista.
+- **Apotekare får "Slumpade frågor" (MC)** (`blandade_apotekare`) enligt det återanvändbara mönstret – poolen är 500 MC-frågor. Ämnesordningen i `#topic`: slumpvalet överst, sedan bokstavsordning (Cell, Hjärta, Mag-tarmkanal, Nervsystemet, Njurar).
+- **`#topic`-scaffolden för apotekare är helt tom** och ersatt av en kommentar. `UTBILDNINGAR_REGLER.md` uppdaterad: statusraden visar KLAR och apotekare står med i listan över utbildningar med slumpval.
+- VERSION/APP_VERSION/index.html- och info.html-cachebuster → 0.9.162.
+
 ## 0.9.161
 - **Läkare batch 4 – de basvetenskapliga tvärsnitten, 300 nya MC-frågor. Utbildningen är därmed färdigbyggd (18 av 18 ämnen).** *Histologi*, *Embryologi* och *Cell- & membranfysiologi* – 100 frågor styck. `data/lakare.json` rymmer nu 1800 frågor och slumppoolen 1900 inklusive det äldre ämnet *Blandad anatomi/fysiologi*, som ligger orört kvar.
 - **0 fel och 0 varningar i `validate_quiz.py`.** Längdbias per nytt ämne 21–36 %. Två distraktorer fastnade på självutpekande-regeln genom formuleringen "en annan vävnadstyp" respektive "en annan jons gradient" och skrevs om; övriga träffar var absolut-ord som hedgades. Antals-paritet handkollad maskinellt på alla räkneords-frågor (fyra grundvävnader, tre groddblad, tre kollagentyper m.fl.).
