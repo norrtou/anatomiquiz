@@ -225,7 +225,22 @@ Skriptet är facit för *formtells* (§2.13), men följande feltyper är osynlig
 
 **6. Genus- och kongruensfel på latinska/grekiska lånord.** Återkommer i alla filer: *ett* membran (inte "den alveolokapillära membranen"), *ett* neuron (inte "en neuron"), *ett* taggutskott, *ett* rörelsesegment, *ett* tubulussegment. Se §1.3.
 
-**7. Osynliga tecken.** Mjukt bindestreck (U+00AD) hittades inuti svarsalternativ i fyra datafiler ("Sakrokoccygeal­leden", "Grupp­funktion"). Syns inte men bryter sökning och strängmatchning. **Test:** `grep -c $'\xc2\xad' data/*.json` efter varje större redigering.
+**7. Prompten frågar efter något annat än svaret ger – eller är rent obegriplig.** Alternativen kan vara helt korrekta medan själva frågan är trasig. Hittat i läkarsvepet 2026-07-19:
+  - `lak_buk_72` "Vilken **del av mjälten** är den röda pulpans huvudsakliga **uppgift**?" – frågar efter en del, svaret är en uppgift. Ska vara "Vad är den röda pulpans huvudsakliga uppgift i mjälten?".
+  - `lak_rygg_81` "Vilken **struktur skadas** vid en Chance-fraktur?" med `correct` som beskriver frakturens förlopp, inte en struktur.
+  - `lak_rygg_58` "**Var mellan vilka nivåer** är ryggmärgens blodförsörjning mest sårbar?" – två frågeord i samma mening.
+  - `lak_buk_80` "Vilket lager omger njuren **närmast** och innehåller fettvävnad?" – motsäger sig själv: närmast är capsula fibrosa, fettet är capsula adiposa. Distraktorn blev då lika rätt som svaret.
+  - **Test:** läs prompten ensam, utan alternativ, och formulera svaret själv. Matchar din svarstyp `correct`s svarstyp (struktur/uppgift/tidpunkt/mekanism)? Bär prompten en kvalificerare som gör en distraktor sann?
+
+**8. Fel böjning av latinska/grekiska fackord i själva svarstexten.** Skild från genusfelen i punkt 6 – här är ordet rätt men formen fel, och det ser ut som kunskap:
+  - "de omyeliniserade **nodierna**" (heter Ranviers **noder**) – fanns i två skilda ämnen, `lak_neuro_74` och `lak_cell_37`.
+  - "en linje mellan **tuberae** ischiadica" (heter **tubera** ischiadica) i `lak_backen_23`.
+  - "Sprängfraktur av **atlas ringar**" (Jefferson-frakturen spränger **atlasringen**) i `lak_rygg_80`.
+  - "Apoptotisk **kaspad**kaskad" (heter **kaspas**) i `lak_cell_96`.
+  - "den **bruskkam** där trachea delar sig" (danska/norska; heter **brosk**kam) i `lak_thorax_26`.
+  - **Test:** varje latinsk plural och varje sammansättning med ett fackord ska gå att slå upp i den formen. Grep gärna filen efter formen efteråt – "nodier" fanns på två ställen, inte ett.
+
+**9. Osynliga tecken.** Mjukt bindestreck (U+00AD) hittades inuti svarsalternativ i fyra datafiler ("Sakrokoccygeal­leden", "Grupp­funktion"). Syns inte men bryter sökning och strängmatchning. **Test:** `grep -c $'\xc2\xad' data/*.json` efter varje större redigering.
 
 ### 2.13 VALIDATORN ÄR FACIT – BYGG RÄTT FRÅN BÖRJAN, KÖR SKRIPTET EFTER VARJE ÄNDRING
 **KRITISKT (kostnadsregel). Att sanera formtells i efterhand, fil för fil, bränner enorma mängder av användarens tokens/pengar. Preventionen är gratis; saneringen är dyr.**
@@ -519,6 +534,10 @@ När nya ämnen läggs till:
 **DESSA REGLER ÄR BINDANDE FÖR ALL ARBETE PÅ ANATOMIQUIZ.**
 
 **Senast uppdaterad:** 2026-07-19
+**Version:** 1.5 – kodifierade två feltyper ur läkarsvepet (2026-07-19), §2.12b punkt 7 och 8:
+- §2.12b:7 prompten frågar efter något annat än svaret ger, eller bär en kvalificerare som gör en distraktor sann (`lak_buk_72`, `lak_rygg_81`, `lak_buk_80`)
+- §2.12b:8 fel böjning av latinska/grekiska fackord i svarstexten ("nodierna", "tuberae ischiadica", "kaspadkaskad") – greppa filen, samma form återkom i flera ämnen
+
 **Version:** 1.4 – kodifierade feltyperna ur granskningssvepet (fysioterapeut, BMA, medicinsk sekreterare), på uttrycklig begäran ("minnet räcker ej"):
 - §2.9 ekoregeln utökad: ekot räknas även när ordet böjts om (*medialis* → "Medial", *supinatio* → "Supination") – svaret ska vara termens BETYDELSE, inte termen i svensk språkdräkt. Med undantaget att böjningsfrågor (*vertebra* → "Vertebrae") är korrekta
 - §2.12b ny: sju feltyper som validatorn INTE fångar, med verkliga fråge-id – framför allt distraktorer som råkar vara sanna (två rätta svar), uppfunna fackuttryck, distraktorer från fel ämnesområde och osynliga tecken
