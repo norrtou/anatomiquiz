@@ -338,15 +338,16 @@ samt *rotationrörelse* och *Contralateral*.
 - `grepp:q9` distraktorn om sträckt handled är sann för kraftgrepp. Omskriven.
 - Språk: *käkningen* → tuggfunktionen; "Vilken är det största benet" → "Vilket".
 
-### ⚠️ TRE ÖPPNA BESLUTSPUNKTER
+### ⚠️ TVÅ ÖPPNA BESLUTSPUNKTER (punkt 3 åtgärdad 0.9.185)
 
 **2. `moho_34` och `moho_50` har identisk prompt** ("Anpassningsprocess") med olika definitioner
 på baksidan. Att slå ihop dem kräver ställningstagande till MOHO-terminologin – gissa inte.
 
-**3. `riktningar.json` använder engelska riktningstermer** – *Superficial*, *Internal*, *External*,
-*Central*, *Peripheral* – där TA har superficialis, internus, externus, centralis (§6.1).
-Rör ett tjugotal frågor i samma fil; bör göras som ETT samlat pass, annars blir filen
-halvkonverterad. `q202` är redan rättad till *Superficialis*, så filen är inkonsekvent i dag.
+**3. ✅ ÅTGÄRDAT 0.9.185 – engelska riktningstermer i `riktningar.json`.** Superficial →
+Superficialis, Internal → Internus, External → Externus, Peripheral → Perifer (svenska, jfr
+"perifera nervsystemet"). 25 fält i 22 frågor i ETT samlat pass. Central lämnades – etablerad
+svenska. ⚠️ Bytet skapade en språkparitets-tell (rätt svar blev det enda på latin) i q25, q26,
+q173, q325, q326 – distraktorerna där ligger nu också på latin.
 
 **1. Påhittade svenska muskelnamn**
 

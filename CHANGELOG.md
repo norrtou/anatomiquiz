@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.185
+- **De engelska riktningstermerna i `riktningar.json` är utbytta mot Terminologia Anatomica-former.** Filen var den enda i arbetsterapeutens material som bar dem, och den var dessutom halvkonverterad sedan tidigare: `q202` rättades till *Superficialis* i 0.9.181 medan resten stod kvar på engelska. 25 fält i 22 frågor är nu rättade i ett samlat pass, så att hela filen är konsekvent.
+- **Superficial → Superficialis** (16 förekomster), **Internal → Internus**, **External → Externus**. Formerna paras nu rätt: *superficialis/profundus* och *internus/externus* är båda TA-par, och *Profundus* stod redan på latin i filen – det var motsvarigheten som saknades.
+- **Peripheral → Perifer.** Här är svenska rätt form och inte latin: appen skriver redan "perifera nervsystemet" i `neurologi.json`, och *Central* som frågan utgår från är likaså etablerad svenska. Paret är alltså svenskt medan de två andra paren är latinska – varje par är internt konsekvent, vilket är det som avgör.
+- **Konverteringen skapade en ny formtell som rättades i samma pass.** När rätt svar blev *Externus* eller *Superficialis* medan distraktorerna stod kvar som "Ulnar", "Proximal" och "Medial" blev rätt svar det enda alternativet på latin – man kunde välja rätt på formen utan att kunna termen (§2.9 språkparitet). Distraktorerna i `q25`, `q26`, `q173`, `q325` och `q326` ligger nu i samma språkregister som svaret: *Ulnaris*, *Proximalis*, *Ventralis*, *Medialis*, *Fibularis*, *Plantaris*, *Lateralis*. Detta är samma fälla som §2.9 varnar för – att rätta en tell skapar lätt en ny.
+- **Längdbias kontrollerad efter bytet:** alla sex ämnen i filen ligger under gränsen (riktningar 30 %, begrepp 28 %, rörelser 31 %, planer 17 %, positioner 7 %, ytor 0 %).
+- *Anterior*, *Posterior*, *Superior*, *Inferior* och *Ipsilateral* är oförändrade – de är latinska nominativformer respektive etablerad svenska, inte engelska.
+- VERSION/APP_VERSION/index.html-, info.html- och versionshistorik.html-cachebuster → 0.9.185.
+
 ## 0.9.184
 - **Faktagranskningen av arbetsterapeutens quiz är klar – hela utbildningen genomläst fråga för fråga.** Därmed är arbetsterapeut-svepet avslutat i sin helhet: punkt 1–7 av åtgärdslistan är genomförda. Utbildningen har nu samma granskningsnivå som de elva som gicks igenom tidigare (se `project_factcheck_sweep`). De två skyddade filerna, `medicinsk_terminologi.json` och `studenters_flashcards.json`, är lämnade orörda enligt tidigare besked.
 - **Sista passet omfattade `riktningar.json` i sin helhet samt de tre flashcard-filerna och de två bildfrågefilerna.** Flashcard-filerna om muskler, MOHO och OTIPM var sakligt korrekta – ursprung, fästen och innervationer stämmer, och OTIPM:s fyra interventionsmodeller är rätt återgivna. Bildfrågorna var också rena: samtliga 155 har tom frågetext som layoutregeln kräver, och inget översiktsnamn används som distraktor till en mer specifik bild.

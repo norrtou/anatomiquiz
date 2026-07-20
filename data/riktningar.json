@@ -266,7 +266,7 @@
     "correct": "Inferior",
     "distractors": [
       "Anterior",
-      "Superficial",
+      "Superficialis",
       "Posterior"
     ],
     "topic": "riktningar",
@@ -307,7 +307,7 @@
     "prompt": "Vilket är motsatsen till 'Proximal'?",
     "correct": "Distal",
     "distractors": [
-      "Superficial",
+      "Superficialis",
       "Anterior",
       "Profundus"
     ],
@@ -318,12 +318,12 @@
   {
     "id": "q25",
     "type": "mc",
-    "prompt": "Vilket är motsatsen till 'Superficial'?",
+    "prompt": "Vilket är motsatsen till 'Superficialis'?",
     "correct": "Profundus",
     "distractors": [
       "Anterior",
-      "Proximal",
-      "Fibular"
+      "Proximalis",
+      "Fibularis"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -332,12 +332,12 @@
   {
     "id": "q26",
     "type": "mc",
-    "prompt": "Vilket är motsatsen till 'Internal'?",
-    "correct": "External",
+    "prompt": "Vilket är motsatsen till 'Internus'?",
+    "correct": "Externus",
     "distractors": [
-      "Ulnar",
-      "Proximal",
-      "Ventral"
+      "Ulnaris",
+      "Proximalis",
+      "Ventralis"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -347,7 +347,7 @@
     "id": "q27",
     "type": "mc",
     "prompt": "Vilket är motsatsen till 'Central'?",
-    "correct": "Peripheral",
+    "correct": "Perifer",
     "distractors": [
       "Medial",
       "Posterior",
@@ -1407,7 +1407,7 @@
     "id": "q105",
     "type": "mc",
     "prompt": "Hudytan är ____ jämfört med musklerna",
-    "correct": "Superficial",
+    "correct": "Superficialis",
     "distractors": [
       "Profundus",
       "Distal",
@@ -1449,7 +1449,7 @@
     "prompt": "Djupa strukturer är ____ jämfört med hudmärken",
     "correct": "Profundus",
     "distractors": [
-      "Superficial",
+      "Superficialis",
       "Anterior",
       "Distal"
     ],
@@ -1822,7 +1822,7 @@
   {
     "id": "q138",
     "type": "tf",
-    "prompt": "Superficial betyder nära ytan",
+    "prompt": "Superficialis betyder nära ytan",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2117,7 +2117,7 @@
     "correct": "Elevation",
     "distractors": [
       "Medial",
-      "Superficial",
+      "Superficialis",
       "Distal"
     ],
     "topic": "begrepp",
@@ -2257,7 +2257,7 @@
   {
     "id": "q172",
     "type": "mc",
-    "prompt": "Vad är motsatsen till Superficial?",
+    "prompt": "Vad är motsatsen till Superficialis?",
     "correct": "Profundus",
     "distractors": [
       "Lateral",
@@ -2271,10 +2271,10 @@
     "id": "q173",
     "type": "mc",
     "prompt": "Vad är motsatsen till Profundus?",
-    "correct": "Superficial",
+    "correct": "Superficialis",
     "distractors": [
-      "Medial",
-      "Fibular"
+      "Medialis",
+      "Fibularis"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -4176,7 +4176,7 @@
     "prompt": "Vilket ord betyder 'Mot mittlinjen'?",
     "correct": "Adduktion",
     "distractors": [
-      "Internal",
+      "Internus",
       "Retraktion",
       "Utåtrotation"
     ],
@@ -4204,7 +4204,7 @@
     "prompt": "Vilket ord betyder 'Nedåt'?",
     "correct": "Inferior",
     "distractors": [
-      "Superficial",
+      "Superficialis",
       "Dorsal",
       "Rotation"
     ],
@@ -4261,7 +4261,7 @@
     "correct": "Lateral",
     "distractors": [
       "Posterior",
-      "Superficial",
+      "Superficialis",
       "Protraktion"
     ],
     "topic": "begrepp",
@@ -4274,8 +4274,8 @@
     "prompt": "Vilket ord betyder 'Närmare utgångspunkten'?",
     "correct": "Proximal",
     "distractors": [
-      "Superficial",
-      "Internal",
+      "Superficialis",
+      "Internus",
       "Depression"
     ],
     "topic": "begrepp",
@@ -4300,11 +4300,11 @@
     "id": "q325",
     "type": "mc",
     "prompt": "Vilket ord betyder 'Vid ytan'?",
-    "correct": "Superficial",
+    "correct": "Superficialis",
     "distractors": [
-      "Plantar",
-      "Ventral",
-      "Medial"
+      "Plantaris",
+      "Ventralis",
+      "Medialis"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -4316,9 +4316,9 @@
     "prompt": "Vilket ord betyder 'I djupet'?",
     "correct": "Profundus",
     "distractors": [
-      "Eversion",
-      "Flexion",
-      "Plantarflexion"
+      "Superficialis",
+      "Ventralis",
+      "Lateralis"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -4402,7 +4402,7 @@
     "distractors": [
       "Pronation",
       "Eversion",
-      "Internal"
+      "Internus"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -4627,7 +4627,7 @@
   {
     "id": "q351",
     "type": "tf",
-    "prompt": "Superficial är en riktningsterm",
+    "prompt": "Superficialis är en riktningsterm",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4656,7 +4656,7 @@
     "distractors": [
       "Inåtrotation",
       "Profundus",
-      "Internal"
+      "Internus"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -4684,7 +4684,7 @@
     "distractors": [
       "Eversion",
       "Tibial",
-      "Internal"
+      "Internus"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -4736,7 +4736,7 @@
     "prompt": "Motsatsen till Protraktion är?",
     "correct": "Retraktion",
     "distractors": [
-      "Superficial",
+      "Superficialis",
       "Radial",
       "Dorsalflexion"
     ],
@@ -4803,7 +4803,7 @@
   {
     "id": "q364",
     "type": "mc",
-    "prompt": "Motsatsen till Superficial är?",
+    "prompt": "Motsatsen till Superficialis är?",
     "correct": "Profundus",
     "distractors": [
       "Depression",
@@ -4822,7 +4822,7 @@
     "distractors": [
       "Radial",
       "Retraktion",
-      "External"
+      "Externus"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",

@@ -1,5 +1,17 @@
 [
   {
+    "version": "0.9.185",
+    "items": [
+      "**De engelska riktningstermerna i `riktningar.json` är utbytta mot Terminologia Anatomica-former.** Filen var den enda i arbetsterapeutens material som bar dem, och den var dessutom halvkonverterad sedan tidigare: `q202` rättades till *Superficialis* i 0.9.181 medan resten stod kvar på engelska. 25 fält i 22 frågor är nu rättade i ett samlat pass, så att hela filen är konsekvent.",
+      "**Superficial → Superficialis** (16 förekomster), **Internal → Internus**, **External → Externus**. Formerna paras nu rätt: *superficialis/profundus* och *internus/externus* är båda TA-par, och *Profundus* stod redan på latin i filen – det var motsvarigheten som saknades.",
+      "**Peripheral → Perifer.** Här är svenska rätt form och inte latin: appen skriver redan \"perifera nervsystemet\" i `neurologi.json`, och *Central* som frågan utgår från är likaså etablerad svenska. Paret är alltså svenskt medan de två andra paren är latinska – varje par är internt konsekvent, vilket är det som avgör.",
+      "**Konverteringen skapade en ny formtell som rättades i samma pass.** När rätt svar blev *Externus* eller *Superficialis* medan distraktorerna stod kvar som \"Ulnar\", \"Proximal\" och \"Medial\" blev rätt svar det enda alternativet på latin – man kunde välja rätt på formen utan att kunna termen (§2.9 språkparitet). Distraktorerna i `q25`, `q26`, `q173`, `q325` och `q326` ligger nu i samma språkregister som svaret: *Ulnaris*, *Proximalis*, *Ventralis*, *Medialis*, *Fibularis*, *Plantaris*, *Lateralis*. Detta är samma fälla som §2.9 varnar för – att rätta en tell skapar lätt en ny.",
+      "**Längdbias kontrollerad efter bytet:** alla sex ämnen i filen ligger under gränsen (riktningar 30 %, begrepp 28 %, rörelser 31 %, planer 17 %, positioner 7 %, ytor 0 %).",
+      "*Anterior*, *Posterior*, *Superior*, *Inferior* och *Ipsilateral* är oförändrade – de är latinska nominativformer respektive etablerad svenska, inte engelska.",
+      "VERSION/APP_VERSION/index.html-, info.html- och versionshistorik.html-cachebuster → 0.9.185."
+    ]
+  },
+  {
     "version": "0.9.184",
     "items": [
       "**Faktagranskningen av arbetsterapeutens quiz är klar – hela utbildningen genomläst fråga för fråga.** Därmed är arbetsterapeut-svepet avslutat i sin helhet: punkt 1–7 av åtgärdslistan är genomförda. Utbildningen har nu samma granskningsnivå som de elva som gicks igenom tidigare (se `project_factcheck_sweep`). De två skyddade filerna, `medicinsk_terminologi.json` och `studenters_flashcards.json`, är lämnade orörda enligt tidigare besked.",
@@ -28,26 +40,6 @@
       "**Språk- och terminologirättelser:** *käkningen* → **tuggfunktionen**, *Os ischi* → **os ischii** (kvarvarande förekomst i `ben:q70`), samt \"Vilken är det största/minsta benet\" → **\"Vilket\"**.",
       "**Kvar av faktagranskningen:** slutet av `riktningar.json` samt de tre flashcard-filerna och de två bildfrågefilerna. Öppen fråga att ta ställning till: ett tiotal frågor i `handen.json` efterfrågar \"det svenska namnet\" på handmuskler som saknar etablerat svenskt namn – \"Kort tumflexor\" är det exempel CLAUDE_REGLER §1.2 uttryckligen pekar ut som en påhittad term, och §2.5 säger att sådana namnfrågor ska strykas.",
       "VERSION/APP_VERSION/index.html-, info.html- och versionshistorik.html-cachebuster → 0.9.183."
-    ]
-  },
-  {
-    "version": "0.9.182",
-    "items": [
-      "**Arbetsterapeutens quiz ger nu 0 fel och 0 varningar i validatorn.** De två defekter som lämnades öppna i 0.9.181 är åtgärdade: sant/falskt-frågornas svarsfördelning och längdparitet mellan alternativen. Utbildningen har därmed samma mekaniska kvalitetsnivå som de elva som granskades tidigare.",
-      "**321 sant/falskt-frågor omskrivna till falska påståenden – 84 % \"Sant\" blev 53 %.** Skevheten var den grövsta formtellen i hela utbildningen: en student kunde svara \"Sant\" rakt igenom och få nära full poäng utan ämneskunskap. Värst var `muskler_funktion` (44 av 44 sanna), `handen_samling_fakta` (38 av 38) och `osteologi_verify` (20 av 20). Per fil: handen 94 → 52 %, ben 92 → 52 %, grepp 97 → 46 %, muskler 100 → 54 %.",
-      "**Varje vändning byter ut EN sak mot ett konkret fel** – fel nerv (\"M. opponens pollicis innerveras av N. ulnaris\"), fel benrad (\"Os hamatum är ett tarsalben\"), fel riktning (\"Distal betyder närmast bålen\"), fel tal (\"Det finns 8 halskotor\"). Ingen fråga gjordes falsk genom att stoppa in \"inte\" i en sann mening; det ger en tillgjord formulering som avslöjar sig själv och testar ingen kunskap.",
-      "**Längdbias borta i samtliga ämnen: 30 ämnen över 40 % → 0.** Cirka 200 distraktorer har byggts ut med genuint sakinnehåll, aldrig fyllnadsord. Skevaste ämnet i hela utbildningen är nu `skuldra_funktion` på 40 %. Rätt svar har inte kortats maskinellt någonstans.",
-      "**`muskler_rörelse_applicering` (94 %) var strukturellt och inte kosmetiskt.** De 100 frågorna har ett enda alternativ vardera, där rätt svar är en utförlig vardagsscen och distraktorn en kortare. Distraktorerna är nu skrivna som lika utförliga scener – \"Att krama hårt om ett cykelstyre med båda händerna under en lång cykeltur på en gropig grusväg\" i stället för \"Att krama hårt om ett cykelstyre\". Samma mall låg i `riktningar:rörelser` (100 av 179 frågor) och åtgärdades där också.",
-      "**62 sant/falskt-frågor var märkta `\"type\": \"mc\"` och drogs i praktiken aldrig.** En tvåalternativsfråga med fel typ faller ur båda urvalspoolerna i `js/app.js` – `tfPool` kräver `type === 'tf'` och `mcPool` kräver tre till fem alternativ – så frågorna plockades bara upp av nödfallssamplingen när poolerna inte räckte. De kringgick dessutom takregeln på 10 % sant/falskt-frågor per omgång. 59 låg i tentaplugg, 3 i handen och 3 i medicinsk sekreterares fil.",
-      "**`data/skuldran.json` saknades i svepets fillista** trots att den laddas av appen. Den var därför osvept även för föregående versions absolut-ordsgenomgång: 8 frågor med \"Endast flexion och extension, inga andra rörelser möjliga\" och liknande är nu omskrivna till konkreta fel med samma antal uppräknade poster som rätt svar.",
-      "**Ett verkligt faktafel hittat på vägen:** `studier_q319` om strukturella proteiner i bindväv hade distraktorerna \"Castin och karotin\" och \"Fibrin och elastan\". *Castin* existerar inte och *elastan* är ett textilmaterial, inte ett kroppseget protein. Ersatta med \"Kasein och karotin\" och \"Fibrin och keratin\".",
-      "**Språkrättelser i samma pass:** *Vertebrorna* → **Kotorna**, *Mot centerlinjen* → **Mot kroppens mittlinje**, *Arbetstagares* → **Arbetstagarens**, *\"ett kraftfullt sparkrörelse\"* → **\"en kraftfull sparkrörelse\"**, *\"abduktion av alla finger\"* → **\"alla fingrar\"**, *os ischi* → **os ischii**, *lårbenshuvet* → **lårbenshuvudet**. 63 frågor inledde dessutom sin frågetext med \"Sant eller falskt: \" – redundant när svarsalternativen står direkt under.",
-      "**`CLAUDE_REGLER.md` uppdaterad till v1.8** med tre nya feltyper, var och en med verkliga fråge-id: sant/falskt-skevhet som formtell med målet 40–60 % per ämne (§2.4), sant/falskt-fråga märkt som `mc` (§2.4), och fällan att en rättad tell skapar en ny (§2.9).",
-      "**Sista punkten är värd att notera:** fyra frågor löd \"Gör Triceps brachii flexion eller extension?\" med alternativen `Extension`/`Flexion`. Det är en tillåten symmetrisk fråga, men \"Extension\" är alltid två tecken längre. När distraktorn förlängdes för att rätta längdbiasen bröts symmetrin och frågan blev **självbesvarande** i stället. De är omskrivna till öppen form – \"Vilken rörelse i armbågsleden utför Triceps brachii?\" – med tre jämnlånga alternativ.",
-      "**`scripts/validate_quiz.py` flaggar nu felmärkta sant/falskt-frågor som blockerande fel.** Sant/falskt-balansen kontrolleras däremot fortfarande för hand: gränsen beror på ämnets storlek och en maskinregel hade gett falska utslag på små ämnen.",
-      "**Två nya arbetsverktyg:** `scripts/tf_flip.py` (vänder en sant-fråga till falsk och håller serialiseringen byte-identisk) och `scripts/patch_distractors.py` (byter distraktorer, räknar stränglängderna själv och rapporterar vilka frågor som fortfarande har rätt svar längst).",
-      "**Kvar för arbetsterapeut:** 42 distraktorer som inleds med \"Bara\"/\"Alla\" och som behöver läsas för hand, samt den egentliga faktagranskningen ämne för ämne mot källorna.",
-      "VERSION/APP_VERSION/index.html-, info.html- och versionshistorik.html-cachebuster → 0.9.182."
     ]
   }
 ]
