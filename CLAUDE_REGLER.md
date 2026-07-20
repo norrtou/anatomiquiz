@@ -22,6 +22,25 @@ Detta dokument definierar ALLA regler och instruktioner för att bygga och under
   - femur (INTE thighbone)
   - fibula (INTE smaller calf bone)
 
+- **⚠️ Påhittat `os`-prefix – de flesta bennamn bär INTE "os" (hittat 2026-07-20 i arbetsterapeut).**
+  `os` hör till namnet bara när Terminologia Anatomica har det där. Att sätta dit det "för att
+  det låter latinskt" ger en term som inte existerar, och den sprider sig till distraktorerna.
+  - **FEL:** os femur, os tibia, os fibula, os humerus, os radius, os ulna, os patella,
+    os mandibula, os maxilla/os maxillaris, os clavicula, os scapula, os sternum.
+  - **RÄTT:** femur, tibia, fibula, humerus, radius, ulna, patella, mandibula, maxilla,
+    clavicula, scapula, sternum.
+  - **`os` hör till namnet i bl.a.:** os frontale, os parietale, os temporale, os occipitale,
+    os sphenoidale, os ethmoidale, os nasale, os zygomaticum, os hyoideum, os sacrum,
+    os coccygis, os coxae, os ilium, os ischii, os pubis, handrots-/fotrotsbenen
+    (os scaphoideum, os lunatum, os pisiforme, os capitatum, os naviculare, os cuboideum …)
+    samt bentyperna (os longum, os breve, os planum, os irregulare) och ossa-pluralerna
+    (ossa carpi, ossa metacarpi, ossa tarsi, ossa metatarsi).
+  - Verkliga fynd: `ben.json` q3/q5/q6/q7/q11/q13/q377 ("Os mandibula", "Os maxilla"),
+    `tentaplugg.json` studier_q59/q60/q97/q292/q293 ("os femur", "Os tibia", "os patella", "Os ulna").
+  - **Dubbel skada:** felet skapar dessutom en språkparitets-tell (§2.9) när `correct` står naket
+    ("Maxilla") bland os-prefixade distraktorer – då pekar formen ut svaret.
+  - **Test:** `grep -rn -oi "os \(femur\|tibia\|fibula\|humerus\|radius\|ulna\|patella\|mandibula\|maxilla\|clavicula\|scapula\|sternum\|vertebra\|costa\|calcaneus\|talus\)\b" data/*.json`
+
 ### 1.2 Svenska Benämningar
 - Använd etablerade svenska namn när de finns
 - Exempel: lårbenet (femur), överarmsben (humerus), armbågsknotan (olecranon)
@@ -164,6 +183,19 @@ En fråga utan relevanta alternativ är värdelös och förstör quizet. Inga fi
   1. **Negations-svansen.** När du stryker ett absolut-ord genom att lägga till en kontrast som slutar med rätt svarets nyckelord ("…, inte ligament eller kapsel", "…, utan bestäms av kostens sammansättning") blir distraktorn *självutpekande* i stället (validatorn flaggar `,\s*(inte|utan)\s+<rätt-svarets ord>$`). Fix: avsluta INTE distraktorn med ", inte/utan <det rätt svaret handlar om>". Skriv om till ett fristående felpåstående.
   2. **Omvänd längdbias vid förkortning.** När du kortar bort utfyllnad ur distraktorerna blir `correct` plötsligt längst i för många frågor (fysio-träning gick till 49 % längdbias). Fix: efter att ha kortat distraktorer, **mät längdbias per ämne igen** och förläng vid behov den längsta distraktorn i några frågor med genuint innehåll (inte fyllnadsord) tills andelen ligger < 40 %.
   3. **Nytt absolut-ord i omskrivningen.** "uteslutande" och "samtliga" glöms lätt bort som absolut-ord (de ÄR med i validatorns lista). En omskrivning som "…för samtliga deltagare" återinför tellen. Fix: läs listan i §2.13 och kör validatorn efter patchen.
+- **⚠️ Kvasi-absoluta ord: "bara" och "alla" – samma tell, men fångas ALDRIG av validatorn (hittat 2026-07-20).**
+  Validatorns ordlista är avsiktligt exakt (endast/enbart/alltid/aldrig/inga/ingen/inget/samtliga/uteslutande).
+  Distraktorer som säger **"Bara hjässbenet"**, **"Bara två av regionerna"**, **"Alla revben lika mycket"**,
+  **"Alla barn når milstolparna exakt samtidigt"** eller **"Alla äldre får demens"** är precis lika strykbara
+  utan sakkunskap – men går igenom med 0 varningar. Verkliga fynd: `ben.json` q27/q141/q143/q318,
+  `grepp.json` q9, `olika_aldrar.json` oa_q18/oa_q75/oa_q83.
+  - **Detta får INTE läggas in i `validate_quiz.py`.** Mätt projektbrett 2026-07-20: 544 frågor träffar på
+    `\b(bara|alla)\b` i en distraktor, och de allra flesta är legitima sakpåståenden
+    ("Nej, eftersom bara fri substans kan transporteras", "Ledningshinder i alla frekvenser").
+    En maskinregel skulle dränka de äkta fynden i brus. **Kontrolleras för hand.**
+  - **Test:** grep:a filen efter `Bara `/`Alla ` i distraktorer och läs dem med gissa-testet (§2.12).
+    Är påståendet en absolut avgränsning ("bara X", "alla Y gör Z") → skriv om till konkret fel.
+    Är det ett vanligt sakpåstående där ordet råkar ingå → lämna.
 - **Omvänd längdbias räknas också:** rätt svar får inte heller vara det enda *mycket korta* alternativet. `rtg_columna_55` hade `correct: "CT"` (2 tecken) mot en 62 teckens distraktor – lika avslöjande som motsatsen. Håll alla alternativ i samma storleksordning.
 
 ### 2.10 BILDFRÅGOR MÅSTE HA TOM PROMPT
@@ -409,6 +441,9 @@ innehållet faktiskt vilar på men som ingen besökare kan se är **inte** en re
   - "Ingen av dessa"
   - "Annan struktur"
   - Slumpmässiga ord för att fylla ut
+- **Även omskrivningarna är filler** (hittat 2026-07-20, `tentaplugg.json` studier_q253:
+  "Inget av ovanstående är relevant"). Förbjudna varianter: "Inget/Ingen av **ovanstående**",
+  "Inget/Ingen av **alternativen**". Validatorns `FILLER`-regex täcker dem sedan 2026-07-20.
 
 ### 6.4 Oincompleta Meningar
 - **ALDRIG:** "Vilken muskel adduktion?" (felanvänd ordklasse)
@@ -559,7 +594,14 @@ När nya ämnen läggs till:
 
 **DESSA REGLER ÄR BINDANDE FÖR ALL ARBETE PÅ ANATOMIQUIZ.**
 
-**Senast uppdaterad:** 2026-07-19
+**Senast uppdaterad:** 2026-07-20
+**Version:** 1.6 – kodifierade tre feltyper ur arbetsterapeut-svepet (2026-07-20):
+- §1.1 påhittat `os`-prefix på bennamn som inte bär det ("os femur", "Os mandibula") – med lista över
+  vilka namn som faktiskt tar `os`, och grep-testet. Ger dessutom en språkparitets-tell i §2.9
+- §2.9 kvasi-absoluta ord "bara"/"alla" – samma tell som absolut-orden men **medvetet utanför validatorn**
+  (544 projektbreda träffar, mest legitima) → manuell kontroll, inte maskinregel
+- §6.3 filler-varianterna "Inget av ovanstående/alternativen" – nu i validatorns `FILLER`-regex
+
 **Version:** 1.5 – kodifierade två feltyper ur läkarsvepet (2026-07-19), §2.12b punkt 7 och 8:
 - §2.12b:7 prompten frågar efter något annat än svaret ger, eller bär en kvalificerare som gör en distraktor sann (`lak_buk_72`, `lak_rygg_81`, `lak_buk_80`)
 - §2.12b:8 fel böjning av latinska/grekiska fackord i svarstexten ("nodierna", "tuberae ischiadica", "kaspadkaskad") – greppa filen, samma form återkom i flera ämnen

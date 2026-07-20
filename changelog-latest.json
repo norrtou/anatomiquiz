@@ -1,5 +1,22 @@
 [
   {
+    "version": "0.9.181",
+    "items": [
+      "**Arbetsterapeutens quiz svept mot CLAUDE_REGLER för första gången.** Utbildningen byggdes före de flesta quizreglerna och hade aldrig granskats: utgångsläget var 24 blockerande fel och 111 varningar. Efter svepet är det **0 blockerande fel**, och de varningar som återstår är uteslutande längdbias – alla andra defekttyper är nollade.",
+      "**42 autogenererade frågor raderade ur `data/ben.json`** (445 → 403). Hela batchen bar `\"source\": \"generated\"` och 24 av dem var äkta dubbletter av befintliga Osteologi-frågor – där satt samtliga blockerande fel. Batchen återanvände dessutom samma distraktortriplett upp till fem gånger. Id-luckorna q326–q367 lämnas.",
+      "**82 frågor med absolut-ord enbart i distraktorerna omskrivna** i tio filer. \"Endast kraftgreppen\", \"Inga grepp påverkas\" och \"Alltid ett tecken på sjukdom\" går att stryka utan att kunna ämnet. Varje distraktor är nu ett konkret och trovärdigt fel i samma längd och register som rätt svar.",
+      "**54 frågor med kategorifel-distraktorer omskrivna.** Frågan gällde vad en term betyder medan alla tre alternativ var kategorietiketter (\"En muskelgrupp\", \"En benstruktur\", \"En nervväg\") – strykbara utan sakkunskap. Alternativen är nu de *andra* termernas riktiga definitioner, så varje alternativ är sant om någon term och bara sakkunskap skiljer dem åt.",
+      "**Defekten fanns i tre skepnader till.** Utöver de två uppenbara etikettuppsättningarna hittades etiketter med ortssuffix (\"En muskelgrupp i underarmen\"), en tredje uppsättning (\"En anatomisk plats\", \"En motsatt rörelse\") och vaga kategorisvar i ben.json där rätt svar var en namngiven struktur men ett alternativ bara sa \"Ett ben\". Samtliga är omskrivna.",
+      "**Påhittade `os`-prefix rättade i 12 frågor.** `os femur`, `Os mandibula`, `Os maxilla`, `Os tibia`, `os patella` och `Os ulna` finns inte i Terminologia Anatomica – prefixet hör till namnet bara där TA har det. Felet gav dessutom en formtell: i `ben:q5` stod rätt svar \"Maxilla\" naket bland os-prefixade distraktorer och pekade ut sig självt.",
+      "**Två anglicismer och en felstavning rättade:** *'Superficial'* → **superficialis** (TA-form), *'os ischi'* → **os ischii**, och *mellanfottsben* → **mellanfotsben** i nio frågor.",
+      "**CLAUDE_REGLER.md uppdaterad till v1.6** med tre nya feltyper, var och en med verkliga fråge-id: påhittat os-prefix (§1.1), kvasi-absoluta orden \"bara\"/\"alla\" (§2.9) och filler-varianten \"Inget av ovanstående\" (§6.3).",
+      "**\"bara\"/\"alla\" läggs medvetet INTE in i validatorn.** Mätt projektbrett träffar mönstret 544 frågor, och de flesta är legitima sakpåståenden (\"Nej, eftersom bara fri substans kan transporteras\"). En maskinregel hade dränkt de äkta fynden i brus, så defekten är dokumenterad som manuell kontroll i stället.",
+      "**`scripts/validate_quiz.py` fångar nu fler filler-varianter** – \"Inget/Ingen av ovanstående\" och \"Inget/Ingen av alternativen\" utöver \"av dessa\".",
+      "**Granskningen är inte avslutad.** Sant/falskt-frågornas svarsfördelning och längdparitet i ett antal ämnen är ännu inte åtgärdade, och en faktagranskning ämne för ämne mot källorna återstår för den här utbildningen.",
+      "VERSION/APP_VERSION/index.html-, info.html- och versionshistorik.html-cachebuster → 0.9.181."
+    ]
+  },
+  {
     "version": "0.9.180",
     "items": [
       "**Info-sidan hämtar inte längre hela CHANGELOG.md.** För att visa tre versioner i teasern laddade den 425 KB markdown och parsade allt i webbläsaren. Nu hämtas `changelog-latest.json` på 10 KB i stället – en minskning med 41 gånger. Versionshistoriksidan hämtar fortfarande hela filen, vilket är rimligt eftersom den faktiskt visar allt.",
@@ -22,21 +39,6 @@
       "Full SEO-paritet med index.html: unik title och description, canonical, robots, OG/Twitter, JSON-LD (WebPage + BreadcrumbList), CSP, favicon och manifest.",
       "**JSON-LD-descriptionen på info.html rättad:** den sa \"Bakgrund, syfte och versionshistorik\", vilket slutade stämma när historiken flyttade. Står nu \"Bakgrund, syfte, omfattning och källor\".",
       "VERSION/APP_VERSION/index.html- och info.html-cachebuster → 0.9.179."
-    ]
-  },
-  {
-    "version": "0.9.178",
-    "items": [
-      "**Källistan i info.html granskad och byggd ut från 6 till 17 poster.** Sektionen \"Källor och kvalitetssäkring\" redovisade tidigare sex källor medan appens innehåll vilar på ett åttiotal. Ingen befintlig post har tagits bort.",
-      "**Fem formfel i den befintliga listan rättade** mot `SEO_REGLER.md` §6b: listan var inte alfabetisk, FIPAT-posten saknade förlag, *Terminologia Anatomica* skrevs med versal titel i stället för husformatets *Terminologia anatomica*, tre källor stod som nakna domäner i stället för länkar, och Socialstyrelsens post hade en kortare titel än den redan granskade posten på kunskapsbankssidorna.",
-      "**Elva källor tillagda.** Sex hämtades ur repots egna, redan faktagranskade `kb-sources`-block (Bojsen-Møller, Hall & Hall, Kandel, Lindskog, Paulsen & Waschke, Standring). Fem slogs upp: Aspelin & Pettersson, Boron & Boulpaep, Lännergren m.fl., Moore/Dalley/Agur och Sand m.fl. – den sistnämnda är appens enskilt största källa med 1 400 frågor och saknades helt.",
-      "**Två upplagor kontrollerade mot verkligheten:** Boron & Boulpaep 4:e uppl. är ännu inte utgiven (pre-order till december 2027), så 3:e uppl. (2016) citeras. *Clinically Oriented Anatomy* citeras som 8:e uppl. (2018) eftersom 9:e uppl. bytt titel till *Moore's…* med Dalley och Agur som författare – 8:e matchar det `source`-fälten anger.",
-      "**Sorteringen följer svensk kollation** (å/ä/ö sist), vilket placerar Lännergren efter Lindskog.",
-      "**Ny regel: `CLAUDE_REGLER.md` §3.2d – använda källor ska skrivas in i info.html.** En källa som innehållet vilar på men som ingen besökare kan se är inte en redovisad källa; `source`-fältet i JSON är internt. Regeln slår också fast att det hellre ska bli för många källor än för få, att goda akademiska källor ska prioriteras, att bibliografiska data aldrig får gissas, och att källor aldrig raderas på eget bevåg.",
-      "**Todo för resten:** `scripts/kallista_info_html_todo.md` listar de 59 källor som återstår att föra in, med antal frågor per källa, census-kommando, skördekommando för `kb-sources`-blocken, tre dubbletter att slå ihop (Ross & Pawlina, Hoffbrand, Purves) och fyra specialfall (ISO 389/8253 är standarder; Vårdhandboken, Läkemedelsräkning för sjuksköterskor och Journalföring… saknar upphovsman i `source`).",
-      "**Regelförtydligande i `CLAUDE_REGLER.md` §2.11:** att fråga samma ord åt båda håll är alltid tillåtet, i alla filer – bidirektionella par ska aldrig flaggas som dubblettfel.",
-      "**Datumen i info.html uppdaterade:** \"Senast uppdaterad\" gick från 7 juli till 20 juli 2026 och JSON-LD:ns `dateModified` från 2026-06-27 till 2026-07-20 – båda hade halkat efter innehållet.",
-      "VERSION/APP_VERSION/index.html- och info.html-cachebuster → 0.9.178."
     ]
   }
 ]

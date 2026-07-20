@@ -1,6 +1,9 @@
 # Arbetsterapeut – kvalitetssvep enligt CLAUDE_REGLER.md
 
-**Status:** planerat, INGET utfört. Skapad 2026-07-19.
+**Status:** punkt 1, 3a, 3c, 3d, 4 UTFÖRDA 2026-07-20. Kvar: 2 (TF-balans), 3b (längdbias),
+5, 6, 7b. Skapad 2026-07-19.
+**Utgångsläget 24 blockerande fel → 0.** 82 absolut-ords-varningar → 0.
+54 kategorifel-frågor omskrivna. Kvarvarande varningar är uteslutande längdbias (punkt 3b).
 **Bakgrund:** arbetsterapeut byggdes före de flesta quizreglerna och har aldrig svepts.
 Alla åtgärder nedan är godkända av användaren utom där annat anges.
 
@@ -28,7 +31,7 @@ Filer: `ben` (445), `blodomloppet` (100), `ergonomi` (50), `grepp` (99), `handen
 
 ---
 
-## 1. Radera `generated`-batchen i `ben.json` (42 frågor)
+## 1. ✅ KLAR – raderade `generated`-batchen i `ben.json` (42 frågor)
 
 Alla 42 har `"source": "generated"`: **q326–q367** (löpande, inga hål).
 
@@ -41,7 +44,8 @@ Varför bort:
 - Faktafel: `q331 "Vad heter käkbenet på latin? → Maxilla"` – käkben är tvetydigt,
   mandibula lika giltigt. Försvinner med batchen.
 
-Efter: ben.json 445 → 403 frågor, alla med `"source": "Osteologi"`. Id-luckorna q326–q367
+Utfört 2026-07-20: ben.json 445 → 403 frågor, alla 24 blockerande fel borta. Var:
+ben.json 445 → 403 frågor, alla med `"source": "Osteologi"`. Id-luckorna q326–q367
 lämnas (enligt regeln om att lämna id-luckor). Kontrollera att de 24 dubbletterna är borta.
 
 ## 2. TF-balans – rätta till ~60/40 per ämne
@@ -95,7 +99,7 @@ bara sätta "inte" i meningen).
 Metod enligt `feedback_sweep_cheapest_method_first`: EN samlad dump-och-patch per fil,
 inte ämne för ämne. Låt skript räkna stränglängder – gissa aldrig för hand.
 
-### 3a. Absolut-ord enbart i distraktorerna (82 frågor, §2.9)
+### 3a. ✅ KLAR – absolut-ord enbart i distraktorerna (82 frågor, §2.9)
 
 Ordlistan är exakt: **endast, enbart, alltid, aldrig, inga, ingen, inget, samtliga, uteslutande**.
 
@@ -116,74 +120,99 @@ Ordlistan är exakt: **endast, enbart, alltid, aldrig, inga, ingen, inget, samtl
 ⚠️ Vid rättning: se §2.9 om de tre fällorna – negations-svans, **omvänd längdbias**
 (mät om efter förkortning) och återinfört absolut-ord.
 
-### 3b. Längdbias > 40 % (28 ämnen)
+### 3b. Längdbias > 40 % (29 ämnen) – OGJORD
 
-Mät om per ämne efter varje patch. Både för lång OCH för kort `correct` räknas som tell.
+Siffrorna nedan är **ommätta 2026-07-20**, efter punkt 1/3a/4. Mät om per ämne efter varje patch.
+Både för lång OCH för kort `correct` räknas som tell.
 
 | % | Ämne | (längst/antal) |
 |---|---|---|
 | **94** | muskler:muskler_rörelse_applicering | 94/100 |
-| 91 | handen:handen_muskler_extrinsic | 10/11 |
-| 89 | ben:osteologi_cells | 8/9 |
-| 80 | handen:handen_ben_metakarpaler | 4/5 |
-| 80 | ben:osteologi_ligaments | 4/5 |
+| **91** | handen:handen_muskler_extrinsic | 10/11 |
+| **89** | ben:osteologi_cells | 8/9 |
+| **80** | handen:handen_ben_metakarpaler | 4/5 |
 | 67 | tentaplugg:studier_ergonomi | 6/9 |
 | 67 | ben:osteologi_orientation | 4/6 |
 | 64 | ben:osteologi_joints | 7/11 |
 | 60 | handen:handen_muskler_funktioner | 3/5 |
 | 60 | handen:handen_grepptyper | 3/5 |
-| 58 | ergonomi:ergonomi | 29/50 |
-| 56 | olika_aldrar:olika_aldrar | 56/100 |
+| 60 | ben:osteologi_ligaments | 3/5 |
 | 55 | ben:osteologi_types | 6/11 |
 | 54 | ledtyper:ledtyper_rorelse | 7/13 |
 | 53 | tentaplugg:studier_fysiologi | 29/55 |
-| 51 | riktningar:rörelser | 91/179 |
-| 50 | neurologi:nervsystemet_banor | 6/12 |
+| 52 | ergonomi:ergonomi | 26/50 |
+| 52 | ben:osteologi_upper | 14/27 |
+| 47 | riktningar:rörelser | 85/179 |
 | 50 | muskler:muskler_flexion_vs_extension | 10/20 |
 | 50 | ledtyper:ledtyper_synovial | 3/6 |
 | 50 | handen:handen_ligament | 2/4 |
 | 50 | ben:osteologi_summary | 3/6 |
 | 50 | ben:osteologi_pelvis | 4/8 |
-| 46 | ben:osteologi_upper | 18/39 |
-| 45 | tentaplugg:studier_hand | 10/22 |
 | 45 | ben:osteologi_placement | 20/44 |
+| 44 | olika_aldrar:olika_aldrar | 44/100 |
 | 43 | tentaplugg:studier_åldrande | 9/21 |
 | 43 | handen:handen_muskler_region | 3/7 |
 | 43 | handen:handen_intrinsic_func | 3/7 |
+| 42 | neurologi:nervsystemet_banor | 5/12 |
+| 41 | tentaplugg:studier_hand | 9/22 |
+| 41 | ben:osteologi_kranium | 12/29 |
 
-Obs: `ben:osteologi_cells`, `osteologi_joints`, `osteologi_summary`, `osteologi_pelvis`,
-`osteologi_upper`, `osteologi_placement` står även i punkt 2 – TF-omskrivningen kan
-ändra siffrorna. **Kör punkt 1 och 2 först, mät sedan om.**
+Förändringar mot 2026-07-19 (effekt av punkt 1/3a): `olika_aldrar` 56 → 44,
+`ergonomi` 58 → 52, `ben:osteologi_ligaments` 80 → 60, `ben:osteologi_upper` 46 → 52
+(batchen som togs bort bar korta distraktorer). **Nytt ämne över gränsen:**
+`ben:osteologi_kranium` 41 % – fanns inte i listan 2026-07-19 eftersom `generated`-batchen
+späddes ut den. `tentaplugg:studier_hand` 45 → 41. Efter punkt 3c: `riktningar:rörelser` 51 → 47
+(tabellraden nedan är uppdaterad), `ben:osteologi_types`/`osteologi_placement` oförändrade –
+kategorifelen låg i ämnen som ändå inte drev längdbiasen.
 
-### 3c. Kategorifel-distraktorer i `riktningar.json` (35 frågor)
+⚠️ **`muskler:muskler_rörelse_applicering` 94 % är strukturellt, inte kosmetiskt.** De 100
+frågorna har bara ETT alternativ var (`correct` = en lång vardagsscen, distraktorn en kortare).
+Det går inte att fixa genom att fila på längder – distraktorerna måste skrivas som lika
+utförliga vardagsscener, eller frågorna byggas om. Störst enskild post i hela punkt 3b.
 
-Frågan gäller vad en rörelse betyder, men alla tre distraktorer är kategorietiketter i
-stället för rörelser → strykbara utan sakkunskap (§2.2).
+### 3c. ✅ KLAR – kategorifel-distraktorer (54 frågor, inte 35)
 
-- Set `En benstruktur / En muskelgrupp / En nervväg` (20×):
-  q180, q181, q182, q183, q184, q187, q188, q189, q190, q191, q192, q193, q194, q195,
-  q196, q197, q198, q199, q202, q203
-- Set `En anatomisk riktning / En kroppsposition / Ett rörelseplans namn` (15×):
-  q61, q62, q63, q64, q65, q66, q67, q68, q69, q70, q71, q72, q73, q74, q75
+Frågan gällde vad en rörelse/term betyder, men distraktorerna var kategorietiketter i stället
+för betydelser → strykbara utan sakkunskap (§2.2). Utfört 2026-07-20.
 
-Ersätt med konkreta felaktiga rörelsebeskrivningar enligt §2.12 (byt mekanism/riktning:
-"Sträckning av en led", "Rörelse från mittlinjen", "Vridning inåt kring längdaxeln" …).
+**Planen underskattade omfattningen.** Listan byggdes på exakta strängmatchningar och missade
+tre grupper. Verkligt utfall:
 
-Obs: q180–q184 och q61–q65 täcker samma begrepp men ligger i **olika ämnen** – tillåtet,
-unikhet gäller bara inom ämnet (§2.11). Rör inte det.
+| Grupp | Antal | Frågor |
+|---|---|---|
+| Set `En benstruktur / En muskelgrupp / En nervväg` | 20 | q180–q184, q187–q199, q202, q203 |
+| Set `En anatomisk riktning / En kroppsposition / Ett rörelseplans namn` | 15 | q61–q75 |
+| **MISSAD:** samma etiketter med ortssuffix (`En muskelgrupp **i underarmen**`) | 2 | q185, q186 |
+| **MISSAD:** tredje etikettvarianten `En kroppslig position / En anatomisk plats / En motsatt rörelse` | 6 | q76–q81 |
+| **MISSAD:** vaga kategorisvar i `ben.json` (`Ett ben`, `Ett eget ben`, `Ett ben i bäckenet`) | 11 | q48, q49, q60, q75, q81, q83, q92, q94, q96, q118, q123 |
 
-### 3d. Självutpekande distraktor (1 st, §2.2)
+Åtgärd enligt §2.9-mönstret: distraktorerna är nu **de andra termernas riktiga definitioner**,
+så att varje alternativ är ett sant påstående om *någon* term och det enda sättet att välja rätt
+är att veta vilken. Exempel:
 
-`muskler:q225` – distraktorn `"Scapula enbart, utan fäste på humerus…"` skyltar med att
-den är fel. Skriv om till ett trovärdigt felaktigt ursprung/fäste.
+    Vad betyder 'Superficialis'?
+      ✔ Nära ytan     ✘ Långt från ytan | Nära mittlinjen | Nära bålen
 
-## 4. Stavfel: mellanfottsben → mellanfotsben (9 frågor i `ben.json`)
+Sidofynd rättade i samma pass: `riktningar:q202` frågade efter engelska *'Superficial'* – TA-formen
+är **superficialis** (§1.1). `ben:q75` frågade efter *'os ischi'* – rätt form är **os ischii**.
+
+⚠️ **Lärdom för resten av svepet:** en åtgärdslista byggd på exakta strängmatchningar missar
+varianter av samma defekt. Sök på *mönstret* (`^(En|Ett) <kategoriord>`), inte på strängen.
+Efterkontrollen `PAT.match` över alla 14 filerna ger nu 0 träffar.
+
+### 3d. ✅ KLAR – självutpekande distraktor (1 st, §2.2)
+
+`muskler:q225` – distraktorn `"Scapula enbart, utan fäste på humerus…"` skyltade med att
+den var fel. Utfört 2026-07-20: alla tre distraktorerna omskrivna till trovärdiga felaktiga
+ursprung (`Scapula och clavicula` / `Humerus och ulna` / `Ulna och radius`). Samma mönster
+fanns i `muskler:q240` och rättades där också.
+
+## 4. ✅ KLAR – stavfel: mellanfottsben → mellanfotsben (9 frågor i `ben.json`)
 
 q340, q342, q359, q364, q365, **q375, q376, q377, q398**
 
-⚠️ q375–q398 ligger **utanför** generated-batchen (q326–q367), så de 4 sista överlever
-punkt 1 och måste rättas för hand. Rätt form är *mellanfotsben*
-(jfr `studenters_flashcards.json` som stavar rätt).
+q340/q342/q359/q364/q365 försvann med generated-batchen; q375/q376/q377/q398 rättades för hand
+till *mellanfotsben*. Verifierat: 0 träffar på `mellanfott` i `data/ben.json`.
 
 ## 5. Städning / verktyg (lägre prioritet)
 
@@ -196,6 +225,8 @@ punkt 1 och måste rättas för hand. Rätt form är *mellanfotsben*
   Överväg att ta bort dem ur SKIP nu när de följer §2.10.
 - **Ny validatorregel: TF-balans.** Varna när ett ämne med ≥8 TF-frågor har ≥70 % (eller
   ≤30 %) "Sant". Hade fångat punkt 2 automatiskt. Kodifiera samtidigt i CLAUDE_REGLER §2.4.
+- ✅ **`FILLER`-regexen utökad 2026-07-20** med "Inget/Ingen av ovanstående" och
+  "Inget/Ingen av alternativen". Kodifierat i CLAUDE_REGLER §6.3.
 
 ## 6. Kvar att göra som INTE är utrett
 
@@ -206,6 +237,38 @@ råkar vara sanna*, vilket inget skript hittar. Stickprov i `ledtyper.json` (52 
 läst i sin helhet) visade inga faktafel – bara mekaniska tells.
 
 Gör den granskningen efter punkt 1–3, annars faktagranskas text som ändå skrivs om.
+
+## 7. Fynd 2026-07-20 som INTE stod i den ursprungliga planen
+
+Tre feltyper dök upp under arbetet med punkt 1/3a/4. Alla tre är nu kodifierade i
+`CLAUDE_REGLER.md` (v1.6) enligt §5.6.
+
+### 7a. ✅ ÅTGÄRDAT – påhittat `os`-prefix på latinska bennamn (§1.1)
+
+`os femur`, `Os mandibula`, `Os maxilla`, `Os tibia`, `os patella`, `Os ulna` – termer som
+inte existerar i Terminologia Anatomica. Rättade: `ben.json` q3, q5, q6, q7, q11, q13, q377
+och `tentaplugg.json` studier_q59, q60, q97, q292, q293.
+
+**Dubbel skada:** i `ben.json` q5 stod `correct: "Maxilla"` naket bland os-prefixade
+distraktorer → formen pekade ut svaret (språkparitet, §2.9). Rättningen löste båda.
+
+Sveptes över alla 14 arbetsterapeut-filer med grep-testet i §1.1 – 0 träffar kvar.
+
+### 7b. ⚠️ KVAR – kvasi-absoluta ord "bara" / "alla" (§2.9)
+
+Samma tell som absolut-orden, men **medvetet utanför validatorn**: mätt projektbrett
+2026-07-20 träffar `\b(bara|alla)\b` i **544 frågors distraktorer**, och de flesta är
+legitima sakpåståenden ("Nej, eftersom bara fri substans kan transporteras"). En maskinregel
+hade dränkt de äkta fynden. **Kontrolleras för hand.**
+
+De som låg i frågor jag ändå rörde under 3a är fixade (`ben` q27/q141/q143/q318, `grepp` q9,
+`olika_aldrar` oa_q18/oa_q75/oa_q83). **Resten av arbetsterapeut-filerna är osvepta för detta.**
+Görs lämpligen i samma pass som punkt 3b, eftersom båda kräver läsning av alternativen.
+
+### 7c. ✅ ÅTGÄRDAT – filler-variant som validatorn missade (§6.3)
+
+`tentaplugg:studier_q253` hade distraktorn "Inget av ovanstående är relevant". Ersatt med ett
+konkret felaktigt påstående. `FILLER`-regexen täcker nu varianten; 0 träffar kvar projektbrett.
 
 ## Version & commit
 

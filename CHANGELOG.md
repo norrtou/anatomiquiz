@@ -1,5 +1,19 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.181
+- **Arbetsterapeutens quiz svept mot CLAUDE_REGLER för första gången.** Utbildningen byggdes före de flesta quizreglerna och hade aldrig granskats: utgångsläget var 24 blockerande fel och 111 varningar. Efter svepet är det **0 blockerande fel**, och de varningar som återstår är uteslutande längdbias – alla andra defekttyper är nollade.
+- **42 autogenererade frågor raderade ur `data/ben.json`** (445 → 403). Hela batchen bar `"source": "generated"` och 24 av dem var äkta dubbletter av befintliga Osteologi-frågor – där satt samtliga blockerande fel. Batchen återanvände dessutom samma distraktortriplett upp till fem gånger. Id-luckorna q326–q367 lämnas.
+- **82 frågor med absolut-ord enbart i distraktorerna omskrivna** i tio filer. "Endast kraftgreppen", "Inga grepp påverkas" och "Alltid ett tecken på sjukdom" går att stryka utan att kunna ämnet. Varje distraktor är nu ett konkret och trovärdigt fel i samma längd och register som rätt svar.
+- **54 frågor med kategorifel-distraktorer omskrivna.** Frågan gällde vad en term betyder medan alla tre alternativ var kategorietiketter ("En muskelgrupp", "En benstruktur", "En nervväg") – strykbara utan sakkunskap. Alternativen är nu de *andra* termernas riktiga definitioner, så varje alternativ är sant om någon term och bara sakkunskap skiljer dem åt.
+- **Defekten fanns i tre skepnader till.** Utöver de två uppenbara etikettuppsättningarna hittades etiketter med ortssuffix ("En muskelgrupp i underarmen"), en tredje uppsättning ("En anatomisk plats", "En motsatt rörelse") och vaga kategorisvar i ben.json där rätt svar var en namngiven struktur men ett alternativ bara sa "Ett ben". Samtliga är omskrivna.
+- **Påhittade `os`-prefix rättade i 12 frågor.** `os femur`, `Os mandibula`, `Os maxilla`, `Os tibia`, `os patella` och `Os ulna` finns inte i Terminologia Anatomica – prefixet hör till namnet bara där TA har det. Felet gav dessutom en formtell: i `ben:q5` stod rätt svar "Maxilla" naket bland os-prefixade distraktorer och pekade ut sig självt.
+- **Två anglicismer och en felstavning rättade:** *'Superficial'* → **superficialis** (TA-form), *'os ischi'* → **os ischii**, och *mellanfottsben* → **mellanfotsben** i nio frågor.
+- **CLAUDE_REGLER.md uppdaterad till v1.6** med tre nya feltyper, var och en med verkliga fråge-id: påhittat os-prefix (§1.1), kvasi-absoluta orden "bara"/"alla" (§2.9) och filler-varianten "Inget av ovanstående" (§6.3).
+- **"bara"/"alla" läggs medvetet INTE in i validatorn.** Mätt projektbrett träffar mönstret 544 frågor, och de flesta är legitima sakpåståenden ("Nej, eftersom bara fri substans kan transporteras"). En maskinregel hade dränkt de äkta fynden i brus, så defekten är dokumenterad som manuell kontroll i stället.
+- **`scripts/validate_quiz.py` fångar nu fler filler-varianter** – "Inget/Ingen av ovanstående" och "Inget/Ingen av alternativen" utöver "av dessa".
+- **Granskningen är inte avslutad.** Sant/falskt-frågornas svarsfördelning och längdparitet i ett antal ämnen är ännu inte åtgärdade, och en faktagranskning ämne för ämne mot källorna återstår för den här utbildningen.
+- VERSION/APP_VERSION/index.html-, info.html- och versionshistorik.html-cachebuster → 0.9.181.
+
 ## 0.9.180
 - **Info-sidan hämtar inte längre hela CHANGELOG.md.** För att visa tre versioner i teasern laddade den 425 KB markdown och parsade allt i webbläsaren. Nu hämtas `changelog-latest.json` på 10 KB i stället – en minskning med 41 gånger. Versionshistoriksidan hämtar fortfarande hela filen, vilket är rimligt eftersom den faktiskt visar allt.
 - **Nytt skript `scripts/generate_changelog_teaser.py`** som klipper ut de senaste posterna. Dess parsning är verifierad byte-identisk med `parseChangelog()` i js/changelog.js, så teasern och historiksidan kan inte visa olika innehåll.

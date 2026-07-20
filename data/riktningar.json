@@ -809,9 +809,9 @@
     "prompt": "Vad är 'Flexion'?",
     "correct": "Minska vinkeln mellan två ben",
     "distractors": [
-      "En kroppsposition",
-      "En anatomisk riktning",
-      "Ett rörelseplans namn"
+      "Öka vinkeln mellan två ben",
+      "Rörelse bort från mittlinjen",
+      "Vridning kring längsaxeln"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -823,9 +823,9 @@
     "prompt": "Vad är 'Extension'?",
     "correct": "Öka vinkeln mellan två ben",
     "distractors": [
-      "En kroppsposition",
-      "En anatomisk riktning",
-      "Ett rörelseplans namn"
+      "Minska vinkeln mellan två ben",
+      "Rörelse mot mittlinjen",
+      "Böjning åt sidan i frontalplanet"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -837,9 +837,9 @@
     "prompt": "Vad är 'Hyperextension'?",
     "correct": "Sträcka längre än neutral position",
     "distractors": [
-      "En kroppsposition",
-      "En anatomisk riktning",
-      "Ett rörelseplans namn"
+      "Böja längre än neutral position",
+      "Sträcka tillbaka till neutral position",
+      "Rotera bortom neutral position"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -851,9 +851,9 @@
     "prompt": "Vad är 'Abduktion'?",
     "correct": "Rörelse bort från mittlinjen",
     "distractors": [
-      "En kroppsposition",
-      "En anatomisk riktning",
-      "Ett rörelseplans namn"
+      "Rörelse mot mittlinjen",
+      "Rörelse framåt i sagittalplanet",
+      "Vridning kring en längsaxel"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -865,9 +865,9 @@
     "prompt": "Vad är 'Adduktion'?",
     "correct": "Rörelse mot mittlinjen",
     "distractors": [
-      "En kroppsposition",
-      "En anatomisk riktning",
-      "Ett rörelseplans namn"
+      "Rörelse bort från mittlinjen",
+      "Rörelse bakåt i sagittalplanet",
+      "Höjning av en kroppsdel"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -879,9 +879,9 @@
     "prompt": "Vad är 'Lateralflexion'?",
     "correct": "Böjning åt sidan",
     "distractors": [
-      "En kroppsposition",
-      "En anatomisk riktning",
-      "Ett rörelseplans namn"
+      "Böjning framåt",
+      "Sträckning bakåt",
+      "Vridning åt sidan"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -893,9 +893,9 @@
     "prompt": "Vad är 'Inåtrotation'?",
     "correct": "Rotation inåt",
     "distractors": [
-      "En kroppsposition",
-      "En anatomisk riktning",
-      "Ett rörelseplans namn"
+      "Rotation utåt",
+      "Böjning inåt",
+      "Förskjutning inåt"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -907,9 +907,9 @@
     "prompt": "Vad är 'Utåtrotation'?",
     "correct": "Rotation utåt",
     "distractors": [
-      "En kroppsposition",
-      "En anatomisk riktning",
-      "Ett rörelseplans namn"
+      "Rotation inåt",
+      "Sträckning utåt",
+      "Förskjutning utåt"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -921,9 +921,9 @@
     "prompt": "Vad är 'Cirkumduktion'?",
     "correct": "Rörelse i cirkulär bana",
     "distractors": [
-      "En kroppsposition",
-      "En anatomisk riktning",
-      "Ett rörelseplans namn"
+      "Rörelse i rak linje",
+      "Rotation kring längsaxeln",
+      "Rörelse i ett enda plan"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -935,9 +935,9 @@
     "prompt": "Vad är 'Pronation'?",
     "correct": "Hand roterad nedåt",
     "distractors": [
-      "En kroppsposition",
-      "En anatomisk riktning",
-      "Ett rörelseplans namn"
+      "Hand roterad uppåt",
+      "Hand böjd nedåt i handleden",
+      "Hand förd åt sidan"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -949,9 +949,9 @@
     "prompt": "Vad är 'Supination'?",
     "correct": "Hand roterad uppåt",
     "distractors": [
-      "En kroppsposition",
-      "En anatomisk riktning",
-      "Ett rörelseplans namn"
+      "Hand roterad nedåt",
+      "Hand sträckt i handleden",
+      "Hand förd åt sidan"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -963,9 +963,9 @@
     "prompt": "Vad är 'Dorsalflexion'?",
     "correct": "Fot dragen uppåt",
     "distractors": [
-      "En kroppsposition",
-      "En anatomisk riktning",
-      "Ett rörelseplans namn"
+      "Fot tryckt nedåt",
+      "Fotsula vänd inåt",
+      "Fot förd åt sidan"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -977,9 +977,9 @@
     "prompt": "Vad är 'Plantarflexion'?",
     "correct": "Fot tryckt nedåt",
     "distractors": [
-      "En kroppsposition",
-      "En anatomisk riktning",
-      "Ett rörelseplans namn"
+      "Fot dragen uppåt",
+      "Fotsula vänd utåt",
+      "Fot vriden inåt"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -991,9 +991,9 @@
     "prompt": "Vad är 'Inversion'?",
     "correct": "Fotsula roterad inåt",
     "distractors": [
-      "En kroppsposition",
-      "En anatomisk riktning",
-      "Ett rörelseplans namn"
+      "Fotsula roterad utåt",
+      "Fot dragen uppåt",
+      "Fot tryckt nedåt"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -1005,9 +1005,9 @@
     "prompt": "Vad är 'Eversion'?",
     "correct": "Fotsula roterad utåt",
     "distractors": [
-      "En kroppsposition",
-      "En anatomisk riktning",
-      "Ett rörelseplans namn"
+      "Fotsula roterad inåt",
+      "Fot tryckt nedåt",
+      "Fot dragen uppåt"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -1019,9 +1019,9 @@
     "prompt": "'Elevation' innebär?",
     "correct": "Höja upp",
     "distractors": [
-      "En kroppslig position",
-      "En anatomisk plats",
-      "En motsatt rörelse"
+      "Sänka ner",
+      "Röra framåt",
+      "Röra bakåt"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -1033,9 +1033,9 @@
     "prompt": "'Depression' innebär?",
     "correct": "Sänka ner",
     "distractors": [
-      "En kroppslig position",
-      "En anatomisk plats",
-      "En motsatt rörelse"
+      "Höja upp",
+      "Röra framåt",
+      "Röra bakåt"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -1047,9 +1047,9 @@
     "prompt": "'Protraktion' innebär?",
     "correct": "Röra framåt",
     "distractors": [
-      "En kroppslig position",
-      "En anatomisk plats",
-      "En motsatt rörelse"
+      "Röra bakåt",
+      "Höja upp",
+      "Sänka ner"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -1061,9 +1061,9 @@
     "prompt": "'Retraktion' innebär?",
     "correct": "Röra bakåt",
     "distractors": [
-      "En kroppslig position",
-      "En anatomisk plats",
-      "En motsatt rörelse"
+      "Röra framåt",
+      "Höja upp",
+      "Sänka ner"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -1075,9 +1075,9 @@
     "prompt": "'Opposition' innebär?",
     "correct": "Tummen möter fingerspetsarna",
     "distractors": [
-      "En kroppslig position",
-      "En anatomisk plats",
-      "En motsatt rörelse"
+      "Tummen förs ut från handflatan",
+      "Tummen sträcks bakåt i basleden",
+      "Tummen förs mot pekfingrets bas"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -1089,9 +1089,9 @@
     "prompt": "'Reposition' innebär?",
     "correct": "Återgå till neutral position",
     "distractors": [
-      "En kroppslig position",
-      "En anatomisk plats",
-      "En motsatt rörelse"
+      "Föra tummen mot fingerspetsarna",
+      "Sträcka bortom neutral position",
+      "Vrida bortom neutral position"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -2364,9 +2364,9 @@
     "prompt": "Vad betyder 'Flexion'?",
     "correct": "Böjning av en led",
     "distractors": [
-      "En muskelgrupp",
-      "En benstruktur",
-      "En nervväg"
+      "Sträckning av en led",
+      "Vridning av en led",
+      "Rörelse från mittlinjen"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2378,9 +2378,9 @@
     "prompt": "Vad betyder 'Extension'?",
     "correct": "Sträckning av en led",
     "distractors": [
-      "En muskelgrupp",
-      "En benstruktur",
-      "En nervväg"
+      "Böjning av en led",
+      "Vridning av en led",
+      "Rörelse mot mittlinjen"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2392,9 +2392,9 @@
     "prompt": "Vad betyder 'Abduktion'?",
     "correct": "Rörelse från mittlinjen",
     "distractors": [
-      "En muskelgrupp",
-      "En benstruktur",
-      "En nervväg"
+      "Rörelse mot mittlinjen",
+      "Böjning av en led",
+      "Vridande rörelse"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2406,9 +2406,9 @@
     "prompt": "Vad betyder 'Adduktion'?",
     "correct": "Rörelse mot mittlinjen",
     "distractors": [
-      "En muskelgrupp",
-      "En benstruktur",
-      "En nervväg"
+      "Rörelse från mittlinjen",
+      "Sträckning av en led",
+      "Cirkulär rörelse"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2420,9 +2420,9 @@
     "prompt": "Vad betyder 'Rotation'?",
     "correct": "Vridande rörelse",
     "distractors": [
-      "En muskelgrupp",
-      "En benstruktur",
-      "En nervväg"
+      "Böjande rörelse",
+      "Cirkulär rörelse",
+      "Rörelse mot mittlinjen"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2434,9 +2434,9 @@
     "prompt": "Vad betyder 'Pronation'?",
     "correct": "Rotationen av hand eller fot nedåt",
     "distractors": [
-      "En muskelgrupp i underarmen",
-      "En benstruktur i handleden",
-      "En nervväg till foten"
+      "Rotationen av hand eller fot uppåt",
+      "Böjning av hand eller fot nedåt",
+      "Vridning av hand eller fot åt sidan"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2448,9 +2448,9 @@
     "prompt": "Vad betyder 'Supination'?",
     "correct": "Rotationen av hand eller fot uppåt",
     "distractors": [
-      "En muskelgrupp i underarmen",
-      "En benstruktur i handleden",
-      "En nervväg till foten"
+      "Rotationen av hand eller fot nedåt",
+      "Sträckning av hand eller fot uppåt",
+      "Vridning av hand eller fot åt sidan"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2462,9 +2462,9 @@
     "prompt": "Vad betyder 'Dorsalflexion'?",
     "correct": "Foten dras uppåt",
     "distractors": [
-      "En muskelgrupp",
-      "En benstruktur",
-      "En nervväg"
+      "Foten pressas nedåt",
+      "Fotsulorna vänds inåt",
+      "Fotsulorna vänds utåt"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2476,9 +2476,9 @@
     "prompt": "Vad betyder 'Plantarflexion'?",
     "correct": "Foten pressas nedåt",
     "distractors": [
-      "En muskelgrupp",
-      "En benstruktur",
-      "En nervväg"
+      "Foten dras uppåt",
+      "Fotsulorna vänds inåt",
+      "Fotsulorna vänds utåt"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2490,9 +2490,9 @@
     "prompt": "Vad betyder 'Inversion'?",
     "correct": "Fotsulorna vänds inåt",
     "distractors": [
-      "En muskelgrupp",
-      "En benstruktur",
-      "En nervväg"
+      "Fotsulorna vänds utåt",
+      "Foten dras uppåt",
+      "Foten pressas nedåt"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2504,9 +2504,9 @@
     "prompt": "Vad betyder 'Eversion'?",
     "correct": "Fotsulorna vänds utåt",
     "distractors": [
-      "En muskelgrupp",
-      "En benstruktur",
-      "En nervväg"
+      "Fotsulorna vänds inåt",
+      "Foten dras uppåt",
+      "Foten pressas nedåt"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2518,9 +2518,9 @@
     "prompt": "Vad betyder 'Cirkumduktion'?",
     "correct": "Cirkulär rörelse",
     "distractors": [
-      "En muskelgrupp",
-      "En benstruktur",
-      "En nervväg"
+      "Vridande rörelse",
+      "Rörelse framåt",
+      "Rörelse i ett plan"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2532,9 +2532,9 @@
     "prompt": "Vad betyder 'Elevation'?",
     "correct": "Höjning av en del",
     "distractors": [
-      "En muskelgrupp",
-      "En benstruktur",
-      "En nervväg"
+      "Sänkning av en del",
+      "Rörelse framåt",
+      "Rörelse bakåt"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2546,9 +2546,9 @@
     "prompt": "Vad betyder 'Depression'?",
     "correct": "Sänkning av en del",
     "distractors": [
-      "En muskelgrupp",
-      "En benstruktur",
-      "En nervväg"
+      "Höjning av en del",
+      "Rörelse framåt",
+      "Rörelse bakåt"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2560,9 +2560,9 @@
     "prompt": "Vad betyder 'Protraktion'?",
     "correct": "Rörelse framåt",
     "distractors": [
-      "En muskelgrupp",
-      "En benstruktur",
-      "En nervväg"
+      "Rörelse bakåt",
+      "Höjning av en del",
+      "Sänkning av en del"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2574,9 +2574,9 @@
     "prompt": "Vad betyder 'Retraktion'?",
     "correct": "Rörelse bakåt",
     "distractors": [
-      "En muskelgrupp",
-      "En benstruktur",
-      "En nervväg"
+      "Rörelse framåt",
+      "Höjning av en del",
+      "Sänkning av en del"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2588,9 +2588,9 @@
     "prompt": "Vad betyder 'Superior'?",
     "correct": "Mot huvudet",
     "distractors": [
-      "En muskelgrupp",
-      "En benstruktur",
-      "En nervväg"
+      "Mot fötterna",
+      "Mot framsidan",
+      "Mot baksidan"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2602,9 +2602,9 @@
     "prompt": "Vad betyder 'Inferior'?",
     "correct": "Mot fötterna",
     "distractors": [
-      "En muskelgrupp",
-      "En benstruktur",
-      "En nervväg"
+      "Mot huvudet",
+      "Mot framsidan",
+      "Mot baksidan"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2616,9 +2616,9 @@
     "prompt": "Vad betyder 'Anterior'?",
     "correct": "Mot framsidan",
     "distractors": [
-      "En muskelgrupp",
-      "En benstruktur",
-      "En nervväg"
+      "Mot baksidan",
+      "Mot huvudet",
+      "Mot fötterna"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2630,9 +2630,9 @@
     "prompt": "Vad betyder 'Posterior'?",
     "correct": "Mot baksidan",
     "distractors": [
-      "En muskelgrupp",
-      "En benstruktur",
-      "En nervväg"
+      "Mot framsidan",
+      "Mot huvudet",
+      "Mot fötterna"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2641,12 +2641,12 @@
   {
     "id": "q202",
     "type": "mc",
-    "prompt": "Vad betyder 'Superficial'?",
+    "prompt": "Vad betyder 'Superficialis'?",
     "correct": "Nära ytan",
     "distractors": [
-      "En muskelgrupp",
-      "En benstruktur",
-      "En nervväg"
+      "Långt från ytan",
+      "Nära mittlinjen",
+      "Nära bålen"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -2658,9 +2658,9 @@
     "prompt": "Vad betyder 'Profundus'?",
     "correct": "Långt från ytan",
     "distractors": [
-      "En muskelgrupp",
-      "En benstruktur",
-      "En nervväg"
+      "Nära ytan",
+      "Nära mittlinjen",
+      "Långt från mittlinjen"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -5544,9 +5544,9 @@
     "prompt": "Cirkumduktion kombinerar",
     "correct": "Flera olika rörelser",
     "distractors": [
-      "Endast flexion",
-      "Endast rotation",
-      "Endast abduktion"
+      "Flexion och extension",
+      "Rotation kring längsaxeln",
+      "Abduktion och adduktion"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",

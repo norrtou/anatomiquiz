@@ -744,7 +744,7 @@
   {
     "id": "studier_q59",
     "type": "mc",
-    "prompt": "Vad heter leden mellan os femur och os coxae på svenska?",
+    "prompt": "Vad heter leden mellan femur och os coxae på svenska?",
     "correct": "Höftleden",
     "distractors": [
       "Knäleden",
@@ -757,7 +757,7 @@
   {
     "id": "studier_q60",
     "type": "mc",
-    "prompt": "Vad heter leden mellan os femur och os coxae på latin?",
+    "prompt": "Vad heter leden mellan femur och os coxae på latin?",
     "correct": "Articulatio coxae",
     "distractors": [
       "Articulatio genus",
@@ -812,7 +812,7 @@
     "prompt": "Vilket av följande påståenden beskriver bäst vad som menas med biologiskt åldrande?",
     "correct": "Det är en gradvis försämring av cellernas och organens funktioner över tid",
     "distractors": [
-      "Det är en process som uteslutande beror på miljöfaktorer",
+      "Det är en process som främst drivs av yttre miljöfaktorer under livet",
       "Det är en plötslig förändring i arvsmassan som sker vid hög ålder",
       "Det är ett fenomen som bara förekommer hos människor, inte hos andra organismer"
     ],
@@ -969,8 +969,8 @@
     "correct": "Rörligheten i CMC I, IV och V är större än i övriga CMC-leder",
     "distractors": [
       "Rörligheten i CMC II och III är störst",
-      "Rörligheten är lika stor i samtliga CMC-leder",
-      "Rörligheten är störst enbart i CMC V"
+      "Rörligheten i CMC III, IV och V är större än i övriga CMC-leder",
+      "Rörligheten i CMC V överstiger rörligheten i övriga CMC-leder"
     ],
     "topic": "studier_hand",
     "difficulty": "Normal"
@@ -1223,11 +1223,11 @@
     "id": "studier_q97",
     "type": "mc",
     "prompt": "Vilka ben ingår i knäleden (articulatio genus)?",
-    "correct": "Os femur, os tibia och os patella",
+    "correct": "Femur, tibia och patella",
     "distractors": [
-      "Os femur och os tibia",
-      "Os femur, os tibia och malleolerna",
-      "Os femur och os fibula"
+      "Femur och tibia",
+      "Femur, tibia och malleolerna",
+      "Femur och fibula"
     ],
     "topic": "studier_led",
     "difficulty": "Normal"
@@ -2179,7 +2179,7 @@
     "correct": "Det somatiska nervsystemet och det autonoma nervsystemet",
     "distractors": [
       "Hjärnan och ryggmärgen",
-      "Det sympatiska och parasympatiska systemet enbart",
+      "Det sympatiska nervsystemet och det parasympatiska nervsystemet",
       "Sensoriska och motoriska banorna i hjärnan"
     ],
     "topic": "studier_neurologi",
@@ -2424,8 +2424,8 @@
     "correct": "Intrinsiska muskler har ursprung och fäste i handen, extrinsiska i underarmen",
     "distractors": [
       "Intrinsiska muskler innerveras av N. radialis, extrinsiska av N. medianus",
-      "Intrinsiska muskler flekterar, extrinsiska extenderar alltid",
-      "Intrinsiska muskler är alltid starkare än extrinsiska"
+      "Intrinsiska muskler flekterar fingrarna, extrinsiska extenderar dem",
+      "Intrinsiska muskler är kraftigare och grövre än de extrinsiska"
     ],
     "topic": "studier_hand",
     "difficulty": "Normal"
@@ -2581,7 +2581,7 @@
     "distractors": [
       "Muskelmassan ökar naturligt utan träning",
       "Muskelmassan förblir oförändrad hela livet",
-      "Muskelmassan omvandlas enbart till fettvävnad"
+      "Muskelmassan omvandlas till fettvävnad"
     ],
     "topic": "studier_åldrande",
     "difficulty": "Normal"
@@ -3177,7 +3177,7 @@
     "distractors": [
       "Samspelet mellan hormonsystemet och hudreceptorer avgör hur greppet fungerar",
       "Samspelet mellan mekanoreceptorer i handens hud och balansen avgör hur greppet fungerar",
-      "Inget av ovanstående är relevant"
+      "Samspelet mellan synintryck och muskelstyrka i underarmen avgör hur greppet fungerar"
     ],
     "topic": "studier_hand",
     "id": "studier_q253",
@@ -3214,8 +3214,8 @@
     "correct": "Dig I, II, III och den radiala halvan av dig IV",
     "distractors": [
       "Dig V och den ulnara halvan av dig IV",
-      "Dig I och II enbart",
-      "Dig V enbart"
+      "Dig I, II och den radiala halvan av dig III",
+      "Dig III, IV och V på palmarsidan"
     ],
     "topic": "studier_neurologi",
     "id": "studier_q256",
@@ -3343,9 +3343,9 @@
     "prompt": "Vilka rörelser kan utföras i articulatio glenohumerale (axelleden)?",
     "correct": "Flexion, extension, abduktion, adduktion, inåtrotation, utåtrotation och cirkumduktion",
     "distractors": [
-      "Flexion och extension enbart, utan andra rörelser i leden",
-      "Flexion, extension och rotation enbart, inget annat",
-      "Endast supination och pronation, inga andra rörelser"
+      "Flexion, extension, abduktion, adduktion, inåtrotation, utåtrotation och glidning",
+      "Flexion, extension, abduktion, adduktion, supination, pronation och cirkumduktion",
+      "Flexion, extension, abduktion, adduktion, elevation, depression och protraktion"
     ],
     "topic": "studier_led",
     "id": "studier_q266",
@@ -3673,12 +3673,12 @@
     "difficulty": "Normal"
   },
   {
-    "prompt": "Vilket annat av följande ben är ett rörben (os longum)?",
-    "correct": "Os ulna",
+    "prompt": "Vilket av följande ben är ett rörben (os longum)?",
+    "correct": "Ulna",
     "distractors": [
-      "Os coxae",
-      "Ossa carpi",
-      "Os pisiforme"
+      "Patella",
+      "Scapula",
+      "Calcaneus"
     ],
     "topic": "studier_osteologi",
     "id": "studier_q292",
@@ -3687,11 +3687,11 @@
   },
   {
     "prompt": "Vad heter lårbenet på latin?",
-    "correct": "Os femur",
+    "correct": "Femur",
     "distractors": [
-      "Os humerus",
-      "Os tibia",
-      "Os fibula"
+      "Humerus",
+      "Tibia",
+      "Fibula"
     ],
     "topic": "studier_osteologi",
     "id": "studier_q293",
@@ -4332,7 +4332,7 @@
     "distractors": [
       "Släppa, gripa med hela handen och fingertoppsgrepp",
       "Flytta föremål mellan händerna, peka med pekfingret och bygga torn",
-      "Styrka, uthållighet och koordination enbart"
+      "Styrka, uthållighet, koordination och balans"
     ],
     "topic": "studier_hand",
     "id": "studier_q346",
@@ -4422,7 +4422,7 @@
     "correct": "En nervsignal som leder impulser till CNS",
     "distractors": [
       "En nervsignal som leder impulser från CNS ut till muskler och organ",
-      "En signal som enbart finns i det autonoma nervsystemet",
+      "En signal som färdas inom det autonoma nervsystemet",
       "En signal som utlöser reflexer utan att nå hjärnan"
     ],
     "topic": "studier_neurologi",

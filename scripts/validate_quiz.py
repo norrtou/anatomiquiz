@@ -27,7 +27,9 @@ ABSOLUTE = re.compile(r"\b(endast|enbart|alltid|aldrig|inga|ingen|inget|samtliga
 # §2.2: distraktorn skyltar med att den är fel i stället för att vara ett trovärdigt alternativ
 SELF_LABEL = re.compile(r"\b(en|ett)\s+(helt\s+)?(annan|annat)\b|vilket är felaktigt|"
                         r"vilket inte stämmer|är felaktigt påstått|en påhittad benämning", re.I)
-FILLER = re.compile(r"(ing[ae]n av dessa|inget av dessa|inget alternativ|annat ben|annan struktur)", re.I)
+FILLER = re.compile(r"(ing[ae]n av dessa|inget av dessa|ing[ae]n av ovanstående|inget av ovanstående|"
+                    r"ing[ae]n av alternativen|inget av alternativen|inget alternativ|"
+                    r"annat ben|annan struktur)", re.I)
 
 # §2.9: frågor som testar BÖJNING – där ska svaret vara den böjda formen av frågans ord,
 # så morfologiskt eko är korrekt och ska inte flaggas.

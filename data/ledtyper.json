@@ -6,8 +6,8 @@
     "correct": "Böjning och sträckning",
     "distractors": [
       "Rörelse åt alla håll",
-      "Endast vridning kring en axel",
-      "Endast glidning"
+      "Vridning kring en längsaxel",
+      "Glidning mellan ledytorna"
     ],
     "topic": "ledtyper_typ",
     "difficulty": "Normal",
@@ -19,9 +19,9 @@
     "prompt": "Vilken rörelse är typisk för en kulled?",
     "correct": "Rörelse åt alla håll",
     "distractors": [
-      "Endast böjning och sträckning",
-      "Endast vridning kring en axel",
-      "Endast glidning"
+      "Böjning och sträckning",
+      "Vridning kring en längsaxel",
+      "Glidning mellan ledytorna"
     ],
     "topic": "ledtyper_typ",
     "difficulty": "Normal",
@@ -75,9 +75,9 @@
     "prompt": "Vilken rörelse möjliggör en sadelled?",
     "correct": "Rörelse i två plan",
     "distractors": [
-      "Endast vridning",
-      "Endast glidning",
-      "Endast sträckning"
+      "Vridning kring en axel",
+      "Glidning mellan ledytor",
+      "Rörelse i ett enda plan"
     ],
     "topic": "ledtyper_typ",
     "difficulty": "Normal",
@@ -229,7 +229,7 @@
     "prompt": "Kulleder, gångjärnsleder och vridleder är alla exempel på...?",
     "correct": "Synovialleder",
     "distractors": [
-      "Endast planleder",
+      "Broskleder",
       "Oäkta, orörliga leder",
       "Benbryggor"
     ],
@@ -551,9 +551,9 @@
     "prompt": "Vilka rörelser tillåter axelleden tack vare att den är en kulled?",
     "correct": "Rörelse åt alla håll",
     "distractors": [
-      "Endast böjning och sträckning",
-      "Endast vridning",
-      "Endast glidning"
+      "Böjning och sträckning",
+      "Vridning kring en längsaxel",
+      "Glidning mellan ledytorna"
     ],
     "topic": "ledtyper_rorelse",
     "difficulty": "Normal",
@@ -595,7 +595,7 @@
     "distractors": [
       "Rörelse åt alla håll",
       "Vridning som huvudrörelse",
-      "Endast glidning"
+      "Glidning mellan ledytorna"
     ],
     "topic": "ledtyper_rorelse",
     "difficulty": "Normal",
@@ -609,7 +609,7 @@
     "distractors": [
       "Pronation",
       "Glidning",
-      "Enbart extension"
+      "Extension"
     ],
     "topic": "ledtyper_rorelse",
     "difficulty": "Normal",
@@ -621,9 +621,9 @@
     "prompt": "Vilka rörelser tillåter höftleden som kulled?",
     "correct": "Böjning, sträckning, abduktion, adduktion och rotation",
     "distractors": [
-      "Endast böjning och sträckning, inga andra rörelser",
-      "Endast vridning kring en fast axel, inget annat",
-      "Endast glidande rörelse mellan ledytorna, inget annat"
+      "Böjning, sträckning, abduktion, adduktion och glidning",
+      "Böjning, sträckning, inåtrotation, utåtrotation och pronation",
+      "Böjning, sträckning, abduktion, supination och pronation"
     ],
     "topic": "ledtyper_rorelse",
     "difficulty": "Normal",
@@ -649,9 +649,9 @@
     "prompt": "Vilka rörelser tillåter handleden som äggled?",
     "correct": "Böjning/sträckning och rörelse i sidled",
     "distractors": [
-      "Vridning kring en axel",
+      "Vridning kring en axel och glidning",
       "Rörelse åt alla håll som en kulled",
-      "Endast glidning"
+      "Glidning mellan ledytorna i ett plan"
     ],
     "topic": "ledtyper_rorelse",
     "difficulty": "Normal",

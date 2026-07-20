@@ -35,7 +35,7 @@
     "distractors": [
       "Os temporale",
       "Os frontale",
-      "Os mandibula"
+      "Mandibula"
     ],
     "topic": "osteologi_kranium",
     "difficulty": "Normal",
@@ -61,7 +61,7 @@
     "prompt": "Vad heter överkäken på latin?",
     "correct": "Maxilla",
     "distractors": [
-      "Os mandibula",
+      "Mandibula",
       "Os temporale",
       "Os nasale"
     ],
@@ -73,7 +73,7 @@
     "id": "q6",
     "type": "mc",
     "prompt": "Vad heter underkäken på latin?",
-    "correct": "Os mandibula",
+    "correct": "Mandibula",
     "distractors": [
       "Maxilla",
       "Os nasale",
@@ -89,7 +89,7 @@
     "prompt": "Vad heter näsbenet på latin?",
     "correct": "Os nasale",
     "distractors": [
-      "Os maxilla",
+      "Maxilla",
       "Os occipitale",
       "Os zygomaticum"
     ],
@@ -138,7 +138,7 @@
   {
     "id": "q11",
     "type": "tf",
-    "prompt": "Hjässbenet är os mandibula",
+    "prompt": "Hjässbenet är mandibula",
     "correct": "Falskt",
     "distractors": [
       "Sant"
@@ -162,7 +162,7 @@
   {
     "id": "q13",
     "type": "tf",
-    "prompt": "Överkäken är os mandibula",
+    "prompt": "Överkäken är mandibula",
     "correct": "Falskt",
     "distractors": [
       "Sant"
@@ -354,8 +354,8 @@
     "correct": "Nackbenet och tinningbenen",
     "distractors": [
       "Pannbenet och näsbenet",
-      "Bara hjässbenet",
-      "Endast överkäken"
+      "Hjässbenet och pannbenet",
+      "Överkäken och kindbenen"
     ],
     "topic": "osteologi_kranium",
     "difficulty": "Normal",
@@ -624,8 +624,8 @@
     "correct": "Den första halskotan",
     "distractors": [
       "Den andra halskotan",
-      "En process på kotan",
-      "Ett ben i bäckenet"
+      "Den sjunde halskotan",
+      "Den första bröstkotan"
     ],
     "topic": "osteologi_columna",
     "difficulty": "Normal",
@@ -639,7 +639,7 @@
     "distractors": [
       "Den första halskotan",
       "Den tredje halskotan",
-      "Ett ben i bäckenet"
+      "Den sjunde halskotan"
     ],
     "topic": "osteologi_columna",
     "difficulty": "Normal",
@@ -776,8 +776,8 @@
     "correct": "Bröstben",
     "distractors": [
       "Revben",
-      "Ett ben på höften",
-      "En kota"
+      "Nyckelben",
+      "Skulderblad"
     ],
     "topic": "osteologi_thorax",
     "difficulty": "Normal",
@@ -970,12 +970,12 @@
   {
     "id": "q75",
     "type": "mc",
-    "prompt": "Vad är os ischi?",
+    "prompt": "Vad är os ischii?",
     "correct": "Sittbenet",
     "distractors": [
       "Tarmbenet",
-      "Pubisbenet",
-      "Ett ben på höften"
+      "Blygdbenet",
+      "Korsbenet"
     ],
     "topic": "osteologi_pelvis",
     "difficulty": "Normal",
@@ -1050,8 +1050,8 @@
     "correct": "Sittbensknölen",
     "distractors": [
       "Höftbenskammen",
-      "Höftledskål",
-      "Ett ben"
+      "Höftledskålen",
+      "Blygdbensfogen"
     ],
     "topic": "osteologi_pelvis",
     "difficulty": "Normal",
@@ -1077,7 +1077,7 @@
     "distractors": [
       "Höftbenskammen upptill",
       "Sittbensknölen nedtill",
-      "Ett ben nere i foten"
+      "Blygdbensfogen framtill"
     ],
     "topic": "osteologi_pelvis",
     "difficulty": "Normal",
@@ -1191,7 +1191,7 @@
     "distractors": [
       "Spina scapulae på skulderbladet",
       "Processus coracoideus framtill",
-      "Ett ben i underarmen"
+      "Cavitas glenoidalis utåt"
     ],
     "topic": "osteologi_upper",
     "difficulty": "Normal",
@@ -1217,7 +1217,7 @@
     "distractors": [
       "Acromion på skulderbladets topp",
       "Spina scapulae på baksidan",
-      "Ett ben i handloven"
+      "Cavitas glenoidalis på sidan"
     ],
     "topic": "osteologi_upper",
     "difficulty": "Normal",
@@ -1241,9 +1241,9 @@
     "prompt": "Vad är cavitas glenoidalis?",
     "correct": "Glenoidkaviteten där överarmsbenets huvud sitter",
     "distractors": [
-      "En fördjupning för en muskel",
-      "Ett ben",
-      "Acromion"
+      "Ledpannan där lårbenets huvud sitter",
+      "Utskottet där nyckelbenet ledar",
+      "Kammen längs skulderbladets baksida"
     ],
     "topic": "osteologi_upper",
     "difficulty": "Normal",
@@ -1527,9 +1527,9 @@
     "prompt": "Vad är phalanx?",
     "correct": "Fingerben",
     "distractors": [
-      "Handben",
-      "Ett ben i foten",
-      "Ett ben på höften"
+      "Handlovsben",
+      "Mellanhandsben",
+      "Mellanfotsben"
     ],
     "topic": "osteologi_upper",
     "difficulty": "Normal",
@@ -1591,9 +1591,9 @@
     "prompt": "Vad är caput femoris?",
     "correct": "Lårbenshuvud i höftledskål",
     "distractors": [
-      "Ett eget ben",
-      "Lårbenskransen",
-      "Ett ben på skenbenet"
+      "Lårbenshals under huvudet",
+      "Stora lårbensknölen utåt",
+      "Lårbenets nedre kondyl"
     ],
     "topic": "osteologi_lower",
     "difficulty": "Normal",
@@ -1829,9 +1829,9 @@
     "prompt": "Vilka regioner har ryggraden?",
     "correct": "Cervical, thoracal, lumbal, sakral, coccygeal",
     "distractors": [
-      "Bara cervical och lumbal region",
-      "Bara två av regionerna",
-      "Endast den lumbala regionen"
+      "Cervical, thoracal, lumbal, sakral och costal",
+      "Cervical, thoracal, lumbal, pelvin och coccygeal",
+      "Cranial, cervical, thoracal, lumbal och sakral"
     ],
     "topic": "osteologi_columna",
     "difficulty": "Normal",
@@ -1856,8 +1856,8 @@
     "correct": "De nedre revbenen",
     "distractors": [
       "De översta revbenen",
-      "Alla revben lika mycket",
-      "Inga revben kan böjas"
+      "De mellersta revbenen",
+      "De första två revbenen"
     ],
     "topic": "osteologi_thorax",
     "difficulty": "Normal",
@@ -4129,9 +4129,9 @@
     "prompt": "Vilka ligament stabiliserar höftleden?",
     "correct": "Lig. iliofemorale, lig. pubofemorale och lig. ischiofemorale",
     "distractors": [
-      "Bara lig. iliofemorale, inga andra ligament",
-      "Bara ett enda ligament håller ihop leden",
-      "Inga ligament stabiliserar leden alls"
+      "Lig. iliofemorale, lig. inguinale och lig. sacrospinale",
+      "Lig. pubofemorale, lig. lacunare och lig. sacrotuberale",
+      "Lig. ischiofemorale, lig. patellae och lig. cruciatum anterius"
     ],
     "topic": "osteologi_ligaments",
     "difficulty": "Normal",
@@ -4226,590 +4226,6 @@
     "topic": "osteologi_summary",
     "difficulty": "Normal",
     "source": "Osteologi"
-  },
-  {
-    "prompt": "Vad är os frontale på svenska?",
-    "correct": "Pannbenet",
-    "type": "mc",
-    "distractors": [
-      "Överarmsben",
-      "Fotrotsben",
-      "Tinningbenet"
-    ],
-    "id": "q326",
-    "topic": "osteologi_kranium",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad är os temporale på svenska?",
-    "correct": "Tinningbenet",
-    "type": "mc",
-    "distractors": [
-      "Handrotsben",
-      "Tåben",
-      "Nackbenet"
-    ],
-    "id": "q327",
-    "topic": "osteologi_kranium",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad är os occipitale på svenska?",
-    "correct": "Nackbenet",
-    "type": "mc",
-    "distractors": [
-      "Mellanhandsben",
-      "Vadbenet",
-      "Kindbenet"
-    ],
-    "id": "q328",
-    "topic": "osteologi_kranium",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad heter kindbenet på latin?",
-    "correct": "Os zygomaticum",
-    "type": "mc",
-    "distractors": [
-      "Femur",
-      "Vertebra",
-      "Processus"
-    ],
-    "id": "q329",
-    "topic": "osteologi_kranium",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad är os zygomaticum på svenska?",
-    "correct": "Kindbenet",
-    "type": "mc",
-    "distractors": [
-      "Överarmsben",
-      "Tåben",
-      "Pannbenet"
-    ],
-    "id": "q330",
-    "topic": "osteologi_kranium",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad heter käkbenet på latin?",
-    "correct": "Maxilla",
-    "type": "mc",
-    "distractors": [
-      "Femur",
-      "Vertebra",
-      "Processus"
-    ],
-    "id": "q331",
-    "topic": "osteologi_kranium",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad är maxilla på svenska?",
-    "correct": "Käkbenet",
-    "type": "mc",
-    "distractors": [
-      "Överarmsben",
-      "Fotrotsben",
-      "Pannbenet"
-    ],
-    "id": "q332",
-    "topic": "osteologi_kranium",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad heter underkäken på latin?",
-    "correct": "Mandibula",
-    "type": "mc",
-    "distractors": [
-      "Tibia",
-      "Vertebra",
-      "Processus"
-    ],
-    "id": "q333",
-    "topic": "osteologi_kranium",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad är mandibula på svenska?",
-    "correct": "Underkäken",
-    "type": "mc",
-    "distractors": [
-      "Överarmsben",
-      "Lårbenet",
-      "Pannbenet"
-    ],
-    "id": "q334",
-    "topic": "osteologi_kranium",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad heter halskotor på latin?",
-    "correct": "Vertebrae cervicales",
-    "type": "mc",
-    "distractors": [
-      "Femur i benet",
-      "Vertebra i allmänhet",
-      "Processus på kotan"
-    ],
-    "id": "q335",
-    "topic": "osteologi_columna",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad är vertebrae cervicales på svenska?",
-    "correct": "Halskotor",
-    "type": "mc",
-    "distractors": [
-      "Överarmsben",
-      "Knäskålen",
-      "Tinningbenet"
-    ],
-    "id": "q336",
-    "topic": "osteologi_columna",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad heter bröstkotor på latin?",
-    "correct": "Vertebrae thoracicae",
-    "type": "mc",
-    "distractors": [
-      "Femur i benet",
-      "Vertebra i allmänhet",
-      "Processus på kotan"
-    ],
-    "id": "q337",
-    "topic": "osteologi_columna",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad är vertebrae thoracicae på svenska?",
-    "correct": "Bröstkotor",
-    "type": "mc",
-    "distractors": [
-      "Strålben",
-      "Fotrotsben",
-      "Pannbenet"
-    ],
-    "id": "q338",
-    "topic": "osteologi_columna",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad heter ländkotor på latin?",
-    "correct": "Vertebrae lumbales",
-    "type": "mc",
-    "distractors": [
-      "Fibula i underbenet",
-      "Vertebra i allmänhet",
-      "Processus på kotan"
-    ],
-    "id": "q339",
-    "topic": "osteologi_columna",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad är vertebrae lumbales på svenska?",
-    "correct": "Ländkotor",
-    "type": "mc",
-    "distractors": [
-      "Handrotsben",
-      "Mellanfottsben",
-      "Underkäken"
-    ],
-    "id": "q340",
-    "topic": "osteologi_columna",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad heter korsbenet på latin?",
-    "correct": "Os sacrum",
-    "type": "mc",
-    "distractors": [
-      "Femur",
-      "Vertebra",
-      "Processus"
-    ],
-    "id": "q341",
-    "topic": "osteologi_columna",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad är os sacrum på svenska?",
-    "correct": "Korsbenet",
-    "type": "mc",
-    "distractors": [
-      "Fingerben",
-      "Mellanfottsben",
-      "Nackbenet"
-    ],
-    "id": "q342",
-    "topic": "osteologi_columna",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad heter svansbenet på latin?",
-    "correct": "Os coccygis",
-    "type": "mc",
-    "distractors": [
-      "Femur",
-      "Vertebra",
-      "Processus"
-    ],
-    "id": "q343",
-    "topic": "osteologi_columna",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad är os coccygis på svenska?",
-    "correct": "Svansbenet",
-    "type": "mc",
-    "distractors": [
-      "Armbågsbenet",
-      "Skenbenet",
-      "Underkäken"
-    ],
-    "id": "q344",
-    "topic": "osteologi_columna",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad är humerus på svenska?",
-    "correct": "Överarmsben",
-    "type": "mc",
-    "distractors": [
-      "Armbågsknotan",
-      "Knäskålen",
-      "Underkäken"
-    ],
-    "id": "q345",
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad heter armbågsknotan på latin?",
-    "correct": "Olecranon",
-    "type": "mc",
-    "distractors": [
-      "Tibia",
-      "Vertebra",
-      "Processus"
-    ],
-    "id": "q346",
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad är olecranon på svenska?",
-    "correct": "Armbågsknotan",
-    "type": "mc",
-    "distractors": [
-      "Vadbenet",
-      "Kindbenet"
-    ],
-    "id": "q347",
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad är radius på svenska?",
-    "correct": "Strålben",
-    "type": "mc",
-    "distractors": [
-      "Armbågsknotan",
-      "Knäskålen",
-      "Underkäken"
-    ],
-    "id": "q348",
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad heter armbågsbenet på latin?",
-    "correct": "Ulna",
-    "type": "mc",
-    "distractors": [
-      "Fibula",
-      "Vertebra",
-      "Processus"
-    ],
-    "id": "q349",
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad är ulna på svenska?",
-    "correct": "Armbågsbenet",
-    "type": "mc",
-    "distractors": [
-      "Armbågsknotan",
-      "Knäskålen",
-      "Kindbenet"
-    ],
-    "id": "q350",
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad heter handrotsben på latin?",
-    "correct": "Ossa carpi",
-    "type": "mc",
-    "distractors": [
-      "Fibula",
-      "Vertebra",
-      "Processus"
-    ],
-    "id": "q351",
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad är ossa carpi på svenska?",
-    "correct": "Handrotsben",
-    "type": "mc",
-    "distractors": [
-      "Fingerben",
-      "Lårbenet",
-      "Tinningbenet"
-    ],
-    "id": "q352",
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad heter mellanhandsben på latin?",
-    "correct": "Ossa metacarpi",
-    "type": "mc",
-    "distractors": [
-      "Fibula",
-      "Vertebra",
-      "Processus"
-    ],
-    "id": "q353",
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad är ossa metacarpi på svenska?",
-    "correct": "Mellanhandsben",
-    "type": "mc",
-    "distractors": [
-      "Handrotsben",
-      "Knäskålen",
-      "Nackbenet"
-    ],
-    "id": "q354",
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad heter fingerben på latin?",
-    "correct": "Phalanges",
-    "type": "mc",
-    "distractors": [
-      "Tibia",
-      "Vertebra",
-      "Processus"
-    ],
-    "id": "q355",
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad är phalanges på svenska?",
-    "correct": "Fingerben",
-    "type": "mc",
-    "distractors": [
-      "Mellanhandsben",
-      "Knäskålen",
-      "Käkbenet"
-    ],
-    "id": "q356",
-    "topic": "osteologi_upper",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad är femur på svenska?",
-    "correct": "Lårbenet",
-    "type": "mc",
-    "distractors": [
-      "Armbågsknotan",
-      "Nackbenet"
-    ],
-    "id": "q357",
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad heter knäskålen på latin?",
-    "correct": "Patella",
-    "type": "mc",
-    "distractors": [
-      "Femur",
-      "Vertebra",
-      "Processus"
-    ],
-    "id": "q358",
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad är patella på svenska?",
-    "correct": "Knäskålen",
-    "type": "mc",
-    "distractors": [
-      "Armbågsbenet",
-      "Mellanfottsben",
-      "Kindbenet"
-    ],
-    "id": "q359",
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad är tibia på svenska?",
-    "correct": "Skenbenet",
-    "type": "mc",
-    "distractors": [
-      "Strålben",
-      "Knäskålen",
-      "Kindbenet"
-    ],
-    "id": "q360",
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad är fibula på svenska?",
-    "correct": "Vadbenet",
-    "type": "mc",
-    "distractors": [
-      "Mellanhandsben",
-      "Skenbenet",
-      "Tinningbenet"
-    ],
-    "id": "q361",
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad heter fotrotsben på latin?",
-    "correct": "Ossa tarsi",
-    "type": "mc",
-    "distractors": [
-      "Tibia",
-      "Vertebra",
-      "Processus"
-    ],
-    "id": "q362",
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad är ossa tarsi på svenska?",
-    "correct": "Fotrotsben",
-    "type": "mc",
-    "distractors": [
-      "Överarmsben",
-      "Pannbenet"
-    ],
-    "id": "q363",
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad heter mellanfottsben på latin?",
-    "correct": "Ossa metatarsi",
-    "type": "mc",
-    "distractors": [
-      "Fibula",
-      "Vertebra",
-      "Processus"
-    ],
-    "id": "q364",
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad är ossa metatarsi på svenska?",
-    "correct": "Mellanfottsben",
-    "type": "mc",
-    "distractors": [
-      "Mellanhandsben",
-      "Kindbenet"
-    ],
-    "id": "q365",
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad heter tåben på latin?",
-    "correct": "Phalanges pedis",
-    "type": "mc",
-    "distractors": [
-      "Tibia",
-      "Vertebra",
-      "Processus"
-    ],
-    "id": "q366",
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated"
-  },
-  {
-    "prompt": "Vad är phalanges pedis på svenska?",
-    "correct": "Tåben",
-    "type": "mc",
-    "distractors": [
-      "Handrotsben",
-      "Fotrotsben",
-      "Nackbenet"
-    ],
-    "id": "q367",
-    "topic": "osteologi_lower",
-    "difficulty": "Normal",
-    "source": "generated"
   },
   {
     "id": "q368",
@@ -4917,7 +4333,7 @@
     "distractors": [
       "Vadbenet",
       "Fotrotsben",
-      "Mellanfottsben"
+      "Mellanfotsben"
     ],
     "topic": "osteologi_kranium",
     "difficulty": "Normal",
@@ -4930,7 +4346,7 @@
     "correct": "Överkäken",
     "distractors": [
       "Fotrotsben",
-      "Mellanfottsben",
+      "Mellanfotsben",
       "Tåben"
     ],
     "topic": "osteologi_kranium",
@@ -4940,10 +4356,10 @@
   {
     "id": "q377",
     "type": "mc",
-    "prompt": "Vad är os mandibula på svenska?",
+    "prompt": "Vad är mandibula på svenska?",
     "correct": "Underkäken",
     "distractors": [
-      "Mellanfottsben",
+      "Mellanfotsben",
       "Tåben",
       "Skulderbladet"
     ],
@@ -5235,7 +4651,7 @@
     "id": "q398",
     "type": "mc",
     "prompt": "Vad är ossa metatarsi på svenska?",
-    "correct": "Mellanfottsben",
+    "correct": "Mellanfotsben",
     "distractors": [
       "Armbågsknotan",
       "Strålben",

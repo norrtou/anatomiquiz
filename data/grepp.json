@@ -111,9 +111,9 @@
     "prompt": "Vad kännetecknar de tre volargreppen?",
     "correct": "Föremålet hålls mot handflatan med fingrarna runtom",
     "distractors": [
-      "Föremålet hålls bara mellan fingertopparna",
-      "Tummen är alltid passiv",
-      "Endast lillfingret används"
+      "Föremålet hålls mellan tummen och fingertopparna",
+      "Tummen stabiliserar utan att böjas runt föremålet",
+      "Handleden hålls sträckt medan fingrarna böjs"
     ],
     "topic": "grepp_typer",
     "difficulty": "Normal",
@@ -335,9 +335,9 @@
     "prompt": "Vad är gemensamt för diagonalt, transversellt och sfäriskt grepp?",
     "correct": "Föremålet stabiliseras mot handflatan",
     "distractors": [
-      "Föremålet hålls endast med fingertopparna",
-      "Tummen får inte användas",
-      "Handleden måste vara böjd"
+      "Föremålet hålls mellan fingertopparna",
+      "Tummen hålls sträckt vid sidan",
+      "Handleden hålls i böjt läge"
     ],
     "topic": "grepp_typer",
     "difficulty": "Normal",
@@ -979,9 +979,9 @@
     "prompt": "Vilka fingerleder böjs när du sluter handen runt ett föremål i ett kraftgrepp?",
     "correct": "MCP-, PIP- och DIP-lederna",
     "distractors": [
-      "Endast MCP-leden",
-      "Endast DIP-leden",
-      "Endast handleden"
+      "CMC-, MCP- och PIP-lederna",
+      "MCP-, DIP- och CMC-lederna",
+      "PIP-, DIP- och CMC-lederna"
     ],
     "topic": "grepp_leder",
     "difficulty": "Normal",
@@ -1087,9 +1087,9 @@
     "prompt": "En skada på n. medianus försämrar tummens opposition. Vilken greppgrupp drabbas särskilt?",
     "correct": "Precisionsgreppen",
     "distractors": [
-      "Inga grepp påverkas",
-      "Endast kraftgreppen",
-      "Endast sfäriskt volargrepp"
+      "Kraftgreppen",
+      "Volargreppen",
+      "De sfäriska greppen"
     ],
     "topic": "grepp_skador",
     "difficulty": "Normal",
@@ -1127,7 +1127,7 @@
     "distractors": [
       "Fingertoppsgreppet",
       "Sfäriskt volargrepp",
-      "Inget grepp"
+      "Hakgreppet"
     ],
     "topic": "grepp_skador",
     "difficulty": "Normal",
@@ -1165,9 +1165,9 @@
     "prompt": "Smärtande artros i tummens CMC I-led (tumbasen) försvårar särskilt...",
     "correct": "Grepp där tummen belastas",
     "distractors": [
-      "endast lillfingrets rörelser",
-      "handledens böjning",
-      "inga grepp alls"
+      "Grepp där lillfingret belastas",
+      "Böjning av handleden",
+      "Grepp där handflatan belastas"
     ],
     "topic": "grepp_skador",
     "difficulty": "Normal",
@@ -1270,8 +1270,8 @@
     "correct": "Pekfingret och långfingret",
     "distractors": [
       "Ringfingret och lillfingret",
-      "Endast lillfingret",
-      "Samtliga tår"
+      "Långfingret och ringfingret",
+      "Pekfingret och lillfingret"
     ],
     "topic": "grepp_muskler",
     "difficulty": "Normal",
