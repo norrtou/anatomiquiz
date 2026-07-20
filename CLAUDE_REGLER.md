@@ -177,6 +177,7 @@ En fråga utan relevanta alternativ är värdelös och förstör quizet. Inga fi
 ### 2.11 INGA DUBLETTFRÅGOR – MEN UNIKHET GÄLLER BARA INOM ÄMNET
 - **Aldrig duplicera hela frågor** (samma id eller samma frågetext) utan explicit tillåtelse. Kopiera/`cp`/copypasta ALDRIG frågor mellan filer för att fylla på antal. Ladda aldrig samma fil två gånger för samma quiz.
 - **Men unikhetskravet gäller bara inom det ämne som byggs**, inte mot andra ämnen eller andra utbildningar. Skriv INTE i CHANGELOG/commit att frågor jämförts mot "hela filen" eller mot andra namngivna ämnen – skriv bara "alla X frågor i ämnet kontrollerade unika". Att aktivt leta efter och narrativisera cross-ämnes-överlapp är inte efterfrågat.
+- **Att fråga samma ord åt BÅDA håll är ALLTID tillåtet – i alla filer, alla ämnen.** "Vad betyder *dyspné*?" → "andnöd" och "Vad heter andnöd med medicinsk term?" → "dyspné" är två olika frågor som testar olika kunskap (igenkänning vs. produktion), inte en dublett. Det gäller hela quizet, inte bara glos-/terminologifiler. Flagga ALDRIG bidirektionella par som dubblettfel och föreslå aldrig att stryka det ena hållet. En dublett kräver samma prompt OCH samma `correct` – exakt vad validatorn kollar (`validate_quiz.py`, `qa_by_topic`).
 
 ### 2.12 SÅ HÄR SKRIVS EN BRA DISTRAKTOR (positiv mall – följ FÖRSTA gången)
 Reglerna ovan (§2.2, §2.9) listar mest vad man INTE får göra. Det här är den positiva mallen: så *ska* en distraktor se ut. Följ den när frågan skrivs, så slipper du saneringssvep senare (se §2.13).
@@ -275,6 +276,31 @@ Skriptet är facit för *formtells* (§2.13), men följande feltyper är osynlig
 
 ### 3.2c Skyddade källfiler
 - `data/medicinsk_terminologi.json` bygger på en säker källa och ska **INTE röras/redigeras** vid språk- eller faktagranskningar. Hoppa över den om användaren inte uttryckligen säger annat.
+
+### 3.2d ANVÄNDA KÄLLOR SKA SKRIVAS IN I `info.html` – ALLTID
+Trovärdighet (E-E-A-T) är ett krav på hela appen, inte bara på kunskapsbanken. En källa som
+innehållet faktiskt vilar på men som ingen besökare kan se är **inte** en redovisad källa.
+
+- **Bygger eller granskar du innehåll mot en källa → för in den i källistan i `info.html`**
+  (sektionen "Källor och kvalitetssäkring") i samma arbetspass. Det räcker INTE att bara sätta
+  den i `source`-fältet i JSON – `source` är internt, listan i info.html är det besökaren ser.
+  Detta gäller utöver den per-sidas-referenslista som kunskapsbanken kräver (`SEO_REGLER.md` §6b).
+- **Hellre för många källor än för få.** Är du osäker på om en källa "är stor nog" – ta med den.
+  Användaren stryker hellre en överflödig post manuellt än upptäcker att en använd källa saknas.
+  Konkret miss att inte upprepa: listan innehöll länge 6 poster medan appens enskilt största
+  källa (Sand m.fl., *Människokroppen*, 1 400 frågor) samt Moore, Boron & Boulpaep, Aspelin &
+  Pettersson och Lännergren m.fl. helt saknades. Åtgärdat först på uttrycklig tillsägelse.
+- **Använd goda källor.** Prioritera akademisk/vetenskaplig standardlitteratur (läroböcker,
+  standardverk, myndighetspublikationer, peer review-material) framför bloggar, wikis,
+  kurskompendier och AI-genererat innehåll. Håller källan inte akademisk nivå – bygg inte
+  innehållet på den.
+- **APA 7, alfabetisk ordning, titlar i `<em>`** – samma format som `SEO_REGLER.md` §6b.
+  Svensk kollation: å/ä/ö sorteras sist (Lindskog före Lännergren).
+- **Gissa ALDRIG bibliografiska data.** `source`-fälten innehåller bara författare + titel.
+  Årtal, upplaga och förlag ska slås upp (eller hämtas från ett redan granskat `kb-sources`-block
+  i repot) – hitta aldrig på dem för att få posten att se komplett ut. Kontrollera också att
+  upplagan finns utgiven; Boron & Boulpaep 4:e uppl. är t.ex. ännu inte publicerad.
+- **Radera aldrig en källa** ur listan på eget bevåg. Utrensning är användarens beslut.
 
 ### 3.3 Duplicering
 - **ALDRIG:** Samma svar både i "correct" och i "distractors"

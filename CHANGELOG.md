@@ -1,5 +1,17 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.178
+- **Källistan i info.html granskad och byggd ut från 6 till 17 poster.** Sektionen "Källor och kvalitetssäkring" redovisade tidigare sex källor medan appens innehåll vilar på ett åttiotal. Ingen befintlig post har tagits bort.
+- **Fem formfel i den befintliga listan rättade** mot `SEO_REGLER.md` §6b: listan var inte alfabetisk, FIPAT-posten saknade förlag, *Terminologia Anatomica* skrevs med versal titel i stället för husformatets *Terminologia anatomica*, tre källor stod som nakna domäner i stället för länkar, och Socialstyrelsens post hade en kortare titel än den redan granskade posten på kunskapsbankssidorna.
+- **Elva källor tillagda.** Sex hämtades ur repots egna, redan faktagranskade `kb-sources`-block (Bojsen-Møller, Hall & Hall, Kandel, Lindskog, Paulsen & Waschke, Standring). Fem slogs upp: Aspelin & Pettersson, Boron & Boulpaep, Lännergren m.fl., Moore/Dalley/Agur och Sand m.fl. – den sistnämnda är appens enskilt största källa med 1 400 frågor och saknades helt.
+- **Två upplagor kontrollerade mot verkligheten:** Boron & Boulpaep 4:e uppl. är ännu inte utgiven (pre-order till december 2027), så 3:e uppl. (2016) citeras. *Clinically Oriented Anatomy* citeras som 8:e uppl. (2018) eftersom 9:e uppl. bytt titel till *Moore's…* med Dalley och Agur som författare – 8:e matchar det `source`-fälten anger.
+- **Sorteringen följer svensk kollation** (å/ä/ö sist), vilket placerar Lännergren efter Lindskog.
+- **Ny regel: `CLAUDE_REGLER.md` §3.2d – använda källor ska skrivas in i info.html.** En källa som innehållet vilar på men som ingen besökare kan se är inte en redovisad källa; `source`-fältet i JSON är internt. Regeln slår också fast att det hellre ska bli för många källor än för få, att goda akademiska källor ska prioriteras, att bibliografiska data aldrig får gissas, och att källor aldrig raderas på eget bevåg.
+- **Todo för resten:** `scripts/kallista_info_html_todo.md` listar de 59 källor som återstår att föra in, med antal frågor per källa, census-kommando, skördekommando för `kb-sources`-blocken, tre dubbletter att slå ihop (Ross & Pawlina, Hoffbrand, Purves) och fyra specialfall (ISO 389/8253 är standarder; Vårdhandboken, Läkemedelsräkning för sjuksköterskor och Journalföring… saknar upphovsman i `source`).
+- **Regelförtydligande i `CLAUDE_REGLER.md` §2.11:** att fråga samma ord åt båda håll är alltid tillåtet, i alla filer – bidirektionella par ska aldrig flaggas som dubblettfel.
+- **Datumen i info.html uppdaterade:** "Senast uppdaterad" gick från 7 juli till 20 juli 2026 och JSON-LD:ns `dateModified` från 2026-06-27 till 2026-07-20 – båda hade halkat efter innehållet.
+- VERSION/APP_VERSION/index.html- och info.html-cachebuster → 0.9.178.
+
 ## 0.9.177
 - **Granskningssvepet avslutat: apotekare, audionom och optiker faktagranskade – 15 ämnen, 1500 frågor, 108 rättningar.** Därmed är samtliga elva utbildningar genomgångna. `scripts/validate_quiz.py` ger 0 varningar för alla utbildningsfiler.
 - **Apotekare, 5 ämnen och 32 rättningar.** Två frågor hade två rätta svar: "vilken molekyl gör cellmembranet mindre rörligt" hade `Sfingomyelin` som distraktor, men sfingomyelin styvar också upp membranet, och "vilken gas aktiverar lösligt guanylatcyklas" hade `Kolmonoxid` som distraktor, fast kolmonoxid faktiskt aktiverar enzymet. En fråga var självbesvarande: "Vad kallas **receptorreserven** som…" med `Reservreceptorer` som facit.
