@@ -10,7 +10,12 @@
  */
 
 // Antal versioner i teasern på info.html. Hela listan finns på versionshistorik.html.
+// Håll i synk med ENTRIES i scripts/generate_changelog_teaser.py.
 const TEASER_ENTRIES = 3
+
+// Färdigparsad teaser (~10 KB) i stället för hela CHANGELOG.md (~420 KB).
+// Genereras av scripts/generate_changelog_teaser.py via pre-commit-hooken.
+const TEASER_URL = './changelog-latest.json'
 
 // ============================================================================
 // Frågestatistik
@@ -317,6 +322,6 @@ function initContactForm() {
 document.addEventListener('DOMContentLoaded', () => {
   loadStats()
   loadGlossaryCount()
-  initChangelog({ containerId: 'changelogContent', limit: TEASER_ENTRIES })
+  initChangelog({ containerId: 'changelogContent', limit: TEASER_ENTRIES, url: TEASER_URL })
   initContactForm()
 })

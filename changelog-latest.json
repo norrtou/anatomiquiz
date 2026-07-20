@@ -1,0 +1,42 @@
+[
+  {
+    "version": "0.9.180",
+    "items": [
+      "**Info-sidan hämtar inte längre hela CHANGELOG.md.** För att visa tre versioner i teasern laddade den 425 KB markdown och parsade allt i webbläsaren. Nu hämtas `changelog-latest.json` på 10 KB i stället – en minskning med 41 gånger. Versionshistoriksidan hämtar fortfarande hela filen, vilket är rimligt eftersom den faktiskt visar allt.",
+      "**Nytt skript `scripts/generate_changelog_teaser.py`** som klipper ut de senaste posterna. Dess parsning är verifierad byte-identisk med `parseChangelog()` i js/changelog.js, så teasern och historiksidan kan inte visa olika innehåll.",
+      "**Pre-commit-hooken regenererar teasern automatiskt** när CHANGELOG.md är stagead och lägger till filen i commiten. Utan det hade Om-sidan visat gamla versioner tills någon kom ihåg att köra skriptet för hand.",
+      "**Filen ligger i repo-roten**, inte i `data/` – hooken kör allt som matchar `data/*.json` genom quizvalidatorn, och en changelog-fil är ingen quizfil. Roten är dessutom där de andra genererade sajtfilerna bor (sitemap.xml, llms.txt, manifest.json).",
+      "**Fallback:** går teaser-filen inte att hämta faller `initChangelog()` tillbaka på CHANGELOG.md, så Om-sidan aldrig blir tom om filen skulle saknas.",
+      "VERSION/APP_VERSION/index.html-, info.html- och versionshistorik.html-cachebuster → 0.9.180."
+    ]
+  },
+  {
+    "version": "0.9.179",
+    "items": [
+      "**Versionshistoriken har flyttat till en egen sida: `versionshistorik.html`.** Info-sidan visade de 20 senaste versionerna, och eftersom releasenoterna vuxit till 10–14 långa punkter styckena var historiken i praktiken 70–80 % av sidans text. Den nya sidan är en undersida till Om Anatomiquiz (brödsmula Anatomiquiz / Om Anatomiquiz / Versionshistorik) och har medvetet ingen egen knapp på startsidan.",
+      "**Info-sidan behåller de tre senaste versionerna som teaser** med en länk vidare till hela listan. Sektionen heter nu \"Omfattning\" i stället för \"Omfattning och versionshistorik\"; antal frågor och ordlistans omfattning ligger kvar där de var, eftersom det är omfattning och inte historik.",
+      "**Ingången ligger högt upp:** meningen i Nyheter-sektionen som tidigare hänvisade till sidans botten länkar nu till versionshistoriken.",
+      "**Nya sidan visar 50 versioner åt gången** med en \"visa fler\"-knapp som räknar ner hur många som återstår. Alla 433 versioner renderas alltså inte på en gång.",
+      "**Ny delad modul `js/changelog.js`.** Parsning och rendering av CHANGELOG.md låg i info.js och behövdes nu på två sidor. Modulen exponerar `initChangelog()` och `escapeHtml()`; info.js och den nya versionshistorik.js använder båda den, så ingen kod är duplicerad. Laddas först på respektive sida eftersom info.js hämtar escapeHtml därifrån (CSP:n tillåter inga inline-skript, därav en egen fil även för den lilla init-koden).",
+      "**Sidan är inlagd i `sitemap.xml` OCH i `write_sitemap()` i `scripts/generate_glossary.py`** – bara det första hade räckt tills nästa ordlistegenerering, som skriver om hela sitemap.xml och hade tappat sidan. Även en rad i `llms.txt`.",
+      "Full SEO-paritet med index.html: unik title och description, canonical, robots, OG/Twitter, JSON-LD (WebPage + BreadcrumbList), CSP, favicon och manifest.",
+      "**JSON-LD-descriptionen på info.html rättad:** den sa \"Bakgrund, syfte och versionshistorik\", vilket slutade stämma när historiken flyttade. Står nu \"Bakgrund, syfte, omfattning och källor\".",
+      "VERSION/APP_VERSION/index.html- och info.html-cachebuster → 0.9.179."
+    ]
+  },
+  {
+    "version": "0.9.178",
+    "items": [
+      "**Källistan i info.html granskad och byggd ut från 6 till 17 poster.** Sektionen \"Källor och kvalitetssäkring\" redovisade tidigare sex källor medan appens innehåll vilar på ett åttiotal. Ingen befintlig post har tagits bort.",
+      "**Fem formfel i den befintliga listan rättade** mot `SEO_REGLER.md` §6b: listan var inte alfabetisk, FIPAT-posten saknade förlag, *Terminologia Anatomica* skrevs med versal titel i stället för husformatets *Terminologia anatomica*, tre källor stod som nakna domäner i stället för länkar, och Socialstyrelsens post hade en kortare titel än den redan granskade posten på kunskapsbankssidorna.",
+      "**Elva källor tillagda.** Sex hämtades ur repots egna, redan faktagranskade `kb-sources`-block (Bojsen-Møller, Hall & Hall, Kandel, Lindskog, Paulsen & Waschke, Standring). Fem slogs upp: Aspelin & Pettersson, Boron & Boulpaep, Lännergren m.fl., Moore/Dalley/Agur och Sand m.fl. – den sistnämnda är appens enskilt största källa med 1 400 frågor och saknades helt.",
+      "**Två upplagor kontrollerade mot verkligheten:** Boron & Boulpaep 4:e uppl. är ännu inte utgiven (pre-order till december 2027), så 3:e uppl. (2016) citeras. *Clinically Oriented Anatomy* citeras som 8:e uppl. (2018) eftersom 9:e uppl. bytt titel till *Moore's…* med Dalley och Agur som författare – 8:e matchar det `source`-fälten anger.",
+      "**Sorteringen följer svensk kollation** (å/ä/ö sist), vilket placerar Lännergren efter Lindskog.",
+      "**Ny regel: `CLAUDE_REGLER.md` §3.2d – använda källor ska skrivas in i info.html.** En källa som innehållet vilar på men som ingen besökare kan se är inte en redovisad källa; `source`-fältet i JSON är internt. Regeln slår också fast att det hellre ska bli för många källor än för få, att goda akademiska källor ska prioriteras, att bibliografiska data aldrig får gissas, och att källor aldrig raderas på eget bevåg.",
+      "**Todo för resten:** `scripts/kallista_info_html_todo.md` listar de 59 källor som återstår att föra in, med antal frågor per källa, census-kommando, skördekommando för `kb-sources`-blocken, tre dubbletter att slå ihop (Ross & Pawlina, Hoffbrand, Purves) och fyra specialfall (ISO 389/8253 är standarder; Vårdhandboken, Läkemedelsräkning för sjuksköterskor och Journalföring… saknar upphovsman i `source`).",
+      "**Regelförtydligande i `CLAUDE_REGLER.md` §2.11:** att fråga samma ord åt båda håll är alltid tillåtet, i alla filer – bidirektionella par ska aldrig flaggas som dubblettfel.",
+      "**Datumen i info.html uppdaterade:** \"Senast uppdaterad\" gick från 7 juli till 20 juli 2026 och JSON-LD:ns `dateModified` från 2026-06-27 till 2026-07-20 – båda hade halkat efter innehållet.",
+      "VERSION/APP_VERSION/index.html- och info.html-cachebuster → 0.9.178."
+    ]
+  }
+]

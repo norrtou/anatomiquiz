@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.180
+- **Info-sidan hämtar inte längre hela CHANGELOG.md.** För att visa tre versioner i teasern laddade den 425 KB markdown och parsade allt i webbläsaren. Nu hämtas `changelog-latest.json` på 10 KB i stället – en minskning med 41 gånger. Versionshistoriksidan hämtar fortfarande hela filen, vilket är rimligt eftersom den faktiskt visar allt.
+- **Nytt skript `scripts/generate_changelog_teaser.py`** som klipper ut de senaste posterna. Dess parsning är verifierad byte-identisk med `parseChangelog()` i js/changelog.js, så teasern och historiksidan kan inte visa olika innehåll.
+- **Pre-commit-hooken regenererar teasern automatiskt** när CHANGELOG.md är stagead och lägger till filen i commiten. Utan det hade Om-sidan visat gamla versioner tills någon kom ihåg att köra skriptet för hand.
+- **Filen ligger i repo-roten**, inte i `data/` – hooken kör allt som matchar `data/*.json` genom quizvalidatorn, och en changelog-fil är ingen quizfil. Roten är dessutom där de andra genererade sajtfilerna bor (sitemap.xml, llms.txt, manifest.json).
+- **Fallback:** går teaser-filen inte att hämta faller `initChangelog()` tillbaka på CHANGELOG.md, så Om-sidan aldrig blir tom om filen skulle saknas.
+- VERSION/APP_VERSION/index.html-, info.html- och versionshistorik.html-cachebuster → 0.9.180.
+
 ## 0.9.179
 - **Versionshistoriken har flyttat till en egen sida: `versionshistorik.html`.** Info-sidan visade de 20 senaste versionerna, och eftersom releasenoterna vuxit till 10–14 långa punkter styckena var historiken i praktiken 70–80 % av sidans text. Den nya sidan är en undersida till Om Anatomiquiz (brödsmula Anatomiquiz / Om Anatomiquiz / Versionshistorik) och har medvetet ingen egen knapp på startsidan.
 - **Info-sidan behåller de tre senaste versionerna som teaser** med en länk vidare till hela listan. Sektionen heter nu "Omfattning" i stället för "Omfattning och versionshistorik"; antal frågor och ordlistans omfattning ligger kvar där de var, eftersom det är omfattning och inte historik.
