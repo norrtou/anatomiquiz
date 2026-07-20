@@ -1,0 +1,137 @@
+{
+  "_kommentar": "Artikelregister för Anatomiquiz kunskapsbank. ENDA sanningen för artikelmetadata – härur genereras ämneshubbar, artikelindex, faktatexter.html, llms.txt-sektionen och sitemap-poster. Regler: ARTIKLAR_REGLER.md. Kör scripts/generate_artiklar.py efter varje ändring.",
+  "_falt": {
+    "sokvag": "Utelämnas för nya artiklar → /kunskapsbank/artiklar/<slug>.html. Anges explicit för artiklar publicerade före omstruktureringen, vars URL aldrig får ändras (SEO_REGLER §11.E).",
+    "poang": "Artikelns tes i EN mening. Måste vara unik över hela registret (ARTIKLAR_REGLER §0.3, §8.1).",
+    "beroenden": "Slugs artikeln förutsätter. Bindande byggordning (ARTIKLAR_REGLER §11).",
+    "llms": "Utförlig innehållsbeskrivning för llms.txt. Längre och mer konkret än poang (som är artikelns tes). Krävs för status live."
+  },
+  "hubbar": [
+    {
+      "slug": "rorelseapparaten",
+      "titel": "Rörelseapparaten",
+      "kortbeskrivning": "Muskler, leder och skelett – hur kroppen är byggd för rörelse och hur strukturerna samverkar.",
+      "beskrivning": "Artiklar om rörelseapparaten – riktningar och plan, ledtyper och ledrörelser, samt hur muskler, senor och fascia samverkar.",
+      "ordning": 1
+    },
+    {
+      "slug": "nervsystemet",
+      "titel": "Nervsystemet",
+      "kortbeskrivning": "Hjärna, ryggmärg och perifera nerver – hur signaler leds och styr kropp och sinnen.",
+      "beskrivning": "Artiklar om nervsystemet – hur motoriska kommandon och känselsignaler leds mellan hjärnan, ryggmärgen och kroppens muskler och hud.",
+      "ordning": 2
+    },
+    {
+      "slug": "hjarta-karl",
+      "titel": "Hjärta &amp; kärl",
+      "kortbeskrivning": "Cirkulationssystemet – hjärtats arbete och blodets väg genom artärer och vener.",
+      "beskrivning": "Artiklar om cirkulationssystemet – hjärtats pumparbete och retledning samt blodets väg genom artärer, kapillärer och vener.",
+      "ordning": 3
+    },
+    {
+      "slug": "inre-organ",
+      "titel": "Inre organ",
+      "kortbeskrivning": "Andnings-, matsmältnings- och urinvägsorganen – läge, uppbyggnad och funktion.",
+      "beskrivning": "Artiklar om kroppens inre organ – andningsvägarna, mag-tarmkanalen och urinvägarna, med läge, uppbyggnad och funktion.",
+      "ordning": 4
+    },
+    {
+      "slug": "klinisk-anatomi",
+      "titel": "Klinisk anatomi",
+      "kortbeskrivning": "Anatomin bakom vanliga besvär – rotatorkuffen, karpaltunneln, ischiasnerven och plantarfascian.",
+      "beskrivning": "Artiklar om anatomin bakom vanliga besvär – rotatorkuffen, karpaltunneln och ischiasnerven, beskrivna i utbildningssyfte.",
+      "ordning": 5,
+      "ansvarsfriskrivning": true
+    },
+    {
+      "slug": "plugga-och-tenta",
+      "titel": "Plugga &amp; tenta",
+      "kortbeskrivning": "Studieteknik, minnesregler och de färdigheter du tenteras på – hur du lär dig anatomin och räknar rätt.",
+      "beskrivning": "Artiklar om studieteknik och de färdigheter du tenteras på – hur du lär dig anatomin på riktigt och räknar ut rätt läkemedelsdos.",
+      "ordning": 6
+    }
+  ],
+  "artiklar": [
+    {
+      "slug": "sa-styrs-en-rorelse",
+      "sokvag": "/kunskapsbank/sa-styrs-en-rorelse.html",
+      "titel": "Så styrs en rörelse",
+      "kortbeskrivning": "Vägen för ett motoriskt kommando – från motorbarken via övre och nedre motorneuron till muskeln, pyramidalt och extrapyramidalt.",
+      "poang": "Ett viljemässigt motoriskt kommando passerar exakt två neuron i serie, och var kedjan bryts avgör vilken sorts bortfall som uppstår.",
+      "typ": "oversikt",
+      "hubb": "nervsystemet",
+      "malgrupp": [
+        "alla"
+      ],
+      "taggar": [
+        "motorik",
+        "nervbanor",
+        "motorneuron",
+        "pyramidbanan"
+      ],
+      "publicerad": "2026-07-04",
+      "uppdaterad": "2026-07-04",
+      "beroenden": [],
+      "tabeller": [
+        "/kunskapsbank/nervtabell-motorbanor.html"
+      ],
+      "status": "live",
+      "llms": "Faktatext om hur ett motoriskt kommando leds från hjärnbarken till muskeln – vägen via övre och nedre motorneuron, korsningen i decussatio pyramidum, skillnaden mellan UMN- och LMN-skada samt pyramidala kontra extrapyramidala system. Korslänkad till tabellen Motoriska nervbanor."
+    },
+    {
+      "slug": "sa-leds-kanseln",
+      "sokvag": "/kunskapsbank/sa-leds-kanseln.html",
+      "titel": "Så leds känseln",
+      "kortbeskrivning": "Känselns väg från receptor via ryggmärg och thalamus till känselbarken – baksträngsbanan kontra spinotalamusbanan och var de korsar.",
+      "poang": "Känselns två huvudbanor korsar på olika nivåer, vilket är själva förklaringen till det korsade bortfallsmönstret vid halvsidig ryggmärgsskada.",
+      "typ": "oversikt",
+      "hubb": "nervsystemet",
+      "malgrupp": [
+        "alla"
+      ],
+      "taggar": [
+        "sensorik",
+        "nervbanor",
+        "baksträngsbanan",
+        "spinotalamusbanan"
+      ],
+      "publicerad": "2026-07-04",
+      "uppdaterad": "2026-07-04",
+      "beroenden": [],
+      "tabeller": [
+        "/kunskapsbank/nervtabell-sensorbanor.html"
+      ],
+      "status": "live",
+      "llms": "Faktatext om hur känseln leds från receptor via spinalganglion, ryggmärg och thalamus till känselbarken (tre neuron i serie). Tar upp baksträngsbanan kontra spinotalamusbanan och var de korsar (Brown-Séquards syndrom), medvetet kontra omedvetet samt receptortyperna (mekano-, noci-, termo- och proprioceptorer). Korslänkad till tabellen Sensoriska nervbanor."
+    },
+    {
+      "slug": "lakemedelsberakning",
+      "sokvag": "/kunskapsbank/lakemedelsberakning.html",
+      "titel": "Läkemedelsberäkning",
+      "kortbeskrivning": "Räkna ut rätt dos – enheter, styrka och dos, de tre formlerna, infusionstakt, dosering per kg och säker kontrollräkning.",
+      "poang": "Nästan alla doseringsfel går tillbaka på enhetshantering, och tre grundformler täcker de beräkningar en sjuksköterska faktiskt möter.",
+      "typ": "guide",
+      "hubb": "plugga-och-tenta",
+      "malgrupp": [
+        "sjukskoterska"
+      ],
+      "taggar": [
+        "läkemedelsberäkning",
+        "dosering",
+        "infusion",
+        "spädning"
+      ],
+      "publicerad": "2026-07-12",
+      "uppdaterad": "2026-07-12",
+      "beroenden": [],
+      "tabeller": [
+        "/kunskapsbank/lakemedelsberakning-omvandlingar.html"
+      ],
+      "quiz": [
+        "lakemedelsrakning"
+      ],
+      "status": "live",
+      "llms": "Faktatext om läkemedelsberäkning för sjuksköterskor – begreppen ordination, styrka och dos, enhetsomvandling (g/mg/µg, liter/ml), de tre grundformlerna (antal tabletter, dosvolym, mängd substans), infusionshastighet och dropptakt, dosering per kroppsvikt (mg/kg), procentlösningar och spädning (C₁V₁ = C₂V₂) samt säker kontrollräkning. Korslänkad till tabellen Omvandlingar & formler och till quizet Läkemedelsräkning."
+    }
+  ]
+}

@@ -356,7 +356,7 @@
     "correct": "avrundningsfel byggs på och gör slutsvaret felaktigt",
     "distractors": [
       "det går snabbare att avrunda tidigt",
-      "mellansvaren ska alltid vara heltal",
+      "mellansvaren ska vara heltal",
       "decimaler är inte tillåtna i vården"
     ],
     "topic": "lakemedelsrakning",
@@ -384,7 +384,7 @@
     "correct": "göra en rimlighetsbedömning av svaret",
     "distractors": [
       "avrunda till närmaste tiotal",
-      "alltid runda uppåt",
+      "runda uppåt för säkerhets skull",
       "lita på första uträkningen utan kontroll"
     ],
     "topic": "lakemedelsrakning",
@@ -510,7 +510,7 @@
     "correct": "generiskt namn är substansens namn, produktnamnet är tillverkarens varumärke",
     "distractors": [
       "generiskt namn är varumärket, produktnamnet är substansen",
-      "de betyder alltid exakt samma sak",
+      "de betyder exakt samma sak",
       "generiskt namn anger styrkan, produktnamnet anger formen"
     ],
     "topic": "lakemedelsrakning",
@@ -581,7 +581,7 @@
     "distractors": [
       "enheter saknar betydelse vid division",
       "man kan blanda enheter fritt så länge talen stämmer",
-      "endast volymen behöver ha rätt enhet"
+      "det räcker att volymen har rätt enhet"
     ],
     "topic": "lakemedelsrakning",
     "difficulty": "Normal",
@@ -595,7 +595,7 @@
     "distractors": [
       "den vanliga rekommenderade engångsdosen",
       "den minsta verksamma dosen",
-      "dosen som alltid ska ges"
+      "den sammanlagda dosen under hela behandlingen"
     ],
     "topic": "lakemedelsrakning",
     "difficulty": "Normal",
@@ -663,9 +663,9 @@
     "prompt": "Vilken uppgift behöver du oftast känna till för att räkna ut en dosvolym i ml?",
     "correct": "ordinationen och lösningens styrka",
     "distractors": [
-      "endast patientens ålder",
-      "endast förpackningens volym",
-      "endast antalet doser per dygn"
+      "patientens ålder och puls",
+      "förpackningens volym och utgångsdatum",
+      "antalet doser per dygn och behandlingens längd"
     ],
     "topic": "lakemedelsrakning",
     "difficulty": "Normal",

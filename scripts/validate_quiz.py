@@ -22,8 +22,9 @@ from collections import defaultdict, Counter
 
 # Filer som inte är MC/TF-quiz (ordlista, register, flashcards utan distraktorer)
 SKIP = {"ordlista.json", "ordlista_import_raw.json", "kb_glossary_terms.json",
-        "bilder.json"}
+        "bilder.json", "artiklar.json"}
 LEN_BIAS_LIMIT = 40  # % frågor där correct är längst, per ämne, innan varning
+LEN_BIAS_MIN_N = 10   # minsta antal mätbara (flerords-)frågor innan andelen betyder något
 
 # §2.9: absoluta ord gör en distraktor strykbar utan sakkunskap om rätt svar aldrig bär dem
 ABSOLUTE = re.compile(r"\b(endast|enbart|alltid|aldrig|inga|ingen|inget|samtliga|uteslutande)\b", re.I)
@@ -128,10 +129,23 @@ def check_file(path, errors, warnings):
 
     # Varningar per ämne
     for topic, qs in by_topic.items():
-        longest = sum(1 for q in qs if len(q["correct"]) > max(len(x) for x in q["distractors"]))
-        pct = round(100 * longest / len(qs))
-        if pct > LEN_BIAS_LIMIT:
-            warnings.append(f"{name}:{topic} längdbias {pct}% (rätt svar längst i {longest}/{len(qs)})")
+        # §2.9 gäller UTFÖRLIGHET, inte teckenantal. Frågor där alla alternativ är
+        # enstaka termer (glosor, latinska substantiv) räknas därför inte: att
+        # "cartilágo" är längre än "génu" är godtyckligt och går inte att gissa på.
+        # Tellen uppstår när facit är en utbyggd FÖRKLARING och distraktorerna
+        # korta etiketter – det förutsätter flerordssvar.
+        matbara = [q for q in qs
+                   if " " in q["correct"].strip()
+                   or any(" " in str(x).strip() for x in q["distractors"])]
+        # Under ~10 mätbara frågor är andelen ren slump ("2 av 4 = 50 %" betyder
+        # ingenting). Systematisk bias kräver ett underlag att vara systematisk i.
+        if len(matbara) >= LEN_BIAS_MIN_N:
+            longest = sum(1 for q in matbara
+                          if len(q["correct"]) > max(len(x) for x in q["distractors"]))
+            pct = round(100 * longest / len(matbara))
+            if pct > LEN_BIAS_LIMIT:
+                warnings.append(f"{name}:{topic} längdbias {pct}% "
+                                f"(rätt svar längst i {longest}/{len(matbara)} flerordsfrågor)")
         cparen = sum(1 for q in qs if "(" in q["correct"])
         dparen = sum(1 for q in qs for x in q["distractors"] if "(" in x)
         if cparen and cparen / len(qs) > 0.15 and cparen > (dparen / 3):

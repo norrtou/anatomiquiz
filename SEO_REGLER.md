@@ -171,6 +171,11 @@ Trovärdighet är ett **krav** på allt innehåll i kunskapsbanken (YMYL). Därf
   anatomica (2:a uppl.). FIPAT.*). Listan **alfabetisk** på författare/titel. Titlar i `<em>`.
 - **Inga referenser i löpande text** om inte användaren uttryckligen ber om det. Hela
   trovärdigheten bärs av referenslistan + att påståendena är faktakollade ([[feedback_trust_source_material]]).
+  **Undantag för artiklar (godkänt 2026-07-20):** i `/kunskapsbank/artiklar/` styrs detta av
+  påståendeklassningen i [`ARTIKLAR_REGLER.md`](ARTIKLAR_REGLER.md) §6.1 – etablerad
+  läroboksfakta (klass A) bärs fortfarande enbart av referenslistan, medan nyare/omdiskuterade
+  påståenden (B), regulatoriska uppgifter (C) och åsikt/praxis (D) länkas i texten. Klass D ska
+  dessutom markeras som just åsikt eller praxis, aldrig presenteras som fakta.
 - Använd `.kb-sources`-blocket (finns redan). Markup:
   ```html
   <div class="kb-sources">

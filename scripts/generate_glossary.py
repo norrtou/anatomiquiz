@@ -50,6 +50,20 @@ SITEMAP = ROOT / "sitemap.xml"
 SITE = "https://anatomiquiz.se"
 LANDING_FILE = "medicinskordlista.html"
 
+
+def artikel_sitemap_urls() -> list[str]:
+    """Artikelsidornas URL:er ur data/artiklar.json.
+
+    write_sitemap() nedan skriver om HELA sitemap.xml. Artiklarna hämtas
+    därför härifrån istället för att hårdkodas – annars tappas de tyst vid
+    nästa körning av det här skriptet. Registret är sanningen
+    (ARTIKLAR_REGLER.md §1.6).
+    """
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import generate_artiklar as ga
+    return ga.sitemap_urls(ga.load())
+
 # Cachebusters per asset — bumpa bara den som faktiskt ändrats.
 STYLES_V = "0.9.144"       # css/styles.css (synkad med övriga sidor 2026-07-12)
 GLOSSARY_V = "0.9.5"      # css/glossary.css + js/glossary.js (denna release)
@@ -995,9 +1009,12 @@ def write_sitemap(group_files: list[str]) -> None:
     # (utanför muskel-serien). Båda pillarna är index,follow sedan 0.9.41.
     blocks.append(url_block(f"{SITE}/kunskapsbank/listor-tabeller.html", "weekly", "0.7"))
     blocks.append(url_block(f"{SITE}/kunskapsbank/faktatexter.html", "weekly", "0.7"))
-    blocks.append(url_block(f"{SITE}/kunskapsbank/sa-styrs-en-rorelse.html", "monthly", "0.7"))
-    blocks.append(url_block(f"{SITE}/kunskapsbank/sa-leds-kanseln.html", "monthly", "0.7"))
-    blocks.append(url_block(f"{SITE}/kunskapsbank/lakemedelsberakning.html", "monthly", "0.7"))
+    # Artikelsidorna (ämneshubbar + artiklar) kommer ur data/artiklar.json och
+    # räknas INTE upp här. Skulle de hårdkodas skulle varje ny artikel behöva
+    # läggas in på två ställen – och glömdes den här försvann den ur sitemap
+    # vid nästa ordlistegenerering. Se ARTIKLAR_REGLER.md §1.6.
+    for u in artikel_sitemap_urls():
+        blocks.append(url_block(f"{SITE}{u}", "monthly", "0.7"))
     blocks.append(url_block(f"{SITE}/kunskapsbank/lakemedelsberakning-omvandlingar.html", "monthly", "0.7"))
     # Nervtabeller (under-pillar + nervsidor)
     blocks.append(url_block(f"{SITE}/kunskapsbank/nervtabeller.html", "weekly", "0.7"))
