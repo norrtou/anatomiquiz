@@ -707,7 +707,7 @@
   },
   {
     "type": "mc",
-    "prompt": "Vad är det latinska namnet för båtbenet?",
+    "prompt": "Vad är det latinska namnet för båtbenet i handloven?",
     "correct": "Os scaphoideum",
     "distractors": [
       "Os naviculare",
@@ -801,9 +801,9 @@
     "prompt": "Vilket ben motsvarar Os scaphoideum?",
     "correct": "Båtbenet",
     "distractors": [
-      "Os lunatum",
-      "Os trapezium",
-      "Os capitatum"
+      "Månbenet",
+      "Krokbenet",
+      "Huvudbenet"
     ],
     "topic": "handen_ben",
     "difficulty": "Normal",
@@ -814,9 +814,9 @@
     "prompt": "Vilket ben motsvarar Os lunatum?",
     "correct": "Månbenet",
     "distractors": [
-      "Os triquetrum",
-      "Os hamatum",
-      "Os pisiforme"
+      "Båtbenet",
+      "Ärtbenet",
+      "Krokbenet"
     ],
     "topic": "handen_ben",
     "difficulty": "Normal",
@@ -827,9 +827,9 @@
     "prompt": "Vilket ben motsvarar Os triquetrum?",
     "correct": "Tresidiga benet",
     "distractors": [
-      "Os scaphoideum",
-      "Os trapezoideum",
-      "Os capitatum"
+      "Trapezoidbenet",
+      "Huvudbenet",
+      "Båtbenet"
     ],
     "topic": "handen_ben",
     "difficulty": "Normal",
@@ -840,9 +840,9 @@
     "prompt": "Vilket ben motsvarar Os pisiforme?",
     "correct": "Ärtbenet",
     "distractors": [
-      "Os lunatum",
-      "Os hamatum",
-      "Os scaphoideum"
+      "Månbenet",
+      "Krokbenet",
+      "Huvudbenet"
     ],
     "topic": "handen_ben",
     "difficulty": "Normal",
@@ -851,12 +851,12 @@
   {
     "id": "q72",
     "type": "mc",
-    "prompt": "Vad heter båtbenet på latin?",
+    "prompt": "Vad heter båtbenet i handloven på latin?",
     "correct": "Os scaphoideum",
     "distractors": [
-      "Os naviculare",
-      "Tarsus",
-      "Carpale"
+      "Os lunatum",
+      "Os capitatum",
+      "Os hamatum"
     ],
     "topic": "handen_ben",
     "difficulty": "Normal"
@@ -867,9 +867,9 @@
     "prompt": "Vad heter månbenet på latin?",
     "correct": "Os lunatum",
     "distractors": [
-      "Os naviculare",
-      "Tarsus",
-      "Carpale"
+      "Os scaphoideum",
+      "Os triquetrum",
+      "Os pisiforme"
     ],
     "topic": "handen_ben",
     "difficulty": "Normal"
@@ -880,9 +880,9 @@
     "prompt": "Vad heter tresidiga benet på latin?",
     "correct": "Os triquetrum",
     "distractors": [
-      "Os naviculare",
-      "Tarsus",
-      "Carpale"
+      "Os pisiforme",
+      "Os hamatum",
+      "Os capitatum"
     ],
     "topic": "handen_ben",
     "difficulty": "Normal"
@@ -893,9 +893,9 @@
     "prompt": "Vad heter ärtbenet på latin?",
     "correct": "Os pisiforme",
     "distractors": [
-      "Os naviculare",
-      "Tarsus",
-      "Carpale"
+      "Os triquetrum",
+      "Os lunatum",
+      "Os hamatum"
     ],
     "topic": "handen_ben",
     "difficulty": "Normal"
@@ -906,9 +906,9 @@
     "prompt": "Vad heter trapezoidbenet på latin?",
     "correct": "Os trapezoideum",
     "distractors": [
-      "Os naviculare",
-      "Tarsus",
-      "Carpale"
+      "Os trapezium",
+      "Os capitatum",
+      "Os scaphoideum"
     ],
     "topic": "handen_ben",
     "difficulty": "Normal"
@@ -919,9 +919,9 @@
     "prompt": "Vad heter huvudbenet på latin?",
     "correct": "Os capitatum",
     "distractors": [
-      "Os naviculare",
-      "Tarsus",
-      "Carpale"
+      "Os hamatum",
+      "Os trapezium",
+      "Os lunatum"
     ],
     "topic": "handen_ben",
     "difficulty": "Normal"
@@ -932,9 +932,9 @@
     "prompt": "Vad heter krokbenet på latin?",
     "correct": "Os hamatum",
     "distractors": [
-      "Os naviculare",
-      "Tarsus",
-      "Carpale"
+      "Os capitatum",
+      "Os trapezoideum",
+      "Os triquetrum"
     ],
     "topic": "handen_ben",
     "difficulty": "Normal"
@@ -945,9 +945,9 @@
     "prompt": "Vad heter tummens mellanhandsben på latin?",
     "correct": "Os metacarpale I",
     "distractors": [
-      "Os naviculare",
-      "Tarsus",
-      "Carpale"
+      "Os metacarpale II",
+      "Os metacarpale III",
+      "Os metacarpale V"
     ],
     "topic": "handen_ben",
     "difficulty": "Normal"
@@ -958,9 +958,9 @@
     "prompt": "Vad heter pekfingrets mellanhandsben på latin?",
     "correct": "Os metacarpale II",
     "distractors": [
-      "Os naviculare",
-      "Tarsus",
-      "Carpale"
+      "Os metacarpale I",
+      "Os metacarpale III",
+      "Os metacarpale IV"
     ],
     "topic": "handen_ben",
     "difficulty": "Normal"
@@ -2598,7 +2598,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Flexor digitorum superficialis går genom vinculum",
+    "prompt": "Senan till m. flexor digitorum profundus passerar genom en klyvning i senan till m. flexor digitorum superficialis",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2708,7 +2708,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Supination sker vid armbågen",
+    "prompt": "Supination sker i tummens sadelled",
     "correct": "Falskt",
     "distractors": [
       "Sant"

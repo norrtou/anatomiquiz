@@ -1,5 +1,22 @@
 [
   {
+    "version": "0.9.183",
+    "items": [
+      "**Faktagranskningen av arbetsterapeutens quiz påbörjad – tolv filer lästa fråga för fråga.** Detta är svepets sista punkt: de mekaniska defekterna (formtells, dubbletter, absolut-ord) var uttömda redan i 0.9.182, och det som återstod krävde läsning mot källorna i stället för mätning. Genomgångna hittills: blodomloppet, ergonomi, grepp, ledtyper, neurologi, olika_aldrar, skuldran, muskler, tentaplugg, handen, ben samt större delen av riktningar – drygt 2 500 frågor. Sju av tolv filer var faktamässigt rena.",
+      "**Distraktor som råkade vara sann – `muskler:q22`.** Frågan \"Vilken muskel extenderar?\" hade `Latissimus dorsi` bland de felaktiga alternativen. Samma fil slår i `q280` fast att latissimus dorsi *extenderar och inåtroterar i art. glenohumerale*. Frågan hade alltså två rätta svar. Distraktorn är utbytt mot `Biceps brachii`, som liksom övriga alternativ är en flexor.",
+      "**Två påståenden i `handen.json` var direkt felaktiga.** `q223` löd \"Flexor digitorum superficialis går genom vinculum\" med facit *Sant* – vincula är blodkärlsförande band till senan, inte något senan passerar igenom. Frågan prövar nu i stället att djupa böjsenan passerar genom en klyvning i den ytliga, vilket är det som faktiskt sker. `q233` löd \"Supination sker vid armbågen\" med facit *Falskt*, trots att `tentaplugg` på två ställen lär ut att armbågsledens vridled är just den led där pronation och supination utförs. Prompten är omskriven så att motsägelsen försvinner.",
+      "**Språkparitet i fyra frågor om handrotsbenen.** `handen:q68–q71` frågade \"Vilket ben motsvarar Os scaphoideum?\" med det svenska \"Båtbenet\" som rätt svar och tre latinska bennamn som distraktorer. Det enda alternativet på ett annat språk är alltid det rätta – man behöver inte kunna handloven för att se det. Alla alternativ ligger nu i samma språkregister.",
+      "**Nio frågor hade alternativ som inte är ben.** `handen:q72–q80` använde `Tarsus` och `Carpale` som distraktorer till latinska bennamn. *Tarsus* är en region, inte ett ben, och *Carpale* är ingen giltig term alls. Distraktorerna är nu andra verkliga handrots- och mellanhandsben. Samma sorts fel fanns i `ben:q322`, där `Periosteum` – en bindvävshinna – stod som alternativ på frågan om kroppens minsta ben.",
+      "**\"Båtbenet\" är tvetydigt och måste preciseras.** `handen:q61` och `q72` frågade efter båtbenet med *Os naviculare* som distraktor. Båda benen heter båtbenet på svenska; det i handloven är os scaphoideum, det i foten os naviculare. Frågorna anger nu \"båtbenet i handloven\", vilket gör distraktorn till ett rimligt men felaktigt alternativ i stället för ett lika rätt svar.",
+      "**Fyra fynd i `tentaplugg.json`.** `studier_q152` hade självutpekande distraktorer – \"Humerus, ett långt rörben\" och \"Scapula, ett platt ben\" talar om att de inte är kortben. `studier_q204` hade *Exostoser* som distraktor till *Osteofyter*, men en osteofyt är en form av exostos. `studier_q193` frågade vad en process *kallas* medan svaret beskrev ett förlopp, och bar dessutom formen \"inneslutas\" i stället för \"innesluts\". `studier_q302` och `q273` innehöll `Art. cruralis` och `Fossa tabatiere` – termer som inte finns; ersatta med art. talocruralis respektive crista iliaca.",
+      "**Två självbesvarande frågor i `ben.json`.** \"Vilken del av lårbenet är närmast höftleden?\" hade svaret \"Höftsidan\" – frågan besvarar sig själv på ordstammen. Frågorna använder nu proximal/distal änden med anatomiska distraktorer. Samma sak i `olika_aldrar:oa_q57`, där prompten berättade att kvinnan bröt höften och svaret var \"Höftfraktur\".",
+      "**Ett potentiellt sant alternativ i `grepp:q9`.** Frågan om vad som kännetecknar volargreppen hade \"Handleden hålls sträckt medan fingrarna böjs\" som distraktor – vilket är en verklig egenskap hos kraftgrepp. Utbytt mot ett konkret felaktigt påstående.",
+      "**Språk- och terminologirättelser:** *käkningen* → **tuggfunktionen**, *Os ischi* → **os ischii** (kvarvarande förekomst i `ben:q70`), samt \"Vilken är det största/minsta benet\" → **\"Vilket\"**.",
+      "**Kvar av faktagranskningen:** slutet av `riktningar.json` samt de tre flashcard-filerna och de två bildfrågefilerna. Öppen fråga att ta ställning till: ett tiotal frågor i `handen.json` efterfrågar \"det svenska namnet\" på handmuskler som saknar etablerat svenskt namn – \"Kort tumflexor\" är det exempel CLAUDE_REGLER §1.2 uttryckligen pekar ut som en påhittad term, och §2.5 säger att sådana namnfrågor ska strykas.",
+      "VERSION/APP_VERSION/index.html-, info.html- och versionshistorik.html-cachebuster → 0.9.183."
+    ]
+  },
+  {
     "version": "0.9.182",
     "items": [
       "**Arbetsterapeutens quiz ger nu 0 fel och 0 varningar i validatorn.** De två defekter som lämnades öppna i 0.9.181 är åtgärdade: sant/falskt-frågornas svarsfördelning och längdparitet mellan alternativen. Utbildningen har därmed samma mekaniska kvalitetsnivå som de elva som granskades tidigare.",
@@ -34,17 +51,6 @@
       "**`scripts/validate_quiz.py` fångar nu fler filler-varianter** – \"Inget/Ingen av ovanstående\" och \"Inget/Ingen av alternativen\" utöver \"av dessa\".",
       "**Granskningen är inte avslutad.** Sant/falskt-frågornas svarsfördelning och längdparitet i ett antal ämnen är ännu inte åtgärdade, och en faktagranskning ämne för ämne mot källorna återstår för den här utbildningen.",
       "VERSION/APP_VERSION/index.html-, info.html- och versionshistorik.html-cachebuster → 0.9.181."
-    ]
-  },
-  {
-    "version": "0.9.180",
-    "items": [
-      "**Info-sidan hämtar inte längre hela CHANGELOG.md.** För att visa tre versioner i teasern laddade den 425 KB markdown och parsade allt i webbläsaren. Nu hämtas `changelog-latest.json` på 10 KB i stället – en minskning med 41 gånger. Versionshistoriksidan hämtar fortfarande hela filen, vilket är rimligt eftersom den faktiskt visar allt.",
-      "**Nytt skript `scripts/generate_changelog_teaser.py`** som klipper ut de senaste posterna. Dess parsning är verifierad byte-identisk med `parseChangelog()` i js/changelog.js, så teasern och historiksidan kan inte visa olika innehåll.",
-      "**Pre-commit-hooken regenererar teasern automatiskt** när CHANGELOG.md är stagead och lägger till filen i commiten. Utan det hade Om-sidan visat gamla versioner tills någon kom ihåg att köra skriptet för hand.",
-      "**Filen ligger i repo-roten**, inte i `data/` – hooken kör allt som matchar `data/*.json` genom quizvalidatorn, och en changelog-fil är ingen quizfil. Roten är dessutom där de andra genererade sajtfilerna bor (sitemap.xml, llms.txt, manifest.json).",
-      "**Fallback:** går teaser-filen inte att hämta faller `initChangelog()` tillbaka på CHANGELOG.md, så Om-sidan aldrig blir tom om filen skulle saknas.",
-      "VERSION/APP_VERSION/index.html-, info.html- och versionshistorik.html-cachebuster → 0.9.180."
     ]
   }
 ]

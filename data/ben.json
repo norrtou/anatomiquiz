@@ -400,7 +400,7 @@
   {
     "id": "q31",
     "type": "mc",
-    "prompt": "Vilka ben är viktiga för käkningen?",
+    "prompt": "Vilka ben är viktiga för tuggfunktionen?",
     "correct": "Överkäken och underkäken",
     "distractors": [
       "Pannbenet och näsbenet",
@@ -907,7 +907,7 @@
     "distractors": [
       "Os ilium",
       "Os pubis",
-      "Os ischi"
+      "Os ischii"
     ],
     "topic": "osteologi_pelvis",
     "difficulty": "Normal",
@@ -3562,12 +3562,12 @@
   {
     "id": "q275",
     "type": "mc",
-    "prompt": "Vilken del av lårbenet är närmast höftleden?",
-    "correct": "Höftsidan",
+    "prompt": "Vilken del av lårbenet ligger närmast höftleden?",
+    "correct": "Den proximala änden",
     "distractors": [
-      "Knäsidan",
-      "Mittendelen",
-      "Skaftets ände"
+      "Den distala änden",
+      "Diafysens mittparti",
+      "Femurkondylerna"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -3576,12 +3576,12 @@
   {
     "id": "q276",
     "type": "mc",
-    "prompt": "Vilken del av lårbenet är närmast knäleden?",
-    "correct": "Knäsidan",
+    "prompt": "Vilken del av lårbenet ligger närmast knäleden?",
+    "correct": "Den distala änden",
     "distractors": [
-      "Höftsidan",
-      "Mittendelen",
-      "Skaftets början"
+      "Den proximala änden",
+      "Diafysens mittparti",
+      "Caput femoris"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -3854,7 +3854,7 @@
   {
     "id": "q297",
     "type": "mc",
-    "prompt": "Vilka ben utgör greppet när man tar något?",
+    "prompt": "Hur samverkar handens ben när man tar ett grepp?",
     "correct": "Carpalbenen stabiliserar, resten rör sig",
     "distractors": [
       "Phalangerna stabiliserar medan resten rör sig",
@@ -4164,7 +4164,7 @@
   {
     "id": "q321",
     "type": "mc",
-    "prompt": "Vilken är det största benet i kroppen?",
+    "prompt": "Vilket är det största benet i kroppen?",
     "correct": "Femur",
     "distractors": [
       "Humerus",
@@ -4178,10 +4178,10 @@
   {
     "id": "q322",
     "type": "mc",
-    "prompt": "Vilken är det minsta benet i kroppen?",
+    "prompt": "Vilket är det minsta benet i kroppen?",
     "correct": "Stapes",
     "distractors": [
-      "Periosteum",
+      "Os nasale",
       "Talus",
       "Pisiforme"
     ],

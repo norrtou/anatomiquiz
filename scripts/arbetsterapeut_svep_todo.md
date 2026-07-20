@@ -1,6 +1,6 @@
 # Arbetsterapeut – kvalitetssvep enligt CLAUDE_REGLER.md
 
-**Status:** punkt 1–5, 7a–7c UTFÖRDA 2026-07-20. **Kvar: bara punkt 6 – faktagranskningen.**
+**Status:** punkt 1–5, 7a–7c UTFÖRDA 2026-07-20. **Punkt 6 (faktagranskningen) PÅBÖRJAD 2026-07-20, se nedan.**
 Skapad 2026-07-19. **Validatorn ger 0 fel och 0 varningar på alla arbetsterapeutfiler**, och
 de mekaniska/strukturella defekterna är därmed uttömda. Det som återstår kräver läsning mot
 källorna, inte mätning.
@@ -306,7 +306,47 @@ till *mellanfotsben*. Verifierat: 0 träffar på `mellanfott` i `data/ben.json`.
 - ✅ **`FILLER`-regexen utökad 2026-07-20** med "Inget/Ingen av ovanstående" och
   "Inget/Ingen av alternativen". Kodifierat i CLAUDE_REGLER §6.3.
 
-## 6. Kvar att göra som INTE är utrett
+## 6. 🔄 PÅGÅR – faktagranskning ämne för ämne (0.9.183)
+
+**Granskade och klara (12 filer, ~2 500 frågor):** blodomloppet, ergonomi, grepp, ledtyper,
+neurologi, olika_aldrar, skuldran, muskler, tentaplugg, handen, ben — samt `riktningar`
+t.o.m. q405 (av 543). Sju av tolv filer var faktamässigt rena.
+
+**Kvar att granska:** slutet av `riktningar.json` (q406–), `muskler_flashcards.json` (87),
+`moho_flashcards.json` (52), `otipm_flashcards.json` (50), `handens_ben_bilder.json` (97),
+`handens_leder_bilder.json` (58).
+
+**Fynd och åtgärder i 0.9.183** (fullständig lista i CHANGELOG):
+- `muskler:q22` distraktor `Latissimus dorsi` var sann (filen säger själv i q280 att den
+  extenderar) → två rätta svar. Bytt mot `Biceps brachii`.
+- `handen:q223` "FDS går genom vinculum" = Sant — falskt påstående. Omskriven.
+- `handen:q233` "Supination sker vid armbågen" = Falskt — motsäger `tentaplugg` q58/q209.
+  Omskriven.
+- `handen:q68–q71` språkparitet (svenskt rätt svar bland latinska distraktorer).
+- `handen:q72–q80` distraktorerna `Tarsus`/`Carpale` är inga ben. Utbytta.
+- `handen:q61`/`q72` "båtbenet" är tvetydigt (scaphoideum vs naviculare) → preciserat
+  till "båtbenet i handloven".
+- `ben:q322` distraktorn `Periosteum` är ingen benstruktur. `ben:q70` `Os ischi` → `os ischii`.
+- `ben:q275`/`q276` och `olika_aldrar:oa_q57` var självbesvarande. Omskrivna.
+- `tentaplugg` q152 (självutpekande), q204 (`Exostoser` ≈ osteofyt), q193 (prompt/svar-
+  missmatch + "inneslutas"), q302/q273 (`Art. cruralis`, `Fossa tabatiere` finns inte).
+- `grepp:q9` distraktorn om sträckt handled är sann för kraftgrepp. Omskriven.
+- Språk: *käkningen* → tuggfunktionen; "Vilken är det största benet" → "Vilket".
+
+### ⚠️ ÖPPEN FRÅGA TILL ANVÄNDAREN – påhittade svenska muskelnamn
+
+`handen.json` q82, q84–q91 och q358–q363 frågar efter "det svenska namnet" på handmuskler
+som saknar etablerat svenskt namn: **Kort tumabduktor, Kort tumflexor, Tumadduktor,
+Lillfingerabduktor, Kort lillfingerflexor, Oppositionsmuskeln för tummen/lillfingret,
+Palmära/Dorsala interossei.**
+
+`CLAUDE_REGLER.md` §1.2 pekar uttryckligen ut **"kort tumflexor"** som exempel på ett
+förbjudet hittepånamn, och §2.5 säger att en namnfråga där inget eget svenskt namn finns
+ska **RADERAS**. Det handlar om ~15 frågor. Enligt §5.3 raderar jag inte på eget bevåg –
+**beslut behövs**: stryka dem, eller behålla dem för att kursunderlaget använder formerna
+(§3.2b, kursunderlaget vinner)?
+
+## 6b. Ursprunglig formulering
 
 Punkt 1–5 är mekaniska/strukturella fynd. **En egentlig faktagranskning ämne för ämne
 mot källorna är inte gjord** – motsvarande den som gjordes för de 11 andra utbildningarna
