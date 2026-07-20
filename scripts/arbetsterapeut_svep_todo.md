@@ -1,6 +1,6 @@
 # Arbetsterapeut – kvalitetssvep enligt CLAUDE_REGLER.md
 
-**Status:** punkt 1–5, 7a–7c UTFÖRDA 2026-07-20. **Punkt 6 (faktagranskningen) PÅBÖRJAD 2026-07-20, se nedan.**
+**Status:** punkt 1–5, 7a–7c UTFÖRDA 2026-07-20. **Punkt 6 (faktagranskningen) KLAR 2026-07-20. HELA SVEPET AVSLUTAT.**
 Skapad 2026-07-19. **Validatorn ger 0 fel och 0 varningar på alla arbetsterapeutfiler**, och
 de mekaniska/strukturella defekterna är därmed uttömda. Det som återstår kräver läsning mot
 källorna, inte mätning.
@@ -306,15 +306,20 @@ till *mellanfotsben*. Verifierat: 0 träffar på `mellanfott` i `data/ben.json`.
 - ✅ **`FILLER`-regexen utökad 2026-07-20** med "Inget/Ingen av ovanstående" och
   "Inget/Ingen av alternativen". Kodifierat i CLAUDE_REGLER §6.3.
 
-## 6. 🔄 PÅGÅR – faktagranskning ämne för ämne (0.9.183)
+## 6. ✅ KLAR – faktagranskning ämne för ämne (0.9.183 + 0.9.184)
 
 **Granskade och klara (12 filer, ~2 500 frågor):** blodomloppet, ergonomi, grepp, ledtyper,
 neurologi, olika_aldrar, skuldran, muskler, tentaplugg, handen, ben — samt `riktningar`
 t.o.m. q405 (av 543). Sju av tolv filer var faktamässigt rena.
 
-**Kvar att granska:** slutet av `riktningar.json` (q406–), `muskler_flashcards.json` (87),
+**Granskade i 0.9.184 (avslutande pass):** hela `riktningar.json`, `muskler_flashcards.json` (87),
 `moho_flashcards.json` (52), `otipm_flashcards.json` (50), `handens_ben_bilder.json` (97),
-`handens_leder_bilder.json` (58).
+`handens_leder_bilder.json` (58). Flashcards och bildfrågor var sakligt rena.
+Fynd i riktningar: `q416` självbesvarande, `q424`/`q425` fel fackterm för käkens rörelser,
+`q236`/`q245` distraktorer från fel ämnesområde, `q118` synonymt rätt svar som distraktor,
+samt *rotationrörelse* och *Contralateral*.
+
+**⛔ Orörda enligt besked:** `medicinsk_terminologi.json`, `studenters_flashcards.json`.
 
 **Fynd och åtgärder i 0.9.183** (fullständig lista i CHANGELOG):
 - `muskler:q22` distraktor `Latissimus dorsi` var sann (filen säger själv i q280 att den
@@ -333,7 +338,17 @@ t.o.m. q405 (av 543). Sju av tolv filer var faktamässigt rena.
 - `grepp:q9` distraktorn om sträckt handled är sann för kraftgrepp. Omskriven.
 - Språk: *käkningen* → tuggfunktionen; "Vilken är det största benet" → "Vilket".
 
-### ⚠️ ÖPPEN FRÅGA TILL ANVÄNDAREN – påhittade svenska muskelnamn
+### ⚠️ TRE ÖPPNA BESLUTSPUNKTER
+
+**2. `moho_34` och `moho_50` har identisk prompt** ("Anpassningsprocess") med olika definitioner
+på baksidan. Att slå ihop dem kräver ställningstagande till MOHO-terminologin – gissa inte.
+
+**3. `riktningar.json` använder engelska riktningstermer** – *Superficial*, *Internal*, *External*,
+*Central*, *Peripheral* – där TA har superficialis, internus, externus, centralis (§6.1).
+Rör ett tjugotal frågor i samma fil; bör göras som ETT samlat pass, annars blir filen
+halvkonverterad. `q202` är redan rättad till *Superficialis*, så filen är inkonsekvent i dag.
+
+**1. Påhittade svenska muskelnamn**
 
 `handen.json` q82, q84–q91 och q358–q363 frågar efter "det svenska namnet" på handmuskler
 som saknar etablerat svenskt namn: **Kort tumabduktor, Kort tumflexor, Tumadduktor,

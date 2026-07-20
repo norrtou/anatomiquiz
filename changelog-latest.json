@@ -1,5 +1,19 @@
 [
   {
+    "version": "0.9.184",
+    "items": [
+      "**Faktagranskningen av arbetsterapeutens quiz är klar – hela utbildningen genomläst fråga för fråga.** Därmed är arbetsterapeut-svepet avslutat i sin helhet: punkt 1–7 av åtgärdslistan är genomförda. Utbildningen har nu samma granskningsnivå som de elva som gicks igenom tidigare (se `project_factcheck_sweep`). De två skyddade filerna, `medicinsk_terminologi.json` och `studenters_flashcards.json`, är lämnade orörda enligt tidigare besked.",
+      "**Sista passet omfattade `riktningar.json` i sin helhet samt de tre flashcard-filerna och de två bildfrågefilerna.** Flashcard-filerna om muskler, MOHO och OTIPM var sakligt korrekta – ursprung, fästen och innervationer stämmer, och OTIPM:s fyra interventionsmodeller är rätt återgivna. Bildfrågorna var också rena: samtliga 155 har tom frågetext som layoutregeln kräver, och inget översiktsnamn används som distraktor till en mer specifik bild.",
+      "**Självbesvarande fråga i `riktningar:q416`.** \"Utåtrotation betyder rotation\" hade svaret \"Utåt\" – frågan besvarar sig själv på ordstammen, och de tre distraktorerna (\"Inåt\", \"Uppåt\", \"Nedåt\") var dessutom av en helt annan sort än rätt svar. Frågan speglar nu sin granne q415 och lyder \"Bort från kroppens mittlinje\" mot tre jämförbara alternativ.",
+      "**Käkens rörelser hade fel fackterm.** `q424` och `q425` beskrev protrusion och retrusion som \"framåttippning\" respektive \"bakåttippning\". Käken tippar inte – den skjuts fram och tillbaka, vilket är vad `muskler.json` redan säger om m. temporalis och m. pterygoideus lateralis. Termerna är nu \"framåtskjutning\" och \"bakåtskjutning av underkäken\", med distraktorer som beskriver de andra käkrörelserna.",
+      "**Två distraktorer hörde inte till frågans ämne.** `q236` och `q245` handlar om lägesbeskrivningar respektive handens ytor, men båda hade *Plantarflexion* – en fotrörelse – som svarsalternativ. Utbytta mot alternativ som faktiskt hör hemma i frågan.",
+      "**`q118` hade en distraktor som är ett synonymt rätt svar.** Frågan \"Dra tårna uppåt från golvet\" har svaret dorsalflexion, men alternativet löd *Extension* – och fotledens dorsalflexion kallas just extension på annat håll i materialet, bland annat i `muskler:q50` om tibialis anterior. Utbytt mot plantarflexion.",
+      "**Stavning och terminologi:** *rotationrörelse* → **rotationsrörelse**, och *Contralateral* → **Kontralateral** i `q28` och `q432` (svensk form; den engelska stavningen hör inte hemma i materialet enligt §6.1).",
+      "**Tre saker lämnas medvetet till beslut och är noterade i `scripts/arbetsterapeut_svep_todo.md`:**",
+      "VERSION/APP_VERSION/index.html-, info.html- och versionshistorik.html-cachebuster → 0.9.184."
+    ]
+  },
+  {
     "version": "0.9.183",
     "items": [
       "**Faktagranskningen av arbetsterapeutens quiz påbörjad – tolv filer lästa fråga för fråga.** Detta är svepets sista punkt: de mekaniska defekterna (formtells, dubbletter, absolut-ord) var uttömda redan i 0.9.182, och det som återstod krävde läsning mot källorna i stället för mätning. Genomgångna hittills: blodomloppet, ergonomi, grepp, ledtyper, neurologi, olika_aldrar, skuldran, muskler, tentaplugg, handen, ben samt större delen av riktningar – drygt 2 500 frågor. Sju av tolv filer var faktamässigt rena.",
@@ -34,23 +48,6 @@
       "**Två nya arbetsverktyg:** `scripts/tf_flip.py` (vänder en sant-fråga till falsk och håller serialiseringen byte-identisk) och `scripts/patch_distractors.py` (byter distraktorer, räknar stränglängderna själv och rapporterar vilka frågor som fortfarande har rätt svar längst).",
       "**Kvar för arbetsterapeut:** 42 distraktorer som inleds med \"Bara\"/\"Alla\" och som behöver läsas för hand, samt den egentliga faktagranskningen ämne för ämne mot källorna.",
       "VERSION/APP_VERSION/index.html-, info.html- och versionshistorik.html-cachebuster → 0.9.182."
-    ]
-  },
-  {
-    "version": "0.9.181",
-    "items": [
-      "**Arbetsterapeutens quiz svept mot CLAUDE_REGLER för första gången.** Utbildningen byggdes före de flesta quizreglerna och hade aldrig granskats: utgångsläget var 24 blockerande fel och 111 varningar. Efter svepet är det **0 blockerande fel**, och de varningar som återstår är uteslutande längdbias – alla andra defekttyper är nollade.",
-      "**42 autogenererade frågor raderade ur `data/ben.json`** (445 → 403). Hela batchen bar `\"source\": \"generated\"` och 24 av dem var äkta dubbletter av befintliga Osteologi-frågor – där satt samtliga blockerande fel. Batchen återanvände dessutom samma distraktortriplett upp till fem gånger. Id-luckorna q326–q367 lämnas.",
-      "**82 frågor med absolut-ord enbart i distraktorerna omskrivna** i tio filer. \"Endast kraftgreppen\", \"Inga grepp påverkas\" och \"Alltid ett tecken på sjukdom\" går att stryka utan att kunna ämnet. Varje distraktor är nu ett konkret och trovärdigt fel i samma längd och register som rätt svar.",
-      "**54 frågor med kategorifel-distraktorer omskrivna.** Frågan gällde vad en term betyder medan alla tre alternativ var kategorietiketter (\"En muskelgrupp\", \"En benstruktur\", \"En nervväg\") – strykbara utan sakkunskap. Alternativen är nu de *andra* termernas riktiga definitioner, så varje alternativ är sant om någon term och bara sakkunskap skiljer dem åt.",
-      "**Defekten fanns i tre skepnader till.** Utöver de två uppenbara etikettuppsättningarna hittades etiketter med ortssuffix (\"En muskelgrupp i underarmen\"), en tredje uppsättning (\"En anatomisk plats\", \"En motsatt rörelse\") och vaga kategorisvar i ben.json där rätt svar var en namngiven struktur men ett alternativ bara sa \"Ett ben\". Samtliga är omskrivna.",
-      "**Påhittade `os`-prefix rättade i 12 frågor.** `os femur`, `Os mandibula`, `Os maxilla`, `Os tibia`, `os patella` och `Os ulna` finns inte i Terminologia Anatomica – prefixet hör till namnet bara där TA har det. Felet gav dessutom en formtell: i `ben:q5` stod rätt svar \"Maxilla\" naket bland os-prefixade distraktorer och pekade ut sig självt.",
-      "**Två anglicismer och en felstavning rättade:** *'Superficial'* → **superficialis** (TA-form), *'os ischi'* → **os ischii**, och *mellanfottsben* → **mellanfotsben** i nio frågor.",
-      "**CLAUDE_REGLER.md uppdaterad till v1.6** med tre nya feltyper, var och en med verkliga fråge-id: påhittat os-prefix (§1.1), kvasi-absoluta orden \"bara\"/\"alla\" (§2.9) och filler-varianten \"Inget av ovanstående\" (§6.3).",
-      "**\"bara\"/\"alla\" läggs medvetet INTE in i validatorn.** Mätt projektbrett träffar mönstret 544 frågor, och de flesta är legitima sakpåståenden (\"Nej, eftersom bara fri substans kan transporteras\"). En maskinregel hade dränkt de äkta fynden i brus, så defekten är dokumenterad som manuell kontroll i stället.",
-      "**`scripts/validate_quiz.py` fångar nu fler filler-varianter** – \"Inget/Ingen av ovanstående\" och \"Inget/Ingen av alternativen\" utöver \"av dessa\".",
-      "**Granskningen är inte avslutad.** Sant/falskt-frågornas svarsfördelning och längdparitet i ett antal ämnen är ännu inte åtgärdade, och en faktagranskning ämne för ämne mot källorna återstår för den här utbildningen.",
-      "VERSION/APP_VERSION/index.html-, info.html- och versionshistorik.html-cachebuster → 0.9.181."
     ]
   }
 ]
