@@ -103,6 +103,11 @@ def check_file(path, errors, warnings):
                 errors.append(f"{name}:{qid} duplicerade distraktorer")
             if it.get("type") == "mc" and not (2 <= len(opts) <= 4):
                 errors.append(f"{name}:{qid} MC har {len(opts)} alternativ (ska vara 2–4)")
+            # TF-fråga felmärkt som mc: faller ur BÅDE tfPool och mcPool i app.js
+            # (mcPool kräver 3–5 alternativ) → frågan dras i praktiken aldrig. §2.4
+            if (it.get("type") == "mc" and len(ds) == 1
+                    and {str(correct), *map(str, ds)} <= {"Sant", "Falskt"}):
+                errors.append(f"{name}:{qid} TF-fråga märkt \"type\": \"mc\" (ska vara \"tf\")")
             if it.get("type") == "mc" and correct and ds:
                 by_topic[topic].append(it)
             # äkta dubbletter (samma fråga OCH samma svar) – dubbelriktade frågor

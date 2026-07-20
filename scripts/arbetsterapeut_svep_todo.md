@@ -1,7 +1,7 @@
 # Arbetsterapeut – kvalitetssvep enligt CLAUDE_REGLER.md
 
-**Status:** punkt 1, 3a, 3c, 3d, 4 UTFÖRDA 2026-07-20. Kvar: 2 (TF-balans), 3b (längdbias),
-5, 6, 7b. Skapad 2026-07-19.
+**Status:** punkt 1, 2, 3a, 3b, 3c, 3d, 4 UTFÖRDA 2026-07-20. Kvar: 5, 6, 7b.
+Skapad 2026-07-19. **Validatorn ger nu 0 fel och 0 varningar på alla 12 arbetsterapeutfiler.**
 **Utgångsläget 24 blockerande fel → 0.** 82 absolut-ords-varningar → 0.
 54 kategorifel-frågor omskrivna. Kvarvarande varningar är uteslutande längdbias (punkt 3b).
 **Bakgrund:** arbetsterapeut byggdes före de flesta quizreglerna och har aldrig svepts.
@@ -48,17 +48,47 @@ Utfört 2026-07-20: ben.json 445 → 403 frågor, alla 24 blockerande fel borta.
 ben.json 445 → 403 frågor, alla med `"source": "Osteologi"`. Id-luckorna q326–q367
 lämnas (enligt regeln om att lämna id-luckor). Kontrollera att de 24 dubbletterna är borta.
 
-## 2. TF-balans – rätta till ~60/40 per ämne
+## 2. ✅ KLAR – TF-balans rättad från 84 % till 53 % "Sant"
 
-**85 % av alla 884 TF-svar är "Sant"** (700 Sant / 125 Falskt). Grövsta formtellen i hela
-utbildningen och validatorn kollar den inte alls. Per fil: grepp 97 %, handen 94 %,
-ben 92 %, riktningar 77 %, neurologi 70 %, blodomloppet 64 %.
+**Utgångsläge: 84 % av 946 TF-svar var "Sant".** Grövsta formtellen i hela utbildningen och
+något validatorn inte kollar alls. Utfört 2026-07-20: **321 prompts omskrivna till falska
+påståenden** enligt §2.12 (byt ut EN sak – fel nerv, fel rad, fel riktning, fel tal), aldrig
+genom att sätta in "inte".
 
-Mål: inget ämne över ~60 % Sant. Innebär att ~250–300 prompts skrivs om till **falska**
-påståenden (byt ut en sak mot fel enligt §2.12 – fel nerv, fel rad, fel riktning – inte
-bara sätta "inte" i meningen).
+Utfall per fil (Sant-andel före → efter):
 
-Ämnen att åtgärda (≥8 frågor, ≥80 % Sant):
+| Fil | Före | Efter | Flippade |
+|---|---|---|---|
+| handen | 94 % | 52 % | 126 |
+| ben | 92 % | 52 % | 75 |
+| muskler | 100 % | 54 % | 27 |
+| neurologi | 70 % | 54 % | 20 |
+| grepp | 97 % | 46 % | 18 |
+| riktningar | 77 % | 54 % | 17 |
+| **skuldran** | 97 % | 53 % | 13 |
+| blodomloppet | 64 % | 55 % | 9 |
+| **Totalt** | **84 %** | **53 %** | **321** |
+
+Inget ämne ligger nu över 60 % Sant; skevaste kvarvarande är `neurologi:nervsystemet_utveckling`
+6/10. Metod: `scripts/tf_flip.py`-mönstret (id → ny prompt, sätter `correct` = Falskt och
+`distractors` = ["Sant"]), byte-identisk serialisering så diffen bara rör de flippade fälten.
+
+⚠️ **Fälla som slog till:** fyra omskrivna prompts blev **ordagrant identiska med redan
+befintliga falska frågor i samma ämne** (`nervsystemet_q27`, `nervsystemet_q45`, `riktningar q136`,
+`blodomloppet_q13`) → 4 blockerande dubblettfel. Validatorn fångade dem; alla fyra omformulerades.
+Kontrollera alltid mot ämnets *befintliga* Falskt-frågor innan en Sant-fråga vänds.
+
+⚠️ **`data/skuldran.json` saknades i fillistan nedan men är wirad i `js/app.js`.** Den var
+därmed osvept även för punkt 3a: 8 absolut-ords-varningar hittades och åtgärdades 2026-07-20
+(q39, q52, q57, q60, q64, q65, q82, q85 – distraktorerna omskrivna till konkreta fel med
+antals-paritet). Ny post till punkt 3b: `skuldran:skuldra_leder` längdbias 50 %.
+
+Språkfynd rättade i samma pass: "Finger har både…" → "Fingrarna har…", "Chuckgrepp är ett
+precision-grepp" → "precisionsgrepp", `Os ischi` → `Os ischii`, "lårbenshuvet" → "lårbenshuvudet",
+"Höftbenen är ett parigt ben" → "pariga ben", "Olecranon sitter på armbågsben" → "armbågsbenet",
+samt fyra prompts som inledde med "Sant eller falskt: " (redundant – svarsalternativen säger det).
+
+<details><summary>Ursprunglig åtgärdslista (ämnen ≥8 frågor, ≥80 % Sant)</summary>
 
 | Fil:ämne | Sant |
 |---|---|
@@ -93,6 +123,8 @@ bara sätta "inte" i meningen).
 | riktningar:positioner | 8/8 (100 %) |
 | riktningar:riktningar | 11/11 (100 %) |
 
+</details>
+
 ## 3. Mekanisk sanering av distraktorer (samlat svep per fil)
 
 **Bara distraktorer skrivs om. Prompts och rätta svar rörs inte.**
@@ -120,10 +152,48 @@ Ordlistan är exakt: **endast, enbart, alltid, aldrig, inga, ingen, inget, samtl
 ⚠️ Vid rättning: se §2.9 om de tre fällorna – negations-svans, **omvänd längdbias**
 (mät om efter förkortning) och återinfört absolut-ord.
 
-### 3b. Längdbias > 40 % (29 ämnen) – OGJORD
+### 3b. ✅ KLAR – längdbias under 40 % i samtliga ämnen
 
-Siffrorna nedan är **ommätta 2026-07-20**, efter punkt 1/3a/4. Mät om per ämne efter varje patch.
-Både för lång OCH för kort `correct` räknas som tell.
+Utfört 2026-07-20. **30 ämnen över gränsen → 0.** Skevaste kvarvarande ämne i hela utbildningen
+är nu `skuldran:skuldra_funktion` 40 % (2/5). ~200 distraktorer omskrivna med genuint
+sceninnehåll – aldrig fyllnadsord, aldrig maskinell trimning av rätt svar.
+
+Verktyg: `scripts/patch_distractors.py` (id → nya distraktorer, valfri språkrättelse av `correct`).
+**Skriptet räknar stränglängderna och rapporterar vilka frågor som fortfarande har `correct`
+längst** – nödvändigt, se fällan nedan.
+
+⚠️ **Jag underskattade längder systematiskt, precis som §2.13 varnar för.** Första patchen av
+`muskler_rörelse_applicering` lämnade 22 av 32 frågor kvar över gränsen; det tog **tre rundor**
+att komma i mål. Skriv alltid tillägget rejält längre än du tror och låt skriptet mäta.
+
+⚠️ **Att fixa längdbias skapade en NY tell i fyra frågor.** `muskler` q41–q44 löd
+"Gör X flexion eller extension?" med alternativen `Extension` / `Flexion` – en symmetrisk
+antingen/eller-fråga (tillåten enligt §2.9), men `Extension` är alltid 2 tecken längre.
+När jag förlängde distraktorn till "Flexion i armbågsleden" bröts symmetrin och validatorn
+flaggade frågan som **självbesvarande** i stället. Löst genom att skriva om prompten till öppen
+form ("Vilken rörelse i armbågsleden utför Triceps brachii?") med tre jämnlånga alternativ.
+
+**Två strukturella fynd:**
+
+1. **62 TF-frågor var märkta `"type": "mc"`** med bara två alternativ (Sant/Falskt) – 59 i
+   `tentaplugg.json`, 3 i `handen.json`. De faller ur **både** `tfPool` och `mcPool`
+   (`js/app.js` rad 499–500, mcPool kräver 3–5 alternativ) och plockas bara upp av
+   nödfallssamplingen på rad 505 → de drogs i praktiken nästan aldrig, och kringgick TF-taket
+   på 10 %. Omtypade till `tf`. Detta löste samtidigt hela längdbiasen i `studier_åldrande`
+   (den var "Falskt"(6) mot "Sant"(4), inte en äkta tell). **Samma defekt finns i
+   `medicinsk_sekreterare.json` (3 frågor) – annan utbildning, orörd.**
+2. **`muskler_rörelse_applicering` 94 %** var som väntat strukturellt: 100 frågor med ETT
+   alternativ där `correct` är en utförlig vardagsscen. Löst som planen föreskrev – distraktorerna
+   omskrivna till lika utförliga scener. Nu 31 %. Samma mall fanns i `riktningar:rörelser`
+   (100 av 179 frågor) och åtgärdades där också: 47 % → 33 %.
+
+Språk-/faktafynd rättade i samma pass: `Vertebrorna` → `Kotorna`, `Mot centerlinjen` →
+`Mot kroppens mittlinje`, `Arbetstagares` → `Arbetstagarens`, "ett kraftfullt sparkrörelse" →
+"en kraftfull sparkrörelse", samt distraktorn `Castin och karotin` / `Fibrin och elastan` i
+`studier_q319` (**elastan är ett textilmaterial**, "Castin" existerar inte) → `Kasein och karotin`
+/ `Fibrin och keratin`.
+
+<details><summary>Ursprunglig tabell (mätt 2026-07-20 före åtgärd)</summary>
 
 | % | Ämne | (längst/antal) |
 |---|---|---|
@@ -169,6 +239,8 @@ kategorifelen låg i ämnen som ändå inte drev längdbiasen.
 frågorna har bara ETT alternativ var (`correct` = en lång vardagsscen, distraktorn en kortare).
 Det går inte att fixa genom att fila på längder – distraktorerna måste skrivas som lika
 utförliga vardagsscener, eller frågorna byggas om. Störst enskild post i hela punkt 3b.
+
+</details>
 
 ### 3c. ✅ KLAR – kategorifel-distraktorer (54 frågor, inte 35)
 
@@ -261,9 +333,14 @@ Samma tell som absolut-orden, men **medvetet utanför validatorn**: mätt projek
 legitima sakpåståenden ("Nej, eftersom bara fri substans kan transporteras"). En maskinregel
 hade dränkt de äkta fynden. **Kontrolleras för hand.**
 
-De som låg i frågor jag ändå rörde under 3a är fixade (`ben` q27/q141/q143/q318, `grepp` q9,
-`olika_aldrar` oa_q18/oa_q75/oa_q83). **Resten av arbetsterapeut-filerna är osvepta för detta.**
-Görs lämpligen i samma pass som punkt 3b, eftersom båda kräver läsning av alternativen.
+De som låg i frågor jag ändå rörde under 3a och 3b är fixade. **Mätt efter 3b: 42 distraktorer
+i arbetsterapeutens 12 filer INLEDS fortfarande med `Bara`/`Alla`/`Enbart`** – merparten i
+`ben.json` (mönstret `Bara <benet> ensamt`, q145–q150 m.fl.). Testa med:
+
+    grep -n '"Bara \|"Alla ' data/*.json
+
+Detta är det billigaste kvarvarande delsteget: mönstret är mekaniskt igenkännbart, men varje
+träff måste läsas med gissa-testet (§2.12) innan den skrivs om – en del är legitima sakpåståenden.
 
 ### 7c. ✅ ÅTGÄRDAT – filler-variant som validatorn missade (§6.3)
 

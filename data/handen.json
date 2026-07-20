@@ -51,9 +51,9 @@
     "prompt": "Diagonalt volargrepp innebär:",
     "correct": "Palmart grepp med objektet diagonalt placerat",
     "distractors": [
-      "Alla fingrar tillsammans runt objektet",
-      "Tumme mot radiella sidan av pekfingret",
-      "Krokliknande grepp utan tumme"
+      "Fingrarna och tummen samlade runt ett litet objekt",
+      "Tummen mot radiella sidan av det böjda pekfingret",
+      "Krokliknande grepp med fingrarna böjda utan tumme"
     ],
     "topic": "handen_grepptyper",
     "difficulty": "Normal"
@@ -64,9 +64,9 @@
     "prompt": "Transversellt volargrepp innebär:",
     "correct": "Palmart grepp med objektet tvärsgående placerat",
     "distractors": [
-      "Tumme och två fingrar på spetsarna",
-      "Alla fingrar tillsammans runt objektet",
-      "Tumme mot radiella sidan av pekfingret"
+      "Tummen och två fingrar möts med spetsarna mot varandra",
+      "Fingrarna och tummen samlade runt ett litet objekt",
+      "Tummen mot radiella sidan av det böjda pekfingret"
     ],
     "topic": "handen_grepptyper",
     "difficulty": "Normal"
@@ -77,9 +77,9 @@
     "prompt": "Sfäriskt volargrepp innebär:",
     "correct": "Ett runt eller sfäriskt objekt hålls med öppen hand",
     "distractors": [
-      "Tumme mot radiella sidan av pekfingret",
-      "Palmart grepp med objektet diagonalt placerat",
-      "Krokliknande grepp utan tumme"
+      "Tummen förs mot radiella sidan av det böjda pekfingret",
+      "Palmart grepp med objektet diagonalt placerat i handen",
+      "Krokliknande grepp med fingrarna böjda utan tumme"
     ],
     "topic": "handen_grepptyper",
     "difficulty": "Normal"
@@ -161,12 +161,12 @@
   {
     "id": "q14",
     "type": "tf",
-    "prompt": "M. flexor pollicis brevis innerveras av N. medianus.",
-    "correct": "Sant",
+    "prompt": "M. flexor pollicis brevis innerveras av N. radialis.",
+    "correct": "Falskt",
     "topic": "handen_innervation",
     "difficulty": "Normal",
     "distractors": [
-      "Falskt"
+      "Sant"
     ]
   },
   {
@@ -185,12 +185,12 @@
   {
     "id": "q16",
     "type": "tf",
-    "prompt": "M. opponens pollicis innerveras av N. medianus.",
-    "correct": "Sant",
+    "prompt": "M. opponens pollicis innerveras av N. ulnaris.",
+    "correct": "Falskt",
     "topic": "handen_innervation",
     "difficulty": "Normal",
     "distractors": [
-      "Falskt"
+      "Sant"
     ]
   },
   {
@@ -231,12 +231,12 @@
   {
     "id": "q20",
     "type": "tf",
-    "prompt": "M. abductor digiti minimi innerveras av N. ulnaris.",
-    "correct": "Sant",
+    "prompt": "M. abductor digiti minimi innerveras av N. medianus.",
+    "correct": "Falskt",
     "topic": "handen_innervation",
     "difficulty": "Normal",
     "distractors": [
-      "Falskt"
+      "Sant"
     ]
   },
   {
@@ -279,12 +279,12 @@
   {
     "id": "q24",
     "type": "tf",
-    "prompt": "M. opponens digiti minimi innerveras av N. ulnaris.",
-    "correct": "Sant",
+    "prompt": "M. opponens digiti minimi innerveras av N. radialis.",
+    "correct": "Falskt",
     "topic": "handen_innervation",
     "difficulty": "Normal",
     "distractors": [
-      "Falskt"
+      "Sant"
     ]
   },
   {
@@ -327,12 +327,12 @@
   {
     "id": "q28",
     "type": "tf",
-    "prompt": "M. lumbricalis III-IV innerveras av N. ulnaris.",
-    "correct": "Sant",
+    "prompt": "M. lumbricalis III-IV innerveras av N. medianus.",
+    "correct": "Falskt",
     "topic": "handen_innervation",
     "difficulty": "Normal",
     "distractors": [
-      "Falskt"
+      "Sant"
     ]
   },
   {
@@ -373,12 +373,12 @@
   {
     "id": "q32",
     "type": "tf",
-    "prompt": "M. interossei dorsales innerveras av N. ulnaris.",
-    "correct": "Sant",
+    "prompt": "M. interossei dorsales innerveras av N. medianus.",
+    "correct": "Falskt",
     "topic": "handen_innervation",
     "difficulty": "Normal",
     "distractors": [
-      "Falskt"
+      "Sant"
     ]
   },
   {
@@ -445,12 +445,12 @@
   {
     "id": "q38",
     "type": "tf",
-    "prompt": "M. extensor digitorum innerveras av N. radialis.",
-    "correct": "Sant",
+    "prompt": "M. extensor digitorum innerveras av N. ulnaris.",
+    "correct": "Falskt",
     "topic": "handen_innervation",
     "difficulty": "Normal",
     "distractors": [
-      "Falskt"
+      "Sant"
     ]
   },
   {
@@ -532,12 +532,12 @@
   {
     "id": "q45",
     "type": "tf",
-    "prompt": "Extensor retinaculum har 6 distinkta fack.",
-    "correct": "Sant",
+    "prompt": "Extensor retinaculum har 3 distinkta fack.",
+    "correct": "Falskt",
     "topic": "handen_senskidor",
     "difficulty": "Normal",
     "distractors": [
-      "Falskt"
+      "Sant"
     ]
   },
   {
@@ -554,23 +554,23 @@
   {
     "id": "q47",
     "type": "tf",
-    "prompt": "Den gemensamma flexorsenskidan löper från handleden till lillfingrets ändfalang.",
-    "correct": "Sant",
+    "prompt": "Den gemensamma flexorsenskidan löper från handleden till pekfingrets ändfalang.",
+    "correct": "Falskt",
     "topic": "handen_senskidor",
     "difficulty": "Normal",
     "distractors": [
-      "Falskt"
+      "Sant"
     ]
   },
   {
     "id": "q48",
     "type": "tf",
-    "prompt": "Listers tuberkel är ett landmärke för M. extensor pollicis longus.",
-    "correct": "Sant",
+    "prompt": "Listers tuberkel är ett landmärke för M. flexor carpi radialis.",
+    "correct": "Falskt",
     "topic": "handen_senskidor",
     "difficulty": "Normal",
     "distractors": [
-      "Falskt"
+      "Sant"
     ]
   },
   {
@@ -653,12 +653,12 @@
   {
     "id": "q56",
     "type": "tf",
-    "prompt": "N. radialis innerverar alla extensormuskler.",
-    "correct": "Sant",
+    "prompt": "N. radialis innerverar handens intrinsiska muskler.",
+    "correct": "Falskt",
     "topic": "handen_grepptyper",
     "difficulty": "Normal",
     "distractors": [
-      "Falskt"
+      "Sant"
     ]
   },
   {
@@ -697,7 +697,7 @@
   {
     "id": "q60",
     "type": "tf",
-    "prompt": "Chuckgrepp är ett precision-grepp.",
+    "prompt": "Chuckgrepp är ett precisionsgrepp.",
     "correct": "Sant",
     "topic": "handen_grepptyper",
     "difficulty": "Normal",
@@ -1133,10 +1133,10 @@
   {
     "id": "q96",
     "type": "tf",
-    "prompt": "N. radialis innerverar handryggens hud.",
-    "correct": "Sant",
+    "prompt": "N. radialis innerverar handflatans hud.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_innervation",
     "difficulty": "Normal"
@@ -1146,9 +1146,9 @@
     "prompt": "Vad är funktionen av M. flexor carpi radialis?",
     "correct": "Flexion + Radialabduktion handled",
     "distractors": [
-      "Pronation av underarmen",
-      "Supination av underarmen",
-      "Rotation av underarmen"
+      "Extension + Radialabduktion handled",
+      "Flexion + Ulnarabduktion handled",
+      "Pronation + Flexion i armbågsleden"
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "Normal",
@@ -1156,10 +1156,10 @@
   },
   {
     "type": "tf",
-    "prompt": "M. flexor carpi radialis är en Flexor",
-    "correct": "Sant",
+    "prompt": "M. flexor carpi radialis är en Extensor",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "Normal",
@@ -1170,9 +1170,9 @@
     "prompt": "Vad är funktionen av M. flexor carpi ulnaris?",
     "correct": "Flexion + Ulnarabduktion handled",
     "distractors": [
-      "Pronation av underarmen",
-      "Supination av underarmen",
-      "Rotation av underarmen"
+      "Extension + Ulnarabduktion handled",
+      "Flexion + Radialabduktion handled",
+      "Supination + Extension i armbågen"
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "Normal",
@@ -1194,9 +1194,9 @@
     "prompt": "Vad är funktionen av M. palmaris longus?",
     "correct": "Flexion handled",
     "distractors": [
-      "Pronation",
-      "Supination",
-      "Rotation"
+      "Extension handled",
+      "Ulnarabduktion",
+      "Radialabduktion"
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "Normal",
@@ -1204,10 +1204,10 @@
   },
   {
     "type": "tf",
-    "prompt": "M. palmaris longus är en Flexor",
-    "correct": "Sant",
+    "prompt": "M. palmaris longus är en Extensor",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "Normal",
@@ -1226,10 +1226,10 @@
   },
   {
     "type": "tf",
-    "prompt": "M. flexor digitorum profundus är en Flexor",
-    "correct": "Sant",
+    "prompt": "M. flexor digitorum profundus är en Extensor",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "Normal",
@@ -1240,9 +1240,9 @@
     "prompt": "Vad är funktionen av M. flexor pollicis longus?",
     "correct": "Flexion IP tumme",
     "distractors": [
-      "Pronation",
-      "Supination",
-      "Rotation"
+      "Extension IP tumme",
+      "Flexion MCP tumme",
+      "Abduktion av tummen"
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "Normal",
@@ -1264,9 +1264,9 @@
     "prompt": "Vad är funktionen av M. extensor carpi radialis longus?",
     "correct": "Extension + Radialabduktion handled",
     "distractors": [
-      "Pronation av underarmen",
-      "Supination av underarmen",
-      "Rotation av underarmen"
+      "Flexion + Radialabduktion handled",
+      "Extension + Ulnarabduktion handled",
+      "Extension av fingrarnas MCP-leder i handen"
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "Normal",
@@ -1312,9 +1312,9 @@
     "prompt": "Vad är funktionen av M. extensor carpi ulnaris?",
     "correct": "Extension + Ulnarabduktion handled",
     "distractors": [
-      "Pronation av underarmen",
-      "Supination av underarmen",
-      "Rotation av underarmen"
+      "Flexion + Ulnarabduktion handled",
+      "Extension + Radialabduktion handled",
+      "Flexion av fingrarnas PIP-leder"
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "Normal",
@@ -1322,10 +1322,10 @@
   },
   {
     "type": "tf",
-    "prompt": "M. extensor carpi ulnaris är en Extensor",
-    "correct": "Sant",
+    "prompt": "M. extensor carpi ulnaris är en Flexor",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "Normal",
@@ -1357,10 +1357,10 @@
   },
   {
     "type": "tf",
-    "prompt": "M. extensor digiti minimi är en Extensor",
-    "correct": "Sant",
+    "prompt": "M. extensor digiti minimi är en Flexor",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "Normal",
@@ -1371,9 +1371,9 @@
     "prompt": "Vad är funktionen av M. extensor pollicis longus?",
     "correct": "Extension av IP-leden i tummen",
     "distractors": [
-      "Pronation av underarmen",
-      "Supination av underarmen",
-      "Rotation av underarmen"
+      "Extension av MCP-leden i tummen",
+      "Flexion av IP-leden i tummen",
+      "Abduktion av tummen i CMC-leden"
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "Normal",
@@ -1395,9 +1395,9 @@
     "prompt": "Vad är funktionen av M. extensor pollicis brevis?",
     "correct": "Extension av MCP-leden i tummen",
     "distractors": [
-      "Pronation av underarmen",
-      "Supination av underarmen",
-      "Rotation av underarmen"
+      "Extension av IP-leden i tummen",
+      "Flexion av MCP-leden i tummen",
+      "Adduktion av tummen mot handflatan"
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "Normal",
@@ -1405,10 +1405,10 @@
   },
   {
     "type": "tf",
-    "prompt": "M. extensor pollicis brevis är en Extensor",
-    "correct": "Sant",
+    "prompt": "M. extensor pollicis brevis är en Flexor",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "Normal",
@@ -1419,9 +1419,9 @@
     "prompt": "Vad är funktionen av M. abductor pollicis longus?",
     "correct": "Abduktion + Extension tumme",
     "distractors": [
-      "Pronation av underarmen",
-      "Supination av underarmen",
-      "Rotation av underarmen"
+      "Adduktion + Flexion tumme",
+      "Abduktion + Flexion tumme",
+      "Opposition av tummen mot lillfingret"
     ],
     "topic": "handen_muskler_extrinsic",
     "difficulty": "Normal",
@@ -1462,10 +1462,10 @@
   },
   {
     "type": "tf",
-    "prompt": "N. medianus innerverar M. opponens pollicis",
-    "correct": "Sant",
+    "prompt": "N. medianus innerverar M. adductor pollicis",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_innervation",
     "difficulty": "Normal",
@@ -1595,10 +1595,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Fingerlederna är gångjärnsleder",
-    "correct": "Sant",
+    "prompt": "Fingrarnas MCP-leder är gångjärnsleder",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_anatomiska_fakta",
     "difficulty": "Normal",
@@ -1650,10 +1650,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Sesamoidbenen sitter under MCP-lederna",
-    "correct": "Sant",
+    "prompt": "Sesamoidbenen sitter under DIP-lederna",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_anatomiska_fakta",
     "difficulty": "Normal",
@@ -1772,10 +1772,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Månbenet motsvarar Os lunatum",
-    "correct": "Sant",
+    "prompt": "Månbenet motsvarar Os scaphoideum",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_ben_namn",
     "difficulty": "Normal",
@@ -1796,10 +1796,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Tresidiga benet motsvarar Os triquetrum",
-    "correct": "Sant",
+    "prompt": "Tresidiga benet motsvarar Os pisiforme",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_ben_namn",
     "difficulty": "Normal",
@@ -1868,10 +1868,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Trapezoid motsvarar Os trapezoideum",
-    "correct": "Sant",
+    "prompt": "Trapezoid motsvarar Os trapezium",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_ben_namn",
     "difficulty": "Normal",
@@ -1916,10 +1916,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Krokbenet motsvarar Os hamatum",
-    "correct": "Sant",
+    "prompt": "Krokbenet motsvarar Os capitatum",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_ben_namn",
     "difficulty": "Normal",
@@ -1983,7 +1983,7 @@
     "correct": "Hypothenar region",
     "distractors": [
       "Dorsal region",
-      "Central region",
+      "Central palmarregion",
       "Underarmsregion"
     ],
     "topic": "handen_muskler_region",
@@ -1996,7 +1996,7 @@
     "correct": "Hypothenar region",
     "distractors": [
       "Dorsal region",
-      "Central region",
+      "Central palmarregion",
       "Underarmsregion"
     ],
     "topic": "handen_muskler_region",
@@ -2009,7 +2009,7 @@
     "correct": "Hypothenar region",
     "distractors": [
       "Dorsal region",
-      "Central region",
+      "Central palmarregion",
       "Underarmsregion"
     ],
     "topic": "handen_muskler_region",
@@ -2081,10 +2081,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Nyckelgrepp: tumme mot radiella sidan av pekfinger",
-    "correct": "Sant",
+    "prompt": "Nyckelgrepp: tumme mot ulnara sidan av lillfingret",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_grepptyper",
     "difficulty": "Normal",
@@ -2092,10 +2092,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Chuckgrepp: tumme och två fingrar tillsammans",
-    "correct": "Sant",
+    "prompt": "Chuckgrepp: tumme och fyra fingrar tillsammans",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_grepptyper",
     "difficulty": "Normal",
@@ -2103,10 +2103,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Fem-fingergrepp: alla fingrar tillsammans",
-    "correct": "Sant",
+    "prompt": "Fem-fingergrepp: tumme och pekfinger mot varandra",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_grepptyper",
     "difficulty": "Normal",
@@ -2125,10 +2125,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Transversellt volargrepp: objektet tvärsgående",
-    "correct": "Sant",
+    "prompt": "Transversellt volargrepp: objektet placerat diagonalt i handflatan",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_grepptyper",
     "difficulty": "Normal",
@@ -2136,10 +2136,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Sfäriskt volargrepp: runt objekt",
-    "correct": "Sant",
+    "prompt": "Sfäriskt volargrepp: platt objekt mot handflatan",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_grepptyper",
     "difficulty": "Normal",
@@ -2158,10 +2158,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Karpaltunnelsyndrom drabbar N. medianus",
-    "correct": "Sant",
+    "prompt": "Karpaltunnelsyndrom drabbar N. ulnaris",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_patologi",
     "difficulty": "Normal",
@@ -2169,10 +2169,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Guyons kanalsyndrom drabbar N. ulnaris",
-    "correct": "Sant",
+    "prompt": "Guyons kanalsyndrom drabbar N. medianus",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_patologi",
     "difficulty": "Normal",
@@ -2180,10 +2180,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Dupuytrens kontraktur drabbar den palmara fascian",
-    "correct": "Sant",
+    "prompt": "Dupuytrens kontraktur drabbar extensorsenorna på handryggen",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_patologi",
     "difficulty": "Normal",
@@ -2202,10 +2202,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Boutonnièredeformitet (knapphålsdeformitet) drabbar PIP-leden",
-    "correct": "Sant",
+    "prompt": "Boutonnièredeformitet (knapphålsdeformitet) drabbar DIP-leden",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_patologi",
     "difficulty": "Normal",
@@ -2237,10 +2237,10 @@
   },
   {
     "type": "tf",
-    "prompt": "N. medianus innerverar känseln i pekfingret",
-    "correct": "Sant",
+    "prompt": "N. ulnaris innerverar känseln i pekfingret",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_innervation_detaljerad",
     "difficulty": "Normal",
@@ -2270,10 +2270,10 @@
   },
   {
     "type": "tf",
-    "prompt": "N. ulnaris innerverar ulnara halvan av ringfingret",
-    "correct": "Sant",
+    "prompt": "N. ulnaris innerverar radiella halvan av ringfingret",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_innervation_detaljerad",
     "difficulty": "Normal",
@@ -2292,10 +2292,10 @@
   },
   {
     "type": "tf",
-    "prompt": "N. ulnaris innerverar interosseusmusklerna",
-    "correct": "Sant",
+    "prompt": "N. radialis innerverar interosseusmusklerna",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_innervation_detaljerad",
     "difficulty": "Normal",
@@ -2328,9 +2328,9 @@
     "prompt": "Vilken metakarpal tillhör tummen?",
     "correct": "Os metacarpale I",
     "distractors": [
-      "Os carpale",
-      "Phalanx",
-      "Sesamoidben"
+      "Os metacarpale II",
+      "Os metacarpale III",
+      "Os metacarpale IV"
     ],
     "topic": "handen_ben_metakarpaler",
     "difficulty": "Normal",
@@ -2352,9 +2352,9 @@
     "prompt": "Vilken metakarpal tillhör pekfingret?",
     "correct": "Os metacarpale II",
     "distractors": [
-      "Os carpale",
-      "Phalanx",
-      "Sesamoid"
+      "Os metacarpale I",
+      "Os metacarpale III",
+      "Os metacarpale IV"
     ],
     "topic": "handen_ben_metakarpaler",
     "difficulty": "Normal",
@@ -2362,10 +2362,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Os metacarpale II bildar skelettet för pekfingret",
-    "correct": "Sant",
+    "prompt": "Os metacarpale II bildar skelettet för långfingret",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_ben_metakarpaler",
     "difficulty": "Normal",
@@ -2386,10 +2386,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Os metacarpale III bildar skelettet för långfingret",
-    "correct": "Sant",
+    "prompt": "Os metacarpale III bildar skelettet för ringfingret",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_ben_metakarpaler",
     "difficulty": "Normal",
@@ -2400,9 +2400,9 @@
     "prompt": "Vilken metakarpal tillhör ringfingret?",
     "correct": "Os metacarpale IV",
     "distractors": [
-      "Os carpale",
-      "Phalanx",
-      "Sesamoid"
+      "Os metacarpale II",
+      "Os metacarpale III",
+      "Os metacarpale V"
     ],
     "topic": "handen_ben_metakarpaler",
     "difficulty": "Normal",
@@ -2424,9 +2424,9 @@
     "prompt": "Vilken metakarpal tillhör lillfingret?",
     "correct": "Os metacarpale V",
     "distractors": [
-      "Os carpale",
-      "Phalanx",
-      "Sesamoid"
+      "Os metacarpale II",
+      "Os metacarpale III",
+      "Os metacarpale IV"
     ],
     "topic": "handen_ben_metakarpaler",
     "difficulty": "Normal",
@@ -2434,10 +2434,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Os metacarpale V bildar skelettet för lillfingret",
-    "correct": "Sant",
+    "prompt": "Os metacarpale V bildar skelettet för ringfingret",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_ben_metakarpaler",
     "difficulty": "Normal",
@@ -2489,10 +2489,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Lillfingret har totalt 3 ledben (proximalt, intermediärt och distalt)",
-    "correct": "Sant",
+    "prompt": "Lillfingret har totalt 4 ledben (proximalt, två intermediära och distalt)",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_ben_falangar",
     "difficulty": "Normal",
@@ -2526,12 +2526,12 @@
   },
   {
     "type": "mc",
-    "prompt": "Vilken muskel utför abduktion av alla finger?",
+    "prompt": "Vilken muskel utför abduktion av alla fingrar?",
     "correct": "M. interossei dorsales",
     "distractors": [
-      "Extensor i underarmen",
-      "Rotator i axeln",
-      "Pronator i underarmen"
+      "M. interossei palmares",
+      "M. lumbricales i handen",
+      "M. abductor digiti minimi"
     ],
     "topic": "handen_muskler_funktioner",
     "difficulty": "Normal",
@@ -2539,12 +2539,12 @@
   },
   {
     "type": "mc",
-    "prompt": "Vilken muskel utför adduktion av alla finger?",
+    "prompt": "Vilken muskel utför adduktion av alla fingrar?",
     "correct": "M. interossei palmares",
     "distractors": [
-      "Extensor i underarmen",
-      "Rotator i axeln",
-      "Pronator i underarmen"
+      "M. interossei dorsales",
+      "M. lumbricales i handen",
+      "M. abductor pollicis brevis"
     ],
     "topic": "handen_muskler_funktioner",
     "difficulty": "Normal",
@@ -2552,12 +2552,12 @@
   },
   {
     "type": "mc",
-    "prompt": "Vilken muskel utför flexion av alla finger?",
+    "prompt": "Vilken muskel utför flexion av alla fingrar?",
     "correct": "Flexor digitorum superficialis",
     "distractors": [
-      "Extensor i underarmen",
-      "Rotator i axeln",
-      "Pronator i underarmen"
+      "Extensor digitorum communis",
+      "Flexor carpi ulnaris i underarmen",
+      "Interossei dorsales i handen"
     ],
     "topic": "handen_muskler_funktioner",
     "difficulty": "Normal",
@@ -2620,10 +2620,10 @@
   },
   {
     "type": "tf",
-    "prompt": "N. ulnaris försörjer motorn för M. interossei",
-    "correct": "Sant",
+    "prompt": "N. medianus försörjer motorn för M. interossei",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_innervation_motor",
     "difficulty": "Normal",
@@ -2642,10 +2642,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Handrotsleden är den mest rörliga leden i handen",
-    "correct": "Sant",
+    "prompt": "Handrotsleden är handens mest rörliga led",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_fakta",
     "difficulty": "Normal",
@@ -2675,10 +2675,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Fingrarnas IP-leder är gångjärnsleder (ginglymus)",
-    "correct": "Sant",
+    "prompt": "Fingrarnas IP-leder är kulleder (articulatio spheroidea)",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_fakta",
     "difficulty": "Normal",
@@ -2686,10 +2686,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Handleden kan utföra flexion, extension samt radial- och ulnardeviation",
-    "correct": "Sant",
+    "prompt": "Handleden kan utföra flexion, extension samt pronation och supination",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_fakta",
     "difficulty": "Normal",
@@ -2741,10 +2741,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Handledsextension är ungefär ~70 grader",
-    "correct": "Sant",
+    "prompt": "Handledsextension är ungefär ~140 grader",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_rörelsområde",
     "difficulty": "Normal",
@@ -2752,10 +2752,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Radial deviation är ungefär ~20 grader",
-    "correct": "Sant",
+    "prompt": "Radial deviation är ungefär ~60 grader",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_rörelsområde",
     "difficulty": "Normal",
@@ -2774,10 +2774,10 @@
   },
   {
     "type": "tf",
-    "prompt": "MCP flexion är ungefär ~90 grader",
-    "correct": "Sant",
+    "prompt": "MCP flexion är ungefär ~30 grader",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_rörelsområde",
     "difficulty": "Normal",
@@ -2796,10 +2796,10 @@
   },
   {
     "type": "tf",
-    "prompt": "DIP flexion är ungefär ~80 grader",
-    "correct": "Sant",
+    "prompt": "DIP flexion är ungefär ~150 grader",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_rörelsområde",
     "difficulty": "Normal",
@@ -2807,10 +2807,10 @@
   },
   {
     "type": "tf",
-    "prompt": "A. radialis försörjer tumme och pekfinger",
-    "correct": "Sant",
+    "prompt": "A. ulnaris försörjer tumme och pekfinger",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_blodförsörjning",
     "difficulty": "Normal",
@@ -2840,10 +2840,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Den ytliga palmarbågen (arcus palmaris superficialis) försörjer aa. digitales palmares communes",
-    "correct": "Sant",
+    "prompt": "Den ytliga palmarbågen (arcus palmaris superficialis) bildas huvudsakligen av a. radialis",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_blodförsörjning",
     "difficulty": "Normal",
@@ -2854,9 +2854,9 @@
     "prompt": "Primär funktion av M. lumbricalis är:",
     "correct": "Flexion i MCP och extension i IP",
     "distractors": [
-      "Extension av fingerleden",
-      "Pronation av handleden",
-      "Rotation av handleden"
+      "Extension i MCP och flexion i IP",
+      "Flexion i både MCP och IP-lederna",
+      "Abduktion av fingrarna från mittlinjen"
     ],
     "topic": "handen_intrinsic_func",
     "difficulty": "Normal",
@@ -2893,9 +2893,9 @@
     "prompt": "Primär funktion av M. abductor pollicis brevis är:",
     "correct": "Abduktion av tummen vid CMC",
     "distractors": [
-      "Extension av fingerleden",
-      "Pronation av handleden",
-      "Rotation av handleden"
+      "Adduktion av tummen vid CMC",
+      "Abduktion av tummen vid MCP",
+      "Opposition av tummen mot lillfingret"
     ],
     "topic": "handen_intrinsic_func",
     "difficulty": "Normal",
@@ -2906,9 +2906,9 @@
     "prompt": "Primär funktion av M. flexor pollicis brevis är:",
     "correct": "Flexion av tummen vid MCP",
     "distractors": [
-      "Extension av fingerleden",
-      "Pronation av handleden",
-      "Rotation av handleden"
+      "Extension av tummen vid MCP",
+      "Flexion av tummen vid IP-leden",
+      "Abduktion av tummen vid CMC"
     ],
     "topic": "handen_intrinsic_func",
     "difficulty": "Normal",
@@ -2997,9 +2997,9 @@
     "prompt": "Vilken är funktionen av lig. radiocarpale palmare?",
     "correct": "Volar stabilitet",
     "distractors": [
-      "Flexion",
-      "Extension",
-      "Rotation"
+      "Dorsal stabilitet",
+      "Sidostabilitet i leden",
+      "Rotationsstabilitet"
     ],
     "topic": "handen_ligament",
     "difficulty": "Normal",
@@ -3023,9 +3023,9 @@
     "prompt": "Vilken är funktionen av ligamenta collateralia (kollateralligamenten)?",
     "correct": "Stabilitet i fingerlederna",
     "distractors": [
-      "Flexion av handleden",
-      "Extension av handleden",
-      "Rotation av handleden"
+      "Stabilitet i handleden framtill",
+      "Rörlighet i fingerlederna",
+      "Rotation i fingrarnas MCP-leder"
     ],
     "topic": "handen_ligament",
     "difficulty": "Normal",
@@ -3079,10 +3079,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Distala interfalangealleden (DIP): endast flexion/extension",
-    "correct": "Sant",
+    "prompt": "Distala interfalangealleden (DIP): flexion, extension och rotation",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_kombi",
     "difficulty": "Normal",
@@ -3090,10 +3090,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Flexorsenskida: skyddar senan",
-    "correct": "Sant",
+    "prompt": "Flexorsenskida: fäster senan vid benet",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_kombi",
     "difficulty": "Normal",
@@ -3101,10 +3101,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Mm. interossei dorsales: huvudfunktion abduktion",
-    "correct": "Sant",
+    "prompt": "Mm. interossei dorsales: huvudfunktion adduktion",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_kombi",
     "difficulty": "Normal",
@@ -3134,10 +3134,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Mm. lumbricales III–IV: innerveras av N. ulnaris",
-    "correct": "Sant",
+    "prompt": "Mm. lumbricales III–IV: innerveras av N. radialis",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_kombi",
     "difficulty": "Normal",
@@ -3145,10 +3145,10 @@
   },
   {
     "type": "tf",
-    "prompt": "M. flexor digitorum profundus: huvudfunktion DIP-flexion",
-    "correct": "Sant",
+    "prompt": "M. flexor digitorum profundus: huvudfunktion PIP-flexion",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_kombi",
     "difficulty": "Normal",
@@ -3211,10 +3211,10 @@
   },
   {
     "type": "tf",
-    "prompt": "M. flexor digiti minimi brevis är en intrinsisk muskel i handen",
-    "correct": "Sant",
+    "prompt": "M. flexor pollicis longus är en intrinsisk muskel i handen",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_muskler_klassificering",
     "difficulty": "Normal",
@@ -3222,10 +3222,10 @@
   },
   {
     "type": "tf",
-    "prompt": "M. opponens digiti minimi är en intrinsisk muskel i handen",
-    "correct": "Sant",
+    "prompt": "M. flexor carpi ulnaris är en intrinsisk muskel i handen",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_muskler_klassificering",
     "difficulty": "Normal",
@@ -3244,10 +3244,10 @@
   },
   {
     "type": "tf",
-    "prompt": "M. lumbricalis II är en intrinsisk muskel i handen",
-    "correct": "Sant",
+    "prompt": "M. flexor digitorum superficialis är en intrinsisk muskel i handen",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_muskler_klassificering",
     "difficulty": "Normal",
@@ -3255,10 +3255,10 @@
   },
   {
     "type": "tf",
-    "prompt": "M. lumbricalis III är en intrinsisk muskel i handen",
-    "correct": "Sant",
+    "prompt": "M. extensor digitorum är en intrinsisk muskel i handen",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_muskler_klassificering",
     "difficulty": "Normal",
@@ -3266,10 +3266,10 @@
   },
   {
     "type": "tf",
-    "prompt": "M. lumbricalis IV är en intrinsisk muskel i handen",
-    "correct": "Sant",
+    "prompt": "M. abductor pollicis longus är en intrinsisk muskel i handen",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_muskler_klassificering",
     "difficulty": "Normal",
@@ -3277,10 +3277,10 @@
   },
   {
     "type": "tf",
-    "prompt": "M. interossei palmares är en intrinsisk muskel i handen",
-    "correct": "Sant",
+    "prompt": "M. palmaris longus är en intrinsisk muskel i handen",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_muskler_klassificering",
     "difficulty": "Normal",
@@ -3343,10 +3343,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Os trapezium är ett handrotsben",
-    "correct": "Sant",
+    "prompt": "Os naviculare är ett handrotsben",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_ben_klassificering",
     "difficulty": "Normal",
@@ -3354,10 +3354,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Os trapezoideum är ett handrotsben",
-    "correct": "Sant",
+    "prompt": "Os cuboideum är ett handrotsben",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_ben_klassificering",
     "difficulty": "Normal",
@@ -3365,10 +3365,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Os capitatum är ett handrotsben",
-    "correct": "Sant",
+    "prompt": "Os metacarpale I är ett handrotsben",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_ben_klassificering",
     "difficulty": "Normal",
@@ -3376,10 +3376,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Os hamatum är ett handrotsben",
-    "correct": "Sant",
+    "prompt": "Os talus är ett handrotsben",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_ben_klassificering",
     "difficulty": "Normal",
@@ -3409,10 +3409,10 @@
   },
   {
     "type": "tf",
-    "prompt": "M. palmaris longus är en extrinsisk muskel",
-    "correct": "Sant",
+    "prompt": "M. palmaris brevis är en extrinsisk muskel",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_extrinsic_klassificering",
     "difficulty": "Normal",
@@ -3442,10 +3442,10 @@
   },
   {
     "type": "tf",
-    "prompt": "M. flexor pollicis longus är en extrinsisk muskel",
-    "correct": "Sant",
+    "prompt": "M. flexor pollicis brevis är en extrinsisk muskel",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_extrinsic_klassificering",
     "difficulty": "Normal",
@@ -3464,10 +3464,10 @@
   },
   {
     "type": "tf",
-    "prompt": "M. extensor carpi radialis brevis är en extrinsisk muskel",
-    "correct": "Sant",
+    "prompt": "M. lumbricalis I är en extrinsisk muskel",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_extrinsic_klassificering",
     "difficulty": "Normal",
@@ -3497,10 +3497,10 @@
   },
   {
     "type": "tf",
-    "prompt": "M. extensor digiti minimi är en extrinsisk muskel",
-    "correct": "Sant",
+    "prompt": "M. opponens digiti minimi är en extrinsisk muskel",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_extrinsic_klassificering",
     "difficulty": "Normal",
@@ -3519,10 +3519,10 @@
   },
   {
     "type": "tf",
-    "prompt": "M. extensor pollicis brevis är en extrinsisk muskel",
-    "correct": "Sant",
+    "prompt": "M. adductor pollicis är en extrinsisk muskel",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_extrinsic_klassificering",
     "difficulty": "Normal",
@@ -3530,10 +3530,10 @@
   },
   {
     "type": "tf",
-    "prompt": "M. abductor pollicis longus är en extrinsisk muskel",
-    "correct": "Sant",
+    "prompt": "M. abductor pollicis brevis är en extrinsisk muskel",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_extrinsic_klassificering",
     "difficulty": "Normal",
@@ -3563,10 +3563,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Abduktion är en möjlig rörelse i handen",
-    "correct": "Sant",
+    "prompt": "Inversion är en möjlig rörelse i handen",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_rörelser_klassificering",
     "difficulty": "Normal",
@@ -3574,10 +3574,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Adduktion är en möjlig rörelse i handen",
-    "correct": "Sant",
+    "prompt": "Eversion är en möjlig rörelse i handen",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_rörelser_klassificering",
     "difficulty": "Normal",
@@ -3596,10 +3596,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Pronation är en möjlig rörelse i handen",
-    "correct": "Sant",
+    "prompt": "Plantarflexion är en möjlig rörelse i handen",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_rörelser_klassificering",
     "difficulty": "Normal",
@@ -3607,10 +3607,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Supination är en möjlig rörelse i handen",
-    "correct": "Sant",
+    "prompt": "Elevation av skulderbladet är en möjlig rörelse i handen",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_rörelser_klassificering",
     "difficulty": "Normal",
@@ -3618,10 +3618,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Radialabduktion är en möjlig rörelse i handen",
-    "correct": "Sant",
+    "prompt": "Lateralflexion är en möjlig rörelse i handen",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_rörelser_klassificering",
     "difficulty": "Normal",
@@ -3673,10 +3673,10 @@
   },
   {
     "type": "tf",
-    "prompt": "N. medianus har någon sensorisk eller motorisk funktion för ringfinger",
-    "correct": "Sant",
+    "prompt": "N. medianus försörjer hela ringfingret sensoriskt",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "Normal",
@@ -3717,10 +3717,10 @@
   },
   {
     "type": "tf",
-    "prompt": "N. ulnaris har någon sensorisk eller motorisk funktion för tumme",
-    "correct": "Sant",
+    "prompt": "N. ulnaris ger känseln i tumtoppen",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "Normal",
@@ -3728,10 +3728,10 @@
   },
   {
     "type": "tf",
-    "prompt": "N. ulnaris har någon sensorisk eller motorisk funktion för pekfinger",
-    "correct": "Sant",
+    "prompt": "N. ulnaris ger känseln palmärt på pekfingret",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "Normal",
@@ -3794,10 +3794,10 @@
   },
   {
     "type": "tf",
-    "prompt": "N. radialis har någon sensorisk eller motorisk funktion för tumme",
-    "correct": "Sant",
+    "prompt": "N. radialis ger känseln palmärt på tummen",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "Normal",
@@ -3805,10 +3805,10 @@
   },
   {
     "type": "tf",
-    "prompt": "N. radialis har någon sensorisk eller motorisk funktion för pekfinger",
-    "correct": "Sant",
+    "prompt": "N. radialis böjer pekfingret i PIP-leden",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "Normal",
@@ -3816,10 +3816,10 @@
   },
   {
     "type": "tf",
-    "prompt": "N. radialis har någon sensorisk eller motorisk funktion för långfinger",
-    "correct": "Sant",
+    "prompt": "N. radialis försörjer långfingrets intrinsiska muskler motoriskt",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_nervfördelning",
     "difficulty": "Normal",
@@ -3904,10 +3904,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Articulationes metacarpophalangeae är en led i handen",
-    "correct": "Sant",
+    "prompt": "Articulationes tarsometatarsales är en led i handen",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_leder",
     "difficulty": "Normal",
@@ -3915,10 +3915,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Articulationes interphalangeae är en led i handen",
-    "correct": "Sant",
+    "prompt": "Articulationes intertarseae är en led i handen",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_leder",
     "difficulty": "Normal",
@@ -3926,10 +3926,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Handen har 27 ben totalt",
-    "correct": "Sant",
+    "prompt": "Handen har 24 ben totalt",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_fakta_enkla",
     "difficulty": "Normal",
@@ -3948,10 +3948,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Tummen har 2 ledben",
-    "correct": "Sant",
+    "prompt": "Tummen har 3 ledben",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_fakta_enkla",
     "difficulty": "Normal",
@@ -3981,10 +3981,10 @@
   },
   {
     "type": "tf",
-    "prompt": "MCP-lederna är kondyllederna",
-    "correct": "Sant",
+    "prompt": "MCP-lederna är gångjärnsleder",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_fakta_enkla",
     "difficulty": "Normal",
@@ -4003,10 +4003,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Flexor digitorum profundus flekterar fingrar",
-    "correct": "Sant",
+    "prompt": "Flexor digitorum profundus sträcker fingrarna",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_fakta_enkla",
     "difficulty": "Normal",
@@ -4014,10 +4014,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Extensor digitorum sträcker fingrar",
-    "correct": "Sant",
+    "prompt": "Extensor digitorum sträcker tummen",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_fakta_enkla",
     "difficulty": "Normal",
@@ -4036,10 +4036,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Interossei gör finger abduktion och adduktion",
-    "correct": "Sant",
+    "prompt": "Dorsala interossei gör fingeradduktion",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_fakta_enkla",
     "difficulty": "Normal",
@@ -4080,10 +4080,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Den palmara aponeurosen är viktig för handens funktion",
-    "correct": "Sant",
+    "prompt": "Den palmara aponeurosen är en muskel i handflatan",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_fakta_enkla",
     "difficulty": "Normal",
@@ -4258,10 +4258,10 @@
   },
   {
     "type": "tf",
-    "prompt": "M. flexor carpi radialis ger flexion i handleden",
-    "correct": "Sant",
+    "prompt": "M. flexor carpi radialis ger flexion och ulnarabduktion i handleden",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_muskelakton",
     "difficulty": "Normal",
@@ -4280,10 +4280,10 @@
   },
   {
     "type": "tf",
-    "prompt": "M. extensor carpi radialis longus ger extension och radialabduktion i handleden",
-    "correct": "Sant",
+    "prompt": "M. extensor carpi radialis longus ger extension och ulnarabduktion i handleden",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_muskelakton",
     "difficulty": "Normal",
@@ -4291,10 +4291,10 @@
   },
   {
     "type": "tf",
-    "prompt": "M. extensor carpi ulnaris ger extension och ulnarabduktion i handleden",
-    "correct": "Sant",
+    "prompt": "M. extensor carpi ulnaris ger extension och radialabduktion i handleden",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_muskelakton",
     "difficulty": "Normal",
@@ -4324,10 +4324,10 @@
   },
   {
     "type": "tf",
-    "prompt": "M. flexor digitorum profundus ger flexion i DIP-lederna",
-    "correct": "Sant",
+    "prompt": "M. flexor digitorum profundus ger flexion i PIP-lederna men inte i DIP-lederna",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_muskelakton",
     "difficulty": "Normal",
@@ -4346,10 +4346,10 @@
   },
   {
     "type": "tf",
-    "prompt": "M. extensor digitorum ger extension i MCP-lederna",
-    "correct": "Sant",
+    "prompt": "M. extensor digitorum ger extension i tummens MCP-led",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_muskelakton",
     "difficulty": "Normal",
@@ -4390,10 +4390,10 @@
   },
   {
     "type": "tf",
-    "prompt": "M. extensor carpi radialis brevis ger extension i handleden",
-    "correct": "Sant",
+    "prompt": "M. extensor carpi radialis brevis ger flexion i handleden",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_muskelakton",
     "difficulty": "Normal",
@@ -4462,10 +4462,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Os metacarpale 2 är ett långben",
-    "correct": "Sant",
+    "prompt": "Os metacarpale 2 är ett kortben",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_metakarpaler_fakta",
     "difficulty": "Normal",
@@ -4484,10 +4484,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Os metacarpale 4 är ett långben",
-    "correct": "Sant",
+    "prompt": "Os metacarpale 4 är ett platt ben",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_metakarpaler_fakta",
     "difficulty": "Normal",
@@ -4495,10 +4495,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Os metacarpale 5 är ett långben",
-    "correct": "Sant",
+    "prompt": "Os metacarpale 5 är ett oregelbundet ben",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_metakarpaler_fakta",
     "difficulty": "Normal",
@@ -4517,10 +4517,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Mediokarpalleden är en plan glidled",
-    "correct": "Sant",
+    "prompt": "Mediokarpalleden är en sadelled",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_ledtyper_fakta",
     "difficulty": "Normal",
@@ -4539,10 +4539,10 @@
   },
   {
     "type": "tf",
-    "prompt": "MCP led är en Ellipsoid led",
-    "correct": "Sant",
+    "prompt": "MCP led är en plan glidled",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_ledtyper_fakta",
     "difficulty": "Normal",
@@ -4550,10 +4550,10 @@
   },
   {
     "type": "tf",
-    "prompt": "IP-leden är en gångjärnsled",
-    "correct": "Sant",
+    "prompt": "IP-leden är en ellipsoid led",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_ledtyper_fakta",
     "difficulty": "Normal",
@@ -4605,10 +4605,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Medianus-nerven innerverar 4 muskler i handflatan",
-    "correct": "Sant",
+    "prompt": "Medianus-nerven innerverar 10 muskler i handflatan",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_avslutande_fakta",
     "difficulty": "Normal",
@@ -4616,10 +4616,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Ulnaris-nerven innerverar de flesta handens muskler",
-    "correct": "Sant",
+    "prompt": "Radialisnerven innerverar de flesta av handens intrinsiska muskler",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_avslutande_fakta",
     "difficulty": "Normal",
@@ -4627,10 +4627,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Karpaltunneln innehåller 9 flexorsenor",
-    "correct": "Sant",
+    "prompt": "Karpaltunneln innehåller 6 flexorsenor",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_avslutande_fakta",
     "difficulty": "Normal",
@@ -4638,10 +4638,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Den palmara aponeurosen utgår från m. palmaris longus",
-    "correct": "Sant",
+    "prompt": "Den palmara aponeurosen utgår från m. flexor carpi ulnaris",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_avslutande_fakta",
     "difficulty": "Normal",
@@ -4660,10 +4660,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Handen har 19 intrinsiska muskler",
-    "correct": "Sant",
+    "prompt": "Handen har 12 intrinsiska muskler",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "Normal",
@@ -4682,10 +4682,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Opponensmusklerna möjliggör opposition",
-    "correct": "Sant",
+    "prompt": "Opponensmusklerna för tummen rakt bort från handflatan i abduktion",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "Normal",
@@ -4715,10 +4715,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Extensorsenorna är organiserade i 6 fack",
-    "correct": "Sant",
+    "prompt": "Extensorsenorna är organiserade i 4 fack",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "Normal",
@@ -4737,10 +4737,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Ulnarisnerven passerar genom Guyons kanal (canalis ulnaris)",
-    "correct": "Sant",
+    "prompt": "Nervus medianus passerar genom Guyons kanal (canalis ulnaris)",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "Normal",
@@ -4748,10 +4748,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Radialis-nerven är övervägande sensorisk i handen",
-    "correct": "Sant",
+    "prompt": "Radialisnerven är övervägande motorisk i handen",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "Normal",
@@ -4759,7 +4759,7 @@
   },
   {
     "type": "tf",
-    "prompt": "Finger har både intrinsiska och extrinsiska muskler",
+    "prompt": "Fingrarna har både intrinsiska och extrinsiska muskler",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -4770,10 +4770,10 @@
   },
   {
     "type": "tf",
-    "prompt": "MCP-lederna är fingrarnas mest rörliga leder",
-    "correct": "Sant",
+    "prompt": "IP-lederna är fingrarnas mest rörliga leder",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "Normal",
@@ -4781,10 +4781,10 @@
   },
   {
     "type": "tf",
-    "prompt": "IP-lederna tillåter endast flexion och extension",
-    "correct": "Sant",
+    "prompt": "IP-lederna tillåter flexion, extension och abduktion",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "Normal",
@@ -4803,10 +4803,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Pronation och supination sker i radioulnarlederna",
-    "correct": "Sant",
+    "prompt": "Pronation och supination sker i handleden (articulatio radiocarpalis)",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "Normal",
@@ -4836,10 +4836,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Scaphoideum är det handrotsben som oftast fraktureras",
-    "correct": "Sant",
+    "prompt": "Lunatum är det handrotsben som oftast fraktureras",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "Normal",
@@ -4858,10 +4858,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Triquetrum är ett pyramidformat ben",
-    "correct": "Sant",
+    "prompt": "Triquetrum är ett ärtformat ben",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "Normal",
@@ -4869,10 +4869,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Pisiforme är det minsta handrotsbenet",
-    "correct": "Sant",
+    "prompt": "Pisiforme ligger i den distala karpalraden",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "Normal",
@@ -4891,10 +4891,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Trapezoideum är det minsta benet i distala karpalraden",
-    "correct": "Sant",
+    "prompt": "Trapezoideum är det största benet i distala karpalraden",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "Normal",
@@ -4924,10 +4924,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Metakarpalbenen är 5 långa ben som bildar mellanhanden",
-    "correct": "Sant",
+    "prompt": "Metakarpalbenen är 5 korta ben som bildar mellanhanden",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "Normal",
@@ -4935,10 +4935,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Falangerna är totalt 14 ben i fingrarna",
-    "correct": "Sant",
+    "prompt": "Falangerna är totalt 15 ben i fingrarna",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "Normal",
@@ -4979,10 +4979,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Lumbricales har den unika funktionen MCP-flexion och IP-extension",
-    "correct": "Sant",
+    "prompt": "Lumbricales har den unika funktionen MCP-extension och IP-flexion",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "Normal",
@@ -5001,10 +5001,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Palmara interossei motsvarar fingeradduktion",
-    "correct": "Sant",
+    "prompt": "Palmara interossei motsvarar fingerabduktion",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "Normal",
@@ -5012,10 +5012,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Thenarregionen innehåller opponensmuskeln",
-    "correct": "Sant",
+    "prompt": "Thenarregionen innehåller m. abductor digiti minimi",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "Normal",
@@ -5056,10 +5056,10 @@
   },
   {
     "type": "tf",
-    "prompt": "Flexor digitorum superficialis flexerar PIP-lederna",
-    "correct": "Sant",
+    "prompt": "Flexor digitorum superficialis flexerar DIP-lederna",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "handen_samling_fakta",
     "difficulty": "Normal",
@@ -5512,8 +5512,8 @@
   },
   {
     "id": "q474",
-    "type": "mc",
-    "prompt": "Sant eller falskt: Articulatio radiocarpea och articulatio mediocarpea delar en stor, gemensam ledhåla.",
+    "type": "tf",
+    "prompt": "Articulatio radiocarpea och articulatio mediocarpea delar en stor, gemensam ledhåla.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
@@ -5594,8 +5594,8 @@
   },
   {
     "id": "q480",
-    "type": "mc",
-    "prompt": "Sant eller falskt: Os pisiforme räknas som ett sesamben inbäddat i senan till musculus flexor carpi ulnaris och bildar en led mot os triquetrum.",
+    "type": "tf",
+    "prompt": "Os pisiforme räknas som ett sesamben inbäddat i senan till musculus flexor carpi ulnaris och bildar en led mot os triquetrum.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -5676,8 +5676,8 @@
   },
   {
     "id": "q486",
-    "type": "mc",
-    "prompt": "Sant eller falskt: Articulatio mediocarpea har en jämn, rätlinjig ledspringa som enbart tillåter glidrörelser i ett plan.",
+    "type": "tf",
+    "prompt": "Articulatio mediocarpea har en jämn, rätlinjig ledspringa som enbart tillåter glidrörelser i ett plan.",
     "correct": "Falskt",
     "distractors": [
       "Sant"

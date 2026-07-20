@@ -215,9 +215,9 @@
     "prompt": "Vad är gemensamt för synovialleder (äkta leder)?",
     "correct": "De har ledbrosk, ledkapsel och ledvätska och är rörliga",
     "distractors": [
-      "De saknar ledvätska, ledbrosk och ledkapsel",
-      "De är helt orörliga och saknar ledhålighet",
-      "De är hopväxta med angränsande ben utan ledspalt"
+      "De saknar ledvätska, ledbrosk och ledkapsel helt och hållet",
+      "De är helt orörliga och saknar ledhålighet mellan benen",
+      "De är hopväxta med angränsande ben helt utan ledspalt"
     ],
     "topic": "ledtyper_synovial",
     "difficulty": "Normal",
@@ -271,9 +271,9 @@
     "prompt": "Vad är ledbroskets uppgift i en led?",
     "correct": "Gör att benens ytor glider lätt mot varandra",
     "distractors": [
-      "Producerar blodceller",
-      "Håller ihop benen som ett band",
-      "Vrider leden"
+      "Producerar blodceller i benets inre märghålrum",
+      "Håller ihop benen som ett band över leden",
+      "Vrider leden kring dess längsgående axel"
     ],
     "topic": "ledtyper_synovial",
     "difficulty": "Normal",
@@ -285,7 +285,7 @@
     "prompt": "Vad gör ledkapseln?",
     "correct": "Sitter runt hela leden och håller ledvätskan på plats",
     "distractors": [
-      "Producerar röda blodkroppar i benmärgen",
+      "Producerar röda blodkroppar inne i benmärgens inre hålrum",
       "Sträcker ut leden maximalt vid varje rörelse",
       "Förbinder muskeln direkt med benet utan sena"
     ],
@@ -567,7 +567,7 @@
     "distractors": [
       "Böjning och sträckning",
       "Abduktion och adduktion",
-      "Glidning"
+      "Glidning mellan ledytorna"
     ],
     "topic": "ledtyper_rorelse",
     "difficulty": "Normal",
@@ -579,9 +579,9 @@
     "prompt": "Vilken rörelse möjliggör atlantoaxialleden (vridled) i nacken?",
     "correct": "Att vrida huvudet i sidled",
     "distractors": [
-      "Att böja huvudet framåt",
-      "Att glida i sidled",
-      "Att abducera huvudet"
+      "Att böja huvudet framåt och bakåt",
+      "Att glida i sidled mellan kotorna",
+      "Att abducera huvudet åt sidan"
     ],
     "topic": "ledtyper_rorelse",
     "difficulty": "Normal",
@@ -609,7 +609,7 @@
     "distractors": [
       "Pronation",
       "Glidning",
-      "Extension"
+      "Lateralflexion"
     ],
     "topic": "ledtyper_rorelse",
     "difficulty": "Normal",
@@ -649,9 +649,9 @@
     "prompt": "Vilka rörelser tillåter handleden som äggled?",
     "correct": "Böjning/sträckning och rörelse i sidled",
     "distractors": [
-      "Vridning kring en axel och glidning",
-      "Rörelse åt alla håll som en kulled",
-      "Glidning mellan ledytorna i ett plan"
+      "Vridning kring en axel och glidning i planet",
+      "Rörelse åt flera håll som i en kulled",
+      "Glidning mellan ledytorna i ett enda plan"
     ],
     "topic": "ledtyper_rorelse",
     "difficulty": "Normal",
@@ -664,8 +664,8 @@
     "correct": "Pronation och supination",
     "distractors": [
       "Böjning och sträckning",
-      "Abduktion",
-      "Opposition"
+      "Abduktion och adduktion",
+      "Glidning mellan ledytorna"
     ],
     "topic": "ledtyper_rorelse",
     "difficulty": "Normal",

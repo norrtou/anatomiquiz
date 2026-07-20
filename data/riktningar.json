@@ -42,10 +42,10 @@
   {
     "id": "q4",
     "type": "tf",
-    "prompt": "Kaudal betyder: Mot svansen",
-    "correct": "Sant",
+    "prompt": "Kaudal betyder: Mot huvudet",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -94,10 +94,10 @@
   {
     "id": "q8",
     "type": "tf",
-    "prompt": "Dorsal betyder: Mot baksidan",
-    "correct": "Sant",
+    "prompt": "Dorsal betyder: Mot framsidan",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -146,10 +146,10 @@
   {
     "id": "q12",
     "type": "tf",
-    "prompt": "Lateral betyder: Från mittlinjen",
-    "correct": "Sant",
+    "prompt": "Lateral betyder: Mot mittlinjen",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -198,10 +198,10 @@
   {
     "id": "q16",
     "type": "tf",
-    "prompt": "Distal betyder: Längre från ursprung",
-    "correct": "Sant",
+    "prompt": "Distal betyder: Närmare ursprung",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -250,10 +250,10 @@
   {
     "id": "q20",
     "type": "tf",
-    "prompt": "Djup betyder: Långt från ytan",
-    "correct": "Sant",
+    "prompt": "Djup betyder: Nära ytan",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "riktningar",
     "difficulty": "Normal",
@@ -554,10 +554,10 @@
   {
     "id": "q42",
     "type": "tf",
-    "prompt": "Bukläge innebär: På mage",
-    "correct": "Sant",
+    "prompt": "Bukläge innebär: På rygg",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "positioner",
     "difficulty": "Normal",
@@ -632,10 +632,10 @@
   {
     "id": "q48",
     "type": "tf",
-    "prompt": "Trendelenburgläge innebär: Huvud ned",
-    "correct": "Sant",
+    "prompt": "Trendelenburgläge innebär: Huvud upp",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "positioner",
     "difficulty": "Normal",
@@ -684,10 +684,10 @@
   {
     "id": "q52",
     "type": "tf",
-    "prompt": "Litotomiläge innebär: Ben upp",
-    "correct": "Sant",
+    "prompt": "Litotomiläge innebär: På mage med benen sträckta",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "positioner",
     "difficulty": "Normal",
@@ -710,10 +710,10 @@
   {
     "id": "q54",
     "type": "tf",
-    "prompt": "Simsläge innebär: Halvt bukläge",
-    "correct": "Sant",
+    "prompt": "Simsläge innebär: Halvsittande",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "positioner",
     "difficulty": "Normal",
@@ -809,7 +809,7 @@
     "prompt": "Vad är 'Flexion'?",
     "correct": "Minska vinkeln mellan två ben",
     "distractors": [
-      "Öka vinkeln mellan två ben",
+      "Öka vinkeln mellan två ben i leden",
       "Rörelse bort från mittlinjen",
       "Vridning kring längsaxeln"
     ],
@@ -1047,7 +1047,7 @@
     "prompt": "'Protraktion' innebär?",
     "correct": "Röra framåt",
     "distractors": [
-      "Röra bakåt",
+      "Röra rakt bakåt",
       "Höja upp",
       "Sänka ner"
     ],
@@ -1475,7 +1475,7 @@
     "prompt": "När du sträcker armen ut sker en _____ i armbågsleden",
     "correct": "Extension",
     "distractors": [
-      "Flexion"
+      "Flexion i leden"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -1539,7 +1539,7 @@
     "distractors": [
       "Pronation",
       "Supination",
-      "Flexion"
+      "Lateralflexion"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -1593,7 +1593,7 @@
     "distractors": [
       "Dorsalflexion",
       "Eversion",
-      "Flexion"
+      "Lateralflexion"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -1678,10 +1678,10 @@
   {
     "id": "q126",
     "type": "tf",
-    "prompt": "Pronation är när handflatan roteras nedåt",
-    "correct": "Sant",
+    "prompt": "Pronation är när handflatan roteras uppåt",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -1726,10 +1726,10 @@
   {
     "id": "q130",
     "type": "tf",
-    "prompt": "Inversion innebär att fotsula vänds inåt",
-    "correct": "Sant",
+    "prompt": "Inversion innebär att fotsulan vänds utåt",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -1798,10 +1798,10 @@
   {
     "id": "q136",
     "type": "tf",
-    "prompt": "Proximal betyder närmare ursprunget",
-    "correct": "Sant",
+    "prompt": "Proximal betyder längre bort från bålen",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -1846,10 +1846,10 @@
   {
     "id": "q140",
     "type": "tf",
-    "prompt": "Anterior betyder mot framsidan",
-    "correct": "Sant",
+    "prompt": "Anterior betyder mot baksidan",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -1909,7 +1909,7 @@
     "prompt": "Vilken rörelse är detta? Armvecket öppnas",
     "correct": "Extension",
     "distractors": [
-      "Flexion"
+      "Flexion i leden"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -2684,7 +2684,7 @@
     "prompt": "'Sträcka halsen' är en rörelse som kallas _____",
     "correct": "Extension",
     "distractors": [
-      "Flexion"
+      "Flexion i leden"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -2708,7 +2708,7 @@
     "prompt": "'Sträcka höftleden' är en rörelse som kallas _____",
     "correct": "Extension",
     "distractors": [
-      "Flexion"
+      "Flexion i leden"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -2736,7 +2736,7 @@
     "distractors": [
       "Flexion",
       "Rotation",
-      "Pronation"
+      "Protraktion"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -2764,7 +2764,7 @@
     "distractors": [
       "Retraktion",
       "Abduktion",
-      "Elevation"
+      "Lateralflexion"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -2788,7 +2788,7 @@
     "prompt": "'Sträcka knäet' är en rörelse som kallas _____",
     "correct": "Extension",
     "distractors": [
-      "Flexion"
+      "Flexion i leden"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -2840,7 +2840,7 @@
     "distractors": [
       "Supination",
       "Pronation",
-      "Abduktion"
+      "Horisontell abduktion"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -3707,10 +3707,10 @@
   {
     "id": "q281",
     "type": "tf",
-    "prompt": "Supination av handen gör tummen peka uppåt",
-    "correct": "Sant",
+    "prompt": "Supination av handen vänder handflatan nedåt",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -3803,10 +3803,10 @@
   {
     "id": "q289",
     "type": "tf",
-    "prompt": "Sagittalplan delar kroppen vänster och höger",
-    "correct": "Sant",
+    "prompt": "Sagittalplan delar kroppen i övre och nedre del",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -3815,10 +3815,10 @@
   {
     "id": "q290",
     "type": "tf",
-    "prompt": "Frontalplan delar kroppen fram och bak",
-    "correct": "Sant",
+    "prompt": "Frontalplan delar kroppen i vänster och höger",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -3984,7 +3984,7 @@
     "distractors": [
       "Eversion",
       "Retraktion",
-      "Depression"
+      "Lateralflexion"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -4519,10 +4519,10 @@
   {
     "id": "q342",
     "type": "tf",
-    "prompt": "Dorsalflexion är en rörelse",
-    "correct": "Sant",
+    "prompt": "Dorsalflexion är en riktningsterm",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "begrepp",
     "difficulty": "Normal",
@@ -5238,7 +5238,7 @@
     "prompt": "Sträcka armen ut från kroppen är en",
     "correct": "Extension",
     "distractors": [
-      "Flexion"
+      "Flexion i leden"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -6010,7 +6010,7 @@
     "prompt": "I vilken position är M. pectoralis major när man gör excentrisk horisontell abduktion-kontroll?",
     "correct": "Armarna bromsar när de pressas utåt sidorna",
     "distractors": [
-      "Händerna slås snabbt ihop framför ansiktet"
+      "Händerna slås snabbt ihop framför ansiktet i en applåd"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -6154,7 +6154,7 @@
     "prompt": "I vilken position är M. levator scapulae när man gör koncentrisk elevation (skulderblad)?",
     "correct": "Skulderbladet lyfts upp på en sida",
     "distractors": [
-      "Axeln sjunker ner helt avslappnat"
+      "Axeln sjunker ner helt avslappnat mot golvet"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -6214,7 +6214,7 @@
     "prompt": "I vilken position är M. brachialis när man gör koncentrisk flexion?",
     "correct": "Armbågsleden böjs oavsett handflate-riktning",
     "distractors": [
-      "Armbågen sträcks ut för att putsa fönster"
+      "Armbågen sträcks ut för att putsa ett fönster"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -6238,7 +6238,7 @@
     "prompt": "I vilken position är M. triceps brachii när man gör koncentrisk extension?",
     "correct": "Armbågen sträcks ut kraftfullt framåt",
     "distractors": [
-      "Armen böjs för att klia sig i nacken"
+      "Armen böjs för att klia sig högt uppe i nacken"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -6394,7 +6394,7 @@
     "prompt": "I vilken position är M. opponens pollicis när man gör koncentrisk opponering?",
     "correct": "Tummen förs mot lillfingrets topp",
     "distractors": [
-      "Handen hålls helt platt och stel"
+      "Handen hålls helt platt och stel mot bordet"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -6442,7 +6442,7 @@
     "prompt": "I vilken position är M. rectus abdominis när man gör excentrisk extension-kontroll?",
     "correct": "Överkroppen sänks långsamt bakåt",
     "distractors": [
-      "Kroppen kastas framåt explosivt"
+      "Kroppen kastas snabbt framåt explosivt"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -6766,7 +6766,7 @@
     "prompt": "I vilken position är M. vastus lateralis när man gör koncentrisk extension?",
     "correct": "Knät sträcks helt när man reser sig",
     "distractors": [
-      "Man bromsar stegen nedför en backe"
+      "Man bromsar stegen nedför en brant backe"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -6778,7 +6778,7 @@
     "prompt": "I vilken position är M. vastus medialis när man gör koncentrisk extension (slutfas)?",
     "correct": "Knät sträcks den sista biten helt",
     "distractors": [
-      "Knät böjs i 90 grader på en stol"
+      "Knät böjs i 90 grader på en låg stol"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -6934,7 +6934,7 @@
     "prompt": "I vilken position är M. soleus när man gör koncentrisk plantarflexion (med böjt knä)?",
     "correct": "Framfoten trycks ner när knät är böjt",
     "distractors": [
-      "Fotbladet lyfts uppåt mot smalbenet"
+      "Fotbladet lyfts uppåt mot smalbenet i steget"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -7030,7 +7030,7 @@
     "prompt": "I vilken position är M. extensor hallucis longus när man gör koncentrisk stortåextension?",
     "correct": "Stortån dras upp mot ovansidan",
     "distractors": [
-      "Stortån pressas ner stenhårt"
+      "Stortån pressas ner stenhårt i marken"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -7054,7 +7054,7 @@
     "prompt": "I vilken position är M. extensor digitorum brevis när man gör koncentrisk tåextension?",
     "correct": "De mellersta tårna sträcks upp",
     "distractors": [
-      "Tårna böjs nedåt under foten"
+      "Tårna böjs nedåt under foten hårt"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",
@@ -7078,7 +7078,7 @@
     "prompt": "I vilken position är M. lumbricales pedis när man gör koncentrisk flexion i grundleder / extension i ändleder?",
     "correct": "Tårna stabiliseras platta mot marken",
     "distractors": [
-      "Tårna knipas till en hård böjd klo"
+      "Tårna knipas till en hård böjd klo i skon"
     ],
     "topic": "rörelser",
     "difficulty": "Normal",

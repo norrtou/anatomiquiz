@@ -42,10 +42,10 @@
   {
     "id": "q4",
     "type": "tf",
-    "prompt": "Cavitas glenoidalis är ledpannan i axelleden.",
-    "correct": "Sant",
+    "prompt": "Cavitas glenoidalis är ledpannan i armbågsleden.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "skuldra_ben",
     "difficulty": "Normal",
@@ -108,10 +108,10 @@
   {
     "id": "q9",
     "type": "tf",
-    "prompt": "Processus coracoideus kallas korpnäbbsutskottet på svenska.",
-    "correct": "Sant",
+    "prompt": "Acromion kallas korpnäbbsutskottet på svenska.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "skuldra_ben",
     "difficulty": "Normal",
@@ -134,10 +134,10 @@
   {
     "id": "q11",
     "type": "tf",
-    "prompt": "Margo medialis scapulae är vänd mot kotpelaren.",
-    "correct": "Sant",
+    "prompt": "Margo medialis scapulae är vänd bort från kotpelaren, ut mot axeln.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "skuldra_ben",
     "difficulty": "Normal",
@@ -242,10 +242,10 @@
   {
     "id": "q19",
     "type": "tf",
-    "prompt": "Clavicula är skuldergördelns enda direkta benförbindelse till bröstbenet.",
-    "correct": "Sant",
+    "prompt": "Scapula är skuldergördelns enda direkta benförbindelse till bröstbenet.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "skuldra_ben",
     "difficulty": "Normal",
@@ -322,10 +322,10 @@
   {
     "id": "q25",
     "type": "tf",
-    "prompt": "I sulcus intertubercularis löper den långa bicepssenan.",
-    "correct": "Sant",
+    "prompt": "I sulcus intertubercularis löper den långa tricepssenan.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "skuldra_ben",
     "difficulty": "Normal",
@@ -378,8 +378,8 @@
     "correct": "Fyra",
     "distractors": [
       "Tre",
-      "Två",
-      "Fem"
+      "Fem",
+      "Åtta"
     ],
     "topic": "skuldra_leder",
     "difficulty": "Normal",
@@ -391,9 +391,9 @@
     "prompt": "Vilka är skulderkomplexets fyra leder?",
     "correct": "Glenohumeralleden, AC-leden, SC-leden och den skapulotorakala leden",
     "distractors": [
+      "Glenohumeralleden, armbågsleden, handleden och den skapulotorakala leden",
       "Art. glenohumerale, art. cubiti, art. radioulnaris och AC-leden",
-      "Axelleden, armbågsleden, handleden och AC-leden",
-      "Art. glenohumerale, art. humeroradialis, SC-leden och AC-leden"
+      "Glenohumeralleden, AC-leden, SC-leden och art. humeroradialis"
     ],
     "topic": "skuldra_leder",
     "difficulty": "Normal",
@@ -442,10 +442,10 @@
   {
     "id": "q34",
     "type": "tf",
-    "prompt": "Axelleden (art. glenohumerale) är en kulled.",
-    "correct": "Sant",
+    "prompt": "Axelleden (art. glenohumerale) är en sadelled.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "skuldra_leder",
     "difficulty": "Normal",
@@ -494,10 +494,10 @@
   {
     "id": "q38",
     "type": "tf",
-    "prompt": "Labrum glenoidale fördjupar cavitas glenoidalis.",
-    "correct": "Sant",
+    "prompt": "Labrum glenoidale är en sena som fäster m. deltoideus på humerus.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "skuldra_leder",
     "difficulty": "Normal",
@@ -509,9 +509,9 @@
     "prompt": "Vilka rörelser kan utföras i art. glenohumerale?",
     "correct": "Flexion, extension, abduktion, adduktion samt in- och utåtrotation",
     "distractors": [
-      "Endast flexion och extension, inga andra rörelser möjliga",
-      "Endast abduktion och adduktion, inga andra rörelser möjliga",
-      "Endast in- och utåtrotation, inga andra rörelser möjliga"
+      "Abduktion, adduktion samt in- och utåtrotation i ett enda rörelseplan",
+      "Flexion, extension samt sidoglidning av caput humeri i ledpannan",
+      "Elevation, depression, protraktion och retraktion av ledhuvudet"
     ],
     "topic": "skuldra_leder",
     "difficulty": "Normal",
@@ -550,8 +550,8 @@
     "correct": "Articulatio acromioclavicularis",
     "distractors": [
       "Articulatio sternoclavicularis",
-      "Articulatio glenohumerale",
-      "Articulatio cubiti"
+      "Articulatio glenohumerale sinistra",
+      "Articulatio scapulothoracalis"
     ],
     "topic": "skuldra_leder",
     "difficulty": "Normal",
@@ -563,8 +563,8 @@
     "prompt": "Vilka strukturer bildar art. acromioclavicularis?",
     "correct": "Acromion och claviculas laterala ände",
     "distractors": [
-      "Acromion och caput humeri",
-      "Clavicula och sternum",
+      "Acromion och caput humeri i ledpannan",
+      "Clavicula och sternums övre del",
       "Processus coracoideus och clavicula"
     ],
     "topic": "skuldra_leder",
@@ -588,10 +588,10 @@
   {
     "id": "q45",
     "type": "tf",
-    "prompt": "Art. acromioclavicularis är en plan led med liten rörlighet.",
-    "correct": "Sant",
+    "prompt": "Art. acromioclavicularis är en kulled med stor rörlighet.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "skuldra_leder",
     "difficulty": "Normal",
@@ -605,7 +605,7 @@
     "distractors": [
       "Lig. costoclaviculare",
       "Lig. interclaviculare",
-      "Lig. glenohumerale"
+      "Lig. transversum scapulae"
     ],
     "topic": "skuldra_leder",
     "difficulty": "Normal",
@@ -614,10 +614,10 @@
   {
     "id": "q47",
     "type": "tf",
-    "prompt": "Lig. coracoclaviculare förbinder clavicula med processus coracoideus.",
-    "correct": "Sant",
+    "prompt": "Lig. coracoclaviculare förbinder scapula med humerus.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "skuldra_leder",
     "difficulty": "Normal",
@@ -685,7 +685,7 @@
     "distractors": [
       "Ett labrum",
       "Två menisker",
-      "Ingen ledvätska alls"
+      "En slemsäck"
     ],
     "topic": "skuldra_leder",
     "difficulty": "Normal",
@@ -751,9 +751,9 @@
     "prompt": "Vilka rörelser kan skulderbladet göra mot bröstkorgen i den skapulotorakala leden?",
     "correct": "Elevation/depression, protraktion/retraktion samt uppåt- och nedåtrotation",
     "distractors": [
-      "Endast flexion och extension, inga andra rörelser möjliga",
-      "Endast in- och utåtrotation, inga andra rörelser möjliga",
-      "Inga rörelser alls, skulderbladet sitter helt fixerat"
+      "Flexion/extension, abduktion/adduktion samt in- och utåtrotation",
+      "Elevation/depression samt in- och utåtrotation kring en lodrät axel",
+      "Pronation/supination samt uppåt- och nedåtrotation av skulderbladet"
     ],
     "topic": "skuldra_leder",
     "difficulty": "Normal",
@@ -791,9 +791,9 @@
     "prompt": "Var har m. deltoideus sitt ursprung?",
     "correct": "Claviculas laterala tredjedel, acromion och spina scapulae",
     "distractors": [
-      "Endast på humerus, ingen annanstans",
-      "Endast på processus coracoideus",
-      "Endast på margo medialis scapulae"
+      "Claviculas mediala tredjedel, processus coracoideus och margo medialis",
+      "Tuberculum majus, collum chirurgicum och crista tuberculi på humerus",
+      "Spina scapulae, angulus inferior och margo lateralis scapulae"
     ],
     "topic": "skuldra_muskler",
     "difficulty": "Normal",
@@ -846,7 +846,7 @@
     "correct": "Flekterar och inåtroterar överarmen",
     "distractors": [
       "Extenderar och utåtroterar överarmen",
-      "Endast abducerar",
+      "Abducerar och utåtroterar överarmen",
       "Adducerar överarmen mot bålen"
     ],
     "topic": "skuldra_muskler",
@@ -860,7 +860,7 @@
     "correct": "Extenderar och utåtroterar överarmen",
     "distractors": [
       "Flekterar och inåtroterar överarmen",
-      "Endast abducerar",
+      "Abducerar och inåtroterar överarmen",
       "Adducerar överarmen mot bålen"
     ],
     "topic": "skuldra_muskler",
@@ -898,10 +898,10 @@
   {
     "id": "q68",
     "type": "tf",
-    "prompt": "Övre delen av m. trapezius lyfter (eleverar) skulderbladet.",
-    "correct": "Sant",
+    "prompt": "Nedre delen av m. trapezius lyfter (eleverar) skulderbladet.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "skuldra_muskler",
     "difficulty": "Normal",
@@ -1091,9 +1091,9 @@
     "prompt": "Vilka rörelser utför m. pectoralis major i axelleden?",
     "correct": "Adduktion, inåtrotation och flexion",
     "distractors": [
-      "Abduktion och utåtrotation",
-      "Endast extension",
-      "Endast abduktion"
+      "Abduktion, utåtrotation och extension",
+      "Extension, adduktion och utåtrotation",
+      "Flexion, abduktion och inåtrotation"
     ],
     "topic": "skuldra_muskler",
     "difficulty": "Normal",
@@ -1116,10 +1116,10 @@
   {
     "id": "q84",
     "type": "tf",
-    "prompt": "M. pectoralis minor fäster på processus coracoideus.",
-    "correct": "Sant",
+    "prompt": "M. pectoralis minor fäster på acromion.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "skuldra_muskler",
     "difficulty": "Normal",
@@ -1132,8 +1132,8 @@
     "correct": "Extension, adduktion och inåtrotation",
     "distractors": [
       "Flexion, abduktion och utåtrotation",
-      "Endast abduktion",
-      "Endast flexion"
+      "Extension, abduktion och utåtrotation",
+      "Flexion, adduktion och inåtrotation"
     ],
     "topic": "skuldra_muskler",
     "difficulty": "Normal",
@@ -1170,10 +1170,10 @@
   {
     "id": "q88",
     "type": "tf",
-    "prompt": "Den långa bicepssenan löper genom sulcus intertubercularis på humerus.",
-    "correct": "Sant",
+    "prompt": "Den korta bicepssenan löper genom sulcus intertubercularis på humerus.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "skuldra_muskler",
     "difficulty": "Normal",
@@ -1236,10 +1236,10 @@
   {
     "id": "q93",
     "type": "tf",
-    "prompt": "Skuldergördeln förbinds med bålens skelett endast via art. sternoclavicularis.",
-    "correct": "Sant",
+    "prompt": "Skuldergördeln förbinds med bålens skelett via art. acromioclavicularis.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "skuldra_funktion",
     "difficulty": "Normal",

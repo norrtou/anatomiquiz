@@ -360,10 +360,12 @@
   {
     "id": "q41",
     "type": "mc",
-    "prompt": "Gör Erector spinae flexion eller extension?",
+    "prompt": "Vilken rörelse i ryggraden utför Erector spinae?",
     "correct": "Extension",
     "distractors": [
-      "Flexion"
+      "Flexion",
+      "Abduktion",
+      "Cirkumduktion"
     ],
     "topic": "muskler_flexion_vs_extension",
     "difficulty": "Normal",
@@ -372,10 +374,12 @@
   {
     "id": "q42",
     "type": "mc",
-    "prompt": "Gör Triceps brachii flexion eller extension?",
+    "prompt": "Vilken rörelse i armbågsleden utför Triceps brachii?",
     "correct": "Extension",
     "distractors": [
-      "Flexion"
+      "Flexion",
+      "Pronation",
+      "Supination"
     ],
     "topic": "muskler_flexion_vs_extension",
     "difficulty": "Normal",
@@ -384,10 +388,12 @@
   {
     "id": "q43",
     "type": "mc",
-    "prompt": "Gör Extensor carpi radialis longus flexion eller extension?",
+    "prompt": "Vilken rörelse i handleden utför Extensor carpi radialis longus?",
     "correct": "Extension",
     "distractors": [
-      "Flexion"
+      "Flexion",
+      "Pronation",
+      "Ulnardeviation"
     ],
     "topic": "muskler_flexion_vs_extension",
     "difficulty": "Normal",
@@ -396,10 +402,12 @@
   {
     "id": "q44",
     "type": "mc",
-    "prompt": "Gör Extensor carpi radialis brevis flexion eller extension?",
+    "prompt": "Vilken rörelse i handleden utför Extensor carpi radialis brevis?",
     "correct": "Extension",
     "distractors": [
-      "Flexion"
+      "Flexion",
+      "Pronation",
+      "Ulnardeviation"
     ],
     "topic": "muskler_flexion_vs_extension",
     "difficulty": "Normal",
@@ -492,10 +500,10 @@
   {
     "id": "q52",
     "type": "tf",
-    "prompt": "Pectoralis major adducerar",
-    "correct": "Sant",
+    "prompt": "Pectoralis major abducerar",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_funktion",
     "difficulty": "Normal",
@@ -504,10 +512,10 @@
   {
     "id": "q53",
     "type": "tf",
-    "prompt": "Pectoralis minor inåtroterar och deprimerar",
-    "correct": "Sant",
+    "prompt": "Pectoralis minor eleverar scapula",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_funktion",
     "difficulty": "Normal",
@@ -528,10 +536,10 @@
   {
     "id": "q55",
     "type": "tf",
-    "prompt": "Rectus abdominis flekterar columna",
-    "correct": "Sant",
+    "prompt": "Rectus abdominis extenderar columna",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_funktion",
     "difficulty": "Normal",
@@ -564,10 +572,10 @@
   {
     "id": "q58",
     "type": "tf",
-    "prompt": "Rhomboidei adducerar scapula",
-    "correct": "Sant",
+    "prompt": "Rhomboidei abducerar scapula",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_funktion",
     "difficulty": "Normal",
@@ -600,10 +608,10 @@
   {
     "id": "q61",
     "type": "tf",
-    "prompt": "Supraspinatus abducerar humerus",
-    "correct": "Sant",
+    "prompt": "Supraspinatus adducerar humerus",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_funktion",
     "difficulty": "Normal",
@@ -636,10 +644,10 @@
   {
     "id": "q64",
     "type": "tf",
-    "prompt": "Triceps brachii extenderar armen",
-    "correct": "Sant",
+    "prompt": "Triceps brachii flekterar armen",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_funktion",
     "difficulty": "Normal",
@@ -660,10 +668,10 @@
   {
     "id": "q66",
     "type": "tf",
-    "prompt": "Flexor carpi radialis flekterar handleden",
-    "correct": "Sant",
+    "prompt": "Flexor carpi radialis extenderar handleden",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_funktion",
     "difficulty": "Normal",
@@ -684,10 +692,10 @@
   {
     "id": "q68",
     "type": "tf",
-    "prompt": "Extensor carpi radialis brevis extenderar handleden",
-    "correct": "Sant",
+    "prompt": "Extensor carpi radialis brevis flekterar handleden",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_funktion",
     "difficulty": "Normal",
@@ -696,10 +704,10 @@
   {
     "id": "q69",
     "type": "tf",
-    "prompt": "Extensor digitorum communis extenderar fingrar",
-    "correct": "Sant",
+    "prompt": "Extensor digitorum communis extenderar tummen",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_funktion",
     "difficulty": "Normal",
@@ -708,10 +716,10 @@
   {
     "id": "q70",
     "type": "tf",
-    "prompt": "Flexor digitorum superficialis flekterar fingrar",
-    "correct": "Sant",
+    "prompt": "Flexor digitorum superficialis extenderar fingrarna",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_funktion",
     "difficulty": "Normal",
@@ -744,10 +752,10 @@
   {
     "id": "q73",
     "type": "tf",
-    "prompt": "Extensor pollicis brevis extenderar tumme",
-    "correct": "Sant",
+    "prompt": "Extensor pollicis brevis flekterar tummen",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_funktion",
     "difficulty": "Normal",
@@ -780,10 +788,10 @@
   {
     "id": "q76",
     "type": "tf",
-    "prompt": "Flexor pollicis brevis flekterar tumme",
-    "correct": "Sant",
+    "prompt": "Flexor pollicis brevis extenderar tummen",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_funktion",
     "difficulty": "Normal",
@@ -792,10 +800,10 @@
   {
     "id": "q77",
     "type": "tf",
-    "prompt": "Abductor pollicis brevis abducerar tumme",
-    "correct": "Sant",
+    "prompt": "Abductor pollicis brevis opponerar tummen",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_funktion",
     "difficulty": "Normal",
@@ -804,10 +812,10 @@
   {
     "id": "q78",
     "type": "tf",
-    "prompt": "Abductor pollicis longus abducerar tumme",
-    "correct": "Sant",
+    "prompt": "Abductor pollicis longus adducerar tummen",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_funktion",
     "difficulty": "Normal",
@@ -828,10 +836,10 @@
   {
     "id": "q80",
     "type": "tf",
-    "prompt": "Gluteus maximus extenderar höften",
-    "correct": "Sant",
+    "prompt": "Gluteus maximus flekterar höften",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_funktion",
     "difficulty": "Normal",
@@ -840,10 +848,10 @@
   {
     "id": "q81",
     "type": "tf",
-    "prompt": "Hamstrings flekterar knät",
-    "correct": "Sant",
+    "prompt": "Hamstrings extenderar knät",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_funktion",
     "difficulty": "Normal",
@@ -864,10 +872,10 @@
   {
     "id": "q83",
     "type": "tf",
-    "prompt": "Triceps surae flekterar fotleden",
-    "correct": "Sant",
+    "prompt": "Triceps surae dorsalflekterar fotleden",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_funktion",
     "difficulty": "Normal",
@@ -876,10 +884,10 @@
   {
     "id": "q84",
     "type": "tf",
-    "prompt": "Tibialis anterior extenderar fotleden",
-    "correct": "Sant",
+    "prompt": "Tibialis anterior plantarflekterar fotleden",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_funktion",
     "difficulty": "Normal",
@@ -900,10 +908,10 @@
   {
     "id": "q86",
     "type": "tf",
-    "prompt": "Flexor carpi radialis innerveras av N. medianus",
-    "correct": "Sant",
+    "prompt": "Flexor carpi radialis innerveras av N. radialis",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_innervation",
     "difficulty": "Normal",
@@ -924,10 +932,10 @@
   {
     "id": "q88",
     "type": "tf",
-    "prompt": "Extensor carpi radialis brevis innerveras av N. radialis",
-    "correct": "Sant",
+    "prompt": "Extensor carpi radialis brevis innerveras av N. ulnaris",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_innervation",
     "difficulty": "Normal",
@@ -948,10 +956,10 @@
   {
     "id": "q90",
     "type": "tf",
-    "prompt": "Flexor digitorum superficialis innerveras av N. medianus",
-    "correct": "Sant",
+    "prompt": "Flexor digitorum superficialis innerveras av N. radialis",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_innervation",
     "difficulty": "Normal",
@@ -972,10 +980,10 @@
   {
     "id": "q92",
     "type": "tf",
-    "prompt": "Flexor pollicis longus innerveras av N. medianus",
-    "correct": "Sant",
+    "prompt": "Flexor pollicis longus innerveras av N. ulnaris",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_innervation",
     "difficulty": "Normal",
@@ -996,10 +1004,10 @@
   {
     "id": "q94",
     "type": "tf",
-    "prompt": "Extensor pollicis longus innerveras av N. radialis",
-    "correct": "Sant",
+    "prompt": "Extensor pollicis longus innerveras av N. medianus",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_innervation",
     "difficulty": "Normal",
@@ -1032,10 +1040,10 @@
   {
     "id": "q97",
     "type": "tf",
-    "prompt": "Abductor pollicis brevis innerveras av N. medianus",
-    "correct": "Sant",
+    "prompt": "Abductor pollicis brevis innerveras av N. ulnaris",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_innervation",
     "difficulty": "Normal",
@@ -1056,10 +1064,10 @@
   {
     "id": "q99",
     "type": "tf",
-    "prompt": "Adductor pollicis innerveras av N. ulnaris",
-    "correct": "Sant",
+    "prompt": "Adductor pollicis innerveras av N. medianus",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_innervation",
     "difficulty": "Normal",
@@ -1239,7 +1247,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk flexion av M. deltoideus (anterior del)?",
     "correct": "Att lyfta armen rakt framåt/uppåt för att nå en kaffekopp på översta hyllan.",
     "distractors": [
-      "Att låta armen falla slappt ner längs sidan efter att ha pekat på något."
+      "Att låta armen falla slappt ner längs kroppssidan efter att ha pekat mot en skylt."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1251,7 +1259,7 @@
     "prompt": "Vilken situation är ett exempel på excentrisk extension-kontroll av M. deltoideus (anterior del)?",
     "correct": "Att långsamt och bromsat sänka ner armen framifrån efter att ha stängt ett högt skåp.",
     "distractors": [
-      "Att snabbt rycka armen bakåt för att kasta en handboll."
+      "Att snabbt rycka armen bakåt i en kraftfull kaströrelse för att kasta en handboll mot mål."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1275,7 +1283,7 @@
     "prompt": "Vilken situation är ett exempel på statisk (isometrisk) abduktion av M. deltoideus (lateral del)?",
     "correct": "Att hålla armarna rakt utåt sidorna i luften för att bibehålla balansen när man går på en lina.",
     "distractors": [
-      "Att pendla fritt med armarna fram och tillbaka under en snabb promenad."
+      "Att pendla fritt och avslappnat med armarna fram och tillbaka under en rask promenad i parken på morgonen."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1287,7 +1295,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk extension av M. deltoideus (posterior del)?",
     "correct": "Att föra armen bakåt bakom kroppen för att trä in handen i ärmen på en ryggsäck.",
     "distractors": [
-      "Att sträcka fram handen framför sig för att hälsa på någon."
+      "Att sträcka fram handen rakt framför kroppen för att hälsa på en ny kollega på kontoret."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1311,7 +1319,7 @@
     "prompt": "Vilken situation är ett exempel på excentrisk horisontell abduktion-kontroll av M. pectoralis major?",
     "correct": "Att kontrollerat bromsa armarnas rörelse när de pressas utåt sidorna av en tung dörr man försöker hålla emot.",
     "distractors": [
-      "Att slå ihop händerna snabbt och kraftfullt i en applåd rakt framför ansiktet upprepade gånger."
+      "Att slå ihop händerna snabbt och kraftfullt i en applåd rakt framför ansiktet upprepade gånger efter ett tal."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1323,7 +1331,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk adduktion och extension av M. latissimus dorsi?",
     "correct": "Att dra armen uppifrån och ned för att stänga en trög rullgardin eller dra sig upp i ett räcke.",
     "distractors": [
-      "Att sträcka armen rakt framför sig för att långsamt putsa en spegel i cirkulerande rörelser."
+      "Att sträcka armen rakt framför sig för att långsamt putsa en spegel i lugna cirkulerande rörelser."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1335,7 +1343,7 @@
     "prompt": "Vilken situation är ett exempel på excentrisk flexion-kontroll av M. latissimus dorsi?",
     "correct": "Att kontrollerat bromsa armens rörelse uppåt/framåt när en stor hund plötsligt drar i hundkopplet.",
     "distractors": [
-      "Att dra ett tungt roddtag in mot magen när man sitter i en roddbåt."
+      "Att dra ett tungt roddtag in mot magen när man sitter och ror en tung eka över en sjö en tidig morgon."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1347,7 +1355,7 @@
     "prompt": "Vilken situation är ett exempel på statisk (isometrisk) kontraktion av M. latissimus dorsi?",
     "correct": "Att hålla överarmen tätt och stelt pressad intill kroppen för att bära en tjock bok under armhålan.",
     "distractors": [
-      "Att svinga en tennisracket kraftfullt framåt och uppåt i en snabb serve mot motståndaren."
+      "Att svinga en tennisracket kraftfullt framåt och uppåt i en snabb serve mot motståndaren vid nätet."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1371,7 +1379,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk utåtrotation av M. infraspinatus?",
     "correct": "Att vrida överarmen utåt och sträcka sig efter säkerhetsbältet i bilen med samma sidas hand.",
     "distractors": [
-      "Att föra handen till motsatt axel för att klia sig på ryggen."
+      "Att föra handen bakom nacken till motsatt axel för att klia sig högt upp mellan skulderbladen på ryggen."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1383,7 +1391,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk inåtrotation av M. subscapularis?",
     "correct": "Att vrida armen inåt mot kroppen för att stoppa ner skjortan i byxorna på ländryggen.",
     "distractors": [
-      "Att sträcka armen spikrakt upp i luften för att plocka ett äpple."
+      "Att sträcka armen spikrakt upp i luften för att plocka ett äpple högt uppe i trädkronan."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1395,7 +1403,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk inåtrotation och adduktion av M. teres major?",
     "correct": "Att dra överarmen bakåt och inåt för att stoppa ner handen i sin egen bakficka.",
     "distractors": [
-      "Att lyfta armen rakt upp för att ställa en fråga under ett möte."
+      "Att lyfta armen rakt upp i luften för att ställa en fråga under ett långt möte."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1407,7 +1415,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk elevation av M. trapezius (övre del)?",
     "correct": "Att rycka upp båda axlarna mot öronen när man signalerar \"jag vet inte\" som svar på en fråga.",
     "distractors": [
-      "Att aktivt sänka axlarna djupt ner efter en stressig arbetsdag."
+      "Att aktivt sänka ner båda axlarna djupt mot golvet för att varva ner efter en stressig arbetsdag."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1419,7 +1427,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk retraktion av M. trapezius (mellersta del)?",
     "correct": "Att dra bak skulderbladen och pressa ihop dem för att rätta till sin militäriska hållning.",
     "distractors": [
-      "Att skjuta fram axlarna så att ryggen blir krum när man sitter vid datorn."
+      "Att skjuta fram båda axlarna så att ryggen blir krum när man sitter framåtlutad vid datorn."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1431,7 +1439,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk depression av M. trapezius (nedre del)?",
     "correct": "Att aktivt pressa ner skulderbladen när man tar spjärn med händerna mot ett bord för att sträcka på ryggen.",
     "distractors": [
-      "Att dra upp axlarna mot öronen för att skydda nacken mot en kall och kraftig vind."
+      "Att dra upp båda axlarna högt mot öronen för att skydda nacken mot en kall och kraftig vind ute på perrongen."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1443,7 +1451,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk protraktion av M. serratus anterior?",
     "correct": "Att skjuta fram axeln och skulderbladet för att nå lite längre när man dammsuger under en låg soffa.",
     "distractors": [
-      "Att dra bak axlarna och pressa ihop skulderbladen för att knäppa ett spänne bakom ryggen."
+      "Att dra bak axlarna och pressa ihop skulderbladen för att knäppa ett spänne högt upp bakom ryggen på en klänning."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1455,7 +1463,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk elevation (skulderblad) av M. levator scapulae?",
     "correct": "Att lyfta upp skulderbladet på den sida man bär en tung axelremsväska för att förhindra att den glider av.",
     "distractors": [
-      "Att låta axeln sjunka ner helt avslappnat när man lägger sig på en massagesäng."
+      "Att låta axeln och skulderbladet sjunka ner helt avslappnat när man lägger sig ner på en massagesäng hos naprapaten."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1467,7 +1475,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk retraktion och elevation av M. rhomboideus major?",
     "correct": "Att dra ihop skulderbladen bakåt och uppåt i slutfasen av att man ror en båt eller drar i ett rep.",
     "distractors": [
-      "Att pressa fram bröstkorgen maximalt utan att flytta på axlarna."
+      "Att pressa fram bröstkorgen maximalt framåt utan att flytta på vare sig axlar eller skulderblad alls."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1479,7 +1487,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk flexion av M. biceps brachii?",
     "correct": "Att böja armbågen för att föra en gaffel med mat eller ett äpple hela vägen upp till munnen.",
     "distractors": [
-      "Att sträcka ut armen fullständigt för att släppa en sten på marken."
+      "Att sträcka ut armen fullständigt nedåt för att släppa en sten ner på marken vid foten i trädgården."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1491,7 +1499,7 @@
     "prompt": "Vilken situation är ett exempel på excentrisk flexion/extension-kontroll av M. biceps brachii?",
     "correct": "Att långsamt och kontrollerat sträcka ut armbågen när man sänker ner en fylld, tung vattenkanna mot marken.",
     "distractors": [
-      "Att snabbt och explosivt kasta en handduk över axeln utan att ens titta åt det hållet."
+      "Att snabbt och explosivt kasta en handduk över axeln utan att ens titta åt det hållet på väg ut genom dörren."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1503,7 +1511,7 @@
     "prompt": "Vilken situation är ett exempel på statisk (isometrisk) flexion av M. biceps brachii?",
     "correct": "Att hålla en tung serveringsbricka helt stilla i luften med armbågen fixerad i en 90-graders vinkel.",
     "distractors": [
-      "Att skruva hårt och upprepat i en skruv med en manuell skruvmejsel i handen."
+      "Att skruva hårt och upprepat i en trög skruv med en manuell skruvmejsel i handen i garaget en lördag."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1515,7 +1523,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk flexion av M. brachialis?",
     "correct": "Att böja armbågsleden för att lyfta upp en tung kasse oavsett om handflatan är vänd uppåt eller nedåt.",
     "distractors": [
-      "Att sträcka ut armbågen för att putsa den övre delen av ett fönster."
+      "Att sträcka ut armbågen helt för att nå upp och putsa den allra översta delen av ett högt fönster inifrån."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1539,7 +1547,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk extension av M. triceps brachii?",
     "correct": "Att sträcka ut armbågen kraftfullt för att trycka upp sig från en djup fåtölj med hjälp av armstöden.",
     "distractors": [
-      "Att böja armen sakta för att klia sig i nacken eller bakom det ena örat."
+      "Att böja armen sakta uppåt för att klia sig i nacken eller bakom det ena örat med fingertopparna en varm dag."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1551,7 +1559,7 @@
     "prompt": "Vilken situation är ett exempel på excentrisk extension/flexion-kontroll av M. triceps brachii?",
     "correct": "Att bromsa kroppens tyngd med armarna när man långsamt lägger sig ner på mage på golvet.",
     "distractors": [
-      "Att skjuta ifrån en fullastad kundvagn framåt med rak, sträckt arm i en jämn rörelse."
+      "Att skjuta ifrån en fullastad kundvagn framåt med rak, sträckt arm i en jämn och stadig rörelse."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1563,7 +1571,7 @@
     "prompt": "Vilken situation är ett exempel på statisk (isometrisk) extension av M. triceps brachii?",
     "correct": "Att pressa handflatan stelt mot en stängd dörr för att blockera den och hålla den stängd mot en kraftig vindby.",
     "distractors": [
-      "Att pendla slappt och avslappnat med armen fram och tillbaka när man väntar på bussen."
+      "Att pendla slappt och avslappnat med armen fram och tillbaka när man står och väntar på bussen vid en hållplats."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1575,7 +1583,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk pronation av M. pronator teres?",
     "correct": "Att vrida underarmen så att handflatan vänds nedåt när du lägger handen platt på en datormus.",
     "distractors": [
-      "Att vrida handflatan uppåt mot taket för att titta på linjerna i sin handflata."
+      "Att vrida handflatan uppåt mot taket för att noga titta på linjerna i sin egen handflata i solljuset."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1587,7 +1595,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk supination av M. supinator?",
     "correct": "Att vrida underarmen så att handflatan vänds uppåt för att ta emot en utsträckt hand eller en godisbit.",
     "distractors": [
-      "Att vrida om en nyckel kraftfullt inåt för att låsa upp en trög ytterdörr."
+      "Att vrida om en nyckel kraftfullt inåt i låset för att låsa upp en trög ytterdörr en kall och mörk vintermorgon."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1599,7 +1607,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk pronation av M. pronator quadratus?",
     "correct": "Att utföra den sista vridningen av underarmen så att handryggen vänds uppåt när du häller vatten ur en full tillbringare.",
     "distractors": [
-      "Att vinkla handryggen tydligt bakåt mot underarmen i ett bestämt \"stopp-tecken\" mot mötande trafik."
+      "Att vinkla handryggen tydligt bakåt mot underarmen i ett bestämt stopp-tecken mot mötande trafik i en korsning nära skolan."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1611,7 +1619,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk palmarflexion av M. flexor carpi radialis?",
     "correct": "Att böja handleden framåt/nedåt för att skopa upp lite vatten ur ett handfat med handflatan.",
     "distractors": [
-      "Att vinkla handleden bakåt för att göra ett \"stopp\"-tecken med handen mot någon."
+      "Att vinkla handleden bakåt för att göra ett tydligt stopp-tecken med handen mot någon som närmar sig."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1623,7 +1631,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk dorsalflexion av M. extensor carpi radialis?",
     "correct": "Att vinkla handleden bakåt/uppåt för att vrida och gasa med handtaget på en motorcykel eller moped.",
     "distractors": [
-      "Att låta handen hänga helt slappt och livlöst neråt när man vilar underarmen på ett bord."
+      "Att låta handen hänga helt slappt och livlöst neråt när man vilar underarmen mot ett bord under en föreläsning."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1635,7 +1643,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk ulnardeviation och palmarflexion av M. flexor carpi ulnaris?",
     "correct": "Att vinkla handleden i sidled mot lillfingersidan när man slår till en boll med ett pingisracket i en backhand.",
     "distractors": [
-      "Att sträcka ut tummen maximalt åt sidan för att försöka lifta längs en motorväg."
+      "Att sträcka ut tummen maximalt åt sidan för att försöka lifta med en bil längs en motorväg i regnet utanför staden."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1647,7 +1655,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk dorsalflexion och ulnardeviation av M. extensor carpi ulnaris?",
     "correct": "Att stabilisera och vinkla handleden bakåt mot lillfingersidan precis i träffögonblicket när man hamrar.",
     "distractors": [
-      "Att böja in alla fingrar hårt i handflatan för att forma en knuten näve."
+      "Att böja in fingrarna hårt mot handflatan för att forma en stadig knuten näve inför ett slag mot en boxningssäck."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1659,7 +1667,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk fingerflexion av M. flexor digitorum superficialis?",
     "correct": "Att böja de mellersta fingerlederna runt handtaget på en hink för att lyfta och bära den.",
     "distractors": [
-      "Att spreta maximalt med alla fingrar för att torka nymålat nagellack."
+      "Att spreta maximalt med fingrarna för att låta nymålat nagellack torka ordentligt i luften."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1671,7 +1679,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk fingerflexion (distala leder) av M. flexor digitorum profundus?",
     "correct": "Att knipa fingertopparna djupt in i handen för att hålla ett stadigt grepp om ett smalt rep eller ett tunt verktyg.",
     "distractors": [
-      "Att slappna av helt i fingrarna så att en penna man håller i ramlar ner på golvet."
+      "Att slappna av helt i fingrarna så att en penna man håller i glider ur greppet och ramlar ner på golvet under mötet."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1683,7 +1691,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk fingerextension av M. extensor digitorum?",
     "correct": "Att öppna handen och sträcka ut alla fingrar helt för att släppa taget om en boll man vill kasta bort.",
     "distractors": [
-      "Att krama hårt om ett cykelstyre under en cykeltur på en gropig grusväg."
+      "Att krama hårt om ett cykelstyre med båda händerna under en lång cykeltur på en gropig grusväg i skogen."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1695,7 +1703,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk opponering av M. opponens pollicis?",
     "correct": "Att föra tummen mot lillfingrets topp för att kunna nypa tag om ett litet knappnålshuvud eller ett gem på golvet.",
     "distractors": [
-      "Att hålla handen helt platt och stel och klappa högljutt i händerna upprepade gånger."
+      "Att hålla handen helt platt och stel och klappa högljutt i händerna upprepade gånger efter föreställningens slut."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1707,7 +1715,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk abduktion (fingrar) av M. interossei dorsales?",
     "correct": "Att spreta brett med fingrarna för att lättare kunna pressa in handen i en tight skidhandske.",
     "distractors": [
-      "Att pressa ihop fingrarna tätt för att förhindra att schampo rinner ut mellan dem i duschen."
+      "Att pressa ihop fingrarna tätt för att förhindra att schampo rinner ut mellan dem i duschen på morgonen."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1719,7 +1727,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk adduktion (fingrar) av M. interossei palmares?",
     "correct": "Att pressa ihop fingrarna hårt för att hålla kvar och bära ett viktigt pappersark mellan pek- och långfingret.",
     "distractors": [
-      "Att göra en stor och kupad handflata för att försöka samla upp regnvatten utomhus."
+      "Att göra en stor och kupad handflata för att försöka samla upp regnvatten utomhus under ett kraftigt skyfall i trädgården."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1731,7 +1739,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk flexion (bål) av M. rectus abdominis?",
     "correct": "Att böja ryggraden framåt för att rulla upp från sängen och sätta sig upp på sängkanten på morgonen.",
     "distractors": [
-      "Att svanka djupt med ländryggen när man står upp och tittar på fyrverkerier på himlen."
+      "Att svanka djupt med ländryggen när man står upp och tittar på fyrverkerier högt uppe på natthimlen."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1743,7 +1751,7 @@
     "prompt": "Vilken situation är ett exempel på excentrisk extension-kontroll av M. rectus abdominis?",
     "correct": "Att långsamt och kontrollerat sänka ner överkroppen bakåt mot golvet när man lägger sig ner på rygg på en träningsmatta.",
     "distractors": [
-      "Att kasta sig snabbt och explosivt framåt i en kraftfull rörelse för att nicka en fotboll."
+      "Att kasta sig snabbt och explosivt framåt i en kraftfull rörelse för att nicka en fotboll i mål vid straffområdet i slutminuterna."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1755,7 +1763,7 @@
     "prompt": "Vilken situation är ett exempel på statisk (isometrisk) kontraktion av M. rectus abdominis?",
     "correct": "Att spänna magmusklerna hårt utan att röra ryggen för att hålla bålen stabil när man bär en tung flyttlåda.",
     "distractors": [
-      "Att slappna av helt i magen så att ryggens kotor hänger passivt i sina ledband."
+      "Att slappna av helt i magen så att ryggens kotor hänger passivt i sina ledband när man vilar på soffan efter jobbet."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1767,7 +1775,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk extension (bål) av M. erector spinae?",
     "correct": "Att räta ut överkroppen till stående position efter att ha böjt sig djupt ner för att plocka upp en tappad nyckel.",
     "distractors": [
-      "Att krumma ryggen maximalt framåt för att böja sig ner och titta på sina egna skosnören."
+      "Att krumma ryggen maximalt framåt för att böja sig ner och titta på sina egna skosnören nere i hallen vid ytterdörren."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1779,7 +1787,7 @@
     "prompt": "Vilken situation är ett exempel på excentrisk flexion-kontroll av M. erector spinae?",
     "correct": "Att bromsa kroppsvikten kontrollerat i ryggen när man böjer sig långsamt framåt för att titta ner i ett djupt brunnshål.",
     "distractors": [
-      "Att hoppa uppåt med helt rak, spänd och stel rygg direkt från ett ovanligt högt trappsteg utomhus."
+      "Att hoppa uppåt med helt rak, spänd och stel rygg direkt från ett ovanligt högt trappsteg utanför huset på vägen ut i regnet."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1791,7 +1799,7 @@
     "prompt": "Vilken situation är ett exempel på statisk (isometrisk) kontraktion av M. erector spinae?",
     "correct": "Att hålla ryggen stabil, rak och upprätt under den halvtimme man står stilla vid diskbänken och diskar efter middagen.",
     "distractors": [
-      "Att ligga helt passivt och avslappnad på mage på en mjuk madrass i sängen en hel timme."
+      "Att ligga helt passivt och avslappnad på mage på en mjuk madrass i sängen under en hel timme på eftermiddagen efter jobbet."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1803,7 +1811,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk rotation (bål) av M. obliquus externus abdominis?",
     "correct": "Att vrida överkroppen kraftigt åt sidan för att sträcka sig efter bilbältet som hänger bakom vänster axel.",
     "distractors": [
-      "Att böja sig rakt framåt med rak rygg för att försöka nudda sina tår med fingrarna."
+      "Att böja sig rakt framåt med rak rygg för att försöka nudda sina tår med fingertopparna i en stretchövning."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1815,7 +1823,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk lateralflexion av M. obliquus internus abdominis?",
     "correct": "Att böja överkroppen rakt åt sidan för att lyfta upp en tung hink eller matkasse som står precis bredvid din fot.",
     "distractors": [
-      "Att sträcka på ryggen maximalt så att man blir så lång som möjligt i en mätning."
+      "Att sträcka på ryggen maximalt så att man blir så lång som möjligt vid en mätning hos skolsköterskan på vårterminen."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1827,7 +1835,7 @@
     "prompt": "Vilken situation är ett exempel på statisk (isometrisk) stabilisering av M. transversus abdominis?",
     "correct": "Att aktivera de djupa magmusklerna för att öka buktrycket och skydda ryggen precis innan ett tungt lyft.",
     "distractors": [
-      "Att pressa ut magen maximalt och slappna av helt efter att ha ätit en mycket stor måltid."
+      "Att pressa ut magen maximalt och slappna av helt efter att ha ätit en mycket stor middag på restaurang i går."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1839,7 +1847,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk lateralflexion av M. quadratus lumborum?",
     "correct": "Att lyfta och dra upp bäckenet på ena sidan när man tar ett högt sidosteg upp på en trottoarkant.",
     "distractors": [
-      "Att böja nacken sakta framåt för att läsa en bok som ligger stilla i knät."
+      "Att böja nacken sakta framåt för att läsa en bok som ligger alldeles stilla i knät borta i soffan."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1851,7 +1859,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk rotation (motsatt sida) av M. sternocleidomastoideus?",
     "correct": "Att vrida huvudet åt vänster för att titta på en person som ropar på dig från den sidan.",
     "distractors": [
-      "Att titta rakt upp i taket utan att vrida på huvudet överhuvudtaget."
+      "Att titta rakt upp i taket utan att vrida på huvudet överhuvudtaget under tiden man lyssnar."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1863,7 +1871,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk flexion (bilateral) av M. sternocleidomastoideus?",
     "correct": "Att lyfta huvudet från kudden när man ligger på rygg för att se vad som händer vid fotänden av sängen.",
     "distractors": [
-      "Att lägga örat tätt mot axeln för att hålla fast en telefon utan att använda händerna."
+      "Att lägga örat tätt mot axeln för att hålla fast en telefon utan att använda någon av händerna under samtalet."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1875,7 +1883,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk extension av M. splenius capitis?",
     "correct": "Att böja huvudet bakåt för att titta på ett flygplan som flyger högt uppe på himlen.",
     "distractors": [
-      "Att pressa in hakan mot bröstet för att titta på en halskedja."
+      "Att pressa in hakan hårt mot bröstet för att titta på en halskedja runt halsen i spegeln."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1887,7 +1895,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk extension (nacke) av M. trapezius (övre del)?",
     "correct": "Att sträcka nacken bakåt för att underlätta när man ska droppa ögondroppar i ögonen.",
     "distractors": [
-      "Att vrida ansiktet ner mot golvet för att leta efter något man tappat."
+      "Att vrida ansiktet ner mot golvet för att leta efter något man tappat under bordet i köket."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1899,7 +1907,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk flexion av M. iliopsoas?",
     "correct": "Att lyfta benet högt för att ta ett stort kliv upp på en stege eller kliva över ett högt hinder.",
     "distractors": [
-      "Att sträcka benet bakut bakom kroppen för att utföra en bakåtspark."
+      "Att sträcka benet bakut bakom kroppen för att utföra en kraftfull bakåtspark i luften under uppvärmningen."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1911,7 +1919,7 @@
     "prompt": "Vilken situation är ett exempel på excentrisk extension-kontroll av M. iliopsoas?",
     "correct": "Att kontrollerat bromsa benets rörelse bakåt precis innan foten sätts i marken i slutet av ett löpsteg.",
     "distractors": [
-      "Att dra knät snabbt och explosivt upp mot magen i ett kraftfullt sparkrörelse."
+      "Att dra knät snabbt och explosivt upp mot magen i en kraftfull sparkrörelse mot en boll under träningen i hallen."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1923,7 +1931,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk extension av M. gluteus maximus?",
     "correct": "Att trycka ifrån kraftfullt med benet för att gå uppför en brant backe eller springa uppför en trappa.",
     "distractors": [
-      "Att sitta helt stilla och avslappnad med benen korslagda på en mjuk kontorsstol."
+      "Att sitta helt stilla och avslappnad med benen korslagda på en mjuk kontorsstol vid skrivbordet hela dagen."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1935,7 +1943,7 @@
     "prompt": "Vilken situation är ett exempel på excentrisk flexion-kontroll av M. gluteus maximus?",
     "correct": "Att bromsa kroppens tyngd kontrollerat med sätesmuskeln när man sänker sig ner för att sätta sig på en låg stol.",
     "distractors": [
-      "Att sparka ut benet rakt framåt och kraftfullt för att träffa en fotboll på volley."
+      "Att sparka ut benet rakt framåt och kraftfullt för att träffa en fotboll på volley under matchen på lördagsförmiddagen."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1947,7 +1955,7 @@
     "prompt": "Vilken situation är ett exempel på statisk (isometrisk) kontraktion av M. gluteus maximus?",
     "correct": "Att spänna sätet hårt för att hålla höften helt sträckt och stabil när man står upprätt i en långsam matkö.",
     "distractors": [
-      "Att ligga på sidan i soffan och slappna av helt med benen lätt böjda under en film."
+      "Att ligga på sidan i soffan och slappna av helt med benen lätt böjda under en lång film på tv:n en fredagskväll."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1959,7 +1967,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk abduktion av M. gluteus medius?",
     "correct": "Att föra benet rakt ut åt sidan för att kliva över ett lågt staket eller ta ett sidosteg.",
     "distractors": [
-      "Att korsa det ena benet över det andra när man sätter sig ner på en stol."
+      "Att korsa det ena benet över det andra när man sätter sig ner på en stol vid det runda köksbordet."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1971,7 +1979,7 @@
     "prompt": "Vilken situation är ett exempel på statisk (isometrisk) kontraktion (stående) av M. gluteus medius?",
     "correct": "Att hålla bäckenet stabilt och vågrätt på det ben man står på när man balanserar på ett ben.",
     "distractors": [
-      "Att låta höften kollapsa utåt sidan så att bäckenet tippar nedåt på den fria sidan."
+      "Att låta höften kollapsa utåt sidan så att bäckenet tippar tydligt nedåt på den fria sidan vid varje steg."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1983,7 +1991,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk inåtrotation av M. gluteus minimus?",
     "correct": "Att vrida hela benet inåt så att tårna pekar mot varandra när man står upp.",
     "distractors": [
-      "Att vrida ut foten så att tårna pekar rakt utåt sidorna som en pingvin."
+      "Att vrida ut foten så att tårna pekar rakt utåt sidorna precis som en pingvin."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -1995,7 +2003,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk adduktion av M. adductor longus?",
     "correct": "Att pressa ihop låren hårt för att hålla fast en kudde eller en boll mellan knäna.",
     "distractors": [
-      "Att spreta brett med benen när man sätter sig tillrätta i en rymlig fåtölj."
+      "Att spreta brett med benen när man sätter sig tillrätta i en rymlig och mjuk fåtölj."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -2007,7 +2015,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk adduktion av M. adductor magnus?",
     "correct": "Att dra tillbaka det yttre benet till mitten efter att ha tagit ett stort, brett kliv ut åt sidan.",
     "distractors": [
-      "Att lyfta benet högt upp mot taket när man ligger platt på rygg."
+      "Att lyfta benet högt upp mot taket när man ligger platt på rygg på en träningsmatta inne i gymmet."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -2019,7 +2027,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk flexion och abduktion av M. tensor fasciae latae?",
     "correct": "Att lyfta benet snett framåt och utåt när du kliver in genom dörren på en bil.",
     "distractors": [
-      "Att sträcka benet rakt bakåt bakom kroppen för att sträcka ut höftböjaren."
+      "Att sträcka benet rakt bakåt bakom kroppen för att stretcha ut höftböjaren ordentligt."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -2031,7 +2039,7 @@
     "prompt": "Vilken situation är ett exempel på koncentrisk flexion, abduktion och utåtrotation av M. sartorius?",
     "correct": "Att lyfta benet och vrida det så att du kan lägga upp din vrist på det andra knät.",
     "distractors": [
-      "Att sträcka ut benet helt spikrakt rakt framför sig utan någon böjning alls."
+      "Att sträcka ut benet helt spikrakt rakt framför sig utan någon böjning alls i knät."
     ],
     "topic": "muskler_rörelse_applicering",
     "difficulty": "Normal",
@@ -3368,10 +3376,10 @@
   {
     "id": "q281",
     "type": "tf",
-    "prompt": "Rhomboidei lyfter och inåtroterar scapula",
-    "correct": "Sant",
+    "prompt": "Rhomboidei sänker och utåtroterar scapula",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_funktion",
     "difficulty": "Normal",
@@ -3416,10 +3424,10 @@
   {
     "id": "q285",
     "type": "tf",
-    "prompt": "Transversus abdominis fungerar som andningsmuskel",
-    "correct": "Sant",
+    "prompt": "Transversus abdominis fungerar som huvudsaklig inandningsmuskel",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "muskler_funktion",
     "difficulty": "Normal",

@@ -28,10 +28,10 @@
   {
     "id": "q3",
     "type": "tf",
-    "prompt": "Diagonalt, transversellt och sfäriskt volargrepp räknas som kraftgrepp.",
-    "correct": "Sant",
+    "prompt": "Diagonalt, transversellt och sfäriskt volargrepp räknas som precisionsgrepp.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "grepp_typer",
     "difficulty": "Normal",
@@ -68,10 +68,10 @@
   {
     "id": "q6",
     "type": "tf",
-    "prompt": "I nyckelgreppet är pekfingret böjt och tummen ligger an mot dess radiala sida.",
-    "correct": "Sant",
+    "prompt": "I nyckelgreppet är pekfingret sträckt och tummen ligger an mot dess ulnara sida.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "grepp_typer",
     "difficulty": "Normal",
@@ -164,10 +164,10 @@
   {
     "id": "q13",
     "type": "tf",
-    "prompt": "Chuckgrepp är ett precisionsgrepp.",
-    "correct": "Sant",
+    "prompt": "Chuckgrepp är ett kraftgrepp.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "grepp_typer",
     "difficulty": "Normal",
@@ -176,10 +176,10 @@
   {
     "id": "q14",
     "type": "tf",
-    "prompt": "Sfäriskt volargrepp är ett kraftgrepp.",
-    "correct": "Sant",
+    "prompt": "Sfäriskt volargrepp är ett precisionsgrepp.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "grepp_typer",
     "difficulty": "Normal",
@@ -228,10 +228,10 @@
   {
     "id": "q18",
     "type": "tf",
-    "prompt": "Precisionsgrepp används för att hantera små föremål med stor noggrannhet.",
-    "correct": "Sant",
+    "prompt": "Precisionsgrepp används för att utveckla maximal kraft mot stora föremål.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "grepp_typer",
     "difficulty": "Normal",
@@ -306,10 +306,10 @@
   {
     "id": "q24",
     "type": "tf",
-    "prompt": "Fingertoppsgreppet ger stor precision men förhållandevis liten kraft.",
-    "correct": "Sant",
+    "prompt": "Fingertoppsgreppet ger stor kraft men förhållandevis liten precision.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "grepp_typer",
     "difficulty": "Normal",
@@ -442,10 +442,10 @@
   {
     "id": "q34",
     "type": "tf",
-    "prompt": "Att hålla ett spelkort mellan tummen och pekfingrets sida är ett nyckelgrepp.",
-    "correct": "Sant",
+    "prompt": "Att hålla ett spelkort mellan tummen och pekfingrets sida är ett chuckgrepp.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "grepp_exempel",
     "difficulty": "Normal",
@@ -576,10 +576,10 @@
   {
     "id": "q45",
     "type": "tf",
-    "prompt": "Att hålla i ett cykelstyre är ett exempel på transversellt volargrepp.",
-    "correct": "Sant",
+    "prompt": "Att hålla i ett cykelstyre är ett exempel på sfäriskt volargrepp.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "grepp_exempel",
     "difficulty": "Normal",
@@ -616,10 +616,10 @@
   {
     "id": "q48",
     "type": "tf",
-    "prompt": "Att hålla en boll i en hand med fingrarna spridda runt den är ett sfäriskt volargrepp.",
-    "correct": "Sant",
+    "prompt": "Att hålla en boll i en hand med fingrarna spridda runt den är ett diagonalt volargrepp.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "grepp_exempel",
     "difficulty": "Normal",
@@ -668,10 +668,10 @@
   {
     "id": "q52",
     "type": "tf",
-    "prompt": "M. adductor pollicis är kraftigt aktiv i nyckelgreppet.",
-    "correct": "Sant",
+    "prompt": "M. abductor digiti minimi är kraftigt aktiv i nyckelgreppet.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "grepp_muskler",
     "difficulty": "Normal",
@@ -764,10 +764,10 @@
   {
     "id": "q59",
     "type": "tf",
-    "prompt": "De långa fingerflexorerna (m. flexor digitorum superficialis och profundus) ger huvudkraften i kraftgreppen.",
-    "correct": "Sant",
+    "prompt": "De långa fingerextensorerna (m. extensor digitorum) ger huvudkraften i kraftgreppen.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "grepp_muskler",
     "difficulty": "Normal",
@@ -790,10 +790,10 @@
   {
     "id": "q61",
     "type": "tf",
-    "prompt": "Tummens thenarmuskler (opponens pollicis, abductor pollicis brevis och flexor pollicis brevis) är viktiga för precisionsgreppen.",
-    "correct": "Sant",
+    "prompt": "Tummens thenarmuskler ligger i handflatans ulnara del vid lillfingret.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "grepp_muskler",
     "difficulty": "Normal",
@@ -964,10 +964,10 @@
   {
     "id": "q74",
     "type": "tf",
-    "prompt": "Utan rörlighet i tummens CMC I-led försvåras alla grepp där tummen möter fingrarna.",
-    "correct": "Sant",
+    "prompt": "Tummens karpometakarpalled (CMC I) är en gångjärnsled.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "grepp_leder",
     "difficulty": "Normal",
@@ -1032,10 +1032,10 @@
   {
     "id": "q79",
     "type": "tf",
-    "prompt": "Tummen har en interfalangealled (IP-led) medan de övriga fingrarna har två (PIP och DIP).",
-    "correct": "Sant",
+    "prompt": "Tummen har två interfalangealleder (PIP och DIP) medan de övriga fingrarna har en.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "grepp_leder",
     "difficulty": "Normal",
@@ -1136,10 +1136,10 @@
   {
     "id": "q87",
     "type": "tf",
-    "prompt": "Skada på n. ulnaris försvagar handens inre muskler (mm. interossei) och därmed kraftgreppet.",
-    "correct": "Sant",
+    "prompt": "Skada på n. medianus försvagar handens inre muskler (mm. interossei) och därmed kraftgreppet.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "grepp_skador",
     "difficulty": "Normal",
@@ -1176,10 +1176,10 @@
   {
     "id": "q90",
     "type": "tf",
-    "prompt": "Nedsatt kraft i de långa fingerflexorerna försämrar kraftgreppen mest.",
-    "correct": "Sant",
+    "prompt": "Nedsatt kraft i de långa fingerextensorerna försämrar kraftgreppen mest.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "grepp_skador",
     "difficulty": "Normal",
@@ -1254,10 +1254,10 @@
   {
     "id": "q96",
     "type": "tf",
-    "prompt": "M. flexor pollicis longus böjer tummens IP-led och behövs när man nyper hårt med tumtoppen.",
-    "correct": "Sant",
+    "prompt": "M. flexor pollicis longus böjer tummens MCP-led men saknar fäste på ändfalangen.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "grepp_muskler",
     "difficulty": "Normal",
@@ -1280,10 +1280,10 @@
   {
     "id": "q98",
     "type": "tf",
-    "prompt": "I kraftgreppen böjs fingrarna i alla tre lederna (MCP, PIP och DIP) runt föremålet.",
-    "correct": "Sant",
+    "prompt": "I kraftgreppen hålls fingrarna sträckta i PIP- och DIP-lederna runt föremålet.",
+    "correct": "Falskt",
     "distractors": [
-      "Falskt"
+      "Sant"
     ],
     "topic": "grepp_leder",
     "difficulty": "Normal",

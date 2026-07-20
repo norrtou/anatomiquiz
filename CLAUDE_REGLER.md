@@ -108,6 +108,38 @@ En fråga utan relevanta alternativ är värdelös och förstör quizet. Inga fi
 - Max 2 svarsalternativ: "Sant" och "Falskt"
 - Kan användas sparsamt för vissa faktapåstående
 
+**⚠️ TF-SKEVHET ÄR EN FORMTELL – BALANSERA SANT/FALSKT PER ÄMNE (hittat 2026-07-20 i arbetsterapeut).**
+Skrivs TF-frågor genom att formulera sanna påståenden blir nästan alla svar "Sant". Då kan en
+student svara "Sant" rakt igenom och få nära full poäng utan ett uns ämneskunskap – exakt samma
+sorts läcka som längdbias, fast på svarsfördelningen i stället för på alternativens form.
+
+- **Verkligt utfall:** arbetsterapeutens 946 TF-frågor låg på **84 % "Sant"**; `muskler_funktion`
+  44/44, `handen_samling_fakta` 38/38, `osteologi_verify` 20/20, `grepp` 97 %, `handen` 94 %.
+  321 prompts fick skrivas om i efterhand.
+- **Mål: 40–60 % "Sant" i varje ämne** med ≥8 TF-frågor. Kontrollera per ämne, inte per fil –
+  en balanserad fil kan bestå av ett 100 %-ämne och ett 0 %-ämne.
+- **Så görs en fråga falsk (§2.12-mönstret): byt ut EN sak mot ett konkret fel** – fel nerv
+  (`M. opponens pollicis innerveras av N. ulnaris`), fel rad (`Os hamatum är ett tarsalben`),
+  fel riktning (`Distal betyder närmast bålen`), fel tal (`Det finns 8 halskotor`).
+  **Sätt ALDRIG bara in "inte"** i den sanna meningen – det ger en tillgjord mening som avslöjar
+  sig själv, och det testar ingen kunskap.
+- **⚠️ Kollisionsfällan:** en vänd fråga blir lätt ordagrant identisk med en *redan befintlig*
+  falsk fråga i samma ämne → blockerande dubblettfel. Det hände i fyra frågor 2026-07-20
+  (`nervsystemet_q27`, `nervsystemet_q45`, `riktningar q136`, `blodomloppet_q13`). Läs ämnets
+  befintliga Falskt-frågor innan du vänder, och kör validatorn efter patchen.
+- **Test:** räkna andelen `correct == "Sant"` per `topic` över alla TF-frågor i filen.
+  Validatorn kollar det inte – gör mätningen själv.
+
+**⚠️ EN TF-FRÅGA MÅSTE HA `"type": "tf"` – annars dras den aldrig (hittat 2026-07-20).**
+62 frågor (59 i `tentaplugg.json`, 3 i `handen.json`) hade Sant/Falskt som enda alternativ men
+stod som `"type": "mc"`. `js/app.js` bygger urvalet av två pooler: `tfPool` kräver `type === 'tf'`
+och `mcPool` kräver `type === 'mc'` **med 3–5 alternativ**. En tvåalternativsfråga märkt `mc`
+hamnar i ingendera och plockas bara upp av nödfallssamplingen när poolerna inte räcker – i
+praktiken drogs de aldrig, och de kringgick TF-takets 10 %-gräns. De förorenade dessutom
+längdbias-mätningen ("Falskt" är 2 tecken längre än "Sant" → falsk 100 %-varning).
+- Validatorn flaggar detta som **fel** sedan 2026-07-20.
+- Kvarstår i `medicinsk_sekreterare.json` (3 frågor) – ej åtgärdat, annan utbildning.
+
 ### 2.5 Namnfrågor
 - **Alternativ måste vara:** Andra namn i samma kategori
 - **EXEMPEL KORREKT:**
@@ -182,7 +214,15 @@ En fråga utan relevanta alternativ är värdelös och förstör quizet. Inga fi
 - **⚠️ Att RÄTTA en tell skapar lätt en NY tell – tre återkommande fällor (fysio-svepet 2026-07-16):**
   1. **Negations-svansen.** När du stryker ett absolut-ord genom att lägga till en kontrast som slutar med rätt svarets nyckelord ("…, inte ligament eller kapsel", "…, utan bestäms av kostens sammansättning") blir distraktorn *självutpekande* i stället (validatorn flaggar `,\s*(inte|utan)\s+<rätt-svarets ord>$`). Fix: avsluta INTE distraktorn med ", inte/utan <det rätt svaret handlar om>". Skriv om till ett fristående felpåstående.
   2. **Omvänd längdbias vid förkortning.** När du kortar bort utfyllnad ur distraktorerna blir `correct` plötsligt längst i för många frågor (fysio-träning gick till 49 % längdbias). Fix: efter att ha kortat distraktorer, **mät längdbias per ämne igen** och förläng vid behov den längsta distraktorn i några frågor med genuint innehåll (inte fyllnadsord) tills andelen ligger < 40 %.
-  3. **Nytt absolut-ord i omskrivningen.** "uteslutande" och "samtliga" glöms lätt bort som absolut-ord (de ÄR med i validatorns lista). En omskrivning som "…för samtliga deltagare" återinför tellen. Fix: läs listan i §2.13 och kör validatorn efter patchen.
+  3. **Bruten symmetri i antingen/eller-frågor (hittat 2026-07-20).** `muskler` q41–q44 löd
+     "Gör Triceps brachii flexion eller extension?" med alternativen `Extension`/`Flexion` –
+     en symmetrisk fråga där båda kandidaterna nämns, alltså tillåten. Men `Extension` är alltid
+     2 tecken längre → längdbias i hela ämnet. När jag förlängde distraktorn till
+     "Flexion i armbågsleden" försvann längdbiasen och frågan blev **självbesvarande** i stället
+     (bara `correct` ekas nu ordagrant i prompten). Fix: bygg om frågan till öppen form –
+     "Vilken rörelse i armbågsleden utför Triceps brachii?" med tre jämnlånga alternativ.
+     Lärdom: en tell i en tvåalternativsfråga går sällan att fila bort, frågan måste byggas om.
+  4. **Nytt absolut-ord i omskrivningen.** "uteslutande" och "samtliga" glöms lätt bort som absolut-ord (de ÄR med i validatorns lista). En omskrivning som "…för samtliga deltagare" återinför tellen. Fix: läs listan i §2.13 och kör validatorn efter patchen.
 - **⚠️ Kvasi-absoluta ord: "bara" och "alla" – samma tell, men fångas ALDRIG av validatorn (hittat 2026-07-20).**
   Validatorns ordlista är avsiktligt exakt (endast/enbart/alltid/aldrig/inga/ingen/inget/samtliga/uteslutande).
   Distraktorer som säger **"Bara hjässbenet"**, **"Bara två av regionerna"**, **"Alla revben lika mycket"**,
@@ -507,6 +547,7 @@ Före varje session/commit, kontrollera:
 - [ ] ALLA latinska termer är korrekt Swedish Medical Latin
 - [ ] INGA engelska medicinska termer förekommer
 - [ ] ALLA MC-frågor har 2-4 alternativ (1 korrekt + 1-3 distraktorer efter behov)
+- [ ] TF-frågorna ligger på 40–60 % "Sant" i varje ämne med ≥8 TF-frågor (§2.4)
 - [ ] INGA dubbletter mellan "correct" och "distractors"
 - [ ] INGA filler-alternativ ("Annat", "Ingen av dessa", osv)
 - [ ] ALLA alternativ är semantiskt relevanta för frågan
@@ -595,6 +636,18 @@ När nya ämnen läggs till:
 **DESSA REGLER ÄR BINDANDE FÖR ALL ARBETE PÅ ANATOMIQUIZ.**
 
 **Senast uppdaterad:** 2026-07-20
+**Version:** 1.8 – kodifierade två feltyper ur arbetsterapeut-svepets punkt 3b (2026-07-20):
+- §2.4 TF-fråga felmärkt `"type": "mc"` – faller ur både `tfPool` och `mcPool` i `js/app.js`
+  och dras därför i praktiken aldrig. 62 verkliga fall. **Nu ett fel i `validate_quiz.py`**
+- §2.9 fälla 3: att rätta längdbias i en symmetrisk antingen/eller-fråga bryter symmetrin och
+  gör frågan självbesvarande i stället (`muskler` q41–q44) – bygg om frågan till öppen form
+
+**Version:** 1.7 – kodifierade TF-skevheten ur arbetsterapeut-svepets punkt 2 (2026-07-20):
+- §2.4 TF-balans: 84 % "Sant" i arbetsterapeuten gjorde att man kunde svara "Sant" rakt igenom.
+  Mål 40–60 % per ämne, vändningsmönstret (byt EN sak, aldrig bara "inte") och kollisionsfällan
+  mot befintliga Falskt-frågor. Validatorn kollar det inte – mät själv
+- §8 checklistan utökad med TF-balansen
+
 **Version:** 1.6 – kodifierade tre feltyper ur arbetsterapeut-svepet (2026-07-20):
 - §1.1 påhittat `os`-prefix på bennamn som inte bär det ("os femur", "Os mandibula") – med lista över
   vilka namn som faktiskt tar `os`, och grep-testet. Ger dessutom en språkparitets-tell i §2.9

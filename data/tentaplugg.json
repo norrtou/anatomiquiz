@@ -235,8 +235,8 @@
   },
   {
     "id": "studier_q19",
-    "type": "mc",
-    "prompt": "Sant eller falskt: Vid fysisk inaktivitet ökar hjärtfrekvensen i vila.",
+    "type": "tf",
+    "prompt": "Vid fysisk inaktivitet ökar hjärtfrekvensen i vila.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -246,8 +246,8 @@
   },
   {
     "id": "studier_q20",
-    "type": "mc",
-    "prompt": "Sant eller falskt: Vid fysisk inaktivitet ökar hjärtfrekvensen vid måttligt arbete.",
+    "type": "tf",
+    "prompt": "Vid fysisk inaktivitet ökar hjärtfrekvensen vid måttligt arbete.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -257,8 +257,8 @@
   },
   {
     "id": "studier_q21",
-    "type": "mc",
-    "prompt": "Sant eller falskt: Vid fysisk inaktivitet ökar blodtrycket i vila.",
+    "type": "tf",
+    "prompt": "Vid fysisk inaktivitet ökar blodtrycket i vila.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -268,8 +268,8 @@
   },
   {
     "id": "studier_q22",
-    "type": "mc",
-    "prompt": "Sant eller falskt: Vid fysisk inaktivitet ökar förmågan att bränna fett och kolhydrater.",
+    "type": "tf",
+    "prompt": "Vid fysisk inaktivitet ökar förmågan att bränna fett och kolhydrater.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
@@ -532,7 +532,7 @@
     "distractors": [
       "Abduktion",
       "Adduktion",
-      "Flexion"
+      "Lateralflexion"
     ],
     "topic": "studier_hand",
     "difficulty": "Normal"
@@ -647,7 +647,7 @@
     "distractors": [
       "Njuren",
       "Levern",
-      "Mjälten"
+      "Matstrupen"
     ],
     "topic": "studier_fysiologi",
     "difficulty": "Normal"
@@ -659,8 +659,8 @@
     "correct": "Sköldkörteln",
     "distractors": [
       "Gallblåsan",
-      "Lungorna",
-      "Urinblåsan"
+      "Urinblåsan",
+      "Spottkörtlarna"
     ],
     "topic": "studier_fysiologi",
     "difficulty": "Normal"
@@ -684,8 +684,8 @@
     "prompt": "Vilket organ (på svenska) har en central roll för reglering av blodets glukosnivå?",
     "correct": "Bukspottkörteln",
     "distractors": [
-      "Njuren",
-      "Levern",
+      "Njurbarken",
+      "Levern och gallblåsan",
       "Sköldkörteln"
     ],
     "topic": "studier_fysiologi",
@@ -1081,8 +1081,8 @@
   },
   {
     "id": "studier_q85",
-    "type": "mc",
-    "prompt": "Sant eller falskt: M. triceps brachii är aktiv vid uppresning från en stol (från sittande till fullt stående).",
+    "type": "tf",
+    "prompt": "M. triceps brachii är aktiv vid uppresning från en stol (från sittande till fullt stående).",
     "correct": "Falskt",
     "distractors": [
       "Sant"
@@ -1092,8 +1092,8 @@
   },
   {
     "id": "studier_q86",
-    "type": "mc",
-    "prompt": "Sant eller falskt: M. gluteus maximus är aktiv vid uppresning från en stol.",
+    "type": "tf",
+    "prompt": "M. gluteus maximus är aktiv vid uppresning från en stol.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1103,8 +1103,8 @@
   },
   {
     "id": "studier_q87",
-    "type": "mc",
-    "prompt": "Sant eller falskt: M. quadriceps (femoris) är aktiv vid uppresning från en stol.",
+    "type": "tf",
+    "prompt": "M. quadriceps (femoris) är aktiv vid uppresning från en stol.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1114,8 +1114,8 @@
   },
   {
     "id": "studier_q88",
-    "type": "mc",
-    "prompt": "Sant eller falskt: M. erector spinae är aktiv vid uppresning från en stol.",
+    "type": "tf",
+    "prompt": "M. erector spinae är aktiv vid uppresning från en stol.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1177,8 +1177,8 @@
   },
   {
     "id": "studier_q93",
-    "type": "mc",
-    "prompt": "Sant eller falskt: Det autonoma nervsystemet kontrollerar icke-viljestyrda funktioner.",
+    "type": "tf",
+    "prompt": "Det autonoma nervsystemet kontrollerar icke-viljestyrda funktioner.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1188,8 +1188,8 @@
   },
   {
     "id": "studier_q94",
-    "type": "mc",
-    "prompt": "Sant eller falskt: Det sympatiska nervsystemet minskar hjärtfrekvensen.",
+    "type": "tf",
+    "prompt": "Det sympatiska nervsystemet minskar hjärtfrekvensen.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
@@ -1199,8 +1199,8 @@
   },
   {
     "id": "studier_q95",
-    "type": "mc",
-    "prompt": "Sant eller falskt: Det parasympatiska nervsystemet förbereder kroppen för flykt vid fara.",
+    "type": "tf",
+    "prompt": "Det parasympatiska nervsystemet förbereder kroppen för flykt vid fara.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
@@ -1210,8 +1210,8 @@
   },
   {
     "id": "studier_q96",
-    "type": "mc",
-    "prompt": "Sant eller falskt: Stresshormoner som kortisol, noradrenalin och adrenalin skickas ut i blodet via det sympatiska systemet.",
+    "type": "tf",
+    "prompt": "Stresshormoner som kortisol, noradrenalin och adrenalin skickas ut i blodet via det sympatiska systemet.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1260,8 +1260,8 @@
   },
   {
     "id": "studier_q100",
-    "type": "mc",
-    "prompt": "Sant eller falskt: Fysisk inaktivitet kan leda till inflammation i kroppen.",
+    "type": "tf",
+    "prompt": "Fysisk inaktivitet kan leda till inflammation i kroppen.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1271,8 +1271,8 @@
   },
   {
     "id": "studier_q101",
-    "type": "mc",
-    "prompt": "Sant eller falskt: Fysisk inaktivitet leder till metabol obalans.",
+    "type": "tf",
+    "prompt": "Fysisk inaktivitet leder till metabol obalans.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1282,8 +1282,8 @@
   },
   {
     "id": "studier_q102",
-    "type": "mc",
-    "prompt": "Sant eller falskt: Fysisk inaktivitet leder till ökad mängd myokiner från musklerna.",
+    "type": "tf",
+    "prompt": "Fysisk inaktivitet leder till ökad mängd myokiner från musklerna.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
@@ -1293,8 +1293,8 @@
   },
   {
     "id": "studier_q103",
-    "type": "mc",
-    "prompt": "Sant eller falskt: Fysisk inaktivitet leder till ökad uthållighet.",
+    "type": "tf",
+    "prompt": "Fysisk inaktivitet leder till ökad uthållighet.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
@@ -1627,8 +1627,8 @@
   },
   {
     "id": "studier_q129",
-    "type": "mc",
-    "prompt": "Sant eller falskt: Synen är väl utvecklad hos nyfödda barn.",
+    "type": "tf",
+    "prompt": "Synen är väl utvecklad hos nyfödda barn.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
@@ -1638,8 +1638,8 @@
   },
   {
     "id": "studier_q130",
-    "type": "mc",
-    "prompt": "Sant eller falskt: Smaksinnet är väl utvecklat hos nyfödda barn.",
+    "type": "tf",
+    "prompt": "Smaksinnet är väl utvecklat hos nyfödda barn.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1649,8 +1649,8 @@
   },
   {
     "id": "studier_q131",
-    "type": "mc",
-    "prompt": "Sant eller falskt: Luktsinnet är väl utvecklat hos nyfödda barn.",
+    "type": "tf",
+    "prompt": "Luktsinnet är väl utvecklat hos nyfödda barn.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1660,8 +1660,8 @@
   },
   {
     "id": "studier_q132",
-    "type": "mc",
-    "prompt": "Sant eller falskt: Känselsinnet (taktilt sinne) är väl utvecklat hos nyfödda barn.",
+    "type": "tf",
+    "prompt": "Känselsinnet (taktilt sinne) är väl utvecklat hos nyfödda barn.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -1675,9 +1675,9 @@
     "prompt": "Vilket av följande är en ergonomisk aspekt att kontrollera vid ett arbetsplatsbesök?",
     "correct": "Sitthöjd och stolens anpassning till individens kroppsmått",
     "distractors": [
-      "Rummets arkitektoniska utformning",
-      "Antal arbetskollegor i lokalen",
-      "Datorns processorkraft och hastighet"
+      "Rummets arkitektoniska utformning och takhöjden i lokalen",
+      "Antalet arbetskollegor som delar lokalen under arbetsdagen",
+      "Datorns processorkraft och hastighet vid tunga program"
     ],
     "topic": "studier_ergonomi",
     "difficulty": "Normal"
@@ -2124,8 +2124,8 @@
   },
   {
     "id": "studier_q168",
-    "type": "mc",
-    "prompt": "Sant eller falskt: Myeliniserade nervfibrer leder nervsignaler snabbare än omyeliniserade fibrer.",
+    "type": "tf",
+    "prompt": "Myeliniserade nervfibrer leder nervsignaler snabbare än omyeliniserade fibrer.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2226,8 +2226,8 @@
   },
   {
     "id": "studier_q176",
-    "type": "mc",
-    "prompt": "Sant eller falskt: Ledbrosket (articulärt brosk) är avaskulärt, dvs. saknar blodkärl.",
+    "type": "tf",
+    "prompt": "Ledbrosket (articulärt brosk) är avaskulärt, dvs. saknar blodkärl.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
@@ -2321,7 +2321,7 @@
     "distractors": [
       "Kortisol",
       "Insulin",
-      "Oxytocin"
+      "Aldosteron"
     ],
     "topic": "studier_fysiologi",
     "difficulty": "Normal"
@@ -2345,9 +2345,9 @@
     "prompt": "Vilken av följande är ett exempel på kognitiv ergonomi?",
     "correct": "Utformning av gränssnitt och informationssystem för att minska mental belastning",
     "distractors": [
-      "Justering av stolens höjd för att minska belastning på ryggen",
-      "Schemaläggning av raster för att undvika muskelutmattning",
-      "Installation av hörselskydd mot buller"
+      "Justering av stolens höjd och armstöd för att minska belastningen på ländryggen",
+      "Schemaläggning av raster och arbetsrotation för att undvika muskelutmattning i axlarna",
+      "Installation av hörselskydd och bullerdämpning i lokalens takkonstruktion"
     ],
     "topic": "studier_ergonomi",
     "difficulty": "Normal"
@@ -2614,11 +2614,11 @@
   },
   {
     "prompt": "Vilken av följande faktorer påverkar belastningen på nacke och rygg i en arbetssituation?",
-    "correct": "Arbetstagares kroppshållning och arbetsposition",
+    "correct": "Arbetstagarens kroppshållning och arbetsposition",
     "distractors": [
-      "Rummets luftfuktighet",
-      "Belysningens färgtemperatur",
-      "Kontorsmöblernas estetik"
+      "Rummets luftfuktighet och temperatur under dagen",
+      "Belysningens färgtemperatur och ljusstyrka i taket",
+      "Kontorsmöblernas estetik och färgsättning i rummet"
     ],
     "topic": "studier_ergonomi",
     "id": "studier_q206",
@@ -2629,9 +2629,9 @@
     "prompt": "Vilken ytterligare faktor påverkar belastningen på nacke och rygg i arbetet?",
     "correct": "Varaktigheten av statisk arbetsställning och tyngden som hålls",
     "distractors": [
-      "Arbetskollegornas antal i rummet",
-      "Kontorsstolens färg och design",
-      "Arbetsplatsens geografiska läge i landet"
+      "Arbetskollegornas antal i rummet och deras arbetsuppgifter",
+      "Kontorsstolens färg och design i förhållande till rummet",
+      "Arbetsplatsens geografiska läge i landet och avstånd till hemmet"
     ],
     "topic": "studier_ergonomi",
     "id": "studier_q207",
@@ -2761,7 +2761,7 @@
     "distractors": [
       "Sköldkörteln",
       "Hypothalamus",
-      "Binjurarna"
+      "Bisköldkörtlarna"
     ],
     "topic": "studier_fysiologi",
     "id": "studier_q218",
@@ -2769,47 +2769,47 @@
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Kalciumhalten i skelettet ökar vid normalt åldrande.",
+    "prompt": "Kalciumhalten i skelettet ökar vid normalt åldrande.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
     ],
     "topic": "studier_åldrande",
     "id": "studier_q219",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Antalet snabba muskelfibrer (typ 2) minskar vid normalt åldrande.",
+    "prompt": "Antalet snabba muskelfibrer (typ 2) minskar vid normalt åldrande.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
     "topic": "studier_åldrande",
     "id": "studier_q220",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Volymen luft som stannar kvar i lungorna vid utandning (residualvolymen) ökar med åldrandet.",
+    "prompt": "Volymen luft som stannar kvar i lungorna vid utandning (residualvolymen) ökar med åldrandet.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
     "topic": "studier_åldrande",
     "id": "studier_q221",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Ledbrosket ökar i tjocklek vid normalt åldrande.",
+    "prompt": "Ledbrosket ökar i tjocklek vid normalt åldrande.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
     ],
     "topic": "studier_åldrande",
     "id": "studier_q222",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
@@ -2826,47 +2826,47 @@
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Det visuella sinnet är ett exempel på en exteroceptor.",
+    "prompt": "Det visuella sinnet är ett exempel på en exteroceptor.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
     "topic": "studier_neurologi",
     "id": "studier_q225",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Det auditiva sinnet (hörseln) är ett exempel på en exteroceptor.",
+    "prompt": "Det auditiva sinnet (hörseln) är ett exempel på en exteroceptor.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
     "topic": "studier_neurologi",
     "id": "studier_q226",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Det taktila sinnet (beröring) är ett exempel på en exteroceptor.",
+    "prompt": "Det taktila sinnet (beröring) är ett exempel på en exteroceptor.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
     "topic": "studier_neurologi",
     "id": "studier_q227",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Det kinestetiska sinnet är ett exempel på en exteroceptor.",
+    "prompt": "Det kinestetiska sinnet är ett exempel på en exteroceptor.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
     ],
     "topic": "studier_neurologi",
     "id": "studier_q228",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
@@ -2909,47 +2909,47 @@
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: N. vestibularis har betydelse för tal och språkutveckling.",
+    "prompt": "N. vestibularis har betydelse för tal och språkutveckling.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
     ],
     "topic": "studier_neurologi",
     "id": "studier_q232",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: N. vestibularis har betydelse för mag- och tarmfunktion.",
+    "prompt": "N. vestibularis har betydelse för mag- och tarmfunktion.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
     ],
     "topic": "studier_neurologi",
     "id": "studier_q233",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: N. vestibularis har betydelse för balans och koordination.",
+    "prompt": "N. vestibularis har betydelse för balans och koordination.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
     "topic": "studier_neurologi",
     "id": "studier_q234",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: N. vestibularis har betydelse för hörsel.",
+    "prompt": "N. vestibularis har betydelse för hörsel.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
     ],
     "topic": "studier_neurologi",
     "id": "studier_q235",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
@@ -3036,7 +3036,7 @@
     "distractors": [
       "Excentriskt arbete",
       "Isometriskt arbete",
-      "Isotoniskt arbete"
+      "Isokinetiskt arbete"
     ],
     "topic": "studier_fysiologi",
     "id": "studier_q242",
@@ -3140,7 +3140,7 @@
     "distractors": [
       "Metacarpalproximal",
       "Midcarpalproximal",
-      "Metacarpopalmaris"
+      "Metacarpopalmarleden"
     ],
     "topic": "studier_hand",
     "id": "studier_q250",
@@ -3151,7 +3151,7 @@
     "prompt": "Vad är skillnaden mellan dynamiskt och statiskt muskelarbete?",
     "correct": "Dynamiskt arbete växlar mellan kontraktion och avslappning och skapar rörelse; statiskt arbete kontraherar utan rörelse.",
     "distractors": [
-      "Vid dynamiskt muskelarbete kontraherar muskeln utan rörelse; vid statiskt arbete växlar muskeln för att skapa rörelse."
+      "Vid dynamiskt muskelarbete kontraherar muskeln utan rörelse; vid statiskt arbete växlar muskeln för att skapa rörelse i leden."
     ],
     "topic": "studier_fysiologi",
     "id": "studier_q251",
@@ -3483,14 +3483,14 @@
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Det parasympatiska och sympatiska nervsystemet kan samverka i komplexa reaktioner, till exempel vid gråt och salivering.",
+    "prompt": "Det parasympatiska och sympatiska nervsystemet kan samverka i komplexa reaktioner, till exempel vid gråt och salivering.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
     "topic": "studier_neurologi",
     "id": "studier_q277",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
@@ -3562,9 +3562,9 @@
     "prompt": "Ytterligare en egenskap hos en förpackning som påverkar greppkraften:",
     "correct": "Förpackningens form och storlek",
     "distractors": [
-      "Förpackningens pris",
-      "Produktens ursprungsland",
-      "Förpackningens miljöpåverkan"
+      "Förpackningens pris och märke",
+      "Produktens ursprungsland och märkning",
+      "Förpackningens miljöpåverkan vid tillverkning"
     ],
     "topic": "studier_hand",
     "id": "studier_q283",
@@ -3712,47 +3712,47 @@
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Vid alla muskelkontraktioner förkortas muskeln.",
+    "prompt": "Vid alla muskelkontraktioner förkortas muskeln.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
     ],
     "topic": "studier_fysiologi",
     "id": "studier_q295",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: M. gluteus maximus arbetar statiskt (isometriskt) när du cyklar.",
+    "prompt": "M. gluteus maximus arbetar statiskt (isometriskt) när du cyklar.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
     ],
     "topic": "studier_muskler",
     "id": "studier_q296",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Vid statiskt muskelarbete används kraft men utan att rörelse sker.",
+    "prompt": "Vid statiskt muskelarbete används kraft men utan att rörelse sker.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
     "topic": "studier_fysiologi",
     "id": "studier_q297",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Vid anaerobt muskelarbete sker syresättning av muskeln.",
+    "prompt": "Vid anaerobt muskelarbete sker syresättning av muskeln.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
     ],
     "topic": "studier_fysiologi",
     "id": "studier_q298",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
@@ -3821,91 +3821,91 @@
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Kortex (hjärnbarken) är den vita substansen i hjärnan.",
+    "prompt": "Kortex (hjärnbarken) är den vita substansen i hjärnan.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
     ],
     "topic": "studier_neurologi",
     "id": "studier_q304",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Kortex är den grå substansen som består av nervcellskroppar, ganglion och gliaceller.",
+    "prompt": "Kortex är den grå substansen som består av nervcellskroppar, ganglion och gliaceller.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
     ],
     "topic": "studier_neurologi",
     "id": "studier_q305",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Kortex (hjärnbarken) är ca 2 cm tjock.",
+    "prompt": "Kortex (hjärnbarken) är ca 2 cm tjock.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
     ],
     "topic": "studier_neurologi",
     "id": "studier_q306",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Pyramidbanan (tractus corticospinalis) utgår från primära somatosensoriska kortex.",
+    "prompt": "Pyramidbanan (tractus corticospinalis) utgår från primära somatosensoriska kortex.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
     ],
     "topic": "studier_neurologi",
     "id": "studier_q307",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Pyramidbanan passerar capsula interna.",
+    "prompt": "Pyramidbanan passerar capsula interna.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
     "topic": "studier_neurologi",
     "id": "studier_q308",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Ca 90 % av pyramidbanans fibrer korsar medellinjen i pyramidkorsningen.",
+    "prompt": "Ca 90 % av pyramidbanans fibrer korsar medellinjen i pyramidkorsningen.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
     "topic": "studier_neurologi",
     "id": "studier_q309",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Efter korsningen i pyramidkorsningen löper 90 % av pyramidbanans fibrer i baksträngen.",
+    "prompt": "Efter korsningen i pyramidkorsningen löper 90 % av pyramidbanans fibrer i baksträngen.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
     ],
     "topic": "studier_neurologi",
     "id": "studier_q310",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Pyramidkorsningen (decussatio pyramidum) är belägen i medulla oblongata (förlängda märgen).",
+    "prompt": "Pyramidkorsningen (decussatio pyramidum) är belägen i medulla oblongata (förlängda märgen).",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
     "topic": "studier_neurologi",
     "id": "studier_q311",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
@@ -4003,9 +4003,9 @@
     "prompt": "Vilket protein spelar en stor roll i bindväv som strukturellt protein?",
     "correct": "Kollagen och elastin",
     "distractors": [
-      "Aktin och myosin",
-      "Castin och karotin",
-      "Fibrin och elastan"
+      "Aktin och myosin i muskeln",
+      "Kasein och karotin",
+      "Fibrin och keratin"
     ],
     "topic": "studier_fysiologi",
     "id": "studier_q319",
@@ -4121,8 +4121,8 @@
     "correct": "Underlagets beskaffenhet",
     "distractors": [
       "Individens muskelstyrka",
-      "Individens ålder",
-      "Individens synförmåga"
+      "Individens synförmåga",
+      "Individens balansträning"
     ],
     "topic": "studier_fysiologi",
     "id": "studier_q328",
@@ -4156,135 +4156,135 @@
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Typ 1-fibrer (långsamma fibrer) drabbas mest av åldrande.",
+    "prompt": "Typ 1-fibrer (långsamma fibrer) drabbas mest av åldrande.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
     ],
     "topic": "studier_åldrande",
     "id": "studier_q331",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Typ 2-fibrer (snabba fibrer) drabbas mest av åldrande.",
+    "prompt": "Typ 2-fibrer (snabba fibrer) drabbas mest av åldrande.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
     "topic": "studier_åldrande",
     "id": "studier_q332",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: De långsamma muskelfibrerna drabbas mest av åldrande.",
+    "prompt": "De långsamma muskelfibrerna drabbas mest av åldrande.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
     ],
     "topic": "studier_åldrande",
     "id": "studier_q333",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: De snabba/explosiva muskelfibrerna drabbas mest av åldrande.",
+    "prompt": "De snabba/explosiva muskelfibrerna drabbas mest av åldrande.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
     "topic": "studier_åldrande",
     "id": "studier_q334",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Frakturläkning tar längre tid hos äldre jämfört med hos yngre.",
+    "prompt": "Frakturläkning tar längre tid hos äldre jämfört med hos yngre.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
     "topic": "studier_åldrande",
     "id": "studier_q335",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Skelettet åldras genom kalciumpålagringar.",
+    "prompt": "Skelettet åldras genom kalciumpålagringar.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
     ],
     "topic": "studier_åldrande",
     "id": "studier_q336",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Ledbrosket blir tjockare med åldrandet.",
+    "prompt": "Ledbrosket blir tjockare med åldrandet.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
     ],
     "topic": "studier_åldrande",
     "id": "studier_q337",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Regelbunden fysisk träning ökar muskelstyrkan.",
+    "prompt": "Regelbunden fysisk träning ökar muskelstyrkan.",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
     "topic": "studier_fysiologi",
     "id": "studier_q338",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Regelbunden fysisk träning ökar konditionen (den aeroba kapaciteten).",
+    "prompt": "Regelbunden fysisk träning ökar konditionen (den aeroba kapaciteten).",
     "correct": "Sant",
     "distractors": [
       "Falskt"
     ],
     "topic": "studier_fysiologi",
     "id": "studier_q339",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Regelbunden fysisk träning ökar andelen kroppsfett.",
+    "prompt": "Regelbunden fysisk träning ökar andelen kroppsfett.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
     ],
     "topic": "studier_fysiologi",
     "id": "studier_q340",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Regelbunden fysisk träning ökar blodfetterna.",
+    "prompt": "Regelbunden fysisk träning ökar blodfetterna.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
     ],
     "topic": "studier_fysiologi",
     "id": "studier_q341",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
-    "prompt": "Sant eller falskt: Regelbunden fysisk träning ökar kronisk inflammation.",
+    "prompt": "Regelbunden fysisk träning ökar kronisk inflammation.",
     "correct": "Falskt",
     "distractors": [
       "Sant"
     ],
     "topic": "studier_fysiologi",
     "id": "studier_q342",
-    "type": "mc",
+    "type": "tf",
     "difficulty": "Normal"
   },
   {
