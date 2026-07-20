@@ -1,12 +1,8 @@
 /**
- * changelog.js — delad rendering av ändringsloggen (CHANGELOG.md).
+ * changelog.js — rendering av ändringsloggen (CHANGELOG.md).
  *
- * Används av två sidor med olika omfattning:
- *   info.html             → de tre senaste versionerna som teaser (ingen "visa fler")
- *   versionshistorik.html → 50 åt gången med "visa fler"-knapp
- *
- * Laddas FÖRE info.js/versionshistorik.js (båda med defer, så ordningen hålls).
- * escapeHtml bor här eftersom info.js också använder den för statistiktabellen.
+ * Används av versionshistorik.html, som visar 50 versioner åt gången med en
+ * "visa fler"-knapp. Laddas FÖRE js/versionshistorik.js.
  */
 
 const CHANGELOG_URL = './CHANGELOG.md'
@@ -65,32 +61,13 @@ function renderEntries(entries) {
 }
 
 /**
- * Hämtar versionsposter från en URL.
- *
- * .json  → färdigparsad teaser (changelog-latest.json), genererad av
- *          scripts/generate_changelog_teaser.py
- * annars → rå CHANGELOG.md som parsas i webbläsaren
- *
- * @param {string} url
- * @returns {Promise<{version: string, items: string[]}[]>}
- */
-async function fetchEntries(url) {
-  const res = await fetch(url)
-  if (!res.ok) throw new Error(`HTTP ${res.status}`)
-  return url.endsWith('.json') ? res.json() : parseChangelog(await res.text())
-}
-
-/**
  * Hämtar ändringsloggen och renderar poster i en container.
  *
  * @param {Object}  opts
  * @param {string}  opts.containerId  Id på elementet som posterna skrivs i.
  * @param {number}  opts.limit        Antal versioner som visas direkt.
- * @param {string}  [opts.moreId]     Id på "visa fler"-knappen. Utelämnas på
- *   info.html, där teasern i stället länkar vidare till versionshistorik.html.
- * @param {string}  [opts.url]        Källa. Default hela CHANGELOG.md. info.html
- *   skickar in teaser-filen; går den inte att hämta faller vi tillbaka på
- *   CHANGELOG.md, så sidan aldrig blir tom bara för att teasern saknas.
+ * @param {string}  [opts.moreId]     Id på "visa fler"-knappen.
+ * @param {string}  [opts.url]        Källa. Default hela CHANGELOG.md.
  */
 async function initChangelog({ containerId, limit, moreId, url = CHANGELOG_URL }) {
   const container = document.getElementById(containerId)
@@ -102,14 +79,12 @@ async function initChangelog({ containerId, limit, moreId, url = CHANGELOG_URL }
 
   let entries = []
   try {
-    entries = await fetchEntries(url)
+    const res = await fetch(url)
+    if (!res.ok) throw new Error(`HTTP ${res.status}`)
+    entries = parseChangelog(await res.text())
   } catch {
-    try {
-      entries = await fetchEntries(CHANGELOG_URL)
-    } catch {
-      container.innerHTML = '<p class="changelog-loading">Kunde inte ladda ändringslogg.</p>'
-      return
-    }
+    container.innerHTML = '<p class="changelog-loading">Kunde inte ladda ändringslogg.</p>'
+    return
   }
 
   if (!entries.length) {

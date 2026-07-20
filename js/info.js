@@ -3,19 +3,21 @@
  *
  * Renderar frågestatistik, ordlistans omfattning och kontaktformuläret.
  *
- * Ändringsloggen visas här bara som teaser (de tre senaste versionerna);
- * hela historiken bor på versionshistorik.html. Parsning/rendering ligger i
- * js/changelog.js, som laddas före den här filen och även tillhandahåller
- * escapeHtml() till statistiktabellen nedan.
+ * Ändringsloggen visas inte här alls – den bor på versionshistorik.html.
  */
 
-// Antal versioner i teasern på info.html. Hela listan finns på versionshistorik.html.
-// Håll i synk med ENTRIES i scripts/generate_changelog_teaser.py.
-const TEASER_ENTRIES = 3
-
-// Färdigparsad teaser (~10 KB) i stället för hela CHANGELOG.md (~420 KB).
-// Genereras av scripts/generate_changelog_teaser.py via pre-commit-hooken.
-const TEASER_URL = './changelog-latest.json'
+/**
+ * Escapar HTML-specialtecken så att text inte tolkas som markup.
+ * @param {string} str
+ * @returns {string}
+ */
+function escapeHtml(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+}
 
 // ============================================================================
 // Frågestatistik
@@ -322,6 +324,5 @@ function initContactForm() {
 document.addEventListener('DOMContentLoaded', () => {
   loadStats()
   loadGlossaryCount()
-  initChangelog({ containerId: 'changelogContent', limit: TEASER_ENTRIES, url: TEASER_URL })
   initContactForm()
 })

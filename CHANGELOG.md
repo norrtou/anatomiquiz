@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.187
+- **Info-sidans lilla ändringslogg är borttagen.** Längst ner på sidan låg en teaser med de tre senaste versionerna. Den fyllde ingen funktion vid sidan av den riktiga versionshistoriken, som redan ligger på en egen sida och länkas från texten högst upp. Sektionen heter fortfarande "Omfattning" och visar antal frågor och ordlistans storlek som förut.
+- **Optimeringen som bara fanns för teasern är städad bort.** `changelog-latest.json` och `scripts/generate_changelog_teaser.py` skapades i 0.9.186 för att slippa ladda hela CHANGELOG.md på info-sidan. Utan teaser hämtar info-sidan ingen ändringslogg alls, så både filen och generatorn är raderade. `js/changelog.js` parsar nu alltid markdown och har tappat JSON-grenen och sin fallback-väg.
+- **Pre-commit-hooken regenererar inte längre teaser-filen.** `.githooks/pre-commit` körde generatorn och stageade `changelog-latest.json` varje gång CHANGELOG.md ändrades. Blocket är borttaget; quiz-regelgrinden i samma hook är orörd.
+- **`js/info.js` har fått en egen `escapeHtml()`.** Den lånade tidigare funktionen ur `js/changelog.js`, som laddades på info.html enbart för teaserns skull. Nu laddar info.html ett skript mindre.
+- VERSION/APP_VERSION/index.html-, info.html- och versionshistorik.html-cachebuster → 0.9.187.
+
 ## 0.9.186
 - **Kunskapsbankens artiklar har fått en egen hierarki, och den styrs nu av ett register.** Faktatexterna låg tidigare som en platt lista med fyra tomma platshållarkort. De är nu ordnade i sex ämnesområden – rörelseapparaten, nervsystemet, hjärta & kärl, inre organ, klinisk anatomi samt plugga & tenta – med `faktatexter.html` som ingång, en sida per ämnesområde och ett samlat artikelindex på `/kunskapsbank/artiklar/`. Strategin och de redaktionella reglerna ligger i det nya styrdokumentet `ARTIKLAR_REGLER.md`, som ska läsas innan en artikel skrivs eller revideras.
 - **Nya artiklar hamnar i `/kunskapsbank/artiklar/` oavsett ämnesområde.** Hierarkin bärs av brödsmulor, hubbkort och JSON-LD – inte av sökvägen. Skälet är att en artikel ska kunna byta ämnesområde utan att URL:en ändras; publicerade URL:er kan aldrig ändras på GitHub Pages (SEO_REGLER §11.E). De tre befintliga faktatexterna behåller därför sina gamla adresser och har bara fått hubbsteget inskjutet i brödsmulan, både synligt och i `BreadcrumbList`.

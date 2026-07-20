@@ -5,13 +5,6 @@
 # Kringgå medvetet vid behov med:  git commit --no-verify
 set -euo pipefail
 
-# Teaser-filen som info.html hämtar i stället för hela CHANGELOG.md regenereras
-# så fort changeloggen ändras – annars visar Om-sidan gamla versioner.
-if git diff --cached --name-only --diff-filter=ACM | grep -qx 'CHANGELOG.md'; then
-  python3 scripts/generate_changelog_teaser.py
-  git add changelog-latest.json
-fi
-
 staged=$(git diff --cached --name-only --diff-filter=ACM | grep -E '^data/.*\.json$' || true)
 [ -z "$staged" ] && exit 0
 

@@ -103,7 +103,7 @@
   <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon.png">
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
-  <link rel="stylesheet" href="css/styles.css?v=0.9.186">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.187">
 </head>
 <body>
 
@@ -137,7 +137,7 @@
     <!-- Nyheter: korta notiser. Nyaste överst. -->
     <section class="card" aria-labelledby="newsHeading">
       <h2 id="newsHeading" class="about-title">Nyheter</h2>
-      <p class="about-update">Anatomiquiz uppdateras löpande. Senast uppdaterad <time datetime="2026-07-20">20 juli 2026</time>. De tre senaste versionerna visas längst ner på sidan – hela <a href="versionshistorik.html" class="info-link">versionshistoriken</a> finns på en egen sida.</p>
+      <p class="about-update">Anatomiquiz uppdateras löpande. Senast uppdaterad <time datetime="2026-07-20">20 juli 2026</time>. Hela <a href="versionshistorik.html" class="info-link">versionshistoriken</a> finns på en egen sida.</p>
       <article class="news-item">
         <time class="news-date" datetime="2026-07-01">1 juli 2026</time>
         <p class="news-text">Två större satsningar har inletts. Bilder har börjat läggas in i materialet för att göra anatomin tydligare och mer visuell, och arbetet med quiz anpassade för olika vårdutbildningar har påbörjats.</p>
@@ -263,16 +263,12 @@
       </form>
     </section>
 
-    <!-- Omfattning + teaser för versionshistoriken (hela listan: versionshistorik.html) -->
+    <!-- Omfattning (ändringsloggen bor på versionshistorik.html) -->
     <section class="card" aria-labelledby="historyHeading">
       <h2 id="historyHeading" class="about-title">Omfattning</h2>
       <h3 class="changelog-heading">Antal frågor</h3>
       <div id="statsContent"></div>
       <p id="glossaryCount" class="glossary-count">Laddar ordlistans omfattning…</p>
-
-      <h3 class="changelog-heading">Senaste versionerna</h3>
-      <div id="changelogContent" class="changelog-list"></div>
-      <p class="glossary-count"><a href="versionshistorik.html" class="info-link">Se hela versionshistoriken →</a></p>
     </section>
 
     <div class="actions">
@@ -281,8 +277,6 @@
 
   </main>
 
-  <!-- changelog.js först: den tillhandahåller escapeHtml() och initChangelog() åt info.js -->
-  <script src="js/changelog.js?v=0.9.186" defer></script>
-  <script src="js/info.js?v=0.9.186" defer></script>
+  <script src="js/info.js?v=0.9.187" defer></script>
 </body>
 </html>
