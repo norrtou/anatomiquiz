@@ -1,5 +1,16 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.179
+- **Versionshistoriken har flyttat till en egen sida: `versionshistorik.html`.** Info-sidan visade de 20 senaste versionerna, och eftersom releasenoterna vuxit till 10–14 långa punkter styckena var historiken i praktiken 70–80 % av sidans text. Den nya sidan är en undersida till Om Anatomiquiz (brödsmula Anatomiquiz / Om Anatomiquiz / Versionshistorik) och har medvetet ingen egen knapp på startsidan.
+- **Info-sidan behåller de tre senaste versionerna som teaser** med en länk vidare till hela listan. Sektionen heter nu "Omfattning" i stället för "Omfattning och versionshistorik"; antal frågor och ordlistans omfattning ligger kvar där de var, eftersom det är omfattning och inte historik.
+- **Ingången ligger högt upp:** meningen i Nyheter-sektionen som tidigare hänvisade till sidans botten länkar nu till versionshistoriken.
+- **Nya sidan visar 50 versioner åt gången** med en "visa fler"-knapp som räknar ner hur många som återstår. Alla 433 versioner renderas alltså inte på en gång.
+- **Ny delad modul `js/changelog.js`.** Parsning och rendering av CHANGELOG.md låg i info.js och behövdes nu på två sidor. Modulen exponerar `initChangelog()` och `escapeHtml()`; info.js och den nya versionshistorik.js använder båda den, så ingen kod är duplicerad. Laddas först på respektive sida eftersom info.js hämtar escapeHtml därifrån (CSP:n tillåter inga inline-skript, därav en egen fil även för den lilla init-koden).
+- **Sidan är inlagd i `sitemap.xml` OCH i `write_sitemap()` i `scripts/generate_glossary.py`** – bara det första hade räckt tills nästa ordlistegenerering, som skriver om hela sitemap.xml och hade tappat sidan. Även en rad i `llms.txt`.
+- Full SEO-paritet med index.html: unik title och description, canonical, robots, OG/Twitter, JSON-LD (WebPage + BreadcrumbList), CSP, favicon och manifest.
+- **JSON-LD-descriptionen på info.html rättad:** den sa "Bakgrund, syfte och versionshistorik", vilket slutade stämma när historiken flyttade. Står nu "Bakgrund, syfte, omfattning och källor".
+- VERSION/APP_VERSION/index.html- och info.html-cachebuster → 0.9.179.
+
 ## 0.9.178
 - **Källistan i info.html granskad och byggd ut från 6 till 17 poster.** Sektionen "Källor och kvalitetssäkring" redovisade tidigare sex källor medan appens innehåll vilar på ett åttiotal. Ingen befintlig post har tagits bort.
 - **Fem formfel i den befintliga listan rättade** mot `SEO_REGLER.md` §6b: listan var inte alfabetisk, FIPAT-posten saknade förlag, *Terminologia Anatomica* skrevs med versal titel i stället för husformatets *Terminologia anatomica*, tre källor stod som nakna domäner i stället för länkar, och Socialstyrelsens post hade en kortare titel än den redan granskade posten på kunskapsbankssidorna.

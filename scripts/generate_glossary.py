@@ -1030,6 +1030,7 @@ def write_sitemap(group_files: list[str]) -> None:
         blocks.append(url_block(f"{SITE}/{f}", "monthly", "0.7"))
     blocks.append(url_block(f"{SITE}/case.html", "monthly", "0.7"))
     blocks.append(url_block(f"{SITE}/info.html", "monthly", "0.5"))
+    blocks.append(url_block(f"{SITE}/versionshistorik.html", "weekly", "0.3"))
     blocks.append(url_block(f"{SITE}/integritet.html", "yearly", "0.3"))
 
     body = (
