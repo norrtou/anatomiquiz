@@ -7,7 +7,10 @@ Körs fristående eller som git pre-commit-hook / Claude Code-hook.
 
 ERROR (avslutkod 1, blockerar commit): bildfråga med icke-tom prompt, dubblett-id,
 tomt/duplicerat svarsalternativ, rätt svar bland distraktorerna, fel antal MC-alternativ,
-dubblerad frågetext inom ett ämne.
+dubblerad frågetext inom ett ämne, TF-fråga felmärkt som "mc" (dras aldrig av appen, §2.4).
+
+Kontrolleras INTE maskinellt (§2.4, §2.9) – gör dem för hand: TF-balansen Sant/Falskt per
+ämne, antals-paritet i frågor med räkneord, och kvasi-absoluta "bara"/"alla" i distraktorer.
 
 WARNING (blockerar inte): längdbias, parentes-asymmetri, självbesvarande fråga,
 numerisk asymmetri, absolut-ord enbart i distraktorerna, självutpekande distraktor,
@@ -19,7 +22,7 @@ from collections import defaultdict, Counter
 
 # Filer som inte är MC/TF-quiz (ordlista, register, flashcards utan distraktorer)
 SKIP = {"ordlista.json", "ordlista_import_raw.json", "kb_glossary_terms.json",
-        "bilder.json", "handens_ben_bilder.json", "handens_leder_bilder.json"}
+        "bilder.json"}
 LEN_BIAS_LIMIT = 40  # % frågor där correct är längst, per ämne, innan varning
 
 # §2.9: absoluta ord gör en distraktor strykbar utan sakkunskap om rätt svar aldrig bär dem

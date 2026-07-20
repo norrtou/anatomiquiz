@@ -1,7 +1,9 @@
 # Arbetsterapeut – kvalitetssvep enligt CLAUDE_REGLER.md
 
-**Status:** punkt 1, 2, 3a, 3b, 3c, 3d, 4 UTFÖRDA 2026-07-20. Kvar: 5, 6, 7b.
-Skapad 2026-07-19. **Validatorn ger nu 0 fel och 0 varningar på alla 12 arbetsterapeutfiler.**
+**Status:** punkt 1–5, 7a–7c UTFÖRDA 2026-07-20. **Kvar: bara punkt 6 – faktagranskningen.**
+Skapad 2026-07-19. **Validatorn ger 0 fel och 0 varningar på alla arbetsterapeutfiler**, och
+de mekaniska/strukturella defekterna är därmed uttömda. Det som återstår kräver läsning mot
+källorna, inte mätning.
 **Utgångsläget 24 blockerande fel → 0.** 82 absolut-ords-varningar → 0.
 54 kategorifel-frågor omskrivna. Kvarvarande varningar är uteslutande längdbias (punkt 3b).
 **Bakgrund:** arbetsterapeut byggdes före de flesta quizreglerna och har aldrig svepts.
@@ -286,17 +288,21 @@ q340, q342, q359, q364, q365, **q375, q376, q377, q398**
 q340/q342/q359/q364/q365 försvann med generated-batchen; q375/q376/q377/q398 rättades för hand
 till *mellanfotsben*. Verifierat: 0 träffar på `mellanfott` i `data/ben.json`.
 
-## 5. Städning / verktyg (lägre prioritet)
+## 5. ✅ KLAR – städning / verktyg
 
-- **Dött `difficulty`-fält** på alla 4 288 frågor (`"difficulty": "Normal"`).
-  Svårighetsgrad togs bort ur appen i 0.9.165. Kan strippas i samma patch-svep.
-  Kontrollera först att inget i `js/` läser fältet.
-- **Validatorns SKIP-lista** (`scripts/validate_quiz.py` rad 21–22) utesluter
-  `handens_ben_bilder.json` och `handens_leder_bilder.json` → 155 bildfrågor kontrolleras
-  aldrig. Manuellt kontrollerade 2026-07-19: alla har tom prompt + `image`, inga fel.
-  Överväg att ta bort dem ur SKIP nu när de följer §2.10.
-- **Ny validatorregel: TF-balans.** Varna när ett ämne med ≥8 TF-frågor har ≥70 % (eller
-  ≤30 %) "Sant". Hade fångat punkt 2 automatiskt. Kodifiera samtidigt i CLAUDE_REGLER §2.4.
+- **Dött `difficulty`-fält – BESLUT 2026-07-20: lämnas kvar.** Kontrollerat att inget i `js/`
+  läser det (enda förekomsten är placeholder-generatorn `js/app.js` rad 179, som *skriver*
+  fältet, plus kommentaren rad 112–114 som redan förklarar att det är dött). Men fältet visade
+  sig finnas i **17 450 frågor i 37 datafiler** – hela projektet, inte bara arbetsterapeutens
+  4 288. Att stryka det ger en 17 450-raders diff genom alla elva utbildningar för noll
+  funktionell vinst, och grumlar git-historiken. **Användarens beslut: låt ligga.**
+- ✅ **Validatorns SKIP-lista rensad 2026-07-20.** `handens_ben_bilder.json` och
+  `handens_leder_bilder.json` ligger inte längre i SKIP – de 155 bildfrågorna valideras nu
+  varje körning och ger 0 fel, vilket bekräftar den manuella kontrollen från 2026-07-19.
+- ✅ **Ny validatorregel** blev inte TF-balans utan **TF-fråga felmärkt som `mc`** (§2.4),
+  som är entydigt maskinellt avgörbar. TF-*balansen* lämnas medvetet manuell: gränsen beror
+  på ämnets storlek och en fast regel hade gett falska utslag på små ämnen. Det står nu i
+  validatorns docstring vilka tre kontroller som kräver handpåläggning.
 - ✅ **`FILLER`-regexen utökad 2026-07-20** med "Inget/Ingen av ovanstående" och
   "Inget/Ingen av alternativen". Kodifierat i CLAUDE_REGLER §6.3.
 
@@ -326,7 +332,34 @@ distraktorer → formen pekade ut svaret (språkparitet, §2.9). Rättningen lö
 
 Sveptes över alla 14 arbetsterapeut-filer med grep-testet i §1.1 – 0 träffar kvar.
 
-### 7b. ⚠️ KVAR – kvasi-absoluta ord "bara" / "alla" (§2.9)
+### 7b. ✅ KLAR – kvasi-absoluta ord "bara" / "alla" (§2.9)
+
+Utfört 2026-07-20. **42 distraktorer som INLEDDES med Bara/Alla/Enbart → 0.** Därutöver
+granskades de 17 träffar där ordet står inuti meningen; **11 lämnades orörda som legitima
+sakpåståenden**, 6 skrevs om. Det är precis den avvägning som gör att mönstret inte får
+maskinregleras – se skiljelinjen nedan.
+
+**Lämnat (ordet ingår i ett sakpåstående):** `ledtyper` "Rörelse åt alla håll" (en korrekt
+beskrivning av en kulled, alltså ett trovärdigt fel om en gångjärnsled), `muskler` "så högt upp
+mot näsan som det bara går" (idiom), "böja alla tårna nedåt" (beskriver en scen),
+`tentaplugg:studier_q223` "kan flektera i alla fingrarna utom tummen" (konkret funktionspåstående).
+
+**Omskrivet (absolut avgränsning som går att stryka på formen):** `oa_q53` "Styrkan ökar bara hos
+den som tränat i unga år" → "…främst hos…", `oa_q79` "Träning är farligt för alla äldre" →
+"Träning medför större risker än nytta i hög ålder", `oa_q93` "Snabba fibrer används bara under
+sömn", `studier_q64` "…bara förekommer hos människor, inte hos andra organismer" (dessutom en
+negations-svans), `ledtyper:q14` "Den kan bara böjas", `pke_q42` "Alla människor har exakt samma
+kroppsmått".
+
+**Skiljelinjen:** är påståendet en *avgränsning* ("bara X", "alla Y gör Z") är det strykbart utan
+sakkunskap → skriv om till ett hedgat men fortfarande felaktigt påstående ("främst", "i stort
+sett", "liten betydelse"). Beskriver ordet däremot något i sak → lämna.
+
+Flera av dessa bar samtidigt **antals-asymmetri** (§2.9): `ben:q68` frågade vilka organ bröstkorgen
+skyddar, rätt svar listade två och distraktorerna "Bara hjärta" / "Bara lungor" listade ett – två
+tells i samma alternativ. Samtliga sådana är nu jämnlånga och listar lika många poster.
+
+<details><summary>Ursprunglig beskrivning</summary>
 
 Samma tell som absolut-orden, men **medvetet utanför validatorn**: mätt projektbrett
 2026-07-20 träffar `\b(bara|alla)\b` i **544 frågors distraktorer**, och de flesta är
@@ -341,6 +374,8 @@ i arbetsterapeutens 12 filer INLEDS fortfarande med `Bara`/`Alla`/`Enbart`** –
 
 Detta är det billigaste kvarvarande delsteget: mönstret är mekaniskt igenkännbart, men varje
 träff måste läsas med gissa-testet (§2.12) innan den skrivs om – en del är legitima sakpåståenden.
+
+</details>
 
 ### 7c. ✅ ÅTGÄRDAT – filler-variant som validatorn missade (§6.3)
 

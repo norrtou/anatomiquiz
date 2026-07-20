@@ -879,9 +879,9 @@
     "prompt": "Vilka organ skyddas av bröstkorgen?",
     "correct": "Hjärta och lungor",
     "distractors": [
-      "Bara hjärta",
-      "Bara lungor",
-      "Lever och mage"
+      "Lever och magsäck",
+      "Njurar och urinblåsa",
+      "Magsäck och tarmar"
     ],
     "topic": "osteologi_thorax",
     "difficulty": "Normal",
@@ -1881,9 +1881,9 @@
     "prompt": "Vilka ben utgör övre extremiteten?",
     "correct": "Överarmsben, underarmsben och handben",
     "distractors": [
-      "Bara överarmsbenet ensamt",
-      "Bara handbenen ensamma",
-      "Bara fingerbenen ensamma"
+      "Lårbenet, underbensbenen och fotbenen",
+      "Överarmsben, revben och bröstben",
+      "Handben, fotben och tåben"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -1895,9 +1895,9 @@
     "prompt": "Vilka ben utgör nedre extremiteten?",
     "correct": "Lårbenet, underbensben och fotben",
     "distractors": [
-      "Bara lårbenet ensamt",
-      "Bara fotbenen ensamma",
-      "Bara tåbenen ensamma"
+      "Överarmsben, underarmsben och handben",
+      "Lårbenet, höftbenet och korsbenet",
+      "Fotben, tåben och handben"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -1909,9 +1909,9 @@
     "prompt": "Vilka ben utgör skulderregionen?",
     "correct": "Scapula, clavicula och överarmsbenen",
     "distractors": [
-      "Bara scapula ensam",
-      "Bara clavicula ensam",
-      "Bara överarmsbenen ensamma"
+      "Scapula, sternum och de övre revbenen",
+      "Clavicula, sternum och halskotorna",
+      "Humerus, radius och ulna"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -1951,9 +1951,9 @@
     "prompt": "Vilka ben utgör fotbågen?",
     "correct": "Talus, naviculare och övriga tarsalben",
     "distractors": [
-      "Bara hälbenet ensamt",
-      "Bara metatarsalbenen ensamma",
-      "Bara phalangerna ensamma"
+      "Calcaneus, metatarsalben och phalanger",
+      "Tibia, fibula och calcaneus",
+      "Metatarsalben, phalanger och sesamben"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -2207,9 +2207,9 @@
     "prompt": "Vilka av dessa ben sitter i handloven?",
     "correct": "Scaphoideum, lunatum, triquetrum, pisiforme, trapezium, trapezoideum, capitatum, hamatum",
     "distractors": [
-      "Bara scaphoideum, lunatum, triquetrum och pisiforme av åtta",
-      "Bara trapezium, trapezoideum, capitatum och hamatum av åtta",
-      "Bara fem slumpmässiga ben av de totalt åtta"
+      "Scaphoideum, lunatum, triquetrum, pisiforme, trapezium, trapezoideum, capitatum, naviculare",
+      "Scaphoideum, lunatum, talus, pisiforme, trapezium, trapezoideum, capitatum, hamatum",
+      "Scaphoideum, lunatum, triquetrum, pisiforme, cuboideum, trapezoideum, capitatum, hamatum"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -3323,9 +3323,9 @@
     "prompt": "Vilka ben sitter i foten?",
     "correct": "Tarsalbenen, metatarsalbenen och phalanger",
     "distractors": [
-      "Bara tarsalbenen i foten",
-      "Bara metatarsalbenen i foten",
-      "Bara phalangerna i foten"
+      "Carpalbenen, metacarpalbenen och phalanger",
+      "Tarsalbenen, tibia och fibula",
+      "Metatarsalbenen, phalanger och patella"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -3857,9 +3857,9 @@
     "prompt": "Vilka ben utgör greppet när man tar något?",
     "correct": "Carpalbenen stabiliserar, resten rör sig",
     "distractors": [
-      "Bara phalangerna för rörelse",
-      "Bara carpalbenen för stabilitet",
-      "Bara metacarpalbenen i handen"
+      "Phalangerna stabiliserar medan resten rör sig",
+      "Metacarpalbenen är helt orörliga vid ett grepp",
+      "Carpalbenen rör sig medan phalangerna står still"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -3871,9 +3871,9 @@
     "prompt": "Vilka ben är viktigast för att stå och gå?",
     "correct": "Femur, tibia, fibula och tarsalbenen",
     "distractors": [
-      "Bara femur för stöd",
-      "Bara tarsalbenen för stöd",
-      "Bara höftbenen för stöd"
+      "Humerus, radius, ulna och carpalbenen",
+      "Femur, patella, revbenen och kotorna",
+      "Höftbenet, korsbenet, svanskotan och revbenen"
     ],
     "topic": "osteologi_placement",
     "difficulty": "Normal",
@@ -4040,8 +4040,8 @@
     "correct": "Osteoblaster, osteocyter, osteoklaster",
     "distractors": [
       "Osteoblaster, osteocyter, osteogena celler",
-      "Bara osteoblaster",
-      "Bara osteocyter"
+      "Osteoklaster, osteocyter, fibroblaster",
+      "Osteoblaster, kondrocyter, osteoklaster"
     ],
     "topic": "osteologi_cells",
     "difficulty": "Normal",
