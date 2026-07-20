@@ -110,6 +110,18 @@ Varje indexerbar sida följer **samma ordning och samma element som `index.html`
 | **Innehåll** | Beskriv sidan rättvist, väv in nyckelord naturligt. Ingen keyword-stuffing, inga löften. |
 | **Konsekvens** | Får skilja sig från og/twitter-description (de är sociala), men ska vara sann mot sidan. |
 
+**Description är en pitch till en sökande — inte en sammanfattning av dispositionen.**
+Formuleringen ska bära de ord folk faktiskt skriver i sökfältet (*latinska rötter*,
+*riktningstermer*, *vad betyder proximal*), inte de begrepp som råkar vara sidans
+akademiska ryggrad. Byt **aldrig** ut sökordsbärande fraser mot fackjargong för att
+metan ska "spegla artikelns struktur" — det var precis det misstaget som gjordes på
+`medicinskt-latin.html` 2026-07-20, när *vanliga latinska rötter samt riktnings- och
+rörelsetermer* ersattes av *genitiv och kongruens*. Ingen söker på kongruens.
+
+**og/twitter-description är inte sökfält.** De syns när länken delas i Slack, LinkedIn
+eller Facebook och ska sälja in ett klick där — konkret om vad sidan innehåller, aldrig
+abstrakt eller tesformulerat.
+
 ---
 
 ## 4. Canonical, robots, verifiering

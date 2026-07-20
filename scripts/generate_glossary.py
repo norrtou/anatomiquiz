@@ -1018,8 +1018,12 @@ def write_sitemap(group_files: list[str]) -> None:
     # Kunskapsbanken (hub + indexerbara undersidor). Denna funktion skriver om
     # HELA sitemap.xml, så ALLA indexerbara sidor måste listas här – annars
     # tappas de vid nästa generering. Håll synkad med faktiska sidor.
+    # Terminologipelaren själv. Pelarens UNDERSIDOR står inte här: i takt med
+    # att de registreras i data/artiklar.json kommer de in via
+    # artikel_sitemap_urls() nedan, och två källor för samma URL ger en
+    # dubblerad <url>-post i sitemap.xml (ARTIKLAR_REGLER.md §1.6).
     kb_pages = [
-        "medicinsk-terminologi", "medicinskt-latin", "grekiska-i-medicinen",
+        "medicinsk-terminologi", "grekiska-i-medicinen",
         "deklinationer-pluralformer", "uttalsregler", "terminologins-historia",
     ]
 
