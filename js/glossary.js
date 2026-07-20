@@ -72,13 +72,30 @@ function pageSlug(key) {
 }
 
 /** Bygger ett ankarvänligt slug-fragment (måste matcha Python:s slugify). */
+/**
+ * Diakriter → ASCII. MÅSTE hållas identisk med _SLUG_MAP i
+ * scripts/generate_glossary.py – annars pekar klientrenderade länkar på
+ * ankare som den statiska HTML:en inte har. Tecken som saknas här faller
+ * igenom till [^a-z0-9]+ och stympar ankaret (Râle → term-r-le).
+ * Grekiska bokstäver translittereras per post via fältet "slug" i
+ * data/ordlista.json, inte här.
+ */
+const SLUG_MAP = {
+  'å': 'a', 'ä': 'a', 'ö': 'o',
+  'à': 'a', 'á': 'a', 'â': 'a', 'ã': 'a',
+  'è': 'e', 'é': 'e', 'ê': 'e', 'ë': 'e',
+  'ì': 'i', 'í': 'i', 'î': 'i', 'ï': 'i',
+  'ò': 'o', 'ó': 'o', 'ô': 'o', 'õ': 'o',
+  'ù': 'u', 'ú': 'u', 'û': 'u', 'ü': 'u',
+  'ý': 'y', 'ÿ': 'y', 'ñ': 'n', 'ç': 'c',
+  'œ': 'oe', 'æ': 'ae', 'ø': 'o', 'ß': 'ss',
+  'đ': 'd', 'ð': 'd', 'þ': 'th', 'ł': 'l', 'š': 's', 'ž': 'z', 'č': 'c'
+}
+
 function slugifyBase(str) {
   return str
     .toLowerCase()
-    .replace(/[åä]/g, 'a')
-    .replace(/ö/g, 'o')
-    .replace(/é|è/g, 'e')
-    .replace(/ü/g, 'u')
+    .replace(/[^a-z0-9]/g, (c) => SLUG_MAP[c] || c)
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '')
 }

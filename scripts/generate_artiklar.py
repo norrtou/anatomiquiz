@@ -15,6 +15,17 @@ utan innehåll är tunt innehåll (ARTIKLAR_REGLER §8.2) och skulle behöva
 noindex; istället visas de som "Snart"-kort på faktatexter.html tills den
 första artikeln landar.
 
+Pelarartiklar (fältet "pelare" i stället för "hubb") hänger under en redan
+befintlig kunskapsbankspelare – i praktiken terminologipelaren. ARTIKLAR_REGLER
+§1.5 är tydlig med att språk- och terminologiartiklar inte får bygga en
+parallell språkavdelning under Faktatexter, så de hålls utanför ämneshubbarna
+och utanför faktatexter.html. De finns däremot i artikelindexet, i sitemap och
+i llms.txt – de är fullvärdiga artiklar, de hänger bara någon annanstans.
+
+Pelarsidorna är handskrivna sedan tidigare och skrivs INTE om av det här
+skriptet. För att registret ändå ska förbli sanningen (§1.6) verifierar
+validate() att varje pelarartikel faktiskt är länkad från sin pelarsida.
+
 Artikelsidorna själva skrivs för hand – prosa genereras aldrig. Skriptet
 rör dem inte, men kräver att de är registrerade.
 
@@ -91,6 +102,8 @@ def validate(reg: dict) -> list[str]:
     """Returnera lista med fel. Tom lista = allt OK."""
     fel: list[str] = []
     hubbslugs = {h["slug"] for h in reg["hubbar"]}
+    pelarslugs = {p["slug"] for p in reg.get("pelare", [])}
+    pelare_av_slug = {p["slug"]: p for p in reg.get("pelare", [])}
 
     seen_slug: set[str] = set()
     seen_poang: dict[str, str] = {}
@@ -110,8 +123,19 @@ def validate(reg: dict) -> list[str]:
             fel.append(f"artikel {s}: dubblerad slug")
         seen_slug.add(s)
 
-        if a["hubb"] not in hubbslugs:
+        # En artikel hänger antingen under en ämneshubb ELLER under en pelare –
+        # aldrig båda, aldrig ingendera. Utan tillhörighet blir den föräldralös
+        # och saknar brödsmula (§7.5); med två blir den dubblerad i navigationen.
+        har_hubb, har_pelare = "hubb" in a, "pelare" in a
+        if har_hubb == har_pelare:
+            fel.append(
+                f"artikel {s}: ange exakt ett av 'hubb' och 'pelare' "
+                f"(har {'båda' if har_hubb else 'ingendera'})"
+            )
+        elif har_hubb and a["hubb"] not in hubbslugs:
             fel.append(f"artikel {s}: okänd hubb '{a['hubb']}'")
+        elif har_pelare and a["pelare"] not in pelarslugs:
+            fel.append(f"artikel {s}: okänd pelare '{a['pelare']}'")
 
         if a["typ"] not in TYP_NAMN:
             fel.append(f"artikel {s}: okänd typ '{a['typ']}'")
@@ -145,13 +169,34 @@ def validate(reg: dict) -> list[str]:
             if not a.get("llms"):
                 fel.append(f"artikel {s}: fältet 'llms' saknas (krävs för llms.txt)")
 
+            # Pelarsidorna är handskrivna och genereras inte. Registret är ändå
+            # sanningen (§1.6), så drift fångas här i stället för att upptäckas
+            # som en oåtkomlig artikel långt senare.
+            if har_pelare:
+                pel = pelare_av_slug[a["pelare"]]
+                pelarfil = ROOT / pel["sokvag"].lstrip("/")
+                if not pelarfil.exists():
+                    fel.append(f"artikel {s}: pelarsidan {pel['sokvag']} saknas")
+                elif artikel_url(a) not in pelarfil.read_text(encoding="utf-8"):
+                    fel.append(
+                        f"artikel {s}: inte länkad från pelarsidan "
+                        f"{pel['sokvag']} – lägg in kortet där (§1.5)"
+                    )
+
     return fel
 
 
 def artiklar_i_hubb(reg: dict, hubbslug: str) -> list[dict]:
     return [
         a for a in reg["artiklar"]
-        if a["hubb"] == hubbslug and a.get("status") == "live"
+        if a.get("hubb") == hubbslug and a.get("status") == "live"
+    ]
+
+
+def artiklar_i_pelare(reg: dict, pelarslug: str) -> list[dict]:
+    return [
+        a for a in reg["artiklar"]
+        if a.get("pelare") == pelarslug and a.get("status") == "live"
     ]
 
 
@@ -463,9 +508,20 @@ def render_index(reg: dict) -> str:
     (ARTIKLAR_REGLER §10) och ska då filtrera DOM som redan finns.
     """
     live = [a for a in reg["artiklar"] if a.get("status") == "live"]
+
+    # Ämneshubbarna först, pelarna sist. Indexet ska vara komplett – en
+    # pelarartikel som saknas här vore osynlig för den som bläddrar listan,
+    # för crawlers och för agentisk inläsning (§1.2).
+    avdelningar = [
+        (h["titel"], h["kortbeskrivning"], artiklar_i_hubb(reg, h["slug"]))
+        for h in sorted(reg["hubbar"], key=lambda x: x["ordning"])
+    ] + [
+        (p["titel"], p["kortbeskrivning"], artiklar_i_pelare(reg, p["slug"]))
+        for p in reg.get("pelare", [])
+    ]
+
     grupper = []
-    for h in sorted(reg["hubbar"], key=lambda x: x["ordning"]):
-        artiklar = artiklar_i_hubb(reg, h["slug"])
+    for titel, kortbeskrivning, artiklar in avdelningar:
         if not artiklar:
             continue
         kort_html = []
@@ -478,8 +534,8 @@ def render_index(reg: dict) -> str:
             ))
         grupper.append(
             f'      <div class="info-about">\n'
-            f'        <h2>{h["titel"]}</h2>\n'
-            f'        <p>{h["kortbeskrivning"]}</p>\n'
+            f'        <h2>{titel}</h2>\n'
+            f'        <p>{kortbeskrivning}</p>\n'
             f'      </div>\n\n'
             f'      <div class="kb-grid">\n\n'
             + "\n\n".join(kort_html) + "\n\n"
@@ -588,6 +644,19 @@ def llms_rader(reg: dict) -> list[str]:
     return rader
 
 
+def llms_rader_pelare(reg: dict, pelarslug: str) -> list[str]:
+    """Rader till den llms.txt-sektion som pelaren redan har.
+
+    Pelarartiklar hör inte hemma under rubriken Faktatexter – de hänger under
+    sin pelare (§1.5), och llms.txt ska spegla sajtens faktiska struktur.
+    llms.txt underhålls för hand; det här är raderna att klistra in.
+    """
+    return [
+        f"- [{a['titel']}]({SITE}{artikel_url(a)}): {a['llms']}"
+        for a in artiklar_i_pelare(reg, pelarslug)
+    ]
+
+
 # ---------------------------------------------------------------------------
 
 def main() -> int:
@@ -627,6 +696,10 @@ def main() -> int:
 
     print("\nPåminnelse (SEO_REGLER §11.B): sitemap.xml regenereras av "
           "generate_glossary.py – kör den efteråt. llms.txt uppdateras för hand.")
+    # Generatorn skriver ren HTML utan tooltips (SEO_REGLER §6c). Utan det här
+    # steget tappar de genererade sidorna sina kb-term-länkar vid varje körning.
+    print("Kör därefter: python3 scripts/wire_terms.py --all "
+          "(generatorn nollställer tooltipsen på sidorna den skriver).")
     return 0
 
 

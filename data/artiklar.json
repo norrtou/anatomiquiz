@@ -3,9 +3,18 @@
   "_falt": {
     "sokvag": "Utelämnas för nya artiklar → /kunskapsbank/artiklar/<slug>.html. Anges explicit för artiklar publicerade före omstruktureringen, vars URL aldrig får ändras (SEO_REGLER §11.E).",
     "poang": "Artikelns tes i EN mening. Måste vara unik över hela registret (ARTIKLAR_REGLER §0.3, §8.1).",
+    "hubb / pelare": "Exakt ett av dem. 'hubb' = artikeln hänger under en N2-ämneshubb i Faktatexter. 'pelare' = artikeln hänger under en befintlig kunskapsbankspelare (ARTIKLAR_REGLER §1.5: språk- och terminologiartiklar ska INTE bygga en parallell språkavdelning under Faktatexter). Pelarartiklar ligger i samma platta URL-namnrymd, syns i artikelindexet, sitemap och llms.txt, men kortlänkas från pelarsidan i stället för från en ämneshubb.",
     "beroenden": "Slugs artikeln förutsätter. Bindande byggordning (ARTIKLAR_REGLER §11).",
     "llms": "Utförlig innehållsbeskrivning för llms.txt. Längre och mer konkret än poang (som är artikelns tes). Krävs för status live."
   },
+  "pelare": [
+    {
+      "slug": "medicinsk-terminologi",
+      "titel": "Medicinsk terminologi",
+      "sokvag": "/kunskapsbank/medicinsk-terminologi.html",
+      "kortbeskrivning": "Språket bakom de medicinska orden – ordbildning, böjning, uttal och terminologins historia."
+    }
+  ],
   "hubbar": [
     {
       "slug": "rorelseapparaten",
@@ -132,6 +141,30 @@
       ],
       "status": "live",
       "llms": "Faktatext om läkemedelsberäkning för sjuksköterskor – begreppen ordination, styrka och dos, enhetsomvandling (g/mg/µg, liter/ml), de tre grundformlerna (antal tabletter, dosvolym, mängd substans), infusionshastighet och dropptakt, dosering per kroppsvikt (mg/kg), procentlösningar och spädning (C₁V₁ = C₂V₂) samt säker kontrollräkning. Korslänkad till tabellen Omvandlingar & formler och till quizet Läkemedelsräkning."
+    },
+    {
+      "slug": "franska-och-tyska-i-medicinskt-sprak",
+      "titel": "Franska och tyska i medicinskt språk",
+      "kortbeskrivning": "Lånorden mellan latinet och engelskan – varför franskan gav instrument och kliniska tecken, och tyskan begrepp och syndrom.",
+      "poang": "Latin och grekiska lånade ut byggstenar som medicinen själv sätter ihop, medan franskan och tyskan lånade ut färdiga ord – franskan för handgrepp, instrument och kliniska tecken, tyskan för begrepp och syndrom som inte gick att översätta.",
+      "typ": "oversikt",
+      "pelare": "medicinsk-terminologi",
+      "malgrupp": [
+        "alla"
+      ],
+      "taggar": [
+        "lånord",
+        "franska",
+        "tyska",
+        "etymologi",
+        "terminologihistoria"
+      ],
+      "publicerad": "2026-07-20",
+      "uppdaterad": "2026-07-20",
+      "granskad": "2026-07-20",
+      "beroenden": [],
+      "status": "live",
+      "llms": "Faktatext om franska och tyska lånord i medicinskt fackspråk. Förklarar den principiella skillnaden mot latin och grekiska (byggstenar kontra färdiga ord), Paris-skolans dominans 1794–1848 och dess avtryck i instrument-, ingrepps- och auskultationstermer (bruit, souffle, râle, trocar, curettage), den tyskspråkiga medicinens period från 1850-talet till 1940-talet och dess avtryck i begrepp och syndrom (Schub, Anlage, Witzelsucht, Gedankenlautwerden), översättningslånen som döljer sitt tyska ursprung (bromsstrålning, tidgivare, bortträngning) samt varför lånen tunnas ut efter 1945. Innehåller två länktabeller in i den medicinska ordlistan med drygt 55 franska och tyska termer."
     }
   ]
 }

@@ -17,8 +17,9 @@ byte-identiska mot js/glossary.js-ankarna.
 
 Användning:
     python3 scripts/wire_terms.py kunskapsbank/muskeltabell-foten.html ...
-    python3 scripts/wire_terms.py --all          # alla kunskapsbankssidor + case.html
-    python3 scripts/wire_terms.py --check FILE    # dry-run: rapportera utan att skriva
+    python3 scripts/wire_terms.py --all           # kunskapsbanken + artiklarna + case.html
+    python3 scripts/wire_terms.py --check --all   # dry-run över allt; tyst = inget att göra
+    python3 scripts/wire_terms.py --check FIL ...  # dry-run för enskilda filer
 """
 import json, re, sys, pathlib
 
@@ -28,10 +29,25 @@ TERMS_FILE = ROOT / "data" / "kb_glossary_terms.json"
 # Svenska ordtecken (för ordgränser som respekterar åäö och bindestreck).
 WORD = r"[0-9A-Za-zÀ-ÖØ-öø-ÿ]"
 
+# Homonymfällor: ord som ÄR riktiga uppslagsord men som också är vanliga
+# svenska ord, och därför wirades fel i löptext ("medicinens ledande centrum"
+# länkat till anatomiskt centrum). Samma undantagsprincip som redan gäller
+# kasus, komplement, opposition, numerus, genus, os och axis (SEO_REGLER §6c).
+# Behövs termen på en enskild sida skrivs kb-term-länken för hand.
+#
+# Vardagsord som INTE var uppslagsord (stort → grand mal, sina → sinus,
+# plats → locus, gången → ductus, platta → lamina, olust → malaise) är i
+# stället borttagna ur data/kb_glossary_terms.json – de hörde aldrig hemma
+# i facit. Listan här är regressionsskyddet: facit underhålls för hand.
+BLOCKERADE = {
+    "centrum",   # -> centrum (anatomiskt); flerordsnyckeln "centrum tendineum"
+                 #    finns i facit och matchas som hel fras (§6c längsta match)
+}
+
 def load_terms():
     data = json.load(open(TERMS_FILE, encoding="utf-8"))
     # nyckel = gemener; värde = {"href":..., "def":...}
-    return {k.lower(): v for k, v in data.items()}
+    return {k.lower(): v for k, v in data.items() if k.lower() not in BLOCKERADE}
 
 def build_regex(terms):
     # Längsta termer först → flerordsfraser vinner över enord på samma position.
@@ -118,25 +134,46 @@ def wire_file(path, terms, rx, write=True):
         pathlib.Path(path).write_text(new, encoding="utf-8")
     return n, stats
 
+def alla_sidor():
+    """Varje wire:bar sida. Artiklarna ligger i en underkatalog och missades
+    tidigare av --all, vilket gjorde att nya artiklar tyst hamnade utanför
+    tooltipsvepet."""
+    kb = ROOT / "kunskapsbank"
+    return (sorted(kb.glob("*.html"))
+            + sorted(kb.glob("artiklar/*.html"))
+            + [ROOT / "case.html"])
+
 def main(argv):
     terms = load_terms()
     rx = build_regex(terms)
     if not argv:
         print(__doc__); return
+
+    check = argv[0] == "--check"
+    if check:
+        argv = argv[1:]
+        if not argv:
+            print("--check kräver filer eller --all", file=sys.stderr); return 1
+
     if argv[0] == "--all":
-        files = sorted((ROOT / "kunskapsbank").glob("*.html")) + [ROOT / "case.html"]
-    elif argv[0] == "--check":
-        n, stats = wire_file(ROOT / argv[1], terms, rx, write=False)
-        print(f"{argv[1]}: {n} kb-term-länkar skulle läggas ({len(stats)} unika)")
-        return
+        files = alla_sidor()
     else:
         files = [ROOT / a for a in argv]
+
     tot = 0
     for f in files:
-        n, _ = wire_file(f, terms, rx, write=True)
+        n, stats = wire_file(f, terms, rx, write=not check)
         tot += n
-        print(f"  {f.relative_to(ROOT)}: {n} kb-term-länkar")
-    print(f"Totalt {tot} länkar i {len(files)} filer.")
+        # Vid --check är tystnad det intressanta: bara sidor som skulle ändras
+        # skrivs ut, så en ren körning ger ingen utdata alls.
+        if not check:
+            print(f"  {f.relative_to(ROOT)}: {n} kb-term-länkar")
+        elif n:
+            print(f"  {f.relative_to(ROOT)}: {n} skulle läggas ({len(stats)} unika): "
+                  f"{', '.join(sorted(stats))}")
+    verb = "skulle läggas" if check else "lagda"
+    print(f"Totalt {tot} länkar {verb} i {len(files)} filer.")
+    return 0
 
 if __name__ == "__main__":
     main(sys.argv[1:])

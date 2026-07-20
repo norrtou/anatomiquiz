@@ -66,7 +66,7 @@ def artikel_sitemap_urls() -> list[str]:
 
 # Cachebusters per asset — bumpa bara den som faktiskt ändrats.
 STYLES_V = "0.9.144"       # css/styles.css (synkad med övriga sidor 2026-07-12)
-GLOSSARY_V = "0.9.5"      # css/glossary.css + js/glossary.js (denna release)
+GLOSSARY_V = "0.9.189"      # css/glossary.css + js/glossary.js (denna release)
 
 # Svenska alfabetet — fast ordning för alfabetsraden. Bokstäver utan poster
 # renderas nedtonade (icke-klickbara), så raden ser likadan ut oavsett innehåll.
@@ -85,7 +85,29 @@ GROUP_ORDER = SWEDISH_ALPHABET + SPECIAL_ORDER
 LEGACY_REDIRECT_FILES = {"ordlista-tecken.html"}
 
 # Diakriter → ASCII för term-slugs (måste matcha slugifyBase i js/glossary.js)
-_SLUG_MAP = {"å": "a", "ä": "a", "ö": "o", "é": "e", "è": "e", "ü": "u"}
+#
+# Allt som INTE står här faller igenom till [^a-z0-9]+ och blir ett bindestreck,
+# vilket ger stympade ankare: Râle → term-r-le, Behçets sjukdom →
+# term-beh-ets-sjukdom. Kartan täcker därför hela Latin-1-området plus de
+# ligaturer och specialtecken som förekommer i medicinsk och eponym latin,
+# franska och tyska – inte bara de sex tecken svenskan råkade behöva först.
+# Grekiska bokstäver hanteras INTE här: de translittereras per post via
+# fältet "slug" i data/ordlista.json (α → alfa, χ → chi), eftersom deras
+# namn inte går att härleda mekaniskt.
+_SLUG_MAP = {
+    # Svenska
+    "å": "a", "ä": "a", "ö": "o",
+    # Accenter (franska, spanska, italienska, portugisiska)
+    "à": "a", "á": "a", "â": "a", "ã": "a",
+    "è": "e", "é": "e", "ê": "e", "ë": "e",
+    "ì": "i", "í": "i", "î": "i", "ï": "i",
+    "ò": "o", "ó": "o", "ô": "o", "õ": "o",
+    "ù": "u", "ú": "u", "û": "u", "ü": "u",
+    "ý": "y", "ÿ": "y", "ñ": "n", "ç": "c",
+    # Ligaturer och nordiska/centraleuropeiska tecken
+    "œ": "oe", "æ": "ae", "ø": "o", "ß": "ss",
+    "đ": "d", "ð": "d", "þ": "th", "ł": "l", "š": "s", "ž": "z", "č": "c",
+}
 
 # Distinkta filnamns-slugs för bokstäver vars term-slug annars kolliderar
 # (Å/Ä→a krockar med A; Ö→o krockar med O). Måste matcha pageSlug() i JS.
