@@ -163,8 +163,17 @@ till en ordlistepost. Utspädning är ett Bing-formaliabrott (§8), inte en genv
 | `sprakvetare` | Språkintresserad, medicinsk sekreterare | Etymologi, morfologi, historik. Filologiska källor tillåtna och önskvärda. |
 | `specialist` | Audionom, optiker, logoped, tandläkare, BMA | Smalt fackspråk tillåtet; låg konkurrens, hög precision. |
 
-**Regel:** en artikel som riktar sig till `alla` får inte i praktiken vara skriven för `lakare`.
-Bestäm målgrupp *före* första meningen och håll den genom hela texten.
+**Regel: `alla` står ensamt.** Nyckeln anger förkunskapsnivå, inte intresse, och kan därför
+aldrig kombineras med en annan målgrupp — antingen förutsätter texten förkunskaper eller så
+gör den inte det. En artikel som säger sig vara för `alla` men i praktiken är skriven för
+`lakare` är skriven för `lakare`.
+
+Två **utbildningsnycklar** får däremot kombineras när ämnet genuint delas av dem
+(`lakare` + `fysioterapeut` för dermatom och myotom), eftersom de ligger på samma
+förkunskapsnivå. Bestäm målgrupp *före* första meningen och håll den genom hela texten.
+
+Kravet kontrolleras av `scripts/generate_artiklar.py`, som vägrar skriva vid brott. Kör
+validatorn mot varje ny målgruppskombination du skriver in här — se §14.
 
 ---
 
@@ -398,14 +407,14 @@ Beroendedriven — en artikel byggs aldrig före den den lutar sig mot. `beroend
 ### Våg 1 — Fundamenten (allt annat länkar hit)
 6. **Anatomiska riktningar, plan och rörelser** — `oversikt`, `alla`. Ersätter hela den
    föreslagna riktningsserien (§8.2). Beroenden: inga.
-7. **Medicinsk ordbildning: förled, rot och efterled** — `navsida`, `alla` + `sprakvetare`.
+7. **Medicinsk ordbildning: förled, rot och efterled** — `navsida`, `alla`.
    Under terminologipelaren. Massiv ingång till ordlistan. Beroenden: inga.
 
 ### Våg 2 — Bygger på våg 1
-8. **Ledtyper och ledrörelser** — `oversikt`, `fysioterapeut` + `alla`. ← 6
+8. **Ledtyper och ledrörelser** — `oversikt`, `alla`. ← 6
 9. **Ursprung, fäste, funktion och innervation — så läser du en muskeltabell** — `guide`,
    `alla`. Gör hela muskeltabellsavdelningen begriplig. ← 6, 8
-10. **Medicinska ordfamiljer** — `navsida`, `sprakvetare` + `alla`. ← 7
+10. **Medicinska ordfamiljer** — `navsida`, `sprakvetare`. ← 7
 11. **Kliniska efterled** — `navsida`, `alla`. Ersätter suffixserien (§8.2). ← 7
 
 ### Våg 3 — Fördjupning
@@ -471,6 +480,14 @@ Dokumenteras så att förslagen inte återuppstår vid nästa idégenomgång.
 en icke-uppenbar insikt om artikelbygge — skriv in den här **samma arbetspass**, med konkret
 exempel. Minnet är kopian; det här dokumentet är originalet.
 
+- **2026-07-20** — **Styrdokument och validator som skrivs i samma pass kan motsäga varandra
+  från dag ett.** §11 föreskrev `alla` + `sprakvetare` för artikel 7, 8 och 10, medan
+  `generate_artiklar.py` samtidigt förbjöd `alla` i kombination med något annat. Ingen av
+  raderna var beställd; båda kom ur samma bygge (0.9.186) och motsägelsen upptäcktes först när
+  nästa artikel skulle registreras. **Kör validatorn mot dokumentets egna exempel innan bygget
+  anses klart** — ett styrdokument vars exempel inte passerar sin egen grind är inte färdigt.
+  Vid krock: rätta dokumentet efter validatorn, inte tvärtom. Frestelsen är att luckra upp
+  kontrollen för att rädda texten man just skrivit.
 - **2026-07-20** — AI-genererade innehållsförslag kan presentera *policyförslag* och
   *provformat* som genomförd verklighet. Två av råmaterialets högst prioriterade förslag föll
   på faktakontroll (§13). **Kontrollera alltid ett förslags faktapremiss innan det planeras in**,
