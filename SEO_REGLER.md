@@ -239,7 +239,28 @@ Tooltips är kärninnehåll i kunskapsbanken (tabeller OCH faktatexter), inte de
 - **Hrefs ska peka på riktiga ankare.** Generera href via generatorns egna
   `slugify`/`page_key`/`page_file` (hanterar å/ä/ö → ascii). 0 trasiga ankare är ett krav.
 - **Homonymer/korta ord-fällor** undantas medvetet (kasus, komplement, opposition, numerus,
-  genus, os, axis, romerska siffror) – se [`CLAUDE_REGLER.md`] / minnet.
+  genus, os, axis, koncentration, romerska siffror) – se [`CLAUDE_REGLER.md`] / minnet.
+  Kriteriet är att **ordlisteposten bara täcker EN av ordets betydelser**: `koncentration`
+  är definierad kognitivt ("hålla kvar uppmärksamheten") men betyder i medicinsk löptext
+  nästan alltid halten av ett löst ämne, så tooltipen blev direkt vilseledande.
+- **Bindestrecksfällan.** Ordgränsen i `wire_terms.py` räknar inte `-`/`–` som ordtecken, så en
+  nyckel matchar även **andra ledet i en sammansättning**. Oftast rätt (`MCP-flexion`,
+  `cauda equina-syndrom`), men fel när sammansättningen betyder något annat än ordet ensamt:
+  `Ländrygg–korsbensleden` (articulatio lumbosacralis, L5–S1) fick SI-ledens tooltip, och
+  `Revben–kotlederna` hade fått de intervertebrala ledernas. Lösningen är **inte** att blockera
+  ordet – lägg in **hela frasen** som egen facitnyckel, så vinner den på längsta match (§6c).
+  Är ordet redan wirat separat i frasen måste det av-wiras först, annars kan frasen aldrig matcha.
+- **`def` ska vara en färdig fras.** Aldrig avhuggen mitt i ord, parentes eller förkortning,
+  och aldrig med ordlistans metadatafält på slutet (`Sv.`, `Eng.`, `Jfr …`). Defekten uppstod
+  en gång genom en hård `def[:140]`-klippning utan ord- och parentesgräns, plus en klippning
+  som utlöstes av punkten i `bl.a.` / `t.ex.` / `Sv.` – 49 tooltips låg live som
+  "Kroppens försvarsreaktion på skada eller retning (av" och "Vänster (sida). Sv"
+  (lagade 2026-07-21). Taket är 140 tecken; klipp vid `;`, `,` eller ordgräns och balansera
+  parenteserna. **Klipp aldrig maskinellt utan att läsa resultatet** – en mekanisk omklippning
+  tappade den psykiatriska betydelsen ur `depression` och abduktorsvagheten ur `Trendelenburg`.
+- **Ändrad `def` slår inte igenom av sig själv.** `data-def` är inbakad i HTML:en och
+  `wire_terms.py` hoppar över redan wirade länkar. Av-wira därför de berörda `href`-arna
+  först, kör sedan `--all`, och kontrollera att antalet `kb-term`-länkar är oförändrat.
 
 **Arbetsflöde vid revidering:** för att fånga flerordsfraser och missade ord rent –
 **av-wira** sidan (`re.sub(r'<a class="kb-term"[^>]*>(.*?)</a>', r'\1', html)`) och **om-wira**
