@@ -254,7 +254,23 @@ Tooltips är kärninnehåll i kunskapsbanken (tabeller OCH faktatexter), inte de
   (rensade 2026-07-21). Testet är enkelt: **skulle nyckeln kunna stå i en godtycklig svensk
   mening utan att betyda termen?** Då ska den bort. Behövs ordet ändå på en enskild sida –
   som `handtag` i *bröstbenets handtag* – lägg in **hela frasen** som facitnyckel i stället,
-  och av-wira det enskilda ordet så att frasen kan vinna på längsta match.
+  och av-wira det enskilda ordet så att frasen kan vinna på längsta match. Ytterligare tre
+  nycklar rensades 2026-07-21 av samma skäl: `vända` → inclino, `människa` → homo och
+  `ovansidan` → facies superior (4, 5 respektive 2 wirade förekomster, alla av-wirade).
+- **Referenslistans boktitlar ska inte wiras.** `wire_terms.py` behandlar `.kb-sources` som
+  aktiv text, och engelska titlar innehåller ord som råkar vara svenska/latinska uppslagsord:
+  *Gray's anatomy: The anatomical **basis** of clinical practice* fick tooltipen "Bas; nedre
+  eller bredaste delen av en anatomisk struktur" och *Principles of **neural** science* fick
+  "Som hör till nerv eller nervsystem" (rättat 2026-07-21 på `anatomiska-riktningar.html`).
+  Läs igenom referensblocket efter varje wiring och av-wira träffar inne i titlar – en tooltip
+  på ett ord i en bibliografisk post är alltid fel, oavsett hur bra nyckeln är i löptext.
+- **Ordlisteposten kan vara smalare än sidans användning.** Ett uppslagsord kan vara rätt term
+  och ändå ge fel tooltip därför att definitionen bara täcker en klinisk delbetydelse:
+  `ulnardeviation` är i ordlistan "felställning … ses bl.a. vid reumatoid artrit", men på en
+  sida om handledens normala rörelser avses sidoböjningen. Lösningen är att peka länken på den
+  post som faktiskt beskriver den avsedda betydelsen (här `deviation (radial/ulnar)`), inte att
+  skriva om texten. Samma gäller `snitt` → incision, som är rätt i kirurgisk text men fel där
+  ordet betyder tomografiskt snitt – av-wira lokalt i stället för att blockera globalt.
 - **Motexempel får ALDRIG wiras – och aldrig hamna i facit.** En språksida citerar med flit
   former som är fel (”det heter *sinus*, inte *sini* eller *meati*”; ”hybrider som *sinusar*
   eller *nucleusar* bör undvikas”). Wiras de får läsaren en tooltip som intygar att den

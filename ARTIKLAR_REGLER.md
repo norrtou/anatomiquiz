@@ -9,8 +9,10 @@
 > - [`CLAUDE_REGLER.md`](CLAUDE_REGLER.md) — språk, terminologi, faktakontroll, källor i `info.html`.
 > - [`UTBILDNINGAR_REGLER.md`](UTBILDNINGAR_REGLER.md) — vilka utbildningar/ämnen som finns (styr målgrupp och quiz-CTA).
 >
-> **Status:** GODKÄND. Infrastrukturen (våg 0) är byggd i 0.9.186; inga artiklar skrivna än.
-> **Senast uppdaterad:** 2026-07-20. **Version:** 1.0
+> **Status:** GODKÄND. Infrastrukturen (våg 0) byggd i 0.9.186, terminologipelaren lagd på
+> artikelstandard i 0.9.191. Våg 1 påbörjad: artikel 6 (*Anatomiska riktningar, plan och
+> rörelser*) skriven 2026-07-21, ännu utan versionsbump (§9 batchar ~5 artiklar per release).
+> **Senast uppdaterad:** 2026-07-21. **Version:** 1.0
 
 ---
 
@@ -501,6 +503,14 @@ exempel. Minnet är kopian; det här dokumentet är originalet.
   märkningen, sju på sidan, och bara fem gemensamma. Ingen validator på sajten fångade det
   förrän jämförelsen skrevs in i verifieringssnutten (`SEO_REGLER.md` §12). Kör den mot varje
   sida som har FAQ, även när arbetspasset inte rör själva frågorna.
+- **2026-07-21** — **En artikel som definierar vokabulär drar tooltipsen mot fel betydelse.**
+  På *Anatomiska riktningar, plan och rörelser* wirades `snitt` (tomografiskt) till incision,
+  `ulnardeviation` (handledens normala rörelse) till ordlistans felställning vid reumatoid
+  artrit, och två engelska boktitlar i referenslistan fick medicinska tooltips på orden *basis*
+  och *neural*. Ingen av träffarna var ett fel i facit i sig – de var rätt uppslagsord i fel
+  sammanhang. **Läs igenom hela tooltip-listan för hand efter wiringen, inklusive
+  referensblocket**, och fråga för varje träff om definitionen beskriver den betydelse texten
+  faktiskt använder. Feltyperna är inskrivna i `SEO_REGLER.md` §6c.
 - **2026-07-20** — AI-genererade innehållsförslag kan presentera *policyförslag* och
   *provformat* som genomförd verklighet. Två av råmaterialets högst prioriterade förslag föll
   på faktakontroll (§13). **Kontrollera alltid ett förslags faktapremiss innan det planeras in**,
