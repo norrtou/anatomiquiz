@@ -397,36 +397,59 @@ Design, förberedd redan nu genom registret:
 ## 11. Byggordning
 
 Beroendedriven — en artikel byggs aldrig före den den lutar sig mot. `beroenden` i registret
-är bindande.
+är bindande. Numreringen är fast: en struken punkt tas aldrig bort och ingenting numreras om,
+eftersom beroendepilarna (`← 6, 8`) pekar på nummer.
 
-### Våg 0 — Infrastruktur (innan en enda artikel skrivs)
+> **Planen åldras.** Listan skrevs 2026-07-20 mot sajten som den såg ut då. Sedan dess har
+> terminologipelarens fem sidor byggts om från 676–1 763 ord till 1 874–2 349, och två
+> planerade artiklar blev därmed dubbletter av innehåll vi själva just skrivit. **Kör §8.2:s
+> test mot det som faktiskt ligger live innan en punkt påbörjas** — kan artikelns
+> innehållsförteckning bytas mot avsnitt på en befintlig sida är den redan skriven. Se §14.
+
+### Våg 0 — Infrastruktur ✅ KLAR (0.9.186)
 1. `data/artiklar.json` + `scripts/generate_artiklar.py`
 2. `artiklar/index.html` (Alla artiklar)
 3. Sex N2-ämneshubbar; `faktatexter.html` byggs om till ingång
 4. Brödsmulor och hubbtillhörighet för de tre befintliga faktatexterna
 5. Kedjan: sitemap, llms.txt, kunskapsbankens hub
 
-### Våg 1 — Fundamenten (allt annat länkar hit)
-6. **Anatomiska riktningar, plan och rörelser** — `oversikt`, `alla`. Ersätter hela den
-   föreslagna riktningsserien (§8.2). Beroenden: inga.
-7. **Medicinsk ordbildning: förled, rot och efterled** — `navsida`, `alla`.
-   Under terminologipelaren. Massiv ingång till ordlistan. Beroenden: inga.
+### Våg 1 — Fundamenten ✅ KLAR
+6. ✅ **Anatomiska riktningar, plan och rörelser** — `oversikt`, `alla`, hubb
+   `rorelseapparaten`. Skriven 2026-07-21. Ersatte hela den föreslagna riktningsserien (§8.2)
+   och skapade ämneshubben *Rörelseapparaten*.
+7. ⛔ **Medicinsk ordbildning: förled, rot och efterled** — **STRUKEN 2026-07-21**, se §13.
+   Ordbildningen behandlas sedan 0.9.190–0.9.191 i löptext på `medicinskt-latin` och
+   `grekiska-i-medicinen`, och ingången till ordlistan finns redan i `ordlista-prefix.html`
+   (659 poster) och `ordlista-suffix.html` (153 poster).
 
 ### Våg 2 — Bygger på våg 1
-8. **Ledtyper och ledrörelser** — `oversikt`, `alla`. ← 6
+8. **Ledtyper och ledrörelser** — `oversikt`, `alla`, hubb `rorelseapparaten`. ← 6
+   Kontrollerat 2026-07-21: ledtyperna finns bara som tabellceller i regionsidorna och som
+   quizfrågor i `data/ledtyper.json`; `leder.html` är en ROM-tabellhubb på 200 ord. Ingen
+   löptext täcker ämnet. **Nästa artikel att bygga.**
 9. **Ursprung, fäste, funktion och innervation — så läser du en muskeltabell** — `guide`,
    `alla`. Gör hela muskeltabellsavdelningen begriplig. ← 6, 8
-10. **Medicinska ordfamiljer** — `navsida`, `sprakvetare`. ← 7
-11. **Kliniska efterled** — `navsida`, `alla`. Ersätter suffixserien (§8.2). ← 7
+   Kontrollerat 2026-07-21: `muskeltabeller.html` ägnar ämnet en enda mening.
+10. ⚠️ **Medicinska ordfamiljer** — `navsida`, `sprakvetare`. Beroendet på 7 är borta.
+    **Prövas mot §8.2 mot `medicinskt-latin` och `grekiska-i-medicinen` innan den planeras in**
+    — bara den axel som är genuint ny (samma rot genom många kliniska termer) motiverar sidan.
+11. ⛔ **Kliniska efterled** — **STRUKEN 2026-07-21**, se §13. `grekiska-i-medicinen` bär redan
+    efterledstabellen, skillnaden mellan -it och -os, -emi och -uri som fynd samt den
+    kirurgiska serien -tomi, -ektomi, -stomi, -plastik och -des.
 
 ### Våg 3 — Fördjupning
 12. **Fascia, bursor, senskidor och muskelloger** — `fordjupning`, `fysioterapeut`. ← 8, 9
+    Kontrollerat 2026-07-21: förekommer bara som enstaka omnämnanden i muskeltabellerna.
 13. **Dermatom, myotom och sklerotom** — `fordjupning`, `lakare` + `fysioterapeut`.
-    ← `sa-leds-kanseln` (finns)
-14. **Minnesregler för kranialnerverna** — `guide`, `alla`. ← kranialnervstabellen (finns)
+    ← `sa-leds-kanseln` (finns). Kontrollerat 2026-07-21: `nervtabell-balen.html` har en
+    dermatomtabell för bålen; myotom och sklerotom saknas helt, liksom all löptext.
+14. **Minnesregler för kranialnerverna** — `guide`, `alla`. ← kranialnervstabellen (finns).
+    Kontrollerat 2026-07-21: `kranialnerverna.html` (244 ord) har inga minnesregler.
+    Minnesramsor är klass D (§6.1) och ska märkas som praxis, aldrig presenteras som fakta.
 
 ### Våg 4 — Klinisk anatomi (efter §4:s avgränsning)
 15. Rotatorkuffen · 16. Karpaltunneln · 17. Ischiasnerven — samtliga `fordjupning`. ← 9, 12
+    Kontrollerat 2026-07-21: strukturerna finns i muskel- och nervtabellerna, ingen löptext.
 
 ### Våg 5 — Plugga & tenta
 18. **Hur du lär dig musklerna** · 19. **Vanliga anatomiska missuppfattningar** — `guide`. ← 9
@@ -468,7 +491,9 @@ Dokumenteras så att förslagen inte återuppstår vid nästa idégenomgång.
 |---|---|---|
 | *"Medicinsk terminologi inför läkarnas nya nationella kunskapsprov"* | **Byggs inte nu** | Kontrollerat 2026-07-20: det "nya nationella kunskapsprovet" är ett **policyförslag från Sveriges läkarförbund** (nov 2025), inte ett beslutat och infört prov. Råmaterialet påstod det som genomfört faktum. Att bygga en artikel på det vore ett faktafel i ett högriskämne. Kan omprövas **om** Socialstyrelsen fattar beslut — då som klass C med hämtningsdatum. |
 | *"Anatomi och fysiologi inför kunskapsprovet för sjuksköterskor"* | **Byggs inte i föreslagen form** | Kontrollerat 2026-07-20: provet (Göteborgs universitet på Socialstyrelsens uppdrag) består av **MEQ-tentamen i klinisk resonemangsförmåga + OSCE**, inte flervalsfrågor i anatomi. Att lova pluggstöd med Anatomiquiz MC-quiz mot det provet vore missvisande mot en målgrupp med legitimationen på spel. |
-| Serie: *"Vad betyder -it/-os/-emi/-uri…"* (10 sidor) | **Konsolideras** | Doorway-/tunnhetsrisk, §8.2. → artikel 11. |
+| **Artikel 7:** *"Medicinsk ordbildning: förled, rot och efterled"* (navsida) | **Struken 2026-07-21** | Planerad 2026-07-20, när `medicinskt-latin` var 756 ord och `grekiska-i-medicinen` 676. Ombyggnaden i 0.9.190–0.9.191 la in exakt det innehållet — *Hur ett medicinskt ord är byggt*, bindevokalen, rötterna, förleden, efterleden — som löptext på båda sidorna. Innehållsförteckningen går att byta rakt av mot deras avsnitt, alltså samma artikel enligt §8.2:s test. Ingången till ordlistan finns dessutom redan förrenderad i `ordlista-prefix.html` (659 poster) och `ordlista-suffix.html` (153), som en navsida hade konkurrerat med om samma sökningar. |
+| **Artikel 11:** *"Kliniska efterled"* (navsida) | **Struken 2026-07-21** | Samma skäl. `grekiska-i-medicinen` bär sedan 0.9.191 tabellen över kliniska efterled, skillnaden mellan -it och -os, -emi och -uri som fynd snarare än diagnoser, -pati som medvetet vagt efterled och hela den kirurgiska serien. Sidan lutade sig dessutom på artikel 7. |
+| Serie: *"Vad betyder -it/-os/-emi/-uri…"* (10 sidor) | **Konsolideras** | Doorway-/tunnhetsrisk, §8.2. → numera `grekiska-i-medicinen`, inte artikel 11 (struken). |
 | Serie: *"Vad betyder proximal och distal / medial och lateral / …"* | **Konsolideras** | Samma skäl. → artikel 6. |
 | *"Gamla tentor"-hubb*, *spärrtentor*, *"tentafrågor som brukar komma"* | **Byggs inte** | Bygger på studentforum och läckta tentor — klass D-material presenterat som fakta. Upphovsrättsligt och trovärdighetsmässigt olämpligt. Studieteknik utan tentapåståenden är däremot fine (våg 5). |
 | *"Normalvärden och referensvärden"*, *"Vanliga medicinska förkortningar A–Ö"* | **Inte artiklar** | Detta är uppslagsdata. Hör hemma i *Listor & tabeller* respektive ordlistan — som redan bär labbvärden och förkortningar. Egna artiklar vore dubblering. |
@@ -503,6 +528,15 @@ exempel. Minnet är kopian; det här dokumentet är originalet.
   märkningen, sju på sidan, och bara fem gemensamma. Ingen validator på sajten fångade det
   förrän jämförelsen skrevs in i verifieringssnutten (`SEO_REGLER.md` §12). Kör den mot varje
   sida som har FAQ, även när arbetspasset inte rör själva frågorna.
+- **2026-07-21** — **En innehållsplan blir osann av att man bygger enligt den.** Två av §11:s
+  punkter (7 och 11) blev dubbletter medan de stod i kö, därför att ombyggnaden av
+  terminologipelaren i 0.9.190–0.9.191 skrev in just det innehåll de skulle bära. Ingen märkte
+  det förrän artikel 7 skulle placeras — planen hade lästs som en beställning i stället för som
+  en hypotes om vad som saknas. **Kör §8.2:s test mot live-sajten när en punkt tas upp, inte
+  när den skrevs in**, och stryk den i §11 plus §13 samma arbetspass om den fallit. Skäl:
+  numreringen är fast och beroendepilarna pekar på nummer, så en tyst borttagning skulle bryta
+  dem. Kostnaden för att upptäcka det sent är en skriven artikel som kannibaliserar en egen
+  sida som redan rankar.
 - **2026-07-21** — **En artikel som definierar vokabulär drar tooltipsen mot fel betydelse.**
   På *Anatomiska riktningar, plan och rörelser* wirades `snitt` (tomografiskt) till incision,
   `ulnardeviation` (handledens normala rörelse) till ordlistans felställning vid reumatoid

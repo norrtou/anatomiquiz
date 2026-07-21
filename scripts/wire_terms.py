@@ -50,6 +50,16 @@ BLOCKERADE = {
     "kasus",     # -> kasus (sjukdomsfall). På deklinationssidan betyder ordet
                  #    grammatiskt kasus; ordlisteposten täcker bara den
                  #    epidemiologiska betydelsen.
+    "ren",       # -> ren (njure). Ordet är rätt term på latin- och grekiksidorna,
+                 #    där det står som uppslagsord och redan är handwirat, men i
+                 #    svensk löptext betyder det nästan alltid "ren" i vardaglig
+                 #    mening: "vid ren rullning" fick tooltipen "Njure" på
+                 #    ledtypssidan. Behövs det som term igen skrivs länken för hand.
+    "region",    # -> regio. Vardagsord i löptext ("region för region"), och
+                 #    ordlistans def är bara "Område" – tooltipen tillför inget.
+    "snitt",     # -> incision. Rätt i kirurgisk text (och kvar handwirat där),
+                 #    men fel där ordet betyder tomografiskt snitt eller ett
+                 #    tänkt plan genom kroppen, som på riktningssidan.
     "koncentration",  # ordlisteposten avser ENBART den kognitiva betydelsen
                       # ("förmågan att hålla kvar uppmärksamheten"). I medicinsk
                       # löptext betyder ordet nästan alltid halten av ett löst
@@ -119,8 +129,15 @@ def wire_html(html, terms, rx, stats=None):
             # själva kort-behållaren (class börjar med kb-card följt av blank/citat),
             # inte kb-card-desc/-title/-go. <a>-kort fångas redan av in_anchor nedan.
             is_kb_card = bool(re.search(r'class="kb-card[ "]', attrs))
+            # Referenslistan (.kb-sources) ska aldrig wiras. Bibliografiska poster
+            # innehåller ord som råkar vara uppslagsord – "The anatomical basis of
+            # clinical practice" fick tooltipen för basis och "Principles of neural
+            # science" den för neural – och en tooltip mitt i en boktitel är alltid
+            # fel, hur bra nyckeln än är i löptext (SEO_REGLER §6c).
+            is_kb_sources = bool(re.search(r'class="kb-sources[ "]', attrs))
             if (name in ("head", "script", "style") or is_breadcrumb_nav
-                    or (is_kb_card and name != "a")) and not self_closing:
+                    or (is_kb_card and name != "a")
+                    or (is_kb_sources and name != "a")) and not self_closing:
                 protected.append(name)        # öppna skyddad zon
             elif name == "a" and not self_closing:
                 in_anchor = True

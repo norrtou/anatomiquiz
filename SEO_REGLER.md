@@ -264,6 +264,10 @@ Tooltips är kärninnehåll i kunskapsbanken (tabeller OCH faktatexter), inte de
   "Som hör till nerv eller nervsystem" (rättat 2026-07-21 på `anatomiska-riktningar.html`).
   Läs igenom referensblocket efter varje wiring och av-wira träffar inne i titlar – en tooltip
   på ett ord i en bibliografisk post är alltid fel, oavsett hur bra nyckeln är i löptext.
+  **Ordningen spelar roll:** lokal av-wiring måste göras som *sista* steg. Nyckeln finns kvar i
+  facit, så nästa `wire_terms`-körning på samma fil lägger tillbaka länken – vilket hände på
+  `ledtyper.html` 2026-07-21, där `ren`, `region` och `basis` av-wirades och återkom en
+  körning senare.
 - **Ordlisteposten kan vara smalare än sidans användning.** Ett uppslagsord kan vara rätt term
   och ändå ge fel tooltip därför att definitionen bara täcker en klinisk delbetydelse:
   `ulnardeviation` är i ordlistan "felställning … ses bl.a. vid reumatoid artrit", men på en
@@ -445,7 +449,15 @@ print("JSON-LD: giltig")
 import html as _h
 faq=[q["name"] for b in re.findall(r'application/ld\+json">(.*?)</script>',h,re.S)
      if '"FAQPage"' in b for q in json.loads(b)["mainEntity"]]
+# Två markupmönster förekommer: <p><strong>Fråga?</strong><br>svar (artiklar och
+# tabellsidor) och <h3>Fråga?</h3><p>svar (medicinskordlista.html). Snutten måste
+# känna igen båda – med bara det första passerade ordlistans FAQ som "0 synliga",
+# alltså tyst godkänd utan att någonsin ha jämförts (upptäckt 2026-07-21).
 vis=[re.sub(r'<[^>]+>','',s) for s in re.findall(r'<p><strong>(.*?)</strong><br>',h)]
+if not vis:
+    i=h.find('id="faq"')
+    vis=[re.sub(r'<[^>]+>','',s).strip()
+         for s in re.findall(r'<h3[^>]*>(.*?)</h3>',h[i:h.find('</section>',i)],re.S)] if i>0 else []
 if faq or vis:
     print("FAQ:",len(faq),"i JSON-LD /",len(vis),"synliga",
           "-> OK" if [_h.unescape(x) for x in faq]==[_h.unescape(x) for x in vis] else "-> GLIDIT ISÄR")
