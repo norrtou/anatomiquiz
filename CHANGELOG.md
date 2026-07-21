@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.192
+- **Info-sidan: tydligare rubrik och flyttad källista.** Avsnittet "Omfattning" hette något som inte beskrev vad det visar; hetter nu "Antal quizfrågor per ämne". Källistan ("Källor och kvalitetssäkring") är flyttad till sist på sidan, efter frågeantalet, eftersom listan växer kontinuerligt och inte längre hör hemma mitt i sidan.
+- **Ny nyhet på info-sidan (22 juli 2026):** alla utbildningar har nu quizämnen på plats och har genomgått både en maskinell/strukturell granskning och en manuell faktagranskning mot källorna. Arbetet med fler artiklar och andra resurser till kunskapsbanken fortsätter.
+
 ## 0.9.191
 - **Terminologipelarens tre sista sidor är ombyggda till artikelstandard enligt `ARTIKLAR_REGLER.md`.** *Deklinationer & pluralformer* (1 763 → 2 349 ord prosa), *Uttalsregler* (1 232 → 1 937) och *Terminologins historia* (756 → 1 874). Samtliga fem sidor i pelaren är därmed registrerade i `data/artiklar.json` som pelarartiklar med bevarade URL:er, `llms`-beskrivningar, granskningsdatum och `datePublished`/`dateModified` i JSON-LD. Den hårdkodade `kb_pages`-listan i `scripts/generate_glossary.py` innehåller nu bara själva pelarsidan, så ingen sida får två `<url>`-poster i `sitemap.xml`.
 - **Deklinationssidan: ingressen bar en innehållsförteckning i prosaform**, vilket §5.1 förbjuder. Den säger nu i stället tesen — att grundformen inte räcker och att det är genitiven som avgör deklinationen, vilket är varför `nucleus` blir `nuclei` men `sinus` förblir `sinus`. Två nya avsnitt: *Hela namnet böjs, inte bara huvudordet* (huvudord och adjektiv böjs i takt medan genitivbestämningen står kvar — `musculi flexores digitorum`, `ossa metacarpi`) och *Förkortningarna dubblar bokstaven* (m./mm., n./nn., a./aa., lig./ligg. med tabell). Avsnittet "Lathund" är borttaget: det bestod av tvåradsstycken i stakato i strid med §5.2, och dess tabell var en exakt delmängd av snabböversikten längre upp.
