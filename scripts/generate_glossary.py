@@ -1024,7 +1024,6 @@ def write_sitemap(group_files: list[str]) -> None:
     # dubblerad <url>-post i sitemap.xml (ARTIKLAR_REGLER.md §1.6).
     kb_pages = [
         "medicinsk-terminologi",
-        "deklinationer-pluralformer", "uttalsregler", "terminologins-historia",
     ]
 
     blocks = [url_block(f"{SITE}/", "weekly", "1.0")]

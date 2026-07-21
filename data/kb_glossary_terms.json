@@ -24,7 +24,7 @@
 "href": "/ordlista-a.html#term-abduktor"
 },
 "accessorius": {
-"def": "Extra, tillbehörig; n",
+"def": "Extra, tillbehörig; nervus accessorius = 11:e kranialnerven, som innerverar musculus sternocleidomastoideus och trapezius",
 "href": "/ordlista-a.html#term-accessorius"
 },
 "acetabulum": {
@@ -655,10 +655,6 @@
 "def": "Elakartad tumör utgången från epitel (körtel- eller ytvävnad); cancer",
 "href": "/ordlista-c.html#term-carcinoma"
 },
-"carcinomas": {
-"def": "Elakartad tumör utgången från epitel (körtel- eller ytvävnad); cancer",
-"href": "/ordlista-c.html#term-carcinoma"
-},
 "caries": {
 "def": "Frätande sönderfall; om tänder tandröta (karies), i äldre språk även om benröta vid bentuberkulos (caries tuberculosa)",
 "href": "/ordlista-c.html#term-caries"
@@ -924,7 +920,7 @@
 "href": "/ordlista-d.html#term-defekation"
 },
 "deltoideus": {
-"def": "Trekantig, deltaformig; m",
+"def": "Trekantig, deltaformig; musculus deltoideus = deltamuskeln, axelns triangulära muskel",
 "href": "/ordlista-d.html#term-deltoideus"
 },
 "dens": {
@@ -1026,6 +1022,10 @@
 "ductus": {
 "def": "Gång; rörformig kanal för vätsketransport",
 "href": "/ordlista-d.html#term-ductus"
+},
+"dura mater": {
+"def": "Den hårda hjärnhinnan; den yttersta, kraftiga av de tre hinnorna kring hjärna och ryggmärg",
+"href": "/ordlista-d.html#term-dura-mater"
 },
 "dynamometer": {
 "def": "kraftmätare för muskelstyrka",
@@ -1264,15 +1264,15 @@
 "href": "/ordlista-f.html#term-fossa"
 },
 "fossa infraspinata": {
-"def": "Nedre skulderbladsgropen; fördjupningen nedanför skulderbladskammen, för m",
+"def": "Nedre skulderbladsgropen; fördjupningen nedanför skulderbladskammen, ursprung för musculus infraspinatus",
 "href": "/ordlista-f.html#term-fossa-infraspinata"
 },
 "fossa subscapularis": {
-"def": "Skulderbladsgropen; den grunda fördjupningen på skulderbladets framsida där m",
+"def": "Skulderbladsgropen; den grunda fördjupningen på skulderbladets framsida där musculus subscapularis fäster",
 "href": "/ordlista-f.html#term-fossa-subscapularis"
 },
 "fossa supraspinata": {
-"def": "Övre skulderbladsgropen; fördjupningen ovanför skulderbladskammen, för m",
+"def": "Övre skulderbladsgropen; fördjupningen ovanför skulderbladskammen, ursprung för musculus supraspinatus",
 "href": "/ordlista-f.html#term-fossa-supraspinata"
 },
 "foster": {
@@ -1328,7 +1328,7 @@
 "href": "/ordlista-g.html#term-gastrit"
 },
 "gastrocnemius": {
-"def": "Vadmuskel; m",
+"def": "Vadmuskel; musculus gastrocnemius bildar den yttre, bukiga vadmuskeln",
 "href": "/ordlista-g.html#term-gastrocnemius"
 },
 "gastroenterit": {
@@ -1376,7 +1376,7 @@
 "href": "/ordlista-g.html#term-goniometri"
 },
 "gracilis": {
-"def": "Tunn, smal; m",
+"def": "Tunn, smal; musculus gracilis = smalmuskeln på lårets insida, som adducerar",
 "href": "/ordlista-g.html#term-gracilis"
 },
 "griseus": {
@@ -1688,7 +1688,7 @@
 "href": "/ordlista-l.html#term-lateralis"
 },
 "latissimus": {
-"def": "Bredast; m",
+"def": "Bredast; musculus latissimus dorsi = den bredaste ryggmuskeln",
 "href": "/ordlista-l.html#term-latissimus"
 },
 "latus": {
@@ -1732,7 +1732,7 @@
 "href": "/ordlista-l.html#term-linea-musculi-solei"
 },
 "linea pectinea": {
-"def": "Kamlinjen; benlist på lårbenets baksida upptill där m",
+"def": "Kamlinjen; benlist upptill på lårbenets baksida där musculus pectineus fäster",
 "href": "/ordlista-l.html#term-linea-pectinea"
 },
 "linea supracondylaris lateralis": {
@@ -3783,10 +3783,6 @@
 "def": "VPL; den thalamuskärna som tar emot kroppskänsel och vidarebefordrar den till känselbarken",
 "href": "/ordlista-t.html#term-thalamus"
 },
-"nucleusar": {
-"def": "Kärna",
-"href": "/ordlista-n.html#term-nucleus"
-},
 "obliquus": {
 "def": "Sned, diagonal",
 "href": "/ordlista-o.html#term-obliquus"
@@ -3963,6 +3959,10 @@
 "def": "okben (oregelbundet)",
 "href": "/ordlista-o.html#term-os-zygomaticum"
 },
+"ossa carpi": {
+"def": "Handlovsbenen; de åtta små ben som bildar handloven, ordnade i två rader",
+"href": "/ordlista-c.html#term-carpi-ossa"
+},
 "ossa cuneiformia": {
 "def": "kilbenen (kort ben)",
 "href": "/ordlista-o.html#term-ossa-cuneiformia"
@@ -4056,7 +4056,7 @@
 "href": "/ordlista-p.html#term-pecten-ossis-pubis"
 },
 "pectineus": {
-"def": "Som hör till pecten; m",
+"def": "Som hör till pecten (kam); musculus pectineus = kammuskeln, som adducerar och flekterar låret",
 "href": "/ordlista-p.html#term-pectineus"
 },
 "pectoralis": {
@@ -4127,6 +4127,10 @@
 "def": "Som hör till mellangärdet; t.ex. nervus phrenicus (mellangärdesnerven), arteria phrenica",
 "href": "/ordlista-p.html#term-phrenicus"
 },
+"pia mater": {
+"def": "Mjuka hjärnhinnan; den innersta, tunna hinnan som tätt följer hjärnans och ryggmärgens yta",
+"href": "/ordlista-p.html#term-pia-mater"
+},
 "pinchmeter": {
 "def": "mäter nypstyrka mellan fingrarna",
 "href": "/ordlista-p.html#term-pinchmeter"
@@ -4176,7 +4180,7 @@
 "href": "/ordlista-p.html#term-pons"
 },
 "popliteus": {
-"def": "Som hör till knävecket; m",
+"def": "Som hör till knävecket; musculus popliteus = en liten muskel i knävecket",
 "href": "/ordlista-p.html#term-popliteus"
 },
 "posterior": {
@@ -4228,7 +4232,7 @@
 "href": "/ordlista-p.html#term-pronation"
 },
 "pronator": {
-"def": "Inåtvridare; m",
+"def": "Inåtvridare; musculus pronator teres och musculus pronator quadratus utför pronation",
 "href": "/ordlista-p.html#term-pronator"
 },
 "proprioception": {
@@ -4264,7 +4268,7 @@
 "href": "/ordlista-p.html#term-proximalis"
 },
 "psoas": {
-"def": "Ländmuskel; m",
+"def": "Ländmuskel; musculus psoas major förbinder kotorna med trochanter minor och är viktig för höftflexion",
 "href": "/ordlista-p.html#term-psoas"
 },
 "pterygoideus": {
@@ -4300,7 +4304,7 @@
 "href": "/ordlista-q.html#term-quadratus"
 },
 "quadriceps": {
-"def": "Fyrhövdad; m",
+"def": "Fyrhövdad; musculus quadriceps femoris = lårets sträckare, med rectus femoris och tre vasti",
 "href": "/ordlista-q.html#term-quadriceps"
 },
 "radial": {
@@ -4326,6 +4330,10 @@
 "raphe": {
 "def": "Söm; mittlinjens bindvävssöm, t.ex. raphe pharyngis, raphe perinei",
 "href": "/ordlista-r.html#term-raphe"
+},
+"reaktiv artrit": {
+"def": "Ledinflammation som uppstår en tid efter en infektion i tarm eller urinvägar",
+"href": "/ordlista-r.html#term-reaktiv-artrit"
 },
 "receptor": {
 "def": "Mottagarstruktur som fångar upp ett stimulus eller ämne och utlöser ett svar i cellen; sinnescellernas receptorer startar känselsignaler",
@@ -4424,7 +4432,7 @@
 "href": "/ordlista-s.html#term-sagittalplan"
 },
 "sarcoma": {
-"def": "Elakartad tumör utgången från stöd- och bindväv (ben, brosk, muskel, fett, kärl). I äldre diagnoser kombinerat med läge: sarcoma mammae, s",
+"def": "Elakartad tumör utgången från stöd- och bindväv (ben, brosk, muskel, fett, kärl)",
 "href": "/ordlista-s.html#term-sarcoma"
 },
 "sarkom": {
@@ -4432,7 +4440,7 @@
 "href": "/ordlista-s.html#term-sarkom"
 },
 "sartorius": {
-"def": "Som tillhör sartor; m",
+"def": "Som tillhör sartor (skräddare); musculus sartorius = skräddarmuskeln, som löper diagonalt över låret",
 "href": "/ordlista-s.html#term-sartorius"
 },
 "scabies": {
@@ -4476,7 +4484,7 @@
 "href": "/ordlista-s.html#term-septum"
 },
 "serratus": {
-"def": "Sågtandad; m",
+"def": "Sågtandad; musculus serratus anterior = sågmuskeln, med tandformiga ursprung på revbenen",
 "href": "/ordlista-s.html#term-serratus"
 },
 "sinister": {
@@ -4487,16 +4495,12 @@
 "def": "Hålighet, bukt, kurva",
 "href": "/ordlista-s.html#term-sinus"
 },
-"sinusar": {
-"def": "Hålighet, bukt, kurva",
-"href": "/ordlista-s.html#term-sinus"
-},
 "skoliometer": {
 "def": "mäter bålrotation vid skoliosscreening",
 "href": "/ordlista-s.html#term-skoliometer"
 },
 "soleus": {
-"def": "Flundrelik; m",
+"def": "Flundrelik; musculus soleus = flundremuskeln, den djupa vadmuskeln",
 "href": "/ordlista-s.html#term-soleus"
 },
 "spasticitet": {
@@ -4524,7 +4528,7 @@
 "href": "/ordlista-s.html#term-spina"
 },
 "spina iliaca anterior inferior": {
-"def": "Främre nedre höftbenstaggen; benutskott nedanför den främre övre, fäste för m",
+"def": "Främre nedre höftbenstaggen; benutskott nedanför den främre övre, fäste för musculus rectus femoris",
 "href": "/ordlista-s.html#term-spina-iliaca-anterior-inferior"
 },
 "spina iliaca anterior superior": {
@@ -4880,7 +4884,7 @@
 "href": "/ordlista-t.html#term-trochanter-major"
 },
 "trochanter minor": {
-"def": "Lilla benutskottet; en mindre benknöl inåt-nedtill på lårbenshalsens bas, fäste för m",
+"def": "Lilla benutskottet; benknöl inåt-nedtill vid lårbenshalsens bas, fäste för musculus iliopsoas",
 "href": "/ordlista-t.html#term-trochanter-minor"
 },
 "trochlea": {
@@ -4924,7 +4928,7 @@
 "href": "/ordlista-t.html#term-tuberculum"
 },
 "tuberculum adductorium": {
-"def": "Adduktorknölen; liten knöl på inre ledknölens topp där m",
+"def": "Adduktorknölen; liten knöl på inre ledknölens topp där musculus adductor magnus fäster",
 "href": "/ordlista-t.html#term-tuberculum-adductorium"
 },
 "tuberculum infraglenoidale": {
@@ -4976,7 +4980,7 @@
 "href": "/ordlista-t.html#term-tuberositas-tibiae"
 },
 "tuberositas ulnae": {
-"def": "Armbågsbensknölen; sträv yta nedanför kronutskottet där m",
+"def": "Armbågsbensknölen; sträv yta nedanför kronutskottet där musculus brachialis fäster",
 "href": "/ordlista-t.html#term-tuberositas-ulnae"
 },
 "tumör": {
@@ -5540,7 +5544,7 @@
 "href": "/ordlista-c.html#term-clavicula"
 },
 "pronatorer": {
-"def": "Inåtvridare; m",
+"def": "Inåtvridare; musculus pronator teres och musculus pronator quadratus utför pronation",
 "href": "/ordlista-p.html#term-pronator"
 },
 "commune": {
@@ -5783,14 +5787,6 @@
 "def": "Liten utbuktning",
 "href": "/ordlista-d.html#term-diverticulum"
 },
-"sini": {
-"def": "Hålighet, bukt, kurva",
-"href": "/ordlista-s.html#term-sinus"
-},
-"meati": {
-"def": "Gång",
-"href": "/ordlista-m.html#term-meatus"
-},
 "cilia": {
 "def": "Ögonhår; rörlig cellutskott (cilium) på epitelceller",
 "href": "/ordlista-c.html#term-cilium"
@@ -5844,8 +5840,8 @@
 "href": "/ordlista-e.html#term-externus"
 },
 "poplitea": {
-"def": "Som hör till knävecket; m",
-"href": "/ordlista-p.html#term-popliteus"
+"def": "Som hör till knävecket; arteria och vena poplitea löper bakom knäleden",
+"href": "/ordlista-p.html#term-poplitea"
 },
 "kliniskt": {
 "def": "Som rör den direkta undersökningen och vården av patienter vid sjukbädden",
@@ -6799,10 +6795,6 @@
 "def": "Ringformig",
 "href": "/ordlista-a.html#term-anularis"
 },
-"spetsar": {
-"def": "Spets, topp",
-"href": "/ordlista-a.html#term-apex"
-},
 "kindmuskeln": {
 "def": "Hornblåsare",
 "href": "/ordlista-b.html#term-bucinator"
@@ -7147,6 +7139,10 @@
 "def": "Nyckelben",
 "href": "/ordlista-c.html#term-clavicula"
 },
+"bröstbenets handtag": {
+"def": "Bröstbenets handtag (manubrium sterni); sternums övre del, som ledar mot nyckelbenen och första revbenet",
+"href": "/ordlista-m.html#term-manubrium"
+},
 "bröstbenet": {
 "def": "Bröstben",
 "href": "/ordlista-s.html#term-sternum"
@@ -7194,10 +7190,6 @@
 "käkvinkeln": {
 "def": "Underkäksvinkeln",
 "href": "/ordlista-a.html#term-angulus-mandibulae"
-},
-"vanligt": {
-"def": "Vanligt, högmolekylärt heparin",
-"href": "/ordlista-o.html#term-ofraktionerat-heparin"
 },
 "halsens": {
 "def": "Hals",
@@ -7303,10 +7295,6 @@
 "def": "Flundremuskeln",
 "href": "/ordlista-m.html#term-musculus-soleus"
 },
-"viktig": {
-"def": "Stor, viktig",
-"href": "/ordlista-m.html#term-magnus"
-},
 "vadmuskeln": {
 "def": "Vadmuskel",
 "href": "/ordlista-g.html#term-gastrocnemius"
@@ -7350,10 +7338,6 @@
 "armvecket": {
 "def": "Armvecket",
 "href": "/ordlista-f.html#term-fossa-cubitalis"
-},
-"platsen": {
-"def": "Plats",
-"href": "/ordlista-l.html#term-locus"
 },
 "revbensbrosk": {
 "def": "Revbensbrosket",
@@ -7402,10 +7386,6 @@
 "nerverna": {
 "def": "Nerv",
 "href": "/ordlista-n.html#term-nervus"
-},
-"ovanlig": {
-"def": "Ovanlig, ofta ärftligt betingad, avvikande reaktion på ett läkemedel eller annat ämne",
-"href": "/ordlista-i.html#term-idiosynkrasi"
 },
 "medianusnerven": {
 "def": "Nerv från plexus brachialis",
@@ -7699,10 +7679,6 @@
 "def": "Ledhuvud",
 "href": "/ordlista-c.html#term-caput-articulare"
 },
-"disken": {
-"def": "Mellankotskiva",
-"href": "/ordlista-d.html#term-discus-intervertebralis"
-},
 "lårartären": {
 "def": "Lårartären",
 "href": "/ordlista-a.html#term-arteria-femoralis"
@@ -7730,10 +7706,6 @@
 "lårvenen": {
 "def": "Lårvenen",
 "href": "/ordlista-v.html#term-vena-femoralis"
-},
-"vanlig": {
-"def": "Vanlig, ofta ärftlig sjukdom med darrning (skakningar) särskilt vid rörelse och hållning",
-"href": "/ordlista-e.html#term-essentiell-tremor"
 },
 "ledpannan": {
 "def": "Höftledsskål i bäckenet",
@@ -7770,10 +7742,6 @@
 "aponeurosen": {
 "def": "Utbredd sena",
 "href": "/ordlista-a.html#term-aponeurosis"
-},
-"skadas": {
-"def": "Skada eller sjuklig förändring i en vävnad eller ett organ",
-"href": "/ordlista-l.html#term-lesion"
 },
 "snitt": {
 "def": "Operativt snitt i huden eller en vävnad",
@@ -7834,10 +7802,6 @@
 "bröstbenets": {
 "def": "Bröstben",
 "href": "/ordlista-s.html#term-sternum"
-},
-"handtag": {
-"def": "Handtag",
-"href": "/ordlista-m.html#term-manubrium"
 },
 "nyckelbenen": {
 "def": "Nyckelben",
@@ -8039,10 +8003,6 @@
 "def": "Revbensvinkeln",
 "href": "/ordlista-a.html#term-angulus-costae"
 },
-"plattas": {
-"def": "Platta",
-"href": "/ordlista-l.html#term-lamina"
-},
 "bröstkorgens": {
 "def": "Bröstkorgen",
 "href": "/ordlista-c.html#term-cavea-thoracis"
@@ -8058,14 +8018,6 @@
 "korsningen": {
 "def": "Korsning",
 "href": "/ordlista-c.html#term-chiasma"
-},
-"tryck": {
-"def": "Sinnesreceptor som registrerar mekaniska stimuli – beröring, tryck, töjning och vibration",
-"href": "/ordlista-m.html#term-mekanoreceptor"
-},
-"pelare": {
-"def": "Pelare",
-"href": "/ordlista-c.html#term-columna"
 },
 "skenben": {
 "def": "Skenben",

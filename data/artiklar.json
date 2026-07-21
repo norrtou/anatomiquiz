@@ -198,6 +198,93 @@
       "llms": "Faktatext om grekiskan i medicinsk terminologi. Förklarar varför sjukdomar, symtom, undersökningar och ingrepp bär grekiska namn medan anatomin är latinsk, hur de grekiska orden kom in via latinet med omskrivningarna ph, th, ch, rh och y, och hur svenskan sedan förenklat stavningen (c till k, ph till f, th till t, rh till r). Går igenom rötter för organ och vävnader, bindevokalen -o- och när den faller bort, fällan kol- (tjocktarm) kontra kole- (galla), de kliniska efterleden med skillnaden mellan -it och -os, -emi och -uri som fynd snarare än diagnoser, -pati som medvetet vagt efterled och den kirurgiska serien -tomi, -ektomi, -stomi, -plastik och -des, samt de graderande förleden i motsatspar (hyper/hypo, taky/brady, poly/oligo/a-). Avslutas med undantagen: elakartade -om, hybridtermer som appendicit och eponymer som inte går att tyda. Innehåller tabeller över grekiska rötter, kliniska efterled och grekiska förled."
     },
     {
+      "slug": "deklinationer-pluralformer",
+      "sokvag": "/kunskapsbank/deklinationer-pluralformer.html",
+      "titel": "Deklinationer & pluralformer",
+      "kortbeskrivning": "Så böjs de medicinska orden – de fem latinska deklinationerna, de grekiska mönstren och genitiven som avgör vilken plural ett ord får.",
+      "poang": "Grundformen räcker inte för att veta hur ett medicinskt ord böjs – det är genitivformen som avslöjar deklinationen, och därför får nucleus och sinus olika plural trots samma ändelse.",
+      "typ": "oversikt",
+      "pelare": "medicinsk-terminologi",
+      "malgrupp": [
+        "alla"
+      ],
+      "taggar": [
+        "latin",
+        "deklinationer",
+        "pluralformer",
+        "genitiv",
+        "böjning"
+      ],
+      "publicerad": "2026-06-25",
+      "uppdaterad": "2026-07-21",
+      "granskad": "2026-07-21",
+      "beroenden": [
+        "medicinskt-latin"
+      ],
+      "tabeller": [
+        "/kunskapsbank/muskeltabeller.html",
+        "/kunskapsbank/skelett-handen.html"
+      ],
+      "status": "live",
+      "llms": "Faktatext om hur medicinska termer böjs. Förklarar vad en deklination är, skillnaden mellan kasus, numerus och genus, och varför genitivformen – inte grundformen – avgör vilken böjningsgrupp ett ord tillhör och därmed vilken plural det får. Går igenom de fem latinska deklinationerna var för sig (-a till -ae, -us till -i, -um till -a, tredje deklinationens -is till -es, -ex och -ix till -ices, -en till -ina och de oregelbundna neutra som corpus, femur och caput, samt fjärde och femte deklinationens oförändrade plural i sinus, plexus och facies), de grekiska mönstren -ma till -mata, -on till -a och -nx till -nges, genitiven i sammansatta anatomiska namn som caput femoris och falx cerebri, kongruensen mellan substantiv och adjektiv, hur hela flerordsnamn sätts i plural medan genitivbestämningen står kvar, och de anatomiska förkortningarnas plural genom dubblerad bokstav (m./mm., n./nn., a./aa., lig./ligg.). Avslutas med fallgroparna kring -us i tre deklinationer, ord på -a som redan är plural och tvetydiga os, samt en frågedel om enskilda pluralformer."
+    },
+    {
+      "slug": "uttalsregler",
+      "sokvag": "/kunskapsbank/uttalsregler.html",
+      "titel": "Uttalsregler",
+      "kortbeskrivning": "Så uttalas medicinskt latin och grekiska – klassiskt mot medicinskt uttal, diftonger, betoningsregler och hela grekiska alfabetet.",
+      "poang": "Vårdens latinuttal är inte antikens utan en svensk variant av medeltidens, och därför är ”bi-seps” rätt medan den historiskt trognare formen vore obegriplig på en rond.",
+      "typ": "oversikt",
+      "pelare": "medicinsk-terminologi",
+      "malgrupp": [
+        "alla"
+      ],
+      "taggar": [
+        "uttal",
+        "latin",
+        "grekiska alfabetet",
+        "betoning",
+        "diftonger"
+      ],
+      "publicerad": "2026-06-24",
+      "uppdaterad": "2026-07-21",
+      "granskad": "2026-07-21",
+      "beroenden": [],
+      "tabeller": [
+        "/kunskapsbank/muskeltabeller.html"
+      ],
+      "status": "live",
+      "llms": "Faktatext om hur medicinskt latin och grekiska uttalas. Skiljer på klassiskt (restituerat), kyrkligt och nationellt skoluttal och förklarar varför vården ärvde en svensk variant av det medeltida uttalet i stället för antikens, samt hur språkforskare över huvud taget kan rekonstruera latinets ljud (grammatikernas beskrivningar, felstavningar i inskrifter, grekiska omskrivningar, versmått och dotterspråken – med Caesar/Kaiser/tsar som exempel). Går igenom vokaler och diftonger (ae och oe till e, au, eu som ofta blir ev i svenska), konsonantfallen c och g framför ljus vokal, sc, ti före vokal med undantagen efter s, t och x, ch, ph, th, rh, qu, ngu och su, samt betoningsreglerna: aldrig sista stavelsen, penultimans längd avgör, ändelserna -alis, -aris, -osus, -atus och -ura drar till sig betoningen medan diminutivens -ulus skjuter den bakåt. Innehåller tabeller över klassiskt kontra medicinskt uttal, diftonger, konsonantkombinationer, betoningsexempel och hela det grekiska alfabetet med omskrivning och uttal. Avslutas med att franska och tyska lånord samt eponymer uttalas efter sitt eget ursprungsspråk."
+    },
+    {
+      "slug": "terminologins-historia",
+      "sokvag": "/kunskapsbank/terminologins-historia.html",
+      "titel": "Terminologins historia",
+      "kortbeskrivning": "Från Hippokrates och Galenos via det arabiska mellanledet och Vesalius till Terminologia Anatomica – och frågan om eponymerna.",
+      "poang": "Fackspråkets egenheter går inte att härleda ur något system utan bara ur historien: varje lager i terminologin motsvarar en period då en annan del av världen drev medicinen framåt.",
+      "typ": "oversikt",
+      "pelare": "medicinsk-terminologi",
+      "malgrupp": [
+        "alla"
+      ],
+      "taggar": [
+        "medicinhistoria",
+        "nomenklatur",
+        "eponymer",
+        "Terminologia Anatomica",
+        "Vesalius"
+      ],
+      "publicerad": "2026-06-25",
+      "uppdaterad": "2026-07-21",
+      "granskad": "2026-07-21",
+      "beroenden": [],
+      "tabeller": [
+        "/kunskapsbank/muskeltabeller.html"
+      ],
+      "status": "live",
+      "llms": "Faktatext om den medicinska terminologins historia. Följer fackspråket lager för lager: den grekiska grunden hos Hippokrates och Galenos (inklusive humoralpatologins kvarlevor i melankolisk, flegmatisk, kolerisk och sangvinisk), det arabiska mellanledet med översättningsarbetet i Bagdad, Ibn Sinas Medicinens kanon och lånord som nucha samt de ordagranna översättningarna dura mater och pia mater, Vesalius De humani corporis fabrica 1543 med boktryckarkonstens roll och den beskrivande namngivningen (tibia = flöjt, malleus = hammare), Linnés latinska systematik, och standardiseringen från Basle Nomina Anatomica 1895 via Jena och Paris till Terminologia Anatomica 1998 och dess andra upplaga 2019 under FIPAT och IFAA. Behandlar också eponymernas nedgång, inklusive namnbyten av icke-språkliga skäl (Wegeners granulomatos till granulomatos med polyangit, Reiters syndrom till reaktiv artrit) och genitivfrågan Downs kontra Down syndrom, samt vad standardiseringen inte löste: diagnoserna styrs av ICD och ICD-10-SE och journaltexten av begreppssystem som SNOMED CT, inte av anatomins nomenklatur. Avslutas med argumentet för döda språk och dess försvagning i takt med engelskans övertagande."
+    },
+    {
       "slug": "franska-och-tyska-i-medicinskt-sprak",
       "titel": "Franska och tyska i medicinskt språk",
       "kortbeskrivning": "Lånorden mellan latinet och engelskan – varför franskan gav instrument och kliniska tecken, och tyskan begrepp och syndrom.",

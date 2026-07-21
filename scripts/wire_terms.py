@@ -42,6 +42,14 @@ WORD = r"[0-9A-Za-zÀ-ÖØ-öø-ÿ]"
 BLOCKERADE = {
     "centrum",   # -> centrum (anatomiskt); flerordsnyckeln "centrum tendineum"
                  #    finns i facit och matchas som hel fras (§6c längsta match)
+    "genus",     # -> genu (knä). Aliaset finns för genitiven i "articulatio
+                 #    genus", men ordet betyder i löptext grammatiskt kön eller
+                 #    biologiskt släkte – "genus styr adjektivets ändelse" fick
+                 #    tooltipen "Knä" på deklinationssidan. Flerordsnycklar med
+                 #    genus matchas fortfarande som hela fraser (§6c).
+    "kasus",     # -> kasus (sjukdomsfall). På deklinationssidan betyder ordet
+                 #    grammatiskt kasus; ordlisteposten täcker bara den
+                 #    epidemiologiska betydelsen.
     "koncentration",  # ordlisteposten avser ENBART den kognitiva betydelsen
                       # ("förmågan att hålla kvar uppmärksamheten"). I medicinsk
                       # löptext betyder ordet nästan alltid halten av ett löst

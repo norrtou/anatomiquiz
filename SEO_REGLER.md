@@ -157,6 +157,10 @@ abstrakt eller tesformulerat.
 Regler:
 
 - **FAQPage måste spegla en synlig FAQ** på sidan, ord för ord i sak (annars policybrott).
+  **Kontrollera antalet frågor i båda riktningarna, inte bara att en FAQ finns.** Listorna
+  glider isär tyst när sidan revideras: `deklinationer-pluralformer.html` hade sex frågor i
+  märkningen och sju på sidan, varav en (*pluralis av carcinoma*) bara fanns i JSON-LD och två
+  bara i brödtexten (rättat 2026-07-21). Snutten i §12 jämför numera listorna par för par.
 - `inLanguage: "sv-SE"`, `isAccessibleForFree: true`, `publisher`/`author` = Norrtou Creations / Anatomiquiz.
 - **`breadcrumb` ska ALDRIG nästlas som property inuti Article/LearningResource/CollectionPage-blocket**
   när `@type` är en array (flera typer). Ahrefs schema.org-validator (och andra strikta validatorer)
@@ -243,6 +247,22 @@ Tooltips är kärninnehåll i kunskapsbanken (tabeller OCH faktatexter), inte de
   Kriteriet är att **ordlisteposten bara täcker EN av ordets betydelser**: `koncentration`
   är definierad kognitivt ("hålla kvar uppmärksamheten") men betyder i medicinsk löptext
   nästan alltid halten av ett löst ämne, så tooltipen blev direkt vilseledande.
+- **Vardagsord och böjda verbformer hör inte hemma i facit.** Tolv sådana nycklar låg live
+  och wirade 25 gånger: `vanlig` → essentiell tremor, `vanligt` → ofraktionerat heparin,
+  `viktig` → magnus, `tryck` → mekanoreceptor, `platsen` → locus, `disken` → discus
+  intervertebralis, `pelare` → columna, samt verbformerna `plattas`, `spetsar` och `skadas`
+  (rensade 2026-07-21). Testet är enkelt: **skulle nyckeln kunna stå i en godtycklig svensk
+  mening utan att betyda termen?** Då ska den bort. Behövs ordet ändå på en enskild sida –
+  som `handtag` i *bröstbenets handtag* – lägg in **hela frasen** som facitnyckel i stället,
+  och av-wira det enskilda ordet så att frasen kan vinna på längsta match.
+- **Motexempel får ALDRIG wiras – och aldrig hamna i facit.** En språksida citerar med flit
+  former som är fel (”det heter *sinus*, inte *sini* eller *meati*”; ”hybrider som *sinusar*
+  eller *nucleusar* bör undvikas”). Wiras de får läsaren en tooltip som intygar att den
+  felaktiga formen är ett uppslagsord, och eftersom `build_terms()` bygger facit ur redan
+  wirade sidor läser sig felet självt in i `kb_glossary_terms.json` och sprids vidare. Fem
+  sådana nycklar låg i facit (`sini`, `sinusar`, `nucleusar`, `meati`, `carcinomas`) och var
+  wirade nio gånger på deklinationssidan (rensat 2026-07-21). Håll citerade felformer utanför
+  både HTML-wiringen och facit; är formen redan wirad, av-wira den innan facit byggs om.
 - **Bindestrecksfällan.** Ordgränsen i `wire_terms.py` räknar inte `-`/`–` som ordtecken, så en
   nyckel matchar även **andra ledet i en sammansättning**. Oftast rätt (`MCP-flexion`,
   `cauda equina-syndrom`), men fel när sammansättningen betyder något annat än ordet ensamt:
@@ -255,7 +275,10 @@ Tooltips är kärninnehåll i kunskapsbanken (tabeller OCH faktatexter), inte de
   en gång genom en hård `def[:140]`-klippning utan ord- och parentesgräns, plus en klippning
   som utlöstes av punkten i `bl.a.` / `t.ex.` / `Sv.` – 49 tooltips låg live som
   "Kroppens försvarsreaktion på skada eller retning (av" och "Vänster (sida). Sv"
-  (lagade 2026-07-21). Taket är 140 tecken; klipp vid `;`, `,` eller ordgräns och balansera
+  (lagade 2026-07-21). **Sök igenom HELA facit, inte bara de sidor arbetspasset rör:** den
+  första lagningen utgick från de sidor som redigerades just då, och 24 defekter till
+  hittades senare samma dag i resten av facit – alla avklippta vid punkten i `m.`, som
+  "Vadmuskel; m" och "Bredast; m". Regex som fångar dem: `[;,:]\s*\w{1,2}$`. Taket är 140 tecken; klipp vid `;`, `,` eller ordgräns och balansera
   parenteserna. **Klipp aldrig maskinellt utan att läsa resultatet** – en mekanisk omklippning
   tappade den psykiatriska betydelsen ur `depression` och abduktorsvagheten ur `Trendelenburg`.
 - **Ändrad `def` slår inte igenom av sig själv.** `data-def` är inbakad i HTML:en och
@@ -402,6 +425,14 @@ for b in re.findall(r'application/ld\+json">(.*?)</script>',h,re.S):
 print("tabeller",h.count('<table'),"captions",h.count('<caption>'),
       "-> OK" if h.count('<table')==h.count('<caption>') else "-> SAKNAS")
 print("JSON-LD: giltig")
+# FAQPage speglar synlig FAQ (§6): jämför fråga för fråga, i ordning.
+import html as _h
+faq=[q["name"] for b in re.findall(r'application/ld\+json">(.*?)</script>',h,re.S)
+     if '"FAQPage"' in b for q in json.loads(b)["mainEntity"]]
+vis=[re.sub(r'<[^>]+>','',s) for s in re.findall(r'<p><strong>(.*?)</strong><br>',h)]
+if faq or vis:
+    print("FAQ:",len(faq),"i JSON-LD /",len(vis),"synliga",
+          "-> OK" if [_h.unescape(x) for x in faq]==[_h.unescape(x) for x in vis] else "-> GLIDIT ISÄR")
 PY
 # (sätt F=… till filsökvägen)
 ```

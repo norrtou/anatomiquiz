@@ -488,6 +488,19 @@ exempel. Minnet är kopian; det här dokumentet är originalet.
   anses klart** — ett styrdokument vars exempel inte passerar sin egen grind är inte färdigt.
   Vid krock: rätta dokumentet efter validatorn, inte tvärtom. Frestelsen är att luckra upp
   kontrollen för att rädda texten man just skrivit.
+- **2026-07-21** — **En sida om språkets regler drar till sig fel som andra sidor inte kan få.**
+  Deklinationssidan citerar med flit former som är fel (*sini*, *meati*, *sinusar*), och
+  tooltip-wiringen gjorde dem till uppslagsord som sedan lästes in i facit. Samma sida hade
+  dessutom grammatikorden *genus* och *kasus* länkade till ordlistans *genu* (knä) respektive
+  *kasus* (sjukdomsfall) – rätt uppslagsord, fel betydelse i just den texten. Båda feltyperna
+  är nu inskrivna i `SEO_REGLER.md` §6c. **Läs igenom tooltipsen i en språkartikel för hand
+  efter wiringen**; kriteriet ”termen finns i ordlistan” räcker inte när sidan handlar om orden
+  själva i stället för om strukturerna de betecknar.
+- **2026-07-21** — **Revidering av en gammal sida är också en FAQ-revidering.** Den synliga
+  FAQ:n och `FAQPage`-blocket på deklinationssidan hade glidit isär i tysthet: sex frågor i
+  märkningen, sju på sidan, och bara fem gemensamma. Ingen validator på sajten fångade det
+  förrän jämförelsen skrevs in i verifieringssnutten (`SEO_REGLER.md` §12). Kör den mot varje
+  sida som har FAQ, även när arbetspasset inte rör själva frågorna.
 - **2026-07-20** — AI-genererade innehållsförslag kan presentera *policyförslag* och
   *provformat* som genomförd verklighet. Två av råmaterialets högst prioriterade förslag föll
   på faktakontroll (§13). **Kontrollera alltid ett förslags faktapremiss innan det planeras in**,
