@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.209
+- **Guinness World Records borttaget ur källistorna.** Uppgifterna är korrekta, men en rekordbok hör inte hemma bland referenserna på en medicinsk sida – den drar ner intrycket av hela listan. Två poster bort från läkemedelsberäknarens referenser och två från källistan i info.html.
+- Rimlighetskontrollens gränser är oförändrade: kroppsvikt 0,2–700 kg står kvar, liksom varningstexternas hänvisningar till lägsta födelsevikt någon överlevt och tyngsta dokumenterade kroppsvikt. Det var källhänvisningen som togs bort, inte underlaget.
+
 ## 0.9.208
 - **Rimlighetskontroll i läkemedelsberäknaren.** Räknarna vet inte vilket preparat det gäller och kan därför aldrig avgöra om en dos är *rätt* – men de kan avgöra om ett värde över huvud taget kan förekomma. Kontrollen ligger på storleksordning, vilket också är där de vanligaste felen syns: ett tiopotens- eller enhetsfel flyttar svaret långt utanför spannet.
 - **Två nivåer, båda under svaret.** Röd ruta när värdet är omöjligt: rubrik *Varning: orimligt värde*, vad som är orimligt, och den stående raden *Kan orsaka livsfara – kontrollera dina uppgifter en gång till*. Gul ruta när värdet är möjligt men ovanligt: rubrik *Kontrollera värdet* och skälet. De tre mjuka varningar som redan fanns (liten dosvolym, fler än fyra tabletter, takt över 999 ml/h) ingår nu i den gula nivån i stället för att stå för sig.
