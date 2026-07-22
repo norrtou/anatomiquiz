@@ -30,6 +30,7 @@ const EDUCATIONS = [
   { name: 'Allmänt', topics: [
     { label: 'Farmakologi',                 file: './data/farmakologi.json', fc: true },
     { label: 'Franska termer i anatomin',   file: './data/franska_termer.json' },
+    { label: 'Grekiska termer i anatomin',  file: './data/grekiska_termer.json' },
     { label: 'Tyska termer i anatomin',     file: './data/tyska_termer.json' },
   ]},
   { name: 'Arbetsterapeut', topics: [
