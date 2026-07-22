@@ -1,5 +1,23 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.204
+- **Ny avdelning i kunskapsbanken: Verktyg.** Sjunde kortet på `kunskapsbank/index.html`, på samma nivå som Ordlistan, Case och Faktatexter – inte en ämneshubb under Faktatexter, eftersom ett verktyg inte är en text och inte hör hemma i artikelregistret. Hubben ligger på `/kunskapsbank/verktyg/` så att den kan växa utan att någon URL flyttar.
+- **Läkemedelsberäknaren** (`/kunskapsbank/verktyg/lakemedelsberakning.html`) – fyra räknare på en sida, alla efter samma princip: fyll i det du vet, lämna det du vill veta tomt, så räknas det ut. Inget val av "vad vill du räkna" behövs, eftersom det tomma fältet *är* frågan.
+  - **Enhetsomvandlare** för massa, volym, tid och koncentration. Ett tal in, alla enheter ut samtidigt – ingen från- och till-väljare.
+  - **Dos och styrka** enligt ordination = styrka × dos, för flytande beredningar och tabletter, med ett delblock som räknar fram ordinationen ur vikt och mg/kg.
+  - **Infusion** enligt volym = hastighet × tid, plus droppar per minut ur droppfaktorn och den omvända räkningen från mg/kg/h till ml/h.
+  - **Spädning** enligt styrka₁ × volym₁ = styrka₂ × volym₂, med spädningsvätskans volym som härlett svar.
+- **Svaret visas aldrig ensamt.** Varje resultat följs av den insatta uträkningen med enheterna utskrivna (`500 mg ÷ 20 mg/ml = 25 ml`), i linje med det faktatexten lär ut om enhetsräkning. Är alla fält ifyllda kontrollerar räknaren i stället om talen hänger ihop.
+- **Träningsläge per räknare.** Slås det på döljs svaret och ersätts av ett tomt "Ditt svar"-fält på samma plats; facit visas först när något fyllts i. Lägesskillnaden är gränssnittsskillnaden – i träningsläget finns ingen siffra att läsa av, så lägena kan inte förväxlas. Kortet byter dessutom färg och rubrikfärg, och reglaget sitter per räknare i stället för globalt. Ett svar som ligger en tiopotens eller en faktor 1000 fel får en egen ledtråd.
+- **Rimlighetsvarningar** som speglar faktatextens avsnitt om rimlighetsbedömning: volymer under 0,1 ml, fler än fyra tabletter i en dos, takt över 999 ml/h, tablettantal som varken är helt eller halvt, och spädningar som inte går att genomföra eftersom koncentratet är svagare än målstyrkan.
+- **Gränssnittet är byggt för mobil.** Enhetsväljaren sitter inuti fältet direkt bredvid talet, eftersom det är där felen uppstår. `inputmode="decimal"`, 46 px höga fält, live-uträkning utan Beräkna-knapp, och **svenskt decimalkomma fungerar lika bra som punkt**.
+- **Säkerhetshållningen är inbyggd, inte påklistrad.** Sidan inleds med att räknarna är ett studieverktyg och inte ett hjälpmedel vid patient, och att de inte ersätter ordination, FASS eller lokala rutiner. Att varje svar visar sin uträkning gör verktyget till ett facit att kontrollera mot snarare än en svarsautomat.
+- Stilarna ligger i en egen `css/verktyg.css` som bara laddas av verktygssidorna – att lägga dem i `styles.css` hade tvingat fram en cachebusterhöjning av stilmallen på hela sajten. Färger och mått ärvs från `:root`, så verktygen ser ut som resten.
+- Utan JavaScript visas i stället en hänvisning till uppslagstabellerna och faktatexten, så sidan aldrig blir tom.
+- Korslänkar åt båda håll mellan räknaren, faktatexten `lakemedelsberakning.html` och uppslagstabellerna `lakemedelsberakning-omvandlingar.html`.
+- `sitemap.xml` får verktygs-URL:erna via `generate_glossary.py` (samma ställe som övriga hårdkodade sidor), och `llms.txt` en egen `## Verktyg`-sektion.
+- Räknarnas logik är testad mot 42 fall – varje formel åt varje håll, enhetsbyten, ogiltig inmatning, konsistenskontroll, samtliga rimlighetsvarningar och hela träningsläget.
+
 ## 0.9.203
 - **Tre gamla faktatexter ombyggda till artikelstandard (ARTIKLAR_REGLER §2, §5).** Samtliga låg under typens ordspann och bar bärande resonemang som punktlistor. URL:erna är oförändrade (§1.1).
   - **Så styrs en rörelse** 596 → 2 005 prosaord, 167 tooltips. Nytt: tvåneuronsprincipen och det nedre motorneuronet som slutlig gemensam bana, somatotopin i motorbarken, capsula interna, främre kortikospinalbanan och bålens bilaterala styrning, kortikobulbärbanan med mekanismen bakom central kontra perifer ansiktsförlamning, motoriska enheten med innervationskvot och rekryteringsordning, neuromuskulära överföringen med acetylkolinesteras och säkerhetsmarginal, spinal chock före spasticiteten, samt muskelspole och gammamotorneuron som förklaring till stegrad tonus. Ny FAQ (5 frågor) speglad mot `FAQPage`.

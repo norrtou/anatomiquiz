@@ -1,0 +1,479 @@
+/* =========================================================
+   verktyg.css — räknare i kunskapsbankens verktygsavdelning
+   =========================================================
+   Egen fil, laddas bara av sidorna under /kunskapsbank/verktyg/.
+   Skälet är cachebustern: stilarna behövs på två sidor, och att
+   lägga dem i styles.css hade tvingat fram en versionshöjning av
+   stilmallen på hela sajten. Alla färger och mått ärvs från
+   :root i styles.css, så verktygen ser ut som resten av sidan.
+   ========================================================= */
+
+/* ---------- Verktygskortet ---------- */
+
+.vt-tool {
+  border: 1px solid rgba(16, 185, 129, 0.18);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  padding: 18px;
+  margin-bottom: 20px;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.vt-tool-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 12px;
+  margin-bottom: 4px;
+}
+
+.vt-tool-head h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--primary-deep);
+}
+
+.vt-tool-intro {
+  margin: 0 0 14px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ---------- Lägesväljare (Räkna / Träna) ---------- */
+
+.vt-mode {
+  display: inline-flex;
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.vt-mode button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--primary-deep);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 7px 14px;
+  min-height: 38px;
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.vt-mode button + button {
+  border-left: 2px solid var(--primary);
+}
+
+.vt-mode button[aria-pressed="true"] {
+  background: var(--primary-deep);
+  color: var(--text-light);
+}
+
+.vt-mode button:focus-visible {
+  outline: 3px solid var(--primary-dark);
+  outline-offset: -3px;
+}
+
+/* ---------- Fälten ---------- */
+
+.vt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+}
+
+.vt-field > span {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+/* Talet och enheten sitter i samma ram: enhetsbytet ska aldrig
+   ligga längre bort än ett tryck från siffran, eftersom det är
+   där felen uppstår. */
+.vt-inputrow {
+  display: flex;
+  align-items: stretch;
+  border: 2px solid rgba(16, 185, 129, 0.35);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+
+.vt-inputrow:focus-within {
+  border-color: var(--primary-dark);
+}
+
+.vt-inputrow input {
+  flex: 1 1 auto;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  padding: 11px 12px;
+  font: inherit;
+  font-size: 1.05rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-primary);
+  min-height: 46px;
+}
+
+.vt-inputrow input:focus {
+  outline: none;
+}
+
+.vt-inputrow select {
+  flex: 0 0 auto;
+  border: 0;
+  border-left: 1px solid rgba(16, 185, 129, 0.25);
+  background: rgba(16, 185, 129, 0.07);
+  color: var(--primary-deep);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0 8px;
+  cursor: pointer;
+}
+
+.vt-inputrow select:focus-visible {
+  outline: 3px solid var(--primary-dark);
+  outline-offset: -3px;
+}
+
+/* Fast enhet utan valmöjlighet visas som text, inte som select. */
+.vt-unit-fixed {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  border-left: 1px solid rgba(16, 185, 129, 0.25);
+  background: rgba(16, 185, 129, 0.07);
+  color: var(--primary-deep);
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Fältet som just nu är det uträknade svaret. */
+.vt-field.is-svar .vt-inputrow {
+  border-color: var(--primary-deep);
+  border-style: dashed;
+  background: var(--success-bg);
+}
+
+.vt-field.is-svar input {
+  color: var(--primary-deep);
+  font-weight: 700;
+}
+
+/* ---------- Utfallet ---------- */
+
+.vt-out {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--success-bg);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.vt-out.is-tom {
+  background: rgba(107, 114, 128, 0.06);
+  border-color: rgba(107, 114, 128, 0.2);
+}
+
+.vt-out-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  margin-bottom: 2px;
+}
+
+.vt-out-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-deep);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+}
+
+.vt-out.is-tom .vt-out-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Den insatta formeln — svaret ska aldrig stå ensamt. */
+.vt-calc {
+  margin-top: 6px;
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+  overflow-x: auto;
+}
+
+.vt-extra {
+  margin-top: 6px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.vt-warn {
+  margin-top: 10px;
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  border-left: 4px solid var(--warning);
+  background: #fffbeb;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+}
+
+/* ---------- Träningsläget ---------- */
+
+/* Kortet ska synas som ett annat läge på en meters avstånd, inte
+   bara via reglagets tillstånd. */
+.vt-tool.is-trana {
+  border-left-color: var(--accent-dark);
+  background: rgba(13, 148, 136, 0.035);
+}
+
+.vt-tool.is-trana .vt-tool-head h3 {
+  color: var(--accent-dark);
+}
+
+.vt-tool.is-trana .vt-mode {
+  border-color: var(--accent-dark);
+}
+
+.vt-tool.is-trana .vt-mode button {
+  color: var(--accent-dark);
+}
+
+.vt-tool.is-trana .vt-mode button + button {
+  border-left-color: var(--accent-dark);
+}
+
+.vt-tool.is-trana .vt-mode button[aria-pressed="true"] {
+  background: var(--accent-dark);
+  color: var(--text-light);
+}
+
+.vt-tool.is-trana .vt-field.is-svar .vt-inputrow {
+  border-color: var(--accent-dark);
+  background: rgba(13, 148, 136, 0.06);
+}
+
+.vt-tool.is-trana .vt-field.is-svar input {
+  color: var(--accent-dark);
+}
+
+.vt-svarsruta {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  background: rgba(13, 148, 136, 0.06);
+  border: 1px dashed var(--accent-dark);
+}
+
+.vt-svarsruta .vt-out-label {
+  color: var(--accent-dark);
+}
+
+.vt-svarsrad {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: stretch;
+  margin-top: 6px;
+}
+
+.vt-svarsrad .vt-inputrow {
+  flex: 1 1 140px;
+  border-color: var(--accent-dark);
+}
+
+.vt-svarsrad button {
+  flex: 0 0 auto;
+  min-height: 46px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: var(--accent-dark);
+  color: var(--text-light);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter var(--transition-fast);
+}
+
+.vt-svarsrad button:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.vt-svarsrad button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.vt-dom {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.vt-dom.ratt {
+  background: var(--success-bg);
+  border-left: 4px solid var(--success);
+  color: var(--text-primary);
+}
+
+.vt-dom.fel {
+  background: var(--error-bg);
+  border-left: 4px solid var(--error);
+  color: var(--text-primary);
+}
+
+/* ---------- Omvandlaren ---------- */
+
+.vt-omv-ut {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.vt-omv-post {
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--success-bg);
+  border: 1px solid rgba(16, 185, 129, 0.22);
+}
+
+.vt-omv-post.is-kalla {
+  background: rgba(16, 185, 129, 0.16);
+  border-color: var(--primary-dark);
+}
+
+.vt-omv-varde {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary-deep);
+  font-variant-numeric: tabular-nums;
+  word-break: break-word;
+}
+
+.vt-omv-enhet {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* ---------- Övrigt ---------- */
+
+.vt-flikar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.vt-flikar button {
+  appearance: none;
+  border: 2px solid rgba(16, 185, 129, 0.35);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--primary-deep);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 7px 14px;
+  min-height: 40px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.vt-flikar button[aria-pressed="true"] {
+  background: var(--primary-deep);
+  border-color: var(--primary-deep);
+  color: var(--text-light);
+}
+
+.vt-flikar button:focus-visible {
+  outline: 3px solid var(--primary-dark);
+  outline-offset: 2px;
+}
+
+.vt-delblock {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(16, 185, 129, 0.3);
+}
+
+.vt-delblock > h4 {
+  margin: 0 0 4px;
+  font-size: 0.92rem;
+  color: var(--primary-deep);
+}
+
+.vt-delblock > p {
+  margin: 0 0 10px;
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+}
+
+.vt-nollstall {
+  margin-top: 12px;
+  text-align: right;
+}
+
+.vt-nollstall button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--text-secondary);
+  font: inherit;
+  font-size: 0.85rem;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 8px 4px;
+  min-height: 40px;
+}
+
+.vt-nollstall button:hover {
+  color: var(--primary-deep);
+}
+
+/* Säkerhetsraden. Ska läsas, inte skrollas förbi. */
+.vt-ansvar {
+  border-left: 4px solid var(--warning);
+  background: #fffbeb;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 20px;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.vt-ansvar strong {
+  color: #92400e;
+}
+
+@media (max-width: 480px) {
+  .vt-tool { padding: 14px; }
+  .vt-grid { grid-template-columns: 1fr; }
+  .vt-tool-head { flex-direction: column; align-items: stretch; }
+  .vt-mode { align-self: flex-start; }
+}
