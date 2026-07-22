@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.201
+- **Rättat ytterligare en avslöjande fråga i "Grekiska termer i anatomin" (`gre_epo_20`), påtalat av användaren efter 0.9.200.** Prompten stavade ut rätt svars exakta form ("en enda orm slingrad runt en stav utan vingar") och en distraktor angav den uttryckliga MOTSATSEN ("två ormar och vingar") – ren logisk negation, ingen sakkunskap krävdes. Skriven om så att ingen beskrivning i prompten härrör ur eller motsäger något alternativ; varje alternativ ("Asklepiosstaven, en enda orm slingrad runt en stav" / "Herolds stav (caduceus), två ormar slingrade runt en bevingad stav" / …) bär nu sin egen, symmetriska beskrivning.
+- Efter fixen genomlästes **hela filen (50 frågor) på nytt, fråga för fråga isolerat** – inte bara jakt på redan kända mönster – samt hela `franska_termer.json` och `tyska_termer.json` för samma feltyp. Inga fler fall hittades i någon av de tre filerna.
+- Ny variant av kategori-/typläckage kodifierad i `CLAUDE_REGLER.md` §2.9 ("bild-/formbeskrivningsfrågor"), med en uttrycklig lärdom om att en genomläsning som bara letar efter EN redan hittad feltyp inte räcker.
+- `python3 scripts/validate_quiz.py data/grekiska_termer.json`: 0 varningar/fel.
+
 ## 0.9.200
 - **Rättat tre avslöjande frågor i "Grekiska termer i anatomin", påtalat av användaren.** En ny variant av kategori-/typläckage (§2.9): i uppföljningsfrågor av typen "vad kallas/kännetecknar X, uppkallad efter [gud]?" upprepade prompten samma mytologiska/beskrivande drag som redan använts för att peka ut guden i föregående fråga – och det draget matchade bara det korrekta alternativets egen betydelse, inte distraktorernas (som hörde till ett helt annat begreppsområde). Gick alltså att lösa på ren temamatchning, utan kunskap om guden eller ämnet.
   - `gre_epo_6`: "… uppkallat efter en grekisk fruktbarhetsgud som ofta avbildades med en ihållande erektion?" avslöjade Priapism (enda alternativet om erektion, mot Fimosis/Epididymit/Hydrocele). Prompten skriver nu bara ut gudens namn: "… som är uppkallat efter fruktbarhetsguden Priapus?"
