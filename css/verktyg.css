@@ -113,9 +113,15 @@
   border-color: var(--primary-dark);
 }
 
+/* styles.css sätter globalt `input, select { width: 100%; margin-bottom: 8px }`.
+   Utan att nollställa båda här blir rullgardinen 100 % bred och klämmer ihop
+   talfältet till några pixlar – då går det inte att skriva i det. */
 .vt-inputrow input {
   flex: 1 1 auto;
+  width: auto;
   min-width: 0;
+  margin: 0;
+  max-width: none;
   border: 0;
   background: transparent;
   padding: 11px 12px;
@@ -132,6 +138,9 @@
 
 .vt-inputrow select {
   flex: 0 0 auto;
+  width: auto;
+  max-width: 45%;
+  margin: 0;
   border: 0;
   border-left: 1px solid rgba(16, 185, 129, 0.25);
   background: rgba(16, 185, 129, 0.07);

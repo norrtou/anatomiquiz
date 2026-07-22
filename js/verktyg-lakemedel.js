@@ -31,13 +31,17 @@
     return parseFloat(t);
   }
 
-  /** Antal decimaler som är meningsfullt att visa för ett tal. */
+  /** Antal decimaler som är meningsfullt att visa för ett tal.
+      Mycket små tal måste få fler decimaler, annars visas 0,5 mg som
+      "0 kg" i omvandlaren i stället för 0,0000005 kg. */
   function decimaler(n) {
     var a = Math.abs(n);
+    if (a === 0) return 0;
     if (a >= 100) return 1;
     if (a >= 1) return 2;
     if (a >= 0.1) return 3;
-    return 4;
+    if (a >= 0.001) return 4;
+    return Math.min(12, Math.ceil(-Math.log10(a)) + 2);
   }
 
   /** Formaterar ett tal med svenskt decimalkomma och rimlig avrundning. */
