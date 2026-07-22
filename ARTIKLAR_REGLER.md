@@ -10,9 +10,10 @@
 > - [`UTBILDNINGAR_REGLER.md`](UTBILDNINGAR_REGLER.md) — vilka utbildningar/ämnen som finns (styr målgrupp och quiz-CTA).
 >
 > **Status:** GODKÄND. Infrastrukturen (våg 0) byggd i 0.9.186, terminologipelaren lagd på
-> artikelstandard i 0.9.191. Våg 1 påbörjad: artikel 6 (*Anatomiska riktningar, plan och
-> rörelser*) skriven 2026-07-21, ännu utan versionsbump (§9 batchar ~5 artiklar per release).
-> **Senast uppdaterad:** 2026-07-21. **Version:** 1.0
+> artikelstandard i 0.9.191. Våg 1 klar; våg 2 påbörjad: artikel 8 (*Ledtyper*) skriven
+> 2026-07-21 och artikel 9 (*Så läser du en muskeltabell*) 2026-07-22, båda ännu utan
+> versionsbump.
+> **Senast uppdaterad:** 2026-07-22. **Version:** 1.0
 
 ---
 
@@ -374,8 +375,11 @@ Utöver det, artikelspecifikt:
 - Bilder: `BILDER_REGLER.md`, dimensioner satta (CLS 0), `loading="lazy"` under fold.
 - Efter skrivning: av-wira och om-wira tooltips (`SEO_REGLER.md` §6c), kör verifieringssnuttarna i §12.
 
-Versionsbump: **inte per artikel.** Samla enligt [[feedback_batch_versions]] — cirka fem
-artiklar per release, rapportera i versioner aldrig i hashar.
+Versionsbump: **inget antalskrav.** Regeln om att samla ihop ungefär fem uppgifter före en
+bump ([[feedback_batch_versions]]) kom ur quizbygget, där en utbildning kunde ge fem nästan
+identiska delleveranser i rad, och gäller **inte** artiklar. En färdig artikel får bumpas för
+sig, och flera får lika gärna dela en release — det avgörs av när användaren vill släppa, inte
+av en siffra. Rapportera alltid i versioner, aldrig i hashar ([[feedback_communicate_in_versions]]).
 
 ---
 
@@ -427,9 +431,10 @@ eftersom beroendepilarna (`← 6, 8`) pekar på nummer.
    Kontrollerat 2026-07-21: ledtyperna finns bara som tabellceller i regionsidorna och som
    quizfrågor i `data/ledtyper.json`; `leder.html` är en ROM-tabellhubb på 200 ord. Ingen
    löptext täcker ämnet. **Nästa artikel att bygga.**
-9. **Ursprung, fäste, funktion och innervation — så läser du en muskeltabell** — `guide`,
-   `alla`. Gör hela muskeltabellsavdelningen begriplig. ← 6, 8
-   Kontrollerat 2026-07-21: `muskeltabeller.html` ägnar ämnet en enda mening.
+9. ✅ **Så läser du en muskeltabell** — `guide`, `alla`, hubb `rorelseapparaten`. ← 6, 8
+   Skriven 2026-07-22. Kontrollerat mot live-sajten samma dag: `muskeltabeller.html` var 16
+   kort plus en enda mening om vad kolumnerna betyder, regionsidorna rena tabeller. Artikeln
+   länkas nu även från `muskeltabeller.html`.
 10. ⚠️ **Medicinska ordfamiljer** — `navsida`, `sprakvetare`. Beroendet på 7 är borta.
     **Prövas mot §8.2 mot `medicinskt-latin` och `grekiska-i-medicinen` innan den planeras in**
     — bara den axel som är genuint ny (samma rot genom många kliniska termer) motiverar sidan.
@@ -545,6 +550,17 @@ exempel. Minnet är kopian; det här dokumentet är originalet.
   sammanhang. **Läs igenom hela tooltip-listan för hand efter wiringen, inklusive
   referensblocket**, och fråga för varje träff om definitionen beskriver den betydelse texten
   faktiskt använder. Feltyperna är inskrivna i `SEO_REGLER.md` §6c.
+- **2026-07-22** — **Tooltip-facit är blint för termer som ingen sida ännu använt.**
+  `data/kb_glossary_terms.json` byggs ur redan wirade sidor, så ett uppslagsord som aldrig
+  förekommit i kunskapsbanken hamnar aldrig i facit — hur centralt det än är. På *Så läser du
+  en muskeltabell* gällde det `agonist`, `antagonist`, `synergist` och `excentrisk`: alla fyra
+  fanns i `data/ordlista.json`, ingen fanns i facit, och `wire_terms.py` gick förbi dem tyst
+  eftersom skriptet bara matchar exakta facitnycklar. Blindfläcken är självförstärkande: ett ord
+  som aldrig wirats kan aldrig komma in i facit av sig självt. **Grep `data/ordlista.json` efter
+  artikelns kärnbegrepp innan wiringen anses klar** — inte bara efter latinet (`SEO_REGLER.md`
+  §6c), utan efter de svenska och grekiska fackord artikeln bygger sitt resonemang på — och lägg
+  in de saknade som facitnycklar med böjningsalias. Lägg dem **sist i filen**; en omsortering av
+  `kb_glossary_terms.json` skriver om hela filen och dränker ändringen i 3 000 raders diff.
 - **2026-07-20** — AI-genererade innehållsförslag kan presentera *policyförslag* och
   *provformat* som genomförd verklighet. Två av råmaterialets högst prioriterade förslag föll
   på faktakontroll (§13). **Kontrollera alltid ett förslags faktapremiss innan det planeras in**,
