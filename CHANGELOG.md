@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.211
+- **Räknarnas testskal ligger nu i repot:** `scripts/test_verktyg_lakemedel.js`. Det har byggts om från grunden två gånger tidigare eftersom det låg i en temporär arbetsmapp och försvann mellan arbetspassen. Körs med `node scripts/test_verktyg_lakemedel.js` – 67 fall, avslutar med kod 0 när allt är grönt.
+- Skalet laddar `js/verktyg-lakemedel.js` och driver räknarna på riktigt, så testerna träffar den kod som faktiskt levereras och inte en kopia av logiken. Sökvägen är relativ, så det går att köra från vilken katalog som helst.
+- Det modellerar DOM-trädet och händelserna men **inte layouten** – bredder och marginaler kan det omöjligt fånga, vilket är just det som gjorde 0.9.205 och 0.9.206 osynliga för det. Den avgränsningen står i filens huvud, så nästa läsning inte övertolkar ett grönt resultat.
+- Inget på sajten ändrat; filen är ett utvecklingsverktyg och laddas inte av någon sida.
+
 ## 0.9.210
 - **Rättat: enhetsomvandlarens tomma läge sa fel sak och såg fel ut.** Den visade ett grönt resultatkort med ett streck i och texten "skriv ett tal", som om strecket vore ett svar. Nu står samma uppmaning som i de övriga räknarna – *Fyll i fältet ovan.* – i den neutrala grå rutan, så att alla fem resultatfälten på sidan ser likadana ut när de är tomma.
 - Skrivs ett tal in återgår rutan till rutnätet med enheterna. Verifierat i webbläsare: 500 mg ger 0,0005 kg / 0,5 g / 500 mg (ditt värde) / 500000 µg.
