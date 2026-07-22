@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.200
+- **Rättat tre avslöjande frågor i "Grekiska termer i anatomin", påtalat av användaren.** En ny variant av kategori-/typläckage (§2.9): i uppföljningsfrågor av typen "vad kallas/kännetecknar X, uppkallad efter [gud]?" upprepade prompten samma mytologiska/beskrivande drag som redan använts för att peka ut guden i föregående fråga – och det draget matchade bara det korrekta alternativets egen betydelse, inte distraktorernas (som hörde till ett helt annat begreppsområde). Gick alltså att lösa på ren temamatchning, utan kunskap om guden eller ämnet.
+  - `gre_epo_6`: "… uppkallat efter en grekisk fruktbarhetsgud som ofta avbildades med en ihållande erektion?" avslöjade Priapism (enda alternativet om erektion, mot Fimosis/Epididymit/Hydrocele). Prompten skriver nu bara ut gudens namn: "… som är uppkallat efter fruktbarhetsguden Priapus?"
+  - `gre_epo_18`: "… myntat av Freud efter dödsgestalten i grekisk mytologi?" avslöjade den destruktiva driften (enda dödsrelaterade alternativet, mot tre obesläktade Freud-begrepp). Skriven om till "… som Sigmund Freud myntade som en del av sin drivteori?", utan att nämna döden.
+  - `gre_epo_22`: "Vilken forntida **ed** …" ekade rätt svarets "Den hippokratiska **eden**" ordagrant (samma ordstam, §2.9:s ekoregel). Skriven om till "Vilket forntida **dokument** …".
+  - I samma genomläsning hittades och rättades ett sakfel i en distraktor (`gre_epo_22`): Genèvedeklarationen antogs av Världsläkarförbundet (World Medical Association) 1948, inte "Läkarförbundet" (Sveriges nationella läkarförbund).
+  - Nya feltypen kodifierad i `CLAUDE_REGLER.md` §2.9 med `gre_epo_6`/`gre_epo_18` som skräckexempel, så samma fel inte återupprepas i nästa språktermsämne.
+  - `python3 scripts/validate_quiz.py data/grekiska_termer.json`: 0 varningar/fel (som väntat – felet är osynligt för skriptet, se `feedback_validator_zero_not_proof`).
+
 ## 0.9.199
 - **Ombyggd utbildnings-/kategoristruktur i ämnesväljaren.** Etiketten på `#education` döpt om från "Utbildning och antal tillgängliga ämnen" till "Utbildning eller kategori och antal tillgängliga ämnen". Kategorin "Allmänt" döpt om till **"Slumpade ämnen"** i dropdownen (intern id `allmant` oförändrat, så sparade topplistor följer med).
 - **Två nya kategorier vid sidan av Allmänt/Slumpade ämnen och de 12 yrkesutbildningarna:**
