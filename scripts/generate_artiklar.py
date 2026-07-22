@@ -290,12 +290,14 @@ def breadcrumb_html(steg: list[tuple[str, str]]) -> str:
 
 
 def kort(href: str, titel: str, desc: str, cta: str, status: str = "live",
-         etikett: str = "Live") -> str:
+         etikett: str | None = None) -> str:
     """Ett .kb-card. Kort får ALDRIG innehålla kb-term-tooltips (SEO_REGLER §6c).
 
-    `etikett` sätter statusbrickans text. På artikelindexet används den för
-    artikeltypen (Översikt/Guide/…) istället för "Live" – samma CSS, mer
-    information per kort, ingen ny stil.
+    `etikett` sätter statusbrickans text och utelämnas som standard: det som
+    ligger uppe behöver ingen "Live"-bricka, bara det som ännu inte finns
+    märks ut ("Snart"). På artikelindexet används brickan i stället för
+    artikeltypen (Översikt/Guide/…) – samma CSS, information i stället för
+    status.
     """
     if status != "live":
         return (
@@ -305,9 +307,11 @@ def kort(href: str, titel: str, desc: str, cta: str, status: str = "live",
             f'          <p class="kb-card-desc">{desc}</p>\n'
             "        </div>"
         )
+    bricka = (f'          <span class="kb-status is-live">{etikett}</span>\n'
+              if etikett else "")
     return (
         f'        <a class="kb-card" href="{href}">\n'
-        f'          <span class="kb-status is-live">{etikett}</span>\n'
+        f'{bricka}'
         f'          <h3 class="kb-card-title">{titel}</h3>\n'
         f'          <p class="kb-card-desc">{desc}</p>\n'
         f'          <span class="kb-card-go">{cta} →</span>\n'

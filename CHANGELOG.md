@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.207
+- **"Live"-brickorna borttagna ur kunskapsbanken.** Det som ligger uppe behöver ingen märkning – bara det som ännu inte finns ska sticka ut. 22 brickor bort: 7 på kunskapsbankens startsida, 8 i nervtabellerna, 6 i listor & tabeller och 1 i verktygshubben, plus 6 i de generatorskrivna sidorna (faktatexter och ämneshubbarna).
+- **`Snart`-brickorna är kvar oförändrade** på de tre ämnesområden som inte är byggda än – Hjärta & kärl, Inre organ och Klinisk anatomi.
+- **Typetiketterna på artikelindexet är också kvar.** De använder samma CSS-klass men säger *Översikt* och *Guide*, alltså artikelns typ och inte dess status. 13 kort berörda, alla oförändrade.
+- `kort()` i `generate_artiklar.py` har inte längre `"Live"` som standardetikett utan utelämnar brickan när ingen etikett anges, så nya hubbar och kort inte återinför den.
+- Ingen CSS ändrad: brickan låg i normalt flöde, så korten börjar nu direkt med rubriken utan att layouten påverkas.
+
 ## 0.9.206
 - **Rättat: fälten i en rad låg inte i linje med varandra.** `styles.css` ger globalt `label { margin: 16px 0 8px }` med undantaget `label:first-child { margin-top: 0 }`. Räknarnas fält är `<label>`, så i rutnätet fick det **första fältet på varje rad ingen toppmarginal medan grannarna fick 16 px** – första fältet hamnade alltså 16 px högre, och rullgardinen i det låg synbart ur linje med enheterna bredvid. Varje fält fick dessutom 8 px extra under sig, ovanpå rutnätets `gap`. Felet fanns i alla fyra räknarna och i samtliga delblock. `.vt-field` nollställer nu marginalen; avståndet mellan fälten sköts av `gap` som avsett.
 - Verifierat i webbläsare efter rättningen: samtliga åtta fältrader (Dos och styrka, Ordination efter kroppsvikt, Infusion, Droppar per minut, Från mg/kg/h till ml/h, Spädning och omvandlaren) har nu identisk topposition, identisk höjd och enhetsväljare på samma linje.
