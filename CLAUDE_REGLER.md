@@ -211,7 +211,13 @@ längdbias-mätningen ("Falskt" är 2 tecken längre än "Sant" → falsk 100 %-
   - ⚠️ **Antals-asymmetri fångas INTE av `validate_quiz.py` – den måste kontrolleras för hand.** Skräckexempel (hittat 2026-07-13 i `bma_karlfys_42`): frågan löd "Vilka **tre** huvudsakliga faktorer (Virchows triad) …", rätt svar listade tre faktorer medan alla tre distraktorer började med "Enbart …" och listade EN. Då räcker det att räkna för att hitta rätt. Fix: skriv om distraktorerna så att de också listar tre (fortsatt fel) faktorer.
   - När du bygger/rättar ett ämne: sök aktivt efter frågor vars prompt innehåller ett räkneord (två/tre/fyra/tre huvudsakliga …) och kontrollera antalet poster i VARJE alternativ.
 - **Inga extra kvalificerare enbart på rätt svar:** Rätt svar får inte vara det enda alternativet som bär en extra precisering (plats, tidpunkt, orsak), även utan parentes. Skräckexempel (`bma_hjarta_30`): `correct: "Nervus medianus, vid handleden"` mot de nakna distraktorerna "Nervus ulnaris" / "Nervus radialis" / "Nervus axillaris" – tillägget "vid handleden" pekar ut svaret. Fix: stryk kvalificeraren från rätt svar (→ "Nervus medianus") eller ge alla alternativ en likvärdig precisering. Samma familj som parentes-regeln ovan.
-- **Språkparitet (latin/svenska):** Alla alternativ ska ligga i samma språkregister. Rätt svar får inte vara det enda på latin (eller det enda på svenska) och sticka ut så. Antingen alla alternativ på latin eller alla på svenska.
+- **Språkparitet (latin/svenska/annat språk) – gäller VARJE språk, inte bara latin/svenska (hittat 2026-07-22 i `franska_termer.json`).** Alla alternativ ska ligga i samma språkregister. Rätt svar får inte vara det enda på latin (eller det enda på svenska) och sticka ut så. Antingen alla alternativ på latin eller alla på svenska. **Samma princip gäller självklart när ett ämne testar ord ur ett SPECIFIKT språk (t.ex. "franska lånord"): då måste ALLA alternativ – korrekt svar och distraktorer – faktiskt vara äkta ord ur det språket, inte en blandning.**
+  - Skräckexempel: en fråga om franska lånord hade `"Sårtoalett"` (svenska "sår" + franskans "toalett" – en hybrid, inte ett rent franskt lånord) i samma alternativlista som `Kyrettage`/`Lavemang`/`Tamponad`/`Triage` m.fl. (rena franska lånord). Hybridordet stack ut i FORM mot de rena lånorden, oavsett om det stod som rätt svar eller distraktor, i fem olika frågor. Fix: bytt mot `Debridering` (även det ett rent franskt lånord, av `débrider`), som håller sig i samma register som resten av poolen.
+  - **Test:** för en ordkunskapsfråga om ett specifikt språk, slå upp varje alternativs ordhistoria. Är även ETT alternativ en hybrid, en försvenskning som blandar en inhemsk stam med lånordet, eller ett ord ur ett HELT annat språk än det frågan testar – byt ut det mot ett äkta ord ur samma språk.
+- **Kategori-/typläckage i namn-frågor (eponymer m.m.) – NY FELTYP (hittat 2026-07-22 i `franska_termer.json`).** När svarsalternativen är byggda som "Namn + generisk sakbeteckning" (t.ex. `Dupuytrens kontraktur`, `Charcots led`, `Aperts syndrom`, `Babinskis reflex`) och distraktorerna hämtas ur en pool med FLERA olika sakbeteckningar (kontraktur/syndrom/led/reflex/tecken/sjukdom/tetrad …), avslöjar frågans egen beskrivning nästan alltid VILKEN TYP av tillstånd det handlar om (en beskrivning av vävnad som "förtjockas och drar ihop fingrarna" är per definition en kontraktur). Då kan man peka ut rätt alternativ genom att bara matcha TYP mot beskrivningen – utan att veta vem personen är eller ens ha hört namnet förut.
+  - Skräckexempel: "Vilket tillstånd innebär att bindväven i handflatan förtjockas och gradvis drar ihop ring- och lillfingret … uppkallat efter en fransk kirurg?" hade `Dupuytrens kontraktur` (korrekt) mot `Aperts syndrom` / `Crouzons syndrom` / `Charcots led`. Beskrivningen ÄR definitionen av en kontraktur – enda alternativet som heter "kontraktur" måste vara rätt, oavsett om man känner till Dupuytren.
+  - **Fix:** när distraktorerna hämtas ur en pool med blandade sakbeteckningar, ta ENDAST bort den generiska beteckningen och testa namnet för sig (`Dupuytren` mot `Charcot`/`Apert`/`Crouzon`) – inte "Namn + beteckning". Alternativet är att hålla ALLA fyra alternativ till EXAKT samma sakbeteckning (bara andra kontrakturer) – välj det i första hand om poolen faktiskt räcker till, annars namn-utan-beteckning.
+  - **Test:** för varje namn-fråga där alternativen är "Namn + ord", läs frågans beskrivning för sig (utan alternativen) och fråga: pekar beskrivningen redan ut vilken SAKBETECKNING (kontraktur/syndrom/led/tecken/reflex …) som gäller? Har bara ETT av alternativen den beteckningen – bygg om till bart namn eller byt distraktorer till samma beteckning.
 - **Absolut-ords-tell – minst lika avslöjande som längdbias:** Distraktorer får inte bära absoluta ord (**endast, enbart, alltid, aldrig, ingen/inget/inga, samtliga, uteslutande**) när rätt svar aldrig gör det. Varje van tentaskrivare stryker "Endast X" och "Alltid Y" utan att kunna ämnet – då är frågan värdelös oavsett hur bra faktan är.
   - Skräckexempel (`rtg_njurfunktion_11`): frågan bad om tre processer i urinbildningen; rätt svar listade tre, medan distraktorerna löd "Endast filtration och sekretion, ingen reabsorption" / "Endast reabsorption, ingen filtration eller sekretion". Två tells på en gång (absolut-ord + antals-asymmetri).
   - **Fix:** skriv om distraktorn till ett konkret, specifikt och trovärdigt fel påstående i stället för ett absolut. "Endast njurbäckenet, inte parenkymet" → "Njurbäckenet och kalkarna med tät kontrast".
@@ -563,6 +569,8 @@ Före varje session/commit, kontrollera:
 - [ ] INGA självutpekande distraktorer, inkl. ", inte/utan <rätt-svarets ord>" och "ett annat namn för …" (§2.2)
 - [ ] Varje distraktor klarar gissa-testet: går inte att stryka på formen (§2.12)
 - [ ] Antals-paritet kontrollerad för hand på frågor med räkneord (tre/fyra …) (§2.9)
+- [ ] Testar ämnet ord/namn ur ett SPECIFIKT språk (t.ex. franska lånord): ALLA alternativ är äkta ord ur det språket, ingen hybrid eller ord ur ett annat språk (§2.9)
+- [ ] Namn-frågor av typen "Namn + generisk beteckning" (kontraktur/syndrom/led/tecken …): beskrivningen i frågan avslöjar inte typen mot bara ETT alternativ – bart namn eller samma beteckning på alla (§2.9)
 - [ ] INGA incompleta meningar i frågorna
 - [ ] ALLA termer är verifierade mot anatomisk litteratur
 - [ ] Filstruktur är korrekt (JSON, topics, IDs)
@@ -615,6 +623,9 @@ Dessa fel ska ALDRIG upprepas:
 - **Omvänd längdbias skapad vid förkortning:** förkortade distraktorer gjorde `correct` längst i 49 % av träningsfrågorna – mät längdbias igen efter förkortning, se §2.9.
 - **Återinfört absolut-ord i egen omskrivning:** "uteslutande"/"samtliga" glömdes som absolut-ord flera gånger under fysio-svepet – kör validatorn efter varje patch, se §2.13.
 - **LÄRDOM (2026-07-16): hela formtells-svepet är klart** (röntgen, BMA, med.sekr, läkare, tandläkare, logoped, fysioterapeut – alla 0 varningar). Skulden fanns bara för att frågorna genererades i strid med §2.2/§2.9 från början. **Bygg rätt första gången (§2.12–2.13); saneringen kostade användaren enorma mängder tokens och stort missnöje.** Detta får inte upprepas när nya ämnen byggs.
+- **Kategori-/typläckage i namn-frågor (2026-07-22, `franska_termer.json`):** "Namn + generisk beteckning"-alternativ (`Dupuytrens kontraktur` mot `Aperts syndrom`/`Charcots led`) läcker typen via frågans egen beskrivning – se §2.9. Fix: bart namn, eller alla alternativ med samma beteckning.
+- **Språkparitet gäller ALLA språk, inte bara latin/svenska (2026-07-22, `franska_termer.json`):** en hybrid (`Sårtoalett` = svensk stam + franskt lånord) bland rena franska lånord är samma sorts formtell som latin bland svenska – se §2.9. Fix: byt ut mot ett äkta ord ur samma språk som resten av poolen.
+- **LÄRDOM (2026-07-22): validatorn gav 0/0 på `franska_termer.json` två gånger i rad – ändå var frågorna trasiga.** Skriptet fångar bara det som redan är kodifierat. Två helt nya feltyper (kategoriläckage, språkblandning i ett tredje språk) smet igenom eftersom de aldrig manuellt gissa-testades mot den faktiska frågetexten. **Läs varje fråga som en student som chansar, inte bara kör skriptet** – 0/0 betyder "inga KÄNDA tells", inte "inga tells".
 
 ### 10.2 Lyckade Lösningar
 - Separera frågor i tre JSON-filer (ben.json, muskler.json, riktningar.json)
@@ -640,7 +651,13 @@ När nya ämnen läggs till:
 
 **DESSA REGLER ÄR BINDANDE FÖR ALL ARBETE PÅ ANATOMIQUIZ.**
 
-**Senast uppdaterad:** 2026-07-20
+**Senast uppdaterad:** 2026-07-22
+**Version:** 1.9 – kodifierade två feltyper ur granskningen av `franska_termer.json` (2026-07-22), på uttrycklig begäran efter att användaren själv hittade dem:
+- §2.9 kategori-/typläckage i namn-frågor: "Namn + generisk beteckning" (`Dupuytrens kontraktur` mot `Aperts syndrom`/`Charcots led`) avslöjar typen via frågans egen beskrivning, utan att man behöver känna till personen. Fix: bart namn, eller samma beteckning på alla alternativ
+- §2.9 språkparitet utökad från "latin/svenska" till att uttryckligen gälla ALLA språk: en hybrid (`Sårtoalett`) bland rena lånord ur ett testat språk är samma formtell
+- §8 checklistan utökad med båda punkterna
+- §10.1: 0/0 från validatorn betyder bara "inga kända tells" – nya feltyper måste hittas genom att faktiskt läsa frågorna, inte genom att lita på skriptet
+
 **Version:** 1.8 – kodifierade två feltyper ur arbetsterapeut-svepets punkt 3b (2026-07-20):
 - §2.4 TF-fråga felmärkt `"type": "mc"` – faller ur både `tfPool` och `mcPool` i `js/app.js`
   och dras därför i praktiken aldrig. 62 verkliga fall. **Nu ett fel i `validate_quiz.py`**
