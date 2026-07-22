@@ -380,7 +380,10 @@ Utöver det, artikelspecifikt:
 - JSON-LD: `["Article","LearningResource"]`; ämneshubbar `["CollectionPage","LearningResource"]`
   med `hasPart`. `BreadcrumbList` **alltid i eget script-block** (§6 i SEO_REGLER).
 - `datePublished` / `dateModified` från registret.
-- **0 JS på artikelsidor.** Filtrering på `artiklar/index.html` är enda undantaget.
+- **Minimal JS.** Artikelsidor kör `js/kb-glossary.js` (obligatoriskt – utan det ritas ingen
+  tooltip, se §14) och `js/kb-table-tools.js` när sidan har en tabell, båda med `defer` i
+  botten av `<body>`. Utöver de två: ingen JS. Filtreringen på `artiklar/index.html` är enda
+  undantaget.
 - Bilder: `BILDER_REGLER.md`, dimensioner satta (CLS 0), `loading="lazy"` under fold.
 - Efter skrivning: av-wira och om-wira tooltips (`SEO_REGLER.md` §6c), kör verifieringssnuttarna i §12.
 
@@ -570,6 +573,33 @@ exempel. Minnet är kopian; det här dokumentet är originalet.
   §6c), utan efter de svenska och grekiska fackord artikeln bygger sitt resonemang på — och lägg
   in de saknade som facitnycklar med böjningsalias. Lägg dem **sist i filen**; en omsortering av
   `kb_glossary_terms.json` skriver om hela filen och dränker ändringen i 3 000 raders diff.
+- **2026-07-22** — **Tre av fyra referenser på läkemedelsberäkningssidan var påhittade.**
+  Sidan skrevs före §6:s källregler och bar fyra poster som alla *såg* korrekta ut. Kontrollen
+  visade att `Björkman, S., & Nilsson, L.-G. (2022). Läkemedelsberäkning för sjuksköterskor`
+  var fel på fyra punkter samtidigt – verket heter *Läkemedelsräkning för sjuksköterskor*, är
+  skrivet av Eva Björkman och Margaretha Hagberg och kom i sin sjätte upplaga 2023 – och att
+  varken `Läkemedelsverket (2023). Hantering av läkemedel` eller `Socialstyrelsen (2023). Att
+  förebygga och hantera läkemedelsfel inom hälso- och sjukvården` existerar. Endast Nordeng &
+  Spigset stämde. Två av posterna låg dessutom kvar på systersidan
+  `lakemedelsberakning-omvandlingar.html`, och **ingen av de fyra hade förts in i `info.html`**
+  – hade de gjort det hade felet upptäckts vid den kontrollen. Lärdomarna: en ärvd referens är
+  lika mycket mitt ansvar som en jag själv skriver, en påhittad post känns igen på att den är
+  *nästan* rätt snarare än uppenbart fel, och `info.html`-kravet i §6.3 är inte bokföring utan
+  själva kontrollstationen. **Verifiera hela referenslistan mot bibliotekskatalog respektive
+  utgivarens egen webbplats när en gammal sida byggs om**, och sök samtidigt igenom repot efter
+  samma post på systersidor.
+- **2026-07-22** — **”0 JS på artikelsidor” (§9) släckte tooltipsen på fem artiklar.** Regeln
+  skrevs som en prestandaambition, men `kb-term` är bara en vanlig länk utan
+  `js/kb-glossary.js` – det är skriptet som ritar tooltipen vid hover, fokus och tryck.
+  Samtliga sidor under `artiklar/` byggdes utan det och bär därför `data-def`-attribut som
+  ingenting läser: 188 på *Anatomiska riktningar*, 127 på *Ledtyper*, 104 på
+  *Så läser du en muskeltabell*, 21 på *Franska och tyska* och 16 på *Engelska i medicinskt
+  språk*. De äldre sidorna i `/kunskapsbank/` har skriptet kvar och fungerar. Feltypen är
+  osynlig för alla verifieringssnuttar, eftersom länkarna, `href`-arna och ankarna är korrekta
+  – det enda som saknas är återgivningen. **`kb-glossary.js` (och `kb-table-tools.js` när sidan
+  har en tabell) ska ligga i botten av varje artikelsida med `defer`.** §9:s formulering är
+  underordnad `SEO_REGLER.md` §6c, som gör tooltipsen obligatoriska, och SEO_REGLER säger
+  själv bara att faktasidor *helst* ska ha 0 JS.
 - **2026-07-20** — AI-genererade innehållsförslag kan presentera *policyförslag* och
   *provformat* som genomförd verklighet. Två av råmaterialets högst prioriterade förslag föll
   på faktakontroll (§13). **Kontrollera alltid ett förslags faktapremiss innan det planeras in**,

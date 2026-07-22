@@ -60,6 +60,19 @@ BLOCKERADE = {
     "snitt",     # -> incision. Rätt i kirurgisk text (och kvar handwirat där),
                  #    men fel där ordet betyder tomografiskt snitt eller ett
                  #    tänkt plan genom kroppen, som på riktningssidan.
+    "massa",       # -> massa (anatomisk klump, "massa lateralis atlantis"). I
+                   #    löptext om läkemedelsberäkning betyder ordet fysikalisk
+                   #    massa i motsats till volym och aktivitetsenheter, och
+                   #    tooltipen "Klump, massa" blev direkt vilseledande på både
+                   #    lakemedelsberakning-sidorna. Flerordsnyckeln
+                   #    "massa lateralis atlantis" finns kvar och matchas som fras.
+    "korsning",    # -> chiasma. Nycklarna "korsning"/"korsningen" har defen
+    "korsningen",  #    "Korsning", alltså en tautologi som inte tillför något,
+                   #    och pekar dessutom på det grekiska ordet för synkorsningen.
+                   #    I löptext avser ordet nästan alltid något annat: pyramid-
+                   #    korsningen (decussatio) på motoriksidan, banornas korsning
+                   #    i sensoriktabellen och en språklig korsning på uttalssidan.
+                   #    Uppslagsordet "chiasma" är kvar och wiras som förut.
     "koncentration",  # ordlisteposten avser ENBART den kognitiva betydelsen
                       # ("förmågan att hålla kvar uppmärksamheten"). I medicinsk
                       # löptext betyder ordet nästan alltid halten av ett löst

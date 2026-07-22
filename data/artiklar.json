@@ -166,7 +166,7 @@
       "slug": "sa-styrs-en-rorelse",
       "sokvag": "/kunskapsbank/sa-styrs-en-rorelse.html",
       "titel": "Så styrs en rörelse",
-      "kortbeskrivning": "Vägen för ett motoriskt kommando – från motorbarken via övre och nedre motorneuron till muskeln, pyramidalt och extrapyramidalt.",
+      "kortbeskrivning": "Vägen för ett motoriskt kommando – från motorbarken via övre och nedre motorneuron till muskeln, den motoriska enheten och bortfallsmönstren.",
       "poang": "Ett viljemässigt motoriskt kommando passerar exakt två neuron i serie, och var kedjan bryts avgör vilken sorts bortfall som uppstår.",
       "typ": "oversikt",
       "hubb": "nervsystemet",
@@ -177,22 +177,30 @@
         "motorik",
         "nervbanor",
         "motorneuron",
-        "pyramidbanan"
+        "pyramidbanan",
+        "motorisk enhet",
+        "muskeltonus"
       ],
       "publicerad": "2026-07-04",
-      "uppdaterad": "2026-07-04",
+      "uppdaterad": "2026-07-22",
+      "granskad": "2026-07-22",
       "beroenden": [],
+      "quiz": [
+        "lins_nervsystemet"
+      ],
       "tabeller": [
-        "/kunskapsbank/nervtabell-motorbanor.html"
+        "/kunskapsbank/nervtabell-motorbanor.html",
+        "/kunskapsbank/nervtabeller.html",
+        "/kunskapsbank/muskeltabeller.html"
       ],
       "status": "live",
-      "llms": "Faktatext om hur ett motoriskt kommando leds från hjärnbarken till muskeln – vägen via övre och nedre motorneuron, korsningen i decussatio pyramidum, skillnaden mellan UMN- och LMN-skada samt pyramidala kontra extrapyramidala system. Korslänkad till tabellen Motoriska nervbanor."
+      "llms": "Faktatext om hur ett viljemässigt motoriskt kommando leds från hjärnbarken till muskeln. Förklarar tvåneuronsprincipen – övre motorneuron helt inom CNS, nedre motorneuron ut i perifer nerv – och varför det nedre motorneuronet är den slutliga gemensamma banan som allt inflytande över en rörelse måste passera. Följer vägen från premotor- och primära motorbarken i gyrus precentralis, via capsula interna och hjärnstammen till pyramidkorsningen (decussatio pyramidum) och vidare i laterala kortikospinalbanan till framhornet, samt den främre kortikospinalbanan som korsar segmentellt och styr bålens muskulatur från båda hjärnhalvorna. Behandlar kortikobulbärbanan och den bilaterala försörjningen av facialiskärnans övre del, vilket är mekanismen bakom skillnaden mellan central och perifer ansiktsförlamning. Går igenom den motoriska enheten och innervationskvoten, kraftgradering genom rekrytering och frekvens samt rekryteringsordningen från minsta till största motorneuron, överföringen vid motoriska ändplattan med acetylkolin, acetylkolinesteras och synapsens säkerhetsmarginal, samt skillnaden mellan UMN- och LMN-skada med tabell över förlamningstyp, reflexer, tonus, atrofi och typiska tecken – inklusive att den akuta bilden vid UMN-skada är slapp (spinal chock) innan spasticiteten växer fram. Förklarar muskelspolen, den monosynaptiska sträckreflexen och gammamotorneuronens inställning av spolens känslighet som förklaring till varför tonus stiger vid central skada, samt pyramidalt kontra extrapyramidalt, de basala gangliernas val av rörelseprogram och lillhjärnans ipsilaterala symtombild. Korslänkad till tabellen Motoriska nervbanor och till faktatexten Så leds känseln."
     },
     {
       "slug": "sa-leds-kanseln",
       "sokvag": "/kunskapsbank/sa-leds-kanseln.html",
       "titel": "Så leds känseln",
-      "kortbeskrivning": "Känselns väg från receptor via ryggmärg och thalamus till känselbarken – baksträngsbanan kontra spinotalamusbanan och var de korsar.",
+      "kortbeskrivning": "Känselns väg från receptor via ryggmärg och thalamus till känselbarken – receptortyperna, fibertyperna och de två banornas korsningsnivåer.",
       "poang": "Känselns två huvudbanor korsar på olika nivåer, vilket är själva förklaringen till det korsade bortfallsmönstret vid halvsidig ryggmärgsskada.",
       "typ": "oversikt",
       "hubb": "nervsystemet",
@@ -203,23 +211,31 @@
         "sensorik",
         "nervbanor",
         "baksträngsbanan",
-        "spinotalamusbanan"
+        "spinotalamusbanan",
+        "receptorer",
+        "dermatom"
       ],
       "publicerad": "2026-07-04",
-      "uppdaterad": "2026-07-04",
+      "uppdaterad": "2026-07-22",
+      "granskad": "2026-07-22",
       "beroenden": [],
+      "quiz": [
+        "lins_nervsystemet"
+      ],
       "tabeller": [
-        "/kunskapsbank/nervtabell-sensorbanor.html"
+        "/kunskapsbank/nervtabell-sensorbanor.html",
+        "/kunskapsbank/nervtabell-balen.html",
+        "/kunskapsbank/nervtabeller.html"
       ],
       "status": "live",
-      "llms": "Faktatext om hur känseln leds från receptor via spinalganglion, ryggmärg och thalamus till känselbarken (tre neuron i serie). Tar upp baksträngsbanan kontra spinotalamusbanan och var de korsar (Brown-Séquards syndrom), medvetet kontra omedvetet samt receptortyperna (mekano-, noci-, termo- och proprioceptorer). Korslänkad till tabellen Sensoriska nervbanor."
+      "llms": "Faktatext om hur känselsignaler leds från kroppen till hjärnbarken. Förklarar treneuronskedjan – det första neuronet med cellkropp i spinalganglion, det andra som korsar mittlinjen och stiger till thalamus, det tredje från thalamus till känselbarken i gyrus postcentralis – och receptortyperna mekanoreceptor, termoreceptor, nociceptor och proprioceptor med vad de registrerar, var de sitter och vilken bana de leds i. Behandlar snabb och långsam anpassning hos mekanoreceptorerna, receptivt fält och tvåpunktströskeln (några millimeter på fingertoppen mot flera centimeter på ryggen), fibrernas myelinisering och ledningshastighet samt varför smärta kommer i två vågor med A-delta- och C-fibrer. Ställer baksträngsbanan mot spinotalamusbanan i tabell – modalitet, var det andra neuronet börjar, korsningsnivå, läge i ryggmärgen, fibertyp och sidan för bortfallet – och visar hur korsningsnivåerna förklarar Brown-Séquards syndrom och det dissocierade bortfallet vid syringomyeli. Går igenom dermatomen som det första neuronets utbredning och skillnaden mot perifera nervers områden, trigeminusnervens egen väg för ansiktets känsel, thalamus som mer än en relästation, somatotopin och formbarheten i gyrus postcentralis, de spinocerebellära banornas omedvetna proprioception från muskelspolar och senorgan, samt smärtans modulering: grindteorin, den nedåtgående hämningen från hjärnstammen och refererad smärta som konvergensfenomen. Korslänkad till tabellen Sensoriska nervbanor, till nervtabellen för bålen och till faktatexten Så styrs en rörelse."
     },
     {
       "slug": "lakemedelsberakning",
       "sokvag": "/kunskapsbank/lakemedelsberakning.html",
       "titel": "Läkemedelsberäkning",
-      "kortbeskrivning": "Räkna ut rätt dos – enheter, styrka och dos, de tre formlerna, infusionstakt, dosering per kg och säker kontrollräkning.",
-      "poang": "Nästan alla doseringsfel går tillbaka på enhetshantering, och tre grundformler täcker de beräkningar en sjuksköterska faktiskt möter.",
+      "kortbeskrivning": "Räkna med enheterna: omvandling, grundformlerna, aktivitetsenheter som IE, infusionstakt, dosering per kilo, spädning och kontrollräkning.",
+      "poang": "Nästan alla fel i läkemedelsberäkning sitter i enheterna och inte i räkneoperationen, och skriver man ut enheten efter varje tal visar enheterna själva om uträkningen gick åt rätt håll.",
       "typ": "guide",
       "hubb": "plugga-och-tenta",
       "malgrupp": [
@@ -228,20 +244,23 @@
       "taggar": [
         "läkemedelsberäkning",
         "dosering",
+        "enheter",
         "infusion",
-        "spädning"
+        "spädning",
+        "kontrollräkning"
       ],
       "publicerad": "2026-07-12",
-      "uppdaterad": "2026-07-12",
+      "uppdaterad": "2026-07-22",
+      "granskad": "2026-07-22",
       "beroenden": [],
-      "tabeller": [
-        "/kunskapsbank/lakemedelsberakning-omvandlingar.html"
-      ],
       "quiz": [
         "lakemedelsrakning"
       ],
+      "tabeller": [
+        "/kunskapsbank/lakemedelsberakning-omvandlingar.html"
+      ],
       "status": "live",
-      "llms": "Faktatext om läkemedelsberäkning för sjuksköterskor – begreppen ordination, styrka och dos, enhetsomvandling (g/mg/µg, liter/ml), de tre grundformlerna (antal tabletter, dosvolym, mängd substans), infusionshastighet och dropptakt, dosering per kroppsvikt (mg/kg), procentlösningar och spädning (C₁V₁ = C₂V₂) samt säker kontrollräkning. Korslänkad till tabellen Omvandlingar & formler och till quizet Läkemedelsräkning."
+      "llms": "Guide till läkemedelsberäkning för sjuksköterskor. Utgår från att felen sitter i enheterna och inte i räkneoperationen, och lär ut enhetsräkning som genomgående metod: skriv ut enheten efter varje tal och låt enheterna visa om divisionen gick åt rätt håll (mg delat med mg/ml ger ml). Skiljer på ordination, styrka och dos, med Socialstyrelsens krav på vad en dokumenterad ordination ska innehålla, och går igenom beredningsformerna peroral, intravenös, intramuskulär och subkutan samt skillnaden enteral–parenteral. Behandlar omvandling mellan kg, g, mg och mikrogram i steg om tusen och varför ett felplacerat decimaltecken ger tiofaldigt fel, samt enheter som inte är massa – insulin i enheter med standardstyrkan 100 enheter/ml, heparin i internationella enheter och elektrolyter i millimol – med regeln att en aktivitetsenhet aldrig får räknas om till milligram på egen hand. Visar de tre grundformlerna som tre läsriktningar av samma samband, dosering per kilo i två steg, infusionshastighet i ml/h, dropptakt med droppfaktor samt den omvända räkningen från mg/kg/h till ml/h (70 kg och 5 mg/kg/h ur en lösning på 25 mg/ml ger 14 ml/h). Går igenom procentlösningar (1 % = 10 mg/ml) och spädning enligt styrka₁ × volym₁ = styrka₂ × volym₂, och avslutas med kontrollräkning: rimlighetsbedömning mot ordinationen och det iordningställda läkemedlet, avrunda sist, kontrollräkna med en annan metod än den först använda, och att lokala rutiner styr när en andra person ska kontrollräkna. Korslänkad till uppslagstabellen Omvandlingar & formler och till quizet Läkemedelsräkning."
     },
     {
       "slug": "medicinskt-latin",

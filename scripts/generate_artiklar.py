@@ -422,6 +422,10 @@ def render_faktatexter(reg: dict) -> str:
 
   </main>
 
+  <!-- Ordlistetooltips (progressiv förbättring; .kb-term funkar som länk utan JS).
+       Utan skriptet ritas ingen tooltip alls – se ARTIKLAR_REGLER §9 och §14. -->
+  <script src="/js/kb-glossary.js" defer></script>
+
 </body>
 </html>
 """
@@ -494,6 +498,10 @@ def render_hubb(reg: dict, h: dict) -> str:
     </section>
 
   </main>
+
+  <!-- Ordlistetooltips (progressiv förbättring; .kb-term funkar som länk utan JS).
+       Utan skriptet ritas ingen tooltip alls – se ARTIKLAR_REGLER §9 och §14. -->
+  <script src="/js/kb-glossary.js" defer></script>
 
 </body>
 </html>
@@ -591,6 +599,10 @@ def render_index(reg: dict) -> str:
     </section>
 
   </main>
+
+  <!-- Ordlistetooltips (progressiv förbättring; .kb-term funkar som länk utan JS).
+       Utan skriptet ritas ingen tooltip alls – se ARTIKLAR_REGLER §9 och §14. -->
+  <script src="/js/kb-glossary.js" defer></script>
 
 </body>
 </html>
