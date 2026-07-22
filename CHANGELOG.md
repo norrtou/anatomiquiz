@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.213
+- **Enad cache-busting för stilmallen.** `css/styles.css` ändrades senast i 0.9.167, men 100 av 113 sidor pekade fortfarande på `?v=0.9.144` – en sträng *lägre* än den senaste CSS-ändringen. Återvändande besökare som cachat den gamla strängen fick därför en föråldrad stilmall och missade ändringarna från 0.9.165/0.9.167. Dessutom var sex olika versionssträngar i omlopp (144, 187, 189, 191, 192, 206).
+- Samtliga 113 `styles.css`-referenser är nu enade till `?v=0.9.213`, vilket tvingar alla klienter att hämta aktuell CSS en gång och gör att konventionen framåt speglar releasenumret (som `app.js` redan gör). Enbart query-strängen ändrad; ingen SEO-/meta- eller innehållspåverkan.
+
 ## 0.9.212
 - **Entitetsdata (Organization + Person) på startsidan.** Startsidans JSON-LD pekade tidigare ut utgivaren som `author` och saknade både en fristående `Organization` med logotyp och det `Person`-schema för Daniel Medin som info.html redan bär. Nu är `author` en `Person` (Daniel Medin) med `sameAs` till norrtou.se, LinkedIn och GitHub, och en ny `publisher`-`Organization` (Norrtou Creations) med logotyp och `sameAs` har lagts till. Det speglar det info.html redan påstår, fast på den URL sökmotorer läser som primär entitet.
 - Inget synligt innehåll ändrat; enbart strukturerad data i `<head>`. FAQ-schema och tabell-omvandling medvetet ej gjort – FAQPage kräver synligt fråga/svar-innehåll som startsidan inte har.
