@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.206
+- **Rättat: fälten i en rad låg inte i linje med varandra.** `styles.css` ger globalt `label { margin: 16px 0 8px }` med undantaget `label:first-child { margin-top: 0 }`. Räknarnas fält är `<label>`, så i rutnätet fick det **första fältet på varje rad ingen toppmarginal medan grannarna fick 16 px** – första fältet hamnade alltså 16 px högre, och rullgardinen i det låg synbart ur linje med enheterna bredvid. Varje fält fick dessutom 8 px extra under sig, ovanpå rutnätets `gap`. Felet fanns i alla fyra räknarna och i samtliga delblock. `.vt-field` nollställer nu marginalen; avståndet mellan fälten sköts av `gap` som avsett.
+- Verifierat i webbläsare efter rättningen: samtliga åtta fältrader (Dos och styrka, Ordination efter kroppsvikt, Infusion, Droppar per minut, Från mg/kg/h till ml/h, Spädning och omvandlaren) har nu identisk topposition, identisk höjd och enhetsväljare på samma linje.
+
 ## 0.9.205
 - **Rättat: enhetsomvandlaren gick inte att skriva i.** `styles.css` sätter globalt `input, select { width: 100%; margin-bottom: 8px }`, och `verktyg.css` nollställde aldrig det för fälten. Rullgardinen tog därför hela radens bredd (843 px i omvandlaren) och klämde ihop talfältet till 24 px, så det gick varken att träffa eller skriva i. Drabbade alla fält med enhetsväljare – omvandlarens Värde, Ordination i Dos och styrka, samt Volym och Tid i Infusion. Fälten med fast enhet var oberörda, vilket är skälet till att felet inte syntes överallt. `width`, `max-width` och `margin` nollställs nu explicit i `.vt-inputrow input` och `.vt-inputrow select`.
 - **Rättat: mycket små tal avrundades till noll.** Omvandlaren visade 0,5 mg som "0 kg" i stället för 0,0000005 kg, eftersom `decimaler()` aldrig gav mer än fyra decimaler. Under 0,001 räknas antalet decimaler nu fram ur talets storlek, så tre värdesiffror alltid syns.
