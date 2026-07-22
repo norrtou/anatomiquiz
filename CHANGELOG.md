@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.212
+- **Entitetsdata (Organization + Person) på startsidan.** Startsidans JSON-LD pekade tidigare ut utgivaren som `author` och saknade både en fristående `Organization` med logotyp och det `Person`-schema för Daniel Medin som info.html redan bär. Nu är `author` en `Person` (Daniel Medin) med `sameAs` till norrtou.se, LinkedIn och GitHub, och en ny `publisher`-`Organization` (Norrtou Creations) med logotyp och `sameAs` har lagts till. Det speglar det info.html redan påstår, fast på den URL sökmotorer läser som primär entitet.
+- Inget synligt innehåll ändrat; enbart strukturerad data i `<head>`. FAQ-schema och tabell-omvandling medvetet ej gjort – FAQPage kräver synligt fråga/svar-innehåll som startsidan inte har.
+
 ## 0.9.211
 - **Räknarnas testskal ligger nu i repot:** `scripts/test_verktyg_lakemedel.js`. Det har byggts om från grunden två gånger tidigare eftersom det låg i en temporär arbetsmapp och försvann mellan arbetspassen. Körs med `node scripts/test_verktyg_lakemedel.js` – 67 fall, avslutar med kod 0 när allt är grönt.
 - Skalet laddar `js/verktyg-lakemedel.js` och driver räknarna på riktigt, så testerna träffar den kod som faktiskt levereras och inte en kopia av logiken. Sökvägen är relativ, så det går att köra från vilken katalog som helst.
