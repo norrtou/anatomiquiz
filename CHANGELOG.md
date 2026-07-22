@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.214
+- **Nyhetsnotis om läkemedelsberäknaren.** Nyhetssektionen på info.html har fått en notis (23 juli 2026) om att kunskapsbanken nu har en interaktiv läkemedelsberäknare, med länk till verktyget (`/kunskapsbank/verktyg/lakemedelsberakning.html`). "Senast uppdaterad"-datumet är bumpat till 23 juli 2026. Enbart innehåll på info.html; inga asset- eller cache-buster-ändringar.
+
 ## 0.9.213
 - **Enad cache-busting för stilmallen.** `css/styles.css` ändrades senast i 0.9.167, men 100 av 113 sidor pekade fortfarande på `?v=0.9.144` – en sträng *lägre* än den senaste CSS-ändringen. Återvändande besökare som cachat den gamla strängen fick därför en föråldrad stilmall och missade ändringarna från 0.9.165/0.9.167. Dessutom var sex olika versionssträngar i omlopp (144, 187, 189, 191, 192, 206).
 - Samtliga 113 `styles.css`-referenser är nu enade till `?v=0.9.213`, vilket tvingar alla klienter att hämta aktuell CSS en gång och gör att konventionen framåt speglar releasenumret (som `app.js` redan gör). Enbart query-strängen ändrad; ingen SEO-/meta- eller innehållspåverkan.
