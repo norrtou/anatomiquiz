@@ -286,6 +286,15 @@ Läkemedelsverket, FIPAT) → etablerade fackorgan (Läkartidningen, Läkarförb
 innehåll, kommersiella pluggsajter. Studentforum får citeras **endast** som klass D — som
 belägg för att en uppfattning finns, aldrig för att uppfattningen stämmer.
 
+### 6.5 Begärd kontroll/korrektur ska alltid vara manuell
+
+**KRITISK, NY REGEL (2026-07-22).** Samma regel som `CLAUDE_REGLER.md` §2.14, gäller lika för
+artiklar: när användaren uttryckligen ber om **kontroll** eller **korrektur** av en artikel
+(inte bara "skriv/uppdatera den här") ska det alltid vara en **manuell genomläsning av hela
+texten**, aldrig ersatt av eller nöjd med en `grep` efter ett redan känt fel, ett tidigare
+faktafel som mönster, eller ett antagande att resten är korrekt för att en del redan
+kontrollerats. Rapportera aldrig en kontroll som uttömmande om den inte var det.
+
 ---
 
 ## 7. Intern länkning

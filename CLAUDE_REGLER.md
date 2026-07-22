@@ -346,6 +346,20 @@ Skriptet är facit för *formtells* (§2.13), men följande feltyper är osynlig
 - **Diagnostisera skulden innan metod väljs (billigaste vägen först):** ren mekanisk tell (absolut-ord/filler) → EN samlad dump-och-patch över hela filen, inte ämne för ämne. Äkta sakfel gömda i `correct` → full genomläsning krävs. Låt ett skript räkna stränglängder och fylla ut distraktorn tills den slår `correct` – gissa ALDRIG längder för hand (jag underskattar konsekvent 15–30 tecken).
 - **Rör bara de flaggade fälten.** Index-patcha distraktorer (`{id:{"idx":ny}}`) så att prompt/correct/orörda distraktorer förblir byte-identiska → ren diff, inga oavsiktliga faktaändringar.
 
+### 2.14 BEGÄRD KONTROLL/KORREKTUR SKA ALLTID VARA MANUELL – ALDRIG MASKINELL GENOMLÄSNING
+**KRITISKT, NY REGEL (2026-07-22, efter att `grekiska_termer.json` innehöll tre olika ytformer av samma avslöjande-svar-fel som en tidigare "kontroll" missade).** När användaren uttryckligen ber om **kontroll** eller **korrektur** av quiz ELLER artiklar – inte bara "bygg det här", utan en explicit granskningsbegäran – ska den granskningen alltid vara en **manuell, isolerad genomläsning av varje fråga/stycke för sig**, aldrig ersättas av eller nöja sig med:
+- att bara köra `validate_quiz.py` och rapportera 0/0 (se `feedback_validator_zero_not_proof` – skriptet fångar bara kända mekaniska mönster),
+- att `grep`:a efter ETT redan hittat felmönster och anta att resten av filen är rent,
+- att pattern-matcha mot en lista av tidigare hittade fel utan att faktiskt läsa frågan/stycket i sin helhet mot sitt eget innehåll.
+
+**Varför:** i grekiska-svepet samma dag hittade en första manuell genomläsning `gre_epo_6`/`gre_epo_18` (samma mönster). Nästa "kontroll" letade specifikt efter DET mönstret, rapporterade filen ren, och missade `gre_epo_20` – en helt annan ytform av exakt samma underliggande fel (§2.9, tre kodifierade varianter). Användaren fick hitta den själv genom att faktiskt spela quizet. Se [[feedback_full_isolated_reread_after_bug_found]].
+
+**Hur det tillämpas:**
+- Läs varje fråga/stycke isolerat: täck (mentalt) över det du redan vet och gissa-testa på nytt (§2.12), oavsett om frågan "redan är kontrollerad" i ett tidigare pass.
+- Validatorn/skript får köras som ett FÖRSTA, billigt filter för rent mekaniska tells – men den ersätter aldrig den manuella genomläsningen, och "0 varningar" får aldrig rapporteras till användaren som att kontrollen är klar.
+- Gäller lika för artiklar: en begärd korrekturläsning innebär att läsa hela artikeltexten, inte att `grep`:a efter ett tidigare hittat stavfel eller sakfel och anta att övrigt är korrekt.
+- Rapportera ALDRIG en kontroll som uttömmande om den inte var det – säg hellre "jag kontrollerade X men inte Y" än att antyda fullständighet.
+
 ---
 
 ## 3. FAKTAKONTROLL OCH VERIFIERING
