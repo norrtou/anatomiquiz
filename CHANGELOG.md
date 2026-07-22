@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.197
+- **Andra kvalitetskontrollen av "Franska termer i anatomin" och "Tyska termer i anatomin", på uttrycklig begäran.** Utöver `validate_quiz.py` (0/0 i båda) genomlästes samtliga 100 frågor manuellt mot hela tell-katalogen i `CLAUDE_REGLER.md` §2.9, inklusive de två nya reglerna från 0.9.195. Två enskilda frågor fick tydligare längdparitet mellan rätt svar och distraktorer (ingen av dem låg över varningströskeln, men marginalen var i minsta laget för en flerklausig fråga):
+  - `fra_lan_14` (vad "bandage" betyder i svensk vårdkontext): distraktorerna förlängdes till jämförbar detaljnivå med rätt svar.
+  - `tys_epo_18` (vilken tarmdel Meckels divertikel sitter i): distraktorerna förlängdes till jämförbar detaljnivå.
+  - Ingen kategoriläcka, ingen språkblandning och inget nytt formtell hittades i övrigt vid genomläsningen.
+- **Länk från artikeln "Franska och tyska i medicinskt språk" till de nya quiz-ämnena.** CTA-stycket pekade tidigare bara generiskt på "medicinsk terminologi i quizet"; det fanns inget quiz-ämne om just franska/tyska lånord när artikeln skrevs (2026-07-20). Nu hänvisar den uttryckligen till **Allmänt → Franska termer i anatomin** och **Allmänt → Tyska termer i anatomin**, samma mönster som övriga kunskapsbanksartiklar använder för att peka ut ett specifikt ämne i quizet. `dateModified`/`uppdaterad` bumpad till 2026-07-22 i både HTML och `data/artiklar.json`.
+- Testat i webbläsare efter ändringarna: båda ämnena laddar och visar frågor utan konsolfel.
+- VERSION/APP_VERSION/index.html-cachebuster → 0.9.197.
+
 ## 0.9.196
 - **Nytt ämne under Allmänt: "Tyska termer i anatomin" (MC), 50 frågor.** Samma mönster som Franska termer (0.9.194–195): fristående ämne, egen fil (`data/tyska_termer.json`), ingen lins, inga befintliga frågor rörda. Byggt från grunden enligt de skärpta reglerna i `CLAUDE_REGLER.md` §2.9 v1.9 (kategoriläckage i namn-frågor, språkparitet för alla språk) för att undvika de tells som hittades i den franska filen.
   - **25 frågor om tyska eponymer** (Alzheimer, Wernicke, Basedow, von Recklinghausen, Wilms, Kussmaul, Röntgen, Virchow, Langerhans, Meckel, Henle, Schwann, Wolff, Müller, Reissner, Auerbach, Meissner m.fl.). Alla "beskrivning → term"-frågor (17 st) bygger på **bart efternamn** som svarsalternativ från start – ingen "Namn + kontraktur/syndrom"-konstruktion som kan läcka typen via frågans egen beskrivning.
