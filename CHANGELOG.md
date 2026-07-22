@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.210
+- **Rättat: enhetsomvandlarens tomma läge sa fel sak och såg fel ut.** Den visade ett grönt resultatkort med ett streck i och texten "skriv ett tal", som om strecket vore ett svar. Nu står samma uppmaning som i de övriga räknarna – *Fyll i fältet ovan.* – i den neutrala grå rutan, så att alla fem resultatfälten på sidan ser likadana ut när de är tomma.
+- Skrivs ett tal in återgår rutan till rutnätet med enheterna. Verifierat i webbläsare: 500 mg ger 0,0005 kg / 0,5 g / 500 mg (ditt värde) / 500000 µg.
+
 ## 0.9.209
 - **Guinness World Records borttaget ur källistorna.** Uppgifterna är korrekta, men en rekordbok hör inte hemma bland referenserna på en medicinsk sida – den drar ner intrycket av hela listan. Två poster bort från läkemedelsberäknarens referenser och två från källistan i info.html.
 - Rimlighetskontrollens gränser är oförändrade: kroppsvikt 0,2–700 kg står kvar, liksom varningstexternas hänvisningar till lägsta födelsevikt någon överlevt och tyngsta dokumenterade kroppsvikt. Det var källhänvisningen som togs bort, inte underlaget.

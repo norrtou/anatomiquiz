@@ -901,12 +901,16 @@
       utrad.innerHTML = '';
       var n = tolkaTal(falt.input.value);
       if (isNaN(n)) {
+        /* Tomt läge: samma neutrala ruta och samma uppmaning som i de
+           övriga räknarna, inte ett resultatkort med ett streck i. */
+        utrad.className = 'vt-out is-tom';
         var tom = document.createElement('div');
-        tom.className = 'vt-omv-post';
-        tom.innerHTML = '<span class="vt-omv-varde">—</span><span class="vt-omv-enhet">skriv ett tal</span>';
+        tom.className = 'vt-out-value';
+        tom.textContent = 'Fyll i fältet ovan.';
         utrad.appendChild(tom);
         return;
       }
+      utrad.className = 'vt-omv-ut';
 
       var lista, vald, bas;
       if (aktiv.konc) {
