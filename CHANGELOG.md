@@ -1,5 +1,17 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.199
+- **Ombyggd utbildnings-/kategoristruktur i ämnesväljaren.** Etiketten på `#education` döpt om från "Utbildning och antal tillgängliga ämnen" till "Utbildning eller kategori och antal tillgängliga ämnen". Kategorin "Allmänt" döpt om till **"Slumpade ämnen"** i dropdownen (intern id `allmant` oförändrat, så sparade topplistor följer med).
+- **Två nya kategorier vid sidan av Allmänt/Slumpade ämnen och de 12 yrkesutbildningarna:**
+  - **"Medicinsk terminologi"** (`data-edu="terminologi"`): Franska, Grekiska och Tyska termer i anatomin flyttade hit från Allmänt.
+  - **"Övrigt"** (`data-edu="ovrigt"`): Farmakologi (FC) flyttad hit från Allmänt.
+  - Allmänt/Slumpade ämnen innehåller efter flytten enbart de sju tvärgående linserna + `lins_alla`; inga egna frågor längre, som tänkt från början (se `UTBILDNINGAR_REGLER.md`).
+  - Inga frågefiler eller frågeinnehåll ändrat, bara vilken kategori ämnena hör till. `getQuestionsPath()` i `js/app.js` är oförändrad (styr på `topic`-värdet, inte `data-edu`).
+- **Länkberoenden uppdaterade:** `EDU_ABBREV` i `js/app.js` fick nya förkortningar TRM (Medicinsk terminologi) och ÖVR (Övrigt) så topplistan visar rätt kategori för dessa ämnen. `js/info.js`s frågestatistik-tabell (info.html) fick den gamla "Allmänt"-gruppen uppdelad i egna "Medicinsk terminologi"- och "Övrigt"-grupper (ingen "Slumpade ämnen"-grupp där, precis som tidigare "Allmänt" – linserna saknar egna frågefiler och räknas inte). CTA-länkarna i kunskapsbanksartiklarna "Grekiska i medicinen" och "Franska och tyska i medicinskt språk" pekar nu på **Medicinsk terminologi → …** i stället för Allmänt → …
+- `UTBILDNINGAR_REGLER.md` uppdaterad i samma pass: ny sektion "Medicinsk terminologi & Övrigt — icke-yrkesspecifika restkategorier" och rättningar i "Allmänt — tvärgående ämnen"-avsnittet.
+- Sitemap och llms.txt oförändrade – ingen sida eller URL har lagts till, tagits bort eller flyttat; det är bara etiketter/gruppering i en befintlig sida (`index.html`) som ändrats.
+- VERSION/APP_VERSION/index.html- och info.html-cachebuster → 0.9.199.
+
 ## 0.9.198
 - **Nytt ämne under Allmänt: "Grekiska termer i anatomin" (MC), 50 frågor.** Samma mönster som Franska/Tyska termer (0.9.194–197): fristående ämne, egen fil (`data/grekiska_termer.json`), ingen lins, inga befintliga frågor rörda.
   - **25 frågor om namngivna företeelser ur grekisk tradition.** Till skillnad från franska/tyska (moderna läkares efternamn) är grekiskans medicinska eponymer i huvudsak gudanamn: Atlas, Achilles, Priapus, Narcissus, Morpheus, Pan, Iris, Hebe, Thanatos, Asklepios och Hygieia, samt de antika läkarna Hippokrates och Galenos. Alla "beskrivning → namn"-frågor bygger på **bart namn** som svarsalternativ, samma princip som franska/tyska använder för att undvika kategoriläckage (§2.9).

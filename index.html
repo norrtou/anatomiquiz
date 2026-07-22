@@ -135,21 +135,28 @@
 
       <h2 id="setupHeading" class="sr-only">Starta quiz eller flashcards</h2>
 
-      <!-- Välj utbildning: filtrerar ämneslistan nedan per utbildning. Allmänt är
-           förvalt (default) och den ämnesövergripande startpunkten. Varje ämne taggas
-           med data-edu så samma datadrivna filter (captureTopicOptions/
-           updateTopicOptions) kombinerar utbildning + frågetyp.
-           Utbildningar utan eget (synligt) data-edu-ämne gråas automatiskt av
-           updateEducationOptions() med "(inga ämnen ännu)" – det är platshållaren,
-           inga fejkade ämnen skapas. Tomma, ej byggda ämnen ligger som UTKOMMENTERAD
-           scaffold i #topic nedan (osynliga för användaren) tills de byggs.
+      <!-- Välj utbildning ELLER kategori: filtrerar ämneslistan nedan. Varje ämne
+           taggas med data-edu så samma datadrivna filter (captureTopicOptions/
+           updateTopicOptions) kombinerar utbildning/kategori + frågetyp.
+           Utöver de 12 yrkesutbildningarna finns tre icke-yrkesspecifika
+           kategorier: "Slumpade ämnen" (allmant, förvald/default – de sju
+           tvärgående linserna, se ALLMANT_LENSES i js/app.js), "Medicinsk
+           terminologi" (terminologi – fristående språktermsämnen: franska,
+           grekiska, tyska) och "Övrigt" (ovrigt – restkategori, i dag bara
+           Farmakologi).
+           Utbildningar/kategorier utan eget (synligt) data-edu-ämne gråas
+           automatiskt av updateEducationOptions() med "(inga ämnen ännu)" –
+           det är platshållaren, inga fejkade ämnen skapas. Tomma, ej byggda
+           ämnen ligger som UTKOMMENTERAD scaffold i #topic nedan (osynliga för
+           användaren) tills de byggs.
            Vilka utbildningar som ska finnas, deras ämnesindelning och linser styrs av
            UTBILDNINGAR_REGLER.md. Listan är sorterad alfabetiskt (svensk ordning:
-           å/ä/ö efter z). Arbetsterapeut hanteras separat (egen ämnesmodell).
+           å/ä/ö efter z), utom "Slumpade ämnen" som ligger överst som förval.
+           Arbetsterapeut hanteras separat (egen ämnesmodell).
            Yrkesnamn används, inte "...programmet". -->
-      <label for="education">Utbildning och antal tillgängliga ämnen</label>
+      <label for="education">Utbildning eller kategori och antal tillgängliga ämnen</label>
       <select id="education" aria-describedby="educationNote">
-        <option value="allmant" selected>Allmänt</option>
+        <option value="allmant" selected>Slumpade ämnen</option>
         <option value="apotekare">Apotekare</option>
         <option value="arbetsterapeut">Arbetsterapeut</option>
         <option value="audionom">Audionom</option>
@@ -158,14 +165,16 @@
         <option value="logoped">Logoped</option>
         <option value="lakare">Läkare</option>
         <option value="medicinsk_sekreterare">Medicinsk sekreterare</option>
+        <option value="terminologi">Medicinsk terminologi</option>
         <option value="optiker">Optiker</option>
         <option value="rontgensjukskoterska">Röntgensjuksköterska</option>
         <option value="sjukskoterska">Sjuksköterska</option>
         <option value="tandlakare">Tandläkare</option>
+        <option value="ovrigt">Övrigt</option>
       </select>
 
-      <!-- Står kvar för ALLA utbildningar, inte bara Allmänt. -->
-      <p id="educationNote" class="topic-legend">Material baserat på officiella läroplaner. ”Allmänt” innehåller slumpmässigt hämtade frågor från alla utbildningar och kan därför variera i svårighetsgrad.</p>
+      <!-- Står kvar för ALLA utbildningar/kategorier, inte bara Slumpade ämnen. -->
+      <p id="educationNote" class="topic-legend">Material baserat på officiella läroplaner. ”Slumpade ämnen” innehåller slumpmässigt hämtade frågor från alla utbildningar och kan därför variera i svårighetsgrad.</p>
 
       <label for="topic">Ämne</label>
       <select id="topic" aria-describedby="topicLegend">
@@ -284,6 +293,13 @@
         <option value="medsek_sjukdom_symtom_atgard" data-edu="medicinsk_sekreterare">Sjukdoms-, symtom- &amp; åtgärdstermer (MC)</option>
         <option value="medsek_termens_byggstenar" data-edu="medicinsk_sekreterare">Termens byggstenar (MC)</option>
 
+        <!-- Medicinsk terminologi. Icke-yrkesspecifik kategori (som Allmänt/
+             Övrigt): fristående språktermsämnen om lånord och eponymer i
+             anatomin, flyttade hit från Allmänt. Egna frågefiler, ingen lins. -->
+        <option value="franska_termer" data-edu="terminologi">Franska termer i anatomin (MC)</option>
+        <option value="grekiska_termer" data-edu="terminologi">Grekiska termer i anatomin (MC)</option>
+        <option value="tyska_termer" data-edu="terminologi">Tyska termer i anatomin (MC)</option>
+
         <!-- Logoped -->
         <option value="blandade_logoped" data-edu="logoped">Slumpade frågor (MC)</option>
         <option value="logoped_andningsapparaten" data-edu="logoped">Andningsapparaten (MC)</option>
@@ -331,13 +347,15 @@
         <option value="apotekare_nervsystem_autonom" data-edu="apotekare">Nervsystemet &amp; autonom fysiologi (MC)</option>
         <option value="apotekare_njurar_utsondring" data-edu="apotekare">Njurar &amp; utsöndring (MC)</option>
 
-        <!-- Allmänt. Linserna (lins_*) har INGA egna frågor: de slumpar ur alla
-             utbildningars frågefiler via topic-mönster i ALLMANT_LENSES i
-             js/app.js. Lägg till/ändra en lins där – här står bara etiketten.
-             Alla linser heter "Blandat – …" så att det syns i dropdownen att
-             frågorna är hämtade tvärs utbildningarna; Farmakologi är ett vanligt
-             ämne med egna frågor och bär därför inte prefixet (och hamnar sist,
-             ämnena står i bokstavsordning).
+        <!-- Slumpade ämnen (data-edu="allmant", intern id oförändrat trots att
+             etiketten i #education döptes om från "Allmänt"). Linserna (lins_*)
+             har INGA egna frågor: de slumpar ur alla utbildningars frågefiler via
+             topic-mönster i ALLMANT_LENSES i js/app.js. Lägg till/ändra en lins
+             där – här står bara etiketten. Alla linser heter "Blandat – …" så
+             att det syns i dropdownen att frågorna är hämtade tvärs
+             utbildningarna. Farmakologi och språktermsämnena (franska/tyska/
+             grekiska) låg tidigare här men flyttades till kategorierna
+             "Medicinsk terminologi" och "Övrigt" nedan.
              Se UTBILDNINGAR_REGLER.md, "Allmänt — tvärgående ämnen". -->
         <option value="lins_alla" data-edu="allmant">Blandat – alla utbildningar (MC+TF+Bild)</option>
         <option value="lins_bal_inre_organ" data-edu="allmant">Blandat – bål &amp; inre organ (MC+TF)</option>
@@ -347,10 +365,6 @@
         <option value="lins_nedre_extremitet" data-edu="allmant">Blandat – nedre extremitet &amp; bäcken (MC+TF)</option>
         <option value="lins_nervsystemet" data-edu="allmant">Blandat – nervsystemet &amp; sinnesorganen (MC+TF)</option>
         <option value="lins_ovre_extremitet" data-edu="allmant">Blandat – övre extremitet (MC+TF+Bild)</option>
-        <option value="farmakologi" data-edu="allmant">Farmakologi (FC)</option>
-        <option value="franska_termer" data-edu="allmant">Franska termer i anatomin (MC)</option>
-        <option value="grekiska_termer" data-edu="allmant">Grekiska termer i anatomin (MC)</option>
-        <option value="tyska_termer" data-edu="allmant">Tyska termer i anatomin (MC)</option>
 
         <!-- =========================================================
              PLATSHÅLLAR-SCAFFOLD per utbildning (ej byggda ämnen ännu).
@@ -361,7 +375,8 @@
              Full ämnesindelning & linser: UTBILDNINGAR_REGLER.md.
              När ett ämne byggs: avkommentera raden, lägg till frågefilen
              i getQuestionsPath() och sätt rätt typtagg (MC/FC/TF) i texten.
-             Allmänt och arbetsterapeut hanteras separat – ingen scaffold här.
+             Slumpade ämnen, Medicinsk terminologi, Övrigt och arbetsterapeut
+             hanteras separat – ingen scaffold här.
              ========================================================= -->
         <!-- Läkare: alla 18 ämnen byggda – ingen scaffold kvar. -->
         <!-- Apotekare: alla 5 ämnen byggda – ingen scaffold kvar. -->
@@ -381,6 +396,10 @@
         <option value="optiker_lins_ackommodation" data-edu="optiker">Lins &amp; ackommodation (MC)</option>
         <option value="optiker_synfysiologi" data-edu="optiker">Synfysiologi &amp; perception (MC)</option>
         <option value="optiker_ogonrorelser_binokular" data-edu="optiker">Ögonrörelser &amp; binokulärseende (MC)</option>
+
+        <!-- Övrigt. Icke-yrkesspecifik restkategori (som Allmänt/Medicinsk
+             terminologi), flyttad hit från Allmänt. -->
+        <option value="farmakologi" data-edu="ovrigt">Farmakologi (FC)</option>
       </select>
       <p id="topicLegend" class="topic-legend">MC = Multiple Choice-frågor för quiz, FC = Flashcards, TF = Sant eller falskt-frågor för quiz, Bild = fråga med bild</p>
 
@@ -720,6 +739,6 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.198" defer></script>
+  <script src="js/app.js?v=0.9.199" defer></script>
 </body>
 </html>

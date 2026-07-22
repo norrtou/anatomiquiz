@@ -130,7 +130,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.198'
+const APP_VERSION = '0.9.199'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -1151,7 +1151,7 @@ function applySettings(){
   // beror på antalet).
   updateEducationOptions()
   // Återställ vald utbildning om den fortfarande finns som ett VALBART alternativ
-  // (inte utgråad pga saknade ämnen). Annars behålls förvalet (Allmänt).
+  // (inte utgråad pga saknade ämnen). Annars behålls förvalet (Slumpade ämnen).
   const eduEl = el('education')
   if(eduEl && typeof s.education === 'string' && Array.from(eduEl.options).some(o => o.value === s.education && !o.disabled)){
     eduEl.value = s.education
@@ -1204,16 +1204,18 @@ function showNonMedical(){
   return !!el('showNonMedical')?.checked
 }
 
-// Vald utbildning i "Välj utbildning" (Allmänt som standard).
+// Vald utbildning/kategori i "Utbildning eller kategori" (Slumpade ämnen,
+// value "allmant", som standard).
 function getSelectedEducation(){
   return el('education')?.value || 'allmant'
 }
 
-// Logiska trebokstavsförkortningar per utbildning, till högst upp i topplistan
-// (t.ex. "Axel/skulderkomplex (FYS)"). SSK/RSK följer den vedertagna svenska
-// sköterske-förkortningsmönstret (sista bokstäverna "SK"); övriga är egna,
-// konsekventa 3-bokstavsval. Statisk lista eftersom utbildningarna själva är
-// en manuellt kurerad, fast uppsättning (UTBILDNINGAR_REGLER.md).
+// Logiska trebokstavsförkortningar per utbildning/kategori, till högst upp i
+// topplistan (t.ex. "Axel/skulderkomplex (FYS)"). SSK/RSK följer den vedertagna
+// svenska sköterske-förkortningsmönstret (sista bokstäverna "SK"); övriga är
+// egna, konsekventa 3-bokstavsval. Statisk lista eftersom utbildningarna/
+// kategorierna själva är en manuellt kurerad, fast uppsättning
+// (UTBILDNINGAR_REGLER.md).
 const EDU_ABBREV = {
   allmant: 'ALM',
   apotekare: 'APO',
@@ -1224,10 +1226,12 @@ const EDU_ABBREV = {
   logoped: 'LOG',
   lakare: 'LÄK',
   medicinsk_sekreterare: 'MSK',
+  terminologi: 'TRM',
   optiker: 'OPT',
   rontgensjukskoterska: 'RSK',
   sjukskoterska: 'SSK',
-  tandlakare: 'TLK'
+  tandlakare: 'TLK',
+  ovrigt: 'ÖVR'
 }
 
 // Utbildningsförkortning för ett sparat highscore-resultats ämnesvärde.

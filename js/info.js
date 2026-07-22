@@ -23,16 +23,13 @@ function escapeHtml(str) {
 // Frågestatistik
 // ============================================================================
 
-// Ämnen grupperade per utbildning — samma indelning som ämnesväljaren på
-// startsidan (data-edu). fc: true = flashcard-ämne (kort i stället för frågor).
+// Ämnen grupperade per utbildning/kategori — samma indelning som
+// ämnesväljaren på startsidan (data-edu). "Slumpade ämnen" (allmant) saknas
+// avsiktligt här: dess ämnen är linser utan egna frågefiler (se
+// UTBILDNINGAR_REGLER.md, "Allmänt — tvärgående ämnen", regel 5) och skulle
+// dubbelräkna korpusen. fc: true = flashcard-ämne (kort i stället för frågor).
 // Håll i synk med getQuestionsPath() i app.js.
 const EDUCATIONS = [
-  { name: 'Allmänt', topics: [
-    { label: 'Farmakologi',                 file: './data/farmakologi.json', fc: true },
-    { label: 'Franska termer i anatomin',   file: './data/franska_termer.json' },
-    { label: 'Grekiska termer i anatomin',  file: './data/grekiska_termer.json' },
-    { label: 'Tyska termer i anatomin',     file: './data/tyska_termer.json' },
-  ]},
   { name: 'Arbetsterapeut', topics: [
     { label: 'Tentaplugg',                  file: './data/tentaplugg.json' },
     { label: 'ATP-studenters flashcards',   file: './data/studenters_flashcards.json', fc: true },
@@ -210,6 +207,14 @@ const EDUCATIONS = [
     { label: 'Organsystemen & deras terminologi',           file: './data/medicinsk_sekreterare.json', topic: 'medsek_organsystemen_terminologi' },
     { label: 'Sjukdoms-, symtom- & åtgärdstermer',          file: './data/medicinsk_sekreterare.json', topic: 'medsek_sjukdom_symtom_atgard' },
     { label: 'Diagnosklassificering & kodning',             file: './data/medicinsk_sekreterare.json', topic: 'medsek_diagnoskodning' },
+  ]},
+  { name: 'Medicinsk terminologi', topics: [
+    { label: 'Franska termer i anatomin',   file: './data/franska_termer.json' },
+    { label: 'Grekiska termer i anatomin',  file: './data/grekiska_termer.json' },
+    { label: 'Tyska termer i anatomin',     file: './data/tyska_termer.json' },
+  ]},
+  { name: 'Övrigt', topics: [
+    { label: 'Farmakologi',                 file: './data/farmakologi.json', fc: true },
   ]},
 ]
 
