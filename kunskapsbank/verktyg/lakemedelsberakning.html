@@ -116,7 +116,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
   <link rel="stylesheet" href="/css/styles.css?v=0.9.144">
-  <link rel="stylesheet" href="/css/verktyg.css?v=0.9.206">
+  <link rel="stylesheet" href="/css/verktyg.css?v=0.9.208">
 </head>
 <body>
 
@@ -148,6 +148,7 @@
       <div class="info-about">
         <p>Varje räknare bygger på ett samband mellan tre eller fyra storheter. Fyll i dem du känner till och lämna den du vill veta tom, så räknas den ut. Svaret visas alltid tillsammans med den insatta uträkningen, så att det går att följa och kontrollera. Enheten byter du direkt i fältet, och både komma och punkt fungerar som decimaltecken.</p>
         <p>Varje räknare har också ett <strong>träningsläge</strong>. Slår du på det försvinner svaret och ersätts av ett tomt fält där du fyller i din egen uträkning – facit visas först när du svarat. Ser du en siffra är du i räkneläget, ser du ett tomt fält är du i träningsläget.</p>
+        <p>Utöver det gör räknarna en <strong>rimlighetskontroll</strong>. Hamnar ett värde utanför det som över huvud taget kan förekomma – en kroppsvikt, en styrka eller en volym som inte finns – visas en varning under svaret. Kontrollen gäller storleksordning, inte dos: räknaren vet inte vilket preparat det handlar om, och en uträkning utan varning är därför inte detsamma som en kontrollerad ordination.</p>
         <p>Formlerna bakom räknarna förklaras i faktatexten <a href="/kunskapsbank/lakemedelsberakning.html">Läkemedelsberäkning</a>, och alla omvandlingar finns som uppslagstabeller i <a href="/kunskapsbank/lakemedelsberakning-omvandlingar.html">Omvandlingar &amp; formler</a>.</p>
       </div>
 
@@ -167,6 +168,19 @@
         <p><strong>Kontrollera alltid svaret.</strong> Räknarna utför den uträkning du matar in, men de känner varken till patienten, preparatet eller din verksamhets rutiner – ett rätt uträknat svar på fel ingångsvärden är fortfarande fel. Stäm av resultatet mot ordinationen och produktinformationen, gör en rimlighetsbedömning, och följ de lokala rutinerna för kontroll och dokumentation.</p>
       </div>
 
+      <!-- =========================================================
+           Källor — underlaget för rimlighetskontrollens gränser
+           ========================================================= -->
+      <div class="kb-sources">
+        <h2>Referenser</h2>
+        <ul>
+          <li>Fresenius Kabi. (2021). <em>Glucos Fresenius Kabi, infusionsvätska, lösning 500 mg/ml</em> [Produktresumé]. Fass. Hämtad 22 juli 2026 från <a href="https://fass.se/health/product/19801219000076/fass-text" target="_blank" rel="noopener noreferrer">fass.se</a></li>
+          <li>Guinness World Records. (u.å.). <em>Heaviest man ever</em>. Hämtad 22 juli 2026 från <a href="https://www.guinnessworldrecords.com/world-records/heaviest-man" target="_blank" rel="noopener noreferrer">guinnessworldrecords.com</a></li>
+          <li>Guinness World Records. (u.å.). <em>Lightest birth (female)</em>. Hämtad 22 juli 2026 från <a href="https://www.guinnessworldrecords.com/world-records/lightest-birth" target="_blank" rel="noopener noreferrer">guinnessworldrecords.com</a></li>
+          <li>Inera. (2023). <em>Iordningställande, administrering och överlämnande</em>. Vårdhandboken. Hämtad 22 juli 2026 från <a href="https://www.vardhandboken.se/vard-och-behandling/lakemedelsbehandling/lakemedelshantering/iordningstallande-administrering-och-overlamnande/" target="_blank" rel="noopener noreferrer">vardhandboken.se</a></li>
+        </ul>
+      </div>
+
       <div class="actions">
         <a href="/kunskapsbank/lakemedelsberakning.html" class="btn primary">Till faktatexten om läkemedelsberäkning</a>
         <a href="/kunskapsbank/verktyg/" class="btn">← Till verktygen</a>
@@ -176,7 +190,7 @@
 
   </main>
 
-  <script src="/js/verktyg-lakemedel.js?v=0.9.205" defer></script>
+  <script src="/js/verktyg-lakemedel.js?v=0.9.208" defer></script>
 
 </body>
 </html>

@@ -1,5 +1,15 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.208
+- **Rimlighetskontroll i läkemedelsberäknaren.** Räknarna vet inte vilket preparat det gäller och kan därför aldrig avgöra om en dos är *rätt* – men de kan avgöra om ett värde över huvud taget kan förekomma. Kontrollen ligger på storleksordning, vilket också är där de vanligaste felen syns: ett tiopotens- eller enhetsfel flyttar svaret långt utanför spannet.
+- **Två nivåer, båda under svaret.** Röd ruta när värdet är omöjligt: rubrik *Varning: orimligt värde*, vad som är orimligt, och den stående raden *Kan orsaka livsfara – kontrollera dina uppgifter en gång till*. Gul ruta när värdet är möjligt men ovanligt: rubrik *Kontrollera värdet* och skälet. De tre mjuka varningar som redan fanns (liten dosvolym, fler än fyra tabletter, takt över 999 ml/h) ingår nu i den gula nivån i stället för att stå för sig.
+- **Tolv granskade storheter:** kroppsvikt, ordinerad mängd, styrka, dosvolym, antal tabletter, dos per kilo, dos per kilo och timme, infusionstakt, infusionsvolym, infusionstid, droppfaktor och dropptakt. Varje fält är märkt med vilken storhet det är, så både inmatade tal och det räknaren själv kommer fram till prövas – och delblocken (kroppsvikt, dropptakt, mg/kg/h) har egna rutor.
+- **Gränserna är källbelagda, inte gissade.** Kroppsvikt 0,2–700 kg utgår från lägsta födelsevikt någon överlevt (212 g) och tyngsta dokumenterade kroppsvikt (635 kg). Styrka över 1000 mg/ml är mer läkemedel än vätska; den gula gränsen 500 mg/ml är glukos 500 mg/ml, den starkaste infusionslösningen i Fass. Sidan har fått en referenslista i APA 7, och källorna är införda i info.html.
+- **Inga falska larm.** Gränserna är satta med marginal så att nyfödda, högdosbehandlingar och koncentrat ryms utan varning. Verifierat i webbläsare: sex realistiska uträkningar samtidigt (500 mg ur 20 mg/ml, 20 kg × 15 mg/kg, 1000 ml på 8 h, dropptakt med df 20, 70 kg × 5 mg/kg/h ur 25 mg/ml, spädning 10 → 1 mg/ml) ger noll varningar och rätt svar i samtliga.
+- **Träningsläget avslöjar inte svaret.** Där granskas bara de värden som matats in – en varning om svarets storlek skulle annars vara en ledtråd till facit. Slår man tillbaka till räkneläget visas den igen.
+- **Svarsrutan slutar se bekräftad ut** när svaret vilar på ett omöjligt värde: den gröna bakgrunden går över i neutralt, så att den röda färgen är reserverad för varningen. Delblocken behandlas likadant.
+- Testade i DOM-skalet: 65 fall, samtliga OK, varav 23 nya för rimlighetskontrollen.
+
 ## 0.9.207
 - **"Live"-brickorna borttagna ur kunskapsbanken.** Det som ligger uppe behöver ingen märkning – bara det som ännu inte finns ska sticka ut. 22 brickor bort: 7 på kunskapsbankens startsida, 8 i nervtabellerna, 6 i listor & tabeller och 1 i verktygshubben, plus 6 i de generatorskrivna sidorna (faktatexter och ämneshubbarna).
 - **`Snart`-brickorna är kvar oförändrade** på de tre ämnesområden som inte är byggda än – Hjärta & kärl, Inre organ och Klinisk anatomi.

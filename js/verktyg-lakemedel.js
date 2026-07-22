@@ -53,6 +53,179 @@
   }
 
   /* ---------------------------------------------------------
+     Rimlighetskontroll
+     ---------------------------------------------------------
+     Räknarna vet inte vilket preparat det gäller, och kan därför
+     aldrig avgöra om en dos är *rätt*. Det de kan avgöra är om ett
+     värde över huvud taget kan förekomma: ingen människa väger 700 kg,
+     ingen lösning kan innehålla mer än ett gram läkemedel per
+     milliliter, och en spruta kan inte mäta upp en tusendels
+     milliliter. Kontrollen ligger alltså på storleksordning, inte på
+     dos — det är också där de vanligaste felen uppstår, eftersom ett
+     tiopotens- eller enhetsfel flyttar svaret långt utanför spannet.
+
+     Två nivåer:
+       rod – värdet ligger utanför vad som är möjligt.
+       gul – värdet är möjligt men ovanligt; värt en kontroll.
+
+     Gränserna är satta med marginal åt bägge håll, så att verkliga
+     ytterlighetsfall (nyfödda, högdosbehandlingar, koncentrat) ryms
+     utan varning. Underlaget står i sidans referenslista.
+     --------------------------------------------------------- */
+
+  var RIMLIGHET = {
+    /* Kroppsvikt i kg. Lägsta födelsevikt någon överlevt är 212 g;
+       tyngsta dokumenterade kroppsvikt hos människa är 635 kg. */
+    vikt: {
+      rod: [
+        { over: 700, text: 'En kroppsvikt på {v} kg ligger utanför vad som förekommer hos människa – den tyngsta vikt som någonsin dokumenterats är 635 kg.' },
+        { under: 0.2, text: 'En kroppsvikt på {v} kg är lägre än den lägsta födelsevikt någon har överlevt (212 gram). Är vikten angiven i gram i stället för kilogram?' }
+      ],
+      gul: [
+        { over: 300, text: 'Kontrollera vikten – {v} kg är en mycket ovanlig kroppsvikt.' },
+        { under: 0.5, text: 'Kontrollera vikten – {v} kg motsvarar en extremt tidig förlossning.' }
+      ]
+    },
+
+    /* Ordinerad mängd i mg. */
+    massa: {
+      rod: [
+        { over: 1e5, text: 'En enskild dos på {v} mg är över hundra gram läkemedel. Så stora mängder ges inte.' }
+      ],
+      gul: [
+        { over: 1e4, text: 'Kontrollera ordinationen – {v} mg är över tio gram i en och samma dos, vilket är ovanligt även för högdoserade preparat.' },
+        { under: 1e-4, text: 'Kontrollera ordinationen – {v} mg är mindre än en tiondels mikrogram.' }
+      ]
+    },
+
+    /* Styrka i mg/ml. 1000 mg/ml = 100 %, alltså mer läkemedel än
+       vätska. Den starkaste infusionslösningen i Fass är glukos
+       500 mg/ml. */
+    styrka: {
+      rod: [
+        { over: 1000, text: 'En styrka på {v} mg/ml är mer än ett gram läkemedel per milliliter, alltså mer läkemedel än vätska. Så koncentrerade lösningar finns inte.' }
+      ],
+      gul: [
+        { over: 500, text: 'Kontrollera styrkan – {v} mg/ml är starkare än de mest koncentrerade infusionslösningar som finns (glukos 500 mg/ml).' },
+        { under: 1e-3, text: 'Kontrollera styrkan – {v} mg/ml är under ett mikrogram per milliliter.' }
+      ]
+    },
+
+    /* Volym för en enskild dos, i ml. */
+    dosvolym: {
+      rod: [
+        { over: 2000, text: 'En dosvolym på {v} ml är över två liter i en och samma dos.' },
+        { under: 0.01, text: 'En dosvolym på {v} ml går inte att mäta upp med spruta. Kontrollera styrkan – det är den som avgör volymen.' }
+      ],
+      gul: [
+        { over: 500, text: 'Kontrollera dosvolymen – {v} ml är en mycket stor volym för en enskild dos.' },
+        { under: 0.1, text: 'Kontrollera styrkan – volymer under 0,1 ml går sällan att mäta upp säkert.' }
+      ]
+    },
+
+    /* Antal tabletter i en dos. */
+    tabletter: {
+      rod: [
+        { over: 20, text: '{v} tabletter i en och samma dos ges inte.' }
+      ],
+      gul: [
+        { over: 4, text: 'Kontrollera ordinationen och tablettstyrkan – {v} tabletter är fler än vad som normalt ges i en dos.' },
+        { under: 0.25, text: 'Kontrollera ordinationen – {v} tabletter är mindre än en kvarts tablett, och tabletter delas sällan i mindre delar än så.' }
+      ]
+    },
+
+    /* Dos per kilo kroppsvikt, mg/kg. */
+    perkg: {
+      rod: [
+        { over: 5000, text: 'En dos på {v} mg/kg är över fem gram läkemedel per kilo kroppsvikt.' }
+      ],
+      gul: [
+        { over: 200, text: 'Kontrollera dosen per kilo – {v} mg/kg ligger över de doser som normalt ordineras per kilogram.' }
+      ]
+    },
+
+    /* Dos per kilo och timme, mg/kg/h. */
+    perkgh: {
+      rod: [
+        { over: 1000, text: 'En dos på {v} mg/kg/h är över ett gram läkemedel per kilo kroppsvikt och timme.' }
+      ],
+      gul: [
+        { over: 100, text: 'Kontrollera dosen – {v} mg/kg/h ligger över de doser som normalt ges som kontinuerlig infusion.' }
+      ]
+    },
+
+    /* Infusionstakt, ml/h. */
+    takt: {
+      rod: [
+        { over: 10000, text: 'En infusionstakt på {v} ml/h är över tio liter i timmen.' }
+      ],
+      gul: [
+        { over: 999, text: 'Kontrollera volym och tid – {v} ml/h är mer än de flesta volympumpar tar emot.' }
+      ]
+    },
+
+    /* Volym som ska infunderas, ml. */
+    infvolym: {
+      rod: [
+        { over: 20000, text: 'En infusionsvolym på {v} ml är över tjugo liter.' }
+      ],
+      gul: [
+        { over: 5000, text: 'Kontrollera volymen – {v} ml är mer än fem liter i en och samma infusion.' }
+      ]
+    },
+
+    /* Infusionstid, minuter. */
+    infusionstid: {
+      rod: [
+        { over: 43200, text: 'En infusionstid på {v} minuter är längre än en månad.' }
+      ],
+      gul: [
+        { over: 4320, text: 'Kontrollera tiden – {v} minuter är längre än tre dygn.' },
+        { under: 1, text: 'Kontrollera tiden – {v} minuter är kortare än en minut.' }
+      ]
+    },
+
+    /* Droppfaktor, droppar/ml. Klara lösningar 20, blod omkring 15. */
+    droppfaktor: {
+      rod: [
+        { over: 200, text: 'En droppfaktor på {v} droppar/ml finns inte på något aggregat.' },
+        { under: 1, text: 'En droppfaktor på {v} droppar/ml finns inte på något aggregat.' }
+      ],
+      gul: [
+        { over: 60, text: 'Kontrollera droppfaktorn på förpackningen – vanliga aggregat ligger på 15–20 droppar/ml.' },
+        { under: 10, text: 'Kontrollera droppfaktorn på förpackningen – vanliga aggregat ligger på 15–20 droppar/ml.' }
+      ]
+    },
+
+    /* Dropptakt, droppar/min. */
+    dropptakt: {
+      rod: [
+        { over: 400, text: 'En dropptakt på {v} droppar/min går inte att ställa in – vid den takten övergår dropparna i en stråle.' }
+      ],
+      gul: [
+        { over: 150, text: 'Kontrollera volym och tid – {v} droppar/min är en mycket hög takt att ställa in för hand.' }
+      ]
+    }
+  };
+
+  /** Prövar ett värde mot sitt spann. Returnerar null när allt är rimligt. */
+  function granskaVarde(typ, varde) {
+    var post = RIMLIGHET[typ];
+    if (!post || !isFinite(varde)) return null;
+    var nivaer = ['rod', 'gul'];
+    for (var i = 0; i < nivaer.length; i++) {
+      var regler = post[nivaer[i]] || [];
+      for (var j = 0; j < regler.length; j++) {
+        var r = regler[j];
+        if ((r.over != null && varde > r.over) || (r.under != null && varde < r.under)) {
+          return { niva: nivaer[i], text: r.text.replace('{v}', visaTal(varde)) };
+        }
+      }
+    }
+    return null;
+  }
+
+  /* ---------------------------------------------------------
      Enheter
      --------------------------------------------------------- */
 
@@ -136,6 +309,76 @@
   /** Enhetstexten som ska stå efter svaret. */
   function faltenhet(f) {
     return f.spec.grupp ? f.valjare.value : (f.spec.enhet || '');
+  }
+
+  /* ---------------------------------------------------------
+     Varningsrutorna
+     --------------------------------------------------------- */
+
+  var VARNTITEL = {
+    rod: 'Varning: orimligt värde',
+    gul: 'Kontrollera värdet'
+  };
+
+  /* Den röda rutan avslutas alltid likadant, så att raden känns igen
+     var i räknaren den än dyker upp. */
+  var RODSLUT = 'Kan orsaka livsfara – kontrollera dina uppgifter en gång till.';
+
+  function byggVarnruta(niva) {
+    var el = document.createElement('div');
+    el.className = 'vt-warn' + (niva === 'rod' ? ' is-fara' : '');
+    el.hidden = true;
+    if (niva === 'rod') el.setAttribute('role', 'alert');
+    var titel = document.createElement('strong');
+    titel.className = 'vt-warn-titel';
+    titel.textContent = VARNTITEL[niva];
+    var text = document.createElement('div');
+    text.className = 'vt-warn-text';
+    el.appendChild(titel);
+    el.appendChild(text);
+    return { el: el, text: text, niva: niva };
+  }
+
+  function fyllVarnruta(ruta, rader) {
+    ruta.text.innerHTML = '';
+    if (!rader.length) { ruta.el.hidden = true; return; }
+    ruta.el.hidden = false;
+    rader.forEach(function (r) {
+      var p = document.createElement('p');
+      p.textContent = r;
+      ruta.text.appendChild(p);
+    });
+    if (ruta.niva === 'rod') {
+      var slut = document.createElement('p');
+      slut.className = 'vt-warn-slut';
+      slut.textContent = RODSLUT;
+      ruta.text.appendChild(slut);
+    }
+  }
+
+  /**
+   * Granskar en uppsättning värden och fyller de två rutorna.
+   * @param {Object} rutor  {rod, gul} från byggVarnruta
+   * @param {Array} poster  [{typ, varde, svar?}] – svar:true för det
+   *   räknaren själv kommit fram till.
+   * @param {Array} extra   redan formulerade gula meddelanden
+   * @param {boolean} doljSvar  i träningsläget får svarets storlek inte
+   *   avslöjas, så bara inmatade värden granskas.
+   * @returns {boolean} sant när något värde är orimligt.
+   */
+  function visaRimlighet(rutor, poster, extra, doljSvar) {
+    var rod = [];
+    var gul = (extra || []).slice();
+    poster.forEach(function (p) {
+      if (doljSvar && p.svar) return;
+      var t = granskaVarde(p.typ, p.varde);
+      if (!t) return;
+      var lista = t.niva === 'rod' ? rod : gul;
+      if (lista.indexOf(t.text) === -1) lista.push(t.text);
+    });
+    fyllVarnruta(rutor.rod, rod);
+    fyllVarnruta(rutor.gul, gul);
+    return rod.length > 0;
   }
 
   /* ---------------------------------------------------------
@@ -272,10 +515,12 @@
     svarsruta.appendChild(dom);
     kort.appendChild(svarsruta);
 
-    var varning = document.createElement('div');
-    varning.className = 'vt-warn';
-    varning.hidden = true;
-    kort.appendChild(varning);
+    /* Rimlighetsrutorna. Den röda ligger överst och närmast svaret –
+       ser man bara en sak till ska det vara den. */
+    var varnRod = byggVarnruta('rod');
+    var varnGul = byggVarnruta('gul');
+    kort.appendChild(varnRod.el);
+    kort.appendChild(varnGul.el);
 
     /* Härledda delblock */
     var delblock = [];
@@ -308,8 +553,12 @@
       dc.className = 'vt-calc';
       dut.appendChild(dl); dut.appendChild(dv); dut.appendChild(dc);
       block.appendChild(dut);
+      var dRod = byggVarnruta('rod');
+      var dGul = byggVarnruta('gul');
+      block.appendChild(dRod.el);
+      block.appendChild(dGul.el);
       kort.appendChild(block);
-      var post = { spec: db, falt: falt, ut: dut, varde: dv, calc: dc };
+      var post = { spec: db, falt: falt, ut: dut, varde: dv, calc: dc, block: block, rutor: { rod: dRod, gul: dGul } };
       delblock.push(post);
       falt.forEach(function (f) {
         f.input.addEventListener('input', function () { raknaDel(post); });
@@ -330,6 +579,8 @@
     var falt = [];
     var traningslage = false;
     var sisteSvar = null; // {basvarde, falt}
+    var rimPoster = [];   // granskade värden från senaste uträkningen
+    var rimGula = [];     // mjuka varningar från räknaren själv
 
     function aktivaFaltspecar() {
       return aktivFlik ? aktivFlik.falt : cfg.falt;
@@ -359,10 +610,11 @@
         f.el.classList.remove('is-svar');
         f.input.placeholder = f.spec.plats || '';
       });
-      varning.hidden = true;
       dom.className = '';
       dom.textContent = '';
       svarInput.value = '';
+      rimPoster = [];
+      rimGula = [];
 
       var v = {};
       var tomma = [];
@@ -373,6 +625,9 @@
         var n = basvarde(f);
         if (isNaN(n) || n <= 0) { ogiltigt = true; return; }
         v[f.spec.namn] = n;
+        /* Varje inmatat värde granskas för sig, oavsett om det räcker
+           till en uträkning — ett orimligt tal ska synas direkt. */
+        if (f.spec.rim) rimPoster.push({ typ: f.spec.rim, varde: n });
       });
 
       if (ogiltigt) {
@@ -424,9 +679,9 @@
       utCalc.textContent = svar.uttryck;
       utExtra.textContent = svar.extra || '';
 
-      if (svar.varning) {
-        varning.hidden = false;
-        varning.textContent = svar.varning;
+      if (svar.varning) rimGula.push(svar.varning);
+      if (malfalt.spec.rim) {
+        rimPoster.push({ typ: malfalt.spec.rim, varde: svar.varde, svar: true });
       }
 
       svarEnhet.textContent = faltenhet(malfalt);
@@ -446,26 +701,35 @@
     function raknaDel(post) {
       var v = {};
       var klart = true;
+      var poster = [];
       post.falt.forEach(function (f) {
         var n = basvarde(f);
         if (isNaN(n) || n <= 0) { klart = false; return; }
         v[f.spec.namn] = n;
+        if (f.spec.rim) poster.push({ typ: f.spec.rim, varde: n });
       });
       if (!klart) {
         post.ut.classList.add('is-tom');
         post.varde.textContent = 'Fyll i fälten ovan.';
         post.calc.textContent = '';
+        post.block.classList.toggle('is-orimligt', visaRimlighet(post.rutor, poster, [], false));
         return;
       }
       var r = post.spec.rakna(v);
       post.ut.classList.remove('is-tom');
       post.varde.textContent = r.text;
       post.calc.textContent = r.uttryck;
+      if (post.spec.rim) poster.push({ typ: post.spec.rim, varde: r.varde });
+      post.block.classList.toggle('is-orimligt', visaRimlighet(post.rutor, poster, [], false));
     }
 
     /* Visar rätt ruta för läget. I träningsläget finns ingen siffra
        att läsa av — det är själva skyddet mot att lägena förväxlas. */
     function lagesvy() {
+      /* Ett svar som bygger på ett omöjligt värde ska inte ligga kvar i
+         den gröna rutan och se bekräftat ut. */
+      var orimligt = visaRimlighet({ rod: varnRod, gul: varnGul }, rimPoster, rimGula, traningslage);
+      kort.classList.toggle('is-orimligt', orimligt);
       var harSvar = sisteSvar !== null;
       if (traningslage) {
         ut.hidden = true;
@@ -683,12 +947,10 @@
     // ordination (mg) = styrka (mg/ml) × dos (ml)
     if (tomt === 'dos') {
       var ml = v.ordination / v.styrka;
+      /* Volymens rimlighet prövas av rimlighetskontrollen (typ dosvolym). */
       return {
         varde: ml,
-        uttryck: visaTal(v.ordination) + ' mg ÷ ' + visaTal(v.styrka) + ' mg/ml = ' + visaTal(ml) + ' ml',
-        varning: ml < 0.1
-          ? 'Volymen är mindre än 0,1 ml. Kontrollera styrkan – så små volymer går sällan att mäta upp säkert.'
-          : (ml > 500 ? 'Volymen är över 500 ml. Kontrollera ordinationen och styrkan.' : null)
+        uttryck: visaTal(v.ordination) + ' mg ÷ ' + visaTal(v.styrka) + ' mg/ml = ' + visaTal(ml) + ' ml'
       };
     }
     if (tomt === 'styrka') {
@@ -707,8 +969,7 @@
         uttryck: visaTal(v.ordination) + ' mg ÷ ' + visaTal(v.styrka) + ' mg per tablett = ' + visaTal(antal) + ' tabletter',
         extra: (Math.abs(antal * 2 - Math.round(antal * 2)) > 1e-9)
           ? 'Svaret är varken ett helt eller ett halvt antal tabletter – kontrollera ordinationen mot tillgängliga styrkor.'
-          : '',
-        varning: antal > 4 ? 'Fler än fyra tabletter i en och samma dos. Kontrollera ordinationen och tablettstyrkan.' : null
+          : ''
       };
     }
     if (tomt === 'styrka') {
@@ -740,9 +1001,9 @@
           {
             id: 'flytande', text: 'Flytande',
             falt: [
-              { namn: 'ordination', etikett: 'Ordination', grupp: 'massa', standard: 'mg', plats: 't.ex. 500' },
-              { namn: 'styrka', etikett: 'Styrka', enhet: 'mg/ml', plats: 't.ex. 20' },
-              { namn: 'dos', etikett: 'Dosvolym', enhet: 'ml', plats: 'lämna tom' }
+              { namn: 'ordination', etikett: 'Ordination', grupp: 'massa', standard: 'mg', plats: 't.ex. 500', rim: 'massa' },
+              { namn: 'styrka', etikett: 'Styrka', enhet: 'mg/ml', plats: 't.ex. 20', rim: 'styrka' },
+              { namn: 'dos', etikett: 'Dosvolym', enhet: 'ml', plats: 'lämna tom', rim: 'dosvolym' }
             ],
             rakna: flytandeRakna,
             stammer: function (v) { return stammerProdukt(v, 'mg/ml', 'ml'); }
@@ -750,9 +1011,9 @@
           {
             id: 'tablett', text: 'Tablett',
             falt: [
-              { namn: 'ordination', etikett: 'Ordination', grupp: 'massa', standard: 'mg', plats: 't.ex. 1000' },
-              { namn: 'styrka', etikett: 'Styrka per tablett', enhet: 'mg', plats: 't.ex. 500' },
-              { namn: 'dos', etikett: 'Antal tabletter', enhet: 'st', plats: 'lämna tom' }
+              { namn: 'ordination', etikett: 'Ordination', grupp: 'massa', standard: 'mg', plats: 't.ex. 1000', rim: 'massa' },
+              { namn: 'styrka', etikett: 'Styrka per tablett', enhet: 'mg', plats: 't.ex. 500', rim: 'massa' },
+              { namn: 'dos', etikett: 'Antal tabletter', enhet: 'st', plats: 'lämna tom', rim: 'tabletter' }
             ],
             rakna: tablettRakna,
             stammer: function (v) { return stammerProdukt(v, 'mg/tablett', 'tabletter'); }
@@ -764,13 +1025,15 @@
         rubrik: 'Ordination efter kroppsvikt',
         intro: 'Räknar fram den ordinerade mängden ur vikt och dos per kilo. Använd resultatet som ordination ovan.',
         svarsetikett: 'Ordinerad mängd',
+        rim: 'massa',
         falt: [
-          { namn: 'vikt', etikett: 'Vikt', enhet: 'kg', plats: 't.ex. 20' },
-          { namn: 'perkg', etikett: 'Dos per kilo', enhet: 'mg/kg', plats: 't.ex. 15' }
+          { namn: 'vikt', etikett: 'Vikt', enhet: 'kg', plats: 't.ex. 20', rim: 'vikt' },
+          { namn: 'perkg', etikett: 'Dos per kilo', enhet: 'mg/kg', plats: 't.ex. 15', rim: 'perkg' }
         ],
         rakna: function (v) {
           var mg = v.vikt * v.perkg;
           return {
+            varde: mg,
             text: visaTal(mg) + ' mg',
             uttryck: visaTal(v.perkg) + ' mg/kg × ' + visaTal(v.vikt) + ' kg = ' + visaTal(mg) + ' mg'
           };
@@ -789,9 +1052,9 @@
       rubrik: 'Infusion',
       intro: 'Sambandet volym = hastighet × tid. Lämna det du vill veta tomt, så räknas det ut – och droppar per minut visas när volym och tid är kända.',
       falt: [
-        { namn: 'volym', etikett: 'Volym', grupp: 'volym', standard: 'ml', plats: 't.ex. 1000' },
-        { namn: 'tid', etikett: 'Tid', grupp: 'tid', standard: 'h', plats: 't.ex. 8' },
-        { namn: 'takt', etikett: 'Hastighet', enhet: 'ml/h', plats: 'lämna tom' }
+        { namn: 'volym', etikett: 'Volym', grupp: 'volym', standard: 'ml', plats: 't.ex. 1000', rim: 'infvolym' },
+        { namn: 'tid', etikett: 'Tid', grupp: 'tid', standard: 'h', plats: 't.ex. 8', rim: 'infusionstid' },
+        { namn: 'takt', etikett: 'Hastighet', enhet: 'ml/h', plats: 'lämna tom', rim: 'takt' }
       ],
       rakna: function (v, tomt) {
         if (tomt === 'takt') {
@@ -800,8 +1063,7 @@
           return {
             varde: takt,
             uttryck: visaTal(v.volym) + ' ml ÷ ' + visaTal(timmar) + ' h = ' + visaTal(takt) + ' ml/h',
-            extra: 'Med ett aggregat på 20 droppar/ml blir det ' + visaTal(v.volym * 20 / v.tid) + ' droppar/min.',
-            varning: takt > 999 ? 'Över 999 ml/h. Kontrollera volym och tid – de flesta pumpar tar inte emot högre takt.' : null
+            extra: 'Med ett aggregat på 20 droppar/ml blir det ' + visaTal(v.volym * 20 / v.tid) + ' droppar/min.'
           };
         }
         if (tomt === 'tid') {
@@ -832,14 +1094,16 @@
           rubrik: 'Droppar per minut',
           intro: 'När takten ställs in för hand på ett droppaggregat. Läs av droppfaktorn på förpackningen – 20 droppar/ml är vanligast för klara lösningar, blodaggregat ligger kring 15.',
           svarsetikett: 'Dropptakt',
+          rim: 'dropptakt',
           falt: [
-            { namn: 'volym', etikett: 'Volym', grupp: 'volym', standard: 'ml', plats: 't.ex. 1000' },
-            { namn: 'tid', etikett: 'Tid', grupp: 'tid', standard: 'h', plats: 't.ex. 8' },
-            { namn: 'df', etikett: 'Droppfaktor', enhet: 'droppar/ml', plats: 't.ex. 20' }
+            { namn: 'volym', etikett: 'Volym', grupp: 'volym', standard: 'ml', plats: 't.ex. 1000', rim: 'infvolym' },
+            { namn: 'tid', etikett: 'Tid', grupp: 'tid', standard: 'h', plats: 't.ex. 8', rim: 'infusionstid' },
+            { namn: 'df', etikett: 'Droppfaktor', enhet: 'droppar/ml', plats: 't.ex. 20', rim: 'droppfaktor' }
           ],
           rakna: function (v) {
             var dr = v.volym * v.df / v.tid;
             return {
+              varde: dr,
               text: visaTal(dr) + ' droppar/min',
               uttryck: '(' + visaTal(v.volym) + ' ml × ' + visaTal(v.df) + ' droppar/ml) ÷ ' +
                 visaTal(v.tid) + ' min = ' + visaTal(dr) + ' droppar/min'
@@ -851,15 +1115,17 @@
           rubrik: 'Från mg/kg/h till ml/h',
           intro: 'Räkningen som oftast vållar problem: ordinationen är angiven per kilo och timme, men pumpen vill ha milliliter per timme.',
           svarsetikett: 'Pumpens inställning',
+          rim: 'takt',
           falt: [
-            { namn: 'vikt', etikett: 'Vikt', enhet: 'kg', plats: 't.ex. 70' },
-            { namn: 'perkgh', etikett: 'Dos', enhet: 'mg/kg/h', plats: 't.ex. 5' },
-            { namn: 'styrka', etikett: 'Lösningens styrka', enhet: 'mg/ml', plats: 't.ex. 25' }
+            { namn: 'vikt', etikett: 'Vikt', enhet: 'kg', plats: 't.ex. 70', rim: 'vikt' },
+            { namn: 'perkgh', etikett: 'Dos', enhet: 'mg/kg/h', plats: 't.ex. 5', rim: 'perkgh' },
+            { namn: 'styrka', etikett: 'Lösningens styrka', enhet: 'mg/ml', plats: 't.ex. 25', rim: 'styrka' }
           ],
           rakna: function (v) {
             var mgh = v.vikt * v.perkgh;
             var mlh = mgh / v.styrka;
             return {
+              varde: mlh,
               text: visaTal(mlh) + ' ml/h',
               uttryck: visaTal(v.perkgh) + ' mg/kg/h × ' + visaTal(v.vikt) + ' kg = ' + visaTal(mgh) +
                 ' mg/h · ' + visaTal(mgh) + ' mg/h ÷ ' + visaTal(v.styrka) + ' mg/ml = ' + visaTal(mlh) + ' ml/h'
@@ -880,10 +1146,10 @@
       rubrik: 'Spädning',
       intro: 'Sambandet styrka₁ × volym₁ = styrka₂ × volym₂. Mängden substans är oförändrad, bara volymen ökar. Lämna det du vill veta tomt.',
       falt: [
-        { namn: 's1', etikett: 'Koncentratets styrka', enhet: 'mg/ml', plats: 't.ex. 10' },
-        { namn: 'v1', etikett: 'Volym koncentrat', grupp: 'volym', standard: 'ml', plats: 'lämna tom' },
-        { namn: 's2', etikett: 'Önskad styrka', enhet: 'mg/ml', plats: 't.ex. 1' },
-        { namn: 'v2', etikett: 'Önskad slutvolym', grupp: 'volym', standard: 'ml', plats: 't.ex. 100' }
+        { namn: 's1', etikett: 'Koncentratets styrka', enhet: 'mg/ml', plats: 't.ex. 10', rim: 'styrka' },
+        { namn: 'v1', etikett: 'Volym koncentrat', grupp: 'volym', standard: 'ml', plats: 'lämna tom', rim: 'dosvolym' },
+        { namn: 's2', etikett: 'Önskad styrka', enhet: 'mg/ml', plats: 't.ex. 1', rim: 'styrka' },
+        { namn: 'v2', etikett: 'Önskad slutvolym', grupp: 'volym', standard: 'ml', plats: 't.ex. 100', rim: 'infvolym' }
       ],
       rakna: function (v, tomt) {
         var r;
@@ -896,7 +1162,7 @@
             extra: 'Fyll på till ' + visaTal(v.v2) + ' ml, alltså med ' + visaTal(v.v2 - r) + ' ml spädningsvätska.',
             varning: r > v.v2
               ? 'Koncentratet är svagare än den styrka du vill ha – den går inte att nå genom att späda.'
-              : (r < 0.1 ? 'Under 0,1 ml koncentrat. Kontrollera talen – så små volymer går sällan att mäta upp säkert.' : null)
+              : null
           };
         }
         if (tomt === 'v2') {

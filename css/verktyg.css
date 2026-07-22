@@ -255,6 +255,57 @@
   color: var(--text-primary);
 }
 
+/* ---------- Rimlighetskontrollen ---------- */
+
+/* Rubriken bär nivån. Den gula rutan ska gå att läsa förbi, den röda
+   inte — därav skillnaden i vikt och färg, inte i storlek. */
+.vt-warn-titel {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #92400e;
+  margin-bottom: 3px;
+}
+
+.vt-warn-text p {
+  margin: 0;
+}
+
+.vt-warn-text p + p {
+  margin-top: 5px;
+}
+
+.vt-warn.is-fara {
+  border-left-color: #dc2626;
+  background: #fef2f2;
+  color: #7f1d1d;
+}
+
+.vt-warn.is-fara .vt-warn-titel {
+  color: #b91c1c;
+}
+
+/* Den stående slutraden – samma ord varje gång, tydligt avskild. */
+.vt-warn.is-fara .vt-warn-slut {
+  font-weight: 600;
+}
+
+/* Vilar svaret på ett omöjligt värde ska det inte ligga kvar i den
+   gröna rutan och se bekräftat ut. Rutan går över i neutralt – den
+   röda färgen är reserverad för varningen, som är den som ska synas. */
+.vt-tool.is-orimligt > .vt-out,
+.vt-delblock.is-orimligt > .vt-out {
+  background: rgba(107, 114, 128, 0.06);
+  border-color: rgba(107, 114, 128, 0.2);
+}
+
+.vt-tool.is-orimligt > .vt-out .vt-out-value,
+.vt-delblock.is-orimligt > .vt-out .vt-out-value {
+  color: var(--text-secondary);
+}
+
 /* ---------- Träningsläget ---------- */
 
 /* Kortet ska synas som ett annat läge på en meters avstånd, inte
