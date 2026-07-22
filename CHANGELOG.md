@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.202
+- **Rättat etiketten på `#education`.** 0.9.199 döpte om den till "Utbildning eller kategori och antal tillgängliga ämnen" – ett tillägg utöver vad som begärdes. Står nu exakt "Utbildning eller kategori", i linje med den ursprungliga begäran.
+
 ## 0.9.201
 - **Rättat ytterligare en avslöjande fråga i "Grekiska termer i anatomin" (`gre_epo_20`), påtalat av användaren efter 0.9.200.** Prompten stavade ut rätt svars exakta form ("en enda orm slingrad runt en stav utan vingar") och en distraktor angav den uttryckliga MOTSATSEN ("två ormar och vingar") – ren logisk negation, ingen sakkunskap krävdes. Skriven om så att ingen beskrivning i prompten härrör ur eller motsäger något alternativ; varje alternativ ("Asklepiosstaven, en enda orm slingrad runt en stav" / "Herolds stav (caduceus), två ormar slingrade runt en bevingad stav" / …) bär nu sin egen, symmetriska beskrivning.
 - Efter fixen genomlästes **hela filen (50 frågor) på nytt, fråga för fråga isolerat** – inte bara jakt på redan kända mönster – samt hela `franska_termer.json` och `tyska_termer.json` för samma feltyp. Inga fler fall hittades i någon av de tre filerna.
