@@ -19,6 +19,7 @@ function getQuestionsPath(topic) {
   if (topic === 'medicinsk_latin') return './data/medicinsk_latin.json'
   if (topic === 'anatomi_fysiologi_flashcards') return './data/anatomi_fysiologi_flashcards.json'
   if (topic === 'farmakologi') return './data/farmakologi.json'
+  if (topic === 'franska_termer') return './data/franska_termer.json'
   if (topic === 'lakemedelsrakning') return './data/lakemedelsrakning.json'
   if (topic === 'lakare_anatomi_fysiologi') return './data/lakare_anatomi_fysiologi.json'
   if (topic.startsWith('lakare_')) return './data/lakare.json'
@@ -127,7 +128,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.193'
+const APP_VERSION = '0.9.194'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'

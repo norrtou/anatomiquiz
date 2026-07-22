@@ -29,6 +29,7 @@ function escapeHtml(str) {
 const EDUCATIONS = [
   { name: 'Allmänt', topics: [
     { label: 'Farmakologi',                 file: './data/farmakologi.json', fc: true },
+    { label: 'Franska termer i anatomin',   file: './data/franska_termer.json' },
   ]},
   { name: 'Arbetsterapeut', topics: [
     { label: 'Tentaplugg',                  file: './data/tentaplugg.json' },
