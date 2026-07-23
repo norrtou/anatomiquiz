@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.215
+- **Rättar det falska "ny version finns"-larmet.** `APP_VERSION` i `js/app.js` fastnade på `0.9.211` medan `VERSION` bumpades vidare till 0.9.212/0.9.213/0.9.214. Eftersom `loadVersion()` jämför den inbakade `APP_VERSION` mot färska `VERSION` visade även en helt uppdaterad app "ny version 0.9.214 finns, ladda om sidan" – och omladdning hjälpte inte, för serverns app.js bar samma stale konstant. Nu är `APP_VERSION` synkad till releasen (`0.9.215`) och app.js cache-bustern i index.html bumpad till `?v=0.9.215` så nya koden faktiskt hämtas. Framåt: `APP_VERSION` MÅSTE bumpas i lås med `VERSION` vid varje release, annars återkommer det falska larmet.
+
 ## 0.9.214
 - **Nyhetsnotis om läkemedelsberäknaren.** Nyhetssektionen på info.html har fått en notis (23 juli 2026) om att kunskapsbanken nu har en interaktiv läkemedelsberäknare, med länk till verktyget (`/kunskapsbank/verktyg/lakemedelsberakning.html`). "Senast uppdaterad"-datumet är bumpat till 23 juli 2026. Enbart innehåll på info.html; inga asset- eller cache-buster-ändringar.
 
