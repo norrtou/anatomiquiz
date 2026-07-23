@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.220
+- **Kortordning på kunskapsbankshubben justerad:** Medicinsk terminologi flyttad upp till plats 3, direkt under Pluggtabeller. Ny ordning: Faktatexter, Pluggtabeller, Medicinsk terminologi, Patientfall (case). Enbart kortordning; ingen CSS-ändring (styles.css-bustern kvar på 0.9.219). `APP_VERSION`/app.js-bustern bumpade i lås med `VERSION`.
+
 ## 0.9.219
 - **Omorganiserad kunskapsbankshubb.** Kategorikorten speglar nu vad kunskapsbanken faktiskt är – referens- och fördjupningsmaterial – i stället för att blanda in appens övriga delar. Ny ordning: **Faktatexter**, **Pluggtabeller** (kortet som leder till listor-tabeller.html heter "Pluggtabeller" här på hubben; sidans egen titel är oförändrad), **Patientfall (case)** och **Medicinsk terminologi**.
 - **Medicinsk ordlista, Verktyg och Testa dig själv** har tagits bort som kort – de hör hemma i appen som helhet, inte som resurser *i* kunskapsbanken. I stället ligger de nu i en ny, nedtonad **"Se även"**-rad (pill-länkar) längst ned på hubben så de fortfarande går att nå därifrån.
