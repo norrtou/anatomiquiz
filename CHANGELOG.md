@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.226
+- **Lång rubrik skalas ner i stället för att brytas.** Lösningen i 0.9.225 (avstavning/radbrytning av `.header h1`) såg tokig ut. Nu skalas i stället själva typsnittet: på mobil (`max-width: 640px`) har `.header h1` fått `font-size: clamp(1.5rem, 7.6vw, 2rem)`, så en lång rubrik som "Läkemedelsberäknare" krymper tills den ryms på **en enda rad** – ingen brytning, ingen avstavning. `min-width`/`overflow-wrap`/`hyphens` från 0.9.225 borttagna; `flex-shrink: 0` återställd. Taket `2rem` = oförändrad storlek på bredare telefoner, golvet `1.5rem` garanterar plats även på de smalaste skärmarna.
+- `css/styles.css` ändrad → styles.css-bustern enad till `?v=0.9.226`; generatorernas CSS-konstanter synkade. `APP_VERSION`/app.js-bustern bumpade i lås med `VERSION`.
+
 ## 0.9.225
 - **Lång rubrik spränger inte längre mobilskärmen.** Rubriken "Läkemedelsberäknare" (ett långt sammansatt ord) rann utanför skärmkanten på mobil, eftersom `.header h1` hade `flex-shrink: 0` i en `flex-wrap: nowrap`-behållare och därför varken kunde krympa eller radbrytas. Nu har rubriken `min-width: 0`, `overflow-wrap: break-word` och `hyphens: auto` (svensk avstavning via `lang="sv"`), så långa enordsrubriker avstavas/bryts i stället för att overflowa. Gäller alla sidors rubriker; korta titlar som "Anatomiquiz" påverkas inte.
 - `css/styles.css` ändrad → styles.css-bustern enad till `?v=0.9.225`; generatorernas CSS-konstanter synkade. `APP_VERSION`/app.js-bustern bumpade i lås med `VERSION`.

@@ -176,7 +176,11 @@ main {
 
 @media (max-width: 640px) {
   .header h1 {
-    font-size: 2rem;
+    /* Skala H1 efter skärmbredden i stället för radbrytning: långa rubriker
+       (t.ex. "Läkemedelsberäknare") krymper tills de ryms på en rad. Taket 2rem
+       = oförändrad storlek på bredare telefoner, golvet garanterar plats även på
+       de smalaste skärmarna. */
+    font-size: clamp(1.5rem, 7.6vw, 2rem);
   }
 }
 
@@ -210,11 +214,7 @@ main {
   background-clip: text;
   letter-spacing: -0.5px;
   line-height: 1.2;
-  /* Långa enordsrubriker (t.ex. "Läkemedelsberäknare") måste kunna krympa och
-     brytas/avstavas i stället för att spränga mobilskärmen. */
-  min-width: 0;
-  overflow-wrap: break-word;
-  hyphens: auto;
+  flex-shrink: 0;
 }
 
 .version {
