@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.216
+- **Uppdaterad "Vad finns i Kunskapsbanken?" på info.html.** Listan var inaktuell och saknade flera tillskott. Terminologipunkten nämner nu även franska, tyska och engelska lånord (utöver latin/grekiska), en ny punkt om **Verktyg** (läkemedelsberäkning för dos, infusionshastighet och spädning) har lagts till, och "Listor och tabeller" speglar dagens innehåll (skelettben, leder, kranialnerver, nervbanor och kärl). Sammanfattningen i feature-kortet "Kunskapsbanken" högre upp har också fått med räkneverktygen. Enbart synligt innehåll på info.html; ingen meta-/SEO-ändring.
+- `APP_VERSION` och app.js-cache-bustern i index.html bumpade i lås med `VERSION` enligt regeln från 0.9.215.
+
 ## 0.9.215
 - **Rättar det falska "ny version finns"-larmet.** `APP_VERSION` i `js/app.js` fastnade på `0.9.211` medan `VERSION` bumpades vidare till 0.9.212/0.9.213/0.9.214. Eftersom `loadVersion()` jämför den inbakade `APP_VERSION` mot färska `VERSION` visade även en helt uppdaterad app "ny version 0.9.214 finns, ladda om sidan" – och omladdning hjälpte inte, för serverns app.js bar samma stale konstant. Nu är `APP_VERSION` synkad till releasen (`0.9.215`) och app.js cache-bustern i index.html bumpad till `?v=0.9.215` så nya koden faktiskt hämtas. Framåt: `APP_VERSION` MÅSTE bumpas i lås med `VERSION` vid varje release, annars återkommer det falska larmet.
 
