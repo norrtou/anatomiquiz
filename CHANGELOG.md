@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.225
+- **Lång rubrik spränger inte längre mobilskärmen.** Rubriken "Läkemedelsberäknare" (ett långt sammansatt ord) rann utanför skärmkanten på mobil, eftersom `.header h1` hade `flex-shrink: 0` i en `flex-wrap: nowrap`-behållare och därför varken kunde krympa eller radbrytas. Nu har rubriken `min-width: 0`, `overflow-wrap: break-word` och `hyphens: auto` (svensk avstavning via `lang="sv"`), så långa enordsrubriker avstavas/bryts i stället för att overflowa. Gäller alla sidors rubriker; korta titlar som "Anatomiquiz" påverkas inte.
+- `css/styles.css` ändrad → styles.css-bustern enad till `?v=0.9.225`; generatorernas CSS-konstanter synkade. `APP_VERSION`/app.js-bustern bumpade i lås med `VERSION`.
+
 ## 0.9.224
 - **Kompaktare utskrift/PDF.** Print-layouten från 0.9.223 var för luftig – en tabell som ryms på en A4 svällde till 2–3 sidor. Orsak: tabellerna ärvde brödtextens `line-height: 1.5` och hade `4pt` vertikal cellpadding, plus 18 mm sidmarginal och stora rubrikmarginaler. Nu:
   - Sidmarginal `18mm/15mm` → `11mm/12mm`; rubrik- och styckemarginaler nedskurna; `.header` nollställd så det inte blir luft ovanför rubriken.
