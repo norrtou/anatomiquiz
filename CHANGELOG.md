@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.219
+- **Omorganiserad kunskapsbankshubb.** Kategorikorten speglar nu vad kunskapsbanken faktiskt är – referens- och fördjupningsmaterial – i stället för att blanda in appens övriga delar. Ny ordning: **Faktatexter**, **Pluggtabeller** (kortet som leder till listor-tabeller.html heter "Pluggtabeller" här på hubben; sidans egen titel är oförändrad), **Patientfall (case)** och **Medicinsk terminologi**.
+- **Medicinsk ordlista, Verktyg och Testa dig själv** har tagits bort som kort – de hör hemma i appen som helhet, inte som resurser *i* kunskapsbanken. I stället ligger de nu i en ny, nedtonad **"Se även"**-rad (pill-länkar) längst ned på hubben så de fortfarande går att nå därifrån.
+- Introtexten under korten är omskriven så den lyfter fram de fyra kvarvarande resurserna (faktatexter, pluggtabeller, patientfall, terminologi) i stället för att inleda med ordlistan.
+- Ny CSS: `.kb-seealso` (+ lista/länkar). Enbart synligt innehåll och stil på `/kunskapsbank/` – `<head>`/JSON-LD orört.
+- `css/styles.css` ändrad → cache-bustern enad till `?v=0.9.219` på samtliga sidor; generatorernas CSS-konstanter synkade. `APP_VERSION` och app.js-bustern bumpade i lås med `VERSION`.
+
 ## 0.9.218
 - **Verktygssidornas navigering leder nu till startsidan, inte kunskapsbanken.** I och med att Verktyg lyfts fram som en egen destination på framsidan (0.9.217) pekade brödsmulorna och tillbaka-knapparna fortfarande in i kunskapsbanken. Nu:
   - `verktyg/index.html`: brödsmulan är **Anatomiquiz / Verktyg** (mellansteget "Kunskapsbank" borttaget) och knappen längst ned är **← Till startsidan** (`/`) i stället för "← Till kunskapsbanken".

@@ -2536,6 +2536,60 @@ ol li {
 }
 
 /* =========================================================
+   "Se även" — lättare pill-länkar till resurser som inte hör
+   till kunskapsbanken (ordlista, verktyg, quiz). Avsiktligt
+   nedtonade jämfört med kategorikorten ovan.
+   ========================================================= */
+.kb-seealso {
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(16, 185, 129, 0.18);
+}
+
+.kb-seealso-title {
+  margin: 0 0 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.kb-seealso-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.kb-seealso-list a {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: 999px;
+  background: rgba(16, 185, 129, 0.05);
+  color: var(--primary-deep);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.12s ease, border-color 0.12s ease, transform 0.12s ease;
+}
+
+.kb-seealso-list a:hover {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.kb-seealso-list a:focus-visible {
+  outline: 3px solid var(--primary-dark);
+  outline-offset: 2px;
+}
+
+/* =========================================================
    Kunskapsbankens innehållssidor — vänsterställda faktatabeller
    (skiljt från .stats-table som högerställer sifferkolumner).
    Vågrät scroll på små skärmar via .kb-table-wrap.
