@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.229
+- **Verktyg-sidans tagline täcker nu alla tre verktygen.** `Räknare och omvandlare som visar uträkningen` beskrev bara läkemedelsberäknaren → ersatt med `Verktyg som räknar, mäter och kartlägger` (räknar = läkemedelsberäknaren, mäter = HEC, kartlägger = aktivitetsdagboken).
+- Ingen CSS ändrad → styles.css-bustern oförändrad. `APP_VERSION`/app.js-bustern bumpad i lås med `VERSION`.
+
 ## 0.9.228
 - **Verktyg-sidan rymmer nu tre verktyg, inte bara läkemedelsberäknaren.** Två nya kort på `verktyg/index.html` länkar till mina fristående externa appar: **HEC – öga–hand-koordination** (`norrtou.github.io/HEC/`) och **Aktivitetsdagboken** (`norrtou.github.io/activitydiary/`). Båda öppnas i nytt fönster (`target="_blank" rel="noopener"`) och märks diskret som externa via call-to-action-texten "Öppna extern app i nytt fönster ↗" (↗ mot de interna kortens →). Intro-texten breddad så den inte längre bara beskriver räknare.
 - Startsidans verktyg-bricka: finstilt undertext `Kliniska räknare` → `Räknare & kliniska appar` så den speglar det nya innehållet.
