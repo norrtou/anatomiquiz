@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.224
+- **Kompaktare utskrift/PDF.** Print-layouten från 0.9.223 var för luftig – en tabell som ryms på en A4 svällde till 2–3 sidor. Orsak: tabellerna ärvde brödtextens `line-height: 1.5` och hade `4pt` vertikal cellpadding, plus 18 mm sidmarginal och stora rubrikmarginaler. Nu:
+  - Sidmarginal `18mm/15mm` → `11mm/12mm`; rubrik- och styckemarginaler nedskurna; `.header` nollställd så det inte blir luft ovanför rubriken.
+  - Tabeller: `line-height` `1.5` → `1.15`, teckenstorlek `9.5pt` → `8.5pt`, cellpadding `4pt 6pt` → `1.5pt 4pt`, `vertical-align: top`. En A4-tabell ryms nu på en A4.
+  - Brödtext `11pt/1.5` → `10.5pt/1.35`. Bara utskrift/PDF påverkas; skärmvyn är oförändrad.
+- `css/styles.css` ändrad → styles.css-bustern enad till `?v=0.9.224`; generatorernas CSS-konstanter synkade. `APP_VERSION`/app.js-bustern bumpade i lås med `VERSION`.
+
 ## 0.9.223
 - **Ren utskrift / spara som PDF på alla innehållssidor.** Verktygsraden (tidigare bara "Skriv ut + Ladda ner CSV" på tabellsidor) är nu en generell dokumentrad: **Skriv ut** och **Spara som PDF** på varje innehållssida, plus **Ladda ner (CSV)** där det finns tabeller. Både utskrift och PDF går via webbläsarens utskriftsdialog tillsammans med sajtens print-stylesheet – ingen tung PDF-motor, CSP-säkert.
 - **Print-stylesheet omarbetad så texten faktiskt följer med.** Tidigare doldes `.info-about` i utskrift – men artiklarnas (t.ex. ledtyper) och faktatexternas hela brödtext ligger i `.info-about`, så utskriften tappade all prosa och behöll bara tabellerna. Nu skrivs prosa **och** referenser (`.kb-sources`) ut, avlövade på skärmstylingen (ram/bakgrund/indrag bort), medan bara skärm-chrome skalas bort: navigering, brödsmulor, knappar, kort-rutnät (`.kb-grid`/`.kb-seealso`/`.hub-nav`), verktygsraden och JS-varningar. A4-marginaler via `@page`, svart text på vitt, tabeller med upprepad kolumnrubrik och radbrytskydd. Det gör bl.a. formellistan för läkemedelsberäkning utskriftsvänlig på A4.
