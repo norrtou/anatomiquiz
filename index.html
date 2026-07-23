@@ -121,7 +121,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="css/styles.css?v=0.9.213">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.217">
 </head>
 <body>
 
@@ -449,10 +449,21 @@
           <button id="viewScores" class="btn">Topplista</button>
           <button id="openSettings" class="btn">Inställningar</button>
         </div>
-        <div class="secondary-actions accent-row">
-          <a class="btn" href="medicinskordlista.html">Medicinsk ordlista</a>
-          <a class="btn" href="kunskapsbank/">Kunskapsbank</a>
-        </div>
+        <nav class="hub-nav" aria-label="Utforska Anatomiquiz">
+          <p class="hub-nav-label">Utforska</p>
+          <a class="hub-tile hub-tile--dict" href="medicinskordlista.html">
+            <span class="hub-tile-title">Medicinsk ordlista</span>
+            <span class="hub-tile-sub">Tusentals termer A–Ö</span>
+          </a>
+          <a class="hub-tile hub-tile--kb" href="kunskapsbank/">
+            <span class="hub-tile-title">Kunskapsbank</span>
+            <span class="hub-tile-sub">Tabeller, terminologi &amp; fakta</span>
+          </a>
+          <a class="hub-tile hub-tile--tools" href="kunskapsbank/verktyg/">
+            <span class="hub-tile-title">Verktyg</span>
+            <span class="hub-tile-sub">Kliniska räknare</span>
+          </a>
+        </nav>
       </div>
     </section>
 
@@ -753,6 +764,6 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.216" defer></script>
+  <script src="js/app.js?v=0.9.217" defer></script>
 </body>
 </html>

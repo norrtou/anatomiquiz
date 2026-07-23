@@ -1127,24 +1127,93 @@ body:has(#quiz:not(.hidden)) {
   flex: 1;
 }
 
-/* Accent-rad (teal) — genvägsknapparna Case + Ordlista längst ned på framsidan */
-.accent-row .btn {
-  border-color: var(--accent);
-  color: var(--accent-dark);
+/* ============================================================================
+   HUB-NAV — de tre destinationerna (Ordlista, Kunskapsbank, Verktyg) längst
+   ned på framsidan. Avsiktligt avskilda från utility-knapparna ovanför med en
+   hårlinje + luft, och formgivna som kort (samma språk som .kb-card de leder
+   till) så de läses som resmål snarare än handlingsknappar.
+   ============================================================================ */
+.hub-nav {
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(16, 185, 129, 0.18);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
 
-.accent-row .btn:hover:not(:disabled) {
-  background: rgba(13, 148, 136, 0.06);
-  border-color: var(--accent-dark);
-  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
+.hub-nav-label {
+  grid-column: 1 / -1;
+  margin: 0 0 2px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
 }
 
-.accent-row .btn:active:not(:disabled) {
-  box-shadow: 0 2px 4px rgba(13, 148, 136, 0.15);
+.hub-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+  padding: 14px 16px;
+  min-height: 44px;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(52, 211, 153, 0.05) 100%);
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
 }
 
-.accent-row .btn:focus-visible {
-  outline-color: var(--accent-dark);
+.hub-tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.18);
+}
+
+.hub-tile:focus-visible {
+  outline: 3px solid var(--primary-dark);
+  outline-offset: 2px;
+}
+
+.hub-tile-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  color: var(--primary-deep);
+}
+
+.hub-tile-sub {
+  font-size: 0.72rem;
+  line-height: 1.25;
+  color: var(--text-secondary);
+}
+
+/* Varje destination får en egen ton inom smaragd/teal-familjen — cohesivt men
+   urskiljbart. Ordlista = smaragd, Kunskapsbank = teal, Verktyg = djup smaragd. */
+.hub-tile--kb {
+  border-left-color: var(--accent);
+  background: linear-gradient(135deg, rgba(13, 148, 136, 0.06) 0%, rgba(20, 184, 166, 0.05) 100%);
+}
+.hub-tile--kb .hub-tile-title { color: var(--accent-dark); }
+.hub-tile--kb:hover { box-shadow: 0 6px 16px rgba(13, 148, 136, 0.18); }
+.hub-tile--kb:focus-visible { outline-color: var(--accent-dark); }
+
+.hub-tile--tools {
+  border-left-color: var(--primary-deep);
+  background: linear-gradient(135deg, rgba(4, 120, 87, 0.06) 0%, rgba(16, 185, 129, 0.05) 100%);
+}
+.hub-tile--tools .hub-tile-title { color: var(--primary-deepest); }
+.hub-tile--tools:focus-visible { outline-color: var(--primary-deepest); }
+
+/* Mobil: stapla destinationerna i full bredd så de framträder tydligt och
+   undertexterna får plats (utility-raden ovanför förblir tät 3-i-rad). */
+@media (max-width: 480px) {
+  .hub-nav {
+    grid-template-columns: 1fr;
+  }
 }
 
 .info-about {

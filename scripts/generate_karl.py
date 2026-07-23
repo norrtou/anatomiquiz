@@ -17,7 +17,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "karl"
 KB = ROOT / "kunskapsbank"
 SITE = "https://anatomiquiz.se"
-CSS_V = "0.7.15"
+CSS_V = "0.9.217"
 
 def esc(s): return html.escape(s, quote=True)
 

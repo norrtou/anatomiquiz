@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.217
+- **Omdesignade destinationsknapparna på startsidan.** De tre resurserna längst ned i startkortet – Medicinsk ordlista, Kunskapsbank och den nya **Verktyg** – ligger nu i en egen avskild `hub-nav`-rad, avdelad från utility-knapparna (Om Anatomiquiz/Topplista/Inställningar) med en hårlinje och luft samt en liten "Utforska"-etikett. Knapparna är formgivna som kort (samma visuella språk som `.kb-card` de leder till): vänsterkant i accentfärg, mjuk tonad bakgrund, titel + kort undertext, och lyft vid hover. Varje destination har en egen ton inom smaragd/teal-familjen (ordlista = smaragd, kunskapsbank = teal, verktyg = djup smaragd). På mobil (≤480 px) staplas de i full bredd så undertexterna får plats; utility-raden förblir tät. **Verktyg** har lyfts fram som en egen destination på startsidan (URL:en ligger kvar under `/kunskapsbank/verktyg/`).
+- Den oanvända `.accent-row`-stilen ersatt av `.hub-nav`/`.hub-tile`.
+- `css/styles.css` ändrad → cache-bustern enad till `?v=0.9.217` på samtliga 113 sidor (konventionen från 0.9.213). De stale CSS-versionskonstanterna i generatorerna (`generate_glossary.py` STYLES_V samt CSS_V i karl/muskeltabeller/skelett/leder) synkade till 0.9.217 så en framtida regenerering inte återinför en gammal sträng.
+- `APP_VERSION` och app.js-cache-bustern bumpade i lås med `VERSION`.
+
 ## 0.9.216
 - **Uppdaterad "Vad finns i Kunskapsbanken?" på info.html.** Listan var inaktuell och saknade flera tillskott. Terminologipunkten nämner nu även franska, tyska och engelska lånord (utöver latin/grekiska), en ny punkt om **Verktyg** (läkemedelsberäkning för dos, infusionshastighet och spädning) har lagts till, och "Listor och tabeller" speglar dagens innehåll (skelettben, leder, kranialnerver, nervbanor och kärl). Sammanfattningen i feature-kortet "Kunskapsbanken" högre upp har också fått med räkneverktygen. Enbart synligt innehåll på info.html; ingen meta-/SEO-ändring.
 - `APP_VERSION` och app.js-cache-bustern i index.html bumpade i lås med `VERSION` enligt regeln från 0.9.215.
