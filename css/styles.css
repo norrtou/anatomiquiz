@@ -172,6 +172,7 @@ main {
   background-clip: text;
   letter-spacing: -0.5px;
   line-height: 1.2;
+  flex-shrink: 0;
 }
 
 @media (max-width: 640px) {
@@ -202,19 +203,6 @@ main {
   .header-logo {
     height: 34px;
   }
-}
-
-.header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-  font-weight: 700;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  letter-spacing: -0.5px;
-  line-height: 1.2;
-  flex-shrink: 0;
 }
 
 .version {

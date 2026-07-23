@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.227
+- **Rubrik-clampen (0.9.226) tog aldrig effekt – nu fixad på riktigt.** `css/styles.css` innehöll **två** identiska `.header h1`-basregler, och den andra (`font-size: 2.5rem; flex-shrink: 0`) låg **efter** `@media (max-width: 640px)`-blocket. Vid lika specificitet vinner den sist deklarerade regeln → basens `2.5rem` klev in igen på mobil och overflowade "Läkemedelsberäknare", trots att `clamp(1.5rem, 7.6vw, 2rem)` fanns. Dubblettblocket borttaget; `flex-shrink: 0` flyttad in i den enda kvarvarande basregeln, som nu ligger **före** media queryn. Rubriken skalas därmed ner som avsett.
+- Ny styrfil `CSS_KARTA.md` i roten: dokumenterar vilken av de tre stylesheeten (`styles.css`/`verktyg.css`/`glossary.css`) som styr vad, laddningsordning och `.header h1`-fällan, så cascade-krocken inte återuppstår.
+- styles.css-bustern enad till `?v=0.9.227`; generatorernas CSS-konstanter synkade. `APP_VERSION`/app.js-bustern bumpade i lås med `VERSION`.
+
 ## 0.9.226
 - **Lång rubrik skalas ner i stället för att brytas.** Lösningen i 0.9.225 (avstavning/radbrytning av `.header h1`) såg tokig ut. Nu skalas i stället själva typsnittet: på mobil (`max-width: 640px`) har `.header h1` fått `font-size: clamp(1.5rem, 7.6vw, 2rem)`, så en lång rubrik som "Läkemedelsberäknare" krymper tills den ryms på **en enda rad** – ingen brytning, ingen avstavning. `min-width`/`overflow-wrap`/`hyphens` från 0.9.225 borttagna; `flex-shrink: 0` återställd. Taket `2rem` = oförändrad storlek på bredare telefoner, golvet `1.5rem` garanterar plats även på de smalaste skärmarna.
 - `css/styles.css` ändrad → styles.css-bustern enad till `?v=0.9.226`; generatorernas CSS-konstanter synkade. `APP_VERSION`/app.js-bustern bumpade i lås med `VERSION`.
