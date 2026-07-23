@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.228
+- **Verktyg-sidan rymmer nu tre verktyg, inte bara läkemedelsberäknaren.** Två nya kort på `verktyg/index.html` länkar till mina fristående externa appar: **HEC – öga–hand-koordination** (`norrtou.github.io/HEC/`) och **Aktivitetsdagboken** (`norrtou.github.io/activitydiary/`). Båda öppnas i nytt fönster (`target="_blank" rel="noopener"`) och märks diskret som externa via call-to-action-texten "Öppna extern app i nytt fönster ↗" (↗ mot de interna kortens →). Intro-texten breddad så den inte längre bara beskriver räknare.
+- Startsidans verktyg-bricka: finstilt undertext `Kliniska räknare` → `Räknare & kliniska appar` så den speglar det nya innehållet.
+- Verktyg-sidans head uppdaterad i takt: meta description + og/twitter description samt JSON-LD `hasPart` listar nu alla tre verktygen (de två apparna som `WebApplication` med sina github.io-URL:er).
+- Ingen CSS ändrad → styles.css-bustern **oförändrad** (`?v=0.9.227`) på alla 113 sidor enligt `CSS_KARTA.md` (bumpa bara när gammal CSS kan spöka). `APP_VERSION`/app.js-bustern bumpad i lås med `VERSION`.
+
 ## 0.9.227
 - **Rubrik-clampen (0.9.226) tog aldrig effekt – nu fixad på riktigt.** `css/styles.css` innehöll **två** identiska `.header h1`-basregler, och den andra (`font-size: 2.5rem; flex-shrink: 0`) låg **efter** `@media (max-width: 640px)`-blocket. Vid lika specificitet vinner den sist deklarerade regeln → basens `2.5rem` klev in igen på mobil och overflowade "Läkemedelsberäknare", trots att `clamp(1.5rem, 7.6vw, 2rem)` fanns. Dubblettblocket borttaget; `flex-shrink: 0` flyttad in i den enda kvarvarande basregeln, som nu ligger **före** media queryn. Rubriken skalas därmed ner som avsett.
 - Ny styrfil `CSS_KARTA.md` i roten: dokumenterar vilken av de tre stylesheeten (`styles.css`/`verktyg.css`/`glossary.css`) som styr vad, laddningsordning och `.header h1`-fällan, så cascade-krocken inte återuppstår.
