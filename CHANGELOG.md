@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.221
+- **Verktyg flyttat till egen toppnivå-URL:** `/kunskapsbank/verktyg/` → `/verktyg/` (och `/verktyg/lakemedelsberakning.html`). I och med att Verktyg är en egen destination sedan 0.9.217 speglar URL:en nu det. Mappen flyttad med `git mv`; alla 28 interna referenser i 9 filer uppdaterade (navigering, hub-knapp på startsidan, "Se även" på kunskapsbankshubben, brödsmulor + JSON-LD på verktygssidorna, samt `sitemap.xml`). De hårdkodade sitemap-URL:erna i `scripts/generate_glossary.py` uppdaterade så en framtida ordliste-regenerering inte återinför den gamla sökvägen.
+- Assets opåverkade: verktygssidorna refererar `/css/styles.css`, `/css/verktyg.css` och `/js/verktyg-lakemedel.js` rot-absolut, så flytten en nivå upp bröt ingenting. Läs-vidare-länkarna till faktatexten om läkemedelsberäkning ligger kvar mot `/kunskapsbank/…` (det innehållet bor genuint i kunskapsbanken).
+- GitHub Pages kan inte 301-omdirigera; den gamla URL:en ger 404 tills sökmotorer kryper om via den uppdaterade sitemapen. Sidorna är nypublicerade och i praktiken inte indexerade, så påverkan är försumbar.
+- `APP_VERSION`/app.js-bustern bumpade i lås med `VERSION`. Ingen CSS-ändring – styles.css (0.9.219) och verktyg.css (0.9.208) står kvar.
+
 ## 0.9.220
 - **Kortordning på kunskapsbankshubben justerad:** Medicinsk terminologi flyttad upp till plats 3, direkt under Pluggtabeller. Ny ordning: Faktatexter, Pluggtabeller, Medicinsk terminologi, Patientfall (case). Enbart kortordning; ingen CSS-ändring (styles.css-bustern kvar på 0.9.219). `APP_VERSION`/app.js-bustern bumpade i lås med `VERSION`.
 

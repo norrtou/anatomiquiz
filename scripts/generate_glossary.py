@@ -1043,8 +1043,8 @@ def write_sitemap(group_files: list[str]) -> None:
     blocks.append(url_block(f"{SITE}/kunskapsbank/lakemedelsberakning-omvandlingar.html", "monthly", "0.7"))
     # Verktygsavdelningen. Hubben ligger på katalog-URL:en (index.html serveras
     # av GitHub Pages) så att den kan växa utan att någon länk måste ändras.
-    blocks.append(url_block(f"{SITE}/kunskapsbank/verktyg/", "monthly", "0.7"))
-    blocks.append(url_block(f"{SITE}/kunskapsbank/verktyg/lakemedelsberakning.html", "monthly", "0.7"))
+    blocks.append(url_block(f"{SITE}/verktyg/", "monthly", "0.7"))
+    blocks.append(url_block(f"{SITE}/verktyg/lakemedelsberakning.html", "monthly", "0.7"))
     # Nervtabeller (under-pillar + nervsidor)
     blocks.append(url_block(f"{SITE}/kunskapsbank/nervtabeller.html", "weekly", "0.7"))
     blocks.append(url_block(f"{SITE}/kunskapsbank/kranialnerverna.html", "monthly", "0.7"))
