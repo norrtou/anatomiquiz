@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.223
+- **Ren utskrift / spara som PDF på alla innehållssidor.** Verktygsraden (tidigare bara "Skriv ut + Ladda ner CSV" på tabellsidor) är nu en generell dokumentrad: **Skriv ut** och **Spara som PDF** på varje innehållssida, plus **Ladda ner (CSV)** där det finns tabeller. Både utskrift och PDF går via webbläsarens utskriftsdialog tillsammans med sajtens print-stylesheet – ingen tung PDF-motor, CSP-säkert.
+- **Print-stylesheet omarbetad så texten faktiskt följer med.** Tidigare doldes `.info-about` i utskrift – men artiklarnas (t.ex. ledtyper) och faktatexternas hela brödtext ligger i `.info-about`, så utskriften tappade all prosa och behöll bara tabellerna. Nu skrivs prosa **och** referenser (`.kb-sources`) ut, avlövade på skärmstylingen (ram/bakgrund/indrag bort), medan bara skärm-chrome skalas bort: navigering, brödsmulor, knappar, kort-rutnät (`.kb-grid`/`.kb-seealso`/`.hub-nav`), verktygsraden och JS-varningar. A4-marginaler via `@page`, svart text på vitt, tabeller med upprepad kolumnrubrik och radbrytskydd. Det gör bl.a. formellistan för läkemedelsberäkning utskriftsvänlig på A4.
+- **`kunskapsbank/lakemedelsberakning.html`** (faktatexten) saknade verktyget helt – nu tillagt. Övriga sidor utan verktyg är rena hubbar (kort-rutnät: nervsystemet, rörelseapparaten, plugga-och-tenta, nervtabeller m.fl.), där utskrift av länklistor inte är meningsfullt, och lämnas därför utan.
+- `js/kb-table-tools.js` omskriven (bailar inte längre när tabeller saknas; `main`-scopad placering). Filnamnet behålls för att slippa röra 64 sidors script-tagg. Alla `kb-table-tools.js`-inkluderingar har fått cache-buster `?v=0.9.223` (saknade tidigare buster helt); generatorernas mall uppdaterad likaså.
+- `css/styles.css` ändrad → styles.css-bustern enad till `?v=0.9.223` på samtliga sidor; generatorernas CSS-konstanter synkade. `APP_VERSION`/app.js-bustern bumpade i lås med `VERSION`.
+
 ## 0.9.222
 - **Texten speglar att Verktyg är en egen del, inte en del av kunskapsbanken.** Följdändring till URL-flytten i 0.9.221:
   - `verktyg/index.html`: synlig kopia och meta (description/OG/Twitter/JSON-LD samt den dolda rubriken) säger inte längre "i kunskapsbanken" utan "i Anatomiquiz" respektive neutralt. Meta ändrad med uttrycklig tillåtelse; inga meta-keywords tillagda och beskrivningarna hålls korta och naturliga (Bing-riktlinjer).

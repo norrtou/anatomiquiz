@@ -22,7 +22,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "muskeltabeller"
 KB = ROOT / "kunskapsbank"
 SITE = "https://anatomiquiz.se"
-CSS_V = "0.9.219"
+CSS_V = "0.9.223"
 
 def esc(s): return html.escape(s, quote=True)
 
@@ -104,7 +104,7 @@ FOOT = """  </main>
   <!-- Ordlistetooltips i löptexten (progressiv förbättring; .kb-term funkar som länk utan JS) -->
   <script src="/js/kb-glossary.js" defer></script>
   <!-- Skriv ut / ladda ner (CSV) för tabellerna (progressiv förbättring; CSP-säkert) -->
-  <script src="/js/kb-table-tools.js" defer></script>
+  <script src="/js/kb-table-tools.js?v=0.9.223" defer></script>
 
 </body>
 </html>

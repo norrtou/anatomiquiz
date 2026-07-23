@@ -12,7 +12,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "leder_rom"
 KB = ROOT / "kunskapsbank"
 SITE = "https://anatomiquiz.se"
-CSS_V = "0.9.219"
+CSS_V = "0.9.223"
 
 def esc(s): return html.escape(s, quote=True)
 
@@ -90,7 +90,7 @@ def head(title, desc, canon, ogtype, jsonld):
 FOOT = """  </main>
 
   <script src="/js/kb-glossary.js" defer></script>
-  <script src="/js/kb-table-tools.js" defer></script>
+  <script src="/js/kb-table-tools.js?v=0.9.223" defer></script>
 
 </body>
 </html>

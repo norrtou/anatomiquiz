@@ -1,19 +1,29 @@
 /*
- * kb-table-tools.js — Skriv ut + ladda ner (CSV) för kunskapsbankens tabeller.
+ * kb-table-tools.js — Skriv ut, spara som PDF och (för tabeller) ladda ner CSV,
+ * för kunskapsbankens innehållssidor.
  *
- * CSP-säkert: ingen extern resurs, inget inline-script, inga beroenden. Läser
- * tabellernas textinnehåll direkt ur DOM:en. "Spara som PDF" sker via webbläsarens
- * utskriftsdialog (window.print) – ingen tung PDF-motor behövs.
+ * (Filnamnet är kvar av historiska skäl; verktyget gäller numera alla
+ * innehållssidor, inte bara tabeller.)
  *
- * Progressiv förbättring: utan JS visas tabellerna som vanligt, bara verktygsraden
+ * CSP-säkert: ingen extern resurs, inget inline-script, inga beroenden.
+ * "Skriv ut" och "Spara som PDF" använder webbläsarens utskriftsdialog
+ * (window.print) tillsammans med sajtens print-stylesheet (@media print), som
+ * skalar bort navigering, knappar och den här verktygsraden så att bara
+ * innehållet – rubrik, text, tabeller och referenser – hamnar på A4/PDF:en.
+ * "Ladda ner (CSV)" läser tabellernas text direkt ur DOM:en och visas bara
+ * när det finns tabeller att exportera.
+ *
+ * Progressiv förbättring: utan JS visas sidan som vanligt, bara verktygsraden
  * uteblir. Verktygsraden injiceras underst (under ev. referenslista, ovanför
  * navigeringsknapparna).
  */
 (function () {
   'use strict';
 
+  var main = document.querySelector('main');
+  if (!main) return;
+
   var tables = document.querySelectorAll('.kb-mtable, .kb-table');
-  if (!tables.length) return;
 
   var ICON_PRINT =
     '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
@@ -21,6 +31,12 @@
     '<polyline points="6 9 6 2 18 2 18 9"/>' +
     '<path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>' +
     '<rect x="6" y="14" width="12" height="8"/></svg>';
+  var ICON_PDF =
+    '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
+    'stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+    '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>' +
+    '<polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/>' +
+    '<line x1="9" y1="18.5" x2="13" y2="18.5"/></svg>';
   var ICON_CSV =
     '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
     'stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
@@ -55,8 +71,8 @@
 
   function fileBase() {
     var h1 = document.querySelector('h1');
-    var raw = (h1 ? h1.textContent : document.title) || 'tabell';
-    return raw.toLowerCase().replace(/[^a-z0-9åäö]+/g, '-').replace(/^-+|-+$/g, '') || 'tabell';
+    var raw = (h1 ? h1.textContent : document.title) || 'anatomiquiz';
+    return raw.toLowerCase().replace(/[^a-z0-9åäö]+/g, '-').replace(/^-+|-+$/g, '') || 'anatomiquiz';
   }
 
   function downloadCsv() {
@@ -83,27 +99,34 @@
   var box = document.createElement('div');
   box.className = 'kb-tabletools';
   box.setAttribute('role', 'group');
-  box.setAttribute('aria-label', 'Skriv ut eller ladda ner tabellen');
+  box.setAttribute('aria-label', 'Skriv ut, spara som PDF eller ladda ner');
 
   var row = document.createElement('div');
   row.className = 'kb-tabletools-row';
   row.appendChild(button(ICON_PRINT, 'Skriv ut', function () { window.print(); }));
-  row.appendChild(button(ICON_CSV, 'Ladda ner (CSV)', downloadCsv));
+  row.appendChild(button(ICON_PDF, 'Spara som PDF', function () { window.print(); }));
+  if (tables.length) {
+    row.appendChild(button(ICON_CSV, 'Ladda ner (CSV)', downloadCsv));
+  }
 
   var hint = document.createElement('p');
   hint.className = 'kb-tabletools-hint';
-  hint.innerHTML =
-    'Tips: i utskriftsrutan kan du välja <strong>Spara som PDF</strong> i stället för skrivare. ' +
-    'CSV-filen öppnas i Excel och Google Kalkylark.';
+  var hintHtml =
+    'Tips: i utskriftsrutan väljer du skrivare eller <strong>Spara som PDF</strong>. ' +
+    'Bara innehållet följer med – meny, knappar och länkar utelämnas.';
+  if (tables.length) {
+    hintHtml += ' CSV-filen öppnas i Excel och Google Kalkylark.';
+  }
+  hint.innerHTML = hintHtml;
 
   box.appendChild(row);
   box.appendChild(hint);
 
   // Placera underst: ovanför navigeringsknapparna (.actions) om de finns, annars sist.
-  var actions = document.querySelector('main .actions');
+  var actions = main.querySelector('.actions');
   if (actions) {
     actions.parentNode.insertBefore(box, actions);
   } else {
-    (document.querySelector('main .card') || document.querySelector('main') || document.body).appendChild(box);
+    (main.querySelector('.card') || main).appendChild(box);
   }
 })();
