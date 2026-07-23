@@ -381,9 +381,18 @@ Utöver det, artikelspecifikt:
   med `hasPart`. `BreadcrumbList` **alltid i eget script-block** (§6 i SEO_REGLER).
 - `datePublished` / `dateModified` från registret.
 - **Minimal JS.** Artikelsidor kör `js/kb-glossary.js` (obligatoriskt – utan det ritas ingen
-  tooltip, se §14) och `js/kb-table-tools.js` när sidan har en tabell, båda med `defer` i
-  botten av `<body>`. Utöver de två: ingen JS. Filtreringen på `artiklar/index.html` är enda
-  undantaget.
+  tooltip, se §14) och `js/kb-table-tools.js` (obligatoriskt på **alla** artikel- och
+  faktasidor – ger Skriv ut + Spara som PDF via print-stylesheeten; CSV-nedladdningsknappen
+  visas automatiskt bara när sidan har en tabell). Båda med `defer` i botten av `<body>` och
+  med cache-buster `?v=<aktuell VERSION>` (bumpas när JS-filen ändras). Utöver de två: ingen JS.
+  Filtreringen på `artiklar/index.html` är enda undantaget. **Ämneshubbar** (kort-rutnät utan
+  egen brödtext) behöver *inte* verktyget – utskrift av länklistor är inte meningsfullt, och
+  `@media print` döljer ändå `.kb-grid`.
+- **Utskriftsvänlighet (följer av verktyget ovan).** `@media print` i `styles.css` tar med
+  rubrik, brödtext (`.info-about` avlövas på ram/bakgrund) och referenser (`.kb-sources`), och
+  skalar bort skärm-chrome (navigering, brödsmulor, knappar, `.kb-grid`/`.kb-seealso`,
+  verktygsraden). Lägg därför **innehåll** i vanliga element/`.info-about`, aldrig i
+  navigationsbehållare som döljs i utskrift. Då blir varje artikel automatiskt ren på A4/PDF.
 - Bilder: `BILDER_REGLER.md`, dimensioner satta (CLS 0), `loading="lazy"` under fold.
 - Efter skrivning: av-wira och om-wira tooltips (`SEO_REGLER.md` §6c), kör verifieringssnuttarna i §12.
 
@@ -588,6 +597,13 @@ exempel. Minnet är kopian; det här dokumentet är originalet.
   själva kontrollstationen. **Verifiera hela referenslistan mot bibliotekskatalog respektive
   utgivarens egen webbplats när en gammal sida byggs om**, och sök samtidigt igenom repot efter
   samma post på systersidor.
+- **2026-07-23** — **Utskrift/PDF blev en generell funktion på alla innehållssidor (0.9.223).**
+  `kb-table-tools.js` var tidigare tabell-bara (bara CSV-knapp) och regeln sa ”inkludera när
+  sidan har en tabell”. Nu ger verktyget **Skriv ut + Spara som PDF** överallt (CSV bara när
+  det finns tabeller), och `@media print` tar med brödtext (`.info-about`) och referenser i
+  stället för att dölja prosan – förut skrevs *bara tabellerna* ut medan hela artikeltexten
+  föll bort. **Nytt krav:** `kb-table-tools.js` ligger på alla artikel-/faktasidor (ej hubbar),
+  med cache-buster. Se den uppdaterade JS-regeln högre upp.
 - **2026-07-22** — **”0 JS på artikelsidor” (§9) släckte tooltipsen på fem artiklar.** Regeln
   skrevs som en prestandaambition, men `kb-term` är bara en vanlig länk utan
   `js/kb-glossary.js` – det är skriptet som ritar tooltipen vid hover, fokus och tryck.
@@ -596,8 +612,9 @@ exempel. Minnet är kopian; det här dokumentet är originalet.
   *Så läser du en muskeltabell*, 21 på *Franska och tyska* och 16 på *Engelska i medicinskt
   språk*. De äldre sidorna i `/kunskapsbank/` har skriptet kvar och fungerar. Feltypen är
   osynlig för alla verifieringssnuttar, eftersom länkarna, `href`-arna och ankarna är korrekta
-  – det enda som saknas är återgivningen. **`kb-glossary.js` (och `kb-table-tools.js` när sidan
-  har en tabell) ska ligga i botten av varje artikelsida med `defer`.** §9:s formulering är
+  – det enda som saknas är återgivningen. **`kb-glossary.js` och `kb-table-tools.js` ska ligga i
+  botten av varje artikelsida med `defer`** (kb-table-tools sedan 2026-07-23 på alla sidor, se
+  lärdomen nedan). §9:s formulering är
   underordnad `SEO_REGLER.md` §6c, som gör tooltipsen obligatoriska, och SEO_REGLER säger
   själv bara att faktasidor *helst* ska ha 0 JS.
 - **2026-07-20** — AI-genererade innehållsförslag kan presentera *policyförslag* och
