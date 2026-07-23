@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.222
+- **Texten speglar att Verktyg är en egen del, inte en del av kunskapsbanken.** Följdändring till URL-flytten i 0.9.221:
+  - `verktyg/index.html`: synlig kopia och meta (description/OG/Twitter/JSON-LD samt den dolda rubriken) säger inte längre "i kunskapsbanken" utan "i Anatomiquiz" respektive neutralt. Meta ändrad med uttrycklig tillåtelse; inga meta-keywords tillagda och beskrivningarna hålls korta och naturliga (Bing-riktlinjer).
+  - `info.html`: Verktyg är borttaget ur listan "Vad finns i Kunskapsbanken?" och ur sammanfattningen av kunskapsbanken, och har fått en egen kort **Verktyg**-sektion. Introt ramar nu appen som anatomiquiz + kunskapsbank + verktyg. Nyhetsnotisen säger "Anatomiquiz har fått" i stället för "Kunskapsbanken har fått".
+- Läs-vidare-länkarna mellan faktatexterna om läkemedelsberäkning och räknaren är oförändrade (korrekta korslänkar). `APP_VERSION`/app.js-bustern bumpade i lås med `VERSION`; ingen CSS-ändring.
+
 ## 0.9.221
 - **Verktyg flyttat till egen toppnivå-URL:** `/kunskapsbank/verktyg/` → `/verktyg/` (och `/verktyg/lakemedelsberakning.html`). I och med att Verktyg är en egen destination sedan 0.9.217 speglar URL:en nu det. Mappen flyttad med `git mv`; alla 28 interna referenser i 9 filer uppdaterade (navigering, hub-knapp på startsidan, "Se även" på kunskapsbankshubben, brödsmulor + JSON-LD på verktygssidorna, samt `sitemap.xml`). De hårdkodade sitemap-URL:erna i `scripts/generate_glossary.py` uppdaterade så en framtida ordliste-regenerering inte återinför den gamla sökvägen.
 - Assets opåverkade: verktygssidorna refererar `/css/styles.css`, `/css/verktyg.css` och `/js/verktyg-lakemedel.js` rot-absolut, så flytten en nivå upp bröt ingenting. Läs-vidare-länkarna till faktatexten om läkemedelsberäkning ligger kvar mot `/kunskapsbank/…` (det innehållet bor genuint i kunskapsbanken).
