@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.218
+- **Verktygssidornas navigering leder nu till startsidan, inte kunskapsbanken.** I och med att Verktyg lyfts fram som en egen destination på framsidan (0.9.217) pekade brödsmulorna och tillbaka-knapparna fortfarande in i kunskapsbanken. Nu:
+  - `verktyg/index.html`: brödsmulan är **Anatomiquiz / Verktyg** (mellansteget "Kunskapsbank" borttaget) och knappen längst ned är **← Till startsidan** (`/`) i stället för "← Till kunskapsbanken".
+  - `verktyg/lakemedelsberakning.html`: brödsmulan är **Anatomiquiz / Verktyg / Läkemedelsberäknare**; "← Till verktygen" leder som förut till verktygshubben.
+  - JSON-LD `BreadcrumbList` på båda sidorna uppdaterad i samma veva så den strukturerade datan matchar den synliga brödsmulan.
+- Contextlänkarna till faktatexten om läkemedelsberäkning och omvandlingstabellerna ligger kvar mot `/kunskapsbank/…` – det innehållet bor genuint i kunskapsbanken och är läs-vidare-länkar, inte navigering.
+- `APP_VERSION` och app.js-cache-bustern bumpade i lås med `VERSION`. Ingen CSS-ändring, så styles.css-bustern står kvar på 0.9.217.
+
 ## 0.9.217
 - **Omdesignade destinationsknapparna på startsidan.** De tre resurserna längst ned i startkortet – Medicinsk ordlista, Kunskapsbank och den nya **Verktyg** – ligger nu i en egen avskild `hub-nav`-rad, avdelad från utility-knapparna (Om Anatomiquiz/Topplista/Inställningar) med en hårlinje och luft samt en liten "Utforska"-etikett. Knapparna är formgivna som kort (samma visuella språk som `.kb-card` de leder till): vänsterkant i accentfärg, mjuk tonad bakgrund, titel + kort undertext, och lyft vid hover. Varje destination har en egen ton inom smaragd/teal-familjen (ordlista = smaragd, kunskapsbank = teal, verktyg = djup smaragd). På mobil (≤480 px) staplas de i full bredd så undertexterna får plats; utility-raden förblir tät. **Verktyg** har lyfts fram som en egen destination på startsidan (URL:en ligger kvar under `/kunskapsbank/verktyg/`).
 - Den oanvända `.accent-row`-stilen ersatt av `.hub-nav`/`.hub-tile`.
