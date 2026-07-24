@@ -11,8 +11,10 @@
 >
 > **Status:** GODKÄND. Infrastrukturen (våg 0) byggd i 0.9.186, terminologipelaren lagd på
 > artikelstandard i 0.9.191. Våg 1 klar; våg 2 klar sånär som på artikel 10 (*Medicinska
-> ordfamiljer*, ska först prövas mot §8.2). Våg 3: artikel 12 (*Fascia, bursor och senskidor*)
-> släppt i 0.9.230, artikel 13 (*Dermatom, myotom och sklerotom*) i 0.9.231. Kvar i vågen: 14.
+> ordfamiljer*, ska först prövas mot §8.2). **Våg 3 klar:** artikel 12 (*Fascia, bursor och
+> senskidor*) släppt i 0.9.230, artikel 13 (*Dermatom, myotom och sklerotom*) i 0.9.231 och
+> artikel 14 (*Minnesregler för kranialnerverna*) i 0.9.233. Näst på tur: våg 4 (klinisk
+> anatomi, punkt 15–17).
 > **Senast uppdaterad:** 2026-07-24. **Version:** 1.0
 
 ---
@@ -475,9 +477,13 @@ eftersom beroendepilarna (`← 6, 8`) pekar på nummer.
     `sa-leds-kanseln` och som tabellceller i `nervtabell-balen`, myotomet som **ett** stycke i
     muskeltabellsguiden, sklerotomet inte alls. Nya korslänkar IN från `sa-leds-kanseln.html`
     och `nervtabell-balen.html`.
-14. **Minnesregler för kranialnerverna** — `guide`, `alla`. ← kranialnervstabellen (finns).
-    Kontrollerat 2026-07-21: `kranialnerverna.html` (244 ord) har inga minnesregler.
-    Minnesramsor är klass D (§6.1) och ska märkas som praxis, aldrig presenteras som fakta.
+14. ✅ **Minnesregler för kranialnerverna** — `guide`, `alla`, hubb `plugga-och-tenta`.
+    ← kranialnervstabellen (finns). Skriven 2026-07-24. §8.2-testet kört om mot live-sajten
+    samma dag: `kranialnerverna.html` är 648 ord och har inga minnesregler alls, ”LR6 SO4 –
+    resten 3” fanns som **en** mening i `muskeltabell-ogat.html` och ”C3, 4, 5 keeps the
+    diaphragm alive” som **en** tabellcell i `nervtabell-halsen.html`. Ramsorna är märkta som
+    klass D (§6.1) och länkade till sina faktiska källor; historik, hjärnstamsregeln och
+    inlärningsavsnittet bärs av peer review. Ny korslänk IN från `kranialnerverna.html`.
 
 ### Våg 4 — Klinisk anatomi (efter §4:s avgränsning)
 15. Rotatorkuffen · 16. Karpaltunneln · 17. Ischiasnerven — samtliga `fordjupning`. ← 9, 12
@@ -641,6 +647,18 @@ exempel. Minnet är kopian; det här dokumentet är originalet.
   verifierade i repot och har fullgoda utvecklingsavsnitt. Kostnaden var noll; att skriva
   "(2018/2019)" eller att gissa hade varit ett brott mot §6.2. Samma princip som
   [[feedback_delete_unverifiable_questions]], fast för källor.
+- **2026-07-24** — **En redan wirad sida kan dölja att facit saknar termen.** Blindfläcken från
+  2026-07-22 (facit byggs ur redan wirade sidor) har en andra form som är svårare att se:
+  termen *är* wirad på de gamla sidorna, men med **fel granularitet**. `kranialnerverna.html`
+  wirade `Foramen`, `Fissura`, `Lamina`, `Meatus` och `Canalis` var för sig, alltså bara det
+  generiska förstaordet, medan `foramen jugulare`, `fissura orbitalis superior` och sex
+  systerfraser aldrig kom in i facit trots att alla åtta stod i `data/ordlista.json` med egna
+  ankare. En kontroll som frågar ”har termen tooltip?” svarar ja; först frågan ”pekar tooltipen
+  på **frasens** post eller på ordet *hål*?” avslöjar felet. **Kontrollera flerordstermer mot
+  facit, inte mot sidorna**, och lägg in hela frasen som nyckel så att längsta match vinner
+  (§6c). Samma pass fanns en tredje variant: `kranialnerverna` hade defen ”Nervi craniales”,
+  alltså latinet för ett svenskt ord läsaren redan förstår — en tooltip som är korrekt och
+  ändå inte tillför något. Byttes i facit och i alla 14 wirade förekomster samtidigt.
 - **2026-07-20** — AI-genererade innehållsförslag kan presentera *policyförslag* och
   *provformat* som genomförd verklighet. Två av råmaterialets högst prioriterade förslag föll
   på faktakontroll (§13). **Kontrollera alltid ett förslags faktapremiss innan det planeras in**,
