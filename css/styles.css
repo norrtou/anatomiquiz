@@ -1110,6 +1110,91 @@ body:has(#quiz:not(.hidden)) {
   letter-spacing: 0.4px;
 }
 
+/* Kommande spellägen — skuggade/inaktiva knappar tills de byggts och funkar.
+   Två rader: 3 knappar (Matcha, Leitner Light, Sporcle) + 2 knappar
+   (Dagens utmaning, Arcade: Gravity). */
+.game-modes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.game-modes-row {
+  display: grid;
+  gap: 12px;
+}
+
+.game-modes-row--3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.game-modes-row--2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.btn-mode {
+  width: 100%;
+  gap: 6px;
+}
+
+/* Skuggat/vilande utseende: dämpad, streckad ram, ingen hover-lyft */
+.btn-mode:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  border-style: dashed;
+  color: var(--text-muted, #6b7280);
+  background: rgba(16, 185, 129, 0.04);
+}
+
+.mode-soon {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: rgba(16, 185, 129, 0.16);
+  color: var(--primary-deep);
+  white-space: nowrap;
+}
+
+/* Ett byggt, spelbart läge (t.ex. Matcha): solid, aktiv knapp – inte det
+   dämpade/streckade "snart"-utseendet. */
+.btn-mode--ready {
+  opacity: 1;
+  cursor: pointer;
+  border-style: solid;
+  border-color: var(--primary);
+  color: var(--primary-deep);
+  background: rgba(16, 185, 129, 0.08);
+}
+
+.btn-mode--ready:hover:not(:disabled) {
+  border-color: var(--primary-dark);
+  background: rgba(16, 185, 129, 0.14);
+}
+
+/* Ämne utan flervalsfrågor → Matcha går inte att spela: vanlig dämpad
+   disabled, inte det streckade "snart"-utseendet. */
+.btn-mode--ready:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-style: solid;
+  background: rgba(16, 185, 129, 0.04);
+}
+
+.mode-new {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: var(--primary-deep);
+  color: #fff;
+  white-space: nowrap;
+}
+
 .secondary-actions {
   display: flex;
   gap: 12px;
@@ -1905,6 +1990,152 @@ ol li {
 .score-row .sr-pct.weak { color: var(--error); }
 .score-row .sr-time { color: var(--text-secondary); font-variant-numeric: tabular-nums; }
 .score-row .sr-date { color: var(--text-secondary); font-variant-numeric: tabular-nums; }
+/* Matcha: tiden är den rankade siffran → lyft fram den; felförsök dämpas. */
+.score-row .sr-lead { font-weight: 700; color: var(--primary-deep); }
+.score-row .sr-miss { color: var(--text-secondary); font-variant-numeric: tabular-nums; }
+
+/* Liten underrubrik i ett topplistesegment, t.ex. "snabbast först". */
+.hs-segment-sub {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-left: auto;
+}
+
+/* ============================================================================
+   MATCHA (parspel) — två kolumner (frågor/svar), para ihop mot klockan.
+   ============================================================================ */
+.matcha-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.matcha-player { font-weight: 700; }
+.matcha-progress { color: var(--text-secondary); font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+
+.matcha-meta {
+  margin: 0 0 8px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--text-primary);
+}
+
+.matcha-hint {
+  margin: 0 0 14px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  min-height: 1.2em;
+}
+
+.matcha-board {
+  position: relative;      /* referens för den absolutpositionerade linje-overlayen */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Brett mellanrum mellan kolumnerna så förbindelselinjerna syns tydligt; tät radhöjd. */
+  row-gap: 10px;
+  column-gap: 48px;
+  align-items: start;
+}
+
+/* Streckade förbindelselinjer mellan ihopparade rutor. Overlay ovanpå brädet,
+   men klick går igenom (pointer-events:none) så rutorna förblir tryckbara. */
+.matcha-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 2;
+}
+
+.matcha-line {
+  fill: none;
+  stroke: var(--primary-dark);
+  stroke-width: 2.5;
+  stroke-dasharray: 6 5;
+  stroke-linecap: round;
+}
+.matcha-line.correct { stroke: var(--success); stroke-dasharray: none; }
+.matcha-line.wrong { stroke: var(--error); }
+
+.matcha-dot { fill: var(--primary-dark); }
+.matcha-dot.correct { fill: var(--success); }
+.matcha-dot.wrong { fill: var(--error); }
+
+.matcha-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.matcha-tile {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 12px;
+  border: 2px solid var(--primary-light);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.95rem;
+  line-height: 1.25;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: border-color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.matcha-tile:hover:not(:disabled) { border-color: var(--primary); }
+
+.matcha-tile.selected {
+  border-color: var(--primary-dark);
+  background: var(--success-bg);
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.3);
+}
+
+/* Ihopparad (men ännu inte rättad): neutral "kopplad" ton – varken grön eller röd. */
+.matcha-tile.linked {
+  border-color: var(--primary-dark);
+  background: rgba(16, 185, 129, 0.06);
+}
+
+/* Facit (efter att alla par lagts): grönt rätt, rött fel. Ingen andra chans. */
+.matcha-tile.correct {
+  border-color: var(--success);
+  background: var(--success-bg);
+  color: var(--primary-deep);
+  cursor: default;
+}
+
+.matcha-tile.wrong {
+  border-color: var(--error);
+  background: var(--error-bg);
+  color: #b91c1c;
+  cursor: default;
+}
+
+.matcha-miss { color: var(--text-secondary); font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+
+.matcha-finished { text-align: center; padding: 10px 0 4px; }
+.matcha-done-text { font-size: 1.1rem; margin: 0 0 14px; }
+
+@media (max-width: 640px) {
+  .matcha-board { row-gap: 7px; column-gap: 30px; }
+  .matcha-col { gap: 7px; }
+  .matcha-tile {
+    min-height: 44px;
+    padding: 8px 9px;
+    font-size: 0.82rem;
+    border-width: 2px;
+  }
+  .matcha-hint { font-size: 0.82rem; margin-bottom: 10px; }
+}
 
 @media (max-width: 640px) {
   .score-row {
@@ -2223,6 +2454,62 @@ ol li {
   margin-bottom: 12px;
   font-size: 1rem;
   color: var(--text-primary);
+}
+
+/* Topplistor för kommande spellägen — tomma platshållar-segment tills
+   respektive quiz byggs. Skuggat/vilande utseende, ett kort per läge. */
+.hs-modes {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(16, 185, 129, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.hs-modes-heading {
+  margin: 0 0 2px;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+/* Aktivt (byggt) segment — solid kortram, i motsats till platshållarnas
+   dämpade streckade look nedan. */
+.hs-segment {
+  padding: 14px 16px;
+  border: 1px solid rgba(16, 185, 129, 0.22);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+
+.hs-segment--placeholder {
+  padding: 14px 16px;
+  border: 1px dashed rgba(16, 185, 129, 0.35);
+  border-radius: var(--radius-sm);
+  background: rgba(16, 185, 129, 0.04);
+  opacity: 0.72;
+}
+
+.hs-segment-title {
+  margin: 0 0 8px;
+  font-size: 0.98rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-primary);
+}
+
+.hs-segment-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hs-empty {
+  margin: 4px 0 12px;
+  font-size: 0.85rem;
+  color: var(--text-muted, #6b7280);
+  font-style: italic;
 }
 
 .stats-list {

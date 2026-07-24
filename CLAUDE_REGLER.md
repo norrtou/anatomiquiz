@@ -793,6 +793,43 @@ När nya ämnen läggs till:
 
 ---
 
+## 12. MODULÄR KOD: EN EGEN JS-FIL PER NYTT SPELLÄGE, APP ELLER VERKTYG
+
+**Mall (så här görs det rätt från början):** varje nytt spelläge, delapp eller
+verktyg byggs i en **egen `js/<namn>.js`** – aldrig genom att växa in i `js/app.js`.
+Filen laddas som ett vanligt klassiskt `<script defer>` **efter** `app.js` i
+`index.html`. Klassiska script delar samma globala scope (precis som `js/images.js`
+redan anropas från `app.js`), så modulen kan använda `app.js` hjälpare direkt som
+globaler: `el`, `shuffle`, `loadQuestions`, `loadQuestionsFromMultiplePaths`,
+`ALLMANT_LENSES`, `getQuestionsPath`, `topicLabelFor`, `eduAbbrevFor`,
+`formatDuration`, `downloadJsonBlob`, `topicCapabilities` m.fl. Modulen wire:ar sina
+egna knappar i sin **egen** `DOMContentLoaded`.
+
+**`app.js` får bara känna till modulen via skyddade krokar** – aldrig direkta anrop:
+```js
+if(typeof renderMatchaScores === 'function') renderMatchaScores()   // i showHighscores()
+if(typeof updateMatchaButton  === 'function') updateMatchaButton()   // i updateStartButtons()
+```
+Så fungerar `app.js` även om modulen inte är laddad, och modulen kan tas bort/bytas
+utan att röra `app.js`. Facit-implementationen är **`js/matcha.js`** (0.9.242) – följ
+den som mall.
+
+**Varför:** `app.js` var på väg mot 2 000+ rader. Varje liten fix i ETT läge tvingade
+då fram en inläsning/ändring av hela filen – dyrt i tokens och riskabelt. Ett läge i
+egen fil läses och ändras isolerat. Detta är en **proaktiv** regel (§0): bygg rätt
+från start, extrahera inte i efterhand (Matcha låg först inbakat i `app.js` och fick
+brytas ut – den kostnaden ska inte återkomma).
+
+**Cachebuster:** den nya filens `?v=` ska hållas i synk med resten (`SEO_REGLER.md`
+§11 C). `bump_version.py` rör i dag bara `app.js?v=` – nya modulfilers buster sätts
+för hand tills skriptet lär sig dem.
+
+**Gäller:** spellägen (Matcha, kommande Skriv/Leitner/Sporcle/Dagens utmaning/Gravity),
+fristående delappar och verktyg. Gäller **inte** rena datafiler eller små
+hjälpfunktioner som hör ihop med befintlig quiz-/flashcard-logik.
+
+---
+
 **DESSA REGLER ÄR BINDANDE FÖR ALL ARBETE PÅ ANATOMIQUIZ.**
 
 **Senast uppdaterad:** 2026-07-22

@@ -130,7 +130,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.241'
+const APP_VERSION = '0.9.242'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -941,6 +941,8 @@ function showHighscores(){
   renderScoreList()
   renderStats()
   renderBestList()
+  // Krok till spellägesmoduler som har egna topplistesegment (js/matcha.js m.fl.).
+  if(typeof renderMatchaScores === 'function') renderMatchaScores()
   // focus the list for keyboard users
   setTimeout(()=>{ el('scoreList').focus?.() },50)
 }
@@ -959,19 +961,25 @@ function clearScores(){
 // ett domän- eller enhetsbyte inte tyst tappar historiken.
 const SCORES_EXPORT_TYPE = 'anatomiquiz-highscores'
 
-function exportScores(){
-  const scores = getScores()
-  if(!scores.length){ alert('Det finns inga resultat att exportera än.'); return }
-  const payload = { type: SCORES_EXPORT_TYPE, version: 1, exported: new Date().toISOString(), scores }
+// Ladda ned ett objekt som en nedladdad JSON-fil (delas av topplistans och
+// Matchas export). filenameBase ska vara utan .json-ändelse.
+function downloadJsonBlob(payload, filenameBase){
   const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' })
   const url = URL.createObjectURL(blob)
   const a = document.createElement('a')
   a.href = url
-  a.download = `anatomiquiz-resultat-${new Date().toISOString().slice(0,10)}.json`
+  a.download = `${filenameBase}.json`
   document.body.appendChild(a)
   a.click()
   a.remove()
   setTimeout(()=>URL.revokeObjectURL(url), 1000)
+}
+
+function exportScores(){
+  const scores = getScores()
+  if(!scores.length){ alert('Det finns inga resultat att exportera än.'); return }
+  const payload = { type: SCORES_EXPORT_TYPE, version: 1, exported: new Date().toISOString(), scores }
+  downloadJsonBlob(payload, `anatomiquiz-resultat-${new Date().toISOString().slice(0,10)}`)
 }
 
 // Unik signatur per resultat → import av samma backup två gånger dubblerar inte raderna.
@@ -1382,6 +1390,9 @@ function updateStartButtons(){
   const cap = topicCapabilities()
   const sb = el('startBtn'); if(sb) sb.disabled = !(cap.mc || cap.tf)
   const fb = el('startFlashcardsBtn'); if(fb) fb.disabled = !cap.fc
+  // Krok till spellägesmoduler (js/matcha.js m.fl.) som har egna startknappar.
+  // Skyddad så app.js fungerar även om modulen inte är laddad.
+  if(typeof updateMatchaButton === 'function') updateMatchaButton()
 }
 
 function showSettings(){
@@ -1589,6 +1600,8 @@ function init(){
   // sidladdning. Frågorna laddas alltid med rätt sökväg när quiz/flashcards startas.
   el('startBtn').addEventListener('click', ()=>startQuiz())
   el('startFlashcardsBtn').addEventListener('click', startFlashcards)
+  // Matcha och andra spellägen kopplar upp sina egna knappar i sin egen modulfil
+  // (t.ex. js/matcha.js). app.js rör dem inte.
   el('fcCancelBtn').addEventListener('click', cancelFlashcards)
   el('fcNextBtn').addEventListener('click', nextFlashcard)
   el('fcRetryBtn').addEventListener('click', () => {
