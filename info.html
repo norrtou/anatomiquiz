@@ -56,7 +56,7 @@
     "description": "Bakgrund, syfte, omfattning och källor för Anatomiquiz — en gratis anatomiquiz och kunskapsbank med sökbar medicinsk ordlista, på svenska.",
     "inLanguage": "sv-SE",
     "url": "https://anatomiquiz.se/info.html",
-    "dateModified": "2026-07-20",
+    "dateModified": "2026-07-24",
     "isPartOf": {
       "@type": "WebSite",
       "name": "Anatomiquiz",
@@ -95,6 +95,69 @@
         }
       ]
     }
+  }
+  </script>
+
+  <!-- FAQPage i eget block (SEO_REGLER.md §6). Speglar den synliga FAQ-sektionen
+       (#faq) längre ner ord för ord — frågorna i samma ordning, svaren med
+       märkningen bortstädad. Ändra ALDRIG bara den ena av dem.
+       OBS: skriv inte ut id-attributet ordagrant här; §12-snutten letar upp den
+       FÖRSTA förekomsten i filen och skulle då läsa fel sektion. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "sv-SE",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Vad kostar Anatomiquiz, och behöver jag ett konto?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Anatomiquiz är helt gratis och kräver varken konto, inloggning eller nedladdning. Du öppnar sidan i webbläsaren och börjar plugga direkt, i mobilen likaväl som på datorn. Det finns inga betalfunktioner, ingen reklam och inga kakor (cookies). Vill du ha appen närmare till hands kan du lägga till den på mobilens hemskärm via webbläsarens meny."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur fungerar quizet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Du väljer först utbildning eller kategori, därefter ämne och hur många frågor du vill ha: 10, 20, 50 eller 100. Sedan visas en fråga i taget. När du svarat markeras ditt svar som rätt eller fel, och vid fel svar markeras dessutom vilket alternativ som var det rätta, så att du ser det direkt. Efter sista frågan visas ditt resultat, och har ämnet material i kunskapsbanken får du länkar vidare dit för fördjupning."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vad är skillnaden mellan quizet och flashcards?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I quizet får du färdiga svarsalternativ att välja mellan – flervalsfrågor eller påståenden av typen sant eller falskt – och svaren räknas ihop till en poäng som kan sparas i topplistan. Flashcards fungerar som traditionella pluggkort: du ser frågan, formulerar svaret för dig själv och vänder sedan på kortet för att kontrollera. Flashcards ger ingen poäng utan är avsett för snabb repetition. Under Inställningar väljer du vilka frågetyper du vill öva på."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kan jag öva på just det som ingår i min utbildning?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Ämnena är indelade efter tolv vårdutbildningar – bland andra arbetsterapeut, fysioterapeut, sjuksköterska, läkare, tandläkare, apotekare och biomedicinsk analytiker – och innehållet utgår från utbildningarnas läroplaner. Utöver dessa finns ”Slumpade ämnen”, som blandar frågor från samtliga utbildningar, samt ”Medicinsk terminologi” och ”Övrigt”. Letar du efter ett särskilt område kan du skriva ett ord i rutan ”Sök ämne i alla utbildningar”, så genomsöks alla utbildningars ämnen på en gång."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Sparas mina resultat, och kan någon annan se dem?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bara du ser dem. Resultat, inställningar och namn sparas med webbläsarens lokala lagring (localStorage) på din egen enhet. Ingenting skickas till någon server, och det finns varken användarkonton, kakor eller besöksstatistik. Du rensar resultaten när du vill med knappen ”Rensa topplista” eller genom att rensa webbläsarens lagring. Öppnar du Anatomiquiz både som vanlig flik och som genväg på hemskärmen kan de ha varsitt separat lagringsutrymme, och då syns inte det ena lägets resultat i det andra. Mer står i integritetspolicyn."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur vet jag att innehållet stämmer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Innehållet är sammanställt och faktagranskat mot vedertagna standardverk inom anatomi, fysiologi och medicinsk terminologi – bland andra Terminologia anatomica, Gray's anatomy, Sobotta och Lindskogs Medicinsk terminologi – medan sjukdomskoder följer Socialstyrelsens ICD-10-SE. Hela källförteckningen finns under Källor och kvalitetssäkring längre ner på sidan. Anatomiquiz är ändå ett komplement till studierna och ersätter inte kurslitteratur eller annan auktoritativ källa. Hittar du ett fel får du gärna rapportera det via kontaktformuläret på den här sidan."
+        }
+      }
+    ]
   }
   </script>
 
@@ -205,6 +268,33 @@
           <li>personliga tränare (PT), massageterapeuter och andra inom hälsa och träning</li>
           <li>idrottsvetare, tränare och andra med ett intresse för kroppen</li>
         </ul>
+      </div>
+    </section>
+
+    <!-- Vanliga frågor. OBS: FAQPage-blocket i <head> MÅSTE spegla frågorna och
+         svaren här ord för ord (SEO_REGLER.md §6) — ändras texten här ska den
+         ändras där också, och antalet frågor måste stämma i båda riktningarna.
+         Verifiera med snutten i SEO_REGLER.md §12 (den läser h3:orna i #faq). -->
+    <section class="card" id="faq" aria-labelledby="faqHeading">
+      <h2 id="faqHeading" class="about-title">Vanliga frågor om Anatomiquiz</h2>
+      <div class="info-prose">
+        <h3 class="info-subheading">Vad kostar Anatomiquiz, och behöver jag ett konto?</h3>
+        <p>Anatomiquiz är helt gratis och kräver varken konto, inloggning eller nedladdning. Du öppnar sidan i webbläsaren och börjar plugga direkt, i mobilen likaväl som på datorn. Det finns inga betalfunktioner, ingen reklam och inga kakor (cookies). Vill du ha appen närmare till hands kan du lägga till den på mobilens hemskärm via webbläsarens meny.</p>
+
+        <h3 class="info-subheading">Hur fungerar quizet?</h3>
+        <p>Du väljer först utbildning eller kategori, därefter ämne och hur många frågor du vill ha: 10, 20, 50 eller 100. Sedan visas en fråga i taget. När du svarat markeras ditt svar som rätt eller fel, och vid fel svar markeras dessutom vilket alternativ som var det rätta, så att du ser det direkt. Efter sista frågan visas ditt resultat, och har ämnet material i kunskapsbanken får du länkar vidare dit för fördjupning.</p>
+
+        <h3 class="info-subheading">Vad är skillnaden mellan quizet och flashcards?</h3>
+        <p>I quizet får du färdiga svarsalternativ att välja mellan – flervalsfrågor eller påståenden av typen sant eller falskt – och svaren räknas ihop till en poäng som kan sparas i topplistan. Flashcards fungerar som traditionella pluggkort: du ser frågan, formulerar svaret för dig själv och vänder sedan på kortet för att kontrollera. Flashcards ger ingen poäng utan är avsett för snabb repetition. Under Inställningar väljer du vilka frågetyper du vill öva på.</p>
+
+        <h3 class="info-subheading">Kan jag öva på just det som ingår i min utbildning?</h3>
+        <p>Ja. Ämnena är indelade efter tolv vårdutbildningar – bland andra arbetsterapeut, fysioterapeut, sjuksköterska, läkare, tandläkare, apotekare och biomedicinsk analytiker – och innehållet utgår från utbildningarnas läroplaner. Utöver dessa finns ”Slumpade ämnen”, som blandar frågor från samtliga utbildningar, samt ”Medicinsk terminologi” och ”Övrigt”. Letar du efter ett särskilt område kan du skriva ett ord i rutan ”Sök ämne i alla utbildningar”, så genomsöks alla utbildningars ämnen på en gång.</p>
+
+        <h3 class="info-subheading">Sparas mina resultat, och kan någon annan se dem?</h3>
+        <p>Bara du ser dem. Resultat, inställningar och namn sparas med webbläsarens lokala lagring (localStorage) på din egen enhet. Ingenting skickas till någon server, och det finns varken användarkonton, kakor eller besöksstatistik. Du rensar resultaten när du vill med knappen ”Rensa topplista” eller genom att rensa webbläsarens lagring. Öppnar du Anatomiquiz både som vanlig flik och som genväg på hemskärmen kan de ha varsitt separat lagringsutrymme, och då syns inte det ena lägets resultat i det andra. Mer står i <a href="integritet.html" class="info-link">integritetspolicyn</a>.</p>
+
+        <h3 class="info-subheading">Hur vet jag att innehållet stämmer?</h3>
+        <p>Innehållet är sammanställt och faktagranskat mot vedertagna standardverk inom anatomi, fysiologi och medicinsk terminologi – bland andra <em>Terminologia anatomica</em>, <em>Gray's anatomy</em>, <em>Sobotta</em> och Lindskogs <em>Medicinsk terminologi</em> – medan sjukdomskoder följer Socialstyrelsens ICD-10-SE. Hela källförteckningen finns under <a href="#sourcesHeading" class="info-link">Källor och kvalitetssäkring</a> längre ner på sidan. Anatomiquiz är ändå ett komplement till studierna och ersätter inte kurslitteratur eller annan auktoritativ källa. Hittar du ett fel får du gärna rapportera det via kontaktformuläret på den här sidan.</p>
       </div>
     </section>
 
