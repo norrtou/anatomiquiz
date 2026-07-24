@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.246
+- **Nyhetsnotis på info.html** (25 juli 2026): Anatomiquiz får nya varianter och spel för att öva; Matcha kan provas redan nu; de är under utformning och kan vara lite buggiga.
+- **Ny regel `SEO_REGLER.md` §15:** var nyheter ligger (info.html, `#newsHeading`) och hur de skrivs, så det blir en snabb operation utan letande. Kedjan (§11.A: bump + CHANGELOG) gäller ändå.
+- Rättar en miss i föregående version: info.html-ändringen i 0.9.245-commiten bumpades aldrig (§11.A-brott). Nu åtgärdat, och den felaktiga undantagsklausulen i §15 (som påstod att nyhetstext slipper bump) är struken.
+
 ## 0.9.245
 - **Snabbare start på blandade ämnen (Matcha OCH quizet).** "Blandat – alla utbildningar" och de andra lins-/blandade-valen laddar ~25 datafiler (~5 MB). `loadQuestionsFromMultiplePaths` hämtade dem **en i taget** (`for … await fetch`), så varje fil väntade på den föregående → flera sekunders fördröjning från knapptryck till start, särskilt på mobil. Nu hämtas alla filer **parallellt** (`Promise.all`, HTTP/2-multiplexering); urvalet slumpas som förut efteråt. Ingen beteendeförändring, bara snabbare.
 - Endast `js/app.js` ändrad → `app.js?v=`/`APP_VERSION`/`VERSION` bumpade; CSS orörd (styles.css-bustern kvar på 0.9.244).

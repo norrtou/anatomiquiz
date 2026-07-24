@@ -653,9 +653,12 @@ Alla nyheter bor i **`info.html`**, i sektionen `<section … aria-labelledby="n
 nytt och vad besökaren kan göra med det. Ingen intern/teknisk jargong (inga versionsnummer,
 inga filnamn, inget om CSS/commits). Länka till det som är nytt med `class="info-link"`.
 
-**Workflow — ingen cirkus:** en ren nyhetsnotis är en textändring i **en** fil. Den kräver
-**INGEN** versionsbump och **ingen** cachebuster (§11 gäller kod/CSS, inte HTML-brödtext) —
-resonera inte om det. Redigera `info.html`, och committa+pusha på begäran. Klart.
+**Workflow — ingen cirkus, men kedjan gäller:** platsen och mallen ovan gör det till en
+snabb operation — leta inte, greppa `newsHeading`, klistra in mallen. Men `info.html` är en
+**ändrad sida**, så §11.A gäller precis som vanligt: kör `python3 scripts/bump_version.py`
+och lägg en CHANGELOG-post innan commit+push. "Ingen cirkus" syftar på letandet och
+CSS-svamlet — INTE på att hoppa över kedjan. Skriv aldrig in undantag från §11 här; §11.A
+säger ALLTID och står över detta avsnitt.
 
 ---
 
