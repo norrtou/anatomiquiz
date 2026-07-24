@@ -1,5 +1,17 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.237
+- **De självrefererande tooltip-definitionerna i `data/kb_glossary_terms.json` omskrivna.** En tooltip som bara upprepade uppslagsordet (`armbågsben` → ”Armbågsben”, `bröstkorgen` → ”Bröstkorgen”) tillförde ingenting för den som förde pekaren över ordet. **258 definitioner** är omskrivna för hand ur den ordlistepost som nyckelns `href` pekar på, och slår igenom på **798 länkar i 61 sidor**.
+- **Skulden var större än de ~146 som var dokumenterade – defekten fanns i tre ytformer.** Bara den första hittades av det `def == nyckel`-test som skulden beskrevs med:
+  - **144 exakta självreferenser** (`bröstkorgen` → ”Bröstkorgen”), de dokumenterade.
+  - **96 böjningsformer**, som testet inte kunde se eftersom strängarna skiljer sig: `ögonbryn` → ”Ögonbrynen”, `bröstkorgens` → ”Bröstkorgen”, `hälbenet` → ”Hälben”. Samma defekt, annan yta.
+  - **18 nycklar som delade exakt `href` + definition med en post som skrevs om.** De måste följa med: annars hade HTML-ersättningen träffat dem ändå och facit glidit isär från sidorna. De latinska bland dem följer husets format ”Svenskt namn; förklaring”, som befintliga `humerus` och `sacrum`.
+- **Länken till den latinska posten är bevarad överallt** – det var definitionstexten som var värdelös, inte länken. Antalet `kb-term`-länkar är 7713 före och efter, och `wire_terms.py --check --all` är tyst (SEO_REGLER §6c).
+- **Latinsk nyckel med svensk definition har lämnats orörd** – `humerus` → ”Överarmsben; artikulerar med scapula…” och `m. sartorius` → ”skräddarmuskeln (skelettmuskel)” är översättningar, inte självreferenser, och gör nytta som de är. Kvar av samma skäl: `extremitas` → ”Extremitet”, `minor` → ”Mindre”, `ovale` → ”Oval”.
+- **Två sakfel i källmaterialet upptäckta vid genomläsningen och inte förda vidare.** `data/ordlista.json` beskriver stigbygeln (`stapes`) som ”innerörats minsta hörselben” – stapes sitter i **mellanörat**. Posten `calcaneus` är taggad `adj.` men är ett substantiv; samma sak för `umbilicus`, `hepar`, `gastrocnemius`. Ordlistan är inte rättad i detta pass.
+- **Kvar i samma fil, en annan defekt:** ett sextiotal svenska nycklar vars definition bara är det latinska namnet (`handled` → ”Articulatio radiocarpalis”, `månben` → ”Os lunatum”, `hålvenen` → ”Vena cava”). De är inte självrefererande – de ger läsaren en term, men ingen förklaring. Inte rörda; egen bedömning krävs.
+- Ingen CSS och ingen synlig text ändrad → `styles.css`-bustern oförändrad. Diffen i HTML rör uteslutande `data-def`-attribut, och diffen i JSON är exakt 258 `"def"`-rader.
+
 ## 0.9.236
 - **FAQ-driften rättad på de fyra återstående sidorna** (tillåtelse given): `deklinationer-pluralformer.html` (7 svar), `medicinskt-latin.html` (6), `terminologins-historia.html` (4) och `uttalsregler.html` (8). Sammanlagt **25 `acceptedAnswer`-texter** omskrivna så att de speglar brödtexten ord för ord. Blocken är genererade ur den synliga HTML:en, med extraktionen scopad till `#faq`-behållaren. **Inga frågenamn behövde ändras** och ingen synlig text är rörd – diffen är exakt 25 rader.
 - **Efter detta speglar alla 18 sidor med `FAQPage` både frågor och svar.** Skulden från 2026-07-21 är därmed avslutad vad gäller FAQ.
