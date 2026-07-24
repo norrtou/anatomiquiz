@@ -2102,6 +2102,14 @@ ol li {
 .matcha-finished { text-align: center; padding: 10px 0 4px; }
 .matcha-done-text { font-size: 1.1rem; margin: 0 0 14px; }
 
+/* OBS: .hidden är INTE en global utility i det här projektet – den fungerar bara
+   via sammansatta selektorer (.card.hidden m.fl.). Matchas inre delar är inga
+   .card, så de behöver egna dölj-regler; annars visas klart-vyn (Spela igen/
+   Avsluta) mitt i ett pågående spel och brädet döljs aldrig vid spelslut. */
+.matcha-board.hidden,
+.matcha-finished.hidden,
+#matchaFooter.hidden { display: none; }
+
 @media (max-width: 640px) {
   .matcha-board { row-gap: 7px; column-gap: 30px; }
   .matcha-col { gap: 7px; }

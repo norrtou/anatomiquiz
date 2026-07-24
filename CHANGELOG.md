@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.244
+- **KRITISK bugg: Matchas klart-vy visades mitt i spelet.** Knapparna "Spela igen"/"Avsluta" syntes bland rutorna under pågående spel, och brädet doldes aldrig vid spelslut. Orsak: `.hidden` är **inte** en global utility i projektet – den fungerar bara via sammansatta selektorer (`.card.hidden` m.fl.), och Matchas inre `div`:ar (`matchaBoard`/`matchaFinished`/`matchaFooter`) är inga `.card`. Fixat med egna dölj-regler i CSS.
+- **Matcha spelas nu i takt med en knapp** i stället för auto-avslöjande. Para ihop alla par → tryck **"Visa rätt svar"** (avstängd tills alla par är lagda) → facit visas → knappen blir **"Nästa"**, och på sista omgången **"Avsluta"**. Ingen auto-timer som byter omgång längre; du styr själv när du går vidare. "Avbryt" finns kvar för att hoppa ur mitt i.
+- CSS ändrad → `styles.css?v=` bumpad enhetligt till 0.9.244 (`SEO_REGLER.md` §11 C) + generatorernas `STYLES_V`/`CSS_V`; `matcha.js?v=` följer med.
+
 ## 0.9.243
 - **Matcha: "nytt"/"snart"-märkningarna borttagna.** Pill-etiketterna tvingade radbrytningar i spelknapparnas text på mobil. Borttagna helt (både från startsidans knappar och topplistans segmentrubriker); ännu ej byggda lägen behåller sitt skuggade/streckade disabled-utseende. Död CSS (`.mode-soon`/`.mode-new`) rensad.
 - **Matcha: "Topplista"-knappen borttagen ur klart-vyn** – onödig där. Kvar: "Spela igen" och "Avsluta".

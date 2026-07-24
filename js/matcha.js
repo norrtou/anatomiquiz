@@ -37,7 +37,6 @@ const MATCHA_ROUND_SIZE = 5
 const MATCHA_MAX_PROMPT_LEN = 55
 const MATCHA_MAX_ANSWER_LEN = 26
 const MATCHA_MIN_PAIRS = 4
-const MATCHA_REVEAL_MS = 1600     // hur länge rätt/fel visas innan nästa omgång
 const SVG_NS = 'http://www.w3.org/2000/svg'
 
 let matchaRounds = []
@@ -46,7 +45,8 @@ let matchaTotalPairs = 0
 let matchaCorrect = 0             // rätt par totalt (över alla omgångar)
 let matchaPending = null          // vald ruta som väntar på partner (eller null)
 let matchaLinks = []              // [{left, right, correct?}] i pågående omgång
-let matchaLocked = false          // blockera klick medan facit visas / omgång byts
+let matchaLocked = false          // blockera klick medan facit visas
+let matchaPhase = 'pairing'       // 'pairing' (para ihop) → 'revealed' (facit visat)
 let matchaStartTime = 0
 let matchaTimerOn = false
 let matchaTimerInterval = null
@@ -198,6 +198,7 @@ function renderMatchaRound(){
   matchaPending = null
   matchaLinks = []
   matchaLocked = false
+  matchaPhase = 'pairing'
   const round = matchaRounds[matchaRoundIdx]
   // Kolumnerna slumpas var för sig så att rad-position inte avslöjar paret.
   const left = shuffle(round.map((p, i) => ({ p, i })))
@@ -208,8 +209,8 @@ function renderMatchaRound(){
   right.forEach(({ p, i }) => colR.appendChild(makeMatchaTile(p.correct, i, 'right')))
   clearMatchaLines()
   updateMatchaProgress()
-  el('matchaHint').textContent = 'Para ihop alla par. Rätt och fel visas först när du parat ihop allihop.'
-  updateMatchaScoreStatus()
+  el('matchaHint').textContent = 'Para ihop alla par och tryck sedan på "Visa rätt svar".'
+  updateMatchaNextButton()
 }
 
 function updateMatchaProgress(){
@@ -217,8 +218,21 @@ function updateMatchaProgress(){
     `Omgång ${matchaRoundIdx + 1}/${matchaRounds.length} · ${matchaLinks.length}/${currentRoundSize()} ihopparade`
 }
 
-function updateMatchaScoreStatus(){
-  el('matchaMiss').textContent = `Rätt: ${matchaCorrect}/${matchaTotalPairs}`
+function isLastMatchaRound(){ return matchaRoundIdx >= matchaRounds.length - 1 }
+
+// Primärknappen i footern. Under ihopparning heter den "Visa rätt svar" och är
+// avstängd tills alla par i omgången är lagda. När facit visats blir den "Nästa"
+// (eller "Avsluta" på sista omgången).
+function updateMatchaNextButton(){
+  const btn = el('matchaNextBtn')
+  if(!btn) return
+  if(matchaPhase === 'revealed'){
+    btn.textContent = isLastMatchaRound() ? 'Avsluta' : 'Nästa'
+    btn.disabled = false
+  } else {
+    btn.textContent = 'Visa rätt svar'
+    btn.disabled = matchaLinks.length !== currentRoundSize()
+  }
 }
 
 function deselectPending(){
@@ -256,8 +270,6 @@ function onMatchaTileClick(b){
   const right = b.dataset.side === 'right' ? b : matchaPending
   matchaPending = null
   createMatchaLink(left, right)
-  // Alla par ihopparade? Då – och först då – avslöjas facit.
-  if(matchaLinks.length === currentRoundSize()) revealMatchaRound()
 }
 
 function createMatchaLink(left, right){
@@ -271,6 +283,7 @@ function createMatchaLink(left, right){
   matchaLinks.push({ left, right })
   drawMatchaLines()
   updateMatchaProgress()
+  updateMatchaNextButton()   // aktiverar "Visa rätt svar" när alla par är lagda
 }
 
 function unlinkTile(t){
@@ -283,6 +296,7 @@ function unlinkTile(t){
   matchaLinks = matchaLinks.filter(k => k.left !== t && k.right !== t && k.left !== partner && k.right !== partner)
   drawMatchaLines()
   updateMatchaProgress()
+  updateMatchaNextButton()   // stänger av "Visa rätt svar" igen om ett par bröts
 }
 
 // Rätta hela omgången på en gång (först när allt är ihopparat). Ingen andra chans.
@@ -304,16 +318,23 @@ function revealMatchaRound(){
     if(ok) roundCorrect++
   })
   matchaCorrect += roundCorrect
+  matchaPhase = 'revealed'
   drawMatchaLines()           // färga om linjerna grön/röd
-  updateMatchaScoreStatus()
   el('matchaHint').textContent =
-    `Omgång ${matchaRoundIdx + 1}: ${roundCorrect} av ${matchaLinks.length} rätt.`
-  setTimeout(advanceMatchaRound, MATCHA_REVEAL_MS)
+    `Omgång ${matchaRoundIdx + 1}: ${roundCorrect} av ${matchaLinks.length} rätt` +
+    ` · totalt ${matchaCorrect} av ${matchaTotalPairs}.`
+  updateMatchaNextButton()    // "Visa rätt svar" → "Nästa"/"Avsluta"
 }
 
-function advanceMatchaRound(){
+// Klick på primärknappen. I ihopparningsläget visar den facit; i facitläget går
+// den vidare till nästa omgång, eller avslutar spelet på den sista.
+function onMatchaNextBtn(){
+  if(matchaPhase === 'pairing'){
+    if(matchaLinks.length === currentRoundSize()) revealMatchaRound()
+    return
+  }
+  if(isLastMatchaRound()){ finishMatcha(); return }
   matchaRoundIdx++
-  if(matchaRoundIdx >= matchaRounds.length){ finishMatcha(); return }
   renderMatchaRound()
 }
 
@@ -511,6 +532,7 @@ if(window.visualViewport) window.visualViewport.addEventListener('resize', redra
 
 document.addEventListener('DOMContentLoaded', () => {
   el('startMatchaBtn')?.addEventListener('click', startMatcha)
+  el('matchaNextBtn')?.addEventListener('click', onMatchaNextBtn)
   el('matchaCancelBtn')?.addEventListener('click', cancelMatcha)
   el('matchaRetryBtn')?.addEventListener('click', startMatcha)
   el('matchaQuitBtn')?.addEventListener('click', () => { el('matcha').classList.add('hidden'); el('setup').classList.remove('hidden') })

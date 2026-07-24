@@ -121,7 +121,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="css/styles.css?v=0.9.243">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.244">
 </head>
 <body>
 
@@ -641,7 +641,7 @@
           <div id="matchaTimer" class="timer" role="timer"></div>
         </div>
         <div class="quiz-actions">
-          <span id="matchaMiss" class="matcha-miss" aria-live="polite"></span>
+          <button id="matchaNextBtn" class="btn primary" type="button" disabled>Visa rätt svar</button>
         </div>
       </div>
     </section>
@@ -892,8 +892,8 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.243" defer></script>
+  <script src="js/app.js?v=0.9.244" defer></script>
   <!-- Spellägesmoduler: en egen fil per läge, laddas EFTER app.js (delar globalt scope). -->
-  <script src="js/matcha.js?v=0.9.243" defer></script>
+  <script src="js/matcha.js?v=0.9.244" defer></script>
 </body>
 </html>
