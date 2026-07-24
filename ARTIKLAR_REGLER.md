@@ -10,10 +10,10 @@
 > - [`UTBILDNINGAR_REGLER.md`](UTBILDNINGAR_REGLER.md) — vilka utbildningar/ämnen som finns (styr målgrupp och quiz-CTA).
 >
 > **Status:** GODKÄND. Infrastrukturen (våg 0) byggd i 0.9.186, terminologipelaren lagd på
-> artikelstandard i 0.9.191. Våg 1 klar; våg 2 påbörjad: artikel 8 (*Ledtyper*) skriven
-> 2026-07-21 och artikel 9 (*Så läser du en muskeltabell*) 2026-07-22, båda ännu utan
-> versionsbump.
-> **Senast uppdaterad:** 2026-07-22. **Version:** 1.0
+> artikelstandard i 0.9.191. Våg 1 klar; våg 2 klar sånär som på artikel 10 (*Medicinska
+> ordfamiljer*, ska först prövas mot §8.2). Våg 3 påbörjad: artikel 12 (*Fascia, bursor och
+> senskidor*) släppt i 0.9.230.
+> **Senast uppdaterad:** 2026-07-24. **Version:** 1.0
 
 ---
 
@@ -464,8 +464,11 @@ eftersom beroendepilarna (`← 6, 8`) pekar på nummer.
     kirurgiska serien -tomi, -ektomi, -stomi, -plastik och -des.
 
 ### Våg 3 — Fördjupning
-12. **Fascia, bursor, senskidor och muskelloger** — `fordjupning`, `fysioterapeut`. ← 8, 9
-    Kontrollerat 2026-07-21: förekommer bara som enstaka omnämnanden i muskeltabellerna.
+12. ✅ **Fascia, bursor och senskidor – glidytor och loger** — `fordjupning`, `fysioterapeut`,
+    hubb `rorelseapparaten`. ← 8, 9. Skriven 2026-07-24. §8.2-testet kört om mot live-sajten
+    samma dag: ämnet fanns bara som lösryckta omnämnanden i muskeltabellernas inledningar
+    (”ligger i fyra loger”) och som ursprungsceller (`fascia thoracolumbalis`,
+    `tensor fasciae latae`), aldrig som löptext. Ny korslänk IN från `ledtyper.html`.
 13. **Dermatom, myotom och sklerotom** — `fordjupning`, `lakare` + `fysioterapeut`.
     ← `sa-leds-kanseln` (finns). Kontrollerat 2026-07-21: `nervtabell-balen.html` har en
     dermatomtabell för bålen; myotom och sklerotom saknas helt, liksom all löptext.

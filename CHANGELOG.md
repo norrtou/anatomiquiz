@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.230
+- **Ny artikel: _Fascia, bursor och senskidor – glidytor och loger_** (`/kunskapsbank/artiklar/fascia-bursor-senskidor.html`) – artikel 12 i `ARTIKLAR_REGLER.md` §11, typ `fordjupning`, målgrupp `fysioterapeut`, hubb *Rörelseapparaten*. 1 836 prosaord, 163 tooltips, 2 tabeller (muskellogerna i armar och ben; bursor och senskidor med läge), FAQ speglad i `FAQPage`. Går från endomysium/perimysium/epimysium ut i senan, skiljer ytlig från djup fascia, förklarar loger och septa intermuscularia, fascian som fäste och kraftöverförare, bursornas byggnad och namngivning, senskidans två lager och retinaklerna – och avslutar med mekanismen bakom kompartmentsyndrom, bursit, senskideinflammation och plantar fasciit, uttryckligen som anatomi och inte som rådgivning (`ARTIKLAR_REGLER.md` §4).
+- §8.2-testet kört mot live-sajten först: ämnet fanns bara som lösryckta omnämnanden i muskeltabellernas inledningar och som ursprungsceller (`fascia thoracolumbalis`, `tensor fasciae latae`), aldrig som löptext.
+- Registrerad i `data/artiklar.json` (unik poäng, beroenden `ledtyper` + `sa-laser-du-en-muskeltabell`) → generatorn skrev om ämneshubben, artikelindexet och faktatexter-ingången. Sitemap och llms.txt uppdaterade. Ny korslänk IN från `ledtyper.html`, där bursorna nämns i förbigående.
+- **40 nya facitnycklar** i `data/kb_glossary_terms.json` (sist i filen): artikelns kärnbegrepp fanns i `data/ordlista.json` men aldrig i facit, eftersom facit byggs ur redan wirade sidor – `epimysium`, `endomysium`, `senskida`, `bursor`, `kompartmentsyndrom`, `fasciotomi`, `fascia lata/cruris/brachii`, `vagina tendinis/synovialis`, bursornas latinska namn, `retinakel`, `karpaltunneln`, `senan/senor/senorna` m.fl., samtliga med verifierade ankare. De wirade samtidigt in 45 korrekta länkar på 17 äldre sidor.
+- **Vardagsordsnyckeln `utsidan` → `facies externa` rensad ur facit** och av-wirad på fyra sidor. Samma klass som `ovansidan`, som togs bort 2026-07-21: ordet kan stå i vilken svensk mening som helst utan att betyda termen (`SEO_REGLER.md` §6c).
+- Ingen CSS ändrad → styles.css-bustern **oförändrad** (`?v=0.9.229`), likaså `kb-table-tools.js?v=0.9.223`. `APP_VERSION`/app.js-bustern bumpad i lås med `VERSION`.
+
 ## 0.9.229
 - **Verktyg-sidans tagline täcker nu alla tre verktygen.** `Räknare och omvandlare som visar uträkningen` beskrev bara läkemedelsberäknaren → ersatt med `Verktyg som räknar, mäter och kartlägger` (räknar = läkemedelsberäknaren, mäter = HEC, kartlägger = aktivitetsdagboken).
 - Ingen CSS ändrad → styles.css-bustern oförändrad. `APP_VERSION`/app.js-bustern bumpad i lås med `VERSION`.
