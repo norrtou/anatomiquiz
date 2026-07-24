@@ -82,6 +82,45 @@ definitioner med komma — vilket var exakt den form den fjärde defekten hade.
 i det som uteslöts. Läs ett stickprov ur det bortfiltrerade, inte bara ur träffarna.
 Se även §2.14 (begärd kontroll ska vara manuell) och §5.6.
 
+### 0.3 Går det inte att automatisera säkert — SKRIV DET FÖR HAND
+
+**Om en text, kod, funktion, quizfråga, definition eller applikationsdel inte kan skrivas
+maskinellt utan uppenbar risk att den blir fel eller slarvig, ska den alltid skrivas för
+hand av Claude.** Detta gäller allt innehåll i projektet, inte bara quiz och artiklar.
+
+**Varför:** ett skript som "nästan" klarar uppgiften producerar innehåll som ser färdigt ut
+men måste korrekturläsas rad för rad — och korrekturet kostar mer än handskrivandet hade
+gjort, eftersom det kräver att varje post läses ändå, fast nu med ett felaktigt utgångsläge
+att reda ut. Automatisering får aldrig väljas för att den är bekvämare för mig; den ska
+väljas för att den bevisligen ger rätt resultat.
+
+**Så här avgörs det — innan en rad kod skrivs:**
+
+1. **Kan regeln uttryckas exakt?** "Byt sträng A mot sträng B", "sätt `data-def` till
+   facits värde", "bumpa versionsnumret" — mekaniska, entydiga, säkra att automatisera.
+2. **Kräver den omdöme?** Formulera en definition, välja distraktorer, avgöra vad en term
+   *betyder*, bedöma om en mening är pedagogisk, veta att stigbygeln sitter i mellanörat —
+   då är svaret handskrivet. Ett skript som gissar ur mönster gissar fel någonstans, och
+   du vet inte var förrän du läst allt.
+3. **Delvis automatiserbart?** Låt skriptet göra det mekaniska (hitta posterna, hämta
+   källtexten, applicera ändringen, verifiera resultatet) och skriv **innehållet** för hand.
+   Det var så de 338 tooltip-definitionerna gjordes rätt: skript för att hitta och
+   propagera, mänsklig formulering av varje enskild text.
+
+**Verkliga fall som motiverar regeln:** en mekanisk omklippning av ordlistedefinitioner
+tappade den psykiatriska betydelsen ur `depression` och abduktorsvagheten ur `Trendelenburg`.
+Parentes-strippningen 2026-07-14 skadade 22 filer och krävde granskning mot git commit för
+commit. Båda var automatiseringar av något som krävde omdöme.
+
+**Gränsdragningen mot §0:** §0 säger att ett verktyg som tvingar fram korrektur ska byggas
+om. Den här regeln säger när verktyget inte ska byggas alls. Kan uppgiften inte göras säkert
+maskinellt är rätt åtgärd att skriva för hand — inte att bygga ett skript med sämre omdöme
+än mitt eget och sedan städa efter det.
+
+**Detta är inte en ursäkt för att hoppa över automatisering som fungerar.** Mekaniska,
+verifierbara operationer ska automatiseras — de är snabbare, billigare och mer konsekventa
+än handarbete. Regeln gäller uppgifter som kräver omdöme, inte uppgifter som är tråkiga.
+
 ---
 
 ## 1. SPRÅK OCH TERMINOLOGI

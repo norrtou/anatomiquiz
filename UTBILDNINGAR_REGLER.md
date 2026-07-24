@@ -4,6 +4,10 @@
 > Varje regel här ska tala om hur något skrivs **rätt från början**, inte hur felet hittas och
 > rättas efteråt. Formulerar du en ny regel: mallen först, förbudet som komplement, och lägg
 > den där arbetet utförs. Tvingar ett verktyg fram korrekturarbete ska verktyget byggas om.
+>
+> **§0.3:** kan något inte skrivas maskinellt utan uppenbar risk att bli fel eller slarvigt —
+> text, kod, quizfråga, definition — **skrivs det för hand**. Automatisering väljs för att den
+> bevisligen ger rätt resultat, aldrig för att den är bekvämare.
 
 Underlag för hur utbildnings- och ämneslistan i Anatomiquiz ska byggas upp.
 Detta är **källan vi utgår från** när vi bygger ut quizet per vårdutbildning.

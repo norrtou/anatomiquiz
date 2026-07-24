@@ -4,6 +4,11 @@
 > Varje regel här ska tala om hur något skrivs **rätt från början**, inte hur felet hittas och
 > rättas efteråt. Formulerar du en ny regel: mallen först, förbudet som komplement, och lägg
 > den där arbetet utförs. Tvingar ett verktyg fram korrekturarbete ska verktyget byggas om.
+>
+> **`CLAUDE_REGLER.md` §0.3:** kan något inte skrivas maskinellt utan uppenbar risk att bli
+> fel eller slarvigt — text, kod, quizfråga, definition — **skrivs det för hand**.
+> Automatisering väljs för att den bevisligen ger rätt resultat, aldrig för att den är
+> bekvämare. (Förväxla inte med §0.3 *i det här dokumentet*, som gäller artikelns tes.)
 
 > **BINDANDE.** Läs det här dokumentet **innan** en artikel planeras, skrivs eller revideras,
 > och innan artikelinfrastrukturen ändras. Det styr *vad* som skrivs, *för vem*, *var det
