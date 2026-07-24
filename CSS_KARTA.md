@@ -1,5 +1,10 @@
 # CSS-karta – vilken stylesheet styr vad
 
+> **PROAKTIVA REGLER — [`CLAUDE_REGLER.md` §0](CLAUDE_REGLER.md) gäller över detta dokument.**
+> Varje regel här ska tala om hur något skrivs **rätt från början**, inte hur felet hittas och
+> rättas efteråt. Formulerar du en ny regel: mallen först, förbudet som komplement, och lägg
+> den där arbetet utförs. Tvingar ett verktyg fram korrekturarbete ska verktyget byggas om.
+
 Läs detta **innan** du rör layout/typografi. Sajten har **tre** CSS-filer. Att glömma
 att en sida laddar flera av dem (och i vilken ordning) är den vanligaste orsaken till
 att en "fix" inte får effekt.

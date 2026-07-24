@@ -1,5 +1,10 @@
 # SEO_REGLER.md — Anatomiquiz · SEO, tillgänglighet, prestanda & agent-standard
 
+> **PROAKTIVA REGLER — [`CLAUDE_REGLER.md` §0](CLAUDE_REGLER.md) gäller över detta dokument.**
+> Varje regel här ska tala om hur något skrivs **rätt från början**, inte hur felet hittas och
+> rättas efteråt. Formulerar du en ny regel: mallen först, förbudet som komplement, och lägg
+> den där arbetet utförs. Tvingar ett verktyg fram korrekturarbete ska verktyget byggas om.
+
 > **BINDANDE.** Det här dokumentet definierar hur **all HTML, sitemap, llms.txt, CSS och
 > JSON-LD** i Anatomiquiz ska skrivas. Det MÅSTE läsas och följas **innan** en sida skapas
 > eller ändras – och pre-flight-checklistan (§12) MÅSTE bockas av innan commit.
@@ -156,11 +161,20 @@ abstrakt eller tesformulerat.
 
 Regler:
 
+- **`FAQPage`-blocket SKA GENERERAS ur den synliga HTML:en — handskrivet block är ett regelbrott.**
+  Detta är regelns proaktiva kärna (§0 i CLAUDE_REGLER): ett genererat block *kan inte* glida
+  isär från sidan, ett handskrivet gör det alltid vid nästa revidering. Generera ur
+  `#faq`-behållarens `<p><strong>Fråga</strong><br>Svar</p>` med märkningen bortstädad, så
+  blir speglingen exakt tecken för tecken. Skriv FAQ:n synlig **först**, generera blocket
+  **sedan** — aldrig tvärtom. Vill du ha ett utförligare svar i märkningen är rätt åtgärd att
+  skriva in det i den synliga texten och generera om; JSON-LD:t får aldrig bli en egen,
+  osynlig version av artikeln.
 - **FAQPage måste spegla en synlig FAQ** på sidan, ord för ord i sak (annars policybrott).
-  **Kontrollera antalet frågor i båda riktningarna, inte bara att en FAQ finns.** Listorna
-  glider isär tyst när sidan revideras: `deklinationer-pluralformer.html` hade sex frågor i
-  märkningen och sju på sidan, varav en (*pluralis av carcinoma*) bara fanns i JSON-LD och två
-  bara i brödtexten (rättat 2026-07-21). Snutten i §12 jämför numera listorna par för par.
+  Kontrollen i §12 är skyddsnätet när ett block ändå skrivits för hand: den jämför **frågor
+  och svar** par för par, i båda riktningarna, med extraktionen scopad till `#faq`. Historiken
+  som motiverar kravet ovan: `deklinationer-pluralformer.html` hade sex frågor i märkningen och
+  sju på sidan (2026-07-21), och `grekiska-i-medicinen.html` hade **samtliga sex svar**
+  isärdrivna utan att någon frågekontroll kunde se det (2026-07-24).
 - **Kravet gäller SVAREN lika hårt som frågorna.** Detta var den tysta halvan av regeln fram
   till 2026-07-24: §12-snutten jämförde bara frågorna, så en sida kunde rapporteras ren med
   samtliga svar isärdrivna. `grekiska-i-medicinen.html` hade två omformulerade frågor **och sex
@@ -170,9 +184,6 @@ Regler:
 - **Riktningen är given: märkningen rättas efter sidan, aldrig tvärtom.** Vill du behålla det
   utförligare svaret är rätt åtgärd att skriva in det i den **synliga** texten först och spegla
   därefter – inte att låta JSON-LD:t stå kvar som en egen, osynlig version av artikeln.
-- **Generera hellre blocket ur den synliga HTML:en än skriv det för hand.** Handskriven
-  spegling driver isär vid nästa revidering; en generering ur `<p><strong>…</strong><br>…</p>`
-  med märkningen bortstädad är exakt tecken för tecken.
 - `inLanguage: "sv-SE"`, `isAccessibleForFree: true`, `publisher`/`author` = Norrtou Creations / Anatomiquiz.
 - **`breadcrumb` ska ALDRIG nästlas som property inuti Article/LearningResource/CollectionPage-blocket**
   när `@type` är en array (flera typer). Ahrefs schema.org-validator (och andra strikta validatorer)
@@ -223,7 +234,58 @@ Trovärdighet är ett **krav** på allt innehåll i kunskapsbanken (YMYL). Därf
 Tooltips är kärninnehåll i kunskapsbanken (tabeller OCH faktatexter), inte dekoration.
 **Slarv här är ett regelbrott.** Gäller både nya sidor och revidering av befintliga.
 
-**Grundkrav:**
+### 6c.0 DEFINITIONSTEXTEN — så skrivs en `def` rätt FÖRSTA gången
+
+Detta avsnitt gäller varje ny nyckel i `data/kb_glossary_terms.json`. **Läs det innan du
+lägger till en enda post.** Regeln saknades fram till 0.9.238 och kostade 338 handskrivna
+omskrivningar över två arbetspass — kravet fanns bara på *vilka ord* som skulle länkas,
+aldrig på vad tooltipen skulle säga.
+
+**Mallen — en tooltip svarar på "vad är detta?" för någon som inte redan vet:**
+
+```
+<Vad det är / vad det gör, i klartext> (<latinskt namn>)
+```
+
+Verkliga, korrekta exempel:
+
+> `handled` → "Ellipsoidleden mellan strålbenet och den proximala raden handlovsben (articulatio radiocarpalis)"
+> `hälben`  → "Det största fotrotsbenet, som bär upp hälen (calcaneus)"
+> `bäckenbotten` → "Muskel- och fascieskivan som sluter bäckenutgången och bär upp bäckenorganen (diaphragma pelvis)"
+
+Form: en mening, ingen avslutande punkt, latinnamnet sist i parentes. Inga `"`, `<`, `>`
+eller `&` — texten hamnar rått i ett `data-def`-attribut.
+
+**Testet innan du skriver posten:** *läser någon som INTE kan ordet ut något nytt?*
+Om svaret är nej är definitionen inte skriven än.
+
+**Dessa former är regelbrott — de såg olika ut, men var samma tomma tooltip:**
+
+| Ytform | Avskräckande exempel | Varför det inte duger |
+|---|---|---|
+| Def upprepar uppslagsordet | `armbågsben` → "Armbågsben" | Säger exakt vad läsaren redan läste |
+| Böjningsvariant av nyckeln | `ögonbryn` → "Ögonbrynen", `hälbenet` → "Hälben" | Samma sak, annan ändelse — undgår ett `def == nyckel`-test |
+| Enbart latinnamnet | `handled` → "Articulatio radiocarpalis", `månben` → "Os lunatum" | Ger en term till, ingen förklaring |
+| Nyckeln som kommaled bland synonymer | `pannan` → "Panna, framsida", `bakhuvudet` → "Bakhuvudet, nackpartiet" | Uppslagsord + synonym är inte en definition |
+
+**Latinsk nyckel är ett annat fall och ska INTE skrivas om.** Där är det svenska namnet
+poängen, och husets format är `Svenskt namn; förklaring`:
+`humerus` → "Överarmsben; artikulerar med scapula i axelleden och radius/ulna i armbågsleden".
+Rena översättningsposter (`minor` → "Mindre", `ovale` → "Oval") är korrekta som de är.
+
+**Ändrad `def` slår inte igenom av sig själv — kör synkningen.** `wire_terms.py` rör aldrig
+befintliga länkar (idempotens), så en redigerad `def` i facit stannar i facit medan sidorna
+visar den gamla texten. Kör **`python3 scripts/wire_terms.py --sync-defs --all`** efter varje
+ändring i `kb_glossary_terms.json`. Patcha aldrig `data-def` för hand: en manuell sträng-
+ersättning missar förekomster och blir tyst fel (hände i 0.9.237 — två länkar bar kvar gammal
+text in i commiten).
+
+**Skyddsnät, inte ersättning för ovanstående:** `wire_terms.py` **vägrar** numera skriva en
+länk vars `def` matchar någon av de fyra formerna ovan, och `--check` rapporterar dem. Att
+skriptet stoppar dig är inte en arbetsmetod — det är sista utposten när den här regeln inte
+följts.
+
+**Grundkrav (vilka ord som ska ha tooltip):**
 
 - **KRITERIET ÄR MEDICINSKT/LATINSKT INNEHÅLL – inte fetstil.** Varje facklatinsk och
   medicinsk **term** ska ha en `kb-term`-tooltip, i löptext, listor, rubriker och tabellceller.
@@ -313,9 +375,13 @@ Tooltips är kärninnehåll i kunskapsbanken (tabeller OCH faktatexter), inte de
   "Vadmuskel; m" och "Bredast; m". Regex som fångar dem: `[;,:]\s*\w{1,2}$`. Taket är 140 tecken; klipp vid `;`, `,` eller ordgräns och balansera
   parenteserna. **Klipp aldrig maskinellt utan att läsa resultatet** – en mekanisk omklippning
   tappade den psykiatriska betydelsen ur `depression` och abduktorsvagheten ur `Trendelenburg`.
-- **Ändrad `def` slår inte igenom av sig själv.** `data-def` är inbakad i HTML:en och
-  `wire_terms.py` hoppar över redan wirade länkar. Av-wira därför de berörda `href`-arna
-  först, kör sedan `--all`, och kontrollera att antalet `kb-term`-länkar är oförändrat.
+- **Ändrad `def` slår inte igenom av sig själv — kör `--sync-defs`.** `data-def` är inbakad i
+  HTML:en och `wire_terms.py` hoppar över redan wirade länkar. Kör
+  `python3 scripts/wire_terms.py --sync-defs --all`; den sätter varje `data-def` till facit
+  och slår upp på **länktexten**, som är facitnyckeln. Av-wira inte och patcha inte för hand:
+  en ersättning på (href, gammal def) är tvetydig när en svensk och en latinsk nyckel delar
+  href, och en manuell sträng-ersättning missar förekomster tyst — två länkar kom med
+  gammal text in i 0.9.237 just så.
 
 **Arbetsflöde vid revidering:** för att fånga flerordsfraser och missade ord rent –
 **av-wira** sidan (`re.sub(r'<a class="kb-term"[^>]*>(.*?)</a>', r'\1', html)`) och **om-wira**
@@ -439,6 +505,12 @@ Detta är hjärtat i dokumentet: **inget led i kedjan får glömmas.**
 - [ ] **Kedjan (§11)** avbockad: VERSION + index.html + app.js + CHANGELOG (+ sitemap + llms.txt + korslänkar).
 - [ ] **Tooltips (§6c):** varje **medicinsk/latinsk term** har `kb-term` (fetstil är INTE kriteriet);
       flerordstermer som EN tooltip; svenska former mappade; 0 trasiga facit-ankare.
+- [ ] **Tooltip-definitioner (§6c.0):** varje ny `def` svarar på "vad är detta?" — aldrig
+      uppslagsordet, dess böjning, enbart latinnamnet eller uppslagsord + synonym.
+      `python3 scripts/wire_terms.py --check --all` ska gå igenom (skriptet vägrar annars).
+- [ ] **Rörde du `data/kb_glossary_terms.json`?** Kör då
+      `python3 scripts/wire_terms.py --sync-defs --all` — annars visar sidorna gammal text.
+      Verifiera mot **hela** facit, inte mot din ändringslista (§0 i CLAUDE_REGLER).
 - [ ] Ingen intern "till mig"-text live.
 
 ### Verifieringssnutt (kör i repo-roten)

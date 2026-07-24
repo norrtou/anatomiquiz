@@ -1,5 +1,10 @@
 # Utbildningar & ämnesindelning — regeldokument
 
+> **PROAKTIVA REGLER — [`CLAUDE_REGLER.md` §0](CLAUDE_REGLER.md) gäller över detta dokument.**
+> Varje regel här ska tala om hur något skrivs **rätt från början**, inte hur felet hittas och
+> rättas efteråt. Formulerar du en ny regel: mallen först, förbudet som komplement, och lägg
+> den där arbetet utförs. Tvingar ett verktyg fram korrekturarbete ska verktyget byggas om.
+
 Underlag för hur utbildnings- och ämneslistan i Anatomiquiz ska byggas upp.
 Detta är **källan vi utgår från** när vi bygger ut quizet per vårdutbildning.
 Varje utbildning är indelad i ämnesområden anpassade efter hur anatomi/fysiologi

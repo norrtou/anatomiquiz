@@ -1,5 +1,10 @@
 # ARTIKLAR_REGLER.md — Anatomiquiz · artikelstrategi, hierarki och redaktionella regler
 
+> **PROAKTIVA REGLER — [`CLAUDE_REGLER.md` §0](CLAUDE_REGLER.md) gäller över detta dokument.**
+> Varje regel här ska tala om hur något skrivs **rätt från början**, inte hur felet hittas och
+> rättas efteråt. Formulerar du en ny regel: mallen först, förbudet som komplement, och lägg
+> den där arbetet utförs. Tvingar ett verktyg fram korrekturarbete ska verktyget byggas om.
+
 > **BINDANDE.** Läs det här dokumentet **innan** en artikel planeras, skrivs eller revideras,
 > och innan artikelinfrastrukturen ändras. Det styr *vad* som skrivs, *för vem*, *var det
 > hamnar i hierarkin* och *hur det beläggs*.

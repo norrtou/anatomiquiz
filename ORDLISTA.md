@@ -1,5 +1,10 @@
 # Medicinska ordlistan — syfte och arbetsgång
 
+> **PROAKTIVA REGLER — [`CLAUDE_REGLER.md` §0](CLAUDE_REGLER.md) gäller över detta dokument.**
+> Varje regel här ska tala om hur något skrivs **rätt från början**, inte hur felet hittas och
+> rättas efteråt. Formulerar du en ny regel: mallen först, förbudet som komplement, och lägg
+> den där arbetet utförs. Tvingar ett verktyg fram korrekturarbete ska verktyget byggas om.
+
 Detta dokument beskriver **vad** den medicinska ordlistan är, **varför** vi bygger ut den och **hur** arbetet går till. Det är skrivet för att vara självförklarande även utan extern kontext.
 
 ---
@@ -97,6 +102,21 @@ Definition i klartext. (ordklass, böjning) Sv: svensk synonym. Eng: english ter
 Riktlinjer:
 - Endast de fält som tillför värde tas med (alla poster har inte Sv/Lekman/etymologi).
 - **Böjning** läggs kompakt i ordklass-parentesen, t.ex. `(subst., -en, pl. -er)`, `(adj., -t, -a)`, `(verb)`, `(förkortn.)`.
+- **Ordklassen bestäms av UPPSLAGSORDET, inte av definitionens första ord.** Skriv taggen
+  genom att fråga "vilken ordklass är termen?" — inte genom att titta på hur förklaringen
+  råkar inledas. Ett latinskt/grekiskt substantiv är `subst.` även när definitionen börjar
+  med ett annat substantiv: `calcaneus`, `umbilicus`, `hepar`, `malleus`, `cuneus`, `calcar`,
+  `thenar` stod alla som `adj.` (rättat 0.9.238). Omvänt är `incisivus` och `visceral` `adj.`
+  trots att deras definitioner inleds med substantiven "framtand" respektive "visceral yta".
+  **Skriv aldrig en ordklasstagg som motsägs inne i samma post** — `sopor`, `submukosa`,
+  `laxans` och `stridor` inleddes med `adj.` men bar `(subst.)` i sin egen brödtext.
+- **Definitionen får aldrig vara uppslagsordet i annan form.** `sopor` → "sopor",
+  `submukosa` → "submukosa" säger ingenting. Beskriv vad termen betyder; se motsvarande
+  förbudstabell i [`SEO_REGLER.md` §6c.0](SEO_REGLER.md), som gäller i sak även här.
+- **Lokalisationer och sakuppgifter kontrolleras mot filens egna poster.** `stapes` stod som
+  "innerörats minsta hörselben" medan `malleus`-posten två rader bort korrekt sade
+  "i mellanörat" (rättat 0.9.238). Grep efter grannposterna i samma anatomiska region innan
+  en ny post skrivs — motsägelser inne i ordlistan är dyrare att hitta än att undvika.
 - **`Eng: …`** måste vara **en mening som avslutas med punkt** — förrenderaren och `glossary.js` kursiverar texten mellan `Eng: ` och nästa punkt (`<em lang="en">`). Lägg inte punkter mitt i den engelska frasen.
 - Förkortningar: expandera, ange engelsk motsvarighet, hoppa över latinsk etymologi om den inte tillför.
 - **Faktakonservativt:** den importerade råtexten ger betydelsen. Lägg hellre till mindre etymologi än att gissa. Kör inte över kursunderlaget med eget resonemang (se `CLAUDE_REGLER.md`).

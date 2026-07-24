@@ -15,11 +15,22 @@ Den filen byggs av build_terms() ur de redan wirade sidorna (facit) + en
 kurerad utökning för anatomitermer som är nya för en sida. Håll href/def
 byte-identiska mot js/glossary.js-ankarna.
 
+Definitionerna kvalitetssäkras vid källan: skriptet VÄGRAR köra om någon `def` i
+facit är en tom tooltip (upprepar uppslagsordet, är det böjt, är enbart latin-
+namnet, eller är uppslagsord + synonym). Se SEO_REGLER §6c.0 för mallen — regeln
+är att skriva definitionen rätt från början, inte att lita på den här spärren.
+
+Eftersom wire_html är idempotent och aldrig rör befintliga länkar slår en ändrad
+`def` inte igenom av sig själv. Kör `--sync-defs` efter varje ändring i
+`data/kb_glossary_terms.json`; patcha aldrig `data-def` för hand.
+
 Användning:
     python3 scripts/wire_terms.py kunskapsbank/muskeltabell-foten.html ...
     python3 scripts/wire_terms.py --all           # kunskapsbanken + artiklarna + case.html
     python3 scripts/wire_terms.py --check --all   # dry-run över allt; tyst = inget att göra
     python3 scripts/wire_terms.py --check FIL ...  # dry-run för enskilda filer
+    python3 scripts/wire_terms.py --sync-defs --all          # HTML:s data-def := facit
+    python3 scripts/wire_terms.py --check --sync-defs --all  # dry-run av synkningen
 """
 import json, re, sys, pathlib
 
@@ -80,10 +91,102 @@ BLOCKERADE = {
                       # läkemedelsberäkningssidorna.
 }
 
-def load_terms():
+# --- Tomma tooltips: fångas vid KÄLLAN, inte i efterhandssvep ----------------
+# SEO_REGLER §6c.0. Fyra ytformer av samma defekt, alla funna i produktion:
+# def == nyckeln, def == nyckeln böjd, def == enbart latinnamnet, och nyckeln
+# som ett kommaled bland synonymer. Varje svep som jagade EN form rapporterade
+# filen ren – därför testas alla fyra här, en gång, innan något skrivs.
+_LATINPREFIX = re.compile(
+    r"^(?:Articulatio|Os|Ossa|Musculus|Musculi|Nervus|Nervi|Vena|Venae|Arteria|"
+    r"Arteriae|Ligamentum|Ligamenta|Glandula|Tractus|Fascia|Bursa|Canalis|"
+    r"Foramen|Plexus|Truncus|Ramus|Rami|Cartilago|Membrana|Discus|Corpus|Caput|"
+    r"Processus|Capsula|Vertebra|Vertebrae|Pancreas)\b")
+
+# Svenska böjningsändelser. "e" står medvetet INTE med: `ovale` -> "Oval" är en
+# latinsk nyckel med svensk översättning, inte en böjning av sig själv.
+_ÄNDELSER = ("ernas", "arnas", "orna", "erna", "arna", "ens", "ets", "ans",
+             "ns", "ar", "er", "or", "en", "et", "n", "t", "s")
+
+def _norm(s):
+    return re.sub(r"[^0-9a-zà-öø-ÿ]+", "", s.lower().strip().rstrip("."))
+
+def _stammar(s):
+    """Ordet självt plus varje form av det utan en böjningsändelse.
+
+    Att kapa EN ändelse och jämföra räcker inte: 'ögonbrynet' och 'ögonbrynen'
+    är samma ord men ingetdera är prefix av det andra. Genom att jämföra
+    mängder träffas de på den gemensamma stammen 'ögonbryn'.
+    """
+    s = _norm(s)
+    former = {s} if len(s) >= 4 else set()
+    for suf in _ÄNDELSER:
+        if s.endswith(suf) and len(s) - len(suf) >= 4:
+            former.add(s[:-len(suf)])
+    return former
+
+def _samma_ord(a, b):
+    """Sant om a och b är samma ord, ev. i olika böjning."""
+    return bool(_stammar(a) & _stammar(b))
+
+def _har_förklaring(defn):
+    """Sant om något led i definitionen faktiskt förklarar något.
+
+    Husets format är `Uppslagsord; förklaring` (humerus -> "Överarmsben;
+    artikulerar med scapula…") och det är KORREKT – att uppslagsordet står
+    först gör inte tooltipen tom. Bara när inget led bär en förklaring är den
+    det. Fyra ord är gränsen: "benringen som förbinder bålen" förklarar,
+    "framsida" gör det inte.
+
+    Delningen sker ENBART på semikolon. Komma sitter inne i förklaringen
+    ("koordinerar rörelser, balans och finmotorik") och att stycka där gör att
+    en fullgod definition ser innehållslös ut.
+    """
+    for led in re.split(r";", re.sub(r"\([^)]*\)", " ", defn)):
+        if len(led.split()) >= 4:
+            return True
+    return False
+
+def tom_tooltip(key, defn):
+    """Returnera skälet om `defn` är en tom tooltip för `key`, annars None.
+
+    Orden jämförs mot varandra via _samma_ord, som bara godtar en äkta svensk
+    böjningsändelse emellan. Latinsk nyckel med svensk översättning är därför
+    inte tom: `extremitas` -> "Extremitet", `minor` -> "Mindre" och
+    `ovale` -> "Oval" är precis vad de posterna ska göra.
+    """
+    d = defn.strip()
+    if d.lower().rstrip(".") == key.lower().strip():
+        return "def upprepar uppslagsordet"
+    if _LATINPREFIX.match(d) and not _har_förklaring(d):
+        return "def är enbart det latinska namnet, ingen förklaring"
+    if _har_förklaring(d):
+        return None
+    kärna = re.sub(r"\s*\([^)]*\)\s*$", "", d).strip()
+    if _samma_ord(key, kärna):
+        return "def är uppslagsordet i annan böjning"
+    for led in re.split(r"[;,]", re.sub(r"\([^)]*\)", " ", d)):
+        if _samma_ord(key, led.strip()):
+            return "def är uppslagsordet + synonym, ingen förklaring"
+    return None
+
+def load_terms(strikt=True):
     data = json.load(open(TERMS_FILE, encoding="utf-8"))
-    # nyckel = gemener; värde = {"href":..., "def":...}
-    return {k.lower(): v for k, v in data.items() if k.lower() not in BLOCKERADE}
+    terms = {k.lower(): v for k, v in data.items() if k.lower() not in BLOCKERADE}
+    if strikt:
+        # Vägra skriva tomma tooltips till sidorna. Att skriptet stoppar här är
+        # sista utposten – definitionen ska vara skriven rätt från början.
+        dåliga = [(k, v["def"], skäl) for k, v in terms.items()
+                  if (skäl := tom_tooltip(k, v["def"]))]
+        if dåliga:
+            print(f"STOPP: {len(dåliga)} tomma tooltips i "
+                  f"{TERMS_FILE.name} (SEO_REGLER §6c.0).", file=sys.stderr)
+            for k, d, skäl in sorted(dåliga)[:25]:
+                print(f'  {k!r} -> {d!r}\n      {skäl}', file=sys.stderr)
+            if len(dåliga) > 25:
+                print(f"  … och {len(dåliga) - 25} till.", file=sys.stderr)
+            print("Skriv om definitionerna – kör inte runt kontrollen.", file=sys.stderr)
+            sys.exit(1)
+    return terms
 
 def build_regex(terms):
     # Längsta termer först → flerordsfraser vinner över enord på samma position.
@@ -177,6 +280,41 @@ def wire_file(path, terms, rx, write=True):
         pathlib.Path(path).write_text(new, encoding="utf-8")
     return n, stats
 
+
+# Hela ankaret, med länktexten som egen grupp. Länktexten ÄR facitnyckeln (se
+# _sub), så uppslaget blir entydigt även när en svensk och en latinsk nyckel
+# delar href med olika definitioner – vilket en ersättning på (href, gammal
+# def) inte klarar.
+ANKARE_RX = re.compile(
+    r'(<a class="kb-term" href=")([^"]*)(" data-def=")([^"]*)(">)([^<]*)(</a>)')
+
+def sync_defs_file(path, terms, write=True):
+    """Skriv om `data-def` så att sidan matchar facit. Returnerar antal ändrade.
+
+    Behövs eftersom wire_html är idempotent och aldrig rör befintliga länkar:
+    en redigerad `def` i facit skulle annars stanna i facit medan sidorna visar
+    den gamla texten. `href` lämnas orörd – avvikande hrefs är en annan sak och
+    rapporteras separat.
+    """
+    html = pathlib.Path(path).read_text(encoding="utf-8")
+    ändrade, href_avvik = [], []
+    def repl(m):
+        pre, href, mid, defn, gt, token, slut = m.groups()
+        v = terms.get(token.lower())
+        if not v:
+            return m.group(0)
+        if v["href"] != href:
+            href_avvik.append(token)
+            return m.group(0)
+        if v["def"] != defn:
+            ändrade.append(token)
+            return f'{pre}{href}{mid}{v["def"]}{gt}{token}{slut}'
+        return m.group(0)
+    ny = ANKARE_RX.sub(repl, html)
+    if write and ny != html:
+        pathlib.Path(path).write_text(ny, encoding="utf-8")
+    return ändrade, href_avvik
+
 def alla_sidor():
     """Varje wire:bar sida. Artiklarna ligger i en underkatalog och missades
     tidigare av --all, vilket gjorde att nya artiklar tyst hamnade utanför
@@ -197,6 +335,30 @@ def main(argv):
         argv = argv[1:]
         if not argv:
             print("--check kräver filer eller --all", file=sys.stderr); return 1
+
+    sync = argv and argv[0] == "--sync-defs"
+    if sync:
+        argv = argv[1:]
+        if not argv:
+            print("--sync-defs kräver filer eller --all", file=sys.stderr); return 1
+        filer = alla_sidor() if argv[0] == "--all" else [ROOT / a for a in argv]
+        tot, hrefs = 0, []
+        for f in filer:
+            ändrade, href_avvik = sync_defs_file(f, terms, write=not check)
+            hrefs += [(f, t) for t in href_avvik]
+            if ändrade:
+                tot += len(ändrade)
+                verb = "skulle synkas" if check else "synkade"
+                print(f"  {f.relative_to(ROOT)}: {len(ändrade)} {verb} "
+                      f"({', '.join(sorted(set(ändrade)))})")
+        print(f"Totalt {tot} data-def {'skulle synkas' if check else 'synkade'} "
+              f"mot facit i {len(filer)} filer.")
+        if hrefs:
+            print(f"\n{len(hrefs)} länkar har en href som avviker från facit "
+                  f"(def orörd – kräver eget beslut):")
+            for f, t in hrefs:
+                print(f"  {f.relative_to(ROOT)}: {t}")
+        return 0
 
     if argv[0] == "--all":
         files = alla_sidor()

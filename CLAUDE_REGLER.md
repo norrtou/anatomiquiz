@@ -10,6 +10,80 @@ Detta dokument definierar ALLA regler och instruktioner för att bygga och under
 
 ---
 
+## 0. ÖVERORDNAD REGEL: ALLA REGLER SKA VARA PROAKTIVA
+
+**Denna regel står över alla andra och gäller varje regeldokument i repot** — CLAUDE_REGLER,
+SEO_REGLER, ARTIKLAR_REGLER, UTBILDNINGAR_REGLER, ORDLISTA, BILDER_REGLER, CSS_KARTA.
+
+En regel ska tala om **hur något skrivs rätt från början**. Den får inte nöja sig med att
+beskriva hur man hittar och rättar felet efteråt.
+
+**Varför:** korrektur kostar användarens pengar, inte mina. Ett fel som skrivs in och rättas
+i ett senare svep har kostat två gånger: en gång att skriva, en gång att sanera — plus
+genomläsningen som krävdes för att hitta det. Reaktiva regler producerar återkommande
+saneringssvep (tooltips, FAQ, formtells, parentesstrippning). Det är inte ett arbetssätt,
+det är en löpande kostnad.
+
+**Så här skrivs en regel:**
+
+1. **Börja med mallen, inte med förbudet.** Först "så här ser en korrekt X ut" med ett
+   verkligt exempel. Förbudslistan är ett komplement, aldrig hela regeln.
+2. **Placera regeln där arbetet utförs**, inte i ett kontrollavsnitt. En regel om
+   definitionstext hör i avsnittet om att skriva definitioner — inte i pre-flight-checklistan.
+3. **"Kontrollera att…" är en varningssignal.** Om regeln bara går att formulera som en
+   kontroll: fråga först om felet kan göras *omöjligt* i stället. Kontrollen får finnas kvar
+   som skyddsnät, men den ersätter inte den proaktiva formuleringen.
+4. **Rekommendationer duger inte.** "Generera hellre blocket ur HTML" blir inte gjort.
+   Skriv "blocket SKA genereras ur HTML; handskrivet block är ett regelbrott".
+
+**Om ett verktyg jag byggt tvingar fram reaktivt arbete ska verktyget byggas om.**
+Detta är inte förhandlingsbart och får aldrig motivera en reaktiv regel. Att ett skript är
+idempotent, bara fångar kända mönster, eller inte propagerar en ändring vidare är ett fel i
+skriptet — inte ett skäl att lägga bördan på manuell efterkontroll. Bygg om det så att
+felet inte kan uppstå: validera indata vid källan, låt ändringar slå igenom automatiskt,
+och låt skriptet **vägra** skriva något som bryter mot regeln.
+
+**Nya upptäckter ska in i regeldokument, inte bara i minnet.** Minnet är kopian, dokumentet
+är originalet — se §5.6. Och den nya regeln ska formuleras proaktivt enligt punkt 1–4 ovan;
+en ny reaktiv regel är inte ett fullgjort arbete.
+
+**Undantag:** när ett fel bevisligen inte går att förebygga vid skrivtillfället — då, och
+bara då, får regeln vara en kontroll. Skriv i så fall ut *varför* förebyggande inte är
+möjligt, så att antagandet kan omprövas. Att förebyggande är "svårare" eller "kräver att jag
+bygger om ett skript" är inte ett giltigt skäl.
+
+### 0.1 Verifiera mot HELA facit — aldrig mot din egen ändringslista
+
+När en kontroll ändå körs ska den gå över **hela datamängden** och för varje post fråga
+*"stämmer detta mot facit?"* — aldrig över diffen och fråga *"blev min ändring gjord?"*.
+
+Ändringslistan är min egen bild av vad jag gjorde. Att mäta mot den bekräftar bara att jag
+gjorde det jag trodde att jag gjorde; poster som ändringen aldrig nådde är per definition
+osynliga för den. I 0.9.237 rapporterades "0 avvikelser" samtidigt som två länkar bar kvar
+gammal text — kontrollen loopade över de 258 ändrade nycklarna, och de två förekomsterna låg
+utanför. Felet gick med i commiten och hittades först när kontrollen kördes mot samtliga
+7713 länkar.
+
+Skriv alltid ut antalet avvikelser explicit, även när det är noll — en kontroll som är tyst
+både när allt är rätt och när den inte tittade på något är värdelös.
+
+### 0.2 En feltyp har oftast flera ytformer — leta efter alla innan du säger "klart"
+
+Hittar du ett fel: anta att samma defekt finns i minst en form till, och sök efter den
+**innan** du rapporterar filen ren. Varje svep som jagar den form som råkade upptäckas först
+kommer att rapportera "0 kvar" med orätta.
+
+Tooltipskulden fanns i fyra former — `def == nyckeln`, nyckeln böjd, enbart latinnamnet, och
+nyckeln som ett kommaled bland synonymer. Skulden beskrevs som "~146" utifrån ett
+`def == nyckel`-test; den var 338. Filtret som letade i 0.9.237 hoppade dessutom över alla
+definitioner med komma — vilket var exakt den form den fjärde defekten hade.
+
+**Praktiskt:** när ett filter utesluter något (`if ',' in x: continue`), fråga vad som göms
+i det som uteslöts. Läs ett stickprov ur det bortfiltrerade, inte bara ur träffarna.
+Se även §2.14 (begärd kontroll ska vara manuell) och §5.6.
+
+---
+
 ## 1. SPRÅK OCH TERMINOLOGI
 
 ### 1.1 Swedish Medical Latin (Terminologia Anatomica)
@@ -492,8 +566,10 @@ innehållet faktiskt vilar på men som ingen besökare kan se är **inte** en re
 **STÅENDE REGEL (påtalad flera gånger: "minnet räcker ej").** Så fort en *ny sorts* fel hittas – en feltyp, inte en enskild felaktig fråga – ska den kodifieras i det här dokumentet i samma arbetspass som den upptäcks.
 
 - **Varför:** minnesanteckningar är kontextberoende och kan missas i en framtida session. Reglerna är facit och läses varje gång innehåll byggs eller granskas. Flera dyra saneringssvep har uppstått just för att en lärdom bara låg i minnet.
-- **Så här:** lägg feltypen under §2.12b (fel som validatorn inte fångar) eller §2.9 (formtells), med **ett verkligt exempel med fråge-id**, varför det är fel, och hur man testar för det. Ett påhittat exempel duger inte – ta det som faktiskt hittades.
-- **Överväg alltid om felet går att fånga maskinellt.** Kan det uttryckas som en regel över `prompt`/`correct`/`distractors` hör det hemma i `scripts/validate_quiz.py`, inte bara i prosa. Går det inte att automatisera – skriv ut testet som en manuell kontroll.
+- **Regeln ska skrivas PROAKTIVT enligt §0.** Formulera den som "så här skrivs det rätt från början", med mallen först och förbudet som komplement — inte som "leta efter detta fel efteråt". Placera den i det avsnitt där arbetet faktiskt utförs. En ny regel som bara beskriver hur felet hittas är inte ett fullgjort arbete.
+- **Så här:** lägg feltypen där den hör hemma innehållsmässigt (§2.12b för fel validatorn inte fångar, §2.9 för formtells, motsvarande avsnitt i SEO_REGLER/ARTIKLAR_REGLER/ORDLISTA), med **ett verkligt exempel med fråge-id eller filnamn**, varför det är fel, och hur en korrekt variant ser ut. Ett påhittat exempel duger inte – ta det som faktiskt hittades.
+- **Fråga först om felet kan göras omöjligt, inte bara upptäckbart.** Kan verktyget vägra skriva det felaktiga? Kan ändringen propagera automatiskt så att glidning inte kan uppstå? Då är det den åtgärden som gäller — och skriptet byggs om (§0). Ett maskinellt *test* (`scripts/validate_quiz.py`, `wire_terms.py --check`) är skyddsnätet därefter, aldrig den enda åtgärden.
+- **Sök efter fler ytformer av samma fel innan regeln skrivs.** En feltyp visar sig sällan i bara en form: tooltipskulden fanns i fyra (exakt självreferens, böjningsvariant, enbart latinnamn, nyckeln som kommaled bland synonymer) och varje svep som jagade en form rapporterade filen ren. Regeln ska beskriva **feltypen**, inte den enskilda ytform som råkade upptäckas först.
 - Notera det i minnet också, men minnet är kopian och dokumentet är originalet.
 
 ---

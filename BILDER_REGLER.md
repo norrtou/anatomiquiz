@@ -1,5 +1,10 @@
 # Bildregler – lagring & hantering av innehållsbilder
 
+> **PROAKTIVA REGLER — [`CLAUDE_REGLER.md` §0](CLAUDE_REGLER.md) gäller över detta dokument.**
+> Varje regel här ska tala om hur något skrivs **rätt från början**, inte hur felet hittas och
+> rättas efteråt. Formulerar du en ny regel: mallen först, förbudet som komplement, och lägg
+> den där arbetet utförs. Tvingar ett verktyg fram korrekturarbete ska verktyget byggas om.
+
 Gäller **alla** innehållsbilder i Anatomiquiz (anatomibilder m.m.) som används i
 quiz och faktatexter. Site-chrome (favicon, ikoner, og-image) omfattas inte –
 det ligger kvar i `img/`.
