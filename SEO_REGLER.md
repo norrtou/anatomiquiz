@@ -632,4 +632,31 @@ PY
 
 ---
 
+## 15. Nyhetsnotiser (var de ligger och hur de skrivs)
+
+Alla nyheter bor i **`info.html`**, i sektionen `<section … aria-labelledby="newsHeading">`
+(rubriken `<h2 id="newsHeading">Nyheter</h2>`). Leta ALDRIG runt — greppa `newsHeading`.
+
+**Så här läggs en notis till (mall, kopiera rakt av):**
+
+1. **Ny `<article>` överst** i news-listan (nyaste först), direkt efter `about-update`-stycket:
+   ```html
+   <article class="news-item">
+     <time class="news-date" datetime="ÅÅÅÅ-MM-DD">D månad ÅÅÅÅ</time>
+     <p class="news-text">Notistext. Länkar med class="info-link".</p>
+   </article>
+   ```
+2. **Uppdatera datumet** i `about-update`-stycket ("Senast uppdaterad …") till samma dag —
+   både `datetime`-attributet och den synliga texten.
+
+**Så skrivs texten:** kort (1–3 meningar), besökarriktad och konkret svenska — vad som är
+nytt och vad besökaren kan göra med det. Ingen intern/teknisk jargong (inga versionsnummer,
+inga filnamn, inget om CSS/commits). Länka till det som är nytt med `class="info-link"`.
+
+**Workflow — ingen cirkus:** en ren nyhetsnotis är en textändring i **en** fil. Den kräver
+**INGEN** versionsbump och **ingen** cachebuster (§11 gäller kod/CSS, inte HTML-brödtext) —
+resonera inte om det. Redigera `info.html`, och committa+pusha på begäran. Klart.
+
+---
+
 **DETTA DOKUMENT ÄR BINDANDE FÖR ALL WEBB-/KOD-/SEO-ARBETE PÅ ANATOMIQUIZ.**
