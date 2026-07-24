@@ -1,5 +1,15 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.232
+- **Kvalitetssäkring av de tre nya ordlisteposterna från 0.9.231** (`myotom`, `sklerotom`, `somit`) – manuell genomgång mot källa, systerposter och formatmall.
+- **Böjningen verifierad, inte antagen.** `somit` är utrum med plural på -er, belagt genom Solunettis svenska text (*”börjar bilda somiter i rad efter varandra”*, *”antalet somiter”*) – en källa som redan står i `info.html`. `myotom` kontrollerad mot Nationalencyklopedin, som ger både definitionen (*muskelsegment eller grupp av muskler som har sin nervförsörjning från ett och samma ryggmärgssegment*) och etymologin (*myo-* + grek. *tomē* = snitt).
+- **`myotom` säger nu ryggmärgs_segment_, inte ryggmärgs_nerv_** – samstämmigt med NE, med tooltip-defen i `data/kb_glossary_terms.json` och med artikelns genomgående vokabulär. Facit och ordlista sa olika saker om samma term.
+- **`sklerotom`: ”som hör till ett ryggmärgssegment” → ”som försörjs av ett ryggmärgssegment”** – parallellt med `dermatom` och `myotom`; alla tre beskriver nu segmentets försörjningsområde med samma verb.
+- **`somit`: ”längs fostrets ryggsträng” struket.** Termen finns inte i ordlistan, kan därför inte slås upp, och förväxlas lätt med ryggmärgen. Ersatt med *”längs fostrets rygg, på ömse sidor om det blivande ryggmärgsröret”*, som bär sig själv.
+- **Korshänvisningar (`Jfr`) mellan alla fyra begreppen**, inklusive den äldre posten `dermatom`, så att triaden går att navigera i ordlistan. Renderas som ren text precis som befintliga `Jfr`-hänvisningar – inga nya länkmål att hålla i sync.
+- Format kontrollerat mot ordlistans egna mönster: `Av gr. X = … + tome = snitt` följer `dermatom`, `anatomi` och `laparotomi`; `mys = muskel` följer `amyotrofi` och `dermatomyosit`; inga dubblettuppslagsord, inga tecken som bryter `data-def`-attribut, sorteringen rätt på alla tre sidorna.
+- Ingen CSS ändrad → styles.css-bustern **oförändrad** (`?v=0.9.229`). `APP_VERSION`/app.js-bustern bumpad i lås med `VERSION`.
+
 ## 0.9.231
 - **Ny artikel: _Dermatom, myotom och sklerotom – kroppens segment_** (`/kunskapsbank/artiklar/dermatom-myotom-sklerotom.html`) – artikel 13 i `ARTIKLAR_REGLER.md` §11, typ `fordjupning`, målgrupp `lakare` + `fysioterapeut`, hubb *Nervsystemet*. 2 156 prosaord, 153 tooltips, 3 tabeller (dermatomens landmärken C5–S1; ISNCSCI:s tio nyckelmuskelfunktioner; segmentellt mot perifert bortfallsmönster), FAQ speglad i `FAQPage`. Följer somitens delning i sklerotom, myotom och dermatom, skiljer det embryologiska dermatomet (en vävnad) från det kliniska (ett innervationsområde), förklarar överlappningen som gör att en enda avskuren bakrot sällan lämnar ett känsellöst område, myotomets flerrotsinnervation, resegmenteringen som placerar spinalnerven mellan två kotor – och ägnar ett eget avsnitt åt sklerotomet, det lager som inte finns på någon karta.
 - §8.2-testet kört mot live-sajten först: dermatomet fanns som **ett** stycke i `sa-leds-kanseln.html` och som tabellceller i `nervtabell-balen.html`, myotomet som **ett** stycke i muskeltabellsguiden, sklerotomet inte alls i kunskapsbanken.
