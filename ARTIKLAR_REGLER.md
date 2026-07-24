@@ -11,8 +11,8 @@
 >
 > **Status:** GODKÄND. Infrastrukturen (våg 0) byggd i 0.9.186, terminologipelaren lagd på
 > artikelstandard i 0.9.191. Våg 1 klar; våg 2 klar sånär som på artikel 10 (*Medicinska
-> ordfamiljer*, ska först prövas mot §8.2). Våg 3 påbörjad: artikel 12 (*Fascia, bursor och
-> senskidor*) släppt i 0.9.230.
+> ordfamiljer*, ska först prövas mot §8.2). Våg 3: artikel 12 (*Fascia, bursor och senskidor*)
+> släppt i 0.9.230, artikel 13 (*Dermatom, myotom och sklerotom*) i 0.9.231. Kvar i vågen: 14.
 > **Senast uppdaterad:** 2026-07-24. **Version:** 1.0
 
 ---
@@ -469,9 +469,12 @@ eftersom beroendepilarna (`← 6, 8`) pekar på nummer.
     samma dag: ämnet fanns bara som lösryckta omnämnanden i muskeltabellernas inledningar
     (”ligger i fyra loger”) och som ursprungsceller (`fascia thoracolumbalis`,
     `tensor fasciae latae`), aldrig som löptext. Ny korslänk IN från `ledtyper.html`.
-13. **Dermatom, myotom och sklerotom** — `fordjupning`, `lakare` + `fysioterapeut`.
-    ← `sa-leds-kanseln` (finns). Kontrollerat 2026-07-21: `nervtabell-balen.html` har en
-    dermatomtabell för bålen; myotom och sklerotom saknas helt, liksom all löptext.
+13. ✅ **Dermatom, myotom och sklerotom – kroppens segment** — `fordjupning`, `lakare` +
+    `fysioterapeut`, hubb `nervsystemet`. ← `sa-leds-kanseln` (finns). Skriven 2026-07-24.
+    §8.2-testet kört om mot live-sajten samma dag: dermatomet fanns som **ett** stycke i
+    `sa-leds-kanseln` och som tabellceller i `nervtabell-balen`, myotomet som **ett** stycke i
+    muskeltabellsguiden, sklerotomet inte alls. Nya korslänkar IN från `sa-leds-kanseln.html`
+    och `nervtabell-balen.html`.
 14. **Minnesregler för kranialnerverna** — `guide`, `alla`. ← kranialnervstabellen (finns).
     Kontrollerat 2026-07-21: `kranialnerverna.html` (244 ord) har inga minnesregler.
     Minnesramsor är klass D (§6.1) och ska märkas som praxis, aldrig presenteras som fakta.
@@ -620,6 +623,24 @@ exempel. Minnet är kopian; det här dokumentet är originalet.
   lärdomen nedan). §9:s formulering är
   underordnad `SEO_REGLER.md` §6c, som gör tooltipsen obligatoriska, och SEO_REGLER säger
   själv bara att faktasidor *helst* ska ha 0 JS.
+- **2026-07-24** — **En tooltipdefinition kan vara korrekt och ändå fel för hela sidan.**
+  På *Dermatom, myotom och sklerotom* wirades `segment` 29 gånger med defen "Avgränsat avsnitt
+  av en större struktur" – ordlisteposten avsåg uttryckligen lung- och leversegment, medan
+  artikelns ord genomgående betyder ryggmärgssegment. Felet fanns redan tyst på åtta äldre
+  sidor (23 förekomster i neurologisk löptext), eftersom ingen kontroll fångar en tooltip som
+  är riktig i sig men beskriver fel betydelse. Frestelsen var att blockera ordet i
+  `wire_terms.py`, vilket hade tagit bort en tooltip som *borde* finnas på just de sidorna.
+  **Utöka i stället ordlisteposten så att den täcker båda betydelserna, och uppdatera defen i
+  facit och i varje redan wirad förekomst i samma pass** – annars driver `data/ordlista.json`,
+  `kb_glossary_terms.json` och de utskrivna sidorna isär. Blockering är rätt medicin bara när
+  ordet i sin vanliga svenska betydelse inte är termen alls (`ren`, `snitt`, `massa`).
+- **2026-07-24** — **En referens som inte går att fastställa stryks, den nyanseras inte.**
+  Artikel 13:s somitavsnitt skulle ha burits av en embryologilärobok, men uppslagningen gav
+  motstridiga uppgifter om upplageår och det gick inte att avgöra vilken upplaga som är den
+  senaste. Posten ströks och avsnittet lades i stället på Standring och Moore, som redan är
+  verifierade i repot och har fullgoda utvecklingsavsnitt. Kostnaden var noll; att skriva
+  "(2018/2019)" eller att gissa hade varit ett brott mot §6.2. Samma princip som
+  [[feedback_delete_unverifiable_questions]], fast för källor.
 - **2026-07-20** — AI-genererade innehållsförslag kan presentera *policyförslag* och
   *provformat* som genomförd verklighet. Två av råmaterialets högst prioriterade förslag föll
   på faktakontroll (§13). **Kontrollera alltid ett förslags faktapremiss innan det planeras in**,
