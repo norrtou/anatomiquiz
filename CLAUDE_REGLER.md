@@ -98,6 +98,11 @@ väljas för att den bevisligen ger rätt resultat.
 
 1. **Kan regeln uttryckas exakt?** "Byt sträng A mot sträng B", "sätt `data-def` till
    facits värde", "bumpa versionsnumret" — mekaniska, entydiga, säkra att automatisera.
+   **Och då SKA de automatiseras.** En mekanisk uppgift som görs för hand blir förr eller
+   senare halvgjord: versionsbumpen kräver tre samtidiga redigeringar och blev partiell i
+   fyra släpp i rad (0.9.237–0.9.240) tills `scripts/bump_version.py` gjorde den till en
+   operation. Samma sak med `wire_terms.py --sync-defs`. Är uppgiften mekanisk och
+   återkommande: bygg verktyget, kör aldrig för hand.
 2. **Kräver den omdöme?** Formulera en definition, välja distraktorer, avgöra vad en term
    *betyder*, bedöma om en mening är pedagogisk, veta att stigbygeln sitter i mellanörat —
    då är svaret handskrivet. Ett skript som gissar ur mönster gissar fel någonstans, och

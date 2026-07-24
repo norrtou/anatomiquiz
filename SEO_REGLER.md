@@ -470,10 +470,27 @@ Koden ska vara läsbar för människa **och** maskin:
 Detta är hjärtat i dokumentet: **inget led i kedjan får glömmas.**
 
 ### A. Ny eller ändrad sida
-- [ ] `VERSION` bumpas (format `0.Y.Z`).
-- [ ] `index.html`: `app.js?v=` cachebuster = ny version.
-- [ ] `js/app.js`: `APP_VERSION` = ny version.
-- [ ] `CHANGELOG.md`: ny post överst med vad som ändrats.
+
+**Bumpa ALDRIG versionen för hand — kör `python3 scripts/bump_version.py <version>`.**
+Skriptet sätter alla tre ställena i en operation, så en partiell bump inte kan uppstå.
+`pre-commit`-hooken blockerar dessutom varje commit där de tre glidit isär.
+
+- [ ] `python3 scripts/bump_version.py 0.Y.Z` — sätter `VERSION`, cachebustern
+      `app.js?v=` i `index.html` och `APP_VERSION` i `js/app.js`.
+- [ ] `CHANGELOG.md`: ny post överst med vad som ändrats (görs för hand).
+
+**Varför alla tre måste vara identiska:** `VERSION` är källan och hämtas färsk vid sidladdning;
+cachebustern tvingar webbläsaren att hämta ny `app.js`; `APP_VERSION` är inbakad i den körda
+koden så att en gammal cachad `app.js` kan avslöja sig själv. Den sista **kan inte** läsas ur
+`VERSION` vid körning — hela poängen är att jämföra vad den laddade koden *tror* att den är mot
+vad servern säger.
+
+**Missas `APP_VERSION` visar sajten en gammal version i all evighet, och ingen omladdning
+hjälper** — den `app.js` som faktiskt serveras bär ju det gamla numret. Det hände i
+**0.9.237–0.9.240**: `VERSION` och cachebustern bumpades i fyra släpp i rad medan `APP_VERSION`
+stod kvar på `0.9.236`, och felet syntes inte i något av de svep som kördes, eftersom
+`js/app.js` aldrig var stageat. Kontrollen utlöses därför av att `VERSION` **eller**
+`index.html` ändras, inte av att `app.js` gör det.
 
 ### B. Ny indexerbar sida (utöver A)
 - [ ] `sitemap.xml`: ny `<url>` med `<loc>` + `<lastmod>` = dagens datum + `changefreq`/`priority`.
@@ -506,7 +523,9 @@ Detta är hjärtat i dokumentet: **inget led i kedjan får glömmas.**
 - [ ] **A11y:** en `<h1>`, skip-länk, landmärken, varje tabell har `<caption>` + `th scope`,
       bilder har `alt`.
 - [ ] **Prestanda:** inga externa resurser; JS bara vid behov + `defer`; bilddimensioner satta (CLS 0).
-- [ ] **Kedjan (§11)** avbockad: VERSION + index.html + app.js + CHANGELOG (+ sitemap + llms.txt + korslänkar).
+- [ ] **Kedjan (§11)** avbockad: versionen satt med `scripts/bump_version.py` (VERSION +
+      index.html + app.js i en operation) + CHANGELOG (+ sitemap + llms.txt + korslänkar).
+      Verifiera med `python3 scripts/bump_version.py --check` — den ska säga "i synk".
 - [ ] **Tooltips (§6c):** varje **medicinsk/latinsk term** har `kb-term` (fetstil är INTE kriteriet);
       flerordstermer som EN tooltip; svenska former mappade; 0 trasiga facit-ankare.
 - [ ] **Tooltip-definitioner (§6c.0):** varje ny `def` svarar på "vad är detta?" — aldrig

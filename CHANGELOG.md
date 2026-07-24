@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.241
+- **Sajten satt fast på ”v0.9.236” i fyra släpp — nu rättat.** `js/app.js` bär versionen inbakad i koden (`APP_VERSION`), och den bumpades aldrig i 0.9.237, 0.9.238, 0.9.239 eller 0.9.240. **Det var inte ett cache-problem:** den `app.js` som faktiskt serverades sade genuint `0.9.236`, så ingen omladdning i världen kunde hjälpa. Kravet fanns redan i `SEO_REGLER.md` §11 A — jag missade det fyra gånger i rad.
+- **Felet var osynligt för mina egna kontroller eftersom `js/app.js` aldrig var stageat.** Alla svep tittade på det jag hade ändrat; filen som *inte* ändrats fanns per definition inte i den vyn. Exakt det §0.1 varnar för — och beviset för att den regeln behövdes.
+- **`scripts/bump_version.py` (nytt): versionen bumpas aldrig mer för hand.** Ett kommando sätter alla tre ställena — `VERSION`, cachebustern `app.js?v=` i `index.html` och `APP_VERSION` i `js/app.js` — så att en partiell bump inte kan uppstå. `--check` verifierar synken och skriver ut vilket ställe som avviker.
+- **`pre-commit`-hooken blockerar numera en osynkad commit.** Kontrollen utlöses av att `VERSION` **eller** `index.html` ändras — inte av att `app.js` gör det, eftersom app.js i det verkliga felfallet aldrig var stageat. Testad mot exakt det scenariot: commiten stoppas med de tre versionerna utskrivna.
+- **Varför `APP_VERSION` inte bara kan läsas ur `VERSION` vid körning:** hela poängen är att jämföra vad den **laddade koden tror att den är** mot vad servern svarar, så att en gammal cachad `app.js` kan avslöja sig själv i stället för att tyst köra föråldrad logik. Den måste därför vara inbakad — och därmed hållas i synk av en maskin i stället för av mig.
+- **Regeln omskriven proaktivt** (§11 A): ”bumpa VERSION / bumpa index.html / bumpa app.js” som tre bockar har ersatts av **”bumpa aldrig för hand — kör `bump_version.py`”**, med skälet till att alla tre måste vara identiska utskrivet. `CLAUDE_REGLER.md` §0.3 punkt 1 skärpt: en mekanisk uppgift ska **inte bara få** automatiseras, den **ska** det — en mekanisk uppgift som görs för hand blir förr eller senare halvgjord, och versionsbumpen är beviset.
+- Ingen CSS och ingen synlig text ändrad → `styles.css`-bustern oförändrad.
+
 ## 0.9.240
 - **Ny principiell regel: `CLAUDE_REGLER.md` §0.3 — GÅR DET INTE ATT AUTOMATISERA SÄKERT, SKRIV DET FÖR HAND.** Om en text, kod, funktion, quizfråga, definition eller applikationsdel inte kan skrivas maskinellt utan uppenbar risk att bli fel eller slarvig, ska den alltid skrivas för hand. Automatisering väljs för att den **bevisligen ger rätt resultat** — aldrig för att den är bekvämare för mig.
 - **Skälet är kostnaden.** Ett skript som ”nästan” klarar uppgiften producerar innehåll som ser färdigt ut men måste korrekturläsas rad för rad. Korrekturet blir dyrare än handskrivandet hade varit: varje post måste läsas ändå, fast nu med ett felaktigt utgångsläge att reda ut.
