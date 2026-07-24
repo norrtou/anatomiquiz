@@ -130,7 +130,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.244'
+const APP_VERSION = '0.9.245'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -187,21 +187,27 @@ async function loadQuestions(path){
 }
 
 async function loadQuestionsFromMultiplePaths(paths){
-  allQuestions = []
-  for(const path of paths){
+  // Hämta alla filer PARALLELLT, inte en i taget. "Blandat – alla utbildningar"
+  // laddar ~25 filer (~5 MB); med sekventiell `await fetch` väntade varje fil på
+  // den föregående, vilket gav flera sekunders start på mobil. Promise.all låter
+  // webbläsaren hämta dem samtidigt (HTTP/2-multiplexering). Ordningen i
+  // resultatet bevaras av map/flat, och urvalet slumpas ändå efteråt.
+  const results = await Promise.all(paths.map(async path => {
     try {
       const res = await fetch(path)
       if (!res.ok) {
         console.error(`Failed to load questions: ${res.status} ${res.statusText}`)
-      } else {
-        const data = await res.json()
-        allQuestions = allQuestions.concat(data)
-        console.log(`Loaded ${data.length} questions from ${path}`)
+        return []
       }
+      const data = await res.json()
+      console.log(`Loaded ${data.length} questions from ${path}`)
+      return data
     } catch(e) {
       console.error(`Error loading questions from ${path}:`, e)
+      return []
     }
-  }
+  }))
+  allQuestions = results.flat()
   console.log(`Total loaded: ${allQuestions.length} questions from all paths`)
 }
 

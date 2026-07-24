@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.245
+- **Snabbare start på blandade ämnen (Matcha OCH quizet).** "Blandat – alla utbildningar" och de andra lins-/blandade-valen laddar ~25 datafiler (~5 MB). `loadQuestionsFromMultiplePaths` hämtade dem **en i taget** (`for … await fetch`), så varje fil väntade på den föregående → flera sekunders fördröjning från knapptryck till start, särskilt på mobil. Nu hämtas alla filer **parallellt** (`Promise.all`, HTTP/2-multiplexering); urvalet slumpas som förut efteråt. Ingen beteendeförändring, bara snabbare.
+- Endast `js/app.js` ändrad → `app.js?v=`/`APP_VERSION`/`VERSION` bumpade; CSS orörd (styles.css-bustern kvar på 0.9.244).
+
 ## 0.9.244
 - **KRITISK bugg: Matchas klart-vy visades mitt i spelet.** Knapparna "Spela igen"/"Avsluta" syntes bland rutorna under pågående spel, och brädet doldes aldrig vid spelslut. Orsak: `.hidden` är **inte** en global utility i projektet – den fungerar bara via sammansatta selektorer (`.card.hidden` m.fl.), och Matchas inre `div`:ar (`matchaBoard`/`matchaFinished`/`matchaFooter`) är inga `.card`. Fixat med egna dölj-regler i CSS.
 - **Matcha spelas nu i takt med en knapp** i stället för auto-avslöjande. Para ihop alla par → tryck **"Visa rätt svar"** (avstängd tills alla par är lagda) → facit visas → knappen blir **"Nästa"**, och på sista omgången **"Avsluta"**. Ingen auto-timer som byter omgång längre; du styr själv när du går vidare. "Avbryt" finns kvar för att hoppa ur mitt i.

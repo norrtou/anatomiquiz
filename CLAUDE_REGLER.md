@@ -830,6 +830,43 @@ hjälpfunktioner som hör ihop med befintlig quiz-/flashcard-logik.
 
 ---
 
+## 13. SPELKÄNSLA ÄR ETT KRAV – RESEARCHA LIKNANDE SPEL FÖRST
+
+**Mall (så här görs det rätt från början):** innan en rad kod skrivs för ett nytt
+spelläge ska jag **titta noga på hur liknande, väletablerade spel är gjorda** och på
+vad som allmänt anses göra dem kul och stimulerande — och skriva ner slutsatserna
+innan bygget börjar. För ett parspel (Matcha): hur gör Duolingo, Quizlet Match,
+memory-/pexeso-spel, Tinycards? För skriv-svaret: hur gör Anki/Quizlet Learn? För
+arkadläget: hur känns Quizlet Gravity? Leta efter de konkreta greppen som skapar
+njutning: **omedelbar och tillfredsställande återkoppling, mikroanimationer med måtta,
+tydlig känsla av framsteg, belöning/beröm, streaks och delmål, ljud/haptik där det
+passar, snygg och inbjudande layout, och friktionsfri touch på mobil.**
+
+**Spelkänsla ("game feel") ska finnas och är en förstklassig kravdimension** — likställd
+med faktakorrekthet och buggfrihet, inte efterhandsputs. Ett spelläge som är logiskt
+korrekt men **tråkigt, platt eller fult att röra vid är inte färdigt.** Bygget planeras
+och bedöms mot frågan *"är det här roligt, snyggt och inbjudande att spela?"* — inte
+bara *"gör det rätt sak?"*.
+
+**Så här tillämpas det:**
+1. **Research först, dokumenterat.** Sammanfatta i planen (som visas för användaren före
+   bygge, [[feedback_write_plan_clearly_before_building]]) vilka förlagor jag tittat på
+   och vilka konkreta spelkänslo-grepp jag tar med. Ingen research = inte redo att bygga.
+2. **Designa återkopplingen medvetet.** Hur känns ett rätt svar? Ett fel? Övergången
+   mellan omgångar? Slutet? Varje sådan moment ska kännas avsiktlig och belönande, inte
+   som ett hårt tillståndsbyte.
+3. **Verifiera spelkänslan visuellt** innan leverans — logik-simulering räcker aldrig för
+   UI (§0.3, [[feedback-ui-fun-and-listen-first]]). Titta på det renderat, på mobil.
+4. **Estetik och mobilkänsla** hör till kravet: tillräcklig träffyta, mjuka men snabba
+   animationer, konsekvent färg/typografi, inget som hoppar eller känns billigt.
+
+**Varför:** appens hela syfte med spellägen är att göra pluggandet roligt nog att man
+kommer tillbaka. Ett mekaniskt korrekt men trist spel missar hela poängen — det var
+precis felet i Matcha-bygget 2026-07-24. Kul och snyggt är inte en bonus ovanpå
+funktionen; för ett spel **är** det funktionen.
+
+---
+
 **DESSA REGLER ÄR BINDANDE FÖR ALL ARBETE PÅ ANATOMIQUIZ.**
 
 **Senast uppdaterad:** 2026-07-22

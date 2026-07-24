@@ -47,6 +47,19 @@ trots att clamp-regeln fanns. Fixat genom att slå ihop till **en** basregel som
 **före** `@media (max-width: 640px)`-blocket. Duplicera aldrig hela selektorblock –
 lägg till egenskaper i den befintliga regeln.
 
+## ⚠️ `.hidden` är INTE en global utility – döljer bara vissa element
+
+Det finns **ingen** global `.hidden { display: none }` i projektet. `.hidden` fungerar
+bara via **sammansatta selektorer**: `.card.hidden`, `.topic-legend.hidden`,
+`.fc-question-sub.hidden`, `.case-card.hidden`, `.case-empty.hidden` m.fl. Sektionerna
+(`#quiz`, `#matcha` …) döljs för att de är `.card`.
+
+**Regel:** ett nytt element som ska kunna döljas med `classList.add('hidden')` MÅSTE ha
+en egen dölj-regel (`.mitt-element.hidden { display: none }`) – annars gör `.hidden`
+ingenting och elementet syns hela tiden. Detta orsakade en skarp bugg i 0.9.244:
+Matchas klart-vy (`#matchaFinished`, en `div` – ingen `.card`) visades mitt i spelet
+eftersom `.hidden` inte bet på den. Se [[feedback-ui-fun-and-listen-first]].
+
 ## Snabb felsökning när en stiländring "inte tar"
 1. Vilka CSS-filer laddar sidan? (`grep stylesheet <sida>.html`)
 2. Finns selektorn i **mer än en** fil eller **mer än en gång** i samma fil?
