@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.236
+- **FAQ-driften rättad på de fyra återstående sidorna** (tillåtelse given): `deklinationer-pluralformer.html` (7 svar), `medicinskt-latin.html` (6), `terminologins-historia.html` (4) och `uttalsregler.html` (8). Sammanlagt **25 `acceptedAnswer`-texter** omskrivna så att de speglar brödtexten ord för ord. Blocken är genererade ur den synliga HTML:en, med extraktionen scopad till `#faq`-behållaren. **Inga frågenamn behövde ändras** och ingen synlig text är rörd – diffen är exakt 25 rader.
+- **Efter detta speglar alla 18 sidor med `FAQPage` både frågor och svar.** Skulden från 2026-07-21 är därmed avslutad vad gäller FAQ.
+- **Två fel i mitt eget verktyg hittade och rättade under arbetet**, båda i `SEO_REGLER.md` §12-snutten:
+  - **Extraktionen skedde ur hela filen i stället för ur `#faq`.** Ett `<p><strong>Ingress</strong>` i brödtexten som *inte* följs av `<br>` får det icke-giriga `(.*?)` att skanna vidare till nästa `</strong><br>` och svälja allt däremellan – frågan blir då ett helt stycke brödtext. Lömskt nog blir **antalet par ändå rätt**, så kontrollen såg trovärdig ut medan den jämförde fel strängar. Det var detta som gjorde att `deklinationer-pluralformer.html` och `terminologins-historia.html` rapporterades ha isärdrivna *frågor*, vilket de aldrig hade. Snutten extraherar nu alltid inom `#faq`.
+  - **Genereringen la indraget en gång för mycket** på `<script>`-raden (`h[:start]` innehåller redan radens blanksteg). Fångat i diffgranskningen och rättat innan commit; inga andra rader påverkades.
+- Ingen CSS, ingen synlig text och inga tooltips ändrade → `styles.css`-bustern oförändrad.
+- **Kvar av skulden från 2026-07-21:** de ~146 självrefererande tooltip-definitionerna i `data/kb_glossary_terms.json`. Orörda.
+
 ## 0.9.235
 - **FAQ-driften i `kunskapsbank/grekiska-i-medicinen.html` rättad.** `FAQPage`-blocket speglar nu den synliga sektionen ord för ord, enligt `SEO_REGLER.md` §6 och det beslut som fattades 2026-07-21.
 - **Driften var tre gånger större än den var dokumenterad.** Noterat sedan tidigare var två omformulerade frågor (*”Vad betyder -om i medicinska ord?”* mot *”Vad betyder -om?”*, *”Vad betyder prefixen hyper- och hypo-?”* mot *”Vad betyder hyper- och hypo-?”*). Vid genomgången visade sig **samtliga sex svar** avvika också. Orsaken till att det aldrig upptäcktes: **§12-snutten jämför bara frågorna, aldrig svaren** – den hade rapporterat sidan som ren så snart de två frågorna rättats.

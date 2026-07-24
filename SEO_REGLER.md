@@ -468,16 +468,21 @@ faq=[q for q,_ in _fq]; faq_a=[a for _,a in _fq]
 # tabellsidor) och <h3>Fråga?</h3><p>svar (medicinskordlista.html, info.html).
 # Snutten måste känna igen båda – med bara det första passerade ordlistans FAQ
 # som "0 synliga", alltså tyst godkänd utan att någonsin ha jämförts (2026-07-21).
-# Leta upp #faq-sektionen via ett REGEXP, inte via h.find('id="faq"'): ligger
+# Leta upp #faq-behållaren via ett REGEXP, inte via h.find('id="faq"'): ligger
 # strängen ordagrant i en head-kommentar slår find() an där och läser fel
 # sektion, vilket ger falskt "0 synliga" (upptäckt 2026-07-24 i info.html).
-_pairs=re.findall(r'<p><strong>(.*?)</strong><br>(.*?)</p>',h,re.S)
+# EXTRAHERA ALLTID INOM #faq, aldrig ur hela filen. Ett <p><strong>Ingress</strong>
+# i brödtexten som INTE följs av <br> får annars det icke-giriga (.*?) att skanna
+# vidare till nästa </strong><br> och svälja allt däremellan – frågan blir då ett
+# helt stycke brödtext och sidan rapporteras falskt som isärdriven, med rätt
+# ANTAL par (upptäckt 2026-07-24 i deklinationer-pluralformer/terminologins-historia).
+m=re.search(r'<(?:div|section)[^>]*\bid="faq"',h)
+seg=h[m.start():min([x for x in (h.find('</section>',m.start()),
+                                 h.find('</div>',m.start())) if x>0] or [len(h)])] if m else h
+_pairs=re.findall(r'<p><strong>(.*?)</strong><br>(.*?)</p>',seg,re.S)
 if _pairs:
     vis=[_plain(q) for q,_ in _pairs]; vis_a=[_plain(a) for _,a in _pairs]
 else:
-    m=re.search(r'<(?:div|section)[^>]*\bid="faq"',h)
-    seg=h[m.start():min([x for x in (h.find('</section>',m.start()),
-                                     h.find('</div>',m.start())) if x>0] or [len(h)])] if m else ''
     vis=[_plain(s) for s in re.findall(r'<h3[^>]*>(.*?)</h3>',seg,re.S)]
     vis_a=[_plain(s) for s in re.findall(r'<p>(.*?)</p>',seg,re.S)]
 if faq or vis:
