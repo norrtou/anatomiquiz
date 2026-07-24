@@ -161,6 +161,18 @@ Regler:
   glider isär tyst när sidan revideras: `deklinationer-pluralformer.html` hade sex frågor i
   märkningen och sju på sidan, varav en (*pluralis av carcinoma*) bara fanns i JSON-LD och två
   bara i brödtexten (rättat 2026-07-21). Snutten i §12 jämför numera listorna par för par.
+- **Kravet gäller SVAREN lika hårt som frågorna.** Detta var den tysta halvan av regeln fram
+  till 2026-07-24: §12-snutten jämförde bara frågorna, så en sida kunde rapporteras ren med
+  samtliga svar isärdrivna. `grekiska-i-medicinen.html` hade två omformulerade frågor **och sex
+  omskrivna svar**; bara frågorna var kända. Mönstret är alltid detsamma – JSON-LD-svaret är
+  längre och mer utförligt än brödtexten, eftersom märkningen inte uppdaterats när den synliga
+  texten stramats åt. Det innebär att sidan lovar sökmotorn innehåll som läsaren aldrig ser.
+- **Riktningen är given: märkningen rättas efter sidan, aldrig tvärtom.** Vill du behålla det
+  utförligare svaret är rätt åtgärd att skriva in det i den **synliga** texten först och spegla
+  därefter – inte att låta JSON-LD:t stå kvar som en egen, osynlig version av artikeln.
+- **Generera hellre blocket ur den synliga HTML:en än skriv det för hand.** Handskriven
+  spegling driver isär vid nästa revidering; en generering ur `<p><strong>…</strong><br>…</p>`
+  med märkningen bortstädad är exakt tecken för tecken.
 - `inLanguage: "sv-SE"`, `isAccessibleForFree: true`, `publisher`/`author` = Norrtou Creations / Anatomiquiz.
 - **`breadcrumb` ska ALDRIG nästlas som property inuti Article/LearningResource/CollectionPage-blocket**
   när `@type` är en array (flera typer). Ahrefs schema.org-validator (och andra strikta validatorer)
@@ -445,22 +457,39 @@ for b in re.findall(r'application/ld\+json">(.*?)</script>',h,re.S):
 print("tabeller",h.count('<table'),"captions",h.count('<caption>'),
       "-> OK" if h.count('<table')==h.count('<caption>') else "-> SAKNAS")
 print("JSON-LD: giltig")
-# FAQPage speglar synlig FAQ (§6): jämför fråga för fråga, i ordning.
+# FAQPage speglar synlig FAQ (§6): jämför fråga för fråga OCH svar för svar.
 import html as _h
-faq=[q["name"] for b in re.findall(r'application/ld\+json">(.*?)</script>',h,re.S)
+def _plain(s): return _h.unescape(re.sub(r'\s+',' ',re.sub(r'<[^>]+>','',s))).strip()
+_fq=[(q["name"],q["acceptedAnswer"]["text"])
+     for b in re.findall(r'application/ld\+json">(.*?)</script>',h,re.S)
      if '"FAQPage"' in b for q in json.loads(b)["mainEntity"]]
+faq=[q for q,_ in _fq]; faq_a=[a for _,a in _fq]
 # Två markupmönster förekommer: <p><strong>Fråga?</strong><br>svar (artiklar och
-# tabellsidor) och <h3>Fråga?</h3><p>svar (medicinskordlista.html). Snutten måste
-# känna igen båda – med bara det första passerade ordlistans FAQ som "0 synliga",
-# alltså tyst godkänd utan att någonsin ha jämförts (upptäckt 2026-07-21).
-vis=[re.sub(r'<[^>]+>','',s) for s in re.findall(r'<p><strong>(.*?)</strong><br>',h)]
-if not vis:
-    i=h.find('id="faq"')
-    vis=[re.sub(r'<[^>]+>','',s).strip()
-         for s in re.findall(r'<h3[^>]*>(.*?)</h3>',h[i:h.find('</section>',i)],re.S)] if i>0 else []
+# tabellsidor) och <h3>Fråga?</h3><p>svar (medicinskordlista.html, info.html).
+# Snutten måste känna igen båda – med bara det första passerade ordlistans FAQ
+# som "0 synliga", alltså tyst godkänd utan att någonsin ha jämförts (2026-07-21).
+# Leta upp #faq-sektionen via ett REGEXP, inte via h.find('id="faq"'): ligger
+# strängen ordagrant i en head-kommentar slår find() an där och läser fel
+# sektion, vilket ger falskt "0 synliga" (upptäckt 2026-07-24 i info.html).
+_pairs=re.findall(r'<p><strong>(.*?)</strong><br>(.*?)</p>',h,re.S)
+if _pairs:
+    vis=[_plain(q) for q,_ in _pairs]; vis_a=[_plain(a) for _,a in _pairs]
+else:
+    m=re.search(r'<(?:div|section)[^>]*\bid="faq"',h)
+    seg=h[m.start():min([x for x in (h.find('</section>',m.start()),
+                                     h.find('</div>',m.start())) if x>0] or [len(h)])] if m else ''
+    vis=[_plain(s) for s in re.findall(r'<h3[^>]*>(.*?)</h3>',seg,re.S)]
+    vis_a=[_plain(s) for s in re.findall(r'<p>(.*?)</p>',seg,re.S)]
 if faq or vis:
     print("FAQ:",len(faq),"i JSON-LD /",len(vis),"synliga",
-          "-> OK" if [_h.unescape(x) for x in faq]==[_h.unescape(x) for x in vis] else "-> GLIDIT ISÄR")
+          "-> OK" if [_h.unescape(x) for x in faq]==vis else "-> GLIDIT ISÄR")
+    # Svaren MÅSTE jämföras separat. Fram till 2026-07-24 gjorde snutten det
+    # inte, och grekiska-i-medicinen.html hade därför sex svar som drivit isär
+    # helt oupptäckt medan frågekontrollen sa OK.
+    print("FAQ-svar:",len(faq_a),"/",len(vis_a),
+          "-> OK" if faq_a==vis_a else "-> GLIDIT ISÄR")
+    for _n,(_a,_b) in enumerate(zip(faq_a,vis_a),1):
+        if _a!=_b: print(f"   svar {_n} avviker\n     json: {_a[:100]}\n     html: {_b[:100]}")
 PY
 # (sätt F=… till filsökvägen)
 ```
