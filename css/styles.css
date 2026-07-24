@@ -1146,20 +1146,8 @@ body:has(#quiz:not(.hidden)) {
   background: rgba(16, 185, 129, 0.04);
 }
 
-.mode-soon {
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  padding: 2px 6px;
-  border-radius: 999px;
-  background: rgba(16, 185, 129, 0.16);
-  color: var(--primary-deep);
-  white-space: nowrap;
-}
-
 /* Ett byggt, spelbart läge (t.ex. Matcha): solid, aktiv knapp – inte det
-   dämpade/streckade "snart"-utseendet. */
+   dämpade/streckade disabled-utseendet på ännu ej byggda lägen. */
 .btn-mode--ready {
   opacity: 1;
   cursor: pointer;
@@ -1181,18 +1169,6 @@ body:has(#quiz:not(.hidden)) {
   cursor: not-allowed;
   border-style: solid;
   background: rgba(16, 185, 129, 0.04);
-}
-
-.mode-new {
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  padding: 2px 6px;
-  border-radius: 999px;
-  background: var(--primary-deep);
-  color: #fff;
-  white-space: nowrap;
 }
 
 .secondary-actions {
@@ -1219,14 +1195,15 @@ body:has(#quiz:not(.hidden)) {
   gap: 10px;
 }
 
+/* Matchar formulärets etiketter (t.ex. "Utbildning eller kategori"): samma
+   typsnitt, vikt, storlek och färg – inte längre versal småkapitäl. */
 .hub-nav-label {
   grid-column: 1 / -1;
-  margin: 0 0 2px;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-secondary);
+  margin: 0 0 6px;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
 }
 
 .hub-tile {

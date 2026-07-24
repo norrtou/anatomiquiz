@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.243
+- **Matcha: "nytt"/"snart"-märkningarna borttagna.** Pill-etiketterna tvingade radbrytningar i spelknapparnas text på mobil. Borttagna helt (både från startsidans knappar och topplistans segmentrubriker); ännu ej byggda lägen behåller sitt skuggade/streckade disabled-utseende. Död CSS (`.mode-soon`/`.mode-new`) rensad.
+- **Matcha: "Topplista"-knappen borttagen ur klart-vyn** – onödig där. Kvar: "Spela igen" och "Avsluta".
+- **Startsidan: rubriken "Utforska" → "Fler användbara resurser"**, med samma typografi som formuläretiketterna (t.ex. "Utbildning eller kategori") i stället för versal småkapitäl.
+- **Matcha: bredare kolumnavstånd** (48 px desktop / 30 px mobil, täta rader) så förbindelselinjerna syns tydligt.
+- CSS ändrad → `styles.css?v=` bumpad enhetligt till 0.9.243 på alla sidor (`SEO_REGLER.md` §11 C) + generatorernas `STYLES_V`/`CSS_V`; `matcha.js?v=` följer med.
+
 ## 0.9.242
 - **Nytt spelläge: Matcha (parspel).** Första läget ur backloggen av nya spellägen. Frågor till vänster, svar till höger (kolumnerna slumpas var för sig); tryck en fråga och sedan rätt svar så dras en **streckad linje** mellan dem. Man parar ihop **alla** par i omgången först – rätt och fel avslöjas **först när allt är ihopparat**, aldrig direkt vid varje val, och det finns **ingen andra chans** (fel står kvar och räknas). En felparning kan ångras genom att trycka på den ihopkopplade rutan tills omgången rättas. Spelas i omgångar om fem par tills valt antal (10/20/50/100) är avklarat. Ämnet och antalet par visas överst under spelets gång. **Poäng = antal rätt av totalt**; topplistan rankar flest rätt, snabbast tid som utslag.
 - **Återanvänder befintlig data, inget nytt innehåll skrivet.** Paren byggs av de MC-frågor som redan finns: `prompt` ↔ `correct`. Bara **korta** frågor tas med (prompt ≤ 55, svar ≤ 26 tecken) så rutorna ryms på en mobilskärm, och par med samma fråga eller samma svar filtreras bort så att en ruta aldrig kan matcha två olika rutor. Ämnen med för få korta frågor (t.ex. de långa språktermsfrågorna) tackar artigt nej med ett meddelande i stället för att starta en trasig omgång.

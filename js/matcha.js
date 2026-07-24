@@ -514,7 +514,6 @@ document.addEventListener('DOMContentLoaded', () => {
   el('matchaCancelBtn')?.addEventListener('click', cancelMatcha)
   el('matchaRetryBtn')?.addEventListener('click', startMatcha)
   el('matchaQuitBtn')?.addEventListener('click', () => { el('matcha').classList.add('hidden'); el('setup').classList.remove('hidden') })
-  el('matchaScoresBtn')?.addEventListener('click', () => { el('matcha').classList.add('hidden'); showHighscores() })
   el('exportScores-matcha')?.addEventListener('click', exportMatchaScores)
   const impMatcha = el('importScoresFile-matcha')
   if(impMatcha) impMatcha.addEventListener('change', handleImportMatchaScores)
