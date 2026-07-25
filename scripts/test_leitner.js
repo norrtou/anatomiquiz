@@ -81,7 +81,7 @@ function node(id, extra){
 }
 
 ;['setup', 'highscores', 'result', 'quiz', 'flashcards', 'matcha', 'leitner', 'leitnerPlay',
-  'leitnerFinished', 'leitnerFooter', 'leitnerPlayerLabel', 'leitnerMeta', 'leitnerProgressFill',
+  'leitnerFinished', 'leitnerFooter', 'leitnerIntro', 'leitnerPlayerLabel', 'leitnerMeta', 'leitnerProgressFill',
   'leitnerProgressLabel', 'leitnerScoreBadge', 'leitnerMastery', 'leitnerMasteryFill',
   'leitnerMasteryLabel', 'leitnerChip', 'leitnerLadderLabel', 'leitnerPraise', 'leitnerCardMeta',
   'leitnerPrompt', 'leitnerChoices', 'leitnerNextBtn', 'leitnerTimer', 'leitnerRingProgress',
@@ -291,6 +291,7 @@ nodes.numQuestions.value = '10'
   eq('förfallodatum satt två dagar fram', st.cards['osteologi_ben|q1'].due, startOfDay(Date.now()) + 2 * DAY)
   ok('klart-vyn visas', !nodes.leitnerFinished._class.has('hidden'))
   ok('spelvyn dold vid slutet', nodes.leitnerPlay._class.has('hidden'))
+  ok('spelreglerna döljs på resultatskärmen', nodes.leitnerIntro._class.has('hidden'))
   eq('resultatring 100 %', nodes.leitnerRingPct.textContent, '100 %')
   ok('slutet pekar framåt mot nästa pass', /Nästa pass: 3 kort återkommer/.test(nodes.leitnerNextText.textContent),
      nodes.leitnerNextText.textContent)

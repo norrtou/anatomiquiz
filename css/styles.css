@@ -2295,6 +2295,14 @@ ol li {
    men har egna klasser, så att de två lägena kan ändras oberoende.
    ============================================================================ */
 
+/* Spelreglerna i en mening, överst i vyn. */
+.leitner-intro {
+  margin: 0 0 10px;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: var(--text-secondary);
+}
+
 /* En sammanhållen infopanel i stället för lösryckta textrader. */
 .leitner-header {
   background: var(--success-bg);
@@ -2641,6 +2649,7 @@ ol li {
    fungerar bara via sammansatta selektorer. Leitners inre delar är inga .card,
    så var och en som ska kunna döljas behöver en egen regel här. Utan den visas
    klart-vyn mitt i passet, precis som hände Matcha i 0.9.244. */
+.leitner-intro.hidden,
 .leitner-play.hidden,
 .leitner-finished.hidden,
 .leitner-praise.hidden,
@@ -2648,6 +2657,7 @@ ol li {
 #leitnerFooter.hidden { display: none; }
 
 @media (max-width: 640px) {
+  .leitner-intro { font-size: 0.82rem; margin-bottom: 8px; }
   .leitner-header { padding: 8px 10px; }
   /* Ämnesraden är lång ("Balansorganet (vestibularis) · 8 att repetera · 2 nya")
      och bröts illa mot högerkanten bredvid namnet. Egen rad, vänsterställd. */

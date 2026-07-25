@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.252
+- **Leitner Light förklarar sig själv.** Lådtrappan gick inte att förstå utan förkunskap — inget i vyn sa vad de fem lådorna betydde eller varför brickan flyttade sig. Nu står spelreglerna i en mening överst i spelet: *"Varje fråga är ett kort i en av fem lådor: rätt svar flyttar kortet upp en låda och dröjer längre till nästa gång, fel svar skickar det tillbaka till låda 1."*
+- Raden döljs på resultatskärmen, där reglerna inte längre är intressanta (med egen `.leitner-intro.hidden`-regel — `.hidden` är inte global, CSS_KARTA).
+- CSS ändrad → `styles.css?v=` bumpad enhetligt till **0.9.252 på alla 116 sidor** plus generatorernas konstanter; `leitner.js?v=` följer med.
+
 ## 0.9.251
 - **Nytt spelläge: Leitner Light (spaced repetition).** Nästa läge ur backloggen, byggt direkt till Matcha-standarden (`CLAUDE_REGLER.md` §13.1) — inget polish-pass efteråt. Varje fråga är ett **kort som bor i en av fem lådor**: rätt svar flyttar kortet upp en låda och glesar ut repetitionen (**1 → 2 → 4 → 8 → 16 dagar**), fel skickar det tillbaka till låda 1. Låda 5 = mästrat. Lådstatusen sparas mellan pass i eget fack (`hur_leitner_state`) — läget är ett långsiktigt pluggschema, inte en enskild runda.
 - **Passets urval:** förfallna kort först (lägst låda först = det man kan sämst, därefter äldst förfallodatum), påfyllt med nya kort ur ämnet upp till valt antal frågor. Finns varken förfallet eller nytt kvar blir det ingen återvändsgränd — läget erbjuder att öva i förväg. **Fel kort återkommer i samma pass** (Anki-stil "relearn"), tidigast tre kort senare och med max två extra försök, men **bara det första svaret påverkar lådan**: ett rätt svar på andra chansen räddar inte kortet ur låda 1.

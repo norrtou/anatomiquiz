@@ -329,6 +329,7 @@ async function startLeitner(){
   el('flashcards').classList.add('hidden')
   el('matcha')?.classList.add('hidden')
   el('leitnerFinished').classList.add('hidden')
+  el('leitnerIntro').classList.remove('hidden')
   el('leitnerPlay').classList.remove('hidden')
   el('leitnerFooter').classList.remove('hidden')
   el('leitner').classList.remove('hidden')
@@ -652,6 +653,7 @@ function finishLeitner(){
   const durationMs = leitnerStartTime ? Date.now() - leitnerStartTime : 0
   el('leitnerPlay').classList.add('hidden')
   el('leitnerFooter').classList.add('hidden')
+  el('leitnerIntro').classList.add('hidden')   // spelreglerna är inte intressanta på resultatskärmen
   el('leitnerFinished').classList.remove('hidden')
 
   const total = leitnerCards.length

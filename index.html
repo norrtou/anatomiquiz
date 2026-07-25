@@ -121,7 +121,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="css/styles.css?v=0.9.251">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.252">
 </head>
 <body>
 
@@ -681,6 +681,10 @@
     <section id="leitner" class="card hidden" aria-labelledby="leitnerHeading">
       <h2 id="leitnerHeading" class="sr-only">Leitner Light</h2>
 
+      <!-- Spelreglerna i en mening, överst. Lådtrappan under är obegriplig utan
+           den: inget annat i vyn säger vad lådorna betyder. Döljs i klart-vyn. -->
+      <p id="leitnerIntro" class="leitner-intro">Varje fråga är ett kort i en av fem lådor: rätt svar flyttar kortet upp en låda och dröjer längre till nästa gång, fel svar skickar det tillbaka till låda 1.</p>
+
       <div class="leitner-header">
         <div class="leitner-header-top">
           <span id="leitnerPlayerLabel" class="leitner-player"></span>
@@ -1010,9 +1014,9 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.251" defer></script>
+  <script src="js/app.js?v=0.9.252" defer></script>
   <!-- Spellägesmoduler: en egen fil per läge, laddas EFTER app.js (delar globalt scope). -->
   <script src="js/matcha.js?v=0.9.251" defer></script>
-  <script src="js/leitner.js?v=0.9.251" defer></script>
+  <script src="js/leitner.js?v=0.9.252" defer></script>
 </body>
 </html>
