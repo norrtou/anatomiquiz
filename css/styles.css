@@ -746,6 +746,74 @@ select:focus-visible {
   line-height: 1.5;
 }
 
+/* Segmenterat reglage (Ljust / Följ systemet / Mörkt) — tre riktiga
+   radioknappar, visuellt dolda, styr ett pillerformat reglage via
+   :checked + label. Ersätter en lista av fristående radioknappar som
+   klämdes ihop på mobil och glesades ut orimligt på desktop (0.9.263). */
+.theme-switch {
+  position: relative;
+  display: flex;
+  gap: 4px;
+  margin: 8px 0 4px;
+  padding: 4px;
+  background: var(--bg-main);
+  border: 2px solid rgba(16, 185, 129, 0.15);
+  border-radius: 999px;
+}
+
+.theme-switch input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+.theme-switch label {
+  flex: 1 1 0;
+  margin: 0;
+  padding: 9px 6px;
+  border-radius: 999px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: normal;
+  color: var(--text-secondary);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.theme-switch label:hover {
+  color: var(--text-primary);
+}
+
+.theme-switch input[type="radio"]:checked + label {
+  background: linear-gradient(135deg, var(--btn-primary-from) 0%, var(--btn-primary-to) 100%);
+  color: var(--text-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.theme-switch input[type="radio"]:focus-visible + label {
+  outline: 3px solid var(--primary-dark);
+  outline-offset: 2px;
+}
+
+/* Under ~360px räcker inte bredden till tre pillertexter jämte varandra;
+   "Följ systemet" blir det som avgör. Radbryt till en kolumn i stället för
+   att pressa ihop texten. */
+@media (max-width: 360px) {
+  .theme-switch {
+    flex-direction: column;
+    border-radius: var(--radius-sm);
+  }
+
+  .theme-switch label {
+    text-align: left;
+    padding: 10px 12px;
+  }
+}
+
 /* Finstilta raderna på startsidan: noten under utbildningsväljaren
    (#educationNote) och förklaringen av MC/FC/TF under ämnesväljaren.
    Ska läsas vid behov, inte konkurrera med dropdownarna. */

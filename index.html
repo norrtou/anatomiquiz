@@ -125,7 +125,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="css/styles.css?v=0.9.263">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.264">
 </head>
 <body>
 
@@ -504,22 +504,20 @@
       <!-- Utseende. Sparas för sig (localStorage 'hur_theme' via js/theme.js) och
            slår igenom på hela sajten, även på ordlistan och kunskapsbanken som
            inte laddar app.js. Träder i kraft direkt vid val – inte först vid
-           Spara – eftersom hela poängen är att se resultatet. -->
+           Spara – eftersom hela poängen är att se resultatet.
+           Segmenterat reglage i stället för fristående radioknappar i lista
+           (se 0.9.263/0.9.264 — tre olika textlängder gjorde radiolistan
+           oläslig, både hopklämd på mobil och glesad ut på desktop). -->
       <span class="settings-label" id="themeLabel">Utseende</span>
-      <div class="checkbox-group" role="radiogroup" aria-labelledby="themeLabel">
-        <label class="checkbox-row" for="themeLight">
-          <input type="radio" name="theme" id="themeLight" value="light" checked />
-          <span>Ljust <small>(förval)</small></span>
-        </label>
-        <label class="checkbox-row" for="themeAuto">
-          <input type="radio" name="theme" id="themeAuto" value="auto" />
-          <span>Följ systemet <small>(mörkt när telefonen eller datorn är inställd på mörkt)</small></span>
-        </label>
-        <label class="checkbox-row" for="themeDark">
-          <input type="radio" name="theme" id="themeDark" value="dark" />
-          <span>Mörkt</span>
-        </label>
+      <div class="theme-switch" role="radiogroup" aria-labelledby="themeLabel">
+        <input type="radio" name="theme" id="themeLight" value="light" checked />
+        <label for="themeLight">Ljust</label>
+        <input type="radio" name="theme" id="themeAuto" value="auto" />
+        <label for="themeAuto">Följ systemet</label>
+        <input type="radio" name="theme" id="themeDark" value="dark" />
+        <label for="themeDark">Mörkt</label>
       </div>
+      <p class="settings-hint">Ljust är förvalt. Följ systemet växlar till mörkt läge när telefonen eller datorn är det.</p>
 
       <span class="settings-label" id="qtypeLabel">Frågetyper</span>
       <div class="checkbox-group" role="group" aria-labelledby="qtypeLabel">
@@ -1233,7 +1231,7 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.263" defer></script>
+  <script src="js/app.js?v=0.9.264" defer></script>
   <!-- Spellägesmoduler: en egen fil per läge, laddas EFTER app.js (delar globalt scope). -->
   <script src="js/matcha.js?v=0.9.261" defer></script>
   <script src="js/leitner.js?v=0.9.261" defer></script>

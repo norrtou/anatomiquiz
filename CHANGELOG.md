@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.264
+- **Utseende-reglaget i Inställningar byggdes om till ett segmenterat piller-reglage.** 0.9.263s fix (flex-shrink: 0) löste hoppklämningen på mobil men gjorde det värre på desktop: `flex-grow: 1` fyllde ut varje bred kolumn, så radioknappen hamnade långt till vänster och etiketten långt till höger med ett stort tomrum mellan dem. Grundproblemet var formen, inte flex-egenskaperna — tre alternativ med olika textlängd (en av dem med lång hjälptext) passar dåligt som en lista av fristående radioknappar i vilken bredd som helst. Ljust/Följ systemet/Mörkt är nu tre riktiga (visuellt dolda) radioknappar som styr ett pillerformat reglage: markerat val får grön gradientbakgrund, hela raden ryms på en rad ner till 360 px och radbryts till en kolumn därunder. Hjälptexten om "Följ systemet" flyttad till en delad rad under reglaget i stället för att tvinga fram radbrytning inuti en av tre pillar.
+
 ## 0.9.263
 - **Utseende-reglagen i Inställningar (Ljust/Följ systemet/Mörkt) var oläsliga på mobil.** `.checkbox-group .checkbox-row` hade `flex: 1 1 240px` — flex-shrink 1 lät raderna krympa mycket smalare än sin egen text i stället för att radbryta, så alternativen krympte ihop och löpte in i varandra på smala skärmar. Drabbade alla `.checkbox-group`, inte bara den nya temaväljaren, men syntes värst där eftersom "Följ systemet"-alternativets hjälptext är lång. `flex-shrink: 0` tvingar nu varje alternativ till egen rad så snart det inte får plats i sin fulla bredd.
 
