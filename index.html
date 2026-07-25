@@ -22,7 +22,11 @@
        Webbläsartema och färgschema
        ========================================================= -->
   <meta name="theme-color" content="#10b981">
-  <meta name="color-scheme" content="light">
+  <meta name="color-scheme" content="light dark">
+  <!-- Tema (ljust/mörkt). Laddas SYNKRONT och före stilmallen: attributet
+       data-theme måste sitta på <html> innan första målningen, annars
+       blinkar sidan ljus. Inline gick inte – CSP:n tillåter bara egen origin. -->
+  <script src="/js/theme.js?v=0.9.260"></script>
 
   <!-- =========================================================
        Open Graph (Facebook, LinkedIn, m.fl.)
@@ -121,7 +125,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="css/styles.css?v=0.9.256">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.260">
 </head>
 <body>
 
@@ -497,6 +501,26 @@
       <label for="playerName">Mitt namn</label>
       <input id="playerName" placeholder="Mitt namn" aria-label="Mitt namn" autocomplete="nickname" />
 
+      <!-- Utseende. Sparas för sig (localStorage 'hur_theme' via js/theme.js) och
+           slår igenom på hela sajten, även på ordlistan och kunskapsbanken som
+           inte laddar app.js. Träder i kraft direkt vid val – inte först vid
+           Spara – eftersom hela poängen är att se resultatet. -->
+      <span class="settings-label" id="themeLabel">Utseende</span>
+      <div class="checkbox-group" role="radiogroup" aria-labelledby="themeLabel">
+        <label class="checkbox-row" for="themeLight">
+          <input type="radio" name="theme" id="themeLight" value="light" checked />
+          <span>Ljust <small>(förval)</small></span>
+        </label>
+        <label class="checkbox-row" for="themeAuto">
+          <input type="radio" name="theme" id="themeAuto" value="auto" />
+          <span>Följ systemet <small>(mörkt när telefonen eller datorn är inställd på mörkt)</small></span>
+        </label>
+        <label class="checkbox-row" for="themeDark">
+          <input type="radio" name="theme" id="themeDark" value="dark" />
+          <span>Mörkt</span>
+        </label>
+      </div>
+
       <span class="settings-label" id="qtypeLabel">Frågetyper</span>
       <div class="checkbox-group" role="group" aria-labelledby="qtypeLabel">
         <label class="checkbox-row" for="typeMc">
@@ -632,6 +656,26 @@
          ========================================================= -->
     <section id="matcha" class="card hidden" aria-labelledby="matchaHeading">
       <h2 id="matchaHeading" class="sr-only">Matcha</h2>
+
+      <!-- Regelpanel, uppfälld första gången man spelar (§13.1). Matcha hade
+           tidigare bara enradershinten nedanför och en länk till spellagen.html
+           mitt i spelvyn — men den länken lämnade sidan och förstörde den
+           pågående rundan, eftersom ingen runda sparas. Reglerna står nu här,
+           kvar i spelet, och den fördjupande länken ligger i klart-vyn där det
+           inte kostar något att gå vidare. Döljs helt i klart-vyn. -->
+      <details id="matchaIntro" class="matcha-intro">
+        <summary>Så funkar det – du parar ihop begrepp med rätt svar, mot klockan</summary>
+        <div class="matcha-intro-body">
+          <p><strong>Det här är ett parspel, inte ett vanligt quiz.</strong> Du får fem frågor till vänster och deras fem svar till höger, i olika ordning. Uppgiften är att koppla ihop rätt par – och tiden räknas.</p>
+          <ul class="matcha-intro-list">
+            <li><strong>Tryck en ruta i vardera kolumnen</strong> för att para ihop dem. En linje dras mellan dem.</li>
+            <li><strong>Ångra</strong> genom att trycka på paret igen, så länge rundan pågår.</li>
+            <li><strong>Rätt och fel visas först när alla fem är parade</strong> – du får alltså tänka färdigt innan facit kommer.</li>
+          </ul>
+          <p>Att inte få veta direkt är avsiktligt: du tvingas välja utifrån vad du kan, inte utifrån vilka rutor som blivit över. <strong>Snabbaste tiden sparas i topplistan</strong> per ämne, så det finns något att slå nästa gång.</p>
+        </div>
+      </details>
+
       <div class="matcha-header">
         <div class="matcha-header-top">
           <span id="matchaPlayerLabel" class="matcha-player"></span>
@@ -647,7 +691,6 @@
       </div>
 
       <p id="matchaHint" class="matcha-hint">Para ihop alla par. Rätt och fel visas först när du parat ihop allihop.</p>
-      <p class="mode-help"><a href="spellagen.html">Om Matcha och de andra spellägena</a></p>
 
       <div id="matchaBoard" class="matcha-board" role="group" aria-label="Para ihop fråga med rätt svar">
         <svg id="matchaLines" class="matcha-lines" aria-hidden="true"></svg>
@@ -715,7 +758,6 @@
           </ul>
           <p>Lådan avgör alltså hur ofta du möter kortet: låda 1 i morgon, sedan efter 2, 4, 8 och 16 dagar. Det du kan får du se sällan, det du inte kan får du se ofta – det är hela poängen. Ett kort som tagit sig ända till låda 5 räknas som mästrat och återkommer bara med ett par veckors mellanrum.</p>
           <p><strong>Ett pass</strong> är dagens portion. Appen väljer själv ut de kort som är dags att repetera och fyller på med nya du inte sett förut, så kom tillbaka i morgon – då vet den precis vilka du behöver se igen. Svarar du fel får du kortet en gång till innan passet är slut, men det är ditt <em>första</em> svar som avgör vilken låda det hamnar i.</p>
-          <p class="mode-help"><a href="spellagen.html">Läs mer om Leitner Light och forskningen bakom</a></p>
         </div>
       </details>
 
@@ -835,7 +877,6 @@
           </ul>
           <p>Klockan stannar aldrig, så alla börjar på samma 60 sekunder men hur länge rundan varar avgör du själv. Har du spelat ämnet förut står ditt rekord uppe under klockan – slår du det får du veta det på en gång.</p>
           <p><strong>När tiden är ute</strong> visas hur många du hann, hur säkert du svarade och hur snabbt – och de frågor du missade, med rätt svar. Det är den listan du ska läsa: den pekar rakt på det du behöver plugga mer på.</p>
-          <p class="mode-help"><a href="spellagen.html">Läs mer om Tidsjakt och de andra lägena</a></p>
         </div>
       </details>
 
@@ -1182,10 +1223,10 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.258" defer></script>
+  <script src="js/app.js?v=0.9.260" defer></script>
   <!-- Spellägesmoduler: en egen fil per läge, laddas EFTER app.js (delar globalt scope). -->
-  <script src="js/matcha.js?v=0.9.255" defer></script>
-  <script src="js/leitner.js?v=0.9.255" defer></script>
-  <script src="js/tidsjakt.js?v=0.9.255" defer></script>
+  <script src="js/matcha.js?v=0.9.260" defer></script>
+  <script src="js/leitner.js?v=0.9.260" defer></script>
+  <script src="js/tidsjakt.js?v=0.9.260" defer></script>
 </body>
 </html>

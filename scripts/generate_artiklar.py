@@ -243,7 +243,11 @@ def head(*, titel: str, desc: str, canonical: str, og_type: str,
   <meta name="twitter:image:alt" content="{og_alt}">
 
   <meta name="theme-color" content="#10b981">
-  <meta name="color-scheme" content="light">
+  <meta name="color-scheme" content="light dark">
+  <!-- Tema (ljust/mörkt). Laddas SYNKRONT och före stilmallen: attributet
+       data-theme måste sitta på <html> innan första målningen, annars
+       blinkar sidan ljus. Inline gick inte – CSP:n tillåter bara egen origin. -->
+  <script src="/js/theme.js?v={VERSION}"></script>
 
 {bloc}
 

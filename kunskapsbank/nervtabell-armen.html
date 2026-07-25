@@ -35,7 +35,11 @@
   <meta name="twitter:image:alt" content="Anatomiquiz — armens nerver">
 
   <meta name="theme-color" content="#10b981">
-  <meta name="color-scheme" content="light">
+  <meta name="color-scheme" content="light dark">
+  <!-- Tema (ljust/mörkt). Laddas SYNKRONT och före stilmallen: attributet
+       data-theme måste sitta på <html> innan första målningen, annars
+       blinkar sidan ljus. Inline gick inte – CSP:n tillåter bara egen origin. -->
+  <script src="/js/theme.js?v=0.9.260"></script>
 
   <!-- Strukturerad data: faktatabell = Article + LearningResource, med BreadcrumbList -->
   <script type="application/ld+json">
@@ -113,7 +117,7 @@
   <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon.png">
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
-  <link rel="stylesheet" href="/css/styles.css?v=0.9.256">
+  <link rel="stylesheet" href="/css/styles.css?v=0.9.260">
 </head>
 <body>
 

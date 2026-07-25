@@ -70,6 +70,13 @@ function getMatchaScores(){
   try{ return JSON.parse(localStorage.getItem(MATCHA_SCORES_KEY) || '[]') }
   catch(e){ return matchaMemoryScores || [] }
 }
+// Har spelaren kört Matcha förut? Styr om regelpanelen är uppfälld vid start
+// (§13.1). Samma kriterium som i Leitner Light och Tidsjakt: finns det ett
+// sparat resultat har man spelat, och behöver inte reglerna uppslagna igen.
+function hasPlayedMatcha(){
+  return getMatchaScores().length > 0
+}
+
 function saveMatchaScores(scores){
   try{ localStorage.setItem(MATCHA_SCORES_KEY, JSON.stringify(scores)); matchaMemoryScores = null }
   catch(e){ matchaMemoryScores = scores; warnStorageUnavailable() }
@@ -192,6 +199,11 @@ async function startMatcha(){
   el('quiz').classList.add('hidden')
   el('flashcards').classList.add('hidden')
   el('matchaFinished').classList.add('hidden')
+  const intro = el('matchaIntro')
+  if(intro){
+    intro.classList.remove('hidden')
+    intro.open = !hasPlayedMatcha()   // uppfälld första gången, hopfälld sedan
+  }
   el('matchaBoard').classList.remove('hidden')
   el('matchaFooter').classList.remove('hidden')
   el('matcha').classList.remove('hidden')
@@ -495,6 +507,7 @@ function finishMatcha(){
   const durationMs = matchaStartTime ? Date.now() - matchaStartTime : 0
   el('matchaBoard').classList.add('hidden')
   el('matchaFooter').classList.add('hidden')
+  el('matchaIntro')?.classList.add('hidden')   // spelreglerna är inte intressanta på resultatskärmen
   el('matchaFinished').classList.remove('hidden')
   const timeStr = formatDuration(durationMs)
   const pct = matchaTotalPairs ? Math.round((matchaCorrect / matchaTotalPairs) * 100) : 0
@@ -675,3 +688,4 @@ document.addEventListener('DOMContentLoaded', () => {
   el('clearScores-matcha')?.addEventListener('click', () => { if(confirm('Är du säker? Alla Matcha-resultat raderas permanent.')) clearMatchaScores() })
   updateMatchaButton()
 })
+

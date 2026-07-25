@@ -23,15 +23,44 @@
 
   /* Text colors */
   --text-primary: #1f2937;      /* Dark gray-blue for main text */
-  --text-secondary: #6b7280;    /* Medium gray for secondary text */
+  --text-secondary: #5f6672;    /* Mellangrå — klarar WCAG AA både mot vit yta (5,78:1)
+                                   och mot mintbakgrunden (5,27:1). Tidigare #6b7280 gav
+                                   bara 4,40:1 mot minten, där bl.a. .tagline sitter. */
   --text-light: #ffffff;        /* White for contrast */
+
+  --text-muted: #5f6672;        /* Samma som --text-secondary; egen variabel för
+                                   de ställen som tidigare hade fallback-värde */
 
   /* Semantic colors */
   --success: #10b981;           /* Green - correct answers */
   --success-bg: #ecfdf5;        /* Success background */
   --error: #dc2626;             /* Red - wrong answers; klarar WCAG AA mot vitt åt båda hållen */
   --error-bg: #fef2f2;          /* Error background */
+  --error-text: #b91c1c;        /* Röd text på --error-bg */
+  --error-text-strong: #7f1d1d; /* Kraftigast röd, för verktygens farerutor */
+  --error-border: #dc2626;      /* Kantlinje på farerutor */
   --warning: #f59e0b;           /* Amber - warnings */
+  --warning-bg: #fffbeb;        /* Gul varningsplatta (t.ex. Tidsjaktens sviter-chip) */
+  --warning-text: #b45309;      /* Bärnstensfärgad text på --warning-bg */
+  --warning-text-strong: #92400e;/* Kraftigare amber, för verktygens varningsrubriker */
+
+  /* Ytor som bar hårdkodad färg innan mörkt läge. Ljusvärdena är oförändrade,
+     de har bara flyttat hit så att mörkt läge kan byta dem på ett ställe. */
+  --question-from: #a7f3d0;     /* Frågerutans gradient, ljus ände */
+  --question-to: #86efac;       /* Frågerutans gradient, mörk ände */
+  --fc-card-bg: #bbf7d0;        /* Flashcard-kortets yta */
+  --option-disabled-bg: #f3f4f6;/* Utgråat <option> i dropdown */
+  --image-plate: #ffffff;       /* Vit platta bakom transparenta bildfrågor —
+                                   anatomibilderna är mörk streckteckning med
+                                   genomskinlig bakgrund och behöver ljus botten
+                                   i BÅDA lägena, annars försvinner de. */
+
+  /* Primärknappens gradient. Egen variabel eftersom --primary-deep i mörkt läge
+     måste bli LJUS (den är textfärg på 64 ställen), medan knappen fortsatt ska
+     ha vit text på mörkgrön botten. */
+  --btn-primary-from: #047857;
+  --btn-primary-to: #065f46;
+  --btn-primary-to-hover: #064e3b;
 
   /* Spacing & sizing */
   --radius: 12px;               /* Border radius */
@@ -43,6 +72,98 @@
   /* Transitions */
   --transition-fast: 0.15s ease;
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================================================
+   MÖRKT LÄGE
+
+   Styrs av data-theme på <html>, satt av js/theme.js FÖRE första målningen.
+   Inställningen har tre lägen (Följ systemet / Ljust / Mörkt), men theme.js
+   löser alltid ut ett SLUTGILTIGT värde – "auto" når aldrig hit. Därför
+   behövs ingen @media (prefers-color-scheme) här, och den mörka paletten
+   står på ett enda ställe i stället för två.
+
+   Sidan Content-Security-Policy tillåter inte inline-skript (script-src
+   'self'), så det gick inte att lägga temaväxlingen som en inline-snutt i
+   <head> som man annars gör. theme.js laddas i stället synkront från egen
+   origin, vilket ger samma effekt utan att sidan blinkar till i fel färg.
+   ============================================================================ */
+
+:root[data-theme="dark"] {
+  /* Gröna toner ljusnar: --primary-deep är TEXTFÄRG på 64 ställen och måste
+     läsas mot mörk yta. Knappens botten ligger kvar mörk i --btn-primary-*. */
+  --primary: #34d399;
+  --primary-light: #6ee7b7;
+  --primary-dark: #10b981;
+  --primary-deep: #34d399;
+  --primary-deepest: #6ee7b7;
+
+  --accent: #2dd4bf;
+  --accent-dark: #5eead4;
+
+  --bg-main: #0e1a15;
+  --bg-gradient-start: #0e1a15;
+  --bg-gradient-end: #0b1411;
+  --surface: #16241e;
+
+  --text-primary: #e8efec;
+  --text-secondary: #a9b8b1;
+  --text-muted: #a9b8b1;
+  --text-light: #ffffff;
+
+  --success: #34d399;
+  --success-bg: #10291f;
+  --error: #f87171;
+  --error-bg: #2a1315;
+  --error-text: #fca5a5;
+  --error-text-strong: #fecaca;
+  --error-border: #f87171;
+  --warning: #fbbf24;
+  --warning-bg: #2a1f0d;
+  --warning-text: #fcd34d;
+  --warning-text-strong: #fde68a;
+
+  --question-from: #123528;
+  --question-to: #17402f;
+  --fc-card-bg: #17402f;
+  --option-disabled-bg: #1e2a25;
+
+  /* Bildplattan stannar LJUS. Bildfrågornas anatomibilder är mörk streck-
+     teckning på transparent botten – mot en mörk platta försvinner de helt. */
+  --image-plate: #eef2f0;
+
+  /* Knappen behåller mörkgrön botten så att den vita texten klarar AA (5,48:1). */
+  --btn-primary-from: #047857;
+  --btn-primary-to: #065f46;
+  --btn-primary-to-hover: #064e3b;
+
+  /* Skuggor blir svarta i stället för gröna – en grön glöd mot mörk botten
+     läses som ett ljussken, inte som djup. */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.55);
+}
+
+/* Ytor som bär VIT text på grön gradient. De bygger gradienten av --primary och
+   --primary-deepest, som båda ljusnar i mörkt läge – vit text på #34d399 ger
+   2,2:1 och blir oläslig. Här hålls bottnen mörkgrön, vilket ger 5,48:1.
+   Ljust läge rörs inte: reglerna står kvar oförändrade ovan och gäller där. */
+:root[data-theme="dark"] .glossary-letter,
+:root[data-theme="dark"] .changelog-version,
+:root[data-theme="dark"] .gm-record-badge,
+:root[data-theme="dark"] .matcha-record-badge,
+:root[data-theme="dark"] .leitner-record-badge,
+:root[data-theme="dark"] .tidsjakt-record-badge,
+:root[data-theme="dark"] .tidsjakt-record-chip.beaten,
+:root[data-theme="dark"] .tidsjakt-praise.gold {
+  background: linear-gradient(135deg, var(--btn-primary-from) 0%, var(--btn-primary-to) 100%);
+}
+
+/* Leitner-brickan ligger BAKOM cellerna och är det som gör den aktiva lådans
+   text vit (se .leitner-box.active). Samma resonemang som ovan. */
+:root[data-theme="dark"] .leitner-chip {
+  background: linear-gradient(135deg, var(--btn-primary-from) 0%, var(--btn-primary-to) 100%);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* ============================================================================
@@ -436,7 +557,7 @@ option {
 
 option:disabled {
   color: var(--text-secondary);
-  background: #f3f4f6;
+  background: var(--option-disabled-bg);
 }
 
 /* På smala mobilskärmar: krymp alla dropdowns (de var onödigt stora) så att
@@ -532,14 +653,14 @@ select:focus-visible {
 
 /* Primary button - full gradient with white text */
 .btn.primary {
-  background: linear-gradient(135deg, var(--primary-deep) 0%, var(--primary-deepest) 100%);
+  background: linear-gradient(135deg, var(--btn-primary-from) 0%, var(--btn-primary-to) 100%);
   color: var(--text-light);
   border: none;
   box-shadow: var(--shadow);
 }
 
 .btn.primary:hover:not(:disabled) {
-  background: linear-gradient(135deg, var(--primary-deepest) 0%, #064e3b 100%);
+  background: linear-gradient(135deg, var(--btn-primary-to) 0%, var(--btn-primary-to-hover) 100%);
   box-shadow: var(--shadow-lg);
   transform: translateY(-2px);
 }
@@ -711,7 +832,7 @@ select:focus-visible {
   font-size: 1.25rem;
   font-weight: 600;
   padding: 20px;
-  background: linear-gradient(135deg, #a7f3d0 0%, #86efac 100%);
+  background: linear-gradient(135deg, var(--question-from) 0%, var(--question-to) 100%);
   border-radius: var(--radius-sm);
   border-left: 4px solid var(--primary-dark);
   margin-bottom: 24px;
@@ -734,7 +855,7 @@ select:focus-visible {
   max-width: 100%;
   height: auto;
   max-height: min(56vh, 460px);
-  background: #fff;
+  background: var(--image-plate);
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-sm);
 }
@@ -1161,7 +1282,7 @@ body:has(#quiz:not(.hidden)) {
   opacity: 0.55;
   cursor: not-allowed;
   border-style: dashed;
-  color: var(--text-muted, #6b7280);
+  color: var(--text-muted);
   background: rgba(16, 185, 129, 0.04);
 }
 
@@ -2211,6 +2332,50 @@ ol li {
   100% { transform: scale(1); }
 }
 
+/* Regelpanel som förklarar läget för en nybörjare (§13.1). Uppfälld första
+   gången, hopfälld sedan, så den inte ligger i vägen för den som redan kan.
+   Följer .leitner-intro och .tidsjakt-intro — samma formspråk i alla tre. */
+.matcha-intro {
+  margin: 0 0 12px;
+  border: 1px solid var(--primary-light);
+  border-radius: var(--radius-sm);
+  background: var(--success-bg);
+  padding: 8px 12px;
+}
+
+.matcha-intro > summary {
+  cursor: pointer;
+  color: var(--primary-deep);
+  font-weight: 600;
+  font-size: 0.88rem;
+  line-height: 1.35;
+  list-style-position: inside;
+}
+
+.matcha-intro > summary:focus-visible {
+  outline: 2px solid var(--primary-deep);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.matcha-intro-body {
+  margin-top: 8px;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.matcha-intro-body p { margin: 0 0 8px; }
+
+.matcha-intro-body p:last-child { margin-bottom: 2px; }
+
+.matcha-intro-list {
+  margin: 0 0 8px;
+  padding-left: 18px;
+}
+
+.matcha-intro-list li { margin-bottom: 4px; }
+
 .matcha-hint {
   margin: 0 0 14px;
   color: var(--text-secondary);
@@ -2328,7 +2493,7 @@ ol li {
 .matcha-tile.wrong {
   border-color: var(--error);
   background: var(--error-bg);
-  color: #b91c1c;
+  color: var(--error-text);
   cursor: default;
 }
 
@@ -2402,6 +2567,9 @@ ol li {
    via sammansatta selektorer (.card.hidden m.fl.). Matchas inre delar är inga
    .card, så de behöver egna dölj-regler; annars visas klart-vyn (Spela igen/
    Avsluta) mitt i ett pågående spel och brädet döljs aldrig vid spelslut. */
+/* `.hidden` är INTE en global utility (CSS_KARTA) – varje element som döljs
+   med classList.add('hidden') måste stå med här, annars syns det ändå. */
+.matcha-intro.hidden,
 .matcha-board.hidden,
 .matcha-finished.hidden,
 .matcha-record-badge.hidden,
@@ -2419,6 +2587,9 @@ ol li {
     border-width: 2px;
   }
   .matcha-hint { font-size: 0.82rem; margin-bottom: 10px; }
+  .matcha-intro { padding: 7px 10px; margin-bottom: 10px; }
+  .matcha-intro > summary { font-size: 0.82rem; }
+  .matcha-intro-body { font-size: 0.8rem; }
   .matcha-ring-wrap { width: 112px; height: 112px; }
   .matcha-ring-pct { font-size: 1.5rem; }
 }
@@ -2773,7 +2944,7 @@ ol li {
 .leitner-choice.wrong {
   border-color: var(--error);
   background: var(--error-bg);
-  color: #b91c1c;
+  color: var(--error-text);
 }
 .leitner-choice.shake { animation: leitnerShake 0.4s ease; }
 @keyframes leitnerShake {
@@ -3000,7 +3171,7 @@ ol li {
 /* Sista 15 sekunderna: amber. Sista 5: rött och pulserande – dramaturgi, och
    samtidigt en läsbar signal för den som inte tittar på siffran. */
 .tidsjakt-clock-row.warn .tidsjakt-clock-fill { background: linear-gradient(90deg, #d97706 0%, var(--warning) 100%); }
-.tidsjakt-clock-row.warn .tidsjakt-clock { color: #b45309; }
+.tidsjakt-clock-row.warn .tidsjakt-clock { color: var(--warning-text); }
 .tidsjakt-clock-row.danger .tidsjakt-clock-fill {
   background: linear-gradient(90deg, #b91c1c 0%, var(--error) 100%);
   animation: tidsjaktClockPulse 0.7s ease-in-out infinite;
@@ -3092,8 +3263,8 @@ ol li {
   flex: 0 0 auto;
   font-size: 0.78rem;
   font-weight: 800;
-  color: #b45309;
-  background: #fffbeb;
+  color: var(--warning-text);
+  background: var(--warning-bg);
   border: 1px solid var(--warning);
   border-radius: 999px;
   padding: 2px 9px;
@@ -3207,7 +3378,7 @@ ol li {
 .tidsjakt-choice.wrong {
   border-color: var(--error);
   background: var(--error-bg);
-  color: #b91c1c;
+  color: var(--error-text);
 }
 .tidsjakt-choice.shake { animation: tidsjaktShake 0.35s ease; }
 @keyframes tidsjaktShake {
@@ -3555,7 +3726,7 @@ ol li {
   position: relative;
   border-radius: var(--radius);
   min-height: 220px;
-  background: #bbf7d0;
+  background: var(--fc-card-bg);
 }
 
 /* Gemensamma stilar för fram- och baksida */
@@ -3800,7 +3971,7 @@ ol li {
 .hs-empty {
   margin: 4px 0 12px;
   font-size: 0.85rem;
-  color: var(--text-muted, #6b7280);
+  color: var(--text-muted);
   font-style: italic;
 }
 /* Spellägenas topplistesegment döljer tomtexten med classList.add('hidden') när

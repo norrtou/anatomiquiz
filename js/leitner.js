@@ -907,3 +907,4 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', onLeitnerKey)
   updateLeitnerButton()
 })
+

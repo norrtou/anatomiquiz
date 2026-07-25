@@ -21,7 +21,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "skelett"
 KB = ROOT / "kunskapsbank"
 SITE = "https://anatomiquiz.se"
-CSS_V = "0.9.256"
+CSS_V = "0.9.260"
 
 def esc(s): return html.escape(s, quote=True)
 
@@ -78,7 +78,11 @@ def head(title, desc, canon, ogtype, jsonld):
   <meta name="twitter:image:alt" content="Anatomiquiz — skelettet och kroppens ben">
 
   <meta name="theme-color" content="#10b981">
-  <meta name="color-scheme" content="light">
+  <meta name="color-scheme" content="light dark">
+  <!-- Tema (ljust/mörkt). Laddas SYNKRONT och före stilmallen: attributet
+       data-theme måste sitta på <html> innan första målningen, annars
+       blinkar sidan ljus. Inline gick inte – CSP:n tillåter bara egen origin. -->
+  <script src="/js/theme.js?v={CSS_V}"></script>
 
   <script type="application/ld+json">
 {json.dumps(jsonld, ensure_ascii=False, indent=2)}

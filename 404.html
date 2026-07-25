@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSP mot XSS (skript/stilar/data endast från egen origin). OBS: GitHub Pages tillåter inga egna HTTP-headers, därav meta-tagg; frame-ancestors/HSTS/COOP kan inte sättas via meta. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+
+  <!-- =========================================================
+       Felsida 404.
+
+       OBS: ALLA sökvägar på den här sidan måste vara absoluta (/css/…,
+       /img/…, /kunskapsbank/…). GitHub Pages serverar den här filen även
+       för djupa adresser – skriver någon /kunskapsbank/felstavat står
+       webbläsaren kvar på den adressen, och en relativ sökväg skulle då
+       leta i /kunskapsbank/ i stället för i roten.
+
+       Sidan ligger medvetet INTE i sitemap.xml och har ingen canonical:
+       en felsida ska inte peka ut sig själv som ett kanoniskt mål.
+       ========================================================= -->
+  <title>Sidan hittades inte – Anatomiquiz</title>
+  <meta name="description" content="Adressen finns inte på Anatomiquiz. Här hittar du vägen vidare till quizet, kunskapsbanken och den medicinska ordlistan.">
+  <meta name="author" content="Daniel Medin (Norrtou Creations)">
+
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <meta name="theme-color" content="#10b981">
+  <meta name="color-scheme" content="light dark">
+  <!-- Tema (ljust/mörkt). Laddas SYNKRONT och före stilmallen: attributet
+       data-theme måste sitta på <html> innan första målningen, annars
+       blinkar sidan ljus. Inline gick inte – CSP:n tillåter bara egen origin. -->
+  <script src="/js/theme.js?v=0.9.260"></script>
+
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon.png">
+  <link rel="apple-touch-icon" href="/img/icon-192.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/css/styles.css?v=0.9.260">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+  <main id="main" class="container" role="main">
+
+    <header class="header">
+      <div class="header-title">
+        <img src="/img/anatomiquiz-logo.webp" alt="" class="header-logo" width="66" height="132" aria-hidden="true">
+        <h1>Sidan hittades inte</h1>
+      </div>
+      <p class="tagline">Adressen du försökte nå finns inte – men innehållet finns kvar.</p>
+    </header>
+
+    <section class="card" aria-labelledby="notFoundHeading">
+      <h2 id="notFoundHeading" class="about-title">Vad har hänt?</h2>
+
+      <div class="info-prose">
+        <p>
+          Antingen är adressen felstavad, eller så har sidan bytt plats sedan länken skapades.
+          Ingenting har gått förlorat – nedan hittar du vägen till Anatomiquiz alla delar.
+        </p>
+        <p>
+          Letar du efter ett enskilt begrepp går det snabbast att söka i den
+          <a href="/medicinskordlista.html" class="info-link">medicinska ordlistan</a>,
+          som täcker flera tusen termer.
+        </p>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="whereToHeading">
+      <h2 id="whereToHeading" class="about-title">Hitta vidare</h2>
+
+      <div class="info-prose">
+        <ul>
+          <li><a href="/" class="info-link">Quiz och flashcards</a> – öva på anatomi, fysiologi och medicinsk terminologi.</li>
+          <li><a href="/kunskapsbank/" class="info-link">Kunskapsbanken</a> – muskel-, skelett-, led-, nerv- och kärltabeller samt faktatexter.</li>
+          <li><a href="/medicinskordlista.html" class="info-link">Medicinsk ordlista</a> – sökbar ordlista med latinska termer, sjukdomar och labbvärden.</li>
+          <li><a href="/verktyg/" class="info-link">Verktyg</a> – räknare för läkemedelsberäkning som visar hela uträkningen.</li>
+          <li><a href="/spellagen.html" class="info-link">Spellägen och studieteknik</a> – reglerna för varje läge och vilket som passar när.</li>
+          <li><a href="/info.html" class="info-link">Om Anatomiquiz</a> – vad sajten är, vem som gjort den och vilka källor som används.</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="actions">
+      <a href="/" class="btn primary">Till quizet</a>
+      <a href="/kunskapsbank/" class="btn">Till kunskapsbanken</a>
+      <a href="/medicinskordlista.html" class="btn">Till ordlistan</a>
+    </div>
+
+  </main>
+
+</body>
+</html>

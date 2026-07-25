@@ -868,3 +868,4 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', onTidsjaktKey)
   updateTidsjaktButton()
 })
+

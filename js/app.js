@@ -130,7 +130,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.258'
+const APP_VERSION = '0.9.260'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -1405,6 +1405,10 @@ function applySettings(){
   if(typeof s.timerEnabled === 'boolean') el('timerEnabled').checked = s.timerEnabled
   if(typeof s.soundEnabled === 'boolean' && el('soundEnabled')) el('soundEnabled').checked = s.soundEnabled
   if(typeof s.showNonMedical === 'boolean' && el('showNonMedical')) el('showNonMedical').checked = s.showNonMedical
+  // Temat bor i js/theme.js och en egen localStorage-nyckel, inte i hur_settings:
+  // det måste kunna läsas av sidor som inte laddar app.js (ordlistan,
+  // kunskapsbanken). Här speglas bara det redan valda värdet in i radioknapparna.
+  applyThemeSetting()
   // Bygg om utbildningsräkningen EFTER att icke-medicinska-bocken återställts, så
   // antalen i parentes stämmer innan vi återställer valet (disabled-state nedan
   // beror på antalet).
@@ -1417,6 +1421,16 @@ function applySettings(){
   }
   updateTopicOptions()
   updateStartButtons()
+}
+
+// Kryssa i den radioknapp som motsvarar sparat tema. Skyddad med typeof:
+// theme.js laddas i <head> på alla sidor, men app.js ska inte krascha om
+// filen någon gång inte hunnit ladda (jfr krokarna till spellägena, §12).
+function applyThemeSetting(){
+  if(typeof window.AQTheme === 'undefined') return
+  const pref = window.AQTheme.get()
+  const radio = document.querySelector(`input[name="theme"][value="${pref}"]`)
+  if(radio) radio.checked = true
 }
 
 function saveSettings(){
@@ -1901,6 +1915,14 @@ function init(){
   // Frågetyps-kryssrutor: håll knapparnas av/på i synk medan man bockar.
   document.querySelectorAll('input[data-type]').forEach(c=>{
     c.addEventListener('change', updateStartButtons)
+  })
+  // Tema: slår igenom direkt vid val, inte först vid Spara – man ska se vad man
+  // väljer. Skrivs av theme.js till egen nyckel, så "Tillbaka" (som återställer
+  // osparade ändringar via applySettings) rör det inte.
+  document.querySelectorAll('input[name="theme"]').forEach(r=>{
+    r.addEventListener('change', ()=>{
+      if(r.checked && typeof window.AQTheme !== 'undefined') window.AQTheme.set(r.value)
+    })
   })
 
   // Uppdatera startknapparnas av/på när ämnet byts. I sökläge (#topicSearch

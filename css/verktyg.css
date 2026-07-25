@@ -250,7 +250,7 @@
   padding: 9px 12px;
   border-radius: var(--radius-sm);
   border-left: 4px solid var(--warning);
-  background: #fffbeb;
+  background: var(--warning-bg);
   font-size: 0.88rem;
   color: var(--text-primary);
 }
@@ -265,7 +265,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: #92400e;
+  color: var(--warning-text-strong);
   margin-bottom: 3px;
 }
 
@@ -278,13 +278,13 @@
 }
 
 .vt-warn.is-fara {
-  border-left-color: #dc2626;
-  background: #fef2f2;
-  color: #7f1d1d;
+  border-left-color: var(--error-border);
+  background: var(--error-bg);
+  color: var(--error-text-strong);
 }
 
 .vt-warn.is-fara .vt-warn-titel {
-  color: #b91c1c;
+  color: var(--error-text);
 }
 
 /* Den stående slutraden – samma ord varje gång, tydligt avskild. */
@@ -528,7 +528,7 @@
 /* Säkerhetsraden. Ska läsas, inte skrollas förbi. */
 .vt-ansvar {
   border-left: 4px solid var(--warning);
-  background: #fffbeb;
+  background: var(--warning-bg);
   padding: 14px 16px;
   border-radius: var(--radius-sm);
   margin-bottom: 20px;
@@ -537,7 +537,7 @@
 }
 
 .vt-ansvar strong {
-  color: #92400e;
+  color: var(--warning-text-strong);
 }
 
 @media (max-width: 480px) {

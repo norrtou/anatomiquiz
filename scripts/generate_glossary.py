@@ -65,7 +65,7 @@ def artikel_sitemap_urls() -> list[str]:
     return ga.sitemap_urls(ga.load())
 
 # Cachebusters per asset — bumpa bara den som faktiskt ändrats.
-STYLES_V = "0.9.256"       # css/styles.css (synkad med övriga sidor 2026-07-25)
+STYLES_V = "0.9.260"       # css/styles.css (synkad med övriga sidor 2026-07-25)
 GLOSSARY_V = "0.9.189"      # css/glossary.css + js/glossary.js (denna release)
 
 # Svenska alfabetet — fast ordning för alfabetsraden. Bokstäver utan poster
@@ -783,7 +783,11 @@ def render_page(
 {jsonld(breadcrumb_obj)}{extra_jsonld_html}
 
   <meta name="theme-color" content="#10b981">
-  <meta name="color-scheme" content="light">
+  <meta name="color-scheme" content="light dark">
+  <!-- Tema (ljust/mörkt). Laddas SYNKRONT och före stilmallen: attributet
+       data-theme måste sitta på <html> innan första målningen, annars
+       blinkar sidan ljus. Inline gick inte – CSP:n tillåter bara egen origin. -->
+  <script src="/js/theme.js?v={STYLES_V}"></script>
 
   <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
   <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon.png">

@@ -91,16 +91,21 @@ def changed_assets():
 
 
 def generator_css_versions():
-    """[(skriptfil, variabelnamn, css-filnamn, nuvarande version)] i scripts/generate_*.py.
+    """[(skriptfil, variabelnamn, resursnamn, nuvarande version)] i scripts/generate_*.py.
 
-    Generatorerna bär CSS-versionen som en egen konstant (`STYLES_V = "0.9.247"`)
+    Generatorerna bär resursversionen som en egen konstant (`STYLES_V = "0.9.247"`)
     och skriver den i sidhuvudet varje gång de kör. Missas den skrivs en gammal
     buster tillbaka nästa gång ordlistan eller en tabellsida genereras om.
+
+    Gäller både .css och .js: sedan 0.9.259 skriver sidhuvudet även
+    `theme.js?v={CSS_V}`. Matchade mönstret bara .css kunde en ändring i enbart
+    js/theme.js lämna generatorerna med en gammal buster, och en regenerering
+    hade då serverat gammal temakod ur cachen.
     """
     found = []
     for path in sorted(SCRIPTS_DIR.glob("generate_*.py")):
         text = path.read_text(encoding="utf-8")
-        for css_name, var in re.findall(r"([a-z-]+\.css)\?v=\{([A-Z_]+)\}", text):
+        for css_name, var in re.findall(r"([a-z-]+\.(?:css|js))\?v=\{([A-Z_]+)\}", text):
             m = re.search(r"^" + var + r'\s*=\s*"([0-9]+\.[0-9]+\.[0-9]+)"', text, re.M)
             if m:
                 found.append((path, var, css_name, m.group(1)))
