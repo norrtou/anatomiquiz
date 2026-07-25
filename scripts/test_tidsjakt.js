@@ -89,7 +89,8 @@ function node(id, extra){
   'tidsjaktPlay', 'tidsjaktFinished', 'tidsjaktFooter', 'tidsjaktIntro', 'tidsjaktPlayerLabel',
   'tidsjaktMeta', 'tidsjaktClockRow', 'tidsjaktClockFill', 'tidsjaktClock', 'tidsjaktFly',
   'tidsjaktScoreBadge', 'tidsjaktRecordChip', 'tidsjaktStreakChip', 'tidsjaktPraise',
-  'tidsjaktCard', 'tidsjaktPrompt', 'tidsjaktChoices', 'tidsjaktAnsweredLabel',
+  'tidsjaktCard', 'tidsjaktCountdown', 'tidsjaktCountdownNr',
+  'tidsjaktPrompt', 'tidsjaktChoices', 'tidsjaktAnsweredLabel',
   'tidsjaktRingProgress', 'tidsjaktRingPct', 'tidsjaktDoneText', 'tidsjaktStatsText',
   'tidsjaktNextText', 'tidsjaktRecordBadge', 'tidsjaktMissedWrap', 'tidsjaktMissed',
   'tidsjaktMissedMore', 'startTidsjaktBtn', 'tidsjaktCancelBtn', 'tidsjaktRetryBtn',
@@ -98,7 +99,7 @@ function node(id, extra){
 
 // Element som är dolda redan i index.html måste vara dolda här också, annars
 // testar skalet ett utgångsläge som inte finns i verkligheten.
-;['tidsjaktFinished', 'tidsjaktPraise', 'tidsjaktRecordChip', 'tidsjaktStreakChip',
+;['tidsjaktFinished', 'tidsjaktCountdown', 'tidsjaktPraise', 'tidsjaktRecordChip', 'tidsjaktStreakChip',
   'tidsjaktFly', 'tidsjaktRecordBadge', 'tidsjaktMissedWrap',
   'tidsjaktMissedMore'].forEach(id => nodes[id].classList.add('hidden'))
 
@@ -157,6 +158,17 @@ function flush(maxMs){
     const t = timeouts.get(id)
     if(t && t.ms <= maxMs){ timeouts.delete(id); t.fn() }
   })
+}
+
+/** Kör nedräkningen (3–2–1–Kör!) klart så att rundan verkligen startar.
+ *  Utan den står varje test kvar i nedräkningen och svarar på en fråga som
+ *  ännu inte visats. Tar inte i om startTidsjakt avbröt (tomt ämne). */
+function runCountdown(){
+  let varv = 0
+  while(!nodes.tidsjaktCountdown.hidden() && varv++ < 8){
+    NOW += 1000
+    flush(1000)
+  }
 }
 
 // --- Frågepool i testet ------------------------------------------------------
@@ -303,7 +315,7 @@ ok('kort fråga räknas som snabb', ctx.tidsjaktIsQuick(mkQ(1)) === true)
   section('Start')
   // ============================================================================
   POOL = Array.from({ length: 30 }, (_, i) => mkQ(i + 1))
-  await ctx.startTidsjakt()
+  await ctx.startTidsjakt(); runCountdown()
   eq('klockan startar på 60 s', remaining(), 60000)
   eq('klocktexten visar hela sekunder', nodes.tidsjaktClock.textContent, '60 s')
   eq('stapeln är full', nodes.tidsjaktClockFill.style.width, '100.00%')
@@ -427,7 +439,7 @@ ok('kort fråga räknas som snabb', ctx.tidsjaktIsQuick(mkQ(1)) === true)
   // ============================================================================
   section('Rekordet jagas under spelet')
   // ============================================================================
-  await ctx.startTidsjakt()
+  await ctx.startTidsjakt(); runCountdown()
   ok('förklaringen ligger hopfälld för den som spelat förut', nodes.tidsjaktIntro.open === false)
   ok('förra rundans svitmärke är borta', nodes.tidsjaktStreakChip.hidden())
   ok('rekordmärket visas nu', !nodes.tidsjaktRecordChip.hidden())
@@ -462,7 +474,7 @@ ok('kort fråga räknas som snabb', ctx.tidsjaktIsQuick(mkQ(1)) === true)
   // ============================================================================
   section('Många missade frågor')
   // ============================================================================
-  await ctx.startTidsjakt()
+  await ctx.startTidsjakt(); runCountdown()
   for(let i = 0; i < 10; i++) answer(false)
   advance(60000)
   eq('högst åtta missade frågor listas', nodes.tidsjaktMissed.children.length, 8)
@@ -478,7 +490,7 @@ ok('kort fråga räknas som snabb', ctx.tidsjaktIsQuick(mkQ(1)) === true)
   section('Frågeleken')
   // ============================================================================
   POOL = [mkQ(1), mkQ(2), mkQ(3)]
-  await ctx.startTidsjakt()
+  await ctx.startTidsjakt(); runCountdown()
   eq('leken börjar om från början', currentId(), 'q1')
   answer(true); answer(true); answer(true)
   eq('leken slumpas om när den tar slut', currentId(), 'q1')
@@ -490,7 +502,7 @@ ok('kort fråga räknas som snabb', ctx.tidsjaktIsQuick(mkQ(1)) === true)
   section('Sant/falskt')
   // ============================================================================
   POOL = [{ id: 't1', type: 'tf', topic: 'osteologi_ben', prompt: 'Femur är ett långben.', correct: 'Sant', distractors: ['Falskt'] }]
-  await ctx.startTidsjakt()
+  await ctx.startTidsjakt(); runCountdown()
   eq('två alternativ i naturlig ordning', nodes.tidsjaktChoices.children.map(c => c.textContent), ['Sant', 'Falskt'])
   ok('rutnätet läggs om till en rad', nodes.tidsjaktChoices._class.has('two'))
   nodes.tidsjaktChoices.children[0].click()
@@ -501,7 +513,7 @@ ok('kort fråga räknas som snabb', ctx.tidsjaktIsQuick(mkQ(1)) === true)
   section('Tangentbord')
   // ============================================================================
   POOL = Array.from({ length: 5 }, (_, i) => mkQ(i + 1))
-  await ctx.startTidsjakt()
+  await ctx.startTidsjakt(); runCountdown()
   const keydown = ctx._docListeners.keydown[0]
   keydown({ key: '1', preventDefault(){} })
   flush(1000)
@@ -598,8 +610,49 @@ ok('kort fråga räknas som snabb', ctx.tidsjaktIsQuick(mkQ(1)) === true)
   // ============================================================================
   POOL = [{ id: 'f1', type: 'fc', topic: 'osteologi_ben', prompt: 'Kort', correct: 'Svar' }]
   ctx.lastAlert = null
-  await ctx.startTidsjakt()
+  await ctx.startTidsjakt(); runCountdown()
   ok('spelaren får veta varför det inte går', String(ctx.lastAlert).includes('inga flervals'))
+
+  // ============================================================================
+  section('Nedräkningen före start')
+  // ============================================================================
+  // Klockan startade tidigare när vyn ritades, så allt som mötte spelaren först
+  // åt riktiga sekunder ur de 60. Nedräkningen ska ge en definierad start.
+  POOL = [mkQ(1), mkQ(2), mkQ(3), mkQ(4), mkQ(5)]
+  await ctx.startTidsjakt()
+
+  ok('nedräkningen visas direkt', !nodes.tidsjaktCountdown.hidden())
+  ok('frågekortet är dolt under nedräkningen', nodes.tidsjaktCard.hidden())
+  eq('den börjar på 3', nodes.tidsjaktCountdownNr.textContent, '3')
+  ok('inga tryck räknas innan start', ev('tidsjaktLocked') === true)
+  ok('klockan visar full tid under nedräkningen',
+     Math.abs(ctx.tidsjaktRemainingMs() - 60000) < 1200)
+
+  NOW += 1000; flush(1000)
+  eq('räknar ned till 2', nodes.tidsjaktCountdownNr.textContent, '2')
+  NOW += 1000; flush(1000)
+  eq('räknar ned till 1', nodes.tidsjaktCountdownNr.textContent, '1')
+  NOW += 1000; flush(1000)
+  eq('avslutas med Kör!', nodes.tidsjaktCountdownNr.textContent, 'Kör!')
+  ok('rundan har fortfarande inte börjat', nodes.tidsjaktCard.hidden())
+
+  NOW += 1000; flush(1000)
+  ok('nedräkningen försvinner när rundan börjar', nodes.tidsjaktCountdown.hidden())
+  ok('frågekortet visas', !nodes.tidsjaktCard.hidden())
+  ok('spelaren kan svara', ev('tidsjaktLocked') === false)
+
+  // Kärnan i hela fixen: de 4 sekunderna ovan får inte ha kostat speltid.
+  const kvar = ctx.tidsjaktRemainingMs()
+  ok(`hela minuten är kvar när rundan börjar (${kvar} ms)`, Math.abs(kvar - 60000) < 150)
+
+  // Avbryt mitt i nedräkningen får inte starta en runda i en dold vy.
+  await ctx.startTidsjakt()
+  ok('ny nedräkning igång', !nodes.tidsjaktCountdown.hidden())
+  ctx.confirmAnswer = true
+  ctx.cancelTidsjakt()
+  NOW += 5000; flush(1000); flush(1000); flush(1000); flush(1000)
+  ok('avbruten nedräkning startar ingen klocka', ev('tidsjaktClockInterval') === null)
+  ok('vyn förblir dold', nodes.tidsjakt.hidden())
 
   // ============================================================================
   console.log(`\n${pass} godkända, ${fail} misslyckade`)

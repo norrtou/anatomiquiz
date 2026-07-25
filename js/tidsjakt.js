@@ -55,6 +55,8 @@ const TIDSJAKT_REVEAL_MS = 180        // rätt svar: bara ett kvitto, håll temp
 // som all annan tid, vilket är konsekvent: ett fel kostar.
 const TIDSJAKT_REVEAL_WRONG_MS = 700
 const TIDSJAKT_TICK_MS = 100          // klockans uppdateringstakt
+const TIDSJAKT_COUNTDOWN_FROM = 3     // "3 – 2 – 1 – Kör!" innan klockan startar
+const TIDSJAKT_COUNTDOWN_STEP_MS = 1000
 const TIDSJAKT_WARN_MS = 15000        // stapeln blir amber
 const TIDSJAKT_DANGER_MS = 5000       // stapeln blir röd och pulserar
 const TIDSJAKT_TICKING_MS = 3000      // tickljud de sista sekunderna
@@ -93,6 +95,7 @@ let tidsjaktDeadline = 0
 let tidsjaktStartTime = 0
 let tidsjaktEndTime = 0
 let tidsjaktClockInterval = null
+let tidsjaktCountdownTimer = null   // nedräkningen före start
 let tidsjaktLocked = false      // facit visas — inga nya tryck
 let tidsjaktPendingEnd = false  // tiden tog slut mitt i ett facit; avsluta när det visats
 let tidsjaktRunning = false
@@ -298,9 +301,13 @@ async function startTidsjakt(){
   tidsjaktRecordBeaten = false
   tidsjaktLastTickSec = -1
   tidsjaktPriorBest = tidsjaktBestFor(tidsjaktTopic)
-  tidsjaktStartTime = Date.now()
+  // Klockan sätts INTE här utan i beginTidsjaktRound(), när nedräkningen är
+  // klar. Sattes den redan nu skulle nedräkningens sekunder räknas som speltid.
+  tidsjaktStartTime = 0
   tidsjaktEndTime = 0
-  tidsjaktDeadline = tidsjaktStartTime + TIDSJAKT_DURATION_MS
+  // Bara för att klockan ska VISA full tid under nedräkningen. Det riktiga
+  // värdet sätts i beginTidsjaktRound() och skriver över det här.
+  tidsjaktDeadline = Date.now() + TIDSJAKT_DURATION_MS
 
   const label = topicLabelFor(tidsjaktTopic).replace(/\s*\([^)]*\)\s*$/, '')
   el('tidsjaktPlayerLabel').textContent = tidsjaktName
@@ -329,9 +336,70 @@ async function startTidsjakt(){
   updateTidsjaktStreakChip()
   updateTidsjaktRecordChip()
   updateTidsjaktClock()
+  startTidsjaktCountdown()
+  window.scrollTo({ top: 0 })
+}
+
+// ============================================================================
+// Nedräkning före start
+// ============================================================================
+// Klockan startade tidigare i samma ögonblick som vyn ritades. Allt som mötte
+// spelaren först — en uppfälld regelpanel, sidans målning, att hitta med
+// blicken — åt då riktiga sekunder ur de 60, och det syntes som ett sämre
+// resultat. Nedräkningen ger en definierad startpunkt: rundan börjar när
+// spelaren är redo, inte när DOM:en råkar bli klar.
+//
+// Frågan hålls dold under nedräkningen. Visades den skulle spelaren få tre
+// sekunders gratis läsning på den första frågan, vilket gör den första frågan
+// systematiskt lättare än de andra.
+function startTidsjaktCountdown(){
+  clearTidsjaktCountdown()
+  tidsjaktLocked = true            // inga tryck räknas innan starten
+  el('tidsjaktCard').classList.add('hidden')
+  el('tidsjaktChoices').innerHTML = ''
+  const wrap = el('tidsjaktCountdown')
+  wrap.classList.remove('hidden')
+
+  let left = TIDSJAKT_COUNTDOWN_FROM
+  const paint = () => {
+    const nr = el('tidsjaktCountdownNr')
+    nr.textContent = left > 0 ? String(left) : 'Kör!'
+    nr.classList.toggle('go', left <= 0)
+    if(!tidsjaktReducedMotion()){
+      nr.classList.remove('pop')
+      void nr.offsetWidth            // tvinga omstart av animationen
+      nr.classList.add('pop')
+    }
+    // Pip på varje siffra, en ljusare ton på "Kör!" – starten ska höras.
+    playTidsjaktTone(left > 0 ? 'tick' : 'bonus')
+    tidsjaktVibrate(left > 0 ? 20 : [30, 40, 30])
+  }
+  paint()
+
+  const step = () => {
+    left--
+    if(left < 0){ beginTidsjaktRound(); return }
+    paint()
+    tidsjaktCountdownTimer = setTimeout(step, TIDSJAKT_COUNTDOWN_STEP_MS)
+  }
+  tidsjaktCountdownTimer = setTimeout(step, TIDSJAKT_COUNTDOWN_STEP_MS)
+}
+
+function clearTidsjaktCountdown(){
+  if(tidsjaktCountdownTimer){ clearTimeout(tidsjaktCountdownTimer); tidsjaktCountdownTimer = null }
+}
+
+// Startskottet: här — och först här — börjar de 60 sekunderna.
+function beginTidsjaktRound(){
+  clearTidsjaktCountdown()
+  el('tidsjaktCountdown').classList.add('hidden')
+  el('tidsjaktCard').classList.remove('hidden')
+  tidsjaktLocked = false
+  tidsjaktStartTime = Date.now()
+  tidsjaktDeadline = tidsjaktStartTime + TIDSJAKT_DURATION_MS
+  updateTidsjaktClock()
   startTidsjaktClock()
   showTidsjaktQuestion()
-  window.scrollTo({ top: 0 })
 }
 
 // ============================================================================
@@ -729,6 +797,7 @@ function cancelTidsjakt(){
   if(confirm('Avbryta rundan? Resultatet sparas inte.')){
     tidsjaktRunning = false
     clearTidsjaktClock()
+    clearTidsjaktCountdown()   // avbryt under nedräkningen: annars startar rundan i en dold vy
     if(tidsjaktAdvanceTimer){ clearTimeout(tidsjaktAdvanceTimer); tidsjaktAdvanceTimer = null }
     if(tidsjaktPraiseTimer){ clearTimeout(tidsjaktPraiseTimer); tidsjaktPraiseTimer = null }
     el('tidsjakt').classList.add('hidden')

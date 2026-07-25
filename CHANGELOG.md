@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.262
+- **Tidsjakt har fått en nedräkning: 3 – 2 – 1 – Kör!** Klockan startade tidigare i samma ögonblick som vyn ritades, så allt som mötte spelaren först — sidans målning, att hitta med blicken, och fram till 0.9.261 en uppfälld regelpanel — åt riktiga sekunder ur de 60 och syntes som ett sämre resultat. Rundan börjar nu när spelaren är redo, inte när DOM:en råkar bli klar.
+- **Frågan hålls dold under nedräkningen.** Visades den skulle man få tre sekunders gratis läsning på just den första frågan, vilket gjort den systematiskt lättare än alla andra.
+- De 60 sekunderna sätts först i `beginTidsjaktRound()`. Under nedräkningen visar klockan full tid, men värdet är enbart för visning och skrivs över vid start — nedräkningens sekunder kan alltså inte läcka in i rundan.
+- Nedräkningen har samma minsta höjd som frågekortet (96 px), så ingenting hoppar när frågan tar över. Pip på varje siffra och en ljusare ton på "Kör!"; animationen tystas vid `prefers-reduced-motion`.
+- **Avbryt mitt i nedräkningen stoppar den.** Utan det hade rundan startat i en redan dold vy, med en klocka som tickade i bakgrunden.
+- `scripts/test_tidsjakt.js`: 16 nya tester för nedräkningen — att den räknar 3-2-1-Kör!, att kortet är dolt och tryck låsta under tiden, att avbryt inte startar någon klocka, och kärnan: att **hela minuten är kvar** när rundan börjar. 155 gröna.
+
 ## 0.9.261
 - **Regelpanelen "Så funkar det" ligger nu hopfälld vid start i alla tre spellägen.** Den fälldes tidigare upp automatiskt för den som inte hade något sparat resultat i ämnet — vilket i praktiken blev *varje* ny runda så länge man inte spelat klart en gång, eftersom resultatet sparas först vid rundans slut. Panelen la sig alltså i vägen för spelet i stället för att stötta det. Reglerna finns kvar, en tryckning bort.
 - Ändrar `CLAUDE_REGLER.md` §13.1: kravet "uppfälld första gången" gäller inte längre. Panelen ska finnas och förklara läget, men inte öppna sig själv.

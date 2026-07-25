@@ -125,7 +125,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="css/styles.css?v=0.9.260">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.262">
 </head>
 <body>
 
@@ -912,6 +912,16 @@
         <!-- Fast minsta höjd på kortet: hoppar frågan mellan kort så flyttar
              sig knapparna, och i ett snabbhetsspel betyder det feltryck som
              kostar spelaren tid hen inte förtjänat att bli av med. -->
+        <!-- Nedräkning innan klockan startar. Utan den började de 60 sekunderna
+             i samma ögonblick som vyn ritades, så allt som mötte spelaren först
+             — panelen, sidladdningen, att hitta med blicken — kostade riktig
+             speltid. Ersätter kortet visuellt och har samma minsta höjd, så att
+             ingenting hoppar när frågan tar över. -->
+        <div id="tidsjaktCountdown" class="tidsjakt-countdown hidden" role="status" aria-live="assertive">
+          <span class="tidsjakt-countdown-label">Gör dig redo</span>
+          <span id="tidsjaktCountdownNr" class="tidsjakt-countdown-nr"></span>
+        </div>
+
         <div id="tidsjaktCard" class="tidsjakt-card">
           <p id="tidsjaktPrompt" class="tidsjakt-prompt"></p>
         </div>
@@ -1223,10 +1233,10 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.261" defer></script>
+  <script src="js/app.js?v=0.9.262" defer></script>
   <!-- Spellägesmoduler: en egen fil per läge, laddas EFTER app.js (delar globalt scope). -->
   <script src="js/matcha.js?v=0.9.261" defer></script>
   <script src="js/leitner.js?v=0.9.261" defer></script>
-  <script src="js/tidsjakt.js?v=0.9.261" defer></script>
+  <script src="js/tidsjakt.js?v=0.9.262" defer></script>
 </body>
 </html>

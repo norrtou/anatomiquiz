@@ -3300,6 +3300,49 @@ ol li {
 /* --- Frågekortet och alternativen --------------------------------------- */
 /* min-height är inte kosmetik: utan den flyttar sig knapparna när frågan är
    kortare än förra, och i ett snabbhetsspel blir det feltryck som kostar tid. */
+/* Nedräkningen står där kortet ska stå och har SAMMA min-height (96px), så att
+   frågan inte får sidan att hoppa när den tar över. */
+.tidsjakt-countdown {
+  border: 2px dashed var(--primary-light);
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: 16px;
+  margin-bottom: 12px;
+  min-height: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.tidsjakt-countdown-label {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.tidsjakt-countdown-nr {
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--primary-deep);
+  font-variant-numeric: tabular-nums;   /* 3→2→1 får inte ändra bredd */
+}
+
+/* Sista sekunden växlar färg så att starten känns, inte bara syns. */
+.tidsjakt-countdown-nr.go { color: var(--accent-dark); }
+
+.tidsjakt-countdown-nr.pop { animation: tidsjaktCountdownPop 0.4s ease; }
+@keyframes tidsjaktCountdownPop {
+  0% { transform: scale(0.7); opacity: 0.4; }
+  55% { transform: scale(1.12); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tidsjakt-countdown-nr.pop { animation: none; }
+}
+
 .tidsjakt-card {
   border: 2px solid var(--primary-light);
   border-radius: var(--radius);
@@ -3493,6 +3536,8 @@ ol li {
    så var och en som ska kunna döljas behöver en egen regel här. Utan den visas
    klart-vyn mitt i rundan, precis som hände Matcha i 0.9.244. */
 .tidsjakt-intro.hidden,
+.tidsjakt-countdown.hidden,
+.tidsjakt-card.hidden,
 .tidsjakt-play.hidden,
 .tidsjakt-finished.hidden,
 .tidsjakt-praise.hidden,
