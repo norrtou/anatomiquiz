@@ -238,6 +238,8 @@ function renderMatchaRound(){
   updateMatchaScoreBadge(false)
   el('matchaHint').textContent = 'Para ihop alla par och tryck sedan på "Visa rätt svar".'
   updateMatchaNextButton()
+  // Krymp vyn tills hela spelplanen + knappen ryms på skärmen (app.js).
+  if(typeof fitActiveView === 'function') fitActiveView()
 }
 
 // Antal par som redan låg bakom oss när den här omgången startade (omgångarna
@@ -383,12 +385,10 @@ function revealMatchaRound(){
     link.correct = ok
     ;[link.left, link.right].forEach(t => {
       t.classList.remove('linked')
-      t.classList.add(ok ? 'correct' : 'wrong', ok ? 'pop' : 'shake')
+      t.classList.add(ok ? 'pop' : 'shake')
       t.disabled = true
-      const sr = document.createElement('span')
-      sr.className = 'sr-only'
-      sr.textContent = ok ? ' — rätt' : ' — fel'
-      t.appendChild(sr)
+      // ✓/✗ + skärmläsartext, inte bara färg (WCAG 1.4.1).
+      markAnswerBtn(t, ok)
     })
     if(ok){ roundCorrect++; matchaCorrect++ }
     matchaRevealedInRound++

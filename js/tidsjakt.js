@@ -383,6 +383,8 @@ function showTidsjaktQuestion(){
   el('tidsjaktAnsweredLabel').textContent = tidsjaktAnswered > 0
     ? `${tidsjaktAnswered} svar`
     : 'Så många du hinner'
+  // Krymp vyn tills fråga + alternativ + sidfot ryms på skärmen (app.js).
+  if(typeof fitActiveView === 'function') fitActiveView()
 }
 
 function showTidsjaktPraise(text, tone){
@@ -469,8 +471,10 @@ function onTidsjaktAnswer(btn, choice){
 
   Array.from(el('tidsjaktChoices').children).forEach(b => {
     b.disabled = true
-    if(b.dataset.choice === q.correct) b.classList.add('correct')
-    else if(b === btn) b.classList.add('wrong', 'shake')
+    // markAnswerBtn (app.js) lägger till ✓/✗ OCH dold skärmläsartext, så att
+    // utfallet inte förmedlas med enbart färg (WCAG 1.4.1).
+    if(b.dataset.choice === q.correct) markAnswerBtn(b, true)
+    else if(b === btn){ markAnswerBtn(b, false); b.classList.add('shake') }
   })
   playTidsjaktTone(ok ? 'right' : 'wrong', tidsjaktStreak)
   tidsjaktVibrate(ok ? 12 : [10, 35, 10])

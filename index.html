@@ -121,7 +121,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="css/styles.css?v=0.9.254">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.255">
 </head>
 <body>
 
@@ -587,7 +587,19 @@
       <h2 id="quizHeading" class="sr-only">Quiz</h2>
       <div class="quiz-header">
         <div id="playerLabel" aria-hidden="false"></div>
+        <!-- Frågeräknaren. Vid en svit tar berömmet tillfälligt över den här
+             raden i stället för att läggas till som en NY rad – quizvyn är
+             höjdbegränsad på mobil (fitActiveView i app.js) och en extra rad
+             kunde knuffa Nästa-knappen under fold. -->
         <div id="progress" aria-live="polite"></div>
+        <!-- Framsteg genom hela quizet + poäng som studsar när den ökar.
+             Delade .gm-*-klasser, samma formspråk som spellägena. -->
+        <div class="quiz-meter">
+          <div class="gm-progress-track" aria-hidden="true">
+            <div id="quizProgressFill" class="gm-progress-fill"></div>
+          </div>
+          <span id="quizScoreBadge" class="gm-score-badge" aria-live="polite"></span>
+        </div>
       </div>
 
       <div id="questionArea" class="question" role="region" aria-live="polite"></div>
@@ -918,7 +930,26 @@
          ========================================================= -->
     <section id="result" class="card hidden" aria-labelledby="resultHeading">
       <h2 id="resultHeading">Resultat</h2>
-      <p id="resultText"></p>
+
+      <!-- Ett slut som känns som ett slut: ring med andel rätt, nyckeltal utöver
+           poängen och rekordmärke mot personbästa i ämnet (räknat FÖRE
+           sparningen). Samma delade .gm-*-klasser som kommande spellägen. -->
+      <div class="gm-result">
+        <div class="gm-ring-wrap">
+          <svg class="gm-ring" viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="gm-ring-bg" cx="60" cy="60" r="52"></circle>
+            <circle id="quizRingProgress" class="gm-ring-progress" cx="60" cy="60" r="52"></circle>
+          </svg>
+          <div class="gm-ring-label">
+            <span id="quizRingPct" class="gm-ring-pct"></span>
+            <span class="gm-ring-sub">rätt</span>
+          </div>
+        </div>
+        <p id="resultText"></p>
+        <p id="quizStatsText" class="gm-stats-text"></p>
+        <p id="quizRecordBadge" class="gm-record-badge hidden" aria-live="polite">🏆 Nytt rekord!</p>
+      </div>
+
       <!-- Ämnesrelaterade fördjupningslänkar (fylls av finishQuiz när ämnet har material i kunskapsbanken) -->
       <p id="resultLinks" class="hidden"></p>
       <div class="actions">
@@ -1144,10 +1175,10 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.254" defer></script>
+  <script src="js/app.js?v=0.9.255" defer></script>
   <!-- Spellägesmoduler: en egen fil per läge, laddas EFTER app.js (delar globalt scope). -->
-  <script src="js/matcha.js?v=0.9.251" defer></script>
-  <script src="js/leitner.js?v=0.9.254" defer></script>
-  <script src="js/tidsjakt.js?v=0.9.254" defer></script>
+  <script src="js/matcha.js?v=0.9.255" defer></script>
+  <script src="js/leitner.js?v=0.9.255" defer></script>
+  <script src="js/tidsjakt.js?v=0.9.255" defer></script>
 </body>
 </html>

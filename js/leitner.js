@@ -397,6 +397,8 @@ function showLeitnerCard(){
   const btn = el('leitnerNextBtn')
   btn.textContent = 'Nästa'
   btn.disabled = true
+  // Krymp vyn tills kort + alternativ + Nästa ryms på skärmen (app.js).
+  if(typeof fitActiveView === 'function') fitActiveView()
 }
 
 // Lådtrappan: brickan glider till sin låda. `animate=false` snäpper dit den utan
@@ -491,8 +493,10 @@ function onLeitnerAnswer(btn, choice){
     () => {
       Array.from(el('leitnerChoices').children).forEach(b => {
         b.disabled = true
-        if(b.dataset.choice === rec.q.correct) b.classList.add('correct')
-        else if(b === btn) b.classList.add('wrong', 'shake')
+        // markAnswerBtn (app.js) lägger till ✓/✗ OCH dold skärmläsartext, så att
+        // utfallet inte förmedlas med enbart färg (WCAG 1.4.1).
+        if(b.dataset.choice === rec.q.correct) markAnswerBtn(b, true)
+        else if(b === btn){ markAnswerBtn(b, false); b.classList.add('shake') }
       })
       playLeitnerTone(ok ? 'right' : 'wrong')
       leitnerVibrate(ok ? 12 : [10, 35, 10])

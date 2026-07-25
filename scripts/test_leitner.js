@@ -161,6 +161,14 @@ const ctx = {
   },
   _docListeners: {},
   el: id => nodes[id] || null,
+  // app.js-hjälpare: markerar ett besvarat alternativ med ✓/✗ OCH dold
+  // skärmläsartext, så att utfallet inte förmedlas med enbart färg (WCAG 1.4.1).
+  markAnswerBtn: (b, ok) => {
+    b.classList.add(ok ? 'correct' : 'wrong')
+    const mark = new El('span'); mark.className = 'answer-mark'; mark.textContent = ok ? '✓' : '✗'
+    const sr = new El('span'); sr.className = 'sr-only'; sr.textContent = ok ? ' — rätt svar' : ' — fel svar'
+    b.append(mark, sr)
+  },
   shuffle: a => a.slice(),          // deterministisk ordning i tester
   loadFlags: () => ({}),
   loadPoolForTopic: async () => null,

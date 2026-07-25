@@ -192,6 +192,14 @@ const ctx = {
   },
   _docListeners: {},
   el: id => nodes[id] || null,
+  // app.js-hjälpare: markerar ett besvarat alternativ med ✓/✗ OCH dold
+  // skärmläsartext, så att utfallet inte förmedlas med enbart färg (WCAG 1.4.1).
+  markAnswerBtn: (b, ok) => {
+    b.classList.add(ok ? 'correct' : 'wrong')
+    const mark = new El('span'); mark.className = 'answer-mark'; mark.textContent = ok ? '✓' : '✗'
+    const sr = new El('span'); sr.className = 'sr-only'; sr.textContent = ok ? ' — rätt svar' : ' — fel svar'
+    b.append(mark, sr)
+  },
   shuffle: a => a.slice(),          // deterministisk ordning i tester
   loadFlags: () => FLAGS,
   loadPoolForTopic: async () => null,
@@ -330,6 +338,10 @@ ok('kort fråga räknas som snabb', ctx.tidsjaktIsQuick(mkQ(1)) === true)
   // ============================================================================
   answerCurrent(false)
   eq('facit tänds på rätt alternativ', nodes.tidsjaktChoices.children.some(c => c._class.has('correct')), true)
+  eq('rätt svar bär ✓ och skärmläsartext, inte bara färg (WCAG 1.4.1)',
+    nodes.tidsjaktChoices.children.find(c => c._class.has('correct')).textContent.includes('✓ — rätt svar'), true)
+  eq('fel svar bär ✗ och skärmläsartext',
+    nodes.tidsjaktChoices.children.find(c => c._class.has('wrong')).textContent.includes('✗ — fel svar'), true)
   eq('det valda felet märks upp', nodes.tidsjaktChoices.children.some(c => c._class.has('wrong') && c._class.has('shake')), true)
   eq('tidsstraff dras av', remaining(), 57000)
   eq('förlorad tid bokförs', ev('tidsjaktLostMs'), 3000)

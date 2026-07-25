@@ -793,35 +793,35 @@ select:focus-visible {
   }
 }
 
-/* TEXTQUIZ PÅ MOBIL — autoanpassad storlek (--quiz-fit).
+/* TEXTQUIZ PÅ MOBIL — autoanpassad storlek (--view-fit).
    Långa frågor med långa svarsalternativ knuffade Nästa-knappen under fold.
-   fitQuizToViewport() i app.js mäter kortets höjd mot den synliga viewporten
+   fitActiveView() i app.js mäter kortets höjd mot den synliga viewporten
    (visualViewport, dvs Safaris verkliga yta med adressfältet framme) och drar
-   ned --quiz-fit från 1 tills allt ryms. Skalan påverkar text, paddings och
+   ned --view-fit från 1 tills allt ryms. Samma variabel används av spellägena. Skalan påverkar text, paddings och
    mellanrum – men träffytan hålls ≥44px och texten ≥0.82rem (WCAG). Bildfrågor
    har sin egen tunade layout (.quiz-image) och rörs inte. */
 @media (max-width: 640px) {
   #quiz:not(.quiz-image) .question {
-    font-size: max(0.95rem, calc(1.25rem * var(--quiz-fit, 1)));
-    padding: calc(20px * var(--quiz-fit, 1));
-    margin-bottom: calc(24px * var(--quiz-fit, 1));
+    font-size: max(0.95rem, calc(1.25rem * var(--view-fit, 1)));
+    padding: calc(20px * var(--view-fit, 1));
+    margin-bottom: calc(24px * var(--view-fit, 1));
   }
   #quiz:not(.quiz-image) .quiz-header {
-    margin-bottom: calc(24px * var(--quiz-fit, 1));
-    padding-bottom: calc(16px * var(--quiz-fit, 1));
+    margin-bottom: calc(24px * var(--view-fit, 1));
+    padding-bottom: calc(16px * var(--view-fit, 1));
   }
   #quiz:not(.quiz-image) .answers {
-    margin: calc(24px * var(--quiz-fit, 1)) 0;
-    gap: max(8px, calc(12px * var(--quiz-fit, 1)));
+    margin: calc(24px * var(--view-fit, 1)) 0;
+    gap: max(8px, calc(12px * var(--view-fit, 1)));
   }
   #quiz:not(.quiz-image) .answer-btn {
-    font-size: max(0.82rem, calc(1rem * var(--quiz-fit, 1)));
-    padding: calc(16px * var(--quiz-fit, 1)) calc(20px * var(--quiz-fit, 1));
-    min-height: max(44px, calc(60px * var(--quiz-fit, 1)));
+    font-size: max(0.82rem, calc(1rem * var(--view-fit, 1)));
+    padding: calc(16px * var(--view-fit, 1)) calc(20px * var(--view-fit, 1));
+    min-height: max(44px, calc(60px * var(--view-fit, 1)));
   }
   #quiz:not(.quiz-image) .quiz-footer {
-    margin-top: calc(24px * var(--quiz-fit, 1));
-    padding-top: calc(16px * var(--quiz-fit, 1));
+    margin-top: calc(24px * var(--view-fit, 1));
+    padding-top: calc(16px * var(--view-fit, 1));
   }
 }
 
@@ -1977,6 +1977,149 @@ ol li {
   font-weight: 500;
   color: var(--text-secondary);
   margin-left: auto;
+}
+
+/* ✓/✗-markeringen från markAnswerBtn (app.js) återanvänds i spellägena. Där är
+   texten centrerad, så märket ska sitta intill den – inte tryckas ut till kanten
+   som i quizets vänsterställda lista. */
+.tidsjakt-choice .answer-mark,
+.matcha-tile .answer-mark {
+  margin-left: 6px;
+  padding-left: 0;
+  font-size: 1em;
+}
+.leitner-choice .answer-mark { padding-left: 8px; }
+
+/* ============================================================================
+   DELAD SPELVYSBAS (.gm-*) — "game mode"
+   ============================================================================
+   Framstegsmätare, poängbricka, resultatring, nyckeltal och rekordmärke är
+   samma sak i varje läge. Matcha, Leitner och Tidsjakt byggdes före den här
+   basen och har egna kopior (.matcha-*, .leitner-*, .tidsjakt-*) som lämnas i
+   fred — men quizet och alla NYA lägen använder klasserna här, så att kopiorna
+   blir tre och inte fem. Ringens omkrets (326.7) speglas i app.js
+   (GM_RING_CIRCUMFERENCE) och måste hållas i synk med r=52.
+   ============================================================================ */
+
+.gm-progress-track {
+  flex: 1 1 auto;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(16, 185, 129, 0.15);
+  overflow: hidden;
+}
+.gm-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+  border-radius: 999px;
+  transition: width 0.35s ease;
+}
+
+.gm-score-badge {
+  flex: 0 0 auto;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--primary-deep);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.gm-score-badge.bump { animation: gmBadgeBump 0.35s ease; }
+@keyframes gmBadgeBump {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.35); }
+  100% { transform: scale(1); }
+}
+
+/* Resultatvyn */
+.gm-result { text-align: center; margin-bottom: 8px; }
+
+.gm-ring-wrap { position: relative; width: 140px; height: 140px; margin: 4px auto 12px; }
+.gm-ring { width: 100%; height: 100%; transform: rotate(-90deg); }
+.gm-ring-bg { fill: none; stroke: var(--success-bg); stroke-width: 10; }
+.gm-ring-progress {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 326.7; /* 2 · π · r(52) */
+  stroke-dashoffset: 326.7;
+  transition: stroke-dashoffset 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.gm-ring-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.gm-ring-pct { font-size: 1.9rem; font-weight: 800; color: var(--primary-deep); font-variant-numeric: tabular-nums; }
+.gm-ring-sub { font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.04em; }
+
+.gm-stats-text { font-size: 0.86rem; color: var(--text-secondary); margin: 6px 0 8px; }
+
+.gm-record-badge {
+  display: inline-block;
+  margin: 0 0 6px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-deepest) 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.88rem;
+  animation: gmRecordIn 0.5s ease;
+}
+@keyframes gmRecordIn {
+  0% { transform: scale(0.7); opacity: 0; }
+  60% { transform: scale(1.08); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* .hidden är INTE global i projektet (CSS_KARTA) – varje döljbart element
+   behöver sin egen regel. */
+.gm-record-badge.hidden { display: none; }
+
+/* --- Quizets egen användning av basen ----------------------------------- */
+/* Mätaren ligger som en egen full rad i .quiz-header (som är flex med wrap),
+   så att den inte konkurrerar med namn och frågeräknare om bredden. */
+.quiz-meter {
+  flex: 1 0 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+/* Svitberöm tar tillfälligt över frågeräknarens plats (js/app.js
+   showQuizPraise) – ingen ny rad, alltså ingen risk att knuffa Nästa under
+   fold på mobil. */
+#progress.praise {
+  color: var(--primary-deep);
+  font-weight: 700;
+  animation: gmPraiseIn 0.4s ease;
+}
+@keyframes gmPraiseIn {
+  0% { transform: scale(0.9); opacity: 0.4; }
+  60% { transform: scale(1.04); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 640px) {
+  .gm-ring-wrap { width: 112px; height: 112px; }
+  .gm-ring-pct { font-size: 1.5rem; }
+  .gm-stats-text { font-size: 0.8rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gm-progress-fill,
+  .gm-score-badge.bump,
+  .gm-ring-progress,
+  .gm-record-badge,
+  #progress.praise {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 /* ============================================================================
@@ -3214,6 +3357,64 @@ ol li {
   .tidsjakt-ring-progress {
     animation: none !important;
     transition: none !important;
+  }
+}
+
+/* ============================================================================
+   SKALA SPELVYERNA TILL SKÄRMEN (--view-fit, sätts av fitActiveView i app.js)
+   ============================================================================
+   Textlängd skalas redan per element (--prompt-scale/--opt-scale/--tile-scale),
+   men det löser bara texten – inte totalhöjden. På en liten iPhone med
+   adressfältet framme kunde sidfoten hamna under fold. Samma mekanism som
+   textquizet använt sedan tidigare. Golv: 44 px träffyta och läslig text (WCAG).
+   ============================================================================ */
+@media (max-width: 640px) {
+  /* Matcha */
+  #matcha .matcha-header { padding: calc(8px * var(--view-fit, 1)) 10px; margin-bottom: calc(12px * var(--view-fit, 1)); }
+  #matcha .matcha-board { row-gap: max(4px, calc(7px * var(--view-fit, 1))); }
+  #matcha .matcha-col { gap: max(4px, calc(7px * var(--view-fit, 1))); }
+  #matcha .matcha-tile {
+    min-height: max(44px, calc(44px * var(--view-fit, 1)));
+    padding: calc(8px * var(--view-fit, 1)) 9px;
+    font-size: max(0.68rem, calc(0.82rem * var(--tile-scale, 1) * var(--view-fit, 1)));
+  }
+  #matcha .matcha-hint { margin-bottom: calc(10px * var(--view-fit, 1)); }
+
+  /* Leitner Light */
+  #leitner .leitner-header { padding: calc(8px * var(--view-fit, 1)) 10px; margin-bottom: calc(12px * var(--view-fit, 1)); }
+  #leitner .leitner-ladder-wrap { margin-bottom: calc(14px * var(--view-fit, 1)); gap: max(3px, calc(6px * var(--view-fit, 1))); }
+  #leitner .leitner-box { min-height: max(30px, calc(38px * var(--view-fit, 1))); }
+  #leitner .leitner-card { padding: calc(13px * var(--view-fit, 1)) 12px; margin-bottom: calc(14px * var(--view-fit, 1)); }
+  #leitner .leitner-prompt { font-size: max(0.82rem, calc(1.1rem * var(--prompt-scale, 1) * var(--view-fit, 1))); }
+  #leitner .leitner-choices { gap: max(6px, calc(9px * var(--view-fit, 1))); }
+  #leitner .leitner-choice {
+    min-height: max(44px, calc(48px * var(--view-fit, 1)));
+    padding: calc(10px * var(--view-fit, 1)) 11px;
+    font-size: max(0.76rem, calc(0.92rem * var(--opt-scale, 1) * var(--view-fit, 1)));
+  }
+
+  /* Tidsjakt */
+  #tidsjakt .tidsjakt-header { padding: calc(8px * var(--view-fit, 1)) 10px; margin-bottom: calc(12px * var(--view-fit, 1)); }
+  #tidsjakt .tidsjakt-card {
+    padding: calc(13px * var(--view-fit, 1)) 12px;
+    margin-bottom: calc(12px * var(--view-fit, 1));
+    min-height: max(64px, calc(86px * var(--view-fit, 1)));
+  }
+  #tidsjakt .tidsjakt-prompt { font-size: max(0.82rem, calc(1.08rem * var(--prompt-scale, 1) * var(--view-fit, 1))); }
+  #tidsjakt .tidsjakt-choices { gap: max(6px, calc(8px * var(--view-fit, 1))); }
+  #tidsjakt .tidsjakt-choice {
+    min-height: max(44px, calc(60px * var(--view-fit, 1)));
+    padding: calc(9px * var(--view-fit, 1)) 8px;
+    font-size: max(0.76rem, calc(0.9rem * var(--opt-scale, 1) * var(--view-fit, 1)));
+  }
+  #tidsjakt .tidsjakt-choices.two .tidsjakt-choice { min-height: max(52px, calc(78px * var(--view-fit, 1))); }
+
+  /* Sidfoten i alla tre – det är den som hamnar under fold först. */
+  #matcha .quiz-footer,
+  #leitner .quiz-footer,
+  #tidsjakt .quiz-footer {
+    margin-top: calc(24px * var(--view-fit, 1));
+    padding-top: calc(16px * var(--view-fit, 1));
   }
 }
 

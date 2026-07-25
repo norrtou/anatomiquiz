@@ -130,7 +130,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.254'
+const APP_VERSION = '0.9.255'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -150,6 +150,11 @@ let timerInterval = null
 let questionStartTime = 0
 let quizTimerOn = false
 let quizStartTime = 0
+// Svit i quizet: beröm vid var femte rätt i rad, och bästa sviten som nyckeltal
+// på resultatskärmen. Nollställs av startQuiz.
+let quizStreak = 0
+let quizBestStreak = 0
+const QUIZ_STREAK_PRAISE = 5
 
 async function loadQuestions(path){
   try {
@@ -574,6 +579,7 @@ async function startQuiz(allowedTypes){
   // Varje forcerad fråga som kom med förbrukar en garanterad återkomst.
   if(practiceWrong) forced.forEach(q => consumeReview(q.id))
   currentIdx = 0; score=0
+  quizStreak = 0; quizBestStreak = 0
   // Mät alltid tiden (oavsett om frågetimern är på) för statistik per ämne.
   quizStartTime = Date.now()
   el('playerLabel').textContent = `${name}`
@@ -618,7 +624,10 @@ function showQuestion(){
     b.addEventListener('click', ()=>selectAnswer(b, opt, q.correct))
     el('answers').appendChild(b)
   })
-  el('progress').textContent = `Fråga ${currentIdx+1}/${quizQuestions.length} — Poäng: ${score}`
+  // Frågeräknaren står för sig; poängen bor i sin egen studsande bricka och
+  // framstegen i stapeln, så raden inte blir en klump av siffror.
+  el('progress').textContent = `Fråga ${currentIdx+1}/${quizQuestions.length}`
+  updateQuizMeter(false)
   // Footer-räknare (visas bara i bildfrågornas fokusvy där quiz-header är dold).
   const fp = el('footerProgress'); if(fp) fp.textContent = `Fråga ${currentIdx+1}/${quizQuestions.length}`
   // På sista frågan: gör tydligt att knappen avslutar quizet och visar resultatet.
@@ -631,41 +640,161 @@ function showQuestion(){
   // browsern upp till knappen och man "hoppar" runt på sidan.
   setTimeout(()=>{
     el('quiz').scrollIntoView({ block: 'start' })
-    fitQuizToViewport()
+    fitActiveView()
     const first = el('answers').querySelector('button')
     if(first) first.focus({ preventScroll: true })
   }, 50)
 }
 
-// Krymp textquizet tills fråga + svarsalternativ + Nästa ryms på en mobilskärm.
-// Långa frågor med långa svar knuffade annars Nästa-knappen under fold, särskilt
-// i Safari på iPhone där adressfältet äter ~100px av höjden (visualViewport ger
-// den verkliga ytan, innerHeight gör inte det). CSS-variabeln --quiz-fit skalar
-// text, paddings och mellanrum; golv på 44px träffyta och 0.82rem text i CSS.
-const QUIZ_FIT_MIN = 0.7
-const QUIZ_FIT_STEP = 0.04
-
-function fitQuizToViewport(){
-  const quiz = el('quiz')
-  if(!quiz || quiz.classList.contains('hidden')) return
-  // Bara mobil (matchar CSS-brytpunkten); bildfrågor har sin egen tunade layout.
-  if(window.innerWidth > 640 || quiz.classList.contains('quiz-image')){
-    quiz.style.removeProperty('--quiz-fit')
-    return
-  }
-  const avail = (window.visualViewport && window.visualViewport.height) || window.innerHeight
-  let fit = 1
-  quiz.style.setProperty('--quiz-fit', '1')
-  // Kortets underkant (Nästa-knappen) ska ligga innanför den synliga ytan.
-  while(fit > QUIZ_FIT_MIN && quiz.getBoundingClientRect().bottom > avail - 8){
-    fit = Math.round((fit - QUIZ_FIT_STEP) * 100) / 100
-    quiz.style.setProperty('--quiz-fit', String(fit))
+// ============================================================================
+// Quizets mätare, svit och beröm
+// ============================================================================
+// Framsteg genom HELA quizet i en fylld stapel, plus en poängbricka som studsar
+// när den ökar. Samma grepp som spellägena – informationen fanns redan i texten
+// "Fråga 3/20 — Poäng: 2", men utan att något hände när siffran gick upp.
+function updateQuizMeter(bump){
+  const total = quizQuestions.length || 1
+  const fill = el('quizProgressFill')
+  if(fill) fill.style.width = Math.min(100, Math.round((currentIdx / total) * 100)) + '%'
+  const badge = el('quizScoreBadge')
+  if(!badge) return
+  badge.textContent = `Poäng: ${score}`
+  if(bump){
+    badge.classList.remove('bump')
+    void badge.offsetWidth      // tvinga reflow så animationen kan köras om
+    badge.classList.add('bump')
   }
 }
 
+// Berömmet tar TILLFÄLLIGT över frågeräknarens rad i stället för att läggas som
+// en ny rad. Quizvyn är höjdbegränsad på mobil (fitActiveView) – en extra rad
+// hade kunnat knuffa Nästa-knappen under fold, och då vore lyftet en försämring.
+let quizPraiseTimer = null
+function showQuizPraise(text){
+  const p = el('progress')
+  if(!p) return
+  if(quizPraiseTimer) clearTimeout(quizPraiseTimer)
+  const restore = `Fråga ${currentIdx+1}/${quizQuestions.length}`
+  p.textContent = text
+  p.classList.add('praise')
+  quizPraiseTimer = setTimeout(() => {
+    quizPraiseTimer = null
+    p.classList.remove('praise')
+    p.textContent = restore
+  }, 1400)
+}
+
+// ============================================================================
+// SKALA VYN TILL SKÄRMEN — gäller quizet OCH alla spellägen
+// ============================================================================
+// Krymp den aktiva vyn tills fråga + svarsalternativ + primärknapp ryms på en
+// mobilskärm. Långa frågor med långa svar knuffade annars knappen under fold,
+// särskilt i Safari på iPhone där adressfältet äter ~100 px av höjden
+// (visualViewport ger den verkliga ytan, innerHeight gör inte det).
+// CSS-variabeln --view-fit skalar text, paddings och mellanrum; golv på 44 px
+// träffyta och 0.82rem text i CSS (WCAG).
+//
+// Detta är en KRAV-mekanism, inte en finess: att textlängd skalas per element
+// (--prompt-scale/--opt-scale i spellägena) löser texten men inte totalhöjden.
+// Varje läge ska kalla fitActiveView() efter att ha renderat sin vy.
+const VIEW_FIT_MIN = 0.7
+const VIEW_FIT_STEP = 0.04
+// Sektioner som kan behöva krympas. Ett nytt spelläge läggs till här OCH får
+// använda var(--view-fit, 1) i sina mobilstorlekar – annars gör mätningen inget.
+const FIT_SECTIONS = ['quiz', 'matcha', 'leitner', 'tidsjakt']
+
+function fitActiveView(){
+  const avail = (window.visualViewport && window.visualViewport.height) || window.innerHeight
+  FIT_SECTIONS.forEach(id => {
+    const sec = el(id)
+    if(!sec) return
+    // Bara mobil (matchar CSS-brytpunkten); bildfrågor har sin egen tunade layout.
+    if(sec.classList.contains('hidden') || window.innerWidth > 640 || sec.classList.contains('quiz-image')){
+      sec.style.removeProperty('--view-fit')
+      return
+    }
+    let fit = 1
+    sec.style.setProperty('--view-fit', '1')
+    // Kortets underkant (primärknappen) ska ligga innanför den synliga ytan.
+    while(fit > VIEW_FIT_MIN && sec.getBoundingClientRect().bottom > avail - 8){
+      fit = Math.round((fit - VIEW_FIT_STEP) * 100) / 100
+      sec.style.setProperty('--view-fit', String(fit))
+    }
+  })
+}
+
 // Rotation, adressfält som fälls in/ut, textstorleksändring – mät om.
-window.addEventListener('resize', fitQuizToViewport)
-if(window.visualViewport) window.visualViewport.addEventListener('resize', fitQuizToViewport)
+window.addEventListener('resize', fitActiveView)
+if(window.visualViewport) window.visualViewport.addEventListener('resize', fitActiveView)
+window.addEventListener('orientationchange', () => setTimeout(fitActiveView, 250))
+
+// ============================================================================
+// DELAT LJUD OCH HAPTIK
+// ============================================================================
+// Korta, självgenererade toner via Web Audio — aldrig externa ljudfiler (CSP
+// tillåter ingen extern källa). AudioContext skapas först vid en spelarinitierad
+// tryckning, vilket uppfyller webbläsarnas autoplay-krav. Av/på styrs av den
+// befintliga "Ljudeffekter"-bocken i Inställningar; inget läge har en egen.
+// Spellägena byggdes före den här hjälparen och har egna kopior — nya lägen och
+// quizet använder den här.
+let sharedAudioCtx = null
+
+function soundEffectsOn(){
+  const cb = el('soundEnabled')
+  return cb ? !!cb.checked : true
+}
+
+function getSharedAudioCtx(){
+  if(sharedAudioCtx) return sharedAudioCtx
+  const Ctx = window.AudioContext || window.webkitAudioContext
+  if(!Ctx) return null
+  try{ sharedAudioCtx = new Ctx() }catch(e){ sharedAudioCtx = null }
+  return sharedAudioCtx
+}
+
+// freqs: en eller flera frekvenser som spelas i följd. falling=true böjer tonen
+// nedåt (används för fel svar) – ljudet ska berätta VAD som hände, inte bara att
+// något hände.
+function playTone(freqs, falling){
+  if(!soundEffectsOn()) return
+  const ctx = getSharedAudioCtx()
+  if(!ctx) return
+  if(ctx.state === 'suspended') ctx.resume()
+  const list = Array.isArray(freqs) ? freqs : [freqs]
+  list.forEach((freq, i) => {
+    const t0 = ctx.currentTime + i * 0.09
+    const osc = ctx.createOscillator()
+    const gain = ctx.createGain()
+    osc.type = 'sine'
+    osc.frequency.setValueAtTime(freq, t0)
+    if(falling) osc.frequency.exponentialRampToValueAtTime(freq * 0.72, t0 + 0.18)
+    gain.gain.setValueAtTime(0.0001, t0)
+    gain.gain.exponentialRampToValueAtTime(0.16, t0 + 0.01)
+    gain.gain.exponentialRampToValueAtTime(0.0001, t0 + (falling ? 0.22 : 0.15))
+    osc.connect(gain); gain.connect(ctx.destination)
+    osc.start(t0)
+    osc.stop(t0 + (falling ? 0.26 : 0.2))
+  })
+}
+
+// Stigande tonhöjd med sviten (ett halvsteg per rätt, tak en oktav) — det är
+// kombokänslan: ljudet säger att man är inne i en serie.
+function streakTone(streak){
+  return 523.25 * Math.pow(2, Math.min(Math.max(streak - 1, 0), 12) / 12)
+}
+
+function hapticPulse(pattern){
+  if(typeof navigator !== 'undefined' && typeof navigator.vibrate === 'function') navigator.vibrate(pattern)
+}
+
+// Omkretsen för resultatringen (2 · π · r(52)) – matchar .gm-ring-progress i
+// styles.css. Delas av quizet och kommande lägen.
+const GM_RING_CIRCUMFERENCE = 326.7
+
+function reducedMotionPreferred(){
+  return typeof window !== 'undefined' && !!window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches
+}
 
 // Markera en svarsknapp som rätt/fel med färg + ✓/✗ + dold skärmläsartext,
 // så att utfallet inte förmedlas med enbart färg (WCAG 1.4.1).
@@ -684,17 +813,28 @@ function markAnswerBtn(b, ok){
 function selectAnswer(btn, selected, correct){
   Array.from(el('answers').children).forEach(b=>{b.disabled=true; b.setAttribute('aria-disabled','true')})
   const q = quizQuestions[currentIdx]
-  if(selected===correct){
+  const ok = selected === correct
+  hapticPulse(10)   // kvitto på själva trycket, före facit
+  if(ok){
     markAnswerBtn(btn, true); score++
+    quizStreak++
+    quizBestStreak = Math.max(quizBestStreak, quizStreak)
     // Rätt svar: frågan behöver inte längre extra övning
     if(q) markCorrect(q.id)
   } else {
     // Hitta rätt-knappen FÖRE markeringen — ✓/✗-texten ändrar textContent
     const correctBtn = Array.from(el('answers').children).find(b=>b.textContent===correct)
     markAnswerBtn(btn, false)
+    quizStreak = 0
     // Fel svar: vägs upp i framtida quiz om "öva extra"-läget är på
     if(q) markWrong(q.id)
     if(correctBtn) markAnswerBtn(correctBtn, true)
+  }
+  playTone(ok ? streakTone(quizStreak) : 220, !ok)
+  hapticPulse(ok ? 12 : [10, 35, 10])
+  updateQuizMeter(ok)
+  if(ok && quizStreak >= QUIZ_STREAK_PRAISE && quizStreak % QUIZ_STREAK_PRAISE === 0){
+    showQuizPraise(`🔥 ${quizStreak} rätt i rad!`)
   }
   el('nextBtn').disabled = false
   el('nextBtn').setAttribute('aria-disabled','false')
@@ -740,15 +880,63 @@ const TOPIC_RESOURCES = {
   ]
 }
 
+// Bästa andel rätt i ÄMNET tidigare, räknat INNAN dagens resultat sparas.
+// Andel och inte antal: man kan välja 10, 20, 50 eller 100 frågor, så "14 rätt"
+// är inte jämförbart mellan omgångar medan procenten är det.
+function quizPriorBestPct(topic){
+  return getScores().reduce((best, s) => {
+    if(s.topic !== topic || !(s.total > 0)) return best
+    return Math.max(best, s.score / s.total)
+  }, 0)
+}
+
+function animateQuizRing(pct){
+  const label = el('quizRingPct')
+  if(label) label.textContent = pct + ' %'
+  const ring = el('quizRingProgress')
+  if(!ring) return
+  const clamped = Math.max(0, Math.min(100, pct))
+  const offset = GM_RING_CIRCUMFERENCE * (1 - clamped / 100)
+  ring.style.strokeDashoffset = String(GM_RING_CIRCUMFERENCE)
+  requestAnimationFrame(() => { ring.style.strokeDashoffset = String(offset) })
+}
+
 function finishQuiz(){
+  clearTimer()
+  if(quizPraiseTimer){ clearTimeout(quizPraiseTimer); quizPraiseTimer = null }
   el('quiz').classList.add('hidden')
   // Städa fokusläget (bildfrågornas kompaktläge) så det inte hänger kvar.
   el('quiz').classList.remove('quiz-image')
   el('result').classList.remove('hidden')
+
+  const total = quizQuestions.length
+  const pct = total ? Math.round((score / total) * 100) : 0
+  const durationMs = quizStartTime ? Date.now() - quizStartTime : 0
+  // Rekordet mäts mot personbästa i ämnet FÖRE sparningen – annars är dagens
+  // resultat redan med i jämförelsen och man slår aldrig sitt rekord.
+  const priorPct = quizPriorBestPct(el('topic').value)
+  const isRecord = priorPct > 0 && total > 0 && (score / total) > priorPct
+
   // Sätt resultattexten FÖRST, och kapsla in sparning/länkar som kan kasta, så att
   // resultatskärmen (med Avsluta/Spela igen) ALLTID visas även om något fel uppstår.
-  el('resultText').textContent = `Du fick ${score} av ${quizQuestions.length} rätt. Resultatet sparades i topplistan.`
+  el('resultText').textContent = `Du fick ${score} av ${total} rätt. Resultatet sparades i topplistan.`
   el('resultText').setAttribute('aria-live','polite')
+
+  // Nyckeltal utöver poängen – bara det som faktiskt hände. "🔥 bästa svit 1" och
+  // en tid på 0 är inga prestationer att skylta med.
+  const stats = []
+  if(durationMs > 0) stats.push(`⏱ ${formatDuration(durationMs)} totalt`)
+  if(durationMs > 0 && total > 0) stats.push(`⚡ ${(durationMs / 1000 / total).toFixed(1)} s per fråga`)
+  if(quizBestStreak > 1) stats.push(`🔥 bästa svit ${quizBestStreak}`)
+  const statsEl = el('quizStatsText')
+  if(statsEl) statsEl.textContent = stats.join(' · ')
+
+  const badge = el('quizRecordBadge')
+  if(badge) badge.classList.toggle('hidden', !isRecord)
+  animateQuizRing(pct)
+  playTone(pct >= 50 ? [523.25, 659.25, 783.99] : [392, 440])
+  hapticPulse([18, 60, 18])
+
   try { saveScore() } catch(e){ console.error('saveScore misslyckades:', e) }
   try { renderResultLinks() } catch(e){ console.error('renderResultLinks misslyckades:', e) }
   // Bildquizets fokusläge dolde sidrubriken och scrollIntoView pinnade kortet högst
@@ -1188,6 +1376,7 @@ let fcIdx = 0
 let fcFlipped = false
 let fcTimerInterval = null
 let fcStartTime = 0
+let fcSessionStart = 0    // hela genomgångens starttid (fcStartTime nollställs per kort)
 let fcTimerOn = false
 
 // ---------------------------------------------------------------------------
@@ -1528,6 +1717,7 @@ async function startFlashcards() {
     .map(q => ({ prompt: q.prompt, sub: q.sub || '', correct: q.correct }))
 
   fcIdx = 0
+  fcSessionStart = Date.now()
   el('fcPlayerLabel').textContent = name
   el('setup').classList.add('hidden')
   el('flashcards').classList.remove('hidden')
@@ -1581,6 +1771,7 @@ function flipCard() {
   if (fcFlipped) return
   fcFlipped = true
   clearFcTimer()
+  hapticPulse(10)   // kvitto på att kortet vändes
   el('fcCard').classList.add('is-flipped')
   // Tiden fram till klicket visas på svarssidan (kortets baksida).
   if (fcTimerOn) {
@@ -1619,7 +1810,14 @@ function finishFlashcards() {
   el('fcScene').classList.add('hidden')
   el('fcNextBtn').classList.add('hidden')
   el('fcTimer').textContent = ''
-  el('fcDoneText').textContent = `Klart! Du gick igenom alla ${fcCards.length} kort.`
+  // Ett slut ska säga något om vad man gjort. Flashcards har ingen poäng att
+  // visa – då är omfattningen och tiden det ärliga nyckeltalet.
+  const fcMs = fcSessionStart ? Date.now() - fcSessionStart : 0
+  const perCard = fcMs > 0 && fcCards.length ? ` — ${(fcMs / 1000 / fcCards.length).toFixed(1)} s per kort` : ''
+  el('fcDoneText').textContent = fcMs > 0
+    ? `Klart! ${fcCards.length} kort på ${formatDuration(fcMs)}${perCard}.`
+    : `Klart! Du gick igenom alla ${fcCards.length} kort.`
+  hapticPulse([18, 60, 18])
   el('fcFinished').classList.remove('hidden')
 }
 

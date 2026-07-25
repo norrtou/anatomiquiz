@@ -999,6 +999,20 @@ använd mönstret därifrån och översätt det till det nya lägets mekanik:**
   att man behöver läsa texten.
 - Egen `js/<namn>.js` med skyddade `typeof`-krokar från `app.js` (§12). Cachebustern
   sätter `scripts/bump_version.py` automatiskt – aldrig för hand.
+- **Vyn SKA skalas till skärmen, inte bara texten.** Lägg sektionen i
+  `FIT_SECTIONS` (`js/app.js`), kalla `fitActiveView()` efter varje renderad
+  vy, och använd `var(--view-fit, 1)` i lägets mobilstorlekar — annars gör
+  mätningen ingenting. Att skala textlängd per element
+  (`--prompt-scale`/`--opt-scale`) löser texten men **inte totalhöjden**: på en
+  liten iPhone med adressfältet framme hamnar sidfoten under fold, och då är
+  primärknappen borta. Golv i CSS: 44 px träffyta och läslig text (WCAG).
+  Textquizet har haft mekanismen sedan tidigare — spellägena saknade den till
+  0.9.255, alltså gjorde det GAMLA läget rätt och de nya fel.
+- **Rätt/fel får aldrig förmedlas med enbart färg (WCAG 1.4.1).** Använd
+  `markAnswerBtn(btn, ok)` ur `js/app.js` — den sätter klassen OCH lägger till
+  ✓/✗ plus dold skärmläsartext. Leitner och Tidsjakt markerade bara med färg
+  fram till 0.9.255; quizet har gjort rätt hela tiden. Skriv aldrig
+  `classList.add('correct')` som enda utfallsmarkering.
 - **Varje nytt element som ska kunna döljas behöver en egen `.x.hidden`-regel** —
   `.hidden` är inte global i projektet (CSS_KARTA). Detta orsakade en skarp bugg i
   0.9.244 och en till i 0.9.251 (`.hs-empty` saknade regeln, så "Inga resultat än"
@@ -1023,6 +1037,16 @@ att jag lyfter spelkänslan också?" ska inte ställas: svaret är redan ja.
 **DESSA REGLER ÄR BINDANDE FÖR ALL ARBETE PÅ ANATOMIQUIZ.**
 
 **Senast uppdaterad:** 2026-07-25
+**Version:** 2.4 – §13.1 två nya krav, båda funna genom att jämföra de NYA spellägena
+mot det gamla textquizet (0.9.255). Lärdomen i sig: **kontrollera alltid om det gamla
+läget redan löst problemet bättre** – flödet går i båda riktningar.
+- **Vyn ska skalas till skärmen, inte bara texten:** `FIT_SECTIONS` + `fitActiveView()`
+  + `var(--view-fit, 1)` i mobilstorlekarna. Per-element-skalning av textlängd löser
+  inte totalhöjden; sidfoten hamnade under fold på en liten iPhone. Textquizet hade
+  mekanismen sedan tidigare, de tre spellägena saknade den
+- **Rätt/fel aldrig med enbart färg (WCAG 1.4.1):** använd `markAnswerBtn()`, som
+  lägger till ✓/✗ och dold skärmläsartext. Leitner och Tidsjakt bröt mot det
+
 **Version:** 2.3 – lärdomar ur bygget av **Tidsjakt** (0.9.254), skrivna proaktivt:
 - **§12.1 ny stående regel: inga varumärkesnamn i kod eller text.** Ett nytt läge får
   ett synligt namn och en slug, båda fria ord som ingen firma äger, och slugen går
