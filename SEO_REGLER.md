@@ -230,6 +230,16 @@ Trovärdighet är ett **krav** på allt innehåll i kunskapsbanken (YMYL). Därf
   </div>
   ```
 - Endast källor som **faktiskt** ligger till grund för sidan ska anges (ljug inte om källor).
+- **`citation` i JSON-LD skrivs aldrig för hand.** `scripts/wire_citations.py --all` läser
+  sidans egna `<li>`-poster, tolkar APA-strängen med `scripts/apa.py` och skriver in resultatet
+  som `citation` i sidans huvudnod. Det är avsiktligt att källan är den **synliga** listan och
+  inte ett register vid sidan om: en referens kan då inte stå i strukturdatan utan att synas för
+  läsaren, och kan inte ändras på sidan utan att strukturdatan följer med. Kör steget efter
+  `wire_terms.py` (`scripts/check_generators.py` kör hela kedjan).
+- **Parsern gissar aldrig.** Känner `apa.py` inte igen mönstret kastar den `APAError` och hela
+  körningen stannar. En referens som inte går att tolka är nästan alltid en referens som inte
+  följer APA 7 – laga strängen på sidan, kringgå inte parsern. Nya mönster (nytt källslag) läggs
+  in i `apa.py` **med** ett fall i `--self-test`, som kör hela sajtens referenskorpus.
 
 ---
 

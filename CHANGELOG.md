@@ -1,5 +1,16 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.267
+- **Sajtens 292 referenser är nu maskinläsbara som `citation` i JSON-LD.** 71 sidor bar en synlig, faktagranskad APA 7-lista längst ner — och **noll** av dem var strukturerad data. För en svarsmotor som ska bedöma om en YMYL-sida är underbyggd är `citation` den mest direkta auktoritetssignal som finns, och den billigaste att lägga till när källorna redan är skrivna. Arbetet var gjort; det syntes bara inte.
+- **55 unika referenser, 0 otolkade.** Verifierat att antalet `citation`-noder är exakt lika med antalet synliga `<li>` på varje enskild sida, och att all JSON-LD fortfarande parsar. Typfördelning: 265 `Book`, 15 `ScholarlyArticle`, 9 `WebPage`, 3 `CreativeWork`.
+- **Ny APA-parser: `scripts/apa.py`.** Tolkar bok, antologi, uppslagsverk utan författare, tidskriftsartikel med DOI, webbsida med hämtdatum och källa utan år. Hanterar det som gör APA svårt att dela på komma: efternamn och initialer skrivs "Efternamn, I. I." med komma inuti namnet, och namnsuffix (`III`, `Jr.`) hör till föregående namn. `python3 scripts/apa.py -v` kör hela sajtens referenskorpus och skriver ut varje nod — parsern kontrollerades genom att alla 55 lästes igenom, inte genom att räkna dem.
+- **Parsern gissar aldrig.** Okänt mönster ger `APAError` och stoppar körningen i stället för att tyst producera en halv nod. 71 sidor med felaktig strukturdata som ingen upptäcker är dyrare än ett bygge som stannar.
+- **`CreativeWork`, inte `Book`, för föreskrifter.** SFS 2009:600, ICD-10-SE och HSLF-FS 2016:40 är organisationsutgivna skrifter utan upplaga. Att kalla en föreskrift för `Book` vore att påstå mer än vi vet; noden säger det minst specifika som är sant.
+- **Nytt steg i sidkedjan: `scripts/wire_citations.py --all`.** Läser sidans **synliga** `<li>`-lista och skriver in resultatet i huvudnoden — aldrig i `FAQPage` eller `BreadcrumbList`, som beskriver något annat än sidan. Idempotent, med `--check`.
+- **Källan är den synliga listan, inte ett register vid sidan om.** Det var ett medvetet val framför att lägga citationerna i artikelgeneratorn: generatorn äger bara hubbar och index, så artikeltexterna och de 29 handskrivna kunskapsbankssidorna hade blivit utan. Ett eget steg täcker alla 71 sidor med samma mekanism — och gör det omöjligt för strukturdatan att avvika från det läsaren ser, åt något håll.
+- **Kostnad, gzipad:** +351 byte på en muskeltabell (+4 %), +370 på `spellagen.html` (+3 %), +1 025 på minnesregelartikeln (+7 % — den har åtta referenser med DOI).
+- `scripts/check_generators.py` kör nu även citationssteget, så en regenerering kan inte tappa dem. `SEO_REGLER.md` §6b har fått regeln att `citation` aldrig skrivs för hand.
+
 ## 0.9.266
 - **Generatordriften som blockerade SEO-svepets punkt 4, 6 och 14 är utredd och åtgärdad.** Hela kedjan `generate_*.py` + `wire_terms.py --all` rundtrippar nu till identitet: en full körning på en ren utcheckning ger **noll** ändrade filer. Punkterna kunde inte byggas i generatorerna så länge en regenerering tyst förstörde handkurerat arbete.
 - **Driften gick åt båda hållen, och det var poängen.** Den ursprungliga analysen (0.9.259) läste diffen som att generatorerna förstörde bättre HTML. Vid mätning visade det sig att den levererade HTML:en var **stale** i de flesta fallen och att generatorn hade rätt. Varje fil avgjordes för sig.

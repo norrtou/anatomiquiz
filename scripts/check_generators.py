@@ -29,8 +29,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 
 # Ordningen är kedjans: sidgeneratorerna skriver REN HTML, wire_terms lägger på
-# tooltipsen, och generate_glossary körs sist eftersom den äger sitemap.xml och
-# måste se de färdiga sidorna.
+# tooltipsen, wire_citations läser sidans synliga referenslista och skriver in
+# den som `citation` i JSON-LD, och generate_glossary körs sist eftersom den
+# äger sitemap.xml och måste se de färdiga sidorna.
 KEDJA = [
     ["scripts/generate_glossary.py"],
     ["scripts/generate_karl.py"],
@@ -41,6 +42,7 @@ KEDJA = [
     ["scripts/generate_medicinsk_latin.py"],
     ["scripts/generate_muskler_flashcards.py"],
     ["scripts/wire_terms.py", "--all"],
+    ["scripts/wire_citations.py", "--all"],
     ["scripts/generate_glossary.py"],
 ]
 

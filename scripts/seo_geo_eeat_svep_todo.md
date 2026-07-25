@@ -2,8 +2,8 @@
 
 **Status:** analys gjord 2026-07-25 över samtliga sidor. **Punkt 1, 2, 3 och 10 utförda i 0.9.259.
 Punkt 7 utförd i 0.9.265** (plus tre generatorbuggar som blockerade den, se nedan).
-**Generatordriften utredd och åtgärdad i 0.9.266 – punkt 4, 6 och 14 är inte längre blockerade.**
-Resten är öppen och prioriterad nedan.
+**Generatordriften utredd och åtgärdad i 0.9.266 – punkt 4, 6 och 14 är inte längre blockerade.
+Punkt 6 utförd i 0.9.267.** Resten är öppen och prioriterad nedan.
 **Skapad:** 2026-07-25. **Underlag:** hela sajten lästes maskinellt – titlar, descriptions,
 canonicals, JSON-LD, rubrikhierarki, tabellmärkning, intern länkning, `llms.txt`, `sitemap.xml`,
 `robots.txt` och CSS-kontraster. Siffrorna nedan är mätta, inte uppskattade.
@@ -128,7 +128,7 @@ skriver inget och ger exit 1 vid avvikelse. Ren utcheckning + `--check` ska allt
 |---|---|---|---|
 | 4 | Person-`author` + `@id` på alla artiklar | ~1 h, generator | **Hög (EEAT)** |
 | 5 | Synligt `<time datetime>` + `dateModified` överallt | ~2 h | **Hög (EEAT + färskhet)** |
-| 6 | `citation` från befintliga referenslistor | ~2 h | **Hög (EEAT)** |
+| ~~6~~ | ~~`citation` från befintliga referenslistor~~ | ✅ 0.9.267 | **Hög (EEAT)** |
 | ~~7~~ | ~~`DefinedTerm`-microdata i ordlistan~~ | ✅ 0.9.265 | **Högst (GEO)** |
 | 8 | Ansvarsfriskrivning som delad komponent | ~1 h | Hög (YMYL) |
 | 9 | `lang="la"` på latinska termer | ~3 h | Hög (WCAG AA) |
@@ -168,17 +168,34 @@ datumet ska matcha den strukturerade datan. Svarsmotorer väger färskhet tungt.
 Kräver en källa till sanning för "senast ändrad" per sida – rimligen `data/artiklar.json`
 respektive generatorernas register, inte filsystemets mtime (som ändras av cachebuster-bumpar).
 
-## 6. ⬜ `citation` från de referenslistor som redan finns
+## 6. ✅ KLAR i 0.9.267 – `citation` från de referenslistor som redan finns
 
-**Mätt:** **80 sidor** har en synlig "Referenser"-rubrik. **Noll** av 81 Article-noder har
-egenskapen `citation`.
+**Mätt efteråt:** **71 sidor** bär `.kb-sources` (analysens "80 sidor" räknade även sidor som
+bara nämner ordet Referenser). Alla 71 har nu `citation` i sin huvudnod: **292 noder, 55 unika
+referenser, 0 otolkade.** Antalet noder är verifierat lika med antalet synliga `<li>` på varje
+enskild sida, och all JSON-LD är omparsad efteråt.
 
-Arbetet är alltså redan gjort och kvalitetssäkrat – det är bara inte maskinläsbart. Det här är
-den mest direkta auktoritetssignal som finns för en svarsmotor, och den billigaste att lägga
-till eftersom källorna redan är strukturerade i sidorna.
+**Två nya skript:**
 
-Gör det till en del av artikelgeneratorn så att en ny artikel får `citation` automatiskt ur
-sin referenslista – annars driver de isär igen.
+- [`scripts/apa.py`](apa.py) tolkar en APA 7-sträng till en schema.org-nod och **vägrar gissa**
+  – okänt mönster ger `APAError` och stoppar bygget. `python3 scripts/apa.py -v` kör hela
+  sajtens referenskorpus och skriver ut varje nod.
+- [`scripts/wire_citations.py`](wire_citations.py) läser sidans **synliga** `<li>`-lista och
+  skriver in resultatet i huvudnoden (`Article`/`CollectionPage`/`WebApplication` — aldrig
+  `FAQPage` eller `BreadcrumbList`). Idempotent, med `--check`.
+
+**Källan är den synliga listan, inte ett register vid sidan om.** Backloggen föreslog att lägga
+det i artikelgeneratorn, men generatorn äger bara hubbar och index — artikeltexterna och de 29
+handskrivna kunskapsbankssidorna hade då blivit utan. Ett eget steg efter `wire_terms.py`
+täcker alla 71 sidor med samma mekanism och garanterar dessutom att strukturdatan inte kan
+avvika från det läsaren ser.
+
+**Typfördelning:** 265 `Book`, 15 `ScholarlyArticle`, 9 `WebPage`, 3 `CreativeWork`.
+`CreativeWork` används för organisationsutgivna skrifter utan upplaga (SFS 2009:600, ICD-10-SE,
+HSLF-FS) — att kalla en föreskrift `Book` vore att påstå mer än vi vet.
+
+**Kostnad:** gzipat +351 byte på en muskeltabell (+4 %), +370 på `spellagen.html` (+3 %),
++1 025 på minnesregelartikeln (+7 %, den har 8 referenser med DOI).
 
 ## 7. ✅ KLAR i 0.9.265 – `DefinedTerm`-microdata i ordlistan
 
