@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.248
+- **Rättar en förvirrande Matcha-fråga i `medicinsk_sekreterare.json`.** `medsek_organsystemen_terminologi_22` frågade *"Vad heter munnen på latin?"* med rätt svar **"Os"** — språkligt korrekt (latinets *os, oris* = mun, jämför "per os"), men samma bokstavskombination som *os, ossis* = ben, som redan är rätt svar på två andra frågor i samma fil. Utanför Matcha görs frågan otvetydig av distraktorerna, men i Matchas kolumnvy (utan distraktorer) framstod ihopparningen som ett faktafel. Frågan omformulerad till **"Vad heter munhålan på latin?"** → **"Cavitas oris"** (distraktorer: Cavitas nasi/abdominis/thoracis) — samma vedertagna term som redan används i `medsek_lages_riktning_rorelse_46`. Ben-betydelsen (`Os` = ben) står orörd.
+
 ## 0.9.247
 - **Matcha: spelkänslo-lyft A–F ur polish-backloggen, allt byggt i samma pass.**
   - **A – Ihopparningsjuice:** förbindelselinjen tonas in och ändpunktsprickarna växer fram i stället för att dyka upp hårt; vald ruta glödpulserar svagt; kort mobil-haptik (`navigator.vibrate`) när ett par kopplas.
