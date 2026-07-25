@@ -22,6 +22,31 @@
 
 ---
 
+## 0b. Nytt synligt på en sida — se på sidan först
+
+**Gäller varje gång något blir synligt för en besökare:** en rad, en ruta, en knapp, en
+etikett, en ikon. Placeringen och formen bestäms **innan** märkningen skrivs, inte efteråt.
+Korrekt HTML och ett idempotent skript betyder ingenting om resultatet ser ut som något som
+blivit över. Fullständig regel med bakgrund: **[`CLAUDE_REGLER.md` §0.5](CLAUDE_REGLER.md)**.
+
+Fyra frågor innan en enda rad skrivs:
+
+1. **Var slutar sidan visuellt?** Läs de sista raderna i `<main>` på **varje** sidtyp som
+   berörs. Sajten har minst tre olika avslut — `.actions`-knapprad (79 sidor), ordlistans
+   `.glossary-footer` med tillbakaknappar (33) och `index.html`. Ett element som ser rätt ut
+   på en av dem kan se ut som skräp på de andra två.
+2. **Hör det nya ihop med något som redan finns?** Finstilt hör ihop med finstilt — baka
+   ihop, lägg inte bredvid. Det var precis det felet i 0.9.271 (§6e).
+3. **Vilken befintlig form ska det ärva?** Återanvänd `.page-footer`, `.kb-sources`,
+   `.info-about` — uppfinn inte en ny. Se [`CSS_KARTA.md`](CSS_KARTA.md).
+4. **Vad tar det uppmärksamhet från?** Metadata ska vara tyst. **Ingen fetstil i sidfot eller
+   annan finstilt.**
+
+Ser du något *annat* som skulle kunna se bättre ut: **säg det, bygg det inte.** Sidans
+utseende är användarens beslut, inte en sidoeffekt av en teknisk uppgift.
+
+---
+
 ## 0. När gäller detta?
 
 Läs och följ SEO_REGLER **varje gång** du:
@@ -716,6 +741,9 @@ stod kvar på `0.9.236`, och felet syntes inte i något av de svep som kördes, 
 - [ ] **Sidfot (§6e):** ingen friskrivning eller integritetsrad handskriven på
       en sida; en ny sida bär sidfoten eller står i en undantagslista med skäl.
       Ingen fetstil i sidfoten.
+- [ ] **Nytt synligt element (§0b):** placeringen bestämd genom att läsa sidans
+      slut på **varje** berörd sidtyp, formen ärvd från något befintligt, inget
+      löst stycke efter det som avslutar sidan.
 - [ ] **A11y:** en `<h1>`, skip-länk, landmärken, varje tabell har `<caption>` + `th scope`,
       bilder har `alt`.
 - [ ] **Prestanda:** inga externa resurser; JS bara vid behov + `defer`; bilddimensioner satta (CLS 0).

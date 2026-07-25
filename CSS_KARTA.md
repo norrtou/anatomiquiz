@@ -71,6 +71,26 @@ ett element, greppa efter dölj-regeln för just den klassen –
 i samma block som elementets övriga stilar. Att "det ser rätt ut i webbläsaren" är
 inget bevis när det tomma tillståndet är standardläget.
 
+## ⚠️ Nytt synligt element – bestäm placering och form INNAN du skriver det
+
+Se **[`CLAUDE_REGLER.md` §0.5](CLAUDE_REGLER.md)** och **[`SEO_REGLER.md` §0b](SEO_REGLER.md)**.
+Kort version: läs sidans slut på **varje** berörd sidtyp, baka ihop med det som redan finns
+i stället för att lägga bredvid, ärv en befintlig form, och håll metadata tyst.
+
+**Sidans avslut ser olika ut på tre ställen** – kontrollera alla tre innan något läggs sist:
+
+| Sidtyp | Sista elementet före sidfoten | Antal |
+|---|---|---|
+| Kunskapsbank, artiklar, verktyg, case | `<div class="actions">` med knappar | 79 |
+| Ordlistans bokstavssidor | `<footer class="glossary-footer">` med tillbakaknappar | 33 |
+| `index.html` | `</section>` efter faktatexten | 1 |
+
+**Sidans finstilta har redan en form – återanvänd den.** `.page-footer` (friskrivning,
+integritetsrad, datum) skrivs av `scripts/wire_sidfot.py` och är det enda som ska ligga efter
+sidans avslut. Lägg aldrig ett eget löst `<p>` där; det var felet i 0.9.271, och det kostade
+en ombyggnad i 0.9.272. Nya finstilta rader hör hemma **inuti** sidfoten, alltså i
+`scripts/sidfot.py` – inte som ett nytt element.
+
 ## Snabb felsökning när en stiländring "inte tar"
 1. Vilka CSS-filer laddar sidan? (`grep stylesheet <sida>.html`)
 2. Finns selektorn i **mer än en** fil eller **mer än en gång** i samma fil?

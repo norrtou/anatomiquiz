@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.273
+- **Ny proaktiv regel: se på sidan innan något synligt läggs på den.** `CLAUDE_REGLER.md` **§0.5**, med kortversion i `SEO_REGLER.md` **§0b**, `CSS_KARTA.md` och §12-checklistan. Korrekt märkning och ett idempotent skript betyder ingenting om resultatet ser ut som något som blivit över — det var precis vad som hände i 0.9.271 och tvingade fram en ombyggnad i 0.9.272.
+- **Fyra frågor som ska besvaras innan en enda rad skrivs:** var slutar sidan *visuellt* (läs sidans slut på **varje** berörd sidtyp — sajten har tre olika avslut), hör det nya ihop med något som redan finns (baka ihop, lägg inte bredvid), vilken befintlig form ska det ärva, och vad tar det uppmärksamhet från. Ingen fetstil i sidfot eller annan finstilt.
+- **`CSS_KARTA.md` har fått sidornas tre avslut i tabellform** — `.actions`-knapprad (79 sidor), ordlistans `.glossary-footer` med tillbakaknappar (33) och `index.html` — plus beskedet att nya finstilta rader hör hemma **inuti** `.page-footer` via `scripts/sidfot.py`, aldrig som ett eget löst element.
+- **Ingen kodändring.** Sajten är oförändrad; det här är regelverket som ska hindra att felet uppstår igen.
+
 ## 0.9.272
 - **Sidans finstilta är nu en riktig sidfot i stället för tre lösa rader.** Friskrivningen (0.9.271), kakraden och datumraden låg som separata stycken sist i `<main>` — på varje sida under det som *visuellt* avslutar den: knappraden, ordlistans tillbakaknappar, och på startsidan under sajtens egen sidfot. Tre rader efter sidans avslut ser ut som något som blivit över. Nu är det ett block med egen linje och luft ovanför, i samma form som den gamla `.footer`: centrerad, liten och dämpad. Sidan slutar där den ser ut att sluta.
 - **Kakraden om integritetspolicyn står nu på alla 116 sidor** i stället för bara `index.html` och `spellagen.html`. Den gamla `.footer`-klassen är uppgången i den delade sidfoten, och dess CSS borttagen. På integritetspolicyn själv utelämnas raden — en sidfot som länkar till sidan man står på är brus.

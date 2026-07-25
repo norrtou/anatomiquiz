@@ -155,6 +155,41 @@ Samma sorts tystnad är hela orsaken till att generatordriften i 0.9.266 kunde v
 regeln säger att skriptet ska veta när facit innehöll något det inte förstod. En körning
 över hela datamängden som tyst ignorerar en fjärdedel av den är inte en helvägskontroll.
 
+### 0.5 SE PÅ SIDAN INNAN DU LÄGGER NÅGOT SYNLIGT PÅ DEN
+
+**STÅENDE REGEL (2026-07-26).** Allt som blir synligt för en besökare — en rad, en ruta, en
+knapp, en etikett, en ikon — ska placeras och formges **innan** det skrivs in, inte upptäckas
+i efterhand. Att märkningen är korrekt och skriptet idempotent betyder ingenting om resultatet
+ser ut som något som blivit över.
+
+**Bakgrunden:** i 0.9.271 lades ansvarsfriskrivningen in som ett löst `<p>` "sist i `<main>`".
+Tekniskt rätt plats, estetiskt fel: på varje sida hamnade den *under* det som visuellt
+avslutar sidan — knappraden på kunskapsbankssidorna, tillbakaknapparna i ordlistan, och på
+startsidan under sajtens egen sidfot. Två grå stycken efter sidans avslut. Det fick byggas om
+i 0.9.272, och det var ett onödigt varv som kostade användaren tokens.
+
+**Så här görs det rätt från början — fyra frågor innan en enda rad skrivs:**
+
+1. **Var slutar sidan visuellt?** Läs de sista 20 raderna i `<main>` på **varje** sidtyp som
+   berörs, inte på en. Anatomiquiz har minst tre olika avslut: `.actions`-knapprad (79 sidor),
+   ordlistans `.glossary-footer` med tillbakaknappar (33), och `index.html`. Ett element som
+   ser rätt ut på en av dem kan se ut som skräp på de andra två.
+2. **Hör det nya ihop med något som redan finns?** Finstilt hör ihop med finstilt. Låg det en
+   kakrad och en datumrad där redan, är svaret ett **block**, inte ett tredje löst stycke.
+   Fråga alltid: kan det här bakas ihop med något befintligt i stället för att läggas bredvid?
+3. **Vilken befintlig form ska det ärva?** Återanvänd en form som redan finns på sajten
+   (`.footer`, `.kb-sources`) i stället för att uppfinna en ny. Se `CSS_KARTA.md`.
+4. **Vad tar det uppmärksamhet från?** Metadata ska kunna hittas av den som söker den och
+   annars vara tyst. **Ingen fetstil i sidfoten eller i annan finstilt** — betoning i
+   metadata konkurrerar med innehållet.
+
+**Regeln gäller också omfattningen.** Nytt synligt innehåll införs bara i den utsträckning
+uppgiften kräver. Ser du något annat som skulle kunna se bättre ut — **säg det, bygg det
+inte.** Sidans utseende är användarens beslut, inte en sidoeffekt av en teknisk uppgift.
+
+Formen för sidans finstilta är avgjord och ska återanvändas: se **SEO_REGLER §6e** (sidfoten)
+och `CSS_KARTA.md`.
+
 ---
 
 ## 1. SPRÅK OCH TERMINOLOGI
