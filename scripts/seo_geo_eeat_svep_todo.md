@@ -3,7 +3,7 @@
 **Status:** analys gjord 2026-07-25 över samtliga sidor. **Punkt 1, 2, 3 och 10 utförda i 0.9.259.
 Punkt 7 utförd i 0.9.265** (plus tre generatorbuggar som blockerade den, se nedan).
 **Generatordriften utredd och åtgärdad i 0.9.266 – punkt 4, 6 och 14 är inte längre blockerade.
-Punkt 6 utförd i 0.9.267.** Resten är öppen och prioriterad nedan.
+Punkt 6 utförd i 0.9.267. Punkt 4 utförd i 0.9.268.** Resten är öppen och prioriterad nedan.
 **Skapad:** 2026-07-25. **Underlag:** hela sajten lästes maskinellt – titlar, descriptions,
 canonicals, JSON-LD, rubrikhierarki, tabellmärkning, intern länkning, `llms.txt`, `sitemap.xml`,
 `robots.txt` och CSS-kontraster. Siffrorna nedan är mätta, inte uppskattade.
@@ -126,7 +126,7 @@ skriver inget och ger exit 1 vid avvikelse. Ren utcheckning + `--check` ska allt
 
 | # | Åtgärd | Insats | Effekt |
 |---|---|---|---|
-| 4 | Person-`author` + `@id` på alla artiklar | ~1 h, generator | **Hög (EEAT)** |
+| ~~4~~ | ~~Person-`author` + `@id` på alla artiklar~~ | ✅ 0.9.268 | **Hög (EEAT)** |
 | 5 | Synligt `<time datetime>` + `dateModified` överallt | ~2 h | **Hög (EEAT + färskhet)** |
 | ~~6~~ | ~~`citation` från befintliga referenslistor~~ | ✅ 0.9.267 | **Hög (EEAT)** |
 | ~~7~~ | ~~`DefinedTerm`-microdata i ordlistan~~ | ✅ 0.9.265 | **Högst (GEO)** |
@@ -140,22 +140,40 @@ skriver inget och ger exit 1 vid avvikelse. Ren utcheckning + `--check` ska allt
 
 ---
 
-## 4. ⬜ Person-`author` + `@id` på artiklarna
+## 4. ✅ KLAR i 0.9.268 – Person-`author` + `@id` på artiklarna
 
-**Mätt:** artiklarnas `author` är `{"@type": "Organization", "name": "Norrtou Creations"}`.
-Samtidigt bär `index.html` den fullständiga Person-noden med `sameAs` till norrtou.se,
-LinkedIn och GitHub.
+**Mätt efteråt:** **117 sidnoder över 117 sidor** bär nu `author` = Daniel Medin (Person,
+`@id: https://anatomiquiz.se/#daniel-medin`) och `publisher` = Norrtou Creations
+(`@id: .../#norrtou-creations`). **0 avvikelser**, verifierat genom att parsa alla 250
+JSON-LD-block, inte greppa dem. Före: 65 noder hade `author` = Organization, 66 saknade
+`author` helt, och de tre Person-noder som fanns var tre olika varianter utan `@id`.
 
-Den starkaste E-E-A-T-signalen – namngiven person med verifierbar närvaro, arbetsterapeutstudent
-vid Lunds universitet, tidigare medicinsk sekreterare – sitter alltså på startsidan men saknas
-på de YMYL-sidor där den väger tyngst.
+**Två nya skript:**
 
-**Dessutom: noll `@id`-referenser i hela sajten.** Person- och Organization-noderna upprepas
-inline utan att knytas ihop. Ett `@id` som `https://anatomiquiz.se/#daniel-medin`, refererat
-från alla sidor, bygger *en* entitet i stället för 118 löskopplade kopior.
+- [`scripts/identity.py`](identity.py) – entiteterna definierade **en** gång. Person-noden är
+  info.html:s fylligare variant; det är kvalifikationerna som är signalen, inte namnet.
+- [`scripts/wire_identity.py`](wire_identity.py) – skriver in dem i varje sidas huvudnod.
+  Idempotent, med `--check`. `FAQPage` och `BreadcrumbList` lämnas i fred, samma gräns som
+  `wire_citations.py` drar.
 
-Görs i `scripts/generate_artiklar.py` m.fl. – **inte** i genererad HTML. Se den blockerande
-upptäckten ovan om regenerering.
+**Skriptet ligger sist i kedjan**, efter `generate_glossary.py`. Det är inte godtyckligt:
+glossary-generatorn skriver om ordlistans 33 sidor i slutet av kedjan och hade skrivit över
+identiteten i vilket tidigare läge som helst.
+
+**Backloggen sa "görs i generatorerna" – det blev tvärtom.** Identiteten är nu *borttagen* ur
+de fyra tabellgeneratorerna (muskeltabeller, kärl, skelett, leder). Att lägga den i
+generatorerna hade lämnat artikeltexterna och de 29 handskrivna kunskapsbankssidorna utan, och
+gett sex kopior av sanningen att hålla i synk. Samma slutsats som punkt 6 kom till.
+
+**Två inkonsekvenser rättades på köpet.** Kunskapsbanken angav `publisher: "Anatomiquiz"` medan
+startsidan angav `"Norrtou Creations"` – två namn för samma utgivare motverkar hela poängen med
+`@id`. Integritetspolicyn säger att Norrtou Creations är utgivaren, så det blev den.
+`<meta name="author">` skiljde sig likadant (114 sidor "Norrtou Creations", 4 sidor "Daniel
+Medin (Norrtou Creations)") och är nu enhetlig på alla 118. `isPartOf: WebSite "Anatomiquiz"`
+står kvar orört – det är sajtens namn, inte utgivarens.
+
+**Kostnad:** gzipat +102 byte på `index.html` (+0,5 %), +215 på minnesregelartikeln (+1,7 %),
++221 på en muskeltabell (+2,7 %), +245 på `ordlista-p.html` (+0,3 %).
 
 ## 5. ⬜ Synligt datum + `dateModified` överallt
 

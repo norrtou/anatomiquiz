@@ -225,7 +225,7 @@ def head(*, titel: str, desc: str, canonical: str, og_type: str,
 
   <title>{titel}</title>
   <meta name="description" content="{desc}">
-  <meta name="author" content="Norrtou Creations">
+  <meta name="author" content="Daniel Medin (Norrtou Creations)">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 
   <link rel="canonical" href="{canonical}">

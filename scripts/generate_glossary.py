@@ -780,7 +780,7 @@ def render_page(
 
   <title>{esc_title}</title>
   <meta name="description" content="{esc_desc}">
-  <meta name="author" content="Norrtou Creations">
+  <meta name="author" content="Daniel Medin (Norrtou Creations)">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 
   <link rel="canonical" href="{url}">

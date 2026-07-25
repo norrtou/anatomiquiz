@@ -30,8 +30,10 @@ ROOT = Path(__file__).resolve().parent.parent
 
 # Ordningen är kedjans: sidgeneratorerna skriver REN HTML, wire_terms lägger på
 # tooltipsen, wire_citations läser sidans synliga referenslista och skriver in
-# den som `citation` i JSON-LD, och generate_glossary körs sist eftersom den
-# äger sitemap.xml och måste se de färdiga sidorna.
+# den som `citation` i JSON-LD, och generate_glossary körs näst sist eftersom
+# den äger sitemap.xml och måste se de färdiga sidorna. wire_identity ligger
+# allra sist just därför — den skriver i ordlistans 33 sidor också, och hade
+# blivit överskriven av glossary-generatorn i vilket tidigare läge som helst.
 KEDJA = [
     ["scripts/generate_glossary.py"],
     ["scripts/generate_karl.py"],
@@ -44,6 +46,7 @@ KEDJA = [
     ["scripts/wire_terms.py", "--all"],
     ["scripts/wire_citations.py", "--all"],
     ["scripts/generate_glossary.py"],
+    ["scripts/wire_identity.py", "--all"],
 ]
 
 

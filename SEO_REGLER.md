@@ -240,6 +240,19 @@ Trovärdighet är ett **krav** på allt innehåll i kunskapsbanken (YMYL). Därf
   körningen stannar. En referens som inte går att tolka är nästan alltid en referens som inte
   följer APA 7 – laga strängen på sidan, kringgå inte parsern. Nya mönster (nytt källslag) läggs
   in i `apa.py` **med** ett fall i `--self-test`, som kör hela sajtens referenskorpus.
+- **`author` och `publisher` skrivs aldrig för hand, och aldrig i en generator.** Entiteterna
+  bor i `scripts/identity.py` och skrivs in av `scripts/wire_identity.py --all`, som ligger
+  **sist** i kedjan (efter `generate_glossary.py`, som annars skriver över ordlistans 33 sidor).
+  Två roller som inte får blandas ihop: `author` är **personen** Daniel Medin
+  (`@id: https://anatomiquiz.se/#daniel-medin`), `publisher` är **organisationen** Norrtou
+  Creations (`@id: .../#norrtou-creations`). Att låta företaget stå som författare till en
+  YMYL-text kastar bort sajtens starkaste E-E-A-T-signal.
+- **`@id` är inte valfritt.** Utan det är 118 inline-noder 118 olika entiteter för en
+  svarsmotor. Noderna skrivs ut i sin helhet på varje sida, inte som nakna `{"@id": …}` —
+  en crawler som landar på en undersida ska kunna läsa ut vem som skrivit den utan att först
+  ha hämtat startsidan.
+- **`isPartOf: WebSite "Anatomiquiz"` är sajtens namn, inte utgivarens.** Blanda inte ihop det
+  med `publisher`. Sajten heter Anatomiquiz; utgivaren heter Norrtou Creations.
 
 ---
 

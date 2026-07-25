@@ -56,7 +56,7 @@ def head(title, desc, canon, ogtype, jsonld):
 
   <title>{esc(title)}</title>
   <meta name="description" content="{esc(desc)}">
-  <meta name="author" content="Norrtou Creations">
+  <meta name="author" content="Daniel Medin (Norrtou Creations)">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 
   <link rel="canonical" href="{canon}">
@@ -155,8 +155,6 @@ def region_page(d):
               "headline": f"{region}s muskler – ursprung, fäste, innervation och funktion",
               "description": desc, "inLanguage": "sv-SE", "isAccessibleForFree": True,
               "learningResourceType": "table", "educationalUse": ["self study", "professional development"],
-              "author": {"@type": "Organization", "name": "Norrtou Creations"},
-              "publisher": {"@type": "Organization", "name": "Anatomiquiz", "url": f"{SITE}/"},
               "isPartOf": {"@type": "WebSite", "name": "Anatomiquiz", "url": f"{SITE}/"},
               "breadcrumb": bc_jsonld([(n if n != "← Anatomiquiz" else "Anatomiquiz", u or canon) for n, u in crumbs])}
 
