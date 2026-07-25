@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.257
+- **Dubbletttiteln borta.** `ordlista-tecken.html` bar ordagrant samma `<title>` som `ordlista-suffix.html` — två sidor med identisk titel, vilket `SEO_REGLER.md` §2 förbjuder och Bing flaggar. Stumpen har nu sin egen, sanna titel: *Sidan har flyttat: medicinska suffix*. Den speglar det som faktiskt står på sidan.
+- Filen är en **avsiktlig klient-redirect** för en gammal URL (sluggen "tecken" döptes om till "suffix" 2026-07-12; GitHub Pages kan inte göra 301, och en publicerad URL får aldrig bara försvinna). `robots` lämnas som `index, follow`: canonical är den signal som pekar om sidan, och att kombinera canonical med `noindex` ger motstridiga besked till sökmotorn. Ingen indexerbarhet är alltså ändrad.
+- Kommentaren i filen säger nu **varför** titeln medvetet skiljer sig från målsidans, så att den inte "rättas" tillbaka vid nästa genomgång.
+
 ## 0.9.256
 - **Ny sida: [Spellägen, regler och studieteknik](spellagen.html)** — en undersida till *Om Anatomiquiz* som går igenom alla fem sätt att plugga på samma frågebank. **Quiz** och **flashcards** ingår på samma villkor som spellägena; de är grundlägena och beskrivs först, med sina egna regler (antal frågor, hur facit visas, öva-extra-läget, bildfrågor) och med den ärliga fällan i flashcards: att det är lätt att lura sig själv om man inte formulerar hela svaret innan man vänder kortet.
 - **Reglerna i detalj per läge:** Matchas omgångar om fem par och rankning på tid, Leitner Lights fem lådor (1–2–4–8–16 dagar) och varför bara det *första* svaret flyttar kortet, Tidsjakts tidsstraff och svitbonus. Varje läge har ett "bra för"-stycke — och ett ärligt "mindre bra för".
