@@ -304,7 +304,7 @@ nodes.numQuestions.value = '10'
   ok('klart-vyn visas', !nodes.leitnerFinished._class.has('hidden'))
   ok('spelvyn dold vid slutet', nodes.leitnerPlay._class.has('hidden'))
   ok('spelreglerna döljs på resultatskärmen', nodes.leitnerIntro._class.has('hidden'))
-  ok('förklaringen var uppfälld för en förstagångsspelare', introOpenVidStart === true, introOpenVidStart)
+  ok('förklaringen ligger hopfälld även för en förstagångsspelare', introOpenVidStart === false, introOpenVidStart)
   eq('resultatring 100 %', nodes.leitnerRingPct.textContent, '100 %')
   ok('slutet pekar framåt mot nästa pass', /Nästa pass: 3 kort återkommer/.test(nodes.leitnerNextText.textContent),
      nodes.leitnerNextText.textContent)

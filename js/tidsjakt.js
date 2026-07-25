@@ -316,7 +316,8 @@ async function startTidsjakt(){
   el('tidsjaktFinished').classList.add('hidden')
   const intro = el('tidsjaktIntro')
   intro.classList.remove('hidden')
-  intro.open = !hasPlayedTidsjakt()   // uppfälld första gången, hopfälld sedan
+  // Alltid hopfälld vid start – reglerna ska finnas till hands, inte i vägen.
+  intro.open = false
   el('tidsjaktPlay').classList.remove('hidden')
   el('tidsjaktFooter').classList.remove('hidden')
   el('tidsjakt').classList.remove('hidden')

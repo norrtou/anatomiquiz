@@ -338,7 +338,8 @@ async function startLeitner(){
   el('leitnerFinished').classList.add('hidden')
   const intro = el('leitnerIntro')
   intro.classList.remove('hidden')
-  intro.open = !hasPlayedLeitner(state)   // uppfälld första gången, hopfälld sedan
+  // Alltid hopfälld vid start – reglerna ska finnas till hands, inte i vägen.
+  intro.open = false
   el('leitnerPlay').classList.remove('hidden')
   el('leitnerFooter').classList.remove('hidden')
   el('leitner').classList.remove('hidden')

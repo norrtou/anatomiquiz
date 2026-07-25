@@ -202,7 +202,8 @@ async function startMatcha(){
   const intro = el('matchaIntro')
   if(intro){
     intro.classList.remove('hidden')
-    intro.open = !hasPlayedMatcha()   // uppfälld första gången, hopfälld sedan
+    // Alltid hopfälld vid start – reglerna ska finnas till hands, inte i vägen.
+    intro.open = false
   }
   el('matchaBoard').classList.remove('hidden')
   el('matchaFooter').classList.remove('hidden')

@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.261
+- **Regelpanelen "Så funkar det" ligger nu hopfälld vid start i alla tre spellägen.** Den fälldes tidigare upp automatiskt för den som inte hade något sparat resultat i ämnet — vilket i praktiken blev *varje* ny runda så länge man inte spelat klart en gång, eftersom resultatet sparas först vid rundans slut. Panelen la sig alltså i vägen för spelet i stället för att stötta det. Reglerna finns kvar, en tryckning bort.
+- Ändrar `CLAUDE_REGLER.md` §13.1: kravet "uppfälld första gången" gäller inte längre. Panelen ska finnas och förklara läget, men inte öppna sig själv.
+
 ## 0.9.260
 - **Navigationsfel rättat: länken till spellägessidan förstörde den pågående rundan.** Alla tre spellägen hade en länk till `spellagen.html` mitt i den levande spelvyn. Den lämnar sidan — och **ingen av spelen sparar en pågående runda**. Rundan var alltså borta, och `spellagen.html` har bara brödsmulor tillbaka till menyn. Det var inte en saknad knapp utan en **tyst dataförlust**: en "tillbaka till spelet"-knapp hade inte haft något att gå tillbaka till.
 - **Länken är borttagen ur spelvyerna.** Den finns kvar där den hör hemma: i startvyn under spellägesknapparna (*Vilket läge ska jag välja?*), alltså innan man gått in i ett spel. Reglerna för det läge man faktiskt spelar står i spelets egen regelpanel och kräver ingen sidladdning.
