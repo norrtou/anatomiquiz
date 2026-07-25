@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.258
+- **Fallgrop rättad i redirect-stumpen `ordlista-tecken.html`:** kommentaren jag lade in i 0.9.257 skrev ut titel-taggen som literal text. Sidan är giltig — HTML-kommentarer får innehålla taggtext — men varje verktyg som regex-söker efter taggen riskerar att läsa kommentaren i stället för sidans riktiga titel, inklusive `SEO_REGLER.md` §12:s egen kontrollsnutt. Den gav rätt svar bara därför att den saknar `DOTALL`. Kommentaren är omskriven och säger nu uttryckligen varför taggen inte ska skrivas ut där.
+- Kontroll tillagd i arbetsflödet: **exakt en titel-tagg per sida** över samtliga 117 sidor (0 avvikelser).
+
 ## 0.9.257
 - **Dubbletttiteln borta.** `ordlista-tecken.html` bar ordagrant samma `<title>` som `ordlista-suffix.html` — två sidor med identisk titel, vilket `SEO_REGLER.md` §2 förbjuder och Bing flaggar. Stumpen har nu sin egen, sanna titel: *Sidan har flyttat: medicinska suffix*. Den speglar det som faktiskt står på sidan.
 - Filen är en **avsiktlig klient-redirect** för en gammal URL (sluggen "tecken" döptes om till "suffix" 2026-07-12; GitHub Pages kan inte göra 301, och en publicerad URL får aldrig bara försvinna). `robots` lämnas som `index, follow`: canonical är den signal som pekar om sidan, och att kombinera canonical med `noindex` ger motstridiga besked till sökmotorn. Ingen indexerbarhet är alltså ändrad.
