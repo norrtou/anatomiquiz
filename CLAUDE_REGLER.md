@@ -892,6 +892,28 @@ python3 scripts/generate_glossary.py --check   # bygger i minnet, skriver inget,
 `--check` ska vara skrivfri — bygg allt i minnet, jämför mot disk, skriv i ett
 enda steg först när det inte är en kontrollkörning.
 
+**Hela kedjan testas med ett kommando (2026-07-25, 0.9.266):**
+
+```
+python3 scripts/check_generators.py    # exit 0 = rundtripp identisk
+```
+
+Skriptet speglar alla spårade filer till en temporär katalog, kör hela kedjan
+där (alla `generate_*.py` + `wire_terms.py --all`) och jämför fil för fil mot
+arbetskopian. Det behövs utöver `--check` av två skäl: de generatorer som
+skriver direkt till disk kan inte bygga i minnet, och **`wire_terms.py` kan
+ingen enskild generator kontrollera** — tooltipsen läggs på efter
+sidgenereringen, så bara en körning av hela kedjan visar om de överlever.
+**Kör det före varje commit som rör en generator, ett facit eller en genererad
+sida.**
+
+**Driften går åt båda hållen — avgör per fil, kör inte bara om allt.** I
+0.9.266 var den levererade filen nyare i två fall (en handinlagd mening i
+muskeltabellernas ingress, versaler i flashcard-svaren → generatorn fick lära
+sig dem) och generatorn nyare i ett (47 disambiguerade distraktorer i
+`medicinsk_latin.json` som aldrig skrivits ut → filen regenererades). Att
+reflexmässigt köra om allt hade tyst raderat de två första.
+
 **EN KONSTANT PER RESURS.** Två resurser får aldrig dela cachebusterkonstant.
 `generate_glossary.py` hade `theme.js?v={STYLES_V}`: när `styles.css` ändrades i
 0.9.264 bumpades `STYLES_V`, och en regenerering hade skrivit

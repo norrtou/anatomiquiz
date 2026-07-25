@@ -368,6 +368,13 @@ följts.
   `Revben–kotlederna` hade fått de intervertebrala ledernas. Lösningen är **inte** att blockera
   ordet – lägg in **hela frasen** som egen facitnyckel, så vinner den på längsta match (§6c).
   Är ordet redan wirat separat i frasen måste det av-wiras först, annars kan frasen aldrig matcha.
+- **Rätt överallt utom på en sida → blockera per sida, inte globalt.** `BLOCKERADE` i
+  `wire_terms.py` tar bort nyckeln från hela sajten och är rätt medicin bara när ordet är
+  ett vardagsord i löptext (`region`, `snitt`, `massa`). Är tooltipen korrekt på tjugo sidor
+  och fel på en – `ursprunget` → origo är rätt i muskeltabellerna, men i minnesregel-
+  artikeln handlar meningen om en **ramsas** ursprung – används `BLOCKERADE_PER_SIDA`
+  (sökväg → nycklar). Global blockering hade där tagit bort 16 korrekta tooltips för att
+  laga en enda felaktig.
 - **`def` ska vara en färdig fras.** Aldrig avhuggen mitt i ord, parentes eller förkortning,
   och aldrig med ordlistans metadatafält på slutet (`Sv.`, `Eng.`, `Jfr …`). Defekten uppstod
   en gång genom en hård `def[:140]`-klippning utan ord- och parentesgräns, plus en klippning

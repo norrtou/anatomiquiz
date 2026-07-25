@@ -91,6 +91,18 @@ BLOCKERADE = {
                       # läkemedelsberäkningssidorna.
 }
 
+# Homonymer som är RÄTT nästan överallt men fel på en enskild sida. Global
+# blockering vore fel medicin: den skulle ta bort en korrekt tooltip på
+# dussintals sidor för att laga en enda. Nyckeln är sidans sökväg relativt
+# repots rot; värdet är de facitnycklar som inte får wiras just där.
+BLOCKERADE_PER_SIDA = {
+    # "ursprunget" -> origo ("Muskelns proximala fästpunkt") är korrekt i
+    # muskeltabellerna och i latinguiden. I minnesregelartikeln handlar
+    # meningen om en RAMSAS ursprung – "tillskriver ursprunget Oliver Wendell
+    # Holmes den äldre" – och tooltipen blir där rent nonsens.
+    "kunskapsbank/artiklar/minnesregler-kranialnerverna.html": {"ursprunget"},
+}
+
 # --- Tomma tooltips: fångas vid KÄLLAN, inte i efterhandssvep ----------------
 # SEO_REGLER §6c.0. Fyra ytformer av samma defekt, alla funna i produktion:
 # def == nyckeln, def == nyckeln böjd, def == enbart latinnamnet, och nyckeln
@@ -272,13 +284,26 @@ def _sub(text, rx, terms, stats):
     return rx.sub(repl, text)
 
 def wire_file(path, terms, rx, write=True):
-    html = pathlib.Path(path).read_text(encoding="utf-8")
+    path = pathlib.Path(path)
+    spärr = BLOCKERADE_PER_SIDA.get(_rel(path))
+    if spärr:
+        terms = {k: v for k, v in terms.items() if k not in spärr}
+        rx = build_regex(terms)
+    html = path.read_text(encoding="utf-8")
     stats = {}
     new = wire_html(html, terms, rx, stats)
     n = sum(stats.values())
     if write and new != html:
-        pathlib.Path(path).write_text(new, encoding="utf-8")
+        path.write_text(new, encoding="utf-8")
     return n, stats
+
+
+def _rel(path):
+    """Sidans sökväg relativt repots rot, med / som separator."""
+    try:
+        return pathlib.Path(path).resolve().relative_to(ROOT).as_posix()
+    except ValueError:
+        return pathlib.Path(path).name
 
 
 # Hela ankaret, med länktexten som egen grupp. Länktexten ÄR facitnyckeln (se

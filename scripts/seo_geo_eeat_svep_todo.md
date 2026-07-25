@@ -2,6 +2,7 @@
 
 **Status:** analys gjord 2026-07-25 över samtliga sidor. **Punkt 1, 2, 3 och 10 utförda i 0.9.259.
 Punkt 7 utförd i 0.9.265** (plus tre generatorbuggar som blockerade den, se nedan).
+**Generatordriften utredd och åtgärdad i 0.9.266 – punkt 4, 6 och 14 är inte längre blockerade.**
 Resten är öppen och prioriterad nedan.
 **Skapad:** 2026-07-25. **Underlag:** hela sajten lästes maskinellt – titlar, descriptions,
 canonicals, JSON-LD, rubrikhierarki, tabellmärkning, intern länkning, `llms.txt`, `sitemap.xml`,
@@ -59,31 +60,40 @@ mintbakgrunden där `.tagline` sitter (AA-gränsen är 4,5). Nu 5,78 / 5,27:1.
 
 ---
 
-## ⚠️ BLOCKERANDE UPPTÄCKT – läs innan något genereras om
+## ✅ BLOCKERAREN ÄR BORTA – utredd och åtgärdad i 0.9.266
 
-**Generatorerna har glidit isär från den levererade HTML:en.** Verifierat 2026-07-25 genom att
-köra hela pipelinen `generate_* → wire_terms.py --all` och diffa mot HEAD. Rundtrippen ger
-**inte** identitet, utan tre klasser av regression:
+**Hela kedjan rundtrippar nu till identitet.** `python3 scripts/check_generators.py` speglar
+alla spårade filer till en temporär katalog, kör alla `generate_*.py` + `wire_terms.py --all`
+och jämför fil för fil. Exit 0 = noll ändrade filer. **Punkt 4, 6 och 14 är därmed öppna.**
 
-1. **Felaktig tooltip läggs till.** I `minnesregler-kranialnerverna.html` länkas *"ursprunget"*
-   (om en ramsas ursprung) till `origo` med definitionen "Muskelns proximala fästpunkt".
-   Klassisk homonymfälla – hör hemma i `BLOCKERADE` i `wire_terms.py`.
-2. **Befintliga tooltips försvinner.** Samtliga `region`-länkar i `karl.html` och `leder.html`
-   tas bort.
-3. **Binomiala latinnamn splittras.** `Centrum tendineum perinei` blir två spans
-   (`Centrum tendineum` + `perinei`). Det bryter direkt mot regeln att ett binomialt latinnamn
-   är EN term / EN span.
+Den ursprungliga analysen läste diffen bakvänt. Vid mätning var **den levererade HTML:en
+stale i de flesta fall**, inte generatorn – handarbetet fanns redan i facit, sidorna hade
+bara wirats innan det lades till. Varje fil avgjordes för sig:
 
-**Konsekvens:** den levererade HTML:en innehåller handkurerad wiring som en regenerering
-förstör. Kör **inte** generatorerna förrän driften är utredd. I 0.9.259 patchades därför
-sidhuvudena i både generatorerna *och* den levererade HTML:en var för sig.
+1. **`ursprunget` → origo i minnesregelartikeln.** Äkta fel, men *bara där*: tooltipen är
+   korrekt på 16 andra ställen. Löst med ny mekanism `BLOCKERADE_PER_SIDA` (sökväg → nycklar)
+   i stället för global blockering.
+2. **`region`-länkarna som "försvann".** Inte en regression – `region` står i `BLOCKERADE`
+   sedan tidigare, och de 16 kvarvarande länkarna var stale. Borttagna, som avsett.
+3. **Splittrade binomialnamn.** Även detta bakvänt läst: **HEAD hade splitten**, generatorn
+   lagade den. Tolv namn låg live som två tooltips – `aponeurosis plantaris`,
+   `vena jugularis interna`, `arteria subclavia`, `canalis opticus`, `dura mater`,
+   `ossa carpi`, `m. flexor carpi ulnaris`, `lamina cribrosa`, `malleolus lateralis`.
+   Undantaget var `Centrum tendineum perinei`, som var handwirad till *diafragmas*
+   centralsena (fel struktur) – ny ordlistepost + ny facitnyckel.
 
-**Att göra:** utred om facit (`data/kb_glossary_terms.json` + `BLOCKERADE`) ska rättas så att
-pipelinen åter blir idempotent, eller om de kurerade avvikelserna ska dokumenteras som
-undantag. Tills dess är regenerering en manuell operation som kräver diffgranskning.
+Tre fall som analysen inte sett alls, funna vid mätningen:
 
-**Avgränsning:** ovanstående gäller `wire_terms.py` och de tooltip-wirade kunskapsbankssidorna.
-Den blockerar punkt 4, 6 och 14 — **inte** ordlistan.
+4. **Muskeltabellhubbens ingress** tappade sin sista mening (länken till läsguiden) vid varje
+   regenerering – den fanns bara i levererad HTML. Nu i generatorn.
+5. **`data/medicinsk_latin.json` var stale i 47 frågor.** Generatorn hade disambiguerat
+   riktningstermerna men filen aldrig skrivits om, så *superior* och *cranial* stod live med
+   identiskt rätt svar ("övre") och var varandras distraktorer. Regenererad – plus en fix i
+   `pick_distractors` så att den nya parentesen inte i sig blir facit.
+6. **`data/muskler_flashcards.json`** hade handrättade versaler på 10 kort. Nu i generatorn.
+
+**Kvarstående regel:** kör `scripts/check_generators.py` före varje commit som rör en
+generator, ett facit eller en genererad sida. Se CLAUDE_REGLER §12.2.
 
 ### ✅ Ordlistegeneratorns egen drift – FIXAD i 0.9.265
 

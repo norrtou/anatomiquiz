@@ -80,7 +80,10 @@ ITEMS = [
     ("innervering", "nervförsörjning", "rorelse"),
     ("extension", "sträcka ut", "rorelse"),
     ("flexion", "böjning", "rorelse"),
-    ("adduktion", "förande mot kroppens mittlinje (medialt)", "rorelse"),
+    # Parentesen "(medialt)" är struken: den tillförde inget som inte redan står
+    # i svaret, och adduktion är enda posten i kategorin rorelse med parentes –
+    # den hade därför pekat ut sig själv bland tre parenteslösa distraktorer.
+    ("adduktion", "förande mot kroppens mittlinje", "rorelse"),
     ("rotation", "vridning", "rorelse"),
     ("palmarflexion", "böjer mot handflatan", "rorelse"),
     ("dorsalflexion (hand)", "böjer mot handryggen", "rorelse"),
@@ -181,10 +184,27 @@ ITEMS = [
 
 
 def pick_distractors(idx, term, meaning, category):
-    """Tre distraktorer: i första hand ur samma kategori, annars hela poolen."""
+    """Tre distraktorer: i första hand ur samma kategori, annars hela poolen.
+
+    Formen väger lika tungt som kategorin. Åtta av posterna bär ett
+    förtydligande inom parentes – "övre (hela kroppen)" mot "övre (inom bålen)",
+    "artärer (plural)" mot "artär" – och parentesen finns för att svaren annars
+    vore identiska. Men om ett sådant svar ställs mot tre parenteslösa
+    distraktorer blir parentesen i sig facit: man ser vilket alternativ som är
+    rätt utan att veta vad termen betyder. Distraktorerna sorteras därför så att
+    de med samma parentesform kommer först, inom den kategori som redan valts.
+    Sorteringen är stabil, så slumpordningen inom varje form är kvar.
+    """
     rng = random.Random(f"medlatin-{idx}-{term}")
-    same = [m for (t, m, c) in ITEMS if c == category and m != meaning]
-    rng.shuffle(same)
+    parentes = "(" in meaning
+
+    def samma_form_först(pool):
+        rng.shuffle(pool)
+        pool.sort(key=lambda m: ("(" in m) != parentes)
+        return pool
+
+    same = samma_form_först([m for (t, m, c) in ITEMS
+                             if c == category and m != meaning])
     chosen, seen = [], {meaning}
     for m in same:
         if m not in seen:
@@ -193,8 +213,7 @@ def pick_distractors(idx, term, meaning, category):
         if len(chosen) == 3:
             break
     if len(chosen) < 3:
-        rest = [m for (t, m, c) in ITEMS if m not in seen]
-        rng.shuffle(rest)
+        rest = samma_form_först([m for (t, m, c) in ITEMS if m not in seen])
         for m in rest:
             chosen.append(m)
             seen.add(m)

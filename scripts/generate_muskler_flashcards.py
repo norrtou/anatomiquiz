@@ -239,6 +239,10 @@ def main() -> None:
     def add(prompt, kind, answer):
         nonlocal n
         n += 1
+        # Svaret visas som egen mening på kortets baksida och inleds med versal.
+        # Gäller bara första tecknet: "n. medianus och n. ulnaris" ska behålla
+        # sitt gemena andra led, precis som latinsk nomenklatur föreskriver.
+        answer = answer[:1].upper() + answer[1:]
         cards.append({
             "id": f"mfc_{n}",
             "type": "fc",

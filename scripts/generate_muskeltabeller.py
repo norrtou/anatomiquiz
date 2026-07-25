@@ -274,7 +274,9 @@ def pillar_page(regions):
 """)
     out.append(crumb(crumbs))
     out.append('\n      <h2 id="mpHeading" class="sr-only">Muskeltabeller per region</h2>\n')
-    out.append('      <div class="info-about">\n        <p>Musklerna presenteras region för region, var och en med ursprung (origo), fäste (insertio), innervation och funktion. Välj en region för att se hela tabellen.</p>\n      </div>\n')
+    # Sista meningen länkar till läsguiden. Den låg länge bara i den levererade
+    # HTML:en och hade försvunnit vid nästa regenerering (CLAUDE_REGLER §12.2).
+    out.append('      <div class="info-about">\n        <p>Musklerna presenteras region för region, var och en med ursprung (origo), fäste (insertio), innervation och funktion. Välj en region för att se hela tabellen. Vad kolumnerna betyder, och hur en muskels funktion går att räkna ut ur var den fäster, står i guiden <a href="/kunskapsbank/artiklar/sa-laser-du-en-muskeltabell.html">så läser du en muskeltabell</a>.</p>\n      </div>\n')
     out.append('      <div class="kb-grid">\n')
     for r in regions:
         out.append(f"""        <a class="kb-card" href="/kunskapsbank/muskeltabell-{r['slug']}.html">
