@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.253
+- **Leitner Light förklarar nu vad spelet går ut på, inte bara vilka knappar som finns.** Meningen som lades till i 0.9.252 beskrev mekaniken ("rätt svar flyttar kortet upp en låda") — vilket inte förklarar någonting för den som aldrig mött spaced repetition och inte förstår varför det finns lådor eller varför man ska komma tillbaka i morgon. Ersatt med en riktig förklaring överst i spelvyn: att det är ett **pluggschema, inte ett vanligt quiz**, att man minns bäst om man repeterar något precis innan man hunnit glömma det, vad rätt respektive fel svar gör med kortet, att det man kan får man se sällan och det man inte kan får man se ofta, och vad ett **pass** är — appen väljer själv ut dagens kort, så kom tillbaka i morgon.
+- **Rutan fälls upp automatiskt för den som inte kört ett pass förut** och ligger hopfälld för vana spelare, med en summary-rad som säger något i sig ("Så funkar det – du repeterar varje kort just innan du hinner glömma det"). Ingen behöver stänga samma text varje dag.
+- **Lådtrappan skyltar med sina egna intervall** — varje låda visar nu både sitt nummer och hur länge kortet vilar där (1 dag · 2 · 4 · 8 · 16 dagar). Trappan lär därmed ut sin egen regel utan att man behöver läsa förklaringen. Brickan ritas om till en **glidande markering bakom cellerna** i stället för en täckande bricka, så att siffran och intervallet syns även i den låda kortet står i.
+- **Ny stående regel `CLAUDE_REGLER.md` §13.1 (version 2.2):** ett spelläge ska förklara sig självt **i spelvyn** för någon som aldrig spelat det — vad det går ut på och varför, i den ordningen. En mening om mekaniken räcker inte, och en FAQ på en annan sida räcker inte. Spelplanen ska dessutom göras självförklarande där det går. Gäller Sporcle, Dagens utmaning och Gravity när de byggs.
+- CSS ändrad → `styles.css?v=` bumpad enhetligt till **0.9.253 på alla 116 sidor** plus generatorernas konstanter; `leitner.js?v=` följer med.
+
 ## 0.9.252
 - **Leitner Light förklarar sig själv.** Lådtrappan gick inte att förstå utan förkunskap — inget i vyn sa vad de fem lådorna betydde eller varför brickan flyttade sig. Nu står spelreglerna i en mening överst i spelet: *"Varje fråga är ett kort i en av fem lådor: rätt svar flyttar kortet upp en låda och dröjer längre till nästa gång, fel svar skickar det tillbaka till låda 1."*
 - Raden döljs på resultatskärmen, där reglerna inte längre är intressanta (med egen `.leitner-intro.hidden`-regel — `.hidden` är inte global, CSS_KARTA).

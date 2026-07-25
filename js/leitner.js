@@ -266,6 +266,13 @@ function pickLeitnerSession(pool, state, num){
   return { cards: [], ahead: true, aheadCards: ahead.slice(0, num).map(x => x.q), nextDue: ahead.length ? ahead[0].c.due : 0 }
 }
 
+// Har spelaren kört Leitner förut? Avgör om förklaringsrutan fälls upp eller
+// ligger hopfälld: spaced repetition är obekant för de flesta, men den som
+// redan kan läget ska inte behöva stänga samma text varje pass.
+function hasPlayedLeitner(state){
+  return getLeitnerScores().length > 0 || Object.keys(state.cards).length > 0
+}
+
 function makeLeitnerRecord(q, state){
   const key = leitnerKey(q)
   const c = state.cards[key]
@@ -329,7 +336,9 @@ async function startLeitner(){
   el('flashcards').classList.add('hidden')
   el('matcha')?.classList.add('hidden')
   el('leitnerFinished').classList.add('hidden')
-  el('leitnerIntro').classList.remove('hidden')
+  const intro = el('leitnerIntro')
+  intro.classList.remove('hidden')
+  intro.open = !hasPlayedLeitner(state)   // uppfälld första gången, hopfälld sedan
   el('leitnerPlay').classList.remove('hidden')
   el('leitnerFooter').classList.remove('hidden')
   el('leitner').classList.remove('hidden')
@@ -399,7 +408,6 @@ function setLeitnerLadder(box, animate){
   const b = Math.min(LEITNER_BOXES, Math.max(1, box))
   chip.classList.toggle('no-anim', !animate || leitnerReducedMotion())
   chip.style.setProperty('--lb-pos', String(b - 1))
-  chip.textContent = String(b)   // brickan täcker cellens siffra – bär den själv i stället
   Array.from(ladder.querySelectorAll('.leitner-box')).forEach((cell, i) => {
     cell.classList.toggle('active', i === box - 1)
     cell.classList.toggle('filled', i < box - 1)

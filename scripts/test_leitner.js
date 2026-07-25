@@ -285,13 +285,18 @@ delete store['hur_highscores_leitner']
 POOL = [mkQ(1), mkQ(2), mkQ(3)]
 nodes.numQuestions.value = '10'
 ;(async () => {
-  await playSession([true, true, true])
+  // Fångas under passet: klart-vyn hinner annars köra över open-flaggan.
+  let introOpenVidStart = null
+  await ctx.startLeitner()
+  introOpenVidStart = nodes.leitnerIntro.open
+  while(nodes.leitnerFinished._class.has('hidden')){ answerCurrent(true); ctx.onLeitnerNext() }
   const st = JSON.parse(store['hur_leitner_state'])
   eq('alla tre korten flyttades till låda 2', [1, 2, 3].map(i => st.cards['osteologi_ben|q' + i].b), [2, 2, 2])
   eq('förfallodatum satt två dagar fram', st.cards['osteologi_ben|q1'].due, startOfDay(Date.now()) + 2 * DAY)
   ok('klart-vyn visas', !nodes.leitnerFinished._class.has('hidden'))
   ok('spelvyn dold vid slutet', nodes.leitnerPlay._class.has('hidden'))
   ok('spelreglerna döljs på resultatskärmen', nodes.leitnerIntro._class.has('hidden'))
+  ok('förklaringen var uppfälld för en förstagångsspelare', introOpenVidStart === true, introOpenVidStart)
   eq('resultatring 100 %', nodes.leitnerRingPct.textContent, '100 %')
   ok('slutet pekar framåt mot nästa pass', /Nästa pass: 3 kort återkommer/.test(nodes.leitnerNextText.textContent),
      nodes.leitnerNextText.textContent)
@@ -355,6 +360,8 @@ nodes.numQuestions.value = '10'
   }])
   POOL = [mkQ(1), mkQ(2), mkQ(3)]
   await playSession([true, true, true])
+  ok('förklaringen ligger hopfälld för den som spelat förut', nodes.leitnerIntro.open === false,
+     nodes.leitnerIntro.open)
   const stMaster = JSON.parse(store['hur_leitner_state'])
   eq('alla kort nådde låda 5', [1, 2, 3].map(i => stMaster.cards['osteologi_ben|q' + i].b), [5, 5, 5])
   eq('mästringsmätaren visar 3/3', nodes.leitnerMasteryLabel.textContent, '3/3')

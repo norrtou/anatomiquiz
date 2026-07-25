@@ -121,7 +121,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="css/styles.css?v=0.9.252">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.253">
 </head>
 <body>
 
@@ -681,9 +681,25 @@
     <section id="leitner" class="card hidden" aria-labelledby="leitnerHeading">
       <h2 id="leitnerHeading" class="sr-only">Leitner Light</h2>
 
-      <!-- Spelreglerna i en mening, överst. Lådtrappan under är obegriplig utan
-           den: inget annat i vyn säger vad lådorna betyder. Döljs i klart-vyn. -->
-      <p id="leitnerIntro" class="leitner-intro">Varje fråga är ett kort i en av fem lådor: rätt svar flyttar kortet upp en låda och dröjer längre till nästa gång, fel svar skickar det tillbaka till låda 1.</p>
+      <!-- Vad spelet GÅR UT PÅ, inte bara vilka knappar som finns. Spaced
+           repetition är obekant för de flesta: utan förklaringen ser lådtrappan
+           bara ut som en poängmätare, och man förstår inte varför man ska komma
+           tillbaka i morgon. js/leitner.js fäller upp rutan automatiskt för den
+           som inte kört ett pass förut, och lämnar den hopfälld för vana
+           spelare. Döljs helt i klart-vyn. -->
+      <details id="leitnerIntro" class="leitner-intro">
+        <summary>Så funkar det – du repeterar varje kort just innan du hinner glömma det</summary>
+        <div class="leitner-intro-body">
+          <p><strong>Det här är ett pluggschema, inte ett vanligt quiz.</strong> Man minns bäst om man repeterar något precis innan man hunnit glömma det. Leitner Light håller reda på när det är, kort för kort, så att du slipper.</p>
+          <p>Varje fråga är ett <strong>kort</strong>, och alla kort börjar i låda 1:</p>
+          <ul class="leitner-intro-list">
+            <li><strong>Rätt svar</strong> – kortet flyttas upp en låda, och det dröjer längre innan du ser det igen.</li>
+            <li><strong>Fel svar</strong> – kortet åker tillbaka till låda 1 och kommer redan i morgon.</li>
+          </ul>
+          <p>Lådan avgör alltså hur ofta du möter kortet: låda 1 i morgon, sedan efter 2, 4, 8 och 16 dagar. Det du kan får du se sällan, det du inte kan får du se ofta – det är hela poängen. Ett kort som tagit sig ända till låda 5 räknas som mästrat och återkommer bara med ett par veckors mellanrum.</p>
+          <p><strong>Ett pass</strong> är dagens portion. Appen väljer själv ut de kort som är dags att repetera och fyller på med nya du inte sett förut, så kom tillbaka i morgon – då vet den precis vilka du behöver se igen. Svarar du fel får du kortet en gång till innan passet är slut, men det är ditt <em>första</em> svar som avgör vilken låda det hamnar i.</p>
+        </div>
+      </details>
 
       <div class="leitner-header">
         <div class="leitner-header-top">
@@ -712,15 +728,20 @@
         <!-- Lådtrappan: brickan glider till kortets nya låda när svaret rättas.
              Det är lägets belöningsmoment – man SER kortet flytta sig. -->
         <div class="leitner-ladder-wrap">
+          <!-- Varje låda skyltar med sitt eget intervall, så att trappan
+               förklarar sig själv: siffran ensam säger inget om att låda 4
+               betyder "om åtta dagar". Brickan ligger BAKOM cellerna (den är
+               en glidande markering), så texten syns även i den låda kortet
+               står i. Håll dagtalen i synk med LEITNER_INTERVAL_DAYS. -->
           <div id="leitnerLadder" class="leitner-ladder" aria-hidden="true">
-            <div class="leitner-boxes">
-              <span class="leitner-box">1</span>
-              <span class="leitner-box">2</span>
-              <span class="leitner-box">3</span>
-              <span class="leitner-box">4</span>
-              <span class="leitner-box">5</span>
-            </div>
             <div id="leitnerChip" class="leitner-chip"></div>
+            <div class="leitner-boxes">
+              <span class="leitner-box"><span class="leitner-box-nr">1</span><span class="leitner-box-day">1 dag</span></span>
+              <span class="leitner-box"><span class="leitner-box-nr">2</span><span class="leitner-box-day">2 dagar</span></span>
+              <span class="leitner-box"><span class="leitner-box-nr">3</span><span class="leitner-box-day">4 dagar</span></span>
+              <span class="leitner-box"><span class="leitner-box-nr">4</span><span class="leitner-box-day">8 dagar</span></span>
+              <span class="leitner-box"><span class="leitner-box-nr">5</span><span class="leitner-box-day">16 dagar</span></span>
+            </div>
           </div>
           <span id="leitnerLadderLabel" class="leitner-ladder-label" aria-live="polite"></span>
         </div>
@@ -1014,9 +1035,9 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.252" defer></script>
+  <script src="js/app.js?v=0.9.253" defer></script>
   <!-- Spellägesmoduler: en egen fil per läge, laddas EFTER app.js (delar globalt scope). -->
   <script src="js/matcha.js?v=0.9.251" defer></script>
-  <script src="js/leitner.js?v=0.9.252" defer></script>
+  <script src="js/leitner.js?v=0.9.253" defer></script>
 </body>
 </html>

@@ -929,6 +929,17 @@ använd mönstret därifrån och översätt det till det nya lägets mekanik:**
    får aldrig betyda utebliven information.
 
 **Utöver de åtta, i varje nytt läge:**
+- **Läget ska förklara sig självt för någon som aldrig spelat det.** Skriv en
+  förklaring som svarar på *vad går det här ut på och varför*, inte bara vilka
+  knappar som finns – och lägg den **i spelvyn**, överst, inte i en FAQ. En mening
+  om mekaniken ("rätt svar flyttar kortet upp en låda") förklarar ingenting för den
+  som inte redan förstår varför lådorna finns; det var precis kritiken mot Leitners
+  första version. Mall: `#leitnerIntro` i `index.html` – en `<details>` som
+  modulen **fäller upp automatiskt för den som inte spelat förut** och lämnar
+  hopfälld för vana spelare, med en summary-rad som säger något i sig.
+  **Gör dessutom spelplanen självförklarande** där det går: Leitners lådor skyltar
+  med sina egna intervall ("4 → 8 dagar"), så trappan lär ut sin egen regel utan
+  att man behöver läsa texten.
 - Egen `js/<namn>.js` med skyddade `typeof`-krokar från `app.js` (§12). Cachebustern
   sätter `scripts/bump_version.py` automatiskt – aldrig för hand.
 - **Varje nytt element som ska kunna döljas behöver en egen `.x.hidden`-regel** —
@@ -955,6 +966,12 @@ att jag lyfter spelkänslan också?" ska inte ställas: svaret är redan ja.
 **DESSA REGLER ÄR BINDANDE FÖR ALL ARBETE PÅ ANATOMIQUIZ.**
 
 **Senast uppdaterad:** 2026-07-25
+**Version:** 2.2 – §13.1 nytt krav (0.9.253, på användarens kritik av Leitners första
+förklaring): **ett spelläge ska förklara sig självt i spelvyn för någon som aldrig spelat
+det** – vad det går ut på och varför, inte bara vilka knappar som finns. En mening om
+mekaniken räcker inte. Uppfälld automatiskt för förstagångsspelaren, hopfälld sedan; och
+spelplanen görs självförklarande där det går (Leitners lådor skyltar med sina intervall).
+
 **Version:** 2.1 – lärdomar ur Leitner-bygget (0.9.251), skrivna proaktivt enligt §0:
 - §12 cachebustern **automatiseras** – `bump_version.py` sätter numera `?v=` för varje
   ändrad `js/*.js` och `css/*.css` i alla sidor som refererar dem, plus generatorernas

@@ -2295,13 +2295,43 @@ ol li {
    men har egna klasser, så att de två lägena kan ändras oberoende.
    ============================================================================ */
 
-/* Spelreglerna i en mening, överst i vyn. */
+/* Vad spelet går ut på, överst i vyn. Hopfällbar (js/leitner.js fäller upp den
+   för den som inte spelat förut) så att förklaringen finns för nybörjaren utan
+   att ligga i vägen för den som redan kan läget. Följer .intro-more-mönstret. */
 .leitner-intro {
-  margin: 0 0 10px;
-  font-size: 0.88rem;
-  line-height: 1.4;
-  color: var(--text-secondary);
+  margin: 0 0 12px;
+  border: 1px solid var(--primary-light);
+  border-radius: var(--radius-sm);
+  background: var(--success-bg);
+  padding: 8px 12px;
 }
+.leitner-intro > summary {
+  cursor: pointer;
+  color: var(--primary-deep);
+  font-weight: 600;
+  font-size: 0.88rem;
+  line-height: 1.35;
+  list-style-position: inside;
+}
+.leitner-intro > summary:focus-visible {
+  outline: 2px solid var(--primary-deep);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+.leitner-intro-body {
+  margin-top: 8px;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+.leitner-intro-body p { margin: 0 0 8px; }
+.leitner-intro-body p:last-child { margin-bottom: 2px; }
+/* Litet listindrag – långa punkter blir annars svårlästa på mobil. */
+.leitner-intro-list {
+  margin: 0 0 8px;
+  padding-left: 18px;
+}
+.leitner-intro-list li { margin-bottom: 4px; }
 
 /* En sammanhållen infopanel i stället för lösryckta textrader. */
 .leitner-header {
@@ -2432,19 +2462,26 @@ ol li {
   gap: var(--lb-gap);
 }
 
+.leitner-boxes {
+  position: relative;   /* cellerna ligger ovanpå brickan */
+  z-index: 1;
+}
+
 .leitner-box {
-  height: 34px;
+  min-height: 42px;
+  padding: 3px 2px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   border: 2px dashed rgba(16, 185, 129, 0.35);
   border-radius: var(--radius-sm);
-  background: var(--surface);
+  background: transparent;   /* brickan bakom ska synas igenom */
   color: var(--text-secondary);
-  font-size: 0.8rem;
-  font-weight: 700;
   transition: border-color var(--transition-fast), background var(--transition-fast), color var(--transition-fast);
 }
+.leitner-box-nr { font-size: 0.8rem; font-weight: 700; line-height: 1.1; }
+.leitner-box-day { font-size: 0.56rem; line-height: 1.15; white-space: nowrap; }
 /* Lådor kortet redan passerat tonas in som avklarade. */
 .leitner-box.filled {
   border-style: solid;
@@ -2452,24 +2489,20 @@ ol li {
   background: var(--success-bg);
   color: var(--primary-deep);
 }
+/* Lådan kortet står i: brickan ligger bakom, så texten vänds till vitt. */
 .leitner-box.active {
   border-style: solid;
-  border-color: var(--primary-dark);
-  color: var(--primary-deep);
+  border-color: var(--primary-deep);
+  color: #fff;
 }
 
-/* Brickan bär sitt lådnummer i vitt: den täcker cellen den står i, och utan
-   siffran skulle just den låda kortet befinner sig i vara den enda utan nummer. */
+/* Brickan är en glidande markering BAKOM cellerna, inte en täckande bricka –
+   annars döljs just den lådans siffra och intervall, som är det man vill läsa. */
 .leitner-chip {
   position: absolute;
   top: 0;
-  height: 34px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 0.8rem;
-  font-weight: 800;
+  bottom: 0;
+  z-index: 0;
   /* Cellbredd = (100 % − 4 mellanrum) / 5; steglängd = cellbredd + mellanrum. */
   width: calc((100% - 4 * var(--lb-gap)) / 5);
   left: 0;
@@ -2657,15 +2690,18 @@ ol li {
 #leitnerFooter.hidden { display: none; }
 
 @media (max-width: 640px) {
-  .leitner-intro { font-size: 0.82rem; margin-bottom: 8px; }
+  .leitner-intro { padding: 7px 10px; margin-bottom: 10px; }
+  .leitner-intro > summary { font-size: 0.82rem; }
+  .leitner-intro-body { font-size: 0.8rem; }
   .leitner-header { padding: 8px 10px; }
   /* Ämnesraden är lång ("Balansorganet (vestibularis) · 8 att repetera · 2 nya")
      och bröts illa mot högerkanten bredvid namnet. Egen rad, vänsterställd. */
   .leitner-header-top { flex-direction: column; align-items: flex-start; gap: 2px; }
   .leitner-meta { font-size: 0.74rem; text-align: left; }
   .leitner-mastery-label { font-size: 0.66rem; }
-  .leitner-box { height: 30px; font-size: 0.72rem; }
-  .leitner-chip { height: 30px; }
+  .leitner-box { min-height: 38px; }
+  .leitner-box-nr { font-size: 0.72rem; }
+  .leitner-box-day { font-size: 0.5rem; }
   .leitner-card { padding: 13px 12px 15px; }
   .leitner-prompt { font-size: max(0.92rem, calc(1.1rem * var(--prompt-scale, 1))); }
   .leitner-choice {
