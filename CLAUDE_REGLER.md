@@ -126,6 +126,35 @@ maskinellt är rätt åtgärd att skriva för hand — inte att bygga ett skript
 verifierbara operationer ska automatiseras — de är snabbare, billigare och mer konsekventa
 än handarbete. Regeln gäller uppgifter som kräver omdöme, inte uppgifter som är tråkiga.
 
+### 0.4 Ett skript som tyst hoppar över det okända är en framtida bugg
+
+**Varje skript som bearbetar en mängd filer eller poster SKA stanna med exitkod 1 när det
+inte hittade det det letade efter.** "Hittade inget att göra här" får aldrig se likadant ut
+som "det fanns inget att göra här".
+
+**Varför:** ett skript som filtrerar på en lista över kända fall — kända `@type`, kända
+mönster, kända filnamn — behandlar allt utanför listan som *ingenting*. Det ser ut som en
+lyckad körning. Felet upptäcks bara om någon råkar titta på rätt sak, och det gör ingen
+nästa gång. `wire_identity.py` saknade `WebPage` i sin typlista och hoppade tyst över två
+sidor; det syntes bara för att listan över sidor utan träff råkade skrivas ut under bygget.
+Samma sorts tystnad är hela orsaken till att generatordriften i 0.9.266 kunde växa ostört.
+
+**Så här byggs det rätt från början:**
+
+1. **Räkna träffarna och kräv minst en.** Varje fil som skriptet öppnar ska producera minst
+   en träff, annars `raise`. Är noll träffar ett legitimt utfall för vissa filer ska de
+   filtreras bort **innan** — i urvalet — inte tyst passera i bearbetningen.
+2. **Felmeddelandet ska säga vad som fanns i stället.** Inte "ingen träff", utan "sidans
+   typer: BreadcrumbList, WebPage — hör någon av dem hemma i HUVUDTYPER?". Ett meddelande
+   som inte pekar på nästa steg tvingar fram samma utredning en gång till.
+3. **Testa larmet, inte bara lyckofallet.** Ta bort ett känt värde ur listan, kör, och
+   verifiera att skriptet stannar. Ett larm som aldrig utlösts är inte verifierat.
+4. **Lägg skriptet i `scripts/check_generators.py`.** Ett larm som ingen kör är inget skydd.
+
+**Gränsdragningen mot §0.1:** §0.1 säger att en kontroll ska gå över hela facit. Den här
+regeln säger att skriptet ska veta när facit innehöll något det inte förstod. En körning
+över hela datamängden som tyst ignorerar en fjärdedel av den är inte en helvägskontroll.
+
 ---
 
 ## 1. SPRÅK OCH TERMINOLOGI

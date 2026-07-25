@@ -87,8 +87,13 @@ def main(argv):
 
     if not avvikande and not nya:
         print(f"OK: rundtripp identisk – {len(filer)} filer oförändrade efter "
-              f"{len(KEDJA)} generatorsteg.")
-        return 0
+              f"{len(KEDJA)} generatorsteg.", flush=True)
+        # Rundtrippen bevisar att generatorerna är i synk med filerna, inte att
+        # filerna pekar på något som finns. Länkkontrollen körs här därför att
+        # det här är kommandot som faktiskt körs före commit – ett larm ingen
+        # kör är inget skydd (CLAUDE_REGLER §0.4).
+        return subprocess.run([sys.executable, "scripts/check_links.py"],
+                              cwd=ROOT).returncode
 
     print(f"AVVIKELSE: {len(avvikande) + len(nya)} filer skiljer sig efter en "
           f"full generatorkörning (CLAUDE_REGLER §12.2).", file=sys.stderr)

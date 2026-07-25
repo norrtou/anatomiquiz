@@ -97,25 +97,46 @@ def _sätt(block, namn, värde):
     return slut[:-1].rstrip() + ",\n" + ny + "\n" + bas + "}" + svans
 
 
-def _är_sidnod(data):
+def _typer(data):
     typ = data.get("@type")
-    typ = set(typ if isinstance(typ, list) else [typ])
+    return set(typ if isinstance(typ, list) else [typ])
+
+
+def _är_sidnod(data):
+    typ = _typer(data)
     return bool(typ & HUVUDTYPER) and not (typ & UNDANTAG)
 
 
 def wire_html(html):
-    """Returnera html med author/publisher satta i sidans huvudnod(er)."""
+    """Returnera html med author/publisher satta i sidans huvudnod(er).
+
+    En sida som bär JSON-LD men ingen nod som beskriver sidan är ett fel, inte
+    ett specialfall: den hade tyst blivit utan identitet. Så upptäcktes att
+    `WebPage` saknades i HUVUDTYPER — men bara för att någon råkade titta.
+    Därför stannar bygget i stället.
+    """
+    träffade = [0]
+
     def skriv(m):
         data = json.loads(m.group(2))
         if "@graph" in data:
             raise ValueError("@graph stöds inte — identiteten skulle hamna fel")
         if not _är_sidnod(data):
             return m.group(0)
+        träffade[0] += 1
         block = _sätt(m.group(2), "author", PERSON)
         block = _sätt(block, "publisher", ORGANISATION)
         return m.group(1) + block + m.group(3)
 
-    return LD.sub(skriv, html)
+    ny = LD.sub(skriv, html)
+    if not träffade[0]:
+        typer = sorted({t for m in LD.finditer(html)
+                        for t in _typer(json.loads(m.group(2)))})
+        raise ValueError(
+            "ingen nod som beskriver sidan — identiteten hade tyst uteblivit. "
+            f"Sidans typer: {', '.join(typer) or '(inga)'}. Hör någon av dem "
+            "hemma i HUVUDTYPER?")
+    return ny
 
 
 def alla_sidor():

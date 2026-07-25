@@ -253,6 +253,15 @@ Trovärdighet är ett **krav** på allt innehåll i kunskapsbanken (YMYL). Därf
   ha hämtat startsidan.
 - **`isPartOf: WebSite "Anatomiquiz"` är sajtens namn, inte utgivarens.** Blanda inte ihop det
   med `publisher`. Sajten heter Anatomiquiz; utgivaren heter Norrtou Creations.
+- **Varje intern URL SKA pekas mot disk innan den skrivs.** `scripts/check_links.py` validerar
+  `llms.txt`, `sitemap.xml`, varje intern `href`/`src`, varje `#ankare` in i en annan sida, och
+  att `<link rel=canonical>` pekar på sidan själv. Den körs automatiskt av
+  `scripts/check_generators.py` — kör det före commit, inte en manuell genomläsning.
+  Bakgrund: två URL:er i `llms.txt` pekade på `/kunskapsbank/verktyg/…` medan sidorna låg på
+  `/verktyg/…`. Sitemap och canonical hade rätt hela tiden, så felet syntes bara i den fil
+  agenter läser *först*, och bara för att någon läste den för hand.
+- **Arkivfiler får inte ligga publikt.** `_ARCHIVED*` utanför `_arkiv/` är ett fel som
+  `check_links.py` stoppar på. 253 KB testdata låg utlagt utan att någon sida länkade dit.
 
 ---
 

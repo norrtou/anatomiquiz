@@ -309,6 +309,33 @@ Sidan går h1 → h3. Enda sidan i hela sajten med ett hopp. Femminutersfix.
 
 ---
 
+## Är punkterna skyddade mot återfall? (granskat 0.9.269)
+
+§0 i CLAUDE_REGLER kräver att en åtgärdad punkt inte kan komma tillbaka. En punkt är inte
+klar för att felet är borta — den är klar när något som *körs* hindrar att det uppstår igen.
+Granskningen efter punkt 4:
+
+| Punkt | Skydd | Kör var |
+|---|---|---|
+| 1 trasiga URL:er | ✅ `check_links.py` — 11 244 länkar mot disk | `check_generators.py` |
+| 2 `404.html` | ✅ `check_links.py` stoppar om filen försvinner | `check_generators.py` |
+| 3 arkivfiler publikt | ✅ `check_links.py` — `_ARCHIVED*` utanför `_arkiv/` | `check_generators.py` |
+| 4 identitet | ✅ `wire_identity.py`, larmar på okänd `@type` | `check_generators.py` |
+| 6 `citation` | ✅ `wire_citations.py` + `apa.py` kastar hellre än gissar | `check_generators.py` |
+| 7 `DefinedTerm` | ✅ `generate_glossary.py` äger märkningen | `check_generators.py` |
+| **10 kontrast** | ❌ **inget** — `--text-secondary` kan ändras tillbaka | — |
+
+**Punkt 10 är det enda öppna hålet.** En kontrastkontroll (räkna WCAG-kvot ur CSS-variablerna)
+skulle täcka både den och punkt 13. Punkt 13 är dock nedprioriterad av användaren 2026-07-25,
+och att bygga motorn enbart för punkt 10 är inte proportionerligt. **Tas när punkt 13 tas** —
+om den tas. Noterat här så att antagandet kan omprövas i stället för att glömmas.
+
+**Regeln för resten av svepet:** varje kommande punkt (5, 8, 9, 11, 12, 14, 15) ska leverera
+sitt skydd i samma pass som åtgärden, inte som en efterhandsfråga. Punkt 11 och 12 skyddas
+redan av `check_links.py` — nya syskonlänkar och en delad `llms-full.txt` valideras automatiskt.
+
+---
+
 ## Medvetet EJ åtgärdat
 
 - **Textstorlekar.** Sajten har `font-size` ner till 0,5 rem (8 px) i Leitner-lådorna på mobil.
