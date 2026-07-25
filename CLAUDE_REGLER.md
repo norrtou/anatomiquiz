@@ -820,11 +820,15 @@ egen fil läses och ändras isolerat. Detta är en **proaktiv** regel (§0): byg
 från start, extrahera inte i efterhand (Matcha låg först inbakat i `app.js` och fick
 brytas ut – den kostnaden ska inte återkomma).
 
-**Cachebuster:** den nya filens `?v=` ska hållas i synk med resten (`SEO_REGLER.md`
-§11 C). `bump_version.py` rör i dag bara `app.js?v=` – nya modulfilers buster sätts
-för hand tills skriptet lär sig dem.
+**Cachebuster:** sköts av `scripts/bump_version.py` (sedan 0.9.251). Skriptet frågar
+git vilka `js/*.js` och `css/*.css` som ändrats och sätter `?v=` för **precis de
+filerna** i alla HTML-sidor som refererar dem – plus generatorernas hårdkodade
+CSS-konstanter. Sätt den aldrig för hand: kravet stod tidigare som "sätts för hand
+tills skriptet lär sig dem", vilket är exakt den sortens mekaniska handpåläggning
+§0.3 förbjuder (116 sidor refererar `styles.css`). `pre-commit` blockerar en commit
+där en ändrad js/css-fil bär en gammal buster.
 
-**Gäller:** spellägen (Matcha, kommande Leitner/Sporcle/Dagens utmaning/Gravity),
+**Gäller:** spellägen (Matcha, Leitner, kommande Sporcle/Dagens utmaning/Gravity),
 fristående delappar och verktyg. Gäller **inte** rena datafiler eller små
 hjälpfunktioner som hör ihop med befintlig quiz-/flashcard-logik.
 
@@ -925,11 +929,17 @@ använd mönstret därifrån och översätt det till det nya lägets mekanik:**
    får aldrig betyda utebliven information.
 
 **Utöver de åtta, i varje nytt läge:**
-- Egen `js/<namn>.js` med skyddade `typeof`-krokar från `app.js` (§12) och egen
-  `?v=`-cachebuster i synk (SEO_REGLER §11 C).
+- Egen `js/<namn>.js` med skyddade `typeof`-krokar från `app.js` (§12). Cachebustern
+  sätter `scripts/bump_version.py` automatiskt – aldrig för hand.
 - **Varje nytt element som ska kunna döljas behöver en egen `.x.hidden`-regel** —
   `.hidden` är inte global i projektet (CSS_KARTA). Detta orsakade en skarp bugg i
-  0.9.244; det får inte upprepas i nästa läge.
+  0.9.244 och en till i 0.9.251 (`.hs-empty` saknade regeln, så "Inga resultat än"
+  låg kvar ovanpå de resultat som faktiskt fanns – i både Matcha- och
+  Leitner-segmentet). **Sök efter regeln innan du använder `.hidden` på ett element
+  du inte själv nyss skrivit den för.**
+- **Ämnesurvalet återanvänds, kopieras aldrig:** `loadPoolForTopic()` och
+  `topicMatchesSelection()` i `js/app.js` är enda upplagan. Ett nytt paraplyämne
+  läggs till där, inte i spelläget.
 - Egen topplista/lagring i eget localStorage-fack med export/import/rensa, och
   minnesfallback vid privat läge (`warnStorageUnavailable`).
 - **Visuell verifiering på mobilviewport (390×844) före leverans** — punkt 3 ovan.
@@ -945,6 +955,17 @@ att jag lyfter spelkänslan också?" ska inte ställas: svaret är redan ja.
 **DESSA REGLER ÄR BINDANDE FÖR ALL ARBETE PÅ ANATOMIQUIZ.**
 
 **Senast uppdaterad:** 2026-07-25
+**Version:** 2.1 – lärdomar ur Leitner-bygget (0.9.251), skrivna proaktivt enligt §0:
+- §12 cachebustern **automatiseras** – `bump_version.py` sätter numera `?v=` för varje
+  ändrad `js/*.js` och `css/*.css` i alla sidor som refererar dem, plus generatorernas
+  `STYLES_V`/`CSS_V`. Den gamla formuleringen ("sätts för hand tills skriptet lär sig
+  dem") var i sig ett regelbrott mot §0.3: 116 sidor refererar `styles.css`
+- §13.1 `.hidden`-fällan slog till igen, nu på en **delad** klass (`.hs-empty`) som
+  redan fanns – leta efter dölj-regeln med grep INNAN `classList.add('hidden')` skrivs,
+  även på element du inte själv skapat (CSS_KARTA har det praktiska greppet)
+- §13.1 ämnesurvalet (`loadPoolForTopic`, `topicMatchesSelection`) ligger i EN upplaga
+  i `js/app.js` – ett nytt spelläge kopierar det aldrig
+
 **Version:** 2.0 – §13.1 ny stående regel (2026-07-25, på uttrycklig begäran): **Matcha-standarden är golvet för varje nytt spelläge** och ska aldrig behöva efterfrågas:
 - åtta punkter som ska sitta i det FÖRSTA bygget, inte i ett polish-pass efteråt: mikroåterkoppling, sekventiell reveal som payoff, framstegsmätare över hela spelet, beröm vid delmål, ett riktigt slut med resultatring + rekordmärke, avstängbart ljud/haptik, estetik & mobilkänsla, `prefers-reduced-motion`
 - **principen är bindande, inte formen** – varje punkt ska vara medvetet besvarad i planen och anpassad efter det enskilda spelets mekanik; det som aldrig får hända är att en punkt tyst uteblir

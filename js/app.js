@@ -130,7 +130,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.250'
+const APP_VERSION = '0.9.251'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -209,6 +209,59 @@ async function loadQuestionsFromMultiplePaths(paths){
   }))
   allQuestions = results.flat()
   console.log(`Total loaded: ${allQuestions.length} questions from all paths`)
+}
+
+// === Delade urvalshjälpare för spellägesmodulerna (js/matcha.js, js/leitner.js) ===
+// Ämnesväljaren har tre sorters värden: linser (lins_*), slumpade (blandade*) och
+// vanliga ämnen — plus en handfull paraplyämnen vars frågor känns igen på ett
+// topic-prefix i stället för på exakt värde. Varje spelläge behöver båda dessa
+// delar, och de MÅSTE följa samma regler som quizet. Därför bor de här, i EN
+// upplaga: en kopia per spelläge skulle glida isär så fort ett nytt paraplyämne
+// tillkommer (§0 – bygg bort det som annars tvingar fram efterkontroll).
+
+// Laddar rätt frågefil(er) för valt ämne och returnerar linsobjektet, eller null
+// om ämnet inte är en lins. Speglar startQuiz laddningsgren.
+async function loadPoolForTopic(topic){
+  const lens = ALLMANT_LENSES[topic]
+  if(lens){
+    await loadQuestionsFromMultiplePaths(lensPaths(lens))
+    return lens
+  }
+  if(topic.startsWith('blandade')){
+    const paths = [...new Set(
+      Array.from(el('topic').options)
+        .filter(o => {
+          if(o.disabled || o.value.startsWith('blandade')) return false
+          const t = typeTagOf(o.textContent)
+          return t.mc || t.tf
+        })
+        .map(o => getQuestionsPath(o.value))
+    )]
+    await loadQuestionsFromMultiplePaths(paths)
+    return null
+  }
+  await loadQuestions(getQuestionsPath(topic))
+  return null
+}
+
+// Hör frågan till valt ämne? Lägg till nya paraplyämnen HÄR (och i startQuiz
+// motsvarande gren), så gäller de automatiskt i alla spellägen.
+function topicMatchesSelection(q, topic, lens){
+  if(lens) return lens.match.test(q.topic)
+  if(topic === 'any') return true
+  if(topic === 'any_riktningar') return q.topic === 'riktningar'
+  if(topic === 'osteologi') return q.topic.startsWith('osteologi_')
+  if(topic === 'muskler') return q.topic.startsWith('muskler_')
+  if(topic === 'skuldran') return q.topic.startsWith('skuldra_')
+  if(topic === 'grepp') return q.topic.startsWith('grepp_')
+  if(topic === 'ledtyper') return q.topic.startsWith('ledtyper_')
+  if(topic === 'handen') return q.topic.startsWith('handen_')
+  if(topic === 'tentaplugg') return q.topic.startsWith('studier_')
+  if(topic === 'neurologi') return q.topic.startsWith('nervsystemet_')
+  if(topic === 'blodomloppet') return q.topic.startsWith('blodomloppet_')
+  if(topic === 'lakare_anatomi_fysiologi') return q.topic.startsWith('fysiologi_') || q.topic.startsWith('anatomi_')
+  if(topic.startsWith('blandade')) return true
+  return q.topic === topic
 }
 
 // Question flags persisted in localStorage: { [id]: { reported: bool, excluded: bool } }
@@ -949,6 +1002,7 @@ function showHighscores(){
   renderBestList()
   // Krok till spellägesmoduler som har egna topplistesegment (js/matcha.js m.fl.).
   if(typeof renderMatchaScores === 'function') renderMatchaScores()
+  if(typeof renderLeitnerScores === 'function') renderLeitnerScores()
   // focus the list for keyboard users
   setTimeout(()=>{ el('scoreList').focus?.() },50)
 }
@@ -1401,6 +1455,7 @@ function updateStartButtons(){
   // Krok till spellägesmoduler (js/matcha.js m.fl.) som har egna startknappar.
   // Skyddad så app.js fungerar även om modulen inte är laddad.
   if(typeof updateMatchaButton === 'function') updateMatchaButton()
+  if(typeof updateLeitnerButton === 'function') updateLeitnerButton()
 }
 
 function showSettings(){

@@ -5,14 +5,17 @@
 # Kringgå medvetet vid behov med:  git commit --no-verify
 set -euo pipefail
 
-# --- Versionssynk (SEO_REGLER §11 A) ---------------------------------------
+# --- Versionssynk (SEO_REGLER §11 A och §11 C) ------------------------------
 # Versionen står på tre ställen som måste vara identiska: VERSION,
 # cachebustern i index.html och APP_VERSION i js/app.js. Missas den sista
 # visar sajten en gammal version i all evighet och ingen omladdning hjälper,
 # eftersom den app.js som serveras genuint bär det gamla numret. Hände i
-# 0.9.237–0.9.240 (fyra släpp). Kontrolleras när något av de tre är stageat.
+# 0.9.237–0.9.240 (fyra släpp).
+# Kontrollen omfattar även ?v= för ÄNDRADE js/css-filer, och utlöses därför av
+# att någon av dem är stagead: en ny js-modul eller en CSS-ändring utan bumpad
+# buster serveras från cache hos återvändande besökare.
 if git diff --cached --name-only --diff-filter=ACM \
-     | grep -qE '^(VERSION|index\.html|js/app\.js)$'; then
+     | grep -qE '^(VERSION|index\.html|js/.*\.js|css/.*\.css)$'; then
   if ! python3 scripts/bump_version.py --check; then
     echo ""
     echo "⛔ Commit stoppad: versionerna är inte i synk."

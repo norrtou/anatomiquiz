@@ -9,10 +9,9 @@
 // Laddas som ett vanligt klassiskt <script defer> EFTER js/app.js. Alla klassiska
 // script delar samma globala scope, precis som js/images.js ↔ js/app.js redan
 // gör – därför kan denna fil anropa app.js hjälpare direkt som globaler:
-//   el, shuffle, loadFlags, loadQuestions, loadQuestionsFromMultiplePaths,
-//   ALLMANT_LENSES, lensPaths, getQuestionsPath, typeTagOf, topicLabelFor,
-//   eduAbbrevFor, formatDuration, warnStorageUnavailable, downloadJsonBlob,
-//   topicCapabilities, showHighscores, allQuestions.
+//   el, shuffle, loadFlags, loadPoolForTopic, topicMatchesSelection,
+//   topicLabelFor, eduAbbrevFor, formatDuration, warnStorageUnavailable,
+//   downloadJsonBlob, topicCapabilities, showHighscores, allQuestions.
 // app.js känner i sin tur INTE till Matcha annat än via två skyddade krokar
 // (`if(typeof renderMatchaScores === 'function') …` i showHighscores och
 // `if(typeof updateMatchaButton === 'function') …` i updateStartButtons).
@@ -130,50 +129,10 @@ function matchaVibrate(pattern){
   if(typeof navigator !== 'undefined' && typeof navigator.vibrate === 'function') navigator.vibrate(pattern)
 }
 
-// Speglar startQuiz-grenen: laddar rätt frågepool för ämnet (lins/blandade/enkelt)
-// och returnerar linsobjektet (eller null) så att topikfiltret kan använda det.
-async function loadMatchaPool(topic){
-  const lens = ALLMANT_LENSES[topic]
-  if(lens){
-    await loadQuestionsFromMultiplePaths(lensPaths(lens))
-    return lens
-  }
-  if(topic.startsWith('blandade')){
-    const paths = [...new Set(
-      Array.from(el('topic').options)
-        .filter(o => {
-          if(o.disabled || o.value.startsWith('blandade')) return false
-          const t = typeTagOf(o.textContent)
-          return t.mc || t.tf
-        })
-        .map(o => getQuestionsPath(o.value))
-    )]
-    await loadQuestionsFromMultiplePaths(paths)
-    return null
-  }
-  await loadQuestions(getQuestionsPath(topic))
-  return null
-}
-
-// Speglar topikfiltret i startQuiz (håll i synk om nya ämnen med egen filterlogik
-// läggs till där).
-function matchaTopicMatches(q, topic, lens){
-  if(lens) return lens.match.test(q.topic)
-  if(topic === 'any') return true
-  if(topic === 'any_riktningar') return q.topic === 'riktningar'
-  if(topic === 'osteologi') return q.topic.startsWith('osteologi_')
-  if(topic === 'muskler') return q.topic.startsWith('muskler_')
-  if(topic === 'skuldran') return q.topic.startsWith('skuldra_')
-  if(topic === 'grepp') return q.topic.startsWith('grepp_')
-  if(topic === 'ledtyper') return q.topic.startsWith('ledtyper_')
-  if(topic === 'handen') return q.topic.startsWith('handen_')
-  if(topic === 'tentaplugg') return q.topic.startsWith('studier_')
-  if(topic === 'neurologi') return q.topic.startsWith('nervsystemet_')
-  if(topic === 'blodomloppet') return q.topic.startsWith('blodomloppet_')
-  if(topic === 'lakare_anatomi_fysiologi') return q.topic.startsWith('fysiologi_') || q.topic.startsWith('anatomi_')
-  if(topic.startsWith('blandade')) return true
-  return q.topic === topic
-}
+// Frågepool och ämnesfilter delas numera med övriga spellägen: `loadPoolForTopic`
+// och `topicMatchesSelection` bor i js/app.js i EN upplaga (de låg tidigare som en
+// egen kopia här). En kopia per läge skulle glida isär så fort ett nytt
+// paraplyämne tillkom — lägg därför nya ämnesgrenar i app.js, inte här.
 
 async function startMatcha(){
   matchaName = el('playerName').value.trim() || 'Spelare'
@@ -181,7 +140,7 @@ async function startMatcha(){
   matchaTimerOn = !!el('timerEnabled')?.checked
   matchaTopic = el('topic').value
 
-  const lens = await loadMatchaPool(matchaTopic)
+  const lens = await loadPoolForTopic(matchaTopic)
   const flags = loadFlags()
   const norm = s => (s || '').trim().toLocaleLowerCase('sv-SE')
   const seenPrompt = new Set()
@@ -196,7 +155,7 @@ async function startMatcha(){
     if(!q.prompt || !q.correct) continue
     if(q.prompt.length > MATCHA_MAX_PROMPT_LEN || q.correct.length > MATCHA_MAX_ANSWER_LEN) continue
     if(flags[q.id] && flags[q.id].excluded) continue
-    if(!matchaTopicMatches(q, matchaTopic, lens)) continue
+    if(!topicMatchesSelection(q, matchaTopic, lens)) continue
     const np = norm(q.prompt), nc = norm(q.correct)
     if(seenPrompt.has(np) || seenCorrect.has(nc)) continue
     seenPrompt.add(np); seenCorrect.add(nc)

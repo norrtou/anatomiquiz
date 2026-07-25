@@ -121,7 +121,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="css/styles.css?v=0.9.247">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.251">
 </head>
 <body>
 
@@ -444,10 +444,10 @@
           <button id="startBtn" class="btn primary btn-start">Starta quiz</button>
           <button id="startFlashcardsBtn" class="btn primary btn-start">Starta flashcards</button>
         </div>
-        <div class="game-modes" aria-label="Fler spellägen (kommer snart)">
+        <div class="game-modes" aria-label="Fler spellägen">
           <div class="game-modes-row game-modes-row--3">
             <button id="startMatchaBtn" class="btn btn-mode btn-mode--ready" type="button">Matcha</button>
-            <button class="btn btn-mode" type="button" disabled aria-disabled="true">Leitner Light</button>
+            <button id="startLeitnerBtn" class="btn btn-mode btn-mode--ready" type="button">Leitner Light</button>
             <button class="btn btn-mode" type="button" disabled aria-disabled="true">Sporcle</button>
           </div>
           <div class="game-modes-row game-modes-row--2">
@@ -671,6 +671,100 @@
     </section>
 
     <!-- =========================================================
+         Leitner Light (spaced repetition) — dagens pluggpass (dold initialt).
+         Varje fråga är ett kort som bor i en av fem lådor: rätt svar flyttar
+         kortet upp en låda och glesar ut repetitionen (1 → 2 → 4 → 8 → 16
+         dagar), fel skickar det tillbaka till låda 1. Lådstatusen sparas mellan
+         pass i eget fack (hur_leitner_state), passresultaten i
+         hur_highscores_leitner. Logik: js/leitner.js.
+         ========================================================= -->
+    <section id="leitner" class="card hidden" aria-labelledby="leitnerHeading">
+      <h2 id="leitnerHeading" class="sr-only">Leitner Light</h2>
+
+      <div class="leitner-header">
+        <div class="leitner-header-top">
+          <span id="leitnerPlayerLabel" class="leitner-player"></span>
+          <span id="leitnerMeta" class="leitner-meta"></span>
+        </div>
+        <div class="leitner-header-bottom">
+          <div class="leitner-progress-track" aria-hidden="true">
+            <div id="leitnerProgressFill" class="leitner-progress-fill"></div>
+          </div>
+          <span id="leitnerProgressLabel" class="leitner-progress-label" aria-live="polite"></span>
+          <span id="leitnerScoreBadge" class="leitner-score-badge" aria-live="polite"></span>
+        </div>
+        <!-- Långsiktig mätare: hur många av ämnets kort som nått låda 5. Dagens
+             pass är litet, kunskapsbygget är stort – båda ska synas. -->
+        <div id="leitnerMastery" class="leitner-mastery">
+          <span class="leitner-mastery-label">Mästrat i ämnet</span>
+          <div class="leitner-mastery-track" aria-hidden="true">
+            <div id="leitnerMasteryFill" class="leitner-mastery-fill"></div>
+          </div>
+          <span id="leitnerMasteryLabel" class="leitner-mastery-count" aria-live="polite"></span>
+        </div>
+      </div>
+
+      <div id="leitnerPlay" class="leitner-play">
+        <!-- Lådtrappan: brickan glider till kortets nya låda när svaret rättas.
+             Det är lägets belöningsmoment – man SER kortet flytta sig. -->
+        <div class="leitner-ladder-wrap">
+          <div id="leitnerLadder" class="leitner-ladder" aria-hidden="true">
+            <div class="leitner-boxes">
+              <span class="leitner-box">1</span>
+              <span class="leitner-box">2</span>
+              <span class="leitner-box">3</span>
+              <span class="leitner-box">4</span>
+              <span class="leitner-box">5</span>
+            </div>
+            <div id="leitnerChip" class="leitner-chip"></div>
+          </div>
+          <span id="leitnerLadderLabel" class="leitner-ladder-label" aria-live="polite"></span>
+        </div>
+
+        <p id="leitnerPraise" class="leitner-praise hidden" aria-live="polite"></p>
+
+        <div class="leitner-card">
+          <span id="leitnerCardMeta" class="leitner-card-meta"></span>
+          <p id="leitnerPrompt" class="leitner-prompt"></p>
+        </div>
+
+        <div id="leitnerChoices" class="leitner-choices" role="group" aria-label="Svarsalternativ"></div>
+      </div>
+
+      <!-- Klart-vy (dold under passet) -->
+      <div id="leitnerFinished" class="leitner-finished hidden">
+        <div class="leitner-ring-wrap">
+          <svg class="leitner-ring" viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="leitner-ring-bg" cx="60" cy="60" r="52"></circle>
+            <circle id="leitnerRingProgress" class="leitner-ring-progress" cx="60" cy="60" r="52"></circle>
+          </svg>
+          <div class="leitner-ring-label">
+            <span id="leitnerRingPct" class="leitner-ring-pct"></span>
+            <span class="leitner-ring-sub">rätt</span>
+          </div>
+        </div>
+        <p id="leitnerDoneText" class="leitner-done-text" aria-live="polite"></p>
+        <p id="leitnerStatsText" class="leitner-stats-text"></p>
+        <p id="leitnerNextText" class="leitner-next-text"></p>
+        <p id="leitnerRecordBadge" class="leitner-record-badge hidden" aria-live="polite">🏆 Nytt rekord!</p>
+        <div class="actions">
+          <button id="leitnerRetryBtn" class="btn primary">Nytt pass</button>
+          <button id="leitnerQuitBtn" class="btn">Avsluta</button>
+        </div>
+      </div>
+
+      <div id="leitnerFooter" class="quiz-footer">
+        <button id="leitnerCancelBtn" class="btn btn-cancel">Avbryt</button>
+        <div class="footer-center">
+          <div id="leitnerTimer" class="timer" role="timer"></div>
+        </div>
+        <div class="quiz-actions">
+          <button id="leitnerNextBtn" class="btn primary" type="button" disabled>Nästa</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
          Hantera-sektion — granska och importera frågor (dold initialt)
          ========================================================= -->
     <section id="manage" class="card hidden" aria-labelledby="manageHeading">
@@ -727,14 +821,14 @@
       </div>
 
       <!-- =====================================================================
-           Platshållar-segment för de kommande spellägena. Ett segment per nytt
-           läge, tomt tills respektive quiz byggs. Varje segment har egna
-           export/import/rensa-knappar (skuggade/disabled) med färdiga id:n enligt
-           slug-konventionen (scoreList-<slug>, exportScores-<slug>, …) så att
-           framtida wiring bara behöver aktivera dem och koppla på logik.
+           Ett segment per spelläge utöver quizet. Byggda lägen (Matcha, Leitner
+           Light) är aktiva; de som ännu inte är byggda står kvar som skuggade
+           platshållare. Id:n följer slug-konventionen (scoreList-<slug>,
+           exportScores-<slug>, …), så ett nytt läge behöver bara ta bort
+           disabled/hs-segment--placeholder och koppla på sin logik.
            Slugs: matcha · leitner · sporcle · daily · gravity
            ===================================================================== -->
-      <div class="hs-modes" aria-label="Topplistor för kommande spellägen">
+      <div class="hs-modes" aria-label="Topplistor för övriga spellägen">
         <h3 class="hs-modes-heading">Fler spellägen</h3>
 
         <div class="hs-segment" data-mode="matcha">
@@ -749,15 +843,15 @@
           </div>
         </div>
 
-        <div class="hs-segment hs-segment--placeholder" data-mode="leitner">
-          <h4 class="hs-segment-title">Leitner Light</h4>
+        <div class="hs-segment" data-mode="leitner">
+          <h4 class="hs-segment-title">Leitner Light <span class="hs-segment-sub">flest rätt först</span></h4>
           <ol id="scoreList-leitner" class="hs-segment-list"></ol>
-          <p class="hs-empty">Spelläget är inte byggt än — inga resultat att visa.</p>
+          <p class="hs-empty">Inga Leitner-pass än — kör ett pass så dyker de upp här.</p>
           <div class="actions">
-            <button id="exportScores-leitner" class="btn" type="button" disabled aria-disabled="true">Exportera resultat</button>
-            <button id="importScoresBtn-leitner" class="btn" type="button" disabled aria-disabled="true">Importera resultat</button>
-            <input id="importScoresFile-leitner" type="file" accept="application/json" class="file-input-hidden" aria-hidden="true" tabindex="-1" disabled />
-            <button id="clearScores-leitner" class="btn" type="button" disabled aria-disabled="true">Rensa</button>
+            <button id="exportScores-leitner" class="btn" type="button">Exportera resultat</button>
+            <button id="importScoresBtn-leitner" class="btn" type="button">Importera resultat</button>
+            <input id="importScoresFile-leitner" type="file" accept="application/json" class="file-input-hidden" aria-hidden="true" tabindex="-1" />
+            <button id="clearScores-leitner" class="btn" type="button">Rensa</button>
           </div>
         </div>
 
@@ -916,8 +1010,9 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.250" defer></script>
+  <script src="js/app.js?v=0.9.251" defer></script>
   <!-- Spellägesmoduler: en egen fil per läge, laddas EFTER app.js (delar globalt scope). -->
-  <script src="js/matcha.js?v=0.9.247" defer></script>
+  <script src="js/matcha.js?v=0.9.251" defer></script>
+  <script src="js/leitner.js?v=0.9.251" defer></script>
 </body>
 </html>

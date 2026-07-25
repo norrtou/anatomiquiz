@@ -2289,6 +2289,405 @@ ol li {
 }
 
 /* ============================================================================
+   LEITNER LIGHT (spaced repetition) — js/leitner.js
+   Ett kort i taget, med en lådtrappa som visar var kortet hamnar. Delar
+   formspråk med Matcha (samma infopanel, mätare, resultatring och rekordmärke)
+   men har egna klasser, så att de två lägena kan ändras oberoende.
+   ============================================================================ */
+
+/* En sammanhållen infopanel i stället för lösryckta textrader. */
+.leitner-header {
+  background: var(--success-bg);
+  border: 1px solid var(--primary-light);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  margin-bottom: 12px;
+}
+
+.leitner-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.leitner-player { font-weight: 700; color: var(--primary-deep); }
+.leitner-meta { font-size: 0.82rem; font-weight: 600; color: var(--text-secondary); text-align: right; }
+
+.leitner-header-bottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* Framsteg genom HELA passet (avklarade kort), inte position i kön. */
+.leitner-progress-track {
+  flex: 1 1 auto;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(16, 185, 129, 0.15);
+  overflow: hidden;
+}
+.leitner-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+  border-radius: 999px;
+  transition: width 0.35s ease;
+}
+.leitner-progress-label {
+  flex: 0 0 auto;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.leitner-score-badge {
+  flex: 0 0 auto;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--primary-deep);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.leitner-score-badge.bump { animation: leitnerBadgeBump 0.35s ease; }
+@keyframes leitnerBadgeBump {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.35); }
+  100% { transform: scale(1); }
+}
+
+/* Långsiktig mästringsmätare för ämnet — den som gör att man kommer tillbaka. */
+.leitner-mastery {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(16, 185, 129, 0.35);
+}
+.leitner-mastery-label {
+  flex: 0 0 auto;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+}
+.leitner-mastery-track {
+  flex: 1 1 auto;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(16, 185, 129, 0.15);
+  overflow: hidden;
+}
+.leitner-mastery-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--primary-deep) 0%, var(--primary) 100%);
+  border-radius: 999px;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.leitner-mastery-count {
+  flex: 0 0 auto;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--primary-deep);
+  font-variant-numeric: tabular-nums;
+}
+.leitner-mastery.celebrate { animation: leitnerMasteryGlow 0.9s ease; }
+@keyframes leitnerMasteryGlow {
+  0%, 100% { background: transparent; }
+  40% { background: rgba(16, 185, 129, 0.18); }
+}
+
+/* --- Lådtrappan --------------------------------------------------------- */
+/* Fem lika breda celler med 6 px mellanrum; brickan ligger som en overlay och
+   glider mellan cellerna. Positionen sätts av js/leitner.js via --lb-pos (0–4),
+   och beräkningen nedan måste därför använda SAMMA cellbredd och mellanrum. */
+.leitner-ladder-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.leitner-ladder {
+  position: relative;
+  --lb-gap: 6px;
+}
+
+.leitner-boxes {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--lb-gap);
+}
+
+.leitner-box {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed rgba(16, 185, 129, 0.35);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: border-color var(--transition-fast), background var(--transition-fast), color var(--transition-fast);
+}
+/* Lådor kortet redan passerat tonas in som avklarade. */
+.leitner-box.filled {
+  border-style: solid;
+  border-color: var(--primary-light);
+  background: var(--success-bg);
+  color: var(--primary-deep);
+}
+.leitner-box.active {
+  border-style: solid;
+  border-color: var(--primary-dark);
+  color: var(--primary-deep);
+}
+
+/* Brickan bär sitt lådnummer i vitt: den täcker cellen den står i, och utan
+   siffran skulle just den låda kortet befinner sig i vara den enda utan nummer. */
+.leitner-chip {
+  position: absolute;
+  top: 0;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 800;
+  /* Cellbredd = (100 % − 4 mellanrum) / 5; steglängd = cellbredd + mellanrum. */
+  width: calc((100% - 4 * var(--lb-gap)) / 5);
+  left: 0;
+  transform: translateX(calc(var(--lb-pos, 0) * (100% + var(--lb-gap))));
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-deep) 100%);
+  box-shadow: 0 3px 8px rgba(4, 120, 87, 0.35);
+  transition: transform 0.45s cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+/* Nytt kort ska snäppa dit utan att åka tvärs över trappan. */
+.leitner-chip.no-anim { transition: none; }
+
+.leitner-ladder-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary-deep);
+  text-align: center;
+  min-height: 1.2em;
+}
+
+/* Beröm vid delmål (mästrat kort, svit) — kort och konkret, inte bara siffror. */
+.leitner-praise {
+  margin: 0 0 10px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--primary-deep);
+  background: var(--success-bg);
+  border: 1px solid var(--primary-light);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.88rem;
+}
+.leitner-praise.in { animation: leitnerPraiseIn 0.45s ease; }
+@keyframes leitnerPraiseIn {
+  0% { transform: scale(0.85); opacity: 0; }
+  60% { transform: scale(1.04); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* --- Kortet och svarsalternativen --------------------------------------- */
+.leitner-card {
+  border: 2px solid var(--primary-light);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  padding: 16px 16px 18px;
+  margin-bottom: 14px;
+}
+
+.leitner-card-meta {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.leitner-prompt {
+  margin: 0;
+  /* Textlängd → typsnittsskala (--prompt-scale sätts per kort av js/leitner.js).
+     max() håller ett läsligt golv oavsett hur lång frågan är. */
+  font-size: max(1rem, calc(1.25rem * var(--prompt-scale, 1)));
+  line-height: 1.35;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.leitner-choices {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.leitner-choice {
+  width: 100%;
+  min-height: 52px;          /* tumvänlig träffyta */
+  padding: 11px 14px;
+  border: 2px solid var(--primary-light);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: max(0.82rem, calc(1rem * var(--opt-scale, 1)));
+  line-height: 1.3;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+.leitner-choice:hover:not(:disabled) { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-1px); }
+.leitner-choice:active:not(:disabled) { transform: translateY(0) scale(0.99); }
+.leitner-choice:disabled { cursor: default; }
+
+/* Omedelbart kvitto på trycket, innan facit hinner tändas. */
+.leitner-choice.chosen { border-color: var(--primary-dark); background: var(--success-bg); }
+
+.leitner-choice.correct {
+  border-color: var(--success);
+  background: var(--success-bg);
+  color: var(--primary-deep);
+  font-weight: 700;
+}
+.leitner-choice.wrong {
+  border-color: var(--error);
+  background: var(--error-bg);
+  color: #b91c1c;
+}
+.leitner-choice.shake { animation: leitnerShake 0.4s ease; }
+@keyframes leitnerShake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-5px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(2px); }
+}
+
+/* --- Klart-vyn ----------------------------------------------------------- */
+.leitner-finished { text-align: center; padding: 14px 0 4px; }
+
+.leitner-ring-wrap { position: relative; width: 140px; height: 140px; margin: 0 auto 12px; }
+.leitner-ring { width: 100%; height: 100%; transform: rotate(-90deg); }
+.leitner-ring-bg { fill: none; stroke: var(--success-bg); stroke-width: 10; }
+.leitner-ring-progress {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 326.7; /* 2 · π · r(52) */
+  stroke-dashoffset: 326.7;
+  transition: stroke-dashoffset 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.leitner-ring-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.leitner-ring-pct { font-size: 1.9rem; font-weight: 800; color: var(--primary-deep); font-variant-numeric: tabular-nums; }
+.leitner-ring-sub { font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.04em; }
+
+.leitner-done-text { font-size: 1.05rem; margin: 0 0 8px; }
+.leitner-stats-text { font-size: 0.86rem; color: var(--text-secondary); margin: 0 0 8px; }
+/* Slutet pekar framåt: när korten kommer tillbaka. */
+.leitner-next-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-deep);
+  background: var(--success-bg);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  margin: 0 0 12px;
+}
+
+.leitner-record-badge {
+  display: inline-block;
+  margin: 0 0 14px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-deepest) 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.88rem;
+  animation: leitnerRecordIn 0.5s ease;
+}
+@keyframes leitnerRecordIn {
+  0% { transform: scale(0.7); opacity: 0; }
+  60% { transform: scale(1.08); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* OBS: .hidden är INTE en global utility i det här projektet (CSS_KARTA) – den
+   fungerar bara via sammansatta selektorer. Leitners inre delar är inga .card,
+   så var och en som ska kunna döljas behöver en egen regel här. Utan den visas
+   klart-vyn mitt i passet, precis som hände Matcha i 0.9.244. */
+.leitner-play.hidden,
+.leitner-finished.hidden,
+.leitner-praise.hidden,
+.leitner-record-badge.hidden,
+#leitnerFooter.hidden { display: none; }
+
+@media (max-width: 640px) {
+  .leitner-header { padding: 8px 10px; }
+  /* Ämnesraden är lång ("Balansorganet (vestibularis) · 8 att repetera · 2 nya")
+     och bröts illa mot högerkanten bredvid namnet. Egen rad, vänsterställd. */
+  .leitner-header-top { flex-direction: column; align-items: flex-start; gap: 2px; }
+  .leitner-meta { font-size: 0.74rem; text-align: left; }
+  .leitner-mastery-label { font-size: 0.66rem; }
+  .leitner-box { height: 30px; font-size: 0.72rem; }
+  .leitner-chip { height: 30px; }
+  .leitner-card { padding: 13px 12px 15px; }
+  .leitner-prompt { font-size: max(0.92rem, calc(1.1rem * var(--prompt-scale, 1))); }
+  .leitner-choice {
+    min-height: 48px;
+    padding: 10px 11px;
+    font-size: max(0.78rem, calc(0.92rem * var(--opt-scale, 1)));
+  }
+  .leitner-ring-wrap { width: 112px; height: 112px; }
+  .leitner-ring-pct { font-size: 1.5rem; }
+  .leitner-next-text { font-size: 0.84rem; }
+}
+
+/* Rörelsen är extra, inte information: sluttillstånden (grön/röd, lådposition,
+   mätare, ring) sätts ändå direkt av JS – bara utan rörelse dit. */
+@media (prefers-reduced-motion: reduce) {
+  .leitner-choice,
+  .leitner-choice.shake,
+  .leitner-chip,
+  .leitner-box,
+  .leitner-progress-fill,
+  .leitner-mastery-fill,
+  .leitner-mastery.celebrate,
+  .leitner-ring-progress,
+  .leitner-score-badge.bump,
+  .leitner-praise.in,
+  .leitner-record-badge {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ============================================================================
    RESPONSIVE DESIGN
    Mobile-first approach ensures great experience on all devices
    ============================================================================ */
@@ -2654,6 +3053,11 @@ ol li {
   color: var(--text-muted, #6b7280);
   font-style: italic;
 }
+/* Spellägenas topplistesegment döljer tomtexten med classList.add('hidden') när
+   det finns resultat. `.hidden` är INTE en global utility (CSS_KARTA), så utan
+   den här regeln visades "Inga resultat än" ovanpå de resultat som faktiskt
+   fanns – i både Matcha- och Leitner-segmentet. */
+.hs-empty.hidden { display: none; }
 
 .stats-list {
   list-style: none;

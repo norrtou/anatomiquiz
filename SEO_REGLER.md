@@ -476,7 +476,10 @@ Skriptet sätter alla tre ställena i en operation, så en partiell bump inte ka
 `pre-commit`-hooken blockerar dessutom varje commit där de tre glidit isär.
 
 - [ ] `python3 scripts/bump_version.py 0.Y.Z` — sätter `VERSION`, cachebustern
-      `app.js?v=` i `index.html` och `APP_VERSION` i `js/app.js`.
+      `app.js?v=` i `index.html` och `APP_VERSION` i `js/app.js`. **Samma körning
+      sätter också `?v=` för alla andra `js/*.js` och `css/*.css` som ändrats sedan
+      HEAD**, i varje HTML-sida som refererar dem, plus generatorernas
+      `STYLES_V`/`CSS_V` (§11 C behöver alltså ingen egen åtgärd).
 - [ ] `CHANGELOG.md`: ny post överst med vad som ändrats (görs för hand).
 
 **Varför alla tre måste vara identiska:** `VERSION` är källan och hämtas färsk vid sidladdning;
@@ -498,9 +501,15 @@ stod kvar på `0.9.236`, och felet syntes inte i något av de svep som kördes, 
 - [ ] Korslänka: lägg in länk från relevant **pillar/hub** + interna korslänkar + breadcrumb.
 - [ ] `<head>` komplett enligt §1 (canonical, OG, Twitter, JSON-LD med BreadcrumbList).
 
-### C. CSS ändrad (`css/styles.css`)
-- [ ] Bumpa `styles.css?v=` cachebuster **på alla sidor som laddar filen** – håll versionen
-      **enhetlig** över hela sajten (annars får återvändande besökare stale CSS).
+### C. CSS eller en js-modul ändrad
+- [ ] `styles.css?v=` ska vara **enhetlig på alla 116 sidor som laddar filen**, och
+      varje modulfil (`js/matcha.js`, `js/leitner.js` …) ska bära den version då den
+      senast ändrades. Detta **görs av `bump_version.py`** (§11 A) — sätt det aldrig
+      för hand; en handredigering av 116 sidor blir förr eller senare halvgjord, och
+      återvändande besökare får då stale CSS. `pre-commit` blockerar en commit där en
+      ändrad js/css-fil bär gammal buster.
+- [ ] Generatorerna (`scripts/generate_*.py`) bär CSS-versionen som konstant och
+      skriver tillbaka den vid nästa körning — skriptet uppdaterar även dem.
 - [ ] `CHANGELOG.md` noterar CSS-versionen.
 
 ### D. Befintlig sidas indexerbarhet/meta ändras

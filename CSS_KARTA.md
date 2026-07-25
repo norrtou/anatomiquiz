@@ -60,6 +60,17 @@ ingenting och elementet syns hela tiden. Detta orsakade en skarp bugg i 0.9.244:
 Matchas klart-vy (`#matchaFinished`, en `div` – ingen `.card`) visades mitt i spelet
 eftersom `.hidden` inte bet på den. Se [[feedback-ui-fun-and-listen-first]].
 
+**Fällan slår till även på element du inte själv skrev:** i 0.9.251 visade sig
+`.hs-empty` ("Inga resultat än") sakna regeln. Texten låg därför kvar **ovanpå** de
+resultat som faktiskt fanns, i både Matcha- och Leitner-segmentet, trots att JS:en
+prydligt satte `hidden` på den. Buggen var osynlig så länge topplistan var tom.
+
+**Så här gör du det rätt från början:** innan du skriver `classList.add('hidden')` på
+ett element, greppa efter dölj-regeln för just den klassen –
+`grep -n "\.<klass>\.hidden" css/*.css`. Finns den inte: skriv den i samma ändring,
+i samma block som elementets övriga stilar. Att "det ser rätt ut i webbläsaren" är
+inget bevis när det tomma tillståndet är standardläget.
+
 ## Snabb felsökning när en stiländring "inte tar"
 1. Vilka CSS-filer laddar sidan? (`grep stylesheet <sida>.html`)
 2. Finns selektorn i **mer än en** fil eller **mer än en gång** i samma fil?
