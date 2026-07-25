@@ -1,6 +1,7 @@
 # SEO, agentisk inläsning (GEO), EEAT och tillgänglighet – åtgärdslista
 
-**Status:** analys gjord 2026-07-25 över samtliga sidor. **Punkt 1, 2, 3 och 10 utförda i 0.9.259.**
+**Status:** analys gjord 2026-07-25 över samtliga sidor. **Punkt 1, 2, 3 och 10 utförda i 0.9.259.
+Punkt 7 utförd i 0.9.265** (plus tre generatorbuggar som blockerade den, se nedan).
 Resten är öppen och prioriterad nedan.
 **Skapad:** 2026-07-25. **Underlag:** hela sajten lästes maskinellt – titlar, descriptions,
 canonicals, JSON-LD, rubrikhierarki, tabellmärkning, intern länkning, `llms.txt`, `sitemap.xml`,
@@ -81,6 +82,34 @@ sidhuvudena i både generatorerna *och* den levererade HTML:en var för sig.
 pipelinen åter blir idempotent, eller om de kurerade avvikelserna ska dokumenteras som
 undantag. Tills dess är regenerering en manuell operation som kräver diffgranskning.
 
+**Avgränsning:** ovanstående gäller `wire_terms.py` och de tooltip-wirade kunskapsbankssidorna.
+Den blockerar punkt 4, 6 och 14 — **inte** ordlistan.
+
+### ✅ Ordlistegeneratorns egen drift – FIXAD i 0.9.265
+
+Mättes när punkt 7 skulle byggas: `generate_glossary.py` rundtrippade inte heller, av tre
+helt andra skäl. Alla tre är åtgärdade, och regeln står nu i **CLAUDE_REGLER.md §12.2**.
+
+1. **`theme.js` fick fel cachebuster.** Mallen skrev `theme.js?v={STYLES_V}`. `styles.css`
+   ändrades i 0.9.264 → `STYLES_V` bumpades → en regenerering hade skrivit
+   `theme.js?v=0.9.264` på 33 sidor fast `js/theme.js` inte rörts sedan 0.9.260.
+   `bump_version.py` gjorde rätt hela tiden; felet var att **en konstant bar två resurser**.
+   Fanns i sex generatorer. Nu `THEME_V` skild från `STYLES_V`/`CSS_V` överallt, och
+   `GLOSSARY_V` uppdelad i `GLOSSARY_CSS_V`/`GLOSSARY_JS_V`. `generate_artiklar.py` hämtade
+   dessutom bustern ur beräknade `VERSION` och var därför osynlig för `bump_version.py`:s
+   `generator_css_versions()` (som kräver ett literalt `VAR = "x.y.z"`) — nu literala konstanter.
+2. **`sitemap.xml` daterade om hela sajten.** `write_sitemap` satte `date.today()` på alla
+   240 URL:er vid varje körning. Nu jämförs varje sida mot disk med cachebusters
+   bortnormaliserade (`?v=0.9.264` → `?v=`); bara sidor med ändrat **innehåll** får nytt
+   `<lastmod>`, URL:er generatorn inte äger behåller sitt datum. Verifierat i 0.9.265:
+   de 33 ordlistesidorna fick 2026-07-25, de 83 övriga stod kvar på 2026-07-24.
+3. **`spellagen.html` var handinlagd i `sitemap.xml`** i annan ordning än generatorn emitterar.
+   Generatorn äger filen; ordningen normaliserades.
+
+**Rundtrippstest finns nu:** `python3 scripts/generate_glossary.py --check` bygger i minnet,
+skriver inget och ger exit 1 vid avvikelse. Ren utcheckning + `--check` ska alltid ge
+"rundtripp identisk".
+
 ---
 
 ## Prioriterad åtgärdslista
@@ -90,7 +119,7 @@ undantag. Tills dess är regenerering en manuell operation som kräver diffgrans
 | 4 | Person-`author` + `@id` på alla artiklar | ~1 h, generator | **Hög (EEAT)** |
 | 5 | Synligt `<time datetime>` + `dateModified` överallt | ~2 h | **Hög (EEAT + färskhet)** |
 | 6 | `citation` från befintliga referenslistor | ~2 h | **Hög (EEAT)** |
-| 7 | `DefinedTerm`-microdata i ordlistan | ~2 h, i generatorn | **Högst (GEO)** |
+| ~~7~~ | ~~`DefinedTerm`-microdata i ordlistan~~ | ✅ 0.9.265 | **Högst (GEO)** |
 | 8 | Ansvarsfriskrivning som delad komponent | ~1 h | Hög (YMYL) |
 | 9 | `lang="la"` på latinska termer | ~3 h | Hög (WCAG AA) |
 | 11 | Syskonlänkar / "Relaterat"-block | ~3 h | Medel |
@@ -141,19 +170,28 @@ till eftersom källorna redan är strukturerade i sidorna.
 Gör det till en del av artikelgeneratorn så att en ny artikel får `citation` automatiskt ur
 sin referenslista – annars driver de isär igen.
 
-## 7. ⬜ `DefinedTerm`-microdata i ordlistan ← största GEO-vinsten
+## 7. ✅ KLAR i 0.9.265 – `DefinedTerm`-microdata i ordlistan
 
-**Mätt:** 4 701 termer ligger i perfekt `<dl><dt><dd>`-struktur över 32 sidor, men sidorna är
-bara märkta `CollectionPage`. Ingen `DefinedTerm` någonstans.
+**Utfört i [`build_group_dl()`](generate_glossary.py).** Inline microdata som planerat:
+`itemscope itemtype="https://schema.org/DefinedTerm"` på `.glossary-entry`, `itemprop="name"`
+på `<dt>`, `itemprop="description"` på `<dd>`.
 
-Sajtens största unika tillgång är alltså osynlig för strukturerad tolkning.
+**Mätt efteråt:** **11 175** poster över 32 sidor, alla med typ + `name` + `description`
+(HTML-parsad, inte greppad: 11 175 objekt, **0** med fel typ eller tomt fält). Analysens
+ursprungliga siffra 4 701 var stale — generatorn rapporterar 11 175 live-termer.
 
-**Använd inline microdata, inte JSON-LD.** `itemscope itemtype="https://schema.org/DefinedTerm"`
-på `.glossary-entry`, `itemprop="name"` på `<dt>`, `itemprop="description"` på `<dd>`. JSON-LD
-hade dubblerat all text och nästan fördubblat en redan 378 KB stor sida som `ordlista-p.html`;
-microdata kostar ~60 byte per term och ingen dubblering.
+**Kostnaden blev mindre än befarat.** `ordlista-p.html` (1 087 termer, störst): 379 041 →
+478 027 byte okomprimerat (+26 %), men **gzip 81 412 → 83 361 byte, +1 949 byte (+2,4 %)**.
+Attributsträngarna är identiska och komprimeras i praktiken bort. Inga nya DOM-noder.
 
-Görs i `scripts/generate_glossary.py`. Håll generator och `js/glossary.js` byte-identiska.
+**Sökträffarna i `js/glossary.js` fick medvetet INTE attributen** — de renderas i klienten ur
+samma data och hade gett en JS-körande crawler samma term två gånger på samma sida. De delade
+funktionerna (`slugify`/`page_key`/`escapeHtml`/`formatDef`) är orörda, så byte-identiteten som
+håller `#term-…`-ankarna stabila gäller fortfarande.
+
+**Dessutom:** landningssidans `DefinedTermSet` fick `"@id": ".../medicinskordlista.html#ordlista"`
+och bokstavssidornas `isPartOf` pekar nu på samma `@id`. Ordlistan är därmed **en** entitet i
+stället för 33 löskopplade kopior — samma princip som punkt 4 vill ha på Person-noden.
 
 ## 8. ⬜ Medicinsk ansvarsfriskrivning som delad komponent
 

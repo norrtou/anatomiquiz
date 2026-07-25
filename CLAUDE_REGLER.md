@@ -874,6 +874,46 @@ namnges de som research, aldrig som namn på något vi levererar.
 **Kontroll före commit** (skyddsnät, inte ersättning för mallen ovan):
 `grep -rniE '<misstänkt namn>' --include=*.js --include=*.html --include=*.css --include=*.md .`
 
+### 12.2 EN GENERATOR SKA RUNDTRIPPA TILL IDENTITET
+
+**STÅENDE REGEL (2026-07-25).** Kör man en generator på en ren utcheckning ska
+diffen bli **tom**. Gör den inte det har generatorn och den levererade HTML:en
+glidit isär, och varje framtida ändring i den generatorn drar med sig regressioner
+som ingen beställt. Driften ska **fixas först**, inte kringgås genom att patcha
+generator och levererad HTML var för sig — det är dubbelarbete som betalas om
+igen vid nästa ändring (§0).
+
+**Testet ska finnas i generatorn**, inte i huvudet på den som råkar upptäcka det:
+
+```
+python3 scripts/generate_glossary.py --check   # bygger i minnet, skriver inget, exit 1 vid avvikelse
+```
+
+`--check` ska vara skrivfri — bygg allt i minnet, jämför mot disk, skriv i ett
+enda steg först när det inte är en kontrollkörning.
+
+**EN KONSTANT PER RESURS.** Två resurser får aldrig dela cachebusterkonstant.
+`generate_glossary.py` hade `theme.js?v={STYLES_V}`: när `styles.css` ändrades i
+0.9.264 bumpades `STYLES_V`, och en regenerering hade skrivit
+`theme.js?v=0.9.264` på 33 sidor trots att `js/theme.js` inte rörts sedan
+0.9.260. `bump_version.py` gjorde rätt — den bumpar per **ändrad** resurs — men
+`generator_css_versions()` kan inte hålla isär två resurser som pekar på samma
+variabel. Samma fel fanns i fem generatorer till, och `generate_artiklar.py`
+hämtade bustern ur `VERSION` (beräknad, inte literal) och var därmed helt osynlig
+för `bump_version.py`.
+
+**En generator äger sina filer helt — handredigera dem aldrig.**
+`spellagen.html` hade lagts in för hand i `sitemap.xml` i en annan ordning än
+generatorn emitterar. Handredigeringen överlever inte nästa körning.
+
+**`<lastmod>` får bara flyttas av en innehållsändring.** `write_sitemap` satte
+`date.today()` på **alla** URL:er, så varje körning daterade om hela sajten —
+en falsk färskhetssignal på 240 URL:er, och färskhet är precis vad en svarsmotor
+väger. Jämför mot disk med cachebusters bortnormaliserade
+(`?v=0.9.264` → `?v=`); en busterbump är ingen innehållsändring. URL:er
+generatorn skriver ut men inte äger (artiklar, tabellsidor) behåller alltid sitt
+befintliga datum.
+
 ---
 
 ## 13. SPELKÄNSLA ÄR ETT KRAV – RESEARCHA LIKNANDE SPEL FÖRST

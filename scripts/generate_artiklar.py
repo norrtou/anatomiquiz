@@ -48,8 +48,14 @@ KB = ROOT / "kunskapsbank"
 ARTDIR = KB / "artiklar"
 SITE = "https://anatomiquiz.se"
 
-# Cachebuster för CSS – hämtas ur VERSION så generatorn aldrig hamnar efter.
-VERSION = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
+# Cachebusters per asset — EN KONSTANT PER RESURS, bumpa bara den som faktiskt
+# ändrats. Låg tidigare på VERSION ("hämtas ur VERSION så generatorn aldrig
+# hamnar efter"), vilket gav två fel: varje versionsbump skrev ny buster på
+# resurser som inte ändrats, och scripts/bump_version.py kunde inte se
+# konstanterna alls — generator_css_versions() kräver ett literalt
+# `VAR = "x.y.z"`, och ett beräknat VERSION matchar inte.
+STYLES_V = "0.9.264"  # css/styles.css
+THEME_V = "0.9.260"   # js/theme.js
 
 # faktatexter.html är en redan indexerad sida – titeln behålls därför oförändrad.
 # Descriptionen skrevs om 2026-07-20 (0.9.186) på användarens uttryckliga begäran:
@@ -247,7 +253,7 @@ def head(*, titel: str, desc: str, canonical: str, og_type: str,
   <!-- Tema (ljust/mörkt). Laddas SYNKRONT och före stilmallen: attributet
        data-theme måste sitta på <html> innan första målningen, annars
        blinkar sidan ljus. Inline gick inte – CSP:n tillåter bara egen origin. -->
-  <script src="/js/theme.js?v={VERSION}"></script>
+  <script src="/js/theme.js?v={THEME_V}"></script>
 
 {bloc}
 
@@ -255,7 +261,7 @@ def head(*, titel: str, desc: str, canonical: str, og_type: str,
   <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon.png">
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
-  <link rel="stylesheet" href="/css/styles.css?v={VERSION}">
+  <link rel="stylesheet" href="/css/styles.css?v={STYLES_V}">
 </head>"""
 
 

@@ -23,6 +23,7 @@ DATA = ROOT / "data" / "muskeltabeller"
 KB = ROOT / "kunskapsbank"
 SITE = "https://anatomiquiz.se"
 CSS_V = "0.9.264"
+THEME_V = "0.9.260"  # js/theme.js — EGEN konstant, se generate_glossary.py
 
 def esc(s): return html.escape(s, quote=True)
 
@@ -83,7 +84,7 @@ def head(title, desc, canon, ogtype, jsonld):
   <!-- Tema (ljust/mörkt). Laddas SYNKRONT och före stilmallen: attributet
        data-theme måste sitta på <html> innan första målningen, annars
        blinkar sidan ljus. Inline gick inte – CSP:n tillåter bara egen origin. -->
-  <script src="/js/theme.js?v={CSS_V}"></script>
+  <script src="/js/theme.js?v={THEME_V}"></script>
 
   <script type="application/ld+json">
 {json.dumps(jsonld, ensure_ascii=False, indent=2)}

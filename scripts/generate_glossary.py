@@ -65,8 +65,18 @@ def artikel_sitemap_urls() -> list[str]:
     return ga.sitemap_urls(ga.load())
 
 # Cachebusters per asset — bumpa bara den som faktiskt ändrats.
-STYLES_V = "0.9.264"       # css/styles.css (synkad med övriga sidor 2026-07-25)
-GLOSSARY_V = "0.9.189"      # css/glossary.css + js/glossary.js (denna release)
+#
+# EN KONSTANT PER RESURS. Låter man två resurser dela konstant bumpas den ena i
+# onödan när den andra ändras, och scripts/bump_version.py kan inte hålla isär
+# dem: generator_css_versions() läser ut (resursnamn, variabelnamn) och skulle
+# få två resurser med samma variabel. Det var precis vad som hände 2026-07-25 —
+# theme.js hängde på STYLES_V, styles.css ändrades i 0.9.264, och en
+# regenerering hade skrivit theme.js?v=0.9.264 på 33 sidor trots att
+# js/theme.js inte rörts sedan 0.9.260.
+STYLES_V = "0.9.264"        # css/styles.css
+THEME_V = "0.9.260"         # js/theme.js
+GLOSSARY_CSS_V = "0.9.189"  # css/glossary.css
+GLOSSARY_JS_V = "0.9.189"   # js/glossary.js
 
 # Svenska alfabetet — fast ordning för alfabetsraden. Bokstäver utan poster
 # renderas nedtonade (icke-klickbara), så raden ser likadan ut oavsett innehåll.
@@ -355,6 +365,20 @@ def build_group_dl(entries: list[dict]) -> str:
     """Statisk <dl> för EN grupps poster (utan bokstavsrubrik — hela sidan är
     redan den bokstaven). Per-post-markupen hålls byte-identisk med tidigare
     rendering så att befintliga term-ankare (#term-...) fortsätter fungera.
+
+    MICRODATA: varje post är en schema.org/DefinedTerm med name (<dt>) och
+    description (<dd>). Ordlistan är sajtens största unika tillgång och låg
+    tidigare helt omärkt — sidorna var bara CollectionPage, så 4 701 termer var
+    osynliga för strukturerad tolkning.
+
+    Inline microdata, INTE JSON-LD: JSON-LD hade dubblerat all termtext och
+    nästan fördubblat en redan 378 KB stor sida som ordlista-p.html (1 087
+    termer). Microdata kostar bara attribut på taggar som redan finns — inga
+    nya DOM-noder, ingen dubblerad text.
+
+    Sökträffarna i js/glossary.js får medvetet INTE de här attributen: de
+    renderas i klienten ur samma data och hade gett en JS-körande crawler samma
+    term två gånger på samma sida.
     """
     lines = ['        <dl class="glossary-group">']
     for entry in entries:
@@ -362,9 +386,10 @@ def build_group_dl(entries: list[dict]) -> str:
         term = escape_html(entry["term"])
         definition = format_def(entry["def"])
         lines.append(
-            f'          <div class="glossary-entry" id="{slug}">'
-            f'<dt class="glossary-term">{term}</dt>'
-            f'<dd class="glossary-def">{definition}</dd></div>'
+            f'          <div class="glossary-entry" id="{slug}"'
+            f' itemscope itemtype="https://schema.org/DefinedTerm">'
+            f'<dt class="glossary-term" itemprop="name">{term}</dt>'
+            f'<dd class="glossary-def" itemprop="description">{definition}</dd></div>'
         )
     lines.append("        </dl>")
     return "\n".join(lines)
@@ -787,14 +812,14 @@ def render_page(
   <!-- Tema (ljust/mörkt). Laddas SYNKRONT och före stilmallen: attributet
        data-theme måste sitta på <html> innan första målningen, annars
        blinkar sidan ljus. Inline gick inte – CSP:n tillåter bara egen origin. -->
-  <script src="/js/theme.js?v={STYLES_V}"></script>
+  <script src="/js/theme.js?v={THEME_V}"></script>
 
   <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
   <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon.png">
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
   <link rel="stylesheet" href="css/styles.css?v={STYLES_V}">
-  <link rel="stylesheet" href="css/glossary.css?v={GLOSSARY_V}">
+  <link rel="stylesheet" href="css/glossary.css?v={GLOSSARY_CSS_V}">
 </head>
 <body{page_attr}>
   <a class="skip-link" href="#main">Hoppa till innehåll</a>
@@ -865,7 +890,7 @@ def render_page(
 
   </main>
 
-  <script src="js/glossary.js?v={GLOSSARY_V}"></script>
+  <script src="js/glossary.js?v={GLOSSARY_JS_V}"></script>
 </body>
 </html>
 """
@@ -880,7 +905,9 @@ def page_file_key(filename: str) -> str:
 # Sidor
 # ---------------------------------------------------------------------------
 
-def write_landing(groups: dict[str, list[dict]]) -> str:
+def build_landing(groups: dict[str, list[dict]]) -> str:
+    """Landningssidans HTML. Skriver inget — main() äger alla filskrivningar
+    så att --check kan jämföra i stället för att skriva."""
     url = f"{SITE}/{LANDING_FILE}"
     title = "Medicinsk ordlista – tusentals termer | Anatomiquiz"
     desc = LANDING_DESC
@@ -896,6 +923,9 @@ def write_landing(groups: dict[str, list[dict]]) -> str:
     page_obj = {
         "@context": "https://schema.org",
         "@type": "DefinedTermSet",
+        # Stabilt @id så att ordlistan är EN entitet: bokstavssidornas isPartOf
+        # pekar på samma nod i stället för att upprepa en lös kopia per sida.
+        "@id": f"{url}#ordlista",
         "name": "Medicinsk ordlista",
         "description": (
             "Sökbar medicinsk ordlista på svenska med latinska och anatomiska "
@@ -907,7 +937,7 @@ def write_landing(groups: dict[str, list[dict]]) -> str:
             {"@type": "CreativeWork", "url": f"{SITE}/{page_file(k)}"} for k in order
         ],
     }
-    page = render_page(
+    return render_page(
         filename=LANDING_FILE,
         title=title,
         description=desc,
@@ -926,8 +956,6 @@ def write_landing(groups: dict[str, list[dict]]) -> str:
         is_landing=True,
         extra_jsonld=[faq_jsonld(LANDING_FAQ)],
     )
-    (ROOT / LANDING_FILE).write_text(page, encoding="utf-8")
-    return LANDING_FILE
 
 
 # Synliga ingresser (taglines) för specialsidorna. Prefix- och suffix-sidorna
@@ -953,7 +981,8 @@ SPECIAL_TAGLINES = {
 SPECIAL_LABELS = {"siffror": "Siffror", "prefix": "Förstavelser", "suffix": "Ändelser"}
 
 
-def write_group(key: str, entries: list[dict], present: set[str]) -> str:
+def build_group(key: str, entries: list[dict], present: set[str]) -> tuple[str, str]:
+    """(filnamn, HTML) för EN grupps sida. Skriver inget — se build_landing."""
     filename = page_file(key)
     url = f"{SITE}/{filename}"
     heading = group_heading(key)
@@ -974,7 +1003,11 @@ def write_group(key: str, entries: list[dict], present: set[str]) -> str:
         "description": desc,
         "inLanguage": "sv-SE",
         "url": url,
-        "isPartOf": {"@type": "DefinedTermSet", "url": f"{SITE}/{LANDING_FILE}"},
+        "isPartOf": {
+            "@type": "DefinedTermSet",
+            "@id": f"{SITE}/{LANDING_FILE}#ordlista",
+            "url": f"{SITE}/{LANDING_FILE}",
+        },
     }
     page = render_page(
         filename=filename,
@@ -993,27 +1026,65 @@ def write_group(key: str, entries: list[dict], present: set[str]) -> str:
         content_html=build_group_dl(entries),
         is_landing=False,
     )
-    (ROOT / filename).write_text(page, encoding="utf-8")
-    return filename
+    return filename, page
 
 
 # ---------------------------------------------------------------------------
-# Sitemap
+# Innehållsjämförelse & sitemap
 # ---------------------------------------------------------------------------
 
-def write_sitemap(group_files: list[str]) -> None:
-    """Skriv om sitemap.xml: rot + ordliste-sidor + case/info.
+# ?v=0.9.264 → ?v=. En cachebusterbump är INTE en innehållsändring.
+CACHEBUSTER_RX = re.compile(r"\?v=[0-9]+\.[0-9]+\.[0-9]+")
+
+# <loc>…</loc> följt av <lastmod>…</lastmod> i sitemap.xml.
+LASTMOD_RX = re.compile(r"<loc>([^<]+)</loc>\s*<lastmod>([^<]+)</lastmod>")
+
+
+def content_changed(path: Path, new_text: str) -> bool:
+    """Har sidans INNEHÅLL ändrats, bortsett från cachebusters?
+
+    Avgör om <lastmod> får flyttas. Utan cachebuster-normaliseringen räknas
+    varje `?v=`-bump som en innehållsändring, och då daterar en regenerering om
+    hela sajten till dagens datum — en falsk färskhetssignal på 240 URL:er.
+    En ny fil (finns inte på disk) räknas alltid som ändrad.
+    """
+    if not path.exists():
+        return True
+    old = path.read_text(encoding="utf-8")
+    return CACHEBUSTER_RX.sub("?v=", old) != CACHEBUSTER_RX.sub("?v=", new_text)
+
+
+def existing_lastmods() -> dict[str, str]:
+    """{URL: lastmod} ur nuvarande sitemap.xml.
+
+    Den här funktionen skriver om HELA sitemap.xml, även URL:er den inte äger
+    (artiklar, tabellsidor, verktyg). För dem är befintligt datum den enda
+    sanning som finns — de får aldrig dateras om här.
+    """
+    if not SITEMAP.exists():
+        return {}
+    return dict(LASTMOD_RX.findall(SITEMAP.read_text(encoding="utf-8")))
+
+
+def build_sitemap(group_files: list[str], changed_urls: set[str]) -> str:
+    """sitemap.xml: rot + ordliste-sidor + case/info.
 
     Ordliste-URL:erna är dynamiska (en per genererad sida); de statiska
     sidorna (rot, case, info) behålls som fasta poster.
+
+    `changed_urls` är de URL:er vars innehåll faktiskt ändrats i den här
+    körningen. Endast de – och URL:er som är helt nya i sitemap – får dagens
+    datum; övriga behåller sitt befintliga <lastmod>.
     """
     today = datetime.date.today().isoformat()
+    previous = existing_lastmods()
 
     def url_block(loc: str, changefreq: str, priority: str) -> str:
+        lastmod = today if loc in changed_urls else previous.get(loc, today)
         return (
             "  <url>\n"
             f"    <loc>{loc}</loc>\n"
-            f"    <lastmod>{today}</lastmod>\n"
+            f"    <lastmod>{lastmod}</lastmod>\n"
             f"    <changefreq>{changefreq}</changefreq>\n"
             f"    <priority>{priority}</priority>\n"
             "  </url>"
@@ -1084,20 +1155,26 @@ def write_sitemap(group_files: list[str]) -> None:
     blocks.append(url_block(f"{SITE}/versionshistorik.html", "weekly", "0.3"))
     blocks.append(url_block(f"{SITE}/integritet.html", "yearly", "0.3"))
 
-    body = (
+    return (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n\n'
         + "\n\n".join(blocks)
         + "\n\n</urlset>\n"
     )
-    SITEMAP.write_text(body, encoding="utf-8")
 
 
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
-def main() -> None:
+def main(check: bool = False) -> None:
+    """Generera ordlistan. `check` jämför i stället för att skriva (rundtripptest).
+
+    Rundtripptestet finns för att drift mellan generator och levererad HTML
+    annars upptäcks av en slump, mitt i något annat arbete:
+        python3 scripts/generate_glossary.py --check
+    Ren utcheckning + --check ska alltid ge "rundtripp identisk".
+    """
     terms = json.loads(DATA.read_text(encoding="utf-8"))
     # Stubs (status == "stub") är ofärdiga poster — filtrera bort dem helt.
     terms = [e for e in terms if e.get("status") != "stub"]
@@ -1144,24 +1221,53 @@ def main() -> None:
         if old.name in LEGACY_REDIRECT_FILES:
             continue
         key_slug = old.name.removeprefix("ordlista-").removesuffix(".html")
-        if key_slug not in {page_slug(k) for k in present}:
+        if key_slug not in {page_slug(k) for k in present} and not check:
             old.unlink()
 
+    # Bygg allt i minnet först. Filerna skrivs (eller jämförs, i --check) i ett
+    # enda steg längst ner — annars kan --check inte vara läsfri.
+    outputs: dict[Path, str] = {}
     group_files: list[str] = []
     order = [k for k in GROUP_ORDER if k in groups]
     for key in order:
-        group_files.append(write_group(key, groups[key], present))
+        filename, page = build_group(key, groups[key], present)
+        group_files.append(filename)
+        outputs[ROOT / filename] = page
+    outputs[ROOT / LANDING_FILE] = build_landing(groups)
 
-    write_landing(groups)
-    write_sitemap(group_files)
+    # Vilka sidors INNEHÅLL ändrades? Styr <lastmod> — se content_changed().
+    changed_urls = {
+        f"{SITE}/{path.name}"
+        for path, text in outputs.items()
+        if content_changed(path, text)
+    }
+    outputs[SITEMAP] = build_sitemap(group_files, changed_urls)
+
+    if check:
+        avvikande = [
+            path for path, text in outputs.items()
+            if not path.exists() or path.read_text(encoding="utf-8") != text
+        ]
+        if avvikande:
+            print(f"AVVIKELSE: {len(avvikande)} fil(er) skiljer sig från generatorns utdata:")
+            for path in sorted(avvikande):
+                print(f"  {path.relative_to(ROOT).as_posix()}")
+            raise SystemExit(1)
+        print(f"OK: rundtripp identisk – {len(outputs)} filer matchar generatorns utdata.")
+        return
+
+    for path, text in outputs.items():
+        path.write_text(text, encoding="utf-8")
 
     print(
         f"OK: {len(terms)} termer → {len(group_files)} gruppsidor "
-        f"+ {LANDING_FILE} + sitemap.xml."
+        f"+ {LANDING_FILE} + sitemap.xml. "
+        f"{len(changed_urls)} sida/sidor med ändrat innehåll → nytt <lastmod>."
     )
     for key in order:
         print(f"  {page_file(key):26} {len(groups[key]):>4} termer")
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    main(check="--check" in sys.argv)
