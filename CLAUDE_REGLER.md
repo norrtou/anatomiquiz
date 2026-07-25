@@ -824,7 +824,7 @@ brytas ut – den kostnaden ska inte återkomma).
 §11 C). `bump_version.py` rör i dag bara `app.js?v=` – nya modulfilers buster sätts
 för hand tills skriptet lär sig dem.
 
-**Gäller:** spellägen (Matcha, kommande Skriv/Leitner/Sporcle/Dagens utmaning/Gravity),
+**Gäller:** spellägen (Matcha, kommande Leitner/Sporcle/Dagens utmaning/Gravity),
 fristående delappar och verktyg. Gäller **inte** rena datafiler eller små
 hjälpfunktioner som hör ihop med befintlig quiz-/flashcard-logik.
 
@@ -871,7 +871,7 @@ funktionen; för ett spel **är** det funktionen.
 framtida spel följer matcha-lyftet, utan att jag behöver upprepa det").**
 
 Matcha efter spelkänslo-lyftet (0.9.247) **är mallen**. Varje kommande spelläge —
-Skriv svaret, Plugga smart/Leitner, Sporcle-kapplöpning, Dagens utmaning + streak,
+Plugga smart/Leitner, Sporcle-kapplöpning, Dagens utmaning + streak,
 Arkad/Gravity och allt som tillkommer — byggs med hela listan nedan **inne i det
 första bygget**. Den ska aldrig behöva efterfrågas, och den får aldrig läggas som ett
 polish-pass efteråt: att bygga läget platt och sedan lyfta det är precis den

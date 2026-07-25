@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.250
+- **Spelläget "Skriv svaret" är struket ur backloggen** på användarens beslut och ska inte byggas. Det låg som nr 2 i listan över kommande lägen (skriv svaret i stället för att välja, med fuzzy-matchning), men inget arbete hade påbörjats — ingen `js/`-fil, ingen scaffold-knapp i `index.html`.
+- Uppräkningarna av kommande lägen i `CLAUDE_REGLER.md` §12 och §13.1 rättade så de inte längre nämner läget. Kvar i backloggen: **Plugga smart/Leitner (nästa att bygga)**, Sporcle, Dagens utmaning + streak, och Arkad/Gravity sist.
+- CHANGELOG-posten för 0.9.249 lämnas orörd trots att den nämner läget — den beskriver vad som gällde då.
+- Ingen CSS, ingen kod och ingen synlig text ändrad → `styles.css`-bustern oförändrad (0.9.247).
+
 ## 0.9.249
 - **Ny stående regel `CLAUDE_REGLER.md` §13.1: Matcha-standarden är golvet för varje nytt spelläge.** Spelkänslo-lyftet som Matcha fick i 0.9.247 ska aldrig behöva efterfrågas igen — Skriv svaret, Plugga smart/Leitner, Sporcle, Dagens utmaning, Arkad och allt som tillkommer byggs dit **direkt i det första bygget**, aldrig som ett polish-pass efteråt. Att bygga ett läge platt och lyfta det sedan är exakt den dubbelkostnad §0 förbjuder; Matcha byggdes så och lyftet blev ett eget arbetspass.
 - **Åtta punkter, med facit i `js/matcha.js` + `.matcha-*` i `css/styles.css`:** mikroåterkoppling på varje handling (markering, in-toning, haptik) · rättning som payoff — ett steg i taget, inte ett hårt tillståndsbyte · framstegsmätare över **hela** spelet plus en räknare som studsar · beröm vid delmål · ett slut som känns som ett slut (resultatring, nyckeltal utöver poängen, rekordmärke mot tidigare personbästa räknat **innan** det nya resultatet sparas) · självgenererat ljud + haptik kopplat till den **befintliga** "Ljudeffekter"-bocken (aldrig externa ljudfiler, aldrig en ny inställning per läge) · estetik och mobilkänsla i själva bygget · `prefers-reduced-motion` där sluttillstånden ändå sätts direkt.
