@@ -37,7 +37,6 @@ per-term-innehållet är ändå fullt crawlbart som semantisk <dl>.
 
 from __future__ import annotations
 
-import datetime
 import html
 import json
 import re
@@ -64,6 +63,18 @@ def artikel_sitemap_urls() -> list[str]:
     import generate_artiklar as ga
     return ga.sitemap_urls(ga.load())
 
+
+def läs_sidodatum() -> dict[str, dict[str, str]]:
+    """Sidornas datum ur data/sidodatum.json — källan till <lastmod>.
+
+    Läses via scripts/sidodatum.py så att registrets format är definierat på ett
+    ställe. Modulen talar med git bara i --update; att importera den är ofarligt.
+    """
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import sidodatum
+    return sidodatum.läs_register()
+
 # Cachebusters per asset — bumpa bara den som faktiskt ändrats.
 #
 # EN KONSTANT PER RESURS. Låter man två resurser dela konstant bumpas den ena i
@@ -73,7 +84,7 @@ def artikel_sitemap_urls() -> list[str]:
 # theme.js hängde på STYLES_V, styles.css ändrades i 0.9.264, och en
 # regenerering hade skrivit theme.js?v=0.9.264 på 33 sidor trots att
 # js/theme.js inte rörts sedan 0.9.260.
-STYLES_V = "0.9.264"        # css/styles.css
+STYLES_V = "0.9.270"        # css/styles.css
 THEME_V = "0.9.260"         # js/theme.js
 GLOSSARY_CSS_V = "0.9.189"  # css/glossary.css
 GLOSSARY_JS_V = "0.9.189"   # js/glossary.js
@@ -906,8 +917,8 @@ def page_file_key(filename: str) -> str:
 # ---------------------------------------------------------------------------
 
 def build_landing(groups: dict[str, list[dict]]) -> str:
-    """Landningssidans HTML. Skriver inget — main() äger alla filskrivningar
-    så att --check kan jämföra i stället för att skriva."""
+    """Landningssidans HTML. Skriver inget — main() äger alla filskrivningar,
+    så att en halv sajt inte blir kvar på disk om något led kastar."""
     url = f"{SITE}/{LANDING_FILE}"
     title = "Medicinsk ordlista – tusentals termer | Anatomiquiz"
     desc = LANDING_DESC
@@ -1030,57 +1041,46 @@ def build_group(key: str, entries: list[dict], present: set[str]) -> tuple[str, 
 
 
 # ---------------------------------------------------------------------------
-# Innehållsjämförelse & sitemap
+# Sitemap
 # ---------------------------------------------------------------------------
 
-# ?v=0.9.264 → ?v=. En cachebusterbump är INTE en innehållsändring.
-CACHEBUSTER_RX = re.compile(r"\?v=[0-9]+\.[0-9]+\.[0-9]+")
-
-# <loc>…</loc> följt av <lastmod>…</lastmod> i sitemap.xml.
-LASTMOD_RX = re.compile(r"<loc>([^<]+)</loc>\s*<lastmod>([^<]+)</lastmod>")
-
-
-def content_changed(path: Path, new_text: str) -> bool:
-    """Har sidans INNEHÅLL ändrats, bortsett från cachebusters?
-
-    Avgör om <lastmod> får flyttas. Utan cachebuster-normaliseringen räknas
-    varje `?v=`-bump som en innehållsändring, och då daterar en regenerering om
-    hela sajten till dagens datum — en falsk färskhetssignal på 240 URL:er.
-    En ny fil (finns inte på disk) räknas alltid som ändrad.
-    """
-    if not path.exists():
-        return True
-    old = path.read_text(encoding="utf-8")
-    return CACHEBUSTER_RX.sub("?v=", old) != CACHEBUSTER_RX.sub("?v=", new_text)
+def url_till_sökväg(loc: str) -> str:
+    """https://anatomiquiz.se/verktyg/ → verktyg/index.html."""
+    rel = loc.removeprefix(f"{SITE}/")
+    if rel == "" or rel.endswith("/"):
+        rel += "index.html"
+    return rel
 
 
-def existing_lastmods() -> dict[str, str]:
-    """{URL: lastmod} ur nuvarande sitemap.xml.
-
-    Den här funktionen skriver om HELA sitemap.xml, även URL:er den inte äger
-    (artiklar, tabellsidor, verktyg). För dem är befintligt datum den enda
-    sanning som finns — de får aldrig dateras om här.
-    """
-    if not SITEMAP.exists():
-        return {}
-    return dict(LASTMOD_RX.findall(SITEMAP.read_text(encoding="utf-8")))
-
-
-def build_sitemap(group_files: list[str], changed_urls: set[str]) -> str:
+def build_sitemap(group_files: list[str]) -> str:
     """sitemap.xml: rot + ordliste-sidor + case/info.
 
     Ordliste-URL:erna är dynamiska (en per genererad sida); de statiska
     sidorna (rot, case, info) behålls som fasta poster.
 
-    `changed_urls` är de URL:er vars innehåll faktiskt ändrats i den här
-    körningen. Endast de – och URL:er som är helt nya i sitemap – får dagens
-    datum; övriga behåller sitt befintliga <lastmod>.
+    `<lastmod>` hämtas ur `data/sidodatum.json` — samma post som ger sidan dess
+    synliga "Senast uppdaterad" och dess `dateModified` i JSON-LD. Tre
+    färskhetssignaler ur en källa kan inte säga tre olika saker.
+
+    Tidigare räknades det ut här, genom att jämföra generatorns utdata mot
+    disk. Det gick inte att laga på plats: generatorn äger bara ordlistans 33
+    sidor, så de övriga 84 kunde aldrig få ett nytt datum — och de 33 fick
+    tvärtom **dagens** datum vid varje körning, eftersom filerna på disk bär
+    tooltips, referenser och identitet som generatorn inte skriver. Sitemapen
+    daterades alltså om varje gång kedjan kördes, och `check_generators.py`
+    hade fällt sig själv nästa dygn.
     """
-    today = datetime.date.today().isoformat()
-    previous = existing_lastmods()
+    datum = läs_sidodatum()
 
     def url_block(loc: str, changefreq: str, priority: str) -> str:
-        lastmod = today if loc in changed_urls else previous.get(loc, today)
+        rel = url_till_sökväg(loc)
+        post = datum.get(rel)
+        if not post:
+            raise SystemExit(
+                f"FEL: {loc} ({rel}) saknas i data/sidodatum.json. En URL i "
+                "sitemap utan datum hade tyst fått dagens (CLAUDE_REGLER §0.4). "
+                "Kör: python3 scripts/sidodatum.py --update")
+        lastmod = post["andrad"]
         return (
             "  <url>\n"
             f"    <loc>{loc}</loc>\n"
@@ -1167,13 +1167,18 @@ def build_sitemap(group_files: list[str], changed_urls: set[str]) -> str:
 # Main
 # ---------------------------------------------------------------------------
 
-def main(check: bool = False) -> None:
-    """Generera ordlistan. `check` jämför i stället för att skriva (rundtripptest).
+def main() -> None:
+    """Generera ordlistan, landningssidan och sitemap.xml.
 
-    Rundtripptestet finns för att drift mellan generator och levererad HTML
-    annars upptäcks av en slump, mitt i något annat arbete:
-        python3 scripts/generate_glossary.py --check
-    Ren utcheckning + --check ska alltid ge "rundtripp identisk".
+    **Rundtrippstestet ligger i `scripts/check_generators.py`, inte här.** Den
+    här generatorn hade ett eget `--check` fram till 0.9.270, men det kunde per
+    konstruktion aldrig lysa grönt igen efter att `wire_citations.py` (0.9.267)
+    och `wire_identity.py` (0.9.268) började skriva i de färdiga sidorna: det
+    jämförde generatorns rena utdata mot filer som bär tooltips, referenser,
+    identitet och datum, tillagda av senare steg i kedjan. Det stod som ett
+    larm i regelverket samtidigt som det gav exit 1 på en ren utcheckning — och
+    ett larm som alltid är rött lär man sig att ignorera. `check_generators.py`
+    kör hela kedjan i en spegelkatalog och mäter samma sak korrekt.
     """
     terms = json.loads(DATA.read_text(encoding="utf-8"))
     # Stubs (status == "stub") är ofärdiga poster — filtrera bort dem helt.
@@ -1221,11 +1226,11 @@ def main(check: bool = False) -> None:
         if old.name in LEGACY_REDIRECT_FILES:
             continue
         key_slug = old.name.removeprefix("ordlista-").removesuffix(".html")
-        if key_slug not in {page_slug(k) for k in present} and not check:
+        if key_slug not in {page_slug(k) for k in present}:
             old.unlink()
 
-    # Bygg allt i minnet först. Filerna skrivs (eller jämförs, i --check) i ett
-    # enda steg längst ner — annars kan --check inte vara läsfri.
+    # Bygg allt i minnet först och skriv i ett enda steg längst ner, så att en
+    # halv sajt inte blir kvar på disk om något led längre fram kastar.
     outputs: dict[Path, str] = {}
     group_files: list[str] = []
     order = [k for k in GROUP_ORDER if k in groups]
@@ -1235,39 +1240,18 @@ def main(check: bool = False) -> None:
         outputs[ROOT / filename] = page
     outputs[ROOT / LANDING_FILE] = build_landing(groups)
 
-    # Vilka sidors INNEHÅLL ändrades? Styr <lastmod> — se content_changed().
-    changed_urls = {
-        f"{SITE}/{path.name}"
-        for path, text in outputs.items()
-        if content_changed(path, text)
-    }
-    outputs[SITEMAP] = build_sitemap(group_files, changed_urls)
-
-    if check:
-        avvikande = [
-            path for path, text in outputs.items()
-            if not path.exists() or path.read_text(encoding="utf-8") != text
-        ]
-        if avvikande:
-            print(f"AVVIKELSE: {len(avvikande)} fil(er) skiljer sig från generatorns utdata:")
-            for path in sorted(avvikande):
-                print(f"  {path.relative_to(ROOT).as_posix()}")
-            raise SystemExit(1)
-        print(f"OK: rundtripp identisk – {len(outputs)} filer matchar generatorns utdata.")
-        return
+    outputs[SITEMAP] = build_sitemap(group_files)
 
     for path, text in outputs.items():
         path.write_text(text, encoding="utf-8")
 
     print(
         f"OK: {len(terms)} termer → {len(group_files)} gruppsidor "
-        f"+ {LANDING_FILE} + sitemap.xml. "
-        f"{len(changed_urls)} sida/sidor med ändrat innehåll → nytt <lastmod>."
+        f"+ {LANDING_FILE} + sitemap.xml."
     )
     for key in order:
         print(f"  {page_file(key):26} {len(groups[key]):>4} termer")
 
 
 if __name__ == "__main__":
-    import sys
-    main(check="--check" in sys.argv)
+    main()

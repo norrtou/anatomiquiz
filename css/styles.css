@@ -4505,6 +4505,18 @@ ol li {
   white-space: nowrap;
 }
 
+/* "Senast uppdaterad" — diskret datumrad sist i <main> på varje sida.
+   Skrivs av scripts/wire_dates.py ur data/sidodatum.json; samma datum som
+   sidans dateModified i JSON-LD och dess <lastmod> i sitemap.xml. Formen
+   följer .kb-sources, som den oftast står direkt under. */
+.page-updated {
+  margin: 26px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid rgba(16, 185, 129, 0.15);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
 /* Källförteckning på innehållssidor */
 .kb-sources {
   margin-top: 28px;
@@ -4811,6 +4823,15 @@ ol li {
   }
   .info-about p, .info-about li,
   .kb-sources p, .kb-sources li { color: #000; margin: 0 0 4pt; }
+
+  /* Datumraden följer med i utskriften – en utskriven sida utan datum går inte
+     att bedöma färskheten på. Ramen bort, texten svart. */
+  .page-updated {
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 4pt 0 0 !important;
+    color: #000;
+  }
 
   h1 { font-size: 15pt; margin: 0 0 5pt; }
   h2 { font-size: 12pt; margin: 9pt 0 3pt; }

@@ -912,29 +912,36 @@ som ingen beställt. Driften ska **fixas först**, inte kringgås genom att patc
 generator och levererad HTML var för sig — det är dubbelarbete som betalas om
 igen vid nästa ändring (§0).
 
-**Testet ska finnas i generatorn**, inte i huvudet på den som råkar upptäcka det:
-
-```
-python3 scripts/generate_glossary.py --check   # bygger i minnet, skriver inget, exit 1 vid avvikelse
-```
-
-`--check` ska vara skrivfri — bygg allt i minnet, jämför mot disk, skriv i ett
-enda steg först när det inte är en kontrollkörning.
-
-**Hela kedjan testas med ett kommando (2026-07-25, 0.9.266):**
+**Testet ska köras med ett kommando**, inte finnas i huvudet på den som råkar
+upptäcka driften:
 
 ```
 python3 scripts/check_generators.py    # exit 0 = rundtripp identisk
 ```
 
+**Ett larm som alltid är rött är inget larm.** `generate_glossary.py` hade fram
+till 0.9.270 ett eget `--check`, och regeln pekade på det. Det kunde per
+konstruktion aldrig lysa grönt igen efter att `wire_citations.py` (0.9.267) och
+`wire_identity.py` (0.9.268) började skriva i de färdiga sidorna: det jämförde
+generatorns rena utdata mot filer som bär tooltips, referenser, identitet och
+datum, tillagda av senare steg. Det stod alltså som ett skydd i regelverket
+samtidigt som det gav exit 1 på en ren utcheckning. `--check` är borttaget —
+kontrollen nedan mäter samma sak korrekt, eftersom den kör **hela** kedjan.
+
 Skriptet speglar alla spårade filer till en temporär katalog, kör hela kedjan
-där (alla `generate_*.py` + `wire_terms.py --all`) och jämför fil för fil mot
-arbetskopian. Det behövs utöver `--check` av två skäl: de generatorer som
-skriver direkt till disk kan inte bygga i minnet, och **`wire_terms.py` kan
-ingen enskild generator kontrollera** — tooltipsen läggs på efter
-sidgenereringen, så bara en körning av hela kedjan visar om de överlever.
-**Kör det före varje commit som rör en generator, ett facit eller en genererad
-sida.**
+där (alla `generate_*.py` + `wire_terms.py` + `wire_citations.py` +
+`wire_identity.py` + `wire_dates.py`) och jämför fil för fil mot arbetskopian.
+Bara en körning av hela kedjan duger: **wire-stegen kan ingen enskild generator
+kontrollera** — tooltips, referenser, identitet och datum läggs på *efter*
+sidgenereringen, så det är först när allt körts i ordning som man ser om de
+överlever. Därefter kör det `check_links.py` (varje intern länk mot disk) och
+`sidodatum.py --check` (varje sidas datum mot git). **Kör det före varje commit
+som rör en generator, ett facit eller en genererad sida.**
+
+**Ett steg som behöver git kan inte ligga i KEDJA.** Spegeln är en naken
+filkopia utan `.git`, så `sidodatum.py` körs mot arbetskatalogen efter
+rundtrippen i stället. Det är också därför datumen bor i ett facit
+(`data/sidodatum.json`) och inte läses ur git av kedjan själv.
 
 **Driften går åt båda hållen — avgör per fil, kör inte bara om allt.** I
 0.9.266 var den levererade filen nyare i två fall (en handinlagd mening i

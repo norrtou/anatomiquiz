@@ -8,11 +8,20 @@ i sex olika former – felaktiga och försvunna tooltips, splittrade binomialnam
 en handinlagd mening i muskeltabellernas ingress, versaler i flashcard-svaren och
 en hel uppsättning distraktorer som aldrig skrevs ut.
 
-`generate_glossary.py --check` bygger i minnet och klarar sig själv. De övriga
-generatorerna skriver direkt till disk och kan inte det. I stället kopieras hela
-trädet till en temporär katalog, kedjan körs där, och resultatet jämförs fil för
-fil mot arbetskopian. Samma test täcker då också `wire_terms.py`, som ingen
-enskild generator kan kontrollera eftersom tooltipsen läggs på efteråt.
+Generatorerna skriver direkt till disk och kan inte bygga i minnet. I stället
+kopieras hela trädet till en temporär katalog, kedjan körs där, och resultatet
+jämförs fil för fil mot arbetskopian. Bara så testas wire-stegen: tooltips,
+referenser, identitet och datum läggs på **efter** sidgenereringen, så det är
+först när allt körts i ordning som man ser om de överlever.
+
+Ingen enskild generator kan göra det. `generate_glossary.py` hade ett eget
+`--check` fram till 0.9.270; det jämförde generatorns rena utdata mot filer som
+senare steg skrivit i, och kunde därför aldrig lysa grönt igen efter 0.9.267.
+
+Efter rundtrippen körs två kontroller mot arbetskatalogen: `check_links.py`
+(varje intern länk mot disk) och `sidodatum.py --check` (varje sidas datum mot
+git). Den senare kan inte ligga i KEDJA – spegeln är en naken filkopia utan
+`.git`.
 
 Testet läser arbetskopian, inte HEAD – oincheckade ändringar räknas med.
 
@@ -31,9 +40,10 @@ ROOT = Path(__file__).resolve().parent.parent
 # Ordningen är kedjans: sidgeneratorerna skriver REN HTML, wire_terms lägger på
 # tooltipsen, wire_citations läser sidans synliga referenslista och skriver in
 # den som `citation` i JSON-LD, och generate_glossary körs näst sist eftersom
-# den äger sitemap.xml och måste se de färdiga sidorna. wire_identity ligger
-# allra sist just därför — den skriver i ordlistans 33 sidor också, och hade
-# blivit överskriven av glossary-generatorn i vilket tidigare läge som helst.
+# den äger sitemap.xml och måste se de färdiga sidorna. wire_identity och
+# wire_dates ligger allra sist just därför — de skriver i ordlistans 33 sidor
+# också, och hade blivit överskrivna av glossary-generatorn i vilket tidigare
+# läge som helst.
 KEDJA = [
     ["scripts/generate_glossary.py"],
     ["scripts/generate_karl.py"],
@@ -47,6 +57,7 @@ KEDJA = [
     ["scripts/wire_citations.py", "--all"],
     ["scripts/generate_glossary.py"],
     ["scripts/wire_identity.py", "--all"],
+    ["scripts/wire_dates.py", "--all"],
 ]
 
 
@@ -89,11 +100,20 @@ def main(argv):
         print(f"OK: rundtripp identisk – {len(filer)} filer oförändrade efter "
               f"{len(KEDJA)} generatorsteg.", flush=True)
         # Rundtrippen bevisar att generatorerna är i synk med filerna, inte att
-        # filerna pekar på något som finns. Länkkontrollen körs här därför att
-        # det här är kommandot som faktiskt körs före commit – ett larm ingen
-        # kör är inget skydd (CLAUDE_REGLER §0.4).
-        return subprocess.run([sys.executable, "scripts/check_links.py"],
-                              cwd=ROOT).returncode
+        # filerna pekar på något som finns eller att datumen stämmer. Båda
+        # kontrollerna körs här därför att det här är kommandot som faktiskt
+        # körs före commit – ett larm ingen kör är inget skydd (§0.4).
+        #
+        # sidodatum.py kan inte ligga i KEDJA: den läser git, och spegeln är en
+        # naken filkopia. Den körs därför mot ROOT, efter rundtrippen. Larmar
+        # den betyder det att en sidas innehåll ändrats utan att datumet följt
+        # med — kör `--update` och sedan `wire_dates.py --all`.
+        for kontroll in ("scripts/check_links.py", "scripts/sidodatum.py"):
+            argv = [kontroll] + (["--check"] if "sidodatum" in kontroll else [])
+            kod = subprocess.run([sys.executable] + argv, cwd=ROOT).returncode
+            if kod != 0:
+                return kod
+        return 0
 
     print(f"AVVIKELSE: {len(avvikande) + len(nya)} filer skiljer sig efter en "
           f"full generatorkörning (CLAUDE_REGLER §12.2).", file=sys.stderr)

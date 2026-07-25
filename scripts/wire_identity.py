@@ -1,20 +1,18 @@
 #!/usr/bin/env python3
 """Skriv in sajtens författare och utgivare i varje sidas JSON-LD-huvudnod.
 
-Sista steget i sidkedjan, efter generatorerna, `wire_terms.py` och
-`wire_citations.py`. Det ligger sist därför att `generate_glossary.py` skriver
-om ordlistans 33 sidor i slutet av kedjan — ett identitetssteg tidigare hade
-skrivits över av just den generatorn.
+Näst sista steget i sidkedjan, efter generatorerna, `wire_terms.py` och
+`wire_citations.py`. Det ligger så sent därför att `generate_glossary.py`
+skriver om ordlistans 33 sidor i slutet av kedjan — ett identitetssteg tidigare
+hade skrivits över av just den generatorn.
 
-Entiteterna definieras i `scripts/identity.py`, inte här. Det här skriptet vet
-bara *var* de ska stå: i den eller de noder som beskriver sidan
-(`Article`/`LearningResource`/`CollectionPage`/`WebApplication`/`AboutPage`/
-`DefinedTermSet`). `FAQPage` och `BreadcrumbList` beskriver något annat än
-sidan och lämnas i fred — samma gräns som `wire_citations.py` drar.
+Entiteterna definieras i `scripts/identity.py`, inte här. *Var* de ska stå —
+i den eller de noder som beskriver sidan — avgörs av `scripts/jsonld.py`, som
+delas med `wire_dates.py`. `FAQPage` och `BreadcrumbList` beskriver något annat
+än sidan och lämnas i fred, samma gräns som `wire_citations.py` drar.
 
 Befintliga `author`/`publisher` ersätts **på plats**, så att egenskapernas
 ordning i objektet bevaras och diffen stannar vid det som faktiskt ändras.
-Saknas de infogas de före `citation` om den finns, annars sist.
 
 Användning:
     python3 scripts/wire_identity.py --all
@@ -23,126 +21,20 @@ Användning:
 """
 import json
 import pathlib
-import re
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from identity import ORGANISATION, PERSON  # noqa: E402
-
-ROOT = pathlib.Path(__file__).resolve().parent.parent
-
-LD = re.compile(r'(<script type="application/ld\+json">)(.*?)(</script>)', re.S)
-
-# Noder som beskriver SIDAN och därför bär sidans författare och utgivare.
-HUVUDTYPER = {"Article", "LearningResource", "CollectionPage", "WebApplication",
-              "AboutPage", "DefinedTermSet", "WebPage"}
-
-# Noder som beskriver något annat än sidan. En FAQ har ingen egen författare.
-UNDANTAG = {"FAQPage", "BreadcrumbList"}
-
-
-def _indrag(block):
-    """(basindrag, innerindrag) för JSON-objektet i ett ld+json-block."""
-    rader = [r for r in block.split("\n") if r.strip()]
-    bas = re.match(r"\s*", rader[0]).group(0)
-    inner = re.match(r"\s*", rader[1]).group(0) if len(rader) > 1 else bas + "  "
-    return bas, inner
-
-
-def _toppnivå(block, inner, namn):
-    """(start, slut) för raden `"namn": <värde>` på objektets toppnivå.
-
-    Toppnivån känns igen på indraget: `json.dumps(indent=2)` ger varje
-    toppnivåegenskap exakt `inner` som radbörjan, medan allt djupare ligger
-    längre in. Värdets slut hittas med `raw_decode`, som klarar godtyckligt
-    nästlade objekt och listor — en regex hade fallit på första `}` i en
-    inbäddad nod.
-    """
-    nyckel = f'\n{inner}"{namn}": '
-    i = block.find(nyckel)
-    if i < 0:
-        return None
-    start = i + 1
-    _, slut = json.JSONDecoder().raw_decode(block, start + len(nyckel) - 1)
-    return start, slut
-
-
-def _formatera(inner, namn, värde):
-    """`"namn": <värde>` med `värde` indraget till objektets toppnivå."""
-    kropp = json.dumps(värde, ensure_ascii=False, indent=2)
-    rader = kropp.split("\n")
-    kropp = "\n".join([rader[0]] + [inner + r for r in rader[1:]])
-    return f'{inner}"{namn}": {kropp}'
-
-
-def _sätt(block, namn, värde):
-    """Returnera blocket med toppnivåegenskapen `namn` satt till `värde`."""
-    bas, inner = _indrag(block)
-    ny = _formatera(inner, namn, värde)
-
-    träff = _toppnivå(block, inner, namn)
-    if träff:                                  # ersätt på plats
-        start, slut = träff
-        return block[:start] + ny + block[slut:]
-
-    ankare = _toppnivå(block, inner, "citation")
-    if ankare:                                 # infoga före citation
-        start = ankare[0]
-        return block[:start] + ny + ",\n" + block[start:]
-
-    slut = block.rstrip()                      # infoga sist, före rotens }
-    if not slut.endswith("}"):
-        raise ValueError("ld+json-blocket slutar inte med }")
-    svans = block[len(slut):]
-    return slut[:-1].rstrip() + ",\n" + ny + "\n" + bas + "}" + svans
-
-
-def _typer(data):
-    typ = data.get("@type")
-    return set(typ if isinstance(typ, list) else [typ])
-
-
-def _är_sidnod(data):
-    typ = _typer(data)
-    return bool(typ & HUVUDTYPER) and not (typ & UNDANTAG)
+from jsonld import ROOT, alla_sidor, antal_sidnoder, skriv_i_sidnod, sätt  # noqa: E402
 
 
 def wire_html(html):
-    """Returnera html med author/publisher satta i sidans huvudnod(er).
+    """Returnera html med author/publisher satta i sidans huvudnod(er)."""
+    def egenskaper(block):
+        block = sätt(block, "author", PERSON)
+        return sätt(block, "publisher", ORGANISATION)
 
-    En sida som bär JSON-LD men ingen nod som beskriver sidan är ett fel, inte
-    ett specialfall: den hade tyst blivit utan identitet. Så upptäcktes att
-    `WebPage` saknades i HUVUDTYPER — men bara för att någon råkade titta.
-    Därför stannar bygget i stället.
-    """
-    träffade = [0]
-
-    def skriv(m):
-        data = json.loads(m.group(2))
-        if "@graph" in data:
-            raise ValueError("@graph stöds inte — identiteten skulle hamna fel")
-        if not _är_sidnod(data):
-            return m.group(0)
-        träffade[0] += 1
-        block = _sätt(m.group(2), "author", PERSON)
-        block = _sätt(block, "publisher", ORGANISATION)
-        return m.group(1) + block + m.group(3)
-
-    ny = LD.sub(skriv, html)
-    if not träffade[0]:
-        typer = sorted({t for m in LD.finditer(html)
-                        for t in _typer(json.loads(m.group(2)))})
-        raise ValueError(
-            "ingen nod som beskriver sidan — identiteten hade tyst uteblivit. "
-            f"Sidans typer: {', '.join(typer) or '(inga)'}. Hör någon av dem "
-            "hemma i HUVUDTYPER?")
-    return ny
-
-
-def alla_sidor():
-    return sorted(p for p in ROOT.rglob("*.html")
-                  if "_arkiv" not in p.parts
-                  and LD.search(p.read_text(encoding="utf-8")))
+    return skriv_i_sidnod(html, egenskaper)
 
 
 def main(argv):
@@ -165,8 +57,7 @@ def main(argv):
         except (ValueError, json.JSONDecodeError) as e:
             print(f"STOPP i {f.relative_to(ROOT)}: {e}", file=sys.stderr)
             return 1
-        noder += sum(1 for m in LD.finditer(html)
-                     if _är_sidnod(json.loads(m.group(2))))
+        noder += antal_sidnoder(html)
         if ny != html:
             ändrade += 1
             if check:

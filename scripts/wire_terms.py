@@ -263,9 +263,16 @@ def wire_html(html, terms, rx, stats=None):
             # science" den för neural – och en tooltip mitt i en boktitel är alltid
             # fel, hur bra nyckeln än är i löptext (SEO_REGLER §6c).
             is_kb_sources = bool(re.search(r'class="kb-sources[ "]', attrs))
+            # Datumraden (.page-updated) skrivs av wire_dates.py och är ren
+            # metadata om sidan, inte innehåll. En tooltip på ett ord i "Senast
+            # uppdaterad 25 juli 2026" vore alltid fel, och eftersom raden läggs
+            # in EFTER wiringen skulle den träffas först vid nästa körning – ett
+            # fel som dykt upp långt från sin orsak (SEO_REGLER §6c).
+            is_page_updated = bool(re.search(r'class="page-updated[ "]', attrs))
             if (name in ("head", "script", "style") or is_breadcrumb_nav
                     or (is_kb_card and name != "a")
-                    or (is_kb_sources and name != "a")) and not self_closing:
+                    or (is_kb_sources and name != "a")
+                    or (is_page_updated and name != "a")) and not self_closing:
                 protected.append(name)        # öppna skyddad zon
             elif name == "a" and not self_closing:
                 in_anchor = True

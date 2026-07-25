@@ -4,11 +4,12 @@
 Punkt 7 utförd i 0.9.265** (plus tre generatorbuggar som blockerade den, se nedan).
 **Generatordriften utredd och åtgärdad i 0.9.266 – punkt 4, 6 och 14 är inte längre blockerade.
 Punkt 6 utförd i 0.9.267. Punkt 4 utförd i 0.9.268. Återfallsskydd för hela svepet i
-0.9.269.** Resten är öppen och prioriterad nedan.
+0.9.269. Punkt 5 utförd i 0.9.270**, plus två blockerare i sitemap- och rundtrippskedjan.
+Resten är öppen och prioriterad nedan.
 
 > 🔒 **Punkt 10 och 13 är vilande och ska inte tas upp, föreslås eller utföras.** Användaren
 > beslutade 2026-07-25 att inget visuellt ska göras och tar upp dem på eget initiativ.
-> Öppna punkter är därmed **5, 8, 9, 11, 12, 14, 15** — inga andra.
+> Öppna punkter är därmed **8, 9, 11, 12, 14, 15** — inga andra.
 **Skapad:** 2026-07-25. **Underlag:** hela sajten lästes maskinellt – titlar, descriptions,
 canonicals, JSON-LD, rubrikhierarki, tabellmärkning, intern länkning, `llms.txt`, `sitemap.xml`,
 `robots.txt` och CSS-kontraster. Siffrorna nedan är mätta, inte uppskattade.
@@ -121,9 +122,11 @@ helt andra skäl. Alla tre är åtgärdade, och regeln står nu i **CLAUDE_REGLE
 3. **`spellagen.html` var handinlagd i `sitemap.xml`** i annan ordning än generatorn emitterar.
    Generatorn äger filen; ordningen normaliserades.
 
-**Rundtrippstest finns nu:** `python3 scripts/generate_glossary.py --check` bygger i minnet,
-skriver inget och ger exit 1 vid avvikelse. Ren utcheckning + `--check` ska alltid ge
-"rundtripp identisk".
+**Rundtrippstestet ligger i `scripts/check_generators.py`.** Ordlistegeneratorn fick ett eget
+`--check` här i 0.9.265, men det togs bort i 0.9.270: det kunde per konstruktion aldrig lysa
+grönt igen efter att `wire_citations.py` och `wire_identity.py` började skriva i de färdiga
+sidorna, och stod alltså som ett skydd i regelverket samtidigt som det gav exit 1 på en ren
+utcheckning. Se punkt 5 nedan.
 
 ---
 
@@ -132,7 +135,7 @@ skriver inget och ger exit 1 vid avvikelse. Ren utcheckning + `--check` ska allt
 | # | Åtgärd | Insats | Effekt |
 |---|---|---|---|
 | ~~4~~ | ~~Person-`author` + `@id` på alla artiklar~~ | ✅ 0.9.268 | **Hög (EEAT)** |
-| 5 | Synligt `<time datetime>` + `dateModified` överallt | ~2 h | **Hög (EEAT + färskhet)** |
+| ~~5~~ | ~~Synligt `<time datetime>` + `dateModified` överallt~~ | ✅ 0.9.270 | **Hög (EEAT + färskhet)** |
 | ~~6~~ | ~~`citation` från befintliga referenslistor~~ | ✅ 0.9.267 | **Hög (EEAT)** |
 | ~~7~~ | ~~`DefinedTerm`-microdata i ordlistan~~ | ✅ 0.9.265 | **Högst (GEO)** |
 | 8 | Ansvarsfriskrivning som delad komponent | ~1 h | Hög (YMYL) |
@@ -180,16 +183,63 @@ står kvar orört – det är sajtens namn, inte utgivarens.
 **Kostnad:** gzipat +102 byte på `index.html` (+0,5 %), +215 på minnesregelartikeln (+1,7 %),
 +221 på en muskeltabell (+2,7 %), +245 på `ordlista-p.html` (+0,3 %).
 
-## 5. ⬜ Synligt datum + `dateModified` överallt
+## 5. ✅ KLAR i 0.9.270 – synligt datum + `dateModified` överallt
 
-**Mätt:** "Senast uppdaterad" finns på **5 av 118** sidor. `<time datetime>` på **1** sida.
-Av 81 `Article`/`LearningResource`-noder saknar **65** `dateModified` och **66** `datePublished`.
+**Mätt efteråt:** **117 sidor, 117 sidnoder med båda datumen, 117 synliga `<time datetime>`,
+117 `<lastmod>` — och varje trio jämförd mot facit post för post. 0 avvikelser.** Verifierat
+genom att parsa all JSON-LD, inte greppa den. Före: "Senast uppdaterad" på **1** sida,
+`<time datetime>` på **1**, och av 117 sidnoder saknade **99** `dateModified` och **102**
+`datePublished`. (Analysens "5 av 118" och "81 Article-noder" räknade fel mängd — den
+verkliga populationen är 117 sidnoder över 117 indexerbara sidor.)
 
-Artiklarna *har* datum i JSON-LD men visar inget på sidan. Googles riktlinje är att det synliga
-datumet ska matcha den strukturerade datan. Svarsmotorer väger färskhet tungt.
+**Källan blev git, inte ett register som fylls i.** Backloggen föreslog `data/artiklar.json`
+respektive generatorernas register. Det hade blivit ett handhållet datum, och ett handhållet
+datum blir aldrig uppdaterat: varje sida som ändras utan att någon minns att flytta datumet
+börjar ljuga för både läsare och sökmotor, och det syns inte. Regeln är därför inte "kom ihåg
+att uppdatera datumet" utan **"rör aldrig datumet"**.
 
-Kräver en källa till sanning för "senast ändrad" per sida – rimligen `data/artiklar.json`
-respektive generatorernas register, inte filsystemets mtime (som ändras av cachebuster-bumpar).
+**Två nya skript + ett facit:**
+
+- [`data/sidodatum.json`](../data/sidodatum.json) – enda sanningen. Tre konsumenter läser
+  samma post: den synliga raden, `datePublished`/`dateModified` i JSON-LD och `<lastmod>` i
+  `sitemap.xml`. De kan därmed inte säga tre olika saker.
+- [`scripts/sidodatum.py`](sidodatum.py) – härleder datumen ur git. Går bakåt genom varje
+  sidas revisioner och stannar vid den första där **innehållet** faktiskt skiljer sig.
+  `--update` skriver facit, `--check` ger exit 1 när det är inaktuellt.
+- [`scripts/wire_dates.py`](wire_dates.py) – skriver raden i `<main>` **och** de två fälten i
+  JSON-LD, ur samma post. Ligger sist i kedjan, efter `wire_identity.py`.
+
+**Normaliseringen är hela poängen.** `<head>`, JSON-LD, cachebusters, datumraden själv och
+blankstegsskillnader räknas inte som innehåll. Utan det hade versionsbumpen till 0.9.270
+(124 filer) och identitetssvepet i 0.9.268 (117 filer) daterat om hela sajten till samma dag.
+Bevisat live: bumpen rörde 124 filer och flyttade **noll** datum. Resultatet är en verklig
+spridning – `integritet.html` 23 juni, `versionshistorik.html` 20 juli, verktygen 23 juli,
+tabellerna 24 juli, ordlistan 25 juli.
+
+**`publicerad` sätts en gång och flyttas aldrig.** Fem artiklar bar ett handskrivet
+`datePublished` som låg *före* incheckningen – de skrevs klart dagen innan – och författarens
+uppgift väger tyngre än incheckningstidpunkten. Den vinner därför över git.
+
+**`info.html` fick ingen extra rad.** Sidan hade redan en egen datumformulering i brödtexten;
+dess `<time>` är märkt `data-updated` och uppdateras på plats. Det tar samtidigt bort det
+handgrepp SEO_REGLER §15 krävde vid varje nyhetsnotis.
+
+**Delad modul `scripts/jsonld.py`.** Bruten ur `wire_identity.py`, som nu importerar den.
+Låg listan över sidtyper i två skript hade ett nytt sidslag kunnat hamna i det ena och inte i
+det andra, och sidan tyst fått författare men inget datum. **Punkt 14 ska använda samma modul.**
+
+### Två blockerare lagade i samma pass
+
+1. **`sitemap.xml` daterades om vid varje körning.** `build_sitemap` räknade själv ut vad som
+   ändrats genom att jämföra generatorns utdata mot disk. Det kunde bara fungera för ordlistans
+   33 sidor — och gjorde fel även där: filerna på disk bär tooltips, referenser och identitet
+   som generatorn inte skriver, så de 33 fick **dagens** datum varje gång kedjan kördes, medan
+   de övriga 84 aldrig kunde få ett nytt. `check_generators.py` hade fällt sig själv nästa
+   dygn. `<lastmod>` hämtas nu ur facit; `content_changed()`/`existing_lastmods()` är borta.
+2. **`generate_glossary.py --check` var ett rött larm.** Det stod i CLAUDE_REGLER §12.2 som
+   *rundtrippstestet*, men gav exit 1 på en ren utcheckning ända sedan 0.9.267 — av samma skäl
+   som ovan. Ett larm som alltid är rött lär man sig att ignorera. `--check` är borttaget;
+   `check_generators.py` mäter samma sak korrekt eftersom den kör hela kedjan.
 
 ## 6. ✅ KLAR i 0.9.267 – `citation` från de referenslistor som redan finns
 
@@ -330,9 +380,15 @@ Granskningen efter punkt 4:
 | 2 `404.html` | ✅ `check_links.py` stoppar om filen försvinner | `check_generators.py` |
 | 3 arkivfiler publikt | ✅ `check_links.py` — `_ARCHIVED*` utanför `_arkiv/` | `check_generators.py` |
 | 4 identitet | ✅ `wire_identity.py`, larmar på okänd `@type` | `check_generators.py` |
+| 5 datum | ✅ `sidodatum.py --check` mot git + `wire_dates.py` | `check_generators.py` |
 | 6 `citation` | ✅ `wire_citations.py` + `apa.py` kastar hellre än gissar | `check_generators.py` |
 | 7 `DefinedTerm` | ✅ `generate_glossary.py` äger märkningen | `check_generators.py` |
 | 10 kontrast | 🔒 vilande — se nedan | — |
+
+Punkt 5:s skydd är verifierat genom att fel planterats, inte genom att kontrollen sagt OK:
+ändrat innehåll utan uppdaterat datum, raderad datumrad, handredigerat datum i facit, ny sida
+utan JSON-LD-sidnod och sida utan `<main>` gav alla exitkod 1 med ett besked som säger vad som
+ska göras.
 
 **Punkt 10 saknar kontroll, och det förblir så.** En kontrastkontroll (räkna WCAG-kvot ur
 CSS-variablerna) skulle täcka både den och punkt 13, men båda rör hur sajten *ser ut*.

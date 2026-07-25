@@ -438,6 +438,71 @@ termer**, lämna pedagogisk betoning, FAQ-frågor, minnesramsor, personnamn, sif
 
 ---
 
+## 6d. Datum — publicerat och senast uppdaterat (OBLIGATORISKT)
+
+Så här bär en sida sitt datum. **Ingen del av det skrivs för hand:**
+
+```html
+<!-- sist i <main> — skrivs av scripts/wire_dates.py -->
+<p class="page-updated">Senast uppdaterad <time data-updated datetime="2026-07-25">25 juli 2026</time></p>
+```
+
+```jsonc
+// i sidans JSON-LD-huvudnod — samma skript, samma post i registret
+"datePublished": "2026-06-23",
+"dateModified":  "2026-07-25",
+```
+
+**Källan är `data/sidodatum.json`, och den är gemensam för tre konsumenter:** den
+synliga raden, `dateModified` i JSON-LD och `<lastmod>` i `sitemap.xml`. Googles
+riktlinje är att det synliga datumet ska stämma med den strukturerade datan, och
+den enda garantin som håller över tid är att de inte har varsin källa. Att låta
+sitemapen räkna ut sitt eget datum var precis det felet: den kunde bara datera om
+ordlistans 33 sidor, och gjorde det vid *varje* körning (rättat 0.9.270).
+
+**Registret härleds ur git — det fylls inte i.** `scripts/sidodatum.py --update`
+läser historiken och skriver datumen. Ett handhållet datum blir aldrig uppdaterat;
+varje sida som ändras utan att någon minns att flytta datumet börjar ljuga för både
+läsare och sökmotor, och det syns inte. Därför är regeln inte "kom ihåg att uppdatera
+datumet" utan **"rör aldrig datumet"**.
+
+**Vad som räknas som en uppdatering** definieras av `normalisera()` i `sidodatum.py`:
+sidans läsbara kropp. Utanför räkningen ligger `<head>`, JSON-LD, cachebusters,
+datumraden själv och blankstegsskillnader. En cachebusterbump rör 116 filer utan att
+en bokstav av innehållet ändras, och identitetssvepet (0.9.268) rörde alla 117 —
+hade de räknats hade hela sajten daterats om till samma dag, vilket är en falsk
+färskhetssignal och dessutom stick i stäv med Googles råd att `dateModified` ska
+spegla en verklig uppdatering.
+
+- **`andrad` får aldrig redigeras för hand.** Den räknas om vid varje `--update`.
+- **`publicerad` sätts en gång och flyttas aldrig.** Ett publiceringsdatum är ett
+  påstående om historien, inte en mätning. Är det fel får det rättas i registret.
+  Första gången det sätts vinner sidans egen handskrivna `datePublished` över git —
+  fem artiklar skrevs klart dagen innan de checkades in, och författarens uppgift
+  väger tyngre än incheckningstidpunkten.
+- **Ny sida behöver bara ett `<main>`.** Raden läggs in automatiskt sist i det.
+  Har sidan redan en egen datumformulering i brödtexten (som `info.html`) märks dess
+  `<time>` med `data-updated` i stället, så uppdateras det elementet på plats och
+  sidan får ingen extra rad.
+- **En sida utan JSON-LD-sidnod stoppar bygget.** Vill du att en sida ska stå
+  utanför datumsystemet ska den in i `UTAN_SIDNOD` i `sidodatum.py`, med skäl.
+  Tyst uteblivna datum är den feltyp §0.4 i CLAUDE_REGLER handlar om.
+- **`.page-updated` är en skyddad zon i `wire_terms.py`** — raden är metadata om
+  sidan, inte innehåll, och ska aldrig få ordlistetooltips.
+
+**Kedjan:** `wire_dates.py` ligger **sist**, efter `wire_identity.py`. Generatorerna
+skriver ren HTML och hade annars raderat raden vid varje körning — samma skäl som
+gör att identiteten ligger efter `generate_glossary.py` (§6b).
+
+**Före commit** (ingår i `scripts/check_generators.py`, som är kommandot som ska köras):
+
+```bash
+python3 scripts/sidodatum.py --update && python3 scripts/wire_dates.py --all
+python3 scripts/check_generators.py     # rundtripp + länkar + `sidodatum.py --check`
+```
+
+---
+
 ## 7. Tillgänglighet (a11y-trädet MÅSTE vara grönt)
 
 PageSpeed-kravet "tillgänglighetsträdet korrekt formaterat" = **alla** a11y-granskningar gröna.
@@ -519,6 +584,9 @@ Skriptet sätter alla tre ställena i en operation, så en partiell bump inte ka
       sätter också `?v=` för alla andra `js/*.js` och `css/*.css` som ändrats sedan
       HEAD**, i varje HTML-sida som refererar dem, plus generatorernas
       `STYLES_V`/`CSS_V` (§11 C behöver alltså ingen egen åtgärd).
+- [ ] `python3 scripts/sidodatum.py --update && python3 scripts/wire_dates.py --all`
+      — sidans synliga datum, dess `dateModified` och dess `<lastmod>` följer med
+      innehållet (§6d). Skriv aldrig datumet för hand.
 - [ ] `CHANGELOG.md`: ny post överst med vad som ändrats (görs för hand).
 
 **Varför alla tre måste vara identiska:** `VERSION` är källan och hämtas färsk vid sidladdning;
@@ -568,6 +636,8 @@ stod kvar på `0.9.236`, och felet syntes inte i något av de svep som kördes, 
 - [ ] `og:title = twitter:title = titel-core`; alla OG/Twitter-fält ifyllda.
 - [ ] Canonical självrefererande; `robots` korrekt; ingen `google-site-verification` på undersida.
 - [ ] **JSON-LD validerar** (giltig JSON); FAQPage speglar synlig FAQ; BreadcrumbList finns.
+- [ ] **Datum (§6d):** inget datum handskrivet i HTML eller JSON-LD;
+      `python3 scripts/sidodatum.py --check` säger "aktuellt".
 - [ ] **A11y:** en `<h1>`, skip-länk, landmärken, varje tabell har `<caption>` + `th scope`,
       bilder har `alt`.
 - [ ] **Prestanda:** inga externa resurser; JS bara vid behov + `defer`; bilddimensioner satta (CLS 0).
@@ -694,8 +764,11 @@ Alla nyheter bor i **`info.html`**, i sektionen `<section … aria-labelledby="n
      <p class="news-text">Notistext. Länkar med class="info-link".</p>
    </article>
    ```
-2. **Uppdatera datumet** i `about-update`-stycket ("Senast uppdaterad …") till samma dag —
-   både `datetime`-attributet och den synliga texten.
+2. **Datumet i `about-update`-stycket rör du inte.** Dess `<time>` är märkt
+   `data-updated` och sätts av `scripts/wire_dates.py` ur `data/sidodatum.json`
+   (§6d) — att lägga in en notis ändrar sidans innehåll, så datumet flyttas av sig
+   självt. Fram till 0.9.270 var det ett handgrepp här, och ett handgrepp som ska
+   göras varje gång blir förr eller senare inte gjort.
 
 **Så skrivs texten:** kort (1–3 meningar), besökarriktad och konkret svenska — vad som är
 nytt och vad besökaren kan göra med det. Ingen intern/teknisk jargong (inga versionsnummer,
