@@ -130,7 +130,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.253'
+const APP_VERSION = '0.9.254'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -1003,6 +1003,7 @@ function showHighscores(){
   // Krok till spellägesmoduler som har egna topplistesegment (js/matcha.js m.fl.).
   if(typeof renderMatchaScores === 'function') renderMatchaScores()
   if(typeof renderLeitnerScores === 'function') renderLeitnerScores()
+  if(typeof renderTidsjaktScores === 'function') renderTidsjaktScores()
   // focus the list for keyboard users
   setTimeout(()=>{ el('scoreList').focus?.() },50)
 }
@@ -1456,6 +1457,7 @@ function updateStartButtons(){
   // Skyddad så app.js fungerar även om modulen inte är laddad.
   if(typeof updateMatchaButton === 'function') updateMatchaButton()
   if(typeof updateLeitnerButton === 'function') updateLeitnerButton()
+  if(typeof updateTidsjaktButton === 'function') updateTidsjaktButton()
 }
 
 function showSettings(){

@@ -121,7 +121,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="css/styles.css?v=0.9.253">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.254">
 </head>
 <body>
 
@@ -448,7 +448,7 @@
           <div class="game-modes-row game-modes-row--3">
             <button id="startMatchaBtn" class="btn btn-mode btn-mode--ready" type="button">Matcha</button>
             <button id="startLeitnerBtn" class="btn btn-mode btn-mode--ready" type="button">Leitner Light</button>
-            <button class="btn btn-mode" type="button" disabled aria-disabled="true">Sporcle</button>
+            <button id="startTidsjaktBtn" class="btn btn-mode btn-mode--ready" type="button">Tidsjakt</button>
           </div>
           <div class="game-modes-row game-modes-row--2">
             <button class="btn btn-mode" type="button" disabled aria-disabled="true">Dagens utmaning</button>
@@ -790,6 +790,115 @@
     </section>
 
     <!-- =========================================================
+         Tidsjakt (kapplöpning mot tiden) — dold initialt.
+         60 sekunder, så många rätt som möjligt ur valt ämne. Rätt svar ger
+         nästa fråga direkt, fel svar kostar 3 sekunder och var femte rätt i
+         rad ger 3 sekunder tillbaka. Resultaten sparas i eget fack
+         (hur_highscores_tidsjakt). Logik: js/tidsjakt.js.
+         Ämne och utbildning ärvs från startvyn som i övriga spellägen.
+         ========================================================= -->
+    <section id="tidsjakt" class="card hidden" aria-labelledby="tidsjaktHeading">
+      <h2 id="tidsjaktHeading" class="sr-only">Tidsjakt</h2>
+
+      <!-- Vad spelet GÅR UT PÅ, inte bara vilka knappar som finns. Utan
+           förklaringen ser tidsstraffet ut som en bestraffning och svitbonusen
+           som slump; med den förstår man att man tränar själva
+           framplockningen. js/tidsjakt.js fäller upp rutan automatiskt för den
+           som inte spelat förut och lämnar den hopfälld för vana spelare.
+           Döljs helt i klart-vyn. -->
+      <details id="tidsjaktIntro" class="tidsjakt-intro">
+        <summary>Så funkar det – du tränar på att komma på svaret direkt, inte på att fundera fram det</summary>
+        <div class="tidsjakt-intro-body">
+          <p><strong>Det här är ett snabbhetstest, inte ett vanligt quiz.</strong> Kunskap du måste leta efter sitter inte riktigt än. Därför får du bara 60 sekunder: svara på känn, så många som du hinner, och låt tveksamheterna avslöja vad du behöver läsa om.</p>
+          <ul class="tidsjakt-intro-list">
+            <li><strong>Rätt svar</strong> – ett poäng, och nästa fråga kommer direkt. Ingen knapp att trycka på emellan.</li>
+            <li><strong>Fel svar</strong> – tre sekunder försvinner från klockan. Att chansa kostar alltså, precis som det ska.</li>
+            <li><strong>Fem rätt i rad</strong> – du får tre sekunder tillbaka. Det du kan ger dig tid att hinna visa mer av det du kan.</li>
+          </ul>
+          <p>Klockan stannar aldrig, så alla börjar på samma 60 sekunder men hur länge rundan varar avgör du själv. Har du spelat ämnet förut står ditt rekord uppe under klockan – slår du det får du veta det på en gång.</p>
+          <p><strong>När tiden är ute</strong> visas hur många du hann, hur säkert du svarade och hur snabbt – och de frågor du missade, med rätt svar. Det är den listan du ska läsa: den pekar rakt på det du behöver plugga mer på.</p>
+        </div>
+      </details>
+
+      <!-- En sammanhållen infopanel: spelare, ämne, klocka och mätare hör
+           ihop och ska inte ligga som lösryckta rader. -->
+      <div class="tidsjakt-header">
+        <div class="tidsjakt-header-top">
+          <span id="tidsjaktPlayerLabel" class="tidsjakt-player"></span>
+          <span id="tidsjaktMeta" class="tidsjakt-meta"></span>
+        </div>
+        <!-- Klockan ÄR framstegsmätaren i det här läget: stapeln töms i stället
+             för att fyllas, byter färg vid 15 s och 5 s, och "+3 s"/"−3 s"
+             flyger upp ur den när tiden ändras. -->
+        <div id="tidsjaktClockRow" class="tidsjakt-clock-row">
+          <div class="tidsjakt-clock-track" aria-hidden="true">
+            <div id="tidsjaktClockFill" class="tidsjakt-clock-fill"></div>
+          </div>
+          <span id="tidsjaktClock" class="tidsjakt-clock" role="timer" aria-live="off"></span>
+          <span id="tidsjaktFly" class="tidsjakt-fly hidden" aria-hidden="true"></span>
+        </div>
+        <div class="tidsjakt-header-bottom">
+          <span id="tidsjaktScoreBadge" class="tidsjakt-score-badge" aria-live="polite"></span>
+          <!-- Spökmålet: personbästa i ämnet syns UNDER spelet, inte bara
+               efteråt. Döljs helt första rundan i ett ämne. -->
+          <span id="tidsjaktRecordChip" class="tidsjakt-record-chip hidden"></span>
+          <span id="tidsjaktStreakChip" class="tidsjakt-streak-chip hidden"></span>
+        </div>
+      </div>
+
+      <p id="tidsjaktPraise" class="tidsjakt-praise hidden" aria-live="polite"></p>
+
+      <div id="tidsjaktPlay" class="tidsjakt-play">
+        <!-- Fast minsta höjd på kortet: hoppar frågan mellan kort så flyttar
+             sig knapparna, och i ett snabbhetsspel betyder det feltryck som
+             kostar spelaren tid hen inte förtjänat att bli av med. -->
+        <div id="tidsjaktCard" class="tidsjakt-card">
+          <p id="tidsjaktPrompt" class="tidsjakt-prompt"></p>
+        </div>
+
+        <div id="tidsjaktChoices" class="tidsjakt-choices" role="group" aria-label="Svarsalternativ"></div>
+      </div>
+
+      <!-- Klart-vy (dold under rundan) -->
+      <div id="tidsjaktFinished" class="tidsjakt-finished hidden">
+        <div class="tidsjakt-ring-wrap">
+          <svg class="tidsjakt-ring" viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="tidsjakt-ring-bg" cx="60" cy="60" r="52"></circle>
+            <circle id="tidsjaktRingProgress" class="tidsjakt-ring-progress" cx="60" cy="60" r="52"></circle>
+          </svg>
+          <div class="tidsjakt-ring-label">
+            <span id="tidsjaktRingPct" class="tidsjakt-ring-pct"></span>
+            <span class="tidsjakt-ring-sub">träffsäkert</span>
+          </div>
+        </div>
+        <p id="tidsjaktDoneText" class="tidsjakt-done-text" aria-live="polite"></p>
+        <p id="tidsjaktStatsText" class="tidsjakt-stats-text"></p>
+        <p id="tidsjaktNextText" class="tidsjakt-next-text"></p>
+        <p id="tidsjaktRecordBadge" class="tidsjakt-record-badge hidden" aria-live="polite">🏆 Nytt rekord!</p>
+
+        <!-- Det pedagogiska värdet i läget: en kapplöpning utan facit efteråt
+             lär ingen något. -->
+        <div id="tidsjaktMissedWrap" class="tidsjakt-missed-wrap hidden">
+          <h3 class="tidsjakt-missed-heading">Det här missade du</h3>
+          <ul id="tidsjaktMissed" class="tidsjakt-missed"></ul>
+          <p id="tidsjaktMissedMore" class="tidsjakt-missed-more hidden"></p>
+        </div>
+
+        <div class="actions">
+          <button id="tidsjaktRetryBtn" class="btn primary">Ny runda</button>
+          <button id="tidsjaktQuitBtn" class="btn">Avsluta</button>
+        </div>
+      </div>
+
+      <div id="tidsjaktFooter" class="quiz-footer">
+        <button id="tidsjaktCancelBtn" class="btn btn-cancel">Avbryt</button>
+        <div class="footer-center">
+          <div id="tidsjaktAnsweredLabel" class="tidsjakt-answered"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
          Hantera-sektion — granska och importera frågor (dold initialt)
          ========================================================= -->
     <section id="manage" class="card hidden" aria-labelledby="manageHeading">
@@ -847,11 +956,11 @@
 
       <!-- =====================================================================
            Ett segment per spelläge utöver quizet. Byggda lägen (Matcha, Leitner
-           Light) är aktiva; de som ännu inte är byggda står kvar som skuggade
-           platshållare. Id:n följer slug-konventionen (scoreList-<slug>,
-           exportScores-<slug>, …), så ett nytt läge behöver bara ta bort
-           disabled/hs-segment--placeholder och koppla på sin logik.
-           Slugs: matcha · leitner · sporcle · daily · gravity
+           Light, Tidsjakt) är aktiva; de som ännu inte är byggda står kvar
+           som skuggade platshållare. Id:n följer slug-konventionen
+           (scoreList-<slug>, exportScores-<slug>, …), så ett nytt läge behöver
+           bara ta bort disabled/hs-segment--placeholder och koppla på sin logik.
+           Slugs: matcha · leitner · tidsjakt · daily · gravity
            ===================================================================== -->
       <div class="hs-modes" aria-label="Topplistor för övriga spellägen">
         <h3 class="hs-modes-heading">Fler spellägen</h3>
@@ -880,15 +989,15 @@
           </div>
         </div>
 
-        <div class="hs-segment hs-segment--placeholder" data-mode="sporcle">
-          <h4 class="hs-segment-title">Sporcle</h4>
-          <ol id="scoreList-sporcle" class="hs-segment-list"></ol>
-          <p class="hs-empty">Spelläget är inte byggt än — inga resultat att visa.</p>
+        <div class="hs-segment" data-mode="tidsjakt">
+          <h4 class="hs-segment-title">Tidsjakt <span class="hs-segment-sub">flest rätt först</span></h4>
+          <ol id="scoreList-tidsjakt" class="hs-segment-list"></ol>
+          <p class="hs-empty">Inga rundor än — spela en runda så dyker de upp här.</p>
           <div class="actions">
-            <button id="exportScores-sporcle" class="btn" type="button" disabled aria-disabled="true">Exportera resultat</button>
-            <button id="importScoresBtn-sporcle" class="btn" type="button" disabled aria-disabled="true">Importera resultat</button>
-            <input id="importScoresFile-sporcle" type="file" accept="application/json" class="file-input-hidden" aria-hidden="true" tabindex="-1" disabled />
-            <button id="clearScores-sporcle" class="btn" type="button" disabled aria-disabled="true">Rensa</button>
+            <button id="exportScores-tidsjakt" class="btn" type="button">Exportera resultat</button>
+            <button id="importScoresBtn-tidsjakt" class="btn" type="button">Importera resultat</button>
+            <input id="importScoresFile-tidsjakt" type="file" accept="application/json" class="file-input-hidden" aria-hidden="true" tabindex="-1" />
+            <button id="clearScores-tidsjakt" class="btn" type="button">Rensa</button>
           </div>
         </div>
 
@@ -1035,9 +1144,10 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.253" defer></script>
+  <script src="js/app.js?v=0.9.254" defer></script>
   <!-- Spellägesmoduler: en egen fil per läge, laddas EFTER app.js (delar globalt scope). -->
   <script src="js/matcha.js?v=0.9.251" defer></script>
-  <script src="js/leitner.js?v=0.9.253" defer></script>
+  <script src="js/leitner.js?v=0.9.254" defer></script>
+  <script src="js/tidsjakt.js?v=0.9.254" defer></script>
 </body>
 </html>

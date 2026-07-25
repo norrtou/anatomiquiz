@@ -1111,7 +1111,7 @@ body:has(#quiz:not(.hidden)) {
 }
 
 /* Kommande spellägen — skuggade/inaktiva knappar tills de byggts och funkar.
-   Två rader: 3 knappar (Matcha, Leitner Light, Sporcle) + 2 knappar
+   Två rader: 3 knappar (Matcha, Leitner Light, Tidsjakt) + 2 knappar
    (Dagens utmaning, Arcade: Gravity). */
 .game-modes {
   display: flex;
@@ -2728,6 +2728,490 @@ ol li {
   .leitner-score-badge.bump,
   .leitner-praise.in,
   .leitner-record-badge {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ============================================================================
+   TIDSJAKT (kapplöpning mot tiden) — js/tidsjakt.js
+   En fråga i taget mot en klocka som töms. Delar formspråk med Matcha och
+   Leitner (samma infopanel, resultatring och rekordmärke) men har egna klasser,
+   så att de tre lägena kan ändras oberoende av varandra.
+   ============================================================================ */
+
+/* Vad spelet går ut på, överst i vyn. Hopfällbar (js/tidsjakt.js fäller upp den
+   för den som inte spelat förut) så att förklaringen finns för nybörjaren utan
+   att ligga i vägen för den som redan kan läget. Följer .leitner-intro. */
+.tidsjakt-intro {
+  margin: 0 0 12px;
+  border: 1px solid var(--primary-light);
+  border-radius: var(--radius-sm);
+  background: var(--success-bg);
+  padding: 8px 12px;
+}
+.tidsjakt-intro > summary {
+  cursor: pointer;
+  color: var(--primary-deep);
+  font-weight: 600;
+  font-size: 0.88rem;
+  line-height: 1.35;
+  list-style-position: inside;
+}
+.tidsjakt-intro > summary:focus-visible {
+  outline: 2px solid var(--primary-deep);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+.tidsjakt-intro-body {
+  margin-top: 8px;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+.tidsjakt-intro-body p { margin: 0 0 8px; }
+.tidsjakt-intro-body p:last-child { margin-bottom: 2px; }
+/* Litet listindrag – långa punkter blir annars svårlästa på mobil. */
+.tidsjakt-intro-list {
+  margin: 0 0 8px;
+  padding-left: 18px;
+}
+.tidsjakt-intro-list li { margin-bottom: 4px; }
+
+/* En sammanhållen infopanel i stället för lösryckta textrader. */
+.tidsjakt-header {
+  background: var(--success-bg);
+  border: 1px solid var(--primary-light);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  margin-bottom: 12px;
+}
+
+.tidsjakt-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tidsjakt-player { font-weight: 700; color: var(--primary-deep); }
+.tidsjakt-meta { font-size: 0.82rem; font-weight: 600; color: var(--text-secondary); text-align: right; }
+
+/* --- Klockan = framstegsmätaren ----------------------------------------- */
+/* position: relative eftersom "+3 s"/"−3 s" flyger upp ur raden. */
+.tidsjakt-clock-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tidsjakt-clock-track {
+  flex: 1 1 auto;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(16, 185, 129, 0.18);
+  overflow: hidden;
+}
+/* Töms i stället för att fyllas: stapeln ÄR den återstående tiden. Kort
+   transition så att tidsstraff/bonus syns som ett hopp man hinner uppfatta,
+   utan att släpa efter klocksiffran. */
+.tidsjakt-clock-fill {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, var(--primary-dark) 0%, var(--primary) 100%);
+  border-radius: 999px;
+  transition: width 0.12s linear, background 0.3s ease;
+}
+.tidsjakt-clock {
+  flex: 0 0 auto;
+  min-width: 3.6em;
+  text-align: right;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--primary-deep);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Sista 15 sekunderna: amber. Sista 5: rött och pulserande – dramaturgi, och
+   samtidigt en läsbar signal för den som inte tittar på siffran. */
+.tidsjakt-clock-row.warn .tidsjakt-clock-fill { background: linear-gradient(90deg, #d97706 0%, var(--warning) 100%); }
+.tidsjakt-clock-row.warn .tidsjakt-clock { color: #b45309; }
+.tidsjakt-clock-row.danger .tidsjakt-clock-fill {
+  background: linear-gradient(90deg, #b91c1c 0%, var(--error) 100%);
+  animation: tidsjaktClockPulse 0.7s ease-in-out infinite;
+}
+.tidsjakt-clock-row.danger .tidsjakt-clock {
+  color: var(--error);
+  animation: tidsjaktClockPulse 0.7s ease-in-out infinite;
+}
+@keyframes tidsjaktClockPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* Tidsändringen som händelse, inte som en stapel som råkade hoppa. Egen platta
+   bakom texten: siffran stiger upp ÖVER namn-/ämnesraden och måste vara läsbar
+   oavsett vad som råkar ligga bakom den. */
+.tidsjakt-fly {
+  position: absolute;
+  right: 0;
+  top: -8px;
+  padding: 0 7px;
+  border-radius: 999px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  font-size: 0.95rem;
+  font-weight: 800;
+  pointer-events: none;
+  font-variant-numeric: tabular-nums;
+}
+.tidsjakt-fly.up { color: var(--primary-deep); }
+.tidsjakt-fly.down { color: var(--error); }
+.tidsjakt-fly.go.up { animation: tidsjaktFlyUp 0.85s ease-out; }
+.tidsjakt-fly.go.down { animation: tidsjaktFlyDown 0.85s ease-out; }
+@keyframes tidsjaktFlyUp {
+  0% { transform: translateY(6px); opacity: 0; }
+  25% { transform: translateY(-2px); opacity: 1; }
+  100% { transform: translateY(-22px); opacity: 0; }
+}
+@keyframes tidsjaktFlyDown {
+  0% { transform: translateY(-6px); opacity: 0; }
+  25% { transform: translateY(2px); opacity: 1; }
+  100% { transform: translateY(20px); opacity: 0; }
+}
+
+.tidsjakt-header-bottom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.tidsjakt-score-badge {
+  flex: 0 0 auto;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--primary-deep);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.tidsjakt-score-badge.bump { animation: tidsjaktBadgeBump 0.35s ease; }
+@keyframes tidsjaktBadgeBump {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.35); }
+  100% { transform: scale(1); }
+}
+
+/* Spökmålet: rekordet att jaga, synligt under spelet. */
+.tidsjakt-record-chip {
+  flex: 0 0 auto;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px dashed rgba(4, 120, 87, 0.4);
+  border-radius: 999px;
+  padding: 2px 9px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.tidsjakt-record-chip.beaten {
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-deepest) 100%);
+  border-style: solid;
+  border-color: transparent;
+}
+
+.tidsjakt-streak-chip {
+  flex: 0 0 auto;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #b45309;
+  background: #fffbeb;
+  border: 1px solid var(--warning);
+  border-radius: 999px;
+  padding: 2px 9px;
+  white-space: nowrap;
+}
+.tidsjakt-streak-chip.bump { animation: tidsjaktBadgeBump 0.3s ease; }
+
+/* Beröm vid delmål — kort och konkret, och tas bort igen av js/tidsjakt.js
+   eftersom nästa fråga kommer inom sekunden. */
+.tidsjakt-praise {
+  margin: 0 0 10px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--primary-deep);
+  background: var(--success-bg);
+  border: 1px solid var(--primary-light);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.88rem;
+}
+.tidsjakt-praise.gold {
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-deepest) 100%);
+  border-color: transparent;
+}
+.tidsjakt-praise.in { animation: tidsjaktPraiseIn 0.4s ease; }
+@keyframes tidsjaktPraiseIn {
+  0% { transform: scale(0.85); opacity: 0; }
+  60% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* --- Frågekortet och alternativen --------------------------------------- */
+/* min-height är inte kosmetik: utan den flyttar sig knapparna när frågan är
+   kortare än förra, och i ett snabbhetsspel blir det feltryck som kostar tid. */
+.tidsjakt-card {
+  border: 2px solid var(--primary-light);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  margin-bottom: 12px;
+  min-height: 96px;
+  display: flex;
+  align-items: center;      /* vertikal centrering – korta frågor hänger inte snett */
+  justify-content: center;
+}
+/* Nytt kort glider in från höger: det ska kännas som ett nytt kort i en ström,
+   inte som att texten byttes ut på stället. */
+.tidsjakt-card.enter { opacity: 0; transform: translateX(18px); }
+.tidsjakt-card.in {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.2s ease, transform 0.24s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tidsjakt-prompt {
+  margin: 0;
+  text-align: center;
+  /* Textlängd → typsnittsskala (--prompt-scale sätts per fråga av
+     js/tidsjakt.js). max() håller ett läsligt golv oavsett frågelängd. */
+  font-size: max(1rem, calc(1.22rem * var(--prompt-scale, 1)));
+  line-height: 1.35;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* 2×2-rutnät: allt ligger inom tummens räckhåll och inget behöver skrollas
+   mitt i en runda. Sant/falskt får dela en rad (.two). */
+.tidsjakt-choices {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+/* Sant/falskt blir en enda rad. Högre knappar, annars ser raden tunn och
+   halvfärdig ut jämfört med ett fullt 2×2-rutnät. */
+.tidsjakt-choices.two .tidsjakt-choice { min-height: 78px; }
+
+.tidsjakt-choice {
+  min-height: 64px;          /* tumvänlig träffyta */
+  padding: 10px 12px;
+  border: 2px solid var(--primary-light);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: max(0.8rem, calc(0.98rem * var(--opt-scale, 1)));
+  line-height: 1.25;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+.tidsjakt-choice:hover:not(:disabled) { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-1px); }
+.tidsjakt-choice:active:not(:disabled) { transform: translateY(0) scale(0.98); }
+.tidsjakt-choice:disabled { cursor: default; }
+
+/* Omedelbart kvitto på trycket, innan facit hinner tändas. */
+.tidsjakt-choice.chosen { border-color: var(--primary-dark); background: var(--success-bg); }
+
+.tidsjakt-choice.correct {
+  border-color: var(--success);
+  background: var(--success-bg);
+  color: var(--primary-deep);
+  font-weight: 800;
+}
+.tidsjakt-choice.wrong {
+  border-color: var(--error);
+  background: var(--error-bg);
+  color: #b91c1c;
+}
+.tidsjakt-choice.shake { animation: tidsjaktShake 0.35s ease; }
+@keyframes tidsjaktShake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-5px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(2px); }
+}
+
+/* Räknaren i sidfoten – diskret, klockan är huvudsaken. */
+.tidsjakt-answered {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Klart-vyn ----------------------------------------------------------- */
+.tidsjakt-finished { text-align: center; padding: 14px 0 4px; }
+
+.tidsjakt-ring-wrap { position: relative; width: 140px; height: 140px; margin: 0 auto 12px; }
+.tidsjakt-ring { width: 100%; height: 100%; transform: rotate(-90deg); }
+.tidsjakt-ring-bg { fill: none; stroke: var(--success-bg); stroke-width: 10; }
+.tidsjakt-ring-progress {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 326.7; /* 2 · π · r(52) */
+  stroke-dashoffset: 326.7;
+  transition: stroke-dashoffset 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tidsjakt-ring-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.tidsjakt-ring-pct { font-size: 1.9rem; font-weight: 800; color: var(--primary-deep); font-variant-numeric: tabular-nums; }
+.tidsjakt-ring-sub { font-size: 0.72rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.04em; }
+
+.tidsjakt-done-text { font-size: 1.05rem; margin: 0 0 8px; }
+.tidsjakt-stats-text { font-size: 0.86rem; color: var(--text-secondary); margin: 0 0 8px; }
+/* Slutet pekar framåt: vad som krävs för att slå rekordet nästa gång. */
+.tidsjakt-next-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-deep);
+  background: var(--success-bg);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  margin: 0 0 12px;
+}
+
+.tidsjakt-record-badge {
+  display: inline-block;
+  margin: 0 0 14px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-deepest) 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.88rem;
+  animation: tidsjaktRecordIn 0.5s ease;
+}
+@keyframes tidsjaktRecordIn {
+  0% { transform: scale(0.7); opacity: 0; }
+  60% { transform: scale(1.08); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Missade frågor med rätt svar — lägets pedagogiska nyttolast, och därför
+   vänsterställd läsbar text mitt i en annars centrerad resultatvy. */
+.tidsjakt-missed-wrap {
+  text-align: left;
+  margin: 4px 0 16px;
+  border: 1px solid var(--primary-light);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  padding: 10px 12px;
+}
+.tidsjakt-missed-heading {
+  margin: 0 0 8px;
+  font-size: 0.92rem;
+  color: var(--primary-deep);
+}
+.tidsjakt-missed { list-style: none; margin: 0; padding: 0; }
+.tidsjakt-missed li {
+  padding: 6px 0;
+  border-top: 1px dashed rgba(16, 185, 129, 0.3);
+}
+.tidsjakt-missed li:first-child { border-top: none; }
+.tidsjakt-missed .sm-q {
+  display: block;
+  font-size: 0.84rem;
+  line-height: 1.35;
+  color: var(--text-primary);
+}
+.tidsjakt-missed .sm-a {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--primary-deep);
+}
+.tidsjakt-missed-more { margin: 8px 0 0; font-size: 0.8rem; color: var(--text-secondary); }
+
+/* OBS: .hidden är INTE en global utility i det här projektet (CSS_KARTA) – den
+   fungerar bara via sammansatta selektorer. Lägets inre delar är inga .card,
+   så var och en som ska kunna döljas behöver en egen regel här. Utan den visas
+   klart-vyn mitt i rundan, precis som hände Matcha i 0.9.244. */
+.tidsjakt-intro.hidden,
+.tidsjakt-play.hidden,
+.tidsjakt-finished.hidden,
+.tidsjakt-praise.hidden,
+.tidsjakt-record-badge.hidden,
+.tidsjakt-record-chip.hidden,
+.tidsjakt-streak-chip.hidden,
+.tidsjakt-fly.hidden,
+.tidsjakt-missed-wrap.hidden,
+.tidsjakt-missed-more.hidden,
+#tidsjaktFooter.hidden { display: none; }
+
+@media (max-width: 640px) {
+  .tidsjakt-intro { padding: 7px 10px; margin-bottom: 10px; }
+  .tidsjakt-intro > summary { font-size: 0.82rem; }
+  .tidsjakt-intro-body { font-size: 0.8rem; }
+  .tidsjakt-header { padding: 8px 10px; }
+  /* Ämnesraden är lång ("Balansorganet (vestibularis) · 60 sekunder") och bröts
+     illa mot högerkanten bredvid namnet. Egen rad, vänsterställd. */
+  .tidsjakt-header-top { flex-direction: column; align-items: flex-start; gap: 2px; }
+  .tidsjakt-meta { font-size: 0.74rem; text-align: left; }
+  .tidsjakt-clock { font-size: 0.98rem; min-width: 3.3em; }
+  .tidsjakt-card { padding: 13px 12px; min-height: 86px; }
+  .tidsjakt-prompt { font-size: max(0.92rem, calc(1.08rem * var(--prompt-scale, 1))); }
+  .tidsjakt-choices { gap: 8px; }
+  .tidsjakt-choice {
+    min-height: 60px;
+    padding: 9px 8px;
+    font-size: max(0.76rem, calc(0.9rem * var(--opt-scale, 1)));
+  }
+  .tidsjakt-ring-wrap { width: 112px; height: 112px; }
+  .tidsjakt-ring-pct { font-size: 1.5rem; }
+  .tidsjakt-next-text { font-size: 0.84rem; }
+  .tidsjakt-missed .sm-q, .tidsjakt-missed .sm-a { font-size: 0.8rem; }
+}
+
+/* Rörelsen är extra, inte information: klockan fortsätter tömmas och alla
+   sluttillstånden (grön/röd, siffror, ring, mätare) sätts ändå direkt av JS –
+   bara utan rörelse dit. Fördröjningen innan nästa fråga rörs INTE, den är
+   tiden facit syns. */
+@media (prefers-reduced-motion: reduce) {
+  .tidsjakt-choice,
+  .tidsjakt-choice.shake,
+  .tidsjakt-card.in,
+  .tidsjakt-clock-row.danger .tidsjakt-clock-fill,
+  .tidsjakt-clock-row.danger .tidsjakt-clock,
+  .tidsjakt-fly.go.up,
+  .tidsjakt-fly.go.down,
+  .tidsjakt-score-badge.bump,
+  .tidsjakt-streak-chip.bump,
+  .tidsjakt-praise.in,
+  .tidsjakt-record-badge,
+  .tidsjakt-ring-progress {
     animation: none !important;
     transition: none !important;
   }

@@ -23,7 +23,7 @@
 //
 // Ett pass plockar FÖRFALLNA kort först (lägst låda först, äldst förfallodatum
 // först) och fyller på med nya kort ur ämnet upp till valt antal frågor. Fel
-// kort återkommer i SAMMA pass (Anki-stil "relearn") tidigast LEITNER_RELEARN_GAP
+// kort återkommer i SAMMA pass (samma "relearn"-princip som i vanliga kortlekssystem) tidigast LEITNER_RELEARN_GAP
 // kort senare, så att man aldrig lämnar passet med kortet obesvarat — men bara
 // det FÖRSTA svaret på ett kort påverkar lådan, eftersom det är det svaret som
 // säger något om minnet.
@@ -540,7 +540,7 @@ function leitnerPraiseText(mastered, ok, firstAnswer){
   return ''
 }
 
-// Fel kort läggs in igen längre fram i kön (Anki-stil "relearn"), så att passet
+// Fel kort läggs in igen längre fram i kön (samma "relearn"-princip som i vanliga kortlekssystem), så att passet
 // aldrig lämnar ett kort obesvarat. Samma post återanvänds — därför räknas den
 // bara en gång i framstegsmätaren.
 function requeueLeitnerCard(rec){

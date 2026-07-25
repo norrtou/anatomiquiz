@@ -828,9 +828,51 @@ tills skriptet lär sig dem", vilket är exakt den sortens mekaniska handpåläg
 §0.3 förbjuder (116 sidor refererar `styles.css`). `pre-commit` blockerar en commit
 där en ändrad js/css-fil bär en gammal buster.
 
-**Gäller:** spellägen (Matcha, Leitner, kommande Sporcle/Dagens utmaning/Gravity),
+**Gäller:** spellägen (Matcha, Leitner, Tidsjakt, kommande Dagens utmaning/Gravity),
 fristående delappar och verktyg. Gäller **inte** rena datafiler eller små
 hjälpfunktioner som hör ihop med befintlig quiz-/flashcard-logik.
+
+### 12.1 INGA VARUMÄRKESNAMN I KOD ELLER TEXT — ANVÄND FRIA ORD
+
+**STÅENDE REGEL (2026-07-25, på användarens uttryckliga begäran: "Använd inga
+varumärkesnamn i kod eller text. Använd bara fria begrepp som inte ägs av en firma.")**
+
+**Mall (så här görs det rätt från början):** ett nytt spelläge, verktyg eller
+begrepp får **två** namn, och båda ska vara fria ord som ingen firma äger:
+
+| | Exempel | Används i |
+|---|---|---|
+| Synligt namn | **Tidsjakt** | knappar, rubriker, topplistan, CHANGELOG, `info.html` |
+| Kodnamn/slug | **`tidsjakt`** | filnamn, funktioner, konstanter, element-id:n, CSS-klasser, localStorage-nyckel, exportens `type` |
+
+**Bäst är när de är samma ord** (Tidsjakt/`tidsjakt`) – då finns ingen översättning
+att hålla i huvudet. Väljer du ett synligt namn som inte kan vara en identifierare
+("Dagens utmaning") måste sluggen ändå vara ett eget fritt ord, aldrig en förkortning
+av en produkt.
+
+Slugen ska vara ett enda gement ord utan diakriter, så att den fungerar rakt
+igenom `js/<slug>.js`, `TIDSJAKT_*`, `#<slug>Clock`, `.<slug>-card`,
+`hur_highscores_<slug>` och `scoreList-<slug>`.
+
+**Så väljs namnet:** beskriv vad läget **gör** (tidsjakt, matcha, parspel,
+dagsutmaning), inte vilken produkt det påminner om. Är det enda namn du kommer
+på ett företags — då har du inte namngett läget än, du har lånat en förlaga.
+
+**Förbjudet:** att döpa något efter en tjänst, app eller sajt. Konkret fall som
+motiverar regeln: läget Tidsjakt låg i backloggen och i scaffolden under en
+amerikansk quizsajts namn, och hann bli filnamn, 441 kodförekomster, 138
+CSS-rader, element-id:n och ett localStorage-fack innan det byttes ut i 0.9.254.
+Kostnaden var ett helt omdöpningspass — precis den dubbelkostnad §0 finns för
+att förhindra. Ett arbetsnamn i en backlogg blir kod om ingen hindrar det.
+
+**Gäller även jämförelser i kommentarer.** Skriv mekanismen, inte produkten:
+"samma relearn-princip som i vanliga kortlekssystem", inte "<appnamn>-stil".
+`js/leitner.js` hade två sådana och städades i samma släpp. Undantaget är §13,
+där instruktionen *är* att titta på namngivna förlagor innan man bygger — där
+namnges de som research, aldrig som namn på något vi levererar.
+
+**Kontroll före commit** (skyddsnät, inte ersättning för mallen ovan):
+`grep -rniE '<misstänkt namn>' --include=*.js --include=*.html --include=*.css --include=*.md .`
 
 ---
 
@@ -875,9 +917,8 @@ funktionen; för ett spel **är** det funktionen.
 framtida spel följer matcha-lyftet, utan att jag behöver upprepa det").**
 
 Matcha efter spelkänslo-lyftet (0.9.247) **är mallen**. Varje kommande spelläge —
-Plugga smart/Leitner, Sporcle-kapplöpning, Dagens utmaning + streak,
-Arkad/Gravity och allt som tillkommer — byggs med hela listan nedan **inne i det
-första bygget**. Den ska aldrig behöva efterfrågas, och den får aldrig läggas som ett
+Dagens utmaning + streak, Arkad/Gravity och allt som tillkommer — byggs med hela
+listan nedan **inne i det första bygget**. Den ska aldrig behöva efterfrågas, och den får aldrig läggas som ett
 polish-pass efteråt: att bygga läget platt och sedan lyfta det är precis den
 dubbelkostnad §0 förbjuder (Matcha byggdes så, och lyftet blev ett eget arbetspass).
 
@@ -889,6 +930,16 @@ lösas på det sättet som passar **det** spelet, inte klistras på för att den
 Kravet är att varje punkt är **medvetet besvarad** i planen (§13 punkt 1): antingen
 "så här gör vi det i det här läget" eller "det här läget löser samma behov så här i
 stället". Det som aldrig får hända är att en punkt tyst uteblir för att den var jobbig.
+
+**Facit för hur en punkt anpassas i stället för kopieras: `js/tidsjakt.js` (0.9.254).**
+Där är tiden spelarens valuta, så Leitners koreografi i tre steg om 260 ms hade
+stulit av den. Punkt 2 löstes därför som **ett** snabbt steg (~180 ms: facit tänds,
+poängen studsar, tidsbonusen flyger, nästa kort glider in) — fortfarande en payoff,
+aldrig ett stumt tillståndsbyte, och klockan stoppas inte. Punkt 3 löstes med
+klockan **som** mätare (den töms i stället för att fyllas) plus ett spökmål:
+personbästa i ämnet syns under spelet, inte bara i efterhand. Motivera anpassningen
+i planen på det sättet — "punkten passar inte" räcker inte, "så här löser läget
+samma behov" gör det.
 
 **De åtta punkterna — facit finns i `js/matcha.js` + `.matcha-*` i `css/styles.css`,
 använd mönstret därifrån och översätt det till det nya lägets mekanik:**
@@ -927,6 +978,12 @@ använd mönstret därifrån och översätt det till det nya lägets mekanik:**
    stegfördröjningen till 0 och media queryn stänger av animationerna, men
    **sluttillstånden (färg, procent, mätare) sätts ändå direkt.** Reducerad rörelse
    får aldrig betyda utebliven information.
+   **⚠️ Nollställ bara fördröjningar som ÄR rörelse.** En fördröjning som utgör
+   tiden något syns är information, inte animation, och ska lämnas i fred. I
+   `js/tidsjakt.js` går nästa fråga fram efter 180 ms; nollas den vid reducerad
+   rörelse hinner spelaren aldrig se om svaret var rätt — alltså precis den
+   uteblivna information regeln finns för att förhindra. Fråga per fördröjning:
+   *rör den något, eller visar den något?*
 
 **Utöver de åtta, i varje nytt läge:**
 - **Läget ska förklara sig självt för någon som aldrig spelat det.** Skriv en
@@ -966,6 +1023,25 @@ att jag lyfter spelkänslan också?" ska inte ställas: svaret är redan ja.
 **DESSA REGLER ÄR BINDANDE FÖR ALL ARBETE PÅ ANATOMIQUIZ.**
 
 **Senast uppdaterad:** 2026-07-25
+**Version:** 2.3 – lärdomar ur bygget av **Tidsjakt** (0.9.254), skrivna proaktivt:
+- **§12.1 ny stående regel: inga varumärkesnamn i kod eller text.** Ett nytt läge får
+  ett synligt namn och en slug, båda fria ord som ingen firma äger, och slugen går
+  rakt igenom filnamn/funktioner/id:n/CSS/localStorage. Läget hann ligga under en
+  quizsajts namn i 441 kodförekomster innan det byttes — ett arbetsnamn i backloggen
+  blir kod om ingen hindrar det. Gäller även jämförelser i kommentarer (skriv
+  mekanismen, inte produkten); §13:s research-förlagor är undantagna
+- §13.1 nytt facit för hur en punkt **anpassas i stället för kopieras**: `js/tidsjakt.js`
+  löser punkt 2 som ett snabbt steg om 180 ms (klockan får inte stoppas) och punkt 3
+  med klockan **som** mätare plus ett spökmål (personbästa syns under spelet).
+  Anpassningen ska motiveras i planen med "så här löser läget samma behov", aldrig
+  med "punkten passar inte"
+- §13.1 punkt 8 skärpt: nollställ bara fördröjningar som **är** rörelse. En fördröjning
+  som utgör tiden något syns (facit i ett snabbhetsspel) är information, och att nolla
+  den vid `prefers-reduced-motion` skapar exakt den uteblivna information regeln
+  förbjuder. Fråga per fördröjning: rör den något, eller visar den något?
+- §12/§13.1 uppräkningarna rättade – Tidsjakt är byggt, kvar är Dagens utmaning
+  + streak och Arkad/Gravity
+
 **Version:** 2.2 – §13.1 nytt krav (0.9.253, på användarens kritik av Leitners första
 förklaring): **ett spelläge ska förklara sig självt i spelvyn för någon som aldrig spelat
 det** – vad det går ut på och varför, inte bara vilka knappar som finns. En mening om
