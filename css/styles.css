@@ -4517,6 +4517,31 @@ ol li {
   color: var(--text-secondary);
 }
 
+/* Medicinsk ansvarsfriskrivning — samma rad, samma ord, på varje innehållssida.
+   Skrivs av scripts/wire_friskrivning.py ur scripts/friskrivning.py och står
+   direkt ovanför datumraden. Formen är medvetet densamma som .page-updated:
+   det här är sidans metadata, inte en varningsruta som ska skrika. */
+.page-disclaimer {
+  margin: 26px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid rgba(16, 185, 129, 0.15);
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.page-disclaimer strong {
+  color: var(--text-primary);
+}
+
+/* Friskrivningen och datumet läses som ett block: bara det första av dem bär
+   linjen, annars får sidan två streck på rad. */
+.page-disclaimer + .page-updated {
+  margin-top: 8px;
+  padding-top: 0;
+  border-top: 0;
+}
+
 /* Källförteckning på innehållssidor */
 .kb-sources {
   margin-top: 28px;
@@ -4825,8 +4850,11 @@ ol li {
   .kb-sources p, .kb-sources li { color: #000; margin: 0 0 4pt; }
 
   /* Datumraden följer med i utskriften – en utskriven sida utan datum går inte
-     att bedöma färskheten på. Ramen bort, texten svart. */
-  .page-updated {
+     att bedöma färskheten på. Ramen bort, texten svart. Friskrivningen följer
+     med av tyngre skäl: en utskriven muskeltabell som cirkulerar utan den ser
+     ut som ett kliniskt underlag. */
+  .page-updated,
+  .page-disclaimer {
     border: 0 !important;
     padding: 0 !important;
     margin: 4pt 0 0 !important;

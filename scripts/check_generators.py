@@ -57,6 +57,7 @@ KEDJA = [
     ["scripts/wire_citations.py", "--all"],
     ["scripts/generate_glossary.py"],
     ["scripts/wire_identity.py", "--all"],
+    ["scripts/wire_friskrivning.py", "--all"],
     ["scripts/wire_dates.py", "--all"],
 ]
 

@@ -503,6 +503,56 @@ python3 scripts/check_generators.py     # rundtripp + länkar + `sidodatum.py --
 
 ---
 
+## 6e. Medicinsk ansvarsfriskrivning (OBLIGATORISKT)
+
+Anatomiquiz är YMYL-innehåll. Varje innehållssida ska säga vad materialet är och
+vad det inte är — **med samma ord på varje sida:**
+
+```html
+<!-- sist i <main>, direkt före datumraden — skrivs av scripts/wire_friskrivning.py -->
+<p class="page-disclaimer"><strong>Utbildningsmaterial, inte medicinsk rådgivning.</strong> Innehållet är avsett för studier och ersätter inte kurslitteratur, undervisning eller kliniska riktlinjer. Det ska inte användas som underlag för vård eller behandling av patienter.</p>
+```
+
+**Texten skrivs aldrig för hand på en sida.** Den bor i `scripts/friskrivning.py`
+och skrivs in av `scripts/wire_friskrivning.py --all`, som ligger mellan
+`wire_identity.py` och `wire_dates.py` i kedjan. Skälet är detsamma som för
+datum och identitet: en sträng som finns på 113 ställen glider isär, en som finns
+på ett ställe kan inte göra det. Före 0.9.271 stod friskrivningen på **fem** av
+119 sidor i **fyra** olika formuleringar, och de sidor som bär det egentliga
+medicinska innehållet — muskeltabeller, nervtabeller, kärl, skelett, leder,
+ordlistan — saknade den helt.
+
+- **Skriptet skriver om, det hoppar inte över.** En befintlig rad tas bort och
+  läggs in på nytt på den kanoniska platsen, så att en ändrad text slår igenom på
+  alla sidor vid nästa körning. Ett skript som hoppar över redan wirade sidor
+  hade lämnat den gamla texten kvar — precis det som gjorde `--sync-defs`
+  nödvändig i `wire_terms.py` (§6c).
+- **Ingen variant per sidtyp.** Läkemedelsräknarnas `.vt-ansvar` är en *annan*
+  sak: den handlar om att stämma av ett uträknat svar mot ordination och
+  produktinformation och hör hemma bredvid räknarna. Den generella friskrivningen
+  har exakt en formulering, för det är det enda som gör den omöjlig att glida
+  ifrån.
+- **Undantag står i `UTAN_FRISKRIVNING`, med skäl.** Två skäl förekommer: sidan
+  bär inget medicinskt innehåll (`404.html`, `ordlista-tecken.html`,
+  `integritet.html`, `versionshistorik.html`), eller den bär redan en fylligare
+  friskrivning i brödtexten (`info.html`, `spellagen.html`). En **ny** sida som
+  varken står i listan eller har ett `<main>` stoppar bygget — tyst uteblivet är
+  det enda som inte är ett alternativ (§0.4 i CLAUDE_REGLER).
+- **`.page-disclaimer` är en skyddad zon i `wire_terms.py`.** Raden är metadata
+  om sidan, inte innehåll, och `klinisk`/`kliniska` är facitnycklar: utan zonen
+  hade 113 identiska rader blivit 113 olika, och hela poängen med en delad
+  komponent varit borta.
+- **Raden räknas inte som innehåll i `sidodatum.py`.** `normalisera()` stryker
+  den, av samma skäl som datumraden stryks: en boilerplate-rad som läggs på hela
+  sajten samma dag är ingen uppdatering för läsaren, och hade den räknats som en
+  sådan hade alla 113 sidorna daterats om till den dagen (§6d).
+- **`reviewedBy` skrivs INTE.** Frågan hör ihop med den här punkten och svaret är
+  nej så länge ingen utomstående faktiskt granskat innehållet. Ett osant
+  `reviewedBy` är ett sämre EEAT-läge än inget alls, och i YMYL-material är det
+  ett direkt falskt påstående. Skriv bara "granskad av" om någon granskat.
+
+---
+
 ## 7. Tillgänglighet (a11y-trädet MÅSTE vara grönt)
 
 PageSpeed-kravet "tillgänglighetsträdet korrekt formaterat" = **alla** a11y-granskningar gröna.
@@ -584,9 +634,12 @@ Skriptet sätter alla tre ställena i en operation, så en partiell bump inte ka
       sätter också `?v=` för alla andra `js/*.js` och `css/*.css` som ändrats sedan
       HEAD**, i varje HTML-sida som refererar dem, plus generatorernas
       `STYLES_V`/`CSS_V` (§11 C behöver alltså ingen egen åtgärd).
+- [ ] `python3 scripts/wire_friskrivning.py --all` — sidan bär den medicinska
+      ansvarsfriskrivningen, ordagrant som alla andra (§6e).
 - [ ] `python3 scripts/sidodatum.py --update && python3 scripts/wire_dates.py --all`
       — sidans synliga datum, dess `dateModified` och dess `<lastmod>` följer med
-      innehållet (§6d). Skriv aldrig datumet för hand.
+      innehållet (§6d). Skriv aldrig datumet för hand. Kör **efter**
+      `wire_friskrivning.py`; datumraden ska stå sist.
 - [ ] `CHANGELOG.md`: ny post överst med vad som ändrats (görs för hand).
 
 **Varför alla tre måste vara identiska:** `VERSION` är källan och hämtas färsk vid sidladdning;
@@ -638,6 +691,8 @@ stod kvar på `0.9.236`, och felet syntes inte i något av de svep som kördes, 
 - [ ] **JSON-LD validerar** (giltig JSON); FAQPage speglar synlig FAQ; BreadcrumbList finns.
 - [ ] **Datum (§6d):** inget datum handskrivet i HTML eller JSON-LD;
       `python3 scripts/sidodatum.py --check` säger "aktuellt".
+- [ ] **Ansvarsfriskrivning (§6e):** ingen friskrivning handskriven på en sida;
+      en ny sida bär den eller står i `UTAN_FRISKRIVNING` med ett skäl.
 - [ ] **A11y:** en `<h1>`, skip-länk, landmärken, varje tabell har `<caption>` + `th scope`,
       bilder har `alt`.
 - [ ] **Prestanda:** inga externa resurser; JS bara vid behov + `defer`; bilddimensioner satta (CLS 0).

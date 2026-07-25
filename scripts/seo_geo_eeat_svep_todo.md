@@ -5,11 +5,11 @@ Punkt 7 utförd i 0.9.265** (plus tre generatorbuggar som blockerade den, se ned
 **Generatordriften utredd och åtgärdad i 0.9.266 – punkt 4, 6 och 14 är inte längre blockerade.
 Punkt 6 utförd i 0.9.267. Punkt 4 utförd i 0.9.268. Återfallsskydd för hela svepet i
 0.9.269. Punkt 5 utförd i 0.9.270**, plus två blockerare i sitemap- och rundtrippskedjan.
-Resten är öppen och prioriterad nedan.
+**Punkt 8 utförd i 0.9.271.** Resten är öppen och prioriterad nedan.
 
 > 🔒 **Punkt 10 och 13 är vilande och ska inte tas upp, föreslås eller utföras.** Användaren
 > beslutade 2026-07-25 att inget visuellt ska göras och tar upp dem på eget initiativ.
-> Öppna punkter är därmed **8, 9, 11, 12, 14, 15** — inga andra.
+> Öppna punkter är därmed **9, 11, 12, 14, 15** — inga andra.
 **Skapad:** 2026-07-25. **Underlag:** hela sajten lästes maskinellt – titlar, descriptions,
 canonicals, JSON-LD, rubrikhierarki, tabellmärkning, intern länkning, `llms.txt`, `sitemap.xml`,
 `robots.txt` och CSS-kontraster. Siffrorna nedan är mätta, inte uppskattade.
@@ -138,7 +138,7 @@ utcheckning. Se punkt 5 nedan.
 | ~~5~~ | ~~Synligt `<time datetime>` + `dateModified` överallt~~ | ✅ 0.9.270 | **Hög (EEAT + färskhet)** |
 | ~~6~~ | ~~`citation` från befintliga referenslistor~~ | ✅ 0.9.267 | **Hög (EEAT)** |
 | ~~7~~ | ~~`DefinedTerm`-microdata i ordlistan~~ | ✅ 0.9.265 | **Högst (GEO)** |
-| 8 | Ansvarsfriskrivning som delad komponent | ~1 h | Hög (YMYL) |
+| ~~8~~ | ~~Ansvarsfriskrivning som delad komponent~~ | ✅ 0.9.271 | **Hög (YMYL)** |
 | 9 | `lang="la"` på latinska termer | ~3 h | Hög (WCAG AA) |
 | 11 | Syskonlänkar / "Relaterat"-block | ~3 h | Medel |
 | 12 | Dela `llms.txt` / `llms-full.txt` | ~30 min | Medel |
@@ -293,17 +293,69 @@ håller `#term-…`-ankarna stabila gäller fortfarande.
 och bokstavssidornas `isPartOf` pekar nu på samma `@id`. Ordlistan är därmed **en** entitet i
 stället för 33 löskopplade kopior — samma princip som punkt 4 vill ha på Person-noden.
 
-## 8. ⬜ Medicinsk ansvarsfriskrivning som delad komponent
+## 8. ✅ KLAR i 0.9.271 – medicinsk ansvarsfriskrivning som delad komponent
 
-**Mätt:** friskrivning finns på **4–5 av 118** sidor. Läkemedelsberäkningssidorna har den (bra).
-Muskeltabellerna, nervtabellerna och de kliniska artiklarna har den inte.
+**Mätt efteråt:** **113 av 119 sidor** bär raden, och alla 113 bär den **ordagrant identisk**
+med `MARKUP` — verifierat genom att extrahera raden ur varje sida och jämföra strängarna, inte
+genom att räkna träffar på klassnamnet. 0 avvikande texter, 0 rader utanför `<main>`, 0 rader
+efter datumraden. De 6 som står utanför är exakt `UTAN_FRISKRIVNING`.
 
-Innehållet är YMYL. Bör vara en delad footer-komponent som alla generatorer emitterar, inte
-text som skrivs in per sida.
+Före: **5 av 119** sidor sa något, i **fyra olika** formuleringar (`spellagen.html` ett helt
+kortavsnitt, `info.html` ett stycke under Källor, två artiklar en mening mitt i brödtexten,
+läkemedelsräknaren sin `.vt-ansvar`-ruta). Analysens "4–5 sidor" stämde; däremot stämde inte
+"läkemedelsberäkningssidorna har den" — det gällde **räknaren**, medan båda faktatexterna om
+läkemedelsberäkning saknade friskrivning helt. Muskeltabeller, nervtabeller, kärl, skelett,
+leder, ordlistans 33 sidor och startsidan hade ingenting.
 
-Relaterat: **`reviewedBy` saknas överallt**, och bara 1 sida innehåller ordet "Granskad".
-Övervägs tillsammans – men lova inget som inte stämmer: skriv bara "granskad av" om någon
-faktiskt granskat.
+**Två nya skript:**
+
+- [`scripts/friskrivning.py`](friskrivning.py) – texten, markupen, mönstret och listan över
+  undantag. En sträng, ett ställe.
+- [`scripts/wire_friskrivning.py`](wire_friskrivning.py) – placerar raden sist i `<main>`,
+  direkt före datumraden. Ligger mellan `wire_identity.py` och `wire_dates.py` i kedjan.
+
+**Backloggen sa "en delad footer-komponent som alla generatorer emitterar" – det blev ett eget
+kedjesteg igen**, av exakt samma skäl som punkt 4 och 6 kom fram till: generatorerna äger bara
+tabellsidorna, hubbarna och ordlistan. Artikeltexterna, de 29 handskrivna
+kunskapsbankssidorna, `index.html` och `case.html` hade blivit utan, och sex generatorer hade
+fått var sin kopia av samma mening att hålla i synk.
+
+**Skriptet skriver om, det hoppar inte över.** En befintlig rad tas bort och läggs in på nytt
+på den kanoniska platsen. Det gör att en textändring i `friskrivning.py` slår igenom på alla
+113 sidorna vid nästa körning — ett skript som hoppade över redan wirade sidor hade lämnat den
+gamla texten kvar, precis det som gjorde `--sync-defs` nödvändig i `wire_terms.py`.
+
+**Ingen variant per sidtyp.** `.vt-ansvar` på räknaren står kvar orörd: den handlar om att
+stämma av ett *uträknat svar* mot ordination och produktinformation och hör hemma bredvid
+räknarna. Den generella friskrivningen har exakt en formulering, för det är det enda som gör
+den omöjlig att glida ifrån. De två artiklarnas handskrivna mening är borttagen — den är nu
+komponentens jobb.
+
+**`reviewedBy` skrevs INTE, och det är ett beslut, inte en glömska.** Ingen utomstående har
+granskat innehållet. Ett `reviewedBy` utan granskare är ett falskt påstående i YMYL-material
+och ett sämre EEAT-läge än att inte påstå något. Beslutet står i SEO_REGLER §6e så att det
+inte behöver tas om.
+
+**Två fällor som hittades vid mätning, inte vid läsning:**
+
+1. **`\s*` i borttagningsmönstret åt upp en tomrad per körning.** Första versionen rundtrippade
+   inte: `\s*<p class="page-disclaimer">` svalde även den tomrad som skiljer raden från
+   `</section>`, och 61 av 113 sidor tappade en tomrad. Mönstret matchar nu `\n[ \t]*` — exakt
+   så mycket som lades till. Raden läggs dessutom in **efter** blankstegssvepet före datumraden,
+   inte före det.
+2. **`klinisk`/`kliniska` är facitnycklar.** Utan `.page-disclaimer` som skyddad zon i
+   `wire_terms.py` hade `wire_terms` wirat dem vid nästa körning och gjort 113 identiska rader
+   till 113 olika. Zonen är på plats; 0 `kb-term` inuti raden, verifierat.
+
+**Kostnad:** gzipat +120 byte på `index.html` (+0,6 %), +174 på en muskeltabell (+2,1 %),
++157 på `ordlista-p.html` (+0,2 %), +139 på minnesregelartikeln (+0,9 %).
+
+**Skyddet är verifierat genom planterade fel, inte genom att kontrollen sagt OK:** raderad rad,
+handredigerad text på en sida, rad flyttad till fel plats, ny sida utan `<main>` och en sida i
+`UTAN_FRISKRIVNING` som inte finns gav alla exitkod 1 med ett besked som säger vad som ska
+göras. Raden räknas inte som innehåll i `sidodatum.py` — bevisat live: svepet rörde 113 filer
+och flyttade **noll** datum. De två artiklarna daterades om till 26 juli, vilket är korrekt:
+där ändrades brödtexten på riktigt.
 
 ## 9. ⬜ `lang="la"` på latinska termer
 
@@ -383,6 +435,7 @@ Granskningen efter punkt 4:
 | 5 datum | ✅ `sidodatum.py --check` mot git + `wire_dates.py` | `check_generators.py` |
 | 6 `citation` | ✅ `wire_citations.py` + `apa.py` kastar hellre än gissar | `check_generators.py` |
 | 7 `DefinedTerm` | ✅ `generate_glossary.py` äger märkningen | `check_generators.py` |
+| 8 friskrivning | ✅ `wire_friskrivning.py`, stoppar på oklassad ny sida | `check_generators.py` |
 | 10 kontrast | 🔒 vilande — se nedan | — |
 
 Punkt 5:s skydd är verifierat genom att fel planterats, inte genom att kontrollen sagt OK:
@@ -393,7 +446,7 @@ ska göras.
 **Punkt 10 saknar kontroll, och det förblir så.** En kontrastkontroll (räkna WCAG-kvot ur
 CSS-variablerna) skulle täcka både den och punkt 13, men båda rör hur sajten *ser ut*.
 
-**Regeln för resten av svepet:** varje kommande punkt (5, 8, 9, 11, 12, 14, 15) ska leverera
+**Regeln för resten av svepet:** varje kommande punkt (9, 11, 12, 14, 15) ska leverera
 sitt skydd i samma pass som åtgärden, inte som en efterhandsfråga. Punkt 11 och 12 skyddas
 redan av `check_links.py` — nya syskonlänkar och en delad `llms-full.txt` valideras automatiskt.
 
