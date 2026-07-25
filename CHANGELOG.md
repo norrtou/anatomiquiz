@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.263
+- **Utseende-reglagen i Inställningar (Ljust/Följ systemet/Mörkt) var oläsliga på mobil.** `.checkbox-group .checkbox-row` hade `flex: 1 1 240px` — flex-shrink 1 lät raderna krympa mycket smalare än sin egen text i stället för att radbryta, så alternativen krympte ihop och löpte in i varandra på smala skärmar. Drabbade alla `.checkbox-group`, inte bara den nya temaväljaren, men syntes värst där eftersom "Följ systemet"-alternativets hjälptext är lång. `flex-shrink: 0` tvingar nu varje alternativ till egen rad så snart det inte får plats i sin fulla bredd.
+
 ## 0.9.262
 - **Tidsjakt har fått en nedräkning: 3 – 2 – 1 – Kör!** Klockan startade tidigare i samma ögonblick som vyn ritades, så allt som mötte spelaren först — sidans målning, att hitta med blicken, och fram till 0.9.261 en uppfälld regelpanel — åt riktiga sekunder ur de 60 och syntes som ett sämre resultat. Rundan börjar nu när spelaren är redo, inte när DOM:en råkar bli klar.
 - **Frågan hålls dold under nedräkningen.** Visades den skulle man få tre sekunders gratis läsning på just den första frågan, vilket gjort den systematiskt lättare än alla andra.

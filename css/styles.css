@@ -521,7 +521,9 @@ option {
 }
 
 .checkbox-group .checkbox-row {
-  flex: 1 1 240px;
+  /* shrink 0: annars kryper raderna in i varandra på smala skärmar i stället
+     för att radbryta (hände med de långa alternativtexterna i Utseende). */
+  flex: 1 0 240px;
   margin: 0;
 }
 
