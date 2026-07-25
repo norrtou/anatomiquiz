@@ -865,11 +865,91 @@ kommer tillbaka. Ett mekaniskt korrekt men trist spel missar hela poängen — d
 precis felet i Matcha-bygget 2026-07-24. Kul och snyggt är inte en bonus ovanpå
 funktionen; för ett spel **är** det funktionen.
 
+### 13.1 MATCHA-STANDARDEN ÄR GOLVET — VARJE NYTT SPELLÄGE BYGGS DIT DIREKT
+
+**STÅENDE REGEL (2026-07-25, på användarens uttryckliga begäran: "se till att ALLA
+framtida spel följer matcha-lyftet, utan att jag behöver upprepa det").**
+
+Matcha efter spelkänslo-lyftet (0.9.247) **är mallen**. Varje kommande spelläge —
+Skriv svaret, Plugga smart/Leitner, Sporcle-kapplöpning, Dagens utmaning + streak,
+Arkad/Gravity och allt som tillkommer — byggs med hela listan nedan **inne i det
+första bygget**. Den ska aldrig behöva efterfrågas, och den får aldrig läggas som ett
+polish-pass efteråt: att bygga läget platt och sedan lyfta det är precis den
+dubbelkostnad §0 förbjuder (Matcha byggdes så, och lyftet blev ett eget arbetspass).
+
+**⚠️ Det är PRINCIPEN som är bindande — utformningen anpassas efter varje spels egna
+behov.** Listan nedan är inte en form att kopiera rakt av. Vad "framsteg", "payoff" och
+"ett riktigt slut" *betyder* skiljer sig mellan ett parspel, ett skrivläge, ett
+Leitner-schema och ett arkadläge — och en punkt som är främmande för spelets natur ska
+lösas på det sättet som passar **det** spelet, inte klistras på för att den står här.
+Kravet är att varje punkt är **medvetet besvarad** i planen (§13 punkt 1): antingen
+"så här gör vi det i det här läget" eller "det här läget löser samma behov så här i
+stället". Det som aldrig får hända är att en punkt tyst uteblir för att den var jobbig.
+
+**De åtta punkterna — facit finns i `js/matcha.js` + `.matcha-*` i `css/styles.css`,
+använd mönstret därifrån och översätt det till det nya lägets mekanik:**
+
+1. **Mikroåterkoppling på varje handling.** Ingen interaktion får vara stum: valt
+   element markeras och pulserar (`.matcha-tile.selected` + `@keyframes matchaGlow`),
+   kopplingar/övergångar tonas in i stället för att poppa (`.grown`-klassen sätts i
+   nästa `requestAnimationFrame` så transitionen startar från utgångsläget), och varje
+   bekräftad handling ger kort haptik (`matchaVibrate(10)`).
+2. **Rättningen är en payoff, inte ett tillståndsbyte.** Avslöja **ett i taget i snabb
+   följd** (`MATCHA_REVEAL_STEP_MS`, ~260 ms) — rätt poppar (`.pop`), fel skakar
+   (`.shake`), med ljud och haptik per steg. Aldrig "allt tänds samtidigt".
+   Omfärga bara det avslöjade elementets **egna** sparade noder; rita inte om hela
+   vyn, då startar redan avslöjade delar om sin animation.
+3. **Framstegsmätare över HELA spelet**, inte över omgången: en fylld stapel
+   (`.matcha-progress-track`/`-fill`) plus en räknare som **studsar** när den ökar
+   (`.matcha-score-badge.bump`, med forcerad reflow så animationen kan köras igen).
+4. **Beröm vid delmål.** Ett kort, konkret erkännande när något går perfekt
+   ("Perfekt omgång! 🎯") — inte bara siffror.
+5. **Slutet ska kännas som ett slut.** Resultatring (SVG-donut animerad via
+   `stroke-dashoffset`), procent, minst ett nyckeltal utöver poängen (Matcha:
+   snitt-tid per par) och ett **rekordmärke** mot tidigare personbästa räknat ur den
+   egna localStorage-listan **innan** det nya resultatet sparas (`matchaPriorBest()`,
+   `🏆 Nytt rekord!`).
+6. **Ljud + haptik, avstängbart.** Korta, självgenererade Web Audio-toner
+   (`playMatchaTone`) — **aldrig externa ljudfiler** (CSP tillåter dem inte).
+   Kopplas till den befintliga **"Ljudeffekter"**-bocken i Inställningar
+   (`el('soundEnabled')`); bygg ingen ny inställning per läge. AudioContext skapas
+   först vid en spelarinitierad tryckning (autoplay-kraven).
+7. **Estetik och mobilkänsla, i själva bygget.** Träffytor som går att träffa med
+   tummen, hover- **och** press-lägen på allt klickbart, textlängd → typsnittsskala
+   per element när innehållet varierar (`--tile-scale`, `matchaTileScale()`, med
+   `max()`-golv i CSS), vertikal centrering så kolumner/paneler inte hänger snett,
+   och **en sammanhållen infopanel** i stället för lösryckta textrader.
+8. **`prefers-reduced-motion: reduce` respekteras** — `prefersReducedMotion()` sätter
+   stegfördröjningen till 0 och media queryn stänger av animationerna, men
+   **sluttillstånden (färg, procent, mätare) sätts ändå direkt.** Reducerad rörelse
+   får aldrig betyda utebliven information.
+
+**Utöver de åtta, i varje nytt läge:**
+- Egen `js/<namn>.js` med skyddade `typeof`-krokar från `app.js` (§12) och egen
+  `?v=`-cachebuster i synk (SEO_REGLER §11 C).
+- **Varje nytt element som ska kunna döljas behöver en egen `.x.hidden`-regel** —
+  `.hidden` är inte global i projektet (CSS_KARTA). Detta orsakade en skarp bugg i
+  0.9.244; det får inte upprepas i nästa läge.
+- Egen topplista/lagring i eget localStorage-fack med export/import/rensa, och
+  minnesfallback vid privat läge (`warnStorageUnavailable`).
+- **Visuell verifiering på mobilviewport (390×844) före leverans** — punkt 3 ovan.
+  Ett Node-DOM-skal testar logiken, aldrig utseendet.
+
+**Läget är inte färdigt förrän alla åtta punkterna är besvarade** — var och en antingen
+byggd eller medvetet löst på lägets eget vis. Ett spelläge som gör rätt sak men lämnar
+dem obesvarade ska varken levereras eller presenteras som klart, och frågan "vill du
+att jag lyfter spelkänslan också?" ska inte ställas: svaret är redan ja.
+
 ---
 
 **DESSA REGLER ÄR BINDANDE FÖR ALL ARBETE PÅ ANATOMIQUIZ.**
 
-**Senast uppdaterad:** 2026-07-22
+**Senast uppdaterad:** 2026-07-25
+**Version:** 2.0 – §13.1 ny stående regel (2026-07-25, på uttrycklig begäran): **Matcha-standarden är golvet för varje nytt spelläge** och ska aldrig behöva efterfrågas:
+- åtta punkter som ska sitta i det FÖRSTA bygget, inte i ett polish-pass efteråt: mikroåterkoppling, sekventiell reveal som payoff, framstegsmätare över hela spelet, beröm vid delmål, ett riktigt slut med resultatring + rekordmärke, avstängbart ljud/haptik, estetik & mobilkänsla, `prefers-reduced-motion`
+- **principen är bindande, inte formen** – varje punkt ska vara medvetet besvarad i planen och anpassad efter det enskilda spelets mekanik; det som aldrig får hända är att en punkt tyst uteblir
+- facit och kopieringsmall: `js/matcha.js` + `.matcha-*` i `css/styles.css` (0.9.247)
+
 **Version:** 1.9 – kodifierade två feltyper ur granskningen av `franska_termer.json` (2026-07-22), på uttrycklig begäran efter att användaren själv hittade dem:
 - §2.9 kategori-/typläckage i namn-frågor: "Namn + generisk beteckning" (`Dupuytrens kontraktur` mot `Aperts syndrom`/`Charcots led`) avslöjar typen via frågans egen beskrivning, utan att man behöver känna till personen. Fix: bart namn, eller samma beteckning på alla alternativ
 - §2.9 språkparitet utökad från "latin/svenska" till att uttryckligen gälla ALLA språk: en hybrid (`Sårtoalett`) bland rena lånord ur ett testat språk är samma formtell
