@@ -65,7 +65,7 @@ def artikel_sitemap_urls() -> list[str]:
     return ga.sitemap_urls(ga.load())
 
 # Cachebusters per asset — bumpa bara den som faktiskt ändrats.
-STYLES_V = "0.9.244"       # css/styles.css (synkad med övriga sidor 2026-07-23)
+STYLES_V = "0.9.247"       # css/styles.css (synkad med övriga sidor 2026-07-25)
 GLOSSARY_V = "0.9.189"      # css/glossary.css + js/glossary.js (denna release)
 
 # Svenska alfabetet — fast ordning för alfabetsraden. Bokstäver utan poster

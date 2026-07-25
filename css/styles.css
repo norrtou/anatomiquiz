@@ -1982,23 +1982,71 @@ ol li {
 /* ============================================================================
    MATCHA (parspel) — två kolumner (frågor/svar), para ihop mot klockan.
    ============================================================================ */
+
+/* Samlad infopanel (spelare/ämne/framsteg/poäng) i EN ruta i stället för tre
+   lösryckta textrader – höll annars på att se rörigt ut, särskilt på mobil. */
 .matcha-header {
+  background: var(--success-bg);
+  border: 1px solid var(--primary-light);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  margin-bottom: 12px;
+}
+
+.matcha-header-top {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
-  margin-bottom: 6px;
 }
 
-.matcha-player { font-weight: 700; }
-.matcha-progress { color: var(--text-secondary); font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+.matcha-player { font-weight: 700; color: var(--primary-deep); }
+.matcha-meta { font-size: 0.82rem; font-weight: 600; color: var(--text-secondary); text-align: right; }
 
-.matcha-meta {
-  margin: 0 0 8px;
-  font-weight: 600;
-  font-size: 0.92rem;
-  color: var(--text-primary);
+.matcha-header-bottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* Riktig framstegsmätare för omgången (ersätter ren text). */
+.matcha-progress-track {
+  flex: 1 1 auto;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(16, 185, 129, 0.15);
+  overflow: hidden;
+}
+.matcha-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+  border-radius: 999px;
+  transition: width 0.35s ease;
+}
+.matcha-progress-label {
+  flex: 0 0 auto;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+/* Löpande rätt-räknare; studsar till vid varje nytt rätt par. */
+.matcha-score-badge {
+  flex: 0 0 auto;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--primary-deep);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.matcha-score-badge.bump { animation: matchaBadgeBump 0.35s ease; }
+@keyframes matchaBadgeBump {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.35); }
+  100% { transform: scale(1); }
 }
 
 .matcha-hint {
@@ -2015,7 +2063,10 @@ ol li {
   /* Brett mellanrum mellan kolumnerna så förbindelselinjerna syns tydligt; tät radhöjd. */
   row-gap: 10px;
   column-gap: 48px;
-  align-items: start;
+  /* Centrerat i stället för top-align: prompt/svar-text har olika längd, så
+     kolumnerna blir sällan lika höga. Centrering håller båda kring samma
+     mittlinje i stället för att en kolumn hänger ner längre än den andra. */
+  align-items: center;
 }
 
 /* Streckade förbindelselinjer mellan ihopparade rutor. Overlay ovanpå brädet,
@@ -2030,17 +2081,28 @@ ol li {
   z-index: 2;
 }
 
+/* Lätt böjd anslutningslinje (kvadratisk bezier) i stället för ett rakt streck,
+   och en mjuk in-fade i stället för att dyka upp hårt. */
 .matcha-line {
   fill: none;
   stroke: var(--primary-dark);
   stroke-width: 2.5;
   stroke-dasharray: 6 5;
   stroke-linecap: round;
+  opacity: 0;
+  transition: opacity 0.25s ease;
 }
+.matcha-line.grown { opacity: 1; }
 .matcha-line.correct { stroke: var(--success); stroke-dasharray: none; }
 .matcha-line.wrong { stroke: var(--error); }
 
-.matcha-dot { fill: var(--primary-dark); }
+/* Ändpunktsprickar växer fram i stället för att bara synas. */
+.matcha-dot {
+  fill: var(--primary-dark);
+  r: 0;
+  transition: r 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), fill 0.15s ease;
+}
+.matcha-dot.grown { r: 4; }
 .matcha-dot.correct { fill: var(--success); }
 .matcha-dot.wrong { fill: var(--error); }
 
@@ -2053,27 +2115,38 @@ ol li {
 .matcha-tile {
   width: 100%;
   min-height: 48px;
-  padding: 10px 12px;
+  padding: 10px 14px;
   border: 2px solid var(--primary-light);
   border-radius: var(--radius-sm);
   background: var(--surface);
   color: var(--text-primary);
   font-family: inherit;
-  font-size: 0.95rem;
+  /* Skalbart typsnitt: js/matcha.js sätter --tile-scale per bricka utifrån
+     textlängd (kortare text = ingen krympning). max() garanterar ett läsligt
+     golv oavsett hur lång texten är. Minskar skillnaden i radantal/höjd
+     mellan en kort ordbricka och en lång meningsbricka i samma omgång. */
+  font-size: max(0.8rem, calc(0.95rem * var(--tile-scale, 1)));
   line-height: 1.25;
   text-align: left;
   cursor: pointer;
   display: flex;
   align-items: center;
-  transition: border-color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
 }
 
-.matcha-tile:hover:not(:disabled) { border-color: var(--primary); }
+.matcha-tile:hover:not(:disabled) { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-1px); }
+.matcha-tile:active:not(:disabled) { transform: translateY(0) scale(0.98); }
 
 .matcha-tile.selected {
   border-color: var(--primary-dark);
   background: var(--success-bg);
   box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.3);
+  animation: matchaGlow 1.1s ease-in-out infinite;
+}
+@keyframes matchaGlow {
+  0%, 100% { box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.3); }
+  50% { box-shadow: 0 0 0 5px rgba(16, 185, 129, 0.16); }
 }
 
 /* Ihopparad (men ännu inte rättad): neutral "kopplad" ton – varken grön eller röd. */
@@ -2097,10 +2170,71 @@ ol li {
   cursor: default;
 }
 
+/* Reveal-payoff: paren tänds ett i taget (js/matcha.js), rätt poppar till, fel skakar kort. */
+.matcha-tile.pop { animation: matchaPop 0.4s ease; }
+@keyframes matchaPop {
+  0% { transform: scale(1); }
+  35% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+.matcha-tile.shake { animation: matchaShake 0.4s ease; }
+@keyframes matchaShake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-5px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(2px); }
+}
+
 .matcha-miss { color: var(--text-secondary); font-size: 0.9rem; font-variant-numeric: tabular-nums; }
 
-.matcha-finished { text-align: center; padding: 10px 0 4px; }
-.matcha-done-text { font-size: 1.1rem; margin: 0 0 14px; }
+.matcha-finished { text-align: center; padding: 14px 0 4px; }
+
+/* Resultatring (procent rätt) som ett tydligt slut på omgången, i stället för
+   bara en textrad. */
+.matcha-ring-wrap { position: relative; width: 140px; height: 140px; margin: 0 auto 12px; }
+.matcha-ring { width: 100%; height: 100%; transform: rotate(-90deg); }
+.matcha-ring-bg { fill: none; stroke: var(--success-bg); stroke-width: 10; }
+.matcha-ring-progress {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 326.7; /* 2 · π · r(52) */
+  stroke-dashoffset: 326.7;
+  transition: stroke-dashoffset 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.matcha-ring-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.matcha-ring-pct { font-size: 1.9rem; font-weight: 800; color: var(--primary-deep); font-variant-numeric: tabular-nums; }
+.matcha-ring-sub { font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.04em; }
+
+.matcha-done-text { font-size: 1.05rem; margin: 0 0 10px; }
+.matcha-pace { font-size: 0.82rem; color: var(--text-secondary); margin: 0 0 10px; }
+
+/* Återhållsam smaragdgrön flourish när ett personligt rekord slås. */
+.matcha-record-badge {
+  display: inline-block;
+  margin: 0 0 14px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-deepest) 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.88rem;
+  animation: matchaRecordIn 0.5s ease;
+}
+@keyframes matchaRecordIn {
+  0% { transform: scale(0.7); opacity: 0; }
+  60% { transform: scale(1.08); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
 
 /* OBS: .hidden är INTE en global utility i det här projektet – den fungerar bara
    via sammansatta selektorer (.card.hidden m.fl.). Matchas inre delar är inga
@@ -2108,18 +2242,42 @@ ol li {
    Avsluta) mitt i ett pågående spel och brädet döljs aldrig vid spelslut. */
 .matcha-board.hidden,
 .matcha-finished.hidden,
+.matcha-record-badge.hidden,
 #matchaFooter.hidden { display: none; }
 
 @media (max-width: 640px) {
+  .matcha-header { padding: 8px 10px; }
+  .matcha-meta { font-size: 0.74rem; }
   .matcha-board { row-gap: 7px; column-gap: 30px; }
   .matcha-col { gap: 7px; }
   .matcha-tile {
     min-height: 44px;
     padding: 8px 9px;
-    font-size: 0.82rem;
+    font-size: max(0.68rem, calc(0.82rem * var(--tile-scale, 1)));
     border-width: 2px;
   }
   .matcha-hint { font-size: 0.82rem; margin-bottom: 10px; }
+  .matcha-ring-wrap { width: 112px; height: 112px; }
+  .matcha-ring-pct { font-size: 1.5rem; }
+}
+
+/* Spelkänslo-animationerna är extra, inte information — stäng av dem helt när
+   användaren bett om det. Sluttillstånden (grön/röd, ring-procent, fylld
+   framstegsmätare) sätts ändå direkt av JS, bara utan rörelse dit. */
+@media (prefers-reduced-motion: reduce) {
+  .matcha-tile,
+  .matcha-tile.selected,
+  .matcha-tile.pop,
+  .matcha-tile.shake,
+  .matcha-line,
+  .matcha-dot,
+  .matcha-progress-fill,
+  .matcha-ring-progress,
+  .matcha-score-badge.bump,
+  .matcha-record-badge {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 @media (max-width: 640px) {

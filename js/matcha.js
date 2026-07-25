@@ -38,11 +38,21 @@ const MATCHA_MAX_PROMPT_LEN = 55
 const MATCHA_MAX_ANSWER_LEN = 26
 const MATCHA_MIN_PAIRS = 4
 const SVG_NS = 'http://www.w3.org/2000/svg'
+const MATCHA_RING_CIRCUMFERENCE = 326.7 // 2 · π · r(52), matchar .matcha-ring-progress i styles.css
+// Textlängd → typsnittsskala per bricka (CSS-variabeln --tile-scale). Korta ord
+// krymps inte alls; långa prompter (upp mot MATCHA_MAX_PROMPT_LEN) krymps mot
+// golvet. Syftet är att minska skillnaden i radantal/höjd mellan en kort och en
+// lång bricka i samma omgång — CSS max() sätter dessutom ett absolut läslighetsgolv.
+const MATCHA_SCALE_MIN_LEN = 14
+const MATCHA_SCALE_MAX_LEN = MATCHA_MAX_PROMPT_LEN
+const MATCHA_SCALE_FLOOR = 0.82
+const MATCHA_REVEAL_STEP_MS = 260
 
 let matchaRounds = []
 let matchaRoundIdx = 0
 let matchaTotalPairs = 0
 let matchaCorrect = 0             // rätt par totalt (över alla omgångar)
+let matchaRevealedInRound = 0     // hur många par som hunnit rättas i den pågående sekventiella revealen
 let matchaPending = null          // vald ruta som väntar på partner (eller null)
 let matchaLinks = []              // [{left, right, correct?}] i pågående omgång
 let matchaLocked = false          // blockera klick medan facit visas
@@ -52,6 +62,7 @@ let matchaTimerOn = false
 let matchaTimerInterval = null
 let matchaName = 'Spelare'
 let matchaTopic = ''
+let matchaAudioCtx = null
 
 // Egen lagring (skild från quizets topplista) med minnesfallback vid privat läge.
 let matchaMemoryScores = null
@@ -63,6 +74,60 @@ function getMatchaScores(){
 function saveMatchaScores(scores){
   try{ localStorage.setItem(MATCHA_SCORES_KEY, JSON.stringify(scores)); matchaMemoryScores = null }
   catch(e){ matchaMemoryScores = scores; warnStorageUnavailable() }
+}
+
+function prefersReducedMotion(){
+  return typeof window !== 'undefined' && !!window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches
+}
+
+// Krympskala för en brickas typsnitt utifrån textlängd (se konstanterna ovan).
+function matchaTileScale(text){
+  const len = (text || '').length
+  if(len <= MATCHA_SCALE_MIN_LEN) return 1
+  const t = Math.min(1, (len - MATCHA_SCALE_MIN_LEN) / (MATCHA_SCALE_MAX_LEN - MATCHA_SCALE_MIN_LEN))
+  return 1 - t * (1 - MATCHA_SCALE_FLOOR)
+}
+
+// Korta, självgenererade pip via Web Audio — inga externa ljudfiler (CSP tillåter
+// ingen extern källa ändå). Skapas/återupptas först vid en spelarinitierad
+// tryckning, vilket också uppfyller webbläsarnas autoplay-krav. Stängs av helt
+// via inställningarnas "Ljudeffekter"-bock (av/på, ingen volymreglage).
+function matchaSoundEnabled(){
+  const cb = el('soundEnabled')
+  return cb ? !!cb.checked : true
+}
+
+function getMatchaAudioCtx(){
+  if(matchaAudioCtx) return matchaAudioCtx
+  const Ctx = window.AudioContext || window.webkitAudioContext
+  if(!Ctx) return null
+  try{ matchaAudioCtx = new Ctx() }catch(e){ matchaAudioCtx = null }
+  return matchaAudioCtx
+}
+
+function playMatchaTone(ok){
+  if(!matchaSoundEnabled()) return
+  const ctx = getMatchaAudioCtx()
+  if(!ctx) return
+  if(ctx.state === 'suspended') ctx.resume()
+  const now = ctx.currentTime
+  const osc = ctx.createOscillator()
+  const gain = ctx.createGain()
+  osc.type = 'sine'
+  osc.frequency.setValueAtTime(ok ? 880 : 220, now)
+  if(!ok) osc.frequency.exponentialRampToValueAtTime(160, now + 0.18)
+  gain.gain.setValueAtTime(0.0001, now)
+  gain.gain.exponentialRampToValueAtTime(0.18, now + 0.01)
+  gain.gain.exponentialRampToValueAtTime(0.0001, now + (ok ? 0.16 : 0.22))
+  osc.connect(gain)
+  gain.connect(ctx.destination)
+  osc.start(now)
+  osc.stop(now + (ok ? 0.2 : 0.26))
+}
+
+function matchaVibrate(pattern){
+  if(typeof navigator !== 'undefined' && typeof navigator.vibrate === 'function') navigator.vibrate(pattern)
 }
 
 // Speglar startQuiz-grenen: laddar rätt frågepool för ämnet (lins/blandade/enkelt)
@@ -181,6 +246,7 @@ function makeMatchaTile(text, pairIdx, side){
   b.type = 'button'
   b.className = 'matcha-tile'
   b.textContent = text
+  b.style.setProperty('--tile-scale', matchaTileScale(text).toFixed(3))
   b.dataset.pair = String(pairIdx)
   b.dataset.side = side
   b.setAttribute('aria-pressed', 'false')
@@ -199,6 +265,7 @@ function renderMatchaRound(){
   matchaLinks = []
   matchaLocked = false
   matchaPhase = 'pairing'
+  matchaRevealedInRound = 0
   const round = matchaRounds[matchaRoundIdx]
   // Kolumnerna slumpas var för sig så att rad-position inte avslöjar paret.
   const left = shuffle(round.map((p, i) => ({ p, i })))
@@ -209,13 +276,41 @@ function renderMatchaRound(){
   right.forEach(({ p, i }) => colR.appendChild(makeMatchaTile(p.correct, i, 'right')))
   clearMatchaLines()
   updateMatchaProgress()
+  updateMatchaScoreBadge(false)
   el('matchaHint').textContent = 'Para ihop alla par och tryck sedan på "Visa rätt svar".'
   updateMatchaNextButton()
 }
 
+// Antal par som redan låg bakom oss när den här omgången startade (omgångarna
+// kan ha olika längd om sista omgången justerats, se startMatcha).
+function pairsBeforeCurrentRound(){
+  let n = 0
+  for(let i = 0; i < matchaRoundIdx; i++) n += matchaRounds[i].length
+  return n
+}
+
+// Riktig framstegsmätare (fylls stadigt genom hela spelet, inte bara omgången)
+// + omgångsetiketten. Ersätter den gamla rena textraden.
 function updateMatchaProgress(){
-  el('matchaProgress').textContent =
-    `Omgång ${matchaRoundIdx + 1}/${matchaRounds.length} · ${matchaLinks.length}/${currentRoundSize()} ihopparade`
+  const placed = pairsBeforeCurrentRound() + matchaLinks.length
+  const pct = matchaTotalPairs ? Math.min(100, Math.round((placed / matchaTotalPairs) * 100)) : 0
+  const fill = el('matchaProgressFill')
+  if(fill) fill.style.width = pct + '%'
+  el('matchaProgress').textContent = `Omgång ${matchaRoundIdx + 1}/${matchaRounds.length}`
+}
+
+// "Rätt"-räknaren i infopanelen: rätt av hittills RÄTTADE par (inte bara ihopparade).
+// Studsar till (bump-animationen) när den ökar av ett nytt rätt par.
+function updateMatchaScoreBadge(bump){
+  const badge = el('matchaScoreBadge')
+  if(!badge) return
+  const revealedSoFar = pairsBeforeCurrentRound() + matchaRevealedInRound
+  badge.textContent = revealedSoFar > 0 ? `Rätt: ${matchaCorrect}/${revealedSoFar}` : 'Rätt: 0'
+  if(bump){
+    badge.classList.remove('bump')
+    void badge.offsetWidth // tvinga reflow så animationen kan köras igen
+    badge.classList.add('bump')
+  }
 }
 
 function isLastMatchaRound(){ return matchaRoundIdx >= matchaRounds.length - 1 }
@@ -281,6 +376,7 @@ function createMatchaLink(left, right){
   left.matchaPartner = right
   right.matchaPartner = left
   matchaLinks.push({ left, right })
+  matchaVibrate(10) // kort tryckkänsla när ett par kopplas ihop
   drawMatchaLines()
   updateMatchaProgress()
   updateMatchaNextButton()   // aktiverar "Visa rätt svar" när alla par är lagda
@@ -299,31 +395,55 @@ function unlinkTile(t){
   updateMatchaNextButton()   // stänger av "Visa rätt svar" igen om ett par bröts
 }
 
-// Rätta hela omgången på en gång (först när allt är ihopparat). Ingen andra chans.
+// Rätta omgången ETT PAR I TAGET (payoff-reveal i stället för ett hårt blink):
+// varje par tänds grönt/rött i snabb följd, med ett litet ljud/haptik-styng och
+// en pop-/skak-animation, medan "Rätt"-räknaren studsar upp. Ingen andra chans —
+// resultatet per par är redan avgjort, det är bara AVSLÖJANDET som är sekventiellt.
 function revealMatchaRound(){
   matchaLocked = true
+  const btn = el('matchaNextBtn')
+  if(btn) btn.disabled = true // "Visa rätt svar" ska inte gå att klicka på igen mitt i revealen
+  const links = matchaLinks.slice()
+  matchaRevealedInRound = 0
   let roundCorrect = 0
-  matchaLinks.forEach(link => {
+  const stepDelay = prefersReducedMotion() ? 0 : MATCHA_REVEAL_STEP_MS
+  drawMatchaLines() // säkerställer färska pathEl/dot-referenser på varje länk innan facit rullar igång
+
+  function step(){
+    if(matchaRevealedInRound >= links.length){
+      matchaPhase = 'revealed'
+      const perfect = links.length > 0 && roundCorrect === links.length
+      el('matchaHint').textContent =
+        `Omgång ${matchaRoundIdx + 1}: ${roundCorrect} av ${links.length} rätt` +
+        ` · totalt ${matchaCorrect} av ${matchaTotalPairs}.` + (perfect ? ' Perfekt omgång! 🎯' : '')
+      updateMatchaNextButton()
+      return
+    }
+    const link = links[matchaRevealedInRound]
     const ok = link.left.dataset.pair === link.right.dataset.pair
     link.correct = ok
     ;[link.left, link.right].forEach(t => {
       t.classList.remove('linked')
-      t.classList.add(ok ? 'correct' : 'wrong')
+      t.classList.add(ok ? 'correct' : 'wrong', ok ? 'pop' : 'shake')
       t.disabled = true
       const sr = document.createElement('span')
       sr.className = 'sr-only'
       sr.textContent = ok ? ' — rätt' : ' — fel'
       t.appendChild(sr)
     })
-    if(ok) roundCorrect++
-  })
-  matchaCorrect += roundCorrect
-  matchaPhase = 'revealed'
-  drawMatchaLines()           // färga om linjerna grön/röd
-  el('matchaHint').textContent =
-    `Omgång ${matchaRoundIdx + 1}: ${roundCorrect} av ${matchaLinks.length} rätt` +
-    ` · totalt ${matchaCorrect} av ${matchaTotalPairs}.`
-  updateMatchaNextButton()    // "Visa rätt svar" → "Nästa"/"Avsluta"
+    if(ok){ roundCorrect++; matchaCorrect++ }
+    matchaRevealedInRound++
+    playMatchaTone(ok)
+    matchaVibrate(ok ? 12 : [10, 35, 10])
+    updateMatchaScoreBadge(ok)
+    // Färga om ENDAST det här parets egen linje/prickar (redan grown/synliga) i
+    // stället för att rita om hela brädet – annars skulle redan avslöjade par
+    // trigga en ny in-fade-animation vid varje efterföljande steg.
+    const lineState = ok ? 'correct' : 'wrong'
+    ;[link.pathEl, link.dot1El, link.dot2El].forEach(node => node && node.classList.add(lineState))
+    if(stepDelay === 0) step(); else setTimeout(step, stepDelay)
+  }
+  step()
 }
 
 // Klick på primärknappen. I ihopparningsläget visar den facit; i facitläget går
@@ -361,16 +481,54 @@ function drawMatchaLines(){
   const b = board.getBoundingClientRect()
   svg.setAttribute('width', b.width)
   svg.setAttribute('height', b.height)
+  const drawn = []
   matchaLinks.forEach(link => {
     const lr = link.left.getBoundingClientRect()
     const rr = link.right.getBoundingClientRect()
     const x1 = lr.right - b.left, y1 = lr.top + lr.height / 2 - b.top
     const x2 = rr.left - b.left,  y2 = rr.top + rr.height / 2 - b.top
+    const midX = x1 + (x2 - x1) / 2
     const state = link.correct === true ? ' correct' : link.correct === false ? ' wrong' : ''
-    svg.appendChild(svgEl('line', { x1, y1, x2, y2, class: 'matcha-line' + state }))
-    svg.appendChild(svgEl('circle', { cx: x1, cy: y1, r: 4, class: 'matcha-dot' + state }))
-    svg.appendChild(svgEl('circle', { cx: x2, cy: y2, r: 4, class: 'matcha-dot' + state }))
+    // Lätt böjd förbindelse (kvadratisk S-kurva) i stället för ett rakt streck.
+    const d = `M ${x1} ${y1} C ${midX} ${y1} ${midX} ${y2} ${x2} ${y2}`
+    const path = svgEl('path', { d, class: 'matcha-line' + state })
+    const dot1 = svgEl('circle', { cx: x1, cy: y1, r: 4, class: 'matcha-dot' + state })
+    const dot2 = svgEl('circle', { cx: x2, cy: y2, r: 4, class: 'matcha-dot' + state })
+    svg.appendChild(path); svg.appendChild(dot1); svg.appendChild(dot2)
+    // Sparas på länk-objektet så revealMatchaRound kan färga om just DETTA par
+    // direkt (utan att rita om hela brädet och trigga en ny in-fade på alla
+    // redan avslöjade par, se revealMatchaRound).
+    link.pathEl = path; link.dot1El = dot1; link.dot2El = dot2
+    drawn.push(path, dot1, dot2)
   })
+  // Fade in-linjen + väx fram prickarna (CSS-transition) i stället för att de
+  // bara poppar upp hårt. Klassen läggs på nästa ritad frame så transitionen
+  // faktiskt hinner starta från utgångsläget (opacity:0 / r:0).
+  requestAnimationFrame(() => drawn.forEach(node => node.classList.add('grown')))
+}
+
+// Bäst hittills (flest rätt-andel, snabbast tid som utslag — samma ordning som
+// topplistans sortering). Måste räknas ut INNAN det nya resultatet sparas.
+function matchaPriorBest(scores){
+  return scores.reduce((best, s) => {
+    if(!s.pairs) return best
+    const p = matchaCorrectOf(s) / s.pairs
+    if(!best || p > best.pct || (p === best.pct && s.durationMs < best.durationMs)){
+      return { pct: p, durationMs: s.durationMs }
+    }
+    return best
+  }, null)
+}
+
+function animateMatchaRing(pct){
+  const label = el('matchaRingPct')
+  if(label) label.textContent = pct + ' %'
+  const ring = el('matchaRingProgress')
+  if(!ring) return
+  const clamped = Math.max(0, Math.min(100, pct))
+  const offset = MATCHA_RING_CIRCUMFERENCE * (1 - clamped / 100)
+  ring.style.strokeDashoffset = String(MATCHA_RING_CIRCUMFERENCE) // starta tom …
+  requestAnimationFrame(() => { ring.style.strokeDashoffset = String(offset) }) // … och fyll på till rätt procent
 }
 
 function finishMatcha(){
@@ -381,8 +539,23 @@ function finishMatcha(){
   el('matchaFinished').classList.remove('hidden')
   const timeStr = formatDuration(durationMs)
   const pct = matchaTotalPairs ? Math.round((matchaCorrect / matchaTotalPairs) * 100) : 0
+  const avgSec = matchaTotalPairs ? durationMs / 1000 / matchaTotalPairs : 0
+
+  // Personligt rekord (mot ALLA tidigare Matcha-resultat, samma rangordning
+  // som topplistan) — jämförs innan den nya rundan sparas.
+  const priorScores = getMatchaScores()
+  const priorBest = matchaPriorBest(priorScores)
+  const curFrac = matchaTotalPairs ? matchaCorrect / matchaTotalPairs : 0
+  const isRecord = !!priorBest && (curFrac > priorBest.pct || (curFrac === priorBest.pct && durationMs < priorBest.durationMs))
+
   el('matchaDoneText').textContent =
     `Klart! ${matchaCorrect} av ${matchaTotalPairs} rätt (${pct} %) på ${timeStr}. Resultatet sparades i topplistan.`
+  const paceLabel = el('matchaPaceLabel')
+  if(paceLabel) paceLabel.textContent = matchaTotalPairs ? `Snitt: ${avgSec.toFixed(1)} s/par` : ''
+  const recordBadge = el('matchaRecordBadge')
+  if(recordBadge) recordBadge.classList.toggle('hidden', !isRecord)
+  animateMatchaRing(pct)
+
   try { saveMatchaScore(durationMs) } catch(e){ console.error('saveMatchaScore misslyckades:', e) }
   window.scrollTo({ top: 0 })
 }

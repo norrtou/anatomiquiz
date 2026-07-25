@@ -121,7 +121,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="css/styles.css?v=0.9.244">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.247">
 </head>
 <body>
 
@@ -519,6 +519,10 @@
           <input type="checkbox" id="timerEnabled" checked />
           <span>Visa tid <small>(Tid räknas alltid, men du vill kanske inte stressas av att se räknaren)</small></span>
         </label>
+        <label class="checkbox-row" for="soundEnabled">
+          <input type="checkbox" id="soundEnabled" checked />
+          <span>Ljudeffekter <small>(korta pip vid rätt/fel, t.ex. i Matcha)</small></span>
+        </label>
         <label class="checkbox-row" for="showNonMedical">
           <input type="checkbox" id="showNonMedical" />
           <span>Visa även icke-medicinska ämnen <small>(specialämnen som inte rör anatomi eller fysiologi, t.ex. Moho och OTIPM, visas under den utbildning de hör till)</small></span>
@@ -613,10 +617,18 @@
     <section id="matcha" class="card hidden" aria-labelledby="matchaHeading">
       <h2 id="matchaHeading" class="sr-only">Matcha</h2>
       <div class="matcha-header">
-        <div id="matchaPlayerLabel" class="matcha-player"></div>
-        <div id="matchaProgress" class="matcha-progress" aria-live="polite"></div>
+        <div class="matcha-header-top">
+          <span id="matchaPlayerLabel" class="matcha-player"></span>
+          <span id="matchaMeta" class="matcha-meta"></span>
+        </div>
+        <div class="matcha-header-bottom">
+          <div class="matcha-progress-track" aria-hidden="true">
+            <div id="matchaProgressFill" class="matcha-progress-fill"></div>
+          </div>
+          <span id="matchaProgress" class="matcha-progress-label" aria-live="polite"></span>
+          <span id="matchaScoreBadge" class="matcha-score-badge" aria-live="polite"></span>
+        </div>
       </div>
-      <p id="matchaMeta" class="matcha-meta"></p>
 
       <p id="matchaHint" class="matcha-hint">Para ihop alla par. Rätt och fel visas först när du parat ihop allihop.</p>
 
@@ -628,7 +640,19 @@
 
       <!-- Klart-vy (dold under spel) -->
       <div id="matchaFinished" class="matcha-finished hidden">
+        <div class="matcha-ring-wrap">
+          <svg class="matcha-ring" viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="matcha-ring-bg" cx="60" cy="60" r="52"></circle>
+            <circle id="matchaRingProgress" class="matcha-ring-progress" cx="60" cy="60" r="52"></circle>
+          </svg>
+          <div class="matcha-ring-label">
+            <span id="matchaRingPct" class="matcha-ring-pct"></span>
+            <span class="matcha-ring-sub">rätt</span>
+          </div>
+        </div>
         <p id="matchaDoneText" class="matcha-done-text" aria-live="polite"></p>
+        <p id="matchaPaceLabel" class="matcha-pace"></p>
+        <p id="matchaRecordBadge" class="matcha-record-badge hidden" aria-live="polite">🏆 Nytt rekord!</p>
         <div class="actions">
           <button id="matchaRetryBtn" class="btn primary">Spela igen</button>
           <button id="matchaQuitBtn" class="btn">Avsluta</button>
@@ -892,8 +916,8 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.246" defer></script>
+  <script src="js/app.js?v=0.9.247" defer></script>
   <!-- Spellägesmoduler: en egen fil per läge, laddas EFTER app.js (delar globalt scope). -->
-  <script src="js/matcha.js?v=0.9.244" defer></script>
+  <script src="js/matcha.js?v=0.9.247" defer></script>
 </body>
 </html>

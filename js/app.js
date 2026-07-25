@@ -130,7 +130,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.246'
+const APP_VERSION = '0.9.247'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -1159,6 +1159,7 @@ function applySettings(){
   }
   if(typeof s.practiceWrong === 'boolean') el('practiceWrong').checked = s.practiceWrong
   if(typeof s.timerEnabled === 'boolean') el('timerEnabled').checked = s.timerEnabled
+  if(typeof s.soundEnabled === 'boolean' && el('soundEnabled')) el('soundEnabled').checked = s.soundEnabled
   if(typeof s.showNonMedical === 'boolean' && el('showNonMedical')) el('showNonMedical').checked = s.showNonMedical
   // Bygg om utbildningsräkningen EFTER att icke-medicinska-bocken återställts, så
   // antalen i parentes stämmer innan vi återställer valet (disabled-state nedan
@@ -1183,6 +1184,7 @@ function saveSettings(){
     types: getSelectedTypes(),
     practiceWrong: !!el('practiceWrong')?.checked,
     timerEnabled: !!el('timerEnabled')?.checked,
+    soundEnabled: !!el('soundEnabled')?.checked,
     showNonMedical: !!el('showNonMedical')?.checked,
     education: getSelectedEducation()
   }

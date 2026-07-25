@@ -1,5 +1,20 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.247
+- **Matcha: spelkänslo-lyft A–F ur polish-backloggen, allt byggt i samma pass.**
+  - **A – Ihopparningsjuice:** förbindelselinjen tonas in och ändpunktsprickarna växer fram i stället för att dyka upp hårt; vald ruta glödpulserar svagt; kort mobil-haptik (`navigator.vibrate`) när ett par kopplas.
+  - **B – Reveal som payoff:** paren rättas nu **ett i taget i snabb följd** i stället för att alla tänds samtidigt — rätt par poppar till, fel par skakar kort, med ett litet ljud/haptik-styng och en studsande "Rätt"-räknare per par.
+  - **C – Framsteg & belöning:** en riktig framstegsmätare (fylls stadigt genom hela spelet, inte bara omgången) ersätter den gamla textraden; "Rätt: X/Y"-räknaren studsar vid varje nytt rätt par; "Perfekt omgång! 🎯" när hela omgången är rätt.
+  - **D – Klart-vyn som ett slut:** ny resultatring (donut) med procent rätt, snitt-tid per par, och ett "🏆 Nytt rekord!"-märke när ett tidigare personbästa (flest rätt, snabbast tid som utslag) slås.
+  - **E – Estetik:** mjukare skuggor, tydligare hover/press-lägen på brickorna, lätt böjda (kvadratisk bezier) förbindelselinjer i stället för raka streck.
+  - **F – Ljudeffekter:** korta, självgenererade pip (Web Audio, inga externa filer) vid rätt/fel, av/på-bara via en ny "Ljudeffekter"-bock i Inställningar (delad mekanism med "Visa tid").
+  - Alla animationer respekterar `prefers-reduced-motion: reduce` — sluttillstånden (färg, ring-procent, framstegsmätare) sätts ändå direkt, bara utan rörelse dit.
+- **Mobilfix: brickornas typsnitt skalas nu efter textlängd** (`--tile-scale`, satt per bricka i `js/matcha.js`) — korta ord krymps inte alls, långa prompter krymps mot ett läsligt golv (`max()` i CSS). Minskar skillnaden i radantal/höjd mellan en kort ordbricka och en lång meningsbricka i samma omgång, som annars gjorde kolumnerna olika höga.
+- **Mobilfix: kolumnerna centreras nu vertikalt** (`align-items: center` i stället för `start`) så en kortare kolumn hamnar kring samma mittlinje som den längre, i stället för att hänga upptill med tomrum under.
+- **Infopanelen ovanför brädet omgjord** — spelarnamn, ämne, omgång och poäng låg tidigare som tre lösryckta textrader och såg rörigt ut, särskilt på mobil. Nu EN sammanhållen ruta: namn + ämne överst, framstegsmätare + omgång + "Rätt"-räknare därunder.
+- Ny inställning **"Ljudeffekter"** (av/på, förvalt på) i Inställningar, delad mekanism med "Visa tid" (`js/app.js` `loadSettings`/`applySettings`/`saveSettings`).
+- CSS ändrad → `styles.css?v=` bumpad enhetligt till **0.9.247 på alla 116 sidor** som laddar filen, plus generatorernas `STYLES_V`/`CSS_V` (`SEO_REGLER.md` §11 C); `matcha.js?v=` följer med.
+
 ## 0.9.246
 - **Nyhetsnotis på info.html** (25 juli 2026): Anatomiquiz får nya varianter och spel för att öva; Matcha kan provas redan nu; de är under utformning och kan vara lite buggiga.
 - **Ny regel `SEO_REGLER.md` §15:** var nyheter ligger (info.html, `#newsHeading`) och hur de skrivs, så det blir en snabb operation utan letande. Kedjan (§11.A: bump + CHANGELOG) gäller ändå.
