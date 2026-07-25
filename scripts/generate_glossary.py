@@ -65,7 +65,7 @@ def artikel_sitemap_urls() -> list[str]:
     return ga.sitemap_urls(ga.load())
 
 # Cachebusters per asset — bumpa bara den som faktiskt ändrats.
-STYLES_V = "0.9.255"       # css/styles.css (synkad med övriga sidor 2026-07-25)
+STYLES_V = "0.9.256"       # css/styles.css (synkad med övriga sidor 2026-07-25)
 GLOSSARY_V = "0.9.189"      # css/glossary.css + js/glossary.js (denna release)
 
 # Svenska alfabetet — fast ordning för alfabetsraden. Bokstäver utan poster
@@ -1076,6 +1076,7 @@ def write_sitemap(group_files: list[str]) -> None:
         blocks.append(url_block(f"{SITE}/{f}", "monthly", "0.7"))
     blocks.append(url_block(f"{SITE}/case.html", "monthly", "0.7"))
     blocks.append(url_block(f"{SITE}/info.html", "monthly", "0.5"))
+    blocks.append(url_block(f"{SITE}/spellagen.html", "monthly", "0.6"))
     blocks.append(url_block(f"{SITE}/versionshistorik.html", "weekly", "0.3"))
     blocks.append(url_block(f"{SITE}/integritet.html", "yearly", "0.3"))
 

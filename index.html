@@ -121,7 +121,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="css/styles.css?v=0.9.255">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.256">
 </head>
 <body>
 
@@ -454,6 +454,10 @@
             <button class="btn btn-mode" type="button" disabled aria-disabled="true">Dagens utmaning</button>
             <button class="btn btn-mode" type="button" disabled aria-disabled="true">Arcade: Gravity</button>
           </div>
+          <!-- Vägen till den utförliga genomgången av alla lägen, reglerna och
+               studietekniken bakom. Ligger här eftersom det är där man står när
+               man ska välja läge – och gäller quiz och flashcards lika mycket. -->
+          <p class="game-modes-note"><a href="spellagen.html">Vilket läge ska jag välja? Läs om spellägen, regler och studieteknik</a></p>
         </div>
         <div class="secondary-actions">
           <a class="btn" href="info.html">Om Anatomiquiz</a>
@@ -643,6 +647,7 @@
       </div>
 
       <p id="matchaHint" class="matcha-hint">Para ihop alla par. Rätt och fel visas först när du parat ihop allihop.</p>
+      <p class="mode-help"><a href="spellagen.html">Om Matcha och de andra spellägena</a></p>
 
       <div id="matchaBoard" class="matcha-board" role="group" aria-label="Para ihop fråga med rätt svar">
         <svg id="matchaLines" class="matcha-lines" aria-hidden="true"></svg>
@@ -710,6 +715,7 @@
           </ul>
           <p>Lådan avgör alltså hur ofta du möter kortet: låda 1 i morgon, sedan efter 2, 4, 8 och 16 dagar. Det du kan får du se sällan, det du inte kan får du se ofta – det är hela poängen. Ett kort som tagit sig ända till låda 5 räknas som mästrat och återkommer bara med ett par veckors mellanrum.</p>
           <p><strong>Ett pass</strong> är dagens portion. Appen väljer själv ut de kort som är dags att repetera och fyller på med nya du inte sett förut, så kom tillbaka i morgon – då vet den precis vilka du behöver se igen. Svarar du fel får du kortet en gång till innan passet är slut, men det är ditt <em>första</em> svar som avgör vilken låda det hamnar i.</p>
+          <p class="mode-help"><a href="spellagen.html">Läs mer om Leitner Light och forskningen bakom</a></p>
         </div>
       </details>
 
@@ -829,6 +835,7 @@
           </ul>
           <p>Klockan stannar aldrig, så alla börjar på samma 60 sekunder men hur länge rundan varar avgör du själv. Har du spelat ämnet förut står ditt rekord uppe under klockan – slår du det får du veta det på en gång.</p>
           <p><strong>När tiden är ute</strong> visas hur många du hann, hur säkert du svarade och hur snabbt – och de frågor du missade, med rätt svar. Det är den listan du ska läsa: den pekar rakt på det du behöver plugga mer på.</p>
+          <p class="mode-help"><a href="spellagen.html">Läs mer om Tidsjakt och de andra lägena</a></p>
         </div>
       </details>
 
@@ -1175,7 +1182,7 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.255" defer></script>
+  <script src="js/app.js?v=0.9.256" defer></script>
   <!-- Spellägesmoduler: en egen fil per läge, laddas EFTER app.js (delar globalt scope). -->
   <script src="js/matcha.js?v=0.9.255" defer></script>
   <script src="js/leitner.js?v=0.9.255" defer></script>

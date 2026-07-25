@@ -1124,6 +1124,25 @@ body:has(#quiz:not(.hidden)) {
   gap: 12px;
 }
 
+/* Vägen till spellagen.html — den utförliga genomgången av lägena, reglerna och
+   studietekniken. Ligger i startvyn (där man väljer läge) och som en liten rad
+   i varje spels egen förklaring, så att den som behöver den hittar den på
+   plats. Diskret: den ska inte konkurrera med startknapparna. */
+.game-modes-note {
+  margin: 2px 0 0;
+  text-align: center;
+  font-size: 0.82rem;
+}
+.game-modes-note a { color: var(--accent-dark); }
+
+.mode-help {
+  margin: 6px 0 0;
+  font-size: 0.78rem;
+}
+.mode-help a { color: var(--accent-dark); }
+/* I Matchas fall står raden fritt i vyn och centreras med hinten ovanför. */
+#matcha .mode-help { text-align: center; margin: -4px 0 10px; }
+
 .game-modes-row--3 {
   grid-template-columns: 1fr 1fr 1fr;
 }

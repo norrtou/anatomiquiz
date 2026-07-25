@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSP mot XSS (skript/stilar/data endast från egen origin). OBS: GitHub Pages tillåter inga egna HTTP-headers, därav meta-tagg. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+
+  <!-- =========================================================
+       Primär SEO
+       ========================================================= -->
+  <title>Spellägen, regler och studieteknik | Anatomiquiz</title>
+  <meta name="description" content="Alla sätt att plugga: quiz, flashcards, Matcha, Leitner Light och Tidsjakt – med reglerna, forskningen bakom aktiv repetition och beprövade tips.">
+  <meta name="author" content="Norrtou Creations">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+  <link rel="canonical" href="https://anatomiquiz.se/spellagen.html">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <!-- =========================================================
+       Webbläsartema
+       ========================================================= -->
+  <meta name="theme-color" content="#10b981">
+  <meta name="color-scheme" content="light">
+
+  <!-- =========================================================
+       Open Graph (Facebook, LinkedIn, m.fl.)
+       ========================================================= -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://anatomiquiz.se/spellagen.html">
+  <meta property="og:title" content="Spellägen, regler och studieteknik">
+  <meta property="og:description" content="Quiz, flashcards, Matcha, Leitner Light och Tidsjakt – vad varje läge gör, vilka regler som gäller och varför aktiv repetition fungerar.">
+  <meta property="og:image" content="https://anatomiquiz.se/img/og-image.png">
+  <meta property="og:image:width" content="1518">
+  <meta property="og:image:height" content="864">
+  <meta property="og:image:alt" content="Anatomiquiz — spellägen och studieteknik">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="Anatomiquiz">
+
+  <!-- =========================================================
+       Twitter / X Card
+       ========================================================= -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Spellägen, regler och studieteknik">
+  <meta name="twitter:description" content="Quiz, flashcards, Matcha, Leitner Light och Tidsjakt – vad varje läge gör, vilka regler som gäller och varför aktiv repetition fungerar.">
+  <meta name="twitter:image" content="https://anatomiquiz.se/img/og-image.png">
+  <meta name="twitter:image:alt" content="Anatomiquiz — spellägen och studieteknik">
+
+  <!-- =========================================================
+       Strukturerad data — schema.org (JSON-LD).
+       Article + LearningResource: sidan är en faktatext om hur appens
+       studieformer fungerar och vilken studieteknik de bygger på.
+       ========================================================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Article", "LearningResource"],
+    "headline": "Spellägen, regler och studieteknik",
+    "description": "Genomgång av Anatomiquiz studieformer – quiz, flashcards, Matcha, Leitner Light och Tidsjakt – med regler, forskningsstöd för aktiv repetition och praktiska tips.",
+    "inLanguage": "sv-SE",
+    "url": "https://anatomiquiz.se/spellagen.html",
+    "dateModified": "2026-07-25",
+    "isAccessibleForFree": true,
+    "learningResourceType": ["Guide", "Reference"],
+    "educationalLevel": "Högskola/universitet",
+    "about": [
+      { "@type": "Thing", "name": "Studieteknik" },
+      { "@type": "Thing", "name": "Aktiv återhämtning (retrieval practice)" },
+      { "@type": "Thing", "name": "Spaced repetition" },
+      { "@type": "Thing", "name": "Anatomi" }
+    ],
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Anatomiquiz",
+      "url": "https://anatomiquiz.se/"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Norrtou Creations",
+      "url": "https://norrtou.se"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Norrtou Creations",
+      "url": "https://norrtou.se"
+    }
+  }
+  </script>
+
+  <!-- BreadcrumbList i EGET block (SEO_REGLER §6): får aldrig nästlas som
+       property inuti ett block där @type är en array. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Anatomiquiz",
+        "item": "https://anatomiquiz.se/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Om Anatomiquiz",
+        "item": "https://anatomiquiz.se/info.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Spellägen och studieteknik",
+        "item": "https://anatomiquiz.se/spellagen.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage speglar den synliga FAQ:n (#faq) ord för ord i sak (SEO_REGLER §6).
+       Blocket är genererat ur den synliga HTML:en – ändra alltid sidan först och
+       generera om, aldrig tvärtom. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "sv-SE",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Vilket läge ska jag välja?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ska du lära dig något nytt: börja med flashcards för att få en första bekantskap, gå sedan över till quizet. Ska du befästa något du redan läst: kör quiz eller Leitner Light, som är de lägen där du måste plocka fram svaret ur minnet. Har du ont om tid och vill se var luckorna finns: Tidsjakt, eftersom det du tvekar på syns direkt i listan över missade frågor. Matcha passar när du vill koppla samman termer och deras betydelser, till exempel latinska namn mot svenska."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Är det bättre att göra quiz än att läsa om samma text igen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "För att minnas något längre än ett par dagar: ja. I den klassiska studien från 2006 fick en grupp läsa om en text flera gånger medan en annan i stället testades på den. Efter fem minuter var omläsning bäst, men efter två dagar och en vecka mindes de som testats betydligt mer. Att öva med frågor är en av två tekniker som en stor forskningsgenomgång från 2013 bedömde som högsta nytta bland tio undersökta studietekniker."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur ofta ska jag repetera?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sällan men regelbundet slår ofta och sammanpressat. Ju längre fram i tiden du behöver kunskapen, desto längre mellanrum tjänar du på – det är slutsatsen i en sammanställning av 839 mätningar av repetitionsintervall. Ska du kunna det på en tenta om en månad är några dagar mellan repetitionerna rimligt. Leitner Light räknar ut det åt dig och glesar ut varje kort du svarar rätt på."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Följer mina resultat och lådor med mellan mobilen och datorn?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nej. Allt sparas lokalt i den webbläsare du spelar i, eftersom appen inte har konton och inte lagrar något om dig. Mobilen och datorn har därför skilda resultat, och även en genväg på hemskärmen kan ha ett eget fack skilt från webbläsarfliken. Du kan flytta över dem med Exportera och Importera i topplistan – Leitner Lights export tar med både passresultaten och lådornas status."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Fungerar spellägena på mobilen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, samtliga lägen är byggda för att spelas med tummen på en telefon och anpassar sin storlek så att både frågan, svarsalternativen och knappen ryms utan att du behöver skrolla mitt i en runda. Ljudeffekter och vibration kan stängas av under Inställningar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vad gör jag om jag hittar en fråga som är fel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Rapportera den gärna via kontaktformuläret på sidan Om Anatomiquiz. Du kan också markera frågan som felaktig, eller utesluta den ur dina egna quiz, under Hantera frågor. Materialet är faktagranskat mot standardverk men kan innehålla fel, och en rapport gör att felet kan rättas för alla."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon.png">
+  <link rel="apple-touch-icon" href="/img/icon-192.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/css/styles.css?v=0.9.256">
+</head>
+<body>
+  <a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+  <main id="main" class="container" role="main">
+
+    <header class="header">
+      <div class="header-title">
+        <h1>Spellägen, regler och studieteknik</h1>
+      </div>
+    </header>
+
+    <!-- Brödsmula + intro -->
+    <section class="card" aria-labelledby="introHeading">
+      <nav class="breadcrumb" aria-label="Brödsmula">
+        <a href="./" class="breadcrumb-link">← Anatomiquiz</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="info.html" class="breadcrumb-link">Om Anatomiquiz</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <span class="breadcrumb-current" aria-current="page">Spellägen</span>
+      </nav>
+
+      <h2 id="introHeading" class="sr-only">Om spellägena</h2>
+
+      <div class="info-prose">
+        <p class="about-lead">Anatomiquiz har fem sätt att plugga på samma frågebank: två grundlägen – <strong>quiz</strong> och <strong>flashcards</strong> – och tre spellägen som gör om samma frågor till något annat. De löser olika problem. Den här sidan går igenom vad varje läge gör, exakt vilka regler som gäller i det, och varför formen att svara på frågor är en av de mest välbelagda studieteknikerna som finns.</p>
+        <p>Alla lägen startas från <a href="./" class="info-link">startsidan</a>: välj utbildning och ämne, och tryck sedan på det läge du vill köra. Ämnesvalet gäller alla lägen lika – byter du läge behåller du ämnet.</p>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Grundlägena
+         ========================================================= -->
+    <section class="card" aria-labelledby="basicsHeading">
+      <h2 id="basicsHeading" class="about-title">De två grundlägena</h2>
+
+      <div class="info-prose">
+        <h3 class="info-subheading">Quiz – flervalsfrågor och sant eller falskt</h3>
+        <p>Grundläget, och det som passar de flesta. Du får en fråga i taget med två till fyra svarsalternativ, eller ett påstående som är sant eller falskt. Så fungerar det:</p>
+        <ul>
+          <li>Du väljer <strong>10, 20, 50 eller 100 frågor</strong>. Frågorna slumpas ur det valda ämnet, och alternativens ordning slumpas för varje fråga.</li>
+          <li>När du svarat markeras ditt svar som rätt eller fel. Svarade du fel <strong>visas dessutom vilket alternativ som var rätt</strong> – du lämnas aldrig utan facit.</li>
+          <li>Poängen räknas upp löpande, och fem rätt i rad ger en liten kvittens. Resultatet avslutas med hur stor andel du hade rätt, din tid och ett rekordmärke om du slagit ditt tidigare bästa i ämnet.</li>
+          <li>Resultatet sparas i <strong>topplistan</strong>, som också visar statistik per ämne så att du ser var du står starkast och svagast.</li>
+          <li>Under Inställningar kan du välja vilka frågetyper som ska ingå, låta appen <strong>öva extra på det du svarat fel på</strong>, dölja tidräknaren om du inte vill stressas av den och stänga av ljudeffekterna.</li>
+        </ul>
+        <p>Vissa ämnen har <strong>bildfrågor</strong>, där bilden är själva frågan och du pekar ut rätt struktur bland alternativen.</p>
+
+        <h3 class="info-subheading">Flashcards – vänd kortet själv</h3>
+        <p>Traditionella pluggkort. Du ser frågan, formulerar svaret <em>i huvudet</em> och vänder sedan på kortet för att kontrollera. Det finns ingen poäng och ingen topplista, för ingen rättar dig – och det är själva idén: kortet ska tvinga dig att försöka minnas innan du får se svaret.</p>
+        <ul>
+          <li>Tryck på kortet (eller på Nästa) för att vända, tryck igen för nästa kort.</li>
+          <li>Tiden du funderade visas på svarssidan, om du har tidräknaren på.</li>
+          <li>Slutet visar hur många kort du gick igenom och hur lång tid det tog.</li>
+        </ul>
+        <p><strong>Fällan med flashcards</strong> är att det är lätt att lura sig själv: man tittar på framsidan, tänker "ja, den kan jag" och vänder. Vinsten uppstår bara om du faktiskt formulerar hela svaret först. Gör du hellre det på pappret finns ett mellanting – kör quizet i stället, där du måste välja.</p>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Spellägena
+         ========================================================= -->
+    <section class="card" aria-labelledby="modesHeading">
+      <h2 id="modesHeading" class="about-title">De tre spellägena</h2>
+
+      <div class="info-prose">
+        <h3 class="info-subheading">Matcha – para ihop fråga och svar</h3>
+        <p>Två kolumner: frågor till vänster, svar till höger, i slumpad ordning var för sig. Du trycker på en ruta i varje kolumn för att koppla dem, och när alla par är ihopkopplade trycker du på <strong>Visa rätt svar</strong>.</p>
+        <ul>
+          <li>Spelet delas i <strong>omgångar om fem par</strong>, så att spelplanen aldrig blir ohanterlig.</li>
+          <li>Rättningen avslöjar ett par i taget i snabb följd, så du ser vilka kopplingar som höll.</li>
+          <li>Topplistan rankar på <strong>snabbast tid</strong>, med färre felförsök som utslag.</li>
+          <li>Läget använder bara korta frågor och korta svar, eftersom rutorna ska gå att läsa. Ämnen med för få korta frågor säger därför nej.</li>
+        </ul>
+        <p><strong>Bra för:</strong> begreppspar – latinskt namn mot svenskt, term mot betydelse, muskel mot funktion. Mindre bra som enda metod, eftersom du kan resonera dig fram genom uteslutning i stället för att kunna svaret.</p>
+
+        <h3 class="info-subheading">Leitner Light – ett pluggschema, inte en runda</h3>
+        <p>Det enda läget som minns dig mellan dagarna. Varje fråga är ett <strong>kort</strong> som bor i en av fem lådor, och lådan bestämmer hur ofta du möter kortet:</p>
+        <ul>
+          <li><strong>Rätt svar</strong> flyttar kortet upp en låda. <strong>Fel svar</strong> skickar det tillbaka till låda 1.</li>
+          <li>Lådorna svarar mot <strong>1, 2, 4, 8 och 16 dagar</strong>. Låda 5 räknas som mästrat.</li>
+          <li>Ett <strong>pass</strong> är dagens portion: appen väljer själv de kort som är dags att repetera – det du kan sämst först – och fyller på med nya du inte sett.</li>
+          <li>Svarar du fel får du kortet en gång till senare i passet, men det är ditt <strong>första</strong> svar som avgör vilken låda det hamnar i. Ett rätt svar på andra chansen räddar alltså inte kortet ur låda 1, och det är avsiktligt.</li>
+          <li>Vid sidan om dagens pass finns en mätare över hur många av ämnets kort som nått låda 5, samt en rad som säger när nästa pass väntar.</li>
+        </ul>
+        <p><strong>Bra för:</strong> långsiktig inlärning inför en tenta som ligger veckor bort. Kräver att du kommer tillbaka – annars hinner korten förfalla och du får en stor portion i stället för en liten.</p>
+
+        <h3 class="info-subheading">Tidsjakt – 60 sekunder, så många du hinner</h3>
+        <p>Ett snabbhetstest, inte ett vanligt quiz. Kunskap du måste leta efter sitter inte riktigt än, och det är precis vad klockan mäter.</p>
+        <ul>
+          <li><strong>Rätt svar</strong> ger ett poäng och nästa fråga direkt – ingen knapp emellan.</li>
+          <li><strong>Fel svar</strong> kostar tre sekunder. Att chansa ska kosta, annars vore det lönsamt att hamra på knapparna.</li>
+          <li><strong>Fem rätt i rad</strong> ger tre sekunder tillbaka. Det du kan ger dig tid att hinna visa mer av det du kan.</li>
+          <li>Har du spelat ämnet förut står ditt rekord under klockan, och slår du det får du veta det på en gång.</li>
+          <li>Slutet listar <strong>de frågor du missade, med rätt svar</strong>. Det är den listan som är själva behållningen – den pekar rakt på vad du behöver läsa om.</li>
+        </ul>
+        <p><strong>Bra för:</strong> att snabbt kartlägga var luckorna finns, och för repetition när du redan kan grunderna. Mindre bra för helt nytt material – då hinner du inte tänka, och tidspressen ger ingen extra inlärning.</p>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Kommande lägen. Beskrivs medvetet utan datum eller löften –
+         backloggen kan ändras.
+         ========================================================= -->
+    <section class="card" aria-labelledby="comingHeading">
+      <h2 id="comingHeading" class="about-title">På väg</h2>
+      <div class="info-prose">
+        <p>Två lägen till är planerade. De är inte byggda än, och beskrivningarna kan ändras innan de släpps.</p>
+        <ul>
+          <li><strong>Dagens utmaning</strong> – ett litet frågeset som är detsamma hela dagen och byts vid midnatt, med en räknare över hur många dagar i rad du gjort det. Tanken är att göra repetitionen till en vana som tar två minuter, inte ett pluggpass man måste hitta tid för.</li>
+          <li><strong>Arkadläge</strong> – ett snabbt, mer lekfullt läge där rätt svar ska pickas ut bland de felaktiga innan tiden rinner ut. Det blir medvetet det minst pedagogiska av lägena: det tränar igenkänning snarare än att plocka fram svaret ur minnet, och finns för att vara roligt när man inte orkar plugga på allvar.</li>
+        </ul>
+        <p>Vill du följa vad som händer finns alla ändringar i <a href="versionshistorik.html" class="info-link">versionshistoriken</a>, och de senaste nyheterna på <a href="info.html" class="info-link">Om Anatomiquiz</a>.</p>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Forskning + historik
+         ========================================================= -->
+    <section class="card" aria-labelledby="scienceHeading">
+      <h2 id="scienceHeading" class="about-title">Varför quiz fungerar</h2>
+      <div class="info-prose">
+        <p>Att svara på frågor känns som en <em>kontroll</em> av vad man lärt sig. Men själva ansträngningen att plocka fram ett svar ur minnet är i sig det som befäster kunskapen – ett fenomen som kallas <strong>testeffekten</strong> eller aktiv återhämtning. Det är också anledningen till att den här appen är byggd som ett quiz och inte som en lärobok.</p>
+
+        <h3 class="info-subheading">Vad forskningen visar</h3>
+        <p>I den mest citerade studien på området fick studenter antingen läsa om en text flera gånger eller i stället testas på den, utan facit. Efter fem minuter kom de som läst om bäst ihåg innehållet. Men efter två dagar och en vecka var förhållandet det omvända, och skillnaden var stor: att ha testats slog att ha läst om.</p>
+        <p>När tio vanliga studietekniker vägdes mot varandra i en stor forskningsgenomgång var det bara <strong>två</strong> som fick högsta betyg för nytta – att öva med frågor och att sprida ut övningen över tid. Att stryka under, läsa om och sammanfatta hamnade lågt, trots att det är vad de flesta gör. Effekten är dessutom prövad i just vårdutbildning: i en genomgång av testeffekten i medicinsk utbildning framhålls att återkommande frågor inte bara mäter kunskap utan bygger den, och att de bör användas som studieredskap och inte enbart som examination.</p>
+        <p>Två praktiska detaljer ur forskningen har fått styra hur appen är byggd. Den första: <strong>flervalsfrågor har en risk</strong> – de felaktiga alternativen kan i sig fastna som felaktiga minnen. Motmedlet är återkoppling, och det är väl belagt att facit både förstärker den positiva effekten och dämpar den negativa. Därför visar quizet alltid vilket svar som var rätt, och därför listar Tidsjakt de frågor du missade. Den andra: <strong>hur långt mellanrummet mellan repetitionerna bör vara beror på hur långt fram du behöver kunskapen.</strong> Ju längre fram, desto längre mellanrum tjänar du på. Det är den regeln Leitner Lights lådor räknar ut åt dig.</p>
+
+        <h3 class="info-subheading">Lite historik</h3>
+        <p>Idén är inte ny. Redan 1939 lät en amerikansk forskare drygt 3 600 skolelever läsa en faktatext och sedan testas på den vid olika tidpunkter. Resultatet var slående: <em>mer</em> glömdes bort under det första dygnet utan repetition än under 63 dagar med två inlagda test. Slutsatsen fanns alltså i litteraturen i decennier innan den blev allmänt känd som studieteknik.</p>
+        <p>Pluggkortet är ännu äldre. Den första kända uppsättningen brukar tillskrivas en engelsk pedagogs läsinlärningskort från 1834, även om attributionen är omdiskuterad. Systemet med <em>lådor</em> för korten formulerades 1972 av den tyske skribenten Sebastian Leitner, som lät fysiska mellanväggar i en kartong sköta schemat: kort man kunde flyttades bakåt i lådan och möttes därmed mer sällan. Det är hans idé som Leitner Light är en digital variant av – därav namnet. Först i slutet av 1980-talet kom de första datorprogrammen som räknade ut repetitionsintervallen automatiskt.</p>
+
+        <h3 class="info-subheading">Tre beprövade tips</h3>
+        <ul>
+          <li><strong>Testa dig i stället för att läsa om.</strong> Stäng boken och försök återge avsnittet innan du kontrollerar. Känslan av att "kunna det" när man läser är opålitlig – den mäter hur bekant texten är, inte om du kan plocka fram innehållet.</li>
+          <li><strong>Sprid ut det.</strong> Tre gånger tjugo minuter under en vecka slår en timme i sträck kvällen före. Om du bara följer ett av dessa tips, ta det här: effekten är stor och det kostar ingenting extra i tid.</li>
+          <li><strong>Läs alltid facit på det du hade fel på.</strong> Ett fel du inte tittar närmare på är ett fel du kommer att göra igen – och på ett flervalsalternativ finns risken att det felaktiga svaret är det som fastnar.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Ansvarsfriskrivning
+         ========================================================= -->
+    <section class="card" aria-labelledby="disclaimerHeading">
+      <h2 id="disclaimerHeading" class="about-title">Ett komplement – inte en ersättning</h2>
+      <div class="info-prose">
+        <p>Anatomiquiz är avsett som ett <strong>komplement</strong> till dina studier. Appen ersätter inte kurslitteratur, undervisning, kliniska riktlinjer eller annan auktoritativ källa, och den är inte avsedd som underlag för vård eller behandling av patienter.</p>
+        <p>Innehållet är sammanställt och faktagranskat mot vedertagna standardverk, men det är omfattande och skrivet av en person – <strong>det kan innehålla fel och brister</strong>. Ett quizsvar som strider mot din kurslitteratur eller din lärare: lita på kurslitteraturen och läraren. Hittar du ett fel får du gärna rapportera det via kontaktformuläret på <a href="info.html" class="info-link">Om Anatomiquiz</a>, så rättas det för alla. Du kan också markera en fråga som felaktig eller utesluta den ur dina egna quiz under Hantera frågor.</p>
+        <p>Resultat, lådor och inställningar sparas <strong>lokalt i din webbläsare</strong>. Appen har inga konton, sparar ingenting om dig på någon server och använder inga kakor – läs mer i <a href="integritet.html" class="info-link">integritetspolicyn</a>.</p>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         FAQ — speglas ord för ord i FAQPage-blocket i <head>.
+         Samma markup som info.html: <h3> + <p>.
+         ========================================================= -->
+    <section class="card" id="faq" aria-labelledby="faqHeading">
+      <h2 id="faqHeading" class="about-title">Vanliga frågor om spellägena</h2>
+      <div class="info-prose">
+        <h3 class="info-subheading">Vilket läge ska jag välja?</h3>
+        <p>Ska du lära dig något nytt: börja med flashcards för att få en första bekantskap, gå sedan över till quizet. Ska du befästa något du redan läst: kör quiz eller Leitner Light, som är de lägen där du måste plocka fram svaret ur minnet. Har du ont om tid och vill se var luckorna finns: Tidsjakt, eftersom det du tvekar på syns direkt i listan över missade frågor. Matcha passar när du vill koppla samman termer och deras betydelser, till exempel latinska namn mot svenska.</p>
+
+        <h3 class="info-subheading">Är det bättre att göra quiz än att läsa om samma text igen?</h3>
+        <p>För att minnas något längre än ett par dagar: ja. I den klassiska studien från 2006 fick en grupp läsa om en text flera gånger medan en annan i stället testades på den. Efter fem minuter var omläsning bäst, men efter två dagar och en vecka mindes de som testats betydligt mer. Att öva med frågor är en av två tekniker som en stor forskningsgenomgång från 2013 bedömde som högsta nytta bland tio undersökta studietekniker.</p>
+
+        <h3 class="info-subheading">Hur ofta ska jag repetera?</h3>
+        <p>Sällan men regelbundet slår ofta och sammanpressat. Ju längre fram i tiden du behöver kunskapen, desto längre mellanrum tjänar du på – det är slutsatsen i en sammanställning av 839 mätningar av repetitionsintervall. Ska du kunna det på en tenta om en månad är några dagar mellan repetitionerna rimligt. Leitner Light räknar ut det åt dig och glesar ut varje kort du svarar rätt på.</p>
+
+        <h3 class="info-subheading">Följer mina resultat och lådor med mellan mobilen och datorn?</h3>
+        <p>Nej. Allt sparas lokalt i den webbläsare du spelar i, eftersom appen inte har konton och inte lagrar något om dig. Mobilen och datorn har därför skilda resultat, och även en genväg på hemskärmen kan ha ett eget fack skilt från webbläsarfliken. Du kan flytta över dem med Exportera och Importera i topplistan – Leitner Lights export tar med både passresultaten och lådornas status.</p>
+
+        <h3 class="info-subheading">Fungerar spellägena på mobilen?</h3>
+        <p>Ja, samtliga lägen är byggda för att spelas med tummen på en telefon och anpassar sin storlek så att både frågan, svarsalternativen och knappen ryms utan att du behöver skrolla mitt i en runda. Ljudeffekter och vibration kan stängas av under Inställningar.</p>
+
+        <h3 class="info-subheading">Vad gör jag om jag hittar en fråga som är fel?</h3>
+        <p>Rapportera den gärna via kontaktformuläret på sidan Om Anatomiquiz. Du kan också markera frågan som felaktig, eller utesluta den ur dina egna quiz, under Hantera frågor. Materialet är faktagranskat mot standardverk men kan innehålla fel, och en rapport gör att felet kan rättas för alla.</p>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Vidare
+         ========================================================= -->
+    <section class="card" aria-labelledby="nextHeading">
+      <h2 id="nextHeading" class="about-title">Kom igång</h2>
+      <nav class="hub-nav" aria-label="Vidare i Anatomiquiz">
+        <a class="hub-tile" href="./">
+          <span class="hub-tile-title">Starta ett läge</span>
+          <span class="hub-tile-sub">Välj ämne och spelform</span>
+        </a>
+        <a class="hub-tile hub-tile--kb" href="kunskapsbank/">
+          <span class="hub-tile-title">Kunskapsbank</span>
+          <span class="hub-tile-sub">Läs på innan du testar dig</span>
+        </a>
+        <a class="hub-tile hub-tile--dict" href="medicinskordlista.html">
+          <span class="hub-tile-title">Medicinsk ordlista</span>
+          <span class="hub-tile-sub">Slå upp ett begrepp</span>
+        </a>
+      </nav>
+    </section>
+
+    <!-- =========================================================
+         Referenser (SEO_REGLER §6b) — endast källor som faktiskt
+         ligger till grund för sidan.
+         ========================================================= -->
+    <div class="kb-sources">
+      <h2>Referenser</h2>
+      <ul>
+        <li>Butler, A. C., &amp; Roediger, H. L., III. (2008). Feedback enhances the positive effects and reduces the negative effects of multiple-choice testing. <em>Memory &amp; Cognition, 36</em>(3), 604–616. <a href="https://doi.org/10.3758/MC.36.3.604" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.3758/MC.36.3.604</a></li>
+        <li>Cepeda, N. J., Pashler, H., Vul, E., Wixted, J. T., &amp; Rohrer, D. (2006). Distributed practice in verbal recall tasks: A review and quantitative synthesis. <em>Psychological Bulletin, 132</em>(3), 354–380. <a href="https://doi.org/10.1037/0033-2909.132.3.354" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1037/0033-2909.132.3.354</a></li>
+        <li>Dunlosky, J., Rawson, K. A., Marsh, E. J., Nathan, M. J., &amp; Willingham, D. T. (2013). Improving students' learning with effective learning techniques: Promising directions from cognitive and educational psychology. <em>Psychological Science in the Public Interest, 14</em>(1), 4–58. <a href="https://doi.org/10.1177/1529100612453266" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1177/1529100612453266</a></li>
+        <li>Larsen, D. P., Butler, A. C., &amp; Roediger, H. L., III. (2008). Test-enhanced learning in medical education. <em>Medical Education, 42</em>(10), 959–966. <a href="https://doi.org/10.1111/j.1365-2923.2008.03124.x" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1111/j.1365-2923.2008.03124.x</a></li>
+        <li>Leitner, S. (1972). <em>So lernt man lernen: Der Weg zum Erfolg</em>. Herder.</li>
+        <li>Roediger, H. L., III, &amp; Karpicke, J. D. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. <em>Psychological Science, 17</em>(3), 249–255. <a href="https://doi.org/10.1111/j.1467-9280.2006.01693.x" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1111/j.1467-9280.2006.01693.x</a></li>
+        <li>Spitzer, H. F. (1939). Studies in retention. <em>Journal of Educational Psychology, 30</em>(9), 641–656. <a href="https://doi.org/10.1037/h0063404" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1037/h0063404</a></li>
+      </ul>
+    </div>
+
+    <footer class="footer">
+      <p>Anatomiquiz använder inga kakor och samlar inte in personuppgifter. Läs mer i <a href="integritet.html" class="info-link">integritetspolicyn</a>.</p>
+    </footer>
+
+  </main>
+</body>
+</html>
