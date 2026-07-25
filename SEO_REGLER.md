@@ -619,6 +619,67 @@ PageSpeed-kravet "tillgänglighetsträdet korrekt formaterat" = **alla** a11y-gr
 - **Bilder:** alltid meningsfull `alt`. Dekorativa bilder: `alt=""`.
 - Kontrast ≥ WCAG AA. Synligt fokus. Klickbara ytor ≥ 24×24 px.
 - Inga `tabindex > 0`. Formulärfält har `<label>`.
+- **Latinsk text märks `lang="la"`** — se §7b.
+
+---
+
+## 7b. Språkmärkning av latin (`lang="la"`) — OBLIGATORISKT
+
+Sidan är `lang="sv"`. En skärmläsare uttalar därför *musculus
+sternocleidomastoideus* med svensk fonetik om inget annat sägs. **WCAG 3.1.2
+Language of Parts (nivå AA)** kräver att språket i ett avsnitt går att avgöra
+maskinellt. Så här bär en sida sin latinska text:
+
+```html
+<!-- tabellcell: <em> omsluter latinet, den svenska glosan står utanför -->
+<td role="cell" data-label="Nerv (latin)"><em lang="la">Nervus medianus</em><br>(medianusnerven)</td>
+
+<!-- ordlistan: latinskt uppslagsord i TA:s inverterade form -->
+<dt class="glossary-term" lang="la" itemprop="name">abductor pollicis brevis, musculus</dt>
+```
+
+**Attributet skrivs aldrig för hand.** Regeln bor i `scripts/latin.py` och skrivs
+in av `scripts/wire_lang.py --all`, som ligger efter `generate_glossary.py` och
+före `wire_identity.py` i kedjan. Skälet är detsamma som för datum, identitet och
+sidfot: latinkolumner finns både i genererade tabeller (muskler, skelett, kärl)
+och i handskrivna (nervtabellerna, kranialnerverna), och hade svaret på "är det
+här latin?" legat i varje generator hade det funnits fem kopior att hålla i synk
+och de handskrivna sidorna blivit utan.
+
+- **`lang="la"` sitter på `<em>`, ALDRIG på `<td>`.** Latinkolumnerna är inte rent
+  latinska — `<em>Nervus medianus</em><br>(medianusnerven)` och
+  `<em>Nervus opticus</em> – synnerven` är typiska celler. Ett `lang="la"` på
+  cellen hade märkt även den svenska översättningen som latin, alltså **ett sämre
+  läge än att inte märka något alls**. Ett felaktigt språkattribut är en
+  regression, inte en halv förbättring.
+- **Konventionen ÄR gränssnittet: en latinkolumn har `(latin)` i sin rubrik.**
+  "Muskel (latin)", "Ben (latin)", "Kärl (latin)", "Nerv (latin)", "Bana (latin)"
+  — plus ledtabellernas nakna "Latin". `wire_lang.py` matchar på det mönstret, så
+  en ny tabell som följer konventionen blir märkt av sig själv. En ny latinkolumn
+  som döps till något annat blir det inte.
+- **En latinkolumncell utan `<em>` stoppar bygget.** Tyst omärkt är det enda som
+  inte är ett alternativ (CLAUDE_REGLER §0.4). Sätt latinet i `<em>`.
+- **Svenska tecken inuti ett `<em>` i en latinkolumn stoppar bygget.** Latin har
+  inga å, ä eller ö. Flytta den svenska texten utanför `<em>`.
+- **I ordlistan märks bara de latinska uppslagsorden**, och de känns igen på
+  Terminologia Anatomicas inverterade form "specifik, genus"
+  (`flava, ligamenta`). Resten av `data/ordlista.json` är svensk (`huvudvärk`),
+  internationell (`infektion`) eller till och med fransk (`Souffle`), och att
+  gissa där hade märkt svenska ord som latin. Ett nytt ord efter kommat som inte
+  står i `GENUS` stoppar bygget i stället för att tolkas (§0.3, §0.4).
+- **`lang="la"` räknas inte som innehåll i `sidodatum.py`.** `LANG_RX` i
+  `normalisera()` stryker det, av samma skäl som sidfoten stryks: märkning som
+  läggs på hela sajten samma dag är ingen uppdatering för läsaren. Utan den hade
+  de 63 berörda sidorna daterats om till samma dag (§6d). Att attributet stryks
+  ur **båda** sidor av jämförelsen är också det som gör att revisioner från innan
+  det fanns fortsätter matcha — samma sak som `HISTORISKA_RX` löser för sidfoten.
+
+**Löptextens inströdda latin är ännu inte märkt** och kräver att termen avgränsas
+i märkningen först. Ordlistans icke-inverterade latinska uppslagsord (`axilla`,
+`radix`, `pylorus`) är heller inte märkta: `data/ordlista.json` bär inget
+språkfält, och att härleda språket ur definitionstexten är precis det gissande
+§0.3 förbjuder. Ska de märkas är rätt åtgärd ett språkfält i datafilen, satt när
+posten skrivs — inte ett mönster som tolkar den i efterhand.
 
 ---
 
@@ -681,6 +742,8 @@ Skriptet sätter alla tre ställena i en operation, så en partiell bump inte ka
       sätter också `?v=` för alla andra `js/*.js` och `css/*.css` som ändrats sedan
       HEAD**, i varje HTML-sida som refererar dem, plus generatorernas
       `STYLES_V`/`CSS_V` (§11 C behöver alltså ingen egen åtgärd).
+- [ ] `python3 scripts/wire_lang.py --all` — latinet på sidan får `lang="la"`
+      (§7b). Skriv aldrig attributet för hand.
 - [ ] `python3 scripts/wire_sidfot.py --all` — sidan får den delade sidfoten
       (friskrivning, integritetsrad, datum), ordagrant som alla andra (§6e).
 - [ ] `python3 scripts/sidodatum.py --update && python3 scripts/wire_dates.py --all`
@@ -746,6 +809,9 @@ stod kvar på `0.9.236`, och felet syntes inte i något av de svep som kördes, 
       löst stycke efter det som avslutar sidan.
 - [ ] **A11y:** en `<h1>`, skip-länk, landmärken, varje tabell har `<caption>` + `th scope`,
       bilder har `alt`.
+- [ ] **Latin (§7b):** inget `lang="la"` handskrivet; en ny latinkolumn heter
+      "… (latin)" och har latinet i `<em>`, den svenska glosan utanför.
+      `python3 scripts/wire_lang.py --check --all` ska gå igenom.
 - [ ] **Prestanda:** inga externa resurser; JS bara vid behov + `defer`; bilddimensioner satta (CLS 0).
 - [ ] **Kedjan (§11)** avbockad: versionen satt med `scripts/bump_version.py` (VERSION +
       index.html + app.js i en operation) + CHANGELOG (+ sitemap + llms.txt + korslänkar).

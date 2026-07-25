@@ -83,6 +83,13 @@ def synligt_datum(iso: str) -> str:
 HEAD_RX = re.compile(r"<head>.*?</head>", re.S)
 LD_RX = re.compile(r'<script type="application/ld\+json">.*?</script>', re.S)
 CACHEBUSTER_RX = re.compile(r"\?v=[0-9]+\.[0-9]+\.[0-9]+")
+# `lang="la"` (wire_lang.py) är märkning, inte innehåll. Attributet lades på 63
+# sidor samma dag och ändrar inte en bokstav av det läsaren ser — räknades det
+# som en uppdatering hade samtliga tabellsidor och hela ordlistan daterats om
+# till den dagen. Samma skäl som sidfoten och datumraden stryks för. Att stryka
+# det ur BÅDA sidor av jämförelsen är också det som gör att en revision från
+# innan attributet fanns fortfarande matchar (jfr HISTORISKA_RX i sidfot.py).
+LANG_RX = re.compile(r' lang="la"')
 BLANKSTEG_RX = re.compile(r"\s+")
 
 
@@ -101,6 +108,7 @@ def normalisera(html: str) -> str:
       innehåll hade hela sajten daterats om till den dagen, vilket är precis den
       falska färskhetssignal den här normaliseringen finns för att undvika.
     * cachebusters — `?v=0.9.269` är en versionsbump, inte en ändring.
+    * `lang="la"` — se LANG_RX ovan. Märkning för skärmläsare, inte innehåll.
     * blankstegsskillnader — omindentering är inte en uppdatering.
     """
     html = HEAD_RX.sub("", html)
@@ -111,6 +119,7 @@ def normalisera(html: str) -> str:
     html = DATUMRAD_RX.sub("", html)
     html = TIME_RX.sub("", html)
     html = CACHEBUSTER_RX.sub("?v=", html)
+    html = LANG_RX.sub("", html)
     return BLANKSTEG_RX.sub(" ", html).strip()
 
 

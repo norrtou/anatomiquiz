@@ -5,11 +5,12 @@ Punkt 7 utförd i 0.9.265** (plus tre generatorbuggar som blockerade den, se ned
 **Generatordriften utredd och åtgärdad i 0.9.266 – punkt 4, 6 och 14 är inte längre blockerade.
 Punkt 6 utförd i 0.9.267. Punkt 4 utförd i 0.9.268. Återfallsskydd för hela svepet i
 0.9.269. Punkt 5 utförd i 0.9.270**, plus två blockerare i sitemap- och rundtrippskedjan.
-**Punkt 8 utförd i 0.9.271, omarbetad till en delad sidfot i 0.9.272.** Resten är öppen och prioriterad nedan.
+**Punkt 8 utförd i 0.9.271, omarbetad till en delad sidfot i 0.9.272.
+Punkt 9 utförd i 0.9.275**, plus en blockerare i datumkedjan. Resten är öppen och prioriterad nedan.
 
 > 🔒 **Punkt 10 och 13 är vilande och ska inte tas upp, föreslås eller utföras.** Användaren
 > beslutade 2026-07-25 att inget visuellt ska göras och tar upp dem på eget initiativ.
-> Öppna punkter är därmed **9, 11, 12, 14, 15** — inga andra.
+> Öppna punkter är därmed **11, 12, 14, 15** — inga andra.
 **Skapad:** 2026-07-25. **Underlag:** hela sajten lästes maskinellt – titlar, descriptions,
 canonicals, JSON-LD, rubrikhierarki, tabellmärkning, intern länkning, `llms.txt`, `sitemap.xml`,
 `robots.txt` och CSS-kontraster. Siffrorna nedan är mätta, inte uppskattade.
@@ -139,7 +140,7 @@ utcheckning. Se punkt 5 nedan.
 | ~~6~~ | ~~`citation` från befintliga referenslistor~~ | ✅ 0.9.267 | **Hög (EEAT)** |
 | ~~7~~ | ~~`DefinedTerm`-microdata i ordlistan~~ | ✅ 0.9.265 | **Högst (GEO)** |
 | ~~8~~ | ~~Ansvarsfriskrivning som delad komponent~~ | ✅ 0.9.271–272 | **Hög (YMYL)** |
-| 9 | `lang="la"` på latinska termer | ~3 h | Hög (WCAG AA) |
+| ~~9~~ | ~~`lang="la"` på latinska termer~~ | ✅ 0.9.275 | **Hög (WCAG AA)** |
 | 11 | Syskonlänkar / "Relaterat"-block | ~3 h | Medel |
 | 12 | Dela `llms.txt` / `llms-full.txt` | ~30 min | Medel |
 | ~~13~~ | ~~`.glossary-letter`-kontrast i ljust läge~~ | 🔒 **VILANDE** | ta inte upp |
@@ -378,16 +379,66 @@ sidfot, handredigerad text, borttagen rad, datumrad utflyttad ur blocket, ny sid
 `<main>` och ett spöke i undantagslistan gav alla exitkod 1 med ett besked som säger vad som
 ska göras.
 
-## 9. ⬜ `lang="la"` på latinska termer
+## 9. ✅ KLAR i 0.9.275 – `lang="la"` på latinska termer
 
-**Mätt:** `lang="la"` förekommer **noll** gånger i hela sajten, trots tusentals latinska termer.
+**Mätt efteråt:** **1 503 förekomster** – **398 `<em>` i tabellernas latinkolumner** (alla
+398, 0 utan) och **1 105 latinska uppslagsord i ordlistan** (exakt de 1 105 som facit
+`data/ordlista.json` pekar ut: 0 falska, 0 missade). `lang="la"` sitter på **enbart** `<em>`
+och `<dt>`, ingen annanstans, och **0 märkta element innehåller svenska tecken**. Verifierat
+genom att härleda mängden ur datafilen och HTML:en oberoende av skriptets egen logik, inte
+genom att lita på dess räkning. Före: **noll** förekomster i hela sajten.
 
-En skärmläsare uttalar *musculus sternocleidomastoideus* med svensk fonetik. Det här är
-**WCAG 3.1.2 Language of Parts på nivå AA** – ett formellt AA-fel, inte en finess.
+**Analysens avgränsning var för smal – latinkolumnen finns i fyra tabellfamiljer, inte en.**
+Backloggen sa "muskeltabellernas latinkolumn". Mätningen hittade den även i skelettabellerna
+(`Ben (latin)`, 62 + ledtabellens `Latin`, 40), kärltabellerna (`Kärl (latin)`, 44) och – det
+som betydde mest – i de **handskrivna** nervtabellerna (`Nerv (latin)` 28,
+`Nerv (latin / svenska)` 12, `Bana (latin)` 12), som ingen generator äger. Klassiskt §0.2:
+feltypen hade flera ytformer än den som råkade beskrivas först.
 
-Rimlig avgränsning i ett första steg: muskeltabellernas latinkolumn (den är redan en egen
-`<td>` med `<em>`) samt ordlistans latinska uppslagsord. Löptextens inströdda latin är
-svårare och kan vänta.
+**Attributet sitter på `<em>`, aldrig på `<td>` – och det är hela poängen.** Latinkolumnerna
+är inte rent latinska: nervtabellerna skriver `<em>Nervus medianus</em><br>(medianusnerven)`
+och kranialnervstabellen `<em>Nervus opticus</em> – synnerven`. Ett `lang="la"` på cellen hade
+fått skärmläsaren att uttala den svenska översättningen med latinsk fonetik också. **Ett
+felaktigt språkattribut är en regression, inte en halv förbättring** – sämre än att inte märka
+något alls.
+
+**Två nya skript:**
+
+- [`scripts/latin.py`](latin.py) – regeln på ett ställe: kolumnmönstret `(latin)` och de 30
+  latinska genusord som avslutar ordlistans inverterade TA-former.
+- [`scripts/wire_lang.py`](wire_lang.py) – skriver in attributet. Idempotent genom att skriva
+  om, med `--check`. Ligger efter `generate_glossary.py` och före `wire_identity.py`.
+
+**Backloggen sa "görs i generatorerna" – det blev ett eget kedjesteg, femte gången i rad.**
+Samma slutsats som punkt 4, 5, 6 och 8: generatorerna äger bara tabellsidorna, hubbarna och
+ordlistan, så de handskrivna nervtabellerna hade blivit utan och fem generatorer fått var sin
+kopia av frågan "är det här latin?".
+
+**Ordlistan märktes till 1 105 av 11 176 poster, och resten är ett beslut – inte en glömska.**
+De latinska uppslagsorden känns igen på Terminologia Anatomicas inverterade form
+"specifik, genus" (`abductor pollicis brevis, musculus`); samtliga 1 105 slutar på ett av 30
+kända genusord, så regeln är sluten och kräver inget omdöme. Resten av ordlistan är svensk
+(`huvudvärk`, `snöblindhet`), internationell (`infektion`, `cytotoxisk`) eller fransk
+(`Souffle`), och ett mönster som gissade språket ur definitionstexten hade märkt svenska ord
+som latin. `data/ordlista.json` bär inget språkfält; ska de övriga latinska uppslagsorden
+(`axilla`, `radix`, `pylorus`) märkas är rätt åtgärd ett fält i datafilen som sätts när posten
+skrivs, inte en tolkning i efterhand (§0.3). **Löptextens inströdda latin är fortfarande
+omärkt** och kräver att termen avgränsas i märkningen först.
+
+**Kostnad:** gzipat +32 byte på en muskeltabell (+0,4 %), +198 på `ordlista-p.html` (+0,2 %),
++26 på `kranialnerverna.html` (+0,3 %). Attributsträngarna är identiska och komprimeras i
+praktiken bort – samma effekt som microdatan i punkt 7.
+
+### Blockeraren som lagades i samma pass
+
+**`lang="la"` hade daterat om 63 sidor till samma dag.** Attributet ändrar sidans markup men
+inte en bokstav av det läsaren ser, och `normalisera()` i `sidodatum.py` kände inte igen det.
+Bevisat genom att stänga av fixen och mäta: **63 sidor** – samtliga tabellsidor och hela
+ordlistan – stod på väg från sina riktiga datum (24–25 juli) till 26 juli. Det är exakt den
+falska färskhetssignal normaliseringen finns för att undvika. `LANG_RX` stryker attributet ur
+**båda** sidor av jämförelsen, vilket också gör att revisioner från innan det fanns fortsätter
+matcha – samma sak som `HISTORISKA_RX` löser för sidfoten. Efter fixen: **0 sidor omdaterade**
+trots att 63 filer skrevs om.
 
 ## 11. ⬜ Syskonlänkar i kunskapsbanken
 
@@ -457,6 +508,7 @@ Granskningen efter punkt 4:
 | 6 `citation` | ✅ `wire_citations.py` + `apa.py` kastar hellre än gissar | `check_generators.py` |
 | 7 `DefinedTerm` | ✅ `generate_glossary.py` äger märkningen | `check_generators.py` |
 | 8 sidfot | ✅ `wire_sidfot.py`, stoppar på oklassad ny sida | `check_generators.py` |
+| 9 `lang="la"` | ✅ `wire_lang.py`, stoppar på omärkbar latinkolumn och okänt genus | `check_generators.py` |
 | 10 kontrast | 🔒 vilande — se nedan | — |
 
 Punkt 5:s skydd är verifierat genom att fel planterats, inte genom att kontrollen sagt OK:
@@ -467,9 +519,14 @@ ska göras.
 **Punkt 10 saknar kontroll, och det förblir så.** En kontrastkontroll (räkna WCAG-kvot ur
 CSS-variablerna) skulle täcka både den och punkt 13, men båda rör hur sajten *ser ut*.
 
-**Regeln för resten av svepet:** varje kommande punkt (9, 11, 12, 14, 15) ska leverera
+**Regeln för resten av svepet:** varje kommande punkt (11, 12, 14, 15) ska leverera
 sitt skydd i samma pass som åtgärden, inte som en efterhandsfråga. Punkt 11 och 12 skyddas
 redan av `check_links.py` — nya syskonlänkar och en delad `llms-full.txt` valideras automatiskt.
+
+Punkt 9:s skydd är verifierat genom planterade fel, inte genom att kontrollen sagt OK:
+latinkolumn utan `<em>`, svenska tecken inuti ett latinskt `<em>` och ett okänt ord efter
+kommat i ett uppslagsord gav alla exitkod 1 med ett besked som säger vad som ska göras — och
+`LANG_RX`-fixen mättes genom att stängas av, varpå 63 sidor stod på väg att dateras om.
 
 ---
 
