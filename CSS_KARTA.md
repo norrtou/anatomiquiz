@@ -91,6 +91,24 @@ sidans avslut. Lägg aldrig ett eget löst `<p>` där; det var felet i 0.9.271, 
 en ombyggnad i 0.9.272. Nya finstilta rader hör hemma **inuti** sidfoten, alltså i
 `scripts/sidfot.py` – inte som ett nytt element.
 
+**Sidfoten går ut till containerns kant, som allt annat.** `.page-footer` har inget eget
+sidopadding och ingen `max-width` på sina stycken – texten är centrerad men nyttjar hela
+innehållsbredden (1000 px). En smal centrerad kolumn syns inte på mobil men ser fånig ut på
+dator (rättat 0.9.274).
+
+### ⚠️ Nytt spelläge ska registreras på TRE ställen
+
+Ett läge som bara läggs till på ett av dem ser rätt ut tills man spelar det:
+
+| Var | Vad som annars händer |
+|---|---|
+| `FIT_SECTIONS` i `js/app.js` | vyn krymps inte på mobil |
+| Fokuslägets `:has()`-lista i `styles.css` (~rad 1029) | sidrubrik och sidfot ligger kvar mitt i spelet |
+| `.gm-*`-basen (se [[project_shared_game_base]]) | spelkänslan saknas |
+
+Fram till 0.9.274 stod bara `#quiz` i fokuslägets lista, så sidfoten låg kvar under
+Flashcards, Matcha, Leitner och Tidsjakt.
+
 ## Snabb felsökning när en stiländring "inte tar"
 1. Vilka CSS-filer laddar sidan? (`grep stylesheet <sida>.html`)
 2. Finns selektorn i **mer än en** fil eller **mer än en gång** i samma fil?

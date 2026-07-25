@@ -1016,14 +1016,23 @@ select:focus-visible {
   }
 }
 
-/* Fokusläge under pågående quiz: dölj sidrubrik (titel/tagline ovanför spelaren)
-   och footern, och ta bort den gröna sidbakgrunden bakom kortet – sådant behöver
-   inte ta plats medan man spelar, så bilden får vara större. Återkommer på
-   inställnings-/resultatvyn (då har #quiz klassen .hidden). */
-.container:has(#quiz:not(.hidden)) > .header,
-.container:has(#quiz:not(.hidden)) > .page-footer {
+/* Fokusläge under en pågående vy: dölj sidrubrik (titel/tagline ovanför spelaren)
+   och sidfoten – sådant behöver inte ta plats medan man spelar. Återkommer på
+   setup-, inställnings- och resultatvyn, som alla har .hidden på spelsektionerna.
+
+   Listan är ALLA aktiva vyer, inte bara quizet. Fram till 0.9.274 stod bara
+   #quiz här, så sidfoten låg kvar under Flashcards, Matcha, Leitner och Tidsjakt
+   medan quizet fick fokusläge – samma inkonsekvens som gjorde att sidfoten syntes
+   mitt i ett spel. Ett nytt spelläge läggs till här OCH i FIT_SECTIONS i
+   js/app.js. */
+.container:has(#quiz:not(.hidden), #flashcards:not(.hidden), #matcha:not(.hidden),
+               #leitner:not(.hidden), #tidsjakt:not(.hidden)) > .header,
+.container:has(#quiz:not(.hidden), #flashcards:not(.hidden), #matcha:not(.hidden),
+               #leitner:not(.hidden), #tidsjakt:not(.hidden)) > .page-footer {
   display: none;
 }
+/* Sidbakgrunden gäller bara quizet: den tas bort för att bildfrågans kort ska
+   kunna vara större, och spellägena har inga bildfrågor. */
 body:has(#quiz:not(.hidden)) {
   background: var(--surface);
 }
@@ -4507,7 +4516,7 @@ ol li {
    block med egen linje och luft ovanför ser ut som ett avslut. */
 .page-footer {
   margin-top: 40px;
-  padding: 18px 16px 4px;
+  padding: 18px 0 4px;
   border-top: 1px solid rgba(16, 185, 129, 0.14);
   color: var(--text-secondary);
   font-size: 0.8rem;
@@ -4516,11 +4525,11 @@ ol li {
   text-wrap: pretty;
 }
 
-/* Raderna får inte bli en vägg: friskrivningen är den längsta och behöver en
-   läsbar radlängd även när sidan är bred. */
+/* Raderna nyttjar hela innehållsbredden, precis som allt annat på sidan. En
+   smal centrerad kolumn syns inte på mobil men ser fånig ut på dator, där
+   resten av innehållet går ut till containerns 1000 px. */
 .page-footer p {
-  max-width: 62ch;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .page-footer p + p {

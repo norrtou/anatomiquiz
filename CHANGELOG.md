@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.274
+- **Fokusläget gäller nu alla spellägen, inte bara quizet.** Sidrubriken och sidfoten döljs medan man spelar — men fram till nu stod bara `#quiz` i regeln, så sidfoten låg kvar mitt i **Flashcards, Matcha, Leitner och Tidsjakt**. Listan omfattar nu alla fem aktiva vyer. Setup-, inställnings- och resultatvyn får sidfoten tillbaka som förut.
+- **Sidfoten nyttjar hela innehållsbredden.** Styckena hade en `max-width` på 62 tecken och sidopadding, vilket inte syns på mobil men gav en smal centrerad kolumn på dator medan resten av sidan gick ut till containerns 1000 px. Texten är fortfarande centrerad, men går nu ut till samma kant som korten.
+- **`CSS_KARTA.md`:** nytt spelläge ska registreras på **tre** ställen — `FIT_SECTIONS` i `js/app.js`, fokuslägets `:has()`-lista i `styles.css` och `.gm-*`-basen. Ett läge som bara läggs till på ett av dem ser rätt ut tills man spelar det.
+
 ## 0.9.273
 - **Ny proaktiv regel: se på sidan innan något synligt läggs på den.** `CLAUDE_REGLER.md` **§0.5**, med kortversion i `SEO_REGLER.md` **§0b**, `CSS_KARTA.md` och §12-checklistan. Korrekt märkning och ett idempotent skript betyder ingenting om resultatet ser ut som något som blivit över — det var precis vad som hände i 0.9.271 och tvingade fram en ombyggnad i 0.9.272.
 - **Fyra frågor som ska besvaras innan en enda rad skrivs:** var slutar sidan *visuellt* (läs sidans slut på **varje** berörd sidtyp — sajten har tre olika avslut), hör det nya ihop med något som redan finns (baka ihop, lägg inte bredvid), vilken befintlig form ska det ärva, och vad tar det uppmärksamhet från. Ingen fetstil i sidfot eller annan finstilt.
