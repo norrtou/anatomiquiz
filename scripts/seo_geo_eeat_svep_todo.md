@@ -3,7 +3,12 @@
 **Status:** analys gjord 2026-07-25 över samtliga sidor. **Punkt 1, 2, 3 och 10 utförda i 0.9.259.
 Punkt 7 utförd i 0.9.265** (plus tre generatorbuggar som blockerade den, se nedan).
 **Generatordriften utredd och åtgärdad i 0.9.266 – punkt 4, 6 och 14 är inte längre blockerade.
-Punkt 6 utförd i 0.9.267. Punkt 4 utförd i 0.9.268.** Resten är öppen och prioriterad nedan.
+Punkt 6 utförd i 0.9.267. Punkt 4 utförd i 0.9.268. Återfallsskydd för hela svepet i
+0.9.269.** Resten är öppen och prioriterad nedan.
+
+> 🔒 **Punkt 10 och 13 är vilande och ska inte tas upp, föreslås eller utföras.** Användaren
+> beslutade 2026-07-25 att inget visuellt ska göras och tar upp dem på eget initiativ.
+> Öppna punkter är därmed **5, 8, 9, 11, 12, 14, 15** — inga andra.
 **Skapad:** 2026-07-25. **Underlag:** hela sajten lästes maskinellt – titlar, descriptions,
 canonicals, JSON-LD, rubrikhierarki, tabellmärkning, intern länkning, `llms.txt`, `sitemap.xml`,
 `robots.txt` och CSS-kontraster. Siffrorna nedan är mätta, inte uppskattade.
@@ -134,7 +139,7 @@ skriver inget och ger exit 1 vid avvikelse. Ren utcheckning + `--check` ska allt
 | 9 | `lang="la"` på latinska termer | ~3 h | Hög (WCAG AA) |
 | 11 | Syskonlänkar / "Relaterat"-block | ~3 h | Medel |
 | 12 | Dela `llms.txt` / `llms-full.txt` | ~30 min | Medel |
-| 13 | `.glossary-letter`-kontrast i ljust läge | ~15 min | Medel (WCAG) |
+| ~~13~~ | ~~`.glossary-letter`-kontrast i ljust läge~~ | 🔒 **VILANDE** | ta inte upp |
 | 14 | `about`/`teaches`/`keywords` i schema | ~2 h | Medel (GEO) |
 | 15 | `integritet.html` rubrikhopp h1→h3 | 5 min | Låg |
 
@@ -279,7 +284,11 @@ Begränsar både crawldjup och hur topical authority samlas.
 Specen vill ha en kort, skannbar indexfil. Innehållet är utmärkt GEO-material – problemet är
 bara var det ligger. Kort `llms.txt` (~5 KB) + `llms-full.txt` med nuvarande innehåll.
 
-## 13. ⬜ `.glossary-letter`-kontrast i ljust läge
+## 13. 🔒 VILANDE – `.glossary-letter`-kontrast i ljust läge
+
+> **Ta inte upp den här punkten.** Användaren beslutade 2026-07-25 att inget visuellt ska
+> göras. Mätningen nedan står kvar som dokumentation; den är inte en åtgärdslista. Se
+> avsnittet "Vilande: punkt 10 och 13" ovan.
 
 **Mätt:** vit text på `linear-gradient(#10b981, #34d399)` ger **2,5:1** i den ljusa änden –
 på varje ordlistesidas klistrade bokstavsrubrik. Samma problem i rekordmärkenas ljusa
@@ -291,8 +300,8 @@ gradientände (`.gm-record-badge`, `.matcha-record-badge`, `.leitner-record-badg
 bottnen mörkgrön (5,48:1). Ljust läge lämnades medvetet orört eftersom fixen ändrar den
 visuella designen och inte var beställd.
 
-Fixen är att låta gradienten börja på `--primary-deep` (`#047857`) i stället för `--primary`,
-eller lägga en mörkare textskugga. **Fråga innan** – det syns.
+Fixen vore att låta gradienten börja på `--primary-deep` (`#047857`) i stället för `--primary`,
+eller lägga en mörkare textskugga. Noterat för användarens skull – inte som ett förslag.
 
 ## 14. ⬜ `about` / `teaches` / `keywords` i schema
 
@@ -323,16 +332,29 @@ Granskningen efter punkt 4:
 | 4 identitet | ✅ `wire_identity.py`, larmar på okänd `@type` | `check_generators.py` |
 | 6 `citation` | ✅ `wire_citations.py` + `apa.py` kastar hellre än gissar | `check_generators.py` |
 | 7 `DefinedTerm` | ✅ `generate_glossary.py` äger märkningen | `check_generators.py` |
-| **10 kontrast** | ❌ **inget** — `--text-secondary` kan ändras tillbaka | — |
+| 10 kontrast | 🔒 vilande — se nedan | — |
 
-**Punkt 10 är det enda öppna hålet.** En kontrastkontroll (räkna WCAG-kvot ur CSS-variablerna)
-skulle täcka både den och punkt 13. Punkt 13 är dock nedprioriterad av användaren 2026-07-25,
-och att bygga motorn enbart för punkt 10 är inte proportionerligt. **Tas när punkt 13 tas** —
-om den tas. Noterat här så att antagandet kan omprövas i stället för att glömmas.
+**Punkt 10 saknar kontroll, och det förblir så.** En kontrastkontroll (räkna WCAG-kvot ur
+CSS-variablerna) skulle täcka både den och punkt 13, men båda rör hur sajten *ser ut*.
 
 **Regeln för resten av svepet:** varje kommande punkt (5, 8, 9, 11, 12, 14, 15) ska leverera
 sitt skydd i samma pass som åtgärden, inte som en efterhandsfråga. Punkt 11 och 12 skyddas
 redan av `check_links.py` — nya syskonlänkar och en delad `llms-full.txt` valideras automatiskt.
+
+---
+
+## 🔒 Vilande: punkt 10 och 13 — visuella ändringar
+
+**Beslut av användaren 2026-07-25: inget visuellt ska göras.** Punkterna står kvar här som
+dokumentation av vad som mätts, ingenting annat.
+
+**De ska inte tas upp, föreslås, påminnas om eller utföras.** Inte i statusrapporter, inte
+som "det finns förresten kvar", inte som ett erbjudande i slutet av ett annat pass. Användaren
+tar upp dem på eget initiativ om och när hen vill. Det gäller även den kontrastkontroll som
+skulle skydda punkt 10 mot återfall — bygg den inte oombedd.
+
+Detsamma gäller allt annat som ändrar sajtens utseende: textstorlekar är sedan tidigare
+uttryckligen fredade (se "Medvetet EJ åtgärdat" nedan).
 
 ---
 
