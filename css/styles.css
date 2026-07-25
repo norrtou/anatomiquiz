@@ -1021,7 +1021,7 @@ select:focus-visible {
    inte ta plats medan man spelar, så bilden får vara större. Återkommer på
    inställnings-/resultatvyn (då har #quiz klassen .hidden). */
 .container:has(#quiz:not(.hidden)) > .header,
-.container:has(#quiz:not(.hidden)) > .footer {
+.container:has(#quiz:not(.hidden)) > .page-footer {
   display: none;
 }
 body:has(#quiz:not(.hidden)) {
@@ -2105,26 +2105,9 @@ button.breadcrumb-link {
 }
 
 /* ============================================================================
-   FOOTER
+   FOOTER — se .page-footer längre ner. Den gamla .footer låg bara på två sidor
+   och bar kakraden ensam; den är uppgången i den delade sidfoten (0.9.272).
    ============================================================================ */
-
-.footer {
-  margin-top: 32px;
-  padding: 16px;
-  color: var(--text-secondary);
-  font-size: 0.85rem;
-  text-align: center;
-  border-top: 1px solid rgba(16, 185, 129, 0.1);
-}
-
-.footer code {
-  background: rgba(16, 185, 129, 0.08);
-  color: var(--primary-deep);
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-family: 'Courier New', monospace;
-  font-weight: 500;
-}
 
 /* ============================================================================
    ORDERED LISTS
@@ -4517,29 +4500,41 @@ ol li {
   color: var(--text-secondary);
 }
 
-/* Medicinsk ansvarsfriskrivning — samma rad, samma ord, på varje innehållssida.
-   Skrivs av scripts/wire_friskrivning.py ur scripts/friskrivning.py och står
-   direkt ovanför datumraden. Formen är medvetet densamma som .page-updated:
-   det här är sidans metadata, inte en varningsruta som ska skrika. */
-.page-disclaimer {
-  margin: 26px 0 0;
-  padding-top: 12px;
-  border-top: 1px solid rgba(16, 185, 129, 0.15);
-  font-size: 0.85rem;
-  line-height: 1.55;
+/* Sidfoten — ansvarsfriskrivning, integritetsrad och datum i ETT block sist i
+   <main>. Skrivs av scripts/wire_sidfot.py ur scripts/sidfot.py. Samma form som
+   den gamla .footer, som den ersätter: centrerad, liten och dämpad. Tre lösa
+   rader under det som avslutar sidan såg ut som något som blivit över — ett
+   block med egen linje och luft ovanför ser ut som ett avslut. */
+.page-footer {
+  margin-top: 40px;
+  padding: 18px 16px 4px;
+  border-top: 1px solid rgba(16, 185, 129, 0.14);
   color: var(--text-secondary);
+  font-size: 0.8rem;
+  line-height: 1.6;
+  text-align: center;
+  text-wrap: pretty;
 }
 
-.page-disclaimer strong {
-  color: var(--text-primary);
+/* Raderna får inte bli en vägg: friskrivningen är den längsta och behöver en
+   läsbar radlängd även när sidan är bred. */
+.page-footer p {
+  max-width: 62ch;
+  margin: 0 auto;
 }
 
-/* Friskrivningen och datumet läses som ett block: bara det första av dem bär
-   linjen, annars får sidan två streck på rad. */
-.page-disclaimer + .page-updated {
-  margin-top: 8px;
+.page-footer p + p {
+  margin-top: 7px;
+}
+
+/* Datumet är den minst viktiga raden och ligger sist — lite mer luft och en
+   aning svagare, så blocket har en riktning uppifrån och ner. */
+.page-footer .page-updated {
+  margin-top: 12px;
   padding-top: 0;
   border-top: 0;
+  font-size: 0.75rem;
+  opacity: 0.85;
 }
 
 /* Källförteckning på innehållssidor */
@@ -4849,17 +4844,19 @@ ol li {
   .info-about p, .info-about li,
   .kb-sources p, .kb-sources li { color: #000; margin: 0 0 4pt; }
 
-  /* Datumraden följer med i utskriften – en utskriven sida utan datum går inte
-     att bedöma färskheten på. Ramen bort, texten svart. Friskrivningen följer
-     med av tyngre skäl: en utskriven muskeltabell som cirkulerar utan den ser
-     ut som ett kliniskt underlag. */
-  .page-updated,
-  .page-disclaimer {
+  /* Sidfoten följer med i utskriften. Datumet för att en utskriven sida utan
+     datum inte går att bedöma färskheten på, friskrivningen av tyngre skäl: en
+     utskriven muskeltabell som cirkulerar utan den ser ut som ett kliniskt
+     underlag. Ramen bort, texten svart. */
+  .page-footer {
     border: 0 !important;
     padding: 0 !important;
-    margin: 4pt 0 0 !important;
+    margin: 6pt 0 0 !important;
     color: #000;
+    text-align: left;
   }
+  .page-footer p { max-width: none; margin: 0 0 3pt; }
+  .page-footer .page-updated { margin: 3pt 0 0 !important; opacity: 1; }
 
   h1 { font-size: 15pt; margin: 0 0 5pt; }
   h2 { font-size: 12pt; margin: 9pt 0 3pt; }

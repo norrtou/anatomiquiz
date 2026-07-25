@@ -5,7 +5,7 @@ Punkt 7 utförd i 0.9.265** (plus tre generatorbuggar som blockerade den, se ned
 **Generatordriften utredd och åtgärdad i 0.9.266 – punkt 4, 6 och 14 är inte längre blockerade.
 Punkt 6 utförd i 0.9.267. Punkt 4 utförd i 0.9.268. Återfallsskydd för hela svepet i
 0.9.269. Punkt 5 utförd i 0.9.270**, plus två blockerare i sitemap- och rundtrippskedjan.
-**Punkt 8 utförd i 0.9.271.** Resten är öppen och prioriterad nedan.
+**Punkt 8 utförd i 0.9.271, omarbetad till en delad sidfot i 0.9.272.** Resten är öppen och prioriterad nedan.
 
 > 🔒 **Punkt 10 och 13 är vilande och ska inte tas upp, föreslås eller utföras.** Användaren
 > beslutade 2026-07-25 att inget visuellt ska göras och tar upp dem på eget initiativ.
@@ -138,7 +138,7 @@ utcheckning. Se punkt 5 nedan.
 | ~~5~~ | ~~Synligt `<time datetime>` + `dateModified` överallt~~ | ✅ 0.9.270 | **Hög (EEAT + färskhet)** |
 | ~~6~~ | ~~`citation` från befintliga referenslistor~~ | ✅ 0.9.267 | **Hög (EEAT)** |
 | ~~7~~ | ~~`DefinedTerm`-microdata i ordlistan~~ | ✅ 0.9.265 | **Högst (GEO)** |
-| ~~8~~ | ~~Ansvarsfriskrivning som delad komponent~~ | ✅ 0.9.271 | **Hög (YMYL)** |
+| ~~8~~ | ~~Ansvarsfriskrivning som delad komponent~~ | ✅ 0.9.271–272 | **Hög (YMYL)** |
 | 9 | `lang="la"` på latinska termer | ~3 h | Hög (WCAG AA) |
 | 11 | Syskonlänkar / "Relaterat"-block | ~3 h | Medel |
 | 12 | Dela `llms.txt` / `llms-full.txt` | ~30 min | Medel |
@@ -293,37 +293,55 @@ håller `#term-…`-ankarna stabila gäller fortfarande.
 och bokstavssidornas `isPartOf` pekar nu på samma `@id`. Ordlistan är därmed **en** entitet i
 stället för 33 löskopplade kopior — samma princip som punkt 4 vill ha på Person-noden.
 
-## 8. ✅ KLAR i 0.9.271 – medicinsk ansvarsfriskrivning som delad komponent
+## 8. ✅ KLAR i 0.9.271, omarbetad till en sidfot i 0.9.272
 
-**Mätt efteråt:** **113 av 119 sidor** bär raden, och alla 113 bär den **ordagrant identisk**
-med `MARKUP` — verifierat genom att extrahera raden ur varje sida och jämföra strängarna, inte
-genom att räkna träffar på klassnamnet. 0 avvikande texter, 0 rader utanför `<main>`, 0 rader
-efter datumraden. De 6 som står utanför är exakt `UTAN_FRISKRIVNING`.
+**Mätt efteråt:** **117 av 119 sidor** bär den delade sidfoten. Av dem har **113**
+friskrivningsraden, **116** integritetsraden och **116** datumraden — varje avvikelse
+motsvarar exakt en post i sin undantagslista, ingen annan. Alla rader är **ordagrant
+identiska**, verifierat genom att extrahera blocket ur varje sida och jämföra strängarna, inte
+genom att räkna träffar på klassnamnet. 0 sidfötter utanför `<main>`, 0 tooltips inuti dem,
+**0 förekomster av fetstil**.
 
-Före: **5 av 119** sidor sa något, i **fyra olika** formuleringar (`spellagen.html` ett helt
-kortavsnitt, `info.html` ett stycke under Källor, två artiklar en mening mitt i brödtexten,
-läkemedelsräknaren sin `.vt-ansvar`-ruta). Analysens "4–5 sidor" stämde; däremot stämde inte
-"läkemedelsberäkningssidorna har den" — det gällde **räknaren**, medan båda faktatexterna om
-läkemedelsberäkning saknade friskrivning helt. Muskeltabeller, nervtabeller, kärl, skelett,
-leder, ordlistans 33 sidor och startsidan hade ingenting.
+Före: **5 av 119** sidor sa något om ansvar, i **fyra olika** formuleringar (`spellagen.html`
+ett helt kortavsnitt, `info.html` ett stycke under Källor, två artiklar en mening mitt i
+brödtexten, läkemedelsräknaren sin `.vt-ansvar`-ruta). Analysens "4–5 sidor" stämde; däremot
+stämde inte "läkemedelsberäkningssidorna har den" — det gällde **räknaren**, medan båda
+faktatexterna om läkemedelsberäkning saknade friskrivning helt. Muskeltabeller, nervtabeller,
+kärl, skelett, leder, ordlistans 33 sidor och startsidan hade ingenting.
 
-**Två nya skript:**
+**Formen blev en sidfot, inte en rad — och det var användarens invändning som gav rätt svar.**
+Första bygget (0.9.271) lade friskrivningen som ett löst stycke ovanför den lika lösa
+datumraden, sist i `<main>`. På varje sida hamnade de två under det som *visuellt* avslutar
+sidan: knappraden, ordlistans tillbakaknappar, och på `index.html` under sajtens egen
+kakfot. Tre lösa rader efter sidans avslut ser ut som något som blivit över.
 
-- [`scripts/friskrivning.py`](friskrivning.py) – texten, markupen, mönstret och listan över
-  undantag. En sträng, ett ställe.
-- [`scripts/wire_friskrivning.py`](wire_friskrivning.py) – placerar raden sist i `<main>`,
-  direkt före datumraden. Ligger mellan `wire_identity.py` och `wire_dates.py` i kedjan.
+Rätt åtgärd var inte att flytta raden utan att **baka ihop den med kakraden till en riktig
+sidfot** — samma form som den gamla `.footer`: centrerad, liten, dämpad, med egen linje och
+luft ovanför. Kakraden fanns dessutom bara på två sidor; nu står den på alla 116 där den hör
+hemma. Den gamla `.footer`-klassen är uppgången i den nya och dess CSS borttagen.
+
+**Två skript:**
+
+- [`scripts/sidfot.py`](sidfot.py) – raderna, markupen, mönstren och de tre undantagslistorna.
+  En sträng, ett ställe.
+- [`scripts/wire_sidfot.py`](wire_sidfot.py) – bygger blocket sist i `<main>`. Ligger mellan
+  `wire_identity.py` och `wire_dates.py` i kedjan.
 
 **Backloggen sa "en delad footer-komponent som alla generatorer emitterar" – det blev ett eget
-kedjesteg igen**, av exakt samma skäl som punkt 4 och 6 kom fram till: generatorerna äger bara
-tabellsidorna, hubbarna och ordlistan. Artikeltexterna, de 29 handskrivna
+kedjesteg igen**, av exakt samma skäl som punkt 4, 5 och 6 kom fram till: generatorerna äger
+bara tabellsidorna, hubbarna och ordlistan. Artikeltexterna, de 29 handskrivna
 kunskapsbankssidorna, `index.html` och `case.html` hade blivit utan, och sex generatorer hade
 fått var sin kopia av samma mening att hålla i synk.
 
-**Skriptet skriver om, det hoppar inte över.** En befintlig rad tas bort och läggs in på nytt
-på den kanoniska platsen. Det gör att en textändring i `friskrivning.py` slår igenom på alla
-113 sidorna vid nästa körning — ett skript som hoppade över redan wirade sidor hade lämnat den
-gamla texten kvar, precis det som gjorde `--sync-defs` nödvändig i `wire_terms.py`.
+**Datumraden bytte ägare till hälften.** `wire_dates.py` äger datumets *värde*,
+`wire_sidfot.py` dess *plats*: en befintlig `<p class="page-updated">` plockas ur sidan och
+läggs sist i blocket. Saknas den helt — en nygenererad sida — lägger `wire_dates.py` in den i
+sidfoten i stället för före `</main>`, eftersom det steget kör efter.
+
+**Skriptet skriver om, det hoppar inte över.** En befintlig sidfot tas bort och byggs på nytt.
+Det gör att en textändring i `sidfot.py` slår igenom på alla sidorna vid nästa körning — ett
+skript som hoppade över redan wirade sidor hade lämnat den gamla texten kvar, precis det som
+gjorde `--sync-defs` nödvändig i `wire_terms.py`.
 
 **Ingen variant per sidtyp.** `.vt-ansvar` på räknaren står kvar orörd: den handlar om att
 stämma av ett *uträknat svar* mot ordination och produktinformation och hör hemma bredvid
@@ -336,26 +354,29 @@ granskat innehållet. Ett `reviewedBy` utan granskare är ett falskt påstående
 och ett sämre EEAT-läge än att inte påstå något. Beslutet står i SEO_REGLER §6e så att det
 inte behöver tas om.
 
-**Två fällor som hittades vid mätning, inte vid läsning:**
+**Tre fällor som hittades vid mätning, inte vid läsning:**
 
-1. **`\s*` i borttagningsmönstret åt upp en tomrad per körning.** Första versionen rundtrippade
-   inte: `\s*<p class="page-disclaimer">` svalde även den tomrad som skiljer raden från
-   `</section>`, och 61 av 113 sidor tappade en tomrad. Mönstret matchar nu `\n[ \t]*` — exakt
-   så mycket som lades till. Raden läggs dessutom in **efter** blankstegssvepet före datumraden,
-   inte före det.
-2. **`klinisk`/`kliniska` är facitnycklar.** Utan `.page-disclaimer` som skyddad zon i
-   `wire_terms.py` hade `wire_terms` wirat dem vid nästa körning och gjort 113 identiska rader
-   till 113 olika. Zonen är på plats; 0 `kb-term` inuti raden, verifierat.
+1. **`\s*` i borttagningsmönstret åt upp en tomrad per körning.** Första versionen
+   rundtrippade inte: `\s*` svalde även den tomrad som skiljer blocket från `</section>`, och
+   61 av 113 sidor tappade en tomrad. Mönstren matchar nu `\n[ \t]*` — exakt så mycket som
+   lades till. Blocket läggs dessutom in **efter** blankstegssvepet före `</main>`, inte före.
+2. **`klinisk`/`kliniska` är facitnycklar.** Utan `.page-footer` som skyddad zon i
+   `wire_terms.py` hade `wire_terms` wirat dem vid nästa körning och gjort 117 identiska
+   sidfötter till 117 olika. Zonen är på plats; 0 `kb-term` inuti dem, verifierat.
+3. **Boilerplate måste kunna strykas i den form den hade IGÅR.** `normalisera()` i
+   `sidodatum.py` jämför mot git-historiken. När 0.9.271:s `.page-disclaimer` byttes mot
+   sidfoten kände normaliseringen bara igen den nya formen, och **112 sidor** stod på väg att
+   dateras om till samma dag — exakt den falska färskhetssignal normaliseringen finns för att
+   undvika. `HISTORISKA_RX` i `sidfot.py` stryker de gamla formerna; efter det: **0 sidor
+   omdaterade**. Ändras sidfotens markup igen ska den gamla formen in där i samma pass.
 
-**Kostnad:** gzipat +120 byte på `index.html` (+0,6 %), +174 på en muskeltabell (+2,1 %),
-+157 på `ordlista-p.html` (+0,2 %), +139 på minnesregelartikeln (+0,9 %).
+**Kostnad** mot läget före hela punkten: gzipat +76 byte på `index.html` (+0,4 %, den bar
+redan kakraden), +245 på en muskeltabell (+2,9 %), +214 på `ordlista-p.html` (+0,3 %).
 
-**Skyddet är verifierat genom planterade fel, inte genom att kontrollen sagt OK:** raderad rad,
-handredigerad text på en sida, rad flyttad till fel plats, ny sida utan `<main>` och en sida i
-`UTAN_FRISKRIVNING` som inte finns gav alla exitkod 1 med ett besked som säger vad som ska
-göras. Raden räknas inte som innehåll i `sidodatum.py` — bevisat live: svepet rörde 113 filer
-och flyttade **noll** datum. De två artiklarna daterades om till 26 juli, vilket är korrekt:
-där ändrades brödtexten på riktigt.
+**Skyddet är verifierat genom planterade fel, inte genom att kontrollen sagt OK:** raderad
+sidfot, handredigerad text, borttagen rad, datumrad utflyttad ur blocket, ny sida utan
+`<main>` och ett spöke i undantagslistan gav alla exitkod 1 med ett besked som säger vad som
+ska göras.
 
 ## 9. ⬜ `lang="la"` på latinska termer
 
@@ -435,7 +456,7 @@ Granskningen efter punkt 4:
 | 5 datum | ✅ `sidodatum.py --check` mot git + `wire_dates.py` | `check_generators.py` |
 | 6 `citation` | ✅ `wire_citations.py` + `apa.py` kastar hellre än gissar | `check_generators.py` |
 | 7 `DefinedTerm` | ✅ `generate_glossary.py` äger märkningen | `check_generators.py` |
-| 8 friskrivning | ✅ `wire_friskrivning.py`, stoppar på oklassad ny sida | `check_generators.py` |
+| 8 sidfot | ✅ `wire_sidfot.py`, stoppar på oklassad ny sida | `check_generators.py` |
 | 10 kontrast | 🔒 vilande — se nedan | — |
 
 Punkt 5:s skydd är verifierat genom att fel planterats, inte genom att kontrollen sagt OK:

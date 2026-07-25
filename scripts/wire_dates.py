@@ -36,7 +36,14 @@ from jsonld import ROOT, antal_sidnoder, skriv_i_sidnod, sätt  # noqa: E402
 from sidodatum import (DATUMRAD, TIME_RX, läs_register,  # noqa: E402
                        synligt_datum)
 
-# Sista </main> på sidan, med radens indrag. Raden läggs ett steg längre in.
+# Slutet på den delade sidfoten, med dess indrag. Datumraden hör hemma där —
+# `wire_sidfot.py` kör före och har redan flyttat in en befintlig rad; det här är
+# fallet där sidan inte hade någon alls (en nygenererad sida).
+SIDFOT_SLUT_RX = re.compile(r'<footer class="page-footer">.*?\n([ \t]*)</footer>',
+                            re.S)
+
+# Sista </main> på sidan, med radens indrag. Reservväg för en sida som varken har
+# datumrad eller sidfot. Raden läggs ett steg längre in.
 MAIN_RX = re.compile(r"\n([ \t]*)</main>")
 
 # datePublished/dateModified ska stå före identiteten och referenserna, så att
@@ -59,14 +66,20 @@ def wire_html(html: str, publicerad: str, andrad: str) -> str:
     if TIME_RX.search(html):                   # sidan bär redan sitt datum
         return TIME_RX.sub(_time(andrad), html)
 
+    rad = DATUMRAD.format(iso=andrad, synligt=synligt_datum(andrad))
+
+    m = SIDFOT_SLUT_RX.search(html)            # sist i den delade sidfoten
+    if m:
+        i = m.end(1) - len(m.group(1))         # radbörjan för </footer>
+        return html[:i] + f"{m.group(1)}  {rad}\n" + html[i:]
+
     m = MAIN_RX.search(html)
     if not m:
         raise ValueError(
-            "varken <time data-updated> eller </main> — det synliga datumet "
-            "hade tyst uteblivit (CLAUDE_REGLER §0.4). Ge sidan ett <main> "
-            "enligt SEO_REGLER §7, eller märk ett befintligt <time> med "
+            "varken <time data-updated>, sidfot eller </main> — det synliga "
+            "datumet hade tyst uteblivit (CLAUDE_REGLER §0.4). Ge sidan ett "
+            "<main> enligt SEO_REGLER §7, eller märk ett befintligt <time> med "
             "data-updated.")
-    rad = DATUMRAD.format(iso=andrad, synligt=synligt_datum(andrad))
     return html[:m.start()] + f"\n{m.group(1)}  {rad}" + html[m.start():]
 
 

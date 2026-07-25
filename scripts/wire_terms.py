@@ -269,16 +269,16 @@ def wire_html(html, terms, rx, stats=None):
             # in EFTER wiringen skulle den träffas först vid nästa körning – ett
             # fel som dykt upp långt från sin orsak (SEO_REGLER §6c).
             is_page_updated = bool(re.search(r'class="page-updated[ "]', attrs))
-            # Ansvarsfriskrivningen (.page-disclaimer) av samma skäl, och ett
-            # till: raden ska vara BYTE-IDENTISK på alla 113 sidor. Ett par
-            # tooltips på "kliniska riktlinjer" hade gjort den till 113 olika
+            # Sidfoten (.page-footer) av samma skäl, och ett till: friskrivningen
+            # och integritetsraden ska vara BYTE-IDENTISKA på alla sidor. Ett par
+            # tooltips på "kliniska riktlinjer" hade gjort dem till 117 olika
             # rader, och därmed upphävt hela poängen med en delad komponent.
-            is_page_disclaimer = bool(re.search(r'class="page-disclaimer[ "]', attrs))
+            is_page_footer = bool(re.search(r'class="page-footer[ "]', attrs))
             if (name in ("head", "script", "style") or is_breadcrumb_nav
                     or (is_kb_card and name != "a")
                     or (is_kb_sources and name != "a")
                     or (is_page_updated and name != "a")
-                    or (is_page_disclaimer and name != "a")) and not self_closing:
+                    or (is_page_footer and name != "a")) and not self_closing:
                 protected.append(name)        # öppna skyddad zon
             elif name == "a" and not self_closing:
                 in_anchor = True

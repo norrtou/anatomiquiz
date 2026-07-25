@@ -43,8 +43,9 @@ import subprocess
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from friskrivning import RX as FRISKRIVNING_RX  # noqa: E402
 from jsonld import LD, ROOT, är_sidnod  # noqa: E402
+from sidfot import HISTORISKA_RX  # noqa: E402
+from sidfot import RX as SIDFOT_RX  # noqa: E402
 
 REGISTER = ROOT / "data" / "sidodatum.json"
 
@@ -95,17 +96,19 @@ def normalisera(html: str) -> str:
     * JSON-LD — strukturdatan speglar sidan, den *är* inte sidan. Annars hade
       det här skriptets egen utdata (`dateModified`) räknats som en ändring.
     * datumraden — se DATUMRAD ovan.
-    * ansvarsfriskrivningen — samma resonemang. Raden är identisk på 113 sidor
-      och lades på dem alla samma dag; räknades den som innehåll hade hela
-      sajten daterats om till den dagen, vilket är precis den falska
-      färskhetssignal den här normaliseringen finns för att undvika.
+    * sidfoten — samma resonemang. Friskrivningen och integritetsraden är
+      identiska på alla sidor och lades på dem alla samma dag; räknades de som
+      innehåll hade hela sajten daterats om till den dagen, vilket är precis den
+      falska färskhetssignal den här normaliseringen finns för att undvika.
     * cachebusters — `?v=0.9.269` är en versionsbump, inte en ändring.
     * blankstegsskillnader — omindentering är inte en uppdatering.
     """
     html = HEAD_RX.sub("", html)
     html = LD_RX.sub("", html)
+    html = SIDFOT_RX.sub("", html)             # före DATUMRAD_RX: datumraden
+    for rx in HISTORISKA_RX:                   # ligger inuti sidfoten
+        html = rx.sub("", html)
     html = DATUMRAD_RX.sub("", html)
-    html = FRISKRIVNING_RX.sub("", html)
     html = TIME_RX.sub("", html)
     html = CACHEBUSTER_RX.sub("?v=", html)
     return BLANKSTEG_RX.sub(" ", html).strip()

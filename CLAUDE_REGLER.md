@@ -930,10 +930,10 @@ kontrollen nedan mäter samma sak korrekt, eftersom den kör **hela** kedjan.
 
 Skriptet speglar alla spårade filer till en temporär katalog, kör hela kedjan
 där (alla `generate_*.py` + `wire_terms.py` + `wire_citations.py` +
-`wire_identity.py` + `wire_friskrivning.py` + `wire_dates.py`) och jämför fil för
+`wire_identity.py` + `wire_sidfot.py` + `wire_dates.py`) och jämför fil för
 fil mot arbetskopian. Bara en körning av hela kedjan duger: **wire-stegen kan
 ingen enskild generator kontrollera** — tooltips, referenser, identitet,
-ansvarsfriskrivning och datum läggs på *efter* sidgenereringen, så det är först
+sidfot och datum läggs på *efter* sidgenereringen, så det är först
 när allt körts i ordning som man ser om de överlever. Därefter kör det `check_links.py` (varje intern länk mot disk) och
 `sidodatum.py --check` (varje sidas datum mot git). **Kör det före varje commit
 som rör en generator, ett facit eller en genererad sida.**
@@ -941,7 +941,7 @@ som rör en generator, ett facit eller en genererad sida.**
 **Spegeln kopierar bara *spårade* filer.** Ett nytt kedjesteg måste vara
 `git add`-at innan `check_generators.py` kan köra det — annars saknas skriptet i
 spegeln och kedjan faller på en `ModuleNotFoundError` som ser ut som ett kodfel
-men är en oincheckad fil (hände när `wire_friskrivning.py` lades till i 0.9.271).
+men är en oincheckad fil (hände när `wire_sidfot.py` lades till i 0.9.271).
 
 **Ett steg som behöver git kan inte ligga i KEDJA.** Spegeln är en naken
 filkopia utan `.git`, så `sidodatum.py` körs mot arbetskatalogen efter
