@@ -242,14 +242,22 @@ Nya sidor **stoppar bygget** om de inte registreras — det är §0.4 och det ä
 
 ## 7. Releaseordning och status
 
+> ⏸️ **PAUSAT 2026-07-27 — vila på användarens begäran.** Krediterna räcker bara till
+> småpyssel i flera dagar framåt, och släpp 3–6 är alla stora byggen. **Ingen av
+> punkterna nedan startas** förrän användaren själv säger till att vi fortsätter.
+> Fråga inte, föreslå inte, plocka inte "en liten bit" av släpp 3 i förbifarten.
+> Släpp 1 och 2 är levererade och live — inget står halvfärdigt, ingenting behöver
+> städas innan pausen. Vid återstart: läs §7 nedifrån och upp, stäm av formen från
+> släpp 2 med användaren, bygg sedan släpp 3.
+
 | Släpp | Innehåll | Status |
 |---|---|---|
 | **1** | `wire_terms.py` utökas till `/verktyg/` + ordlistetermerna + §0.6 i reglerna | ✅ **klart 0.9.286** |
 | **2** | Motor (`akutmedicin.json` + `.js` + CSS) + hubb + `vitalparametrar.html` (NEWS2) + testskal | ✅ **klart 0.9.287** |
-| **3** | `syra-bas.html` — blodgasklassificeraren | ⬜ |
-| **4** | `blodproppar.html` + `hjartat.html` | ⬜ |
-| **5** | `infektion.html` + `neurologi.html` + `buken.html` | ⬜ |
-| **6** | `kunskapsbank/kliniska-poangskalor.html` + korslänkning + `info.html`-källor | ⬜ |
+| **3** | `syra-bas.html` — blodgasklassificeraren | ⏸️ pausat 2026-07-27 |
+| **4** | `blodproppar.html` + `hjartat.html` | ⏸️ pausat 2026-07-27 |
+| **5** | `infektion.html` + `neurologi.html` + `buken.html` | ⏸️ pausat 2026-07-27 |
+| **6** | `kunskapsbank/kliniska-poangskalor.html` + korslänkning + `info.html`-källor | ⏸️ pausat 2026-07-27 |
 
 **Släpp 2 är referensimplementationen** — formen stäms av med användaren innan resten rullas
 ut. Bygg inte vidare på en form som inte godkänts.
