@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.295
+- **Undertexten på NEWS2-sidan är nu "Träna på NEWS2 och lär dig hur det fungerar"** (användarens formulering, ordagrant). Den säger rakt ut vad sidan är till för — öva på skalan och förstå den — i stället för att räkna upp innehållet.
+
 ## 0.9.294
 - **Syrgasfältets etikett är kortad till "Andas luft eller syrgas".** "Andas patienten luft eller syrgas?" bröt till två rader på skrivbordsbredd, och eftersom etiketten är en `display: block` ovanför fältet sköt den andra raden ner rullgardinen ett snäpp jämfört med fälten bredvid — hela raden såg ojämn ut. Kortare text, en rad, jämn linje.
 - Etiketten står nu i samma form som de andra sex ("Andningsfrekvens", "Systoliskt blodtryck", "Puls") — en benämning på det som ska fyllas i, inte en fråga. Poängtabellens radrubrik behåller den längre frågeformen; där finns plats och den läser bättre som fullständig mening.
