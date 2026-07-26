@@ -9,12 +9,13 @@ Punkt 6 utförd i 0.9.267. Punkt 4 utförd i 0.9.268. Återfallsskydd för hela 
 Punkt 9 utförd i 0.9.275**, plus en blockerare i datumkedjan.
 **Punkt 12 utförd i 0.9.276**, plus 30 sidor som saknades i `llms.txt` och en text som
 drivit isär mellan två register.
-**Punkt 11 utförd i 0.9.277**, plus blockeraren i datumkedjan. Resten är öppen och
-prioriterad nedan.
+**Punkt 11 utförd i 0.9.277**, plus blockeraren i datumkedjan.
+**Punkt 14 utförd i 0.9.278**, plus fyra felaktiga `about`-påståenden som legat i
+märkningen sedan sidorna skrevs. Resten är öppen och prioriterad nedan.
 
 > 🔒 **Punkt 10 och 13 är vilande och ska inte tas upp, föreslås eller utföras.** Användaren
 > beslutade 2026-07-25 att inget visuellt ska göras och tar upp dem på eget initiativ.
-> Öppna punkter är därmed **14 och 15** — inga andra.
+> Öppen punkt är därmed **15** — ingen annan.
 **Skapad:** 2026-07-25. **Underlag:** hela sajten lästes maskinellt – titlar, descriptions,
 canonicals, JSON-LD, rubrikhierarki, tabellmärkning, intern länkning, `llms.txt`, `sitemap.xml`,
 `robots.txt` och CSS-kontraster. Siffrorna nedan är mätta, inte uppskattade.
@@ -148,7 +149,7 @@ utcheckning. Se punkt 5 nedan.
 | ~~11~~ | ~~Syskonlänkar / "Relaterat"-block~~ | ✅ 0.9.277 | Medel |
 | ~~12~~ | ~~Dela `llms.txt` / `llms-full.txt`~~ | ✅ 0.9.276 | **Medel (GEO)** |
 | ~~13~~ | ~~`.glossary-letter`-kontrast i ljust läge~~ | 🔒 **VILANDE** | ta inte upp |
-| 14 | `about`/`teaches`/`keywords` i schema | ~2 h | Medel (GEO) |
+| ~~14~~ | ~~`about`/`teaches`/`keywords` i schema~~ | ✅ 0.9.278 | Medel (GEO) |
 | 15 | `integritet.html` rubrikhopp h1→h3 | 5 min | Låg |
 
 ---
@@ -576,14 +577,78 @@ visuella designen och inte var beställd.
 Fixen vore att låta gradienten börja på `--primary-deep` (`#047857`) i stället för `--primary`,
 eller lägga en mörkare textskugga. Noterat för användarens skull – inte som ett förslag.
 
-## 14. ⬜ `about` / `teaches` / `keywords` i schema
+## 14. ✅ KLAR i 0.9.278 – `about` / `teaches` / `keywords` i schema
 
-**Mätt:** av 81 Article-noder saknar **73** `about`, och **alla 81** saknar `teaches`, `keywords`
-och `license`.
+**Mätt efteråt:** **117 sidnoder över 117 sidor** bär nu alla tre egenskaperna — **312
+`about`-noder, 288 lärandemål och 707 nyckelord, 0 avvikelser** mot registret, verifierat
+genom att parsa all JSON-LD och jämföra post för post, inte genom att greppa. Före: `about`
+på **8** noder, `teaches` och `keywords` på **0**. (Analysens "81 Article-noder" räknade
+`LearningResource` i alla kombinationer; den verkliga populationen är 117 sidnoder, varav 64
+`Article + LearningResource`.)
 
-Muskeltabellerna beskriver anatomiska entiteter. `"about": {"@type": "AnatomicalStructure",
-"name": "Musculus biceps brachii"}` är exakt vad en svarsmotor behöver för att veta *vilken*
-muskel sidan handlar om. Schema.org har health-lifesci-tilläggen färdiga.
+**`about` typas efter vad strukturen är:** 149 `Thing`, 39 `Muscle`, 27 `Bone`, 22
+`AnatomicalStructure`, 21 `Joint`, 19 `Nerve`, 17 `AnatomicalSystem`, 12 `Artery`, 6 `Vein`.
+Backloggens exempel gick igenom precis som det stod — `muskeltabell-overarmen.html` bär nu
+`{"@type": "Muscle", "name": "Musculus biceps brachii"}`.
+
+**Två nya skript:**
+
+- [`scripts/amne.py`](amne.py) – registret. Vad en sida *handlar om* är omdöme och är
+  handskrivet (§0.3). Tre tak är hårda: 8 ämnen, 5 lärandemål, 12 nyckelord.
+- [`scripts/wire_amne.py`](wire_amne.py) – skriver in dem i sidans huvudnod via `jsonld.py`,
+  precis som `wire_identity.py` och `wire_dates.py`. Idempotent, med `--check`. Ligger efter
+  `wire_identity.py` i kedjan.
+
+**Latinkolumnen dög inte som källa, och det var punktens verkliga designfråga.** Att härleda
+`about` maskinellt ur tabellernas `<em lang="la">` hade varit frestande — punkt 9 garanterar
+ju att varje latinkolumncell har ett `<em>` — men mätningen visade tre skäl att låta bli:
+skelettsidornas kolumn **blandar ben och leder** (`Femur` bredvid `Articulatio genus`), de
+fyra ledsidorna har **ingen latinkolumn alls** (ledens namn står i `<caption>`) och
+`nervtabell-autonoma.html` är en jämförelsetabell. En maskin hade alltså typat 21 leder som
+ben och lämnat fem sidor utan. Dessutom: tjugo latinska namn i en tabell gör inte alla tjugo
+till sidans *ämne*.
+
+**Kontrollen som gör fälten ärliga: varje `about`-namn och varje nyckelord måste stå i sidans
+egen text** (`<title>`, description eller `<main>`). Samma riktning som SEO_REGLER §6 drar för
+`FAQPage` och §6b för `citation` — strukturdatan rättas efter sidan, aldrig tvärtom. **Den
+fällde fyra påståenden som legat i märkningen sedan sidorna skrevs:** `about`-värdena "Human
+anatomi", "Myologi" och "Artrologi" på `index.html` och "Spaced repetition" på
+`spellagen.html`. Inget av orden stod någonstans på sin sida. Vid första körningen fälldes 30
+av 117 sidor; samtliga är omskrivna mot vad sidan faktiskt säger.
+
+För `keywords` är kravet dessutom det enda som håller fältet ärligt: fältet är gratis att
+fylla på och kostar ingenting att överdriva, och kravet gör keyword-stuffing *omöjlig* i
+stället för förbjuden.
+
+**`<meta name="keywords">` är en annan sak och står kvar på noll sidor.** Taggen togs bort i
+0.9.56 på användarens begäran. Att den här punkten inför ett fält som *heter* keywords gör
+misstaget lätt att göra, så `wire_amne.py` stoppar bygget om taggen dyker upp någonstans.
+
+**`teaches` skrevs INTE på tre sidor, och det är ett beslut.** `info.html`,
+`integritet.html` och `versionshistorik.html` undervisar inte om något; ett lärandemål där
+hade varit samma slags falska påstående som `reviewedBy` utan granskare (§6e, punkt 8). De
+står i `UTAN_LAR_UT` med skäl.
+
+**`license` skrevs inte heller.** Analysen räknade det bland de saknade fälten, men `license`
+är ett rättighetspåstående — vilken licens innehållet står under är användarens beslut, inte
+en metadataförbättring. Att skriva en licens som ingen valt vore samma fel som `reviewedBy`.
+Frågan är lämnad öppen, inte glömd.
+
+**Ingen blockerare den här gången — för första gången i svepet.** Punkt 8, 9 och 11 daterade
+alla om sidor och krävde en ny rad i `normalisera()`. Här rörs bara `<head>`, och JSON-LD
+stryks redan av normaliseringen sedan 0.9.270. Mätt, inte antaget: 117 filer omskrivna, **0
+sidor omdaterade**, verifierat genom att jämföra normaliserad HEAD mot normaliserad
+arbetskopia sida för sida.
+
+**Kostnad:** gzipat +115 byte på `index.html` (+0,6 %), +183 på en muskeltabell (+3,2 %),
++151 på `skelett-skallen.html` (+1,7 %), +123 på `ordlista-p.html` (+0,1 %).
+
+**Skyddet är verifierat med planterade fel, inte genom att kontrollen sagt OK:** ny sida som
+ingen klassat, spöke i registret, `about`-namn som inte står på sidan, nyckelord som inte står
+på sidan, okänd `@type`, tomt `lär_ut` utan post i undantagslistan, lärandemål trots post i
+den, sprängt tak, samma nyckelord två gånger, `<meta name="keywords">` tillbaka, sida utan
+`<main>` och handredigerat `about` i en levererad sida gav alla exitkod 1 med ett besked som
+säger vad som ska göras.
 
 ## 15. ⬜ Rubrikhopp i `integritet.html`
 
@@ -611,6 +676,7 @@ Granskningen efter punkt 4:
 | 10 kontrast | 🔒 vilande — se nedan | — |
 | 11 syskonlänkar | ✅ `wire_relaterat.py`, stoppar på oklassad sida och sprängt tak | `check_generators.py` |
 | 12 agentfilerna | ✅ `generate_llms.py`, stoppar på sida i sitemap som saknas i registret | `check_generators.py` |
+| 14 ämne | ✅ `wire_amne.py`, stoppar på oklassad sida och på påstående som inte står på sidan | `check_generators.py` |
 
 Punkt 5:s skydd är verifierat genom att fel planterats, inte genom att kontrollen sagt OK:
 ändrat innehåll utan uppdaterat datum, raderad datumrad, handredigerat datum i facit, ny sida
@@ -620,7 +686,7 @@ ska göras.
 **Punkt 10 saknar kontroll, och det förblir så.** En kontrastkontroll (räkna WCAG-kvot ur
 CSS-variablerna) skulle täcka både den och punkt 13, men båda rör hur sajten *ser ut*.
 
-**Regeln för resten av svepet:** varje kommande punkt (14, 15) ska leverera
+**Regeln för resten av svepet:** punkt 15 ska leverera
 sitt skydd i samma pass som åtgärden, inte som en efterhandsfråga. Punkt 11 visade varför
 `check_links.py` aldrig räcker som skydd: den validerar att de länkar som *finns* pekar rätt,
 aldrig att en sida som *borde* ha länkar har dem. Det skyddet gör `wire_relaterat.py` genom

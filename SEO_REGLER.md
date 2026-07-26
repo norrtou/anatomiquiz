@@ -668,6 +668,84 @@ placeras före referenslistan och måste därför skrivas när den finns.
 
 ---
 
+## 6g. `about`, `teaches` och `keywords` — vad sidan handlar om (OBLIGATORISKT)
+
+Så här säger en sida vad den handlar om. **Ingen del av det skrivs för hand:**
+
+```jsonc
+// i sidans JSON-LD-huvudnod — skrivs av scripts/wire_amne.py ur scripts/amne.py
+"about": [
+  { "@type": "AnatomicalStructure", "name": "Överarmens muskler" },
+  { "@type": "Muscle", "name": "Musculus biceps brachii" }
+],
+"teaches": [
+  "Vilka muskler som ligger i överarmens främre respektive bakre loge.",
+  "Vilken muskel som är armbågens starkaste böjare och vilken som sträcker."
+],
+"keywords": ["överarmens muskler", "biceps brachii", "innervation"]
+```
+
+**Källan är `scripts/amne.py`, och den är handskriven.** Vad en sida *handlar
+om* är omdöme (CLAUDE_REGLER §0.3 punkt 2). Att en tabell radar upp tjugo
+latinska namn gör inte alla tjugo till sidans ämne, och en maskin som läste
+latinkolumnen rakt av hade typat fel: skelettsidornas kolumn blandar ben och
+leder, ledsidorna har ingen latinkolumn alls och `nervtabell-autonoma.html` är
+en jämförelsetabell. Att kontrollera, formatera och skriva in är mekaniskt och
+görs av skriptet.
+
+- **Ingenting får påstås som sidan inte säger.** Varje namn i `about` och varje
+  `keyword` måste stå i sidans egen text — `<title>`, description eller
+  `<main>`. Annars stoppar bygget. Det är samma riktning som §6 drar för
+  `FAQPage` och §6b för `citation`: **strukturdatan rättas efter sidan, aldrig
+  tvärtom.** Regeln är inte teoretisk — den fällde vid införandet fyra
+  påståenden som legat i märkningen sedan sidorna skrevs: `about`-värdena
+  "Human anatomi", "Myologi" och "Artrologi" på `index.html` och "Spaced
+  repetition" på `spellagen.html`. Inget av orden stod någonstans på sin sida.
+- **För `keywords` är samma krav det enda som håller fältet ärligt.** Fältet är
+  gratis att fylla på och kostar ingenting att överdriva; kravet att ordet ska
+  finnas på sidan gör keyword-stuffing *omöjlig* i stället för förbjuden.
+- **`<meta name="keywords">` är en helt annan sak och ska ALDRIG tillbaka.**
+  Taggen togs bort i 0.9.56 på användarens begäran — död signal sedan 2009, och
+  `index.html` (mallen, §1) saknar den. Att den här punkten inför ett fält som
+  *heter* keywords gör misstaget lätt att göra, så `wire_amne.py` stoppar bygget
+  om taggen dyker upp på någon sida.
+- **Bara riktiga schema.org-typer i `about`.** `TYPER` i `amne.py` är en stängd
+  lista, kontrollerad mot schema.org: `Thing`, `AnatomicalStructure`,
+  `AnatomicalSystem` samt `Bone`, `BrainStructure`, `Joint`, `Ligament`,
+  `Muscle`, `Nerve`, `Vessel` och `Vessel`-undertyperna `Artery`, `Vein`,
+  `LymphaticVessel`. En typ utanför listan stoppar bygget i stället för att
+  skrivas ut och tyst ignoreras av läsaren (§6, CLAUDE_REGLER §0.4).
+- **Välj den typ som är säkert sann, inte den som låter mest.** Ryggmärgens
+  banor står som `AnatomicalStructure`, inte `BrainStructure`: en bana som
+  löper från bark till ryggmärg är inte entydigt en hjärnstruktur, och ett
+  felaktigt `@type` är en regression, inte en halv förbättring — samma
+  resonemang som §7b gör för `lang="la"` på `<td>`.
+- **Taken är hårda: 8 ämnen, 5 lärandemål, 12 nyckelord.** `about` med tjugo
+  poster är ingen ämnesangivelse utan en innehållsförteckning. Ett register som
+  spränger taket ska skrivas om, inte klippas — skriptet vägrar och pekar ut
+  sidan.
+- **`teaches` är ett påstående om ett lärandemål.** En sida som inte undervisar
+  om någonting ska inte påstå att den gör det; det är samma slags falska
+  påstående som ett `reviewedBy` utan granskare (§6e). Sidor utan lärandemål
+  står i `UTAN_LAR_UT` **med skäl** (`info.html`, `integritet.html`,
+  `versionshistorik.html`). Tomt fält får inte betyda två olika saker.
+- **Varje sida med en JSON-LD-sidnod ska stå i registret.** En ny sida som
+  saknas stoppar bygget. Tyst uteblivet är det enda som inte är ett alternativ
+  (CLAUDE_REGLER §0.4) — det var precis så 30 sidor kunde saknas i `llms.txt`
+  (§9b) och 36 sidor bli lösryckta löv (§6f).
+- **Egenskaperna räknas inte som innehåll i `sidodatum.py`.** JSON-LD stryks
+  redan av `normalisera()` (§6d), så de 117 omskrivna filerna daterade om
+  **noll** sidor — mätt, inte antaget. Till skillnad från sidfoten, `lang="la"`
+  och "Se även"-blocket krävde den här punkten alltså ingen ny rad i
+  normaliseringen: den rör bara `<head>`, aldrig det läsaren ser.
+
+**Kedjan:** `wire_amne.py` ligger efter `wire_identity.py`. Skälet är detsamma
+som gör att identiteten ligger efter `generate_glossary.py` (§6b): glossary-
+generatorn skriver om ordlistans 32 sidor och hade skrivit över egenskaperna i
+vilket tidigare läge som helst.
+
+---
+
 ## 7. Tillgänglighet (a11y-trädet MÅSTE vara grönt)
 
 PageSpeed-kravet "tillgänglighetsträdet korrekt formaterat" = **alla** a11y-granskningar gröna.
@@ -854,6 +932,10 @@ Skriptet sätter alla tre ställena i en operation, så en partiell bump inte ka
 - [ ] `python3 scripts/wire_relaterat.py --all` — kunskapsbankssidan får sitt
       "Se även"-block (§6f). Nya kunskapsbankssidor måste först in i en grupp
       eller i `UTAN_RELATERAT` i `scripts/relaterat.py`, annars stoppar bygget.
+- [ ] `python3 scripts/wire_amne.py --all` — sidans `about`, `teaches` och
+      `keywords` skrivs ur `scripts/amne.py` (§6g). Nya sidor måste först in i
+      registret, annars stoppar bygget. Skriv aldrig fälten för hand, och lägg
+      **aldrig** in `<meta name="keywords">`.
 - [ ] `python3 scripts/wire_sidfot.py --all` — sidan får den delade sidfoten
       (friskrivning, integritetsrad, datum), ordagrant som alla andra (§6e).
 - [ ] `python3 scripts/sidodatum.py --update && python3 scripts/wire_dates.py --all`
@@ -922,6 +1004,10 @@ stod kvar på `0.9.236`, och felet syntes inte i något av de svep som kördes, 
 - [ ] **Se även (§6f):** inget block handskrivet; varje kunskapsbankssida står
       i en relationsgrupp eller i `UTAN_RELATERAT` med skäl; max 6 länkar.
       `python3 scripts/wire_relaterat.py --check --all` ska gå igenom.
+- [ ] **Ämne (§6g):** inget `about`, `teaches` eller `keywords` handskrivet;
+      varje namn och nyckelord står i sidans egen text; ingen
+      `<meta name="keywords">` någonstans.
+      `python3 scripts/wire_amne.py --check --all` ska gå igenom.
 - [ ] **Nytt synligt element (§0b):** placeringen bestämd genom att läsa sidans
       slut på **varje** berörd sidtyp, formen ärvd från något befintligt, inget
       löst stycke efter det som avslutar sidan.

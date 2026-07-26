@@ -63,6 +63,10 @@ KEDJA = [
     ["scripts/generate_glossary.py"],
     ["scripts/wire_lang.py", "--all"],
     ["scripts/wire_identity.py", "--all"],
+    # about/teaches/keywords. Steget stoppar på en sida som saknas i registret,
+    # på ett about-namn eller nyckelord som inte står i sidans egen text, och
+    # på att <meta name="keywords"> dykt upp igen någonstans.
+    ["scripts/wire_amne.py", "--all"],
     ["scripts/wire_sidfot.py", "--all"],
     ["scripts/wire_dates.py", "--all"],
     # Sist: llms.txt och llms-full.txt beskriver sajten och behöver se den

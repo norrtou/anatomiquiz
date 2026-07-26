@@ -101,14 +101,30 @@
       "audienceType": "Arbetsterapeuter, fysioterapeuter, sjuksköterskor, läkare, biomedicinska analytiker och andra vård- och medicinstudenter"
     },
     "about": [
-      { "@type": "Thing", "name": "Human anatomi" },
-      { "@type": "Thing", "name": "Fysiologi" },
-      { "@type": "Thing", "name": "Medicinsk terminologi" },
-      { "@type": "Thing", "name": "Osteologi" },
-      { "@type": "Thing", "name": "Myologi" },
-      { "@type": "Thing", "name": "Artrologi" },
-      { "@type": "Thing", "name": "Neuroanatomi" },
-      { "@type": "Thing", "name": "Blodomloppet" }
+      {
+        "@type": "Thing",
+        "name": "Anatomi"
+      },
+      {
+        "@type": "Thing",
+        "name": "Fysiologi"
+      },
+      {
+        "@type": "Thing",
+        "name": "Medicinsk terminologi"
+      },
+      {
+        "@type": "Thing",
+        "name": "Osteologi"
+      },
+      {
+        "@type": "Thing",
+        "name": "Neuroanatomi"
+      },
+      {
+        "@type": "Thing",
+        "name": "Blodomloppet"
+      }
     ],
     "hasPart": [
       {
@@ -123,6 +139,22 @@
         "learningResourceType": "reference",
         "url": "https://anatomiquiz.se/kunskapsbank/"
       }
+    ],
+    "teaches": [
+      "Att känna igen kroppens skelett, muskler, nerver och kärl.",
+      "Vad medicinska och latinska termer betyder.",
+      "Att befästa anatomin genom att svara i stället för att läsa om."
+    ],
+    "keywords": [
+      "anatomiquiz",
+      "anatomi",
+      "quiz",
+      "flashcards",
+      "medicinsk terminologi",
+      "skelett",
+      "muskler",
+      "nerver",
+      "tentaplugg"
     ]
   }
   </script>
@@ -1235,7 +1267,7 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.277" defer></script>
+  <script src="js/app.js?v=0.9.278" defer></script>
   <!-- Spellägesmoduler: en egen fil per läge, laddas EFTER app.js (delar globalt scope). -->
   <script src="js/matcha.js?v=0.9.261" defer></script>
   <script src="js/leitner.js?v=0.9.261" defer></script>

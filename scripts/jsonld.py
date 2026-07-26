@@ -9,8 +9,8 @@ röra resten av blocket.
 Modulen finns för att **HUVUDTYPER bara får definieras en gång**. Låg listan i
 båda skripten skulle ett nytt sidslag kunna hamna i det ena och inte i det
 andra, och då hade sidan tyst fått författare men inget datum — precis den
-sortens tystnad CLAUDE_REGLER §0.4 handlar om. Punkt 14 i SEO-svepet
-(`about`/`teaches`/`keywords`) ska använda samma modul.
+sortens tystnad CLAUDE_REGLER §0.4 handlar om. `wire_amne.py`
+(`about`/`teaches`/`keywords`) använder samma modul av samma skäl.
 """
 import json
 import pathlib
