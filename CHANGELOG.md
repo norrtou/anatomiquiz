@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.294
+- **Syrgasfältets etikett är kortad till "Andas luft eller syrgas".** "Andas patienten luft eller syrgas?" bröt till två rader på skrivbordsbredd, och eftersom etiketten är en `display: block` ovanför fältet sköt den andra raden ner rullgardinen ett snäpp jämfört med fälten bredvid — hela raden såg ojämn ut. Kortare text, en rad, jämn linje.
+- Etiketten står nu i samma form som de andra sex ("Andningsfrekvens", "Systoliskt blodtryck", "Puls") — en benämning på det som ska fyllas i, inte en fråga. Poängtabellens radrubrik behåller den längre frågeformen; där finns plats och den läser bättre som fullständig mening.
+
 ## 0.9.293
 - **Samma trams-formulering är nu borta ur NEWS2-sidans `og:description` och `twitter:description`.** "Fyll i de sju vitalparametrarna och se poängen växa fram en i taget" → "Fyll i de sju vitalparametrarna och få poäng per parameter. Med poängtabellen, vad varje variabel betyder och varför just de väger vid försämring." Delningskortet är sidans första intryck i ett flöde; en spelifierad rad där är samma fel som på sidan.
 - **Ny regel `CLAUDE_REGLER.md` §12.3 — verktyg är inte spel.** Klinisk text skrivs sakligt: undertexter, knappar, resultatrader och meta beskriver vad instrumentet mäter och vad läsaren lär sig, aldrig hur roligt det är att fylla i. §13.1 (spelkänsla är golvet) gäller **spellägen** och stannar där — ett verktyg lånar spellägenas komponenter, aldrig deras tonfall. Testet före leverans: skulle raden kunna stå på ett vårdmaterial?
