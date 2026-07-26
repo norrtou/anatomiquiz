@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.290
+- **Facebook-länken pekar nu på profilen, inte på en delningslänk.** `facebook.com/people/Anatomiquizse/61592224814069/` ersätter `/share/1AuxfAEAbE/` på **båda** ställena — den synliga ikonen och `sameAs` i JSON-LD. En delningslänk är en omdirigering; som identitetspåstående är den svagare än adressen den leder till.
+- **Så här kontrollerades den:** Facebook svarar 400 på allt anrop utan inloggning, både på sidor som finns och på rent nonsens, så statuskoden duger inte som bevis. Men `/people/`-sökvägen svarar med riktiga koder, och där ger varje adress **utan** avslutande profil-id 404 — även Facebooks egen. Med id:t på plats försvinner 404:an. Det bekräftar formen, inte kontot; adressen är hämtad ur användarens eget adressfält.
+
 ## 0.9.289
 - **De sociala profilerna står nu också i startsidans JSON-LD.** `sameAs` med Instagram och Facebook ligger på huvudnoden `Anatomiquiz` (`WebApplication`/`LearningResource`) — det är där sök- och AI-motorer läser av vilka konton som hör till varumärket. Utan den kopplingen är ikonerna två utgående länkar bland andra; med den är de samma entitet.
 - **Placerad på sajtnoden, inte på `author` eller `publisher`.** De två befintliga `sameAs`-listorna hör till Daniel Medin respektive Norrtou Creations och beskriver personen och företaget. Kontona är Anatomiquiz egna och hör därför hemma på den nod som bär namnet.
