@@ -855,6 +855,26 @@ select:focus-visible {
 #setup select {
   margin-bottom: 4px;
 }
+
+/* Egen pil i stället för webbläsarens/OS:ets egen — den senare visas olika
+   (eller inte alls, t.ex. på vissa mobiler) beroende på enhet, medan denna
+   garanterat syns likadant överallt. Egna filer, inte data-URI: sidans CSP
+   har img-src 'self' och blockerar tyst data:-bilder (bekräftat i konsolen
+   som en CSP-violation) — filerna behövs, inte kosmetik. Färgen matchar
+   --text-secondary i respektive tema; byts i mörkt läge nedan. */
+#setup select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("../img/chevron-light.svg");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 10px 6px;
+  padding-right: 36px;
+}
+
+:root[data-theme="dark"] #setup select {
+  background-image: url("../img/chevron-dark.svg");
+}
 #setup .topic-legend {
   margin-bottom: 2px;
 }

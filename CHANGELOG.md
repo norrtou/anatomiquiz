@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.283
+- **Dropdownpilarna i startvyn (Utbildning, Ämne, Antal frågor) syntes inte på mobil.** Orsaken var inte CSS-utebliven arrow-styling utan sidans egen `Content-Security-Policy` (`img-src 'self'`): ett första försök med en data-URI-pil blockerades tyst av CSP (bekräftat i konsolen som en violation) i alla lägen, inte bara mobil — det syntes bara inte förut eftersom webbläsarens NATIVA pil då fick visas i stället, och den varierar mellan enheter. Lösningen är två egna, filbaserade pilar (`img/chevron-light.svg` / `chevron-dark.svg`, samma origin som sidan) i stället för webbläsarens variabla native-pil, så att `#setup select` alltid visar samma pil oavsett enhet och tema.
+
 ## 0.9.282
 - **Artikel 15 släppt: *Rotatorkuffen – senplattan som centrerar axelleden*** (`kunskapsbank/artiklar/rotatorkuffen.html`), en `fordjupning` på 1 856 ord brödtext för läkar- och fysioterapeutstudenter. Poängen är att kuffen inte är fyra separata senor utan en sammanvävd platta med en enda mekanisk uppgift — att hålla ledhuvudet i den grunda pannan så att de stora musklerna får ett vridcentrum — och att en kuffskada därför yttrar sig som förlorad centrering långt före förlorad kraft. Texten går från de fyra ursprungen på skulderbladet via senplattans fem skikt och rotatorkabeln till taket under akromion, och slutar i de två modellerna för varför senan ger vika. Anatomi och mekanism, inte diagnostik eller behandling (ARTIKLAR_REGLER §4).
 - **Ämneshubben *Klinisk anatomi* finns nu på riktigt.** Den var ett "Snart"-kort sedan 0.9.186; generatorn skapar hubbsidan automatiskt när den första artikeln registreras, och den bär ämnesområdets egen rad om att texterna är utbildningsmaterial.
