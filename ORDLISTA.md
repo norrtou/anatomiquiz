@@ -100,8 +100,14 @@ Stubs får aldrig synas på sajten förrän de är berikade. Det sköts på **tv
 ## Husformat för `def`
 
 ```
-Definition i klartext. (ordklass, böjning) Sv: svensk synonym. Eng: english term. Lekman: vardagsuttryck. Av lat./gr. etymologi.
+ordklass. (böjning) definition i klartext. Sv. svensk synonym. Eng. english term. Vardag. vardagsuttryck. Av lat./gr. etymologi.
 ```
+
+Så ser de 11 196 posterna faktiskt ut: **ordklasstaggen först**, böjningen i parentes direkt
+efter, och därefter definitionen med liten begynnelsebokstav. Mallen stod tidigare med
+definitionen först och ordklassen inskjuten i mitten, vilket ingen post följer — och den
+inledande taggen är dessutom det enda `format_def()` kursiverar, så den *måste* stå först
+för att renderas rätt.
 
 Riktlinjer:
 - Endast de fält som tillför värde tas med (alla poster har inte Sv/Lekman/etymologi).
@@ -121,7 +127,16 @@ Riktlinjer:
   "innerörats minsta hörselben" medan `malleus`-posten två rader bort korrekt sade
   "i mellanörat" (rättat 0.9.238). Grep efter grannposterna i samma anatomiska region innan
   en ny post skrivs — motsägelser inne i ordlistan är dyrare att hitta än att undvika.
-- **`Eng: …`** måste vara **en mening som avslutas med punkt** — förrenderaren och `glossary.js` kursiverar texten mellan `Eng: ` och nästa punkt (`<em lang="en">`). Lägg inte punkter mitt i den engelska frasen.
+- **Markören är `Eng. `, inte `Eng: `.** Alla 9 678 poster som bär engelsk motsvarighet
+  skriver `Eng. <term>.` — noll använder kolon. Skriv aldrig `Eng:`; det bryter mot filens
+  enda form och blir osökbart bland de övriga.
+  *(Rättat 0.9.286: regeln stod tidigare som `Eng: …` och påstod att förrenderaren
+  kursiverar texten mellan `Eng: ` och nästa punkt. Det gör den inte — `format_def()` i
+  `generate_glossary.py` kursiverar **enbart** den inledande ordklasstaggen, och `formatDef`
+  i `js/glossary.js` gör detsamma. Ingen av dem känner till `Eng` över huvud taget.)*
+- Övriga fältmarkörer följer samma punktform: `Sv. ` (svensk synonym), `Vardag. ` (lekmanna­
+  uttryck, 781 poster), `Förk. ` (förkortning), `Lat. `, `Jfr ` (1 371 poster),
+  `Motsats: `, `Referensvärde (…): ` för labbvärden (71 poster), `ICD-10: ` sist.
 - Förkortningar: expandera, ange engelsk motsvarighet, hoppa över latinsk etymologi om den inte tillför.
 - **Faktakonservativt:** den importerade råtexten ger betydelsen. Lägg hellre till mindre etymologi än att gissa. Kör inte över kursunderlaget med eget resonemang (se `CLAUDE_REGLER.md`).
 
@@ -152,7 +167,19 @@ Följd: ord som bara skiljer på diakrit (t.ex. *Adenomatos* / *Adenomatös*) f�
 
 ## Sortering
 
-`ordlista.json` hålls alfabetiskt sorterad med diakritiskt **foldad** nyckel (samma fold som slugify), och mellanslag/bindestreck före bokstäver — det matchar den befintliga ordningen och håller synliga posters inbördes ordning stabil.
+`ordlista.json` är **ungefärligt** alfabetiskt sorterad, inte strikt. Filen består av en
+huvudlista A–Ö (index 0–9594) följd av ett antal tematiska batchar som lagts till i efterhand
+(labbvärden, psykiatritermer, läkemedel, örter, latinska anatomitermer) — var och en internt
+sorterad, men efter huvudlistan.
+
+**Härled aldrig en global sorteringsnyckel och sortera aldrig om filen.** Både diakritisk
+fold (å→a, ä→a, ö→o) och svensk kollation (å ä ö sist) ger ~6 % avvikande par mot den
+faktiska ordningen; grekiska bokstäver (α, β, χ, δ, ε, φ, γ) sorteras dessutom som sina
+utskrivna namn. En omsortering skulle ge en diff på tusentals rader och ingen vinst.
+
+**Så läggs en ny post in:** hitta dess två grannar i huvudlistan, kontrollera dem med
+ögonen, och infoga däremellan. Då blir diffen fyra rader per post och den befintliga
+ordningen kan inte rubbas. (0.9.286 lade in 17 poster så: 68 rader, noll omflyttningar.)
 
 ---
 

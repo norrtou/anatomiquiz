@@ -190,6 +190,44 @@ inte.** Sidans utseende är användarens beslut, inte en sidoeffekt av en teknis
 Formen för sidans finstilta är avgjord och ska återanvändas: se **SEO_REGLER §6e** (sidfoten)
 och `CSS_KARTA.md`.
 
+### 0.6 EN TERM SOM ANVÄNDS PÅ SAJTEN SKA FINNAS I ORDLISTAN
+
+**STÅENDE REGEL (2026-07-26, på användarens uttryckliga begäran: "Om det hittas saker när
+detta byggs, likt labvärden, biokemiska begrepp och förkortningar, tekniska termer osv, som ej
+finns i ordlistan här, ska de läggas in.")**
+
+**Mall (så här görs det rätt från början):** när en ny sida, faktatext eller verktyg skrivs
+är fackorden i texten en del av leveransen. Innan sidan är klar:
+
+1. **Plocka ut fackorden ur din egen text** — labbvärden, biokemiska begrepp, förkortningar,
+   tekniska termer, instrument, skalor.
+2. **Slå upp var och en i `data/ordlista.json`.** Saknas ordet skrivs posten i husformat
+   (`ORDLISTA.md`) **i samma pass** — inte i en backlogg.
+3. **Lägg in ordet i `data/kb_glossary_terms.json`** med kort tooltipsdefinition och
+   verifierad href. Utan det steget wire:as termen aldrig, hur komplett ordlistan än är.
+4. **Verifiera ankaret mot den genererade sidan** innan hrefen skrivs — en href som pekar
+   fel ger en tooltip som ser rätt ut och är fel.
+
+**Två gater, inte en.** Ordlistan (`ordlista.json`, 11 196 poster) och wiring-facit
+(`kb_glossary_terms.json`, 2 328 poster) är **olika** filer. Ett ord kan finnas i ordlistan
+och ändå aldrig bli en länk. Mätt 2026-07-26: av 35 sonderade kliniska termer fanns 27 i
+ordlistan men bara 8 i facit — facit var byggt ur anatomisidorna och var därför nästan rent
+anatomiskt. Kontrollera **båda** filerna, aldrig bara den ena.
+
+**Sammansättningar räcker inte som täckning.** `chock` fanns bara som *anafylaktisk chock*,
+*hypovolemisk chock*, *kardiogen chock*; `njure` bara som *njursvikt*, *njursten*,
+*njurcancer*. Grundbegreppet saknades i båda fallen. Sök på ordstammen, inte på ordet.
+
+**En felpekande href är värre än ingen.** `puls` pekade på *hjärtfrekvens* med tooltipen
+"Antalet hjärtslag per minut" — på de två sidor som bar länken palperas tryckvågen bakom
+malleolen och i handleden, inte en frekvens. Länken såg riktig ut i tre releaser.
+
+**Verktyg:** `wire_terms.py --check --sync-defs --all` listar varje href som avviker från
+facit. Kör den efter varje facitändring.
+
+**Gäller inte** ord som redan täcks av en publicerad post i annan form — då integreras
+varianten i den befintliga posten med "även …" (se `ORDLISTA.md`), den får ingen egen post.
+
 ---
 
 ## 1. SPRÅK OCH TERMINOLOGI

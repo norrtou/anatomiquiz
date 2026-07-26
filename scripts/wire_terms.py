@@ -373,10 +373,25 @@ def sync_defs_file(path, terms, write=True):
 def alla_sidor():
     """Varje wire:bar sida. Artiklarna ligger i en underkatalog och missades
     tidigare av --all, vilket gjorde att nya artiklar tyst hamnade utanför
-    tooltipsvepet."""
+    tooltipsvepet.
+
+    Verktygssidorna kom med 0.9.286. De stod utanför svepet i sin helhet:
+    `verktyg/lakemedelsberakning.html` hade **en enda** kb-term, handskriven i
+    en sr-only-rubrik, och `verktyg/index.html` ingen alls. Sidor som handlar om
+    dos, infusion och spädning är precis de sidor vars ord ordlistan förklarar,
+    så uteblivandet kostade länkar i båda riktningarna.
+
+    Glob:en är rekursiv (`**`) därför att akutmedicinen ligger i en egen
+    underkatalog — samma misstag som artiklarna en gång utlöste ska inte kunna
+    upprepas när nästa verktygsgren tillkommer.
+
+    Kalkylatorernas egna etiketter renderas av JS och kan aldrig nås härifrån.
+    Termbärande text ska därför skrivas som statisk HTML på sidan, inte i
+    modulen — se `scripts/akutmedicin_verktyg_todo.md` §3b."""
     kb = ROOT / "kunskapsbank"
     return (sorted(kb.glob("*.html"))
             + sorted(kb.glob("artiklar/*.html"))
+            + sorted((ROOT / "verktyg").glob("**/*.html"))
             + [ROOT / "case.html"])
 
 def main(argv):
