@@ -156,6 +156,18 @@ rörelsetermer* ersattes av *genitiv och kongruens*. Ingen söker på kongruens.
 eller Facebook och ska sälja in ett klick där — konkret om vad sidan innehåller, aldrig
 abstrakt eller tesformulerat.
 
+**Spannen mäts av `python3 scripts/check_meta.py`** (körs av `check_generators.py`
+före varje commit). Den fäller title över 65 tecken, description över **155**,
+saknade fält och dubbletter; husnormen 127–150 rapporteras som anmärkning, eftersom
+ett kort fält inte är trasigt utan outnyttjat och att fylla ut det vore
+keyword-stuffing. Kontrollen finns just för att fälten är **handjusterade** och ägs
+av användaren: ett fält som ingen generator äger kan inte hållas rätt av en
+omkörning, och en description på 160 tecken ser korrekt ut överallt utom i
+träfflistan — alltså på det enda ställe där den har en uppgift. Två sidor låg över
+taket när mätningen infördes i 0.9.285 (`index.html` 157, `integritet.html` 160).
+**Att kontrollen larmar ger inte rätt att skriva om ett fält** — meta ändras bara på
+uttrycklig begäran (CLAUDE_REGLER, meta-regeln).
+
 ---
 
 ## 4. Canonical, robots, verifiering

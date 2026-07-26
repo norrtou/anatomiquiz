@@ -18,10 +18,11 @@ Ingen enskild generator kan göra det. `generate_glossary.py` hade ett eget
 `--check` fram till 0.9.270; det jämförde generatorns rena utdata mot filer som
 senare steg skrivit i, och kunde därför aldrig lysa grönt igen efter 0.9.267.
 
-Efter rundtrippen körs fem kontroller mot arbetskatalogen: `check_links.py`
+Efter rundtrippen körs sex kontroller mot arbetskatalogen: `check_links.py`
 (varje intern länk mot disk), `check_rubriker.py` (varje sidas rubrikkedja utan
 hopp), `check_kontrast.py` (WCAG-kvoten på varje färgad yta, i båda teman),
-`check_spellagen.py` (varje spelläge registrerat på alla fyra ställen) och
+`check_spellagen.py` (varje spelläge registrerat på alla fyra ställen),
+`check_meta.py` (title och description mot Bings spann) och
 `sidodatum.py --check` (varje sidas datum mot git). Den sista kan inte
 ligga i KEDJA – spegeln är en naken filkopia utan `.git`.
 
@@ -144,9 +145,16 @@ def main(argv):
         # fokuslägets :has()-lista ändå — sajtrubrik och sidfot låg kvar mitt i
         # spelet, precis den bugg 0.9.274 fixade för de fyra andra lägena. En
         # checklista i ett dokument är den handpåläggning §0.3 förbjuder.
+        #
+        # check_meta.py mäter title och description mot Bings hårda spann
+        # (SEO_REGLER §2–3). Fälten är HANDJUSTERADE och ägs av användaren,
+        # vilket är just därför de behöver en mätning: ett fält som ingen
+        # generator äger kan inte hållas rätt av en omkörning. En description
+        # på 160 tecken ser korrekt ut överallt utom i träfflistan, där den
+        # kapas — alltså på det enda ställe där den har en uppgift.
         for kontroll in ("scripts/check_links.py", "scripts/check_rubriker.py",
                          "scripts/check_kontrast.py", "scripts/check_spellagen.py",
-                         "scripts/sidodatum.py"):
+                         "scripts/check_meta.py", "scripts/sidodatum.py"):
             argv = [kontroll] + (["--check"] if "sidodatum" in kontroll else [])
             kod = subprocess.run([sys.executable] + argv, cwd=ROOT).returncode
             if kod != 0:
