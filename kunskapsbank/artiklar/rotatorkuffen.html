@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSP mot XSS: skript/stilar/data endast från egen origin. GitHub Pages tillåter inga egna HTTP-headers, därav meta. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+
+  <!-- Primär SEO -->
+  <title>Rotatorkuffen – senplattan som centrerar axelleden | Anatomiquiz</title>
+  <meta name="description" content="Rotatorkuffens fyra muskler, deras gemensamma senplatta och utrymmet under akromion – och varför kuffens uppgift är att centrera ledhuvudet.">
+  <meta name="author" content="Daniel Medin (Norrtou Creations)">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+  <link rel="canonical" href="https://anatomiquiz.se/kunskapsbank/artiklar/rotatorkuffen.html">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://anatomiquiz.se/kunskapsbank/artiklar/rotatorkuffen.html">
+  <meta property="og:title" content="Rotatorkuffen – senplattan som centrerar axelleden">
+  <meta property="og:description" content="Fyra muskler som slutar i en enda sammanvävd senplatta: var de fäster, hur de håller överarmsbenets huvud på plats och varför just den här senan tar stryk.">
+  <meta property="og:image" content="https://anatomiquiz.se/img/og-image.png">
+  <meta property="og:image:width" content="1518">
+  <meta property="og:image:height" content="864">
+  <meta property="og:image:alt" content="Anatomiquiz — rotatorkuffens muskler och senplatta i axelleden">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="Anatomiquiz">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rotatorkuffen – senplattan som centrerar axelleden">
+  <meta name="twitter:description" content="Fyra muskler som slutar i en enda sammanvävd senplatta: var de fäster, hur de håller överarmsbenets huvud på plats och varför just den här senan tar stryk.">
+  <meta name="twitter:image" content="https://anatomiquiz.se/img/og-image.png">
+  <meta name="twitter:image:alt" content="Anatomiquiz — rotatorkuffens muskler och senplatta i axelleden">
+
+  <meta name="theme-color" content="#10b981">
+  <meta name="color-scheme" content="light dark">
+  <!-- Tema (ljust/mörkt). Laddas SYNKRONT och före stilmallen: attributet
+       data-theme måste sitta på <html> innan första målningen, annars
+       blinkar sidan ljus. Inline gick inte – CSP:n tillåter bara egen origin. -->
+  <script src="/js/theme.js?v=0.9.260"></script>
+
+  <!-- Strukturerad data — artikel + lärresurs (SEO_REGLER §6). -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "Article",
+    "LearningResource"
+  ],
+  "headline": "Rotatorkuffen – senplattan som centrerar axelleden",
+  "description": "Rotatorkuffens fyra muskler från ursprung till gemensam infästning: senplattans byggnad, kraftparen som centrerar ledhuvudet, utrymmet under akromion och de två modellerna för varför senan ger vika.",
+  "inLanguage": "sv-SE",
+  "isAccessibleForFree": true,
+  "learningResourceType": "reference",
+  "educationalUse": [
+    "self study",
+    "professional development"
+  ],
+  "datePublished": "2026-07-26",
+  "dateModified": "2026-07-26",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Anatomiquiz",
+    "url": "https://anatomiquiz.se/"
+  },
+  "about": [
+    {
+      "@type": "AnatomicalStructure",
+      "name": "Rotatorkuffen"
+    },
+    {
+      "@type": "Muscle",
+      "name": "Musculus supraspinatus"
+    },
+    {
+      "@type": "Muscle",
+      "name": "Musculus subscapularis"
+    },
+    {
+      "@type": "Joint",
+      "name": "Axelleden"
+    }
+  ],
+  "teaches": [
+    "Vilka fyra muskler som bildar rotatorkuffen och var de fäster.",
+    "Att kuffens senor växer ihop till en gemensam infästning.",
+    "Att kuffens mekaniska uppgift är att centrera ledhuvudet.",
+    "Vilka två modeller som förklarar varför kuffens senor bryts ner."
+  ],
+  "keywords": [
+    "rotatorkuffen",
+    "musculus supraspinatus",
+    "senplatta",
+    "centrering",
+    "tuberculum majus",
+    "bursa subacromialis",
+    "rotatorkabeln",
+    "cavitas glenoidalis"
+  ],
+  "author": {
+    "@type": "Person",
+    "@id": "https://anatomiquiz.se/#daniel-medin",
+    "name": "Daniel Medin",
+    "description": "Utbildad medicinsk sekreterare och studerande i arbetsterapi vid Lunds universitet, med särskilt intresse för anatomi.",
+    "url": "https://norrtou.se",
+    "sameAs": [
+      "https://norrtou.se",
+      "https://www.linkedin.com/in/danielmedin",
+      "https://github.com/norrtou"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://anatomiquiz.se/#norrtou-creations",
+    "name": "Norrtou Creations",
+    "url": "https://norrtou.se",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://anatomiquiz.se/img/icon-512.png"
+    },
+    "sameAs": [
+      "https://github.com/norrtou"
+    ]
+  },
+  "citation": [
+    {
+      "@type": "Book",
+      "name": "Rörelseapparatens anatomi",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Bojsen-Møller, F."
+        },
+        {
+          "@type": "Person",
+          "name": "Simonsen, E. B."
+        },
+        {
+          "@type": "Person",
+          "name": "Tranum-Jensen, J."
+        }
+      ],
+      "datePublished": "2018",
+      "bookEdition": "2:a uppl.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Liber"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "The rotator crescent and rotator cable: An anatomic description of the shoulder's \"suspension bridge\"",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Burkhart, S. S."
+        },
+        {
+          "@type": "Person",
+          "name": "Esch, J. C."
+        },
+        {
+          "@type": "Person",
+          "name": "Jolson, R. S."
+        }
+      ],
+      "datePublished": "1993",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Arthroscopy"
+      },
+      "url": "https://doi.org/10.1016/S0749-8063(05"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Tendons, ligaments, and capsule of the rotator cuff: Gross and microscopic anatomy",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Clark, J. M."
+        },
+        {
+          "@type": "Person",
+          "name": "Harryman, D. T., II"
+        }
+      ],
+      "datePublished": "1992",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "The Journal of Bone and Joint Surgery"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Guideline for diagnosis and treatment of subacromial pain syndrome: A multidisciplinary review by the Dutch Orthopaedic Association",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Diercks, R."
+        },
+        {
+          "@type": "Person",
+          "name": "Bron, C."
+        },
+        {
+          "@type": "Person",
+          "name": "Dorrestijn, O."
+        },
+        {
+          "@type": "Person",
+          "name": "Meskers, C."
+        },
+        {
+          "@type": "Person",
+          "name": "Naber, R."
+        },
+        {
+          "@type": "Person",
+          "name": "de Ruiter, T."
+        },
+        {
+          "@type": "Person",
+          "name": "Willems, J."
+        },
+        {
+          "@type": "Person",
+          "name": "Winters, J."
+        },
+        {
+          "@type": "Person",
+          "name": "van der Woude, H. J."
+        }
+      ],
+      "datePublished": "2014",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Acta Orthopaedica"
+      },
+      "url": "https://doi.org/10.3109/17453674.2014.920991"
+    },
+    {
+      "@type": "Book",
+      "name": "Terminologia anatomica",
+      "author": [
+        {
+          "@type": "Organization",
+          "name": "Federative International Programme for Anatomical Terminology"
+        }
+      ],
+      "datePublished": "2019",
+      "bookEdition": "2:a uppl.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "FIPAT"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Measurement of blood flow in the rotator cuff using laser Doppler flowmetry",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Levy, O."
+        },
+        {
+          "@type": "Person",
+          "name": "Relwani, J."
+        },
+        {
+          "@type": "Person",
+          "name": "Zaman, T."
+        },
+        {
+          "@type": "Person",
+          "name": "Even, T."
+        },
+        {
+          "@type": "Person",
+          "name": "Venkateswaran, B."
+        },
+        {
+          "@type": "Person",
+          "name": "Copeland, S."
+        }
+      ],
+      "datePublished": "2008",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "The Journal of Bone and Joint Surgery. British Volume"
+      },
+      "url": "https://doi.org/10.1302/0301-620X.90B7.19918"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Humeral insertion of the supraspinatus and infraspinatus: New anatomical findings regarding the footprint of the rotator cuff",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Mochizuki, T."
+        },
+        {
+          "@type": "Person",
+          "name": "Sugaya, H."
+        },
+        {
+          "@type": "Person",
+          "name": "Uomizu, M."
+        },
+        {
+          "@type": "Person",
+          "name": "Maeda, K."
+        },
+        {
+          "@type": "Person",
+          "name": "Matsuki, K."
+        },
+        {
+          "@type": "Person",
+          "name": "Sekiya, I."
+        },
+        {
+          "@type": "Person",
+          "name": "Muneta, T."
+        },
+        {
+          "@type": "Person",
+          "name": "Akita, K."
+        }
+      ],
+      "datePublished": "2008",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "The Journal of Bone and Joint Surgery"
+      },
+      "url": "https://doi.org/10.2106/JBJS.G.00427"
+    },
+    {
+      "@type": "Book",
+      "name": "Clinically oriented anatomy",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Moore, K. L."
+        },
+        {
+          "@type": "Person",
+          "name": "Dalley, A. F."
+        },
+        {
+          "@type": "Person",
+          "name": "Agur, A. M. R."
+        }
+      ],
+      "datePublished": "2018",
+      "bookEdition": "8:e uppl.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Wolters Kluwer"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "The microvascular pattern of the rotator cuff",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Rathbun, J. B."
+        },
+        {
+          "@type": "Person",
+          "name": "Macnab, I."
+        }
+      ],
+      "datePublished": "1970",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "The Journal of Bone and Joint Surgery. British Volume"
+      },
+      "url": "https://doi.org/10.1302/0301-620X.52B3.540"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Mechanisms of rotator cuff tendinopathy: Intrinsic, extrinsic, or both?",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Seitz, A. L."
+        },
+        {
+          "@type": "Person",
+          "name": "McClure, P. W."
+        },
+        {
+          "@type": "Person",
+          "name": "Finucane, S."
+        },
+        {
+          "@type": "Person",
+          "name": "Boardman, N. D., III"
+        },
+        {
+          "@type": "Person",
+          "name": "Michener, L. A."
+        }
+      ],
+      "datePublished": "2011",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Clinical Biomechanics"
+      },
+      "url": "https://doi.org/10.1016/j.clinbiomech.2010.08.001"
+    },
+    {
+      "@type": "Book",
+      "name": "Gray's anatomy: The anatomical basis of clinical practice",
+      "editor": [
+        {
+          "@type": "Person",
+          "name": "Standring, S."
+        }
+      ],
+      "datePublished": "2021",
+      "bookEdition": "42:a uppl.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Elsevier"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Prevalence and risk factors of a rotator cuff tear in the general population",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Yamamoto, A."
+        },
+        {
+          "@type": "Person",
+          "name": "Takagishi, K."
+        },
+        {
+          "@type": "Person",
+          "name": "Osawa, T."
+        },
+        {
+          "@type": "Person",
+          "name": "Yanagawa, T."
+        },
+        {
+          "@type": "Person",
+          "name": "Nakajima, D."
+        },
+        {
+          "@type": "Person",
+          "name": "Shitara, H."
+        },
+        {
+          "@type": "Person",
+          "name": "Kobayashi, T."
+        }
+      ],
+      "datePublished": "2010",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Journal of Shoulder and Elbow Surgery"
+      },
+      "url": "https://doi.org/10.1016/j.jse.2009.04.006"
+    }
+  ]
+}
+  </script>
+
+  <!-- BreadcrumbList i EGET block: nästlad som property i en @type-array
+       flaggas som "Unexpected property" av strikta validatorer (SEO_REGLER §6). -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Anatomiquiz",
+      "item": "https://anatomiquiz.se/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Kunskapsbank",
+      "item": "https://anatomiquiz.se/kunskapsbank/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Faktatexter",
+      "item": "https://anatomiquiz.se/kunskapsbank/faktatexter.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Klinisk anatomi",
+      "item": "https://anatomiquiz.se/kunskapsbank/artiklar/klinisk-anatomi.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Rotatorkuffen",
+      "item": "https://anatomiquiz.se/kunskapsbank/artiklar/rotatorkuffen.html"
+    }
+  ]
+}
+  </script>
+  <!-- FAQPage speglar den synliga FAQ-sektionen ord för ord i sak (SEO_REGLER §6). Blocket är GENERERAT ur #faq – skriv det aldrig för hand. -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Vilka fyra muskler bildar rotatorkuffen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Musculus supraspinatus, musculus infraspinatus, musculus subscapularis och musculus teres minor. Alla fyra utgår från scapula. Supraspinatus, infraspinatus och teres minor fäster på tuberculum majus, var och en på sin facett, medan subscapularis går framför ledhuvudet till tuberculum minus. Det är därför kuffen omsluter caput humeri framifrån, ovanifrån och bakifrån men inte nedifrån."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vad gör rotatorkuffen egentligen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Den centrerar ledhuvudet i den grunda ledpannan under rörelse. Cavitas glenoidalis täcker bara omkring en tredjedel av ledhuvudet, så det finns inget benigt hinder som håller kulan i skålen. Kuffen pressar huvudet mot pannan och balanserar samtidigt deltoideus uppåtriktade drag, så att pannan fungerar som vridcentrum. Rotationerna musklerna utför är påtagliga, men centreringen är den mekaniskt avgörande uppgiften."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Är kuffens senor fyra separata senor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nej, inte vid infästningen. Fibrerna från supraspinatus och infraspinatus flätas in i varandra och bildar en gemensam, sammanhängande infästning på överarmsbenet, och infästningsområdena överlappar. Att tala om supraspinatussenan syftar därför på den del av plattan som den muskeln drar hårdast i, inte på en sena som går att lyfta ut för sig."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vad är rotatorkabeln?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ett tjockt fiberknippe i senplattan som löper längs den inre begränsningen av supraspinatus och infraspinatus yttersta infästningar. Knippet är i genomsnitt drygt två och en halv gång så tjockt som den tunna halvmånen det omsluter, och har tolkats som en hängbro: kabeln bär lasten och avlastar den tunnare vävnaden innanför."
+      }
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon.png">
+  <link rel="apple-touch-icon" href="/img/icon-192.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/css/styles.css?v=0.9.280">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+  <main id="main" class="container" role="main">
+
+    <header class="header">
+      <div class="header-title">
+        <h1><a class="kb-term" href="/ordlista-r.html#term-rotatorkuff" data-def="Den senplatta som skuldrans fyra kuffmuskler bildar runt axelledens ledhuvud och håller centrerat i ledpannan (rotatorkuff)">Rotatorkuffen</a> – senplattan som centrerar <a class="kb-term" href="/ordlista-a.html#term-articulatio-glenohumeralis" data-def="Kulled mellan skulderbladets ledskål (cavitas glenoidalis) och överarmsbenets huvud">axelleden</a></h1>
+      </div>
+      <p class="tagline">Fyra muskler, en gemensam sena</p>
+    </header>
+
+    <section class="card" aria-labelledby="kuffHeading">
+
+      <nav class="breadcrumb" aria-label="Brödsmula">
+        <a href="/" class="breadcrumb-link">← Anatomiquiz</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="/kunskapsbank/" class="breadcrumb-link">Kunskapsbank</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="/kunskapsbank/faktatexter.html" class="breadcrumb-link">Faktatexter</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="/kunskapsbank/artiklar/klinisk-anatomi.html" class="breadcrumb-link">Klinisk anatomi</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <span class="breadcrumb-current" aria-current="page">Rotatorkuffen</span>
+      </nav>
+
+      <h2 id="kuffHeading" class="sr-only">Rotatorkuffens muskler, senplatta, kraftpar och belastning</h2>
+
+      <div class="info-about">
+        <p><a class="kb-term" href="/ordlista-r.html#term-rotatorkuff" data-def="Den senplatta som skuldrans fyra kuffmuskler bildar runt axelledens ledhuvud och håller centrerat i ledpannan (rotatorkuff)">Rotatorkuffen</a> är fyra muskler som slutar i en enda sammanvävd senplatta runt axelledens ledhuvud, och dess uppgift är inte att lyfta armen utan att hålla <a class="kb-term" href="/ordlista-c.html#term-caput-articulare" data-def="Den rundade ledytan som passar in i en ledgrop (caput articulare)">ledhuvudet</a> på plats medan andra muskler lyfter. Namnet beskriver formen: <a class="kb-term" href="/ordlista-t.html#term-tendo-sena" data-def="Bindvävssträngen som förbinder en muskel med ett ben">senorna</a> från <a class="kb-term" href="/ordlista-m.html#term-musculus-supraspinatus" data-def="övre kammuskeln (skelettmuskel)">musculus supraspinatus</a>, <a class="kb-term" href="/ordlista-m.html#term-musculus-infraspinatus" data-def="nedre kammuskeln (skelettmuskel)">musculus infraspinatus</a>, <a class="kb-term" href="/ordlista-m.html#term-musculus-subscapularis" data-def="underskulderbladsmuskeln (skelettmuskel)">musculus subscapularis</a> och <a class="kb-term" href="/ordlista-m.html#term-musculus-teres-minor" data-def="lilla runda muskeln (skelettmuskel)">musculus teres minor</a> sluter kring <a class="kb-term" href="/ordlista-c.html#term-caput-humeri" data-def="Överarmsbenshuvudet; den runda övre änden av överarmsbenet som bildar axelleden">caput humeri</a> som en manschett. Det som skiljer <a class="kb-term" href="/ordlista-r.html#term-rotatorkuff" data-def="Den senplatta som skuldrans fyra kuffmuskler bildar runt axelledens ledhuvud och håller centrerat i ledpannan (rotatorkuff)">kuffen</a> från en vanlig muskelgrupp är att den arbetar mekaniskt som en enhet, oavsett hur muskeltabellen delar upp den i fyra rader.</p>
+        <p>Den här texten följer <a class="kb-term" href="/ordlista-r.html#term-rotatorkuff" data-def="Den senplatta som skuldrans fyra kuffmuskler bildar runt axelledens ledhuvud och håller centrerat i ledpannan (rotatorkuff)">kuffen</a> från de fyra ursprungen på skulderbladet ut till den gemensamma infästningen på <a class="kb-term" href="/ordlista-h.html#term-humerus" data-def="Benet mellan axelleden och armbågsleden (humerus)">överarmsbenet</a>, vidare till det trånga utrymmet <a class="kb-term" href="/ordlista-t.html#term-tendo-sena" data-def="Bindvävssträngen som förbinder en muskel med ett ben">senan</a> måste passera under skulderhöjden, och slutar i frågan om varför just den här <a class="kb-term" href="/ordlista-t.html#term-tendo-sena" data-def="Bindvävssträngen som förbinder en muskel med ett ben">senan</a> så ofta ger vika. Texten beskriver <a class="kb-term" href="/ordlista-a.html#term-anatomi" data-def="Läran om kroppens uppbyggnad och organens form och läge">anatomi</a> och mekanism; den ger inga undersökningsfynd och inga råd.</p>
+      </div>
+
+      <!-- =========================================================
+           Fyra ursprung, en gemensam infästning
+           ========================================================= -->
+      <div class="info-about">
+        <h2>Fyra ursprung på skulderbladet, en gemensam infästning</h2>
+        <p>Alla fyra musklerna utgår från <a class="kb-term" href="/ordlista-s.html#term-scapula" data-def="Skulderblad; plattben på bröstkorgens baksida">scapula</a> och alla fyra fäster på <a class="kb-term" href="/ordlista-h.html#term-humerus" data-def="Benet mellan axelleden och armbågsleden (humerus)">överarmsbenets</a> övre del, vilket är hela förklaringen till att de kan bilda en manschett. <a class="kb-term" href="/ordlista-m.html#term-musculus-supraspinatus" data-def="övre kammuskeln (skelettmuskel)">Musculus supraspinatus</a> ligger i <a class="kb-term" href="/ordlista-f.html#term-fossa-supraspinata" data-def="Övre skulderbladsgropen; fördjupningen ovanför skulderbladskammen, ursprung för musculus supraspinatus">fossa supraspinata</a> ovanför <a class="kb-term" href="/ordlista-s.html#term-spina-scapulae" data-def="Skulderbladskammen; den utskjutande benkam som delar skulderbladets baksida">spina scapulae</a> och fäster på den övre <a class="kb-term" href="/ordlista-f.html#term-facett" data-def="Liten, avplanad yta på ett ben – en ledyta eller ett avgränsat muskelfäste">facetten</a> av <a class="kb-term" href="/ordlista-t.html#term-tuberculum-majus" data-def="Större knölen; den stora knölen utåt på överarmsbenets övre del, fäste för rotatorkuffens muskler">tuberculum majus</a>. <a class="kb-term" href="/ordlista-m.html#term-musculus-infraspinatus" data-def="nedre kammuskeln (skelettmuskel)">Musculus infraspinatus</a> fyller <a class="kb-term" href="/ordlista-f.html#term-fossa-infraspinata" data-def="Nedre skulderbladsgropen; fördjupningen nedanför skulderbladskammen, ursprung för musculus infraspinatus">fossa infraspinata</a> nedanför kammen och går till den mellersta <a class="kb-term" href="/ordlista-f.html#term-facett" data-def="Liten, avplanad yta på ett ben – en ledyta eller ett avgränsat muskelfäste">facetten</a>. <a class="kb-term" href="/ordlista-m.html#term-musculus-teres-minor" data-def="lilla runda muskeln (skelettmuskel)">Musculus teres minor</a> löper från <a class="kb-term" href="/ordlista-s.html#term-scapula" data-def="Plattbenet på bröstkorgens baksida som bär ledskålen för överarmen (scapula)">skulderbladets</a> <a class="kb-term" href="/ordlista-l.html#term-lateral" data-def="Bort från kroppens mittlinje; mot sidan">laterala</a> kant till den nedre <a class="kb-term" href="/ordlista-f.html#term-facett" data-def="Liten, avplanad yta på ett ben – en ledyta eller ett avgränsat muskelfäste">facetten</a>. De tre kommer alltså bakifrån och ovanifrån och samlas på samma benknöl.</p>
+        <p><a class="kb-term" href="/ordlista-m.html#term-musculus-subscapularis" data-def="underskulderbladsmuskeln (skelettmuskel)">Musculus subscapularis</a> är undantaget och samtidigt det som gör <a class="kb-term" href="/ordlista-r.html#term-rotatorkuff" data-def="Den senplatta som skuldrans fyra kuffmuskler bildar runt axelledens ledhuvud och håller centrerat i ledpannan (rotatorkuff)">kuffen</a> till en manschett i stället för ett tak. Den utgår från <a class="kb-term" href="/ordlista-f.html#term-fossa-subscapularis" data-def="Skulderbladsgropen; den grunda fördjupningen på skulderbladets framsida där musculus subscapularis fäster">fossa subscapularis</a> på <a class="kb-term" href="/ordlista-s.html#term-scapula" data-def="Plattbenet på bröstkorgens baksida som bär ledskålen för överarmen (scapula)">skulderbladets</a> framsida, alltså från ytan som vetter mot <a class="kb-term" href="/ordlista-c.html#term-cavea-thoracis" data-def="Buren av revben, bröstben och bröstkotor som omger brösthålan (cavea thoracis)">bröstkorgen</a>, och löper framför <a class="kb-term" href="/ordlista-c.html#term-caput-articulare" data-def="Den rundade ledytan som passar in i en ledgrop (caput articulare)">ledhuvudet</a> till <a class="kb-term" href="/ordlista-t.html#term-tuberculum-minus" data-def="Mindre knölen; den mindre knölen framtill på överarmsbenets övre del">tuberculum minus</a>. <a class="kb-term" href="/ordlista-r.html#term-rotatorkuff" data-def="Den senplatta som skuldrans fyra kuffmuskler bildar runt axelledens ledhuvud och håller centrerat i ledpannan (rotatorkuff)">Kuffen</a> omsluter därmed <a class="kb-term" href="/ordlista-c.html#term-caput-humeri" data-def="Överarmsbenshuvudet; den runda övre änden av överarmsbenet som bildar axelleden">caput humeri</a> framifrån, ovanifrån och bakifrån.</p>
+        <p>Nedåt finns däremot ingen kuff. Ledkapselns undersida är den enda delen av ledhuvudets omgivning som inte förstärks av en muskelsena, och den är dessutom rymligast där. Det förklarar varför <a class="kb-term" href="/ordlista-a.html#term-articulatio-glenohumeralis" data-def="Kulled mellan skulderbladets ledskål (cavitas glenoidalis) och överarmsbenets huvud">axelleden</a> går ur led nedåt och framåt snarare än rakt uppåt, och det knyter ihop <a class="kb-term" href="/ordlista-r.html#term-rotatorkuff" data-def="Den senplatta som skuldrans fyra kuffmuskler bildar runt axelledens ledhuvud och håller centrerat i ledpannan (rotatorkuff)">kuffen</a> med den grundläggande avvägningen mellan rörlighet och stabilitet som beskrivs i artikeln om <a href="/kunskapsbank/artiklar/ledtyper.html">ledtyper och ledrörelser</a>. <a class="kb-term" href="/ordlista-i.html#term-innervation" data-def="Nervförsörjning; nervernas försörjning av och signalering till muskler, organ och hud">Innervationen</a> följer inte muskelgruppen utan läget: <a class="kb-term" href="/ordlista-n.html#term-nervus-suprascapularis" data-def="m. supraspinatus och infraspinatus">nervus suprascapularis</a> försörjer <a class="kb-term" href="/ordlista-s.html#term-supraspinatus" data-def="Supraspinatus; en av skuldrans rotatorkuffmuskler, vars sena hjälper till att lyfta armen ut från kroppen">supraspinatus</a> och <a class="kb-term" href="/ordlista-i.html#term-infraspinatus-musculus" data-def="Nedre kammuskeln; kuffmuskel nedanför skulderbladskammen som utåtroterar armen (musculus infraspinatus)">infraspinatus</a>, <a class="kb-term" href="/ordlista-n.html#term-nervus-axillaris" data-def="axillarisnerven (plexus brachialis)">nervus axillaris</a> <a class="kb-term" href="/ordlista-t.html#term-teres-minor-musculus" data-def="Lilla runda muskeln; smal kuffmuskel på skulderbladets ytterkant som utåtroterar armen (musculus teres minor)">teres minor</a>, och <a class="kb-term" href="/ordlista-n.html#term-nervus-subscapularis" data-def="Nerverna till underskulderbladsmuskeln, från plexus brachialis (nervi subscapulares)">nervi subscapulares</a> subscapularis. Samtliga rader finns i <a href="/kunskapsbank/muskeltabell-skuldran.html">tabellen över skuldrans muskler</a>.</p>
+      </div>
+
+      <!-- =========================================================
+           Senplattan
+           ========================================================= -->
+      <div class="info-about">
+        <h2><a class="kb-term" href="/ordlista-t.html#term-tendo-sena" data-def="Bindvävssträngen som förbinder en muskel med ett ben">Senorna</a> växer ihop till en platta</h2>
+        <p>Att tala om supraspinatussenan i singular är en praktisk förenkling, inte en beskrivning av vad man ser vid en dissektion. <a href="https://pubmed.ncbi.nlm.nih.gov/1642664/" rel="noopener">Clark och Harryman (1992)</a> dissekerade trettiotvå makroskopiskt intakta kuffar från trettio färska kroppar och beskrev senplattan i fem skikt. Ytterst ligger ett tunt lager av fibrer från <a class="kb-term" href="/ordlista-c.html#term-coracohumerale-ligamentum" data-def="Bandet från korpnäbbsutskottet till överarmsbenet, som förstärker axelledens kapsel framtill (ligamentum coracohumerale)">ligamentum coracohumerale</a>, därunder ett tjockare skikt av parallella senfibrer, sedan ett djupare skikt där fibrerna korsar varandra i omkring 45 graders vinkel, därefter lös bindväv med grova kollagenband, och innerst <a class="kb-term" href="/ordlista-c.html#term-capsula-articularis" data-def="Bindvävssäcken som omsluter en led och innesluter ledhålan">ledkapseln</a>.</p>
+        <p>Poängen sitter i det tredje skiktet. Där flätas fibrerna från <a class="kb-term" href="/ordlista-s.html#term-supraspinatus" data-def="Supraspinatus; en av skuldrans rotatorkuffmuskler, vars sena hjälper till att lyfta armen ut från kroppen">supraspinatus</a> och <a class="kb-term" href="/ordlista-i.html#term-infraspinatus-musculus" data-def="Nedre kammuskeln; kuffmuskel nedanför skulderbladskammen som utåtroterar armen (musculus infraspinatus)">infraspinatus</a> in i varandra så att <a class="kb-term" href="/ordlista-t.html#term-tendo-sena" data-def="Bindvävssträngen som förbinder en muskel med ett ben">senorna</a> framstår som sammansmälta, och <a class="kb-term" href="/ordlista-t.html#term-tendo-sena" data-def="Bindvävssträngen som förbinder en muskel med ett ben">senorna</a> breder ut sig och griper in i varandra till en gemensam, sammanhängande infästning på <a class="kb-term" href="/ordlista-h.html#term-humerus" data-def="Överarmsben; artikulerar med scapula i axelleden och radius/ulna i armbågsleden">humerus</a>. Vad man kallar en enskild sena är alltså en fråga om vilken muskel som drar hårdast i en viss del av plattan, inte om var en gräns går att lägga. Supraspinatussenans framkant och yta mot <a class="kb-term" href="/ordlista-b.html#term-bursa" data-def="Slemsäck; vätskefylld säck som minskar friktion vid leder, senor och muskler">bursan</a> är dessutom omsluten av ett kraftigt bindvävsskikt från samma ligament.</p>
+        <p><a href="https://doi.org/10.2106/JBJS.G.00427" rel="noopener">Mochizuki med medarbetare (2008)</a> mätte infästningsområdet och kom fram till att <a class="kb-term" href="/ordlista-s.html#term-supraspinatus" data-def="Supraspinatus; en av skuldrans rotatorkuffmuskler, vars sena hjälper till att lyfta armen ut från kroppen">supraspinatus</a> upptar en betydligt mindre del av <a class="kb-term" href="/ordlista-t.html#term-tuberculum-majus" data-def="Större knölen; den stora knölen utåt på överarmsbenets övre del, fäste för rotatorkuffens muskler">tuberculum majus</a> än man tidigare räknat med, och att <a class="kb-term" href="/ordlista-i.html#term-infraspinatus-musculus" data-def="Nedre kammuskeln; kuffmuskel nedanför skulderbladskammen som utåtroterar armen (musculus infraspinatus)">infraspinatus</a> tar över en stor del av ytan. Två saker följer av det. Det ena är att fästena överlappar, så att en tabellcell som anger en <a class="kb-term" href="/ordlista-f.html#term-facett" data-def="Liten, avplanad yta på ett ben – en ledyta eller ett avgränsat muskelfäste">facett</a> per muskel beskriver ett tyngdpunktsområde snarare än en gräns — samma sorts förenkling som guiden om <a href="/kunskapsbank/artiklar/sa-laser-du-en-muskeltabell.html">hur du läser en muskeltabell</a> går igenom kolumn för kolumn. Det andra är att en skada i plattan sällan följer en muskels kontur.</p>
+      </div>
+
+      <!-- =========================================================
+           Centrering
+           ========================================================= -->
+      <div class="info-about">
+        <h2>Uppgiften är centrering, inte kraft</h2>
+        <p><a class="kb-term" href="/ordlista-c.html#term-cavitas-glenoidalis" data-def="Ledpannan på skulderbladet där överarmsbenets huvud vilar i axelleden (cavitas glenoidalis)">Cavitas glenoidalis</a>, <a class="kb-term" href="/ordlista-l.html#term-ledskal" data-def="Skålformad ledyta som tar emot ledhuvudet">ledpannan</a>, är grund och nästan flack och täcker bara omkring en tredjedel av ledhuvudets yta, och <a class="kb-term" href="/ordlista-l.html#term-labrum-glenoidale" data-def="Broskringen som kantar och fördjupar skulderbladets ledpanna (labrum glenoidale)">labrum glenoidale</a> fördjupar den bara marginellt. En <a class="kb-term" href="/ordlista-s.html#term-spheroidea-articulatio" data-def="Led där ett klotformat ledhuvud rör sig fritt i en grop, rörlig i alla riktningar (articulatio spheroidea)">kulled</a> byggd så har inget benigt hinder som håller kulan i skålen. Stabiliteten måste därför skapas av muskler under själva rörelsen, och det är precis vad <a class="kb-term" href="/ordlista-r.html#term-rotatorkuff" data-def="Den senplatta som skuldrans fyra kuffmuskler bildar runt axelledens ledhuvud och håller centrerat i ledpannan (rotatorkuff)">kuffen</a> gör: den drar <a class="kb-term" href="/ordlista-c.html#term-caput-articulare" data-def="Den rundade ledytan som passar in i en ledgrop (caput articulare)">ledhuvudet</a> inåt mot pannan, så att pannan blir ett vridcentrum i stället för en yta att glida av från. Ju hårdare huvudet pressas in i en konkav yta, desto mer sidokraft tål leden innan huvudet vandrar.</p>
+        <p><a class="kb-term" href="/ordlista-m.html#term-musculus-deltoideus" data-def="deltamuskeln (skelettmuskel)">Musculus deltoideus</a> är den muskel som lyfter armen, men i början av abduktionen är dess dragriktning nästan parallell med <a class="kb-term" href="/ordlista-h.html#term-humerus" data-def="Benet mellan axelleden och armbågsleden (humerus)">överarmsbenet</a>. Ett sådant drag skulle föra <a class="kb-term" href="/ordlista-c.html#term-caput-articulare" data-def="Den rundade ledytan som passar in i en ledgrop (caput articulare)">ledhuvudet</a> uppåt snarare än vrida det, om ingenting höll emot. <a class="kb-term" href="/ordlista-r.html#term-rotatorkuff" data-def="Den senplatta som skuldrans fyra kuffmuskler bildar runt axelledens ledhuvud och håller centrerat i ledpannan (rotatorkuff)">Kuffen</a> håller emot i två plan samtidigt. I horisontalplanet balanserar subscapularis framifrån mot <a class="kb-term" href="/ordlista-i.html#term-infraspinatus-musculus" data-def="Nedre kammuskeln; kuffmuskel nedanför skulderbladskammen som utåtroterar armen (musculus infraspinatus)">infraspinatus</a> och <a class="kb-term" href="/ordlista-t.html#term-teres-minor-musculus" data-def="Lilla runda muskeln; smal kuffmuskel på skulderbladets ytterkant som utåtroterar armen (musculus teres minor)">teres minor</a> bakifrån, så att huvudet kläms mellan två motriktade drag i stället för att skjutas fram eller bak. I <a class="kb-term" href="/ordlista-f.html#term-frontalplan" data-def="vertikalt plan som delar kroppen i fram/bak (koronalplan); abduktion/adduktion sker här">frontalplanet</a> drar samma tre muskler <a class="kb-term" href="/ordlista-c.html#term-caput-articulare" data-def="Den rundade ledytan som passar in i en ledgrop (caput articulare)">ledhuvudet</a> nedåt och <a class="kb-term" href="/ordlista-m.html#term-medial" data-def="Mot kroppens mittlinje">medialt</a> mot <a class="kb-term" href="/ordlista-d.html#term-deltoideus" data-def="Trekantig, deltaformig; musculus deltoideus = deltamuskeln, axelns triangulära muskel">deltoideus</a> uppåtriktade drag, medan <a class="kb-term" href="/ordlista-s.html#term-supraspinatus" data-def="Supraspinatus; en av skuldrans rotatorkuffmuskler, vars sena hjälper till att lyfta armen ut från kroppen">supraspinatus</a> gör båda sakerna på en gång: den pressar huvudet mot pannan och bidrar samtidigt till abduktionen.</p>
+        <p>Konsekvensen är mekanisk och inte muskelspecifik. Går centreringen förlorad ändras ledhuvudets bana genom rörelsen, medan armens kraft kan vara i stort sett oförändrad så länge <a class="kb-term" href="/ordlista-d.html#term-deltoideus" data-def="Trekantig, deltaformig; musculus deltoideus = deltamuskeln, axelns triangulära muskel">deltoideus</a> fungerar. Det är därför en kuffskada och en kraftförlust inte är samma sak, och det är också därför <a class="kb-term" href="/ordlista-r.html#term-rotatorkuff" data-def="Den senplatta som skuldrans fyra kuffmuskler bildar runt axelledens ledhuvud och håller centrerat i ledpannan (rotatorkuff)">kuffen</a> inte går att förstå muskel för muskel. Fyra rader i en tabell beskriver fyra dragriktningar; centreringen är vad de fyra tillsammans åstadkommer.</p>
+      </div>
+
+      <!-- =========================================================
+           Rotatorkabeln
+           ========================================================= -->
+      <div class="info-about">
+        <h2>Rotatorkabeln fördelar draget över plattan</h2>
+        <p>Senplattan är inte lika tjock överallt. <a href="https://doi.org/10.1016/S0749-8063(05)80496-7" rel="noopener">Burkhart med medarbetare (1993)</a> dissekerade tjugo färska axlar och fann att den tunna, halvmåneformade del av plattan som utgörs av <a class="kb-term" href="/ordlista-s.html#term-supraspinatus" data-def="Supraspinatus; en av skuldrans rotatorkuffmuskler, vars sena hjälper till att lyfta armen ut från kroppen">supraspinatus</a> och <a class="kb-term" href="/ordlista-i.html#term-infraspinatus-musculus" data-def="Nedre kammuskeln; kuffmuskel nedanför skulderbladskammen som utåtroterar armen (musculus infraspinatus)">infraspinatus</a> yttersta infästningar konsekvent kantas av ett tjockt fiberknippe längs sin inre begränsning. Halvmånen kallade de rotator crescent, knippet rotator cable — rotatorkabeln. Kabeln mättes till i genomsnitt 2,59 gånger halvmånens tjocklek.</p>
+        <p>Författarna tolkade byggnaden som en hängbro. Det grova knippet bär lasten och avlastar den tunnare halvmånen inuti sig, på samma sätt som en hängbros kablar bär däcket. Tolkningen är en modell av vad byggnaden är till för och inte en mätning av hur lasten faktiskt fördelas, men den gör en oregelbunden tjockleksskillnad begriplig: senplattan är förstärkt just där draget från flera muskler samlas, och tunnast där den bara ska överföra kraft den sista biten till benet.</p>
+      </div>
+
+      <!-- =========================================================
+           Utrymmet under akromion
+           ========================================================= -->
+      <div class="info-about">
+        <h2>Utrymmet under skulderhöjden</h2>
+        <p>Ovanför <a class="kb-term" href="/ordlista-r.html#term-rotatorkuff" data-def="Den senplatta som skuldrans fyra kuffmuskler bildar runt axelledens ledhuvud och håller centrerat i ledpannan (rotatorkuff)">kuffen</a> finns ett tak som inte är en bildlig beskrivning utan en benig och ligamentär konstruktion. <a class="kb-term" href="/ordlista-a.html#term-acromion" data-def="Skulderhöjden; det utskott av skulderbladskammen som bildar skuldrans topp och ledar mot nyckelbenet">Acromion</a> bildar dess bakre och yttre del, <a class="kb-term" href="/ordlista-p.html#term-processus-coracoideus" data-def="Korpnäbbsutskottet; det krokformade utskott framtill på skulderbladet, muskel- och ledbandsfäste">processus coracoideus</a> den främre, och mellan dem spänner <a class="kb-term" href="/ordlista-c.html#term-coracoacromiale-ligamentum" data-def="Det starka bandet mellan korpnäbbsutskottet och akromion, som bildar taket över axelleden (ligamentum coracoacromiale)">ligamentum coracoacromiale</a> som ett kraftigt band. Tillsammans välver de sig över <a class="kb-term" href="/ordlista-c.html#term-caput-humeri" data-def="Överarmsbenshuvudet; den runda övre änden av överarmsbenet som bildar axelleden">caput humeri</a> och över supraspinatussenan, som därmed löper genom en spalt med ben och <a class="kb-term" href="/ordlista-l.html#term-ligamentum" data-def="Band av stark, tät bindväv som förbinder skelettdelar och stabiliserar en led">ledband</a> ovanför och <a class="kb-term" href="/ordlista-c.html#term-caput-articulare" data-def="Den rundade ledytan som passar in i en ledgrop (caput articulare)">ledhuvudet</a> under.</p>
+        <p>I spalten ligger <a class="kb-term" href="/ordlista-s.html#term-subacromialis-bursa" data-def="Slemsäck mellan akromion och rotatorkuffen som underlättar armens lyft">bursa subacromialis</a>, en platt slemsäck mellan taket och <a class="kb-term" href="/ordlista-t.html#term-tendo-sena" data-def="Bindvävssträngen som förbinder en muskel med ett ben">senan</a>. Den fyller samma uppgift som slemsäckar gör överallt i kroppen, och som beskrivs närmare i artikeln om <a href="/kunskapsbank/artiklar/fascia-bursor-senskidor.html">fascia, bursor och senskidor</a>: den låter två ytor som rör sig mot varandra göra det utan att skava. Här är uppgiften ovanligt krävande, eftersom <a class="kb-term" href="/ordlista-t.html#term-tendo-sena" data-def="Bindvävssträngen som förbinder en muskel med ett ben">senan</a> passerar taket vid varje lyft av armen.</p>
+        <p>Utrymmet är också litet, och det blir mindre när armen abduceras — såvida inte <a class="kb-term" href="/ordlista-c.html#term-caput-articulare" data-def="Den rundade ledytan som passar in i en ledgrop (caput articulare)">ledhuvudet</a> samtidigt dras nedåt och roteras, vilket är just det <a class="kb-term" href="/ordlista-r.html#term-rotatorkuff" data-def="Den senplatta som skuldrans fyra kuffmuskler bildar runt axelledens ledhuvud och håller centrerat i ledpannan (rotatorkuff)">kuffen</a> gör. Kuffens centrerande arbete är därför inte bara en fråga om att hålla <a class="kb-term" href="/ordlista-c.html#term-caput-articulare" data-def="Den rundade ledytan som passar in i en ledgrop (caput articulare)">ledhuvudet</a> i pannan. Det är också det som håller <a class="kb-term" href="/ordlista-t.html#term-tendo-sena" data-def="Bindvävssträngen som förbinder en muskel med ett ben">senans</a> egen passage öppen, vilket gör konstruktionen ovanligt beroende av sig själv: <a class="kb-term" href="/ordlista-t.html#term-tendo-sena" data-def="Bindvävssträngen som förbinder en muskel med ett ben">senan</a> behöver att musklerna den tillhör fungerar för att inte klämmas.</p>
+      </div>
+
+      <!-- =========================================================
+           Inifrån eller utifrån
+           ========================================================= -->
+      <div class="info-about">
+        <h2>Inifrån eller utifrån — varför <a class="kb-term" href="/ordlista-t.html#term-tendo-sena" data-def="Bindvävssträngen som förbinder en muskel med ett ben">senan</a> ger vika</h2>
+        <p>Två förklaringar har konkurrerat om varför kuffens <a class="kb-term" href="/ordlista-t.html#term-tendo-sena" data-def="Bindvävssträngen som förbinder en muskel med ett ben">senor</a> bryts ner. Den yttre bygger på geometrin ovan: taket och den trånga spalten trycker mekaniskt mot <a class="kb-term" href="/ordlista-t.html#term-tendo-sena" data-def="Bindvävssträngen som förbinder en muskel med ett ben">senan</a>, och nedbrytningen börjar på <a class="kb-term" href="/ordlista-t.html#term-tendo-sena" data-def="Bindvävssträngen som förbinder en muskel med ett ben">senans</a> ovansida. Den inre utgår från senvävnaden själv, där <a class="kb-term" href="/ordlista-k.html#term-kollagen" data-def="Det vanligaste strukturproteinet i kroppens bindväv; ger draghållfasthet åt hud, senor, ben och brosk">kollagenet</a> med tiden byggs om, blir oordnat och tappar draghållfasthet utan att någon yttre struktur behöver klämma på den. <a href="https://doi.org/10.1016/j.clinbiomech.2010.08.001" rel="noopener">Seitz med medarbetare (2011)</a> gick igenom underlaget för båda och landade i att de inte utesluter varandra, och att en indelning efter vilken mekanism som dominerar hos den enskilda är rimligare än ett gemensamt svar.</p>
+        <p>Ett klassiskt argument för den inre förklaringen är <a class="kb-term" href="/ordlista-t.html#term-tendo-sena" data-def="Bindvävssträngen som förbinder en muskel med ett ben">senans</a> blodförsörjning. <a href="https://doi.org/10.1302/0301-620X.52B3.540" rel="noopener">Rathbun och Macnab (1970)</a> injicerade kärlen på kroppar och beskrev en kärlfattig zon i supraspinatussenan nära infästningen. Zonen saknades i kuffens övriga <a class="kb-term" href="/ordlista-t.html#term-tendo-sena" data-def="Bindvävssträngen som förbinder en muskel med ett ben">senor</a> med ett undantag, och de föreslog att <a class="kb-term" href="/ordlista-c.html#term-caput-articulare" data-def="Den rundade ledytan som passar in i en ledgrop (caput articulare)">ledhuvudet</a> pressar ut blodet ur just det avsnittet när armen hänger adducerad. Fyndet gav upphov till uttrycket den kritiska zonen och har citerats i decennier.</p>
+        <p>Påståendet har dock inte hållit när blodflödet mätts på levande <a class="kb-term" href="/ordlista-v.html#term-vavnad" data-def="Samling celler med likartad byggnad och funktion som tillsammans bygger upp kroppens organ (t.ex. muskel-, nerv- och bindväv)">vävnad</a>. <a href="https://doi.org/10.1302/0301-620X.90B7.19918" rel="noopener">Levy med medarbetare (2008)</a> mätte flödet med laserdoppler under <a class="kb-term" href="/ordlista-a.html#term-artroskopi" data-def="Titthålsundersökning av en led med ett instrument (skop) med ljuskälla; mindre ingrepp kan utföras samtidigt">artroskopi</a> och kunde inte påvisa något område med <a class="kb-term" href="/ordlista-f.html#term-funktionell" data-def="Som rör funktionen">funktionell</a> underförsörjning — någon kritisk zon — i den friska <a class="kb-term" href="/ordlista-r.html#term-rotatorkuff" data-def="Den senplatta som skuldrans fyra kuffmuskler bildar runt axelledens ledhuvud och håller centrerat i ledpannan (rotatorkuff)">kuffen</a>. I trasig <a class="kb-term" href="/ordlista-v.html#term-vavnad" data-def="Samling celler med likartad byggnad och funktion som tillsammans bygger upp kroppens organ (t.ex. muskel-, nerv- och bindväv)">vävnad</a> var flödet i stället högre vid rupturens kanter än i frisk sena. Slutsatsen är inte att kärlförsörjningen är oviktig, utan att en kärlfattig zon i en injicerad kropp och ett lågt blodflöde i en levande axel är två olika påståenden.</p>
+        <p>Osäkerheten har också fått språkliga följder. Ordet <a class="kb-term" href="/ordlista-i.html#term-impingement" data-def="Inklämning; att en sena eller nerv kläms i ett trångt utrymme">impingement</a> beskriver en mekanism, alltså att något kläms, men det har länge använts som om det vore en diagnos i sig. Den holländska ortopedföreningens genomgång av området valde därför uttrycket subakromialt smärtsyndrom och motiverade det med att den <a class="kb-term" href="/ordlista-a.html#term-anatomisk" data-def="Som rör kroppens uppbyggnad">anatomiska</a> förklaringen som inklämning inte räcker för att täcka det som sker i <a class="kb-term" href="/ordlista-v.html#term-vavnad" data-def="Samling celler med likartad byggnad och funktion som tillsammans bygger upp kroppens organ (t.ex. muskel-, nerv- och bindväv)">vävnaden</a> (<a href="https://doi.org/10.3109/17453674.2014.920991" rel="noopener">Diercks med medarbetare, 2014</a>). För den som läser <a class="kb-term" href="/ordlista-a.html#term-anatomi" data-def="Läran om kroppens uppbyggnad och organens form och läge">anatomi</a> är det en användbar påminnelse: taket, spalten och <a class="kb-term" href="/ordlista-b.html#term-bursa" data-def="Slemsäck; vätskefylld säck som minskar friktion vid leder, senor och muskler">bursan</a> är verkliga strukturer, men att beskriva en trång passage är inte samma sak som att ha förklarat en smärta.</p>
+      </div>
+
+      <!-- =========================================================
+           Fynd kontra besvär
+           ========================================================= -->
+      <div class="info-about">
+        <h2>Ett fynd i senplattan är inte samma sak som ett besvär</h2>
+        <p>Hur vanligt det är att <a class="kb-term" href="/ordlista-r.html#term-rotatorkuff" data-def="Den senplatta som skuldrans fyra kuffmuskler bildar runt axelledens ledhuvud och håller centrerat i ledpannan (rotatorkuff)">kuffen</a> inte är hel har undersökts i befolkningen och inte bara på mottagningar. <a href="https://doi.org/10.1016/j.jse.2009.04.006" rel="noopener">Yamamoto med medarbetare (2010)</a> ultraljudsundersökte båda axlarna hos 683 invånare i en japansk bergsby, sammanlagt 1 366 axlar, och fann ruptur i <a class="kb-term" href="/ordlista-r.html#term-rotatorkuff" data-def="Den senplatta som skuldrans fyra kuffmuskler bildar runt axelledens ledhuvud och håller centrerat i ledpannan (rotatorkuff)">kuffen</a> hos 20,7 procent. Andelen steg med åldern, och bland dem som saknade besvär i axeln hade 16,9 procent ändå en ruptur. Bland dem som hade besvär var andelen 36 procent. Tidigare <a class="kb-term" href="/ordlista-t.html#term-trauma" data-def="Skada på kroppen genom yttre våld; även psykiskt trauma efter en svår händelse">trauma</a>, dominant arm och ålder framträdde som de faktorer som samvarierade med fyndet.</p>
+        <p>Anatomiskt är det den mest upplysande uppgiften i hela texten. En senplatta som är byggd av flera sammanflätade <a class="kb-term" href="/ordlista-t.html#term-tendo-sena" data-def="Bindvävssträngen som förbinder en muskel med ett ben">senor</a> kan förlora en del av sin väv och ändå överföra kraft, eftersom lasten fördelas över resten av plattan och kabeln bär det mesta av den. Strukturens hållfasthet och axelns funktion är alltså inte samma variabel, och det är en direkt följd av byggnaden: hade <a class="kb-term" href="/ordlista-r.html#term-rotatorkuff" data-def="Den senplatta som skuldrans fyra kuffmuskler bildar runt axelledens ledhuvud och håller centrerat i ledpannan (rotatorkuff)">kuffen</a> bestått av fyra separata <a class="kb-term" href="/ordlista-t.html#term-tendo-sena" data-def="Bindvävssträngen som förbinder en muskel med ett ben">senor</a> hade ett avbrott i en av dem varit ett avbrott i den muskelns hela verkan.</p>
+      </div>
+
+      <!-- =========================================================
+           Avslutning
+           ========================================================= -->
+      <div class="info-about">
+        <p><a class="kb-term" href="/ordlista-r.html#term-rotatorkuff" data-def="Den senplatta som skuldrans fyra kuffmuskler bildar runt axelledens ledhuvud och håller centrerat i ledpannan (rotatorkuff)">Kuffen</a> är därmed ett gott exempel på att anatomins indelningar inte alltid följer mekaniken. Muskeltabellen ger fyra muskler med fyra ursprung, fyra fästen och tre olika nerver, och den indelningen är riktig och nödvändig för att kunna lära sig strukturerna. Men de fyra <a class="kb-term" href="/ordlista-t.html#term-tendo-sena" data-def="Bindvävssträngen som förbinder en muskel med ett ben">senorna</a> är en platta, plattan har en förstärkning där draget samlas, och plattans uppgift är en enda: att hålla <a class="kb-term" href="/ordlista-c.html#term-caput-articulare" data-def="Den rundade ledytan som passar in i en ledgrop (caput articulare)">ledhuvudet</a> i pannan så att de stora musklerna får något att arbeta mot. Läser man raderna var för sig får man fyra dragriktningar. Läser man dem tillsammans får man en centrering.</p>
+      </div>
+
+      <!-- =========================================================
+           FAQ — FAQPage-blocket är genererat ur denna markering
+           ========================================================= -->
+      <div class="info-about" id="faq">
+        <h2>Fråga &amp; svar om <a class="kb-term" href="/ordlista-r.html#term-rotatorkuff" data-def="Den senplatta som skuldrans fyra kuffmuskler bildar runt axelledens ledhuvud och håller centrerat i ledpannan (rotatorkuff)">rotatorkuffen</a></h2>
+        <p><strong>Vilka fyra muskler bildar <a class="kb-term" href="/ordlista-r.html#term-rotatorkuff" data-def="Den senplatta som skuldrans fyra kuffmuskler bildar runt axelledens ledhuvud och håller centrerat i ledpannan (rotatorkuff)">rotatorkuffen</a>?</strong><br><a class="kb-term" href="/ordlista-m.html#term-musculus-supraspinatus" data-def="övre kammuskeln (skelettmuskel)">Musculus supraspinatus</a>, <a class="kb-term" href="/ordlista-m.html#term-musculus-infraspinatus" data-def="nedre kammuskeln (skelettmuskel)">musculus infraspinatus</a>, <a class="kb-term" href="/ordlista-m.html#term-musculus-subscapularis" data-def="underskulderbladsmuskeln (skelettmuskel)">musculus subscapularis</a> och <a class="kb-term" href="/ordlista-m.html#term-musculus-teres-minor" data-def="lilla runda muskeln (skelettmuskel)">musculus teres minor</a>. Alla fyra utgår från <a class="kb-term" href="/ordlista-s.html#term-scapula" data-def="Skulderblad; plattben på bröstkorgens baksida">scapula</a>. <a class="kb-term" href="/ordlista-s.html#term-supraspinatus" data-def="Supraspinatus; en av skuldrans rotatorkuffmuskler, vars sena hjälper till att lyfta armen ut från kroppen">Supraspinatus</a>, <a class="kb-term" href="/ordlista-i.html#term-infraspinatus-musculus" data-def="Nedre kammuskeln; kuffmuskel nedanför skulderbladskammen som utåtroterar armen (musculus infraspinatus)">infraspinatus</a> och <a class="kb-term" href="/ordlista-t.html#term-teres-minor-musculus" data-def="Lilla runda muskeln; smal kuffmuskel på skulderbladets ytterkant som utåtroterar armen (musculus teres minor)">teres minor</a> fäster på <a class="kb-term" href="/ordlista-t.html#term-tuberculum-majus" data-def="Större knölen; den stora knölen utåt på överarmsbenets övre del, fäste för rotatorkuffens muskler">tuberculum majus</a>, var och en på sin <a class="kb-term" href="/ordlista-f.html#term-facett" data-def="Liten, avplanad yta på ett ben – en ledyta eller ett avgränsat muskelfäste">facett</a>, medan subscapularis går framför <a class="kb-term" href="/ordlista-c.html#term-caput-articulare" data-def="Den rundade ledytan som passar in i en ledgrop (caput articulare)">ledhuvudet</a> till <a class="kb-term" href="/ordlista-t.html#term-tuberculum-minus" data-def="Mindre knölen; den mindre knölen framtill på överarmsbenets övre del">tuberculum minus</a>. Det är därför <a class="kb-term" href="/ordlista-r.html#term-rotatorkuff" data-def="Den senplatta som skuldrans fyra kuffmuskler bildar runt axelledens ledhuvud och håller centrerat i ledpannan (rotatorkuff)">kuffen</a> omsluter <a class="kb-term" href="/ordlista-c.html#term-caput-humeri" data-def="Överarmsbenshuvudet; den runda övre änden av överarmsbenet som bildar axelleden">caput humeri</a> framifrån, ovanifrån och bakifrån men inte nedifrån.</p>
+        <p><strong>Vad gör <a class="kb-term" href="/ordlista-r.html#term-rotatorkuff" data-def="Den senplatta som skuldrans fyra kuffmuskler bildar runt axelledens ledhuvud och håller centrerat i ledpannan (rotatorkuff)">rotatorkuffen</a> egentligen?</strong><br>Den centrerar <a class="kb-term" href="/ordlista-c.html#term-caput-articulare" data-def="Den rundade ledytan som passar in i en ledgrop (caput articulare)">ledhuvudet</a> i den grunda <a class="kb-term" href="/ordlista-l.html#term-ledskal" data-def="Skålformad ledyta som tar emot ledhuvudet">ledpannan</a> under rörelse. <a class="kb-term" href="/ordlista-c.html#term-cavitas-glenoidalis" data-def="Ledpannan på skulderbladet där överarmsbenets huvud vilar i axelleden (cavitas glenoidalis)">Cavitas glenoidalis</a> täcker bara omkring en tredjedel av <a class="kb-term" href="/ordlista-c.html#term-caput-articulare" data-def="Den rundade ledytan som passar in i en ledgrop (caput articulare)">ledhuvudet</a>, så det finns inget benigt hinder som håller kulan i skålen. <a class="kb-term" href="/ordlista-r.html#term-rotatorkuff" data-def="Den senplatta som skuldrans fyra kuffmuskler bildar runt axelledens ledhuvud och håller centrerat i ledpannan (rotatorkuff)">Kuffen</a> pressar huvudet mot pannan och balanserar samtidigt <a class="kb-term" href="/ordlista-d.html#term-deltoideus" data-def="Trekantig, deltaformig; musculus deltoideus = deltamuskeln, axelns triangulära muskel">deltoideus</a> uppåtriktade drag, så att pannan fungerar som vridcentrum. Rotationerna musklerna utför är påtagliga, men centreringen är den mekaniskt avgörande uppgiften.</p>
+        <p><strong>Är kuffens <a class="kb-term" href="/ordlista-t.html#term-tendo-sena" data-def="Bindvävssträngen som förbinder en muskel med ett ben">senor</a> fyra separata <a class="kb-term" href="/ordlista-t.html#term-tendo-sena" data-def="Bindvävssträngen som förbinder en muskel med ett ben">senor</a>?</strong><br>Nej, inte vid infästningen. Fibrerna från <a class="kb-term" href="/ordlista-s.html#term-supraspinatus" data-def="Supraspinatus; en av skuldrans rotatorkuffmuskler, vars sena hjälper till att lyfta armen ut från kroppen">supraspinatus</a> och <a class="kb-term" href="/ordlista-i.html#term-infraspinatus-musculus" data-def="Nedre kammuskeln; kuffmuskel nedanför skulderbladskammen som utåtroterar armen (musculus infraspinatus)">infraspinatus</a> flätas in i varandra och bildar en gemensam, sammanhängande infästning på <a class="kb-term" href="/ordlista-h.html#term-humerus" data-def="Benet mellan axelleden och armbågsleden (humerus)">överarmsbenet</a>, och infästningsområdena överlappar. Att tala om supraspinatussenan syftar därför på den del av plattan som den muskeln drar hårdast i, inte på en sena som går att lyfta ut för sig.</p>
+        <p><strong>Vad är rotatorkabeln?</strong><br>Ett tjockt fiberknippe i senplattan som löper längs den inre begränsningen av <a class="kb-term" href="/ordlista-s.html#term-supraspinatus" data-def="Supraspinatus; en av skuldrans rotatorkuffmuskler, vars sena hjälper till att lyfta armen ut från kroppen">supraspinatus</a> och <a class="kb-term" href="/ordlista-i.html#term-infraspinatus-musculus" data-def="Nedre kammuskeln; kuffmuskel nedanför skulderbladskammen som utåtroterar armen (musculus infraspinatus)">infraspinatus</a> yttersta infästningar. Knippet är i genomsnitt drygt två och en halv gång så tjockt som den tunna halvmånen det omsluter, och har tolkats som en hängbro: kabeln bär lasten och avlastar den tunnare <a class="kb-term" href="/ordlista-v.html#term-vavnad" data-def="Samling celler med likartad byggnad och funktion som tillsammans bygger upp kroppens organ (t.ex. muskel-, nerv- och bindväv)">vävnaden</a> innanför.</p>
+      </div>
+
+      <!-- =========================================================
+           CTA: korslänkar + öva i quizet
+           ========================================================= -->
+      <div class="info-about">
+        <p>Kuffens muskler står med ursprung, fäste, funktion och <a class="kb-term" href="/ordlista-i.html#term-innervation" data-def="Nervförsörjning; nervernas försörjning av och signalering till muskler, organ och hud">innervation</a> i <a href="/kunskapsbank/muskeltabell-skuldran.html">tabellen över skuldrans muskler</a>, <a class="kb-term" href="/ordlista-n.html#term-nervus" data-def="Buntar av nervtrådar som leder impulser till och från centrala nervsystemet (nervus)">nerverna</a> som försörjer dem i <a href="/kunskapsbank/nervtabell-armen.html">tabellen över armens nerver</a>, och benutskotten de fäster på i <a href="/kunskapsbank/skelett-overarmen.html">tabellen över överarmens ben</a>. Enskilda termer slås upp i den <a href="/medicinskordlista.html">medicinska ordlistan</a>. Vill du träna aktivt? Öppna <a href="/">quizet</a> och välj <strong>Fysioterapeut → Axel/skulderkomplex</strong> eller <strong>Läkare → Övre extremitet</strong>.</p>
+      </div>
+
+      <!-- Granskningsdatum enligt ARTIKLAR_REGLER §5.1. Ligger i ett befintligt
+           .info-about för att slippa en ny CSS-klass, som hade tvingat fram en
+           cachebusterbump på hela sajten (SEO_REGLER §11.C). -->
+      <div class="info-about">
+        <p>Faktagranskad 2026-07-26.</p>
+      </div>
+
+      <!-- =========================================================
+           Källor
+           ========================================================= -->
+      <div class="kb-sources">
+        <h2>Referenser</h2>
+        <ul>
+          <li>Bojsen-Møller, F., Simonsen, E. B., &amp; Tranum-Jensen, J. (2018). <em>Rörelseapparatens anatomi</em> (2:a uppl.). Liber.</li>
+          <li>Burkhart, S. S., Esch, J. C., &amp; Jolson, R. S. (1993). The rotator crescent and rotator cable: An anatomic description of the shoulder's "suspension bridge". <em>Arthroscopy, 9</em>(6), 611–616. https://doi.org/10.1016/S0749-8063(05)80496-7</li>
+          <li>Clark, J. M., &amp; Harryman, D. T., II. (1992). Tendons, ligaments, and capsule of the rotator cuff: Gross and microscopic anatomy. <em>The Journal of Bone and Joint Surgery, 74</em>(5), 713–725.</li>
+          <li>Diercks, R., Bron, C., Dorrestijn, O., Meskers, C., Naber, R., de Ruiter, T., Willems, J., Winters, J., &amp; van der Woude, H. J. (2014). Guideline for diagnosis and treatment of subacromial pain syndrome: A multidisciplinary review by the Dutch Orthopaedic Association. <em>Acta Orthopaedica, 85</em>(3), 314–322. https://doi.org/10.3109/17453674.2014.920991</li>
+          <li>Federative International Programme for Anatomical Terminology. (2019). <em>Terminologia anatomica</em> (2:a uppl.). FIPAT.</li>
+          <li>Levy, O., Relwani, J., Zaman, T., Even, T., Venkateswaran, B., &amp; Copeland, S. (2008). Measurement of blood flow in the rotator cuff using laser Doppler flowmetry. <em>The Journal of Bone and Joint Surgery. British Volume, 90</em>(7), 893–898. https://doi.org/10.1302/0301-620X.90B7.19918</li>
+          <li>Mochizuki, T., Sugaya, H., Uomizu, M., Maeda, K., Matsuki, K., Sekiya, I., Muneta, T., &amp; Akita, K. (2008). Humeral insertion of the supraspinatus and infraspinatus: New anatomical findings regarding the footprint of the rotator cuff. <em>The Journal of Bone and Joint Surgery, 90</em>(5), 962–969. https://doi.org/10.2106/JBJS.G.00427</li>
+          <li>Moore, K. L., Dalley, A. F., &amp; Agur, A. M. R. (2018). <em>Clinically oriented anatomy</em> (8:e uppl.). Wolters Kluwer.</li>
+          <li>Rathbun, J. B., &amp; Macnab, I. (1970). The microvascular pattern of the rotator cuff. <em>The Journal of Bone and Joint Surgery. British Volume, 52</em>(3), 540–553. https://doi.org/10.1302/0301-620X.52B3.540</li>
+          <li>Seitz, A. L., McClure, P. W., Finucane, S., Boardman, N. D., III, &amp; Michener, L. A. (2011). Mechanisms of rotator cuff tendinopathy: Intrinsic, extrinsic, or both? <em>Clinical Biomechanics, 26</em>(1), 1–12. https://doi.org/10.1016/j.clinbiomech.2010.08.001</li>
+          <li>Standring, S. (Red.). (2021). <em>Gray's anatomy: The anatomical basis of clinical practice</em> (42:a uppl.). Elsevier.</li>
+          <li>Yamamoto, A., Takagishi, K., Osawa, T., Yanagawa, T., Nakajima, D., Shitara, H., &amp; Kobayashi, T. (2010). Prevalence and risk factors of a rotator cuff tear in the general population. <em>Journal of Shoulder and Elbow Surgery, 19</em>(1), 116–120. https://doi.org/10.1016/j.jse.2009.04.006</li>
+        </ul>
+      </div>
+
+      <div class="actions">
+        <a href="/kunskapsbank/muskeltabell-skuldran.html" class="btn primary">Till skuldrans muskler</a>
+        <a href="/kunskapsbank/artiklar/klinisk-anatomi.html" class="btn">← Till klinisk anatomi</a>
+      </div>
+
+    </section>
+    <footer class="page-footer">
+      <p>Utbildningsmaterial, inte medicinsk rådgivning. Innehållet är avsett för studier och ersätter inte kurslitteratur, undervisning eller kliniska riktlinjer. Det ska inte användas som underlag för vård eller behandling av patienter.</p>
+      <p>Anatomiquiz använder inga kakor och samlar inte in personuppgifter. Läs mer i <a href="/integritet.html" class="info-link">integritetspolicyn</a>.</p>
+      <p class="page-updated">Senast uppdaterad <time data-updated datetime="2026-07-26">26 juli 2026</time></p>
+    </footer>
+  </main>
+
+  <!-- Ordlistetooltips i löptexten (progressiv förbättring; .kb-term funkar som länk utan JS) -->
+  <script src="/js/kb-glossary.js" defer></script>
+  <!-- Skriv ut / ladda ner (CSV) för tabellerna (progressiv förbättring; CSP-säkert) -->
+  <script src="/js/kb-table-tools.js?v=0.9.223" defer></script>
+
+</body>
+</html>

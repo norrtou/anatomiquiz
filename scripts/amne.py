@@ -285,6 +285,11 @@ _s("kunskapsbank/artiklar/index.html",
    ["Vilka artiklar som finns och vilket ämnesområde var och en hör till."],
    ["artiklar", "kunskapsbank", "anatomi", "ämnesområde"])
 
+_s("kunskapsbank/artiklar/klinisk-anatomi.html",
+   [("Thing", "Klinisk anatomi"), ("Thing", "Rotatorkuffen")],
+   ["Vilka artiklar som beskriver anatomin bakom vanliga besvär."],
+   ["klinisk anatomi", "rotatorkuffen", "karpaltunneln", "ischiasnerven"])
+
 _s("kunskapsbank/artiklar/nervsystemet.html",
    [("AnatomicalSystem", "Nervsystemet"), ("Thing", "Ryggmärgen")],
    ["Hur motoriska kommandon leds från hjärnan ut till musklerna.",
@@ -844,6 +849,19 @@ _s("kunskapsbank/artiklar/fascia-bursor-senskidor.html",
     "Var slemsäckarna sitter och varför de finns.",
     "Varför långa senor behöver senskidor."],
    ["fascia", "bursor", "senskidor", "muskelloger", "bindväv"])
+
+_s("kunskapsbank/artiklar/rotatorkuffen.html",
+   [("AnatomicalStructure", "Rotatorkuffen"),
+    ("Muscle", "Musculus supraspinatus"),
+    ("Muscle", "Musculus subscapularis"),
+    ("Joint", "Axelleden")],
+   ["Vilka fyra muskler som bildar rotatorkuffen och var de fäster.",
+    "Att kuffens senor växer ihop till en gemensam infästning.",
+    "Att kuffens mekaniska uppgift är att centrera ledhuvudet.",
+    "Vilka två modeller som förklarar varför kuffens senor bryts ner."],
+   ["rotatorkuffen", "musculus supraspinatus", "senplatta", "centrering",
+    "tuberculum majus", "bursa subacromialis", "rotatorkabeln",
+    "cavitas glenoidalis"])
 
 _s("kunskapsbank/artiklar/ledtyper.html",
    [("Joint", "Synovialled"), ("AnatomicalSystem", "Leder"),

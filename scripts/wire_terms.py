@@ -101,6 +101,15 @@ BLOCKERADE_PER_SIDA = {
     # meningen om en RAMSAS ursprung – "tillskriver ursprunget Oliver Wendell
     # Holmes den äldre" – och tooltipen blir där rent nonsens.
     "kunskapsbank/artiklar/minnesregler-kranialnerverna.html": {"ursprunget"},
+    # "pannan" -> frons ("Ansiktets övre del") är korrekt på ansiktets
+    # muskeltabell, kranialnervssidan och i "rynka pannan" på
+    # sa-styrs-en-rorelse. I kuffartikeln är ordet genomgående kortformen av
+    # LEDpannan ("pressar huvudet mot pannan"), och pannan i ansiktet blir där
+    # rent nonsens. Global blockering hade tagit bort åtta korrekta tooltips.
+    # "extremitet" är rätt term överallt utom i quiz-CTA:ns menyväg
+    # ("Läkare → Övre extremitet"), som är ett gränssnittsnamn och ska hållas
+    # rent från tooltips av samma skäl som .btn och .kb-card gör det.
+    "kunskapsbank/artiklar/rotatorkuffen.html": {"pannan", "extremitet"},
 }
 
 # --- Tomma tooltips: fångas vid KÄLLAN, inte i efterhandssvep ----------------

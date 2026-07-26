@@ -23,9 +23,10 @@
 > artikelstandard i 0.9.191. Våg 1 klar; våg 2 klar sånär som på artikel 10 (*Medicinska
 > ordfamiljer*, ska först prövas mot §8.2). **Våg 3 klar:** artikel 12 (*Fascia, bursor och
 > senskidor*) släppt i 0.9.230, artikel 13 (*Dermatom, myotom och sklerotom*) i 0.9.231 och
-> artikel 14 (*Minnesregler för kranialnerverna*) i 0.9.233. Näst på tur: våg 4 (klinisk
-> anatomi, punkt 15–17).
-> **Senast uppdaterad:** 2026-07-24. **Version:** 1.0
+> artikel 14 (*Minnesregler för kranialnerverna*) i 0.9.233. **Våg 4 påbörjad:** artikel 15
+> (*Rotatorkuffen*) släppt i 0.9.281, och skapade därmed ämneshubben *Klinisk anatomi*.
+> Näst på tur: punkt 16 (*Karpaltunneln*) och 17 (*Ischiasnerven*).
+> **Senast uppdaterad:** 2026-07-26. **Version:** 1.0
 
 ---
 
@@ -460,10 +461,10 @@ eftersom beroendepilarna (`← 6, 8`) pekar på nummer.
    (659 poster) och `ordlista-suffix.html` (153 poster).
 
 ### Våg 2 — Bygger på våg 1
-8. **Ledtyper och ledrörelser** — `oversikt`, `alla`, hubb `rorelseapparaten`. ← 6
-   Kontrollerat 2026-07-21: ledtyperna finns bara som tabellceller i regionsidorna och som
-   quizfrågor i `data/ledtyper.json`; `leder.html` är en ROM-tabellhubb på 200 ord. Ingen
-   löptext täcker ämnet. **Nästa artikel att bygga.**
+8. ✅ **Ledtyper och ledrörelser** — `oversikt`, `alla`, hubb `rorelseapparaten`. ← 6
+   Skriven 2026-07-21. Kontrollerat samma dag: ledtyperna fanns bara som tabellceller i
+   regionsidorna och som quizfrågor i `data/ledtyper.json`; `leder.html` var en ROM-tabellhubb
+   på 200 ord. Ingen löptext täckte ämnet. Ny korslänk IN till artikel 15 lades 2026-07-26.
 9. ✅ **Så läser du en muskeltabell** — `guide`, `alla`, hubb `rorelseapparaten`. ← 6, 8
    Skriven 2026-07-22. Kontrollerat mot live-sajten samma dag: `muskeltabeller.html` var 16
    kort plus en enda mening om vad kolumnerna betyder, regionsidorna rena tabeller. Artikeln
@@ -496,8 +497,17 @@ eftersom beroendepilarna (`← 6, 8`) pekar på nummer.
     inlärningsavsnittet bärs av peer review. Ny korslänk IN från `kranialnerverna.html`.
 
 ### Våg 4 — Klinisk anatomi (efter §4:s avgränsning)
-15. Rotatorkuffen · 16. Karpaltunneln · 17. Ischiasnerven — samtliga `fordjupning`. ← 9, 12
+15. ✅ **Rotatorkuffen – senplattan som centrerar axelleden** — `fordjupning`, `lakare` +
+    `fysioterapeut`, hubb `klinisk-anatomi`. ← 8, 9, 12. Skriven 2026-07-26. §8.2-testet kört om
+    mot live-sajten samma dag: kuffen fanns som en tabellsektion plus **en** mening i
+    `muskeltabell-skuldran.html`:s ingress, **en** mening om aktiv stabilitet i `ledtyper.html`,
+    `bursa subacromialis` som **en** tabellcell i fasciaartikeln, och i övrigt bara som
+    platshållartext på `faktatexter.html`. Ingen löptext om mekanismen. Artikeln skapade
+    ämneshubben *Klinisk anatomi*. Ny korslänk IN från `ledtyper.html`.
+16. **Karpaltunneln** · 17. **Ischiasnerven** — båda `fordjupning`. ← 9, 12
     Kontrollerat 2026-07-21: strukturerna finns i muskel- och nervtabellerna, ingen löptext.
+    Kör om §8.2-testet när punkten tas upp – fasciaartikeln (12) behandlar sedan 0.9.230
+    retinaklerna och karpaltunneln i löptext, så punkt 16:s axel måste vara genuint ny.
 
 ### Våg 5 — Plugga & tenta
 18. **Hur du lär dig musklerna** · 19. **Vanliga anatomiska missuppfattningar** — `guide`. ← 9
@@ -669,6 +679,28 @@ exempel. Minnet är kopian; det här dokumentet är originalet.
   (§6c). Samma pass fanns en tredje variant: `kranialnerverna` hade defen ”Nervi craniales”,
   alltså latinet för ett svenskt ord läsaren redan förstår — en tooltip som är korrekt och
   ändå inte tillför något. Byttes i facit och i alla 14 wirade förekomster samtidigt.
+- **2026-07-26** — **§6:s krav att `FAQPage` ska GENERERAS har inget steg i kedjan.**
+  SEO_REGLER §6 säger att blocket ska genereras ur den synliga `#faq`-sektionen och att ett
+  handskrivet block är ett regelbrott, men det finns inget `wire_faq.py` i
+  `check_generators.py`:s KEDJA. Alla åtta FAQ-bärande artiklar har därför handskrivna block,
+  och §12-snutten är enda skyddet — en efterhandskontroll, alltså precis det §0 säger att en
+  regel inte får nöja sig med. Artikel 15:s block skrevs med ett engångsskript ur den synliga
+  FAQ:n, så det var **speglat i det ögonblick det skapades**, men garantin håller bara till
+  nästa gång någon redigerar en fråga för hand. **Åtgärden är ett kedjesteg, inte en bättre
+  kontroll:** ett `wire_faq.py` som skriver om blocket ur `#faq` på alla åtta sidorna vid varje
+  körning gör glidningen omöjlig i stället för upptäckbar. Tills det finns: generera blocket
+  maskinellt även när det bara gäller en sida, och kör §12-snuttens fråge- **och** svarsjämförelse.
+- **2026-07-26** — **§4:s friskrivningsrad var redan byggd, på rätt nivå.** Paragrafen kräver
+  att varje artikel i `klinisk-anatomi` bär raden *"Den här texten beskriver anatomi i
+  utbildningssyfte och är inte medicinsk rådgivning."* Kravet skrevs 2026-07-20, alltså före
+  den delade sidfoten (SEO_REGLER §6e, 0.9.271–272) och före att `generate_artiklar.py` fick
+  lägga en motsvarande rad på ämneshubben. När artikel 15 skrevs bar hubben redan
+  *"Texterna i det här ämnesområdet beskriver anatomi i utbildningssyfte och är inte medicinsk
+  rådgivning"* och varje sida sin sidfotsfriskrivning. **En tredje, sidspecifik rad hade varit
+  exakt 0.9.271-felet igen** – finstilt bredvid finstilt, i en fjärde formulering, i strid med
+  §6e:s "ingen variant per sidtyp". Läs därför alltid vad sidan och dess generator redan skriver
+  innan en regel om en *synlig rad* uppfylls; en regel kan vara uppfylld av något som byggts
+  senare än regeln.
 - **2026-07-20** — AI-genererade innehållsförslag kan presentera *policyförslag* och
   *provformat* som genomförd verklighet. Två av råmaterialets högst prioriterade förslag föll
   på faktakontroll (§13). **Kontrollera alltid ett förslags faktapremiss innan det planeras in**,

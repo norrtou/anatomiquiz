@@ -392,6 +392,12 @@ följts.
   och av-wira det enskilda ordet så att frasen kan vinna på längsta match. Ytterligare tre
   nycklar rensades 2026-07-21 av samma skäl: `vända` → inclino, `människa` → homo och
   `ovansidan` → facies superior (4, 5 respektive 2 wirade förekomster, alla av-wirade).
+  **Rensningen 2026-07-21 var inte uttömmande, och det var förutsägbart:** den listade de
+  verbformer den råkade hitta (`plattas`, `spetsar`, `skadas`), varpå `trycker` → mekanoreceptor
+  låg kvar och wirades 2026-07-26 in i en mening om att spalten *trycker mot senan*. Feltypen är
+  "böjd verbform som facitnyckel", inte de tre formerna i listan (§0.2 i CLAUDE_REGLER).
+  **Testet vid skrivtillfället:** går nyckeln att sätta efter *"jag/den …"* och bli en fullständig
+  sats, är det ett verb och hör inte i facit — oavsett hur medicinskt substantivet bakom är.
 - **Referenslistans boktitlar ska inte wiras.** `wire_terms.py` behandlar `.kb-sources` som
   aktiv text, och engelska titlar innehåller ord som råkar vara svenska/latinska uppslagsord:
   *Gray's anatomy: The anatomical **basis** of clinical practice* fick tooltipen "Bas; nedre
@@ -403,6 +409,22 @@ följts.
   facit, så nästa `wire_terms`-körning på samma fil lägger tillbaka länken – vilket hände på
   `ledtyper.html` 2026-07-21, där `ren`, `region` och `basis` av-wirades och återkom en
   körning senare.
+- **Ett generiskt svenskt ord ska peka på en generisk post — aldrig på den region där det
+  råkade skrivas in först.** Så väljs målet rätt: fråga *"om ordet stod i en text om en annan
+  kroppsdel, hade defen fortfarande stämt?"* Är svaret nej är posten för smal, och rätt åtgärd
+  är den generiska post som täcker båda lägena (`ledpannan` → `ledskål`, "Skålformad ledyta som
+  tar emot ledhuvudet") — eller att skriva den posten om den saknas (`facetten` → nyskriven
+  `facett`, "Liten, avplanad yta på ett ben"). **Blockera inte**: ordet ska ha en tooltip, den
+  ska bara vara rätt.
+  Två sådana nycklar låg live och var felaktiga i **samtliga** sina förekomster: `ledpannan`
+  pekade på `acetabulum` ("Höftledsskål i bäckenet") och `facetten` på `facettled` ("Liten plan
+  led mellan kotornas ledutskott"), medan alla sex förekomsterna satt i skuldran — de tre
+  facetterna på tuberculum majus och den grunda ledpannan. Skillnaden mot `segment`-fallet
+  (2026-07-24) är att det inte fanns **någon** sida där tooltipen var riktig, och felet ändå
+  levde vidare: nyckeln kom in i facit från en genererad muskeltabell, där ingen läser
+  tooltipsen i löptext, och `--check` kan inte se skillnad på en def som är fel och en som är
+  rätt. **Testet är riktningen, inte förekomsten:** en svensk nyckel vars href pekar på en post
+  med ett region- eller organnamn i sin definition ska granskas innan den skrivs in.
 - **Ordlisteposten kan vara smalare än sidans användning.** Ett uppslagsord kan vara rätt term
   och ändå ge fel tooltip därför att definitionen bara täcker en klinisk delbetydelse:
   `ulnardeviation` är i ordlistan "felställning … ses bl.a. vid reumatoid artrit", men på en

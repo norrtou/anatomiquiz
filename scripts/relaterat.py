@@ -209,11 +209,13 @@ UTAN_RELATERAT = {
     "kunskapsbank/artiklar/engelska-i-medicinskt-sprak.html": "artikel, korslänkad i brödtext",
     "kunskapsbank/artiklar/fascia-bursor-senskidor.html": "artikel, korslänkad i brödtext",
     "kunskapsbank/artiklar/franska-och-tyska-i-medicinskt-sprak.html": "artikel, korslänkad i brödtext",
+    "kunskapsbank/artiklar/klinisk-anatomi.html": "ämneshubb, kortlänkar artiklarna",
     "kunskapsbank/artiklar/ledtyper.html": "artikel, korslänkad i brödtext",
     "kunskapsbank/artiklar/minnesregler-kranialnerverna.html": "artikel, korslänkad i brödtext",
     "kunskapsbank/artiklar/nervsystemet.html": "artikel, korslänkad i brödtext",
     "kunskapsbank/artiklar/plugga-och-tenta.html": "artikel, korslänkad i brödtext",
     "kunskapsbank/artiklar/rorelseapparaten.html": "artikel, korslänkad i brödtext",
+    "kunskapsbank/artiklar/rotatorkuffen.html": "artikel, korslänkad i brödtext",
     "kunskapsbank/artiklar/sa-laser-du-en-muskeltabell.html": "artikel, korslänkad i brödtext",
 }
 
