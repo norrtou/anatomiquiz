@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.289
+- **De sociala profilerna står nu också i startsidans JSON-LD.** `sameAs` med Instagram och Facebook ligger på huvudnoden `Anatomiquiz` (`WebApplication`/`LearningResource`) — det är där sök- och AI-motorer läser av vilka konton som hör till varumärket. Utan den kopplingen är ikonerna två utgående länkar bland andra; med den är de samma entitet.
+- **Placerad på sajtnoden, inte på `author` eller `publisher`.** De två befintliga `sameAs`-listorna hör till Daniel Medin respektive Norrtou Creations och beskriver personen och företaget. Kontona är Anatomiquiz egna och hör därför hemma på den nod som bär namnet.
+- **Steget kan inte skriva över det.** `wire_identity.py` byter bara ut `author`/`publisher`, `wire_dates.py` bara datumen och `wire_amne.py` bara `about`/`teaches`/`keywords` — rundtrippstestet bekräftar att fältet står kvar efter en full kedjekörning.
+- Facebook-adressen står som ren delningslänk i `sameAs` (utan spårningsparametern `mibextid`, som hör till klicket och inte till identiteten). Den synliga länken bär användarens adress oförändrad.
+
 ## 0.9.288
 - **"Följ Anatomiquiz.se" sist i Om-sektionen på startsidan.** Instagram och Facebook som två små monokroma ikoner, lagda **utanför** `<details>` så att de syns utan att fördjupningen fälls ut — hade de legat inuti hade de varit osynliga för alla som inte klickar.
 - **Ikonerna är inline-SVG med `fill="currentColor"`, inte varumärkesfärger.** De sätter bara `color` och aldrig en egen botten, så de följer ljust och mörkt läge utan ett nytt kontrastpar att hålla i synk (SEO_REGLER §7c). Instagrammärket är ritat som en enda `fill-rule="evenodd"`-bana — ram, lins och punkt — i stället för en inklistrad tredjepartsbana.
