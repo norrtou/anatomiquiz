@@ -121,18 +121,24 @@ sidopadding och ingen `max-width` på sina stycken – texten är centrerad men 
 innehållsbredden (1000 px). En smal centrerad kolumn syns inte på mobil men ser fånig ut på
 dator (rättat 0.9.274).
 
-### ⚠️ Nytt spelläge ska registreras på TRE ställen
+### ⚠️ Nytt spelläge ska registreras på FLERA ställen
 
 Ett läge som bara läggs till på ett av dem ser rätt ut tills man spelar det:
 
 | Var | Vad som annars händer |
 |---|---|
 | `FIT_SECTIONS` i `js/app.js` | vyn krymps inte på mobil |
-| Fokuslägets `:has()`-lista i `styles.css` (~rad 1029) | sidrubrik och sidfot ligger kvar mitt i spelet |
+| Fokuslägets `:has()`-lista i `styles.css` (~rad 1056) | sidrubrik och sidfot ligger kvar mitt i spelet |
+| `<script src="js/<slug>.js?v=…">` i `index.html` | modulen laddas aldrig |
+| Egna `.<slug>-*.hidden`-regler | klart-vyn visas mitt i rundan (`.hidden` är inte global) |
 | `.gm-*`-basen (se [[project_shared_game_base]]) | spelkänslan saknas |
 
 Fram till 0.9.274 stod bara `#quiz` i fokuslägets lista, så sidfoten låg kvar under
-Flashcards, Matcha, Leitner och Tidsjakt.
+Flashcards, Matcha, Leitner och Tidsjakt. **Samma sak hände igen i 0.9.284** med
+`#dagsutmaning`, trots att tabellen stod här — en checklista i ett dokument är den
+mekaniska handpåläggning §0.3 förbjuder. De fyra första raderna kontrolleras därför
+numera av **`python3 scripts/check_spellagen.py`**, som körs av `check_generators.py`
+före varje commit. `.gm*`-raden är omdöme och står kvar som en läsanvisning.
 
 ## Snabb felsökning när en stiländring "inte tar"
 1. Vilka CSS-filer laddar sidan? (`grep stylesheet <sida>.html`)

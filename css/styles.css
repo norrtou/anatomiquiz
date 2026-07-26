@@ -1054,9 +1054,9 @@ select:focus-visible {
    mitt i ett spel. Ett nytt spelläge läggs till här OCH i FIT_SECTIONS i
    js/app.js. */
 .container:has(#quiz:not(.hidden), #flashcards:not(.hidden), #matcha:not(.hidden),
-               #leitner:not(.hidden), #tidsjakt:not(.hidden)) > .header,
+               #leitner:not(.hidden), #tidsjakt:not(.hidden), #dagsutmaning:not(.hidden)) > .header,
 .container:has(#quiz:not(.hidden), #flashcards:not(.hidden), #matcha:not(.hidden),
-               #leitner:not(.hidden), #tidsjakt:not(.hidden)) > .page-footer {
+               #leitner:not(.hidden), #tidsjakt:not(.hidden), #dagsutmaning:not(.hidden)) > .page-footer {
   display: none;
 }
 /* Sidbakgrunden gäller bara quizet: den tas bort för att bildfrågans kort ska
@@ -1390,7 +1390,36 @@ body:has(#quiz:not(.hidden)) {
 .btn-mode {
   width: 100%;
   gap: 6px;
+  /* Dagens utmaning bär en svitbricka bredvid etiketten. Wrap gör att bricka
+     och text lägger sig på var sin rad på en smal skärm i stället för att
+     klämma ihop etiketten. Övriga lägesknappar har bara ren text (ett enda
+     anonymt flex-item) och påverkas inte. */
+  flex-wrap: wrap;
 }
+
+/* Sviten på startknappen: 🔥 N = dagar i rad, ✅ N = dagens redan klar. Sitter
+   på knappen och inte bara inne i läget – en svit man måste öppna spelet för
+   att se driver inga återbesök. Sätts av js/dagsutmaning.js. */
+.mode-flame {
+  flex: 0 0 auto;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
+  padding: 2px 8px;
+  border-radius: 999px;
+  color: var(--warning-text);
+  background: var(--warning-bg);
+  border: 1px solid var(--warning);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+/* Dagens är klar: grön i stället för amber – "gjort" ska inte se ut som "gör". */
+.mode-flame.done {
+  color: #fff;
+  background: linear-gradient(135deg, var(--plate-green) 0%, var(--plate-green-deep) 100%);
+  border-color: transparent;
+}
+.mode-flame.hidden { display: none; }
 
 /* Skuggat/vilande utseende: dämpad, streckad ram, ingen hover-lyft */
 .btn-mode:disabled {
@@ -3694,6 +3723,403 @@ ol li {
 }
 
 /* ============================================================================
+   DAGENS UTMANING — js/dagsutmaning.js
+   Tio frågor som är desamma hela dygnet, och en svit som räknar DAGAR. Till
+   skillnad från Matcha/Leitner/Tidsjakt, som byggdes före den delade
+   spelvysbasen, använder läget `.gm-*` för mätare, poängbricka, resultatring,
+   nyckeltal och rekordmärke — här står bara det som är lägets eget.
+   ============================================================================ */
+
+/* Vad läget går ut på, överst i vyn. Följer .leitner-intro/.tidsjakt-intro –
+   samma formspråk i alla fyra. js/dagsutmaning.js fäller upp den för den som
+   aldrig spelat. */
+.dagsutmaning-intro {
+  margin: 0 0 12px;
+  border: 1px solid var(--primary-light);
+  border-radius: var(--radius-sm);
+  background: var(--success-bg);
+  padding: 8px 12px;
+}
+.dagsutmaning-intro > summary {
+  cursor: pointer;
+  color: var(--primary-deep);
+  font-weight: 600;
+  font-size: 0.88rem;
+  line-height: 1.35;
+  list-style-position: inside;
+}
+.dagsutmaning-intro > summary:focus-visible {
+  outline: 2px solid var(--primary-deep);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+.dagsutmaning-intro-body {
+  margin-top: 8px;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+.dagsutmaning-intro-body p { margin: 0 0 8px; }
+.dagsutmaning-intro-body p:last-child { margin-bottom: 2px; }
+/* Litet listindrag – långa punkter blir annars svårlästa på mobil. */
+.dagsutmaning-intro-list {
+  margin: 0 0 8px;
+  padding-left: 18px;
+}
+.dagsutmaning-intro-list li { margin-bottom: 4px; }
+
+/* En sammanhållen infopanel i stället för lösryckta textrader. */
+.dagsutmaning-header {
+  background: var(--success-bg);
+  border: 1px solid var(--primary-light);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  margin-bottom: 12px;
+}
+
+.dagsutmaning-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.dagsutmaning-player { font-weight: 700; color: var(--primary-deep); }
+.dagsutmaning-meta { font-size: 0.82rem; font-weight: 600; color: var(--text-secondary); text-align: right; }
+
+/* --- Vaneraden: lägets riktiga framstegsmätare -------------------------- */
+/* Spelet spänner över dagar, inte över en runda, så den mätare som betyder
+   något är sju dagar bakåt. Veckodagens initial står under varje prick, så att
+   raden lär ut sin egen regel utan att man behöver läsa förklaringen. */
+.dagsutmaning-week-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.dagsutmaning-week {
+  display: flex;
+  gap: 5px;
+  flex: 0 0 auto;
+}
+
+.dagsutmaning-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.dagsutmaning-day-dot {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid var(--bg-gradient-start);
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* Klarad dag: samma gröna platta som rekordmärket, alltså vit text som klarar
+   WCAG i båda teman (--plate-* överskrivs aldrig i mörkt läge). */
+.dagsutmaning-day.done .dagsutmaning-day-dot {
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--plate-green) 0%, var(--plate-green-deep) 100%);
+  color: #fff;
+}
+/* I dag, ännu inte klarad: streckad ram = "här är luckan att fylla". */
+.dagsutmaning-day.today .dagsutmaning-day-dot {
+  border-style: dashed;
+  border-color: var(--primary);
+}
+/* Dagar innan man började spela ska inte se ut som missade. */
+.dagsutmaning-day.none .dagsutmaning-day-dot { opacity: 0.4; }
+
+.dagsutmaning-day.pop .dagsutmaning-day-dot { animation: dagsutmaningDayPop 0.5s ease; }
+@keyframes dagsutmaningDayPop {
+  0% { transform: scale(0.6); opacity: 0.5; }
+  55% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.dagsutmaning-day-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  line-height: 1;
+}
+
+/* Sviten i siffror bredvid raden. Samma amber som Tidsjaktens svitmärke. */
+.dagsutmaning-streak-chip {
+  flex: 0 0 auto;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--warning-text);
+  background: var(--warning-bg);
+  border: 1px solid var(--warning);
+  border-radius: 999px;
+  padding: 2px 9px;
+  white-space: nowrap;
+}
+
+/* Omspel: samma frågor igen, men resultatet räknas inte. Måste synas UNDER
+   rundan – att få veta det först på resultatskärmen vore att låta någon spela
+   under fel förutsättning. */
+.dagsutmaning-replay-chip {
+  flex: 0 0 auto;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  background: var(--surface);
+  border: 1px dashed var(--text-secondary);
+  border-radius: 999px;
+  padding: 2px 9px;
+  white-space: nowrap;
+}
+
+/* Rundans mätare (.gm-progress-*) och poängbrickan (.gm-score-badge). */
+.dagsutmaning-header-bottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Beröm vid delmål — kort och konkret, tas bort igen av js/dagsutmaning.js. */
+.dagsutmaning-praise {
+  margin: 0 0 10px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--primary-deep);
+  background: var(--success-bg);
+  border: 1px solid var(--primary-light);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.88rem;
+}
+.dagsutmaning-praise.gold {
+  color: #fff;
+  background: linear-gradient(135deg, var(--plate-green) 0%, var(--plate-green-deep) 100%);
+  border-color: transparent;
+}
+.dagsutmaning-praise.in { animation: dagsutmaningPraiseIn 0.4s ease; }
+@keyframes dagsutmaningPraiseIn {
+  0% { transform: scale(0.85); opacity: 0; }
+  60% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* --- Frågekortet och alternativen --------------------------------------- */
+/* min-height håller kortet lika högt oavsett frågelängd, så att knapparna inte
+   flyttar sig mellan frågorna. */
+.dagsutmaning-card {
+  border: 2px solid var(--primary-light);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  margin-bottom: 12px;
+  min-height: 96px;
+  display: flex;
+  align-items: center;      /* vertikal centrering – korta frågor hänger inte snett */
+  justify-content: center;
+}
+.dagsutmaning-card.enter { opacity: 0; transform: translateX(18px); }
+.dagsutmaning-card.in {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.2s ease, transform 0.24s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dagsutmaning-prompt {
+  margin: 0;
+  text-align: center;
+  /* Textlängd → typsnittsskala (--prompt-scale sätts per fråga av JS). */
+  font-size: max(1rem, calc(1.22rem * var(--prompt-scale, 1)));
+  line-height: 1.35;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.dagsutmaning-choices {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.dagsutmaning-choices.two .dagsutmaning-choice { min-height: 78px; }
+
+.dagsutmaning-choice {
+  min-height: 64px;          /* tumvänlig träffyta */
+  padding: 10px 12px;
+  border: 2px solid var(--primary-light);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: max(0.8rem, calc(0.98rem * var(--opt-scale, 1)));
+  line-height: 1.25;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+.dagsutmaning-choice:hover:not(:disabled) { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-1px); }
+.dagsutmaning-choice:active:not(:disabled) { transform: translateY(0) scale(0.98); }
+.dagsutmaning-choice:disabled { cursor: default; }
+
+/* Omedelbart kvitto på trycket, innan facit hinner tändas. */
+.dagsutmaning-choice.chosen { border-color: var(--primary-dark); background: var(--success-bg); }
+
+.dagsutmaning-choice.correct {
+  border-color: var(--success);
+  background: var(--success-bg);
+  color: var(--primary-deep);
+  font-weight: 800;
+}
+.dagsutmaning-choice.wrong {
+  border-color: var(--error);
+  background: var(--error-bg);
+  color: var(--error-text);
+}
+.dagsutmaning-choice.shake { animation: dagsutmaningShake 0.35s ease; }
+@keyframes dagsutmaningShake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-5px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(2px); }
+}
+
+.dagsutmaning-counter {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Klart-vyn ----------------------------------------------------------- */
+.dagsutmaning-finished { text-align: center; padding: 14px 0 4px; }
+
+.dagsutmaning-done-text { font-size: 1.05rem; margin: 0 0 8px; }
+
+/* Sviten är lägets riktiga poäng och får en egen rad, inte en siffra bland
+   nyckeltalen. */
+.dagsutmaning-streak-text {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--primary-deep);
+  margin: 0 0 10px;
+}
+
+/* Nedräkningen till nästa utmaning: slutet pekar på i morgon, inte på "spela
+   igen". Det är knappheten som gör läget till en vana. */
+.dagsutmaning-next-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-deep);
+  background: var(--success-bg);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  margin: 0 0 12px;
+}
+
+/* Missade frågor med rätt svar — lägets pedagogiska nyttolast, och därför
+   vänsterställd läsbar text mitt i en annars centrerad resultatvy. */
+.dagsutmaning-missed-wrap {
+  text-align: left;
+  margin: 4px 0 16px;
+  border: 1px solid var(--primary-light);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  padding: 10px 12px;
+}
+.dagsutmaning-missed-heading {
+  margin: 0 0 8px;
+  font-size: 0.92rem;
+  color: var(--primary-deep);
+}
+.dagsutmaning-missed { list-style: none; margin: 0; padding: 0; }
+.dagsutmaning-missed li {
+  padding: 6px 0;
+  border-top: 1px dashed rgba(16, 185, 129, 0.3);
+}
+.dagsutmaning-missed li:first-child { border-top: none; }
+.dagsutmaning-missed .sm-q {
+  display: block;
+  font-size: 0.84rem;
+  line-height: 1.35;
+  color: var(--text-primary);
+}
+.dagsutmaning-missed .sm-a {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--primary-deep);
+}
+.dagsutmaning-missed-more { margin: 8px 0 0; font-size: 0.8rem; color: var(--text-secondary); }
+
+/* OBS: .hidden är INTE en global utility i det här projektet (CSS_KARTA) – den
+   fungerar bara via sammansatta selektorer. Var och en av lägets inre delar som
+   ska kunna döljas behöver därför en egen regel här. */
+.dagsutmaning-intro.hidden,
+.dagsutmaning-play.hidden,
+.dagsutmaning-finished.hidden,
+.dagsutmaning-praise.hidden,
+.dagsutmaning-streak-chip.hidden,
+.dagsutmaning-replay-chip.hidden,
+.dagsutmaning-missed-wrap.hidden,
+.dagsutmaning-missed-more.hidden,
+#dagsutmaningNextBtn.hidden,
+#dagsutmaningFooter.hidden { display: none; }
+
+@media (max-width: 640px) {
+  .dagsutmaning-intro { padding: 7px 10px; margin-bottom: 10px; }
+  .dagsutmaning-intro > summary { font-size: 0.82rem; }
+  .dagsutmaning-intro-body { font-size: 0.8rem; }
+  .dagsutmaning-header { padding: 8px 10px; }
+  /* Ämnesraden är lång och bröts illa mot högerkanten bredvid namnet. */
+  .dagsutmaning-header-top { flex-direction: column; align-items: flex-start; gap: 2px; }
+  .dagsutmaning-meta { font-size: 0.74rem; text-align: left; }
+  .dagsutmaning-day-dot { width: 23px; height: 23px; font-size: 0.72rem; }
+  .dagsutmaning-card { padding: 13px 12px; min-height: 86px; }
+  .dagsutmaning-prompt { font-size: max(0.92rem, calc(1.08rem * var(--prompt-scale, 1))); }
+  .dagsutmaning-choices { gap: 8px; }
+  .dagsutmaning-choice {
+    min-height: 60px;
+    padding: 9px 8px;
+    font-size: max(0.76rem, calc(0.9rem * var(--opt-scale, 1)));
+  }
+  .dagsutmaning-streak-text { font-size: 1.05rem; }
+  .dagsutmaning-next-text { font-size: 0.84rem; }
+  .dagsutmaning-missed .sm-q, .dagsutmaning-missed .sm-a { font-size: 0.8rem; }
+}
+
+/* Rörelsen är extra, inte information: alla sluttillstånd (grön/röd, ✓ i
+   dagsprickarna, mätare, ring, siffror) sätts ändå direkt av JS. Fördröjningen
+   innan nästa fråga rörs INTE — den är tiden facit syns (§13.1 punkt 8). */
+@media (prefers-reduced-motion: reduce) {
+  .dagsutmaning-choice,
+  .dagsutmaning-choice.shake,
+  .dagsutmaning-card.in,
+  .dagsutmaning-day.pop .dagsutmaning-day-dot,
+  .dagsutmaning-praise.in {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ============================================================================
    SKALA SPELVYERNA TILL SKÄRMEN (--view-fit, sätts av fitActiveView i app.js)
    ============================================================================
    Textlängd skalas redan per element (--prompt-scale/--opt-scale/--tile-scale),
@@ -3742,10 +4168,32 @@ ol li {
   }
   #tidsjakt .tidsjakt-choices.two .tidsjakt-choice { min-height: max(52px, calc(78px * var(--view-fit, 1))); }
 
-  /* Sidfoten i alla tre – det är den som hamnar under fold först. */
+  /* Dagens utmaning */
+  #dagsutmaning .dagsutmaning-header { padding: calc(8px * var(--view-fit, 1)) 10px; margin-bottom: calc(12px * var(--view-fit, 1)); }
+  #dagsutmaning .dagsutmaning-day-dot {
+    width: max(18px, calc(23px * var(--view-fit, 1)));
+    height: max(18px, calc(23px * var(--view-fit, 1)));
+    font-size: max(0.6rem, calc(0.72rem * var(--view-fit, 1)));
+  }
+  #dagsutmaning .dagsutmaning-card {
+    padding: calc(13px * var(--view-fit, 1)) 12px;
+    margin-bottom: calc(12px * var(--view-fit, 1));
+    min-height: max(64px, calc(86px * var(--view-fit, 1)));
+  }
+  #dagsutmaning .dagsutmaning-prompt { font-size: max(0.82rem, calc(1.08rem * var(--prompt-scale, 1) * var(--view-fit, 1))); }
+  #dagsutmaning .dagsutmaning-choices { gap: max(6px, calc(8px * var(--view-fit, 1))); }
+  #dagsutmaning .dagsutmaning-choice {
+    min-height: max(44px, calc(60px * var(--view-fit, 1)));
+    padding: calc(9px * var(--view-fit, 1)) 8px;
+    font-size: max(0.76rem, calc(0.9rem * var(--opt-scale, 1) * var(--view-fit, 1)));
+  }
+  #dagsutmaning .dagsutmaning-choices.two .dagsutmaning-choice { min-height: max(52px, calc(78px * var(--view-fit, 1))); }
+
+  /* Sidfoten i alla fyra – det är den som hamnar under fold först. */
   #matcha .quiz-footer,
   #leitner .quiz-footer,
-  #tidsjakt .quiz-footer {
+  #tidsjakt .quiz-footer,
+  #dagsutmaning .quiz-footer {
     margin-top: calc(24px * var(--view-fit, 1));
     padding-top: calc(16px * var(--view-fit, 1));
   }

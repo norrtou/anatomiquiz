@@ -18,9 +18,10 @@ Ingen enskild generator kan göra det. `generate_glossary.py` hade ett eget
 `--check` fram till 0.9.270; det jämförde generatorns rena utdata mot filer som
 senare steg skrivit i, och kunde därför aldrig lysa grönt igen efter 0.9.267.
 
-Efter rundtrippen körs fyra kontroller mot arbetskatalogen: `check_links.py`
+Efter rundtrippen körs fem kontroller mot arbetskatalogen: `check_links.py`
 (varje intern länk mot disk), `check_rubriker.py` (varje sidas rubrikkedja utan
-hopp), `check_kontrast.py` (WCAG-kvoten på varje färgad yta, i båda teman) och
+hopp), `check_kontrast.py` (WCAG-kvoten på varje färgad yta, i båda teman),
+`check_spellagen.py` (varje spelläge registrerat på alla fyra ställen) och
 `sidodatum.py --check` (varje sidas datum mot git). Den sista kan inte
 ligga i KEDJA – spegeln är en naken filkopia utan `.git`.
 
@@ -136,8 +137,16 @@ def main(argv):
         # med värden, så den kan inte bli inaktuell när paletten ändras. Felet
         # den finns för att fånga syns inte alls: vit text på #34d399 ser prydlig
         # ut i en skärmdump och ger 1,92:1.
+        #
+        # check_spellagen.py mäter en femte sak: att varje spelläge är
+        # registrerat på ALLA fyra ställen ett läge måste stå på. CSS_KARTA
+        # listade dem som en tabell att komma ihåg, och i 0.9.284 glömdes
+        # fokuslägets :has()-lista ändå — sajtrubrik och sidfot låg kvar mitt i
+        # spelet, precis den bugg 0.9.274 fixade för de fyra andra lägena. En
+        # checklista i ett dokument är den handpåläggning §0.3 förbjuder.
         for kontroll in ("scripts/check_links.py", "scripts/check_rubriker.py",
-                         "scripts/check_kontrast.py", "scripts/sidodatum.py"):
+                         "scripts/check_kontrast.py", "scripts/check_spellagen.py",
+                         "scripts/sidodatum.py"):
             argv = [kontroll] + (["--check"] if "sidodatum" in kontroll else [])
             kod = subprocess.run([sys.executable] + argv, cwd=ROOT).returncode
             if kod != 0:

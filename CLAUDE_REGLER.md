@@ -892,7 +892,7 @@ tills skriptet lär sig dem", vilket är exakt den sortens mekaniska handpåläg
 §0.3 förbjuder (116 sidor refererar `styles.css`). `pre-commit` blockerar en commit
 där en ändrad js/css-fil bär en gammal buster.
 
-**Gäller:** spellägen (Matcha, Leitner, Tidsjakt, kommande Dagens utmaning/Gravity),
+**Gäller:** spellägen (Matcha, Leitner, Tidsjakt, Dagens utmaning, kommande Gravity),
 fristående delappar och verktyg. Gäller **inte** rena datafiler eller små
 hjälpfunktioner som hör ihop med befintlig quiz-/flashcard-logik.
 
@@ -1059,7 +1059,7 @@ funktionen; för ett spel **är** det funktionen.
 framtida spel följer matcha-lyftet, utan att jag behöver upprepa det").**
 
 Matcha efter spelkänslo-lyftet (0.9.247) **är mallen**. Varje kommande spelläge —
-Dagens utmaning + streak, Arkad/Gravity och allt som tillkommer — byggs med hela
+Arkad/Gravity och allt som tillkommer — byggs med hela
 listan nedan **inne i det första bygget**. Den ska aldrig behöva efterfrågas, och den får aldrig läggas som ett
 polish-pass efteråt: att bygga läget platt och sedan lyfta det är precis den
 dubbelkostnad §0 förbjuder (Matcha byggdes så, och lyftet blev ett eget arbetspass).
@@ -1082,6 +1082,24 @@ klockan **som** mätare (den töms i stället för att fyllas) plus ett spökmå
 personbästa i ämnet syns under spelet, inte bara i efterhand. Motivera anpassningen
 i planen på det sättet — "punkten passar inte" räcker inte, "så här löser läget
 samma behov" gör det.
+
+**Andra facit: `js/dagsutmaning.js` (0.9.284), där anpassningen gick åt motsatt
+håll.** Där finns ingen klocka, och då blir Tidsjaktens snabba steg fel av samma
+skäl som Leitners tresteg var fel där: **rätt svar** kvitteras kort (650 ms) och går
+vidare av sig självt, men **fel svar** lämnar facit kvar tills spelaren själv trycker
+vidare. Auto-vidare på ett felsvar är aktivt skadligt när inget jagar spelaren — den
+enda fråga man faktiskt behövde läsa vore den man inte hann läsa. Punkt 3 fick två
+nivåer i stället för en, eftersom "hela spelet" i ett dagligt läge spänner över
+**dagar**: rundans mätare är den delade `.gm-progress-*`-basen, och vanemätaren är en
+rad med sju prickar som visar de senaste dygnen. Frågan att ställa per punkt är alltså
+inte bara *vad betyder den här punkten i det här spelet* utan **vad är enheten för
+"spelet"** — en runda, ett pass eller en vana.
+
+**Ta två minuter till formuleringarna när slutskärmen är byggd.** Båda textfelen i
+0.9.284 hittades i den visuella kontrollen och inget av dem av 111 tester: "🔥 bästa
+svit 9" stod bredvid "🔥 Dag 1 i rad" (två olika mått med samma emoji, där det ena är
+lägets identitet), och omspelets slut inledde två rader i följd med "Omspel –". Läs
+slutskärmens rader **tillsammans**, som en text — varje rad ska göra en egen sak.
 
 **De åtta punkterna — facit finns i `js/matcha.js` + `.matcha-*` i `css/styles.css`,
 använd mönstret därifrån och översätt det till det nya lägets mekanik:**

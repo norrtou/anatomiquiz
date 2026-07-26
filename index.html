@@ -69,7 +69,7 @@
     "educationalUse": "practice",
     "learningResourceType": ["quiz", "flashcard", "reference"],
     "datePublished": "2026-05-27",
-    "dateModified": "2026-07-25",
+    "dateModified": "2026-07-26",
     "author": {
       "@type": "Person",
       "@id": "https://anatomiquiz.se/#daniel-medin",
@@ -164,7 +164,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="css/styles.css?v=0.9.283">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.284">
 </head>
 <body>
 
@@ -494,7 +494,14 @@
             <button id="startTidsjaktBtn" class="btn btn-mode btn-mode--ready" type="button">Tidsjakt</button>
           </div>
           <div class="game-modes-row game-modes-row--2">
-            <button class="btn btn-mode" type="button" disabled aria-disabled="true">Dagens utmaning</button>
+            <!-- Sviten sitter PÅ knappen, inte bara inne i läget: en svit man
+                 måste öppna spelet för att se driver inga återbesök. 🔥 N =
+                 dagar i rad, ✅ N = dagens utmaning redan klar. Sätts av
+                 js/dagsutmaning.js (updateDagsutmaningButton). -->
+            <button id="startDagsutmaningBtn" class="btn btn-mode btn-mode--ready" type="button">
+              <span class="mode-label">Dagens utmaning</span>
+              <span id="dagsutmaningFlame" class="mode-flame hidden"></span>
+            </button>
             <button class="btn btn-mode" type="button" disabled aria-disabled="true">Arcade: Gravity</button>
           </div>
           <!-- Vägen till den utförliga genomgången av alla lägen, reglerna och
@@ -1006,6 +1013,122 @@
     </section>
 
     <!-- =========================================================
+         Dagens utmaning — dold initialt.
+         Tio frågor ur valt ämne, valda av datumet självt (seed = dagens datum
+         + ämne), alltså samma set hela dygnet och nytt vid midnatt. Sviten
+         räknar DAGAR i rad och sparas i eget fack (hur_dagsutmaning_state),
+         resultaten i hur_highscores_dagsutmaning. Logik: js/dagsutmaning.js.
+         Ämne och utbildning ärvs från startvyn som i övriga spellägen.
+         ========================================================= -->
+    <section id="dagsutmaning" class="card hidden" aria-labelledby="dagsutmaningHeading">
+      <h2 id="dagsutmaningHeading" class="sr-only">Dagens utmaning</h2>
+
+      <!-- Vad läget GÅR UT PÅ, inte bara vilka knappar som finns. En daglig
+           utmaning med en svit förklarar sig inte själv: utan texten ser de tio
+           frågorna ut som ett kort quiz och prickraden som dekoration, och då
+           finns ingen anledning att komma tillbaka i morgon.
+           js/dagsutmaning.js fäller upp rutan automatiskt för den som aldrig
+           spelat och lämnar den hopfälld för vana spelare. Döljs i klart-vyn. -->
+      <details id="dagsutmaningIntro" class="dagsutmaning-intro">
+        <summary>Så funkar det – två minuter om dagen slår ett långpass i månaden</summary>
+        <div class="dagsutmaning-intro-body">
+          <p><strong>Det här är en vana, inte ett pluggpass.</strong> Tio frågor ur ämnet du valt, och de är <em>desamma hela dagen</em> – appen väljer dem ur datumet, inte på måfå. Vid midnatt byts de mot tio nya.</p>
+          <ul class="dagsutmaning-intro-list">
+            <li><strong>Rätt svar</strong> – nästa fråga kommer av sig själv. Du behöver inte trycka på något.</li>
+            <li><strong>Fel svar</strong> – rätt svar blir kvar på skärmen tills du själv trycker vidare. Det är den frågan du är här för.</li>
+            <li><strong>Klarar du dagens</strong> – dagen bockas av i raden längst upp och din <strong>svit</strong> växer med ett. Missar du en dag börjar den om på ett.</li>
+          </ul>
+          <p>Sviten är hela poängen. Forskningen bakom appen säger samma sak om och om igen: att sprida ut övningen över tid slår att samla ihop den, även om den totala tiden är densamma. Sju korta dagar är alltså värda mer än en lång kväll – och raden med prickar finns för att göra det synligt.</p>
+          <p><strong>Har du redan klarat dagens</strong> i det här ämnet går den att spela igen, men då är det ren träning: samma frågor, resultatet sparas inte och sviten rörs inte.</p>
+          <p class="mode-help"><a href="spellagen.html">Läs mer om alla spellägen och studietekniken bakom</a></p>
+        </div>
+      </details>
+
+      <!-- En sammanhållen infopanel: spelare, ämne, vanerad och rundans mätare
+           hör ihop och ska inte ligga som lösryckta rader. -->
+      <div class="dagsutmaning-header">
+        <div class="dagsutmaning-header-top">
+          <span id="dagsutmaningPlayerLabel" class="dagsutmaning-player"></span>
+          <span id="dagsutmaningMeta" class="dagsutmaning-meta"></span>
+        </div>
+
+        <!-- Vanemätaren: den riktiga framstegsmätaren i det här läget, eftersom
+             spelet spänner över dagar och inte över en runda. Sju dagar bakåt,
+             veckodagens initial under varje prick, så att raden skyltar med sin
+             egen regel utan att man behöver läsa förklaringen. Byggs av
+             js/dagsutmaning.js (renderDagsutmaningWeek). -->
+        <div class="dagsutmaning-week-row">
+          <div id="dagsutmaningWeek" class="dagsutmaning-week" role="img" aria-label="Dina senaste sju dagar"></div>
+          <span id="dagsutmaningStreakChip" class="dagsutmaning-streak-chip hidden"></span>
+          <span id="dagsutmaningReplayChip" class="dagsutmaning-replay-chip hidden">Omspel</span>
+        </div>
+
+        <!-- Rundans mätare — delad .gm-*-bas (css/styles.css). -->
+        <div class="dagsutmaning-header-bottom">
+          <div class="gm-progress-track" aria-hidden="true">
+            <div id="dagsutmaningProgressFill" class="gm-progress-fill"></div>
+          </div>
+          <span id="dagsutmaningScoreBadge" class="gm-score-badge" aria-live="polite"></span>
+        </div>
+      </div>
+
+      <p id="dagsutmaningPraise" class="dagsutmaning-praise hidden" aria-live="polite"></p>
+
+      <div id="dagsutmaningPlay" class="dagsutmaning-play">
+        <div id="dagsutmaningCard" class="dagsutmaning-card">
+          <p id="dagsutmaningPrompt" class="dagsutmaning-prompt"></p>
+        </div>
+
+        <div id="dagsutmaningChoices" class="dagsutmaning-choices" role="group" aria-label="Svarsalternativ"></div>
+      </div>
+
+      <!-- Klart-vy (dold under rundan) -->
+      <div id="dagsutmaningFinished" class="dagsutmaning-finished hidden">
+        <div class="gm-ring-wrap">
+          <svg class="gm-ring" viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="gm-ring-bg" cx="60" cy="60" r="52"></circle>
+            <circle id="dagsutmaningRingProgress" class="gm-ring-progress" cx="60" cy="60" r="52"></circle>
+          </svg>
+          <div class="gm-ring-label">
+            <span id="dagsutmaningRingPct" class="gm-ring-pct"></span>
+            <span class="gm-ring-sub">rätt</span>
+          </div>
+        </div>
+        <p id="dagsutmaningDoneText" class="dagsutmaning-done-text" aria-live="polite"></p>
+        <p id="dagsutmaningStatsText" class="gm-stats-text"></p>
+        <!-- Sviten är lägets riktiga poäng och får en egen rad, inte en siffra
+             bland nyckeltalen. -->
+        <p id="dagsutmaningStreakText" class="dagsutmaning-streak-text" aria-live="polite"></p>
+        <p id="dagsutmaningRecordBadge" class="gm-record-badge hidden" aria-live="polite"></p>
+        <!-- Knappheten är mekaniken: nästa mål är i morgon, inte "spela igen". -->
+        <p id="dagsutmaningNextText" class="dagsutmaning-next-text"></p>
+
+        <!-- Det pedagogiska värdet: en runda utan facit efteråt lär ingen något. -->
+        <div id="dagsutmaningMissedWrap" class="dagsutmaning-missed-wrap hidden">
+          <h3 class="dagsutmaning-missed-heading">Det här missade du</h3>
+          <ul id="dagsutmaningMissed" class="dagsutmaning-missed"></ul>
+          <p id="dagsutmaningMissedMore" class="dagsutmaning-missed-more hidden"></p>
+        </div>
+
+        <div class="actions">
+          <button id="dagsutmaningQuitBtn" class="btn primary">Avsluta</button>
+          <button id="dagsutmaningRetryBtn" class="btn">Spela igen</button>
+        </div>
+      </div>
+
+      <div id="dagsutmaningFooter" class="quiz-footer">
+        <button id="dagsutmaningCancelBtn" class="btn btn-cancel">Avbryt</button>
+        <div class="footer-center">
+          <div id="dagsutmaningCounter" class="dagsutmaning-counter"></div>
+        </div>
+        <div class="quiz-actions">
+          <!-- Finns bara efter ett fel svar; rätt svar går vidare av sig självt. -->
+          <button id="dagsutmaningNextBtn" class="btn primary hidden" type="button" disabled>Nästa</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
          Hantera-sektion — granska och importera frågor (dold initialt)
          ========================================================= -->
     <section id="manage" class="card hidden" aria-labelledby="manageHeading">
@@ -1086,7 +1209,7 @@
            som skuggade platshållare. Id:n följer slug-konventionen
            (scoreList-<slug>, exportScores-<slug>, …), så ett nytt läge behöver
            bara ta bort disabled/hs-segment--placeholder och koppla på sin logik.
-           Slugs: matcha · leitner · tidsjakt · daily · gravity
+           Slugs: matcha · leitner · tidsjakt · dagsutmaning · gravity
            ===================================================================== -->
       <div class="hs-modes" aria-label="Topplistor för övriga spellägen">
         <h3 class="hs-modes-heading">Fler spellägen</h3>
@@ -1127,15 +1250,18 @@
           </div>
         </div>
 
-        <div class="hs-segment hs-segment--placeholder" data-mode="daily">
-          <h4 class="hs-segment-title">Dagens utmaning</h4>
-          <ol id="scoreList-daily" class="hs-segment-list"></ol>
-          <p class="hs-empty">Spelläget är inte byggt än — inga resultat att visa.</p>
+        <div class="hs-segment" data-mode="dagsutmaning">
+          <h4 class="hs-segment-title">Dagens utmaning <span class="hs-segment-sub">bäst andel först</span></h4>
+          <ol id="scoreList-dagsutmaning" class="hs-segment-list"></ol>
+          <p class="hs-empty">Inga dagsutmaningar än — klara dagens så dyker den upp här.</p>
           <div class="actions">
-            <button id="exportScores-daily" class="btn" type="button" disabled aria-disabled="true">Exportera resultat</button>
-            <button id="importScoresBtn-daily" class="btn" type="button" disabled aria-disabled="true">Importera resultat</button>
-            <input id="importScoresFile-daily" type="file" accept="application/json" class="file-input-hidden" aria-hidden="true" tabindex="-1" disabled />
-            <button id="clearScores-daily" class="btn" type="button" disabled aria-disabled="true">Rensa</button>
+            <button id="exportScores-dagsutmaning" class="btn" type="button">Exportera resultat</button>
+            <button id="importScoresBtn-dagsutmaning" class="btn" type="button">Importera resultat</button>
+            <input id="importScoresFile-dagsutmaning" type="file" accept="application/json" class="file-input-hidden" aria-hidden="true" tabindex="-1" />
+            <button id="clearScores-dagsutmaning" class="btn" type="button">Rensa</button>
+            <!-- Sviten bor i ett eget fack och rensas separat: den som nollar
+                 topplistan menar sällan att 40 dagars svit ska följa med. -->
+            <button id="clearStreak-dagsutmaning" class="btn" type="button">Nollställ svit</button>
           </div>
         </div>
 
@@ -1261,16 +1387,17 @@
     <footer class="page-footer">
       <p>Utbildningsmaterial, inte medicinsk rådgivning. Innehållet är avsett för studier och ersätter inte kurslitteratur, undervisning eller kliniska riktlinjer. Det ska inte användas som underlag för vård eller behandling av patienter.</p>
       <p>Anatomiquiz använder inga kakor och samlar inte in personuppgifter. Läs mer i <a href="/integritet.html" class="info-link">integritetspolicyn</a>.</p>
-      <p class="page-updated">Senast uppdaterad <time data-updated datetime="2026-07-25">25 juli 2026</time></p>
+      <p class="page-updated">Senast uppdaterad <time data-updated datetime="2026-07-26">26 juli 2026</time></p>
     </footer>
   </main>
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.283" defer></script>
+  <script src="js/app.js?v=0.9.284" defer></script>
   <!-- Spellägesmoduler: en egen fil per läge, laddas EFTER app.js (delar globalt scope). -->
   <script src="js/matcha.js?v=0.9.261" defer></script>
   <script src="js/leitner.js?v=0.9.261" defer></script>
   <script src="js/tidsjakt.js?v=0.9.262" defer></script>
+  <script src="js/dagsutmaning.js?v=0.9.284" defer></script>
 </body>
 </html>
