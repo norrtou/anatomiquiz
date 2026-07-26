@@ -415,6 +415,72 @@ main {
   margin-bottom: 6px;
 }
 
+/* Sociala kanaler sist i Om-sektionen. Avsiktligt lågmält: tunn skiljelinje av
+   samma sort som sidfotens, dämpad minirubrik och två små monokroma ikoner utan
+   plattor eller varumärkesfärger — raden ska kunna hittas, inte dra blicken.
+   Ikonerna sätter bara color (currentColor i SVG:n), aldrig en egen botten, så
+   de följer ljust/mörkt läge utan ett eget kontrastpar att hålla reda på. */
+.intro-social {
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(16, 185, 129, 0.15);
+}
+
+.intro-social h3 {
+  /* Skriver över .intro h3 (0.98rem + 22px topmarginal): det här är en etikett
+     över ikonerna, inte ännu en avdelningsrubrik i texten. */
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Nollar .intro ul/li — ingen punktlista, inget indrag. Den negativa marginalen
+   drar ikonens tappyta ut i kanten så att själva glyfen står optiskt i linje
+   med rubriken ovanför. */
+.intro-social .social-links {
+  display: flex;
+  gap: 2px;
+  margin: 2px 0 0 -9px;
+  padding: 0;
+  list-style: none;
+}
+
+.intro-social .social-links li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Två klasser i selektorn: .intro a (grön + fet + understruken) har annars
+   högre specificitet och färgar ikonen som en textlänk. */
+.intro-social .social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;   /* liten ikon, men hela 40×40 är tryckyta (WCAG 2.5.8) */
+  height: 40px;
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.intro-social .social-link svg {
+  display: block;
+  width: 19px;
+  height: 19px;
+}
+
+.intro-social .social-link:hover,
+.intro-social .social-link:focus-visible {
+  color: var(--primary-deep);
+}
+
+.intro-social .social-link:focus-visible {
+  outline: 2px solid var(--primary-deep);
+  outline-offset: 2px;
+}
+
 /* Dölj Om-sektionen när startvyn är dold (under quiz/flashcards/resultat) */
 #setup.hidden ~ .intro {
   display: none;

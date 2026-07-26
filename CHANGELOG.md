@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.288
+- **"Följ Anatomiquiz.se" sist i Om-sektionen på startsidan.** Instagram och Facebook som två små monokroma ikoner, lagda **utanför** `<details>` så att de syns utan att fördjupningen fälls ut — hade de legat inuti hade de varit osynliga för alla som inte klickar.
+- **Ikonerna är inline-SVG med `fill="currentColor"`, inte varumärkesfärger.** De sätter bara `color` och aldrig en egen botten, så de följer ljust och mörkt läge utan ett nytt kontrastpar att hålla i synk (SEO_REGLER §7c). Instagrammärket är ritat som en enda `fill-rule="evenodd"`-bana — ram, lins och punkt — i stället för en inklistrad tredjepartsbana.
+- **Lågmält med flit:** samma tunna skiljelinje som sidfoten, dämpad minirubrik i `--text-secondary` och 19 px glyfer. Tryckytan är ändå 40×40 px (WCAG 2.5.8), och den negativa vänstermarginalen drar tryckytan ut i kanten så att glyfen står optiskt i linje med rubriken ovanför.
+- **Selektorerna är `.intro-social .social-link`, inte `.social-link`.** `.intro a` (grön, fet, understruken) har högre specificitet än en ensam klass och hade annars färgat ikonerna som textlänkar.
+- Kedjan avbockad: WCAG AA i båda teman på 163 mätpunkter, rundtripp identisk, datumen i synk.
+
 ## 0.9.287
 - **Släpp 2 av akutmedicinsvepet: motorn, hubben och NEWS2.** `/verktyg/akutmedicin/` finns nu, med `vitalparametrar.html` som första instrument. Det här är **referensimplementationen** — formen ska stämmas av innan släpp 3–6 rullas ut (facit: `scripts/akutmedicin_verktyg_todo.md`).
 - **Skalorna är data, inte kod.** `data/akutmedicin.json` bär NEWS2:s sju parametrar, deras intervall, poäng och svarstabell; `js/akutmedicin.js` monterar en skala i varje `<div data-akut="…">`. En ny skala ska vara en post i JSON-filen. **Bara mönster B (värdeskala) är byggt** — kryssruteskalan, formelräknaren och beslutsgången hängs på när sina instrument byggs, eftersom en renderare utan instrument är kod som ingen kör och ingen testar.
