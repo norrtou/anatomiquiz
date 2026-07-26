@@ -321,6 +321,34 @@ def _sub(text, rx, terms, stats):
                 f'data-def="{v["def"]}">{token}</a>')
     return rx.sub(repl, text)
 
+# Tooltipen är inte CSS – den ritas av js/kb-glossary.js, som letar upp varje
+# `a.kb-term` och visar `data-def` vid hover och fokus. Utan skriptet är en
+# kb-term bara en understruken länk till ordlistan: inget poppar upp.
+#
+# Sidgeneratorerna skriver taggen själva, men de handskrivna sidorna gjorde det
+# inte, och när `--all` utökades till /verktyg/ (0.9.286) fick de 38 tooltips på
+# NEWS2-sidan som ingen kunde se. Att lägga in taggen för hand på varje ny sida
+# är precis den handpåläggning §0.3 förbjuder, så steget som SÄTTER kb-term
+# ansvarar också för att den går att visa. Rundtrippstestet blir därmed larmet:
+# en sida som saknar taggen ändras i spegeln och faller ut som avvikelse.
+TOOLTIP_SKRIPT = '<script src="/js/kb-glossary.js" defer></script>'
+TOOLTIP_KOMMENTAR = ('<!-- Ordlistetooltips i löptexten (progressiv '
+                     'förbättring; .kb-term funkar som länk utan JS) -->')
+
+
+def säkra_tooltipskript(html, rel):
+    """Lägg in kb-glossary.js på en sida som bär kb-term men saknar skriptet."""
+    if 'class="kb-term"' not in html or "js/kb-glossary.js" in html:
+        return html
+    if "</body>" not in html:
+        print(f"STOPP: {rel} har kb-term men ingen </body> att lägga "
+              "tooltipskriptet före.", file=sys.stderr)
+        return html
+    return html.replace(
+        "</body>",
+        f"  {TOOLTIP_KOMMENTAR}\n  {TOOLTIP_SKRIPT}\n\n</body>", 1)
+
+
 def wire_file(path, terms, rx, write=True):
     path = pathlib.Path(path)
     spärr = BLOCKERADE_PER_SIDA.get(_rel(path))
@@ -329,7 +357,7 @@ def wire_file(path, terms, rx, write=True):
         rx = build_regex(terms)
     html = path.read_text(encoding="utf-8")
     stats = {}
-    new = wire_html(html, terms, rx, stats)
+    new = säkra_tooltipskript(wire_html(html, terms, rx, stats), _rel(path))
     n = sum(stats.values())
     if write and new != html:
         path.write_text(new, encoding="utf-8")

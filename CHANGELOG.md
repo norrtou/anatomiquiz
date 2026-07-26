@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.296
+- **Tooltiparna fungerar igen på fem sidor — de saknade skriptet som ritar dem.** En `.kb-term` är bara en länk till ordlistan; det är `js/kb-glossary.js` som läser `data-def` och visar rutan vid hover och tangentbordsfokus. Sidgeneratorerna skriver in den taggen själva, men de **handskrivna** sidorna gjorde det inte. NEWS2-sidan hade därför 38 uppslagsord som såg klickbara ut men aldrig visade något: `verktyg/akutmedicin/vitalparametrar.html` (38), `verktyg/akutmedicin/index.html` (3), `verktyg/lakemedelsberakning.html` (2), `kunskapsbank/nervtabeller.html` (2) och `kunskapsbank/index.html` (1).
+- **Orsaken var 0.9.286.** Då utökades `wire_terms.py --all` till `/verktyg/`, som dittills stått helt utanför tooltipsvepet. Termerna länkades in — men ingenting tog med skripttaggen, som fram till dess hade följt med automatiskt eftersom varje sida som bar kb-term också råkade vara generatorskriven.
+- **Skyddet ligger i steget som orsakade felet, inte i en checklista.** `wire_terms.py` lägger nu själv in taggen på varje sida som bär `class="kb-term"` och saknar den. Steget som *sätter* uppslagsorden ansvarar därmed för att de går att visa, och rundtrippstestet blir larmet: en sida utan taggen ändras i spegeln och faller ut som avvikelse (§0.3, §12.2). Verifierat genom att ta bort taggen igen — `check_generators.py` fällde larm på rätt fil.
+- Sidorna som faktiskt ändrades fick nytt `lastmod` och synligt datum via `sidodatum.py --update` + `wire_dates.py --all`.
+
 ## 0.9.295
 - **Undertexten på NEWS2-sidan är nu "Träna på NEWS2 och lär dig hur det fungerar"** (användarens formulering, ordagrant). Den säger rakt ut vad sidan är till för — öva på skalan och förstå den — i stället för att räkna upp innehållet.
 
