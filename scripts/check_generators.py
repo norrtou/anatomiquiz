@@ -152,9 +152,19 @@ def main(argv):
         # generator äger kan inte hållas rätt av en omkörning. En description
         # på 160 tecken ser korrekt ut överallt utom i träfflistan, där den
         # kapas — alltså på det enda ställe där den har en uppgift.
+        #
+        # check_akutmedicin.py mäter en sjunde sak: att poängskalornas facit
+        # (data/akutmedicin.json) och sidornas statiska uppslagstabeller säger
+        # samma sak, och att js/akutmedicin.js räknar rätt mot facit. Skalorna
+        # MÅSTE finnas på två ställen — räknaren läser facit, läsaren utan
+        # JavaScript läser tabellen — och två upplagor av samma sanning glider
+        # isär om ingenting mäter dem. Steget kör även
+        # scripts/test_verktyg_akutmedicin.js, som driver modulen i ett DOM-skal
+        # och prövar varje intervallgräns i NEWS2 åt båda håll.
         for kontroll in ("scripts/check_links.py", "scripts/check_rubriker.py",
                          "scripts/check_kontrast.py", "scripts/check_spellagen.py",
-                         "scripts/check_meta.py", "scripts/sidodatum.py"):
+                         "scripts/check_meta.py", "scripts/check_akutmedicin.py",
+                         "scripts/sidodatum.py"):
             argv = [kontroll] + (["--check"] if "sidodatum" in kontroll else [])
             kod = subprocess.run([sys.executable] + argv, cwd=ROOT).returncode
             if kod != 0:

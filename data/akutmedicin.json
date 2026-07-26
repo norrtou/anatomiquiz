@@ -1,0 +1,191 @@
+{
+  "_kommentar": "Facit för de akutmedicinska poängskalorna under /verktyg/akutmedicin/. Läses av js/akutmedicin.js, som monterar en skala i varje <div data-akut=\"...\">. En ny skala ska vara en post här, inte ny kod. Poängsättningen är hämtad ur instrumentets primärkälla (fältet kalla) och får aldrig ändras utan att källan säger det. Termbärande brödtext står i sidans statiska HTML, inte här — etiketter som modulen skriver ut når scripts/wire_terms.py aldrig (scripts/akutmedicin_verktyg_todo.md §3b).",
+
+  "news2": {
+    "namn": "NEWS2",
+    "monster": "varde",
+    "rubrik": "NEWS2 – tidig varningspoäng",
+    "intro": "Varje vitalparameter faller i ett intervall, och varje intervall är värt 0–3 poäng. Summan är patientens NEWS2. Fyll i de fem mätvärdena och kontrollera de tre valen, så visas poängen per parameter tillsammans med totalen.",
+    "summaetikett": "NEWS2",
+    "enhetssuffix": "poäng",
+    "kalla": "Royal College of Physicians (2017)",
+
+    "parametrar": [
+      {
+        "namn": "af",
+        "etikett": "Andningsfrekvens",
+        "kort": "Andningsfrekvens",
+        "enhet": "andetag/min",
+        "typ": "tal",
+        "plats": "t.ex. 18",
+        "rimlig": { "min": 4, "max": 80 },
+        "band": [
+          { "max": 8,  "poang": 3, "intervall": "≤8" },
+          { "max": 11, "poang": 1, "intervall": "9–11" },
+          { "max": 20, "poang": 0, "intervall": "12–20" },
+          { "max": 24, "poang": 2, "intervall": "21–24" },
+          {            "poang": 3, "intervall": "≥25" }
+        ]
+      },
+
+      {
+        "namn": "skala",
+        "etikett": "Mättnadsskala",
+        "kort": "Skala",
+        "typ": "val",
+        "roll": "instalning",
+        "hjalp": "Mättnadsskala 2 väljs bara för patienter med ett ordinerat målvärde på 88–92 %, alltså vid risk för koldioxidretention. Valet ger ingen poäng i sig — det avgör vilken tabell syresaturationen läses mot.",
+        "val": [
+          { "varde": "1", "text": "Skala 1 (målvärde ≥96 %)", "poang": 0 },
+          { "varde": "2", "text": "Skala 2 (målvärde 88–92 %)", "poang": 0 }
+        ]
+      },
+
+      {
+        "namn": "spo2",
+        "etikett": "Syresaturation",
+        "kort": "Syresaturation",
+        "enhet": "%",
+        "typ": "tal",
+        "plats": "t.ex. 97",
+        "rimlig": { "min": 50, "max": 100 },
+        "bandvaljare": "skala",
+        "band": {
+          "1": [
+            { "max": 91, "poang": 3, "intervall": "≤91" },
+            { "max": 93, "poang": 2, "intervall": "92–93" },
+            { "max": 95, "poang": 1, "intervall": "94–95" },
+            {            "poang": 0, "intervall": "≥96" }
+          ],
+          "2": [
+            { "max": 83, "poang": 3, "intervall": "≤83" },
+            { "max": 85, "poang": 2, "intervall": "84–85" },
+            { "max": 87, "poang": 1, "intervall": "86–87" },
+            { "max": 92, "poang": 0, "intervall": "88–92" },
+            { "max": 94, "poang": 1, "nar": { "syrgas": "syrgas" }, "intervall": "93–94 med syrgas" },
+            { "max": 96, "poang": 2, "nar": { "syrgas": "syrgas" }, "intervall": "95–96 med syrgas" },
+            {            "poang": 3, "nar": { "syrgas": "syrgas" }, "intervall": "≥97 med syrgas" },
+            {            "poang": 0, "intervall": "≥93 på luft" }
+          ]
+        }
+      },
+
+      {
+        "namn": "syrgas",
+        "etikett": "Andas patienten luft eller syrgas?",
+        "kort": "Syrgas",
+        "typ": "val",
+        "val": [
+          { "varde": "luft",   "text": "Luft",   "poang": 0 },
+          { "varde": "syrgas", "text": "Syrgas", "poang": 2 }
+        ]
+      },
+
+      {
+        "namn": "sbt",
+        "etikett": "Systoliskt blodtryck",
+        "kort": "Systoliskt blodtryck",
+        "enhet": "mmHg",
+        "typ": "tal",
+        "plats": "t.ex. 125",
+        "rimlig": { "min": 40, "max": 300 },
+        "band": [
+          { "max": 90,  "poang": 3, "intervall": "≤90" },
+          { "max": 100, "poang": 2, "intervall": "91–100" },
+          { "max": 110, "poang": 1, "intervall": "101–110" },
+          { "max": 219, "poang": 0, "intervall": "111–219" },
+          {             "poang": 3, "intervall": "≥220" }
+        ]
+      },
+
+      {
+        "namn": "puls",
+        "etikett": "Puls",
+        "kort": "Puls",
+        "enhet": "slag/min",
+        "typ": "tal",
+        "plats": "t.ex. 72",
+        "rimlig": { "min": 20, "max": 250 },
+        "band": [
+          { "max": 40,  "poang": 3, "intervall": "≤40" },
+          { "max": 50,  "poang": 1, "intervall": "41–50" },
+          { "max": 90,  "poang": 0, "intervall": "51–90" },
+          { "max": 110, "poang": 1, "intervall": "91–110" },
+          { "max": 130, "poang": 2, "intervall": "111–130" },
+          {             "poang": 3, "intervall": "≥131" }
+        ]
+      },
+
+      {
+        "namn": "temp",
+        "etikett": "Kroppstemperatur",
+        "kort": "Kroppstemperatur",
+        "enhet": "°C",
+        "typ": "tal",
+        "plats": "t.ex. 37,0",
+        "rimlig": { "min": 25, "max": 45 },
+        "band": [
+          { "max": 35.0, "poang": 3, "intervall": "≤35,0" },
+          { "max": 36.0, "poang": 1, "intervall": "35,1–36,0" },
+          { "max": 38.0, "poang": 0, "intervall": "36,1–38,0" },
+          { "max": 39.0, "poang": 1, "intervall": "38,1–39,0" },
+          {              "poang": 2, "intervall": "≥39,1" }
+        ]
+      },
+
+      {
+        "namn": "acvpu",
+        "etikett": "Medvetandegrad",
+        "kort": "Medvetandegrad",
+        "typ": "val",
+        "hjalp": "C i medvetandegraden står för nytillkommen förvirring. En patient som varit förvirrad länge och är oförändrad räknas som A.",
+        "val": [
+          { "varde": "A", "text": "A – vaken och orienterad",        "poang": 0 },
+          { "varde": "C", "text": "C – nytillkommen förvirring",     "poang": 3 },
+          { "varde": "V", "text": "V – reagerar på tilltal",         "poang": 3 },
+          { "varde": "P", "text": "P – reagerar på smärtstimulering", "poang": 3 },
+          { "varde": "U", "text": "U – reagerar inte",               "poang": 3 }
+        ]
+      }
+    ],
+
+    "band": [
+      {
+        "max": 0,
+        "niva": "ingen",
+        "rubrik": "Ingen förhöjd risk",
+        "overvakning": "Minst var tolfte timme.",
+        "atgard": "Fortsatt rutinmässig övervakning."
+      },
+      {
+        "max": 4,
+        "niva": "lag",
+        "rubrik": "Låg risk",
+        "overvakning": "Minst var fjärde till sjätte timme.",
+        "atgard": "Legitimerad sjuksköterska bedömer patienten och avgör om övervakningen behöver tätas eller läkare kontaktas."
+      },
+      {
+        "max": 6,
+        "niva": "medel",
+        "rubrik": "Medelhög risk",
+        "overvakning": "Minst en gång i timmen.",
+        "atgard": "Brådskande bedömning av läkare eller team med kompetens i akut sjukdom. Överväg plats med förhöjd övervakningsnivå."
+      },
+      {
+        "niva": "hog",
+        "rubrik": "Hög risk",
+        "overvakning": "Kontinuerlig registrering av vitalparametrarna.",
+        "atgard": "Akut bedömning av team med intensivvårdskompetens. Överväg vård på högre vårdnivå."
+      }
+    ],
+
+    "kritisk": {
+      "granspoang": 3,
+      "niva": "medel",
+      "rubrik": "Låg till medelhög risk – röd poäng",
+      "overvakning": "Minst en gång i timmen.",
+      "atgard": "En enskild parameter på 3 poäng väger tyngre än summan antyder och kräver brådskande läkarbedömning, även när totalen är låg.",
+      "notis": "Röd poäng: {p} ger 3 poäng ensam."
+    }
+  }
+}

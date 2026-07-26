@@ -1,11 +1,19 @@
 /* =========================================================
-   verktyg.css — räknare i kunskapsbankens verktygsavdelning
+   verktyg.css — räknare och poängskalor i verktygsavdelningen
    =========================================================
-   Egen fil, laddas bara av sidorna under /kunskapsbank/verktyg/.
-   Skälet är cachebustern: stilarna behövs på två sidor, och att
-   lägga dem i styles.css hade tvingat fram en versionshöjning av
-   stilmallen på hela sajten. Alla färger och mått ärvs från
-   :root i styles.css, så verktygen ser ut som resten av sidan.
+   Egen fil, laddas bara av sidorna under /verktyg/.
+   Skälet är cachebustern: stilarna behövs på en handfull sidor,
+   och att lägga dem i styles.css hade tvingat fram en
+   versionshöjning av stilmallen på hela sajten. Alla färger och
+   mått ärvs från :root i styles.css, så verktygen ser ut som
+   resten av sidan.
+
+   Två moduler klär sig här, och de delar komponenter med flit:
+   js/verktyg-lakemedel.js och js/akutmedicin.js. Det visuella
+   språket ska vara IDENTISKT, inte "nästan lika" — därför ärver
+   poängskalorna .vt-tool, .vt-field, .vt-inputrow, .vt-out,
+   .vt-warn, .vt-svarsruta och .vt-mode rakt av, och lägger bara
+   till det som saknades (.vt-poang, .vt-band, .vt-krit, .vt-hjalp).
    ========================================================= */
 
 /* ---------- Verktygskortet ---------- */
@@ -451,6 +459,146 @@
   font-size: 0.78rem;
   color: var(--text-secondary);
   font-weight: 600;
+}
+
+/* ---------- Poängskalorna (js/akutmedicin.js) ---------- */
+
+/* Ett valfält är ett helt fält, inte en enhetsväljare bredvid ett tal.
+   Basregeln .vt-inputrow select klämmer in rullgardinen på högst 45 %
+   av raden, vilket är rätt när den delar ram med ett tal och fel när
+   den är ensam. */
+.vt-field--val .vt-inputrow select {
+  flex: 1 1 auto;
+  max-width: none;
+  border-left: 0;
+  min-height: 46px;
+  padding: 0 12px;
+}
+
+/* Poängen för den enskilda parametern, under fältet. Det är den här
+   raden som gör skalan begriplig: man ser vilket intervall värdet föll
+   i, inte bara vad summan blev. Ingen egen bakgrund — texten ligger på
+   verktygskortets yta, och en ruta per fält hade blivit sju rutor. */
+.vt-poang {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.vt-poang.is-rod {
+  color: var(--error-text);
+}
+
+.vt-poang.is-tom,
+.vt-poang.is-dold {
+  font-weight: 500;
+}
+
+/* Förklaringar som hör till ett enskilt fält. Finstilt, utan fetstil. */
+.vt-hjalp {
+  margin-top: 12px;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.vt-hjalp p {
+  margin: 0;
+}
+
+.vt-hjalp p + p {
+  margin-top: 6px;
+}
+
+/* Svarsbandet — instrumentets egen svarstabell för just den summan.
+   Formen är .vt-warn:s: tonad botten och en färgad kantlinje till
+   vänster. Ingen platta med vit text, alltså ingen yta som kan gå
+   sönder i mörkt läge (SEO_REGLER §7c). Färgparen är desamma som
+   .vt-dom redan använder. */
+.vt-band {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border-left: 4px solid var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.vt-band-titel {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.vt-band-rad {
+  margin: 0;
+}
+
+.vt-band-rad + .vt-band-rad {
+  margin-top: 4px;
+}
+
+.vt-band.is-ingen,
+.vt-band.is-lag {
+  background: var(--success-bg);
+  color: var(--text-primary);
+  border-left-color: var(--success);
+}
+
+.vt-band.is-ingen .vt-band-titel,
+.vt-band.is-lag .vt-band-titel {
+  color: var(--primary-deep);
+}
+
+.vt-band.is-medel {
+  background: var(--warning-bg);
+  color: var(--text-primary);
+  border-left-color: var(--warning);
+}
+
+.vt-band.is-medel .vt-band-titel {
+  color: var(--warning-text-strong);
+}
+
+.vt-band.is-hog {
+  background: var(--error-bg);
+  color: var(--text-primary);
+  border-left-color: var(--error-border);
+}
+
+.vt-band.is-hog .vt-band-titel {
+  color: var(--error-text-strong);
+}
+
+/* Kolumnproportioner för poängskalornas uppslagstabeller. Basen
+   .kb-mtable bor i styles.css och är redan responsiv (staplas till
+   kort under 720 px); bara bredderna hör hemma här, eftersom bara
+   verktygssidorna använder just de här kolumnerna. Att lägga dem i
+   styles.css hade bumpat cachebustern på 116 sidor för två tabeller. */
+.kb-mtable .c-npar  { width: 26%; }
+.kb-mtable .c-np0   { width: 17%; }
+.kb-mtable .c-np1   { width: 22%; }
+.kb-mtable .c-np2   { width: 17%; }
+.kb-mtable .c-np3   { width: 18%; }
+
+.kb-mtable .c-nsum  { width: 16%; }
+.kb-mtable .c-nrisk { width: 14%; }
+.kb-mtable .c-nov   { width: 22%; }
+.kb-mtable .c-nat   { width: 48%; }
+
+/* Röd poäng: en enskild parameter som ensam når tre poäng. Den ska
+   synas som en anmärkning på bandet ovanför, inte som en andra
+   färgad ruta – två staplade rutor läser som två resultat. */
+.vt-krit {
+  margin: 8px 0 0;
+  padding-left: 10px;
+  border-left: 3px solid var(--error-border);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--error-text);
 }
 
 /* ---------- Övrigt ---------- */

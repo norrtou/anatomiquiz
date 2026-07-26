@@ -156,9 +156,11 @@ _s("versionshistorik.html",
 
 # --- Verktyg ----------------------------------------------------------------
 _s("verktyg/index.html",
-   [("Thing", "Läkemedelsberäknare"), ("Thing", "Aktivitetsdagbok")],
+   [("Thing", "Läkemedelsberäknare"), ("Thing", "Kliniska poängskalor"),
+    ("Thing", "Aktivitetsdagbok")],
    ["Vilka interaktiva verktyg som finns och vad var och ett gör."],
-   ["verktyg", "läkemedelsberäknare", "aktivitetsdagbok", "anatomiquiz"])
+   ["verktyg", "läkemedelsberäknare", "poängskalor", "aktivitetsdagbok",
+    "anatomiquiz"])
 
 _s("verktyg/lakemedelsberakning.html",
    [("Thing", "Läkemedelsberäkning"), ("Thing", "Infusion"),
@@ -168,6 +170,23 @@ _s("verktyg/lakemedelsberakning.html",
     "Att kontrollräkna ett svar innan det används."],
    ["läkemedelsberäkning", "dos och styrka", "infusionstakt", "spädning",
     "enhetsomvandling"])
+
+_s("verktyg/akutmedicin/index.html",
+   [("Thing", "Kliniska poängskalor"), ("Thing", "NEWS2")],
+   ["Vad en klinisk poängskala är och vad den kan säga om en patient.",
+    "Vilka poängskalor som finns som räknare och vad var och en mäter."],
+   ["poängskalor", "kalkylatorer", "akutmedicin", "NEWS2", "vitalparametrar"])
+
+_s("verktyg/akutmedicin/vitalparametrar.html",
+   [("Thing", "NEWS2"), ("Thing", "Vitalparametrar"),
+    ("Thing", "Syresaturation"), ("Thing", "Medvetandegrad")],
+   ["Hur NEWS2 poängsätts, parameter för parameter.",
+    "Vad varje vitalparameter mäter och vilket intervall som ger noll poäng.",
+    "Varför andningsfrekvensen förändras tidigare än blodtrycket vid akut "
+    "sjukdom.",
+    "Vad summan betyder för hur tätt patienten ska mätas om."],
+   ["NEWS2", "vitalparametrar", "andningsfrekvens", "syresaturation",
+    "medvetandegrad", "tidig varningspoäng"])
 
 # --- Ordlistan --------------------------------------------------------------
 _s("medicinskordlista.html",

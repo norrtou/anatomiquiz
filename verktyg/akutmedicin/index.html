@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSP mot XSS: skript/stilar/data endast från egen origin. GitHub Pages tillåter inga egna HTTP-headers, därav meta. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+
+  <!-- Primär SEO -->
+  <title>Akutmedicin – poängskalor och kalkylatorer | Anatomiquiz</title>
+  <meta name="description" content="Kliniska poängskalor förklarade: vad skalan mäter, varför just de variablerna väger, och en räknare som visar poängen parameter för parameter.">
+  <meta name="author" content="Daniel Medin (Norrtou Creations)">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+  <link rel="canonical" href="https://anatomiquiz.se/verktyg/akutmedicin/">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anatomiquiz.se/verktyg/akutmedicin/">
+  <meta property="og:title" content="Akutmedicin – poängskalor och kalkylatorer">
+  <meta property="og:description" content="Poängskalor som förklarar sig själva: räknaren visar poängen per parameter, och texten säger vad varje variabel betyder och varför den väger.">
+  <meta property="og:image" content="https://anatomiquiz.se/img/og-image.png">
+  <meta property="og:image:width" content="1518">
+  <meta property="og:image:height" content="864">
+  <meta property="og:image:alt" content="Anatomiquiz — akutmedicinska poängskalor">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="Anatomiquiz">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Akutmedicin – poängskalor och kalkylatorer">
+  <meta name="twitter:description" content="Poängskalor som förklarar sig själva: räknaren visar poängen per parameter, och texten säger vad varje variabel betyder och varför den väger.">
+  <meta name="twitter:image" content="https://anatomiquiz.se/img/og-image.png">
+  <meta name="twitter:image:alt" content="Anatomiquiz — akutmedicinska poängskalor">
+
+  <meta name="theme-color" content="#10b981">
+  <meta name="color-scheme" content="light dark">
+  <!-- Tema (ljust/mörkt). Laddas SYNKRONT och före stilmallen: attributet
+       data-theme måste sitta på <html> innan första målningen, annars
+       blinkar sidan ljus. Inline gick inte – CSP:n tillåter bara egen origin. -->
+  <script src="/js/theme.js?v=0.9.260"></script>
+
+  <!-- Strukturerad data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "CollectionPage",
+    "LearningResource"
+  ],
+  "name": "Akutmedicin – poängskalor och kalkylatorer",
+  "description": "Kliniska poängskalor och kalkylatorer som lärverktyg: varje instrument har en räknare som visar poängen parameter för parameter, en förklaring av vad variablerna betyder och en genomgång av varför just de variablerna väger.",
+  "url": "https://anatomiquiz.se/verktyg/akutmedicin/",
+  "inLanguage": "sv-SE",
+  "isAccessibleForFree": true,
+  "hasPart": [
+    {
+      "@type": "WebApplication",
+      "name": "Vitalparametrar och NEWS2",
+      "url": "https://anatomiquiz.se/verktyg/akutmedicin/vitalparametrar.html"
+    }
+  ],
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Anatomiquiz",
+    "url": "https://anatomiquiz.se/"
+  },
+  "datePublished": "2026-07-27",
+  "dateModified": "2026-07-27",
+  "author": {
+    "@type": "Person",
+    "@id": "https://anatomiquiz.se/#daniel-medin",
+    "name": "Daniel Medin",
+    "description": "Utbildad medicinsk sekreterare och studerande i arbetsterapi vid Lunds universitet, med särskilt intresse för anatomi.",
+    "url": "https://norrtou.se",
+    "sameAs": [
+      "https://norrtou.se",
+      "https://www.linkedin.com/in/danielmedin",
+      "https://github.com/norrtou"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://anatomiquiz.se/#norrtou-creations",
+    "name": "Norrtou Creations",
+    "url": "https://norrtou.se",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://anatomiquiz.se/img/icon-512.png"
+    },
+    "sameAs": [
+      "https://github.com/norrtou"
+    ]
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Kliniska poängskalor"
+    },
+    {
+      "@type": "Thing",
+      "name": "NEWS2"
+    }
+  ],
+  "teaches": [
+    "Vad en klinisk poängskala är och vad den kan säga om en patient.",
+    "Vilka poängskalor som finns som räknare och vad var och en mäter."
+  ],
+  "keywords": [
+    "poängskalor",
+    "kalkylatorer",
+    "akutmedicin",
+    "NEWS2",
+    "vitalparametrar"
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Anatomiquiz",
+      "item": "https://anatomiquiz.se/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Verktyg",
+      "item": "https://anatomiquiz.se/verktyg/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Akutmedicin",
+      "item": "https://anatomiquiz.se/verktyg/akutmedicin/"
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon.png">
+  <link rel="apple-touch-icon" href="/img/icon-192.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/css/styles.css?v=0.9.284">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+  <main id="main" class="container" role="main">
+
+    <header class="header">
+      <div class="header-title">
+        <h1>Akutmedicin</h1>
+      </div>
+      <p class="tagline">Poängskalor som förklarar sig själva</p>
+    </header>
+
+    <section class="card" aria-labelledby="akutHubHeading">
+
+      <nav class="breadcrumb" aria-label="Brödsmula">
+        <a href="/" class="breadcrumb-link">← Anatomiquiz</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="/verktyg/" class="breadcrumb-link">Verktyg</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <span class="breadcrumb-current" aria-current="page">Akutmedicin</span>
+      </nav>
+
+      <h2 id="akutHubHeading" class="sr-only"><a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">Kliniska</a> poängskalor och kalkylatorer</h2>
+
+      <div class="info-about">
+        <p>En <a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">klinisk</a> poängskala är ett sätt att göra en samlad bedömning räknebar. Mätvärden som var för sig ser normala ut kan tillsammans peka på att en patient håller på att bli sämre, och skalan sätter ord och siffror på det mönstret. Här ligger skalorna som lärverktyg: räknaren visar poängen parameter för parameter, så att det går att se <em>varför</em> summan blev som den blev.</p>
+        <p>Varje instrument har därför tre delar. Först räknaren. Sedan en genomgång av vad variablerna betyder, där varje fackterm går att slå upp. Sist en förklaring av varför just de variablerna väger — varför <a class="kb-term" href="/ordlista-a.html#term-andningsfrekvens" data-def="Antal andetag per minut; normalt 12–20 hos vuxen i vila">andningsfrekvensen</a> förändras tidigare än <a class="kb-term" href="/ordlista-p.html#term-puls" data-def="Tryckvågen som varje hjärtslag skickar ut i artärerna; mått på hjärtfrekvensen">pulsen</a>, och varför ett systoliskt <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtryck</a> kan vara opåverkat långt in i en försämring.</p>
+        <p>Avdelningen byggs ut instrument för instrument. Sidor märkta <em>Snart</em> har ännu inget publicerat innehåll.</p>
+      </div>
+
+      <div class="kb-grid">
+
+        <a class="kb-card" href="/verktyg/akutmedicin/vitalparametrar.html">
+          <span class="kb-status is-live">Räknare</span>
+          <h3 class="kb-card-title">Vitalparametrar</h3>
+          <p class="kb-card-desc">NEWS2 – andningsfrekvens, syresaturation, syrgas, blodtryck, puls, temperatur och medvetandegrad, med poängen utskriven per parameter.</p>
+          <span class="kb-card-go">Öppna räknaren →</span>
+        </a>
+
+        <div class="kb-card is-placeholder">
+          <span class="kb-status is-soon">Snart</span>
+          <h3 class="kb-card-title">Syra och bas</h3>
+          <p class="kb-card-desc">Blodgastolkning steg för steg, korrigerat natrium vid högt glukos och effektiv serumosmolalitet.</p>
+        </div>
+
+        <div class="kb-card is-placeholder">
+          <span class="kb-status is-soon">Snart</span>
+          <h3 class="kb-card-title">Blodproppar</h3>
+          <p class="kb-card-desc">Wells poäng för djup ventrombos, PERC och sPESI – hur ett instrument kan utesluta i stället för att bekräfta.</p>
+        </div>
+
+        <div class="kb-card is-placeholder">
+          <span class="kb-status is-soon">Snart</span>
+          <h3 class="kb-card-title">Hjärtat</h3>
+          <p class="kb-card-desc">Korrigerad QT-tid, riskskalorna vid förmaksflimmer och graderingen av flimmerbesvär.</p>
+        </div>
+
+        <div class="kb-card is-placeholder">
+          <span class="kb-status is-soon">Snart</span>
+          <h3 class="kb-card-title">Infektion</h3>
+          <p class="kb-card-desc">qSOFA och SOFA vid misstänkt sepsis, och CRB-65 vid samhällsförvärvad lunginflammation.</p>
+        </div>
+
+        <div class="kb-card is-placeholder">
+          <span class="kb-status is-soon">Snart</span>
+          <h3 class="kb-card-title">Neurologi</h3>
+          <p class="kb-card-desc">Medvetandegradering med GCS och RLS 85, förvirringstestet 4AT och strukturerad bedömning vid stroke och yrsel.</p>
+        </div>
+
+        <div class="kb-card is-placeholder">
+          <span class="kb-status is-soon">Snart</span>
+          <h3 class="kb-card-title">Buken</h3>
+          <p class="kb-card-desc">Alvarados poäng vid misstänkt blindtarmsinflammation och Glasgow-Blatchford vid blödning i övre magtarmkanalen.</p>
+        </div>
+
+      </div>
+
+      <div class="info-about">
+        <p>Skalorna är byggda ur sina originalpublikationer, som står angivna på varje sida. De är utbildningsmaterial och inte beslutsstöd: en poäng är en observation, inte en ordination, och den ersätter varken undersökningen av patienten eller verksamhetens egna rutiner.</p>
+      </div>
+
+      <div class="actions">
+        <a href="/verktyg/akutmedicin/vitalparametrar.html" class="btn primary">Till NEWS2-räknaren</a>
+        <a href="/verktyg/" class="btn">← Till verktygen</a>
+      </div>
+
+    </section>
+
+    <footer class="page-footer">
+      <p>Utbildningsmaterial, inte medicinsk rådgivning. Innehållet är avsett för studier och ersätter inte kurslitteratur, undervisning eller kliniska riktlinjer. Det ska inte användas som underlag för vård eller behandling av patienter.</p>
+      <p>Anatomiquiz använder inga kakor och samlar inte in personuppgifter. Läs mer i <a href="/integritet.html" class="info-link">integritetspolicyn</a>.</p>
+      <p class="page-updated">Senast uppdaterad <time data-updated datetime="2026-07-27">27 juli 2026</time></p>
+    </footer>
+  </main>
+
+</body>
+</html>

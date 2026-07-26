@@ -18,7 +18,7 @@ att en "fix" inte får effekt.
 | Fil | Laddas av | Ansvar |
 |-----|-----------|--------|
 | `css/styles.css` | **Alla sidor** (~113 st) – index, quiz, alla artiklar, verktyg, ordlista m.fl. | Basen: layout, `.header`/`.header-title`/`.header h1`, `.card`, `.btn`, färgvariabler, typografi, mobil-media queries, print-stylesheet. **Global rubrikstyrning bor här.** |
-| `css/verktyg.css` | **Endast** `verktyg/lakemedelsberakning.html` (laddas EFTER styles.css) | Bara verktygsspecifika komponenter (räknarfält, resultatrutor). Sätter **inte** `.header h1`. |
+| `css/verktyg.css` | **Endast** verktygssidor med en räknare – `verktyg/lakemedelsberakning.html` och `verktyg/akutmedicin/*.html` (laddas EFTER styles.css) | Bara verktygsspecifika komponenter (räknarfält, resultatrutor, poängchip, svarsband). Sätter **inte** `.header h1`. Hubbarna `verktyg/index.html` och `verktyg/akutmedicin/index.html` laddar den **inte** – de har ingen räknare. |
 | `css/glossary.css` | 33 ordlistesidor (`ordlista-*.html`) | Endast ordliste-/uppslagslayout. |
 
 **Laddningsordning på verktygssidan:** `styles.css` → `verktyg.css`. Alltså kan

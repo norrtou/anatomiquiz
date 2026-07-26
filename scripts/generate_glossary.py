@@ -1120,6 +1120,10 @@ def build_sitemap(group_files: list[str]) -> str:
     # av GitHub Pages) så att den kan växa utan att någon länk måste ändras.
     blocks.append(url_block(f"{SITE}/verktyg/", "monthly", "0.7"))
     blocks.append(url_block(f"{SITE}/verktyg/lakemedelsberakning.html", "monthly", "0.7"))
+    # Akutmedicinen: egen underhubb med en sida per instrumentgrupp. Hubben
+    # ligger på katalog-URL:en av samma skäl som verktygshubben ovan.
+    blocks.append(url_block(f"{SITE}/verktyg/akutmedicin/", "monthly", "0.7"))
+    blocks.append(url_block(f"{SITE}/verktyg/akutmedicin/vitalparametrar.html", "monthly", "0.7"))
     # Nervtabeller (under-pillar + nervsidor)
     blocks.append(url_block(f"{SITE}/kunskapsbank/nervtabeller.html", "weekly", "0.7"))
     blocks.append(url_block(f"{SITE}/kunskapsbank/kranialnerverna.html", "monthly", "0.7"))

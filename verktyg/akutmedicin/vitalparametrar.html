@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSP mot XSS: skript/stilar/data endast från egen origin. GitHub Pages tillåter inga egna HTTP-headers, därav meta. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+
+  <!-- Primär SEO -->
+  <title>NEWS2 – vitalparametrar och tidig varningspoäng | Anatomiquiz</title>
+  <meta name="description" content="NEWS2-räknare som visar poängen per vitalparameter, med förklaring av vad andningsfrekvens, saturation och medvetandegrad betyder och varför de väger.">
+  <meta name="author" content="Daniel Medin (Norrtou Creations)">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+  <link rel="canonical" href="https://anatomiquiz.se/verktyg/akutmedicin/vitalparametrar.html">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anatomiquiz.se/verktyg/akutmedicin/vitalparametrar.html">
+  <meta property="og:title" content="NEWS2 – vitalparametrar och tidig varningspoäng">
+  <meta property="og:description" content="Fyll i de sju vitalparametrarna och se poängen växa fram en i taget. Med poängtabellen, vad varje variabel betyder och varför just de variablerna väger.">
+  <meta property="og:image" content="https://anatomiquiz.se/img/og-image.png">
+  <meta property="og:image:width" content="1518">
+  <meta property="og:image:height" content="864">
+  <meta property="og:image:alt" content="Anatomiquiz — NEWS2 och vitalparametrar">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="Anatomiquiz">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NEWS2 – vitalparametrar och tidig varningspoäng">
+  <meta name="twitter:description" content="Fyll i de sju vitalparametrarna och se poängen växa fram en i taget. Med poängtabellen, vad varje variabel betyder och varför just de variablerna väger.">
+  <meta name="twitter:image" content="https://anatomiquiz.se/img/og-image.png">
+  <meta name="twitter:image:alt" content="Anatomiquiz — NEWS2 och vitalparametrar">
+
+  <meta name="theme-color" content="#10b981">
+  <meta name="color-scheme" content="light dark">
+  <!-- Tema (ljust/mörkt). Laddas SYNKRONT och före stilmallen: attributet
+       data-theme måste sitta på <html> innan första målningen, annars
+       blinkar sidan ljus. Inline gick inte – CSP:n tillåter bara egen origin. -->
+  <script src="/js/theme.js?v=0.9.260"></script>
+
+  <!-- Strukturerad data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "WebApplication",
+    "LearningResource"
+  ],
+  "name": "NEWS2 – vitalparametrar och tidig varningspoäng",
+  "description": "Räknare för NEWS2 som visar poängen parameter för parameter i stället för bara summan, tillsammans med poängtabellen, en förklaring av vad varje vitalparameter betyder och en genomgång av varför just de variablerna väger tyngst vid akut försämring.",
+  "url": "https://anatomiquiz.se/verktyg/akutmedicin/vitalparametrar.html",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Alla webbläsare",
+  "inLanguage": "sv-SE",
+  "isAccessibleForFree": true,
+  "learningResourceType": "interactive tool",
+  "educationalUse": [
+    "self study",
+    "practice"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "SEK"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Anatomiquiz",
+    "url": "https://anatomiquiz.se/"
+  },
+  "datePublished": "2026-07-27",
+  "dateModified": "2026-07-27",
+  "author": {
+    "@type": "Person",
+    "@id": "https://anatomiquiz.se/#daniel-medin",
+    "name": "Daniel Medin",
+    "description": "Utbildad medicinsk sekreterare och studerande i arbetsterapi vid Lunds universitet, med särskilt intresse för anatomi.",
+    "url": "https://norrtou.se",
+    "sameAs": [
+      "https://norrtou.se",
+      "https://www.linkedin.com/in/danielmedin",
+      "https://github.com/norrtou"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://anatomiquiz.se/#norrtou-creations",
+    "name": "Norrtou Creations",
+    "url": "https://norrtou.se",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://anatomiquiz.se/img/icon-512.png"
+    },
+    "sameAs": [
+      "https://github.com/norrtou"
+    ]
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "NEWS2"
+    },
+    {
+      "@type": "Thing",
+      "name": "Vitalparametrar"
+    },
+    {
+      "@type": "Thing",
+      "name": "Syresaturation"
+    },
+    {
+      "@type": "Thing",
+      "name": "Medvetandegrad"
+    }
+  ],
+  "teaches": [
+    "Hur NEWS2 poängsätts, parameter för parameter.",
+    "Vad varje vitalparameter mäter och vilket intervall som ger noll poäng.",
+    "Varför andningsfrekvensen förändras tidigare än blodtrycket vid akut sjukdom.",
+    "Vad summan betyder för hur tätt patienten ska mätas om."
+  ],
+  "keywords": [
+    "NEWS2",
+    "vitalparametrar",
+    "andningsfrekvens",
+    "syresaturation",
+    "medvetandegrad",
+    "tidig varningspoäng"
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "BTS guideline for oxygen use in adults in healthcare and emergency settings",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "O'Driscoll, B. R."
+        },
+        {
+          "@type": "Person",
+          "name": "Howard, L. S."
+        },
+        {
+          "@type": "Person",
+          "name": "Earis, J."
+        },
+        {
+          "@type": "Person",
+          "name": "Mak, V."
+        }
+      ],
+      "datePublished": "2017",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Thorax"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "National Early Warning Score (NEWS) 2: Standardising the assessment of acute-illness severity in the NHS",
+      "author": [
+        {
+          "@type": "Organization",
+          "name": "Royal College of Physicians"
+        }
+      ],
+      "datePublished": "2017",
+      "publisher": {
+        "@type": "Organization",
+        "name": "RCP"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "The ability of the National Early Warning Score (NEWS) to discriminate patients at risk of early cardiac arrest, unanticipated intensive care unit admission, and death",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Smith, G. B."
+        },
+        {
+          "@type": "Person",
+          "name": "Prytherch, D. R."
+        },
+        {
+          "@type": "Person",
+          "name": "Meredith, P."
+        },
+        {
+          "@type": "Person",
+          "name": "Schmidt, P. E."
+        },
+        {
+          "@type": "Person",
+          "name": "Featherstone, P. I."
+        }
+      ],
+      "datePublished": "2013",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Resuscitation"
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Anatomiquiz",
+      "item": "https://anatomiquiz.se/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Verktyg",
+      "item": "https://anatomiquiz.se/verktyg/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Akutmedicin",
+      "item": "https://anatomiquiz.se/verktyg/akutmedicin/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Vitalparametrar",
+      "item": "https://anatomiquiz.se/verktyg/akutmedicin/vitalparametrar.html"
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon.png">
+  <link rel="apple-touch-icon" href="/img/icon-192.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/css/styles.css?v=0.9.284">
+  <link rel="stylesheet" href="/css/verktyg.css?v=0.9.287">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+  <main id="main" class="container" role="main">
+
+    <header class="header">
+      <div class="header-title">
+        <h1><a class="kb-term" href="/ordlista-v.html#term-vitalparameter" data-def="Grundläggande mätvärde för kroppens livsviktiga funktioner – andning, puls, blodtryck, temperatur, medvetande">Vitalparametrar</a> och NEWS2</h1>
+      </div>
+      <p class="tagline">Se poängen växa fram, en parameter i taget</p>
+    </header>
+
+    <section class="card" aria-labelledby="akutHeading">
+
+      <nav class="breadcrumb" aria-label="Brödsmula">
+        <a href="/" class="breadcrumb-link">← Anatomiquiz</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="/verktyg/" class="breadcrumb-link">Verktyg</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="/verktyg/akutmedicin/" class="breadcrumb-link">Akutmedicin</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <span class="breadcrumb-current" aria-current="page">Vitalparametrar</span>
+      </nav>
+
+      <h2 id="akutHeading" class="sr-only">Räknare för NEWS2</h2>
+
+      <div class="info-about">
+        <p>NEWS2 är en tidig varningspoäng: sju <a class="kb-term" href="/ordlista-v.html#term-vitalparameter" data-def="Grundläggande mätvärde för kroppens livsviktiga funktioner – andning, puls, blodtryck, temperatur, medvetande">vitalparametrar</a> mäts, var och en faller i ett intervall, och varje intervall är värt noll till tre poäng. Summan säger hur brådskande patienten behöver ses om. Poängen är alltså inte en diagnos utan ett mått på hur långt kroppen har flyttat sig från sitt normalläge.</p>
+        <p>Räknaren nedan visar poängen för varje parameter för sig, inte bara totalen. Det är hela poängen med den: en NEWS2 på fem kan komma av fem parametrar som var och en väger lite, eller av en enda som väger tungt, och det är två helt olika patienter. Slår du på <em>Träna</em> döljs både delpoängen och summan tills du fyllt i din egen — då kontrolleras din uträkning i stället för att göras åt dig.</p>
+      </div>
+
+      <div id="akut-utan-js" class="vt-warn">
+        Räknaren kräver JavaScript. Är det avstängt finns hela poängsättningen som
+        uppslagstabell längre ner på sidan, under <a href="#poangtabellen">Poängtabellen</a>
+        och <a href="#summan">Vad summan betyder</a>.
+      </div>
+
+      <div data-akut="news2"></div>
+
+      <h2 id="poangtabellen">Poängtabellen</h2>
+
+      <p>Så här poängsätts de sju parametrarna. Tabellen är läst ur instrumentets egen publikation och är densamma som räknaren använder.</p>
+
+      <table class="kb-mtable">
+        <caption>NEWS2 – poäng per <a class="kb-term" href="/ordlista-v.html#term-vitalparameter" data-def="Grundläggande mätvärde för kroppens livsviktiga funktioner – andning, puls, blodtryck, temperatur, medvetande">vitalparameter</a> och intervall</caption>
+        <colgroup>
+          <col class="c-npar"><col class="c-np0"><col class="c-np1"><col class="c-np2"><col class="c-np3">
+        </colgroup>
+        <thead>
+          <tr>
+            <th scope="col">Parameter</th>
+            <th scope="col">0 poäng</th>
+            <th scope="col">1 poäng</th>
+            <th scope="col">2 poäng</th>
+            <th scope="col">3 poäng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" data-label="Parameter"><a class="kb-term" href="/ordlista-a.html#term-andningsfrekvens" data-def="Antal andetag per minut; normalt 12–20 hos vuxen i vila">Andningsfrekvens</a> (andetag/min)</th>
+            <td data-label="0 poäng">12–20</td>
+            <td data-label="1 poäng">9–11</td>
+            <td data-label="2 poäng">21–24</td>
+            <td data-label="3 poäng">≤8 eller ≥25</td>
+          </tr>
+          <tr>
+            <th scope="row" data-label="Parameter"><a class="kb-term" href="/ordlista-s.html#term-syresaturation" data-def="Andelen av blodets hemoglobin som är mättat med syre, angiven i procent">Syresaturation</a>, mättnadsskala 1 (%)</th>
+            <td data-label="0 poäng">≥96</td>
+            <td data-label="1 poäng">94–95</td>
+            <td data-label="2 poäng">92–93</td>
+            <td data-label="3 poäng">≤91</td>
+          </tr>
+          <tr>
+            <th scope="row" data-label="Parameter"><a class="kb-term" href="/ordlista-s.html#term-syresaturation" data-def="Andelen av blodets hemoglobin som är mättat med syre, angiven i procent">Syresaturation</a>, mättnadsskala 2 (%)</th>
+            <td data-label="0 poäng">88–92, eller ≥93 på luft</td>
+            <td data-label="1 poäng">86–87, eller 93–94 med <a class="kb-term" href="/ordlista-s.html#term-syrgas" data-def="Medicinskt syre som tillförs för att höja blodets syresättning">syrgas</a></td>
+            <td data-label="2 poäng">84–85, eller 95–96 med <a class="kb-term" href="/ordlista-s.html#term-syrgas" data-def="Medicinskt syre som tillförs för att höja blodets syresättning">syrgas</a></td>
+            <td data-label="3 poäng">≤83, eller ≥97 med <a class="kb-term" href="/ordlista-s.html#term-syrgas" data-def="Medicinskt syre som tillförs för att höja blodets syresättning">syrgas</a></td>
+          </tr>
+          <tr>
+            <th scope="row" data-label="Parameter">Andas patienten luft eller <a class="kb-term" href="/ordlista-s.html#term-syrgas" data-def="Medicinskt syre som tillförs för att höja blodets syresättning">syrgas</a>?</th>
+            <td data-label="0 poäng">Luft</td>
+            <td data-label="1 poäng">—</td>
+            <td data-label="2 poäng"><a class="kb-term" href="/ordlista-s.html#term-syrgas" data-def="Medicinskt syre som tillförs för att höja blodets syresättning">Syrgas</a></td>
+            <td data-label="3 poäng">—</td>
+          </tr>
+          <tr>
+            <th scope="row" data-label="Parameter">Systoliskt <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtryck</a> (mmHg)</th>
+            <td data-label="0 poäng">111–219</td>
+            <td data-label="1 poäng">101–110</td>
+            <td data-label="2 poäng">91–100</td>
+            <td data-label="3 poäng">≤90 eller ≥220</td>
+          </tr>
+          <tr>
+            <th scope="row" data-label="Parameter"><a class="kb-term" href="/ordlista-p.html#term-puls" data-def="Tryckvågen som varje hjärtslag skickar ut i artärerna; mått på hjärtfrekvensen">Puls</a> (slag/min)</th>
+            <td data-label="0 poäng">51–90</td>
+            <td data-label="1 poäng">41–50 eller 91–110</td>
+            <td data-label="2 poäng">111–130</td>
+            <td data-label="3 poäng">≤40 eller ≥131</td>
+          </tr>
+          <tr>
+            <th scope="row" data-label="Parameter"><a class="kb-term" href="/ordlista-k.html#term-kroppstemperatur" data-def="Kroppens inre temperatur, normalt omkring 37 grader hos en vuxen i vila">Kroppstemperatur</a> (°C)</th>
+            <td data-label="0 poäng">36,1–38,0</td>
+            <td data-label="1 poäng">35,1–36,0 eller 38,1–39,0</td>
+            <td data-label="2 poäng">≥39,1</td>
+            <td data-label="3 poäng">≤35,0</td>
+          </tr>
+          <tr>
+            <th scope="row" data-label="Parameter"><a class="kb-term" href="/ordlista-m.html#term-medvetandegrad" data-def="Hur vaken och kontaktbar en person är, från fullt vaken till djupt medvetslös">Medvetandegrad</a></th>
+            <td data-label="0 poäng">A – vaken och orienterad</td>
+            <td data-label="1 poäng">—</td>
+            <td data-label="2 poäng">—</td>
+            <td data-label="3 poäng">C, V, P eller U</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="summan">Vad summan betyder</h2>
+
+      <p>Summan översätts till hur tätt patienten ska mätas om och vem som ska göra bedömningen. En enskild parameter som ensam ger tre poäng lyfter svarsnivån även när totalen är låg — det är den regel som fångar patienten med en enda men allvarlig avvikelse.</p>
+
+      <table class="kb-mtable">
+        <caption>NEWS2 – övervakning och åtgärd per riskgrupp</caption>
+        <colgroup>
+          <col class="c-nsum"><col class="c-nrisk"><col class="c-nov"><col class="c-nat">
+        </colgroup>
+        <thead>
+          <tr>
+            <th scope="col">Summa</th>
+            <th scope="col">Risknivå</th>
+            <th scope="col">Övervakning</th>
+            <th scope="col">Åtgärd</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" data-label="Summa">0</th>
+            <td data-label="Risknivå">Ingen förhöjd risk</td>
+            <td data-label="Övervakning">Minst var tolfte timme.</td>
+            <td data-label="Åtgärd">Fortsatt rutinmässig övervakning.</td>
+          </tr>
+          <tr>
+            <th scope="row" data-label="Summa">1–4</th>
+            <td data-label="Risknivå">Låg risk</td>
+            <td data-label="Övervakning">Minst var fjärde till sjätte timme.</td>
+            <td data-label="Åtgärd">Legitimerad sjuksköterska bedömer patienten och avgör om övervakningen behöver tätas eller läkare kontaktas.</td>
+          </tr>
+          <tr>
+            <th scope="row" data-label="Summa">3 i en enskild parameter</th>
+            <td data-label="Risknivå">Låg till medelhög risk – röd poäng</td>
+            <td data-label="Övervakning">Minst en gång i timmen.</td>
+            <td data-label="Åtgärd">En enskild parameter på 3 poäng väger tyngre än summan antyder och kräver brådskande läkarbedömning, även när totalen är låg.</td>
+          </tr>
+          <tr>
+            <th scope="row" data-label="Summa">5–6</th>
+            <td data-label="Risknivå">Medelhög risk</td>
+            <td data-label="Övervakning">Minst en gång i timmen.</td>
+            <td data-label="Åtgärd">Brådskande bedömning av läkare eller team med kompetens i akut sjukdom. Överväg plats med förhöjd övervakningsnivå.</td>
+          </tr>
+          <tr>
+            <th scope="row" data-label="Summa">7 eller mer</th>
+            <td data-label="Risknivå">Hög risk</td>
+            <td data-label="Övervakning">Kontinuerlig registrering av <a class="kb-term" href="/ordlista-v.html#term-vitalparameter" data-def="Grundläggande mätvärde för kroppens livsviktiga funktioner – andning, puls, blodtryck, temperatur, medvetande">vitalparametrarna</a>.</td>
+            <td data-label="Åtgärd">Akut bedömning av team med intensivvårdskompetens. Överväg vård på högre vårdnivå.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Vad betyder variablerna?</h2>
+
+      <h3><a class="kb-term" href="/ordlista-a.html#term-andningsfrekvens" data-def="Antal andetag per minut; normalt 12–20 hos vuxen i vila">Andningsfrekvens</a></h3>
+      <p>Antalet andetag per minut. Den räknas under en hel minut, och helst utan att patienten vet om att man räknar — andningen är den enda <a class="kb-term" href="/ordlista-v.html#term-vitalparameter" data-def="Grundläggande mätvärde för kroppens livsviktiga funktioner – andning, puls, blodtryck, temperatur, medvetande">vitalparameter</a> en människa kan styra med viljan, och den ändrar sig så snart man tänker på den. En vuxen i vila ligger på 12–20. Onormalt snabb andning kallas <a class="kb-term" href="/ordlista-t.html#term-takypne" data-def="Onaturligt snabb andningsfrekvens">takypné</a>.</p>
+      <p>Poängen är avsiktligt osymmetrisk: 21–24 är värt två poäng medan 9–11 bara är värt ett. En stigande <a class="kb-term" href="/ordlista-a.html#term-andningsfrekvens" data-def="Antal andetag per minut; normalt 12–20 hos vuxen i vila">andningsfrekvens</a> är ett av de tidigaste tecknen på att något håller på att gå fel, medan en lätt sjunkande frekvens oftare är ofarlig. Först vid åtta andetag i minuten eller färre blir den låga frekvensen lika allvarlig som den höga.</p>
+
+      <h3><a class="kb-term" href="/ordlista-s.html#term-syresaturation" data-def="Andelen av blodets hemoglobin som är mättat med syre, angiven i procent">Syresaturation</a> och mättnadsskala</h3>
+      <p><a class="kb-term" href="/ordlista-s.html#term-syresaturation" data-def="Andelen av blodets hemoglobin som är mättat med syre, angiven i procent">Syresaturationen</a> är hur stor andel av blodets <a class="kb-term" href="/ordlista-h.html#term-hemoglobin" data-def="Det järnhaltiga proteinet i röda blodkroppar som binder och transporterar syre">hemoglobin</a> som bär syre. Den mäts med en <a class="kb-term" href="/ordlista-p.html#term-pulsoximeter" data-def="Apparat som mäter syremättnaden i blodet med ljus genom huden">pulsoximeter</a> på fingret, och skrivs oftast SpO₂. Ett värde under normalområdet betyder <a class="kb-term" href="/ordlista-h.html#term-hypoxemi" data-def="För låg syrehalt i blodet">hypoxemi</a>, alltså för lite syre i blodet.</p>
+      <p>NEWS2 har två skalor. Mättnadsskala 1 gäller de allra flesta och har målvärdet 96 procent eller mer. Mättnadsskala 2 gäller den patient som har fått ett ordinerat målvärde på 88–92 procent därför att kroppen har svårt att göra sig av med <a class="kb-term" href="/ordlista-k.html#term-koldioxid" data-def="Gasformig restprodukt från cellernas ämnesomsättning som andas ut via lungorna">koldioxid</a> — ett tillstånd som kan uppstå vid till exempel KOL. Hos dessa patienter kan ett för högt syrgastryck göra att <a class="kb-term" href="/ordlista-k.html#term-koldioxid" data-def="Gasformig restprodukt från cellernas ämnesomsättning som andas ut via lungorna">koldioxiden</a> stiger ytterligare, och en hög saturation är därför inte längre ett gott tecken utan ett skäl att sänka <a class="kb-term" href="/ordlista-s.html#term-syrgas" data-def="Medicinskt syre som tillförs för att höja blodets syresättning">syrgasen</a>. Det är därför skala 2 är den enda i NEWS2 där mättnad över målområdet ger poäng.</p>
+      <p>Skala 2 ska bara användas när den är uttryckligen ordinerad. Väljs den på en patient som inte har ett sänkt målvärde blir poängen för låg, och en verklig försämring döljs.</p>
+
+      <h3>Luft eller <a class="kb-term" href="/ordlista-s.html#term-syrgas" data-def="Medicinskt syre som tillförs för att höja blodets syresättning">syrgas</a></h3>
+      <p>Två poäng ges så snart patienten får <a class="kb-term" href="/ordlista-s.html#term-syrgas" data-def="Medicinskt syre som tillförs för att höja blodets syresättning">syrgas</a>. Det är ingen bedömning av behandlingen, utan en upplysning om vad mätvärdet är värt: en saturation på 96 procent betyder helt olika saker beroende på om patienten når dit av egen kraft eller med hjälp. Utan den här rutan hade en patient kunnat bli sämre och samtidigt få lägre poäng, i takt med att <a class="kb-term" href="/ordlista-s.html#term-syrgas" data-def="Medicinskt syre som tillförs för att höja blodets syresättning">syrgasen</a> skruvades upp.</p>
+
+      <h3>Systoliskt <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtryck</a></h3>
+      <p>Trycket i <a class="kb-term" href="/ordlista-a.html#term-artar" data-def="Pulsåder; blodkärl som leder blod från hjärtat ut i kroppen">artärerna</a> när hjärtat drar ihop sig, alltså det övre av de två talen i ett <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtryck</a>. NEWS2 använder bara det systoliska. Lågt <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtryck</a>, <a class="kb-term" href="/ordlista-h.html#term-hypotoni" data-def="Nedsatt muskelspänning (slapphet); används även om lågt blodtryck">hypotoni</a>, ger poäng i tre steg, medan högt tryck ger poäng först vid 220 mmHg — ett kroniskt förhöjt <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtryck</a> är ett problem på månaders sikt, inte ett tecken på att patienten håller på att bli akut sämre den här timmen.</p>
+
+      <h3><a class="kb-term" href="/ordlista-p.html#term-puls" data-def="Tryckvågen som varje hjärtslag skickar ut i artärerna; mått på hjärtfrekvensen">Puls</a></h3>
+      <p>Den tryckvåg som fortplantar sig ut i <a class="kb-term" href="/ordlista-a.html#term-artar" data-def="Pulsåder; blodkärl som leder blod från hjärtat ut i kroppen">artärerna</a> varje gång hjärtat slår, räknad per minut. För snabb <a class="kb-term" href="/ordlista-p.html#term-puls" data-def="Tryckvågen som varje hjärtslag skickar ut i artärerna; mått på hjärtfrekvensen">puls</a> kallas <a class="kb-term" href="/ordlista-t.html#term-takykardi" data-def="Onaturligt snabb hjärtrytm, vanligen puls över 100 slag/min i vila">takykardi</a> och för långsam <a class="kb-term" href="/ordlista-b.html#term-bradykardi" data-def="Långsam hjärtrytm, puls under 60 slag per minut">bradykardi</a>. Bandet 51–90 är brett därför att vilopulsen skiljer sig kraftigt mellan människor, och poängen stiger sedan i flera steg uppåt: 91–110 ger ett poäng, 111–130 två och 131 eller mer tre.</p>
+
+      <h3><a class="kb-term" href="/ordlista-k.html#term-kroppstemperatur" data-def="Kroppens inre temperatur, normalt omkring 37 grader hos en vuxen i vila">Kroppstemperatur</a></h3>
+      <p><a class="kb-term" href="/ordlista-f.html#term-feber" data-def="Förhöjd kroppstemperatur, oftast ett tecken på infektion eller inflammation">Feber</a> ger poäng, men lågt räknat: 38,1–39,0 grader är värt ett poäng och 39,1 eller mer två. Undertemperatur väger tyngre. Under 35,0 grader ger tre poäng, alltså mer än vilken <a class="kb-term" href="/ordlista-f.html#term-feber" data-def="Förhöjd kroppstemperatur, oftast ett tecken på infektion eller inflammation">feber</a> som helst, eftersom <a class="kb-term" href="/ordlista-h.html#term-hypotermi" data-def="Nedkylning; sänkt kroppstemperatur under det normala">hypotermi</a> hos en akut sjuk vuxen ofta betyder att kroppens värmereglering håller på att svikta — bland annat vid svår <a class="kb-term" href="/ordlista-s.html#term-sepsis" data-def="Livshotande organsvikt orsakad av kroppens reaktion på en infektion">sepsis</a>.</p>
+
+      <h3><a class="kb-term" href="/ordlista-m.html#term-medvetandegrad" data-def="Hur vaken och kontaktbar en person är, från fullt vaken till djupt medvetslös">Medvetandegrad</a></h3>
+      <p>Bedöms med bokstäverna A, C, V, P och U: vaken och orienterad, nytillkommen <a class="kb-term" href="/ordlista-k.html#term-konfusion" data-def="Förvirring med störd uppfattning om tid, rum och sammanhang">konfusion</a>, reagerar på tilltal, reagerar på smärtstimulering, reagerar inte alls. Allt utom A ger tre poäng — det finns ingen mellannivå, eftersom varje sänkning av medvetandet är en avvikelse som ska ses om genast.</p>
+      <p>Bokstaven C är den som oftast missas. Den avser <em>nytillkommen</em> förvirring. En patient med en sedan länge känd och oförändrad förvirring räknas som A, medan en patient som var klar i morse och är desorienterad nu räknas som C och får tre poäng.</p>
+
+      <h2>Varför just de här variablerna?</h2>
+
+      <p>De sju parametrarna är inte valda för att de är lätta att mäta, utan för att de tillsammans följer de tre system som sviktar först vid akut sjukdom: andningen, cirkulationen och <a class="kb-term" href="/ordlista-e.html#term-encephalon" data-def="Storhjärna, lillhjärna och hjärnstam tillsammans (encephalon)">hjärnan</a>. Var och en av dem hade var för sig gett en ofullständig bild.</p>
+
+      <p><strong><a class="kb-term" href="/ordlista-a.html#term-andningsfrekvens" data-def="Antal andetag per minut; normalt 12–20 hos vuxen i vila">Andningsfrekvensen</a> är den känsligaste enskilda parametern</strong>, och den enda som reagerar på nästan allt. Skälet är att andningen är kroppens snabbaste sätt att kompensera. Blir vävnaderna dåligt genomblödda övergår cellerna till att bilda energi utan syre, <a class="kb-term" href="/ordlista-l.html#term-laktat" data-def="Salt eller jon av mjölksyra; stiger vid syrebrist och chock">laktat</a> samlas i blodet och pH sjunker. <a class="kb-term" href="/ordlista-k.html#term-kemoreceptor" data-def="Sinnescell som känner av kemiska förändringar">Kemoreceptorer</a> i <a class="kb-term" href="/ordlista-h.html#term-hjarnstam" data-def="Mellanhjärna, pons och förlängda märgen">hjärnstammen</a> och i <a class="kb-term" href="/ordlista-h.html#term-hals" data-def="Kroppsdelen mellan huvudet och bålen; även den smala, halsformade delen av ett organ eller ben">halsens</a> stora kärl svarar med att öka <a class="kb-term" href="/ordlista-v.html#term-ventilation" data-def="Luftutbytet mellan lungorna och omgivningen">ventilationen</a>, som vädrar ut <a class="kb-term" href="/ordlista-k.html#term-koldioxid" data-def="Gasformig restprodukt från cellernas ämnesomsättning som andas ut via lungorna">koldioxid</a> och håller uppe pH. <a class="kb-term" href="/ordlista-a.html#term-andningsfrekvens" data-def="Antal andetag per minut; normalt 12–20 hos vuxen i vila">Andningsfrekvensen</a> stiger alltså långt innan <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtrycket</a> rör sig — vid begynnande <a class="kb-term" href="/ordlista-s.html#term-sepsis" data-def="Livshotande organsvikt orsakad av kroppens reaktion på en infektion">sepsis</a>, vid blödning, vid <a class="kb-term" href="/ordlista-h.html#term-hjartsvikt" data-def="Hjärtats oförmåga att pumpa tillräckligt med blod för kroppens behov">hjärtsvikt</a> och vid infektion i lungan. Det är också den parameter som oftast inte blir mätt, eftersom den kräver en minut och inte en apparat.</p>
+
+      <p><strong><a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">Blodtrycket</a> är tvärtom det som håller längst.</strong> När blodvolymen eller hjärtats pumpförmåga sviktar svarar <a class="kb-term" href="/ordlista-s.html#term-sympaticus" data-def="Den del av autonoma nervsystemet som aktiveras vid stress (”kamp eller flykt”)">sympatikus</a> med att frisätta <a class="kb-term" href="/ordlista-k.html#term-katekolamin" data-def="Grupp av signalämnen och hormoner – adrenalin, noradrenalin och dopamin – som frisätts vid stress">katekolaminer</a>. <a class="kb-term" href="/ordlista-p.html#term-puls" data-def="Tryckvågen som varje hjärtslag skickar ut i artärerna; mått på hjärtfrekvensen">Pulsen</a> stiger och kärlen drar ihop sig — <a class="kb-term" href="/ordlista-v.html#term-vasokonstriktion" data-def="Sammandragning av blodkärl, vilket minskar blodflödet och höjer blodtrycket">vasokonstriktion</a> — så att ett mindre kärlrum ska rymma en mindre volym. Så länge den <a class="kb-term" href="/ordlista-k.html#term-kompensation" data-def="Kroppens förmåga att uppväga en störning så att funktionen ändå upprätthålls">kompensationen</a> håller är <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtrycket</a> normalt trots att cirkulationen redan är otillräcklig. Ett fallande systoliskt <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtryck</a> är därför inte ett tidigt tecken utan ett sent: det betyder att <a class="kb-term" href="/ordlista-k.html#term-kompensation" data-def="Kroppens förmåga att uppväga en störning så att funktionen ändå upprätthålls">kompensationen</a> har tagit slut. Det är hela skälet till att NEWS2 mäter både <a class="kb-term" href="/ordlista-p.html#term-puls" data-def="Tryckvågen som varje hjärtslag skickar ut i artärerna; mått på hjärtfrekvensen">puls</a> och tryck. <a class="kb-term" href="/ordlista-p.html#term-puls" data-def="Tryckvågen som varje hjärtslag skickar ut i artärerna; mått på hjärtfrekvensen">Pulsen</a> visar ansträngningen, trycket visar först när den inte längre räcker.</p>
+
+      <p><strong><a class="kb-term" href="/ordlista-m.html#term-medvetandegrad" data-def="Hur vaken och kontaktbar en person är, från fullt vaken till djupt medvetslös">Medvetandegraden</a> är hjärnans mätvärde på sin egen <a class="kb-term" href="/ordlista-p.html#term-perfusion" data-def="Blodgenomströmning av en vävnad eller ett organ">perfusion</a>.</strong> <a class="kb-term" href="/ordlista-c.html#term-cortex-cerebri" data-def="Hjärnbarken (cortex cerebri); storhjärnans yttre grå substans">Hjärnbarken</a> är den <a class="kb-term" href="/ordlista-v.html#term-vavnad" data-def="Samling celler med likartad byggnad och funktion som tillsammans bygger upp kroppens organ (t.ex. muskel-, nerv- och bindväv)">vävnad</a> i kroppen som tål syrebrist sämst och som får sitt blod prioriterat längst. När medvetandet börjar svikta har alltså kroppen redan gjort allt den kan för att skydda just den <a class="kb-term" href="/ordlista-v.html#term-vavnad" data-def="Samling celler med likartad byggnad och funktion som tillsammans bygger upp kroppens organ (t.ex. muskel-, nerv- och bindväv)">vävnaden</a>. Nytillkommen <a class="kb-term" href="/ordlista-k.html#term-konfusion" data-def="Förvirring med störd uppfattning om tid, rum och sammanhang">konfusion</a> är därför en tung avvikelse och inte ett ålderstecken — den är ofta det första <a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">kliniska</a> tecknet på en infektion hos en äldre patient.</p>
+
+      <p><strong>Temperaturen och <a class="kb-term" href="/ordlista-s.html#term-syrgas" data-def="Medicinskt syre som tillförs för att höja blodets syresättning">syrgasen</a> bidrar med sammanhang.</strong> Temperaturen skiljer den infekterade patienten från den blödande, och lågtemperaturen fångar den svårast sjuke. Syrgasrutan gör att mätvärdet går att jämföra över tid: utan den skulle en patient som behövde allt mer hjälp för att hålla samma saturation ha sett oförändrad ut i journalen.</p>
+
+      <p>Skalan är byggd för att fånga försämring, inte för att ställa diagnos. Den är avsiktligt känslig snarare än träffsäker: många patienter med förhöjd poäng visar sig må bra, och det är det priset instrumentet betalar för att missa så få som möjligt av dem som inte gör det. En hög poäng betyder att patienten ska ses om, inte vad som är fel. Och en låg poäng utesluter ingenting — en patient som ser dålig ut ska bedömas oavsett vad summan blev.</p>
+
+      <div class="vt-ansvar">
+        <p><strong>Poängen ersätter inte bedömningen.</strong> NEWS2 är validerat för akut sjuka vuxna. Den gäller inte för barn, och för gravida är den inte utprövad — graviditetens egna förändringar i <a class="kb-term" href="/ordlista-p.html#term-puls" data-def="Tryckvågen som varje hjärtslag skickar ut i artärerna; mått på hjärtfrekvensen">puls</a>, <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtryck</a> och andning gör att poängen blir svår att tolka. Räknaren utför den summering du matar in och känner varken patienten, sammanhanget eller din verksamhets rutiner. Följ det lokala vårdprogrammet, och låt en oroande <a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">klinisk</a> bild väga tyngre än en låg summa.</p>
+      </div>
+
+      <!-- =========================================================
+           Källor — instrumentets originalpublikation, valideringen
+           av föregångaren och underlaget för mättnadsskala 2
+           ========================================================= -->
+      <div class="kb-sources">
+        <h2>Referenser</h2>
+        <ul>
+          <li>O'Driscoll, B. R., Howard, L. S., Earis, J., &amp; Mak, V. (2017). BTS guideline for oxygen use in adults in healthcare and emergency settings. <em>Thorax, 72</em>(Suppl 1), ii1–ii90.</li>
+          <li>Royal College of Physicians. (2017). <em>National Early Warning Score (NEWS) 2: Standardising the assessment of acute-illness severity in the NHS</em>. RCP.</li>
+          <li>Smith, G. B., Prytherch, D. R., Meredith, P., Schmidt, P. E., &amp; Featherstone, P. I. (2013). The ability of the National Early Warning Score (NEWS) to discriminate patients at risk of early cardiac arrest, unanticipated intensive care unit admission, and death. <em>Resuscitation, 84</em>(4), 465–470.</li>
+        </ul>
+      </div>
+
+      <div class="actions">
+        <a href="/verktyg/akutmedicin/" class="btn primary">← Till akutmedicinen</a>
+        <a href="/medicinskordlista.html" class="btn">Slå upp en term</a>
+      </div>
+
+    </section>
+
+    <footer class="page-footer">
+      <p>Utbildningsmaterial, inte medicinsk rådgivning. Innehållet är avsett för studier och ersätter inte kurslitteratur, undervisning eller kliniska riktlinjer. Det ska inte användas som underlag för vård eller behandling av patienter.</p>
+      <p>Anatomiquiz använder inga kakor och samlar inte in personuppgifter. Läs mer i <a href="/integritet.html" class="info-link">integritetspolicyn</a>.</p>
+      <p class="page-updated">Senast uppdaterad <time data-updated datetime="2026-07-27">27 juli 2026</time></p>
+    </footer>
+  </main>
+
+  <script src="/js/akutmedicin.js?v=0.9.287" defer></script>
+
+</body>
+</html>

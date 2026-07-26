@@ -31,6 +31,14 @@ Användning:
     python3 scripts/wire_terms.py --check FIL ...  # dry-run för enskilda filer
     python3 scripts/wire_terms.py --sync-defs --all          # HTML:s data-def := facit
     python3 scripts/wire_terms.py --check --sync-defs --all  # dry-run av synkningen
+    python3 scripts/wire_terms.py --repoint hals halsen halsens --all
+                                                  # namngivna nycklars href OCH def := facit
+
+`--sync-defs` rör med flit aldrig `href` – en avvikande href kan vara avsiktlig
+(`njuren` pekar på den latinska posten `ren` på språksidorna). Ska en term byta
+mål används därför `--repoint` med nycklarna utskrivna. Att peka om för hand är
+inget alternativ: den levererade HTML:en ägs ofta av en generator, och en
+handredigering överlever inte nästa körning (det hände `puls` i 0.9.286).
 """
 import json, re, sys, pathlib
 
@@ -370,6 +378,45 @@ def sync_defs_file(path, terms, write=True):
         pathlib.Path(path).write_text(ny, encoding="utf-8")
     return ändrade, href_avvik
 
+def repoint_file(path, terms, nycklar, write=True):
+    """Peka om NAMNGIVNA facitnycklars länkar: både `href` och `def` ur facit.
+
+    Skäl att detta INTE ligger i `--sync-defs`: en avvikande href är ibland
+    avsiktlig. `njuren` pekar med flit på den latinska posten `ren` på
+    språksidorna, där det latinska ordet är hela poängen, medan svensk löptext
+    ska peka på `njure`. Ett svep som tvingade på facits href överallt hade
+    tyst rivit sex korrekta länkar för att laga en felaktig.
+
+    Därför tar det här läget en uttrycklig lista med nycklar. Du säger vilken
+    term som ska pekas om, skriptet gör det på varje sida — och rör ingenting
+    annat.
+
+    Varför det behöver vara ett verktyg och inte handarbete (§0.3): en ändrad
+    href i facit slår inte igenom av sig själv, eftersom `wire_html` är
+    idempotent och aldrig rör en befintlig länk. I 0.9.286 rättades `puls`
+    därför genom handredigering av en GENERERAD sida, och ändringen ströks vid
+    nästa körning. Facit ska vara enda källan, också när en länk byter mål.
+    """
+    html = pathlib.Path(path).read_text(encoding="utf-8")
+    nycklar = {n.lower() for n in nycklar}
+    ändrade = []
+
+    def repl(m):
+        pre, href, mid, defn, gt, token, slut = m.groups()
+        if token.lower() not in nycklar:
+            return m.group(0)
+        v = terms.get(token.lower())
+        if not v or (v["href"] == href and v["def"] == defn):
+            return m.group(0)
+        ändrade.append(token)
+        return f'{pre}{v["href"]}{mid}{v["def"]}{gt}{token}{slut}'
+
+    ny = ANKARE_RX.sub(repl, html)
+    if write and ny != html:
+        pathlib.Path(path).write_text(ny, encoding="utf-8")
+    return ändrade
+
+
 def alla_sidor():
     """Varje wire:bar sida. Artiklarna ligger i en underkatalog och missades
     tidigare av --all, vilket gjorde att nya artiklar tyst hamnade utanför
@@ -405,6 +452,37 @@ def main(argv):
         argv = argv[1:]
         if not argv:
             print("--check kräver filer eller --all", file=sys.stderr); return 1
+
+    if argv and argv[0] == "--repoint":
+        argv = argv[1:]
+        nycklar = []
+        while argv and not argv[0].startswith("--") and argv[0] != "--all":
+            nycklar.append(argv.pop(0))
+        if not nycklar or not argv:
+            print("--repoint kräver en eller flera facitnycklar följt av "
+                  "--all eller filer. Ex: --repoint hals halsen halsens --all",
+                  file=sys.stderr)
+            return 1
+        okända = [n for n in nycklar if n.lower() not in terms]
+        if okända:
+            # Tyst uteblivet ser ut som en lyckad körning (§0.4): en felstavad
+            # nyckel hade gett "0 länkar ompekade" utan att något var gjort.
+            print(f"STOPP: dessa nycklar finns inte i facit: {okända}",
+                  file=sys.stderr)
+            return 1
+        filer = alla_sidor() if argv[0] == "--all" else [ROOT / a for a in argv]
+        tot = 0
+        for f in filer:
+            ändrade = repoint_file(f, terms, nycklar, write=not check)
+            if ändrade:
+                tot += len(ändrade)
+                verb = "skulle pekas om" if check else "ompekade"
+                print(f"  {f.relative_to(ROOT)}: {len(ändrade)} {verb} "
+                      f"({', '.join(sorted(set(ändrade)))})")
+        verb = "skulle pekas om" if check else "ompekade"
+        print(f"Totalt {tot} länkar {verb} mot facit i {len(filer)} filer "
+              f"({', '.join(nycklar)}).")
+        return 1 if (check and tot) else 0
 
     sync = argv and argv[0] == "--sync-defs"
     if sync:
@@ -451,4 +529,8 @@ def main(argv):
     return 0
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    # main() returnerar 1 på fel, men returvärdet kastades bort fram till
+    # 0.9.287 – varje `STOPP` i skriptet såg därför ut som en lyckad körning
+    # för det som anropade det, inklusive check_generators.py. Ett larm som
+    # inte kan fällas är inget larm (CLAUDE_REGLER §0.4).
+    sys.exit(main(sys.argv[1:]) or 0)

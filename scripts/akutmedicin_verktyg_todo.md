@@ -245,7 +245,7 @@ Nya sidor **stoppar bygget** om de inte registreras — det är §0.4 och det ä
 | Släpp | Innehåll | Status |
 |---|---|---|
 | **1** | `wire_terms.py` utökas till `/verktyg/` + ordlistetermerna + §0.6 i reglerna | ✅ **klart 0.9.286** |
-| **2** | Motor (`akutmedicin.json` + `.js` + CSS) + hubb + `vitalparametrar.html` (NEWS2) + testskal | ⬜ |
+| **2** | Motor (`akutmedicin.json` + `.js` + CSS) + hubb + `vitalparametrar.html` (NEWS2) + testskal | ✅ **klart 0.9.287** |
 | **3** | `syra-bas.html` — blodgasklassificeraren | ⬜ |
 | **4** | `blodproppar.html` + `hjartat.html` | ⬜ |
 | **5** | `infektion.html` + `neurologi.html` + `buken.html` | ⬜ |
@@ -298,4 +298,44 @@ Sök alltid efter böjda alias efter en facitändring:
 **Metodfel att inte upprepa:** `puls`-länken rättades först genom handredigering av
 `kunskapsbank/karl-armen.html`. Den filen ägs av `generate_karl.py` och ändringen ströks vid
 nästa körning — rundtrippstestet fångade den. Rätt väg är alltid facit; genererad HTML
-redigeras aldrig för hand.
+redigeras aldrig för hand. **Löst i verktyget 0.9.287:** `wire_terms.py --repoint <nyckel …>
+--all` skriver om både `href` och `def` för namngivna facitnycklar på varje sida. Handpåläggning
+är därmed inte längre ett alternativ som går att välja av misstag.
+
+### Släpp 2 — LEVERERAT 0.9.287
+
+- [x] `data/akutmedicin.json` — NEWS2 som facit: sju parametrar, intervall, poäng, svarstabell
+- [x] `js/akutmedicin.js` — motor + renderaren för **mönster B (värdeskala)**
+- [x] `css/verktyg.css` — `.vt-poang`, `.vt-band`, `.vt-krit`, `.vt-hjalp`, `.vt-field--val`
+- [x] `verktyg/akutmedicin/index.html` (hubb) + `vitalparametrar.html` (NEWS2)
+- [x] `scripts/test_verktyg_akutmedicin.js` — 133 tester, larmet verifierat med planterade fel
+- [x] `scripts/check_akutmedicin.py` — inkopplad i `check_generators.py`
+- [x] 3 nya ordlisteposter (`hals`, `koldioxid`, `kroppstemperatur`), facit 2 328 → 2 347
+- [x] 39 felpekande `hals`-länkar rättade på 9 sidor (se §7c)
+
+#### 7c. `hals` pekade fel på nio sidor — hittat under bygget
+
+`hals`, `halsen` och `halsens` pekade på `#term-cervix` med defen *"Smal, halsformad del av ett
+organ, t.ex. livmoderhalsen"*. På **samtliga** 39 förekomster på sajten avser ordet kroppsdelen
+mellan huvudet och bålen — halsens muskler, halsens kärl, nerverna på halsen. Ordlistan saknade
+helt en post för halsen som kroppsdel; bara `collum` och `cervix` fanns, och båda beskriver den
+smala delen av ett organ. Rätt åtgärd var därför den generiska post som täcker båda lägena
+(SEO_REGLER §6c), inte att blockera ordet.
+
+**Samma feltyp som `puls` och `njuren` i släpp 1:** en svensk nyckel vars href pekar på en post
+med ett organnamn i sin definition. Testet är riktningen, inte förekomsten — *hade defen
+fortfarande stämt om ordet stod i en text om en annan kroppsdel?*
+
+#### 7d. Två fel i verktygen, båda lagade i samma pass
+
+**`--sync-defs` kunde inte peka om en länk.** Den synkar `data-def` men lämnar `href` orörd —
+avsiktligt, eftersom en avvikande href ibland är rätt (`njuren` pekar med flit på det latinska
+`ren` på språksidorna). Följden var att en ändrad href bara gick att applicera för hand, vilket
+är precis det §0.3 förbjuder. Nu finns **`--repoint <nyckel …> --all`**, som skriver om både
+`href` och `def` för uttryckligen namngivna nycklar och rör ingenting annat. De sex avsiktliga
+`njuren`-länkarna står kvar orörda.
+
+**`wire_terms.py` kastade bort sin egen returkod.** `if __name__ == "__main__": main(...)` utan
+`sys.exit()` gjorde att varje `STOPP` i skriptet gav exitkod 0 — larmet kunde alltså aldrig
+fällas, inte heller från `check_generators.py`. Rättat till `sys.exit(main(...) or 0)` och
+verifierat genom att anropa `--repoint` med en nyckel som inte finns i facit.
