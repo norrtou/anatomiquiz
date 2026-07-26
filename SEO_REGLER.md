@@ -600,6 +600,74 @@ muskeltabeller, nervtabeller, kärl, skelett, leder, ordlistan — saknade den h
 
 ---
 
+## 6f. "Se även" — syskonlänkar i kunskapsbanken (OBLIGATORISKT)
+
+Så här bär en kunskapsbankssida sina syskonlänkar. **Ingen del av det skrivs för hand:**
+
+```html
+<!-- före .kb-sources — skrivs av scripts/wire_relaterat.py ur scripts/relaterat.py -->
+<aside class="kb-seealso" aria-labelledby="seealsoHeading">
+  <h3 id="seealsoHeading" class="kb-seealso-title">Se även</h3>
+  <ul class="kb-seealso-list">
+    <li><a href="/kunskapsbank/skelett-handen.html">Handens ben →</a></li>
+    <li><a href="/kunskapsbank/nervtabell-armen.html">Armens nerver →</a></li>
+  </ul>
+</aside>
+```
+
+**Källan är `scripts/relaterat.py`, och relationerna är grupper — inte par.**
+En grupp skrivs en gång och blir symmetrisk av sig själv. Par hade krävt att
+samma relation skrevs två gånger (`handen → underarmen` och tvärtom), och två
+strängar för samma sak glider isär — samma slutsats som §6b, §6d, §6e och §9b
+kom till var för sig. Bakgrunden: **36 av 119 sidor hade exakt en ingående
+intern länk**, och den kom i samtliga fall från sidans egen hubb.
+
+- **Vilka sidor som hör ihop är anatomiskt omdöme och skrivs för hand**
+  (CLAUDE_REGLER §0.3). Att göra relationen symmetrisk, hålla den under taket,
+  hämta länktexten och rendera blocket är mekaniskt och görs av skriptet.
+- **Länktexten läses ur målsidans egen `<h1>`.** Då kan den inte glida ifrån
+  sidan den pekar på, och sidtitlarna får ingen andra upplaga att hålla i synk.
+  En målsida utan `<h1>` stoppar bygget.
+- **`kärna` och `vidare` finns för att översiktssidorna inte kan svara
+  symmetriskt.** `karl-armen.html` täcker skuldra, överarm, underarm och hand.
+  Som `kärna` i alla fyra regiongrupperna hade den fått femton länkar tillbaka.
+  Den står därför som `vidare` — regionens sidor länkar till den, den länkar
+  inte tillbaka — och får sina egna länkar ur familjegruppen, där
+  granulariteten matchar. Ingen relation skrivs någonstans två gånger.
+- **Taket är 6 länkar och det är hårt.** Fler är ingen "Se även" utan en
+  sitemap. En karta som spränger taket ska skrivas om, inte klippas: skriptet
+  vägrar och pekar ut sidan.
+- **Placeringen är före `.kb-sources`**, bestämd genom att läsa slutet av
+  `<main>` på alla fem berörda sidtyper (§0b). Efter referenserna hade
+  referenslistan tappat sin plats sist (§6b); mellan referenserna och
+  `.actions` hade sidan fått två rader knappliknande länkar efter varandra.
+  Saknas `.kb-sources` läggs blocket före `.actions`; saknas båda stoppar
+  bygget.
+- **Formen är återanvänd, inte uppfunnen.** `.kb-seealso` fanns redan på
+  `kunskapsbank/index.html`. Ingen ny CSS, och samma ord — "Se även" — för
+  samma sak (§0b punkt 3).
+- **Varje kunskapsbankssida ska stå i en grupp eller i `UTAN_RELATERAT` med
+  skäl.** En ny sida som inte gör någotdera stoppar bygget. Tyst uteblivet är
+  det enda som inte är ett alternativ (CLAUDE_REGLER §0.4) — det var precis så
+  30 sidor kunde saknas i `llms.txt` utan att något larmade (§9b).
+- **Skriptet skriver om, det hoppar inte över.** Ett befintligt block tas bort
+  och byggs på nytt, så att en ändrad karta slår igenom överallt vid nästa
+  körning.
+- **Blocket räknas inte som innehåll i `sidodatum.py`.** `RELATERAT_RX` i
+  `normalisera()` stryker det, av samma skäl som sidfoten stryks: navigering
+  som läggs på 46 sidor samma dag är ingen innehållsuppdatering för läsaren.
+  Utan raden hade exakt de 46 sidorna daterats om till samma dag — mätt genom
+  att stänga av den (§6d). Regeln gäller även framåt: ändras kartan så att en
+  region får en sida till ska regionens övriga sidor inte påstå att deras
+  innehåll är nytt.
+- **`.kb-seealso` är en skyddad zon i `wire_terms.py`.** Blocket är navigering,
+  inte innehåll, och rubriken ska vara ordagrant densamma på alla 46 sidor.
+
+**Kedjan:** `wire_relaterat.py` ligger efter `wire_citations.py` — blocket
+placeras före referenslistan och måste därför skrivas när den finns.
+
+---
+
 ## 7. Tillgänglighet (a11y-trädet MÅSTE vara grönt)
 
 PageSpeed-kravet "tillgänglighetsträdet korrekt formaterat" = **alla** a11y-granskningar gröna.
@@ -783,6 +851,9 @@ Skriptet sätter alla tre ställena i en operation, så en partiell bump inte ka
       `STYLES_V`/`CSS_V` (§11 C behöver alltså ingen egen åtgärd).
 - [ ] `python3 scripts/wire_lang.py --all` — latinet på sidan får `lang="la"`
       (§7b). Skriv aldrig attributet för hand.
+- [ ] `python3 scripts/wire_relaterat.py --all` — kunskapsbankssidan får sitt
+      "Se även"-block (§6f). Nya kunskapsbankssidor måste först in i en grupp
+      eller i `UTAN_RELATERAT` i `scripts/relaterat.py`, annars stoppar bygget.
 - [ ] `python3 scripts/wire_sidfot.py --all` — sidan får den delade sidfoten
       (friskrivning, integritetsrad, datum), ordagrant som alla andra (§6e).
 - [ ] `python3 scripts/sidodatum.py --update && python3 scripts/wire_dates.py --all`
@@ -810,6 +881,9 @@ stod kvar på `0.9.236`, och felet syntes inte i något av de svep som kördes, 
       `python3 scripts/generate_llms.py`. Skriv aldrig i `llms.txt` eller `llms-full.txt`
       direkt — de regenereras. Glöms posten stoppar bygget vid nästa körning.
 - [ ] Korslänka: lägg in länk från relevant **pillar/hub** + interna korslänkar + breadcrumb.
+- [ ] Är sidan en kunskapsbankssida: in i en relationsgrupp eller i
+      `UTAN_RELATERAT` i `scripts/relaterat.py` **med skäl** (§6f). En hubblänk
+      ensam är precis det som gjorde 36 sidor till lösryckta löv.
 - [ ] `<head>` komplett enligt §1 (canonical, OG, Twitter, JSON-LD med BreadcrumbList).
 
 ### C. CSS eller en js-modul ändrad
@@ -845,6 +919,9 @@ stod kvar på `0.9.236`, och felet syntes inte i något av de svep som kördes, 
 - [ ] **Sidfot (§6e):** ingen friskrivning eller integritetsrad handskriven på
       en sida; en ny sida bär sidfoten eller står i en undantagslista med skäl.
       Ingen fetstil i sidfoten.
+- [ ] **Se även (§6f):** inget block handskrivet; varje kunskapsbankssida står
+      i en relationsgrupp eller i `UTAN_RELATERAT` med skäl; max 6 länkar.
+      `python3 scripts/wire_relaterat.py --check --all` ska gå igenom.
 - [ ] **Nytt synligt element (§0b):** placeringen bestämd genom att läsa sidans
       slut på **varje** berörd sidtyp, formen ärvd från något befintligt, inget
       löst stycke efter det som avslutar sidan.

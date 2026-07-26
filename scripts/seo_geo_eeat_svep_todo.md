@@ -8,13 +8,13 @@ Punkt 6 utförd i 0.9.267. Punkt 4 utförd i 0.9.268. Återfallsskydd för hela 
 **Punkt 8 utförd i 0.9.271, omarbetad till en delad sidfot i 0.9.272.
 Punkt 9 utförd i 0.9.275**, plus en blockerare i datumkedjan.
 **Punkt 12 utförd i 0.9.276**, plus 30 sidor som saknades i `llms.txt` och en text som
-drivit isär mellan två register. Resten är öppen och prioriterad nedan.
+drivit isär mellan två register.
+**Punkt 11 utförd i 0.9.277**, plus blockeraren i datumkedjan. Resten är öppen och
+prioriterad nedan.
 
 > 🔒 **Punkt 10 och 13 är vilande och ska inte tas upp, föreslås eller utföras.** Användaren
 > beslutade 2026-07-25 att inget visuellt ska göras och tar upp dem på eget initiativ.
-> Öppna punkter är därmed **11, 14, 15** — inga andra.
->
-> **Punkt 11 är planerad men inte byggd** — hela planen står under sin rubrik nedan.
+> Öppna punkter är därmed **14 och 15** — inga andra.
 **Skapad:** 2026-07-25. **Underlag:** hela sajten lästes maskinellt – titlar, descriptions,
 canonicals, JSON-LD, rubrikhierarki, tabellmärkning, intern länkning, `llms.txt`, `sitemap.xml`,
 `robots.txt` och CSS-kontraster. Siffrorna nedan är mätta, inte uppskattade.
@@ -145,7 +145,7 @@ utcheckning. Se punkt 5 nedan.
 | ~~7~~ | ~~`DefinedTerm`-microdata i ordlistan~~ | ✅ 0.9.265 | **Högst (GEO)** |
 | ~~8~~ | ~~Ansvarsfriskrivning som delad komponent~~ | ✅ 0.9.271–272 | **Hög (YMYL)** |
 | ~~9~~ | ~~`lang="la"` på latinska termer~~ | ✅ 0.9.275 | **Hög (WCAG AA)** |
-| 11 | Syskonlänkar / "Relaterat"-block | ~3 h | Medel |
+| ~~11~~ | ~~Syskonlänkar / "Relaterat"-block~~ | ✅ 0.9.277 | Medel |
 | ~~12~~ | ~~Dela `llms.txt` / `llms-full.txt`~~ | ✅ 0.9.276 | **Medel (GEO)** |
 | ~~13~~ | ~~`.glossary-letter`-kontrast i ljust läge~~ | 🔒 **VILANDE** | ta inte upp |
 | 14 | `about`/`teaches`/`keywords` i schema | ~2 h | Medel (GEO) |
@@ -444,57 +444,72 @@ falska färskhetssignal normaliseringen finns för att undvika. `LANG_RX` stryke
 matcha – samma sak som `HISTORISKA_RX` löser för sidfoten. Efter fixen: **0 sidor omdaterade**
 trots att 63 filer skrevs om.
 
-## 11. ⬜ Syskonlänkar i kunskapsbanken
+## 11. ✅ KLAR i 0.9.277 – syskonlänkar i kunskapsbanken
 
-**Ommätt 2026-07-26 över alla 119 sidor – backloggens siffra var för hög.** Inte "60+" utan
-**36 sidor med exakt en** ingående intern länk, plus 7 med två. Alla 36 länkas bara från sin
-egen hubb: skelett 12, muskeltabeller 13, kärl 6, leder 4, nervtabeller 2. Att **bara 1 sida**
-i hela kunskapsbanken har ett "Se även"-block stämde.
+**Mätt efteråt:** **0 kunskapsbankssidor har kvar en enda ingående intern länk** — före: 36.
+Blocken lägger **225 pillänkar** över **46 sidor**, varav 221 är nya källa→mål-par (fyra fanns
+redan i brödtexten på de två nervbanesidorna). De 36 tidigare löven ligger nu på **3–14**
+ingående länkar. Verifierat genom att räkna om hela länkgrafen två gånger — en gång med
+blocken bortnormaliserade ur HTML:en, en gång med dem kvar — inte genom att lita på skriptets
+egen räkning. Blocken bär 3–6 länkar var; taket är 6.
 
-Utgående länkarna till ordlistan är däremot exemplariskt täta (`muskeltabell-handen.html`
-länkar till 30+ termankare). Det är bara sidhorisontellt det saknas: handen ↔ underarmen ↔
-skuldran, skelett-foten ↔ muskeltabell-foten ↔ leder-nedreextremitet.
+**Den ommätta utgångspunkten stämde:** inte backloggens "60+" utan **36 sidor med exakt en**
+ingående länk, i samtliga fall från sidans egen hubb (skelett 11, muskeltabeller 13, kärl 6,
+leder 4, nervtabeller 2). Utgående länkar till ordlistan var däremot redan täta —
+`muskeltabell-handen.html` länkar till 30+ termankare. Det var bara sidhorisontellt det saknades.
 
-Begränsar både crawldjup och hur topical authority samlas.
+**Två nya skript:**
 
-### Planen (skriven 2026-07-26, ej byggd)
+- [`scripts/relaterat.py`](relaterat.py) – kartan som **relationsgrupper**, inte som par.
+  En grupp skrivs en gång och blir symmetrisk av sig själv. Vilka sidor som hör ihop är
+  anatomiskt omdöme och är handskrivet (§0.3); att göra relationen symmetrisk, hålla den
+  under taket och rendera den är skriptets.
+- [`scripts/wire_relaterat.py`](wire_relaterat.py) – placerar blocket före `.kb-sources`,
+  med `--check`. Skriver om, hoppar inte över. Ligger efter `wire_citations.py` i kedjan.
 
-**Komponenten finns redan – ingen ny visuell form ska uppfinnas (§0.5 punkt 3).**
-`.kb-seealso` / `.kb-seealso-title` / `.kb-seealso-list` ligger i `css/styles.css` och används
-på `kunskapsbank/index.html`: en `<aside>` med rubriken "Se även" och pillänkar. Återanvänd
-den rakt av, inklusive ordet "Se även" — två namn för samma sak är hela problemet punkt 8
-löste. **Ingen ny CSS.**
+**Rena regiongrupper räckte inte, och det var punktens enda verkliga designproblem.**
+`karl-armen.html` täcker skuldra, överarm, underarm och hand. Som medlem i alla fyra
+regiongrupperna hade den fått **15** länkar tillbaka — mätt, inte uppskattat. Lösningen blev
+`kärna`/`vidare`: regionens sidor länkar till översiktssidan, den länkar inte tillbaka, och
+får sina egna länkar ur en familjegrupp där granulariteten matchar. Ingen relation skrivs
+någonstans två gånger, så ingenting kan glida isär — och taket kan hållas utan att någon lista
+klipps. **Samma mekanism åt andra hållet räddade bäckenbottnen**, som annars hade blivit kvar
+med en enda ingående länk: den står som `vidare` i höftgruppen.
 
-**Placering, bestämd genom att läsa slutet av `<main>` på alla fem berörda sidtyper
-(muskeltabell, skelett, kärl, nervtabell, artikel):** blocket läggs direkt **före**
-`.kb-sources`. Sidorna slutar Referenser → `.actions` → sidfot. Läggs pillarna mellan
-referenserna och knappraden får man två rader knappliknande länkar i rad, och referenslistan
-tappar sin plats sist (§6b). På en sida utan `.kb-sources` läggs blocket före `.actions`.
-Max 5 länkar, annars är det ingen "Se även" utan en sitemap.
+**Backloggen sa "max 5 länkar" – det blev 6.** Kedjegrannarna (handen ↔ underarmen ↔ skuldran)
+gör att en mittsida i en extremitet får sex: regiontvillingen, tre översiktssidor och två
+grannar. Att i stället klippa listan hade gjort urvalet godtyckligt. Taket är hårt i skriptet:
+en karta som spränger det stoppar bygget i stället för att trimmas.
 
 **Eget kedjesteg, inte generatorändring — sjätte gången samma slutsats** (punkt 4, 5, 6, 8, 9):
 nervtabellerna, `kranialnerverna` och de handskrivna faktatexterna ägs inte av någon generator.
 
-- `scripts/relaterat.py` – kartan som **relationsgrupper**, inte som par: region *handen* =
-  muskeltabell-handen, skelett-handen, leder-överextremitet, nervtabell-armen, kärl-armen.
-  Gruppen skrivs en gång och blir symmetrisk av sig själv; par hade krävt att samma relation
-  skrevs två gånger och kunnat glida isär. Vilka sidor som hör ihop är anatomiskt omdöme och
-  skrivs för hand (§0.3 punkt 3) — att göra relationen symmetrisk och rendera den är skriptets.
-- `scripts/wire_relaterat.py --all` – skriver blocket, med `--check`. **Skriver om, hoppar
-  inte över** (samma skäl som `wire_sidfot.py`). Placeras i KEDJA efter `wire_citations.py`.
-- **Länktexten läses ur målsidans egen `<h1>`** — då kan den inte glida ifrån sidan den pekar
-  på, och ingen andra upplaga av sidtitlarna uppstår.
-- **§0.4:** varje kunskapsbankssida ska stå i en grupp eller i en undantagslista med skäl;
-  en omappad sida stoppar bygget.
+**30 sidor står utanför, var och en med skäl.** Hubbarna *är* navigeringen, och artiklarna och
+terminologisidorna korslänkas redan i brödtexten enligt ARTIKLAR_REGLER — samtliga hade tre
+eller fler ingående länkar vid mätningen och var alltså inte det problem punkten löser.
+Nytt synligt innehåll infördes bara i den utsträckning uppgiften krävde (§0.5).
 
-**Blockeraren som måste lagas i samma pass — annars dateras ~76 sidor om till samma dag.**
-Blocket ändrar `<main>` på alla sidor samtidigt, precis som sidfoten (0.9.272) och `lang="la"`
-(0.9.275). `RELATERAT_RX` ska in i `normalisera()` i `sidodatum.py`, och effekten mätas genom
-att stänga av fixen — som punkt 9:s 63 sidor.
+### Blockeraren som lagades i samma pass
 
-**`.kb-seealso` ska bli skyddad zon i `wire_terms.py`**, bredvid `.page-footer` och `.kb-card`.
-Länktexten sitter visserligen inuti `<a>` och skyddas av `in_anchor` idag, men rubriken gör
-det inte, och blocket ska vara ordagrant lika på alla sidor.
+**Blocket hade daterat om exakt de 46 sidor punkten finns för att lyfta.** Precis som sidfoten
+(0.9.272) och `lang="la"` (0.9.275) ändrar det `<main>` på alla sidorna samma dag. Bevisat
+genom att köra utan fixen och mäta: **46 sidor** stod på väg från 24 juli till 26 juli.
+`RELATERAT_RX` i `normalisera()` stryker blocket ur **båda** sidor av jämförelsen; efter fixen
+**0 omdaterade sidor**. Regeln räcker längre än till införandet: ändras kartan så att en region
+får en sida till ska regionens övriga sidor inte påstå att deras innehåll är nytt.
+
+Att mönstret stryker *bara* blocket är verifierat separat: normaliserad sida med och utan
+blocket är byte-identisk (54 097 tecken båda), medan en ändrad ordinarie tabellcell
+fortfarande syns som en ändring.
+
+**`.kb-seealso` är skyddad zon i `wire_terms.py`**, bredvid `.page-footer` och `.kb-card`.
+Länktexten skyddas visserligen redan av `in_anchor`, men rubriken gör det inte.
+
+**Skyddet är verifierat med planterade fel, inte genom att kontrollen sagt OK:** ny
+kunskapsbankssida som ingen klassat, spöke i undantagslistan, sida i både grupp och
+undantagslista, karta som spränger taket, målsida utan `<h1>`, sida utan både `.kb-sources`
+och `.actions`, handredigerad länktext, raderat block och block flyttat efter referenslistan
+gav alla exitkod 1 med ett besked som säger vad som ska göras.
 
 ## 12. ✅ KLAR i 0.9.276 – `llms.txt` delad i index och fulltext
 
@@ -594,6 +609,7 @@ Granskningen efter punkt 4:
 | 8 sidfot | ✅ `wire_sidfot.py`, stoppar på oklassad ny sida | `check_generators.py` |
 | 9 `lang="la"` | ✅ `wire_lang.py`, stoppar på omärkbar latinkolumn och okänt genus | `check_generators.py` |
 | 10 kontrast | 🔒 vilande — se nedan | — |
+| 11 syskonlänkar | ✅ `wire_relaterat.py`, stoppar på oklassad sida och sprängt tak | `check_generators.py` |
 | 12 agentfilerna | ✅ `generate_llms.py`, stoppar på sida i sitemap som saknas i registret | `check_generators.py` |
 
 Punkt 5:s skydd är verifierat genom att fel planterats, inte genom att kontrollen sagt OK:
@@ -604,12 +620,13 @@ ska göras.
 **Punkt 10 saknar kontroll, och det förblir så.** En kontrastkontroll (räkna WCAG-kvot ur
 CSS-variablerna) skulle täcka både den och punkt 13, men båda rör hur sajten *ser ut*.
 
-**Regeln för resten av svepet:** varje kommande punkt (11, 14, 15) ska leverera
-sitt skydd i samma pass som åtgärden, inte som en efterhandsfråga. Punkt 11:s syskonlänkar
-valideras av `check_links.py` så snart de skrivits — men skyddet som saknas är att en sida
-*utan* block ska larma, och det ska `wire_relaterat.py` göra (§0.4). Att `check_links.py`
-räcker var för övrigt fel om punkt 12 också: den validerar att URL:erna i `llms.txt` finns,
-aldrig att sidorna finns i `llms.txt`, och 30 sidor saknades ändå.
+**Regeln för resten av svepet:** varje kommande punkt (14, 15) ska leverera
+sitt skydd i samma pass som åtgärden, inte som en efterhandsfråga. Punkt 11 visade varför
+`check_links.py` aldrig räcker som skydd: den validerar att de länkar som *finns* pekar rätt,
+aldrig att en sida som *borde* ha länkar har dem. Det skyddet gör `wire_relaterat.py` genom
+att stoppa på en oklassad sida (§0.4). Samma sak gällde punkt 12: `check_links.py` validerar
+att URL:erna i `llms.txt` finns, aldrig att sidorna finns i `llms.txt`, och 30 sidor saknades
+ändå.
 
 Punkt 9:s skydd är verifierat genom planterade fel, inte genom att kontrollen sagt OK:
 latinkolumn utan `<em>`, svenska tecken inuti ett latinskt `<em>` och ett okänt ord efter

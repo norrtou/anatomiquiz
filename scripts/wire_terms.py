@@ -274,11 +274,19 @@ def wire_html(html, terms, rx, stats=None):
             # tooltips på "kliniska riktlinjer" hade gjort dem till 117 olika
             # rader, och därmed upphävt hela poängen med en delad komponent.
             is_page_footer = bool(re.search(r'class="page-footer[ "]', attrs))
+            # "Se även"-blocket (.kb-seealso) av samma skäl som sidfoten:
+            # det är navigering, och rubriken och länktexterna ska vara
+            # ordagrant desamma på alla 46 sidor. Länktexten sitter visserligen
+            # inuti <a> och skyddas redan av in_anchor, men rubriken "Se även"
+            # gör det inte — och blir ett ord i den någonsin en facitnyckel
+            # hade blocket sett olika ut från sida till sida (SEO_REGLER §6f).
+            is_kb_seealso = bool(re.search(r'class="kb-seealso[ "]', attrs))
             if (name in ("head", "script", "style") or is_breadcrumb_nav
                     or (is_kb_card and name != "a")
                     or (is_kb_sources and name != "a")
                     or (is_page_updated and name != "a")
-                    or (is_page_footer and name != "a")) and not self_closing:
+                    or (is_page_footer and name != "a")
+                    or (is_kb_seealso and name != "a")) and not self_closing:
                 protected.append(name)        # öppna skyddad zon
             elif name == "a" and not self_closing:
                 in_anchor = True

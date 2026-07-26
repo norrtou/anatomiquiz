@@ -44,6 +44,7 @@ import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from jsonld import LD, ROOT, är_sidnod  # noqa: E402
+from relaterat import RX as RELATERAT_RX  # noqa: E402
 from sidfot import HISTORISKA_RX  # noqa: E402
 from sidfot import RX as SIDFOT_RX  # noqa: E402
 
@@ -92,6 +93,17 @@ CACHEBUSTER_RX = re.compile(r"\?v=[0-9]+\.[0-9]+\.[0-9]+")
 LANG_RX = re.compile(r' lang="la"')
 BLANKSTEG_RX = re.compile(r"\s+")
 
+# "Se även"-blocket (wire_relaterat.py) är navigering, inte artikelinnehåll.
+# Det lades på 46 sidor samma dag och hade annars daterat om exakt de sidor
+# punkten finns för att lyfta — mätt genom att stänga av den här raden: 46
+# sidor stod på väg från 24 juli till 26 juli. Samma skäl som sidfoten stryks
+# för, och samma sak som Googles råd säger: `dateModified` ska spegla en
+# verklig innehållsuppdatering, inte att en länkrad tillkommit. Konsekvensen
+# räcker längre än till införandet: ändras kartan så att en region får en sida
+# till, ska inte regionens övriga sidor påstå att deras innehåll är nytt.
+# Mönstret bor i relaterat.py, av samma skäl som sidfotens bor i sidfot.py:
+# den som äger markupen äger också mönstret som stryker den.
+
 
 def normalisera(html: str) -> str:
     """Sidans läsbara innehåll, med allt som inte är en uppdatering borttaget.
@@ -109,10 +121,12 @@ def normalisera(html: str) -> str:
       falska färskhetssignal den här normaliseringen finns för att undvika.
     * cachebusters — `?v=0.9.269` är en versionsbump, inte en ändring.
     * `lang="la"` — se LANG_RX ovan. Märkning för skärmläsare, inte innehåll.
+    * "Se även"-blocket — se RELATERAT_RX ovan. Navigering, inte artikeltext.
     * blankstegsskillnader — omindentering är inte en uppdatering.
     """
     html = HEAD_RX.sub("", html)
     html = LD_RX.sub("", html)
+    html = RELATERAT_RX.sub("", html)
     html = SIDFOT_RX.sub("", html)             # före DATUMRAD_RX: datumraden
     for rx in HISTORISKA_RX:                   # ligger inuti sidfoten
         html = rx.sub("", html)

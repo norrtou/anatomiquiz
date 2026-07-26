@@ -55,6 +55,11 @@ KEDJA = [
     ["scripts/generate_muskler_flashcards.py"],
     ["scripts/wire_terms.py", "--all"],
     ["scripts/wire_citations.py", "--all"],
+    # Se även-blocket läggs före referenslistan och måste därför skrivas efter
+    # att den finns. Steget stoppar på en kunskapsbankssida som varken står i
+    # en relationsgrupp eller i UTAN_RELATERAT — en ny tabellsida ska tvinga
+    # fram ett beslut, inte tyst hamna utanför korslänkningen (§0.4).
+    ["scripts/wire_relaterat.py", "--all"],
     ["scripts/generate_glossary.py"],
     ["scripts/wire_lang.py", "--all"],
     ["scripts/wire_identity.py", "--all"],
