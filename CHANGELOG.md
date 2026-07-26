@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.293
+- **Samma trams-formulering är nu borta ur NEWS2-sidans `og:description` och `twitter:description`.** "Fyll i de sju vitalparametrarna och se poängen växa fram en i taget" → "Fyll i de sju vitalparametrarna och få poäng per parameter. Med poängtabellen, vad varje variabel betyder och varför just de väger vid försämring." Delningskortet är sidans första intryck i ett flöde; en spelifierad rad där är samma fel som på sidan.
+- **Ny regel `CLAUDE_REGLER.md` §12.3 — verktyg är inte spel.** Klinisk text skrivs sakligt: undertexter, knappar, resultatrader och meta beskriver vad instrumentet mäter och vad läsaren lär sig, aldrig hur roligt det är att fylla i. §13.1 (spelkänsla är golvet) gäller **spellägen** och stannar där — ett verktyg lånar spellägenas komponenter, aldrig deras tonfall. Testet före leverans: skulle raden kunna stå på ett vårdmaterial?
+- **Regeln säger också att hela sidan rättas i samma andetag.** Samma formulering brukar stå på fem ställen — tagline, två meta-fält, JSON-LD och `data/llms.json`. Grep frasen över kodbasen först; att stanna vid den synliga raden och *fråga* om resten är precis den handpåläggning §0.3 förbjuder. Detta är det enda undantaget från "rör inte meta".
+- Svepet över resten av avdelningen: `data/llms.json`, JSON-LD, hubben, `js/akutmedicin.js` och `data/akutmedicin.json` var redan sakliga — inga jubelsträngar, inga utropstecken. Bara de två meta-fälten bar formuleringen.
+
 ## 0.9.292
 - **Ny undertext på NEWS2-sidan.** "Se poängen växa fram, en parameter i taget" är utbytt mot **"Vad mätvärdena betyder och varför NEWS2 väger dem olika"**. Den gamla sålde interaktionen som ett poängsamlande; NEWS2 mäter hur nära en patient är att försämras, och undertexten ska säga vad sidan lär ut, inte hur roligt det är att fylla i den.
 - Den nya texten beskriver dessutom det sidan faktiskt består av — avsnitten "Vad betyder variablerna?" och "Varför just de här variablerna?" — i stället för räknaren som redan syns.

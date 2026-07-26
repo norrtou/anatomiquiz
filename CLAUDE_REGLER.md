@@ -1054,6 +1054,46 @@ väger. Jämför mot disk med cachebusters bortnormaliserade
 generatorn skriver ut men inte äger (artiklar, tabellsidor) behåller alltid sitt
 befintliga datum.
 
+### 12.3 VERKTYG ÄR INTE SPEL — KLINISKT MATERIAL SKRIVS SAKLIGT, ALDRIG SPELIFIERAT
+
+**Mall (så här görs det rätt från början):** all synlig text på en verktygs- eller
+kunskapsbankssida — undertext, rubrik, knapptext, resultatrad, `og:`/`twitter:`- och
+`meta`-beskrivning — beskriver **vad instrumentet mäter och vad läsaren lär sig**.
+Aldrig hur roligt det är att fylla i det, aldrig som en poängjakt, aldrig med
+spelvokabulär ("samla", "se poängen växa", "klara nivån", "utmana dig själv").
+§13.1 säger att spelkänsla är golvet för **spellägen** — den regeln stannar där. Ett
+verktyg lånar spellägenas *komponenter* (`.vt-*`, tonerna, layouten), aldrig deras
+*tonfall*.
+
+**Varför det är allvarligare än en stilfråga:** verktygen mäter riktiga patienter.
+NEWS2 är en försämringsskala — hög poäng betyder att någon är på väg att bli sämre.
+Att rama in det som poänginsamling är inte bara omdömeslöst, det lär ut fel sak:
+läsaren ska bära med sig att summan styr *hur tätt patienten mäts om*, inte att den
+är ett resultat att slå. Samma sak gäller varje riskskala vi bygger — Wells,
+HAS-BLED, GCS, Glasgow-Blatchford.
+
+**Testet före leverans, på varje synlig sträng:** *skulle den här formuleringen kunna
+stå på ett vårdmaterial utan att någon höjer på ögonbrynen?* Nej → skriv om. Läs
+raden som om patienten på andra sidan mätvärdet läste den.
+
+**Undertexten ska säga vad sidan lär ut.** Sidan består av räknaren *plus* "Vad
+betyder variablerna?" och "Varför just de här variablerna?" (§1 i
+`scripts/akutmedicin_verktyg_todo.md`) — det är de delarna som är vårt eget innehåll,
+och det är dem undertexten ska spegla. Räknaren syns redan; den behöver ingen
+säljande rad.
+
+**Rätta hela sidan i samma andetag, inte bara den rad som pekades ut.** Samma
+formulering brukar stå på flera ställen: `<p class="tagline">`, `og:description`,
+`twitter:description`, JSON-LD `description` och `data/llms.json`. Grep frasen över
+hela kodbasen innan något sägs vara åtgärdat. Detta är den enda situationen där meta
+får skrivas om utan att fråga (§ "Rör inte meta" gäller i övrigt) — en trams-rad i
+`og:description` är samma fel som i undertexten, och att stanna vid den synliga raden
+och *fråga* om resten är exakt det §0.3 och §12.2 förbjuder.
+
+**Bakgrund (0.9.292–293):** NEWS2-sidan levererades med undertexten "Se poängen växa
+fram, en parameter i taget" och samma formulering i två meta-fält. Användarens ord:
+"Det är inte en tävling att samla poäng liksom."
+
 ---
 
 ## 13. SPELKÄNSLA ÄR ETT KRAV – RESEARCHA LIKNANDE SPEL FÖRST
