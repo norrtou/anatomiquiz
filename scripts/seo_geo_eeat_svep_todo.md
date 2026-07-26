@@ -11,11 +11,13 @@ Punkt 9 utförd i 0.9.275**, plus en blockerare i datumkedjan.
 drivit isär mellan två register.
 **Punkt 11 utförd i 0.9.277**, plus blockeraren i datumkedjan.
 **Punkt 14 utförd i 0.9.278**, plus fyra felaktiga `about`-påståenden som legat i
-märkningen sedan sidorna skrevs. Resten är öppen och prioriterad nedan.
+märkningen sedan sidorna skrevs.
+**Punkt 15 utförd i 0.9.279**, plus en handskriven datumdubblett i policyns brödtext.
+**Svepet har därmed inga öppna punkter kvar** – 10 och 13 är vilande på användarens beslut.
 
 > 🔒 **Punkt 10 och 13 är vilande och ska inte tas upp, föreslås eller utföras.** Användaren
 > beslutade 2026-07-25 att inget visuellt ska göras och tar upp dem på eget initiativ.
-> Öppen punkt är därmed **15** — ingen annan.
+> Alla åtgärdade punkter är därmed avklarade; ingenting är öppet.
 **Skapad:** 2026-07-25. **Underlag:** hela sajten lästes maskinellt – titlar, descriptions,
 canonicals, JSON-LD, rubrikhierarki, tabellmärkning, intern länkning, `llms.txt`, `sitemap.xml`,
 `robots.txt` och CSS-kontraster. Siffrorna nedan är mätta, inte uppskattade.
@@ -150,7 +152,7 @@ utcheckning. Se punkt 5 nedan.
 | ~~12~~ | ~~Dela `llms.txt` / `llms-full.txt`~~ | ✅ 0.9.276 | **Medel (GEO)** |
 | ~~13~~ | ~~`.glossary-letter`-kontrast i ljust läge~~ | 🔒 **VILANDE** | ta inte upp |
 | ~~14~~ | ~~`about`/`teaches`/`keywords` i schema~~ | ✅ 0.9.278 | Medel (GEO) |
-| 15 | `integritet.html` rubrikhopp h1→h3 | 5 min | Låg |
+| ~~15~~ | ~~`integritet.html` rubrikhopp h1→h3~~ | ✅ 0.9.279 | Låg |
 
 ---
 
@@ -650,9 +652,37 @@ den, sprängt tak, samma nyckelord två gånger, `<meta name="keywords">` tillba
 `<main>` och handredigerat `about` i en levererad sida gav alla exitkod 1 med ett besked som
 säger vad som ska göras.
 
-## 15. ⬜ Rubrikhopp i `integritet.html`
+## 15. ✅ KLAR i 0.9.279 – Rubrikhopp i `integritet.html`
 
-Sidan går h1 → h3. Enda sidan i hela sajten med ett hopp. Femminutersfix.
+**Mätt efteråt:** **118 sidor har en h1 och en rubrikkedja utan hopp** – hela trädet utanför
+`_arkiv/`, mätt av `scripts/check_rubriker.py`. Integritetspolicyns åtta avsnittsrubriker gick
+från `<h3>` till `<h2>`; klassen `.info-subheading` rördes inte.
+
+**Varför felet kunde ligga kvar:** rubrikstorleken styrs av klassen, inte av taggnamnet.
+`.info-subheading` ger samma 0,98 rem på en h2 som på en h3, och klassens specificitet slår
+elementregeln `h3 { font-size: 11pt }` i `@media print`. Sidan såg alltså exakt likadan ut före
+och efter, på skärm och i utskrift. Det som ändrades var strukturen: en skärmläsare hörde
+"rubrik nivå 3" direkt efter sidans titel, utan avsnittet den skulle tillhöra.
+
+**Skyddet:** `scripts/check_rubriker.py` kräver exakt en `<h1>`, `<h1>` först och att ingen
+rubrik ligger mer än en nivå under den föregående. Att stiga tillbaka (h4 → h2) tillåts – det är
+vad som händer när ett avsnitt tar slut. Kommentarer, `<script>`, `<style>` och `<template>`
+maskas bort först; `spellagen.html` har en kommentar som *nämner* en rubriktagg. Redirect-stumpar
+känns igen på `<meta http-equiv="refresh">` och hoppas över, så `ordlista-tecken.html` inte
+behöver stå i någon handskriven lista. Kontrollen körs av `check_generators.py`.
+
+**Skyddet är verifierat med planterade fel, inte genom att kontrollen sagt OK:** originalbuggen
+återinsatt ordagrant (h1 → h3), två `<h1>` på samma sida, borttagen `<h1>`, h2 → h4 mitt i en
+artikel och en redirect-stump utan sin meta-tagg gav alla exitkod 1 med ett besked som säger vad
+som ska göras – medan en rubrik i en kommentar och en i en `<template>` passerar.
+
+**Sidoupptäckt, åtgärdad i samma pass:** policyn avslutades med "Den här sidan uppdaterades
+senast 2026-06-23" handskrivet i brödtexten, två rader ovanför sidfotens `<time data-updated>`.
+Så fort ändringen daterade om sidan hade de motsagt varandra. Meningen pekar nu på sidfotens
+datum i stället för att upprepa det (§6d: ett datum per sida, från `data/sidodatum.json`).
+
+**Kostnad:** gzipat +40 byte på `integritet.html` (+1,0 %). Ingen CSS, ingen ny klass, inget nytt
+synligt element.
 
 ---
 
@@ -677,6 +707,7 @@ Granskningen efter punkt 4:
 | 11 syskonlänkar | ✅ `wire_relaterat.py`, stoppar på oklassad sida och sprängt tak | `check_generators.py` |
 | 12 agentfilerna | ✅ `generate_llms.py`, stoppar på sida i sitemap som saknas i registret | `check_generators.py` |
 | 14 ämne | ✅ `wire_amne.py`, stoppar på oklassad sida och på påstående som inte står på sidan | `check_generators.py` |
+| 15 rubrikkedja | ✅ `check_rubriker.py` — en h1, h1 först, inga hopp; 118 sidor | `check_generators.py` |
 
 Punkt 5:s skydd är verifierat genom att fel planterats, inte genom att kontrollen sagt OK:
 ändrat innehåll utan uppdaterat datum, raderad datumrad, handredigerat datum i facit, ny sida
@@ -686,8 +717,8 @@ ska göras.
 **Punkt 10 saknar kontroll, och det förblir så.** En kontrastkontroll (räkna WCAG-kvot ur
 CSS-variablerna) skulle täcka både den och punkt 13, men båda rör hur sajten *ser ut*.
 
-**Regeln för resten av svepet:** punkt 15 ska leverera
-sitt skydd i samma pass som åtgärden, inte som en efterhandsfråga. Punkt 11 visade varför
+**Regeln gällde hela svepet och höll hela vägen:** varje punkt levererade sitt skydd i samma
+pass som åtgärden, aldrig som en efterhandsfråga. Punkt 11 visade varför
 `check_links.py` aldrig räcker som skydd: den validerar att de länkar som *finns* pekar rätt,
 aldrig att en sida som *borde* ha länkar har dem. Det skyddet gör `wire_relaterat.py` genom
 att stoppa på en oklassad sida (§0.4). Samma sak gällde punkt 12: `check_links.py` validerar

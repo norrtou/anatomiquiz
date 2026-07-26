@@ -970,7 +970,8 @@ där (alla `generate_*.py` + `wire_terms.py` + `wire_citations.py` +
 mot arbetskopian. Bara en körning av hela kedjan duger:
 **wire-stegen kan ingen enskild generator kontrollera** — tooltips, referenser,
 syskonlänkar, språkmärkning, identitet, ämne, sidfot och datum läggs på *efter* sidgenereringen, så
-det är först när allt körts i ordning som man ser om de överlever. Därefter kör det `check_links.py` (varje intern länk mot disk) och
+det är först när allt körts i ordning som man ser om de överlever. Därefter kör det `check_links.py` (varje intern länk mot disk),
+`check_rubriker.py` (varje sidas rubrikkedja: en h1, inga hopp) och
 `sidodatum.py --check` (varje sidas datum mot git). **Kör det före varje commit
 som rör en generator, ett facit eller en genererad sida.**
 

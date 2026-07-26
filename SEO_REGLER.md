@@ -752,6 +752,11 @@ PageSpeed-kravet "tillgänglighetsträdet korrekt formaterat" = **alla** a11y-gr
 
 - `<html lang="sv">`.
 - **Exakt en `<h1>`** per sida; rubriker i hierarkisk ordning (h1→h2→h3, hoppa inte över nivåer).
+  **Nivån bestäms av strukturen, aldrig av utseendet.** Rubrikernas storlek styrs av klassen
+  (`.about-title`, `.info-subheading`, `.kb-seealso-title`), så en h3 direkt under h1 ser exakt
+  rätt ut och är ändå ett hopp — det var precis felet i `integritet.html` (punkt 15 i SEO-svepet).
+  Behöver en rubrik se mindre ut: byt klass, inte nivå. `python3 scripts/check_rubriker.py` läser
+  varje sida och stoppar på hopp, saknad h1 och dubbel h1; den körs av `check_generators.py`.
 - **Skip-länk** först i `<body>`: `<a class="skip-link" href="#main">Hoppa till innehåll</a>`.
 - Landmärken: `<main id="main">`, `<nav aria-label="…">`, `<header>`. Breadcrumb-`<nav>` med
   `aria-current="page"` på sista steget.
@@ -1013,6 +1018,8 @@ stod kvar på `0.9.236`, och felet syntes inte i något av de svep som kördes, 
       löst stycke efter det som avslutar sidan.
 - [ ] **A11y:** en `<h1>`, skip-länk, landmärken, varje tabell har `<caption>` + `th scope`,
       bilder har `alt`.
+- [ ] **Rubrikkedja (§7):** ingen nivå vald efter hur rubriken ska se ut; ingen sida
+      hoppar över en nivå. `python3 scripts/check_rubriker.py` ska gå igenom.
 - [ ] **Latin (§7b):** inget `lang="la"` handskrivet; en ny latinkolumn heter
       "… (latin)" och har latinet i `<em>`, den svenska glosan utanför.
       `python3 scripts/wire_lang.py --check --all` ska gå igenom.

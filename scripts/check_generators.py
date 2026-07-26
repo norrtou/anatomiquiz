@@ -18,10 +18,10 @@ Ingen enskild generator kan göra det. `generate_glossary.py` hade ett eget
 `--check` fram till 0.9.270; det jämförde generatorns rena utdata mot filer som
 senare steg skrivit i, och kunde därför aldrig lysa grönt igen efter 0.9.267.
 
-Efter rundtrippen körs två kontroller mot arbetskatalogen: `check_links.py`
-(varje intern länk mot disk) och `sidodatum.py --check` (varje sidas datum mot
-git). Den senare kan inte ligga i KEDJA – spegeln är en naken filkopia utan
-`.git`.
+Efter rundtrippen körs tre kontroller mot arbetskatalogen: `check_links.py`
+(varje intern länk mot disk), `check_rubriker.py` (varje sidas rubrikkedja utan
+hopp) och `sidodatum.py --check` (varje sidas datum mot git). Den sista kan inte
+ligga i KEDJA – spegeln är en naken filkopia utan `.git`.
 
 Testet läser arbetskopian, inte HEAD – oincheckade ändringar räknas med.
 
@@ -124,7 +124,13 @@ def main(argv):
         # naken filkopia. Den körs därför mot ROOT, efter rundtrippen. Larmar
         # den betyder det att en sidas innehåll ändrats utan att datumet följt
         # med — kör `--update` och sedan `wire_dates.py --all`.
-        for kontroll in ("scripts/check_links.py", "scripts/sidodatum.py"):
+        #
+        # check_rubriker.py mäter en tredje sak ingen generator äger: att varje
+        # sidas rubrikkedja går h1 → h2 → h3 utan hopp. Felet syns inte —
+        # `.info-subheading` gav `integritet.html` samma utseende på h3 som på
+        # h2 — så bara något som körs kan hitta det.
+        for kontroll in ("scripts/check_links.py", "scripts/check_rubriker.py",
+                         "scripts/sidodatum.py"):
             argv = [kontroll] + (["--check"] if "sidodatum" in kontroll else [])
             kod = subprocess.run([sys.executable] + argv, cwd=ROOT).returncode
             if kod != 0:
