@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.291
+- **Facebook-adressen är nu `facebook.com/anatomiquizse`.** Sidan har fått ett användarnamn, så id-adressen `/people/Anatomiquizse/61592224814069/` är utbytt på båda ställena — den synliga ikonen och `sameAs` i JSON-LD. Adressen hänger inte längre på ett numeriskt id och är därför stabil även om profilens namn ändras.
+- Tredje och sista bytet av samma länk (delningslänk → id-adress → användarnamn). Att den bytts tre gånger på fyra versioner är hela poängen med att den bara står på **två** ställen i kodbasen: en sökning, två träffar, inget spritt över sajten som kan hamna efter.
+
 ## 0.9.290
 - **Facebook-länken pekar nu på profilen, inte på en delningslänk.** `facebook.com/people/Anatomiquizse/61592224814069/` ersätter `/share/1AuxfAEAbE/` på **båda** ställena — den synliga ikonen och `sameAs` i JSON-LD. En delningslänk är en omdirigering; som identitetspåstående är den svagare än adressen den leder till.
 - **Så här kontrollerades den:** Facebook svarar 400 på allt anrop utan inloggning, både på sidor som finns och på rent nonsens, så statuskoden duger inte som bevis. Men `/people/`-sökvägen svarar med riktiga koder, och där ger varje adress **utan** avslutande profil-id 404 — även Facebooks egen. Med id:t på plats försvinner 404:an. Det bekräftar formen, inte kontot; adressen är hämtad ur användarens eget adressfält.
