@@ -755,5 +755,9 @@ uttryckligen fredade (se "Medvetet EJ åtgärdat" nedan).
   samtliga AI-crawlers redan. Ingen åtgärd behövs; en explicit bot-lista tillför inget.
 - **`sitemap.xml` lastmod.** 116 sidor står på 2026-07-24 trots att filerna rörts senare.
   Det är **korrekt** – bara cachebustern ändrades, inte innehållet.
-- **`ordlista-tecken.html`.** Saknar description, JSON-LD och `<h1>`, och är `noindex`.
-  Avsiktlig redirect-stump (se 0.9.257). Ska förbli som den är.
+- **`ordlista-tecken.html`.** Saknar description, JSON-LD och `<h1>`. Avsiktlig
+  redirect-stump (se 0.9.257). Ska förbli som den är. **Sidan är `index, follow`,
+  inte `noindex`** — canonical är den signal som pekar om sidan, och att kombinera
+  canonical med noindex ger motstridiga besked. Sätt aldrig tillbaka noindex; se
+  kommentaren i filen. Att sidan saknar `<h1>` är därför också rätt, och
+  `check_rubriker.py` hoppar över den på dess `<meta http-equiv="refresh">`.
