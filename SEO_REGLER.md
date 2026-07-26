@@ -768,7 +768,8 @@ PageSpeed-kravet "tillgänglighetsträdet korrekt formaterat" = **alla** a11y-gr
   (`role="table"/"rowgroup"/"row"/"columnheader"/"cell"`) eftersom `display:block` annars tar bort den.
   Inga inline-`style`-attribut (CSP `style-src 'self'`) – kolumnbredder via CSS-klasser på `<col>`.
 - **Bilder:** alltid meningsfull `alt`. Dekorativa bilder: `alt=""`.
-- Kontrast ≥ WCAG AA. Synligt fokus. Klickbara ytor ≥ 24×24 px.
+- Kontrast ≥ WCAG AA — **och den räknas, inte bedöms.** Se §7c.
+- Synligt fokus. Klickbara ytor ≥ 24×24 px.
 - Inga `tabindex > 0`. Formulärfält har `<label>`.
 - **Latinsk text märks `lang="la"`** — se §7b.
 
@@ -831,6 +832,59 @@ i märkningen först. Ordlistans icke-inverterade latinska uppslagsord (`axilla`
 språkfält, och att härleda språket ur definitionstexten är precis det gissande
 §0.3 förbjuder. Ska de märkas är rätt åtgärd ett språkfält i datafilen, satt när
 posten skrivs — inte ett mönster som tolkar den i efterhand.
+
+---
+
+## 7c. Kontrast: färgad yta under text (WCAG 1.4.3)
+
+**Kontrasten räknas av `scripts/check_kontrast.py`, i båda teman, före commit.**
+Ögonmått duger inte: en yta som ser prydlig ut i en skärmdump kan ligga på 1,92:1,
+och det var precis vad ordlistans bokstavsrubrik gjorde på 33 sidor fram till
+0.9.280. Kontrollen läser CSS:en och blir därför aldrig inaktuell när paletten
+ändras.
+
+**Så skrivs en färgad yta rätt från början:**
+
+```css
+/* Vit text på färgad botten → använd en PLATTA, aldrig --primary/--accent/--error */
+.min-yta {
+  background: linear-gradient(135deg, var(--plate-green) 0%, var(--plate-green-deep) 100%);
+  color: var(--text-light);
+}
+```
+
+| Behov | Variabel | Vit text ger |
+|---|---|---|
+| Grön botten | `--plate-green` | 5,48:1 |
+| Mörkare gröna änden i en gradient | `--plate-green-deep` | 7,68:1 |
+| Teal botten | `--plate-teal` | 5,47:1 |
+| Röd botten (fel svar, tidsvarning) | `--plate-red` | 4,83:1 |
+
+**Varför det inte får vara `--primary-deep`:** de gröna, teal- och röda tonerna är
+**textfärger** i mörkt läge och ljusnar därför där (`--primary-deep` blir `#34d399`).
+En yta som använder dem som botten under vit text går sönder i mörkt läge utan att
+någon ser det — det var felet i `.answer-btn.correct` (rätt svar, 1,92:1),
+`.answer-btn.wrong`, `.timer.warning` och fyra ytor i `verktyg.css`.
+**`--plate-*` överskrivs aldrig i `[data-theme="dark"]`.** Det är hela poängen.
+
+**Fyra regler som följer av kontrollens byggnad:**
+
+1. **Genomskinlig botten** (`rgba(…)`) har ingen kontrast i sig. Ny sådan yta ska in
+   i `BAKGRUND` med vad som ligger bakom — annars stoppar bygget.
+2. **Gradient som textfyllning** (`background-clip: text`) mäts som *text*, mot det
+   som ligger bakom elementet, och ska in i `TEXT_PLATTOR`.
+3. **`@keyframes` som animerar `background`** ska in i `KEYFRAME_PLATTOR` med den
+   textfärg som ligger på plattan, eller `None` om ingen gör det. En animation kan
+   sänka kontrasten i en femtedels sekund: `blink-red` blinkade till 2,78:1 medan
+   tiden rann ut, och ingen statisk mätning såg det.
+4. **`REDOVISADE` är användarens lista, inte min.** En mätt yta som medvetet lämnas
+   oförändrad står där med sin kvot — ändras kvoten fälls posten. Skriv aldrig in
+   något där för att bli av med ett larm.
+
+**Sajttiteln `.header h1` står i `REDOVISADE` på 1,75:1** (gradient som textfyllning
+mot mintbakgrunden, kravet för stor text är 3:1). Att mörka ner den ändrar hela
+startsidans uttryck och är ett designbeslut, inte en metadataförbättring — samma
+gräns som `reviewedBy` (§6e) och `license` (punkt 14) drar.
 
 ---
 

@@ -971,9 +971,11 @@ mot arbetskopian. Bara en körning av hela kedjan duger:
 **wire-stegen kan ingen enskild generator kontrollera** — tooltips, referenser,
 syskonlänkar, språkmärkning, identitet, ämne, sidfot och datum läggs på *efter* sidgenereringen, så
 det är först när allt körts i ordning som man ser om de överlever. Därefter kör det `check_links.py` (varje intern länk mot disk),
-`check_rubriker.py` (varje sidas rubrikkedja: en h1, inga hopp) och
+`check_rubriker.py` (varje sidas rubrikkedja: en h1, inga hopp),
+`check_kontrast.py` (WCAG-kvoten på varje färgad yta, i båda teman — se
+SEO_REGLER §7c) och
 `sidodatum.py --check` (varje sidas datum mot git). **Kör det före varje commit
-som rör en generator, ett facit eller en genererad sida.**
+som rör en generator, ett facit, en genererad sida eller en CSS-färg.**
 
 **Spegeln kopierar bara *spårade* filer.** Ett nytt kedjesteg måste vara
 `git add`-at innan `check_generators.py` kan köra det — annars saknas skriptet i

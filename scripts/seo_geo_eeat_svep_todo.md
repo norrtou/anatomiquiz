@@ -13,11 +13,13 @@ drivit isär mellan två register.
 **Punkt 14 utförd i 0.9.278**, plus fyra felaktiga `about`-påståenden som legat i
 märkningen sedan sidorna skrevs.
 **Punkt 15 utförd i 0.9.279**, plus en handskriven datumdubblett i policyns brödtext.
-**Svepet har därmed inga öppna punkter kvar** – 10 och 13 är vilande på användarens beslut.
+**Punkt 13 utförd i 0.9.280 på användarens begäran**, tillsammans med det skydd punkt 10
+saknade – plus elva kontrastbrister i mörkt läge som ingen mätning hade tittat efter.
+**Svepet är därmed helt avslutat: inga öppna punkter, inga vilande punkter.**
 
-> 🔒 **Punkt 10 och 13 är vilande och ska inte tas upp, föreslås eller utföras.** Användaren
-> beslutade 2026-07-25 att inget visuellt ska göras och tar upp dem på eget initiativ.
-> Alla åtgärdade punkter är därmed avklarade; ingenting är öppet.
+> ✅ **Punkt 10 och 13 låg vilande 2026-07-25 – 2026-07-26 och togs upp av användaren själv,
+> vilket var villkoret.** Textstorlekar är fortfarande uttryckligen fredade, se
+> "Medvetet EJ åtgärdat" sist i filen.
 **Skapad:** 2026-07-25. **Underlag:** hela sajten lästes maskinellt – titlar, descriptions,
 canonicals, JSON-LD, rubrikhierarki, tabellmärkning, intern länkning, `llms.txt`, `sitemap.xml`,
 `robots.txt` och CSS-kontraster. Siffrorna nedan är mätta, inte uppskattade.
@@ -150,7 +152,7 @@ utcheckning. Se punkt 5 nedan.
 | ~~9~~ | ~~`lang="la"` på latinska termer~~ | ✅ 0.9.275 | **Hög (WCAG AA)** |
 | ~~11~~ | ~~Syskonlänkar / "Relaterat"-block~~ | ✅ 0.9.277 | Medel |
 | ~~12~~ | ~~Dela `llms.txt` / `llms-full.txt`~~ | ✅ 0.9.276 | **Medel (GEO)** |
-| ~~13~~ | ~~`.glossary-letter`-kontrast i ljust läge~~ | 🔒 **VILANDE** | ta inte upp |
+| ~~13~~ | ~~Kontrast på färgade ytor, båda teman~~ | ✅ 0.9.280 | **Hög (WCAG AA)** |
 | ~~14~~ | ~~`about`/`teaches`/`keywords` i schema~~ | ✅ 0.9.278 | Medel (GEO) |
 | ~~15~~ | ~~`integritet.html` rubrikhopp h1→h3~~ | ✅ 0.9.279 | Låg |
 
@@ -560,24 +562,98 @@ rundtripp och en handredigering kan inte överleva till en commit.
 **Regeln står i SEO_REGLER §9b**, med §11.B och pre-flight-listan i §12 uppdaterade: en ny sida
 läggs i `data/llms.json`, aldrig i textfilerna.
 
-## 13. 🔒 VILANDE – `.glossary-letter`-kontrast i ljust läge
+## 13. ✅ KLAR i 0.9.280 – kontrast på färgade ytor, båda teman
 
-> **Ta inte upp den här punkten.** Användaren beslutade 2026-07-25 att inget visuellt ska
-> göras. Mätningen nedan står kvar som dokumentation; den är inte en åtgärdslista. Se
-> avsnittet "Vilande: punkt 10 och 13" ovan.
+**Beställd av användaren 2026-07-26**, efter att ha legat vilande sedan 2026-07-25.
 
-**Mätt:** vit text på `linear-gradient(#10b981, #34d399)` ger **2,5:1** i den ljusa änden –
-på varje ordlistesidas klistrade bokstavsrubrik. Samma problem i rekordmärkenas ljusa
-gradientände (`.gm-record-badge`, `.matcha-record-badge`, `.leitner-record-badge`,
-`.tidsjakt-record-badge`, `.tidsjakt-record-chip.beaten`, `.tidsjakt-praise.gold`,
-`.leitner-chip`).
+**Mätt efteråt:** **131 mätpunkter i två teman klarar WCAG AA**, mätta av det nya
+`scripts/check_kontrast.py` som räknar kvoten ur CSS:en. Före: **19 ytor under gränsen**,
+varav bara 8 var de som analysen pekade ut. 9 ytor går inte att mäta och har var sin skäl i
+skriptet; 1 är mätt, redovisad och medvetet oförändrad (se nedan).
 
-**Mörkt läge är redan åtgärdat** i 0.9.259 via en egen `[data-theme="dark"]`-regel som håller
-bottnen mörkgrön (5,48:1). Ljust läge lämnades medvetet orört eftersom fixen ändrar den
-visuella designen och inte var beställd.
+**Analysens siffra var för mild: 2,5:1 gällde `--primary`, men den ljusa änden är
+`--primary-light`.** Bokstavsrubriken låg på **1,92:1**, inte 2,5.
 
-Fixen vore att låta gradienten börja på `--primary-deep` (`#047857`) i stället för `--primary`,
-eller lägga en mörkare textskugga. Noterat för användarens skull – inte som ett förslag.
+### Före → efter, värde för värde
+
+| Yta | Tema | Före | Efter |
+|---|---|---|---|
+| `.glossary-letter` (33 sidor, klistrad rubrik) | ljust | `--primary`→`--primary-light`, **1,92** | `--plate-green`→`--plate-green-deep`, **5,48** |
+| `.changelog-version` | ljust | samma gradient, **1,92** | samma fix, **5,48** |
+| `.gm-record-badge`, `.matcha-record-badge`, `.leitner-record-badge`, `.tidsjakt-record-badge`, `.tidsjakt-record-chip.beaten`, `.tidsjakt-praise.gold` | ljust | `--primary`→`--primary-deepest`, **2,54** | `--plate-green`→`--plate-green-deep`, **5,48** |
+| `.leitner-chip` | ljust | `--primary`→`--primary-deep`, **2,54** | samma fix, **5,48** |
+| `.skip-link` | ljust | `--primary`, **2,54** | `--plate-green`, **5,48** |
+| `.answer-btn.correct` | **mörkt** | `--primary-deep` (→`#34d399`), **1,92** | `--plate-green`, **5,48** |
+| `.answer-btn.wrong` | **mörkt** | `--error` (→`#f87171`), **2,77** | `--plate-red`, **4,83** |
+| `.timer.warning` | **mörkt** | `--error`, **2,77** | `--plate-red`, **4,83** |
+| `@keyframes blink-red` 50 % | båda | `#ff6b6b`, **2,78** | `#b91c1c`, **6,47** |
+| `.badge.placeholder` | ljust | `--warning` på gul platta, **1,99** | `--warning-text`, **4,65** |
+| `.btn-cancel:hover` | **mörkt** | hårdkodad `#dc2626`, **3,19** | `--error-border`, **5,45** |
+| `.vt-mode button[aria-pressed]`, `.vt-flikar button[aria-pressed]` | **mörkt** | `--primary-deep`, **1,92** | `--plate-green`, **5,48** |
+| `.vt-tool.is-trana .vt-mode button[aria-pressed]`, `.vt-svarsrad button` | **mörkt** | `--accent-dark` (→`#5eead4`), **1,48** | `--plate-teal`, **5,47** |
+
+**Bara de sex första raderna syns i ljust läge.** Alla mörkt-läge-fixar har *identiskt*
+ljust värde före och efter — `--plate-green` är `#047857`, precis vad `--primary-deep` är i
+ljust läge. Vill man backa hela punkten räcker det att återställa de fyra `--plate-*`-raderna
+och de elva reglerna; ingen struktur och ingen markup har rörts.
+
+### Den verkliga orsaken satt i paletten, inte i de åtta ytorna
+
+Mörkt läge ljusnar `--primary-deep`, `--primary-deepest`, `--accent-dark` och `--error`
+eftersom de är **textfärger** där (`--primary-deep` står som färg på 64 ställen). Varje yta
+som använde dem som **botten** under vit text gick därför sönder i mörkt läge, tyst. Elva av
+de nitton bristerna var av det slaget, och ingen av dem stod i analysen.
+
+Fyra nya variabler i `:root` — `--plate-green`, `--plate-green-deep`, `--plate-teal`,
+`--plate-red` — bär plattor som **inte** växlar med temat. `--btn-primary-from/to` är nu alias
+för de två gröna i stället för egna värden, och **mörkt lägets kopia av dem är borta**: en
+kopia som alltid ska vara lika är en kopia som kan bli olika.
+
+**Ett helt block CSS försvann på köpet.** `[data-theme="dark"]`-regeln som höll de åtta
+gröna ytorna mörka i mörkt läge (0.9.259) behövs inte längre — de bygger nu gradienten av
+plattor som är samma i båda teman. Ytorna ser därmed likadana ut i ljust och mörkt läge, och
+regeln står på ett ställe i stället för två.
+
+### Sajttiteln är mätt, redovisad och ORÖRD
+
+`.header h1` fyller sin text med samma gradient (`background-clip: text`) och ligger på
+**1,75:1** mot mintbakgrunden i ljust läge; kravet för stor text är 3:1. Den står i
+`REDOVISADE` i skriptet med sin kvot, inte i en fixlista: att mörka ner sajtens namn ändrar
+hela startsidans uttryck, och det är ett designbeslut för användaren — samma gräns som
+`reviewedBy` (§6e) och `license` (punkt 14) drar. **Ändras kvoten fälls posten**, så den kan
+inte tystna av sig själv.
+
+### Skyddet — punkt 10 fick sitt på samma gång
+
+[`scripts/check_kontrast.py`](check_kontrast.py) läser `css/*.css`, löser upp `var()` mot
+båda paletterna och räknar WCAG-kvoten på varje regelblock som sätter både `color` och
+`background`. Den mäter tre saker som annars hade fallit mellan stolarna:
+
+- **genomskinliga bottnar** blandas mot den bakdel som står i `BAKGRUND` (handskrivet — vad
+  som ligger bakom en yta går inte att läsa ur regeln, §0.3);
+- **gradient som textfyllning** (`background-clip: text`) mäts som text mot det bakomvarande,
+  via `TEXT_PLATTOR`. Utan det hade sajttiteln sluppit mätningen helt — den sätter aldrig
+  `color`;
+- **`background` inne i `@keyframes`**, via `KEYFRAME_PLATTOR`. Det var där `blink-red` gömde
+  sig: halva blinket låg på 2,78:1, och det är sekunderna innan tiden tar slut.
+
+En yta som varken går att mäta eller står i någon av listorna **stoppar bygget** (§0.4).
+Kontrollen ligger i `check_generators.py`, bredvid `check_links.py` och `check_rubriker.py`.
+
+**Punkt 10 hade ingen kontroll och har nu samma.** `--text-secondary` mäts mot varje yta den
+står på; ändras den tillbaka till `#6b7280` fälls den mot mintbakgrunden igen.
+
+**Skyddet är verifierat med planterade fel, inte genom att kontrollen sagt OK:**
+originalbuggen återinsatt ordagrant, `--plate-green` överskriven i mörkt läge, ny chip med
+genomskinlig botten utan post i `BAKGRUND`, ny `@keyframes` som animerar `background`, ny
+gradient som textfyllning, ändrad kvot på den redovisade ytan, `REDOVISADE`-post vars yta
+tagits bort, hela paletten regredierad och blinket tillbaka på `#ff6b6b` gav **alla** exitkod
+1 med ett besked som säger vad som ska göras — och en orörd utcheckning ger exit 0.
+
+**Kostnad:** inget nytt element, ingen ny klass, ingen ny CSS-regel. **31 kodrader in, 41 ut**
+— netto **−10 rader CSS-kod** (radantalet i filerna växer med 20, som alla är kommentarer).
+Ingen HTML ändrades utöver cachebustern på `styles.css` och `verktyg.css`, alltså inget
+sidinnehåll: **0 sidor omdaterade**, verifierat av `sidodatum.py --check` (§6d).
 
 ## 14. ✅ KLAR i 0.9.278 – `about` / `teaches` / `keywords` i schema
 
@@ -703,10 +779,11 @@ Granskningen efter punkt 4:
 | 7 `DefinedTerm` | ✅ `generate_glossary.py` äger märkningen | `check_generators.py` |
 | 8 sidfot | ✅ `wire_sidfot.py`, stoppar på oklassad ny sida | `check_generators.py` |
 | 9 `lang="la"` | ✅ `wire_lang.py`, stoppar på omärkbar latinkolumn och okänt genus | `check_generators.py` |
-| 10 kontrast | 🔒 vilande — se nedan | — |
+| 10 kontrast | ✅ `check_kontrast.py` — WCAG-kvoten ur CSS:en, båda teman | `check_generators.py` |
 | 11 syskonlänkar | ✅ `wire_relaterat.py`, stoppar på oklassad sida och sprängt tak | `check_generators.py` |
 | 12 agentfilerna | ✅ `generate_llms.py`, stoppar på sida i sitemap som saknas i registret | `check_generators.py` |
 | 14 ämne | ✅ `wire_amne.py`, stoppar på oklassad sida och på påstående som inte står på sidan | `check_generators.py` |
+| 13 färgade ytor | ✅ `check_kontrast.py`, stoppar på omätbar yta och på animerad platta | `check_generators.py` |
 | 15 rubrikkedja | ✅ `check_rubriker.py` — en h1, h1 först, inga hopp; 118 sidor | `check_generators.py` |
 
 Punkt 5:s skydd är verifierat genom att fel planterats, inte genom att kontrollen sagt OK:
@@ -714,8 +791,9 @@ Punkt 5:s skydd är verifierat genom att fel planterats, inte genom att kontroll
 utan JSON-LD-sidnod och sida utan `<main>` gav alla exitkod 1 med ett besked som säger vad som
 ska göras.
 
-**Punkt 10 saknar kontroll, och det förblir så.** En kontrastkontroll (räkna WCAG-kvot ur
-CSS-variablerna) skulle täcka både den och punkt 13, men båda rör hur sajten *ser ut*.
+**Punkt 10 fick sin kontroll i 0.9.280**, tillsammans med punkt 13. Den räknar kvoten ur
+CSS:en i stället för att jämföra mot en lista med värden, och blir därför aldrig inaktuell när
+paletten ändras. Fram till dess var de två de enda punkterna i svepet utan skydd.
 
 **Regeln gällde hela svepet och höll hela vägen:** varje punkt levererade sitt skydd i samma
 pass som åtgärden, aldrig som en efterhandsfråga. Punkt 11 visade varför
@@ -732,18 +810,18 @@ kommat i ett uppslagsord gav alla exitkod 1 med ett besked som säger vad som sk
 
 ---
 
-## 🔒 Vilande: punkt 10 och 13 — visuella ändringar
+## ✅ Avslutat: punkt 10 och 13 — de visuella ändringarna
 
-**Beslut av användaren 2026-07-25: inget visuellt ska göras.** Punkterna står kvar här som
-dokumentation av vad som mätts, ingenting annat.
+**Punkterna låg vilande på användarens beslut 2026-07-25 och togs upp av användaren själv
+2026-07-26**, vilket var villkoret som stod här. Båda är åtgärdade i 0.9.280, och skyddet
+som avsnittet uttryckligen förbjöd att bygga oombett är byggt på beställning.
 
-**De ska inte tas upp, föreslås, påminnas om eller utföras.** Inte i statusrapporter, inte
-som "det finns förresten kvar", inte som ett erbjudande i slutet av ett annat pass. Användaren
-tar upp dem på eget initiativ om och när hen vill. Det gäller även den kontrastkontroll som
-skulle skydda punkt 10 mot återfall — bygg den inte oombedd.
+**Regeln bakom vilandeläget står kvar oförändrad:** det som ändrar sajtens utseende föreslås
+inte, påminns inte om och byggs inte oombett. Användaren tar upp det på eget initiativ.
+Sajttiteln `.header h1` är exemplet i det här passet — mätt på 1,75:1, redovisad i skriptet
+och orörd, eftersom att mörka ner sajtens namn är ett designbeslut.
 
-Detsamma gäller allt annat som ändrar sajtens utseende: textstorlekar är sedan tidigare
-uttryckligen fredade (se "Medvetet EJ åtgärdat" nedan).
+Textstorlekar är sedan tidigare uttryckligen fredade (se "Medvetet EJ åtgärdat" nedan).
 
 ---
 

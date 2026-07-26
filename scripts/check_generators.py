@@ -18,9 +18,10 @@ Ingen enskild generator kan göra det. `generate_glossary.py` hade ett eget
 `--check` fram till 0.9.270; det jämförde generatorns rena utdata mot filer som
 senare steg skrivit i, och kunde därför aldrig lysa grönt igen efter 0.9.267.
 
-Efter rundtrippen körs tre kontroller mot arbetskatalogen: `check_links.py`
+Efter rundtrippen körs fyra kontroller mot arbetskatalogen: `check_links.py`
 (varje intern länk mot disk), `check_rubriker.py` (varje sidas rubrikkedja utan
-hopp) och `sidodatum.py --check` (varje sidas datum mot git). Den sista kan inte
+hopp), `check_kontrast.py` (WCAG-kvoten på varje färgad yta, i båda teman) och
+`sidodatum.py --check` (varje sidas datum mot git). Den sista kan inte
 ligga i KEDJA – spegeln är en naken filkopia utan `.git`.
 
 Testet läser arbetskopian, inte HEAD – oincheckade ändringar räknas med.
@@ -129,8 +130,14 @@ def main(argv):
         # sidas rubrikkedja går h1 → h2 → h3 utan hopp. Felet syns inte —
         # `.info-subheading` gav `integritet.html` samma utseende på h3 som på
         # h2 — så bara något som körs kan hitta det.
+        #
+        # check_kontrast.py mäter WCAG-kvoten på varje yta som sätter både
+        # textfärg och bakgrund, i båda teman. Den läser CSS:en, inte en lista
+        # med värden, så den kan inte bli inaktuell när paletten ändras. Felet
+        # den finns för att fånga syns inte alls: vit text på #34d399 ser prydlig
+        # ut i en skärmdump och ger 1,92:1.
         for kontroll in ("scripts/check_links.py", "scripts/check_rubriker.py",
-                         "scripts/sidodatum.py"):
+                         "scripts/check_kontrast.py", "scripts/sidodatum.py"):
             argv = [kontroll] + (["--check"] if "sidodatum" in kontroll else [])
             kod = subprocess.run([sys.executable] + argv, cwd=ROOT).returncode
             if kod != 0:

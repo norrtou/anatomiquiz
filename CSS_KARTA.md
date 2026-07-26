@@ -47,6 +47,30 @@ trots att clamp-regeln fanns. Fixat genom att slå ihop till **en** basregel som
 **före** `@media (max-width: 640px)`-blocket. Duplicera aldrig hela selektorblock –
 lägg till egenskaper i den befintliga regeln.
 
+## ⚠️ Vit text på färgad botten – använd en `--plate-*`, aldrig `--primary-deep`
+
+De gröna, teal- och röda palettvariablerna är **textfärger** i mörkt läge och ljusnar
+därför där: `--primary-deep` är `#047857` i ljust läge men `#34d399` i mörkt. En yta
+som använder dem som **botten** under vit text ser rätt ut i ljust läge och ger 1,92:1
+i mörkt, utan att något syns i en skärmdump.
+
+| Behov | Variabel | Vit text |
+|---|---|---|
+| Grön botten | `--plate-green` (`#047857`) | 5,48:1 |
+| Mörkare gröna änden i en gradient | `--plate-green-deep` (`#065f46`) | 7,68:1 |
+| Teal botten | `--plate-teal` (`#0f766e`) | 5,47:1 |
+| Röd botten | `--plate-red` (`#dc2626`) | 4,83:1 |
+
+Plattorna står **bara** i `:root` och överskrivs aldrig i `[data-theme="dark"]` – det
+är det som gör dem säkra. `--btn-primary-from/to` är alias för de två gröna; lägg inte
+till en femte variabel med samma värde, det blir två sanningar att hålla i synk.
+
+**Kontrollen körs, den bedöms inte:** `python3 scripts/check_kontrast.py` mäter varje
+yta som sätter både `color` och `background` i båda teman, plus gradienter som är
+textfyllning (`background-clip: text`) och bakgrunder inne i `@keyframes`. Den ingår i
+`check_generators.py`. Regeln med alla fyra följdregler står i
+[`SEO_REGLER.md` §7c](SEO_REGLER.md).
+
 ## ⚠️ `.hidden` är INTE en global utility – döljer bara vissa element
 
 Det finns **ingen** global `.hidden { display: none }` i projektet. `.hidden` fungerar

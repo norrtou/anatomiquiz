@@ -55,11 +55,26 @@
                                    genomskinlig bakgrund och behöver ljus botten
                                    i BÅDA lägena, annars försvinner de. */
 
-  /* Primärknappens gradient. Egen variabel eftersom --primary-deep i mörkt läge
-     måste bli LJUS (den är textfärg på 64 ställen), medan knappen fortsatt ska
-     ha vit text på mörkgrön botten. */
-  --btn-primary-from: #047857;
-  --btn-primary-to: #065f46;
+  /* PLATTOR SOM BÄR VIT TEXT — samma värden i BÅDA teman.
+
+     De gröna, teal- och röda tonerna ljusnar i mörkt läge eftersom de där är
+     TEXTfärger (--primary-deep står som färg på 64 ställen). En yta som använder
+     dem som BOTTEN under vit text går därför sönder i mörkt läge utan att någon
+     ser det: vit på #34d399 ger 1,92:1. Plattorna nedan står utanför den
+     växlingen och klarar WCAG AA i båda lägena.
+
+     Vit text mot varje platta: 5,48 / 7,68 / 5,47 / 4,83:1. Ändras ett värde
+     larmar scripts/check_kontrast.py. Överskriv dem ALDRIG i mörkt läge — det är
+     hela poängen med att de är egna variabler. */
+  --plate-green: #047857;       /* Grön botten under vit text */
+  --plate-green-deep: #065f46;  /* Mörkare gröna änden i gradienter */
+  --plate-teal: #0f766e;        /* Teal botten (verktygens träningsläge) */
+  --plate-red: #dc2626;         /* Röd botten (fel svar, tidsvarning) */
+
+  /* Primärknappens gradient är samma platta – ett värde, två namn hade blivit
+     två sanningar att hålla i synk. */
+  --btn-primary-from: var(--plate-green);
+  --btn-primary-to: var(--plate-green-deep);
   --btn-primary-to-hover: #064e3b;
 
   /* Spacing & sizing */
@@ -132,10 +147,10 @@
      teckning på transparent botten – mot en mörk platta försvinner de helt. */
   --image-plate: #eef2f0;
 
-  /* Knappen behåller mörkgrön botten så att den vita texten klarar AA (5,48:1). */
-  --btn-primary-from: #047857;
-  --btn-primary-to: #065f46;
-  --btn-primary-to-hover: #064e3b;
+  /* --plate-* och --btn-primary-* överskrivs INTE här. De ärvs oförändrade från
+     :root, vilket är vad som håller vit text läsbar i båda teman. Fram till
+     0.9.280 stod --btn-primary-* med identiska värden även här; en kopia som
+     alltid ska vara lika är en kopia som kan bli olika. */
 
   /* Skuggor blir svarta i stället för gröna – en grön glöd mot mörk botten
      läses som ett ljussken, inte som djup. */
@@ -144,25 +159,14 @@
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.55);
 }
 
-/* Ytor som bär VIT text på grön gradient. De bygger gradienten av --primary och
-   --primary-deepest, som båda ljusnar i mörkt läge – vit text på #34d399 ger
-   2,2:1 och blir oläslig. Här hålls bottnen mörkgrön, vilket ger 5,48:1.
-   Ljust läge rörs inte: reglerna står kvar oförändrade ovan och gäller där. */
-:root[data-theme="dark"] .glossary-letter,
-:root[data-theme="dark"] .changelog-version,
-:root[data-theme="dark"] .gm-record-badge,
-:root[data-theme="dark"] .matcha-record-badge,
-:root[data-theme="dark"] .leitner-record-badge,
-:root[data-theme="dark"] .tidsjakt-record-badge,
-:root[data-theme="dark"] .tidsjakt-record-chip.beaten,
-:root[data-theme="dark"] .tidsjakt-praise.gold {
-  background: linear-gradient(135deg, var(--btn-primary-from) 0%, var(--btn-primary-to) 100%);
-}
+/* De åtta ytor som bär VIT text på grön gradient hade ett eget mörkt-läge-block
+   här fram till 0.9.280. Det behövs inte längre: reglerna bygger gradienten av
+   --plate-green/--plate-green-deep, som är samma i båda teman. Ytorna ser
+   därmed likadana ut i ljust och mörkt läge, och regeln står på ett ställe.
 
-/* Leitner-brickan ligger BAKOM cellerna och är det som gör den aktiva lådans
-   text vit (se .leitner-box.active). Samma resonemang som ovan. */
+   Leitner-brickan behåller sin mörka skugga – en grön glöd mot mörk botten
+   läses som ett ljussken, inte som djup. */
 :root[data-theme="dark"] .leitner-chip {
-  background: linear-gradient(135deg, var(--btn-primary-from) 0%, var(--btn-primary-to) 100%);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
 }
 
@@ -208,7 +212,9 @@ main {
   width: 1px;
   height: 1px;
   overflow: hidden;
-  background: var(--primary);
+  /* Plattan, inte --primary: vit text på #10b981 ger 2,54:1, och en hoppa-till-
+     innehållet-länk som inte går att läsa är sämre än ingen alls. */
+  background: var(--plate-green);
   color: var(--text-light);
 }
 
@@ -698,8 +704,10 @@ select:focus-visible {
 
 .btn-cancel:hover:not(:disabled) {
   background: rgba(239, 68, 68, 0.05);
-  border-color: #dc2626;
-  color: #dc2626;
+  /* Hårdkodad #dc2626 gav 3,19:1 mot mörkt lägets yta. --error-border är samma
+     röd i ljust läge och ljusnar där den behöver: 4,83 → 5,45:1. */
+  border-color: var(--error-border);
+  color: var(--error-border);
 }
 
 /* ============================================================================
@@ -1114,8 +1122,10 @@ body:has(#quiz:not(.hidden)) {
 
 /* Correct answer styling - mörk smaragd, vit text klarar WCAG AA */
 .answer-btn.correct {
-  background: var(--primary-deep);
-  border-color: var(--primary-deep);
+  /* Plattan, inte --primary-deep: den variabeln är textfärg i mörkt läge och
+     ljusnar till #34d399, vilket gav vit text 1,92:1 på det RÄTTA svaret. */
+  background: var(--plate-green);
+  border-color: var(--plate-green);
   color: white;
   box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
   animation: slideInCorrect 0.4s ease-out;
@@ -1135,8 +1145,9 @@ body:has(#quiz:not(.hidden)) {
 
 /* Wrong answer styling - PURE RED */
 .answer-btn.wrong {
-  background: var(--error);
-  border-color: var(--error);
+  /* Samma sak som .correct: --error ljusnar till #f87171 i mörkt läge (2,77:1). */
+  background: var(--plate-red);
+  border-color: var(--plate-red);
   color: white;
   box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
   animation: shake 0.4s ease-out;
@@ -1206,15 +1217,18 @@ body:has(#quiz:not(.hidden)) {
 /* Timer warning state - red when running out */
 .timer.warning {
   color: white;
-  background-color: var(--error);
+  background-color: var(--plate-red);
   padding: 4px 8px;
   border-radius: 4px;
   animation: blink-red 0.5s infinite;
 }
 
+/* Blinket går MÖRKARE, inte ljusare. Den gamla ljusa änden #ff6b6b gav vit text
+   2,78:1 – halva blinket var alltså oläsligt, och det är sekunderna innan tiden
+   tar slut. Nu 4,83 → 6,47:1; pulsen syns lika bra på opaciteten. */
 @keyframes blink-red {
-  0%, 100% { background-color: var(--error); opacity: 1; }
-  50% { background-color: #ff6b6b; opacity: 0.8; }
+  0%, 100% { background-color: var(--plate-red); opacity: 1; }
+  50% { background-color: #b91c1c; opacity: 0.8; }
 }
 
 /* ============================================================================
@@ -1277,7 +1291,9 @@ body:has(#quiz:not(.hidden)) {
 
 .badge.placeholder {
   background: rgba(245, 158, 11, 0.1);
-  color: var(--warning);
+  /* --warning är plattans egen ton (#f59e0b) och gav 1,99:1 som text på den.
+     --warning-text finns just för text på gul botten: 4,65:1. */
+  color: var(--warning-text);
 }
 
 /* ============================================================================
@@ -1924,7 +1940,7 @@ body:has(#quiz:not(.hidden)) {
 }
 
 .changelog-version {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  background: linear-gradient(135deg, var(--plate-green) 0%, var(--plate-green-deep) 100%);
   color: #ffffff;
   padding: 8px 16px;
   font-weight: 700;
@@ -1979,7 +1995,7 @@ body:has(#quiz:not(.hidden)) {
 /* h3-rubrik per bokstav — nollställ rubrikens UA-marginal */
 .glossary-letter {
   margin: 0;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  background: linear-gradient(135deg, var(--plate-green) 0%, var(--plate-green-deep) 100%);
   color: white;
   font-weight: 700;
   font-size: 0.9rem;
@@ -2266,7 +2282,7 @@ ol li {
   margin: 0 0 6px;
   padding: 5px 14px;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-deepest) 100%);
+  background: linear-gradient(135deg, var(--plate-green) 0%, var(--plate-green-deep) 100%);
   color: #fff;
   font-weight: 700;
   font-size: 0.88rem;
@@ -2613,7 +2629,7 @@ ol li {
   margin: 0 0 14px;
   padding: 5px 14px;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-deepest) 100%);
+  background: linear-gradient(135deg, var(--plate-green) 0%, var(--plate-green-deep) 100%);
   color: #fff;
   font-weight: 700;
   font-size: 0.88rem;
@@ -2903,7 +2919,7 @@ ol li {
   left: 0;
   transform: translateX(calc(var(--lb-pos, 0) * (100% + var(--lb-gap))));
   border-radius: var(--radius-sm);
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-deep) 100%);
+  background: linear-gradient(135deg, var(--plate-green) 0%, var(--plate-green-deep) 100%);
   box-shadow: 0 3px 8px rgba(4, 120, 87, 0.35);
   transition: transform 0.45s cubic-bezier(0.34, 1.4, 0.64, 1);
 }
@@ -3061,7 +3077,7 @@ ol li {
   margin: 0 0 14px;
   padding: 5px 14px;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-deepest) 100%);
+  background: linear-gradient(135deg, var(--plate-green) 0%, var(--plate-green-deep) 100%);
   color: #fff;
   font-weight: 700;
   font-size: 0.88rem;
@@ -3316,7 +3332,7 @@ ol li {
 }
 .tidsjakt-record-chip.beaten {
   color: #fff;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-deepest) 100%);
+  background: linear-gradient(135deg, var(--plate-green) 0%, var(--plate-green-deep) 100%);
   border-style: solid;
   border-color: transparent;
 }
@@ -3349,7 +3365,7 @@ ol li {
 }
 .tidsjakt-praise.gold {
   color: #fff;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-deepest) 100%);
+  background: linear-gradient(135deg, var(--plate-green) 0%, var(--plate-green-deep) 100%);
   border-color: transparent;
 }
 .tidsjakt-praise.in { animation: tidsjaktPraiseIn 0.4s ease; }
@@ -3545,7 +3561,7 @@ ol li {
   margin: 0 0 14px;
   padding: 5px 14px;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-deepest) 100%);
+  background: linear-gradient(135deg, var(--plate-green) 0%, var(--plate-green-deep) 100%);
   color: #fff;
   font-weight: 700;
   font-size: 0.88rem;
