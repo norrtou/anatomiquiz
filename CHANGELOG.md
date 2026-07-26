@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.292
+- **Ny undertext på NEWS2-sidan.** "Se poängen växa fram, en parameter i taget" är utbytt mot **"Vad mätvärdena betyder och varför NEWS2 väger dem olika"**. Den gamla sålde interaktionen som ett poängsamlande; NEWS2 mäter hur nära en patient är att försämras, och undertexten ska säga vad sidan lär ut, inte hur roligt det är att fylla i den.
+- Den nya texten beskriver dessutom det sidan faktiskt består av — avsnitten "Vad betyder variablerna?" och "Varför just de här variablerna?" — i stället för räknaren som redan syns.
+
 ## 0.9.291
 - **Facebook-adressen är nu `facebook.com/anatomiquizse`.** Sidan har fått ett användarnamn, så id-adressen `/people/Anatomiquizse/61592224814069/` är utbytt på båda ställena — den synliga ikonen och `sameAs` i JSON-LD. Adressen hänger inte längre på ett numeriskt id och är därför stabil även om profilens namn ändras.
 - Tredje och sista bytet av samma länk (delningslänk → id-adress → användarnamn). Att den bytts tre gånger på fyra versioner är hela poängen med att den bara står på **två** ställen i kodbasen: en sökning, två träffar, inget spritt över sajten som kan hamna efter.
