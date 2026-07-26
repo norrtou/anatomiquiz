@@ -131,13 +131,16 @@ a.glossary-alpha:focus-visible {
   scroll-margin-top: 8px;
 }
 
-/* "Topp"-länk i varje bokstavsrubrik — diskret, på den gröna rubrikytan */
+/* "Topp"-länk i varje bokstavsrubrik — diskret, på den gröna rubrikytan.
+   Diskretionen ligger i storleken och vikten, inte i genomskinligheten:
+   0,85 gav 4,43:1 mot plattan, alltså strax under AA. 0,92 ger 4,90 och syns
+   inte som en annan grad av dämpning. */
 .glossary-top {
   flex-shrink: 0;
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.92);
   text-decoration: none;
   white-space: nowrap;
 }

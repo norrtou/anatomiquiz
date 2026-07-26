@@ -67,8 +67,9 @@ till en femte variabel med samma värde, det blir två sanningar att hålla i sy
 
 **Kontrollen körs, den bedöms inte:** `python3 scripts/check_kontrast.py` mäter varje
 yta som sätter både `color` och `background` i båda teman, plus gradienter som är
-textfyllning (`background-clip: text`) och bakgrunder inne i `@keyframes`. Den ingår i
-`check_generators.py`. Regeln med alla fyra följdregler står i
+textfyllning (`background-clip: text`), dämpad text vars botten sitter i en annan regel och
+bakgrunder inne i `@keyframes`. Den ingår i
+`check_generators.py`. Regeln med alla fem följdregler står i
 [`SEO_REGLER.md` §7c](SEO_REGLER.md).
 
 ## ⚠️ `.hidden` är INTE en global utility – döljer bara vissa element

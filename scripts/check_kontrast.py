@@ -26,6 +26,11 @@ Ytan mäts **två gånger**, en gång per tema. I mörkt läge läggs eventuella
 så paletten faktiskt fungerar, och utan det hade kontrollen larmat om ytor som
 mörkt läge redan lagat.
 
+Fyra former mäts som annars hade sluppit undan: genomskinliga bottnar,
+halvgenomskinlig text vars botten sitter i en annan regel (`ÄRVD_BOTTEN`),
+gradient som textfyllning (`TEXT_PLATTOR`) och bakgrunder inne i `@keyframes`
+(`KEYFRAME_PLATTOR`).
+
 ## Genomskinliga ytor
 
 En bakgrund med alfa (`rgba(16, 185, 129, 0.12)`) har ingen kontrast i sig —
@@ -106,6 +111,16 @@ OMÄTBARA = {
     ".glossary-results .glossary-def mark.glossary-hit":
         "color: inherit och color-mix() — sökträffens ton beräknas av "
         "webbläsaren och går inte att räkna ut här.",
+}
+
+# Text med alfa som ligger på en ANNAN regels botten. En halvgenomskinlig
+# textfärg utan egen bakgrund i samma block har ingen mätbar kontrast förrän man
+# vet vilken yta den ligger på — och den ytan står i en annan regel. Nyckeln är
+# elementets selektor, värdet den selektor vars bakgrund den vilar på.
+# `.glossary-top` satt på 4,43:1 (0,85 vitt mot plattan) och slank igenom hela
+# mätningen i 0.9.280 just för att den inte sätter någon egen bakgrund.
+ÄRVD_BOTTEN = {
+    ".glossary-top": ".glossary-letter",
 }
 
 # Gradient som TEXTFYLLNING (`background-clip: text`). Där är gradienten
@@ -273,6 +288,43 @@ def ytor(alla):
             if "color" in b[3] and ("background" in b[3] or "background-color" in b[3])]
 
 
+def ärvda_ytor(alla):
+    """Block med halvgenomskinlig text utan egen bakgrund → yta mot förälderns.
+
+    Utan det här steget mäts de inte alls: `mät()` kräver en bakgrund i samma
+    block. Ett sådant block är antingen registrerat i `ÄRVD_BOTTEN` eller ett
+    fel — en dämpad textfärg är alltid dämpad *mot något*.
+    """
+    ut, okända = [], []
+    bakgrunder = {}
+    for _fil, sel, _media, d in alla:
+        for del_ in sel.split(","):
+            if "background" in d or "background-color" in d:
+                bakgrunder.setdefault(del_.strip(),
+                                      d.get("background", d.get("background-color")))
+    for fil, sel, media, d in alla:
+        if "color" not in d or "background" in d or "background-color" in d:
+            continue
+        if not re.search(r"rgba\([^)]*,\s*0?\.\d+\s*\)|#[0-9a-fA-F]{4}\b(?!\w)"
+                         r"|#[0-9a-fA-F]{8}\b", d["color"]):
+            continue
+        for del_ in sel.split(","):
+            del_ = del_.strip()
+            förälder = ÄRVD_BOTTEN.get(del_)
+            if förälder is None:
+                okända.append((del_, "genomskinlig textfärg utan egen bakgrund och "
+                                     "utan post i ÄRVD_BOTTEN"))
+                continue
+            if förälder not in bakgrunder:
+                okända.append((del_, f"ÄRVD_BOTTEN pekar på {förälder}, som inte "
+                                     f"sätter någon bakgrund"))
+                continue
+            syntetisk = dict(d)
+            syntetisk["background"] = bakgrunder[förälder]
+            ut.append((fil, del_, media, syntetisk))
+    return ut, okända
+
+
 def textplattor(text):
     """Gradient som textfyllning → yta där gradienten är TEXTEN, bottnen bakdelen.
 
@@ -418,9 +470,10 @@ def main(argv):
     redovisade, kvarglömda = [], dict(REDOVISADE)
 
     text_ytor, okända_text = textplattor(text)
-    okända += okända_text
+    ärvda, okända_ärvda = ärvda_ytor(alla)
+    okända += okända_text + okända_ärvda
 
-    for fil, selektor, media, dekl in ytor(alla) + text_ytor:
+    for fil, selektor, media, dekl in ytor(alla) + text_ytor + ärvda:
         for del_ in selektor.split(","):
             del_ = del_.strip()
             if not del_ or del_.startswith("@"):
@@ -485,8 +538,8 @@ def main(argv):
 
     if okända:
         print(f"FEL: {len(okända)} yta/ytor går inte att mäta och står inte i "
-              f"BAKGRUND, OMÄTBARA, TEXT_PLATTOR eller KEYFRAME_PLATTOR i "
-              f"scripts/check_kontrast.py:", file=sys.stderr)
+              f"BAKGRUND, ÄRVD_BOTTEN, OMÄTBARA, TEXT_PLATTOR eller "
+              f"KEYFRAME_PLATTOR i scripts/check_kontrast.py:", file=sys.stderr)
         for sel, skäl in okända:
             print(f"  {sel}: {skäl}", file=sys.stderr)
         print("\nSkriv in vad som ligger bakom ytan eller varför den inte går att "

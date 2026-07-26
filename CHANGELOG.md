@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.281
+- **"Topp"-länken i ordlistans bokstavsrubrik låg på 4,43:1 — precis under gränsen, och 0.9.280:s mätning såg den inte.** Den satt på `rgba(255,255,255,0.85)`, alltså dämpad vit text, och plattan under den kommer från en **annan** CSS-regel (`.glossary-letter`). Kontrollen kräver textfärg och bakgrund i samma block, så länken mättes aldrig — den fick 4,43 i stället för AA:s 4,5 på 33 sidor. Nu `0.92` och **4,90:1**. Diskretionen ligger i storleken och vikten, inte i genomskinligheten, så skillnaden syns inte.
+- **Hålet i mätningen är tätat, inte bara värdet ändrat.** `ÄRVD_BOTTEN` i `scripts/check_kontrast.py` säger vilken ytas bakgrund en dämpad textfärg vilar på, och **en halvgenomskinlig textfärg utan egen bakgrund och utan post i listan stoppar bygget** — en dämpad färg är alltid dämpad *mot något*. Det var sajtens enda sådana fall; nu mäts det, i båda teman.
+- **Verifierat med planterade fel:** länken tillbaka på `0.85`, en ny dämpad textfärg utan egen botten, och en post som pekar på en regel som inte sätter någon bakgrund gav alla exitkod 1. Kontrollen ligger på **133 mätpunkter** i två teman.
+- `SEO_REGLER.md` §7c har fått den femte följdregeln; `CSS_KARTA.md` nämner formen.
+
 ## 0.9.280
 - **Nitton färgade ytor låg under WCAG AA — nu klarar 131 mätpunkter gränsen i båda teman.** Punkt 13 i SEO-svepet, beställd av användaren efter att ha legat vilande. Ordlistans klistrade bokstavsrubrik bar vit text på den ljusa änden av en grön gradient: **1,92:1** på 33 sidor, där gränsen är 4,5. Samma mönster i rekordmärkena, Leitner-brickan, versionsrubriken och skip-länken. Alla ligger nu på **5,48:1**.
 - **Analysen hade underskattat felet, och pekat ut mindre än hälften av det.** Den mätte 2,5:1 på `--primary`, men den ljusa änden är `--primary-light` — alltså 1,92. Och av de nitton bristerna gällde **elva mörkt läge**, som ingen hade tittat efter: rätt-svar-knappen (`.answer-btn.correct`) låg på **1,92:1**, fel-svar-knappen och tidsvarningen på 2,77, och fyra ytor i läkemedelsräknaren på 1,48–1,92.

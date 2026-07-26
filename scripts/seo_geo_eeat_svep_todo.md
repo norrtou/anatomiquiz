@@ -650,6 +650,24 @@ gradient som textfyllning, ändrad kvot på den redovisade ytan, `REDOVISADE`-po
 tagits bort, hela paletten regredierad och blinket tillbaka på `#ff6b6b` gav **alla** exitkod
 1 med ett besked som säger vad som ska göras — och en orörd utcheckning ger exit 0.
 
+### Efterskott i 0.9.281 – ett fall som mätningen själv missade
+
+**"Topp"-länken i bokstavsrubriken (`.glossary-top`) låg på 4,43:1** och syntes inte i
+0.9.280:s mätning. Den bär dämpad vit text (`rgba(255,255,255,0.85)`) men **ingen egen
+bakgrund** — plattan kommer från `.glossary-letter`, en annan regel — och kontrollen krävde
+båda i samma block. Före punkt 13 låg den på 2,19:1, så fixen lyfte den; men 4,43 är under
+4,5. Nu `0.92` → **4,90:1**.
+
+`ÄRVD_BOTTEN` i skriptet anger vilken ytas botten en dämpad textfärg vilar på, och **en
+halvgenomskinlig textfärg utan egen bakgrund och utan post i listan stoppar bygget**. Sajtens
+enda sådana fall, nu mätt. Verifierat med planterade fel: värdet tillbaka på 0,85, ny dämpad
+textfärg utan botten, och en post som pekar på en regel utan bakgrund gav alla exit 1.
+Kontrollen ligger på **133 mätpunkter**.
+
+**Lärdomen är §0.2 igen:** feltypen hade fler ytformer än den som råkade beskrivas först. Fyra
+former mäts nu utöver den vanliga — genomskinlig botten, ärvd botten, textfyllning och
+animerad platta — och var och en av dem hittades genom att mäta, inte genom att läsa.
+
 **Kostnad:** inget nytt element, ingen ny klass, ingen ny CSS-regel. **31 kodrader in, 41 ut**
 — netto **−10 rader CSS-kod** (radantalet i filerna växer med 20, som alla är kommentarer).
 Ingen HTML ändrades utöver cachebustern på `styles.css` och `verktyg.css`, alltså inget

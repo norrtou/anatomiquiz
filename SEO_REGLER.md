@@ -867,7 +867,7 @@ någon ser det — det var felet i `.answer-btn.correct` (rätt svar, 1,92:1),
 `.answer-btn.wrong`, `.timer.warning` och fyra ytor i `verktyg.css`.
 **`--plate-*` överskrivs aldrig i `[data-theme="dark"]`.** Det är hela poängen.
 
-**Fyra regler som följer av kontrollens byggnad:**
+**Fem regler som följer av kontrollens byggnad:**
 
 1. **Genomskinlig botten** (`rgba(…)`) har ingen kontrast i sig. Ny sådan yta ska in
    i `BAKGRUND` med vad som ligger bakom — annars stoppar bygget.
@@ -877,7 +877,11 @@ någon ser det — det var felet i `.answer-btn.correct` (rätt svar, 1,92:1),
    textfärg som ligger på plattan, eller `None` om ingen gör det. En animation kan
    sänka kontrasten i en femtedels sekund: `blink-red` blinkade till 2,78:1 medan
    tiden rann ut, och ingen statisk mätning såg det.
-4. **`REDOVISADE` är användarens lista, inte min.** En mätt yta som medvetet lämnas
+4. **Dämpad text utan egen bakgrund** (`color: rgba(255,255,255,0.85)`) mäts mot den
+   yta den *ligger* på, angiven i `ÄRVD_BOTTEN`. En dämpad textfärg är alltid dämpad
+   mot något, och just den formen slank igenom hela mätningen i 0.9.280:
+   `.glossary-top` ("Topp"-länken i bokstavsrubriken) låg på 4,43:1.
+5. **`REDOVISADE` är användarens lista, inte min.** En mätt yta som medvetet lämnas
    oförändrad står där med sin kvot — ändras kvoten fälls posten. Skriv aldrig in
    något där för att bli av med ett larm.
 
