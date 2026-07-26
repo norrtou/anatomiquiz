@@ -60,6 +60,11 @@ KEDJA = [
     ["scripts/wire_identity.py", "--all"],
     ["scripts/wire_sidfot.py", "--all"],
     ["scripts/wire_dates.py", "--all"],
+    # Sist: llms.txt och llms-full.txt beskriver sajten och behöver se den
+    # färdig. Steget kontrollerar dessutom att varje <loc> i sitemap.xml står i
+    # data/llms.json — en ny sida som aldrig kom in i indexfilen stoppar bygget
+    # i stället för att tyst utebli (§0.4).
+    ["scripts/generate_llms.py"],
 ]
 
 

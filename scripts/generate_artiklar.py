@@ -644,45 +644,6 @@ def sitemap_urls(reg: dict) -> list[str]:
     return urls
 
 
-def llms_rader(reg: dict) -> list[str]:
-    """Rader till llms.txt-sektionen (SEO_REGLER §11.B).
-
-    Artikelraderna använder fältet "llms" – en utförlig innehållsbeskrivning –
-    inte "poang". Poängen är artikelns tes och räcker inte för att en
-    språkmodell ska förstå vad sidan faktiskt täcker.
-    """
-    rader = [
-        f"- [Alla artiklar]({SITE}/kunskapsbank/artiklar/): Platt index över "
-        "kunskapsbankens samtliga artiklar, grupperade efter ämnesområde med "
-        "artikeltyp och målgrupp angiven."
-    ]
-    for h in sorted(reg["hubbar"], key=lambda x: x["ordning"]):
-        if not artiklar_i_hubb(reg, h["slug"]):
-            continue
-        titel_ren = h["titel"].replace("&amp;", "&")
-        rader.append(
-            f"- [{titel_ren} (ämneshubb)]({SITE}/kunskapsbank/artiklar/{h['slug']}.html): "
-            f"{h['beskrivning']}"
-        )
-    for h in sorted(reg["hubbar"], key=lambda x: x["ordning"]):
-        for a in artiklar_i_hubb(reg, h["slug"]):
-            rader.append(f"- [{a['titel']}]({SITE}{artikel_url(a)}): {a['llms']}")
-    return rader
-
-
-def llms_rader_pelare(reg: dict, pelarslug: str) -> list[str]:
-    """Rader till den llms.txt-sektion som pelaren redan har.
-
-    Pelarartiklar hör inte hemma under rubriken Faktatexter – de hänger under
-    sin pelare (§1.5), och llms.txt ska spegla sajtens faktiska struktur.
-    llms.txt underhålls för hand; det här är raderna att klistra in.
-    """
-    return [
-        f"- [{a['titel']}]({SITE}{artikel_url(a)}): {a['llms']}"
-        for a in artiklar_i_pelare(reg, pelarslug)
-    ]
-
-
 # ---------------------------------------------------------------------------
 
 def main() -> int:
@@ -721,7 +682,9 @@ def main() -> int:
             print(f"  · {t.replace('&amp;', '&')}")
 
     print("\nPåminnelse (SEO_REGLER §11.B): sitemap.xml regenereras av "
-          "generate_glossary.py – kör den efteråt. llms.txt uppdateras för hand.")
+          "generate_glossary.py – kör den efteråt, och därefter generate_llms.py "
+          "(artikelns rad i llms.txt/llms-full.txt kommer ur fältet 'llms' här "
+          "plus 'kort' i data/llms.json).")
     # Generatorn skriver ren HTML utan tooltips (SEO_REGLER §6c). Utan det här
     # steget tappar de genererade sidorna sina kb-term-länkar vid varje körning.
     print("Kör därefter: python3 scripts/wire_terms.py --all "

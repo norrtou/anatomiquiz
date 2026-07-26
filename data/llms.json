@@ -1,0 +1,1055 @@
+{
+  "_kommentar": "Registret bakom llms.txt och llms-full.txt. En post per sida: 'kort' hamnar i llms.txt, 'lang' i llms-full.txt. Artiklarnas 'lang' står i data/artiklar.json (fältet llms) och upprepas inte här. Skrivs aldrig i filerna direkt — kör scripts/generate_llms.py.",
+  "titel": "Anatomiquiz",
+  "sammanfattning": "Gratis interaktivt quiz på svenska för dig som pluggar anatomi och medicinsk terminologi. Träna skelett, muskler, leder, neurologi och blodomloppet med flervalsfrågor, sant/falskt och flashcards – samt slå upp begrepp i en stor medicinsk ordlista. Materialet riktar sig till studenter inom vård och medicin (arbetsterapeut, fysioterapeut, sjuksköterska, läkare, medicinsk sekreterare) och är mest utbyggt inom arbetsterapi.",
+  "ingress": "Allt material är på svenska. Sajten är en statisk webbapp utan inloggning eller kostnad; resultat sparas lokalt i webbläsaren.",
+  "sektioner": [
+    {
+      "rubrik": "Öva",
+      "poster": [
+        {
+          "lankar": [
+            {
+              "titel": "Quiz och flashcards",
+              "url": "/"
+            }
+          ],
+          "kort": "Starta quiz (flerval eller sant/falskt) eller flashcards. Välj utbildning, ämne och antal frågor.",
+          "lang": "Starta quiz (flerval/sant–falskt) eller flashcards. Välj utbildning, ämne, antal frågor och svårighetsgrad."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Spellägen och studieteknik",
+              "url": "/spellagen.html"
+            }
+          ],
+          "kort": "Alla studieformer i appen – quiz, flashcards, Matcha, Leitner Light och Tidsjakt – med regler, forskningsstöd och studietips.",
+          "lang": "Genomgång av alla studieformer i appen – quiz (flerval/sant–falskt), flashcards, Matcha (parspel), Leitner Light (spaced repetition med fem lådor, 1–2–4–8–16 dagar) och Tidsjakt (60 sekunder mot klockan). Reglerna för varje läge, vilket läge som passar vilken situation, planerade lägen, forskningsstödet för aktiv återhämtning (testeffekten) och utspridd repetition, kort historik från 1939 och framåt, beprövade studietips samt FAQ."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Exempel med case",
+              "url": "/case.html"
+            }
+          ],
+          "kort": "Patientnära fallbeskrivningar med källförankrade begrepp.",
+          "lang": "Patientnära fallbeskrivningar med källförankrade begrepp."
+        }
+      ]
+    },
+    {
+      "rubrik": "Medicinsk ordlista",
+      "poster": [
+        {
+          "lankar": [
+            {
+              "titel": "Medicinsk ordlista (landningssida)",
+              "url": "/medicinskordlista.html"
+            }
+          ],
+          "kort": "Sökbar ordlista med tusentals medicinska och anatomiska termer, latinska anatomitermer, sjukdomar med ICD-10-koder och labbvärden.",
+          "lang": "Sökbar ordlista med tusentals medicinska och anatomiska termer, latinska anatomitermer (Terminologia Anatomica), sjukdomar med ICD-10-koder och labbvärden med referensintervall."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Ordlista A",
+              "url": "/ordlista-a.html"
+            },
+            {
+              "titel": "B",
+              "url": "/ordlista-b.html"
+            },
+            {
+              "titel": "C",
+              "url": "/ordlista-c.html"
+            },
+            {
+              "titel": "D",
+              "url": "/ordlista-d.html"
+            },
+            {
+              "titel": "E",
+              "url": "/ordlista-e.html"
+            },
+            {
+              "titel": "F",
+              "url": "/ordlista-f.html"
+            },
+            {
+              "titel": "G",
+              "url": "/ordlista-g.html"
+            },
+            {
+              "titel": "H",
+              "url": "/ordlista-h.html"
+            },
+            {
+              "titel": "I",
+              "url": "/ordlista-i.html"
+            },
+            {
+              "titel": "J",
+              "url": "/ordlista-j.html"
+            },
+            {
+              "titel": "K",
+              "url": "/ordlista-k.html"
+            },
+            {
+              "titel": "L",
+              "url": "/ordlista-l.html"
+            },
+            {
+              "titel": "M",
+              "url": "/ordlista-m.html"
+            },
+            {
+              "titel": "N",
+              "url": "/ordlista-n.html"
+            },
+            {
+              "titel": "O",
+              "url": "/ordlista-o.html"
+            },
+            {
+              "titel": "P",
+              "url": "/ordlista-p.html"
+            },
+            {
+              "titel": "Q",
+              "url": "/ordlista-q.html"
+            },
+            {
+              "titel": "R",
+              "url": "/ordlista-r.html"
+            },
+            {
+              "titel": "S",
+              "url": "/ordlista-s.html"
+            },
+            {
+              "titel": "T",
+              "url": "/ordlista-t.html"
+            },
+            {
+              "titel": "U",
+              "url": "/ordlista-u.html"
+            },
+            {
+              "titel": "V",
+              "url": "/ordlista-v.html"
+            },
+            {
+              "titel": "W",
+              "url": "/ordlista-w.html"
+            },
+            {
+              "titel": "X",
+              "url": "/ordlista-x.html"
+            },
+            {
+              "titel": "Y",
+              "url": "/ordlista-y.html"
+            },
+            {
+              "titel": "Z",
+              "url": "/ordlista-z.html"
+            },
+            {
+              "titel": "Å",
+              "url": "/ordlista-aa.html"
+            },
+            {
+              "titel": "Ä",
+              "url": "/ordlista-ae.html"
+            },
+            {
+              "titel": "Ö",
+              "url": "/ordlista-oe.html"
+            }
+          ],
+          "kort": "Ordlistan uppdelad per begynnelsebokstav.",
+          "lang": "Ordlistan uppdelad per begynnelsebokstav."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Medicinska förstavelser (prefix)",
+              "url": "/ordlista-prefix.html"
+            }
+          ],
+          "kort": "Latinska och grekiska förstavelser med betydelse, ursprung och exempel.",
+          "lang": "Medicinska och anatomiska förstavelser ur latinet och grekiskan – som a-, hyper-, endo- och hemi- – med betydelse, ursprung och exempel."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Medicinska ändelser (suffix)",
+              "url": "/ordlista-suffix.html"
+            }
+          ],
+          "kort": "Latinska och grekiska ändelser med betydelse, ursprung och exempel.",
+          "lang": "Medicinska och anatomiska ändelser ur latinet och grekiskan – som -it, -emi, -ektomi och -pati – med betydelse, ursprung och exempel. Efterledet bär termens sakinnehåll: vad som iakttagits, vilket ingrepp som gjorts eller vilket fynd som gjorts."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Medicinska siffror",
+              "url": "/ordlista-siffror.html"
+            }
+          ],
+          "kort": "Medicinska termer och förkortningar som inleds med en siffra.",
+          "lang": "Medicinska termer och förkortningar som inleds med en siffra, till exempel 5-ASA och 5-FU, med definition och förklaring."
+        }
+      ]
+    },
+    {
+      "rubrik": "Kunskapsbank",
+      "poster": [
+        {
+          "lankar": [
+            {
+              "titel": "Kunskapsbank (hub)",
+              "url": "/kunskapsbank/"
+            }
+          ],
+          "kort": "Sajtens fördjupningsmaterial – ordlista, patientfall, listor och tabeller samt faktatexter.",
+          "lang": "Samlar sajtens fördjupningsmaterial – ordlista, patientfall, listor/tabeller och faktatexter."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Medicinsk terminologi",
+              "url": "/kunskapsbank/medicinsk-terminologi.html"
+            }
+          ],
+          "kort": "Översikt över språket bakom de medicinska orden, med sju fördjupningssidor.",
+          "lang": "Översikt över språket bakom de medicinska orden, med sju fördjupningssidor."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Medicinskt latin",
+              "url": "/kunskapsbank/medicinskt-latin.html"
+            }
+          ],
+          "kort": "Latinets roll i den anatomiska nomenklaturen – ordbildning, genitiv och kongruens, med termtabeller.",
+          "lang": ""
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Grekiska i medicinen",
+              "url": "/kunskapsbank/grekiska-i-medicinen.html"
+            }
+          ],
+          "kort": "Grekiskan i de kliniska termerna – rötter, bindevokal samt för- och efterled, med termtabeller.",
+          "lang": ""
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Deklinationer och pluralformer",
+              "url": "/kunskapsbank/deklinationer-pluralformer.html"
+            }
+          ],
+          "kort": "Hur medicinska termer böjs – de fem latinska deklinationerna, de grekiska mönstren och pluralfällorna.",
+          "lang": ""
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Uttalsregler",
+              "url": "/kunskapsbank/uttalsregler.html"
+            }
+          ],
+          "kort": "Hur medicinskt latin och grekiska uttalas – vokaler, konsonantfall och betoningsregler.",
+          "lang": ""
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Terminologins historia",
+              "url": "/kunskapsbank/terminologins-historia.html"
+            }
+          ],
+          "kort": "Fackspråkets lager – från Hippokrates via det arabiska mellanledet till Terminologia Anatomica.",
+          "lang": ""
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Franska och tyska i medicinskt språk",
+              "url": "/kunskapsbank/artiklar/franska-och-tyska-i-medicinskt-sprak.html"
+            }
+          ],
+          "kort": "Franska och tyska lånord i medicinskt fackspråk, med drygt 55 termer länkade till ordlistan.",
+          "lang": ""
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Engelska i medicinskt språk",
+              "url": "/kunskapsbank/artiklar/engelska-i-medicinskt-sprak.html"
+            }
+          ],
+          "kort": "Engelskans övertagande som forskningsspråk, stavningsskillnaderna, lånorden och de falska vännerna.",
+          "lang": ""
+        }
+      ]
+    },
+    {
+      "rubrik": "Listor och tabeller",
+      "poster": [
+        {
+          "lankar": [
+            {
+              "titel": "Listor och tabeller",
+              "url": "/kunskapsbank/listor-tabeller.html"
+            }
+          ],
+          "kort": "Hub för plugglistorna – muskler, nerver, kärl, skelett och leder, region för region.",
+          "lang": "Hub för kunskapsbankens plugglistor – muskeltabeller, nervtabeller, kärltabeller, skelettabeller och ledtabeller med rörelseomfång, samt uppslagstabellerna för läkemedelsberäkning. Varje familj har en egen hubb med undersidor per kroppsregion."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Nervtabeller",
+              "url": "/kunskapsbank/nervtabeller.html"
+            }
+          ],
+          "kort": "Hub för nervtabellerna – kranialnerverna och de perifera nerverna per kroppsregion.",
+          "lang": "Hub för nervtabeller – kranialnerverna (I–XII) och perifera nerver per kroppsregion (plexus brachialis, plexus lumbosacralis)."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Kranialnerverna",
+              "url": "/kunskapsbank/kranialnerverna.html"
+            }
+          ],
+          "kort": "De tolv kranialnerverna – namn, typ, funktion, utträde ur skallen och bortfall vid skada.",
+          "lang": "Tabell över de tolv kranialnerverna (I–XII) – namn (latin/svenska), typ (sensorisk/motorisk/blandad), funktion, utträde ur skallen (foramen) och typiska bortfallssymtom vid skada."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Armens nerver",
+              "url": "/kunskapsbank/nervtabell-armen.html"
+            }
+          ],
+          "kort": "Plexus brachialis fem terminala nerver – rötter, innervation och typiska bortfall.",
+          "lang": "Tabell över plexus brachialis fem terminala nerver – nervus musculocutaneus, medianus, ulnaris, radialis och axillaris – med rötter (C5–T1), motorisk och sensorisk innervation samt typiska bortfall (dropphand, klohand, karpaltunnelsyndrom)."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Bålens nerver",
+              "url": "/kunskapsbank/nervtabell-balen.html"
+            }
+          ],
+          "kort": "Bålens segmentella nerver och de kliniska dermatomnivåerna.",
+          "lang": "Tabell över bålens segmentella nerver – interkostalnerverna (T1–T11) och nervus subcostalis (T12) med motorik till bröst- och bukvägg samt sensoriska dermatom, plus en tabell över kliniska dermatomnivåer (T4 bröstvårtorna, T6 svärdsutskottet, T10 naveln)."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Motoriska nervbanor",
+              "url": "/kunskapsbank/nervtabell-motorbanor.html"
+            }
+          ],
+          "kort": "De nedåtgående motoriska banorna i CNS – ursprung, korsning, mål och funktion.",
+          "lang": "Tabell över de descenderande (nedåtgående) motoriska banorna i CNS – pyramidala (tractus corticospinalis lateralis/anterior, corticobulbaris) och extrapyramidala (rubro-, vestibulo-, reticulo-, tectospinalis) – med ursprung, korsning (decussation), mål och funktion. Förklaras i faktatexten \"Så styrs en rörelse\"."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Sensoriska nervbanor",
+              "url": "/kunskapsbank/nervtabell-sensorbanor.html"
+            }
+          ],
+          "kort": "De uppåtgående sensoriska banorna i CNS – modalitet, korsning och mål.",
+          "lang": "Tabell över de ascenderande (uppåtgående) sensoriska banorna i CNS – medvetna banor till känselbarken (baksträngs–lemniscus medialis-systemet för beröring/vibration/proprioception, tractus spinothalamicus lateralis för smärta/temperatur, anterior för grov beröring) och omedvetna banor till lillhjärnan (tractus spinocerebellaris posterior/anterior) – med modalitet, korsning och mål."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Autonoma nervsystemet",
+              "url": "/kunskapsbank/nervtabell-autonoma.html"
+            }
+          ],
+          "kort": "Sympatikus mot parasympatikus – ursprung, ganglier, signalsubstanser och organeffekter.",
+          "lang": "Jämförelsetabell sympatikus vs parasympatikus – övergripande roll (\"kamp eller flykt\" vs \"vila och smält\"), ursprung (thorakolumbalt vs kraniosakralt), ganglier, signalsubstanser (noradrenalin vs acetylkolin) och effekter på pupill, hjärta, lungor, mag-tarm, urinblåsa m.m."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Halsens nerver",
+              "url": "/kunskapsbank/nervtabell-halsen.html"
+            }
+          ],
+          "kort": "Plexus cervicalis hud- och muskelgrenar, inklusive nervus phrenicus.",
+          "lang": "Tabell över plexus cervicalis (C1–C4) – hudgrenar (occipitalis minor, auricularis magnus, transversus colli, supraclaviculares) och muskelgrenar (ansa cervicalis, nervus phrenicus till diafragma, direkta grenar till prevertebrala muskler) – med rötter, innervation och bortfall."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Benets nerver",
+              "url": "/kunskapsbank/nervtabell-benet.html"
+            }
+          ],
+          "kort": "Plexus lumbosacralis nerver – rötter, innervation och bortfall.",
+          "lang": "Tabell över plexus lumbosacralis (L1–S4) – plexus lumbalis (femoralis, obturatorius, cutaneus femoris lateralis m.fl.) och plexus sacralis (gluteus superior/inferior, ischiadicus, tibialis, fibularis communis, pudendus) – med rötter, motorisk och sensorisk innervation samt bortfall (droppfot, Trendelenburg, ischias)."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Muskeltabeller",
+              "url": "/kunskapsbank/muskeltabeller.html"
+            }
+          ],
+          "kort": "Hub för muskeltabellerna – ursprung, fäste, innervation och funktion per kroppsregion.",
+          "lang": "Muskeltabeller per kroppsregion – ursprung (origo), fäste (insertio), innervation och funktion."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Handens muskler",
+              "url": "/kunskapsbank/muskeltabell-handen.html"
+            }
+          ],
+          "kort": "Handens intrinsiska och extrinsiska muskler – tenar, hypotenar, lumbricaler och interosseer.",
+          "lang": "Tabell över handens intrinsiska och extrinsiska muskler – tenar, hypotenar, lumbricaler, interosseer samt extrinsiska finger- och tummuskler – med ursprung, fäste, innervation och funktion."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Skuldrans muskler",
+              "url": "/kunskapsbank/muskeltabell-skuldran.html"
+            }
+          ],
+          "kort": "Skuldrans muskler – rotatorkuffen samt de scapulohumerala och bålförankrade musklerna.",
+          "lang": "Tabell över skuldrans muskler – rotatorkuffen, scapulohumerala och bålförankrade muskler – med ursprung, fäste, innervation och funktion."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Överarmens muskler",
+              "url": "/kunskapsbank/muskeltabell-overarmen.html"
+            }
+          ],
+          "kort": "Överarmens främre böjarloge och bakre sträckarloge.",
+          "lang": "Tabell över överarmens muskler – främre böjarlogen (biceps, brachialis, coracobrachialis) och bakre sträckarlogen (triceps, anconeus) – med ursprung, fäste, innervation och funktion."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Underarmens muskler",
+              "url": "/kunskapsbank/muskeltabell-underarmen.html"
+            }
+          ],
+          "kort": "Underarmens böjar-, pronator- och sträckarloge – de extrinsiska hand- och fingermusklerna.",
+          "lang": "Tabell över underarmens muskler – främre böjar- och pronatorlogen (medianus, delvis ulnaris) och bakre sträckarlogen med supinator (radialis) – de extrinsiska musklerna som styr handled, fingrar och tumme, med ursprung, fäste, innervation och funktion."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Lårets muskler",
+              "url": "/kunskapsbank/muskeltabell-laret.html"
+            }
+          ],
+          "kort": "Lårets främre, mediala och bakre loge – quadriceps, adduktorer och hamstrings.",
+          "lang": "Tabell över lårets muskler – främre logen (quadriceps, sartorius), mediala logen (adduktorer) och bakre logen (hamstrings) – med ursprung, fäste, innervation och funktion."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Underbenets muskler",
+              "url": "/kunskapsbank/muskeltabell-underbenet.html"
+            }
+          ],
+          "kort": "Underbenets främre, laterala och bakre loger – dorsalflexorer, peroneus och vadmuskler.",
+          "lang": "Tabell över underbenets muskler – främre dorsalflexorerna, laterala peroneuslogen samt ytliga och djupa bakre logen (vadmuskler och tåböjare) – med ursprung, fäste, innervation och funktion."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Fotens muskler",
+              "url": "/kunskapsbank/muskeltabell-foten.html"
+            }
+          ],
+          "kort": "Fotryggens och fotsulans intrinsiska muskler samt de långa tåböjarna och tåsträckarna.",
+          "lang": "Tabell över fotens muskler – fotryggens korta sträckare och fotsulans fyra muskellager (intrinsiska) samt de långa tåböjarna och tåsträckarna från underbenet (extrinsiska) – med ursprung, fäste, innervation och funktion."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Bukväggens muskler",
+              "url": "/kunskapsbank/muskeltabell-bukvaggen.html"
+            }
+          ],
+          "kort": "Bukväggens raka och sneda muskler, transversus abdominis och quadratus lumborum.",
+          "lang": "Tabell över bukväggens muskler – raka och sneda bukmusklerna, transversus abdominis samt quadratus lumborum – med ursprung, fäste, innervation och funktion."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Ryggens muskler",
+              "url": "/kunskapsbank/muskeltabell-ryggen.html"
+            }
+          ],
+          "kort": "Ryggens autoktona muskler – erector spinae, det transversospinala systemet och nackmusklerna.",
+          "lang": "Tabell över ryggens egentliga (autoktona) muskler – splenius, erector spinae (iliocostalis, longissimus, spinalis), det transversospinala systemet (semispinalis, multifidus, rotatores), korta segmentella muskler och de suboccipitala nackmusklerna – alla på rami dorsales, med ursprung, fäste, innervation och funktion."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Halsens muskler",
+              "url": "/kunskapsbank/muskeltabell-halsen.html"
+            }
+          ],
+          "kort": "Halsens ytliga muskler, tungbensmusklerna, scalenerna och de prevertebrala musklerna.",
+          "lang": "Tabell över halsens muskler – ytliga (platysma, sternocleidomastoideus), suprahyoidala och infrahyoidala tungbensmuskler, scalenerna samt de prevertebrala musklerna – med ursprung, fäste, innervation och funktion."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Bröstkorgens muskler",
+              "url": "/kunskapsbank/muskeltabell-brostkorgen.html"
+            }
+          ],
+          "kort": "Bröstkorgens andningsmuskler – interkostalmusklerna, diafragma och serratus posterior.",
+          "lang": "Tabell över bröstkorgens andningsmuskler – interkostalmusklerna (externi, interni, intimi), subcostales, transversus thoracis, diafragma (mellangärdet) samt serratus posterior superior/inferior – med ursprung, fäste, innervation och funktion."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Höftens muskler",
+              "url": "/kunskapsbank/muskeltabell-hoften.html"
+            }
+          ],
+          "kort": "Höftens och sätets muskler – iliopsoas, glutealmusklerna och de pelvitrokantära utåtrotatorerna.",
+          "lang": "Tabell över höftens och sätets muskler – iliopsoas (psoas major/minor, iliacus), sätesmusklerna (gluteus maximus, medius, minimus, tensor fasciae latae) och de pelvitrokantära utåtrotatorerna (piriformis, obturatorius internus/externus, gemelli, quadratus femoris) – med ursprung, fäste, innervation och funktion."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Käkens muskler",
+              "url": "/kunskapsbank/muskeltabell-kaken.html"
+            }
+          ],
+          "kort": "Tuggmusklerna – masseter, temporalis och pterygoideus, alla på nervus mandibularis.",
+          "lang": "Tabell över tuggmusklerna – masseter, temporalis, pterygoideus medialis och lateralis – som rör underkäken i käkleden, alla på nervus mandibularis (V3), med ursprung, fäste, innervation och funktion."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Ansiktets muskler",
+              "url": "/kunskapsbank/muskeltabell-ansiktet.html"
+            }
+          ],
+          "kort": "Ansiktets mimiska muskler, som fäster i huden och styrs av nervus facialis.",
+          "lang": "Tabell över ansiktets mimiska muskler – occipitofrontalis, orbicularis oculi och oris, näsmusklerna, läpp- och munvinkelmusklerna, buccinator och öronmusklerna – som fäster i huden och styrs av nervus facialis (VII), med ursprung, fäste, innervation och funktion."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Ögats muskler",
+              "url": "/kunskapsbank/muskeltabell-ogat.html"
+            }
+          ],
+          "kort": "Ögats yttre muskler och levator palpebrae superioris, styrda av kranialnerverna III, IV och VI.",
+          "lang": "Tabell över ögats yttre muskler – de fyra raka och två sneda ögonmusklerna samt levator palpebrae superioris – som rör ögongloben och lyfter ögonlocket, styrda av kranialnerverna III, IV och VI, med ursprung, fäste, innervation och funktion."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Bäckenbottens muskler",
+              "url": "/kunskapsbank/muskeltabell-backenbotten.html"
+            }
+          ],
+          "kort": "Bäckenbottens muskler – levator ani och mellangårdens perinealmuskler.",
+          "lang": "Tabell över bäckenbottens muskler – levator ani (puborectalis, pubococcygeus, iliococcygeus), ischiococcygeus och mellangårdens perinealmuskler med slutmusklerna för urinrör och anus – mest på nervus pudendus (S2–S4), med ursprung, fäste, innervation och funktion."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Skelettet",
+              "url": "/kunskapsbank/skelett.html"
+            }
+          ],
+          "kort": "Hub för skelettabellerna – kroppens ben med latinska namn, bentyp och landmärken per region.",
+          "lang": "Hub för skelettabellerna – kroppens ben per kroppsregion med latinskt och svenskt namn, bentyp, landmärken (utskott, gropar och åsar) och de leder benen ingår i."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Skallens ben",
+              "url": "/kunskapsbank/skelett-skallen.html"
+            }
+          ],
+          "kort": "Hjärnskålens och ansiktsskelettets ben, hörselbenen och tungbenet, samt skallens suturer.",
+          "lang": "Tabell över skallens ben (cranium) – hjärnskålens ben kring hjärnan och ansiktsskelettets ben kring syn-, lukt- och tuggorganen, samt mellanörats tre hörselben och det fritt svävande tungbenet. Med bentyp, landmärken och skallens leder, där de flesta benen är förenade med orörliga suturer och endast underkäken rör sig fritt."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Halsens ben",
+              "url": "/kunskapsbank/skelett-halsen.html"
+            }
+          ],
+          "kort": "Halskotorna C1–C7 med foramen transversarium, atlas och axis, samt halsens leder.",
+          "lang": "Tabell över halskotpelarens sju kotor (C1–C7) – de minsta och rörligaste kotorna, med hål i tvärutskotten (foramen transversarium) för kotartären – samt de två översta, atlas och axis, som bär och vrider huvudet. Med landmärken och halsens leder."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Ryggens ben",
+              "url": "/kunskapsbank/skelett-ryggen.html"
+            }
+          ],
+          "kort": "Bröstkotorna, ländkotorna, korsbenet och svansbenet, samt ryggens leder.",
+          "lang": "Tabell över ryggens del av kotpelaren (columna vertebralis) – de tolv bröstkotorna som ledar mot revbenen, de fem kraftiga ländkotorna som bär den största belastningen, samt korsbenet och svansbenet där flera kotor smält samman. Med landmärken och ryggens leder."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Bröstkorgens ben",
+              "url": "/kunskapsbank/skelett-brostkorgen.html"
+            }
+          ],
+          "kort": "Bröstbenet och de tolv revbensparen – äkta, falska och flytande – samt bröstkorgens leder.",
+          "lang": "Tabell över bröstkorgens ben (thorax) – bröstbenet framtill och de tolv revbensparen på sidorna, indelade efter hur de fäster framtill i äkta, falska och flytande revben. Med landmärken och bröstkorgens leder."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Skuldrans ben",
+              "url": "/kunskapsbank/skelett-skuldran.html"
+            }
+          ],
+          "kort": "Skuldergördelns nyckelben och skulderblad, samt skuldrans leder.",
+          "lang": "Tabell över skuldergördeln (cingulum pectorale) – nyckelbenet framtill och skulderbladet baktill, som förbinder övre extremiteten med bålen. Med landmärken och skuldrans leder, där bröstben–nyckelbensleden är den enda egentliga förbindelsen mot bålskelettet."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Överarmens ben",
+              "url": "/kunskapsbank/skelett-overarmen.html"
+            }
+          ],
+          "kort": "Överarmsbenet med huvud, epikondyler och ledytor, samt överarmens leder.",
+          "lang": "Tabell över överarmsbenet (humerus) – ett långt rörben med rundat huvud mot axelleden och en bred nedre ände med ledytor och epikondyler mot armbågsleden. Med landmärken och överarmens leder."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Underarmens ben",
+              "url": "/kunskapsbank/skelett-underarmen.html"
+            }
+          ],
+          "kort": "Strålbenet och armbågsbenet, samt underarmens leder och vridrörelse.",
+          "lang": "Tabell över underarmens två ben – strålbenet på tumsidan och armbågsbenet på lillfingersidan – med landmärken och underarmens leder, inklusive vridrörelsen där benen korsar varandra vid pronation och supination."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Handens ben",
+              "url": "/kunskapsbank/skelett-handen.html"
+            }
+          ],
+          "kort": "Handlovsbenen, mellanhandsbenen och fingrarnas falanger, samt handens leder.",
+          "lang": "Tabell över handens ben – de åtta handlovsbenen i två rader, de fem mellanhandsbenen och fingrarnas falanger – med latinska namn, landmärken och handens leder."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Höftens ben",
+              "url": "/kunskapsbank/skelett-hoften.html"
+            }
+          ],
+          "kort": "Höftbenets tarmben, sittben och blygdben, bäckenet och höftens leder.",
+          "lang": "Tabell över höftbenet (os coxae) och bäckenet – tarmben, sittben och blygdben, som hos den vuxne smält samman i ledskålen (acetabulum) för höftleden – tillsammans med korsbenet och svansbenet. Med landmärken och höftens leder."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Lårets ben",
+              "url": "/kunskapsbank/skelett-laret.html"
+            }
+          ],
+          "kort": "Lårbenet och knäskålen, samt lårets leder.",
+          "lang": "Tabell över lårbenet, kroppens längsta och starkaste ben, och knäskålen som ligger inbäddad i lårmusklernas sena framför knäet. Med landmärken och lårets leder."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Underbenets ben",
+              "url": "/kunskapsbank/skelett-underbenet.html"
+            }
+          ],
+          "kort": "Skenbenet och vadbenet, samt underbenets leder.",
+          "lang": "Tabell över underbenets två ben – det kraftiga skenbenet som bär kroppstyngden och det smala vadbenet på utsidan som ger muskelfäste och bildar yttre fotknölen. Med landmärken och underbenets leder."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Fotens ben",
+              "url": "/kunskapsbank/skelett-foten.html"
+            }
+          ],
+          "kort": "Fotrotsbenen, mellanfotsbenen och tårnas falanger, samt fotens leder.",
+          "lang": "Tabell över fotens ben – de sju fotrotsbenen, de fem mellanfotsbenen och tårnas falanger – där språngbenet tar emot kroppstyngden från underbenet och hälbenet bildar hälen. Med landmärken och fotens leder."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Leder och rörelser",
+              "url": "/kunskapsbank/leder.html"
+            }
+          ],
+          "kort": "Hub för ledtabellerna – ledernas rörelser och normalt rörelseomfång (ROM) per region.",
+          "lang": "Hub för ledtabellerna – ledernas rörelser, rörelseplan och normala rörelseomfång (ROM) i grader, per kroppsregion, med de muskler som främst utför varje rörelse."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Övre extremitetens leder",
+              "url": "/kunskapsbank/leder-overextremitet.html"
+            }
+          ],
+          "kort": "Axel, armbåge, underarm och handled – rörelser, rörelseplan och normalt rörelseomfång i grader.",
+          "lang": "Tabell över axelleden, armbågsleden, underarmens vridleder och handleden – varje rörelse med sitt rörelseplan, sitt normala rörelseomfång i grader och de muskler som främst utför den."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Nedre extremitetens leder",
+              "url": "/kunskapsbank/leder-nedreextremitet.html"
+            }
+          ],
+          "kort": "Höft, knä och fotled – rörelser, rörelseplan och normalt rörelseomfång i grader.",
+          "lang": "Tabell över höftleden, knäleden samt övre och nedre fotleden – varje rörelse med sitt rörelseplan, sitt normala rörelseomfång i grader och de muskler som främst utför den."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Ryggens och nackens rörelser",
+              "url": "/kunskapsbank/leder-bal-nacke.html"
+            }
+          ],
+          "kort": "Hals-, bröst- och ländrygg – flexion, extension, lateralflexion och rotation i grader.",
+          "lang": "Tabell över halsryggen samt bröst- och ländryggen – flexion, extension, lateralflexion och rotation med normalt rörelseomfång i grader och de muskler som utför rörelserna."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Käkledens rörelser",
+              "url": "/kunskapsbank/leder-kaken.html"
+            }
+          ],
+          "kort": "Käkledens gapning, slutning, protrusion och sidorörelse, mätta i millimeter.",
+          "lang": "Tabell över käkleden (articulatio temporomandibularis) – gapning, slutning, protrusion och sidorörelse, angivna i millimeter mätt mellan framtänderna i stället för i grader, med de muskler som utför dem."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Kärl",
+              "url": "/kunskapsbank/karl.html"
+            }
+          ],
+          "kort": "Hub för kärltabellerna – artärer och vener med avgång, förgreningar och försörjningsområden.",
+          "lang": "Hub för kärltabellerna – artärer och vener per kroppsregion med avgång, förgreningar och försörjningsområden."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Huvudet och halsens kärl",
+              "url": "/kunskapsbank/karl-huvud-hals.html"
+            }
+          ],
+          "kort": "Halspulsådrorna, kotpulsådrorna och halsvenerna.",
+          "lang": "Tabell över huvudets och halsens artärer och vener – halspulsådrorna (carotiderna), där carotis communis delar sig i en inre gren till hjärnan och ögat och en yttre till ansikte och skalp, kotpulsådrorna, samt halsvenerna (jugularis)."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Armens kärl",
+              "url": "/kunskapsbank/karl-armen.html"
+            }
+          ],
+          "kort": "Artärkedjan subclavia–axillaris–brachialis samt armens djupa och ytliga vener.",
+          "lang": "Tabell över övre extremitetens kärl – artärkedjan som byter namn på vägen (subclavia, axillaris, brachialis) och delar sig i strålbens- och armbågsbensartären, samt de djupa venerna som följer artärerna och de ytliga vena cephalica och basilica."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Bröstkorgens kärl",
+              "url": "/kunskapsbank/karl-brostkorgen.html"
+            }
+          ],
+          "kort": "Aorta, lungstammen, hålvenerna och lungvenerna.",
+          "lang": "Tabell över brösthålans kärl – aorta från vänster kammare med sin båge, lungstammen från höger kammare, samt återflödet via övre hålvenen och det syresatta blodet från lungvenerna."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Bukens kärl",
+              "url": "/kunskapsbank/karl-buken.html"
+            }
+          ],
+          "kort": "Bukaortans opariga och pariga grenar, nedre hålvenen och portavenen.",
+          "lang": "Tabell över bukens kärl – bukaortans opariga grenar till mag-tarmkanalen och pariga grenar till bland annat njurarna, nedre hålvenen, samt portavenen som för tarmens näringsrika blod genom levern."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Bäckenets kärl",
+              "url": "/kunskapsbank/karl-backenet.html"
+            }
+          ],
+          "kort": "De gemensamma höftartärernas inre och yttre grenar med följevener.",
+          "lang": "Tabell över bäckenets kärl – bukaortans delning i två gemensamma höftartärer, som var och en grenar sig i en inre gren till bäckenorganen och en yttre som fortsätter ut i benet, med vener som följer artärerna till nedre hålvenen."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Benets kärl",
+              "url": "/kunskapsbank/karl-benet.html"
+            }
+          ],
+          "kort": "Artärkedjan femoralis–poplitea samt benets djupa vener och rosenvenerna.",
+          "lang": "Tabell över nedre extremitetens kärl – artärkedjan femoralis och poplitea som delas i främre och bakre skenbensartären, de djupa venerna som följer artärerna, samt de ytliga rosenvenerna (vena saphena) som är kliniskt viktiga vid åderbråck och blodproppar."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Läkemedelsberäkning – omvandlingar & formler",
+              "url": "/kunskapsbank/lakemedelsberakning-omvandlingar.html"
+            }
+          ],
+          "kort": "Uppslagstabeller för enheter, procentlösningar och droppfaktor, plus formelsamling.",
+          "lang": "Uppslagstabeller för läkemedelsberäkning – omvandling mellan g/mg/µg, liter och ml, procentlösningar till mg/ml (0,9 % = 9 mg/ml osv.), tid, droppfaktor/dropptakt samt en formelsamling (antal tabletter, dosvolym, mängd substans, infusionshastighet, droppar/min, mg/kg och spädning). Korslänkad till faktatexten Läkemedelsberäkning."
+        }
+      ]
+    },
+    {
+      "rubrik": "Faktatexter",
+      "poster": [
+        {
+          "lankar": [
+            {
+              "titel": "Faktatexter",
+              "url": "/kunskapsbank/faktatexter.html"
+            }
+          ],
+          "kort": "Hub för kunskapsbankens faktatexter, ordnade efter ämnesområde.",
+          "lang": "Hub för kunskapsbankens faktatexter, ordnade efter ämnesområde – rörelseapparaten, nervsystemet och studieteknik – med länk vidare till det platta artikelindexet."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Alla artiklar",
+              "url": "/kunskapsbank/artiklar/"
+            }
+          ],
+          "kort": "Platt index över samtliga artiklar, med artikeltyp och målgrupp angiven.",
+          "lang": "Platt index över kunskapsbankens samtliga artiklar, grupperade efter ämnesområde med artikeltyp och målgrupp angiven."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Rörelseapparaten (ämneshubb)",
+              "url": "/kunskapsbank/artiklar/rorelseapparaten.html"
+            }
+          ],
+          "kort": "Ämneshubb – riktningar och plan, ledtyper samt muskler, senor och fascia.",
+          "lang": ""
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Nervsystemet (ämneshubb)",
+              "url": "/kunskapsbank/artiklar/nervsystemet.html"
+            }
+          ],
+          "kort": "Ämneshubb – hur motoriska kommandon och känselsignaler leds mellan hjärnan, ryggmärgen och kroppen.",
+          "lang": ""
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Plugga & tenta (ämneshubb)",
+              "url": "/kunskapsbank/artiklar/plugga-och-tenta.html"
+            }
+          ],
+          "kort": "Ämneshubb – studieteknik och de färdigheter du tenteras på.",
+          "lang": ""
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Ledtyper – form, axlar och rörlighet",
+              "url": "/kunskapsbank/artiklar/ledtyper.html"
+            }
+          ],
+          "kort": "Ledernas indelning och byggnad, frihetsgrader och de sex synovialledstyperna.",
+          "lang": ""
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Så läser du en muskeltabell",
+              "url": "/kunskapsbank/artiklar/sa-laser-du-en-muskeltabell.html"
+            }
+          ],
+          "kort": "Vad muskeltabellens sex kolumner svarar på, och hur funktionen härleds ur ursprung och fäste.",
+          "lang": ""
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Anatomiska riktningar, plan och rörelser",
+              "url": "/kunskapsbank/artiklar/anatomiska-riktningar.html"
+            }
+          ],
+          "kort": "Anatomiskt normalläge, riktningstermerna parvis, kroppens tre plan och rörelseaxlarna.",
+          "lang": ""
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Fascia, bursor och senskidor – glidytor och loger",
+              "url": "/kunskapsbank/artiklar/fascia-bursor-senskidor.html"
+            }
+          ],
+          "kort": "Bindväven kring musklerna – fascior, muskelloger, bursor och senskidor.",
+          "lang": ""
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Så styrs en rörelse",
+              "url": "/kunskapsbank/sa-styrs-en-rorelse.html"
+            }
+          ],
+          "kort": "Vägen för ett motoriskt kommando – tvåneuronsprincipen, motoriska enheten och bortfallsmönstren.",
+          "lang": ""
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Så leds känseln",
+              "url": "/kunskapsbank/sa-leds-kanseln.html"
+            }
+          ],
+          "kort": "Känselns treneuronskedja, receptortyperna och baksträngsbanan mot spinotalamusbanan.",
+          "lang": ""
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Dermatom, myotom och sklerotom – kroppens segment",
+              "url": "/kunskapsbank/artiklar/dermatom-myotom-sklerotom.html"
+            }
+          ],
+          "kort": "Kroppens segmentella innervation – dermatom, myotom och sklerotom, med ISNCSCI:s landmärken.",
+          "lang": ""
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Minnesregler för kranialnerverna",
+              "url": "/kunskapsbank/artiklar/minnesregler-kranialnerverna.html"
+            }
+          ],
+          "kort": "Minnesramsorna för kranialnerverna, deras historia och vad en ramsa faktiskt lagrar.",
+          "lang": ""
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Läkemedelsberäkning",
+              "url": "/kunskapsbank/lakemedelsberakning.html"
+            }
+          ],
+          "kort": "Läkemedelsberäkning med enhetsräkning – grundformlerna, dropptakt, spädning och kontrollräkning.",
+          "lang": ""
+        }
+      ]
+    },
+    {
+      "rubrik": "Verktyg",
+      "poster": [
+        {
+          "lankar": [
+            {
+              "titel": "Verktyg (hubb)",
+              "url": "/verktyg/"
+            }
+          ],
+          "kort": "Räknare och omvandlare som visar den insatta uträkningen, inte bara svaret.",
+          "lang": "Kunskapsbankens interaktiva verktyg – räknare och omvandlare som visar den insatta uträkningen och inte bara svaret, samt kan kontrollera en uträkning användaren gjort själv."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Läkemedelsberäknare",
+              "url": "/verktyg/lakemedelsberakning.html"
+            }
+          ],
+          "kort": "Fyra räknare – enhetsomvandlare, dos och styrka, infusion och spädning – med träningsläge.",
+          "lang": "Fyra räknare för läkemedelsberäkning på en sida, alla byggda på principen att användaren fyller i det som är känt och lämnar det efterfrågade tomt. Enhetsomvandlare för massa (kg/g/mg/µg), volym (l/dl/ml), tid (dygn/h/min) och koncentration (%, mg/ml, g/l, µg/ml), som visar alla enheter samtidigt. Dos och styrka enligt sambandet ordination = styrka × dos, för både flytande beredningar och tabletter, med ett delblock som räknar fram ordinationen ur vikt och mg/kg. Infusion enligt volym = hastighet × tid, med droppar per minut ur droppfaktorn och den omvända räkningen från mg/kg/h till ml/h. Spädning enligt styrka₁ × volym₁ = styrka₂ × volym₂, med spädningsvätskans volym som härlett svar. Varje svar visas tillsammans med den insatta uträkningen, orimliga svar flaggas, och varje räknare har ett träningsläge där svaret döljs tills användaren fyllt i sin egen uträkning. Verktygen är studiestöd och ersätter inte ordination, produktinformation eller lokala rutiner."
+        }
+      ]
+    },
+    {
+      "rubrik": "Om",
+      "poster": [
+        {
+          "lankar": [
+            {
+              "titel": "Information om Anatomiquiz",
+              "url": "/info.html"
+            }
+          ],
+          "kort": "Om sajten, dess syfte, källor och hur den används.",
+          "lang": "Om sajten, dess syfte och hur den används."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Integritetspolicy",
+              "url": "/integritet.html"
+            }
+          ],
+          "kort": "Inga kakor, ingen spårning och inga personuppgifter – allt du sparar stannar i din webbläsare.",
+          "lang": "Integritetspolicy för Anatomiquiz. Appen har inga användarkonton, samlar inte in personuppgifter, använder inga kakor och har varken spårning, annonsering eller analysverktyg. Resultat och inställningar sparas lokalt i besökarens egen webbläsare."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Versionshistorik",
+              "url": "/versionshistorik.html"
+            }
+          ],
+          "kort": "Samtliga versioner av Anatomiquiz med vad som lagts till, byggts ut eller rättats.",
+          "lang": "Samtliga versioner av Anatomiquiz med vad som lagts till, byggts ut eller rättats."
+        },
+        {
+          "lankar": [
+            {
+              "titel": "Sitemap",
+              "url": "/sitemap.xml"
+            }
+          ],
+          "kort": "Fullständig sidförteckning.",
+          "lang": "Fullständig sidförteckning."
+        }
+      ]
+    }
+  ]
+}

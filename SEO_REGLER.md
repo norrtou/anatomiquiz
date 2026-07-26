@@ -714,6 +714,45 @@ Styrning av AI-/snippet-exponering sker via `max-snippet` / `nosnippet` / `data-
 
 ---
 
+## 9b. `llms.txt` och `llms-full.txt` (OBLIGATORISKT)
+
+Sajten har **två** filer för agenter, och båda skrivs ur **ett** register:
+
+```jsonc
+// data/llms.json — sanningen. En post per sida.
+{ "lankar": [{ "titel": "Fotens ben", "url": "/kunskapsbank/skelett-foten.html" }],
+  "kort": "Fotrotsbenen, mellanfotsbenen och tårnas falanger, samt fotens leder.",
+  "lang": "Tabell över fotens ben – de sju fotrotsbenen, …" }
+```
+
+```bash
+python3 scripts/generate_llms.py          # skriver llms.txt + llms-full.txt
+python3 scripts/generate_llms.py --check  # exit 1 om filerna är inaktuella
+```
+
+- **`llms.txt` är indexfilen** — en rad per sida, `kort`. Specen (llmstxt.org) vill ha något
+  kort och skannbart; vår låg på 39 KB med artikelbeskrivningar på 1 500+ tecken.
+- **`llms-full.txt` bär de utförliga beskrivningarna**, `lang`. Samma sektioner, samma
+  URL-ordning. `llms.txt` länkar dit.
+- **Filerna redigeras ALDRIG för hand.** De regenereras vid varje körning av
+  `check_generators.py`, så en handredigering överlever inte till nästa commit.
+- **Artiklarnas `lang` bor i `data/artiklar.json` (fältet `llms`) och upprepas inte i
+  registret.** Det är inte en optimering utan en lagning: när båda filerna bar var sin kopia
+  hade `engelska-i-medicinskt-sprak` redan drivit isär — `llms.txt` hade den språkligt putsade
+  texten ("cirka", "c till k", "SNOMED CT") och artikelregistret den gamla ("ca", "c→k",
+  "Snomed CT"), och ingenting kunde se det. Samma slutsats som §6b, §6d och §6e: en sträng som
+  finns på två ställen glider isär.
+- **Varje indexerbar sida SKA stå i registret.** `generate_llms.py` jämför mot varje `<loc>` i
+  `sitemap.xml` och stoppar bygget vid första sida som saknas. Skälet: `check_links.py`
+  validerar att URL:erna *i* filen finns på disk, aldrig att sidorna *på disk* finns i filen —
+  och därför saknades **30 av 117** indexerbara sidor (hela skelett-, kärl- och ledfamiljen)
+  utan att något larmade. En sida som hör utanför indexet ska in i `UNDANTAG` **med skäl**,
+  aldrig tyst utebli (CLAUDE_REGLER §0.4).
+- **En tom `kort` stoppar bygget.** Att lägga in en sida utan indexrad är samma tysta
+  uteblivande som att inte lägga in den alls.
+
+---
+
 ## 10. Dokumentation i koden
 
 Koden ska vara läsbar för människa **och** maskin:
@@ -767,7 +806,9 @@ stod kvar på `0.9.236`, och felet syntes inte i något av de svep som kördes, 
 
 ### B. Ny indexerbar sida (utöver A)
 - [ ] `sitemap.xml`: ny `<url>` med `<loc>` + `<lastmod>` = dagens datum + `changefreq`/`priority`.
-- [ ] `llms.txt`: lägg sidan i rätt sektion (skapa sektion vid behov).
+- [ ] `data/llms.json`: ny post i rätt sektion med **`kort`** och **`lang`** (§9b), följt av
+      `python3 scripts/generate_llms.py`. Skriv aldrig i `llms.txt` eller `llms-full.txt`
+      direkt — de regenereras. Glöms posten stoppar bygget vid nästa körning.
 - [ ] Korslänka: lägg in länk från relevant **pillar/hub** + interna korslänkar + breadcrumb.
 - [ ] `<head>` komplett enligt §1 (canonical, OG, Twitter, JSON-LD med BreadcrumbList).
 
@@ -812,6 +853,9 @@ stod kvar på `0.9.236`, och felet syntes inte i något av de svep som kördes, 
 - [ ] **Latin (§7b):** inget `lang="la"` handskrivet; en ny latinkolumn heter
       "… (latin)" och har latinet i `<em>`, den svenska glosan utanför.
       `python3 scripts/wire_lang.py --check --all` ska gå igenom.
+- [ ] **Agentfilerna (§9b):** inget skrivet för hand i `llms.txt` eller `llms-full.txt`; en ny
+      sida har en post i `data/llms.json` med både `kort` och `lang`.
+      `python3 scripts/generate_llms.py --check` ska säga "i synk".
 - [ ] **Prestanda:** inga externa resurser; JS bara vid behov + `defer`; bilddimensioner satta (CLS 0).
 - [ ] **Kedjan (§11)** avbockad: versionen satt med `scripts/bump_version.py` (VERSION +
       index.html + app.js i en operation) + CHANGELOG (+ sitemap + llms.txt + korslänkar).

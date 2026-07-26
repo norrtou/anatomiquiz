@@ -6,11 +6,15 @@ Punkt 7 utförd i 0.9.265** (plus tre generatorbuggar som blockerade den, se ned
 Punkt 6 utförd i 0.9.267. Punkt 4 utförd i 0.9.268. Återfallsskydd för hela svepet i
 0.9.269. Punkt 5 utförd i 0.9.270**, plus två blockerare i sitemap- och rundtrippskedjan.
 **Punkt 8 utförd i 0.9.271, omarbetad till en delad sidfot i 0.9.272.
-Punkt 9 utförd i 0.9.275**, plus en blockerare i datumkedjan. Resten är öppen och prioriterad nedan.
+Punkt 9 utförd i 0.9.275**, plus en blockerare i datumkedjan.
+**Punkt 12 utförd i 0.9.276**, plus 30 sidor som saknades i `llms.txt` och en text som
+drivit isär mellan två register. Resten är öppen och prioriterad nedan.
 
 > 🔒 **Punkt 10 och 13 är vilande och ska inte tas upp, föreslås eller utföras.** Användaren
 > beslutade 2026-07-25 att inget visuellt ska göras och tar upp dem på eget initiativ.
-> Öppna punkter är därmed **11, 12, 14, 15** — inga andra.
+> Öppna punkter är därmed **11, 14, 15** — inga andra.
+>
+> **Punkt 11 är planerad men inte byggd** — hela planen står under sin rubrik nedan.
 **Skapad:** 2026-07-25. **Underlag:** hela sajten lästes maskinellt – titlar, descriptions,
 canonicals, JSON-LD, rubrikhierarki, tabellmärkning, intern länkning, `llms.txt`, `sitemap.xml`,
 `robots.txt` och CSS-kontraster. Siffrorna nedan är mätta, inte uppskattade.
@@ -142,7 +146,7 @@ utcheckning. Se punkt 5 nedan.
 | ~~8~~ | ~~Ansvarsfriskrivning som delad komponent~~ | ✅ 0.9.271–272 | **Hög (YMYL)** |
 | ~~9~~ | ~~`lang="la"` på latinska termer~~ | ✅ 0.9.275 | **Hög (WCAG AA)** |
 | 11 | Syskonlänkar / "Relaterat"-block | ~3 h | Medel |
-| 12 | Dela `llms.txt` / `llms-full.txt` | ~30 min | Medel |
+| ~~12~~ | ~~Dela `llms.txt` / `llms-full.txt`~~ | ✅ 0.9.276 | **Medel (GEO)** |
 | ~~13~~ | ~~`.glossary-letter`-kontrast i ljust läge~~ | 🔒 **VILANDE** | ta inte upp |
 | 14 | `about`/`teaches`/`keywords` i schema | ~2 h | Medel (GEO) |
 | 15 | `integritet.html` rubrikhopp h1→h3 | 5 min | Låg |
@@ -442,8 +446,10 @@ trots att 63 filer skrevs om.
 
 ## 11. ⬜ Syskonlänkar i kunskapsbanken
 
-**Mätt:** 60+ djupa kunskapsbankssidor har **exakt en** ingående intern länk – bara från sin
-hubb. Endast **1 sida** i hela kunskapsbanken har ett "Relaterat"/"Se även"-block.
+**Ommätt 2026-07-26 över alla 119 sidor – backloggens siffra var för hög.** Inte "60+" utan
+**36 sidor med exakt en** ingående intern länk, plus 7 med två. Alla 36 länkas bara från sin
+egen hubb: skelett 12, muskeltabeller 13, kärl 6, leder 4, nervtabeller 2. Att **bara 1 sida**
+i hela kunskapsbanken har ett "Se även"-block stämde.
 
 Utgående länkarna till ordlistan är däremot exemplariskt täta (`muskeltabell-handen.html`
 länkar till 30+ termankare). Det är bara sidhorisontellt det saknas: handen ↔ underarmen ↔
@@ -451,12 +457,90 @@ skuldran, skelett-foten ↔ muskeltabell-foten ↔ leder-nedreextremitet.
 
 Begränsar både crawldjup och hur topical authority samlas.
 
-## 12. ⬜ Dela `llms.txt` i två filer
+### Planen (skriven 2026-07-26, ej byggd)
 
-**Mätt:** `llms.txt` är 39 KB. Enskilda artikelbeskrivningar är 1 500+ tecken.
+**Komponenten finns redan – ingen ny visuell form ska uppfinnas (§0.5 punkt 3).**
+`.kb-seealso` / `.kb-seealso-title` / `.kb-seealso-list` ligger i `css/styles.css` och används
+på `kunskapsbank/index.html`: en `<aside>` med rubriken "Se även" och pillänkar. Återanvänd
+den rakt av, inklusive ordet "Se även" — två namn för samma sak är hela problemet punkt 8
+löste. **Ingen ny CSS.**
 
-Specen vill ha en kort, skannbar indexfil. Innehållet är utmärkt GEO-material – problemet är
-bara var det ligger. Kort `llms.txt` (~5 KB) + `llms-full.txt` med nuvarande innehåll.
+**Placering, bestämd genom att läsa slutet av `<main>` på alla fem berörda sidtyper
+(muskeltabell, skelett, kärl, nervtabell, artikel):** blocket läggs direkt **före**
+`.kb-sources`. Sidorna slutar Referenser → `.actions` → sidfot. Läggs pillarna mellan
+referenserna och knappraden får man två rader knappliknande länkar i rad, och referenslistan
+tappar sin plats sist (§6b). På en sida utan `.kb-sources` läggs blocket före `.actions`.
+Max 5 länkar, annars är det ingen "Se även" utan en sitemap.
+
+**Eget kedjesteg, inte generatorändring — sjätte gången samma slutsats** (punkt 4, 5, 6, 8, 9):
+nervtabellerna, `kranialnerverna` och de handskrivna faktatexterna ägs inte av någon generator.
+
+- `scripts/relaterat.py` – kartan som **relationsgrupper**, inte som par: region *handen* =
+  muskeltabell-handen, skelett-handen, leder-överextremitet, nervtabell-armen, kärl-armen.
+  Gruppen skrivs en gång och blir symmetrisk av sig själv; par hade krävt att samma relation
+  skrevs två gånger och kunnat glida isär. Vilka sidor som hör ihop är anatomiskt omdöme och
+  skrivs för hand (§0.3 punkt 3) — att göra relationen symmetrisk och rendera den är skriptets.
+- `scripts/wire_relaterat.py --all` – skriver blocket, med `--check`. **Skriver om, hoppar
+  inte över** (samma skäl som `wire_sidfot.py`). Placeras i KEDJA efter `wire_citations.py`.
+- **Länktexten läses ur målsidans egen `<h1>`** — då kan den inte glida ifrån sidan den pekar
+  på, och ingen andra upplaga av sidtitlarna uppstår.
+- **§0.4:** varje kunskapsbankssida ska stå i en grupp eller i en undantagslista med skäl;
+  en omappad sida stoppar bygget.
+
+**Blockeraren som måste lagas i samma pass — annars dateras ~76 sidor om till samma dag.**
+Blocket ändrar `<main>` på alla sidor samtidigt, precis som sidfoten (0.9.272) och `lang="la"`
+(0.9.275). `RELATERAT_RX` ska in i `normalisera()` i `sidodatum.py`, och effekten mätas genom
+att stänga av fixen — som punkt 9:s 63 sidor.
+
+**`.kb-seealso` ska bli skyddad zon i `wire_terms.py`**, bredvid `.page-footer` och `.kb-card`.
+Länktexten sitter visserligen inuti `<a>` och skyddas av `in_anchor` idag, men rubriken gör
+det inte, och blocket ska vara ordagrant lika på alla sidor.
+
+## 12. ✅ KLAR i 0.9.276 – `llms.txt` delad i index och fulltext
+
+**Mätt efteråt:** `llms.txt` **39,2 → 17,1 KB** (−56 %) samtidigt som den gick från 88 till
+**118 URL:er** (+34 %) — per sida från ~450 till ~140 byte. `llms-full.txt` bär de utförliga
+beskrivningarna, 47,0 KB. **Varje `<loc>` i `sitemap.xml` finns nu i indexet: 117 av 117, 0
+undantag.** Båda filerna renderas ur `data/llms.json`, så deras URL-listor kan inte skilja sig
+åt. Verifierat genom att konverteringen av den gamla filen till registret regenererade
+**byte-identisk** utdata innan en enda text skrevs om — inget gick förlorat i flytten.
+
+**Storleken var inte den värsta defekten.** Jämförelsen mot `sitemap.xml` visade att **30 av
+117 indexerbara sidor saknades helt i `llms.txt`** — hela skelettfamiljen (12 undersidor +
+hubb), hela kärlfamiljen (6 + hubb), hela ledfamiljen (4 + hubb), plus `listor-tabeller.html`,
+`faktatexter.html`, `integritet.html`, `ordlista-siffror.html` och `ordlista-suffix.html`. Den
+fil agenter läser **först** saknade alltså en fjärdedel av sajten, och ingenting som kördes
+upptäckte det: `check_links.py` validerar att URL:erna *i* filen finns på disk, aldrig att
+sidorna *på disk* finns i filen. Klassisk §0.4 — tyst uteblivet ser ut som en lyckad körning.
+Alla 30 har nu både kort och utförlig beskrivning, skrivna mot sidornas eget innehåll.
+
+**Ett register, två renderingar.** `data/llms.json` bär sektion, URL, titel, `kort` (→
+`llms.txt`) och `lang` (→ `llms-full.txt`); [`scripts/generate_llms.py`](generate_llms.py)
+skriver båda filerna. Två handhållna textfiler med samma URL-lista hade glidit isär — samma
+slutsats som punkt 4, 5, 6, 8 och 9 kom till var för sig.
+
+**Och de hade redan gjort det.** Artiklarnas utförliga text stod i **två** register, och
+`engelska-i-medicinskt-sprak` skiljde sig: `llms.txt` bar den språkligt putsade versionen
+("cirka", "c till k", "SNOMED CT"), `data/artiklar.json` den gamla ("ca", "c→k", "Snomed CT").
+Ingen kontroll kunde se det. Artikeltexten bor nu bara i `data/artiklar.json` (fältet `llms`)
+och slås upp därifrån — den putsade versionen vann. `llms_rader()`/`llms_rader_pelare()` i
+`generate_artiklar.py`, som producerade rader att klistra in för hand, är borttagna; de var
+dessutom aldrig anropade.
+
+**Två gränser som inte flyttades.** Ordlistans 30 bokstavssidor står kvar som **en** rad med 30
+länkar — de har inget eget innehåll att beskriva var för sig, och 30 rader hade varit brus i en
+indexfil. `ordlista-tecken.html` står utanför båda filerna: den är `noindex` och därmed inte i
+sitemap. Prefixposten hette dessutom "Prefix och suffix" fast suffixsidan finns separat och
+saknades — nu tre egna poster (prefix, suffix, siffror).
+
+**Skyddet är verifierat med planterade fel, inte genom att kontrollen sagt OK:** sida i sitemap
+men inte i registret, tom `kort`, URL som inte finns på disk, artikel utan utförlig text,
+handredigerad `llms.txt` och samma URL två gånger gav alla exitkod 1 med ett besked som säger
+vad som ska göras. Steget ligger sist i `check_generators.py`, så filerna regenereras vid varje
+rundtripp och en handredigering kan inte överleva till en commit.
+
+**Regeln står i SEO_REGLER §9b**, med §11.B och pre-flight-listan i §12 uppdaterade: en ny sida
+läggs i `data/llms.json`, aldrig i textfilerna.
 
 ## 13. 🔒 VILANDE – `.glossary-letter`-kontrast i ljust läge
 
@@ -510,6 +594,7 @@ Granskningen efter punkt 4:
 | 8 sidfot | ✅ `wire_sidfot.py`, stoppar på oklassad ny sida | `check_generators.py` |
 | 9 `lang="la"` | ✅ `wire_lang.py`, stoppar på omärkbar latinkolumn och okänt genus | `check_generators.py` |
 | 10 kontrast | 🔒 vilande — se nedan | — |
+| 12 agentfilerna | ✅ `generate_llms.py`, stoppar på sida i sitemap som saknas i registret | `check_generators.py` |
 
 Punkt 5:s skydd är verifierat genom att fel planterats, inte genom att kontrollen sagt OK:
 ändrat innehåll utan uppdaterat datum, raderad datumrad, handredigerat datum i facit, ny sida
@@ -519,9 +604,12 @@ ska göras.
 **Punkt 10 saknar kontroll, och det förblir så.** En kontrastkontroll (räkna WCAG-kvot ur
 CSS-variablerna) skulle täcka både den och punkt 13, men båda rör hur sajten *ser ut*.
 
-**Regeln för resten av svepet:** varje kommande punkt (11, 12, 14, 15) ska leverera
-sitt skydd i samma pass som åtgärden, inte som en efterhandsfråga. Punkt 11 och 12 skyddas
-redan av `check_links.py` — nya syskonlänkar och en delad `llms-full.txt` valideras automatiskt.
+**Regeln för resten av svepet:** varje kommande punkt (11, 14, 15) ska leverera
+sitt skydd i samma pass som åtgärden, inte som en efterhandsfråga. Punkt 11:s syskonlänkar
+valideras av `check_links.py` så snart de skrivits — men skyddet som saknas är att en sida
+*utan* block ska larma, och det ska `wire_relaterat.py` göra (§0.4). Att `check_links.py`
+räcker var för övrigt fel om punkt 12 också: den validerar att URL:erna i `llms.txt` finns,
+aldrig att sidorna finns i `llms.txt`, och 30 sidor saknades ändå.
 
 Punkt 9:s skydd är verifierat genom planterade fel, inte genom att kontrollen sagt OK:
 latinkolumn utan `<em>`, svenska tecken inuti ett latinskt `<em>` och ett okänt ord efter

@@ -965,8 +965,8 @@ kontrollen nedan mäter samma sak korrekt, eftersom den kör **hela** kedjan.
 
 Skriptet speglar alla spårade filer till en temporär katalog, kör hela kedjan
 där (alla `generate_*.py` + `wire_terms.py` + `wire_citations.py` +
-`wire_lang.py` + `wire_identity.py` + `wire_sidfot.py` + `wire_dates.py`) och
-jämför fil för fil mot arbetskopian. Bara en körning av hela kedjan duger:
+`wire_lang.py` + `wire_identity.py` + `wire_sidfot.py` + `wire_dates.py` +
+`generate_llms.py`) och jämför fil för fil mot arbetskopian. Bara en körning av hela kedjan duger:
 **wire-stegen kan ingen enskild generator kontrollera** — tooltips, referenser,
 språkmärkning, identitet, sidfot och datum läggs på *efter* sidgenereringen, så
 det är först när allt körts i ordning som man ser om de överlever. Därefter kör det `check_links.py` (varje intern länk mot disk) och
