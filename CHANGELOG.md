@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.303
+- Bytte ut "produkten" mot "appen" i brevtexten på `vision.html` — konsekvent med hur resten av sajten talar om Anatomiquiz.
+
 ## 0.9.302
 - **Vision-hänvisningen på `info.html` fick en rad till och en synlig länk.** "...och hur du kan hjälpa till att förverkliga det" lades till efter "här", och länken är nu understruken (ny klass `.info-link-underline`) i stället för att bara luta sig mot `.info-link`s halvfeta stil — mot en bakgrund med flera `<strong>`-ord syntes den knappt.
 
