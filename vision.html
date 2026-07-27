@@ -136,7 +136,7 @@
   <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon.png">
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
-  <link rel="stylesheet" href="css/styles.css?v=0.9.288">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.299">
 </head>
 <body>
 
@@ -197,6 +197,20 @@
         <p>Men tills vidare rullar jag på, endast uppburen av lust, goda tillrop och kreativt driv allena – så får vi se hur det räcker.</p>
 
         <p class="info-creator">Hälsningar, Daniel<br>Norrto den 27 juli 2026</p>
+
+        <div class="vision-swish">
+          <h3>Vill du stötta projektet?</h3>
+          <button type="button" class="swish-btn" id="swishCopyBtn" title="Klicka för att kopiera telefonnumret">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"/>
+            </svg>
+            <span>Swisha</span>
+            <span class="swish-number">
+              <span data-c="0"></span><span data-c="7"></span><span data-c="0"></span><span data-c="8"></span>-<span data-c="9"></span><span data-c="0"></span><span data-c="0"></span><span data-c="0"></span><span data-c="9"></span><span data-c="3"></span>
+            </span>
+          </button>
+          <p class="swish-status" id="swishStatus" role="status" aria-live="polite"></p>
+        </div>
       </div>
     </section>
 
@@ -212,5 +226,6 @@
     </footer>
   </main>
 
+  <script src="js/vision-swish.js?v=0.9.299" defer></script>
 </body>
 </html>

@@ -1681,6 +1681,72 @@ body:has(#quiz:not(.hidden)) {
   border-top: 1px solid rgba(16, 185, 129, 0.15);
 }
 
+/* Swish-knappen längst ner på vision.html. Siffrorna renderas via CSS
+   content (se .swish-number nedan) i stället för att stå som text i
+   markupen, se js/vision-swish.js för varför. */
+.vision-swish {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.vision-swish h3 {
+  margin: 0 0 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.swish-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 24px;
+  border-radius: 999px;
+  border: 1.5px solid var(--accent-dark);
+  background: transparent;
+  color: var(--accent-dark);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+.swish-btn svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* --plate-teal + vit text: samma verifierade par som resten av sajtens
+   plattor, konstant i båda teman (se plate-kommentaren högre upp i filen). */
+.swish-btn:hover,
+.swish-btn:focus-visible {
+  background: var(--plate-teal);
+  color: var(--text-light);
+}
+
+.swish-btn:focus-visible {
+  outline: 2px solid var(--accent-dark);
+  outline-offset: 3px;
+}
+
+.swish-btn:active {
+  transform: scale(0.96);
+}
+
+.swish-number [data-c]::before {
+  content: attr(data-c);
+}
+
+.swish-status {
+  min-height: 1.2em;
+  margin: 10px 0 0;
+  font-size: 0.85rem;
+  color: var(--primary-deep);
+}
+
 .info-link {
   color: var(--primary-deep);
   text-decoration: none;
