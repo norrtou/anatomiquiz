@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.304
+- Kortade brevets avslutande mening på `vision.html` — den slutar nu vid "...allena.", "– så får vi se hur det räcker" är borttaget.
+
 ## 0.9.303
 - Bytte ut "produkten" mot "appen" i brevtexten på `vision.html` — konsekvent med hur resten av sajten talar om Anatomiquiz.
 
