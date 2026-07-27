@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.298
+- **Radbrytning mellan introtexten och vision-hänvisningen på `info.html`.** Länken till `vision.html` satt direkt efter introstycket med bara en `<br>` och inget mellanrum. Nu är den ett eget stycke, med samma 12 px marginal som resten av `.info-prose`-texten.
+
 ## 0.9.297
 - **Ny sida: `vision.html`.** Ett personligt brev från Daniel Medin — varför Anatomiquiz finns, hur det växte fram ur arbetsterapeutstudierna, varför AI används öppet i utvecklingen, och visionen för plattformens framtid. Länkad direkt efter introtexten på `info.html` ("Läs mer om tanken med anatomiquiz.se och visioner för framtiden här").
 - Fristående sida i samma mönster som `versionshistorik.html`: tre nivåers brödsmula (Anatomiquiz / Om Anatomiquiz / Vision), fullständig `<head>` med JSON-LD och `BreadcrumbList`. Registrerad i `scripts/amne.py`, `sitemap.xml` och `data/llms.json`.
