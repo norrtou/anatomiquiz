@@ -154,6 +154,11 @@ _s("versionshistorik.html",
    [],
    ["versionshistorik", "anatomiquiz", "uppdateringar", "kunskapsbank"])
 
+_s("vision.html",
+   [("Thing", "Vision")],
+   [],
+   ["vision", "anatomiquiz", "daniel medin", "arbetsterapeut", "student"])
+
 # --- Verktyg ----------------------------------------------------------------
 _s("verktyg/index.html",
    [("Thing", "Läkemedelsberäknare"), ("Thing", "Kliniska poängskalor"),
@@ -937,6 +942,7 @@ UTAN_LAR_UT = {
                  "undervisning",
     "integritet.html": "policytext",
     "versionshistorik.html": "ändringslogg",
+    "vision.html": "personlig text från upphovspersonen, inte undervisning",
 }
 
 

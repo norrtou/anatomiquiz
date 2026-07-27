@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.297
+- **Ny sida: `vision.html`.** Ett personligt brev från Daniel Medin — varför Anatomiquiz finns, hur det växte fram ur arbetsterapeutstudierna, varför AI används öppet i utvecklingen, och visionen för plattformens framtid. Länkad direkt efter introtexten på `info.html` ("Läs mer om tanken med anatomiquiz.se och visioner för framtiden här").
+- Fristående sida i samma mönster som `versionshistorik.html`: tre nivåers brödsmula (Anatomiquiz / Om Anatomiquiz / Vision), fullständig `<head>` med JSON-LD och `BreadcrumbList`. Registrerad i `scripts/amne.py`, `sitemap.xml` och `data/llms.json`.
+- Texten är användarens egen, med enbart småfel rättade: stavfel (`arbetsterapeutistudenter` → `arbetsterapeutstudenter`, `webutveckling` → `webbutveckling`, `infallsvinkar` → `infallsvinklar`, `möjlighet` → `möjligt` i sista meningen), dubbelkomparation (`mer rikare` → `rikare`), bindestreck i samordnade sammansättningar (`dubbel-, trippel- och femtielvakolla`), talstreck där tanke­streck avsågs, och förkortningarna `t om`/`dvs` till `t.o.m.`/`Dvs.` i linje med sajtens övriga bruk av `t.ex.`. Inget i sak är ändrat.
+
 ## 0.9.296
 - **Tooltiparna fungerar igen på fem sidor — de saknade skriptet som ritar dem.** En `.kb-term` är bara en länk till ordlistan; det är `js/kb-glossary.js` som läser `data-def` och visar rutan vid hover och tangentbordsfokus. Sidgeneratorerna skriver in den taggen själva, men de **handskrivna** sidorna gjorde det inte. NEWS2-sidan hade därför 38 uppslagsord som såg klickbara ut men aldrig visade något: `verktyg/akutmedicin/vitalparametrar.html` (38), `verktyg/akutmedicin/index.html` (3), `verktyg/lakemedelsberakning.html` (2), `kunskapsbank/nervtabeller.html` (2) och `kunskapsbank/index.html` (1).
 - **Orsaken var 0.9.286.** Då utökades `wire_terms.py --all` till `/verktyg/`, som dittills stått helt utanför tooltipsvepet. Termerna länkades in — men ingenting tog med skripttaggen, som fram till dess hade följt med automatiskt eftersom varje sida som bar kb-term också råkade vara generatorskriven.

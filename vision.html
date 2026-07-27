@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSP mot XSS (skript/stilar/data endast från egen origin). OBS: GitHub Pages tillåter inga egna HTTP-headers, därav meta-tagg; frame-ancestors/HSTS/COOP kan inte sättas via meta. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+
+  <!-- =========================================================
+       Primär SEO
+       ========================================================= -->
+  <title>Vision — Anatomiquiz</title>
+  <meta name="description" content="Personliga tankar från Daniel Medin om varför Anatomiquiz finns, hur det kom till under studietiden och visionen för plattformens framtid.">
+  <meta name="author" content="Daniel Medin (Norrtou Creations)">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+  <link rel="canonical" href="https://anatomiquiz.se/vision.html">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <!-- =========================================================
+       Open Graph (Facebook, LinkedIn, m.fl.)
+       ========================================================= -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anatomiquiz.se/vision.html">
+  <meta property="og:title" content="Vision — Anatomiquiz">
+  <meta property="og:description" content="Personliga tankar från Daniel Medin om varför Anatomiquiz finns och visionen för plattformens framtid.">
+  <meta property="og:image" content="https://anatomiquiz.se/img/og-image.png">
+  <meta property="og:image:width" content="1518">
+  <meta property="og:image:height" content="864">
+  <meta property="og:image:alt" content="Anatomiquiz — interaktiv anatomiquiz på svenska">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="Anatomiquiz">
+
+  <!-- =========================================================
+       Twitter / X Card
+       ========================================================= -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vision — Anatomiquiz">
+  <meta name="twitter:description" content="Personliga tankar från Daniel Medin om varför Anatomiquiz finns och visionen för plattformens framtid.">
+  <meta name="twitter:image" content="https://anatomiquiz.se/img/og-image.png">
+  <meta name="twitter:image:alt" content="Anatomiquiz — interaktiv anatomiquiz på svenska">
+
+  <!-- =========================================================
+       Webbläsartema
+       ========================================================= -->
+  <meta name="theme-color" content="#10b981">
+  <meta name="color-scheme" content="light dark">
+  <!-- Tema (ljust/mörkt). Laddas SYNKRONT och före stilmallen: attributet
+       data-theme måste sitta på <html> innan första målningen, annars
+       blinkar sidan ljus. Inline gick inte – CSP:n tillåter bara egen origin. -->
+  <script src="/js/theme.js?v=0.9.260"></script>
+
+  <!-- =========================================================
+       Strukturerad data — schema.org (JSON-LD)
+       ========================================================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Vision — Anatomiquiz",
+    "description": "Personliga tankar från Daniel Medin om varför Anatomiquiz finns, hur det kom till under studietiden och visionen för plattformens framtid.",
+    "inLanguage": "sv-SE",
+    "url": "https://anatomiquiz.se/vision.html",
+    "dateModified": "2026-07-27",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Anatomiquiz",
+      "url": "https://anatomiquiz.se/"
+    },
+    "datePublished": "2026-07-27",
+    "author": {
+      "@type": "Person",
+      "@id": "https://anatomiquiz.se/#daniel-medin",
+      "name": "Daniel Medin",
+      "description": "Utbildad medicinsk sekreterare och studerande i arbetsterapi vid Lunds universitet, med särskilt intresse för anatomi.",
+      "url": "https://norrtou.se",
+      "sameAs": [
+        "https://norrtou.se",
+        "https://www.linkedin.com/in/danielmedin",
+        "https://github.com/norrtou"
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://anatomiquiz.se/#norrtou-creations",
+      "name": "Norrtou Creations",
+      "url": "https://norrtou.se",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://anatomiquiz.se/img/icon-512.png"
+      },
+      "sameAs": [
+        "https://github.com/norrtou"
+      ]
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Anatomiquiz",
+          "item": "https://anatomiquiz.se/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Om Anatomiquiz",
+          "item": "https://anatomiquiz.se/info.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Vision",
+          "item": "https://anatomiquiz.se/vision.html"
+        }
+      ]
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Vision"
+      }
+    ],
+    "keywords": [
+      "vision",
+      "anatomiquiz",
+      "daniel medin",
+      "arbetsterapeut",
+      "student"
+    ]
+  }
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon.png">
+  <link rel="apple-touch-icon" href="/img/icon-192.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.288">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+  <main id="main" class="container" role="main">
+
+    <header class="header">
+      <div class="header-title">
+        <h1>Vision</h1>
+      </div>
+    </header>
+
+    <section class="card" aria-labelledby="visionHeading">
+
+      <!-- Brödsmula — vision.html är en undersida till Om Anatomiquiz -->
+      <nav class="breadcrumb" aria-label="Brödsmula">
+        <a href="./" class="breadcrumb-link">← Anatomiquiz</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="info.html" class="breadcrumb-link">Om Anatomiquiz</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <span class="breadcrumb-current" aria-current="page">Vision</span>
+      </nav>
+
+      <h2 id="visionHeading" class="about-title">Några personliga ord från upphovsmakaren.</h2>
+
+      <div class="info-prose">
+        <p class="about-lead">All kurslitteratur för studenter är i regel väldigt dyr. De stora vackra tegelstensböckerna om anatomi tillhör definitivt inte den billigare änden heller. Det här beror ju på både små upplagor, stor kostnad att ta fram, men om vi ska vara ärliga, tyvärr även girighet hos förlagen. Jag har väldigt svårt för att studier blir en klassfråga. Det är det så mycket som redan är.</p>
+
+        <p>Så när jag började studera till arbetsterapeut vårterminen 2026 vid Lunds universitet, föddes tanken på att skapa ett litet gratis hjälpmedel. Efter tidigare studier till medicinsk sekreterare hade jag redan ett intresse för medicinsk terminologi, och nu skulle det krävas ytterligare investeringar av mig när nivån ändå ökade något.</p>
+
+        <p>Jag bestämde mig då för att lägga pengarna på en domän istället för en kursbok till. Samtidigt se om jag kunde bygga en liten riktad quizapp för mig och mina klasskamrater för våra behov. Så de första versionerna innehöll bara precis material riktat åt just arbetsterapeutstudenter. Vilket avspeglas ännu i att detta material både är mer personligt i sin karaktär och troligen lite rikare i omfång ännu.</p>
+
+        <p>I takt med att jag fick god respons från några i klassen, fastnade jag också i processen. Det är ganska kul att vibekoda fram saker. Förvisso kan jag en del programmering och webbutveckling sedan tidigare, men inte tillräckligt för att bygga upp en komplicerad applikation som uppfyller alla moderna krav om agentisk webbinläsning och andra GEO/SEO-teknikaliteter. Mina rötter vilar i kommunikation och att skriva.</p>
+
+        <p>Så skamlöst har jag istället blivit en fena på att nyttja artificiell intelligens i processen. Folk har så mycket åsikter om AI till höger och vänster, men idag är det ett hjälpmedel på alla byråer som sysslar med utveckling och programmering. Deal with it. Det är målet som är det viktiga, inte vägen dit, åtminstone i denna sorts ytterst funktionella produkt.</p>
+
+        <p>Min plan är att fortsätta utveckla plattformen. Dels med många fler och bättre quiz, dels bygga ut verktygen för kliniska analyser, dels ordlistan (som nog är en av de rikaste som existerar på medicinska termer – i världen, t.o.m.), dels försöka hitta nya kul sätt att presentera quiz på i olika spelformer.</p>
+
+        <p>Det vore kul med en internationell version, möjlighet för att kunna tävla mot andra, men det finns inte ekonomiska eller tidsmässiga resurser för mig att bygga i dagsläget, då det sistnämnda kräver en bättre plattformslösning än den statiska jag har nu och det förstnämnda skulle ta enormt lång tid i anspråk att bygga. Och vem vet, plötsligt är kanske hela idén snodd av någon. Det är det som kan ske när som helst i en fri värld med open source och annat liknande. Jag har inga resurser att konkurrera med ekonomiskt och inget material jag arbetar med är något jag kan ha upphovsanspråk på heller mer än kring det uppenbara.</p>
+
+        <p>Men det som skiljer mig från en webbyrå med stora resurser och bättre kompetens kring utveckling och programmering är att jag faktiskt kan lite om ämnet jag arbetar med. Så det som gör denna app är att den kommer med mig, istället för en identitetslös byrå som inte bryr sig.</p>
+
+        <p>Jag märker ofta att olika applösningar, spel, quiz och guider där ute är ambitiösa på det tekniska och som kan sådant jag inte kan bygga (just nu iaf), faller hårt på att innehållet inte är så bra. Det märks omgående när någon som inte kan något om en sak försöker tjäna pengar på det, likt så många utvecklare och byråer där ute gör.</p>
+
+        <p>Och i slutändan kan du ha hur snyggt presenterat ”professionellt material” och ”tekniskt korrekta lösningar” som helst, för om innehållet på en lärplattform är fullt av fel, så är det inte ett användbart och säkert verktyg.</p>
+
+        <p>Är mitt innehåll utan fel? Knappast, och det är en skrämmande tanke som jag hela tiden har i bakhuvudet. Jag vill genuint inte göra en produkt med medicinska faktafel i, av uppenbara etiska skäl. Men faktafel smyger sig in överallt och det finns många ämnesfält här i quiz där jag inte alls kan tillräckligt för att avgöra om frågorna är fel. Så även om jag kan astronomiskt mycket mer om anatomi och medicinsk terminologi än genomsnittsutvecklaren, så är det en omöjlig uppgift att göra lärplattformar felfria.</p>
+
+        <p>Jag har gjort mycket för att säkerställa och dubbel-, trippel- och femtielvakolla innehållet, men det kommer alltid finnas luckor och fel som missas både av människa och maskin.</p>
+
+        <p>Det är en liten tröst i sammanhanget, för mitt samvetes skull, men under resans gång har jag även sett luckor och fel i material gjort och vidimerat av individer med betydligt finare titlar inom medicin, anatomi och fysiologi än vad jag har. Dvs. underskrivet av läkare, professorer och slikt.</p>
+
+        <p>Alla gör fel, t.o.m. experternas experter. Och ibland finns inte ens något rätt eller fel, utan bara olika infallsvinklar och åsikter. Att produkten är ett komplement till andra övervakade kvalificerade studier kan också inte nog understrykas och jag gör så genomgående genom hela applikationen. Men det sagt vill jag fortfarande att den ska vara så nära 100% korrekt som den kan vara. Därför tar jag tacksamt emot input om uppenbara fel.</p>
+
+        <p>Min vision framåt är att fortsätta bygga på denna applikation så länge det finns en efterfrågan och jag har tid och möjlighet. Men då även jag är en fattig student med annat att göra än att felsäkra quiztabeller, tas bidrag tacksamt emot i form av både faktagranskning från kunniga ögon, bra önskemål från vetgiriga studenter och små Swish från den som vill hjälpa projektet. Tanken är verkligen inte att jag ska bli rik på detta genom att be om bidrag, men det vore skönt om underhållet av det åtminstone finansierades på egen hand och jag kan hålla invasiva finansieringslösningar (som både är irriterande för besökaren och för mig som utvecklare) borta. Och finns det pengar till att utveckla plattformen så att den kan innehålla mer kostsamma lösningar, ja då är det ju bara kul det med tycker jag, som vill leverera en så rolig och bra produkt som möjligt.</p>
+
+        <p>Men tills vidare rullar jag på, endast uppburen av lust, goda tillrop och kreativt driv allena – så får vi se hur det räcker.</p>
+
+        <p class="info-creator">Hälsningar, Daniel<br>Norrto den 27 juli 2026</p>
+      </div>
+    </section>
+
+    <div class="actions">
+      <a href="info.html" class="btn">← Om Anatomiquiz</a>
+      <a href="./" class="btn">Till quizet</a>
+    </div>
+
+    <footer class="page-footer">
+      <p>Utbildningsmaterial, inte medicinsk rådgivning. Innehållet är avsett för studier och ersätter inte kurslitteratur, undervisning eller kliniska riktlinjer. Det ska inte användas som underlag för vård eller behandling av patienter.</p>
+      <p>Anatomiquiz använder inga kakor och samlar inte in personuppgifter. Läs mer i <a href="/integritet.html" class="info-link">integritetspolicyn</a>.</p>
+      <p class="page-updated">Senast uppdaterad <time data-updated datetime="2026-07-27">27 juli 2026</time></p>
+    </footer>
+  </main>
+
+</body>
+</html>

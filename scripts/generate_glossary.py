@@ -1157,6 +1157,7 @@ def build_sitemap(group_files: list[str]) -> str:
     blocks.append(url_block(f"{SITE}/info.html", "monthly", "0.5"))
     blocks.append(url_block(f"{SITE}/spellagen.html", "monthly", "0.6"))
     blocks.append(url_block(f"{SITE}/versionshistorik.html", "weekly", "0.3"))
+    blocks.append(url_block(f"{SITE}/vision.html", "yearly", "0.3"))
     blocks.append(url_block(f"{SITE}/integritet.html", "yearly", "0.3"))
 
     return (
