@@ -1806,6 +1806,10 @@ body:has(#quiz:not(.hidden)) {
   text-decoration: underline;
 }
 
+.info-link-underline {
+  text-decoration: underline;
+}
+
 #info h2 {
   font-size: 1.05rem;
 }

@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.302
+- **Vision-hänvisningen på `info.html` fick en rad till och en synlig länk.** "...och hur du kan hjälpa till att förverkliga det" lades till efter "här", och länken är nu understruken (ny klass `.info-link-underline`) i stället för att bara luta sig mot `.info-link`s halvfeta stil — mot en bakgrund med flera `<strong>`-ord syntes den knappt.
+
 ## 0.9.301
 - **Rensat upp "Vem har nytta av Anatomiquiz?" på `info.html`.** Listan med yrken var en enda flat rad utan inbördes ordning, där orelaterade specialiteter (t.ex. dietist, audionom och optiker) klumpades ihop utan anledning. Nu är yrkena grupperade i sju kompetensområden (vård och omvårdnad, rehabilitering, tandvård, diagnostik, sinnen och kommunikation, administration, hälsa/kost/träning) med en fet etikett per grupp.
 - Tog bort "sjukgymnast" som eget ord — det är inte en yrkestitel i dagens Sverige, bara fysioterapeuternas gamla titel. Listan säger nu bara "fysioterapeuter".
