@@ -1681,8 +1681,9 @@ body:has(#quiz:not(.hidden)) {
   border-top: 1px solid rgba(16, 185, 129, 0.15);
 }
 
-/* Swish-knappen längst ner på vision.html. Siffrorna renderas via CSS
-   content (se .swish-number nedan) i stället för att stå som text i
+/* Kontaktraden längst ner på vision.html: sociala ikoner, Swish-knappen och
+   mejlknappen i en enda centrerad, radbrytande rad. Swish-numret renderas via
+   CSS content (se .swish-number nedan) i stället för att stå som text i
    markupen, se js/vision-swish.js för varför. */
 .vision-swish {
   margin-top: 18px;
@@ -1696,7 +1697,52 @@ body:has(#quiz:not(.hidden)) {
   color: var(--text-secondary);
 }
 
-.swish-btn {
+.vision-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.vision-social {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* Samma tappyta (40×40, WCAG 2.5.8) och ikonstorlek som .intro-social på
+   index.html, men tonad mot samma teal som knapparna intill – en gemensam
+   rad ska läsas som en enhet. */
+.vision-social .social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.vision-social .social-link svg {
+  display: block;
+  width: 19px;
+  height: 19px;
+}
+
+.vision-social .social-link:hover,
+.vision-social .social-link:focus-visible {
+  color: var(--accent-dark);
+}
+
+.vision-social .social-link:focus-visible {
+  outline: 2px solid var(--accent-dark);
+  outline-offset: 2px;
+}
+
+.vision-pill {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -1709,11 +1755,12 @@ body:has(#quiz:not(.hidden)) {
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.3px;
+  text-decoration: none;
   cursor: pointer;
   transition: background-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
 }
 
-.swish-btn svg {
+.vision-pill svg {
   width: 20px;
   height: 20px;
   flex-shrink: 0;
@@ -1721,18 +1768,18 @@ body:has(#quiz:not(.hidden)) {
 
 /* --plate-teal + vit text: samma verifierade par som resten av sajtens
    plattor, konstant i båda teman (se plate-kommentaren högre upp i filen). */
-.swish-btn:hover,
-.swish-btn:focus-visible {
+.vision-pill:hover,
+.vision-pill:focus-visible {
   background: var(--plate-teal);
   color: var(--text-light);
 }
 
-.swish-btn:focus-visible {
+.vision-pill:focus-visible {
   outline: 2px solid var(--accent-dark);
   outline-offset: 3px;
 }
 
-.swish-btn:active {
+.vision-pill:active {
   transform: scale(0.96);
 }
 

@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.300
+- **Sociala ikoner och en mejlknapp bredvid Swish-knappen på `vision.html`.** Samma Instagram-/Facebook-ikoner som på `index.html` (`.intro-social`), i samma tappyta och ikonstorlek, står nu till vänster om Swish-knappen. En ny pillerknapp med `mailto:anatomiquizse@gmail.com` (kuvertikon, "Mejla") står till höger, i samma stil. Allt i en enda centrerad, radbrytande rad.
+- Delade knappstilen mellan Swish- och mejlknappen: `.swish-btn` döptes om till det generella `.vision-pill`, siffer-/statusklasserna (`.swish-number`, `.swish-status`) är oförändrade.
+
 ## 0.9.299
 - **Swish-knapp längst ner på `vision.html`.** En liten pillerformad knapp ("Swisha 0708-900093" med ikon) efter brevets signatur, i sajtens gröna/teala palett. Klick kopierar numret till urklipp, hover/fokus visar tooltipen "Klicka för att kopiera telefonnumret".
 - Numret står aldrig som en sammanhängande sträng i HTML- eller JS-källan — varje siffra ligger i ett eget `data-c`-attribut som CSS ritar ut via `::before`, och `js/vision-swish.js` sätter ihop siffrorna och `aria-label` först i körning. Ett enkelt textscrap av sidkällan hittar därför ingen matchande sifferföljd, motsvarande hur telefonnummer ofta göms mot spamskördare som bild i stället för text.
