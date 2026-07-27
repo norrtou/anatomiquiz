@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.301
+- **Rensat upp "Vem har nytta av Anatomiquiz?" på `info.html`.** Listan med yrken var en enda flat rad utan inbördes ordning, där orelaterade specialiteter (t.ex. dietist, audionom och optiker) klumpades ihop utan anledning. Nu är yrkena grupperade i sju kompetensområden (vård och omvårdnad, rehabilitering, tandvård, diagnostik, sinnen och kommunikation, administration, hälsa/kost/träning) med en fet etikett per grupp.
+- Tog bort "sjukgymnast" som eget ord — det är inte en yrkestitel i dagens Sverige, bara fysioterapeuternas gamla titel. Listan säger nu bara "fysioterapeuter".
+- Det generella intresset för kroppen ("... och andra med ett intresse för kroppen") är nu en egen avslutande mening i stället för att hänga kvar sist i en yrkespunkt.
+
 ## 0.9.300
 - **Sociala ikoner och en mejlknapp bredvid Swish-knappen på `vision.html`.** Samma Instagram-/Facebook-ikoner som på `index.html` (`.intro-social`), i samma tappyta och ikonstorlek, står nu till vänster om Swish-knappen. En ny pillerknapp med `mailto:anatomiquizse@gmail.com` (kuvertikon, "Mejla") står till höger, i samma stil. Allt i en enda centrerad, radbrytande rad.
 - Delade knappstilen mellan Swish- och mejlknappen: `.swish-btn` döptes om till det generella `.vision-pill`, siffer-/statusklasserna (`.swish-number`, `.swish-status`) är oförändrade.
