@@ -102,9 +102,16 @@ class SelectEl extends El {
   set value(v) { this._value = v; }
 }
 
-/* Monteringspunkten på sidan: <div data-akut="news2"></div>. */
-const plats = new El('div');
-plats.setAttribute('data-akut', 'news2');
+/* Monteringspunkterna på sidorna: en <div data-akut="…"> per skala.
+   Flera skalor monteras samtidigt, precis som på syra-bas.html. */
+const SKALNAMN = ['news2', 'natrium_korrigerat', 'osmolalitet', 'blodgas'];
+const platser = {};
+SKALNAMN.forEach((namn) => {
+  const p = new El('div');
+  p.setAttribute('data-akut', namn);
+  platser[namn] = p;
+});
+const plats = platser.news2;   // bakåtkompatibelt namn för NEWS2-avsnittet nedan
 const utanJs = new El('div');
 
 const registry = { 'akut-utan-js': utanJs };
@@ -114,8 +121,8 @@ global.document = {
   createElement: (t) => (t === 'select' ? new SelectEl() : new El(t)),
   getElementById: (id) => registry[id] || null,
   addEventListener: () => {},
-  querySelector: (sel) => (sel === '[data-akut]' ? plats : null),
-  querySelectorAll: (sel) => (sel === '[data-akut]' ? [plats] : [])
+  querySelector: (sel) => (sel === '[data-akut]' ? platser.news2 : null),
+  querySelectorAll: (sel) => (sel === '[data-akut]' ? Object.values(platser) : [])
 };
 
 /* Modulen hämtar facit med fetch. Skalet läser samma fil från disk,
@@ -235,10 +242,12 @@ async function kör() {
   await new Promise(r => setTimeout(r, 0));
   await new Promise(r => setTimeout(r, 0));
 
-  if (!plats.children.length) {
-    console.log('FEL: ingen skala monterades i <div data-akut="news2">.');
-    process.exit(1);
-  }
+  SKALNAMN.forEach((namn) => {
+    if (!platser[namn].children.length) {
+      console.log('FEL: ingen skala monterades i <div data-akut="' + namn + '">.');
+      process.exit(1);
+    }
+  });
   plocka();
 
   rubrik('Montering');
@@ -403,6 +412,242 @@ async function kör() {
   pastå('valen går till utgångsläget', falt.acvpu.valjare.value, 'A');
   pastå('skalan återställs', falt.skala.valjare.value, '1');
   pastå('uppmaningen är tillbaka', utVarde(), 'Fyll i 5 parametrar till.');
+
+  /* =========================================================
+     Formelräknarna (mönster C): korrigerat natrium, osmolalitet
+     =========================================================
+     Ingen tabell att pröva bandgräns för bandgräns här — det är
+     räkningen som är sanningen. Talen nedan är handräknade mot
+     formlerna i js/akutmedicin.js (§0.3: mekanisk, entydig
+     uträkning), med ett par medvetet runda indata (t.ex. P-glukos
+     11,1 mmol/L = exakt det dubbla av referenspunkten 5,55) så att
+     facit går att kontrollera för hand utan avrundningsfel. */
+
+  function plockaFormel(namn, faltNamn, utdataNamn) {
+    const kort = platser[namn].children[0];
+    const falt = {};
+    faltNamn.forEach((n) => {
+      const f = kort.find((e) => e._class.has('vt-field') && e.dataset.falt === n);
+      falt[n] = { input: f.find((e) => e.tagName === 'INPUT') };
+    });
+    const utEls = kort.findAll((e) => e._class.has('vt-out'));
+    const svarEls = kort.findAll((e) => e._class.has('vt-svarsruta'));
+    const rader = {};
+    utdataNamn.forEach((n, i) => {
+      const ut = utEls[i];
+      const sv = svarEls[i];
+      rader[n] = {
+        ut,
+        varde: ut.children[1],
+        calc: ut.children[2],
+        not: ut.children[3],
+        svarsruta: sv,
+        svarInput: sv.find((e) => e.tagName === 'INPUT'),
+        svarKnapp: sv.find((e) => e.tagName === 'BUTTON'),
+        dom: sv.children[sv.children.length - 1]
+      };
+    });
+    return {
+      kort, falt, rader,
+      varn: kort.find((e) => e._class.has('vt-warn')),
+      lagesknappar: kort.find((e) => e._class.has('vt-mode')).children,
+      nollknapp: kort.find((e) => e._class.has('vt-nollstall')).children[0]
+    };
+  }
+
+  function skrivIn(falt, namn, v) {
+    falt[namn].input.value = String(v);
+    falt[namn].input.fire('input');
+  }
+
+  /* ---- Korrigerat natrium ---- */
+  rubrik('Korrigerat natrium — Katz och Hillier');
+  {
+    const r = plockaFormel('natrium_korrigerat', ['na', 'glukos'], ['katz', 'hillier']);
+
+    skrivIn(r.falt, 'na', 128);
+    pastå('bara ett fält ifyllt', r.rader.katz.varde.textContent, 'Fyll i glukos också.');
+
+    /* P-glukos 11,1 mmol/L är exakt dubbla referenspunkten 5,55, så
+       (11,1 − 5,55) / 5,55 = 1 exakt — inga avrundningsfel att jaga. */
+    skrivIn(r.falt, 'na', 140); skrivIn(r.falt, 'glukos', 11.1);
+    pastå('Katz, na 140 + glukos 11,1', r.rader.katz.varde.textContent, '141,6 mmol/L');
+    pastå('Hillier, na 140 + glukos 11,1', r.rader.hillier.varde.textContent, '142,4 mmol/L');
+    paståMed('uträkningen syns', r.rader.katz.calc.textContent, '140 + 1,6 × (11,1 − 5,55) / 5,55');
+    pastå('normalt Katz-natrium ger ingen anmärkning', r.rader.katz.not.hidden, true);
+
+    skrivIn(r.falt, 'na', 130); skrivIn(r.falt, 'glukos', 11.1);
+    pastå('Katz under 137', r.rader.katz.varde.textContent, '131,6 mmol/L');
+    pastå('lågt korrigerat natrium flaggas', r.rader.katz.not.hidden, false);
+    paståMed('flaggan nämner hyponatremi', r.rader.katz.not.textContent, 'hyponatremi');
+
+    skrivIn(r.falt, 'na', 145); skrivIn(r.falt, 'glukos', 11.1);
+    pastå('Katz över 145', r.rader.katz.varde.textContent, '146,6 mmol/L');
+    paståMed('högt korrigerat natrium flaggas', r.rader.katz.not.textContent, 'hypernatremi');
+
+    /* Rimlighetskontrollen */
+    skrivIn(r.falt, 'na', 128); skrivIn(r.falt, 'glukos', 90);
+    pastå('orimligt högt glukos varnar', r.varn.hidden, false);
+
+    /* Träningsläget: två svarsrutor, en per formel */
+    skrivIn(r.falt, 'na', 140); skrivIn(r.falt, 'glukos', 11.1);
+    r.lagesknappar.find((b) => b.textContent === 'Träna').fire('click');
+    pastå('räknat värde döljs i träningsläget', r.rader.katz.ut.hidden, true);
+    r.rader.katz.svarInput.value = '141,6';
+    r.rader.katz.svarKnapp.fire('click');
+    pastå('rätt Katz-svar', r.rader.katz.dom.className, 'vt-dom ratt');
+    r.rader.hillier.svarInput.value = '100';
+    r.rader.hillier.svarKnapp.fire('click');
+    pastå('fel Hillier-svar', r.rader.hillier.dom.className, 'vt-dom fel');
+    paståMed('facit visas vid fel svar', r.rader.hillier.dom.textContent, '142,4');
+    r.lagesknappar.find((b) => b.textContent === 'Räkna').fire('click');
+
+    r.nollknapp.fire('click');
+    pastå('nollställt', r.falt.na.input.value, '');
+  }
+
+  /* ---- Effektiv serumosmolalitet ---- */
+  rubrik('Effektiv serumosmolalitet');
+  {
+    const r = plockaFormel('osmolalitet', ['na', 'k', 'glukos'], ['osm']);
+
+    skrivIn(r.falt, 'na', 140); skrivIn(r.falt, 'k', 4); skrivIn(r.falt, 'glukos', 5);
+    pastå('2×(140+4)+5', r.rader.osm.varde.textContent, '293 mosmol/kg');
+    pastå('normalvärde ger ingen anmärkning', r.rader.osm.not.hidden, true);
+
+    skrivIn(r.falt, 'glukos', 7);
+    pastå('gränsen 295 är fortfarande normal', r.rader.osm.varde.textContent, '295 mosmol/kg');
+    pastå('295 flaggas inte', r.rader.osm.not.hidden, true);
+
+    skrivIn(r.falt, 'glukos', 8);
+    pastå('296 är lätt förhöjt', r.rader.osm.varde.textContent, '296 mosmol/kg');
+    pastå('296 flaggas', r.rader.osm.not.hidden, false);
+    paståMed('måttlig förhöjning', r.rader.osm.not.textContent, 'förhöjd');
+
+    skrivIn(r.falt, 'na', 140); skrivIn(r.falt, 'k', 5); skrivIn(r.falt, 'glukos', 30);
+    pastå('2×(140+5)+30 = 320, HHS-nivå', r.rader.osm.varde.textContent, '320 mosmol/kg');
+    pastå('HHS-notisen visas', r.rader.osm.not.className, 'vt-krit');
+    paståMed('HHS nämns', r.rader.osm.not.textContent, 'HHS');
+
+    r.nollknapp.fire('click');
+    pastå('nollställt', r.falt.na.input.value, '');
+  }
+
+  /* ---- Blodgasklassificeraren ---- */
+  rubrik('Blodgasklassificeraren');
+  {
+    /* Speglar visaTal() i js/akutmedicin.js exakt (3 decimaler,
+       svenskt kommatecken) så att de förväntade talen i påståendena
+       nedan är uträknade en gång, inte avskrivna för hand två gånger. */
+    const v3 = (n) => String(Math.round(n * 1000) / 1000).replace('.', ',');
+
+    function plockaBlodgas() {
+      const kort = platser.blodgas.children[0];
+      const falt = {};
+      ['ph', 'pco2', 'hco3', 'be', 'na', 'cl', 'laktat'].forEach((n) => {
+        const f = kort.find((e) => e._class.has('vt-field') && e.dataset.falt === n);
+        falt[n] = { input: f.find((e) => e.tagName === 'INPUT') };
+      });
+      return {
+        kort, falt,
+        varn: kort.find((e) => e._class.has('vt-warn')),
+        ut: kort.find((e) => e._class.has('vt-out')),
+        utVarde: kort.find((e) => e._class.has('vt-out')).children[0],
+        slutsats: kort.find((e) => e._class.has('vt-band')),
+        stegBox: kort.find((e) => e._class.has('vt-steg')),
+        nollknapp: kort.find((e) => e._class.has('vt-nollstall')).children[0]
+      };
+    }
+    function slutsatsTitel(r) { return r.slutsats.children[0].textContent; }
+    function stegText(r, titel) {
+      const blk = r.stegBox.children.find((b) => b.children[0].textContent === titel);
+      return blk ? blk.children[1].textContent : null;
+    }
+    function fyll(r, varden) {
+      r.nollknapp.fire('click');
+      Object.keys(varden).forEach((n) => { r.falt[n].input.value = String(varden[n]); r.falt[n].input.fire('input'); });
+    }
+
+    const r = plockaBlodgas();
+
+    rubrik('  Ofullständiga värden');
+    fyll(r, { ph: 7.2 });
+    paståMed('efterlyser resten', r.utVarde.textContent, 'Fyll i');
+    pastå('ingen slutsats än', r.slutsats.hidden, true);
+
+    rubrik('  Ren metabol acidos, adekvat kompenserad (Winters exakt)');
+    fyll(r, { ph: 7.20, hco3: 14, be: -12, pco2: 3.9 });
+    pastå('slutsatsen', slutsatsTitel(r), 'Primär metabol acidos, adekvat kompenserad.');
+    pastå('nivån', r.slutsats.className, 'vt-band is-lag');
+    paståMed('primärtexten nämner metabol acidos', stegText(r, 'Primär rubbning'), 'primär metabol acidos');
+    paståMed('BE bekräftar', stegText(r, 'Primär rubbning'), 'bekräftar den metabola komponenten');
+    paståMed('Winters uträkning', stegText(r, 'Förväntad kompensation'), '0,2 × 14 + 1,1 = ' + v3(0.2 * 14 + 1.1));
+    paståMed('inom spannet', stegText(r, 'Förväntad kompensation'), 'adekvat respiratorisk kompensation');
+
+    rubrik('  Metabol acidos med otillräcklig kompensation (Winters avviker)');
+    fyll(r, { ph: 7.28, hco3: 14, be: -12, pco2: 5.0 });
+    paståMed('otillräcklig kompensation', stegText(r, 'Förväntad kompensation'), 'högre än väntat');
+    paståMed('flaggar samtidig respiratorisk acidos', stegText(r, 'Förväntad kompensation'), 'samtidig respiratorisk acidos');
+    paståMed('slutsatsen nämner samtidig rubbning', slutsatsTitel(r), 'samtidig rubbning');
+
+    rubrik('  Ren respiratorisk acidos, akut kompensation');
+    fyll(r, { ph: 7.30, hco3: 25, be: 1, pco2: 6.6 });
+    pastå('primärtexten', slutsatsTitel(r), 'Primär respiratorisk acidos, adekvat kompenserad.');
+    paståMed('båda nivåerna nämns', stegText(r, 'Förväntad kompensation'), v3(24 + 0.75 * 1.3));
+    paståMed('den kroniska nivån också', stegText(r, 'Förväntad kompensation'), v3(24 + 3.4 * 1.3));
+    paståMed('inom spannet', stegText(r, 'Förväntad kompensation'), 'inom det förväntade spannet');
+
+    rubrik('  Ren respiratorisk alkalos, med kompensatoriskt lågt bikarbonat');
+    fyll(r, { ph: 7.50, hco3: 20, be: -2, pco2: 3.5 });
+    pastå('primärtexten', slutsatsTitel(r), 'Primär respiratorisk alkalos, adekvat kompenserad.');
+    paståMed('kompensationen', stegText(r, 'Förväntad kompensation'), 'inom det förväntade spannet');
+
+    rubrik('  Kombinerad metabol och respiratorisk acidos');
+    fyll(r, { ph: 7.05, hco3: 14, be: -14, pco2: 7.0 });
+    pastå('slutsatsen', slutsatsTitel(r), 'Kombinerad metabol och respiratorisk acidos.');
+    pastå('nivån', r.slutsats.className, 'vt-band is-hog');
+    pastå('ingen egen kompensationsberäkning för blandade rubbningar', stegText(r, 'Förväntad kompensation'), null);
+
+    rubrik('  Normal blodgas');
+    fyll(r, { ph: 7.40, hco3: 24, be: 0, pco2: 5.3 });
+    pastå('slutsatsen', slutsatsTitel(r), 'Normal blodgas.');
+    pastå('nivån', r.slutsats.className, 'vt-band is-ingen');
+
+    rubrik('  Surt pH utan avvikande bikarbonat eller pCO₂');
+    fyll(r, { ph: 7.30, hco3: 24, be: 0, pco2: 5.3 });
+    pastå('slutsatsen', slutsatsTitel(r), 'Oklar bild — kontrollera värdena.');
+
+    rubrik('  Normalt pH trots avvikande komponenter (fullt kompenserad)');
+    fyll(r, { ph: 7.40, hco3: 18, be: -6, pco2: 4.0 });
+    pastå('slutsatsen', slutsatsTitel(r), 'Normalt pH trots avvikande komponent — kompenserad eller blandad rubbning.');
+
+    rubrik('  Anjongap — bara när Na och Cl fylls i, bara vid metabol acidos');
+    fyll(r, { ph: 7.20, hco3: 14, be: -12, pco2: 3.9 });
+    pastå('inget anjongapssteg utan Na/Cl', stegText(r, 'Anjongap'), null);
+    fyll(r, { ph: 7.20, hco3: 14, be: -12, pco2: 3.9, na: 140, cl: 100 });
+    paståMed('anjongapet räknas ut', stegText(r, 'Anjongap'), 'Anjongap = 140 − (100 + 14) = ' + v3(140 - (100 + 14)));
+    paståMed('högt anjongap', stegText(r, 'Anjongap'), 'Högt anjongap');
+    fyll(r, { ph: 7.20, hco3: 14, be: -12, pco2: 3.9, na: 140, cl: 100, laktat: 8 });
+    paståMed('förhöjt laktat förklarar gapet', stegText(r, 'Anjongap'), 'laktacidos förklarar hela eller delar av gapet');
+    fyll(r, { ph: 7.20, hco3: 14, be: -12, pco2: 3.9, na: 140, cl: 100, laktat: 1 });
+    paståMed('normalt laktat pekar bort från laktacidos', stegText(r, 'Anjongap'), 'något annat än laktacidos');
+    fyll(r, { ph: 7.20, hco3: 14, be: -12, pco2: 3.9, na: 140, cl: 118 });
+    paståMed('normalt anjongap', stegText(r, 'Anjongap'), 'Normalt anjongap');
+
+    rubrik('  Inget anjongapssteg vid enbart kompensatoriskt lågt bikarbonat');
+    fyll(r, { ph: 7.50, hco3: 20, be: -2, pco2: 3.5, na: 140, cl: 100 });
+    pastå('respiratorisk alkalos triggar inte anjongapet', stegText(r, 'Anjongap'), null);
+
+    rubrik('  Rimlighetskontroll');
+    fyll(r, { ph: 7.20, hco3: 14, be: -12, pco2: 3.9 });
+    pastå('inga orimliga värden', r.varn.hidden, true);
+    fyll(r, { ph: 7.20, hco3: 14, be: -12, pco2: 40 });
+    pastå('orimligt pCO₂ varnar', r.varn.hidden, false);
+    paståMed('bedömningen görs ändå', r.slutsats.hidden, false);
+
+    r.nollknapp.fire('click');
+    pastå('nollställt', r.falt.ph.input.value, '');
+  }
 
   console.log('\n' + (fel === 0
     ? `ALLA ${ok} TESTER GRÖNA`

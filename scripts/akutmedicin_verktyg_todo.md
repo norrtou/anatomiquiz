@@ -242,25 +242,18 @@ Nya sidor **stoppar bygget** om de inte registreras — det är §0.4 och det ä
 
 ## 7. Releaseordning och status
 
-> ⏸️ **PAUSAT 2026-07-27 — vila på användarens begäran.** Krediterna räcker bara till
-> småpyssel i flera dagar framåt, och släpp 3–6 är alla stora byggen. **Ingen av
-> punkterna nedan startas** förrän användaren själv säger till att vi fortsätter.
-> Fråga inte, föreslå inte, plocka inte "en liten bit" av släpp 3 i förbifarten.
-> Släpp 1 och 2 är levererade och live — inget står halvfärdigt, ingenting behöver
-> städas innan pausen. Vid återstart: läs §7 nedifrån och upp, stäm av formen från
-> släpp 2 med användaren, bygg sedan släpp 3.
+> ▶️ **ÅTERUPPTAGET 2026-07-31 på användarens begäran.** Släpp 3 är byggt och levererat
+> (0.9.305) utan att formen från släpp 2 stämdes av separat innan — användaren bad om
+> fortsättning direkt. Släpp 4–6 väntar fortsatt på sin tur, i ordning nedan.
 
 | Släpp | Innehåll | Status |
 |---|---|---|
 | **1** | `wire_terms.py` utökas till `/verktyg/` + ordlistetermerna + §0.6 i reglerna | ✅ **klart 0.9.286** |
 | **2** | Motor (`akutmedicin.json` + `.js` + CSS) + hubb + `vitalparametrar.html` (NEWS2) + testskal | ✅ **klart 0.9.287** |
-| **3** | `syra-bas.html` — blodgasklassificeraren | ⏸️ pausat 2026-07-27 |
-| **4** | `blodproppar.html` + `hjartat.html` | ⏸️ pausat 2026-07-27 |
-| **5** | `infektion.html` + `neurologi.html` + `buken.html` | ⏸️ pausat 2026-07-27 |
-| **6** | `kunskapsbank/kliniska-poangskalor.html` + korslänkning + `info.html`-källor | ⏸️ pausat 2026-07-27 |
-
-**Släpp 2 är referensimplementationen** — formen stäms av med användaren innan resten rullas
-ut. Bygg inte vidare på en form som inte godkänts.
+| **3** | `syra-bas.html` — blodgasklassificeraren, korrigerat natrium, effektiv osmolalitet | ✅ **klart 0.9.305** |
+| **4** | `blodproppar.html` + `hjartat.html` | väntar |
+| **5** | `infektion.html` + `neurologi.html` + `buken.html` | väntar |
+| **6** | `kunskapsbank/kliniska-poangskalor.html` + korslänkning + `info.html`-källor | väntar |
 
 ### Släpp 1 — LEVERERAT 0.9.286
 
@@ -347,3 +340,49 @@ avsiktligt, eftersom en avvikande href ibland är rätt (`njuren` pekar med flit
 `sys.exit()` gjorde att varje `STOPP` i skriptet gav exitkod 0 — larmet kunde alltså aldrig
 fällas, inte heller från `check_generators.py`. Rättat till `sys.exit(main(...) or 0)` och
 verifierat genom att anropa `--repoint` med en nyckel som inte finns i facit.
+
+### Släpp 3 — LEVERERAT 0.9.305
+
+- [x] **Mönster C (formelräknare)** i `js/akutmedicin.js` — datadriven som mönster B: en
+      formel blir en JSON-post (`falt` + `utdata`) plus en rad i `FORMLER`, inte en ny renderare
+      per instrument. Byggd generiskt för att bära flera samtidiga utdata (Katz *och* Hillier ur
+      samma två fält).
+- [x] `natrium_korrigerat` — Katz (1973, faktor 1,6) och Hillier, Abbott & Barrett (1999, faktor
+      2,4), båda ur samma natrium/P-glukos. Referenspunkten 100 mg/dL konverterad exakt till
+      5,55 mmol/L, inte den ofta avrundade 5,5 (se `js/akutmedicin.js` för uträkningen).
+- [x] `osmolalitet` — 2 × (Na + K) + glukos enligt Joint British Diabetes Societies (Mustafa,
+      Haq, Dashora, Castro & Dhatariya, 2023), med 320 mosmol/kg som HHS-tröskel.
+- [x] **Blodgasklassificeraren, ett eget mönster (`blodgas`)** — bespoke beslutslogik
+      (`bedomBlodgas` i `js/akutmedicin.js`), inte tvingad in i mönster B/C. Algoritmen är
+      Berend, de Vries & Gans (2014) Table 1/Figure 1: pH avgör acidemi/alkalemi, HCO₃⁻ och pCO₂
+      var för sig avgör primär metabol/respiratorisk komponent, Winters formel (metabolt
+      primär) eller akut/kroniskt förväntat bikarbonat (respiratoriskt primär) avgör om
+      kompensationen är adekvat, och anjongapet (Na, Cl, valfritt laktat) räknas ut när det
+      finns en verklig metabol acidos — inte bara ett kompensatoriskt lågt bikarbonat vid en
+      annan primär rubbning (se felet nedan). Alla mmHg-koefficienter konverterade till kPa
+      (× 0,1333) för svensk klinisk praxis. Ingen Träna-flik: ett flerstyckesresonemang har
+      inget enskilt svar att kontrollera mot.
+- [x] `verktyg/akutmedicin/syra-bas.html` — tre instrument i tredelad form (räknare, vad
+      betyder variablerna, varför just de), källor för alla fyra primärkällor.
+- [x] 4 nya ordlisteposter (`acidemi`, `alkalemi`, `blodgas`, `renal tubulär acidos`), facit
+      2 347 → 2 351. `wire_terms.py --all` gav 107 nya kb-term-länkar på den nya sidan.
+- [x] `scripts/test_verktyg_akutmedicin.js` utökad 133 → 195 tester, alla tre nya instrumenten
+      handräknade mot facit (se §7e).
+- [x] `scripts/check_akutmedicin.py` utökad: `syra-bas.html` kontrolleras mot facit genom att
+      varje referensvärde, bandgräns och formelkoefficient ska *nämnas* på sidan — svagare än
+      NEWS2:s cell-för-cell-spegling (instrumenten har ingen uppslagstabell att spegla mot),
+      men fångar samma feltyp. Larmet verifierat med planterade fel i både JSON och HTML.
+- [x] Hubbkortet "Syra och bas" på `verktyg/akutmedicin/index.html` bytt från "Snart" till
+      live-länk, `hasPart` och actions-raden uppdaterade.
+
+#### 7e. Ett verkligt logikfel, hittat under testningen
+
+**Anjongapet triggade på fel villkor.** Första versionen räknade ut anjongapet så snart
+bikarbonatet låg under 22 mmol/L (`metabol === 'acidos'`) — men ett lågt bikarbonat uppstår
+även som en fullt förväntad *kompensation* vid en primärt respiratorisk alkalos (njurarna
+utsöndrar bikarbonat för att sänka pH tillbaka). Ett testfall med kronisk respiratorisk
+alkalos (pH 7,50, pCO₂ 3,5 kPa, HCO₃⁻ 20 mmol/L) avslöjade att anjongapet då räknades ut trots
+att grundproblemet inte var en metabol acidos alls. Rättat till att bara trigga när
+algoritmen faktiskt *landat* i `metabol_acidos` eller `blandad_acidos` som primär rubbning —
+inte varje gång bikarbonatet råkar vara lågt. Samma sorts fel som `hals` i släpp 2: rätt
+riktning på jämförelsen, fel villkor för när den ska prövas.

@@ -1,5 +1,15 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.305
+- **Släpp 3 av akutmedicin-utbyggnaden: `verktyg/akutmedicin/syra-bas.html`.** Tre nya räknare, byggda ur sina originalpublikationer.
+  - **Blodgasklassificerare** — fyll i pH, pCO₂, bikarbonat och basöverskott, så byggs ett resonemang i flera steg: vilken primär rubbning (metabol/respiratorisk, acidos/alkalos) mönstret pekar mot, om kompensationen ligger inom det förväntade spannet enligt Winters formel och Berend, de Vries & Gans (2014), och — fylls natrium och klorid i också — vad anjongapet är och vad det talar för, med laktatet som stöd vid ett högt gap. Ny renderare i `js/akutmedicin.js`, ingen Träna-flik (ett flerstyckesresonemang går inte att kontrollera som ett enda svar).
+  - **Korrigerat natrium** — Katz (1973) och Hillier, Abbott & Barrett (1999) sida vid sida, samma indata (natrium, P-glukos), olika korrektionsfaktor.
+  - **Effektiv serumosmolalitet** — 2 × (Na + K) + glukos enligt Joint British Diabetes Societies (Mustafa m.fl., 2023), med flagga vid 320 mosmol/kg (HHS-nivå).
+  - Ny motor: mönster C (formelräknare) i `js/akutmedicin.js`, datadriven precis som mönster B — en formel blir en JSON-post i `data/akutmedicin.json` plus en rad kod i `FORMLER`.
+  - 4 nya ordlisteposter (`acidemi`, `alkalemi`, `blodgas`, `renal tubulär acidos`), wire_terms `--all` gav 107 nya kb-term-länkar på sidan.
+  - `scripts/test_verktyg_akutmedicin.js` utökad med 62 nya tester (195 totalt) för de tre nya instrumenten, handräknade mot facit. `scripts/check_akutmedicin.py` utökad till att kontrollera att `syra-bas.html` nämner varje referensvärde, bandgräns och formelkoefficient ur facit — svagare än NEWS2:s cell-för-cell-spegling, men fångar samma feltyp. Larmet verifierat med ett planterat fel.
+  - Hubbkortet "Syra och bas" på `verktyg/akutmedicin/index.html` bytt från "Snart" till en live-länk.
+
 ## 0.9.304
 - Kortade brevets avslutande mening på `vision.html` — den slutar nu vid "...allena.", "– så får vi se hur det räcker" är borttaget.
 

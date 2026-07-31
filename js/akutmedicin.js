@@ -166,7 +166,12 @@
      Fälten
      --------------------------------------------------------- */
 
-  function byggTalfalt(spec, idPrefix) {
+  /**
+   * @param {boolean} [utanPoang] Formelräknaren (mönster C) har ingen
+   *   poäng per fält — bara ett svar längre ner — så den chipen byggs
+   *   inte alls i stället för att byggas och tas bort igen.
+   */
+  function byggTalfalt(spec, idPrefix, utanPoang) {
     var wrap = document.createElement('label');
     wrap.className = 'vt-field';
     wrap.dataset.falt = spec.namn;
@@ -193,10 +198,13 @@
     }
     wrap.appendChild(rad);
 
-    var poang = document.createElement('span');
-    poang.className = 'vt-poang is-tom';
-    poang.textContent = '—';
-    wrap.appendChild(poang);
+    var poang = null;
+    if (!utanPoang) {
+      poang = document.createElement('span');
+      poang.className = 'vt-poang is-tom';
+      poang.textContent = '—';
+      wrap.appendChild(poang);
+    }
 
     return { el: wrap, input: input, valjare: null, poang: poang, spec: spec };
   }
@@ -598,11 +606,808 @@
     return kort;
   }
 
-  /* Mönster A (kryssruteskala), C (formelräknare) och D (beslutsgång)
-     hängs på här när sina instrument byggs. Ett mönster utan
-     instrument vore kod som ingen kör och ingen testar. */
+  /* ---------------------------------------------------------
+     Renderaren: formelräknare (mönster C)
+     ---------------------------------------------------------
+     Ett eller flera tal matas in, en eller flera formler räknas ut.
+     Till skillnad från värdeskalan (B) är matematiken inte
+     generisk — varje instrument har sin egen formel. Formeln är
+     ändå ren räkning (§0.3 punkt 1: mekaniskt och entydigt ska
+     automatiseras), så koden ligger i FORMLER nedan medan alla
+     etiketter, enheter och tolkningstexter är data i facit. Ny
+     formel = ny nyckel i FORMLER, inte en ny renderare.
+     --------------------------------------------------------- */
+
+  /**
+   * Rena räknefunktioner. Varje formel tar värdena (`v`, nycklar
+   * = fältens `namn`) och returnerar {varde, uttryck} — det
+   * uträknade talet och den insatta formeln som text, så att
+   * uträkningen syns, inte bara svaret (samma princip som NEWS2:s
+   * `vt-calc`).
+   *
+   * Natriumkorrektionen räknar om 100 mg/dL (den amerikanska
+   * litteraturens referenspunkt) till exakt 5,55 mmol/L i stället
+   * för det ofta avrundade 5,5 — annars glider korrektionen med
+   * cirka en procent vid höga glukosvärden.
+   */
+  var FORMLER = {
+    natrium_katz: function (v) {
+      var varde = v.na + 1.6 * (v.glukos - 5.55) / 5.55;
+      return { varde: varde, uttryck: visaTal(v.na) + ' + 1,6 × (' +
+        visaTal(v.glukos) + ' − 5,55) / 5,55' };
+    },
+    natrium_hillier: function (v) {
+      var varde = v.na + 2.4 * (v.glukos - 5.55) / 5.55;
+      return { varde: varde, uttryck: visaTal(v.na) + ' + 2,4 × (' +
+        visaTal(v.glukos) + ' − 5,55) / 5,55' };
+    },
+    osmolalitet_effektiv: function (v) {
+      var varde = 2 * (v.na + v.k) + v.glukos;
+      return { varde: varde, uttryck: '2 × (' + visaTal(v.na) + ' + ' +
+        visaTal(v.k) + ') + ' + visaTal(v.glukos) };
+    }
+  };
+
+  /** Tolkningsbandet för ett uträknat värde, samma bandprincip som
+      poängskalans bandFor — första träffen med tak vinner. */
+  function tolkningsbandFor(utdata, varde) {
+    if (!utdata.band) return null;
+    for (var i = 0; i < utdata.band.length; i++) {
+      var b = utdata.band[i];
+      if (b.max == null || varde <= b.max) return b;
+    }
+    return utdata.band[utdata.band.length - 1];
+  }
+
+  function skapaFormelraknare(skala, id) {
+    var kort = document.createElement('section');
+    kort.className = 'vt-tool';
+    kort.id = id;
+
+    var huvud = document.createElement('div');
+    huvud.className = 'vt-tool-head';
+    var h3 = document.createElement('h3');
+    h3.textContent = skala.rubrik;
+    h3.id = id + '-rubrik';
+    huvud.appendChild(h3);
+
+    var lage = document.createElement('div');
+    lage.className = 'vt-mode';
+    lage.setAttribute('role', 'group');
+    lage.setAttribute('aria-label', 'Läge för ' + skala.namn);
+    var knappRakna = document.createElement('button');
+    knappRakna.type = 'button';
+    knappRakna.textContent = 'Räkna';
+    knappRakna.setAttribute('aria-pressed', 'true');
+    var knappTrana = document.createElement('button');
+    knappTrana.type = 'button';
+    knappTrana.textContent = 'Träna';
+    knappTrana.setAttribute('aria-pressed', 'false');
+    lage.appendChild(knappRakna);
+    lage.appendChild(knappTrana);
+    huvud.appendChild(lage);
+    kort.appendChild(huvud);
+
+    var intro = document.createElement('p');
+    intro.className = 'vt-tool-intro';
+    intro.textContent = skala.intro;
+    kort.appendChild(intro);
+
+    var rutnat = document.createElement('div');
+    rutnat.className = 'vt-grid';
+    kort.appendChild(rutnat);
+
+    var falt = skala.falt.map(function (spec) {
+      var f = byggTalfalt(spec, id, true);
+      rutnat.appendChild(f.el);
+      return f;
+    });
+
+    var hjalp = document.createElement('div');
+    hjalp.className = 'vt-hjalp';
+    skala.falt.forEach(function (p) {
+      if (!p.hjalp) return;
+      var rad = document.createElement('p');
+      rad.textContent = p.hjalp;
+      hjalp.appendChild(rad);
+    });
+    if (hjalp.children.length) kort.appendChild(hjalp);
+
+    /* Rimlighetsvarningen — direkt under fälten, samma komponent som
+       värdeskalan använder men här byggd separat eftersom
+       formelräknaren saknar den annars. */
+    var varnBox = document.createElement('div');
+    varnBox.className = 'vt-warn';
+    varnBox.hidden = true;
+    var varnTitel = document.createElement('strong');
+    varnTitel.className = 'vt-warn-titel';
+    varnTitel.textContent = 'Kontrollera värdet';
+    var varnText = document.createElement('div');
+    varnText.className = 'vt-warn-text';
+    varnBox.appendChild(varnTitel);
+    varnBox.appendChild(varnText);
+    kort.appendChild(varnBox);
+
+    /* Ett .vt-out + en .vt-svarsruta per utdata — flera formler
+       (Katz och Hillier) visas som flera rader under varandra. */
+    var rader = skala.utdata.map(function (spec) {
+      var ut = document.createElement('div');
+      ut.className = 'vt-out is-tom';
+      ut.setAttribute('aria-live', 'polite');
+      var utEtikett = document.createElement('span');
+      utEtikett.className = 'vt-out-label';
+      utEtikett.textContent = spec.etikett;
+      var utVarde = document.createElement('div');
+      utVarde.className = 'vt-out-value';
+      var utCalc = document.createElement('div');
+      utCalc.className = 'vt-calc';
+      var utNot = document.createElement('p');
+      utNot.hidden = true;
+      ut.appendChild(utEtikett);
+      ut.appendChild(utVarde);
+      ut.appendChild(utCalc);
+      ut.appendChild(utNot);
+      kort.appendChild(ut);
+
+      var svarsruta = document.createElement('div');
+      svarsruta.className = 'vt-svarsruta';
+      svarsruta.hidden = true;
+      var svarEtikett = document.createElement('span');
+      svarEtikett.className = 'vt-out-label';
+      svarEtikett.textContent = 'Ditt svar — ' + spec.etikett.toLowerCase();
+      var svarRad = document.createElement('div');
+      svarRad.className = 'vt-svarsrad';
+      var svarWrap = document.createElement('div');
+      svarWrap.className = 'vt-inputrow';
+      var svarInput = document.createElement('input');
+      svarInput.type = 'text';
+      svarInput.inputMode = 'decimal';
+      svarInput.autocomplete = 'off';
+      svarInput.id = id + '-' + spec.namn + '-ditt-svar';
+      svarInput.setAttribute('aria-label', 'Ditt svar — ' + spec.etikett.toLowerCase());
+      var svarEnhet = document.createElement('span');
+      svarEnhet.className = 'vt-unit-fixed';
+      svarEnhet.textContent = spec.enhet;
+      svarWrap.appendChild(svarInput);
+      svarWrap.appendChild(svarEnhet);
+      var svarKnapp = document.createElement('button');
+      svarKnapp.type = 'button';
+      svarKnapp.textContent = 'Kontrollera';
+      svarRad.appendChild(svarWrap);
+      svarRad.appendChild(svarKnapp);
+      var dom = document.createElement('div');
+      dom.setAttribute('aria-live', 'polite');
+      svarsruta.appendChild(svarEtikett);
+      svarsruta.appendChild(svarRad);
+      svarsruta.appendChild(dom);
+      kort.appendChild(svarsruta);
+
+      return { spec: spec, ut: ut, utEtikett: utEtikett, utVarde: utVarde,
+               utCalc: utCalc, utNot: utNot, svarsruta: svarsruta,
+               svarInput: svarInput, svarKnapp: svarKnapp, dom: dom };
+    });
+
+    var nollrad = document.createElement('div');
+    nollrad.className = 'vt-nollstall';
+    var nollknapp = document.createElement('button');
+    nollknapp.type = 'button';
+    nollknapp.textContent = 'Nollställ';
+    nollrad.appendChild(nollknapp);
+    kort.appendChild(nollrad);
+
+    /* ---- tillstånd ---- */
+    var traningslage = false;
+    var senaste = null;   // { klar, saknas:[falt], resultat:[{spec,varde,uttryck,band}] }
+
+    function lasVarden() {
+      var v = {};
+      falt.forEach(function (f) {
+        var n = tolkaTal(f.input.value);
+        if (!isNaN(n)) v[f.spec.namn] = n;
+      });
+      return v;
+    }
+
+    function orimliga(varden) {
+      var texter = [];
+      falt.forEach(function (f) {
+        var r = f.spec.rimlig;
+        if (!r) return;
+        var n = varden[f.spec.namn];
+        if (typeof n !== 'number') return;
+        if (n < r.min || n > r.max) {
+          texter.push('Kontrollera ' + f.spec.kort.toLowerCase() + ' – ' +
+            visaTal(n) + ' ' + f.spec.enhet + ' ligger utanför det som mäts ' +
+            'på en levande patient (' + visaTal(r.min) + '–' + visaTal(r.max) +
+            ' ' + f.spec.enhet + '). Uträkningen görs ändå.');
+        }
+      });
+      return texter;
+    }
+
+    function rakna() {
+      var varden = lasVarden();
+      var saknas = skala.falt.filter(function (p) { return typeof varden[p.namn] !== 'number'; });
+
+      if (saknas.length) {
+        senaste = { klar: false, saknas: saknas };
+      } else {
+        var resultat = skala.utdata.map(function (spec) {
+          var r = FORMLER[spec.berakning](varden);
+          return { spec: spec, varde: r.varde, uttryck: r.uttryck,
+                   band: tolkningsbandFor(spec, r.varde) };
+        });
+        senaste = { klar: true, resultat: resultat };
+      }
+
+      var varningar = orimliga(varden);
+      varnBox.hidden = !varningar.length;
+      varnText.innerHTML = '';
+      varningar.forEach(function (t) {
+        var p = document.createElement('p');
+        p.textContent = t;
+        varnText.appendChild(p);
+      });
+
+      lagesvy();
+    }
+
+    function saknasText(saknas) {
+      return saknas.length === 1
+        ? 'Fyll i ' + saknas[0].kort.toLowerCase() + ' också.'
+        : 'Fyll i ' + saknas.length + ' värden till.';
+    }
+
+    function lagesvy() {
+      var res = senaste;
+      var klart = res && res.klar;
+
+      rader.forEach(function (rad, i) {
+        if (traningslage) {
+          rad.ut.hidden = true;
+          rad.svarsruta.hidden = false;
+          rad.svarKnapp.disabled = !klart;
+          rad.svarInput.disabled = !klart;
+          if (!klart) {
+            rad.dom.className = '';
+            rad.dom.textContent = '';
+          }
+          return;
+        }
+
+        rad.svarsruta.hidden = true;
+        rad.ut.hidden = false;
+
+        if (!klart) {
+          rad.ut.classList.add('is-tom');
+          rad.utVarde.textContent = saknasText(res.saknas);
+          rad.utCalc.textContent = '';
+          rad.utNot.hidden = true;
+          return;
+        }
+
+        var r = res.resultat[i];
+        rad.ut.classList.remove('is-tom');
+        rad.utVarde.textContent = visaTal(r.varde) + ' ' + r.spec.enhet;
+        rad.utCalc.textContent = r.uttryck + ' = ' + visaTal(r.varde);
+        if (r.band && r.band.text) {
+          rad.utNot.hidden = false;
+          rad.utNot.className = r.band.niva === 'hog' ? 'vt-krit' : 'vt-extra';
+          rad.utNot.textContent = r.band.text;
+        } else {
+          rad.utNot.hidden = true;
+        }
+      });
+    }
+
+    function sattLage(trana) {
+      traningslage = trana;
+      kort.classList.toggle('is-trana', trana);
+      knappRakna.setAttribute('aria-pressed', String(!trana));
+      knappTrana.setAttribute('aria-pressed', String(trana));
+      rader.forEach(function (rad) {
+        rad.svarInput.value = '';
+        rad.dom.className = '';
+        rad.dom.textContent = '';
+      });
+      rakna();
+    }
+
+    falt.forEach(function (f) {
+      f.input.addEventListener('input', rakna);
+    });
+
+    knappRakna.addEventListener('click', function () { sattLage(false); });
+    knappTrana.addEventListener('click', function () { sattLage(true); });
+
+    rader.forEach(function (rad) {
+      function kontrollera() {
+        if (!senaste || !senaste.klar) return;
+        var mitt = tolkaTal(rad.svarInput.value);
+        var facitpost = senaste.resultat.filter(function (r) { return r.spec === rad.spec; })[0];
+        var facit = facitpost.varde;
+        if (isNaN(mitt)) {
+          rad.dom.className = 'vt-dom fel';
+          rad.dom.textContent = 'Skriv in ett tal.';
+          return;
+        }
+        /* En hundradels marginal för avrundning i inmatningen. */
+        if (Math.abs(mitt - facit) < 0.05) {
+          rad.dom.className = 'vt-dom ratt';
+          rad.dom.textContent = 'Rätt. ' + facitpost.uttryck + ' = ' + visaTal(facit) + ' ' + rad.spec.enhet + '.';
+        } else {
+          rad.dom.className = 'vt-dom fel';
+          rad.dom.textContent = 'Inte riktigt. ' + facitpost.uttryck + ' = ' +
+            visaTal(facit) + ' ' + rad.spec.enhet + '.';
+        }
+      }
+      rad.svarKnapp.addEventListener('click', kontrollera);
+      rad.svarInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') { e.preventDefault(); kontrollera(); }
+      });
+    });
+
+    nollknapp.addEventListener('click', function () {
+      falt.forEach(function (f) { f.input.value = ''; });
+      rader.forEach(function (rad) {
+        rad.svarInput.value = '';
+        rad.dom.className = '';
+        rad.dom.textContent = '';
+      });
+      rakna();
+      if (falt[0]) falt[0].input.focus();
+    });
+
+    rakna();
+    return kort;
+  }
+
+  /* ---------------------------------------------------------
+     Renderaren: blodgasklassificerare (mönster D→C)
+     ---------------------------------------------------------
+     Fyra mätvärden (pH, pCO₂, HCO₃⁻, BE) avgör en primär rubbning
+     genom en beslutsgång (D), som i sin tur styr vilken formel (C)
+     som prövar om kompensationen är den förväntade. Det är sidans
+     mest bespoke logik — till skillnad från värdeskalan är det
+     inget generellt mönster som fler instrument delar, så koden
+     ligger handskriven här medan referensvärdena och koefficienterna
+     (facit) ligger i data/akutmedicin.json.
+
+     Källa för hela algoritmen: Berend, de Vries & Gans (2014),
+     "Physiological Approach to Assessment of Acid–Base
+     Disturbances", NEJM 371(15):1434–1445, Table 1 och Figure 1.
+     Koefficienterna i originalet är angivna i mmHg och konverterade
+     till kPa här (× 0,1333) — se `bedomBlodgas` för uträkningen.
+     Anjongapets referensvärde (8–12 mmol/L) är samma som
+     data/ordlista.json redan bär för uppslagsordet "anjongap", inte
+     ett eget påhittat tal. */
+
+  /**
+   * Ren beslutslogik, utan DOM — testbar för sig
+   * (scripts/test_verktyg_akutmedicin.js). `v` bär de inlästa
+   * värdena, `ref` är facitets referensintervall.
+   * @returns {Object} { klar, saknas } eller
+   *   { klar:true, primar, slutsats:{niva,titel}, steg:[{titel,text}] }
+   */
+  function bedomBlodgas(v, ref) {
+    var KARNFALT = ['ph', 'pco2', 'hco3', 'be'];
+    var saknas = KARNFALT.filter(function (n) { return typeof v[n] !== 'number'; });
+    if (saknas.length) return { klar: false, saknas: saknas };
+
+    var steg = [];
+
+    /* STEG 1 — pH: acidemi, alkalemi eller normalt. */
+    var phRiktning = v.ph < ref.ph.min ? 'acidemi' : (v.ph > ref.ph.max ? 'alkalemi' : 'normalt');
+    steg.push({ titel: 'pH', text:
+      phRiktning === 'normalt'
+        ? 'pH ' + visaTal(v.ph) + ' ligger inom referensintervallet (' + visaTal(ref.ph.min) + '–' + visaTal(ref.ph.max) + ').'
+        : 'pH ' + visaTal(v.ph) + ' ligger ' + (phRiktning === 'acidemi' ? 'under' : 'över') +
+          ' referensintervallet (' + visaTal(ref.ph.min) + '–' + visaTal(ref.ph.max) + ') — ' + phRiktning + '.'
+    });
+
+    /* Avvikelser i respektive komponent, oberoende av varandra. */
+    var metabol = v.hco3 < ref.hco3.min ? 'acidos' : (v.hco3 > ref.hco3.max ? 'alkalos' : null);
+    var resp = v.pco2 > ref.pco2.max ? 'acidos' : (v.pco2 < ref.pco2.min ? 'alkalos' : null);
+
+    var primar;
+    if (phRiktning === 'acidemi') {
+      if (metabol === 'acidos' && resp === 'acidos') primar = 'blandad_acidos';
+      else if (metabol === 'acidos') primar = 'metabol_acidos';
+      else if (resp === 'acidos') primar = 'resp_acidos';
+      else primar = 'oklar_acidemi';
+    } else if (phRiktning === 'alkalemi') {
+      if (metabol === 'alkalos' && resp === 'alkalos') primar = 'blandad_alkalos';
+      else if (metabol === 'alkalos') primar = 'metabol_alkalos';
+      else if (resp === 'alkalos') primar = 'resp_alkalos';
+      else primar = 'oklar_alkalemi';
+    } else {
+      primar = (!metabol && !resp) ? 'normal' : 'normalt_ph_men_avvikande';
+    }
+
+    steg.push({ titel: 'Primär rubbning', text: primarText(primar, v, ref, metabol, resp) });
+
+    var kompensation = null;
+    if (primar === 'metabol_acidos' || primar === 'metabol_alkalos') {
+      kompensation = metabolKompensation(primar, v, ref);
+      steg.push(kompensation);
+    } else if (primar === 'resp_acidos' || primar === 'resp_alkalos') {
+      kompensation = respKompensation(primar, v, ref);
+      steg.push(kompensation);
+    }
+
+    /* Bara när algoritmen faktiskt landat i en metabol acidos — inte
+       varje gång bikarbonatet råkar ligga under 22, för det gör det
+       även vid en fullt förväntad kompensatorisk sänkning (t.ex. vid
+       kronisk respiratorisk alkalos). Anjongapet hör bara hemma när
+       det finns en riktig metabol acidos att förklara. */
+    var harMetabolAcidoskomponent = primar === 'metabol_acidos' || primar === 'blandad_acidos';
+    if (harMetabolAcidoskomponent && typeof v.na === 'number' && typeof v.cl === 'number') {
+      steg.push(anjongapSteg(v, ref));
+    }
+
+    return { klar: true, primar: primar, slutsats: slutsatsFor(primar, kompensation), steg: steg };
+  }
+
+  function primarText(primar, v, ref, metabol, resp) {
+    var beText = '';
+    if (primar === 'metabol_acidos' || primar === 'blandad_acidos') {
+      beText = v.be < ref.be.min
+        ? ' Basöverskottet ' + visaTal(v.be) + ' mmol/L ligger under referensintervallet (' +
+          visaTal(ref.be.min) + ' till +' + visaTal(ref.be.max) + ') och bekräftar den metabola komponenten — till skillnad från aktuellt bikarbonat är basöverskottet konstruerat för att inte påverkas av ett akut förändrat pCO₂.'
+        : ' Basöverskottet ' + visaTal(v.be) + ' mmol/L ligger dock inom referensintervallet, vilket är värt att kontrollera vid en så tydlig bikarbonatsänkning.';
+    } else if (primar === 'metabol_alkalos' || primar === 'blandad_alkalos') {
+      beText = v.be > ref.be.max
+        ? ' Basöverskottet ' + visaTal(v.be) + ' mmol/L ligger över referensintervallet och bekräftar den metabola komponenten.'
+        : ' Basöverskottet ' + visaTal(v.be) + ' mmol/L ligger dock inom referensintervallet, vilket är värt att kontrollera.';
+    }
+
+    switch (primar) {
+      case 'metabol_acidos':
+        return 'Bikarbonatet ' + visaTal(v.hco3) + ' mmol/L är lägre än referensintervallet (' +
+          visaTal(ref.hco3.min) + '–' + visaTal(ref.hco3.max) + '), medan pCO₂ ' + visaTal(v.pco2) +
+          ' kPa ligger inom sitt (' + visaTal(ref.pco2.min) + '–' + visaTal(ref.pco2.max) +
+          '). Mönstret pekar på en primär metabol acidos.' + beText;
+      case 'metabol_alkalos':
+        return 'Bikarbonatet ' + visaTal(v.hco3) + ' mmol/L är högre än referensintervallet (' +
+          visaTal(ref.hco3.min) + '–' + visaTal(ref.hco3.max) + '), medan pCO₂ ' + visaTal(v.pco2) +
+          ' kPa ligger inom sitt. Mönstret pekar på en primär metabol alkalos.' + beText;
+      case 'resp_acidos':
+        return 'pCO₂ ' + visaTal(v.pco2) + ' kPa är högre än referensintervallet (' +
+          visaTal(ref.pco2.min) + '–' + visaTal(ref.pco2.max) + '), medan bikarbonatet ' +
+          visaTal(v.hco3) + ' mmol/L ännu ligger inom sitt (' + visaTal(ref.hco3.min) + '–' +
+          visaTal(ref.hco3.max) + '). Mönstret pekar på en primär respiratorisk acidos.';
+      case 'resp_alkalos':
+        return 'pCO₂ ' + visaTal(v.pco2) + ' kPa är lägre än referensintervallet (' +
+          visaTal(ref.pco2.min) + '–' + visaTal(ref.pco2.max) + '), medan bikarbonatet ' +
+          visaTal(v.hco3) + ' mmol/L ännu ligger inom sitt. Mönstret pekar på en primär respiratorisk alkalos.';
+      case 'blandad_acidos':
+        return 'Både bikarbonatet (' + visaTal(v.hco3) + ' mmol/L, under ' + visaTal(ref.hco3.min) +
+          ') och pCO₂ (' + visaTal(v.pco2) + ' kPa, över ' + visaTal(ref.pco2.max) +
+          ') avviker åt det sura hållet samtidigt. Det talar för en kombinerad metabol och ' +
+          'respiratorisk acidos — två samtidiga rubbningar, inte den ena som kompenserar den andra.' + beText;
+      case 'blandad_alkalos':
+        return 'Både bikarbonatet (' + visaTal(v.hco3) + ' mmol/L, över ' + visaTal(ref.hco3.max) +
+          ') och pCO₂ (' + visaTal(v.pco2) + ' kPa, under ' + visaTal(ref.pco2.min) +
+          ') avviker åt det basiska hållet samtidigt. Det talar för en kombinerad metabol och ' +
+          'respiratorisk alkalos.' + beText;
+      case 'oklar_acidemi':
+        return 'pH-värdet är surt, men varken bikarbonatet (' + visaTal(v.hco3) + ' mmol/L) eller pCO₂ (' +
+          visaTal(v.pco2) + ' kPa) ligger utanför sina referensintervall. Kontrollera att värdena är ' +
+          'korrekt inmatade — annars kan bilden bero på en rubbning som redan hunnit kompenseras nästan ' +
+          'helt, eller på en felkälla i provtagningen.';
+      case 'oklar_alkalemi':
+        return 'pH-värdet är basiskt, men varken bikarbonatet (' + visaTal(v.hco3) + ' mmol/L) eller pCO₂ (' +
+          visaTal(v.pco2) + ' kPa) ligger utanför sina referensintervall. Kontrollera att värdena är ' +
+          'korrekt inmatade — annars kan bilden bero på en rubbning som redan hunnit kompenseras nästan helt.';
+      case 'normalt_ph_men_avvikande':
+        var vad = metabol && resp ? 'både bikarbonatet och pCO₂' : (metabol ? 'bikarbonatet' : 'pCO₂');
+        return 'pH ligger inom referensintervallet trots att ' + vad + ' avviker. Det kan vara en ' +
+          'rubbning som hunnit kompenseras nästan fullständigt, eller två motsatta rubbningar som ' +
+          'råkar ta ut varandra — blodgasen ensam kan inte skilja dem åt. Jämför med tidigare värden ' +
+          'och den kliniska bilden.';
+      default: // 'normal'
+        return 'Varken bikarbonatet eller pCO₂ avviker från referensintervallet. Blodgasen är normal.';
+    }
+  }
+
+  /** Winters formel m.fl. — förväntat pCO₂ vid en primärt metabol rubbning.
+      Koefficienterna är Berend et al:s mmHg-tal × 0,1333 (kPa per mmHg). */
+  function metabolKompensation(primar, v, ref) {
+    var acidos = primar === 'metabol_acidos';
+    var forvantat = acidos
+      ? 0.2 * v.hco3 + 1.1
+      : 0.09 * (v.hco3 - ref.hco3.bas) + 5.3;
+    var tolerans = 0.3;
+    var min = forvantat - tolerans, max = forvantat + tolerans;
+    var uttryck = acidos
+      ? '0,2 × ' + visaTal(v.hco3) + ' + 1,1'
+      : '0,09 × (' + visaTal(v.hco3) + ' − ' + visaTal(ref.hco3.bas) + ') + 5,3';
+
+    var verdikt;
+    if (v.pco2 < min) {
+      verdikt = 'lägre än väntat — talar för en samtidig respiratorisk alkalos utöver den metabola ' +
+        (acidos ? 'acidosen' : 'alkalosen') + '.';
+    } else if (v.pco2 > max) {
+      verdikt = 'högre än väntat — talar för en samtidig respiratorisk acidos utöver den metabola ' +
+        (acidos ? 'acidosen' : 'alkalosen') + ' (till exempel otillräcklig kompensation eller trötthet i andningsarbetet).';
+    } else {
+      verdikt = 'inom det förväntade spannet — mönstret talar för en ren (okomplicerad) metabol ' +
+        (acidos ? 'acidos' : 'alkalos') + ' med adekvat respiratorisk kompensation.';
+    }
+
+    return { titel: 'Förväntad kompensation', text:
+      "Winters formel (Berend, de Vries & Gans, 2014) ger förväntat pCO₂ = " + uttryck + ' = ' +
+      visaTal(forvantat) + ' kPa (± ' + visaTal(tolerans) + '). Uppmätt pCO₂ är ' + visaTal(v.pco2) +
+      ' kPa — ' + verdikt,
+      status: v.pco2 < min || v.pco2 > max ? 'blandad' : 'ren' };
+  }
+
+  /** Förväntad metabol kompensation vid en primärt respiratorisk
+      rubbning. Njurarna svarar långsamt, så akut och kronisk
+      kompensation ger olika förväntade bikarbonatnivåer — här visas
+      båda i stället för att fråga användaren om något en enskild
+      blodgas inte kan avgöra på egen hand. */
+  function respKompensation(primar, v, ref) {
+    var acidos = primar === 'resp_acidos';
+    var deltaPco2 = acidos ? (v.pco2 - ref.pco2.bas) : (ref.pco2.bas - v.pco2);
+    var akutKoeff = acidos ? 0.75 : -1.5;
+    var kronKoeff = acidos ? 3.4 : -3.4;
+    var akut = ref.hco3.bas + akutKoeff * deltaPco2;
+    var kron = ref.hco3.bas + kronKoeff * deltaPco2;
+    var undre = Math.min(akut, kron), övre = Math.max(akut, kron);
+
+    var verdikt;
+    if (v.hco3 < undre) {
+      verdikt = 'lägre än vad ens en helt färsk rubbning skulle ge — talar för en samtidig metabol acidos utöver den respiratoriska.';
+    } else if (v.hco3 > övre) {
+      verdikt = 'högre än vad även en fullt kompenserad, kronisk rubbning skulle ge — talar för en samtidig metabol alkalos utöver den respiratoriska.';
+    } else {
+      verdikt = 'inom det förväntade spannet mellan en färsk och en fullt kompenserad rubbning.';
+    }
+
+    return { titel: 'Förväntad kompensation', text:
+      'Njurarnas svar tar timmar till dagar. Är rubbningen ny (timmar) förväntas bikarbonatet ligga ' +
+      'kring ' + visaTal(akut) + ' mmol/L; är den veckor gammal och fullt kompenserad förväntas det i ' +
+      'stället ligga kring ' + visaTal(kron) + ' mmol/L. Uppmätt bikarbonat är ' + visaTal(v.hco3) +
+      ' mmol/L — ' + verdikt,
+      status: (v.hco3 < undre || v.hco3 > övre) ? 'blandad' : 'ren' };
+  }
+
+  function anjongapSteg(v, ref) {
+    var ag = v.na - (v.cl + v.hco3);
+    var uttryck = visaTal(v.na) + ' − (' + visaTal(v.cl) + ' + ' + visaTal(v.hco3) + ')';
+    var text = 'Anjongap = ' + uttryck + ' = ' + visaTal(ag) + ' mmol/L (referens ' +
+      visaTal(ref.anjongap.min) + '–' + visaTal(ref.anjongap.max) + ' mmol/L). ';
+
+    if (ag > ref.anjongap.max) {
+      text += 'Högt anjongap talar för en tillkommen organisk syra som orsak — till exempel laktacidos, ' +
+        'ketoacidos, njursvikt eller en förgiftning — snarare än att bikarbonat gått förlorat direkt.';
+      if (typeof v.laktat === 'number') {
+        text += v.laktat > ref.laktat.max
+          ? ' Laktatet ' + visaTal(v.laktat) + ' mmol/L är förhöjt (referens cirka ' +
+            visaTal(ref.laktat.min) + '–' + visaTal(ref.laktat.max) + ' mmol/L) och talar för att en ' +
+            'laktacidos förklarar hela eller delar av gapet.'
+          : ' Laktatet ' + visaTal(v.laktat) + ' mmol/L ligger inom referensintervallet, så det höga ' +
+            'anjongapet förklaras troligen av något annat än laktacidos — till exempel ketoacidos eller njursvikt.';
+      }
+    } else if (ag < ref.anjongap.min) {
+      text += 'Ovanligt lågt anjongap ses ibland vid lågt albumin eller vid vissa mätmetoder, och är sällan i sig kliniskt drivande.';
+    } else {
+      text += 'Normalt anjongap talar för att bikarbonatet gått förlorat direkt (till exempel vid diarré) ' +
+        'eller att njurarna inte kan återbilda det (renal tubulär acidos), snarare än för en tillkommen syra.';
+    }
+    return { titel: 'Anjongap', text: text };
+  }
+
+  function slutsatsFor(primar, kompensation) {
+    var TITLAR = {
+      normal: { niva: 'ingen', titel: 'Normal blodgas.' },
+      oklar_acidemi: { niva: 'medel', titel: 'Oklar bild — kontrollera värdena.' },
+      oklar_alkalemi: { niva: 'medel', titel: 'Oklar bild — kontrollera värdena.' },
+      normalt_ph_men_avvikande: { niva: 'medel', titel: 'Normalt pH trots avvikande komponent — kompenserad eller blandad rubbning.' },
+      blandad_acidos: { niva: 'hog', titel: 'Kombinerad metabol och respiratorisk acidos.' },
+      blandad_alkalos: { niva: 'hog', titel: 'Kombinerad metabol och respiratorisk alkalos.' }
+    };
+    if (TITLAR[primar]) return TITLAR[primar];
+
+    var namn = {
+      metabol_acidos: 'metabol acidos', metabol_alkalos: 'metabol alkalos',
+      resp_acidos: 'respiratorisk acidos', resp_alkalos: 'respiratorisk alkalos'
+    }[primar];
+    var ren = kompensation && kompensation.status === 'ren';
+    return {
+      niva: ren ? 'lag' : 'hog',
+      titel: 'Primär ' + namn + (ren ? ', adekvat kompenserad.' : ' med tecken på en samtidig rubbning.')
+    };
+  }
+
+  /**
+   * DOM-lagret ovanpå bedomBlodgas. Skiljer sig från de andra
+   * mönstren på en punkt med avsikt: ingen Träna-flik. De andra
+   * skalornas träningsläge ber om EN siffra att kontrollera mot
+   * facit — här är resultatet ett resonemang i flera stycken, och
+   * en sådan textjämförelse vore varken meningsfull att skriva
+   * eller att rätta. Värdet i den här skalan är själva
+   * resonemanget, som redan står framme i räkneläget.
+   */
+  function skapaBlodgas(skala, id) {
+    var kort = document.createElement('section');
+    kort.className = 'vt-tool';
+    kort.id = id;
+
+    var huvud = document.createElement('div');
+    huvud.className = 'vt-tool-head';
+    var h3 = document.createElement('h3');
+    h3.textContent = skala.rubrik;
+    h3.id = id + '-rubrik';
+    huvud.appendChild(h3);
+    kort.appendChild(huvud);
+
+    var intro = document.createElement('p');
+    intro.className = 'vt-tool-intro';
+    intro.textContent = skala.intro;
+    kort.appendChild(intro);
+
+    var rutnat = document.createElement('div');
+    rutnat.className = 'vt-grid';
+    kort.appendChild(rutnat);
+
+    var falt = skala.falt.map(function (spec) {
+      var f = byggTalfalt(spec, id, true);
+      rutnat.appendChild(f.el);
+      return f;
+    });
+
+    var valfriNot = document.createElement('p');
+    valfriNot.className = 'vt-extra';
+    valfriNot.textContent = 'Natrium och klorid är valfria och används bara för att räkna ut anjongapet. Laktatet är valfritt och används bara för att kommentera ett förhöjt anjongap.';
+    kort.appendChild(valfriNot);
+
+    var varnBox = document.createElement('div');
+    varnBox.className = 'vt-warn';
+    varnBox.hidden = true;
+    var varnTitel = document.createElement('strong');
+    varnTitel.className = 'vt-warn-titel';
+    varnTitel.textContent = 'Kontrollera värdet';
+    var varnText = document.createElement('div');
+    varnText.className = 'vt-warn-text';
+    varnBox.appendChild(varnTitel);
+    varnBox.appendChild(varnText);
+    kort.appendChild(varnBox);
+
+    /* Tomt/ofullständigt läge. */
+    var ut = document.createElement('div');
+    ut.className = 'vt-out is-tom';
+    ut.setAttribute('aria-live', 'polite');
+    var utVarde = document.createElement('div');
+    utVarde.className = 'vt-out-value';
+    ut.appendChild(utVarde);
+    kort.appendChild(ut);
+
+    /* Slutsatsen — samma platta som poängskalornas svarsband. */
+    var slutsats = document.createElement('div');
+    slutsats.className = 'vt-band';
+    slutsats.hidden = true;
+    var slutsatsTitel = document.createElement('strong');
+    slutsatsTitel.className = 'vt-band-titel';
+    slutsats.appendChild(slutsatsTitel);
+    kort.appendChild(slutsats);
+
+    /* Resonemanget, steg för steg — varje steg ett delblock. */
+    var stegBox = document.createElement('div');
+    stegBox.className = 'vt-steg';
+    stegBox.hidden = true;
+    kort.appendChild(stegBox);
+
+    var nollrad = document.createElement('div');
+    nollrad.className = 'vt-nollstall';
+    var nollknapp = document.createElement('button');
+    nollknapp.type = 'button';
+    nollknapp.textContent = 'Nollställ';
+    nollrad.appendChild(nollknapp);
+    kort.appendChild(nollrad);
+
+    function faltSpec(namn) {
+      return skala.falt.filter(function (f) { return f.namn === namn; })[0];
+    }
+
+    function lasVarden() {
+      var v = {};
+      falt.forEach(function (f) {
+        var n = tolkaTal(f.input.value);
+        if (!isNaN(n)) v[f.spec.namn] = n;
+      });
+      return v;
+    }
+
+    function orimliga(varden) {
+      var texter = [];
+      falt.forEach(function (f) {
+        var r = f.spec.rimlig;
+        if (!r) return;
+        var n = varden[f.spec.namn];
+        if (typeof n !== 'number') return;
+        if (n < r.min || n > r.max) {
+          texter.push('Kontrollera ' + f.spec.kort.toLowerCase() + ' – ' +
+            visaTal(n) + (f.spec.enhet ? ' ' + f.spec.enhet : '') + ' ligger utanför det som mäts ' +
+            'på en levande patient (' + visaTal(r.min) + '–' + visaTal(r.max) +
+            (f.spec.enhet ? ' ' + f.spec.enhet : '') + '). Bedömningen görs ändå.');
+        }
+      });
+      return texter;
+    }
+
+    function saknasText(saknas) {
+      var etiketter = saknas.map(function (n) { return faltSpec(n).kort.toLowerCase(); });
+      return etiketter.length === 1
+        ? 'Fyll i ' + etiketter[0] + ' också.'
+        : 'Fyll i ' + etiketter.join(', ') + '.';
+    }
+
+    function uppdatera() {
+      var varden = lasVarden();
+      var res = bedomBlodgas(varden, skala.referens);
+
+      var varningar = orimliga(varden);
+      varnBox.hidden = !varningar.length;
+      varnText.innerHTML = '';
+      varningar.forEach(function (t) {
+        var p = document.createElement('p');
+        p.textContent = t;
+        varnText.appendChild(p);
+      });
+
+      if (!res.klar) {
+        ut.hidden = false;
+        utVarde.textContent = saknasText(res.saknas);
+        slutsats.hidden = true;
+        stegBox.hidden = true;
+        stegBox.innerHTML = '';
+        return;
+      }
+
+      ut.hidden = true;
+
+      slutsats.hidden = false;
+      slutsats.className = 'vt-band is-' + res.slutsats.niva;
+      slutsatsTitel.textContent = res.slutsats.titel;
+
+      stegBox.innerHTML = '';
+      stegBox.hidden = false;
+      res.steg.forEach(function (s) {
+        var blk = document.createElement('div');
+        blk.className = 'vt-delblock';
+        var h4 = document.createElement('h4');
+        h4.textContent = s.titel;
+        var p = document.createElement('p');
+        p.textContent = s.text;
+        blk.appendChild(h4);
+        blk.appendChild(p);
+        stegBox.appendChild(blk);
+      });
+    }
+
+    falt.forEach(function (f) {
+      f.input.addEventListener('input', uppdatera);
+    });
+
+    nollknapp.addEventListener('click', function () {
+      falt.forEach(function (f) { f.input.value = ''; });
+      uppdatera();
+      if (falt[0]) falt[0].input.focus();
+    });
+
+    uppdatera();
+    return kort;
+  }
+
+  /* Mönster A (kryssruteskala) hängs på här när sitt instrument
+     byggs. Ett mönster utan instrument vore kod som ingen kör och
+     ingen testar. */
   var RENDERARE = {
-    varde: skapaVardeskala
+    varde: skapaVardeskala,
+    formel: skapaFormelraknare,
+    blodgas: skapaBlodgas
   };
 
   /* ---------------------------------------------------------

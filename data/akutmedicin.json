@@ -187,5 +187,138 @@
       "atgard": "En enskild parameter på 3 poäng väger tyngre än summan antyder och kräver brådskande läkarbedömning, även när totalen är låg.",
       "notis": "Röd poäng: {p} ger 3 poäng ensam."
     }
+  },
+
+  "natrium_korrigerat": {
+    "namn": "Korrigerat natrium",
+    "monster": "formel",
+    "rubrik": "Korrigerat natrium vid högt glukos",
+    "intro": "Ett högt P-glukos drar vatten ut ur cellerna och späder ut natriumet i blodet, så att uppmätt natrium ser lägre ut än kroppens faktiska saltbalans. Räknaren visar det korrigerade natriumet enligt två formler: Katz (1973), som länge var standard, och Hillier et al. (1999), som mätte upp att effekten är starkare än Katz uppskattade.",
+    "kalla": "Katz (1973); Hillier, Abbott & Barrett (1999)",
+
+    "falt": [
+      {
+        "namn": "na",
+        "etikett": "Uppmätt natrium",
+        "kort": "Natrium",
+        "enhet": "mmol/L",
+        "typ": "tal",
+        "plats": "t.ex. 128",
+        "rimlig": { "min": 100, "max": 170 }
+      },
+      {
+        "namn": "glukos",
+        "etikett": "P-glukos",
+        "kort": "Glukos",
+        "enhet": "mmol/L",
+        "typ": "tal",
+        "plats": "t.ex. 30",
+        "rimlig": { "min": 2, "max": 60 }
+      }
+    ],
+
+    "utdata": [
+      {
+        "namn": "katz",
+        "etikett": "Korrigerat natrium (Katz, faktor 1,6)",
+        "enhet": "mmol/L",
+        "berakning": "natrium_katz",
+        "band": [
+          { "max": 136.99, "niva": "lag", "text": "Under 137 mmol/L — talar för att en viss hyponatremi kvarstår även efter korrigeringen för glukosnivån." },
+          { "max": 145,    "niva": "normal", "text": null },
+          {                "niva": "hog", "text": "Över 145 mmol/L — talar för hypernatremi efter korrigeringen för glukosnivån." }
+        ]
+      },
+      {
+        "namn": "hillier",
+        "etikett": "Korrigerat natrium (Hillier, faktor 2,4)",
+        "enhet": "mmol/L",
+        "berakning": "natrium_hillier",
+        "band": [
+          { "max": 136.99, "niva": "lag", "text": "Under 137 mmol/L — talar för att en viss hyponatremi kvarstår även efter korrigeringen för glukosnivån." },
+          { "max": 145,    "niva": "normal", "text": null },
+          {                "niva": "hog", "text": "Över 145 mmol/L — talar för hypernatremi efter korrigeringen för glukosnivån." }
+        ]
+      }
+    ]
+  },
+
+  "osmolalitet": {
+    "namn": "Effektiv serumosmolalitet",
+    "monster": "formel",
+    "rubrik": "Effektiv serumosmolalitet",
+    "intro": "Effektiv osmolalitet (tonicitet) mäter hur starkt blodet drar vatten till sig — bara de partiklar som inte fritt passerar cellmembran räknas med. Urea utelämnas därför avsiktligt, till skillnad från den totala osmolalitet som labbet ibland rapporterar.",
+    "kalla": "Mustafa, Haq, Dashora, Castro & Dhatariya (2023), Joint British Diabetes Societies",
+
+    "falt": [
+      {
+        "namn": "na",
+        "etikett": "Natrium",
+        "kort": "Natrium",
+        "enhet": "mmol/L",
+        "typ": "tal",
+        "plats": "t.ex. 138",
+        "rimlig": { "min": 100, "max": 170 }
+      },
+      {
+        "namn": "k",
+        "etikett": "Kalium",
+        "kort": "Kalium",
+        "enhet": "mmol/L",
+        "typ": "tal",
+        "plats": "t.ex. 4,2",
+        "rimlig": { "min": 1.5, "max": 9 }
+      },
+      {
+        "namn": "glukos",
+        "etikett": "P-glukos",
+        "kort": "Glukos",
+        "enhet": "mmol/L",
+        "typ": "tal",
+        "plats": "t.ex. 30",
+        "rimlig": { "min": 2, "max": 60 }
+      }
+    ],
+
+    "utdata": [
+      {
+        "namn": "osm",
+        "etikett": "Effektiv serumosmolalitet",
+        "enhet": "mosmol/kg",
+        "berakning": "osmolalitet_effektiv",
+        "band": [
+          { "max": 295, "niva": "normal", "text": null },
+          { "max": 319, "niva": "medel", "text": "Lätt till måttligt förhöjd (referens cirka 275–295 mosmol/kg)." },
+          {             "niva": "hog", "text": "320 mosmol/kg eller mer är den nivå som används som kriterium för hyperosmolärt hyperglykemiskt syndrom (HHS), tillsammans med högt glukos och avsaknad av uttalad ketoacidos." }
+        ]
+      }
+    ]
+  },
+
+  "blodgas": {
+    "namn": "Blodgastolkning",
+    "monster": "blodgas",
+    "rubrik": "Blodgasklassificerare",
+    "intro": "Fyll i pH, pCO₂, bikarbonat och basöverskott, så visas den primära rubbningen och om kompensationen är den förväntade — steg för steg, inte bara ett facit. Natrium och klorid ger dessutom anjongapet, som hjälper till att förklara en metabol acidos.",
+    "kalla": "Berend, de Vries & Gans (2014)",
+
+    "referens": {
+      "ph":       { "min": 7.35, "max": 7.45 },
+      "pco2":     { "min": 4.5,  "max": 6.0, "bas": 5.3 },
+      "hco3":     { "min": 22,   "max": 26,  "bas": 24 },
+      "be":       { "min": -3,   "max": 3 },
+      "anjongap": { "min": 8,    "max": 12 },
+      "laktat":   { "min": 0.5,  "max": 2.2 }
+    },
+
+    "falt": [
+      { "namn": "ph",   "etikett": "pH",                          "kort": "pH",         "typ": "tal", "plats": "t.ex. 7,25", "rimlig": { "min": 6.8, "max": 7.8 } },
+      { "namn": "pco2", "etikett": "pCO₂",                        "kort": "pCO₂",       "typ": "tal", "enhet": "kPa",    "plats": "t.ex. 7,0", "rimlig": { "min": 1, "max": 20 } },
+      { "namn": "hco3", "etikett": "Aktuellt bikarbonat (HCO₃⁻)", "kort": "Bikarbonat", "typ": "tal", "enhet": "mmol/L", "plats": "t.ex. 30",  "rimlig": { "min": 2, "max": 60 } },
+      { "namn": "be",   "etikett": "Basöverskott (BE)",           "kort": "Basöverskott","typ": "tal", "enhet": "mmol/L", "plats": "t.ex. 5",  "rimlig": { "min": -30, "max": 30 } },
+      { "namn": "na",   "etikett": "Natrium",                     "kort": "Natrium",    "typ": "tal", "enhet": "mmol/L", "plats": "t.ex. 138", "rimlig": { "min": 100, "max": 170 }, "valfri": true },
+      { "namn": "cl",   "etikett": "Klorid",                      "kort": "Klorid",     "typ": "tal", "enhet": "mmol/L", "plats": "t.ex. 100", "rimlig": { "min": 60, "max": 140 }, "valfri": true },
+      { "namn": "laktat","etikett": "Laktat",                     "kort": "Laktat",     "typ": "tal", "enhet": "mmol/L", "plats": "t.ex. 1,2", "rimlig": { "min": 0, "max": 30 }, "valfri": true }
+    ]
   }
 }

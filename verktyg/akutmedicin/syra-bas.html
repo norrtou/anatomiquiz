@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSP mot XSS: skript/stilar/data endast från egen origin. GitHub Pages tillåter inga egna HTTP-headers, därav meta. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+
+  <!-- Primär SEO -->
+  <title>Syra och bas – blodgastolkning och räknare | Anatomiquiz</title>
+  <meta name="description" content="Blodgasklassificerare med resonemang steg för steg, korrigerat natrium vid högt glukos och effektiv serumosmolalitet – med källor och referensvärden.">
+  <meta name="author" content="Daniel Medin (Norrtou Creations)">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+  <link rel="canonical" href="https://anatomiquiz.se/verktyg/akutmedicin/syra-bas.html">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anatomiquiz.se/verktyg/akutmedicin/syra-bas.html">
+  <meta property="og:title" content="Syra och bas – blodgastolkning och räknare">
+  <meta property="og:description" content="Fyll i pH, pCO₂, bikarbonat och basöverskott och få den primära rubbningen förklarad steg för steg. Plus korrigerat natrium vid högt glukos och effektiv serumosmolalitet.">
+  <meta property="og:image" content="https://anatomiquiz.se/img/og-image.png">
+  <meta property="og:image:width" content="1518">
+  <meta property="og:image:height" content="864">
+  <meta property="og:image:alt" content="Anatomiquiz — syra-bas-tolkning och räknare">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="Anatomiquiz">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Syra och bas – blodgastolkning och räknare">
+  <meta name="twitter:description" content="Fyll i pH, pCO₂, bikarbonat och basöverskott och få den primära rubbningen förklarad steg för steg. Plus korrigerat natrium vid högt glukos och effektiv serumosmolalitet.">
+  <meta name="twitter:image" content="https://anatomiquiz.se/img/og-image.png">
+  <meta name="twitter:image:alt" content="Anatomiquiz — syra-bas-tolkning och räknare">
+
+  <meta name="theme-color" content="#10b981">
+  <meta name="color-scheme" content="light dark">
+  <!-- Tema (ljust/mörkt). Laddas SYNKRONT och före stilmallen: attributet
+       data-theme måste sitta på <html> innan första målningen, annars
+       blinkar sidan ljus. Inline gick inte – CSP:n tillåter bara egen origin. -->
+  <script src="/js/theme.js?v=0.9.260"></script>
+
+  <!-- Strukturerad data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "WebApplication",
+    "LearningResource"
+  ],
+  "name": "Syra och bas – blodgastolkning och räknare",
+  "description": "Blodgasklassificerare som visar den primära rubbningen och den förväntade kompensationen steg för steg, tillsammans med räknare för korrigerat natrium vid högt glukos (Katz och Hillier) och effektiv serumosmolalitet.",
+  "url": "https://anatomiquiz.se/verktyg/akutmedicin/syra-bas.html",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Alla webbläsare",
+  "inLanguage": "sv-SE",
+  "isAccessibleForFree": true,
+  "learningResourceType": "interactive tool",
+  "educationalUse": [
+    "self study",
+    "practice"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "SEK"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Anatomiquiz",
+    "url": "https://anatomiquiz.se/"
+  },
+  "datePublished": "2026-07-31",
+  "dateModified": "2026-07-31",
+  "author": {
+    "@type": "Person",
+    "@id": "https://anatomiquiz.se/#daniel-medin",
+    "name": "Daniel Medin",
+    "description": "Utbildad medicinsk sekreterare och studerande i arbetsterapi vid Lunds universitet, med särskilt intresse för anatomi.",
+    "url": "https://norrtou.se",
+    "sameAs": [
+      "https://norrtou.se",
+      "https://www.linkedin.com/in/danielmedin",
+      "https://github.com/norrtou"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://anatomiquiz.se/#norrtou-creations",
+    "name": "Norrtou Creations",
+    "url": "https://norrtou.se",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://anatomiquiz.se/img/icon-512.png"
+    },
+    "sameAs": [
+      "https://github.com/norrtou"
+    ]
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Blodgas"
+    },
+    {
+      "@type": "Thing",
+      "name": "Korrigerat natrium"
+    },
+    {
+      "@type": "Thing",
+      "name": "Serumosmolalitet"
+    },
+    {
+      "@type": "Thing",
+      "name": "Anjongap"
+    }
+  ],
+  "teaches": [
+    "Hur pH, pCO₂, bikarbonat och basöverskott tillsammans avgör en primär syra-bas-rubbning.",
+    "Hur man räknar ut om kompensationen är den förväntade.",
+    "Hur anjongapet räknas ut och vad ett högt respektive normalt anjongap talar för.",
+    "Varför ett högt P-glukos gör uppmätt natrium missvisande lågt.",
+    "Skillnaden mellan effektiv och total serumosmolalitet."
+  ],
+  "keywords": [
+    "blodgas",
+    "blodgastolkning",
+    "korrigerat natrium",
+    "serumosmolalitet",
+    "anjongap",
+    "tonicitet"
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Physiological approach to assessment of acid-base disturbances",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Berend, K."
+        },
+        {
+          "@type": "Person",
+          "name": "de Vries, A. P. J."
+        },
+        {
+          "@type": "Person",
+          "name": "Gans, R. O. B."
+        }
+      ],
+      "datePublished": "2014",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "New England Journal of Medicine"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Hyperglycemia-induced hyponatremia—calculation of expected serum sodium depression",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Katz, M. A."
+        }
+      ],
+      "datePublished": "1973",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "New England Journal of Medicine"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Hyponatremia: evaluating the correction factor for hyperglycemia",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Hillier, T. A."
+        },
+        {
+          "@type": "Person",
+          "name": "Abbott, R. D."
+        },
+        {
+          "@type": "Person",
+          "name": "Barrett, E. J."
+        }
+      ],
+      "datePublished": "1999",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "The American Journal of Medicine"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Management of hyperosmolar hyperglycaemic state (HHS) in adults: An updated guideline from the Joint British Diabetes Societies (JBDS) for Inpatient Care Group",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Mustafa, O. G."
+        },
+        {
+          "@type": "Person",
+          "name": "Haq, M."
+        },
+        {
+          "@type": "Person",
+          "name": "Dashora, U."
+        },
+        {
+          "@type": "Person",
+          "name": "Castro, E."
+        },
+        {
+          "@type": "Person",
+          "name": "Dhatariya, K. K."
+        }
+      ],
+      "datePublished": "2023",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Diabetic Medicine"
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Anatomiquiz",
+      "item": "https://anatomiquiz.se/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Verktyg",
+      "item": "https://anatomiquiz.se/verktyg/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Akutmedicin",
+      "item": "https://anatomiquiz.se/verktyg/akutmedicin/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Syra och bas",
+      "item": "https://anatomiquiz.se/verktyg/akutmedicin/syra-bas.html"
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon.png">
+  <link rel="apple-touch-icon" href="/img/icon-192.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/css/styles.css?v=0.9.304">
+  <link rel="stylesheet" href="/css/verktyg.css?v=0.9.287">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+  <main id="main" class="container" role="main">
+
+    <header class="header">
+      <div class="header-title">
+        <h1>Syra och bas</h1>
+      </div>
+      <p class="tagline">Blodgastolkning, korrigerat <a class="kb-term" href="/ordlista-n.html#term-natrium" data-def="Grundämne och elektrolyt som styr kroppens vatten- och saltbalans">natrium</a> och serumosmolalitet</p>
+    </header>
+
+    <section class="card" aria-labelledby="akutHeading">
+
+      <nav class="breadcrumb" aria-label="Brödsmula">
+        <a href="/" class="breadcrumb-link">← Anatomiquiz</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="/verktyg/" class="breadcrumb-link">Verktyg</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="/verktyg/akutmedicin/" class="breadcrumb-link">Akutmedicin</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <span class="breadcrumb-current" aria-current="page">Syra och bas</span>
+      </nav>
+
+      <h2 id="akutHeading" class="sr-only">Blodgastolkning och räknare för syra-bas-balansen</h2>
+
+      <div class="info-about">
+        <p>Tre räknare som hör ihop: <a href="#blodgas" class="info-link">blodgasklassificeraren</a> tolkar pH, pCO₂, <a class="kb-term" href="/ordlista-b.html#term-bikarbonat" data-def="HCO₃⁻; blodets viktigaste buffert, reglerad av njurarna">bikarbonat</a> och <a class="kb-term" href="/ordlista-b.html#term-basoverskott" data-def="BE; hur mycket bas som måste tillföras eller tas bort för att normalisera blodets pH">basöverskott</a> och visar resonemanget steg för steg i stället för bara ett facit. <a href="#natrium" class="info-link">Korrigerat natrium</a> räknar bort den utspädning ett högt <a class="kb-term" href="/ordlista-g.html#term-glukos" data-def="Druvsocker; kroppens viktigaste enkla sockerart och energikälla">P-glukos</a> orsakar. <a href="#osmolalitet" class="info-link">Effektiv serumosmolalitet</a> mäter hur starkt blodet drar vatten till sig. Alla tre är byggda ur sina originalpublikationer, angivna längst ner.</p>
+      </div>
+
+      <div id="akut-utan-js" class="vt-warn">
+        Räknarna kräver JavaScript. Är det avstängt finns referensvärdena, formlerna och tolkningsbanden som text under varje rubrik.
+      </div>
+
+      <!-- =========================================================
+           1. Blodgasklassificerare
+           ========================================================= -->
+
+      <h2 id="blodgas">Blodgasklassificerare</h2>
+
+      <p>Fyll i pH, <a class="kb-term" href="/ordlista-k.html#term-koldioxid" data-def="Gasformig restprodukt från cellernas ämnesomsättning som andas ut via lungorna">pCO₂</a>, <a class="kb-term" href="/ordlista-b.html#term-bikarbonat" data-def="HCO₃⁻; blodets viktigaste buffert, reglerad av njurarna">bikarbonat</a> och <a class="kb-term" href="/ordlista-b.html#term-basoverskott" data-def="BE; hur mycket bas som måste tillföras eller tas bort för att normalisera blodets pH">basöverskott</a>. Räknaren avgör om rubbningen är metabol eller respiratorisk, om <a class="kb-term" href="/ordlista-k.html#term-kompensation" data-def="Kroppens förmåga att uppväga en störning så att funktionen ändå upprätthålls">kompensationen</a> är den förväntade, och — fylls <a class="kb-term" href="/ordlista-n.html#term-natrium" data-def="Grundämne och elektrolyt som styr kroppens vatten- och saltbalans">natrium</a> och klorid i också — vad anjongapet är. Resonemanget byggs i egna stycken, ett steg i taget, precis som det görs för hand vid en sängkant.</p>
+
+      <div data-akut="blodgas"></div>
+
+      <h3>Referensvärden och formler</h3>
+
+      <p>Räknarens facit — samma tal som ligger bakom varje bedömning ovan.</p>
+
+      <table class="kb-mtable">
+        <caption>Referensintervall för en arteriell <a class="kb-term" href="/ordlista-b.html#term-blodgas" data-def="Blodprov som mäter pH, koldioxid- och syrehalt samt bikarbonat">blodgas</a></caption>
+        <thead>
+          <tr>
+            <th scope="col">Variabel</th>
+            <th scope="col">Referensintervall</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Variabel">pH</th><td data-label="Referensintervall">7,35–7,45</td></tr>
+          <tr><th scope="row" data-label="Variabel">pCO₂</th><td data-label="Referensintervall">4,5–6,0 kPa</td></tr>
+          <tr><th scope="row" data-label="Variabel"><a class="kb-term" href="/ordlista-b.html#term-bikarbonat" data-def="HCO₃⁻; blodets viktigaste buffert, reglerad av njurarna">Bikarbonat</a> (HCO₃⁻)</th><td data-label="Referensintervall">22–26 mmol/L</td></tr>
+          <tr><th scope="row" data-label="Variabel"><a class="kb-term" href="/ordlista-b.html#term-basoverskott" data-def="BE; hur mycket bas som måste tillföras eller tas bort för att normalisera blodets pH">Basöverskott</a> (BE)</th><td data-label="Referensintervall">−3 till +3 mmol/L</td></tr>
+          <tr><th scope="row" data-label="Variabel"><a class="kb-term" href="/ordlista-a.html#term-anjongap" data-def="Skillnaden mellan uppmätta positiva och negativa joner i plasma; delar in metabol acidos">Anjongap</a></th><td data-label="Referensintervall">8–12 mmol/L</td></tr>
+          <tr><th scope="row" data-label="Variabel"><a class="kb-term" href="/ordlista-l.html#term-laktat" data-def="Salt eller jon av mjölksyra; stiger vid syrebrist och chock">Laktat</a> (<a class="kb-term" href="/ordlista-v.html#term-venos" data-def="Som har med vener (blodådror) att göra">venöst</a>)</th><td data-label="Referensintervall">0,5–2,2 mmol/L</td></tr>
+        </tbody>
+      </table>
+
+      <p>Är bikarbonatet under 22 mmol/L eller pCO₂ över 6,0 kPa medan pH är surt (under 7,35) pekar mönstret mot en metabol respektive respiratorisk <a class="kb-term" href="/ordlista-a.html#term-acidos" data-def="Syra-bas-rubbning med sänkt pH i blodet">acidos</a> som orsak — symmetriskt vid <a class="kb-term" href="/ordlista-a.html#term-alkalos" data-def="Syra-bas-rubbning med förhöjt pH i blodet">alkalos</a> och högt pH. Är bara det ena avvikande prövas <a class="kb-term" href="/ordlista-k.html#term-kompensation" data-def="Kroppens förmåga att uppväga en störning så att funktionen ändå upprätthålls">kompensationen</a> mot en förväntad nivå:</p>
+
+      <table class="kb-mtable">
+        <caption>Förväntad <a class="kb-term" href="/ordlista-k.html#term-kompensation" data-def="Kroppens förmåga att uppväga en störning så att funktionen ändå upprätthålls">kompensation</a> (Berend, de Vries &amp; Gans, 2014)</caption>
+        <thead>
+          <tr>
+            <th scope="col"><a class="kb-term" href="/ordlista-p.html#term-primar" data-def="Som kommer först, ursprunglig; om en sjukdom: med okänd eller egen grundorsak (motsats sekundär)">Primär</a> rubbning</th>
+            <th scope="col">Förväntat värde</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Primär rubbning">Metabol <a class="kb-term" href="/ordlista-a.html#term-acidos" data-def="Syra-bas-rubbning med sänkt pH i blodet">acidos</a></th><td data-label="Förväntat värde">pCO₂ = 0,2 × HCO₃⁻ + 1,1 kPa (± 0,3)</td></tr>
+          <tr><th scope="row" data-label="Primär rubbning">Metabol <a class="kb-term" href="/ordlista-a.html#term-alkalos" data-def="Syra-bas-rubbning med förhöjt pH i blodet">alkalos</a></th><td data-label="Förväntat värde">pCO₂ = 0,09 × (HCO₃⁻ − 24) + 5,3 kPa (± 0,3)</td></tr>
+          <tr><th scope="row" data-label="Primär rubbning">Respiratorisk <a class="kb-term" href="/ordlista-a.html#term-acidos" data-def="Syra-bas-rubbning med sänkt pH i blodet">acidos</a>, akut</th><td data-label="Förväntat värde">HCO₃⁻ stiger 0,75 mmol/L per kPa pCO₂ över 5,3</td></tr>
+          <tr><th scope="row" data-label="Primär rubbning">Respiratorisk <a class="kb-term" href="/ordlista-a.html#term-acidos" data-def="Syra-bas-rubbning med sänkt pH i blodet">acidos</a>, kroniskt</th><td data-label="Förväntat värde">HCO₃⁻ stiger 3,4 mmol/L per kPa pCO₂ över 5,3</td></tr>
+          <tr><th scope="row" data-label="Primär rubbning">Respiratorisk <a class="kb-term" href="/ordlista-a.html#term-alkalos" data-def="Syra-bas-rubbning med förhöjt pH i blodet">alkalos</a>, akut</th><td data-label="Förväntat värde">HCO₃⁻ sjunker 1,5 mmol/L per kPa pCO₂ under 5,3</td></tr>
+          <tr><th scope="row" data-label="Primär rubbning">Respiratorisk <a class="kb-term" href="/ordlista-a.html#term-alkalos" data-def="Syra-bas-rubbning med förhöjt pH i blodet">alkalos</a>, kroniskt</th><td data-label="Förväntat värde">HCO₃⁻ sjunker 3,4 mmol/L per kPa pCO₂ under 5,3</td></tr>
+        </tbody>
+      </table>
+
+      <p>Ligger det uppmätta värdet utanför sitt förväntade spann talar det för en andra, samtidig rubbning — inte bara en enda som kompenseras.</p>
+
+      <h3>Vad betyder variablerna?</h3>
+
+      <h4>pH</h4>
+      <p><a class="kb-term" href="/ordlista-p.html#term-ph" data-def="Mått på en vätskas surhetsgrad på en skala 0–14, där 7 är neutralt">pH</a> är måttet på blodets surhetsgrad. Ett pH under 7,35 kallas <a class="kb-term" href="/ordlista-a.html#term-acidemi" data-def="Sänkt pH i blodet, under 7,35">acidemi</a>, ett pH över 7,45 kallas <a class="kb-term" href="/ordlista-a.html#term-alkalemi" data-def="Förhöjt pH i blodet, över 7,45">alkalemi</a>. Det är viktigt att skilja de orden från <a class="kb-term" href="/ordlista-a.html#term-acidos" data-def="Syra-bas-rubbning med sänkt pH i blodet">acidos</a> och <a class="kb-term" href="/ordlista-a.html#term-alkalos" data-def="Syra-bas-rubbning med förhöjt pH i blodet">alkalos</a>: <a class="kb-term" href="/ordlista-a.html#term-acidos" data-def="Syra-bas-rubbning med sänkt pH i blodet">acidos</a> och <a class="kb-term" href="/ordlista-a.html#term-alkalos" data-def="Syra-bas-rubbning med förhöjt pH i blodet">alkalos</a> är själva den bakomliggande <em>processen</em>, medan <a class="kb-term" href="/ordlista-a.html#term-acidemi" data-def="Sänkt pH i blodet, under 7,35">acidemi</a> och <a class="kb-term" href="/ordlista-a.html#term-alkalemi" data-def="Förhöjt pH i blodet, över 7,45">alkalemi</a> är vad den processen gör med pH just nu. En patient kan ha en uttalad metabol <a class="kb-term" href="/ordlista-a.html#term-acidos" data-def="Syra-bas-rubbning med sänkt pH i blodet">acidos</a> och ändå ett normalt pH, om lungorna hunnit kompensera fullt ut.</p>
+
+      <h4>pCO₂</h4>
+      <p><a class="kb-term" href="/ordlista-k.html#term-koldioxid" data-def="Gasformig restprodukt från cellernas ämnesomsättning som andas ut via lungorna">Koldioxiden</a> löst i blodet bildar kolsyra, som är en syra i sig — desto mer pCO₂, desto surare blod. Lungorna styr pCO₂ på minuter genom att andas fortare eller långsammare, vilket gör pCO₂ till den <em>respiratoriska</em> halvan av syra-bas-systemet. Ett för högt pCO₂ kallas <a class="kb-term" href="/ordlista-h.html#term-hyperkapni" data-def="Förhöjd koldioxidhalt i blodet">hyperkapni</a>, ett för lågt <a class="kb-term" href="/ordlista-h.html#term-hypokapni" data-def="Låg koldioxidhalt i blodet, t.ex. vid hyperventilation">hypokapni</a>.</p>
+
+      <h4><a class="kb-term" href="/ordlista-b.html#term-bikarbonat" data-def="HCO₃⁻; blodets viktigaste buffert, reglerad av njurarna">Bikarbonat</a></h4>
+      <p><a class="kb-term" href="/ordlista-b.html#term-bikarbonat" data-def="Vätekarbonatjonen HCO₃⁻; kroppens viktigaste buffert">Bikarbonatet</a> är den <em>metabola</em> halvan: njurarna styr hur mycket som återbildas och utsöndras, men det tar timmar till dagar snarare än minuter. Ett <a class="kb-term" href="/ordlista-b.html#term-bikarbonat" data-def="HCO₃⁻; blodets viktigaste buffert, reglerad av njurarna">bikarbonat</a> under 22 mmol/L talar för en metabol <a class="kb-term" href="/ordlista-a.html#term-acidos" data-def="Syra-bas-rubbning med sänkt pH i blodet">acidos</a>, över 26 för en metabol <a class="kb-term" href="/ordlista-a.html#term-alkalos" data-def="Syra-bas-rubbning med förhöjt pH i blodet">alkalos</a> — under förutsättning att pCO₂ inte redan hunnit förändra det genom en pågående <a class="kb-term" href="/ordlista-k.html#term-kompensation" data-def="Kroppens förmåga att uppväga en störning så att funktionen ändå upprätthålls">kompensation</a>.</p>
+
+      <h4><a class="kb-term" href="/ordlista-b.html#term-basoverskott" data-def="BE; hur mycket bas som måste tillföras eller tas bort för att normalisera blodets pH">Basöverskott</a></h4>
+      <p><a class="kb-term" href="/ordlista-b.html#term-basoverskott" data-def="Den mängd bas som skulle behöva tillföras eller tas bort för att återställa blodets pH till 7,40 vid normal koldioxidhalt">Basöverskottet</a> (BE) svarar på en annan fråga än det uppmätta bikarbonatet: hur mycket bas som skulle behöva tillföras eller tas bort för att få pH till 7,40 <em>om pCO₂ samtidigt normaliserades</em>. Just den definitionen gör BE oberoende av ett akut förändrat pCO₂, vilket det uppmätta (aktuella) bikarbonatet inte riktigt är. Ett negativt BE (basunderskott) bekräftar en metabol <a class="kb-term" href="/ordlista-a.html#term-acidos" data-def="Syra-bas-rubbning med sänkt pH i blodet">acidos</a>, ett positivt en metabol <a class="kb-term" href="/ordlista-a.html#term-alkalos" data-def="Syra-bas-rubbning med förhöjt pH i blodet">alkalos</a>.</p>
+
+      <h4><a class="kb-term" href="/ordlista-n.html#term-natrium" data-def="Grundämne och elektrolyt som styr kroppens vatten- och saltbalans">Natrium</a>, klorid och anjongapet</h4>
+      <p><a class="kb-term" href="/ordlista-n.html#term-natrium" data-def="Grundämne och elektrolyt som styr kroppens vatten- och saltbalans">Natrium</a> och <a class="kb-term" href="/ordlista-k.html#term-klorid" data-def="Negativt laddad elektrolyt (Cl⁻) som följer natrium och bidrar till vätske- och syra-bas-balansen">klorid</a> används tillsammans med bikarbonatet för att räkna ut <a class="kb-term" href="/ordlista-a.html#term-anjongap" data-def="Beräknad skillnad mellan uppmätta positivt och negativt laddade joner i plasma: Na⁺ − (Cl⁻ + HCO₃⁻)">anjongapet</a>: Na⁺ − (Cl⁻ + HCO₃⁻). Ett högt <a class="kb-term" href="/ordlista-a.html#term-anjongap" data-def="Skillnaden mellan uppmätta positiva och negativa joner i plasma; delar in metabol acidos">anjongap</a> betyder att något annat än klorid håller jämvikten med natriumet — en syra som <a class="kb-term" href="/ordlista-l.html#term-laktat" data-def="Salt eller jon av mjölksyra; stiger vid syrebrist och chock">laktat</a>, ketonkroppar eller ett gift. Ett normalt <a class="kb-term" href="/ordlista-a.html#term-anjongap" data-def="Skillnaden mellan uppmätta positiva och negativa joner i plasma; delar in metabol acidos">anjongap</a> vid en metabol <a class="kb-term" href="/ordlista-a.html#term-acidos" data-def="Syra-bas-rubbning med sänkt pH i blodet">acidos</a> talar i stället för att <a class="kb-term" href="/ordlista-b.html#term-bikarbonat" data-def="HCO₃⁻; blodets viktigaste buffert, reglerad av njurarna">bikarbonat</a> gått förlorat direkt, till exempel via tarmen eller njurarna (<a class="kb-term" href="/ordlista-r.html#term-renal-tubular-acidos" data-def="Metabol acidos med normalt anjongap orsakad av att njurtubuli inte kan hålla pH normalt">renal tubulär acidos</a>).</p>
+
+      <h4><a class="kb-term" href="/ordlista-l.html#term-laktat" data-def="Salt eller jon av mjölksyra; stiger vid syrebrist och chock">Laktat</a></h4>
+      <p><a class="kb-term" href="/ordlista-l.html#term-laktat" data-def="Salt eller jon av mjölksyra; bildas vid syrefattig (anaerob) ämnesomsättning">Laktatet</a> bildas när celler tvingas göra energi utan syre. Ett förhöjt <a class="kb-term" href="/ordlista-l.html#term-laktat" data-def="Salt eller jon av mjölksyra; stiger vid syrebrist och chock">laktat</a> vid ett samtidigt högt <a class="kb-term" href="/ordlista-a.html#term-anjongap" data-def="Skillnaden mellan uppmätta positiva och negativa joner i plasma; delar in metabol acidos">anjongap</a> gör <a class="kb-term" href="/ordlista-l.html#term-laktacidos" data-def="Metabol acidos av ansamlat laktat, oftast vid syrebrist i vävnaderna">laktacidos</a> till den sannolika förklaringen; ett normalt <a class="kb-term" href="/ordlista-l.html#term-laktat" data-def="Salt eller jon av mjölksyra; stiger vid syrebrist och chock">laktat</a> pekar i stället mot en annan orsak, som <a class="kb-term" href="/ordlista-k.html#term-ketoacidos" data-def="Försurning av blodet orsakad av ökad bildning av ketonkroppar">ketoacidos</a> eller <a class="kb-term" href="/ordlista-n.html#term-njursvikt" data-def="Nedsatt förmåga hos njurarna att rena blodet och reglera vätskebalansen">njursvikt</a>.</p>
+
+      <h3>Varför just de här variablerna?</h3>
+
+      <p>Blodets buffertsystem bygger på en enda jämvikt mellan <a class="kb-term" href="/ordlista-k.html#term-koldioxid" data-def="Gasformig restprodukt från cellernas ämnesomsättning som andas ut via lungorna">koldioxid</a> och <a class="kb-term" href="/ordlista-b.html#term-bikarbonat" data-def="HCO₃⁻; blodets viktigaste buffert, reglerad av njurarna">bikarbonat</a>, beskriven av Henderson–Hasselbalchs ekvation. Just därför räcker det med tre mätvärden — pH, pCO₂ och <a class="kb-term" href="/ordlista-b.html#term-bikarbonat" data-def="HCO₃⁻; blodets viktigaste buffert, reglerad av njurarna">bikarbonat</a> — för att i praktiken beskriva hela systemet: känner man två av dem följer det tredje. Att en rubbning kallas <em>respiratorisk</em> eller <em>metabol</em> handlar bara om vilken sida av jämvikten som rubbades först (Berend, de Vries &amp; Gans, 2014).</p>
+
+      <p><strong>Lungorna svarar på minuter, njurarna på dagar.</strong> Andningscentrum i <a class="kb-term" href="/ordlista-h.html#term-hjarnstam" data-def="Mellanhjärna, pons och förlängda märgen">hjärnstammen</a> känner av pH och pCO₂ och justerar <a class="kb-term" href="/ordlista-a.html#term-andningsfrekvens" data-def="Antal andetag per minut; normalt 12–20 hos vuxen i vila">andningsfrekvensen</a> nästan omedelbart, medan njurarnas förmåga att ändra hur mycket <a class="kb-term" href="/ordlista-b.html#term-bikarbonat" data-def="HCO₃⁻; blodets viktigaste buffert, reglerad av njurarna">bikarbonat</a> som återvinns tar timmar till dagar att nå sin fulla nivå. Det är skälet till att en respiratorisk rubbnings förväntade <a class="kb-term" href="/ordlista-k.html#term-kompensation" data-def="Kroppens förmåga att uppväga en störning så att funktionen ändå upprätthålls">kompensation</a> skiljer sig mellan <em>akut</em> (timmar) och <em>kroniskt</em> (dagar till veckor) — njurarna har helt enkelt inte hunnit svara ännu i den akuta situationen. En metabol rubbning kompenseras däremot alltid av lungorna, som är snabba, vilket är varför den metabola sidan bara har en förväntad nivå, inte två.</p>
+
+      <p><strong>Basöverskottet finns för att en ensam bikarbonatsiffra kan lura.</strong> Vid ett akut förändrat pCO₂ hinner även det uppmätta (aktuella) bikarbonatet röra sig lite, trots att inget hänt på den metabola sidan — en ren respiratorisk rubbning kan alltså ge ett <a class="kb-term" href="/ordlista-b.html#term-bikarbonat" data-def="HCO₃⁻; blodets viktigaste buffert, reglerad av njurarna">bikarbonat</a> som ser lätt avvikande ut. BE är matematiskt konstruerat för att räkna bort just den effekten, och är därför det renare måttet på om det finns en verklig metabol komponent.</p>
+
+      <p><strong>Anjongapet gör en osynlig syra synlig.</strong> Kroppens positiva och negativa joner tar alltid ut varandra exakt — det finns inget riktigt "gap" i blodet. Det beräknade anjongapet mäter bara de vanligaste jonerna (<a class="kb-term" href="/ordlista-n.html#term-natrium" data-def="Grundämne och elektrolyt som styr kroppens vatten- och saltbalans">natrium</a> mot klorid och <a class="kb-term" href="/ordlista-b.html#term-bikarbonat" data-def="HCO₃⁻; blodets viktigaste buffert, reglerad av njurarna">bikarbonat</a>) och lämnar allt annat oräknat. När en ny syra dyker upp, som <a class="kb-term" href="/ordlista-l.html#term-laktat" data-def="Salt eller jon av mjölksyra; stiger vid syrebrist och chock">laktat</a> vid <a class="kb-term" href="/ordlista-c.html#term-chock" data-def="Livshotande tillstånd där cirkulationen inte räcker för att syresätta vävnaderna">chock</a> eller ketonkroppar vid <a class="kb-term" href="/ordlista-k.html#term-ketoacidos" data-def="Försurning av blodet orsakad av ökad bildning av ketonkroppar">ketoacidos</a>, konsumerar den <a class="kb-term" href="/ordlista-b.html#term-bikarbonat" data-def="HCO₃⁻; blodets viktigaste buffert, reglerad av njurarna">bikarbonat</a> utan att klorid stiger i motsvarande grad — och gapet växer. Det är därför ett högt <a class="kb-term" href="/ordlista-a.html#term-anjongap" data-def="Skillnaden mellan uppmätta positiva och negativa joner i plasma; delar in metabol acidos">anjongap</a> pekar mot en <em>tillkommen</em> syra, medan ett normalt <a class="kb-term" href="/ordlista-a.html#term-anjongap" data-def="Skillnaden mellan uppmätta positiva och negativa joner i plasma; delar in metabol acidos">anjongap</a> pekar mot att <a class="kb-term" href="/ordlista-b.html#term-bikarbonat" data-def="HCO₃⁻; blodets viktigaste buffert, reglerad av njurarna">bikarbonat</a> helt enkelt runnit bort, till exempel med en <a class="kb-term" href="/ordlista-d.html#term-diarre" data-def="Lös eller vattnig avföring, ofta tätare än vanligt">diarré</a>.</p>
+
+      <div class="vt-ansvar">
+        <p><strong>Räknaren ersätter inte bedömningen.</strong> Referensvärdena gäller en arteriell <a class="kb-term" href="/ordlista-b.html#term-blodgas" data-def="Blodprov som mäter pH, koldioxid- och syrehalt samt bikarbonat">blodgas</a> hos en vuxen i vila. Kompensationsformlerna är statistiska tumregler från Berend, de Vries och Gans (2014), inte absoluta gränser — ett värde precis utanför spannet är inte automatiskt fel, och ett värde innanför utesluter inte en rubbning i tidigt skede. Den <a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">kliniska</a> bilden och tidigare värden väger alltid tyngre än en enskild beräkning.</p>
+      </div>
+
+      <!-- =========================================================
+           2. Korrigerat natrium
+           ========================================================= -->
+
+      <h2 id="natrium">Korrigerat <a class="kb-term" href="/ordlista-n.html#term-natrium" data-def="Grundämne och elektrolyt som styr kroppens vatten- och saltbalans">natrium</a> vid högt <a class="kb-term" href="/ordlista-g.html#term-glukos" data-def="Druvsocker">glukos</a></h2>
+
+      <p>Ett högt <a class="kb-term" href="/ordlista-g.html#term-glukos" data-def="Druvsocker; kroppens viktigaste enkla sockerart och energikälla">P-glukos</a> drar vatten ut ur cellerna och späder ut natriumet i blodet, så att det uppmätta värdet ser lägre ut än kroppens verkliga saltbalans. Räknaren visar det korrigerade natriumet enligt två formler: Katz (1973), som länge var standard, och Hillier, Abbott och Barrett (1999), som mätte upp att effekten är starkare än Katz uppskattade.</p>
+
+      <div data-akut="natrium_korrigerat"></div>
+
+      <h3>Formeln och tolkningen</h3>
+
+      <table class="kb-mtable">
+        <caption>Korrigerat <a class="kb-term" href="/ordlista-n.html#term-natrium" data-def="Grundämne och elektrolyt som styr kroppens vatten- och saltbalans">natrium</a> – formel och tolkning</caption>
+        <thead>
+          <tr>
+            <th scope="col">Formel</th>
+            <th scope="col">Korrigerat <a class="kb-term" href="/ordlista-n.html#term-natrium" data-def="Grundämne och elektrolyt som styr kroppens vatten- och saltbalans">natrium</a></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Formel">Katz (1973)</th><td data-label="Korrigerat natrium">Na + 1,6 × (<a class="kb-term" href="/ordlista-g.html#term-glukos" data-def="Druvsocker">glukos</a> − 5,55) / 5,55</td></tr>
+          <tr><th scope="row" data-label="Formel">Hillier m.fl. (1999)</th><td data-label="Korrigerat natrium">Na + 2,4 × (<a class="kb-term" href="/ordlista-g.html#term-glukos" data-def="Druvsocker">glukos</a> − 5,55) / 5,55</td></tr>
+        </tbody>
+      </table>
+
+      <table class="kb-mtable">
+        <caption>Tolkning av det korrigerade värdet</caption>
+        <thead>
+          <tr>
+            <th scope="col">Korrigerat <a class="kb-term" href="/ordlista-n.html#term-natrium" data-def="Grundämne och elektrolyt som styr kroppens vatten- och saltbalans">natrium</a></th>
+            <th scope="col">Tolkning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Korrigerat natrium">Under 137 mmol/L</th><td data-label="Tolkning">En viss <a class="kb-term" href="/ordlista-h.html#term-hyponatremi" data-def="För lågt natrium i blodet">hyponatremi</a> kvarstår trots korrigeringen</td></tr>
+          <tr><th scope="row" data-label="Korrigerat natrium">137–145 mmol/L</th><td data-label="Tolkning">Normalt efter korrigeringen</td></tr>
+          <tr><th scope="row" data-label="Korrigerat natrium">Över 145 mmol/L</th><td data-label="Tolkning">Hypernatremi efter korrigeringen</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Vad betyder variablerna?</h3>
+
+      <h4><a class="kb-term" href="/ordlista-n.html#term-natrium" data-def="Grundämne och elektrolyt som styr kroppens vatten- och saltbalans">Natrium</a></h4>
+      <p><a class="kb-term" href="/ordlista-n.html#term-natrium" data-def="Grundämne och metall (Na); kroppens viktigaste positiva jon utanför cellerna">Natriumet</a> är kroppens viktigaste jon utanför cellerna och det som bestämmer hur mycket vatten som stannar där. <a class="kb-term" href="/ordlista-h.html#term-hyponatremi" data-def="För lågt natrium i blodet">Hyponatremi</a> — lågt <a class="kb-term" href="/ordlista-n.html#term-natrium" data-def="Grundämne och elektrolyt som styr kroppens vatten- och saltbalans">natrium</a> — kan bero på för mycket vatten, för lite <a class="kb-term" href="/ordlista-n.html#term-natrium" data-def="Grundämne och elektrolyt som styr kroppens vatten- och saltbalans">natrium</a>, eller på att något annat drar vatten ut ur cellerna och späder ut natriumet utan att kroppens totala saltmängd egentligen förändrats. Det senare är exakt vad som händer vid högt <a class="kb-term" href="/ordlista-g.html#term-glukos" data-def="Druvsocker">glukos</a>.</p>
+
+      <h4>P-<a class="kb-term" href="/ordlista-g.html#term-glukos" data-def="Druvsocker">glukos</a></h4>
+      <p><a class="kb-term" href="/ordlista-g.html#term-glukos" data-def="Druvsocker">Glukos</a> passerar inte fritt in i de flesta celler utan <a class="kb-term" href="/ordlista-i.html#term-insulin" data-def="Blodsockersänkande hormon från bukspottkörteln; får cellerna att ta upp glukos">insulin</a>, och vid <a class="kb-term" href="/ordlista-h.html#term-hyperglykemi" data-def="Förhöjt blodsocker">hyperglykemi</a> blir glukosnivån i blodet så mycket högre än inne i cellen att vatten dras ut genom osmos för att jämna ut skillnaden. Ju högre <a class="kb-term" href="/ordlista-g.html#term-glukos" data-def="Druvsocker">glukos</a>, desto mer utspädning — och desto större korrigering krävs för att se vad natriumet egentligen är.</p>
+
+      <h4>Katz och Hillier</h4>
+      <p>Båda formlerna bygger på samma princip men skiljer sig i hur stor effekten antas vara. Katz (1973) uppskattade att natriumet faller 1,6 mmol/L för varje 5,55 mmol/L <a class="kb-term" href="/ordlista-g.html#term-glukos" data-def="Druvsocker">glukos</a> stiger över det normala. Hillier, Abbott och Barrett (1999) mätte effekten direkt hos patienter och fann att den var närmare 2,4 — särskilt vid mycket höga glukosvärden är skillnaden mellan formlerna stor, vilket är varför räknaren visar båda i stället för att välja en åt dig.</p>
+
+      <h3>Varför just de här variablerna?</h3>
+
+      <p>Osmos jämnar alltid ut koncentrationsskillnader över ett cellmembran genom att flytta vatten, inte lösta ämnen. När glukoset i blodet stiger snabbare än det kan tas upp av cellerna uppstår en tillfällig koncentrationsskillnad, och vatten lämnar cellerna för att jämna ut den. Natriumkoncentrationen i blodet — som är ett mått på hur utspätt blodet är, inte på hur mycket <a class="kb-term" href="/ordlista-n.html#term-natrium" data-def="Grundämne och elektrolyt som styr kroppens vatten- och saltbalans">natrium</a> som finns totalt — faller då som en bieffekt, utan att patienten egentligen förlorat något <a class="kb-term" href="/ordlista-n.html#term-natrium" data-def="Grundämne och elektrolyt som styr kroppens vatten- och saltbalans">natrium</a>.</p>
+
+      <p>Skälet till att korrigeringen är <a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">kliniskt</a> viktig är att den avgör vilken <a class="kb-term" href="/ordlista-h.html#term-hyponatremi" data-def="För lågt natrium i blodet">hyponatremi</a> man faktiskt har framför sig. Ett okorrigerat <a class="kb-term" href="/ordlista-n.html#term-natrium" data-def="Grundämne och elektrolyt som styr kroppens vatten- och saltbalans">natrium</a> på 128 mmol/L hos en patient med kraftigt förhöjt <a class="kb-term" href="/ordlista-g.html#term-glukos" data-def="Druvsocker">glukos</a> kan mycket väl motsvara ett i grunden normalt <a class="kb-term" href="/ordlista-n.html#term-natrium" data-def="Grundämne och elektrolyt som styr kroppens vatten- och saltbalans">natrium</a> — att behandla det som en riktig <a class="kb-term" href="/ordlista-h.html#term-hyponatremi" data-def="För lågt natrium i blodet">hyponatremi</a>, till exempel med hypertona lösningar, hade då varit fel. Korrigeringen skiljer den skenbara sänkningen från den verkliga.</p>
+
+      <!-- =========================================================
+           3. Effektiv serumosmolalitet
+           ========================================================= -->
+
+      <h2 id="osmolalitet">Effektiv serumosmolalitet</h2>
+
+      <p><a class="kb-term" href="/ordlista-t.html#term-tonicitet" data-def="En lösnings förmåga att dra vatten in i eller ut ur en cell">Tonicitet</a>, eller effektiv <a class="kb-term" href="/ordlista-o.html#term-osmolalitet" data-def="Måttet på hur många lösta partiklar en vätska innehåller per kilo lösningsmedel">osmolalitet</a>, mäter hur starkt blodet drar vatten till sig — men bara med de partiklar som inte fritt passerar cellmembran. Urea utelämnas därför avsiktligt, till skillnad från den totala <a class="kb-term" href="/ordlista-o.html#term-osmolalitet" data-def="Måttet på hur många lösta partiklar en vätska innehåller per kilo lösningsmedel">osmolalitet</a> ett laboratorium ibland rapporterar.</p>
+
+      <div data-akut="osmolalitet"></div>
+
+      <h3>Formel och tolkning</h3>
+
+      <table class="kb-mtable">
+        <caption>Effektiv serumosmolalitet – formel och tolkning</caption>
+        <thead>
+          <tr>
+            <th scope="col">Effektiv <a class="kb-term" href="/ordlista-o.html#term-osmolalitet" data-def="Måttet på hur många lösta partiklar en vätska innehåller per kilo lösningsmedel">osmolalitet</a></th>
+            <th scope="col">Tolkning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Effektiv osmolalitet">2 × (Na + K) + <a class="kb-term" href="/ordlista-g.html#term-glukos" data-def="Druvsocker">glukos</a></th><td data-label="Tolkning">Formeln (Mustafa m.fl., 2023)</td></tr>
+          <tr><th scope="row" data-label="Effektiv osmolalitet">Upp till 295 mosmol/kg</th><td data-label="Tolkning">Normalt (referens cirka 275–295)</td></tr>
+          <tr><th scope="row" data-label="Effektiv osmolalitet">296–319 mosmol/kg</th><td data-label="Tolkning">Lätt till måttligt förhöjd</td></tr>
+          <tr><th scope="row" data-label="Effektiv osmolalitet">320 mosmol/kg eller mer</th><td data-label="Tolkning">HHS-nivå</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Vad betyder variablerna?</h3>
+
+      <h4><a class="kb-term" href="/ordlista-t.html#term-tonicitet" data-def="En lösnings förmåga att dra vatten in i eller ut ur en cell">Tonicitet</a> och total <a class="kb-term" href="/ordlista-o.html#term-osmolalitet" data-def="Måttet på hur många lösta partiklar en vätska innehåller per kilo lösningsmedel">osmolalitet</a></h4>
+      <p>Ett labb mäter ofta den totala osmolaliteten, som räknar med allt löst i blodet, inklusive urinämne (urea). Urea passerar dock fritt in och ut ur celler och bidrar därför inte till att flytta vatten mellan blodet och cellerna — det driver ingen <a class="kb-term" href="/ordlista-t.html#term-tonicitet" data-def="En lösnings förmåga att dra vatten in i eller ut ur en cell">tonicitet</a>. Den effektiva osmolaliteten räknar bort urea av precis det skälet och blir därmed det mått som säger något om risken för hjärnödem eller uttorkning av celler.</p>
+
+      <h4><a class="kb-term" href="/ordlista-k.html#term-kalium" data-def="Grundämne och elektrolyt som styr cellernas elektriska aktivitet, särskilt i hjärtat">Kalium</a></h4>
+      <p><a class="kb-term" href="/ordlista-k.html#term-kalium" data-def="Grundämne och elektrolyt som styr cellernas elektriska aktivitet, särskilt i hjärtat">Kalium</a> tas med i just den här formeln, till skillnad från vissa enklare varianter som bara räknar <a class="kb-term" href="/ordlista-n.html#term-natrium" data-def="Grundämne och elektrolyt som styr kroppens vatten- och saltbalans">natrium</a>. <a class="kb-term" href="/ordlista-k.html#term-kalium" data-def="Grundämne och elektrolyt som styr cellernas elektriska aktivitet, särskilt i hjärtat">Kalium</a> är visserligen mest en intracellulär jon, men den bidrar ändå mätbart till kroppens totala mängd osmotiskt aktiva partiklar.</p>
+
+      <h3>Varför just de här variablerna?</h3>
+
+      <p>Gränsen 320 mosmol/kg används som ett av kriterierna för <a class="kb-term" href="/ordlista-h.html#term-hyperglykemi" data-def="Förhöjt blodsocker">hyperosmolärt</a> hyperglykemiskt <a class="kb-term" href="/ordlista-s.html#term-syndrom" data-def="En grupp symtom och tecken som regelbundet förekommer tillsammans och kännetecknar ett bestämt sjukdomstillstånd">syndrom</a> (HHS) — ett tillstånd med extremt förhöjt <a class="kb-term" href="/ordlista-g.html#term-glukos" data-def="Druvsocker">glukos</a> där patienten, till skillnad från vid <a class="kb-term" href="/ordlista-k.html#term-ketoacidos" data-def="Försurning av blodet orsakad av ökad bildning av ketonkroppar">ketoacidos</a>, ofta har kvar tillräckligt med <a class="kb-term" href="/ordlista-i.html#term-insulin" data-def="Blodsockersänkande hormon från bukspottkörteln; får cellerna att ta upp glukos">insulin</a> för att hämma ketonbildningen men inte för att sänka glukoset (Mustafa, Haq, Dashora, Castro &amp; Dhatariya, 2023). Ju högre <a class="kb-term" href="/ordlista-t.html#term-tonicitet" data-def="En lösnings förmåga att dra vatten in i eller ut ur en cell">tonicitet</a>, desto mer vatten har dragits ut ur hjärnans celler, vilket förklarar den sjunkande <a class="kb-term" href="/ordlista-m.html#term-medvetandegrad" data-def="Hur vaken och kontaktbar en person är, från fullt vaken till djupt medvetslös">medvetandegrad</a> som ger syndromet dess namn.</p>
+
+      <p>Just därför är <a class="kb-term" href="/ordlista-t.html#term-tonicitet" data-def="En lösnings förmåga att dra vatten in i eller ut ur en cell">tonicitet</a> också avgörande för <em>hur</em> ett sådant tillstånd behandlas, inte bara för att upptäcka det. Sänks glukoset och därmed toniciteten för snabbt hinner inte hjärnans celler anpassa sig, och vatten strömmar tillbaka in i dem fortare än de klarar av — med hjärnödem som följd. Det är samma princip som gör att en kronisk <a class="kb-term" href="/ordlista-h.html#term-hyponatremi" data-def="För lågt natrium i blodet">hyponatremi</a> inte får korrigeras för snabbt, fast i motsatt riktning.</p>
+
+      <div class="kb-sources">
+        <h2>Referenser</h2>
+        <ul>
+          <li>Berend, K., de Vries, A. P. J., &amp; Gans, R. O. B. (2014). Physiological approach to assessment of acid-base disturbances. <em>New England Journal of Medicine, 371</em>(15), 1434–1445.</li>
+          <li>Katz, M. A. (1973). Hyperglycemia-induced hyponatremia—calculation of expected serum sodium depression. <em>New England Journal of Medicine, 289</em>(16), 843–844.</li>
+          <li>Hillier, T. A., Abbott, R. D., &amp; Barrett, E. J. (1999). Hyponatremia: evaluating the correction factor for hyperglycemia. <em>The American Journal of Medicine, 106</em>(4), 399–403.</li>
+          <li>Mustafa, O. G., Haq, M., Dashora, U., Castro, E., &amp; Dhatariya, K. K. (2023). Management of hyperosmolar hyperglycaemic state (HHS) in adults: An updated guideline from the Joint British Diabetes Societies (JBDS) for Inpatient Care Group. <em>Diabetic Medicine, 40</em>(3), e15005.</li>
+        </ul>
+      </div>
+
+      <div class="actions">
+        <a href="/verktyg/akutmedicin/" class="btn primary">← Till akutmedicinen</a>
+        <a href="/medicinskordlista.html" class="btn">Slå upp en term</a>
+      </div>
+
+    </section>
+
+    <footer class="page-footer">
+      <p>Utbildningsmaterial, inte medicinsk rådgivning. Innehållet är avsett för studier och ersätter inte kurslitteratur, undervisning eller kliniska riktlinjer. Det ska inte användas som underlag för vård eller behandling av patienter.</p>
+      <p>Anatomiquiz använder inga kakor och samlar inte in personuppgifter. Läs mer i <a href="/integritet.html" class="info-link">integritetspolicyn</a>.</p>
+      <p class="page-updated">Senast uppdaterad <time data-updated datetime="2026-07-31">31 juli 2026</time></p>
+    </footer>
+  </main>
+
+  <script src="/js/akutmedicin.js?v=0.9.305" defer></script>
+
+  <!-- Ordlistetooltips i löptexten (progressiv förbättring; .kb-term funkar som länk utan JS) -->
+  <script src="/js/kb-glossary.js" defer></script>
+
+</body>
+</html>

@@ -14,17 +14,35 @@ generera tabellen ur facit: sidan är handskriven, bär tooltips från
 `wire_terms.py` och ska formuleras för en läsare, inte serialiseras. Alltså
 mäts likheten i stället, exakt och före commit.
 
-Skriptet gör två saker:
+Skriptet gör tre saker:
 
   1. Kör `node scripts/test_verktyg_akutmedicin.js` — motorn mot facit.
-  2. Jämför den statiska poängtabellen och svarstabellen mot facit, cell för
+  2. Jämför NEWS2:s statiska poängtabell och svarstabell mot facit, cell för
      cell, i BÅDA riktningar: varje intervall i facit ska stå i sin cell, och
      varje rad i tabellen ska ha en post i facit. En rad som inte känns igen
      stoppar bygget i stället för att tyst hoppas över (§0.4).
+  3. Kontrollerar att `syra-bas.html` (korrigerat natrium, effektiv
+     osmolalitet, blodgasklassificeraren) nämner varje referensvärde,
+     bandgräns och koefficient som facit bär, i löptext eller tabell.
+
+För NEWS2 är sidan en fullständig cell-för-cell-spegling av facit — det går
+tack vare att poängtabellen är en riktig uppslagstabell. `syra-bas.html`s tre
+instrument har ingen sådan tabellstruktur (två har en formel, ett en
+beslutsgång), så där kontrolleras i stället att varje tal ur facit *nämns* på
+sidan — svagare än en cell-för-cell-spegling, men det fångar ändå den
+vanligaste driften: att en gräns eller koefficient ändras i det ena stället
+och glöms i det andra.
 
 Radernas koppling till facit står i `RADER` nedan och är handskriven, eftersom
 tabellen slår ihop band som facit håller isär ("≤8" och "≥25" står i samma
 cell). Att kontrollera, hitta och jämföra är mekaniskt och görs här.
+
+**Formlernas koefficienter finns bara i `js/akutmedicin.js` (FORMLER,
+metabolKompensation, respKompensation) — inte som egna fält i facit.** De
+återges här i `KOEFFICIENTER`, handskrivna av samma skäl som `RADER`: ändras
+en koefficient i JS men inte i `KOEFFICIENTER` upptäcks det ändå, eftersom
+`scripts/test_verktyg_akutmedicin.js` redan pinnar samma tal via sina
+uträknade facit — de två skydden täcker varandras blinda fläck.
 
 Användning:
     python3 scripts/check_akutmedicin.py
@@ -41,7 +59,15 @@ import sys
 ROT = pathlib.Path(__file__).resolve().parent.parent
 FACIT = ROT / "data" / "akutmedicin.json"
 SIDA = ROT / "verktyg" / "akutmedicin" / "vitalparametrar.html"
+SIDA_SYRABAS = ROT / "verktyg" / "akutmedicin" / "syra-bas.html"
 NODTEST = "scripts/test_verktyg_akutmedicin.js"
+
+# Formelkoefficienter som bara lever i JS — se modulens docstring.
+KOEFFICIENTER = {
+    "natrium_korrigerat": ["1,6", "2,4", "5,55"],
+    "osmolalitet": [],   # formeln 2×(Na+K)+glukos bär inga egna fria koefficienter
+    "blodgas": ["0,2", "1,1", "0,3", "0,09", "5,3", "0,75", "3,4", "1,5", "24"],
+}
 
 # Radrubrik i poängtabellen → (parameter i facit, bandnyckel eller None).
 # Syresaturationen har två rader, en per mättnadsskala, och delar parameter.
@@ -163,6 +189,60 @@ def kontrollera_svarstabell(skala: dict, tabell: str, fel: list, visa: bool):
         fel.append("svarstabellen saknar rad för: " + ", ".join(sorted(saknade)))
 
 
+def sv(n) -> str:
+    """Svensk talvisning, samma avrundningsprincip som visaTal() i
+    js/akutmedicin.js: heltal utan decimaler, annars komma."""
+    if float(n).is_integer():
+        return str(int(n))
+    s = f"{n:.3f}".rstrip("0").rstrip(".")
+    return s.replace(".", ",")
+
+
+def normaliserad(text: str) -> str:
+    """Minustecknet skrivs − (U+2212) i löptext men -/− spelar ingen roll
+    för om talet nämns — normalisera bort skillnaden före sökningen."""
+    return text.replace("−", "-")
+
+
+def kontrollera_forekomst(etikett: str, tal: list[str], text: str, fel: list, visa: bool):
+    text_n = normaliserad(text)
+    for t in tal:
+        t_n = normaliserad(str(t))
+        if t_n not in text_n:
+            fel.append(f"{etikett}: talet {t!r} ur facit nämns inte på {SIDA_SYRABAS.name}.")
+        elif visa:
+            print(f"  OK  {etikett} · {t} nämns")
+
+
+def granser_for(utdata: dict) -> list[int]:
+    """Gränstalen ur ett bandschema, avrundade till närmaste heltal — samma
+    knep som 136.99 i facit gör för att undvika glapp mellan banden."""
+    return [round(b["max"]) for b in (utdata.get("band") or []) if b.get("max") is not None]
+
+
+def kontrollera_natrium(facit: dict, text: str, fel: list, visa: bool):
+    utdata = facit["natrium_korrigerat"]["utdata"][0]
+    tal = [str(g) for g in granser_for(utdata)] + KOEFFICIENTER["natrium_korrigerat"]
+    kontrollera_forekomst("Korrigerat natrium", tal, text, fel, visa)
+
+
+def kontrollera_osmolalitet(facit: dict, text: str, fel: list, visa: bool):
+    utdata = facit["osmolalitet"]["utdata"][0]
+    granser = granser_for(utdata)
+    granser.append(granser[-1] + 1)   # 319 → 320, HHS-tröskeln, är bandets nästa heltal
+    kontrollera_forekomst("Effektiv serumosmolalitet", [str(g) for g in granser], text, fel, visa)
+
+
+def kontrollera_blodgas(facit: dict, text: str, fel: list, visa: bool):
+    ref = facit["blodgas"]["referens"]
+    tal = []
+    for namn in ("ph", "pco2", "hco3", "be", "anjongap", "laktat"):
+        tal.append(sv(ref[namn]["min"]))
+        tal.append(sv(ref[namn]["max"]))
+    tal += KOEFFICIENTER["blodgas"]
+    kontrollera_forekomst("Blodgasklassificeraren", tal, text, fel, visa)
+
+
 def kör_nodtest() -> int:
     nod = shutil.which("node")
     if not nod:
@@ -212,6 +292,29 @@ def main(argv) -> int:
                 if p["typ"] != "val")
     print(f"OK: poängtabellen speglar facit – {antal} intervall och "
           f"{len(SVARSRADER)} svarsrader identiska, 0 avvikelser.")
+
+    facit = json.loads(FACIT.read_text(encoding="utf-8"))
+    if not SIDA_SYRABAS.exists():
+        print(f"STOPP: {SIDA_SYRABAS.relative_to(ROT)} saknas trots att facit "
+              "har poster för natrium_korrigerat, osmolalitet och blodgas.",
+              file=sys.stderr)
+        return 1
+    text_syrabas = htmllib.unescape(re.sub(r"<[^>]+>", " ", SIDA_SYRABAS.read_text(encoding="utf-8")))
+
+    fel2: list[str] = []
+    kontrollera_natrium(facit, text_syrabas, fel2, visa)
+    kontrollera_osmolalitet(facit, text_syrabas, fel2, visa)
+    kontrollera_blodgas(facit, text_syrabas, fel2, visa)
+
+    if fel2:
+        print(f"AVVIKELSE: {len(fel2)} tal ur data/akutmedicin.json nämns inte "
+              f"på {SIDA_SYRABAS.relative_to(ROT)}:", file=sys.stderr)
+        for f in fel2:
+            print("  - " + f, file=sys.stderr)
+        return 1
+
+    print("OK: syra-bas.html nämner alla referensvärden, bandgränser och "
+          f"koefficienter ur facit – 0 avvikelser.")
     return 0
 
 

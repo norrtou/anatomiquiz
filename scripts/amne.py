@@ -193,6 +193,19 @@ _s("verktyg/akutmedicin/vitalparametrar.html",
    ["NEWS2", "vitalparametrar", "andningsfrekvens", "syresaturation",
     "medvetandegrad", "tidig varningspoäng"])
 
+_s("verktyg/akutmedicin/syra-bas.html",
+   [("Thing", "Blodgas"), ("Thing", "Korrigerat natrium"),
+    ("Thing", "Serumosmolalitet"), ("Thing", "Anjongap")],
+   ["Hur pH, pCO₂, bikarbonat och basöverskott tillsammans avgör en primär "
+    "syra-bas-rubbning.",
+    "Hur man räknar ut om kompensationen är den förväntade.",
+    "Hur anjongapet räknas ut och vad ett högt respektive normalt anjongap "
+    "talar för.",
+    "Varför ett högt P-glukos gör uppmätt natrium missvisande lågt.",
+    "Skillnaden mellan effektiv och total serumosmolalitet."],
+   ["blodgas", "blodgastolkning", "korrigerat natrium", "serumosmolalitet",
+    "anjongap", "tonicitet"])
+
 # --- Ordlistan --------------------------------------------------------------
 _s("medicinskordlista.html",
    [("Thing", "Medicinsk terminologi"), ("Thing", "Medicinsk ordlista"),
