@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.312
+- **H1-rubriker som inte fick plats på mobil, fixat på 12 sidor.** `.header h1` hade `flex-shrink: 0` i sin flex-rad (`.header-title`), vilket låste rubrikboxen till sin helt orradbrutna bredd oavsett hur mycket `font-size`-clampen sänkte fontstorleken på mobil — rubriken krympte synligt men bröt aldrig rad, och långa flerordstitlar rann ut över skärmkanten. Hittat genom en headless-Chrome-svep av alla 124 sidor med `<h1>` vid 320/375px mobilbredd (inget gissningsarbete), som pekade ut exakt vilka rubriker som faktiskt overflowade och varför.
+  - Drabbade sidor: `spellagen.html`, `ordlista-prefix.html`, `verktyg/akutmedicin/vitalparametrar.html`, `kunskapsbank/deklinationer-pluralformer.html`, `kunskapsbank/leder-bal-nacke.html` och sex kunskapsbanksartiklar (`anatomiska-riktningar`, `dermatom-myotom-sklerotom`, `fascia-bursor-senskidor`, `franska-och-tyska-i-medicinskt-sprak`, `ledtyper`, `minnesregler-kranialnerverna`, `rotatorkuffen`).
+  - Fix: tog bort `flex-shrink: 0` från `.header h1` i `css/styles.css` och lade till `word-break: break-word` som skydd mot enstaka extremt långa ord. `.header-logo` och `.version` (grannelement på index.html/404.html) har egna `flex-shrink: 0`-regler och påverkades inte — verifierat att de fortfarande håller sin bredd.
+  - Samma svep hittade tre **orelaterade** mobil-overflow-buggar som INTE rör h1: långa referenslänkar i `.kb-sources`/`.info-link` (rotatorkuffen-artikeln, `info.html`), `.vt-unit-fixed`-spann och tabellrubriker i akutmedicinräknarna (`vitalparametrar.html`, `syra-bas.html`), samt enstaka långa ord i löptext som inte bryter i smala kolumner (`minnesregler-kranialnerverna.html`, `engelska-i-medicinskt-sprak.html`). Lämnade orörda tills vidare — hör inte till H1-felet.
+  - Regeln in i `CSS_KARTA.md`: `.header h1` ska aldrig ha `flex-shrink: 0`; ett grannelement som behöver hålla sin bredd ska ha regeln på sig själv, inte tvinga rubriken att låta bli att radbryta.
+
 ## 0.9.311
 - **Sortera, etapp 5 av 6: storleksfrågorna 60 → 100 — ämnet Storlek & antal är därmed färdigbyggt.** 40 nya frågor (`ss061`–`ss100`), och målfördelningen är nu exakt uppfylld: 40 antal, 25 längd, 20 vikt, 15 volym. Sortera har därmed 200 frågor totalt, lika många i vardera ämnet.
   - Antal fick fler sammanhållna uppsättningar (hjärtats stora kärl, hela armens och benets benantal, öga/öra, hjärna och ryggmärg) och fler "hör inte ihop anatomiskt"-blandningar.

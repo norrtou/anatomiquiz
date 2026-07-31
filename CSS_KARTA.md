@@ -29,12 +29,31 @@ för rubriken – rubriken styrs uteslutande av `styles.css`.
 
 Allt bor i `css/styles.css`:
 
-1. **Basregel** (~rad 165): `.header h1 { font-size: 2.5rem; flex-shrink: 0; ... }`
-2. **Mobil** (~rad 179, `@media (max-width: 640px)`): `.header h1 { font-size: clamp(1.5rem, 7.6vw, 2rem); }`
+1. **Basregel** (~rad 292): `.header h1 { font-size: 2.5rem; word-break: break-word; ... }`
+2. **Mobil** (~rad 305, `@media (max-width: 640px)`): `.header h1 { font-size: clamp(1.5rem, 7.6vw, 2rem); }`
 
-Långa rubriker **skalas ner** (font-size-clamp) i stället för att brytas/avstavas.
-Taket 2rem = oförändrad storlek på bredare telefoner; golvet 1.5rem garanterar plats
-på de smalaste skärmarna.
+Långa rubriker **skalas ner** (font-size-clamp) **och bryts till flera rader** när
+skalningen ensam inte räcker. Taket 2rem = oförändrad storlek på bredare telefoner;
+golvet 1.5rem garanterar läsbar text på de smalaste skärmarna – därefter tar radbrytning
+över i stället för att texten rinner ut över skärmkanten.
+
+### ⚠️ Fällan `flex-shrink: 0` på `.header h1` (0.9.312)
+`.header-title` är `display: flex; flex-wrap: nowrap`. Ett flex-item med
+`flex-shrink: 0` och `flex-basis: auto` sätts till sin **max-content-bredd**
+(bredden texten skulle ha helt orradbruten) och krymper **aldrig**, oavsett hur
+liten `font-size` blir. Resultatet: långa flerordsrubriker (artikeltitlar,
+"Spellägen, regler och studieteknik", "Vitalparametrar och NEWS2" …) rullade ut
+över skärmkanten på mobil trots att clampen sänkte fontstorleken korrekt –
+`font-size` syntes minska, men boxen bröt aldrig rad. Hittat med en headless-
+Chrome-svep av alla 124 `<h1>`-sidor vid 320/375px, 12 sidor drabbade.
+
+`.header-logo` och `.version` har **egna** `flex-shrink: 0`-regler (skyddar dem
+från att klämmas av en lång rubrik) och påverkas inte av att h1 fick sin borttagen.
+
+**Regel framåt:** `.header h1` ska **aldrig** ha `flex-shrink: 0`. Om en ny rubrik
+delar `.header-title` med ett grannelement som måste hålla sin bredd, sätt
+`flex-shrink: 0` på **det grannelementet**, inte på h1 – h1 ska alltid få krympa
+och radbryta.
 
 ### ⚠️ Fällan som redan slagit till en gång
 Det fanns **två** identiska `.header h1`-basregler i `styles.css`, och den andra låg

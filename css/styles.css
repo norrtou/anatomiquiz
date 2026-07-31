@@ -299,7 +299,7 @@ main {
   background-clip: text;
   letter-spacing: -0.5px;
   line-height: 1.2;
-  flex-shrink: 0;
+  word-break: break-word;
 }
 
 @media (max-width: 640px) {
