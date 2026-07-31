@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.310
+- **Sortera, etapp 4 av 6: storleksfrågorna 20 → 60.** 40 nya frågor (`ss021`–`ss060`), fördelade enligt målplanen: 16 antal, 10 längd, 8 vikt, 6 volym — ämnet Storlek & antal ligger nu exakt på målfördelningen (24/15/12/9 av 60, motsvarar 40/25/20/15 % vid 100).
+  - Antal fick benantal per kroppsdel, muskelgrupper, tandbett och revben/kotor räknade rätt (sanna, falska och flytande revben, med flytande som en delmängd av de falska), samt flera "hör inte ihop anatomiskt"-uppsättningar där måttet är det enda som binder ihop posterna.
+  - Längd fick armens och benets rörben, urinrörets delar hos man jämfört med kvinna, buk- och bäckenorganens mått och andningsvägarnas väg från trachea till huvudbronkerna.
+  - Vikt fick nya jämförelser med huden (kroppens största organ räknat i vikt) och ögongloben, plus separata manliga och kvinnliga uppsättningar av bäckenorganen.
+  - Volym fick matsmältningskörtlarnas dygnsvolymer, kroppsvattnets fördelning i intra- och extracellulärvätska (siffrorna summerar till samma 42 liter som redan fanns i `ss019`), maximala uttänjningskapaciteter, ventilationen vid stigande ansträngning och hjärtats kammarvolymer.
+- Alla nya frågor kontrollerade mot samma tre spärrar som riktningsfrågorna: fallande ordning utan luckor, ingen alfabetisk råkoincidens (fångade en i `ss052`, brutit genom att byta ut en post) och enhetlig måttenhet per fråga (fångade sju frågor som blandade "par" och "st" – rättat genom att räkna om paren till totalantal, aldrig genom att mjuka upp kontrollen).
+
 ## 0.9.309
 - **Kvalitetsgranskning av Sortera (på begäran).** Tre fynd, alla rättade:
   - **CSS-bugg:** `.sortera-slot` hade en enda `gap: 10px` för både rader och kolumner. Vid facit lägger JS:en till en eller två extra fullbreddsrader (facitraden, och vid fel svar även "du hade …"), och den gemensamma gap:en gav dem samma 10 px mellanrum som brickan har till bockmarkeringen — en platta som borde växa någon millimeter blev i stället påtagligt större, och gap:en skalade heller inte ned med `--view-fit` på liten skärm. Det var vad som såg ut som en bugg på mobilen. Fixat med `column-gap: 10px; row-gap: 3px`.
