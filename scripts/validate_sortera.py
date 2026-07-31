@@ -53,6 +53,20 @@ MIN_FORKLARING = 40   # tecken; en förklaring som inte förklarar något är in
 
 # Prompten måste peka ut åt vilket håll listan ska ordnas.
 FORST = re.compile(r"\bförst\b", re.I)
+
+# Osynliga tecken. Ett mjukt bindestreck mitt i "medioklavikularlinjen" syns
+# inte i webbläsaren, i en diff eller i en granskning — men det delar ordet vid
+# radbrytning, förstör sökning och kopiering, och går inte att hitta genom att
+# läsa texten. Just därför måste det vara något som KÖRS (§0.3). Hittades i ett
+# eget manuellt korrektur av sr036 och kodifierades i samma pass.
+OSYNLIGA = {
+    "­": "mjukt bindestreck",
+    "​": "nollbredds-mellanslag",
+    "‌": "nollbredds-icke-sammanfogare",
+    " ": "hårt mellanslag",
+    "‐": "unicode-bindestreck (ska vara vanligt -)",
+    "﻿": "byte order mark",
+}
 # Räkneomfånget i antalsfrågor: totalt eller unilateralt (VARNING, inte FEL —
 # opariga organ och "par" bär omfånget i sig).
 OMFANG = re.compile(r"hela kroppen|båda sidor|en sida|unilateralt|totalt|hela skallen|"
@@ -108,6 +122,17 @@ def kontrollera_fraga(q, axlar, amnen, sedda_id, sedda_prompt, ut):
 
     if len(q["explanation"]) < MIN_FORKLARING:
         ut.fel(qid, f"förklaringen är kortare än {MIN_FORKLARING} tecken")
+
+    # Osynliga tecken i all synlig text, inklusive noterna.
+    texter = [("prompt", prompt), ("explanation", q["explanation"])]
+    for i, post in enumerate(q["items"]):
+        texter.append((f"post {i + 1} etikett", str(post.get("label", ""))))
+        if post.get("note"):
+            texter.append((f"post {i + 1} not", str(post["note"])))
+    for var, text in texter:
+        for tecken, namn in OSYNLIGA.items():
+            if tecken in text:
+                ut.fel(qid, f"{namn} i {var}: {text[:60]!r}")
 
     # --- Posterna ------------------------------------------------------------
     items = q["items"]

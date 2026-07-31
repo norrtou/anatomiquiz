@@ -269,8 +269,11 @@ ok('startsidan (#setup) är dold', nodes.setup.hidden())
 // att någon rör index.html.
 const optioner = nodes.sorteraTopic.children.map(o => o.value)
 eq('ett val per ämne, plus Blandat', optioner, ['sortera_riktningar', 'sortera_storlek', 'blandat'])
+// Antalet räknas ur arkivet, inte ur en siffra i testet: frågorna byggs ut
+// etappvis och en pinnad siffra hade fällt testet vid varje påfyllning.
+const ANTAL_RIKTNINGAR = ARKIV.fragor.filter(q => q.topic === 'sortera_riktningar').length
 ok('etiketten visar antalet frågor',
-  nodes.sorteraTopic.children[0].textContent === 'Riktningar & lägen (20 frågor)',
+  nodes.sorteraTopic.children[0].textContent === `Riktningar & lägen (${ANTAL_RIKTNINGAR} frågor)`,
   nodes.sorteraTopic.children[0].textContent)
 
 ok('förklaringen fälls upp för den som aldrig spelat', nodes.sorteraIntro.open === true)
@@ -284,7 +287,7 @@ eq('Blandat tar med båda ämnena',
   ev('new Set(buildSorteraSet("blandat", 99).map(q => q.topic)).size'), 2)
 eq('antalet kapar setet', ev('buildSorteraSet("blandat", 5).length'), 5)
 eq('fler önskade än som finns ger allt som finns',
-  ev('buildSorteraSet("sortera_riktningar", 500).length'), 20)
+  ev('buildSorteraSet("sortera_riktningar", 500).length'), ANTAL_RIKTNINGAR)
 
 // Brickorna får aldrig ligga i rätt ordning från start – en omgång som redan är
 // löst innan man rört den är ingen omgång.

@@ -1,5 +1,15 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.307
+- **Sortera, etapp 2 av 6: riktningsfrågorna 20 → 60.** 40 nya frågor (`sr021`–`sr060`), fördelade enligt målplanen: 12 proximalt–distalt, 10 medialt–lateralt, 8 ventralt–dorsalt, 6 kranialt–kaudalt och 4 ytligt–djupt.
+  - De nya proximal–distal-frågorna följer *rörsystem och kärl/nervträd* snarare än bara extremitetsskelett: venerna i arm och ben, artärträden, n. ischiadicus och n. femoralis, bronkträdet, gallvägarna, tjocktarmen, lymfvägarna och sädesledaren. Poängen är att proximalt/distalt räknas längs strukturen själv — längs en ven är proximalt mot hjärtat, alltså *mot* flödet.
+  - De blandade seten ligger på medial–lateral, ventral–dorsal och kranial–kaudal, där en kroppsgemensam referens finns: kärlnervsträngen i halsen, NAVEL i ljumsken, hjärtrummen i djupled (höger kammare främst, vänster förmak bakerst), kotkanalens skikt i lumbalpunktionens ordning, dermatomens landmärken C4→S1.
+  - Varje förklaring knyter ordningen till något kliniskt där det går — varför v. mediana cubiti är provtagningsvenen, varför trakeotomisnittet läggs nedanför sköldkörtelns istmus, varför Dupuytrens kontraktur drar fingrarna i böjning.
+- **Ny spärr i `scripts/validate_sortera.py`: osynliga tecken.** Ett mjukt bindestreck hade smugit sig in mitt i "medioklavikularlinjen" i en förklaring. Det syns inte i webbläsaren, inte i en diff och inte vid genomläsning — men det delar ordet vid radbrytning och förstör sökning och kopiering. Kontrollen fångar mjukt bindestreck, nollbredds-mellanslag, nollbredds-icke-sammanfogare, hårt mellanslag, unicode-bindestreck och BOM i prompt, förklaring, etiketter och noter. Larmet verifierat med två planterade tecken.
+- Testskalet räknar nu antalet frågor **ur arkivet** i stället för ur pinnade siffror — två tester föll på att arkivet växte, vilket de kommer att göra vid varje etapp.
+- **SEO på `spellagen.html` uppdaterad (på begäran):** `description`, `og:`, `twitter:` och JSON-LD-beskrivningen räknar nu upp fem spellägen inklusive Sortera, inom husnormen 127–150 tecken. FAQ-svaret "Vilket läge ska jag välja?" har fått en mening om Sortera — i **båda** upplagorna, den synliga och den i JSON-LD, som måste vara identiska.
+  - Notera: `wire_amne.py` stoppade första försöket. Strukturdatans about-namn "Aktiv repetition" måste stå i sidans text, och den texten räknas som titel + `<meta name="description">` + `<main>` — min första omskrivning hade tagit bort frasen ur description. Beskrivningen formulerades om så att frasen står kvar.
+
 ## 0.9.306
 - **Nytt spelläge: Sortera (etapp 1 av 6).** Fem anatomiska strukturer ska läggas i rätt ordning längs en riktning. Det enda läget där svaret är en *ordning* och inte ett alternativ.
   - **Eget frågearkiv och egen understartsida.** `data/sortera.json` med två egna ämnen (Riktningar & lägen, Storlek & antal) plus Blandat — sorteringsfrågor finns inte i quizets ämnen, så läget har en egen ämnesväljare i stället för `loadPoolForTopic`. Den byggs ur arkivet, så ett nytt ämne i JSON syns utan att någon rör `index.html`. **20 + 20 frågor i den här etappen**, målet är 100 + 100.
