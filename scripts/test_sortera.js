@@ -283,8 +283,12 @@ section('Urval')
 // ============================================================================
 eq('ämnet filtrerar poolen',
   ev('buildSorteraSet("sortera_storlek", 99).every(q => q.topic === "sortera_storlek")'), true)
+// 500 (inte 99): shuffle-stubben är en ren omvändning, så ett för litet
+// önskat antal kan hamna helt inom det block som råkar ligga sist i arkivet
+// när ämnena växer sig lika stora. Be om fler än vad som finns totalt, som i
+// testet nedanför, så täcks hela poolen oavsett hur ämnena växer.
 eq('Blandat tar med båda ämnena',
-  ev('new Set(buildSorteraSet("blandat", 99).map(q => q.topic)).size'), 2)
+  ev('new Set(buildSorteraSet("blandat", 500).map(q => q.topic)).size'), 2)
 eq('antalet kapar setet', ev('buildSorteraSet("blandat", 5).length'), 5)
 eq('fler önskade än som finns ger allt som finns',
   ev('buildSorteraSet("sortera_riktningar", 500).length'), ANTAL_RIKTNINGAR)

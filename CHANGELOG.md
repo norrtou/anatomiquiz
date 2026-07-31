@@ -1,6 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
-## 0.9.310
+## 0.9.311
+- **Sortera, etapp 5 av 6: storleksfrågorna 60 → 100 — ämnet Storlek & antal är därmed färdigbyggt.** 40 nya frågor (`ss061`–`ss100`), och målfördelningen är nu exakt uppfylld: 40 antal, 25 längd, 20 vikt, 15 volym. Sortera har därmed 200 frågor totalt, lika många i vardera ämnet.
+  - Antal fick fler sammanhållna uppsättningar (hjärtats stora kärl, hela armens och benets benantal, öga/öra, hjärna och ryggmärg) och fler "hör inte ihop anatomiskt"-blandningar.
+  - Längd fick nya jämförelser: aorta, hjärnans längdmått och den uträtade hörselsnäckan i samma fråga, samt ytterligare uppsättningar av arm-, ben- och tarmavsnitt.
+  - Vikt fick separata manliga och kvinnliga uppsättningar av bäckenorganen (bröstkörtel och livmoder mot prostata och testikel), så att inga könsspecifika organ blandas i samma fråga.
+  - Volym fick lungvolymernas tre deltal (inspiratorisk och expiratorisk reservvolym, kontrollerat att de summerar till samma vitalkapacitet som redan stod i `ss018`), kroppsvattnet hos en kvinna på 60 kg, blodets plasma/erytrocyt-fördelning vid 45 % hematokrit och ett andra blodflödesset med levern som störst efter hjärtat.
+- **Ett nytt testfel hittat och fixat, inte i sakinnehållet utan i testskalet självt:** `scripts/test_sortera.js` antog att en pool på 99 alltid spänner över båda ämnena när `shuffle` är stubbad till en ren omvändning. Det höll så länge Storlek & antal var mindre än Riktningar & lägen – men nu när båda är exakt 100 hamnade de 99 sista tvärt inne i ett enda ämnesblock. Fixat genom att be om fler frågor än vad som finns totalt (samma mönster som testet därunder redan använde), så kontrollen inte går sönder vid nästa tillväxt heller.
+- Samma tre spärrar som i etapp 4 kontrollerade alla 40 nya frågor: fallande ordning utan luckor, ingen alfabetisk råkoincidens och en enda måttenhet per fråga.
 - **Sortera, etapp 4 av 6: storleksfrågorna 20 → 60.** 40 nya frågor (`ss021`–`ss060`), fördelade enligt målplanen: 16 antal, 10 längd, 8 vikt, 6 volym — ämnet Storlek & antal ligger nu exakt på målfördelningen (24/15/12/9 av 60, motsvarar 40/25/20/15 % vid 100).
   - Antal fick benantal per kroppsdel, muskelgrupper, tandbett och revben/kotor räknade rätt (sanna, falska och flytande revben, med flytande som en delmängd av de falska), samt flera "hör inte ihop anatomiskt"-uppsättningar där måttet är det enda som binder ihop posterna.
   - Längd fick armens och benets rörben, urinrörets delar hos man jämfört med kvinna, buk- och bäckenorganens mått och andningsvägarnas väg från trachea till huvudbronkerna.

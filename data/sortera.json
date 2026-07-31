@@ -5474,6 +5474,1606 @@
       ],
       "explanation": "Slagvolymen är skillnaden mellan den fyllda och den tömda kammarvolymen: 120 minus 50 blir 70 ml per slag. Perikardvätskan smörjer hjärtats rörelser mot hjärtsäcken – men vid en snabbt tillkommen hjärttamponad räcker redan en bråkdel mer för att bli livshotande.",
       "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss061",
+      "topic": "sortera_storlek",
+      "axis": "antal",
+      "prompt": "Ordna efter antal, flest först, räknat totalt. Kärl och klaffar som hör till hjärtat hos en vuxen.",
+      "items": [
+        {
+          "label": "Hjärtklaffarnas segel",
+          "value": 11,
+          "unit": "st",
+          "note": "alla fyra klaffar tillsammans"
+        },
+        {
+          "label": "Stora kärl som ansluter till hjärtat",
+          "value": 8,
+          "unit": "st",
+          "note": "aorta, lungpulsådern, två hålvener och fyra lungvener"
+        },
+        {
+          "label": "Hjärtklaffar",
+          "value": 4,
+          "unit": "st",
+          "note": "två på varje sida av hjärtat"
+        },
+        {
+          "label": "Kranskärlens huvudstammar",
+          "value": 2,
+          "unit": "st",
+          "note": "vänster och höger, direkt ur aorta"
+        },
+        {
+          "label": "Njurartär per njure",
+          "value": 1,
+          "unit": "st",
+          "note": "den vanligaste varianten"
+        }
+      ],
+      "explanation": "Åtta stora kärl ansluter direkt till hjärtat: aorta och lungpulsådern ut, de två hålvenerna och fyra lungvener in. Klaffarnas elva segel fördelar sig tre, tre, tre och två på de fyra klaffarna.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss062",
+      "topic": "sortera_storlek",
+      "axis": "antal",
+      "prompt": "Ordna efter antal ben, flest först, räknat totalt. Hela armen respektive hela benet hos en vuxen.",
+      "items": [
+        {
+          "label": "En arm inklusive handen",
+          "value": 30,
+          "unit": "st",
+          "note": "humerus, radius, ulna samt handens 27 ben"
+        },
+        {
+          "label": "En hand",
+          "value": 27,
+          "unit": "st",
+          "note": "8 handlovsben, 5 mellanhandsben, 14 falanger"
+        },
+        {
+          "label": "Ansiktsben",
+          "value": 14,
+          "unit": "st",
+          "note": "viscerocranium"
+        },
+        {
+          "label": "Hörselben totalt",
+          "value": 6,
+          "unit": "st",
+          "note": "3 per öra"
+        },
+        {
+          "label": "Bäckenet",
+          "value": 4,
+          "unit": "st",
+          "note": "två sammanvuxna höftben, korsben och svansben"
+        }
+      ],
+      "explanation": "Handen ensam utgör 27 av armens 30 ben – bara tre ben, humerus, radius och ulna, finns ovanför handleden. Ansiktet har mer än dubbelt så många ben som handleden och handloven har tillsammans.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "ss063",
+      "topic": "sortera_storlek",
+      "axis": "antal",
+      "prompt": "Ordna efter antal, flest först, räknat totalt. Ögats och örats strukturer hos en vuxen.",
+      "items": [
+        {
+          "label": "Ögats yttre muskler",
+          "value": 12,
+          "unit": "st",
+          "note": "båda ögonen tillsammans"
+        },
+        {
+          "label": "Hörselben totalt",
+          "value": 6,
+          "unit": "st",
+          "note": "3 per öra"
+        },
+        {
+          "label": "Örats båggångar",
+          "value": 3,
+          "unit": "st",
+          "note": "de halvcirkelformiga kanalerna, per öra"
+        },
+        {
+          "label": "Örats små muskler",
+          "value": 2,
+          "unit": "st",
+          "note": "tensor tympani och stapedius, per öra"
+        },
+        {
+          "label": "Trumhinnan",
+          "value": 1,
+          "unit": "st",
+          "note": "per öra"
+        }
+      ],
+      "explanation": "Örats båggångar sitter i tre olika plan och ger balanssinnet dess tredimensionella känslighet. De två små musklerna i mellanörat dämpar ljudöverföringen vid höga ljudnivåer.",
+      "source": "Sobotta, Atlas of Human Anatomy"
+    },
+    {
+      "id": "ss064",
+      "topic": "sortera_storlek",
+      "axis": "antal",
+      "prompt": "Ordna efter antal, flest först, räknat totalt. Hjärnans, ryggmärgens och kroppens indelning.",
+      "items": [
+        {
+          "label": "Hörselben totalt",
+          "value": 6,
+          "unit": "st",
+          "note": "3 per öra"
+        },
+        {
+          "label": "Hjärnans lober per hemisfär",
+          "value": 4,
+          "unit": "st",
+          "note": "frontal-, parietal-, temporal- och occipitalloben"
+        },
+        {
+          "label": "Ryggmärgens strängar per sida",
+          "value": 3,
+          "unit": "st",
+          "note": "främre, laterala och bakre funiculus"
+        },
+        {
+          "label": "Cirkulationssystemets kretslopp",
+          "value": 2,
+          "unit": "st",
+          "note": "det stora och det lilla"
+        },
+        {
+          "label": "Ryggmärgen",
+          "value": 1,
+          "unit": "st",
+          "note": "oparad, sträcker sig från foramen magnum till L1–L2"
+        }
+      ],
+      "explanation": "Varje hjärnhalva delas i fyra lober, men insula och den limbiska loben räknas ofta separat och lämnas därför utanför den klassiska fyra-lobersindelningen. Kroppen har bara två kretslopp – det stora ut i kroppen och det lilla genom lungorna.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss065",
+      "topic": "sortera_storlek",
+      "axis": "antal",
+      "prompt": "Ordna efter antal ben, flest först, räknat totalt. Handens, fotens och fotledens ben hos en vuxen.",
+      "items": [
+        {
+          "label": "Handlovsben i en hand",
+          "value": 8,
+          "unit": "st",
+          "note": "två rader om fyra"
+        },
+        {
+          "label": "Fotrotsben i en fot",
+          "value": 7,
+          "unit": "st",
+          "note": "bland annat talus och calcaneus"
+        },
+        {
+          "label": "Fotledens ben",
+          "value": 3,
+          "unit": "st",
+          "note": "tibia, fibula och talus bildar leden"
+        },
+        {
+          "label": "Örats små muskler",
+          "value": 2,
+          "unit": "st",
+          "note": "tensor tympani och stapedius, per öra"
+        },
+        {
+          "label": "Trumhinnan",
+          "value": 1,
+          "unit": "st",
+          "note": "per öra"
+        }
+      ],
+      "explanation": "Fotleden bildas av tre ben: tibia och fibula ovanifrån, talus underifrån. Handloven har ett ben mer än fotroten trots att båda bär upp en hel extremitet.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "ss066",
+      "topic": "sortera_storlek",
+      "axis": "antal",
+      "prompt": "Ordna efter antal, flest först, räknat totalt. Armbågens och underarmens strukturer hos en vuxen.",
+      "items": [
+        {
+          "label": "Falanger i en hand",
+          "value": 14,
+          "unit": "st",
+          "note": "2 i tummen, 3 i vardera övriga finger"
+        },
+        {
+          "label": "Handlovsben i en hand",
+          "value": 8,
+          "unit": "st",
+          "note": "två rader om fyra"
+        },
+        {
+          "label": "Armbågens ben",
+          "value": 3,
+          "unit": "st",
+          "note": "humerus, radius och ulna bildar leden"
+        },
+        {
+          "label": "Underarmens muskelfack",
+          "value": 2,
+          "unit": "st",
+          "note": "ett böjarfack och ett sträckarfack"
+        },
+        {
+          "label": "Membrana interossea",
+          "value": 1,
+          "unit": "st",
+          "note": "hinnan mellan radius och ulna, oparad"
+        }
+      ],
+      "explanation": "Armbågsleden bildas av tre ben men rör sig egentligen i flera olika leder samtidigt: en gångjärnsled och en vridled. Böjar- och sträckarfacken skiljs åt av membrana interossea, som också håller radius och ulna på rätt avstånd från varandra.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "ss067",
+      "topic": "sortera_storlek",
+      "axis": "antal",
+      "prompt": "Ordna efter antal, flest först, räknat totalt. Nerver och deras grenar hos en vuxen.",
+      "items": [
+        {
+          "label": "A. carotis externas grenar",
+          "value": 8,
+          "unit": "st",
+          "note": "bland annat a. facialis och a. lingualis"
+        },
+        {
+          "label": "Facialisnervens huvudgrenar",
+          "value": 5,
+          "unit": "st",
+          "note": "temporal-, zygomatisk-, buckal-, mandibulär- och cervikalgrenen"
+        },
+        {
+          "label": "Kranialnerver till ögats yttre muskler",
+          "value": 3,
+          "unit": "st",
+          "note": "n. oculomotorius, n. trochlearis och n. abducens"
+        },
+        {
+          "label": "Örats små muskler",
+          "value": 2,
+          "unit": "st",
+          "note": "tensor tympani och stapedius, per öra"
+        },
+        {
+          "label": "Njurartär per njure",
+          "value": 1,
+          "unit": "st",
+          "note": "den vanligaste varianten"
+        }
+      ],
+      "explanation": "Facialisnervens fem huvudgrenar sprider sig som en solfjäder ut över ansiktet efter att nerven lämnat öronspottkörteln. Bara tre av de tolv kranialnerverna styr ögats yttre muskler.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "ss068",
+      "topic": "sortera_storlek",
+      "axis": "antal",
+      "prompt": "Ordna efter antal, flest först, räknat totalt. Leverns och bukspottkörtelns indelning hos en vuxen.",
+      "items": [
+        {
+          "label": "Leverns segment",
+          "value": 8,
+          "unit": "st",
+          "note": "enligt Couinauds kirurgiska indelning"
+        },
+        {
+          "label": "Leverns lober",
+          "value": 4,
+          "unit": "st",
+          "note": "höger, vänster, caudatus och quadratus i klassisk indelning"
+        },
+        {
+          "label": "Bukspottkörtelns delar",
+          "value": 3,
+          "unit": "st",
+          "note": "caput, corpus och cauda"
+        },
+        {
+          "label": "Njurens huvuddelar",
+          "value": 2,
+          "unit": "st",
+          "note": "bark och märg"
+        },
+        {
+          "label": "Mjälten",
+          "value": 1,
+          "unit": "st",
+          "note": "kroppens enda, oparad i vänster hypokondrium"
+        }
+      ],
+      "explanation": "Den klassiska indelningen i fyra leverlober är äldre än Couinauds åtta segment, som i stället utgår från kärlens och gallgångarnas grenmönster och används vid planering av leverkirurgi.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "ss069",
+      "topic": "sortera_storlek",
+      "axis": "antal",
+      "prompt": "Ordna efter antal, flest först, räknat totalt. Struphuvudets och halsens brosk och muskler.",
+      "items": [
+        {
+          "label": "Struphuvudets brosk",
+          "value": 9,
+          "unit": "st",
+          "note": "tre oparade och tre par"
+        },
+        {
+          "label": "Halsens suprahyoidala muskler",
+          "value": 4,
+          "unit": "st",
+          "note": "ovanför tungbenet"
+        },
+        {
+          "label": "Halsens skalenusmuskler",
+          "value": 3,
+          "unit": "st",
+          "note": "anterior, medius och posterior"
+        },
+        {
+          "label": "Örats små muskler",
+          "value": 2,
+          "unit": "st",
+          "note": "tensor tympani och stapedius, per öra"
+        },
+        {
+          "label": "Njurartär per njure",
+          "value": 1,
+          "unit": "st",
+          "note": "den vanligaste varianten"
+        }
+      ],
+      "explanation": "Struphuvudets nio brosk ger det både stadga och rörlighet: de tre oparade bär upp strukturen, de tre paren styr stämbanden. Skalenusmusklerna lyfter de övre revbenen vid forcerad inandning.",
+      "source": "Sobotta, Atlas of Human Anatomy"
+    },
+    {
+      "id": "ss070",
+      "topic": "sortera_storlek",
+      "axis": "antal",
+      "prompt": "Ordna efter antal, flest först, räknat totalt. Manliga reproduktionsorganen och handens/örats delar.",
+      "items": [
+        {
+          "label": "Falanger i en hand",
+          "value": 14,
+          "unit": "st",
+          "note": "2 i tummen, 3 i vardera övriga finger"
+        },
+        {
+          "label": "Hörselben totalt",
+          "value": 6,
+          "unit": "st",
+          "note": "3 per öra"
+        },
+        {
+          "label": "Manliga urinrörets delar",
+          "value": 3,
+          "unit": "st",
+          "note": "pars prostatica, membranacea och spongiosa"
+        },
+        {
+          "label": "Testiklar",
+          "value": 2,
+          "unit": "st",
+          "note": "en på varje sida"
+        },
+        {
+          "label": "Njurartär per njure",
+          "value": 1,
+          "unit": "st",
+          "note": "den vanligaste varianten"
+        }
+      ],
+      "explanation": "Mannens urinrör delas i tre avsnitt efter vad det passerar genom: prostatan, bäckenbotten och till sist penis. Testiklarna är parade om två, till skillnad från de flesta av bukens andra körtlar.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "ss071",
+      "topic": "sortera_storlek",
+      "axis": "antal",
+      "prompt": "Ordna efter antal ben, flest först, räknat totalt. Skelettets ben i bålen och skallen hos en vuxen.",
+      "items": [
+        {
+          "label": "Kotor",
+          "value": 33,
+          "unit": "st",
+          "note": "7 hals-, 12 bröst-, 5 länd-, 5 sammanvuxna sakral- och 4 sammanvuxna svanskotor"
+        },
+        {
+          "label": "Fria kotor",
+          "value": 26,
+          "unit": "st",
+          "note": "rörliga kotor, korsben och svansben räknat som ett vardera"
+        },
+        {
+          "label": "Ansiktsben",
+          "value": 14,
+          "unit": "st",
+          "note": "viscerocranium"
+        },
+        {
+          "label": "Hjärnskålens ben",
+          "value": 8,
+          "unit": "st",
+          "note": "neurocranium"
+        },
+        {
+          "label": "Bäckenet",
+          "value": 4,
+          "unit": "st",
+          "note": "två sammanvuxna höftben, korsben och svansben"
+        }
+      ],
+      "explanation": "Ansiktet har nästan dubbelt så många ben som hjärnskålen, trots att hjärnskålen rymmer betydligt mer volym. Bäckenet räknas som fyra ben hos en vuxen, mot tre per sida hos ett barn innan de växer samman.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "ss072",
+      "topic": "sortera_storlek",
+      "axis": "antal",
+      "prompt": "Ordna efter antal, flest först, räknat totalt. Andningsorganens indelning hos en vuxen.",
+      "items": [
+        {
+          "label": "Lungsegment totalt",
+          "value": 18,
+          "unit": "st",
+          "note": "bronkopulmonella segment, båda lungorna"
+        },
+        {
+          "label": "Höger lungas segment",
+          "value": 10,
+          "unit": "st",
+          "note": "bronkopulmonella segment"
+        },
+        {
+          "label": "Vänster lungas segment",
+          "value": 8,
+          "unit": "st",
+          "note": "färre än höger lunga, eftersom hjärtat tar plats"
+        },
+        {
+          "label": "Lunglober totalt",
+          "value": 5,
+          "unit": "st",
+          "note": "tre höger och två vänster"
+        },
+        {
+          "label": "Höger lungas lober",
+          "value": 3,
+          "unit": "st",
+          "note": "över-, mellan- och underlob"
+        }
+      ],
+      "explanation": "Vänster lunga har både färre lober och färre segment än den högra, eftersom hjärtat breder ut sig in i vänster lungas utrymme. Varje lob delas i flera segment med egen bronk och eget kärlförsörjningsområde.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss073",
+      "topic": "sortera_storlek",
+      "axis": "antal",
+      "prompt": "Ordna efter antal, flest först, räknat totalt. Halsens och bröstkorgens skelett och muskler.",
+      "items": [
+        {
+          "label": "Fria kotor",
+          "value": 26,
+          "unit": "st",
+          "note": "rörliga kotor, korsben och svansben räknat som ett vardera"
+        },
+        {
+          "label": "Revben",
+          "value": 24,
+          "unit": "st",
+          "note": "totalt, båda sidor"
+        },
+        {
+          "label": "Struphuvudets brosk",
+          "value": 9,
+          "unit": "st",
+          "note": "tre oparade och tre par"
+        },
+        {
+          "label": "Halsens suprahyoidala muskler",
+          "value": 4,
+          "unit": "st",
+          "note": "ovanför tungbenet"
+        },
+        {
+          "label": "Halsens skalenusmuskler",
+          "value": 3,
+          "unit": "st",
+          "note": "anterior, medius och posterior"
+        }
+      ],
+      "explanation": "Revbenen är nästan lika många som de fria kotorna, men bara tolv av de tjugosex kotorna – bröstkotorna – bär ett revbenspar var. Skalenusmusklerna fäster på just de två översta revbenen.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "ss074",
+      "topic": "sortera_storlek",
+      "axis": "antal",
+      "prompt": "Ordna efter antal ben, flest först, räknat totalt. Handens och fotens ben och leder, en tredje uppsättning.",
+      "items": [
+        {
+          "label": "En hand",
+          "value": 27,
+          "unit": "st",
+          "note": "8 handlovsben, 5 mellanhandsben, 14 falanger"
+        },
+        {
+          "label": "En fot",
+          "value": 26,
+          "unit": "st",
+          "note": "7 fotrotsben, 5 mellanfotsben, 14 falanger"
+        },
+        {
+          "label": "Handlovsben i en hand",
+          "value": 8,
+          "unit": "st",
+          "note": "två rader om fyra"
+        },
+        {
+          "label": "Fotrotsben i en fot",
+          "value": 7,
+          "unit": "st",
+          "note": "bland annat talus och calcaneus"
+        },
+        {
+          "label": "Fotledens ben",
+          "value": 3,
+          "unit": "st",
+          "note": "tibia, fibula och talus bildar leden"
+        }
+      ],
+      "explanation": "Handen och foten har nästan lika många ben totalt, 27 mot 26, men fördelningen skiljer sig – handloven har ett ben mer än fotroten. Fotleden i sig räknas som en egen led mellan bara tre av dessa ben.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "ss075",
+      "topic": "sortera_storlek",
+      "axis": "antal",
+      "prompt": "Ordna efter antal, flest först, räknat totalt. Näsan, munnen och svalget hos en vuxen.",
+      "items": [
+        {
+          "label": "Ansiktsben",
+          "value": 14,
+          "unit": "st",
+          "note": "viscerocranium"
+        },
+        {
+          "label": "Bihålepar",
+          "value": 4,
+          "unit": "st",
+          "note": "maxillar-, front-, sil- och kilbenshålorna"
+        },
+        {
+          "label": "Svalgets delar",
+          "value": 3,
+          "unit": "st",
+          "note": "näs-, mun- och struphuvudsdelen av pharynx"
+        },
+        {
+          "label": "Örats små muskler",
+          "value": 2,
+          "unit": "st",
+          "note": "tensor tympani och stapedius, per öra"
+        },
+        {
+          "label": "Njurartär per njure",
+          "value": 1,
+          "unit": "st",
+          "note": "den vanligaste varianten"
+        }
+      ],
+      "explanation": "Svalget delas i tre våningar efter vad de gränsar mot: näshålan, munhålan och struphuvudet. De fyra bihålorna mynnar alla ut i näshålan, den översta av svalgets tre delar.",
+      "source": "Sobotta, Atlas of Human Anatomy"
+    },
+    {
+      "id": "ss076",
+      "topic": "sortera_storlek",
+      "axis": "antal",
+      "prompt": "Ordna efter antal, flest först, räknat totalt. En sista blandning av kroppens strukturer.",
+      "items": [
+        {
+          "label": "Hörselben totalt",
+          "value": 6,
+          "unit": "st",
+          "note": "3 per öra"
+        },
+        {
+          "label": "Leverns lober",
+          "value": 4,
+          "unit": "st",
+          "note": "höger, vänster, caudatus och quadratus i klassisk indelning"
+        },
+        {
+          "label": "Bukspottkörtelns delar",
+          "value": 3,
+          "unit": "st",
+          "note": "caput, corpus och cauda"
+        },
+        {
+          "label": "Njurens huvuddelar",
+          "value": 2,
+          "unit": "st",
+          "note": "bark och märg"
+        },
+        {
+          "label": "Mjälten",
+          "value": 1,
+          "unit": "st",
+          "note": "kroppens enda, oparad i vänster hypokondrium"
+        }
+      ],
+      "explanation": "Strukturerna hör inte ihop anatomiskt – måttet är enbart antalet. Mjälten avslutar listan som bukens tydligaste exempel på ett oparat organ.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss077",
+      "topic": "sortera_storlek",
+      "axis": "langd",
+      "prompt": "Ordna efter längd, längst först. Bålens och extremiteternas ben, en fjärde uppsättning hos en vuxen.",
+      "items": [
+        {
+          "label": "Kotpelaren",
+          "value": 70,
+          "unit": "cm",
+          "note": "columna vertebralis"
+        },
+        {
+          "label": "Femur",
+          "value": 45,
+          "unit": "cm",
+          "note": "kroppens längsta ben"
+        },
+        {
+          "label": "Tibia",
+          "value": 37,
+          "unit": "cm",
+          "note": "skenbenet"
+        },
+        {
+          "label": "Clavicula",
+          "value": 15,
+          "unit": "cm",
+          "note": "nyckelbenet"
+        },
+        {
+          "label": "Os metacarpale III",
+          "value": 7,
+          "unit": "cm",
+          "note": "långfingrets mellanhandsben"
+        }
+      ],
+      "explanation": "Kotpelaren är längre än femur och tibia tillsammans, trots att den byggs av 26 fria kotor med bara några centimeter var. Nyckelbenet är kroppens mest horisontella långa ben.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "ss078",
+      "topic": "sortera_storlek",
+      "axis": "langd",
+      "prompt": "Ordna efter längd, längst först. Skelettets ben, jämförda över hela kroppen.",
+      "items": [
+        {
+          "label": "Femur",
+          "value": 45,
+          "unit": "cm",
+          "note": "kroppens längsta ben"
+        },
+        {
+          "label": "Tibia",
+          "value": 37,
+          "unit": "cm",
+          "note": "skenbenet"
+        },
+        {
+          "label": "Sternum",
+          "value": 17,
+          "unit": "cm",
+          "note": "bröstbenet"
+        },
+        {
+          "label": "Njuren",
+          "value": 11,
+          "unit": "cm",
+          "note": "mätt i längdaxeln"
+        },
+        {
+          "label": "Hörselgången",
+          "value": 2.5,
+          "unit": "cm",
+          "note": "meatus acusticus externus"
+        }
+      ],
+      "explanation": "Femur och tibia bär tillsammans hela kroppsvikten i stående. Sternum är längre än njuren men mycket kortare än de två lårbenen tillsammans.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "ss079",
+      "topic": "sortera_storlek",
+      "axis": "langd",
+      "prompt": "Ordna efter längd, längst först. Buk- och bäckenorganens mått, en tredje uppsättning.",
+      "items": [
+        {
+          "label": "Uretären",
+          "value": 28,
+          "unit": "cm",
+          "note": "från njurbäcken till urinblåsa"
+        },
+        {
+          "label": "Bukspottkörteln",
+          "value": 15,
+          "unit": "cm",
+          "note": "från caput till cauda"
+        },
+        {
+          "label": "Mjälten",
+          "value": 12,
+          "unit": "cm",
+          "note": "längdaxeln"
+        },
+        {
+          "label": "Gallblåsan",
+          "value": 8,
+          "unit": "cm",
+          "note": "från fundus till hals"
+        },
+        {
+          "label": "Distala falangen i dig. II",
+          "value": 2,
+          "unit": "cm",
+          "note": "pekfingrets yttersta led"
+        }
+      ],
+      "explanation": "Uretären är förvånansvärt lång för hur smal den är. Bukspottkörteln sträcker sig tvärs över bakre bukväggen, längre än både mjälten och gallblåsan.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss080",
+      "topic": "sortera_storlek",
+      "axis": "langd",
+      "prompt": "Ordna efter längd, längst först. Kärl, hjärna och öra hos en vuxen.",
+      "items": [
+        {
+          "label": "Aorta",
+          "value": 40,
+          "unit": "cm",
+          "note": "hela kärlet, från klaffen till bifurkationen"
+        },
+        {
+          "label": "Hjärnan",
+          "value": 16.5,
+          "unit": "cm",
+          "note": "längdmått, framifrån och bak"
+        },
+        {
+          "label": "Cochlea",
+          "value": 3.5,
+          "unit": "cm",
+          "note": "hörselsnäckan uträtad"
+        },
+        {
+          "label": "Stämbanden",
+          "value": 1.8,
+          "unit": "cm",
+          "note": "plica vocalis hos en vuxen"
+        },
+        {
+          "label": "Stapes",
+          "value": 0.3,
+          "unit": "cm",
+          "note": "kroppens minsta ben"
+        }
+      ],
+      "explanation": "Aorta är kroppens grövsta och en av dess längsta pulsådror. Cochlean är hoprullad till en snäcka i innerörat men skulle mäta 3,5 cm om den rullades ut rakt.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss081",
+      "topic": "sortera_storlek",
+      "axis": "langd",
+      "prompt": "Ordna efter längd, längst först. Buk- och bäckenorganen, en femte uppsättning.",
+      "items": [
+        {
+          "label": "Uretären",
+          "value": 28,
+          "unit": "cm",
+          "note": "från njurbäcken till urinblåsa"
+        },
+        {
+          "label": "Njuren",
+          "value": 11,
+          "unit": "cm",
+          "note": "mätt i längdaxeln"
+        },
+        {
+          "label": "Livmodern",
+          "value": 7.5,
+          "unit": "cm",
+          "note": "hos en icke-gravid vuxen kvinna"
+        },
+        {
+          "label": "Njurartären",
+          "value": 4,
+          "unit": "cm",
+          "note": "från aorta till njurhilus"
+        },
+        {
+          "label": "Distala falangen i dig. II",
+          "value": 2,
+          "unit": "cm",
+          "note": "pekfingrets yttersta led"
+        }
+      ],
+      "explanation": "Njurartären är kort – njuren ligger tätt an mot aorta i bakre bukväggen. Livmodern är kort jämfört med de rörformiga organen i listan men rymmer ett fullgånget foster vid graviditetens slut.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "ss082",
+      "topic": "sortera_storlek",
+      "axis": "langd",
+      "prompt": "Ordna avsnitten i mag-tarmkanalen efter längd, längst först, en fjärde uppsättning.",
+      "items": [
+        {
+          "label": "Tunntarmen",
+          "value": 600,
+          "unit": "cm",
+          "note": "hela den fria delen"
+        },
+        {
+          "label": "Jejunum",
+          "value": 250,
+          "unit": "cm",
+          "note": "tunntarmens övre fria del"
+        },
+        {
+          "label": "Esofagus",
+          "value": 25,
+          "unit": "cm",
+          "note": "matstrupen"
+        },
+        {
+          "label": "Rektum",
+          "value": 13,
+          "unit": "cm",
+          "note": "ändtarmen"
+        },
+        {
+          "label": "Blindtarmsbihanget",
+          "value": 9,
+          "unit": "cm",
+          "note": "appendix vermiformis"
+        }
+      ],
+      "explanation": "Jejunum utgör bara en del av tunntarmens 600 centimeter, resten är ileum. Rektum är kort jämfört med resten av tarmkanalen men ändå längre än blindtarmsbihanget.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss083",
+      "topic": "sortera_storlek",
+      "axis": "langd",
+      "prompt": "Ordna efter längd, längst först. Nervsystemet och ryggraden, en tredje uppsättning.",
+      "items": [
+        {
+          "label": "Kotpelaren",
+          "value": 70,
+          "unit": "cm",
+          "note": "columna vertebralis"
+        },
+        {
+          "label": "Ryggmärgen",
+          "value": 45,
+          "unit": "cm",
+          "note": "slutar vid L1–L2"
+        },
+        {
+          "label": "Hjärnan",
+          "value": 16.5,
+          "unit": "cm",
+          "note": "längdmått, framifrån och bak"
+        },
+        {
+          "label": "Cochlea",
+          "value": 3.5,
+          "unit": "cm",
+          "note": "hörselsnäckan uträtad"
+        },
+        {
+          "label": "Stapes",
+          "value": 0.3,
+          "unit": "cm",
+          "note": "kroppens minsta ben"
+        }
+      ],
+      "explanation": "Ryggmärgen är kortare än kotpelaren eftersom kotpelaren växer mer under uppväxten. Hjärnan är förhållandevis kort mätt framifrån och bak jämfört med hur lång ryggmärgen är.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "ss084",
+      "topic": "sortera_storlek",
+      "axis": "langd",
+      "prompt": "Ordna efter längd, längst först. Övre extremitetens ben, en fjärde uppsättning.",
+      "items": [
+        {
+          "label": "Humerus",
+          "value": 33,
+          "unit": "cm",
+          "note": "överarmsbenet"
+        },
+        {
+          "label": "Radius",
+          "value": 24,
+          "unit": "cm",
+          "note": "strålbenet"
+        },
+        {
+          "label": "Clavicula",
+          "value": 15,
+          "unit": "cm",
+          "note": "nyckelbenet"
+        },
+        {
+          "label": "Os metacarpale II",
+          "value": 7,
+          "unit": "cm",
+          "note": "pekfingrets mellanhandsben"
+        },
+        {
+          "label": "Proximala falangen i dig. III",
+          "value": 4,
+          "unit": "cm",
+          "note": "långfingrets första led"
+        }
+      ],
+      "explanation": "Humerus är nästan dubbelt så lång som radius, trots att båda är rörben i samma arm. Nyckelbenet ligger däremellan i längd men bryts oftare än något annat ben i kroppen.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "ss085",
+      "topic": "sortera_storlek",
+      "axis": "langd",
+      "prompt": "Ordna efter längd, längst först. Nedre extremitetens ben, en fjärde uppsättning.",
+      "items": [
+        {
+          "label": "Femur",
+          "value": 45,
+          "unit": "cm",
+          "note": "kroppens längsta ben"
+        },
+        {
+          "label": "Tibia",
+          "value": 37,
+          "unit": "cm",
+          "note": "skenbenet"
+        },
+        {
+          "label": "Os metatarsale I",
+          "value": 6,
+          "unit": "cm",
+          "note": "stortåns mellanfotsben"
+        },
+        {
+          "label": "Distala falangen i stortån",
+          "value": 1.5,
+          "unit": "cm",
+          "note": "stortåns yttersta led"
+        },
+        {
+          "label": "Stapes",
+          "value": 0.3,
+          "unit": "cm",
+          "note": "kroppens minsta ben"
+        }
+      ],
+      "explanation": "Femur och tibia bär tillsammans hela kroppsvikten i stående. Os metatarsale I är kort i jämförelse men avgörande för frånskjutet i varje steg.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "ss086",
+      "topic": "sortera_storlek",
+      "axis": "langd",
+      "prompt": "Ordna efter längd, längst först. En blandning av inre organ och skelettdelar, en femte uppsättning.",
+      "items": [
+        {
+          "label": "Aorta",
+          "value": 40,
+          "unit": "cm",
+          "note": "hela kärlet, från klaffen till bifurkationen"
+        },
+        {
+          "label": "Sternum",
+          "value": 17,
+          "unit": "cm",
+          "note": "bröstbenet"
+        },
+        {
+          "label": "Mjälten",
+          "value": 12,
+          "unit": "cm",
+          "note": "längdaxeln"
+        },
+        {
+          "label": "Gallblåsan",
+          "value": 8,
+          "unit": "cm",
+          "note": "från fundus till hals"
+        },
+        {
+          "label": "Hörselgången",
+          "value": 2.5,
+          "unit": "cm",
+          "note": "meatus acusticus externus"
+        }
+      ],
+      "explanation": "Här hör strukturerna inte ihop anatomiskt – måttet är enbart längden. Aorta är mer än tre gånger så lång som sternum, som i sin tur är längre än både mjälten och gallblåsan.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss087",
+      "topic": "sortera_storlek",
+      "axis": "vikt",
+      "prompt": "Ordna efter vikt hos en vuxen, tyngst först. En fjärde uppsättning av kroppens organ.",
+      "items": [
+        {
+          "label": "Skelettmuskulaturen",
+          "value": 28000,
+          "unit": "g",
+          "note": "≈ 40 % av kroppsvikten"
+        },
+        {
+          "label": "Huden",
+          "value": 4000,
+          "unit": "g",
+          "note": "kroppens största organ räknat i vikt"
+        },
+        {
+          "label": "Hjärnan",
+          "value": 1400,
+          "unit": "g",
+          "note": "≈ 2 % av kroppsvikten"
+        },
+        {
+          "label": "Lungorna tillsammans",
+          "value": 1000,
+          "unit": "g",
+          "note": "båda lungorna"
+        },
+        {
+          "label": "Hjärtat",
+          "value": 300,
+          "unit": "g",
+          "note": "ungefär en knuten näve"
+        }
+      ],
+      "explanation": "Skelettmuskulaturen väger sju gånger så mycket som huden, som i sin tur väger nästan tre gånger så mycket som hjärnan. Lungorna och hjärnan ligger förvånansvärt nära varandra i vikt.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss088",
+      "topic": "sortera_storlek",
+      "axis": "vikt",
+      "prompt": "Ordna efter vikt hos en vuxen man, tyngst först. Bröstkorgens och bukens organ.",
+      "items": [
+        {
+          "label": "Lungorna tillsammans",
+          "value": 1000,
+          "unit": "g",
+          "note": "båda lungorna"
+        },
+        {
+          "label": "Hjärtat",
+          "value": 300,
+          "unit": "g",
+          "note": "ungefär en knuten näve"
+        },
+        {
+          "label": "Struphuvudet",
+          "value": 35,
+          "unit": "g",
+          "note": "brosk och muskler tillsammans"
+        },
+        {
+          "label": "Prostatan",
+          "value": 20,
+          "unit": "g",
+          "note": "ungefär en valnöt"
+        },
+        {
+          "label": "Bisköldkörtlarna tillsammans",
+          "value": 0.15,
+          "unit": "g",
+          "note": "vanligen fyra små körtlar"
+        }
+      ],
+      "explanation": "Struphuvudet väger mer än man anar för sin storlek – broskstommen ger tyngd. Bisköldkörtlarna är minst av alla men styr kalciumbalansen i hela kroppen.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss089",
+      "topic": "sortera_storlek",
+      "axis": "vikt",
+      "prompt": "Ordna efter vikt hos en vuxen kvinna, tyngst först. Bröstkorgens och bukens organ.",
+      "items": [
+        {
+          "label": "Lungorna tillsammans",
+          "value": 1000,
+          "unit": "g",
+          "note": "båda lungorna"
+        },
+        {
+          "label": "En bröstkörtel",
+          "value": 200,
+          "unit": "g",
+          "note": "hos en icke ammande kvinna"
+        },
+        {
+          "label": "Livmodern",
+          "value": 60,
+          "unit": "g",
+          "note": "hos en icke-gravid, icke-förlöst kvinna"
+        },
+        {
+          "label": "Sköldkörteln",
+          "value": 25,
+          "unit": "g",
+          "note": "framför trachea"
+        },
+        {
+          "label": "Hypofysen",
+          "value": 0.6,
+          "unit": "g",
+          "note": "i sella turcica"
+        }
+      ],
+      "explanation": "En bröstkörtel väger flera gånger mer än livmodern hos en icke-gravid kvinna, men vid amning ökar körtelns vikt ytterligare. Hypofysen är minst av dessa men styr flera av kroppens hormonsystem.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss090",
+      "topic": "sortera_storlek",
+      "axis": "vikt",
+      "prompt": "Ordna efter vikt hos en vuxen, tyngst först. En femte uppsättning av kroppens organ och vävnader.",
+      "items": [
+        {
+          "label": "Skelettet",
+          "value": 10500,
+          "unit": "g",
+          "note": "≈ 15 % av kroppsvikten"
+        },
+        {
+          "label": "Blodet",
+          "value": 5000,
+          "unit": "g",
+          "note": "≈ 5 liter"
+        },
+        {
+          "label": "Huden",
+          "value": 4000,
+          "unit": "g",
+          "note": "kroppens största organ räknat i vikt"
+        },
+        {
+          "label": "Levern",
+          "value": 1500,
+          "unit": "g",
+          "note": "kroppens tyngsta inre organ"
+        },
+        {
+          "label": "En njure",
+          "value": 150,
+          "unit": "g",
+          "note": "en av två"
+        }
+      ],
+      "explanation": "Skelettet, blodet och huden ligger alla i samma storleksordning, tusentals gram, medan levern och njuren väger avsevärt mindre trots att de är centrala organ för ämnesomsättningen.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss091",
+      "topic": "sortera_storlek",
+      "axis": "vikt",
+      "prompt": "Ordna efter vikt hos en vuxen, tyngst först. Körtlarna, en andra uppsättning.",
+      "items": [
+        {
+          "label": "Pankreas",
+          "value": 90,
+          "unit": "g",
+          "note": "både exokrin och endokrin funktion"
+        },
+        {
+          "label": "Sköldkörteln",
+          "value": 25,
+          "unit": "g",
+          "note": "framför trachea"
+        },
+        {
+          "label": "En ögonglob",
+          "value": 7.5,
+          "unit": "g",
+          "note": "per öga"
+        },
+        {
+          "label": "En binjure",
+          "value": 5,
+          "unit": "g",
+          "note": "sitter som en mössa på njuren"
+        },
+        {
+          "label": "Hypofysen",
+          "value": 0.6,
+          "unit": "g",
+          "note": "i sella turcica"
+        }
+      ],
+      "explanation": "Pankreas är den tyngsta av dessa körtlar men fungerar bara delvis som körtel – större delen av vävnaden bildar matsmältningsenzymer, bara en liten andel bildar hormoner.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss092",
+      "topic": "sortera_storlek",
+      "axis": "vikt",
+      "prompt": "Ordna efter vikt hos en vuxen man, tyngst först. En tredje uppsättning.",
+      "items": [
+        {
+          "label": "Hjärtat",
+          "value": 300,
+          "unit": "g",
+          "note": "ungefär en knuten näve"
+        },
+        {
+          "label": "En njure",
+          "value": 150,
+          "unit": "g",
+          "note": "en av två"
+        },
+        {
+          "label": "Struphuvudet",
+          "value": 35,
+          "unit": "g",
+          "note": "brosk och muskler tillsammans"
+        },
+        {
+          "label": "En testikel",
+          "value": 20,
+          "unit": "g",
+          "note": "en av två"
+        },
+        {
+          "label": "En binjure",
+          "value": 5,
+          "unit": "g",
+          "note": "sitter som en mössa på njuren"
+        }
+      ],
+      "explanation": "En testikel väger ungefär lika mycket som fyra binjurar tillsammans. Hjärtat är dubbelt så tungt som en njure, trots att båda arbetar kontinuerligt dygnet runt.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss093",
+      "topic": "sortera_storlek",
+      "axis": "vikt",
+      "prompt": "Ordna efter vikt hos en vuxen, tyngst först. Nervsystemet och sinnesorganen, en andra uppsättning.",
+      "items": [
+        {
+          "label": "Hjärnan",
+          "value": 1400,
+          "unit": "g",
+          "note": "≈ 2 % av kroppsvikten"
+        },
+        {
+          "label": "En ögonglob",
+          "value": 7.5,
+          "unit": "g",
+          "note": "per öga"
+        },
+        {
+          "label": "En binjure",
+          "value": 5,
+          "unit": "g",
+          "note": "sitter som en mössa på njuren"
+        },
+        {
+          "label": "Hypofysen",
+          "value": 0.6,
+          "unit": "g",
+          "note": "i sella turcica"
+        },
+        {
+          "label": "Bisköldkörtlarna tillsammans",
+          "value": 0.15,
+          "unit": "g",
+          "note": "vanligen fyra små körtlar"
+        }
+      ],
+      "explanation": "Hjärnan väger nästan tvåhundra gånger så mycket som en ögonglob. Hypofysen väger obetydligt men styr flera av kroppens andra hormonkörtlar, bland dem sköldkörteln och binjurarna.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss094",
+      "topic": "sortera_storlek",
+      "axis": "vikt",
+      "prompt": "Ordna efter vikt hos en vuxen kvinna, tyngst först. En fjärde uppsättning.",
+      "items": [
+        {
+          "label": "Levern",
+          "value": 1500,
+          "unit": "g",
+          "note": "kroppens tyngsta inre organ"
+        },
+        {
+          "label": "En bröstkörtel",
+          "value": 200,
+          "unit": "g",
+          "note": "hos en icke ammande kvinna"
+        },
+        {
+          "label": "Mjälten",
+          "value": 150,
+          "unit": "g",
+          "note": "i vänster övre bukkvadrant"
+        },
+        {
+          "label": "Livmodern",
+          "value": 60,
+          "unit": "g",
+          "note": "hos en icke-gravid, icke-förlöst kvinna"
+        },
+        {
+          "label": "Sköldkörteln",
+          "value": 25,
+          "unit": "g",
+          "note": "framför trachea"
+        }
+      ],
+      "explanation": "Levern väger nästan åtta gånger så mycket som en bröstkörtel, som i sin tur väger mer än livmodern hos en icke-gravid kvinna.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss095",
+      "topic": "sortera_storlek",
+      "axis": "volym",
+      "prompt": "Ordna efter volym, störst först. Andningsorganens luftvolymer hos en vuxen, en andra uppsättning.",
+      "items": [
+        {
+          "label": "Total lungkapacitet",
+          "value": 6000,
+          "unit": "ml",
+          "note": "allt som ryms i lungorna"
+        },
+        {
+          "label": "Vitalkapacitet",
+          "value": 4800,
+          "unit": "ml",
+          "note": "största möjliga andetag"
+        },
+        {
+          "label": "Inspiratorisk reservvolym",
+          "value": 3100,
+          "unit": "ml",
+          "note": "det extra som går att andas in efter ett vanligt andetag"
+        },
+        {
+          "label": "Funktionell residualkapacitet",
+          "value": 2400,
+          "unit": "ml",
+          "note": "kvar efter en vanlig utandning"
+        },
+        {
+          "label": "Expiratorisk reservvolym",
+          "value": 1200,
+          "unit": "ml",
+          "note": "det extra som går att andas ut efter ett vanligt andetag"
+        }
+      ],
+      "explanation": "Vitalkapaciteten byggs av tre delar: inspiratorisk reservvolym, tidalvolym och expiratorisk reservvolym. Den inspiratoriska reservvolymen är störst av de tre, eftersom lungorna har mest oanvänd kapacitet vid inandning.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss096",
+      "topic": "sortera_storlek",
+      "axis": "volym",
+      "prompt": "Ordna efter volym, störst först. Kroppsvätskornas fördelning hos en vuxen kvinna på 60 kg.",
+      "items": [
+        {
+          "label": "Kroppens totala vattenmängd",
+          "value": 30000,
+          "unit": "ml",
+          "note": "≈ 50 % av kroppsvikten hos en kvinna"
+        },
+        {
+          "label": "Intracellulärvätska",
+          "value": 20000,
+          "unit": "ml",
+          "note": "inne i cellerna, ≈ 2/3 av kroppsvattnet"
+        },
+        {
+          "label": "Extracellulärvätska",
+          "value": 10000,
+          "unit": "ml",
+          "note": "utanför cellerna, ≈ 1/3 av kroppsvattnet"
+        },
+        {
+          "label": "Blodvolymen",
+          "value": 4200,
+          "unit": "ml",
+          "note": "≈ 7 % av kroppsvikten"
+        },
+        {
+          "label": "Plasmavolymen",
+          "value": 2500,
+          "unit": "ml",
+          "note": "blodets vätskedel"
+        }
+      ],
+      "explanation": "Kvinnor har lägre andel kroppsvatten än män, ungefär hälften av kroppsvikten mot mäns 60 %, eftersom kvinnokroppen normalt har en större andel fettvävnad. Fördelningen mellan cellernas inre och yttre vätska följer ändå samma tvåtredjedelsregel.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss097",
+      "topic": "sortera_storlek",
+      "axis": "volym",
+      "prompt": "Ordna efter volym, störst först. Mag-tarmkanalens och urinvägarnas rymd hos en vuxen, en tredje uppsättning.",
+      "items": [
+        {
+          "label": "Tjocktarmens kapacitet",
+          "value": 2000,
+          "unit": "ml",
+          "note": "innan tömningsreflexen dominerar"
+        },
+        {
+          "label": "Magsäckens normala kapacitet",
+          "value": 1500,
+          "unit": "ml",
+          "note": "vid en vanlig måltid"
+        },
+        {
+          "label": "Urinblåsans maximala kapacitet",
+          "value": 1000,
+          "unit": "ml",
+          "note": "vid stark uttänjning"
+        },
+        {
+          "label": "Urinblåsans normala kapacitet",
+          "value": 500,
+          "unit": "ml",
+          "note": "trängningar kommer tidigare"
+        },
+        {
+          "label": "Likvorvolymen",
+          "value": 150,
+          "unit": "ml",
+          "note": "cerebrospinalvätska totalt"
+        }
+      ],
+      "explanation": "Urinblåsan finns med här i två varianter: den normala kapaciteten, där trängningar redan känns tydligt, och den maximala, som bara nås vid stark medveten uttänjning. Det är alltid den normala som avgör hur ofta man behöver kissa.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss098",
+      "topic": "sortera_storlek",
+      "axis": "volym",
+      "prompt": "Ordna efter volym per minut, störst först. Blodflödet i vila hos en vuxen, en andra uppsättning.",
+      "items": [
+        {
+          "label": "Hjärtminutvolymen",
+          "value": 5000,
+          "unit": "ml/min",
+          "note": "≈ 70 slag × 70 ml"
+        },
+        {
+          "label": "Blodflödet genom levern",
+          "value": 1500,
+          "unit": "ml/min",
+          "note": "≈ 25–30 % av hjärtminutvolymen, portakärl och leverartär tillsammans"
+        },
+        {
+          "label": "Blodflödet genom hjärnan",
+          "value": 750,
+          "unit": "ml/min",
+          "note": "≈ 15 % av hjärtminutvolymen"
+        },
+        {
+          "label": "Blodflödet genom huden",
+          "value": 300,
+          "unit": "ml/min",
+          "note": "i vila, ökar kraftigt vid värmeavgivning"
+        },
+        {
+          "label": "Glomerulär filtration",
+          "value": 125,
+          "unit": "ml/min",
+          "note": "≈ 180 liter primärurin per dygn"
+        }
+      ],
+      "explanation": "Levern tar emot en större andel av hjärtminutvolymen än något annat enskilt organ, eftersom den försörjs både av leverartären och av portådern från tarmen. Blodflödet genom huden kan mångdubblas vid värme, långt utöver vilovärdet här.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss099",
+      "topic": "sortera_storlek",
+      "axis": "volym",
+      "prompt": "Ordna efter volym per dygn hos en vuxen, störst först. Vätskeflöden i kroppen, en andra uppsättning.",
+      "items": [
+        {
+          "label": "Njurarnas blodplasmaflöde",
+          "value": 864000,
+          "unit": "ml",
+          "note": "≈ 600 ml/min genom båda njurarna"
+        },
+        {
+          "label": "Primärurin",
+          "value": 180000,
+          "unit": "ml",
+          "note": "filtreras i glomeruli"
+        },
+        {
+          "label": "Bukspottkörtelns saft",
+          "value": 1500,
+          "unit": "ml",
+          "note": "enzymer och bikarbonat"
+        },
+        {
+          "label": "Saliv",
+          "value": 1000,
+          "unit": "ml",
+          "note": "från de stora spottkörtlarna"
+        },
+        {
+          "label": "Gallan",
+          "value": 700,
+          "unit": "ml",
+          "note": "bildas i levern, lagras i gallblåsan"
+        }
+      ],
+      "explanation": "Njurarnas plasmaflöde är enormt jämfört med de körtelvätskor som mag-tarmkanalen bildar varje dygn – mer än femhundra gånger så stort som bukspottkörtelns dagsproduktion.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss100",
+      "topic": "sortera_storlek",
+      "axis": "volym",
+      "prompt": "Ordna efter volym, störst först. Blodets sammansättning hos en vuxen med normalt blodvärde.",
+      "items": [
+        {
+          "label": "Blodvolymen",
+          "value": 5000,
+          "unit": "ml",
+          "note": "plasma och blodkroppar tillsammans"
+        },
+        {
+          "label": "Plasmavolymen",
+          "value": 2750,
+          "unit": "ml",
+          "note": "≈ 55 % av blodvolymen"
+        },
+        {
+          "label": "Erytrocytvolymen",
+          "value": 2250,
+          "unit": "ml",
+          "note": "≈ 45 % av blodvolymen, motsvarar hematokritvärdet"
+        },
+        {
+          "label": "Likvorvolymen",
+          "value": 150,
+          "unit": "ml",
+          "note": "cerebrospinalvätska totalt"
+        },
+        {
+          "label": "Perikardvätskan",
+          "value": 25,
+          "unit": "ml",
+          "note": "normal mängd i hjärtsäcken"
+        }
+      ],
+      "explanation": "Hematokritvärdet, andelen röda blodkroppar av blodvolymen, ligger normalt kring 45 % hos en vuxen. Plasman utgör den något större återstoden, ungefär 55 %.",
+      "source": "Sand m.fl., Människokroppen"
     }
   ]
 }
