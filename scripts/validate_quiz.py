@@ -22,7 +22,11 @@ from collections import defaultdict, Counter
 
 # Filer som inte är MC/TF-quiz (ordlista, register, flashcards utan distraktorer)
 SKIP = {"ordlista.json", "ordlista_import_raw.json", "kb_glossary_terms.json",
-        "bilder.json", "artiklar.json"}
+        "bilder.json", "artiklar.json",
+        # Sorteringsfrågor (spelläget Sortera) har eget skelett – en ORDNING av
+        # fem poster, inte ett rätt svar bland fyra. Kontrolleras i stället av
+        # scripts/validate_sortera.py, som körs av check_generators.py.
+        "sortera.json"}
 LEN_BIAS_LIMIT = 40  # % frågor där correct är längst, per ämne, innan varning
 LEN_BIAS_MIN_N = 10   # minsta antal mätbara (flerords-)frågor innan andelen betyder något
 

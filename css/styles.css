@@ -1120,9 +1120,11 @@ select:focus-visible {
    mitt i ett spel. Ett nytt spelläge läggs till här OCH i FIT_SECTIONS i
    js/app.js. */
 .container:has(#quiz:not(.hidden), #flashcards:not(.hidden), #matcha:not(.hidden),
-               #leitner:not(.hidden), #tidsjakt:not(.hidden), #dagsutmaning:not(.hidden)) > .header,
+               #leitner:not(.hidden), #tidsjakt:not(.hidden), #dagsutmaning:not(.hidden),
+               #sortera:not(.hidden)) > .header,
 .container:has(#quiz:not(.hidden), #flashcards:not(.hidden), #matcha:not(.hidden),
-               #leitner:not(.hidden), #tidsjakt:not(.hidden), #dagsutmaning:not(.hidden)) > .page-footer {
+               #leitner:not(.hidden), #tidsjakt:not(.hidden), #dagsutmaning:not(.hidden),
+               #sortera:not(.hidden)) > .page-footer {
   display: none;
 }
 /* Sidbakgrunden gäller bara quizet: den tas bort för att bildfrågans kort ska
@@ -4303,6 +4305,364 @@ ol li {
 }
 
 /* ============================================================================
+   SORTERA — js/sortera.js
+   Fem brickor läggs i rätt ordning längs en axel. Läget använder den delade
+   `.gm-*`-basen för mätare, poängbricka, resultatring, nyckeltal och
+   rekordmärke — här står bara det som är lägets eget.
+   ============================================================================ */
+
+/* Understartsidan: lägets egen ämnesväljare (eget frågearkiv). */
+.sortera-start { margin: 0; }
+.sortera-start .setup-actions { margin-top: 14px; }
+
+/* Vad läget går ut på. Följer .dagsutmaning-intro – samma formspråk i alla
+   lägen. js/sortera.js fäller upp den för den som aldrig spelat. */
+.sortera-intro {
+  margin: 0 0 14px;
+  border: 1px solid var(--primary-light);
+  border-radius: var(--radius-sm);
+  background: var(--success-bg);
+  padding: 8px 12px;
+}
+.sortera-intro > summary {
+  cursor: pointer;
+  color: var(--primary-deep);
+  font-weight: 600;
+  font-size: 0.88rem;
+  line-height: 1.35;
+  list-style-position: inside;
+}
+.sortera-intro > summary:focus-visible {
+  outline: 2px solid var(--primary-deep);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+.sortera-intro-body {
+  margin-top: 8px;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+.sortera-intro-body p { margin: 0 0 8px; }
+.sortera-intro-body p:last-child { margin-bottom: 2px; }
+/* Litet listindrag – långa punkter blir annars svårlästa på mobil. */
+.sortera-intro-list { margin: 0 0 8px; padding-left: 18px; }
+.sortera-intro-list li { margin-bottom: 4px; }
+
+/* En sammanhållen infopanel i stället för lösryckta textrader. */
+.sortera-header {
+  background: var(--success-bg);
+  border: 1px solid var(--primary-light);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  margin-bottom: 12px;
+}
+.sortera-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.sortera-player { font-weight: 700; color: var(--primary-deep); }
+.sortera-meta { font-size: 0.82rem; font-weight: 600; color: var(--text-secondary); text-align: right; }
+.sortera-header-bottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+/* Delpoängen: den ärligaste framstegssiffran i ett läge där hela ordningen
+   måste stämma för att frågan ska räknas. */
+.sortera-placement {
+  margin: 6px 0 0;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.sortera-praise {
+  margin: 0 0 10px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--primary-deep);
+  background: var(--success-bg);
+  border: 1px solid var(--primary-light);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.88rem;
+}
+.sortera-praise.gold {
+  color: #fff;
+  background: linear-gradient(135deg, var(--plate-green) 0%, var(--plate-green-deep) 100%);
+  border-color: transparent;
+}
+.sortera-praise.in { animation: sorteraPraiseIn 0.4s ease; }
+@keyframes sorteraPraiseIn {
+  0% { transform: scale(0.9); opacity: 0.3; }
+  60% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.sortera-prompt {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* --- Spelplanen ---------------------------------------------------------- */
+/* Axeln till vänster om platserna: polerna står vid varsin ände, så
+   spelplanen skyltar med sin egen regel utan att man läser förklaringen. */
+.sortera-board {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.sortera-axis {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 0;
+}
+.sortera-pole {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--primary-deep);
+  writing-mode: horizontal-tb;
+  text-align: center;
+  max-width: 68px;
+  line-height: 1.15;
+}
+.sortera-axis-line {
+  flex: 1 1 auto;
+  width: 3px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-light) 100%);
+}
+
+.sortera-slots {
+  flex: 1 1 auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.sortera-slot {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  min-height: 52px;
+  padding: 6px 10px;
+  border: 2px dashed var(--primary-light);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.sortera-slot.empty { background: transparent; }
+/* Vit text på grön platta (--plate-*), inte --primary-deep på --primary-light:
+   det paret ger 2,85:1 och underkänns av check_kontrast.py. Plattfärgerna är
+   konstanta i båda teman. */
+.sortera-slot-nr {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: var(--plate-green);
+  color: var(--text-light);
+  font-size: 0.75rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sortera-slot-empty { color: var(--text-secondary); font-size: 0.82rem; font-style: italic; }
+
+/* Facit efter rättningen. Utfallet bärs av färg PLUS ✓/✗ plus dold
+   skärmläsartext (markAnswerBtn i app.js) – aldrig av färg allena (WCAG 1.4.1). */
+.sortera-slot.correct { border-style: solid; border-color: var(--primary); background: var(--success-bg); }
+.sortera-slot.wrong { border-style: solid; border-color: var(--error); background: var(--error-bg); }
+/* Raden som säger vad spelaren själv hade – utan den förstår man inte varför
+   platsen är röd. */
+.sortera-slot-had {
+  flex: 1 0 100%;
+  font-size: 0.74rem;
+  color: var(--error);
+  padding-left: 32px;
+}
+/* Mätvärdet eller kortfaktan vänds fram i facit. I storleksfrågor är det den
+   här raden som är belöningen: man lär sig storleksordningen, inte bara facit. */
+.sortera-slot-fact {
+  flex: 1 0 100%;
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+  padding-left: 32px;
+  font-variant-numeric: tabular-nums;
+}
+.sortera-slot .answer-mark { margin-left: auto; font-weight: 800; }
+.sortera-slot.correct .answer-mark { color: var(--primary-deep); }
+.sortera-slot.wrong .answer-mark { color: var(--error); }
+
+/* --- Brickorna ----------------------------------------------------------- */
+.sortera-bank { margin-bottom: 12px; }
+.sortera-bank-hint {
+  margin: 0 0 6px;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+.sortera-bank-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.sortera-tile {
+  flex: 0 1 auto;
+  min-height: 44px;                     /* träffyta för tummen (WCAG) */
+  padding: 8px 12px;
+  border: 2px solid var(--primary-light);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: max(0.78rem, calc(0.92rem * var(--tile-scale, 1)));
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, opacity 0.2s ease;
+}
+.sortera-tile:hover:not(:disabled) { border-color: var(--primary); box-shadow: var(--shadow); transform: translateY(-1px); }
+.sortera-tile:active:not(:disabled) { transform: translateY(0) scale(0.97); }
+.sortera-tile:disabled { cursor: default; }
+.sortera-tile:focus-visible { outline: 2px solid var(--primary-deep); outline-offset: 2px; }
+.sortera-tile.placed {
+  flex: 1 1 auto;
+  border-style: solid;
+  border-color: var(--primary);
+  background: var(--success-bg);
+}
+/* Brickan tonas in på sin nya plats i stället för att poppa dit: klassen sätts
+   före första framen och tas bort i nästa, så transitionen startar från
+   utgångsläget. */
+.sortera-tile.landing { opacity: 0; transform: translateY(-8px); }
+.sortera-tile.pop { animation: sorteraPop 0.32s ease; }
+.sortera-tile.shake { animation: sorteraShake 0.35s ease; }
+@keyframes sorteraPop {
+  0% { transform: scale(1); }
+  45% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+@keyframes sorteraShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-3px); }
+}
+
+.sortera-explanation {
+  margin: 0 0 8px;
+  padding: 9px 12px;
+  border-left: 3px solid var(--primary);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: var(--success-bg);
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.sortera-counter { font-size: 0.85rem; color: var(--text-secondary); font-weight: 600; }
+.sortera-done-text { margin: 0 0 6px; font-size: 1.05rem; font-weight: 700; text-align: center; color: var(--text-primary); }
+
+/* Facit på det man missade – en omgång utan facit efteråt lär ingen något. */
+.sortera-finished { text-align: center; }
+.sortera-missed-wrap {
+  margin: 4px 0 16px;
+  padding: 10px 12px;
+  border: 1px solid var(--primary-light);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  text-align: left;
+}
+.sortera-missed-heading {
+  margin: 0 0 6px;
+  font-size: 0.92rem;
+  color: var(--primary-deep);
+}
+.sortera-missed { list-style: none; margin: 0; padding: 0; }
+.sortera-missed li {
+  padding: 6px 0;
+  border-top: 1px dashed rgba(16, 185, 129, 0.3);
+}
+.sortera-missed li:first-child { border-top: none; }
+.sortera-missed .sm-q {
+  display: block;
+  font-size: 0.84rem;
+  line-height: 1.35;
+  color: var(--text-primary);
+}
+.sortera-missed .sm-a {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary-deep);
+}
+.sortera-missed-more { margin: 8px 0 0; font-size: 0.8rem; color: var(--text-secondary); }
+
+/* OBS: .hidden är INTE en global utility i det här projektet (CSS_KARTA) – den
+   fungerar bara via sammansatta selektorer. Var och en av lägets inre delar som
+   ska kunna döljas behöver därför en egen regel här. */
+.sortera-start.hidden,
+.sortera-intro.hidden,
+.sortera-play.hidden,
+.sortera-finished.hidden,
+.sortera-praise.hidden,
+.sortera-explanation.hidden,
+.sortera-missed-wrap.hidden,
+.sortera-missed-more.hidden,
+#sorteraFooter.hidden { display: none; }
+
+@media (max-width: 640px) {
+  .sortera-intro { padding: 7px 10px; margin-bottom: 10px; }
+  .sortera-intro > summary { font-size: 0.82rem; }
+  .sortera-intro-body { font-size: 0.8rem; }
+  .sortera-header { padding: 8px 10px; }
+  /* Ämnesraden är lång och bröts illa mot högerkanten bredvid namnet. */
+  .sortera-header-top { flex-direction: column; align-items: flex-start; gap: 2px; }
+  .sortera-meta { font-size: 0.74rem; text-align: left; }
+  .sortera-prompt { font-size: 0.95rem; }
+  .sortera-pole { font-size: 0.62rem; max-width: 52px; }
+  .sortera-board { gap: 8px; }
+  .sortera-missed .sm-q, .sortera-missed .sm-a { font-size: 0.78rem; }
+}
+
+/* Rörelsen är extra, inte information: sluttillstånden (grön/röd, ✓/✗,
+   facitraderna, mätaren, ringen) sätts ändå direkt av JS, och js/sortera.js
+   nollar dessutom stegfördröjningen i avslöjandet — den ROR något, den visar
+   inget (§13.1 punkt 8). */
+@media (prefers-reduced-motion: reduce) {
+  .sortera-tile,
+  .sortera-tile.pop,
+  .sortera-tile.shake,
+  .sortera-tile.landing,
+  .sortera-praise.in,
+  .sortera-slot {
+    animation: none !important;
+    transition: none !important;
+  }
+  .sortera-tile.landing { opacity: 1; transform: none; }
+}
+
+/* ============================================================================
    SKALA SPELVYERNA TILL SKÄRMEN (--view-fit, sätts av fitActiveView i app.js)
    ============================================================================
    Textlängd skalas redan per element (--prompt-scale/--opt-scale/--tile-scale),
@@ -4372,11 +4732,29 @@ ol li {
   }
   #dagsutmaning .dagsutmaning-choices.two .dagsutmaning-choice { min-height: max(52px, calc(78px * var(--view-fit, 1))); }
 
-  /* Sidfoten i alla fyra – det är den som hamnar under fold först. */
+  /* Sortera */
+  #sortera .sortera-header { padding: calc(8px * var(--view-fit, 1)) 10px; margin-bottom: calc(12px * var(--view-fit, 1)); }
+  #sortera .sortera-prompt { font-size: max(0.82rem, calc(0.95rem * var(--view-fit, 1))); margin-bottom: calc(12px * var(--view-fit, 1)); }
+  #sortera .sortera-board { gap: max(6px, calc(8px * var(--view-fit, 1))); margin-bottom: calc(14px * var(--view-fit, 1)); }
+  #sortera .sortera-slots { gap: max(5px, calc(8px * var(--view-fit, 1))); }
+  #sortera .sortera-slot {
+    min-height: max(44px, calc(52px * var(--view-fit, 1)));
+    padding: calc(6px * var(--view-fit, 1)) 9px;
+  }
+  #sortera .sortera-bank-row { gap: max(5px, calc(8px * var(--view-fit, 1))); }
+  #sortera .sortera-tile {
+    min-height: max(44px, calc(44px * var(--view-fit, 1)));
+    padding: calc(8px * var(--view-fit, 1)) 10px;
+    font-size: max(0.72rem, calc(0.88rem * var(--tile-scale, 1) * var(--view-fit, 1)));
+  }
+  #sortera .sortera-explanation { font-size: max(0.74rem, calc(0.84rem * var(--view-fit, 1))); padding: calc(8px * var(--view-fit, 1)) 11px; }
+
+  /* Sidfoten i alla fem – det är den som hamnar under fold först. */
   #matcha .quiz-footer,
   #leitner .quiz-footer,
   #tidsjakt .quiz-footer,
-  #dagsutmaning .quiz-footer {
+  #dagsutmaning .quiz-footer,
+  #sortera .quiz-footer {
     margin-top: calc(24px * var(--view-fit, 1));
     padding-top: calc(16px * var(--view-fit, 1));
   }

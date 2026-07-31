@@ -161,10 +161,18 @@ def main(argv):
         # isär om ingenting mäter dem. Steget kör även
         # scripts/test_verktyg_akutmedicin.js, som driver modulen i ett DOM-skal
         # och prövar varje intervallgräns i NEWS2 åt båda håll.
+        #
+        # validate_sortera.py mäter en åttonde sak: att spelläget Sorteras
+        # frågearkiv håller ihop. En sorteringsfråga med fem poster bär FYRA
+        # parvisa faktapåståenden, och validate_quiz.py kan inte läsa formatet
+        # (den kan bara MC/TF). Den viktigaste spärren är närhetsspärren: två
+        # mätvärden som skiljer under 15 % ger en fråga med två försvarbara
+        # svar. Steget kör även scripts/test_sortera.js, som driver modulen i
+        # ett DOM-skal.
         for kontroll in ("scripts/check_links.py", "scripts/check_rubriker.py",
                          "scripts/check_kontrast.py", "scripts/check_spellagen.py",
                          "scripts/check_meta.py", "scripts/check_akutmedicin.py",
-                         "scripts/sidodatum.py"):
+                         "scripts/validate_sortera.py", "scripts/sidodatum.py"):
             argv = [kontroll] + (["--check"] if "sidodatum" in kontroll else [])
             kod = subprocess.run([sys.executable] + argv, cwd=ROOT).returncode
             if kod != 0:

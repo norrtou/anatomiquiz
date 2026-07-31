@@ -69,7 +69,7 @@
     "educationalUse": "practice",
     "learningResourceType": ["quiz", "flashcard", "reference"],
     "datePublished": "2026-05-27",
-    "dateModified": "2026-07-27",
+    "dateModified": "2026-07-31",
     "sameAs": [
       "https://www.instagram.com/anatomiquiz.se",
       "https://www.facebook.com/anatomiquizse"
@@ -168,7 +168,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="css/styles.css?v=0.9.302">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.306">
 </head>
 <body>
 
@@ -497,7 +497,7 @@
             <button id="startLeitnerBtn" class="btn btn-mode btn-mode--ready" type="button">Leitner Light</button>
             <button id="startTidsjaktBtn" class="btn btn-mode btn-mode--ready" type="button">Tidsjakt</button>
           </div>
-          <div class="game-modes-row game-modes-row--2">
+          <div class="game-modes-row game-modes-row--3">
             <!-- Sviten sitter PÅ knappen, inte bara inne i läget: en svit man
                  måste öppna spelet för att se driver inga återbesök. 🔥 N =
                  dagar i rad, ✅ N = dagens utmaning redan klar. Sätts av
@@ -506,6 +506,10 @@
               <span class="mode-label">Dagens utmaning</span>
               <span id="dagsutmaningFlame" class="mode-flame hidden"></span>
             </button>
+            <!-- Sortera har ett EGET frågearkiv och därmed en egen
+                 understartsida: knappen leder till lägets ämnesväljare, inte
+                 rakt in i en runda med quizets valda ämne. -->
+            <button id="startSorteraBtn" class="btn btn-mode btn-mode--ready" type="button">Sortera</button>
             <button class="btn btn-mode" type="button" disabled aria-disabled="true">Arcade: Gravity</button>
           </div>
           <!-- Vägen till den utförliga genomgången av alla lägen, reglerna och
@@ -1133,6 +1137,150 @@
     </section>
 
     <!-- =========================================================
+         Sortera — lägg fem strukturer i rätt ordning längs en axel.
+         Eget frågearkiv (data/sortera.json) och därför en egen
+         understartsida med egen ämnesdropdown: lägets frågor är
+         sorteringsfrågor och finns inte i quizets ämnen.
+         Byggs av js/sortera.js.
+         ========================================================= -->
+    <section id="sortera" class="card hidden" aria-labelledby="sorteraHeading">
+      <h2 id="sorteraHeading" class="sr-only">Sortera</h2>
+
+      <!-- Understartsidan: förklaring, ämne, längd, start. -->
+      <div id="sorteraStart" class="sortera-start">
+        <nav class="crumbs" aria-label="Brödsmulor">
+          <button type="button" id="sorteraBackBtn" class="crumb-link">‹ Start</button>
+          <span class="crumb-current" aria-current="page">Sortera</span>
+        </nav>
+
+        <!-- Vad läget GÅR UT PÅ, inte bara vilka knappar som finns. Ett
+             sorteringsspel förklarar sig inte självt: utan texten ser fem
+             brickor ut som fem svarsalternativ. js/sortera.js fäller upp rutan
+             automatiskt för den som aldrig spelat. -->
+        <details id="sorteraIntro" class="sortera-intro">
+          <summary>Så funkar det – ordningen är svaret, inte ett av alternativen</summary>
+          <div class="sortera-intro-body">
+            <p><strong>Du får fem strukturer och en riktning.</strong> Uppgiften är att lägga dem i rätt ordning längs den riktningen – till exempel från proximalt till distalt, eller från tyngst till lättast. Tryck på en bricka så hamnar den på nästa lediga plats; tryck på en placerad bricka så åker den tillbaka.</p>
+            <ul class="sortera-intro-list">
+              <li><strong>Inget rättas förrän du säger till.</strong> Flytta om hur mycket du vill och tryck <em>Rätta</em> först när du är nöjd.</li>
+              <li><strong>Facit avslöjas en plats i taget</strong>, nedifrån och upp. Rätt plats blir grön, fel plats visar vad som skulle stått där.</li>
+              <li><strong>Hela ordningen måste stämma</strong> för att frågan ska räknas som rätt – men dina rätta placeringar räknas separat, så du ser när du var nära.</li>
+            </ul>
+            <p>Varför just sortering? För att riktningstermer och storleksordningar sitter i <em>relationer</em>, inte i lösryckta definitioner. Att veta att distalt betyder ”längre ut” hjälper inte förrän man kan placera scaphoideum i förhållande till olecranon — och det är precis det den här övningen tränar.</p>
+            <p class="mode-help"><a href="spellagen.html">Läs mer om alla spellägen och studietekniken bakom</a></p>
+          </div>
+        </details>
+
+        <label for="sorteraTopic">Ämne</label>
+        <!-- Fylls av js/sortera.js ur data/sortera.json, så att ett nytt ämne
+             i arkivet syns här utan att någon rör index.html. -->
+        <select id="sorteraTopic" aria-describedby="sorteraTopicNote"></select>
+        <p id="sorteraTopicNote" class="topic-legend">Sortera har ett eget frågearkiv och påverkas inte av utbildningen du valt på startsidan.</p>
+
+        <div class="setup-row">
+          <div class="setup-field">
+            <label for="sorteraCount">Antal frågor</label>
+            <select id="sorteraCount">
+              <option value="5">5</option>
+              <option value="10" selected>10</option>
+              <option value="20">20</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="setup-actions">
+          <div class="primary-actions">
+            <button id="sorteraStartBtn" class="btn primary btn-start" type="button">Starta Sortera</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spelvyn -->
+      <div id="sorteraPlay" class="sortera-play hidden">
+        <!-- En sammanhållen infopanel: spelare, ämne och mätare hör ihop och
+             ska inte ligga som lösryckta rader. -->
+        <div class="sortera-header">
+          <div class="sortera-header-top">
+            <span id="sorteraPlayerLabel" class="sortera-player"></span>
+            <span id="sorteraMeta" class="sortera-meta"></span>
+          </div>
+          <!-- Mätaren går över HELA omgången — delad .gm-*-bas. -->
+          <div class="sortera-header-bottom">
+            <div class="gm-progress-track" aria-hidden="true">
+              <div id="sorteraProgressFill" class="gm-progress-fill"></div>
+            </div>
+            <span id="sorteraScoreBadge" class="gm-score-badge" aria-live="polite"></span>
+          </div>
+          <!-- Delpoängen på egen rad: den visar att man var nära även när
+               ingen fullträff blev av. -->
+          <p id="sorteraPlacementText" class="sortera-placement"></p>
+        </div>
+
+        <p id="sorteraPraise" class="sortera-praise hidden" aria-live="polite"></p>
+
+        <p id="sorteraPrompt" class="sortera-prompt"></p>
+
+        <!-- Spelplanen skyltar med sin egen regel: polerna står vid varsin
+             ände av platskolumnen, så axelns riktning syns utan att man
+             behöver läsa förklaringen. -->
+        <div class="sortera-board">
+          <div class="sortera-axis" aria-hidden="true">
+            <span id="sorteraPoleTop" class="sortera-pole"></span>
+            <span class="sortera-axis-line"></span>
+            <span id="sorteraPoleBottom" class="sortera-pole"></span>
+          </div>
+          <ol id="sorteraSlots" class="sortera-slots"></ol>
+        </div>
+
+        <div class="sortera-bank">
+          <p id="sorteraBankHint" class="sortera-bank-hint"></p>
+          <div id="sorteraBankRow" class="sortera-bank-row" role="group" aria-label="Strukturer att placera"></div>
+        </div>
+
+        <p id="sorteraExplanation" class="sortera-explanation hidden"></p>
+      </div>
+
+      <!-- Klart-vy (dold under omgången) -->
+      <div id="sorteraFinished" class="sortera-finished hidden">
+        <div class="gm-ring-wrap">
+          <svg class="gm-ring" viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="gm-ring-bg" cx="60" cy="60" r="52"></circle>
+            <circle id="sorteraRingProgress" class="gm-ring-progress" cx="60" cy="60" r="52"></circle>
+          </svg>
+          <div class="gm-ring-label">
+            <span id="sorteraRingPct" class="gm-ring-pct"></span>
+            <span class="gm-ring-sub">perfekta</span>
+          </div>
+        </div>
+        <p id="sorteraDoneText" class="sortera-done-text" aria-live="polite"></p>
+        <p id="sorteraStatsText" class="gm-stats-text"></p>
+        <p id="sorteraRecordBadge" class="gm-record-badge hidden" aria-live="polite"></p>
+
+        <!-- Det pedagogiska värdet: en omgång utan facit efteråt lär ingen något. -->
+        <div id="sorteraMissedWrap" class="sortera-missed-wrap hidden">
+          <h3 class="sortera-missed-heading">Rätt ordning i de du missade</h3>
+          <ul id="sorteraMissed" class="sortera-missed"></ul>
+          <p id="sorteraMissedMore" class="sortera-missed-more hidden"></p>
+        </div>
+
+        <div class="actions">
+          <button id="sorteraRetryBtn" class="btn primary" type="button">Spela igen</button>
+          <button id="sorteraQuitBtn" class="btn" type="button">Avsluta</button>
+        </div>
+      </div>
+
+      <div id="sorteraFooter" class="quiz-footer hidden">
+        <button id="sorteraCancelBtn" class="btn btn-cancel" type="button">Avbryt</button>
+        <div class="footer-center">
+          <div id="sorteraCounter" class="sortera-counter"></div>
+        </div>
+        <div class="quiz-actions">
+          <button id="sorteraCheckBtn" class="btn primary" type="button" disabled>Rätta</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
          Hantera-sektion — granska och importera frågor (dold initialt)
          ========================================================= -->
     <section id="manage" class="card hidden" aria-labelledby="manageHeading">
@@ -1266,6 +1414,18 @@
             <!-- Sviten bor i ett eget fack och rensas separat: den som nollar
                  topplistan menar sällan att 40 dagars svit ska följa med. -->
             <button id="clearStreak-dagsutmaning" class="btn" type="button">Nollställ svit</button>
+          </div>
+        </div>
+
+        <div class="hs-segment" data-mode="sortera">
+          <h4 class="hs-segment-title">Sortera <span class="hs-segment-sub">flest perfekta ordningar först</span></h4>
+          <ol id="scoreList-sortera" class="hs-segment-list"></ol>
+          <p class="hs-empty">Inga omgångar än — sortera en omgång så dyker den upp här.</p>
+          <div class="actions">
+            <button id="exportScores-sortera" class="btn" type="button">Exportera resultat</button>
+            <button id="importScoresBtn-sortera" class="btn" type="button">Importera resultat</button>
+            <input id="importScoresFile-sortera" type="file" accept="application/json" class="file-input-hidden" aria-hidden="true" tabindex="-1" />
+            <button id="clearScores-sortera" class="btn" type="button">Rensa</button>
           </div>
         </div>
 
@@ -1418,17 +1578,18 @@
     <footer class="page-footer">
       <p>Utbildningsmaterial, inte medicinsk rådgivning. Innehållet är avsett för studier och ersätter inte kurslitteratur, undervisning eller kliniska riktlinjer. Det ska inte användas som underlag för vård eller behandling av patienter.</p>
       <p>Anatomiquiz använder inga kakor och samlar inte in personuppgifter. Läs mer i <a href="/integritet.html" class="info-link">integritetspolicyn</a>.</p>
-      <p class="page-updated">Senast uppdaterad <time data-updated datetime="2026-07-27">27 juli 2026</time></p>
+      <p class="page-updated">Senast uppdaterad <time data-updated datetime="2026-07-31">31 juli 2026</time></p>
     </footer>
   </main>
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.305" defer></script>
+  <script src="js/app.js?v=0.9.306" defer></script>
   <!-- Spellägesmoduler: en egen fil per läge, laddas EFTER app.js (delar globalt scope). -->
   <script src="js/matcha.js?v=0.9.261" defer></script>
   <script src="js/leitner.js?v=0.9.261" defer></script>
   <script src="js/tidsjakt.js?v=0.9.262" defer></script>
   <script src="js/dagsutmaning.js?v=0.9.284" defer></script>
+  <script src="js/sortera.js?v=0.9.306" defer></script>
 </body>
 </html>

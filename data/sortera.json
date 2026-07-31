@@ -1,0 +1,659 @@
+{
+  "_kommentar": "Frågearkiv för spelläget Sortera (js/sortera.js). EGET schema — detta är INTE MC/TF-frågor, så filen står i SKIP i scripts/validate_quiz.py och kontrolleras i stället av scripts/validate_sortera.py. items ligger ALLTID i rätt ordning här; js/sortera.js slumpar dem vid körning (och slumpar om ifall lotten råkar ge rätt ordning). Axeltabellen nedan är ENDA upplagan av polernas namn — både spelet och validatorn läser den härifrån, så de kan inte glida isär (CLAUDE_REGLER §12.2).",
+  "version": 1,
+  "axlar": {
+    "proximal_distal": {
+      "top": "Proximalt",
+      "bottom": "Distalt",
+      "riktningsord": ["proximal", "distal"]
+    },
+    "medial_lateral": {
+      "top": "Medialt",
+      "bottom": "Lateralt",
+      "riktningsord": ["medial", "lateral"]
+    },
+    "ventral_dorsal": {
+      "top": "Ventralt",
+      "bottom": "Dorsalt",
+      "riktningsord": ["ventral", "dorsal", "anterior", "posterior", "volar"]
+    },
+    "kranial_kaudal": {
+      "top": "Kranialt",
+      "bottom": "Kaudalt",
+      "riktningsord": ["kranial", "kaudal", "superior", "inferior"]
+    },
+    "superficiell_djup": {
+      "top": "Ytligt",
+      "bottom": "Djupt",
+      "riktningsord": ["superficiell", "ytlig", "profund"]
+    },
+    "antal": {
+      "top": "Flest",
+      "bottom": "Färst",
+      "matt": "antal",
+      "exakt": true
+    },
+    "langd": {
+      "top": "Längst",
+      "bottom": "Kortast",
+      "matt": "längd"
+    },
+    "vikt": {
+      "top": "Tyngst",
+      "bottom": "Lättast",
+      "matt": "vikt"
+    },
+    "volym": {
+      "top": "Störst",
+      "bottom": "Minst",
+      "matt": "volym"
+    }
+  },
+  "amnen": {
+    "sortera_riktningar": "Riktningar & lägen",
+    "sortera_storlek": "Storlek & antal"
+  },
+  "fragor": [
+    {
+      "id": "sr001",
+      "topic": "sortera_riktningar",
+      "axis": "proximal_distal",
+      "prompt": "Ordna strukturerna i höger övre extremitet från proximalt till distalt.",
+      "items": [
+        { "label": "Caput humeri", "note": "överarmsbenets ledhuvud i axelleden" },
+        { "label": "Olecranon", "note": "armbågsspetsen, ulnas proximala ände" },
+        { "label": "Os scaphoideum", "note": "båtbenet i proximala handlovsraden" },
+        { "label": "Os metacarpale III", "note": "långfingrets mellanhandsben" },
+        { "label": "Ytterfalangen på dig. II", "note": "pekfingrets yttersta falang" }
+      ],
+      "explanation": "Proximalt betyder närmare bålfästet, distalt längre ut i extremiteten. Kedjan går axel → armbåge → handled → mellanhand → finger.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "sr002",
+      "topic": "sortera_riktningar",
+      "axis": "proximal_distal",
+      "prompt": "Ordna strukturerna i höger nedre extremitet från proximalt till distalt.",
+      "items": [
+        { "label": "Trochanter major", "note": "femurs stora benutskott vid höften" },
+        { "label": "Patella", "note": "knäskålen" },
+        { "label": "Malleolus medialis", "note": "tibias fotknöl" },
+        { "label": "Os naviculare", "note": "båtbenet i fotroten" },
+        { "label": "Ytterfalangen i stortån", "note": "hallux yttersta falang" }
+      ],
+      "explanation": "Samma princip som i armen: höft → knä → fotled → fotrot → tå. Malleolus medialis sitter på tibias distala ände och ligger därför längre ut än patella.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "sr003",
+      "topic": "sortera_riktningar",
+      "axis": "proximal_distal",
+      "prompt": "Ordna stationerna längs n. medianus väg från proximalt till distalt.",
+      "items": [
+        { "label": "Plexus brachialis i axillen", "note": "nervens ursprung" },
+        { "label": "N. medianus i fossa cubiti", "note": "armbågsgropen" },
+        { "label": "Karpaltunneln", "note": "under retinaculum flexorum" },
+        { "label": "N. digitalis palmaris communis", "note": "gemensam fingernerv i handflatan" },
+        { "label": "N. digitalis palmaris proprius i dig. II", "note": "egen fingernerv längs pekfingret" }
+      ],
+      "explanation": "Proximalt och distalt gäller även längs en nerv: räknat från ursprunget i plexus och ut mot periferin. Nerven byter namn när den grenar sig, men riktningen är densamma.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "sr004",
+      "topic": "sortera_riktningar",
+      "axis": "proximal_distal",
+      "prompt": "Ordna avsnitten i mag-tarmkanalen från proximalt till distalt.",
+      "items": [
+        { "label": "Duodenum", "note": "tolvfingertarmen" },
+        { "label": "Jejunum", "note": "tunntarmens övre fria del" },
+        { "label": "Ileum", "note": "tunntarmens nedre del" },
+        { "label": "Colon transversum", "note": "tvärgående tjocktarm" },
+        { "label": "Rektum", "note": "ändtarmen" }
+      ],
+      "explanation": "I ett rörformigt organ räknas proximalt och distalt längs flödesriktningen, inte mot bålen. Proximalt är alltså närmare munnen.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "sr005",
+      "topic": "sortera_riktningar",
+      "axis": "proximal_distal",
+      "prompt": "Ordna stationerna i urinvägarna från proximalt till distalt.",
+      "items": [
+        { "label": "Njurbäckenet", "note": "pelvis renalis, där urinen samlas" },
+        { "label": "Uretärens övre tredjedel", "note": "strax nedanför njurbäckenet" },
+        { "label": "Uretärostiet i urinblåsan", "note": "uretärens mynning" },
+        { "label": "Urinblåsehalsen", "note": "övergången till uretra" },
+        { "label": "Uretras yttre mynning", "note": "meatus urethrae externus" }
+      ],
+      "explanation": "Urinvägarna räknas i flödesriktningen: proximalt är närmare njuren, distalt närmare mynningen.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "sr006",
+      "topic": "sortera_riktningar",
+      "axis": "proximal_distal",
+      "prompt": "Ordna kärlen längs artärträdet i höger ben från proximalt till distalt.",
+      "items": [
+        { "label": "A. iliaca communis", "note": "avgår från aortas delning" },
+        { "label": "A. femoralis i ljumsken", "note": "under lig. inguinale" },
+        { "label": "A. poplitea", "note": "i knävecket" },
+        { "label": "A. tibialis posterior vid malleolen", "note": "bakom mediala fotknölen" },
+        { "label": "Arcus plantaris i foten", "note": "fotsulans artärbåge" }
+      ],
+      "explanation": "Längs ett kärlträd räknas proximalt mot hjärtat och distalt mot periferin. Kedjan följer blodets väg från bäckenet ut i foten.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "sr007",
+      "topic": "sortera_riktningar",
+      "axis": "medial_lateral",
+      "prompt": "Ordna benen i höger handled från medialt till lateralt, i anatomisk grundställning.",
+      "items": [
+        { "label": "Os pisiforme", "note": "ärtbenet, ligger ulnart" },
+        { "label": "Os triquetrum", "note": "trekantsbenet" },
+        { "label": "Os lunatum", "note": "månbenet, mitt i raden" },
+        { "label": "Os scaphoideum", "note": "båtbenet, ligger radialt" },
+        { "label": "Processus styloideus radii", "note": "radius griffelutskott" }
+      ],
+      "explanation": "I anatomisk grundställning är handflatan vänd framåt, så lillfingersidan (ulnart) är medial och tumsidan (radialt) lateral. Proximala handlovsraden ligger i ordningen pisiforme–triquetrum–lunatum–scaphoideum.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "sr008",
+      "topic": "sortera_riktningar",
+      "axis": "medial_lateral",
+      "prompt": "Ordna strukturerna i thorax från medialt till lateralt på vänster sida, i höjd med Th6.",
+      "items": [
+        { "label": "Corpus vertebrae Th6", "note": "kotkroppen, i mittlinjen" },
+        { "label": "Aorta descendens", "note": "löper strax till vänster om kotkroppen" },
+        { "label": "Vänster lunghilus", "note": "där kärl och bronk går in i lungan" },
+        { "label": "Revben 6 i axillarlinjen", "note": "bröstkorgens vägg" },
+        { "label": "Huden över vänster axill", "note": "kroppsytan" }
+      ],
+      "explanation": "Medialt betyder närmare kroppens mittlinje, lateralt längre ut åt sidan. Här blandas kotpelare, kärl, lunga, skelett och hud — måttet är avståndet till medianplanet, inte vilket organsystem strukturen tillhör.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "sr009",
+      "topic": "sortera_riktningar",
+      "axis": "medial_lateral",
+      "prompt": "Ordna strukturerna i ett tvärsnitt genom höger underben från medialt till lateralt.",
+      "items": [
+        { "label": "V. saphena magna", "note": "ytlig ven längs underbenets insida" },
+        { "label": "Tibias framkant", "note": "skenbenets hudnära kant" },
+        { "label": "Membrana interossea", "note": "bindvävshinnan mellan benen" },
+        { "label": "Fibula", "note": "vadbenet" },
+        { "label": "M. fibularis longus", "note": "ligger utanpå fibula" }
+      ],
+      "explanation": "V. saphena magna löper längs underbenets insida och är underbenets mest mediala namngivna struktur. Mellan tibia och fibula spänner membrana interossea, och m. fibularis longus ligger utanpå fibula.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "sr010",
+      "topic": "sortera_riktningar",
+      "axis": "medial_lateral",
+      "prompt": "Ordna strukturerna i buken från medialt till lateralt på höger sida, i höjd med L2.",
+      "items": [
+        { "label": "Aorta abdominalis", "note": "ligger strax till vänster om mittlinjen" },
+        { "label": "V. cava inferior", "note": "löper till höger om aorta" },
+        { "label": "Höger njure", "note": "retroperitonealt mot bakre bukväggen" },
+        { "label": "M. transversus abdominis i höger flank", "note": "bukväggens djupaste muskelskikt" },
+        { "label": "Huden över höger flank", "note": "kroppsytan" }
+      ],
+      "explanation": "V. cava inferior ligger alltid till höger om aorta. Njuren ligger lateralt om kärlen, bukväggens muskler ännu längre ut och huden ytterst.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "sr011",
+      "topic": "sortera_riktningar",
+      "axis": "medial_lateral",
+      "prompt": "Ordna strukturerna i ansiktet från medialt till lateralt på höger sida.",
+      "items": [
+        { "label": "Nässkiljeväggen", "note": "septum nasi, i mittlinjen" },
+        { "label": "Höger näsvinge", "note": "ala nasi" },
+        { "label": "Höger pupill", "note": "ligger i mediopupillarlinjen" },
+        { "label": "Höger kindben", "note": "os zygomaticum" },
+        { "label": "Höger öronsnibb", "note": "sitter längst ut på huvudets sida" }
+      ],
+      "explanation": "Medialt och lateralt mäts som avstånd till medianplanet. Nässkiljeväggen ligger i planet, öronsnibben längst ifrån det.",
+      "source": "Sobotta, Atlas of Human Anatomy"
+    },
+    {
+      "id": "sr012",
+      "topic": "sortera_riktningar",
+      "axis": "ventral_dorsal",
+      "prompt": "Ordna strukturerna i halsen från ventralt till dorsalt, i höjd med C6.",
+      "items": [
+        { "label": "Trachea", "note": "luftstrupen, längst fram" },
+        { "label": "Esofagus", "note": "matstrupen, bakom trachea" },
+        { "label": "Corpus vertebrae C6", "note": "kotkroppen" },
+        { "label": "Medulla spinalis", "note": "ryggmärgen i kotkanalen" },
+        { "label": "Processus spinosus C6", "note": "taggutskottet, känns i nacken" }
+      ],
+      "explanation": "Ventralt är mot framsidan, dorsalt mot ryggsidan. På halsen ligger luftvägen främst, matstrupen bakom den, och därefter kotkropp, ryggmärg och taggutskott.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "sr013",
+      "topic": "sortera_riktningar",
+      "axis": "ventral_dorsal",
+      "prompt": "Ordna strukturerna i buken från ventralt till dorsalt, i mittlinjen strax nedanför bröstbenets spets.",
+      "items": [
+        { "label": "Huden över epigastriet", "note": "kroppsytan" },
+        { "label": "Linea alba", "note": "bindvävsstråket i bukväggens mittlinje" },
+        { "label": "Ventrikelns kropp", "note": "magsäcken, intraperitonealt" },
+        { "label": "Pankreas", "note": "bukspottkörteln, retroperitonealt" },
+        { "label": "Aorta abdominalis", "note": "mot kotpelaren" }
+      ],
+      "explanation": "Pankreas ligger retroperitonealt, alltså bakom magsäcken, och aorta ligger ännu längre bak mot kotpelaren. Det är därför bukspottkörteln inte går att palpera genom bukväggen.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "sr014",
+      "topic": "sortera_riktningar",
+      "axis": "ventral_dorsal",
+      "prompt": "Ordna strukturerna i höger knä från ventralt till dorsalt.",
+      "items": [
+        { "label": "Patella", "note": "knäskålen" },
+        { "label": "Femurs trochlea", "note": "ledytan som patella glider i" },
+        { "label": "Fossa intercondylaris", "note": "gropen där korsbanden fäster" },
+        { "label": "A. poplitea", "note": "i knävecket, mot ledkapselns baksida" },
+        { "label": "Huden i knävecket", "note": "kroppsytan baktill" }
+      ],
+      "explanation": "Knäskålen ligger längst fram och glider mot femurs trochlea. Bakom ledytorna ligger fossa intercondylaris, och i knävecket löper a. poplitea nära kapseln — därför är kärlskada en känd risk vid knäluxation.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "sr015",
+      "topic": "sortera_riktningar",
+      "axis": "ventral_dorsal",
+      "prompt": "Ordna strukturerna i höger handled från ventralt till dorsalt.",
+      "items": [
+        { "label": "Sena till m. flexor carpi radialis", "note": "böjsena på handledens framsida" },
+        { "label": "N. medianus i karpaltunneln", "note": "under retinaculum flexorum" },
+        { "label": "Os capitatum", "note": "huvudbenet i distala handlovsraden" },
+        { "label": "Sena till m. extensor digitorum", "note": "sträcksena på handryggen" },
+        { "label": "Handryggens hud", "note": "kroppsytan baktill" }
+      ],
+      "explanation": "Böjsenor och n. medianus ligger på handledens framsida, handlovsbenen i mitten och sträcksenorna på baksidan. Det är den ordningen som gör att medianuskompression ger symtom i handflatan, inte på handryggen.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "sr016",
+      "topic": "sortera_riktningar",
+      "axis": "kranial_kaudal",
+      "prompt": "Ordna strukturerna från kranialt till kaudalt hos en stående vuxen i anatomisk grundställning.",
+      "items": [
+        { "label": "Diafragmans kupol", "note": "når vid utandning upp mot revben 4–5" },
+        { "label": "Njurhilus", "note": "ungefär i höjd med L1–L2" },
+        { "label": "Crista iliaca", "note": "höftbenskammen, ungefär i höjd med L4" },
+        { "label": "Trochanter major", "note": "femurs utskott vid höften" },
+        { "label": "Patella", "note": "knäskålen" }
+      ],
+      "explanation": "Kranialt är mot huvudet, kaudalt mot svansändan. Här blandas inre organ, bål och extremitet — måttet är höjden i kroppen, inte vilket system strukturen hör till.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "sr017",
+      "topic": "sortera_riktningar",
+      "axis": "kranial_kaudal",
+      "prompt": "Ordna strukturerna längs kotpelaren från kranialt till kaudalt.",
+      "items": [
+        { "label": "Foramen magnum", "note": "stora nackhålet i os occipitale" },
+        { "label": "Vertebra prominens", "note": "C7, det utskott som syns i nacken" },
+        { "label": "Conus medullaris", "note": "ryggmärgens slut, vanligen vid L1–L2" },
+        { "label": "Cauda equina", "note": "nervrötterna nedanför conus" },
+        { "label": "Hiatus sacralis", "note": "sakralkanalens nedre öppning" }
+      ],
+      "explanation": "Ryggmärgen slutar vid conus medullaris, ungefär i höjd med L1–L2, medan kotkanalen fortsätter. Det är därför lumbalpunktion görs nedanför den nivån, där bara cauda equina finns.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "sr018",
+      "topic": "sortera_riktningar",
+      "axis": "kranial_kaudal",
+      "prompt": "Ordna strukturerna i luftvägarna från kranialt till kaudalt.",
+      "items": [
+        { "label": "Epiglottis", "note": "struplocket" },
+        { "label": "Stämbanden", "note": "plica vocalis i larynx" },
+        { "label": "Cartilago cricoidea", "note": "ringbrosket, larynx nedre gräns" },
+        { "label": "Carina trachealis", "note": "trakeas delning, ungefär i höjd med Th4–Th5" },
+        { "label": "Höger huvudbronk vid hilus", "note": "på väg in i lungan" }
+      ],
+      "explanation": "Luftvägen går uppifrån och ned: struplock, stämband, ringbrosk, trakeas delning och sedan huvudbronkerna. Ringbrosket är den enda kompletta broskringen i luftvägen.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "sr019",
+      "topic": "sortera_riktningar",
+      "axis": "superficiell_djup",
+      "prompt": "Ordna skikten i främre bukväggen från ytligt till djupt, lateralt om linea alba.",
+      "items": [
+        { "label": "Epidermis", "note": "överhuden" },
+        { "label": "Subkutant fett", "note": "tela subcutanea" },
+        { "label": "M. obliquus externus abdominis", "note": "yttre sneda bukmuskeln" },
+        { "label": "M. transversus abdominis", "note": "innersta av de tre platta bukmusklerna" },
+        { "label": "Peritoneum parietale", "note": "bukhinnans vägglager" }
+      ],
+      "explanation": "Bukväggens tre platta muskler ligger i ordningen externus, internus och transversus utifrån och in. Innerst kläs bukhålan av peritoneum parietale.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "sr020",
+      "topic": "sortera_riktningar",
+      "axis": "superficiell_djup",
+      "prompt": "Ordna skikten i huvudets vägg från ytligt till djupt, över hjässan.",
+      "items": [
+        { "label": "Hårbotten", "note": "skalpens hud" },
+        { "label": "Galea aponeurotica", "note": "senhinnan mellan pannans och nackens muskelbukar" },
+        { "label": "Kraniets tabula externa", "note": "skallbenets yttre kompakta skikt" },
+        { "label": "Dura mater", "note": "den hårda hjärnhinnan" },
+        { "label": "Arachnoidea mater", "note": "spindelvävshinnan" }
+      ],
+      "explanation": "Skalpen ligger utanpå kraniet, och innanför benet följer hjärnhinnorna i ordningen dura, arachnoidea och pia. Ett epiduralhematom ligger mellan ben och dura, ett subduralt innanför duran.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+
+    {
+      "id": "ss001",
+      "topic": "sortera_storlek",
+      "axis": "antal",
+      "prompt": "Ordna efter antal ben, flest först. Räkna hela kroppen, båda sidor.",
+      "items": [
+        { "label": "Falanger i händerna", "value": 28, "unit": "st", "note": "14 per hand" },
+        { "label": "Revben", "value": 24, "unit": "st", "note": "12 par" },
+        { "label": "Handlovsben", "value": 16, "unit": "st", "note": "8 per hand" },
+        { "label": "Fotrotsben", "value": 14, "unit": "st", "note": "7 per fot" },
+        { "label": "Hörselben", "value": 6, "unit": "st", "note": "3 per öra" }
+      ],
+      "explanation": "Tummen har två falanger och övriga fingrar tre, alltså 14 per hand. Fotroten har sju ben per fot mot handlovens åtta.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "ss002",
+      "topic": "sortera_storlek",
+      "axis": "antal",
+      "prompt": "Ordna efter antal, flest först. Räkna hela kroppen hos en vuxen.",
+      "items": [
+        { "label": "Kotor, medräknat de sammanvuxna kors- och svanskotorna", "value": 33, "unit": "st", "note": "7 + 12 + 5 + 5 + 4" },
+        { "label": "Permanenta tänder i ett fullt bett", "value": 32, "unit": "st", "note": "8 per käkhalva" },
+        { "label": "Falanger i fötterna", "value": 28, "unit": "st", "note": "14 per fot" },
+        { "label": "Revben", "value": 24, "unit": "st", "note": "12 par" },
+        { "label": "Hörselben", "value": 6, "unit": "st", "note": "3 per öra" }
+      ],
+      "explanation": "Kotorna är 33 om man räknar de fem sammanvuxna korskotorna och de fyra svanskotorna var för sig; som fria kotor räknas 24. Tänderna är 32 i ett fullt permanent bett.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "ss003",
+      "topic": "sortera_storlek",
+      "axis": "antal",
+      "prompt": "Ordna efter antal ben, flest först. Räkna endast EN sida av kroppen (unilateralt).",
+      "items": [
+        { "label": "Falanger i en hand", "value": 14, "unit": "st", "note": "2 i tummen, 3 i vardera övriga finger" },
+        { "label": "Revben på en sida", "value": 12, "unit": "st", "note": "hälften av 24" },
+        { "label": "Handlovsben i en hand", "value": 8, "unit": "st", "note": "två rader om fyra" },
+        { "label": "Fotrotsben i en fot", "value": 7, "unit": "st", "note": "bland annat talus och calcaneus" },
+        { "label": "Hörselben i ett öra", "value": 3, "unit": "st", "note": "hammare, städ och stigbygel" }
+      ],
+      "explanation": "Samma strukturer som i frågan om hela kroppen, men halva antalet. Att skilja på totalt och unilateralt är själva poängen: 24 revben totalt är 12 på varje sida.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "ss004",
+      "topic": "sortera_storlek",
+      "axis": "antal",
+      "prompt": "Ordna efter antal nervpar, flest först.",
+      "items": [
+        { "label": "Spinalnervpar totalt", "value": 31, "unit": "par", "note": "8 + 12 + 5 + 5 + 1" },
+        { "label": "Kranialnervpar", "value": 12, "unit": "par", "note": "I–XII" },
+        { "label": "Cervikala spinalnervpar", "value": 8, "unit": "par", "note": "ett fler än antalet halskotor" },
+        { "label": "Lumbala spinalnervpar", "value": 5, "unit": "par", "note": "L1–L5" },
+        { "label": "Coccygeala spinalnervpar", "value": 1, "unit": "par", "note": "det nedersta" }
+      ],
+      "explanation": "De cervikala spinalnerverna är åtta trots att halskotorna är sju, eftersom C1 lämnar kanalen ovanför första halskotan. Summan av alla avsnitt blir 31 par.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss005",
+      "topic": "sortera_storlek",
+      "axis": "antal",
+      "prompt": "Ordna efter antal, flest först. Räkna hela kroppen hos en vuxen med friskt hjärta och friska lungor.",
+      "items": [
+        { "label": "Segel i hjärtats fyra klaffar tillsammans", "value": 11, "unit": "st", "note": "3 + 3 + 3 + 2" },
+        { "label": "Lunglober totalt", "value": 5, "unit": "st", "note": "3 höger, 2 vänster" },
+        { "label": "Lungvener som mynnar i vänster förmak", "value": 4, "unit": "st", "note": "två från varje lunga" },
+        { "label": "Lober i höger lunga", "value": 3, "unit": "st", "note": "över-, mellan- och underlob" },
+        { "label": "Kranskärl som utgår direkt ur aorta", "value": 2, "unit": "st", "note": "vänster och höger" }
+      ],
+      "explanation": "Aorta-, pulmonalis- och tricuspidalisklaffen har tre segel var, mitralisklaffen två — alltså elva tillsammans. Vänster lunga har bara två lober eftersom hjärtat tar plats där.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss006",
+      "topic": "sortera_storlek",
+      "axis": "antal",
+      "prompt": "Ordna efter antal ben i skallen, flest först. Räkna hela skallen, båda sidor.",
+      "items": [
+        { "label": "Ben i skallen totalt", "value": 22, "unit": "st", "note": "hörselbenen ej medräknade" },
+        { "label": "Ansiktsben (viscerocranium)", "value": 14, "unit": "st", "note": "bland annat maxilla och mandibula" },
+        { "label": "Hjärnskålens ben (neurocranium)", "value": 8, "unit": "st", "note": "bland annat os frontale och os occipitale" },
+        { "label": "Hörselben totalt", "value": 6, "unit": "st", "note": "3 per öra" },
+        { "label": "Tungbenet", "value": 1, "unit": "st", "note": "ledar inte mot något annat ben" }
+      ],
+      "explanation": "Skallens 22 ben delas i hjärnskålens 8 och ansiktets 14. Hörselbenen räknas traditionellt separat, och tungbenet är kroppens enda ben utan ledförbindelse.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "ss007",
+      "topic": "sortera_storlek",
+      "axis": "antal",
+      "prompt": "Ordna efter antal tänder, flest först. Räkna hela bettet, båda käkhalvorna.",
+      "items": [
+        { "label": "Permanenta tänder i ett fullt bett", "value": 32, "unit": "st", "note": "8 per käkhalva" },
+        { "label": "Mjölktänder i ett fullt mjölktandsbett", "value": 20, "unit": "st", "note": "5 per käkhalva" },
+        { "label": "Permanenta molarer inklusive visdomständer", "value": 12, "unit": "st", "note": "3 per käkhalva" },
+        { "label": "Permanenta premolarer", "value": 8, "unit": "st", "note": "2 per käkhalva" },
+        { "label": "Permanenta hörntänder", "value": 4, "unit": "st", "note": "1 per käkhalva" }
+      ],
+      "explanation": "Det permanenta bettet har per käkhalva två incisiver, en hörntand, två premolarer och tre molarer. Mjölktandsbettet saknar premolarer och har därför bara 20 tänder.",
+      "source": "Sobotta, Atlas of Human Anatomy"
+    },
+    {
+      "id": "ss008",
+      "topic": "sortera_storlek",
+      "axis": "antal",
+      "prompt": "Ordna efter antal celler per liter blod, flest först. Ungefärliga normalvärden hos en vuxen.",
+      "items": [
+        { "label": "Erytrocyter", "value": 5000000000000, "unit": "per liter", "note": "≈ 5 × 10¹²/L" },
+        { "label": "Trombocyter", "value": 250000000000, "unit": "per liter", "note": "≈ 250 × 10⁹/L" },
+        { "label": "Leukocyter totalt", "value": 7000000000, "unit": "per liter", "note": "≈ 7 × 10⁹/L" },
+        { "label": "Lymfocyter", "value": 2000000000, "unit": "per liter", "note": "≈ 2 × 10⁹/L" },
+        { "label": "Monocyter", "value": 500000000, "unit": "per liter", "note": "≈ 0,5 × 10⁹/L" }
+      ],
+      "explanation": "Skillnaderna är tiopotenser: röda blodkroppar räknas i 10¹² per liter, trombocyter och vita i 10⁹. Lymfocyter och monocyter är delmängder av leukocyterna.",
+      "source": "Region Kronoberg, laboratoriets referensintervall"
+    },
+    {
+      "id": "ss009",
+      "topic": "sortera_storlek",
+      "axis": "langd",
+      "prompt": "Ordna efter längd hos en vuxen, längst först.",
+      "items": [
+        { "label": "Tunntarmen", "value": 600, "unit": "cm", "note": "≈ 6 m" },
+        { "label": "Tjocktarmen", "value": 150, "unit": "cm", "note": "≈ 1,5 m" },
+        { "label": "Femur", "value": 45, "unit": "cm", "note": "kroppens längsta ben" },
+        { "label": "Esofagus", "value": 25, "unit": "cm", "note": "från svalget till magmunnen" },
+        { "label": "Uretra hos en kvinna", "value": 4, "unit": "cm", "note": "kort, till skillnad från mannens" }
+      ],
+      "explanation": "Tunntarmen är fyra gånger så lång som tjocktarmen. Den korta kvinnliga uretran är en av förklaringarna till att urinvägsinfektion är vanligare hos kvinnor.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss010",
+      "topic": "sortera_storlek",
+      "axis": "langd",
+      "prompt": "Ordna benen i övre och nedre extremiteten efter längd, längst först. Ungefärliga mått hos en vuxen.",
+      "items": [
+        { "label": "Femur", "value": 45, "unit": "cm", "note": "lårbenet" },
+        { "label": "Humerus", "value": 33, "unit": "cm", "note": "överarmsbenet" },
+        { "label": "Radius", "value": 24, "unit": "cm", "note": "strålbenet" },
+        { "label": "Os metacarpale II", "value": 7, "unit": "cm", "note": "pekfingrets mellanhandsben" },
+        { "label": "Ytterfalangen på dig. II", "value": 2, "unit": "cm", "note": "pekfingrets yttersta falang" }
+      ],
+      "explanation": "Femur är kroppens längsta ben och utgör ungefär en fjärdedel av kroppslängden. Skillnaden mellan de långa rörbenen och handens ben är en tiopotens.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "ss011",
+      "topic": "sortera_storlek",
+      "axis": "langd",
+      "prompt": "Ordna rörformiga strukturer och kotpelaren efter längd hos en vuxen, längst först.",
+      "items": [
+        { "label": "Kotpelaren", "value": 70, "unit": "cm", "note": "columna vertebralis" },
+        { "label": "Ryggmärgen", "value": 45, "unit": "cm", "note": "slutar vid L1–L2" },
+        { "label": "Uretären", "value": 28, "unit": "cm", "note": "från njurbäcken till urinblåsa" },
+        { "label": "Trachea", "value": 11, "unit": "cm", "note": "från larynx till carina" },
+        { "label": "Höger huvudbronk", "value": 2.5, "unit": "cm", "note": "kortare och brantare än den vänstra" }
+      ],
+      "explanation": "Ryggmärgen är kortare än kotpelaren eftersom kotpelaren växer mer under uppväxten — därför slutar ryggmärgen redan vid L1–L2. Höger huvudbronk är kort och brant, vilket gör att främmande kroppar oftast hamnar där.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "ss012",
+      "topic": "sortera_storlek",
+      "axis": "langd",
+      "prompt": "Ordna avsnitten i mag-tarmkanalen efter längd, längst först. Ungefärliga mått hos en vuxen.",
+      "items": [
+        { "label": "Ileum", "value": 350, "unit": "cm", "note": "tunntarmens nedre del" },
+        { "label": "Jejunum", "value": 250, "unit": "cm", "note": "tunntarmens övre fria del" },
+        { "label": "Colon", "value": 150, "unit": "cm", "note": "hela tjocktarmen" },
+        { "label": "Esofagus", "value": 25, "unit": "cm", "note": "matstrupen" },
+        { "label": "Rektum", "value": 13, "unit": "cm", "note": "ändtarmen" }
+      ],
+      "explanation": "Tunntarmens fria del delas ungefär i två femtedelar jejunum och tre femtedelar ileum. Trots namnet är tjocktarmen alltså mycket kortare än tunntarmen — den är tjockare, inte längre.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss013",
+      "topic": "sortera_storlek",
+      "axis": "langd",
+      "prompt": "Ordna efter längd hos en vuxen, längst först. Strukturerna kommer från olika delar av kroppen.",
+      "items": [
+        { "label": "Femur", "value": 45, "unit": "cm", "note": "kroppens längsta ben" },
+        { "label": "Sternum", "value": 17, "unit": "cm", "note": "bröstbenet" },
+        { "label": "Njure", "value": 11, "unit": "cm", "note": "mätt i längdaxeln" },
+        { "label": "Hörselgången", "value": 2.5, "unit": "cm", "note": "meatus acusticus externus" },
+        { "label": "Stapes", "value": 0.3, "unit": "cm", "note": "kroppens minsta ben" }
+      ],
+      "explanation": "Här hör strukturerna inte ihop anatomiskt — måttet är enbart längden. Skillnaden mellan kroppens längsta och minsta ben, femur och stapes, är ungefär 150 gånger.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "ss014",
+      "topic": "sortera_storlek",
+      "axis": "vikt",
+      "prompt": "Ordna organen efter vikt hos en vuxen, tyngst först.",
+      "items": [
+        { "label": "Levern", "value": 1500, "unit": "g", "note": "kroppens tyngsta inre organ" },
+        { "label": "Lungorna tillsammans", "value": 1000, "unit": "g", "note": "båda lungorna" },
+        { "label": "Hjärtat", "value": 300, "unit": "g", "note": "ungefär en knuten näve" },
+        { "label": "En njure", "value": 150, "unit": "g", "note": "en av två" },
+        { "label": "Sköldkörteln", "value": 25, "unit": "g", "note": "framför trachea" }
+      ],
+      "explanation": "Levern är det tyngsta inre organet och väger ungefär 2 % av kroppsvikten. Notera att lungorna här räknas tillsammans men njuren en och en — det är alltid frågan som avgör.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss015",
+      "topic": "sortera_storlek",
+      "axis": "vikt",
+      "prompt": "Ordna efter vikt hos en vuxen, tyngst först.",
+      "items": [
+        { "label": "Hjärnan", "value": 1400, "unit": "g", "note": "ungefär 2 % av kroppsvikten" },
+        { "label": "Mjälten", "value": 150, "unit": "g", "note": "i vänster övre bukkvadrant" },
+        { "label": "Prostatan", "value": 20, "unit": "g", "note": "ungefär en valnöt" },
+        { "label": "En binjure", "value": 5, "unit": "g", "note": "sitter som en mössa på njuren" },
+        { "label": "Hypofysen", "value": 0.6, "unit": "g", "note": "i sella turcica" }
+      ],
+      "explanation": "Hjärnan väger ungefär lika mycket som levern men står för en betydligt större andel av energiförbrukningen. Hypofysen är trots sin storlek överordnad flera av kroppens hormonsystem.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss016",
+      "topic": "sortera_storlek",
+      "axis": "vikt",
+      "prompt": "Ordna efter vikt hos en vuxen på 70 kg, tyngst först. Ungefärliga värden.",
+      "items": [
+        { "label": "Skelettmuskulaturen", "value": 28000, "unit": "g", "note": "≈ 40 % av kroppsvikten" },
+        { "label": "Skelettet", "value": 10500, "unit": "g", "note": "≈ 15 % av kroppsvikten" },
+        { "label": "Blodet", "value": 5000, "unit": "g", "note": "≈ 5 liter" },
+        { "label": "Levern", "value": 1500, "unit": "g", "note": "tyngsta inre organet" },
+        { "label": "Hjärtat", "value": 300, "unit": "g", "note": "ungefär en knuten näve" }
+      ],
+      "explanation": "Skelettmuskulaturen är kroppens största vävnad räknat i vikt. Att blodet väger ungefär 5 kg är samma sak som att blodvolymen är ungefär 5 liter, eftersom blodets densitet ligger nära vattnets.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss017",
+      "topic": "sortera_storlek",
+      "axis": "vikt",
+      "prompt": "Ordna körtlarna efter vikt hos en vuxen, tyngst först.",
+      "items": [
+        { "label": "Levern", "value": 1500, "unit": "g", "note": "kroppens största körtel" },
+        { "label": "Pankreas", "value": 90, "unit": "g", "note": "både exokrin och endokrin funktion" },
+        { "label": "Sköldkörteln", "value": 25, "unit": "g", "note": "framför trachea" },
+        { "label": "En binjure", "value": 5, "unit": "g", "note": "bark och märg i ett organ" },
+        { "label": "Bisköldkörtlarna tillsammans", "value": 0.15, "unit": "g", "note": "vanligen fyra små körtlar" }
+      ],
+      "explanation": "Levern är kroppens största körtel. Bisköldkörtlarna väger tillsammans mindre än ett halvt gram men styr kalciumbalansen — storlek och betydelse följs inte åt.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss018",
+      "topic": "sortera_storlek",
+      "axis": "volym",
+      "prompt": "Ordna lungvolymerna efter storlek, störst först. Ungefärliga värden hos en frisk vuxen man.",
+      "items": [
+        { "label": "Total lungkapacitet", "value": 6000, "unit": "ml", "note": "allt som ryms i lungorna" },
+        { "label": "Vitalkapacitet", "value": 4800, "unit": "ml", "note": "största möjliga andetag" },
+        { "label": "Funktionell residualkapacitet", "value": 2400, "unit": "ml", "note": "kvar efter en vanlig utandning" },
+        { "label": "Residualvolym", "value": 1200, "unit": "ml", "note": "går aldrig att andas ut" },
+        { "label": "Tidalvolym", "value": 500, "unit": "ml", "note": "ett vanligt andetag i vila" }
+      ],
+      "explanation": "Total lungkapacitet är vitalkapaciteten plus residualvolymen. Att residualvolymen aldrig går att andas ut är förklaringen till att lungorna inte faller ihop mellan andetagen.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss019",
+      "topic": "sortera_storlek",
+      "axis": "volym",
+      "prompt": "Ordna efter volym hos en vuxen man på 70 kg, störst först. Ungefärliga värden.",
+      "items": [
+        { "label": "Kroppens totala vattenmängd", "value": 42000, "unit": "ml", "note": "≈ 60 % av kroppsvikten" },
+        { "label": "Blodvolymen", "value": 5000, "unit": "ml", "note": "≈ 7 % av kroppsvikten" },
+        { "label": "Magsäckens normala kapacitet", "value": 1500, "unit": "ml", "note": "vid en vanlig måltid" },
+        { "label": "Urinblåsans normala kapacitet", "value": 500, "unit": "ml", "note": "trängningar kommer tidigare" },
+        { "label": "Likvorvolymen", "value": 150, "unit": "ml", "note": "cerebrospinalvätska totalt" }
+      ],
+      "explanation": "Ungefär 60 % av kroppsvikten är vatten, varav två tredjedelar finns inne i cellerna. Likvorvolymen är liten men omsätts flera gånger per dygn.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "ss020",
+      "topic": "sortera_storlek",
+      "axis": "volym",
+      "prompt": "Ordna efter volym per minut i vila hos en vuxen, störst först. Ungefärliga värden.",
+      "items": [
+        { "label": "Ventilationen", "value": 6000, "unit": "ml/min", "note": "≈ 12 andetag × 500 ml" },
+        { "label": "Hjärtminutvolymen", "value": 5000, "unit": "ml/min", "note": "≈ 70 slag × 70 ml" },
+        { "label": "Blodflödet genom njurarna", "value": 1200, "unit": "ml/min", "note": "≈ 20 % av hjärtminutvolymen" },
+        { "label": "Blodflödet genom hjärnan", "value": 750, "unit": "ml/min", "note": "≈ 15 % av hjärtminutvolymen" },
+        { "label": "Glomerulär filtration", "value": 125, "unit": "ml/min", "note": "≈ 180 liter primärurin per dygn" }
+      ],
+      "explanation": "Ventilation och hjärtminutvolym ligger båda kring 5–6 liter per minut i vila. Njurarna tar emot ungefär en femtedel av hjärtminutvolymen, men bara en femtedel av njurplasman filtreras.",
+      "source": "Sand m.fl., Människokroppen"
+    }
+  ]
+}

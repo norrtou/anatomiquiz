@@ -95,6 +95,11 @@ OMÄTBARA = {
         "background: transparent — knappens yta är den som ligger bakom, och "
         "varje variant (.btn-primary m.fl.) sätter sin egen bakgrund och mäts där.",
     ".btn-mode": "background: transparent — samma sak som .btn.",
+    ".vision-pill":
+        "background: transparent — kontursknappen ligger i kortet, alltså på "
+        "--surface, och --accent-dark mot --surface mäts redan via .info-link. "
+        "Hover-/fokusläget sätter sin egen platta (--plate-teal + --text-light) "
+        "och mäts i den regeln.",
     ".vt-mode button": "background: transparent — aktivt läge mäts på [aria-pressed].",
     ".vt-flikar button": "background: transparent — samma sak.",
     ".vt-nollstall button": "background: transparent — texten ligger på kortets yta.",

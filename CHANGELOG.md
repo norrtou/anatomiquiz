@@ -1,5 +1,22 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.306
+- **Nytt spelläge: Sortera (etapp 1 av 6).** Fem anatomiska strukturer ska läggas i rätt ordning längs en riktning. Det enda läget där svaret är en *ordning* och inte ett alternativ.
+  - **Eget frågearkiv och egen understartsida.** `data/sortera.json` med två egna ämnen (Riktningar & lägen, Storlek & antal) plus Blandat — sorteringsfrågor finns inte i quizets ämnen, så läget har en egen ämnesväljare i stället för `loadPoolForTopic`. Den byggs ur arkivet, så ett nytt ämne i JSON syns utan att någon rör `index.html`. **20 + 20 frågor i den här etappen**, målet är 100 + 100.
+  - **Tryck-för-att-placera, inte drag & drop.** HTML5-drag fungerar inte på touch, och egen pekardrag betyder scroll-låsning och träffytor som glider. Ett tryck flyttar brickan till nästa lediga plats, ett tryck på en placerad bricka tar tillbaka den. Fungerar med tumme, tangentbord (1–5, Backspace, Enter) och skärmläsare.
+  - **Inget rättas förrän spelaren trycker Rätta.** Att få flytta om och tänka är hela poängen med ett sorteringsspel; automatisk rättning per tryck hade gjort om det till fem gissningar.
+  - **Rättningen är en payoff (§13.1 punkt 2):** facit avslöjas en plats i taget nedifrån och upp (200 ms/steg), rätt plats poppar, fel plats skakar och byter till det som skulle stått där plus en rad med vad spelaren hade. I storleksfrågor vänds mätvärdet fram under varje bricka — det är den frågetypens riktiga belöning.
+  - **Poäng i två mått:** en fråga räknas som rätt bara om *hela* ordningen stämmer, men rätta placeringar (0–5) räknas separat och står på egen rad under mätaren. Slutet visar båda, plus snitt-tid, längsta svit och rekordmärke mot personbästa i samma ämne.
+  - Delade `.gm-*`-basen för mätare, poängbricka, resultatring och rekordmärke. `#sortera` i `FIT_SECTIONS`, i fokuslägets `:has()`-lista och med egna `.hidden`-regler — `check_spellagen.py` grön på alla fyra åtaganden.
+  - Ny fil: `js/sortera.js`, kopplad till `js/app.js` via två skyddade `typeof`-krokar (§12).
+- **Nytt skydd: `scripts/validate_sortera.py`**, inkopplat i `check_generators.py` och därmed körd före varje commit. `validate_quiz.py` kan bara läsa MC/TF, så `sortera.json` står i dess SKIP.
+  - **Närhetsspärren** är den viktigaste: en sorteringsfråga med fem poster bär fyra parvisa faktapåståenden, och två mätvärden som skiljer under 15 % ger en fråga med två försvarbara svar. "Levern 1 500 g" intill "hjärnan 1 400 g" är 7 % isär och avvisas. Exakta antal undantas — 24 revben är inget estimat.
+  - Kontrollerar dessutom att prompten namnger båda polerna eller mätriktningen, att värdena är strikt fallande utan lika, att enheten är enhetlig, och varnar för självutpekande etiketter (en post som bär axelns eget riktningsord avslöjar sin plats) och parentes-asymmetri. Larmen verifierade med fyra planterade fel.
+  - Steget kör även `scripts/test_sortera.js` — **94 tester** som driver modulen i ett DOM-skal med styrbar slump: urval, placering, ångra, rättning, delpoäng, beröm, reducerad rörelse, topplista och export/import.
+- Registrerat i `spellagen.html` (nytt avsnitt under "De fem spellägena"), `info.html` (nyhetsnotis) och `data/llms.json`.
+- **Sidoeffekt utanför läget:** `.vision-pill` saknades i `check_kontrast.py`:s register och gjorde `check_generators.py` röd på en ren utcheckning. Nu införd i `OMÄTBARA` med skäl (transparent botten, ligger på `--surface`; hover-läget mäts i sin egen regel). Kontrollen hittade också en riktig bugg i den nya CSS:en: `.sortera-slot-nr` hade `--primary-deep` på `--primary-light` = 2,85:1 — utbytt mot vit text på `--plate-green`.
+- `data/sidodatum.json` uppdaterat: fem sidor bar fel datum sedan tidigare (fyra artikelsidor daterade 2026-07-31 trots att git säger 07-24/07-26, samt `verktyg/akutmedicin/index.html`).
+
 ## 0.9.305
 - **Släpp 3 av akutmedicin-utbyggnaden: `verktyg/akutmedicin/syra-bas.html`.** Tre nya räknare, byggda ur sina originalpublikationer.
   - **Blodgasklassificerare** — fyll i pH, pCO₂, bikarbonat och basöverskott, så byggs ett resonemang i flera steg: vilken primär rubbning (metabol/respiratorisk, acidos/alkalos) mönstret pekar mot, om kompensationen ligger inom det förväntade spannet enligt Winters formel och Berend, de Vries & Gans (2014), och — fylls natrium och klorid i också — vad anjongapet är och vad det talar för, med laktatet som stöd vid ett högt gap. Ny renderare i `js/akutmedicin.js`, ingen Träna-flik (ett flerstyckesresonemang går inte att kontrollera som ett enda svar).
