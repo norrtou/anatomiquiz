@@ -25,35 +25,60 @@ att en "fix" inte får effekt.
 `verktyg.css` skriva över `styles.css` vid samma specificitet. Idag gör den inte det
 för rubriken – rubriken styrs uteslutande av `styles.css`.
 
-## `.header h1` – rubrikstorleken (t.ex. "Läkemedelsberäknare")
+## `.header h1` – rubrikstorlek och radbrytning (t.ex. "Läkemedelsberäknare")
 
-Allt bor i `css/styles.css`:
+**Regeln (bindande, från användaren):** en rubrik på **tre ord eller fler** FÅR
+radbrytas vid ordgränser om den inte ryms – det är normal `white-space: normal`-
+radbrytning, inte samma sak som avstavning. En rubrik på **färre än tre ord**
+ska **ALDRIG radbrytas** – den ska i stället **skalas ner** tills den ryms på en
+rad. Avstavning (mitt-i-ord-brytning, t.ex. `word-break: break-word` eller
+`overflow-wrap: break-word`) är **aldrig tillåtet**, oavsett ordantal.
 
-1. **Basregel** (~rad 292): `.header h1 { font-size: 2.5rem; word-break: break-word; ... }`
-2. **Mobil** (~rad 305, `@media (max-width: 640px)`): `.header h1 { font-size: clamp(1.5rem, 7.6vw, 2rem); }`
+Allt bor i `css/styles.css`, `.header h1` (~rad 292 basregel, ~rad 311 mobil
+`@media (max-width: 640px)`): `font-size: calc(clamp(1.5rem, 7.6vw, 2rem) *
+var(--h1-fit, 1))`. `--h1-fit` är 1 (ingen effekt) för alla vanliga rubriker.
 
-Långa rubriker **skalas ner** (font-size-clamp) **och bryts till flera rader** när
-skalningen ensam inte räcker. Taket 2rem = oförändrad storlek på bredare telefoner;
-golvet 1.5rem garanterar läsbar text på de smalaste skärmarna – därefter tar radbrytning
-över i stället för att texten rinner ut över skärmkanten.
+**Korta rubriker som inte ryms:** lägg till klassen `.h1-oneline-NN` (finns
+längst ner i samma block i `styles.css`) på just den h1:n – den sätter
+`white-space: nowrap` och `--h1-fit: 0.NN`. Siffran räknas fram och verifieras
+headless (mät h1:ens `scrollWidth` mot `.header-title`s riktiga `clientWidth`
+vid 320px bredd), **aldrig gissad**. Exempel: `kunskapsbank/deklinationer-
+pluralformer.html` (0.9.313), två ord, ryms annars inte på golvet.
 
-### ⚠️ Fällan `flex-shrink: 0` på `.header h1` (0.9.312)
-`.header-title` är `display: flex; flex-wrap: nowrap`. Ett flex-item med
-`flex-shrink: 0` och `flex-basis: auto` sätts till sin **max-content-bredd**
-(bredden texten skulle ha helt orradbruten) och krymper **aldrig**, oavsett hur
-liten `font-size` blir. Resultatet: långa flerordsrubriker (artikeltitlar,
-"Spellägen, regler och studieteknik", "Vitalparametrar och NEWS2" …) rullade ut
-över skärmkanten på mobil trots att clampen sänkte fontstorleken korrekt –
-`font-size` syntes minska, men boxen bröt aldrig rad. Hittat med en headless-
-Chrome-svep av alla 124 `<h1>`-sidor vid 320/375px, 12 sidor drabbade.
+### ⚠️ `style="…"` fungerar INTE – CSP blockerar tyst (upptäckt 0.9.313)
+Alla sidors CSP är `style-src 'self'` **utan** `unsafe-inline`. Ett `style="…"`-
+attribut på vilket element som helst syns i `outerHTML` men **appliceras
+aldrig** – `element.style.xxx` är tomt och inget i attributet vinner över
+stilmallen. Det gav timmar av felsökning (`--h1-fit` verkade ignoreras helt)
+innan orsaken hittades. **Regel framåt:** en ny per-sida-stil skrivs alltid som
+en klass i en extern CSS-fil, aldrig som `style="…"` på elementet – prova det
+aldrig ens som snabbtest, det ger falskt "fungerar inte".
 
-`.header-logo` och `.version` har **egna** `flex-shrink: 0`-regler (skyddar dem
-från att klämmas av en lång rubrik) och påverkas inte av att h1 fick sin borttagen.
+### ⚠️ Roten till H1-overflowen: en föräldralös `.header`-regel (0.9.313)
+`css/styles.css` hade (sedan första commiten) en **andra, obesläktad** regel
+`.header { align-items: flex-start; ... }` inne i en `@media (max-width: 640px)`-
+sektion bland spelvyernas mobilstilar (mitt bland `.timer`, `.btn-cancel` osv).
+Den var uppenbarligen skriven för en annan, äldre header-struktur (dess
+följerad `.header > div:last-child { text-align: right }` matchar ingenting
+i dagens markup) men matchade ändå **alla** sidors `<header class="header">`
+eftersom selektorn är obeskyddad. Effekten: den slog ut basregelns
+`align-items: stretch` (default) på mobil, så `.header-title` slutade
+**stretcha** till containerns bredd och sträckte sig i stället efter sitt
+innehåll – vilket lät en lång rubrik dra ut hela headern bredare än skärmen.
+Fixat genom att ta bort `align-items: flex-start` ur den regeln (`gap: 0` och
+`justify-content: space-between` är kvar, ofarliga/no-op).
 
-**Regel framåt:** `.header h1` ska **aldrig** ha `flex-shrink: 0`. Om en ny rubrik
-delar `.header-title` med ett grannelement som måste hålla sin bredd, sätt
-`flex-shrink: 0` på **det grannelementet**, inte på h1 – h1 ska alltid få krympa
-och radbryta.
+En andra, mindre bidragande orsak: `.header-title` (som själv är ett
+flex-item i `.header`s kolumnlayout) saknade `min-width: 0`, så webbläsarens
+automatiska minimibredd (= innehållets ohindrade bredd) vann över stretch så
+fort en rubrik inte kunde radbrytas. Lagt till som skydd, oavsett om
+`align-items` någonsin bryts igen.
+
+**Lärdom:** headless-Chrome-mätning (`getBoundingClientRect`,
+`scrollWidth`/`clientWidth`, `CSS.getMatchedStylesForNode` via CDP för att se
+VILKEN regel som faktiskt vinner) är det enda pålitliga sättet att hitta den
+här typen av fel – att bara läsa CSS:en top-down missar en obeskyddad regel
+150 rader bort i en helt annan sektion.
 
 ### ⚠️ Fällan som redan slagit till en gång
 Det fanns **två** identiska `.header h1`-basregler i `styles.css`, och den andra låg

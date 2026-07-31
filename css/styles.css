@@ -291,7 +291,7 @@ main {
 
 .header h1 {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: calc(2.5rem * var(--h1-fit, 1));
   font-weight: 700;
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
   -webkit-background-clip: text;
@@ -299,24 +299,42 @@ main {
   background-clip: text;
   letter-spacing: -0.5px;
   line-height: 1.2;
-  word-break: break-word;
+  /* white-space är MEDVETET normal (default): rubriker på tre ord eller fler
+     FÅR radbrytas vid ordgränser – det är inte samma sak som avstavning
+     (mitt-i-ord-brytning), som aldrig är tillåtet och inte heller görs av
+     normal radbrytning. Kortare rubriker (< 3 ord) ska INTE radbrytas utan
+     i stället skalas ned – se .h1-oneline-* nedan. CSP:n (style-src 'self',
+     ingen unsafe-inline) blockerar tyst style="…" på alla sidor, så en sådan
+     rubrik får en egen klass här, ALDRIG en inline style. */
 }
 
 @media (max-width: 640px) {
   .header h1 {
-    /* Skala H1 efter skärmbredden i stället för radbrytning: långa rubriker
-       (t.ex. "Läkemedelsberäknare") krymper tills de ryms på en rad. Taket 2rem
-       = oförändrad storlek på bredare telefoner, golvet garanterar plats även på
-       de smalaste skärmarna. */
-    font-size: clamp(1.5rem, 7.6vw, 2rem);
+    /* Skala H1 efter skärmbredden så att korta rubriker ("Läkemedelsberäknare")
+       får plats på en rad. Taket 2rem = oförändrad storlek på bredare
+       telefoner, golvet garanterar läsbar text på de smalaste skärmarna. */
+    font-size: calc(clamp(1.5rem, 7.6vw, 2rem) * var(--h1-fit, 1));
   }
 }
+
+/* Rubriker kortare än tre ord som ändå inte ryms på en rad vid golvet:
+   håll dem på EN rad (aldrig radbrytning för en kort rubrik) och skala ner
+   ytterligare med --h1-fit (0–1), räknat mot den faktiska tillgängliga
+   bredden med headless Chrome – aldrig gissat. En ny klass per sida som
+   behöver det; siffran i klassnamnet är bara en läsbar etikett. */
+.h1-oneline-89 { --h1-fit: 0.89; white-space: nowrap; }
 
 .header-title {
   display: flex;
   align-items: baseline;
   gap: 8px;
   flex-wrap: nowrap;
+  /* .header-title är själv ett flex-item i .header (flex-direction: column).
+     Utan min-width: 0 tar webbläsarens automatiska min-bredd (= innehållets
+     ohindrade bredd) över och tvingar hela headern bredare än containern så
+     fort h1 (white-space: nowrap) är för lång – exakt samma fälla som gav
+     H1-overflowen, fast ett steg upp i flex-trädet. */
+  min-width: 0;
 }
 
 /* Liten logga (transparent skelett-metalhorn) till vänster om "Anatomiquiz". */
@@ -4817,7 +4835,12 @@ ol li {
   .header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    /* align-items är MEDVETET inte satt här (default: normal → stretch).
+       Denna regel råkade tidigare sätta align-items: flex-start, vilket bröt
+       .header-titles stretch mot containern och lät en orradbruten (nowrap)
+       h1 tvinga hela headern bredare än skärmen på mobil – roten till att
+       långa H1-rubriker overflowade i stället för att skalas ner. Se
+       CSS_KARTA.md, "Fällan .header align-items". */
     gap: 0;
   }
 

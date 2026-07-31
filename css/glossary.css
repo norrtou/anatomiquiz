@@ -21,10 +21,12 @@
 
 /* Sidtiteln ("Medicinska ord på A" m.fl.) skalar med skärmbredden så att
    även långa titlar ("Medicinska ändelser (suffix)") får plats snyggt på
-   mobil. Scoped till ordlistesidorna; laddas efter styles.css och vinner. */
+   mobil. Scoped till ordlistesidorna; laddas efter styles.css och vinner.
+   H1 RADBRYTS ALDRIG (white-space: nowrap ärvs från .header h1 i styles.css)
+   – räcker inte vw-clampen för en enskild lång titel sätter sidan sin egen
+   --h1-fit (se css/styles.css, .header h1). */
 .glossary-header h1 {
-  font-size: clamp(1.5rem, 6.5vw, 2.5rem);
-  word-break: break-word;
+  font-size: calc(clamp(1.5rem, 6.5vw, 2.5rem) * var(--h1-fit, 1));
 }
 
 /* Ingressen är lång och informativ — håll den nedtonad och kompakt
