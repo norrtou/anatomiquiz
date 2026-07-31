@@ -4459,7 +4459,8 @@ ol li {
 .sortera-slot {
   display: flex;
   align-items: center;
-  gap: 10px;
+  column-gap: 10px;
+  row-gap: 3px;
   flex-wrap: wrap;
   min-height: 52px;
   padding: 6px 10px;

@@ -736,9 +736,9 @@
       "prompt": "Ordna strukturerna i kotkanalen från ventralt till dorsalt, i höjd med L4.",
       "items": [
         { "label": "Corpus vertebrae L4", "note": "kotkroppen" },
-        { "label": "Epiduralrummet", "note": "fettvävnad och vener" },
         { "label": "Dura mater", "note": "durasäckens vägg" },
         { "label": "Cauda equina", "note": "nervrötterna inne i säcken" },
+        { "label": "Epiduralrummet", "note": "fettvävnad och vener" },
         { "label": "Ligamentum flavum", "note": "det gula bandet mellan kotbågarna" }
       ],
       "explanation": "En lumbalpunktion passerar samma skikt i motsatt ordning: hud, ligament, ligamentum flavum, epiduralrum och dura innan nålen når likvor kring cauda equina. Motståndsförlusten som känns är genomgången av ligamentum flavum.",
@@ -1848,7 +1848,7 @@
       "items": [
         { "label": "Ventilationen", "value": 6000, "unit": "ml/min", "note": "≈ 12 andetag × 500 ml" },
         { "label": "Hjärtminutvolymen", "value": 5000, "unit": "ml/min", "note": "≈ 70 slag × 70 ml" },
-        { "label": "Blodflödet genom njurarna", "value": 1200, "unit": "ml/min", "note": "≈ 20 % av hjärtminutvolymen" },
+        { "label": "Blodflödet genom njurarna", "value": 1000, "unit": "ml/min", "note": "≈ 20 % av hjärtminutvolymen" },
         { "label": "Blodflödet genom hjärnan", "value": 750, "unit": "ml/min", "note": "≈ 15 % av hjärtminutvolymen" },
         { "label": "Glomerulär filtration", "value": 125, "unit": "ml/min", "note": "≈ 180 liter primärurin per dygn" }
       ],

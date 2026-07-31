@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.309
+- **Kvalitetsgranskning av Sortera (på begäran).** Tre fynd, alla rättade:
+  - **CSS-bugg:** `.sortera-slot` hade en enda `gap: 10px` för både rader och kolumner. Vid facit lägger JS:en till en eller två extra fullbreddsrader (facitraden, och vid fel svar även "du hade …"), och den gemensamma gap:en gav dem samma 10 px mellanrum som brickan har till bockmarkeringen — en platta som borde växa någon millimeter blev i stället påtagligt större, och gap:en skalade heller inte ned med `--view-fit` på liten skärm. Det var vad som såg ut som en bugg på mobilen. Fixat med `column-gap: 10px; row-gap: 3px`.
+  - **Sakfel i `sr046`** (kotkanalen, ventralt→dorsalt): "Epiduralrummet" låg mellan kotkroppen och dura mater, men frågans egen förklaring beskriver en lumbalpunktion som går ligamentum flavum → epiduralrum → dura — vilket betyder att det lumbala epiduralrummet ligger dorsalt om duran, inte ventralt om den. Ordningen rättad till kotkropp → dura mater → cauda equina → epiduralrum → ligamentum flavum.
+  - **Sakfel i `ss020`** (blodflöde per minut): njurarnas blodflöde stod märkt "≈ 20 % av hjärtminutvolymen" men värdet var 1 200 ml/min mot en hjärtminutvolym på 5 000 ml/min i samma fråga, vilket är 24 %. Värdet sänkt till 1 000 ml/min så att både etiketten och förklaringens "en femtedel" stämmer exakt.
+  - Övriga 118 av 120 frågor, hela `spellagen.html`-avsnittet och understartsidans förklaringstext höll måttet vid genomläsning — inga fler ändringar gjorda.
+
 ## 0.9.308
 - **Sortera, etapp 3 av 6: riktningsfrågorna 60 → 100 — ämnet Riktningar & lägen är därmed färdigbyggt.** 40 nya frågor (`sr061`–`sr100`), och målfördelningen är nu exakt uppfylld: 30 proximalt–distalt, 25 medialt–lateralt, 20 ventralt–dorsalt, 15 kranialt–kaudalt, 10 ytligt–djupt.
   - De sista proximal–distal-frågorna följer nerver och rörsystem hela vägen ut: n. ulnaris, n. radialis, n. facialis, den kortikospinala banan, aorta, tårvägarna, mannens uretra, nefronet, portaflödet, ductus thoracicus samt lymfan i armen.
