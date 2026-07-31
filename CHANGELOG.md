@@ -1,5 +1,15 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.308
+- **Sortera, etapp 3 av 6: riktningsfrågorna 60 → 100 — ämnet Riktningar & lägen är därmed färdigbyggt.** 40 nya frågor (`sr061`–`sr100`), och målfördelningen är nu exakt uppfylld: 30 proximalt–distalt, 25 medialt–lateralt, 20 ventralt–dorsalt, 15 kranialt–kaudalt, 10 ytligt–djupt.
+  - De sista proximal–distal-frågorna följer nerver och rörsystem hela vägen ut: n. ulnaris, n. radialis, n. facialis, den kortikospinala banan, aorta, tårvägarna, mannens uretra, nefronet, portaflödet, ductus thoracicus samt lymfan i armen.
+  - Medial–lateral fick de klassiska ordningarna som faktiskt används kliniskt: innehållet i armbågsgropen inifrån och ut, skallbasens hål, bakre mediastinum, handflatans och fotsulans muskelvallar.
+  - Ventral–dorsal fick de två bäckensnitten, kvinna och man, som förklarar varför prostatan palperas per rectum och var fri vätska först samlas — plus njurhilus ven–artär–njurbäcken.
+  - Kranial–kaudal fick kranialnerverna efter utträdesnivå, likvorns väg genom ventrikelsystemet och ett medvetet osammanhängande set: de endokrina organen, som inte hör ihop anatomiskt utan bara ordnas efter höjd.
+  - Ytligt–djupt fick artärväggens och magsäcksväggens lager, ryggens tre muskelgrupper och sätesregionen — den sista med förklaringen till varför en intramuskulär injektion läggs i den övre yttre kvadranten.
+- Rättade en formulering i `sr065` som var för tvärsäker: pars membranacea är uretras **minst eftergivliga** del, inte dess trängsta — den trängsta punkten är mynningen. Funnen i den manuella genomläsningen, inte av någon kontroll.
+- Kontrollerat att inga två frågor bär samma uppsättning strukturer (0 dolda dubbletter) och att etikettåteranvändningen är begränsad till kroppens stora landmärken, som med avsikt återkommer sedda från olika axlar: 429 unika etiketter på 500 poster.
+
 ## 0.9.307
 - **Sortera, etapp 2 av 6: riktningsfrågorna 20 → 60.** 40 nya frågor (`sr021`–`sr060`), fördelade enligt målplanen: 12 proximalt–distalt, 10 medialt–lateralt, 8 ventralt–dorsalt, 6 kranialt–kaudalt och 4 ytligt–djupt.
   - De nya proximal–distal-frågorna följer *rörsystem och kärl/nervträd* snarare än bara extremitetsskelett: venerna i arm och ben, artärträden, n. ischiadicus och n. femoralis, bronkträdet, gallvägarna, tjocktarmen, lymfvägarna och sädesledaren. Poängen är att proximalt/distalt räknas längs strukturen själv — längs en ven är proximalt mot hjärtat, alltså *mot* flödet.

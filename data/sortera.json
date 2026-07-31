@@ -954,6 +954,606 @@
       "explanation": "Njuren ligger inbäddad i fett innanför sin fascia, vilket dämpar stötar och håller den på plats. Innanför den egna kapseln ligger barken med glomeruli ytterst och märgen med pyramiderna innerst.",
       "source": "Sand m.fl., Människokroppen"
     },
+    {
+      "id": "sr061",
+      "topic": "sortera_riktningar",
+      "axis": "proximal_distal",
+      "prompt": "Ordna stationerna längs n. ulnaris väg från proximalt till distalt.",
+      "items": [
+        { "label": "Fasciculus medialis i plexus brachialis", "note": "nervens ursprung" },
+        { "label": "Sulcus nervi ulnaris vid armbågen", "note": "där man slår i ”ringklockan”" },
+        { "label": "Guyons kanal vid handleden", "note": "canalis ulnaris" },
+        { "label": "Djupa grenen till mm. interossei", "note": "handens småmuskler" },
+        { "label": "Nervändarna i lillfingret", "note": "nervens känselområde" }
+      ],
+      "explanation": "N. ulnaris ligger oskyddad i fåran bakom mediala epikondylen, vilket är varför en stöt där ger ilningar ut i lillfingret. Kompression kan ske både där och längre ut i Guyons kanal.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "sr062",
+      "topic": "sortera_riktningar",
+      "axis": "proximal_distal",
+      "prompt": "Ordna aortas avsnitt från proximalt till distalt.",
+      "items": [
+        { "label": "Aorta ascendens", "note": "direkt ur vänster kammare" },
+        { "label": "Arcus aortae", "note": "aortabågen, med grenarna till huvud och armar" },
+        { "label": "Aorta descendens i thorax", "note": "längs kotpelaren" },
+        { "label": "Aorta abdominalis", "note": "nedanför diafragma" },
+        { "label": "A. iliaca communis", "note": "efter aortabifurkationen" }
+      ],
+      "explanation": "Aorta räknas från klaffen och utåt. Den byter namn vid diafragma, och delar sig i höjd med L4 i de två gemensamma höftartärerna.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "sr063",
+      "topic": "sortera_riktningar",
+      "axis": "proximal_distal",
+      "prompt": "Ordna tårvägarnas avsnitt från proximalt till distalt.",
+      "items": [
+        { "label": "Tårkörteln", "note": "under ögonhålans yttre tak" },
+        { "label": "Tårpunkten", "note": "punctum lacrimale i ögonvrån" },
+        { "label": "Tårkanalikeln", "note": "canaliculus lacrimalis" },
+        { "label": "Tårsäcken", "note": "saccus lacrimalis" },
+        { "label": "Mynningen under nedre näsmusslan", "note": "ductus nasolacrimalis slut" }
+      ],
+      "explanation": "Tårvätskan bildas ytterst, sköljer över ögat och rinner ut i näsan. Det är därför ögondroppar kan kännas i halsen och varför man snörvlar när man gråter.",
+      "source": "Sobotta, Atlas of Human Anatomy"
+    },
+    {
+      "id": "sr064",
+      "topic": "sortera_riktningar",
+      "axis": "proximal_distal",
+      "prompt": "Ordna stationerna längs den kortikospinala banan från proximalt till distalt, räknat från ursprunget.",
+      "items": [
+        { "label": "Motorkortex i gyrus precentralis", "note": "banans ursprung" },
+        { "label": "Capsula interna", "note": "där fibrerna trängs ihop" },
+        { "label": "Pyramidkorsningen", "note": "decussatio pyramidum i medulla oblongata" },
+        { "label": "Framhornscellen i ryggmärgen", "note": "andra motorneuronet" },
+        { "label": "Motorisk ändplatta i muskeln", "note": "där signalen lämnar nervsystemet" }
+      ],
+      "explanation": "Banan består av två neuron i serie, med omkopplingen i ryggmärgens framhorn. Eftersom fibrerna korsar i medulla oblongata styr vänster hjärnhalva höger kroppshalva.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "sr065",
+      "topic": "sortera_riktningar",
+      "axis": "proximal_distal",
+      "prompt": "Ordna avsnitten i mannens uretra från proximalt till distalt.",
+      "items": [
+        { "label": "Pars prostatica", "note": "genom prostatan" },
+        { "label": "Pars membranacea", "note": "genom bäckenbotten, kort och fixerad" },
+        { "label": "Bulbära delen av pars spongiosa", "note": "vid penisroten" },
+        { "label": "Penila delen av pars spongiosa", "note": "genom penisskaftet" },
+        { "label": "Fossa navicularis", "note": "vidgningen närmast mynningen" }
+      ],
+      "explanation": "Mannens uretra är ungefär 20 cm mot kvinnans 4 cm och har två krökar. Pars membranacea är kort och fixerad i bäckenbotten och därför den minst eftergivliga delen — det är där en kateter ofta tar emot, medan den trängsta punkten är själva mynningen.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "sr066",
+      "topic": "sortera_riktningar",
+      "axis": "proximal_distal",
+      "prompt": "Ordna lymfvägarna i höger arm från proximalt till distalt.",
+      "items": [
+        { "label": "Lymfkörtlarna i armhålan", "note": "nodi axillares" },
+        { "label": "Lymfkärlen i överarmen", "note": "på väg mot armhålan" },
+        { "label": "Lymfkörtlarna vid armbågen", "note": "nodi cubitales" },
+        { "label": "Lymfkärlen i underarmen", "note": "följer de ytliga venerna" },
+        { "label": "Lymfkapillärerna i handens hud", "note": "systemets början" }
+      ],
+      "explanation": "Armens lymfa passerar armhålans körtlar innan den når blodbanan. Det är därför de körtlarna undersöks vid bröstcancer, och varför armen kan svullna om de opereras bort.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "sr067",
+      "topic": "sortera_riktningar",
+      "axis": "proximal_distal",
+      "prompt": "Ordna nefronets och urinvägarnas avsnitt från proximalt till distalt.",
+      "items": [
+        { "label": "Glomerulus", "note": "kapillärnystanet där filtrationen sker" },
+        { "label": "Bowmans kapsel", "note": "fångar upp primärurinen" },
+        { "label": "Henles slynga", "note": "skapar koncentrationsgradienten" },
+        { "label": "Samlingsröret", "note": "där ADH styr vattenåterupptaget" },
+        { "label": "Njurpapillens mynning", "note": "urinen lämnar njurvävnaden" }
+      ],
+      "explanation": "Kedjan följer primärurinens väg genom nefronet. Av de ungefär 180 liter som filtreras per dygn återstår bara ett par liter när urinen når njurpapillen.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "sr068",
+      "topic": "sortera_riktningar",
+      "axis": "proximal_distal",
+      "prompt": "Ordna stationerna längs n. facialis väg från proximalt till distalt.",
+      "items": [
+        { "label": "Facialiskärnan i pons", "note": "nervens ursprung" },
+        { "label": "Meatus acusticus internus", "note": "in i tinningbenet" },
+        { "label": "Canalis facialis", "note": "nervens kanal genom os temporale" },
+        { "label": "Foramen stylomastoideum", "note": "där nerven lämnar kraniet" },
+        { "label": "Grenarna i glandula parotidea", "note": "ut i ansiktsmuskulaturen" }
+      ],
+      "explanation": "N. facialis har en lång väg inne i tinningbenet, vilket gör den känslig för svullnad — det är mekanismen bakom Bells pares. Nerven passerar rakt genom öronspottkörteln utan att försörja den.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "sr069",
+      "topic": "sortera_riktningar",
+      "axis": "proximal_distal",
+      "prompt": "Ordna stationerna längs n. radialis väg från proximalt till distalt.",
+      "items": [
+        { "label": "Fasciculus posterior i plexus brachialis", "note": "nervens ursprung" },
+        { "label": "Sulcus nervi radialis på humerus", "note": "nerven ligger an mot benet" },
+        { "label": "Delningen vid armbågen", "note": "i en djup och en ytlig gren" },
+        { "label": "Ramus superficialis över tabatièren", "note": "på tumsidan av handleden" },
+        { "label": "Hudgrenarna på handryggen", "note": "nervens känselområde" }
+      ],
+      "explanation": "Nerven ligger direkt mot humerus i sin fåra, vilket är varför en överarmsfraktur eller ett tryck mot överarmen kan ge dropphand. Skadan sitter då proximalt om delningen.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "sr070",
+      "topic": "sortera_riktningar",
+      "axis": "proximal_distal",
+      "prompt": "Ordna kärlen längs portaflödet från proximalt till distalt, räknat från levern.",
+      "items": [
+        { "label": "V. portae vid leverhilus", "note": "portsystemets stam" },
+        { "label": "V. mesenterica superior", "note": "en av de två stora tillflödena" },
+        { "label": "Vv. jejunales", "note": "vener från tunntarmen" },
+        { "label": "Tarmväggens vener", "note": "i tarmens vägglager" },
+        { "label": "Kapillärerna i tarmslemhinnan", "note": "där näringen tas upp" }
+      ],
+      "explanation": "Portsystemet börjar och slutar i kapillärer: näringen tas upp i tarmens kapillärer och når leverns sinusoider utan att passera hjärtat först. Proximalt räknas här mot systemets stam, alltså mot levern.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "sr071",
+      "topic": "sortera_riktningar",
+      "axis": "proximal_distal",
+      "prompt": "Ordna lymfvägarna längs ductus thoracicus från proximalt till distalt, räknat från inmynningen.",
+      "items": [
+        { "label": "Inmynningen i vänster venvinkel", "note": "där lymfan når blodbanan" },
+        { "label": "Ductus thoracicus i bakre mediastinum", "note": "längs kotpelaren" },
+        { "label": "Cisterna chyli", "note": "utvidgningen i övre buken" },
+        { "label": "Trunci lumbales", "note": "lymfstammar från nedre kroppshalvan" },
+        { "label": "Lymfkärlen i bäckenet", "note": "systemets nedre början" }
+      ],
+      "explanation": "Ductus thoracicus samlar lymfan från hela kroppen utom höger överkropp och tömmer den i vänster venvinkel. Kärlet räknas här från mynningen och nedåt mot sina tillflöden.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "sr072",
+      "topic": "sortera_riktningar",
+      "axis": "proximal_distal",
+      "prompt": "Ordna strukturerna i höger tumme från proximalt till distalt.",
+      "items": [
+        { "label": "Os trapezium", "note": "handlovsbenet mot tummen" },
+        { "label": "Karpometakarpalleden", "note": "tummens sadelled" },
+        { "label": "Os metacarpale I", "note": "tummens mellanhandsben" },
+        { "label": "Metakarpofalangealleden", "note": "tummens grundled" },
+        { "label": "Ytterfalangen i tummen", "note": "tummens yttersta falang" }
+      ],
+      "explanation": "Kedjan varvar ben och led. Sadelleden mellan os trapezium och första mellanhandsbenet är den som gör tummen opponerbar — och den som drabbas vid tumbasartros.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "sr073",
+      "topic": "sortera_riktningar",
+      "axis": "medial_lateral",
+      "prompt": "Ordna musklerna i höger handflata från medialt till lateralt, i anatomisk grundställning.",
+      "items": [
+        { "label": "M. abductor digiti minimi", "note": "ytterst i hypotenarvallen" },
+        { "label": "M. flexor digiti minimi brevis", "note": "hypotenarmuskel" },
+        { "label": "Mm. lumbricales", "note": "mellan böjsenorna, mitt i handflatan" },
+        { "label": "M. adductor pollicis", "note": "i tumvecket" },
+        { "label": "M. abductor pollicis brevis", "note": "ytterst i tenarvallen" }
+      ],
+      "explanation": "Handflatan har två muskelvallar: hypotenar på lillfingersidan och tenar på tumsidan, med lumbrikaler och interosseer däremellan. I anatomisk grundställning är tumsidan lateral.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "sr074",
+      "topic": "sortera_riktningar",
+      "axis": "medial_lateral",
+      "prompt": "Ordna strukturerna i bröstkorgen från medialt till lateralt på höger sida, i höjd med lunghilus.",
+      "items": [
+        { "label": "Esofagus", "note": "nära mittlinjen" },
+        { "label": "V. azygos", "note": "löper längs kotpelarens högra sida" },
+        { "label": "Höger huvudbronk", "note": "på väg in i lungan" },
+        { "label": "Höger lunga", "note": "lungvävnaden" },
+        { "label": "Bröstkorgsväggen", "note": "revben och muskler ytterst" }
+      ],
+      "explanation": "V. azygos löper längs kotpelarens högra sida och bildar en båge över höger huvudbronk innan den mynnar i v. cava superior. Det är den bågen som syns som en skarp kant på lungröntgen.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "sr075",
+      "topic": "sortera_riktningar",
+      "axis": "medial_lateral",
+      "prompt": "Ordna öppningarna i skallbasen från medialt till lateralt på höger sida.",
+      "items": [
+        { "label": "Foramen magnum", "note": "stora nackhålet i mittlinjen" },
+        { "label": "Canalis hypoglossi", "note": "för n. hypoglossus" },
+        { "label": "Foramen jugulare", "note": "för v. jugularis interna och tre kranialnerver" },
+        { "label": "Foramen stylomastoideum", "note": "där n. facialis lämnar kraniet" },
+        { "label": "Processus mastoideus", "note": "utskottet bakom örat" }
+      ],
+      "explanation": "Skallbasens hål ligger i en båge ut från foramen magnum. Genom foramen jugulare passerar n. glossopharyngeus, n. vagus och n. accessorius tillsammans med den stora halsvenen.",
+      "source": "Sobotta, Atlas of Human Anatomy"
+    },
+    {
+      "id": "sr076",
+      "topic": "sortera_riktningar",
+      "axis": "medial_lateral",
+      "prompt": "Ordna strukturerna i buken från medialt till lateralt på vänster sida, i höjd med L4.",
+      "items": [
+        { "label": "Corpus vertebrae L4", "note": "kotkroppen i mittlinjen" },
+        { "label": "M. psoas major", "note": "ligger an mot kotkropparna" },
+        { "label": "M. quadratus lumborum", "note": "utanför psoas på bakre bukväggen" },
+        { "label": "M. obliquus internus abdominis", "note": "i vänster flank" },
+        { "label": "Huden över vänster flank", "note": "kroppsytan" }
+      ],
+      "explanation": "Bakre bukväggen byggs inifrån och ut av psoas och quadratus lumborum, och sidoväggen av de tre platta bukmusklerna. Plexus lumbalis löper inne i psoas, vilket är varför en blödning där kan ge nervbortfall i benet.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "sr077",
+      "topic": "sortera_riktningar",
+      "axis": "medial_lateral",
+      "prompt": "Ordna strukturerna i höger höftregion från medialt till lateralt.",
+      "items": [
+        { "label": "Symphysis pubica", "note": "blygdbensfogen i mittlinjen" },
+        { "label": "Foramen obturatum", "note": "det stora hålet i höftbenet" },
+        { "label": "Acetabulum", "note": "höftledens skål" },
+        { "label": "Trochanter major", "note": "femurs utskott, palperas genom huden" },
+        { "label": "Huden över trochanter major", "note": "kroppsytan" }
+      ],
+      "explanation": "Trochanter major är höftens tydligaste landmärke utifrån och ligger bara ett hudlager under ytan. Det är därför den är utsatt vid fall i sidled och en vanlig frakturlokal.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "sr078",
+      "topic": "sortera_riktningar",
+      "axis": "medial_lateral",
+      "prompt": "Ordna strukturerna i munhålan från medialt till lateralt på höger sida.",
+      "items": [
+        { "label": "Raphe palati", "note": "gomvalvets mittstrimma" },
+        { "label": "Tungans högra kant", "note": "mot tandraden" },
+        { "label": "Molarerna i höger överkäke", "note": "tandraden" },
+        { "label": "Kindslemhinnan", "note": "buccalslemhinnan" },
+        { "label": "Kindens hud", "note": "kroppsytan" }
+      ],
+      "explanation": "Munhålan delas av tandraden i en inre del och ett yttre rum mellan tänder och kind. Ductus parotideus mynnar i det yttre rummet mitt emot andra övre molaren.",
+      "source": "Sobotta, Atlas of Human Anatomy"
+    },
+    {
+      "id": "sr079",
+      "topic": "sortera_riktningar",
+      "axis": "medial_lateral",
+      "prompt": "Ordna strukturerna i höger armbågsgrop från medialt till lateralt, i anatomisk grundställning.",
+      "items": [
+        { "label": "M. pronator teres", "note": "gropens inre begränsning" },
+        { "label": "N. medianus", "note": "innerst av kärlen och nerverna" },
+        { "label": "A. brachialis", "note": "där blodtrycksstetoskopet placeras" },
+        { "label": "Senan till m. biceps brachii", "note": "mitt i gropen" },
+        { "label": "M. brachioradialis", "note": "gropens yttre begränsning" }
+      ],
+      "explanation": "Innehållet i fossa cubiti ligger i en fast ordning inifrån och ut: nerv, artär, sena. Det är därför artären hittas strax innanför bicepssenan när blodtrycket ska mätas.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "sr080",
+      "topic": "sortera_riktningar",
+      "axis": "medial_lateral",
+      "prompt": "Ordna strukturerna i bäckenbotten från medialt till lateralt på höger sida.",
+      "items": [
+        { "label": "Anus", "note": "i mittlinjen" },
+        { "label": "M. sphincter ani externus", "note": "den yttre slutmuskeln" },
+        { "label": "Fossa ischioanalis", "note": "fettfylld grop vid sidan av ändtarmen" },
+        { "label": "Tuber ischiadicum", "note": "sittbensknölen" },
+        { "label": "Huden över höften", "note": "kroppsytan" }
+      ],
+      "explanation": "Fossa ischioanalis är ett fettfyllt rum som ger ändtarmen plats att vidgas. Det är också där abscesser kan breda ut sig, eftersom rummet är löst fyllt och står i förbindelse med motsatta sidan.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "sr081",
+      "topic": "sortera_riktningar",
+      "axis": "medial_lateral",
+      "prompt": "Ordna strukturerna i bakre mediastinum från medialt till lateralt på höger sida, i höjd med Th8.",
+      "items": [
+        { "label": "Corpus vertebrae Th8", "note": "kotkroppen i mittlinjen" },
+        { "label": "V. azygos", "note": "på kotkroppens högra sida" },
+        { "label": "Truncus sympathicus", "note": "gränssträngen över revbenshuvudena" },
+        { "label": "Revbenets huvud", "note": "caput costae, mot kotkroppen" },
+        { "label": "Höger lunga", "note": "lungvävnaden ytterst" }
+      ],
+      "explanation": "Den sympatiska gränssträngen löper som en pärlrad av ganglier över revbenshuvudena, strax utanför v. azygos. Läget förklarar varför en torakal sympatektomi görs torakoskopiskt inifrån brösthålan.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "sr082",
+      "topic": "sortera_riktningar",
+      "axis": "medial_lateral",
+      "prompt": "Ordna musklerna i höger fotsula från medialt till lateralt.",
+      "items": [
+        { "label": "M. abductor hallucis", "note": "längs fotens innerkant" },
+        { "label": "M. flexor hallucis brevis", "note": "under stortåstrålen" },
+        { "label": "M. flexor digitorum brevis", "note": "mitt i fotsulan" },
+        { "label": "Mm. interossei", "note": "mellan mellanfotsbenen" },
+        { "label": "M. abductor digiti minimi", "note": "längs fotens ytterkant" }
+      ],
+      "explanation": "Fotsulan är byggd som handflatan, med en muskelvall längs varje kant och småmuskler däremellan — men i foten ligger stortån medialt, till skillnad från tummen som ligger lateralt.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "sr083",
+      "topic": "sortera_riktningar",
+      "axis": "ventral_dorsal",
+      "prompt": "Ordna strukturerna i höger njurhilus från ventralt till dorsalt.",
+      "items": [
+        { "label": "Bukhinnan över njuren", "note": "peritoneum" },
+        { "label": "V. renalis", "note": "njurvenen" },
+        { "label": "A. renalis", "note": "njurartären" },
+        { "label": "Njurbäckenet", "note": "pelvis renalis, som övergår i uretären" },
+        { "label": "M. psoas major", "note": "bakre bukväggens muskel" }
+      ],
+      "explanation": "Njurhilus har en fast ordning framifrån och bak: ven, artär, njurbäcken. Ordningen är densamma i båda njurarna och är det som gör att kärlen kan identifieras säkert vid kirurgi.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "sr084",
+      "topic": "sortera_riktningar",
+      "axis": "ventral_dorsal",
+      "prompt": "Ordna strukturerna i ett tvärsnitt genom höger överarm från ventralt till dorsalt.",
+      "items": [
+        { "label": "M. biceps brachii", "note": "ytligast på överarmens framsida" },
+        { "label": "M. brachialis", "note": "under biceps" },
+        { "label": "Humerus", "note": "överarmsbenet i mitten" },
+        { "label": "N. radialis i sulcus nervi radialis", "note": "ligger an mot benet baktill" },
+        { "label": "M. triceps brachii", "note": "på överarmens baksida" }
+      ],
+      "explanation": "Överarmen delas av humerus i ett främre böjarfack och ett bakre sträckarfack. N. radialis löper i sin fåra på benets baksida, vilket är varför den skadas vid humerusfrakturer.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "sr085",
+      "topic": "sortera_riktningar",
+      "axis": "ventral_dorsal",
+      "prompt": "Ordna organen i lilla bäckenet från ventralt till dorsalt hos en kvinna.",
+      "items": [
+        { "label": "Symfysen", "note": "blygdbensfogen" },
+        { "label": "Urinblåsan", "note": "bakom symfysen" },
+        { "label": "Uterus", "note": "livmodern, mellan blåsa och tarm" },
+        { "label": "Rektum", "note": "ändtarmen" },
+        { "label": "Os sacrum", "note": "korsbenet baktill" }
+      ],
+      "explanation": "Livmodern ligger som en kil mellan urinblåsan och ändtarmen. Fickan mellan livmoder och ändtarm — excavatio rectouterina — är bäckenets djupaste punkt och där fri vätska först samlas.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "sr086",
+      "topic": "sortera_riktningar",
+      "axis": "ventral_dorsal",
+      "prompt": "Ordna organen i lilla bäckenet från ventralt till dorsalt hos en man.",
+      "items": [
+        { "label": "Symfysen", "note": "blygdbensfogen" },
+        { "label": "Urinblåsan", "note": "bakom symfysen" },
+        { "label": "Prostatan", "note": "under blåsan, kring uretra" },
+        { "label": "Sädesblåsorna", "note": "bakom blåsbotten" },
+        { "label": "Rektum", "note": "ändtarmen baktill" }
+      ],
+      "explanation": "Prostatan ligger med sin baksida direkt mot ändtarmen, vilket är hela grunden för palpation per rectum. Sädesblåsorna ligger bakom blåsbotten, mellan blåsan och ändtarmen.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "sr087",
+      "topic": "sortera_riktningar",
+      "axis": "ventral_dorsal",
+      "prompt": "Ordna strukturerna i ett tvärsnitt genom höger underarm från ventralt till dorsalt.",
+      "items": [
+        { "label": "M. flexor carpi radialis", "note": "ytlig böjmuskel" },
+        { "label": "M. flexor digitorum profundus", "note": "djup böjmuskel" },
+        { "label": "Membrana interossea", "note": "hinnan mellan radius och ulna" },
+        { "label": "M. extensor digitorum", "note": "sträckmuskel till fingrarna" },
+        { "label": "Huden över underarmens sträcksida", "note": "kroppsytan" }
+      ],
+      "explanation": "Membrana interossea delar underarmen i ett böjarfack och ett sträckarfack. Böjarna ligger i två lager, ett ytligt och ett djupt, vilket är varför man kan skada den ytliga böjsenan utan att den djupa påverkas.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "sr088",
+      "topic": "sortera_riktningar",
+      "axis": "ventral_dorsal",
+      "prompt": "Ordna strukturerna i höger skuldra från ventralt till dorsalt.",
+      "items": [
+        { "label": "Clavicula", "note": "nyckelbenet längst fram" },
+        { "label": "M. subscapularis", "note": "på skulderbladets framsida" },
+        { "label": "Scapula", "note": "skulderbladet" },
+        { "label": "M. infraspinatus", "note": "på skulderbladets baksida" },
+        { "label": "Huden över skulderbladet", "note": "kroppsytan" }
+      ],
+      "explanation": "Skulderbladet har muskler på båda sidor: m. subscapularis mot bröstkorgen och m. supraspinatus, m. infraspinatus och m. teres minor på baksidan. Tillsammans bildar de rotatorkuffen.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "sr089",
+      "topic": "sortera_riktningar",
+      "axis": "ventral_dorsal",
+      "prompt": "Ordna strukturerna i munhåla och svalg från ventralt till dorsalt.",
+      "items": [
+        { "label": "Överläppen", "note": "munhålans ingång" },
+        { "label": "Framtänderna i överkäken", "note": "tandraden" },
+        { "label": "Tungan", "note": "fyller munhålan" },
+        { "label": "Uvula", "note": "gomspenen i mjuka gommens kant" },
+        { "label": "Svalget", "note": "pharynx" }
+      ],
+      "explanation": "Munhålan övergår i svalget vid gombågarna, där uvula hänger ned. Vid sväljning lyfts mjuka gommen och stänger av näshålan, så att födan styrs bakåt och nedåt.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "sr090",
+      "topic": "sortera_riktningar",
+      "axis": "ventral_dorsal",
+      "prompt": "Ordna strukturerna i ryggen från ventralt till dorsalt, i höjd med Th7 strax vid sidan av mittlinjen.",
+      "items": [
+        { "label": "Pleura parietalis", "note": "lungsäckens vägglager" },
+        { "label": "Revbenet", "note": "bröstkorgens vägg" },
+        { "label": "M. erector spinae", "note": "ryggsträckarna i sin fåra" },
+        { "label": "M. trapezius", "note": "den ytliga ryggmuskeln" },
+        { "label": "Ryggens hud", "note": "kroppsytan" }
+      ],
+      "explanation": "Ryggens muskulatur ligger i lager utanpå bröstkorgen. Det är den ordningen en pleurapunktion passerar, och därför sticket läggs vid revbenets överkant — kärlen och nerven löper i fåran under varje revben.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "sr091",
+      "topic": "sortera_riktningar",
+      "axis": "kranial_kaudal",
+      "prompt": "Ordna kranialnerverna efter var de lämnar hjärnan, från kranialt till kaudalt.",
+      "items": [
+        { "label": "N. opticus", "note": "från diencefalon" },
+        { "label": "N. oculomotorius", "note": "från mesencefalon" },
+        { "label": "N. trigeminus", "note": "från pons" },
+        { "label": "N. facialis", "note": "från gränsen pons–medulla" },
+        { "label": "N. hypoglossus", "note": "från medulla oblongata" }
+      ],
+      "explanation": "Kranialnerverna lämnar hjärnan i nummerordning uppifrån och ned. Numren är alltså inte godtyckliga — de speglar nivån, från synnerven högst upp till de nedersta nerverna i förlängda märgen.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "sr092",
+      "topic": "sortera_riktningar",
+      "axis": "kranial_kaudal",
+      "prompt": "Ordna strukturerna på halsens framsida från kranialt till kaudalt.",
+      "items": [
+        { "label": "Os hyoideum", "note": "tungbenet" },
+        { "label": "Cartilago thyroidea", "note": "sköldbrosket, adamsäpplet" },
+        { "label": "Cartilago cricoidea", "note": "ringbrosket" },
+        { "label": "Sköldkörtelns istmus", "note": "över de översta trakealringarna" },
+        { "label": "Jugulum", "note": "incisura jugularis i bröstbenets överkant" }
+      ],
+      "explanation": "Det här är landmärkena man palperar nedåt längs halsen inför en luftvägsåtgärd. Membranet mellan sköld- och ringbrosket är det man går igenom vid en nödkoniotomi.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "sr093",
+      "topic": "sortera_riktningar",
+      "axis": "kranial_kaudal",
+      "prompt": "Ordna hjärnans vätskerum från kranialt till kaudalt, i likvorns flödesriktning.",
+      "items": [
+        { "label": "Sidoventriklarna", "note": "en i varje hemisfär" },
+        { "label": "Foramen interventriculare", "note": "förbindelsen till tredje ventrikeln" },
+        { "label": "Tredje ventrikeln", "note": "mellan thalamushalvorna" },
+        { "label": "Aqueductus mesencephali", "note": "den trånga kanalen genom mitthjärnan" },
+        { "label": "Fjärde ventrikeln", "note": "mellan hjärnstam och lillhjärna" }
+      ],
+      "explanation": "Likvor bildas i plexus choroideus och rinner nedåt genom systemet. Akvedukten är den trängsta passagen, och en förträngning där är en klassisk orsak till hydrocefalus.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "sr094",
+      "topic": "sortera_riktningar",
+      "axis": "kranial_kaudal",
+      "prompt": "Ordna landmärkena i höger nedre extremitet från kranialt till kaudalt.",
+      "items": [
+        { "label": "Trochanter major", "note": "höftens landmärke" },
+        { "label": "Patellas överkant", "note": "knäskålens övre rand" },
+        { "label": "Tuberositas tibiae", "note": "där knäskålssenan fäster" },
+        { "label": "Malleolus medialis", "note": "fotknölen på insidan" },
+        { "label": "Hälens undersida", "note": "under calcaneus" }
+      ],
+      "explanation": "De här punkterna används för att mäta benlängd och för att hitta rätt vid injektioner och punktioner. Tuberositas tibiae ligger ungefär två fingerbredder nedanför knäledsspalten.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "sr095",
+      "topic": "sortera_riktningar",
+      "axis": "kranial_kaudal",
+      "prompt": "Ordna de endokrina organen från kranialt till kaudalt.",
+      "items": [
+        { "label": "Hypofysen", "note": "i sella turcica i skallbasen" },
+        { "label": "Sköldkörteln", "note": "på halsens framsida" },
+        { "label": "Thymus", "note": "i främre mediastinum" },
+        { "label": "Binjurarna", "note": "på njurarnas övre poler" },
+        { "label": "Äggstockarna", "note": "i lilla bäckenet" }
+      ],
+      "explanation": "De endokrina organen är utspridda över hela kroppen och hör inte ihop anatomiskt — det som binder dem samman är att de utsöndrar hormoner till blodet. Här ordnas de enbart efter höjd.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "sr096",
+      "topic": "sortera_riktningar",
+      "axis": "kranial_kaudal",
+      "prompt": "Ordna strukturerna i bröstkorgen från kranialt till kaudalt.",
+      "items": [
+        { "label": "Incisura jugularis", "note": "bröstbenets övre inbuktning" },
+        { "label": "Arcus aortae", "note": "ungefär i höjd med Th4" },
+        { "label": "Carina trachealis", "note": "trakeas delning" },
+        { "label": "Hjärtats apex", "note": "i femte interkostalrummet" },
+        { "label": "Diafragmans esofagusöppning", "note": "ungefär i höjd med Th10" }
+      ],
+      "explanation": "Aortabågen och carina ligger båda kring Th4–Th5, i höjd med angulus sterni. Diafragmans tre öppningar ligger på olika nivåer: v. cava vid Th8, esofagus vid Th10 och aorta vid Th12.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "sr097",
+      "topic": "sortera_riktningar",
+      "axis": "superficiell_djup",
+      "prompt": "Ordna skikten i ryggen från ytligt till djupt, i höjd med Th7 vid sidan av kotpelaren.",
+      "items": [
+        { "label": "Huden på ryggen", "note": "kroppsytan" },
+        { "label": "M. trapezius", "note": "det ytliga muskellagret" },
+        { "label": "M. rhomboideus major", "note": "under trapezius" },
+        { "label": "M. erector spinae", "note": "ryggens egna sträckare" },
+        { "label": "Revbenet", "note": "bröstkorgens vägg" }
+      ],
+      "explanation": "Ryggens muskler ligger i tre grupper: ett ytligt lager som rör armen, ett mellanlager som rör revbenen och ett djupt lager som rör kotpelaren själv. Bara det djupa lagret är ryggens egen muskulatur.",
+      "source": "Gray's Anatomy for Students"
+    },
+    {
+      "id": "sr098",
+      "topic": "sortera_riktningar",
+      "axis": "superficiell_djup",
+      "prompt": "Ordna skikten i sätesregionen från ytligt till djupt.",
+      "items": [
+        { "label": "Huden över sätet", "note": "kroppsytan" },
+        { "label": "Subkutant fett", "note": "ofta flera centimeter tjockt" },
+        { "label": "M. gluteus maximus", "note": "den stora sätesmuskeln" },
+        { "label": "M. gluteus medius", "note": "under maximus" },
+        { "label": "Os ilium", "note": "höftbenets vinge" }
+      ],
+      "explanation": "En intramuskulär injektion i sätet läggs i den övre yttre kvadranten, i m. gluteus medius. Det är för att undvika n. ischiadicus, som löper under m. gluteus maximus i den nedre inre delen.",
+      "source": "Moore, Clinically Oriented Anatomy"
+    },
+    {
+      "id": "sr099",
+      "topic": "sortera_riktningar",
+      "axis": "superficiell_djup",
+      "prompt": "Ordna en artärväggs skikt från ytligt till djupt, räknat utifrån.",
+      "items": [
+        { "label": "Tunica adventitia", "note": "bindvävshöljet ytterst" },
+        { "label": "Membrana elastica externa", "note": "elastiskt membran" },
+        { "label": "Tunica media", "note": "glatt muskulatur och elastin" },
+        { "label": "Membrana elastica interna", "note": "elastiskt membran" },
+        { "label": "Tunica intima", "note": "endotelet innerst mot blodet" }
+      ],
+      "explanation": "Artärväggens tre lager skiljs åt av två elastiska membran. Det är tunica media med sin glatta muskulatur som gör att artärer kan ändra kärldiameter och därmed reglera blodtrycket.",
+      "source": "Sand m.fl., Människokroppen"
+    },
+    {
+      "id": "sr100",
+      "topic": "sortera_riktningar",
+      "axis": "superficiell_djup",
+      "prompt": "Ordna magsäcksväggens skikt från ytligt till djupt, räknat utifrån.",
+      "items": [
+        { "label": "Tunica serosa", "note": "bukhinnans lager ytterst" },
+        { "label": "Muskellagret", "note": "tunica muscularis, i tre riktningar" },
+        { "label": "Tela submucosa", "note": "bindväv med kärl och nervplexus" },
+        { "label": "Muscularis mucosae", "note": "tunt muskelskikt i slemhinnan" },
+        { "label": "Slemhinnans epitel", "note": "innerst mot magsäckens innehåll" }
+      ],
+      "explanation": "Alla avsnitt i mag-tarmkanalen har samma fyra vägglager. Magsäcken är den enda delen med tre muskelriktningar i stället för två, vilket är vad som gör den kraftiga knådningen möjlig.",
+      "source": "Sand m.fl., Människokroppen"
+    },
 
     {
       "id": "ss001",
