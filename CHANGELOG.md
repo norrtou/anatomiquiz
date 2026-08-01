@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.318
+- **Arcade: Shoot! reskinnat: kranier → bubblor som spricker, i en egen blå ton.** Målen är nu glänsande bubblor (samma tvålagerreskott och gloss-recept som Pop!s bubblor, fast i en ny `--plate-blue`/`--plate-blue-deep`) i stället för skallformer. Hindren är taggiga, minliknande former (`clip-path`-polygon) i en dämpad blågrå ton — formen, inte färgen, skiljer dem från bubblorna (WCAG 1.4.1), eftersom "runt och glänsande" inte längre går att återanvända som skillnad när båda är bubbelfamiljen.
+  - Träff-, miss- och avslöjande-animationerna byggdes om efter Pop!s rikare recept: rätt bubbla blåses upp och spricker (`.burst`) med en utslående ring (`.shoot-ring`, ny), fel bubbla rödfärgas och skakar (`.miss`), den avslöjade rätta bubblan grönfärgas och pulserar (`.reveal`) — i stället för den gamla tippa-omkull-animationen. Klassnamnen döptes om (`fallen`→`burst`, `missed`→`miss`) för att matcha Pop!s konvention.
+  - **Färgtemat kodar vilket läge det är:** Pop! är violett (oförändrat), Shoot! är blått — egna `--arcade-blue-*`-variabler, en ny `.btn-mode--arcade-blue`-klass på startknappen, och blått genomgående i spelytans bakgrund, rundans mätare, spökmålsbrickan och berömrutan. Glansen är mätt, inte gissad, som Pop!s (18 % vitt mot `--plate-blue` ger 5,58:1 i värsta fallet).
+  - All text i spelet och i `spellagen.html` bytte ordval i samma pass: "kranium" → "bubbla", "oskyldigt kranium" → "mina".
+- **Mästerskytt-utmärkelsen skärpt: kräver nu BÅDE full överlevnad OCH 100 % träffsäkerhet.** Tidigare räckte det att klockan gick ut — en spelare som aldrig ens svarade på en fråga (bara lät 6-sekundersklockan tick:a ur upprepade gånger) kunde ändå bli "mästerskytt". Användarens poäng: utmärkelsen är SÄRSKILD och ska inte gå att få bara genom att vänta ut tiden. Tre utfall nu, tydligt åtskilda: mästerskytt (perfekt), "Du överlevde rundan!" (klarade tiden men missade något — inget märke), och minsprängning (nederlag).
+  - Ny mellanton `survived`-ljudsignal för det andra utfallet — nöjd men inte triumferande, så att mästerskyttens fanfar förblir särskild.
+  - Testerna skärpta i samma pass: den gamla "mästerskytt utan att svara på något" fick ny facit (INGET märke), plus två nya tester som handsätter perfekt respektive 0-av-0-träffsäkerhet.
+
 ## 0.9.317
 - **Rättar 0.9.316: Arcade: Shoot! visade aldrig frågetexten.** Fyra kranier med ordalternativ syntes, men ingenting sa vilken fråga de svarade på — till skillnad från Pop!, som hela tiden har `#popPrompt` synligt över spelytan, glömdes motsvarande rad bort helt i Shoot!. Hittat av användaren på riktig telefon, inte av något test (rundans logik var korrekt — `shootCurrent.prompt` fanns i tillståndet, den skrevs bara aldrig till DOM:en).
   - Ny `#shootPrompt`-rad ovanför spelytan, som `#popPrompt`, med samma `--prompt-scale`-krympning för långa frågor.

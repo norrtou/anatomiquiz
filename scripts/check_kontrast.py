@@ -80,6 +80,8 @@ BAKGRUND = {
     # Arkadknapparna ligger i startkortet, precis som de gröna lägesknapparna.
     ".btn-mode--arcade": "--surface",
     ".btn-mode--arcade:disabled": "--surface",
+    ".btn-mode--arcade-blue": "--surface",
+    ".btn-mode--arcade-blue:disabled": "--surface",
     ".btn-cancel:hover:not(:disabled)": "--surface",
     ".tidsjakt-record-chip": "--surface",
     ".case-topic-tag": "--surface",

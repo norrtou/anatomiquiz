@@ -168,7 +168,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="css/styles.css?v=0.9.317">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.318">
 </head>
 <body>
 
@@ -527,7 +527,7 @@
               </svg>
               <span class="mode-label">Arcade: Pop!</span>
             </button>
-            <button id="startShootBtn" class="btn btn-mode btn-mode--arcade" type="button">
+            <button id="startShootBtn" class="btn btn-mode btn-mode--arcade btn-mode--arcade-blue" type="button">
               <svg class="mode-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <circle cx="12" cy="12" r="7.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
                 <circle cx="12" cy="12" r="1.7" fill="currentColor"/>
@@ -1412,12 +1412,12 @@
 
     <!-- =========================================================
          Arcade: Shoot! — dold initialt.
-         Fyra kranier med svarsalternativ på rad överst; du siktar med en
+         Fyra bubblor med svarsalternativ på rad överst; du siktar med en
          gevärspipa nedtill (dra i fältet, släpp för att skjuta) och en röd
-         prickad laserlinje visar riktningen. Rätt kranium → poäng, ny fråga.
-         Tomma "oskyldiga" kranier glider förbi mellan dig och målen — träffar
-         du ett sådant är rundan slut. Max 5 minuter, klarar du hela vägen
-         blir du "mästerskytt". Logik: js/shoot.js.
+         prickad laserlinje visar riktningen. Rätt bubbla → poäng, ny fråga.
+         Taggiga minor glider förbi mellan dig och målen — träffar du en
+         sådan är rundan slut. Max 5 minuter; överlever du hela vägen MED
+         alla rätt blir du "mästerskytt". Logik: js/shoot.js.
          Ämne och utbildning ärvs från startvyn som i övriga spellägen.
          ========================================================= -->
     <section id="shoot" class="card hidden" aria-labelledby="shootHeading">
@@ -1425,7 +1425,7 @@
 
       <div id="shootStage" class="shoot-stage">
         <!-- Frågan hålls som EN kort rad ovanför spelytan, som i Pop! — utan
-             den vet spelaren inte VAD kranierna svarar på, bara vilka ord som
+             den vet spelaren inte VAD bubblorna svarar på, bara vilka ord som
              står i dem. --prompt-scale sätts av js/shoot.js efter längden. -->
         <p id="shootPrompt" class="shoot-prompt" aria-live="polite"></p>
 
@@ -1463,11 +1463,11 @@
           <span id="shootPlayerLabel" class="sr-only"></span>
           <span id="shootMeta" class="sr-only"></span>
 
-          <!-- Målen: fyra kranier, fasta platser. -->
+          <!-- Målen: fyra bubblor med svarsord, fasta platser. -->
           <div id="shootTargets" class="shoot-targets" aria-hidden="true"></div>
 
-          <!-- Hindren: tomma "oskyldiga" kranier som glider förbi. Formen
-               skiljer dem från målen, inte färgen (WCAG 1.4.1). -->
+          <!-- Hindren: taggiga minor som glider förbi. Formen skiljer dem
+               från bubblorna, inte färgen (WCAG 1.4.1). -->
           <div id="shootObstacles" class="shoot-obstacles" aria-hidden="true"></div>
 
           <!-- Sikte: pipa + prickad laserlinje, samma pivot. -->
@@ -1480,14 +1480,14 @@
                ytan, ingen speltid får gå åt innan spelaren är redo, och
                trycket är den gest iOS kräver för att ljudet ska få spelas. -->
           <div id="shootStart" class="shoot-start hidden">
-            <p class="shoot-start-title">Skjut kraniet med rätt svar</p>
+            <p class="shoot-start-title">Skjut bubblan med rätt svar</p>
             <div id="shootStartRules" class="shoot-start-rules">
-              <p>Fyra kranier med svarsalternativ står på rad. Dra i fältet för att sikta, släpp för att skjuta.</p>
+              <p>Fyra bubblor med svarsalternativ står på rad. Dra i fältet för att sikta, släpp för att skjuta.</p>
               <ul>
-                <li><strong>Rätt kranium</strong> – det faller omkull, poäng, ny fråga direkt.</li>
-                <li><strong>Tomt kranium</strong> – de glider förbi mellan dig och målen. Träffar du ett sådant är rundan slut.</li>
-                <li><strong>Fel kranium eller bom</strong> – räknas som miss, men rundan fortsätter.</li>
-                <li>Klarar du dig i <strong>5 minuter</strong> blir du mästerskytt.</li>
+                <li><strong>Rätt bubbla</strong> – den spricker, poäng, ny fråga direkt.</li>
+                <li><strong>En mina</strong> – de glider förbi mellan dig och målen. Träffar du en sådan är rundan slut.</li>
+                <li><strong>Fel bubbla eller bom</strong> – räknas som miss, men rundan fortsätter.</li>
+                <li>Överlever du <strong>5 minuter</strong> med alla rätt blir du mästerskytt.</li>
               </ul>
             </div>
             <button id="shootStartBtn" class="btn primary shoot-start-btn" type="button">Kör!</button>
@@ -1851,7 +1851,7 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.317" defer></script>
+  <script src="js/app.js?v=0.9.318" defer></script>
   <!-- Spellägesmoduler: en egen fil per läge, laddas EFTER app.js (delar globalt scope). -->
   <script src="js/matcha.js?v=0.9.261" defer></script>
   <script src="js/leitner.js?v=0.9.261" defer></script>
@@ -1859,6 +1859,6 @@
   <script src="js/dagsutmaning.js?v=0.9.284" defer></script>
   <script src="js/sortera.js?v=0.9.306" defer></script>
   <script src="js/pop.js?v=0.9.315" defer></script>
-  <script src="js/shoot.js?v=0.9.317" defer></script>
+  <script src="js/shoot.js?v=0.9.318" defer></script>
 </body>
 </html>

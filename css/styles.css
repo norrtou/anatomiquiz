@@ -93,6 +93,20 @@
   --plate-violet-deep: #5b21b6; /* Mörkare änden i bubbelgradienten: 8,98:1 */
   --plate-amber: #92400e;       /* Svitbrickan i spelytan. Vit text: 7,09:1 */
 
+  /* Arcade: Shoot! har en egen blå ton, så att de två arkadlägena går att
+     skilja åt på färgen (Pop! violett, Shoot! blått) trots att de delar
+     `.btn-mode--arcade` för layouten. Samma konstruktion som ovan. */
+  --arcade-blue-text: #1d4ed8;
+  --arcade-blue-border: #93c5fd;
+  --arcade-blue-border-strong: #2563eb;
+  --arcade-blue-bg: rgba(37, 99, 235, 0.10);
+  --arcade-blue-bg-hover: rgba(37, 99, 235, 0.18);
+  --arcade-blue-bg-muted: rgba(37, 99, 235, 0.05);
+  /* Bubblornas fyllning i Shoot!s spelyta. Vit text: 8,72 / 10,36:1 (mätt,
+     se scripts/check_kontrast.py). */
+  --plate-blue: #1e40af;
+  --plate-blue-deep: #1e3a8a;
+
   /* Spacing & sizing */
   --radius: 12px;               /* Border radius */
   --radius-sm: 8px;
@@ -177,6 +191,15 @@
   --arcade-bg: rgba(139, 92, 246, 0.16);
   --arcade-bg-hover: rgba(139, 92, 246, 0.26);
   --arcade-bg-muted: rgba(139, 92, 246, 0.08);
+
+  /* Shoot!s blå ton, samma princip som den violetta ovan. --plate-blue*
+     står kvar oförändrade från :root. */
+  --arcade-blue-text: #93c5fd;
+  --arcade-blue-border: #60a5fa;
+  --arcade-blue-border-strong: #93c5fd;
+  --arcade-blue-bg: rgba(37, 99, 235, 0.18);
+  --arcade-blue-bg-hover: rgba(37, 99, 235, 0.28);
+  --arcade-blue-bg-muted: rgba(37, 99, 235, 0.09);
 
   /* Skuggor blir svarta i stället för gröna – en grön glöd mot mörk botten
      läses som ett ljussken, inte som djup. */
@@ -1612,6 +1635,23 @@ body:has(#quiz:not(.hidden)) {
   border-style: dashed;
   color: var(--text-muted);
   background: var(--arcade-bg-muted);
+}
+
+/* Shoot!-knappen delar .btn-mode--arcades layout men bär sin egen blå ton
+   (facit: Pop! violett, Shoot! blått) — samma tre regler, bara med de blå
+   variablerna i stället. */
+.btn-mode--arcade-blue {
+  border-color: var(--arcade-blue-border);
+  color: var(--arcade-blue-text);
+  background: var(--arcade-blue-bg);
+}
+.btn-mode--arcade-blue:hover:not(:disabled) {
+  border-color: var(--arcade-blue-border-strong);
+  background: var(--arcade-blue-bg-hover);
+}
+.btn-mode--arcade-blue:disabled {
+  color: var(--text-muted);
+  background: var(--arcade-blue-bg-muted);
 }
 
 .secondary-actions {
@@ -5162,10 +5202,10 @@ ol li {
 /* ============================================================================
    ARCADE: SHOOT! (.shoot-*)
    ============================================================================
-   Fyra kranier med svarsalternativ på rad överst; sikta med en gevärspipa
+   Fyra bubblor med svarsalternativ på rad överst; sikta med en gevärspipa
    nedtill (dra i fältet, släpp för att skjuta) och en röd prickad laserlinje
-   visar riktningen. Tomma "oskyldiga" kranier glider förbi mellan dig och
-   målen. Logik: js/shoot.js. Fysik (hinder, projektil) skrivs som
+   visar riktningen. Taggiga minor glider förbi mellan dig och målen.
+   Logik: js/shoot.js. Fysik (hinder, projektil) skrivs som
    transform: translate3d — aldrig top/left per bildruta, av samma skäl som
    i Pop!.
    Pipan och mynningsflamman är NOLLSTORA ankarelement: transform-origin
@@ -5200,7 +5240,7 @@ ol li {
   border-radius: var(--radius);
   height: clamp(320px, 70vh, 720px);
   background:
-    radial-gradient(circle at 50% 6%, rgba(139, 92, 246, 0.14) 0%, transparent 55%),
+    radial-gradient(circle at 50% 6%, rgba(37, 99, 235, 0.14) 0%, transparent 55%),
     radial-gradient(circle at 50% 96%, rgba(15, 118, 110, 0.16) 0%, transparent 55%),
     var(--success-bg);
   border: 1px solid var(--accent);
@@ -5245,7 +5285,7 @@ ol li {
   height: 100%;
   width: 0%;
   border-radius: 999px;
-  background: linear-gradient(90deg, var(--plate-violet) 0%, var(--plate-teal) 100%);
+  background: linear-gradient(90deg, var(--plate-blue) 0%, var(--plate-teal) 100%);
   transition: width 0.15s linear;
 }
 .shoot-round-tick {
@@ -5320,12 +5360,15 @@ ol li {
   color: #fff;
 }
 .shoot-streak-chip { background: var(--plate-amber); }
-.shoot-record-chip { background: var(--plate-violet); }
+.shoot-record-chip { background: var(--plate-blue); }
 .shoot-streak-chip.hidden,
 .shoot-record-chip.hidden { display: none; }
 
-/* ---- Målen: fyra kranier, fasta platser (ingen fysik, till skillnad från
-   Pop!s bubblor) ----------------------------------------------------------- */
+/* ---- Målen: fyra bubblor med svarsord, fasta platser (ingen fysik, till
+   skillnad från Pop!s flytande bubblor) -------------------------------------
+   Samma tvålagerstruktur och gloss-recept som .pop-bubble-body, bara i
+   Shoot!s egen blå platta. GLANSEN ÄR MÄTT, INTE GISSAD (samma metod som
+   Pop!): 18 % vitt mot --plate-blue ger 5,58:1 i värsta fallet, klart AA. */
 .shoot-targets {
   position: absolute;
   inset: 0;
@@ -5338,43 +5381,30 @@ ol li {
   left: 0;
   transform: translate3d(0, 0, 0);
 }
-/* Skallformen: rundad hjässa, smalare underkäke. Ögonhålorna (pseudoelement)
-   är det som SKILJER målet från ett hinder — formen, inte färgen (WCAG 1.4.1,
-   se hindren nedan). */
 .shoot-target-body {
   position: relative;
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  padding-bottom: 12%;
-  border-radius: 46% 46% 38% 38% / 52% 52% 32% 32%;
-  background: linear-gradient(160deg, #f4f4f5 0%, #d4d4d8 100%);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), inset 0 -4px 8px rgba(0, 0, 0, 0.14);
-  transition: opacity 0.2s ease;
-}
-.shoot-target-body::before,
-.shoot-target-body::after {
-  content: '';
-  position: absolute;
-  top: 30%;
-  width: 22%;
-  height: 22%;
+  padding: 6%;
   border-radius: 50%;
-  background: radial-gradient(circle, #18181b 55%, #3f3f46 100%);
+  background:
+    radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 42%),
+    linear-gradient(135deg, var(--plate-blue) 0%, var(--plate-blue-deep) 100%);
+  box-shadow: 0 4px 14px rgba(30, 58, 138, 0.4), inset 0 -3px 10px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.14s ease, transform 0.08s ease;
 }
-.shoot-target-body::before { left: 19%; }
-.shoot-target-body::after { right: 19%; }
 .shoot-target-text {
   position: relative;
   z-index: 1;
-  max-width: 90%;
-  font-size: 0.64rem;
+  max-width: 88%;
+  font-size: 0.66rem;
   font-weight: 800;
-  line-height: 1.08;
+  line-height: 1.12;
   text-align: center;
-  color: #1c1917;
+  color: #fff;
   word-break: break-word;
 }
 .shoot-mark {
@@ -5393,31 +5423,63 @@ ol li {
   color: #fff;
   /* Solid, INTE genomskinlig: en yta med alfakanal går inte att mäta
      automatiskt (scripts/check_kontrast.py kräver en manuell post i
-     BAKGRUND/OMÄTBARA då) och kranierna glider under den i olika färger. */
+     BAKGRUND/OMÄTBARA då) och bubblorna glider under den i olika färger. */
   background: #18181b;
 }
-/* Rätt kranium: faller omkull och tippar ner ur bild (facit §6). */
-.shoot-target.fallen .shoot-target-body { animation: shootFall 0.5s cubic-bezier(0.5, 0, 0.4, 1) forwards; }
-@keyframes shootFall {
-  to { transform: rotate(80deg) translateY(24%); opacity: 0; }
+/* Rätt: bubblan blåses upp och spricker, som Pop!s .pop-bubble.burst. */
+.shoot-target.burst { pointer-events: none; }
+.shoot-target.burst .shoot-target-body { animation: shootBurst 0.28s cubic-bezier(0.3, 0, 0.2, 1) forwards; }
+@keyframes shootBurst {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
 }
-/* Fel kranium: kort skakning, sedan kvar (avslöjar var det rätta var). */
-.shoot-target.missed .shoot-target-body { animation: shootTargetShake 0.4s ease; }
-@keyframes shootTargetShake {
+/* Fel: bubblan rödfärgas och skakar, men står kvar tillräckligt länge för
+   att ✗ ska hinna läsas — samma recept som Pop!s .pop-bubble.miss. */
+.shoot-target.miss { pointer-events: none; }
+.shoot-target.miss .shoot-target-body {
+  animation: shootMiss 0.4s ease;
+  background: linear-gradient(135deg, var(--plate-red) 0%, #991b1b 100%);
+}
+@keyframes shootMiss {
   0%, 100% { transform: translateX(0); }
-  20% { transform: translateX(-4px); }
-  40% { transform: translateX(4px); }
-  60% { transform: translateX(-3px); }
-  80% { transform: translateX(3px); }
+  20% { transform: translateX(-7px); }
+  40% { transform: translateX(7px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
 }
-/* Det avslöjade rätta kraniet efter ett felskott: mjuk glöd. */
+/* Den avslöjade rätta bubblan efter ett felskott: grönt, pulserar. */
+.shoot-target.reveal { pointer-events: none; }
 .shoot-target.reveal .shoot-target-body {
-  box-shadow: 0 0 0 3px var(--primary-light, #34d399), 0 4px 12px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, var(--plate-green) 0%, var(--plate-green-deep) 100%);
+  animation: shootReveal 0.5s ease-in-out 2;
+}
+@keyframes shootReveal {
+  0%, 100% { box-shadow: 0 4px 14px rgba(4, 120, 87, 0.4); }
+  50% { box-shadow: 0 0 0 8px rgba(4, 120, 87, 0.28); }
 }
 
-/* ---- Hindren: tomma "oskyldiga" kranier som glider förbi ----------------- */
-/* Medvetet formlösa — runda, utan käke eller ögonhålor — så att skillnaden
-   mot målen är SKEPNADEN och inte en färgkod. */
+/* Ringen som slår ut ur en spräckt bubbla, som Pop!s .pop-ring. Positioneras
+   med left/top (skapas en gång per skott, inte per bildruta) så att
+   transform är fritt för skalningen. Ren dekor, hoppas över vid reducerad
+   rörelse. */
+.shoot-ring {
+  position: absolute;
+  z-index: 2;
+  border-radius: 50%;
+  border: 3px solid var(--plate-blue);
+  pointer-events: none;
+  animation: shootRingOut 0.4s ease-out forwards;
+}
+@keyframes shootRingOut {
+  0% { opacity: 0.7; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.75); }
+}
+
+/* ---- Hindren: tomma "oskyldiga" bubblor som glider förbi ------------------
+   Formen — inte färgen — skiljer dem från målen (WCAG 1.4.1): en taggig
+   minliknande kontur i stället för en len cirkel, i en dämpad blågrå ton så
+   att de fortfarande läses som en del av Shoot!s blå familj utan att kunna
+   förväxlas med ett svarsalternativ. */
 .shoot-obstacles {
   position: absolute;
   inset: 0;
@@ -5428,11 +5490,16 @@ ol li {
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 50%;
   transform: translate3d(0, 0, 0);
+  clip-path: polygon(
+    50.0% 0.0%, 60.5% 17.7%, 79.4% 9.5%, 77.5% 30.0%, 97.6% 34.5%,
+    84.0% 50.0%, 97.6% 65.5%, 77.5% 70.0%, 79.4% 90.5%, 60.5% 82.3%,
+    50.0% 100.0%, 39.5% 82.3%, 20.6% 90.5%, 22.5% 70.0%, 2.4% 65.5%,
+    16.0% 50.0%, 2.4% 34.5%, 22.5% 30.0%, 20.6% 9.5%, 39.5% 17.7%
+  );
   background:
-    radial-gradient(circle at 32% 26%, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 45%),
-    linear-gradient(160deg, #57534e 0%, #292524 100%);
+    radial-gradient(circle at 34% 30%, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0) 45%),
+    linear-gradient(160deg, #475569 0%, #1e293b 100%);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
 }
 
@@ -5536,7 +5603,7 @@ ol li {
   padding: 16px;
   text-align: center;
   overflow-y: auto;
-  background: linear-gradient(160deg, var(--plate-violet-deep) 0%, var(--plate-teal) 100%);
+  background: linear-gradient(160deg, var(--plate-blue-deep) 0%, var(--plate-teal) 100%);
   border-radius: var(--radius);
   color: #fff;
 }
@@ -5585,8 +5652,9 @@ ol li {
   font-size: 0.95rem;
   color: #fff;
   /* Solid, som Pop!s .pop-praise (var(--plate-violet)) — samma skäl som
-     .shoot-mark ovan: en genomskinlig platta går inte att mäta automatiskt. */
-  background: var(--plate-violet);
+     .shoot-mark ovan: en genomskinlig platta går inte att mäta automatiskt.
+     Blått i stället för violett: Shoot!s egen ton. */
+  background: var(--plate-blue);
   white-space: nowrap;
   pointer-events: none;
 }
@@ -5658,15 +5726,17 @@ ol li {
 /* Hindrens rörelse ÄR spelet och kan inte stängas av (facit §7 punkt 8) —
    trappan börjar i stället ett steg mildare vid reducerad rörelse
    (SHOOT_RM_EASE_MS i js/shoot.js). Det som stängs av här är REN dekor:
-   rekyl, mynningsflamma, skärmskak och fallanimationen. Sluttillståndet
-   sätts ändå (kraniet FÖRSVINNER, blir inte bara stillastående), så
+   rekyl, mynningsflamma, skärmskak och bubbelanimationerna. Sluttillståndet
+   sätts ändå (bubblan FÖRSVINNER, blir inte bara stillastående), så
    utebliven rörelse aldrig betyder utebliven information. */
 @media (prefers-reduced-motion: reduce) {
   .shoot-barrel.recoil .shoot-barrel-tube,
   .shoot-muzzle-flash.go::after,
   .shoot-field.shake,
-  .shoot-target.fallen .shoot-target-body,
-  .shoot-target.missed .shoot-target-body,
+  .shoot-target.burst .shoot-target-body,
+  .shoot-target.miss .shoot-target-body,
+  .shoot-target.reveal .shoot-target-body,
+  .shoot-ring,
   .shoot-praise,
   .shoot-fly.go,
   .shoot-countdown-nr.tick,
@@ -5676,7 +5746,7 @@ ol li {
     animation: none !important;
     transition: none !important;
   }
-  .shoot-target.fallen .shoot-target-body { opacity: 0; }
+  .shoot-target.burst .shoot-target-body { opacity: 0; }
 }
 
 /* ============================================================================

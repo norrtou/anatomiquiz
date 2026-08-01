@@ -1,5 +1,5 @@
 // ============================================================================
-// js/shoot.js — arkadläget "Arcade: Shoot!" (prickskytte mot kranier).
+// js/shoot.js — arkadläget "Arcade: Shoot!" (prickskytte mot bubblor).
 // Namnet är två fria ord som ingen firma äger – inga varumärken i filnamn,
 // funktioner, id:n, klasser eller synlig text (CLAUDE_REGLER §12.1).
 // Slug: "shoot". Facit och alla beslut: scripts/arcade_shoot_todo.md.
@@ -23,17 +23,19 @@
 // ============================================================================
 // SPELLOGIK — se scripts/arcade_shoot_todo.md för hela specen. Sammanfattning:
 //
-// Fyra kranier med svarsalternativ står på rad högst upp. Du siktar med en
+// Fyra bubblor med svarsalternativ står på rad högst upp. Du siktar med en
 // gevärspipa längst ner (dra var som helst i fältet, släpp för att skjuta)
-// och en röd prickad laserlinje visar riktningen. Skjuter du rätt kranium
-// faller det omkull, poäng, ny fråga direkt. Mellan dig och målen glider tomma
-// kranier ("oskyldiga") förbi — träffar du ett sådant är rundan slut.
+// och en röd prickad laserlinje visar riktningen. Skjuter du rätt bubbla
+// spricker den, poäng, ny fråga direkt. Mellan dig och målen glider taggiga
+// minor förbi — träffar du en sådan är rundan slut.
 //
-// Skjuter du fel kranium räknas det som miss (träffsäkerhet ned) och en ny
+// Skjuter du fel bubbla räknas det som miss (träffsäkerhet ned) och en ny
 // fråga kommer, men rundan fortsätter. Ett skott som inte träffar något är
 // också en miss, men frågan står KVAR tills 6-sekundersklockan för den
-// frågan går ut. Rundan pågår i högst 5 minuter — överlever du hela vägen får
-// du utmärkelsen "mästerskytt", ingen extra poäng.
+// frågan går ut. Rundan pågår i högst 5 minuter. Överlever du hela vägen MED
+// perfekt träffsäkerhet får du utmärkelsen "mästerskytt" (ingen extra poäng,
+// se finishShoot() — utmärkelsen är medvetet sträng). Överlever du men missar
+// något räknas rundan ändå, bara utan utmärkelsen.
 //
 // LUCKEGARANTIN (hård designregel, inte en förhoppning): alla hinder delar
 // EN gemensam hastighet och sprids jämnt över korridorens bredd när de
@@ -56,14 +58,14 @@ const SHOOT_Q_WARN_MS = 2000           // frågeklockan blir amber
 const SHOOT_PRAISE_MS = 1100
 const SHOOT_MISSED_SHOWN = 8
 
-// Rätt kranium: kort paus så fallanimationen hinner synas, som Pop!. Fel
-// kranium: längre paus så den avslöjade rätta bubblan hinner läsas.
+// Rätt bubbla: kort paus så spricktanimationen hinner synas, som Pop!. Fel
+// bubbla: längre paus så den avslöjade rätta bubblan hinner läsas.
 const SHOOT_RIGHT_MS = 150
 const SHOOT_WRONG_MS = 640
 const SHOOT_TIMEOUT_MS = 260
 
 // Ordfiltret. Beslutat i facit (mätt underlag): ≤14 tecken, ≤2 ord ger
-// 2 861 frågor i 109 ämnen och ryms i ett 76 px-kranium på mobil. Mjuk
+// 2 861 frågor i 109 ämnen och ryms i en 76 px-bubbla på mobil. Mjuk
 // lättnad för ämnen som annars vore ospelbara, samma princip som Pop!.
 const SHOOT_MAX_WORDS = 2
 const SHOOT_MAX_CHARS = 14
@@ -269,6 +271,9 @@ function playShootTone(kind, streak){
   if(kind === 'tick'){ shootBeep(ctx, 1320, 0, 0.045, 0.06); return }
   if(kind === 'go'){ shootBeep(ctx, 880, 0, 0.16, 0.13); return }
   if(kind === 'innocent'){ [220, 164.81, 130.81].forEach((f, i) => shootBeep(ctx, f, i * 0.13, 0.3, 0.14)); return }
+  // Överlevde rundan men inte helt rätt: nöjd, inte triumferande — mästerskytt
+  // är en särskild utmärkelse och ska låta som en, inte som "tiden bara gick".
+  if(kind === 'survived'){ [523.25, 659.25].forEach((f, i) => shootBeep(ctx, f, i * 0.1, 0.2, 0.13)); return }
   if(kind === 'marksman'){ [523.25, 659.25, 783.99, 1046.5].forEach((f, i) => shootBeep(ctx, f, i * 0.11, 0.26, 0.14)) }
 }
 
@@ -294,7 +299,7 @@ function shootIsShort(q, maxWords, maxChars){
 }
 
 // Grundpoolen: MC utan bild, inte placeholder, inte utesluten, i valt ämne,
-// med MINST TRE distraktorer — fyra kranier kräver fyra alternativ.
+// med MINST TRE distraktorer — fyra bubblor kräver fyra alternativ.
 function buildShootPool(topic, lens){
   const flags = loadFlags()
   const pool = []
@@ -485,7 +490,7 @@ function clearShootField(){
 }
 
 // ============================================================================
-// Målen — fyra kranier, fasta platser (ingen fysik, till skillnad från Pop!)
+// Målen — fyra bubblor, fasta platser (ingen fysik, till skillnad från Pop!)
 // ============================================================================
 function shootTargetSize(){
   const slot = shootFieldW / 4
@@ -846,7 +851,7 @@ function stepShootProjectile(dtSec){
   }
   for(const t of shootTargets){
     if(t.dead) continue
-    const hitR = t.size / 2 * 1.1      // generös — kranierna är smala mål
+    const hitR = t.size / 2 * 1.1      // generös hitbox — lite större än bubblan syns
     if(circlesOverlap(p.x, p.y, SHOOT_PROJECTILE_RADIUS, t.x, t.y, hitR)){
       handleShootTargetHit(t)
       return
@@ -873,8 +878,9 @@ function shootCorrectHit(t){
   shootStreak++
   if(shootStreak > shootBestStreak) shootBestStreak = shootStreak
   t.dead = true
-  if(t.node) t.node.classList.add('fallen')
+  if(t.node) t.node.classList.add('burst')
   markShootTarget(t, true)
+  spawnShootRing(t)
   playShootTone('hit', shootStreak)
   shootVibrate(10)
   updateShootScoreBadge(true)
@@ -900,10 +906,10 @@ function shootCorrectHit(t){
 function shootWrongHit(t){
   shootStreak = 0
   t.dead = true
-  if(t.node) t.node.classList.add('missed')
+  if(t.node) t.node.classList.add('miss')
   markShootTarget(t, false)
 
-  // Visa vilket kranium som VAR rätt — annars lär felet ingenting (som Pop!).
+  // Visa vilken bubbla som VAR rätt — annars lär felet ingenting (som Pop!).
   const right = shootTargets.find(x => x.correct && !x.dead)
   if(right){
     right.dead = true
@@ -922,6 +928,25 @@ function shootWrongHit(t){
     shootLocked = false
     if(shootRunning) nextShootQuestion()
   }, SHOOT_WRONG_MS)
+}
+
+// Ringen som slår ut ur en spräckt bubbla, som Pop!s spawnPopRing. t.x/t.y
+// är CENTER-koordinater (till skillnad från Pop!s bubblor, som räknar från
+// hörnet) — positioneras därför med ett halvt storlek-avdrag. Ren dekor och
+// därför bortvald vid reducerad rörelse.
+function spawnShootRing(t){
+  if(reducedMotionPreferred()) return
+  const field = el('shootField')
+  if(!field) return
+  const ring = document.createElement('span')
+  ring.className = 'shoot-ring'
+  ring.setAttribute('aria-hidden', 'true')
+  ring.style.width = t.size + 'px'
+  ring.style.height = t.size + 'px'
+  ring.style.left = (t.x - t.size / 2) + 'px'
+  ring.style.top = (t.y - t.size / 2) + 'px'
+  field.appendChild(ring)
+  setTimeout(() => ring.remove(), 420)
 }
 
 // Rätt/fel förmedlas aldrig med enbart färg (WCAG 1.4.1): ✓/✗ + dold
@@ -960,7 +985,7 @@ function flashShootLaserMiss(){
   beam.classList.add('miss')
 }
 
-// Ett oskyldigt kranium träffat: rundan är slut, omedelbart.
+// En mina träffad: rundan är slut, omedelbart.
 function handleShootObstacleHit(o){
   removeShootProjectileNode()
   shootProjectile = null
@@ -1160,7 +1185,12 @@ function finishShoot(reason){
   el('shootStart')?.classList.add('hidden')
   el('shootFinished').classList.remove('hidden')
 
-  const isMarksman = reason === 'marksman'
+  // Mästerskytt är en SÄRSKILD utmärkelse (användarens ord) — den kräver att
+  // du överlevt hela rundan OCH svarat helt rätt. Att bara låta klockan gå
+  // ut, oavsett hur många misstag som samlats på vägen, ska inte räcka; annars
+  // är märket bara "du väntade ut 5 minuter" i förklädnad.
+  const survivedFull = reason === 'marksman'
+  const isMarksman = survivedFull && shootAttempts > 0 && shootHits === shootAttempts
   const survivedMs = Math.min(SHOOT_ROUND_MS, Math.max(0, shootEndTime - shootStartTime))
   const finalScore = Math.round(computeShootScore(shootHits, shootAttempts, survivedMs))
   const pct = shootAttempts ? Math.round((shootHits / shootAttempts) * 100) : 0
@@ -1168,7 +1198,9 @@ function finishShoot(reason){
 
   el('shootDoneText').textContent = isMarksman
     ? `Du är en mästerskytt! ${shootHits} träffar på ${formatShootTime(survivedMs)}.`
-    : `Träffad av ett oskyldigt kranium. ${shootHits} träffar på ${formatShootTime(survivedMs)}.`
+    : survivedFull
+      ? `Du överlevde rundan! ${shootHits} av ${shootAttempts} rätt på ${formatShootTime(survivedMs)}.`
+      : `Du sprängde en mina. ${shootHits} träffar på ${formatShootTime(survivedMs)}.`
 
   const nyckeltal = []
   if(shootBestStreak > 1) nyckeltal.push(`🔥 bästa svit ${shootBestStreak}`)
@@ -1185,12 +1217,12 @@ function finishShoot(reason){
   el('shootRecordBadge')?.classList.toggle('hidden', !isRecord)
   el('shootMarksmanBadge')?.classList.toggle('hidden', !isMarksman)
   el('shootFinished')?.classList.toggle('shoot-finished--marksman', isMarksman)
-  el('shootFinished')?.classList.toggle('shoot-finished--defeat', !isMarksman)
+  el('shootFinished')?.classList.toggle('shoot-finished--defeat', reason === 'innocent')
 
   animateShootRing(pct)
   renderShootMissed()
-  playShootTone(isMarksman ? 'marksman' : 'innocent')
-  shootVibrate(isMarksman ? [18, 60, 18, 60, 18] : [30, 80, 30])
+  playShootTone(isMarksman ? 'marksman' : reason === 'innocent' ? 'innocent' : 'survived')
+  shootVibrate(isMarksman ? [18, 60, 18, 60, 18] : reason === 'innocent' ? [30, 80, 30] : [16, 40, 16])
 
   try{ saveShootScore(survivedMs, finalScore, isMarksman) }catch(e){ console.error('saveShootScore misslyckades:', e) }
   window.scrollTo({ top: 0 })
@@ -1215,7 +1247,7 @@ function saveShootScore(survivedMs, finalScore, isMarksman){
 }
 
 // Ingen avbrytknapp under rundan (samma val som Pop!, se §12.2): rundan tar
-// slut av sig själv, antingen av ett oskyldigt kranium eller av klockan.
+// slut av sig själv, antingen av en mina eller av klockan.
 function quitShoot(){
   el('shoot').classList.add('hidden')
   el('setup').classList.remove('hidden')

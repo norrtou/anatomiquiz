@@ -12,7 +12,7 @@
      * SLUMPEN (seedad, annars blir hindrens startfas flakig mellan körningar)
 
    Skalet modellerar DOM-trädet och fysikens matematik, INTE layouten eller
-   hur ett kranium faktiskt ser ut — det kräver visuell kontroll i webbläsare
+   hur en bubbla faktiskt ser ut — det kräver visuell kontroll i webbläsare
    (CLAUDE_REGLER §13.1, se scripts/arcade_shoot_todo.md avsnitt 10).
 
    Kör det här skriptet efter varje ändring i js/shoot.js.
@@ -103,7 +103,7 @@ function node(id, extra){
   'shootRecordChip', 'shootFly', 'shootRecordBadge', 'shootMarksmanBadge',
   'shootMissedWrap', 'shootMissedMore', 'shootStart'].forEach(id => nodes[id].classList.add('hidden'))
 
-// Spelytans mått. Betydligt högre än bred — kranier överst, pipa nedtill.
+// Spelytans mått. Betydligt högre än bred — bubblor överst, pipa nedtill.
 const FIELD_W = 340, FIELD_H = 520
 nodes.shootField._rect = { width: FIELD_W, height: FIELD_H, top: 0, left: 0 }
 
@@ -320,9 +320,9 @@ eq('uteslutna frågor utelämnas', ctx.buildShootPool('osteologi_ben', null).map
 FLAGS = {}
 
 // ============================================================================
-section('Ordfiltret — svaret ska få plats i ett kranium')
+section('Ordfiltret — svaret ska få plats i en bubbla')
 // ============================================================================
-ok('ett ord godkänns', ctx.shootOptionFits('kraniet', 2, 14))
+ok('ett ord godkänns', ctx.shootOptionFits('bubblan', 2, 14))
 ok('två ord godkänns', ctx.shootOptionFits('os coxae', 2, 14))
 ok('tre ord underkänns', !ctx.shootOptionFits('a b c', 2, 14))
 ok('för långt underkänns', !ctx.shootOptionFits('gastroesofagealreflux', 2, 12))
@@ -372,7 +372,7 @@ ok('nedräkningen döljs när rundan startar', nodes.shootCountdown.hidden())
 ok('rundan är igång', ev('shootRunning'))
 eq('frågetexten SYNS i spelvyn (inte bara i internt tillstånd)',
   nodes.shootPrompt.textContent, ev('shootCurrent.prompt'))
-eq('fyra kranier på planen', targetNodes().length, 4)
+eq('fyra bubblor på planen', targetNodes().length, 4)
 eq('första frågan visas', currentPromptId(), '1')
 ok('ett hinder finns från start (facit §4: 0:00 → 1 hinder)', ev('shootObstacles.length') === 1, ev('shootObstacles.length'))
 ok('frågeklockan står på 6 s', remainingQ() === 6000, remainingQ())
@@ -389,7 +389,7 @@ ok('vinkeln klipps vid ±70°',
   ev(`shootAngleFromClient(shootBarrelX - 5000, shootBarrelY - 1)`) >= -maxRad - 0.0001)
 
 // ============================================================================
-section('Ballistik — träffar rätt kranium')
+section('Ballistik — träffar rätt bubbla')
 // ============================================================================
 ev('shootObstacles = []; shootObstacleSpeed = 0')  // rensa vägen för ren ballistiktest
 let pos = correctTargetPos()
@@ -398,14 +398,14 @@ fireAtXY(pos.x, pos.y)
 ok('projektilen skapas', ev('shootProjectile') !== null)
 resolveShot()
 eq('träffen räknas', ev('shootHits'), träffarFöre + 1)
-ok('kraniet faller (klass fallen)', targetNodes().some(t => t._class.has('fallen')))
+ok('bubblan spricker (klass burst)', targetNodes().some(t => t._class.has('burst')))
 ok('✓ visas (inte bara färg, WCAG 1.4.1)', targetNodes().some(t => t.textContent.includes('✓')))
 flush(200)
 eq('ny fråga direkt', currentPromptId(), '2')
-eq('fyra nya kranier', targetNodes().length, 4)
+eq('fyra nya bubblor', targetNodes().length, 4)
 
 // ============================================================================
-section('Ballistik — träffar fel kranium')
+section('Ballistik — träffar fel bubbla')
 // ============================================================================
 ev('shootObstacles = []; shootObstacleSpeed = 0')
 pos = wrongTargetPos()
@@ -413,8 +413,8 @@ const svitFöre = ev('shootStreak')
 fireAtXY(pos.x, pos.y)
 resolveShot()
 ok('sviten nollställs', ev('shootStreak') === 0, svitFöre)
-ok('fel kranium markeras missed', targetNodes().some(t => t._class.has('missed')))
-ok('det rätta kraniet avslöjas (reveal)', targetNodes().some(t => t._class.has('reveal')))
+ok('fel bubbla markeras miss', targetNodes().some(t => t._class.has('miss')))
+ok('den rätta bubblan avslöjas (reveal)', targetNodes().some(t => t._class.has('reveal')))
 ok('✗ och ✓ visas', targetNodes().some(t => t.textContent.includes('✗')) && targetNodes().some(t => t.textContent.includes('✓')))
 eq('missad fråga sparas', ev('shootMissed.length'), 1)
 flush(700)
@@ -428,15 +428,15 @@ ev('shootObstacles = []; shootObstacleSpeed = 0')
 const attemptsFöre = ev('shootAttempts')
 const frågaFöre = currentPromptId()
 // 40° sikte: den horisontella förflyttningen upp till målraden blir då större
-// än fältets bredd plus kraniernas generösa hitbox, så skottet garanterat
+// än fältets bredd plus bubblornas generösa hitbox, så skottet garanterat
 // missar allt — rakt upp räcker INTE (hitboxen spänner nästan hela fältets
 // bredd, se facit §6). Brantare än så hinner inte lämna fältet upptill inom
 // testets bildruteantal.
 ev('shootAimAngle = 40 * Math.PI / 180; fireShoot()')
 resolveShot()
 eq('missen räknas', ev('shootAttempts'), attemptsFöre + 1)
-eq('frågan står KVAR (facit §3, till skillnad från fel kranium)', currentPromptId(), frågaFöre)
-ok('inga kranier har ändrat status', targetNodes().every(t => !t._class.has('fallen') && !t._class.has('missed')))
+eq('frågan står KVAR (facit §3, till skillnad från fel bubbla)', currentPromptId(), frågaFöre)
+ok('inga bubblor har ändrat status', targetNodes().every(t => !t._class.has('burst') && !t._class.has('miss')))
 
 // ============================================================================
 section('6-sekundersklockan — byter mål och räknas som miss')
@@ -449,17 +449,17 @@ ok('sviten nollställs', ev('shootStreak') === 0)
 ok('rundan fortsätter', ev('shootRunning'))
 
 // ============================================================================
-section('Ballistik — träffar ett oskyldigt kranium avslutar rundan')
+section('Ballistik — träffar en mina avslutar rundan')
 // ============================================================================
 ev('shootObstacles = [{ x: shootBarrelX, y: shootFieldH * SHOOT_OBSTACLE_ROW_FRAC, size: 40, dead: false, node: null }]')
 ev('shootObstacleSpeed = 0')
 ok('rundan är igång innan träffen', ev('shootRunning'))
 ev('shootAimAngle = 0; fireShoot()')
 resolveShot()
-ok('rundan avslutas direkt av ett oskyldigt kranium', !ev('shootRunning'))
+ok('rundan avslutas direkt av en mina', !ev('shootRunning'))
 ok('klart-vyn visas', !nodes.shootFinished.hidden())
 ok('mästerskyttmärket visas INTE (det här var ett nederlag)', nodes.shootMarksmanBadge.hidden())
-ok('resultattexten nämner det oskyldiga kraniet', nodes.shootDoneText.textContent.includes('oskyldigt'))
+ok('resultattexten nämner minan', nodes.shootDoneText.textContent.includes('mina'))
 
 // ============================================================================
 section('Luckegarantin — hindren stänger aldrig korridoren helt')
@@ -566,8 +566,14 @@ eq('inga träffar, bara överlevd tid', ctx.computeShootScore(0, 0, 45000), 45)
 eq('inga försök alls ger ingen NaN-krasch', ctx.computeShootScore(0, 0, 0), 0)
 
 // ============================================================================
-section('Mästerskytt — 5 minuter utan att träffa ett oskyldigt kranium')
+section('Överlevde rundan men INTE mästerskytt (ofullständig träffsäkerhet)')
 // ============================================================================
+// Mästerskytt är en SÄRSKILD utmärkelse (användarens uttryckliga krav,
+// 2026-08-01): att bara vänta ut klockan räcker inte, det krävs perfekt
+// träffsäkerhet också. Den här körningen svarar aldrig på en enda fråga —
+// 6-sekundersklockan hinner ticka ur gång på gång under de 5 minuterna, så
+// träffsäkerheten blir ofullständig (0 av N) trots att rundan överlevs hela
+// vägen. Realistisk körning genom den riktiga klockan, inte handsatt.
 nodes.shootTargets.children = []
 nodes.shootObstacles.children = []
 nodes.shootFinished.classList.add('hidden')
@@ -575,12 +581,41 @@ POOL = Array.from({ length: 8 }, (_, i) => mkQ(i + 1))
 store['hur_highscores_shoot'] = '[]'
 await ctx.startShoot()
 runCountdown()
-ev('shootObstacles = []')   // inga hinder i vägen — rundan ska bara ta slut på tid
+ev('shootObstacles = []')   // inga minor i vägen — rundan ska bara ta slut på tid
 advance(5 * 60 * 1000 + 500)
 ok('rundan avslutas av klockan', !ev('shootRunning'))
 ok('klart-vyn visas', !nodes.shootFinished.hidden())
-ok('mästerskyttmärket visas', !nodes.shootMarksmanBadge.hidden())
+ok('mästerskyttmärket visas INTE (ofullständig träffsäkerhet)', nodes.shootMarksmanBadge.hidden())
+ok('resultattexten säger att rundan överlevdes, inte mästerskytt',
+  nodes.shootDoneText.textContent.includes('överlevde') && !nodes.shootDoneText.textContent.includes('mästerskytt'))
+eq('mästerskytt-flaggan sparas som false', JSON.parse(store['hur_highscores_shoot'])[0].marksman, false)
+
+// ============================================================================
+section('Mästerskytt — kräver BÅDE full överlevnad OCH 100 % träffsäkerhet')
+// ============================================================================
+nodes.shootTargets.children = []
+nodes.shootObstacles.children = []
+nodes.shootFinished.classList.add('hidden')
+store['hur_highscores_shoot'] = '[]'
+await ctx.startShoot()
+runCountdown()
+// Handsätter träff/försök-facit och anropar finishShoot direkt: att spela
+// fram 5 minuter med perfekt träffsäkerhet i testet vore i praktiken samma
+// sak, bara mycket dyrare att simulera (den riktiga klockan skulle kräva att
+// varenda fråga i ~50 frågor besvarades rätt i tur och ordning).
+ev('shootHits = 12; shootAttempts = 12; shootStartTime = Date.now() - SHOOT_ROUND_MS')
+ev("finishShoot('marksman')")
+ok('mästerskyttmärket visas vid perfekt träffsäkerhet', !nodes.shootMarksmanBadge.hidden())
 ok('resultattexten firar mästerskytten', nodes.shootDoneText.textContent.includes('mästerskytt'))
+eq('mästerskytt-flaggan sparas som true', JSON.parse(store['hur_highscores_shoot'])[0].marksman, true)
+
+nodes.shootFinished.classList.add('hidden')
+store['hur_highscores_shoot'] = '[]'
+await ctx.startShoot()
+runCountdown()
+ev('shootHits = 0; shootAttempts = 0; shootStartTime = Date.now() - SHOOT_ROUND_MS')
+ev("finishShoot('marksman')")
+ok('0 av 0 försök räknas INTE som perfekt (kräver minst ett försök)', nodes.shootMarksmanBadge.hidden())
 
 // ============================================================================
 section('Lagring och topplista')
@@ -588,7 +623,9 @@ section('Lagring och topplista')
 const sparade = JSON.parse(store['hur_highscores_shoot'] || '[]')
 eq('resultatet sparas', sparade.length, 1)
 ok('poängen sparas som tal', typeof sparade[0].score === 'number')
-ok('mästerskytt-flaggan sparas', sparade[0].marksman === true)
+// Värdet (true/false) för mästerskytt-flaggan har egna dedikerade tester
+// ovan — här kontrolleras bara att fältet finns och har rätt TYP.
+ok('mästerskytt-flaggan sparas som boolesk', typeof sparade[0].marksman === 'boolean')
 eq('ämnet sparas', sparade[0].topic, 'osteologi_ben')
 
 ctx.renderShootScores()
