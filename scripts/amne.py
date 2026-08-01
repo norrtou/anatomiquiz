@@ -135,7 +135,7 @@ _s("spellagen.html",
    # "dagens utmaning" och inte sluggen "dagsutmaning": nyckelordet måste stå
    # på sidan, och sidan skriver lägets SYNLIGA namn. Sluggen är ett kodnamn.
    ["spellägen", "studieteknik", "flashcards", "quiz", "matcha", "leitner",
-    "tidsjakt", "dagens utmaning", "anatomi"])
+    "tidsjakt", "dagens utmaning", "sortera", "pop", "shoot", "anatomi"])
 
 _s("info.html",
    [("Thing", "Anatomiquiz"), ("Thing", "Norrtou Creations")],

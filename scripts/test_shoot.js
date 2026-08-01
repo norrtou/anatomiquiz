@@ -85,7 +85,7 @@ function node(id, extra){
 }
 
 ;['setup', 'highscores', 'quiz', 'shoot', 'shootStage', 'shootFinished',
-  'shootPlayerLabel', 'shootMeta', 'shootField', 'shootTargets', 'shootObstacles',
+  'shootPlayerLabel', 'shootMeta', 'shootPrompt', 'shootField', 'shootTargets', 'shootObstacles',
   'shootLaserBeam', 'shootBarrel', 'shootMuzzleFlash',
   'shootStart', 'shootStartRules', 'shootStartBtn',
   'shootCountdown', 'shootCountdownNr', 'shootFly', 'shootPraise',
@@ -278,10 +278,13 @@ function targetNodes(){
   return nodes.shootTargets.children.filter(c => c._class.has('shoot-target'))
 }
 function currentPromptId(){
-  // shootCurrent har inget synligt prompt-element (kranierna bär bara
-  // ordet) — läs frågan direkt ur toppnivåtillståndet.
-  const p = ev('shootCurrent ? shootCurrent.prompt : null')
-  return p ? p.match(/\d+/)[0] : null
+  // Läser DOM-elementet, inte bara toppnivåtillståndet — annars hade testet
+  // inte fångat att frågan glömdes bort i markeringen (0.9.316: shootCurrent
+  // var korrekt men #shootPrompt fanns inte alls, rundan gick inte att
+  // begripa på riktiga skärmar trots att all logik var rätt).
+  const shown = nodes.shootPrompt.textContent
+  const m = shown && shown.match(/\d+/)
+  return m ? m[0] : null
 }
 function correctTargetPos(){ return ev("(() => { const t = shootTargets.find(x => x.correct && !x.dead); return t ? { x: t.x, y: t.y } : null })()") }
 function wrongTargetPos(){ return ev("(() => { const t = shootTargets.find(x => !x.correct && !x.dead); return t ? { x: t.x, y: t.y } : null })()") }
@@ -362,10 +365,13 @@ ok('nedräkningen har INTE börjat innan spelaren tryckt', nodes.shootCountdown.
 ok('inga mål innan rundan börjat', targetNodes().length === 0, targetNodes().length)
 ok('startrutan visas', !nodes.shootStart.hidden())
 ok('reglerna visas för den som aldrig spelat', !nodes.shootStartRules.hidden())
+eq('frågan är tom innan rundan börjat', nodes.shootPrompt.textContent, '')
 
 runCountdown()
 ok('nedräkningen döljs när rundan startar', nodes.shootCountdown.hidden())
 ok('rundan är igång', ev('shootRunning'))
+eq('frågetexten SYNS i spelvyn (inte bara i internt tillstånd)',
+  nodes.shootPrompt.textContent, ev('shootCurrent.prompt'))
 eq('fyra kranier på planen', targetNodes().length, 4)
 eq('första frågan visas', currentPromptId(), '1')
 ok('ett hinder finns från start (facit §4: 0:00 → 1 hinder)', ev('shootObstacles.length') === 1, ev('shootObstacles.length'))

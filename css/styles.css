@@ -5182,6 +5182,18 @@ ol li {
 }
 .shoot-stage.hidden { display: none; }
 
+/* Frågan: EN kort rad, som Pop!s .pop-prompt. Ska gå att läsa i förbifarten
+   utan att äta av spelytan. --prompt-scale sätts av js/shoot.js efter
+   frågans längd, med golv i max() (WCAG-läsbarhet). */
+.shoot-prompt {
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text-primary);
+  font-size: max(0.82rem, calc(0.95rem * var(--prompt-scale, 1)));
+}
+
 .shoot-field {
   position: relative;
   overflow: hidden;
@@ -5636,6 +5648,7 @@ ol li {
   /* Spelytan är poängen med läget, som i Pop!: paddingen krymps så att ytan
      får så mycket som möjligt, höjden följer --view-fit. */
   #shoot { padding: 10px; }
+  .shoot-prompt { font-size: max(0.78rem, calc(0.9rem * var(--prompt-scale, 1))); }
   .shoot-field { height: max(280px, calc(min(78vh, 700px) * var(--view-fit, 1))); }
   .shoot-countdown-nr { font-size: 2.4rem; }
   .shoot-target-text { font-size: 0.6rem; }

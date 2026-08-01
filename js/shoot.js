@@ -72,6 +72,9 @@ const SHOOT_MAX_CHARS_RELAXED = 20
 const SHOOT_MIN_POOL = 8               // matchar tröskeln i det mätta underlaget
 const SHOOT_MAX_PROMPT = 140
 
+// Textlängd → typsnittsskala för frågan ovanför spelytan, som Pop!.
+const SHOOT_PROMPT_SCALE = { min: 40, max: SHOOT_MAX_PROMPT, floor: 0.8 }
+
 // Sikte och ballistik.
 const SHOOT_MAX_AIM_DEG = 70
 const SHOOT_PROJECTILE_SPEED = 900     // px/s — startvärde, se facit §6
@@ -386,6 +389,7 @@ async function startShoot(){
 
   el('shootPlayerLabel').textContent = shootName
   el('shootMeta').textContent = topicLabelFor(shootTopic)
+  el('shootPrompt').textContent = ''
   clearShootField()
   updateShootScoreBadge(false)
   updateShootStreakChip()
@@ -531,11 +535,27 @@ function makeShootTargetNode(t){
   return node
 }
 
+// Textlängd → typsnittsskala för frågan ovanför spelytan, som Pop!s
+// popTextScale — långa frågor krymper i stället för att svämma över raden.
+function shootTextScale(text, cfg){
+  const len = (text || '').length
+  if(len <= cfg.min) return 1
+  const t = Math.min(1, (len - cfg.min) / (cfg.max - cfg.min))
+  return 1 - t * (1 - cfg.floor)
+}
+
 function nextShootQuestion(){
   if(!shootRunning) return
   shootCurrent = drawShootQuestion()
   if(!shootCurrent) return
   shootLocked = false
+
+  const promptEl = el('shootPrompt')
+  if(promptEl){
+    promptEl.textContent = shootCurrent.prompt
+    promptEl.style.setProperty('--prompt-scale', String(shootTextScale(shootCurrent.prompt, SHOOT_PROMPT_SCALE)))
+  }
+
   buildShootTargets(shootCurrent)
   shootQDeadline = Date.now() + SHOOT_Q_MS
   updateShootQClock(SHOOT_Q_MS)
