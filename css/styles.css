@@ -887,11 +887,14 @@ select:focus-visible {
   line-height: 1.5;
 }
 
-/* Segmenterat reglage (Ljust / Följ systemet / Mörkt) — tre riktiga
-   radioknappar, visuellt dolda, styr ett pillerformat reglage via
-   :checked + label. Ersätter en lista av fristående radioknappar som
-   klämdes ihop på mobil och glesades ut orimligt på desktop (0.9.263). */
-.theme-switch {
+/* Segmenterat reglage — riktiga radioknappar, visuellt dolda, som styr ett
+   pillerformat reglage via :checked + label. Ersätter en lista av fristående
+   radioknappar som klämdes ihop på mobil och glesades ut orimligt på desktop
+   (0.9.263).
+   Hette .theme-switch fram till 0.9.330, då Rättning och Flashcards-riktning
+   fick samma form. Namnet är generiskt sedan dess — en klass som heter efter
+   sin första användning blir en lögn så fort den återanvänds. */
+.seg-switch {
   position: relative;
   display: flex;
   gap: 4px;
@@ -902,7 +905,7 @@ select:focus-visible {
   border-radius: 999px;
 }
 
-.theme-switch input[type="radio"] {
+.seg-switch input[type="radio"] {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -911,7 +914,7 @@ select:focus-visible {
   opacity: 0;
 }
 
-.theme-switch label {
+.seg-switch label {
   flex: 1 1 0;
   margin: 0;
   padding: 9px 6px;
@@ -925,34 +928,91 @@ select:focus-visible {
   transition: background var(--transition-fast), color var(--transition-fast);
 }
 
-.theme-switch label:hover {
+.seg-switch label:hover {
   color: var(--text-primary);
 }
 
-.theme-switch input[type="radio"]:checked + label {
+.seg-switch input[type="radio"]:checked + label {
   background: linear-gradient(135deg, var(--btn-primary-from) 0%, var(--btn-primary-to) 100%);
   color: var(--text-light);
   box-shadow: var(--shadow-sm);
 }
 
-.theme-switch input[type="radio"]:focus-visible + label {
+.seg-switch input[type="radio"]:focus-visible + label {
   outline: 3px solid var(--primary-dark);
   outline-offset: 2px;
 }
 
 /* Under ~360px räcker inte bredden till tre pillertexter jämte varandra;
    "Följ systemet" blir det som avgör. Radbryt till en kolumn i stället för
-   att pressa ihop texten. */
+   att pressa ihop texten. Tvådelade reglage (Rättning) har gott om plats och
+   undantas — de skulle bara bli onödigt höga. */
 @media (max-width: 360px) {
-  .theme-switch {
+  .seg-switch:not(.seg-switch--two) {
     flex-direction: column;
     border-radius: var(--radius-sm);
   }
 
-  .theme-switch label {
+  .seg-switch:not(.seg-switch--two) label {
     text-align: left;
     padding: 10px 12px;
   }
+}
+
+/* --- Inställningssidans grupper (0.9.330) ---------------------------------
+   Sidan var en platt lista med sju kontroller och växte för varje tillägg.
+   Formen är LÅNAD från topplistans .hs-modes (hårfin överlinje + h3 i 1rem) i
+   stället för nyuppfunnen — CLAUDE_REGLER §0.5 punkt 3. Ingen ram och ingen
+   egen bottenfärg: grupperna ska strukturera kortet, inte bli kort i kortet. */
+.settings-group {
+  margin-top: 30px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(16, 185, 129, 0.18);
+}
+
+.settings-group-title {
+  margin: 0 0 4px;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+/* Första etiketten i en grupp ligger tätt inpå rubriken — .settings-label har
+   16px toppmarginal för att skilja fristående block åt, och den luften är
+   redan tagen av gruppens padding. */
+.settings-group-title + .settings-label {
+  margin-top: 8px;
+}
+
+/* Antal sparade poster i "Rensa sparat". Ligger INNE i radens <small> så att
+   den hamnar på samma rad som förklaringen ("(alla spellägen) — 3 resultat")
+   i stället för att bli en tredje rad per fack. Finstilt och tyst: siffran är
+   till för den som undrar vad som försvinner, inte en rubrik — därför ingen
+   fetstil (§0.5 punkt 4). */
+.settings-count {
+  white-space: nowrap;
+  color: var(--text-secondary);
+}
+
+/* Ruta för ett tillstånd som normalt inte finns (i dag: dolda frågor). Syns
+   bara när den har något att säga, och ska då läsas som en notis — inte som
+   ännu en inställning. */
+.settings-note {
+  margin: 12px 0 18px;
+  padding: 12px 14px;
+  background: var(--bg-main);
+  border: 1px solid rgba(16, 185, 129, 0.22);
+  border-radius: var(--radius-sm);
+}
+
+.settings-note p {
+  margin: 0 0 10px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.settings-note .actions {
+  margin: 0;
 }
 
 /* Finstilta raderna på startsidan: noten under utbildningsväljaren
@@ -1273,6 +1333,32 @@ body:has(#quiz:not(.hidden)) {
 .answer-btn:focus-visible {
   outline: 3px solid var(--primary-dark);
   outline-offset: 2px;
+}
+
+/* Valt men ännu inte rättat svar — tentaläget ("Rätta i slutet", 0.9.330).
+   Måste läsas som "det här är mitt val", inte som "det här är rätt": ingen
+   grön botten, ingen ✓, bara en kraftigare ram och en svag ton. Markören ▸
+   sätts av CSS så att knappens textContent förblir ren (app.js jämför svaret
+   mot facit på just textContent). */
+.answer-btn.selected {
+  border-color: var(--primary-dark);
+  background: rgba(16, 185, 129, 0.1);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.18);
+  font-weight: 600;
+}
+
+.answer-btn.selected::after {
+  content: '▸';
+  margin-left: auto;
+  padding-left: 12px;
+  color: var(--primary-deep);
+  font-weight: 700;
+}
+
+/* Tentaläget: poängbrickan hålls inne under omgången. Att dölja den är hela
+   idén — en synlig poäng röjer facit lika säkert som en grön knapp. */
+.quiz-blind .gm-score-badge {
+  display: none;
 }
 
 /* Correct answer styling - mörk smaragd, vit text klarar WCAG AA */
@@ -2704,6 +2790,67 @@ ol li {
     transition: none !important;
   }
 }
+
+/* --- Genomgång fråga för fråga efter tentaläget (0.9.330) -----------------
+   Hopfälld <details> på resultatskärmen. Hopfälld är ett krav, inte en smak:
+   resultatringen ska vara det man ser först och Avsluta/Spela igen får inte
+   hamna under fold på mobil. Listan kan bli 100 poster lång och scrollar då
+   inuti sig själv i stället för att göra kortet oändligt. */
+.quiz-review {
+  margin: 18px 0 4px;
+  border-top: 1px solid rgba(16, 185, 129, 0.18);
+  padding-top: 14px;
+  text-align: left;
+}
+
+.quiz-review.hidden { display: none; }
+
+.quiz-review > summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--primary-deep);
+  list-style-position: outside;
+}
+
+.quiz-review > summary:focus-visible {
+  outline: 3px solid var(--primary-dark);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.quiz-review-list {
+  margin: 14px 0 0;
+  /* Litet listindrag: webbläsarens ~40px pressar ihop textkolumnen på mobil. */
+  padding-left: 1.3em;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.qr-item {
+  margin-bottom: 14px;
+  padding-left: 4px;
+  line-height: 1.45;
+}
+
+.qr-prompt {
+  margin: 0 0 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.qr-line {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Rätt/fel bärs av ord ("Rätt svar:"/"Ditt svar:") plus ✓/✗, inte av färgen
+   ensam (WCAG 1.4.1). Texttonerna är de mörka varianterna – de klarar AA mot
+   kortets vita yta i båda temana. */
+.qr-line--ok { color: var(--primary-deep); }
+.qr-line--wrong { color: var(--error-text); }
 
 /* ============================================================================
    MATCHA (parspel) — två kolumner (frågor/svar), para ihop mot klockan.

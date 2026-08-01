@@ -86,6 +86,26 @@ def spårade_filer():
     return [f for f in ut.split("\0") if f]
 
 
+def kor_nodtest(sokvag):
+    """Kör ett DOM-testskal i node. Saknas node blir det STOPP, inte tystnad —
+    en överhoppad kontroll får aldrig se ut som en godkänd (§0.4). Samma form
+    som i validate_sortera.py och check_akutmedicin.py."""
+    nod = shutil.which("node")
+    if not nod:
+        print(f"STOPP: node saknas, så {sokvag} kunde inte köras. En överhoppad "
+              "kontroll får inte se ut som en godkänd (CLAUDE_REGLER §0.4).",
+              file=sys.stderr)
+        return 1
+    r = subprocess.run([nod, sokvag], cwd=ROOT, capture_output=True, text=True)
+    if r.returncode != 0:
+        print(r.stdout + r.stderr, file=sys.stderr)
+        print(f"STOPP: {sokvag} föll.", file=sys.stderr)
+        return 1
+    rader = [rad for rad in r.stdout.strip().splitlines() if rad.strip()]
+    print(f"Inställningar: {rader[-2] if len(rader) > 1 else rader[-1]}")
+    return 0
+
+
 def main(argv):
     verbose = "-v" in argv or "--verbose" in argv
     filer = spårade_filer()
@@ -177,7 +197,14 @@ def main(argv):
             kod = subprocess.run([sys.executable] + argv, cwd=ROOT).returncode
             if kod != 0:
                 return kod
-        return 0
+
+        # scripts/test_installningar.js mäter en nionde sak ingen generator äger:
+        # att inställningarna styr det de utger sig för att styra. Skalet bygger
+        # sin DOM ur index.html och kör riktiga js/app.js, så en omdöpt kryssruta
+        # eller ett borttappat name-attribut ger rött HÄR i stället för en tyst
+        # inställning som inte gör något i webbläsaren. Inget larmar annars: en
+        # bock som inte är kopplad ser precis lika rätt ut som en som är det.
+        return kor_nodtest("scripts/test_installningar.js")
 
     print(f"AVVIKELSE: {len(avvikande) + len(nya)} filer skiljer sig efter en "
           f"full generatorkörning (CLAUDE_REGLER §12.2).", file=sys.stderr)

@@ -398,6 +398,10 @@ function playShootTone(kind, streak){
 }
 
 function shootVibrate(pattern){
+  // Av/på styrs av den BEFINTLIGA "Vibration"-bocken i Inställningar via
+  // hapticsOn() i js/app.js; läget har ingen egen. Skyddad `typeof`-krok (§12)
+  // så filen fungerar även när app.js inte är laddad (testskalen).
+  if(typeof hapticsOn === 'function' && !hapticsOn()) return
   if(typeof navigator !== 'undefined' && typeof navigator.vibrate === 'function') navigator.vibrate(pattern)
 }
 

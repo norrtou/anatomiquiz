@@ -130,7 +130,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.329'
+const APP_VERSION = '0.9.330'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -155,6 +155,18 @@ let quizStartTime = 0
 let quizStreak = 0
 let quizBestStreak = 0
 const QUIZ_STREAK_PRAISE = 5
+// Rättningsläge för DEN PÅGÅENDE omgången: 'instant' (facit efter varje fråga)
+// eller 'end' (tentaläge – facit, färger och poäng hålls inne till slutet).
+// Läses av vid start, precis som quizTimerOn, så ett byte i Inställningar mitt i
+// en omgång inte kan ändra reglerna halvvägs.
+let quizGrading = 'instant'
+// Tentalägets valda men ännu inte bokförda svar på den aktuella frågan. Man får
+// byta sig fram tills man trycker Nästa – det är så en tenta fungerar, och det
+// kostar inget eftersom inget facit ändå visas.
+let quizPendingAnswer = null
+// Genomgången på resultatskärmen: {prompt, chosen, correct, ok} per fråga.
+// Fylls bara i tentaläget; i direktläget har man redan sett varje facit.
+let quizAnswerLog = []
 
 async function loadQuestions(path){
   try {
@@ -580,6 +592,10 @@ async function startQuiz(allowedTypes){
   if(practiceWrong) forced.forEach(q => consumeReview(q.id))
   currentIdx = 0; score=0
   quizStreak = 0; quizBestStreak = 0
+  // Rättningsläget låses för hela omgången (jfr quizTimerOn ovan).
+  quizGrading = gradingMode()
+  quizPendingAnswer = null
+  quizAnswerLog = []
   // Mät alltid tiden (oavsett om frågetimern är på) för statistik per ämne.
   quizStartTime = Date.now()
   el('playerLabel').textContent = `${name}`
@@ -587,6 +603,9 @@ async function startQuiz(allowedTypes){
   el('highscores').classList.add('hidden')
   el('result').classList.add('hidden')
   el('quiz').classList.remove('hidden')
+  // Tentaläget döljer poängbrickan via CSS (.quiz-blind) — en synlig poäng
+  // röjer facit lika säkert som en grön knapp.
+  el('quiz').classList.toggle('quiz-blind', quizGrading === 'end')
   el('nextBtn').disabled = true
   el('timer').textContent = ''
   showQuestion()
@@ -594,6 +613,7 @@ async function startQuiz(allowedTypes){
 
 function showQuestion(){
   clearTimer()
+  quizPendingAnswer = null
   const q = quizQuestions[currentIdx]
   // Bygg om frågevyn: om frågan har en bild (bilden ÄR frågan) renderas den först,
   // sedan promptexten. Annars bara texten. textContent töms via innerHTML.
@@ -783,7 +803,18 @@ function streakTone(streak){
   return 523.25 * Math.pow(2, Math.min(Math.max(streak - 1, 0), 12) / 12)
 }
 
+// Av/på för vibrationen, styrd av "Vibration"-bocken i Inställningar. Samma
+// form som soundEffectsOn(): saknas kryssrutan (t.ex. i ett testskal som bara
+// laddar en spellägesfil) är svaret ja, så gamla anropsvägar beter sig som förr.
+// Spellägena har egna kopior av hapticPulse och kallar den HÄR via en skyddad
+// `typeof`-krok (§12) – lägg alltså inte in en andra sanning i modulfilerna.
+function hapticsOn(){
+  const cb = el('hapticsEnabled')
+  return cb ? !!cb.checked : true
+}
+
 function hapticPulse(pattern){
+  if(!hapticsOn()) return
   if(typeof navigator !== 'undefined' && typeof navigator.vibrate === 'function') navigator.vibrate(pattern)
 }
 
@@ -810,7 +841,52 @@ function markAnswerBtn(b, ok){
   b.append(icon, sr)
 }
 
+// Vilket rättningsläge som står valt i Inställningar just nu. Läses av startQuiz
+// och låses sedan för hela omgången i quizGrading.
+function gradingMode(){
+  const r = document.querySelector('input[name="grading"]:checked')
+  return r && r.value === 'end' ? 'end' : 'instant'
+}
+
+// TENTALÄGE: registrera valet utan att avslöja något. Knapparna står kvar
+// aktiva så att man kan ändra sig fram till Nästa — inget facit visas ändå, och
+// att låsa svaret vore en godtycklig sträng utöver vad en tenta kräver.
+// Bokföringen (poäng, svit, öva-extra, genomgång) sker i commitPendingAnswer()
+// när man går vidare.
+function selectAnswerBlind(btn, selected){
+  Array.from(el('answers').children).forEach(b => b.classList.remove('selected'))
+  btn.classList.add('selected')
+  quizPendingAnswer = selected
+  // EN neutral ton oavsett rätt/fel: tonhöjden i direktläget ÄR facit, så den
+  // får inte användas här. Över 500 Hz för att höras i en telefonhögtalare.
+  playTone(660)
+  hapticPulse(10)
+  el('nextBtn').disabled = false
+  el('nextBtn').setAttribute('aria-disabled','false')
+}
+
+// Bokför tentalägets valda svar när man lämnar frågan. Allt som i direktläget
+// sker direkt i selectAnswer sker här i stället — men utan att rita något.
+function commitPendingAnswer(){
+  if(quizGrading !== 'end' || quizPendingAnswer === null) return
+  const q = quizQuestions[currentIdx]
+  if(!q) return
+  const ok = quizPendingAnswer === q.correct
+  if(ok){
+    score++
+    quizStreak++
+    quizBestStreak = Math.max(quizBestStreak, quizStreak)
+    markCorrect(q.id)
+  } else {
+    quizStreak = 0
+    markWrong(q.id)
+  }
+  quizAnswerLog.push({ prompt: q.prompt || '', chosen: quizPendingAnswer, correct: q.correct, ok })
+  quizPendingAnswer = null
+}
+
 function selectAnswer(btn, selected, correct){
+  if(quizGrading === 'end'){ selectAnswerBlind(btn, selected); return }
   Array.from(el('answers').children).forEach(b=>{b.disabled=true; b.setAttribute('aria-disabled','true')})
   const q = quizQuestions[currentIdx]
   const ok = selected === correct
@@ -850,6 +926,10 @@ function selectAnswer(btn, selected, correct){
 }
 
 function nextQuestion(){
+  // Tentaläget bokför först här — inte vid trycket på svaret (se
+  // commitPendingAnswer). Måste ske FÖRE currentIdx++, annars bokförs svaret på
+  // nästa fråga.
+  commitPendingAnswer()
   currentIdx++
   if(currentIdx>=quizQuestions.length){ finishQuiz(); return }
   el('nextBtn').disabled = true
@@ -907,6 +987,7 @@ function finishQuiz(){
   el('quiz').classList.add('hidden')
   // Städa fokusläget (bildfrågornas kompaktläge) så det inte hänger kvar.
   el('quiz').classList.remove('quiz-image')
+  el('quiz').classList.remove('quiz-blind')
   el('result').classList.remove('hidden')
 
   const total = quizQuestions.length
@@ -939,10 +1020,66 @@ function finishQuiz(){
 
   try { saveScore() } catch(e){ console.error('saveScore misslyckades:', e) }
   try { renderResultLinks() } catch(e){ console.error('renderResultLinks misslyckades:', e) }
+  try { renderQuizReview() } catch(e){ console.error('renderQuizReview misslyckades:', e) }
   // Bildquizets fokusläge dolde sidrubriken och scrollIntoView pinnade kortet högst
   // upp; när rubriken kommer tillbaka måste vi scrolla upp så resultatet garanterat
   // syns, annars ser det ut som att appen låser sig (inget "Avsluta" dyker upp).
   window.scrollTo({ top: 0 })
+}
+
+// Genomgång fråga för fråga efter en omgång i TENTALÄGE. I direktläget har man
+// redan sett varje facit, och då vore listan bara ännu en låda på skärmen —
+// därför döljs den helt där (CLAUDE_REGLER §0.5: inget nytt synligt utan skäl).
+// Hopfälld som standard så att resultatringen och Avsluta-knappen behåller sina
+// platser; öppen visar den ditt svar och, när det var fel, rätt svar.
+function renderQuizReview(){
+  const box = el('quizReview')
+  if(!box) return
+  const list = el('quizReviewList')
+  if(!list) return
+  list.innerHTML = ''
+  box.open = false
+  if(quizGrading !== 'end' || !quizAnswerLog.length){
+    box.classList.add('hidden')
+    return
+  }
+
+  const wrong = quizAnswerLog.filter(a => !a.ok).length
+  const sum = el('quizReviewSummary')
+  if(sum){
+    // "fel" böjs inte i plural (ett fel, flera fel) – ingen ternär behövs.
+    sum.textContent = wrong
+      ? `Visa genomgång (${wrong} fel att titta på)`
+      : 'Visa genomgång (allt rätt)'
+  }
+
+  quizAnswerLog.forEach(a => {
+    const li = document.createElement('li')
+    li.className = 'qr-item'
+
+    const prompt = document.createElement('p')
+    prompt.className = 'qr-prompt'
+    // Bildfrågor har tom prompt (§2.10) – bilden ÄR frågan. Skriv ut vad det
+    // var i stället för att lämna en tom rad.
+    prompt.textContent = a.prompt || 'Bildfråga'
+    li.appendChild(prompt)
+
+    const mine = document.createElement('p')
+    mine.className = 'qr-line ' + (a.ok ? 'qr-line--ok' : 'qr-line--wrong')
+    // Ordet bär utfallet, inte färgen (WCAG 1.4.1).
+    mine.textContent = `${a.ok ? '✓' : '✗'} Ditt svar: ${a.chosen}`
+    li.appendChild(mine)
+
+    if(!a.ok){
+      const right = document.createElement('p')
+      right.className = 'qr-line qr-line--ok'
+      right.textContent = `Rätt svar: ${a.correct}`
+      li.appendChild(right)
+    }
+
+    list.appendChild(li)
+  })
+  box.classList.remove('hidden')
 }
 
 // Visar ämnesrelaterade fördjupningslänkar (faktatext/tabell) på resultatskärmen.
@@ -1408,7 +1545,10 @@ function applySettings(){
   if(typeof s.practiceWrong === 'boolean') el('practiceWrong').checked = s.practiceWrong
   if(typeof s.timerEnabled === 'boolean') el('timerEnabled').checked = s.timerEnabled
   if(typeof s.soundEnabled === 'boolean' && el('soundEnabled')) el('soundEnabled').checked = s.soundEnabled
+  if(typeof s.hapticsEnabled === 'boolean' && el('hapticsEnabled')) el('hapticsEnabled').checked = s.hapticsEnabled
   if(typeof s.showNonMedical === 'boolean' && el('showNonMedical')) el('showNonMedical').checked = s.showNonMedical
+  applyRadioSetting('grading', s.grading)
+  applyRadioSetting('fcDirection', s.fcDirection)
   // Temat bor i js/theme.js och en egen localStorage-nyckel, inte i hur_settings:
   // det måste kunna läsas av sidor som inte laddar app.js (ordlistan,
   // kunskapsbanken). Här speglas bara det redan valda värdet in i radioknapparna.
@@ -1424,7 +1564,31 @@ function applySettings(){
     eduEl.value = s.education
   }
   updateTopicOptions()
+  // Ämnet återställs EFTER updateTopicOptions – listan byggs om där, och ett
+  // värde satt innan hade skrivits över. Bara om ämnet fortfarande finns i den
+  // filtrerade listan; annars står det updateTopicOptions valde.
+  const topicEl = el('topic')
+  if(topicEl && typeof s.topic === 'string' && Array.from(topicEl.options).some(o => o.value === s.topic && !o.disabled)){
+    topicEl.value = s.topic
+  }
+  // Antal frågor. Tidigare sparades det inte alls, så valet föll tillbaka till
+  // 10 vid varje besök – den som alltid kör 50 fick ställa om varje gång.
+  const numEl = el('numQuestions')
+  if(numEl && s.numQuestions != null && Array.from(numEl.options).some(o => o.value === String(s.numQuestions))){
+    numEl.value = String(s.numQuestions)
+  }
   updateStartButtons()
+  // Mina data-blocket speglar localStorage och måste räknas om varje gång sidan
+  // visas – annars står gamla siffror kvar efter en rensning.
+  renderDataCounts()
+}
+
+// Kryssa i radioknappen med det sparade värdet i en namngiven grupp. Okänt
+// eller saknat värde lämnar markupens förvalda `checked` orörd.
+function applyRadioSetting(name, value){
+  if(typeof value !== 'string') return
+  const radio = document.querySelector(`input[name="${name}"][value="${value}"]`)
+  if(radio) radio.checked = true
 }
 
 // Kryssa i den radioknapp som motsvarar sparat tema. Skyddad med typeof:
@@ -1441,16 +1605,175 @@ function saveSettings(){
   // Null-säker fältläsning: tidigare kunde t.ex. el('playerName').value kasta om
   // ett fält saknades, vilket fick HELA sparningen (inkl. vald utbildning) att tyst
   // misslyckas. Nu sparas alltid det som finns.
+  const num = parseInt(el('numQuestions')?.value, 10)
   const s = {
     name: (el('playerName')?.value || '').trim(),
     types: getSelectedTypes(),
     practiceWrong: !!el('practiceWrong')?.checked,
     timerEnabled: !!el('timerEnabled')?.checked,
     soundEnabled: !!el('soundEnabled')?.checked,
+    hapticsEnabled: !!el('hapticsEnabled')?.checked,
     showNonMedical: !!el('showNonMedical')?.checked,
-    education: getSelectedEducation()
+    grading: gradingMode(),
+    fcDirection: fcDirectionMode(),
+    education: getSelectedEducation(),
+    // Ämne och antal bor på STARTSIDAN, inte på inställningssidan, men sparas
+    // här: de är lika mycket "mitt val" som utbildningen bredvid dem.
+    topic: el('topic')?.value || '',
+    numQuestions: Number.isFinite(num) ? num : 10
   }
   try{ localStorage.setItem(SETTINGS_KEY, JSON.stringify(s)) }catch{}
+}
+
+// ============================================================================
+// MINA DATA — vad appen sparar, och hur man blir av med det
+// ============================================================================
+// Allt appen sparar ligger i localStorage, alltså per webbläsare OCH per fack
+// (egen flik och hemskärmsgenväg är skilda fack). Fram till 0.9.330 fanns bara
+// "Rensa topplista" inne på topplistan; fel-listan, Leitner-lådorna och
+// dagsutmaningens svit gick inte att komma åt någonstans.
+//
+// Spellägenas nycklar står som STRÄNGAR här, inte som importerade konstanter.
+// Varje läge äger sin nyckel i sin egen fil (§12) och app.js ska inte vara
+// beroende av att modulen är laddad för att kunna räkna eller rensa. Nya lägen
+// läggs till i MODE_SCORE_KEYS.
+const MODE_SCORE_KEYS = [
+  'hur_highscores_matcha',
+  'hur_highscores_leitner',
+  'hur_highscores_tidsjakt',
+  'hur_highscores_dagsutmaning',
+  'hur_highscores_sortera',
+  'hur_highscores_pop',
+  'hur_highscores_shoot'
+]
+const LEITNER_STATE_STORAGE_KEY = 'hur_leitner_state'
+const DAGSUTMANING_STATE_STORAGE_KEY = 'hur_dagsutmaning_state'
+const THEME_STORAGE_KEY = 'hur_theme'
+
+function readStored(key, fallback){
+  try{
+    const raw = localStorage.getItem(key)
+    return raw ? JSON.parse(raw) : fallback
+  }catch(e){ return fallback }
+}
+
+function storedArrayLength(key){
+  const v = readStored(key, [])
+  return Array.isArray(v) ? v.length : 0
+}
+
+// Antal nycklar i ett sparat objekt, ev. i en underegenskap (Leitners
+// {cards:{…}}, dagsutmaningens {done:{…}}).
+function storedObjectSize(key, prop){
+  const v = readStored(key, null)
+  if(!v || typeof v !== 'object') return 0
+  const target = prop ? v[prop] : v
+  return (target && typeof target === 'object') ? Object.keys(target).length : 0
+}
+
+// Ett fack per rad i "Rensa sparat". `count` är bara till för siffran i
+// etiketten – rensningen går alltid på `keys`, så ett fack med trasig JSON
+// (count 0) städas ändå bort.
+const DATA_BUCKETS = {
+  scores: {
+    keys: () => [NEW_SCORES_KEY, OLD_SCORES_KEY, ...MODE_SCORE_KEYS],
+    count: () => [NEW_SCORES_KEY, OLD_SCORES_KEY, ...MODE_SCORE_KEYS]
+      .reduce((n, k) => n + storedArrayLength(k), 0),
+    // "resultat" och "kort" nedan är oböjda i plural (ett resultat, flera
+    // resultat) – därför ingen ternär, till skillnad från fråga/frågor.
+    label: n => `${n} resultat`
+  },
+  wrong: {
+    keys: () => [WRONG_KEY],
+    count: () => storedObjectSize(WRONG_KEY),
+    label: n => `${n} ${n === 1 ? 'fråga' : 'frågor'}`
+  },
+  leitner: {
+    keys: () => [LEITNER_STATE_STORAGE_KEY],
+    count: () => storedObjectSize(LEITNER_STATE_STORAGE_KEY, 'cards'),
+    label: n => `${n} kort`
+  },
+  dagsutmaning: {
+    keys: () => [DAGSUTMANING_STATE_STORAGE_KEY],
+    count: () => storedObjectSize(DAGSUTMANING_STATE_STORAGE_KEY, 'done'),
+    label: n => `${n} ${n === 1 ? 'dag' : 'dagar'}`
+  },
+  // Sista facket laddar om sidan efter rensning: formulärets fält står kvar med
+  // de gamla värdena annars, och nästa "Spara" hade skrivit tillbaka precis det
+  // man just bad om att få bort. Temat behöver dessutom målas om.
+  settings: {
+    keys: () => [SETTINGS_KEY, THEME_STORAGE_KEY],
+    count: null,
+    reload: true
+  }
+}
+
+// Antal frågor som är utestängda från både quiz och flashcards.
+function hiddenQuestionCount(){
+  const flags = loadFlags()
+  return Object.keys(flags).filter(id => flags[id] && flags[id].excluded).length
+}
+
+// Ta tillbaka alla utestängda frågor. `reported` (markerad som felaktig) rörs
+// INTE – det är en helt annan sak än att gömma frågan för sig själv.
+function restoreHiddenQuestions(){
+  const flags = loadFlags()
+  Object.keys(flags).forEach(id => { if(flags[id]) delete flags[id].excluded })
+  saveFlags(flags)
+  renderDataCounts()
+}
+
+// Skriv ut antalen i "Mina data" och visa raden om dolda frågor bara när det
+// FINNS dolda frågor. Normalfallet är noll, och då ska rutan vara tyst.
+function renderDataCounts(){
+  document.querySelectorAll('[data-count]').forEach(span => {
+    const bucket = DATA_BUCKETS[span.dataset.count]
+    if(!bucket || !bucket.count){ span.textContent = ''; return }
+    const n = bucket.count()
+    span.textContent = n ? `— ${bucket.label(n)}` : '— tomt'
+  })
+
+  const box = el('hiddenQuestionsBox')
+  if(!box) return
+  const n = hiddenQuestionCount()
+  if(!n){ box.classList.add('hidden'); return }
+  const text = el('hiddenQuestionsText')
+  if(text){
+    text.textContent = n === 1
+      ? 'En fråga är dold och tas inte med i quiz eller flashcards.'
+      : `${n} frågor är dolda och tas inte med i quiz eller flashcards.`
+  }
+  box.classList.remove('hidden')
+}
+
+// Rensa de fack som är ikryssade. En bekräftelse, inte en per fack: den som
+// kryssat fyra rutor och tryckt Rensa har redan sagt vad hen vill.
+function clearSelectedData(){
+  const picked = Array.from(document.querySelectorAll('input[data-clear]'))
+    .filter(cb => cb.checked)
+    .map(cb => cb.dataset.clear)
+    .filter(name => DATA_BUCKETS[name])
+
+  if(!picked.length){
+    alert('Kryssa i vad du vill rensa först.')
+    return
+  }
+  if(!confirm(`Rensa ${picked.length === 1 ? 'det valda facket' : `de ${picked.length} valda facken`}? Det gäller den här webbläsaren och går inte att ångra.`)) return
+
+  let reload = false
+  picked.forEach(name => {
+    const bucket = DATA_BUCKETS[name]
+    if(bucket.reload) reload = true
+    bucket.keys().forEach(k => { try{ localStorage.removeItem(k) }catch(e){} })
+  })
+
+  if(reload){ location.reload(); return }
+
+  document.querySelectorAll('input[data-clear]').forEach(cb => { cb.checked = false })
+  renderDataCounts()
+  // Topplistevyn kan ligga renderad bakom inställningssidan – bygg om den så
+  // att den inte visar rader som just raderats.
+  try{ if(!el('highscores')?.classList.contains('hidden')) showHighscores() }catch(e){}
 }
 
 // Vilka typer en ämnesetikett erbjuder, avläst ur parentesen, t.ex.
@@ -1673,6 +1996,9 @@ function updateStartButtons(){
 
 function showSettings(){
   applySettings()
+  // Rensa-kryssen är inte en inställning utan en engångsavsikt – de ska aldrig
+  // ligga kvar ikryssade från förra besöket och vänta på ett tryck.
+  document.querySelectorAll('input[data-clear]').forEach(cb => { cb.checked = false })
   el('setup').classList.add('hidden')
   el('settings').classList.remove('hidden')
 }
@@ -1680,6 +2006,15 @@ function showSettings(){
 function hideSettings(){
   el('settings').classList.add('hidden')
   el('setup').classList.remove('hidden')
+}
+
+// Kortens riktning: 'forward' (fråga → svar), 'reverse' (svar → fråga) eller
+// 'mixed' (slumpas per kort). Baklänges är en ANNAN färdighet än framlänges —
+// att se "scapula" och säga "skulderblad" är inte samma sak som tvärtom.
+function fcDirectionMode(){
+  const r = document.querySelector('input[name="fcDirection"]:checked')
+  const v = r ? r.value : 'forward'
+  return (v === 'reverse' || v === 'mixed') ? v : 'forward'
 }
 
 async function startFlashcards() {
@@ -1734,9 +2069,18 @@ async function startFlashcards() {
     return
   }
 
+  const dir = fcDirectionMode()
   fcCards = shuffle(filtered.slice())
     .slice(0, Math.min(num, filtered.length))
-    .map(q => ({ prompt: q.prompt, sub: q.sub || '', correct: q.correct }))
+    .map(q => {
+      const flip = dir === 'reverse' || (dir === 'mixed' && Math.random() < 0.5)
+      if(!flip) return { prompt: q.prompt, sub: q.sub || '', correct: q.correct }
+      // Baklänges: `sub` följer INTE med. Fältet är ett förtydligande till
+      // frågesidan ("Extrinsisk muskel" + "(Vad innebär det?)") och blir
+      // meningslöst eller direkt vilseledande när definitionen är frågan.
+      // Att i stället klistra det på svaret vore lika fel för muskelkorten.
+      return { prompt: q.correct, sub: '', correct: q.prompt }
+    })
 
   fcIdx = 0
   fcSessionStart = Date.now()
@@ -1854,6 +2198,10 @@ function cancelFlashcards() {
 function cancelQuiz(){
   if(confirm('Är du säker? Ditt resultat sparas inte.')) {
     el('quiz').classList.add('hidden')
+    // Tentalägets blindläge är per omgång – städa det, annars saknas
+    // poängbrickan i nästa quiz som körs med direkträttning.
+    el('quiz').classList.remove('quiz-blind')
+    quizPendingAnswer = null
     el('setup').classList.remove('hidden')
     el('result').classList.add('hidden')
     el('highscores').classList.add('hidden')
@@ -1933,10 +2281,17 @@ function init(){
     })
   })
 
+  // Mina data: ta tillbaka dolda frågor och rensa valda fack.
+  el('restoreHidden')?.addEventListener('click', restoreHiddenQuestions)
+  el('clearData')?.addEventListener('click', clearSelectedData)
+
   // Uppdatera startknapparnas av/på när ämnet byts. I sökläge (#topicSearch
   // ifyllt) synkas Utbildning också till det valda ämnets egen utbildning, och
   // sökfältet töms.
-  el('topic').addEventListener('change', ()=>{ syncEducationToSelectedTopic(); updateStartButtons() })
+  // Ämnet och antalet sparas också – de är lika mycket "mitt val" som
+  // utbildningen, och föll tidigare tillbaka till förvalet vid varje besök.
+  el('topic').addEventListener('change', ()=>{ syncEducationToSelectedTopic(); updateStartButtons(); saveSettings() })
+  el('numQuestions')?.addEventListener('change', saveSettings)
   // Byte av utbildning bygger om ämneslistan (utbildning + frågetyp) och sparar valet.
   el('education')?.addEventListener('change', ()=>{ updateTopicOptions(); updateStartButtons(); saveSettings() })
   // Sök ämne i alla utbildningar: filtrerar #topic-listan medan man skriver

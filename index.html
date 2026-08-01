@@ -69,7 +69,7 @@
     "educationalUse": "practice",
     "learningResourceType": ["quiz", "flashcard", "reference"],
     "datePublished": "2026-05-27",
-    "dateModified": "2026-08-01",
+    "dateModified": "2026-08-02",
     "sameAs": [
       "https://www.instagram.com/anatomiquiz.se",
       "https://www.facebook.com/anatomiquizse"
@@ -168,7 +168,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="css/styles.css?v=0.9.327">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.330">
 </head>
 <body>
 
@@ -566,7 +566,13 @@
 
     <!-- =========================================================
          Inställningssida — sparas permanent (dold initialt).
-         Namn, frågetyper (piller), öva-extra och visa tid bor här.
+         GRUPPERAD i fem block (0.9.330): sidan var en platt vägg av kryssrutor
+         och växte varje gång en inställning tillkom. Blocken ärver formen från
+         topplistans .hs-modes (hårfin överlinje + h3 i 1rem) i stället för att
+         uppfinna en ny — se CLAUDE_REGLER §0.5 punkt 3.
+         Ordning: namnet först (ett fält, behöver ingen rubrik), sedan Utseende
+         → Vad du övar på → Hur du övar → Ljud & känsel → Mina data. Det
+         raderande blocket ligger SIST, längst från Spara-knappen.
          ========================================================= -->
     <section id="settings" class="card hidden" aria-labelledby="settingsHeading">
       <nav class="crumbs" aria-label="Brödsmulor">
@@ -585,53 +591,155 @@
            Spara – eftersom hela poängen är att se resultatet.
            Segmenterat reglage i stället för fristående radioknappar i lista
            (se 0.9.263/0.9.264 — tre olika textlängder gjorde radiolistan
-           oläslig, både hopklämd på mobil och glesad ut på desktop). -->
-      <span class="settings-label" id="themeLabel">Utseende</span>
-      <div class="theme-switch" role="radiogroup" aria-labelledby="themeLabel">
-        <input type="radio" name="theme" id="themeLight" value="light" checked />
-        <label for="themeLight">Ljust</label>
-        <input type="radio" name="theme" id="themeAuto" value="auto" />
-        <label for="themeAuto">Följ systemet</label>
-        <input type="radio" name="theme" id="themeDark" value="dark" />
-        <label for="themeDark">Mörkt</label>
+           oläslig, både hopklämd på mobil och glesad ut på desktop).
+           Klassen heter .seg-switch och inte .theme-switch sedan 0.9.330:
+           samma reglage bär nu även Rättning och Flashcards-riktning. -->
+      <div class="settings-group">
+        <h3 class="settings-group-title">Utseende</h3>
+        <span class="settings-label" id="themeLabel">Tema</span>
+        <div class="seg-switch" role="radiogroup" aria-labelledby="themeLabel">
+          <input type="radio" name="theme" id="themeLight" value="light" checked />
+          <label for="themeLight">Ljust</label>
+          <input type="radio" name="theme" id="themeAuto" value="auto" />
+          <label for="themeAuto">Följ systemet</label>
+          <input type="radio" name="theme" id="themeDark" value="dark" />
+          <label for="themeDark">Mörkt</label>
+        </div>
+        <p class="settings-hint">Ljust är förvalt. Följ systemet växlar till mörkt läge när telefonen eller datorn är det.</p>
       </div>
-      <p class="settings-hint">Ljust är förvalt. Följ systemet växlar till mörkt läge när telefonen eller datorn är det.</p>
 
-      <span class="settings-label" id="qtypeLabel">Frågetyper</span>
-      <div class="checkbox-group" role="group" aria-labelledby="qtypeLabel">
-        <label class="checkbox-row" for="typeMc">
-          <input type="checkbox" id="typeMc" data-type="mc" checked />
-          <span>Flervalsfrågor</span>
-        </label>
-        <label class="checkbox-row" for="typeTf">
-          <input type="checkbox" id="typeTf" data-type="tf" checked />
-          <span>Sant eller falskt</span>
-        </label>
-        <label class="checkbox-row" for="typeFc">
-          <input type="checkbox" id="typeFc" data-type="fc" checked />
-          <span>Flashcards</span>
-        </label>
-      </div>
-      <p class="settings-hint">Välj vilka frågetyper du vill öva på. Flervalsfrågor och Sant eller falskt gäller quizet, Flashcards gäller flashcards-läget.</p>
+      <!-- Vad du övar på: urvalet av frågor och ämnen. -->
+      <div class="settings-group">
+        <h3 class="settings-group-title">Vad du övar på</h3>
 
-      <div class="checkbox-group">
-        <label class="checkbox-row" for="practiceWrong">
-          <input type="checkbox" id="practiceWrong" />
-          <span>Öva extra på de jag svarar fel på <small>(gäller quiz)</small></span>
-        </label>
-        <label class="checkbox-row" for="timerEnabled">
-          <input type="checkbox" id="timerEnabled" checked />
-          <span>Visa tid <small>(Tid räknas alltid, men du vill kanske inte stressas av att se räknaren)</small></span>
-        </label>
-        <label class="checkbox-row" for="soundEnabled">
-          <input type="checkbox" id="soundEnabled" checked />
-          <span>Ljudeffekter <small>(korta pip vid rätt/fel, t.ex. i Matcha)</small></span>
-        </label>
-        <label class="checkbox-row" for="showNonMedical">
-          <input type="checkbox" id="showNonMedical" />
-          <span>Visa även icke-medicinska ämnen <small>(specialämnen som inte rör anatomi eller fysiologi, t.ex. Moho och OTIPM, visas under den utbildning de hör till)</small></span>
-        </label>
+        <span class="settings-label" id="qtypeLabel">Frågetyper</span>
+        <div class="checkbox-group" role="group" aria-labelledby="qtypeLabel">
+          <label class="checkbox-row" for="typeMc">
+            <input type="checkbox" id="typeMc" data-type="mc" checked />
+            <span>Flervalsfrågor</span>
+          </label>
+          <label class="checkbox-row" for="typeTf">
+            <input type="checkbox" id="typeTf" data-type="tf" checked />
+            <span>Sant eller falskt</span>
+          </label>
+          <label class="checkbox-row" for="typeFc">
+            <input type="checkbox" id="typeFc" data-type="fc" checked />
+            <span>Flashcards</span>
+          </label>
+        </div>
+        <p class="settings-hint">Välj vilka frågetyper du vill öva på. Flervalsfrågor och Sant eller falskt gäller quizet, Flashcards gäller flashcards-läget.</p>
+
+        <div class="checkbox-group">
+          <label class="checkbox-row" for="showNonMedical">
+            <input type="checkbox" id="showNonMedical" />
+            <span>Visa även icke-medicinska ämnen <small>(specialämnen som inte rör anatomi eller fysiologi, t.ex. Moho och OTIPM, visas under den utbildning de hör till)</small></span>
+          </label>
+        </div>
       </div>
+
+      <!-- Hur du övar: upplägget under en omgång. -->
+      <div class="settings-group">
+        <h3 class="settings-group-title">Hur du övar</h3>
+
+        <!-- Rättning. "Rätta i slutet" är tentaläget: inget facit, ingen färg,
+             ingen poäng under omgången — allt kommer på resultatskärmen som en
+             genomgång fråga för fråga. Se quizGrading i js/app.js. -->
+        <span class="settings-label" id="gradingLabel">Rättning</span>
+        <div class="seg-switch seg-switch--two" role="radiogroup" aria-labelledby="gradingLabel">
+          <input type="radio" name="grading" id="gradingInstant" value="instant" checked />
+          <label for="gradingInstant">Rätta direkt</label>
+          <input type="radio" name="grading" id="gradingEnd" value="end" />
+          <label for="gradingEnd">Rätta i slutet</label>
+        </div>
+        <p class="settings-hint">Rätta direkt visar facit efter varje fråga. Rätta i slutet håller inne facit, färgerna och poängen tills hela quizet är klart – som på en tenta – och ger dig en genomgång fråga för fråga på resultatskärmen. Gäller quizet, inte spellägena.</p>
+
+        <!-- Flashcards-riktning. Baklängesriktningen är en annan färdighet: att
+             se "scapula" och säga "skulderblad" är inte samma sak som tvärtom. -->
+        <span class="settings-label" id="fcDirLabel">Flashcards: riktning</span>
+        <div class="seg-switch" role="radiogroup" aria-labelledby="fcDirLabel">
+          <input type="radio" name="fcDirection" id="fcDirForward" value="forward" checked />
+          <label for="fcDirForward">Fråga → svar</label>
+          <input type="radio" name="fcDirection" id="fcDirReverse" value="reverse" />
+          <label for="fcDirReverse">Svar → fråga</label>
+          <input type="radio" name="fcDirection" id="fcDirMixed" value="mixed" />
+          <label for="fcDirMixed">Blandat</label>
+        </div>
+        <p class="settings-hint">Baklänges visar svaret först och låter dig komma på termen. Blandat slumpar riktning per kort. Vissa kort har långa svar och blir otympliga baklänges.</p>
+
+        <div class="checkbox-group">
+          <label class="checkbox-row" for="practiceWrong">
+            <input type="checkbox" id="practiceWrong" />
+            <span>Öva extra på de jag svarar fel på <small>(gäller quiz)</small></span>
+          </label>
+          <label class="checkbox-row" for="timerEnabled">
+            <input type="checkbox" id="timerEnabled" checked />
+            <span>Visa tid <small>(Tid räknas alltid, men du vill kanske inte stressas av att se räknaren)</small></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Ljud & känsel. Vibrationen saknade av/på ända till 0.9.330 trots att
+           ljudet haft det länge; sex filer anropade navigator.vibrate rakt av. -->
+      <div class="settings-group">
+        <h3 class="settings-group-title">Ljud &amp; känsel</h3>
+        <div class="checkbox-group">
+          <label class="checkbox-row" for="soundEnabled">
+            <input type="checkbox" id="soundEnabled" checked />
+            <span>Ljudeffekter <small>(korta pip vid rätt/fel, t.ex. i Matcha)</small></span>
+          </label>
+          <label class="checkbox-row" for="hapticsEnabled">
+            <input type="checkbox" id="hapticsEnabled" checked />
+            <span>Vibration <small>(korta stötar vid tryck och facit; alla telefoner och webbläsare stöder det inte)</small></span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Mina data. Allt appen sparar bor i localStorage, alltså per webbläsare
+           och per fack (egen flik och hemskärmsgenväg är skilda fack). Här syns
+           vad som finns och här går det att ta bort. -->
+      <div class="settings-group">
+        <h3 class="settings-group-title">Mina data</h3>
+
+        <!-- Dolda frågor: visas BARA när det faktiskt finns några, annars är
+             raden tyst. Uteslutna frågor filtreras bort ur både quiz och
+             flashcards (isExcluded i js/app.js) – utan den här raden fanns
+             ingen väg tillbaka. -->
+        <div id="hiddenQuestionsBox" class="settings-note hidden">
+          <p id="hiddenQuestionsText"></p>
+          <div class="actions">
+            <button id="restoreHidden" class="btn" type="button">Visa alla igen</button>
+          </div>
+        </div>
+
+        <span class="settings-label" id="clearDataLabel">Rensa sparat</span>
+        <div class="checkbox-group" role="group" aria-labelledby="clearDataLabel">
+          <label class="checkbox-row" for="clearScoresData">
+            <input type="checkbox" id="clearScoresData" data-clear="scores" />
+            <span>Topplistor <small>(alla spellägen) <span class="settings-count" data-count="scores"></span></small></span>
+          </label>
+          <label class="checkbox-row" for="clearWrongData">
+            <input type="checkbox" id="clearWrongData" data-clear="wrong" />
+            <span>Frågor jag svarat fel på <small>(underlaget för ”öva extra”) <span class="settings-count" data-count="wrong"></span></small></span>
+          </label>
+          <label class="checkbox-row" for="clearLeitnerData">
+            <input type="checkbox" id="clearLeitnerData" data-clear="leitner" />
+            <span>Leitner-lådorna <small>(repetitionsschemat) <span class="settings-count" data-count="leitner"></span></small></span>
+          </label>
+          <label class="checkbox-row" for="clearDagsutmaningData">
+            <input type="checkbox" id="clearDagsutmaningData" data-clear="dagsutmaning" />
+            <span>Dagens utmaning <small>(svit och dagshistorik) <span class="settings-count" data-count="dagsutmaning"></span></small></span>
+          </label>
+          <label class="checkbox-row" for="clearSettingsData">
+            <input type="checkbox" id="clearSettingsData" data-clear="settings" />
+            <span>Mina inställningar <small>(namn, tema och valen på den här sidan – sidan laddas om)</small></span>
+          </label>
+        </div>
+        <div class="actions">
+          <button id="clearData" class="btn btn-cancel" type="button">Rensa valda</button>
+        </div>
+        <p class="settings-hint">Raderingen gäller bara den här webbläsaren och går inte att ångra. Vill du spara topplistan först finns Exportera resultat under Topplista.</p>
+      </div>
+
       <div class="actions">
         <button id="saveSettings" class="btn primary">Spara</button>
         <button id="backFromSettings" class="btn">Tillbaka</button>
@@ -1598,6 +1706,18 @@
 
       <!-- Ämnesrelaterade fördjupningslänkar (fylls av finishQuiz när ämnet har material i kunskapsbanken) -->
       <p id="resultLinks" class="hidden"></p>
+
+      <!-- Genomgång fråga för fråga. Visas BARA efter en omgång i tentaläge
+           ("Rätta i slutet") – där är den hela poängen, eftersom facit hållits
+           inne under omgången. I direktläget har man redan sett varje facit och
+           då vore den bara en till hopfälld låda på resultatskärmen.
+           Hopfälld som standard: resultatringen ska fortfarande vara det man ser
+           först, och Avsluta/Spela igen får inte knuffas under fold. -->
+      <details id="quizReview" class="quiz-review hidden">
+        <summary id="quizReviewSummary">Visa genomgång</summary>
+        <ol id="quizReviewList" class="quiz-review-list"></ol>
+      </details>
+
       <div class="actions">
         <button id="finishBtn" class="btn primary">Avsluta</button>
         <button id="restart" class="btn">Spela igen</button>
@@ -1866,20 +1986,20 @@
     <footer class="page-footer">
       <p>Utbildningsmaterial, inte medicinsk rådgivning. Innehållet är avsett för studier och ersätter inte kurslitteratur, undervisning eller kliniska riktlinjer. Det ska inte användas som underlag för vård eller behandling av patienter.</p>
       <p>Anatomiquiz använder inga kakor och samlar inte in personuppgifter. Läs mer i <a href="/integritet.html" class="info-link">integritetspolicyn</a>.</p>
-      <p class="page-updated">Senast uppdaterad <time data-updated datetime="2026-08-01">1 augusti 2026</time></p>
+      <p class="page-updated">Senast uppdaterad <time data-updated datetime="2026-08-02">2 augusti 2026</time></p>
     </footer>
   </main>
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.329" defer></script>
+  <script src="js/app.js?v=0.9.330" defer></script>
   <!-- Spellägesmoduler: en egen fil per läge, laddas EFTER app.js (delar globalt scope). -->
-  <script src="js/matcha.js?v=0.9.261" defer></script>
-  <script src="js/leitner.js?v=0.9.261" defer></script>
-  <script src="js/tidsjakt.js?v=0.9.262" defer></script>
+  <script src="js/matcha.js?v=0.9.330" defer></script>
+  <script src="js/leitner.js?v=0.9.330" defer></script>
+  <script src="js/tidsjakt.js?v=0.9.330" defer></script>
   <script src="js/dagsutmaning.js?v=0.9.284" defer></script>
   <script src="js/sortera.js?v=0.9.306" defer></script>
-  <script src="js/pop.js?v=0.9.327" defer></script>
-  <script src="js/shoot.js?v=0.9.329" defer></script>
+  <script src="js/pop.js?v=0.9.330" defer></script>
+  <script src="js/shoot.js?v=0.9.330" defer></script>
 </body>
 </html>
