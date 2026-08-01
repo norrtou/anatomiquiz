@@ -46,6 +46,10 @@
 // glappet garanteras >= SHOOT_GAP_FLOOR oavsett hur många hinder som är i
 // spel just nu. Det gör garantin till ett bevisbart formelvillkor
 // (shootObstacleSize) i stället för något som måste hoppas fram i tester.
+// Straffminorna som en missriktad träff lägger till (SHOOT_MINE_HIT_ADDS) kan
+// skjuta antalet FÖRBI 4, och därför har de i sin tur ett tak
+// (shootMaxObstacles) räknat ur exakt samma olikhet — det är den ena
+// obekanta löst för den andra, inte en andra, oberoende regel.
 // ============================================================================
 const SHOOT_SCORES_KEY = 'hur_highscores_shoot'
 const SHOOT_EXPORT_TYPE = 'anatomiquiz-shoot'
@@ -70,6 +74,17 @@ const SHOOT_MINE_PENALTY_MS = 10000
 // hela hinderuppsättningen vid varje nivåhöjning (spawnShootObstacles bygger
 // om ALLA hinder från grunden, se den funktionen).
 const SHOOT_MINE_LETHAL_EVERY = 5
+// Träffar du en VANLIG mina växer minfältet: en mina till läggs till, och den
+// stannar kvar resten av rundan (användarens begäran 2026-08-01). Straffet
+// blir därmed dubbelt — 10 sekunder direkt, plus en trängre korridor för all
+// framtid — vilket gör slarv dyrare ju längre rundan går.
+const SHOOT_MINE_HIT_ADDS = 1
+// Taket för hur många minor som ALLS får finnas samtidigt. Utan ett tak äter
+// straffminorna upp korridoren och luckegarantin (filhuvudet) faller: den
+// vilar på att storleken räknas mot ett KÄNT maxantal. Det faktiska taket
+// räknas dessutom mot fältets bredd i shootMaxObstacles() — det här är bara
+// den övre gränsen.
+const SHOOT_MINE_HARD_CAP = 8
 
 // Rätt bubbla: kort paus så spricktanimationen hinner synas, som Pop!. Fel
 // bubbla: längre paus så den avslöjade rätta bubblan hinner läsas.
@@ -186,7 +201,9 @@ let shootName = 'Spelare'
 let shootTopic = ''
 let shootQDeadline = 0
 let shootMineSpawnCount = 0   // löpande räknare, se SHOOT_MINE_LETHAL_EVERY
-let shootObstacleCount = 0
+let shootObstacleCount = 0    // det som FAKTISKT ligger i fältet just nu
+let shootBaseObstacleCount = 0 // vad svårighetstrappan begär
+let shootExtraMines = 0       // straffminor från träffar, se SHOOT_MINE_HIT_ADDS
 let shootObstacleSpeed = 0
 let shootLastCountLevel = null
 let shootLastSpeedLevel = null
@@ -562,6 +579,8 @@ function beginShootRound(){
   shootStartTime = Date.now()
   measureShootField()
   shootObstacleCount = 0
+  shootBaseObstacleCount = 0
+  shootExtraMines = 0
   shootObstacleSpeed = 0
   shootLastCountLevel = null
   shootLastSpeedLevel = null
@@ -705,13 +724,46 @@ function nextShootQuestion(){
 // ============================================================================
 // Hindren — se filhuvudets bevis för luckegarantin
 // ============================================================================
-// Storleken räknas mot MAXANTALET hinder (4), inte det aktuella, så att
-// garantin gäller vid varje trappsteg: gap = corridorW/count − size, och
+// Storleken räknas mot MAXANTALET hinder i trappan (4), inte det aktuella, så
+// att garantin gäller vid varje trappsteg: gap = corridorW/count − size, och
 // eftersom size ≤ corridorW/SHOOT_MAX_OBSTACLES − SHOOT_GAP_FLOOR och
 // count ≤ SHOOT_MAX_OBSTACLES, blir gap alltid ≥ SHOOT_GAP_FLOOR.
+//
+// Straffminorna ändrar INTE storleken. Att låta nämnaren följa antalet vore
+// den andra vägen att hålla garantin, och den provades — men minorna krympte
+// då till ~8 px vid taket, vilket läser som ett fel snarare än som en
+// svårighetshöjning. Konstant storlek plus ett tak på ANTALET
+// (shootMaxObstacles) ger samma bevis utan den bieffekten.
 function shootObstacleSize(corridorW){
   const raw = corridorW / SHOOT_MAX_OBSTACLES - SHOOT_GAP_FLOOR
   return Math.max(SHOOT_OBSTACLE_SIZE_FLOOR, Math.min(SHOOT_OBSTACLE_SIZE_CAP, raw)) * SHOOT_OBSTACLE_SCALE
+}
+
+// Hur många minor korridoren TÅL vid den storlek shootObstacleSize ger. Det
+// här är luckegarantin löst baklänges, inte en tumregel:
+//   gap = corridorW/count − size ≥ SHOOT_GAP_FLOOR
+//   ⟺ count ≤ corridorW / (size + SHOOT_GAP_FLOOR)
+// Samma olikhet som filhuvudets bevis, bara med count som obekant i stället
+// för size.
+//
+// Svårighetstrappans fyra hinder är alltid tillåtna — det är spelets grundform
+// (facit §4). Det är straffminorna OVANPÅ som stryps, och på en smal telefon
+// blir de därför färre än på en bred skärm.
+function shootMaxObstacles(corridorW){
+  const w = Math.max(1, corridorW || shootFieldW)
+  const ryms = Math.floor(w / (shootObstacleSize(w) + SHOOT_GAP_FLOOR))
+  return Math.max(SHOOT_MAX_OBSTACLES, Math.min(SHOOT_MINE_HARD_CAP, ryms))
+}
+
+// Sätter fältet till det antal minor som trappan + straffminorna kräver,
+// klämt mot taket. Returnerar true om antalet faktiskt ändrades, så att
+// anroparen vet om något ska sägas till spelaren.
+function syncShootObstacleCount(){
+  const önskat = Math.min(shootBaseObstacleCount + shootExtraMines, shootMaxObstacles())
+  if(önskat === shootObstacleCount) return false
+  shootObstacleCount = önskat
+  spawnShootObstacles(önskat)
+  return true
 }
 
 // Bandet minorna får spawna i: mellan bubblornas underkant och pipans topp,
@@ -846,12 +898,15 @@ function applyShootLevels(realElapsed){
   const countLvl = shootLevelFor(SHOOT_COUNT_LEVELS, eased)
   const speedLvl = shootLevelFor(SHOOT_SPEED_LEVELS, eased)
 
-  if(countLvl.count !== shootObstacleCount){
+  // Trappan styr BASantalet. Straffminorna läggs ovanpå i
+  // syncShootObstacleCount, så ett trappsteg aldrig kan ta bort minor som
+  // spelaren själv har skjutit fram.
+  if(countLvl.count !== shootBaseObstacleCount){
     const first = shootLastCountLevel === null
-    shootObstacleCount = countLvl.count
-    spawnShootObstacles(shootObstacleCount)
-    if(!first) showShootPraise(`${shootObstacleCount} hinder nu!`, 'level')
+    shootBaseObstacleCount = countLvl.count
     shootLastCountLevel = countLvl.count
+    syncShootObstacleCount()
+    if(!first) showShootPraise(`${shootObstacleCount} hinder nu!`, 'level')
   }
   if(speedLvl.speed !== shootObstacleSpeed){
     const first = shootLastSpeedLevel === null
@@ -1191,12 +1246,19 @@ function flashShootLaserMiss(){
 // tidsstraff. Frågan står kvar (samma princip som ett bomskott, se
 // handleShootMissShot ovan): minan låg i vägen för skottet, den ÄR inte
 // skottets mål.
+//
+// Träffen lägger dessutom till EN mina i fältet resten av rundan
+// (SHOOT_MINE_HIT_ADDS). Fältet byggs om från grunden, precis som vid ett
+// trappsteg — det är enda sättet den jämna spridningen och det konstanta
+// horisontella glappet (filhuvudets bevis) håller när antalet ändras.
 function handleShootObstacleHit(o){
   removeShootProjectileNode()
   shootProjectile = null
   shootAttempts++
   shootStreak = 0
   updateShootStreakChip()
+  shootExtraMines += SHOOT_MINE_HIT_ADDS
+  const flerMinor = syncShootObstacleCount()
   // "Påslag på tiden": flyttar STARTEN bakåt, vilket gör att elapsed
   // (Date.now() - shootStartTime) hoppar SHOOT_MINE_PENALTY_MS framåt —
   // samma knep som Pop!s popDeadline -= POP_PENALTY_MS, fast spegelvänt
@@ -1206,7 +1268,10 @@ function handleShootObstacleHit(o){
   triggerShootScreenShake()
   playShootTone('mine')
   shootVibrate([20, 60, 20])
-  flyShootText(`+${SHOOT_MINE_PENALTY_MS / 1000} s`, 'loss')
+  // Spelaren måste kunna SE varför fältet plötsligt blev trängre (§13.1) —
+  // straffet står i samma text som tidsstraffet. Är taket redan nått läggs
+  // ingen mina till, och då ska texten inte heller påstå det.
+  flyShootText(`+${SHOOT_MINE_PENALTY_MS / 1000} s${flerMinor ? ' · +1 mina' : ''}`, 'loss')
 }
 
 // Den röda minan (var SHOOT_MINE_LETHAL_EVERY:e spawnade) ÄR game over —
@@ -1625,7 +1690,14 @@ function onShootResize(){
       }
     })
   }
-  if(shootObstacleCount > 0) spawnShootObstacles(shootObstacleCount)
+  // Nytt fältmått → nytt tak (shootMaxObstacles räknar mot bredden), så
+  // antalet klams om innan hindren byggs om. Annars kunde en rotation till
+  // smalt läge behålla fler minor än korridoren tål.
+  if(shootObstacleCount > 0){
+    const önskat = Math.min(shootBaseObstacleCount + shootExtraMines, shootMaxObstacles())
+    shootObstacleCount = önskat
+    spawnShootObstacles(önskat)
+  }
   updateShootAim()
 }
 

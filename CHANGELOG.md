@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.329
+- **Träffar du en vanlig mina i Arcade: Shoot! växer minfältet med en mina**, på begäran. Straffet är därmed dubbelt: 10 sekunder direkt, som förut, plus en trängre korridor resten av rundan. Slarv blir alltså dyrare ju längre in i rundan man kommer, i stället för att kosta lika mycket varje gång.
+  - Svårighetstrappan styr numera **basantalet** och straffminorna läggs ovanpå, så ett trappsteg aldrig kan ta bort minor spelaren själv skjutit fram. Tidigt i rundan (basen är 1–3 hinder före 1:30) syns straffet direkt; sent i rundan möter det taket.
+  - **Taket är räknat, inte gissat.** Luckegarantin (ingen hinderuppsättning får stänga korridoren) löstes baklänges: `count ≤ korridorbredd / (minstorlek + glappgolv)`. Det ger 6 minor på en vanlig telefon (~340 px spelyta, 28,7 px glapp kvar vid taket) och 8 på en bred skärm — alltså 2–4 straffminor ovanpå trappans fyra. Testet kontrollerar både att garantin håller ända upp till taket och att den **faktiskt faller ett steg bortom det**, så gränsen bevisligen ligger där matematiken tar slut och inte där jag kände mig försiktig.
+  - Att i stället låta minorna **krympa** när de blir fler provades och förkastades: det håller garantin lika bra, men minorna gick ner till ~8 px vid taket och såg då ut som ett fel snarare än som en svårighetshöjning. Konstant storlek plus tak på antalet ger samma bevis utan bieffekten.
+  - Straffet syns i spelvyn (§13.1): texten som flyger upp säger nu `+10 s · +1 mina` — och utelämnar minan när taket redan är nått, så den aldrig lovar något som inte hände. Reglerna i startpanelen uppdaterade likaså.
+  - Fältmåtten kan ändras mitt i rundan (rotation), så antalet klams om mot det nya taket innan hindren byggs om — annars kunde en vridning till smalt läge behålla fler minor än korridoren tål.
+
 ## 0.9.328
 - **Den röda game over-minan i Arcade: Shoot! slutade dyka upp efter 1:30 — fixat.** Användaren rapporterade att den försvunnit. Orsaken hittades genom att simulera en hel runda och räkna: `spawnShootObstacles()` anropas **bara när ANTALET hinder ändras**, och antalet är maxat redan vid 1:30. Under rundans sista 3,5 minuter byttes uppsättningen alltså aldrig ut — spawnräknaren frös på 10, vilka minor som var röda låstes fast, och **i ett fall av fem innehöll de fyra kvarvarande ingen röd alls**. Då fanns ingen game over-mina i hela resten av rundan.
   - **Fixen:** en mina som glider ut genom fältets kant kommer tillbaka som en NY mina — räknaren tickar, den får ny slumpad höjd, och var femte blir röd. Det passar spelets rullande karaktär och gör att faran finns kvar hela vägen.

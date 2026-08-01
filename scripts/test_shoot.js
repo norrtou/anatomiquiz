@@ -470,6 +470,41 @@ eq('klockan knuffas framåt med straffet',
   ev('shootStartTime'), minStartTimeFöre - ev('SHOOT_MINE_PENALTY_MS'))
 
 // ============================================================================
+section('Träffad mina lägger till en mina i fältet')
+// ============================================================================
+// Användarens begäran 2026-08-01: varje träff på en VANLIG mina ökar antalet
+// minor med 1, resten av rundan. Straffet är alltså dubbelt — 10 sekunder
+// direkt PLUS en trängre korridor för all framtid. Träffen ovan är den
+// första, så räknaren ska stå på exakt ett steg.
+eq('träffen ovan lade till en mina', ev('shootExtraMines'), ev('SHOOT_MINE_HIT_ADDS'))
+eq('fältet är trappans antal PLUS straffminorna',
+  ev('shootObstacleCount'), ev('shootBaseObstacleCount') + ev('shootExtraMines'))
+eq('minorna i fältet är lika många som räknaren säger',
+  ev('shootObstacles.length'), ev('shootObstacleCount'))
+
+// Trappsteget får aldrig ta bort minor spelaren själv skjutit fram: det
+// styr BASantalet, straffminorna ligger ovanpå.
+const basFöreSteg = ev('shootBaseObstacleCount')
+const extraFöreSteg = ev('shootExtraMines')
+ev('applyShootLevels(60000)')   // facit §4: 1:00 → 3 hinder i basen
+eq('trappan höjde basantalet', ev('shootBaseObstacleCount'), 3)
+ok('basen steg faktiskt jämfört med före', 3 > basFöreSteg, { basFöreSteg })
+eq('straffminan ligger kvar ovanpå trappsteget',
+  ev('shootObstacleCount'), 3 + extraFöreSteg)
+
+// Taket: straffminorna får inte äta upp korridoren. shootMaxObstacles räknas
+// ur samma olikhet som luckegarantin, så antalet planar ut i stället för att
+// växa obegränsat.
+ev('shootExtraMines = 0; shootBaseObstacleCount = 1; shootObstacleCount = 0; syncShootObstacleCount()')
+const taket = ev('shootMaxObstacles()')
+ok('taket är minst trappans maxantal', taket >= ev('SHOOT_MAX_OBSTACLES'), taket)
+ok('taket överstiger aldrig den hårda gränsen', taket <= ev('SHOOT_MINE_HARD_CAP'), taket)
+for(let i = 0; i < 30; i++) ev('shootExtraMines += SHOOT_MINE_HIT_ADDS; syncShootObstacleCount()')
+eq('antalet minor planar ut vid taket', ev('shootObstacleCount'), taket)
+eq('fältet innehåller inte fler noder än taket', ev('shootObstacles.length'), taket)
+ok('ingen text lovar en mina till när taket är nått', ev('syncShootObstacleCount()') === false)
+
+// ============================================================================
 section('Var femte spawnade mina är röd och dödlig')
 // ============================================================================
 // Räkningen är LÖPANDE över hela rundan, inte per våg — spawnShootObstacles
@@ -548,7 +583,12 @@ function minGap(){
   return min
 }
 const gapFloor = ev('SHOOT_GAP_FLOOR')
-;[1, 2, 3, 4].forEach(count => {
+// Hela spannet, inte bara trappans fyra: straffminorna (SHOOT_MINE_HIT_ADDS)
+// kan skjuta antalet ända upp till taket, och korridoren måste vara
+// skjutbar där också.
+const antalSpann = []
+for(let n = 1; n <= ev('shootMaxObstacles()'); n++) antalSpann.push(n)
+antalSpann.forEach(count => {
   // Flera omspawn per antal, olika slumpade faser (seedad slump — inte tur).
   for(let i = 0; i < 6; i++){
     ev(`spawnShootObstacles(${count})`)
@@ -561,6 +601,23 @@ const gapFloor = ev('SHOOT_GAP_FLOOR')
   const size = ev(`shootObstacleSize(${w})`)
   const gapAtMax = w / ev('SHOOT_MAX_OBSTACLES') - size
   ok(`storleksformeln garanterar golvet vid bredd ${w}`, gapAtMax >= gapFloor - 0.001, { w, size, gapAtMax })
+  // Straffminorna kan skjuta antalet FÖRBI 4. Minstorleken är då konstant, så
+  // det är taket som måste hålla garantin — samma olikhet, count som obekant.
+  // Taket räknas per bredd: en smal telefon tål färre straffminor.
+  const tak = ev(`shootMaxObstacles(${w})`)
+  ok(`taket vid bredd ${w} ligger inom sina gränser`,
+    tak >= ev('SHOOT_MAX_OBSTACLES') && tak <= ev('SHOOT_MINE_HARD_CAP'), { w, tak })
+  for(let n = ev('SHOOT_MAX_OBSTACLES'); n <= tak; n++){
+    ok(`glappet håller vid bredd ${w} och ${n} minor`,
+      w / n - size >= gapFloor - 0.001, { w, n, size, gap: w / n - size })
+  }
+  // Och ett steg BORTOM taket ska garantin faktiskt falla — annars vore taket
+  // satt av försiktighet i stället för av matematiken, och då bevisar testet
+  // ingenting om att gränsen ligger rätt.
+  if(tak < ev('SHOOT_MINE_HARD_CAP')){
+    ok(`taket vid bredd ${w} ligger där garantin verkligen tar slut`,
+      w / (tak + 1) - size < gapFloor, { w, tak, gapEfter: w / (tak + 1) - size })
+  }
 })
 
 // ============================================================================

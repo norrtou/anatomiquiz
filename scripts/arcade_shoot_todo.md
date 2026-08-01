@@ -102,6 +102,14 @@ måste motorn garantera en lucka — ingen slumpkonfiguration får stänga korri
 helt, ens vid 4 hinder i max fart. Det är skillnaden mellan svårt och orättvist,
 och det är en spärr som ska testas, inte hoppas på.
 
+**Tillägg 0.9.329 (användarens begäran):** trappan ovan styr *basantalet*. En
+träff på en **vanlig** mina lägger till **en mina** som ligger kvar resten av
+rundan, ovanpå basen — trappsteg får aldrig ta bort straffminor. Antalet har ett
+tak räknat ur luckegarantin baklänges (`count ≤ bredd / (minstorlek + glappgolv)`,
+hårt tak 8): **6 minor på ~340 px spelyta, 8 på bred skärm.** Minstorleken hålls
+konstant; alternativet att krympa minorna när de blir fler höll garantin men gav
+~8 px minor vid taket, vilket lästes som ett fel och förkastades.
+
 ---
 
 ## 5. Poäng
