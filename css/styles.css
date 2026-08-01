@@ -5225,23 +5225,24 @@ ol li {
 }
 .shoot-stage.hidden { display: none; }
 
-/* Frågan: EN kort rad, som Pop!s .pop-prompt. Ska gå att läsa i förbifarten
-   utan att äta av spelytan. --prompt-scale sätts av js/shoot.js efter
-   frågans längd, med golv i max() (WCAG-läsbarhet). */
+/* Frågan: EN kort rad, som Pop!s .pop-prompt — men STÖRRE, på uttrycklig
+   begäran (den ska synas ordentligt trots att man siktar samtidigt).
+   Spelytan krymps nedanför för att ge plats (se .shoot-field). --prompt-scale
+   sätts av js/shoot.js efter frågans längd, med golv i max() (WCAG-läsbarhet). */
 .shoot-prompt {
   margin: 0;
   text-align: center;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.25;
   color: var(--text-primary);
-  font-size: max(0.82rem, calc(0.95rem * var(--prompt-scale, 1)));
+  font-size: max(1rem, calc(1.2rem * var(--prompt-scale, 1)));
 }
 
 .shoot-field {
   position: relative;
   overflow: hidden;
   border-radius: var(--radius);
-  height: clamp(320px, 70vh, 720px);
+  height: clamp(260px, 58vh, 620px);
   background:
     radial-gradient(circle at 50% 6%, rgba(37, 99, 235, 0.14) 0%, transparent 55%),
     radial-gradient(circle at 50% 96%, rgba(15, 118, 110, 0.16) 0%, transparent 55%),
@@ -5337,7 +5338,20 @@ ol li {
 }
 @keyframes shootQClockPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
 
-.shoot-hud-chips { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+/* Träffräknaren står VID SIDAN OM geväret, i fältets nedre hörn — inte i
+   topp-HUD:en ovanför bubblorna, där den knuffade frågan i vägen. Geväret
+   och laserlinjen är horisontellt centrerade, så vänsterhörnet är fritt. */
+.shoot-hud-bottom {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  pointer-events: none;
+}
 .shoot-score-badge {
   font-size: 0.82rem;
   font-weight: 800;
@@ -5750,8 +5764,8 @@ ol li {
   /* Spelytan är poängen med läget, som i Pop!: paddingen krymps så att ytan
      får så mycket som möjligt, höjden följer --view-fit. */
   #shoot { padding: 10px; }
-  .shoot-prompt { font-size: max(0.78rem, calc(0.9rem * var(--prompt-scale, 1))); }
-  .shoot-field { height: max(280px, calc(min(78vh, 700px) * var(--view-fit, 1))); }
+  .shoot-prompt { font-size: max(0.95rem, calc(1.1rem * var(--prompt-scale, 1))); }
+  .shoot-field { height: max(230px, calc(min(64vh, 560px) * var(--view-fit, 1))); }
   .shoot-countdown-nr { font-size: 2.4rem; }
   .shoot-missed-q, .shoot-missed-a { font-size: 0.78rem; }
 }

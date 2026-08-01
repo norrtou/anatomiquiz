@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.321
+- **Arcade: Shoot! layoutjusterad på begäran:** frågetexten (`.shoot-prompt`) är nu klart större (`max(1rem, 1.2rem × --prompt-scale)`, upp från 0,82/0,95rem) så den syns bättre medan man siktar. Spelytan (`.shoot-field`) krympt i motsvarande grad (`clamp(260px, 58vh, 620px)`, ned från 320/70vh/720px) för att ge frågan plats utan att sidan växer.
+  - **Träffräknaren flyttad ut ur topp-HUD:en, ner till fältets nedre vänsterhörn — vid sidan om geväret.** Den låg tidigare i samma rad som frågan skulle synas, rakt ovanför bubblorna. Ny `.shoot-hud-bottom`, en egen positionerad låda skild från `.shoot-hud` (som nu bara har överlevnadsmätaren och frågeklockan kvar).
+  - **Minorna halverade, både utseende och träffyta.** Ny `SHOOT_OBSTACLE_SCALE = 0.5` multiplicerad SIST i `shootObstacleSize()`, efter golv/tak — gör bara luckegarantins marginal STÖRRE än den behöver vara, aldrig mindre, så beviset för att korridoren aldrig kan stängas håller oförändrat (testat: `gapAtMax >= golvet` gäller fortfarande för alla mätta fältbredder).
+
 ## 0.9.320
 - **Var femte mina i Arcade: Shoot! är röd och riktigt dödlig igen.** Användarens uppföljning på 0.9.319: helt riskfritt kändes fel — "kanske borde var 5:e mina vara dödlig ändå". En löpande räknare (`shootMineSpawnCount`, nollställd per runda men ALDRIG per hindervåg — svårighetstrappan bygger om hela hinderuppsättningen vid varje nivåhöjning) märker var femte spawnade mina som `lethal`. Bara den röda minan avslutar rundan (`finishShoot('lethal')`, ny tredje slutskärm skild från mästerskytt/överlevde); alla andra minor är fortfarande bara ett tidsstraff. Skillnaden mellan en vanlig och en dödlig mina vilar INTE på färgen ensam (WCAG 1.4.1) — en ☠-glyf ovanpå är den riktiga signalen, rödfärgningen bara en förstärkning.
   - Egen, större "pang"-ton (`mineLethal`) för den röda minan — ett djupare, längre lågpassat brus med fallande tonhöjd, tydligt skild från den vanliga minans smäll.

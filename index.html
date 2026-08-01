@@ -168,7 +168,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="css/styles.css?v=0.9.320">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.321">
 </head>
 <body>
 
@@ -1455,11 +1455,6 @@
                 <div id="shootQClockFill" class="shoot-qclock-fill"></div>
               </div>
             </div>
-            <div class="shoot-hud-chips">
-              <span id="shootScoreBadge" class="shoot-score-badge" aria-live="polite"></span>
-              <span id="shootStreakChip" class="shoot-streak-chip hidden"></span>
-              <span id="shootRecordChip" class="shoot-record-chip hidden"></span>
-            </div>
           </div>
 
           <span id="shootPlayerLabel" class="sr-only"></span>
@@ -1476,6 +1471,14 @@
           <div id="shootLaserBeam" class="shoot-laser-beam" aria-hidden="true"></div>
           <div id="shootMuzzleFlash" class="shoot-muzzle-flash" aria-hidden="true"></div>
           <div id="shootBarrel" class="shoot-barrel" aria-hidden="true"><span class="shoot-barrel-tube"></span></div>
+
+          <!-- Träffräknaren står nu VID SIDAN OM geväret, inte i topp-HUD:en
+               ovanför bubblorna — den knuffade texten i vägen för frågan. -->
+          <div class="shoot-hud-bottom" aria-hidden="false">
+            <span id="shootScoreBadge" class="shoot-score-badge" aria-live="polite"></span>
+            <span id="shootStreakChip" class="shoot-streak-chip hidden"></span>
+            <span id="shootRecordChip" class="shoot-record-chip hidden"></span>
+          </div>
 
           <!-- Startrutan ligger INNE i spelytan, av samma tre skäl som i
                Pop!: reglerna måste synas i spelvyn (§13.1) utan att äta av
@@ -1854,7 +1857,7 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.320" defer></script>
+  <script src="js/app.js?v=0.9.321" defer></script>
   <!-- Spellägesmoduler: en egen fil per läge, laddas EFTER app.js (delar globalt scope). -->
   <script src="js/matcha.js?v=0.9.261" defer></script>
   <script src="js/leitner.js?v=0.9.261" defer></script>
@@ -1862,6 +1865,6 @@
   <script src="js/dagsutmaning.js?v=0.9.284" defer></script>
   <script src="js/sortera.js?v=0.9.306" defer></script>
   <script src="js/pop.js?v=0.9.320" defer></script>
-  <script src="js/shoot.js?v=0.9.320" defer></script>
+  <script src="js/shoot.js?v=0.9.321" defer></script>
 </body>
 </html>

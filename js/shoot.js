@@ -107,6 +107,11 @@ const SHOOT_MAX_OBSTACLES = 4
 const SHOOT_GAP_FLOOR = 26             // minsta garanterade lucka i px
 const SHOOT_OBSTACLE_SIZE_CAP = 56
 const SHOOT_OBSTACLE_SIZE_FLOOR = 16
+// Minorna halverades på uttrycklig begäran (både utseende och träffyta,
+// hitR i stepShootProjectile räknas mot o.size). Multipliceras SIST, efter
+// golv/tak — gör bara luckan STÖRRE än garantin kräver, aldrig mindre, så
+// beviset i shootObstacleSize() håller oförändrat.
+const SHOOT_OBSTACLE_SCALE = 0.5
 
 // Reducerad rörelse: trappan börjar ett steg mildare genom att låtsas att
 // mindre tid gått vid uppslag i nivåtabellerna (inte i rundans egen klocka —
@@ -661,7 +666,7 @@ function nextShootQuestion(){
 // count ≤ SHOOT_MAX_OBSTACLES, blir gap alltid ≥ SHOOT_GAP_FLOOR.
 function shootObstacleSize(corridorW){
   const raw = corridorW / SHOOT_MAX_OBSTACLES - SHOOT_GAP_FLOOR
-  return Math.max(SHOOT_OBSTACLE_SIZE_FLOOR, Math.min(SHOOT_OBSTACLE_SIZE_CAP, raw))
+  return Math.max(SHOOT_OBSTACLE_SIZE_FLOOR, Math.min(SHOOT_OBSTACLE_SIZE_CAP, raw)) * SHOOT_OBSTACLE_SCALE
 }
 
 // Jämnt spridda med en gemensam slumpad fasförskjutning. Alla hinder delar
