@@ -168,7 +168,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="css/styles.css?v=0.9.314">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.316">
 </head>
 <body>
 
@@ -527,7 +527,7 @@
               </svg>
               <span class="mode-label">Arcade: Pop!</span>
             </button>
-            <button class="btn btn-mode btn-mode--arcade" type="button" disabled aria-disabled="true">
+            <button id="startShootBtn" class="btn btn-mode btn-mode--arcade" type="button">
               <svg class="mode-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <circle cx="12" cy="12" r="7.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
                 <circle cx="12" cy="12" r="1.7" fill="currentColor"/>
@@ -1411,6 +1411,126 @@
     </section>
 
     <!-- =========================================================
+         Arcade: Shoot! — dold initialt.
+         Fyra kranier med svarsalternativ på rad överst; du siktar med en
+         gevärspipa nedtill (dra i fältet, släpp för att skjuta) och en röd
+         prickad laserlinje visar riktningen. Rätt kranium → poäng, ny fråga.
+         Tomma "oskyldiga" kranier glider förbi mellan dig och målen — träffar
+         du ett sådant är rundan slut. Max 5 minuter, klarar du hela vägen
+         blir du "mästerskytt". Logik: js/shoot.js.
+         Ämne och utbildning ärvs från startvyn som i övriga spellägen.
+         ========================================================= -->
+    <section id="shoot" class="card hidden" aria-labelledby="shootHeading">
+      <h2 id="shootHeading" class="sr-only">Arcade: Shoot!</h2>
+
+      <div id="shootStage" class="shoot-stage">
+        <div id="shootField" class="shoot-field">
+          <!-- Räknarna ligger INNE i spelfältet (pointer-events: none), som i
+               Pop!, så att ytan inte behöver delas med en panel. -->
+          <div class="shoot-hud" aria-hidden="false">
+            <div class="shoot-round-row">
+              <div class="shoot-round-track">
+                <div id="shootRoundFill" class="shoot-round-fill"></div>
+                <!-- Trappstegen i facit §4 (0:30/1:00/1:30/2:00/2:30/3:00 av
+                     5:00) — positionerna sitter i CSS, inte i style="",
+                     eftersom CSP:n (style-src 'self') blockerar inline-stilar. -->
+                <span class="shoot-round-tick shoot-round-tick--1"></span>
+                <span class="shoot-round-tick shoot-round-tick--2"></span>
+                <span class="shoot-round-tick shoot-round-tick--3"></span>
+                <span class="shoot-round-tick shoot-round-tick--4"></span>
+                <span class="shoot-round-tick shoot-round-tick--5"></span>
+                <span class="shoot-round-tick shoot-round-tick--6"></span>
+              </div>
+              <span id="shootRoundClock" class="shoot-round-clock" role="timer" aria-live="off"></span>
+            </div>
+            <div id="shootQClockRow" class="shoot-qclock-row">
+              <div class="shoot-qclock-track">
+                <div id="shootQClockFill" class="shoot-qclock-fill"></div>
+              </div>
+            </div>
+            <div class="shoot-hud-chips">
+              <span id="shootScoreBadge" class="shoot-score-badge" aria-live="polite"></span>
+              <span id="shootStreakChip" class="shoot-streak-chip hidden"></span>
+              <span id="shootRecordChip" class="shoot-record-chip hidden"></span>
+            </div>
+          </div>
+
+          <span id="shootPlayerLabel" class="sr-only"></span>
+          <span id="shootMeta" class="sr-only"></span>
+
+          <!-- Målen: fyra kranier, fasta platser. -->
+          <div id="shootTargets" class="shoot-targets" aria-hidden="true"></div>
+
+          <!-- Hindren: tomma "oskyldiga" kranier som glider förbi. Formen
+               skiljer dem från målen, inte färgen (WCAG 1.4.1). -->
+          <div id="shootObstacles" class="shoot-obstacles" aria-hidden="true"></div>
+
+          <!-- Sikte: pipa + prickad laserlinje, samma pivot. -->
+          <div id="shootLaserBeam" class="shoot-laser-beam" aria-hidden="true"></div>
+          <div id="shootMuzzleFlash" class="shoot-muzzle-flash" aria-hidden="true"></div>
+          <div id="shootBarrel" class="shoot-barrel" aria-hidden="true"><span class="shoot-barrel-tube"></span></div>
+
+          <!-- Startrutan ligger INNE i spelytan, av samma tre skäl som i
+               Pop!: reglerna måste synas i spelvyn (§13.1) utan att äta av
+               ytan, ingen speltid får gå åt innan spelaren är redo, och
+               trycket är den gest iOS kräver för att ljudet ska få spelas. -->
+          <div id="shootStart" class="shoot-start hidden">
+            <p class="shoot-start-title">Skjut kraniet med rätt svar</p>
+            <div id="shootStartRules" class="shoot-start-rules">
+              <p>Fyra kranier med svarsalternativ står på rad. Dra i fältet för att sikta, släpp för att skjuta.</p>
+              <ul>
+                <li><strong>Rätt kranium</strong> – det faller omkull, poäng, ny fråga direkt.</li>
+                <li><strong>Tomt kranium</strong> – de glider förbi mellan dig och målen. Träffar du ett sådant är rundan slut.</li>
+                <li><strong>Fel kranium eller bom</strong> – räknas som miss, men rundan fortsätter.</li>
+                <li>Klarar du dig i <strong>5 minuter</strong> blir du mästerskytt.</li>
+              </ul>
+            </div>
+            <button id="shootStartBtn" class="btn primary shoot-start-btn" type="button">Kör!</button>
+            <p class="shoot-start-time">Max 5 minuter</p>
+          </div>
+
+          <div id="shootCountdown" class="shoot-countdown hidden" role="status" aria-live="assertive">
+            <span class="shoot-countdown-label">Gör dig redo</span>
+            <span id="shootCountdownNr" class="shoot-countdown-nr"></span>
+          </div>
+
+          <span id="shootFly" class="shoot-fly hidden" aria-hidden="true"></span>
+          <p id="shootPraise" class="shoot-praise hidden" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <!-- Klart-vy (dold under rundan). Två olika slut, se js/shoot.js. -->
+      <div id="shootFinished" class="shoot-finished hidden">
+        <div class="gm-ring-wrap">
+          <svg class="gm-ring" viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="gm-ring-bg" cx="60" cy="60" r="52"></circle>
+            <circle id="shootRingProgress" class="gm-ring-progress" cx="60" cy="60" r="52"></circle>
+          </svg>
+          <div class="gm-ring-label">
+            <span id="shootRingPct" class="gm-ring-pct"></span>
+            <span class="gm-ring-sub">träffsäkert</span>
+          </div>
+        </div>
+        <p id="shootDoneText" class="shoot-done-text" aria-live="polite"></p>
+        <p id="shootStatsText" class="gm-stats-text"></p>
+        <p id="shootNextText" class="shoot-next-text"></p>
+        <p id="shootRecordBadge" class="gm-record-badge hidden" aria-live="polite">🏆 Nytt rekord!</p>
+        <p id="shootMarksmanBadge" class="shoot-marksman-badge hidden" aria-live="polite">⭐ Mästerskytt!</p>
+
+        <div id="shootMissedWrap" class="shoot-missed-wrap hidden">
+          <h3 class="shoot-missed-heading">Det här missade du</h3>
+          <ul id="shootMissed" class="shoot-missed"></ul>
+          <p id="shootMissedMore" class="shoot-missed-more hidden"></p>
+        </div>
+
+        <div class="actions">
+          <button id="shootRetryBtn" class="btn primary" type="button">Ny runda</button>
+          <button id="shootQuitBtn" class="btn" type="button">Avsluta</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
          Hantera-sektion — granska och importera frågor (dold initialt)
          ========================================================= -->
     <section id="manage" class="card hidden" aria-labelledby="manageHeading">
@@ -1571,15 +1691,15 @@
           </div>
         </div>
 
-        <div class="hs-segment hs-segment--placeholder" data-mode="shoot">
-          <h4 class="hs-segment-title">Arcade: Shoot!</h4>
+        <div class="hs-segment" data-mode="shoot">
+          <h4 class="hs-segment-title">Arcade: Shoot! <span class="hs-segment-sub">högst poäng först</span></h4>
           <ol id="scoreList-shoot" class="hs-segment-list"></ol>
-          <p class="hs-empty">Spelläget är inte byggt än — inga resultat att visa.</p>
+          <p class="hs-empty">Inga rundor än — skjut en runda så dyker den upp här.</p>
           <div class="actions">
-            <button id="exportScores-shoot" class="btn" type="button" disabled aria-disabled="true">Exportera resultat</button>
-            <button id="importScoresBtn-shoot" class="btn" type="button" disabled aria-disabled="true">Importera resultat</button>
-            <input id="importScoresFile-shoot" type="file" accept="application/json" class="file-input-hidden" aria-hidden="true" tabindex="-1" disabled />
-            <button id="clearScores-shoot" class="btn" type="button" disabled aria-disabled="true">Rensa</button>
+            <button id="exportScores-shoot" class="btn" type="button">Exportera resultat</button>
+            <button id="importScoresBtn-shoot" class="btn" type="button">Importera resultat</button>
+            <input id="importScoresFile-shoot" type="file" accept="application/json" class="file-input-hidden" aria-hidden="true" tabindex="-1" />
+            <button id="clearScores-shoot" class="btn" type="button">Rensa</button>
           </div>
         </div>
       </div>
@@ -1726,7 +1846,7 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.315" defer></script>
+  <script src="js/app.js?v=0.9.316" defer></script>
   <!-- Spellägesmoduler: en egen fil per läge, laddas EFTER app.js (delar globalt scope). -->
   <script src="js/matcha.js?v=0.9.261" defer></script>
   <script src="js/leitner.js?v=0.9.261" defer></script>
@@ -1734,5 +1854,6 @@
   <script src="js/dagsutmaning.js?v=0.9.284" defer></script>
   <script src="js/sortera.js?v=0.9.306" defer></script>
   <script src="js/pop.js?v=0.9.315" defer></script>
+  <script src="js/shoot.js?v=0.9.316" defer></script>
 </body>
 </html>

@@ -130,7 +130,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.315'
+const APP_VERSION = '0.9.316'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -701,7 +701,7 @@ const VIEW_FIT_MIN = 0.7
 const VIEW_FIT_STEP = 0.04
 // Sektioner som kan behöva krympas. Ett nytt spelläge läggs till här OCH får
 // använda var(--view-fit, 1) i sina mobilstorlekar – annars gör mätningen inget.
-const FIT_SECTIONS = ['quiz', 'matcha', 'leitner', 'tidsjakt', 'dagsutmaning', 'sortera', 'pop']
+const FIT_SECTIONS = ['quiz', 'matcha', 'leitner', 'tidsjakt', 'dagsutmaning', 'sortera', 'pop', 'shoot']
 
 function fitActiveView(){
   const avail = (window.visualViewport && window.visualViewport.height) || window.innerHeight
@@ -1195,6 +1195,7 @@ function showHighscores(){
   if(typeof renderDagsutmaningScores === 'function') renderDagsutmaningScores()
   if(typeof renderSorteraScores === 'function') renderSorteraScores()
   if(typeof renderPopScores === 'function') renderPopScores()
+  if(typeof renderShootScores === 'function') renderShootScores()
   // focus the list for keyboard users
   setTimeout(()=>{ el('scoreList').focus?.() },50)
 }
@@ -1667,6 +1668,7 @@ function updateStartButtons(){
   if(typeof updateDagsutmaningButton === 'function') updateDagsutmaningButton()
   if(typeof updateSorteraButton === 'function') updateSorteraButton()
   if(typeof updatePopButton === 'function') updatePopButton()
+  if(typeof updateShootButton === 'function') updateShootButton()
 }
 
 function showSettings(){

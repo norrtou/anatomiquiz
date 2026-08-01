@@ -54,7 +54,7 @@ SITE = "https://anatomiquiz.se"
 # resurser som inte ändrats, och scripts/bump_version.py kunde inte se
 # konstanterna alls — generator_css_versions() kräver ett literalt
 # `VAR = "x.y.z"`, och ett beräknat VERSION matchar inte.
-STYLES_V = "0.9.314"  # css/styles.css
+STYLES_V = "0.9.316"  # css/styles.css
 THEME_V = "0.9.260"   # js/theme.js
 
 # faktatexter.html är en redan indexerad sida – titeln behålls därför oförändrad.

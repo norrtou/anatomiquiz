@@ -1165,10 +1165,10 @@ select:focus-visible {
    js/app.js. */
 .container:has(#quiz:not(.hidden), #flashcards:not(.hidden), #matcha:not(.hidden),
                #leitner:not(.hidden), #tidsjakt:not(.hidden), #dagsutmaning:not(.hidden),
-               #sortera:not(.hidden), #pop:not(.hidden)) > .header,
+               #sortera:not(.hidden), #pop:not(.hidden), #shoot:not(.hidden)) > .header,
 .container:has(#quiz:not(.hidden), #flashcards:not(.hidden), #matcha:not(.hidden),
                #leitner:not(.hidden), #tidsjakt:not(.hidden), #dagsutmaning:not(.hidden),
-               #sortera:not(.hidden), #pop:not(.hidden)) > .page-footer {
+               #sortera:not(.hidden), #pop:not(.hidden), #shoot:not(.hidden)) > .page-footer {
   display: none;
 }
 /* Sidbakgrunden gäller bara quizet: den tas bort för att bildfrågans kort ska
@@ -5157,6 +5157,513 @@ ol li {
      information. */
   .pop-bubble.burst .pop-bubble-body { opacity: 0; }
   .pop-bubble:active .pop-bubble-body { transform: none; }
+}
+
+/* ============================================================================
+   ARCADE: SHOOT! (.shoot-*)
+   ============================================================================
+   Fyra kranier med svarsalternativ på rad överst; sikta med en gevärspipa
+   nedtill (dra i fältet, släpp för att skjuta) och en röd prickad laserlinje
+   visar riktningen. Tomma "oskyldiga" kranier glider förbi mellan dig och
+   målen. Logik: js/shoot.js. Fysik (hinder, projektil) skrivs som
+   transform: translate3d — aldrig top/left per bildruta, av samma skäl som
+   i Pop!.
+   Pipan och mynningsflamman är NOLLSTORA ankarelement: transform-origin
+   räknas i procent av elementets EGEN storlek, så för en 0×0-låda hamnar
+   origin exakt i ankarpunkten oavsett rotation. Laserlinjen har verklig höjd
+   och roterar i stället runt sin egen underkant (transform-origin: bottom
+   center), positionerad med left/top så att underkanten möter pivotpunkten.
+   ============================================================================ */
+
+.shoot-stage {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.shoot-stage.hidden { display: none; }
+
+.shoot-field {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  height: clamp(320px, 70vh, 720px);
+  background:
+    radial-gradient(circle at 50% 6%, rgba(139, 92, 246, 0.14) 0%, transparent 55%),
+    radial-gradient(circle at 50% 96%, rgba(15, 118, 110, 0.16) 0%, transparent 55%),
+    var(--success-bg);
+  border: 1px solid var(--accent);
+  /* Siktet fångar draget; ytan ska aldrig starta en scroll-gest. */
+  touch-action: none;
+}
+.shoot-field.shake { animation: shootScreenShake 0.4s ease; }
+@keyframes shootScreenShake {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  20% { transform: translate3d(-6px, 2px, 0); }
+  40% { transform: translate3d(5px, -3px, 0); }
+  60% { transform: translate3d(-4px, -2px, 0); }
+  80% { transform: translate3d(3px, 2px, 0); }
+}
+
+/* ---- HUD: räknarna som overlay i spelytans överkant --------------------- */
+.shoot-hud {
+  position: absolute;
+  inset: 0 0 auto 0;
+  z-index: 5;
+  padding: 8px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+/* Överlevnadstiden: räknar UPP mot 5 minuter, med trappstegen utmärkta som
+   streck i spåret (facit §13.1 punkt 3 — TVÅ mätare, inte en). */
+.shoot-round-row { display: flex; align-items: center; gap: 8px; }
+.shoot-round-track {
+  position: relative;
+  flex: 1 1 auto;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.32);
+  overflow: hidden;
+}
+.shoot-round-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--plate-violet) 0%, var(--plate-teal) 100%);
+  transition: width 0.15s linear;
+}
+.shoot-round-tick {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.6);
+}
+/* Positionerna, inte style="left:…": CSP:n (style-src 'self', ingen
+   unsafe-inline) blockerar tyst alla inline style-attribut på hela sajten
+   (se CHANGELOG 0.9.313) — elementet finns i outerHTML men style förblir
+   tomt. Trappstegen i facit §4 (0:30/1:00/1:30/2:00/2:30/3:00 av 5:00). */
+.shoot-round-tick--1 { left: 10%; }
+.shoot-round-tick--2 { left: 20%; }
+.shoot-round-tick--3 { left: 30%; }
+.shoot-round-tick--4 { left: 40%; }
+.shoot-round-tick--5 { left: 50%; }
+.shoot-round-tick--6 { left: 60%; }
+.shoot-round-clock {
+  flex: 0 0 auto;
+  font-size: 0.78rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-primary);
+}
+
+/* Frågeklockan: 6 sekunder, räknar NED. Egen, tunnare rad under
+   överlevnadsmätaren. */
+.shoot-qclock-track {
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.26);
+  overflow: hidden;
+}
+.shoot-qclock-fill {
+  height: 100%;
+  width: 100%;
+  border-radius: 999px;
+  background: var(--plate-teal);
+  transition: width 0.1s linear;
+}
+.shoot-qclock-row.warn .shoot-qclock-fill {
+  background: var(--plate-red);
+  animation: shootQClockPulse 0.6s ease-in-out infinite;
+}
+@keyframes shootQClockPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+.shoot-hud-chips { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.shoot-score-badge {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.shoot-score-badge.bump { animation: shootBadgeBump 0.35s ease; }
+@keyframes shootBadgeBump {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
+.shoot-streak-chip,
+.shoot-record-chip {
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1;
+  padding: 3px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  color: #fff;
+}
+.shoot-streak-chip { background: var(--plate-amber); }
+.shoot-record-chip { background: var(--plate-violet); }
+.shoot-streak-chip.hidden,
+.shoot-record-chip.hidden { display: none; }
+
+/* ---- Målen: fyra kranier, fasta platser (ingen fysik, till skillnad från
+   Pop!s bubblor) ----------------------------------------------------------- */
+.shoot-targets {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.shoot-target {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+/* Skallformen: rundad hjässa, smalare underkäke. Ögonhålorna (pseudoelement)
+   är det som SKILJER målet från ett hinder — formen, inte färgen (WCAG 1.4.1,
+   se hindren nedan). */
+.shoot-target-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 12%;
+  border-radius: 46% 46% 38% 38% / 52% 52% 32% 32%;
+  background: linear-gradient(160deg, #f4f4f5 0%, #d4d4d8 100%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), inset 0 -4px 8px rgba(0, 0, 0, 0.14);
+  transition: opacity 0.2s ease;
+}
+.shoot-target-body::before,
+.shoot-target-body::after {
+  content: '';
+  position: absolute;
+  top: 30%;
+  width: 22%;
+  height: 22%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #18181b 55%, #3f3f46 100%);
+}
+.shoot-target-body::before { left: 19%; }
+.shoot-target-body::after { right: 19%; }
+.shoot-target-text {
+  position: relative;
+  z-index: 1;
+  max-width: 90%;
+  font-size: 0.64rem;
+  font-weight: 800;
+  line-height: 1.08;
+  text-align: center;
+  color: #1c1917;
+  word-break: break-word;
+}
+.shoot-mark {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #fff;
+  /* Solid, INTE genomskinlig: en yta med alfakanal går inte att mäta
+     automatiskt (scripts/check_kontrast.py kräver en manuell post i
+     BAKGRUND/OMÄTBARA då) och kranierna glider under den i olika färger. */
+  background: #18181b;
+}
+/* Rätt kranium: faller omkull och tippar ner ur bild (facit §6). */
+.shoot-target.fallen .shoot-target-body { animation: shootFall 0.5s cubic-bezier(0.5, 0, 0.4, 1) forwards; }
+@keyframes shootFall {
+  to { transform: rotate(80deg) translateY(24%); opacity: 0; }
+}
+/* Fel kranium: kort skakning, sedan kvar (avslöjar var det rätta var). */
+.shoot-target.missed .shoot-target-body { animation: shootTargetShake 0.4s ease; }
+@keyframes shootTargetShake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(3px); }
+}
+/* Det avslöjade rätta kraniet efter ett felskott: mjuk glöd. */
+.shoot-target.reveal .shoot-target-body {
+  box-shadow: 0 0 0 3px var(--primary-light, #34d399), 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Hindren: tomma "oskyldiga" kranier som glider förbi ----------------- */
+/* Medvetet formlösa — runda, utan käke eller ögonhålor — så att skillnaden
+   mot målen är SKEPNADEN och inte en färgkod. */
+.shoot-obstacles {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.shoot-obstacle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  transform: translate3d(0, 0, 0);
+  background:
+    radial-gradient(circle at 32% 26%, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 45%),
+    linear-gradient(160deg, #57534e 0%, #292524 100%);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* ---- Sikte: pipa + laserlinje -------------------------------------------- */
+.shoot-laser-beam {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  width: 3px;
+  margin-left: -1.5px;
+  transform-origin: bottom center;
+  pointer-events: none;
+  background: repeating-linear-gradient(to top, rgba(239, 68, 68, 0.92) 0 4px, transparent 4px 11px);
+}
+.shoot-laser-beam.miss { animation: shootLaserMiss 0.26s ease; }
+@keyframes shootLaserMiss {
+  0%, 100% { filter: none; }
+  50% { filter: drop-shadow(0 0 6px #ef4444) brightness(1.7); }
+}
+
+.shoot-barrel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+.shoot-barrel-tube {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 38px;
+  border-radius: 6px 6px 3px 3px;
+  background: linear-gradient(180deg, #71717a 0%, #27272a 100%);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+}
+.shoot-barrel.recoil .shoot-barrel-tube { animation: shootRecoil 0.12s ease; }
+@keyframes shootRecoil {
+  0% { transform: translateX(-50%) translateY(0); }
+  30% { transform: translateX(-50%) translateY(8px); }
+  100% { transform: translateX(-50%) translateY(0); }
+}
+
+.shoot-muzzle-flash {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+.shoot-muzzle-flash::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 36px;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, 50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(253, 224, 71, 0.95) 0%, rgba(249, 115, 22, 0.75) 45%, transparent 72%);
+  opacity: 0;
+}
+.shoot-muzzle-flash.go::after { animation: shootMuzzle 0.14s ease-out; }
+@keyframes shootMuzzle {
+  0% { width: 0; height: 0; opacity: 1; }
+  40% { width: 34px; height: 34px; opacity: 1; }
+  100% { width: 10px; height: 10px; opacity: 0; }
+}
+
+.shoot-projectile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle at 35% 30%, #fff59d 0%, #f59e0b 55%, #b45309 100%);
+  box-shadow: 0 0 6px rgba(245, 158, 11, 0.85);
+}
+
+/* ---- Startrutan, nedräkning, beröm och flygtext (samma mönster som Pop!) - */
+.shoot-start {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px;
+  text-align: center;
+  overflow-y: auto;
+  background: linear-gradient(160deg, var(--plate-violet-deep) 0%, var(--plate-teal) 100%);
+  border-radius: var(--radius);
+  color: #fff;
+}
+.shoot-start.hidden { display: none; }
+.shoot-start-title { margin: 0; font-size: 1.12rem; font-weight: 800; line-height: 1.25; }
+.shoot-start-rules { font-size: 0.82rem; line-height: 1.45; max-width: 30rem; }
+.shoot-start-rules.hidden { display: none; }
+.shoot-start-rules p { margin: 0 0 8px; }
+.shoot-start-rules ul { margin: 0; padding-left: 18px; text-align: left; }
+.shoot-start-rules li { margin-bottom: 4px; }
+.shoot-start-btn { min-width: 140px; font-size: 1.02rem; }
+.shoot-start-time { margin: 0; font-size: 0.76rem; opacity: 0.85; letter-spacing: 0.04em; text-transform: uppercase; }
+
+.shoot-countdown {
+  position: absolute;
+  inset: 0;
+  z-index: 7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: rgba(24, 24, 27, 0.72);
+  border-radius: var(--radius);
+}
+.shoot-countdown.hidden { display: none; }
+.shoot-countdown-label { font-size: 0.86rem; font-weight: 700; color: #fff; }
+.shoot-countdown-nr { font-size: 3rem; font-weight: 800; color: #fff; line-height: 1; }
+.shoot-countdown-nr.tick { animation: shootCountdownTick 0.42s ease; }
+@keyframes shootCountdownTick {
+  0% { transform: scale(1.5); opacity: 0; }
+  60% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.shoot-praise {
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+  margin: 0;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #fff;
+  /* Solid, som Pop!s .pop-praise (var(--plate-violet)) — samma skäl som
+     .shoot-mark ovan: en genomskinlig platta går inte att mäta automatiskt. */
+  background: var(--plate-violet);
+  white-space: nowrap;
+  pointer-events: none;
+}
+.shoot-praise.hidden { display: none; }
+
+.shoot-fly {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  z-index: 6;
+  font-weight: 800;
+  font-size: 1.3rem;
+  pointer-events: none;
+  transform: translate(-50%, 0);
+}
+.shoot-fly.hidden { display: none; }
+.shoot-fly.gain { color: var(--primary-light); }
+.shoot-fly.loss { color: var(--error-text-strong); }
+.shoot-fly.go { animation: shootFlyUp 0.6s ease-out; }
+@keyframes shootFlyUp {
+  0% { opacity: 0; transform: translate(-50%, 10px); }
+  30% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -32px); }
+}
+
+/* ---- Klart-vyn ------------------------------------------------------------ */
+.shoot-finished { text-align: center; }
+.shoot-finished.hidden { display: none; }
+.shoot-done-text { font-size: 1.02rem; font-weight: 700; margin: 0 0 4px; }
+.shoot-finished--marksman .shoot-done-text { color: var(--primary-deep); }
+.shoot-finished--defeat .shoot-done-text { color: var(--error-text-strong); }
+.shoot-next-text { font-size: 0.86rem; color: var(--text-secondary); margin: 0 0 10px; }
+.shoot-marksman-badge {
+  display: inline-block;
+  margin: 2px 0 8px;
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--plate-amber) 0%, #b45309 100%);
+}
+.shoot-marksman-badge.hidden { display: none; }
+
+.shoot-missed-wrap { text-align: left; margin: 10px 0 4px; }
+.shoot-missed-wrap.hidden { display: none; }
+.shoot-missed-heading { font-size: 0.95rem; margin: 0 0 6px; }
+.shoot-missed { list-style: none; margin: 0; padding: 0; }
+.shoot-missed li {
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+}
+.shoot-missed-q { display: block; font-size: 0.84rem; color: var(--text-primary); }
+.shoot-missed-a { display: block; font-size: 0.82rem; font-weight: 700; color: var(--primary-deep); margin-top: 2px; }
+.shoot-missed-more { font-size: 0.8rem; color: var(--text-secondary); margin: 0; }
+.shoot-missed-more.hidden { display: none; }
+
+@media (max-width: 640px) {
+  /* Spelytan är poängen med läget, som i Pop!: paddingen krymps så att ytan
+     får så mycket som möjligt, höjden följer --view-fit. */
+  #shoot { padding: 10px; }
+  .shoot-field { height: max(280px, calc(min(78vh, 700px) * var(--view-fit, 1))); }
+  .shoot-countdown-nr { font-size: 2.4rem; }
+  .shoot-target-text { font-size: 0.6rem; }
+  .shoot-missed-q, .shoot-missed-a { font-size: 0.78rem; }
+}
+
+/* Hindrens rörelse ÄR spelet och kan inte stängas av (facit §7 punkt 8) —
+   trappan börjar i stället ett steg mildare vid reducerad rörelse
+   (SHOOT_RM_EASE_MS i js/shoot.js). Det som stängs av här är REN dekor:
+   rekyl, mynningsflamma, skärmskak och fallanimationen. Sluttillståndet
+   sätts ändå (kraniet FÖRSVINNER, blir inte bara stillastående), så
+   utebliven rörelse aldrig betyder utebliven information. */
+@media (prefers-reduced-motion: reduce) {
+  .shoot-barrel.recoil .shoot-barrel-tube,
+  .shoot-muzzle-flash.go::after,
+  .shoot-field.shake,
+  .shoot-target.fallen .shoot-target-body,
+  .shoot-target.missed .shoot-target-body,
+  .shoot-praise,
+  .shoot-fly.go,
+  .shoot-countdown-nr.tick,
+  .shoot-score-badge.bump,
+  .shoot-qclock-row.warn .shoot-qclock-fill,
+  .shoot-laser-beam.miss {
+    animation: none !important;
+    transition: none !important;
+  }
+  .shoot-target.fallen .shoot-target-body { opacity: 0; }
 }
 
 /* ============================================================================
