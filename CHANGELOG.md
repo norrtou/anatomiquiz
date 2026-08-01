@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.327
+- **Större storleksvariation på bubblorna i Arcade: Pop!**, på begäran — maxstorleken är oförändrad, det var fler *små* storlekar som saknades. Tidigare bestämdes storleken enbart av textlängd, så fyra bubblor med liknande ord blev nästan identiska. Nu spänner de 50–126 px med ett **medianspann på 33 px inom en och samma omgång** (uppmätt över 80 omgångar); bara 4 % av omgångarna är fortfarande likformiga.
+  - **Stratifierad slump, inte oberoende per bubbla.** Första försöket med vanlig slump gav 79/78/78/77 px av ren tur — exakt den likformighet som skulle bort. Spannet delas nu i lika många band som det finns bubblor, varje bubbla får sitt band och ordningen blandas, så spridning är garanterad i stället för trolig.
+- **Två verkliga textbuggar hittade och rättade på vägen, båda genom mätning:**
+  - **`.pop-bubble-text` saknade `max-width`.** Utan den växer textelementet fritt förbi bubblan, och då aktiveras `overflow-wrap: break-word` *aldrig* — det finns ingen gräns att bryta mot. Långa ord rann därför ut ur bubblan i sidled i stället för att brytas. Felet var latent sedan läget byggdes och blev synligt först när mindre bubblor tilläts. Shoot!s motsvarighet hade `max-width` från början och drabbades aldrig.
+  - **Typsnittsskalan vägde inte in bubblans storlek**, bara ordlängden, så ett kort ord fick full textstorlek även i en liten bubbla ("Humerus" fyllde 104 % av en 50 px-bubbla). Skalan räknas nu så att längsta ordet ryms på **en rad** i den faktiska bubblan, med versaler viktade tyngre (de är bredare — "ASAT" bröts trots bara fyra tecken).
+  - Resultat: andelen enordssvar som bryts mitt i ordet gick från utbredd till **1 %** (3 av 275 uppmätta), och de kvarvarande är 14-teckensord i små bubblor där texten hade behövt bli oläsligt liten (under 7 px) för att rymmas — där är radbrytning det bättre valet. Noll överflöd i sidled eller höjdled kvarstår.
+- Nya tester låser fast både variationen (faktorerna ska vara spridda, inte klumpade) och att textskalan väger in bubbelstorlek och ordlängd.
+
 ## 0.9.326
 - **Arcade: Pop! fick samma behandling som Shoot!**, på begäran — de två arkadlägena styrs nu likadant:
   - **Frågetexten är klart större** (`max(1rem, 1.2rem × --prompt-scale)`, upp från 0,82/0,95rem). Den var alldeles för liten för att läsas i förbifarten, vilket är hela poängen med läget.

@@ -79,6 +79,16 @@ const POP_MAX_STEP_MS = 50       // hoppa aldrig längre än så per bildruta (f
 // Textlängd → bubbelstorlek och typsnittsskala.
 const POP_PROMPT_SCALE = { min: 40, max: POP_MAX_PROMPT, floor: 0.8 }
 
+// Minsta bubbelstorlek. Golv, inte riktvärde: under ~44 px blir en yta
+// besvärlig att träffa med tummen, och bubblorna ÄR spelets knappar.
+const POP_BUBBLE_MIN = 48
+// Hur långt NEDÅT en bubbla får slumpas från sin basstorlek. Maxstorleken
+// rörs inte — den är avstämd mot fältet — det är fler SMÅ storlekar som
+// saknades, så planen blir livligare än fyra nästan likstora bubblor.
+// Golvet beror på textlängd: ett långt ord får inte krympas lika hårt,
+// annars spränger texten bubblan (se popBubbleScale för typsnittet).
+const POP_BUBBLE_VARIATION_MIN = { kort: 0.52, medel: 0.62, lang: 0.72 }
+
 // Marginal före varje schemalagd ton. Se popBeep.
 const POP_AUDIO_LEAD = 0.02
 
@@ -166,13 +176,46 @@ function popTextScale(text, cfg){
 // tvinga fram ett avstavat radbryte (.pop-bubble-text har hyphens: auto som
 // sista utväg, se CSS_KARTA). Ett tvåordssvar med två korta ord ska inte
 // krympas i onödan bara för att den SAMMANLAGDA texten är lång.
-function popBubbleScale(text){
-  const longest = Math.max(0, ...String(text).trim().split(/\s+/).map(w => w.length))
-  if(longest <= 8) return 1
-  if(longest <= 11) return 0.86
-  if(longest <= 14) return 0.74
-  if(longest <= 18) return 0.62
-  return 0.52
+// Kalibrering för att räkna ut om ett ord ryms på EN rad i en given bubbla.
+// Mätt i webbläsaren: ett tecken i den feta texten är ca 0,62 × fontstorleken
+// brett. Bubblans användbara bredd är diametern minus kroppens padding
+// (2 × 6 px) gånger textelementets max-width.
+const POP_CHAR_W_RATIO = 0.62
+const POP_BUBBLE_PAD = 12
+const POP_BUBBLE_TEXT_MAXW = 0.92
+const POP_BUBBLE_BASE_FONT_PX = 15.2   // 0,95rem, se .pop-bubble-text
+
+// Typsnittsskalan räknas så att LÄNGSTA ORDET ryms på en rad i den FAKTISKA
+// bubblan. Trappan efter ordlängd är bara ett tak för läsbarheten; det är
+// utrymmesberäkningen som avgör. Skälet: ett ord som inte får plats bryts av
+// `overflow-wrap: break-word` på en godtycklig bokstav ("Caecum" → "Caecu/m"),
+// och användaren har uttryckligen sagt att texten hellre ska krympa än brytas
+// på slumpad plats. Golvet finns ändå — ett tillräckligt långt ord måste till
+// slut brytas, men då är det en sista utväg och inte normalfallet.
+// Versaler och breda gemener (m, w) är bredare än snittet som
+// POP_CHAR_W_RATIO kalibrerats mot. Utan viktningen underskattas korta
+// versalord: "ASAT" bröts på en 55 px-bubbla trots bara fyra tecken.
+function popWeightedLen(word){
+  let n = 0
+  for(const c of word) n += /[A-ZÅÄÖ]/.test(c) ? 1.22 : /[mw]/.test(c) ? 1.15 : 1
+  return n
+}
+
+function popBubbleScale(text, size){
+  const ord = String(text).trim().split(/\s+/).filter(Boolean)
+  const longest = Math.max(0, ...ord.map(w => w.length))
+  const bredast = Math.max(0, ...ord.map(popWeightedLen))
+  const trappa = longest <= 8 ? 1
+    : longest <= 11 ? 0.86
+    : longest <= 14 ? 0.74
+    : longest <= 18 ? 0.62
+    : 0.52
+  if(!size || !longest) return trappa
+  const bredd = Math.max(1, (size - POP_BUBBLE_PAD) * POP_BUBBLE_TEXT_MAXW)
+  // Säkerhetsmarginal: uppskattningen ligger nära verkligheten, och utan
+  // marginal hamnade ord som "Adenom" exakt på gränsen och bröts ändå.
+  const passar = 0.93 * bredd / (bredast * POP_CHAR_W_RATIO * POP_BUBBLE_BASE_FONT_PX)
+  return Math.max(0.45, Math.min(trappa, passar))
 }
 
 // Korta, självgenererade toner via Web Audio — aldrig externa ljudfiler (CSP
@@ -476,11 +519,43 @@ function clearPopField(){
 
 // Bubbelstorleken följer ordlängden, men taket sätts av fältet: fyra bubblor
 // ska få plats utan att ligga på varandra även på en smal telefon.
-function popBubbleSize(text, count){
+// Textlängdens golv för hur mycket en bubbla får krympas.
+function popBubbleFloor(len){
+  return len <= 8 ? POP_BUBBLE_VARIATION_MIN.kort
+    : len <= 14 ? POP_BUBBLE_VARIATION_MIN.medel
+    : POP_BUBBLE_VARIATION_MIN.lang
+}
+
+// STRATIFIERAD slump, inte oberoende per bubbla: spannet delas i lika många
+// band som det finns bubblor, varje bubbla får sitt eget band och sedan
+// blandas ordningen. Oberoende slump räckte INTE — fyra bubblor kunde landa
+// på 79/78/78/77 px av ren tur (uppmätt), alltså exakt den likformighet som
+// skulle bort. Med band garanteras att det alltid finns både små och stora
+// på planen.
+function popBubbleFactors(count){
+  const lo = POP_BUBBLE_VARIATION_MIN.kort
+  const steg = (1 - lo) / Math.max(1, count)
+  const f = []
+  for(let i = 0; i < count; i++) f.push(lo + steg * (i + Math.random()))
+  return shuffle(f)
+}
+
+// Slumpfaktorn drar bara NEDÅT (max är 1,0), så taket nedan är fortfarande
+// det som sätter största möjliga bubbla.
+function popBubbleSize(text, count, factor){
   const len = String(text).length
   const base = len <= 8 ? 96 : len <= 14 ? 112 : 126
   const budget = Math.sqrt(Math.max(1, popFieldW * popFieldH) / Math.max(1, count)) * 0.82
-  return Math.max(62, Math.round(Math.min(base, budget, Math.min(popFieldW, popFieldH) * 0.46)))
+  const tak = Math.min(base, budget, Math.min(popFieldW, popFieldH) * 0.46)
+  const golv = popBubbleFloor(len)
+  // Faktorn MAPPAS in i [golv, 1], den klampas inte. Klampning åt bort
+  // variationen helt för långa ord: tre bubblor med >14 tecken hamnade alla
+  // på golvet 0,84 och blev exakt lika stora (uppmätt 106/106/106 px).
+  // Mappningen behåller bubblans relativa plats i sitt band.
+  const lo = POP_BUBBLE_VARIATION_MIN.kort
+  const raw = typeof factor === 'number' ? factor : lo + Math.random() * (1 - lo)
+  const f = golv + ((Math.min(1, Math.max(lo, raw)) - lo) / (1 - lo)) * (1 - golv)
+  return Math.max(POP_BUBBLE_MIN, Math.round(tak * f))
 }
 
 function nextPopQuestion(){
@@ -516,8 +591,11 @@ function buildPopBubbles(q){
   ])
 
   const still = popReducedMotion()
-  opts.forEach(o => {
-    const size = popBubbleSize(o.text, opts.length)
+  // Storleksfaktorerna räknas för HELA omgången på en gång, inte per bubbla,
+  // så att spridningen kan garanteras (se popBubbleFactors).
+  const faktorer = popBubbleFactors(opts.length)
+  opts.forEach((o, idx) => {
+    const size = popBubbleSize(o.text, opts.length, faktorer[idx])
     const b = {
       text: o.text,
       correct: o.correct,
@@ -582,7 +660,7 @@ function makePopBubbleNode(b){
   // riskerar att spränga bubblan. Fler trappsteg än tidigare (som bara gick
   // till 14 tecken) eftersom ett enda ord i en tillåten fråga kan vara upp
   // till 22 (strikt filter) eller 28 (lättat) tecken långt.
-  node.style.setProperty('--bubble-scale', String(popBubbleScale(b.text)))
+  node.style.setProperty('--bubble-scale', String(popBubbleScale(b.text, b.size)))
   const body = document.createElement('span')
   body.className = 'pop-bubble-body'
   const label = document.createElement('span')

@@ -5059,10 +5059,15 @@ ol li {
   font-weight: 700;
   line-height: 1.15;
   text-align: center;
-  /* Radbryt vid ordgränser är förstahandsvalet. Ett enskilt ord som ändå
-     inte får plats (skalan räcker inte till) avstavas KORREKT (hyphens:
-     auto, sv-ordboken via <html lang="sv">) i stället för att kapas på en
-     slumpad plats — det var precis det som hände innan (0.9.319-arvet). */
+  /* MAX-WIDTH ÄR INTE KOSMETIK — utan den växer textelementet fritt förbi
+     bubblan, och då aktiveras `overflow-wrap: break-word` ALDRIG (det finns
+     ingen gräns att bryta mot). Ett långt ord rann därför ut ur bubblan i
+     sidled i stället för att brytas. Shoot!s .shoot-target-text hade
+     max-width från början och drabbades aldrig; Pop! saknade den.
+     Radbryt vid ordgränser är förstahandsvalet, break-word är sista utvägen
+     för ett enskilt ord, och hyphens: auto sätter ett korrekt bindestreck
+     när ordboken finns. */
+  max-width: 92%;
   word-break: normal;
   overflow-wrap: break-word;
   hyphens: auto;

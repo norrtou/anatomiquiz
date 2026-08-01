@@ -373,6 +373,31 @@ eq('fyra bubblor på planen', bubbleNodes().length, 4)
 eq('första frågan visas', currentId(), 'q1')
 
 // ============================================================================
+section('Bubbelstorlek — variation och att texten ryms')
+// ============================================================================
+// Storlekarna ska SPRIDAS. Oberoende slump per bubbla räckte inte: fyra
+// bubblor kunde landa på 79/78/78/77 px av ren tur, vilket är just den
+// likformighet användaren ville bort från. popBubbleFactors delar spannet i
+// band och ger varje bubbla sitt, så spridning är garanterad — inte tur.
+const faktorer = ctx.popBubbleFactors(4)
+eq('en faktor per bubbla', faktorer.length, 4)
+const faktorGolv = ev('POP_BUBBLE_VARIATION_MIN.kort')
+ok('faktorerna ligger inom [golv, 1]',
+  faktorer.every(f => f >= faktorGolv - 0.001 && f <= 1.001), faktorer)
+ok('faktorerna är spridda, inte klumpade',
+  Math.max(...faktorer) - Math.min(...faktorer) > 0.2,
+  { spann: Math.max(...faktorer) - Math.min(...faktorer) })
+
+// Textskalan ska väga in BUBBLANS storlek, inte bara ordlängden — annars får
+// ett kort ord full textstorlek även i en liten bubbla och rinner ut.
+ok('samma ord får mindre text i en mindre bubbla',
+  ctx.popBubbleScale('Humerus', 50) < ctx.popBubbleScale('Humerus', 120))
+ok('ett långt ord skalas ner mer än ett kort i samma bubbla',
+  ctx.popBubbleScale('Immunhistokemi', 90) < ctx.popBubbleScale('Ben', 90))
+ok('skalan har ett läsbarhetsgolv', ctx.popBubbleScale('Glossopharyngeusnerven', 50) >= 0.45)
+ok('skalan går aldrig över 1', ctx.popBubbleScale('Ben', 400) <= 1)
+
+// ============================================================================
 section('Bubbelfysik')
 // ============================================================================
 const inomFaltet = () => ev(`popBubbles.every(b => b.x >= 0 && b.y >= 0 && b.x + b.size <= ${FIELD_W} + 0.001 && b.y + b.size <= ${FIELD_H} + 0.001)`)
