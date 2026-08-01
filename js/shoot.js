@@ -763,31 +763,62 @@ function spawnShootObstacles(count){
   renderShootObstacles()
 }
 
-function makeShootObstacleNode(o){
-  const node = document.createElement('div')
-  node.className = 'shoot-obstacle' + (o.lethal ? ' shoot-obstacle--lethal' : '')
-  node.style.width = o.size + 'px'
-  node.style.height = o.size + 'px'
-  // Formen (spiken) räcker för att skilja mina från bubbla (WCAG 1.4.1) —
-  // men skillnaden mellan en VANLIG och en DÖDLIG mina är BARA menad att
-  // gå att se, så den får inte vila på färgen ensam heller: en skalle-glyf
-  // ovanpå, inte bara rödfärgning.
+// Skriver minans utseende efter dess lethal-flagga. Formen (spiken) skiljer
+// mina från bubbla (WCAG 1.4.1), och skillnaden mellan en VANLIG och en
+// DÖDLIG mina vilar inte heller på färgen ensam: en skalle-glyf ovanpå, inte
+// bara rödfärgning. Bruten ut ur makeShootObstacleNode eftersom en mina kan
+// BYTA status mitt i rundan när den wrappar (se refreshShootMine).
+function paintShootMine(o){
+  if(!o.node) return
+  o.node.className = 'shoot-obstacle' + (o.lethal ? ' shoot-obstacle--lethal' : '')
+  const gammal = o.node.querySelector('.shoot-obstacle-mark')
+  if(gammal) gammal.remove()
   if(o.lethal){
     const mark = document.createElement('span')
     mark.className = 'shoot-obstacle-mark'
     mark.setAttribute('aria-hidden', 'true')
     mark.textContent = '☠'
-    node.appendChild(mark)
+    o.node.appendChild(mark)
   }
+}
+
+function makeShootObstacleNode(o){
+  const node = document.createElement('div')
+  node.style.width = o.size + 'px'
+  node.style.height = o.size + 'px'
+  o.node = node
+  paintShootMine(o)
   return node
+}
+
+// En mina som glidit ut genom kanten kommer tillbaka som en NY mina: räknaren
+// tickar, den får ny höjd, och var femte blir röd.
+//
+// UTAN DET SLUTAR RÖDA MINOR DYKA UPP EFTER 1:30. spawnShootObstacles
+// anropas bara när ANTALET hinder ändras, och antalet är maxat vid 1:30 —
+// alltså byttes uppsättningen aldrig ut under rundans sista 3,5 minuter.
+// Vilka som var röda låstes då fast, och i ett fall av fem innehöll de fyra
+// sista ingen röd alls: då fanns ingen game over-mina kvar i hela rundan.
+function refreshShootMine(o){
+  shootMineSpawnCount++
+  o.lethal = shootMineSpawnCount % SHOOT_MINE_LETHAL_EVERY === 0
+  const band = shootObstacleBand(o.size)
+  o.y = band.min + Math.random() * (band.max - band.min)
+  paintShootMine(o)
 }
 
 function stepShootObstacles(dtSec){
   if(dtSec <= 0 || !shootObstacles.length) return
   const corridorW = Math.max(1, shootFieldW)
   for(const o of shootObstacles){
-    o.x = (o.x + shootObstacleSpeed * dtSec) % corridorW
-    if(o.x < 0) o.x += corridorW
+    const nyX = o.x + shootObstacleSpeed * dtSec
+    // Wrappade minan runt kanten? Då räknas den som en ny mina.
+    if(nyX >= corridorW || nyX < 0){
+      o.x = ((nyX % corridorW) + corridorW) % corridorW
+      refreshShootMine(o)
+    }else{
+      o.x = nyX
+    }
   }
 }
 

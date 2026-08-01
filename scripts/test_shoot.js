@@ -485,6 +485,30 @@ eq('inga dödliga bland minor 6–9', ev('shootObstacles.filter(o => o.lethal).l
 ev('spawnShootObstacles(1)')   // mina 10: DÖDLIG igen
 eq('tionde spawnade minan är också dödlig', ev('shootObstacles[0].lethal'), true)
 
+// REGRESSIONSSKYDD: en mina som glider ut genom kanten kommer tillbaka som
+// en NY mina, så räknaren tickar under HELA rundan. Utan det spawnas minor
+// bara när ANTALET ändras — och eftersom antalet är maxat vid 1:30 byttes
+// uppsättningen aldrig ut under rundans sista 3,5 minuter. Vilka som var
+// röda låstes fast, och i ett fall av fem fanns ingen röd kvar alls.
+ev('shootMineSpawnCount = 0')
+ev('spawnShootObstacles(4)')
+ev('shootObstacleSpeed = 200')
+const spawnFore = ev('shootMineSpawnCount')
+// Kör fysiken tillräckligt länge att alla minor hinner varva fältet.
+ev('for(let i = 0; i < 600; i++) stepShootObstacles(1/60)')
+ok('räknaren tickar vidare när minor wrappar', ev('shootMineSpawnCount') > spawnFore,
+  { fore: spawnFore, efter: ev('shootMineSpawnCount') })
+ok('minst en röd mina har hunnit dyka upp under rundan',
+  ev('shootMineSpawnCount') >= ev('SHOOT_MINE_LETHAL_EVERY'),
+  ev('shootMineSpawnCount'))
+ok('en wrappad mina håller sig kvar inom korridoren',
+  ev('shootObstacles.every(o => o.x >= 0 && o.x <= shootFieldW)'),
+  ev('shootObstacles.map(o => Math.round(o.x))'))
+ok('en wrappad mina håller sig kvar i höjdbandet',
+  ev(`(() => { const b = shootObstacleBand(shootObstacles[0].size)
+        return shootObstacles.every(o => o.y >= b.min - 0.001 && o.y <= b.max + 0.001) })()`),
+  ev('shootObstacles.map(o => Math.round(o.y))'))
+
 nodes.shootTargets.children = []
 nodes.shootObstacles.children = []
 POOL = Array.from({ length: 8 }, (_, i) => mkQ(i + 1))

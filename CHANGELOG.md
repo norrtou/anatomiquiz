@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.328
+- **Den röda game over-minan i Arcade: Shoot! slutade dyka upp efter 1:30 — fixat.** Användaren rapporterade att den försvunnit. Orsaken hittades genom att simulera en hel runda och räkna: `spawnShootObstacles()` anropas **bara när ANTALET hinder ändras**, och antalet är maxat redan vid 1:30. Under rundans sista 3,5 minuter byttes uppsättningen alltså aldrig ut — spawnräknaren frös på 10, vilka minor som var röda låstes fast, och **i ett fall av fem innehöll de fyra kvarvarande ingen röd alls**. Då fanns ingen game over-mina i hela resten av rundan.
+  - **Fixen:** en mina som glider ut genom fältets kant kommer tillbaka som en NY mina — räknaren tickar, den får ny slumpad höjd, och var femte blir röd. Det passar spelets rullande karaktär och gör att faran finns kvar hela vägen.
+  - **Mätt efter fixen** (simulerad femminutersrunda): 333 minor spawnas i stället för 10, en röd mina är synlig **67 % av speltiden**, och antalet nya röda ökar med farten genom rundan (3 → 6 → 14 → 20 → 21 per minut) — sista minuterna blir alltså farligare, vilket är rätt riktning.
+  - Regressionsskydd i testskalet: räknaren måste ticka vidare när minor wrappar, och en wrappad mina måste hålla sig kvar både inom korridoren och i höjdbandet (den får inte hamna ovanpå bubblorna eller geväret).
+  - Bruten ut `paintShootMine()` ur nodbygget, eftersom en mina numera kan **byta** status mitt i rundan och inte bara får sitt utseende en gång vid skapandet.
+
 ## 0.9.327
 - **Större storleksvariation på bubblorna i Arcade: Pop!**, på begäran — maxstorleken är oförändrad, det var fler *små* storlekar som saknades. Tidigare bestämdes storleken enbart av textlängd, så fyra bubblor med liknande ord blev nästan identiska. Nu spänner de 50–126 px med ett **medianspann på 33 px inom en och samma omgång** (uppmätt över 80 omgångar); bara 4 % av omgångarna är fortfarande likformiga.
   - **Stratifierad slump, inte oberoende per bubbla.** Första försöket med vanlig slump gav 79/78/78/77 px av ren tur — exakt den likformighet som skulle bort. Spannet delas nu i lika många band som det finns bubblor, varje bubbla får sitt band och ordningen blandas, så spridning är garanterad i stället för trolig.
