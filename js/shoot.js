@@ -1445,9 +1445,30 @@ function saveShootScore(survivedMs, finalScore, isMarksman){
   saveShootScores(scores.slice(0, 50))
 }
 
-// Ingen avbrytknapp under rundan (samma val som Pop!, se §12.2): rundan tar
-// slut av sig själv, antingen av en mina eller av klockan.
+// Från klart-vyn tillbaka till startvyn.
 function quitShoot(){
+  el('shoot').classList.add('hidden')
+  el('setup').classList.remove('hidden')
+}
+
+// Avbryt MITT I rundan (knappen i fältets nedre högra hörn). Följer samma
+// mönster som Tidsjakt, det andra tidsläget: bekräfta först, spara inget —
+// en halvspelad runda hör inte hemma i topplistan — och rensa ALLA timers,
+// inklusive nedräkningen. Missas nedräkningen startar rundan i en dold vy
+// (den buggen är redan gjord och fixad en gång i js/tidsjakt.js).
+function cancelShootRound(){
+  if(!confirm('Avbryta rundan? Resultatet sparas inte.')) return
+  shootRunning = false
+  shootLocked = true
+  clearShootTick()
+  stopShootLoop()
+  clearShootCountdown()
+  if(shootAdvanceTimer){ clearTimeout(shootAdvanceTimer); shootAdvanceTimer = null }
+  if(shootPraiseTimer){ clearTimeout(shootPraiseTimer); shootPraiseTimer = null }
+  if(shootFlyTimer){ clearTimeout(shootFlyTimer); shootFlyTimer = null }
+  removeShootProjectileNode()
+  shootProjectile = null
+  shootAiming = false
   el('shoot').classList.add('hidden')
   el('setup').classList.remove('hidden')
 }
@@ -1594,6 +1615,18 @@ document.addEventListener('DOMContentLoaded', () => {
     field.addEventListener('pointermove', onShootPointerMove)
     field.addEventListener('pointerup', onShootPointerUp)
     field.addEventListener('pointercancel', onShootPointerCancel)
+  }
+
+  // Avbryt-knappen ligger INUTI spelfältet, som fångar pointerdown för
+  // siktet. Utan stopPropagation skulle ett tryck på knappen först sätta en
+  // siktvinkel och sedan avfyra ett skott på släppet — man skulle alltså
+  // skjuta i samma gest som man avbryter. Klicket självt får däremot passera.
+  const cancelBtn = el('shootCancelBtn')
+  if(cancelBtn){
+    ;['pointerdown', 'pointermove', 'pointerup'].forEach(t => {
+      cancelBtn.addEventListener(t, ev => ev.stopPropagation())
+    })
+    cancelBtn.addEventListener('click', cancelShootRound)
   }
 
   window.addEventListener('resize', onShootResize)

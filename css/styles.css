@@ -5374,6 +5374,31 @@ ol li {
   gap: 5px;
   pointer-events: none;
 }
+
+/* Avbryt-knappen speglar träffräknaren: samma avstånd från kanten, samma
+   höjd, motsatt sida. Till skillnad från .shoot-hud-bottom måste den TA
+   emot tryck (pointer-events: auto) — resten av HUD:en släpper igenom dem
+   till siktet. Solid platta, inte genomskinlig: en yta med alfakanal går
+   inte att kontrastmäta automatiskt (scripts/check_kontrast.py). */
+.shoot-cancel {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 6;
+  pointer-events: auto;
+  padding: 5px 13px;
+  border: 0;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #fff;
+  background: #18181b;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.shoot-cancel:hover { background: #3f3f46; }
+.shoot-cancel:focus-visible { outline: 3px solid var(--primary-light); outline-offset: 2px; }
 .shoot-score-badge {
   font-size: 0.82rem;
   font-weight: 800;

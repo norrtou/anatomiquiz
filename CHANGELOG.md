@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.325
+- **Avbryt-knapp i Arcade: Shoot!**, på begäran — en liten knapp i spelfältets nedre **högra** hörn, exakt speglad mot träffräknaren till vänster (mätt: 11 px från kant och botten på båda sidor). Läget saknade tidigare helt sätt att ta sig ur en påbörjad runda.
+  - Följer samma mönster som Tidsjakt, sajtens andra tidsläge: **bekräftar först** ("Avbryta rundan? Resultatet sparas inte."), sparar inget resultat — en halvspelad runda hör inte hemma i topplistan — och rensar *alla* timers inklusive nedräkningen. Missas nedräkningen startar rundan i en dold vy, en bugg som redan gjorts och rättats en gång i `js/tidsjakt.js`.
+  - **Trycket på knappen avfyrar inte ett skott.** Knappen ligger inuti spelfältet, som fångar `pointerdown` för siktet — utan `stopPropagation` hade ett tryck först satt en siktvinkel och sedan skjutit på släppet, alltså skjutit i samma gest som man avbryter. Verifierat: inget skott, inget nytt försök räknat.
+  - Ändringen avviker medvetet från det ursprungliga designvalet i `scripts/arcade_shoot_todo.md` ("inga avbrytknappar under rundan"); facit är uppdaterat så det inte motsäger koden. **Arcade: Pop! har fortfarande ingen avbrytknapp** — 60 sekunder är kort nog, och det valet står kvar.
+
 ## 0.9.324
 - **Ny fråga i Arcade: Shoot! markeras nu med ett zoomsvep**, på begäran — tidigare byttes fråga och bubblor ut utan någon visuell markering alls, så det var lätt att missa att något nytt kommit. Sekvensen är medvetet ordnad: **frågan zoomar in först** (0–200 ms), **sedan de fyra bubblorna en i taget från vänster** (start 120/200/280/360 ms, 220 ms var), så att blicken hinner läsa vad som ska besvaras innan svaren dyker upp.
   - **Hela svepet är klart på 580 ms** — kravet var under 0,7 s. Verifierat genom att läsa webbläsarens egen animationstidslinje (`getAnimations()`), inte genom att lita på konstanterna i koden. Tidsbudgeten står som en räkneregel i kommentaren vid konstanterna, så att nästa justering inte råkar spränga den.

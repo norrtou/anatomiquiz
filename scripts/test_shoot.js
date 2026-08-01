@@ -94,7 +94,7 @@ function node(id, extra){
   'shootRingProgress', 'shootRingPct', 'shootDoneText', 'shootStatsText',
   'shootNextText', 'shootRecordBadge', 'shootMarksmanBadge',
   'shootMissedWrap', 'shootMissed', 'shootMissedMore',
-  'startShootBtn', 'shootRetryBtn', 'shootQuitBtn',
+  'startShootBtn', 'shootRetryBtn', 'shootQuitBtn', 'shootCancelBtn',
   'exportScores-shoot', 'importScoresBtn-shoot', 'importScoresFile-shoot',
   'clearScores-shoot'].forEach(id => node(id))
 
@@ -723,6 +723,39 @@ await ctx.startShoot()
 runCountdown()
 ok('spökmålet visas när det finns ett rekord', !nodes.shootRecordChip.hidden())
 ok('spökmålet visar rekordet', nodes.shootRecordChip.textContent.includes('50'))
+
+// ============================================================================
+section('Avbryt mitt i rundan')
+// ============================================================================
+nodes.shootTargets.children = []
+nodes.shootObstacles.children = []
+nodes.shootFinished.classList.add('hidden')
+POOL = Array.from({ length: 8 }, (_, i) => mkQ(i + 1))
+store['hur_highscores_shoot'] = '[]'
+await ctx.startShoot()
+runCountdown()
+ok('rundan är igång före avbrytet', ev('shootRunning'))
+
+// Nekad bekräftelse ska INTE avbryta något.
+ctx.confirmAnswer = false
+nodes.shootCancelBtn.dispatch('click')
+ok('nej i bekräftelsen låter rundan fortsätta', ev('shootRunning'))
+ok('spelvyn är kvar', !nodes.shoot.hidden())
+
+ctx.confirmAnswer = true
+nodes.shootCancelBtn.dispatch('click')
+ok('ja i bekräftelsen stoppar rundan', !ev('shootRunning'))
+ok('spelvyn döljs', nodes.shoot.hidden())
+ok('startvyn visas igen', !nodes.setup.hidden())
+ok('klart-vyn visas INTE (avbrott är inget resultat)', nodes.shootFinished.hidden())
+eq('inget resultat sparas för en avbruten runda',
+  JSON.parse(store['hur_highscores_shoot'] || '[]').length, 0)
+ok('bildruteslingan är stoppad', ev('shootRafId') === null)
+
+// Klockan får inte fortsätta ticka i bakgrunden efter avbrottet.
+const efterAvbrott = ev('shootAttempts')
+advance(30000)
+eq('inga fler missar räknas efter avbrottet', ev('shootAttempts'), efterAvbrott)
 
 // ============================================================================
 section('Tomt/otillräckligt ämne och knappstatus')

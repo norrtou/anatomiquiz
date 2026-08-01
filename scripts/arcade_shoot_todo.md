@@ -191,7 +191,11 @@ märke — inte poäng.
 - **Startrutan inne i spelytan** (`.shoot-start`), som i Pop! — reglerna där,
   inte i en `<details>` ovanför fältet. Den fällde spelplanen under fold i
   Pop! och är dessutom den gest iOS kräver för ljudet.
-- **Inga avbrytknappar under rundan.** Rundan tar slut av sig själv.
+- ~~**Inga avbrytknappar under rundan.** Rundan tar slut av sig själv.~~
+  **ÄNDRAT 0.9.325 på användarens begäran:** en liten Avbryt-knapp finns i
+  fältets nedre högra hörn, speglad mot träffräknaren till vänster. Bekräftar
+  först och sparar inget — en halvspelad runda hör inte hemma i topplistan.
+  Pop! har fortfarande ingen avbrytknapp; det gäller alltså bara Shoot!.
 
 ---
 
