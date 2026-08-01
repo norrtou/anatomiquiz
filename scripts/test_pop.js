@@ -96,7 +96,7 @@ function node(id, extra){
   'popCountdownNr', 'popFly', 'popPraise', 'popRingProgress', 'popRingPct',
   'popStart', 'popStartRules', 'popStartBtn',
   'popDoneText', 'popStatsText', 'popNextText', 'popRecordBadge', 'popMissedWrap',
-  'popMissed', 'popMissedMore', 'startPopBtn', 'popRetryBtn', 'popQuitBtn',
+  'popMissed', 'popMissedMore', 'startPopBtn', 'popRetryBtn', 'popQuitBtn', 'popCancelBtn',
   'exportScores-pop', 'importScoresBtn-pop', 'importScoresFile-pop',
   'clearScores-pop'].forEach(id => node(id))
 
@@ -529,6 +529,36 @@ ok('bubblorna står stilla vid reducerad rörelse', ev('popBubbles.length > 0 &&
 ok('men går fortfarande att poppa', (() => { const f = ev('popScore'); popBubble(true); return ev('popScore') === f + 1 })())
 flush(200)
 ctx.reducedMotion = false
+
+// ============================================================================
+section('Avbryt mitt i rundan')
+// ============================================================================
+POOL = [mkQ(1), mkQ(2), mkQ(3), mkQ(4), mkQ(5), mkQ(6), mkQ(7), mkQ(8)]
+nodes.popField.children = []
+nodes.popFinished.classList.add('hidden')
+store['hur_highscores_pop'] = '[]'
+await ctx.startPop()
+runCountdown()
+ok('rundan är igång före avbrytet', ev('popRunning'))
+
+ctx.confirmAnswer = false
+nodes.popCancelBtn.dispatch('click')
+ok('nej i bekräftelsen låter rundan fortsätta', ev('popRunning'))
+ok('spelvyn är kvar', !nodes.pop.hidden())
+
+ctx.confirmAnswer = true
+nodes.popCancelBtn.dispatch('click')
+ok('ja i bekräftelsen stoppar rundan', !ev('popRunning'))
+ok('spelvyn döljs', nodes.pop.hidden())
+ok('startvyn visas igen', !nodes.setup.hidden())
+ok('klart-vyn visas INTE (avbrott är inget resultat)', nodes.popFinished.hidden())
+eq('inget resultat sparas för en avbruten runda',
+  JSON.parse(store['hur_highscores_pop'] || '[]').length, 0)
+ok('bildruteslingan är stoppad', ev('popRafId') === null)
+
+// Klockan får inte fortsätta ticka i bakgrunden efter avbrottet.
+advance(61000)
+ok('klockan avslutar inte rundan i efterhand', nodes.popFinished.hidden())
 
 // ============================================================================
 section('Tomt/otillräckligt ämne')

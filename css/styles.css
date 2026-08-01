@@ -4848,10 +4848,28 @@ ol li {
 .pop-prompt {
   margin: 0;
   text-align: center;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.25;
   color: var(--text-primary);
-  font-size: max(0.82rem, calc(0.95rem * var(--prompt-scale, 1)));
+  font-size: max(1rem, calc(1.2rem * var(--prompt-scale, 1)));
+  /* FAST HÖJD, inte auto — samma skäl som .shoot-prompt: frågan är 1–4 rader
+     beroende på längd, och med auto-höjd flyttas hela spelytan när en ny
+     fråga kommer. I Pop! är det extra illa: bubblornas fysik räknas mot
+     fältets mått, så ett fält som byter höjd flyttar även bubblorna.
+     Höjden rymmer POP_MAX_PROMPT (120 tecken) i den nya, större graden. */
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+/* Ny fråga svepar in, som i Arcade: Shoot!. Bubblorna har sin egen
+   inflygning via fysiken (de placeras om varje fråga), så här behövs bara
+   frågans markör. */
+.pop-prompt.enter { animation: popPromptIn 0.2s cubic-bezier(0.2, 0.9, 0.3, 1.25); }
+@keyframes popPromptIn {
+  0% { opacity: 0; transform: scale(0.86); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
 .pop-field {
@@ -4915,7 +4933,46 @@ ol li {
 .pop-clock-row.danger .pop-clock { color: var(--error-text-strong); }
 @keyframes popClockPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.55; } }
 
-.pop-hud-chips { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+/* Poäng och brickor nere till VÄNSTER, Avbryt nere till HÖGER — samma
+   uppdelning som i Arcade: Shoot!, så de två arkadlägena styrs likadant.
+   Bubblorna flyter fritt i hela fältet och passerar därför under de här
+   elementen: HUD:en släpper igenom tryck (pointer-events: none) så att en
+   bubbla under poängen fortfarande går att poppa. Avbryt-knappen är det
+   enda undantaget — den MÅSTE ta emot tryck, se .pop-cancel. */
+.pop-hud-bottom {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  pointer-events: none;
+}
+
+.pop-cancel {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 6;
+  pointer-events: auto;
+  padding: 5px 13px;
+  border: 0;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #fff;
+  /* Solid, inte genomskinlig: en yta med alfakanal går inte att
+     kontrastmäta automatiskt (scripts/check_kontrast.py), och bubblor i
+     olika färger passerar under den. */
+  background: #18181b;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.pop-cancel:hover { background: #3f3f46; }
+.pop-cancel:focus-visible { outline: 3px solid var(--primary-light); outline-offset: 2px; }
 
 .pop-score-badge {
   font-size: 0.82rem;
@@ -5171,7 +5228,9 @@ ol li {
   /* Spelytan är poängen med läget: paddingen på kortet krymps så att ytan får
      så mycket som möjligt, och höjden följer --view-fit som övriga lägen. */
   #pop { padding: 10px; }
-  .pop-prompt { font-size: max(0.78rem, calc(0.9rem * var(--prompt-scale, 1))); }
+  /* Fast höjd även här, se basregeln — annars flyttar sig spelytan (och
+     därmed bubblornas fysikram) när frågan byter antal rader. */
+  .pop-prompt { font-size: max(0.95rem, calc(1.1rem * var(--prompt-scale, 1))); height: 4.75rem; }
   .pop-field { height: max(240px, calc(min(76vh, 660px) * var(--view-fit, 1))); }
   .pop-countdown-nr { font-size: 2.4rem; }
   .pop-missed-q, .pop-missed-a { font-size: 0.78rem; }
@@ -5184,6 +5243,7 @@ ol li {
    (§13.1 punkt 8). */
 @media (prefers-reduced-motion: reduce) {
   .pop-bubble-body,
+  .pop-prompt.enter,
   .pop-bubble.burst .pop-bubble-body,
   .pop-bubble.miss .pop-bubble-body,
   .pop-bubble.reveal .pop-bubble-body,

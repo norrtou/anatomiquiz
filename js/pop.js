@@ -492,6 +492,14 @@ function nextPopQuestion(){
   const promptEl = el('popPrompt')
   promptEl.textContent = popCurrent.prompt
   promptEl.style.setProperty('--prompt-scale', String(popTextScale(popCurrent.prompt, POP_PROMPT_SCALE)))
+  // Markera att frågan bytts, som i Arcade: Shoot!. Klassen måste tas bort
+  // och tvingas igenom en reflow, annars kör webbläsaren aldrig om en
+  // animation som redan ligger på elementet (samma mönster som .tick).
+  if(!popReducedMotion()){
+    promptEl.classList.remove('enter')
+    void promptEl.offsetWidth
+    promptEl.classList.add('enter')
+  }
 
   buildPopBubbles(popCurrent)
 }
@@ -1024,10 +1032,26 @@ function savePopScore(durationMs){
   savePopScores(scores.slice(0, 50))
 }
 
-// Ingen avbrytknapp under rundan (medvetet: 60 sekunder är kort, och ett
-// arkadläge ska inte ha chrome i vägen). Härifrån går man vidare efter att
-// tiden tagit slut.
+// Från klart-vyn tillbaka till startvyn.
 function quitPop(){
+  el('pop').classList.add('hidden')
+  el('setup').classList.remove('hidden')
+}
+
+// Avbryt MITT I rundan (knappen i fältets nedre högra hörn). Samma mönster
+// som Arcade: Shoot! och Tidsjakt: bekräfta först, spara inget — en
+// halvspelad runda hör inte hemma i topplistan — och rensa ALLA timers,
+// inklusive nedräkningen. Missas nedräkningen startar rundan i en dold vy.
+function cancelPopRound(){
+  if(!confirm('Avbryta rundan? Resultatet sparas inte.')) return
+  popRunning = false
+  popLocked = true
+  clearPopClock()
+  stopPopLoop()
+  clearPopCountdown()
+  if(popAdvanceTimer){ clearTimeout(popAdvanceTimer); popAdvanceTimer = null }
+  if(popFlyTimer){ clearTimeout(popFlyTimer); popFlyTimer = null }
+  hidePopPraise()
   el('pop').classList.add('hidden')
   el('setup').classList.remove('hidden')
 }
@@ -1152,6 +1176,11 @@ document.addEventListener('DOMContentLoaded', () => {
   el('popStartBtn')?.addEventListener('click', onPopStartClick)
   el('popRetryBtn')?.addEventListener('click', startPop)
   el('popQuitBtn')?.addEventListener('click', quitPop)
+  // Bubblorna lyssnar på pointerdown var för sig (inte via fältet), så
+  // knappen behöver ingen stopPropagation — men den ligger ÖVER en bubbla
+  // som råkar flyta förbi, och då ska knappen vinna. Det är den enda ytan i
+  // fältet som medvetet stjäl ett tryck från en bubbla.
+  el('popCancelBtn')?.addEventListener('click', cancelPopRound)
   el('exportScores-pop')?.addEventListener('click', exportPopScores)
   const imp = el('importScoresFile-pop')
   if(imp) imp.addEventListener('change', handleImportPopScores)

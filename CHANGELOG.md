@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.326
+- **Arcade: Pop! fick samma behandling som Shoot!**, på begäran — de två arkadlägena styrs nu likadant:
+  - **Frågetexten är klart större** (`max(1rem, 1.2rem × --prompt-scale)`, upp från 0,82/0,95rem). Den var alldeles för liten för att läsas i förbifarten, vilket är hela poängen med läget.
+  - **Fast höjd på frågeraden**, samma fix som Shoot! fick i 0.9.323. I Pop! är den ännu viktigare: bubblornas fysik räknas mot fältets mått, så ett fält som byter höjd när frågan blir längre flyttar även bubblorna mitt i rundan. Verifierat att fältets position och höjd nu är identiska för 10, 60 och 120 tecken.
+  - **Zoomsvep när frågan byts** (`.pop-prompt.enter`, 200 ms), så att man ser att en ny fråga kommit. Bubblorna har redan sin egen inflygning via fysiken — de placeras om varje fråga — så bara frågan behövde markören.
+  - **Poängen flyttad till fältets nedre vänstra hörn och en Avbryt-knapp tillagd nere till höger**, exakt speglade (mätt: 11 px från kant och botten på båda sidor). Avbryt bekräftar först, sparar inget resultat och rensar alla timers inklusive nedräkningen — samma mönster som Shoot! och Tidsjakt.
+  - **Kontrollerat att Avbryt inte stjäl bubblor:** knappen är den enda ytan i fältet som tar emot tryck (resten av HUD:en har `pointer-events: none` så bubblor kan poppas rakt igenom). Verifierat att en bubbla som ligger under knappen fortfarande går att poppa på sin fria yta.
+  - `spellagen.html` uppdaterad: Pop! beskrivs inte längre som att den saknar avbrytknapp.
+
 ## 0.9.325
 - **Avbryt-knapp i Arcade: Shoot!**, på begäran — en liten knapp i spelfältets nedre **högra** hörn, exakt speglad mot träffräknaren till vänster (mätt: 11 px från kant och botten på båda sidor). Läget saknade tidigare helt sätt att ta sig ur en påbörjad runda.
   - Följer samma mönster som Tidsjakt, sajtens andra tidsläge: **bekräftar först** ("Avbryta rundan? Resultatet sparas inte."), sparar inget resultat — en halvspelad runda hör inte hemma i topplistan — och rensar *alla* timers inklusive nedräkningen. Missas nedräkningen startar rundan i en dold vy, en bugg som redan gjorts och rättats en gång i `js/tidsjakt.js`.
