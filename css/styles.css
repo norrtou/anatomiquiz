@@ -5236,6 +5236,18 @@ ol li {
   line-height: 1.25;
   color: var(--text-primary);
   font-size: max(1rem, calc(1.2rem * var(--prompt-scale, 1)));
+  /* FAST HÖJD, inte auto. Frågan är 1–4 rader beroende på längd, och med
+     auto-höjd flyttade sig spelytan 35 px mellan en kort och en lång fråga
+     (mätt) — planen hoppade alltså under pågående runda varje gång en ny
+     fråga kom. Höjden rymmer lägets längsta tillåtna fråga
+     (SHOOT_MAX_PROMPT = 140 tecken → 4 rader → 76 px mätt vid 320–390 px
+     bredd); texten centreras vertikalt inom den. Ändras SHOOT_MAX_PROMPT
+     eller typsnittsstorleken måste den här höjden mätas om. */
+  height: 5.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .shoot-field {
@@ -5764,7 +5776,9 @@ ol li {
   /* Spelytan är poängen med läget, som i Pop!: paddingen krymps så att ytan
      får så mycket som möjligt, höjden följer --view-fit. */
   #shoot { padding: 10px; }
-  .shoot-prompt { font-size: max(0.95rem, calc(1.1rem * var(--prompt-scale, 1))); }
+  /* Fast höjd även här, se basregeln — 4 rader à 15,2 px är det uppmätta
+     värsta fallet på 320–390 px bredd. */
+  .shoot-prompt { font-size: max(0.95rem, calc(1.1rem * var(--prompt-scale, 1))); height: 5rem; }
   .shoot-field { height: max(230px, calc(min(64vh, 560px) * var(--view-fit, 1))); }
   .shoot-countdown-nr { font-size: 2.4rem; }
   .shoot-missed-q, .shoot-missed-a { font-size: 0.78rem; }

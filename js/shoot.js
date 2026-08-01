@@ -98,9 +98,15 @@ const SHOOT_MAX_STEP_MS = 50           // hoppa aldrig längre än så per bildr
 
 // Geometri (andelar av spelytans mått, uträknat vid varje mätning).
 const SHOOT_TARGET_ROW_FRAC = 0.15
-const SHOOT_OBSTACLE_ROW_FRAC = 0.5
 const SHOOT_BARREL_INSET_FRAC = 0.09
 const SHOOT_BARREL_INSET_MAX = 56
+// Pipans längd uppåt från pivotpunkten — matchar .shoot-barrel-tube i CSS
+// (height: 38px). Används för att hålla minorna borta från geväret.
+const SHOOT_BARREL_TUBE_H = 38
+// Fri yta minorna måste hålla mot bubblorna ovanför och geväret nedanför.
+// Minorna spawnas på SLUMPAD höjd inom bandet däremellan (användarens
+// begäran) — inte längre på EN linje mitt i fältet.
+const SHOOT_OBSTACLE_CLEARANCE = 16
 
 // Hinder och luckegarantin. Se filhuvudets motivering.
 const SHOOT_MAX_OBSTACLES = 4
@@ -681,10 +687,28 @@ function shootObstacleSize(corridorW){
   return Math.max(SHOOT_OBSTACLE_SIZE_FLOOR, Math.min(SHOOT_OBSTACLE_SIZE_CAP, raw)) * SHOOT_OBSTACLE_SCALE
 }
 
-// Jämnt spridda med en gemensam slumpad fasförskjutning. Alla hinder delar
-// EN hastighet (shootObstacleSpeed) och flyttas lika mycket varje bildruta,
-// så inbördes avstånd är konstant för alltid — garantin behöver aldrig
-// verifieras löpande, bara vid spawn.
+// Bandet minorna får spawna i: mellan bubblornas underkant och pipans topp,
+// med SHOOT_OBSTACLE_CLEARANCE fri yta åt båda håll och minans egen radie
+// inräknad. Räknas mot de FAKTISKA måtten (bubbelstorlek, pipans längd) i
+// stället för hårdkodade fraktioner, så bandet följer med när fältet byter
+// storlek. Returnerar min === max om fältet är så lågt att bandet kollapsar —
+// då hamnar alla minor på samma höjd, vilket är rätt beteende: hellre en
+// linje än minor ovanpå bubblorna.
+function shootObstacleBand(size){
+  const r = size / 2
+  const targetBottom = shootFieldH * SHOOT_TARGET_ROW_FRAC + shootTargetSize() / 2
+  const barrelTop = shootBarrelY - SHOOT_BARREL_TUBE_H
+  let min = targetBottom + SHOOT_OBSTACLE_CLEARANCE + r
+  let max = barrelTop - SHOOT_OBSTACLE_CLEARANCE - r
+  if(max < min){ const mid = (min + max) / 2; min = mid; max = mid }
+  return { min, max }
+}
+
+// Jämnt spridda i X med en gemensam slumpad fasförskjutning, men SLUMPAD
+// HÖJD var för sig (användarens begäran: minorna ska inte stå på en linje).
+// Alla hinder delar EN hastighet (shootObstacleSpeed) och rör sig bara i
+// x-led, så det inbördes HORISONTELLA avståndet är konstant för alltid —
+// luckegarantin gäller i x-led och påverkas inte av att höjderna varierar.
 function spawnShootObstacles(count){
   const wrap = el('shootObstacles')
   if(wrap) wrap.innerHTML = ''
@@ -694,6 +718,7 @@ function spawnShootObstacles(count){
   const size = shootObstacleSize(corridorW)
   const spacing = corridorW / count
   const phase = Math.random() * spacing
+  const band = shootObstacleBand(size)
   for(let i = 0; i < count; i++){
     // Löpande räknare över HELA rundan (inte återställd per våg): var femte
     // mina som någonsin spawnas är dödlig, se SHOOT_MINE_LETHAL_EVERY.
@@ -701,7 +726,7 @@ function spawnShootObstacles(count){
     const lethal = shootMineSpawnCount % SHOOT_MINE_LETHAL_EVERY === 0
     const o = {
       x: (phase + i * spacing) % corridorW,
-      y: shootFieldH * SHOOT_OBSTACLE_ROW_FRAC,
+      y: band.min + Math.random() * (band.max - band.min),
       size, node: null, dead: false, lethal
     }
     o.node = makeShootObstacleNode(o)

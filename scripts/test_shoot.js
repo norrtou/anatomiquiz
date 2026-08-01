@@ -454,7 +454,7 @@ section('Ballistik — en mina är INTE game over, bara ett tidsstraff')
 // Bekräftat av användaren 2026-08-01: det ursprungliga instant-death-upplägget
 // kändes för hårt. En mina kostar nu SHOOT_MINE_PENALTY_MS (10 s) och räknas
 // som en miss, men rundan fortsätter — precis som ett bomskott.
-ev('shootObstacles = [{ x: shootBarrelX, y: shootFieldH * SHOOT_OBSTACLE_ROW_FRAC, size: 40, dead: false, node: null }]')
+ev('shootObstacles = [{ x: shootBarrelX, y: shootObstacleBand(40).min, size: 40, dead: false, node: null }]')
 ev('shootObstacleSpeed = 0')
 const minAttemptsFöre = ev('shootAttempts')
 const minFråganFöre = currentPromptId()
@@ -496,7 +496,7 @@ runCountdown()
 // ============================================================================
 section('Den röda minan ÄR game over — enda sättet rundan tar slut i förtid')
 // ============================================================================
-ev('shootObstacles = [{ x: shootBarrelX, y: shootFieldH * SHOOT_OBSTACLE_ROW_FRAC, size: 40, dead: false, node: null, lethal: true }]')
+ev('shootObstacles = [{ x: shootBarrelX, y: shootObstacleBand(40).min, size: 40, dead: false, node: null, lethal: true }]')
 ev('shootObstacleSpeed = 0')
 ok('rundan är igång innan träffen', ev('shootRunning'))
 ev('shootAimAngle = 0; fireShoot()')
@@ -540,6 +540,33 @@ const gapFloor = ev('SHOOT_GAP_FLOOR')
 })
 
 // ============================================================================
+section('Minorna spawnar på slumpad höjd, inte på en linje')
+// ============================================================================
+// Användarens krav: olika vertikal position, men aldrig så nära bubblorna
+// eller geväret att de klumpar ihop sig med dem.
+ev('spawnShootObstacles(4)')
+const höjder = ev('shootObstacles.map(o => o.y)')
+ok('minorna ligger INTE alla på samma höjd', new Set(höjder.map(y => Math.round(y))).size > 1, höjder)
+
+const band = ev('shootObstacleBand(shootObstacleSize(shootFieldW))')
+const bubbelUnderkant = ev('shootFieldH * SHOOT_TARGET_ROW_FRAC + shootTargetSize() / 2')
+const pipTopp = ev('shootBarrelY - SHOOT_BARREL_TUBE_H')
+ok('bandet börjar under bubblorna', band.min > bubbelUnderkant, { bandMin: band.min, bubbelUnderkant })
+ok('bandet slutar ovanför geväret', band.max < pipTopp, { bandMax: band.max, pipTopp })
+ok('bandet har verklig höjd att slumpa i', band.max - band.min > 20, band)
+
+// Många spawnar: ingen mina får någonsin hamna utanför bandet.
+let utanför = 0
+for(let i = 0; i < 40; i++){
+  ev('spawnShootObstacles(4)')
+  const ys = ev('shootObstacles.map(o => ({ y: o.y, r: o.size / 2 }))')
+  ys.forEach(o => {
+    if(o.y - o.r < bubbelUnderkant || o.y + o.r > pipTopp) utanför++
+  })
+}
+eq('ingen mina överlappar bubblor eller gevär på 160 spawnar', utanför, 0)
+
+// ============================================================================
 section('Ballistik — restiden gör att ett hinder hinner in i banan')
 // ============================================================================
 // Barrelns rakt-upp-bana korsar hinderraden. Ett hinder som glider IN i den
@@ -554,7 +581,7 @@ runCountdown()
 // exakt när projektilen når hinderraden, uträknat ur ballistikens tid: vid
 // 900 px/s tar det ~237 ms att nå raden, och vid 400 px/s hinner hindret då
 // precis fram till barrelX.
-ev(`shootObstacles = [{ x: shootBarrelX - 95, y: shootFieldH * SHOOT_OBSTACLE_ROW_FRAC, size: 40, dead: false, node: null }]`)
+ev(`shootObstacles = [{ x: shootBarrelX - 95, y: shootObstacleBand(40).min, size: 40, dead: false, node: null }]`)
 ev('shootObstacleSpeed = 400')   // hinner glida in i banan under projektilens flykt
 const restidAttemptsFöre = ev('shootAttempts')
 ev('shootAimAngle = 0; fireShoot()')
