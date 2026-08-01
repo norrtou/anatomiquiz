@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.332
+- **Bort med nedvärderingen av arkadlägena i all löptext**, på användarens tillsägelse. Texterna sa upprepat att Pop! och Shoot! tränar "det lättaste minnessteget", att de är "medvetet de minst allvarliga", att andra lägen är "betydligt bättre" och att de ska användas "som omväxling, inte som huvudmetod". Det är en värdering jag lagt in själv, den är inte användarens och den hörde aldrig hemma i beskrivningarna. Reglerna och vad läget faktiskt gör står kvar oförändrade — det var omdömena om lägenas värde som togs bort, inte fakta.
+  - `spellagen.html`: "Bra för"-styckena för båda lägena omskrivna så att de säger vad lägena tränar (tempo respektive säkerhet under press) i stället för vad de inte duger till. "Det snabbaste och medvetet minst allvarliga läget" → "Det snabbaste läget".
+  - `info.html`: nyhetsnotisen från 0.9.331 omskriven på samma sätt, och kompletterad med mästerskytt-utmärkelsen och att missade frågor listas efteråt — sådant som faktiskt beskriver lägena.
+  - `index.html`: startpanelen i Pop! sa "Du tränar att känna igen rätt ord i högt tempo — **inte att grubbla fram det**". Svansen borttagen.
+- **Arkadlägena saknades helt i FAQ:n "Vilket läge ska jag välja?"** på `spellagen.html` — fem lägen räknades upp, två utelämnades, vilket i sig läser som ett underkännande. Nu står alla sju, i den synliga FAQ:n och i FAQPage-blocket i `<head>` (de speglar varandra ord för ord).
+- **`data/llms.json` beskrev fortfarande arkadläget som "planerat"** trots att båda byggdes i 0.9.314/0.9.316. Ersatt med vad de två lägena faktiskt gör; `llms.txt` och `llms-full.txt` regenererade.
+
 ## 0.9.331
 - **Nyhetsnotis om de två arkadlägena**, på begäran. Arcade: Pop! och Arcade: Shoot! byggdes i 0.9.314 och 0.9.316 men fick aldrig någon notis under Nyheter i `info.html` — den senaste stod kvar på Sortera. Notisen är daterad **1 augusti 2026**, dagen lägena faktiskt släpptes enligt git, inte dagens datum.
   - Samtidigt rättad på samma sida: "Utöver quizet och flashcards finns **fem** spellägen" — det har varit sju sedan 0.9.316. Äldre nyhetsnotiser står kvar oförändrade; de var sanna när de skrevs och är daterade därefter.
