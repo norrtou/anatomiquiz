@@ -470,6 +470,43 @@ eq('klockan knuffas framåt med straffet',
   ev('shootStartTime'), minStartTimeFöre - ev('SHOOT_MINE_PENALTY_MS'))
 
 // ============================================================================
+section('Var femte spawnade mina är röd och dödlig')
+// ============================================================================
+// Räkningen är LÖPANDE över hela rundan, inte per våg — spawnShootObstacles
+// bygger om HELA hinderuppsättningen vid varje nivåhöjning, så räknaren får
+// aldrig nollställas mellan anropen (bara vid ny runda).
+ev('shootMineSpawnCount = 0')
+ev('spawnShootObstacles(4)')   // minor 1–4: ingen dödlig (4 % 5 !== 0)
+eq('inga dödliga minor bland de fyra första', ev('shootObstacles.filter(o => o.lethal).length'), 0)
+ev('spawnShootObstacles(1)')   // mina 5: DÖDLIG
+eq('femte spawnade minan är dödlig', ev('shootObstacles[0].lethal'), true)
+ev('spawnShootObstacles(4)')   // minor 6–9: ingen dödlig
+eq('inga dödliga bland minor 6–9', ev('shootObstacles.filter(o => o.lethal).length'), 0)
+ev('spawnShootObstacles(1)')   // mina 10: DÖDLIG igen
+eq('tionde spawnade minan är också dödlig', ev('shootObstacles[0].lethal'), true)
+
+nodes.shootTargets.children = []
+nodes.shootObstacles.children = []
+POOL = Array.from({ length: 8 }, (_, i) => mkQ(i + 1))
+store['hur_highscores_shoot'] = '[]'
+await ctx.startShoot()
+eq('räknaren nollställs vid ny runda', ev('shootMineSpawnCount'), 0)
+runCountdown()
+
+// ============================================================================
+section('Den röda minan ÄR game over — enda sättet rundan tar slut i förtid')
+// ============================================================================
+ev('shootObstacles = [{ x: shootBarrelX, y: shootFieldH * SHOOT_OBSTACLE_ROW_FRAC, size: 40, dead: false, node: null, lethal: true }]')
+ev('shootObstacleSpeed = 0')
+ok('rundan är igång innan träffen', ev('shootRunning'))
+ev('shootAimAngle = 0; fireShoot()')
+resolveShot()
+ok('rundan avslutas direkt av den röda minan', !ev('shootRunning'))
+ok('klart-vyn visas', !nodes.shootFinished.hidden())
+ok('mästerskyttmärket visas INTE (det här var ett nederlag)', nodes.shootMarksmanBadge.hidden())
+ok('resultattexten nämner den röda minan', nodes.shootDoneText.textContent.includes('röd mina'))
+
+// ============================================================================
 section('Luckegarantin — hindren stänger aldrig korridoren helt')
 // ============================================================================
 function minGap(){

@@ -168,7 +168,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="css/styles.css?v=0.9.319">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.320">
 </head>
 <body>
 
@@ -1417,8 +1417,9 @@
          prickad laserlinje visar riktningen. Rätt bubbla → poäng, ny fråga.
          Taggiga minor glider förbi mellan dig och målen — träffar du en
          kostar det 10 sekunder och räknas som miss, men rundan fortsätter.
-         Max 5 minuter; överlever du hela vägen MED alla rätt blir du
-         "mästerskytt". Logik: js/shoot.js.
+         Var femte spawnade mina är röd och DÖDLIG (☠) — enda sättet rundan
+         kan ta slut i förtid. Max 5 minuter; överlever du hela vägen MED
+         alla rätt blir du "mästerskytt". Logik: js/shoot.js.
          Ämne och utbildning ärvs från startvyn som i övriga spellägen.
          ========================================================= -->
     <section id="shoot" class="card hidden" aria-labelledby="shootHeading">
@@ -1487,6 +1488,7 @@
               <ul>
                 <li><strong>Rätt bubbla</strong> – den spricker, poäng, ny fråga direkt.</li>
                 <li><strong>En mina</strong> – glider förbi mellan dig och målen. Träffar du en kostar det 10 sekunder.</li>
+                <li><strong>Var femte mina är röd</strong> (☠) – den är dödlig. Träffar du en är rundan slut.</li>
                 <li><strong>Fel bubbla eller bom</strong> – räknas som miss, men rundan fortsätter.</li>
                 <li>Överlever du <strong>5 minuter</strong> med alla rätt blir du mästerskytt.</li>
               </ul>
@@ -1852,14 +1854,14 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.319" defer></script>
+  <script src="js/app.js?v=0.9.320" defer></script>
   <!-- Spellägesmoduler: en egen fil per läge, laddas EFTER app.js (delar globalt scope). -->
   <script src="js/matcha.js?v=0.9.261" defer></script>
   <script src="js/leitner.js?v=0.9.261" defer></script>
   <script src="js/tidsjakt.js?v=0.9.262" defer></script>
   <script src="js/dagsutmaning.js?v=0.9.284" defer></script>
   <script src="js/sortera.js?v=0.9.306" defer></script>
-  <script src="js/pop.js?v=0.9.315" defer></script>
-  <script src="js/shoot.js?v=0.9.319" defer></script>
+  <script src="js/pop.js?v=0.9.320" defer></script>
+  <script src="js/shoot.js?v=0.9.320" defer></script>
 </body>
 </html>

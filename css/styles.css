@@ -5002,11 +5002,14 @@ ol li {
   font-weight: 700;
   line-height: 1.15;
   text-align: center;
-  /* Radbryt i bubblan är OK; avstavning mitt i ett ord är det inte. */
+  /* Radbryt vid ordgränser är förstahandsvalet. Ett enskilt ord som ändå
+     inte får plats (skalan räcker inte till) avstavas KORREKT (hyphens:
+     auto, sv-ordboken via <html lang="sv">) i stället för att kapas på en
+     slumpad plats — det var precis det som hände innan (0.9.319-arvet). */
   word-break: normal;
   overflow-wrap: break-word;
-  hyphens: none;
-  font-size: max(0.66rem, calc(0.95rem * var(--bubble-scale, 1)));
+  hyphens: auto;
+  font-size: max(0.5rem, calc(0.95rem * var(--bubble-scale, 1)));
 }
 /* Nedtryck ska kännas direkt — trycket kvitteras innan spelet hunnit rätta. */
 .pop-bubble:active .pop-bubble-body { transform: scale(0.94); }
@@ -5400,12 +5403,20 @@ ol li {
   position: relative;
   z-index: 1;
   max-width: 88%;
-  font-size: 0.66rem;
   font-weight: 800;
   line-height: 1.12;
   text-align: center;
   color: #fff;
-  word-break: break-word;
+  /* Samma princip som Pop!s .pop-bubble-text: radbryt vid ordgränser är
+     förstahandsvalet. --bubble-scale (satt av js/shoot.js efter LÄNGSTA
+     ordets längd) krymper typsnittet så att de allra flesta ord får plats
+     osplittrade. Räcker inte ens det (extremfall, se den lättade
+     ordfiltergränsen på 20 tecken) avstavas ordet KORREKT i stället för att
+     kapas på en slumpad plats. */
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  font-size: max(0.4rem, calc(0.66rem * var(--bubble-scale, 1)));
 }
 .shoot-mark {
   position: absolute;
@@ -5501,6 +5512,29 @@ ol li {
     radial-gradient(circle at 34% 30%, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0) 45%),
     linear-gradient(160deg, #475569 0%, #1e293b 100%);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Var femte spawnade mina är RÖD och DÖDLIG — enda sättet rundan kan ta
+   slut i förtid (facit, bekräftat av användaren). Skillnaden mot en vanlig
+   mina vilar INTE på färgen ensam (WCAG 1.4.1): ☠-glyfen är den riktiga
+   signalen, rödfärgen är bara förstärkning för den som ser färg. */
+.shoot-obstacle--lethal {
+  background:
+    radial-gradient(circle at 34% 30%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 45%),
+    linear-gradient(160deg, #ef4444 0%, #7f1d1d 100%);
+  box-shadow: 0 3px 12px rgba(127, 29, 29, 0.6);
+}
+.shoot-obstacle-mark {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.65);
+  pointer-events: none;
 }
 
 /* ---- Sikte: pipa + laserlinje -------------------------------------------- */
@@ -5685,6 +5719,7 @@ ol li {
 .shoot-finished.hidden { display: none; }
 .shoot-done-text { font-size: 1.02rem; font-weight: 700; margin: 0 0 4px; }
 .shoot-finished--marksman .shoot-done-text { color: var(--primary-deep); }
+.shoot-finished--defeat .shoot-done-text { color: var(--error-text-strong); }
 .shoot-next-text { font-size: 0.86rem; color: var(--text-secondary); margin: 0 0 10px; }
 .shoot-marksman-badge {
   display: inline-block;
@@ -5718,7 +5753,6 @@ ol li {
   .shoot-prompt { font-size: max(0.78rem, calc(0.9rem * var(--prompt-scale, 1))); }
   .shoot-field { height: max(280px, calc(min(78vh, 700px) * var(--view-fit, 1))); }
   .shoot-countdown-nr { font-size: 2.4rem; }
-  .shoot-target-text { font-size: 0.6rem; }
   .shoot-missed-q, .shoot-missed-a { font-size: 0.78rem; }
 }
 

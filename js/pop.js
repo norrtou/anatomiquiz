@@ -161,6 +161,20 @@ function popTextScale(text, cfg){
   return 1 - t * (1 - cfg.floor)
 }
 
+// Skalan för bubbelns TEXT (inte bubbelns storlek, se popBubbleSize) — räknad
+// mot det LÄNGSTA enskilda ordet, eftersom det är ett osplittrat ord som kan
+// tvinga fram ett avstavat radbryte (.pop-bubble-text har hyphens: auto som
+// sista utväg, se CSS_KARTA). Ett tvåordssvar med två korta ord ska inte
+// krympas i onödan bara för att den SAMMANLAGDA texten är lång.
+function popBubbleScale(text){
+  const longest = Math.max(0, ...String(text).trim().split(/\s+/).map(w => w.length))
+  if(longest <= 8) return 1
+  if(longest <= 11) return 0.86
+  if(longest <= 14) return 0.74
+  if(longest <= 18) return 0.62
+  return 0.52
+}
+
 // Korta, självgenererade toner via Web Audio — aldrig externa ljudfiler (CSP
 // tillåter ingen extern källa). AudioContext skapas först vid en spelarinitierad
 // tryckning (autoplay-kraven). Av/på styrs av den BEFINTLIGA
@@ -555,9 +569,12 @@ function makePopBubbleNode(b){
   node.className = 'pop-bubble'
   node.style.width = b.size + 'px'
   node.style.height = b.size + 'px'
-  // Ordlängd → typsnittsskala, så att långa ord inte spränger bubblan.
-  const scale = b.text.length <= 8 ? 1 : b.text.length <= 14 ? 0.86 : 0.74
-  node.style.setProperty('--bubble-scale', String(scale))
+  // LÄNGSTA ORDETS längd → typsnittsskala, inte hela textens: ett tvåordssvar
+  // radbryter fint mellan orden, det är ETT långt sammanhängande ord som
+  // riskerar att spränga bubblan. Fler trappsteg än tidigare (som bara gick
+  // till 14 tecken) eftersom ett enda ord i en tillåten fråga kan vara upp
+  // till 22 (strikt filter) eller 28 (lättat) tecken långt.
+  node.style.setProperty('--bubble-scale', String(popBubbleScale(b.text)))
   const body = document.createElement('span')
   body.className = 'pop-bubble-body'
   const label = document.createElement('span')

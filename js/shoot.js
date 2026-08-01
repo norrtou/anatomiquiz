@@ -57,12 +57,19 @@ const SHOOT_COUNTDOWN_STEP_MS = 800
 const SHOOT_Q_WARN_MS = 2000           // frågeklockan blir amber
 const SHOOT_PRAISE_MS = 1100
 const SHOOT_MISSED_SHOWN = 8
-// En mina är INTE game over (bekräftat av användaren 2026-08-01, det
-// tidigare instant-death-upplägget kändes för hårt) — den kostar i stället
-// tid, som Pop!s tidsstraff för fel bubbla. Räknas dessutom som en miss
-// (träffsäkerheten sjunker), så en spelare som smäller i minor gång på gång
-// aldrig kan bli mästerskytt.
+// En mina är INTE game over i det vanliga fallet (bekräftat av användaren
+// 2026-08-01, det ursprungliga instant-death-upplägget kändes för hårt) —
+// den kostar i stället tid, som Pop!s tidsstraff för fel bubbla. Räknas
+// dessutom som en miss (träffsäkerheten sjunker), så en spelare som smäller
+// i minor gång på gång aldrig kan bli mästerskytt.
 const SHOOT_MINE_PENALTY_MS = 10000
+// MEN: användaren ville ha tillbaka lite verklig fara — var femte SPAWNADE
+// mina (räknat löpande över hela rundan, inte per våg) är röd och DÖDLIG.
+// Det är nu enda sättet rundan kan ta slut i förtid. Räkningen är global så
+// att den håller ihop över hela rundan även när svårighetstrappan byter ut
+// hela hinderuppsättningen vid varje nivåhöjning (spawnShootObstacles bygger
+// om ALLA hinder från grunden, se den funktionen).
+const SHOOT_MINE_LETHAL_EVERY = 5
 
 // Rätt bubbla: kort paus så spricktanimationen hinner synas, som Pop!. Fel
 // bubbla: längre paus så den avslöjade rätta bubblan hinner läsas.
@@ -158,6 +165,7 @@ let shootRecordBeaten = false
 let shootName = 'Spelare'
 let shootTopic = ''
 let shootQDeadline = 0
+let shootMineSpawnCount = 0   // löpande räknare, se SHOOT_MINE_LETHAL_EVERY
 let shootObstacleCount = 0
 let shootObstacleSpeed = 0
 let shootLastCountLevel = null
@@ -325,6 +333,15 @@ function playShootTone(kind, streak){
     shootBeep(ctx, 75, 0, 0.16, 0.15, 0.45)
     return
   }
+  // Den röda minan: rundans slut, och ska höras som något STÖRRE än den
+  // vanliga minans smäll — längre, djupare, med ett fallande tonfall. Två
+  // lager lågt brus + två sjunkande djupa toner ger explosionskänslan.
+  if(kind === 'mineLethal'){
+    shootNoiseBurst(ctx, 0, 0.32, 0.16, 'lowpass', 350, 0.8)
+    shootBeep(ctx, 90, 0, 0.3, 0.15, 0.25)
+    shootBeep(ctx, 60, 0.05, 0.28, 0.12, 0.3)
+    return
+  }
   // Överlevde rundan men inte helt rätt: nöjd, inte triumferande — mästerskytt
   // är en särskild utmärkelse och ska låta som en, inte som "tiden bara gick".
   if(kind === 'survived'){ [523.25, 659.25].forEach((f, i) => shootBeep(ctx, f, i * 0.1, 0.2, 0.13)); return }
@@ -434,6 +451,7 @@ async function startShoot(){
   shootRecordBeaten = false
   shootLastCountLevel = null
   shootLastSpeedLevel = null
+  shootMineSpawnCount = 0
   shootAiming = false
   shootAimAngle = 0
 
@@ -577,6 +595,19 @@ function buildShootTargets(q){
   })
 }
 
+// Skalan räknas mot det LÄNGSTA enskilda ordet, inte hela textens längd —
+// ett tvåordssvar radbryter fint mellan orden, det är ETT långt
+// sammanhängande ord som riskerar att spränga bubblan. Samma trappa som
+// Pop!s popBubbleScale (facit: håll de två i synk om en ändras).
+function shootBubbleScale(text){
+  const longest = Math.max(0, ...String(text).trim().split(/\s+/).map(w => w.length))
+  if(longest <= 8) return 1
+  if(longest <= 11) return 0.86
+  if(longest <= 14) return 0.74
+  if(longest <= 18) return 0.62
+  return 0.52
+}
+
 function makeShootTargetNode(t){
   const node = document.createElement('div')
   node.className = 'shoot-target'
@@ -588,6 +619,7 @@ function makeShootTargetNode(t){
   const label = document.createElement('span')
   label.className = 'shoot-target-text'
   label.textContent = t.text
+  label.style.setProperty('--bubble-scale', String(shootBubbleScale(t.text)))
   body.appendChild(label)
   node.appendChild(body)
   t.body = body
@@ -646,10 +678,14 @@ function spawnShootObstacles(count){
   const spacing = corridorW / count
   const phase = Math.random() * spacing
   for(let i = 0; i < count; i++){
+    // Löpande räknare över HELA rundan (inte återställd per våg): var femte
+    // mina som någonsin spawnas är dödlig, se SHOOT_MINE_LETHAL_EVERY.
+    shootMineSpawnCount++
+    const lethal = shootMineSpawnCount % SHOOT_MINE_LETHAL_EVERY === 0
     const o = {
       x: (phase + i * spacing) % corridorW,
       y: shootFieldH * SHOOT_OBSTACLE_ROW_FRAC,
-      size, node: null, dead: false
+      size, node: null, dead: false, lethal
     }
     o.node = makeShootObstacleNode(o)
     if(wrap) wrap.appendChild(o.node)
@@ -660,9 +696,20 @@ function spawnShootObstacles(count){
 
 function makeShootObstacleNode(o){
   const node = document.createElement('div')
-  node.className = 'shoot-obstacle'
+  node.className = 'shoot-obstacle' + (o.lethal ? ' shoot-obstacle--lethal' : '')
   node.style.width = o.size + 'px'
   node.style.height = o.size + 'px'
+  // Formen (spiken) räcker för att skilja mina från bubbla (WCAG 1.4.1) —
+  // men skillnaden mellan en VANLIG och en DÖDLIG mina är BARA menad att
+  // gå att se, så den får inte vila på färgen ensam heller: en skalle-glyf
+  // ovanpå, inte bara rödfärgning.
+  if(o.lethal){
+    const mark = document.createElement('span')
+    mark.className = 'shoot-obstacle-mark'
+    mark.setAttribute('aria-hidden', 'true')
+    mark.textContent = '☠'
+    node.appendChild(mark)
+  }
   return node
 }
 
@@ -899,7 +946,8 @@ function stepShootProjectile(dtSec){
     if(o.dead) continue
     const hitR = o.size / 2 * 0.85     // lite förlåtande — visuellt guidar, hitboxen är snällare
     if(circlesOverlap(p.x, p.y, SHOOT_PROJECTILE_RADIUS, o.x, o.y, hitR)){
-      handleShootObstacleHit(o)
+      if(o.lethal) handleShootLethalMineHit(o)
+      else handleShootObstacleHit(o)
       return
     }
   }
@@ -1059,6 +1107,17 @@ function handleShootObstacleHit(o){
   playShootTone('mine')
   shootVibrate([20, 60, 20])
   flyShootText(`+${SHOOT_MINE_PENALTY_MS / 1000} s`, 'loss')
+}
+
+// Den röda minan (var SHOOT_MINE_LETHAL_EVERY:e spawnade) ÄR game over —
+// bekräftat av användaren 2026-08-01: helt riskfritt kändes fel, så faran
+// är tillbaka men bara i en av fem minor, och den går att SE i förväg
+// (☠-glyfen). Enda sättet rundan kan ta slut i förtid.
+function handleShootLethalMineHit(o){
+  removeShootProjectileNode()
+  shootProjectile = null
+  triggerShootScreenShake()
+  finishShoot('lethal')
 }
 
 // ============================================================================
@@ -1238,13 +1297,14 @@ function renderShootMissed(){
   }
 }
 
-// Rundan har numera bara ETT sätt att ta slut: klockan når SHOOT_ROUND_MS
-// (minor gör inte längre rundan slut, de bara knuffar klockan framåt — se
-// handleShootObstacleHit). Mästerskytt är en SÄRSKILD utmärkelse (användarens
-// ord) och kräver att du dessutom svarat helt rätt; att bara låta klockan gå
-// ut räcker inte, annars är märket bara "du väntade ut 5 minuter" i
-// förklädnad.
-function finishShoot(){
+// Rundan kan ta slut på TVÅ sätt: klockan når SHOOT_ROUND_MS (det vanliga),
+// eller en röd, dödlig mina träffas (reason === 'lethal', se
+// handleShootLethalMineHit — var femte spawnade mina, resten är bara ett
+// tidsstraff). Mästerskytt är en SÄRSKILD utmärkelse (användarens ord) och
+// kräver att du dessutom svarat helt rätt OCH inte sprängt en röd mina; att
+// bara låta klockan gå ut räcker inte, annars är märket bara "du väntade ut
+// 5 minuter" i förklädnad.
+function finishShoot(reason){
   if(!shootRunning) return
   shootRunning = false
   shootLocked = true
@@ -1259,15 +1319,18 @@ function finishShoot(){
   el('shootStart')?.classList.add('hidden')
   el('shootFinished').classList.remove('hidden')
 
-  const isMarksman = shootAttempts > 0 && shootHits === shootAttempts
+  const isLethal = reason === 'lethal'
+  const isMarksman = !isLethal && shootAttempts > 0 && shootHits === shootAttempts
   const survivedMs = Math.min(SHOOT_ROUND_MS, Math.max(0, shootEndTime - shootStartTime))
   const finalScore = Math.round(computeShootScore(shootHits, shootAttempts, survivedMs))
   const pct = shootAttempts ? Math.round((shootHits / shootAttempts) * 100) : 0
   const isRecord = shootPriorBest > 0 ? finalScore > shootPriorBest : shootHits > 0
 
-  el('shootDoneText').textContent = isMarksman
-    ? `Du är en mästerskytt! ${shootHits} träffar på ${formatShootTime(survivedMs)}.`
-    : `Du överlevde rundan! ${shootHits} av ${shootAttempts} rätt på ${formatShootTime(survivedMs)}.`
+  el('shootDoneText').textContent = isLethal
+    ? `Du sprängde en röd mina. ${shootHits} träffar på ${formatShootTime(survivedMs)}.`
+    : isMarksman
+      ? `Du är en mästerskytt! ${shootHits} träffar på ${formatShootTime(survivedMs)}.`
+      : `Du överlevde rundan! ${shootHits} av ${shootAttempts} rätt på ${formatShootTime(survivedMs)}.`
 
   const nyckeltal = []
   if(shootBestStreak > 1) nyckeltal.push(`🔥 bästa svit ${shootBestStreak}`)
@@ -1284,11 +1347,12 @@ function finishShoot(){
   el('shootRecordBadge')?.classList.toggle('hidden', !isRecord)
   el('shootMarksmanBadge')?.classList.toggle('hidden', !isMarksman)
   el('shootFinished')?.classList.toggle('shoot-finished--marksman', isMarksman)
+  el('shootFinished')?.classList.toggle('shoot-finished--defeat', isLethal)
 
   animateShootRing(pct)
   renderShootMissed()
-  playShootTone(isMarksman ? 'marksman' : 'survived')
-  shootVibrate(isMarksman ? [18, 60, 18, 60, 18] : [16, 40, 16])
+  playShootTone(isLethal ? 'mineLethal' : isMarksman ? 'marksman' : 'survived')
+  shootVibrate(isLethal ? [30, 80, 30] : isMarksman ? [18, 60, 18, 60, 18] : [16, 40, 16])
 
   try{ saveShootScore(survivedMs, finalScore, isMarksman) }catch(e){ console.error('saveShootScore misslyckades:', e) }
   window.scrollTo({ top: 0 })
