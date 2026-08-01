@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.315
+- **Arcade: Pop! var tyst på iPhone vid första besöket.** Nedräkningens tickljud hördes, men inget därefter; en omladdning av sidan gjorde att ljudet fungerade. Det pekar på att ljudkontexten inte hunnit bli verkligt upplåst första gången, inte på att ljudkoden var fel — och det är en felklass som bara syns på riktig hårdvara, aldrig i ett DOM-skal eller i headless Chrome (där mätning visade kontexten som `running` och alla toner schemalagda).
+  - **Upplåsningen gör nu det iOS faktiskt kräver.** Att kontexten *skapas* i en spelargest räcker inte på WebKit — och alla webbläsare på iPhone är WebKit, även Chrome. Den måste också väckas genom att spela något: `unlockPopAudio()` startar en tyst enprovsbuffert vid trycket på "Kör!", vilket är den etablerade upplåsningen och kostar ingenting där den inte behövs.
+  - **Toner schemaläggs inte längre på exakt `currentTime`.** En kontext som just väckts har en klocka som stått stilla, så en ton lagd på `currentTime` hamnar i det förflutna och droppas tyst av WebKit. Alla toner får nu 20 ms förhållningstid — för kort för att höras, långt nog för att spelas.
+  - **Kontexten väcks om den somnat.** iOS suspenderar den när fliken varit i bakgrunden; `playPopTone` kontrollerar därför `state` före varje ton i stället för att lita på att den är kvar i `running`.
+
 ## 0.9.314
 - **Nytt spelläge: Arcade: Pop!** — 60 sekunder, frågan står som en rad över spelytan och svarsalternativen svävar runt som bubblor. Poppa den som är rätt svar → poäng och ny fråga direkt. Ingen Nästa-knapp, ingen avbrytknapp, inget chrome: allt går på tid. Logiken bor i egen `js/pop.js` (§12) och kopplas till `app.js` via två skyddade `typeof`-krokar.
   - **Reglerna:** fel bubbla kostar 3 sekunder och den rätta blinkar med ✓ innan nästa fråga — utan tidsstraffet är det matematiskt optimalt att hamra på alla bubblor, och då mäter läget ingen kunskap. Fem rätt i rad ger kvittens och stigande ton. Poängen är antalet poppade rätt.

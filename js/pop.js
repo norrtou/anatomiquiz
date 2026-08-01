@@ -79,6 +79,9 @@ const POP_MAX_STEP_MS = 50       // hoppa aldrig längre än så per bildruta (f
 // Textlängd → bubbelstorlek och typsnittsskala.
 const POP_PROMPT_SCALE = { min: 40, max: POP_MAX_PROMPT, floor: 0.8 }
 
+// Marginal före varje schemalagd ton. Se popBeep.
+const POP_AUDIO_LEAD = 0.02
+
 const POP_RING_CIRCUMFERENCE = (typeof GM_RING_CIRCUMFERENCE !== 'undefined') ? GM_RING_CIRCUMFERENCE : 326.7
 
 // --- Rundans tillstånd -------------------------------------------------------
@@ -113,6 +116,7 @@ let popRecordBeaten = false
 let popName = 'Spelare'
 let popTopic = ''
 let popAudioCtx = null
+let popAudioUnlocked = false
 
 // ============================================================================
 // Lagring — eget fack med minnesfallback (privat läge får inte krascha spelet,
@@ -174,8 +178,35 @@ function getPopAudioCtx(){
   return popAudioCtx
 }
 
+// iOS — och därmed VARJE webbläsare på iPhone, eftersom de alla kör WebKit —
+// kräver mer än att kontexten skapas i en gest. Den måste väckas genom att
+// faktiskt spela något i gesten, annars står den kvar tyst resten av sessionen
+// även när state säger "running". En tyst enprovsbuffert är den etablerade
+// upplåsningen och kostar ingenting där den inte behövs.
+function unlockPopAudio(){
+  const ctx = getPopAudioCtx()
+  if(!ctx) return null
+  if(ctx.state !== 'running' && typeof ctx.resume === 'function'){
+    try{ ctx.resume() }catch(e){ /* struntsak: ljudet är inte kritiskt */ }
+  }
+  if(!popAudioUnlocked){
+    try{
+      const src = ctx.createBufferSource()
+      src.buffer = ctx.createBuffer(1, 1, 22050)
+      src.connect(ctx.destination)
+      src.start(0)
+      popAudioUnlocked = true
+    }catch(e){ /* samma sak – spelet ska aldrig falla på ljudet */ }
+  }
+  return ctx
+}
+
 function popBeep(ctx, freq, offset, dur, peak, glide){
-  const t0 = ctx.currentTime + offset
+  // FÖRHÅLLNINGSTID: en ton som schemaläggs på exakt ctx.currentTime hamnar
+  // i det förflutna så fort kontexten just väckts (currentTime står stilla
+  // medan den är suspended) och droppas då tyst av WebKit. Marginalen är för
+  // kort för att höras men räcker för att tonen ska spelas.
+  const t0 = ctx.currentTime + POP_AUDIO_LEAD + offset
   const osc = ctx.createOscillator()
   const gain = ctx.createGain()
   osc.type = 'sine'
@@ -200,7 +231,10 @@ function playPopTone(kind, streak){
   if(!popSoundEnabled()) return
   const ctx = getPopAudioCtx()
   if(!ctx) return
-  if(ctx.state === 'suspended') ctx.resume()
+  // iOS suspenderar kontexten igen när fliken varit i bakgrunden.
+  if(ctx.state !== 'running' && typeof ctx.resume === 'function'){
+    try{ ctx.resume() }catch(e){ /* ljudet är aldrig kritiskt */ }
+  }
   // Popp: mycket kort blip med uppåtglid — bubbelkänslan sitter i att den är
   // klar innan man hinner uppfatta den som en ton.
   if(kind === 'pop'){ popBeep(ctx, popStreakFreq(streak), 0, 0.07, 0.13, 1.6); return }
@@ -354,8 +388,7 @@ async function startPop(){
 // AudioContext, eftersom det måste ske i en spelarinitierad gest.
 function onPopStartClick(){
   el('popStart')?.classList.add('hidden')
-  const ctx = getPopAudioCtx()
-  if(ctx && ctx.state === 'suspended') ctx.resume()
+  unlockPopAudio()
   measurePopField()
   startPopCountdown()
 }
