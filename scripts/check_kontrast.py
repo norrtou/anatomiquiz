@@ -77,6 +77,9 @@ BAKGRUND = {
     ".badge.placeholder": "--surface",
     ".btn-mode:disabled": "--surface",
     ".btn-mode--ready": "--surface",
+    # Arkadknapparna ligger i startkortet, precis som de gröna lägesknapparna.
+    ".btn-mode--arcade": "--surface",
+    ".btn-mode--arcade:disabled": "--surface",
     ".btn-cancel:hover:not(:disabled)": "--surface",
     ".tidsjakt-record-chip": "--surface",
     ".case-topic-tag": "--surface",
@@ -112,6 +115,14 @@ OMÄTBARA = {
     ".hub-tile":
         "gradient med två alfastopp över --surface, och texten är sidans egen "
         "brödtextfärg — plattan är en aning grön, inte en färgad yta.",
+    ".pop-bubble-body":
+        "bubblans botten ÄR en platta (linear-gradient --plate-violet → "
+        "--plate-violet-deep, vit text 7,10:1 respektive 8,98:1); ovanpå den "
+        "ligger en radiell glans med alfastopp som verktyget inte kan väga "
+        "samman. Värsta fallet är därför plattan med FULL glans, och det är "
+        "handräknat: 18 % vit över --plate-violet ger #874fe0 och vit text "
+        "4,97:1 (AA). Glansen låg först på 45 %, vilket gav 2,77:1 — underkänt "
+        "och osynligt i en skärmdump. Höjs den måste siffran räknas om.",
     ".kb-card": "color: inherit — kortets text ärvs från sidan.",
     ".glossary-results .glossary-def mark.glossary-hit":
         "color: inherit och color-mix() — sökträffens ton beräknas av "

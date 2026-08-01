@@ -104,6 +104,15 @@ i mörkt, utan att något syns i en skärmdump.
 | Mörkare gröna änden i en gradient | `--plate-green-deep` (`#065f46`) | 7,68:1 |
 | Teal botten | `--plate-teal` (`#0f766e`) | 5,47:1 |
 | Röd botten | `--plate-red` (`#dc2626`) | 4,83:1 |
+| Violett botten (arkadlägenas bubblor) | `--plate-violet` (`#6d28d9`) | 7,10:1 |
+| Mörkare violetta änden i en gradient | `--plate-violet-deep` (`#5b21b6`) | 8,98:1 |
+| Amber botten (svitbrickan i spelytan) | `--plate-amber` (`#92400e`) | 7,09:1 |
+
+⚠️ **En glans ovanpå en platta måste räknas med.** Bubblorna i `Arcade: Pop!` har en
+radiell vit högdager över den violetta plattan. På 45 % föll vit text till **2,77:1** –
+underkänt, och osynligt både i en skärmdump och för `check_kontrast.py`, som inte kan
+väga samman alfastopp med plattan under. Den ligger nu på 18 % (4,97:1) och det värsta
+fallet står handräknat i `OMÄTBARA` i skriptet. Höjer du den: räkna om.
 
 Plattorna står **bara** i `:root` och överskrivs aldrig i `[data-theme="dark"]` – det
 är det som gör dem säkra. `--btn-primary-from/to` är alias för de två gröna; lägg inte
@@ -183,6 +192,30 @@ Flashcards, Matcha, Leitner och Tidsjakt. **Samma sak hände igen i 0.9.284** me
 mekaniska handpåläggning §0.3 förbjuder. De fyra första raderna kontrolleras därför
 numera av **`python3 scripts/check_spellagen.py`**, som körs av `check_generators.py`
 före varje commit. `.gm*`-raden är omdöme och står kvar som en läsanvisning.
+
+Sedan 0.9.314 kör samma skript dessutom **lägets testskal** (`scripts/test_<slug>.js`)
+om det finns. Tidigare låg de körningarna inne i den datafilsvalidering som råkade
+finnas per läge (`validate_sortera.py` kör `test_sortera.js`), vilket betyder att ett
+läge utan egen datafil tyst blev utan testkörning — Pop! hade blivit det första.
+
+### ⚠️ Ett spelläge med en spelyta: mät den, gissa den inte
+`Arcade: Pop!` har en fysikstyrd spelyta (`.pop-field`), och två fällor slog till i
+bygget som varken tester eller CSS-läsning hade fångat:
+
+* **Positionen och animationen får inte dela `transform`.** Bubblorna flyttas varje
+  bildruta med `transform: translate3d(...)` från JS. Låg burst-animationen på samma
+  element skrev dess `transform` över positionen, och bubblan hoppade till hörnet
+  precis när den poppades. Lösningen är två lager: `.pop-bubble` bär BARA positionen,
+  `.pop-bubble-body` bär utseende och alla animationer.
+* **En förklaringspanel ovanför ytan åt upp hela spelplanen.** Den automatiskt
+  uppfällda `<details>`-rutan (mallen från Leitner och Tidsjakt) knuffade fältet under
+  fold på en 390×844-skärm. I ett tidsläge är det dessutom poängavdrag, inte kosmetik.
+  Reglerna ligger nu i en startruta *inne i* fältet (`.pop-start`), som samtidigt är
+  den spelarinitierade gest som webbläsaren kräver för att ljudet ska få spelas.
+
+**Regel framåt:** ett läge med en spelyta verifieras renderat på 390×844 innan det
+kallas klart — ett Node-DOM-skal renderar ingen CSS och kan per konstruktion inte se
+något av ovanstående.
 
 ## Snabb felsökning när en stiländring "inte tar"
 1. Vilka CSS-filer laddar sidan? (`grep stylesheet <sida>.html`)

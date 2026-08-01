@@ -38,6 +38,7 @@ Användning:
 """
 import pathlib
 import re
+import subprocess
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -124,6 +125,28 @@ def main(argv):
 
     print(f"OK: {len(lagen)} spellägen registrerade på alla fyra ställen "
           f"({', '.join(lagen)}).")
+
+    # Femte åtagandet: har läget ett DOM-testskal ska det också KÖRAS före
+    # commit. Testerna låg tidigare inne i den datafilsvalidering som råkade
+    # finnas per läge (validate_sortera.py kör test_sortera.js), vilket betyder
+    # att ett läge utan egen datafil tyst blev utan testkörning. Här hittas de
+    # på konventionen i stället, så nästa läge får sin körning gratis.
+    kvar = []
+    for slug in lagen:
+        test = ROOT / "scripts" / f"test_{slug}.js"
+        if not test.exists():
+            kvar.append(slug)
+            continue
+        kod = subprocess.run(["node", str(test)], cwd=ROOT,
+                             stdout=subprocess.DEVNULL).returncode
+        if kod != 0:
+            print(f"AVVIKELSE: scripts/test_{slug}.js underkänd — kör "
+                  f"`node scripts/test_{slug}.js` för utskriften.", file=sys.stderr)
+            return kod
+        print(f"OK: scripts/test_{slug}.js grön.")
+    if kvar:
+        print(f"Anm: {len(kvar)} läge(n) saknar testskal ({', '.join(kvar)}) — "
+              "logiken prövas bara manuellt där.")
     return 0
 
 

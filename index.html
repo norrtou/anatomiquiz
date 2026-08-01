@@ -69,7 +69,7 @@
     "educationalUse": "practice",
     "learningResourceType": ["quiz", "flashcard", "reference"],
     "datePublished": "2026-05-27",
-    "dateModified": "2026-07-31",
+    "dateModified": "2026-08-01",
     "sameAs": [
       "https://www.instagram.com/anatomiquiz.se",
       "https://www.facebook.com/anatomiquizse"
@@ -168,7 +168,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 
-  <link rel="stylesheet" href="css/styles.css?v=0.9.313">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.314">
 </head>
 <body>
 
@@ -497,7 +497,7 @@
             <button id="startLeitnerBtn" class="btn btn-mode btn-mode--ready" type="button">Leitner Light</button>
             <button id="startTidsjaktBtn" class="btn btn-mode btn-mode--ready" type="button">Tidsjakt</button>
           </div>
-          <div class="game-modes-row game-modes-row--3">
+          <div class="game-modes-row game-modes-row--2">
             <!-- Sviten sitter PÅ knappen, inte bara inne i läget: en svit man
                  måste öppna spelet för att se driver inga återbesök. 🔥 N =
                  dagar i rad, ✅ N = dagens utmaning redan klar. Sätts av
@@ -510,7 +510,31 @@
                  understartsida: knappen leder till lägets ämnesväljare, inte
                  rakt in i en runda med quizets valda ämne. -->
             <button id="startSorteraBtn" class="btn btn-mode btn-mode--ready" type="button">Sortera</button>
-            <button class="btn btn-mode" type="button" disabled aria-disabled="true">Arcade: Gravity</button>
+          </div>
+          <!-- Arkadlägena står på en egen rad med eget utseende: de är snabba
+               och lekfulla snarare än pedagogiska, och ska inte se ut som
+               plugglägena ovanför. Ikonerna är inline-SVG — CSP:n tillåter
+               inga externa resurser, och en <img> till skulle vara en
+               nätverkshämtning för två streck. -->
+          <div class="game-modes-row game-modes-row--2 game-modes-row--arcade">
+            <button id="startPopBtn" class="btn btn-mode btn-mode--arcade" type="button">
+              <svg class="mode-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <circle cx="9" cy="13" r="5.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="17" cy="7.5" r="3.4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="18.2" cy="16.4" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="7.1" cy="11.1" r="1.35" fill="currentColor"/>
+                <circle cx="15.9" cy="6.3" r="0.95" fill="currentColor"/>
+              </svg>
+              <span class="mode-label">Arcade: Pop!</span>
+            </button>
+            <button class="btn btn-mode btn-mode--arcade" type="button" disabled aria-disabled="true">
+              <svg class="mode-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="7.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="12" cy="12" r="1.7" fill="currentColor"/>
+                <path d="M12 1.6v3.6M12 18.8v3.6M1.6 12h3.6M18.8 12h3.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+              <span class="mode-label">Arcade: Shoot!</span>
+            </button>
           </div>
           <!-- Vägen till den utförliga genomgången av alla lägen, reglerna och
                studietekniken bakom. Ligger här eftersom det är där man står när
@@ -1281,6 +1305,112 @@
     </section>
 
     <!-- =========================================================
+         Arcade: Pop! — dold initialt.
+         60 sekunder. Frågan står som en kort rad över spelytan, svaren svävar
+         som bubblor. Poppa rätt bubbla → poäng och ny fråga direkt; poppa fel
+         → samma sak, men 3 sekunder försvinner och den rätta bubblan blinkar
+         med ✓ först. Inga Nästa- eller Avbryt-knappar: allt går på tid, och
+         chrome i vägen dödar arkadkänslan. Logik: js/pop.js.
+         Ämne och utbildning ärvs från startvyn som i övriga spellägen.
+         ========================================================= -->
+    <section id="pop" class="card hidden" aria-labelledby="popHeading">
+      <h2 id="popHeading" class="sr-only">Arcade: Pop!</h2>
+
+      <div id="popStage" class="pop-stage">
+        <!-- Frågan hålls som EN kort rad ovanför spelytan: den ska gå att läsa
+             i förbifarten utan att äta av ytan. --prompt-scale sätts av
+             js/pop.js efter frågans längd. -->
+        <p id="popPrompt" class="pop-prompt" aria-live="polite"></p>
+
+        <div id="popField" class="pop-field">
+          <!-- Räknarna ligger INNE i spelfältet (pointer-events: none), så att
+               ytan inte behöver delas med en panel. Bubblorna passerar under. -->
+          <div class="pop-hud" aria-hidden="false">
+            <div id="popClockRow" class="pop-clock-row">
+              <div class="pop-clock-track">
+                <div id="popClockFill" class="pop-clock-fill"></div>
+              </div>
+              <span id="popClock" class="pop-clock" role="timer" aria-live="off"></span>
+            </div>
+            <div class="pop-hud-chips">
+              <span id="popScoreBadge" class="pop-score-badge" aria-live="polite"></span>
+              <span id="popStreakChip" class="pop-streak-chip hidden"></span>
+              <!-- Spökmålet: personbästa i ämnet syns UNDER spelet. -->
+              <span id="popRecordChip" class="pop-record-chip hidden"></span>
+            </div>
+          </div>
+
+          <span id="popPlayerLabel" class="sr-only"></span>
+          <span id="popMeta" class="sr-only"></span>
+
+          <!-- Startrutan ligger INNE i spelytan, inte som en panel ovanför.
+               Tre skäl, alla tre skarpa:
+                 * Reglerna måste stå i spelvyn (§13.1) men får inte äta av
+                   ytan — här ÄR de ytan, och försvinner när rundan börjar.
+                 * Klockan startar först efter tryck. En uppfälld textpanel i
+                   ett tidsläge är poängavdrag, inte kosmetik.
+                 * Trycket är den spelarinitierade gest som webbläsaren kräver
+                   för att ljudet ska få spelas (autoplay-kraven).
+               Den som spelat förut får bara rubriken och knappen: samma text
+               varje runda är brus, inte hjälp. -->
+          <div id="popStart" class="pop-start hidden">
+            <p class="pop-start-title">Poppa ordet som är rätt svar</p>
+            <div id="popStartRules" class="pop-start-rules">
+              <p>Frågan står överst, svaren svävar runt som bubblor. Du tränar att <strong>känna igen</strong> rätt ord i högt tempo — inte att grubbla fram det.</p>
+              <ul>
+                <li><strong>Rätt bubbla</strong> – ett poäng, ny fråga direkt.</li>
+                <li><strong>Fel bubbla</strong> – tre sekunder bort, och den rätta blinkar med ✓.</li>
+                <li><strong>Fem i rad</strong> – tonen stiger och du får en kvittens.</li>
+              </ul>
+            </div>
+            <button id="popStartBtn" class="btn primary pop-start-btn" type="button">Kör!</button>
+            <p class="pop-start-time">60 sekunder</p>
+          </div>
+
+          <!-- Nedräkning innan klockan startar: annars kostar vyrenderingen och
+               blicksökandet riktig speltid. -->
+          <div id="popCountdown" class="pop-countdown hidden" role="status" aria-live="assertive">
+            <span class="pop-countdown-label">Gör dig redo</span>
+            <span id="popCountdownNr" class="pop-countdown-nr"></span>
+          </div>
+
+          <span id="popFly" class="pop-fly hidden" aria-hidden="true"></span>
+          <p id="popPraise" class="pop-praise hidden" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <!-- Klart-vy (dold under rundan) -->
+      <div id="popFinished" class="pop-finished hidden">
+        <div class="gm-ring-wrap">
+          <svg class="gm-ring" viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="gm-ring-bg" cx="60" cy="60" r="52"></circle>
+            <circle id="popRingProgress" class="gm-ring-progress" cx="60" cy="60" r="52"></circle>
+          </svg>
+          <div class="gm-ring-label">
+            <span id="popRingPct" class="gm-ring-pct"></span>
+            <span class="gm-ring-sub">träffsäkert</span>
+          </div>
+        </div>
+        <p id="popDoneText" class="pop-done-text" aria-live="polite"></p>
+        <p id="popStatsText" class="gm-stats-text"></p>
+        <p id="popNextText" class="pop-next-text"></p>
+        <p id="popRecordBadge" class="gm-record-badge hidden" aria-live="polite">🏆 Nytt rekord!</p>
+
+        <!-- Ett arkadläge utan facit efteråt lär ingen något. -->
+        <div id="popMissedWrap" class="pop-missed-wrap hidden">
+          <h3 class="pop-missed-heading">Det här missade du</h3>
+          <ul id="popMissed" class="pop-missed"></ul>
+          <p id="popMissedMore" class="pop-missed-more hidden"></p>
+        </div>
+
+        <div class="actions">
+          <button id="popRetryBtn" class="btn primary" type="button">Ny runda</button>
+          <button id="popQuitBtn" class="btn" type="button">Avsluta</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
          Hantera-sektion — granska och importera frågor (dold initialt)
          ========================================================= -->
     <section id="manage" class="card hidden" aria-labelledby="manageHeading">
@@ -1361,7 +1491,7 @@
            som skuggade platshållare. Id:n följer slug-konventionen
            (scoreList-<slug>, exportScores-<slug>, …), så ett nytt läge behöver
            bara ta bort disabled/hs-segment--placeholder och koppla på sin logik.
-           Slugs: matcha · leitner · tidsjakt · dagsutmaning · gravity
+           Slugs: matcha · leitner · tidsjakt · dagsutmaning · sortera · pop · shoot
            ===================================================================== -->
       <div class="hs-modes" aria-label="Topplistor för övriga spellägen">
         <h3 class="hs-modes-heading">Fler spellägen</h3>
@@ -1429,15 +1559,27 @@
           </div>
         </div>
 
-        <div class="hs-segment hs-segment--placeholder" data-mode="gravity">
-          <h4 class="hs-segment-title">Arcade: Gravity</h4>
-          <ol id="scoreList-gravity" class="hs-segment-list"></ol>
+        <div class="hs-segment" data-mode="pop">
+          <h4 class="hs-segment-title">Arcade: Pop! <span class="hs-segment-sub">flest poppade först</span></h4>
+          <ol id="scoreList-pop" class="hs-segment-list"></ol>
+          <p class="hs-empty">Inga rundor än — poppa en runda så dyker den upp här.</p>
+          <div class="actions">
+            <button id="exportScores-pop" class="btn" type="button">Exportera resultat</button>
+            <button id="importScoresBtn-pop" class="btn" type="button">Importera resultat</button>
+            <input id="importScoresFile-pop" type="file" accept="application/json" class="file-input-hidden" aria-hidden="true" tabindex="-1" />
+            <button id="clearScores-pop" class="btn" type="button">Rensa</button>
+          </div>
+        </div>
+
+        <div class="hs-segment hs-segment--placeholder" data-mode="shoot">
+          <h4 class="hs-segment-title">Arcade: Shoot!</h4>
+          <ol id="scoreList-shoot" class="hs-segment-list"></ol>
           <p class="hs-empty">Spelläget är inte byggt än — inga resultat att visa.</p>
           <div class="actions">
-            <button id="exportScores-gravity" class="btn" type="button" disabled aria-disabled="true">Exportera resultat</button>
-            <button id="importScoresBtn-gravity" class="btn" type="button" disabled aria-disabled="true">Importera resultat</button>
-            <input id="importScoresFile-gravity" type="file" accept="application/json" class="file-input-hidden" aria-hidden="true" tabindex="-1" disabled />
-            <button id="clearScores-gravity" class="btn" type="button" disabled aria-disabled="true">Rensa</button>
+            <button id="exportScores-shoot" class="btn" type="button" disabled aria-disabled="true">Exportera resultat</button>
+            <button id="importScoresBtn-shoot" class="btn" type="button" disabled aria-disabled="true">Importera resultat</button>
+            <input id="importScoresFile-shoot" type="file" accept="application/json" class="file-input-hidden" aria-hidden="true" tabindex="-1" disabled />
+            <button id="clearScores-shoot" class="btn" type="button" disabled aria-disabled="true">Rensa</button>
           </div>
         </div>
       </div>
@@ -1578,18 +1720,19 @@
     <footer class="page-footer">
       <p>Utbildningsmaterial, inte medicinsk rådgivning. Innehållet är avsett för studier och ersätter inte kurslitteratur, undervisning eller kliniska riktlinjer. Det ska inte användas som underlag för vård eller behandling av patienter.</p>
       <p>Anatomiquiz använder inga kakor och samlar inte in personuppgifter. Läs mer i <a href="/integritet.html" class="info-link">integritetspolicyn</a>.</p>
-      <p class="page-updated">Senast uppdaterad <time data-updated datetime="2026-07-31">31 juli 2026</time></p>
+      <p class="page-updated">Senast uppdaterad <time data-updated datetime="2026-08-01">1 augusti 2026</time></p>
     </footer>
   </main>
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.313" defer></script>
+  <script src="js/app.js?v=0.9.314" defer></script>
   <!-- Spellägesmoduler: en egen fil per läge, laddas EFTER app.js (delar globalt scope). -->
   <script src="js/matcha.js?v=0.9.261" defer></script>
   <script src="js/leitner.js?v=0.9.261" defer></script>
   <script src="js/tidsjakt.js?v=0.9.262" defer></script>
   <script src="js/dagsutmaning.js?v=0.9.284" defer></script>
   <script src="js/sortera.js?v=0.9.306" defer></script>
+  <script src="js/pop.js?v=0.9.314" defer></script>
 </body>
 </html>

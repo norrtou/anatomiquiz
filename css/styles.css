@@ -77,6 +77,22 @@
   --btn-primary-to: var(--plate-green-deep);
   --btn-primary-to-hover: #064e3b;
 
+  /* Arkadlägena (Arcade: Pop! m.fl.) har en egen violett ton, så att de läses
+     som en annan sorts läge än de gröna plugglägena. Samma konstruktion som
+     .btn-mode--ready: mättad TEXTfärg mot en genomskinlig botten – alltså
+     ljusnar textfärgen i mörkt läge (se :root[data-theme="dark"]). */
+  --arcade-text: #6d28d9;
+  --arcade-border: #a78bfa;
+  --arcade-border-strong: #7c3aed;
+  --arcade-bg: rgba(139, 92, 246, 0.10);
+  --arcade-bg-hover: rgba(139, 92, 246, 0.18);
+  --arcade-bg-muted: rgba(139, 92, 246, 0.05);
+  /* Bubblornas fyllning i spelytan. Platta, INTE --arcade-text: vit text
+     ligger på den och måste klara WCAG i båda teman (CSS_KARTA). */
+  --plate-violet: #6d28d9;      /* Vit text: 7,10:1 */
+  --plate-violet-deep: #5b21b6; /* Mörkare änden i bubbelgradienten: 8,98:1 */
+  --plate-amber: #92400e;       /* Svitbrickan i spelytan. Vit text: 7,09:1 */
+
   /* Spacing & sizing */
   --radius: 12px;               /* Border radius */
   --radius-sm: 8px;
@@ -151,6 +167,16 @@
      :root, vilket är vad som håller vit text läsbar i båda teman. Fram till
      0.9.280 stod --btn-primary-* med identiska värden även här; en kopia som
      alltid ska vara lika är en kopia som kan bli olika. */
+
+  /* Arkadlägenas violetta ton. Textfärgen ljusnar (den läses mot mörk yta);
+     bottnarna är genomskinliga och behöver bara bli något starkare.
+     --plate-violet* står kvar oförändrade från :root, precis som --plate-*. */
+  --arcade-text: #c4b5fd;
+  --arcade-border: #8b5cf6;
+  --arcade-border-strong: #a78bfa;
+  --arcade-bg: rgba(139, 92, 246, 0.16);
+  --arcade-bg-hover: rgba(139, 92, 246, 0.26);
+  --arcade-bg-muted: rgba(139, 92, 246, 0.08);
 
   /* Skuggor blir svarta i stället för gröna – en grön glöd mot mörk botten
      läses som ett ljussken, inte som djup. */
@@ -1139,10 +1165,10 @@ select:focus-visible {
    js/app.js. */
 .container:has(#quiz:not(.hidden), #flashcards:not(.hidden), #matcha:not(.hidden),
                #leitner:not(.hidden), #tidsjakt:not(.hidden), #dagsutmaning:not(.hidden),
-               #sortera:not(.hidden)) > .header,
+               #sortera:not(.hidden), #pop:not(.hidden)) > .header,
 .container:has(#quiz:not(.hidden), #flashcards:not(.hidden), #matcha:not(.hidden),
                #leitner:not(.hidden), #tidsjakt:not(.hidden), #dagsutmaning:not(.hidden),
-               #sortera:not(.hidden)) > .page-footer {
+               #sortera:not(.hidden), #pop:not(.hidden)) > .page-footer {
   display: none;
 }
 /* Sidbakgrunden gäller bara quizet: den tas bort för att bildfrågans kort ska
@@ -1432,9 +1458,10 @@ body:has(#quiz:not(.hidden)) {
   letter-spacing: 0.4px;
 }
 
-/* Kommande spellägen — skuggade/inaktiva knappar tills de byggts och funkar.
-   Två rader: 3 knappar (Matcha, Leitner Light, Tidsjakt) + 2 knappar
-   (Dagens utmaning, Arcade: Gravity). */
+/* Lägesknapparna, tre rader: 3 plugglägen (Matcha, Leitner Light, Tidsjakt),
+   2 plugglägen (Dagens utmaning, Sortera) och 2 arkadlägen (Arcade: Pop!,
+   Arcade: Shoot!) med eget utseende. Ännu ej byggda lägen står skuggade och
+   streckade tills de fungerar. */
 .game-modes {
   display: flex;
   flex-direction: column;
@@ -1539,6 +1566,52 @@ body:has(#quiz:not(.hidden)) {
   cursor: not-allowed;
   border-style: solid;
   background: rgba(16, 185, 129, 0.04);
+}
+
+/* ---- Arkadlägena (Arcade: Pop!, Arcade: Shoot!) ------------------------- */
+/* Egen rad och eget utseende: de är snabba och lekfulla snarare än
+   pedagogiska och ska läsas som en annan sorts läge än plugglägena ovanför.
+   Violett i stället för grönt, ikon till vänster om etiketten. */
+.game-modes-row--arcade {
+  margin-top: 2px;
+}
+
+.btn-mode--arcade {
+  flex-wrap: nowrap;
+  gap: 8px;
+  border-style: solid;
+  border-color: var(--arcade-border);
+  color: var(--arcade-text);
+  background: var(--arcade-bg);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.btn-mode--arcade .mode-label {
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.mode-icon {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.btn-mode--arcade:hover:not(:disabled) {
+  border-color: var(--arcade-border-strong);
+  background: var(--arcade-bg-hover);
+}
+
+/* Ännu ej byggt arkadläge: samma streckade "snart"-utseende som övriga
+   platshållare, men i lägets egen färg så raden hänger ihop. */
+.btn-mode--arcade:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-style: dashed;
+  color: var(--text-muted);
+  background: var(--arcade-bg-muted);
 }
 
 .secondary-actions {
@@ -4679,6 +4752,411 @@ ol li {
     transition: none !important;
   }
   .sortera-tile.landing { opacity: 1; transform: none; }
+}
+
+/* ============================================================================
+   ARCADE: POP! (.pop-*)
+   ============================================================================
+   Bubblor med svarsalternativ svävar i en spelyta; poppa den som är rätt.
+   Spelytan är det viktiga i läget, så paddingar hålls nere och räknarna
+   ligger som overlay INNE i ytan i stället för i en egen panel ovanför.
+   Logik: js/pop.js. Fysiken (position/hastighet) sätts i JS och skrivs som
+   transform: translate3d på varje bubbla — aldrig top/left, som hade tvingat
+   fram en layout-omräkning per bildruta.
+   ============================================================================ */
+
+/* Startrutan ligger INNE i spelytan och ÄR ytan tills rundan börjar. En
+   uppfälld textpanel ovanför fältet såg ut som en rimlig förklaringsruta men
+   knuffade hela spelplanen under fold på en telefon — och i ett tidsläge är
+   en panel som måste läsas bort poängavdrag, inte kosmetik. */
+.pop-start {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px;
+  text-align: center;
+  overflow-y: auto;
+  background: linear-gradient(160deg, var(--plate-violet-deep) 0%, var(--plate-teal) 100%);
+  border-radius: var(--radius);
+  color: #fff;
+}
+.pop-start.hidden { display: none; }
+.pop-start-title { margin: 0; font-size: 1.12rem; font-weight: 800; line-height: 1.25; }
+.pop-start-rules { font-size: 0.82rem; line-height: 1.45; max-width: 30rem; }
+.pop-start-rules.hidden { display: none; }
+.pop-start-rules p { margin: 0 0 8px; }
+.pop-start-rules ul { margin: 0; padding-left: 18px; text-align: left; }
+.pop-start-rules li { margin-bottom: 4px; }
+.pop-start-btn { min-width: 140px; font-size: 1.02rem; }
+.pop-start-time { margin: 0; font-size: 0.76rem; opacity: 0.85; letter-spacing: 0.04em; text-transform: uppercase; }
+
+.pop-stage {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.pop-stage.hidden { display: none; }
+
+/* Frågan: EN kort rad, medvetet dämpad i storlek. Den ska gå att läsa i
+   förbifarten utan att konkurrera med spelytan om höjden. --prompt-scale
+   sätts av js/pop.js efter frågans längd, med golv i max() (WCAG-läsbarhet). */
+.pop-prompt {
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text-primary);
+  font-size: max(0.82rem, calc(0.95rem * var(--prompt-scale, 1)));
+}
+
+.pop-field {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  height: clamp(280px, 62vh, 680px);
+  background:
+    radial-gradient(circle at 22% 18%, rgba(139, 92, 246, 0.10) 0%, transparent 55%),
+    radial-gradient(circle at 78% 82%, rgba(45, 212, 191, 0.10) 0%, transparent 55%),
+    var(--success-bg);
+  border: 1px solid var(--accent);
+  /* Bubblorna fångar nedtryck; ytan ska aldrig starta en scroll-gest. */
+  touch-action: none;
+}
+
+/* ---- Räknarna, som overlay i spelytans överkant ------------------------- */
+/* pointer-events: none — de får aldrig äta ett tryck som var menat för en
+   bubbla som passerar under dem. */
+.pop-hud {
+  position: absolute;
+  inset: 0 0 auto 0;
+  z-index: 3;
+  padding: 8px 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.16) 0%, transparent 100%);
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.pop-clock-row { display: flex; align-items: center; gap: 8px; }
+
+.pop-clock-track {
+  flex: 1 1 auto;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.35);
+  overflow: hidden;
+}
+.pop-clock-fill {
+  height: 100%;
+  width: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--plate-violet) 0%, var(--plate-teal) 100%);
+  transition: width 0.12s linear;
+}
+.pop-clock {
+  flex: 0 0 auto;
+  font-size: 0.82rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-primary);
+}
+/* Klockan byter färg vid 15 s och 5 s. Färgen är inte enda signalen: siffran
+   står bredvid och tickljudet startar de sista tre sekunderna. */
+.pop-clock-row.warn .pop-clock-fill { background: var(--warning); }
+.pop-clock-row.warn .pop-clock { color: var(--warning-text-strong); }
+.pop-clock-row.danger .pop-clock-fill { background: var(--plate-red); animation: popClockPulse 0.7s ease-in-out infinite; }
+.pop-clock-row.danger .pop-clock { color: var(--error-text-strong); }
+@keyframes popClockPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.55; } }
+
+.pop-hud-chips { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+
+.pop-score-badge {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.pop-score-badge.bump { animation: popBadgeBump 0.35s ease; }
+@keyframes popBadgeBump {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
+
+.pop-streak-chip,
+.pop-record-chip {
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1;
+  padding: 3px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+/* Solid platta, inte en genomskinlig svart: brickan ligger över en spelyta
+   vars färg ändrar sig under den (bubblor passerar), och då är en
+   genomskinlig botten inte mätbar och inte heller pålitligt läsbar. */
+.pop-streak-chip {
+  color: #fff;
+  background: var(--plate-amber);
+}
+.pop-record-chip {
+  color: #fff;
+  background: var(--plate-violet);
+}
+.pop-streak-chip.hidden,
+.pop-record-chip.hidden { display: none; }
+
+/* ---- Bubblorna --------------------------------------------------------- */
+/* TVÅ lager, medvetet: den yttre knappen bär BARA positionen (transform
+   translate3d, skriven av fysiken varje bildruta) och den inre kroppen bär
+   allt utseende och alla animationer. Ligger de i samma element skriver
+   burst-animationens transform över positionen, och bubblan hoppar till
+   hörnet i samma ögonblick som den poppas. */
+.pop-bubble {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  /* Aldrig top/left per bildruta — translate3d håller rörelsen på GPU:n. */
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.pop-bubble-body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  border-radius: 50%;
+  color: #fff;
+  /* Platta, inte --arcade-text: den ljusnar i mörkt läge och vit text på den
+     ytan skulle falla under WCAG (CSS_KARTA).
+     GLANSEN ÄR MÄTT, INTE GISSAD: vit text ligger på den, och det värsta
+     fallet är plattan + full glans. 45 % vit gav 2,77:1 (klart underkänt och
+     helt osynligt i en skärmdump); 18 % ger 4,97:1 och klarar AA med marginal
+     även där glansen är som starkast. Höj den aldrig utan att räkna om. */
+  background:
+    radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 42%),
+    linear-gradient(135deg, var(--plate-violet) 0%, var(--plate-violet-deep) 100%);
+  box-shadow: 0 4px 14px rgba(91, 33, 182, 0.35), inset 0 -3px 10px rgba(0, 0, 0, 0.18);
+  transition: opacity 0.14s ease, transform 0.08s ease;
+}
+.pop-bubble-text {
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
+  /* Radbryt i bubblan är OK; avstavning mitt i ett ord är det inte. */
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: none;
+  font-size: max(0.66rem, calc(0.95rem * var(--bubble-scale, 1)));
+}
+/* Nedtryck ska kännas direkt — trycket kvitteras innan spelet hunnit rätta. */
+.pop-bubble:active .pop-bubble-body { transform: scale(0.94); }
+
+.pop-mark {
+  position: absolute;
+  top: 11%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1;
+  /* Hörnet på en cirkel ligger UTANFÖR cirkeln: en bricka i övre högra hörnet
+     klipptes bort av border-radius och syntes bara till hälften. */
+}
+
+/* Rätt: bubblan blåses upp och försvinner. */
+.pop-bubble.burst { pointer-events: none; }
+.pop-bubble.burst .pop-bubble-body { animation: popBurst 0.24s cubic-bezier(0.3, 0, 0.2, 1) forwards; }
+@keyframes popBurst {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+/* Fel: bubblan skakar och slocknar, men står kvar tillräckligt länge för att
+   ✗ ska hinna läsas. */
+.pop-bubble.miss { pointer-events: none; }
+.pop-bubble.miss .pop-bubble-body {
+  animation: popMiss 0.4s ease;
+  background: linear-gradient(135deg, var(--plate-red) 0%, #991b1b 100%);
+}
+@keyframes popMiss {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-7px); }
+  40% { transform: translateX(7px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+/* Den rätta bubblan när man poppat fel: pulserar grön så att felet lär något. */
+.pop-bubble.reveal { pointer-events: none; }
+.pop-bubble.reveal .pop-bubble-body {
+  background: linear-gradient(135deg, var(--plate-green) 0%, var(--plate-green-deep) 100%);
+  animation: popReveal 0.5s ease-in-out 2;
+}
+@keyframes popReveal {
+  0%, 100% { box-shadow: 0 4px 14px rgba(4, 120, 87, 0.4); }
+  50% { box-shadow: 0 0 0 8px rgba(4, 120, 87, 0.28); }
+}
+/* Övriga bubblor när frågan är klar: tonar bort utan att flytta på sig. */
+.pop-bubble.fade { pointer-events: none; }
+.pop-bubble.fade .pop-bubble-body { opacity: 0; }
+
+/* Ringen som slår ut ur en poppad bubbla. Positioneras med left/top (den
+   skapas en gång per popp, inte per bildruta) så att transform är fri för
+   skalningen. Ren dekor — js/pop.js hoppar över den vid reducerad rörelse. */
+.pop-ring {
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  border: 3px solid var(--plate-violet);
+  pointer-events: none;
+  animation: popRingOut 0.4s ease-out forwards;
+}
+@keyframes popRingOut {
+  0% { opacity: 0.7; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.75); }
+}
+
+/* ---- Nedräkning, beröm och flygande tid -------------------------------- */
+.pop-countdown {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: var(--radius);
+}
+.pop-countdown.hidden { display: none; }
+.pop-countdown-label { font-size: 0.86rem; font-weight: 700; color: #fff; }
+.pop-countdown-nr { font-size: 3rem; font-weight: 800; color: #fff; line-height: 1; }
+.pop-countdown-nr.tick { animation: popCountdownTick 0.42s ease; }
+@keyframes popCountdownTick {
+  0% { transform: scale(0.6); opacity: 0; }
+  55% { transform: scale(1.14); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.pop-praise {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%);
+  z-index: 4;
+  margin: 0;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: var(--plate-violet);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.86rem;
+  white-space: nowrap;
+  pointer-events: none;
+  animation: popPraiseIn 0.3s ease;
+}
+.pop-praise.hidden { display: none; }
+@keyframes popPraiseIn {
+  0% { transform: translateX(-50%) translateY(10px); opacity: 0; }
+  100% { transform: translateX(-50%) translateY(0); opacity: 1; }
+}
+
+/* "+1" / "−3 s" flyger upp ur spelytans mitt. */
+.pop-fly {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  z-index: 4;
+  font-weight: 800;
+  font-size: 1.1rem;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, 0);
+}
+.pop-fly.hidden { display: none; }
+.pop-fly.gain { color: var(--primary-light); }
+.pop-fly.loss { color: var(--error-text-strong); }
+.pop-fly.go { animation: popFlyUp 0.6s ease-out; }
+@keyframes popFlyUp {
+  0% { opacity: 0; transform: translate(-50%, 6px); }
+  25% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -30px); }
+}
+
+/* ---- Klart-vyn --------------------------------------------------------- */
+.pop-finished { text-align: center; }
+.pop-finished.hidden { display: none; }
+.pop-done-text { font-size: 1.02rem; font-weight: 700; margin: 0 0 4px; }
+.pop-next-text { font-size: 0.86rem; color: var(--text-secondary); margin: 0 0 10px; }
+
+.pop-missed-wrap { text-align: left; margin: 10px 0 4px; }
+.pop-missed-wrap.hidden { display: none; }
+.pop-missed-heading { font-size: 0.95rem; margin: 0 0 6px; }
+.pop-missed { list-style: none; margin: 0; padding: 0; }
+.pop-missed li {
+  padding: 7px 10px;
+  margin-bottom: 6px;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+.pop-missed-q { display: block; font-size: 0.84rem; color: var(--text-primary); }
+.pop-missed-a { display: block; font-size: 0.82rem; font-weight: 700; color: var(--primary-deep); margin-top: 2px; }
+.pop-missed-more { font-size: 0.8rem; color: var(--text-secondary); margin: 0; }
+.pop-missed-more.hidden { display: none; }
+
+@media (max-width: 640px) {
+  /* Spelytan är poängen med läget: paddingen på kortet krymps så att ytan får
+     så mycket som möjligt, och höjden följer --view-fit som övriga lägen. */
+  #pop { padding: 10px; }
+  .pop-prompt { font-size: max(0.78rem, calc(0.9rem * var(--prompt-scale, 1))); }
+  .pop-field { height: max(240px, calc(min(76vh, 660px) * var(--view-fit, 1))); }
+  .pop-countdown-nr { font-size: 2.4rem; }
+  .pop-missed-q, .pop-missed-a { font-size: 0.78rem; }
+}
+
+/* Rörelsen är extra, inte information. js/pop.js sätter bubblornas hastighet
+   till noll vid reducerad rörelse — de står stilla men går att poppa precis
+   som vanligt, och ✓/✗, poäng och klocka uppdateras oförändrat. Fördröjningen
+   före nästa fråga nollas INTE: den VISAR vilken bubbla som var rätt
+   (§13.1 punkt 8). */
+@media (prefers-reduced-motion: reduce) {
+  .pop-bubble-body,
+  .pop-bubble.burst .pop-bubble-body,
+  .pop-bubble.miss .pop-bubble-body,
+  .pop-bubble.reveal .pop-bubble-body,
+  .pop-praise,
+  .pop-fly.go,
+  .pop-countdown-nr.tick,
+  .pop-score-badge.bump,
+  .pop-clock-row.danger .pop-clock-fill {
+    animation: none !important;
+    transition: none !important;
+  }
+  /* Sluttillståndet sätts ändå: den poppade bubblan FÖRSVINNER, den blir inte
+     bara stillastående. Utebliven rörelse får aldrig betyda utebliven
+     information. */
+  .pop-bubble.burst .pop-bubble-body { opacity: 0; }
+  .pop-bubble:active .pop-bubble-body { transform: none; }
 }
 
 /* ============================================================================
