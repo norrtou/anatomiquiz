@@ -1,6 +1,7 @@
 # Arcade: Shoot! — plan och facit
 
-> **Status:** PLANERAD, inget byggt. Den här filen är facit för bygget.
+> **Status:** PLANERAD och **beslutad** (alla frågor besvarade 2026-08-01),
+> inget byggt. Den här filen är facit för bygget — klar att börja på.
 > **Slug:** `shoot` · **Synligt namn:** Arcade: Shoot! (båda fria ord, §12.1)
 > **Föregångare:** `js/pop.js` (0.9.314–315) är närmaste förlaga — samma
 > ämnesurval, samma `.gm-*`-bas, samma teststruktur.
@@ -70,17 +71,17 @@ skärpas, inte kravet på fyra mål — användaren har varit tydlig med fyra p�
 | 6-sekundersklocka per fråga | Hinner du inte skjuta byts målen ut och det räknas som miss |
 | Maxlängd | 5 minuter → rundan avslutas med **"Du är en mästerskytt!"** + utmärkelse i topplistan |
 
-**Öppet, behöver ditt besked (markerat ⬜ nedan):** de tre raderna om fel
-kranium, bomskott och vad 6-sekundersklockan gör med *frågan* är mina
-tolkningar av din spec, inte något du sagt uttryckligen.
+Raderna om fel kranium, bomskott och vad 6-sekundersklockan gör med *frågan*
+var från början mina tolkningar av specen. **Bekräftade av användaren
+2026-08-01** och gäller därmed som skrivna.
 
 ---
 
 ## 4. Svårighetstrappa
 
-Din spec säger både "max svårighet uppnådd vid ca 2 minuter" och räknar sedan
-upp fartökningar vid 2, 2,5 och 3 minuter. Jag har tolkat det som två skilda
-trappor — **antalet** hinder är maxat tidigt, **farten** fortsätter uppåt:
+Specen sa både "max svårighet uppnådd vid ca 2 minuter" och räknade sedan upp
+fartökningar vid 2, 2,5 och 3 minuter. **Beslutat 2026-08-01: två skilda
+trappor** — **antalet** hinder är maxat tidigt, **farten** fortsätter uppåt:
 
 | Tid | Antal hinder | Fart |
 |---|---|---|
@@ -93,8 +94,8 @@ trappor — **antalet** hinder är maxat tidigt, **farten** fortsätter uppåt:
 | 3:00 | 4 | mycket snabb (max) |
 | 5:00 | — | rundan slut, mästerskytt |
 
-⬜ **Bekräfta:** full uppsättning hinder vid 1:30 och full fart först vid 3:00,
-eller ska allt vara maxat vid 2:00 som första meningen sa?
+✅ **Bekräftat:** full uppsättning hinder vid 1:30, full fart först vid 3:00.
+Trappan ovan är alltså facit; "max vid 2 minuter" gäller *antalet*, inte farten.
 
 **Hårt designkrav:** det ska alltid *gå* att skjuta igenom. När hindren placeras
 måste motorn garantera en lucka — ingen slumpkonfiguration får stänga korridoren
@@ -109,14 +110,14 @@ och det är en spärr som ska testas, inte hoppas på.
 
 Exempel: 40 träffar, 85 % träffsäkerhet, 3 minuter → 40 × 10 × 0,85 + 180 = **520**.
 
-Alla tre delarna du bad om vägs in, och formeln går att förklara på en rad i
-spelvyn. Mästerskytt (5 min) ger **ingen extra poäng** utan en **utmärkelse**
-(⭐) på raden i topplistan — annars blir poängen svårläst.
+Alla tre delarna vägs in, och formeln går att förklara på en rad i spelvyn.
+Mästerskytt (5 min) ger **ingen extra poäng** utan en **utmärkelse** (⭐) på
+raden i topplistan — annars blir poängen svårläst.
 
 Topplistan sorterar på poäng, med träffsäkerhet som utslag.
 
-⬜ **Bekräfta formeln.** Vill du att mästerskytt ska ge poäng i stället för
-märke säger du till.
+✅ **Bekräftat 2026-08-01:** formeln enligt ovan, och mästerskytt förblir ett
+märke — inte poäng.
 
 ---
 
@@ -251,10 +252,22 @@ Ska täcka:
 
 ---
 
-## 12. Öppna frågor att svara på före etapp 1
+## 12. Beslutade frågor
 
-- ⬜ Svårighetstrappan: full fart vid 3:00 (som listan) eller allt maxat vid 2:00?
-- ⬜ Poängformeln enligt §5?
-- ⬜ Fel kranium = miss men inte slut — rätt tolkat?
-- ⬜ Bomskott: räknas som miss, frågan står kvar till 6-sekunderna går ut?
-- ⬜ Ska mästerskytt ge poäng i stället för märke?
+Alla fem öppna punkter **bekräftade av användaren 2026-08-01**. Inget här är
+längre min tolkning — ändras något ska det ändras här först.
+
+| Fråga | Beslut |
+|---|---|
+| Svårighetstrappan | Antal hinder maxat 1:30, fart maxad 3:00 |
+| Poängformeln | `träffar × 10 × träffsäkerhet + 1 p/sekund` |
+| Fel kranium | Miss (träffsäkerhet ned) + ny fråga — **inte** slut |
+| Bomskott | Miss; frågan står kvar tills 6-sekunderna går ut |
+| Mästerskytt | Utmärkelse ⭐ i topplistan, **inte** extra poäng |
+
+**Kvar innan etapp 1:** inget. Planen är komplett och går att bygga på.
+
+Två saker som ändå ska avgöras **genom att spela**, inte genom att gissa i
+förväg — startvärdena i planen är kvalificerade utgångspunkter, inte facit:
+projektilens fart (~1 000 px/s) och hindrens bas- respektive maxfart. De
+sätts när etapp 1 och 3 går att köra på en telefon.
