@@ -1207,6 +1207,22 @@ använd mönstret därifrån och översätt det till det nya lägets mekanik:**
    Kopplas till den befintliga **"Ljudeffekter"**-bocken i Inställningar
    (`el('soundEnabled')`); bygg ingen ny inställning per läge. AudioContext skapas
    först vid en spelarinitierad tryckning (autoplay-kraven).
+   **⚠️ Att SKAPA kontexten i en gest räcker inte på iOS** — och alla webbläsare
+   på iPhone kör WebKit, även Chrome. Två saker till krävs, och båda saknades i
+   `Arcade: Pop!` (0.9.315), där nedräkningens tick hördes men inget därefter
+   förrän sidan laddades om:
+   * **Väck kontexten genom att faktiskt spela något** i samma gest — en tyst
+     enprovsbuffert (`createBuffer(1, 1, 22050)` + `start(0)`). Facit:
+     `unlockPopAudio()` i `js/pop.js`.
+   * **Schemalägg aldrig en ton på exakt `ctx.currentTime`.** En nyväckt kontext
+     har en klocka som stått stilla, så tonen hamnar i det förflutna och droppas
+     **tyst**. Lägg på ~20 ms förhållningstid (`POP_AUDIO_LEAD`).
+   Kontrollera dessutom `ctx.state` före varje ton, inte bara vid skapandet: iOS
+   suspenderar kontexten när fliken varit i bakgrunden.
+   **Den här felklassen syns bara på riktig hårdvara.** Ett DOM-skal har inget
+   ljud alls, och i headless Chrome mätte kontexten `running` med alla toner
+   prydligt schemalagda medan iPhone var tyst. Ljud kan alltså inte kvitteras
+   som klart via test — det måste höras på en telefon.
 7. **Estetik och mobilkänsla, i själva bygget.** Träffytor som går att träffa med
    tummen, hover- **och** press-lägen på allt klickbart, textlängd → typsnittsskala
    per element när innehållet varierar (`--tile-scale`, `matchaTileScale()`, med
