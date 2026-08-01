@@ -680,11 +680,12 @@ eq('trasigt fack rensas ändå', store.hur_leitner_state, undefined)
   hiddenQuestionTests()
   dataTests()
 
-  console.log(`\n${pass} tester gröna.`)
   if (fails.length) {
-    console.log(`\n${fails.length} RÖDA:`)
+    console.log(`\n${pass} gröna, ${fails.length} RÖDA:`)
     fails.forEach(f => console.log('  ✗ ' + f))
     process.exit(1)
   }
-  console.log('Allt grönt.')
+  // Sista raden är sammanfattningen: check_generators.py skriver ut just den
+  // raden och inget annat. Håll den informativ, inte bara "klart".
+  console.log(`${pass} gröna, 0 röda`)
 })()

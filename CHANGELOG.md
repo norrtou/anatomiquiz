@@ -1,5 +1,15 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.331
+- **Nyhetsnotis om de två arkadlägena**, på begäran. Arcade: Pop! och Arcade: Shoot! byggdes i 0.9.314 och 0.9.316 men fick aldrig någon notis under Nyheter i `info.html` — den senaste stod kvar på Sortera. Notisen är daterad **1 augusti 2026**, dagen lägena faktiskt släpptes enligt git, inte dagens datum.
+  - Samtidigt rättad på samma sida: "Utöver quizet och flashcards finns **fem** spellägen" — det har varit sju sedan 0.9.316. Äldre nyhetsnotiser står kvar oförändrade; de var sanna när de skrevs och är daterade därefter.
+- **Tentaläget och flashcards-riktningen inskrivna i `spellagen.html`**, den sida som förklarar lägena. Inbakat i de befintliga punktlistorna under "De två grundlägena" i stället för som ett löst nytt stycke (§0.5 punkt 2). Punkten om direkträttning fick samtidigt ordet "förvalda", eftersom den inte längre beskriver det enda sättet.
+- **Alla DOM-testskal körs nu automatiskt före commit.** `scripts/check_generators.py` hittar `scripts/test_*.js` på disk och kör dem som ingen annan kontroll äger.
+  - **Rättelse av en felaktig lägesbedömning:** jag rapporterade att sju testskal saknade automatisk körning. Fel — `check_spellagen.py` har hela tiden kört ett skal per spelläge på konventionen `<section id="slug">` + `js/slug.js`. Verkligt utanför stod **tre**: `test_theme.js`, `test_verktyg_lakemedel.js` och `test_installningar.js`. Nu körs alla tio.
+  - Listan över vilka skal som redan har en ägare **hämtas ur `check_spellagen.spellagen()`**, inte skriven av. Två kopior av samma konvention glider isär, och den som glider blir tyst: ett läge som fallit ur den ena listan hade körts noll gånger utan att något sagt till (§0.4). Ett nytt spelläge får sin körning gratis där, ett nytt fristående skal fångas här.
+  - Verifierat genom att plantera fel i `js/theme.js`, `js/leitner.js` och `js/verktyg-lakemedel.js` och kontrollera att varje gav rött, samt att ett nytt `scripts/test_*.js` plockas upp utan att någon lista rörs.
+  - Kvarstår: **Matcha saknar testskal helt** — `check_spellagen.py` skriver ut det som en anmärkning. Ingen ändring här, bara noterat.
+
 ## 0.9.330
 - **Sex nya eller saknade inställningar, och inställningssidan grupperad i fem block**, på begäran. Sidan var en platt lista med sju kontroller som växte för varje tillägg; den delas nu i **Utseende · Vad du övar på · Hur du övar · Ljud & känsel · Mina data**, med namnfältet kvar överst och det raderande blocket sist, längst från Spara. Formen är lånad från topplistans `.hs-modes` (hårfin överlinje + h3) i stället för nyuppfunnen (§0.5 punkt 3).
 - **Vibrationen går att stänga av.** Ljudet har haft en bock länge, men sex filer anropade `navigator.vibrate` rakt av utan att fråga någon. Grinden ligger i `hapticsOn()` i app.js och spellägena når den via en skyddad `typeof`-krok (§12), alltså en sanning och inte sex.

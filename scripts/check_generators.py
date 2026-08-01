@@ -38,7 +38,12 @@ import sys
 import tempfile
 from pathlib import Path
 
+# check_spellagen.py äger konventionen för vad som ÄR ett spelläge. Den läses
+# in i stället för att skrivas av — se nodtest_agda_av_annan() nedan.
+from check_spellagen import spellagen
+
 ROOT = Path(__file__).resolve().parent.parent
+INDEX = ROOT / "index.html"
 
 # Ordningen är kedjans: sidgeneratorerna skriver REN HTML, wire_terms lägger på
 # tooltipsen, wire_citations läser sidans synliga referenslista och skriver in
@@ -86,10 +91,51 @@ def spårade_filer():
     return [f for f in ut.split("\0") if f]
 
 
+def nodtest_agda_av_annan():
+    """Testskal som redan körs av en annan kontroll i den här körningen.
+
+    * `test_sortera.js` och `test_verktyg_akutmedicin.js` körs av
+      `validate_sortera.py` respektive `check_akutmedicin.py`, som äger sina
+      facit och stoppar på dem.
+    * `test_<spelläge>.js` körs av `check_spellagen.py`, som hittar lägena på
+      konventionen `<section id="slug">` + `js/slug.js`. Ett NYTT spelläge får
+      alltså sin testkörning gratis där.
+
+    Listan över spellägen HÄMTAS därifrån i stället för att skrivas av. Två
+    kopior av samma konvention glider isär, och den som glider blir tyst
+    (§0.4): ett läge som fallit ur den ena listan hade körts noll gånger utan
+    att något sagt till.
+    """
+    agda = {"test_sortera.js", "test_verktyg_akutmedicin.js"}
+    agda |= {f"test_{slug}.js"
+             for slug in spellagen(INDEX.read_text(encoding="utf-8"))}
+    return agda
+
+
+def nodtestskal():
+    """De `scripts/test_*.js` som ingen annan kontroll kör — hittade på disk,
+    inte en handhållen lista.
+
+    Ett nytt testskal ska köras för att det FINNS, inte för att någon kom ihåg
+    att skriva in det här. Fram till 0.9.331 stod `test_theme.js`,
+    `test_verktyg_lakemedel.js` och `test_installningar.js` utanför varje
+    automatisk körning: de kördes bara när någon råkade minnas kommandot, och
+    ett test som ingen kör är inget skydd.
+    """
+    agda = nodtest_agda_av_annan()
+    return sorted(p for p in (ROOT / "scripts").glob("test_*.js")
+                  if p.name not in agda)
+
+
 def kor_nodtest(sokvag):
     """Kör ett DOM-testskal i node. Saknas node blir det STOPP, inte tystnad —
     en överhoppad kontroll får aldrig se ut som en godkänd (§0.4). Samma form
-    som i validate_sortera.py och check_akutmedicin.py."""
+    som i validate_sortera.py och check_akutmedicin.py.
+
+    Skalen skriver en rad per test; bara sista raden (sammanfattningen) skrivs
+    ut här, annars dränks kedjans övriga utdata i hundratals bockar. Faller ett
+    skal skrivs HELA dess utdata ut — då är det de raderna som spelar roll.
+    """
     nod = shutil.which("node")
     if not nod:
         print(f"STOPP: node saknas, så {sokvag} kunde inte köras. En överhoppad "
@@ -101,8 +147,9 @@ def kor_nodtest(sokvag):
         print(r.stdout + r.stderr, file=sys.stderr)
         print(f"STOPP: {sokvag} föll.", file=sys.stderr)
         return 1
+    namn = Path(sokvag).stem.removeprefix("test_")
     rader = [rad for rad in r.stdout.strip().splitlines() if rad.strip()]
-    print(f"Inställningar: {rader[-2] if len(rader) > 1 else rader[-1]}")
+    print(f"  {namn}: {rader[-1] if rader else '(ingen utdata)'}")
     return 0
 
 
@@ -198,13 +245,22 @@ def main(argv):
             if kod != 0:
                 return kod
 
-        # scripts/test_installningar.js mäter en nionde sak ingen generator äger:
-        # att inställningarna styr det de utger sig för att styra. Skalet bygger
-        # sin DOM ur index.html och kör riktiga js/app.js, så en omdöpt kryssruta
-        # eller ett borttappat name-attribut ger rött HÄR i stället för en tyst
-        # inställning som inte gör något i webbläsaren. Inget larmar annars: en
-        # bock som inte är kopplad ser precis lika rätt ut som en som är det.
-        return kor_nodtest("scripts/test_installningar.js")
+        # Sist: de DOM-testskal ingen kontroll ovan redan kört (se
+        # nodtestskal()). De mäter en nionde sak ingen generator äger — att
+        # koden gör det den utger sig för att göra. En inställning som inte är
+        # kopplad till något ser precis lika rätt ut i markupen som en som är
+        # det; bara något som KÖRS hittar det.
+        #
+        # Spellägenas skal körs av check_spellagen.py och verktygens av
+        # check_akutmedicin.py/validate_sortera.py. Kvar stod tre skal utan
+        # ägare — theme, verktyg_lakemedel och installningar — som fram till
+        # 0.9.331 bara kördes när någon råkade minnas kommandot.
+        print("DOM-testskal utan annan ägare:")
+        for skal in nodtestskal():
+            kod = kor_nodtest(f"scripts/{skal.name}")
+            if kod != 0:
+                return kod
+        return 0
 
     print(f"AVVIKELSE: {len(avvikande) + len(nya)} filer skiljer sig efter en "
           f"full generatorkörning (CLAUDE_REGLER §12.2).", file=sys.stderr)
