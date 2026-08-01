@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.322
+- **Rättar 0.9.319: de omgjorda ljuden i Arcade: Shoot! var i praktiken ohörbara på telefon.** Användaren rapporterade att ingen skillnad hördes. Rotorsaken hittades genom att MÄTA i stället för att gissa: ljuden renderades i en `OfflineAudioContext` och kördes genom ett 500 Hz högpass för att räkna hur stor del av energin som ligger i det band en telefonhögtalare faktiskt återger. Resultatet var entydigt — **skottet hade 1,8 %, minan 2,4 % och den röda minan 0,5 % av sin energi över 500 Hz.** En iPhone-högtalare återger praktiskt taget ingenting därunder, så nästan hela ljudet försvann. Ballongens pop låg på 96 % och var följdriktigt det enda ljud användaren inte klagade på.
+  - **Felet var designen, inte koden:** skottet byggdes på en 95 Hz-ton och minorna på 60–90 Hz med lågpassat brus vid 350–900 Hz. Det låter som djupa smällar i hörlurar, men mixades för fel uppspelningsenhet. "Dovt" byggs nu RELATIVT inom det hörbara bandet (skottet dovare än ballongen, minan dovare än skottet) i stället för med absolut låg frekvens.
+  - Skottet: mest brus (lågpass 2000 Hz) med en kort 300 Hz-ton för tyngd. Minan: lågpass 1400 Hz, längre. Röda minan: en skarpare framkant (lågpass 2600 Hz) plus ett längre efterdån (lågpass 950 Hz) och en fallande 260 Hz-ton.
+  - **Efter fixen ligger alla fyra på jämn hörbar nivå** (audiblePeak 0,109–0,116 mot ballongens 0,109), med toppvolymen kvar i nivå med lägets övriga ljud — användarens krav att volymen skulle stanna som den var. Karaktärsseparationen mätt och bevarad: längden skiljer dem tydligt åt (skott 67 ms, ballong 86 ms, mina 145 ms, röd mina 300 ms) och minan är fortfarande dovast (spektral tyngdpunkt 434 Hz mot skottets 575 Hz).
+  - Mätmetoden är dokumenterad i en varningskommentar i `js/shoot.js` ovanför ljudblocket, så att nästa ändring inte upprepar misstaget.
+
 ## 0.9.321
 - **Arcade: Shoot! layoutjusterad på begäran:** frågetexten (`.shoot-prompt`) är nu klart större (`max(1rem, 1.2rem × --prompt-scale)`, upp från 0,82/0,95rem) så den syns bättre medan man siktar. Spelytan (`.shoot-field`) krympt i motsvarande grad (`clamp(260px, 58vh, 620px)`, ned från 320/70vh/720px) för att ge frågan plats utan att sidan växer.
   - **Träffräknaren flyttad ut ur topp-HUD:en, ner till fältets nedre vänsterhörn — vid sidan om geväret.** Den låg tidigare i samma rad som frågan skulle synas, rakt ovanför bubblorna. Ny `.shoot-hud-bottom`, en egen positionerad låda skild från `.shoot-hud` (som nu bara har överlevnadsmätaren och frågeklockan kvar).

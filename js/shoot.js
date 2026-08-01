@@ -307,13 +307,23 @@ function playShootTone(kind, streak){
   if(ctx.state !== 'running' && typeof ctx.resume === 'function'){
     try{ ctx.resume() }catch(e){ /* ljudet är aldrig kritiskt */ }
   }
-  // Ljuddämpat skott: en låg dov duns (INTE en hög skarp smäll — det är
-  // precis vad en ljuddämpare tar bort) + en kort filtrerad brusstöt som ger
-  // den mekaniska "puff"-känslan. Samma toppvolym som den gamla ensamma
-  // tonen (0,15), bara med mer verklighet i klangen.
+  // ⚠️ ALLA "SMÄLL"-LJUD MÅSTE HÅLLA SIN ENERGI ÖVER ~500 Hz. En
+  // telefonhögtalare återger praktiskt taget ingenting under det, och spelet
+  // spelas på telefon. Första försöket (0.9.319) byggde skottet på 95 Hz och
+  // minorna på 60–90 Hz med lågpassat brus vid 350–900 Hz: MÄTT hamnade bara
+  // 0,5–2,4 % av energin över 500 Hz, och användaren hörde ingen skillnad
+  // alls — det fanns bokstavligen inget att höra på en iPhone. "Dovt" måste
+  // därför byggas RELATIVT inom det hörbara bandet (skottet dovare än
+  // ballongen, minan dovare än skottet), inte genom absolut låg frekvens.
+  // Mätmetod finns kvar i scratchpad: rendera i OfflineAudioContext, kör
+  // genom ett 500 Hz högpass och jämför RMS-energin.
+  //
+  // Ljuddämpat skott: en mekanisk "thock" — mest brus (det är vad en
+  // ljuddämpare lämnar kvar), med en kort ton som ger tyngd utan att bli en
+  // skarp knall.
   if(kind === 'shot'){
-    shootBeep(ctx, 95, 0, 0.07, 0.15, 0.5)
-    shootNoiseBurst(ctx, 0, 0.05, 0.08, 'lowpass', 900, 0.7)
+    shootNoiseBurst(ctx, 0, 0.07, 0.24, 'lowpass', 2000, 1.0)
+    shootBeep(ctx, 300, 0, 0.05, 0.09, 0.4)
     return
   }
   // Ballongen: en kort skarp knall (brus i högre register, det som gör att
@@ -331,20 +341,22 @@ function playShootTone(kind, streak){
   if(kind === 'record'){ [659.25, 880, 1174.66, 1318.51].forEach((f, i) => shootBeep(ctx, f, i * 0.08, 0.16, 0.13)); return }
   if(kind === 'tick'){ shootBeep(ctx, 1320, 0, 0.045, 0.06); return }
   if(kind === 'go'){ shootBeep(ctx, 880, 0, 0.16, 0.13); return }
-  // Minan: en dovare, längre och lägre smäll än ballongens knall — de två
-  // ska aldrig kunna förväxlas med stängda ögon.
+  // Minan: dovare och längre än skottet, men fortfarande i hörbart band (se
+  // varningen ovan). Dovheten kommer av ett LÄGRE lågpass än skottets, inte
+  // av en låg grundton.
   if(kind === 'mine'){
-    shootNoiseBurst(ctx, 0, 0.16, 0.14, 'lowpass', 550, 0.9)
-    shootBeep(ctx, 75, 0, 0.16, 0.15, 0.45)
+    shootNoiseBurst(ctx, 0, 0.18, 0.26, 'lowpass', 1400, 1.0)
+    shootBeep(ctx, 190, 0, 0.16, 0.1, 0.5)
     return
   }
   // Den röda minan: rundans slut, och ska höras som något STÖRRE än den
-  // vanliga minans smäll — längre, djupare, med ett fallande tonfall. Två
-  // lager lågt brus + två sjunkande djupa toner ger explosionskänslan.
+  // vanliga minans smäll — längre, bredare och med ett fallande tonfall.
+  // Två brusstötar (en skarpare framkant + ett längre efterdån) plus en
+  // sjunkande ton ger explosionskänslan utan att falla under hörbart band.
   if(kind === 'mineLethal'){
-    shootNoiseBurst(ctx, 0, 0.32, 0.16, 'lowpass', 350, 0.8)
-    shootBeep(ctx, 90, 0, 0.3, 0.15, 0.25)
-    shootBeep(ctx, 60, 0.05, 0.28, 0.12, 0.3)
+    shootNoiseBurst(ctx, 0, 0.1, 0.17, 'lowpass', 2600, 1.0)
+    shootNoiseBurst(ctx, 0.04, 0.38, 0.15, 'lowpass', 950, 0.9)
+    shootBeep(ctx, 260, 0, 0.34, 0.11, 0.3)
     return
   }
   // Överlevde rundan men inte helt rätt: nöjd, inte triumferande — mästerskytt
