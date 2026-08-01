@@ -17,7 +17,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "karl"
 KB = ROOT / "kunskapsbank"
 SITE = "https://anatomiquiz.se"
-CSS_V = "0.9.318"
+CSS_V = "0.9.319"
 THEME_V = "0.9.260"  # js/theme.js — EGEN konstant, se generate_glossary.py
 
 def esc(s): return html.escape(s, quote=True)

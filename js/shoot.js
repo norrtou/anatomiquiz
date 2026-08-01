@@ -31,7 +31,7 @@
 //
 // Skjuter du fel bubbla räknas det som miss (träffsäkerhet ned) och en ny
 // fråga kommer, men rundan fortsätter. Ett skott som inte träffar något är
-// också en miss, men frågan står KVAR tills 6-sekundersklockan för den
+// också en miss, men frågan står KVAR tills 10-sekundersklockan för den
 // frågan går ut. Rundan pågår i högst 5 minuter. Överlever du hela vägen MED
 // perfekt träffsäkerhet får du utmärkelsen "mästerskytt" (ingen extra poäng,
 // se finishShoot() — utmärkelsen är medvetet sträng). Överlever du men missar
@@ -49,14 +49,20 @@
 // ============================================================================
 const SHOOT_SCORES_KEY = 'hur_highscores_shoot'
 const SHOOT_EXPORT_TYPE = 'anatomiquiz-shoot'
-const SHOOT_ROUND_MS = 5 * 60 * 1000   // 5 minuter → mästerskytt
-const SHOOT_Q_MS = 6000                // 6 sekunder per fråga
+const SHOOT_ROUND_MS = 5 * 60 * 1000   // 5 minuter → rundan tar slut
+const SHOOT_Q_MS = 10000               // 10 sekunder per fråga
 const SHOOT_TICK_MS = 100
 const SHOOT_COUNTDOWN_FROM = 3
 const SHOOT_COUNTDOWN_STEP_MS = 800
 const SHOOT_Q_WARN_MS = 2000           // frågeklockan blir amber
 const SHOOT_PRAISE_MS = 1100
 const SHOOT_MISSED_SHOWN = 8
+// En mina är INTE game over (bekräftat av användaren 2026-08-01, det
+// tidigare instant-death-upplägget kändes för hårt) — den kostar i stället
+// tid, som Pop!s tidsstraff för fel bubbla. Räknas dessutom som en miss
+// (träffsäkerheten sjunker), så en spelare som smäller i minor gång på gång
+// aldrig kan bli mästerskytt.
+const SHOOT_MINE_PENALTY_MS = 10000
 
 // Rätt bubbla: kort paus så spricktanimationen hinner synas, som Pop!. Fel
 // bubbla: längre paus så den avslöjade rätta bubblan hinner läsas.
@@ -247,6 +253,33 @@ function shootBeep(ctx, freq, offset, dur, peak, glide){
   osc.stop(t0 + dur + 0.04)
 }
 
+// En kort stöt av eget genererat brus genom ett filter — INTE en extern
+// ljudfil (CSP tillåter ingen extern källa, samma skäl som resten av
+// filens ljud). Det här är vad som ger "pang"-ljuden deras verklighet:
+// en ren sinus låter aldrig som ett skott eller en smäll, bara som en ton.
+// Lågpass ger en dov duns (ljuddämpat skott, mina), bandpass ger en
+// knastrig knall (ballongens pop). Samma FÖRHÅLLNINGSTID som shootBeep().
+function shootNoiseBurst(ctx, offset, dur, peak, filterType, filterFreq, filterQ){
+  const t0 = ctx.currentTime + SHOOT_AUDIO_LEAD + offset
+  const frames = Math.max(1, Math.floor(ctx.sampleRate * dur))
+  const buffer = ctx.createBuffer(1, frames, ctx.sampleRate)
+  const data = buffer.getChannelData(0)
+  for(let i = 0; i < frames; i++) data[i] = Math.random() * 2 - 1
+  const src = ctx.createBufferSource()
+  src.buffer = buffer
+  const filter = ctx.createBiquadFilter()
+  filter.type = filterType
+  filter.frequency.setValueAtTime(filterFreq, t0)
+  if(filterQ) filter.Q.setValueAtTime(filterQ, t0)
+  const gain = ctx.createGain()
+  gain.gain.setValueAtTime(0.0001, t0)
+  gain.gain.exponentialRampToValueAtTime(peak, t0 + 0.006)
+  gain.gain.exponentialRampToValueAtTime(0.0001, t0 + dur)
+  src.connect(filter); filter.connect(gain); gain.connect(ctx.destination)
+  src.start(t0)
+  src.stop(t0 + dur + 0.02)
+}
+
 // Tonhöjden vid träff STIGER med sviten, som Pop! — ljudet berättar att man
 // är inne i en serie.
 function shootStreakFreq(streak){
@@ -261,8 +294,23 @@ function playShootTone(kind, streak){
   if(ctx.state !== 'running' && typeof ctx.resume === 'function'){
     try{ ctx.resume() }catch(e){ /* ljudet är aldrig kritiskt */ }
   }
-  if(kind === 'shot'){ shootBeep(ctx, 180, 0, 0.05, 0.15, 0.5); return }
-  if(kind === 'hit'){ shootBeep(ctx, shootStreakFreq(streak), 0, 0.09, 0.14, 1.4); return }
+  // Ljuddämpat skott: en låg dov duns (INTE en hög skarp smäll — det är
+  // precis vad en ljuddämpare tar bort) + en kort filtrerad brusstöt som ger
+  // den mekaniska "puff"-känslan. Samma toppvolym som den gamla ensamma
+  // tonen (0,15), bara med mer verklighet i klangen.
+  if(kind === 'shot'){
+    shootBeep(ctx, 95, 0, 0.07, 0.15, 0.5)
+    shootNoiseBurst(ctx, 0, 0.05, 0.08, 'lowpass', 900, 0.7)
+    return
+  }
+  // Ballongen: en kort skarp knall (brus i högre register, det som gör att
+  // det låter som en riktig pop och inte en synt-ton) plus den befintliga
+  // stigande tonen som belöning — sviten hörs fortfarande i tonhöjden.
+  if(kind === 'hit'){
+    shootNoiseBurst(ctx, 0, 0.035, 0.1, 'bandpass', 2200, 1.4)
+    shootBeep(ctx, shootStreakFreq(streak), 0.008, 0.08, 0.13, 1.4)
+    return
+  }
   if(kind === 'wrong'){ shootBeep(ctx, 200, 0, 0.22, 0.13, 0.75); return }
   if(kind === 'miss'){ shootBeep(ctx, 140, 0, 0.1, 0.09); return }
   if(kind === 'level'){ [659.25, 880].forEach((f, i) => shootBeep(ctx, f, i * 0.07, 0.12, 0.12)); return }
@@ -270,7 +318,13 @@ function playShootTone(kind, streak){
   if(kind === 'record'){ [659.25, 880, 1174.66, 1318.51].forEach((f, i) => shootBeep(ctx, f, i * 0.08, 0.16, 0.13)); return }
   if(kind === 'tick'){ shootBeep(ctx, 1320, 0, 0.045, 0.06); return }
   if(kind === 'go'){ shootBeep(ctx, 880, 0, 0.16, 0.13); return }
-  if(kind === 'innocent'){ [220, 164.81, 130.81].forEach((f, i) => shootBeep(ctx, f, i * 0.13, 0.3, 0.14)); return }
+  // Minan: en dovare, längre och lägre smäll än ballongens knall — de två
+  // ska aldrig kunna förväxlas med stängda ögon.
+  if(kind === 'mine'){
+    shootNoiseBurst(ctx, 0, 0.16, 0.14, 'lowpass', 550, 0.9)
+    shootBeep(ctx, 75, 0, 0.16, 0.15, 0.45)
+    return
+  }
   // Överlevde rundan men inte helt rätt: nöjd, inte triumferande — mästerskytt
   // är en särskild utmärkelse och ska låta som en, inte som "tiden bara gick".
   if(kind === 'survived'){ [523.25, 659.25].forEach((f, i) => shootBeep(ctx, f, i * 0.1, 0.2, 0.13)); return }
@@ -662,7 +716,7 @@ function applyShootLevels(realElapsed){
 
 // ============================================================================
 // Rundans klocka — TVÅ mätare (facit §13.1 punkt 3): överlevnadstiden räknar
-// UPP mot 5 minuter, frågeklockan räknar NED mot 6 sekunder.
+// UPP mot 5 minuter, frågeklockan räknar NED mot 10 sekunder.
 // ============================================================================
 function startShootTick(){
   clearShootTick()
@@ -689,7 +743,7 @@ function onShootTick(){
   updateShootQClock(shootQRemainingMs())
   updateShootRecordChip()
   if(!shootLocked && shootQRemainingMs() <= 0){ shootQuestionTimeout(); return }
-  if(elapsed >= SHOOT_ROUND_MS){ finishShoot('marksman') }
+  if(elapsed >= SHOOT_ROUND_MS){ finishShoot() }
 }
 
 function updateShootRoundClock(elapsed){
@@ -710,7 +764,7 @@ function updateShootQClock(msLeft){
   if(row) row.classList.toggle('warn', msLeft <= SHOOT_Q_WARN_MS)
 }
 
-// 6 sekunder utan träff: målen byts, räknas som miss. Rundan fortsätter.
+// 10 sekunder utan träff: målen byts, räknas som miss. Rundan fortsätter.
 function shootQuestionTimeout(){
   if(!shootRunning || shootLocked) return
   shootLocked = true
@@ -985,12 +1039,26 @@ function flashShootLaserMiss(){
   beam.classList.add('miss')
 }
 
-// En mina träffad: rundan är slut, omedelbart.
+// En mina träffad: INTE game over (bekräftat av användaren) — miss +
+// tidsstraff. Frågan står kvar (samma princip som ett bomskott, se
+// handleShootMissShot ovan): minan låg i vägen för skottet, den ÄR inte
+// skottets mål.
 function handleShootObstacleHit(o){
   removeShootProjectileNode()
   shootProjectile = null
+  shootAttempts++
+  shootStreak = 0
+  updateShootStreakChip()
+  // "Påslag på tiden": flyttar STARTEN bakåt, vilket gör att elapsed
+  // (Date.now() - shootStartTime) hoppar SHOOT_MINE_PENALTY_MS framåt —
+  // samma knep som Pop!s popDeadline -= POP_PENALTY_MS, fast spegelvänt
+  // eftersom Shoot!s klocka räknar UPP mot gränsen i stället för ner mot 0.
+  shootStartTime -= SHOOT_MINE_PENALTY_MS
+  updateShootRoundClock(shootRoundElapsedMs())
   triggerShootScreenShake()
-  finishShoot('innocent')
+  playShootTone('mine')
+  shootVibrate([20, 60, 20])
+  flyShootText(`+${SHOOT_MINE_PENALTY_MS / 1000} s`, 'loss')
 }
 
 // ============================================================================
@@ -1170,7 +1238,13 @@ function renderShootMissed(){
   }
 }
 
-function finishShoot(reason){
+// Rundan har numera bara ETT sätt att ta slut: klockan når SHOOT_ROUND_MS
+// (minor gör inte längre rundan slut, de bara knuffar klockan framåt — se
+// handleShootObstacleHit). Mästerskytt är en SÄRSKILD utmärkelse (användarens
+// ord) och kräver att du dessutom svarat helt rätt; att bara låta klockan gå
+// ut räcker inte, annars är märket bara "du väntade ut 5 minuter" i
+// förklädnad.
+function finishShoot(){
   if(!shootRunning) return
   shootRunning = false
   shootLocked = true
@@ -1185,12 +1259,7 @@ function finishShoot(reason){
   el('shootStart')?.classList.add('hidden')
   el('shootFinished').classList.remove('hidden')
 
-  // Mästerskytt är en SÄRSKILD utmärkelse (användarens ord) — den kräver att
-  // du överlevt hela rundan OCH svarat helt rätt. Att bara låta klockan gå
-  // ut, oavsett hur många misstag som samlats på vägen, ska inte räcka; annars
-  // är märket bara "du väntade ut 5 minuter" i förklädnad.
-  const survivedFull = reason === 'marksman'
-  const isMarksman = survivedFull && shootAttempts > 0 && shootHits === shootAttempts
+  const isMarksman = shootAttempts > 0 && shootHits === shootAttempts
   const survivedMs = Math.min(SHOOT_ROUND_MS, Math.max(0, shootEndTime - shootStartTime))
   const finalScore = Math.round(computeShootScore(shootHits, shootAttempts, survivedMs))
   const pct = shootAttempts ? Math.round((shootHits / shootAttempts) * 100) : 0
@@ -1198,9 +1267,7 @@ function finishShoot(reason){
 
   el('shootDoneText').textContent = isMarksman
     ? `Du är en mästerskytt! ${shootHits} träffar på ${formatShootTime(survivedMs)}.`
-    : survivedFull
-      ? `Du överlevde rundan! ${shootHits} av ${shootAttempts} rätt på ${formatShootTime(survivedMs)}.`
-      : `Du sprängde en mina. ${shootHits} träffar på ${formatShootTime(survivedMs)}.`
+    : `Du överlevde rundan! ${shootHits} av ${shootAttempts} rätt på ${formatShootTime(survivedMs)}.`
 
   const nyckeltal = []
   if(shootBestStreak > 1) nyckeltal.push(`🔥 bästa svit ${shootBestStreak}`)
@@ -1217,12 +1284,11 @@ function finishShoot(reason){
   el('shootRecordBadge')?.classList.toggle('hidden', !isRecord)
   el('shootMarksmanBadge')?.classList.toggle('hidden', !isMarksman)
   el('shootFinished')?.classList.toggle('shoot-finished--marksman', isMarksman)
-  el('shootFinished')?.classList.toggle('shoot-finished--defeat', reason === 'innocent')
 
   animateShootRing(pct)
   renderShootMissed()
-  playShootTone(isMarksman ? 'marksman' : reason === 'innocent' ? 'innocent' : 'survived')
-  shootVibrate(isMarksman ? [18, 60, 18, 60, 18] : reason === 'innocent' ? [30, 80, 30] : [16, 40, 16])
+  playShootTone(isMarksman ? 'marksman' : 'survived')
+  shootVibrate(isMarksman ? [18, 60, 18, 60, 18] : [16, 40, 16])
 
   try{ saveShootScore(survivedMs, finalScore, isMarksman) }catch(e){ console.error('saveShootScore misslyckades:', e) }
   window.scrollTo({ top: 0 })

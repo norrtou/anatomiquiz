@@ -5685,7 +5685,6 @@ ol li {
 .shoot-finished.hidden { display: none; }
 .shoot-done-text { font-size: 1.02rem; font-weight: 700; margin: 0 0 4px; }
 .shoot-finished--marksman .shoot-done-text { color: var(--primary-deep); }
-.shoot-finished--defeat .shoot-done-text { color: var(--error-text-strong); }
 .shoot-next-text { font-size: 0.86rem; color: var(--text-secondary); margin: 0 0 10px; }
 .shoot-marksman-badge {
   display: inline-block;

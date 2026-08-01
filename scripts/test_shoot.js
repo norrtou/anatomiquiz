@@ -375,7 +375,7 @@ eq('frågetexten SYNS i spelvyn (inte bara i internt tillstånd)',
 eq('fyra bubblor på planen', targetNodes().length, 4)
 eq('första frågan visas', currentPromptId(), '1')
 ok('ett hinder finns från start (facit §4: 0:00 → 1 hinder)', ev('shootObstacles.length') === 1, ev('shootObstacles.length'))
-ok('frågeklockan står på 6 s', remainingQ() === 6000, remainingQ())
+ok('frågeklockan står på 10 s', remainingQ() === 10000, remainingQ())
 
 // ============================================================================
 section('Sikte')
@@ -439,27 +439,35 @@ eq('frågan står KVAR (facit §3, till skillnad från fel bubbla)', currentProm
 ok('inga bubblor har ändrat status', targetNodes().every(t => !t._class.has('burst') && !t._class.has('miss')))
 
 // ============================================================================
-section('6-sekundersklockan — byter mål och räknas som miss')
+section('10-sekundersklockan — byter mål och räknas som miss')
 // ============================================================================
 const missarFöre = ev('shootAttempts')
-advance(6100)
+advance(10100)
 flush(300)
 eq('missen räknas när tiden går ut', ev('shootAttempts'), missarFöre + 1)
 ok('sviten nollställs', ev('shootStreak') === 0)
 ok('rundan fortsätter', ev('shootRunning'))
 
 // ============================================================================
-section('Ballistik — träffar en mina avslutar rundan')
+section('Ballistik — en mina är INTE game over, bara ett tidsstraff')
 // ============================================================================
+// Bekräftat av användaren 2026-08-01: det ursprungliga instant-death-upplägget
+// kändes för hårt. En mina kostar nu SHOOT_MINE_PENALTY_MS (10 s) och räknas
+// som en miss, men rundan fortsätter — precis som ett bomskott.
 ev('shootObstacles = [{ x: shootBarrelX, y: shootFieldH * SHOOT_OBSTACLE_ROW_FRAC, size: 40, dead: false, node: null }]')
 ev('shootObstacleSpeed = 0')
+const minAttemptsFöre = ev('shootAttempts')
+const minFråganFöre = currentPromptId()
+const minStartTimeFöre = ev('shootStartTime')
 ok('rundan är igång innan träffen', ev('shootRunning'))
 ev('shootAimAngle = 0; fireShoot()')
 resolveShot()
-ok('rundan avslutas direkt av en mina', !ev('shootRunning'))
-ok('klart-vyn visas', !nodes.shootFinished.hidden())
-ok('mästerskyttmärket visas INTE (det här var ett nederlag)', nodes.shootMarksmanBadge.hidden())
-ok('resultattexten nämner minan', nodes.shootDoneText.textContent.includes('mina'))
+ok('rundan fortsätter (INTE game over)', ev('shootRunning'))
+ok('klart-vyn visas INTE', nodes.shootFinished.hidden())
+eq('missen räknas', ev('shootAttempts'), minAttemptsFöre + 1)
+eq('frågan står kvar (minan låg bara i vägen)', currentPromptId(), minFråganFöre)
+eq('klockan knuffas framåt med straffet',
+  ev('shootStartTime'), minStartTimeFöre - ev('SHOOT_MINE_PENALTY_MS'))
 
 // ============================================================================
 section('Luckegarantin — hindren stänger aldrig korridoren helt')
@@ -511,10 +519,12 @@ runCountdown()
 // precis fram till barrelX.
 ev(`shootObstacles = [{ x: shootBarrelX - 95, y: shootFieldH * SHOOT_OBSTACLE_ROW_FRAC, size: 40, dead: false, node: null }]`)
 ev('shootObstacleSpeed = 400')   // hinner glida in i banan under projektilens flykt
+const restidAttemptsFöre = ev('shootAttempts')
 ev('shootAimAngle = 0; fireShoot()')
 resolveShot()
 ok('projektilen konsumerades av något (hindret hann i vägen)', ev('shootProjectile') === null)
-ok('rundan avslutades av hindret, inte av en träff i förväg', !ev('shootRunning'))
+ok('rundan fortsätter (en mina är inte game over)', ev('shootRunning'))
+eq('missen räknas ändå', ev('shootAttempts'), restidAttemptsFöre + 1)
 
 // ============================================================================
 section('Svårighetstrappan')
@@ -604,7 +614,7 @@ runCountdown()
 // sak, bara mycket dyrare att simulera (den riktiga klockan skulle kräva att
 // varenda fråga i ~50 frågor besvarades rätt i tur och ordning).
 ev('shootHits = 12; shootAttempts = 12; shootStartTime = Date.now() - SHOOT_ROUND_MS')
-ev("finishShoot('marksman')")
+ev('finishShoot()')
 ok('mästerskyttmärket visas vid perfekt träffsäkerhet', !nodes.shootMarksmanBadge.hidden())
 ok('resultattexten firar mästerskytten', nodes.shootDoneText.textContent.includes('mästerskytt'))
 eq('mästerskytt-flaggan sparas som true', JSON.parse(store['hur_highscores_shoot'])[0].marksman, true)
@@ -614,7 +624,7 @@ store['hur_highscores_shoot'] = '[]'
 await ctx.startShoot()
 runCountdown()
 ev('shootHits = 0; shootAttempts = 0; shootStartTime = Date.now() - SHOOT_ROUND_MS')
-ev("finishShoot('marksman')")
+ev('finishShoot()')
 ok('0 av 0 försök räknas INTE som perfekt (kräver minst ett försök)', nodes.shootMarksmanBadge.hidden())
 
 // ============================================================================
