@@ -5249,6 +5249,16 @@ ol li {
   justify-content: center;
   overflow: hidden;
 }
+/* Entré för en ny fråga. Sekvensen är medvetet ordnad: FRÅGAN först, sedan
+   bubblorna en efter en (se --in-delay på .shoot-target-body), så att
+   blicken hinner läsa vad som ska besvaras innan svaren dyker upp. Hela
+   svepet är klart på ~0,58 s — kravet var under 0,7 s, och en entré som
+   drar ut på tiden i ett tidsläge är poängavdrag, inte kosmetik. */
+.shoot-prompt.enter { animation: shootPromptIn 0.2s cubic-bezier(0.2, 0.9, 0.3, 1.25); }
+@keyframes shootPromptIn {
+  0% { opacity: 0; transform: scale(0.86); }
+  100% { opacity: 1; transform: scale(1); }
+}
 
 .shoot-field {
   position: relative;
@@ -5424,6 +5434,18 @@ ol li {
     linear-gradient(135deg, var(--plate-blue) 0%, var(--plate-blue-deep) 100%);
   box-shadow: 0 4px 14px rgba(30, 58, 138, 0.4), inset 0 -3px 10px rgba(0, 0, 0, 0.2);
   transition: opacity 0.14s ease, transform 0.08s ease;
+  /* Entré: bubblorna zoomar in en efter en när en ny fråga kommer.
+     Animationen ligger på BODY, aldrig på .shoot-target — den yttre lådan
+     bär positionen som transform, och en animation på samma element hade
+     slängt bubblan till hörnet (samma fälla som kostade ett släpp i Pop!).
+     --in-delay sätts av js/shoot.js per bubbla; `backwards` håller dem
+     osynliga under fördröjningen så de inte blinkar fram i förväg. */
+  animation: shootTargetIn 0.22s cubic-bezier(0.2, 0.9, 0.3, 1.25) var(--in-delay, 0s) backwards;
+}
+@keyframes shootTargetIn {
+  0% { opacity: 0; transform: scale(0.4); }
+  70% { opacity: 1; transform: scale(1.06); }
+  100% { opacity: 1; transform: scale(1); }
 }
 .shoot-target-text {
   position: relative;
@@ -5794,6 +5816,8 @@ ol li {
   .shoot-barrel.recoil .shoot-barrel-tube,
   .shoot-muzzle-flash.go::after,
   .shoot-field.shake,
+  .shoot-target-body,
+  .shoot-prompt.enter,
   .shoot-target.burst .shoot-target-body,
   .shoot-target.miss .shoot-target-body,
   .shoot-target.reveal .shoot-target-body,

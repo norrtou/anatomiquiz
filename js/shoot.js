@@ -90,6 +90,15 @@ const SHOOT_MAX_PROMPT = 140
 // Textlängd → typsnittsskala för frågan ovanför spelytan, som Pop!.
 const SHOOT_PROMPT_SCALE = { min: 40, max: SHOOT_MAX_PROMPT, floor: 0.8 }
 
+// Entrésvepet när en ny fråga kommer: FRÅGAN först, sedan de fyra bubblorna
+// en i taget från vänster, så blicken hinner läsa frågan innan svaren dyker
+// upp. Tidsbudget (användarens krav): hela svepet under 700 ms. Sista
+// bubblan startar vid 120 + 3 × 80 = 360 ms och animationen tar 220 ms
+// (shootTargetIn i CSS) → klar ~580 ms. Ändras något av talen: räkna om att
+// START + 3 × STEG + 220 fortfarande ligger under 700.
+const SHOOT_ENTER_TARGET_START_MS = 120
+const SHOOT_ENTER_TARGET_STEP_MS = 80
+
 // Sikte och ballistik.
 const SHOOT_MAX_AIM_DEG = 70
 const SHOOT_PROJECTILE_SPEED = 900     // px/s — startvärde, se facit §6
@@ -610,7 +619,11 @@ function buildShootTargets(q){
       text: o.text, correct: o.correct, dead: false,
       x: i * slot + slot / 2,
       y: shootFieldH * SHOOT_TARGET_ROW_FRAC,
-      size, node: null, body: null
+      size, node: null, body: null,
+      // Entré-fördröjning: bubblorna svepar in EFTER frågan, en i taget från
+      // vänster. Sista bubblan är klar på SHOOT_ENTER_TARGET_DELAY_MS * 3 +
+      // animationens 220 ms ≈ 580 ms, inom kravet på 0,7 s för hela svepet.
+      enterDelayMs: SHOOT_ENTER_TARGET_START_MS + i * SHOOT_ENTER_TARGET_STEP_MS
     }
     t.node = makeShootTargetNode(t)
     wrap.appendChild(t.node)
@@ -639,6 +652,12 @@ function makeShootTargetNode(t){
   node.style.transform = `translate3d(${t.x - t.size / 2}px, ${t.y - t.size / 2}px, 0)`
   const body = document.createElement('span')
   body.className = 'shoot-target-body'
+  // Ren dekor: vid reducerad rörelse står bubblan bara där direkt (CSS:en
+  // stänger av själva animationen, men utan delay slipper den även den
+  // osynliga `backwards`-fasen).
+  if(!reducedMotionPreferred() && t.enterDelayMs){
+    body.style.setProperty('--in-delay', (t.enterDelayMs / 1000) + 's')
+  }
   const label = document.createElement('span')
   label.className = 'shoot-target-text'
   label.textContent = t.text
@@ -668,6 +687,14 @@ function nextShootQuestion(){
   if(promptEl){
     promptEl.textContent = shootCurrent.prompt
     promptEl.style.setProperty('--prompt-scale', String(shootTextScale(shootCurrent.prompt, SHOOT_PROMPT_SCALE)))
+    // Starta om entré-animationen. Klassen måste tas bort och tvingas
+    // igenom en reflow, annars kör webbläsaren aldrig om en animation som
+    // redan ligger på elementet (samma mönster som nedräkningens .tick).
+    if(!reducedMotionPreferred()){
+      promptEl.classList.remove('enter')
+      void promptEl.offsetWidth
+      promptEl.classList.add('enter')
+    }
   }
 
   buildShootTargets(shootCurrent)
