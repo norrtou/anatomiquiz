@@ -257,7 +257,7 @@ det är en egen fråga.
 ### Etapp 4 · Fältkomplettering — risk: låg, men LÅNGT (§0.3, för hand) 🔄 PÅGÅR
 Prioritetsordning (störst lucka, minst gissningsrisk först). Siffrorna är de
 ommätta ur `ORDLISTA.md`, inte punkt 1:s felaktiga:
-1. [ ] Böjning — **8 516 saknade vid start**, 8 391 kvar (A klar).
+1. [ ] Böjning — **8 516 saknade vid start**, 8 344 kvar (A–B klara).
 2. [ ] Etymologi — 3 481 saknar.
 3. [ ] Eng. — 1 504 saknar (många prefix/suffix motiverat undantagna).
 
@@ -294,6 +294,15 @@ particip och `-um`-läkemedlen får det inte.
   renderades helt utan kursiv ordklass förut, eftersom `format_def()` kräver gement.
   `antitussiv` fick bara adjektivböjningen: substantivformen är `antitussivum`,
   inte `antitussiv`, så en substantivböjning där hade varit påhittad.
+- **B: klart** (0.9.337). 231 poster saknade böjning, 47 fick den: 42 substantiv,
+  2 adjektiv, 1 verb och 2 rättade formfel. Två fynd:
+  - `blodsocker` bar `(-/-värdet)` — ingen böjning alls, utan en hopskrivning av
+    *blodsocker/blodsockervärdet* som råkat hamna i böjningsparentesen. Rättat
+    till `(-ret)`.
+  - `baktericid` var B:s enda post med versal, kombinerad tagg (`Adj./subst., pl. -a:`).
+    Den fick bara adjektivböjningen, av samma skäl som `antitussiv` i A-passet:
+    substantivet heter *baktericid* i vissa källor och *baktericidum* i andra, och
+    det är inte avgjort i posten.
 
 ### Etapp 3 · Jfr/Se/Motsats-länkning — risk: hög, kräver beslut (se punkt 6)
 - [ ] Designbeslut taget (väg a eller b, punkt 6).

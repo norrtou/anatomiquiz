@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.337
+- **Bokstav B böjs: 47 poster.** Andra passet i etapp 4. 42 substantiv (*biologi* → `(-n)`, *bronkoskopi* → `(-n, pl. -er)`, *Bakercysta* → `(-n, pl. -or)`, *Betametason* → `(-et)`), 2 adjektiv, 1 verb och 2 rättade formfel. Böjningstäckningen 25,1 % → 25,5 %.
+- **`blodsocker` bar `(-/-värdet)` i böjningsparentesen — det är ingen böjning.** Det är en hopskrivning av *blodsocker/blodsockervärdet* som hamnat på den plats där böjningen ska stå. Ordet böjs *blodsocker – blodsockret*; rättat till `(-ret)`.
+- `baktericid` var B:s enda post med versal, kombinerad ordklasstagg (`Adj./subst., pl. -a:`) och är omskriven till husformat. Den fick **bara** adjektivböjningen: substantivet heter *baktericid* i vissa källor och *baktericidum* i andra, och posten avgör inte vilket — samma skäl som *antitussiv* i A-passet.
+- De 184 B-poster som står kvar obojda är samma slags motiverade undantag som i A: latinska lemman (*bucca*, *bulbus*, *bursa*, *brachium*), latinska adjektiv (*basalis*, *bifidus*, *brevis*), förkortningar, prefix/suffix, och franska/tyska/engelska lånord som inte har någon etablerad svensk böjning (*bruit*, *bougie*, *Bremsstrahlung*, *bypass*, *bias*).
+- `python3 scripts/check_generators.py` grön före och efter: rundtripp identisk, 407 filer, 195 tester, 2 351/2 351 tooltip-ankare hela.
+
 ## 0.9.336
 - **Bokstav A böjs: 125 poster i ordlistan har fått sin böjningsform.** Första passet i etapp 4, `scripts/ordlista_forbattring_todo.md`. 99 substantiv (*abduktion* → `(-en, pl. -er)`, *anatomi* → `(-n)`, *axon* → `(-et, pl. -er)`, *alkoholberoende* → `(-t)`), 5 adjektiv, 15 `-era`-verb och 6 omskrivningar. Böjningen står där husets övriga 2 687 poster har den: i en egen parentes direkt efter ordklasstaggen.
 - **De 637 A-poster som fortfarande står obojda är motiverade undantag, inte skuld.** "Saknas 8 516" i täckningstabellen är ett tak, inte en arbetslista: 346 av dem är latinska flerordstermer ur TA-importen (*aorta thoracica*, *articulationes interphalangeae pedis*), 106 förkortningar, 46 prefix/suffix, 44 latinska adjektiv (*abdominalis*, *accessorius*) och ~20 `-um`-läkemedel som redan bär `(pl. antibiotika)`. Filen böjer sedan tidigare konsekvent inte latinska uppslagsformer — *cornea*, *retina*, *pleura*, *tibia* och *arcus* står alla oböjda — och en svensk böjning av ett latinskt lemma är en gissning oftare än ett faktum.
