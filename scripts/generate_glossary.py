@@ -1310,6 +1310,30 @@ def main() -> None:
             f"skriven ordklasstagg först i def: {sorted(otaggade)[:12]}"
         )
 
+    # Böjningsparentesen skrivs i husets notation, `(-en, pl. -er)`. Två former
+    # smiter förbi mätsnutten i ORDLISTA.md och kan därför ligga kvar för alltid:
+    # ett plural utan `pl.` (`(-en, -er)`, 325 poster rättade i 0.9.351) räknas som
+    # bojt fast det inte följer notationen, och ett substantiv som bara bär plural
+    # (`(pl. -er)`, 3 poster) saknar den bestämda formen helt men matchar ändå.
+    # Adjektivens `(pl. -a)` och `-um`-läkemedlens `(pl. antibiotika)` är korrekta
+    # och undantas: kontrollen kräver ett bindestreck följt av en svensk pluraländelse.
+    PLURAL = r"(?:er|ar|or|n|r)"
+    boj_fel = []
+    for e in terms:
+        m = re.match(r"^(?P<tag>[^.(]*\.?)\s*\((?P<p>[^)]*)\)", e["def"])
+        if not m:
+            continue
+        par, tag = m.group("p"), m.group("tag").strip()
+        if re.fullmatch(rf"-[a-zåäö∅]+, -{PLURAL}", par):
+            boj_fel.append(f"{e['term']}: ({par}) saknar 'pl.'")
+        elif tag.startswith("subst") and re.fullmatch(rf"pl\. -{PLURAL}", par):
+            boj_fel.append(f"{e['term']}: ({par}) saknar bestämd form")
+    if boj_fel:
+        raise SystemExit(
+            f"FEL: {len(boj_fel)} böjningsparentes(er) i data/ordlista.json följer "
+            f"inte husets notation: {sorted(boj_fel)[:12]}"
+        )
+
     # Gruppera på sidnyckel; sortera varje grupp alfabetiskt på term.
     groups: dict[str, list[dict]] = {}
     for entry in terms:

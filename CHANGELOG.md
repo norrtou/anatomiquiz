@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.351
+- **328 böjningsparenteser normaliserade — och ett skydd som hindrar att de kommer tillbaka.** Två skrivningar smiter förbi mätsnutten i `ORDLISTA.md`: de räknas som *bojda* och kan därför ligga kvar hur länge som helst, eftersom bokstavspassen bara läser posterna som mätningen pekar ut. Fynden gjordes i I- och K-passen och tas här i ett eget svep i stället för att smygas in i en bokstav.
+  - **325 poster skrev plural utan `pl.`:** `makrofag (-en, -er)`, `nekros (-en, -er)`, `psykos (-en, -er)` … → `(-en, pl. -er)`. De ligger nästan uteslutande i bokstäver som ännu inte böjts: 143 i P, 57 i R, 51 i O, 35 i N, 33 i M.
+  - **3 substantiv bar bara plural och saknade bestämd form helt:** `mekanoreceptor`, `termoreceptor` och `proprioceptor` skrev `(pl. -er)` → `(-n, pl. -er)`, som systerposterna `kemoreceptor` och `nociceptor`. Samma feltyp som `hypoxi` (0.9.345) och `interkostalnerv` (0.9.348), men den här varianten var osynlig för mätningen.
+- **`generate_glossary.py` hård-felar nu på båda formerna**, precis som den sedan 0.9.342 gör på en post utan ordklasstagg. Larmet är verifierat mot två planterade fel (`makrocyt` → `(-en, -er)`, `mekanoreceptor` → `(pl. -er)`), och mot att de *korrekta* undantagen fortsatt går igenom: adjektivens `(pl. -a)` och `-um`-läkemedlens `(pl. antibiotika)` saknar bestämd form med rätta, så kontrollen kräver bindestreck plus svensk pluraländelse.
+- Regeln inskriven i `ORDLISTA.md` under böjningsnotationen, tillsammans med varför ingen av formerna syns i täckningsmätningen.
+
 ## 0.9.350
 - **Bokstav K böjs: 45 poster.** Elfte passet i etapp 4. 112 av 288 poster saknade böjning; 33 substantiv och 12 läkemedels- och ämnesnamn fick den. Täckningen 28,8 % → 29,2 %. De 67 som står kvar är motiverade undantag: 33 flerordstermer (`klinisk kemi`, `klinisk patologi` och de nio andra specialiteterna, `Kawasakis syndrom`, `kardiogen chock`), 11 förkortningar, 14 ettordslemman och 9 prefix.
 - **`koma` fick `(-t)` — filen hade redan svarat på frågan.** Ordet skrivs *komat* tre gånger i löptexten (bl.a. i `komatös` och `stuporös`) och *i koma* två gånger; ingenstans *koman*. Neutrum alltså.

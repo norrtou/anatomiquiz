@@ -258,6 +258,14 @@ Vid dubbel ordklass skiljer **semikolon** sinnena, och ordningen följer taggen:
 (eller `pl. -`) — annars ser mätsnutten posten som obojd och den ligger kvar i
 arbetslistan för alltid.
 
+**Pluralen skrivs alltid med `pl.`, och ett substantiv bär alltid sin bestämda form.**
+`(-en, -er)` och `(pl. -er)` är båda otillåtna: den första saknar `pl.`, den andra
+saknar bestämd form. Ingen av dem syns i mätsnutten ovan — de räknas som bojda — så de
+kan ligga kvar hur länge som helst. 325 respektive 3 poster rättades i 0.9.351, och
+`generate_glossary.py` **hård-felar** nu på båda formerna, precis som på en otaggad post.
+Undantagna är adjektivens `(pl. -a)` och `-um`-läkemedlens `(pl. antibiotika)`, som
+saknar bestämd form med rätta; kontrollen kräver bindestreck + svensk pluraländelse.
+
 **Kända avvikelser, rör dem inte i förbifarten:** fem K-verb skriver
 `(-ar, -ade, -at)` i stället för `(-r, -de, -t)` (*katalysera*, *kateterisera*,
 *kauterisera*, *koagulera*, *konisera*), och oförändrad plural förekommer i tre
