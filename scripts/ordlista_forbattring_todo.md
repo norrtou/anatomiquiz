@@ -254,13 +254,46 @@ många rader i ett svep. Det gjorde den före den här etappen också — filtre
 1 ms, renderingen är hela kostnaden. Att kapa listan kräver ett synligt "visar N av M", och
 det är en egen fråga.
 
-### Etapp 4 · Fältkomplettering — risk: låg, men LÅNGT (§0.3, för hand)
-Prioritetsordning (störst lucka, minst gissningsrisk först):
-1. [ ] Böjning — 5 448 saknar.
-2. [ ] Etymologi — 3 574 saknar.
+### Etapp 4 · Fältkomplettering — risk: låg, men LÅNGT (§0.3, för hand) 🔄 PÅGÅR
+Prioritetsordning (störst lucka, minst gissningsrisk först). Siffrorna är de
+ommätta ur `ORDLISTA.md`, inte punkt 1:s felaktiga:
+1. [ ] Böjning — **8 516 saknade vid start**, 8 391 kvar (A klar).
+2. [ ] Etymologi — 3 481 saknar.
 3. [ ] Eng. — 1 504 saknar (många prefix/suffix motiverat undantagna).
 
-En bokstav i taget, samma arbetsform som ursprungsberikningen.
+**Ett fält per bokstav och commit**, i den ordningen — inte alla tre fälten på
+samma bokstav. A saknade böjning i 762 poster, etymologi i 396 och `Eng.` i 139;
+allt i ett pass hade blivit en ogranskbar commit.
+
+**"Saknas" är ett tak, inte en arbetslista.** Kriterierna för vilka poster som
+faktiskt ska ha böjning står i [`ORDLISTA.md`](../ORDLISTA.md) tillsammans med
+notationstabellen. Kort: försvenskade substantiv, svenska adjektiv och `-era`-verb
+får böjning; latinska/grekiska lemman och fraser, prefix/suffix, förkortningar,
+particip och `-um`-läkemedlen får det inte.
+
+#### Böjningslogg per bokstav
+- **A: klart** (0.9.336). 762 poster saknade böjning, 125 fick den: 99 substantiv,
+  5 adjektiv, 15 verb och 6 omskrivningar. De återstående 637 är motiverade
+  undantag — 346 latinska flerordstermer ur TA-importen, 106 förkortningar,
+  46 prefix/suffix, 44 latinska adjektiv (`abdominalis`, `accessorius`) och
+  ~20 `-um`-läkemedel som redan bär `(pl. antibiotika)`.
+
+  **Tre fynd som blev regler i stället för engångsbeslut:**
+  1. Husets notation var aldrig nedskriven, bara utövad. Den ligger nu i en
+     tabell i `ORDLISTA.md`, med de kända avvikelserna namngivna (fem K-verb
+     skriver `(-ar, -ade, -at)`; oförändrad plural förekommer som `-∅`, `-` och `=`).
+  2. Första utkastet skrev dubbel ordklass som `(adj. -t, -a; subst. -en, pl. -er)`.
+     Insättningsskriptets efterkontroll fällde det: parentesen börjar inte med
+     bindestreck, så mätsnutten hade räknat posten som obojd i evighet. Formen
+     blev `(-t, -a; -en, pl. -er)`, där taggordningen disambiguerar.
+  3. `ORDLISTA.md`:s egen mall sa `(subst., -en, pl. -er)` — böjningen inuti
+     taggparentesen. Ingen av de 2 687 poster som bar böjning gjorde så. Rättat.
+
+  Sex poster med versal, kombinerad tagg skrevs om till husformat i samma pass
+  (`adenoid`, `amyloid`, `analog`, `androgen`, `antitussiv`, `antiöstrogen`) — de
+  renderades helt utan kursiv ordklass förut, eftersom `format_def()` kräver gement.
+  `antitussiv` fick bara adjektivböjningen: substantivformen är `antitussivum`,
+  inte `antitussiv`, så en substantivböjning där hade varit påhittad.
 
 ### Etapp 3 · Jfr/Se/Motsats-länkning — risk: hög, kräver beslut (se punkt 6)
 - [ ] Designbeslut taget (väg a eller b, punkt 6).

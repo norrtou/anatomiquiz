@@ -68,7 +68,7 @@ arbetslista rakt av.
 | `Eng. ` | 9 699 | 86,6 % | 1 504 |
 | Etymologi (`Av lat./gr. …`) | 7 722 | 68,9 % | 3 481 |
 | `Sv. ` | 2 686 | 24,0 % | 8 517 |
-| Böjning i parentes | 2 687 | 24,0 % | 8 516 |
+| Böjning i parentes | 2 812 | 25,1 % | 8 391 |
 | `Jfr ` | 1 394 | 12,4 % | 9 809 |
 | `ICD-10: ` | 947 | 8,5 % | 10 256 |
 | `Vardag. ` | 782 | 7,0 % | 10 421 |
@@ -110,6 +110,10 @@ Två fällor i mätningen, båda påträffade 2026-08-02:
   inte inuti taggparentesen. En regex som bara letar bindestreck var som helst inom
   parentes fångar också `(A01.1-A01.4)`, `(5-HT)` och liknande och överskattar
   täckningen grovt.
+- **55 poster bär plural utan bindestreck** — `analgetikum (pl. analgetika)`,
+  `antibiotikum (pl. antibiotika)` och de övriga `-um`-läkemedlen. Mätsnutten
+  räknar dem som obojda, eftersom mönstret kräver `-`. De är alltså *inte* en
+  arbetslista: de har redan den böjning som är relevant för formen.
 
 **Kända formavvikelser:** 54 poster saknar ordklasstagg helt (flertalet är flerordsuttryck
 och statistikbegrepp: *absolut risk*, *akut buk*, *aerob träning*), och **36 poster skriver
@@ -185,7 +189,8 @@ för att renderas rätt.
 
 Riktlinjer:
 - Endast de fält som tillför värde tas med (alla poster har inte Sv/Lekman/etymologi).
-- **Böjning** läggs kompakt i ordklass-parentesen, t.ex. `(subst., -en, pl. -er)`, `(adj., -t, -a)`, `(verb)`, `(förkortn.)`.
+- **Böjning** står i en egen parentes direkt efter ordklasstaggen: `subst. (-en, pl. -er)`,
+  `adj. (-t, -a)`, `verb (-r, -de, -t)`. Se notationstabellen nedan.
 - **Ordklassen bestäms av UPPSLAGSORDET, inte av definitionens första ord.** Skriv taggen
   genom att fråga "vilken ordklass är termen?" — inte genom att titta på hur förklaringen
   råkar inledas. Ett latinskt/grekiskt substantiv är `subst.` även när definitionen börjar
@@ -214,6 +219,47 @@ Riktlinjer:
   (947 poster). Aktuella siffror: kör mätsnutten i statusavsnittet.
 - Förkortningar: expandera, ange engelsk motsvarighet, hoppa över latinsk etymologi om den inte tillför.
 - **Faktakonservativt:** den importerade råtexten ger betydelsen. Lägg hellre till mindre etymologi än att gissa. Kör inte över kursunderlaget med eget resonemang (se `CLAUDE_REGLER.md`).
+
+### Böjningsnotation — och vilka poster som ska ha böjning
+
+Notationen är husets, härledd ur de poster som redan bär böjning. Använd dessa
+former; hitta inte på en ny för att den ser prydligare ut i just den posten.
+
+| Situation | Form | Exempel |
+|---|---|---|
+| en-ord, räknebart | `(-en, pl. -er)` / `(-n, pl. -er)` | `agonist`, `autopsi` |
+| en-ord, oräknebart | `(-en)` / `(-n)` | `abstinens`, `anatomi` |
+| ord på `-ing` | `(-en, pl. -ar)` | `Anpassningsstörning` |
+| ett-ord, räknebart | `(-et, pl. -er)` | `axon`, `hormon` |
+| ett-ord, oförändrad plural | `(-et, pl. -∅)` | `angiokeratom`, `Aktivitetsmål` |
+| ett-ord på `-e` | `(-t)` | `alkoholberoende`, `Arbetsminne` |
+| ämnesnamn (läkemedel, hormon) | `(-et)` | `Atropin`, `testosteron` |
+| adjektiv | `(-t, -a)` | `allogen`, `antalgisk` |
+| adjektiv som redan slutar på `-t` | `(pl. -a)` | `adekvat`, `adult` |
+| verb på `-era` | `(-r, -de, -t)` | `abducera`, `aspirera` |
+| dubbel ordklass | `(-t, -a; -en, pl. -er)` | `adenoid`, `analog` |
+
+Vid dubbel ordklass skiljer **semikolon** sinnena, och ordningen följer taggen:
+`adj./subst.` ⇒ adjektivböjningen först. Parentesen **måste börja med bindestreck**
+(eller `pl. -`) — annars ser mätsnutten posten som obojd och den ligger kvar i
+arbetslistan för alltid.
+
+**Kända avvikelser, rör dem inte i förbifarten:** fem K-verb skriver
+`(-ar, -ade, -at)` i stället för `(-r, -de, -t)` (*katalysera*, *kateterisera*,
+*kauterisera*, *koagulera*, *konisera*), och oförändrad plural förekommer i tre
+skrivningar — `pl. -∅` (80 poster), `pl. -` (12) och `pl. =` (11). `-∅` är husets
+form för nya poster.
+
+**Böjning skrivs inte i varje post.** "Saknas" i täckningstabellen är ett tak, inte
+en arbetslista. Utanför står:
+
+- **latinska och grekiska uppslagsformer och fraser** — `cornea`, `retina`, `arcus`,
+  `articulatio`, `aorta thoracica`. Filen böjer dem redan konsekvent inte, och en
+  svensk böjning av ett latinskt lemma är en gissning oftare än ett faktum;
+- **prefix och suffix**, som inte böjs;
+- **förkortningar** (`ACE`, `APTT`);
+- **particip som används adjektiviskt** — `adstringerande`, `antikoagulerande`;
+- **`-um`-läkemedlen** som redan bär `(pl. antibiotika)`-formen.
 
 ### -ös-adjektiv integreras i grundordet
 Medicinska **-ös**-former (adenomatös, fibrös, ödematös …) ges ingen egen post — integrera dem i grundformen med "**även …**". **MEN:** substantivet och -ös-adjektivet är relaterade, inte samma ord. Glosan måste vara en **egen, tydlig förklaring som visar skillnaden** — aldrig bara likställa adjektivet med grundordet. Skriv `även <ordet> (adj.) = <distinkt betydelse>`, t.ex.:
