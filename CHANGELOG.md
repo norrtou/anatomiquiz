@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.349
+- **Bokstav J böjs: 5 poster.** Tionde passet i etapp 4 och det klart minsta — J har bara 51 poster, och 44 av dem är motiverade undantag: 31 flerords- och latinska fraser (hela `junctura`/`juncturae`-familjen, `jugularis`-venerna, `Juniperus`-växterna), 6 latinska lemman (*jejunum*, *jejunus*, *jugulum*), 5 förkortningar och 2 prefix. Böjda poster i filen: 3 221 → 3 226.
+- **Två poster var osynliga för mätningen fast de bar böjning.** `jonisera` skrev `(joniserar, joniserade, joniserat)` och `juvenil` skrev `(juvenilt, juvenila)` — utskrivna former i stället för husets notation, och en parentes som inte börjar med bindestreck räknas som obojd av mätsnutten i `ORDLISTA.md`. Normaliserade till `(-r, -de, -t)` respektive `(-t, -a)`. Innehållet är detsamma; nu syns de.
+- **`jonisering` fick `(-en)`, inte `(-en, pl. -ar)`.** Filens `-ering`-substantiv är processord och skriver konsekvent bara den definita formen (`ackommodering`, `debridering`, `defibrillering`, `dehydrering`, `denervering`, `desensibilisering` …).
+- **`järnbristanemi` fick `(-n)` och `jättecellsarterit` `(-en)`** — grundorden `anemi` och `arterit` bär `(-n, pl. -er)`/`(-en, pl. -er)`, men de namngivna sjukdomsformerna används inte i plural, precis som `gonartrit` `(-en)`.
+
 ## 0.9.348
 - **Bokstav I böjs: 50 poster.** Nionde passet i etapp 4. 353 av 490 poster saknade böjning; 19 substantiv, 5 adjektiv, 17 `-era`-verb och 9 läkemedelsnamn fick den. Täckningen 28,3 % → 28,8 %. De 303 som står kvar är motiverade undantag: 173 flerords- och latinska fraser (`incisura`-, `impressio`- och `junctura`-familjerna, alla `musculus`/`arteria`/`ligamentum`-uppslag), 57 förkortningar, 51 latinska/grekiska ettordslemman (*ileum*, *ilium*, *incus*, *insula*, *isthmus*, *introitus*) och 22 prefix.
 - **`ikterus` och `ileus` fick `(-en)` efter filens egna sammansättningar.** `ocklusionsikterus` och `adherensileus` bar redan `(-en)`, så grundorden följer dem. `impetigo` och `intertrigo` fick `(-n)` efter mönstret från `libido` och `polio`.
