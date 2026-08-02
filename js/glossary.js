@@ -36,7 +36,7 @@
  * pageKey()/pageSlug()/slugify() MÅSTE spegla scripts/generate_glossary.py
  * byte för byte, annars pekar sökträffarnas länkar fel.
  * scripts/test_ordlista_sok.js kör den här filen på riktig data och prövar bl.a.
- * att de två stegen ger IDENTISKA länkar för var och en av de 11 203 posterna.
+ * att de två stegen ger IDENTISKA länkar för var och en av de 11 202 posterna.
  */
 
 const DATA_URL = './data/ordlista.json'
@@ -265,7 +265,7 @@ function loadTerms() {
       .then(data => {
         const live = data.filter(e => e.status !== 'stub')
         // Vik på plats: posterna är färska ur JSON.parse och ägs av oss, och
-        // 11 203 kopior hade kostat minne i onödan på mobil.
+        // 11 202 kopior hade kostat minne i onödan på mobil.
         live.forEach(e => { e.fold = foldForSearch(e.term) })
         return live
       })

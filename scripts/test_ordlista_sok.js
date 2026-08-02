@@ -14,7 +14,7 @@
         ur det lätta indexet (steg 1) och ur hela ordlistan (steg 2, som räknar
         fram grupp och slug med sin spegling av Python). Skulle de säga olika
         skulle ett sökresultat leda rätt ibland och fel ibland, beroende på hur
-        snabbt nätet var. Här jämförs de för var och en av de 11 203 posterna.
+        snabbt nätet var. Här jämförs de för var och en av de 11 202 posterna.
 
      2. ATT SLUG-TABELLEN ÄR IDENTISK MED PYTHONS. _SLUG_MAP i
         scripts/generate_glossary.py och SLUG_MAP här bygger ankaret som

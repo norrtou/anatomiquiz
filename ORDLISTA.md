@@ -40,7 +40,7 @@ Ordlistan byggs ut från en omfattande importerad lista med medicinska termer (3
 
 ## Status: fas 2 avslutad
 
-`data/ordlista.json` innehåller **11 203 poster och 0 stubs** (mätt 2026-08-02). Varje
+`data/ordlista.json` innehåller **11 202 poster och 0 stubs** (mätt 2026-08-02). Varje
 importerad term är berikad — det finns ingenting kvar att hämta ur råimporten, och
 sedan dess har filen dessutom vuxit långt förbi importen med TA-anatomi, labbvärden,
 sjukdomar med ICD-koder, psykiatritermer, läkemedel och örter.
@@ -57,25 +57,25 @@ print('total',len(d),'synliga',sum(1 for e in d if e.get('status')!='stub'),\
 
 ### Fälttäckning (mätt 2026-08-02) — facit för fältkompletteringen
 
-Mät aldrig detta på känsla; kör snutten under tabellen. **Siffrorna gäller alla 11 203
+Mät aldrig detta på känsla; kör snutten under tabellen. **Siffrorna gäller alla 11 202
 poster**, även de där fältet är motiverat frånvarande (ett prefix behöver ingen böjning,
 en förkortning sällan en etymologi) — "saknas" är alltså ett tak för arbetet, inte en
 arbetslista rakt av.
 
 | Fält | Poster | Täckning | Saknas |
 |---|---:|---:|---:|
-| Ordklasstagg | 11 149 | 99,5 % | 54 |
-| `Eng. ` | 9 699 | 86,6 % | 1 504 |
-| Etymologi (`Av lat./gr. …`) | 7 722 | 68,9 % | 3 481 |
-| `Sv. ` | 2 686 | 24,0 % | 8 517 |
-| Böjning i parentes | 2 891 | 25,8 % | 8 312 |
-| `Jfr ` | 1 394 | 12,4 % | 9 809 |
-| `ICD-10: ` | 947 | 8,5 % | 10 256 |
-| `Vardag. ` | 782 | 7,0 % | 10 421 |
-| `Se ` | 358 | 3,2 % | 10 845 |
-| `Motsats` | 157 | 1,4 % | 11 046 |
-| `Referensvärde` | 78 | 0,7 % | 11 125 |
-| Uttalsangivelse | **0** | 0,0 % | 11 203 |
+| Ordklasstagg | 11 150 | 99,5 % | 52 |
+| `Eng. ` | 9 698 | 86,6 % | 1 504 |
+| Etymologi (`Av lat./gr. …`) | 7 721 | 68,9 % | 3 481 |
+| `Sv. ` | 2 685 | 24,0 % | 8 517 |
+| Böjning i parentes | 2 971 | 26,5 % | 8 231 |
+| `Jfr ` | 1 394 | 12,4 % | 9 808 |
+| `ICD-10: ` | 947 | 8,5 % | 10 255 |
+| `Vardag. ` | 782 | 7,0 % | 10 420 |
+| `Se ` | 358 | 3,2 % | 10 844 |
+| `Motsats` | 157 | 1,4 % | 11 045 |
+| `Referensvärde` | 78 | 0,7 % | 11 124 |
+| Uttalsangivelse | **0** | 0,0 % | 11 202 |
 
 ```bash
 python3 - <<'PY'
@@ -115,7 +115,7 @@ Två fällor i mätningen, båda påträffade 2026-08-02:
   räknar dem som obojda, eftersom mönstret kräver `-`. De är alltså *inte* en
   arbetslista: de har redan den böjning som är relevant för formen.
 
-**Kända formavvikelser:** 54 poster saknar ordklasstagg helt (flertalet är flerordsuttryck
+**Kända formavvikelser:** 52 poster saknar ordklasstagg helt (flertalet är flerordsuttryck
 och statistikbegrepp: *absolut risk*, *akut buk*, *aerob träning*), och **36 poster skriver
 taggen med versal** — `Adj.`/`Subst.`/`Förk.` i stället för gement (*adenoid*, *amyloid*,
 *androgen*, *eosinofil* m.fl.). Husformatet kräver gement.
@@ -181,7 +181,7 @@ Stubs får aldrig synas på sajten förrän de är berikade. Det sköts på **tv
 ordklass. (böjning) definition i klartext. Sv. svensk synonym. Eng. english term. Vardag. vardagsuttryck. Av lat./gr. etymologi.
 ```
 
-Så ser de 11 203 posterna faktiskt ut: **ordklasstaggen först**, böjningen i parentes direkt
+Så ser de 11 202 posterna faktiskt ut: **ordklasstaggen först**, böjningen i parentes direkt
 efter, och därefter definitionen med liten begynnelsebokstav. Mallen stod tidigare med
 definitionen först och ordklassen inskjuten i mitten, vilket ingen post följer — och den
 inledande taggen är dessutom det enda `format_def()` kursiverar, så den *måste* stå först
@@ -256,10 +256,18 @@ en arbetslista. Utanför står:
 - **latinska och grekiska uppslagsformer och fraser** — `cornea`, `retina`, `arcus`,
   `articulatio`, `aorta thoracica`. Filen böjer dem redan konsekvent inte, och en
   svensk böjning av ett latinskt lemma är en gissning oftare än ett faktum;
+- **svenska flerordstermer och eponymfraser** — `djup ventrombos`, `dilaterad ven`,
+  `dental plack`, `Downs syndrom`, `Duchennes muskeldystrofi`. Böjningen hör till
+  frasens huvudord, inte till frasen, och parentesen står direkt efter taggen där
+  den skulle läsas som frasens egen (avgjort i D-passet, 0.9.340);
 - **prefix och suffix**, som inte böjs;
 - **förkortningar** (`ACE`, `APTT`);
 - **particip som används adjektiviskt** — `adstringerande`, `antikoagulerande`;
 - **`-um`-läkemedlen** som redan bär `(pl. antibiotika)`-formen.
+
+**Läkemedels- och ämnesnamn böjs däremot**, med `(-et)` — `Atropin`, `testosteron`,
+`Doxycyklin`, `Dexametason`. Undantaget är de som bygger på ett n-ord: `Dietyleter`
+får `(-n)`, eftersom *eter* heter *etern*.
 
 ### -ös-adjektiv integreras i grundordet
 Medicinska **-ös**-former (adenomatös, fibrös, ödematös …) ges ingen egen post — integrera dem i grundformen med "**även …**". **MEN:** substantivet och -ös-adjektivet är relaterade, inte samma ord. Glosan måste vara en **egen, tydlig förklaring som visar skillnaden** — aldrig bara likställa adjektivet med grundordet. Skriv `även <ordet> (adj.) = <distinkt betydelse>`, t.ex.:
@@ -304,7 +312,7 @@ kunskapsbanken och byter ut allt som inte är a–z0–9 mot bindestreck, medan 
 lämna mellanslag och streck kvar.
 
 `node scripts/test_ordlista_sok.js` kör den riktiga sökkoden mot den riktiga datan och prövar
-bl.a. att båda stegen ger identiska länkar för var och en av de 11 203 posterna, att
+bl.a. att båda stegen ger identiska länkar för var och en av de 11 202 posterna, att
 slug-tabellen är identisk i Python och JS, och att k-formen fortfarande hittar c-formen.
 Skalet körs automatiskt av `scripts/check_generators.py`.
 

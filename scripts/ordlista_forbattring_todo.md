@@ -11,7 +11,7 @@
 
 ## 1. Utgångsläget (mätt 2026-08-02, gissa inte om)
 
-`data/ordlista.json`: **11 203 poster, 0 stubs.** Fas 2 i `ORDLISTA.md` är alltså
+`data/ordlista.json`: **11 202 poster, 0 stubs.** Fas 2 i `ORDLISTA.md` är alltså
 **helt klar** — men `ORDLISTA.md`:s statusavsnitt är stale och påstår
 fortfarande att S/T/U/V m.fl. återstår. Faktiska antal per bokstav:
 
@@ -257,7 +257,7 @@ det är en egen fråga.
 ### Etapp 4 · Fältkomplettering — risk: låg, men LÅNGT (§0.3, för hand) 🔄 PÅGÅR
 Prioritetsordning (störst lucka, minst gissningsrisk först). Siffrorna är de
 ommätta ur `ORDLISTA.md`, inte punkt 1:s felaktiga:
-1. [ ] Böjning — **8 516 saknade vid start**, 8 312 kvar (A–C klara).
+1. [ ] Böjning — **8 516 saknade vid start**, 8 231 kvar (A–D klara).
 2. [ ] Etymologi — 3 481 saknar.
 3. [ ] Eng. — 1 504 saknar (många prefix/suffix motiverat undantagna).
 
@@ -314,6 +314,43 @@ particip och `-um`-läkemedlen får det inte.
   - `concomitans` är latinsk och ska **inte** böjas, men bar versal, kombinerad tagg
     (`Adj./subst., lat.:`) och renderades därför utan kursiv ordklass. Taggen
     normaliserad till gement, ingen böjning inskriven.
+
+- **D: klart** (0.9.340). 331 av 432 poster saknade böjning vid start;
+  **80 fick den** — 62 substantiv, 11 `-era`-verb, 6 adjektiv och `defekt`
+  (dubbel ordklass). Störst enskild grupp: de 17 läkemedels-/ämnesnamnen
+  (`Doxycyklin`, `Dexametason`, `dopamin` …), som alla tar `(-et)` efter mallen
+  `Atropin`. Kvar står 250 av nu 431 D-poster, alla motiverade undantag:
+  107 i TA-serierna (`ductus …`, `dorsum …`, `dens …`, `dorsalis …`),
+  45 förkortningar, 39 övriga latinska/grekiska lemman (`dermis`, `diploe`,
+  `dolor`), 31 flerordstermer inkl. växtnamnen och 28 prefix.
+  - **`Dietyleter` fick `(-n)`, inte `(-et)`.** Läkemedelsregeln `(-et)` gäller
+    ämnesnamnet, inte grundordet: *eter* är ett n-ord (*etern*). Regeln står nu
+    utskriven i `ORDLISTA.md`, för den hade annars fällt nästa `-eter`-post.
+  - **Svenska flerordstermer böjs inte** — `djup ventrombos`, `dilaterad ven`,
+    `Downs syndrom`, `Duchennes muskeldystrofi`. Böjningen hör till huvudordet,
+    men parentesen står efter taggen och skulle läsas som frasens egen. Ny
+    punkt i `ORDLISTA.md`:s undantagslista; gällde 8 poster i D.
+  - **`dysrrafi` fanns inte som ord** — dubbel-r uppstår bara efter vokal
+    (*perineorrafi*), inte efter konsonant. Omdöpt till `dysrafi` efter kontroll
+    av skyddsregel 6: noll träffar i `kb_glossary_terms.json`, ingen
+    icke-genererad fil nämnde den, slugen `term-dysrafi` ledig.
+  - **`daktyli` struken** — importrest som påstod sig vara ett förled. Efterledet
+    står redan i `-dactyly / -daktyli` och förledet i `dactyl- / dactylo-`, båda
+    byggda av `_build_suffixes.py`/`_build_prefixes.py`. Posten var dessutom den
+    enda strecklösa termen i suffixgruppen, så `pick_example()` gjorde den till
+    ändelsesidans skyltord ("t.ex. daktyli"). 11 203 → 11 202 poster.
+  - Två poster med avvikande tagg rättade till husformat: `defekt`
+    (`Adj./subst., pl. -a:`) och `dexter`, som saknade ordklasstagg helt och
+    inledde med "Höger." — formen tagen från systerposten `sinister`.
+    `D-vitamin` bar `(D-vitaminet)`; skrivet som `(-et)`.
+  - **Sju textfel lästa i samma dumpar:** `snedddiametern` → *sneddiametern*,
+    `muskelbuklar` → *muskelbukar*, `syncceller` → *synceller*, `densutskotet`
+    → *densutskottet* (två poster, `dens` och `Axis (C2)`), `axiståten` →
+    *axistappen* (filens egen `axis`-post säger "tappen"), `Sv. descenderade`
+    → *descenderande* (jfr `ascendens`) och `Sv. darthinnmuskel` →
+    *dartosmuskel* (jfr systerposten `dartos, musculus`). Två osvenska former
+    strukna hellre än gissade om: `Sv. sädesledarens` (genitiv som synonym till
+    ett adjektiv) och `Sv. denterad` — samma beslut som `Sv. kaudad` i A-passet.
 
 - **Sidopass: ordklasstaggar och textfel** (0.9.339). C-passet avslöjade tre
   latinska adjektiv taggade `subst.` Fyndet svepte jag över **hela filen**, inte
