@@ -40,7 +40,7 @@ Ordlistan byggs ut från en omfattande importerad lista med medicinska termer (3
 
 ## Status: fas 2 avslutad
 
-`data/ordlista.json` innehåller **11 196 poster och 0 stubs** (mätt 2026-08-02). Varje
+`data/ordlista.json` innehåller **11 195 poster och 0 stubs** (mätt 2026-08-02). Varje
 importerad term är berikad — det finns ingenting kvar att hämta ur råimporten, och
 sedan dess har filen dessutom vuxit långt förbi importen med TA-anatomi, labbvärden,
 sjukdomar med ICD-koder, psykiatritermer, läkemedel och örter.
@@ -57,25 +57,25 @@ print('total',len(d),'synliga',sum(1 for e in d if e.get('status')!='stub'),\
 
 ### Fälttäckning (mätt 2026-08-02) — facit för fältkompletteringen
 
-Mät aldrig detta på känsla; kör snutten under tabellen. **Siffrorna gäller alla 11 196
+Mät aldrig detta på känsla; kör snutten under tabellen. **Siffrorna gäller alla 11 195
 poster**, även de där fältet är motiverat frånvarande (ett prefix behöver ingen böjning,
 en förkortning sällan en etymologi) — "saknas" är alltså ett tak för arbetet, inte en
 arbetslista rakt av.
 
 | Fält | Poster | Täckning | Saknas |
 |---|---:|---:|---:|
-| Ordklasstagg | 11 196 | 100 % | 0 |
-| `Eng. ` | 9 692 | 86,6 % | 1 504 |
-| Etymologi (`Av lat./gr. …`) | 7 720 | 69,0 % | 3 476 |
-| `Sv. ` | 2 681 | 23,9 % | 8 515 |
-| Böjning i parentes | 3 272 | 29,2 % | 7 924 |
-| `Jfr ` | 1 393 | 12,4 % | 9 803 |
-| `ICD-10: ` | 945 | 8,4 % | 10 251 |
-| `Vardag. ` | 782 | 7,0 % | 10 414 |
-| `Se ` | 358 | 3,2 % | 10 838 |
-| `Motsats` | 157 | 1,4 % | 11 039 |
-| `Referensvärde` | 78 | 0,7 % | 11 118 |
-| Uttalsangivelse | **0** | 0,0 % | 11 196 |
+| Ordklasstagg | 11 195 | 100 % | 0 |
+| `Eng. ` | 9 691 | 86,6 % | 1 504 |
+| Etymologi (`Av lat./gr. …`) | 7 720 | 69,0 % | 3 475 |
+| `Sv. ` | 2 679 | 23,9 % | 8 516 |
+| Böjning i parentes | 3 381 | 30,2 % | 7 814 |
+| `Jfr ` | 1 393 | 12,4 % | 9 802 |
+| `ICD-10: ` | 945 | 8,4 % | 10 250 |
+| `Vardag. ` | 781 | 7,0 % | 10 414 |
+| `Se ` | 357 | 3,2 % | 10 838 |
+| `Motsats` | 157 | 1,4 % | 11 038 |
+| `Referensvärde` | 78 | 0,7 % | 11 117 |
+| Uttalsangivelse | **0** | 0,0 % | 11 195 |
 
 ```bash
 python3 - <<'PY'
@@ -127,7 +127,13 @@ så pröva formen i huvudet innan du väljer — ändelsen ensam avgör inte.
 `(-en)` och gav *fransosenen* (rättat 0.9.343). Samma sak som med flerordstermerna:
 parentesen står direkt efter taggen och läses som uppslagsordets egen.
 
-**Inga formavvikelser kvar (0.9.342):** samtliga 11 196 poster inleds med en gement
+**En parentes som inte börjar med bindestreck räknas som obojd av mätsnutten.** Formen
+`(-, -a)` såg ut som en böjning men var osynlig i mätningen (`latent`, `somnolent`,
+rättade 0.9.352) — samma fälla som utskrivna former, `jonisera (joniserar, joniserade,
+joniserat)` (0.9.349). **Leta efter den i varje bokstav:** en post som *ser* böjd ut men
+inte syns i mätningen blir aldrig arbetad på.
+
+**Inga formavvikelser kvar (0.9.342):** samtliga 11 195 poster inleds med en gement
 skriven ordklasstagg. Före det passet saknade 50 poster tagg helt och 28 skrev den med
 versal (`Adj./subst.:`, `Egennamn:`, `Förled:`) — de renderades utan kursiv ordklass,
 eftersom `format_def()` bara kursiverar en gement skriven tagg. **Skriv aldrig en ny
@@ -194,7 +200,7 @@ Stubs får aldrig synas på sajten förrän de är berikade. Det sköts på **tv
 ordklass. (böjning) definition i klartext. Sv. svensk synonym. Eng. english term. Vardag. vardagsuttryck. Av lat./gr. etymologi.
 ```
 
-Så ser de 11 196 posterna faktiskt ut: **ordklasstaggen först**, böjningen i parentes direkt
+Så ser de 11 195 posterna faktiskt ut: **ordklasstaggen först**, böjningen i parentes direkt
 efter, och därefter definitionen med liten begynnelsebokstav. Mallen stod tidigare med
 definitionen först och ordklassen inskjuten i mitten, vilket ingen post följer — och den
 inledande taggen är dessutom det enda `format_def()` kursiverar, så den *måste* stå först
@@ -272,6 +278,13 @@ saknar bestämd form med rätta; kontrollen kräver bindestreck + svensk plural�
 skrivningar — `pl. -∅` (80 poster), `pl. -` (12) och `pl. =` (11). `-∅` är husets
 form för nya poster.
 
+**Latinsk plural skrivs `(pl. …)`, aldrig `(plur. …)`** — `nevus (pl. nevi)`,
+`neuroleptikum (pl. neuroleptika)`, `nares (pl., lat.)`. 219 poster mot 8 innan
+0.9.354; fyra kvarstår (`psykofarmaka`, `protektiva ämnen`, `radikulära smärtor`,
+`ragader`) och de skriver `(plur.)` ensamt, där husformen för svensk pluralis är
+`(plural)` (`nässelutslag`, `mollusker`, `klimakteriebesvär`). Avgör i respektive
+bokstavspass vilken av de två det ska vara.
+
 **Böjning skrivs inte i varje post.** "Saknas" i täckningstabellen är ett tak, inte
 en arbetslista. Utanför står:
 
@@ -290,6 +303,14 @@ en arbetslista. Utanför står:
 **Läkemedels- och ämnesnamn böjs däremot**, med `(-et)` — `Atropin`, `testosteron`,
 `Doxycyklin`, `Dexametason`. Undantaget är de som bygger på ett n-ord: `Dietyleter`
 får `(-n)`, eftersom *eter* heter *etern*.
+
+**Kemiska ämnesnamn på `-id` är n-ord och tar `(-en)`**, inte `(-et)`. Filens egna
+`klorid`, `lipid`, `peptid`, `steroid`, `opioid`, `glykosid`, `karbamid` och `tiazid`
+skriver alla `(-en)`, och läkemedelsnamnen följer grundordet: `Kaliumbromid`,
+`Ipratropiumbromid`, `Ciklofosfamid`, `Loperamid`, `Furosemid`, `Glibenklamid`,
+`Hydroklortiazid`, `Isoniazid`. De fyra sista bar `(-et)` till 0.9.352 —
+`Hydroklortiazid` motsade till och med sitt eget grundord. **Undantag:** `suicid (-et)`
+är genuint neutrum (lat. *suicidium*), inte ett ämnesnamn.
 
 ### th → t, och uppslagsordet i singular
 
@@ -367,7 +388,7 @@ kunskapsbanken och byter ut allt som inte är a–z0–9 mot bindestreck, medan 
 lämna mellanslag och streck kvar.
 
 `node scripts/test_ordlista_sok.js` kör den riktiga sökkoden mot den riktiga datan och prövar
-bl.a. att båda stegen ger identiska länkar för var och en av de 11 196 posterna, att
+bl.a. att båda stegen ger identiska länkar för var och en av de 11 195 posterna, att
 slug-tabellen är identisk i Python och JS, och att k-formen fortfarande hittar c-formen.
 Skalet körs automatiskt av `scripts/check_generators.py`.
 

@@ -257,7 +257,7 @@ det är en egen fråga.
 ### Etapp 4 · Fältkomplettering — risk: låg, men LÅNGT (§0.3, för hand) 🔄 PÅGÅR
 Prioritetsordning (störst lucka, minst gissningsrisk först). Siffrorna är de
 ommätta ur `ORDLISTA.md`, inte punkt 1:s felaktiga:
-1. [ ] Böjning — **8 516 saknade vid start**, 7 924 kvar (A–K klara).
+1. [ ] Böjning — **8 516 saknade vid start**, 7 814 kvar (A–N klara).
 2. [ ] Etymologi — 3 481 saknar.
 3. [ ] Eng. — 1 504 saknar (många prefix/suffix motiverat undantagna).
 
@@ -571,6 +571,108 @@ particip och `-um`-läkemedlen får det inte.
     bar den oskrivna platshållaren `(-/-ret, pl. ...)`; `komatös` och `kompatibel`
     skrev ut formerna; `klimakteriebesvär` skrev `(pluralis)`, unikt i filen.
   - `koebners fenomen` → `Koebners fenomen`, slug oförändrad.
+
+- **L: klart** (0.9.352). 338 av 441 poster saknade böjning; **24 fick den** —
+  17 substantiv, 1 adjektiv, 6 läkemedels-/ämnesnamn. 29,2 % → 29,5 %. De 312
+  kvarvarande: 182 flerordstermer (`labium`-, `lamina`-, `linea`-, `lobus`- och
+  `levator`-familjerna), 61 latinska/grekiska ettordslemman, 38 prefix/suffix,
+  27 förkortningar, 4 egennamn.
+  - **`latent` bar `(-, -a)` — osynligt för mätsnutten**, samma fälla som
+    `jonisera`/`juvenil` i J. Adjektiv som redan slutar på `-t` skrivs `(pl. -a)`.
+    Svepet över hela filen gav en till: `somnolent`. **Leta efter formen
+    `(-, …)` i varje bokstav.**
+  - **`laxans` bar husets gamla format mitt i brödtexten** — `(subst., -et;
+    lat. pluralform laxantia; …)` efter definitionen, med ordklassen skriven två
+    gånger. Omskriven till `subst. (-et; lat. pl. laxantia)` först.
+  - **Fyra läkemedel UTANFÖR L stod med fel genus.** Ett svep över filens
+    `-id`-poster visade `Furosemid`, `Glibenklamid`, `Hydroklortiazid` och
+    `Isoniazid` med `(-et)` mot `klorid`, `lipid`, `peptid`, `steroid`,
+    `karbamid`, `tiazid` och `Ciklofosfamid` som alla skriver `(-en)`.
+    `Hydroklortiazid` motsade sitt eget grundord `tiazid (-en)`. Rättade enligt
+    D-passets n-ordsundantag; `Loperamid` fick `(-en)` från början.
+    **`suicid (-et)` rördes inte** — genuint neutrum (lat. *suicidium*).
+  - **Ett sakfel:** `libero` glossades "lyfta, höja, frigöra" — det är *levos*
+    betydelse; *liberare* betyder befria. Två etymologier skrev `lordos =
+    bakåtböjd` mot familjens (`lordosis`, `lord- / lordo-`) *framåtböjd*.
+  - **Fem textfel:** `lobloberna` → *loberna*, `eftergiver` → *ger efter*,
+    `arteria lienalis (splenalis)` → *(splenica)*, gement `läkemedelsverket` →
+    *Läkemedelsverket*, `Av it.` → *Av ital.* (1 mot 11). `lens` etymologi skrev
+    "linsplätten" och "en linsfröa", två ord som inte finns.
+  - `lhermittes tecken` → `Lhermittes tecken`, slug oförändrad.
+  - **Fem kvarlämnade th-former från 0.9.347.** `diencephalon` skrev "thalamus,
+    hypotalamus, epithalamus och subthalamus" — tre th och ett t i samma mening.
+    `lemniscus medialis` skrev "vidare till thalamus". Samma blandning i
+    tooltip-facit: `nucleus ventralis posterolateralis`, `spinotalamusbanan` och
+    `spinotalamusbanans` mot systerposterna `tractus spinothalamicus
+    anterior`/`lateralis` som redan skrev *talamus*. Facit rättat + `--sync-defs`.
+
+- **M: klart** (0.9.353). 597 av 721 poster saknade böjning; **42 fick den** —
+  25 substantiv, 2 adjektiv, 15 läkemedels-/ämnesnamn. 29,5 % → 29,8 %. De 554
+  kvarvarande: **372 flerordstermer** (`musculus`-serien ensam 166, `margo` 32,
+  `membrana` 22), 88 ettordslemman, 45 förkortningar, 42 prefix.
+  - **Tre latinska adjektiv stod taggade `subst.`** — `medius`, `medianus` och
+    delvis `medium`. **Svepet i 0.9.339 fångade dem inte.** `medius`/`medianus`
+    omtaggade till `adj.`; `medium` är den substantiverade neutrumformen och
+    behåller `subst.`, men glosan löd "alldaglig, lagom" — det svenska ordets
+    betydelse, inte det latinska lemmats.
+  - **Tre ord som inte finns:** `Sv. mellre` (`medius`), `Sv. mediän, mittre`
+    och `medianus = mittre` i etymologin. `medianus` glossade dessutom
+    `planum medianum` som "medialt plan"; det är medianplanet.
+  - **Dubbletten `mesentarium` struken.** Felstavad (av grek. *enteron*) och
+    dubblerade den redan böjda `mesenterium` — som till och med korshänvisade
+    till felstavningen med "Se Mesentarium". 11 196 → 11 195 poster.
+  - **Ett sakfel satt i en wirad tooltip:** `mesencefalon` sade "mellanhjärnan",
+    men det är *diencephalon*; mesencefalon är **mitthjärnan**, som filens egen
+    `mesencephalon` skriver. Felet stod ordagrant i `kb_glossary_terms.json`.
+    Samma sak med `mastoideus`, glossad "bröstkörtelliknande" om ett vårtutskott.
+    Båda rättade i ordlistan OCH i facit, synkade med `--sync-defs`.
+  - **Fem uppslagsord rättade:** `ms` → `MS`, `mrsa` → `MRSA`, `modic` →
+    `Modic`, `mylo` → `mylo-` (enda prefixposten i M utan husets streck) och
+    `Mefloquin` → `Meflokin` (svensk INN-form; filens `Hydroxiklorokin` skriver
+    "av klorokin"). Bara `Meflokin` bytte slug.
+  - **Fem textfel:** `hypopofalamus`, `lillfrån`, `hammarbenet handtag`,
+    `fingerts`, `de tre små knottror`. `myelin` skrev "fettrik isolationshölje"
+    om ett neutrumord — **facits tooltiptext hade redan rätt form**.
+  - **Två fel i hjärnstammens familj:** `mesencephalon` lämnade engelskans
+    *midbrain* mitt i svensk text, `myelencephalon` kallade *medulla oblongata*
+    "den förlängda ryggmärgen" (filens egen post: *förlängda märgen*).
+    `myositis ossificans` hänvisade till "Se Myo" — posten finns inte.
+
+- **N: klart** (0.9.354). 225 av 312 poster saknade böjning; **40 fick den** —
+  24 substantiv, 1 adjektiv, 15 läkemedelsnamn. 29,8 % → **30,2 %**. De 185
+  kvarvarande: 98 flerordstermer (`nervus`-serien 58), 31 ettordslemman,
+  27 förkortningar, 25 prefix.
+  - `neuron` fick `(-et, pl. -er)` efter `axon`/`hormon`, `nystagmus` `(-en)`
+    efter L-passets `lagoftalmus`, `noma` `(-n)` efter `lepra`, `noradrenalin`
+    `(-et)` efter `adrenalin`. `neoadjuvant` fick `(pl. -a)` — slutar redan på `-t`.
+  - **`nalorphine` → `Nalorfin`.** Engelsk stavning som uppslagsord; postens egen
+    `Sv.`-rad sade redan *nalorfin*. `Sv.`-fältet ströks eftersom det efter bytet
+    bara upprepade uppslagsordet. `Nt-proANP` → `NT-proANP` efter systerposten
+    `NT-proBNP`; löptexten i `ANP` rättad i samma pass.
+  - **Fyra poster skrev `plur.` där filen skriver `pl.`** (219 mot 8): `nares`,
+    `nates`, `nevus`, `neuroleptikum`. De fyra kvarvarande `(plur.)` — `psykofarmaka`,
+    `protektiva ämnen`, `radikulära smärtor`, `ragader` — ligger i P och R.
+    **OBS:** de använder `(plur.)` ensamt, där K-passet fastslog `(plural)` som
+    husform; avgör i respektive pass om de är svensk plural eller latinsk.
+  - **Fyra textfel:** `Sv. nuktal, nacke-` → *nukal, nack-* (`nuchalis`), gement
+    `new York Heart Association` (`NYHA`), `bortförande (efferent) lymfkärl`
+    utan kongruens (`nodus lymphoideus`) och filens **enda** post med tyska
+    citattecken, `„snurrnerven“` (`nervus ulnaris`).
+  - **Tre dubblettpar hittade, INTE sammanslagna — de kräver ett beslut:**
+    1. `Musculus (M.)` / `musculus` (M). Bara `musculus` är wirad i facit;
+       `Musculus (M.)` bär etymologin (*mus* + *-culus*).
+    2. `meatus communis nasi` / `meatus nasi communis` (M). TA-formen är den
+       senare; ingen av dem står i facit.
+    3. `non-Hodgkins lymfom` / `non-Hodgkin-lymfom` (N) och
+       `naviculare` / `naviculare, os` (N). Ingen i facit. Filens TA-konvention
+       är `<term>, os` (jfr `lunatum, os`, `hamatum, os`), så den strecklösa
+       `naviculare` är outlier — men den bär "kan drabbas av stressfraktur"
+       och "Även navikulare".
+  - **Fyra hyphenlösa prefixposter kvar** (`bredspektrum`, `giga`, `krikos`,
+    `psoa`) mot 653 med streck. `bredspektrum` är prefixgruppens skyltord via
+    `pick_example()` — hyphenering ändrar kortet på `medicinskordlista.html`
+    till reservvalet, alltså en synlig ändring. `krikos`/`psoa` är dessutom
+    grekiska rotord snarare än kombinationsformer. Kräver beslut.
 
 - **Sidopass: böjningsparentesernas notation, hela filen** (0.9.351). **328 poster**
   normaliserade, och skyddet levererat i samma commit.
