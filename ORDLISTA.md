@@ -40,7 +40,7 @@ Ordlistan byggs ut från en omfattande importerad lista med medicinska termer (3
 
 ## Status: fas 2 avslutad
 
-`data/ordlista.json` innehåller **11 201 poster och 0 stubs** (mätt 2026-08-02). Varje
+`data/ordlista.json` innehåller **11 200 poster och 0 stubs** (mätt 2026-08-02). Varje
 importerad term är berikad — det finns ingenting kvar att hämta ur råimporten, och
 sedan dess har filen dessutom vuxit långt förbi importen med TA-anatomi, labbvärden,
 sjukdomar med ICD-koder, psykiatritermer, läkemedel och örter.
@@ -57,25 +57,25 @@ print('total',len(d),'synliga',sum(1 for e in d if e.get('status')!='stub'),\
 
 ### Fälttäckning (mätt 2026-08-02) — facit för fältkompletteringen
 
-Mät aldrig detta på känsla; kör snutten under tabellen. **Siffrorna gäller alla 11 201
+Mät aldrig detta på känsla; kör snutten under tabellen. **Siffrorna gäller alla 11 200
 poster**, även de där fältet är motiverat frånvarande (ett prefix behöver ingen böjning,
 en förkortning sällan en etymologi) — "saknas" är alltså ett tak för arbetet, inte en
 arbetslista rakt av.
 
 | Fält | Poster | Täckning | Saknas |
 |---|---:|---:|---:|
-| Ordklasstagg | 11 201 | 100 % | 0 |
-| `Eng. ` | 9 697 | 86,6 % | 1 504 |
-| Etymologi (`Av lat./gr. …`) | 7 721 | 68,9 % | 3 480 |
-| `Sv. ` | 2 685 | 24,0 % | 8 516 |
-| Böjning i parentes | 3 084 | 27,5 % | 8 117 |
-| `Jfr ` | 1 394 | 12,4 % | 9 807 |
-| `ICD-10: ` | 947 | 8,5 % | 10 254 |
-| `Vardag. ` | 782 | 7,0 % | 10 419 |
-| `Se ` | 358 | 3,2 % | 10 843 |
-| `Motsats` | 157 | 1,4 % | 11 044 |
-| `Referensvärde` | 78 | 0,7 % | 11 123 |
-| Uttalsangivelse | **0** | 0,0 % | 11 201 |
+| Ordklasstagg | 11 200 | 100 % | 0 |
+| `Eng. ` | 9 696 | 86,6 % | 1 504 |
+| Etymologi (`Av lat./gr. …`) | 7 721 | 68,9 % | 3 479 |
+| `Sv. ` | 2 685 | 24,0 % | 8 515 |
+| Böjning i parentes | 3 106 | 27,7 % | 8 094 |
+| `Jfr ` | 1 394 | 12,4 % | 9 806 |
+| `ICD-10: ` | 947 | 8,5 % | 10 253 |
+| `Vardag. ` | 782 | 7,0 % | 10 418 |
+| `Se ` | 358 | 3,2 % | 10 842 |
+| `Motsats` | 157 | 1,4 % | 11 043 |
+| `Referensvärde` | 78 | 0,7 % | 11 122 |
+| Uttalsangivelse | **0** | 0,0 % | 11 200 |
 
 ```bash
 python3 - <<'PY'
@@ -127,7 +127,7 @@ så pröva formen i huvudet innan du väljer — ändelsen ensam avgör inte.
 `(-en)` och gav *fransosenen* (rättat 0.9.343). Samma sak som med flerordstermerna:
 parentesen står direkt efter taggen och läses som uppslagsordets egen.
 
-**Inga formavvikelser kvar (0.9.342):** samtliga 11 201 poster inleds med en gement
+**Inga formavvikelser kvar (0.9.342):** samtliga 11 200 poster inleds med en gement
 skriven ordklasstagg. Före det passet saknade 50 poster tagg helt och 28 skrev den med
 versal (`Adj./subst.:`, `Egennamn:`, `Förled:`) — de renderades utan kursiv ordklass,
 eftersom `format_def()` bara kursiverar en gement skriven tagg. **Skriv aldrig en ny
@@ -194,7 +194,7 @@ Stubs får aldrig synas på sajten förrän de är berikade. Det sköts på **tv
 ordklass. (böjning) definition i klartext. Sv. svensk synonym. Eng. english term. Vardag. vardagsuttryck. Av lat./gr. etymologi.
 ```
 
-Så ser de 11 201 posterna faktiskt ut: **ordklasstaggen först**, böjningen i parentes direkt
+Så ser de 11 200 posterna faktiskt ut: **ordklasstaggen först**, böjningen i parentes direkt
 efter, och därefter definitionen med liten begynnelsebokstav. Mallen stod tidigare med
 definitionen först och ordklassen inskjuten i mitten, vilket ingen post följer — och den
 inledande taggen är dessutom det enda `format_def()` kursiverar, så den *måste* stå först
@@ -326,7 +326,7 @@ kunskapsbanken och byter ut allt som inte är a–z0–9 mot bindestreck, medan 
 lämna mellanslag och streck kvar.
 
 `node scripts/test_ordlista_sok.js` kör den riktiga sökkoden mot den riktiga datan och prövar
-bl.a. att båda stegen ger identiska länkar för var och en av de 11 201 posterna, att
+bl.a. att båda stegen ger identiska länkar för var och en av de 11 200 posterna, att
 slug-tabellen är identisk i Python och JS, och att k-formen fortfarande hittar c-formen.
 Skalet körs automatiskt av `scripts/check_generators.py`.
 

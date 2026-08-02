@@ -11,7 +11,7 @@
 
 ## 1. Utgångsläget (mätt 2026-08-02, gissa inte om)
 
-`data/ordlista.json`: **11 201 poster, 0 stubs.** Fas 2 i `ORDLISTA.md` är alltså
+`data/ordlista.json`: **11 200 poster, 0 stubs.** Fas 2 i `ORDLISTA.md` är alltså
 **helt klar** — men `ORDLISTA.md`:s statusavsnitt är stale och påstår
 fortfarande att S/T/U/V m.fl. återstår. Faktiska antal per bokstav:
 
@@ -257,7 +257,7 @@ det är en egen fråga.
 ### Etapp 4 · Fältkomplettering — risk: låg, men LÅNGT (§0.3, för hand) 🔄 PÅGÅR
 Prioritetsordning (störst lucka, minst gissningsrisk först). Siffrorna är de
 ommätta ur `ORDLISTA.md`, inte punkt 1:s felaktiga:
-1. [ ] Böjning — **8 516 saknade vid start**, 8 117 kvar (A–F klara).
+1. [ ] Böjning — **8 516 saknade vid start**, 8 094 kvar (A–G klara).
 2. [ ] Etymologi — 3 481 saknar.
 3. [ ] Eng. — 1 504 saknar (många prefix/suffix motiverat undantagna).
 
@@ -432,6 +432,45 @@ particip och `-um`-läkemedlen får det inte.
     `fatigue`, `fluor` (två sinnen, olika genus) och `forceps`. `flegmone`
     bär sedan tidigare `(-t, pl. -r)` — neutrumformen är osäker (utrum
     förekommer i svensk medicinsk text) och rördes inte utan belägg.
+
+- **G: klart** (0.9.344). 188 av 267 poster saknade böjning; **23 fick den** —
+  18 substantiv, 1 `-era`-verb och 4 läkemedelsnamn. Täckning 27,5 % → 27,7 %.
+  Kvar står 165: 66 latinska flerordstermer, 45 latinska/grekiska ettordslemman
+  (`gaster`, `glandula`, `gyrus`, `glottis`), 26 förkortningar, 25 prefix och
+  3 egennamn.
+  - **Tre uppslagsord rättade**, samtliga kontrollerade mot skyddsregel 6
+    (noll facitträffar, ingen icke-genererad fil, ledig slug): `glutos` →
+    `gloutos` (formen finns inte; postens **egen etymologi** sade
+    `Av grek. gloutos`), `gerd` → `GERD` (förkortningar skrivs med versaler, och
+    systerposten `GORD` hänvisade redan till "GERD") och `guglielmi` →
+    `Guglielmi`. Bara `gloutos` bytte slug; de två andra foldar likadant.
+  - `Guglielmi`-glosan fick husets egennamnsform från `Golgi`/`Galeazzi`:
+    språkmarkören `(it.)` + fullt namn, **Guido Guglielmi**. Årtalen utelämnade
+    i stället för gissade. `GDC` skrev hans namn gement i sin expansion — versal.
+  - **`glykosuri` sammanslagen med `glukosuri`.** `glukosuri` bar redan husets
+    markör "Även glykosuri." medan `glykosuri` stod kvar som egen post — en
+    halvgjord hopslagning. Innehållet från s-formen ("klassiskt tecken på
+    diabetes", `Jfr Diabetes, Sockersjuka`) fördes över. 11 201 → 11 200 poster.
+  - **Två sakfel:** `glenoidalis` glossades "glänsande som ögongloben" —
+    adjektivet betyder *som hör till ledpannan*, vilket postens egen etymologi
+    (`glene` = ledpanna) redan sade. `granulosus` skrev `layer granulosum`
+    (engelska); hudlagret heter *stratum granulosum*.
+  - **Ett tyskt ord utanför G, hittat av ett grep.** Kontrollen av
+    `karos`-etymologin visade att `carotis` skrev "tryck mot artären ger
+    **bewusstlosighet**" — samma feltyp som de tre tyska orden i C-passet.
+    Rättat. Samma grep: `bifurcatio carotidis` och `glomus caroticum` lämnade
+    `grek. karos` oglossat medan familjens fem övriga skriver `= djup sömn`.
+  - **Fyra språkfel:** `en liten kemoreceptororgan` → *ett litet*
+    (`glomus caroticum`), `medial lårmuskeln` → *den mediala lårmuskeln*
+    (`gracilis`), `körtelns rundan form` → *runda* (`glandula`) och
+    `Sv. glossofaryngealt.` → *glossofaryngeal* — Sv.-formen av ett adjektiv
+    skrivs i grundform (jfr `gluteus` "Sv. gluteal."). `gc` inledde med
+    `förk. förkortning för …`; taggen säger redan förk.
+  - **Ett misstänkt fel som visade sig vara husets form.** `Sv. `-fältet
+    upprepar uppslagsordet i **253 poster** (`anulus` → "Sv. anulus, ring",
+    `apex` → "Sv. spets, apex"). Det är avsiktligt för latinska uppslagsord:
+    fältet säger att latinformen används på svenska *och* ger det inhemska
+    ordet. **Rör dem inte** — mät före du rättar.
 
 - **Sidopass: ordklasstaggen, hela filen** (0.9.342). 78 poster inledde inte med
   husets gement skrivna tagg — 50 saknade den helt, 28 skrev den med versal
