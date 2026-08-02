@@ -64,7 +64,7 @@ arbetslista rakt av.
 
 | Fält | Poster | Täckning | Saknas |
 |---|---:|---:|---:|
-| Ordklasstagg | 11 152 | 99,6 % | 50 |
+| Ordklasstagg | 11 202 | 100 % | 0 |
 | `Eng. ` | 9 698 | 86,6 % | 1 504 |
 | Etymologi (`Av lat./gr. …`) | 7 721 | 68,9 % | 3 481 |
 | `Sv. ` | 2 685 | 24,0 % | 8 517 |
@@ -82,7 +82,8 @@ python3 - <<'PY'
 import json, re
 d = json.load(open('data/ordlista.json')); n = len(d)
 FALT = {
-    "Ordklasstagg":  r"(?i)^(?:subst|adj|verb|adv|förk|egennamn|lat|gr|prefix|suffix)\b",
+    "Ordklasstagg":  r"(?i)^(?:subst|adj|verb|adv|förk|egennamn|lat|gr|prefix|suffix"
+                     r"|prep|pron|räkn|interj|konj)\b",
     "Eng.":          r"Eng\. ",
     "Etymologi":     r"\bAv (?:lat|gr|grek|eng|fr|ty|ital|arab|sanskr)",
     "Sv.":           r"Sv\. ",
@@ -115,12 +116,11 @@ Två fällor i mätningen, båda påträffade 2026-08-02:
   räknar dem som obojda, eftersom mönstret kräver `-`. De är alltså *inte* en
   arbetslista: de har redan den böjning som är relevant för formen.
 
-**Kända formavvikelser:** 50 poster saknar ordklasstagg helt (flertalet är flerordsuttryck
-och statistikbegrepp: *absolut risk*, *akut buk*, *aerob träning*), och **28 poster skriver
-taggen med versal** — `Adj.`/`Subst.`/`Förk.`/`Förled:` i stället för gement
-(*kolloid*, *onkogen*, *patogen*, *cefalo-* m.fl.). Husformatet kräver gement;
-`format_def()` kursiverar bara en gement skriven tagg, så en versal tagg renderas
-helt utan kursiv ordklass.
+**Inga formavvikelser kvar (0.9.342):** samtliga 11 202 poster inleds med en gement
+skriven ordklasstagg. Före det passet saknade 50 poster tagg helt och 28 skrev den med
+versal (`Adj./subst.:`, `Egennamn:`, `Förled:`) — de renderades utan kursiv ordklass,
+eftersom `format_def()` bara kursiverar en gement skriven tagg. **Skriv aldrig en ny
+post utan tagg först**, och skriv den gement: mätsnutten ovan ska förbli 0 saknade.
 
 ### Berikningslogg per bokstav (fas 2, avslutad)
 

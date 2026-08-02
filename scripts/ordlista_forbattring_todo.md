@@ -381,6 +381,26 @@ particip och `-um`-läkemedlen får det inte.
     `sädesträngen` med ett s (`cremaster`, `funiculus`, `spermaticus`) mot 14
     poster med två — rättade, liksom `tunnt rep` → *tunt rep* i `funiculus`.
 
+- **Sidopass: ordklasstaggen, hela filen** (0.9.342). 78 poster inledde inte med
+  husets gement skrivna tagg — 50 saknade den helt, 28 skrev den med versal
+  (`Adj./subst.:`, `Egennamn:`, `Förled:`, `Förk.:`). De 28 renderades utan
+  kursiv ordklass. Nu är täckningen **100 %** av 11 202 poster.
+  - **Skyddet sitter i `generate_glossary.py`** och hård-felar på en post utan
+    gement skriven tagg, som den redan gjorde på slug-kollisioner. Verifierat
+    mot tre planterade fel. Nya poster kan alltså inte längre smyga in otaggade.
+  - **Böjning bara där formen är säker** — 11 poster. `fungicid` fick bara den
+    substantivböjning posten redan bar; adjektivformen av ett `-id`-ord är inte
+    given (samma skäl som `baktericid`). `gestagen` fick formen från `androgen`.
+    `postinfarkt` och `sederande` fick ingen: ingen substantivform finns, och
+    presens particip böjs inte.
+  - Tre uppslagsord rättade: `klinisk signifikant` → `kliniskt signifikant`,
+    `ia`/`ib` → `Ia`/`Ib`. Kontrollerade mot skyddsregel 6.
+  - `Schobers test` och `Severs sjukdom` inledde glosan med sitt eget
+    uppslagsord. Omskrivna. Tre språkfel därtill: satsradning, hängande `av`
+    och en etymologi utan språkangivelse.
+  - **Mätsnuttens tagglista undermätte** — den saknade `prep|pron|räkn|interj|konj`,
+    som `format_def()` ändå kursiverar. `inklusive` räknades som otaggad. Rättad.
+
 - **Sidopass: ordklasstaggar och textfel** (0.9.339). C-passet avslöjade tre
   latinska adjektiv taggade `subst.` Fyndet svepte jag över **hela filen**, inte
   bara C: **tio** poster bar fel tagg — `cavus`, `communis`, `convexus`, `durus`,

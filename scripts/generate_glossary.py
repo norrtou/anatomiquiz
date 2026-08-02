@@ -339,6 +339,15 @@ def escape_html(text: str) -> str:
     )
 
 
+# Husets ordklasstaggar, gement. De tolv första är de `format_def()` kursiverar;
+# `egennamn`, `lat` och `gr` används av huset utan kursivering. Versal tagg
+# godtas INTE — se kontrollen i build().
+GLOSS_TAG = re.compile(
+    r"^(?:subst|adj|adv|verb|prefix|suffix|förk|pron|räkn|interj|konj|prep"
+    r"|egennamn|lat|gr)\b"
+)
+
+
 def format_def(text: str) -> str:
     """Escapa HTML och kursivera ordklassen i början. Matchar formatDef i JS."""
     escaped = escape_html(text)
@@ -1287,6 +1296,19 @@ def main() -> None:
     dupes = {s for s in slugs if slugs.count(s) > 1}
     if dupes:
         raise SystemExit(f"FEL: slug-kollisioner: {sorted(dupes)}")
+
+    # Varje post måste inleda med en GEMENT skriven ordklasstagg. `format_def()`
+    # kursiverar bara en gement skriven tagg, så `Adj./subst.:` eller `Egennamn:`
+    # renderas helt utan kursiv ordklass — och en post helt utan tagg tappar
+    # dessutom fältet. 78 sådana poster rättades i 0.9.342; det här hindrar
+    # återfall. Taggarna är exakt de `format_def()` känner igen, plus `egennamn`,
+    # `lat` och `gr` som huset använder utan kursivering (se ORDLISTA.md).
+    otaggade = [e["term"] for e in terms if not GLOSS_TAG.match(e["def"])]
+    if otaggade:
+        raise SystemExit(
+            f"FEL: {len(otaggade)} post(er) i data/ordlista.json saknar gement "
+            f"skriven ordklasstagg först i def: {sorted(otaggade)[:12]}"
+        )
 
     # Gruppera på sidnyckel; sortera varje grupp alfabetiskt på term.
     groups: dict[str, list[dict]] = {}
