@@ -257,7 +257,7 @@ det är en egen fråga.
 ### Etapp 4 · Fältkomplettering — risk: låg, men LÅNGT (§0.3, för hand) 🔄 PÅGÅR
 Prioritetsordning (störst lucka, minst gissningsrisk först). Siffrorna är de
 ommätta ur `ORDLISTA.md`, inte punkt 1:s felaktiga:
-1. [ ] Böjning — **8 516 saknade vid start**, 8 094 kvar (A–G klara).
+1. [ ] Böjning — **8 516 saknade vid start**, 8 029 kvar (A–H klara).
 2. [ ] Etymologi — 3 481 saknar.
 3. [ ] Eng. — 1 504 saknar (många prefix/suffix motiverat undantagna).
 
@@ -471,6 +471,42 @@ particip och `-um`-läkemedlen får det inte.
     `apex` → "Sv. spets, apex"). Det är avsiktligt för latinska uppslagsord:
     fältet säger att latinformen används på svenska *och* ger det inhemska
     ordet. **Rör dem inte** — mät före du rättar.
+
+- **H: klart** (0.9.345). 279 av 444 poster saknade böjning; **65 fick den** —
+  51 substantiv, 3 `-era`-verb och 11 läkemedels-/ämnesnamn. Täckning
+  27,7 % → 28,3 %. Kvar står 214: 78 flerordstermer, **66 förkortningar**
+  (H är förkortningarnas bokstav), 40 latinska/grekiska ettordslemman
+  (`hallux`, `humerus`, `hiatus`, `hypophysis`), 29 prefix och 1 egennamn.
+  - **Synkoperegeln från F-passet betalade sig direkt.** `Hjälpmedel` böjs
+    *hjälpmedlet* och fick `(-let, pl. -∅)` från början i stället för det
+    felaktiga `(-et)`. `hjärnstam` fick `(-men)` (*hjärnstammen*) efter
+    `audiogram` `(-met)` — dubbelteckning vid ändelse, samma princip.
+  - **En felskriven böjning:** `hypoxi` bar bara `(pl. -er)` — en
+    adjektivnotation på ett substantiv, så den definita formen fattades.
+    Rättad till `(-n, pl. -er)` som systerposterna `hypoxemi`/`hyperoxi`.
+  - **Tre uppslagsord fick versal**, alla med oförändrad slug och kontrollerade
+    mot skyddsregel 6: `heimlichs manöver` → `Heimlichs manöver`,
+    `helicobacter pylori` → `Helicobacter pylori` (släktnamn; postens egen
+    `Eng.`-rad skrev det redan med versal) och `herxheimer` → `Herxheimer`.
+    Den sista saknade husets egennamnsform helt — skriven efter `Golgi`/
+    `Guglielmi` med `(ty.)` + **Karl Herxheimer**, årtalen utelämnade.
+  - **Fem textfel:** `kroppskonstituion` → *kroppskonstitution* (`habitus`),
+    `krokhansen` → *krokbenet* (`hamatus`; systerposten `hamatum, os` har rätt),
+    `haustrae coli` → *haustra coli* (latinsk plural av *haustrum*),
+    `en liten märke` → *ett litet* (`hilus`) och `ledförbinding` →
+    *ledförbindning* (`hyoideus`). `HDL-kolesterol` inledde med versal.
+  - **⚠️ TRE DUBBLETTER HITTADE, INGEN SAMMANSLAGEN — de kräver ditt beslut:**
+    1. **`hypotenar` / `hypothenar`.** Båda står i `kb_glossary_terms.json`
+       med **var sin href**, och båda ankarna används skarpt: `case.html` →
+       `#term-hypothenar`; `kunskapsbank/muskeltabell-handen.html` (×2) och
+       `nervtabell-armen.html` → `#term-hypotenar`. En hopslagning kräver att
+       facit skrivs om **och** att tre sidor wiras om. Båda fick böjning.
+    2. **`hypotalamus` / `hypothalamus`.** Inga facitberoenden, men valet är
+       inte givet: filen håller `thalamus` i th-form och **den är wirad**,
+       medan svensk medicinsk standard skriver *hypotalamus*. Ingendera böjdes
+       — `thalamus`, `hippocampus` och `hypophysis` står också oböjda.
+    3. **`hemorrojd` / `hemorrojder`** — singular- respektive pluralpost för
+       samma sak. Jfr N-passets `Neutrofila granulocyter` → `Neutrofil granulocyt`.
 
 - **Sidopass: ordklasstaggen, hela filen** (0.9.342). 78 poster inledde inte med
   husets gement skrivna tagg — 50 saknade den helt, 28 skrev den med versal
