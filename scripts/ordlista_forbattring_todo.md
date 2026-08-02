@@ -11,7 +11,7 @@
 
 ## 1. Utgångsläget (mätt 2026-08-02, gissa inte om)
 
-`data/ordlista.json`: **11 200 poster, 0 stubs.** Fas 2 i `ORDLISTA.md` är alltså
+`data/ordlista.json`: **11 197 poster, 0 stubs.** Fas 2 i `ORDLISTA.md` är alltså
 **helt klar** — men `ORDLISTA.md`:s statusavsnitt är stale och påstår
 fortfarande att S/T/U/V m.fl. återstår. Faktiska antal per bokstav:
 
@@ -257,7 +257,7 @@ det är en egen fråga.
 ### Etapp 4 · Fältkomplettering — risk: låg, men LÅNGT (§0.3, för hand) 🔄 PÅGÅR
 Prioritetsordning (störst lucka, minst gissningsrisk först). Siffrorna är de
 ommätta ur `ORDLISTA.md`, inte punkt 1:s felaktiga:
-1. [ ] Böjning — **8 516 saknade vid start**, 8 029 kvar (A–H klara).
+1. [ ] Böjning — **8 516 saknade vid start**, 8 027 kvar (A–H klara).
 2. [ ] Etymologi — 3 481 saknar.
 3. [ ] Eng. — 1 504 saknar (många prefix/suffix motiverat undantagna).
 
@@ -495,7 +495,7 @@ particip och `-um`-läkemedlen får det inte.
     `haustrae coli` → *haustra coli* (latinsk plural av *haustrum*),
     `en liten märke` → *ett litet* (`hilus`) och `ledförbinding` →
     *ledförbindning* (`hyoideus`). `HDL-kolesterol` inledde med versal.
-  - **⚠️ TRE DUBBLETTER HITTADE, INGEN SAMMANSLAGEN — de kräver ditt beslut:**
+  - **Tre dubbletter hittade; sammanslagna i 0.9.346 — se posten nedan:**
     1. **`hypotenar` / `hypothenar`.** Båda står i `kb_glossary_terms.json`
        med **var sin href**, och båda ankarna används skarpt: `case.html` →
        `#term-hypothenar`; `kunskapsbank/muskeltabell-handen.html` (×2) och
@@ -507,6 +507,33 @@ particip och `-um`-läkemedlen får det inte.
        — `thalamus`, `hippocampus` och `hypophysis` står också oböjda.
     3. **`hemorrojd` / `hemorrojder`** — singular- respektive pluralpost för
        samma sak. Jfr N-passets `Neutrofila granulocyter` → `Neutrofil granulocyt`.
+
+- **Sidopass: H-passets tre dubbletter** (0.9.346). Sammanslagna efter användarens
+  beslut: **den korrekta svenska formen vinner** — grekiskans `th` skrivs `t`
+  (filens egen linje sedan P- och N-passen) och uppslagsordet står i **singular**.
+  Kvar: `hypotenar`, `hypotalamus`, `hemorrojd`. Borta: `hypothenar`,
+  `hypothalamus`, `hemorrojder`, med innehållet överfört och th-formen bevarad
+  som "Även …" efter `Eng.` (fortsatt sökbar via def-sökningen).
+  11 200 → 11 197 poster.
+  - **`hypothenar` bar en egen wirad href — den kunde inte bara tas bort.**
+    Nyckeln stod i `kb_glossary_terms.json` med `#term-hypothenar` och användes i
+    `case.html`. Facitnyckeln pekades om till `#term-hypotenar` och sidan skrevs
+    om med `wire_terms.py --repoint hypothenar hypotenar --all`.
+  - **`check_generators.py` fällde första försöket** — och gjorde precis sitt jobb.
+    `wire_terms.py` är idempotent och rör **aldrig** en redan wirad länk, så hela
+    kedjan kunde köras utan att `case.html` ändrades; larmet löd "ankaret
+    #term-hypothenar finns inte i ordlista-h.html". **`--repoint` är det enda
+    steget som byter href på en befintlig länk; `--sync-defs` lämnar href orörd
+    med flit.** Rutinen står nu i `ORDLISTA.md` under "th → t".
+  - `check_links.py` punkt 6 prövar att facits `def` finns och att href löser ut —
+    **inte** att def-texten matchar ordlistan. Den synken görs för hand; båda
+    hypotenar-nycklarnas tooltiptext skrevs om i samma pass.
+  - Innehållsrättelser på köpet: `hypotalamus`-glosan inledde med sitt eget
+    uppslagsord (förbjudet i `ORDLISTA.md`) och skrev "den lilla men centrala
+    **del** av mellanhjärnan" → *delen*. `hypotenar` skrev `muskelvallen` medan
+    `thenar`/`hypothenar` skriver *valk* — familjen följs nu.
+  - **Öppet:** `thenar` och `thalamus` står kvar i th-form och är wirade i facit,
+    medan sina hypo-syskon är t-form. **Ta ställning när T böjs.**
 
 - **Sidopass: ordklasstaggen, hela filen** (0.9.342). 78 poster inledde inte med
   husets gement skrivna tagg — 50 saknade den helt, 28 skrev den med versal

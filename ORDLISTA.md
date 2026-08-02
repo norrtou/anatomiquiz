@@ -40,7 +40,7 @@ Ordlistan byggs ut från en omfattande importerad lista med medicinska termer (3
 
 ## Status: fas 2 avslutad
 
-`data/ordlista.json` innehåller **11 200 poster och 0 stubs** (mätt 2026-08-02). Varje
+`data/ordlista.json` innehåller **11 197 poster och 0 stubs** (mätt 2026-08-02). Varje
 importerad term är berikad — det finns ingenting kvar att hämta ur råimporten, och
 sedan dess har filen dessutom vuxit långt förbi importen med TA-anatomi, labbvärden,
 sjukdomar med ICD-koder, psykiatritermer, läkemedel och örter.
@@ -57,25 +57,25 @@ print('total',len(d),'synliga',sum(1 for e in d if e.get('status')!='stub'),\
 
 ### Fälttäckning (mätt 2026-08-02) — facit för fältkompletteringen
 
-Mät aldrig detta på känsla; kör snutten under tabellen. **Siffrorna gäller alla 11 200
+Mät aldrig detta på känsla; kör snutten under tabellen. **Siffrorna gäller alla 11 197
 poster**, även de där fältet är motiverat frånvarande (ett prefix behöver ingen böjning,
 en förkortning sällan en etymologi) — "saknas" är alltså ett tak för arbetet, inte en
 arbetslista rakt av.
 
 | Fält | Poster | Täckning | Saknas |
 |---|---:|---:|---:|
-| Ordklasstagg | 11 200 | 100 % | 0 |
-| `Eng. ` | 9 696 | 86,6 % | 1 504 |
-| Etymologi (`Av lat./gr. …`) | 7 721 | 68,9 % | 3 479 |
-| `Sv. ` | 2 685 | 24,0 % | 8 515 |
-| Böjning i parentes | 3 171 | 28,3 % | 8 029 |
-| `Jfr ` | 1 394 | 12,4 % | 9 806 |
-| `ICD-10: ` | 947 | 8,5 % | 10 253 |
-| `Vardag. ` | 782 | 7,0 % | 10 418 |
-| `Se ` | 358 | 3,2 % | 10 842 |
-| `Motsats` | 157 | 1,4 % | 11 043 |
-| `Referensvärde` | 78 | 0,7 % | 11 122 |
-| Uttalsangivelse | **0** | 0,0 % | 11 200 |
+| Ordklasstagg | 11 197 | 100 % | 0 |
+| `Eng. ` | 9 693 | 86,6 % | 1 504 |
+| Etymologi (`Av lat./gr. …`) | 7 720 | 68,9 % | 3 477 |
+| `Sv. ` | 2 683 | 24,0 % | 8 514 |
+| Böjning i parentes | 3 170 | 28,3 % | 8 027 |
+| `Jfr ` | 1 394 | 12,4 % | 9 803 |
+| `ICD-10: ` | 946 | 8,4 % | 10 251 |
+| `Vardag. ` | 782 | 7,0 % | 10 415 |
+| `Se ` | 358 | 3,2 % | 10 839 |
+| `Motsats` | 157 | 1,4 % | 11 040 |
+| `Referensvärde` | 78 | 0,7 % | 11 119 |
+| Uttalsangivelse | **0** | 0,0 % | 11 197 |
 
 ```bash
 python3 - <<'PY'
@@ -127,7 +127,7 @@ så pröva formen i huvudet innan du väljer — ändelsen ensam avgör inte.
 `(-en)` och gav *fransosenen* (rättat 0.9.343). Samma sak som med flerordstermerna:
 parentesen står direkt efter taggen och läses som uppslagsordets egen.
 
-**Inga formavvikelser kvar (0.9.342):** samtliga 11 200 poster inleds med en gement
+**Inga formavvikelser kvar (0.9.342):** samtliga 11 197 poster inleds med en gement
 skriven ordklasstagg. Före det passet saknade 50 poster tagg helt och 28 skrev den med
 versal (`Adj./subst.:`, `Egennamn:`, `Förled:`) — de renderades utan kursiv ordklass,
 eftersom `format_def()` bara kursiverar en gement skriven tagg. **Skriv aldrig en ny
@@ -194,7 +194,7 @@ Stubs får aldrig synas på sajten förrän de är berikade. Det sköts på **tv
 ordklass. (böjning) definition i klartext. Sv. svensk synonym. Eng. english term. Vardag. vardagsuttryck. Av lat./gr. etymologi.
 ```
 
-Så ser de 11 200 posterna faktiskt ut: **ordklasstaggen först**, böjningen i parentes direkt
+Så ser de 11 197 posterna faktiskt ut: **ordklasstaggen först**, böjningen i parentes direkt
 efter, och därefter definitionen med liten begynnelsebokstav. Mallen stod tidigare med
 definitionen först och ordklassen inskjuten i mitten, vilket ingen post följer — och den
 inledande taggen är dessutom det enda `format_def()` kursiverar, så den *måste* stå först
@@ -283,6 +283,29 @@ en arbetslista. Utanför står:
 `Doxycyklin`, `Dexametason`. Undantaget är de som bygger på ett n-ord: `Dietyleter`
 får `(-n)`, eftersom *eter* heter *etern*.
 
+### th → t, och uppslagsordet i singular
+
+Grekiskans `th` skrivs **`t`** i försvenskade termer: `hypotenar`, `hypotalamus`,
+`paratyreoidea`, `pneumotorax`, `nefropati`. Uppslagsordet står i **singular**
+(`hemorrojd`, inte `hemorrojder`). När en dubblett slås ihop behålls den korrekta
+formen och den andra bevaras som "**Även …**" efter `Eng.` — då är den fortfarande
+sökbar, eftersom sökningen matchar `def`-texten.
+
+**Kontrollera ALLTID facit först (skyddsregel 6).** Den form du tar bort kan bära en
+egen wirad `href`: `hypothenar` gjorde det och användes i `case.html`. Rätt ordning är
+
+```bash
+# 1. peka om facitnyckeln i data/kb_glossary_terms.json till den kvarvarande posten
+# 2. skriv om sidorna – wire_terms.py är idempotent och rör ALDRIG en redan wirad länk:
+python3 scripts/wire_terms.py --repoint <nyckel> ... --all
+```
+
+`--sync-defs` räcker inte: den lämnar `href` orörd med flit. Och `check_links.py`
+punkt 6 prövar att facits `def` finns och att href löser ut mot ett verkligt ankare —
+**inte** att texten matchar ordlistan, så def-synken görs för hand.
+*(Kvar att avgöra: `thenar` och `thalamus` står i th-form och är wirade, medan sina
+hypo-syskon är t-form. Tas när T böjs.)*
+
 ### -ös-adjektiv integreras i grundordet
 Medicinska **-ös**-former (adenomatös, fibrös, ödematös …) ges ingen egen post — integrera dem i grundformen med "**även …**". **MEN:** substantivet och -ös-adjektivet är relaterade, inte samma ord. Glosan måste vara en **egen, tydlig förklaring som visar skillnaden** — aldrig bara likställa adjektivet med grundordet. Skriv `även <ordet> (adj.) = <distinkt betydelse>`, t.ex.:
 > Adenomatos — "… Eng: adenomatosis. Även adenomatös (adj.) = körtelliknande, av adenomkaraktär …"
@@ -326,7 +349,7 @@ kunskapsbanken och byter ut allt som inte är a–z0–9 mot bindestreck, medan 
 lämna mellanslag och streck kvar.
 
 `node scripts/test_ordlista_sok.js` kör den riktiga sökkoden mot den riktiga datan och prövar
-bl.a. att båda stegen ger identiska länkar för var och en av de 11 200 posterna, att
+bl.a. att båda stegen ger identiska länkar för var och en av de 11 197 posterna, att
 slug-tabellen är identisk i Python och JS, och att k-formen fortfarande hittar c-formen.
 Skalet körs automatiskt av `scripts/check_generators.py`.
 
