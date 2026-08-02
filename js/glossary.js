@@ -8,19 +8,39 @@
  * läsbart helt utan JavaScript. Den här filen bygger INTE om listan; den lägger
  * bara till global sökning ovanpå det statiska innehållet:
  *
- *   - Datan (data/ordlista.json) lazy-laddas först när användaren börjar söka,
- *     så att sidladdningen förblir lätt (snabb LCP / Core Web Vitals).
+ *   - Datan lazy-laddas först när användaren visar avsikt att söka, så att
+ *     sidladdningen förblir lätt (snabb LCP / Core Web Vitals).
  *   - Sökträffar visas i #searchResults och länkas till rätt sida + ankare,
  *     oavsett vilken undersida man söker från. Är träffen på den aktuella sidan
  *     används ett rent #ankare (ingen omladdning).
  *   - Medan en sökning är aktiv döljs det statiska #glossaryContent; töms
  *     sökrutan återställs det.
  *
+ * SÖKNINGEN LADDAR I TVÅ STEG (0.9.335). Fram till dess hämtades hela
+ * data/ordlista.json — 2,4 MB, varav 1,9 MB definitioner — redan när sökrutan
+ * fick fokus, alltså innan en enda tangent tryckts. På mobil betydde det att
+ * den som slog upp ett ord fick vänta på hela ordlistan innan första träffen.
+ *
+ *   Steg 1: data/ordlista-index.json (~190 KB) — uppslagsord, sidgrupp och
+ *           slug-överstyrningar. Räcker för att hitta ett ORD och länka rätt.
+ *           Hämtas vid fokus; träffarna ritas utan beskrivning.
+ *   Steg 2: data/ordlista.json — hämtas i bakgrunden vid första tangenttrycket
+ *           (inte vid fokus: en tapp som inte leder till en sökning ska inte
+ *           kosta 2,4 MB). När den landar ritas träfflistan om MED beskrivningar
+ *           och med de träffar som bara står i en definition.
+ *
+ * Definitionssökningen i steg 2 är inte en bonus utan bärande: den är det som
+ * gör att en sökning på k-formen hittar c-formen (kolit → Colitis), eftersom
+ * c-posterna nämner k-formen i sin brödtext.
+ *
  * pageKey()/pageSlug()/slugify() MÅSTE spegla scripts/generate_glossary.py
  * byte för byte, annars pekar sökträffarnas länkar fel.
+ * scripts/test_ordlista_sok.js kör den här filen på riktig data och prövar bl.a.
+ * att de två stegen ger IDENTISKA länkar för var och en av de 11 203 posterna.
  */
 
 const DATA_URL = './data/ordlista.json'
+const INDEX_URL = './data/ordlista-index.json'
 
 const SWEDISH_ALPHABET = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ']
 const PAGE_SLUG = { Å: 'aa', Ä: 'ae', Ö: 'oe' }
@@ -79,6 +99,11 @@ function pageSlug(key) {
  * igenom till [^a-z0-9]+ och stympar ankaret (Râle → term-r-le).
  * Grekiska bokstäver translittereras per post via fältet "slug" i
  * data/ordlista.json, inte här.
+ *
+ * TABELLEN DELAS MED foldForSearch(). Ändra den bara när ANKARE ska ändras –
+ * aldrig för att justera sökbeteendet. Ett nytt tecken här flyttar ankaret för
+ * varje term som bär det, och 2 351 tooltips i kunskapsbanken pekar på de
+ * gamla (data/kb_glossary_terms.json).
  */
 const SLUG_MAP = {
   'å': 'a', 'ä': 'a', 'ö': 'o',
@@ -107,14 +132,42 @@ function slugify(term) {
 }
 
 /**
- * Länk till en terms position. Är termen på den aktuella sidan används ett rent
- * #ankare (ingen omladdning); annars full sökväg till rätt undersida.
+ * Länk till en position i ordlistan. Är den på den aktuella sidan används ett
+ * rent #ankare (ingen omladdning); annars full sökväg till rätt undersida.
  */
-function termHref(entry, currentPage) {
-  const key = pageKey(entry)
+function groupHref(key, anchorSlug, currentPage) {
   const slug = pageSlug(key)
-  const anchor = '#' + (entry.slug || slugify(entry.term))
+  const anchor = '#' + anchorSlug
   return slug === currentPage ? anchor : `ordlista-${slug}.html${anchor}`
+}
+
+/** Länk till en post ur HELA ordlistan (steg 2) – grupp och slug härleds. */
+function termHref(entry, currentPage) {
+  return groupHref(pageKey(entry), entry.slug || slugify(entry.term), currentPage)
+}
+
+/** Länk till en post ur det lätta indexet (steg 1) – grupp och slug står där. */
+function indexHref(item, currentPage) {
+  return groupHref(item.page, item.slug, currentPage)
+}
+
+// ============================================================================
+// Sökfold — diakritisk vikning, HELT SKILD FRÅN slugify()
+// ============================================================================
+
+/**
+ * Viker diakriter till ASCII för SÖKNING: "oga" hittar "öga", "hoft" hittar
+ * "höft", "resume" hittar "résumé". Både söksträngen och uppslagsordet viks, så
+ * matchningen fungerar åt båda håll.
+ *
+ * Skild funktion från slugify() med flit (ordlistans skyddsregel 3). slugify()
+ * är ankarkontraktet mot 2 351 tooltips och byter dessutom ut ALLT som inte är
+ * a–z0–9 mot bindestreck; en sökfold måste tvärtom lämna mellanslag och streck
+ * kvar, annars slutar "abductor pollicis" matcha. Använd ALDRIG den här
+ * funktionen för att bygga ett ankare.
+ */
+function foldForSearch(str) {
+  return str.toLowerCase().replace(/[^a-z0-9]/g, c => SLUG_MAP[c] || c)
 }
 
 // ============================================================================
@@ -163,18 +216,61 @@ function highlightMatches(html, q) {
 // ============================================================================
 
 let termsPromise = null
+let indexPromise = null
 
-/** Hämtar och cachar ordlisteposter (filtrerar bort stubs). Laddas en gång. */
+function fetchJson(url) {
+  return fetch(url).then(res => {
+    if (!res.ok) throw new Error(`HTTP ${res.status}`)
+    return res.json()
+  })
+}
+
+/**
+ * Steg 1: det lätta indexet, platt och sökklart. Varje post bär termen, sin
+ * sidgrupp, sitt ankarslug och sin vikta form (fold), så att filtreringen per
+ * tangenttryck bara jämför färdiga strängar.
+ */
+function loadIndex() {
+  if (!indexPromise) {
+    indexPromise = fetchJson(INDEX_URL)
+      .then(data => {
+        const items = []
+        Object.keys(data.grupper).forEach(page => {
+          data.grupper[page].forEach(term => {
+            items.push({
+              term,
+              page,
+              slug: data.slugg[term] || slugify(term),
+              fold: foldForSearch(term),
+            })
+          })
+        })
+        return items
+      })
+      .catch(err => {
+        indexPromise = null // tillåt nytt försök vid nästa sökning
+        throw err
+      })
+  }
+  return indexPromise
+}
+
+/**
+ * Steg 2: hela ordlistan (filtrerar bort stubs). Laddas en gång. Den vikta
+ * formen läggs på här också, så att steg 2 rangordnar likadant som steg 1.
+ */
 function loadTerms() {
   if (!termsPromise) {
-    termsPromise = fetch(DATA_URL)
-      .then(res => {
-        if (!res.ok) throw new Error(`HTTP ${res.status}`)
-        return res.json()
+    termsPromise = fetchJson(DATA_URL)
+      .then(data => {
+        const live = data.filter(e => e.status !== 'stub')
+        // Vik på plats: posterna är färska ur JSON.parse och ägs av oss, och
+        // 11 203 kopior hade kostat minne i onödan på mobil.
+        live.forEach(e => { e.fold = foldForSearch(e.term) })
+        return live
       })
-      .then(data => data.filter(e => e.status !== 'stub'))
       .catch(err => {
-        termsPromise = null // tillåt ny försök vid nästa sökning
+        termsPromise = null // tillåt nytt försök vid nästa sökning
         throw err
       })
   }
@@ -186,16 +282,44 @@ function loadTerms() {
 // ============================================================================
 
 /**
- * Relevansrang för en träff mot den (gemena, trimmade) söktermen. Lägre = mer
+ * Relevansrang för ett uppslagsord mot söktermen. Båda ska vara VIKTA (se
+ * foldForSearch), så att "oga" och "öga" rangordnas likadant. Lägre = mer
  * relevant: exakt uppslagsord → term som börjar med söktermen → söktermen någon
  * annanstans i termen → enbart i beskrivningen.
  */
-function matchRank(entry, q) {
-  const term = entry.term.toLowerCase()
-  if (term === q) return 0
-  if (term.startsWith(q)) return 1
-  if (term.includes(q)) return 2
+function matchRank(foldedTerm, foldedQuery) {
+  if (foldedTerm === foldedQuery) return 0
+  if (foldedTerm.startsWith(foldedQuery)) return 1
+  if (foldedTerm.includes(foldedQuery)) return 2
   return 3
+}
+
+/** Träffar i det lätta indexet (steg 1) – bara uppslagsord, inga beskrivningar. */
+function indexHits(items, qf) {
+  const hits = []
+  items.forEach(item => {
+    const rank = matchRank(item.fold, qf)
+    if (rank < 3) hits.push({ entry: item, rank })
+  })
+  return hits
+}
+
+/**
+ * Träffar i hela ordlistan (steg 2): uppslagsordet VIKT, beskrivningen på den
+ * råa söksträngen.
+ *
+ * Beskrivningen viks med flit inte. Vikte man den skulle "öga" i söktermen bli
+ * "oga" och sluta matcha definitioner som skriver "öga" — alltså en försämring
+ * av det som fungerar idag, i utbyte mot en vikning av 1,9 MB text per
+ * tangenttryck.
+ */
+function fullHits(terms, q, qf) {
+  const hits = []
+  terms.forEach(entry => {
+    const rank = matchRank(entry.fold, qf)
+    if (rank < 3 || entry.def.toLowerCase().includes(q)) hits.push({ entry, rank })
+  })
+  return hits
 }
 
 /**
@@ -203,8 +327,13 @@ function matchRank(entry, q) {
  * matchRank), med varje term länkad till sin position. Inom samma rang sorteras
  * alfabetiskt (svensk kollation). Döljer det statiska bläddringsinnehållet så
  * länge en sökning är aktiv.
+ *
+ * `data.full` (hela ordlistan) används så fort den finns; annars ritas steg
+ * 1-träffarna ur `data.index`. Beskrivningskolumnen står då tom och fylls när
+ * steg 2 landar — länken funkar hela tiden, så man kan klicka sig vidare utan
+ * att vänta in resten.
  */
-function renderResults(terms, query, currentPage) {
+function renderResults(data, query, currentPage) {
   const results = document.getElementById('searchResults')
   const content = document.getElementById('glossaryContent')
   const q = query.toLowerCase().trim()
@@ -219,32 +348,35 @@ function renderResults(terms, query, currentPage) {
     return
   }
 
-  const filtered = terms.filter(
-    e => e.term.toLowerCase().includes(q) || e.def.toLowerCase().includes(q)
-  )
+  const qf = foldForSearch(q)
+  const hits = data.full
+    ? fullHits(data.full, q, qf)
+    : indexHits(data.index || [], qf)
 
   content.hidden = true
   results.hidden = false
 
-  if (!filtered.length) {
+  if (!hits.length) {
     results.innerHTML = '<p class="glossary-empty">Inga träffar.</p>'
     updateAlphabet(new Set())
     updateCount(0)
     return
   }
 
-  const ranked = filtered
-    .map(e => ({ entry: e, rank: matchRank(e, q) }))
-    .sort(
-      (a, b) => a.rank - b.rank || a.entry.term.localeCompare(b.entry.term, 'sv')
-    )
+  hits.sort(
+    (a, b) => a.rank - b.rank || a.entry.term.localeCompare(b.entry.term, 'sv')
+  )
 
   let html = '<dl class="glossary-group">'
-  ranked.forEach(({ entry: e, rank }) => {
-    const href = termHref(e, currentPage)
+  hits.forEach(({ entry: e, rank }) => {
+    const href = data.full ? termHref(e, currentPage) : indexHref(e, currentPage)
     // Rank 3 = söktermen finns bara i beskrivningen; markera den så det syns
-    // snabbt varför träffen kom med.
-    const def = rank === 3 ? highlightMatches(formatDef(e.def), q) : formatDef(e.def)
+    // snabbt varför träffen kom med. Steg 1 har ingen beskrivning att visa.
+    const def = !data.full
+      ? ''
+      : rank === 3
+        ? highlightMatches(formatDef(e.def), q)
+        : formatDef(e.def)
     html += `<div class="glossary-entry"><dt class="glossary-term"><a href="${href}">${escapeHtml(
       e.term
     )}</a></dt><dd class="glossary-def">${def}</dd></div>`
@@ -253,8 +385,10 @@ function renderResults(terms, query, currentPage) {
 
   results.innerHTML = html
   // Alfabetsraden speglar fortfarande vilka grupper som har träffar.
-  updateAlphabet(new Set(filtered.map(e => pageKey(e))))
-  updateCount(filtered.length)
+  updateAlphabet(
+    new Set(hits.map(({ entry: e }) => (data.full ? pageKey(e) : e.page)))
+  )
+  updateCount(hits.length)
 }
 
 /**
@@ -295,23 +429,59 @@ function init() {
   if (!input) return
 
   const currentPage = document.body.dataset.page || null
-  let terms = null
+  const data = { index: null, full: null }
+  let fullStarted = false
   let debounce = null
 
-  async function run() {
-    if (!terms) {
-      try {
-        terms = await loadTerms()
-      } catch {
-        disableSearch(input)
-        return
-      }
-    }
-    renderResults(terms, input.value, currentPage)
+  function draw() {
+    renderResults(data, input.value, currentPage)
   }
 
-  // Förladda datan så fort användaren visar avsikt att söka.
-  input.addEventListener('focus', () => loadTerms().catch(() => {}), {
+  /**
+   * Steg 2 i bakgrunden. Startas vid första sökningen, inte vid fokus: en tapp
+   * i sökrutan som inte leder någonstans ska inte kosta 2,4 MB.
+   *
+   * Faller hämtningen står träfflistan kvar som den är — uppslagsorden är
+   * sökbara och länkarna funkar, det är beskrivningskolumnen som blir tom.
+   * Det är bättre än att slå av sökrutan, vilket var enda utgången förut.
+   */
+  function loadFull() {
+    if (fullStarted) return
+    fullStarted = true
+    loadTerms()
+      .then(terms => {
+        data.full = terms
+        if (input.value.trim()) draw() // rita om med beskrivningar
+      })
+      .catch(() => { fullStarted = false })
+  }
+
+  async function run() {
+    // Tom sökruta återställer sidan och ska aldrig utlösa en hämtning.
+    if (!input.value.trim()) {
+      draw()
+      return
+    }
+    if (!data.index && !data.full) {
+      try {
+        data.index = await loadIndex()
+      } catch {
+        // Utan index: fall tillbaka på hela ordlistan (som före 0.9.335).
+        try {
+          data.full = await loadTerms()
+          fullStarted = true
+        } catch {
+          disableSearch(input)
+          return
+        }
+      }
+    }
+    loadFull()
+    draw()
+  }
+
+  // Förladda det LÄTTA indexet så fort användaren visar avsikt att söka.
+  input.addEventListener('focus', () => loadIndex().catch(() => {}), {
     once: true,
   })
 

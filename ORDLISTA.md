@@ -232,6 +232,38 @@ Följd: ord som bara skiljer på diakrit (t.ex. *Adenomatos* / *Adenomatös*) f�
 
 ---
 
+## Sökningen laddar i två steg (0.9.335)
+
+Sökrutan hämtade tidigare hela `data/ordlista.json` — 2,4 MB, varav 1,9 MB definitioner —
+redan när den fick fokus, alltså innan en enda tangent tryckts. Nu laddas datan i två steg:
+
+| Steg | Fil | Storlek | Innehåll | Hämtas |
+|---|---|---|---|---|
+| 1 | `data/ordlista-index.json` | ~190 KB | uppslagsord + sidgrupp + de 41 slug-överstyrningarna | vid fokus |
+| 2 | `data/ordlista.json` | 2,4 MB | allt, inkl. definitionerna | vid första tangenttrycket, i bakgrunden |
+
+Steg 1 räcker för att **hitta ett ord och länka rätt**; träffarna ritas direkt, med tom
+beskrivningskolumn. När steg 2 landar ritas listan om med beskrivningar och med de träffar
+som bara står i en definition.
+
+**Definitionssökningen i steg 2 får aldrig tas bort.** Den är det som gör att en sökning på
+k-formen hittar c-formen (*kolit* → **colit**), eftersom c-posterna nämner k-formen i sin
+brödtext — se c/k-avsnittet ovan. Indexet **kompletterar** den, ersätter den inte.
+
+`data/ordlista-index.json` skrivs av `generate_glossary.py` (`build_search_index()`) och
+redigeras aldrig för hand. Sökningen viker dessutom diakriter (`foldForSearch()` i
+`js/glossary.js`), så *hoft* hittar *höft* och *arr* hittar *ärr*. Den funktionen är **skild
+från `slugify()`** med flit: `slugify()` är ankarkontraktet mot 2 351 tooltips i
+kunskapsbanken och byter ut allt som inte är a–z0–9 mot bindestreck, medan sökfolden måste
+lämna mellanslag och streck kvar.
+
+`node scripts/test_ordlista_sok.js` kör den riktiga sökkoden mot den riktiga datan och prövar
+bl.a. att båda stegen ger identiska länkar för var och en av de 11 203 posterna, att
+slug-tabellen är identisk i Python och JS, och att k-formen fortfarande hittar c-formen.
+Skalet körs automatiskt av `scripts/check_generators.py`.
+
+---
+
 ## Arbetsflöde per bokstav
 
 1. Plocka ut bokstavens stubs (term + `def`-råtext + `variants`).
@@ -264,7 +296,9 @@ ordningen kan inte rubbas. (0.9.286 lade in 17 poster så: 68 rader, noll omflyt
 |-----|------|
 | `data/ordlista.json` | Sanningskälla för ordlistan (synliga poster + stubs). |
 | `data/ordlista_import_raw.json` | Råimport av termlistan (referens/backup, redigeras ej). |
+| `data/ordlista-index.json` | Genererat sökindex (steg 1). Skrivs av generatorn, redigeras aldrig för hand. |
 | `scripts/generate_glossary.py` | Förrenderar `medicinskordlista.html` (hoppar över stubs). |
 | `js/glossary.js` | Dynamisk rendering + sökning (hoppar över stubs). |
+| `scripts/test_ordlista_sok.js` | Testskal för sökningen — körs av `check_generators.py`. |
 | `medicinskordlista.html` | Genererad sida (redigera inte de genererade blocken för hand). |
 | `CLAUDE_REGLER.md` | Projektregler (dubblettförbud, källtrohet, versionering). |

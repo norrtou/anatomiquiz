@@ -23,10 +23,16 @@ grupp som faktiskt har termer. Tomma bokstäver (t.ex. Å/Ä idag) får ingen si
 men renderas nedtonade i alfabetsraden; dyker en term upp imorgon skapas sidan
 automatiskt vid nästa körning. Kör om när som helst (idempotent).
 
-Sökningen är global och bor i js/glossary.js: den lazy-laddar ordlista.json
-först när användaren börjar söka, och länkar träffar till rätt sida + ankare.
-Därför måste page_slug()/slugify() här spegla motsvarande logik i glossary.js
-byte för byte, så att djuplänkar är stabila oavsett rendering.
+Sökningen är global och bor i js/glossary.js: den lazy-laddar data först när
+användaren börjar söka, och länkar träffar till rätt sida + ankare. Därför måste
+page_slug()/slugify() här spegla motsvarande logik i glossary.js byte för byte,
+så att djuplänkar är stabila oavsett rendering.
+
+Skriptet skriver också data/ordlista-index.json — ett LÄTT sökindex (bara
+uppslagsord, sidgrupp och de 41 slug-överstyrningarna, ~190 KB mot ordlistans
+2,4 MB). Sökningen hämtar indexet först och hela ordlistan som ett andra steg,
+så att den som knappar in ett ord på mobil får träffar direkt i stället för att
+vänta på 2,4 MB. Se build_search_index() nedan.
 
 JSON-LD: medvetet LÄTT. Bokstavssidorna är CollectionPage; landningssidan är en
 DefinedTermSet på SET-nivå (namn + länkar till bokstavssidorna, INGA per-term-
@@ -44,6 +50,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "ordlista.json"
+SEARCH_INDEX = ROOT / "data" / "ordlista-index.json"
 SITEMAP = ROOT / "sitemap.xml"
 
 SITE = "https://anatomiquiz.se"
@@ -87,7 +94,7 @@ def läs_sidodatum() -> dict[str, dict[str, str]]:
 STYLES_V = "0.9.330"        # css/styles.css
 THEME_V = "0.9.260"         # js/theme.js
 GLOSSARY_CSS_V = "0.9.313"  # css/glossary.css
-GLOSSARY_JS_V = "0.9.189"   # js/glossary.js
+GLOSSARY_JS_V = "0.9.335"   # js/glossary.js
 
 # Svenska alfabetet — fast ordning för alfabetsraden. Bokstäver utan poster
 # renderas nedtonade (icke-klickbara), så raden ser likadan ut oavsett innehåll.
@@ -1041,6 +1048,91 @@ def build_group(key: str, entries: list[dict], present: set[str]) -> tuple[str, 
 
 
 # ---------------------------------------------------------------------------
+# Lätt sökindex
+# ---------------------------------------------------------------------------
+
+def build_search_index(groups: dict[str, list[dict]]) -> str:
+    """data/ordlista-index.json — allt sökningen behöver för att hitta ett ord.
+
+    Fram till 0.9.335 hämtade js/glossary.js hela data/ordlista.json (2,4 MB)
+    så fort sökrutan fick fokus, alltså innan användaren hunnit trycka en enda
+    tangent. Definitionerna står för 1,9 MB av de 2,4 — och för att HITTA ett
+    uppslagsord behövs de inte alls. Indexet bär därför bara tre saker:
+
+        {"grupper": {"A": ["abdomen", ...], ...},
+         "slugg":   {"α₁-receptor": "term-alfa-1-receptor", ...}}
+
+    * `grupper` — uppslagsorden per sidgrupp (page_key). Grupperingen KAN inte
+      räknas ut i klienten ur enbart termen: is_prefix()/is_suffix() läser
+      definitionen, som indexet inte bär. Därför skrivs den ut här.
+    * `slugg` — bara de 41 poster som har en slug-överstyrning i
+      data/ordlista.json (kollisionsskydd, se ORDLISTA.md). Övriga slugar
+      räknar klienten fram med sin spegling av slugify().
+
+    Ordningen följer grupperna och sorteringen i sidorna, så filen är stabil
+    mellan körningar (rundtrippstestet i check_generators.py läser den som vilken
+    genererad fil som helst).
+
+    Definitionssökningen finns kvar oförändrad i steg två, när hela ordlistan
+    laddats: det är den som gör att en sökning på k-formen hittar c-formen,
+    eftersom c-posterna nämner k-formen i sin brödtext.
+    """
+    order = [k for k in GROUP_ORDER if k in groups]
+
+    # Termen är nyckel i slug-tabellen, så två poster med samma uppslagsord
+    # hade tyst tappat den enas ankare. Kollisionen kan bara uppstå när minst
+    # en av dem har en slug-överstyrning – annars fälls den redan av
+    # slug-kontrollen i main() – och just då är den som farligast: en tooltip
+    # i kunskapsbanken pekar på det ankare som föll bort.
+    seen: dict[str, str] = {}
+    for key in order:
+        for entry in groups[key]:
+            term = entry["term"]
+            if term in seen:
+                raise SystemExit(
+                    f"FEL: uppslagsordet {term!r} finns två gånger "
+                    f"(grupp {seen[term]} och {key}). Sökindexet nycklar "
+                    "slug-överstyrningar på termen och kan inte hålla isär dem."
+                )
+            seen[term] = key
+
+    grupper = {key: [e["term"] for e in groups[key]] for key in order}
+    slugg = {
+        e["term"]: e["slug"]
+        for key in order
+        for e in groups[key]
+        if e.get("slug")
+    }
+
+    # En rad per grupp och en per slug-överstyrning: filen går att ögna igenom
+    # utan att den kostar de ~45 KB en helt indenterad lista hade gjort.
+    # Varje värde serialiseras av json.dumps, så escapningen är aldrig handgjord.
+    rader = [
+        f'  {json.dumps(key, ensure_ascii=False)}: '
+        + json.dumps(grupper[key], ensure_ascii=False, separators=(",", ":"))
+        for key in order
+    ]
+    slug_rader = [
+        f"  {json.dumps(k, ensure_ascii=False)}: {json.dumps(v, ensure_ascii=False)}"
+        for k, v in slugg.items()
+    ]
+    text = (
+        '{\n "grupper": {\n'
+        + ",\n".join(rader)
+        + '\n },\n "slugg": {\n'
+        + ",\n".join(slug_rader)
+        + "\n }\n}\n"
+    )
+
+    # Texten sätts ihop för hand (radbrytningarna), så den läses tillbaka och
+    # jämförs mot det den skulle innehålla. Ett trasigt index hade annars synts
+    # först som en död sökruta i webbläsaren.
+    if json.loads(text) != {"grupper": grupper, "slugg": slugg}:
+        raise SystemExit("FEL: sökindexet parsar inte tillbaka till sitt innehåll.")
+    return text
+
+
+# ---------------------------------------------------------------------------
 # Sitemap
 # ---------------------------------------------------------------------------
 
@@ -1246,6 +1338,7 @@ def main() -> None:
         outputs[ROOT / filename] = page
     outputs[ROOT / LANDING_FILE] = build_landing(groups)
 
+    outputs[SEARCH_INDEX] = build_search_index(groups)
     outputs[SITEMAP] = build_sitemap(group_files)
 
     for path, text in outputs.items():
@@ -1253,7 +1346,7 @@ def main() -> None:
 
     print(
         f"OK: {len(terms)} termer → {len(group_files)} gruppsidor "
-        f"+ {LANDING_FILE} + sitemap.xml."
+        f"+ {LANDING_FILE} + {SEARCH_INDEX.name} + sitemap.xml."
     )
     for key in order:
         print(f"  {page_file(key):26} {len(groups[key]):>4} termer")

@@ -22,6 +22,11 @@ from collections import defaultdict, Counter
 
 # Filer som inte är MC/TF-quiz (ordlista, register, flashcards utan distraktorer)
 SKIP = {"ordlista.json", "ordlista_import_raw.json", "kb_glossary_terms.json",
+        # Ordlistans lätta sökindex (genereras av generate_glossary.py). Står
+        # här uttryckligen: filen är ett objekt, inte en lista med frågor, så
+        # loopen nedan hade tuggat igenom den utan att kontrollera något – och
+        # den hade ändå räknats in i "inga blockerande fel i N filer" (§0.4).
+        "ordlista-index.json",
         "bilder.json", "artiklar.json",
         # Sorteringsfrågor (spelläget Sortera) har eget skelett – en ORDNING av
         # fem poster, inte ett rätt svar bland fyra. Kontrolleras i stället av

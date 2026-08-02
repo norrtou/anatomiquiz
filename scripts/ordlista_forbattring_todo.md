@@ -1,7 +1,8 @@
 # Ordlistan — förbättringsplan och riskanalys (facit)
 
 > **Status:** Analys och riskgenomgång gjord 2026-08-02. **Etapp 1 klar (0.9.333),
-> skyddet i punkt 4 klart (0.9.334).** Nästa steg enligt ordningen i punkt 5: etapp 2.
+> skyddet i punkt 4 klart (0.9.334), etapp 2 klar (0.9.335).** Nästa steg enligt
+> ordningen i punkt 5: etapp 4 (fältkomplettering).
 > Filen skapades på uttrycklig begäran: *"analysera allt som kan gå sönder när
 > du bygger om saker"* innan någon etapp påbörjas. Bocka av här när något görs,
 > och skriv in vad som faktiskt hände — inte bara att det är klart.
@@ -36,16 +37,19 @@ den här tabellen står kvar bara för att visa vad som rättades.
 | Vardag. | 7,0 % | — | ✔ stämde (782) |
 | Uttal | **12 poster totalt** | — | ❌ **fel — 0 poster.** Alla tolv träffarna var ordet *uttalad*/*uttalade* i löptext, ingen enda uttalsangivelse |
 
-**Tekniska fynd i `js/glossary.js`:**
-- Sökningen laddar hela `ordlista.json` (2,5 MB) vid fokus, innan första
-  tangenttryckning — ingen lätt sökindex finns.
-- `matchRank()` (rad 193–199) gör exakt/börjar-med/innehåller. Ingen
-  diakritisk fold (sök "oga" hittar inte "öga") och ingen stavfelstolerans.
+**Tekniska fynd i `js/glossary.js`** (samtliga åtgärdade i etapp 2, 0.9.335):
+- ~~Sökningen laddar hela `ordlista.json` (2,5 MB) vid fokus, innan första
+  tangenttryckning — ingen lätt sökindex finns.~~ → två steg, se etapp 2.
+- ~~`matchRank()` (rad 193–199) gör exakt/börjar-med/innehåller. Ingen
+  diakritisk fold (sök "oga" hittar inte "öga")~~ → `foldForSearch()`.
+  Stavfelstolerans finns fortfarande inte och är inte planerad.
 - `renderResults()` filtrerar redan på både `term` **och** `def` — den
   def-sökningen är det som gör att man hittar c-formen (`Kolit`) när man
   söker k-formen (`Kolit`/`kolit`) eftersom c-posterna noterar "även
   k-form" i brödtexten. Ett framtida lätt index (bara term+href) får
-  **inte** ersätta detta, bara komplettera det.
+  **inte** ersätta detta, bara komplettera det. **Kravet hölls:** indexet
+  är steg 1, def-sökningen ligger kvar oförändrad i steg 2, och
+  `test_ordlista_sok.js` prövar just fallet *kolit* → **colit**.
 
 **Outnyttjad länkpotential:** 1 394 poster innehåller `Jfr …`, 358 `Se …`,
 157 `Motsats: …` — allt ren text idag, inga klickbara länkar. Bokstavssidorna
@@ -176,7 +180,7 @@ fram ett beslut i stället för att den nya formen tyst blir norm (§0.4).
 ## 5. Etapper (reviderad ordning efter riskanalysen)
 
 Ursprunglig rekommendation var 1 → 3 → 2. Efter analysen: **1 ✅ → skyddet
-(punkt 4) ✅ → 2 → 4 → 3 → 5.** Etapp 3 flyttades sist bland kodetapperna
+(punkt 4) ✅ → 2 ✅ → 4 → 3 → 5.** Etapp 3 flyttades sist bland kodetapperna
 eftersom den vilar på ett öppet designbeslut (punkt 6) som inte ska tas som
 bieffekt av att bygget startar.
 
@@ -201,14 +205,54 @@ Fyra stale siffror i husformatsavsnittet rättade i samma pass (11 196 → 11 20
 Nytt fynd inskrivet som känd formavvikelse: **36 poster skriver ordklasstaggen med versal**
 (`Adj.`/`Subst.`/`Förk.`) och 54 saknar den helt. `check_generators.py` grön före och efter.
 
-### Etapp 2 · Sök som håller på mobil — risk: låg
-- [ ] Generera lätt sökindex (`data/ordlista-index.json`: term + page + slug)
+### Etapp 2 · Sök som håller på mobil — risk: låg ✅ KLAR (0.9.335)
+- [x] Generera lätt sökindex (`data/ordlista-index.json`: term + page + slug)
       från `generate_glossary.py`. Bygger på befintlig `page_key`/`slugify`,
       ändrar dem inte.
-- [ ] Diakritisk fold i sökningen som egen funktion (se skyddsregel 3).
-- [ ] Behåll def-sökning som separat, andra steg (se fynd i punkt 1) —
+- [x] Diakritisk fold i sökningen som egen funktion (se skyddsregel 3).
+- [x] Behåll def-sökning som separat, andra steg (se fynd i punkt 1) —
       annars slutar c/k-sökningen fungera.
-- [ ] Bumpa `GLOSSARY_JS_V`.
+- [x] Bumpa `GLOSSARY_JS_V` (gjordes av `bump_version.py`, inte för hand).
+
+**Vad som faktiskt hände.** Mätt före bygget: `def` står för **1 915 KB av 2 477 KB** i
+`ordlista.json` — alltså 77 % av filen, och exakt den del som inte behövs för att *hitta*
+ett ord. Indexet blev **189 KB (57 KB gzip)** mot ordlistans 2,42 MB (668 KB gzip); det som
+måste komma fram före första träffen krympte alltså **12×**. `JSON.parse` 2 ms mot 17 ms.
+
+**Formatet blev `{"grupper": {...}, "slugg": {...}}`, inte en platt lista.** Tre kandidater
+mättes: platt `[term, page, slug]` gav 290 KB, grupperad med blandade typer 188 KB,
+grupperad + separat slug-tabell 189 KB. Den sista valdes för 1 KB mer eftersom den inte
+kräver att klienten typkontrollerar varje post. **Sidgruppen måste stå i filen** — den går
+inte att räkna fram ur enbart termen, eftersom `is_prefix()`/`is_suffix()` läser
+definitionen. Slug-tabellen bär bara de 41 överstyrningarna; övriga slugar räknar klienten
+fram med sin spegling av `slugify()`.
+
+**Hittat hål som täpptes på vägen:** slug-tabellen nycklas på termen, så två poster med
+samma uppslagsord hade tyst tappat den enas ankare. Slug-unikhetskontrollen i `main()`
+fångar det bara när båda saknar överstyrning — har en av dem en, går den igenom. Generatorn
+stoppar nu uttryckligen på dubblerat uppslagsord. (Idag: 0 dubbletter av 11 203.)
+
+**Steg 2 startar vid första tangenttrycket, inte vid fokus.** En tapp i sökrutan som inte
+leder till en sökning ska inte kosta 2,4 MB. Faller indexet används hela ordlistan som
+förut; faller ordlistan står steg 1-träffarna kvar och går att klicka på. Sökrutan slås av
+först när **båda** faller — förut räckte det att den enda filen inte kom fram.
+
+**Definitionstexten viks INTE.** Skulle den vikas blev "öga" i söktermen "oga" och slutade
+matcha definitioner som skriver "öga" — en försämring av dagens beteende, i utbyte mot en
+vikning av 1,9 MB per tangenttryck. Uppslagsordet viks, definitionen matchas rått.
+
+**Skyddet:** `scripts/test_ordlista_sok.js`, 71 tester, kör riktiga `js/glossary.js` mot
+riktig data med styrbar fetch och timer (annars går det inte att pröva vad som händer
+*mellan* stegen). Plockas upp automatiskt av `check_generators.py` sedan 0.9.331. Tyngsta
+testet jämför **de två stegens länkar för var och en av de 11 203 posterna** — de härleds på
+var sitt sätt och en avvikelse hade gett en träff som leder rätt eller fel beroende på
+nätets hastighet. Skalet mäter dessutom att `SLUG_MAP` (JS) och `_SLUG_MAP` (Python) är
+identiska, vilket ingenting gjorde förut. Larmet verifierat mot **sju planterade fel**.
+
+**Kvar, medvetet orört:** en bred sökning (t.ex. "a") ger 7 649 träffar och renderar lika
+många rader i ett svep. Det gjorde den före den här etappen också — filtreringen kostar
+1 ms, renderingen är hela kostnaden. Att kapa listan kräver ett synligt "visar N av M", och
+det är en egen fråga.
 
 ### Etapp 4 · Fältkomplettering — risk: låg, men LÅNGT (§0.3, för hand)
 Prioritetsordning (störst lucka, minst gissningsrisk först):
@@ -260,4 +304,7 @@ uttryckligen innan etapp 3 påbörjas.**
 - [`ORDLISTA.md`](../ORDLISTA.md) — styrdokument, husformat, arbetsflöde per bokstav.
 - [`CLAUDE_REGLER.md`](../CLAUDE_REGLER.md) — §0.3 (handarbete när maskinellt är osäkert).
 - `scripts/check_generators.py` — rundtrippstestet, körs före/efter varje etapp.
-- `data/kb_glossary_terms.json` — facit för tooltips, 2 351 nycklar, obevakat av `check_links.py` idag.
+- `data/kb_glossary_terms.json` — facit för tooltips, 2 351 nycklar. Bevakas av
+  `check_links.py` punkt 6 sedan 0.9.334 (se punkt 4).
+- `data/ordlista-index.json` — lätt sökindex, genererat i etapp 2. Redigeras aldrig
+  för hand; `scripts/test_ordlista_sok.js` prövar det mot ordlistan.
