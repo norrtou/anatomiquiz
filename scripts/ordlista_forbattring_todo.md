@@ -11,7 +11,7 @@
 
 ## 1. Utgångsläget (mätt 2026-08-02, gissa inte om)
 
-`data/ordlista.json`: **11 197 poster, 0 stubs.** Fas 2 i `ORDLISTA.md` är alltså
+`data/ordlista.json`: **11 196 poster, 0 stubs.** Fas 2 i `ORDLISTA.md` är alltså
 **helt klar** — men `ORDLISTA.md`:s statusavsnitt är stale och påstår
 fortfarande att S/T/U/V m.fl. återstår. Faktiska antal per bokstav:
 
@@ -257,7 +257,7 @@ det är en egen fråga.
 ### Etapp 4 · Fältkomplettering — risk: låg, men LÅNGT (§0.3, för hand) 🔄 PÅGÅR
 Prioritetsordning (störst lucka, minst gissningsrisk först). Siffrorna är de
 ommätta ur `ORDLISTA.md`, inte punkt 1:s felaktiga:
-1. [ ] Böjning — **8 516 saknade vid start**, 8 027 kvar (A–H klara).
+1. [ ] Böjning — **8 516 saknade vid start**, 8 025 kvar (A–H klara).
 2. [ ] Etymologi — 3 481 saknar.
 3. [ ] Eng. — 1 504 saknar (många prefix/suffix motiverat undantagna).
 
@@ -532,8 +532,29 @@ particip och `-um`-läkemedlen får det inte.
     uppslagsord (förbjudet i `ORDLISTA.md`) och skrev "den lilla men centrala
     **del** av mellanhjärnan" → *delen*. `hypotenar` skrev `muskelvallen` medan
     `thenar`/`hypothenar` skriver *valk* — familjen följs nu.
-  - **Öppet:** `thenar` och `thalamus` står kvar i th-form och är wirade i facit,
-    medan sina hypo-syskon är t-form. **Ta ställning när T böjs.**
+  - ~~Öppet: `thenar`/`thalamus` i th-form~~ → **avslutat i 0.9.347**, se nedan.
+
+- **Sidopass: th → t i hela filen** (0.9.347). Sex uppslagsord bytte stavning med
+  th-formen bevarad som "Även …": `thalamus`→`talamus`, `thenar`→`tenar`,
+  `epithalamus`→`epitalamus`, `metathalamus`→`metatalamus`,
+  `subthalamus`→`subtalamus`, `spontanpneumothorax`→`spontanpneumotorax`.
+  Dubbletten `pneumothorax` slogs ihop med `pneumotorax` (som redan bar
+  markören). 11 197 → 11 196 poster.
+  - **Gränsen går vid om ordet är SVENSKT, inte vid bokstavskombinationen.**
+    246 poster har `th` i uppslagsordet; de allra flesta är korrekt latin och
+    rördes inte — TA-termer, latinska lemman (`thorax`, `thymus`, `theca`,
+    `urethra`, `isthmus`), vetenskapliga växtnamn och de grekiska
+    kombinationsformerna, vars prefix-/suffixposter redan visar båda formerna.
+    `thoraxkirurgi`/`Thoraxdrän` behölls: th är specialitetens officiella namn.
+  - **Fem `Sv.`-fält gav th-formen där filen själv skriver t** — `thymus`
+    ("Ex: tymus" i egen prefixpost), `isthmus` (filen skriver *aortaistmus*,
+    *sköldkörtelistmus*), `urethra` ("Ex: uretrit") och `thoracalis` (mot
+    systerposten `thoracicus` "Sv. torakal"). `thorax` fick "Även torax."
+    `thorakal` i löptext (5 träffar mot 2 för t-formen) normaliserat.
+  - **Fyra facitnycklar pekades om → 24 länkar skrevs om i fem sidor**
+    (`sa-leds-kanseln.html` 12, `nervtabell-sensorbanor.html` 7,
+    `grekiska-i-medicinen.html` 2, `case.html` 2, `sa-styrs-en-rorelse.html` 1)
+    med `wire_terms.py --repoint`. **Kedjan gör INTE detta åt en.**
 
 - **Sidopass: ordklasstaggen, hela filen** (0.9.342). 78 poster inledde inte med
   husets gement skrivna tagg — 50 saknade den helt, 28 skrev den med versal
