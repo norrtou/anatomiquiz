@@ -8,12 +8,21 @@ canonical hade rätt hela tiden — felet fanns bara i den fil som agenter läse
 arbetssätt §0 i CLAUDE_REGLER förbjuder: felet kunde inte upptäckas av något
 som kördes, så nästa gång hade det legat kvar lika länge.
 
-Kontrollen täcker fyra påståenden om att en sida finns:
+Kontrollen täcker fem påståenden om att en sida finns:
 
 - `llms.txt` / `llms-full.txt` — varje `https://anatomiquiz.se/…`-länk
 - `sitemap.xml` — varje `<loc>`
 - HTML — varje intern `href`, och att `<link rel=canonical>` pekar på sidan själv
 - HTML — varje `#ankare` som pekar in i en annan sida på sajten
+- `data/kb_glossary_terms.json` — varje tooltip-ankare, **utan** att gå via HTML
+
+Den femte tillkom 2026-08-02. De fyra första utgår alla från något som redan
+STÅR i en fil sajten levererar, och tooltip-facit gör inte det: det är
+`wire_terms.py` som skriver in dess 2 351 `href` i kunskapsbanken, artiklarna
+och verktygen. En nyckel vars ankare dött slutar bara wiras — sidorna blir
+tysta i stället för trasiga, och en kontroll som läser HTML ser då ingenting
+alls att klaga på. Facit var därmed sajtens största obevakade beroende (2 351
+länkar) fram till dess.
 
 Arkivfiler (`_ARCHIVED*`, `_arkiv/`) får inte ligga publikt — punkt 3 i samma
 svep tog bort 253 KB som ingen sida länkade till men som låg utlagt ändå.
@@ -22,6 +31,7 @@ Användning:
     python3 scripts/check_links.py          # exit 1 vid första bristen
     python3 scripts/check_links.py -v       # lista allt som kontrollerades
 """
+import json
 import pathlib
 import re
 import sys
@@ -29,6 +39,16 @@ from html.parser import HTMLParser
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = "https://anatomiquiz.se"
+
+# Tooltip-facit: 2 351 uppslagsord → definition + djuplänk in i ordlistan.
+FACIT = ROOT / "data" / "kb_glossary_terms.json"
+
+# Formen varje facit-href måste ha. Kontraktet är inte kosmetiskt: en tooltip
+# ska leda till ett UPPSLAGSORD i ordlistan, inte till en sidas topp och inte
+# ut i kunskapsbanken. Samtliga 2 351 följer den redan, så regeln kostar
+# ingenting att hålla — men den gör att en href som pekar någon annanstans
+# tvingar fram ett beslut i stället för att tyst bli sajtens nya norm (§0.4).
+FACIT_HREF = re.compile(r"/ordlista-[a-z0-9]+\.html#term-[a-z0-9-]+")
 
 # `ordlista-tecken.html` är en avsiktlig redirect-stump (0.9.257) och ska peka
 # canonical vidare till målsidan. Den enda sidan där det är rätt.
@@ -154,15 +174,42 @@ def main(argv):
         if "_arkiv" not in p.parts:
             brister.append(f"{p.relative_to(ROOT)}: arkivfil ligger publikt")
 
+    # 6. Tooltip-facit, läst direkt ur JSON i stället för ur någon sida.
+    #
+    # Ordningen är avsiktlig: formen kontrolleras FÖRE ankaret. En href som
+    # saknar fragment eller pekar utanför ordlistan hade annars rapporterats
+    # som "filen finns" och sluppit igenom med ett halvt fel.
+    facit_kollade = 0
+    if FACIT.is_file():
+        for nyckel, post in sorted(json.loads(
+                FACIT.read_text(encoding="utf-8")).items()):
+            källa = f"data/kb_glossary_terms.json: \"{nyckel}\""
+            href = post.get("href", "")
+            if not post.get("def", "").strip():
+                brister.append(f"{källa}: saknar definition – tooltipen skulle "
+                               f"bli en tom ruta")
+            if not href:
+                brister.append(f"{källa}: saknar href")
+                continue
+            if not FACIT_HREF.fullmatch(href):
+                brister.append(
+                    f"{källa}: href=\"{href}\" har inte formen "
+                    f"/ordlista-<grupp>.html#term-<ankare>. En tooltip ska "
+                    f"leda till ett uppslagsord i ordlistan")
+                continue
+            facit_kollade += 1
+            kolla(href, källa)
+
     if utförligt:
         print(f"{kontrollerade} interna länkar kontrollerade över "
-              f"{len(sidor())} sidor.")
+              f"{len(sidor())} sidor, varav {facit_kollade} ur tooltip-facit.")
     if brister:
         print(f"{len(brister)} brister:", file=sys.stderr)
         for b in brister:
             print(f"  {b}", file=sys.stderr)
         return 1
-    print(f"OK: {kontrollerade} interna länkar pekar på filer som finns.")
+    print(f"OK: {kontrollerade} interna länkar pekar på filer som finns "
+          f"({facit_kollade} tooltip-ankare i facit medräknade).")
     return 0
 
 

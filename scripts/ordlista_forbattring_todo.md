@@ -1,7 +1,7 @@
 # Ordlistan — förbättringsplan och riskanalys (facit)
 
-> **Status:** Analys och riskgenomgång gjord 2026-08-02. **Etapp 1 klar (0.9.333).**
-> Nästa steg enligt ordningen i punkt 5: skyddet i punkt 4, före etapp 2.
+> **Status:** Analys och riskgenomgång gjord 2026-08-02. **Etapp 1 klar (0.9.333),
+> skyddet i punkt 4 klart (0.9.334).** Nästa steg enligt ordningen i punkt 5: etapp 2.
 > Filen skapades på uttrycklig begäran: *"analysera allt som kan gå sönder när
 > du bygger om saker"* innan någon etapp påbörjas. Bocka av här när något görs,
 > och skriv in vad som faktiskt hände — inte bara att det är klart.
@@ -68,10 +68,21 @@ eller `page_key()` i `generate_glossary.py`/`js/glossary.js` dör alla 2 351
 tyst samtidigt.
 
 **Verifierat 2026-08-02:** samtliga 2 351 facit-hrefar upplöses mot disk just
-nu (fil finns + `id=` finns). **Men `check_links.py` validerar inte
-`kb_glossary_terms.json` direkt** — den kontrollerar bara länkar som redan
-står i HTML. En trasig facitnyckel skulle idag inte fångas av något som körs.
-→ Se punkt 4, skyddet som ska byggas FÖRST.
+nu (fil finns + `id=` finns). **Men `check_links.py` validerade inte
+`kb_glossary_terms.json` direkt** — den kontrollerade bara länkar som redan
+stod i HTML. → Åtgärdat i punkt 4 (0.9.334).
+
+**Rättelse av påståendet ovan, gjord när skyddet byggdes:** den här punkten sa
+först att "en trasig facitnyckel skulle idag inte fångas av något som körs".
+Det var för kategoriskt. `wire_terms.py` skriver in facits href **med fragment**
+i HTML (`<a class="kb-term" href="/ordlista-a.html#term-anatomi" data-def="…">`),
+så för en nyckel som faktiskt är wirad någonstans fångade den befintliga
+HTML-ankarkontrollen felet ändå — och kördes inte kedjan om, fångade
+rundtrippen det. Det verkliga hålet var mindre men skarpare: **91 av 2 351
+nycklar (90 unika hrefar) står inte wirade i en enda HTML-fil** och var därmed
+osynliga för allt som mätte. Det är dessutom de farligaste, eftersom ett dött
+ankare bland dem upptäcks först den dag någon skriver ett dokument som råkar
+använda ordet — och då wiras felet in färdigt.
 
 **Generatorkedjans ordning är säkerhetskritisk** (`scripts/check_generators.py`,
 `KEDJA`-listan): `generate_glossary.py` körs **två gånger** — tidigt (skriver
@@ -127,25 +138,45 @@ tooltip-ankare hela. Det här är läget varje etapp ska kunna återställas til
 
 ---
 
-## 4. Verktyg att bygga FÖRST — skyddet som saknas
+## 4. Verktyg att bygga FÖRST — skyddet som saknas ✅ KLAR (0.9.334)
 
-Innan etapp 2 påbörjas: utöka `check_links.py` (eller ett nytt separat skript
-inkopplat i `check_generators.py`-kedjan) att läsa `kb_glossary_terms.json`
-direkt och validera varje `href`/ankare mot disk — inte bara länkar som redan
-står i HTML. Verifiera larmet genom att medvetet peta sönder ett ankare och se
-att kontrollen faller, enligt [[feedback_ship_the_guardrail_with_the_fix]].
-Utan detta är facit obevakat.
+- [x] Byggt
+- [x] Larmet verifierat genom planterat fel
+- [x] Inkopplat i `check_generators.py`
 
-- [ ] Byggt
-- [ ] Larmet verifierat genom planterat fel
-- [ ] Inkopplat i `check_generators.py`
+Byggt som **punkt 6 i `scripts/check_links.py`** i stället för som ett nytt
+skript. Det skriptet står redan i `check_generators.py`:s kontrollista, så
+inkopplingen följde med gratis — ett nytt skript hade krävt en rad till i en
+lista, alltså ett nytt ställe att glömma. Kontrollen läser facit direkt ur
+JSON och prövar fyra saker per nyckel: att `def` inte är tom, att `href` finns,
+att den har formen `/ordlista-<grupp>.html#term-<ankare>` (`FACIT_HREF`), och
+att fil + ankare upplöses mot disk. Formen prövas **före** ankaret — annars
+hade en href utan fragment rapporterats som "filen finns" och sluppit igenom.
+
+**Larmet verifierat mot sju planterade fel**, ett i taget, med facit återställd
+efteråt: dött ankare, sida som inte finns, href utan fragment, href ut ur
+ordlistan, tom def, href som saknas helt, och rätt ankare på fel bokstavssida.
+Alla sju gav exit 1 med ett meddelande som pekar ut nyckeln vid namn.
+
+**Inkopplingen bevisad, inte antagen.** Ett dött ankare planterades på
+`algometer` — en av de 91 nycklar som inte står wirad i någon HTML, och som
+därför inte kan ändra en enda sida. `check_generators.py` rapporterade
+*"rundtripp identisk – 405 filer oförändrade efter 18 generatorsteg"* och
+föll ändå med exit 1 på facitraden. Eftersom rundtrippen var grön kan ingenting
+annat än den nya kontrollen ha fällt den.
+
+Kontraktet `FACIT_HREF` är medvetet snävt: en tooltip ska leda till ett
+uppslagsord i ordlistan, inte till en sidas topp och inte ut i kunskapsbanken.
+Samtliga 2 351 följer det redan, så regeln kostar ingenting att hålla — men
+skulle någon vilja peka en term någon annanstans stoppar bygget och tvingar
+fram ett beslut i stället för att den nya formen tyst blir norm (§0.4).
 
 ---
 
 ## 5. Etapper (reviderad ordning efter riskanalysen)
 
-Ursprunglig rekommendation var 1 → 3 → 2. Efter analysen: **1 → skyddet
-(punkt 4) → 2 → 4 → 3 → 5.** Etapp 3 flyttades sist bland kodetapperna
+Ursprunglig rekommendation var 1 → 3 → 2. Efter analysen: **1 ✅ → skyddet
+(punkt 4) ✅ → 2 → 4 → 3 → 5.** Etapp 3 flyttades sist bland kodetapperna
 eftersom den vilar på ett öppet designbeslut (punkt 6) som inte ska tas som
 bieffekt av att bygget startar.
 
