@@ -11,7 +11,7 @@
 
 ## 1. Utgångsläget (mätt 2026-08-02, gissa inte om)
 
-`data/ordlista.json`: **11 202 poster, 0 stubs.** Fas 2 i `ORDLISTA.md` är alltså
+`data/ordlista.json`: **11 201 poster, 0 stubs.** Fas 2 i `ORDLISTA.md` är alltså
 **helt klar** — men `ORDLISTA.md`:s statusavsnitt är stale och påstår
 fortfarande att S/T/U/V m.fl. återstår. Faktiska antal per bokstav:
 
@@ -257,7 +257,7 @@ det är en egen fråga.
 ### Etapp 4 · Fältkomplettering — risk: låg, men LÅNGT (§0.3, för hand) 🔄 PÅGÅR
 Prioritetsordning (störst lucka, minst gissningsrisk först). Siffrorna är de
 ommätta ur `ORDLISTA.md`, inte punkt 1:s felaktiga:
-1. [ ] Böjning — **8 516 saknade vid start**, 8 179 kvar (A–E klara).
+1. [ ] Böjning — **8 516 saknade vid start**, 8 117 kvar (A–F klara).
 2. [ ] Etymologi — 3 481 saknar.
 3. [ ] Eng. — 1 504 saknar (många prefix/suffix motiverat undantagna).
 
@@ -380,6 +380,58 @@ particip och `-um`-läkemedlen får det inte.
     sädessträngen visade dessutom att tre poster utanför E stavade den
     `sädesträngen` med ett s (`cremaster`, `funiculus`, `spermaticus`) mot 14
     poster med två — rättade, liksom `tunnt rep` → *tunt rep* i `funiculus`.
+
+- **F: klart** (0.9.343). 533 av 633 poster saknade böjning; **53 fick den** —
+  39 substantiv, 2 `-era`-verb, 1 adjektiv (`fusiform`) och 11 läkemedels-/
+  ämnesnamn. Täckning 27,0 % → 27,5 %. Kvar står 482, varav 245 i fem latinska
+  serier (`facies` 69, `fascia` 57, `fossa` 56, `foramen`/`foramina` 47,
+  `fissura` 16), 34 förkortningar och 13 prefix. `flexion` var den ena av de två
+  rörelsetermer E-passet lämnade; bara `inversion` (I) återstår.
+  - **Två böjningar var felskrivna och gav ord som inte finns.** `flimmer` bar
+    `(-et)` → *flimmeret*, `foster` bar `(-et, pl. -∅)` → *fosteret*. Rätt form
+    är `(-ret)`: obetonat `-er`/`-el` tappar vokalen i bestämd form. Systerposten
+    `förmaksflimmer` skrev redan `(-ret)`, så felet gick att se inne i filen.
+    **Ett svep över hela filen** efter samma mönster gav en tredje träff utanför
+    F — `koagel` → *koagelet*, rättad till `(-let, pl. koagler)`. Sex övriga
+    träffar (`allel`, `D-dimer`, `endotel`, `epitel`, `flimmerepitel`,
+    `kardinalfel`) är korrekta: betonad slutstavelse, ingen synkope. Regeln står
+    nu i `ORDLISTA.md` — ändelsen ensam avgör inte, formen måste prövas.
+  - **Två böjningar togs bort.** `fast vårdkontakt` är en svensk flerordsterm
+    (D-passets regel): `(-en)` läses som frasens egen och ger *fast
+    vårdkontakten*. `fransosen` står redan i bestämd form som uppslagsord;
+    `(-en)` gav *fransosenen*. Ny punkt i `ORDLISTA.md` för det senare.
+  - **`fasettled` sammanslagen med `facettled`** (stavningsdubblett, samma
+    betydelse). C-formen behölls efter kontroll av skyddsregel 6:
+    `kb_glossary_terms.json` pekar på `#term-facettled` i tre nycklar
+    (`facettled`, `facettleder`, `facettlederna`), grundordet `facett`
+    korshänvisar till den, och **ingenting** pekade på s-formens ankare.
+    S-stavningen bevarad som "Även fasettled." (efter `Eng.`, husets placering:
+    64 poster mot 9). 11 202 → 11 201 poster.
+  - **Två sakfel:** `falciformis` kallade *ligamentum falciforme hepatis* för
+    "leversenan" — det är ett bukhinneveck, och filens egen post
+    `falciforme, ligamentum` säger "skärformiga leverbandet". `forceps` sade
+    "forceps minor/major = talade fibrer i corpus callosum"; omskrivet till
+    *corpus callosums framåt- respektive bakåtböjda fiberbuntar*.
+  - **Nio textfel:** `break i ett ben` → *kontinuitetsbrott* (engelskt ord kvar
+    i svensk text, `fractura`), `food and Drug Administration` → versal *Food*
+    (`FDA`, samma feltyp som *european Medicines Agency* i E), `framre` →
+    *främre* (`frontalplan`; systerposten `frontalis` stavar rätt),
+    `massetorfascia` → *masseterfascia*, `kollagenfibrerbuntar` →
+    *kollagenfiberbuntar*, `= liten rep` → *litet rep* (`funiculus`, neutrum),
+    `Eng. frenulum, frenulum.` (ordet två gånger) samt versal mitt i
+    definitionen i `fagocytos` och `fluor`.
+    - Ett svep efter husets språkförkortning visade att **sex poster skrev
+      `Av fra.`** mot 44 med `Av fr.` — `facett`, `mandräng`, `manschett`,
+      `petit mal`, `plack`, `reservoar`. Normaliserade.
+  - **Öppet fynd, medvetet inte åtgärdat i F-passet:** 17 flerordstermer i filen
+    bär böjning trots D-passets regel (`beprövad erfarenhet`, `palliativ vård`,
+    `relativ risk`, `metabolt syndrom`, `Raynauds fenomen` …). Bara F:s egen
+    (`fast vårdkontakt`) togs här; övriga 16 ligger i bokstäver som ännu inte
+    böjts och fångas när de står på tur. **Kontrollera dem i respektive pass.**
+  - Fyra poster lämnades oböjda för att formen inte är avgjord: `fokus`,
+    `fatigue`, `fluor` (två sinnen, olika genus) och `forceps`. `flegmone`
+    bär sedan tidigare `(-t, pl. -r)` — neutrumformen är osäker (utrum
+    förekommer i svensk medicinsk text) och rördes inte utan belägg.
 
 - **Sidopass: ordklasstaggen, hela filen** (0.9.342). 78 poster inledde inte med
   husets gement skrivna tagg — 50 saknade den helt, 28 skrev den med versal
