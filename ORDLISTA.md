@@ -34,9 +34,89 @@ Ordlistan byggs ut från en omfattande importerad lista med medicinska termer (3
 
 **Fas 1 – Import (klar):** Alla importerade termer som inte redan fanns i `ordlista.json` lades in som *stubs* (se nedan). 211 fanns redan, 3 754 var nya.
 
-**Fas 2 – Berikning (pågår):** Varje stub görs om till en färdig post i husformat, **en bokstav i taget** (A, B, C … Ö). När en post är berikad blir den synlig live.
+**Fas 2 – Berikning (klar):** Varje stub gjordes om till en färdig post i husformat, **en bokstav i taget** (A, B, C … Ö). När en post är berikad blir den synlig live.
 
-### Status
+---
+
+## Status: fas 2 avslutad
+
+`data/ordlista.json` innehåller **11 203 poster och 0 stubs** (mätt 2026-08-02). Varje
+importerad term är berikad — det finns ingenting kvar att hämta ur råimporten, och
+sedan dess har filen dessutom vuxit långt förbi importen med TA-anatomi, labbvärden,
+sjukdomar med ICD-koder, psykiatritermer, läkemedel och örter.
+
+Arbetet fortsätter därför **inne i posterna**, inte över bokstäverna: se
+fälttäckningen nedan, som är facit för fältkompletteringen.
+
+Aktuell totalsumma kontrolleras med:
+```bash
+python3 -c "import json;d=json.load(open('data/ordlista.json'));\
+print('total',len(d),'synliga',sum(1 for e in d if e.get('status')!='stub'),\
+'stubs',sum(1 for e in d if e.get('status')=='stub'))"
+```
+
+### Fälttäckning (mätt 2026-08-02) — facit för fältkompletteringen
+
+Mät aldrig detta på känsla; kör snutten under tabellen. **Siffrorna gäller alla 11 203
+poster**, även de där fältet är motiverat frånvarande (ett prefix behöver ingen böjning,
+en förkortning sällan en etymologi) — "saknas" är alltså ett tak för arbetet, inte en
+arbetslista rakt av.
+
+| Fält | Poster | Täckning | Saknas |
+|---|---:|---:|---:|
+| Ordklasstagg | 11 149 | 99,5 % | 54 |
+| `Eng. ` | 9 699 | 86,6 % | 1 504 |
+| Etymologi (`Av lat./gr. …`) | 7 722 | 68,9 % | 3 481 |
+| `Sv. ` | 2 686 | 24,0 % | 8 517 |
+| Böjning i parentes | 2 687 | 24,0 % | 8 516 |
+| `Jfr ` | 1 394 | 12,4 % | 9 809 |
+| `ICD-10: ` | 947 | 8,5 % | 10 256 |
+| `Vardag. ` | 782 | 7,0 % | 10 421 |
+| `Se ` | 358 | 3,2 % | 10 845 |
+| `Motsats` | 157 | 1,4 % | 11 046 |
+| `Referensvärde` | 78 | 0,7 % | 11 125 |
+| Uttalsangivelse | **0** | 0,0 % | 11 203 |
+
+```bash
+python3 - <<'PY'
+import json, re
+d = json.load(open('data/ordlista.json')); n = len(d)
+FALT = {
+    "Ordklasstagg":  r"(?i)^(?:subst|adj|verb|adv|förk|egennamn|lat|gr|prefix|suffix)\b",
+    "Eng.":          r"Eng\. ",
+    "Etymologi":     r"\bAv (?:lat|gr|grek|eng|fr|ty|ital|arab|sanskr)",
+    "Sv.":           r"Sv\. ",
+    "Böjning":       r"\((?:-[a-zåäö∅]|pl\. -)",
+    "Jfr":           r"Jfr ",
+    "ICD-10":        r"ICD-10: ",
+    "Vardag.":       r"Vardag\. ",
+    "Se":            r"(?<![A-Za-zåäöÅÄÖ])Se ",
+    "Motsats":       r"Motsats",
+    "Referensvärde": r"Referensvärde",
+    "Uttal":         r"\buttal(?:as|sangivelse)",
+}
+for k, p in FALT.items():
+    c = sum(1 for e in d if re.search(p, e["def"]))
+    print(f'{k:14s} {c:6d}  {100*c/n:5.1f} %  saknas {n-c}')
+PY
+```
+
+Två fällor i mätningen, båda påträffade 2026-08-02:
+
+- **Sök inte uttalsangivelser på `uttal`.** Ordet ger 12 träffar i filen och samtliga
+  tolv är *uttalad*/*uttalade* i löptext (`fatigue`, `somnolens`, `mononukleos` …).
+  Ordlistan har **noll** uttalsangivelser — mät på `uttalas`/`uttalsangivelse`.
+- **Böjningen står i en egen parentes efter ordklasstaggen**, `subst. (-en, pl. -er)`,
+  inte inuti taggparentesen. En regex som bara letar bindestreck var som helst inom
+  parentes fångar också `(A01.1-A01.4)`, `(5-HT)` och liknande och överskattar
+  täckningen grovt.
+
+**Kända formavvikelser:** 54 poster saknar ordklasstagg helt (flertalet är flerordsuttryck
+och statistikbegrepp: *absolut risk*, *akut buk*, *aerob träning*), och **36 poster skriver
+taggen med versal** — `Adj.`/`Subst.`/`Förk.` i stället för gement (*adenoid*, *amyloid*,
+*androgen*, *eosinofil* m.fl.). Husformatet kräver gement.
+
+### Berikningslogg per bokstav (fas 2, avslutad)
 
 - **A: klart** (475 poster berikade).
 - **B: klart** (99 berikade, 3 stavningsdubbletter sammanslagna).
@@ -56,18 +136,12 @@ Ordlistan byggs ut från en omfattande importerad lista med medicinska termer (3
 - **P: klart** (449 poster berikade — största bokstaven; 15 stubbar borttagna: th/t Parathyreoidea→Paratyreoidea, Pneumothorax→Pneumotorax; stavnings-/c-k-dubbletter Panniculit→Pannikulit, Pediculos+Pediculosis→Pedikulos, Petechium→Petekium, Pingvekula→Pinguecula, Polynevropati→Polyneuropati, Pyoderma→Pyodermi, Proptosis→Proptos, Paronykion→Paronyki; synonympar Periodontit→Parodontit, Periodontal→Parodontal, Pip→Pip-led; slug-kollision Pustulös→Pustulos. Rubrik rättad: Parasympatimimetisk→Parasympatomimetisk. Synliga termer totalt: 3 895).
 - **Q: klart** (3 poster berikade: Q-tagg, QCT, QT-intervall. Synliga termer totalt: 3 898).
 - **R: klart** (153 poster berikade; 2 stubbar borttagna: c/k Resekera→Resecera, Rektum→täcks av publicerade Rectum; cross-ref RA/RAST/RCA/RCT/RR/RRI/RRR/RRT/RF/RIND/RPGN/RMR; källflagga Rubeola=mässling vs råtextens "röda hund". Synliga termer totalt: 4 051).
-- Återstår (stubs per bokstav):
-  S 280 · T 221 · U 59 · V 103 · W 5 · X 6 · Y 1 · Z 2 · Ö 5
+- **S: klart** (271 poster berikade; 9 stubbar borttagna, bl.a. Evidensgrad-sammanslagningen. Synliga termer totalt: 4 321). *(0.8.15)*
+- **T–Ö: klart** — sista berikningspasset, som tömde stub-listan: T 200, U 58, V 99, W 5, X 6, Y 1, Z 2, Ö 5 poster berikade, plus `5-ASA` och `5-FU` på siffersidan. 26 stubbar borttagna som täckta av redan publicerade poster (th/t-formerna Thoracal→Torakal, verbstubbar Torakotomera/Trombektomera/Vasektomera, Tendovaginit→Tendosynovit, Trokanter/Trochanter major/minor, -ös-formerna Varikös ven/Vesikulös m.fl.). Synliga termer totalt: 4 701, **stubs: 0**. *(0.8.18)*
+- **Å/Ä: klart** (21 nya poster — inga stubbar fanns; historiska termer märkta ålderdomliga, slug-override mot `ärr`/ARR-kollisionen). *(0.8.26)*
 
 ### c/k-stavningsdubbletter (viktigt vid K m.fl.)
-Grekisk-härledda medicinska ord finns ofta i både c- och k-stavning (Catarakt/Katarakt, Carcinom/Karcinom, Cardio-/Kardio-, Cholecystit/Kolecystit, Colit/Kolit, Coronar/Koronar, Conjunktivit/Konjunktivit, Curativ/Kurativ …). C-formerna är redan berikade och **publicerade** (de noterar k-formen med "även …"). När K (och andra letter) berikas: ta bort k-stubben om en redan publicerad c-post täcker samma ord — behåll den publicerade, lägg ev. till "även k-form". Kontrollera genom att byta k→c i K-termen och se om en synlig post finns.
-
-Aktuell totalsumma kontrolleras med:
-```bash
-python3 -c "import json;d=json.load(open('data/ordlista.json'));\
-print('total',len(d),'synliga',sum(1 for e in d if e.get('status')!='stub'),\
-'stubs',sum(1 for e in d if e.get('status')=='stub'))"
-```
+Grekisk-härledda medicinska ord finns ofta i både c- och k-stavning (Catarakt/Katarakt, Carcinom/Karcinom, Cardio-/Kardio-, Cholecystit/Kolecystit, Colit/Kolit, Coronar/Koronar, Conjunktivit/Konjunktivit, Curativ/Kurativ …). C-formerna är redan berikade och **publicerade** (de noterar k-formen med "även …"). När K (och andra bokstäver) berikas: ta bort k-stubben om en redan publicerad c-post täcker samma ord — behåll den publicerade, lägg ev. till "även k-form". Kontrollera genom att byta k→c i K-termen och se om en synlig post finns.
 
 ---
 
@@ -103,7 +177,7 @@ Stubs får aldrig synas på sajten förrän de är berikade. Det sköts på **tv
 ordklass. (böjning) definition i klartext. Sv. svensk synonym. Eng. english term. Vardag. vardagsuttryck. Av lat./gr. etymologi.
 ```
 
-Så ser de 11 196 posterna faktiskt ut: **ordklasstaggen först**, böjningen i parentes direkt
+Så ser de 11 203 posterna faktiskt ut: **ordklasstaggen först**, böjningen i parentes direkt
 efter, och därefter definitionen med liten begynnelsebokstav. Mallen stod tidigare med
 definitionen först och ordklassen inskjuten i mitten, vilket ingen post följer — och den
 inledande taggen är dessutom det enda `format_def()` kursiverar, så den *måste* stå först
@@ -127,7 +201,7 @@ Riktlinjer:
   "innerörats minsta hörselben" medan `malleus`-posten två rader bort korrekt sade
   "i mellanörat" (rättat 0.9.238). Grep efter grannposterna i samma anatomiska region innan
   en ny post skrivs — motsägelser inne i ordlistan är dyrare att hitta än att undvika.
-- **Markören är `Eng. `, inte `Eng: `.** Alla 9 678 poster som bär engelsk motsvarighet
+- **Markören är `Eng. `, inte `Eng: `.** Alla 9 699 poster som bär engelsk motsvarighet
   skriver `Eng. <term>.` — noll använder kolon. Skriv aldrig `Eng:`; det bryter mot filens
   enda form och blir osökbart bland de övriga.
   *(Rättat 0.9.286: regeln stod tidigare som `Eng: …` och påstod att förrenderaren
@@ -135,8 +209,9 @@ Riktlinjer:
   `generate_glossary.py` kursiverar **enbart** den inledande ordklasstaggen, och `formatDef`
   i `js/glossary.js` gör detsamma. Ingen av dem känner till `Eng` över huvud taget.)*
 - Övriga fältmarkörer följer samma punktform: `Sv. ` (svensk synonym), `Vardag. ` (lekmanna­
-  uttryck, 781 poster), `Förk. ` (förkortning), `Lat. `, `Jfr ` (1 371 poster),
-  `Motsats: `, `Referensvärde (…): ` för labbvärden (71 poster), `ICD-10: ` sist.
+  uttryck, 782 poster), `Förk. ` (förkortning), `Lat. `, `Jfr ` (1 394 poster),
+  `Motsats: ` (157), `Referensvärde (…): ` för labbvärden (78 poster), `ICD-10: ` sist
+  (947 poster). Aktuella siffror: kör mätsnutten i statusavsnittet.
 - Förkortningar: expandera, ange engelsk motsvarighet, hoppa över latinsk etymologi om den inte tillför.
 - **Faktakonservativt:** den importerade råtexten ger betydelsen. Lägg hellre till mindre etymologi än att gissa. Kör inte över kursunderlaget med eget resonemang (se `CLAUDE_REGLER.md`).
 
