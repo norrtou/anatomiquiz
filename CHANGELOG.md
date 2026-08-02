@@ -1,5 +1,15 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.350
+- **Bokstav K böjs: 45 poster.** Elfte passet i etapp 4. 112 av 288 poster saknade böjning; 33 substantiv och 12 läkemedels- och ämnesnamn fick den. Täckningen 28,8 % → 29,2 %. De 67 som står kvar är motiverade undantag: 33 flerordstermer (`klinisk kemi`, `klinisk patologi` och de nio andra specialiteterna, `Kawasakis syndrom`, `kardiogen chock`), 11 förkortningar, 14 ettordslemman och 9 prefix.
+- **`koma` fick `(-t)` — filen hade redan svarat på frågan.** Ordet skrivs *komat* tre gånger i löptexten (bl.a. i `komatös` och `stuporös`) och *i koma* två gånger; ingenstans *koman*. Neutrum alltså.
+- **Två läkemedel fick `(-en)` enligt D-passets n-ordsundantag:** `Kaliumbromid` och `Kaliumjodid`, eftersom *bromid* och *jodid* är n-ord precis som postens egen `klorid` `(-en)`. `Kloroform` fick också `(-en)` — *kloroformen*, som `etanol` `(-en)`. Övriga nio fick `(-et)`. `Kalomel` och `Karbidopa` lämnades obojda: genus går inte att fastställa utan att gissa, och `Levodopa` står obojd av samma skäl.
+- **`kolesteatom` stod med fel genus.** Posten bar `(-en, pl. -er)`, men tumörord på `-om` är neutrum och filens övriga skriver `(-et, pl. -∅)` (`kondylom`, `kolangiom`, `angiokeratom`). Rättad.
+- **`kvalitetsregister` bar en oskriven platshållare: `(-/-ret, pl. ...)`.** Den var det enda stället i filen med den formen. Ersatt med `(-ret, pl. -∅)` — synkoperegeln från F-passet (*registret*, inte "registeret") och oförändrad plural.
+- **Två notationsavvikelser rättade:** `komatös` skrev `(-t, komatösa)` i stället för `(-t, -a)`, och `kompatibel` skrev `(-t, kompatibla)` där filens övriga `-bel`-adjektiv skriver `(-t, pl. -bla)`. `klimakteriebesvär` skrev `(pluralis)`, unikt i filen; ändrat till `(plural)` som de sju systerposterna (`vattkoppor`, `svinkoppor`, `nässelutslag` …).
+- **Ett uppslagsord fick versal: `koebners fenomen` → `Koebners fenomen`.** Eponym efter den tyske hudläkaren Heinrich Koebner. Kontrollerad mot skyddsregel 6 före bytet — nyckeln fanns inte i `data/kb_glossary_terms.json`, och slugen är oförändrad eftersom `slugify()` foldar till gemener.
+- **`knäartros` följer sin systerpost, inte den allmänna regeln.** Den fick `(-en, pl. -er)` som `koxartros` i samma bokstav, medan namngivna sjukdomsformer annars fått bara definit form.
+
 ## 0.9.349
 - **Bokstav J böjs: 5 poster.** Tionde passet i etapp 4 och det klart minsta — J har bara 51 poster, och 44 av dem är motiverade undantag: 31 flerords- och latinska fraser (hela `junctura`/`juncturae`-familjen, `jugularis`-venerna, `Juniperus`-växterna), 6 latinska lemman (*jejunum*, *jejunus*, *jugulum*), 5 förkortningar och 2 prefix. Böjda poster i filen: 3 221 → 3 226.
 - **Två poster var osynliga för mätningen fast de bar böjning.** `jonisera` skrev `(joniserar, joniserade, joniserat)` och `juvenil` skrev `(juvenilt, juvenila)` — utskrivna former i stället för husets notation, och en parentes som inte börjar med bindestreck räknas som obojd av mätsnutten i `ORDLISTA.md`. Normaliserade till `(-r, -de, -t)` respektive `(-t, -a)`. Innehållet är detsamma; nu syns de.
