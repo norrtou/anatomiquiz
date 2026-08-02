@@ -257,7 +257,7 @@ det är en egen fråga.
 ### Etapp 4 · Fältkomplettering — risk: låg, men LÅNGT (§0.3, för hand) 🔄 PÅGÅR
 Prioritetsordning (störst lucka, minst gissningsrisk först). Siffrorna är de
 ommätta ur `ORDLISTA.md`, inte punkt 1:s felaktiga:
-1. [ ] Böjning — **8 516 saknade vid start**, 8 231 kvar (A–D klara).
+1. [ ] Böjning — **8 516 saknade vid start**, 8 179 kvar (A–E klara).
 2. [ ] Etymologi — 3 481 saknar.
 3. [ ] Eng. — 1 504 saknar (många prefix/suffix motiverat undantagna).
 
@@ -351,6 +351,35 @@ particip och `-um`-läkemedlen får det inte.
     *dartosmuskel* (jfr systerposten `dartos, musculus`). Två osvenska former
     strukna hellre än gissade om: `Sv. sädesledarens` (genitiv som synonym till
     ett adjektiv) och `Sv. denterad` — samma beslut som `Sv. kaudad` i A-passet.
+
+- **E: klart** (0.9.341). 272 av 402 poster saknade böjning; **52 fick den** —
+  26 substantiv, 12 `-era`-verb, 6 adjektiv, 7 läkemedelsnamn och `eosinofil`
+  (dubbel ordklass). Kvar står 220: 72 flerordstermer, 58 latinska/grekiska
+  ettordslemman (`epidermis`, `epiglottis`, `esofagus`), 55 förkortningar —
+  E är förkortningarnas bokstav näst efter C — och 32 prefix.
+  - **`embryo` fick `(-t, pl. -n)`** — formen fanns redan i filen (`trauma`,
+    `hydrocele`, `huvudtrauma`) men saknades i notationstabellen. Inskriven nu.
+  - **Rörelsetermerna var halvgjorda.** `abduktion`, `adduktion` och `depression`
+    bar `(-en, pl. -er)`, medan `elevation`, `eversion` och `extension` stod
+    oböjda i samma familj. De tre i E rättade; `flexion` och `inversion` ligger
+    kvar under F och I.
+  - Tre poster utan husets ordklasstagg rättade: `eosinofil` skrev
+    `Adj./subst., pl. -a:`, `evidensgrad` saknade tagg och bar en lös
+    `(beteckning)` mitt i texten, och `ex juvantibus` fick formen från
+    `emollitio cerebri` (`lat. uttryck för …`). `eosinofil`:s glosa inleddes
+    dessutom med uppslagsordet ("Eosinofil granulocyt") — omskriven efter
+    `neutrofil`, som beskriver infärgningen först.
+  - **Ett sakfel:** `ejaculatorius` sade att *ductus ejaculatorius* är
+    "sädessträngens utföringsgång". Sädessträngen är *funiculus spermaticus*,
+    och filens egen `ductus ejaculatorius`-post säger "utsprutningsgången".
+    Rättat dit.
+  - **Sju textfel:** `slungaa` → *slunga* (två poster), `eminetia` → *eminentia*,
+    `struploket` → *struplocket* (sju andra poster stavar rätt), `e.g.` → *t.ex.*
+    (filens enda anglicism av det slaget), `maculary pucker` → *macular pucker*
+    och `european Medicines Agency` → versal *European*. Grepet efter
+    sädessträngen visade dessutom att tre poster utanför E stavade den
+    `sädesträngen` med ett s (`cremaster`, `funiculus`, `spermaticus`) mot 14
+    poster med två — rättade, liksom `tunnt rep` → *tunt rep* i `funiculus`.
 
 - **Sidopass: ordklasstaggar och textfel** (0.9.339). C-passet avslöjade tre
   latinska adjektiv taggade `subst.` Fyndet svepte jag över **hela filen**, inte

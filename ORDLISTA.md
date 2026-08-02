@@ -64,11 +64,11 @@ arbetslista rakt av.
 
 | Fält | Poster | Täckning | Saknas |
 |---|---:|---:|---:|
-| Ordklasstagg | 11 150 | 99,5 % | 52 |
+| Ordklasstagg | 11 152 | 99,6 % | 50 |
 | `Eng. ` | 9 698 | 86,6 % | 1 504 |
 | Etymologi (`Av lat./gr. …`) | 7 721 | 68,9 % | 3 481 |
 | `Sv. ` | 2 685 | 24,0 % | 8 517 |
-| Böjning i parentes | 2 971 | 26,5 % | 8 231 |
+| Böjning i parentes | 3 023 | 27,0 % | 8 179 |
 | `Jfr ` | 1 394 | 12,4 % | 9 808 |
 | `ICD-10: ` | 947 | 8,5 % | 10 255 |
 | `Vardag. ` | 782 | 7,0 % | 10 420 |
@@ -115,10 +115,12 @@ Två fällor i mätningen, båda påträffade 2026-08-02:
   räknar dem som obojda, eftersom mönstret kräver `-`. De är alltså *inte* en
   arbetslista: de har redan den böjning som är relevant för formen.
 
-**Kända formavvikelser:** 52 poster saknar ordklasstagg helt (flertalet är flerordsuttryck
-och statistikbegrepp: *absolut risk*, *akut buk*, *aerob träning*), och **36 poster skriver
-taggen med versal** — `Adj.`/`Subst.`/`Förk.` i stället för gement (*adenoid*, *amyloid*,
-*androgen*, *eosinofil* m.fl.). Husformatet kräver gement.
+**Kända formavvikelser:** 50 poster saknar ordklasstagg helt (flertalet är flerordsuttryck
+och statistikbegrepp: *absolut risk*, *akut buk*, *aerob träning*), och **28 poster skriver
+taggen med versal** — `Adj.`/`Subst.`/`Förk.`/`Förled:` i stället för gement
+(*kolloid*, *onkogen*, *patogen*, *cefalo-* m.fl.). Husformatet kräver gement;
+`format_def()` kursiverar bara en gement skriven tagg, så en versal tagg renderas
+helt utan kursiv ordklass.
 
 ### Berikningslogg per bokstav (fas 2, avslutad)
 
@@ -233,6 +235,7 @@ former; hitta inte på en ny för att den ser prydligare ut i just den posten.
 | ett-ord, räknebart | `(-et, pl. -er)` | `axon`, `hormon` |
 | ett-ord, oförändrad plural | `(-et, pl. -∅)` | `angiokeratom`, `Aktivitetsmål` |
 | ett-ord på `-e` | `(-t)` | `alkoholberoende`, `Arbetsminne` |
+| ett-ord på `-o`/`-a`, plural på `-n` | `(-t, pl. -n)` | `embryo`, `trauma`, `hydrocele` |
 | ämnesnamn (läkemedel, hormon) | `(-et)` | `Atropin`, `testosteron` |
 | adjektiv | `(-t, -a)` | `allogen`, `antalgisk` |
 | adjektiv som redan slutar på `-t` | `(pl. -a)` | `adekvat`, `adult` |

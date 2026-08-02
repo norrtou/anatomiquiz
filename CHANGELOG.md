@@ -1,5 +1,16 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.341
+- **Bokstav E böjs: 52 poster.** Femte passet i etapp 4. 272 av 402 poster saknade böjning; 26 substantiv, 12 `-era`-verb, 6 adjektiv, 7 läkemedelsnamn och `eosinofil` (dubbel ordklass) fick den. Täckningen 26,5 % → 27,0 %. De 220 som står kvar är motiverade undantag: 72 flerordstermer, 58 latinska/grekiska ettordslemman (*epidermis*, *epiglottis*, *esofagus*), 55 förkortningar och 32 prefix.
+- **Rörelsetermerna var halvgjorda.** *abduktion*, *adduktion* och *depression* bar `(-en, pl. -er)`, men *elevation*, *eversion* och *extension* stod oböjda i samma familj — och *elevation* är dessutom det ord *depression* pekar på som motsats. De tre i E rättade; *flexion* och *inversion* tas när F och I står på tur.
+- **`embryo` fick `(-t, pl. -n)`** — en form som redan användes i filen (*trauma*, *hydrocele*, *huvudtrauma*) men saknades i notationstabellen i `ORDLISTA.md`. Inskriven, så att nästa `-o`-substantiv inte får en påhittad form.
+- **Tre poster utan husets ordklasstagg rättade.** `eosinofil` skrev `Adj./subst., pl. -a:` och renderades därför helt utan kursiv ordklass; `evidensgrad` saknade tagg och bar en lös `(beteckning)` mitt i texten; `ex juvantibus` fick formen från *emollitio cerebri* (`lat. uttryck för …`).
+  - `eosinofil`:s glosa inleddes dessutom med uppslagsordet ("Eosinofil granulocyt") — vilket `ORDLISTA.md` uttryckligen förbjuder. Omskriven efter mönstret i *neutrofil*, som beskriver infärgningen först och nämner cellen sedan.
+- **Ett sakfel:** `ejaculatorius` sade att *ductus ejaculatorius* är "sädessträngens utföringsgång". Sädessträngen är *funiculus spermaticus* — en helt annan struktur — och filens egen post `ductus ejaculatorius` säger "utsprutningsgången". Rättat dit.
+- **Sju textfel lästa i samma genomgång:** `slungaa` → *slunga* (två poster), `eminetia` → *eminentia*, `struploket` → *struplocket* (sju andra poster stavar det rätt), `e.g.` → *t.ex.* (filens enda anglicism av det slaget), `maculary pucker` → *macular pucker* och `european Medicines Agency` → versal *European*.
+  - Kontrollen av sädessträngen visade på köpet att tre poster utanför E stavade den `sädesträngen` med ett s (`cremaster`, `funiculus`, `spermaticus`) mot 14 poster med två. Rättade, liksom `tunnt rep` → *tunt rep* i `funiculus`.
+- `python3 scripts/check_generators.py` grön: rundtripp identisk, 407 filer, 195 tester, 2 351/2 351 tooltip-ankare hela.
+
 ## 0.9.340
 - **Bokstav D böjs: 80 poster.** Fjärde passet i etapp 4, och det största hittills. 331 av 432 poster saknade böjning; 62 substantiv, 11 `-era`-verb, 6 adjektiv och `defekt` (dubbel ordklass) fick den. Täckningen 25,8 % → 26,5 %. Störst enskild grupp är de 17 läkemedels- och ämnesnamnen — *Doxycyklin*, *Dexametason*, *Doxorubicin*, *dopamin*, *diazepam* … — som alla tar `(-et)` efter mallen *Atropin*.
 - **`Dietyleter` fick `(-n)`, inte `(-et)`.** Läkemedelsregeln gäller ämnesnamnet, inte grundordet: *eter* är ett n-ord (*etern*). Regeln står nu utskriven i `ORDLISTA.md`, för annars hade nästa `-eter`-post böjts fel av samma automatik i huvudet.
