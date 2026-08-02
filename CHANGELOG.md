@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.338
+- **Bokstav C böjs: 33 poster.** Tredje passet i etapp 4. C är alfabetets mest latinska bokstav — 989 av 1 039 poster saknade böjning, den högsta andelen i hela ordlistan (95 %), eftersom det är här TA-anatomin bor: *calcaneus*, *cartilago*, *cortex*, *cranium*, *cavitas* och hundratals till står i latinsk uppslagsform och böjs inte på svenska. Kandidaterna var de försvenskade posterna. Täckningen 25,5 % → 25,8 %.
+- **Latinskt ursprung är inte samma sak som latinskt ord.** `cancer` → `(-n)`, `cysta` → `(-n, pl. -or)` och `cytoplasma` → `(-n)` fick böjning: de är svenska ord idag, oavsett var de kommer ifrån. *Bakercysta* fick böjning i B-passet, så att lämna huvudordet *cysta* oböjt hade varit inkonsekvent. Gränsen går vid om ordet böjs i svensk text — inte vid dess etymologi.
+- Elva läkemedelssubstanser (*Cisplatin*, *Captopril*, *Ciprofloxacin*, *Citalopram* …) och tre adjektiv (*central*, *cervikal*, *contralateral*). `carcinogen` omskriven från versal, kombinerad tagg till husformat med båda ordklassernas böjning.
+- `concomitans` är latinsk och ska **inte** böjas, men bar versal tagg (`Adj./subst., lat.:`) och renderades därför helt utan kursiv ordklass — `format_def()` kursiverar bara en gement skriven tagg. Taggen normaliserad, ingen böjning inskriven.
+- **Noterat för ett senare pass, inte åtgärdat här:** minst tre latinska adjektiv står taggade `subst.` och motsägs av sin egen brödtext — `cavus` ("subst. ihålig"), `communis` ("subst. gemensam, delad") och `convexus` ("subst. konvex, utbuktande"). Samma feltyp som *sopor*/*submukosa*/*stridor* (rättade 0.9.238). Ordklasstaggen är ett annat fält än böjningen, och en tagg som byts ska granskas för sig — fyndet står i facit.
+- `python3 scripts/check_generators.py` grön före och efter: rundtripp identisk, 407 filer, 195 tester, 2 351/2 351 tooltip-ankare hela.
+
 ## 0.9.337
 - **Bokstav B böjs: 47 poster.** Andra passet i etapp 4. 42 substantiv (*biologi* → `(-n)`, *bronkoskopi* → `(-n, pl. -er)`, *Bakercysta* → `(-n, pl. -or)`, *Betametason* → `(-et)`), 2 adjektiv, 1 verb och 2 rättade formfel. Böjningstäckningen 25,1 % → 25,5 %.
 - **`blodsocker` bar `(-/-värdet)` i böjningsparentesen — det är ingen böjning.** Det är en hopskrivning av *blodsocker/blodsockervärdet* som hamnat på den plats där böjningen ska stå. Ordet böjs *blodsocker – blodsockret*; rättat till `(-ret)`.

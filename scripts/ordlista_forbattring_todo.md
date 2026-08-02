@@ -257,7 +257,7 @@ det är en egen fråga.
 ### Etapp 4 · Fältkomplettering — risk: låg, men LÅNGT (§0.3, för hand) 🔄 PÅGÅR
 Prioritetsordning (störst lucka, minst gissningsrisk först). Siffrorna är de
 ommätta ur `ORDLISTA.md`, inte punkt 1:s felaktiga:
-1. [ ] Böjning — **8 516 saknade vid start**, 8 344 kvar (A–B klara).
+1. [ ] Böjning — **8 516 saknade vid start**, 8 312 kvar (A–C klara).
 2. [ ] Etymologi — 3 481 saknar.
 3. [ ] Eng. — 1 504 saknar (många prefix/suffix motiverat undantagna).
 
@@ -303,6 +303,24 @@ particip och `-um`-läkemedlen får det inte.
     Den fick bara adjektivböjningen, av samma skäl som `antitussiv` i A-passet:
     substantivet heter *baktericid* i vissa källor och *baktericidum* i andra, och
     det är inte avgjort i posten.
+- **C: klart** (0.9.338). 989 av 1 039 poster saknade böjning — högsta andelen i
+  hela alfabetet (95 %), eftersom C är TA-anatomins bokstav: *calcaneus*, *cartilago*,
+  *cortex*, *cranium*, *cavitas* och hundratals till står i latinsk uppslagsform.
+  33 poster ändrade: 32 fick böjning, 1 fick bara sin tagg normaliserad.
+  - `cancer`, `cysta` och `cytoplasma` **fick** böjning trots latinskt ursprung.
+    Gränsen går inte vid etymologin utan vid om ordet är ett svenskt ord idag:
+    *cancern*, *cystan/cystor*, *cytoplasman*. `Bakercysta` fick böjning i B-passet,
+    så att lämna huvudordet `cysta` oböjt hade varit inkonsekvent.
+  - `concomitans` är latinsk och ska **inte** böjas, men bar versal, kombinerad tagg
+    (`Adj./subst., lat.:`) och renderades därför utan kursiv ordklass. Taggen
+    normaliserad till gement, ingen böjning inskriven.
+
+**Fynd att ta i ett senare pass (fel ordklasstagg, inte böjning):** minst tre
+latinska adjektiv står taggade `subst.` och motsägs av sin egen brödtext —
+`cavus` ("subst. ihålig"), `communis` ("subst. gemensam, delad") och `convexus`
+("subst. konvex, utbuktande"). Samma feltyp som `sopor`/`submukosa`/`stridor`
+(rättade 0.9.238) och den `ORDLISTA.md` varnar för. De rörs inte i böjningspasset
+— fältet är ett annat, och en tagg som byts ska granskas för sig.
 
 ### Etapp 3 · Jfr/Se/Motsats-länkning — risk: hög, kräver beslut (se punkt 6)
 - [ ] Designbeslut taget (väg a eller b, punkt 6).
