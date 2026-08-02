@@ -257,7 +257,7 @@ det är en egen fråga.
 ### Etapp 4 · Fältkomplettering — risk: låg, men LÅNGT (§0.3, för hand) 🔄 PÅGÅR
 Prioritetsordning (störst lucka, minst gissningsrisk först). Siffrorna är de
 ommätta ur `ORDLISTA.md`, inte punkt 1:s felaktiga:
-1. [ ] Böjning — **8 516 saknade vid start**, 8 025 kvar (A–H klara).
+1. [ ] Böjning — **8 516 saknade vid start**, 7 924 kvar (A–K klara).
 2. [ ] Etymologi — 3 481 saknar.
 3. [ ] Eng. — 1 504 saknar (många prefix/suffix motiverat undantagna).
 
@@ -533,6 +533,58 @@ particip och `-um`-läkemedlen får det inte.
     **del** av mellanhjärnan" → *delen*. `hypotenar` skrev `muskelvallen` medan
     `thenar`/`hypothenar` skriver *valk* — familjen följs nu.
   - ~~Öppet: `thenar`/`thalamus` i th-form~~ → **avslutat i 0.9.347**, se nedan.
+
+- **I: klart** (0.9.348). 353 av 490 poster saknade böjning; **50 fick den** —
+  19 substantiv, 5 adjektiv, 17 `-era`-verb, 9 läkemedelsnamn. 28,3 % → 28,8 %.
+  De 303 kvarvarande: 173 flerords-/latinska fraser (`incisura`-, `impressio`-,
+  `junctura`-familjerna), 57 förkortningar, 51 latinska lemman, 22 prefix.
+  - **Filen svarar själv på genusfrågor — leta i sammansättningarna.**
+    `ocklusionsikterus` och `adherensileus` bar redan `(-en)`, alltså fick
+    `ikterus` och `ileus` det. `impetigo`/`intertrigo` följde `libido`/`polio`.
+  - `Ipratropiumbromid` fick `(-en)` (n-ordsundantaget: *bromid*, jfr `klorid`).
+    `intrinsisk` fick `(pl. -a)` — filens `-isk`-adjektiv gör det undantagslöst.
+  - **Två felskrivna böjningar:** `interkostalnerv` bar bara `(pl. -er)` utan
+    definit form (samma feltyp som `hypoxi` i H), `irreponibel` saknade `-t`.
+  - **Ett felstavat uppslagsord:** `ileosakralled` → `iliosakralled` (`ileo-` är
+    krumtarmen, `ilio-` tarmbenet; postens egen `Sv.`-rad sade redan rätt).
+    Skyddsregel 6 prövad först — ingen facitnyckel, ingen href att peka om.
+
+- **J: klart** (0.9.349). Filens minsta bokstav: 51 poster, **5 fick böjning**.
+  44 motiverade undantag (31 flerords-/latinska fraser ur `junctura`- och
+  `jugularis`-familjerna, 6 latinska lemman, 5 förkortningar, 2 prefix).
+  - **Två poster bar böjning men var osynliga för mätningen.** `jonisera` skrev
+    `(joniserar, joniserade, joniserat)` och `juvenil` `(juvenilt, juvenila)` —
+    utskrivna former, och en parentes utan inledande bindestreck räknas som obojd.
+    Normaliserade. Leta efter fler av den här sorten i varje bokstav.
+  - `jonisering` fick `(-en)`: filens `-ering`-processord tar aldrig plural.
+
+- **K: klart** (0.9.350). 112 av 288 poster saknade böjning; **45 fick den** —
+  33 substantiv, 12 läkemedelsnamn. 28,8 % → 29,2 %. 67 kvar (33 flerordstermer,
+  14 ettordslemman, 11 förkortningar, 9 prefix).
+  - **`koma` fick `(-t)` för att filen redan skrivit *komat* tre gånger** och
+    *i koma* två — aldrig *koman*. Sök i löptexten innan du gissar genus.
+  - `Kaliumbromid`, `Kaliumjodid` och `Kloroform` fick `(-en)`. **`Kalomel` och
+    `Karbidopa` lämnades obojda** — genus går inte att fastställa utan att gissa,
+    och `Levodopa` står obojd av samma skäl. Hellre en lucka än ett påhitt.
+  - **Fyra rättelser:** `kolesteatom` bar `(-en, pl. -er)` fast `-om`-ord är
+    neutrum (`kondylom`, `kolangiom` skriver `(-et, pl. -∅)`); `kvalitetsregister`
+    bar den oskrivna platshållaren `(-/-ret, pl. ...)`; `komatös` och `kompatibel`
+    skrev ut formerna; `klimakteriebesvär` skrev `(pluralis)`, unikt i filen.
+  - `koebners fenomen` → `Koebners fenomen`, slug oförändrad.
+
+- **Sidopass: böjningsparentesernas notation, hela filen** (0.9.351). **328 poster**
+  normaliserade, och skyddet levererat i samma commit.
+  - **325 skrev plural utan `pl.`** (`makrofag (-en, -er)`) och **3 substantiv bar
+    bara plural** (`mekanoreceptor (pl. -er)`, `termoreceptor`, `proprioceptor`).
+  - **Båda formerna räknas som *bojda* av mätsnutten** och var därför osynliga för
+    bokstavspassen, som bara läser det mätningen pekar ut. De hade legat kvar för
+    alltid. 143 av dem låg i P, 57 i R, 51 i O, 35 i N, 33 i M — alltså i bokstäver
+    som ännu inte gåtts igenom.
+  - **`generate_glossary.py` hård-felar nu på båda**, som den gör på en otaggad
+    post. Larmet verifierat mot två planterade fel OCH mot att de korrekta
+    undantagen går igenom: adjektivens `(pl. -a)` och `-um`-läkemedlens
+    `(pl. antibiotika)` saknar bestämd form med rätta, så kontrollen kräver
+    bindestreck + svensk pluraländelse. Regeln inskriven i `ORDLISTA.md`.
 
 - **Sidopass: th → t i hela filen** (0.9.347). Sex uppslagsord bytte stavning med
   th-formen bevarad som "Även …": `thalamus`→`talamus`, `thenar`→`tenar`,
