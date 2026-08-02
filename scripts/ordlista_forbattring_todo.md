@@ -315,12 +315,25 @@ particip och `-um`-läkemedlen får det inte.
     (`Adj./subst., lat.:`) och renderades därför utan kursiv ordklass. Taggen
     normaliserad till gement, ingen böjning inskriven.
 
-**Fynd att ta i ett senare pass (fel ordklasstagg, inte böjning):** minst tre
-latinska adjektiv står taggade `subst.` och motsägs av sin egen brödtext —
-`cavus` ("subst. ihålig"), `communis` ("subst. gemensam, delad") och `convexus`
-("subst. konvex, utbuktande"). Samma feltyp som `sopor`/`submukosa`/`stridor`
-(rättade 0.9.238) och den `ORDLISTA.md` varnar för. De rörs inte i böjningspasset
-— fältet är ett annat, och en tagg som byts ska granskas för sig.
+- **Sidopass: ordklasstaggar och textfel** (0.9.339). C-passet avslöjade tre
+  latinska adjektiv taggade `subst.` Fyndet svepte jag över **hela filen**, inte
+  bara C: **tio** poster bar fel tagg — `cavus`, `communis`, `convexus`, `durus`,
+  `jejunus`, `opponens`, `proprius`, `splenius`, `teres`, `triquetrus`. Samma
+  feltyp som `sopor`/`submukosa`/`stridor` (0.9.238). Det omvända svepet
+  (`adj.`-taggade substantiv) gav en enda träff, `incisivus`, som `ORDLISTA.md`
+  redan slår fast är korrekt taggad — alltså inget fel.
+
+  Åtta textfel lästa i samma dumpar: tyska ord i svensk text (`hohlfot` →
+  *hålfot*, `eigen` → *egen*, `schulderleden` → *skulderleden*), kongruens
+  (`jejunum är ofta tom` → *tomt*), skrivfel (`hudd-` → *hud-*), ett obegripligt
+  ord (`den bromskkörningsformation` → *den kölformade list*), ett sakfel
+  (`corpus coracoideum` finns inte — strukturen heter *processus coracoideus*),
+  och en osvensk form som ströks hellre än gissades om (`Sv. kaudad`).
+
+  Uppslagsordet **`cremster` fanns inte som ord** — muskeln heter *cremaster*.
+  Omdöpt efter kontroll av skyddsregel 6: nyckeln stod inte i
+  `kb_glossary_terms.json`, ingen icke-genererad fil nämnde den, och slugen
+  `term-cremaster` var ledig (TA-posten heter `cremaster, musculus`).
 
 ### Etapp 3 · Jfr/Se/Motsats-länkning — risk: hög, kräver beslut (se punkt 6)
 - [ ] Designbeslut taget (väg a eller b, punkt 6).

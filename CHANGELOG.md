@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.339
+- **Tio latinska adjektiv stod taggade som substantiv och motsades av sin egen glosa.** `durus` = "hård", `teres` = "rund", `communis` = "gemensam, delad" — ordklassen bestäms av uppslagsordet, inte av definitionens första ord. Rättade: `cavus`, `communis`, `convexus`, `durus`, `jejunus`, `opponens`, `proprius`, `splenius`, `teres`, `triquetrus`. Samma feltyp som *sopor*/*submukosa*/*stridor* (0.9.238).
+  - Fyndet gjordes på tre poster i C, men svepet gick över **hela filen** — annars hade de sju övriga blivit kvar. Det omvända svepet (`adj.`-taggade substantiv) gav en enda träff, `incisivus`, som `ORDLISTA.md` redan slår fast är korrekt taggad.
+- **Åtta textfel rättade**, alla lästa med ögonen i samma genomgång: tre tyska ord som halkat in i svensk text (`pes cavus = hohlfot` → *hålfot*, `egentlig, eigen` → *egen*, `t.ex. schulderleden` → *skulderleden*), ett kongruensfel (*jejunum är ofta tom* → *tomt*; jejunum är neutrum), ett skrivfel (`Sv. kutan, hudd-`), ett obegripligt ord (*carina tracheae = den bromskkörningsformation* → *den kölformade list*), och ett sakfel: `coracoideus` påstod att processus coracoideus är "corpus coracoideum på scapula" — den strukturen finns inte, utskottet heter *processus coracoideus*.
+  - `caudatus` skrev "Sv. kaudad" — ingen svensk form. Ordet **ströks** i stället för att ersättas: *caudatus* (svansförsedd) är inte samma sak som *caudalis* (mot svansänden), så en ersättning hade varit en gissning.
+- **Uppslagsordet `cremster` fanns inte som ord** — muskeln heter *cremaster*. Omdöpt efter kontroll av skyddsregel 6 i facit: nyckeln stod inte i `kb_glossary_terms.json`, ingen icke-genererad fil nämnde den, och slugen `term-cremaster` var ledig (TA-posten heter `cremaster, musculus`).
+- `python3 scripts/check_generators.py` grön: rundtripp identisk, 407 filer, 195 tester, 2 351/2 351 tooltip-ankare hela — inklusive de sex bokstavssidor vars poster rörts.
+
 ## 0.9.338
 - **Bokstav C böjs: 33 poster.** Tredje passet i etapp 4. C är alfabetets mest latinska bokstav — 989 av 1 039 poster saknade böjning, den högsta andelen i hela ordlistan (95 %), eftersom det är här TA-anatomin bor: *calcaneus*, *cartilago*, *cortex*, *cranium*, *cavitas* och hundratals till står i latinsk uppslagsform och böjs inte på svenska. Kandidaterna var de försvenskade posterna. Täckningen 25,5 % → 25,8 %.
 - **Latinskt ursprung är inte samma sak som latinskt ord.** `cancer` → `(-n)`, `cysta` → `(-n, pl. -or)` och `cytoplasma` → `(-n)` fick böjning: de är svenska ord idag, oavsett var de kommer ifrån. *Bakercysta* fick böjning i B-passet, så att lämna huvudordet *cysta* oböjt hade varit inkonsekvent. Gränsen går vid om ordet böjs i svensk text — inte vid dess etymologi.
