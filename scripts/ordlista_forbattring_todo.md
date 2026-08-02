@@ -658,7 +658,8 @@ particip och `-um`-läkemedlen får det inte.
     `new York Heart Association` (`NYHA`), `bortförande (efferent) lymfkärl`
     utan kongruens (`nodus lymphoideus`) och filens **enda** post med tyska
     citattecken, `„snurrnerven“` (`nervus ulnaris`).
-  - **Tre dubblettpar hittade, INTE sammanslagna — de kräver ett beslut:**
+  - **Tre dubblettpar hittade, INTE sammanslagna i bokstavspasset** — de krävde ett
+    beslut, som togs i 0.9.355 (se sidopasset nedan):
     1. `Musculus (M.)` / `musculus` (M). Bara `musculus` är wirad i facit;
        `Musculus (M.)` bär etymologin (*mus* + *-culus*).
     2. `meatus communis nasi` / `meatus nasi communis` (M). TA-formen är den
@@ -672,7 +673,32 @@ particip och `-um`-läkemedlen får det inte.
     `psoa`) mot 653 med streck. `bredspektrum` är prefixgruppens skyltord via
     `pick_example()` — hyphenering ändrar kortet på `medicinskordlista.html`
     till reservvalet, alltså en synlig ändring. `krikos`/`psoa` är dessutom
-    grekiska rotord snarare än kombinationsformer. Kräver beslut.
+    grekiska rotord snarare än kombinationsformer. Åtgärdade i 0.9.355 (nedan).
+
+- **Sidopass: M/N-passens fyra dubblettpar + prefixgruppens sista strecklösa**
+  (0.9.355). Samma ordning som H-passet: bokstavspasset flaggar, sidopasset slår
+  ihop efter användarens beslut. 11 195 → **11 190 poster**.
+  - **Sammanslagna, korrekt/husets form vinner:** `Musculus (M.)` → `musculus`
+    (den gemena är wirad i facit och är husets form för latinska lemman;
+    etymologin *mus* + *-culus* flyttades in), `meatus communis nasi` →
+    `meatus nasi communis` (TA-formen, i serie med `meatus nasi inferior/medius/
+    superior`), `naviculare` → `naviculare, os` (konventionen `<term>, os`;
+    stressfrakturen och "Även navikulare" flyttades in), `non-Hodgkin-lymfom` →
+    `non-Hodgkins lymfom` (etablerad svensk genitivform; ICD-11 `2A80–2A86`,
+    ICD-10-underkoderna och B/T-lymfocytupplysningen flyttades in, den strukna
+    formen bevarad som "Även …" och därmed sökbar via def-sökningen).
+  - **Prefixgruppen har nu 0 strecklösa av 657**, suffixgruppen 0 av 153:
+    `bredspektrum-`, `giga-`, `krikos` omskriven till kombinationsformen
+    `cric- / crico- / krik- / kriko-` med `Ex:`-rad, och `psoa` uppgången i
+    `psoas` (rotord, inte förled — stavfelet `psoa = länsmuskeln` rättat till
+    *ländmuskel* i den kvarvarande posten; det stod i båda).
+  - **Den förutsagda synliga ändringen inträffade:** prefixkortet på
+    `medicinskordlista.html` visar nu `a-` i stället för `bredspektrum`, eftersom
+    `pick_example()` inte har någon strecklös gemen term kvar att välja. Samma
+    mekanism som gav suffixkortet `daktyli` i D-passet.
+  - **Ingen `--repoint` behövdes** — ingen av de åtta termerna stod som nyckel i
+    `kb_glossary_terms.json` (kontrollerat per nyckel före bygget, skyddsregel 6).
+    `check_generators.py` exit 0, 195 tester gröna, 2 351/2 351 ankare hela.
 
 - **Sidopass: böjningsparentesernas notation, hela filen** (0.9.351). **328 poster**
   normaliserade, och skyddet levererat i samma commit.

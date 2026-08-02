@@ -40,7 +40,7 @@ Ordlistan byggs ut från en omfattande importerad lista med medicinska termer (3
 
 ## Status: fas 2 avslutad
 
-`data/ordlista.json` innehåller **11 195 poster och 0 stubs** (mätt 2026-08-02). Varje
+`data/ordlista.json` innehåller **11 190 poster och 0 stubs** (mätt 2026-08-02). Varje
 importerad term är berikad — det finns ingenting kvar att hämta ur råimporten, och
 sedan dess har filen dessutom vuxit långt förbi importen med TA-anatomi, labbvärden,
 sjukdomar med ICD-koder, psykiatritermer, läkemedel och örter.
@@ -57,25 +57,25 @@ print('total',len(d),'synliga',sum(1 for e in d if e.get('status')!='stub'),\
 
 ### Fälttäckning (mätt 2026-08-02) — facit för fältkompletteringen
 
-Mät aldrig detta på känsla; kör snutten under tabellen. **Siffrorna gäller alla 11 195
+Mät aldrig detta på känsla; kör snutten under tabellen. **Siffrorna gäller alla 11 190
 poster**, även de där fältet är motiverat frånvarande (ett prefix behöver ingen böjning,
 en förkortning sällan en etymologi) — "saknas" är alltså ett tak för arbetet, inte en
 arbetslista rakt av.
 
 | Fält | Poster | Täckning | Saknas |
 |---|---:|---:|---:|
-| Ordklasstagg | 11 195 | 100 % | 0 |
-| `Eng. ` | 9 691 | 86,6 % | 1 504 |
-| Etymologi (`Av lat./gr. …`) | 7 720 | 69,0 % | 3 475 |
-| `Sv. ` | 2 679 | 23,9 % | 8 516 |
-| Böjning i parentes | 3 381 | 30,2 % | 7 814 |
-| `Jfr ` | 1 393 | 12,4 % | 9 802 |
-| `ICD-10: ` | 945 | 8,4 % | 10 250 |
-| `Vardag. ` | 781 | 7,0 % | 10 414 |
-| `Se ` | 357 | 3,2 % | 10 838 |
-| `Motsats` | 157 | 1,4 % | 11 038 |
-| `Referensvärde` | 78 | 0,7 % | 11 117 |
-| Uttalsangivelse | **0** | 0,0 % | 11 195 |
+| Ordklasstagg | 11 190 | 100 % | 0 |
+| `Eng. ` | 9 685 | 86,6 % | 1 505 |
+| Etymologi (`Av lat./gr. …`) | 7 717 | 69,0 % | 3 473 |
+| `Sv. ` | 2 676 | 23,9 % | 8 514 |
+| Böjning i parentes | 3 381 | 30,2 % | 7 809 |
+| `Jfr ` | 1 393 | 12,4 % | 9 797 |
+| `ICD-10: ` | 944 | 8,4 % | 10 246 |
+| `Vardag. ` | 781 | 7,0 % | 10 409 |
+| `Se ` | 357 | 3,2 % | 10 833 |
+| `Motsats` | 157 | 1,4 % | 11 033 |
+| `Referensvärde` | 78 | 0,7 % | 11 112 |
+| Uttalsangivelse | **0** | 0,0 % | 11 190 |
 
 ```bash
 python3 - <<'PY'
@@ -133,7 +133,7 @@ rättade 0.9.352) — samma fälla som utskrivna former, `jonisera (joniserar, j
 joniserat)` (0.9.349). **Leta efter den i varje bokstav:** en post som *ser* böjd ut men
 inte syns i mätningen blir aldrig arbetad på.
 
-**Inga formavvikelser kvar (0.9.342):** samtliga 11 195 poster inleds med en gement
+**Inga formavvikelser kvar (0.9.342):** samtliga 11 190 poster inleds med en gement
 skriven ordklasstagg. Före det passet saknade 50 poster tagg helt och 28 skrev den med
 versal (`Adj./subst.:`, `Egennamn:`, `Förled:`) — de renderades utan kursiv ordklass,
 eftersom `format_def()` bara kursiverar en gement skriven tagg. **Skriv aldrig en ny
@@ -200,7 +200,7 @@ Stubs får aldrig synas på sajten förrän de är berikade. Det sköts på **tv
 ordklass. (böjning) definition i klartext. Sv. svensk synonym. Eng. english term. Vardag. vardagsuttryck. Av lat./gr. etymologi.
 ```
 
-Så ser de 11 195 posterna faktiskt ut: **ordklasstaggen först**, böjningen i parentes direkt
+Så ser de 11 190 posterna faktiskt ut: **ordklasstaggen först**, böjningen i parentes direkt
 efter, och därefter definitionen med liten begynnelsebokstav. Mallen stod tidigare med
 definitionen först och ordklassen inskjuten i mitten, vilket ingen post följer — och den
 inledande taggen är dessutom det enda `format_def()` kursiverar, så den *måste* stå först
@@ -304,6 +304,23 @@ en arbetslista. Utanför står:
 `Doxycyklin`, `Dexametason`. Undantaget är de som bygger på ett n-ord: `Dietyleter`
 får `(-n)`, eftersom *eter* heter *etern*.
 
+### Prefix- och suffixposter bär alltid sitt bindestreck
+
+Ett uppslagsord i prefixgruppen **slutar** med bindestreck (`brady-`, `pseud- / pseudo-`),
+ett i suffixgruppen **börjar** med det (`-itis`, `-ad`). Sedan 0.9.355 gäller det utan
+undantag: 657 av 657 prefix och 153 av 153 suffix. Två skäl utöver formen:
+
+- **Ett rotord är inte ett förled.** `krikos` och `psoa` låg i prefixgruppen fast de är
+  grekiska rotord. Rätt åtgärd är att skriva om posten till husets kombinationsform
+  (`cric- / crico- / krik- / kriko-`, med `Ex:`-rad) eller att låta den uppgå i den
+  svenska grundposten (`psoa` → `psoas`) — inte att sätta dit ett streck på ett ord som
+  inte är ett förled.
+- **`pick_example()` väljer första strecklösa gemena termen i gruppen**, så en enda
+  strecklös post kapar gruppkortets skyltord på `medicinskordlista.html`. `daktyli` blev
+  suffixgruppens skyltord i D-passet, `bredspektrum` prefixgruppens. **Kontrollera kortet
+  efter varje ändring av en `prefix `- eller `suffix `-tagg**; när ingen strecklös finns
+  kvar visar kortet gruppens första post (`a-`, `-ad`), vilket är det önskade läget.
+
 **Kemiska ämnesnamn på `-id` är n-ord och tar `(-en)`**, inte `(-et)`. Filens egna
 `klorid`, `lipid`, `peptid`, `steroid`, `opioid`, `glykosid`, `karbamid` och `tiazid`
 skriver alla `(-en)`, och läkemedelsnamnen följer grundordet: `Kaliumbromid`,
@@ -388,7 +405,7 @@ kunskapsbanken och byter ut allt som inte är a–z0–9 mot bindestreck, medan 
 lämna mellanslag och streck kvar.
 
 `node scripts/test_ordlista_sok.js` kör den riktiga sökkoden mot den riktiga datan och prövar
-bl.a. att båda stegen ger identiska länkar för var och en av de 11 195 posterna, att
+bl.a. att båda stegen ger identiska länkar för var och en av de 11 190 posterna, att
 slug-tabellen är identisk i Python och JS, och att k-formen fortfarande hittar c-formen.
 Skalet körs automatiskt av `scripts/check_generators.py`.
 
