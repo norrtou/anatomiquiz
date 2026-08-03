@@ -1107,6 +1107,71 @@ particip och `-um`-läkemedlen får det inte.
   - `check_generators.py`: rundtripp identisk, 407 filer oförändrade efter
     18 generatorsteg, 195 tester gröna.
 
+- **U: klart** (0.9.364). 63 av 122 U-poster saknade böjning; **20 fick den** ur
+  etablerade familjer: `-gen`-adjektiv `(-t, -a)` (`ulcerogen`, samma familj som
+  `patogen`/`homogen`/`heterogen`/`endogen`/`exogen`/`teratogen`, alla redan `(-t, -a)`);
+  `-al`-adjektiv `(-t, -a)`: `ungual`, `urogenital` (facit-belagd: `urogenitala` finns
+  redan i filens egen text), `uterin` (facit-belagd: `uterina` × 8); vanligt
+  Sv.-adjektiv `uniform` `(-t, -a)`; `-isk`-adjektiv `uremisk` `(pl. -a)` (facit-belagd:
+  `uremiskt` × 3); `-cancer`- och `-infektion`-sammansättningar (`urinblåsecancer` `(-n)`,
+  `urinvägsinfektion` `(-en, pl. -er)`, samma familjer som S/T-passens `-cancer`-ord resp.
+  `infektion` självt); neutrum-sammansättning `utomkvedshavandeskap` `(-et)` (som
+  `havandeskap` självt); `-psykologi`/`-rotation`-sammansättningar
+  (`utvecklingspsykologi` `(-n)` som `socialpsykologi`, `utåtrotation` `(-en, pl. -er)`
+  som syskonordet `inåtrotation`, redan i filen som Motsats); `-era`-verbmönstret på
+  `utsöndra` `(-r, -de, -t)` (facit-belagd: `utsöndrar` × 8, samma böjningsklass som
+  `jonisera`/`terminera`); `ures` `(-en, pl. -er)` (facit-belagd via syskonordet
+  `diures`, redan `(-en, pl. -er)`, samma rot); `-het`/`-ning`-abstrakta samt
+  redskapssammansättning `(-en)`: `Uppmärksamhet`, `Utsläckning`, `Ultraljudskniv`
+  (helt regelbunden svensk avledning, ingen gissning); `urinal` `(-t, -a)` för den
+  taggade adjektivbetydelsen (den inflikade "Även urinal = urinflaska"-bibetydelsen
+  lämnad oböjd i löptext, som andra bibetydelser i filen).
+  - **`urogenitalsystemet` fick `(best.)`** — uppslagsordet står redan i bestämd form
+    (`-systemet`), samma mönster som `rosen`/`städet`/`AV-knutan`/`cervikalpelaren`.
+  - **`ulcerös` slogs ihop med `ulcus`** efter husets `-ös`-regel (adjektivet ska
+    integreras i grundordet, inte ha egen post) — exakt samma fynd som T-passets
+    `tuberös`→`tuber`. Innehållet flyttat in som "Även ulcerös (adj.) = sårbildande,
+    sårig; …", `Sv. sårig` och `Jfr Ulceration` bevarade i den sammanslagna posten.
+    Noll facitträffar. `ulcerös kolit` (egen sjukdomsbenämning, som `Downs syndrom`)
+    rördes inte. 10 941 → **10 940 poster**.
+  - **`unipennatus` hade ett sakfel i `Sv.`-fältet**: `Sv. unipennate.` upprepade
+    engelska ordet i stället för att ge svenskan — rättad till `Sv. enfjädrad.`
+    (matchar postens egen huvuddefinition). Samma feltyp som `mesencefalon`/
+    `mastoideus` i tidigare pass: ett sakfel kan sitta var som helst i posten, inte
+    bara i böjningsparentesen.
+  - **Familjeanalogin gav även "lämna obojd"-svar, inte bara böjningar.** `unipara`
+    matchar exakt `primipara` (redan taggad `subst. (lat.)`, oböjd Latin-lemma-familj
+    för `-para`-orden) — samma slutsats utan att gissa en `(-n)` för att ordet råkar
+    beteckna en kvinna. `urolithiasis`/`ureterolitiasis` matchar `nefrolitiasis`/
+    `sialolitiasis` (S-passets redan avgjorda "lämnad obojd, grundordet saknar belagd
+    böjning"-familj) — konsekvens vann över gissning även här.
+  - **Bekräftat obojda med bevis, inte förbisedda:** `ulna`/`uncus`/`umbilicus`/
+    `urachus`/`unguis`/`uvea`/`uterus`/`utriculus` (Latin ettordslemma + `Sv.`-
+    översättning, samma "cornea/retina/pleura/aorta/urethra"-klass — även `aorta`
+    saknar böjning trots att den är lika vanlig i tal), `ulnaris`/`umbilicalis`/
+    `unilateralis`/`uncinatus`/`unipennatus` (Latin-adjektivfamiljen, egen `Sv.`/
+    "Svensk form:"-rad ger den riktiga svenska ordformen separat, som `cavus`/
+    `communis`/`tenuis`), `ureter` (samma Latin-lemma-klass som `aorta`, trots att
+    `ureterit`s egen text skriver den böjda formen "uretären" — spretande stavning
+    `ureter`/`uretär` är ett separat, inte akut, fynd som lämnas orört här).
+  - De ~46 kvarvarande är motiverade undantag: TA-flerordsserierna (`ulcus`-,
+    `uncus corporis`-, `uterina/uterinae`-, `uvula`-familjerna m.fl.), latinska
+    ettordslemman, prefix/suffix, förkortningar (`UFH`, `UL`, `UVA`, `UVI`) och
+    `ushers syndrom`/`Universell utformning` (svenska flerordstermer, böjs inte).
+  - **Öppet fynd, INTE åtgärdat: `-ande`-particip saknar `(oböjl.)` i stora delar av
+    alfabetet.** Grammatiskt är svenska presensparticip som adjektiv (`trängande`,
+    `sederande`, `perforerande` …) alltid oböjliga — men bara 2 av 17 sådana ord i
+    hela filen (`relaxerande`, `remitterande`) bär `(oböjl.)`; 15 gör det inte
+    (`adsorberande`, `adstringerande`, `antikoagulerande`, `ascenderande`,
+    `luteiniserande`, `nekrotiserande`, `perforerande`, `persevererande`,
+    `protruerande`, `sederande`, `trängande`, `valgiserande`, `variserande` plus
+    U-passets `undulerande`/`uteruskontraherande`, som ÅTGÄRDADES här eftersom de
+    ligger i den bokstav som redan var öppen). De 13 övriga sprids över hela
+    alfabetet (redan avslutade bokstäver) — för stort för ett sidopass i
+    förbifarten, kräver en egen liten svep. Facit: denna logg.
+  - `check_generators.py`: rundtripp identisk, 407 filer oförändrade efter
+    18 generatorsteg, 195 tester gröna.
+
 ### Etapp 3 · Jfr/Se/Motsats-länkning — risk: hög, kräver beslut (se punkt 6)
 - [ ] Designbeslut taget (väg a eller b, punkt 6).
 - [ ] Byggt enligt beslutet.
