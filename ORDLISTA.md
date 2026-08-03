@@ -64,18 +64,33 @@ arbetslista rakt av.
 
 | Fält | Poster | Täckning | Saknas |
 |---|---:|---:|---:|
-| Ordklasstagg | 11 190 | 100 % | 0 |
-| `Eng. ` | 9 685 | 86,6 % | 1 505 |
-| Etymologi (`Av lat./gr. …`) | 7 717 | 69,0 % | 3 473 |
-| `Sv. ` | 2 676 | 23,9 % | 8 514 |
-| Böjning i parentes | 3 381 | 30,2 % | 7 809 |
-| `Jfr ` | 1 393 | 12,4 % | 9 797 |
-| `ICD-10: ` | 944 | 8,4 % | 10 246 |
-| `Vardag. ` | 781 | 7,0 % | 10 409 |
-| `Se ` | 357 | 3,2 % | 10 833 |
-| `Motsats` | 157 | 1,4 % | 11 033 |
-| `Referensvärde` | 78 | 0,7 % | 11 112 |
-| Uttalsangivelse | **0** | 0,0 % | 11 190 |
+| Ordklasstagg | 10 942 | 100 % | 0 |
+| `Eng. ` | 9 685 | 88,5 % | 1 257 |
+| Etymologi (`Av lat./gr. …`) | 7 717 | 70,5 % | 3 225 |
+| `Sv. ` | 2 636 | 24,1 % | 8 306 |
+| Böjning i parentes | 4 561 | 41,7 % | 6 381 |
+| `Jfr ` | 1 393 | 12,7 % | 9 549 |
+| `ICD-10: ` | 944 | 8,6 % | 9 998 |
+| `Vardag. ` | 781 | 7,1 % | 10 161 |
+| `Se ` | 357 | 3,3 % | 10 585 |
+| `Motsats` | 157 | 1,4 % | 10 785 |
+| `Referensvärde` | 78 | 0,7 % | 10 864 |
+| Uttalsangivelse | **0** | 0,0 % | 10 942 |
+
+**Böjningssiffran hoppade 32,0 % → 41,7 % (0.9.361) utan att en enda post ändrades** — mätsnutten
+kände tidigare bara igen böjning som börjar med bindestreck eller `pl. -`. Men filen bär sedan
+länge en parallell, lika avsiktlig konvention: en bar språk-/statustagg som **hela** innehållet i
+den parentes som annars skulle hålla böjningen — `(lat.)`, `(fr.)`, `(ty.)`, `(it.)`, `(eng.)`,
+`(gr.)`, `(lat./gr.)`, `(lat. uttryck)`, `(pl.)`, `(plural)`, `(plur.)`, `(best.)`, `(oböjl.)` —
+och det **är** svaret på böjningsfrågan för den posten (”det här är ett latinskt/franskt/tyskt/
+italienskt/engelskt låneord, oböjt”, ”det här är redan bestämd form”, ”det här förekommer bara i
+plural”), inte en lucka. 1 063 poster bar en sådan tagg utan att mätsnutten räknade dem — `(eng.)`
+och `(lat.)` ensamma svarar för de flesta (många är TA-flerordstermer som ändå räknas som
+motiverat undantag, men gott och väl hundratals är ettordslemman/adjektiv/förkortningar/egennamn
+som annars setts som obearbetade). Hittat i R-passet när `rigid`, `resistent` m.fl. visade att
+samma "skriven ut i stället för bindestreck"-fälla (se nedan) även gäller de här taggarna.
+**Kontrollera alltid mot den här listan innan en post bedöms sakna böjning** — en post som redan
+bär en ensam språktagg i böjningsparentesen är klar, inte en arbetslista-post.
 
 ```bash
 python3 - <<'PY'
@@ -87,7 +102,8 @@ FALT = {
     "Eng.":          r"Eng\. ",
     "Etymologi":     r"\bAv (?:lat|gr|grek|eng|fr|ty|ital|arab|sanskr)",
     "Sv.":           r"Sv\. ",
-    "Böjning":       r"\((?:-[a-zåäö∅]|pl\. -)",
+    "Böjning":       r"\((?:-[a-zåäö∅]|pl\. -)|\((?:lat\.|fr\.|ty\.|it\.|eng\.|gr\."
+                     r"|pl\.|plural|plur\.|best\.|oböjl\.|lat\./gr\.|lat\. uttryck)\)",
     "Jfr":           r"Jfr ",
     "ICD-10":        r"ICD-10: ",
     "Vardag.":       r"Vardag\. ",
@@ -257,6 +273,8 @@ former; hitta inte på en ny för att den ser prydligare ut i just den posten.
 | adjektiv | `(-t, -a)` | `allogen`, `antalgisk` |
 | adjektiv som redan slutar på `-t` | `(pl. -a)` | `adekvat`, `adult` |
 | verb på `-era` | `(-r, -de, -t)` | `abducera`, `aspirera` |
+| adjektiv på `-ad`/`-erad` (particip) | `(-e)` | `protraherad`, `retarderad` |
+| adjektiv på `-bel`/`-abel` | `(-t, pl. -bla)` | `kompatibel`, `reversibel` |
 | dubbel ordklass | `(-t, -a; -en, pl. -er)` | `adenoid`, `analog` |
 
 Vid dubbel ordklass skiljer **semikolon** sinnena, och ordningen följer taggen:
@@ -280,10 +298,19 @@ form för nya poster.
 
 **Latinsk plural skrivs `(pl. …)`, aldrig `(plur. …)`** — `nevus (pl. nevi)`,
 `neuroleptikum (pl. neuroleptika)`, `nares (pl., lat.)`. 219 poster mot 8 innan
-0.9.354; fyra kvarstår (`psykofarmaka`, `protektiva ämnen`, `radikulära smärtor`,
-`ragader`) och de skriver `(plur.)` ensamt, där husformen för svensk pluralis är
-`(plural)` (`nässelutslag`, `mollusker`, `klimakteriebesvär`). Avgör i respektive
-bokstavspass vilken av de två det ska vara.
+0.9.354.
+
+**Ett uppslagsord som bara finns i plural skrivs `(pl.)`, inte `(plural)` eller
+`(plur.)`.** N-passet trodde `(plural)` var husformen (utifrån tre exempel:
+`nässelutslag`, `mollusker`, `klimakteriebesvär`) utan att räkna hela filen —
+en helfilsräkning i R-passet (0.9.361) visade att den bara skrivna, korta
+`(pl.)` är den faktiska majoritetsformen: **31** poster mot 13 `(plural)` och
+4 `(plur.)`. `(pl.)` normaliserat i R:s två (`radikulära smärtor`, `ragader`);
+`psykofarmaka`/`protektiva ämnen` (P) står kvar med `(plur.)` och rättas när
+en bokstavspass ändå rör dem. Samma mätfälla som språktaggarna ovan —
+`(plural)`/`(plur.)`/`(pl.)` börjar inget av dem med bindestreck, så alla tre
+är osynliga för mätsnutten oavsett vilken som väljs; skillnaden är bara
+inbördes konsekvens.
 
 **Böjning skrivs inte i varje post.** "Saknas" i täckningstabellen är ett tak, inte
 en arbetslista. Utanför står:

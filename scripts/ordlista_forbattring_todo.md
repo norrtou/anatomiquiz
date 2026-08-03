@@ -257,7 +257,13 @@ det är en egen fråga.
 ### Etapp 4 · Fältkomplettering — risk: låg, men LÅNGT (§0.3, för hand) 🔄 PÅGÅR
 Prioritetsordning (störst lucka, minst gissningsrisk först). Siffrorna är de
 ommätta ur `ORDLISTA.md`, inte punkt 1:s felaktiga:
-1. [ ] Böjning — **8 516 saknade vid start**, 7 722 kvar (A–Q klara).
+1. [ ] Böjning — **8 516 saknade vid start** (gammal mätsnutt). Mätsnutten
+   rättad 0.9.361 (se `ORDLISTA.md`, "Böjningssiffran hoppade …") sedan R-passet
+   visade att språk-/statustaggar som `(lat.)`/`(eng.)`/`(fr.)`/`(pl.)` m.fl.
+   redan var böjningssvaret för 1 063 poster utan att synas i mätningen.
+   **Med den nya mätsnutten: 6 381 kvar av 10 942 (41,7 % täckning).** A–R
+   granskade bokstav för bokstav (böjning tillagd där den saknades och var
+   säker; övriga är motiverade undantag).
 2. [ ] Etymologi — 3 481 saknar.
 3. [ ] Eng. — 1 504 saknar (många prefix/suffix motiverat undantagna).
 
@@ -942,6 +948,61 @@ particip och `-um`-läkemedlen får det inte.
   Omdöpt efter kontroll av skyddsregel 6: nyckeln stod inte i
   `kb_glossary_terms.json`, ingen icke-genererad fil nämnde den, och slugen
   `term-cremaster` var ledig (TA-posten heter `cremaster, musculus`).
+
+- **R: klart** (0.9.361). 245 av 380 R-poster saknade böjning; **22 fick den** —
+  substantiv/adjektiv hämtade ur redan etablerade familjer i filen (rörelsetermer
+  `(-en, pl. -er)`: `reposition`, `retraktion`, `retroversion`, `retrusion`,
+  `rotation`; `-medicin`/`-feber`/`-cancer`-sammansättningar: `rehabiliteringsmedicin`,
+  `rättsmedicin`, `refluxsjukdom`, `rosfeber`, `rektalcancer`; `-logi`/`-i`-ord
+  oräknebara `(-n)`: `reflexologi`, `reumatologi`, `rättspsykiatri`; adjektiv
+  `(-t, -a)`: `radial`, `rostral`; plus `ryggmärgsbråck`, `rotatorkuffsruptur`,
+  `Realitetsprövning`, `Rationalisering`, `Resiliens`, `Rullstolsutprovning`,
+  `ryggläge (supine)`). De 223 kvarvarande är motiverade undantag: TA-flerords-
+  serierna (`recessus`-, `rectus`-, `retinaculum`-, `rima`-familjerna m.fl.),
+  latinska ettordslemman (`recessus`, `regio`, `rete`, `reticulum`, `rima`,
+  `ramus`, `raphe`, `radius`, `radix`, `rectum` — samma "cornea/retina/pleura"-
+  klass), prefix, förkortningar och egennamn.
+  - **10 poster hade böjning skriven ut i stället för husets bindestrecksform** —
+    samma fälla som `jonisera`/`latent` i J/L, nu bekräftad även för particip-
+    och `-bel`-adjektiv: `retarderad`/`retroflekterad`/`retroverterad`
+    `(retarderat, -e)` → `(-e)` (efter `protraherad`); `reversibel`
+    `(reversibelt, -a)` → `(-t, pl. -bla)` (efter sitt eget derivat
+    `irreversibel`, som redan var rätt); `rigid` `(rigit, -a)` → `(-t, -a)`
+    (efter `komorbid`/`reumatoid` — felstavat OCH fel notation); `resistent`
+    `(resistent, -a)` → `(pl. -a)` (ordet slutar redan på `-t`); `ronkus`
+    `(-, ronki)` → `(pl. ronki)` (efter `nevus`); `ructus` `(-)` → borttagen
+    (meningslös, latinskt ettordslemma utan böjning); `radikulära smärtor`/
+    `ragader` `(plur.)` → `(pl.)` (se nästa punkt).
+  - **Stort mätfynd, inget med R-bokstaven att göra: böjningstäckningen
+    32,0 % → 41,7 % utan att en enda post ändrades.** Filen bär en parallell,
+    lika avsiktlig böjningskonvention som mätsnutten aldrig kände igen — en
+    bar språk-/statustagg som HELA innehållet i böjningsparentesen: `(lat.)`,
+    `(fr.)`, `(ty.)`, `(it.)`, `(eng.)`, `(gr.)`, `(lat./gr.)`,
+    `(lat. uttryck)`, `(pl.)`, `(plural)`, `(plur.)`, `(best.)`, `(oböjl.)`.
+    Ingen av dem börjar med bindestreck, så alla var osynliga. 1 063 poster
+    fångades av fixen (`ORDLISTA.md`:s mätsnutt uppdaterad, hela tabellen
+    ommätt). **Ta med till S och T:** en post med en sådan tagg i
+    böjningsparentesen är redan klar, inte en arbetslista-post — kontrollera
+    innan den räknas som saknande böjning.
+  - **`(plural)` var aldrig husformen — `(pl.)` är, med god marginal.**
+    N-passet drog slutsatsen av tre stickprov utan att räkna hela filen; en
+    fullräkning i det här passet visar 31 `(pl.)` mot 13 `(plural)` och
+    4 `(plur.)`. Normaliserat i R:s två (`radikulära smärtor`, `ragader`);
+    P-brödrarna `psykofarmaka`/`protektiva ämnen` står kvar och rättas nästa
+    gång de rörs.
+  - **`rostral` bar en meningslös `Sv. rostral.`** — upprepade uppslagsordet
+    rakt av (regeln om självreferens gäller bara latinska lemman, t.ex.
+    `anulus` → "Sv. anulus, ring"). Struket.
+  - **Bekräftat obojda, inte förbisedda, med bevis:** `rotator` (Latin-
+    agentnomen-familjen, redan prövad i O/P-sidopassen), `rosen`/`AV-knutan`/
+    `cervikalpelaren` (`(best.)`, redan bestämd form — matchar tre exempel,
+    inte bara ett), `Riksstroke`/`Rikshöft` (namngivna kvalitetsregister,
+    samma obojda mönster som `GallRiks`/`Swedeheart`), `Râle`/`Rapport`/
+    `Reiz`/`Ruffini` (redan korrekt `(fr.)`/`(ty.)`/`(it.)`-taggade).
+    `rs-virus` förblir `förk.` utan böjning, samma behandling som
+    `aids`/`HIV`/`RSV` (etablerad låneords-konvention, inte en lucka).
+  - `check_generators.py`: rundtripp identisk, 407 filer oförändrade efter
+    18 generatorsteg, 195 tester gröna.
 
 ### Etapp 3 · Jfr/Se/Motsats-länkning — risk: hög, kräver beslut (se punkt 6)
 - [ ] Designbeslut taget (väg a eller b, punkt 6).
