@@ -759,10 +759,11 @@ particip och `-um`-läkemedlen får det inte.
     för hand, 8 var äkta (`penis`, `perifer`, `placenta`, `posterior`,
     `posttrombotisk`, `pronator`, `prostata`, `proximal`, `pulpa` — 9
     egentligen), resten falska substamsmatchningar. **O-passets `pronator`-
-    undantag rättat ovan; abductor/adductor/constrictor/extensor/flexor/
-    levator/rotator/sphincter/supinator/tensor har INTE prövats med samma
-    metod och kan dölja fler missar — ej åtgärdat, kräver att man öppnar
-    redan stängda bokstäver.**
+    undantag rättat ovan.** ✅ **Hela familjen omprövad i sidopasset 0.9.359
+    (se nedan): `extensor` och `supinator` fick samma rättelse, resten
+    (`abductor`/`adductor`/`constrictor`/`flexor`/`levator`/`rotator`/
+    `sphincter`/`tensor`/`obturator`/`opponens`) gav noll träffar och
+    förblir bekräftat obojda.**
   - **68 nya böjningar, i grupper:** 21 läkemedelsnamn (`Paklitaxel` …
     `Protriptylin`, alla `(-et)` efter `Omeprazol`-mallen från O), 8 "läran
     om"/`-i`/`-logi`-ord (`parapsykologi`, `plagiocefali`, `plastikkirurgi`,
@@ -807,6 +808,17 @@ particip och `-um`-läkemedlen får det inte.
   — noll träffar i filens löptext, ingen gömd böjd form att hämta. Första
   bokstaven i etapp 4 utan en enda rad ändrad i `data/ordlista.json`.
   Täckningen står kvar på 31,0 %, 11 190 poster.
+
+- **Sidopass: hela Latin-agentnomen-familjen omprövad mot ordgränsmetoden**
+  (0.9.359), på användarens uttryckliga begäran efter P-passets `pronator`-
+  fynd. `abductor`, `adductor`, `constrictor`, `flexor`, `levator`, `rotator`,
+  `sphincter`, `tensor`, `obturator`, `opponens` prövade — noll träffar,
+  förblir bekräftat obojda. **`extensor` (E) och `supinator` (S) hade dold
+  böjning**: `extensorn` stod i en `musculus`-posts `Funktion:`-fält
+  ("enda egentliga extensorn") och `supinatorn` i en annan post
+  ("underarmens baksida som rymmer sträckmusklerna och supinatorn"). Båda
+  fick `(-n, pl. -er)`, samma form som `pronator`. `check_generators.py`
+  grönt, 2 351/2 351 ankare hela.
 
 - **Sidopass: böjningsparentesernas notation, hela filen** (0.9.351). **328 poster**
   normaliserade, och skyddet levererat i samma commit.
