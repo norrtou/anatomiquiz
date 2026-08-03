@@ -261,9 +261,9 @@ ommätta ur `ORDLISTA.md`, inte punkt 1:s felaktiga:
    rättad 0.9.361 (se `ORDLISTA.md`, "Böjningssiffran hoppade …") sedan R-passet
    visade att språk-/statustaggar som `(lat.)`/`(eng.)`/`(fr.)`/`(pl.)` m.fl.
    redan var böjningssvaret för 1 063 poster utan att synas i mätningen.
-   **Med den nya mätsnutten: 6 381 kvar av 10 942 (41,7 % täckning).** A–R
+   **Med den nya mätsnutten: 6 245 kvar av 10 941 (42,9 % täckning).** A–T
    granskade bokstav för bokstav (böjning tillagd där den saknades och var
-   säker; övriga är motiverade undantag).
+   säker; övriga är motiverade undantag). NÄSTA BOKSTAV: U.
 2. [ ] Etymologi — 3 481 saknar.
 3. [ ] Eng. — 1 504 saknar (många prefix/suffix motiverat undantagna).
 
@@ -1055,6 +1055,55 @@ particip och `-um`-läkemedlen får det inte.
     latinska ettordslemman (`sella`, `septum`, `stapes`, `stratum`, `sulcus` —
     samma "cornea/retina/pleura"-klass), prefix/suffix, förkortningar och
     egennamn.
+  - `check_generators.py`: rundtripp identisk, 407 filer oförändrade efter
+    18 generatorsteg, 195 tester gröna.
+
+- **T: klart** (0.9.363). 483 av 641 T-poster saknade böjning (mätt med den
+  rättade mätsnutten); **65 fick den** — `-isk`-adjektiv `(pl. -a)` (den sena
+  alfabetets etablerade form, utan neutrumdel — se `ORDLISTA.md`):
+  `toxisk`, `tonisk`, `terapeutisk`, `traumatisk`, `trofisk`, `trombolytisk`,
+  `trombotisk`, `tympanitisk`, `tyreostatisk`, `tyreotoxisk`, `teratologisk`,
+  `tokolytisk`, `transitorisk`; `-al`-adjektiv `(-t, -a)`: `trakeal`,
+  `trakeolaryngeal`, `transabdominal`, `transdermal`, `transkutan`,
+  `transmural`, `transuretral`, `transversospinal`, `testikulär`, `tubulär`;
+  `-era`-verb: `terminera`, `termoreglera`; oräknebara `-i`/`-logi`-ord `(-n)`:
+  `tanatologi`, `teratologi`, `thoraxkirurgi`, `trädgårdsterapi`; plus
+  `-cancer`-, `-läge`- och psykiatri-/OT-batchen (`tyreoideacancer`,
+  `testikelcancer`, `Trendelenburgläge`, `Tvångstanke`, `Tvångshandling`,
+  fem `Tanke-`-sammansättningar, `Traumabearbetning`, `Tillgänglighet`,
+  `Tryckavlastning`) och läkemedelsnamn (`Talidomid` `(-en)` efter
+  D/L-passens `-id`-regel, `Tubokurarin` `(-et)`).
+  - **`transversalplan` fick `(-et, pl. -∅)`** — ett öppet fynd från R-passets
+    sidoletning (syskonordet `frontalplan` hade redan formen, men
+    `transversalplan` själv låg obehandlad tills dess bokstav stod på tur).
+  - **Sex poster i HELA filen (fem i T, en i V) delade en identisk gammal
+    bugg**, hittad genom att söka mönstret över alla 10 942 poster i stället
+    för att bara ögna igenom bokstaven: ledande tagg `verb`/`adj.` i stället
+    för `subst.`, med böjningen felaktigt gömd mitt i brödtexten som en död
+    `(subst., -X)`-rest — samma feltyp som `seborré`/`sopor`/`stridor`/
+    `submukosa` i S-passet. `torakotomi`, `toxikologi`, `transformation`,
+    `trigger`, `trombektomi` (T) och `vasektomi` (V, åtgärdad nu eftersom
+    bugmönstret är identiskt och kostnadsfritt att fixa i samma svep) fick
+    alla sin böjning flyttad fram och den döda mittlappen borttagen.
+  - **`tenuis` var taggad `subst.` fast det är ett latinskt adjektiv**
+    (”tunn”) — samma feltyp som C-passets `cavus`/`communis`/`teres` m.fl.
+    (0.9.339), missad då eftersom det svepet bara körde mot bokstav C.
+    Rättad till `adj.`, ingen böjning (latinskt lemma).
+  - **`tuberös` slogs ihop med `tuber`** efter husets `-ös`-regel (adjektivet
+    ska integreras i grundordet, inte ha egen post). Innehållet flyttat in
+    som "Även tuberös (adj.) = …". Noll facitträffar. 10 942 → **10 941
+    poster**.
+  - **Bekräftat obojda med bevis, inte förbisedda:** `tensor` (Latin-
+    agentnomen-familjen, prövad tre gånger sedan P-passet), `thorax`/
+    `thymus`/`talamus` (th-formen behålls avsiktligt för TA-lemman resp.
+    redan avgjort obojda i H-passet), `tinnitus`/`torticollis`/`tetanus`
+    (latinska diagnosnamn utan textbelägg för svensk böjning i filen —
+    `toxoplasmos` är undantaget, redan svensk stavning, fick `(-en)`).
+  - De ~380 kvarvarande är motiverade undantag: TA-flerordsserierna
+    (`tuberculum`-, `tunica`-, `tractus`-, `trigonum`-familjerna m.fl.),
+    latinska ettordslemman (`talus`, `tempus`, `thorax`, `trochlea`,
+    `truncus` — samma "cornea/retina/pleura"-klass), prefix/suffix,
+    förkortningar och egennamn.
   - `check_generators.py`: rundtripp identisk, 407 filer oförändrade efter
     18 generatorsteg, 195 tester gröna.
 
