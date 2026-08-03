@@ -1004,6 +1004,60 @@ particip och `-um`-läkemedlen får det inte.
   - `check_generators.py`: rundtripp identisk, 407 filer oförändrade efter
     18 generatorsteg, 195 tester gröna.
 
+- **S: klart** (0.9.362). Alfabetets största bokstav, 1 033 poster; 718 saknade
+  böjning enligt den rättade mätsnutten (0.9.361). **61 fick böjning**, hämtad
+  ur samma etablerade familjer som tidigare bokstäver: `-medicin` (`smärtmedicin`,
+  `socialmedicin`), `-logi`/`-i` oräknebart `(-n)` (`semiologi`, `sexologi`,
+  `socialpsykologi`, `splanknologi`, `somnologi`, `Samtalsterapi`), `-cancer`/
+  `-feber`/`-sjukdom` (`sköldkörtelcancer`, `skivepitelcancer`, `sorkfeber`,
+  `skrumplever`), rörelse-/kliniska termer `(-en, pl. -er)` (`supination`,
+  `synaps`, `synergist`, `spondyloartros`, `senskideinflammation`,
+  `Sorgereaktion`, `Stressreaktion`, `Sittanalys`), och hela psykiatri-/
+  OT-namnbatchen (`Separationsångest`, `Stress`, `Självkänsla`,
+  `Självförtroende`, `Självbild`, `Självmedkänsla`, `Självskadebeteende`,
+  `Suicidtanke`, `Suicidrisk`, `Suicidalitet`, `Sjukdomsinsikt`, `Sömnlöshet`,
+  `Somnambulism`, `Samsjuklighet`, `Symtomlindring`, `Splint`,
+  `Sårsköljningsset`) samt läkemedelsnamn (`Salvarsan`, `Skopolamin`,
+  `Streptomycin`, `Sulfanilamid` — den sista `(-en)` efter D/L-passens
+  `-id`-kemikalieregel, inte `(-et)`).
+  - **`somatoforma` bytte uppslagsord till `somatoform`.** Enda posten i filen
+    där ett adjektivs huvuduppslag stod i pluralform; böjningen var dessutom
+    skriven ut `(somatoform, -t)` i stället för husets `(-t, -a)`. Noll
+    facitträffar (skyddsregel 6), namnbytet riskfritt.
+  - **Fyra poster bar en gammal, halvgjord ordklassrättning som aldrig
+    städades klart.** `seborré` inledde fortfarande med fel tagg `adj.` trots
+    att det är ett substantiv — rättad till `subst. (-n)`, den döda
+    `(subst., -n)`-lappen mitt i texten borttagen. `sopor`/`submukosa` hade
+    redan rätt ledande tagg men en tom `(subst.)`-rest kvar mitt i meningen
+    (ingen böjning, ren dubblettklump) — borttagen. `stridor` hade sin
+    böjning `(-en)` gömd mitt i texten i stället för direkt efter taggen —
+    flyttad fram. **Samma feltyp som `ORDLISTA.md` redan namngav** (`sopor`,
+    `submukosa`, `laxans`, `stridor` — bara `laxans` var städad klar av
+    L-passet); nu är alla fyra rena.
+  - **`strålben`/`städet` skrev `(best. -et)` — en form som inte finns i
+    huset.** `strålben` (grundform) fick vanlig `(-et)`; `städet` (redan
+    bestämd form, som `rosen`/`AV-knutan`) fick bara `(best.)`. Båda hade
+    dessutom en meningslös `Sv.`-rad som bara upprepade uppslagsordet —
+    struken, samma fynd som `rostral` i R-passet. Svepte samtidigt hela S för
+    fler såna: `synaps`/`systole` hade samma tomma självreferens (`Sv. synaps.`,
+    `Sv. systole.`) och städades. **`sacculus`/`sartorius`/`splenius`/
+    `supinator` rördes INTE** — där är självreferensen legitim (bekräftar att
+    ett latinskt lemma också används oböjt i svenskan, samma mönster som
+    `anulus` → "Sv. anulus, ring").
+  - **Bekräftat obojda med bevis, inte förbisedda:** `sphincter` (Latin-
+    agentnomen-familjen, redan prövad två gånger), `spontanpneumotorax`
+    och `sialolitiasis` (matchar sina redan obojda grundord `pneumotorax`/
+    `nefrolitiasis` — konsekvens vann över att gissa en böjning grundordet
+    självt saknar), `sperma`/`stoma`/`sunna`/`sustento` (genus/böjning inte
+    belagt någonstans i filens egen text, lämnade obojda hellre än gissade).
+  - De ~640 kvarvarande är motiverade undantag: TA-flerordsserierna
+    (`sacculus`/`saccus`-, `sinus`-, `spina`-, `sutura`-familjerna m.fl.),
+    latinska ettordslemman (`sella`, `septum`, `stapes`, `stratum`, `sulcus` —
+    samma "cornea/retina/pleura"-klass), prefix/suffix, förkortningar och
+    egennamn.
+  - `check_generators.py`: rundtripp identisk, 407 filer oförändrade efter
+    18 generatorsteg, 195 tester gröna.
+
 ### Etapp 3 · Jfr/Se/Motsats-länkning — risk: hög, kräver beslut (se punkt 6)
 - [ ] Designbeslut taget (väg a eller b, punkt 6).
 - [ ] Byggt enligt beslutet.
