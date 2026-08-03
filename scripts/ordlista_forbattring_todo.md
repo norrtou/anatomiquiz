@@ -257,7 +257,7 @@ det är en egen fråga.
 ### Etapp 4 · Fältkomplettering — risk: låg, men LÅNGT (§0.3, för hand) 🔄 PÅGÅR
 Prioritetsordning (störst lucka, minst gissningsrisk först). Siffrorna är de
 ommätta ur `ORDLISTA.md`, inte punkt 1:s felaktiga:
-1. [ ] Böjning — **8 516 saknade vid start**, 7 789 kvar (A–O klara).
+1. [ ] Böjning — **8 516 saknade vid start**, 7 722 kvar (A–P klara).
 2. [ ] Etymologi — 3 481 saknar.
 3. [ ] Eng. — 1 504 saknar (många prefix/suffix motiverat undantagna).
 
@@ -718,9 +718,13 @@ particip och `-um`-läkemedlen får det inte.
     `(-en, pl. -er)` — samma familj som E-passets städning).
   - **Två Latin-agentnomen-familjer bekräftade som konsekventa undantag:**
     `obturator` (jfr `abductor`, `adductor`, `constrictor`, `extensor`, `flexor`,
-    `levator`, `pronator`, `rotator`, `sphincter`, `supinator`, `tensor` — inga
-    böjda i sina resp. redan avslutade bokstäver) och `opponens` (samma
-    `-ens`/`-ans`-particip som C-passets `concomitans`) böjs inte.
+    `levator`, `rotator`, `sphincter`, `supinator`, `tensor` — inga böjda i sina
+    resp. redan avslutade bokstäver) och `opponens` (samma `-ens`/`-ans`-particip
+    som C-passets `concomitans`) böjs inte. **Rättelse från P-passet:**
+    `pronator` stod felaktigt med i den här familjen — P-passet hittade
+    `pronatorn`/`pronatorerna` i filens egen löptext (i `pronator quadratus`/
+    `pronator teres`-posterna) och gav `pronator` `(-n, pl. -er)`. Övriga
+    ord i listan är fortfarande obekräftade utan liknande textbevis.
   - **Två textfel:** `orofarynks` → *orofarynx* (syskonen `nasofarynx`,
     `hypofarynx`, `larynx`, `farynx` stavar alla utan `-s`) och `orificum` →
     *orificium* (postens egen etymologi sade redan `orificium = öppning`;
@@ -741,6 +745,56 @@ particip och `-um`-läkemedlen får det inte.
     därmed undantagna oavsett), så det blockerar INTE etapp 4 — men det är för
     stort för att lösas i förbifarten och kräver en egen riskgenomgång
     (jfr punkt 2 i den här filen) innan något slås ihop.
+
+- **P: klart** (0.9.357). 848 av 1 181 poster saknade böjning — P är alfabetets
+  största bokstav — **68 fick den**. Täckningen 30,4 % → **31,0 %**.
+  - **Metodfynd som ändrade arbetssättet mitt i passet:** familjeanalogi
+    ("obductor/adductor/… böjs inte, så det gör pronator/supinator inte
+    heller") räcker inte — den missade att `pronator` faktiskt STÅR böjd i
+    filens egen löptext (`pronatorn`/`pronatorerna` i `pronator quadratus`/
+    `teres`-posterna). Ny rutin, använd resten av passet: sök
+    `\b<term>(en|et|n|t|arna|erna|ens|ets)\b` (ordgräns före, annars fångar
+    substrängar som `parställda`/`pest`/`portion`/`pulmonalis`) över HELA
+    filens term+def-text, inte bara i termens egen post. 21 träffar prövades
+    för hand, 8 var äkta (`penis`, `perifer`, `placenta`, `posterior`,
+    `posttrombotisk`, `pronator`, `prostata`, `proximal`, `pulpa` — 9
+    egentligen), resten falska substamsmatchningar. **O-passets `pronator`-
+    undantag rättat ovan; abductor/adductor/constrictor/extensor/flexor/
+    levator/rotator/sphincter/supinator/tensor har INTE prövats med samma
+    metod och kan dölja fler missar — ej åtgärdat, kräver att man öppnar
+    redan stängda bokstäver.**
+  - **68 nya böjningar, i grupper:** 21 läkemedelsnamn (`Paklitaxel` …
+    `Protriptylin`, alla `(-et)` efter `Omeprazol`-mallen från O), 8 "läran
+    om"/`-i`/`-logi`-ord (`parapsykologi`, `plagiocefali`, `plastikkirurgi`,
+    `presbyfagi`, `proteomik`, `psykofarmakologi`, `psykofysiologi`,
+    `psykopatologi`), 6 rörelsetermer (`pronation`, `protraktion`,
+    `plantarflexion`, `piloerektion`, `Psykoedukation`, `Projektion`, alla
+    `(-en, pl. -er)`/`(-en)` efter `abduktion`/`extension`-familjen), 4
+    adjektiv på `-al`/`-ar` (`palmar`, `plantar`, `proximal`, `prevertebral`
+    → `(-t, -a)` efter `distal`/`medial`/`lateral`/`kaudal`), 3 celltermer/
+    inflammationsord (`proktosigmoidit`, `panartros`, `proteinuri`), 3
+    `terapi`-/`syndrom`-sammansättningar (`Psykoterapi`, `Parterapi`,
+    `Personlighetssyndrom`, `postinfarktsyndrom` — fyra, efter `terapi`/
+    `syndrom`), och resten enskilda substantiv (`palilali`, `patergi`,
+    `penetrans`, `pilokarpin`, `paracetamol`, `prokalcitonin`, `pulpa`,
+    `palmaraponeuros`, `prostatacancer`, `psykoanalys`, `Psykodynamik`,
+    `Panikattack`, `Parasomni`). Plus **3 `(plural)`-taggar** för redan-
+    plurala uppslagsord (`prebiotika`, `probiotika`,
+    `provtagningsbeteckningar` — husformen från K-passet; osynliga för
+    mätsnutten precis som `nässelutslag`/`mollusker`, räknas ändå som klara).
+  - **`palliativ vård` miste sin felaktiga böjning** — ett av F-passets
+    kvarstående "17 flerordstermer i strid med regeln" (`(-en)` direkt efter
+    taggen läses som hela frasens egen). Samma fix som `fast vårdkontakt`
+    i D-passet. 15 kvar i R och T, tas när de bokstäverna står på tur.
+  - **Två textfel:** `pemberton` → *Pemberton* (eponymer med versal, som
+    `Guglielmi`/`Modic`) och `prolatio`s ordklasstagg `verb` → *subst.*
+    (det är ett latinskt substantiv). Båda kontrollerade mot skyddsregel 6.
+  - **Disease-namn lämnade medvetet obojda, ingen gissning:** `pemfigus`,
+    `pemfigoid`, `psoriasis`, `paranoia`, `placebo` — inget tydligt textbevis
+    i filen, samma försiktighet som `vitiligo` sedan tidigare.
+  - De 780 kvarvarande (efter de 3 `(plural)`-taggarna): 375 TA-flerordstermer
+    (`processus`-, `pars`-, `papilla`-, `plica`-serierna m.fl.), 94 prefix,
+    ~230 latinska ettordslemman, 66 förkortningar.
 
 - **Sidopass: böjningsparentesernas notation, hela filen** (0.9.351). **328 poster**
   normaliserade, och skyddet levererat i samma commit.
