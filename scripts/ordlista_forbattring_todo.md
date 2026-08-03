@@ -1158,17 +1158,96 @@ particip och `-um`-läkemedlen får det inte.
     `uncus corporis`-, `uterina/uterinae`-, `uvula`-familjerna m.fl.), latinska
     ettordslemman, prefix/suffix, förkortningar (`UFH`, `UL`, `UVA`, `UVI`) och
     `ushers syndrom`/`Universell utformning` (svenska flerordstermer, böjs inte).
-  - **Öppet fynd, INTE åtgärdat: `-ande`-particip saknar `(oböjl.)` i stora delar av
+  - **Öppet fynd, delvis åtgärdat: `-ande`-particip saknar `(oböjl.)` i stora delar av
     alfabetet.** Grammatiskt är svenska presensparticip som adjektiv (`trängande`,
     `sederande`, `perforerande` …) alltid oböjliga — men bara 2 av 17 sådana ord i
-    hela filen (`relaxerande`, `remitterande`) bär `(oböjl.)`; 15 gör det inte
+    hela filen (`relaxerande`, `remitterande`) bar `(oböjl.)` innan U-passet.
+    U-passets `undulerande`/`uteruskontraherande` ÅTGÄRDADES då eftersom de låg i
+    den bokstav som redan var öppen; V-passets `valgiserande`/`variserande`
+    åtgärdades av samma skäl när V öppnades (se den loggen). **11 kvarstår**
     (`adsorberande`, `adstringerande`, `antikoagulerande`, `ascenderande`,
     `luteiniserande`, `nekrotiserande`, `perforerande`, `persevererande`,
-    `protruerande`, `sederande`, `trängande`, `valgiserande`, `variserande` plus
-    U-passets `undulerande`/`uteruskontraherande`, som ÅTGÄRDADES här eftersom de
-    ligger i den bokstav som redan var öppen). De 13 övriga sprids över hela
-    alfabetet (redan avslutade bokstäver) — för stort för ett sidopass i
-    förbifarten, kräver en egen liten svep. Facit: denna logg.
+    `protruerande`, `sederande`, `trängande`), alla i redan avslutade bokstäver —
+    för stort för ett sidopass i förbifarten, kräver en egen liten svep. Facit:
+    denna logg.
+  - `check_generators.py`: rundtripp identisk, 407 filer oförändrade efter
+    18 generatorsteg, 195 tester gröna.
+
+- **V: klart** (0.9.365). Alfabetets näst största bokstav (297 poster); 223 saknade
+  böjning. **39 fick den**, till stor del anatomi-tunga adjektivfamiljer: `-al`-
+  adjektiv `(-t, -a)` (`ventral` — facit-belagd via syskonorden `dorsal`/`lateral`/
+  `medial`/`kaudal`/`proximal`/`distal`, alla redan `(-t, -a)`; `vagal`, `vasal`,
+  `visceral`, `vulval`); `-är`-adjektiv `(-t, -a)` (`valvulär`, `vaskulär`,
+  `ventrikulär`, `vesikulär`); `-iv`-adjektiv `(-t, -a)` (`vasoaktiv`, `vegetativ`);
+  `-isk`-adjektiv `(pl. -a)` (`vasomotorisk`, `vasospastisk`, `venerisk`); `-abel`-
+  adjektiv `(-t, -a)` (`viabel`, `vulnerabel`); `-ös`-adjektiv `(-t, -a)` i samma
+  stora, redan etablerade familj som `adipös`/`bullös`/`komatös`/`membranös`/
+  `ossös`/`serös` (`viskös`, som INTE hade någon grundordspost att slås ihop med,
+  se nedan om `villös`/`varikös`); enstaka `-id`/`-ell`/`-al` (`valid`, `visuell`,
+  `vital`, `voluntär`); `-logi`-orden `(-n)` (`vaccinologi`, `venereologi`,
+  `virologi`); `-era`-verben `(-r, -de, -t)` (`vaskularisera`, `virilisera`);
+  `-cancer`-familjen `(-n)` (`ventrikelcancer`); `varikocele` `(-t, pl. -n)` (facit-
+  belagd via syskonordet `hydrocele`, samma `-cele`-suffix); `vitiligo` `(-n)`
+  (facit-belagd via syskonordet `impetigo`, samma `-igo`-suffix, samma hudsjukdoms-
+  kategori); vanliga substantiv (`vårdhygien` `(-en)`, `vinterkräksjuka` `(-n)`)
+  samt psykiatri-/OT-batchen (`Vanföreställning` `(-en)`, `Vanföreställningssyndrom`
+  `(-et, pl. -)` som syskonordet `syndrom`, `Validering` `(-en)`).
+  - **`valgiserande`/`variserande` fick `(oböjl.)`** — de två `-ande`-particip som
+    låg i V, se det öppna fyndet ovan (U-passets logg).
+  - **Nytt öppet fynd: `-ös`-adjektiv har INTE konsekvent slagits ihop med sin
+    grundord, trots husregeln.** `tuberös`→`tuber` (T) och `ulcerös`→`ulcus` (U)
+    följde regeln, men filen bär redan ett tiotal `-ös`-adjektiv som fått EGEN post
+    trots att grundordet finns kvar oberört: `bullös` (`bulla` finns), `komatös`
+    (`koma` finns), `ossös` (`os` finns), `papulös` (`papel` finns), `parenkymatös`
+    (`parenkym` finns), `polypös` (`polyp` finns), `serös` (`serum` finns),
+    `stuporös` (`stupor` finns) — 8 bekräftade fall (rot verifierad i filen, inte
+    gissad), alla i redan avslutade bokstäver. Blockerar inget, men är för stort
+    för ett sidopass i förbifarten — kräver ett användarbeslut om huruvida de ska
+    slås ihop i efterhand eller lämnas, eftersom `venös` och flera andra
+    `-ös`-ord redan står ensamma utan grundordspar (`vena`/`ven` har ingen egen
+    post att slå ihop med) och alltså inte är fel i sig.
+  - **`villös` slogs ihop med `villus`** och **`varikös` slogs ihop med `varice`**
+    (samma husregel som `tuberös`/`ulcerös`, båda hade ett rent grundordspar i
+    filen: `villus`="tarmludd", `varice`="åderbråck", som `varikös` redan hade en
+    trasig, ofullständig integrering av — "Även varikös ven." utan egen
+    betydelseförklaring — nu ersatt med den fullständiga "Även varikös (adj.) = …"-
+    formen). Noll facitträffar för båda. 10 940 → 10 938 poster.
+  - **`vena (ven)` var en ordagrann dubblett av `vena`** — två poster med nästan
+    identisk definition ("blodkärl som leder blod tillbaka till hjärtat"), upptäckt
+    vid en vanlig genomläsning, inte en riktad sökning. `vena` är facit-wirad,
+    `vena (ven)` var det inte. Dubblettens enda unika innehåll (`Vardag. blodåder.`)
+    flyttades in i `vena` innan dubbletten togs bort. 10 938 → **10 937 poster**.
+  - **`veganer` bytte uppslagsord till `vegan`** — samma feltyp som S-passets
+    `somatoforma`→`somatoform`: en plural stod som huvuduppslag med förklaringen
+    "(pl.; sing. vegan)" i böjningsparentesen i stället för att singularen var
+    huvudordet och böjningen `(-en, pl. -er)`. Noll facitträffar, namnbytet
+    riskfritt.
+  - **Familjeanalogin gav även "lämna obojd"-svar:** `ventriculus` matchar inte
+    `ventrikel` (den redan existerande, redan böjda svenska formen `(-n; pl.
+    ventriklar)`) utan är den Latinska TA-formen — samma mönster som
+    `vaginalis`/`vertebralis`/`ventralis`/`volaris` m.fl., som alla har en
+    `Svensk form:`/`Sv.`-rad som pekar på ett ANNAT, redan existerande uppslagsord.
+    `vertigo` lämnades obojd (ingen belagd böjning i filens egen text, till
+    skillnad från syskonordet `vitiligo`); `varioloides`/`volvulus` matchar redan
+    obojda latinska diagnosnamn (`tinnitus`/`torticollis`-klassen, S/T-passen).
+  - **Bekräftat obojda med bevis, inte förbisedda:** ~50 Latinska ettordslemman
+    (`vagina`, `vagus`, `valva`, `valvula`, `vas`, `vastus`, `velum`, `venter`,
+    `ventriculus`, `venula`, `vermis`, `verruca`, `vertebra`, `vertex`, `vesica`,
+    `vesicula`, `vestibulum`, `villus`, `viscera`, `viscus`, `visus`, `vola`,
+    `vomer`, `vomitus`, `vortex`, `vulnus`, `vulva` m.fl. — samma "cornea/retina/
+    aorta/ulna/uncus"-klass, alla med egen `Sv.`-översättning), Latin-adjektiv-
+    familjen med separat svensk form (`vaginalis`, `vasculosus`, `venosus`,
+    `ventralis`, `ventricularis`, `vermiformis`, `vertebralis`, `verticalis`,
+    `vesicalis`, `vestibularis`, `vetus`, `verus`, `vitreus`, `vocalis`, `volaris`
+    — `valgus`/`varus` hör till samma klass men med självrefererande `Sv.`, som
+    `anulus`), samt Latin plural-lemma (`viscera`, `venerea`, `vibrissae`).
+  - De ~145 kvarvarande är motiverade undantag: TA-flerordsserierna (`vagina`-,
+    `valva`-, `valvula`-, `vas`-, `vastus`-, `venae`-, `ventriculus`-, `vertebra`-,
+    `vesica`-, `vestibulum`-familjerna m.fl.), latinska ettordslemman,
+    prefix/suffix, förkortningar (`VH`, `VMA`, `VRE`, `VSD`, `VTE`, `VVH`, `VFU`,
+    `VC`, `VRI`, `VALMO`) och svenska/hybrida flerordstermer (`vasomotorisk rinit`,
+    `vesikoureteral reflux`, `vita pesten`, `von Willebrands sjukdom`, `Vaskulär
+    demens`).
   - `check_generators.py`: rundtripp identisk, 407 filer oförändrade efter
     18 generatorsteg, 195 tester gröna.
 

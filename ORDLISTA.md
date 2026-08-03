@@ -40,7 +40,7 @@ Ordlistan byggs ut från en omfattande importerad lista med medicinska termer (3
 
 ## Status: fas 2 avslutad
 
-`data/ordlista.json` innehåller **10 940 poster och 0 stubs** (mätt 2026-08-03). Varje
+`data/ordlista.json` innehåller **10 937 poster och 0 stubs** (mätt 2026-08-03). Varje
 importerad term är berikad — det finns ingenting kvar att hämta ur råimporten, och
 sedan dess har filen dessutom vuxit långt förbi importen med TA-anatomi, labbvärden,
 sjukdomar med ICD-koder, psykiatritermer, läkemedel och örter.
@@ -57,25 +57,25 @@ print('total',len(d),'synliga',sum(1 for e in d if e.get('status')!='stub'),\
 
 ### Fälttäckning (mätt 2026-08-02) — facit för fältkompletteringen
 
-Mät aldrig detta på känsla; kör snutten under tabellen. **Siffrorna gäller alla 10 940
+Mät aldrig detta på känsla; kör snutten under tabellen. **Siffrorna gäller alla 10 937
 poster**, även de där fältet är motiverat frånvarande (ett prefix behöver ingen böjning,
 en förkortning sällan en etymologi) — "saknas" är alltså ett tak för arbetet, inte en
 arbetslista rakt av.
 
 | Fält | Poster | Täckning | Saknas |
 |---|---:|---:|---:|
-| Ordklasstagg | 10 940 | 100 % | 0 |
-| `Eng. ` | 9 683 | 88,5 % | 1 257 |
-| Etymologi (`Av lat./gr. …`) | 7 715 | 70,5 % | 3 225 |
-| `Sv. ` | 2 630 | 24,0 % | 8 310 |
-| Böjning i parentes | 4 716 | 43,1 % | 6 224 |
-| `Jfr ` | 1 391 | 12,7 % | 9 549 |
-| `ICD-10: ` | 944 | 8,6 % | 9 996 |
-| `Vardag. ` | 781 | 7,1 % | 10 159 |
-| `Se ` | 357 | 3,3 % | 10 583 |
-| `Motsats` | 157 | 1,4 % | 10 783 |
-| `Referensvärde` | 78 | 0,7 % | 10 862 |
-| Uttalsangivelse | **0** | 0,0 % | 10 940 |
+| Ordklasstagg | 10 937 | 100 % | 0 |
+| `Eng. ` | 9 680 | 88,5 % | 1 257 |
+| Etymologi (`Av lat./gr. …`) | 7 712 | 70,5 % | 3 225 |
+| `Sv. ` | 2 629 | 24,0 % | 8 308 |
+| Böjning i parentes | 4 755 | 43,5 % | 6 182 |
+| `Jfr ` | 1 389 | 12,7 % | 9 548 |
+| `ICD-10: ` | 944 | 8,6 % | 9 993 |
+| `Vardag. ` | 781 | 7,1 % | 10 156 |
+| `Se ` | 357 | 3,3 % | 10 580 |
+| `Motsats` | 157 | 1,4 % | 10 780 |
+| `Referensvärde` | 78 | 0,7 % | 10 859 |
+| Uttalsangivelse | **0** | 0,0 % | 10 937 |
 
 **Böjningssiffran hoppade 32,0 % → 41,7 % (0.9.361) utan att en enda post ändrades** — mätsnutten
 kände tidigare bara igen böjning som börjar med bindestreck eller `pl. -`. Men filen bär sedan
@@ -149,7 +149,7 @@ rättade 0.9.352) — samma fälla som utskrivna former, `jonisera (joniserar, j
 joniserat)` (0.9.349). **Leta efter den i varje bokstav:** en post som *ser* böjd ut men
 inte syns i mätningen blir aldrig arbetad på.
 
-**Inga formavvikelser kvar (0.9.342):** samtliga 10 940 poster inleds med en gement
+**Inga formavvikelser kvar (0.9.342):** samtliga 10 937 poster inleds med en gement
 skriven ordklasstagg. Före det passet saknade 50 poster tagg helt och 28 skrev den med
 versal (`Adj./subst.:`, `Egennamn:`, `Förled:`) — de renderades utan kursiv ordklass,
 eftersom `format_def()` bara kursiverar en gement skriven tagg. **Skriv aldrig en ny
@@ -216,7 +216,7 @@ Stubs får aldrig synas på sajten förrän de är berikade. Det sköts på **tv
 ordklass. (böjning) definition i klartext. Sv. svensk synonym. Eng. english term. Vardag. vardagsuttryck. Av lat./gr. etymologi.
 ```
 
-Så ser de 10 940 posterna faktiskt ut: **ordklasstaggen först**, böjningen i parentes direkt
+Så ser de 10 937 posterna faktiskt ut: **ordklasstaggen först**, böjningen i parentes direkt
 efter, och därefter definitionen med liten begynnelsebokstav. Mallen stod tidigare med
 definitionen först och ordklassen inskjuten i mitten, vilket ingen post följer — och den
 inledande taggen är dessutom det enda `format_def()` kursiverar, så den *måste* stå först
@@ -432,7 +432,7 @@ kunskapsbanken och byter ut allt som inte är a–z0–9 mot bindestreck, medan 
 lämna mellanslag och streck kvar.
 
 `node scripts/test_ordlista_sok.js` kör den riktiga sökkoden mot den riktiga datan och prövar
-bl.a. att båda stegen ger identiska länkar för var och en av de 10 940 posterna, att
+bl.a. att båda stegen ger identiska länkar för var och en av de 10 937 posterna, att
 slug-tabellen är identisk i Python och JS, och att k-formen fortfarande hittar c-formen.
 Skalet körs automatiskt av `scripts/check_generators.py`.
 
