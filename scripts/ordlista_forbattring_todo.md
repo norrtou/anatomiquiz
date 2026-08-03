@@ -730,21 +730,14 @@ particip och `-um`-läkemedlen får det inte.
     *orificium* (postens egen etymologi sade redan `orificium = öppning`;
     exemplet i brödtexten rättat samtidigt). Båda kontrollerade mot
     skyddsregel 6: ingen facitnyckel, ingen icke-genererad fil.
-  - **⚠️ Stort öppet fynd, INTE åtgärdat — kräver eget beslut innan det rörs.**
-    248 poster med prefixform `arteria X`/`vena X`/`nervus X`/`musculus X`/
-    `musculi X` (tagg `subst. (lat.) …` + `Funktion: …`, ex. `musculus obliquus
-    superior`) duplicerar nästan exakt 248 redan existerande TA-poster i
-    suffixform `X, arteria`/`X, vena`/`X, nervus`/`X, musculus`/`X, musculi`
-    (husformat, ex. `obliquus superior, musculus`) spridda över HELA alfabetet
-    (mätt: 21 arteria-, 13 vena-, 39 nervus-, 162 musculus-, 13 musculi-par).
-    **Facit-wiringen pekar entydigt på prefixformen:** samtliga 248 prefixformer
-    står som nyckel i `kb_glossary_terms.json`, noll av suffixformerna gör det —
-    samma tiebreaker som M/N-sidopasset använde ("wirad i facit vinner"), fast
-    på 60x skalan. Motsvarar grovt 4,4 % av hela ordlistans 11 190 poster.
-    Ingen böjning berörs av fyndet (båda formerna är TA-flerordstermer och
-    därmed undantagna oavsett), så det blockerar INTE etapp 4 — men det är för
-    stort för att lösas i förbifarten och kräver en egen riskgenomgång
-    (jfr punkt 2 i den här filen) innan något slås ihop.
+  - **✅ Stort fynd, ÅTGÄRDAT i sidopasset 0.9.360** (se nedan): 248 poster med
+    prefixform `arteria X`/`vena X`/`nervus X`/`musculus X`/`musculi X`
+    dubblerade lika många TA-poster i suffixform. Facit-wiringen pekade på
+    prefixformen, men efter riskgenomgång (punkt 2 i den här filen) visade det
+    sig att husets ETABLERADE alfabetiska konvention är suffixformen (samma
+    som hundratals andra TA-poster) — användaren valde suffixformen som
+    vinnare, med prefixformens `Funktion:`-fält inflyttat. Facitnycklarna
+    pekades om i stället för att låta "wirad vinner" avgöra blint.
 
 - **P: klart** (0.9.357). 848 av 1 181 poster saknade böjning — P är alfabetets
   största bokstav — **68 fick den**. Täckningen 30,4 % → **31,0 %**.
@@ -819,6 +812,60 @@ particip och `-um`-läkemedlen får det inte.
   ("underarmens baksida som rymmer sträckmusklerna och supinatorn"). Båda
   fick `(-n, pl. -er)`, samma form som `pronator`. `check_generators.py`
   grönt, 2 351/2 351 ankare hela.
+
+- **Sidopass: 248 musculus/musculi/arteria/vena/nervus-dubbletter sammanslagna**
+  (0.9.360), på uttrycklig begäran efter O-passets fynd. Ordlistan
+  11 190 → **10 942 poster**.
+  - **Vägval:** frågan var vilken form som skulle vinna — prefixformen
+    (`musculus X`, wirad i facit) eller suffixformen (`X, musculus`, husets
+    etablerade alfabetiska konvention med `Eng.`/etymologi). Facit-wiringen
+    pekade på prefixformen (samma "wirad vinner"-regel som M/N-sidopasset),
+    men husformatet och alfabetisk konsekvens (hundratals andra `X, os`/
+    `X, arteria`-poster sorteras redan så) pekade på suffixformen. Användaren
+    valde suffixformen — ett medvetet undantag från "wirad vinner" när den
+    regeln pekar åt fel håll arkitektoniskt.
+  - **Arkitekturen kartlagd innan något rördes** (research-agent, inga filer
+    ändrade): prefixformerna är en manuellt importerad, ordagrant matchande
+    kopia av `data/muskeltabeller/*.json`/`data/karl/*.json` — **ingen
+    generator läser dem**, de existerar bara som facit-ankare för tooltips i
+    `kunskapsbank/muskeltabell-*.html`/`karl-*.html`/`nervtabell-*.html`.
+    Ingenting på sajten går sönder av att radera dem; källdatan för
+    tabellsidorna lever oberoende.
+  - **175 musculus/musculi-par:** prefixformens `Funktion: …`-mening flyttades
+    mekaniskt in i suffixformens def (före `Sv./Eng.`-fältet) — ren
+    textflytt av redan skriven, källbelagd text, ingen ny prosa hittad på.
+    Viss redundans mot suffixformens egen beskrivning accepterad som pris för
+    att aldrig tappa klinisk precision.
+  - **73 arteria/vena/nervus-par granskade för hand, en och en** (ingen mekanisk
+    genväg fanns — inget gemensamt fält att flytta). 70 av 73 var suffixformen
+    redan minst lika komplett; **3 hade fakta som annars runnit bort:**
+    `arteria carotis communis` och `arteria subclavia` fick höger/vänster-
+    ursprunget (truncus brachiocephalicus resp. aortabågen) tillskrivet,
+    `nervus dorsalis scapulae` fick grenen till `levator scapulae` tillbaka
+    (suffixformen nämnde bara romboidmusklerna).
+  - **⚠️ Facit-repointing missade nästan 239 nycklar.** Första svepet
+    ompekade bara de 248 nycklar vars TEXT var identisk med en raderad
+    prefixterm (`"musculus deltoideus"` → ny href). Men varje muskel har
+    ofta EN nyckel till — en svensk synonym (`"deltamuskeln"`) — vars href
+    pekade på SAMMA nu strukna ankare utan att nyckeltexten matchade
+    något i min lista. Hittades genom att skanna HELA facit efter alla
+    hrefs som pekade på ett av de 248 gamla ankarna, oavsett nyckelnamn —
+    239 till. **Lärdom: när ett ankare tas bort, sök efter varje FACIT-POST
+    vars href pekar dit, inte bara posten med samma namn som den borttagna
+    termen.**
+  - **⚠️ 12 statiska sidor utanför generatorkedjan hade hårdkodade döda hrefs**
+    efter facit-repointingen ändå, eftersom `wire_terms.py` med flit aldrig
+    rör en redan wired länk (samma gotcha som `th → t`-avsnittet i
+    `ORDLISTA.md` varnar för). Hittades genom att textsöka hela sajten
+    (`grep` över alla `.html`) efter de 248 gamla ankar-id:na direkt, inte
+    bara facit — `check_links.py` ser bara döda länkar som redan finns i
+    HTML, aldrig en facit-post som ingen sida använder än.
+    `python3 scripts/wire_terms.py --repoint <487 nycklar> --all` (en körning,
+    nycklarna i en Python-lista, inte shell-sammanslagna — mellanslag i en
+    flerordsnyckel som `"nervus dorsalis scapulae"` splittras annars av
+    skalet till tre separata, ogiltiga nycklar).
+  - `check_generators.py` exit 0, 195 tester gröna. `check_links.py`:
+    14 636 länkar, 2 351/2 351 tooltip-ankare hela.
 
 - **Sidopass: böjningsparentesernas notation, hela filen** (0.9.351). **328 poster**
   normaliserade, och skyddet levererat i samma commit.
