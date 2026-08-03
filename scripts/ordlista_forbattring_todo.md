@@ -257,7 +257,7 @@ det är en egen fråga.
 ### Etapp 4 · Fältkomplettering — risk: låg, men LÅNGT (§0.3, för hand) 🔄 PÅGÅR
 Prioritetsordning (störst lucka, minst gissningsrisk först). Siffrorna är de
 ommätta ur `ORDLISTA.md`, inte punkt 1:s felaktiga:
-1. [ ] Böjning — **8 516 saknade vid start**, 7 722 kvar (A–P klara).
+1. [ ] Böjning — **8 516 saknade vid start**, 7 722 kvar (A–Q klara).
 2. [ ] Etymologi — 3 481 saknar.
 3. [ ] Eng. — 1 504 saknar (många prefix/suffix motiverat undantagna).
 
@@ -795,6 +795,18 @@ particip och `-um`-läkemedlen får det inte.
   - De 780 kvarvarande (efter de 3 `(plural)`-taggarna): 375 TA-flerordstermer
     (`processus`-, `pars`-, `papilla`-, `plica`-serierna m.fl.), 94 prefix,
     ~230 latinska ettordslemman, 66 förkortningar.
+
+- **Q: klart** (0.9.358). Alfabetets minsta bokstav, 20 poster, **18 saknade
+  böjning — 0 fick den.** Samtliga är motiverade undantag: 2 prefix
+  (`quadr-/quadri-`, `quinti-`), 9 i `quadratus`/`quadriceps`-seriens
+  TA-flerordstermer och latinska adjektiv, 4 förkortningar (`QCT`,
+  `QuickDASH`, `qSOFA`), 3 främmandespråkstaggade poster med egen `Sv.`-rad
+  (`Quaddel` ty., `Quarantena` it., `Quercus robur`/`Quassia amara` lat.).
+  P-passets ordgränssökning kördes mot alla 6 enordskandidater
+  (`quadratus`, `quadriceps`, `QuickDASH`, `qSOFA`, `Quaddel`, `Quarantena`)
+  — noll träffar i filens löptext, ingen gömd böjd form att hämta. Första
+  bokstaven i etapp 4 utan en enda rad ändrad i `data/ordlista.json`.
+  Täckningen står kvar på 31,0 %, 11 190 poster.
 
 - **Sidopass: böjningsparentesernas notation, hela filen** (0.9.351). **328 poster**
   normaliserade, och skyddet levererat i samma commit.
