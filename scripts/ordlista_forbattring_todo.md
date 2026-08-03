@@ -257,7 +257,7 @@ det är en egen fråga.
 ### Etapp 4 · Fältkomplettering — risk: låg, men LÅNGT (§0.3, för hand) 🔄 PÅGÅR
 Prioritetsordning (störst lucka, minst gissningsrisk först). Siffrorna är de
 ommätta ur `ORDLISTA.md`, inte punkt 1:s felaktiga:
-1. [ ] Böjning — **8 516 saknade vid start**, 7 814 kvar (A–N klara).
+1. [ ] Böjning — **8 516 saknade vid start**, 7 789 kvar (A–O klara).
 2. [ ] Etymologi — 3 481 saknar.
 3. [ ] Eng. — 1 504 saknar (många prefix/suffix motiverat undantagna).
 
@@ -699,6 +699,48 @@ particip och `-um`-läkemedlen får det inte.
   - **Ingen `--repoint` behövdes** — ingen av de åtta termerna stod som nyckel i
     `kb_glossary_terms.json` (kontrollerat per nyckel före bygget, skyddsregel 6).
     `check_generators.py` exit 0, 195 tester gröna, 2 351/2 351 ankare hela.
+
+- **O: klart** (0.9.356). 243 av 353 poster saknade böjning; **21 fick den** —
+  8 substantiv (`odynofagi`, `odör`, `onykolys`, `opposition`, `oligofreni`,
+  `optometri`, `ortopné`, `ortoptik`), 3 celltermer (`osteoblast`, `osteocyt`,
+  `osteoklast`), 3 "läran om"-/behandlingsord (`osteologi`, `osteopati`,
+  `osteokondros`), 2 på `-förmåga`/`-orexi` (`Orienteringsförmåga`, `Ortorexi`),
+  4 läkemedelsnamn (`Omeprazol`, `Ondansetron`, `Oxazepam`, `Oxitetracyklin`)
+  och 1 plural-tag (`Operationshandskar` → `(plural)`). Täckningen
+  30,2 % → **30,4 %**. De 222 kvarvarande: 97 TA-flerordstermer (`obliquus`-,
+  `ostium`-, `os`-serierna), 60 prefix, 31 latinska ettordslemman, 21 förkortningar,
+  13 engelska instituts-/testnamn.
+  - **Alla nya böjningar hämtade ur filens egna syskonserier**, inte gissade:
+    `onykolys` följer `-lys`-serien (`autolys`, `hemolys`, `keratolys` …, alla
+    `(-en)`), `osteoblast`/`osteocyt`/`osteoklast` `-cyt`/`-blast`-serien
+    (`erytrocyt`, `leukocyt`, `megaloblast` … `(-en, pl. -er)`), `opposition`
+    rörelsetermernas mönster (`abduktion`, `extension`, `flexion` …
+    `(-en, pl. -er)` — samma familj som E-passets städning).
+  - **Två Latin-agentnomen-familjer bekräftade som konsekventa undantag:**
+    `obturator` (jfr `abductor`, `adductor`, `constrictor`, `extensor`, `flexor`,
+    `levator`, `pronator`, `rotator`, `sphincter`, `supinator`, `tensor` — inga
+    böjda i sina resp. redan avslutade bokstäver) och `opponens` (samma
+    `-ens`/`-ans`-particip som C-passets `concomitans`) böjs inte.
+  - **Två textfel:** `orofarynks` → *orofarynx* (syskonen `nasofarynx`,
+    `hypofarynx`, `larynx`, `farynx` stavar alla utan `-s`) och `orificum` →
+    *orificium* (postens egen etymologi sade redan `orificium = öppning`;
+    exemplet i brödtexten rättat samtidigt). Båda kontrollerade mot
+    skyddsregel 6: ingen facitnyckel, ingen icke-genererad fil.
+  - **⚠️ Stort öppet fynd, INTE åtgärdat — kräver eget beslut innan det rörs.**
+    248 poster med prefixform `arteria X`/`vena X`/`nervus X`/`musculus X`/
+    `musculi X` (tagg `subst. (lat.) …` + `Funktion: …`, ex. `musculus obliquus
+    superior`) duplicerar nästan exakt 248 redan existerande TA-poster i
+    suffixform `X, arteria`/`X, vena`/`X, nervus`/`X, musculus`/`X, musculi`
+    (husformat, ex. `obliquus superior, musculus`) spridda över HELA alfabetet
+    (mätt: 21 arteria-, 13 vena-, 39 nervus-, 162 musculus-, 13 musculi-par).
+    **Facit-wiringen pekar entydigt på prefixformen:** samtliga 248 prefixformer
+    står som nyckel i `kb_glossary_terms.json`, noll av suffixformerna gör det —
+    samma tiebreaker som M/N-sidopasset använde ("wirad i facit vinner"), fast
+    på 60x skalan. Motsvarar grovt 4,4 % av hela ordlistans 11 190 poster.
+    Ingen böjning berörs av fyndet (båda formerna är TA-flerordstermer och
+    därmed undantagna oavsett), så det blockerar INTE etapp 4 — men det är för
+    stort för att lösas i förbifarten och kräver en egen riskgenomgång
+    (jfr punkt 2 i den här filen) innan något slås ihop.
 
 - **Sidopass: böjningsparentesernas notation, hela filen** (0.9.351). **328 poster**
   normaliserade, och skyddet levererat i samma commit.
