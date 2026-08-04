@@ -257,15 +257,16 @@ det är en egen fråga.
 ### Etapp 4 · Fältkomplettering — risk: låg, men LÅNGT (§0.3, för hand) 🔄 PÅGÅR
 Prioritetsordning (störst lucka, minst gissningsrisk först). Siffrorna är de
 ommätta ur `ORDLISTA.md`, inte punkt 1:s felaktiga:
-1. [ ] Böjning — **8 516 saknade vid start** (gammal mätsnutt). Mätsnutten
-   rättad 0.9.361 (se `ORDLISTA.md`, "Böjningssiffran hoppade …") sedan R-passet
-   visade att språk-/statustaggar som `(lat.)`/`(eng.)`/`(fr.)`/`(pl.)` m.fl.
-   redan var böjningssvaret för 1 063 poster utan att synas i mätningen.
-   **Med den nya mätsnutten: 6 245 kvar av 10 941 (42,9 % täckning).** A–T
-   granskade bokstav för bokstav (böjning tillagd där den saknades och var
-   säker; övriga är motiverade undantag). NÄSTA BOKSTAV: U.
-2. [ ] Etymologi — 3 481 saknar.
-3. [ ] Eng. — 1 504 saknar (många prefix/suffix motiverat undantagna).
+1. [x] **Böjning — ✅ HELT AVSLUTAD 0.9.369.** 8 516 saknade vid start (gammal
+   mätsnutt). Mätsnutten rättad 0.9.361 (se `ORDLISTA.md`, "Böjningssiffran
+   hoppade …") sedan R-passet visade att språk-/statustaggar som
+   `(lat.)`/`(eng.)`/`(fr.)`/`(pl.)` m.fl. redan var böjningssvaret för
+   1 063 poster utan att synas i mätningen. Hela alfabetet A–Ö genomgånget
+   bokstav för bokstav, plus tre sidofynd (`-ande`-particip, `-ös`-adjektiv,
+   semikolon-notation) — se loggen ovan (0.9.369). **Slutläge: 4 769 av
+   10 928 (43,6 % täckning).** De ~6 159 kvarvarande är motiverade undantag.
+2. [ ] Etymologi — 3 223 saknar. **NÄSTA STEG i etapp 4.**
+3. [ ] Eng. — 1 257 saknar (många prefix/suffix motiverat undantagna).
 
 **Ett fält per bokstav och commit**, i den ordningen — inte alla tre fälten på
 samma bokstav. A saknade böjning i 762 poster, etymologi i 396 och `Eng.` i 139;
@@ -1295,8 +1296,75 @@ particip och `-um`-läkemedlen får det inte.
   - `check_generators.py`: rundtripp identisk, 407 filer oförändrade efter
     18 generatorsteg, 195 tester gröna.
 
-- **NÄSTA BOKSTAV: Z.** 16 av 20 Z-poster saknar böjning; Å (2/18), Ä (2/8) och
-  Ö (4/9) återstår därefter — alfabetets sista fyra.
+- **Z/Å/Ä/Ö klara i ett svep, plus alla tre öppna sidofynd åtgärdade** (0.9.369).
+  **Z:** 16 av 20 saknade böjning, bara `zonterapi` fick den (`(-n)`, oräknebar
+  `-terapi`-familj — jämfört mot hela filens `-terapi`-serie: `aromaterapi`,
+  `fysioterapi`, `kemoterapi` m.fl., alla `(-n)`). Resten motiverade undantag: 5
+  prefix (`zo-/zoo-`, `zyg-/zygo-`, `zym-/zymo-`), 6 TA-flerordstermer
+  (`zona glandularum periurethralium`, `zona orbicularis`,
+  `zona transitionalis analis`, `zonula ciliaris`,
+  `zygapophysiales, articulationes`, `zygomaticum, os`,
+  `zygomaticus major/minor, musculus`), 2 latinska ettordslemman med egen
+  `Sv.`-rad (`zona`, `zygoma`, samma "cornea/retina"-klass), 1 latinskt adjektiv
+  (`zygomaticus`) och 1 svensk flerordsterm (`zoofil dermatofyt`,
+  adjektiv+substantiv, samma regel som `djup ventrombos`).
+  **Å:** `Återfall` `(-et, pl. -∅)`, `Återhämtning` `(-en)` (som syskonorden
+  `Utsläckning`/`Vanföreställning`, abstrakta OT-/psykiatriprocesser i singular).
+  **Ä:** `äldrepsykiatri` `(-n)` (som `psykiatri`), `Ältande` `(-t)` — facit-
+  belagd via filens egen `Jfr grubblande`-korshänvisning: `grubblande`,
+  `Katastroftänkande` och `Aktivitetsutförande` bär alla samma "substantiverat
+  particip" `(-t)`.
+  **Ö:** `överpronera` bar den felaktiga Latin-infinitiv-stilen "verb att foten
+  rullar in …" (kopierad av misstag från `adducere`/`ducere`/`extendo`, som ÄR
+  latinska verblemman glossade med "att + infinitiv" — `överpronera` är däremot
+  ett vanligt svenskt `-era`-verb, facit-belagt via den redan böjda syskonposten
+  `pronera` `(-r, -de, -t)`); rättad till husformen. `Överföring` `(-en)`.
+  `överaktiv blåsa` var redan ett motiverat undantag (svensk flerordsterm).
+  `ödematös` slogs ihop med `ödem`, se nedan.
+  - **11 kvarvarande `-ande`-particip fick `(oböjl.)`:** `adsorberande`,
+    `adstringerande`, `antikoagulerande`, `ascenderande`, `luteiniserande`,
+    `nekrotiserande`, `perforerande`, `persevererande`, `protruerande`,
+    `sederande`, `trängande`. Samtliga 17 `-ande`-particip i filen bär nu
+    markören konsekvent (tidigare bara 6 av 17: de 2 ursprungliga
+    `relaxerande`/`remitterande` plus de 4 som redan åtgärdats i U/V-passen).
+  - **9 `-ös`-adjektiv slogs ihop med sina grundord** — de 8 redan kända
+    (`bullös`→`bulla`, `komatös`→`koma`, `ossös`→`os`, `papulös`→`papel`,
+    `parenkymatös`→`parenkym`, `polypös`→`polyp`, `serös`→`serum`,
+    `stuporös`→`stupor`) plus ett **nionde fynd hittat vid samma genomläsning:
+    `ödematös`→`ödem`.** `ödem`s egen text hade bara en textlös
+    `Jfr Ödematös`-hänvisning — ingen riktig integrering, precis den halvgjorda
+    situation som H-passets `hypotenar`/`hypothenar` och G-passets
+    `glykosuri`/`glukosuri` varnade för. `komatös` var redan halvvägs
+    sammanslagen: `koma`s egen def hade sedan tidigare "Även komatös (adj.) =
+    som befinner sig i koma, djupt medvetslös." — bara den överblivna
+    dubblettposten togs bort där, ingen ny text skrevs. Övriga åtta fick
+    fullständig "Även X (adj.) = distinkt förklaring"-integrering enligt husets
+    -ös-regel. **Skyddsregel 6 kontrollerad för alla nio på två sätt:** noll
+    facitnycklar med det namnet, och noll facithref:ar som pekar på deras
+    ankare oavsett nyckelnamn (samma dubbelkontroll som O-passets 248-dubblett-
+    fynd lärde ut) — och ett tredje steg, textsökning över hela sajtens
+    `.html`-filer, visade att bara de egna genererade `ordlista-*.html`-sidorna
+    nämnde ankarna. Ingen `--repoint` behövdes. 10 937 → **10 928 poster**.
+  - **33 poster normaliserade från semikolon- till komma-notation**
+    (`(-et; pl. -er)` → `(-et, pl. -er)`) — W-passets öppna fynd
+    (`xantelasm`s avvikelse), nu löst för hela filen: `takykardi`,
+    `telangiektasi`, `tendinit`, `tenesm`, `terapi`, `termin`,
+    `tetanusvaccin`, `tiazid`, `tic`, `torsion`, `toxin`, `transaminas`,
+    `transmittor`, `trauma`, `trematod`, `triglycerid`, `trimester`, `tromb`,
+    `trombocyt`, `trombos`, `tuberkel`, `tumör`, `urolog`, `usur`,
+    `vagitorium`, `varice`, `vehikel`, `vektor`, `ventrikel`, `vesikel`,
+    `xantelasm`, `zoonos`, `östrogen`. Formen var redan synlig för mätsnutten
+    (räknades som böjd) — ren notationsstädning, blockerade inget arbete.
+  - `check_generators.py`: rundtripp identisk, 407 filer oförändrade efter
+    18 generatorsteg, 195 tester gröna, 2 351/2 351 tooltip-ankare hela.
+
+- **✅ ETAPP 4, PUNKT 1 (BÖJNING) HELT AVSLUTAD — hela alfabetet A–Ö genomgånget.**
+  Böjningstäckningen står nu på **43,6 % (4 769 av 10 928)**, mätt 2026-08-04.
+  De ~6 159 kvarvarande är motiverade undantag (TA-flerordstermer, latinska
+  ettordslemman, prefix/suffix, förkortningar, particip, `-um`-läkemedel,
+  svenska flerordstermer) — inte en arbetslista. **Nästa steg i etapp 4:
+  punkt 2 (etymologi, 3 223 saknar) eller punkt 3 (Eng., 1 257 saknar),** i
+  den ordningen enligt planens ursprungliga prioritering (§5).
 
 ### Etapp 3 · Jfr/Se/Motsats-länkning — risk: hög, kräver beslut (se punkt 6)
 - [ ] Designbeslut taget (väg a eller b, punkt 6).

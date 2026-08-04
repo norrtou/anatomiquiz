@@ -40,7 +40,7 @@ Ordlistan byggs ut från en omfattande importerad lista med medicinska termer (3
 
 ## Status: fas 2 avslutad
 
-`data/ordlista.json` innehåller **10 937 poster och 0 stubs** (mätt 2026-08-03). Varje
+`data/ordlista.json` innehåller **10 928 poster och 0 stubs** (mätt 2026-08-04). Varje
 importerad term är berikad — det finns ingenting kvar att hämta ur råimporten, och
 sedan dess har filen dessutom vuxit långt förbi importen med TA-anatomi, labbvärden,
 sjukdomar med ICD-koder, psykiatritermer, läkemedel och örter.
@@ -57,25 +57,26 @@ print('total',len(d),'synliga',sum(1 for e in d if e.get('status')!='stub'),\
 
 ### Fälttäckning (mätt 2026-08-02) — facit för fältkompletteringen
 
-Mät aldrig detta på känsla; kör snutten under tabellen. **Siffrorna gäller alla 10 937
+Mät aldrig detta på känsla; kör snutten under tabellen. **Siffrorna gäller alla 10 928
 poster**, även de där fältet är motiverat frånvarande (ett prefix behöver ingen böjning,
 en förkortning sällan en etymologi) — "saknas" är alltså ett tak för arbetet, inte en
-arbetslista rakt av.
+arbetslista rakt av. Mätt 2026-08-04, efter att böjningsetappen (etapp 4 punkt 1)
+avslutades i hela alfabetet A–Ö.
 
 | Fält | Poster | Täckning | Saknas |
 |---|---:|---:|---:|
-| Ordklasstagg | 10 937 | 100 % | 0 |
-| `Eng. ` | 9 680 | 88,5 % | 1 257 |
-| Etymologi (`Av lat./gr. …`) | 7 712 | 70,5 % | 3 225 |
-| `Sv. ` | 2 629 | 24,0 % | 8 308 |
-| Böjning i parentes | 4 755 | 43,5 % | 6 182 |
-| `Jfr ` | 1 389 | 12,7 % | 9 548 |
-| `ICD-10: ` | 944 | 8,6 % | 9 993 |
-| `Vardag. ` | 781 | 7,1 % | 10 156 |
-| `Se ` | 357 | 3,3 % | 10 580 |
-| `Motsats` | 157 | 1,4 % | 10 780 |
-| `Referensvärde` | 78 | 0,7 % | 10 859 |
-| Uttalsangivelse | **0** | 0,0 % | 10 937 |
+| Ordklasstagg | 10 928 | 100 % | 0 |
+| `Eng. ` | 9 671 | 88,5 % | 1 257 |
+| Etymologi (`Av lat./gr. …`) | 7 705 | 70,5 % | 3 223 |
+| `Sv. ` | 2 627 | 24,0 % | 8 301 |
+| Böjning i parentes | 4 769 | 43,6 % | 6 159 |
+| `Jfr ` | 1 386 | 12,7 % | 9 542 |
+| `ICD-10: ` | 944 | 8,6 % | 9 984 |
+| `Vardag. ` | 781 | 7,1 % | 10 147 |
+| `Se ` | 355 | 3,2 % | 10 573 |
+| `Motsats` | 157 | 1,4 % | 10 771 |
+| `Referensvärde` | 78 | 0,7 % | 10 850 |
+| Uttalsangivelse | **0** | 0,0 % | 10 928 |
 
 **Böjningssiffran hoppade 32,0 % → 41,7 % (0.9.361) utan att en enda post ändrades** — mätsnutten
 kände tidigare bara igen böjning som börjar med bindestreck eller `pl. -`. Men filen bär sedan
