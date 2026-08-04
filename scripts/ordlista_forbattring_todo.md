@@ -1251,6 +1251,31 @@ particip och `-um`-läkemedlen får det inte.
   - `check_generators.py`: rundtripp identisk, 407 filer oförändrade efter
     18 generatorsteg, 195 tester gröna.
 
+- **W: klart** (0.9.366). Liten bokstav (23 poster); 6 saknade böjning. **4 fick
+  den:** `WDHA-syndrom` `(-et)` (facit-belagd via familjen `carcinoidsyndrom`/
+  `karpaltunnelsyndrom`/`kompartmentsyndrom` — ettordssammansättningar på
+  `-syndrom` böjs, till skillnad från flerordsfraserna `nefrotiskt syndrom`/
+  `posttrombotiskt syndrom`/`toxiskt chocksyndrom`, som inte gör det); `WG` och
+  `WPW` fick `(förk.)` — samma mönster som `RA` (ordklasstaggad `subst.` men i
+  praktiken en förkortning, till skillnad från `GPA`/`HUS`/`SIRS` som är
+  ordklasstaggade `förk.` direkt); `whiplash` fick `(eng.)` — kvarhållen
+  engelsk stavning trots att en svensk synonym (`Sv. pisksnärtsskada`) finns,
+  samma mönster som `bypass`/`clearance`.
+  - **2 var redan motiverade undantag:** `Wilsons sjukdom`/`Wegeners
+    granulomatos`, eponymfraser (adjektiv/genitiv + huvudord) som redan följer
+    D-passets regel att flerordstermer inte böjs (samma klass som `Downs
+    syndrom`/`Duchennes muskeldystrofi`).
+  - **`xantelasm` (X) hade en notationsavvikelse hittad vid genomläsning:**
+    `(-et; pl. -er)` med semikolon i stället för husets komma. Rättad i samma
+    svep eftersom den låg i den öppnade bokstavsgruppen. **Öppet fynd, inte
+    åtgärdat i resten av filen:** minst 31 till poster i redan avslutade
+    bokstäver skriver samma semikolonform (`grep -o '([^()]*; pl\. [^()]*)'`)
+    — synlig för mätsnutten (räknas redan som böjd, blockerar inget), men en
+    tredje inkonsekvent notationsvariant utöver `pl. -∅`/`pl. -`/`pl. =` som
+    redan är dokumenterad. För stort för ett sidopass i förbifarten.
+  - `check_generators.py`: rundtripp identisk, 407 filer oförändrade efter
+    18 generatorsteg, 195 tester gröna.
+
 ### Etapp 3 · Jfr/Se/Motsats-länkning — risk: hög, kräver beslut (se punkt 6)
 - [ ] Designbeslut taget (väg a eller b, punkt 6).
 - [ ] Byggt enligt beslutet.
