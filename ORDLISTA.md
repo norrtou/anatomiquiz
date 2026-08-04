@@ -344,6 +344,71 @@ en arbetslista. Utanför står:
 `Doxycyklin`, `Dexametason`. Undantaget är de som bygger på ett n-ord: `Dietyleter`
 får `(-n)`, eftersom *eter* heter *etern*.
 
+### Etymologinotation — och vilka poster som ska ha etymologi
+
+Härlett i A-passet (0.9.370), efter samma metod som böjningen: mät hela bokstaven,
+kategorisera varje "saknas"-post innan något skrivs. **Facit av A: 380 poster
+saknade enligt mätsnutten, bara 45 (11,8 %) var faktiska luckor.** Användarens
+egen misstanke ("det är inte så många som listan säger") stämde och är
+utgångspunkten för varje kommande bokstav — förvänta en liknande kvot, inte 1:1.
+
+**Placering:** `Av lat./gr. …` står som **egen mening efter** `Eng.`/`Sv.`/`Vardag.`
+och **före** `Jfr `/`ICD-10: `/`ICD-11: `/`Referensvärde`/`Motsats:` — aldrig sist.
+Exempel: `…Eng. amylase. Av lat. amylum = stärkelse. Referensvärde (…): … Jfr …`
+(`amylas`). Saknas alla tre tail-fält, läggs den sist i meningen.
+
+**"Saknas" är samma sorts tak som böjningen, inte en arbetslista.** Sex kategorier
+är motiverade undantag, i fallande andel av A:s 380:
+
+1. **Förkortningar** (`förk.`) — expansionen i brödtexten ÄR ursprungsförklaringen.
+   En extra `Av eng. …` tillför inget (redan skrivet i husformatsavsnittet ovan).
+2. **TA-/latinska flerordsfraser** där uppslagsordet redan är på latin/grekiska
+   (`articulatio genus`, `aorta abdominalis`, `ansa cervicalis`) — samma undantag
+   som böjningen. Termen ÄR redan sitt eget ursprungssvar; `Sv. `-översättningen
+   räcker. **Undantag från undantaget:** enskilda, vanligt förekommande kliniska
+   latin-/grekfraser (inte en systematisk TA-serie) FÅR en `Av lat./gr. X = Y + Z
+   = W`-nedbrytning om den tillför — `otitis media`, `pectus excavatum`,
+   `placenta praevia` har redan det. Gränsen är register: en TA-anatomisk
+   namnserie (leder, kärl, muskler) byggd på samma mönster i hundratals varianter
+   behöver inte upprepningen; en enskild, namngiven klinisk diagnos gör.
+3. **Sammansättningar av redan glosade svenska/medicinska led** — roten bär sin
+   etymologi på sin EGEN post, och en sammansättning ska inte upprepa den.
+   `aortaklaff`, `autoimmun sjukdom`, `antikropp`, hela OT-/psykiatribatchen
+   (`Aktivitets-`/`Arbets-`) hör hit. **Kontrollera alltid roten i filen
+   innan den avfärdas** — `autoimmun`, `affekt`, `anestesi`, `koagulation`,
+   `astma`, `arytmi` har alla redan `Av gr./lat. …` på sin egen post.
+4. **Arkaiska latinska diagnosnamn** vars moderna svenska syskon redan bär
+   etymologin (`apoplexia cerebri` → `apoplexi`, `cholera` → `kolera`,
+   `hysteria` → `hysteri`) — samma mönster som hela [[project_archaic_terms]]-
+   importen. Skriv INTE etymologin på båda; den hör hemma på den moderna formen.
+5. **Varunamn** (`antabus`).
+6. **Redan besvarade, osynliga för mätregexen** — se stycket i fälttäckningen
+   ovan ("Etymologimätningen har samma sorts blinda fläck"). 24 av A:s 380 satt
+   här. Kontrollera ALLTID för `Efter `/`beskrevs … av`/`Bildat av`/`Namnet är`/
+   `Ändelsen -`/`Av <ord> \+ <ord>` (utan språkkod) innan en post räknas som tom.
+
+**Metod för de faktiska luckorna: slå upp roten i FILEN, gissa aldrig fritt.**
+En standalone grekisk/latinsk/arabisk fackterm får etymologi när jag har hög
+säkerhet i den vedertagna nedbrytningen — helst bekräftad av att ett syskonord
+redan bär samma rot i filen (`arterioskleros` skrevs mot redan-bojda
+`ateroskleros`/`aorta`/`skleros`; `artroskopi` mot `artros`; `appendicit` mot
+`appendix`). **`anti-`-läkemedelsklasser** (`-ikum`/`-ivum`, `subst. (pl. …)`)
+följer exakt `antibiotikum`s mönster (`Av gr. anti- = mot + bios = liv`) —
+kontrollera bara att förledsroten redan är belagd (`antiarytmikum` mot `arytmi`,
+`antidiabetikum` mot `diabetes`, osv.) innan den återanvänds i en ny post.
+
+**Eponymer: `Efter [yrke] [namn]`, årtal ENDAST vid hög säkerhet.** Samma
+försiktighet som H-passets Golgi/Guglielmi/Herxheimer. Är jag inte säker på ett
+exakt årtal (födelseår, publiceringsår) — utelämna det hellre än att gissa en
+siffra som blir ett falskt faktapåstående i en offentlig ordbok. `alzheimers
+sjukdom` fick 1906 (mycket väldokumenterat); `Angelmans syndrom`/`Aspergers
+syndrom`/`Allis-klämma`/`Adson-pincett` fick bara namn + yrke + nationalitet.
+
+**Vad som INTE ska skrivas:** en gissad, plausibel-låtande men obekräftad
+nedbrytning. Hellre en lucka kvar än en felaktig "fakta" i en sökbar ordbok —
+samma princip som böjningens `Kalomel`/`Karbidopa` (lämnade obojda hellre än
+gissade).
+
 ### Prefix- och suffixposter bär alltid sitt bindestreck
 
 Ett uppslagsord i prefixgruppen **slutar** med bindestreck (`brady-`, `pseud- / pseudo-`),
