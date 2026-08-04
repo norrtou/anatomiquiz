@@ -67,7 +67,7 @@ avslutades i hela alfabetet A–Ö.
 |---|---:|---:|---:|
 | Ordklasstagg | 10 928 | 100 % | 0 |
 | `Eng. ` | 9 671 | 88,5 % | 1 257 |
-| Etymologi (`Av lat./gr. …`) | 7 746 | 70,9 % | 3 182 |
+| Etymologi (`Av lat./gr. …`) | 7 757 | 71,0 % | 3 171 |
 | `Sv. ` | 2 627 | 24,0 % | 8 301 |
 | Böjning i parentes | 4 769 | 43,6 % | 6 159 |
 | `Jfr ` | 1 386 | 12,7 % | 9 542 |
@@ -451,6 +451,73 @@ gäller `bakteriell`-familjens `Av bakterie + gr. …`-poster
 redan klara sedan tidigare) — språkkoden sitter efter `+`, inte direkt efter
 `Av `. **Kontrollera alltid hela meningen, inte bara de första två orden,
 innan en post räknas som lucka.**
+
+**C klar 0.9.373** (2026-08-04): av 1 040 C-poster saknade 185 enligt
+mätsnutten, bara **24 (13,0 %) faktiska luckor** — samma kvot som A och B.
+Kategorifördelningen av de 161 motiverade undantagen: 96 förkortningar, 21
+TA-/latinska flerordsfraser (systematisk serie, t.ex. `colon ascendens/
+transversum/sigmoideum` — roten `colon` bär redan `Av grek. kolon =
+tjocktarm`), 16 redan-skrivna men mätsnutts-osynliga poster (samma
+läkemedels-/växtkluster-mönster som B: `Cinchona officinalis`, `Coffea
+arabica`, `Camellia sinensis`, `Cola nitida`, `Colchicum autumnale`, `Catha
+edulis`, `Carapichea ipecacuanha`, `Chaulmoograolja`, samt läkemedlen
+`Captopril`, `Cefalotin`, `Cefotaxim`, `Cimetidin`, `Ciprofloxacin`,
+`Ciklofosfamid`, `Cinnarizin`, `Citalopram`, `Clobetasol`), och resten
+sammansättningar av redan i filen glosade rötter (`cervixcancer`→`cancer`,
+`cardioselektiv`→`cardio-`/`selektiv`, `cellulit`s `-itis`-familj där andra
+led redan var etablerade, `carcinoid`→`-karcinom`/`-oid` osv. — kontrollerat
+med `grep` mot varje rot, inte gissat).
+
+**Nytt fynd i C: "enskild namngiven klinisk diagnos" (kategori 2:s
+undantag-från-undantaget) användes för första gången på riktigt.**
+Regeln fanns redan (”otitis media, pectus excavatum, placenta praevia”) men
+hade inte utlöst en ny post tidigare. Fem fristående latinska klinisktermer
+sedan tidigare **helt utan familj i filen** fick en egen nedbrytning:
+`claudicatio` (`Av lat. claudicare = halta`), `commotio cerebri` (`Av lat.
+commovere = sätta i rörelse, skaka + cerebrum = hjärna`), `caput
+succedaneum` (`Av lat. caput = huvud + succedaneum = som kommer i stället,
+ersättande`), `coarctatio aortae` (`Av lat. coarctare = trånga in,
+sammanpressa + aorta`), `calculus dentalis` (`Av lat. calculus = liten sten
+(egentligen räknesten) + dentalis = tand-`). Skillnaden mot `colon
+X`/`coma X`/`corpus X`/`cortex X` (skip) är att de senare är en **systematisk
+serie** byggd på en redan etablerad rot (`colon`, `koma`, `membrana`), medan
+de fem tillagda är **ensamma** i sin familj — ingen annan post i filen delar
+deras stam.
+
+**Fyra standalone fackord fick etymologi mot en bekräftad rot i filen**, som
+i A/B: `cellulit` (`Av lat. cellula = liten cell + -itis = inflammation`,
+`cella` och `-itis` redan glosade), `cefalosporin` (samma fakta som redan
+stod på `Cefalotin`s post — `Av svampsläktet Cephalosporium, grek. kephale =
+huvud + spora = frö`, flyttad till familjens rotpost), `candidiasis` (`Av
+Candida, lat. candidus = vit, skinande + gr. -iasis = sjukligt tillstånd`
+— gör `candida-vaginit`/`candidos` till kategori-3-sammansättningar av den
+nya roten), `canalolithiasis` (`Av lat. canalis = kanal + gr. lithos = sten
++ -iasis`, `canalis` och `lithos`/`-iasis`-mönstret redan belagda via
+`kolelitiasis`). `Cyklotymi` fick sin etymologi genom att spegla
+syskonordet `dystymi`s redan skrivna `Av gr. dys- = svårt + thymos = sinne`
+→ `Av gr. kyklos = cirkel + thymos = sinne`.
+
+**Tre lånord och en historisk folketymologi:** `Coping` (`Av eng. cope =
+klara av, hantera` — saknade `(eng.)`-taggen som annars hade gjort den till
+ett rule-2-undantag), `chock` (`Av fr. choc = stöt, sammanstötning`),
+`comedon` (`Av lat. comedo = frossare, av comedere = äta upp` — den
+historiska föreställningen om en matmask i huden), `covid-19` (`Bildat av
+engelskans "corona virus disease 2019"`, samma `Bildat av`-mönster som
+läkemedelsnamnen).
+
+**Nio eponymer i husformat `Efter den [nationalitet]e [yrke] [Namn]`,**
+tre av dem på förkortningsposter helt utan utskriven syskonpost (samma regel
+som B:s `BCS`/`BDI`): `Cheyne-Stokes andning`, `Crohns sjukdom` (årtal 1932,
+hög säkerhet), `Cushings syndrom` (årtal 1932, hög säkerhet), `Conns
+syndrom`, `Creutzfeldt-Jakobs sjukdom`, `Centor criteria`, `Child-Pugh
+score`, samt `CMT` (Charcot-Marie-Tooths sjukdom, tre namngivna upptäckare)
+och `CNC` (Carney-komplex) och `CSS` (Churg–Strauss syndrom, ett kvinnligt
+och ett manligt namn — kontrollerade grammatiskt kön i "den … -e/-a
+patologen"-frasen separat för varje namn).
+
+Etymologitäckning 70,9 % → **71,0 % (7 757 av 10 928, 3 171 saknar).** Nästa
+bokstav: D. `check_generators.py`: rundtripp identisk, 407 filer oförändrade
+efter 18 generatorsteg, 195 tester gröna, 2 351/2 351 tooltip-ankare hela.
 
 ### Prefix- och suffixposter bär alltid sitt bindestreck
 
