@@ -1276,6 +1276,15 @@ particip och `-um`-läkemedlen får det inte.
   - `check_generators.py`: rundtripp identisk, 407 filer oförändrade efter
     18 generatorsteg, 195 tester gröna.
 
+- **X: klart** (0.9.367). 0 nya böjningar. Minsta bokstaven bland de kvarvarande
+  (12 poster); de 6 som saknade böjning är samtliga motiverade undantag: 5 prefix
+  (`xanth-/xantho-`, `xen-/xeno-`, `xer-/xero-`, `xiph-/xipho-`, `xyl-/xylo-` —
+  prefix böjs aldrig) och `xiphoideus`, ett rent latinskt adjektiv utan svensk
+  assimilering (samma klass som `cavus`/`communis`/`tenuis`, till skillnad från
+  det fullt försvenskade `visceral`). `xantelasm`s semikolon-notationsavvikelse
+  fixades redan i W-passet (0.9.366), där den upptäcktes.
+  - `check_generators.py`: rundtripp identisk, ingen ändring i `data/ordlista.json`.
+
 ### Etapp 3 · Jfr/Se/Motsats-länkning — risk: hög, kräver beslut (se punkt 6)
 - [ ] Designbeslut taget (väg a eller b, punkt 6).
 - [ ] Byggt enligt beslutet.

@@ -1,5 +1,9 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.367
+- **Bokstav X genomgången: 0 nya böjningar, alla 6 luckor motiverade undantag.** X är alfabetets minsta bokstav bland dem som saknar böjning (12 poster totalt). De 6 är samtliga: 5 prefix (`xanth-/xantho-`, `xen-/xeno-`, `xer-/xero-`, `xiph-/xipho-`, `xyl-/xylo-` — prefix böjs aldrig, 657/657 bekräftat i M/N-sidopasset) och `xiphoideus`, ett rent latinskt adjektiv utan svensk assimilering (som `cavus`/`communis`/`tenuis`), till skillnad från det fullt försvenskade `visceral`. `xantelasm`s notationsavvikelse (semikolon i stället för komma) fixades redan i W-passet (0.9.366), där den upptäcktes.
+- `check_generators.py`: rundtripp identisk, ingen ändring i `data/ordlista.json`.
+
 ## 0.9.366
 - **Bokstav W böjs: 4 nya böjningar.** 6 av 23 W-poster saknade böjning; 2 var redan motiverade undantag (`Wilsons sjukdom`, `Wegeners granulomatos` — eponymfraser, samma D-passregel som `Downs syndrom`). `WDHA-syndrom` fick `(-et)` (facit-belagd via familjen `carcinoidsyndrom`/`karpaltunnelsyndrom`/`kompartmentsyndrom`, ettordssammansättningar på `-syndrom` som redan böjs, till skillnad från flerordsfraserna `nefrotiskt syndrom`/`toxiskt chocksyndrom`). `WG` och `WPW` fick `(förk.)` efter samma mönster som `RA` (ordklasstaggad `subst.` men i praktiken en förkortning). `whiplash` fick `(eng.)` — kvarhållen engelsk stavning, samma mönster som `bypass`/`clearance`.
 - `check_generators.py`: rundtripp identisk, 407 filer oförändrade efter 18 generatorsteg, 195 tester gröna.
