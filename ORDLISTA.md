@@ -67,7 +67,7 @@ avslutades i hela alfabetet A–Ö.
 |---|---:|---:|---:|
 | Ordklasstagg | 10 928 | 100 % | 0 |
 | `Eng. ` | 9 671 | 88,5 % | 1 257 |
-| Etymologi (`Av lat./gr. …`) | 7 770 | 71,1 % | 3 158 |
+| Etymologi (`Av lat./gr. …`) | 7 799 | 71,4 % | 3 129 |
 | `Sv. ` | 2 627 | 24,0 % | 8 301 |
 | Böjning i parentes | 4 769 | 43,6 % | 6 159 |
 | `Jfr ` | 1 386 | 12,7 % | 9 542 |
@@ -574,9 +574,70 @@ förkortningar krävde `Efter` den här bokstaven): `Downs syndrom` (årtal
 1866, hög säkerhet), `Duchennes muskeldystrofi`, `Dupuytrens kontraktur`,
 `DeBakey-pincett`.
 
-Etymologitäckning 71,0 % → **71,1 % (7 770 av 10 928, 3 158 saknar).** Nästa
-bokstav: E. `check_generators.py`: rundtripp identisk, 407 filer oförändrade
-efter 18 generatorsteg, 195 tester gröna, 2 351/2 351 tooltip-ankare hela.
+Etymologitäckning 71,0 % → **71,1 % (7 770 av 10 928, 3 158 saknar).**
+`check_generators.py`: rundtripp identisk, 407 filer oförändrade efter 18
+generatorsteg, 195 tester gröna, 2 351/2 351 tooltip-ankare hela.
+
+**E klar 0.9.375** (2026-08-04): av 402 E-poster saknade 176 enligt
+mätsnutten, men denna gång **33 (18,8 %) faktiska luckor** — en klart
+högre kvot än A/B/C/D (12–14 %). Orsaken: bokstav E domineras av
+`e-`/`ex-`/`epi-`/`endo-`-prefixade fristående grekiska/latinska
+fackord, precis den ordtyp som kvalificerar för tillägg, snarare än
+svenska sammansättningar av redan etablerade led.
+
+**Metodfynd: samma "kolla roten i filen"-disciplin räddade nio
+tilltänkta tillägg som redan var täckta**, mer än i något tidigare pass
+— ett bevis på att metoden fungerar, inte ett tecken på slarv. Efter en
+första bred kandidatlista på 41 ord visade en rotkontroll att nio redan
+hade sin etymologi täckt av en etablerad syskonpost och ströks:
+`ejektionsfraktion` (`fraktur` bär redan `Av lat. frangere`), `eruptiv`
+(`ruptur` bär redan `Av lat. rumpere`), `excentrisk` (`centrum`/`central`
+bär redan `Av lat. centrum, av grek. kentron`), `exspirium`
+(`respiration` bär redan `Av lat. respirare`), `egodyston`/`egosynton`
+(`tonus` bär redan `Av grek. tonos`), `expektorat` (`pectus excavatum`
+bär redan `Av lat. pectus … + excavare`), `eradikation` (`radix` bär
+redan `Av lat. radix = rot`), `exkavera` (`kavitet`/`pectus excavatum`
+bär redan `Av lat. cavitas, av cavus`). **Två mönster upprepades från
+tidigare bokstäver:** ett ord kan dela exakt SAMMA latinska verb som en
+redan etablerad post (`exkavera`/`excavare` = ordagrant samma verb som
+i `pectus excavatum`s etymologi), eller bara dela roten (`erysipelas`
+delar `erythros = röd` med redan-etablerade `erytrocyt`, men fick ändå
+sin egen etymologi eftersom den andra leden, `pella = hud`, var ny).
+
+**24 standalone fackord/lånord mot antingen ny rot eller en rot delvis
+bekräftad i filen:** `echinococcus`, `ekografi` (etablerar `graphein =
+skriva` för framtida bruk), `eksem`, `ektopisk graviditet` (etablerar
+`topos = plats`), `elektrolyt` (bärnsten-fakta om `elektron`),
+`elimination`, `emulsion`, `endokrinologi` (`krinein` ny trots att
+`endo-`/`logos` redan fanns via `epi-`/`dermatologi`), `endoskopi`
+(etablerar `skopein = betrakta`), `enteroklysis` (`enteron` redan
+etablerad via `enterit`, `klysis` ny), `entesopati` (`pathos` redan
+etablerad via `patologi`, `enthesis` ny), `epidemiologi`, `epikantus`,
+`episiotomi`, `eponychium`, `eponym`, `ergoterapi` (`ergon = arbete`
+ny), `ergotism`, `erodera`, `erysipelas`, `esotropi`/`exotropi`
+(symmetriskt par, etablerar `trope = vändning`), `evakuering`,
+`evaluering`, `evaporation`, `excitabilitet`, `exfoliering`,
+`exstirpera`, `exsudation`. Ett `Bildat av`-mönster: `EMLA-kräm` (`Av
+engelskans Eutectic Mixture of Local Anesthetics`).
+
+**Tre eponymer**, en av dem ett bakteriesläkte snarare än en person-
+diagnos: `ehrlichios` (bakteriesläktet `Ehrlichia` uppkallat efter Paul
+Ehrlich — samma "genus är uppkallat efter forskaren"-mönster som C-
+passets `Corti`), `Epstein-Barr-virus` (Michael Epstein och Yvonne Barr,
+1964, hög säkerhet), `Ehlers-Danlos syndrom` (Edvard Ehlers och Henri-
+Alexandre Danlos). **Ett fynd avfärdat, inte en eponym trots namnet:**
+`Epworth Sleepiness Scale` är uppkallad efter Epworth Hospital i
+Melbourne (i sin tur uppkallat efter en plats i England) — en institu-
+tions-/ortnamnskedja, inte en person, och passar därför inte husformatet
+`Efter [yrke] [namn]`. **Två äkta luckor lämnade pga. osäkert ursprung**
+(samma försiktighet som D-passets `demarkera`/`denguefeber`): `etanol`
+(oklar exakt lånkedja för `-ol`-ändelsen) och `eskarotomi` (`eschara`s
+exakta klassiska betydelse för osäker för en säker nedbrytning).
+
+Etymologitäckning 71,1 % → **71,4 % (7 799 av 10 928, 3 129 saknar).**
+Nästa bokstav: F. `check_generators.py`: rundtripp identisk, 407 filer
+oförändrade efter 18 generatorsteg, 195 tester gröna, 2 351/2 351
+tooltip-ankare hela.
 
 ### Prefix- och suffixposter bär alltid sitt bindestreck
 
