@@ -67,7 +67,7 @@ avslutades i hela alfabetet A–Ö.
 |---|---:|---:|---:|
 | Ordklasstagg | 10 928 | 100 % | 0 |
 | `Eng. ` | 9 671 | 88,5 % | 1 257 |
-| Etymologi (`Av lat./gr. …`) | 7 757 | 71,0 % | 3 171 |
+| Etymologi (`Av lat./gr. …`) | 7 770 | 71,1 % | 3 158 |
 | `Sv. ` | 2 627 | 24,0 % | 8 301 |
 | Böjning i parentes | 4 769 | 43,6 % | 6 159 |
 | `Jfr ` | 1 386 | 12,7 % | 9 542 |
@@ -515,8 +515,67 @@ och `CNC` (Carney-komplex) och `CSS` (Churg–Strauss syndrom, ett kvinnligt
 och ett manligt namn — kontrollerade grammatiskt kön i "den … -e/-a
 patologen"-frasen separat för varje namn).
 
-Etymologitäckning 70,9 % → **71,0 % (7 757 av 10 928, 3 171 saknar).** Nästa
-bokstav: D. `check_generators.py`: rundtripp identisk, 407 filer oförändrade
+Etymologitäckning 70,9 % → **71,0 % (7 757 av 10 928, 3 171 saknar).**
+`check_generators.py`: rundtripp identisk, 407 filer oförändrade efter 18
+generatorsteg, 195 tester gröna, 2 351/2 351 tooltip-ankare hela.
+
+**D klar 0.9.374** (2026-08-04): av 431 D-poster saknade 153 enligt
+mätsnutten, bara **19 (12,4 %) faktiska luckor** — samma kvot som A/B/C.
+Kategorier: 45 förkortningar, 6 TA-/latinska flerordsfraser, 16 redan-skrivna
+men mätsnutts-osynliga poster (`diskektomi` hade redan `Av diskus + gr.
+ektome`; `Dakarbazin`/`Dapson` hade `Sammandragning av`/`Förkortning av`
+det kemiska namnet; `Doxorubicin` hade `Av en hydroxylgrupp (doxo-) …`;
+`Droperidol` "Besläktat med haloperidol"), resten sammansättningar av
+redan glosade rötter. **`de-`-prefixet (`Av lat. de = från, bort`) visade
+sig bära nästan hela bokstaven** — 15 av D:s `de-`-verb/-substantiv
+(`defibrillator`, `degradering`, `dekompensation`, `dekompression`,
+`demineralisation`, `demyelinisering`, `denervering`, `depersonalisation`,
+`depigmentering`, `depolarisation`, `derealisation`, `desensibilisering`,
+`desorientering`, `detoxifiering`) är kategori 3 rakt av eftersom BÅDA
+leden redan är etablerade i filen (`myelin`, `toxin`, `kompensation` m.fl.
+har egna `Av`-meningar sedan tidigare bokstäver). Samma sak för `dansterapi`
+(`terapi` etablerad), `datortomografi` (`tomografi` etablerad),
+`dilatera`/`dilaterad ven` (`dilatation` bär redan `Av lat. dilatare =
+vidga`) och `deskvamera` (`squama` etablerad, `Av lat. squama = fjäll`).
+
+**Metodfynd: "kontrollera roten i filen" kan avslöja att en planerad
+tillägg redan är onödigt.** `dilatera` var tilltänkt för en egen etymologi
+tills sökningen visade att syskonordet `dilatation` redan bär exakt samma
+verb (`Av lat. dilatare`) — samma sak för `deskvamera` mot `squama`. Två
+mindre lyckade kandidater (`demarkera`, `denguefeber`) lämnades som
+**äkta luckor** trots delvis kända ursprung: `demarkera`s exakta
+långivarspråk (franska vs. spanska vs. medeltidslatinets `marca`) gick
+inte att fastställa med tillräcklig säkerhet, och `dengue` har en
+omtvistad etymologi (swahili via spanska, eller tvärtom) i etablerade
+källor — hellre en lucka än en gissning som kan vara fel.
+
+**Fem standalone fackord fick etymologi mot bekräftad rot i filen:**
+`dissektion` (`secare = skära`, samma rot som redan-etablerade `resektion`),
+`dyslexi` (`dys-` etablerad via `dystrofi`/`dyskinesi`, `lexis = ord, tal`
+ny), `dysdiadokokinesi` (`kinesis = rörelse` etablerad via `dyskinesi`,
+`diadochos` ny), `dermatofytos` (`derma = hud` etablerad via
+`dermatit`/`dermatologi`, `phyton = växt` ny), `diuretikum` (`dia-` +
+`ourein = kissa`, fristående grekisk fackterm). Tre rena standalone-ord:
+`dislokera` (`Av lat. dis- = isär + locare = placera`), `deviera` (`Av lat.
+deviare, av via = väg`), `diaforetisk` (`Av gr. diaphorein = bära igenom`),
+`deprivation` (`Av lat. deprivare, av privus = enskild`), `debris` (`Av fr.
+débris, av briser = bryta sönder`), `dominans` (`Av lat. dominari, av
+dominus = herre`). Två kemiska bildningar (`Bildat av`-mönster som C-passets
+läkemedel): `dopamin` (`Bildat av DOPA + amin`), `diazepam` (`di- + azepin,
+en kväveinnehållande sjuring`). `difteri` hade bara en `Lat. diphtheria.`-
+tagg (samma B-passfälla — den formella namnformen är inte en förklaring)
+och fick sin riktiga etymologi: `Av gr. diphthera = läderhud, hinna`.
+`dränage` fick roten (`Av eng. to drain … via fr. drainage`); `drän`,
+`dränera` och `dränering` är sammansättningar/avledningar av den och
+förblir kategori 3.
+
+**Fyra eponymer i husformat**, alla med full utskriven syskonpost (inga
+förkortningar krävde `Efter` den här bokstaven): `Downs syndrom` (årtal
+1866, hög säkerhet), `Duchennes muskeldystrofi`, `Dupuytrens kontraktur`,
+`DeBakey-pincett`.
+
+Etymologitäckning 71,0 % → **71,1 % (7 770 av 10 928, 3 158 saknar).** Nästa
+bokstav: E. `check_generators.py`: rundtripp identisk, 407 filer oförändrade
 efter 18 generatorsteg, 195 tester gröna, 2 351/2 351 tooltip-ankare hela.
 
 ### Prefix- och suffixposter bär alltid sitt bindestreck
