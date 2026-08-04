@@ -1285,6 +1285,19 @@ particip och `-um`-läkemedlen får det inte.
   fixades redan i W-passet (0.9.366), där den upptäcktes.
   - `check_generators.py`: rundtripp identisk, ingen ändring i `data/ordlista.json`.
 
+- **Y: klart** (0.9.368). 3 av 6 Y-poster saknade böjning. **2 fick den:**
+  `ytanatomi` `(-n)` (samma oräknebara `-anatomi`-familj som `anatomi`/
+  `neuroanatomi`), `ytterled` `(-en, pl. -er)` (facit-belagd via hela
+  `-led`-familjen: `grundled`, `mellanled`, `glidled`, `kondylled`, `nackled`,
+  `facettled`, `iliosakralled`, `sakroiliakaled`, `pip-led` — alla samma form).
+  `yttre vändning` var redan ett motiverat undantag (adjektiv + huvudord,
+  samma flerordsregel som `djup ventrombos`).
+  - `check_generators.py`: rundtripp identisk, 407 filer oförändrade efter
+    18 generatorsteg, 195 tester gröna.
+
+- **NÄSTA BOKSTAV: Z.** 16 av 20 Z-poster saknar böjning; Å (2/18), Ä (2/8) och
+  Ö (4/9) återstår därefter — alfabetets sista fyra.
+
 ### Etapp 3 · Jfr/Se/Motsats-länkning — risk: hög, kräver beslut (se punkt 6)
 - [ ] Designbeslut taget (väg a eller b, punkt 6).
 - [ ] Byggt enligt beslutet.

@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.368
+- **Bokstav Y böjs: 2 nya böjningar.** 3 av 6 Y-poster saknade böjning. `ytanatomi` fick `(-n)` (samma oräknebara `-anatomi`-familj som `anatomi`/`neuroanatomi`), `ytterled` fick `(-en, pl. -er)` (facit-belagd via hela `-led`-familjen: `grundled`, `mellanled`, `glidled`, `kondylled`, `nackled`, `facettled`, `iliosakralled`, `sakroiliakaled`, `pip-led`). `yttre vändning` var redan ett motiverat undantag (adjektiv + huvudord, samma flerordsregel som `djup ventrombos`).
+- **Böjning klar t.o.m. Y.** Kvar: Z (16 av 20 saknar böjning), Å (2 av 18), Ä (2 av 8), Ö (4 av 9). Två öppna fynd kvarstår sedan tidigare för ett framtida sidopass (11 `-ande`-particip utan `(oböjl.)`, 8 `-ös`-adjektiv ej sammanslagna med grundord — facit i `scripts/ordlista_forbattring_todo.md`).
+- `check_generators.py`: rundtripp identisk, 407 filer oförändrade efter 18 generatorsteg, 195 tester gröna.
+
 ## 0.9.367
 - **Bokstav X genomgången: 0 nya böjningar, alla 6 luckor motiverade undantag.** X är alfabetets minsta bokstav bland dem som saknar böjning (12 poster totalt). De 6 är samtliga: 5 prefix (`xanth-/xantho-`, `xen-/xeno-`, `xer-/xero-`, `xiph-/xipho-`, `xyl-/xylo-` — prefix böjs aldrig, 657/657 bekräftat i M/N-sidopasset) och `xiphoideus`, ett rent latinskt adjektiv utan svensk assimilering (som `cavus`/`communis`/`tenuis`), till skillnad från det fullt försvenskade `visceral`. `xantelasm`s notationsavvikelse (semikolon i stället för komma) fixades redan i W-passet (0.9.366), där den upptäcktes.
 - `check_generators.py`: rundtripp identisk, ingen ändring i `data/ordlista.json`.
