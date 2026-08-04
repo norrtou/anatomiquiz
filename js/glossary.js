@@ -265,8 +265,13 @@ function loadTerms() {
       .then(data => {
         const live = data.filter(e => e.status !== 'stub')
         // Vik på plats: posterna är färska ur JSON.parse och ägs av oss, och
-        // 11 202 kopior hade kostat minne i onödan på mobil.
-        live.forEach(e => { e.fold = foldForSearch(e.term) })
+        // 11 202 kopior hade kostat minne i onödan på mobil. defLower cachas
+        // här av samma skäl som fold: annars körs toLowerCase() om på 1,9 MB
+        // definitionstext vid VARJE tangenttryck (fullHits letar i den).
+        live.forEach(e => {
+          e.fold = foldForSearch(e.term)
+          e.defLower = e.def.toLowerCase()
+        })
         return live
       })
       .catch(err => {
@@ -317,10 +322,21 @@ function fullHits(terms, q, qf) {
   const hits = []
   terms.forEach(entry => {
     const rank = matchRank(entry.fold, qf)
-    if (rank < 3 || entry.def.toLowerCase().includes(q)) hits.push({ entry, rank })
+    if (rank < 3 || entry.defLower.includes(q)) hits.push({ entry, rank })
   })
   return hits
 }
+
+/**
+ * Tak för antal RITADE träffar. Korta söktermer (en bokstav, vanliga
+ * bokstavskombinationer) matchar nästan hela ordlistan — "a" träffar över
+ * 10 000 av 10 928 poster, eftersom fritextsökningen letar i definitionerna
+ * också. Att rita om en `<dl>` med tusentals rader vid varje avstannad
+ * tangentpaus är precis den lagg som kändes som att skrivandet pausade när
+ * man började ange ett ord. Räknaren och alfabetsraden speglar ändå det
+ * FULLSTÄNDIGA antalet träffar — bara ritningen begränsas.
+ */
+const MAX_RENDERED_HITS = 200
 
 /**
  * Renderar filtrerade träffar i #searchResults sorterade efter relevans (se
@@ -367,8 +383,10 @@ function renderResults(data, query, currentPage) {
     (a, b) => a.rank - b.rank || a.entry.term.localeCompare(b.entry.term, 'sv')
   )
 
+  const shown = hits.length > MAX_RENDERED_HITS ? hits.slice(0, MAX_RENDERED_HITS) : hits
+
   let html = '<dl class="glossary-group">'
-  hits.forEach(({ entry: e, rank }) => {
+  shown.forEach(({ entry: e, rank }) => {
     const href = data.full ? termHref(e, currentPage) : indexHref(e, currentPage)
     // Rank 3 = söktermen finns bara i beskrivningen; markera den så det syns
     // snabbt varför träffen kom med. Steg 1 har ingen beskrivning att visa.
@@ -382,6 +400,9 @@ function renderResults(data, query, currentPage) {
     )}</a></dt><dd class="glossary-def">${def}</dd></div>`
   })
   html += '</dl>'
+  if (hits.length > MAX_RENDERED_HITS) {
+    html += `<p class="glossary-truncated">Visar de ${MAX_RENDERED_HITS} mest relevanta träffarna av ${hits.length}. Skriv fler bokstäver för att smalna av sökningen.</p>`
+  }
 
   results.innerHTML = html
   // Alfabetsraden speglar fortfarande vilka grupper som har träffar.
