@@ -265,7 +265,8 @@ ommätta ur `ORDLISTA.md`, inte punkt 1:s felaktiga:
    bokstav för bokstav, plus tre sidofynd (`-ande`-particip, `-ös`-adjektiv,
    semikolon-notation) — se loggen ovan (0.9.369). **Slutläge: 4 769 av
    10 928 (43,6 % täckning).** De ~6 159 kvarvarande är motiverade undantag.
-2. [ ] Etymologi — 3 223 saknar. **NÄSTA STEG i etapp 4.**
+2. [ ] Etymologi — 3 223 saknade vid start, **3 188 kvar efter A** (45 tillagda,
+   se loggen nedan). 🔄 PÅGÅR, bokstav för bokstav. **NÄSTA STEG i etapp 4.**
 3. [ ] Eng. — 1 257 saknar (många prefix/suffix motiverat undantagna).
 
 **Ett fält per bokstav och commit**, i den ordningen — inte alla tre fälten på
@@ -1365,6 +1366,65 @@ particip och `-um`-läkemedlen får det inte.
   svenska flerordstermer) — inte en arbetslista. **Nästa steg i etapp 4:
   punkt 2 (etymologi, 3 223 saknar) eller punkt 3 (Eng., 1 257 saknar),** i
   den ordningen enligt planens ursprungliga prioritering (§5).
+
+#### Etymologilogg per bokstav
+
+**A: klart** (0.9.370, 2026-08-04). Användarens uttryckliga misstanke — "det är inte
+alls så många missade som listan säger" — **stämde:** av 380 A-poster utan
+`Av lat./gr. …` var bara 45 (11,8 %) faktiska luckor värda att fylla. Resten var
+motiverade undantag i sex kategorier:
+- **107 förkortningar** (`förk.`) — expansionen i brödtexten är själva ursprungs­
+  förklaringen, en extra `Av eng. …` tillför inget (`ORDLISTA.md`:s egen regel).
+- **40 TA-/latinska flerordsfraser** (`articulatio …`, `aorta abdominalis`,
+  `ansa cervicalis`) — samma undantag som böjningen: termen ÄR redan sitt eget
+  latinska svar, en översättning (`Sv. …`) räcker.
+- **24 poster bar redan en etymologisk not som mätsnuttens regex missade** —
+  se det nya stycket i `ORDLISTA.md` ("Etymologimätningen har samma sorts blinda
+  fläck"): eponymer skrivna `Efter [Namn]`/`beskrevs … av [Namn]` (`Addisons
+  sjukdom`, `Aselli`, `Aranzio`, `atlas`, `Atlas (C1)`, `Apgar`, sex växtnamn),
+  kemiska bildningsförklaringar (`Amfetamin`, `Amitriptylin`, `Atenolol`,
+  `Azatioprin`, `Azidotymidin`, `aminosyra`, `Amoxicillin`) och `adrenolytisk`
+  ("Av adrenalin + gr. lysis").
+- **~205 sammansättningar av redan glosade svenska/medicinska led** (`aortaklaff`,
+  `alkoholcirros`, `andningsfrekvens`, `autoimmun sjukdom`, hela OT-/psykiatri­
+  batchen `Aktivitets-`/`Arbets-`) — roten bär sin etymologi på sin EGEN post
+  (`autoimmun`, `affekt`, `anestesi` har alla redan `Av gr./lat. …`); att upprepa
+  den på varje sammansättning hade varit brus, inte fakta. Bekräftat genom att
+  slå upp varje misstänkt rot i filen innan den avfärdades — inte gissat.
+- **3 arkaiska latinska diagnosnamn** (`apoplexia cerebri`, `apostem`) vars
+  moderna svenska syskon (`apoplexi`, `abscess`) redan bär etymologin; samma
+  mönster som hela "Ålderdomliga sjukdomsnamn"-importen ([[project_archaic_terms]]).
+- **1 varunamn** (`antabus`).
+
+**45 fick etymologi, i tre grupper:**
+1. **30 fristående grekiska/latinska/arabiska fackord** där jag hade hög
+   säkerhet i standardetymologin och där syskonord i FILEN redan bekräftade
+   roten (`arterioskleros`/`aortaskleros` mot redan-bojda `ateroskleros`/`aorta`/
+   `skleros`; `artroskopi`/`artroskopera` mot `artros`; `appendicit`/
+   `appendektomera` mot `appendix`; `adenomatos`/`adenohypofys` mot `adenom`;
+   `anastomosera` mot `stoma`; `apofysit` mot `apofys`) — samt fristående ord
+   utan syskon men med välkänd etymologi (`aceton`, `aerosol`, `alkaloid`,
+   `alkalos`, `alopeci`, `ammoniak`, `amnioskopi`, `anisometropi`, `anoskopi`,
+   `angiokeratom`, `aneuploidi`, `anaplastisk`, `aktinomykos`, `anorganisk`,
+   `aldosteron`, `akne` — den sistnämnda hedgad "Troligen …", osäkert ursprung).
+2. **8 `anti-`-läkemedelsklasser** (`antastmatikum`, `antiarytmikum`,
+   `antidepressivum`, `antidiabetikum`, `antiepileptikum`, `antikoagulantium`,
+   `antipsykotikum`, `antikolinerg`) fick `Av gr. anti- = mot + [rot] (jfr [Rot])`
+   efter EXAKT samma grammatiska mönster som redan-bojda `antibiotikum` (`Av
+   gr. anti- = mot + bios = liv`) — roten kontrollerad i varje enskilt syskonord
+   (`astma`, `arytmi`, `depression`, `diabetes`, `epilepsi`, `koagulation`,
+   `psykos`, `kolinerg`) innan den återanvändes.
+3. **5 eponymer**, husformat `Efter [yrke] [namn]`: `alzheimers sjukdom` (Alois
+   Alzheimer, 1906), `Angelmans syndrom` (Harry Angelman), `Aspergers syndrom`
+   (Hans Asperger), `Allis-klämma` (Oscar H. Allis), `Adson-pincett` (Alfred W.
+   Adson). **Årtal utelämnade utom Alzheimers 1906** (samma försiktighetsprincip
+   som H-passets Golgi/Guglielmi/Herxheimer: hellre ingen gissad siffra än en
+   felaktig).
+
+Etymologitäckning 70,5 % → **70,8 % (7 740 av 10 928, 3 188 saknar)**,
+mätt med den rättade snutten i `ORDLISTA.md`. `check_generators.py`: rundtripp
+identisk efter full generatorkörning, 195 tester gröna, 2 351/2 351 tooltip-
+ankare hela. **Nästa bokstav: B.**
 
 ### Etapp 3 · Jfr/Se/Motsats-länkning — risk: hög, kräver beslut (se punkt 6)
 - [ ] Designbeslut taget (väg a eller b, punkt 6).

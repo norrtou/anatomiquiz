@@ -67,7 +67,7 @@ avslutades i hela alfabetet A–Ö.
 |---|---:|---:|---:|
 | Ordklasstagg | 10 928 | 100 % | 0 |
 | `Eng. ` | 9 671 | 88,5 % | 1 257 |
-| Etymologi (`Av lat./gr. …`) | 7 705 | 70,5 % | 3 223 |
+| Etymologi (`Av lat./gr. …`) | 7 740 | 70,8 % | 3 188 |
 | `Sv. ` | 2 627 | 24,0 % | 8 301 |
 | Böjning i parentes | 4 769 | 43,6 % | 6 159 |
 | `Jfr ` | 1 386 | 12,7 % | 9 542 |
@@ -132,6 +132,18 @@ Två fällor i mätningen, båda påträffade 2026-08-02:
   `antibiotikum (pl. antibiotika)` och de övriga `-um`-läkemedlen. Mätsnutten
   räknar dem som obojda, eftersom mönstret kräver `-`. De är alltså *inte* en
   arbetslista: de har redan den böjning som är relevant för formen.
+
+**Etymologimätningen har samma sorts blinda fläck, hittad 2026-08-04 i A-passet.**
+Regexen `Av (?:lat|gr|grek|eng|fr|ty|ital|arab|sanskr)` missar tre redan levande
+notationer: (1) eponymer skrivna `Efter [Namn]` eller `beskrevs … av [Namn]`
+(`Addisons sjukdom`, `Aselli`, `Aranzio`, `atlas`), (2) kemiska bildningar skrivna
+`Bildat av …`/`Namnet är en sammandragning …`/`Ändelsen -X betecknar …`
+(`Amitriptylin`, `Atenolol`, `Azatioprin`), och (3) `Av <ord> + <ord>` utan språkkod
+när båda leden redan är svenska/vedertagna (`aminosyra`: "Av amin + syra"). 24 poster
+i bokstav A bar redan en sådan notering utan att synas i mätningen — samma lärdom som
+böjningens dolda språktaggar (se `scripts/ordlista_forbattring_todo.md`, etapp 4 punkt 2).
+**Kontrollera alltid för `Efter `/`beskrevs av`/`Bildat av`/`Av <ord> \+` innan en post
+bedöms sakna etymologi.**
 
 **Skriv `(-ret)`/`(-let)`, inte `(-et)`, när ordet tappar en vokal i bestämd form.**
 Uppslagsord på obetonat `-er`/`-el` synkoperar: *flimmer → flimret*, *foster → fostret*,
