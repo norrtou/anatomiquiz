@@ -1426,6 +1426,70 @@ mätt med den rättade snutten i `ORDLISTA.md`. `check_generators.py`: rundtripp
 identisk efter full generatorkörning, 195 tester gröna, 2 351/2 351 tooltip-
 ankare hela. **Nästa bokstav: B.**
 
+**B: klart** (0.9.371, 2026-08-04). Samma mönster som A: av 324 B-poster
+saknade **169** enligt mätsnutten, bara **23 (13,6 %)** var faktiska luckor
+värda att fylla. Resten var motiverade undantag:
+- **~35 förkortningar** (`B27`, `BCC`, `BMI`, `BRCA`, `BOA` m.fl.) —
+  expansionen är själva ursprungsförklaringen.
+- **19 poster bar redan en etymologisk not mätsnutten missade**, upptäckt
+  INNAN detta pass (fanns redan i filen): `Babinskis reflex`/`Babinskis
+  tecken`/`Brown-Séquards syndrom`/`Botallo` (`Efter …`), `baktericid`/
+  `bakteriemi`/`bakteriostatisk`/`bakteriuri`/`bakteroid` (`Av bakterie +
+  gr./lat. …`, språkkoden efter `+` i stället för direkt efter `Av `), och
+  ett helt kluster läkemedels-/växtetymologier (`Berberis vulgaris`,
+  `Boswellia sacra`, `Banisteriopsis caapi`, `Barbital`, `Bacitracin`,
+  `Beklometason`, `Betametason`, `Bensylpenicillin`, `Bleomycin`,
+  `Busulfan` — `Bildat av …`/`Sammandragning av …`/`Ändelsen -X av …`).
+- **Resten:** sammansättningar av redan i FILEN glosade rötter
+  (`barnkirurgi`→`kirurgi`, `basalt ganglion`→`ganglion`,
+  `benresorption`→`resorption`, `bronkopneumoni`→`pneumoni`, alla
+  verifierade `Av gr./lat. …` på sin egen post), rena svenska beskrivande
+  sammansättningar utan klassiskt ursprung att bryta ner (`blodtryck`,
+  `bukspottkörtel`, `bensår`, `blodpropp`, `benbrott` …), och bara-taggade
+  oöversatta engelska lånord där `Eng. `-fältet är identiskt med
+  uppslagsordet (`bias`, `bypass`, `biofeedback`) — de två nya
+  undantagsfynden står nedskrivna i `ORDLISTA.md`.
+
+**23 fick riktig etymologi, i tre grupper:**
+1. **9 fristående fackord/kliniska termer** med hög säkerhet, flera
+   verifierade mot syskonord i filen: `bronkit` (`Av gr. bronchos = luftrör
+   + -itis = inflammation`, samma mönster som redan-bojda `artrit`),
+   `bakteriell vaginos` (`Av lat. vagina = slida + gr. -osis = tillstånd`),
+   `bakteriologisk` (`Av bakterie + gr. logos = lära`), `Bulimia nervosa`
+   (`Av gr. bous = oxe + limos = hunger + lat. nervosa = nervös`),
+   `basaliom` (`Ändelsen -om av gr. -oma = svulst`), `botulism` (`Av lat.
+   botulus = korv`, uppkallad efter tidiga fall av korvförgiftning),
+   `borrelios` (`Efter den franske bakteriologen Amédée Borrel`),
+   `borborygmi` (`Av gr. borborygmos`, ljudhärmande), `bikarbonat` (`Av
+   lat. bi- = två, dubbel + karbonat`).
+2. **13 sjukdoms-/syndromeponymer**, husformat `Efter [yrke] [namn]`,
+   samtliga utan gissat årtal: `Bantis sjukdom` (Guido Banti),
+   `Bardet-Biedls syndrom` (Georges Bardet + Arthur Biedl), `Basedows
+   sjukdom` (Carl von Basedow), `BCS` (George Budd + Hans Chiari),
+   `Bechterews sjukdom` (Vladimir Bechterew), `bürgers sjukdom` (Leo
+   Buerger), `Barretts esofagus` (Norman Barrett), `Bells pares` (Charles
+   Bell), `Behçets sjukdom` (Hulusi Behçet), `Bakercysta` (William Baker).
+3. **4 instrument-/skaleponymer**, samma format: `Barthel Index` (Dorothea
+   Barthel), `Berg Balance Scale` (Katherine Berg), `BDI` (Aaron Beck),
+   `Balfour-retraktor` (Donald Balfour). `BBS` (samma skala som Berg
+   Balance Scale) fick INGEN egen `Efter`-mening — syskonposten bär den
+   redan, se ny regel i `ORDLISTA.md`.
+
+**Ett fynd lämnat olöst, medvetet:** `Backhaus-tång` är sannolikt uppkallad
+efter en tysk kirurg, men jag har inte tillräckligt hög säkerhet i namn/
+yrke för att skriva en `Efter …`-mening utan att gissa — lämnad som lucka.
+
+**Ett sidofynd, INTE åtgärdat, flaggat för användaren:** `Box and Blocks
+Test` (förk. BBT) och `Box and Block Test` ser ut att beskriva samma
+kliniska test (handfunktion, klossar, en minut) under två olika
+namnformer med olika definitioner och olika `Jfr`-fält — möjlig dubblett,
+inte bekräftad eller sammanslagen i detta pass.
+
+Etymologitäckning 70,8 % → **70,9 % (7 746 av 10 928, 3 182 saknar)**,
+mätt med den rättade snutten i `ORDLISTA.md`. `check_generators.py`:
+rundtripp identisk efter full generatorkörning (18 steg), 195 tester
+gröna, 2 351/2 351 tooltip-ankare hela. **Nästa bokstav: C.**
+
 ### Etapp 3 · Jfr/Se/Motsats-länkning — risk: hög, kräver beslut (se punkt 6)
 - [ ] Designbeslut taget (väg a eller b, punkt 6).
 - [ ] Byggt enligt beslutet.

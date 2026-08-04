@@ -67,7 +67,7 @@ avslutades i hela alfabetet A–Ö.
 |---|---:|---:|---:|
 | Ordklasstagg | 10 928 | 100 % | 0 |
 | `Eng. ` | 9 671 | 88,5 % | 1 257 |
-| Etymologi (`Av lat./gr. …`) | 7 740 | 70,8 % | 3 188 |
+| Etymologi (`Av lat./gr. …`) | 7 746 | 70,9 % | 3 182 |
 | `Sv. ` | 2 627 | 24,0 % | 8 301 |
 | Böjning i parentes | 4 769 | 43,6 % | 6 159 |
 | `Jfr ` | 1 386 | 12,7 % | 9 542 |
@@ -408,6 +408,49 @@ syndrom`/`Allis-klämma`/`Adson-pincett` fick bara namn + yrke + nationalitet.
 nedbrytning. Hellre en lucka kvar än en felaktig "fakta" i en sökbar ordbok —
 samma princip som böjningens `Kalomel`/`Karbidopa` (lämnade obojda hellre än
 gissade).
+
+**Två fynd till från B-passet (0.9.371), båda värda att kolla i varje
+kommande bokstav:**
+
+1. **En `Lat. X.`-tagg är INTE en etymologi.** Den ger bara den formella
+   latinska/vetenskapliga namnformen på en svensk vardagsterm (`bronkit …
+   Lat. bronchitis.`, `botulism … Lat. botulismus.`, `Barretts esofagus …
+   Lat. oesophagus Barrett.`) — helt separat information från `Av lat./gr.
+   X = Y`, som förklarar vad ordet **betyder**. En post med bara `Lat. `-tagg
+   är alltså fortfarande en riktig etymologilucka, inte klar. B-passet gav
+   fyra sådana poster (`bronkit`, `botulism`, `basaliom`, `bakteriell
+   vaginos`) en riktig `Av …`/`Ändelsen …`-etymologi utöver den befintliga
+   `Lat. `-taggen.
+2. **Ett bart `(eng.)`/`(lat.)`-taggat ord där uppslagsordet är IDENTISKT
+   med `Eng. `-fältet är sitt eget ursprungssvar** — samma princip som
+   TA-flerordsfraserna (kategori 2), fast för enskilda oöversatta lånord:
+   `bias`, `bypass`, `biofeedback`, `Box and Blocks Test`, `Barthel Index`
+   (innan eponymen lades till). Taggen säger redan "det här är engelska/
+   latin, oöversatt" — en `Av eng. bias = bias`-mening hade varit cirkulär.
+   **Gäller inte om ordet är en eponym** (uppkallat efter en person) — då
+   krävs ändå `Efter [yrke] [namn]`, som för `Barthel Index`/`Berg Balance
+   Scale`/`BDI` nedan; taggen svarar bara på SPRÅK-frågan, inte VEM-frågan.
+
+**Eponymer gäller även förkortningsposter utan egen utskriven syskonpost.**
+`BCS` (Budd-Chiaris syndrom) och `BDI` (Beck Depression Inventory) fick
+`Efter …` skrivet direkt på förkortningsposten, eftersom ingen fullt
+utskriven post för det bakomliggande namnet finns någon annanstans i filen.
+`BBS` (Berg Balance Scale) fick INGEN egen `Efter`-mening — sifferexemplet
+finns redan på syskonposten `Berg Balance Scale` i samma fil, samma
+"roten bär sin etymologi på sin EGEN post"-princip som kategori 3.
+
+**Ett helt kluster av redan-skrivna, mätsnutts-osynliga läkemedels-/
+växtetymologier upptäcktes i B** (`Berberis vulgaris`, `Boswellia sacra`,
+`Banisteriopsis caapi`, `Barbital`, `Bacitracin`, `Beklometason`,
+`Betametason`, `Bensylpenicillin`, `Bleomycin`, `Busulfan`) — alla bär redan
+fullständiga, korrekta etymologier (`Bildat av …`, `Sammandragning av …`,
+`Ändelsen -X av …`, eller `Av <ord> + <ord med språkkod längre in i
+meningen>`), bara i en formulering mätregexen inte fångar. Samma mönster
+gäller `bakteriell`-familjens `Av bakterie + gr. …`-poster
+(`baktericid`/`bakteriemi`/`bakteriostatisk`/`bakteriuri`/`bakteroid`,
+redan klara sedan tidigare) — språkkoden sitter efter `+`, inte direkt efter
+`Av `. **Kontrollera alltid hela meningen, inte bara de första två orden,
+innan en post räknas som lucka.**
 
 ### Prefix- och suffixposter bär alltid sitt bindestreck
 
