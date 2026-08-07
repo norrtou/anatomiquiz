@@ -66,7 +66,7 @@ avslutades i hela alfabetet A–Ö.
 | Fält | Poster | Täckning | Saknas |
 |---|---:|---:|---:|
 | Ordklasstagg | 10 928 | 100 % | 0 |
-| `Eng. ` | 9 671 | 88,5 % | 1 257 |
+| `Eng. ` | 9 718 | 88,9 % | 1 210 |
 | Etymologi (`Av lat./gr. …`) | 7 859 | 71,9 % | 3 069 |
 | `Sv. ` | 2 627 | 24,0 % | 8 301 |
 | Böjning i parentes | 4 769 | 43,6 % | 6 159 |
@@ -1578,6 +1578,136 @@ kör den smala kedjan en gång rakt igenom, kör DÄREFTER
 `sidodatum.py --update` (ser nu sidornas färdiga innehåll), kör
 SEDAN kedjan en andra gång (så både sitemap och synligt datum
 byggs mot det uppdaterade registret).
+
+### Engelsknotation — och vilka poster som ska ha `Eng. `
+
+Etapp 4 punkt 3, påbörjad 0.9.396 (2026-08-07) efter att etymologin (punkt 2) blev
+helt klar A–Ö. Samma metod som böjningen och etymologin: mät hela bokstaven,
+kategorisera varje "saknas"-post innan något skrivs — **"saknas" är ett tak, inte
+en arbetslista.** Facit av A–E: 156 poster saknade `Eng. ` enligt mätsnutten, bara
+**47 (30,1 %)** var faktiska luckor värda att fylla — en klart högre kvot äkta
+luckor än etymologins ~12 %, eftersom flertalet motiverade undantag nedan är
+koncentrerade till enstaka bokstäver (särskilt TA-ledserien i A) snarare än
+utspridda jämnt.
+
+**Placering:** `Eng. …` står **direkt efter** `Sv. …` (husformatets egen ordning,
+verifierad mot `reumatoid artrit`: `… Sv. ledgångsreumatism. Eng. rheumatoid
+arthritis. Förk. RA. ICD-10: …`) och **före** `Förk. `/`Jfr `/`ICD-10: `/övriga
+tail-fält. Saknas `Sv. `, läggs `Eng. …` sist i den beskrivande meningen, före ett
+eventuellt `Jfr `.
+
+**Fem kategorier motiverade undantag**, i den ordning de dominerade A–E:
+
+1. **Latinska binomiala växtnamn** (`Atropa belladonna`, `Allium sativum`,
+   `Berberis vulgaris`, `Cannabis sativa`, `Digitalis purpurea` …) — det
+   vetenskapliga binomialnamnet är internationellt och används **identiskt** i
+   engelsk facktext; ett `Eng. `-fält hade bara upprepat uppslagsordet.
+   **Kontrollerat, inte antaget:** noll av alla binomialposter i hela filen bär
+   vare sig `Sv. ` eller `Eng. `-tagg — husets egen konsekventa praxis är att låta
+   den svenska/engelska vardagsbenämningen stå inline i löptexten (”vitlök,
+   lökväxt”) i stället för en formell tagg. Störst kategori i alla fem
+   bokstäverna: 26 (A), 5 (B), 32 (C, störst enskilda kategori i hela passet),
+   8 (D), 11 (E) = **82 av 109 undantag.**
+2. **Redan tautologiska engelska/latinska lånord** — uppslagsordet ÄR redan sin
+   egen engelska form (`anasarca`, `anthrax`, `encephalomalacia`; jfr B-passets
+   etymologimotsvarighet `bias`/`bypass`/`biofeedback`). Ett `Eng. `-fält hade
+   bara upprepat termen.
+3. **Modern/primär syskonpost bär redan fältet** — en arkaisk, sällsynt eller
+   dubblerande term vars huvudkoncept redan har `Eng. ` på sin egen post, oftast
+   uttryckligen länkad via `Jfr `/`Ålderdomligt:`. Samma logik som etymologins
+   "arkaiska latinska diagnosnamn"-undantag, men här gäller den även levande
+   ord: `apostem`→`böld`/`abscess` (Eng. abscess), `digerdöden`→`pest` (Eng.
+   plague, listar `digerdöden` som Ålderdomligt:-synonym), `caries`→`karies`
+   (Eng. caries, tooth decay — `karies` är dessutom explicit "Även stavat
+   caries"),
+   `decubitus`→`trycksår` (Eng. pressure ulcer, Jfr Decubitus), `cholera
+   infantum`/`cholera nostras`→`kolera` (Eng. cholera), `commotio cerebri`→
+   `hjärnskakning` (Eng. concussion, Lat. commotio cerebri), `estesiometer`→
+   `aestesiometer` (ren "se X"-korsreferens), `epithelioma`→`carcinoma` (Eng.
+   carcinoma), `embolia`→`emboli` (Eng. embolism). **Kontrollmetod:** slå upp
+   varje misstänkt syskon i FILEN innan posten avfärdas — precis som
+   etymologins rotkontroll, fast riktningen är omvänd (leta framåt mot den
+   moderna termen, inte bakåt mot roten).
+4. **Svenskspecifika institutioner/utbildningssystem utan internationell
+   motsvarighet** — `AT`, `BT` (redan obesvarade sedan tidigare, bekräftar
+   mönstret), `EHM` (E-hälsomyndigheten), `BOA` (namnet på ett svenskt
+   kvalitetsregister). En engelsk "motsvarighet" hade varit en approximation,
+   inte en översättning — samma gräns som etymologins varunamnsundantag.
+5. **Flertydiga förkortningar där båda betydelserna redan är parentetiskt
+   översatta i löptexten** — `CAPS`, `CHD`, `CAD`, `ESS` skriver redan
+   `(catastrophic antiphospholipid syndrome)`/`(coronary artery disease)` osv.
+   inline för varje sifferled. Ett formellt `Eng. `-fält hade varit tvetydigt
+   (vilken av de två betydelserna?) och `BT` sätter samma precedens: dess
+   `blodtryck`-betydelse har redan `(blood pressure)` inline utan formell tagg.
+
+**47 fick riktig `Eng. `, i två grupper:**
+1. **35 TA-ledtermer i den latinska prefixformen** (`articulatio X`/
+   `articulationes X`) fick sin engelska TA-standardbenämning
+   (`articulatio coxae` → hip joint, `articulatio genus` → knee joint,
+   `articulatio femoropatellaris` → **patellofemoral** joint — engelskan vänder
+   ordordningen jämfört med latinets femoro-patellaris, kontrollerat separat
+   eftersom en ren transkribering hade gett fel term). Symmetriskt med `Sv. `-
+   fältet som redan fanns på alla 35. Plus `aorta abdominalis`/`aorta thoracica`
+   (abdominal/thoracic aorta, omvänd ordföljd som joint-termerna).
+2. **12 fristående fackord/institutioner**, verifierade mot etablerad
+   anatomisk/klinisk standardterminologi: `anococcygeum` (anococcygeal body),
+   `anserinus` (pes anserinus, samma Latin-i-engelskan-princip som `ansa
+   cervicalis` ovan men här verkligen den använda engelska termen), `AKM`
+   (emergency department), `BVC` (child health centre), `BMM` (midwifery
+   clinic), `BIVA` (paediatric intensive care unit), `bröstrygg` (thoracic
+   spine), `costae fluitantes` (floating ribs), `CIVA` (central intensive care
+   unit), `dränering` (drainage — trots att syskonet `dränage` redan hade
+   fältet, är `dränering` en egen, levande term utan `Jfr`-länk till syskonet,
+   så den fick sin egen rad i stället för att räknas som dubblettundantag).
+
+**Stavningskonvention: brittisk engelska.** `paediatric` (inte pediatric),
+`centre` (inte center) — kontrollerat mot filens egna redan skrivna `Eng. `-fält
+(`barnkirurgi`: paediatric surgery, `vårdcentral`/`VC`: health centre, `RCC`:
+regional cancer centre) innan `BVC`/`BIVA` skrevs.
+
+Etymologitäckning-mönstret upprepade sig: **Eng.-täckning 88,5 % → 88,9 %
+(9 671 → 9 718 av 10 928, 1 257 → 1 210 saknar)**, mätt 2026-08-07 efter A–E.
+`check_generators.py`: rundtripp identisk, 407 filer oförändrade efter 18
+generatorsteg, 195 tester gröna, sidodatum.json aktuellt, 2 351/2 351
+tooltip-ankare hela.
+
+#### Engelskloggen per bokstav
+
+**A klar** (0.9.396, 2026-08-07): 72 poster saknade `Eng. ` enligt mätsnutten.
+**40 fick fältet** — 35 TA-leder + `aorta abdominalis`/`aorta thoracica` +
+`anococcygeum`/`anserinus` + `AKM`. **32 motiverade undantag:** 26 binomiala
+växtnamn (kategori 1) + `ansa cervicalis`/`anasarca`/`anthrax` (kategori 2) +
+`apoplexia cerebri`/`apostem` (kategori 3, syskon `apoplexi`/`abscess` bär redan
+fältet) + `AT` (kategori 4).
+
+**B klar** (0.9.396, 2026-08-07): 12 poster saknade `Eng. `. **4 fick fältet:**
+`BVC`, `BMM`, `BIVA`, `bröstrygg`. **8 motiverade undantag:** 5 binomiala
+växtnamn + `bröstsjuka` (kategori 3, syskon `lungsot` listar `bröstsot` som
+Ålderdomligt-synonym med Eng. redan satt) + `BT` (kategori 4/5) + `BOA`
+(kategori 4).
+
+**C klar** (0.9.396, 2026-08-07): 42 poster saknade `Eng. ` — flest av de fem,
+men också högst undantagskvot (95 %). **2 fick fältet:** `costae fluitantes`,
+`CIVA`. **40 motiverade undantag:** 32 binomiala växtnamn (störst enskilda grupp
+i hela A–E-passet) + `caries`/`cholera`/`cholera infantum`/`cholera nostras`/
+`commotio cerebri` (kategori 3, syskon `karies`/`kolera`/`hjärnskakning` bär
+redan fältet) + `CAPS`/`CHD`/`CAD` (kategori 5).
+
+**D klar** (0.9.396, 2026-08-07): 12 poster saknade `Eng. `. **1 fick fältet:**
+`dränering`. **11 motiverade undantag:** 8 binomiala växtnamn + `decubitus`/
+`dementia paralytica`/`digerdöden` (kategori 3, syskon `trycksår`/`paralysis
+generalis`+`syfilis`/`pest` bär redan fältet eller täcker konceptet).
+
+**E klar** (0.9.396, 2026-08-07): 18 poster saknade `Eng. ` — **0 fick fältet**,
+första bokstaven med noll äkta luckor i det här passet (samma sak hände Q och U
+i etymologipasset). **18 motiverade undantag:** 11 binomiala växtnamn +
+`embolia`/`epithelioma`/`estesiometer` (kategori 3, syskon `emboli`/`carcinoma`/
+`aestesiometer` bär redan fältet) + `emollitio cerebri`/`encephalomalacia`
+(kategori 2/3 kombinerat — `encephalomalacia` är själv redan sin engelska form,
+`emollitio cerebri` är den arkaiska latinska sidoformen) + `ESS`/`EHM`
+(kategori 5/4).
+
+Nästa bokstav: F. Per bokstav: A–E 0.9.396.
 
 ### Prefix- och suffixposter bär alltid sitt bindestreck
 
