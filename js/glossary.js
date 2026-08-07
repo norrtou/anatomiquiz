@@ -182,9 +182,125 @@ function escapeHtml(str) {
     .replace(/"/g, '&quot;')
 }
 
-/** Escapar HTML och kursiverar ordklassen (ledande token: subst., adj., verb …). */
-function formatDef(str) {
-  return escapeHtml(str).replace(
+/**
+ * Nyckel: gement uppslagsord, eller en av dess ' / '-alternativformer
+ * ("-algia / -algi" ger både "-algia" och "-algi") → {page, slug}.
+ * Speglar build_term_index() i scripts/generate_glossary.py.
+ *
+ * Två poster som delar samma nyckel gör den tvetydig; den utelämnas helt i
+ * stället för att gissas. Byggs en gång per sidladdning (se refIndex nedan) –
+ * 10 928 poster är för dyrt att gå igenom per tangenttryck.
+ */
+function buildTermIndex(entries) {
+  const seen = new Map()
+  entries.forEach(entry => {
+    const page = pageKey(entry)
+    const slug = entry.slug || slugify(entry.term)
+    const värde = page + ' ' + slug
+    entry.term.split(' / ').forEach(alt => {
+      const key = alt.trim().toLowerCase()
+      if (!key) return
+      if (!seen.has(key)) seen.set(key, värde)
+      else if (seen.get(key) !== värde) seen.set(key, null) // tvetydig
+    })
+  })
+  const idx = new Map()
+  seen.forEach((v, k) => {
+    if (v) {
+      const i = v.indexOf(' ')
+      idx.set(k, { page: v.slice(0, i), slug: v.slice(i + 1) })
+    }
+  })
+  return idx
+}
+
+let termIndexCache = null
+
+/**
+ * Termindexet för den inlästa ordlistan. Byggt vid första sökträffen som
+ * visar en beskrivning och sedan återanvänt: 10 928 poster tar ~10 ms att gå
+ * igenom, vilket är för mycket per tangenttryck men försumbart en gång.
+ */
+function refIndex(entries) {
+  if (!termIndexCache) termIndexCache = buildTermIndex(entries)
+  return termIndexCache
+}
+
+/**
+ * Jfr/Se/Motsats-meningen. Samma nyckelord som REF_PATTERN i
+ * scripts/generate_glossary.py, men UTAN lookbehind: den stöds inte i Safari
+ * före 16.4 och hade kastat SyntaxError vid inläsning, alltså tagit hela
+ * sökningen med sig. Tecknet före "Se" fångas i stället i grupp 1 och skrivs
+ * tillbaka oförändrat. Gruppen med värdet är därför nr 2, inte nr 1.
+ */
+const REF_PATTERN =
+  /(?:\bJfr\b|\bMotsats\b|(^|[^A-Za-zÀ-ÖØ-öø-ÿ])Se\b):?\s+([^.]+)\./g
+
+/** En del ur en Jfr-lista: "prefix zym-", "-opi (synfel)", "HDL". */
+const REF_PART = /^((?:prefix|suffix)\s+)?([\s\S]*?)(\s*\([^)]*\))?$/
+
+/**
+ * En Jfr/Se/Motsats-lista, ev. kommaseparerad. Länkar varje del som matchar
+ * exakt en post i index; resten lämnas som text. skip = {page, slug} för
+ * posten som renderas, så att den aldrig länkar till sig själv.
+ */
+function linkifyValue(value, index, skip) {
+  return value
+    .split(', ')
+    .map(part => {
+      const m = REF_PART.exec(part)
+      const lead = m[1] || ''
+      const core = m[2]
+      const tail = m[3] || ''
+      const träff = index.get(core.trim().toLowerCase())
+      if (!träff || (skip && träff.page === skip.page && träff.slug === skip.slug)) {
+        return escapeHtml(part)
+      }
+      const href = `ordlista-${pageSlug(träff.page)}.html#${träff.slug}`
+      return (
+        escapeHtml(lead) +
+        `<a href="${escapeHtml(href)}">${escapeHtml(core)}</a>` +
+        escapeHtml(tail)
+      )
+    })
+    .join(', ')
+}
+
+/**
+ * Escapar texten och länkar samtidigt Jfr/Se/Motsats-referenser som pekar på
+ * en riktig post. Motsvarar escape_html(text) plus inbäddade <a>-taggar.
+ *
+ * Länken skrivs ALLTID med full sökväg (ordlista-x.html#ankare), aldrig som
+ * bart #ankare ens på samma sida – annars skulle sökträffens markup skilja sig
+ * från den statiska sidans för samma post, och de två renderingsvägarna
+ * (Python och JS) vore inte längre utbytbara.
+ */
+function linkifyRefs(text, index, skip) {
+  let ut = ''
+  let pos = 0
+  let m
+  REF_PATTERN.lastIndex = 0
+  while ((m = REF_PATTERN.exec(text)) !== null) {
+    const start = m.index + m[0].indexOf(m[2], (m[1] || '').length)
+    ut += escapeHtml(text.slice(pos, start))
+    ut += linkifyValue(m[2], index, skip)
+    pos = start + m[2].length
+  }
+  return ut + escapeHtml(text.slice(pos))
+}
+
+/**
+ * Escapar HTML och kursiverar ordklassen (ledande token: subst., adj., verb …).
+ *
+ * Ges refIndex länkas dessutom Jfr/Se/Motsats-referenserna, exakt som
+ * format_def() i scripts/generate_glossary.py gör för den statiska sidan.
+ * De två måste ge BYTE-IDENTISK utdata för samma post – annars skulle en
+ * sökträff och samma post på bokstavssidan se olika ut. Det prövas för
+ * samtliga poster i scripts/test_ordlista_sok.js.
+ */
+function formatDef(str, refIndex, skip) {
+  const body = refIndex ? linkifyRefs(str, refIndex, skip) : escapeHtml(str)
+  return body.replace(
     /^(subst\.|adj\.|adv\.|verb|prefix|suffix|förk\.|pron\.|räkn\.|interj\.|konj\.|prep\.)(?![a-zåäö])/,
     '<em>$1</em>'
   )
@@ -390,11 +506,14 @@ function renderResults(data, query, currentPage) {
     const href = data.full ? termHref(e, currentPage) : indexHref(e, currentPage)
     // Rank 3 = söktermen finns bara i beskrivningen; markera den så det syns
     // snabbt varför träffen kom med. Steg 1 har ingen beskrivning att visa.
+    const skip = data.full
+      ? { page: pageKey(e), slug: e.slug || slugify(e.term) }
+      : null
     const def = !data.full
       ? ''
       : rank === 3
-        ? highlightMatches(formatDef(e.def), q)
-        : formatDef(e.def)
+        ? highlightMatches(formatDef(e.def, refIndex(data.full), skip), q)
+        : formatDef(e.def, refIndex(data.full), skip)
     html += `<div class="glossary-entry"><dt class="glossary-term"><a href="${href}">${escapeHtml(
       e.term
     )}</a></dt><dd class="glossary-def">${def}</dd></div>`

@@ -1559,6 +1559,29 @@ bekräftade gränsdragningen: `Jfr Uvea, Irit. ICD-10: H20` länkar termerna men
 lämnar koden, och alla 17 poster med flera referensmeningar får varje mening
 länkad.
 
+**Rättat i 0.9.402 — länkarna finns nu ÄVEN i sökträffarna (väg a).**
+Användaren invände direkt efter leverans: *"Varför kommer jmfr och se bara om
+jag klickar på ordet? Ingen kommer ju klicka på ordet."* Helt riktigt — se §6.
+`js/glossary.js` fick `buildTermIndex()`, `linkifyRefs()` och ett `refIndex`-
+argument till `formatDef()`, speglingar av Python-sidan, och `renderResults()`
+skickar in indexet. Tre saker skiljer JS-porten från Python-originalet, alla
+avsiktliga: (1) **ingen lookbehind** — `(?<!…)` stöds inte i Safari före 16.4
+och hade kastat SyntaxError vid inläsning, alltså slagit ut hela sökningen;
+tecknet före `Se` fångas i en egen grupp i stället, och projektets övriga JS
+använder heller ingen lookbehind. (2) **Alltid full sökväg i href**, aldrig
+bart `#ankare` ens på samma sida — `groupHref()` gör annars det, men då hade
+sökträffens markup skilt sig från den statiska sidans för samma post. (3)
+**Indexet memoiseras** (`refIndex()`); 10 928 poster per tangenttryck är för
+dyrt. `highlightMatches()` behövde ingen ändring — den delar på hela taggar
+och rör aldrig en `href`. Skyddet: `test_ordlista_sok.js` jämför nu
+`formatDef()` mot den Python-genererade HTML:en för **var och en av de 10 928
+posterna** (71 → 83 tester). **Larmet verifierat mot tre planterade fel:** fel
+href-format (1 776 avvikelser, rött), tvetydig nyckel som länkas, och
+bortkopplat självlänkskydd. De två sista lämnade först hela sviten grön —
+dagens data har varken en refererad tvetydig nyckel eller en självreferens —
+så de fick egna direkttester mot syntetisk data i stället. Utan det steget hade
+två skydd kunnat falla bort tyst den dag ordlistan ändras.
+
 **Två medvetet olösta fynd ur efterkontrollen:**
 
 1. **Två äkta missar av 2 587:** `kaudal` → `Motsats: kranial` och `ledläpp` →
@@ -1592,7 +1615,18 @@ punkt 1 rapporterade var alla ordet *uttalad* i löptext). Fältet byggs alltså
 
 ---
 
-## 6. Designbeslut inför etapp 3 — ✅ BESLUTAT: väg (b) (0.9.401)
+## 6. Designbeslut inför etapp 3 — väg (b) 0.9.401, **ERSATT av väg (a) 0.9.402**
+
+> **Utfallet först, så ingen läser vägvalet nedan som gällande:** väg (b)
+> levererades i 0.9.401 och visade sig **fel i praktiken**. Sökträffen visar
+> redan hela definitionen, så en läsare som sökt fram ett ord har ingen
+> anledning att klicka vidare till bokstavssidan — och det var bara där
+> länkarna fanns. De hamnade alltså på det enda ställe man inte behöver gå
+> till. Väg (a) byggdes i 0.9.402 och gäller nu: BÅDA renderingsvägarna länkar,
+> och `format_def()`/`formatDef()` är åter byte-identiska (vilket väg (b)
+> offrade). **Lärdomen är inte "b var en dålig idé" utan att rekommendationen
+> vägde byggrisk mot byggrisk och aldrig frågade var användaren faktiskt
+> läser.** Se [[feedback_recommend_on_user_value_not_build_risk]].
 
 Kravet på att `format_def()`/`formatDef()` ska vara byte-identiska höll inte
 rakt av för Jfr/Se-länkning: Python-generatorn **kan** ha tillgång till ett

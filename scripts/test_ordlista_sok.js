@@ -488,6 +488,94 @@ async function main () {
     eq('  med en förklarande platshållare', w.input.placeholder, 'Sök är inte tillgänglig offline')
   }
 
+  /* =========================================================================
+     13. Jfr/Se/Motsats-länkning: JS måste ge EXAKT samma markup som Python
+
+     Etapp 3 lades först bara i den statiska sidan (väg b) och saknades därför
+     i sökträffarna – där de flesta faktiskt läser definitionen. Nu länkar båda
+     vägarna, och då är den enda som räknas att de säger BYTE-IDENTISKT samma
+     sak: annars ser en post olika ut beroende på om man sökte fram den eller
+     bläddrade till den. Här jämförs js/glossary.js:s formatDef() mot den
+     färdiga HTML som generate_glossary.py skrev, för VARJE post i ordlistan.
+     ========================================================================= */
+  {
+    const w = makeWorld()
+    const { formatDef, buildTermIndex, pageKey, slugify } = w.ctx
+    const idx = buildTermIndex(FULL_RAW)
+
+    // Facit: <dd>-innehållet per ankare, ur de genererade bokstavssidorna.
+    const DD = /<div class="glossary-entry" id="([^"]+)"[^>]*><dt class="glossary-term"[^>]*>[\s\S]*?<\/dt><dd class="glossary-def" itemprop="description">([\s\S]*?)<\/dd><\/div>/g
+    const facit = new Map()
+    fs.readdirSync(ROOT)
+      .filter(f => /^ordlista-[a-z0-9]+\.html$/.test(f))
+      .forEach(f => {
+        const html = fs.readFileSync(path.join(ROOT, f), 'utf8')
+        let m
+        while ((m = DD.exec(html))) facit.set(m[1], m[2])
+      })
+    ok('facit hittat: de genererade bokstavssidornas definitioner', facit.size === FULL_RAW.length)
+
+    let olika = 0
+    let exempel = ''
+    let medLänk = 0
+    FULL_RAW.forEach(e => {
+      const slug = e.slug || slugify(e.term)
+      const vill = facit.get(slug)
+      if (vill === undefined) return
+      const fick = formatDef(e.def, idx, { page: pageKey(e), slug })
+      if (fick.indexOf('<a href=') !== -1) medLänk++
+      if (fick !== vill && !exempel) {
+        exempel = `\n      term : ${e.term}\n      JS   : ${fick}\n      PY   : ${vill}`
+      }
+      if (fick !== vill) olika++
+    })
+    ok(`formatDef() ger samma markup som Python för alla ${FULL_RAW.length} poster` +
+       (olika ? ` – ${olika} avviker:${exempel}` : ''), olika === 0)
+    ok(`  och länkar faktiskt något (${medLänk} poster fick minst en länk)`, medLänk > 1000)
+
+    // Utan index ska den bete sig exakt som före etapp 3 – ren escapning.
+    const utan = formatDef('subst. test. Jfr Ödem.')
+    eq('utan index: ingen länkning (bakåtkompatibelt)', utan, '<em>subst.</em> test. Jfr Ödem.')
+
+    /* De två skydden nedan går INTE att pröva mot ordlistan: den har i dag
+       varken en refererad tvetydig nyckel eller en post som nämner sig själv.
+       Planterade fel i båda lämnade hela sviten grön, alltså måste de prövas
+       direkt – annars kan de tyst falla bort den dag datan ändras. */
+    {
+      const tvetydig = buildTermIndex([
+        { term: 'Unik / Delad', def: 'subst. a' },
+        { term: 'Delad', def: 'subst. b' }
+      ])
+      ok('tvetydig nyckel (två poster delar form) utelämnas ur indexet',
+         !tvetydig.has('delad'))
+      ok('  men entydiga former ur samma post finns kvar', tvetydig.has('unik'))
+      eq('  och en tvetydig referens länkas därför inte',
+         formatDef('subst. x. Jfr Delad.', tvetydig), '<em>subst.</em> x. Jfr Delad.')
+    }
+    {
+      const själv = buildTermIndex([{ term: 'Ödem', def: 'subst. svullnad' }])
+      const skip = { page: 'Ö', slug: 'term-odem' }
+      eq('en post länkar aldrig till sig själv',
+         formatDef('subst. x. Jfr Ödem.', själv, skip), '<em>subst.</em> x. Jfr Ödem.')
+      ok('  men samma referens länkas från en ANNAN post',
+         formatDef('subst. x. Jfr Ödem.', själv).indexOf('<a href=') !== -1)
+    }
+  }
+
+  /* =========================================================================
+     14. Länkarna syns i en riktig sökträff (regressionen som fällde väg b)
+     ========================================================================= */
+  {
+    const w = makeWorld({ page: 'x' })
+    await w.searchFully('chock')
+    const rad = w.rows().find(r => r.term === 'chock')
+    ok('sökträffen på "chock" finns', !!rad)
+    ok('  och dess definition innehåller klickbara Jfr-länkar',
+       !!rad && rad.def.indexOf('<a href="ordlista-k.html#term-kardiogen-chock">') !== -1)
+    ok('  markeringen bryter aldrig sönder en länk (<mark> hamnar inte i href)',
+       !!rad && !/<a href="[^"]*<mark/.test(rad.def))
+  }
+
   /* --- Sammanfattning ------------------------------------------------------ */
   console.log(`\ntest_ordlista_sok: ${pass} gröna, ${fails.length} röda`)
   if (fails.length) {

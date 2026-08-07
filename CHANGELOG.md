@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.402
+- **Jfr/Se/Motsats-länkarna finns nu även i sökträffarna — väg (b) ersatt av väg (a).** 0.9.401 lade länkarna bara på bokstavssidorna, men sökträffen visar redan hela definitionen: den som sökt fram ett ord har ingen anledning att klicka vidare, så länkarna hamnade på det enda ställe man inte behöver gå till. `js/glossary.js` fick `buildTermIndex()`/`linkifyRefs()` och ett indexargument till `formatDef()`, speglingar av generatorns. `format_def()`/`formatDef()` är därmed åter **byte-identiska**, vilket väg (b) offrade.
+- **Tre avsiktliga skillnader i JS-porten:** ingen lookbehind (stöds inte i Safari före 16.4 — hade kastat SyntaxError och slagit ut hela sökningen), alltid full sökväg i `href` (aldrig bart `#ankare`, annars skiljer sig sökträffens markup från bokstavssidans), och memoiserat index (10 928 poster per tangenttryck är för dyrt).
+- **Skyddet:** `test_ordlista_sok.js` jämför nu `formatDef()` mot den Python-genererade HTML:en för var och en av de 10 928 posterna (71 → 83 tester). Larmet verifierat mot tre planterade fel; de två som rör tvetydiga nycklar och självlänkar lämnade sviten grön (dagens data saknar båda fallen) och fick därför egna direkttester mot syntetisk data.
+
 ## 0.9.401
 - **✅ Etapp 3 (Jfr/Se/Motsats-länkning) KLAR — designbeslutet i `ordlista_forbattring_todo.md` §6 löst till väg (b).** `scripts/generate_glossary.py` bygger nu ett globalt termindex vid byggtid och skriver klickbara `<a>`-länkar direkt i den statiska `<dd>`-HTML:en för varje Jfr/Se/Motsats-referens som matchar en riktig, otvetydig ordlisteterm — kommaseparerade listor, `prefix `/`suffix `-förled och parentetiska disambigueringar (`-opsi (besiktning)`) hanterade.
 - **2 390 av 2 587 (92 %) referenser blev klickbara länkar**, 197 (8 %) förblir oformaterad text eftersom målet saknar egen post (t.ex. "preload", "kranial", "kognitiv bias") — ingen gissning. `js/glossary.js` ändrades INTE: sökträffar visar Jfr/Se/Motsats som text precis som förut, med avsikt — `format_def()`/`formatDef()` slutar därmed vara byte-identiska, dokumenterat i båda.
