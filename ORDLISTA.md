@@ -67,7 +67,7 @@ avslutades i hela alfabetet A–Ö.
 |---|---:|---:|---:|
 | Ordklasstagg | 10 928 | 100 % | 0 |
 | `Eng. ` | 9 671 | 88,5 % | 1 257 |
-| Etymologi (`Av lat./gr. …`) | 7 839 | 71,7 % | 3 089 |
+| Etymologi (`Av lat./gr. …`) | 7 841 | 71,8 % | 3 087 |
 | `Sv. ` | 2 627 | 24,0 % | 8 301 |
 | Böjning i parentes | 4 769 | 43,6 % | 6 159 |
 | `Jfr ` | 1 386 | 12,7 % | 9 542 |
@@ -1017,6 +1017,54 @@ Emil Theodor Kocher, 1841–1917, nobelpristagare 1909).
 
 Etymologitäckning 71,7 % → **71,7 % (7 839 av 10 928, 3 089 saknar).**
 Nästa bokstav: L. `check_generators.py`: rundtripp identisk, 407
+filer oförändrade efter 18 generatorsteg, 195 tester gröna, 2 351/
+2 351 tooltip-ankare hela.
+
+**L klar 0.9.382** (2026-08-07): av 432 L-poster saknade 85 enligt
+mätsnutten, bara **9 (10,6 %) faktiska luckor.** 27 förkortningar,
+14 poster som redan bar en etymologisk not mätsnutten missade —
+läkemedels-/växtklustret `Lidokain` (med hela historien om de
+svenska uppfinnarna Nils Löfgren och Bengt Lundqvist), `Lorazepam`,
+`Lobelia inflata`, `Levisticum officinale`, eponymen `Lhermittes
+tecken`, och ett kluster `Av X + gr./lat. Y`-förklaringar med
+språkkoden efter `+` i stället för direkt efter `Av` (samma B-
+passfälla): `laktosintolerans`, `ledläpp`, `levercirros`,
+`luftemboli`, `lungemboli`, `lungödem`, `läkemedelsexantem`,
+`läkemedelsresistens`, `lågvirulent`.
+
+**Rotkontrollen bar en majoritet av bokstaven.** `laktat`/`laktos`/
+`laktas` (alla `Av lat. lac`) täckte `laktacidos` tillsammans med
+redan-bojda `acidos`; `lymfa`/`lymfocyt`/`lymfom` (`Av lat. lympha`)
+täckte `lymfatisk leukemi`, `lymfocytisk` och `lymphogranulomatosis`
+(tillsammans med redan-bojda `leukemi` och `granulom`). Var sin egen
+etablerad rot täckte ytterligare en klunga: `lues` → `luetisk`,
+`pneumoni` → `lunginflammation`, `fibros` → `lungfibros`, `letargi`
+→ `letargisk`, `carcinoma` → `lungcancer`/`levercancer`, `hepar` →
+`lever` (fast `lever` i sig är ett inhemskt germanskt ord, inte ett
+lånord — `hepar` är bara den grekiska motsvarigheten), `laparoskopi`
+→ `Laparoskop`, `lateral`/`latus` → `lateralrotation`.
+
+**9 fick riktig etymologi:** `lordos` (`Av gr. lordos = bakåtböjd,
+krokig` — motsatsen till K-passets `kyfos`, men saknade helt egen
+etymologi trots att den använts sedan A), `lichen planus` (`Av gr.
+leichen = lav + lat. planus = platt`, syftar på utslagets utseende),
+`legionella` (`Bildat av engelskans "Legionnaires' disease", efter
+ett utbrott bland deltagare i en amerikansk veterankonferens i
+Philadelphia 1976` — en namnhistoria, inte en person-eponym, men
+lika verifierbar) + 5 eponymer och 1 varumärkesförklaring, alla
+kontrollerade mot webbkällor: `Langerhans` (självrefererande `Efter
+Paul Langerhans`, samma mönster som redan klara `Golgi`/`Galeazzi`),
+`Lewykroppsdemens` (den tysk-amerikanske neurologen Friedrich Lewy,
+1885–1950, upptäckte inlagringarna 1912), `Lawton IADL` (den
+amerikanske psykologen M. Powell Lawton och Elaine Brody,
+publicerade skalan 1969), `Langenbeck-retraktor` (den tyske kirurgen
+Bernhard von Langenbeck, 1810–1887), `Littles sjukdom` (den engelske
+kirurgen William John Little, 1810–1894), `LigaSure` (`Bildat av
+eng. ligate = avbinda + secure = säkra`, samma varumärkesnamns-
+mönster som E-passets `EMLA-kräm`).
+
+Etymologitäckning 71,7 % → **71,8 % (7 841 av 10 928, 3 087 saknar).**
+Nästa bokstav: M. `check_generators.py`: rundtripp identisk, 407
 filer oförändrade efter 18 generatorsteg, 195 tester gröna, 2 351/
 2 351 tooltip-ankare hela.
 
