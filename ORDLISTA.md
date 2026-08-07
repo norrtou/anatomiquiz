@@ -67,7 +67,7 @@ avslutades i hela alfabetet A–Ö.
 |---|---:|---:|---:|
 | Ordklasstagg | 10 928 | 100 % | 0 |
 | `Eng. ` | 9 671 | 88,5 % | 1 257 |
-| Etymologi (`Av lat./gr. …`) | 7 828 | 71,6 % | 3 100 |
+| Etymologi (`Av lat./gr. …`) | 7 833 | 71,7 % | 3 095 |
 | `Sv. ` | 2 627 | 24,0 % | 8 301 |
 | Böjning i parentes | 4 769 | 43,6 % | 6 159 |
 | `Jfr ` | 1 386 | 12,7 % | 9 542 |
@@ -878,6 +878,58 @@ etymologietappen).
 
 Etymologitäckning 71,6 % → **71,6 % (7 828 av 10 928, 3 100 saknar).**
 Nästa bokstav: I. `check_generators.py`: rundtripp identisk, 407
+filer oförändrade efter 18 generatorsteg, 195 tester gröna, 2 351/
+2 351 tooltip-ankare hela.
+
+**I klar 0.9.379** (2026-08-07): av 490 I-poster saknade 244 enligt
+mätsnutten, men bara **5 (2,0 %) faktiska luckor** — den lägsta
+kvoten hittills, ännu lägre än H:s 7,4 %. Orsaken går längre än
+H:s: `in-`/`im-` (`Av lat. in = i / in- = icke`, med posternas EGNA
+exempel `injektion = införing` och `inkontinens = oförmåga att
+hålla tätt`, och assimilationen till `il-`/`im-`/`ir-` uttryckligen
+dokumenterad i prefixpostens egen text) bar **över 140 ord** helt
+själv — praktiskt taget hela `im-`/`in-`-vokabulären. `inter-`
+(`Ex: interkostal = mellan revbenen`), `intra-` (`Ex: intravenös =
+inuti en ven`), `intro-` (`Ex: introvert = inåtvänd`) och `iso-`
+(`Ex: isoton = med samma osmotiska tryck`) — fyra ytterligare egna
+prefixposter — täckte ett tjugotal till. 57 förkortningar, 9 poster
+som redan bar en etymologisk not mätsnutten missade (läkemedels-
+klustret `Isoniazid`, `Indometacin`, `Ipratropiumbromid`,
+`Isotretinoin`, `Imipramin`, `Indoramin`, `Inositolnikotinat`,
+`Ibuprofen`, `Isosorbidmononitrat`).
+
+**Rotkontrollen visade att nästan alla `in-`-sammansättningar redan
+var täckta i BÅDA sina led, inte bara prefixet** — ett tydligare
+mönster än i något tidigare pass: `infertil` (`fertil`, F-passet),
+`impotens` (`potens`, `Av lat. potentia`), `immunitet`/
+`immunkompetent` m.fl. (`immun` har en EGEN etymologi utöver den
+generiska `in-`-posten), `iridocyklit` (`iris`), `ileocekal`/
+`ileostomi` (`ileum` + `cekum`/`stoma`), `iliosakralled` (`ilium` +
+`sacrum`), `iliopsoas` (`ilium` + `psoas`), `ischiopubicus`
+(`ischion` + `pubis`), `isoenzym`/`isoton`/`isotop` (`iso-` +
+`enzym`/`tonus`/`topos`, alla fyra redan belagda), `infibulation`
+(`fibula` = spänne, inte bara skenbensordet), `irreponibel`/
+`irreversibel`/`irrigation` (`ir-` = den dokumenterade
+assimilationsformen av `in-`), `ischemisk` (`ischemi` bär redan
+`Av gr. ischein = hejda + haima = blod`), `icterus` (samma ord som
+redan-bojda `ikterus`, bara den latinska stavningen), `influensa`
+(`in-` + `fluere`, båda leden redan belagda via F-passets `fluor`).
+
+**5 fick riktig etymologi**, samtliga valda för att deras ANDRA led
+saknade dokumentation trots att `in-`-prefixet redan var känt:
+`impetigo` (`Av lat. impetere = angripa, av in- = mot + petere =
+söka, anfalla` — `petere` fanns inte belagt någon annanstans i
+filen), `inflammation` (`Av lat. inflammare = sätta i brand, av
+in- + flamma = låga` — `flamma` ny), `insulin` (`Av lat. insula = ö,
+efter de Langerhanska öarna i bukspottkörteln` — `insula` redan
+etablerad via sin egen post, men kopplingen till hormonets namn
+värd att skriva ut explicit). Två helt fristående ord utan
+`in-`-koppling: `idiosynkrasi` (`Av gr. idios = egen + synkrasis =
+sammanblandning, temperament`), `Irritabilitet` (`Av lat. irritare
+= reta, egga`).
+
+Etymologitäckning 71,6 % → **71,7 % (7 833 av 10 928, 3 095 saknar).**
+Nästa bokstav: J. `check_generators.py`: rundtripp identisk, 407
 filer oförändrade efter 18 generatorsteg, 195 tester gröna, 2 351/
 2 351 tooltip-ankare hela.
 
