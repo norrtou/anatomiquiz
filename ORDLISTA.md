@@ -67,7 +67,7 @@ avslutades i hela alfabetet A–Ö.
 |---|---:|---:|---:|
 | Ordklasstagg | 10 928 | 100 % | 0 |
 | `Eng. ` | 9 671 | 88,5 % | 1 257 |
-| Etymologi (`Av lat./gr. …`) | 7 841 | 71,8 % | 3 087 |
+| Etymologi (`Av lat./gr. …`) | 7 847 | 71,8 % | 3 081 |
 | `Sv. ` | 2 627 | 24,0 % | 8 301 |
 | Böjning i parentes | 4 769 | 43,6 % | 6 159 |
 | `Jfr ` | 1 386 | 12,7 % | 9 542 |
@@ -1065,6 +1065,61 @@ mönster som E-passets `EMLA-kräm`).
 
 Etymologitäckning 71,7 % → **71,8 % (7 841 av 10 928, 3 087 saknar).**
 Nästa bokstav: M. `check_generators.py`: rundtripp identisk, 407
+filer oförändrade efter 18 generatorsteg, 195 tester gröna, 2 351/
+2 351 tooltip-ankare hela.
+
+**M klar 0.9.383** (2026-08-07): av 533 M-poster saknade 152 enligt
+mätsnutten, bara **13 (8,6 %) faktiska luckor.** 36 förkortningar,
+25 poster som redan bar en etymologisk not mätsnutten missade —
+läkemedelsklustret `Medroxyprogesteron`…`Metotrexat` (elva
+preparat), eponymerna `Malpighi`/`Morgagni`/`Monteggia`/`Mondini`/
+`Marchiafava–Bignami`/`Modic`, `Morfin` (`Efter Morfeus, drömmarnas
+gud i grekisk mytologi`) och ett kluster `Av X + gr./lat. Y`-
+förklaringar med språkkoden efter `+` (samma B-passfälla).
+
+**Rotkontrollen bar en stor del av bokstaven.** `mani` (`Av grek.
+mania`) täckte `manodepressiv`/`mania`; `melankoli` (`melas+chole`)
+täckte `mjältsjuka`/`melancholia`; `myelin` (`Av grek. myelos =
+märg`) täckte `myelofibros`/`myelodysplastiskt syndrom`; `skleros`,
+`melanin`/`melanom`, `purpura`, `dystrofi`, `abortus`, `placenta`,
+`asteni`, `musculus` (`Av lat. mus = mus + -culus` — en muskel som
+rör sig under huden liknade en löpande mus) och `malign` täckte var
+sin klunga sammansättningar. Sex Latin-`Morbus X`-fraser (`Morbus
+Addisonii`/`Basedowii`/`Brighti`/`maculosus Werlhofii`/`Menieri`/
+`Parkinsonii`) är alla självförklarande `lat. uttryck` som pekar på
+redan etablerade eponymer.
+
+**Metodfynd: två lika stavade men olika grekiska rötter fick hållas
+isär.** `myelos` = märg (`myelom`-familjen ovan) och `mys`/`myos` =
+mus/muskel (`myom`) är två helt olika ord som råkar dela bokstäverna
+"my-" — och `myopi` visade sig vara en TREDJE, orelaterad rot
+(`myein` = blinka, inget med mus eller märg att göra). Att blint anta
+gemensam rot för alla "my-"-ord hade gett en felaktig etymologi;
+varje ord kontrollerades separat mot en oberoende källa.
+
+**13 fick riktig etymologi:** 6 fristående fackord — `marasmus`
+(`Av gr. marasmos = avmattning, vissnande`), `myom` (`Av gr. mys
+(myos) = mus, muskel + -om = svulst`, samma "muskel liknar en
+mus"-fakta som redan-bojda `musculus` men på grekiska), `myopi`
+(`Av gr. myein = blinka, sluta ögonen + ops = öga`), `mitralis-
+insufficiens` (`Av lat. mitra = biskopsmössa`, klaffens form liknar
+en biskopsmössa), `metabolt syndrom` (`Av gr. metabole = förändring,
+av meta = byte + ballein = kasta`), `medulla oblongata` (`Av lat.
+medulla = märg + oblongata = avlång`) — samt 7 eponymer/
+institutionsnamn, alla verifierade mot webbkällor innan de skrevs:
+`Ménières sjukdom` (den franske läkaren Prosper Ménière, 1799–1862,
+beskrev sjukdomen 1861), `Marfans syndrom` (den franske barnläkaren
+Antoine Marfan, 1858–1942, beskrev syndromet 1896), `McGill Pain
+Questionnaire` (uppkallat efter McGill University i Montreal, där
+psykologen Ronald Melzack utvecklade formuläret 1975), `Metzenbaum-
+sax` (den amerikanske kirurgen Myron Firth Metzenbaum, 1876–1944),
+`Mayo-sax` (bröderna William och Charles Mayo, grundare av Mayo
+Clinic), `Magill-tång` (den nordirländske narkosläkaren Ivan Magill,
+1888–1986), `MADRS` (den brittiske psykiatrikern Stuart Montgomery
+och den svenska psykiatrikern Marie Åsberg, publicerade skalan 1979).
+
+Etymologitäckning 71,8 % → **71,8 % (7 847 av 10 928, 3 081 saknar).**
+Nästa bokstav: N. `check_generators.py`: rundtripp identisk, 407
 filer oförändrade efter 18 generatorsteg, 195 tester gröna, 2 351/
 2 351 tooltip-ankare hela.
 
