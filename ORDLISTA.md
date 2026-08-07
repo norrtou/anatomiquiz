@@ -67,7 +67,7 @@ avslutades i hela alfabetet A–Ö.
 |---|---:|---:|---:|
 | Ordklasstagg | 10 928 | 100 % | 0 |
 | `Eng. ` | 9 671 | 88,5 % | 1 257 |
-| Etymologi (`Av lat./gr. …`) | 7 848 | 71,8 % | 3 080 |
+| Etymologi (`Av lat./gr. …`) | 7 851 | 71,8 % | 3 077 |
 | `Sv. ` | 2 627 | 24,0 % | 8 301 |
 | Böjning i parentes | 4 769 | 43,6 % | 6 159 |
 | `Jfr ` | 1 386 | 12,7 % | 9 542 |
@@ -362,6 +362,10 @@ Exempel: `…Eng. amylase. Av lat. amylum = stärkelse. Referensvärde (…): �
 
 1. **Förkortningar** (`förk.`) — expansionen i brödtexten ÄR ursprungsförklaringen.
    En extra `Av eng. …` tillför inget (redan skrivet i husformatsavsnittet ovan).
+   **Sök efter BÅDA formerna** när du filtrerar fram en bokstavs förkortningar:
+   posten kan börja direkt med `förk.` ELLER med `subst. (förk.)` — P-passet
+   (0.9.386) missade 43 av 68 förkortningar första varvet för att söksträngen
+   bara matchade den första formen.
 2. **TA-/latinska flerordsfraser** där uppslagsordet redan är på latin/grekiska
    (`articulatio genus`, `aorta abdominalis`, `ansa cervicalis`) — samma undantag
    som böjningen. Termen ÄR redan sitt eget ursprungssvar; `Sv. `-översättningen
@@ -1192,6 +1196,60 @@ saknar)** — båda tilläggen är `Efter`/`Uppkallat efter`-formuleringar,
 osynliga för mätregexen. Nästa bokstav: P. `check_generators.py`:
 rundtripp identisk, 407 filer oförändrade efter 18 generatorsteg,
 195 tester gröna, 2 351/2 351 tooltip-ankare hela.
+
+**P klar 0.9.386** (2026-08-07): alfabetets största bokstav (1 178
+poster totalt). Av 188 P-poster saknade etymologi enligt mätsnutten
+var bara **7 (3,7 %) faktiska luckor** — en av de lägsta kvoterna
+hittills, i klass med N och O. **Metodfynd: 43 av bokstavens
+förkortningar var formen `subst. (förk.)` snarare än bara `förk.`**
+— den tidigare abbreviations-filtreringen (grep efter `förk.` direkt
+efter tabbtecknet) missade dem alla, och en bredare sökning fick
+läggas till mitt i passet. Totalt 68 förkortningar, 47 poster som
+redan bar en etymologisk not mätsnutten missade — det hittills
+största läkemedelsklustret (arton preparat: `Penicillamin`,
+`Pivampicillin`, `Prednisolon`, `Primidon`, `Prokainamid`,
+`Pancuronium`, `Pentazocin`, `Pentobarbital`, `Petidin`, `Pimozid`,
+`Pramoxin`, `Prazosin`, `Prometazin`, `Propranolol`,
+`Propyltiouracil`, `Protriptylin`, `Prontosil`, `Podofyllotoxin`),
+sex växtnamn (`Pimpinella anisum`, `Paullinia cupana`, `Pausinystalia
+johimbe`, `Pilocarpus jaborandi` m.fl.), sex eponymer som redan hade
+`Efter …` (`parinauds syndrom`, `Parkinsonism`, `Parkinsons sjukdom`,
+`Pemberton`, `Pacini`, `Pacchioni`, `Peang`) och nio `Av X + Y`-
+formförklaringar med språkkoden efter `+` (`paracetamol`,
+`penicillinas`, `plasminogen`, `priapism` — efter Priapos, grekisk
+fruktbarhetsgud, samma mytologimönster som nedan — `prostaglandin`,
+`proteas`, `proteinuri`, `proteolys`, `proteolytisk`).
+
+**Rotkontrollen bar en stor del av resten.** `patologi`, `tumör`,
+`prostata`, `pankreas`, `hyperplasia`, `arteria`, `pleura`,
+`poliomyelit`, `larynx`, `vertebra`, `planta`, `palma` och `proprius`
+— alla redan etablerade sedan tidigare bokstäver — täckte tillsammans
+över tjugo P-sammansättningar: `patologisk anatomi`, `primärtumör`,
+`prostatacancer`, `pankreascancer`, `prostataförstoring`, `perifer
+kärlsjukdom`, `pleurautgjutning`, `postpolio`, `pseudokrupp`,
+`plantar`, `palmar`, `palmaraponeuros`, `proprioceptor`. **`prevertebral`
+fick BÅDA sina led täckta separat** — `prae-` (H-passets `preeklampsi`,
+`Av lat. prae = före`) och `vertebra` (`Av lat. vertere = vända`) —
+ingenting nytt att lägga till.
+
+**7 fick riktig etymologi:** 3 fristående fackord — `Protes` (`Av gr.
+prosthesis = tillägg, av pros = till + tithenai = sätta, placera`),
+`pyemi` (`Av gr. pyon = var + haima = blod`), `paniksyndrom` (`Av gr.
+Pan, herde- och naturguden` — plötslig, omotiverad skräck ansågs
+orsakad av guden Pan, samma mytologiska namnmönster som redan-bojda
+`narcissism`/Narkissos och `priapism`/Priapos) — samt 4 eponymer,
+alla verifierade mot webbkällor innan de skrevs: `Penrosedrän` (den
+amerikanske kirurgen Charles Bingham Penrose, 1862–1925, konstruerade
+dränet 1890), `Perthes sjukdom` (den tyske kirurgen Georg Clemens
+Perthes, 1869–1927), `Prader-Willis syndrom` (de schweiziska
+barnläkarna Andrea Prader och Heinrich Willi, beskrev syndromet
+1956), `Pagets sjukdom` (den engelske kirurgen James Paget,
+1814–1899, beskrev sjukdomen 1877).
+
+Etymologitäckning 71,8 % → **71,8 % (7 851 av 10 928, 3 077 saknar).**
+Nästa bokstav: Q. `check_generators.py`: rundtripp identisk, 407
+filer oförändrade efter 18 generatorsteg, 195 tester gröna, 2 351/
+2 351 tooltip-ankare hela.
 
 ### Prefix- och suffixposter bär alltid sitt bindestreck
 
