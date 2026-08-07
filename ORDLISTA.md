@@ -1994,6 +1994,13 @@ binomiala växtnamn och tautologiska kombinationsformer), inte en
 arbetslista. Per grupp: A–E 0.9.396, F–J 0.9.397, K–O 0.9.398, P–T 0.9.399,
 U–Ö+prefix+suffix 0.9.400.
 
+**✅ MILSTOLPE: etapp 3 (Jfr/Se/Motsats-länkning) är klar (0.9.401).**
+`scripts/generate_glossary.py` länkar nu 2 390 av 2 587 (92 %) Jfr/Se/Motsats-
+referenser mot riktiga uppslagsord, direkt i den statiska `<dd>`-HTML:en (väg
+(b), designbeslutet i `scripts/ordlista_forbattring_todo.md` §6) — `Se
+scripts/ordlista_forbattring_todo.md` för hela metodloggen. `js/glossary.js`
+rördes inte: sökträffar visar referenserna som text, precis som förut.
+
 ### Prefix- och suffixposter bär alltid sitt bindestreck
 
 Ett uppslagsord i prefixgruppen **slutar** med bindestreck (`brady-`, `pseud- / pseudo-`),

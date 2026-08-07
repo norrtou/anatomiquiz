@@ -1,8 +1,8 @@
 # Ordlistan — förbättringsplan och riskanalys (facit)
 
 > **Status:** Analys och riskgenomgång gjord 2026-08-02. **Etapp 1 klar (0.9.333),
-> skyddet i punkt 4 klart (0.9.334), etapp 2 klar (0.9.335).** Nästa steg enligt
-> ordningen i punkt 5: etapp 4 (fältkomplettering).
+> skyddet i punkt 4 klart (0.9.334), etapp 2 klar (0.9.335), etapp 4 klar (0.9.400),
+> etapp 3 klar (0.9.401).** Kvar enligt ordningen i punkt 5: etapp 5 (uttal).
 > Filen skapades på uttrycklig begäran: *"analysera allt som kan gå sönder när
 > du bygger om saker"* innan någon etapp påbörjas. Bocka av här när något görs,
 > och skriv in vad som faktiskt hände — inte bara att det är klart.
@@ -51,9 +51,13 @@ den här tabellen står kvar bara för att visa vad som rättades.
   är steg 1, def-sökningen ligger kvar oförändrad i steg 2, och
   `test_ordlista_sok.js` prövar just fallet *kolit* → **colit**.
 
-**Outnyttjad länkpotential:** 1 394 poster innehåller `Jfr …`, 358 `Se …`,
-157 `Motsats: …` — allt ren text idag, inga klickbara länkar. Bokstavssidorna
-länkar bara till andra bokstavssidor, aldrig till quiz eller kunskapsbank.
+**Länkpotential (byggd i etapp 3, 0.9.401):** 1 394 poster innehöll `Jfr …`, 358
+`Se …`, 157 `Motsats: …`. Efter kommaseparering av listorna: 2 587 enskilda
+referenser, varav **2 390 (92 %) länkas nu** mot en riktig ordlisteterm — 197 (8 %)
+pekar på begrepp som saknar egen post (t.ex. "preload", "kranial") och förblir
+medvetet oformaterad text, ingen gissning. Länkarna byggs bara i den statiska
+`<dd>`-HTML:en (väg (b), §6 nedan); bokstavssidorna länkar i övrigt bara till
+andra bokstavssidor, aldrig till quiz eller kunskapsbank.
 
 **Inga kvalitetsproblem hittade** i de sex misstänkta "eko-defs" (def som
 bara upprepar uppslagsordet) — fem av sex är korrekt husformat
@@ -1502,10 +1506,44 @@ mätt med den rättade snutten i `ORDLISTA.md`. `check_generators.py`:
 rundtripp identisk efter full generatorkörning (18 steg), 195 tester
 gröna, 2 351/2 351 tooltip-ankare hela. **Nästa bokstav: C.**
 
-### Etapp 3 · Jfr/Se/Motsats-länkning — risk: hög, kräver beslut (se punkt 6)
-- [ ] Designbeslut taget (väg a eller b, punkt 6).
-- [ ] Byggt enligt beslutet.
-- [ ] `check_generators.py` grönt.
+### Etapp 3 · Jfr/Se/Motsats-länkning — ✅ KLAR (0.9.401)
+- [x] Designbeslut taget: väg (b), punkt 6.
+- [x] Byggt enligt beslutet.
+- [x] `check_generators.py` grönt.
+
+**Vad som faktiskt hände** (2026-08-07): `build_term_index()` (nytt, i
+`scripts/generate_glossary.py`) bygger vid byggtid en global lookup gement
+uppslagsord (eller en av dess ` / `-alternativformer) → (sidgrupp, slug), med
+samma `page_key()`/`slugify()` som posten faktiskt renderas med. En nyckel som
+delas av två olika poster utelämnas helt i stället för att gissas — inträffar
+i dag bara för `-opsia` (delad mellan `-opia / -opsia / -opi` och `-opsia /
+-opsi`), och ingen av de faktiska Jfr-referenserna pekar på just den nyckeln.
+
+`format_def()` fick två nya, valfria parametrar (`ref_index`, `skip`) och en ny
+hjälpfunktion `linkify_refs()`: Jfr/Se/Motsats-listor (kommaseparerade,
+`prefix `/`suffix `-förled och `(parentetisk disambiguering)` hanterade)
+länkas mot term-indexet när en exakt, otvetydig träff finns; resten lämnas som
+vanlig text. `skip` hindrar en post från att länka till sig själv. Länkarna
+följer samma relativa hrefkonvention som `build_alphabet()` redan använder
+(`ordlista-<grupp>.html#<slug>`, aldrig `/`-prefixad — den formen hör till
+`kb_glossary_terms.json`/`wire_terms.py`, ett separat system för sidor på
+annat djup).
+
+**Uppmätt:** 2 587 enskilda referenser efter kommaseparering, **2 390 (92 %)
+blev klickbara länkar**, 197 (8 %) förblir text (målet saknar egen post — t.ex.
+"preload", "kranial", "kognitiv bias" — ingen gissning). `js/glossary.js`
+ändrades INTE alls: `renderResults()` visar Jfr/Se/Motsats som oformaterad
+text i live-sökträffar precis som förut, med avsikt (väg (b) nedan).
+
+`format_def()`/`formatDef()` slutar därmed vara byte-identiska, med avsikt,
+dokumenterat i båda funktionernas docstring/kommentar. CSS: ny regel
+`.glossary-def a` i `css/glossary.css` (färg `var(--accent-dark)`, samma ton
+som `.game-modes-note a`/`.mode-help a` på andra ställen i sajten — INTE
+`.kb-term`s dotted-underline/`cursor:help`, som signalerar en tooltip som inte
+finns här). `GLOSSARY_CSS_V` bumpades av `scripts/bump_version.py` (aldrig för
+hand). `check_generators.py`: rundtripp identisk, 195 tester gröna,
+`check_links.py` grönt (validerade automatiskt de nya hrefarna/ankarna),
+2 351/2 351 tooltip-ankare hela, `sidodatum.json` aktuellt.
 
 ### Etapp 5 · Uttal — risk: låg, differentierande
 Utgångsläget är **noll** uttalsangivelser i hela filen (rättat i etapp 1 — de "12 poster"
@@ -1515,15 +1553,15 @@ punkt 1 rapporterade var alla ordet *uttalad* i löptext). Fältet byggs alltså
 
 ---
 
-## 6. Öppet designbeslut inför etapp 3
+## 6. Designbeslut inför etapp 3 — ✅ BESLUTAT: väg (b) (0.9.401)
 
-Kravet på att `format_def()`/`formatDef()` ska vara byte-identiska håller inte
+Kravet på att `format_def()`/`formatDef()` ska vara byte-identiska höll inte
 rakt av för Jfr/Se-länkning: Python-generatorn **kan** ha tillgång till ett
 fullt termindex vid byggtid (slå upp `Jfr kolit` → rätt href), men
 `formatDef()` i JS är en ren strängfunktion utan index och kan inte göra
 samma uppslag dynamiskt.
 
-**Två vägar:**
+**Två vägar övervägdes:**
 - **(a)** Ge båda funktionerna ett index-argument, håll transformationslogiken
   identisk, bara datakällan skiljer.
 - **(b)** Låt Python-generatorn skriva färdiga `<a>`-taggar direkt i den
@@ -1532,10 +1570,12 @@ samma uppslag dynamiskt.
   oformaterad text i sökresultat-vyn — ingen länk där, bara i den statiska
   sidan.
 
-Väg (b) bedöms enklare och mindre riskabel eftersom sökträffar redan renderas
-annorlunda än den statiska sidan (`itemprop`-microdata finns t.ex. inte i
-sökträffar heller, se kommentar i `build_group_dl()`). **Ska beslutas
-uttryckligen innan etapp 3 påbörjas.**
+**Användaren valde väg (b)** — bedömdes enklare och mindre riskabel eftersom
+sökträffar redan renderas annorlunda än den statiska sidan (`itemprop`-
+microdata finns t.ex. inte i sökträffar heller, se kommentar i
+`build_group_dl()`). Byggt i `scripts/generate_glossary.py`
+(`build_term_index()`/`linkify_refs()`, se etapp 3 ovan); `js/glossary.js`
+rördes inte alls.
 
 ---
 

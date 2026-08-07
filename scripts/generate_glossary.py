@@ -46,6 +46,7 @@ from __future__ import annotations
 import html
 import json
 import re
+from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -93,7 +94,7 @@ def läs_sidodatum() -> dict[str, dict[str, str]]:
 # js/theme.js inte rörts sedan 0.9.260.
 STYLES_V = "0.9.372"        # css/styles.css
 THEME_V = "0.9.260"         # js/theme.js
-GLOSSARY_CSS_V = "0.9.313"  # css/glossary.css
+GLOSSARY_CSS_V = "0.9.401"  # css/glossary.css
 GLOSSARY_JS_V = "0.9.372"   # js/glossary.js
 
 # Svenska alfabetet — fast ordning för alfabetsraden. Bokstäver utan poster
@@ -348,13 +349,86 @@ GLOSS_TAG = re.compile(
 )
 
 
-def format_def(text: str) -> str:
-    """Escapa HTML och kursivera ordklassen i början. Matchar formatDef i JS."""
-    escaped = escape_html(text)
+def build_term_index(terms: list[dict]) -> dict[str, tuple[str, str]]:
+    """Slår upp Jfr/Se/Motsats-referenser mot riktiga uppslagsord.
+
+    Nyckel: gement uppslagsord, eller en av dess ' / '-alternativformer
+    (t.ex. "-algia / -algi" ger både "-algia" och "-algi") → (page_key, slug)
+    för den posten. Två poster som råkar dela samma nyckel gör den tvetydig —
+    den utelämnas helt i stället för att gissas ("facit vinner", se
+    scripts/ordlista_forbattring_todo.md §3).
+    """
+    seen: dict[str, set[tuple[str, str]]] = defaultdict(set)
+    for entry in terms:
+        group = page_key(entry)
+        slug = entry.get("slug") or slugify(entry["term"])
+        for alt in entry["term"].split(" / "):
+            key = alt.strip().lower()
+            if key:
+                seen[key].add((group, slug))
+    return {k: next(iter(v)) for k, v in seen.items() if len(v) == 1}
+
+
+# Samma nyckelord/lookbehind som mätsnutten i ORDLISTA.md ("FALT"-tabellen) —
+# redan bevisad mot hela filen, ingen ny detektionslogik uppfinns här.
+_REF_KEYWORD = r"(?:\bJfr\b|(?<![A-Za-zåäöÅÄÖ])Se\b|\bMotsats\b)"
+REF_PATTERN = re.compile(_REF_KEYWORD + r":?\s+([^.]+)\.")
+
+
+def _linkify_value(value: str, index: dict, skip: tuple[str, str] | None) -> str:
+    """En Jfr/Se/Motsats-lista, ev. kommaseparerad ('Jfr HDL, LDL.'). Länkar
+    varje del som matchar exakt en post i index; resten lämnas som text."""
+    parts = []
+    for part in value.split(", "):  # enda separatorn i hela filen, verifierat
+        m = re.match(r"^((?:prefix|suffix)\s+)?(.*?)(\s*\([^)]*\))?$", part)
+        lead, core, tail = m.group(1) or "", m.group(2), m.group(3) or ""
+        hit = index.get(core.strip().lower())
+        if hit and hit != skip:
+            group, slug = hit
+            href = f"{page_file(group)}#{slug}"
+            parts.append(
+                f"{escape_html(lead)}<a href=\"{escape_html(href)}\">"
+                f"{escape_html(core)}</a>{escape_html(tail)}"
+            )
+        else:
+            parts.append(escape_html(part))
+    return ", ".join(parts)
+
+
+def linkify_refs(text: str, index: dict, skip: tuple[str, str] | None) -> str:
+    """HTML-escapar text och länkar samtidigt varje Jfr/Se/Motsats-referens
+    som matchar en riktig post i index. Motsvarar escape_html(text) plus
+    inbäddade <a>-taggar."""
+    out: list[str] = []
+    pos = 0
+    for m in REF_PATTERN.finditer(text):
+        out.append(escape_html(text[pos : m.start(1)]))
+        out.append(_linkify_value(m.group(1), index, skip))
+        pos = m.end(1)
+    out.append(escape_html(text[pos:]))
+    return "".join(out)
+
+
+def format_def(
+    text: str,
+    ref_index: dict[str, tuple[str, str]] | None = None,
+    skip: tuple[str, str] | None = None,
+) -> str:
+    """Escapa HTML, kursivera ordklassen i början, och (om ref_index ges)
+    länka Jfr/Se/Motsats-referenser mot riktiga uppslagsord.
+
+    OBS: skiljer sig nu MEDVETET från formatDef() i js/glossary.js, som
+    aldrig länkar referenser (etapp 3, väg (b) i
+    scripts/ordlista_forbattring_todo.md §6). js/glossary.js:s renderResults()
+    visar Jfr/Se/Motsats som oformaterad text i live-sökträffar — det är
+    avsett, inte en bugg att rätta. Utan ref_index (standard) beter sig
+    funktionen precis som tidigare/som formatDef i JS.
+    """
+    body = linkify_refs(text, ref_index, skip) if ref_index else escape_html(text)
     return re.sub(
         r"^(subst\.|adj\.|adv\.|verb|prefix|suffix|förk\.|pron\.|räkn\.|interj\.|konj\.|prep\.)(?![a-zåäö])",
         r"<em>\1</em>",
-        escaped,
+        body,
     )
 
 
@@ -388,7 +462,7 @@ def group_heading(key: str) -> str:
 # Byggblock (HTML)
 # ---------------------------------------------------------------------------
 
-def build_group_dl(entries: list[dict]) -> str:
+def build_group_dl(entries: list[dict], term_index: dict[str, tuple[str, str]]) -> str:
     """Statisk <dl> för EN grupps poster (utan bokstavsrubrik — hela sidan är
     redan den bokstaven). Per-post-markupen hålls byte-identisk med tidigare
     rendering så att befintliga term-ankare (#term-...) fortsätter fungera.
@@ -406,12 +480,17 @@ def build_group_dl(entries: list[dict]) -> str:
     Sökträffarna i js/glossary.js får medvetet INTE de här attributen: de
     renderas i klienten ur samma data och hade gett en JS-körande crawler samma
     term två gånger på samma sida.
+
+    term_index (från build_term_index()) driver Jfr/Se/Motsats-länkningen i
+    format_def() — se den funktionens docstring för varför den medvetet
+    skiljer sig från js/glossary.js:s formatDef().
     """
     lines = ['        <dl class="glossary-group">']
     for entry in entries:
+        group = page_key(entry)
         slug = entry.get("slug") or slugify(entry["term"])
         term = escape_html(entry["term"])
-        definition = format_def(entry["def"])
+        definition = format_def(entry["def"], term_index, skip=(group, slug))
         lines.append(
             f'          <div class="glossary-entry" id="{slug}"'
             f' itemscope itemtype="https://schema.org/DefinedTerm">'
@@ -1008,7 +1087,12 @@ SPECIAL_TAGLINES = {
 SPECIAL_LABELS = {"siffror": "Siffror", "prefix": "Förstavelser", "suffix": "Ändelser"}
 
 
-def build_group(key: str, entries: list[dict], present: set[str]) -> tuple[str, str]:
+def build_group(
+    key: str,
+    entries: list[dict],
+    present: set[str],
+    term_index: dict[str, tuple[str, str]],
+) -> tuple[str, str]:
     """(filnamn, HTML) för EN grupps sida. Skriver inget — se build_landing."""
     filename = page_file(key)
     url = f"{SITE}/{filename}"
@@ -1050,7 +1134,7 @@ def build_group(key: str, entries: list[dict], present: set[str]) -> tuple[str, 
         page_jsonld=page_obj,
         breadcrumb_obj=breadcrumb_jsonld(label, url),
         alphabet_html=build_alphabet(present, key),
-        content_html=build_group_dl(entries),
+        content_html=build_group_dl(entries, term_index),
         is_landing=False,
     )
     return filename, page
@@ -1297,6 +1381,9 @@ def main() -> None:
     if dupes:
         raise SystemExit(f"FEL: slug-kollisioner: {sorted(dupes)}")
 
+    # Termindex för Jfr/Se/Motsats-länkning i format_def() (etapp 3).
+    term_index = build_term_index(terms)
+
     # Varje post måste inleda med en GEMENT skriven ordklasstagg. `format_def()`
     # kursiverar bara en gement skriven tagg, så `Adj./subst.:` eller `Egennamn:`
     # renderas helt utan kursiv ordklass — och en post helt utan tagg tappar
@@ -1379,7 +1466,7 @@ def main() -> None:
     group_files: list[str] = []
     order = [k for k in GROUP_ORDER if k in groups]
     for key in order:
-        filename, page = build_group(key, groups[key], present)
+        filename, page = build_group(key, groups[key], present, term_index)
         group_files.append(filename)
         outputs[ROOT / filename] = page
     outputs[ROOT / LANDING_FILE] = build_landing(groups)

@@ -178,6 +178,20 @@ a.glossary-alpha:focus-visible {
   text-decoration: underline;
 }
 
+/* Jfr/Se/Motsats-korsreferenser i den statiska definitionen (etapp 3).
+   Vanlig textlänk, samma färgton som andra länkar i löptext (.game-modes-note
+   a / .mode-help a) — INTE .kb-term-behandlingen (dotted underline +
+   cursor:help), som signalerar en hover-tooltip som inte finns här. */
+.glossary-def a {
+  color: var(--accent-dark);
+}
+
+.glossary-def a:focus-visible {
+  outline: 2px solid var(--primary-dark);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 /* Markering av söktermen i beskrivningen (träffar där ordet bara finns i
    definitionen). Svag, temahärledd ljusgrön ton som syns snabbt utan att
    skrika. Behåller textfärgen — annars gör <mark> texten svart/gul. */
