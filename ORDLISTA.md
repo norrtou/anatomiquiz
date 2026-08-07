@@ -67,7 +67,7 @@ avslutades i hela alfabetet A–Ö.
 |---|---:|---:|---:|
 | Ordklasstagg | 10 928 | 100 % | 0 |
 | `Eng. ` | 9 671 | 88,5 % | 1 257 |
-| Etymologi (`Av lat./gr. …`) | 7 856 | 71,9 % | 3 072 |
+| Etymologi (`Av lat./gr. …`) | 7 859 | 71,9 % | 3 069 |
 | `Sv. ` | 2 627 | 24,0 % | 8 301 |
 | Böjning i parentes | 4 769 | 43,6 % | 6 159 |
 | `Jfr ` | 1 386 | 12,7 % | 9 542 |
@@ -362,10 +362,12 @@ Exempel: `…Eng. amylase. Av lat. amylum = stärkelse. Referensvärde (…): �
 
 1. **Förkortningar** (`förk.`) — expansionen i brödtexten ÄR ursprungsförklaringen.
    En extra `Av eng. …` tillför inget (redan skrivet i husformatsavsnittet ovan).
-   **Sök efter BÅDA formerna** när du filtrerar fram en bokstavs förkortningar:
-   posten kan börja direkt med `förk.` ELLER med `subst. (förk.)` — P-passet
-   (0.9.386) missade 43 av 68 förkortningar första varvet för att söksträngen
-   bara matchade den första formen.
+   **Sök efter ALLA TRE formerna** när du filtrerar fram en bokstavs förkortningar:
+   posten kan börja direkt med `förk.`, med `subst. (förk.)`, ELLER med
+   `subst. förkortning` (utan parentes) — P-passet (0.9.386) missade 43 av 68
+   för att söksträngen bara matchade den första formen. T-passet (0.9.390)
+   hittade den tredje varianten (`TAP`, `TB`, `TS`) genom att proaktivt lägga
+   till en tredje sökning, en lärdom från P applicerad i förväg.
 2. **TA-/latinska flerordsfraser** där uppslagsordet redan är på latin/grekiska
    (`articulatio genus`, `aorta abdominalis`, `ansa cervicalis`) — samma undantag
    som böjningen. Termen ÄR redan sitt eget ursprungssvar; `Sv. `-översättningen
@@ -1362,6 +1364,48 @@ generators_only` i minnessystemet.
 Etymologitäckning 71,9 % → **71,9 % (7 856 av 10 928, 3 072 saknar).**
 Nästa bokstav: T. `check_generators.py`: rundtripp identisk, 407
 filer oförändrade, 195 tester gröna, 2 351/2 351 tooltip-ankare hela.
+
+**T klar 0.9.390** (2026-08-07): av 150 T-poster saknade etymologi
+enligt mätsnutten, bara **5 (3,3 %) faktiska luckor** — en av de
+lägsta kvoterna hittills. 12 förkortningar (en tredje mätfälla
+hittad PROAKTIVT den här gången: `subst. förkortning` utan parentes,
+utöver P-passets `förk.`/`subst. (förk.)` — sökningen utökades i
+förväg baserat på P-passets lärdom, i stället för att missas och
+upptäckas efteråt), 21 poster som redan bar en etymologisk not
+mätsnutten missade — hela `trombocyt`-klustret (`trombocytemi`,
+`trombocytopeni`, `trombocytos`), `Trendelenburg`-familjen
+(`Trendelenburg`, `Trendelenburgläge`, `Omvänt Trendelenburgläge`),
+eponymerna `Tinels`, `tourettes syndrom`, `Turners syndrom`.
+
+**Rotkontrollen bar en ovanligt stor andel av bokstaven.**
+`trombocyt` (`Av gr. thrombos = propp + kytos = cell`), `tromb`,
+`tuberkel`/`tuberculum` (`Av lat. tuberculum = liten knöl`),
+`torsion`, `trachea`, `tension`, `transitorisk`, `obsession`,
+`polyp`, `tic`, `tuba`, `trans-` (`Av lat. trans = över`),
+`trigeminus` (`Av lat. tri- + geminus = tvilling`), `tendinit`,
+`trochanter` (`Av grek. trokhazein = löpa, springa` — muskelfästet
+möjliggör löpning) och hela `tyreoidea`-familjen (H-passet) täckte
+tillsammans över tjugofem T-sammansättningar utan att något behövde
+skrivas. Två exempel där BÅDA leden var separat täckta: `tuberös
+skleros` (`tuberkel` + S-passets `skleros`) och `trokantertendinit`
+(`trochanter` + `tendinit`).
+
+**5 fick riktig etymologi:** 3 fristående fackord — `Termometer`
+(`Av gr. thermos = varm + metron = mått`), `talassemi` (`Av gr.
+thalassa = hav + haima = blod`, syftar på sjukdomens ursprung kring
+Medelhavet), `trikinos` (`Av gr. thrix (trichos) = hår`, de hårtunna
+larverna) — samt 1 namnhistoria och 1 eponym, båda verifierade mot
+webbkällor innan de skrevs: `tularemi` (bildad efter Tulare County i
+Kalifornien, där bakterien upptäcktes 1911, samma platsuppkallnings-
+mönster som L-passets `legionella` och N-passets `norovirus`),
+`Takayasus arterit` (den japanske oftalmologen Mikito Takayasu,
+1860–1938, rapporterade fallet 1908).
+
+Etymologitäckning 71,9 % → **71,9 % (7 859 av 10 928, 3 069 saknar).**
+Passet kördes med bara de relevanta generatorerna (glossary +
+wire-steg + llms), som beslutat efter S-passet. Nästa bokstav: U.
+`check_generators.py`: rundtripp identisk, 407 filer oförändrade,
+195 tester gröna, 2 351/2 351 tooltip-ankare hela.
 
 ### Prefix- och suffixposter bär alltid sitt bindestreck
 
