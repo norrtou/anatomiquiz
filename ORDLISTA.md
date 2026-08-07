@@ -67,7 +67,7 @@ avslutades i hela alfabetet A–Ö.
 |---|---:|---:|---:|
 | Ordklasstagg | 10 928 | 100 % | 0 |
 | `Eng. ` | 9 671 | 88,5 % | 1 257 |
-| Etymologi (`Av lat./gr. …`) | 7 799 | 71,4 % | 3 129 |
+| Etymologi (`Av lat./gr. …`) | 7 813 | 71,5 % | 3 115 |
 | `Sv. ` | 2 627 | 24,0 % | 8 301 |
 | Böjning i parentes | 4 769 | 43,6 % | 6 159 |
 | `Jfr ` | 1 386 | 12,7 % | 9 542 |
@@ -636,6 +636,102 @@ exakta klassiska betydelse för osäker för en säker nedbrytning).
 
 Etymologitäckning 71,1 % → **71,4 % (7 799 av 10 928, 3 129 saknar).**
 Nästa bokstav: F. `check_generators.py`: rundtripp identisk, 407 filer
+oförändrade efter 18 generatorsteg, 195 tester gröna, 2 351/2 351
+tooltip-ankare hela.
+
+**F klar 0.9.376** (2026-08-07): av 632 F-poster saknade 158 enligt
+mätsnutten, bara **18 (11,4 %) faktiska luckor** — tillbaka till A–D:s
+kvot efter E:s högre 18,8 %. Kategorier: 34 förkortningar, 13 poster som
+redan bar en etymologisk not mätsnutten missade (samma läkemedelskluster-
+mönster som B/C: `Fenobarbital`, `Fenoximetylpenicillin`, `Fenytoin`,
+`Flukonazol`, `Flufenazin`, `Fluorouracil`, `Fluoxetin`, `Flunitrazepam`,
+`Flurazepam`, `Furosemid` — alla `Av <ord> (+ <ord>)`-formuleringar utan
+språkkod direkt efter `Av `; `flimmer` `Av lågty. flimmern`, samt
+eponymerna `Falloppio`/`Fontana`/`fowlerläge` som redan hade
+`Efter …`/`Uppkallat efter …`), resten sammansättningar av redan i
+filen glosade rötter.
+
+**Rotkontrollen räddade ovanligt många tilltänkta tillägg — högsta
+antalet hittills.** Nästan varenda kandidat med ett klassiskt förled
+visade sig redan täckt: `fertilitet` (`fertil`), `filarier`/
+`follikelcysta`/`follikulit` (`follikel`, `Av lat. folliculus = liten
+säck`), `fixera`/`fixering` (`fixus`, `Av lat. figere = fästa`),
+`flebografi` (`phleb-`/`graphein`, båda redan egna prefixposter),
+`femurfraktur`/`femurkondyl`/`femoralbråck` (`femur`), `fibrinogen`
+(`fibrin` + `gen`, båda etablerade oberoende av varandra),
+`fasciotomi` (`fascia` + grekiskans `tome` via `flebotomi`),
+`faryngit` (`farynx`), `fenylketonuri` (`fenyl` via `Fenobarbital` +
+`-uri` via `ketonuri`), `flimmerepitel` (`epitel`), `fungistatisk`
+(`fungi-` + `statikos` via `bakteriostatisk`), `familjeanamnes`/
+`framhornsneuron`/`födoämnesallergi` (`anamnes`/`neuron`/`allergi`,
+alla redan egna poster). **Hela OT-/psykiatribatchen** (`Förstämning`,
+`Fobisk personlighetsstörning`, `Frontotemporal demens`,
+`Familjeterapi`, `Försvarsmekanism`, `Förnekelse`, `Förstärkning`,
+`Funktionsnivå`, `Förskrivning`, `Funktionsförmåga`,
+`Funktionsnedsättning`, `Funktionshinder`, `Finmotorik`) följde samma
+mönster som A-passets Aktivitets-/Arbets-batch — svenska sammansättningar
+vars klassiska led redan är glosade eller inte finns i filen.
+
+**Nytt mönster: arkaiska/vardagliga svenska namn vars TEKNISKA syskon
+redan bär etymologin.** Samma logik som regel 4 (arkaiska latinska
+diagnosnamn), fast riktningen vänd — det är den svenska vardagstermen
+som saknar `Av …` medan den latinska facktermen redan har den:
+`frossa` → `malaria` (`Av ital. mala aria = dålig luft`),
+`fönstertittarsjuka` → `claudicatio` (`Av lat. claudicare = halta`),
+`fetma` → `obesitas` (`Av lat. obesus = fet`), `förstoppning` →
+`obstipation` (`Av lat. obstipare = packa tätt`), `födelsemärke` →
+`nevus` (`Av lat. naevus = födelsemärke`). Etymologin skrivs på den
+tekniska termens post, inte upprepas på den svenska. **Samma mönster
+men UTAN att syskonet ännu finns:** `franska sjukan`/`fransosen`
+hör hemma på `syfilis`, `förgiftning` på `intoxikation`,
+`förkylning`/`rinit` redan besvarad `rinit`-post — men syfilis och
+intoxikation saknar själva etymologi ännu (S/I är inte etymologi-
+passade), så luckan flyttas dit i stället för att fyllas i förtid på
+fel bokstav.
+
+**18 fick riktig etymologi, i två grupper:**
+1. **14 fristående fackord/lånord** mot ny eller delvis bekräftad rot:
+   `fenomenologi` (`Av gr. phainomenon = det som visar sig + logos =
+   lära` — samma `phainein`-rot som redan-bojda `fenotyp`),
+   `feokromocytom` (`Av gr. phaios = mörk, grå + chroma = färg + kytos
+   = cell + -oma = svulst` — tre av fyra led redan etablerade via
+   prefix-/suffixposterna `-chrome/-krom`, `-cyte/-cyt`, `adenom`;
+   bara `phaios` nytt), `fermentering`, `fluor` (`Av lat. fluor =
+   flöde, av fluere = flyta` — gäller båda betydelserna, flytning och
+   grundämnet), `flush` (bar inte den vanliga `(eng.)`-taggen och
+   föll därför utanför kategori 2:s skydd), `fruktos`, `feber` (`Av
+   lat. febris = feber`), `fläcktyfus` (`Av gr. typhos = dimma,
+   dvala`, eftersom `tyfus` självt saknar egen post), `fimosis` (`Av
+   gr. phimos = munkorg`), `fremitus` (`Av lat. fremere = brumma,
+   dåna`), `ferritin` (`Av lat. ferrum = järn`), `fosfat` (`Av gr.
+   phosphoros = ljusbärande, av phos = ljus + pherein = bära` — `phos`
+   redan etablerad via `fotofobi`), `fatigue` (`Av fr. fatigue, av
+   lat. fatigare = trötta ut` — som `flush` utan `(fr.)`-tagg),
+   `fysiologi` (`Av gr. physis = natur + logos = lära` — exakt samma
+   mall som redan-bojda `biologi`/`farmakologi`, gör `fysiologisk`/
+   `fysioterapi` till sammansättningar).
+2. **4 eponymer i husformat**, alla verifierade mot webbkällor innan de
+   skrevs (namn/nationalitet/yrke/år): `Fagerströmtest` (den svenske
+   psykologen Karl-Olov Fagerström, legitimerad 1975), `Farabeuf-
+   retraktor` (den franske kirurgen Louis Hubert Farabeuf, 1841–1910),
+   `Finochietto-retraktor` (den argentinske kirurgen Enrique
+   Finochietto, 1881–1948), `Fallots tetrad` (den franske läkaren
+   Étienne-Louis Arthur Fallot, 1850–1911, beskrev missbildningen
+   1888).
+
+**Flera grundord ("medicin", "kontraktur", "tyfus", "punktion",
+"provokation") saknar EGEN post i filen men förekommer i flera
+F-sammansättningar** (`flygmedicin`, `fysikalisk medicin`,
+`flexionskontraktur`, `finnålspunktion`, `födoämnesprovokation`). Ingen
+ny rotpost uppfanns mitt i F-passet för dem — sammansättningarna lämnades
+som motiverade undantag (ren svensk/allmän sammansättning där den ena
+leden inte har ett hem att peka mot), samma försiktighet som att inte
+gissa fram en etymologi. `fläcktyfus` är undantaget: eftersom det är en
+riktig, icke-arkaisk sjukdomsbeteckning (inte en sammansättning som kan
+vänta på en bättre värdpost) fick den sin etymologi direkt.
+
+Etymologitäckning 71,4 % → **71,5 % (7 813 av 10 928, 3 115 saknar).**
+Nästa bokstav: G. `check_generators.py`: rundtripp identisk, 407 filer
 oförändrade efter 18 generatorsteg, 195 tester gröna, 2 351/2 351
 tooltip-ankare hela.
 
