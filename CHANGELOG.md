@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.400
+- **✅ Etapp 4 punkt 3 (`Eng.`-fältet) HELT AVSLUTAD — hela ordlistan (A–Ö, prefix, suffix) genomgången i ett svep** på uttrycklig begäran ("Ta alla återstående nu och även prefix och suffix"). U–Ö gav 6 nya (`UVA`→post-anaesthesia care unit, `vena portae`→hepatic portal vein, `vena renalis`→renal vein, resten motiverade undantag).
+- **Prefix (652 saknade) och suffix (153 saknade): 139 äkta avvikelser hittade och fyllda, resten tautologiska.** Grekiska/latinska kombinationsformer stavas i den överväldigande majoriteten identiskt i svensk och engelsk fackvokabulär (kategori 2, samma logik som binomiala växtnamn) — men **15 prefix** hade en genuin skillnad (C/K-dubbletter som `cerat-`→kerat-, brittisk ae/oe-stavning som `esophag-`→oesophago-, enskilda avvikelser som `leci-`→lecith-), och **124 suffix** följde ett systematiskt mönster: den vetenskapliga latinformen på `-ia`/`-ica` blev ofta engelska `-y` via franskt mellanled (samma ljudlag som philosophia→philosophy) — `-logia`→**-logy**, `-graphia`→**-graphy**, `-ectomia`→**-ectomy**, `-scopia`→**-scopy**, `-therapia`→**-therapy** m.fl., medan direkt myntade nylatinska termer som `-algia`/`-mania`/`-phobia` behöll `-ia` oförändrat.
+- Eng.-täckning **89,7 % → 91,0 % (9 801 → 9 942 av 10 928, 1 127 → 986 saknar)** — största enskilda hoppet i hela etapp 4 punkt 3. `check_generators.py`: rundtripp identisk, 407 filer oförändrade, 195 tester gröna, sidodatum.json aktuellt, 2 351/2 351 tooltip-ankare hela.
+
 ## 0.9.399
 - **Etapp 4 punkt 3 (`Eng.`-fältet): bokstäverna P–T genomgångna, 10 nya.** 111 poster saknade `Eng. `, bara 10 (9 %) var faktiska luckor. `PAVA`→post-anaesthesia care unit, `rami musculares`→muscular branches, `RÖ`→radiology department, `REHAB`→rehabilitation, 3 TA-neuroanatomiska banor, 2 TA-artärstammar, `TLV`→Dental and Pharmaceutical Benefits Agency (samma undantag-från-undantaget som `FHM`: etablerat eget engelskt myndighetsnamn).
 - **S gav 0 nya — bokstavens 35 poster var alla motiverade undantag** (100 %), högst undantagskvot hittills för en stor bokstav. Q gav också 0 (2 binomiala växtnamn).

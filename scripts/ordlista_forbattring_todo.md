@@ -272,9 +272,11 @@ ommätta ur `ORDLISTA.md`, inte punkt 1:s felaktiga:
    överväldigande del motiverade undantag (förkortningar, rena svenska
    ord, sammansättningar redan täckta av etablerade rötter men osynliga
    för mätregexen).
-3. [ ] Eng. — 🔄 PÅGÅR sedan 0.9.396. A–T klara (111 poster saknade i P–T,
-   10 fick fältet, 101 motiverade undantag — S gav 0, 100 % undantag — se
-   loggen i `ORDLISTA.md`). **Kvar: 1 127 saknar (U–Ö).** Nästa bokstav: U.
+3. [x] **Eng. — ✅ HELT AVSLUTAD 0.9.400.** Hela ordlistan (A–Ö, prefix,
+   suffix) genomgången. **Slutläge: 9 942 av 10 928 (91,0 % täckning), 986
+   kvar.** De kvarvarande är motiverade undantag i fem kategorier (mest
+   binomiala växtnamn och tautologiska prefix/suffix-kombinationsformer)
+   — se loggen i `ORDLISTA.md`.
    ⚠️ Nytt dubblettfynd under N/O: 56 fler prefix-/suffixform-par utöver det
    redan lösta 248-fyndet — se `ORDLISTA.md`, egen riskgenomgång krävs innan
    sammanslagning.

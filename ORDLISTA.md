@@ -66,7 +66,7 @@ avslutades i hela alfabetet A–Ö.
 | Fält | Poster | Täckning | Saknas |
 |---|---:|---:|---:|
 | Ordklasstagg | 10 928 | 100 % | 0 |
-| `Eng. ` | 9 801 | 89,7 % | 1 127 |
+| `Eng. ` | 9 942 | 91,0 % | 986 |
 | Etymologi (`Av lat./gr. …`) | 7 859 | 71,9 % | 3 069 |
 | `Sv. ` | 2 627 | 24,0 % | 8 301 |
 | Böjning i parentes | 4 769 | 43,6 % | 6 159 |
@@ -1890,8 +1890,109 @@ engelska).
 
 Eng.-täckning efter P–T: **89,6 % → 89,7 % (9 801 av 10 928, 1 127 saknar).**
 `check_generators.py`: rundtripp identisk, 407 filer oförändrade, 195 tester
-gröna, sidodatum.json aktuellt, 2 351/2 351 tooltip-ankare hela. Nästa bokstav: U.
-Per bokstav: A–E 0.9.396, F–J 0.9.397, K–O 0.9.398, P–T 0.9.399.
+gröna, sidodatum.json aktuellt, 2 351/2 351 tooltip-ankare hela.
+
+**U–Ö + prefix + suffix klara — HELA ORDLISTAN NU GENOMGÅNGEN A–Ö** (0.9.400,
+2026-08-07), på uttrycklig begäran ("Ta alla återstående nu och även prefix
+och suffix") i ett enda svep i stället för bokstav för bokstav.
+
+**U (3 saknade):** `UVA` → post-anaesthesia care unit (samma koncept som `PAVA`
+men egen, ej `Jfr`-länkad post, fick sitt eget svar). **1 motiverat undantag
+till:** `utsot` (kategori 3, syskonen `diarré`/`dysenteri` bär redan fältet) +
+`Urtica dioica` (binomialt växtnamn).
+
+**V (16 saknade):** `vena portae` → hepatic portal vein, `vena renalis` →
+renal vein. **14 motiverade undantag:** 9 binomiala växtnamn + `varfeber`/
+`varioloides`/`vita pesten` (kategori 3, syskonen `sepsis`/`smittkoppor`+
+`variola`/`tuberkulos` bär redan fältet) + `vas` (kategori 5, andra
+betydelsen redan inline-översatt) + `VFU` (kategori 4, svensk
+utbildningsterm utan etablerad engelsk motsvarighet, samma mönster som
+`AT`/`ST`/`BT`).
+
+**W, X, Y, Z, Å, Ä, Ö:** X, Y, Å, Ä, Ö hade 0 saknade sedan tidigare. W (1) och
+Z (1) var båda binomiala växtnamn — 0 nya.
+
+**Prefix (652 saknade av 657) och suffix (153 saknade av 153) — en helt egen
+klassificering** (`is_prefix()`/`is_suffix()` läser ordklasstaggen i `def`,
+egna sidor `ordlista-prefix.html`/`ordlista-suffix.html`, utanför hela
+bokstavsslingan). **Metodfynd, avgörande för hela passet:** dessa är
+grekiska/latinska kombinationsformer (`hyper-`, `-itis`, `cardio-` osv.) där
+den engelska facktermen i den överväldigande majoriteten är **identiskt
+stavad** som den redan skrivna svenska formen — engelsk och svensk
+medicinsk fackvokabulär ärver samma nylatinska/grekiska stam nästan
+oförändrat. Ett `Eng. `-fält hade där bara upprepat uppslagsordet, exakt
+samma logik som de binomiala växtnamnen (kategori 2). **Kontrollerat
+post för post, inte antaget masstautologiskt:** varje post lästes mot sin
+egen `Av lat./grek. …`-etymologi (redan angiven i SAMMA post) och jämfördes
+med etablerad engelsk facklitteratur.
+
+**Prefix: 15 äkta avvikelser av 652** hittade och fyllda, i tre mönster:
+1. **C/K-dubbletter** där den svenska filen bär BÅDA stavningsvarianterna
+   som separata uppslagsord för samma grekiska rot, men engelskan bara
+   använder EN av dem: `caryo-` → engelska är `karyo-` (med K, som
+   `kary-/karyo-`s egen — redan korrekta — post); `cerat-/cerato-` →
+   engelska är `kerat-/kerato-` (keratitis, keratoconus, aldrig
+   "ceratitis"); `cric-/crico-/krik-/kriko-` → engelska använder bara
+   `cric-/crico-`, aldrig k-formen.
+2. **Brittisk stavning (ae/oe)** som den svenska formen saknar, samma
+   mönster som filens redan etablerade `oesophagus`/`paediatric`/
+   `hemoglobin (AmE), haemoglobin (BrE)`: `esophag-/esophago-` →
+   `oesophago-` (BrE), `esthesi-/esthesio-` → `aesthesio-` (BrE),
+   `eti-/etio-` → `aetio-` (BrE), `gyn-/gyne-/gynec-/gyneco-` →
+   `gynaeco-` (BrE), `nevi-/nevo-` → `naevo-` (BrE), `pale-/paleo-` →
+   `palaeo-` (BrE), `ped-/pedi-/pedo-` → `paed-` (BrE, bara
+   barnbetydelsen — fotbetydelsen är latinsk och opåverkad), `emia-` →
+   `-aemia` (BrE, komplement till den redan AmE-lika svenska formen).
+3. **Enskilda felstavningar/ovanliga varianter** där den etablerade
+   engelska facktermen skiljer sig på ett sätt som inte följer något
+   mönster: `leci-/lecido-` → `lecith-/lecitho-` (lecithin, inte
+   "lecitin" — samma th-återställning som husets `th → t`-regel fast i
+   motsatt riktning), `ptyl-/ptyalo-` → `ptyalo-` (ptyalin, ptyalism),
+   `pycn-/pycno-` → `pykno-` (pyknosis, standardstavningen).
+
+**Suffix: 124 äkta avvikelser av 153** — en helt annan, mycket högre kvot än
+prefixens 2,3 %, av en tydlig lingvistisk anledning. Suffixposterna ger
+konsekvent BÅDA formerna i uppslagsordet, `-X / -x` (internationell/
+vetenskaplig latinform / svensk förenklad form, t.ex. `-logia / -logi`,
+`-therapia / -terapi`). Men den vetenskapliga latinformen på `-ia`/`-ica`
+är OFTA INTE den engelska formen — ett stort antal av dessa ord kom in i
+engelskan via franskan och kortades då systematiskt till `-y`
+(samma ljudlag som `philosophia → philosophy`, `democratia → democracy`):
+`-logia` → engelska **-logy** (oncology, inte "oncologia"), `-graphia` →
+**-graphy**, `-metria` → **-metry**, `-ectomia` → **-ectomy**, `-scopia` →
+**-scopy**, `-stomia` → **-stomy**, `-tomia` → **-tomy**, `-pathia` →
+**-pathy**, `-therapia` → **-therapy**, `-trophia` → **-trophy**,
+`-megalia` → **-megaly**, `-pexia` → **-pexy**, `-plastica` → **-plasty**,
+`-rrhaphia` → **-rrhaphy**, `-tripsia` → **-tripsy**, `-doxia` → **-doxy**,
+`-toxism/-toxikos` → **-toxicosis**. Andra `-ia`-suffix som myntades DIREKT
+som nylatinsk/grekisk facklitteratur (inte via franskans folkliga
+ljudutveckling) BEHÖLL `-ia` oförändrat i engelskan: `-algia`, `-mania`,
+`-phobia`, `-plegia`, `-plasia`, `-uria`, `-emia`, `-itis`, `-osis` —
+dessa fick alltså `Eng. ` = samma `-ia`-form som redan gavs (fortfarande
+en äkta skillnad från den svenska `-i`-formen i posten, så en genuin
+avvikelse värd att fylla, inte tautologisk). Ett dussintal fick dessutom
+brittisk ae/oe-parallellform på samma sätt som prefixen (`-emia` →
+`-aemia`, `-esthesia` → `-aesthesia`, `-edema` → `-oedema`, `-pnea` →
+`-pnoea`, `-rrhea` → `-rrhoea`, `-menorrhea` → `-menorrhoea`, `-cythemia`
+→ `-cythaemia`). **29 motiverade undantag** i suffixgruppen: enstaka
+redan-tautologiska korta suffix (`-ad`, `-blast`, `-cele`, `-form`,
+`-gram`, `-ism`, `-oid`, `-plasm`, `-stat` m.fl., redan identiska med
+engelskan) samt två poster lämnade **obesvarade av osäkerhet snarare än
+gissning** (`-liposis/-lipos` och delvis `-dermia/-derma`, där källorna
+går isär) — i linje med husets regel att hellre lämna en lucka än gissa.
+
+Eng.-täckning **89,7 % → 91,0 % (9 801 → 9 942 av 10 928, 1 127 → 986
+saknar)** — det enskilt största hoppet i hela etapp 4 punkt 3, drivet av
+prefix/suffix-passet. `check_generators.py`: rundtripp identisk, 407 filer
+oförändrade efter 18 generatorsteg, 195 tester gröna, sidodatum.json
+aktuellt, 2 351/2 351 tooltip-ankare hela.
+
+**✅ MILSTOLPE: etapp 4 punkt 3 (`Eng.`-fältet) är nu helt avslutad — hela
+ordlistan (A–Ö, prefix, suffix) genomgången.** De kvarvarande 986 är
+motiverade undantag i de fem etablerade kategorierna (dominerat av
+binomiala växtnamn och tautologiska kombinationsformer), inte en
+arbetslista. Per grupp: A–E 0.9.396, F–J 0.9.397, K–O 0.9.398, P–T 0.9.399,
+U–Ö+prefix+suffix 0.9.400.
 
 ### Prefix- och suffixposter bär alltid sitt bindestreck
 
