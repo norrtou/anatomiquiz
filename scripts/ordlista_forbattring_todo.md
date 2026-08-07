@@ -272,9 +272,9 @@ ommätta ur `ORDLISTA.md`, inte punkt 1:s felaktiga:
    överväldigande del motiverade undantag (förkortningar, rena svenska
    ord, sammansättningar redan täckta av etablerade rötter men osynliga
    för mätregexen).
-3. [ ] Eng. — 🔄 PÅGÅR sedan 0.9.396. A–E klara (156 saknade, 47 fick fältet,
-   109 motiverade undantag — se loggen i `ORDLISTA.md`). **Kvar: 1 210 saknar
-   (F–Ö).** Nästa bokstav: F.
+3. [ ] Eng. — 🔄 PÅGÅR sedan 0.9.396. A–J klara (48 poster saknade i F–J,
+   8 fick fältet, 40 motiverade undantag — se loggen i `ORDLISTA.md`).
+   **Kvar: 1 202 saknar (K–Ö).** Nästa bokstav: K.
 
 **Ett fält per bokstav och commit**, i den ordningen — inte alla tre fälten på
 samma bokstav. A saknade böjning i 762 poster, etymologi i 396 och `Eng.` i 139;

@@ -66,7 +66,7 @@ avslutades i hela alfabetet A–Ö.
 | Fält | Poster | Täckning | Saknas |
 |---|---:|---:|---:|
 | Ordklasstagg | 10 928 | 100 % | 0 |
-| `Eng. ` | 9 718 | 88,9 % | 1 210 |
+| `Eng. ` | 9 726 | 89,0 % | 1 202 |
 | Etymologi (`Av lat./gr. …`) | 7 859 | 71,9 % | 3 069 |
 | `Sv. ` | 2 627 | 24,0 % | 8 301 |
 | Böjning i parentes | 4 769 | 43,6 % | 6 159 |
@@ -1707,7 +1707,51 @@ i etymologipasset). **18 motiverade undantag:** 11 binomiala växtnamn +
 `emollitio cerebri` är den arkaiska latinska sidoformen) + `ESS`/`EHM`
 (kategori 5/4).
 
-Nästa bokstav: F. Per bokstav: A–E 0.9.396.
+**F klar** (0.9.397, 2026-08-07): 11 poster saknade `Eng. `. **1 fick fältet:**
+`FHM` → Public Health Agency of Sweden (till skillnad från `EHM`/`BOA`: FHM har ett
+etablerat, internationellt använt engelskt namn — myndighetens eget engelskspråkiga
+namn, väl belagt bl.a. från covid-bevakningen — så den räknas INTE som kategori 4
+trots att den också är en svensk myndighet). **10 motiverade undantag:** 4 binomiala
+växtnamn + `febris intermittens`/`febris recurrens`/`febris typhoides` (kategori 3,
+syskonen `malaria`/`återfallsfeber`/`tyfoidfeber` bär redan fältet, den sistnämnda
+med `Lat. febris typhoides` explicit utskrivet) + `fransosen` (kategori 3, syskon
+`syfilis` bär redan fältet) + `FAP`/`FAST` (kategori 5).
+
+**G klar** (0.9.397, 2026-08-07): 9 poster saknade `Eng. ` — **0 fick fältet**,
+andra bokstaven i det här passet med noll äkta luckor. **9 motiverade undantag:**
+7 binomiala växtnamn + `GAS` (kategori 5) + `GERD` (ny undantagsvariant: expansionen
+i brödtexten ÄR redan den engelska frasen ordagrant — `förk. gastro-oesophageal
+reflux disease; …` — ett formellt `Eng. `-fält hade upprepat exakt samma fras en
+gång till i samma post, samma logik som en bar-taggad engelsk term men tillämpad på
+en förkortnings egen expansion i stället för uppslagsordet).
+
+**H klar** (0.9.397, 2026-08-07): 19 poster saknade `Eng. `. **5 fick fältet:**
+`HIA` → coronary care unit, `HAB` → habilitation (ett äkta engelskt fackord, skilt
+från "rehabilitation"), `HMC` → assistive technology centre, `halsrygg` → cervical
+spine, `hjärnstam` → brainstem. **14 motiverade undantag:** 7 binomiala växtnamn +
+`hydrophobia`/`hysteria`/`håll och styng` (kategori 3, syskonen `rabies`/`hysteri`/
+`pleurit` bär redan fältet — `pleurit`s `Vardag. `-fält nämner uttryckligen "håll" i
+bröstet) + `hp`/`HSV`/`HSAN` (kategori 5) + `HSLF-FS` (kategori 4, svensk
+författningssamling utan engelsk motsvarighet).
+
+**I klar** (0.9.397, 2026-08-07): 7 poster saknade `Eng. `. **2 fick fältet:**
+`IVA` → intensive care unit (basförkortningen själv saknade fältet trots att
+syskonen `BIVA`/`CIVA` redan fått sitt i A/C-passen — kontrollerat i FILEN, inte
+antaget), `ischiopubicus` → ischiopubic (bar Latinsk adjektivform, samma mönster
+som redan skrivna `articularis`→articular, `costalis`→costal, `radialis`→radial:
+strippa den latinska ändelsen, sätt den engelska adjektivändelsen). **5 motiverade
+undantag:** 2 binomiala växtnamn + `icterus` (kategori 3, syskon `ikterus` bär redan
+fältet OCH listar `icterus` explicit som "Även stavn.") + `insania` (kategori 3,
+BÅDA syskonen `mani`/`melankoli` bär redan fältet) + `ICD-10-SE` (kategori 4, svensk
+anpassning av en internationell standard, inget eget engelskt namn).
+
+**J klar** (0.9.397, 2026-08-07): 2 poster saknade `Eng. ` — **0 fick fältet**,
+båda binomiala växtnamn (`Juniperus sabina`, `Juniperus communis`).
+
+Eng.-täckning efter F–J: **88,9 % → 89,0 % (9 726 av 10 928, 1 202 saknar).**
+`check_generators.py`: rundtripp identisk, 407 filer oförändrade, 195 tester gröna,
+sidodatum.json aktuellt, 2 351/2 351 tooltip-ankare hela. Nästa bokstav: K.
+Per bokstav: A–E 0.9.396, F–J 0.9.397.
 
 ### Prefix- och suffixposter bär alltid sitt bindestreck
 

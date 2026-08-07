@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.397
+- **Etapp 4 punkt 3 (`Eng.`-fältet): bokstäverna F–J genomgångna, 8 nya.** 48 poster saknade `Eng. ` enligt mätsnutten, bara 8 (17 %) var faktiska luckor. `FHM` → Public Health Agency of Sweden (till skillnad från `EHM`/`BOA`: ett etablerat, internationellt använt engelskt myndighetsnamn), `HIA` → coronary care unit, `HAB` → habilitation, `HMC` → assistive technology centre, `halsrygg` → cervical spine, `hjärnstam` → brainstem, `IVA` → intensive care unit (basförkortningen själv saknade fältet trots att `BIVA`/`CIVA` redan fått sitt), `ischiopubicus` → ischiopubic (samma adjektivmönster som redan skrivna `articularis`/`costalis`/`radialis`).
+- **Ny undantagsvariant hittad i G:** `GERD`s expansion i brödtexten ÄR redan den engelska frasen ordagrant (`gastro-oesophageal reflux disease`) — ett formellt `Eng. `-fält hade upprepat exakt samma fras en gång till.
+- Eng.-täckning **88,9 % → 89,0 % (9 718 → 9 726 av 10 928, 1 210 → 1 202 saknar)**. `check_generators.py`: rundtripp identisk, 407 filer oförändrade, 195 tester gröna, sidodatum.json aktuellt, 2 351/2 351 tooltip-ankare hela. Nästa bokstav: K.
+
 ## 0.9.396
 - **Etapp 4 punkt 3 (`Eng.`-fältet) påbörjad — bokstäverna A–E genomgångna.** Samma metod som böjningen och etymologin: mät hela bokstaven, kategorisera varje "saknas"-post innan något skrivs. 156 poster saknade `Eng. ` enligt mätsnutten (A 72, B 12, C 42, D 12, E 18), bara **47 (30,1 %)** var faktiska luckor.
 - **Fem kategorier motiverade undantag identifierade och nedskrivna i `ORDLISTA.md`:** latinska binomiala växtnamn (uppslagsordet ÄR redan sin internationella engelska form, 82 av 109 undantag i detta pass), redan tautologiska lånord (`anasarca`, `anthrax`, `encephalomalacia`), redan täckta av en modern/primär syskonpost (`apostem`→`böld`, `digerdöden`→`pest`, `caries`→`karies`, `decubitus`→`trycksår` m.fl.), svenskspecifika institutioner utan internationell motsvarighet (`AT`, `BT`, `EHM`, `BOA`), och flertydiga förkortningar med redan inline-översatta sinnen (`CAPS`, `CHD`, `CAD`, `ESS`).
