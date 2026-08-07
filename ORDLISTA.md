@@ -1159,6 +1159,40 @@ Nästa bokstav: O. `check_generators.py`: rundtripp identisk, 407
 filer oförändrade efter 18 generatorsteg, 195 tester gröna, 2 351/
 2 351 tooltip-ankare hela.
 
+**O klar 0.9.385** (2026-08-07): av 352 O-poster saknade 69 enligt
+mätsnutten, bara **2 (2,9 %) faktiska luckor** — samma låga kvot som
+N-passet, av samma orsaksfamilj (en handfull redan etablerade rötter
+bär enorma systematiska kluster). `os` (`Av lat. os = ben` — posten
+bär till och med en inbyggd varning "ej att förväxla med os = mun",
+`os, oris`) täckte ensamt **27** systematiska `os X`/`ossa X`-TA-
+bennamn (`os capitatum` … `ossa metatarsi`) i ett enda svep.
+`ortopedi` (`Av grek. orthos = rak + pais = barn`) gav `orthos`-
+roten och `anorexi` (`Av gr. an- = utan + orexis = aptit`) gav
+`orexis`-roten till `Ortorexi` — BÅDA leden i ordet var alltså redan
+täckta var för sig, ingenting nytt att lägga till. `genesis` (`Av
+grek. genesis = uppkomst`) täckte `osteogenesis imperfecta`
+tillsammans med redan-bojda `osteoporos`/`osteotomi`. 11 förkort-
+ningar, 5 poster som redan bar en etymologisk not mätsnutten missade
+— läkemedelsklustret `Omeprazol`, `Ondansetron`, `Oxitetracyklin`,
+`Oxazepam`, samt eponymen `Omvänt Trendelenburgläge` (`Uppkallat
+efter Friedrich Trendelenburg`).
+
+**2 fick riktig etymologi**, båda platsuppkallade snarare än person-
+uppkallade och verifierade mot webbkällor: `Osgood-Schlatter` (en
+riktig dubbel-eponym: den amerikanske kirurgen Robert Bayley Osgood,
+1873–1956, och den schweiziske kirurgen Carl Schlatter, 1864–1934,
+som oberoende av varandra beskrev tillståndet 1903), `Oswestry
+Disability Index` (uppkallat efter staden Oswestry i England, där
+indexet utvecklades vid Robert Jones and Agnes Hunt Orthopaedic
+Hospital och publicerades 1980 — samma namnhistoria-mönster som
+L-passets `legionella` och N-passets `norovirus`).
+
+Etymologitäckning oförändrad på **71,8 % (7 848 av 10 928, 3 080
+saknar)** — båda tilläggen är `Efter`/`Uppkallat efter`-formuleringar,
+osynliga för mätregexen. Nästa bokstav: P. `check_generators.py`:
+rundtripp identisk, 407 filer oförändrade efter 18 generatorsteg,
+195 tester gröna, 2 351/2 351 tooltip-ankare hela.
+
 ### Prefix- och suffixposter bär alltid sitt bindestreck
 
 Ett uppslagsord i prefixgruppen **slutar** med bindestreck (`brady-`, `pseud- / pseudo-`),
