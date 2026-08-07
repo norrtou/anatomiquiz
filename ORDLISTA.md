@@ -1458,6 +1458,33 @@ saknar)** — tillägget är en `Efter`-eponym, osynlig för mätregexen.
 Nästa bokstav: W. `check_generators.py`: rundtripp identisk, 407
 filer oförändrade, 195 tester gröna, 2 351/2 351 tooltip-ankare hela.
 
+**W klar 0.9.393** (2026-08-07): liten bokstav (23 poster totalt).
+Av 20 W-poster saknade etymologi enligt mätsnutten var 10 förkort-
+ningar, 2 redan besvarade (`WDHA-syndrom` — akronymen självförklarad
+i brödtexten, `Withania somnifera` — växtnamn), `whiplash` ett bare-
+taggat engelskt lånord (kategori 2, `Sv. pisksnärtsskada` är redan
+en självständig svensk översättning i egen post).
+
+**6 fick riktig etymologi, samtliga eponymer/namnhistorier, alla
+verifierade mot webbkällor innan de skrevs:** `warfarin` (`Bildat av
+WARF, Wisconsin Alumni Research Foundation, som finansierade forsk-
+ningen, + ändelsen -arin, av kumarin` — en av medicinens mer ovan-
+liga namnhistorier, uppkallat efter en finansiär snarare än en
+person eller upptäckt), `Wilsons sjukdom` (den brittiske neurologen
+Samuel Alexander Kinnier Wilson, 1878–1937, beskrev sjukdomen 1912),
+`Wegeners granulomatos` (den tyske patologen Friedrich Wegener,
+1907–1990, beskrev sjukdomen på 1930-talet), `Wong-Baker Faces` (de
+amerikanska sjuksköterskorna Donna Wong och Connie Baker, utvecklade
+skalan 1983), `Wells score` (den kanadensiske hematologen Philip
+Wells), `Weitlaner-retraktor` (den österrikiske läkaren Franz
+Weitlaner, 1872–1944, publicerade konstruktionen 1905).
+
+Etymologitäckning oförändrad på **71,9 % (7 859 av 10 928, 3 069
+saknar)** — alla sex är `Efter`/`Bildat av`-formuleringar, osynliga
+för mätregexen. Nästa bokstav: X. `check_generators.py`: rundtripp
+identisk, 407 filer oförändrade, 195 tester gröna, 2 351/2 351
+tooltip-ankare hela.
+
 ### Prefix- och suffixposter bär alltid sitt bindestreck
 
 Ett uppslagsord i prefixgruppen **slutar** med bindestreck (`brady-`, `pseud- / pseudo-`),
