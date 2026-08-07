@@ -67,7 +67,7 @@ avslutades i hela alfabetet A–Ö.
 |---|---:|---:|---:|
 | Ordklasstagg | 10 928 | 100 % | 0 |
 | `Eng. ` | 9 671 | 88,5 % | 1 257 |
-| Etymologi (`Av lat./gr. …`) | 7 813 | 71,5 % | 3 115 |
+| Etymologi (`Av lat./gr. …`) | 7 819 | 71,6 % | 3 109 |
 | `Sv. ` | 2 627 | 24,0 % | 8 301 |
 | Böjning i parentes | 4 769 | 43,6 % | 6 159 |
 | `Jfr ` | 1 386 | 12,7 % | 9 542 |
@@ -734,6 +734,68 @@ Etymologitäckning 71,4 % → **71,5 % (7 813 av 10 928, 3 115 saknar).**
 Nästa bokstav: G. `check_generators.py`: rundtripp identisk, 407 filer
 oförändrade efter 18 generatorsteg, 195 tester gröna, 2 351/2 351
 tooltip-ankare hela.
+
+**G klar 0.9.377** (2026-08-07): av 266 G-poster saknade 118 enligt
+mätsnutten, bara **15 (12,7 %) faktiska luckor.** 26 förkortningar, 12
+poster som redan bar en etymologisk not mätsnutten missade (samma
+läkemedels-/växtkluster-mönster som B/C/F: `Gentiana lutea`,
+`Guaiacum officinale`, `Ginkgo biloba`, `Gaultheria procumbens`,
+`Glyceroltrinitrat`, `Griseofulvin`, `Gentamicin`, `Glibenklamid`,
+samt `gulsot` som redan hade `Av gul + sot (sjukdom)` — en helt
+svensk, icke-språkkodad etymologimening som mätregexen inte kan se —
+och eponymerna `Golgi`/`Galeazzi`/`Galvanismo` med redan skrivet
+`Efter …`), resten sammansättningar av redan glosade rötter.
+
+**Rotkontrollen bar nästan hela bokstaven — färre enskilda rotkoll-
+fynd men fler ord per rot än i något tidigare pass.** `gaster` (`Av
+grek. gaster = mage, buk`) gjorde ensam nio gastro-sammansättningar
+till kategori 3 (`gastrektomera`, `gastrin`, `gastrinom`,
+`gastroenterit`, `gastroenterologi`, `gastroesofageal`,
+`gastrointestinaltractus`, `gastroskop`, `gastroskopi` — det gemen-
+samma, igenkännbara ledet räcker, andra ledets suffix behöver inte
+också vara belagt). `glukos` (`Av gr. glykys = söt`) bar på samma
+sätt nio glyk-/gluk-ord (`glukagon`, `glukagonom`, `glukokortikoid`,
+`glukoneogenes`, `glukosuri`, `glykemiskt index`, `glykogenolys`,
+`glykolys`, `glykosid`), `granulum`/`granul-` sex granul-ord
+(`granulation`, `granulationsvävnad`, `granulocyt`,
+`granulocytopeni`, `granulocytos`, `granulom`), `gonad` tre gonado-ord
+och `ganglion` två TA-fraser (`ganglia basalia`, `ganglion spinale`).
+`gangraena` visade sig vara exakt samma ord som redan-bojda `gangrän`
+(`Av gr. gangraina`), bara den latinska stavningsvarianten.
+
+**15 fick riktig etymologi, i två grupper:**
+1. **6 fristående fackord:** `glaukom` (`Av gr. glaukos = blågrön,
+   grumlig` — samma B-passfälla som `bronkit`/`botulism`: posten bar
+   bara en missvisande `Lat.`-namntagg, ingen riktig ordförklaring),
+   `gonorré` (`Av gr. gone = säd + rhoia = flöde` — `rhoia`-roten
+   redan belagd via redan-bojda `diarré`s `dia + rhein = flyta`),
+   `gonioskopi` (`Av gr. gonia = vinkel + skopein = betrakta`),
+   `galaktosemi` (`Av gr. gala (galaktos) = mjölk + haima = blod`),
+   `gestagen` (`Av lat. gestare = bära, bära på + gr. -gen =
+   alstrande`), `Grandiositet` (`Av lat. grandis = stor`).
+2. **9 eponymer**, alla verifierade mot webbkällor innan de skrevs
+   (namn/nationalitet/yrke/år): `gramnegativ`/`grampositiv` (danske
+   bakteriologen Hans Christian Gram, 1853–1938, båda posterna fick
+   varsin `Efter`-mening eftersom `Gram`/`gramfärgning` saknar egen
+   post att peka mot), `Graves sjukdom` (irländske läkaren Robert
+   James Graves, 1796–1853 — samma diagnos som redan-bojda `Basedows
+   sjukdom` under ett annat namn, två oberoende eponymer för samma
+   sjukdom), `giardia` (franske zoologen Alfred Giard + tjeckiske
+   läkaren Vilém Dušan Lambl, samma "släkte uppkallat efter
+   forskaren"-mönster som E-passets `ehrlichios`), `Guillain-Barré`
+   (franska neurologerna Georges Guillain och Jean-Alexandre Barré,
+   beskrev syndromet 1916), `Gigli-såg` (italienske kirurgen Leonardo
+   Gigli, 1863–1908), `Guedel-tub` (amerikanske narkosläkaren Arthur
+   Guedel, 1883–1956), `Gelpi-retraktor` (amerikanske kirurgen
+   Maurice Gelpi, 1883–1939 — webbsökningen rättade en första,
+   felaktig förnamnsgissning innan något skrevs), `Guglielmi`
+   (självrefererande `Efter Guido Guglielmi`, samma mönster som redan
+   klara `Golgi`/`Galeazzi`).
+
+Etymologitäckning 71,5 % → **71,6 % (7 819 av 10 928, 3 109 saknar).**
+Nästa bokstav: H. `check_generators.py`: rundtripp identisk, 407
+filer oförändrade efter 18 generatorsteg, 195 tester gröna, 2 351/
+2 351 tooltip-ankare hela.
 
 ### Prefix- och suffixposter bär alltid sitt bindestreck
 
