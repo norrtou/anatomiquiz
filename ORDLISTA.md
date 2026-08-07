@@ -67,7 +67,7 @@ avslutades i hela alfabetet A–Ö.
 |---|---:|---:|---:|
 | Ordklasstagg | 10 928 | 100 % | 0 |
 | `Eng. ` | 9 671 | 88,5 % | 1 257 |
-| Etymologi (`Av lat./gr. …`) | 7 853 | 71,9 % | 3 075 |
+| Etymologi (`Av lat./gr. …`) | 7 856 | 71,9 % | 3 072 |
 | `Sv. ` | 2 627 | 24,0 % | 8 301 |
 | Böjning i parentes | 4 769 | 43,6 % | 6 159 |
 | `Jfr ` | 1 386 | 12,7 % | 9 542 |
@@ -1304,6 +1304,64 @@ Etymologitäckning 71,8 % → **71,9 % (7 853 av 10 928, 3 075 saknar).**
 Nästa bokstav: S. `check_generators.py`: rundtripp identisk, 407
 filer oförändrade efter 18 generatorsteg, 195 tester gröna, 2 351/
 2 351 tooltip-ankare hela.
+
+**S klar 0.9.389** (2026-08-07): alfabetets näst största bokstav
+(1 031 poster). Av 201 S-poster saknade etymologi enligt mätsnutten
+var bara **11 (5,5 %) faktiska luckor.** 53 förkortningar, 20 poster
+som redan bar en etymologisk not mätsnutten missade — hela `synovia`-
+familjen (`synovia`, `synovial`, `synovialhinna`, `synovialvätska`,
+`synovit`, `synovektomi`, `synovektomera`, alla `Av nylat. synovia =
+ledvätska`), växtnamn, samt eponymerna `Schwannom`, `Sertoli`,
+`Scarpa`, `Santorini` och `simsläge` (Uppkallat efter gynekolog James
+Marion Sims).
+
+**Rotkontrollen bar en majoritet av bokstaven.** `sub-` (`Av lat.
+sub = under`, med assimilationsformerna `suc-/suf-/sug-/sum-/sup-/
+sur-/sus-` uttryckligen dokumenterade i prefixpostens egen text) och
+en rad andra redan etablerade rötter — `strabism`, `stenos`,
+`distorsion`, `scabies`, `tetanus`, `lepra`, `senil`, `cirrhosis`
+(via L-passets `levercirros`) och `impetigo` (I-passet) — täckte
+sina arkaiska/vardagliga svenska syskon i ett svep: `skelning`,
+`spinal stenos`, `stukning`, `skabb`, `stelkramp`, `spetälska`,
+`senilitas`, `skrumplever`, `svinkoppor`. `fobi`, `schizofreni`,
+`suicid`, `sepsis`, `serum` + `tonus` (K-passet) och `soma` +
+`statikos` (K-passet, `bakteriostatisk`s rot) täckte ytterligare
+stora kluster: hela `social fobi`/`Specifik fobi`/`Separationsångest`-
+gruppen, hela `Schizoid`/`Schizotyp`/`Schizoaffektivt`-familjen, hela
+`Suicidtanke`/`Suicidrisk`/`Suicidalitet`-familjen, samt
+`septicaemia`, `serotonin`, `somatostatin`/`somatostatinom`.
+
+**11 fick riktig etymologi:** 3 fristående fackord — `Somnambulism`
+(`Av lat. somnus = sömn + ambulare = gå, vandra`), `Stetoskop`
+(`Av gr. stethos = bröst + skopein = betrakta`), `syfilis` (`Bildat
+av den italienske läkaren och diktaren Girolamo Fracastoro, som 1530
+gav sjukdomen namnet i diktverket "Syphilis sive morbus gallicus",
+efter herden Syphilus i berättelsen` — ett av husets viktigaste ord
+inom infektionsmedicin, hade saknat etymologi helt sedan bokstav A),
+`Skalpell` (`Av lat. scalpellum, diminutiv av scalprum = kniv,
+mejsel`) — samt 2 namnhistorier och 5 eponymer, alla verifierade mot
+webbkällor innan de skrevs: `salmonellos` (den amerikanske
+veterinärpatologen Daniel Elmer Salmon, 1850–1914, chefen för
+laboratoriet där bakterien isolerades 1885), `stent` (den engelske
+tandläkaren Charles Thomas Stent, 1807–1885, vars dentala
+avtrycksmaterial gav namnet sin väg in i medicinen), `Stroop-test`
+(John Ridley Stroop, 1935), `Schobers test` (Paul Schober, 1937),
+`Severs sjukdom` (James Warren Sever, 1912), `Sjögren`/`Sjögrens
+syndrom` (Henrik Sjögren, 1933 — båda dubbla entries fick tillägget).
+
+**Metodfynd: efter att användaren ifrågasatte varför alla 18
+generatorsteg kördes för en ren `data/ordlista.json`-ändring**
+kördes S-passets tillämpning bara med de scripten som faktiskt
+konsumerar ordlistan — `generate_glossary.py`, samtliga
+`wire_*.py --all` och `generate_llms.py` — och `check_generators.py`
+visade ändå "rundtripp identisk" på det riktiga trädet, vilket
+bekräftar att de sju sidgeneratorerna (`generate_karl.py` m.fl.) var
+onödiga för den här ändringstypen. Se `feedback_ordlista_relevant_
+generators_only` i minnessystemet.
+
+Etymologitäckning 71,9 % → **71,9 % (7 856 av 10 928, 3 072 saknar).**
+Nästa bokstav: T. `check_generators.py`: rundtripp identisk, 407
+filer oförändrade, 195 tester gröna, 2 351/2 351 tooltip-ankare hela.
 
 ### Prefix- och suffixposter bär alltid sitt bindestreck
 
