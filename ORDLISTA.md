@@ -67,7 +67,7 @@ avslutades i hela alfabetet A–Ö.
 |---|---:|---:|---:|
 | Ordklasstagg | 10 928 | 100 % | 0 |
 | `Eng. ` | 9 671 | 88,5 % | 1 257 |
-| Etymologi (`Av lat./gr. …`) | 7 851 | 71,8 % | 3 077 |
+| Etymologi (`Av lat./gr. …`) | 7 853 | 71,9 % | 3 075 |
 | `Sv. ` | 2 627 | 24,0 % | 8 301 |
 | Böjning i parentes | 4 769 | 43,6 % | 6 159 |
 | `Jfr ` | 1 386 | 12,7 % | 9 542 |
@@ -1265,6 +1265,45 @@ Etymologitäckning oförändrad på **71,8 % (7 851 av 10 928, 3 077
 saknar).** Nästa bokstav: R. `check_generators.py`: rundtripp
 identisk, 407 filer oförändrade efter 18 generatorsteg, 195 tester
 gröna, 2 351/2 351 tooltip-ankare hela.
+
+**R klar 0.9.388** (2026-08-07): av 380 R-poster saknade 74 enligt
+mätsnutten, bara **5 (6,8 %) faktiska luckor.** 27 förkortningar
+(flera av formen `subst. (förk.)`, samma P-passfälla som redan
+skrevs in i metoden ovan), 8 poster som redan bar en etymologisk
+not mätsnutten missade — läkemedlet `Reserpin` (`Ur växten Rauvolfia
+serpentina, artnamnet av lat. serpens = orm, efter den slingrande
+roten`), eponymerna `Raynauds fenomen`, `refsums sjukdom`, `röntgen`,
+`Ruffini`.
+
+**Rotkontrollen bar en stor del av bokstaven via arkaiska/vardagliga
+svenska syskon till redan etablerade latin-/grektermer** — samma
+mönster som H- och N-passen, men nu med rollerna omvända: `erysipelas`
+→ `rosfeber`, `lumbago` → `ryggskott`, `spina bifida` →
+`ryggmärgsbråck`, `rubella` → `röda hund`, `tinea` → `ringorm`,
+`dorsal` → `ryggsmärta`. `rakit`/`rachitis` är ett extra tydligt
+exempel: den SVENSKA formen (`rakit`, `Av gr. rhachis = ryggrad`)
+bär etymologin, den latinska sidoformen (`rachitis`) är sibling —
+motsatt riktning mot den vanliga "arkaiskt latinskt namn, modernt
+svenskt syskon"-regeln. Dessutom täckte `reflex`, `rete`/`reticulum`,
+`radius` (tillsammans med F-passets `deviera`), `psykiatri`,
+`rotator` och `ramus` ytterligare en klunga: `reflexologi`,
+`retikulocyter`, `radialdeviation` (där BÅDA leden var täckta
+separat — `radial` via `radius`, `-deviation` via `deviera`),
+`rättspsykiatri`, `rotatorkuffsruptur`, `rami musculares`.
+
+**5 fick riktig etymologi:** 2 fristående fackord (`rotavirus` —
+`Av lat. rota = hjul`, syftar på partiklarnas hjulliknande form i
+elektronmikroskopet, `Rongeur` — `Av fr. ronger = gnaga`) + 3
+eponymer, alla verifierade mot webbkällor innan de skrevs: `Retts
+syndrom` (den österrikiske barnläkaren Andreas Rett, 1924–1997,
+beskrev syndromet 1966), `Richardson-retraktor` (den amerikanske
+kirurgen Maurice Howe Richardson), `Redon-drän` (den franske
+kirurgen Henri Redon, 1899–1974, utvecklade dränet 1950).
+
+Etymologitäckning 71,8 % → **71,9 % (7 853 av 10 928, 3 075 saknar).**
+Nästa bokstav: S. `check_generators.py`: rundtripp identisk, 407
+filer oförändrade efter 18 generatorsteg, 195 tester gröna, 2 351/
+2 351 tooltip-ankare hela.
 
 ### Prefix- och suffixposter bär alltid sitt bindestreck
 
