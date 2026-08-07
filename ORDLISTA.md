@@ -1485,6 +1485,62 @@ för mätregexen. Nästa bokstav: X. `check_generators.py`: rundtripp
 identisk, 407 filer oförändrade, 195 tester gröna, 2 351/2 351
 tooltip-ankare hela.
 
+**X, Y, Z, Å, Ä, Ö klara 0.9.394** (2026-08-07): de sex sista
+bokstäverna genomgångna i ett svep, på uttrycklig begäran ("Gör alla
+återstående bokstäver i ett svep") i stället för en och en. 72 poster
+granskade totalt (X 12, Y 6, Z 20, Å 18, Ä 8, Ö 8). **X hade 0 luckor**
+— redan klar sedan tidigare bokstav. Av de återstående 60 (Y–Ö) saknade
+55 etymologi enligt mätsnutten.
+
+**Rotkontrollen bar 53 av de 55 luckorna (96 %), utan att en enda
+rad behövde skrivas.** Rena svenska ord utan lånordskomponent:
+hela `åder`-familjen (`åder`, `åderbråck`, `åderförkalkning`,
+`åderinflammation`, `åderlåta`, `åderlåtning`, `åderstockning`),
+hela `ålderdom`-familjen (`ålderdom`, `ålderdomssvaghet`,
+`åldersbräcklighet`, `åldersförfall`), hela `ärr`-familjen
+(`ärrbildning`, `ärrvävnad`), `åkomma`, `återfallsfeber`, `Återfall`,
+`Återhämtning`, `ytanatomi` (ytled), `yttre vändning`, `ytterled`,
+`ätstörning`, `Ältande`, `övervikt`, `överaktiv blåsa`, `Överföring`.
+Sammansättningar täckta av rötter etablerade i tidigare bokstäver:
+`anatomi` bar `ytanatomi`; `zona` + `terapi` bar tillsammans
+`zonterapi` (Z:s enda lucka); `ångest` (redan etablerad: `Av lat.
+angustia = trånghet, beklämning`) + `neuron`/`neuro-` bar
+`ångestneuros`/`ångestsyndrom`; `psykiatri` bar `äldrepsykiatri`;
+`con-` (`Av lat. con- = med`) + `trahere` (`Av lat. trahere = dra`,
+etablerad via `protraktion`/`retraktion`/`traktion`) bar tillsammans
+`ärrkontraktur` trots att `kontraktur` saknar egen post; `pronation`/
+`pronator` (`Av lat. pronus`) bar `överpronera`; `hyper-` (`Av grek.
+hyper = över`) + `ops`/`opi` = öga (etablerad via `myopi`/`diplopi`/
+`amblyopi` m.fl.) bar tillsammans `översynthet` trots att `hyperopi`
+saknar egen post. **`yrsel`** följer samma mönster som tidigare
+bokstävers arkaisk/vardaglig-mot-facktermen: den bär bara en `Lat.
+vertigo`-tagg (inte en etymologi, se B-passets fynd), men `vertigo`
+har sin egna fulla etymologi (`Av lat. vertere = vända, snurra`,
+etablerad i V-passet) på sin egen post. **`östradiol`** hade redan
+sin bildning utskriven inline (`Av östrogen + diol`) trots att den
+inte matchar mätregexen (`östrogen` är inget språkkodsord) — inget
+att lägga till.
+
+**2 fick riktig etymologi, båda i Y, båda verifierade mot
+webbkällor innan de skrevs:** `YMRS` (`Efter den amerikanske
+psykiatern Robert C. Young, som konstruerade skalan 1978`) och
+`Y-BOCS` — en namnhistoria snarare än en person-eponym, samma
+kategori som `legionella`/`tularemi`: `Bildat av namnen på
+universiteten Yale och Brown`, där utvecklarna Wayne Goodman
+respektive Steven Rasmussen var verksamma när skalan publicerades
+1989.
+
+Etymologitäckning oförändrad på **71,9 % (7 859 av 10 928, 3 069
+saknar)** — båda tilläggen är `Efter`/`Bildat av`-formuleringar,
+osynliga för mätregexen. `check_generators.py`: rundtripp identisk,
+407 filer oförändrade, 195 tester gröna, 2 351/2 351 tooltip-ankare
+hela.
+
+**MILSTOLPE: etapp 4 punkt 2 (etymologi) är nu helt avslutad A–Ö.**
+Hela alfabetet genomgånget bokstav för bokstav sedan starten
+(0.9.371–0.9.394). Nästa steg i etapp 4: punkt 3, `Eng.`-fältet
+(1 257 saknar).
+
 ### Prefix- och suffixposter bär alltid sitt bindestreck
 
 Ett uppslagsord i prefixgruppen **slutar** med bindestreck (`brady-`, `pseud- / pseudo-`),

@@ -265,9 +265,15 @@ ommätta ur `ORDLISTA.md`, inte punkt 1:s felaktiga:
    bokstav för bokstav, plus tre sidofynd (`-ande`-particip, `-ös`-adjektiv,
    semikolon-notation) — se loggen ovan (0.9.369). **Slutläge: 4 769 av
    10 928 (43,6 % täckning).** De ~6 159 kvarvarande är motiverade undantag.
-2. [ ] Etymologi — 3 223 saknade vid start, **3 188 kvar efter A** (45 tillagda,
-   se loggen nedan). 🔄 PÅGÅR, bokstav för bokstav. **NÄSTA STEG i etapp 4.**
+2. [x] **Etymologi — ✅ HELT AVSLUTAD 0.9.394.** 3 223 saknade vid start
+   (gammal mätsnutt). Hela alfabetet A–Ö genomgånget bokstav för bokstav
+   (0.9.371–0.9.394), se loggen i `ORDLISTA.md`. **Slutläge: 7 859 av
+   10 928 (71,9 % täckning), 3 069 kvar.** De kvarvarande är till
+   överväldigande del motiverade undantag (förkortningar, rena svenska
+   ord, sammansättningar redan täckta av etablerade rötter men osynliga
+   för mätregexen).
 3. [ ] Eng. — 1 257 saknar (många prefix/suffix motiverat undantagna).
+   **NÄSTA STEG i etapp 4.**
 
 **Ett fält per bokstav och commit**, i den ordningen — inte alla tre fälten på
 samma bokstav. A saknade böjning i 762 poster, etymologi i 396 och `Eng.` i 139;
