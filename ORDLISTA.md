@@ -933,6 +933,30 @@ Nästa bokstav: J. `check_generators.py`: rundtripp identisk, 407
 filer oförändrade efter 18 generatorsteg, 195 tester gröna, 2 351/
 2 351 tooltip-ankare hela.
 
+**J klar 0.9.380** (2026-08-07): filens minsta bokstav (51 poster
+totalt). Av 11 J-poster utan `Av lat./gr. …` var 4 förkortningar och
+5 sammansättningar av redan glosade rötter: `anatomi` (`Av gr. ana- =
+upp + tome = snitt`) täckte `jämförande anatomi`, `artrit`/`arterit`
+täckte `jättecellsarterit`, och `juvenil` (`Av lat. juvenilis =
+ungdomlig`) täckte `juvenil idiopatisk artrit` — där alla tre led
+redan var belagda, inklusive `idiopatisk` via I-passets `idios`.
+`järn`/`järnbristanemi` är rena svenska/germanska ord utan klassiskt
+ursprung att bryta ner (`järn` är inte ett lånord, till skillnad från
+grundämnets Latinska namn `ferrum`, som inte är uppslagsordet här).
+
+**2 eponymer**, båda verifierade mot webbkällor innan de skrevs:
+`Jebsen-Taylor hand function test` (de amerikanska läkarna Robert H.
+Jebsen och Neal Taylor, publicerade testet 1969) och `Jackson-Pratt-
+drän` (de amerikanska kirurgerna Frederick E. Jackson och Richard A.
+Pratt, utvecklade dränet 1971).
+
+Etymologitäckning oförändrad på **71,7 % (7 833 av 10 928, 3 095
+saknar)** — båda tilläggen är `Efter`-eponymer, osynliga för
+mätregexen precis som tidigare bokstävers eponymer. Nästa bokstav: K.
+`check_generators.py`: rundtripp identisk, 407 filer oförändrade
+efter 18 generatorsteg, 195 tester gröna, 2 351/2 351 tooltip-ankare
+hela.
+
 ### Prefix- och suffixposter bär alltid sitt bindestreck
 
 Ett uppslagsord i prefixgruppen **slutar** med bindestreck (`brady-`, `pseud- / pseudo-`),
