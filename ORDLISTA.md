@@ -66,7 +66,7 @@ avslutades i hela alfabetet A–Ö.
 | Fält | Poster | Täckning | Saknas |
 |---|---:|---:|---:|
 | Ordklasstagg | 10 928 | 100 % | 0 |
-| `Eng. ` | 9 726 | 89,0 % | 1 202 |
+| `Eng. ` | 9 791 | 89,6 % | 1 137 |
 | Etymologi (`Av lat./gr. …`) | 7 859 | 71,9 % | 3 069 |
 | `Sv. ` | 2 627 | 24,0 % | 8 301 |
 | Böjning i parentes | 4 769 | 43,6 % | 6 159 |
@@ -1750,8 +1750,98 @@ båda binomiala växtnamn (`Juniperus sabina`, `Juniperus communis`).
 
 Eng.-täckning efter F–J: **88,9 % → 89,0 % (9 726 av 10 928, 1 202 saknar).**
 `check_generators.py`: rundtripp identisk, 407 filer oförändrade, 195 tester gröna,
-sidodatum.json aktuellt, 2 351/2 351 tooltip-ankare hela. Nästa bokstav: K.
-Per bokstav: A–E 0.9.396, F–J 0.9.397.
+sidodatum.json aktuellt, 2 351/2 351 tooltip-ankare hela.
+
+**⚠️ Stort nytt dubblettfynd, upptäckt under N/O-passet, INTE åtgärdat (0.9.398):**
+utöver det redan lösta "248-dubblettfyndet" (`musculus X`/`arteria X`/`vena X`/
+`nervus X`/`musculi X`, åtgärdat 0.9.360) finns **56 fler prefix-/suffixform-par**
+som slank igenom den kartläggningen, koncentrerade till tre kluster: 25
+`articulatio X`/`articulationes X` (mest i A, redan Eng.-ifyllda i A-passet ovan —
+kontrollerat att mina tillägg exakt matchar syskonens redan skrivna `Eng. `,
+t.ex. `articulatio coxae`/`coxae, articulatio` båda "hip joint"), 2 `nervi X`
+(`nervi intercostales`, `nervi supraclaviculares`), och **29 `os X`/`ossa X`**
+(hela den TA-bennomenklaturen, koncentrerad till O eftersom alla börjar på "o" —
+samma strukturella mönster som gjorde att ledserien samlades i A). Alla 56 par
+har suffixformen wirad i facit (`kb_glossary_terms.json`) och prefixformen
+owirad — samma "facit vinner"-situation som 248-fyndet. **Metod för att hitta
+dem:** jämför varje `<prefix> <rest>`-term mot `<rest>, <prefix>` för de åtta
+prefixen `musculus/musculi/vena/venae/arteria/arteriae/nervus/nervi/ligamentum/
+ligamenta/articulatio/articulationes/os/ossa`. **Hanterat i det här Eng.-passet
+utan att röra dubbletterna:** i N/O kopierades syskonets redan skrivna `Eng. `-
+text ordagrant in i prefixformen (i stället för att omöversättas från grunden)
+— snabbare och risikofritt eftersom svaret redan fanns verifierat i filen. **Inte
+åtgärdat:** själva sammanslagningen (som 248-fyndet krävde två svep + href-kontroll
+mot facit) är en egen, större uppgift — kräver samma riskgenomgång som
+0.9.360. Facit: `scripts/ordlista_forbattring_todo.md`.
+
+**K klar** (0.9.398, 2026-08-07): 2 poster saknade `Eng. ` — **0 fick fältet.**
+Båda (`KVÅ`, `KSH97-P`) är Socialstyrelsens svenska kodverk utan internationell
+motsvarighet (kategori 4).
+
+**L klar** (0.9.398, 2026-08-07): 18 poster saknade `Eng. `. **3 fick fältet:**
+`LAB` → laboratory medicine, `ländrygg` → lumbar spine (samma mönster som
+`halsrygg`/`bröstrygg`), `ledskål` → socket (matchar `acetabulum`s eget
+`Eng. acetabulum, hip socket`). **15 motiverade undantag:** 7 binomiala
+växtnamn + `lupus vulgaris`/`lyssa` (kategori 3, syskonen `tuberkulos`/`rabies`
+bär redan fältet) + `lymphogranulomatosis` (kategori 3, syskon `Hodgkins lymfom`
+bär redan `Eng. Hodgkin lymphoma`) + `LPT`/`LRV`/`LVM`/`LVU`/`LSS` (kategori 4,
+svenska lagar utan engelsk motsvarighet).
+
+**M klar** (0.9.398, 2026-08-07): 29 poster saknade `Eng. `. **7 fick fältet:**
+`MAVA` → acute medical unit, `Morbus maculosus Werlhofii` → immune
+thrombocytopenic purpura (den enda av bokstavens sex `Morbus X`-latinfraser utan
+en modern syskonpost som redan bar fältet — de fem andra är kategori 3), 4
+TA-muskelnamn i prefixform (`musculus levator labii superioris alaeque nasi`,
+`musculus multifidus`, `musculus rectus capitis lateralis`,
+`musculus transversus perinei superficialis` — kontrollerat mot suffixformens
+341/341 100%-täckning INNAN dessa skrevs, se dubblettstycket ovan; tre fick den
+bara latinet minus "musculus" som redan är engelska anatomins egen konvention,
+den fjärde `superficial transverse perineal muscle` matchande sin redan skrivna
+motpart `deep transverse perineal muscle`), `munvinkel` → angle of the mouth,
+oral commissure. **22 motiverade undantag:** 9 arkaiska Latin-/svensktermer
+(`mania`, `marasm`, `marasmus senilis`, `melancholia`, `mjältsjuka`,
+`moderpassion`, `Morbus Addisonii`, `Morbus Basedowii`, `Morbus Brighti`,
+`Morbus Menieri`, `Morbus Parkinsonii` — kategori 3, syskonen `mani`/
+`marasmus`/`melankoli`/`hysteri`/`Addisons sjukdom`/`Basedows sjukdom`/
+`Brights sjukdom`/`Ménières sjukdom`/`Parkinsons sjukdom` bär redan fältet) +
+`MVC` (kategori 3, syskon `BMM` bär redan fältet, MVC är institutionens äldre
+namn) + `MI` (kategori 5) + 9 binomiala växtnamn.
+
+**N klar** (0.9.398, 2026-08-07): 31 poster saknade `Eng. `, dominerat av en
+TA-nervserie i prefixform (22 poster, `nervi X`/`nervus X`). **24 fick fältet:**
+20 unika nerver fick genuin engelsk översättning, verifierad mot mönstret i
+redan skrivna `Sv. `-fält på samma poster (`nerven till m. X` → `nerve to X` för
+de namnlösa grenarna, translaterad adjektivform för de namngivna — `nervus
+subscapularis` → subscapular nerve, `nervus transversus colli` → transverse
+cervical nerve); 2 (`nervi intercostales`, `nervi supraclaviculares`) var
+dubbletter av redan Eng.-ifyllda suffixformer (se dubblettstycket ovan) och fick
+syskonets text kopierad ordagrant; plus `NIVA` → neurointensive care unit och
+`nackled` → craniocervical joints (samlingstermen för `articulatio
+atlantoaxialis`+`articulatio atlantooccipitalis`, båda redan Eng.-ifyllda i
+A-passet). **⚠️ Skrivfel hittat och rättat under passet:** tre `Sv. nerven
+till m. X`-poster (`nervus musculi obturatorii interni`, `nervus musculi
+quadrati femoris`, `nervus subclavius`) fick sin `Eng. `-mening infogad FÖRE
+punkten i "m." (den latinska muskelförkortningen) i stället för efter hela
+frasen, eftersom infogningsregexen `Sv\. [^.]*\.` tolkade "m." som meningsslut.
+Upptäckt genom en egen efterkontroll (sökte hela filen efter mönstret
+`m\. Eng\. `) innan generatorkedjan kördes, rättat direkt för hand. **7
+motiverade undantag:** `nervfeber` (kategori 3, syskon `tyfoidfeber` bär redan
+fältet) + `NT-rådet`/`NDR` (kategori 4) + 4 binomiala växtnamn.
+
+**O klar** (0.9.398, 2026-08-07): 36 poster saknade `Eng. `, dominerat av HELA
+den TA-bennomenklaturen i prefixform (30 poster, `os X`/`ossa X`). **31 fick
+fältet:** 29 var dubbletter av redan Eng.-ifyllda suffixformer (`capitatum, os`
+osv., se dubblettstycket ovan) och fick sin text kopierad ordagrant (`os coxae`
+→ hip bone — inte att förväxla med `coxae, articulatio` → hip JOINT, båda nu
+korrekt åtskilda); `ossa cuneiformia` (den enda bennamnet UTAN suffixsyskon) fick
+genuin översättning → cuneiform bones; `OP` → operating department. **5
+motiverade undantag:** `OSA` (kategori 5) + `OSL` (kategori 4) + 3 binomiala
+växtnamn.
+
+Eng.-täckning efter K–O: **89,0 % → 89,6 % (9 791 av 10 928, 1 137 saknar).**
+`check_generators.py`: rundtripp identisk, 407 filer oförändrade, 195 tester
+gröna, sidodatum.json aktuellt, 2 351/2 351 tooltip-ankare hela. Nästa bokstav: P.
+Per bokstav: A–E 0.9.396, F–J 0.9.397, K–O 0.9.398.
 
 ### Prefix- och suffixposter bär alltid sitt bindestreck
 

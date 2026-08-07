@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.398
+- **Etapp 4 punkt 3 (`Eng.`-fältet): bokstäverna K–O genomgångna, 65 nya.** 116 poster saknade `Eng. ` enligt mätsnutten. K gav 0 (två svenska kodverk utan engelsk motsvarighet). L, M: 10 nya inkl. `ländrygg`→lumbar spine, `ledskål`→socket, 4 TA-muskelnamn, `Morbus maculosus Werlhofii`→immune thrombocytopenic purpura. N, O: 55 nya, mest TA-nerv- och bennomenklatur i prefixform.
+- **⚠️ Stort nytt dubblettfynd, INTE åtgärdat:** utöver det redan lösta "248-dubblettfyndet" (0.9.360) finns 56 fler prefix-/suffixform-par (`articulatio X`/`nervi X`/`os X` mot sina `X, articulatio`/`X, nervi`/`X, os`-syskon) som slank igenom den kartläggningen. Kontrollerat att alla A-passets tidigare `articulatio`-översättningar exakt matchar sina syskons redan skrivna `Eng. `. I N/O kopierades syskonets text in ordagrant i stället för att omöversättas. Sammanslagningen kräver en egen riskgenomgång, se `ORDLISTA.md`.
+- **Skrivfel hittat och rättat under passet:** tre `Sv. nerven till m. X`-poster fick sin `Eng. `-mening felaktigt infogad före punkten i förkortningen "m." — upptäckt genom egen efterkontroll, rättat innan generatorkörning.
+- Eng.-täckning **89,0 % → 89,6 % (9 726 → 9 791 av 10 928, 1 202 → 1 137 saknar)**. `check_generators.py`: rundtripp identisk, 407 filer oförändrade, 195 tester gröna, sidodatum.json aktuellt, 2 351/2 351 tooltip-ankare hela. Nästa bokstav: P.
+
 ## 0.9.397
 - **Etapp 4 punkt 3 (`Eng.`-fältet): bokstäverna F–J genomgångna, 8 nya.** 48 poster saknade `Eng. ` enligt mätsnutten, bara 8 (17 %) var faktiska luckor. `FHM` → Public Health Agency of Sweden (till skillnad från `EHM`/`BOA`: ett etablerat, internationellt använt engelskt myndighetsnamn), `HIA` → coronary care unit, `HAB` → habilitation, `HMC` → assistive technology centre, `halsrygg` → cervical spine, `hjärnstam` → brainstem, `IVA` → intensive care unit (basförkortningen själv saknade fältet trots att `BIVA`/`CIVA` redan fått sitt), `ischiopubicus` → ischiopubic (samma adjektivmönster som redan skrivna `articularis`/`costalis`/`radialis`).
 - **Ny undantagsvariant hittad i G:** `GERD`s expansion i brödtexten ÄR redan den engelska frasen ordagrant (`gastro-oesophageal reflux disease`) — ett formellt `Eng. `-fält hade upprepat exakt samma fras en gång till.
