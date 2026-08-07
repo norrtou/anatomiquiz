@@ -1407,6 +1407,27 @@ wire-steg + llms), som beslutat efter S-passet. Nästa bokstav: U.
 `check_generators.py`: rundtripp identisk, 407 filer oförändrade,
 195 tester gröna, 2 351/2 351 tooltip-ankare hela.
 
+**U klar 0.9.391** (2026-08-07): av 122 U-poster saknade 29 enligt
+mätsnutten — 4 förkortningar och 1 redan besvarad eponym (`ushers
+syndrom`, `Uppkallat efter Charles Usher`). De resterande 24 var
+alla sammansättningar av rötter redan etablerade sedan tidigare
+bokstäver: `uremi` (`Av gr. ouron = urin + haima = blod`) täckte
+`uremisk`; `urologi`/`urogenital` täckte `urolog`/
+`urogenitalsystemet`; `extra-` (`Av lat. extra = utanför`) + `uterus`
+(`Av lat. uterus = livmoder`) täckte tillsammans `utomkvedshavande-
+skap` (`Lat. graviditas extrauterina`, BÅDA leden separat täckta)
+samt `uteruskontraktion`/`uteruskontraherande`; `sekretion` täckte
+`utsöndra`. Resten var rena svenska sammansättningar (`utsot`,
+`undernäring`, `utmattningssyndrom`, `Ultraljudskniv` m.fl.) eller
+självförklarande förkortningsliknande termer utan formell `förk.`-
+tagg (`UFH`, `UVI`, båda med redan etablerade rötter i sin egen
+expansion). **Ingen enda äkta lucka — 0 fick riktig etymologi.**
+
+Etymologitäckning oförändrad på **71,9 % (7 859 av 10 928, 3 069
+saknar).** Nästa bokstav: V. `check_generators.py`: rundtripp
+identisk, 407 filer oförändrade, 195 tester gröna, 2 351/2 351
+tooltip-ankare hela.
+
 ### Prefix- och suffixposter bär alltid sitt bindestreck
 
 Ett uppslagsord i prefixgruppen **slutar** med bindestreck (`brady-`, `pseud- / pseudo-`),
