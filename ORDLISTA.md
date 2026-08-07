@@ -67,7 +67,7 @@ avslutades i hela alfabetet A–Ö.
 |---|---:|---:|---:|
 | Ordklasstagg | 10 928 | 100 % | 0 |
 | `Eng. ` | 9 671 | 88,5 % | 1 257 |
-| Etymologi (`Av lat./gr. …`) | 7 819 | 71,6 % | 3 109 |
+| Etymologi (`Av lat./gr. …`) | 7 828 | 71,6 % | 3 100 |
 | `Sv. ` | 2 627 | 24,0 % | 8 301 |
 | Böjning i parentes | 4 769 | 43,6 % | 6 159 |
 | `Jfr ` | 1 386 | 12,7 % | 9 542 |
@@ -794,6 +794,90 @@ och `ganglion` två TA-fraser (`ganglia basalia`, `ganglion spinale`).
 
 Etymologitäckning 71,5 % → **71,6 % (7 819 av 10 928, 3 109 saknar).**
 Nästa bokstav: H. `check_generators.py`: rundtripp identisk, 407
+filer oförändrade efter 18 generatorsteg, 195 tester gröna, 2 351/
+2 351 tooltip-ankare hela.
+
+**H klar 0.9.378** (2026-08-07): av 441 H-poster saknade 269 enligt
+mätsnutten, men bara **20 (7,4 %) faktiska luckor** — klart lägre kvot
+än någon tidigare bokstav (A–G låg på 11–19 %). Orsaken: H domineras
+av två jättelika, redan etablerade prefixfamiljer. `hyper-`/`hypo-`
+(`Av grek. hyper/hypo = över/under`, med posternas EGNA exempel
+`hypertoni`/`hypotoni`) bar ensamma **73 ord** — praktiskt taget hela
+`hyper-`/`hypo-`-vokabulären i filen (`hyperaldosteronism` …
+`hypovolemisk chock`, plus den elidera formen `hypestesi` = `hyp-` +
+`estesi` före vokal). `hem-/hemo-/hemato-` (`Av grek. haima = blod`,
+etablerad via `hemoglobin`s `Av grek. haima + lat. globus`) bar 19
+ord (`hemagglutination` … `hemostas`, `hematokrit`), och `hepat-/
+hepato-` (`Av grek. hepar (hepatos) = lever`) bar 7 (`heparin`,
+`heparinisera`, `hepatit`, `hepatocellulär`, `hepatocyt`,
+`hepatomegali`, `hepatosplenomegali`, `hepatotoxisk` — `heparin`
+namngavs efter LEVERN, inte blodet, en fälla värd att komma ihåg).
+66 förkortningar, 10 poster som redan bar en etymologisk not
+mätsnutten missade (läkemedelsklustret `Halotan`, `Hydrokortison`,
+`Hydroklortiazid`, `Hydroxiklorokin`, `Haloperidol`, `Hydralazin`,
+`Hydroxizin`, växtnamnet `Humulus lupulus`, eponymen `Heberdens
+knutor`, samt `hysteri` vars etymologi stod skriven med **litet**
+`av` mitt i löptexten — "namnet av gr. hystera = livmoder" — en
+tredje variant av mätsnutts-blinda-fläcken utöver B-passets
+`Lat. X.`-fälla och tidigare bokstävers `Av <ord> (`-mönster).
+
+**Rotkontrollen bar en majoritet av hela bokstaven, samma mönster
+som G-passets `gaster`/`glukos`/`granulum` fast i större skala.**
+Redan etablerade rötter på andra bokstäver gjorde tiotals H-
+sammansättningar till kategori 3 utan att något skrevs:
+`eklampsi`/`preeklampsi` (→ `havandeskapsförgiftning`),
+`luxatio`/`luxation` (→ `höftledsluxation`), `dysplasi` (→
+`höftledsdysplasi`), `tumör` (→ `hjärntumör`), `trauma` (→
+`huvudtrauma`), `psykologi` (→ `hälsopsykologi`), `infarkt` (→
+`hjärtinfarkt`), `pylorus` (→ `Helicobacter pylori`), `tonsillit`
+(→ `halsfluss`), `fasciit`/`fascia` (→ indirekt `hälsporre` via
+`calcar`), `calcar` (→ `hälsporre`), `coxa` + `artros` (→
+`höftledsartros`, båda halvorna redan belagda), `flexion`
+(F-passet, → `handledsflexion`), `humerus` + `scapula` (→
+`humeroskapulär`), `helmint` (→ `helmintisk`), `hallux` + `valgus`
+(→ `hallux valgus`), `encefalit` (→ `herpesencefalit`),
+`suppurativ` + `aden` (delvis, → `hidradenitis suppurativa`, se
+nedan), `follikel`-mönstrets syskon `gangrän` (F/G-passen). **`gulsot`-
+fyndet från G upprepade sig:** `Hodgkins lymfom` visade sig redan
+täckt av syskonposten `non-Hodgkins lymfom`s `Efter läkaren Thomas
+Hodgkin + grek. lympha = vatten` (skriven i ett tidigare pass, före
+etymologietappen).
+
+**20 fick riktig etymologi, i två grupper:**
+1. **9 fristående fackord**, flera valda för att de etablerar en ny
+   rot som redan syns täcka andra H-poster: `Hallucination` (`Av lat.
+   hallucinari = vandra i tankarna, drömma`), `hidradenitis
+   suppurativa` (`Av gr. hidros = svett + aden = körtel + -itis =
+   inflammation` — `aden` och `suppurativ` redan etablerade, bara
+   `hidros` nytt), `hamartom` (`Av gr. hamartia = fel, missbildning +
+   -oma = svulst`), `hebefren` (`Av gr. hebe = ungdom + phren = sinne,
+   förstånd`), `histamin` (`Av gr. histos = väv + amin` — etablerar
+   `histos` för `histologisk`/`histopatologi`, kategori 3 direkt),
+   `heterogenitet`/`homogenitet` (`Av gr. heteros/homos = annan/samma
+   + genos = ursprung, art` — `genos` redan etablerad via `gen`),
+   `haptoglobin` (`Av gr. haptein = binda, fästa + globin`, jfr
+   `hemoglobin`), `herpes simplex` (`Av gr. herpein = krypa, kräla` —
+   etablerar roten för `herpes zoster`/`herpetiform`/
+   `herpesencefalit`, kategori 3 direkt).
+2. **11 eponymer**, alla verifierade mot webbkällor innan de skrevs:
+   `Huntingtons sjukdom` (George Huntington, amerikansk läkare,
+   1850–1916, beskrev sjukdomen 1872), `Hirschsprungs sjukdom`
+   (Harald Hirschsprung, dansk läkare, 1830–1916, 1886),
+   `Hortons huvudvärk` (Bayard Taylor Horton, amerikansk läkare,
+   1895–1980, 1939), `Hashimotos tyreoidit` (Hakaru Hashimoto,
+   japansk kirurg, 1881–1934, 1912), `Harris Hip Score` (William H.
+   Harris, amerikansk ortoped, 1969), `Holter-EKG` (Norman Holter,
+   amerikansk biofysiker, 1914–1983), `Hohmann-retraktor` (Georg
+   Hohmann, tysk ortoped, 1880–1970), `Heimlichs manöver` (Henry
+   Heimlich, amerikansk thoraxkirurg, 1920–2016, 1974),
+   `Henoch-Schönleins purpura` (Eduard Heinrich Henoch + Johann Lukas
+   Schönlein, tyska läkare), `Horners syndrom` (Johann Friedrich
+   Horner, schweizisk oftalmolog, 1831–1886, 1869), `Herxheimer`
+   (självrefererande `Efter Karl Herxheimer`, samma mönster som redan
+   klara `Golgi`/`Galeazzi`/`Falloppio`/`Fontana`).
+
+Etymologitäckning 71,6 % → **71,6 % (7 828 av 10 928, 3 100 saknar).**
+Nästa bokstav: I. `check_generators.py`: rundtripp identisk, 407
 filer oförändrade efter 18 generatorsteg, 195 tester gröna, 2 351/
 2 351 tooltip-ankare hela.
 
