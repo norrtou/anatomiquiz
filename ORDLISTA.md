@@ -66,7 +66,7 @@ avslutades i hela alfabetet A–Ö.
 | Fält | Poster | Täckning | Saknas |
 |---|---:|---:|---:|
 | Ordklasstagg | 10 928 | 100 % | 0 |
-| `Eng. ` | 9 791 | 89,6 % | 1 137 |
+| `Eng. ` | 9 801 | 89,7 % | 1 127 |
 | Etymologi (`Av lat./gr. …`) | 7 859 | 71,9 % | 3 069 |
 | `Sv. ` | 2 627 | 24,0 % | 8 301 |
 | Böjning i parentes | 4 769 | 43,6 % | 6 159 |
@@ -1840,8 +1840,58 @@ växtnamn.
 
 Eng.-täckning efter K–O: **89,0 % → 89,6 % (9 791 av 10 928, 1 137 saknar).**
 `check_generators.py`: rundtripp identisk, 407 filer oförändrade, 195 tester
-gröna, sidodatum.json aktuellt, 2 351/2 351 tooltip-ankare hela. Nästa bokstav: P.
-Per bokstav: A–E 0.9.396, F–J 0.9.397, K–O 0.9.398.
+gröna, sidodatum.json aktuellt, 2 351/2 351 tooltip-ankare hela.
+
+**P klar** (0.9.399, 2026-08-07): 33 poster saknade `Eng. `. **1 fick fältet:**
+`PAVA` → post-anaesthesia care unit. **32 motiverade undantag:** 22 binomiala
+växtnamn + `paralysis agitans`/`paralysis generalis`/`parotitis epidemica`/
+`phthisis pulmonum`/`podagra`/`pustula maligna` (kategori 3, syskonen
+`Parkinsons sjukdom`/`syfilis`/`påssjuka`/`tuberkulos`/`podager`/`mjältbrand`
+bär redan fältet — `podagra` dessutom kategori 2, `podager`s eget `Eng. `-fält
+ÄR ordet "podagra") + `PDT` (kategori 5) + `PSL`/`PL`/`PDL` (kategori 4,
+svenska lagar).
+
+**Q klar** (0.9.399, 2026-08-07): 2 poster saknade `Eng. ` — **0 fick fältet**,
+båda binomiala växtnamn (`Quercus robur`, `Quassia amara`).
+
+**R klar** (0.9.399, 2026-08-07): 17 poster saknade `Eng. `. **3 fick fältet:**
+`rami musculares` → muscular branches, `RÖ` → radiology department, `REHAB` →
+rehabilitation (skilt från `HAB`s "habilitation", trots att REHAB cross-refar
+HAB — de är två distinkta engelska fackord, inte samma översättning). **14
+motiverade undantag:** 8 binomiala växtnamn + `rachitis`/`rosen`/`rötfeber`
+(kategori 3, syskonen `rakit`/`erysipelas`/`sepsis` bär redan fältet) +
+`Riksstroke`/`Rikshöft` (kategori 4, svenska kvalitetsregisternamn) +
+`revbensvinkel` (kategori 3, syskon `angulus costae` bär redan `Eng. angle of
+rib`).
+
+**S klar** (0.9.399, 2026-08-07): 35 poster saknade `Eng. ` — **0 fick fältet**,
+den STÖRSTA bokstaven hittills med noll äkta luckor (100 % motiverade
+undantag). 17 binomiala växtnamn + 9 arkaiska Latin-/svensktermer (`scirrhus`,
+`scorbutus`, `senilitas`, `septicaemia`, `skrofulos`, `sphacelus`,
+`stenocardia`, `stenpassion`, `strupsjuka` — samtliga kategori 3, syskonen
+`carcinoma`/`skörbjugg`/`senil`+`marasmus`/`sepsis`/`tuberkulos`/`gangrän`/
+`angina pectoris`/`njursten`+`gallsten`/`difteri`+`krupp` bär redan fältet) +
+`SoL`/`SmL`/`SOSFS`/`ST`/`SPUR`/`SNR`/`SveDem`/`SRQ` (8, kategori 4, svenska
+lagar/register/institutioner) + `svärdsutskott` (kategori 3, syskon `processus
+xiphoideus` bär redan `Eng. xiphoid process`).
+
+**T klar** (0.9.399, 2026-08-07): 24 poster saknade `Eng. `. **6 fick fältet:**
+3 TA-neuroanatomiska banor (`tractus reticulospinalis`, `tractus
+tectospinalis`, `tractus vestibulospinalis`) + 2 TA-artärstammar (`truncus
+brachiocephalicus` → brachiocephalic trunk, `truncus coeliacus` → coeliac
+trunk, brittisk stavning) + `TLV` → Dental and Pharmaceutical Benefits Agency
+(samma undantag-från-undantaget som `FHM`: myndigheten har ett etablerat eget
+engelskt namn, inte kategori 4 trots att den är svensk). **18 motiverade
+undantag:** 12 binomiala växtnamn + `thrombosis`/`tussis convulsiva`/
+`tvinsot`/`typhus abdominalis`/`tärsot` (kategori 3, syskonen `trombos`/
+`kikhosta`+`pertussis`/`lungsot`/`tyfoidfeber`/`lungsot` bär redan fältet) +
+`transversospinal` (kategori 2, tautologiskt — samma stavning på svenska och
+engelska).
+
+Eng.-täckning efter P–T: **89,6 % → 89,7 % (9 801 av 10 928, 1 127 saknar).**
+`check_generators.py`: rundtripp identisk, 407 filer oförändrade, 195 tester
+gröna, sidodatum.json aktuellt, 2 351/2 351 tooltip-ankare hela. Nästa bokstav: U.
+Per bokstav: A–E 0.9.396, F–J 0.9.397, K–O 0.9.398, P–T 0.9.399.
 
 ### Prefix- och suffixposter bär alltid sitt bindestreck
 

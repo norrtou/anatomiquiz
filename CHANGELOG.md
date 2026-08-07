@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.399
+- **Etapp 4 punkt 3 (`Eng.`-fältet): bokstäverna P–T genomgångna, 10 nya.** 111 poster saknade `Eng. `, bara 10 (9 %) var faktiska luckor. `PAVA`→post-anaesthesia care unit, `rami musculares`→muscular branches, `RÖ`→radiology department, `REHAB`→rehabilitation, 3 TA-neuroanatomiska banor, 2 TA-artärstammar, `TLV`→Dental and Pharmaceutical Benefits Agency (samma undantag-från-undantaget som `FHM`: etablerat eget engelskt myndighetsnamn).
+- **S gav 0 nya — bokstavens 35 poster var alla motiverade undantag** (100 %), högst undantagskvot hittills för en stor bokstav. Q gav också 0 (2 binomiala växtnamn).
+- Eng.-täckning **89,6 % → 89,7 % (9 791 → 9 801 av 10 928, 1 137 → 1 127 saknar)**. `check_generators.py`: rundtripp identisk, 407 filer oförändrade, 195 tester gröna, sidodatum.json aktuellt, 2 351/2 351 tooltip-ankare hela. Nästa bokstav: U.
+
 ## 0.9.398
 - **Etapp 4 punkt 3 (`Eng.`-fältet): bokstäverna K–O genomgångna, 65 nya.** 116 poster saknade `Eng. ` enligt mätsnutten. K gav 0 (två svenska kodverk utan engelsk motsvarighet). L, M: 10 nya inkl. `ländrygg`→lumbar spine, `ledskål`→socket, 4 TA-muskelnamn, `Morbus maculosus Werlhofii`→immune thrombocytopenic purpura. N, O: 55 nya, mest TA-nerv- och bennomenklatur i prefixform.
 - **⚠️ Stort nytt dubblettfynd, INTE åtgärdat:** utöver det redan lösta "248-dubblettfyndet" (0.9.360) finns 56 fler prefix-/suffixform-par (`articulatio X`/`nervi X`/`os X` mot sina `X, articulatio`/`X, nervi`/`X, os`-syskon) som slank igenom den kartläggningen. Kontrollerat att alla A-passets tidigare `articulatio`-översättningar exakt matchar sina syskons redan skrivna `Eng. `. I N/O kopierades syskonets text in ordagrant i stället för att omöversättas. Sammanslagningen kräver en egen riskgenomgång, se `ORDLISTA.md`.
