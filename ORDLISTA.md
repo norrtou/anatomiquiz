@@ -1541,6 +1541,44 @@ Hela alfabetet genomgånget bokstav för bokstav sedan starten
 (0.9.371–0.9.394). Nästa steg i etapp 4: punkt 3, `Eng.`-fältet
 (1 257 saknar).
 
+**Prefix/suffix kontrollerade 0.9.395** (2026-08-07): på uttrycklig
+begäran ("Kontrollera prefix och suffix med [etymologin]") ett
+komplement till A–Ö-slingan, eftersom prefix/suffix är en EGEN
+klassificering (`is_prefix()`/`is_suffix()` läser ordklasstaggen i
+`def`, inte uppslagsordets bokstav) och egna sidor
+(`ordlista-prefix.html`/`ordlista-suffix.html`). **Suffix (153
+poster, alla inledda med `-`) föll strukturellt UTANFÖR hela
+A–Ö-slingan** — `term[0]` är `-`, ingen bokstav i A–Ö — men var
+redan 152/153 täckta av tidigare arbete innan det här projektet ens
+började. **Prefix (657 poster) täcktes redan indirekt** via den
+vanliga bokstavsgenomgången, eftersom prefix-uppslagsord oftast
+börjar på en riktig bokstav (`hyper-` kom med i H-passet, `neuro-`
+i N-passet, osv.) — 656/657 täckta.
+
+**1 äkta lucka: `bredspektrum-`.** `bred` inhemsk svenska, `spektrum`
+saknade helt egen rot i filen (kontrollerat: `spektrum`/`spectrum`/
+`specere`/`spekulum` — inga egna poster). Verifierad mot webbkällor:
+`Av sv. bred + lat. spectrum = syn, bild, av specere = se,
+betrakta`. Suffixets enda regex-miss (`-ase / -as`) var redan
+besvarad (`Efter diastas, det första namngivna enzymet`), ingen
+åtgärd. Etymologitäckning oförändrad **71,9 % (7 859 av 10 928,
+3 069 saknar)** — tillägget skrivs `Av sv. … + lat. …`, samma dolda
+mönster som `tankedetraktion` sedan tidigare, osynligt för
+mätregexen. `check_generators.py`: rundtripp identisk, 407 filer
+oförändrade, 195 tester gröna, sidodatum.json aktuellt, 2 351/2 351
+tooltip-ankare hela.
+
+**Metodfynd: `sidodatum.py --update` FÖRST i kedjan räcker inte.**
+Den läser sidans innehåll på DISK i det ögonblicket — körs den
+innan `generate_glossary.py` hunnit skriva den nya texten ser den
+den gamla filen och sätter inget nytt datum, vilket senare gör att
+`sitemap.xml` (byggd ur `data/sidodatum.json`) blir inaktuell och
+`check_generators.py` larmar trots grön rundtripp. Robust ordning:
+kör den smala kedjan en gång rakt igenom, kör DÄREFTER
+`sidodatum.py --update` (ser nu sidornas färdiga innehåll), kör
+SEDAN kedjan en andra gång (så både sitemap och synligt datum
+byggs mot det uppdaterade registret).
+
 ### Prefix- och suffixposter bär alltid sitt bindestreck
 
 Ett uppslagsord i prefixgruppen **slutar** med bindestreck (`brady-`, `pseud- / pseudo-`),
