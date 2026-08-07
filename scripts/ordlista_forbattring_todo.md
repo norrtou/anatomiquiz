@@ -1545,6 +1545,45 @@ hand). `check_generators.py`: rundtripp identisk, 195 tester gröna,
 `check_links.py` grönt (validerade automatiskt de nya hrefarna/ankarna),
 2 351/2 351 tooltip-ankare hela, `sidodatum.json` aktuellt.
 
+**Efterkontroll gjord på begäran (samma dag, efter leverans).** Sex mätningar
+mot HELA facit, inte mot det jag råkade ändra: (1) varje definition byte-
+identisk med före-versionen när `<a>`-taggarna strippas — **0 avvikelser av
+10 928**, alltså ingen text omskriven, tappad eller dubbelescapad; (2) **2 390
+av 2 390** länkar upplöses mot ett verkligt ankare; (3) **0** länkar pekar på
+FEL post (länktexten jämförd mot målpostens uppslagsord och dess
+alternativformer — en länk kan annars nå ett giltigt ankare och ändå vara fel);
+(4) **0** nästlade/oavslutade `<a>`; (5) **0** falska positiva (de enda två
+"ovanlig kontext"-träffarna är den avsiktliga `prefix `-hanteringen, där ordet
+"prefix" står kvar som text); (6) **0** självlänkar. Manuellt lästa stickprov
+bekräftade gränsdragningen: `Jfr Uvea, Irit. ICD-10: H20` länkar termerna men
+lämnar koden, och alla 17 poster med flera referensmeningar får varje mening
+länkad.
+
+**Två medvetet olösta fynd ur efterkontrollen:**
+
+1. **Två äkta missar av 2 587:** `kaudal` → `Motsats: kranial` och `ledläpp` →
+   `Jfr Labium (labrum)` förblir olänkade fast målen finns — de heter
+   `cranial (kranial)` respektive `labium (labrum)`, alltså uppslagsord med
+   variantform i parentes. Att indexera parentesformen brett ger **+2 länkar
+   men −1** (`tenosynovit` → `Synovia` blir tvetydig mot en systerpost), netto
+   +1. Avstått eftersom parentesen bär OLIKA betydelser i filen —
+   `cranial (kranial)` är en stavningsvariant, men `Atlas (C1)` en
+   kotbeteckning, `deviation (radial/ulnar)` en precisering och
+   `bukläge (prone)` den engelska termen — en generell regel hade alltså
+   matchat på lösa grunder. Vill man ha just de två får de lösas riktat.
+
+2. **`.glossary-def a` mäts inte av `check_kontrast.py`.** Skriptet mäter bara
+   block som sätter BÅDE textfärg och bakgrund (`ytor()`), plus block med
+   halvgenomskinlig färg via `ÄRVD_BOTTEN`. En regel med **opak** färg och
+   ingen egen bakgrund faller mellan stolarna — tyst, utan att ens hamna i
+   "okända". Blind fläcken är strukturell och FÖRE detta pass: `.game-modes-note
+   a` och `.mode-help a` har samma form och mäts inte heller. Kontrasten mättes
+   därför för hand: ljust tema **4,98:1**, mörkt **12,06:1**, hovervarianterna
+   4,81 resp. 11,45 — AA (4,5:1) klarat i båda. Understrykningen finns kvar
+   (sajtens enda `a`-reset ligger i `@media print`), så länken skiljs inte från
+   brödtexten med enbart färg. Att bygga om validatorn är en egen uppgift med
+   egen riskgenomgång — den vaktar 205 mätpunkter över hela sajten.
+
 ### Etapp 5 · Uttal — risk: låg, differentierande
 Utgångsläget är **noll** uttalsangivelser i hela filen (rättat i etapp 1 — de "12 poster"
 punkt 1 rapporterade var alla ordet *uttalad* i löptext). Fältet byggs alltså från grunden.
