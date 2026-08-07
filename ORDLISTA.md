@@ -67,7 +67,7 @@ avslutades i hela alfabetet A–Ö.
 |---|---:|---:|---:|
 | Ordklasstagg | 10 928 | 100 % | 0 |
 | `Eng. ` | 9 671 | 88,5 % | 1 257 |
-| Etymologi (`Av lat./gr. …`) | 7 833 | 71,7 % | 3 095 |
+| Etymologi (`Av lat./gr. …`) | 7 839 | 71,7 % | 3 089 |
 | `Sv. ` | 2 627 | 24,0 % | 8 301 |
 | Böjning i parentes | 4 769 | 43,6 % | 6 159 |
 | `Jfr ` | 1 386 | 12,7 % | 9 542 |
@@ -956,6 +956,69 @@ mätregexen precis som tidigare bokstävers eponymer. Nästa bokstav: K.
 `check_generators.py`: rundtripp identisk, 407 filer oförändrade
 efter 18 generatorsteg, 195 tester gröna, 2 351/2 351 tooltip-ankare
 hela.
+
+**K klar 0.9.381** (2026-08-07): av 286 K-poster saknade 146 enligt
+mätsnutten, bara **10 (6,8 %) faktiska luckor**. 11 förkortningar,
+32 poster som redan bar en etymologisk not mätsnutten missade —
+läkemedels-/växtklustret `Kloroform`, `Klorpromazin`, `Klomipramin`,
+`Klonidin`, `Karbidopa`, `Ketokonazol`, `Ketoprofen`, `Karbamazepin`,
+`Kokain`, `Kinin`, grundämnet `kalium` (`Av nylat. kalium, av arab.
+al-qaly = aska, pottaska`), eponymerna `Koebners fenomen`/`Kawasakis
+syndrom`, och ett helt kluster kemiska/anatomiska `Av X + Y`-
+förklaringar där språkkoden sitter efter `+` i stället för direkt
+efter `Av` (samma B-passfälla som återkommit i varje bokstav sedan
+dess): `kammartakykardi`, `karboanhydrashämmare`, `karcinomatos`,
+`karpaltunnelsyndrom`, `katekolamin`, `kattklössjuka`,
+`kemoprofylax`, `kemoreceptor`, `kemotaxis`, `ketoacidos`,
+`ketonuri`, `koagulopati`, `koenzym`, `kolesteatom`, `kolinerg`,
+`kollagenos`, `kolorektal`, `kompressionsfraktur`, `käkläsa`,
+`klimakteriebesvär`.
+
+**Nytt mönster upptäckt: en uttrycklig `Se X`-korsreferens till en
+redan etablerad rot räcker för att stänga hela klustret utan att
+något skrivs.** Ett dussintal K-poster avslutar sin definition med
+`Se Kardiologi`/`Se Katarr`/`Se Kateter`/`Se Keratin`/`Se
+Koagulation` (fyra gånger) osv. — när målposten redan bär `Av
+lat./gr. …` är det uttryckliga beviset på att sammansättningen
+räknats som kategori 3 med avsikt, inte bara implicit antaget:
+`kardiologisk` (`Se Kardiologi`), `katarral` (`Se Katarr`),
+`kateterisera` (`Se Kateter`), `keratinisering` (`Se Keratin`),
+`keratolytikum` (`Se Keratolys`), `koagulas`/`koagulationsfaktor`/
+`koagulationstid`/`koagulera` (`Se Koagulation`), `koarktation av
+aorta` (`Se Koarktation`), `kollateralkretslopp` (`Se Kollateral`),
+`kolon descendens`/`kolonflora` (`Se Colon`), `komorbid` (`Se
+Komorbiditet`), `kompatibilitet` (`Se Kompatibel`),
+`kompressionsbrott` (`Se Kompressionsfraktur`, som själv är kategori
+6 ovan), `kolorektalcancer` (`Se Kolorektal`, också kategori 6).
+**Samma mönster utan uttrycklig `Se`-länk** stängde två hela ordfamiljer
+på en gång: alla tio `klinisk X`-specialiteter (farmakologi,
+fysiologi, genetik, immunologi, kemi, mikrobiologi, neurofysiologi,
+nutrition, patologi, psykologi) täcktes av `klinisk`s egen `Av gr.
+kline = säng`, och hela `Kognitiv X`/`Kognition`-serien (sex poster)
+av `kognitiv`s `Av lat. cognoscere = lära känna`.
+
+**10 fick riktig etymologi:** `katarakt` (`Av gr. katarrhaktes =
+vattenfall`, syftar på den grumlade synen — bar ingen etymologi alls
+trots att ordet redan använts i sju tidigare bokstäver, A–H),
+`klimakteriet` (`Av gr. klimakter = kritisk tidpunkt i livet, av
+klimax = stege, trappa` — gör den redan skrivna men ytliga noten på
+`klimakteriebesvär`, "Av klimakterium = övergångsålder", begriplig på
+riktigt först nu), `kreatinin` (`Av gr. kreas = kött, muskel`),
+`kobalamin` (`Av kobolt, efter tyska bergsandan "kobold" — malmen
+ansågs förhäxad, + amin`), `klamydia` (`Av gr. chlamys = mantel`,
+efter inneslutningskropparnas form), `kyfos` (`Av gr. kyphos =
+puckelryggig, krokig`), `Konfabulation` (`Av lat. confabulari =
+samtala, av fabula = berättelse`) — samt 3 eponymer, alla verifierade
+mot webbkällor innan de skrevs: `Klinefelters syndrom` (den
+amerikanske läkaren Harry Klinefelter, 1912–1990, beskrev syndromet
+1942), `Katz ADL` (den amerikanske läkaren Sidney Katz, 1924–2012,
+publicerade indexet 1963), `Kocher-peang` (den schweiziske kirurgen
+Emil Theodor Kocher, 1841–1917, nobelpristagare 1909).
+
+Etymologitäckning 71,7 % → **71,7 % (7 839 av 10 928, 3 089 saknar).**
+Nästa bokstav: L. `check_generators.py`: rundtripp identisk, 407
+filer oförändrade efter 18 generatorsteg, 195 tester gröna, 2 351/
+2 351 tooltip-ankare hela.
 
 ### Prefix- och suffixposter bär alltid sitt bindestreck
 
