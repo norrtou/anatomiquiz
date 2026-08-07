@@ -67,7 +67,7 @@ avslutades i hela alfabetet A–Ö.
 |---|---:|---:|---:|
 | Ordklasstagg | 10 928 | 100 % | 0 |
 | `Eng. ` | 9 671 | 88,5 % | 1 257 |
-| Etymologi (`Av lat./gr. …`) | 7 847 | 71,8 % | 3 081 |
+| Etymologi (`Av lat./gr. …`) | 7 848 | 71,8 % | 3 080 |
 | `Sv. ` | 2 627 | 24,0 % | 8 301 |
 | Böjning i parentes | 4 769 | 43,6 % | 6 159 |
 | `Jfr ` | 1 386 | 12,7 % | 9 542 |
@@ -1120,6 +1120,42 @@ och den svenska psykiatrikern Marie Åsberg, publicerade skalan 1979).
 
 Etymologitäckning 71,8 % → **71,8 % (7 847 av 10 928, 3 081 saknar).**
 Nästa bokstav: N. `check_generators.py`: rundtripp identisk, 407
+filer oförändrade efter 18 generatorsteg, 195 tester gröna, 2 351/
+2 351 tooltip-ankare hela.
+
+**N klar 0.9.384** (2026-08-07): av 269 N-poster saknade 105 enligt
+mätsnutten, bara **3 (2,9 %) faktiska luckor** — näst lägst hittills
+efter I:s 2,0 %, av samma orsak. `neuron`/`nervus` (`Av grek./lat.
+neuron/nervus = nerv`) täckte ensamma hela `neuro-`-klustret
+(`neuroanatomi`, `neurohypofys`, `neurokirurgi`, `neuropsykiatri`,
+`neuroradiologi`, `neurovetenskap`, `Neuropsykologi`) och **22**
+systematiska `nervus X`/`nervi X`-TA-fraser i ett enda svep. 19
+förkortningar, 21 poster som redan bar en etymologisk not mätsnutten
+missade — läkemedelsklustret `Nalorfin`…`Nystatin` (arton preparat),
+eponymen `Negri`, och `nollhypotes`, som redan förklarar sig själv
+med formeln `Förled noll + grek. hypothesis = antagande` (en tredje
+variant av "kompositionsförklaring utan `Av`-prefix"-fällan).
+
+**Rotkontrollen bar resten.** `urtikaria` (→ `nässelutslag`),
+`torticollis` (→ `nackspärr`), `ren` (→ `njure`-familjen),
+`epistaxis` (→ `näsblödning`), `myopi` (M-passet, → `närsynthet`),
+`ikterus`/`gulsot` (G-passet, → `neonatal gulsot`), `fibros`
+(L-passet, → `neurofibromatos`) och `carcinoma` (M-passet, →
+`njurcancer`) täckte var sin svenska sammansättning. Flera av dessa
+(`njure`, `näsblödning`, `nackspärr`) är dessutom rena inhemska
+svenska ord som inte ens BEHÖVER ett lånords-ursprung — den latinska
+`Lat. X`-taggen ger bara den formella parallellbeteckningen.
+
+**3 fick riktig etymologi:** `noma` (`Av gr. nome = spridning (av
+sår), av nemein = beta, sprida sig`), `norovirus` (`Bildat av
+Norwalk, Ohio, platsen för det första identifierade utbrottet
+1968 + virus` — en namnhistoria i samma stil som L-passets
+`legionella`), `Nortonskala` (Efter den engelska sjuksköterskan
+Doreen Norton, 1922–2007, som tog fram skalan 1962 tillsammans med
+sitt team — verifierad mot webbkällor).
+
+Etymologitäckning 71,8 % → **71,8 % (7 848 av 10 928, 3 080 saknar).**
+Nästa bokstav: O. `check_generators.py`: rundtripp identisk, 407
 filer oförändrade efter 18 generatorsteg, 195 tester gröna, 2 351/
 2 351 tooltip-ankare hela.
 
