@@ -1251,6 +1251,21 @@ Nästa bokstav: Q. `check_generators.py`: rundtripp identisk, 407
 filer oförändrade efter 18 generatorsteg, 195 tester gröna, 2 351/
 2 351 tooltip-ankare hela.
 
+**Q klar 0.9.387** (2026-08-07): alfabetets minsta bokstav (20
+poster totalt — samma bokstav som gav böjningspassets "0 nya"
+0.9.358). Av 6 Q-poster utan `Av lat./gr. …` var 3 rena förkortningar
+(`QCT`, `QuickDASH`, `qSOFA`) och 3 redan fullständigt förklarade
+utan att mätregexen kände igen mönstret: `Q-tagg` och `QT-intervall`
+förklaras båda med `Efter EKG-kurvans bokstavsbeteckning(ar) Q (och
+T)`, och `Quassia amara` bär redan `Av Quassia (efter slaven Graman
+Quassi, som visade dess bruk) + lat. amara = bitter`. **Ingen enda
+äkta lucka — 0 fick riktig etymologi.**
+
+Etymologitäckning oförändrad på **71,8 % (7 851 av 10 928, 3 077
+saknar).** Nästa bokstav: R. `check_generators.py`: rundtripp
+identisk, 407 filer oförändrade efter 18 generatorsteg, 195 tester
+gröna, 2 351/2 351 tooltip-ankare hela.
+
 ### Prefix- och suffixposter bär alltid sitt bindestreck
 
 Ett uppslagsord i prefixgruppen **slutar** med bindestreck (`brady-`, `pseud- / pseudo-`),
