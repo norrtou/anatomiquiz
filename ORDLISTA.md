@@ -1428,6 +1428,36 @@ saknar).** Nästa bokstav: V. `check_generators.py`: rundtripp
 identisk, 407 filer oförändrade, 195 tester gröna, 2 351/2 351
 tooltip-ankare hela.
 
+**V klar 0.9.392** (2026-08-07): av 61 V-poster saknade etymologi
+enligt mätsnutten, bara **1 (1,6 %) faktisk lucka** — den lägsta
+kvoten hittills. 6 förkortningar, 7 poster som redan bar en
+etymologisk not mätsnutten missade (`vas`, `Av lat. vas = kärl`,
+eponymerna `Valsalva`, `Varolio`).
+
+**Rotkontrollen bar nästan hela bokstaven.** `ventrikel` (`Av lat.
+ventriculus = liten buk`) täckte ensam åtta `ventrikel-X`-
+sammansättningar (`ventrikelaspiration`, `ventrikelcancer`,
+`ventrikeldilation`, `ventrikelflimmer`, `ventrikelresektion`,
+`ventrikelretention`, `ventrikelsköljning`, `ventrikeltakykardi`)
+tillsammans med redan etablerade `carcinoma`, `dilatation`,
+`resektion`, `retention` och `takykardi`. `vas` (hidden) bar hela
+`vaso-`-familjen (`vasodilator`, `vasokonstriktor`, `vasomotorisk
+rinit`, `vasopressin`, `vasospastisk`). `varicella`, `verruca`,
+`hordeolum` och `variola` täckte sina svenska/arkaiska syskon
+(`vattkoppor`, `vårta`, `vagel`, `varioloides`). `laryngoskop` och
+`kateter` täckte `Videolaryngoskop` respektive `Venkateter` — den
+sistnämnda med BÅDA leden separat täckta.
+
+**1 fick riktig etymologi:** eponymen `von Willebrands sjukdom`,
+verifierad mot webbkällor innan den skrevs (den finländske läkaren
+Erik Adolf von Willebrand, 1870–1949, beskrev sjukdomen 1926 hos en
+familj på Åland).
+
+Etymologitäckning oförändrad på **71,9 % (7 859 av 10 928, 3 069
+saknar)** — tillägget är en `Efter`-eponym, osynlig för mätregexen.
+Nästa bokstav: W. `check_generators.py`: rundtripp identisk, 407
+filer oförändrade, 195 tester gröna, 2 351/2 351 tooltip-ankare hela.
+
 ### Prefix- och suffixposter bär alltid sitt bindestreck
 
 Ett uppslagsord i prefixgruppen **slutar** med bindestreck (`brady-`, `pseud- / pseudo-`),
