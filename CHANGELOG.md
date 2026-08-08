@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.403
+- **Quizkategorin "Övrigt" döpt om till "Allmänt".** Gäller `#education`-väljaren i `index.html` (flyttad till alfabetisk plats direkt efter "Slumpade ämnen"), frågestatistik-tabellen i `js/info.js` och FAQ-texten i `info.html` (synlig + JSON-LD). Kontaktformulärets separata "Övrigt"-alternativ (typ av meddelande) är oförändrat — det är ett annat begrepp.
+- **Namnkollision undanröjd:** "Allmänt" var sedan tidigare namnet på kategorin `allmant` (döpt om till "Slumpade ämnen" 2026-07-22, men med intern id och gamla kommentarer/dokumentation som fortfarande sa "Allmänt"). `EDU_ABBREV` i `js/app.js` bytte förkortning för att inte krocka i topplistans kolumn: `ovrigt` → `ALM` (matchar nya etiketten), `allmant` → `SLU`. `UTBILDNINGAR_REGLER.md` genomgången i sin helhet så att "Allmänt" numera entydigt betyder `ovrigt`-kategorin och den gamla lins-kategorin konsekvent kallas "Slumpade ämnen".
+- `check_generators.py`: rundtripp identisk, ALLA 195 tester gröna (inkl. `test_installningar.js`, som bygger DOM ur riktig `index.html`+`app.js`), `sidodatum.json`/`wire_dates.py` uppdaterade för `index.html`+`info.html`.
+
 ## 0.9.402
 - **Jfr/Se/Motsats-länkarna finns nu även i sökträffarna — väg (b) ersatt av väg (a).** 0.9.401 lade länkarna bara på bokstavssidorna, men sökträffen visar redan hela definitionen: den som sökt fram ett ord har ingen anledning att klicka vidare, så länkarna hamnade på det enda ställe man inte behöver gå till. `js/glossary.js` fick `buildTermIndex()`/`linkifyRefs()` och ett indexargument till `formatDef()`, speglingar av generatorns. `format_def()`/`formatDef()` är därmed åter **byte-identiska**, vilket väg (b) offrade.
 - **Tre avsiktliga skillnader i JS-porten:** ingen lookbehind (stöds inte i Safari före 16.4 — hade kastat SyntaxError och slagit ut hela sökningen), alltid full sökväg i `href` (aldrig bart `#ankare`, annars skiljer sig sökträffens markup från bokstavssidans), och memoiserat index (10 928 poster per tangenttryck är för dyrt).

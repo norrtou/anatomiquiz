@@ -69,7 +69,7 @@
     "educationalUse": "practice",
     "learningResourceType": ["quiz", "flashcard", "reference"],
     "datePublished": "2026-05-27",
-    "dateModified": "2026-08-02",
+    "dateModified": "2026-08-08",
     "sameAs": [
       "https://www.instagram.com/anatomiquiz.se",
       "https://www.facebook.com/anatomiquizse"
@@ -203,8 +203,10 @@
            kategorier: "Slumpade ämnen" (allmant, förvald/default – de sju
            tvärgående linserna, se ALLMANT_LENSES i js/app.js), "Medicinsk
            terminologi" (terminologi – fristående språktermsämnen: franska,
-           grekiska, tyska) och "Övrigt" (ovrigt – restkategori, i dag bara
-           Farmakologi).
+           grekiska, tyska) och "Allmänt" (ovrigt – restkategori, i dag bara
+           Farmakologi; intern id "ovrigt" oförändrat sedan tiden då etiketten
+           löd "Övrigt" – EJ att förväxla med "Slumpade ämnen" ovan, vars
+           intern id är "allmant").
            Utbildningar/kategorier utan eget (synligt) data-edu-ämne gråas
            automatiskt av updateEducationOptions() med "(inga ämnen ännu)" –
            det är platshållaren, inga fejkade ämnen skapas. Tomma, ej byggda
@@ -218,6 +220,7 @@
       <label for="education">Utbildning eller kategori</label>
       <select id="education" aria-describedby="educationNote">
         <option value="allmant" selected>Slumpade ämnen</option>
+        <option value="ovrigt">Allmänt</option>
         <option value="apotekare">Apotekare</option>
         <option value="arbetsterapeut">Arbetsterapeut</option>
         <option value="audionom">Audionom</option>
@@ -231,7 +234,6 @@
         <option value="rontgensjukskoterska">Röntgensjuksköterska</option>
         <option value="sjukskoterska">Sjuksköterska</option>
         <option value="tandlakare">Tandläkare</option>
-        <option value="ovrigt">Övrigt</option>
       </select>
 
       <!-- Står kvar för ALLA utbildningar/kategorier, inte bara Slumpade ämnen. -->
@@ -354,9 +356,10 @@
         <option value="medsek_sjukdom_symtom_atgard" data-edu="medicinsk_sekreterare">Sjukdoms-, symtom- &amp; åtgärdstermer (MC)</option>
         <option value="medsek_termens_byggstenar" data-edu="medicinsk_sekreterare">Termens byggstenar (MC)</option>
 
-        <!-- Medicinsk terminologi. Icke-yrkesspecifik kategori (som Allmänt/
-             Övrigt): fristående språktermsämnen om lånord och eponymer i
-             anatomin, flyttade hit från Allmänt. Egna frågefiler, ingen lins. -->
+        <!-- Medicinsk terminologi. Icke-yrkesspecifik kategori (som Slumpade
+             ämnen/Allmänt): fristående språktermsämnen om lånord och eponymer
+             i anatomin, flyttade hit från Slumpade ämnen (dåvarande "Allmänt").
+             Egna frågefiler, ingen lins. -->
         <option value="franska_termer" data-edu="terminologi">Franska termer i anatomin (MC)</option>
         <option value="grekiska_termer" data-edu="terminologi">Grekiska termer i anatomin (MC)</option>
         <option value="tyska_termer" data-edu="terminologi">Tyska termer i anatomin (MC)</option>
@@ -409,15 +412,18 @@
         <option value="apotekare_njurar_utsondring" data-edu="apotekare">Njurar &amp; utsöndring (MC)</option>
 
         <!-- Slumpade ämnen (data-edu="allmant", intern id oförändrat trots att
-             etiketten i #education döptes om från "Allmänt"). Linserna (lins_*)
-             har INGA egna frågor: de slumpar ur alla utbildningars frågefiler via
+             etiketten i #education döptes om från sitt tidigare namn "Allmänt".
+             OBS: "Allmänt" är sedan 2026-08-08 i stället den synliga etiketten
+             för en helt annan, egen kategori längre ner (data-edu="ovrigt",
+             f.d. "Övrigt") – blanda inte ihop dem.). Linserna (lins_*) har
+             INGA egna frågor: de slumpar ur alla utbildningars frågefiler via
              topic-mönster i ALLMANT_LENSES i js/app.js. Lägg till/ändra en lins
              där – här står bara etiketten. Alla linser heter "Blandat – …" så
              att det syns i dropdownen att frågorna är hämtade tvärs
              utbildningarna. Farmakologi och språktermsämnena (franska/tyska/
              grekiska) låg tidigare här men flyttades till kategorierna
-             "Medicinsk terminologi" och "Övrigt" nedan.
-             Se UTBILDNINGAR_REGLER.md, "Allmänt — tvärgående ämnen". -->
+             "Medicinsk terminologi" och "Allmänt" (f.d. "Övrigt") nedan.
+             Se UTBILDNINGAR_REGLER.md, "Slumpade ämnen — tvärgående ämnen". -->
         <option value="lins_alla" data-edu="allmant">Blandat – alla utbildningar (MC+TF+Bild)</option>
         <option value="lins_bal_inre_organ" data-edu="allmant">Blandat – bål &amp; inre organ (MC+TF)</option>
         <option value="lins_cell_vavnad" data-edu="allmant">Blandat – cellen, vävnaden &amp; histologi (MC+TF)</option>
@@ -436,7 +442,7 @@
              Full ämnesindelning & linser: UTBILDNINGAR_REGLER.md.
              När ett ämne byggs: avkommentera raden, lägg till frågefilen
              i getQuestionsPath() och sätt rätt typtagg (MC/FC/TF) i texten.
-             Slumpade ämnen, Medicinsk terminologi, Övrigt och arbetsterapeut
+             Slumpade ämnen, Medicinsk terminologi, Allmänt och arbetsterapeut
              hanteras separat – ingen scaffold här.
              ========================================================= -->
         <!-- Läkare: alla 18 ämnen byggda – ingen scaffold kvar. -->
@@ -458,8 +464,10 @@
         <option value="optiker_synfysiologi" data-edu="optiker">Synfysiologi &amp; perception (MC)</option>
         <option value="optiker_ogonrorelser_binokular" data-edu="optiker">Ögonrörelser &amp; binokulärseende (MC)</option>
 
-        <!-- Övrigt. Icke-yrkesspecifik restkategori (som Allmänt/Medicinsk
-             terminologi), flyttad hit från Allmänt. -->
+        <!-- Allmänt (data-edu="ovrigt", intern id oförändrat sedan tiden då
+             etiketten löd "Övrigt"). Icke-yrkesspecifik restkategori (som
+             Slumpade ämnen/Medicinsk terminologi), flyttad hit från Slumpade
+             ämnen (dåvarande "Allmänt"). -->
         <option value="farmakologi" data-edu="ovrigt">Farmakologi (FC)</option>
       </select>
       <p id="topicLegend" class="topic-legend">MC = Multiple Choice-frågor för quiz, FC = Flashcards, TF = Sant eller falskt-frågor för quiz, Bild = fråga med bild</p>
@@ -1986,13 +1994,13 @@
     <footer class="page-footer">
       <p>Utbildningsmaterial, inte medicinsk rådgivning. Innehållet är avsett för studier och ersätter inte kurslitteratur, undervisning eller kliniska riktlinjer. Det ska inte användas som underlag för vård eller behandling av patienter.</p>
       <p>Anatomiquiz använder inga kakor och samlar inte in personuppgifter. Läs mer i <a href="/integritet.html" class="info-link">integritetspolicyn</a>.</p>
-      <p class="page-updated">Senast uppdaterad <time data-updated datetime="2026-08-02">2 augusti 2026</time></p>
+      <p class="page-updated">Senast uppdaterad <time data-updated datetime="2026-08-08">8 augusti 2026</time></p>
     </footer>
   </main>
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.402" defer></script>
+  <script src="js/app.js?v=0.9.403" defer></script>
   <!-- Spellägesmoduler: en egen fil per läge, laddas EFTER app.js (delar globalt scope). -->
   <script src="js/matcha.js?v=0.9.330" defer></script>
   <script src="js/leitner.js?v=0.9.330" defer></script>

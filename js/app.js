@@ -42,8 +42,11 @@ function getQuestionsPath(topic) {
 }
 
 // ---------------------------------------------------------------------------
-// Allmänt – tvärgående linser (UTBILDNINGAR_REGLER.md, "Allmänt — tvärgående
-// ämnen"). En lins har INGA egna frågor och ingen egen datafil: den slumpar ur
+// Slumpade ämnen (intern id "allmant") – tvärgående linser
+// (UTBILDNINGAR_REGLER.md, "Slumpade ämnen — tvärgående ämnen"). INTE att
+// förväxla med kategorin "Allmänt" (intern id "ovrigt"), som är en separat
+// restkategori med egna frågefiler. En lins har INGA egna frågor och ingen
+// egen datafil: den slumpar ur
 // de befintliga utbildningsfilerna genom att matcha ett mönster mot frågans
 // `topic`-nyckel. `optiker_synfysiologi`, `ssk_nervsystemet` och
 // `nervsystemet_synaps` hamnar alltså i samma lins.
@@ -130,7 +133,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.402'
+const APP_VERSION = '0.9.403'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -463,7 +466,7 @@ async function startQuiz(allowedTypes){
   // Load questions based on topic
   const lens = ALLMANT_LENSES[topic]
   if(lens){
-    // Allmänt-lins: läser flera utbildningsfiler och filtrerar på topic-mönster
+    // Slumpade ämnen-lins: läser flera utbildningsfiler och filtrerar på topic-mönster
     // längre ned. Måste testas FÖRE blandade-grenen, som utgår från den
     // utbildningsfiltrerade #topic-listan.
     await loadQuestionsFromMultiplePaths(lensPaths(lens))
@@ -1818,7 +1821,7 @@ function getSelectedEducation(){
 // kategorierna själva är en manuellt kurerad, fast uppsättning
 // (UTBILDNINGAR_REGLER.md).
 const EDU_ABBREV = {
-  allmant: 'ALM',
+  allmant: 'SLU',
   apotekare: 'APO',
   arbetsterapeut: 'ATP',
   audionom: 'AUD',
@@ -1832,7 +1835,7 @@ const EDU_ABBREV = {
   rontgensjukskoterska: 'RSK',
   sjukskoterska: 'SSK',
   tandlakare: 'TLK',
-  ovrigt: 'ÖVR'
+  ovrigt: 'ALM'
 }
 
 // Utbildningsförkortning för ett sparat highscore-resultats ämnesvärde.

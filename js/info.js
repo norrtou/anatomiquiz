@@ -26,7 +26,7 @@ function escapeHtml(str) {
 // Ämnen grupperade per utbildning/kategori — samma indelning som
 // ämnesväljaren på startsidan (data-edu). "Slumpade ämnen" (allmant) saknas
 // avsiktligt här: dess ämnen är linser utan egna frågefiler (se
-// UTBILDNINGAR_REGLER.md, "Allmänt — tvärgående ämnen", regel 5) och skulle
+// UTBILDNINGAR_REGLER.md, "Slumpade ämnen — tvärgående ämnen", regel 5) och skulle
 // dubbelräkna korpusen. fc: true = flashcard-ämne (kort i stället för frågor).
 // Håll i synk med getQuestionsPath() i app.js.
 const EDUCATIONS = [
@@ -213,7 +213,7 @@ const EDUCATIONS = [
     { label: 'Grekiska termer i anatomin',  file: './data/grekiska_termer.json' },
     { label: 'Tyska termer i anatomin',     file: './data/tyska_termer.json' },
   ]},
-  { name: 'Övrigt', topics: [
+  { name: 'Allmänt', topics: [
     { label: 'Farmakologi',                 file: './data/farmakologi.json', fc: true },
   ]},
 ]

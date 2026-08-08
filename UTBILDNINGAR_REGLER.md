@@ -25,18 +25,28 @@ Tekniskt sitter listan som två kopplade `<select>` i `index.html`
 1. **Utbildningar som ska finnas** = de 12 nedan. Övriga tomma utbildningar i
    dropdownen raderas (barnmorska, biomedicinare, dietist, medicintekniker,
    receptarie, tandhygienist).
-2. **Allmänt byggs separat.** Kategorin "Allmänt" (`allmant`, döpt om till
-   **"Slumpade ämnen"** i `#education` 2026-07-22, intern id oförändrat) ingår
-   inte i denna utbyggnadsordning — den har en egen plan med tvärgående linser,
-   se avsnittet "Allmänt — tvärgående ämnen" nedan. (Fram till 2026-07-19 löd
-   regeln "Allmänt rörs INTE"; den är upphävd i och med att linsplanen
-   beslutades.) Utöver de 12 yrkesutbildningarna och Allmänt/Slumpade ämnen
-   finns sedan 2026-07-22 två ytterligare icke-yrkesspecifika kategorier:
-   **"Medicinsk terminologi"** (`terminologi` — franska/grekiska/tyska
-   termsämnen, flyttade från Allmänt) och **"Övrigt"** (`ovrigt` —
-   restkategori, i dag bara Farmakologi, flyttad från Allmänt). Till skillnad
-   från Allmänts linser har dessa två riktiga ämnen med egna frågefiler, inga
-   linser.
+2. **Slumpade ämnen byggs separat.** Kategorin "Slumpade ämnen" (`allmant`,
+   hette **"Allmänt"** i `#education` fram till 2026-07-22, intern id
+   oförändrat) ingår inte i denna utbyggnadsordning — den har en egen plan med
+   tvärgående linser, se avsnittet "Slumpade ämnen — tvärgående ämnen" nedan.
+   (Fram till 2026-07-19 löd regeln "Allmänt rörs INTE"; den är upphävd i och
+   med att linsplanen beslutades.) Utöver de 12 yrkesutbildningarna och
+   Slumpade ämnen finns sedan 2026-07-22 två ytterligare icke-yrkesspecifika
+   kategorier: **"Medicinsk terminologi"** (`terminologi` — franska/grekiska/
+   tyska termsämnen, flyttade från Slumpade ämnen/dåvarande "Allmänt") och
+   **"Allmänt"** (`ovrigt` — restkategori, i dag bara Farmakologi, flyttad
+   från Slumpade ämnen/dåvarande "Allmänt"; hette **"Övrigt"** i `#education`
+   fram till 2026-08-08, döpt om till "Allmänt" — se not nedan om
+   namnbytet). Till skillnad från Slumpade ämnens linser har dessa två riktiga
+   ämnen med egna frågefiler, inga linser.
+
+   > **Namnbyte 2026-08-08:** kategorin `ovrigt` bytte synlig etikett från
+   > "Övrigt" till "Allmänt". Eftersom "Allmänt" tidigare var namnet på
+   > `allmant`/Slumpade ämnen bytte det här dokumentet i samma veva ut ALLA
+   > löpande omnämnanden av den kategorin till "Slumpade ämnen", så att
+   > "Allmänt" numera entydigt betyder `ovrigt`. `EDU_ABBREV` i `js/app.js`
+   > byttes samtidigt: `ovrigt` → `ALM` (matchar nya etiketten), `allmant` →
+   > `SLU` (för att inte krocka i topplistans förkortningskolumn).
 3. **Arbetsterapeut rörs INTE här.** Arbetsterapeutens ämnesindelning är
    annorlunda än underlaget i detta dokument och hanteras separat vid ett annat
    tillfälle. Lägg inte till eller ta bort något på arbetsterapeut utifrån detta
@@ -74,10 +84,10 @@ apotekare (tillagt i 0.9.162, utbildningen färdigbyggd samtidigt), audionom (ti
 när utbildningen byggdes, 5 ämnen), optiker (tillagt i 0.9.164 när utbildningen
 byggdes, 5 ämnen). Lägg till valet så snart utbildningen har minst två MC/TF-ämnen.
 
-Allmänt har i stället ett slumpval av en **annan** typ: `lins_alla`, över alla
-utbildningar i stället för inom en. Det har egen mekanik (`ALLMANT_LENSES`) och
-byggdes i 0.9.166 — se "Allmänt — tvärgående ämnen" nedan. Använd alltså inte
-`blandade_*`-mönstret för Allmänt.
+Slumpade ämnen har i stället ett slumpval av en **annan** typ: `lins_alla`,
+över alla utbildningar i stället för inom en. Det har egen mekanik
+(`ALLMANT_LENSES`) och byggdes i 0.9.166 — se "Slumpade ämnen — tvärgående
+ämnen" nedan. Använd alltså inte `blandade_*`-mönstret för Slumpade ämnen.
 
 **Så lägger du till det för en ny utbildning – enda steget som behövs:**
 lägg en `<option>` i `#topic` i `index.html`:
@@ -116,23 +126,24 @@ någon lista behöver utökas.
 
 ---
 
-## Allmänt — tvärgående ämnen (BYGGT 0.9.166)
+## Slumpade ämnen — tvärgående ämnen (BYGGT 0.9.166)
 
-**Status 2026-07-19: byggt och verifierat.** Allmänt har nu de sju linserna +
-slumpvalet över alla utbildningar. Linstabellen ligger i `ALLMANT_LENSES` i
-`js/app.js`; `index.html` bär bara etiketterna. Lägg till en ny utbildningsfil
-genom att föra in dess sökväg och `topic`-prefix i de linser den hör hemma i —
-inget annat behövs.
+**Status 2026-07-19: byggt och verifierat.** Slumpade ämnen (dåvarande namn
+"Allmänt") har nu de sju linserna + slumpvalet över alla utbildningar.
+Linstabellen ligger i `ALLMANT_LENSES` i `js/app.js`; `index.html` bär bara
+etiketterna. Lägg till en ny utbildningsfil genom att föra in dess sökväg och
+`topic`-prefix i de linser den hör hemma i — inget annat behövs.
 
 **Uppdatering 2026-07-22:** Kategorin döptes om till **"Slumpade ämnen"** i
 `#education` (intern id `allmant` oförändrat), och de två riktiga ämnena som
 låg vid sidan av linserna — Farmakologi (FC) och de tre språktermsämnena
 (franska/grekiska/tyska) — flyttades ut till två nya, egna icke-yrkesspecifika
 kategorier: **"Medicinsk terminologi"** (`terminologi`) och **"Övrigt"**
-(`ovrigt`). Allmänt/Slumpade ämnen innehåller sedan dess ENBART linser.
+(`ovrigt`, döpt om till **"Allmänt"** 2026-08-08 — se not vid grundregel 2).
+Slumpade ämnen innehåller sedan dess ENBART linser.
 
 ### Idén
-Allmänt ska INTE ha egna frågor. Dess ämnen är **linser över hela korpusen** —
+Slumpade ämnen ska INTE ha egna frågor. Dess ämnen är **linser över hela korpusen** —
 varje lins plockar slumpmässigt ur de befintliga utbildningsfilerna genom att
 matcha mönster mot frågornas `topic`-nyckel. Alltså: `optiker_synfysiologi`,
 `ssk_nervsystemet`, `nervsystemet_synaps` och `lakare_neuroanatomi` matas alla
@@ -156,7 +167,7 @@ Uppmätt pool i det byggda läget (0.9.166) mot planens uppskattning:
 | **Blandat – alla utbildningar** | `lins_alla` | hela poolen | 14 851 |
 
 **Namngivning:** varje lins heter `Blandat – …` i dropdownen, så att det syns
-att frågorna hämtas tvärs utbildningarna. Ämnesordningen inom Allmänt/Slumpade
+att frågorna hämtas tvärs utbildningarna. Ämnesordningen inom Slumpade
 ämnen är ren bokstavsordning på `Blandat – …` – kategorin har inget separat
 "Slumpade frågor"-val överst, eftersom `lins_alla` är just det valet.
 
@@ -164,7 +175,7 @@ att frågorna hämtas tvärs utbildningarna. Ämnesordningen inom Allmänt/Slump
 - **Slumpvalet över allt gör att linserna inte behöver vara heltäckande.** Hud,
   reproduktion, åldrande, tandanatomi, röntgenteknik och logopedens
   tal/sväljning nås via slumpvalet i stället för att pressas in i en konstig
-  restkategori. Allmänt = "igenkännbara ingångar + allt", inte en taxonomi som
+  restkategori. Slumpade ämnen = "igenkännbara ingångar + allt", inte en taxonomi som
   måste gå ihop.
 - **CNS/PNS slås ihop med sinnesorganen** eftersom audionom (500) och optiker
   (500) är ren sinnesfysiologi och annars blir föräldralösa.
@@ -185,7 +196,7 @@ kapa. Övre extremitet och slumpvalet drar även in bildfrågorna (handens ben/l
    påståenden ligger sida vid sida med läkarämnets MC. Det är avsiktligt.
 3. **Mekaniken kan INTE återanvända `blandade_*` rakt av.** Det mönstret läser
    `el('topic').options`, som redan är filtrerad på vald utbildning — precis
-   tvärtom mot vad en Allmänt-lins behöver. Linserna kräver en egen explicit
+   tvärtom mot vad en Slumpade ämnen-lins behöver. Linserna kräver en egen explicit
    mappning `lins → [filsökvägar] + [topic-mönster]`, som sedan matas till
    `loadQuestionsFromMultiplePaths()`. Slumpvalet "alla utbildningar" behöver
    samma sak (hela `allTopicOptions`, inte den filtrerade listan).
@@ -198,20 +209,20 @@ kapa. Övre extremitet och slumpvalet drar även in bildfrågorna (handens ben/l
 
 ---
 
-## Medicinsk terminologi & Övrigt — icke-yrkesspecifika restkategorier (BYGGT 2026-07-22)
+## Medicinsk terminologi & Allmänt — icke-yrkesspecifika restkategorier (BYGGT 2026-07-22)
 
-Två kategorier vid sidan av Allmänt/Slumpade ämnen och de 12 yrkesutbildningarna.
-Till skillnad från Allmänt har de RIKTIGA ämnen med egna frågefiler — ingen
-lins-mekanik.
+Två kategorier vid sidan av Slumpade ämnen och de 12 yrkesutbildningarna.
+Till skillnad från Slumpade ämnen har de RIKTIGA ämnen med egna frågefiler —
+ingen lins-mekanik.
 
 - **Medicinsk terminologi** (`data-edu="terminologi"`): fristående
   språktermsämnen om lånord och eponymer i anatomin/medicinen. I dag: Franska
   termer i anatomin, Grekiska termer i anatomin, Tyska termer i anatomin
   (alla MC, i bokstavsordning). Nästa språk (om det byggs) läggs till här —
   se `project_language_terms_quizzes.md`.
-- **Övrigt** (`data-edu="ovrigt"`): ren restkategori för ämnen som inte passar
-  någon yrkesutbildning och inte är en språktermskategori. I dag: bara
-  Farmakologi (FC).
+- **Allmänt** (`data-edu="ovrigt"`, hette "Övrigt" fram till 2026-08-08): ren
+  restkategori för ämnen som inte passar någon yrkesutbildning och inte är en
+  språktermskategori. I dag: bara Farmakologi (FC).
 
 Ingen av kategorierna har något "Slumpade frågor"-val (för få MC/TF-ämnen för
 att motivera det, se "Slumpade frågor per utbildning" ovan). Håll ämnena i
@@ -237,9 +248,9 @@ att motivera det, se "Slumpade frågor per utbildning" ovan). Håll ämnena i
 | Tandläkare | `tandlakare` | tom → platshållare |
 
 Plus tre icke-yrkesspecifika kategorier: **Slumpade ämnen** (`allmant`) med
-egen plan (tvärgående linser, se "Allmänt — tvärgående ämnen" ovan),
-**Medicinsk terminologi** (`terminologi`) och **Övrigt** (`ovrigt`) — se
-"Medicinsk terminologi & Övrigt" ovan.
+egen plan (tvärgående linser, se "Slumpade ämnen — tvärgående ämnen" ovan),
+**Medicinsk terminologi** (`terminologi`) och **Allmänt** (`ovrigt`) — se
+"Medicinsk terminologi & Allmänt" ovan.
 
 ### Utbildningar som raderas ur dropdownen
 barnmorska, biomedicin (Biomedicinare), dietist, medicintekniker, receptarie,
