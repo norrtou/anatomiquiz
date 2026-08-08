@@ -350,6 +350,26 @@ sorts läcka som längdbias, fast på svarsfördelningen i stället för på alt
 - **Test:** räkna andelen `correct == "Sant"` per `topic` över alla TF-frågor i filen.
   Validatorn kollar det inte – gör mätningen själv.
 
+**⚠️ ETT ABSOLUT ORD I ETT TF-PÅSTÅENDE FÅR ALDRIG KORRELERA MED SVARET (hittat 2026-08-08
+i `moho_flashcards.json`/`otipm_flashcards.json`).** Balanserad Sant/Falskt-andel räcker inte.
+Skriver du falska påståenden genom att *avgränsa för hårt* — "omfattar **endast** de objektiva
+systemen", "avser **bara** den fysiska omgivningen", "är **alltid** en enskild person" — blir
+varje absolut-märkt påstående falskt. Då finns en genväg som är exakt lika stark som TF-skevhet:
+stryk allt som låter kategoriskt och svara Falskt.
+
+- **Verkligt utfall:** av 100 nya TF-frågor bar sju ett absolut eller kvasi-absolut ord
+  (`endast`, `enbart`, `alltid`, `bara`). **Samtliga sju hade `correct: "Falskt"`.** Sju rätt
+  utan ett uns ämneskunskap. TF-balansen låg samtidigt på exakta 50 % och validatorn gav 0/0 —
+  ingen av de två mätningarna kan se det här.
+- **Så skrivs det rätt från början:** gör påståendet falskt genom ett **konkret byte** (§2.12),
+  inte genom en avgränsning. "Utförandekapacitet omfattar endast de objektiva systemen" →
+  "Utförandekapacitet byggs upp av personens vanor och internaliserade roller". Det andra
+  påståendet är lika falskt, men går bara att avfärda om man vet vad utförandekapacitet är.
+- **Test:** greppa TF-prompterna efter
+  `\b(endast|enbart|alltid|aldrig|inga|ingen|inget|samtliga|uteslutande|bara|alla)\b` och räkna
+  fördelningen Sant/Falskt bland träffarna. Är den skev åt något håll ska påståendena skrivas om.
+  Noll träffar är det enklaste godkända utfallet.
+
 **⚠️ EN TF-FRÅGA MÅSTE HA `"type": "tf"` – annars dras den aldrig (hittat 2026-07-20).**
 62 frågor (59 i `tentaplugg.json`, 3 i `handen.json`) hade Sant/Falskt som enda alternativ men
 stod som `"type": "mc"`. `js/app.js` bygger urvalet av två pooler: `tfPool` kräver `type === 'tf'`
@@ -605,6 +625,23 @@ Skriptet är facit för *formtells* (§2.13), men följande feltyper är osynlig
 - **Kör validatorn efter VARJE patch, inte bara till slut.** Under fysio-svepet fångade den mina egna slipups om och om igen: att jag råkade återinföra "inget/alltid/uteslutande/samtliga" i en omskrivning, och att jag skapade nya självutpekande distraktorer (se §2.9 om ", inte/utan"-fällan).
 - **Diagnostisera skulden innan metod väljs (billigaste vägen först):** ren mekanisk tell (absolut-ord/filler) → EN samlad dump-och-patch över hela filen, inte ämne för ämne. Äkta sakfel gömda i `correct` → full genomläsning krävs. Låt ett skript räkna stränglängder och fylla ut distraktorn tills den slår `correct` – gissa ALDRIG längder för hand (jag underskattar konsekvent 15–30 tecken).
 - **Rör bara de flaggade fälten.** Index-patcha distraktorer (`{id:{"idx":ny}}`) så att prompt/correct/orörda distraktorer förblir byte-identiska → ren diff, inga oavsiktliga faktaändringar.
+
+**⚠️ HÄRLED ALDRIG ETT FRÅGE-ID UR EN LISTAS ORDNING — MATCHA PÅ INNEHÅLL (hittat 2026-08-08).**
+En patch ska slå upp posten på något som står **i** posten (dess `prompt`, dess `correct`, dess
+faktiska `id`), aldrig på en position jag räknat fram i huvudet.
+
+- **Verkligt fall:** 100 frågor genererades ur en konceptlista med `id = f'{prefix}_{100+n}'`.
+  När fyra prompts skulle rättas i efterhand gissade jag id:na genom att handräkna listans
+  ordning. Räkningen slog fel, och tre av fyra patchar skrev över **grannfrågan**: `otipm_130`
+  fick en prompt om aktivitetsträning medan dess `correct` fortfarande var en annan modell, och
+  `otipm_181` fick ett falskt påstående med `correct: "Sant"`. Inget av det syns i
+  `validate_quiz.py` — prompt och correct är var för sig välformade, det är *paret* som är fel.
+- **Så görs det rätt:** patcha på en nyckel som finns i källmaterialet (begreppsnamnet), och låt
+  byggskriptet slå ihop källa + patch och **generera om filen från grunden**. Då kan ett
+  felräknat index inte existera. Kräv dessutom att varje patchnyckel träffar (§0.4) — en nyckel
+  utan träff ska ge `raise`, inte tyst hoppas över.
+- **Test efter varje patch som rör `prompt` eller `correct`:** läs ut paret prompt + correct för
+  de patchade posterna **och deras grannar** och kontrollera att de hör ihop.
 
 ### 2.14 BEGÄRD KONTROLL/KORREKTUR SKA ALLTID VARA MANUELL – ALDRIG MASKINELL GENOMLÄSNING
 **KRITISKT, NY REGEL (2026-07-22, efter att `grekiska_termer.json` innehöll tre olika ytformer av samma avslöjande-svar-fel som en tidigare "kontroll" missade).** När användaren uttryckligen ber om **kontroll** eller **korrektur** av quiz ELLER artiklar – inte bara "bygg det här", utan en explicit granskningsbegäran – ska den granskningen alltid vara en **manuell, isolerad genomläsning av varje fråga/stycke för sig**, aldrig ersättas av eller nöja sig med:
@@ -920,6 +957,8 @@ Före varje session/commit, kontrollera:
 - [ ] INGA engelska medicinska termer förekommer
 - [ ] ALLA MC-frågor har 2-4 alternativ (1 korrekt + 1-3 distraktorer efter behov)
 - [ ] TF-frågorna ligger på 40–60 % "Sant" i varje ämne med ≥8 TF-frågor (§2.4)
+- [ ] Absolut-ord i TF-påståenden korrelerar inte med svaret – helst noll träffar (§2.4)
+- [ ] Patchade `prompt`/`correct` slogs upp på innehåll, inte på ett framräknat id; paret prompt+correct kontrollerat för de patchade posterna och deras grannar (§2.13)
 - [ ] INGA dubbletter mellan "correct" och "distractors"
 - [ ] INGA filler-alternativ ("Annat", "Ingen av dessa", osv)
 - [ ] ALLA alternativ är semantiskt relevanta för frågan
