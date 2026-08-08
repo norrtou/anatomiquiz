@@ -250,10 +250,12 @@
              ordningen här ÄR den användaren ser – håll den när nya ämnen
              läggs till. -->
 
-        <!-- Arbetsterapeut. Moho och OTIPM nedan är data-nonmedical: ej
-             anatomi/fysiologi (ATP-teori). De döljs om inte "Visa även
-             icke-medicinska ämnen" är ibockat i inställningarna. -->
+        <!-- Arbetsterapeut. Arbetsterapeutiska modeller, Moho och OTIPM nedan
+             är data-nonmedical: ej anatomi/fysiologi (ATP-teori). De döljs om
+             inte "Visa även icke-medicinska ämnen" är ibockat i
+             inställningarna. -->
         <option value="blandade" data-edu="arbetsterapeut">Slumpade frågor (MC+TF+Bild)</option>
+        <option value="arbetsterapeutiska_modeller" data-edu="arbetsterapeut" data-nonmedical="1">Arbetsterapeutiska modeller (FC)</option>
         <option value="studenters_flashcards" data-edu="arbetsterapeut">ATP-studenters flashcards (FC)</option>
         <option value="osteologi" data-edu="arbetsterapeut">Ben (MC+TF)</option>
         <option value="blodomloppet" data-edu="arbetsterapeut">Blodomloppet (TF)</option>
@@ -2005,7 +2007,7 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.407" defer></script>
+  <script src="js/app.js?v=0.9.408" defer></script>
   <!-- Spellägesmoduler: en egen fil per läge, laddas EFTER app.js (delar globalt scope). -->
   <script src="js/matcha.js?v=0.9.330" defer></script>
   <script src="js/leitner.js?v=0.9.330" defer></script>
