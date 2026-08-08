@@ -426,7 +426,11 @@ längdbias-mätningen ("Falskt" är 2 tecken längre än "Sant" → falsk 100 %-
   - Rätt byggt (samma ämne, oförändrat): "Vad betyder riktningstermen `anterior` (ventralis)?" → `Främre, mot buksidan`, med `Bakre, mot ryggsidan` / `Övre` / `Nedre` som distraktorer. "anterior" liknar inte "främre" – man måste kunna det.
   - Fixade varianten: "medialis" → `Närmare kroppens mittlinje, inåt`, mot `Längre ut från mittlinjen, utåt` / `Närmare bålen räknat längs extremiteten` / `Längre bort från bålen längs extremiteten`.
   - **UNDANTAG – böjningsfrågor är inte detta fel.** "Vad blir genitiv singular av `vertebra`?" → `Vertebrae` är helt korrekt: där ÄR den böjda formen det som testas, och distraktorerna är felaktiga böjningar. Skilj på *betydelsefrågor* (svaret ska vara betydelsen) och *formfrågor* (svaret ska vara formen).
-  - **Sök aktivt efter mönstret** – validatorn fångar det inte. Jämför normaliserad `correct` mot termer inom citattecken i `prompt`; flagga när de delar ordstam. Kör på varje utbildningsfil, och undanta ämnen som handlar om böjning.
+  - **⚠️ Ekot göms lika gärna i ETT ORD av ett flerordssvar (hittat 2026-08-08 i `medicinsk_terminologi_allmant.json`).** Att `correct` är en hel definition och inte ett enda ord skyddar ingenting: räcker det att leta efter termens stam bland alternativen är frågan lika trasig. Skräckexempel `mta_q6`: "Vad betyder uttrycket `functio laesa`?" → `Nedsatt **funktion** i den drabbade delen`, mot distraktorer om genomblödning, känslighet och läkningstid. Ingen behöver kunna latin – man letar efter ordet som liknar termen. **Fixad variant:** `Att den drabbade delen inte kan användas som vanligt`.
+    - **Stavningsskillnaden är ingen ursäkt.** `functio`→`funktion`, `rotatio`→`rotation`, `phlebo`→`flebo`: c→k, ph→f, th→t, ae/oe→e och y→i är precis vad som skiljer termen från lånordet, och en jämförelse som inte normaliserar dem missar den vanligaste formen av felet.
+    - **Skriv rätt från början:** formulera definitionen med ord som INTE är termens egen stam. Går det inte – ge då varje distraktor samma stam, så att ordlikheten inte pekar ut något (`Rotation kring en axel` mot `Rotation kring två axlar` är fine).
+    - **Skyddet:** `validate_quiz.py` flaggar det sedan 2026-08-08 (`_definition_echo`) när ett ord i ett flerordssvar bär en citerad terms stam och **ingen** distraktor gör det. Böjningsfrågor undantas, och ett ord med å/ä/ö räknas som svenskt och inte som en främmande term. Larmet är verifierat genom att den trasiga `mta_q6`-formuleringen planterades tillbaka.
+  - **⚠️ Ordbildningsparitet: rätt svar får inte vara det enda alternativet med en annan ordform (hittat 2026-08-08, `mta_q168`).** Systerfall till språkpariteten nedan. `Débridering` (svensk `-ing`-avledning) stod bland `Kyrettage` / `Tamponad` / `Dränage` – alla fyra äkta franska lånord, men rätt svar var det enda som inte såg ut som ett lånord. Fix: `Tamponering` / `Sondering` / `Kanylering`, alltså samma avledningsform på alla fyra. **Test:** läs alternativens ÄNDELSER för sig, utan betydelserna. Sticker rätt svar ut i form – byt distraktorer tills alla fyra har samma sorts ordbildning.
 - **Numerisk-/format-paritet:** Rätt svar får inte vara det enda alternativet som är numeriskt eller format-mässigt korrekt. Efterfrågas ett antal/en siffra ska ALLA alternativ vara tal. Efterfrågas ett visst antal saker (plural) ska ALLA alternativ innehålla exakt lika många – t.ex. om rätt svar listar tre strukturer måste varje distraktor också lista tre, aldrig två eller fyra. Annars kan man räkna sig fram till svaret utan sakkunskap.
   - ⚠️ **Antals-asymmetri fångas INTE av `validate_quiz.py` – den måste kontrolleras för hand.** Skräckexempel (hittat 2026-07-13 i `bma_karlfys_42`): frågan löd "Vilka **tre** huvudsakliga faktorer (Virchows triad) …", rätt svar listade tre faktorer medan alla tre distraktorer började med "Enbart …" och listade EN. Då räcker det att räkna för att hitta rätt. Fix: skriv om distraktorerna så att de också listar tre (fortsatt fel) faktorer.
   - När du bygger/rättar ett ämne: sök aktivt efter frågor vars prompt innehåller ett räkneord (två/tre/fyra/tre huvudsakliga …) och kontrollera antalet poster i VARJE alternativ.
@@ -922,6 +926,8 @@ Före varje session/commit, kontrollera:
 - [ ] Rätt svar är INTE systematiskt längst ELLER kortast (ingen längdbias, per ämne < 40 %); distraktorer jämförbart långa (§2.9)
 - [ ] INGA avslöjande parenteser eller extra kvalificerare enbart på rätt svar (§2.9)
 - [ ] Frågetexten ekar inte svaret verbatim (ej självbesvarande) (§2.9)
+- [ ] Inget ord i ett flerordssvar är frågans citerade term i svensk språkdräkt när ingen distraktor bär samma stam (`functio laesa` → "Nedsatt **funktion** …") (§2.9)
+- [ ] Ordbildningsparitet: rätt svar är inte det enda alternativet med en avvikande ordform/ändelse (`Débridering` bland `-age`/`-ad`) (§2.9)
 - [ ] INGA absolut-ord (endast/enbart/alltid/aldrig/inga/ingen/inget/samtliga/uteslutande) enbart i distraktorerna (§2.9)
 - [ ] INGA självutpekande distraktorer, inkl. ", inte/utan <rätt-svarets ord>" och "ett annat namn för …" (§2.2)
 - [ ] Varje distraktor klarar gissa-testet: går inte att stryka på formen (§2.12)
@@ -1423,6 +1429,22 @@ att jag lyfter spelkänslan också?" ska inte ställas: svaret är redan ja.
 **DESSA REGLER ÄR BINDANDE FÖR ALL ARBETE PÅ ANATOMIQUIZ.**
 
 **Senast uppdaterad:** 2026-08-08
+**Version:** 2.7 – två ytformer av redan kända feltyper kodifierade ur bygget av ämnet
+"Medicinsk terminologi" under Allmänt (2026-08-08, 0.9.405). Båda hittades av den manuella
+genomläsningen, båda hade passerat validatorn:
+- **§2.9 ekot göms lika gärna i ETT ORD av ett flerordssvar.** `functio laesa` → "Nedsatt
+  **funktion** i den drabbade delen" går att lösa genom att leta efter termens stam bland
+  alternativen, precis som `medialis`→`Medial`. Att svaret är en hel definition skyddar
+  ingenting. **Gjort omöjligt att missa maskinellt:** `validate_quiz.py` fick
+  `_definition_echo`, som normaliserar latinsk stavning mot svensk (c→k, ph→f, ae→e …) och
+  flaggar när ett ord i svaret bär en citerad terms stam och ingen distraktor gör det.
+  Larmet verifierat genom att den trasiga formuleringen planterades tillbaka
+- **§2.9 ordbildningsparitet.** `Débridering` var det enda alternativet på `-ing` bland
+  `Kyrettage`/`Tamponad`/`Dränage`; alla fyra äkta franska lånord, men rätt svar var det
+  enda som inte såg ut som ett. Läs alternativens ändelser för sig, utan betydelserna.
+  Kontrolleras för hand — en maskinregel på ordform skulle drunkna i brus
+- §8 checklistan utökad med båda punkterna
+
 **Version:** 2.6 – §2.11 skärpt och §7 steg 1 korrigerad, på uttrycklig order (2026-08-08).
 Regeln sa bara att unikhet *gäller* inom ämnet; den förbjöd inte att jag letade utanför det,
 och därför gjorde jag det på eget bevåg. Nu står förbudet uttryckligen:

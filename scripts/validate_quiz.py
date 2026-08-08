@@ -12,7 +12,9 @@ dubblerad frågetext inom ett ämne, TF-fråga felmärkt som "mc" (dras aldrig a
 Kontrolleras INTE maskinellt (§2.4, §2.9) – gör dem för hand: TF-balansen Sant/Falskt per
 ämne, antals-paritet i frågor med räkneord, och kvasi-absoluta "bara"/"alla" i distraktorer.
 
-WARNING (blockerar inte): längdbias, parentes-asymmetri, självbesvarande fråga,
+WARNING (blockerar inte): längdbias, parentes-asymmetri, självbesvarande fråga (både
+ordagrant eko, enordssvar med bytt ändelse och flerordssvar där ETT ord är frågans term
+i svensk språkdräkt),
 numerisk asymmetri, absolut-ord enbart i distraktorerna, självutpekande distraktor,
 förbjudet filler-alternativ.
 Dessa kräver omdöme att åtgärda men rapporteras så de aldrig glöms bort.
@@ -67,6 +69,58 @@ def _morphological_echo(prompt, correct):
         stem = min(len(c), len(t)) - 2      # tillåt att ändelsen skiljer
         if stem >= 4 and c[:stem] == t[:stem]:
             return term
+    return None
+
+# §2.9: latinsk/grekisk stavning normaliserad mot svensk, så att functio↔funktion,
+# rotatio↔rotation och phlebo↔flebo jämförs på samma stam. Utan den här normaliseringen
+# missas den vanligaste formen av ekot: c→k är precis det som skiljer termen från lånordet.
+_LAT2SV = (("ph", "f"), ("th", "t"), ("rh", "r"), ("ae", "e"), ("oe", "e"),
+           ("c", "k"), ("q", "k"), ("z", "s"), ("y", "i"), ("å", "a"), ("ä", "a"), ("ö", "o"))
+
+def _lat_stem(word):
+    w = word.lower()
+    for a, b in _LAT2SV:
+        w = w.replace(a, b)
+    return re.sub(r"(.)\1+", r"\1", re.sub(r"[^a-z]", "", w))
+
+def _words(text):
+    return [w for w in re.split(r"[\s,;:/()–—-]+", text) if w]
+
+def _stem_echo(term_word, text):
+    """True om något ord i `text` är `term_word` med bytt ändelse (inte ordagrant)."""
+    t = _lat_stem(term_word)
+    if len(t) < 5:
+        return False
+    for w in _words(text):
+        w = _lat_stem(w)
+        if w == t:
+            continue                        # ordagrant upprepning, en annan feltyp
+        stem = min(len(w), len(t)) - 2
+        if stem >= 5 and w[:stem] == t[:stem]:
+            return True
+    return False
+
+def _definition_echo(prompt, correct, distractors):
+    """True om ETT ORD i ett flerordssvar är frågans citerade term i svensk språkdräkt (§2.9).
+
+    Systerkontroll till _morphological_echo, som bara ser enordssvar. Fångar
+    'Vad betyder ”functio laesa”?' -> correct "Nedsatt FUNKTION i den drabbade delen":
+    frågan går att lösa genom att leta efter termens stam bland alternativen. Flaggas
+    bara när INGEN distraktor bär samma stam – gör de det finns ingen asymmetri att
+    gissa på. Returnerar det citerade ordet, annars None.
+    """
+    if " " not in correct.strip():
+        return None                         # enordssvar sköts av _morphological_echo
+    if FORM_Q.search(prompt) or FORM_Q.search(correct):
+        return None                         # böjningsfråga: ekot ÄR det som testas
+    for term in re.findall(r"[\"'«»“”„]([A-Za-zÅÄÖåäöÉéÜü ,.-]{4,}?)[\"'«»“”„]", prompt):
+        if term.lower() in correct.lower():
+            continue                        # svaret citerar termen, alltså metaspråkligt
+        for tw in _words(term):
+            if re.search(r"[åäöÅÄÖ]", tw):
+                continue                    # ett svenskt ord är ingen främmande term
+            if _stem_echo(tw, correct) and not any(_stem_echo(tw, str(d)) for d in distractors):
+                return tw
     return None
 
 def _negates_correct(distractor, correct):
@@ -171,6 +225,11 @@ def check_file(path, errors, warnings):
             term = _morphological_echo(q["prompt"], c)
             if term:
                 warnings.append(f"{name}:{q.get('id')} självbesvarande: svaret '{c}' är frågans term '{term}' med bytt ändelse")
+            # samma tell i ett FLERORDSSVAR: ett ord i definitionen är termen i svensk
+            # språkdräkt och ingen distraktor bär stammen (§2.9)
+            term = _definition_echo(q["prompt"], c, q["distractors"])
+            if term:
+                warnings.append(f"{name}:{q.get('id')} självbesvarande: svaret bär frågans term '{term}' i svensk form, ingen distraktor gör det")
             # numerisk-/format-paritet (§2.9): rätt svar är ett ANTAL/tal (börjar med en siffra,
             # ev. efter cirka/ca/~) men någon distraktor saknar siffra. Börjar svaret med en
             # bokstav (t.ex. "A1-pulleyn") räknas siffran som del av ett namn, inte ett antal.
