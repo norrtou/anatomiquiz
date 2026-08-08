@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.409
+- **Sista fynden ur faktakollen av Moho och OTIPM lösta.** Efter 0.9.407–408 återstod dubbletter inom Moho-leken och två luckor. Ingen framsida förekommer nu två gånger i något av de tre ämnena.
+- **Fem redundanta Moho-kort ersatta av de MOHO-begrepp faktakollen saknade.** `moho_21` Aktivitetsroller (dubblett av Internaliserade roller) → **Aktivitetsval** (*activity choices*), `moho_35` Identitetsskapande (dubblett av Aktivitetsidentitet) → **Verksamhetsval** (*occupational choices*), `moho_34` och `moho_50` Anpassningsprocess (identisk framsida, båda omskrivningar av Aktivitetsanpassning) → **Den levda kroppen** (*the lived body*) respektive **Personliga övertygelser** (*personal convictions*), `moho_42` Värdesystem (inget MOHO-begrepp) → **Pliktkänsla** (*sense of obligation*). Personliga övertygelser och pliktkänsla är värderingarnas två delar; den levda kroppen är utförandekapacitetens subjektiva sida.
+- **`moho_45` Aktivitetsanamnes → Aktivitetsberättelse (*occupational narrative*).** MOHO:s eget begrepp, och det som bär Sveriges Arbetsterapeuters instrumentnamn för OPHI-II ("Intervjubaserad aktivitetsberättelse").
+- **`moho_17` Aktivitetsbeteende** hade en baksida som ordagrant beskrev samma sak som Aktivitetsutförande. Omskriven till samlingsbegreppet för görande i arbete, lek och dagliga aktiviteter.
+- **`otipm_31` Möjliggörande flyttat till Arbetsterapeutiska modeller (13 → 14 kort).** *Enablement* är den kanadensiska modellens (CMOP-E) begrepp, inte Fishers.
+- **Nytt kort `otipm_51` Aktivitetsfokuserad intervention.** Aktivitetsbaserad/aktivitetsfokuserad är OTIPM:s centrala svenska begreppspar och bara den ena halvan fanns. OTIPM står kvar på 46 kort.
+- **Kvalitetskontroll:** `validate_quiz.py` 0 varningar och 0 fel på alla tre filerna, 0 dubbla id, 0 dubbla framsidor, 0 tomma fält, 0 osynliga tecken. Moho 41, OTIPM 46, Arbetsterapeutiska modeller 14 — 101 kort. `check_generators.py`: rundtripp identisk över 410 filer, ALLA 195 tester gröna.
+
 ## 0.9.408
 - **Nytt flashcard-ämne "Arbetsterapeutiska modeller (FC)" under Arbetsterapeut — 13 kort.** Ny datafil `data/arbetsterapeutiska_modeller.json` (ett ämne, en fil), sökväg i `getQuestionsPath()` och `<option>` i `index.html`. Ämnet samlar de begrepp som låg i Moho- och OTIPM-lekarna men hör till andra ramverk, så att varje lek bara innehåller sin egen modells vokabulär.
 - **Elva kort flyttade ur Moho (52 → 41).** OTPF/AOTA: Klientfaktorer, Aktivitetsprofil, Aktivitetskrav, Utförandemönster. Aktivitetsvetenskap (Wilcock/Townsend/Yerxa): Aktivitetsdeprivation, Aktivitetsobalans, Aktivitetsalienation, Aktivitetsrättvisa, Aktivitetsvetenskap. Allmän rollteori: Rollbalans, Rollkonflikt.
