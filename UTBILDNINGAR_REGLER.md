@@ -18,6 +18,16 @@ Tekniskt sitter listan som två kopplade `<select>` i `index.html`
 (`#education` + `#topic`), där varje ämne knyts till sin utbildning via
 `data-edu`. Se minnesfilen `project_education_split.md` för historik.
 
+**Ordningen i `#education` (beslutad 2026-08-08, på uttrycklig begäran):**
+`Allmänt` (`ovrigt`) överst, `Slumpade ämnen` (`allmant`) på plats två, och
+**först därefter** de tolv utbildningarna plus `Medicinsk terminologi` i
+bokstavsordning (svensk kollation: å/ä/ö efter z, så `Läkare` hamnar efter
+`Logoped`). De två översta är alltså undantagna från sorteringen — flytta dem
+inte in i den vid nästa tillägg. Förvalet (`selected`) sitter kvar på
+`Slumpade ämnen` och följer inte översta raden; det är avsiktligt och ska inte
+"rättas" till översta alternativet. En ny utbildning eller kategori läggs in på
+sin alfabetiska plats i listan under de två.
+
 ---
 
 ## Grundregler (gäller hela ombyggnaden)

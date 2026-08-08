@@ -213,14 +213,17 @@
            ämnen ligger som UTKOMMENTERAD scaffold i #topic nedan (osynliga för
            användaren) tills de byggs.
            Vilka utbildningar som ska finnas, deras ämnesindelning och linser styrs av
-           UTBILDNINGAR_REGLER.md. Listan är sorterad alfabetiskt (svensk ordning:
-           å/ä/ö efter z), utom "Slumpade ämnen" som ligger överst som förval.
+           UTBILDNINGAR_REGLER.md. ORDNING: "Allmänt" ligger överst och "Slumpade
+           ämnen" näst överst; först därefter börjar den alfabetiska listan
+           (svensk ordning: å/ä/ö efter z). De två är alltså undantagna från
+           sorteringen, inte felsorterade. Förvalet (`selected`) sitter kvar på
+           "Slumpade ämnen" och följer alltså inte översta raden.
            Arbetsterapeut hanteras separat (egen ämnesmodell).
            Yrkesnamn används, inte "...programmet". -->
       <label for="education">Utbildning eller kategori</label>
       <select id="education" aria-describedby="educationNote">
-        <option value="allmant" selected>Slumpade ämnen</option>
         <option value="ovrigt">Allmänt</option>
+        <option value="allmant" selected>Slumpade ämnen</option>
         <option value="apotekare">Apotekare</option>
         <option value="arbetsterapeut">Arbetsterapeut</option>
         <option value="audionom">Audionom</option>
@@ -2002,7 +2005,7 @@
 
   <!-- defer: scriptet körs efter att DOM är parsad, utan att blockera rendering -->
   <script src="js/images.js?v=0.9.84" defer></script>
-  <script src="js/app.js?v=0.9.405" defer></script>
+  <script src="js/app.js?v=0.9.406" defer></script>
   <!-- Spellägesmoduler: en egen fil per läge, laddas EFTER app.js (delar globalt scope). -->
   <script src="js/matcha.js?v=0.9.330" defer></script>
   <script src="js/leitner.js?v=0.9.330" defer></script>

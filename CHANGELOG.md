@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.406
+- **Ny ordning i "Utbildning eller kategori" (`#education`):** "Allmänt" ligger överst, "Slumpade ämnen" på plats två, och först därefter de tolv utbildningarna plus "Medicinsk terminologi" i bokstavsordning (svensk kollation, å/ä/ö efter z). De två översta är undantagna från sorteringen.
+- **Förvalet är oförändrat.** `selected` sitter kvar på "Slumpade ämnen" och följer alltså inte längre översta raden — avsiktligt, ordningen ändrades men inte vilken kategori quizet startar på.
+- Ordningsregeln inskriven i `UTBILDNINGAR_REGLER.md` och i kommentaren ovanför `<select id="education">`, så att nästa tillägg hamnar rätt utan att de två översta dras in i sorteringen igen. Inget i `js/app.js` läser listan positionellt (`getSelectedEducation()`, `EDU_ABBREV` och `updateEducationOptions()` går på `value`), så omflyttningen är ren markup.
+- `test_installningar.js` 114 gröna, `check_generators.py`: rundtripp identisk, ALLA 195 tester gröna.
+
 ## 0.9.405
 - **Nytt quiz-ämne "Medicinsk terminologi (MC)" under kategorin Allmänt — 200 MC-frågor.** Ny datafil `data/medicinsk_terminologi_allmant.json` (ett ämne, en fil), sökväg i `getQuestionsPath()`, `<option data-edu="ovrigt">` i `index.html` (alfabetiskt sist under Allmänt) och rad i frågestatistiken i `js/info.js`. Tredje ämnet under Allmänt.
 - **Egen topic-nyckel `medicinsk_terminologi_allmant` och eget filnamn.** Nyckeln `medicinsk_terminologi` och filen `data/medicinsk_terminologi.json` är sedan tidigare upptagna av arbetsterapeutens skyddade källfil (CLAUDE_REGLER §3.2c) och rörs inte.
