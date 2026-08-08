@@ -215,6 +215,7 @@ const EDUCATIONS = [
   ]},
   { name: 'Allmänt', topics: [
     { label: 'Farmakologi',                 file: './data/farmakologi.json', fc: true },
+    { label: 'Lägen, rörelser & riktningar', file: './data/lagen_rorelser_riktningar.json' },
   ]},
 ]
 
