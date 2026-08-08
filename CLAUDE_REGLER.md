@@ -511,12 +511,17 @@ i repot är irrelevant — de är inte en del av uppgiften.
   missförstånd i ny förklädnad.)
 - Nämn det inte heller i chatt, CHANGELOG eller commit — se punkten om unikhetens omfattning ovan.
 
-**Enda tillåtna skälet att titta i ett annat quiz** är att jag *verkligen behöver* det för
-uppgiften jag fått: att lära mig ett format eller en konvention jag ska följa, eller att
-kontrollera om ett **nyupptäckt generellt fel** finns på fler ställen (§0.2). Då gäller:
-titta på **precis så mycket som krävs** och inte en fil mer, håll det till det uppgiften
-handlar om, och gör ingen dublettjakt på vägen. Undantaget legitimerar aldrig en jämförelse
-av frågeinnehåll mellan ämnen.
+**Tror jag att jag behöver läsa in ett annat ämne – FRÅGA OM LOV FÖRST och vänta på svar.**
+Det är inte min bedömning att göra själv, och det är hela skillnaden mot hur jag gjorde förut:
+jag beslutade att jag "behövde" och läste. Fråga i stället, kort och i förväg — vilket ämne och
+varför. Två skäl kan bära en sådan fråga: att jag behöver lära mig ett format eller en
+konvention jag ska följa, eller att kontrollera om ett **nyupptäckt generellt fel** finns på
+fler ställen (§0.2). Får jag ja gäller: läs **precis så mycket som krävs** och inte en fil mer,
+håll det till det uppgiften handlar om, och gör ingen dublettjakt på vägen. Ett ja legitimerar
+aldrig en jämförelse av frågeinnehåll mellan ämnen.
+
+**Normalfallet är att frågan inte behövs.** Ämnesrubriken talar om vad ämnet ska handla om –
+det är avgränsningen, och den räcker nästan alltid för att veta vad jag ska skriva (§7 steg 1).
 
 **Varför:** användaren har aldrig bett om cross-ämnes-koll, och den kostar hens pengar varje
 gång jag tar den på eget bevåg — läsningen, jämförelsen och texten jag skriver om resultatet.
@@ -874,7 +879,11 @@ När ett nytt ämne ska läggas till:
    - Samla källmaterial
    - Bestäm frågekategorier
    - Skapa lista över termer att verifiera
-   - **Vid delad per-utbildningsfil** (flera ämnen i samma JSON, åtskilda av `topic`): läs FÖRST prompts i redan befintliga ämnen vars sakinnehåll plausibelt överlappar – inte bara grep efter identiska strängar efteråt. Styr det nya ämnet mot det som ännu INTE testats. (Missen som kostade en omskrivning: BMA "Hematologi & transfusion" dubblerade "Blod & blodbildning".)
+   - **Ämnesrubriken är avgränsningen – läs INTE in andra ämnen på eget bevåg.** Rubriken talar
+     om vad ämnet ska handla om, och det är det jag skriver för. Det gäller även i en delad
+     per-utbildningsfil (flera ämnen i samma JSON, åtskilda av `topic`): att de ligger i samma
+     fil ger mig ingen rätt att läsa dem. **Tror jag att jag behöver läsa ett annat ämne – FRÅGA
+     om lov först och vänta på svar.** Bedömningen är inte min att göra själv (§2.11).
 
 2. **Frågegenerering**
    - Följ alla regler från avsnitt 1-6
@@ -1414,17 +1423,20 @@ att jag lyfter spelkänslan också?" ska inte ställas: svaret är redan ja.
 **DESSA REGLER ÄR BINDANDE FÖR ALL ARBETE PÅ ANATOMIQUIZ.**
 
 **Senast uppdaterad:** 2026-08-08
-**Version:** 2.6 – §2.11 skärpt på uttrycklig order (2026-08-08). Regeln sa bara att unikhet
-*gäller* inom ämnet; den förbjöd inte att jag letade utanför det, och därför gjorde jag det på
-eget bevåg. Nu står förbudet uttryckligen:
+**Version:** 2.6 – §2.11 skärpt och §7 steg 1 korrigerad, på uttrycklig order (2026-08-08).
+Regeln sa bara att unikhet *gäller* inom ämnet; den förbjöd inte att jag letade utanför det,
+och därför gjorde jag det på eget bevåg. Nu står förbudet uttryckligen:
 - **Leta ALDRIG efter dubletter i andra ämnen, kategorier eller utbildningar.** Kontrollen
   jämför frågorna i det ämne som byggs mot varandra och slutar där. Att öppna/greppa/dumpa ett
   annat ämnes frågor för jämförelse är förbjudet utan uttrycklig begäran — även "snabbkollen"
 - **Överlapp mellan utbildningar är designen, inte skuld.** Ingen dedupe, ingen varning, ingen
   städlista, ingen beskrivning av det som ett problem
-- **Enda undantaget:** att jag verkligen behöver det för uppgiften — lära mig ett format, eller
-  kontrollera om ett nyupptäckt generellt fel finns på fler ställen (§0.2). Då: precis så mycket
-  som krävs, inte en fil mer, och ingen dublettjakt på vägen
+- **Tror jag mig behöva läsa ett annat ämne: fråga om lov först och vänta på svar.** Bedömningen
+  är inte min att göra själv — det var precis den jag gjorde när jag "behövde" och läste. Vid ja:
+  precis så mycket som krävs, inte en fil mer, ingen dublettjakt på vägen
+- **§7 steg 1 vänd.** Den bad mig tidigare läsa överlappande ämnen i en delad per-utbildningsfil
+  innan ett nytt ämne skrevs — alltså exakt det §2.11 nu förbjuder. Nu gäller motsatsen:
+  ämnesrubriken är avgränsningen och räcker nästan alltid; samma fil ger ingen läsrätt
 
 **Version:** 2.5 – tre nya stående regler om ARBETSSÄTT och HEDERLIGHET (2026-08-08,
 0.9.404, på användarens uttryckliga order: *"Det här är galet allvarligt. Du behöver
