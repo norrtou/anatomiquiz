@@ -338,10 +338,15 @@ samt *rotationrörelse* och *Contralateral*.
 - `grepp:q9` distraktorn om sträckt handled är sann för kraftgrepp. Omskriven.
 - Språk: *käkningen* → tuggfunktionen; "Vilken är det största benet" → "Vilket".
 
-### ⚠️ TVÅ ÖPPNA BESLUTSPUNKTER (punkt 3 åtgärdad 0.9.185)
+### ✅ BÅDA BESLUTSPUNKTERNA ÅTGÄRDADE (punkt 3 i 0.9.185, punkt 2 i 0.9.409)
 
-**2. `moho_34` och `moho_50` har identisk prompt** ("Anpassningsprocess") med olika definitioner
-på baksidan. Att slå ihop dem kräver ställningstagande till MOHO-terminologin – gissa inte.
+**2. ✅ ÅTGÄRDAT 0.9.409 – `moho_34`/`moho_50` "Anpassningsprocess".** Ställningstagandet blev:
+MOHO har inget eget "anpassningsprocess"-begrepp vid sidan av **aktivitetsanpassning**
+(`moho_9`), så båda korten var omskrivningar av det. Slottarna fylldes i stället med två
+MOHO-begrepp som saknades helt – **den levda kroppen** och **personliga övertygelser**.
+Underlaget var den svenska MOHO-begreppslistan till Kielhofners *Model of human occupation:
+teori och tillämpning*, inte gissning. Samma pass tog `moho_21`/`moho_35` (dubbletter av
+`moho_6`/`moho_7`) och `moho_42` "Värdesystem" (inget MOHO-begrepp).
 
 **3. ✅ ÅTGÄRDAT 0.9.185 – engelska riktningstermer i `riktningar.json`.** Superficial →
 Superficialis, Internal → Internus, External → Externus, Peripheral → Perifer (svenska, jfr
