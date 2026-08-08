@@ -492,6 +492,37 @@ längdbias-mätningen ("Falskt" är 2 tecken längre än "Sant" → falsk 100 %-
 - **Men unikhetskravet gäller bara inom det ämne som byggs**, inte mot andra ämnen eller andra utbildningar. Skriv INTE i CHANGELOG/commit att frågor jämförts mot "hela filen" eller mot andra namngivna ämnen – skriv bara "alla X frågor i ämnet kontrollerade unika". Att aktivt leta efter och narrativisera cross-ämnes-överlapp är inte efterfrågat.
 - **Att fråga samma ord åt BÅDA håll är ALLTID tillåtet – i alla filer, alla ämnen.** "Vad betyder *dyspné*?" → "andnöd" och "Vad heter andnöd med medicinsk term?" → "dyspné" är två olika frågor som testar olika kunskap (igenkänning vs. produktion), inte en dublett. Det gäller hela quizet, inte bara glos-/terminologifiler. Flagga ALDRIG bidirektionella par som dubblettfel och föreslå aldrig att stryka det ena hållet. En dublett kräver samma prompt OCH samma `correct` – exakt vad validatorn kollar (`validate_quiz.py`, `qa_by_topic`).
 
+**⛔ LETA ALDRIG EFTER DUBLETTER I ANDRA ÄMNEN, KATEGORIER ELLER UTBILDNINGAR (uttrycklig order 2026-08-08).**
+
+Så här ser kontrollen ut när den görs rätt: frågorna i det ämne jag bygger eller granskar
+jämförs **mot varandra**, och där är kontrollen slut. Att det ligger tiotusentals andra frågor
+i repot är irrelevant — de är inte en del av uppgiften.
+
+- Att öppna, greppa, dumpa eller läsa in ett **annat** ämnes, en annan kategoris eller en annan
+  utbildnings frågor **för att jämföra dem med det jag arbetar med är förbjudet** om användaren
+  inte uttryckligen bett om det. Förbudet gäller även "bara en snabbkoll", även när det går
+  fort, även när jag är övertygad om att jag skulle hitta något — och även när jag redan har
+  filen öppen av annat skäl.
+- **Att samma sakinnehåll testas i flera utbildningar är designen, inte skuld.** Varje
+  utbildning täcker sin fysiologi ur sitt perspektiv. Föreslå därför aldrig dedupliceringslogik,
+  varningar, en städlista eller en "att lösa"-punkt om cross-ämnes-överlapp, och beskriv det
+  aldrig som ett problem. (Återfall 2026-07-19: jag föreslog dedupe för Allmänt-linserna
+  "eftersom `ssk_nervsystemet` och `fysio_nervsystemet` säkert liknar varandra". Samma
+  missförstånd i ny förklädnad.)
+- Nämn det inte heller i chatt, CHANGELOG eller commit — se punkten om unikhetens omfattning ovan.
+
+**Enda tillåtna skälet att titta i ett annat quiz** är att jag *verkligen behöver* det för
+uppgiften jag fått: att lära mig ett format eller en konvention jag ska följa, eller att
+kontrollera om ett **nyupptäckt generellt fel** finns på fler ställen (§0.2). Då gäller:
+titta på **precis så mycket som krävs** och inte en fil mer, håll det till det uppgiften
+handlar om, och gör ingen dublettjakt på vägen. Undantaget legitimerar aldrig en jämförelse
+av frågeinnehåll mellan ämnen.
+
+**Varför:** användaren har aldrig bett om cross-ämnes-koll, och den kostar hens pengar varje
+gång jag tar den på eget bevåg — läsningen, jämförelsen och texten jag skriver om resultatet.
+Värre är att den producerar arbete som inte var beställt: förslag på strykningar, dedupe och
+saneringssvep av något som inte är trasigt.
+
 ### 2.12 SÅ HÄR SKRIVS EN BRA DISTRAKTOR (positiv mall – följ FÖRSTA gången)
 Reglerna ovan (§2.2, §2.9) listar mest vad man INTE får göra. Det här är den positiva mallen: så *ska* en distraktor se ut. Följ den när frågan skrivs, så slipper du saneringssvep senare (se §2.13).
 
@@ -1383,6 +1414,18 @@ att jag lyfter spelkänslan också?" ska inte ställas: svaret är redan ja.
 **DESSA REGLER ÄR BINDANDE FÖR ALL ARBETE PÅ ANATOMIQUIZ.**
 
 **Senast uppdaterad:** 2026-08-08
+**Version:** 2.6 – §2.11 skärpt på uttrycklig order (2026-08-08). Regeln sa bara att unikhet
+*gäller* inom ämnet; den förbjöd inte att jag letade utanför det, och därför gjorde jag det på
+eget bevåg. Nu står förbudet uttryckligen:
+- **Leta ALDRIG efter dubletter i andra ämnen, kategorier eller utbildningar.** Kontrollen
+  jämför frågorna i det ämne som byggs mot varandra och slutar där. Att öppna/greppa/dumpa ett
+  annat ämnes frågor för jämförelse är förbjudet utan uttrycklig begäran — även "snabbkollen"
+- **Överlapp mellan utbildningar är designen, inte skuld.** Ingen dedupe, ingen varning, ingen
+  städlista, ingen beskrivning av det som ett problem
+- **Enda undantaget:** att jag verkligen behöver det för uppgiften — lära mig ett format, eller
+  kontrollera om ett nyupptäckt generellt fel finns på fler ställen (§0.2). Då: precis så mycket
+  som krävs, inte en fil mer, och ingen dublettjakt på vägen
+
 **Version:** 2.5 – tre nya stående regler om ARBETSSÄTT och HEDERLIGHET (2026-08-08,
 0.9.404, på användarens uttryckliga order: *"Det här är galet allvarligt. Du behöver
 uppdatera dina regler så att detta aldrig kan ske igen."*). Till skillnad från tidigare
