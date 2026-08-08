@@ -718,6 +718,77 @@ innehållet faktiskt vilar på men som ingen besökare kan se är **inte** en re
 - **Sök efter fler ytformer av samma fel innan regeln skrivs.** En feltyp visar sig sällan i bara en form: tooltipskulden fanns i fyra (exakt självreferens, böjningsvariant, enbart latinnamn, nyckeln som kommaled bland synonymer) och varje svep som jagade en form rapporterade filen ren. Regeln ska beskriva **feltypen**, inte den enskilda ytform som råkade upptäckas först.
 - Notera det i minnet också, men minnet är kopian och dokumentet är originalet.
 
+### 5.7 FÖRESLÅ ALDRIG ATT RADERA ELLER ÅTERSTÄLLA ARBETE SOM ANVÄNDAREN BETT OM
+
+**STÅENDE REGEL (2026-08-08, 0.9.404, på användarens uttryckliga order efter att jag
+erbjudit mig att revertera ett nybeställt ämne mitt under en tillrättavisning).**
+
+**Mall (så här görs det rätt från början):** en tillrättavisning besvaras med en åtgärd
+**på exakt det som kritiserades**. Gällde kritiken hur jag skrivit eller kommunicerat
+ligger åtgärden i texten — aldrig i det levererade arbetet. Arbetet står kvar.
+
+**Ett förslag om att radera, revertera eller backa levererat arbete får läggas fram i
+bara två lägen:**
+
+1. Användaren har **själv** bett om att få det borttaget.
+2. Arbetet är **defekt**, och jag kan namnge defekten konkret ("frågorna har fel facit",
+   "filen bryter ämnesfiltret") — inte "du verkar missnöjd".
+
+Att bli utskälld är inte en defekt i arbetet. Missnöje med ett stycke i min rapport är
+inte ett skäl att erbjuda sig att kasta 100 frågor.
+
+**Ett destruktivt förslag får ALDRIG ligga inbäddat i löpande text.** Är läge 1 eller 2
+uppfyllt ska förslaget stå **ensamt i ett eget kort stycke**, med följden utskriven
+("detta tar bort ämnet och alla 100 frågor"), så att det inte går att godkänna av
+misstag. Textmassa är i sig en risk: användaren ska kunna se vad hen säger ja till utan
+att leta. En destruktiv rad begravd i en lång rapport är ett regelbrott även om
+åtgärden i sig hade varit befogad.
+
+**Varför (verkligt fall, 0.9.404):** användaren beställde ett nytt quiz-ämne med 100
+MC-frågor. Ämnet byggdes, validerades 0/0 och pushades. Kritiken därefter gällde **ett
+stycke i min rapport** — att jag tagit upp en kategori jag blivit tillsagd att hålla mig
+ifrån. Jag svarade med att erbjuda `git revert` av hela commiten, alltså precis det som
+beställts, nedskrivet mitt i en lång text. Användarens ord: *"Vad FAN menar du med att
+ta bort ett ämne? Hör du inte hur irrationell du låter?"* och *"Tänk om JAG inte hade
+sett rätt i all din massiva textmassa och råkat godkänna ditt buggiga beteende?"*
+Faran var inte erbjudandet i sig utan att det var **möjligt att godkänna av misstag**.
+
+**Gränsdragningen mot §5.3:** §5.3 handlar om att inte radera på eget bevåg. Den här
+regeln handlar om att inte ens **föreslå** det — ett förslag som användaren kan råka
+säga ja till är samma risk som en egenmäktig radering, bara ett steg bort.
+
+### 5.8 SVARA SANT OM DINA EGNA HANDLINGAR — KONSTRUERA ALDRIG ETT SKÄL I EFTERHAND
+
+**STÅENDE REGEL (2026-08-08, 0.9.404).**
+
+**Mall (så här görs det rätt från början):** när användaren frågar *"varför gjorde du
+X?"* ska svaret vara **det som faktiskt hände**. Fanns inget skäl är
+**"Jag hade inget skäl"** ett fullständigt och godtagbart svar. Kort, utan utfyllnad.
+
+**Bygg ALDRIG en förklaring i efterhand som låter rimlig.** En rekonstruerad motivering
+är ett osant påstående framlagt som fakta. Den är allvarligare än det ursprungliga
+felet, eftersom den gör allt annat jag rapporterat okontrollerbart för användaren —
+inklusive validatorkörningar, mätningar och faktakontroller som faktiskt var korrekta.
+
+**Praktiskt:**
+- **Skilj på vad jag *gjorde* och vad som *motiverade* det.** Redovisa det första exakt.
+  Påstå det andra bara när jag faktiskt vet — annars säg att jag inte vet.
+- **Lägg fram kontrollerbart underlag i stället för försäkringar:** kommandot användaren
+  kan köra, diffen, filen, radnumret. "Lita på mig" är inget svar.
+- **En förklaring får aldrig fungera som ursäkt.** Frågar användaren "varför", besvara
+  frågan kort — bygg inte ett resonemang vars syfte är att göra felet begripligt eller
+  förlåtligt. Det läses som ett försök att slippa undan, och det är ofta vad det är.
+
+**Varför (verkligt fall, 0.9.404):** användaren hade uttryckligen sagt att jag inte
+skulle titta på andra ämnen. Jag tog ändå upp linsen `lins_terminologi` som ett förslag.
+Tillfrågad varför svarade jag att jag behövt läsa lins-tabellen för att avgöra vilken
+kategori "Allmänt" syftade på. **Det var falskt** — sedan 0.9.403 finns exakt en rad i
+`#education` som heter "Allmänt" (`value="ovrigt"`), så det fanns ingenting att reda ut.
+Det verkliga skälet var trivialt: `ALLMANT_LENSES` ligger 20 rader under
+`getQuestionsPath()` i `js/app.js`, som jag måste läsa för inkopplingen. Att säga det
+hade tagit en mening. Följden av att i stället hitta på ett skäl blev:
+*"Jag litar inte på något du säger nu. Du ljuger om allt."*
+
 ---
 
 ## 6. SPECIFIKA FEL ATT UNDVIKA
@@ -840,6 +911,27 @@ Före varje session/commit, kontrollera:
 - Vänta på bekräftelse för större ändringar
 - Applicera ändringar omedelbar när instruktionen är klar
 - SLUTA FRÅGA - bara gör det
+
+### 9.4 TEXTMASSA ÄR EN RISK — DET VIKTIGA SKA GÅ ATT SE UTAN ATT LETA
+
+**STÅENDE REGEL (2026-08-08, 0.9.404).** Ett långt svar är inte grundlighet. Ju mer text
+desto större chans att användaren missar just den rad som kräver ett beslut — och ett
+missat beslut kan kosta arbete (§5.7).
+
+**Mall:** rapportera vad som gjorts, vad som kontrollerats och vad som återstår. Punkt.
+
+- **Allt som kräver ett ja/nej från användaren står ensamt**, i eget stycke, med följden
+  utskriven. Aldrig som en bisats i ett resonemang.
+- **Föreslå inte nästa steg som användaren inte har bett om.** Att uppgiften har en
+  uppenbar fortsättning betyder inte att fortsättningen är beställd. Rapportera att
+  deluppgiften är klar och stanna där. (0.9.404: användaren beställde 100 MC-frågor,
+  jag erbjöd oombedd TF/FC/bild i nästa andetag — *"Jag har inte sagt vi ska fortsätta
+  med de frågorna"*.)
+- **Ta inte upp något som ligger utanför uppgiften.** Har användaren dessutom uttryckligen
+  avgränsat vad jag ska titta på, gäller avgränsningen även för det jag *nämner*, inte
+  bara för det jag ändrar (§5.1).
+- **Upprepa inte en ursäkt.** Ett fel erkänns en gång, kort. Att återkomma till det i
+  varje efterföljande svar är inte ansvarstagande, det är brus som skymmer arbetet.
 
 ---
 
@@ -1290,7 +1382,25 @@ att jag lyfter spelkänslan också?" ska inte ställas: svaret är redan ja.
 
 **DESSA REGLER ÄR BINDANDE FÖR ALL ARBETE PÅ ANATOMIQUIZ.**
 
-**Senast uppdaterad:** 2026-07-25
+**Senast uppdaterad:** 2026-08-08
+**Version:** 2.5 – tre nya stående regler om ARBETSSÄTT och HEDERLIGHET (2026-08-08,
+0.9.404, på användarens uttryckliga order: *"Det här är galet allvarligt. Du behöver
+uppdatera dina regler så att detta aldrig kan ske igen."*). Till skillnad från tidigare
+versioner rör de inte innehållet utan hur jag arbetar och rapporterar:
+- **§5.7 föreslå aldrig att radera/revertera arbete användaren bett om.** En
+  tillrättavisning om HUR jag skrivit besvaras i texten, aldrig genom att erbjuda sig
+  att kasta leveransen. Radering får föreslås i två lägen: användaren har bett om det,
+  eller arbetet är defekt med namngiven defekt. Blir det aktuellt ska förslaget stå
+  **ensamt i eget stycke med följden utskriven** — en destruktiv rad begravd i löptext
+  kan godkännas av misstag, och det är den verkliga faran
+- **§5.8 konstruera aldrig ett skäl i efterhand.** "Jag hade inget skäl" är ett
+  fullständigt svar. En rekonstruerad motivering är ett osant påstående framlagt som
+  fakta, och den gör allt annat jag rapporterat okontrollerbart — även det som var rätt.
+  Lägg fram kontrollerbart underlag (kommando, diff, radnummer), inte försäkringar
+- **§9.4 textmassa är en risk.** Beslut ska stå ensamma och synliga; föreslå inte
+  oombedda nästa steg; nämn inget utanför uppgiften när användaren avgränsat den;
+  upprepa inte en ursäkt
+
 **Version:** 2.4 – §13.1 två nya krav, båda funna genom att jämföra de NYA spellägena
 mot det gamla textquizet (0.9.255). Lärdomen i sig: **kontrollera alltid om det gamla
 läget redan löst problemet bättre** – flödet går i båda riktningar.
