@@ -342,9 +342,9 @@
   {
     "id": "otipm_38",
     "type": "fc",
-    "prompt": "Pedagogisk modell",
+    "prompt": "Modell för utbildning och undervisning",
     "sub": "Model for education and teaching",
-    "correct": "OTIPM-interventionsmodell med undervisning i grupp om aktivitet och hälsa, där klienter lär och reflekterar tillsammans.\n\nEx: Gruppträff om energibesparing vid trötthet.",
+    "correct": "OTIPM-interventionsmodell med utbildningsprogram för grupper, inriktade på utförandet av dagliga uppgifter.\n\nEx: Gruppträff om energibesparing vid trötthet.",
     "topic": "otipm_flashcards",
     "difficulty": "Normal",
     "source": "OTIPM Flashcards"
@@ -458,5 +458,1305 @@
     "topic": "otipm_flashcards",
     "difficulty": "Normal",
     "source": "OTIPM Flashcards"
+  },
+  {
+    "id": "otipm_101",
+    "type": "mc",
+    "prompt": "Vad är OTIPM avsett att styra?",
+    "correct": "Arbetsterapeutens resonemang genom hela processen, från utredning till utvärdering",
+    "distractors": [
+      "Klassificeringen av en persons funktionstillstånd, funktionshinder och omgivningsfaktorer",
+      "Motivationen bakom en persons görande och hur vanor, roller och intressen formas över tid",
+      "Rangordningen av vilka diagnoser som ska prioriteras i en rehabiliteringsverksamhet"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_151",
+    "type": "tf",
+    "prompt": "OTIPM är en modell för arbetsterapeutens resonemang genom hela processen, inte en teori om varför människor gör det de gör.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_102",
+    "type": "mc",
+    "prompt": "Vad innebär det klientcentrerade förhållningssättet i OTIPM?",
+    "correct": "Att klientens egna prioriteringar och perspektiv styr vad som utreds och åtgärdas",
+    "distractors": [
+      "Att arbetsterapeuten väljer de åtgärder som forskningen visat bäst genomsnittlig effekt för",
+      "Att klienten själv genomför bedömningen och tolkar sitt eget resultat tillsammans med teamet",
+      "Att vårdteamet gemensamt beslutar vilka mål som är rimliga att sätta upp för klienten"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_152",
+    "type": "tf",
+    "prompt": "I OTIPM innebär klientcentrering att arbetsterapeuten först utreder kroppsfunktionerna och därefter frågar klienten vad hen vill uppnå.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_103",
+    "type": "mc",
+    "prompt": "Vad menas med att OTIPM tillämpar ett så kallat true top-down-perspektiv?",
+    "correct": "Att processen börjar i klientens vardag och aktiviteter, inte i kroppsfunktionerna",
+    "distractors": [
+      "Att den arbetsterapeut som har längst erfarenhet i teamet fattar besluten om insatserna",
+      "Att processen börjar i de kroppsliga förutsättningarna och arbetar sig uppåt mot vardagen",
+      "Att klienten tilldelas en färdig åtgärdsplan innan den första observationen har gjorts"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_153",
+    "type": "tf",
+    "prompt": "Ett true top-down-perspektiv i OTIPM innebär att arbetsterapeuten inleder med klientens aktiviteter och vardag.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_104",
+    "type": "mc",
+    "prompt": "Varför avvisar OTIPM ett bottom-up-perspektiv som utgångspunkt?",
+    "correct": "Därför att träning av enskilda kroppsfunktioner inte säkert leder till bättre vardag",
+    "distractors": [
+      "Därför att kroppsfunktioner inte går att mäta på ett tillräckligt tillförlitligt sätt",
+      "Därför att klienten sällan har någon egen uppfattning om sina egna kroppsfunktioner",
+      "Därför att kroppsfunktioner anses falla utanför arbetsterapeutens kompetensområde"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_154",
+    "type": "tf",
+    "prompt": "OTIPM avvisar bottom-up därför att kroppsfunktioner ligger utanför arbetsterapeutens ansvarsområde.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_105",
+    "type": "mc",
+    "prompt": "Vad innebär det att en insats är aktivitetsbaserad enligt OTIPM?",
+    "correct": "Att klienten utför den verkliga aktiviteten, i verklig tid och i verklig miljö",
+    "distractors": [
+      "Att insatsen har klientens vardag som mål utan att aktiviteten behöver utföras där",
+      "Att insatsen bygger på en standardiserad bedömning av klientens motoriska färdigheter",
+      "Att insatsen genomförs i grupp tillsammans med andra som är i en liknande situation"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_155",
+    "type": "tf",
+    "prompt": "En aktivitetsbaserad insats i OTIPM innebär att klienten faktiskt utför aktiviteten, i verklig tid och verklig miljö.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_106",
+    "type": "mc",
+    "prompt": "Vad innebär det att en insats är aktivitetsfokuserad enligt OTIPM?",
+    "correct": "Att aktiviteten står i centrum för insatsen även om klienten inte utför den där och då",
+    "distractors": [
+      "Att klienten utför aktiviteten i sin egen bostad tillsammans med arbetsterapeuten på plats",
+      "Att insatsen riktas mot att stärka muskelstyrka och rörlighet inför en kommande aktivitet",
+      "Att aktiviteten väljs av arbetsterapeuten utifrån vad avdelningen har utrustning för"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_156",
+    "type": "tf",
+    "prompt": "En insats i OTIPM är aktivitetsfokuserad först när klienten utför aktiviteten i verklig miljö.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_107",
+    "type": "mc",
+    "prompt": "Vad kallas det yrkesmässiga beslutsfattande som enligt OTIPM styr varje steg i processen?",
+    "correct": "Professionellt resonemang",
+    "distractors": [
+      "Standardiserad bedömning",
+      "Analys av aktivitetsutförande",
+      "Klientcentrerat arbetssätt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_157",
+    "type": "tf",
+    "prompt": "Fisher och Nyman kallar det yrkesmässiga beslutsfattande som styr OTIPM för professionellt resonemang.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_108",
+    "type": "mc",
+    "prompt": "Vem eller vad kan vara klient i OTIPM?",
+    "correct": "En enskild person, en grupp eller en hel population",
+    "distractors": [
+      "En enskild person som har fått en diagnos fastställd av läkare",
+      "Den enskilde tillsammans med sina närmaste anhöriga",
+      "Det vårdteam som ansvarar för den enskildes rehabilitering"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_158",
+    "type": "tf",
+    "prompt": "Klienten i OTIPM är en enskild person, medan grupper och populationer hanteras i andra modeller.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_109",
+    "type": "mc",
+    "prompt": "Vad heter OTIPM:s första fas i den officiella svenska översättningen?",
+    "correct": "Fas för utredning och målformulering",
+    "distractors": [
+      "Fas för intervention och genomförande",
+      "Fas för utvärdering av resultatet",
+      "Fas för observation och utförandeanalys"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_159",
+    "type": "tf",
+    "prompt": "OTIPM:s första fas heter i den officiella svenska översättningen interventionsfasen.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_110",
+    "type": "mc",
+    "prompt": "Vilket steg inleder OTIPM:s första fas?",
+    "correct": "Utveckla terapeutiska relationer och samarbeta med klienten",
+    "distractors": [
+      "Observera klientens utförande av prioriterade uppgifter",
+      "Fastställa det klientcentrerade utförandesammanhanget",
+      "Identifiera resurser och begränsningar i utförandesammanhanget"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_160",
+    "type": "tf",
+    "prompt": "OTIPM inleds med att arbetsterapeuten utvecklar terapeutiska relationer och samarbetar med klienten.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_111",
+    "type": "mc",
+    "prompt": "Vad avser utförandesammanhanget i OTIPM?",
+    "correct": "Helheten av yttre och inre faktorer som omger och påverkar klientens utförande",
+    "distractors": [
+      "De kroppsfunktioner och kroppsstrukturer som ligger till grund för klientens rörelser",
+      "Den lista över uppgifter som klienten själv har rangordnat som viktigast för sig",
+      "Det rum och den utrustning som arbetsterapeuten har till sitt förfogande på enheten"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_161",
+    "type": "tf",
+    "prompt": "Utförandesammanhanget i OTIPM avser de kroppsfunktioner som ligger till grund för klientens rörelser.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_112",
+    "type": "mc",
+    "prompt": "Hur beskrivs utförandesammanhanget i OTIPM?",
+    "correct": "Som flera dimensioner, bland dem fysisk, social, kulturell och tidsmässig",
+    "distractors": [
+      "Som två motpoler, den inre miljön hos personen och den yttre miljön runt omkring",
+      "Som en rangordning från den viktigaste till den minst viktiga faktorn för klienten själv",
+      "Som en indelning i kroppsfunktioner, kroppsstrukturer och personliga faktorer"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_162",
+    "type": "tf",
+    "prompt": "Utförandesammanhanget i OTIPM beskrivs i flera dimensioner, bland dem den fysiska, sociala, kulturella och tidsmässiga.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_113",
+    "type": "mc",
+    "prompt": "Vad gör arbetsterapeuten i steget som följer på att utförandesammanhanget fastställts?",
+    "correct": "Identifierar klientens egna rapporterade och prioriterade problem med utförandet",
+    "distractors": [
+      "Väljer vilken av de fyra interventionsmodellerna som ska ligga till grund för insatsen",
+      "Genomför en utförandeanalys av den uppgift som klienten har valt att utföra",
+      "Utvärderar om utförandet av meningsfulla uppgifter blivit tillfredsställande"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_163",
+    "type": "tf",
+    "prompt": "I OTIPM är det arbetsterapeuten som avgör vilka aktivitetsproblem som ska prioriteras, oberoende av vad klienten själv rapporterar.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_114",
+    "type": "mc",
+    "prompt": "Vad avses i OTIPM med de uppgifter som klienten ska observeras utföra?",
+    "correct": "Uppgifter som är meningsfulla och betydelsefulla för klienten själv",
+    "distractors": [
+      "Uppgifter som ingår i den bedömningsrutin verksamheten har fastställt",
+      "Uppgifter som är enkla nog att klienten säkert klarar av dem",
+      "Uppgifter som belastar den kroppsfunktion som bedöms vara nedsatt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_164",
+    "type": "tf",
+    "prompt": "I OTIPM observeras klienten i de uppgifter som ingår i verksamhetens fastställda bedömningsrutin.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_115",
+    "type": "mc",
+    "prompt": "Vad är kärnan i det observationssteg som ingår i OTIPM:s första fas?",
+    "correct": "Att se klienten utföra de prioriterade uppgifterna och analysera utförandet",
+    "distractors": [
+      "Att intervjua klienten och de anhöriga om hur utförandet brukar gå till hemma",
+      "Att mäta ledrörlighet och muskelstyrka inför valet av lämplig åtgärd",
+      "Att låta klienten skatta sitt eget utförande på en graderad skala"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_165",
+    "type": "tf",
+    "prompt": "I OTIPM räcker det att klienten själv berättar hur uppgiften brukar gå, eftersom observationen ändå ger samma information.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_116",
+    "type": "mc",
+    "prompt": "Vad är utförandeanalys i OTIPM?",
+    "correct": "Bedömningen av hur ändamålsenligt klienten utför handlingarna i en observerad uppgift",
+    "distractors": [
+      "Kartläggningen av vilka krav en uppgift generellt ställer på den som ska utföra den",
+      "Uppdelningen av en uppgift i de enskilda delsteg som den är uppbyggd av",
+      "Sammanställningen av klientens tidigare aktivitetsliv och nuvarande prioriteringar"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_166",
+    "type": "tf",
+    "prompt": "Utförandeanalysen i OTIPM görs på en uppgift arbetsterapeuten sett klienten utföra.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_117",
+    "type": "mc",
+    "prompt": "Vad gör arbetsterapeuten direkt efter utförandeanalysen i OTIPM?",
+    "correct": "Definierar vilka handlingar klienten utför och inte utför ändamålsenligt",
+    "distractors": [
+      "Väljer den interventionsmodell som ska ligga till grund för den fortsatta åtgärden",
+      "Fastställer klientens diagnos utifrån de svårigheter som iakttagits i utförandet",
+      "Rangordnar vilka av vardagens uppgifter som är mest meningsfulla för klienten"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_167",
+    "type": "tf",
+    "prompt": "Efter utförandeanalysen definierar och beskriver arbetsterapeuten vilka handlingar klienten utför respektive inte utför ändamålsenligt.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_118",
+    "type": "mc",
+    "prompt": "Vilket steg i OTIPM handlar om att förklara varför klientens utförande brister?",
+    "correct": "Förtydliga eller tolka orsaken till klientens problem med utförandet",
+    "distractors": [
+      "Fastställa det klientcentrerade utförandesammanhanget",
+      "Utveckla terapeutiska relationer och samarbeta med klienten",
+      "Utvärdera om utförandet är tillfredsställande och förbättrat"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_168",
+    "type": "tf",
+    "prompt": "Steget att förtydliga eller tolka orsaken till klientens problem ligger i OTIPM före själva utförandeanalysen.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_119",
+    "type": "mc",
+    "prompt": "Hur beskriver den officiella svenska översättningen av OTIPM de mål som formuleras i första fasen?",
+    "correct": "Klientcentrerade och aktivitetsfokuserade mål",
+    "distractors": [
+      "Mätbara och tidsatta funktionsmål",
+      "Diagnosbaserade och evidensstyrda mål",
+      "Normrelaterade och standardiserade delmål"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_169",
+    "type": "tf",
+    "prompt": "Målen i OTIPM beskrivs i den officiella svenska översättningen som klientcentrerade och aktivitetsfokuserade.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_120",
+    "type": "mc",
+    "prompt": "Vad identifierar arbetsterapeuten i inledningen av OTIPM:s interventionsfas?",
+    "correct": "Resurser och begränsningar i det klientcentrerade utförandesammanhanget",
+    "distractors": [
+      "Klientens egna rapporterade och prioriterade problem med utförandet",
+      "De handlingar klienten utför och inte utför på ett ändamålsenligt sätt",
+      "Om utförandet av meningsfulla uppgifter har blivit tillfredsställande"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_170",
+    "type": "tf",
+    "prompt": "I OTIPM identifieras resurser och begränsningar i utförandesammanhanget som en del av utvärderingsfasen.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_121",
+    "type": "mc",
+    "prompt": "Vad skiljer utförandeanalys från aktivitetsanalys i OTIPM?",
+    "correct": "Utförandeanalysen gäller en viss persons görande, aktivitetsanalysen uppgiften i sig",
+    "distractors": [
+      "Utförandeanalysen görs av hela teamet, aktivitetsanalysen av arbetsterapeuten ensam",
+      "Utförandeanalysen bygger på intervju med klienten, aktivitetsanalysen på observation",
+      "Utförandeanalysen görs före insatsen och aktivitetsanalysen efter att den avslutats"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_171",
+    "type": "tf",
+    "prompt": "Aktivitetsanalys i OTIPM gäller de krav en uppgift ställer oberoende av vem som utför den.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_122",
+    "type": "mc",
+    "prompt": "Vad bedömer AMPS?",
+    "correct": "Kvaliteten på motoriska färdigheter och processfärdigheter i ADL-uppgifter",
+    "distractors": [
+      "Klientens egen skattning av sitt utförande och sin tillfredsställelse med det",
+      "Kvaliteten på klientens sociala samspel under ett pågående vardagligt samtal",
+      "Muskelstyrka och ledrörlighet i både över- och underextremitet"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_172",
+    "type": "tf",
+    "prompt": "AMPS bygger på att arbetsterapeuten observerar klienten utföra ADL-uppgifter.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_123",
+    "type": "mc",
+    "prompt": "Vad bedömer ESI?",
+    "correct": "Kvaliteten på klientens sociala samspel i en naturlig social situation",
+    "distractors": [
+      "Kvaliteten på motoriska färdigheter och processfärdigheter i ADL-uppgifter",
+      "Klientens egen skattning av hur viktig en enskild aktivitet är för hen",
+      "Klientens kognitiva förmåga med hjälp av standardiserade testuppgifter"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_173",
+    "type": "tf",
+    "prompt": "ESI bedömer kvaliteten på motoriska färdigheter och processfärdigheter i ADL-uppgifter.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_124",
+    "type": "mc",
+    "prompt": "Vad används COPM till?",
+    "correct": "Att låta klienten själv namnge, rangordna och skatta sina aktivitetsproblem",
+    "distractors": [
+      "Att låta arbetsterapeuten observera och gradera klientens färdigheter i ADL",
+      "Att mäta hur lång tid klienten behöver för en vardaglig uppgift i hemmet",
+      "Att kartlägga bostadens fysiska hinder inför en planerad miljöanpassning"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_174",
+    "type": "tf",
+    "prompt": "COPM bygger på klientens egen skattning, inte på arbetsterapeutens observation.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_125",
+    "type": "mc",
+    "prompt": "Vad kännetecknar en standardiserad bedömning?",
+    "correct": "Att den genomförs på ett fastställt sätt och tolkas mot referensvärden",
+    "distractors": [
+      "Att den genomförs i klientens egen bostad för att resultatet ska bli rättvisande",
+      "Att den utformas på nytt för varje enskild klient utifrån hens egna mål",
+      "Att den genomförs av två bedömare som efteråt jämför sina resultat"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_175",
+    "type": "tf",
+    "prompt": "En standardiserad bedömning utformas på nytt för varje klient utifrån hens egna mål.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_126",
+    "type": "mc",
+    "prompt": "Vad heter OTIPM:s andra fas i den officiella svenska översättningen?",
+    "correct": "Interventionsfas",
+    "distractors": [
+      "Fas för utvärdering av resultatet",
+      "Fas för utredning och målformulering",
+      "Fas för aktivitetsträning"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_176",
+    "type": "tf",
+    "prompt": "OTIPM:s andra fas heter interventionsfasen och rymmer valet mellan de fyra modellerna.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_127",
+    "type": "mc",
+    "prompt": "Vilken av OTIPM:s fyra interventionsmodeller väljs när aktiviteten eller miljön ska anpassas i stället för att förmågan tränas?",
+    "correct": "Den kompensatoriska modellen",
+    "distractors": [
+      "Modell för aktivitetsträning",
+      "Modell för utbildning och undervisning",
+      "Modell för förbättring av personliga faktorer och kroppsfunktioner"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_177",
+    "type": "tf",
+    "prompt": "Den kompensatoriska modellen i OTIPM syftar till att klienten ska återfå den nedsatta förmågan.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_128",
+    "type": "mc",
+    "prompt": "Vilken av OTIPM:s fyra interventionsmodeller vänder sig till en grupp klienter i stället för till en klient i taget?",
+    "correct": "Modell för utbildning och undervisning",
+    "distractors": [
+      "Den kompensatoriska modellen",
+      "Modell för aktivitetsträning",
+      "Modell för förbättring av personliga faktorer och kroppsfunktioner"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_178",
+    "type": "tf",
+    "prompt": "Modellen för utbildning och undervisning i OTIPM vänder sig till grupper, inte till en enskild klient åt gången.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_129",
+    "type": "mc",
+    "prompt": "Vilken av OTIPM:s fyra interventionsmodeller innebär att klienten återfår sin förmåga genom att upprepat utföra meningsfulla vardagsuppgifter?",
+    "correct": "Modell för aktivitetsträning",
+    "distractors": [
+      "Den kompensatoriska modellen",
+      "Modell för utbildning och undervisning",
+      "Modell för förbättring av personliga faktorer och kroppsfunktioner"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_179",
+    "type": "tf",
+    "prompt": "Modellen för aktivitetsträning i OTIPM innebär att klienten återfår eller utvecklar aktivitetsförmåga genom att utföra meningsfulla aktiviteter.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_130",
+    "type": "mc",
+    "prompt": "Vilken av OTIPM:s fyra interventionsmodeller syftar till att bygga upp de underliggande förutsättningarna, som styrka, rörlighet och uppmärksamhet?",
+    "correct": "Modell för förbättring av personliga faktorer och kroppsfunktioner",
+    "distractors": [
+      "Den kompensatoriska modellen med anpassad aktivitet",
+      "Modell för aktivitetsträning i meningsfulla uppgifter",
+      "Modell för utbildning och undervisning i grupp"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_180",
+    "type": "tf",
+    "prompt": "Modellen för förbättring av personliga faktorer och kroppsfunktioner används i OTIPM för att undervisa grupper om dagliga uppgifter.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_131",
+    "type": "mc",
+    "prompt": "Vad styr valet av interventionsmodell i OTIPM?",
+    "correct": "Det professionella resonemanget utifrån analysen och klientens mål",
+    "distractors": [
+      "Vilken av modellerna verksamheten har flest utbildade medarbetare i",
+      "Vilken av modellerna som visat bäst effekt i den senaste forskningen",
+      "Vilken av modellerna som kräver kortast behandlingstid för klienten"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_181",
+    "type": "tf",
+    "prompt": "I OTIPM väljs interventionsmodell utifrån utförandeanalysen och klientens mål.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_132",
+    "type": "mc",
+    "prompt": "Vad innebär kompensation som åtgärd i OTIPM?",
+    "correct": "Att ett annat sätt eller ett hjälpmedel ersätter den nedsatta förmågan",
+    "distractors": [
+      "Att den nedsatta förmågan tränas upp genom upprepad belastning över tid",
+      "Att klienten undervisas i grupp om hur vardagen kan läggas om",
+      "Att uppgiften delas upp i delsteg som tränas var för sig"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_182",
+    "type": "tf",
+    "prompt": "Kompensation i OTIPM innebär att den nedsatta förmågan tränas upp genom upprepad belastning.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_133",
+    "type": "mc",
+    "prompt": "Var i OTIPM hör förskrivning av ett hjälpmedel hemma?",
+    "correct": "I den kompensatoriska modellen",
+    "distractors": [
+      "I modellen för aktivitetsträning",
+      "I modellen för utbildning och undervisning",
+      "I modellen för förbättring av personliga faktorer"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_183",
+    "type": "tf",
+    "prompt": "Förskrivning av ett hjälpmedel hör i OTIPM hemma i den kompensatoriska modellen.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_134",
+    "type": "mc",
+    "prompt": "En arbetsterapeut tar bort lösa mattor och sätter upp stödhandtag i klientens badrum. Vilken av OTIPM:s modeller tillämpas?",
+    "correct": "Den kompensatoriska modellen",
+    "distractors": [
+      "Modell för aktivitetsträning",
+      "Modell för utbildning och undervisning",
+      "Modell för förbättring av personliga faktorer och kroppsfunktioner"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_184",
+    "type": "tf",
+    "prompt": "Att bygga om klientens badrum för att minska fallrisken hör i OTIPM till modellen för aktivitetsträning.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_135",
+    "type": "mc",
+    "prompt": "En klient lär sig klä på sig sittande i stället för stående, utan att styrkan tränas. Vilken av OTIPM:s modeller tillämpas?",
+    "correct": "Den kompensatoriska modellen",
+    "distractors": [
+      "Modell för aktivitetsträning",
+      "Modell för utbildning och undervisning",
+      "Modell för förbättring av personliga faktorer och kroppsfunktioner"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_185",
+    "type": "tf",
+    "prompt": "Att lära ut ett nytt sätt att utföra en uppgift, utan att förmågan tränas, hör i OTIPM till den kompensatoriska modellen.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_136",
+    "type": "mc",
+    "prompt": "En arbetsterapeut håller en kursserie för personer med långvarig trötthet om hur dagens aktiviteter kan fördelas. Vilken av OTIPM:s modeller tillämpas?",
+    "correct": "Modell för utbildning och undervisning",
+    "distractors": [
+      "Den kompensatoriska modellen",
+      "Modell för aktivitetsträning",
+      "Modell för förbättring av personliga faktorer och kroppsfunktioner"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_186",
+    "type": "tf",
+    "prompt": "En kursserie i grupp om hur dagens aktiviteter kan fördelas hör i OTIPM till modellen för utbildning och undervisning.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_137",
+    "type": "mc",
+    "prompt": "En klient klär på sig själv varje morgon, om och om igen, tills det går av sig självt. Vilken av OTIPM:s fyra interventionsmodeller tillämpas?",
+    "correct": "Modell för aktivitetsträning",
+    "distractors": [
+      "Den kompensatoriska modellen",
+      "Modell för utbildning och undervisning",
+      "Modell för förbättring av personliga faktorer och kroppsfunktioner"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_187",
+    "type": "tf",
+    "prompt": "Att träna påklädning genom att faktiskt klä på sig varje morgon hör i OTIPM till den kompensatoriska modellen.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_138",
+    "type": "mc",
+    "prompt": "En klient utför aktiviteter valda för att bygga upp greppstyrkan efter en handskada. Vilken av OTIPM:s modeller tillämpas?",
+    "correct": "Modell för förbättring av personliga faktorer och kroppsfunktioner",
+    "distractors": [
+      "Den kompensatoriska modellen med anpassad aktivitet",
+      "Modell för aktivitetsträning i meningsfulla uppgifter",
+      "Modell för utbildning och undervisning i grupp"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_188",
+    "type": "tf",
+    "prompt": "Aktiviteter valda för att bygga upp greppstyrkan hör i OTIPM till modellen för förbättring av personliga faktorer och kroppsfunktioner.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_139",
+    "type": "mc",
+    "prompt": "Vad heter OTIPM:s tredje fas i den officiella svenska översättningen?",
+    "correct": "Utvärderingsfas",
+    "distractors": [
+      "Interventionsfas",
+      "Fas för utredning och målformulering",
+      "Fas för utförandeanalys"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_189",
+    "type": "tf",
+    "prompt": "OTIPM:s tredje fas heter i den officiella svenska översättningen utvärderingsfasen.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_140",
+    "type": "mc",
+    "prompt": "Vad utvärderas i OTIPM:s sista fas?",
+    "correct": "Om utförandet av meningsfulla uppgifter är tillfredsställande och bättre",
+    "distractors": [
+      "Om klientens kroppsfunktioner har återgått till sina normalvärden",
+      "Om insatsen har genomförts inom den planerade tidsramen",
+      "Om klienten är nöjd med bemötandet under behandlingstiden"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_190",
+    "type": "tf",
+    "prompt": "I OTIPM:s utvärderingsfas prövas om utförandet av meningsfulla uppgifter blivit tillfredsställande och förbättrat.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_141",
+    "type": "mc",
+    "prompt": "Hur prövas resultatet av insatsen i OTIPM?",
+    "correct": "Med en ny utförandeanalys av samma slags uppgift som observerades först",
+    "distractors": [
+      "Med en strukturerad intervju om hur klienten upplevt behandlingsperioden",
+      "Med en mätning av rörlighet och styrka i den drabbade kroppsdelen",
+      "Med en genomgång av journalen tillsammans med det övriga teamet"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_191",
+    "type": "tf",
+    "prompt": "Resultatet av en insats prövas i OTIPM genom en intervju om hur klienten upplevt behandlingen.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_142",
+    "type": "mc",
+    "prompt": "Vad är ett utfallsmått?",
+    "correct": "Ett instrument som fångar om insatsen gett den förändring som söktes",
+    "distractors": [
+      "Ett instrument som fastställer klientens diagnos inför den planerade insatsen",
+      "Ett instrument som beskriver vilka krav en vardaglig uppgift ställer",
+      "Ett instrument som rangordnar verksamhetens klienter efter behov"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_192",
+    "type": "tf",
+    "prompt": "Ett utfallsmått används för att fånga om insatsen gett den förändring som eftersträvades.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_143",
+    "type": "mc",
+    "prompt": "Vad avses med aktivitetsutförande i OTIPM?",
+    "correct": "Hur en person faktiskt genomför en vardaglig uppgift i en verklig situation",
+    "distractors": [
+      "Vilka krav en vardaglig uppgift ställer på den som ska genomföra den",
+      "Vilken betydelse en vardaglig uppgift har för den person som utför den",
+      "Vilka kroppsfunktioner som är i bruk under en vardaglig uppgift"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_193",
+    "type": "tf",
+    "prompt": "Aktivitetsutförande i OTIPM avser hur en person faktiskt genomför en vardaglig uppgift i en verklig situation.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_144",
+    "type": "mc",
+    "prompt": "Vad är ett aktivitetsproblem i OTIPM?",
+    "correct": "En svårighet i en uppgift som klienten vill eller behöver kunna utföra",
+    "distractors": [
+      "En avvikelse i en kroppsfunktion som uppmätts med ett standardiserat test",
+      "En brist i bostadens utformning som försvårar förflyttning inomhus",
+      "En skillnad mellan teamets och klientens uppfattning om målet"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_194",
+    "type": "tf",
+    "prompt": "Ett aktivitetsproblem i OTIPM är en avvikelse i en kroppsfunktion som uppmätts med ett standardiserat test.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_145",
+    "type": "mc",
+    "prompt": "Vad avses med kroppsfunktioner i OTIPM:s begreppsapparat?",
+    "correct": "Kroppssystemens fysiologiska och psykologiska funktioner",
+    "distractors": [
+      "Kroppens anatomiska delar och deras inbördes läge",
+      "De handlingar som går att iaktta när en uppgift utförs",
+      "De krav som själva uppgiften ställer på utföraren"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_195",
+    "type": "tf",
+    "prompt": "Kroppsfunktioner avser kroppens anatomiska delar och deras inbördes läge.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_146",
+    "type": "mc",
+    "prompt": "Vad avser personliga faktorer i OTIPM, vid sidan av kroppsfunktionerna?",
+    "correct": "Inre förhållanden hos personen, som motivation och sinnesstämning",
+    "distractors": [
+      "Anhörigas och arbetskamraters inställning till klientens rehabilitering",
+      "De redskap och hjälpmedel klienten har tillgång till i sitt hem",
+      "De normer som råder på klientens arbetsplats och i hens umgänge"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_196",
+    "type": "tf",
+    "prompt": "Personliga faktorer i OTIPM avser anhörigas och arbetskamraters inställning till klienten.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_147",
+    "type": "mc",
+    "prompt": "Vad kännetecknar en förberedande åtgärd i OTIPM?",
+    "correct": "Att den bereder väg för en aktivitet utan att själva aktiviteten utförs",
+    "distractors": [
+      "Att den utförs i klientens verkliga miljö tillsammans med arbetsterapeuten",
+      "Att den genomförs i grupp innan den individuella behandlingen inleds",
+      "Att den föregås av en standardiserad bedömning av klientens färdigheter"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_197",
+    "type": "tf",
+    "prompt": "En förberedande åtgärd i OTIPM räknas som aktivitetsbaserad, eftersom den syftar mot en aktivitet.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_148",
+    "type": "mc",
+    "prompt": "Vad innebär träning i kontext enligt OTIPM?",
+    "correct": "Att uppgiften tränas i den verkliga miljö där den ska utföras",
+    "distractors": [
+      "Att uppgiften tränas i en särskilt iordningställd övningsmiljö",
+      "Att uppgiften tränas i delsteg som senare sätts samman",
+      "Att uppgiften tränas tillsammans med andra i samma situation"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_198",
+    "type": "tf",
+    "prompt": "Träning i kontext innebär enligt OTIPM att uppgiften tränas i en särskilt iordningställd övningsmiljö.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_149",
+    "type": "mc",
+    "prompt": "Vad kännetecknar en simulerad aktivitet i OTIPM?",
+    "correct": "Att den genomförs i en iordningställd övningsmiljö i stället för i den verkliga",
+    "distractors": [
+      "Att den genomförs i klientens eget hem under ett planerat hembesök",
+      "Att den genomförs utan att klienten känner till syftet med den",
+      "Att den genomförs av arbetsterapeuten medan klienten iakttar"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_199",
+    "type": "tf",
+    "prompt": "En simulerad aktivitet i OTIPM genomförs i en iordningställd övningsmiljö i stället för i den verkliga.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_150",
+    "type": "mc",
+    "prompt": "Vad avser aktivitetsförmåga i OTIPM:s interventionsmodeller?",
+    "correct": "Förmågan att genomföra de vardagliga uppgifter som är meningsfulla",
+    "distractors": [
+      "Styrkan och rörligheten i de kroppsdelar som uppgiften belastar",
+      "Den tid personen behöver för att genomföra en vardaglig uppgift",
+      "Den grad av hjälp personen tar emot från sin egen omgivning"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
+  },
+  {
+    "id": "otipm_200",
+    "type": "tf",
+    "prompt": "Aktivitetsförmåga i OTIPM avser styrkan och rörligheten i de kroppsdelar som uppgiften belastar.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "otipm_flashcards",
+    "difficulty": "Normal",
+    "source": "Fisher & Nyman, OTIPM (Sveriges Arbetsterapeuter); officiell svensk översättning av OTIPM-schemat, 2013"
   }
 ]

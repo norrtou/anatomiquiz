@@ -408,5 +408,1305 @@
     "topic": "moho_flashcards",
     "difficulty": "Normal",
     "source": "MOHO Flashcards"
+  },
+  {
+    "id": "moho_101",
+    "type": "mc",
+    "prompt": "En arbetsterapeut kartlägger vad som motiverar en patient att göra saker: vad hen tycker är betydelsefullt, vad som lockar och hur hen ser på sin egen förmåga. Vilken av MOHO:s fyra delar rör detta?",
+    "correct": "Viljekraft",
+    "distractors": [
+      "Vanebildning",
+      "Utförandekapacitet",
+      "Miljö"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_151",
+    "type": "tf",
+    "prompt": "I MOHO omfattar viljekraft en persons värderingar, intressen och uppfattning om den egna förmågan.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_102",
+    "type": "mc",
+    "prompt": "Vilket begrepp i MOHO avser det en person upplever som betydelsefullt och angeläget att ägna sig åt?",
+    "correct": "Värderingar",
+    "distractors": [
+      "Intressen",
+      "Färdigheter",
+      "Rutiner"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_152",
+    "type": "tf",
+    "prompt": "I MOHO avser värderingar det en person tycker om och upplever som roligt att göra.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_103",
+    "type": "mc",
+    "prompt": "Värderingarna i MOHO består av två delar. Den ena är pliktkänsla. Vad heter den andra?",
+    "correct": "Personliga övertygelser",
+    "distractors": [
+      "Upplevelse av personlig kapacitet",
+      "Internaliserade roller",
+      "Intressemönster"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_153",
+    "type": "tf",
+    "prompt": "Personliga övertygelser är i MOHO en av värderingarnas två delar och avser uppfattningen om vad som är viktigt och riktigt i livet.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_104",
+    "type": "mc",
+    "prompt": "En patient går till sitt arbete trots svår trötthet, eftersom hen anser att det vore orätt att låta kollegorna bära hens börda. Vilket MOHO-begrepp beskriver drivkraften bakom handlingen?",
+    "correct": "Pliktkänsla",
+    "distractors": [
+      "Rollförväntningar",
+      "Aktivitetsval",
+      "Intressen"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_154",
+    "type": "tf",
+    "prompt": "Pliktkänsla avser i MOHO de krav omgivningen ställer på en person i en viss roll.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_105",
+    "type": "mc",
+    "prompt": "Vad avser begreppet uppfattning om den egna förmågan i MOHO?",
+    "correct": "Känslan av att vara kompetent och av att kunna nå det man siktar mot",
+    "distractors": [
+      "Den bild man har av vem man är och vill bli som aktiv person",
+      "De automatiserade mönster som gör vardagen förutsägbar och trygg",
+      "Det man tycker om och upplever som tillfredsställande att göra"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_155",
+    "type": "tf",
+    "prompt": "Uppfattning om den egna förmågan består i MOHO av två delar: upplevelse av personlig kapacitet och känsla av effektivitet.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_106",
+    "type": "mc",
+    "prompt": "Vilket begrepp i MOHO avser en persons värdering av sina egna fysiska, intellektuella och sociala förmågor?",
+    "correct": "Upplevelse av personlig kapacitet",
+    "distractors": [
+      "Kommunikations- och interaktionsfärdigheter",
+      "Känsla av effektivitet",
+      "Objektiva komponenter"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_156",
+    "type": "tf",
+    "prompt": "Upplevelse av personlig kapacitet avser i MOHO hur säker en person är på att en viss handling ska leda till önskat resultat.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_107",
+    "type": "mc",
+    "prompt": "En patient tror sig ha styrkan att laga mat, men tvivlar på att hen ska lyckas få det gjort i tid och ge upp halvvägs. Vilken del av uppfattningen om den egna förmågan är påverkad?",
+    "correct": "Känsla av effektivitet",
+    "distractors": [
+      "Upplevelse av personlig kapacitet",
+      "Rollförväntningar",
+      "Intressemönster"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_157",
+    "type": "tf",
+    "prompt": "Känsla av effektivitet handlar i MOHO om tankar och känslor kring hur väl de egna förmågorna leder till önskat resultat.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_108",
+    "type": "mc",
+    "prompt": "Vilket begrepp i MOHO avser det en person tycker om och upplever som tillfredsställande att göra?",
+    "correct": "Intressen",
+    "distractors": [
+      "Värderingar",
+      "Vanor",
+      "Färdigheter"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_158",
+    "type": "tf",
+    "prompt": "Intressen avser i MOHO det en person anser vara moraliskt riktigt att ägna sin tid åt.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_109",
+    "type": "mc",
+    "prompt": "Vilket begrepp i MOHO avser den unika kombination av sysslor som en viss person föredrar framför andra?",
+    "correct": "Intressemönster",
+    "distractors": [
+      "Intressen",
+      "Aktivitetsomställning",
+      "Aktivitetsval"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_159",
+    "type": "tf",
+    "prompt": "Intressemönster avser i MOHO den unika kombination av sysslor som en person föredrar att ägna sig åt.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_110",
+    "type": "mc",
+    "prompt": "Vilket begrepp i MOHO avser den känsla av välbehag och tillfredsställelse som uppstår ur själva görandet?",
+    "correct": "Glädje",
+    "distractors": [
+      "Tolkning",
+      "Förväntan",
+      "Perturbation"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_160",
+    "type": "tf",
+    "prompt": "Glädje avser i MOHO den reflektion en person gör efteråt över vad utförandet betydde.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_111",
+    "type": "mc",
+    "prompt": "I vilken ordning löper viljeprocessen i MOHO?",
+    "correct": "Förväntan, aktivitetsval, upplevelse, tolkning",
+    "distractors": [
+      "Tolkning, upplevelse, aktivitetsval, förväntan",
+      "Aktivitetsval, förväntan, tolkning, upplevelse",
+      "Upplevelse, tolkning, förväntan, aktivitetsval"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_161",
+    "type": "tf",
+    "prompt": "Viljeprocessen i MOHO är ett kretslopp där tolkningen av en erfarenhet formar förväntan inför nästa tillfälle.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_112",
+    "type": "mc",
+    "prompt": "Vilket steg i viljeprocessen avser att uppmärksamma och reagera på en möjlighet till handling innan den påbörjats?",
+    "correct": "Förväntan",
+    "distractors": [
+      "Tolkning",
+      "Upplevelse",
+      "Perturbation"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_162",
+    "type": "tf",
+    "prompt": "Förväntan är i MOHO det steg i viljeprocessen där personen reflekterar över hur ett redan avslutat utförande gick.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_113",
+    "type": "mc",
+    "prompt": "En patient bestämmer sig på morgonen för att gå ut och promenera en stund. Vilket MOHO-begrepp beskriver ett sådant kortsiktigt beslut?",
+    "correct": "Aktivitetsval",
+    "distractors": [
+      "Verksamhetsval",
+      "Aktivitetsomställning",
+      "Rollförväntningar"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_163",
+    "type": "tf",
+    "prompt": "Aktivitetsval avser i MOHO kortsiktiga beslut om att påbörja eller avsluta en aktivitet.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_114",
+    "type": "mc",
+    "prompt": "En patient bestämmer sig efter lång tvekan för att söka till en utbildning och därmed axla studentrollen. Vilket MOHO-begrepp beskriver ett sådant beslut?",
+    "correct": "Verksamhetsval",
+    "distractors": [
+      "Aktivitetsval",
+      "Rollutförande",
+      "Aktivitetsengagemang"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_164",
+    "type": "tf",
+    "prompt": "Verksamhetsval avser i MOHO ett kortsiktigt beslut om att påbörja eller avbryta en enskild syssla.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_115",
+    "type": "mc",
+    "prompt": "Vilket steg i viljeprocessen avser de omedelbara tankar och känslor som uppstår medan personen håller på med aktiviteten?",
+    "correct": "Upplevelse",
+    "distractors": [
+      "Tolkning",
+      "Förväntan",
+      "Verksamhetsval"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_165",
+    "type": "tf",
+    "prompt": "Upplevelse avser i MOHO de omedelbara tankar och känslor som väcks under själva utförandet.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_116",
+    "type": "mc",
+    "prompt": "Vilket steg i viljeprocessen avser den efterföljande reflektionen över vad utförandet betydde för personen?",
+    "correct": "Tolkning",
+    "distractors": [
+      "Upplevelse",
+      "Förväntan",
+      "Aktivitetsval"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_166",
+    "type": "tf",
+    "prompt": "Tolkning avser i MOHO det som pågår i personens huvud i samma stund som handlingen utförs.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_117",
+    "type": "mc",
+    "prompt": "Vilken av MOHO:s fyra delar avser den internaliserade benägenheten att uppvisa konsekventa beteendemönster i vardagen?",
+    "correct": "Vanebildning",
+    "distractors": [
+      "Viljekraft",
+      "Utförandekapacitet",
+      "Miljö"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_167",
+    "type": "tf",
+    "prompt": "Vanebildning i MOHO rymmer både vanor och internaliserade roller.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_118",
+    "type": "mc",
+    "prompt": "Vilket begrepp i MOHO avser förvärvade tendenser att agera på ett konsekvent sätt i välbekanta situationer?",
+    "correct": "Vanor",
+    "distractors": [
+      "Färdigheter",
+      "Värderingar",
+      "Intressen"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_168",
+    "type": "tf",
+    "prompt": "Vanor avser i MOHO de iakttagbara handlingar som personen utför när en uppgift genomförs.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_119",
+    "type": "mc",
+    "prompt": "En patient tar sina läkemedel, duschar och äter frukost i samma ordning varje morgon. Vilket MOHO-begrepp beskriver detta återkommande mönster?",
+    "correct": "Rutiner",
+    "distractors": [
+      "Färdigheter",
+      "Aktivitetsformer",
+      "Rollförväntningar"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_169",
+    "type": "tf",
+    "prompt": "Rutiner avser i MOHO återkommande mönster av aktiviteter som strukturerar vardagen.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_120",
+    "type": "mc",
+    "prompt": "Vilket begrepp i MOHO avser en socialt eller personligt definierad position som personen gjort till en del av sig själv?",
+    "correct": "Internaliserade roller",
+    "distractors": [
+      "Rollförväntningar",
+      "Aktivitetsmiljöer",
+      "Sociala grupper"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_170",
+    "type": "tf",
+    "prompt": "Internaliserade roller avser i MOHO de positioner som en myndighet eller arbetsgivare formellt har tilldelat personen.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_121",
+    "type": "mc",
+    "prompt": "Vilket begrepp i MOHO avser det omgivningen förutsätter att en person i en viss position ska göra?",
+    "correct": "Rollförväntningar",
+    "distractors": [
+      "Pliktkänsla",
+      "Miljöns inverkan",
+      "Rollutförande"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_171",
+    "type": "tf",
+    "prompt": "Rollförväntningar avser i MOHO det omgivningen förutsätter att en person i en viss position ska göra.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_122",
+    "type": "mc",
+    "prompt": "Vilket begrepp i MOHO avser i vilken utsträckning en person faktiskt lever upp till sin roll i vardagen?",
+    "correct": "Rollutförande",
+    "distractors": [
+      "Rollförväntningar",
+      "Aktivitetskompetens",
+      "Aktivitetsidentitet"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_172",
+    "type": "tf",
+    "prompt": "Rollutförande avser i MOHO den bild personen har av vem hen är och vill bli som aktiv varelse.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_123",
+    "type": "mc",
+    "prompt": "En patient går i pension och hela veckans innehåll förändras. Vilket MOHO-begrepp beskriver en sådan förändring av aktiviteterna när livet tar en ny vändning?",
+    "correct": "Aktivitetsomställning",
+    "distractors": [
+      "Aktivitetsanpassning",
+      "Perturbation",
+      "Kontrollparameter"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_173",
+    "type": "tf",
+    "prompt": "Aktivitetsomställning avser i MOHO de förändringar av aktiviteterna som sker när en person utvecklas och livet tar nya vändningar.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_124",
+    "type": "mc",
+    "prompt": "Vilken av MOHO:s fyra delar avser förmågan att göra, sedd både som objektiva kroppsliga och mentala system och som personens egen upplevelse?",
+    "correct": "Utförandekapacitet",
+    "distractors": [
+      "Viljekraft",
+      "Vanebildning",
+      "Miljö"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_174",
+    "type": "tf",
+    "prompt": "Utförandekapacitet i MOHO byggs upp av personens vanor och internaliserade roller.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_125",
+    "type": "mc",
+    "prompt": "Vilket begrepp i MOHO avser upplevelsen av att vara i och erfara världen genom just sin egen kropp?",
+    "correct": "Den levda kroppen",
+    "distractors": [
+      "Objektiva komponenter",
+      "Miljöns inverkan",
+      "Aktivitetsformer"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_175",
+    "type": "tf",
+    "prompt": "Den levda kroppen avser i MOHO utförandekapacitetens subjektiva sida, alltså hur kroppen erfars inifrån.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_126",
+    "type": "mc",
+    "prompt": "Vilket begrepp i MOHO avser de muskuloskeletala, neurologiska, kardiopulmonella och kognitiva system som utförandet vilar på?",
+    "correct": "Objektiva komponenter",
+    "distractors": [
+      "Den levda kroppen",
+      "Aktivitetsformer",
+      "Miljöns inverkan"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_176",
+    "type": "tf",
+    "prompt": "Objektiva komponenter avser i MOHO hur en person själv erfar sin kropp inifrån under utförandet.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_127",
+    "type": "mc",
+    "prompt": "Vilket begrepp i MOHO avser förmågan att svara på förändring och återhämta sig efter en påfrestning?",
+    "correct": "Resiliens",
+    "distractors": [
+      "Perturbation",
+      "Heterarki",
+      "Emergens"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_177",
+    "type": "tf",
+    "prompt": "Resiliens avser i MOHO förmågan att svara på förändring och återhämta sig efter en påfrestning.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_128",
+    "type": "mc",
+    "prompt": "Vilken av MOHO:s fyra delar avser de fysiska och sociala sammanhang där en person utför sina aktiviteter?",
+    "correct": "Miljö",
+    "distractors": [
+      "Viljekraft",
+      "Vanebildning",
+      "Utförandekapacitet"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_178",
+    "type": "tf",
+    "prompt": "Miljö i MOHO omfattar rum och föremål men räknar sociala grupper till vanebildningen.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_129",
+    "type": "mc",
+    "prompt": "Vilket begrepp i MOHO avser avgränsade fysiska sammanhang som är utformade så att de påverkar vad människor gör i dem?",
+    "correct": "Rum",
+    "distractors": [
+      "Föremål",
+      "Sociala grupper",
+      "Aktivitetsformer"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_179",
+    "type": "tf",
+    "prompt": "Rum avser i MOHO avgränsade fysiska sammanhang som är utformade så att de påverkar vad människor gör i dem.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_130",
+    "type": "mc",
+    "prompt": "Vilket begrepp i MOHO avser de naturligt förekommande eller tillverkade ting som människor hanterar i sina aktiviteter?",
+    "correct": "Föremål",
+    "distractors": [
+      "Rum",
+      "Sociala grupper",
+      "Aktivitetsmiljöer"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_180",
+    "type": "tf",
+    "prompt": "Föremål avser i MOHO de avgränsade fysiska sammanhang som människor rör sig i.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_131",
+    "type": "mc",
+    "prompt": "Vilket begrepp i MOHO avser kulturellt igenkända och namngivna handlingssekvenser, som att koka kaffe eller duka bordet?",
+    "correct": "Aktivitetsformer",
+    "distractors": [
+      "Sociala grupper",
+      "Färdigheter",
+      "Rutiner"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_181",
+    "type": "tf",
+    "prompt": "Aktivitetsformer avser i MOHO kulturellt igenkända och namngivna handlingssekvenser som människor känner igen och kan benämna.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_132",
+    "type": "mc",
+    "prompt": "Vilket begrepp i MOHO avser de samlingar av människor som tillsammans bär upp roller och sätt att göra saker på?",
+    "correct": "Sociala grupper",
+    "distractors": [
+      "Aktivitetsformer",
+      "Kultur",
+      "Rollförväntningar"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_182",
+    "type": "tf",
+    "prompt": "Sociala grupper avser i MOHO de nedärvda normer och värderingar som en hel befolkning delar.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_133",
+    "type": "mc",
+    "prompt": "Vilket begrepp i MOHO avser de övertygelser, värderingar, normer och beteenden som förs vidare inom en grupp eller ett samhälle?",
+    "correct": "Kultur",
+    "distractors": [
+      "Sociala grupper",
+      "Rollförväntningar",
+      "Aktivitetsmiljöer"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_183",
+    "type": "tf",
+    "prompt": "Kultur avser i MOHO de övertygelser, värderingar, normer och beteenden som förs vidare inom en grupp eller ett samhälle.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_134",
+    "type": "mc",
+    "prompt": "Vilket begrepp i MOHO avser det sätt på vilket en persons egenskaper och omgivningens egenskaper samspelar och påverkar varandra?",
+    "correct": "Miljöns inverkan",
+    "distractors": [
+      "Aktivitetsmiljöer",
+      "Kontrollparameter",
+      "Aktivitetsomställning"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_184",
+    "type": "tf",
+    "prompt": "Miljöns inverkan avser i MOHO det krav som en uppgift i sig ställer på den som ska utföra den.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_135",
+    "type": "mc",
+    "prompt": "Vilket begrepp i MOHO avser de sammansatta platser där aktivitet äger rum, uppbyggda av rum, föremål, aktivitetsformer och sociala grupper?",
+    "correct": "Aktivitetsmiljöer",
+    "distractors": [
+      "Miljöns inverkan",
+      "Kultur",
+      "Rutiner"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_185",
+    "type": "tf",
+    "prompt": "Aktivitetsmiljöer avser i MOHO de sammansatta platser där aktivitet äger rum, som hemmet, arbetsplatsen eller skolan.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_136",
+    "type": "mc",
+    "prompt": "Vilken av görandets tre nivåer i MOHO är den bredaste och avser engagemang i arbete, lek och dagliga aktiviteter som hör till personens sammanhang?",
+    "correct": "Aktivitetsdelaktighet",
+    "distractors": [
+      "Aktivitetsutförande",
+      "Färdigheter",
+      "Motoriska färdigheter"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_186",
+    "type": "tf",
+    "prompt": "Aktivitetsdelaktighet är i MOHO den smalaste av görandets tre nivåer och avser en enskild iakttagbar handling.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_137",
+    "type": "mc",
+    "prompt": "Vilken av görandets tre nivåer i MOHO avser att genomföra en avgränsad aktivitetsform, som att laga en måltid?",
+    "correct": "Aktivitetsutförande",
+    "distractors": [
+      "Aktivitetsdelaktighet",
+      "Färdigheter",
+      "Processfärdigheter"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_187",
+    "type": "tf",
+    "prompt": "Aktivitetsutförande ligger i MOHO mellan aktivitetsdelaktighet och färdigheter i görandets tre nivåer.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_138",
+    "type": "mc",
+    "prompt": "Vilken av görandets tre nivåer i MOHO är den smalaste och avser de målinriktade handlingar man kan iaktta medan en uppgift genomförs?",
+    "correct": "Färdigheter",
+    "distractors": [
+      "Aktivitetsdelaktighet",
+      "Aktivitetsutförande",
+      "Aktivitetsengagemang"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_188",
+    "type": "tf",
+    "prompt": "Färdigheter avser i MOHO de underliggande kroppssystem som gör görandet möjligt, inte de handlingar som går att iaktta.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_139",
+    "type": "mc",
+    "prompt": "Vilken grupp av färdigheter i MOHO avser att förflytta sig själv eller de föremål som används i uppgiften?",
+    "correct": "Motoriska färdigheter",
+    "distractors": [
+      "Processfärdigheter",
+      "Kommunikations- och interaktionsfärdigheter",
+      "Objektiva komponenter"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_189",
+    "type": "tf",
+    "prompt": "Motoriska färdigheter avser i MOHO att förflytta sig själv eller de föremål som ingår i uppgiften.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_140",
+    "type": "mc",
+    "prompt": "Vilken grupp av färdigheter i MOHO avser att ordna handlingar i tid, välja och använda redskap och anpassa sig när något går fel?",
+    "correct": "Processfärdigheter",
+    "distractors": [
+      "Motoriska färdigheter",
+      "Kommunikations- och interaktionsfärdigheter",
+      "Objektiva komponenter"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_190",
+    "type": "tf",
+    "prompt": "Processfärdigheter avser i MOHO att förmedla sina avsikter och behov till andra människor.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_141",
+    "type": "mc",
+    "prompt": "Vilken grupp av färdigheter i MOHO avser att förmedla avsikter och behov och att samordna sig med andra under aktiviteten?",
+    "correct": "Kommunikations- och interaktionsfärdigheter",
+    "distractors": [
+      "Motoriska färdigheter",
+      "Processfärdigheter",
+      "Objektiva komponenter"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_191",
+    "type": "tf",
+    "prompt": "Kommunikations- och interaktionsfärdigheter avser i MOHO att förmedla avsikter och behov och samordna sig med andra.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_142",
+    "type": "mc",
+    "prompt": "Vilket begrepp i MOHO avser den sammansatta bilden av vem man är och vill bli, byggd ur det man gjort genom livet?",
+    "correct": "Aktivitetsidentitet",
+    "distractors": [
+      "Aktivitetskompetens",
+      "Aktivitetsberättelse",
+      "Rollutförande"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_192",
+    "type": "tf",
+    "prompt": "Aktivitetsidentitet avser i MOHO hur skickligt och lättvindigt en person genomför sina uppgifter i vardagen.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_143",
+    "type": "mc",
+    "prompt": "Vilket begrepp i MOHO avser i vilken grad en person upprätthåller ett mönster av görande som svarar mot den hen anser sig vara?",
+    "correct": "Aktivitetskompetens",
+    "distractors": [
+      "Aktivitetsidentitet",
+      "Aktivitetsberättelse",
+      "Aktivitetsengagemang"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_193",
+    "type": "tf",
+    "prompt": "Aktivitetskompetens avser i MOHO i vilken grad en person upprätthåller ett mönster av görande som svarar mot den hen anser sig vara.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_144",
+    "type": "mc",
+    "prompt": "Aktivitetsanpassning byggs i MOHO upp av två ting över tid, i samspel med miljön. Vilka?",
+    "correct": "Aktivitetsidentitet och aktivitetskompetens",
+    "distractors": [
+      "Vanor och internaliserade roller",
+      "Värderingar och intressen",
+      "Motoriska färdigheter och processfärdigheter"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_194",
+    "type": "tf",
+    "prompt": "Aktivitetsanpassning byggs i MOHO upp av vanor och internaliserade roller över tid.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_145",
+    "type": "mc",
+    "prompt": "Vilket begrepp i MOHO avser personens egen sammanhängande berättelse om sitt aktivitetsliv, som ger riktning åt vart hen är på väg?",
+    "correct": "Aktivitetsberättelse",
+    "distractors": [
+      "Aktivitetsidentitet",
+      "Aktivitetsengagemang",
+      "Aktivitetsomställning"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_195",
+    "type": "tf",
+    "prompt": "Aktivitetsberättelse avser i MOHO personens egen sammanhängande berättelse om sitt aktivitetsliv över tid.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_146",
+    "type": "mc",
+    "prompt": "Vilket begrepp i MOHO avser klientens görande, tänkande och kännande i själva terapin?",
+    "correct": "Aktivitetsengagemang",
+    "distractors": [
+      "Aktivitetsdelaktighet",
+      "Aktivitetsutförande",
+      "Rollutförande"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_196",
+    "type": "tf",
+    "prompt": "Aktivitetsengagemang avser i MOHO de handlingar terapeuten utför åt klienten under behandlingen.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_147",
+    "type": "mc",
+    "prompt": "Vilken systemprincip i MOHO innebär att sammansatta handlingar, tankar och känslor uppstår spontant ur samspelet mellan delarna?",
+    "correct": "Emergens",
+    "distractors": [
+      "Heterarki",
+      "Perturbation",
+      "Resiliens"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_197",
+    "type": "tf",
+    "prompt": "Emergens innebär i MOHO att sammansatta handlingar, tankar och känslor uppstår spontant ur samspelet mellan delarna.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_148",
+    "type": "mc",
+    "prompt": "Vilken systemprincip i MOHO innebär att delarna bildar en dynamisk helhet där ingen del är överordnad de övriga?",
+    "correct": "Heterarki",
+    "distractors": [
+      "Emergens",
+      "Kontrollparameter",
+      "Resiliens"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_198",
+    "type": "tf",
+    "prompt": "Heterarki innebär i MOHO att viljekraften är överordnad och styr de övriga delarna uppifrån.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_149",
+    "type": "mc",
+    "prompt": "Vilket begrepp i MOHO avser den enskilda faktor vars förändring får hela systemet att skifta till ett nytt mönster?",
+    "correct": "Kontrollparameter",
+    "distractors": [
+      "Perturbation",
+      "Emergens",
+      "Aktivitetsomställning"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_199",
+    "type": "tf",
+    "prompt": "Kontrollparameter avser i MOHO den enskilda faktor vars förändring får hela systemet att skifta till ett nytt mönster.",
+    "correct": "Sant",
+    "distractors": [
+      "Falskt"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_150",
+    "type": "mc",
+    "prompt": "Vilket begrepp i MOHO avser den störning eller omställning som bryter ett invant mönster och känns obehaglig?",
+    "correct": "Perturbation",
+    "distractors": [
+      "Resiliens",
+      "Emergens",
+      "Heterarki"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
+  },
+  {
+    "id": "moho_200",
+    "type": "tf",
+    "prompt": "Perturbation avser i MOHO den förmåga som gör att en person snabbt återhämtar sig efter en störning.",
+    "correct": "Falskt",
+    "distractors": [
+      "Sant"
+    ],
+    "topic": "moho_flashcards",
+    "difficulty": "Normal",
+    "source": "Kielhofner, Model of human occupation: teori och tillämpning"
   }
 ]
