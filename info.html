@@ -12,7 +12,7 @@
   <title>Om Anatomiquiz — gratis anatomiquiz & kunskapsbank på svenska</title>
   <meta name="description" content="Om Anatomiquiz – en gratis anatomiquiz och kunskapsbank på svenska med sökbar medicinsk ordlista, skapad av Daniel Medin, medicinsk sekreterare.">
   <meta name="author" content="Daniel Medin (Norrtou Creations)">
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large"> 
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 
   <link rel="canonical" href="https://anatomiquiz.se/info.html">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
@@ -60,7 +60,7 @@
     "description": "Bakgrund, syfte, omfattning och källor för Anatomiquiz — en gratis anatomiquiz och kunskapsbank med sökbar medicinsk ordlista, på svenska.",
     "inLanguage": "sv-SE",
     "url": "https://anatomiquiz.se/info.html",
-    "dateModified": "2026-08-08",
+    "dateModified": "2026-08-09",
     "isPartOf": {
       "@type": "WebSite",
       "name": "Anatomiquiz",
@@ -186,7 +186,7 @@
         "name": "Hur vet jag att innehållet stämmer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Innehållet är sammanställt och faktagranskat mot vedertagna standardverk inom anatomi, fysiologi och medicinsk terminologi – bland andra Terminologia anatomica, Gray's anatomy, Sobotta och Lindskogs Medicinsk terminologi – medan sjukdomskoder följer Socialstyrelsens ICD-10-SE. Hela källförteckningen finns under Källor och kvalitetssäkring längre ner på sidan. Anatomiquiz är ändå ett komplement till studierna och ersätter inte kurslitteratur eller annan auktoritativ källa. Hittar du ett fel får du gärna rapportera det via kontaktformuläret på den här sidan."
+          "text": "Innehållet är sammanställt och faktagranskat mot vedertagna standardverk inom anatomi, fysiologi och medicinsk terminologi – bland andra Terminologia anatomica, Gray's anatomy, Sobotta och Lindskogs Medicinsk terminologi – medan sjukdomskoder följer Socialstyrelsens ICD-10-SE. Hela källförteckningen finns under fliken Referenser. Anatomiquiz är ändå ett komplement till studierna och ersätter inte kurslitteratur eller annan auktoritativ källa. Hittar du ett fel får du gärna rapportera det via kontaktformuläret under fliken Kontakt."
         }
       }
     ]
@@ -197,7 +197,7 @@
   <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon.png">
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
-  <link rel="stylesheet" href="css/styles.css?v=0.9.372">
+  <link rel="stylesheet" href="css/styles.css?v=0.9.412">
 </head>
 <body>
 
@@ -211,7 +211,9 @@
       </div>
     </header>
 
-    <!-- Brödsmula + intro -->
+    <!-- Brödsmula + intro. Ligger UTANFÖR flikarna med avsikt: det är sidans
+         definition av vad Anatomiquiz är, och ska mötas först oavsett vilken
+         flik besökaren landar i. -->
     <section class="card" aria-labelledby="introHeading">
 
       <!-- Brödsmula — identisk struktur med ordlistesidan -->
@@ -225,254 +227,350 @@
 
       <div class="info-prose">
         <p class="about-lead">Anatomiquiz är en kostnadsfri webbapp för att studera och repetera human anatomi och medicinsk terminologi på svenska och medicinsk latin. Appen består av ett interaktivt <strong>anatomiquiz</strong>, <strong>Kunskapsbanken</strong> – en växande samling resurser för att slå upp, läsa och förstå anatomins och medicinens språk, däribland en sökbar medicinsk ordlista – och praktiska <strong>verktyg</strong> som en läkemedelsberäknare. Materialet vänder sig i första hand till studerande och yrkesverksamma inom vård, rehabilitering och hälsa, men kan användas av var och en som vill befästa sina kunskaper i anatomi.</p>
-        <p>Läs mer om tanken med anatomiquiz.se och visioner för framtiden <a href="vision.html" class="info-link info-link-underline">här</a> och hur du kan hjälpa till att förverkliga det.</p>
       </div>
     </section>
 
-    <!-- Nyheter: korta notiser. Nyaste överst. -->
-    <section class="card" aria-labelledby="newsHeading">
-      <h2 id="newsHeading" class="about-title">Nyheter</h2>
-      <p class="about-update">Anatomiquiz uppdateras löpande. Senast uppdaterad <time data-updated datetime="2026-08-08">8 augusti 2026</time>. Hela <a href="versionshistorik.html" class="info-link">versionshistoriken</a> finns på en egen sida.</p>
-      <article class="news-item">
-        <time class="news-date" datetime="2026-08-01">1 augusti 2026</time>
-        <p class="news-text">Två nya arkadlägen finns nu på <a href="/" class="info-link">startsidan</a>, och de tränar snabbhet och säkerhet i termerna. I <strong>Arcade: Pop!</strong> svävar svarsalternativen runt som bubblor och du poppar det du tror är rätt – rundan är 60 sekunder och ett felpopp kostar tre av dem, så det lönar sig att läsa innan man trycker. I <strong>Arcade: Shoot!</strong> siktar du med en gevärspipa på fyra bubblor högst upp, medan minor glider förbi mellan dig och dem: en vanlig mina kostar tid, men var femte är röd och avslutar rundan direkt. Överlever du hela femminutersrundan med alla rätt blir du <strong>mästerskytt</strong>. Båda listar de frågor du missade när rundan är slut, med rätt svar. Läs mer om alla lägen på sidan om <a href="spellagen.html" class="info-link">spellägen och studieteknik</a>.</p>
-      </article>
-      <article class="news-item">
-        <time class="news-date" datetime="2026-07-31">31 juli 2026</time>
-        <p class="news-text">Ett femte spelläge finns nu på <a href="/" class="info-link">startsidan</a>: <strong>Sortera</strong>. Här är svaret en <strong>ordning</strong> och inte ett alternativ – du får fem anatomiska strukturer och en riktning, och ska lägga dem i rätt följd. Från proximalt till distalt, från medialt till lateralt, eller efter storlek och antal: vad väger mest, vad finns det flest av. Läget har ett eget frågearkiv med två ämnen och en egen startsida där du väljer ämne. Läs mer om alla lägen på sidan om <a href="spellagen.html" class="info-link">spellägen och studieteknik</a>.</p>
-      </article>
-      <article class="news-item">
-        <time class="news-date" datetime="2026-07-26">26 juli 2026</time>
-        <p class="news-text">Ett fjärde spelläge finns nu på <a href="/" class="info-link">startsidan</a>: <strong>Dagens utmaning</strong>. Tio frågor ur ämnet du valt, valda ur dagens datum – samma set hela dygnet, nya vid midnatt. Klarar du dagens växer din <strong>svit</strong> med ett, och missar du en dag börjar den om. Tanken är att göra repetitionen till en vana som tar ett par minuter, i stället för ett pluggpass man måste hitta tid för. Läs mer om alla lägen på sidan om <a href="spellagen.html" class="info-link">spellägen och studieteknik</a>.</p>
-      </article>
-      <article class="news-item">
-        <time class="news-date" datetime="2026-07-25">25 juli 2026</time>
-        <p class="news-text">Nu finns en egen sida om <a href="spellagen.html" class="info-link">spellägen, regler och studieteknik</a>: vad quizet, flashcards och de tre spellägena gör, vilka regler som gäller i varje läge, vad forskningen säger om att testa sig själv i stället för att läsa om – och några beprövade tips. Länken finns också i varje spels egen förklaring.</p>
-      </article>
-      <article class="news-item">
-        <time class="news-date" datetime="2026-07-25">25 juli 2026</time>
-        <p class="news-text">Anatomiquiz håller på att få nya varianter och spel för att öva – ett roligare komplement till de vanliga frågorna. Tre finns att pröva redan nu på <a href="/" class="info-link">startsidan</a>: <strong>Matcha</strong>, där du parar ihop fråga och rätt svar, <strong>Leitner Light</strong>, som håller reda på när det är dags att repetera varje fråga, och <strong>Tidsjakt</strong>, där du hinner så många frågor du kan på 60 sekunder. De nya spellägena är fortfarande under utformning och kan vara lite buggiga – har du synpunkter eller stöter på något som strular tar jag tacksamt emot det.</p>
-      </article>
-      <article class="news-item">
-        <time class="news-date" datetime="2026-07-23">23 juli 2026</time>
-        <p class="news-text">Anatomiquiz har fått en interaktiv <a href="/verktyg/lakemedelsberakning.html" class="info-link">läkemedelsberäknare</a>. Där kan du omvandla mellan enheter – gram, milligram och mikrogram, liter och milliliter, procent till mg/ml – och räkna ut dos och styrka, infusionstakt och spädning. Fyll i det du vet, så visas svaret med hela uträkningen.</p>
-      </article>
-      <article class="news-item">
-        <time class="news-date" datetime="2026-07-22">22 juli 2026</time>
-        <p class="news-text">Alla utbildningar har nu quizämnen på plats, och samtliga har genomgått både en maskinell och strukturell granskning och en fördjupad manuell faktagranskning mot källorna. Parallellt fortsätter arbetet med fler artiklar och andra resurser till kunskapsbanken.</p>
-      </article>
-      <article class="news-item">
-        <time class="news-date" datetime="2026-07-01">1 juli 2026</time>
-        <p class="news-text">Två större satsningar har inletts. Bilder har börjat läggas in i materialet för att göra anatomin tydligare och mer visuell, och arbetet med quiz anpassade för olika vårdutbildningar har påbörjats.</p>
-      </article>
-      <article class="news-item">
-        <time class="news-date" datetime="2026-06-23">23 juni 2026</time>
-        <p class="news-text">Idag har flera viktiga förbättringar gjorts. Sajten har fått ett kontaktformulär för att rapportera buggar, fel och synpunkter. Anatomiquiz har dessutom flyttat till en egen domän – anatomiquiz.se – i stället för den tidigare adressen. Domänbytet innebar tyvärr att alla gamla highscore-resultat gick förlorade. Jag ber om ursäkt för det.</p>
-      </article>
-    </section>
+    <!-- ==========================================================
+         Flikarna
+         Växlingen sker i CSS (:has + :checked), inte i JavaScript: rätt
+         flik är målad redan i första bildrutan (CLS 0) och sidan fungerar
+         med JS avstängt. js/info.js lägger bara till adressfältssynk, så
+         att en enskild flik går att länka och bokmärka.
+         Radioknappar och inte knappar med role="tab": det ger native
+         gruppering och piltangentsnavigering utan en rad JavaScript, och
+         är samma mekanik som .seg-switch i Inställningar.
+         ========================================================== -->
+    <div class="about-tabs">
+      <div class="about-tablist" role="radiogroup" aria-label="Om Anatomiquiz – välj avsnitt">
+        <input type="radio" name="omflik" id="flik-nyheter" value="nyheter" checked>
+        <label class="about-tab" id="tab-nyheter" for="flik-nyheter">Nyheter</label>
 
-    <!-- Vad är Anatomiquiz? — de två delarna sida vid sida -->
-    <section class="card" aria-labelledby="whatHeading">
-      <h2 id="whatHeading" class="about-title">Vad är Anatomiquiz?</h2>
-      <div class="about-grid">
-        <div class="about-feature">
-          <h3>Anatomiquizet</h3>
-          <p>Quizet prövar kunskaper inom bland annat skelett, muskler, anatomiska riktningar och medicinsk terminologi genom flervalsfrågor och påståenden av sant/falskt-typ. Frågorna är indelade i ämnesområden som kan väljas var för sig, och du pluggar aktivt med både frågesport och flashcards. Utöver quizet och flashcards finns sju spellägen som gör samma stoff till något annat – läs om <a href="spellagen.html" class="info-link">spellägen, regler och studieteknik</a>. Planerade tillägg omfattar fler anatomiska och fysiologiska områden, fokusområden anpassade för olika professioner samt frågor om vanliga besvär, skador och sjukdomar.</p>
-        </div>
-        <div class="about-feature">
-          <h3>Kunskapsbanken</h3>
-          <p><a href="kunskapsbank/" class="info-link">Kunskapsbanken</a> samlar appens referens- och fördjupningsmaterial på ett ställe: en sökbar medicinsk ordlista, språket bakom orden, anatomiska listor och tabeller, kliniska patientfall och fördjupande faktatexter. Den växer kontinuerligt i takt med att nya områden läggs till.</p>
-        </div>
+        <input type="radio" name="omflik" id="flik-info" value="info">
+        <label class="about-tab" id="tab-info" for="flik-info">Info</label>
+
+        <input type="radio" name="omflik" id="flik-vision" value="vision">
+        <label class="about-tab" id="tab-vision" for="flik-vision">Vision</label>
+
+        <input type="radio" name="omflik" id="flik-quizfragor" value="quizfragor">
+        <label class="about-tab" id="tab-quizfragor" for="flik-quizfragor">Quizfrågor</label>
+
+        <input type="radio" name="omflik" id="flik-referenser" value="referenser">
+        <label class="about-tab" id="tab-referenser" for="flik-referenser">Referenser</label>
+
+        <input type="radio" name="omflik" id="flik-kontakt" value="kontakt">
+        <label class="about-tab" id="tab-kontakt" for="flik-kontakt">Kontakt</label>
       </div>
 
-      <div class="info-prose">
-        <h3 class="info-subheading">Vad finns i Kunskapsbanken?</h3>
-        <ul>
-          <li><strong><a href="medicinskordlista.html" class="info-link">Medicinsk ordlista</a></strong> – flera tusen uppslagsord A–Ö på svenska och latin: termer med ordklass och böjning, ordets ursprung (etymologi), grekiska och latinska former, vardagliga lekmannatermer, sjukdomar och skador med ICD-kod samt laboratorieprover med referensvärden.</li>
-          <li><strong><a href="kunskapsbank/medicinsk-terminologi.html" class="info-link">Medicinsk terminologi</a></strong> – språket bakom orden: latin och grekiska i medicinen, franska, tyska och engelska lånord, ordbildning, deklinationer och pluralformer, uttalsregler och terminologins historia.</li>
-          <li><strong><a href="kunskapsbank/listor-tabeller.html" class="info-link">Listor och tabeller</a></strong> – muskler per kroppsregion (ursprung, fäste, innervation och funktion), skelettben, leder, kranialnerver, nervbanor och kärl.</li>
-          <li><strong><a href="case.html" class="info-link">Patientfall (case)</a></strong> – verklighetsnära kliniska fall där anatomin sätts i sitt sammanhang med korrekt terminologi.</li>
-          <li><strong><a href="kunskapsbank/faktatexter.html" class="info-link">Faktatexter</a></strong> – fördjupande artiklar om kroppens strukturer: hur de hänger ihop och vad de gör.</li>
-        </ul>
+      <!-- Flik 1: Nyheter — korta notiser. Nyaste överst. -->
+      <div class="about-panel" id="nyheter" role="region" aria-labelledby="tab-nyheter">
+        <section class="card" aria-labelledby="newsHeading">
+          <h2 id="newsHeading" class="sr-only">Nyheter</h2>
+          <p class="about-update">Anatomiquiz uppdateras löpande. Senast uppdaterad <time data-updated datetime="2026-08-09">9 augusti 2026</time>. Hela <a href="versionshistorik.html" class="info-link">versionshistoriken</a> finns på en egen sida.</p>
+          <article class="news-item">
+            <time class="news-date" datetime="2026-08-01">1 augusti 2026</time>
+            <p class="news-text">Två nya arkadlägen finns nu på <a href="/" class="info-link">startsidan</a>, och de tränar snabbhet och säkerhet i termerna. I <strong>Arcade: Pop!</strong> svävar svarsalternativen runt som bubblor och du poppar det du tror är rätt – rundan är 60 sekunder och ett felpopp kostar tre av dem, så det lönar sig att läsa innan man trycker. I <strong>Arcade: Shoot!</strong> siktar du med en gevärspipa på fyra bubblor högst upp, medan minor glider förbi mellan dig och dem: en vanlig mina kostar tid, men var femte är röd och avslutar rundan direkt. Överlever du hela femminutersrundan med alla rätt blir du <strong>mästerskytt</strong>. Båda listar de frågor du missade när rundan är slut, med rätt svar. Läs mer om alla lägen på sidan om <a href="spellagen.html" class="info-link">spellägen och studieteknik</a>.</p>
+          </article>
+          <article class="news-item">
+            <time class="news-date" datetime="2026-07-31">31 juli 2026</time>
+            <p class="news-text">Ett femte spelläge finns nu på <a href="/" class="info-link">startsidan</a>: <strong>Sortera</strong>. Här är svaret en <strong>ordning</strong> och inte ett alternativ – du får fem anatomiska strukturer och en riktning, och ska lägga dem i rätt följd. Från proximalt till distalt, från medialt till lateralt, eller efter storlek och antal: vad väger mest, vad finns det flest av. Läget har ett eget frågearkiv med två ämnen och en egen startsida där du väljer ämne. Läs mer om alla lägen på sidan om <a href="spellagen.html" class="info-link">spellägen och studieteknik</a>.</p>
+          </article>
+          <article class="news-item">
+            <time class="news-date" datetime="2026-07-26">26 juli 2026</time>
+            <p class="news-text">Ett fjärde spelläge finns nu på <a href="/" class="info-link">startsidan</a>: <strong>Dagens utmaning</strong>. Tio frågor ur ämnet du valt, valda ur dagens datum – samma set hela dygnet, nya vid midnatt. Klarar du dagens växer din <strong>svit</strong> med ett, och missar du en dag börjar den om. Tanken är att göra repetitionen till en vana som tar ett par minuter, i stället för ett pluggpass man måste hitta tid för. Läs mer om alla lägen på sidan om <a href="spellagen.html" class="info-link">spellägen och studieteknik</a>.</p>
+          </article>
+          <article class="news-item">
+            <time class="news-date" datetime="2026-07-25">25 juli 2026</time>
+            <p class="news-text">Nu finns en egen sida om <a href="spellagen.html" class="info-link">spellägen, regler och studieteknik</a>: vad quizet, flashcards och de tre spellägena gör, vilka regler som gäller i varje läge, vad forskningen säger om att testa sig själv i stället för att läsa om – och några beprövade tips. Länken finns också i varje spels egen förklaring.</p>
+          </article>
+          <article class="news-item">
+            <time class="news-date" datetime="2026-07-25">25 juli 2026</time>
+            <p class="news-text">Anatomiquiz håller på att få nya varianter och spel för att öva – ett roligare komplement till de vanliga frågorna. Tre finns att pröva redan nu på <a href="/" class="info-link">startsidan</a>: <strong>Matcha</strong>, där du parar ihop fråga och rätt svar, <strong>Leitner Light</strong>, som håller reda på när det är dags att repetera varje fråga, och <strong>Tidsjakt</strong>, där du hinner så många frågor du kan på 60 sekunder. De nya spellägena är fortfarande under utformning och kan vara lite buggiga – har du synpunkter eller stöter på något som strular tar jag tacksamt emot det.</p>
+          </article>
+          <article class="news-item">
+            <time class="news-date" datetime="2026-07-23">23 juli 2026</time>
+            <p class="news-text">Anatomiquiz har fått en interaktiv <a href="/verktyg/lakemedelsberakning.html" class="info-link">läkemedelsberäknare</a>. Där kan du omvandla mellan enheter – gram, milligram och mikrogram, liter och milliliter, procent till mg/ml – och räkna ut dos och styrka, infusionstakt och spädning. Fyll i det du vet, så visas svaret med hela uträkningen.</p>
+          </article>
+          <article class="news-item">
+            <time class="news-date" datetime="2026-07-22">22 juli 2026</time>
+            <p class="news-text">Alla utbildningar har nu quizämnen på plats, och samtliga har genomgått både en maskinell och strukturell granskning och en fördjupad manuell faktagranskning mot källorna. Parallellt fortsätter arbetet med fler artiklar och andra resurser till kunskapsbanken.</p>
+          </article>
+          <article class="news-item">
+            <time class="news-date" datetime="2026-07-01">1 juli 2026</time>
+            <p class="news-text">Två större satsningar har inletts. Bilder har börjat läggas in i materialet för att göra anatomin tydligare och mer visuell, och arbetet med quiz anpassade för olika vårdutbildningar har påbörjats.</p>
+          </article>
+          <article class="news-item">
+            <time class="news-date" datetime="2026-06-23">23 juni 2026</time>
+            <p class="news-text">Idag har flera viktiga förbättringar gjorts. Sajten har fått ett kontaktformulär för att rapportera buggar, fel och synpunkter. Anatomiquiz har dessutom flyttat till en egen domän – anatomiquiz.se – i stället för den tidigare adressen. Domänbytet innebar tyvärr att alla gamla highscore-resultat gick förlorade. Jag ber om ursäkt för det.</p>
+          </article>
+        </section>
       </div>
 
-      <div class="info-prose">
-        <h3 class="info-subheading">Verktyg</h3>
-        <p>Utöver quizet och kunskapsbanken finns interaktiva <a href="verktyg/" class="info-link">verktyg</a> – räknare och omvandlare som visar hela uträkningen och inte bara svaret. Först ut är en läkemedelsberäknare för enhetsomvandling, dos och styrka, infusionshastighet och spädning, med ett träningsläge som kontrollerar din egen uträkning.</p>
+      <!-- Flik 2: Info — vad appen är, vem den är för, vanliga frågor och vem som gjort den -->
+      <div class="about-panel" id="info" role="region" aria-labelledby="tab-info">
+
+        <!-- Vad är Anatomiquiz? — de två delarna sida vid sida -->
+        <section class="card" aria-labelledby="whatHeading">
+          <h2 id="whatHeading" class="about-title">Vad är Anatomiquiz?</h2>
+          <div class="about-grid">
+            <div class="about-feature">
+              <h3>Anatomiquizet</h3>
+              <p>Quizet prövar kunskaper inom bland annat skelett, muskler, anatomiska riktningar och medicinsk terminologi genom flervalsfrågor och påståenden av sant/falskt-typ. Frågorna är indelade i ämnesområden som kan väljas var för sig, och du pluggar aktivt med både frågesport och flashcards. Utöver quizet och flashcards finns sju spellägen som gör samma stoff till något annat – läs om <a href="spellagen.html" class="info-link">spellägen, regler och studieteknik</a>. Planerade tillägg omfattar fler anatomiska och fysiologiska områden, fokusområden anpassade för olika professioner samt frågor om vanliga besvär, skador och sjukdomar.</p>
+            </div>
+            <div class="about-feature">
+              <h3>Kunskapsbanken</h3>
+              <p><a href="kunskapsbank/" class="info-link">Kunskapsbanken</a> samlar appens referens- och fördjupningsmaterial på ett ställe: en sökbar medicinsk ordlista, språket bakom orden, anatomiska listor och tabeller, kliniska patientfall och fördjupande faktatexter. Den växer kontinuerligt i takt med att nya områden läggs till.</p>
+            </div>
+          </div>
+
+          <div class="info-prose">
+            <h3 class="info-subheading">Vad finns i Kunskapsbanken?</h3>
+            <ul>
+              <li><strong><a href="medicinskordlista.html" class="info-link">Medicinsk ordlista</a></strong> – flera tusen uppslagsord A–Ö på svenska och latin: termer med ordklass och böjning, ordets ursprung (etymologi), grekiska och latinska former, vardagliga lekmannatermer, sjukdomar och skador med ICD-kod samt laboratorieprover med referensvärden.</li>
+              <li><strong><a href="kunskapsbank/medicinsk-terminologi.html" class="info-link">Medicinsk terminologi</a></strong> – språket bakom orden: latin och grekiska i medicinen, franska, tyska och engelska lånord, ordbildning, deklinationer och pluralformer, uttalsregler och terminologins historia.</li>
+              <li><strong><a href="kunskapsbank/listor-tabeller.html" class="info-link">Listor och tabeller</a></strong> – muskler per kroppsregion (ursprung, fäste, innervation och funktion), skelettben, leder, kranialnerver, nervbanor och kärl.</li>
+              <li><strong><a href="case.html" class="info-link">Patientfall (case)</a></strong> – verklighetsnära kliniska fall där anatomin sätts i sitt sammanhang med korrekt terminologi.</li>
+              <li><strong><a href="kunskapsbank/faktatexter.html" class="info-link">Faktatexter</a></strong> – fördjupande artiklar om kroppens strukturer: hur de hänger ihop och vad de gör.</li>
+            </ul>
+          </div>
+
+          <div class="info-prose">
+            <h3 class="info-subheading">Verktyg</h3>
+            <p>Utöver quizet och kunskapsbanken finns interaktiva <a href="verktyg/" class="info-link">verktyg</a> – räknare och omvandlare som visar hela uträkningen och inte bara svaret. Först ut är en läkemedelsberäknare för enhetsomvandling, dos och styrka, infusionshastighet och spädning, med ett träningsläge som kontrollerar din egen uträkning.</p>
+          </div>
+        </section>
+
+        <!-- Målgrupp -->
+        <section class="card" aria-labelledby="audienceHeading">
+          <h2 id="audienceHeading" class="about-title">Vem har nytta av Anatomiquiz?</h2>
+          <div class="info-prose">
+            <p>Innehållet är upplagt för alla som behöver kunna anatomi och medicinsk terminologi, oavsett utbildning. Det passar bland annat studerande och yrkesverksamma inom:</p>
+            <ul class="about-cols">
+              <li><strong>Vård och omvårdnad:</strong> läkare och läkarstudenter, sjuksköterskor och specialistsjuksköterskor, undersköterskor och vårdbiträden</li>
+              <li><strong>Rehabilitering:</strong> fysioterapeuter, arbetsterapeuter, naprapater, kiropraktorer och osteopater</li>
+              <li><strong>Tandvård:</strong> tandläkare, tandhygienister och tandsköterskor</li>
+              <li><strong>Diagnostik:</strong> biomedicinska analytiker och röntgensjuksköterskor</li>
+              <li><strong>Sinnen och kommunikation:</strong> logopeder, audionomer och optiker</li>
+              <li><strong>Administration:</strong> medicinska sekreterare och vårdadministratörer</li>
+              <li><strong>Hälsa, kost och träning:</strong> dietister, personliga tränare (PT), massageterapeuter och idrottsvetare</li>
+            </ul>
+            <p>Har du bara ett allmänt intresse för hur kroppen fungerar passar innehållet lika bra.</p>
+          </div>
+        </section>
+
+        <!-- Vanliga frågor. OBS: FAQPage-blocket i <head> MÅSTE spegla frågorna och
+             svaren här ord för ord (SEO_REGLER.md §6) — ändras texten här ska den
+             ändras där också, och antalet frågor måste stämma i båda riktningarna.
+             Verifiera med snutten i SEO_REGLER.md §12 (den läser h3:orna i #faq). -->
+        <section class="card" id="faq" aria-labelledby="faqHeading">
+          <h2 id="faqHeading" class="about-title">Vanliga frågor om Anatomiquiz</h2>
+          <div class="info-prose">
+            <h3 class="info-subheading">Vad kostar Anatomiquiz, och behöver jag ett konto?</h3>
+            <p>Anatomiquiz är helt gratis och kräver varken konto, inloggning eller nedladdning. Du öppnar sidan i webbläsaren och börjar plugga direkt, i mobilen likaväl som på datorn. Det finns inga betalfunktioner, ingen reklam och inga kakor (cookies). Vill du ha appen närmare till hands kan du lägga till den på mobilens hemskärm via webbläsarens meny.</p>
+
+            <h3 class="info-subheading">Hur fungerar quizet?</h3>
+            <p>Du väljer först utbildning eller kategori, därefter ämne och hur många frågor du vill ha: 10, 20, 50 eller 100. Sedan visas en fråga i taget. När du svarat markeras ditt svar som rätt eller fel, och vid fel svar markeras dessutom vilket alternativ som var det rätta, så att du ser det direkt. Efter sista frågan visas ditt resultat, och har ämnet material i kunskapsbanken får du länkar vidare dit för fördjupning.</p>
+
+            <h3 class="info-subheading">Vad är skillnaden mellan quizet och flashcards?</h3>
+            <p>I quizet får du färdiga svarsalternativ att välja mellan – flervalsfrågor eller påståenden av typen sant eller falskt – och svaren räknas ihop till en poäng som kan sparas i topplistan. Flashcards fungerar som traditionella pluggkort: du ser frågan, formulerar svaret för dig själv och vänder sedan på kortet för att kontrollera. Flashcards ger ingen poäng utan är avsett för snabb repetition. Under Inställningar väljer du vilka frågetyper du vill öva på.</p>
+
+            <h3 class="info-subheading">Kan jag öva på just det som ingår i min utbildning?</h3>
+            <p>Ja. Ämnena är indelade efter tolv vårdutbildningar – bland andra arbetsterapeut, fysioterapeut, sjuksköterska, läkare, tandläkare, apotekare och biomedicinsk analytiker – och innehållet utgår från utbildningarnas läroplaner. Utöver dessa finns ”Slumpade ämnen”, som blandar frågor från samtliga utbildningar, samt ”Medicinsk terminologi” och ”Allmänt”. Letar du efter ett särskilt område kan du skriva ett ord i rutan ”Sök ämne i alla utbildningar”, så genomsöks alla utbildningars ämnen på en gång.</p>
+
+            <h3 class="info-subheading">Sparas mina resultat, och kan någon annan se dem?</h3>
+            <p>Bara du ser dem. Resultat, inställningar och namn sparas med webbläsarens lokala lagring (localStorage) på din egen enhet. Ingenting skickas till någon server, och det finns varken användarkonton, kakor eller besöksstatistik. Du rensar resultaten när du vill med knappen ”Rensa topplista” eller genom att rensa webbläsarens lagring. Öppnar du Anatomiquiz både som vanlig flik och som genväg på hemskärmen kan de ha varsitt separat lagringsutrymme, och då syns inte det ena lägets resultat i det andra. Mer står i <a href="integritet.html" class="info-link">integritetspolicyn</a>.</p>
+
+            <h3 class="info-subheading">Hur vet jag att innehållet stämmer?</h3>
+            <p>Innehållet är sammanställt och faktagranskat mot vedertagna standardverk inom anatomi, fysiologi och medicinsk terminologi – bland andra <em>Terminologia anatomica</em>, <em>Gray's anatomy</em>, <em>Sobotta</em> och Lindskogs <em>Medicinsk terminologi</em> – medan sjukdomskoder följer Socialstyrelsens ICD-10-SE. Hela källförteckningen finns under fliken <a href="#referenser" class="info-link">Referenser</a>. Anatomiquiz är ändå ett komplement till studierna och ersätter inte kurslitteratur eller annan auktoritativ källa. Hittar du ett fel får du gärna rapportera det via kontaktformuläret under fliken <a href="#kontakt" class="info-link">Kontakt</a>.</p>
+          </div>
+        </section>
+
+        <!-- Vem ligger bakom + varför -->
+        <section class="card" aria-labelledby="authorHeading">
+          <h2 id="authorHeading" class="about-title">Vem ligger bakom Anatomiquiz?</h2>
+          <div class="info-prose">
+            <p>Anatomiquiz skapas, underhålls och kvalitetssäkras av en enda person: <strong>Daniel Medin</strong>. Daniel har tidigare studerat till medicinsk sekreterare och studerar i dag till arbetsterapeut vid Lunds universitet. Anatomi är ett särskilt intresse – och det är den kombinationen, vårddokumentationens terminologi och arbetsterapeutens kunskap om kroppens funktion, som präglar innehållet och dess noggrannhet.</p>
+            <p>Appen ges ut under <a href="https://norrtou.se" target="_blank" rel="noopener noreferrer" class="info-link">Norrtou Creations</a>, Daniels enmansstudio med fokus på tillgängliga webbappar (WCAG). Du når honom via <a href="https://www.linkedin.com/in/danielmedin" target="_blank" rel="noopener noreferrer" class="info-link">LinkedIn</a> och <a href="https://github.com/norrtou" target="_blank" rel="noopener noreferrer" class="info-link">GitHub</a>, eller genom kontaktformuläret under fliken <a href="#kontakt" class="info-link">Kontakt</a>.</p>
+
+            <h3 class="info-subheading">Varför Anatomiquiz finns</h3>
+            <p>Idén föddes under studierna. Daniel saknade bra, kostnadsfritt övningsmaterial i anatomi på svenska – det mesta var antingen låst bakom betalväggar, skrivet på engelska eller alldeles för ytligt. I stället för att leta vidare byggde han sitt eget. Tanken var enkel: samla all relevant fakta på ett och samma ställe och göra den lätt att nå, repetera och söka i. Anatomiquiz är resultatet, och appen växer kontinuerligt i takt med att nya områden läggs till.</p>
+          </div>
+        </section>
       </div>
-    </section>
 
-    <!-- Målgrupp -->
-    <section class="card" aria-labelledby="audienceHeading">
-      <h2 id="audienceHeading" class="about-title">Vem har nytta av Anatomiquiz?</h2>
-      <div class="info-prose">
-        <p>Innehållet är upplagt för alla som behöver kunna anatomi och medicinsk terminologi, oavsett utbildning. Det passar bland annat studerande och yrkesverksamma inom:</p>
-        <ul class="about-cols">
-          <li><strong>Vård och omvårdnad:</strong> läkare och läkarstudenter, sjuksköterskor och specialistsjuksköterskor, undersköterskor och vårdbiträden</li>
-          <li><strong>Rehabilitering:</strong> fysioterapeuter, arbetsterapeuter, naprapater, kiropraktorer och osteopater</li>
-          <li><strong>Tandvård:</strong> tandläkare, tandhygienister och tandsköterskor</li>
-          <li><strong>Diagnostik:</strong> biomedicinska analytiker och röntgensjuksköterskor</li>
-          <li><strong>Sinnen och kommunikation:</strong> logopeder, audionomer och optiker</li>
-          <li><strong>Administration:</strong> medicinska sekreterare och vårdadministratörer</li>
-          <li><strong>Hälsa, kost och träning:</strong> dietister, personliga tränare (PT), massageterapeuter och idrottsvetare</li>
-        </ul>
-        <p>Har du bara ett allmänt intresse för hur kroppen fungerar passar innehållet lika bra.</p>
+      <!-- Flik 3: Vision — kort ingress och stödblocket. Hela texten bor på
+           vision.html och upprepas inte här; två upplagor av samma text driver
+           isär vid första revideringen. -->
+      <div class="about-panel" id="vision" role="region" aria-labelledby="tab-vision">
+        <section class="card" aria-labelledby="visionHeading">
+          <h2 id="visionHeading" class="sr-only">Vision</h2>
+          <div class="info-prose">
+            <p class="about-lead">Anatomiquiz började som ett litet gratis hjälpmedel till en klass arbetsterapeutstudenter, byggt av en enkel anledning: kurslitteraturen i anatomi kostar mer än många studenter har råd med. Målet är detsamma i dag – material som är fritt att använda, skrivet på svenska och tillräckligt noggrant för att gå att lita på.</p>
+            <p>Planen framåt är fler och bättre quiz, utbyggda verktyg för kliniska beräkningar, en ordlista som fortsätter växa och nya sätt att presentera frågorna på. I <a href="vision.html" class="info-link info-link-underline">hela texten om visionen</a> berättar Daniel Medin utförligare om hur appen kom till, hur den byggs och hur han ser på innehållets kvalitet.</p>
+            <p>Bidrag tas tacksamt emot i alla former: faktagranskning från kunniga ögon, önskemål om ämnen som saknas, eller en slant till driften för den som vill hjälpa projektet framåt.</p>
+
+            <div class="vision-swish">
+              <h3>Följ, mejla eller stötta Anatomiquiz</h3>
+              <div class="vision-links">
+                <div class="vision-social">
+                  <a class="social-link" href="https://www.instagram.com/anatomiquiz.se"
+                     target="_blank" rel="noopener" aria-label="Anatomiquiz på Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd" aria-hidden="true" focusable="false">
+                      <path d="M7.5 2 h9 a5.5 5.5 0 0 1 5.5 5.5 v9 a5.5 5.5 0 0 1 -5.5 5.5 h-9 a5.5 5.5 0 0 1 -5.5 -5.5 v-9 a5.5 5.5 0 0 1 5.5 -5.5 z M7.8 3.8 h8.4 a4 4 0 0 1 4 4 v8.4 a4 4 0 0 1 -4 4 h-8.4 a4 4 0 0 1 -4 -4 v-8.4 a4 4 0 0 1 4 -4 z M7.4 12 a4.6 4.6 0 1 0 9.2 0 a4.6 4.6 0 1 0 -9.2 0 z M9.2 12 a2.8 2.8 0 1 0 5.6 0 a2.8 2.8 0 1 0 -5.6 0 z M15.9 6.8 a1.3 1.3 0 1 0 2.6 0 a1.3 1.3 0 1 0 -2.6 0 z"/>
+                    </svg>
+                  </a>
+                  <a class="social-link" href="https://www.facebook.com/anatomiquizse"
+                     target="_blank" rel="noopener" aria-label="Anatomiquiz på Facebook">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                      <path d="M13.4 21.5v-8.2h2.8l.4-3.2h-3.2V8.05c0-.93.26-1.56 1.6-1.56h1.71V3.62c-.3-.04-1.31-.13-2.5-.13-2.47 0-4.16 1.51-4.16 4.28v2.39H7.2v3.2h2.85v8.2h3.35z"/>
+                    </svg>
+                  </a>
+                </div>
+
+                <button type="button" class="vision-pill" id="swishCopyBtn" title="Klicka för att kopiera telefonnumret">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                    <path d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"/>
+                  </svg>
+                  <span>Swisha</span>
+                  <span class="swish-number">
+                    <span data-c="0"></span><span data-c="7"></span><span data-c="0"></span><span data-c="8"></span>-<span data-c="9"></span><span data-c="0"></span><span data-c="0"></span><span data-c="0"></span><span data-c="9"></span><span data-c="3"></span>
+                  </span>
+                </button>
+
+                <a class="vision-pill" href="mailto:anatomiquizse@gmail.com">
+                  <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false">
+                    <path d="M2.003 5.884 10 9.882l7.997-3.998A2 2 0 0 0 16 4H4a2 2 0 0 0-1.997 1.884z"/>
+                    <path d="M18 8.118 10 12.118l-8-4V14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.118z"/>
+                  </svg>
+                  <span>Mejla</span>
+                </a>
+              </div>
+              <p class="swish-status" id="swishStatus" role="status" aria-live="polite"></p>
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
 
-    <!-- Vanliga frågor. OBS: FAQPage-blocket i <head> MÅSTE spegla frågorna och
-         svaren här ord för ord (SEO_REGLER.md §6) — ändras texten här ska den
-         ändras där också, och antalet frågor måste stämma i båda riktningarna.
-         Verifiera med snutten i SEO_REGLER.md §12 (den läser h3:orna i #faq). -->
-    <section class="card" id="faq" aria-labelledby="faqHeading">
-      <h2 id="faqHeading" class="about-title">Vanliga frågor om Anatomiquiz</h2>
-      <div class="info-prose">
-        <h3 class="info-subheading">Vad kostar Anatomiquiz, och behöver jag ett konto?</h3>
-        <p>Anatomiquiz är helt gratis och kräver varken konto, inloggning eller nedladdning. Du öppnar sidan i webbläsaren och börjar plugga direkt, i mobilen likaväl som på datorn. Det finns inga betalfunktioner, ingen reklam och inga kakor (cookies). Vill du ha appen närmare till hands kan du lägga till den på mobilens hemskärm via webbläsarens meny.</p>
-
-        <h3 class="info-subheading">Hur fungerar quizet?</h3>
-        <p>Du väljer först utbildning eller kategori, därefter ämne och hur många frågor du vill ha: 10, 20, 50 eller 100. Sedan visas en fråga i taget. När du svarat markeras ditt svar som rätt eller fel, och vid fel svar markeras dessutom vilket alternativ som var det rätta, så att du ser det direkt. Efter sista frågan visas ditt resultat, och har ämnet material i kunskapsbanken får du länkar vidare dit för fördjupning.</p>
-
-        <h3 class="info-subheading">Vad är skillnaden mellan quizet och flashcards?</h3>
-        <p>I quizet får du färdiga svarsalternativ att välja mellan – flervalsfrågor eller påståenden av typen sant eller falskt – och svaren räknas ihop till en poäng som kan sparas i topplistan. Flashcards fungerar som traditionella pluggkort: du ser frågan, formulerar svaret för dig själv och vänder sedan på kortet för att kontrollera. Flashcards ger ingen poäng utan är avsett för snabb repetition. Under Inställningar väljer du vilka frågetyper du vill öva på.</p>
-
-        <h3 class="info-subheading">Kan jag öva på just det som ingår i min utbildning?</h3>
-        <p>Ja. Ämnena är indelade efter tolv vårdutbildningar – bland andra arbetsterapeut, fysioterapeut, sjuksköterska, läkare, tandläkare, apotekare och biomedicinsk analytiker – och innehållet utgår från utbildningarnas läroplaner. Utöver dessa finns ”Slumpade ämnen”, som blandar frågor från samtliga utbildningar, samt ”Medicinsk terminologi” och ”Allmänt”. Letar du efter ett särskilt område kan du skriva ett ord i rutan ”Sök ämne i alla utbildningar”, så genomsöks alla utbildningars ämnen på en gång.</p>
-
-        <h3 class="info-subheading">Sparas mina resultat, och kan någon annan se dem?</h3>
-        <p>Bara du ser dem. Resultat, inställningar och namn sparas med webbläsarens lokala lagring (localStorage) på din egen enhet. Ingenting skickas till någon server, och det finns varken användarkonton, kakor eller besöksstatistik. Du rensar resultaten när du vill med knappen ”Rensa topplista” eller genom att rensa webbläsarens lagring. Öppnar du Anatomiquiz både som vanlig flik och som genväg på hemskärmen kan de ha varsitt separat lagringsutrymme, och då syns inte det ena lägets resultat i det andra. Mer står i <a href="integritet.html" class="info-link">integritetspolicyn</a>.</p>
-
-        <h3 class="info-subheading">Hur vet jag att innehållet stämmer?</h3>
-        <p>Innehållet är sammanställt och faktagranskat mot vedertagna standardverk inom anatomi, fysiologi och medicinsk terminologi – bland andra <em>Terminologia anatomica</em>, <em>Gray's anatomy</em>, <em>Sobotta</em> och Lindskogs <em>Medicinsk terminologi</em> – medan sjukdomskoder följer Socialstyrelsens ICD-10-SE. Hela källförteckningen finns under <a href="#sourcesHeading" class="info-link">Källor och kvalitetssäkring</a> längre ner på sidan. Anatomiquiz är ändå ett komplement till studierna och ersätter inte kurslitteratur eller annan auktoritativ källa. Hittar du ett fel får du gärna rapportera det via kontaktformuläret på den här sidan.</p>
+      <!-- Flik 4: Quizfrågor — omfattning (ändringsloggen bor på versionshistorik.html) -->
+      <div class="about-panel" id="quizfragor" role="region" aria-labelledby="tab-quizfragor">
+        <section class="card" aria-labelledby="historyHeading">
+          <h2 id="historyHeading" class="about-title">Antal quizfrågor per ämne</h2>
+          <div id="statsContent"></div>
+          <p id="glossaryCount" class="glossary-count">Laddar ordlistans omfattning…</p>
+        </section>
       </div>
-    </section>
 
-    <!-- Vem ligger bakom + varför -->
-    <section class="card" aria-labelledby="authorHeading">
-      <h2 id="authorHeading" class="about-title">Vem ligger bakom Anatomiquiz?</h2>
-      <div class="info-prose">
-        <p>Anatomiquiz skapas, underhålls och kvalitetssäkras av en enda person: <strong>Daniel Medin</strong>. Daniel har tidigare studerat till medicinsk sekreterare och studerar i dag till arbetsterapeut vid Lunds universitet. Anatomi är ett särskilt intresse – och det är den kombinationen, vårddokumentationens terminologi och arbetsterapeutens kunskap om kroppens funktion, som präglar innehållet och dess noggrannhet.</p>
-        <p>Appen ges ut under <a href="https://norrtou.se" target="_blank" rel="noopener noreferrer" class="info-link">Norrtou Creations</a>, Daniels enmansstudio med fokus på tillgängliga webbappar (WCAG). Du når honom via <a href="https://www.linkedin.com/in/danielmedin" target="_blank" rel="noopener noreferrer" class="info-link">LinkedIn</a> och <a href="https://github.com/norrtou" target="_blank" rel="noopener noreferrer" class="info-link">GitHub</a>, eller direkt genom kontaktformuläret längre ner på sidan.</p>
+      <!-- Flik 5: Referenser — listan växer kontinuerligt och bär sidans hela källförteckning -->
+      <div class="about-panel" id="referenser" role="region" aria-labelledby="tab-referenser">
+        <section class="card" aria-labelledby="sourcesHeading">
+          <h2 id="sourcesHeading" class="about-title">Källor och kvalitetssäkring</h2>
+          <div class="info-prose">
+            <p>Innehållet är sammanställt och kvalitetssäkrat mot beprövat referensmaterial inom medicin och språk. Trots detta arbete kan materialet innehålla fel och brister. Det är avsett som ett komplement till studier och ersätter inte kurslitteratur, läromedel eller annan auktoritativ källa. Centrala källor:</p>
+            <ul>
+              <li>Ackerknecht, E. H. (1967). <em>Medicine at the Paris hospital, 1794–1848</em>. Johns Hopkins Press.</li>
+              <li>Allen, W. S. (1978). <em>Vox Latina: A guide to the pronunciation of Classical Latin</em> (2:a uppl.). Cambridge University Press.</li>
+              <li>American Spinal Injury Association. (2019). <em>International standards for neurological classification of spinal cord injury</em> (rev. 2019). ASIA. Hämtad 24 juli 2026 från <a href="https://asia-spinalinjury.org/" target="_blank" rel="noopener noreferrer" class="info-link">asia-spinalinjury.org</a></li>
+              <li>Aspelin, P., &amp; Pettersson, H. (Red.). (2008). <em>Radiologi</em>. Studentlitteratur.</li>
+              <li>Baethge, C. (2008). The languages of medicine. <em>Deutsches Ärzteblatt International, 105</em>(3), 37–40. <a href="https://doi.org/10.3238/arztebl.2008.0037" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.3238/arztebl.2008.0037</a></li>
+              <li>Björkman, E., &amp; Hagberg, M. (2023). <em>Läkemedelsräkning för sjuksköterskor</em> (6:e uppl.). Studentlitteratur.</li>
+              <li>Burkhart, S. S., Esch, J. C., &amp; Jolson, R. S. (1993). The rotator crescent and rotator cable: An anatomic description of the shoulder's "suspension bridge". <em>Arthroscopy, 9</em>(6), 611–616. <a href="https://doi.org/10.1016/S0749-8063(05)80496-7" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1016/S0749-8063(05)80496-7</a></li>
+              <li>Butler, A. C., &amp; Roediger, H. L., III. (2008). Feedback enhances the positive effects and reduces the negative effects of multiple-choice testing. <em>Memory &amp; Cognition, 36</em>(3), 604–616. <a href="https://doi.org/10.3758/MC.36.3.604" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.3758/MC.36.3.604</a></li>
+              <li>Bojsen-Møller, F., Simonsen, E. B., &amp; Tranum-Jensen, J. (2018). <em>Rörelseapparatens anatomi</em> (2:a uppl.). Liber.</li>
+              <li>Boron, W. F., &amp; Boulpaep, E. L. (2016). <em>Medical physiology</em> (3:e uppl.). Elsevier.</li>
+              <li>Cepeda, N. J., Pashler, H., Vul, E., Wixted, J. T., &amp; Rohrer, D. (2006). Distributed practice in verbal recall tasks: A review and quantitative synthesis. <em>Psychological Bulletin, 132</em>(3), 354–380. <a href="https://doi.org/10.1037/0033-2909.132.3.354" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1037/0033-2909.132.3.354</a></li>
+              <li>Clark, J. M., &amp; Harryman, D. T., II. (1992). Tendons, ligaments, and capsule of the rotator cuff: Gross and microscopic anatomy. <em>The Journal of Bone and Joint Surgery, 74</em>(5), 713–725.</li>
+              <li>Diercks, R., Bron, C., Dorrestijn, O., Meskers, C., Naber, R., de Ruiter, T., Willems, J., Winters, J., &amp; van der Woude, H. J. (2014). Guideline for diagnosis and treatment of subacromial pain syndrome: A multidisciplinary review by the Dutch Orthopaedic Association. <em>Acta Orthopaedica, 85</em>(3), 314–322. <a href="https://doi.org/10.3109/17453674.2014.920991" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.3109/17453674.2014.920991</a></li>
+              <li><em>Dorland's illustrated medical dictionary</em> (33:e uppl.). (2020). Elsevier.</li>
+              <li>Dunlosky, J., Rawson, K. A., Marsh, E. J., Nathan, M. J., &amp; Willingham, D. T. (2013). Improving students' learning with effective learning techniques: Promising directions from cognitive and educational psychology. <em>Psychological Science in the Public Interest, 14</em>(1), 4–58. <a href="https://doi.org/10.1177/1529100612453266" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1177/1529100612453266</a></li>
+              <li>Edlund, L.-E., &amp; Hene, B. (2013). <em>Lånord i svenskan: Om språkförändringar i tid och rum</em> (2:a uppl.). Studentlitteratur.</li>
+              <li>Federative International Programme for Anatomical Terminology. (2019). <em>Terminologia anatomica</em> (2:a uppl.). FIPAT.</li>
+              <li>Fisher, A. G. (2009). <em>Occupational Therapy Intervention Process Model: A model for planning and implementing top-down, client-centered, and occupation-based interventions</em>. Three Star Press.</li>
+              <li>Fisher, A. G., &amp; Nyman, A. (2011). <em>OTIPM: En modell för ett professionellt resonemang som främjar bästa praxis i arbetsterapi</em> (3:e uppl.). Förbundet Sveriges Arbetsterapeuter.</li>
+              <li>Fitzgerald, M. J. T., Gruener, G., &amp; Mtui, E. (2012). <em>Clinical neuroanatomy and neuroscience</em> (6:e uppl.). Saunders/Elsevier.</li>
+              <li>Fresenius Kabi. (2021). <em>Glucos Fresenius Kabi, infusionsvätska, lösning 500 mg/ml</em> [Produktresumé]. Fass. Hämtad 22 juli 2026 från <a href="https://fass.se/health/product/19801219000076/fass-text" target="_blank" rel="noopener noreferrer" class="info-link">fass.se</a></li>
+              <li>Gates, P. (2005). The rule of 4 of the brainstem: A simplified method for understanding brainstem anatomy and brainstem vascular syndromes for the non-neurologist. <em>Internal Medicine Journal, 35</em>(4), 263–266. <a href="https://doi.org/10.1111/j.1445-5994.2004.00732.x" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1111/j.1445-5994.2004.00732.x</a></li>
+              <li>Hall, J. E., &amp; Hall, M. E. (2021). <em>Guyton and Hall textbook of medical physiology</em> (14:e uppl.). Elsevier.</li>
+              <li>Holmberg, D. (u.å.). <em>Minnesregler för anatomiskt lärande</em> [Sammanställning]. Hämtad 24 juli 2026 från <a href="https://hus75.se/host/Minnesramsor.pdf" target="_blank" rel="noopener noreferrer" class="info-link">hus75.se</a></li>
+              <li>Internetodontologi. (u.å.). <em>Kunskapsstöd inom odontologi</em>. <a href="https://www.internetodontologi.se" target="_blank" rel="noopener noreferrer" class="info-link">internetodontologi.se</a></li>
+              <li>Hansson, N., &amp; Uvelius, B. (2018). Svenska läkare höll fast vid tyskan in på 1940-talet. <em>Läkartidningen, 115</em>, FCDL. <a href="https://lakartidningen.se/vetenskap/svenska-lakare-holl-fast-vid-tyskan-in-pa-1940-talet/" target="_blank" rel="noopener noreferrer" class="info-link">lakartidningen.se</a></li>
+              <li>Hellquist, E. (1948). <em>Svensk etymologisk ordbok</em> (3:e uppl.). Gleerup.</li>
+              <li>Iverson, C., Christiansen, S., Flanagin, A., Fontanarosa, P. B., Glass, R. M., Gregoline, B., … Young, R. K. (2020). <em>AMA manual of style: A guide for authors and editors</em> (11:e uppl.). Oxford University Press.</li>
+              <li>Kandel, E. R., Koester, J. D., Mack, S. H., &amp; Siegelbaum, S. A. (Red.). (2021). <em>Principles of neural science</em> (6:e uppl.). McGraw Hill.</li>
+              <li>Kielhofner, G. (2012). <em>Model of human occupation: Teori och tillämpning</em>. Studentlitteratur.</li>
+              <li>Lanska, D. J. (2022). On old Olympus? Oliver Wendell Holmes and the origin and evolution of a mnemonic couplet for the cranial nerves. <em>Journal of the History of the Neurosciences, 31</em>(1), 20–29. <a href="https://doi.org/10.1080/0964704X.2021.1904331" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1080/0964704X.2021.1904331</a></li>
+              <li>Larsen, D. P., Butler, A. C., &amp; Roediger, H. L., III. (2008). Test-enhanced learning in medical education. <em>Medical Education, 42</em>(10), 959–966. <a href="https://doi.org/10.1111/j.1365-2923.2008.03124.x" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1111/j.1365-2923.2008.03124.x</a></li>
+              <li>Lee, M. W. L., McPhee, R. W., &amp; Stringer, M. D. (2008). An evidence-based approach to human dermatomes. <em>Clinical Anatomy, 21</em>(5), 363–373. <a href="https://doi.org/10.1002/ca.20636" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1002/ca.20636</a></li>
+              <li>Leitner, S. (1972). <em>So lernt man lernen: Der Weg zum Erfolg</em>. Herder.</li>
+              <li>Levy, O., Relwani, J., Zaman, T., Even, T., Venkateswaran, B., &amp; Copeland, S. (2008). Measurement of blood flow in the rotator cuff using laser Doppler flowmetry. <em>The Journal of Bone and Joint Surgery. British Volume, 90</em>(7), 893–898. <a href="https://doi.org/10.1302/0301-620X.90B7.19918" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1302/0301-620X.90B7.19918</a></li>
+              <li>Lindskog, B. I. (2008). <em>Medicinsk terminologi</em> (5:e uppl.). Nya Doxa.</li>
+              <li>Lännergren, J., Westerblad, H., Ulfendahl, M., &amp; Lundeberg, T. (2017). <em>Fysiologi</em> (6:e uppl.). Studentlitteratur.</li>
+              <li>Läkarstudent.se. (u.å.). <em>Minnesramsor för de tolv kranialnerverna</em> [Forumtråd]. Hämtad 24 juli 2026 från <a href="https://www.xn--lkarstudent-l8a.se/forum/viewtopic.php?t=2148" target="_blank" rel="noopener noreferrer" class="info-link">läkarstudent.se</a></li>
+              <li>Medibas. (u.å.). <em>Medicinskt uppslagsverk för vårdpersonal</em>. Bonnier Healthcare Sweden. <a href="https://medibas.se" target="_blank" rel="noopener noreferrer" class="info-link">medibas.se</a></li>
+              <li>Mochizuki, T., Sugaya, H., Uomizu, M., Maeda, K., Matsuki, K., Sekiya, I., Muneta, T., &amp; Akita, K. (2008). Humeral insertion of the supraspinatus and infraspinatus: New anatomical findings regarding the footprint of the rotator cuff. <em>The Journal of Bone and Joint Surgery, 90</em>(5), 962–969. <a href="https://doi.org/10.2106/JBJS.G.00427" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.2106/JBJS.G.00427</a></li>
+              <li>Moore, K. L., Dalley, A. F., &amp; Agur, A. M. R. (2018). <em>Clinically oriented anatomy</em> (8:e uppl.). Wolters Kluwer.</li>
+              <li>Inera. (2023). <em>Iordningställande, administrering och överlämnande</em>. Vårdhandboken. Hämtad 22 juli 2026 från <a href="https://www.vardhandboken.se/vard-och-behandling/lakemedelsbehandling/lakemedelshantering/iordningstallande-administrering-och-overlamnande/" target="_blank" rel="noopener noreferrer" class="info-link">vardhandboken.se</a></li>
+              <li>Nordeng, H., &amp; Spigset, O. (Red.). (2020). <em>Farmakologi och läkemedelsanvändning</em> (3:e uppl.). Studentlitteratur.</li>
+              <li>Norkin, C. C., &amp; White, D. J. (2016). <em>Measurement of joint motion: A guide to goniometry</em> (5:e uppl.). F.A. Davis.</li>
+              <li>O'Driscoll, B. R., Howard, L. S., Earis, J., &amp; Mak, V. (2017). BTS guideline for oxygen use in adults in healthcare and emergency settings. <em>Thorax, 72</em>(Suppl 1), ii1–ii90.</li>
+              <li>Paulsen, F., &amp; Waschke, J. (Red.). (2018). <em>Sobotta atlas of human anatomy</em> (16:e uppl.). Elsevier.</li>
+              <li>Porter, R. (1997). <em>The greatest benefit to mankind: A medical history of humanity from antiquity to the present</em>. HarperCollins.</li>
+              <li>Rathbun, J. B., &amp; Macnab, I. (1970). The microvascular pattern of the rotator cuff. <em>The Journal of Bone and Joint Surgery. British Volume, 52</em>(3), 540–553. <a href="https://doi.org/10.1302/0301-620X.52B3.540" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1302/0301-620X.52B3.540</a></li>
+              <li>Roediger, H. L., III, &amp; Karpicke, J. D. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. <em>Psychological Science, 17</em>(3), 249–255. <a href="https://doi.org/10.1111/j.1467-9280.2006.01693.x" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1111/j.1467-9280.2006.01693.x</a></li>
+              <li>Royal College of Physicians. (2017). <em>National Early Warning Score (NEWS) 2: Standardising the assessment of acute-illness severity in the NHS</em>. RCP.</li>
+              <li>Salö, L. (2010). <em>Engelska eller svenska? En kartläggning av språksituationen inom högre utbildning och forskning</em>. Språkrådet.</li>
+              <li>Sand, O., Sjaastad, Ø. V., Haug, E., &amp; Bjålie, J. G. (2021). <em>Människokroppen: Fysiologi och anatomi</em> (3:e uppl.). Liber.</li>
+              <li>Seitz, A. L., McClure, P. W., Finucane, S., Boardman, N. D., III, &amp; Michener, L. A. (2011). Mechanisms of rotator cuff tendinopathy: Intrinsic, extrinsic, or both? <em>Clinical Biomechanics, 26</em>(1), 1–12. <a href="https://doi.org/10.1016/j.clinbiomech.2010.08.001" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1016/j.clinbiomech.2010.08.001</a></li>
+              <li>Smith, G. B., Prytherch, D. R., Meredith, P., Schmidt, P. E., &amp; Featherstone, P. I. (2013). The ability of the National Early Warning Score (NEWS) to discriminate patients at risk of early cardiac arrest, unanticipated intensive care unit admission, and death. <em>Resuscitation, 84</em>(4), 465–470.</li>
+              <li>Socialstyrelsen. (2016). <em>Socialstyrelsens föreskrifter och allmänna råd om journalföring och behandling av personuppgifter i hälso- och sjukvården</em> (HSLF-FS 2016:40). Socialstyrelsen.</li>
+              <li>Socialstyrelsen. (2017). <em>Socialstyrelsens föreskrifter och allmänna råd om ordination och hantering av läkemedel i hälso- och sjukvården</em> (HSLF-FS 2017:37, konsoliderad version 2025-12-18). Hämtad 22 juli 2026 från <a href="https://www.socialstyrelsen.se/kunskapsstod-och-regler/regler-och-riktlinjer/foreskrifter-och-allmanna-rad/konsoliderade-foreskrifter/201737-om-ordination-och-hantering-av-lakemedel-i-halso--och-sjukvarden/" target="_blank" rel="noopener noreferrer" class="info-link">socialstyrelsen.se</a></li>
+              <li>Socialstyrelsen. (2024). <em>Internationell statistisk klassifikation av sjukdomar och relaterade hälsoproblem – systematisk förteckning (ICD-10-SE)</em>. Socialstyrelsen. <a href="https://klassifikationer.socialstyrelsen.se" target="_blank" rel="noopener noreferrer" class="info-link">klassifikationer.socialstyrelsen.se</a></li>
+              <li>Socialstyrelsen. (u.å.). <em>Snomed CT</em>. Hämtad 21 juli 2026 från <a href="https://www.socialstyrelsen.se" target="_blank" rel="noopener noreferrer" class="info-link">socialstyrelsen.se</a></li>
+              <li>Spitzer, H. F. (1939). Studies in retention. <em>Journal of Educational Psychology, 30</em>(9), 641–656. <a href="https://doi.org/10.1037/h0063404" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1037/h0063404</a></li>
+              <li>Solunetti. (u.å.). <em>Histologi och utvecklingsbiologi</em>. <a href="https://www.solunetti.fi" target="_blank" rel="noopener noreferrer" class="info-link">solunetti.fi</a></li>
+              <li>Standring, S. (Red.). (2021). <em>Gray's anatomy: The anatomical basis of clinical practice</em> (42:a uppl.). Elsevier.</li>
+              <li><em>Stedman's medical dictionary</em> (28:e uppl.). (2006). Lippincott Williams &amp; Wilkins.</li>
+              <li>Svenska Akademien. (2015). <em>Svenska Akademiens ordlista över svenska språket</em> (14:e uppl.). Norstedts.</li>
+              <li>Svenska Akademien. (2021). <em>Svensk ordbok utgiven av Svenska Akademien</em> (2:a uppl.). <a href="https://svenska.se" target="_blank" rel="noopener noreferrer" class="info-link">svenska.se</a></li>
+              <li>Sveriges riksdag. (2009). <em>Språklag</em> (SFS 2009:600). Kulturdepartementet.</li>
+              <li>Trestjärnan AB. (2013). <em>OTIPM: Officiell svensk översättning av processchemat</em> [Bearbetning av Fisher, 2009]. Hämtad 8 augusti 2026 från <a href="https://amps.se/kursmaterial/otipm-svenska.pdf" target="_blank" rel="noopener noreferrer" class="info-link">amps.se</a></li>
+              <li>Vesalius, A. (1543). <em>De humani corporis fabrica libri septem</em>. Johannes Oporinus.</li>
+              <li>Vilensky, J. A. (2014). The neglected cranial nerve: Nervus terminalis (cranial nerve N). <em>Clinical Anatomy, 27</em>(1), 46–53. <a href="https://doi.org/10.1002/ca.22130" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1002/ca.22130</a></li>
+              <li>Världshälsoorganisationen. (2019). <em>ICD-11: International classification of diseases</em> (11:e rev.). <a href="https://icd.who.int" target="_blank" rel="noopener noreferrer" class="info-link">icd.who.int</a></li>
+              <li>Yamamoto, A., Takagishi, K., Osawa, T., Yanagawa, T., Nakajima, D., Shitara, H., &amp; Kobayashi, T. (2010). Prevalence and risk factors of a rotator cuff tear in the general population. <em>Journal of Shoulder and Elbow Surgery, 19</em>(1), 116–120. <a href="https://doi.org/10.1016/j.jse.2009.04.006" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1016/j.jse.2009.04.006</a></li>
+            </ul>
 
-        <h3 class="info-subheading">Varför Anatomiquiz finns</h3>
-        <p>Idén föddes under studierna. Daniel saknade bra, kostnadsfritt övningsmaterial i anatomi på svenska – det mesta var antingen låst bakom betalväggar, skrivet på engelska eller alldeles för ytligt. I stället för att leta vidare byggde han sitt eget. Tanken var enkel: samla all relevant fakta på ett och samma ställe och göra den lätt att nå, repetera och söka i. Anatomiquiz är resultatet, och appen växer kontinuerligt i takt med att nya områden läggs till.</p>
+            <p class="info-creator">Skapad, utgiven och kvalitetssäkrad av Daniel Medin / <a href="https://norrtou.se" target="_blank" rel="noopener noreferrer" class="info-link">Norrtou Creations</a>. Källkoden finns på <a href="https://github.com/norrtou" target="_blank" rel="noopener noreferrer" class="info-link">GitHub</a>.</p>
+
+            <p class="info-creator">Läs om hur dina uppgifter hanteras i <a href="integritet.html" class="info-link">integritetspolicyn</a>.</p>
+          </div>
+        </section>
       </div>
-    </section>
 
-    <!-- Diskret kontaktformulär. GitHub Pages saknar backend, så submit fångas i
-         info.js och öppnar besökarens egen e-postklient via mailto: (ingen tredjepart,
-         inga data passerar något mellanled). Mottagare: anatomiquizse@gmail.com. -->
-    <section class="card contact" aria-labelledby="contactHeading">
-      <h2 id="contactHeading" class="about-title">Rapportera fel &amp; synpunkter</h2>
-      <p class="contact-intro">Hittat en bugg, ett fel i innehållet eller har en synpunkt? Skriv några rader – ditt e-postprogram öppnas med ett färdigt meddelande. Jag tar också gärna emot förslag på ämnen för quiz som du saknar.</p>
-      <form id="contactForm" novalidate>
-        <label for="contactType">Typ</label>
-        <select id="contactType">
-          <option value="Bugg">Bugg</option>
-          <option value="Fel i innehåll">Fel i innehåll</option>
-          <option value="Förslag på ämne">Förslag på ämne</option>
-          <option value="Synpunkt">Synpunkt</option>
-          <option value="Övrigt">Övrigt</option>
-        </select>
-        <label for="contactMessage">Meddelande</label>
-        <textarea id="contactMessage" rows="4" placeholder="Beskriv felet eller din synpunkt…" required></textarea>
-        <div class="actions">
-          <button type="submit" class="btn primary">Skicka via e-post</button>
-        </div>
-        <p class="contact-fallback">Fungerar inte knappen? Mejla <a class="info-link" href="mailto:anatomiquizse@gmail.com">anatomiquizse@gmail.com</a> direkt.</p>
-      </form>
-    </section>
-
-    <!-- Omfattning (ändringsloggen bor på versionshistorik.html) -->
-    <section class="card" aria-labelledby="historyHeading">
-      <h2 id="historyHeading" class="about-title">Antal quizfrågor per ämne</h2>
-      <div id="statsContent"></div>
-      <p id="glossaryCount" class="glossary-count">Laddar ordlistans omfattning…</p>
-    </section>
-
-    <!-- Källor (flyttad sist eftersom listan växer kontinuerligt) -->
-    <section class="card" aria-labelledby="sourcesHeading">
-      <h2 id="sourcesHeading" class="about-title">Källor och kvalitetssäkring</h2>
-      <div class="info-prose">
-        <p>Innehållet är sammanställt och kvalitetssäkrat mot beprövat referensmaterial inom medicin och språk. Trots detta arbete kan materialet innehålla fel och brister. Det är avsett som ett komplement till studier och ersätter inte kurslitteratur, läromedel eller annan auktoritativ källa. Centrala källor:</p>
-        <ul>
-          <li>Ackerknecht, E. H. (1967). <em>Medicine at the Paris hospital, 1794–1848</em>. Johns Hopkins Press.</li>
-          <li>Allen, W. S. (1978). <em>Vox Latina: A guide to the pronunciation of Classical Latin</em> (2:a uppl.). Cambridge University Press.</li>
-          <li>American Spinal Injury Association. (2019). <em>International standards for neurological classification of spinal cord injury</em> (rev. 2019). ASIA. Hämtad 24 juli 2026 från <a href="https://asia-spinalinjury.org/" target="_blank" rel="noopener noreferrer" class="info-link">asia-spinalinjury.org</a></li>
-          <li>Aspelin, P., &amp; Pettersson, H. (Red.). (2008). <em>Radiologi</em>. Studentlitteratur.</li>
-          <li>Baethge, C. (2008). The languages of medicine. <em>Deutsches Ärzteblatt International, 105</em>(3), 37–40. <a href="https://doi.org/10.3238/arztebl.2008.0037" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.3238/arztebl.2008.0037</a></li>
-          <li>Björkman, E., &amp; Hagberg, M. (2023). <em>Läkemedelsräkning för sjuksköterskor</em> (6:e uppl.). Studentlitteratur.</li>
-          <li>Burkhart, S. S., Esch, J. C., &amp; Jolson, R. S. (1993). The rotator crescent and rotator cable: An anatomic description of the shoulder's "suspension bridge". <em>Arthroscopy, 9</em>(6), 611–616. <a href="https://doi.org/10.1016/S0749-8063(05)80496-7" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1016/S0749-8063(05)80496-7</a></li>
-          <li>Butler, A. C., &amp; Roediger, H. L., III. (2008). Feedback enhances the positive effects and reduces the negative effects of multiple-choice testing. <em>Memory &amp; Cognition, 36</em>(3), 604–616. <a href="https://doi.org/10.3758/MC.36.3.604" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.3758/MC.36.3.604</a></li>
-          <li>Bojsen-Møller, F., Simonsen, E. B., &amp; Tranum-Jensen, J. (2018). <em>Rörelseapparatens anatomi</em> (2:a uppl.). Liber.</li>
-          <li>Boron, W. F., &amp; Boulpaep, E. L. (2016). <em>Medical physiology</em> (3:e uppl.). Elsevier.</li>
-          <li>Cepeda, N. J., Pashler, H., Vul, E., Wixted, J. T., &amp; Rohrer, D. (2006). Distributed practice in verbal recall tasks: A review and quantitative synthesis. <em>Psychological Bulletin, 132</em>(3), 354–380. <a href="https://doi.org/10.1037/0033-2909.132.3.354" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1037/0033-2909.132.3.354</a></li>
-          <li>Clark, J. M., &amp; Harryman, D. T., II. (1992). Tendons, ligaments, and capsule of the rotator cuff: Gross and microscopic anatomy. <em>The Journal of Bone and Joint Surgery, 74</em>(5), 713–725.</li>
-          <li>Diercks, R., Bron, C., Dorrestijn, O., Meskers, C., Naber, R., de Ruiter, T., Willems, J., Winters, J., &amp; van der Woude, H. J. (2014). Guideline for diagnosis and treatment of subacromial pain syndrome: A multidisciplinary review by the Dutch Orthopaedic Association. <em>Acta Orthopaedica, 85</em>(3), 314–322. <a href="https://doi.org/10.3109/17453674.2014.920991" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.3109/17453674.2014.920991</a></li>
-          <li><em>Dorland's illustrated medical dictionary</em> (33:e uppl.). (2020). Elsevier.</li>
-          <li>Dunlosky, J., Rawson, K. A., Marsh, E. J., Nathan, M. J., &amp; Willingham, D. T. (2013). Improving students' learning with effective learning techniques: Promising directions from cognitive and educational psychology. <em>Psychological Science in the Public Interest, 14</em>(1), 4–58. <a href="https://doi.org/10.1177/1529100612453266" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1177/1529100612453266</a></li>
-          <li>Edlund, L.-E., &amp; Hene, B. (2013). <em>Lånord i svenskan: Om språkförändringar i tid och rum</em> (2:a uppl.). Studentlitteratur.</li>
-          <li>Federative International Programme for Anatomical Terminology. (2019). <em>Terminologia anatomica</em> (2:a uppl.). FIPAT.</li>
-          <li>Fisher, A. G. (2009). <em>Occupational Therapy Intervention Process Model: A model for planning and implementing top-down, client-centered, and occupation-based interventions</em>. Three Star Press.</li>
-          <li>Fisher, A. G., &amp; Nyman, A. (2011). <em>OTIPM: En modell för ett professionellt resonemang som främjar bästa praxis i arbetsterapi</em> (3:e uppl.). Förbundet Sveriges Arbetsterapeuter.</li>
-          <li>Fitzgerald, M. J. T., Gruener, G., &amp; Mtui, E. (2012). <em>Clinical neuroanatomy and neuroscience</em> (6:e uppl.). Saunders/Elsevier.</li>
-          <li>Fresenius Kabi. (2021). <em>Glucos Fresenius Kabi, infusionsvätska, lösning 500 mg/ml</em> [Produktresumé]. Fass. Hämtad 22 juli 2026 från <a href="https://fass.se/health/product/19801219000076/fass-text" target="_blank" rel="noopener noreferrer" class="info-link">fass.se</a></li>
-          <li>Gates, P. (2005). The rule of 4 of the brainstem: A simplified method for understanding brainstem anatomy and brainstem vascular syndromes for the non-neurologist. <em>Internal Medicine Journal, 35</em>(4), 263–266. <a href="https://doi.org/10.1111/j.1445-5994.2004.00732.x" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1111/j.1445-5994.2004.00732.x</a></li>
-          <li>Hall, J. E., &amp; Hall, M. E. (2021). <em>Guyton and Hall textbook of medical physiology</em> (14:e uppl.). Elsevier.</li>
-          <li>Holmberg, D. (u.å.). <em>Minnesregler för anatomiskt lärande</em> [Sammanställning]. Hämtad 24 juli 2026 från <a href="https://hus75.se/host/Minnesramsor.pdf" target="_blank" rel="noopener noreferrer" class="info-link">hus75.se</a></li>
-          <li>Internetodontologi. (u.å.). <em>Kunskapsstöd inom odontologi</em>. <a href="https://www.internetodontologi.se" target="_blank" rel="noopener noreferrer" class="info-link">internetodontologi.se</a></li>
-          <li>Hansson, N., &amp; Uvelius, B. (2018). Svenska läkare höll fast vid tyskan in på 1940-talet. <em>Läkartidningen, 115</em>, FCDL. <a href="https://lakartidningen.se/vetenskap/svenska-lakare-holl-fast-vid-tyskan-in-pa-1940-talet/" target="_blank" rel="noopener noreferrer" class="info-link">lakartidningen.se</a></li>
-          <li>Hellquist, E. (1948). <em>Svensk etymologisk ordbok</em> (3:e uppl.). Gleerup.</li>
-          <li>Iverson, C., Christiansen, S., Flanagin, A., Fontanarosa, P. B., Glass, R. M., Gregoline, B., … Young, R. K. (2020). <em>AMA manual of style: A guide for authors and editors</em> (11:e uppl.). Oxford University Press.</li>
-          <li>Kandel, E. R., Koester, J. D., Mack, S. H., &amp; Siegelbaum, S. A. (Red.). (2021). <em>Principles of neural science</em> (6:e uppl.). McGraw Hill.</li>
-          <li>Kielhofner, G. (2012). <em>Model of human occupation: Teori och tillämpning</em>. Studentlitteratur.</li>
-          <li>Lanska, D. J. (2022). On old Olympus? Oliver Wendell Holmes and the origin and evolution of a mnemonic couplet for the cranial nerves. <em>Journal of the History of the Neurosciences, 31</em>(1), 20–29. <a href="https://doi.org/10.1080/0964704X.2021.1904331" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1080/0964704X.2021.1904331</a></li>
-          <li>Larsen, D. P., Butler, A. C., &amp; Roediger, H. L., III. (2008). Test-enhanced learning in medical education. <em>Medical Education, 42</em>(10), 959–966. <a href="https://doi.org/10.1111/j.1365-2923.2008.03124.x" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1111/j.1365-2923.2008.03124.x</a></li>
-          <li>Lee, M. W. L., McPhee, R. W., &amp; Stringer, M. D. (2008). An evidence-based approach to human dermatomes. <em>Clinical Anatomy, 21</em>(5), 363–373. <a href="https://doi.org/10.1002/ca.20636" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1002/ca.20636</a></li>
-          <li>Leitner, S. (1972). <em>So lernt man lernen: Der Weg zum Erfolg</em>. Herder.</li>
-          <li>Levy, O., Relwani, J., Zaman, T., Even, T., Venkateswaran, B., &amp; Copeland, S. (2008). Measurement of blood flow in the rotator cuff using laser Doppler flowmetry. <em>The Journal of Bone and Joint Surgery. British Volume, 90</em>(7), 893–898. <a href="https://doi.org/10.1302/0301-620X.90B7.19918" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1302/0301-620X.90B7.19918</a></li>
-          <li>Lindskog, B. I. (2008). <em>Medicinsk terminologi</em> (5:e uppl.). Nya Doxa.</li>
-          <li>Lännergren, J., Westerblad, H., Ulfendahl, M., &amp; Lundeberg, T. (2017). <em>Fysiologi</em> (6:e uppl.). Studentlitteratur.</li>
-          <li>Läkarstudent.se. (u.å.). <em>Minnesramsor för de tolv kranialnerverna</em> [Forumtråd]. Hämtad 24 juli 2026 från <a href="https://www.xn--lkarstudent-l8a.se/forum/viewtopic.php?t=2148" target="_blank" rel="noopener noreferrer" class="info-link">läkarstudent.se</a></li>
-          <li>Medibas. (u.å.). <em>Medicinskt uppslagsverk för vårdpersonal</em>. Bonnier Healthcare Sweden. <a href="https://medibas.se" target="_blank" rel="noopener noreferrer" class="info-link">medibas.se</a></li>
-          <li>Mochizuki, T., Sugaya, H., Uomizu, M., Maeda, K., Matsuki, K., Sekiya, I., Muneta, T., &amp; Akita, K. (2008). Humeral insertion of the supraspinatus and infraspinatus: New anatomical findings regarding the footprint of the rotator cuff. <em>The Journal of Bone and Joint Surgery, 90</em>(5), 962–969. <a href="https://doi.org/10.2106/JBJS.G.00427" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.2106/JBJS.G.00427</a></li>
-          <li>Moore, K. L., Dalley, A. F., &amp; Agur, A. M. R. (2018). <em>Clinically oriented anatomy</em> (8:e uppl.). Wolters Kluwer.</li>
-          <li>Inera. (2023). <em>Iordningställande, administrering och överlämnande</em>. Vårdhandboken. Hämtad 22 juli 2026 från <a href="https://www.vardhandboken.se/vard-och-behandling/lakemedelsbehandling/lakemedelshantering/iordningstallande-administrering-och-overlamnande/" target="_blank" rel="noopener noreferrer" class="info-link">vardhandboken.se</a></li>
-          <li>Nordeng, H., &amp; Spigset, O. (Red.). (2020). <em>Farmakologi och läkemedelsanvändning</em> (3:e uppl.). Studentlitteratur.</li>
-          <li>Norkin, C. C., &amp; White, D. J. (2016). <em>Measurement of joint motion: A guide to goniometry</em> (5:e uppl.). F.A. Davis.</li>
-          <li>O'Driscoll, B. R., Howard, L. S., Earis, J., &amp; Mak, V. (2017). BTS guideline for oxygen use in adults in healthcare and emergency settings. <em>Thorax, 72</em>(Suppl 1), ii1–ii90.</li>
-          <li>Paulsen, F., &amp; Waschke, J. (Red.). (2018). <em>Sobotta atlas of human anatomy</em> (16:e uppl.). Elsevier.</li>
-          <li>Porter, R. (1997). <em>The greatest benefit to mankind: A medical history of humanity from antiquity to the present</em>. HarperCollins.</li>
-          <li>Rathbun, J. B., &amp; Macnab, I. (1970). The microvascular pattern of the rotator cuff. <em>The Journal of Bone and Joint Surgery. British Volume, 52</em>(3), 540–553. <a href="https://doi.org/10.1302/0301-620X.52B3.540" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1302/0301-620X.52B3.540</a></li>
-          <li>Roediger, H. L., III, &amp; Karpicke, J. D. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. <em>Psychological Science, 17</em>(3), 249–255. <a href="https://doi.org/10.1111/j.1467-9280.2006.01693.x" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1111/j.1467-9280.2006.01693.x</a></li>
-          <li>Royal College of Physicians. (2017). <em>National Early Warning Score (NEWS) 2: Standardising the assessment of acute-illness severity in the NHS</em>. RCP.</li>
-          <li>Salö, L. (2010). <em>Engelska eller svenska? En kartläggning av språksituationen inom högre utbildning och forskning</em>. Språkrådet.</li>
-          <li>Sand, O., Sjaastad, Ø. V., Haug, E., &amp; Bjålie, J. G. (2021). <em>Människokroppen: Fysiologi och anatomi</em> (3:e uppl.). Liber.</li>
-          <li>Seitz, A. L., McClure, P. W., Finucane, S., Boardman, N. D., III, &amp; Michener, L. A. (2011). Mechanisms of rotator cuff tendinopathy: Intrinsic, extrinsic, or both? <em>Clinical Biomechanics, 26</em>(1), 1–12. <a href="https://doi.org/10.1016/j.clinbiomech.2010.08.001" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1016/j.clinbiomech.2010.08.001</a></li>
-          <li>Smith, G. B., Prytherch, D. R., Meredith, P., Schmidt, P. E., &amp; Featherstone, P. I. (2013). The ability of the National Early Warning Score (NEWS) to discriminate patients at risk of early cardiac arrest, unanticipated intensive care unit admission, and death. <em>Resuscitation, 84</em>(4), 465–470.</li>
-          <li>Socialstyrelsen. (2016). <em>Socialstyrelsens föreskrifter och allmänna råd om journalföring och behandling av personuppgifter i hälso- och sjukvården</em> (HSLF-FS 2016:40). Socialstyrelsen.</li>
-          <li>Socialstyrelsen. (2017). <em>Socialstyrelsens föreskrifter och allmänna råd om ordination och hantering av läkemedel i hälso- och sjukvården</em> (HSLF-FS 2017:37, konsoliderad version 2025-12-18). Hämtad 22 juli 2026 från <a href="https://www.socialstyrelsen.se/kunskapsstod-och-regler/regler-och-riktlinjer/foreskrifter-och-allmanna-rad/konsoliderade-foreskrifter/201737-om-ordination-och-hantering-av-lakemedel-i-halso--och-sjukvarden/" target="_blank" rel="noopener noreferrer" class="info-link">socialstyrelsen.se</a></li>
-          <li>Socialstyrelsen. (2024). <em>Internationell statistisk klassifikation av sjukdomar och relaterade hälsoproblem – systematisk förteckning (ICD-10-SE)</em>. Socialstyrelsen. <a href="https://klassifikationer.socialstyrelsen.se" target="_blank" rel="noopener noreferrer" class="info-link">klassifikationer.socialstyrelsen.se</a></li>
-          <li>Socialstyrelsen. (u.å.). <em>Snomed CT</em>. Hämtad 21 juli 2026 från <a href="https://www.socialstyrelsen.se" target="_blank" rel="noopener noreferrer" class="info-link">socialstyrelsen.se</a></li>
-          <li>Spitzer, H. F. (1939). Studies in retention. <em>Journal of Educational Psychology, 30</em>(9), 641–656. <a href="https://doi.org/10.1037/h0063404" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1037/h0063404</a></li>
-          <li>Solunetti. (u.å.). <em>Histologi och utvecklingsbiologi</em>. <a href="https://www.solunetti.fi" target="_blank" rel="noopener noreferrer" class="info-link">solunetti.fi</a></li>
-          <li>Standring, S. (Red.). (2021). <em>Gray's anatomy: The anatomical basis of clinical practice</em> (42:a uppl.). Elsevier.</li>
-          <li><em>Stedman's medical dictionary</em> (28:e uppl.). (2006). Lippincott Williams &amp; Wilkins.</li>
-          <li>Svenska Akademien. (2015). <em>Svenska Akademiens ordlista över svenska språket</em> (14:e uppl.). Norstedts.</li>
-          <li>Svenska Akademien. (2021). <em>Svensk ordbok utgiven av Svenska Akademien</em> (2:a uppl.). <a href="https://svenska.se" target="_blank" rel="noopener noreferrer" class="info-link">svenska.se</a></li>
-          <li>Sveriges riksdag. (2009). <em>Språklag</em> (SFS 2009:600). Kulturdepartementet.</li>
-          <li>Trestjärnan AB. (2013). <em>OTIPM: Officiell svensk översättning av processchemat</em> [Bearbetning av Fisher, 2009]. Hämtad 8 augusti 2026 från <a href="https://amps.se/kursmaterial/otipm-svenska.pdf" target="_blank" rel="noopener noreferrer" class="info-link">amps.se</a></li>
-          <li>Vesalius, A. (1543). <em>De humani corporis fabrica libri septem</em>. Johannes Oporinus.</li>
-          <li>Vilensky, J. A. (2014). The neglected cranial nerve: Nervus terminalis (cranial nerve N). <em>Clinical Anatomy, 27</em>(1), 46–53. <a href="https://doi.org/10.1002/ca.22130" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1002/ca.22130</a></li>
-          <li>Världshälsoorganisationen. (2019). <em>ICD-11: International classification of diseases</em> (11:e rev.). <a href="https://icd.who.int" target="_blank" rel="noopener noreferrer" class="info-link">icd.who.int</a></li>
-          <li>Yamamoto, A., Takagishi, K., Osawa, T., Yanagawa, T., Nakajima, D., Shitara, H., &amp; Kobayashi, T. (2010). Prevalence and risk factors of a rotator cuff tear in the general population. <em>Journal of Shoulder and Elbow Surgery, 19</em>(1), 116–120. <a href="https://doi.org/10.1016/j.jse.2009.04.006" target="_blank" rel="noopener noreferrer" class="info-link">doi.org/10.1016/j.jse.2009.04.006</a></li>
-        </ul>
-
-        <p class="info-creator">Skapad, utgiven och kvalitetssäkrad av Daniel Medin / <a href="https://norrtou.se" target="_blank" rel="noopener noreferrer" class="info-link">Norrtou Creations</a>. Källkoden finns på <a href="https://github.com/norrtou" target="_blank" rel="noopener noreferrer" class="info-link">GitHub</a>.</p>
-
-        <p class="info-creator">Läs om hur dina uppgifter hanteras i <a href="integritet.html" class="info-link">integritetspolicyn</a>.</p>
+      <!-- Flik 6: Kontakt. GitHub Pages saknar backend, så submit fångas i
+           info.js och öppnar besökarens egen e-postklient via mailto: (ingen tredjepart,
+           inga data passerar något mellanled). Mottagare: anatomiquizse@gmail.com. -->
+      <div class="about-panel" id="kontakt" role="region" aria-labelledby="tab-kontakt">
+        <section class="card contact" aria-labelledby="contactHeading">
+          <h2 id="contactHeading" class="about-title">Rapportera fel &amp; synpunkter</h2>
+          <p class="contact-intro">Hittat en bugg, ett fel i innehållet eller har en synpunkt? Skriv några rader – ditt e-postprogram öppnas med ett färdigt meddelande. Jag tar också gärna emot förslag på ämnen för quiz som du saknar.</p>
+          <form id="contactForm" novalidate>
+            <label for="contactType">Typ</label>
+            <select id="contactType">
+              <option value="Bugg">Bugg</option>
+              <option value="Fel i innehåll">Fel i innehåll</option>
+              <option value="Förslag på ämne">Förslag på ämne</option>
+              <option value="Synpunkt">Synpunkt</option>
+              <option value="Övrigt">Övrigt</option>
+            </select>
+            <label for="contactMessage">Meddelande</label>
+            <textarea id="contactMessage" rows="4" placeholder="Beskriv felet eller din synpunkt…" required></textarea>
+            <div class="actions">
+              <button type="submit" class="btn primary">Skicka via e-post</button>
+            </div>
+            <p class="contact-fallback">Fungerar inte knappen? Mejla <a class="info-link" href="mailto:anatomiquizse@gmail.com">anatomiquizse@gmail.com</a> direkt.</p>
+          </form>
+        </section>
       </div>
-    </section>
+    </div>
 
     <div class="actions">
       <a href="./" class="btn">← Tillbaka</a>
@@ -483,6 +581,9 @@
     </footer>
   </main>
 
-  <script src="js/info.js?v=0.9.411" defer></script>
+  <script src="js/info.js?v=0.9.412" defer></script>
+  <!-- Swish-knappen i Vision-fliken. Samma modul som vision.html använder; den
+       avslutar tyst om knappen inte finns på sidan. -->
+  <script src="js/vision-swish.js?v=0.9.299" defer></script>
 </body>
 </html>

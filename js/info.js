@@ -1,7 +1,8 @@
 /**
  * info.js — Om-sidan (info.html)
  *
- * Renderar frågestatistik, ordlistans omfattning och kontaktformuläret.
+ * Renderar frågestatistik, ordlistans omfattning och kontaktformuläret, och
+ * synkar flikvalet mot adressfältet.
  *
  * Ändringsloggen visas inte här alls – den bor på versionshistorik.html.
  */
@@ -329,10 +330,110 @@ function initContactForm() {
 }
 
 // ============================================================================
+// Flikar
+// ============================================================================
+
+/**
+ * Flikvalet självt sköts av CSS (dolda radioknappar + :has i styles.css), så
+ * sidan växlar flik även utan JavaScript. Det här lagret lägger till tre saker
+ * ovanpå, och bara sådant som kräver skript:
+ *
+ *   1. #hash i adressen väljer flik vid inladdning – en enskild flik går då att
+ *      länka, bokmärka och dela.
+ *   2. Adressen uppdateras när besökaren byter flik (replaceState, så flikbyten
+ *      inte fyller bakåtknappen med steg).
+ *   3. En intern länk till något som ligger i en ANNAN flik öppnar den fliken
+ *      först. Utan det gör t.ex. FAQ-svarets länk till Referenser ingenting.
+ */
+function initTabs() {
+  const tabs = document.querySelector('.about-tabs')
+  if (!tabs) return
+
+  const radios = Array.from(tabs.querySelectorAll('input[name="omflik"]'))
+  if (!radios.length) return
+
+  const panelIds = radios.map(r => r.value)
+  const radioFor = (panelId) => radios.find(r => r.value === panelId) || null
+
+  /** Panelen som ett id ligger i — panelens eget id eller ett element inuti den. */
+  function panelOf(targetId) {
+    if (!targetId) return null
+    if (panelIds.includes(targetId)) return targetId
+    const el = document.getElementById(targetId)
+    const panel = el && el.closest('.about-panel')
+    return panel ? panel.id : null
+  }
+
+  /** Väljer fliken utan att skriva i adressen. Returnerar true om något byttes. */
+  function selectTab(panelId) {
+    const radio = radioFor(panelId)
+    if (!radio || radio.checked) return false
+    radio.checked = true
+    return true
+  }
+
+  // 1. Öppna den flik adressen pekar ut (#referenser, men även #faq som ligger
+  //    inuti Info-fliken).
+  //
+  //    Rullningen görs alltid här, aldrig av webbläsaren själv. När sidan laddas
+  //    med en hash är målet fortfarande display:none, så webbläsarens egen
+  //    hopprullning misslyckas – och Chrome gör sedan ett nytt försök när
+  //    elementet blir synligt, vilket landar långt ner i dokumentet. Att styra
+  //    det själv är det enda som ger ett förutsägbart läge.
+  //
+  //    Pekar hashen på en flik rullar vi till flikraden och inte till panelen:
+  //    annars hamnar flikarna ovanför skärmkanten och besökaren ser innehåll
+  //    utan att se vilken flik det kom ur.
+  function applyHash() {
+    const targetId = decodeURIComponent(location.hash.slice(1))
+    const panelId = panelOf(targetId)
+    if (!panelId) return
+    selectTab(panelId)
+    scrollTo(targetId === panelId ? tabs : document.getElementById(targetId))
+  }
+
+  /** Rullar fram ett element först när flikbytet hunnit målas. */
+  function scrollTo(el) {
+    if (!el) return
+    requestAnimationFrame(() => el.scrollIntoView({ block: 'start' }))
+  }
+  applyHash()
+  window.addEventListener('hashchange', applyHash)
+
+  // 2. Spegla besökarens val i adressen. Nyheter är förvald flik och lämnar
+  //    adressen ren – en hash som besökaren inte bett om är bara brus.
+  const defaultRadio = radios.find(r => r.defaultChecked) || radios[0]
+  radios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      if (!radio.checked) return
+      const hash = radio === defaultRadio ? '' : '#' + radio.value
+      history.replaceState(null, '', location.pathname + location.search + hash)
+    })
+  })
+
+  // 3. Länkar in i en annan flik. preventDefault behövs eftersom webbläsaren
+  //    annars försöker rulla till ett mål som fortfarande är display:none.
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href^="#"]')
+    if (!link) return
+    const targetId = decodeURIComponent(link.getAttribute('href').slice(1))
+    if (!targetId) return
+    const panelId = panelOf(targetId)
+    if (!panelId) return
+
+    e.preventDefault()
+    selectTab(panelId)
+    history.replaceState(null, '', location.pathname + location.search + '#' + targetId)
+    scrollTo(targetId === panelId ? tabs : document.getElementById(targetId))
+  })
+}
+
+// ============================================================================
 // Init
 // ============================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
+  initTabs()
   loadStats()
   loadGlossaryCount()
   initContactForm()

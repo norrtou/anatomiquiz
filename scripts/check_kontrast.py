@@ -92,6 +92,10 @@ BAKGRUND = {
     ".vt-inputrow select": "--surface",
     ".vt-unit-fixed": "--surface",
     ".glossary-alpha": "--surface",
+    # Om-sidans flikrad ligger inte i ett kort utan direkt på sidbakgrunden
+    # (gradienten i html, body). --bg-main är gradientens ena ände och den
+    # ände som ger sämst kontrast i mörkt läge, alltså det konservativa valet.
+    ".about-tab:hover": "--bg-main",
 }
 
 # Ytor som inte går att mäta här, med skäl. Nyckeln är selektorn ordagrant.

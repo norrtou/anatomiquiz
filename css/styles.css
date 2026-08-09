@@ -2029,13 +2029,145 @@ body:has(#quiz:not(.hidden)) {
   text-decoration: underline;
 }
 
-#info h2 {
-  font-size: 1.05rem;
-}
-
 /* ============================================================================
    OM-SIDAN (info.html) — kortbaserad, överskådlig layout
    ============================================================================ */
+
+/* ----------------------------------------------------------------------------
+   Flikarna på om-sidan (Nyheter · Info · Vision · Quizfrågor · Referenser · Kontakt)
+
+   Mekaniken är .seg-switch:ens: dolda radioknappar + <label>. Ingen JavaScript
+   behövs för att växla flik, så sidan fungerar med JS avstängt och rätt flik är
+   målad redan i första bildrutan (CLS 0). js/info.js lägger bara till synk mot
+   adressfältet ovanpå.
+
+   Varför radio och inte role="tab": ARIA:s flikmönster kräver egen tangent-
+   hantering i JS. Radioknappar med samma name ger gruppering, piltangenter och
+   fokusordning gratis från webbläsaren.
+   ---------------------------------------------------------------------------- */
+.about-tabs {
+  margin-bottom: 20px;
+}
+
+/* Flikraden. Sex etiketter ryms inte på en rad på en telefon – de radbryts till
+   två rader i stället för att pressas ihop eller läggas i en sidoscrollande
+   remsa där flikar hamnar utanför skärmen. */
+.about-tablist {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 0 2px;
+  border-bottom: 2px solid rgba(16, 185, 129, 0.18);
+}
+
+/* Radioknappen bär tillståndet men syns inte. 1×1 px och opacity 0 i stället
+   för display:none – annars går den inte att nå med tangentbord. */
+.about-tablist input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+.about-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  min-height: 44px;
+  margin-bottom: -2px;
+  padding: 10px 14px;
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.88rem;
+  letter-spacing: 0.2px;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.about-tab:hover {
+  background: rgba(16, 185, 129, 0.07);
+  color: var(--text-primary);
+}
+
+/* Vald flik smälter ihop med kortet under: samma botten som kortet, och
+   underkanten målar över flikradens linje. Den gröna listen ligger som en inre
+   skugga upptill i stället för en border, så etiketten inte hoppar 3 px. */
+.about-tablist input[type="radio"]:checked + .about-tab {
+  background: var(--surface);
+  color: var(--primary-deep);
+  border-color: rgba(16, 185, 129, 0.18);
+  border-bottom-color: var(--surface);
+  box-shadow: inset 0 3px 0 var(--primary);
+}
+
+.about-tablist input[type="radio"]:focus-visible + .about-tab {
+  outline: 3px solid var(--primary-dark);
+  outline-offset: 2px;
+}
+
+/* Panelerna ligger kvar i DOM:en även när de är dolda – det är så sökmotorer
+   och svarsmotorer läser hela sidan trots att bara en flik visas. */
+.about-panel {
+  display: none;
+}
+
+.about-tabs:has(#flik-nyheter:checked) #nyheter,
+.about-tabs:has(#flik-info:checked) #info,
+.about-tabs:has(#flik-vision:checked) #vision,
+.about-tabs:has(#flik-quizfragor:checked) #quizfragor,
+.about-tabs:has(#flik-referenser:checked) #referenser,
+.about-tabs:has(#flik-kontakt:checked) #kontakt {
+  display: block;
+}
+
+/* Kortet direkt under flikraden är flikens "mapp": raka överkanter så att den
+   valda fliken sitter ihop med den. */
+.about-panel > .card:first-child {
+  margin-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* Under ~760px ryms inte sex etiketter på en rad. Ett flex-wrap gav 4+2, och då
+   hamnar den valda fliken i översta raden utan att nå kortet – mappen faller
+   isär. Ett rutnät med tre kolumner ger i stället 3+3 med jämna bredder.
+   Flikraden blir då en knappyta snarare än en mappkant, så mappkanterna tas bort
+   på båda hållen: strecket under raden och kortets raka överkant. */
+@media (max-width: 760px) {
+  .about-tablist {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    padding: 0;
+    border-bottom: 0;
+  }
+
+  .about-tab {
+    margin-bottom: 0;
+    padding: 10px 8px;
+    border-color: rgba(16, 185, 129, 0.15);
+    border-radius: var(--radius-sm);
+    font-size: 0.82rem;
+  }
+
+  .about-tablist input[type="radio"]:checked + .about-tab {
+    border-bottom-color: rgba(16, 185, 129, 0.18);
+  }
+
+  .about-panel > .card:first-child {
+    margin-top: 12px;
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+  }
+}
 
 /* Sektionsrubrik överst i varje om-kort (en per kort i stället för många på rad) */
 .about-title {
@@ -7295,8 +7427,13 @@ ol li {
   .hub-nav,
   .vt-warn,
   #vt-utan-js,
+  .about-tablist,
   .contact,
   .actions { display: none !important; }
+
+  /* Om-sidans flikar är en skärmväxling, inte ett urval av innehåll: en utskrift
+     ska bära hela sidan, inte bara den flik som råkade vara vald. */
+  .about-panel { display: block !important; }
 
   body { background: #fff; color: #000; font-size: 10.5pt; line-height: 1.35; }
   .container, main, .card, section {

@@ -149,6 +149,43 @@ ett element, greppa efter dölj-regeln för just den klassen –
 i samma block som elementets övriga stilar. Att "det ser rätt ut i webbläsaren" är
 inget bevis när det tomma tillståndet är standardläget.
 
+## Växla mellan vyer utan JavaScript: dold radioknapp + `:has`
+
+**Mall (så här görs det rätt från början):** ett reglage som växlar mellan lägen på en
+sida byggs med **riktiga radioknappar** som är visuellt dolda (`position:absolute`,
+1×1 px, `opacity:0` — aldrig `display:none`, då går de inte att nå med tangentbord) och
+en `<label>` per läge. CSS:en läser tillståndet:
+
+```css
+.mina-flikar:has(#flik-info:checked) #info { display: block; }
+.min-flikrad input[type="radio"]:checked + .flik { /* vald-utseendet */ }
+```
+
+Två användningar finns: `.seg-switch` (Inställningar: tema, rättning, flashcards-riktning)
+och `.about-tabs` (om-sidans sex flikar). `.vt-flikar` i `verktyg.css` gör samma sak med
+`aria-pressed`-knappar, eftersom räknarna ändå byggs i JS.
+
+**Varför inte knappar med `role="tab"` och JS:** ARIA:s flikmönster kräver egen
+tangenthantering. Radioknappar med samma `name` ger gruppering, piltangenter och
+fokusordning gratis — och framför allt: **växlingen fungerar utan JavaScript, och rätt
+läge är målat i första bildrutan** (CLS 0, ingen blinkning av fel innehåll). JS får
+lägga till sådant som kräver skript, som synk mot adressfältet (`js/info.js`), men
+aldrig äga själva växlingen.
+
+**Panelerna ska ligga kvar i DOM:en** (`display:none`, inte borttagna) — sökmotorer och
+svarsmotorer läser hela sidan trots att bara ett läge visas.
+
+**Två saker är lätta att missa:**
+
+- **Utskriften.** Dolda paneler skrivs inte ut. Ett växlingsreglage är skärm-chrome:
+  lägg reglaget i `display:none`-listan i `@media print` och panelerna i
+  `display: block !important`, annars bär utskriften bara det läge som råkade vara valt.
+- **Id-krockar.** Ett panel-id blir en global CSS-krok. `#info h2 { font-size: 1.05rem }`
+  låg kvar sedan en gammal startsidesektion och matchade ingenting — tills om-sidan fick
+  en panel med `id="info"`, då hade den tyst krympt fyra rubriker. Greppa
+  `grep -o "#[a-zA-Z][a-zA-Z0-9_-]*" css/*.css` efter id-selektorer innan du döper en
+  panel (rensad i 0.9.412).
+
 ## ⚠️ Nytt synligt element – bestäm placering och form INNAN du skriver det
 
 Se **[`CLAUDE_REGLER.md` §0.5](CLAUDE_REGLER.md)** och **[`SEO_REGLER.md` §0b](SEO_REGLER.md)**.
