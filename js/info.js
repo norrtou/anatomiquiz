@@ -334,8 +334,36 @@ function initContactForm() {
 // ============================================================================
 
 /**
+ * Innehåll som hämtas först när sin flik öppnas, per panel-id.
+ *
+ * Frågestatistiken läser drygt hundra JSON-filer och ordlistans omfattning hela
+ * data/ordlista.json. Fram till 0.9.413 skedde båda vid varje sidladdning, även
+ * för den som bara läste Nyheter och aldrig såg siffrorna.
+ */
+const LAZY_PANELS = {
+  quizfragor: () => { loadStats(); loadGlossaryCount() },
+}
+
+/**
+ * Kör en panels laddare första gången panelen visas. Posten tas bort när den
+ * körts, så en flik som öppnas om och om igen hämtar en enda gång.
+ * @param {string} panelId
+ */
+function panelShown(panelId) {
+  const load = LAZY_PANELS[panelId]
+  if (!load) return
+  delete LAZY_PANELS[panelId]
+  load()
+}
+
+/** Kör allt som annars väntar på sin flik. Reservväg när flikarna saknas. */
+function loadAllPanels() {
+  Object.keys(LAZY_PANELS).forEach(panelShown)
+}
+
+/**
  * Flikvalet självt sköts av CSS (dolda radioknappar + :has i styles.css), så
- * sidan växlar flik även utan JavaScript. Det här lagret lägger till tre saker
+ * sidan växlar flik även utan JavaScript. Det här lagret lägger till fyra saker
  * ovanpå, och bara sådant som kräver skript:
  *
  *   1. #hash i adressen väljer flik vid inladdning – en enskild flik går då att
@@ -344,13 +372,16 @@ function initContactForm() {
  *      inte fyller bakåtknappen med steg).
  *   3. En intern länk till något som ligger i en ANNAN flik öppnar den fliken
  *      först. Utan det gör t.ex. FAQ-svarets länk till Referenser ingenting.
+ *   4. En flik som visas för första gången får hämta sitt innehåll (LAZY_PANELS).
+ *
+ * @returns {boolean} false om flikmärkningen saknas och inget kopplades in.
  */
 function initTabs() {
   const tabs = document.querySelector('.about-tabs')
-  if (!tabs) return
+  if (!tabs) return false
 
   const radios = Array.from(tabs.querySelectorAll('input[name="omflik"]'))
-  if (!radios.length) return
+  if (!radios.length) return false
 
   const panelIds = radios.map(r => r.value)
   const radioFor = (panelId) => radios.find(r => r.value === panelId) || null
@@ -364,12 +395,16 @@ function initTabs() {
     return panel ? panel.id : null
   }
 
-  /** Väljer fliken utan att skriva i adressen. Returnerar true om något byttes. */
+  /**
+   * Väljer fliken utan att skriva i adressen. Att sätta .checked i kod utlöser
+   * inget change-event, så panelShown måste anropas här och inte bara i
+   * lyssnaren nedan.
+   */
   function selectTab(panelId) {
     const radio = radioFor(panelId)
-    if (!radio || radio.checked) return false
+    if (!radio) return
     radio.checked = true
-    return true
+    panelShown(panelId)
   }
 
   // 1. Öppna den flik adressen pekar ut (#referenser, men även #faq som ligger
@@ -400,12 +435,18 @@ function initTabs() {
   applyHash()
   window.addEventListener('hashchange', applyHash)
 
+  // Fliken som står öppen när sidan laddats får också sin laddare körd. Utan
+  // hash rörde applyHash ingenting, och då hade förvald flik aldrig hämtat sitt.
+  const start = radios.find(r => r.checked)
+  if (start) panelShown(start.value)
+
   // 2. Spegla besökarens val i adressen. Nyheter är förvald flik och lämnar
   //    adressen ren – en hash som besökaren inte bett om är bara brus.
   const defaultRadio = radios.find(r => r.defaultChecked) || radios[0]
   radios.forEach(radio => {
     radio.addEventListener('change', () => {
       if (!radio.checked) return
+      panelShown(radio.value)
       const hash = radio === defaultRadio ? '' : '#' + radio.value
       history.replaceState(null, '', location.pathname + location.search + hash)
     })
@@ -426,6 +467,8 @@ function initTabs() {
     history.replaceState(null, '', location.pathname + location.search + '#' + targetId)
     scrollTo(targetId === panelId ? tabs : document.getElementById(targetId))
   })
+
+  return true
 }
 
 // ============================================================================
@@ -433,8 +476,8 @@ function initTabs() {
 // ============================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
-  initTabs()
-  loadStats()
-  loadGlossaryCount()
+  // Saknas flikmärkningen hämtas allt ändå. Innehåll som tyst uteblir är det
+  // enda som inte är ett alternativ (CLAUDE_REGLER §0.4).
+  if (!initTabs()) loadAllPanels()
   initContactForm()
 })
