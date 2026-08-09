@@ -450,6 +450,10 @@ längdbias-mätningen ("Falskt" är 2 tecken längre än "Sant" → falsk 100 %-
     - **Stavningsskillnaden är ingen ursäkt.** `functio`→`funktion`, `rotatio`→`rotation`, `phlebo`→`flebo`: c→k, ph→f, th→t, ae/oe→e och y→i är precis vad som skiljer termen från lånordet, och en jämförelse som inte normaliserar dem missar den vanligaste formen av felet.
     - **Skriv rätt från början:** formulera definitionen med ord som INTE är termens egen stam. Går det inte – ge då varje distraktor samma stam, så att ordlikheten inte pekar ut något (`Rotation kring en axel` mot `Rotation kring två axlar` är fine).
     - **Skyddet:** `validate_quiz.py` flaggar det sedan 2026-08-08 (`_definition_echo`) när ett ord i ett flerordssvar bär en citerad terms stam och **ingen** distraktor gör det. Böjningsfrågor undantas, och ett ord med å/ä/ö räknas som svenskt och inte som en främmande term. Larmet är verifierat genom att den trasiga `mta_q6`-formuleringen planterades tillbaka.
+  - **⚠️ Ekot kan gå tvärs över språkgränsen: prompten översätter svaret (hittat 2026-08-09, `osa_q47`).** Systerfall till stavningsnormaliseringen ovan, men en nivå längre bort: där handlar det om att `functio` och `funktion` är samma ord olika stavat, här om att `långsträckt` och `longum` är samma ord på två språk. En jämförelse på stam kan inte se det — `långsträckt` normaliseras till `langstrackt` och `longum` till `longum`, och de delar ingen stam. Ändå räcker skolengelska eller ett halvt minne av "long" för att peka ut svaret bland `Os breve`/`Os planum`/`Os irregulare`.
+    - **Skräckexempel:** "Vilken bentyp har ett **långsträckt** skaft med märghåla och två ändstycken?" → `Os longum`. **Fixad variant:** "Vilken bentyp har ett **rörformigt** skaft med märghåla och två ändstycken?" — lika sant, men `rörformig` översätter inte något av de fyra alternativen.
+    - **Skriv rätt från början:** när svaret är en term på latin eller grekiska, översätt prompten mentalt till det språket innan den skrivs. Beskriver prompten strukturen med det svenska ordet för terminens egen betydelse (`lång` för *longus*, `kort` för *brevis*, `platt` för *planus*, `stor`/`liten` för *major*/*minor*, `främre`/`bakre` för *anterior*/*posterior*) — byt till ett beskrivande ord som pekar på **något annat** av strukturens egenskaper. Går det inte: ge varje distraktor samma sorts beskrivning, så att ordlikheten inte skiljer ut något.
+    - **Detta läggs medvetet INTE i `validate_quiz.py`.** Det kräver en översättningslista mellan latin och svenska för varje alternativ, och en approximation skulle antingen missa det mesta eller dränka de äkta fynden i brus. Kontrolleras för hand, som ordbildningspariteten nedan.
   - **⚠️ Ordbildningsparitet: rätt svar får inte vara det enda alternativet med en annan ordform (hittat 2026-08-08, `mta_q168`).** Systerfall till språkpariteten nedan. `Débridering` (svensk `-ing`-avledning) stod bland `Kyrettage` / `Tamponad` / `Dränage` – alla fyra äkta franska lånord, men rätt svar var det enda som inte såg ut som ett lånord. Fix: `Tamponering` / `Sondering` / `Kanylering`, alltså samma avledningsform på alla fyra. **Test:** läs alternativens ÄNDELSER för sig, utan betydelserna. Sticker rätt svar ut i form – byt distraktorer tills alla fyra har samma sorts ordbildning.
 - **Numerisk-/format-paritet:** Rätt svar får inte vara det enda alternativet som är numeriskt eller format-mässigt korrekt. Efterfrågas ett antal/en siffra ska ALLA alternativ vara tal. Efterfrågas ett visst antal saker (plural) ska ALLA alternativ innehålla exakt lika många – t.ex. om rätt svar listar tre strukturer måste varje distraktor också lista tre, aldrig två eller fyra. Annars kan man räkna sig fram till svaret utan sakkunskap.
   - ⚠️ **Antals-asymmetri fångas INTE av `validate_quiz.py` – den måste kontrolleras för hand.** Skräckexempel (hittat 2026-07-13 i `bma_karlfys_42`): frågan löd "Vilka **tre** huvudsakliga faktorer (Virchows triad) …", rätt svar listade tre faktorer medan alla tre distraktorer började med "Enbart …" och listade EN. Då räcker det att räkna för att hitta rätt. Fix: skriv om distraktorerna så att de också listar tre (fortsatt fel) faktorer.
@@ -967,6 +971,7 @@ Före varje session/commit, kontrollera:
 - [ ] Frågetexten ekar inte svaret verbatim (ej självbesvarande) (§2.9)
 - [ ] Inget ord i ett flerordssvar är frågans citerade term i svensk språkdräkt när ingen distraktor bär samma stam (`functio laesa` → "Nedsatt **funktion** …") (§2.9)
 - [ ] Ordbildningsparitet: rätt svar är inte det enda alternativet med en avvikande ordform/ändelse (`Débridering` bland `-age`/`-ad`) (§2.9)
+- [ ] Prompten översätter inte svaret till svenska när alternativen är latinska/grekiska termer ("långsträckt" → `Os longum`) (§2.9)
 - [ ] INGA absolut-ord (endast/enbart/alltid/aldrig/inga/ingen/inget/samtliga/uteslutande) enbart i distraktorerna (§2.9)
 - [ ] INGA självutpekande distraktorer, inkl. ", inte/utan <rätt-svarets ord>" och "ett annat namn för …" (§2.2)
 - [ ] Varje distraktor klarar gissa-testet: går inte att stryka på formen (§2.12)
@@ -1467,7 +1472,20 @@ att jag lyfter spelkänslan också?" ska inte ställas: svaret är redan ja.
 
 **DESSA REGLER ÄR BINDANDE FÖR ALL ARBETE PÅ ANATOMIQUIZ.**
 
-**Senast uppdaterad:** 2026-08-08
+**Senast uppdaterad:** 2026-08-09
+**Version:** 2.8 – en tredje ytform av ekot kodifierad ur bygget av ämnet "Osteologi" under
+Allmänt (2026-08-09, 0.9.411). Den hittades av den manuella genomläsningen; validatorn gav 0/0
+både före och efter:
+- **§2.9 ekot går tvärs över språkgränsen.** `mta_q6` var termen i svensk språkdräkt och
+  `mta_q168` var ordformen; det här är översättningen. "Vilken bentyp har ett **långsträckt**
+  skaft …" → `Os longum` bland `Os breve`/`Os planum`/`Os irregulare`: `långsträckt` och
+  `longum` är samma ord på två språk, så ingen osteologi behövs. Stamjämförelsen i
+  `_definition_echo` kan per konstruktion inte se det — `langstrackt` och `longum` delar ingen
+  stam. Skriv rätt från början genom att beskriva strukturen med ett ord som pekar på **något
+  annat** än terminens egen betydelse (`rörformigt` i stället för `långsträckt`). Kontrolleras
+  för hand; en maskinregel skulle kräva en latin–svensk översättningslista per alternativ
+- §8 checklistan utökad med punkten
+
 **Version:** 2.7 – två ytformer av redan kända feltyper kodifierade ur bygget av ämnet
 "Medicinsk terminologi" under Allmänt (2026-08-08, 0.9.405). Båda hittades av den manuella
 genomläsningen, båda hade passerat validatorn:
