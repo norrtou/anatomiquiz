@@ -217,6 +217,7 @@ const EDUCATIONS = [
     { label: 'Farmakologi',                 file: './data/farmakologi.json', fc: true },
     { label: 'Lägen, rörelser & riktningar', file: './data/lagen_rorelser_riktningar.json' },
     { label: 'Medicinsk terminologi',        file: './data/medicinsk_terminologi_allmant.json' },
+    { label: 'Osteologi',                    file: './data/osteologi_allmant.json' },
   ]},
 ]
 
