@@ -266,7 +266,8 @@ Nya sidor **stoppar bygget** om de inte registreras — det är §0.4 och det ä
 | **2** | Motor (`akutmedicin.json` + `.js` + CSS) + hubb + `vitalparametrar.html` (NEWS2) + testskal | ✅ **klart 0.9.287** |
 | **3** | `syra-bas.html` — blodgasklassificeraren, korrigerat natrium, effektiv osmolalitet | ✅ **klart 0.9.305** |
 | **3,5** | Motorn färdig: mönster A och D + facit för Wells DVT, CHA₂DS₂-VA och EHRA | ✅ **klart 0.9.415** |
-| **4** | `blodproppar.html` + `hjartat.html` | väntar — **ingen ny motorkod behövs** |
+| **4a** | `blodproppar.html` — Wells DVT, PERC, sPESI + LMH-hänvisningen | ✅ **klart 0.9.416** |
+| **4b** | `hjartat.html` — QTc, CHA₂DS₂-VA, HAS-BLED, EHRA + GRACE förklarad | väntar — QTc behöver Bazett/Fridericia i `FORMLER`, HAS-BLED en facitpost |
 | **5** | `infektion.html` + `neurologi.html` + `buken.html` | väntar |
 | **6** | `kunskapsbank/kliniska-poangskalor.html` + korslänkning + `info.html`-källor | väntar |
 
@@ -442,3 +443,35 @@ uppslag, ett uppslag som pekar på en skala som inte längre finns, och ett unda
 kvar och tysta kontrollen för en sida som finns). Alla tre grenarna är verifierade genom att
 felet planterats, den sista genom att anropa funktionen direkt eftersom nodtestet hann fälla
 körningen först.
+
+### Släpp 4a — LEVERERAT 0.9.416 (`blodproppar.html`)
+
+- [x] `verktyg/akutmedicin/blodproppar.html` — Wells DVT, PERC och sPESI i tredelad form
+      (räknare, vad betyder variablerna, varför just de här), plus LMH-hänvisningen enligt §0c.
+- [x] **PERC och sPESI i facit** — Kline et al. (2008) respektive Jiménez et al. (2010). Båda
+      är kryssruteskalor med band vid `max: 0`, alltså rule-out-logik: det är skillnaden mellan
+      noll och minst ett kriterium som betyder något, inte hur högt summan blir.
+- [x] Registrerad hela vägen: `amne.py`, `data/llms.json`, sitemap via `generate_glossary.py`,
+      hubbkortet bytt från "Snart" till live-länk, `hasPart` och actions-raden uppdaterade.
+- [x] **3 nya ordlisteposter** (`pittingödem`, `venklaff`, `hjärtminutvolym`) och **29 nya
+      poster i wiring-facit** — 54 kb-term-länkar lades på den nya sidan.
+- [x] Källorna (Wells 2003, Kline 2008, Jiménez 2010) inskrivna i `info.html` i samma pass (§3.2d).
+- [x] `check_akutmedicin.py` speglar nu kryssruteskalorna **cell för cell** mot sidans tabeller,
+      i båda riktningar, plus bandens rubriker. Larmet verifierat med fem planterade fel.
+
+#### 7g. Tre fel i mitt eget arbetssätt, alla fångade av befintliga skydd
+
+**Sitemap.xml handredigerades.** Filen ägs av `generate_glossary.py` och min rad ströks vid
+nästa körning. Rätt väg var att lägga URL:en i generatorn — samma metodfel som `puls`-länken i
+släpp 1, och samma lärdom: genererad utdata redigeras aldrig för hand.
+
+**`generate_glossary.py` kördes ensam mitt i arbetet.** Det nollställer identitet, ämne, sidfot
+och datum på ordlistans sidor, så rundtrippstestet larmade om 37 filer. Facit varnar för precis
+det (§ "Kör alltid HELA kedjan"), och kedjan i `check_generators.py:KEDJA` fick köras i sin
+ordning för att få tillbaka en ren diff.
+
+**Den nya speglingskontrollen larmade falskt på sig själv.** `wire_terms.py` lägger tooltips
+*mitt i* en bandrubrik (`<a …>DVT</a> osannolik`), och tagg-strippningen byter varje tagg mot
+ett mellanslag — kontrollen letade efter `DVT osannolik` i en text som lydde `DVT  osannolik`.
+Felet satt i verktyget, inte i sidan, och hittades genom att läsa ut strängarna i stället för
+att lita på antalet avvikelser. Åtgärdat med `blanksteg()` i `check_akutmedicin.py`.

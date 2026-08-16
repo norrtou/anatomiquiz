@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSP mot XSS: skript/stilar/data endast från egen origin. GitHub Pages tillåter inga egna HTTP-headers, därav meta. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+
+  <!-- Primär SEO -->
+  <title>Blodproppar – Wells, PERC och sPESI | Anatomiquiz</title>
+  <meta name="description" content="Räknare för Wells score, PERC och sPESI med varje kriterium förklarat – när en lungemboli kan avfärdas utan prov och när utredningen måste fortsätta.">
+  <meta name="author" content="Daniel Medin (Norrtou Creations)">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+  <link rel="canonical" href="https://anatomiquiz.se/verktyg/akutmedicin/blodproppar.html">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anatomiquiz.se/verktyg/akutmedicin/blodproppar.html">
+  <meta property="og:title" content="Blodproppar – Wells, PERC och sPESI">
+  <meta property="og:description" content="Tre skalor som besvarar tre olika frågor: hur sannolik är en djup ventrombos, kan en lungemboli avfärdas utan prov, och hur allvarlig är den bekräftade embolin?">
+  <meta property="og:image" content="https://anatomiquiz.se/img/og-image.png">
+  <meta property="og:image:width" content="1518">
+  <meta property="og:image:height" content="864">
+  <meta property="og:image:alt" content="Anatomiquiz — räknare för blodproppsskalor">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="Anatomiquiz">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blodproppar – Wells, PERC och sPESI">
+  <meta name="twitter:description" content="Tre skalor som besvarar tre olika frågor: hur sannolik är en djup ventrombos, kan en lungemboli avfärdas utan prov, och hur allvarlig är den bekräftade embolin?">
+  <meta name="twitter:image" content="https://anatomiquiz.se/img/og-image.png">
+  <meta name="twitter:image:alt" content="Anatomiquiz — räknare för blodproppsskalor">
+
+  <meta name="theme-color" content="#10b981">
+  <meta name="color-scheme" content="light dark">
+  <!-- Tema (ljust/mörkt). Laddas SYNKRONT och före stilmallen: attributet
+       data-theme måste sitta på <html> innan första målningen, annars
+       blinkar sidan ljus. Inline gick inte – CSP:n tillåter bara egen origin. -->
+  <script src="/js/theme.js?v=0.9.260"></script>
+
+  <!-- Strukturerad data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "WebApplication",
+    "LearningResource"
+  ],
+  "name": "Blodproppar – Wells, PERC och sPESI",
+  "description": "Räknare för Wells score vid djup ventrombos, PERC-regeln för att avfärda lungemboli och sPESI för riskbedömning vid bekräftad lungemboli, med varje kriterium förklarat.",
+  "url": "https://anatomiquiz.se/verktyg/akutmedicin/blodproppar.html",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Alla webbläsare",
+  "inLanguage": "sv-SE",
+  "isAccessibleForFree": true,
+  "learningResourceType": "interactive tool",
+  "educationalUse": [
+    "self study",
+    "practice"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "SEK"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Anatomiquiz",
+    "url": "https://anatomiquiz.se/"
+  },
+  "datePublished": "2026-08-16",
+  "dateModified": "2026-08-16",
+  "author": {
+    "@type": "Person",
+    "@id": "https://anatomiquiz.se/#daniel-medin",
+    "name": "Daniel Medin",
+    "description": "Utbildad medicinsk sekreterare och studerande i arbetsterapi vid Lunds universitet, med särskilt intresse för anatomi.",
+    "url": "https://norrtou.se",
+    "sameAs": [
+      "https://norrtou.se",
+      "https://www.linkedin.com/in/danielmedin",
+      "https://github.com/norrtou"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://anatomiquiz.se/#norrtou-creations",
+    "name": "Norrtou Creations",
+    "url": "https://norrtou.se",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://anatomiquiz.se/img/icon-512.png"
+    },
+    "sameAs": [
+      "https://github.com/norrtou"
+    ]
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Djup ventrombos"
+    },
+    {
+      "@type": "Thing",
+      "name": "Lungemboli"
+    },
+    {
+      "@type": "Thing",
+      "name": "Wells score"
+    },
+    {
+      "@type": "Thing",
+      "name": "D-dimer"
+    }
+  ],
+  "teaches": [
+    "Vilka kriterier som ingår i Wells score för djup ventrombos och vad avdraget på två poäng gör.",
+    "Varför PERC är byggd för att avfärda en diagnos i stället för att styrka den.",
+    "Hur en skala med hög sensitivitet skiljer sig från en med hög specificitet.",
+    "Vilka sex kriterier som ingår i sPESI och varför bara noll poäng betyder något.",
+    "Varför förtestsannolikheten avgör hur ett provsvar ska tolkas."
+  ],
+  "keywords": [
+    "wells score",
+    "perc",
+    "spesi",
+    "djup ventrombos",
+    "lungemboli",
+    "d-dimer"
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Simplification of the pulmonary embolism severity index for prognostication in patients with acute symptomatic pulmonary embolism",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Jiménez, D."
+        },
+        {
+          "@type": "Person",
+          "name": "Aujesky, D."
+        },
+        {
+          "@type": "Person",
+          "name": "Moores, L."
+        },
+        {
+          "@type": "Person",
+          "name": "Gómez, V."
+        },
+        {
+          "@type": "Person",
+          "name": "Lobo, J. L."
+        },
+        {
+          "@type": "Person",
+          "name": "Uresandi, F."
+        },
+        {
+          "@type": "Person",
+          "name": "Otero, R."
+        },
+        {
+          "@type": "Person",
+          "name": "Monreal, M."
+        },
+        {
+          "@type": "Person",
+          "name": "Muriel, A."
+        },
+        {
+          "@type": "Person",
+          "name": "Yusen, R. D."
+        }
+      ],
+      "datePublished": "2010",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Archives of Internal Medicine"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Prospective multicenter evaluation of the pulmonary embolism rule-out criteria",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Kline, J. A."
+        },
+        {
+          "@type": "Person",
+          "name": "Courtney, D. M."
+        },
+        {
+          "@type": "Person",
+          "name": "Kabrhel, C."
+        },
+        {
+          "@type": "Person",
+          "name": "Moore, C. L."
+        },
+        {
+          "@type": "Person",
+          "name": "Smithline, H. A."
+        },
+        {
+          "@type": "Person",
+          "name": "Plewa, M. C."
+        },
+        {
+          "@type": "Person",
+          "name": "Richman, P. B."
+        },
+        {
+          "@type": "Person",
+          "name": "O'Neil, B. J."
+        },
+        {
+          "@type": "Person",
+          "name": "Nordenholz, K."
+        }
+      ],
+      "datePublished": "2008",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Journal of Thrombosis and Haemostasis"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Evaluation of D-dimer in the diagnosis of suspected deep-vein thrombosis",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Wells, P. S."
+        },
+        {
+          "@type": "Person",
+          "name": "Anderson, D. R."
+        },
+        {
+          "@type": "Person",
+          "name": "Rodger, M."
+        },
+        {
+          "@type": "Person",
+          "name": "Forgie, M."
+        },
+        {
+          "@type": "Person",
+          "name": "Kearon, C."
+        },
+        {
+          "@type": "Person",
+          "name": "Dreyer, J."
+        },
+        {
+          "@type": "Person",
+          "name": "Kovacs, G."
+        },
+        {
+          "@type": "Person",
+          "name": "Mitchell, M."
+        },
+        {
+          "@type": "Person",
+          "name": "Lewandowski, B."
+        },
+        {
+          "@type": "Person",
+          "name": "Kovacs, M. J."
+        }
+      ],
+      "datePublished": "2003",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "New England Journal of Medicine"
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Anatomiquiz",
+      "item": "https://anatomiquiz.se/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Verktyg",
+      "item": "https://anatomiquiz.se/verktyg/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Akutmedicin",
+      "item": "https://anatomiquiz.se/verktyg/akutmedicin/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Blodproppar",
+      "item": "https://anatomiquiz.se/verktyg/akutmedicin/blodproppar.html"
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon.png">
+  <link rel="apple-touch-icon" href="/img/icon-192.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/css/styles.css?v=0.9.412">
+  <link rel="stylesheet" href="/css/verktyg.css?v=0.9.415">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+  <main id="main" class="container" role="main">
+
+    <header class="header">
+      <div class="header-title">
+        <h1><a class="kb-term" href="/ordlista-b.html#term-blodpropp" data-def="Levrat blod (tromb) som bildas i ett blodkärl och kan täppa till det">Blodproppar</a></h1>
+      </div>
+      <p class="tagline">Wells score, PERC-regeln och sPESI</p>
+    </header>
+
+    <section class="card" aria-labelledby="akutHeading">
+
+      <nav class="breadcrumb" aria-label="Brödsmula">
+        <a href="/" class="breadcrumb-link">← Anatomiquiz</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="/verktyg/" class="breadcrumb-link">Verktyg</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="/verktyg/akutmedicin/" class="breadcrumb-link">Akutmedicin</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <span class="breadcrumb-current" aria-current="page">Blodproppar</span>
+      </nav>
+
+      <h2 id="akutHeading" class="sr-only">Poängskalor för <a class="kb-term" href="/ordlista-d.html#term-djup-ventrombos" data-def="Blodpropp i en av de djupa venerna, oftast i ett ben">djup ventrombos</a> och <a class="kb-term" href="/ordlista-l.html#term-lungemboli" data-def="Blodpropp som täpper till ett kärl i lungcirkulationen">lungemboli</a></h2>
+
+      <div class="info-about">
+        <p>Tre skalor som ser ut att handla om samma sak men besvarar tre olika frågor. <a href="#wells" class="info-link">Wells score</a> väger ihop hur sannolik en <a class="kb-term" href="/ordlista-d.html#term-djup-ventrombos" data-def="Blodpropp i en av de djupa venerna, oftast i ett ben">djup ventrombos</a> är innan något prov tagits. <a href="#perc" class="info-link">PERC</a> är byggd baklänges och letar efter allt som skulle göra det oförsvarligt att avfärda en <a class="kb-term" href="/ordlista-l.html#term-lungemboli" data-def="Blodpropp som täpper till ett kärl i lungcirkulationen">lungemboli</a>. <a href="#spesi" class="info-link">sPESI</a> används först när embolin redan är bekräftad och skattar hur allvarlig den är. Alla tre är byggda ur sina originalpublikationer, angivna längst ner.</p>
+      </div>
+
+      <div id="akut-utan-js" class="vt-warn">
+        Räknarna kräver JavaScript. Är det avstängt finns alla kriterier, poäng och tolkningsband som tabeller under varje rubrik.
+      </div>
+
+      <!-- =========================================================
+           1. Wells score för djup ventrombos
+           ========================================================= -->
+
+      <h2 id="wells">Wells score för <a class="kb-term" href="/ordlista-d.html#term-djup-ventrombos" data-def="Blodpropp i en av de djupa venerna, oftast i ett ben">djup ventrombos</a></h2>
+
+      <p>Nio fynd talar för en <a class="kb-term" href="/ordlista-d.html#term-djup-ventrombos" data-def="Blodpropp i en av de djupa venerna, oftast i ett ben">djup ventrombos</a> och ger vardera en poäng. Det tionde kriteriet drar av två poäng och är det enda som pekar åt andra hållet: finns en annan diagnos som förklarar benet lika bra, sjunker sannolikheten för <a class="kb-term" href="/ordlista-t.html#term-trombos" data-def="Blodpropp som bildas inuti ett kärl">trombos</a>. Skalan är alltså inte en checklista över <a class="kb-term" href="/ordlista-s.html#term-symtom" data-def="Tecken på sjukdom som den sjuke själv märker och beskriver">symtom</a>, utan en strukturerad sammanvägning av det som talar för och det som talar emot.</p>
+
+      <div data-akut="wells_dvt"></div>
+
+      <h3>Kriterier och poäng</h3>
+
+      <p>Räknarens facit — samma kriterier och vikter som ligger bakom summan ovan.</p>
+
+      <table class="kb-mtable">
+        <caption>Wells score – kriterier och poäng</caption>
+        <thead>
+          <tr>
+            <th scope="col">Kriterium</th>
+            <th scope="col">Poäng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Kriterium">Aktiv cancer — pågående behandling, behandling avslutad inom sex månader, eller <a class="kb-term" href="/ordlista-p.html#term-palliativ" data-def="Lindrande; inriktad på symtom och livskvalitet snarare än på att bota">palliativ</a> vård</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">Förlamning, <a class="kb-term" href="/ordlista-p.html#term-pares" data-def="Partiell förlamning med viss kvarvarande muskelkraft">pares</a> eller nyligen gipsad nedre <a class="kb-term" href="/ordlista-e.html#term-extremitet" data-def="Lem; arm eller ben">extremitet</a></th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">Sängliggande minst tre dygn, eller större kirurgi inom tolv veckor med <a class="kb-term" href="/ordlista-n.html#term-narkos" data-def="Framkallad sömn med medvetslöshet och smärtfrihet under ett ingrepp">narkos</a> eller regional anestesi</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">Lokal ömhet längs de djupa venernas förlopp</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">Hela benet svullet</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">Vadomfånget minst tre centimeter större än på det friska benet</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium"><a class="kb-term" href="/ordlista-p.html#term-pittingodem" data-def="Ödem som lämnar en kvarstående grop efter tryck med ett finger">Pittingödem</a> enbart i det symtomgivande benet</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">Framträdande ytliga <a class="kb-term" href="/ordlista-k.html#term-kollateral" data-def="Ytliga vener som vidgas och tar över när en djup ven är tilltäppt">kollateralvener</a> som inte är <a class="kb-term" href="/ordlista-aa.html#term-aderbrack" data-def="Varicer; utvidgade, slingrande ytliga vener (oftast på benen) till följd av bristande venklaffar">åderbråck</a></th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">Tidigare dokumenterad <a class="kb-term" href="/ordlista-d.html#term-djup-ventrombos" data-def="Blodpropp i en av de djupa venerna, oftast i ett ben">djup ventrombos</a></th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">Annan diagnos är minst lika sannolik som <a class="kb-term" href="/ordlista-d.html#term-djup-ventrombos" data-def="Blodpropp i en av de djupa venerna, oftast i ett ben">djup ventrombos</a></th><td data-label="Poäng">−2</td></tr>
+        </tbody>
+      </table>
+
+      <table class="kb-mtable">
+        <caption>Wells score – tolkning av summan</caption>
+        <thead>
+          <tr>
+            <th scope="col">Summa</th>
+            <th scope="col">Bedömning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Summa">1 poäng eller lägre</th><td data-label="Bedömning"><a class="kb-term" href="/ordlista-d.html#term-dvt" data-def="Djup ventrombos">DVT</a> osannolik — låg förekomst i studiens motsvarande grupp, där en negativ <a class="kb-term" href="/ordlista-d.html#term-d-dimer" data-def="Nedbrytningsprodukt av fibrin; blodprov som stiger vid blodproppssjukdom">D-dimer</a> räckte för att avfärda diagnosen</td></tr>
+          <tr><th scope="row" data-label="Summa">2 poäng eller högre</th><td data-label="Bedömning"><a class="kb-term" href="/ordlista-d.html#term-dvt" data-def="Djup ventrombos">DVT</a> sannolik — gruppen gick vidare till <a class="kb-term" href="/ordlista-u.html#term-ultraljud" data-def="Bildgivande undersökning med ljudvågor över det hörbara området">ultraljud</a> oavsett <a class="kb-term" href="/ordlista-d.html#term-d-dimer" data-def="Nedbrytningsprodukt av fibrin; blodprov som stiger vid blodproppssjukdom">D-dimer</a></td></tr>
+        </tbody>
+      </table>
+
+      <h3>Vad betyder variablerna?</h3>
+
+      <h4>De djupa venernas förlopp</h4>
+      <p>Ömheten som efterfrågas följer venernas sträckning, inte muskelbuken. I benet betyder det <a class="kb-term" href="/ordlista-f.html#term-femoralis-vena" data-def="lårvenen (ven)">vena femoralis</a> på lårets insida och <a class="kb-term" href="/ordlista-v.html#term-vena" data-def="Ven (blodåder); blodkärl som leder blod tillbaka mot hjärtat">vena</a> <a class="kb-term" href="/ordlista-p.html#term-poplitea" data-def="Som hör till knävecket; arteria och vena poplitea löper bakom knäleden">poplitea</a> i knävecket, samt vadens djupa vener längs <a class="kb-term" href="/ordlista-t.html#term-tibia" data-def="Det tjocka, viktbärande benet på underbenets insida (tibia)">skenbenet</a>. Skillnaden mot vanlig muskelömhet är just den: en <a class="kb-term" href="/ordlista-m.html#term-muskelbristning" data-def="Bristning av muskelfibrer vid överbelastning eller plötslig kraft">muskelbristning</a> ömmar i själva muskeln, en <a class="kb-term" href="/ordlista-t.html#term-trombos" data-def="Blodpropp som bildas inuti ett kärl">trombos</a> längs det kärl som är tilltäppt. Det är också skälet till att ömheten i skalan beskrivs som lokal och följsam längs en linje, inte som diffus värk.</p>
+
+      <h4>Vadomfånget</h4>
+      <p>Måttet tas tio centimeter nedanför <a class="kb-term" href="/ordlista-t.html#term-tuberositas-tibiae" data-def="Skenbensknölen; den kännbara knölen framtill upptill på skenbenet där knäskålssenan fäster">tuberositas tibiae</a> på båda benen och jämförs. Det är ett av få objektiva fynd i hela skalan, och därmed också det som lättast blir fel: mäts sidorna på olika höjd betyder skillnaden ingenting. Gränsen på tre centimeter är vald för att ligga över den naturliga sidoskillnad de flesta människor har, ofta åt det ben man belastar mest.</p>
+
+      <h4><a class="kb-term" href="/ordlista-p.html#term-pittingodem" data-def="Ödem som lämnar en kvarstående grop efter tryck med ett finger">Pittingödem</a></h4>
+      <p>Ett <a class="kb-term" href="/ordlista-oe.html#term-odem" data-def="Onormal ansamling av vätska i kroppens vävnader, oftast mellan cellerna (interstitiellt), i svårare fall även i kroppshåligheter">ödem</a> som lämnar en grop efter ett fingertryck. Att gropen står kvar betyder att vätskan ligger fritt i <a class="kb-term" href="/ordlista-v.html#term-vavnad" data-def="Samling celler med likartad byggnad och funktion som tillsammans bygger upp kroppens organ (t.ex. muskel-, nerv- och bindväv)">vävnaden</a> och går att trycka undan. Skalan frågar efter <a class="kb-term" href="/ordlista-p.html#term-pittingodem" data-def="Ödem som lämnar en kvarstående grop efter tryck med ett finger">pittingödem</a> enbart i det symtomgivande benet, och ensidigheten är hela poängen: ett <a class="kb-term" href="/ordlista-oe.html#term-odem" data-def="Onormal ansamling av vätska i kroppens vävnader, oftast mellan cellerna (interstitiellt), i svårare fall även i kroppshåligheter">ödem</a> i båda benen talar snarare för <a class="kb-term" href="/ordlista-h.html#term-hjartsvikt" data-def="Hjärtats oförmåga att pumpa tillräckligt med blod för kroppens behov">hjärtsvikt</a>, njursjukdom eller <a class="kb-term" href="/ordlista-l.html#term-leversvikt" data-def="Sjukdom i levern; vid svikt räcker organets funktion inte till">leversjukdom</a>, alltså orsaker som drabbar hela kroppen. En <a class="kb-term" href="/ordlista-t.html#term-trombos" data-def="Blodpropp som bildas inuti ett kärl">trombos</a> sitter i ett kärl, och stasen den orsakar blir därför ensidig.</p>
+
+      <h4><a class="kb-term" href="/ordlista-k.html#term-kollateral" data-def="Ytliga vener som vidgas och tar över när en djup ven är tilltäppt">Kollateralvener</a></h4>
+      <p>När en djup ven täpps till måste blodet hitta en annan väg tillbaka till hjärtat, och det tar de ytliga venerna. De vidgas då och blir synliga under huden. Kriteriet skiljer uttryckligen sådana <a class="kb-term" href="/ordlista-k.html#term-kollateral" data-def="Förbindelse vid sidan om; kärl som tar över när det ordinarie är tilltäppt">kollateraler</a> från <a class="kb-term" href="/ordlista-aa.html#term-aderbrack" data-def="Varicer; utvidgade, slingrande ytliga vener (oftast på benen) till följd av bristande venklaffar">åderbråck</a>, som är ett kroniskt tillstånd med trasiga <a class="kb-term" href="/ordlista-v.html#term-venklaff" data-def="Klaffar inuti venerna som bara släpper fram blod i riktning mot hjärtat">venklaffar</a> och inte har med en färsk <a class="kb-term" href="/ordlista-t.html#term-trombos" data-def="Blodpropp som bildas inuti ett kärl">trombos</a> att göra. Skillnaden syns oftast i förloppet: <a class="kb-term" href="/ordlista-k.html#term-kollateral" data-def="Förbindelse vid sidan om; kärl som tar över när det ordinarie är tilltäppt">kollateraler</a> är nya, <a class="kb-term" href="/ordlista-aa.html#term-aderbrack" data-def="Varicer; utvidgade, slingrande ytliga vener (oftast på benen) till följd av bristande venklaffar">åderbråck</a> har funnits länge.</p>
+
+      <h4>Avdraget på två poäng</h4>
+      <p>Det enda kriteriet som drar ner summan, och det som gör Wells till mer än en checklista. Bedömaren tvingas väga in vad annat som kan förklara ett svullet, ömt ben — <a class="kb-term" href="/ordlista-e.html#term-erysipelas" data-def="Rosfeber; bakteriell hudinfektion med skarpt avgränsad rodnad och svullnad">erysipelas</a>, en <a class="kb-term" href="/ordlista-m.html#term-muskelbristning" data-def="Bristning av muskelfibrer vid överbelastning eller plötslig kraft">muskelbristning</a>, en rupturerad <a class="kb-term" href="/ordlista-b.html#term-bakercysta" data-def="Vätskefylld utbuktning i knävecket, utgången från knäledens kapsel">Bakercysta</a>, ett <a class="kb-term" href="/ordlista-l.html#term-lymfodem" data-def="Svullnad av vävnad när lymfan inte förs bort som den ska">lymfödem</a>. Avdraget är dessutom stort nog att ensamt flytta en patient från sannolik till osannolik, vilket är avsiktligt: en trovärdig alternativ förklaring säger mer om sannolikheten än ett par ospecifika fynd gör.</p>
+
+      <h3>Varför just de här variablerna?</h3>
+
+      <p>Kriterierna följer Virchows triad, de tre förutsättningar som tillsammans gör att blod levrar sig inuti ett kärl: långsamt flöde, skada på kärlväggen och ökad benägenhet att koagulera. Sängliggande och gips ger långsamt flöde när vadmuskelpumpen slutar arbeta. Kirurgi och <a class="kb-term" href="/ordlista-t.html#term-trauma" data-def="Skada på kroppen genom yttre våld; även psykiskt trauma efter en svår händelse">trauma</a> skadar kärlväggen. Aktiv cancer gör blodet mer koagulationsbenäget. Skalan frågar alltså inte efter <a class="kb-term" href="/ordlista-s.html#term-symtom" data-def="Tecken på sjukdom som den sjuke själv märker och beskriver">symtom</a> i första hand, utan efter de tillstånd som skapar en <a class="kb-term" href="/ordlista-t.html#term-trombos" data-def="Blodpropp som bildas inuti ett kärl">trombos</a> — och lägger sedan till de fynd stasen ger nedanför proppen.</p>
+
+      <p><strong>Ensidigheten går igen i nästan varje kriterium.</strong> Hela benet svullet, vadomfånget jämfört med andra sidan, <a class="kb-term" href="/ordlista-p.html#term-pittingodem" data-def="Ödem som lämnar en kvarstående grop efter tryck med ett finger">pittingödem</a> enbart i det symtomgivande benet, <a class="kb-term" href="/ordlista-k.html#term-kollateral" data-def="Förbindelse vid sidan om; kärl som tar över när det ordinarie är tilltäppt">kollateraler</a> på ett ben. Det är ingen slump: en propp sitter i ett kärl, och allt den orsakar sker nedströms om just det kärlet. De sjukdomar som ger svullna ben åt båda hållen — <a class="kb-term" href="/ordlista-h.html#term-hjartsvikt" data-def="Hjärtats oförmåga att pumpa tillräckligt med blod för kroppens behov">hjärtsvikt</a>, <a class="kb-term" href="/ordlista-n.html#term-njursvikt" data-def="Nedsatt förmåga hos njurarna att rena blodet och reglera vätskebalansen">njursvikt</a>, leversvikt — sorteras bort av samma jämförelse.</p>
+
+      <p><strong>Skalan är byggd för att styra provtagningen, inte för att ställa diagnos.</strong> I studien avgjorde grupptillhörigheten hur ett D-dimersvar skulle tolkas: i lågsannolikhetsgruppen räckte ett normalt värde för att avfärda <a class="kb-term" href="/ordlista-t.html#term-trombos" data-def="Blodpropp som bildas inuti ett kärl">trombos</a>, i högsannolikhetsgruppen gjorde det inte det. Det är förtestsannolikheten i praktiken — samma provsvar betyder olika saker beroende på hur sannolik diagnosen var innan provet togs. Ett D-dimervärde är känsligt men ospecifikt: det stiger vid infektion, graviditet, cancer och efter kirurgi, och det är därför ett normalt värde säger mer än ett förhöjt.</p>
+
+      <div class="vt-ansvar">
+        <p><strong>Räknaren ersätter inte bedömningen.</strong> Wells score förutsätter att någon undersökt benet och tagit en <a class="kb-term" href="/ordlista-a.html#term-anamnes" data-def="Patientens sjukhistoria så som den berättas vid undersökningen">anamnes</a> — flera kriterier bygger på fynd som bara går att avgöra vid undersökningen. Skalan är framtagen och validerad på patienter som sökt vård för misstänkt <a class="kb-term" href="/ordlista-d.html#term-djup-ventrombos" data-def="Blodpropp i en av de djupa venerna, oftast i ett ben">djup ventrombos</a>, och gäller inte som allmän <a class="kb-term" href="/ordlista-s.html#term-screening" data-def="Systematisk undersökning av personer utan symtom för att hitta sjukdom tidigt">screening</a>. Summan är ett underlag för hur utredningen ska läggas upp, inte ett besked om patienten har en propp.</p>
+      </div>
+
+      <!-- =========================================================
+           2. PERC
+           ========================================================= -->
+
+      <h2 id="perc">PERC – kriterier för att avfärda <a class="kb-term" href="/ordlista-l.html#term-lungemboli" data-def="Blodpropp som täpper till ett kärl i lungcirkulationen">lungemboli</a></h2>
+
+      <p>PERC är byggd baklänges mot de andra skalorna på sidan. Den letar inte efter tecken som talar för <a class="kb-term" href="/ordlista-l.html#term-lungemboli" data-def="Blodpropp som täpper till ett kärl i lungcirkulationen">lungemboli</a>, utan efter allt som skulle göra det oförsvarligt att avfärda diagnosen utan prov. Först när samtliga åtta kriterier är frånvarande är regeln uppfylld — ett enda ikryssat kriterium räcker för att den inte ska gälla.</p>
+
+      <div data-akut="perc"></div>
+
+      <h3>Kriterier och tolkning</h3>
+
+      <table class="kb-mtable">
+        <caption>PERC – de åtta kriterierna</caption>
+        <thead>
+          <tr>
+            <th scope="col">Kriterium</th>
+            <th scope="col">Poäng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Kriterium">Ålder 50 år eller äldre</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium"><a class="kb-term" href="/ordlista-p.html#term-puls" data-def="Tryckvågen som varje hjärtslag skickar ut i artärerna; mått på hjärtfrekvensen">Puls</a> 100 slag per minut eller mer</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium"><a class="kb-term" href="/ordlista-s.html#term-syresaturation" data-def="Andelen av blodets hemoglobin som är mättat med syre, angiven i procent">Syresaturation</a> under 95 procent på luft</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">Ensidig bensvullnad</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">Blodhosta</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">Kirurgi eller <a class="kb-term" href="/ordlista-t.html#term-trauma" data-def="Skada på kroppen genom yttre våld; även psykiskt trauma efter en svår händelse">trauma</a> som krävt <a class="kb-term" href="/ordlista-n.html#term-narkos" data-def="Framkallad sömn med medvetslöshet och smärtfrihet under ett ingrepp">narkos</a> inom fyra veckor</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">Tidigare <a class="kb-term" href="/ordlista-l.html#term-lungemboli" data-def="Blodpropp som täpper till ett kärl i lungcirkulationen">lungemboli</a> eller <a class="kb-term" href="/ordlista-d.html#term-djup-ventrombos" data-def="Blodpropp i en av de djupa venerna, oftast i ett ben">djup ventrombos</a></th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">Pågående behandling med <a class="kb-term" href="/ordlista-oe.html#term-ostrogen" data-def="Kvinnligt könshormon; ökar bland annat blodets benägenhet att levra sig">östrogen</a>, p-piller eller hormonsubstitution</th><td data-label="Poäng">+1</td></tr>
+        </tbody>
+      </table>
+
+      <table class="kb-mtable">
+        <caption>PERC – tolkning</caption>
+        <thead>
+          <tr>
+            <th scope="col">Utfall</th>
+            <th scope="col">Bedömning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Utfall">Inget kriterium ikryssat</th><td data-label="Bedömning"><strong>PERC uppfylld – inget kriterium ikryssat</strong>. Vid redan låg <a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">klinisk</a> misstanke var risken i studien för liten för att motivera vidare provtagning</td></tr>
+          <tr><th scope="row" data-label="Utfall">Minst ett kriterium ikryssat</th><td data-label="Bedömning"><strong>PERC inte uppfylld</strong>. Regeln kan inte användas för att avfärda diagnosen, utredningen fortsätter på vanligt sätt</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Vad betyder variablerna?</h3>
+
+      <h4>Åldersgränsen och pulsgränsen</h4>
+      <p>Femtio år och hundra slag per minut är inte gränser för när något blir farligt, utan för när det slutar vara ovanligt. Risken för <a class="kb-term" href="/ordlista-l.html#term-lungemboli" data-def="Blodpropp som täpper till ett kärl i lungcirkulationen">lungemboli</a> stiger med åldern utan något hopp vid en viss födelsedag, och gränsen är vald där den skiljer ut en tillräckligt stor lågriskgrupp. Detsamma gäller <a class="kb-term" href="/ordlista-p.html#term-puls" data-def="Tryckvågen som varje hjärtslag skickar ut i artärerna; mått på hjärtfrekvensen">pulsen</a>: hundra är gränsen för <a class="kb-term" href="/ordlista-t.html#term-takykardi" data-def="Onaturligt snabb hjärtrytm, vanligen puls över 100 slag/min i vila">takykardi</a>, och en <a class="kb-term" href="/ordlista-l.html#term-lungemboli" data-def="Blodpropp som täpper till ett kärl i lungcirkulationen">lungemboli</a> som är stor nog att märkas ger nästan alltid en stegrad <a class="kb-term" href="/ordlista-p.html#term-puls" data-def="Tryckvågen som varje hjärtslag skickar ut i artärerna; mått på hjärtfrekvensen">puls</a>.</p>
+
+      <h4><a class="kb-term" href="/ordlista-s.html#term-syresaturation" data-def="Andelen av blodets hemoglobin som är mättat med syre, angiven i procent">Syresaturation</a> under 95 procent</h4>
+      <p>En propp i lungcirkulationen stänger av blodflödet till en del av lungan. Den delen ventileras fortfarande men får inget blod att syresätta, och det bidrag den skulle gett till blodets syrehalt faller bort. Gränsen ligger avsiktligt lågt: en liten <a class="kb-term" href="/ordlista-e.html#term-emboli" data-def="Tilltäppning av ett kärl av material som följt med blodströmmen">emboli</a> sänker inte saturationen alls, vilket är varför en normal saturation inte utesluter något på egen hand utan bara räknas som ett av åtta villkor.</p>
+
+      <h4>Hormonbehandling</h4>
+      <p><a class="kb-term" href="/ordlista-oe.html#term-ostrogen" data-def="Kvinnligt könshormon; ökar bland annat blodets benägenhet att levra sig">Östrogen</a> ökar leverns produktion av flera <a class="kb-term" href="/ordlista-k.html#term-koagulationsfaktor" data-def="Protein i plasma som ingår i kedjan som får blodet att levra sig">koagulationsfaktorer</a> och minskar samtidigt mängden av kroppens egna hämmare av <a class="kb-term" href="/ordlista-k.html#term-koagulation" data-def="Blodets levring, då lösligt fibrinogen omvandlas till ett fibrinnät">koagulationen</a>. Nettoresultatet är ett blod som levrar sig lättare. Kriteriet gäller pågående behandling, inte hormoner patienten slutat med, eftersom effekten avtar när tillförseln upphör.</p>
+
+      <h4>Blodhosta</h4>
+      <p>En <a class="kb-term" href="/ordlista-e.html#term-emboli" data-def="Tilltäppning av ett kärl av material som följt med blodströmmen">emboli</a> som stänger av blodflödet till en liten del av lungvävnaden kan ge en <a class="kb-term" href="/ordlista-l.html#term-lunginfarkt" data-def="Vävnadsdöd i en del av lungan sedan blodflödet dit stängts av">lunginfarkt</a>, och den blöder in i <a class="kb-term" href="/ordlista-a.html#term-alveol" data-def="Lungblåsorna; de små säckar där gasutbytet mellan luft och blod sker">alveolerna</a>. Blodet hostas sedan upp. Fyndet är ovanligt men talar starkt nog för diagnosen att det ensamt gör regeln obrukbar.</p>
+
+      <h3>Varför just de här variablerna?</h3>
+
+      <p>PERC är konstruerad för hög <a class="kb-term" href="/ordlista-s.html#term-sensitivitet" data-def="Ett tests förmåga att fånga upp dem som verkligen har tillståndet">sensitivitet</a> på bekostnad av specificiteten, och det är en avsiktlig obalans. En regel som ska tillåta att en potentiellt dödlig diagnos lämnas outredd får nästan aldrig missa ett fall — däremot får den gärna fånga in många patienter i onödan, eftersom priset för det bara är fortsatt utredning. Motsatsen hade varit oacceptabel. Det förklarar också varför kriterierna var för sig är så ospecifika: de är inte valda för att peka ut <a class="kb-term" href="/ordlista-l.html#term-lungemboli" data-def="Blodpropp som täpper till ett kärl i lungcirkulationen">lungemboli</a>, utan för att fånga in allt som skulle kunna vara det.</p>
+
+      <p><strong>Regeln gäller bara i kombination med en redan låg <a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">klinisk</a> misstanke.</strong> Det är det vanligaste missförståndet om PERC. Åtta frånvarande kriterier hos en patient där misstanken från början var hög säger ingenting — skalan är validerad i den lågrisksituationen och ingen annan. Den är alltså inte ett självständigt test utan ett andra steg efter en bedömning som redan gjorts.</p>
+
+      <p><strong>Varför en negativ regel behövs alls.</strong> <a class="kb-term" href="/ordlista-d.html#term-d-dimer" data-def="Nedbrytningsprodukt av fibrin; blodprov som stiger vid blodproppssjukdom">D-dimer</a> stiger vid infektion, graviditet, cancer, kirurgi och hög ålder, och i en akutmottagningspopulation är förhöjda värden vanliga hos patienter som inte har någon propp. Varje sådant svar leder vidare till <a class="kb-term" href="/ordlista-d.html#term-datortomografi" data-def="Skiktröntgen; bygger tvärsnittsbilder av kroppen med röntgenstrålar">datortomografi</a> med kontrast, alltså strålning, kontrastbelastning och tid. PERC finns för att identifiera den grupp där kedjan aldrig behöver börja.</p>
+
+      <div class="vt-ansvar">
+        <p><strong>Räknaren ersätter inte bedömningen.</strong> PERC förutsätter att den <a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">kliniska</a> misstanken redan bedömts som låg och gäller inte utanför den situationen. Regeln är validerad på vuxna som sökt akut för misstänkt <a class="kb-term" href="/ordlista-l.html#term-lungemboli" data-def="Blodpropp som täpper till ett kärl i lungcirkulationen">lungemboli</a>, och särskilda grupper — gravida, patienter med pågående <a class="kb-term" href="/ordlista-a.html#term-antikoagulantium" data-def="Behandling med läkemedel som motverkar att blodet levrar sig">antikoagulantiabehandling</a>, personer med tidigare <a class="kb-term" href="/ordlista-t.html#term-tromboembolism" data-def="Blodpropp som lossnat och förts med blodet till ett annat kärl">tromboembolism</a> — faller utanför det underlaget.</p>
+      </div>
+
+      <!-- =========================================================
+           3. sPESI
+           ========================================================= -->
+
+      <h2 id="spesi">sPESI – riskbedömning vid bekräftad <a class="kb-term" href="/ordlista-l.html#term-lungemboli" data-def="Blodpropp som täpper till ett kärl i lungcirkulationen">lungemboli</a></h2>
+
+      <p>sPESI besvarar en annan fråga än de två föregående skalorna. Den används först när lungembolin är bekräftad och skattar hur allvarlig den är. Sex kriterier väger vardera en poäng, och det är skillnaden mellan noll och minst en som betyder något — inte hur högt summan blir.</p>
+
+      <div data-akut="spesi"></div>
+
+      <h3>Kriterier och tolkning</h3>
+
+      <table class="kb-mtable">
+        <caption>sPESI – de sex kriterierna</caption>
+        <thead>
+          <tr>
+            <th scope="col">Kriterium</th>
+            <th scope="col">Poäng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Kriterium">Ålder över 80 år</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">Cancer i sjukhistorien</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">Kronisk <a class="kb-term" href="/ordlista-h.html#term-hjartsvikt" data-def="Hjärtats oförmåga att pumpa tillräckligt med blod för kroppens behov">hjärtsvikt</a> eller kronisk lungsjukdom</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium"><a class="kb-term" href="/ordlista-p.html#term-puls" data-def="Tryckvågen som varje hjärtslag skickar ut i artärerna; mått på hjärtfrekvensen">Puls</a> 110 slag per minut eller mer</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">Systoliskt <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtryck</a> under 100 mmHg</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium"><a class="kb-term" href="/ordlista-s.html#term-syresaturation" data-def="Andelen av blodets hemoglobin som är mättat med syre, angiven i procent">Syresaturation</a> under 90 procent</th><td data-label="Poäng">+1</td></tr>
+        </tbody>
+      </table>
+
+      <table class="kb-mtable">
+        <caption>sPESI – tolkning av summan</caption>
+        <thead>
+          <tr>
+            <th scope="col">Summa</th>
+            <th scope="col">Bedömning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Summa">0 poäng</th><td data-label="Bedömning"><strong>0 poäng – låg risk</strong>. Omkring en procent avled inom trettio dagar i studien</td></tr>
+          <tr><th scope="row" data-label="Summa">1 poäng eller mer</th><td data-label="Bedömning"><strong>1 poäng eller mer – förhöjd risk</strong>. Omkring elva procent avled inom trettio dagar i studien</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Vad betyder variablerna?</h3>
+
+      <h4><a class="kb-term" href="/ordlista-p.html#term-puls" data-def="Tryckvågen som varje hjärtslag skickar ut i artärerna; mått på hjärtfrekvensen">Puls</a>, <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtryck</a> och saturation</h4>
+      <p>De tre mätvärdena beskriver samma sak från olika håll: hur hårt högerkammaren pressas av proppen. En <a class="kb-term" href="/ordlista-e.html#term-emboli" data-def="Tilltäppning av ett kärl av material som följt med blodströmmen">emboli</a> ökar motståndet i lungcirkulationen, och högerkammaren svarar först med att slå fortare. Räcker inte det faller till slut <a class="kb-term" href="/ordlista-h.html#term-hjartminutvolym" data-def="Blodvolymen hjärtat pumpar ut per minut; slagvolym gånger hjärtfrekvens">hjärtminutvolymen</a>, och då sjunker det systoliska trycket. Saturationen speglar hur stor del av lungan som ventileras utan att få blod. Ett sjunkande <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtryck</a> vid bekräftad <a class="kb-term" href="/ordlista-l.html#term-lungemboli" data-def="Blodpropp som täpper till ett kärl i lungcirkulationen">lungemboli</a> är därför ett sent tecken, inte ett tidigt.</p>
+
+      <h4>Kronisk hjärt- eller lungsjukdom</h4>
+      <p>De två sjukdomsgrupperna räknas som ett enda kriterium och ger tillsammans högst en poäng. I den ursprungliga PESI-skalan var de två skilda punkter, och sammanslagningen är en av förenklingarna i sPESI. Skälet till att de hör ihop är att de gör samma sak: en patient vars hjärta eller lungor redan arbetar på marginalen har mindre reserv kvar när en <a class="kb-term" href="/ordlista-e.html#term-emboli" data-def="Tilltäppning av ett kärl av material som följt med blodströmmen">emboli</a> lägger till ytterligare belastning.</p>
+
+      <h4>Ålder och cancer</h4>
+      <p>Till skillnad från de fyra andra kriterierna säger dessa två ingenting om hur stor embolin är. De beskriver patienten, inte proppen — hur mycket reserv kroppen har och vilka andra sjukdomar som pågår samtidigt. Att de väger lika tungt som ett lågt <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtryck</a> är avsiktligt: dödligheten efter en <a class="kb-term" href="/ordlista-l.html#term-lungemboli" data-def="Blodpropp som täpper till ett kärl i lungcirkulationen">lungemboli</a> styrs minst lika mycket av vem som drabbas som av hur stor proppen är.</p>
+
+      <h3>Varför just de här variablerna?</h3>
+
+      <p>sPESI är en förenkling av den ursprungliga PESI, som hade elva variabler med olika poängvikter och gav en indelning i fem klasser. Förenklingen minskade antalet variabler till sex och gav dem alla samma vikt, utan att lågriskgruppen blev sämre identifierad. Det säger något om hur poängskalor fungerar: en modell som ser mer förfinad ut är inte nödvändigtvis bättre på det den ska göra, och en skala som ska användas vid en akutmottagning vinner på att gå att räkna i huvudet.</p>
+
+      <p><strong>Skalan graderar bara nedåt, inte uppåt.</strong> Det är den viktigaste egenskapen att förstå. Fyra poäng betyder inte att patienten är fyra gånger sjukare än vid en poäng — det betyder bara att patienten inte tillhör lågriskgruppen. Hela konstruktionen syftar till att skilja ut de patienter där risken är så låg att vård utanför sjukhus har undersökts som ett alternativ. För allt ovanför den gränsen ger sPESI ingen ytterligare upplösning, och andra bedömningar tar vid.</p>
+
+      <div class="vt-ansvar">
+        <p><strong>Räknaren ersätter inte bedömningen.</strong> sPESI förutsätter en redan bekräftad <a class="kb-term" href="/ordlista-l.html#term-lungemboli" data-def="Blodpropp som täpper till ett kärl i lungcirkulationen">lungemboli</a> och säger ingenting om sannolikheten för diagnosen — den frågan besvaras av Wells och PERC ovan. Skalan är framtagen för <a class="kb-term" href="/ordlista-p.html#term-prognos" data-def="Bedömd framtidsutsikt för förloppet och utgången av en sjukdom">prognos</a> på gruppnivå och avgör inte vårdnivån för en enskild patient.</p>
+      </div>
+
+      <!-- =========================================================
+           Hänvisning: dosering av lågmolekylärt heparin
+           ========================================================= -->
+
+      <div class="vt-ansvar">
+        <p><strong>Ska dosen räknas ut?</strong> Vikt gånger <a class="kb-term" href="/ordlista-d.html#term-dos" data-def="Bestämd mängd läkemedel eller strålning som ges vid ett tillfälle eller under en viss tid">dos</a> per kilo görs i läkemedelsberäknarens <a href="/verktyg/lakemedelsberakning.html" class="info-link">Dos och styrka</a>. Själva ordinationen — preparat, dosnivå och justering för njurfunktion — hämtas ur FASS och lokalt vårdprogram, inte härifrån. Anatomiquiz lär ut räknemomentet och publicerar inte doseringsanvisningar.</p>
+      </div>
+
+      <div class="kb-sources">
+        <h2>Referenser</h2>
+        <ul>
+          <li>Jiménez, D., Aujesky, D., Moores, L., Gómez, V., Lobo, J. L., Uresandi, F., Otero, R., Monreal, M., Muriel, A., &amp; Yusen, R. D. (2010). Simplification of the pulmonary embolism severity index for prognostication in patients with acute symptomatic pulmonary embolism. <em>Archives of Internal Medicine, 170</em>(15), 1383–1389.</li>
+          <li>Kline, J. A., Courtney, D. M., Kabrhel, C., Moore, C. L., Smithline, H. A., Plewa, M. C., Richman, P. B., O'Neil, B. J., &amp; Nordenholz, K. (2008). Prospective multicenter evaluation of the pulmonary embolism rule-out criteria. <em>Journal of Thrombosis and Haemostasis, 6</em>(5), 772–780.</li>
+          <li>Wells, P. S., Anderson, D. R., Rodger, M., Forgie, M., Kearon, C., Dreyer, J., Kovacs, G., Mitchell, M., Lewandowski, B., &amp; Kovacs, M. J. (2003). Evaluation of D-dimer in the diagnosis of suspected deep-vein thrombosis. <em>New England Journal of Medicine, 349</em>(13), 1227–1235.</li>
+        </ul>
+      </div>
+
+      <div class="actions">
+        <a href="/verktyg/akutmedicin/" class="btn primary">← Till akutmedicinen</a>
+        <a href="/medicinskordlista.html" class="btn">Slå upp en term</a>
+      </div>
+
+    </section>
+
+    <footer class="page-footer">
+      <p>Utbildningsmaterial, inte medicinsk rådgivning. Innehållet är avsett för studier och ersätter inte kurslitteratur, undervisning eller kliniska riktlinjer. Det ska inte användas som underlag för vård eller behandling av patienter.</p>
+      <p>Anatomiquiz använder inga kakor och samlar inte in personuppgifter. Läs mer i <a href="/integritet.html" class="info-link">integritetspolicyn</a>.</p>
+      <p class="page-updated">Senast uppdaterad <time data-updated datetime="2026-08-16">16 augusti 2026</time></p>
+    </footer>
+  </main>
+
+  <script src="/js/akutmedicin.js?v=0.9.415" defer></script>
+
+  <!-- Ordlistetooltips i löptexten (progressiv förbättring; .kb-term funkar som länk utan JS) -->
+  <script src="/js/kb-glossary.js" defer></script>
+
+</body>
+</html>

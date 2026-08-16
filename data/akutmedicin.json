@@ -365,6 +365,76 @@
     ]
   },
 
+  "perc": {
+    "namn": "PERC",
+    "monster": "kryss",
+    "rubrik": "PERC – kriterier för att avfärda lungemboli",
+    "intro": "PERC är byggd baklänges mot de andra skalorna: den letar inte efter tecken som talar för lungemboli, utan efter allt som skulle göra det oförsvarligt att avfärda diagnosen utan prov. Först när samtliga åtta kriterier är frånvarande är regeln uppfylld. Kryssa i det som stämmer.",
+    "summaetikett": "Uppfyllda kriterier",
+    "enhetssuffix": "poäng",
+    "kalla": "Kline et al. (2008)",
+
+    "kriterier": [
+      { "namn": "alder", "kort": "Ålder 50 år eller äldre", "poang": 1,
+        "etikett": "Ålder 50 år eller äldre" },
+      { "namn": "puls", "kort": "Puls 100 eller mer", "poang": 1,
+        "etikett": "Puls 100 slag per minut eller mer" },
+      { "namn": "saturation", "kort": "Saturation under 95 procent", "poang": 1,
+        "etikett": "Syresaturation under 95 procent på luft" },
+      { "namn": "bensvullnad", "kort": "Ensidig bensvullnad", "poang": 1,
+        "etikett": "Ensidig bensvullnad" },
+      { "namn": "hemoptys", "kort": "Blodhosta", "poang": 1,
+        "etikett": "Blodhosta" },
+      { "namn": "kirurgi", "kort": "Kirurgi eller trauma", "poang": 1,
+        "etikett": "Kirurgi eller trauma som krävt narkos inom fyra veckor" },
+      { "namn": "tidigare", "kort": "Tidigare emboli eller trombos", "poang": 1,
+        "etikett": "Tidigare lungemboli eller djup ventrombos" },
+      { "namn": "hormoner", "kort": "Hormonbehandling", "poang": 1,
+        "etikett": "Pågående behandling med östrogen, p-piller eller hormonsubstitution",
+        "hjalp": "Kriteriet gäller pågående behandling, inte hormoner patienten slutat med. Det finns med därför att östrogen ökar blodets benägenhet att levra sig." }
+    ],
+
+    "band": [
+      { "max": 0, "niva": "lag", "rubrik": "PERC uppfylld – inget kriterium ikryssat",
+        "text": "Med samtliga åtta kriterier frånvarande, och när den kliniska misstanken redan bedömts som låg, var risken för lungemboli i studien så liten att vidare provtagning inte ansågs motiverad. Regeln gäller bara i den kombinationen — den ersätter inte den kliniska bedömningen utan förutsätter den." },
+      { "niva": "medel", "rubrik": "PERC inte uppfylld",
+        "text": "Ett enda ikryssat kriterium räcker för att regeln inte ska gälla. Det betyder inte att patienten har lungemboli, bara att PERC inte kan användas för att avfärda den — utredningen fortsätter på vanligt sätt." }
+    ]
+  },
+
+  "spesi": {
+    "namn": "sPESI",
+    "monster": "kryss",
+    "rubrik": "sPESI – riskbedömning vid bekräftad lungemboli",
+    "intro": "sPESI används först när lungembolin är bekräftad och besvarar en annan fråga än Wells och PERC: hur allvarlig är den? Sex kriterier väger vardera en poäng, och det är skillnaden mellan noll och minst en som betyder något — inte hur högt summan blir.",
+    "summaetikett": "sPESI",
+    "enhetssuffix": "poäng",
+    "kalla": "Jiménez et al. (2010)",
+
+    "kriterier": [
+      { "namn": "alder", "kort": "Ålder över 80 år", "poang": 1,
+        "etikett": "Ålder över 80 år" },
+      { "namn": "cancer", "kort": "Cancer", "poang": 1,
+        "etikett": "Cancer i sjukhistorien" },
+      { "namn": "hjartlunga", "kort": "Kronisk hjärt- eller lungsjukdom", "poang": 1,
+        "etikett": "Kronisk hjärtsvikt eller kronisk lungsjukdom",
+        "hjalp": "De två sjukdomsgrupperna räknas som ett enda kriterium och ger tillsammans högst en poäng. I den ursprungliga PESI-skalan var de två skilda punkter; sammanslagningen är en av förenklingarna i sPESI." },
+      { "namn": "puls", "kort": "Puls 110 eller mer", "poang": 1,
+        "etikett": "Puls 110 slag per minut eller mer" },
+      { "namn": "blodtryck", "kort": "Systoliskt tryck under 100", "poang": 1,
+        "etikett": "Systoliskt blodtryck under 100 mmHg" },
+      { "namn": "saturation", "kort": "Saturation under 90 procent", "poang": 1,
+        "etikett": "Syresaturation under 90 procent" }
+    ],
+
+    "band": [
+      { "max": 0, "niva": "lag", "rubrik": "0 poäng – låg risk",
+        "text": "I studien som skalan bygger på avled omkring en procent av patienterna med noll poäng inom trettio dagar. Det är den grupp där vård utanför sjukhus har undersökts som ett alternativ." },
+      { "niva": "hog", "rubrik": "1 poäng eller mer – förhöjd risk",
+        "text": "Från en poäng låg dödligheten inom trettio dagar i studien kring elva procent. Skalan skiljer alltså ut en lågriskgrupp; den graderar inte risken vidare uppåt, så fyra poäng säger inte något annat än att patienten inte tillhör lågriskgruppen." }
+    ]
+  },
+
   "chadsva": {
     "namn": "CHA₂DS₂-VA",
     "monster": "kryss",

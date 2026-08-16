@@ -206,6 +206,21 @@ _s("verktyg/akutmedicin/syra-bas.html",
    ["blodgas", "blodgastolkning", "korrigerat natrium", "serumosmolalitet",
     "anjongap", "tonicitet"])
 
+_s("verktyg/akutmedicin/blodproppar.html",
+   [("Thing", "Djup ventrombos"), ("Thing", "Lungemboli"),
+    ("Thing", "Wells score"), ("Thing", "D-dimer")],
+   ["Vilka kriterier som ingår i Wells score för djup ventrombos och vad "
+    "avdraget på två poäng gör.",
+    "Varför PERC är byggd för att avfärda en diagnos i stället för att "
+    "styrka den.",
+    "Hur en skala med hög sensitivitet skiljer sig från en med hög "
+    "specificitet.",
+    "Vilka sex kriterier som ingår i sPESI och varför bara noll poäng "
+    "betyder något.",
+    "Varför förtestsannolikheten avgör hur ett provsvar ska tolkas."],
+   ["wells score", "perc", "spesi", "djup ventrombos", "lungemboli",
+    "d-dimer"])
+
 # --- Ordlistan --------------------------------------------------------------
 _s("medicinskordlista.html",
    [("Thing", "Medicinsk terminologi"), ("Thing", "Medicinsk ordlista"),

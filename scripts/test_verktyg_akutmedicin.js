@@ -105,7 +105,7 @@ class SelectEl extends El {
 /* Monteringspunkterna på sidorna: en <div data-akut="…"> per skala.
    Flera skalor monteras samtidigt, precis som på syra-bas.html. */
 const SKALNAMN = ['news2', 'natrium_korrigerat', 'osmolalitet', 'blodgas',
-                  'wells_dvt', 'chadsva', 'ehra'];
+                  'wells_dvt', 'perc', 'spesi', 'chadsva', 'ehra'];
 const platser = {};
 SKALNAMN.forEach((namn) => {
   const p = new El('div');
