@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSP mot XSS: skript/stilar/data endast från egen origin. GitHub Pages tillåter inga egna HTTP-headers, därav meta. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+
+  <!-- Primär SEO -->
+  <title>Hjärtat – QTc, CHA₂DS₂-VA och HAS-BLED | Anatomiquiz</title>
+  <meta name="description" content="Räknare för korrigerad QT-tid samt riskskalorna vid förmaksflimmer, med varje variabel förklarad – vad skalan mäter och varför just de faktorerna väger.">
+  <meta name="author" content="Daniel Medin (Norrtou Creations)">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+  <link rel="canonical" href="https://anatomiquiz.se/verktyg/akutmedicin/hjartat.html">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anatomiquiz.se/verktyg/akutmedicin/hjartat.html">
+  <meta property="og:title" content="Hjärtat – QTc, CHA₂DS₂-VA och HAS-BLED">
+  <meta property="og:description" content="Korrigerad QT-tid enligt Bazett och Fridericia, strokerisk och blödningsrisk vid förmaksflimmer, och symtomklassen som beskriver hur mycket flimret besvärar patienten.">
+  <meta property="og:image" content="https://anatomiquiz.se/img/og-image.png">
+  <meta property="og:image:width" content="1518">
+  <meta property="og:image:height" content="864">
+  <meta property="og:image:alt" content="Anatomiquiz — räknare för hjärtats poängskalor">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="Anatomiquiz">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hjärtat – QTc, CHA₂DS₂-VA och HAS-BLED">
+  <meta name="twitter:description" content="Korrigerad QT-tid enligt Bazett och Fridericia, strokerisk och blödningsrisk vid förmaksflimmer, och symtomklassen som beskriver hur mycket flimret besvärar patienten.">
+  <meta name="twitter:image" content="https://anatomiquiz.se/img/og-image.png">
+  <meta name="twitter:image:alt" content="Anatomiquiz — räknare för hjärtats poängskalor">
+
+  <meta name="theme-color" content="#10b981">
+  <meta name="color-scheme" content="light dark">
+  <!-- Tema (ljust/mörkt). Laddas SYNKRONT och före stilmallen: attributet
+       data-theme måste sitta på <html> innan första målningen, annars
+       blinkar sidan ljus. Inline gick inte – CSP:n tillåter bara egen origin. -->
+  <script src="/js/theme.js?v=0.9.260"></script>
+
+  <!-- Strukturerad data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "WebApplication",
+    "LearningResource"
+  ],
+  "name": "Hjärtat – QTc, CHA₂DS₂-VA och HAS-BLED",
+  "description": "Räknare för frekvenskorrigerad QT-tid enligt Bazett och Fridericia, CHA₂DS₂-VA för strokerisk vid förmaksflimmer, HAS-BLED för blödningsrisk och modifierad EHRA för symtomklass, med varje variabel förklarad.",
+  "url": "https://anatomiquiz.se/verktyg/akutmedicin/hjartat.html",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Alla webbläsare",
+  "inLanguage": "sv-SE",
+  "isAccessibleForFree": true,
+  "learningResourceType": "interactive tool",
+  "educationalUse": [
+    "self study",
+    "practice"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "SEK"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Anatomiquiz",
+    "url": "https://anatomiquiz.se/"
+  },
+  "datePublished": "2026-08-16",
+  "dateModified": "2026-08-16",
+  "author": {
+    "@type": "Person",
+    "@id": "https://anatomiquiz.se/#daniel-medin",
+    "name": "Daniel Medin",
+    "description": "Utbildad medicinsk sekreterare och studerande i arbetsterapi vid Lunds universitet, med särskilt intresse för anatomi.",
+    "url": "https://norrtou.se",
+    "sameAs": [
+      "https://norrtou.se",
+      "https://www.linkedin.com/in/danielmedin",
+      "https://github.com/norrtou"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://anatomiquiz.se/#norrtou-creations",
+    "name": "Norrtou Creations",
+    "url": "https://norrtou.se",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://anatomiquiz.se/img/icon-512.png"
+    },
+    "sameAs": [
+      "https://github.com/norrtou"
+    ]
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "QT-tid"
+    },
+    {
+      "@type": "Thing",
+      "name": "Förmaksflimmer"
+    },
+    {
+      "@type": "Thing",
+      "name": "Strokerisk"
+    },
+    {
+      "@type": "Thing",
+      "name": "Blödningsrisk"
+    }
+  ],
+  "teaches": [
+    "Varför QT-tiden måste korrigeras för hjärtfrekvensen innan den kan bedömas.",
+    "Hur Bazett och Fridericia skiljer sig åt och varför Bazett överkorrigerar vid hög puls.",
+    "Vilka riskfaktorer som ingår i CHA₂DS₂-VA och varför två av dem väger dubbelt.",
+    "Varför HAS-BLED inte är avsedd att användas för att avstå från antikoagulantia.",
+    "Vad som skiljer EHRA-klass 2a från 2b och varför modifieringen gjordes."
+  ],
+  "keywords": [
+    "qtc",
+    "qt-tid",
+    "cha₂ds₂-va",
+    "has-bled",
+    "förmaksflimmer",
+    "ehra"
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "An analysis of the time-relations of electrocardiograms",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Bazett, H. C."
+        }
+      ],
+      "datePublished": "1920",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Heart"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "2024 ESC guidelines for the management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)",
+      "author": [
+        {
+          "@type": "Organization",
+          "name": "European Society of Cardiology"
+        }
+      ],
+      "datePublished": "2024",
+      "publisher": {
+        "@type": "Organization",
+        "name": "escardio.org"
+      },
+      "url": "https://www.escardio.org/Guidelines"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Die Systolendauer im Elektrokardiogramm bei normalen Menschen und bei Herzkranken",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Fridericia, L. S."
+        }
+      ],
+      "datePublished": "1920",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Acta Medica Scandinavica"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "A novel user-friendly score (HAS-BLED) to assess 1-year risk of major bleeding in patients with atrial fibrillation: The Euro Heart Survey",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Pisters, R."
+        },
+        {
+          "@type": "Person",
+          "name": "Lane, D. A."
+        },
+        {
+          "@type": "Person",
+          "name": "Nieuwlaat, R."
+        },
+        {
+          "@type": "Person",
+          "name": "de Vos, C. B."
+        },
+        {
+          "@type": "Person",
+          "name": "Crijns, H. J. G. M."
+        },
+        {
+          "@type": "Person",
+          "name": "Lip, G. Y. H."
+        }
+      ],
+      "datePublished": "2010",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Chest"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "The European Heart Rhythm Association symptom classification for atrial fibrillation: Validation and improvement through a simple modification",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Wynn, G. J."
+        },
+        {
+          "@type": "Person",
+          "name": "Todd, D. M."
+        },
+        {
+          "@type": "Person",
+          "name": "Webber, M."
+        },
+        {
+          "@type": "Person",
+          "name": "Bonnett, L."
+        },
+        {
+          "@type": "Person",
+          "name": "McShane, J."
+        },
+        {
+          "@type": "Person",
+          "name": "Kirchhof, P."
+        },
+        {
+          "@type": "Person",
+          "name": "Gupta, D."
+        }
+      ],
+      "datePublished": "2014",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Europace"
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Anatomiquiz",
+      "item": "https://anatomiquiz.se/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Verktyg",
+      "item": "https://anatomiquiz.se/verktyg/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Akutmedicin",
+      "item": "https://anatomiquiz.se/verktyg/akutmedicin/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Hjärtat",
+      "item": "https://anatomiquiz.se/verktyg/akutmedicin/hjartat.html"
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon.png">
+  <link rel="apple-touch-icon" href="/img/icon-192.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/css/styles.css?v=0.9.412">
+  <link rel="stylesheet" href="/css/verktyg.css?v=0.9.415">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+  <main id="main" class="container" role="main">
+
+    <header class="header">
+      <div class="header-title">
+        <h1>Hjärtat</h1>
+      </div>
+      <p class="tagline"><a class="kb-term" href="/ordlista-q.html#term-qt-tid" data-def="Tiden för kamrarnas aktivering och elektriska återhämtning på EKG">QT-tid</a>, strokerisk, blödningsrisk och symtomklass</p>
+    </header>
+
+    <section class="card" aria-labelledby="akutHeading">
+
+      <nav class="breadcrumb" aria-label="Brödsmula">
+        <a href="/" class="breadcrumb-link">← Anatomiquiz</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="/verktyg/" class="breadcrumb-link">Verktyg</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="/verktyg/akutmedicin/" class="breadcrumb-link">Akutmedicin</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <span class="breadcrumb-current" aria-current="page">Hjärtat</span>
+      </nav>
+
+      <h2 id="akutHeading" class="sr-only">Poängskalor och räknare för hjärtat</h2>
+
+      <div class="info-about">
+        <p>Fyra instrument. <a href="#qtc" class="info-link">QTc</a> räknar om en uppmätt <a class="kb-term" href="/ordlista-q.html#term-qt-tid" data-def="Tiden för kamrarnas aktivering och elektriska återhämtning på EKG">QT-tid</a> till den den skulle haft vid 60 slag per minut, så att den går att bedöma. De tre övriga hör ihop med <a class="kb-term" href="/ordlista-f.html#term-formaksflimmer" data-def="Oregelbunden, snabb elektrisk aktivitet i hjärtats förmak">förmaksflimmer</a> och besvarar var sin fråga: <a href="#chadsva" class="info-link">CHA₂DS₂-VA</a> hur stor risken för <a class="kb-term" href="/ordlista-s.html#term-stroke" data-def="Plötslig skada i hjärnan av avstängd blodförsörjning eller blödning">stroke</a> är, <a href="#hasbled" class="info-link">HAS-BLED</a> hur stor risken för blödning är om blodförtunnande ges, och <a href="#ehra" class="info-link">EHRA</a> hur mycket <a class="kb-term" href="/ordlista-f.html#term-formaksflimmer" data-def="Förmaksflimmer; oregelbunden hjärtrytm där förmaken darrar i stället för att dra ihop sig">flimret</a> faktiskt besvärar patienten. Längst ner står också <a href="#grace" class="info-link">varför GRACE inte finns här</a>.</p>
+      </div>
+
+      <div id="akut-utan-js" class="vt-warn">
+        Räknarna kräver JavaScript. Är det avstängt finns alla kriterier, poäng, formler och tolkningsband som tabeller under varje rubrik.
+      </div>
+
+      <!-- =========================================================
+           1. QTc
+           ========================================================= -->
+
+      <h2 id="qtc">QTc – frekvenskorrigerad <a class="kb-term" href="/ordlista-q.html#term-qt-tid" data-def="Tiden för kamrarnas aktivering och elektriska återhämtning på EKG">QT-tid</a></h2>
+
+      <p><a class="kb-term" href="/ordlista-q.html#term-qt-tid" data-def="Tiden för kamrarnas aktivering och elektriska återhämtning på EKG">QT-tiden</a> är den tid det tar för kamrarna att både aktiveras och återhämta sig elektriskt. Den blir kortare ju fortare hjärtat slår, eftersom hela hjärtcykeln kortas — och därför säger en uppmätt <a class="kb-term" href="/ordlista-q.html#term-qt-tid" data-def="Tiden för kamrarnas aktivering och elektriska återhämtning på EKG">QT-tid</a> ingenting förrän den räknats om till den tid den skulle haft vid 60 slag per minut. Det är den omräkningen som kallas QTc.</p>
+
+      <div data-akut="qtc"></div>
+
+      <h3>Formler och gränser</h3>
+
+      <table class="kb-mtable">
+        <caption>QTc – de två korrigeringsformlerna</caption>
+        <thead>
+          <tr>
+            <th scope="col">Formel</th>
+            <th scope="col">Uträkning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Formel">Bazett (1920)</th><td data-label="Uträkning">QT delat med kvadratroten ur RR-intervallet i sekunder</td></tr>
+          <tr><th scope="row" data-label="Formel">Fridericia (1920)</th><td data-label="Uträkning">QT delat med kubikroten ur RR-intervallet i sekunder</td></tr>
+          <tr><th scope="row" data-label="Formel">RR-intervallet</th><td data-label="Uträkning">60 delat med hjärtfrekvensen</td></tr>
+        </tbody>
+      </table>
+
+      <table class="kb-mtable">
+        <caption>QTc – tolkning</caption>
+        <thead>
+          <tr>
+            <th scope="col">QTc</th>
+            <th scope="col">Bedömning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="QTc">Upp till 450 ms (man) respektive 460 ms (kvinna)</th><td data-label="Bedömning">Normal</td></tr>
+          <tr><th scope="row" data-label="QTc">Över 450 ms (man) respektive 460 ms (kvinna)</th><td data-label="Bedömning">Förlängd</td></tr>
+          <tr><th scope="row" data-label="QTc">500 ms eller mer</th><td data-label="Bedömning">Kraftigt förlängd, samma gräns för båda könen</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Vad betyder variablerna?</h3>
+
+      <h4><a class="kb-term" href="/ordlista-q.html#term-qt-tid" data-def="Tiden för kamrarnas aktivering och elektriska återhämtning på EKG">QT-tiden</a></h4>
+      <p>Mäts från början av Q-vågen till slutet av T-vågen, i den avledning där intervallet är längst. Sträckan rymmer både kamrarnas aktivering (QRS) och deras återhämtning (ST-sträckan och T-vågen), och det är återhämtningen som står för nästan hela längden. Är T-vågens slut svårt att avgöra används tangentmetoden: en linje längs T-vågens brantaste nedförsbacke, och tiden läses där linjen möter baslinjen.</p>
+
+      <h4>RR-intervallet</h4>
+      <p>Tiden mellan två hjärtslag, mätt från R-våg till R-våg, uttryckt i sekunder. Räknaren tar fram det som 60 delat med hjärtfrekvensen. Vid 60 slag per minut blir RR exakt en sekund — och eftersom både kvadratroten och kubikroten ur ett är ett, ger båda formlerna då exakt den uppmätta <a class="kb-term" href="/ordlista-q.html#term-qt-tid" data-def="Tiden för kamrarnas aktivering och elektriska återhämtning på EKG">QT-tiden</a> tillbaka. Det är den punkt där korrigeringen inte gör någonting alls, och den enda där de två formlerna alltid är överens.</p>
+
+      <h4>Könet</h4>
+      <p>Ändrar inte uträkningen utan bara gränsen som resultatet läses mot. Skillnaden på tio millisekunder finns därför att <a class="kb-term" href="/ordlista-q.html#term-qt-tid" data-def="Tiden för kamrarnas aktivering och elektriska återhämtning på EKG">QT-tiden</a> i genomsnitt är något längre hos kvinnor efter puberteten. Gränsen vid 500 ms är däremot gemensam.</p>
+
+      <h3>Varför just de här variablerna?</h3>
+
+      <p><a class="kb-term" href="/ordlista-q.html#term-qt-tid" data-def="Tiden för kamrarnas aktivering och elektriska återhämtning på EKG">QT-tiden</a> speglar hur lång tid kamrarnas muskelceller har förhöjd spänning över sitt <a class="kb-term" href="/ordlista-c.html#term-cellmembran" data-def="Det hinnlager som avgränsar cellen mot omgivningen">cellmembran</a> innan de återgår till viloläget. Under den tiden kan cellen inte utlösa ett nytt normalt slag. Blir återhämtningen utdragen ökar risken att en extraslagsimpuls faller mitt i den känsliga fasen och startar en kaotisk kammararytmi — <a class="kb-term" href="/ordlista-t.html#term-torsades-de-pointes" data-def="Livshotande kammararytmi som kan utlösas av förlängd QT-tid">torsades de pointes</a>. Det är hela skälet till att intervallet mäts: det är ett mått på hur brett det sårbara fönstret är.</p>
+
+      <p><strong>Varför korrigeringen behövs.</strong> Vid hög hjärtfrekvens måste hela cykeln få plats på kortare tid, och återhämtningen kortas med den. En <a class="kb-term" href="/ordlista-q.html#term-qt-tid" data-def="Tiden för kamrarnas aktivering och elektriska återhämtning på EKG">QT-tid</a> på 400 ms betyder därför något helt annat vid <a class="kb-term" href="/ordlista-p.html#term-puls" data-def="Tryckvågen som varje hjärtslag skickar ut i artärerna; mått på hjärtfrekvensen">puls</a> 50 än vid <a class="kb-term" href="/ordlista-p.html#term-puls" data-def="Tryckvågen som varje hjärtslag skickar ut i artärerna; mått på hjärtfrekvensen">puls</a> 120. Korrigeringen översätter mätvärdet till en gemensam referenspunkt — hur lång tiden hade varit vid 60 slag per minut — så att olika patienter och olika tillfällen går att jämföra.</p>
+
+      <p><strong>Skillnaden mellan Bazett och Fridericia är rotens grad, och den får konsekvenser.</strong> Bazett tar kvadratroten, Fridericia kubikroten ur samma RR-intervall. Kubikroten ligger närmare ett, så Fridericia flyttar värdet mindre. Vid <a class="kb-term" href="/ordlista-p.html#term-puls" data-def="Tryckvågen som varje hjärtslag skickar ut i artärerna; mått på hjärtfrekvensen">puls</a> 100 ger en uppmätt <a class="kb-term" href="/ordlista-q.html#term-qt-tid" data-def="Tiden för kamrarnas aktivering och elektriska återhämtning på EKG">QT-tid</a> på 400 ms omkring 516 ms enligt Bazett men omkring 474 enligt Fridericia — den ena passerar 500-gränsen, den andra inte. Vid <a class="kb-term" href="/ordlista-p.html#term-puls" data-def="Tryckvågen som varje hjärtslag skickar ut i artärerna; mått på hjärtfrekvensen">puls</a> 50 vänder förhållandet: Bazett ger omkring 365 ms och Fridericia omkring 376. Bazett överkorrigerar alltså vid snabb <a class="kb-term" href="/ordlista-p.html#term-puls" data-def="Tryckvågen som varje hjärtslag skickar ut i artärerna; mått på hjärtfrekvensen">puls</a> och underkorrigerar vid långsam, och det är därför räknaren visar båda i stället för att välja åt dig.</p>
+
+      <div class="vt-ansvar">
+        <p><strong>Räknaren ersätter inte bedömningen.</strong> Korrigeringen förutsätter en regelbunden rytm. Vid <a class="kb-term" href="/ordlista-f.html#term-formaksflimmer" data-def="Oregelbunden, snabb elektrisk aktivitet i hjärtats förmak">förmaksflimmer</a> varierar RR-intervallet från slag till slag, och en enstaka korrigering blir då osäker. Vid breda QRS-komplex, till exempel grenblock eller <a class="kb-term" href="/ordlista-p.html#term-pacemaker" data-def="Hjärtrytm som styrs av en inopererad pacemaker">pacemakerrytm</a>, är själva <a class="kb-term" href="/ordlista-q.html#term-qt-tid" data-def="Tiden för kamrarnas aktivering och elektriska återhämtning på EKG">QT-tiden</a> dessutom förlängd av aktiveringen och inte av återhämtningen, vilket kräver en annan bedömning än den här räknaren gör.</p>
+      </div>
+
+      <!-- =========================================================
+           2. CHA₂DS₂-VA
+           ========================================================= -->
+
+      <h2 id="chadsva">CHA₂DS₂-VA – strokerisk vid <a class="kb-term" href="/ordlista-f.html#term-formaksflimmer" data-def="Oregelbunden, snabb elektrisk aktivitet i hjärtats förmak">förmaksflimmer</a></h2>
+
+      <p>Vid <a class="kb-term" href="/ordlista-f.html#term-formaksflimmer" data-def="Oregelbunden, snabb elektrisk aktivitet i hjärtats förmak">förmaksflimmer</a> står förmaken stilla och darrar i stället för att dra ihop sig. Blodet blir då stående i <a class="kb-term" href="/ordlista-f.html#term-formaksora" data-def="Fingerformad utbuktning från hjärtats förmak; vanligaste platsen för proppar vid flimmer">förmaksörat</a>, och stillastående blod levrar sig. CHA₂DS₂-VA väger ihop sju faktorer som var för sig ökar risken att en sådan propp bildas och förs vidare till <a class="kb-term" href="/ordlista-e.html#term-encephalon" data-def="Storhjärna, lillhjärna och hjärnstam tillsammans (encephalon)">hjärnan</a>.</p>
+
+      <div data-akut="chadsva"></div>
+
+      <h3>Kriterier och poäng</h3>
+
+      <table class="kb-mtable">
+        <caption>CHA₂DS₂-VA – kriterier och poäng</caption>
+        <thead>
+          <tr>
+            <th scope="col">Kriterium</th>
+            <th scope="col">Poäng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Kriterium">C – <a class="kb-term" href="/ordlista-h.html#term-hjartsvikt" data-def="Hjärtats oförmåga att pumpa tillräckligt med blod för kroppens behov">hjärtsvikt</a> eller nedsatt vänsterkammarfunktion</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">H – <a class="kb-term" href="/ordlista-h.html#term-hypertoni" data-def="Förhöjt blodtryck; även förhöjd spänning (tonus) i muskler">hypertoni</a></th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">A₂ – ålder 75 år eller äldre</th><td data-label="Poäng">+2</td></tr>
+          <tr><th scope="row" data-label="Kriterium">D – <a class="kb-term" href="/ordlista-d.html#term-diabetes" data-def="Sjukdomsgrupp med förhöjt blodsocker på grund av brist på eller nedsatt effekt av insulin">diabetes</a></th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">S₂ – tidigare <a class="kb-term" href="/ordlista-s.html#term-stroke" data-def="Plötslig skada i hjärnan av avstängd blodförsörjning eller blödning">stroke</a>, <a class="kb-term" href="/ordlista-t.html#term-tia" data-def="Övergående attack av strokesymtom som går tillbaka helt">TIA</a> eller arteriell <a class="kb-term" href="/ordlista-t.html#term-tromboembolism" data-def="Blodpropp som lossnat och förts med blodet till ett annat kärl">tromboembolism</a></th><td data-label="Poäng">+2</td></tr>
+          <tr><th scope="row" data-label="Kriterium">V – kärlsjukdom: tidigare <a class="kb-term" href="/ordlista-h.html#term-hjartinfarkt" data-def="Vävnadsdöd i hjärtmuskeln sedan ett kranskärl täppts till">hjärtinfarkt</a>, <a class="kb-term" href="/ordlista-p.html#term-perifer-artarsjukdom" data-def="Åderförkalkning i kroppens perifera artärer, oftast i benen">perifer artärsjukdom</a> eller <a class="kb-term" href="/ordlista-p.html#term-plack" data-def="Förtjockad avlagring, t.ex. av fett och bindväv i en artärvägg">plack</a> i <a class="kb-term" href="/ordlista-a.html#term-aorta" data-def="Kroppens största artär; utgår från vänster hjärtkammare">aorta</a></th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">A – ålder 65–74 år</th><td data-label="Poäng">+1</td></tr>
+        </tbody>
+      </table>
+
+      <table class="kb-mtable">
+        <caption>CHA₂DS₂-VA – tolkning av summan</caption>
+        <thead>
+          <tr>
+            <th scope="col">Summa</th>
+            <th scope="col">Bedömning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Summa">0 poäng</th><td data-label="Bedömning"><strong>0 poäng – låg risk</strong>. Riktlinjerna rekommenderar inte antikoagulantia enbart på grund av <a class="kb-term" href="/ordlista-f.html#term-formaksflimmer" data-def="Förmaksflimmer; oregelbunden hjärtrytm där förmaken darrar i stället för att dra ihop sig">flimret</a></td></tr>
+          <tr><th scope="row" data-label="Summa">1 poäng</th><td data-label="Bedömning"><strong>1 poäng – måttlig risk</strong>. Antikoagulantia bör övervägas, med hänsyn till blödningsrisk och patientens inställning</td></tr>
+          <tr><th scope="row" data-label="Summa">2 poäng eller mer</th><td data-label="Bedömning"><strong>2 poäng eller mer – hög risk</strong>. Riktlinjerna rekommenderar antikoagulantia</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Vad betyder variablerna?</h3>
+
+      <h4>De två som väger dubbelt</h4>
+      <p>Hög ålder och tidigare <a class="kb-term" href="/ordlista-s.html#term-stroke" data-def="Plötslig skada i hjärnan av avstängd blodförsörjning eller blödning">stroke</a> ger två poäng var, och det är inte en avrundning utan ett mätt förhållande: de är de starkaste enskilda riskmarkörerna i underlaget. En tidigare propp visar att mekanismen redan har inträffat hos just den här patienten, vilket säger mer än vilken enskild riskfaktor som helst.</p>
+
+      <h4>De två åldersraderna</h4>
+      <p>Åldern räknas en gång. Raderna 65–74 år och 75 år eller äldre är ömsesidigt uteslutande, och räknaren lossar därför den ena när den andra kryssas i. Att åldern förekommer som två rader i stället för en är bara ett sätt att ge den två olika vikter i samma tabell.</p>
+
+      <h4>Bokstaven som inte längre finns</h4>
+      <p>Skalan hette tidigare CHA₂DS₂-VASc, där Sc stod för kvinnligt kön som en egen riskpoäng. I 2024 års riktlinjer togs den bort, eftersom könet visade sig fungera som en riskmodifierare snarare än en självständig riskfaktor — det påverkar hur de andra faktorerna slår ut, inte risken i sig. Namnet är därför kortare i dag, och maxsumman lägre.</p>
+
+      <h3>Varför just de här variablerna?</h3>
+
+      <p>Nästan varje kriterium beskriver något som antingen skadar kärlens insida eller gör blodet mer benäget att levra sig — samma grundmekanismer som styr all trombosbildning. <a class="kb-term" href="/ordlista-h.html#term-hypertoni" data-def="Förhöjt blodtryck; även förhöjd spänning (tonus) i muskler">Hypertoni</a> och <a class="kb-term" href="/ordlista-d.html#term-diabetes" data-def="Sjukdomsgrupp med förhöjt blodsocker på grund av brist på eller nedsatt effekt av insulin">diabetes</a> sliter på <a class="kb-term" href="/ordlista-e.html#term-endotel" data-def="Det tunna cellskikt som klär kärlens insida">endotelet</a>, kärlsjukdom är beviset på att slitaget redan gett skador, och <a class="kb-term" href="/ordlista-h.html#term-hjartsvikt" data-def="Hjärtats oförmåga att pumpa tillräckligt med blod för kroppens behov">hjärtsvikt</a> betyder långsammare flöde genom hjärtat. <a class="kb-term" href="/ordlista-f.html#term-formaksflimmer" data-def="Förmaksflimmer; oregelbunden hjärtrytm där förmaken darrar i stället för att dra ihop sig">Flimret</a> bidrar med det stillastående blodet i <a class="kb-term" href="/ordlista-f.html#term-formaksora" data-def="Fingerformad utbuktning från hjärtats förmak; vanligaste platsen för proppar vid flimmer">förmaksörat</a>. Skalan mäter alltså inte <a class="kb-term" href="/ordlista-f.html#term-formaksflimmer" data-def="Förmaksflimmer; oregelbunden hjärtrytm där förmaken darrar i stället för att dra ihop sig">flimret</a> utan hur mottaglig just den här patienten är för dess konsekvens.</p>
+
+      <p><strong>Åldern väger tyngst därför att den samlar allt annat.</strong> Med stigande ålder följer stelare kärl, tystare tidigare hjärtinfarkter, sämre njurfunktion och fler samtidiga sjukdomar. Att ålder ensam ger två poäng är i praktiken ett sätt att fånga upp allt det som inte står som egna rader i tabellen.</p>
+
+      <!-- =========================================================
+           3. HAS-BLED
+           ========================================================= -->
+
+      <h2 id="hasbled">HAS-BLED – blödningsrisk vid <a class="kb-term" href="/ordlista-a.html#term-antikoagulantium" data-def="Behandling med läkemedel som motverkar att blodet levrar sig">antikoagulantiabehandling</a></h2>
+
+      <p>Om CHA₂DS₂-VA skattar vad man vinner på blodförtunnande behandling, skattar HAS-BLED vad den kostar. Nio kryssrutor fördelade på sju bokstäver — A och D står vardera för två skilda saker och kan därför ge två poäng var.</p>
+
+      <div data-akut="has_bled"></div>
+
+      <h3>Kriterier och poäng</h3>
+
+      <table class="kb-mtable">
+        <caption>HAS-BLED – kriterier och poäng</caption>
+        <thead>
+          <tr>
+            <th scope="col">Kriterium</th>
+            <th scope="col">Poäng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Kriterium">H – okontrollerad <a class="kb-term" href="/ordlista-h.html#term-hypertoni" data-def="Förhöjt blodtryck; även förhöjd spänning (tonus) i muskler">hypertoni</a>, systoliskt <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtryck</a> över 160 mmHg</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">A – nedsatt njurfunktion: <a class="kb-term" href="/ordlista-d.html#term-dialys" data-def="Rening av blodet från avfallsämnen och överskottsvätska när njurarna sviktar">dialys</a>, njurtransplantation eller <a class="kb-term" href="/ordlista-k.html#term-kreatinin" data-def="Nedbrytningsprodukt från muskler som utsöndras av njurarna; mått på njurfunktion">kreatinin</a> över 200 mikromol per liter</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">A – nedsatt leverfunktion: kronisk <a class="kb-term" href="/ordlista-l.html#term-leversvikt" data-def="Sjukdom i levern; vid svikt räcker organets funktion inte till">leversjukdom</a> eller påtagligt avvikande leverprover</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">S – tidigare <a class="kb-term" href="/ordlista-s.html#term-stroke" data-def="Plötslig skada i hjärnan av avstängd blodförsörjning eller blödning">stroke</a></th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">B – tidigare allvarlig blödning eller känd blödningsbenägenhet</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">L – labilt <a class="kb-term" href="/ordlista-i.html#term-inr" data-def="Mått på blodets levringstid, används för att styra warfarinbehandling">INR</a> med låg andel tid inom terapeutiskt intervall</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">E – ålder över 65 år</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">D – samtidig behandling med läkemedel som ökar blödningsrisken, till exempel <a class="kb-term" href="/ordlista-t.html#term-trombocythammare" data-def="Läkemedel som minskar blodplättarnas benägenhet att klumpa ihop sig">trombocythämmare</a> eller antiinflammatoriska medel</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">D – hög alkoholkonsumtion</th><td data-label="Poäng">+1</td></tr>
+        </tbody>
+      </table>
+
+      <table class="kb-mtable">
+        <caption>HAS-BLED – tolkning av summan</caption>
+        <thead>
+          <tr>
+            <th scope="col">Summa</th>
+            <th scope="col">Bedömning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Summa">0–2 poäng</th><td data-label="Bedömning"><strong>0–2 poäng – låg blödningsrisk</strong>. Säger ingenting om nyttan av behandlingen, som skattas separat</td></tr>
+          <tr><th scope="row" data-label="Summa">3 poäng eller mer</th><td data-label="Bedömning"><strong>3 poäng eller mer – hög blödningsrisk</strong>. Pekar ut vad som går att åtgärda och vem som behöver tätare uppföljning</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Vad betyder variablerna?</h3>
+
+      <h4>Bokstäverna som räknas två gånger</h4>
+      <p>A täcker både <a class="kb-term" href="/ordlista-n.html#term-njure" data-def="Bönformat parorgan som filtrerar blodet, bildar urin och reglerar vätske- och saltbalans">njure</a> och lever, D både läkemedel och alkohol. Båda paren kan ge två poäng, vilket är varför nio rutor får plats under sju bokstäver och maxsumman är nio och inte sju. Att just de fyra slås ihop parvis beror på att de hör ihop begreppsligt — organsvikt respektive substanser — inte på att de skulle väga mindre.</p>
+
+      <h4>Labilt <a class="kb-term" href="/ordlista-i.html#term-inr" data-def="Mått på blodets levringstid, används för att styra warfarinbehandling">INR</a></h4>
+      <p>Kriteriet förutsätter behandling med <a class="kb-term" href="/ordlista-w.html#term-warfarin" data-def="Blodförtunnande läkemedel som hämmar K-vitaminberoende koagulationsfaktorer">warfarin</a>, eftersom <a class="kb-term" href="/ordlista-i.html#term-inr" data-def="Mått på blodets levringstid, används för att styra warfarinbehandling">INR</a> inte mäts vid de direktverkande antikoagulantia som i dag är vanligast. Ett labilt <a class="kb-term" href="/ordlista-i.html#term-inr" data-def="Mått på blodets levringstid, används för att styra warfarinbehandling">INR</a> betyder att blodets levringsförmåga pendlar över och under det avsedda intervallet, med blödningsrisk i den ena änden och proppsrisk i den andra. För en patient som inte står på <a class="kb-term" href="/ordlista-w.html#term-warfarin" data-def="Blodförtunnande läkemedel som hämmar K-vitaminberoende koagulationsfaktorer">warfarin</a> är rutan inte tillämplig.</p>
+
+      <h4><a class="kb-term" href="/ordlista-n.html#term-njure" data-def="Bönformat parorgan som filtrerar blodet, bildar urin och reglerar vätske- och saltbalans">Njure</a> och lever</h4>
+      <p>Båda organen har dubbla roller här. <a class="kb-term" href="/ordlista-h.html#term-hepar" data-def="Kroppens största körtel, som omsätter näringsämnen och avgiftar blodet (hepar)">Levern</a> tillverkar flertalet <a class="kb-term" href="/ordlista-k.html#term-koagulationsfaktor" data-def="Protein i plasma som ingår i kedjan som får blodet att levra sig">koagulationsfaktorer</a>, så en sviktande lever ger ett blod som levrar sig sämre redan innan något läkemedel getts. Njurarna utsöndrar flera av de blodförtunnande läkemedlen, och en sviktande <a class="kb-term" href="/ordlista-n.html#term-njure" data-def="Bönformat parorgan som filtrerar blodet, bildar urin och reglerar vätske- och saltbalans">njure</a> låter läkemedlet ansamlas till högre nivåer än avsett. Det är två skilda mekanismer som råkar peka åt samma håll.</p>
+
+      <h3>Varför just de här variablerna?</h3>
+
+      <p>Kriterierna delar sig i tre grupper. Några beskriver ett kärl som lätt brister — okontrollerad <a class="kb-term" href="/ordlista-h.html#term-hypertoni" data-def="Förhöjt blodtryck; även förhöjd spänning (tonus) i muskler">hypertoni</a>, tidigare <a class="kb-term" href="/ordlista-s.html#term-stroke" data-def="Plötslig skada i hjärnan av avstängd blodförsörjning eller blödning">stroke</a>. Några beskriver ett blod som redan har svårt att levra sig — leversvikt, tidigare blödning, labilt <a class="kb-term" href="/ordlista-i.html#term-inr" data-def="Mått på blodets levringstid, används för att styra warfarinbehandling">INR</a>. Resten beskriver sådant som förstärker läkemedlets effekt utöver det avsedda: <a class="kb-term" href="/ordlista-n.html#term-njursvikt" data-def="Nedsatt förmåga hos njurarna att rena blodet och reglera vätskebalansen">njursvikt</a>, andra blodförtunnande medel, alkohol. Tillsammans täcker de vägen från kärlvägg till läkemedelsnivå.</p>
+
+      <p><strong>Skalan är inte byggd för att avstå från behandling.</strong> Det är den vanligaste feltolkningen, och den är värd att stanna vid. En hög HAS-BLED är i regel inte ett skäl att låta bli antikoagulantia, eftersom flera av kriterierna — <a class="kb-term" href="/ordlista-h.html#term-hypertoni" data-def="Förhöjt blodtryck; även förhöjd spänning (tonus) i muskler">hypertoni</a>, tidigare <a class="kb-term" href="/ordlista-s.html#term-stroke" data-def="Plötslig skada i hjärnan av avstängd blodförsörjning eller blödning">stroke</a>, hög ålder — höjer risken för <a class="kb-term" href="/ordlista-s.html#term-stroke" data-def="Plötslig skada i hjärnan av avstängd blodförsörjning eller blödning">stroke</a> minst lika mycket som de höjer risken för blödning. Den patient som ser farligast ut att behandla är ofta densamma som har mest att förlora på att inte behandlas. Skalans syfte är i stället att peka ut vad som går att åtgärda: sänka <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtrycket</a>, se över kombinationen av läkemedel, ta upp alkoholvanorna, och följa upp tätare.</p>
+
+      <div class="vt-ansvar">
+        <p><strong>Räknaren ersätter inte bedömningen.</strong> HAS-BLED skattar risk på gruppnivå under pågående <a class="kb-term" href="/ordlista-a.html#term-antikoagulantium" data-def="Behandling med läkemedel som motverkar att blodet levrar sig">antikoagulantiabehandling</a> och avgör inte behandlingen för en enskild patient. Den ska läsas tillsammans med CHA₂DS₂-VA, aldrig i stället för den.</p>
+      </div>
+
+      <!-- =========================================================
+           4. Modifierad EHRA
+           ========================================================= -->
+
+      <h2 id="ehra">Modifierad EHRA – symtomklass vid <a class="kb-term" href="/ordlista-f.html#term-formaksflimmer" data-def="Oregelbunden, snabb elektrisk aktivitet i hjärtats förmak">förmaksflimmer</a></h2>
+
+      <p>De två föregående skalorna handlar om risk. EHRA-klassen handlar om något annat: hur mycket <a class="kb-term" href="/ordlista-f.html#term-formaksflimmer" data-def="Förmaksflimmer; oregelbunden hjärtrytm där förmaken darrar i stället för att dra ihop sig">flimret</a> besvärar patienten just nu. Den räknas inte fram utan väljs, och den säger ingenting om hur allvarligt <a class="kb-term" href="/ordlista-f.html#term-formaksflimmer" data-def="Förmaksflimmer; oregelbunden hjärtrytm där förmaken darrar i stället för att dra ihop sig">flimret</a> är i övrigt — en patient utan <a class="kb-term" href="/ordlista-s.html#term-symtom" data-def="Tecken på sjukdom som den sjuke själv märker och beskriver">symtom</a> kan ha hög strokerisk och tvärtom.</p>
+
+      <div data-akut="ehra"></div>
+
+      <h3>Klasserna</h3>
+
+      <table class="kb-mtable">
+        <caption>Modifierad EHRA – de fem klasserna</caption>
+        <thead>
+          <tr>
+            <th scope="col">Klass</th>
+            <th scope="col">Beskrivning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Klass">EHRA 1 – inga <a class="kb-term" href="/ordlista-s.html#term-symtom" data-def="Tecken på sjukdom som den sjuke själv märker och beskriver">symtom</a></th><td data-label="Beskrivning"><a class="kb-term" href="/ordlista-f.html#term-formaksflimmer" data-def="Förmaksflimmer; oregelbunden hjärtrytm där förmaken darrar i stället för att dra ihop sig">Flimret</a> ger inga <a class="kb-term" href="/ordlista-s.html#term-symtom" data-def="Tecken på sjukdom som den sjuke själv märker och beskriver">symtom</a> och upptäcks ofta av en slump</td></tr>
+          <tr><th scope="row" data-label="Klass">EHRA 2a – lätta <a class="kb-term" href="/ordlista-s.html#term-symtom" data-def="Tecken på sjukdom som den sjuke själv märker och beskriver">symtom</a></th><td data-label="Beskrivning">Vardagen fungerar som vanligt och patienten är inte besvärad</td></tr>
+          <tr><th scope="row" data-label="Klass">EHRA 2b – måttliga <a class="kb-term" href="/ordlista-s.html#term-symtom" data-def="Tecken på sjukdom som den sjuke själv märker och beskriver">symtom</a></th><td data-label="Beskrivning">Vardagen fungerar, men patienten besväras av <a class="kb-term" href="/ordlista-s.html#term-symtom" data-def="Tecken på sjukdom som den sjuke själv märker och beskriver">symtomen</a></td></tr>
+          <tr><th scope="row" data-label="Klass">EHRA 3 – svåra <a class="kb-term" href="/ordlista-s.html#term-symtom" data-def="Tecken på sjukdom som den sjuke själv märker och beskriver">symtom</a></th><td data-label="Beskrivning">Vardagen påverkas av <a class="kb-term" href="/ordlista-s.html#term-symtom" data-def="Tecken på sjukdom som den sjuke själv märker och beskriver">symtomen</a></td></tr>
+          <tr><th scope="row" data-label="Klass">EHRA 4 – invalidiserande <a class="kb-term" href="/ordlista-s.html#term-symtom" data-def="Tecken på sjukdom som den sjuke själv märker och beskriver">symtom</a></th><td data-label="Beskrivning">Vanliga aktiviteter går inte längre att utföra</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Vad betyder variablerna?</h3>
+
+      <h4>Gränsen mellan 2a och 2b</h4>
+      <p>I båda klasserna fungerar vardagen. Skillnaden ligger i om patienten besväras av <a class="kb-term" href="/ordlista-s.html#term-symtom" data-def="Tecken på sjukdom som den sjuke själv märker och beskriver">symtomen</a> ändå. Det är en fråga om upplevelse, inte om funktion, och den är hela poängen med 2014 års modifiering: den gamla klass 2 rymde två grupper som visade sig bete sig olika, och 2b-gruppen liknade klass 3 mer än den liknade 2a.</p>
+
+      <h4>Varför klassen är vald och inte uträknad</h4>
+      <p>Det finns inget mätvärde att summera. Klassen bygger på vad patienten berättar, och skalans uppgift är att göra den berättelsen jämförbar mellan besök och mellan behandlare. Därför saknar det här instrumentet en Träna-flik — det finns ingen uträkning att kontrollera sitt eget svar mot, bara en beskrivning man känner igen eller inte.</p>
+
+      <h3>Varför just de här variablerna?</h3>
+
+      <p><a class="kb-term" href="/ordlista-s.html#term-symtom" data-def="Tecken på sjukdom som den sjuke själv märker och beskriver">Symtomen</a> vid <a class="kb-term" href="/ordlista-f.html#term-formaksflimmer" data-def="Oregelbunden, snabb elektrisk aktivitet i hjärtats förmak">förmaksflimmer</a> följer inte hjärtfrekvensen på något förutsägbart sätt. Två patienter med samma <a class="kb-term" href="/ordlista-f.html#term-formaksflimmer" data-def="Förmaksflimmer; oregelbunden hjärtrytm där förmaken darrar i stället för att dra ihop sig">flimmer</a> och samma <a class="kb-term" href="/ordlista-p.html#term-puls" data-def="Tryckvågen som varje hjärtslag skickar ut i artärerna; mått på hjärtfrekvensen">puls</a> kan uppleva helt olika saker, beroende på hur väl kamrarna klarar att fyllas utan förmakens bidrag och hur känslig personen är för oregelbundenheten i sig. Just därför går <a class="kb-term" href="/ordlista-s.html#term-symtom" data-def="Tecken på sjukdom som den sjuke själv märker och beskriver">symtomen</a> inte att härleda ur ett <a class="kb-term" href="/ordlista-e.html#term-ekg" data-def="Elektrokardiogram/-grafi">EKG</a>, och just därför behövs en egen skala för dem.</p>
+
+      <p><strong>Klassen används för att följa förändring, inte för att ställa diagnos.</strong> Dess värde ligger i jämförelsen före och efter en behandling: sjönk patienten från 3 till 2a hjälpte behandlingen, oavsett vad <a class="kb-term" href="/ordlista-e.html#term-ekg" data-def="Elektrokardiogram/-grafi">EKG</a>:t visar. Det gör EHRA till ett av få instrument på den här sidan där patientens egen upplevelse är själva mätvärdet.</p>
+
+      <!-- =========================================================
+           GRACE – förklarad, inte byggd
+           ========================================================= -->
+
+      <h2 id="grace">Varför GRACE inte finns som räknare här</h2>
+
+      <p>GRACE skattar risken att avlida efter ett akut koronart <a class="kb-term" href="/ordlista-s.html#term-syndrom" data-def="En grupp symtom och tecken som regelbundet förekommer tillsammans och kännetecknar ett bestämt sjukdomstillstånd">syndrom</a> och är en av de mest använda riskmodellerna inom kardiologin. Den finns medvetet inte som räknare på den här sidan, och skälet är värt att förklara eftersom det säger något om hur riskmodeller fungerar.</p>
+
+      <p>GRACE bygger på <strong>kontinuerliga variabler i en regressionsmodell</strong>: ålder, hjärtfrekvens, systoliskt <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtryck</a>, <a class="kb-term" href="/ordlista-k.html#term-kreatinin" data-def="Nedbrytningsprodukt från muskler som utsöndras av njurarna; mått på njurfunktion">kreatinin</a>, <a class="kb-term" href="/ordlista-k.html#term-killip-klass" data-def="Fyrgradig indelning av hjärtsviktens svårighetsgrad vid akut hjärtinfarkt">Killip-klass</a>, hjärtstillestånd vid ankomst, ST-förändringar och förhöjda hjärtskademarkörer. Varje variabel bidrar med en vikt som varierar med värdet — det är alltså inte fråga om poäng man kryssar i, utan om en beräkning som ger en procentuell risk. Förenklade varianter med några kryssrutor förekommer, men de är egna approximationer som inte är validerade mot originalmodellen. Att publicera en sådan under namnet GRACE vore att sprida ett instrument som inte finns.</p>
+
+      <p>Det generella av det: en poängskala med kryssrutor och en regressionsmodell är olika sorters verktyg. Kryssrutan förutsätter att varje riskfaktor kan reduceras till <em>finns</em> eller <em>finns inte</em>, och att faktorerna väger lika oavsett hur uttalade de är. Det fungerar när faktorerna verkligen är av- eller påslagna, som tidigare <a class="kb-term" href="/ordlista-s.html#term-stroke" data-def="Plötslig skada i hjärnan av avstängd blodförsörjning eller blödning">stroke</a> i CHA₂DS₂-VA. Det fungerar sämre när det avgörande är <em>hur mycket</em> — och då krävs den beräkning som inte går att göra i huvudet.</p>
+
+      <div class="kb-sources">
+        <h2>Referenser</h2>
+        <ul>
+          <li>Bazett, H. C. (1920). An analysis of the time-relations of electrocardiograms. <em>Heart, 7</em>, 353–370.</li>
+          <li>European Society of Cardiology. (2024). <em>2024 ESC guidelines for the management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS)</em>. <a href="https://www.escardio.org/Guidelines" target="_blank" rel="noopener noreferrer" class="info-link">escardio.org</a></li>
+          <li>Fridericia, L. S. (1920). Die Systolendauer im Elektrokardiogramm bei normalen Menschen und bei Herzkranken. <em>Acta Medica Scandinavica, 53</em>(1), 469–486.</li>
+          <li>Pisters, R., Lane, D. A., Nieuwlaat, R., de Vos, C. B., Crijns, H. J. G. M., &amp; Lip, G. Y. H. (2010). A novel user-friendly score (HAS-BLED) to assess 1-year risk of major bleeding in patients with atrial fibrillation: The Euro Heart Survey. <em>Chest, 138</em>(5), 1093–1100.</li>
+          <li>Wynn, G. J., Todd, D. M., Webber, M., Bonnett, L., McShane, J., Kirchhof, P., &amp; Gupta, D. (2014). The European Heart Rhythm Association symptom classification for atrial fibrillation: Validation and improvement through a simple modification. <em>Europace, 16</em>(7), 965–972.</li>
+        </ul>
+      </div>
+
+      <div class="actions">
+        <a href="/verktyg/akutmedicin/" class="btn primary">← Till akutmedicinen</a>
+        <a href="/medicinskordlista.html" class="btn">Slå upp en term</a>
+      </div>
+
+    </section>
+
+    <footer class="page-footer">
+      <p>Utbildningsmaterial, inte medicinsk rådgivning. Innehållet är avsett för studier och ersätter inte kurslitteratur, undervisning eller kliniska riktlinjer. Det ska inte användas som underlag för vård eller behandling av patienter.</p>
+      <p>Anatomiquiz använder inga kakor och samlar inte in personuppgifter. Läs mer i <a href="/integritet.html" class="info-link">integritetspolicyn</a>.</p>
+      <p class="page-updated">Senast uppdaterad <time data-updated datetime="2026-08-16">16 augusti 2026</time></p>
+    </footer>
+  </main>
+
+  <script src="/js/akutmedicin.js?v=0.9.417" defer></script>
+
+  <!-- Ordlistetooltips i löptexten (progressiv förbättring; .kb-term funkar som länk utan JS) -->
+  <script src="/js/kb-glossary.js" defer></script>
+
+</body>
+</html>

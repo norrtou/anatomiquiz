@@ -653,18 +653,42 @@
       var varde = 2 * (v.na + v.k) + v.glukos;
       return { varde: varde, uttryck: '2 × (' + visaTal(v.na) + ' + ' +
         visaTal(v.k) + ') + ' + visaTal(v.glukos) };
+    },
+    /* Båda QTc-formlerna delar RR-intervallet i SEKUNDER (60 / puls).
+       Bazett tar kvadratroten, Fridericia kubikroten — det är hela
+       skillnaden, och den är skälet till att Bazett överkorrigerar vid
+       hög puls och underkorrigerar vid låg. */
+    qtc_bazett: function (v) {
+      var rr = 60 / v.puls;
+      return { varde: v.qt / Math.sqrt(rr),
+        uttryck: visaTal(v.qt) + ' / √(60 / ' + visaTal(v.puls) + ')' };
+    },
+    qtc_fridericia: function (v) {
+      var rr = 60 / v.puls;
+      return { varde: v.qt / Math.cbrt(rr),
+        uttryck: visaTal(v.qt) + ' / ∛(60 / ' + visaTal(v.puls) + ')' };
     }
   };
 
-  /** Tolkningsbandet för ett uträknat värde, samma bandprincip som
-      poängskalans bandFor — första träffen med tak vinner. */
-  function tolkningsbandFor(utdata, varde) {
-    if (!utdata.band) return null;
-    for (var i = 0; i < utdata.band.length; i++) {
-      var b = utdata.band[i];
+  /**
+   * Tolkningsbandet för ett uträknat värde, samma bandprincip som
+   * poängskalans bandFor — första träffen med tak vinner.
+   *
+   * `bandvaljare` pekar ut ett annat fälts värde som avgör VILKEN
+   * bandtabell som gäller, precis som i värdeskalan (mönster B), där
+   * mättnadsskalan väljer tabell åt syresaturationen. QTc behöver det:
+   * gränsen för förlängd tid går vid 450 ms för män och 460 för kvinnor,
+   * alltså två tabeller för samma uträknade tal.
+   */
+  function tolkningsbandFor(utdata, varde, varden) {
+    var regler = utdata.band;
+    if (utdata.bandvaljare) regler = regler[varden[utdata.bandvaljare]];
+    if (!regler) return null;
+    for (var i = 0; i < regler.length; i++) {
+      var b = regler[i];
       if (b.max == null || varde <= b.max) return b;
     }
-    return utdata.band[utdata.band.length - 1];
+    return regler[regler.length - 1];
   }
 
   function skapaFormelraknare(skala, id) {
@@ -705,8 +729,12 @@
     rutnat.className = 'vt-grid';
     kort.appendChild(rutnat);
 
+    /* Ett valfält bland talen väljer inte ett värde att räkna PÅ utan en
+       tolkningstabell att läsa resultatet MOT (QTc: könet avgör gränsen).
+       Det ger därför ingen poängchip, precis som talfälten här. */
     var falt = skala.falt.map(function (spec) {
-      var f = byggTalfalt(spec, id, true);
+      var f = spec.typ === 'val' ? byggValfalt(spec, id, true)
+                                 : byggTalfalt(spec, id, true);
       rutnat.appendChild(f.el);
       return f;
     });
@@ -810,6 +838,7 @@
     function lasVarden() {
       var v = {};
       falt.forEach(function (f) {
+        if (f.spec.typ === 'val') { v[f.spec.namn] = f.valjare.value; return; }
         var n = tolkaTal(f.input.value);
         if (!isNaN(n)) v[f.spec.namn] = n;
       });
@@ -835,7 +864,11 @@
 
     function rakna() {
       var varden = lasVarden();
-      var saknas = skala.falt.filter(function (p) { return typeof varden[p.namn] !== 'number'; });
+      /* Ett valfält har alltid ett värde (rullgardinen står på något) och kan
+         därför aldrig saknas — bara talen räknas som ofyllda. */
+      var saknas = skala.falt.filter(function (p) {
+        return p.typ !== 'val' && typeof varden[p.namn] !== 'number';
+      });
 
       if (saknas.length) {
         senaste = { klar: false, saknas: saknas };
@@ -843,7 +876,7 @@
         var resultat = skala.utdata.map(function (spec) {
           var r = FORMLER[spec.berakning](varden);
           return { spec: spec, varde: r.varde, uttryck: r.uttryck,
-                   band: tolkningsbandFor(spec, r.varde) };
+                   band: tolkningsbandFor(spec, r.varde, varden) };
         });
         senaste = { klar: true, resultat: resultat };
       }
@@ -922,6 +955,7 @@
     }
 
     falt.forEach(function (f) {
+      if (f.spec.typ === 'val') { f.valjare.addEventListener('change', rakna); return; }
       f.input.addEventListener('input', rakna);
     });
 
@@ -956,14 +990,17 @@
     });
 
     nollknapp.addEventListener('click', function () {
-      falt.forEach(function (f) { f.input.value = ''; });
+      falt.forEach(function (f) {
+        if (f.spec.typ === 'val') { f.valjare.value = f.spec.val[0].varde; return; }
+        f.input.value = '';
+      });
       rader.forEach(function (rad) {
         rad.svarInput.value = '';
         rad.dom.className = '';
         rad.dom.textContent = '';
       });
       rakna();
-      if (falt[0]) falt[0].input.focus();
+      if (falt[0] && falt[0].input) falt[0].input.focus();
     });
 
     rakna();

@@ -267,7 +267,7 @@ Nya sidor **stoppar bygget** om de inte registreras — det är §0.4 och det ä
 | **3** | `syra-bas.html` — blodgasklassificeraren, korrigerat natrium, effektiv osmolalitet | ✅ **klart 0.9.305** |
 | **3,5** | Motorn färdig: mönster A och D + facit för Wells DVT, CHA₂DS₂-VA och EHRA | ✅ **klart 0.9.415** |
 | **4a** | `blodproppar.html` — Wells DVT, PERC, sPESI + LMH-hänvisningen | ✅ **klart 0.9.416** |
-| **4b** | `hjartat.html` — QTc, CHA₂DS₂-VA, HAS-BLED, EHRA + GRACE förklarad | väntar — QTc behöver Bazett/Fridericia i `FORMLER`, HAS-BLED en facitpost |
+| **4b** | `hjartat.html` — QTc, CHA₂DS₂-VA, HAS-BLED, EHRA + GRACE förklarad | ✅ **klart 0.9.417** |
 | **5** | `infektion.html` + `neurologi.html` + `buken.html` | väntar |
 | **6** | `kunskapsbank/kliniska-poangskalor.html` + korslänkning + `info.html`-källor | väntar |
 
@@ -475,3 +475,44 @@ ordning för att få tillbaka en ren diff.
 ett mellanslag — kontrollen letade efter `DVT osannolik` i en text som lydde `DVT  osannolik`.
 Felet satt i verktyget, inte i sidan, och hittades genom att läsa ut strängarna i stället för
 att lita på antalet avvikelser. Åtgärdat med `blanksteg()` i `check_akutmedicin.py`.
+
+### Släpp 4b — LEVERERAT 0.9.417 (`hjartat.html`)
+
+Släpp 4 är därmed helt klart.
+
+- [x] `verktyg/akutmedicin/hjartat.html` — QTc, CHA₂DS₂-VA, HAS-BLED och modifierad EHRA i
+      tredelad form, plus GRACE förklarad i prosa enligt §0c.
+- [x] **QTc i mönster C** — `qtc_bazett` och `qtc_fridericia` i `FORMLER`. Båda delar
+      RR-intervallet i sekunder (60 / puls); Bazett tar kvadratroten, Fridericia kubikroten.
+      **Avsteg från inventeringen i §0a:** där står "HR *el.* RR" som ingång. Räknaren tar bara
+      hjärtfrekvensen, eftersom RR är exakt härledbart ur den (60 / puls) och två ingångar för
+      samma storhet hade gett två sätt att mata in samma sak.
+- [x] **`bandvaljare` tillagd i mönster C** — könet väljer tolkningstabell (450 ms för män,
+      460 för kvinnor) utan att röra uträkningen. Samma mekanism som mättnadsskalan redan
+      använder i mönster B; formelräknaren kan därför nu också bära ett valfält bland talen.
+- [x] **HAS-BLED i facit** — Pisters et al. (2010), nio kryssrutor på sju bokstäver eftersom
+      A och D vardera täcker två saker. **Avsteg från inventeringen i §0a:** där står "7 kryss"
+      efter förlagan; primärkällan har nio poäng, och nio rutor är den trogna formen.
+- [x] `check_akutmedicin.py` generaliserad: `KRYSSTABELLER` bär nu (sida, caption) så att flera
+      sidor kan speglas, och `GANGSKALOR` respektive `FORMELTAL` täcker beslutsgången och
+      formelräknaren. `UTAN_SIDA` är tom — samtliga elva skalor speglas av en sida.
+- [x] **5 nya ordlisteposter** (`QT-tid`, `förmaksöra`, `trombocythämmare`, `Killip-klass`,
+      `perifer artärsjukdom`) och 18 nya poster i wiring-facit → 50 kb-term-länkar på sidan.
+- [x] Källorna (Bazett 1920, ESC 2024, Fridericia 1920, Pisters 2010, Wynn 2014) inskrivna i
+      `info.html` i samma pass (§3.2d).
+- [x] `test_verktyg_akutmedicin.js` 279 → 314 tester. QTc prövas vid puls 60, där RR är exakt
+      en sekund och båda rötterna ur ett är ett — den enda punkt där formlerna kan kontrolleras
+      utan avrundning.
+
+#### 7h. Två fel i mitt eget arbete
+
+**Testets väntevärden skrevs innan de räknats.** Jag angav Fridericia till 474,331 respektive
+376,437 ms efter att ha läst av en utskrift med en decimal och fyllt på med siffror jag inte
+hade. Rätt värden är 474,252 och 376,414. Testet föll direkt, men felet var av den sort som
+hade kunnat cementera ett fel facit om det råkat ligga närmare. **Räkna ut talet, läs aldrig av
+det ungefär och fyll på.**
+
+**Testskalet kraschade i stället för att förklara.** När ett kriterium plockades bort ur facit
+under larmverifieringen dog skriptet på `undefined` i stället för att säga vilket kriterium som
+saknades och vilka som fanns. Exitkoden var rätt, meddelandet värdelöst. `kryssa()` kastar nu
+ett läsbart fel med hela kriterielistan (§0.4 punkt 2).

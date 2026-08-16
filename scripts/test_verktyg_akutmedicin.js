@@ -105,7 +105,8 @@ class SelectEl extends El {
 /* Monteringspunkterna på sidorna: en <div data-akut="…"> per skala.
    Flera skalor monteras samtidigt, precis som på syra-bas.html. */
 const SKALNAMN = ['news2', 'natrium_korrigerat', 'osmolalitet', 'blodgas',
-                  'wells_dvt', 'perc', 'spesi', 'chadsva', 'ehra'];
+                  'wells_dvt', 'perc', 'spesi', 'chadsva', 'has_bled',
+                  'qtc', 'ehra'];
 const platser = {};
 SKALNAMN.forEach((namn) => {
   const p = new El('div');
@@ -691,6 +692,14 @@ async function kör() {
   }
 
   const kryssa = (r, namn, pa) => {
+    /* Ett kriterium som försvunnit ur facit ska säga VAD som fanns i stället,
+       inte krascha på undefined (CLAUDE_REGLER §0.4 punkt 2). Felet syntes
+       först som ett TypeError när alkoholkriteriet plockades bort ur
+       HAS-BLED under larmverifieringen. */
+    if (!r.rutor[namn]) {
+      throw new Error(`kriteriet "${namn}" finns inte i facit. Kriterier i ` +
+        `skalan: ${Object.keys(r.rutor).join(', ')}`);
+    }
     r.rutor[namn].ruta.checked = pa !== false;
     r.rutor[namn].ruta.fire('change');
   };
@@ -857,6 +866,107 @@ async function kör() {
       .forEach((n) => kryssa(r, n));
     pastå('åtta poäng är taket', r.varde.textContent, '8 poäng');
     pastå('uträkningen', r.calc.textContent, '1 + 1 + 2 + 1 + 2 + 1 = 8');
+  }
+
+  /* ---- HAS-BLED ---- */
+  rubrik('HAS-BLED — nio rutor på sju bokstäver (Pisters et al. 2010)');
+  {
+    const r = plockaKryss('has_bled');
+
+    ['hypertoni', 'njure', 'lever', 'stroke', 'blodning', 'labilt_inr',
+     'alder', 'lakemedel', 'alkohol'].forEach((n) => {
+      pastå(n, viktFor(r, n), 1);
+    });
+
+    rubrik('  A och D ger två poäng var, eftersom de täcker två saker');
+    r.nollknapp.fire('click');
+    kryssa(r, 'njure');
+    kryssa(r, 'lever');
+    pastå('båda A-raderna räknas', r.varde.textContent, '2 poäng');
+    kryssa(r, 'lakemedel');
+    kryssa(r, 'alkohol');
+    pastå('båda D-raderna räknas också', r.varde.textContent, '4 poäng');
+
+    rubrik('  Bandgränsen prövad åt båda håll');
+    r.nollknapp.fire('click');
+    kryssa(r, 'hypertoni');
+    kryssa(r, 'stroke');
+    pastå('2 poäng', bandTitelAv(r), '0–2 poäng – låg blödningsrisk');
+    pastå('nivån', r.band.className, 'vt-band is-lag');
+    kryssa(r, 'alder');
+    pastå('3 poäng', bandTitelAv(r), '3 poäng eller mer – hög blödningsrisk');
+    pastå('nivån', r.band.className, 'vt-band is-medel');
+    paståMed('skalan avråder inte från behandling', r.band.textContent,
+             'inte avsedd att användas för att avstå från antikoagulantia');
+
+    rubrik('  Maxsumman är nio, inte sju');
+    r.nollknapp.fire('click');
+    ['hypertoni', 'njure', 'lever', 'stroke', 'blodning', 'labilt_inr',
+     'alder', 'lakemedel', 'alkohol'].forEach((n) => kryssa(r, n));
+    pastå('nio poäng', r.varde.textContent, '9 poäng');
+  }
+
+  /* =========================================================
+     QTc (mönster C med bandväljare)
+     =========================================================
+     Talen nedan är handräknade ur formlerna, inte hämtade ur
+     modulen: QTc = QT / √(60/puls) för Bazett och QT / ∛(60/puls)
+     för Fridericia. Vid puls 60 är RR-intervallet exakt en sekund,
+     och båda rötterna av 1 är 1 — då ska QTc vara identisk med den
+     uppmätta QT-tiden. Det är den enda punkt där formlerna kan
+     kontrolleras utan avrundning, och därför den viktigaste. */
+
+  rubrik('QTc — Bazett och Fridericia (Bazett 1920; Fridericia 1920)');
+  {
+    const r = plockaFormel('qtc', ['qt', 'puls'], ['bazett', 'fridericia']);
+    const konvaljare = r.kort.find((e) => e.tagName === 'SELECT');
+    const valjKon = (v) => { konvaljare.value = v; konvaljare.fire('change'); };
+
+    rubrik('  Vid puls 60 är RR en sekund och QTc = QT');
+    skrivIn(r.falt, 'qt', 400);
+    skrivIn(r.falt, 'puls', 60);
+    pastå('Bazett', r.rader.bazett.varde.textContent, '400 ms');
+    pastå('Fridericia', r.rader.fridericia.varde.textContent, '400 ms');
+    paståMed('uträkningen visas', r.rader.bazett.calc.textContent, '400 / √(60 / 60)');
+
+    rubrik('  Bazett överkorrigerar vid hög puls, Fridericia mindre');
+    skrivIn(r.falt, 'puls', 100);
+    pastå('Bazett 400/√0,6', r.rader.bazett.varde.textContent, '516,398 ms');
+    pastå('Fridericia 400/∛0,6', r.rader.fridericia.varde.textContent, '474,252 ms');
+
+    rubrik('  ...och underkorrigerar vid låg puls');
+    skrivIn(r.falt, 'puls', 50);
+    pastå('Bazett', r.rader.bazett.varde.textContent, '365,148 ms');
+    pastå('Fridericia', r.rader.fridericia.varde.textContent, '376,414 ms');
+
+    rubrik('  Könet byter tolkningstabell men inte uträkningen');
+    skrivIn(r.falt, 'qt', 400);
+    skrivIn(r.falt, 'puls', 76);
+    const bazettVarde = r.rader.bazett.varde.textContent;   // 450,0 ms, mellan gränserna
+    valjKon('man');
+    paståMed('över mannens gräns 450 ms', r.rader.bazett.not.textContent, 'förlängd hos män');
+    pastå('talet är oförändrat', r.rader.bazett.varde.textContent, bazettVarde);
+    valjKon('kvinna');
+    pastå('under kvinnans gräns 460 ms', r.rader.bazett.not.hidden, true);
+    pastå('talet är fortfarande oförändrat', r.rader.bazett.varde.textContent, bazettVarde);
+
+    rubrik('  500 ms är samma gräns för båda könen');
+    skrivIn(r.falt, 'qt', 460);
+    skrivIn(r.falt, 'puls', 100);
+    valjKon('kvinna');
+    paståMed('kraftigt förlängd', r.rader.bazett.not.textContent, 'kraftigt förlängd');
+    pastå('nivån markeras', r.rader.bazett.not.className, 'vt-krit');
+    valjKon('man');
+    paståMed('samma text för män', r.rader.bazett.not.textContent, 'kraftigt förlängd');
+
+    rubrik('  Könet räknas aldrig som ett ofyllt fält');
+    r.nollknapp.fire('click');
+    pastå('talfälten töms', r.falt.qt.input.value, '');
+    pastå('könet går till första valet', konvaljare.value, 'man');
+    pastå('uppmaningen gäller bara talen', r.rader.bazett.varde.textContent,
+          'Fyll i 2 värden till.');
+    skrivIn(r.falt, 'qt', 400);
+    pastå('ett tal kvar', r.rader.bazett.varde.textContent, 'Fyll i hjärtfrekvens också.');
   }
 
   /* =========================================================

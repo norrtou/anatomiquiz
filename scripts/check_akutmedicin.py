@@ -76,25 +76,42 @@ SPEGLAD_AV = {
     "wells_dvt": "blodproppar.html",
     "perc": "blodproppar.html",
     "spesi": "blodproppar.html",
+    "qtc": "hjartat.html",
+    "chadsva": "hjartat.html",
+    "has_bled": "hjartat.html",
+    "ehra": "hjartat.html",
 }
 
 # Kryssruteskalorna speglas cell för cell, som NEWS2 – de HAR en riktig
 # uppslagstabell (kriterium → vikt), till skillnad från formlerna på
-# syra-bas.html. Ordningen är tabellens ordning på sidan.
+# syra-bas.html. Värdet är (sidfil, tabellens <caption>); tabellen slås upp
+# på sin caption och aldrig på ordningen i filen, så att en ny tabell mellan
+# två gamla inte tyst förskjuter varje jämförelse.
 KRYSSTABELLER = {
-    "wells_dvt": "Wells score – kriterier och poäng",
-    "perc": "PERC – de åtta kriterierna",
-    "spesi": "sPESI – de sex kriterierna",
+    "wells_dvt": ("blodproppar.html", "Wells score – kriterier och poäng"),
+    "perc": ("blodproppar.html", "PERC – de åtta kriterierna"),
+    "spesi": ("blodproppar.html", "sPESI – de sex kriterierna"),
+    "chadsva": ("hjartat.html", "CHA₂DS₂-VA – kriterier och poäng"),
+    "has_bled": ("hjartat.html", "HAS-BLED – kriterier och poäng"),
+}
+
+# Beslutsgången har inga vikter att spegla, bara utfall. Varje utfalls rubrik
+# ska stå på sidan – det är dem läsaren känner igen sin patient i.
+GANGSKALOR = {
+    "ehra": "hjartat.html",
+}
+
+# Formelräknarnas tal lever i js/akutmedicin.js (FORMLER) och i facits band.
+# De kontrolleras som på syra-bas.html: varje tal ska NÄMNAS på sidan.
+FORMELTAL = {
+    "qtc": ("hjartat.html", ["450", "460", "500", "60"]),
 }
 
 # Skalor som ligger i facit men ännu inte har någon sida. Motorn och testskalet
 # täcker dem (scripts/test_verktyg_akutmedicin.js), men ingen statisk tabell
 # finns att spegla mot förrän sidan skrivs. Posten ska bort härifrån samma pass
 # som sidan byggs — därför står släppet i värdet.
-UTAN_SIDA = {
-    "chadsva": "släpp 4, hjartat.html",
-    "ehra": "släpp 4, hjartat.html",
-}
+UTAN_SIDA = {}
 
 # Formelkoefficienter som bara lever i JS — se modulens docstring.
 KOEFFICIENTER = {
@@ -304,15 +321,40 @@ def vikt(n: int) -> str:
     return ("−" if n < 0 else "+") + str(abs(n))
 
 
-def kontrollera_krysstabell(namn: str, skala: dict, tabeller: dict,
-                            fel: list, visa: bool):
+def sidtext_for(sidfil: str) -> str:
+    """Sidans rena text, blankstegsnormaliserad.
+
+    Blanktecknen MÅSTE normaliseras. wire_terms.py lägger tooltips mitt i en
+    rubrik ("<a …>DVT</a> osannolik"), och tagg-strippningen byter varje tagg
+    mot ett mellanslag – utan kollapsen letar kontrollen efter "DVT osannolik"
+    i en text som lyder "DVT  osannolik" och larmar om en drift som inte finns.
+    Felet fanns i första versionen av den här kontrollen (0.9.416).
+    """
+    p = ROT / "verktyg" / "akutmedicin" / sidfil
+    return blanksteg(normaliserad(htmllib.unescape(
+        re.sub(r"<[^>]+>", " ", p.read_text(encoding="utf-8")))))
+
+
+def tabeller_pa(sidfil: str) -> dict:
+    """Sidans kb-mtable-tabeller, uppslagna på sin <caption>."""
+    html = (ROT / "verktyg" / "akutmedicin" / sidfil).read_text(encoding="utf-8")
+    ut = {}
+    for t in TABELL.findall(html):
+        m = re.search(r"<caption>(.*?)</caption>", t, re.S)
+        if m:
+            ut[text(m.group(1))] = t
+    return ut
+
+
+def kontrollera_krysstabell(namn: str, skala: dict, fel: list, visa: bool):
     """Varje kriterium i facit ska stå i sidans tabell med rätt vikt, och varje
     rad i tabellen ska ha ett kriterium i facit. Båda riktningarna, så att
     varken en tillagd eller en bortglömd rad kan passera (§0.1)."""
-    rubrik = KRYSSTABELLER[namn]
+    sidfil, rubrik = KRYSSTABELLER[namn]
+    tabeller = tabeller_pa(sidfil)
     if rubrik not in tabeller:
         fel.append(f"{namn}: tabellen {rubrik!r} finns inte på "
-                   f"{SIDA_BLODPROPPAR.name}. Utan den har läsaren utan "
+                   f"{sidfil}. Utan den har läsaren utan "
                    "JavaScript ingen upplaga av facit.")
         return
 
@@ -337,21 +379,45 @@ def kontrollera_krysstabell(namn: str, skala: dict, tabeller: dict,
 
     # Bandens rubriker ska också stå på sidan – det är dem läsaren tolkar
     # summan med, och de glider isär lika lätt som vikterna.
-    #
-    # Blanktecknen måste normaliseras. wire_terms.py lägger tooltips MITT I en
-    # rubrik ("<a …>DVT</a> osannolik"), och tagg-strippningen nedan byter
-    # varje tagg mot ett mellanslag – utan kollapsen letar kontrollen efter
-    # "DVT osannolik" i en text som lyder "DVT  osannolik" och larmar om en
-    # drift som inte finns. Felet fanns i första versionen av just den här
-    # funktionen och hittades genom att läsa ut strängarna, inte antalet.
-    sidtext = blanksteg(normaliserad(htmllib.unescape(
-        re.sub(r"<[^>]+>", " ", SIDA_BLODPROPPAR.read_text(encoding="utf-8")))))
+    sidtext = sidtext_for(sidfil)
     for b in skala["band"]:
         if blanksteg(normaliserad(b["rubrik"])) not in sidtext:
             fel.append(f"{namn}: bandet {b['rubrik']!r} ur facit nämns inte på "
-                       f"{SIDA_BLODPROPPAR.name}.")
+                       f"{sidfil}.")
         elif visa:
             print(f"  {namn}: band {b['rubrik']!r}")
+
+
+def kontrollera_gang(namn: str, skala: dict, fel: list, visa: bool):
+    """Beslutsgången har inga vikter, bara utfall. Varje utfalls rubrik ska stå
+    på sidan, och varje steg-alternativ ska peka på ett utfall som finns."""
+    sidfil = GANGSKALOR[namn]
+    sidtext = sidtext_for(sidfil)
+    for nyckel, u in skala["utfall"].items():
+        if blanksteg(normaliserad(u["rubrik"])) not in sidtext:
+            fel.append(f"{namn}: utfallet {u['rubrik']!r} ur facit nämns inte "
+                       f"på {sidfil}.")
+        elif visa:
+            print(f"  {namn}: utfall {u['rubrik']!r}")
+    for steg in skala["steg"]:
+        for alt in steg["val"]:
+            if alt.get("utfall") and alt["utfall"] not in skala["utfall"]:
+                fel.append(f"{namn}: steget {steg['namn']!r} pekar på utfallet "
+                           f"{alt['utfall']!r} som inte finns i facit. "
+                           f"Utfall som finns: {', '.join(skala['utfall'])}.")
+
+
+def kontrollera_formeltal(namn: str, fel: list, visa: bool):
+    """Formelräknarens gränsvärden lever i facit och i JS. Samma metod som för
+    syra-bas.html: varje tal ska nämnas på sidan, annars har läsaren utan
+    JavaScript ingen upplaga av det räknaren gör."""
+    sidfil, tal = FORMELTAL[namn]
+    sidtext = sidtext_for(sidfil)
+    for t in tal:
+        if t not in sidtext:
+            fel.append(f"{namn}: talet {t!r} ur facit nämns inte på {sidfil}.")
+        elif visa:
+            print(f"  {namn}: talet {t}")
 
 
 def kontrollera_tackning(facit: dict) -> int:
@@ -455,26 +521,27 @@ def main(argv) -> int:
     print("OK: syra-bas.html nämner alla referensvärden, bandgränser och "
           f"koefficienter ur facit – 0 avvikelser.")
 
-    if not SIDA_BLODPROPPAR.exists():
-        print(f"STOPP: {SIDA_BLODPROPPAR.relative_to(ROT)} saknas trots att "
-              "facit har poster för wells_dvt, perc och spesi.", file=sys.stderr)
-        return 1
-    html_bp = SIDA_BLODPROPPAR.read_text(encoding="utf-8")
-    # Tabellerna slås upp på sin <caption>, inte på ordningen i filen: en ny
-    # tabell mellan två gamla hade annars tyst förskjutit varje jämförelse.
-    tabeller = {}
-    for t in TABELL.findall(html_bp):
-        m = re.search(r"<caption>(.*?)</caption>", t, re.S)
-        if m:
-            tabeller[text(m.group(1))] = t
+    # Varje sida som något uppslag pekar på måste finnas – annars är facit
+    # och leveransen ur synk åt andra hållet (§0.4).
+    sidor = ({s for s, _ in KRYSSTABELLER.values()} | set(GANGSKALOR.values())
+             | {s for s, _ in FORMELTAL.values()})
+    for s in sorted(sidor):
+        if not (ROT / "verktyg" / "akutmedicin" / s).exists():
+            print(f"STOPP: verktyg/akutmedicin/{s} saknas trots att facit har "
+                  "poster som ska speglas där.", file=sys.stderr)
+            return 1
 
     fel3: list[str] = []
     for namn in KRYSSTABELLER:
-        kontrollera_krysstabell(namn, facit[namn], tabeller, fel3, visa)
+        kontrollera_krysstabell(namn, facit[namn], fel3, visa)
+    for namn in GANGSKALOR:
+        kontrollera_gang(namn, facit[namn], fel3, visa)
+    for namn in FORMELTAL:
+        kontrollera_formeltal(namn, fel3, visa)
 
     if fel3:
         print(f"AVVIKELSE: {len(fel3)} skillnader mellan data/akutmedicin.json "
-              f"och {SIDA_BLODPROPPAR.relative_to(ROT)}:", file=sys.stderr)
+              f"och verktygssidorna:", file=sys.stderr)
         for f in fel3:
             print("  - " + f, file=sys.stderr)
         print("\nFacit är räknarens sanning och sidan är läsarens. Rätta den "
@@ -482,8 +549,10 @@ def main(argv) -> int:
         return 1
 
     antal_krit = sum(len(facit[n]["kriterier"]) for n in KRYSSTABELLER)
-    print(f"OK: blodproppar.html speglar facit – {antal_krit} kriterier och "
-          f"{sum(len(facit[n]['band']) for n in KRYSSTABELLER)} band identiska, "
+    antal_band = sum(len(facit[n]["band"]) for n in KRYSSTABELLER)
+    antal_utfall = sum(len(facit[n]["utfall"]) for n in GANGSKALOR)
+    print(f"OK: {', '.join(sorted(sidor))} speglar facit – {antal_krit} "
+          f"kriterier, {antal_band} band och {antal_utfall} utfall identiska, "
           "0 avvikelser.")
     return 0
 

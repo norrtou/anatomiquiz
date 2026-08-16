@@ -472,6 +472,129 @@
     ]
   },
 
+  "qtc": {
+    "namn": "QTc",
+    "monster": "formel",
+    "rubrik": "QTc – frekvenskorrigerad QT-tid",
+    "intro": "QT-tiden på EKG:t blir kortare ju fortare hjärtat slår, så en uppmätt QT-tid går inte att bedöma utan att först räknas om till den tid den skulle ha haft vid 60 slag per minut. Räknaren visar två korrigeringar: Bazett (1920), som är den vanligaste, och Fridericia (1920), som håller sig bättre vid höga och låga pulser.",
+    "kalla": "Bazett (1920); Fridericia (1920)",
+
+    "falt": [
+      {
+        "namn": "qt",
+        "etikett": "Uppmätt QT-tid",
+        "kort": "QT-tid",
+        "enhet": "ms",
+        "typ": "tal",
+        "plats": "t.ex. 400",
+        "rimlig": { "min": 200, "max": 700 },
+        "hjalp": "QT-tiden mäts från början av Q-vågen till slutet av T-vågen, i den avledning där intervallet är längst. Är T-vågen svår att avgränsa används tangentmetoden: en linje längs T-vågens brantaste nedförsbacke, och tiden läses där linjen möter baslinjen."
+      },
+      {
+        "namn": "puls",
+        "etikett": "Hjärtfrekvens",
+        "kort": "Hjärtfrekvens",
+        "enhet": "slag/min",
+        "typ": "tal",
+        "plats": "t.ex. 72",
+        "rimlig": { "min": 20, "max": 250 },
+        "hjalp": "Formlerna utgår från RR-intervallet i sekunder, som räknaren tar fram som 60 delat med hjärtfrekvensen. Vid oregelbunden rytm, till exempel förmaksflimmer, blir varje enskild korrigering osäker eftersom RR-intervallet varierar från slag till slag."
+      },
+      {
+        "namn": "kon",
+        "etikett": "Kön",
+        "kort": "Kön",
+        "typ": "val",
+        "hjalp": "Könet ändrar inte uträkningen utan bara gränsen som resultatet läses mot: 450 ms respektive 460 ms. Skillnaden finns därför att QT-tiden i genomsnitt är något längre hos kvinnor efter puberteten.",
+        "val": [
+          { "varde": "man", "text": "Man (gräns 450 ms)" },
+          { "varde": "kvinna", "text": "Kvinna (gräns 460 ms)" }
+        ]
+      }
+    ],
+
+    "utdata": [
+      {
+        "namn": "bazett",
+        "etikett": "QTc enligt Bazett",
+        "enhet": "ms",
+        "berakning": "qtc_bazett",
+        "bandvaljare": "kon",
+        "band": {
+          "man": [
+            { "max": 450, "niva": "normal", "text": null },
+            { "max": 499, "niva": "medel", "text": "Över 450 ms räknas QT-tiden som förlängd hos män." },
+            { "niva": "hog", "text": "500 ms eller mer räknas som kraftigt förlängd, oavsett kön, och är den nivå där risken för ventrikulär arytmi av typen torsades de pointes brukar anges som påtagligt ökad." }
+          ],
+          "kvinna": [
+            { "max": 460, "niva": "normal", "text": null },
+            { "max": 499, "niva": "medel", "text": "Över 460 ms räknas QT-tiden som förlängd hos kvinnor." },
+            { "niva": "hog", "text": "500 ms eller mer räknas som kraftigt förlängd, oavsett kön, och är den nivå där risken för ventrikulär arytmi av typen torsades de pointes brukar anges som påtagligt ökad." }
+          ]
+        }
+      },
+      {
+        "namn": "fridericia",
+        "etikett": "QTc enligt Fridericia",
+        "enhet": "ms",
+        "berakning": "qtc_fridericia",
+        "bandvaljare": "kon",
+        "band": {
+          "man": [
+            { "max": 450, "niva": "normal", "text": null },
+            { "max": 499, "niva": "medel", "text": "Över 450 ms räknas QT-tiden som förlängd hos män." },
+            { "niva": "hog", "text": "500 ms eller mer räknas som kraftigt förlängd, oavsett kön, och är den nivå där risken för ventrikulär arytmi av typen torsades de pointes brukar anges som påtagligt ökad." }
+          ],
+          "kvinna": [
+            { "max": 460, "niva": "normal", "text": null },
+            { "max": 499, "niva": "medel", "text": "Över 460 ms räknas QT-tiden som förlängd hos kvinnor." },
+            { "niva": "hog", "text": "500 ms eller mer räknas som kraftigt förlängd, oavsett kön, och är den nivå där risken för ventrikulär arytmi av typen torsades de pointes brukar anges som påtagligt ökad." }
+          ]
+        }
+      }
+    ]
+  },
+
+  "has_bled": {
+    "namn": "HAS-BLED",
+    "monster": "kryss",
+    "rubrik": "HAS-BLED – blödningsrisk vid antikoagulantiabehandling",
+    "intro": "Nio kryssrutor fördelade på sju bokstäver — A och D står vardera för två skilda saker och kan därför ge två poäng var. Skalan skattar risken för allvarlig blödning under behandling med blodförtunnande läkemedel, och är avsedd att peka ut vad som går att åtgärda, inte att avgöra om behandlingen ska ges.",
+    "summaetikett": "HAS-BLED",
+    "enhetssuffix": "poäng",
+    "kalla": "Pisters et al. (2010)",
+
+    "kriterier": [
+      { "namn": "hypertoni", "kort": "Hypertoni", "poang": 1,
+        "etikett": "H – okontrollerad hypertoni, systoliskt blodtryck över 160 mmHg" },
+      { "namn": "njure", "kort": "Nedsatt njurfunktion", "poang": 1,
+        "etikett": "A – nedsatt njurfunktion: dialys, njurtransplantation eller kreatinin över 200 mikromol per liter" },
+      { "namn": "lever", "kort": "Nedsatt leverfunktion", "poang": 1,
+        "etikett": "A – nedsatt leverfunktion: kronisk leversjukdom eller påtagligt avvikande leverprover",
+        "hjalp": "Bokstaven A står för två skilda organ och kan ge två poäng. Samma sak gäller D längst ner, som täcker både läkemedel och alkohol. Det är därför nio rutor fördelade på sju bokstäver." },
+      { "namn": "stroke", "kort": "Tidigare stroke", "poang": 1,
+        "etikett": "S – tidigare stroke" },
+      { "namn": "blodning", "kort": "Tidigare blödning", "poang": 1,
+        "etikett": "B – tidigare allvarlig blödning eller känd blödningsbenägenhet" },
+      { "namn": "labilt_inr", "kort": "Labilt INR", "poang": 1,
+        "etikett": "L – labilt INR med låg andel tid inom terapeutiskt intervall",
+        "hjalp": "Kriteriet förutsätter behandling med warfarin, eftersom INR inte mäts vid de direktverkande antikoagulantia som i dag är vanligast. För en patient som inte står på warfarin är rutan inte tillämplig." },
+      { "namn": "alder", "kort": "Ålder över 65 år", "poang": 1,
+        "etikett": "E – ålder över 65 år" },
+      { "namn": "lakemedel", "kort": "Blödningsbenägna läkemedel", "poang": 1,
+        "etikett": "D – samtidig behandling med läkemedel som ökar blödningsrisken, till exempel trombocythämmare eller antiinflammatoriska medel" },
+      { "namn": "alkohol", "kort": "Hög alkoholkonsumtion", "poang": 1,
+        "etikett": "D – hög alkoholkonsumtion" }
+    ],
+
+    "band": [
+      { "max": 2, "niva": "lag", "rubrik": "0–2 poäng – låg blödningsrisk",
+        "text": "Risken för allvarlig blödning under behandling bedöms som låg. Poängen säger ingenting om nyttan av behandlingen, som skattas separat med CHA₂DS₂-VA." },
+      { "niva": "medel", "rubrik": "3 poäng eller mer – hög blödningsrisk",
+        "text": "Från tre poäng räknas blödningsrisken som hög. Skalan är uttryckligen inte avsedd att användas för att avstå från antikoagulantia — den pekar ut vad som går att åtgärda, som blodtryck, läkemedelskombinationer och alkohol, och vilka patienter som behöver tätare uppföljning." }
+    ]
+  },
+
   "ehra": {
     "namn": "Modifierad EHRA",
     "monster": "gang",

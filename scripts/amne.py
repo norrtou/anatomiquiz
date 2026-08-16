@@ -221,6 +221,20 @@ _s("verktyg/akutmedicin/blodproppar.html",
    ["wells score", "perc", "spesi", "djup ventrombos", "lungemboli",
     "d-dimer"])
 
+_s("verktyg/akutmedicin/hjartat.html",
+   [("Thing", "QT-tid"), ("Thing", "Förmaksflimmer"),
+    ("Thing", "Strokerisk"), ("Thing", "Blödningsrisk")],
+   ["Varför QT-tiden måste korrigeras för hjärtfrekvensen innan den kan "
+    "bedömas.",
+    "Hur Bazett och Fridericia skiljer sig åt och varför Bazett "
+    "överkorrigerar vid hög puls.",
+    "Vilka riskfaktorer som ingår i CHA₂DS₂-VA och varför två av dem väger "
+    "dubbelt.",
+    "Varför HAS-BLED inte är avsedd att användas för att avstå från "
+    "antikoagulantia.",
+    "Vad som skiljer EHRA-klass 2a från 2b och varför modifieringen gjordes."],
+   ["qtc", "qt-tid", "cha₂ds₂-va", "has-bled", "förmaksflimmer", "ehra"])
+
 # --- Ordlistan --------------------------------------------------------------
 _s("medicinskordlista.html",
    [("Thing", "Medicinsk terminologi"), ("Thing", "Medicinsk ordlista"),
