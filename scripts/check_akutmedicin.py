@@ -80,6 +80,9 @@ SPEGLAD_AV = {
     "chadsva": "hjartat.html",
     "has_bled": "hjartat.html",
     "ehra": "hjartat.html",
+    "qsofa": "infektion.html",
+    "sofa": "infektion.html",
+    "dscrb65": "infektion.html",
 }
 
 # Kryssruteskalorna speglas cell för cell, som NEWS2 – de HAR en riktig
@@ -93,12 +96,23 @@ KRYSSTABELLER = {
     "spesi": ("blodproppar.html", "sPESI – de sex kriterierna"),
     "chadsva": ("hjartat.html", "CHA₂DS₂-VA – kriterier och poäng"),
     "has_bled": ("hjartat.html", "HAS-BLED – kriterier och poäng"),
+    "dscrb65": ("infektion.html", "DS-CRB-65 – de sex kriterierna"),
 }
 
 # Beslutsgången har inga vikter att spegla, bara utfall. Varje utfalls rubrik
 # ska stå på sidan – det är dem läsaren känner igen sin patient i.
 GANGSKALOR = {
     "ehra": "hjartat.html",
+}
+
+# Värdeskalor utanför NEWS2. NEWS2 speglas cell för cell via RADER nedan, vilket
+# kräver en handskriven radmappning eftersom dess tabell slår ihop band som facit
+# håller isär. De här skalorna har en rakare tabell, och kontrolleras därför
+# generiskt: varje intervalltext ur facit ska stå på sidan, i den form facit
+# skriver den ("≤21", "<300", "20–32", eller ett valalternativs egen text).
+VARDESKALOR = {
+    "qsofa": "infektion.html",
+    "sofa": "infektion.html",
 }
 
 # Formelräknarnas tal lever i js/akutmedicin.js (FORMLER) och i facits band.
@@ -321,18 +335,34 @@ def vikt(n: int) -> str:
     return ("−" if n < 0 else "+") + str(abs(n))
 
 
-def sidtext_for(sidfil: str) -> str:
-    """Sidans rena text, blankstegsnormaliserad.
+# Taggar som sitter INUTI en mening och inte avgränsar något. De tas bort utan
+# att lämna mellanslag efter sig; blocktaggar byts mot ett mellanslag, så att
+# två celler aldrig kan smälta ihop till ett ord och ge en falsk träff.
+INLINE_TAGG = re.compile(r"</?(?:a|em|strong|span|sup|sub|abbr|b|i|code)\b[^>]*>",
+                         re.I)
+OVRIG_TAGG = re.compile(r"<[^>]+>")
 
-    Blanktecknen MÅSTE normaliseras. wire_terms.py lägger tooltips mitt i en
-    rubrik ("<a …>DVT</a> osannolik"), och tagg-strippningen byter varje tagg
-    mot ett mellanslag – utan kollapsen letar kontrollen efter "DVT osannolik"
-    i en text som lyder "DVT  osannolik" och larmar om en drift som inte finns.
-    Felet fanns i första versionen av den här kontrollen (0.9.416).
+
+def sidtext_for(sidfil: str) -> str:
+    """Sidans rena text, normaliserad för jämförelse mot facit.
+
+    Två fällor, båda upptäckta som falska larm från den här kontrollen:
+
+    1. `wire_terms.py` lägger tooltips MITT I en mening ("<a …>DVT</a>
+       osannolik"). Byts varje tagg mot ett mellanslag blir det "DVT
+       osannolik" med dubbelt mellanslag — därav `blanksteg()`.
+    2. Värre: två intilliggande länkar ("adrenalin</a>/<a …>noradrenalin")
+       får då ett mellanslag INSKJUTET där facit inte har något, och
+       "adrenalin/noradrenalin" hittas aldrig. Kollapsen räddar inte det,
+       eftersom mellanslagen är nya och inte dubblerade.
+
+    Därför tas inline-taggar bort helt medan blocktaggar blir mellanslag.
     """
     p = ROT / "verktyg" / "akutmedicin" / sidfil
+    rå = p.read_text(encoding="utf-8")
+    utan_inline = INLINE_TAGG.sub("", rå)
     return blanksteg(normaliserad(htmllib.unescape(
-        re.sub(r"<[^>]+>", " ", p.read_text(encoding="utf-8")))))
+        OVRIG_TAGG.sub(" ", utan_inline))))
 
 
 def tabeller_pa(sidfil: str) -> dict:
@@ -405,6 +435,44 @@ def kontrollera_gang(namn: str, skala: dict, fel: list, visa: bool):
                 fel.append(f"{namn}: steget {steg['namn']!r} pekar på utfallet "
                            f"{alt['utfall']!r} som inte finns i facit. "
                            f"Utfall som finns: {', '.join(skala['utfall'])}.")
+
+
+def kontrollera_vardeskala(namn: str, skala: dict, fel: list, visa: bool):
+    """Varje intervall och varje bandrubrik ur facit ska stå på sidan.
+
+    Ett valfälts "intervall" ÄR alternativets egen text (så skriver
+    poangForVal i js/akutmedicin.js), så den jämförs som den är.
+    Parametrar med roll `instalning` ger ingen poäng och har inga
+    intervall att spegla.
+    """
+    sidfil = VARDESKALOR[namn]
+    sidtext = sidtext_for(sidfil)
+
+    def finns(s):
+        return blanksteg(normaliserad(s)) in sidtext
+
+    for p in skala["parametrar"]:
+        if p.get("roll") == "instalning":
+            continue
+        if p["typ"] == "val":
+            texter = [v["text"] for v in p["val"]]
+        else:
+            band = p["band"]
+            grupper = band.values() if isinstance(band, dict) else [band]
+            texter = [b["intervall"] for g in grupper for b in g]
+        for s in texter:
+            if not finns(s):
+                fel.append(f"{namn}: intervallet {s!r} för {p['kort']!r} ur facit "
+                           f"står inte på {sidfil}.")
+            elif visa:
+                print(f"  {namn}: {p['kort']} {s!r}")
+
+    for b in skala["band"]:
+        if not finns(b["rubrik"]):
+            fel.append(f"{namn}: bandet {b['rubrik']!r} ur facit nämns inte på "
+                       f"{sidfil}.")
+        elif visa:
+            print(f"  {namn}: band {b['rubrik']!r}")
 
 
 def kontrollera_formeltal(namn: str, fel: list, visa: bool):
@@ -524,7 +592,7 @@ def main(argv) -> int:
     # Varje sida som något uppslag pekar på måste finnas – annars är facit
     # och leveransen ur synk åt andra hållet (§0.4).
     sidor = ({s for s, _ in KRYSSTABELLER.values()} | set(GANGSKALOR.values())
-             | {s for s, _ in FORMELTAL.values()})
+             | set(VARDESKALOR.values()) | {s for s, _ in FORMELTAL.values()})
     for s in sorted(sidor):
         if not (ROT / "verktyg" / "akutmedicin" / s).exists():
             print(f"STOPP: verktyg/akutmedicin/{s} saknas trots att facit har "
@@ -536,6 +604,8 @@ def main(argv) -> int:
         kontrollera_krysstabell(namn, facit[namn], fel3, visa)
     for namn in GANGSKALOR:
         kontrollera_gang(namn, facit[namn], fel3, visa)
+    for namn in VARDESKALOR:
+        kontrollera_vardeskala(namn, facit[namn], fel3, visa)
     for namn in FORMELTAL:
         kontrollera_formeltal(namn, fel3, visa)
 

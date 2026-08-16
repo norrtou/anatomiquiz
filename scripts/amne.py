@@ -235,6 +235,20 @@ _s("verktyg/akutmedicin/hjartat.html",
     "Vad som skiljer EHRA-klass 2a från 2b och varför modifieringen gjordes."],
    ["qtc", "qt-tid", "cha₂ds₂-va", "has-bled", "förmaksflimmer", "ehra"])
 
+_s("verktyg/akutmedicin/infektion.html",
+   [("Thing", "Sepsis"), ("Thing", "Organsvikt"),
+    ("Thing", "Pneumoni"), ("Thing", "Andningsfrekvens")],
+   ["Vilka tre uppgifter qSOFA bygger på och varför de går att få fram utan "
+    "prover.",
+    "Hur SOFA poängsätter organsvikt i sex system på en gemensam skala 0–4.",
+    "Vad Sepsis-3 menar med att sepsis är en akut ökning med minst två "
+    "SOFA-poäng.",
+    "Vilka sex kriterier som ingår i DS-CRB-65 och vad D och S lägger till "
+    "mot CRB-65.",
+    "Varför en snabb screening och en fullständig kartläggning inte kan "
+    "ersätta varandra."],
+   ["qsofa", "sofa", "ds-crb-65", "sepsis", "organsvikt", "pneumoni"])
+
 # --- Ordlistan --------------------------------------------------------------
 _s("medicinskordlista.html",
    [("Thing", "Medicinsk terminologi"), ("Thing", "Medicinsk ordlista"),

@@ -106,7 +106,7 @@ class SelectEl extends El {
    Flera skalor monteras samtidigt, precis som på syra-bas.html. */
 const SKALNAMN = ['news2', 'natrium_korrigerat', 'osmolalitet', 'blodgas',
                   'wells_dvt', 'perc', 'spesi', 'chadsva', 'has_bled',
-                  'qtc', 'ehra'];
+                  'qtc', 'ehra', 'qsofa', 'sofa', 'dscrb65'];
 const platser = {};
 SKALNAMN.forEach((namn) => {
   const p = new El('div');
@@ -1017,6 +1017,184 @@ async function kör() {
     nollknapp.fire('click');
     pastå('valet återställs', valjare.value, '1');
     pastå('utfallet följer med', titel(), 'EHRA 1 – inga symtom');
+  }
+
+  /* =========================================================
+     Infektionssidans instrument: qSOFA, SOFA och DS-CRB-65
+     =========================================================
+     Gränserna är avlästa ur Sepsis-3:s tabell (Singer et al., 2016)
+     respektive det svenska pneumonivårdprogrammet, och prövas åt
+     BÅDA håll — sista värdet i ett band och första i nästa. */
+
+  function plockaVarde(namn) {
+    const kort = platser[namn].children[0];
+    const falt = {};
+    kort.findAll((e) => e._class.has('vt-field')).forEach((f) => {
+      falt[f.dataset.falt] = {
+        input: f.find((e) => e.tagName === 'INPUT'),
+        valjare: f.find((e) => e.tagName === 'SELECT'),
+        poang: f.find((e) => e._class.has('vt-poang'))
+      };
+    });
+    const ut = kort.find((e) => e._class.has('vt-out'));
+    return {
+      kort, falt, ut,
+      varde: ut.children.find((c) => c._class.has('vt-out-value')),
+      band: kort.find((e) => e._class.has('vt-band')),
+      nollknapp: kort.find((e) => e._class.has('vt-nollstall')).children[0]
+    };
+  }
+
+  const skrivV = (r, n, v) => { r.falt[n].input.value = String(v); r.falt[n].input.fire('input'); };
+  const valjV = (r, n, v) => { r.falt[n].valjare.value = v; r.falt[n].valjare.fire('change'); };
+  const chipP = (r, n) => {
+    const m = /^(\d+) p/.exec(r.falt[n].poang.textContent);
+    return m ? Number(m[1]) : r.falt[n].poang.textContent;
+  };
+  const bandT = (r) =>
+    r.band.children.find((c) => c._class.has('vt-band-titel')).textContent;
+
+  /* ---- qSOFA ---- */
+  rubrik('qSOFA — tre kriterier vid sängkanten (Singer et al. 2016)');
+  {
+    const r = plockaVarde('qsofa');
+    const normal = () => { skrivV(r, 'af', 18); skrivV(r, 'sbt', 125);
+                           valjV(r, 'medvetande', 'opaverkad'); };
+
+    rubrik('  Andningsfrekvensens gräns åt båda håll');
+    normal(); skrivV(r, 'af', 21);
+    pastå('21 ger 0', chipP(r, 'af'), 0);
+    skrivV(r, 'af', 22);
+    pastå('22 ger 1', chipP(r, 'af'), 1);
+
+    rubrik('  Blodtrycksgränsen åt båda håll');
+    normal(); skrivV(r, 'sbt', 101);
+    pastå('101 ger 0', chipP(r, 'sbt'), 0);
+    skrivV(r, 'sbt', 100);
+    pastå('100 ger 1', chipP(r, 'sbt'), 1);
+
+    rubrik('  Medvetandegraden');
+    normal();
+    pastå('vaken ger 0', chipP(r, 'medvetande'), 0);
+    valjV(r, 'medvetande', 'paverkad');
+    pastå('påverkad ger 1', chipP(r, 'medvetande'), 1);
+
+    rubrik('  Bandgränsen vid 2 poäng');
+    normal();
+    pastå('0 poäng', r.varde.textContent, '0 poäng');
+    pastå('lågt band', bandT(r), '0–1 poäng');
+    skrivV(r, 'af', 24);
+    pastå('1 poäng', r.varde.textContent, '1 poäng');
+    pastå('fortfarande lågt band', bandT(r), '0–1 poäng');
+    skrivV(r, 'sbt', 95);
+    pastå('2 poäng', r.varde.textContent, '2 poäng');
+    pastå('högt band', bandT(r), '2 poäng eller mer');
+    pastå('nivån', r.band.className, 'vt-band is-hog');
+    paståMed('trubbigheten står i det låga bandet', r.band.textContent.length > 0, true);
+
+    rubrik('  Maxsumman är tre');
+    valjV(r, 'medvetande', 'paverkad');
+    pastå('3 poäng', r.varde.textContent, '3 poäng');
+  }
+
+  /* ---- SOFA ---- */
+  rubrik('SOFA — sex organsystem à 0–4 poäng (Singer et al. 2016)');
+  {
+    const r = plockaVarde('sofa');
+    const friskt = () => {
+      valjV(r, 'andningsstod', 'nej');
+      skrivV(r, 'pafi', 450); skrivV(r, 'trombocyter', 250);
+      skrivV(r, 'bilirubin', 12); valjV(r, 'cirkulation', 'map70');
+      skrivV(r, 'gcs', 15); skrivV(r, 'kreatinin', 80);
+    };
+
+    rubrik('  Friska värden ger noll');
+    friskt();
+    pastå('summan', r.varde.textContent, '0 poäng');
+    pastå('bandet', bandT(r), '0–1 poäng – ingen påvisad organsvikt');
+
+    rubrik('  Trombocyterna, varje gräns åt båda håll');
+    friskt();
+    [[150, 0], [149, 1], [100, 1], [99, 2], [50, 2], [49, 3], [20, 3], [19, 4]]
+      .forEach(([v, p]) => { skrivV(r, 'trombocyter', v);
+        pastå(`${v} ×10⁹/L ger ${p}`, chipP(r, 'trombocyter'), p); });
+
+    rubrik('  Bilirubinet, varje gräns åt båda håll');
+    friskt();
+    [[19, 0], [20, 1], [32, 1], [33, 2], [101, 2], [102, 3], [204, 3], [205, 4]]
+      .forEach(([v, p]) => { skrivV(r, 'bilirubin', v);
+        pastå(`${v} µmol/L ger ${p}`, chipP(r, 'bilirubin'), p); });
+
+    rubrik('  Kreatininet, varje gräns åt båda håll');
+    friskt();
+    [[109, 0], [110, 1], [170, 1], [171, 2], [299, 2], [300, 3], [440, 3], [441, 4]]
+      .forEach(([v, p]) => { skrivV(r, 'kreatinin', v);
+        pastå(`${v} µmol/L ger ${p}`, chipP(r, 'kreatinin'), p); });
+
+    rubrik('  Glasgow Coma Scale');
+    friskt();
+    [[15, 0], [14, 1], [13, 1], [12, 2], [10, 2], [9, 3], [6, 3], [5, 4]]
+      .forEach(([v, p]) => { skrivV(r, 'gcs', v);
+        pastå(`GCS ${v} ger ${p}`, chipP(r, 'gcs'), p); });
+
+    rubrik('  De två högsta respirationsstegen kräver andningsstöd');
+    friskt(); skrivV(r, 'pafi', 150);
+    pastå('utan andningsstöd stannar det på 2', chipP(r, 'pafi'), 2);
+    valjV(r, 'andningsstod', 'ja');
+    pastå('med andningsstöd ger samma värde 3', chipP(r, 'pafi'), 3);
+    skrivV(r, 'pafi', 80);
+    pastå('under 100 med andningsstöd ger 4', chipP(r, 'pafi'), 4);
+    valjV(r, 'andningsstod', 'nej');
+    pastå('utan stöd stannar även 80 på 2', chipP(r, 'pafi'), 2);
+    pastå('andningsstödet ger ingen egen poäng',
+          r.falt.andningsstod.poang.textContent, 'ger ingen poäng');
+
+    rubrik('  Cirkulationens fem steg');
+    friskt();
+    [['map70', 0], ['map_under70', 1], ['dopamin_lag', 2],
+     ['dopamin_medel', 3], ['dopamin_hog', 4]]
+      .forEach(([v, p]) => { valjV(r, 'cirkulation', v);
+        pastå(`${v} ger ${p}`, chipP(r, 'cirkulation'), p); });
+
+    rubrik('  Maxsumman är 24, sex system à fyra poäng');
+    valjV(r, 'andningsstod', 'ja');
+    skrivV(r, 'pafi', 50); skrivV(r, 'trombocyter', 10);
+    skrivV(r, 'bilirubin', 400); valjV(r, 'cirkulation', 'dopamin_hog');
+    skrivV(r, 'gcs', 3); skrivV(r, 'kreatinin', 600);
+    pastå('summan', r.varde.textContent, '24 poäng');
+    pastå('högsta bandet', bandT(r), '10 poäng eller mer – uttalad organsvikt');
+
+    rubrik('  Bandgränserna');
+    friskt(); skrivV(r, 'trombocyter', 140);
+    pastå('1 poäng', bandT(r), '0–1 poäng – ingen påvisad organsvikt');
+    skrivV(r, 'bilirubin', 25);
+    pastå('2 poäng', bandT(r), '2–9 poäng – organsvikt föreligger');
+    paståMed('Sepsis-3-kriteriet förklaras', r.band.textContent, 'minst två poäng');
+  }
+
+  /* ---- DS-CRB-65 ---- */
+  rubrik('DS-CRB-65 — sex kriterier (svenskt vårdprogram 2024)');
+  {
+    const r = plockaKryss('dscrb65');
+
+    ['sjukdom', 'saturation', 'konfusion', 'andningsfrekvens', 'blodtryck', 'alder']
+      .forEach((n) => pastå(n, viktFor(r, n), 1));
+
+    rubrik('  Bandgränsen prövad åt båda håll');
+    r.nollknapp.fire('click');
+    pastå('0 poäng', bandTitelAv(r), '0–1 poäng – lägre allvarlighetsgrad');
+    kryssa(r, 'alder');
+    pastå('1 poäng', bandTitelAv(r), '0–1 poäng – lägre allvarlighetsgrad');
+    pastå('nivån', r.band.className, 'vt-band is-lag');
+    kryssa(r, 'konfusion');
+    pastå('2 poäng', bandTitelAv(r), '2 poäng eller mer – högre allvarlighetsgrad');
+    pastå('nivån', r.band.className, 'vt-band is-hog');
+
+    rubrik('  Maxsumman är sex — det är D och S som skiljer från CRB-65');
+    r.nollknapp.fire('click');
+    ['sjukdom', 'saturation', 'konfusion', 'andningsfrekvens', 'blodtryck', 'alder']
+      .forEach((n) => kryssa(r, n));
+    pastå('sex poäng', r.varde.textContent, '6 poäng');
   }
 
   console.log('\n' + (fel === 0

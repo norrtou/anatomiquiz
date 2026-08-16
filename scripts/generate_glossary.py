@@ -1312,6 +1312,7 @@ def build_sitemap(group_files: list[str]) -> str:
     blocks.append(url_block(f"{SITE}/verktyg/akutmedicin/syra-bas.html", "monthly", "0.7"))
     blocks.append(url_block(f"{SITE}/verktyg/akutmedicin/blodproppar.html", "monthly", "0.7"))
     blocks.append(url_block(f"{SITE}/verktyg/akutmedicin/hjartat.html", "monthly", "0.7"))
+    blocks.append(url_block(f"{SITE}/verktyg/akutmedicin/infektion.html", "monthly", "0.7"))
     # Nervtabeller (under-pillar + nervsidor)
     blocks.append(url_block(f"{SITE}/kunskapsbank/nervtabeller.html", "weekly", "0.7"))
     blocks.append(url_block(f"{SITE}/kunskapsbank/kranialnerverna.html", "monthly", "0.7"))

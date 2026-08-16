@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSP mot XSS: skript/stilar/data endast från egen origin. GitHub Pages tillåter inga egna HTTP-headers, därav meta. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+
+  <!-- Primär SEO -->
+  <title>Infektion – qSOFA, SOFA och DS-CRB-65 | Anatomiquiz</title>
+  <meta name="description" content="Räknare för qSOFA, SOFA och DS-CRB-65 med varje variabel förklarad – hur organsvikt poängsätts och vad som skiljer en snabb bedömning från en fullständig.">
+  <meta name="author" content="Daniel Medin (Norrtou Creations)">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+  <link rel="canonical" href="https://anatomiquiz.se/verktyg/akutmedicin/infektion.html">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anatomiquiz.se/verktyg/akutmedicin/infektion.html">
+  <meta property="og:title" content="Infektion – qSOFA, SOFA och DS-CRB-65">
+  <meta property="og:description" content="Tre skalor vid infektion: en snabb bedömning vid sängkanten, en fullständig kartläggning av organsvikt i sex system, och en allvarlighetsbedömning vid lunginflammation.">
+  <meta property="og:image" content="https://anatomiquiz.se/img/og-image.png">
+  <meta property="og:image:width" content="1518">
+  <meta property="og:image:height" content="864">
+  <meta property="og:image:alt" content="Anatomiquiz — räknare för infektionsskalor">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="Anatomiquiz">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Infektion – qSOFA, SOFA och DS-CRB-65">
+  <meta name="twitter:description" content="Tre skalor vid infektion: en snabb bedömning vid sängkanten, en fullständig kartläggning av organsvikt i sex system, och en allvarlighetsbedömning vid lunginflammation.">
+  <meta name="twitter:image" content="https://anatomiquiz.se/img/og-image.png">
+  <meta name="twitter:image:alt" content="Anatomiquiz — räknare för infektionsskalor">
+
+  <meta name="theme-color" content="#10b981">
+  <meta name="color-scheme" content="light dark">
+  <!-- Tema (ljust/mörkt). Laddas SYNKRONT och före stilmallen: attributet
+       data-theme måste sitta på <html> innan första målningen, annars
+       blinkar sidan ljus. Inline gick inte – CSP:n tillåter bara egen origin. -->
+  <script src="/js/theme.js?v=0.9.260"></script>
+
+  <!-- Strukturerad data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "WebApplication",
+    "LearningResource"
+  ],
+  "name": "Infektion – qSOFA, SOFA och DS-CRB-65",
+  "description": "Räknare för qSOFA som snabb bedömning vid misstänkt infektion, SOFA för organsvikt i sex system och DS-CRB-65 för allvarlighetsbedömning vid samhällsförvärvad pneumoni, med varje variabel förklarad.",
+  "url": "https://anatomiquiz.se/verktyg/akutmedicin/infektion.html",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Alla webbläsare",
+  "inLanguage": "sv-SE",
+  "isAccessibleForFree": true,
+  "learningResourceType": "interactive tool",
+  "educationalUse": [
+    "self study",
+    "practice"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "SEK"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Anatomiquiz",
+    "url": "https://anatomiquiz.se/"
+  },
+  "datePublished": "2026-08-16",
+  "dateModified": "2026-08-17",
+  "author": {
+    "@type": "Person",
+    "@id": "https://anatomiquiz.se/#daniel-medin",
+    "name": "Daniel Medin",
+    "description": "Utbildad medicinsk sekreterare och studerande i arbetsterapi vid Lunds universitet, med särskilt intresse för anatomi.",
+    "url": "https://norrtou.se",
+    "sameAs": [
+      "https://norrtou.se",
+      "https://www.linkedin.com/in/danielmedin",
+      "https://github.com/norrtou"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://anatomiquiz.se/#norrtou-creations",
+    "name": "Norrtou Creations",
+    "url": "https://norrtou.se",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://anatomiquiz.se/img/icon-512.png"
+    },
+    "sameAs": [
+      "https://github.com/norrtou"
+    ]
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Sepsis"
+    },
+    {
+      "@type": "Thing",
+      "name": "Organsvikt"
+    },
+    {
+      "@type": "Thing",
+      "name": "Pneumoni"
+    },
+    {
+      "@type": "Thing",
+      "name": "Andningsfrekvens"
+    }
+  ],
+  "teaches": [
+    "Vilka tre uppgifter qSOFA bygger på och varför de går att få fram utan prover.",
+    "Hur SOFA poängsätter organsvikt i sex system på en gemensam skala 0–4.",
+    "Vad Sepsis-3 menar med att sepsis är en akut ökning med minst två SOFA-poäng.",
+    "Vilka sex kriterier som ingår i DS-CRB-65 och vad D och S lägger till mot CRB-65.",
+    "Varför en snabb screening och en fullständig kartläggning inte kan ersätta varandra."
+  ],
+  "keywords": [
+    "qsofa",
+    "sofa",
+    "ds-crb-65",
+    "sepsis",
+    "organsvikt",
+    "pneumoni"
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "The third international consensus definitions for sepsis and septic shock (Sepsis-3)",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Singer, M."
+        },
+        {
+          "@type": "Person",
+          "name": "Deutschman, C. S."
+        },
+        {
+          "@type": "Person",
+          "name": "Seymour, C. W."
+        },
+        {
+          "@type": "Person",
+          "name": "Shankar-Hari, M."
+        },
+        {
+          "@type": "Person",
+          "name": "Annane, D."
+        },
+        {
+          "@type": "Person",
+          "name": "Bauer, M."
+        },
+        {
+          "@type": "Person",
+          "name": "Bellomo, R."
+        },
+        {
+          "@type": "Person",
+          "name": "Bernard, G. R."
+        },
+        {
+          "@type": "Person",
+          "name": "Chiche, J.-D."
+        },
+        {
+          "@type": "Person",
+          "name": "Coopersmith, C. M."
+        },
+        {
+          "@type": "Person",
+          "name": "Hotchkiss, R. S."
+        },
+        {
+          "@type": "Person",
+          "name": "Levy, M. M."
+        },
+        {
+          "@type": "Person",
+          "name": "Marshall, J. C."
+        },
+        {
+          "@type": "Person",
+          "name": "Martin, G. S."
+        },
+        {
+          "@type": "Person",
+          "name": "Opal, S. M."
+        },
+        {
+          "@type": "Person",
+          "name": "Rubenfeld, G. D."
+        },
+        {
+          "@type": "Person",
+          "name": "van der Poll, T."
+        },
+        {
+          "@type": "Person",
+          "name": "Vincent, J.-L."
+        },
+        {
+          "@type": "Person",
+          "name": "Angus, D. C."
+        }
+      ],
+      "datePublished": "2016",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "JAMA"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Vårdprogram för samhällsförvärvad pneumoni",
+      "author": [
+        {
+          "@type": "Organization",
+          "name": "Svenska infektionsläkarföreningen"
+        }
+      ],
+      "datePublished": "2024",
+      "publisher": {
+        "@type": "Organization",
+        "name": "infektion.net"
+      },
+      "url": "https://infektion.net/vardprogram/"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "The SOFA (Sepsis-related Organ Failure Assessment) score to describe organ dysfunction/failure",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Vincent, J.-L."
+        },
+        {
+          "@type": "Person",
+          "name": "Moreno, R."
+        },
+        {
+          "@type": "Person",
+          "name": "Takala, J."
+        },
+        {
+          "@type": "Person",
+          "name": "Willatts, S."
+        },
+        {
+          "@type": "Person",
+          "name": "De Mendonça, A."
+        },
+        {
+          "@type": "Person",
+          "name": "Bruining, H."
+        },
+        {
+          "@type": "Person",
+          "name": "Reinhart, C. K."
+        },
+        {
+          "@type": "Person",
+          "name": "Suter, P. M."
+        },
+        {
+          "@type": "Person",
+          "name": "Thijs, L. G."
+        }
+      ],
+      "datePublished": "1996",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Intensive Care Medicine"
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Anatomiquiz",
+      "item": "https://anatomiquiz.se/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Verktyg",
+      "item": "https://anatomiquiz.se/verktyg/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Akutmedicin",
+      "item": "https://anatomiquiz.se/verktyg/akutmedicin/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Infektion",
+      "item": "https://anatomiquiz.se/verktyg/akutmedicin/infektion.html"
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon.png">
+  <link rel="apple-touch-icon" href="/img/icon-192.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/css/styles.css?v=0.9.412">
+  <link rel="stylesheet" href="/css/verktyg.css?v=0.9.415">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+  <main id="main" class="container" role="main">
+
+    <header class="header">
+      <div class="header-title">
+        <h1>Infektion</h1>
+      </div>
+      <p class="tagline">qSOFA, SOFA och DS-CRB-65</p>
+    </header>
+
+    <section class="card" aria-labelledby="akutHeading">
+
+      <nav class="breadcrumb" aria-label="Brödsmula">
+        <a href="/" class="breadcrumb-link">← Anatomiquiz</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="/verktyg/" class="breadcrumb-link">Verktyg</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="/verktyg/akutmedicin/" class="breadcrumb-link">Akutmedicin</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <span class="breadcrumb-current" aria-current="page">Infektion</span>
+      </nav>
+
+      <h2 id="akutHeading" class="sr-only">Poängskalor vid infektion och <a class="kb-term" href="/ordlista-o.html#term-organsvikt" data-def="Tillstånd där ett organs funktion inte längre räcker för kroppens behov">organsvikt</a></h2>
+
+      <div class="info-about">
+        <p>Tre skalor som ligger på olika avstånd från patienten. <a href="#qsofa" class="info-link">qSOFA</a> bygger på tre uppgifter som går att få fram vid sängkanten utan ett enda prov. <a href="#sofa" class="info-link">SOFA</a> kräver prover och mätvärden och kartlägger sex organsystem var för sig. <a href="#dscrb65" class="info-link">DS-CRB-65</a> är smalare och gäller bara <a class="kb-term" href="/ordlista-l.html#term-lunginflammation" data-def="Infektion i lungvävnaden; pneumoni">lunginflammation</a>, men svarar på den fråga som ofta är den första: var ska den här patienten vårdas?</p>
+      </div>
+
+      <div id="akut-utan-js" class="vt-warn">
+        Räknarna kräver JavaScript. Är det avstängt finns alla kriterier, poäng och tolkningsband som tabeller under varje rubrik.
+      </div>
+
+      <!-- =========================================================
+           1. qSOFA
+           ========================================================= -->
+
+      <h2 id="qsofa">qSOFA – snabb bedömning vid misstänkt infektion</h2>
+
+      <p>Tre uppgifter, alla tillgängliga innan ett enda prov är taget: <a class="kb-term" href="/ordlista-a.html#term-andningsfrekvens" data-def="Antal andetag per minut; normalt 12–20 hos vuxen i vila">andningsfrekvensen</a>, det systoliska <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtrycket</a> och om patienten är opåverkad i medvetandet. Varje uppfyllt kriterium ger en poäng. Skalan ställer ingen diagnos — den pekar ut vilka patienter med misstänkt infektion som riskerar ett sämre förlopp och därför behöver utredas vidare.</p>
+
+      <div data-akut="qsofa"></div>
+
+      <h3>Kriterier och tolkning</h3>
+
+      <table class="kb-mtable">
+        <caption>qSOFA – de tre kriterierna</caption>
+        <thead>
+          <tr>
+            <th scope="col">Parameter</th>
+            <th scope="col">0 poäng</th>
+            <th scope="col">1 poäng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Parameter"><a class="kb-term" href="/ordlista-a.html#term-andningsfrekvens" data-def="Antal andetag per minut; normalt 12–20 hos vuxen i vila">Andningsfrekvens</a> (andetag/min)</th><td data-label="0 poäng">≤21</td><td data-label="1 poäng">≥22</td></tr>
+          <tr><th scope="row" data-label="Parameter">Systoliskt <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtryck</a> (mmHg)</th><td data-label="0 poäng">≥101</td><td data-label="1 poäng">≤100</td></tr>
+          <tr><th scope="row" data-label="Parameter"><a class="kb-term" href="/ordlista-m.html#term-medvetandegrad" data-def="Hur vaken och kontaktbar en person är, från fullt vaken till djupt medvetslös">Medvetandegrad</a></th><td data-label="0 poäng">Vaken och orienterad</td><td data-label="1 poäng">Påverkad <a class="kb-term" href="/ordlista-m.html#term-medvetandegrad" data-def="Hur vaken och kontaktbar en person är, från fullt vaken till djupt medvetslös">medvetandegrad</a></td></tr>
+        </tbody>
+      </table>
+
+      <table class="kb-mtable">
+        <caption>qSOFA – tolkning av summan</caption>
+        <thead>
+          <tr>
+            <th scope="col">Summa</th>
+            <th scope="col">Bedömning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Summa">0–1 poäng</th><td data-label="Bedömning">Kriteriet för förhöjd risk är inte uppfyllt. Skalan är trubbig och utesluter inte <a class="kb-term" href="/ordlista-s.html#term-sepsis" data-def="Livshotande organsvikt orsakad av kroppens reaktion på en infektion">sepsis</a></td></tr>
+          <tr><th scope="row" data-label="Summa">2 poäng eller mer</th><td data-label="Bedömning">Risken för ett sämre förlopp är påtagligt förhöjd vid misstänkt infektion, och <a class="kb-term" href="/ordlista-o.html#term-organsvikt" data-def="Tillstånd där ett organs funktion inte längre räcker för kroppens behov">organsvikt</a> bör efterforskas med prover</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Vad betyder variablerna?</h3>
+
+      <h4><a class="kb-term" href="/ordlista-a.html#term-andningsfrekvens" data-def="Antal andetag per minut; normalt 12–20 hos vuxen i vila">Andningsfrekvensen</a></h4>
+      <p>Den enda av de tre som mäts genom att räkna, och den som oftast hoppas över eller uppskattas på känsla. Gränsen på 22 andetag per minut ligger strax ovanför det normala spannet för en vuxen i vila. Att andningen finns med är ingen slump: den stiger tidigt när kroppen börjar kompensera för en försämring, långt innan <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtrycket</a> rör sig.</p>
+
+      <h4>Det systoliska <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtrycket</a></h4>
+      <p>Gränsen 100 mmHg är avsiktligt satt högre än den gräns som brukar användas för <a class="kb-term" href="/ordlista-c.html#term-chock" data-def="Livshotande tillstånd där cirkulationen inte räcker för att syresätta vävnaderna">chock</a>. Poängen är att fånga en begynnande cirkulatorisk påverkan medan den ännu är kompenserad, inte att bekräfta ett tillstånd som redan är uppenbart.</p>
+
+      <h4><a class="kb-term" href="/ordlista-m.html#term-medvetandegrad" data-def="Hur vaken och kontaktbar en person är, från fullt vaken till djupt medvetslös">Medvetandegraden</a></h4>
+      <p>Kriteriet gäller varje avvikelse från fullt vaken och orienterad, alltså allt under 15 på <a class="kb-term" href="/ordlista-g.html#term-glasgow-coma-scale" data-def="Skala 3–15 för medvetandegrad: ögonöppning, verbalt svar och motoriskt svar">Glasgow Coma Scale</a>. Nytillkommen förvirring räknas, och den kan vara det första tecknet på en allvarlig infektion hos en äldre patient — ibland innan <a class="kb-term" href="/ordlista-f.html#term-feber" data-def="Förhöjd kroppstemperatur, oftast ett tecken på infektion eller inflammation">feber</a> eller lokala <a class="kb-term" href="/ordlista-s.html#term-symtom" data-def="Tecken på sjukdom som den sjuke själv märker och beskriver">symtom</a> hunnit visa sig.</p>
+
+      <h3>Varför just de här variablerna?</h3>
+
+      <p>De tre kriterierna beskriver var sitt organsystem — lungan, cirkulationen och <a class="kb-term" href="/ordlista-e.html#term-encephalon" data-def="Storhjärna, lillhjärna och hjärnstam tillsammans (encephalon)">hjärnan</a> — och de valdes ut statistiskt. I underlaget till <a class="kb-term" href="/ordlista-s.html#term-sepsis" data-def="Livshotande organsvikt orsakad av kroppens reaktion på en infektion">Sepsis</a>-3 prövades ett stort antal <a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">kliniska</a> variabler mot hur väl de förutsade död på sjukhus, och just den här trepunktsmodellen visade sig lika träffsäker som betydligt mer omfattande modeller. Att den bara innehåller uppgifter som går att få fram utan prover är därför inte en förenkling som kostat noggrannhet, utan hela poängen: den fungerar där proverna ännu inte finns.</p>
+
+      <p><strong>qSOFA är en varningssignal, inte ett test.</strong> Det är den vanligaste feltolkningen. En låg poäng utesluter inte <a class="kb-term" href="/ordlista-s.html#term-sepsis" data-def="Livshotande organsvikt orsakad av kroppens reaktion på en infektion">sepsis</a> — den säger bara att just de tre grova markörerna inte slagit ut. En patient med tydlig infektion och påverkat allmäntillstånd ska bedömas oavsett vad qSOFA visar, och skalans upphovsmän har själva varnat för att använda den som ett screeningtest med hög känslighet, vilket den inte är.</p>
+
+      <div class="vt-ansvar">
+        <p><strong>Räknaren ersätter inte bedömningen.</strong> qSOFA är framtagen för vuxna med misstänkt infektion utanför <a class="kb-term" href="/ordlista-i.html#term-intensivvard" data-def="Vårdnivå för patienter med svikt i ett eller flera organsystem">intensivvården</a> och gäller inte som allmän <a class="kb-term" href="/ordlista-s.html#term-screening" data-def="Systematisk undersökning av personer utan symtom för att hitta sjukdom tidigt">screening</a>. Den säger ingenting om vilken behandling som behövs, bara att risken för ett sämre förlopp är förhöjd.</p>
+      </div>
+
+      <!-- =========================================================
+           2. SOFA
+           ========================================================= -->
+
+      <h2 id="sofa">SOFA – <a class="kb-term" href="/ordlista-o.html#term-organsvikt" data-def="Tillstånd där ett organs funktion inte längre räcker för kroppens behov">organsvikt</a> i sex system</h2>
+
+      <p>Där qSOFA nöjer sig med tre grova markörer bedömer SOFA sex organsystem var för sig, vart och ett på en skala från noll till fyra. Summan beskriver hur utbredd organsvikten är. Skalan kräver prover och är byggd för <a class="kb-term" href="/ordlista-i.html#term-intensivvard" data-def="Vårdnivå för patienter med svikt i ett eller flera organsystem">intensivvården</a>, men den visar tydligare än något annat instrument på sajten hur ett poängsystem kan väga ihop helt olika sorters mätvärden — ett blodprov, ett tryck och en medvetandeskala — till ett enda tal.</p>
+
+      <div data-akut="sofa"></div>
+
+      <h3>Poängtabellen</h3>
+
+      <p>Räknarens facit. Kvoten PaO₂/FiO₂ anges i mmHg enligt originaltabellen, eftersom gränserna då blir jämna hundratal; i kPa motsvarar de 53,3 – 40 – 26,7 – 13,3.</p>
+
+      <table class="kb-mtable">
+        <caption>SOFA – poäng per organsystem</caption>
+        <thead>
+          <tr>
+            <th scope="col">System</th>
+            <th scope="col">0</th>
+            <th scope="col">1</th>
+            <th scope="col">2</th>
+            <th scope="col">3</th>
+            <th scope="col">4</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="System">PaO₂/FiO₂ (mmHg)</th><td data-label="0">≥400</td><td data-label="1">&lt;400</td><td data-label="2">&lt;300</td><td data-label="3">&lt;200 med andningsstöd</td><td data-label="4">&lt;100 med andningsstöd</td></tr>
+          <tr><th scope="row" data-label="System"><a class="kb-term" href="/ordlista-t.html#term-trombocyt" data-def="Blodplättar; cellfragment som startar blodets levring vid en kärlskada">Trombocyter</a> (×10⁹/L)</th><td data-label="0">≥150</td><td data-label="1">&lt;150</td><td data-label="2">&lt;100</td><td data-label="3">&lt;50</td><td data-label="4">&lt;20</td></tr>
+          <tr><th scope="row" data-label="System"><a class="kb-term" href="/ordlista-b.html#term-bilirubin" data-def="Gallfärgämne som bildas vid nedbrytning av hemoglobin och utsöndras av levern">Bilirubin</a> (µmol/L)</th><td data-label="0">&lt;20</td><td data-label="1">20–32</td><td data-label="2">33–101</td><td data-label="3">102–204</td><td data-label="4">&gt;204</td></tr>
+          <tr><th scope="row" data-label="System">Cirkulation</th><td data-label="0"><a class="kb-term" href="/ordlista-m.html#term-medelartartryck" data-def="Det genomsnittliga artärtrycket under ett helt hjärtslag; driver organens genomblödning">Medelartärtryck</a> 70 mmHg eller mer</td><td data-label="1"><a class="kb-term" href="/ordlista-m.html#term-medelartartryck" data-def="Det genomsnittliga artärtrycket under ett helt hjärtslag; driver organens genomblödning">Medelartärtryck</a> under 70 mmHg</td><td data-label="2"><a class="kb-term" href="/ordlista-d.html#term-dopamin" data-def="Signalsubstans som i högre doser också används som kärlpåverkande läkemedel">Dopamin</a> högst 5 eller dobutamin i någon <a class="kb-term" href="/ordlista-d.html#term-dos" data-def="Bestämd mängd läkemedel eller strålning som ges vid ett tillfälle eller under en viss tid">dos</a></td><td data-label="3"><a class="kb-term" href="/ordlista-d.html#term-dopamin" data-def="Signalsubstans som i högre doser också används som kärlpåverkande läkemedel">Dopamin</a> över 5, eller <a class="kb-term" href="/ordlista-a.html#term-adrenalin" data-def="Hormon från binjuremärgen som frisätts vid stress och fara (”kamp eller flykt”)">adrenalin</a>/<a class="kb-term" href="/ordlista-n.html#term-noradrenalin" data-def="Viktigaste signalsubstansen i sympatiska nervsystemet; bildas även i binjuremärgen">noradrenalin</a> högst 0,1</td><td data-label="4"><a class="kb-term" href="/ordlista-d.html#term-dopamin" data-def="Signalsubstans som i högre doser också används som kärlpåverkande läkemedel">Dopamin</a> över 15, eller <a class="kb-term" href="/ordlista-a.html#term-adrenalin" data-def="Hormon från binjuremärgen som frisätts vid stress och fara (”kamp eller flykt”)">adrenalin</a>/<a class="kb-term" href="/ordlista-n.html#term-noradrenalin" data-def="Viktigaste signalsubstansen i sympatiska nervsystemet; bildas även i binjuremärgen">noradrenalin</a> över 0,1</td></tr>
+          <tr><th scope="row" data-label="System"><a class="kb-term" href="/ordlista-g.html#term-glasgow-coma-scale" data-def="Skala 3–15 för medvetandegrad: ögonöppning, verbalt svar och motoriskt svar">Glasgow Coma Scale</a></th><td data-label="0">15</td><td data-label="1">13–14</td><td data-label="2">10–12</td><td data-label="3">6–9</td><td data-label="4">&lt;6</td></tr>
+          <tr><th scope="row" data-label="System"><a class="kb-term" href="/ordlista-k.html#term-kreatinin" data-def="Nedbrytningsprodukt från muskler som utsöndras av njurarna; mått på njurfunktion">Kreatinin</a> (µmol/L)</th><td data-label="0">&lt;110</td><td data-label="1">110–170</td><td data-label="2">171–299</td><td data-label="3">300–440</td><td data-label="4">&gt;440</td></tr>
+        </tbody>
+      </table>
+
+      <table class="kb-mtable">
+        <caption>SOFA – tolkning av summan</caption>
+        <thead>
+          <tr>
+            <th scope="col">Summa</th>
+            <th scope="col">Bedömning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Summa">0–1 poäng</th><td data-label="Bedömning"><strong>0–1 poäng – ingen påvisad <a class="kb-term" href="/ordlista-o.html#term-organsvikt" data-def="Tillstånd där ett organs funktion inte längre räcker för kroppens behov">organsvikt</a></strong></td></tr>
+          <tr><th scope="row" data-label="Summa">2–9 poäng</th><td data-label="Bedömning"><strong>2–9 poäng – <a class="kb-term" href="/ordlista-o.html#term-organsvikt" data-def="Tillstånd där ett organs funktion inte längre räcker för kroppens behov">organsvikt</a> föreligger</strong>. En akut ökning med minst två poäng definierar <a class="kb-term" href="/ordlista-s.html#term-sepsis" data-def="Livshotande organsvikt orsakad av kroppens reaktion på en infektion">sepsis</a> vid misstänkt infektion</td></tr>
+          <tr><th scope="row" data-label="Summa">10 poäng eller mer</th><td data-label="Bedömning"><strong>10 poäng eller mer – uttalad <a class="kb-term" href="/ordlista-o.html#term-organsvikt" data-def="Tillstånd där ett organs funktion inte längre räcker för kroppens behov">organsvikt</a></strong>. Flera system sviktar samtidigt</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Vad betyder variablerna?</h3>
+
+      <h4>PaO₂/FiO₂</h4>
+      <p>Syrgastrycket i artärblod delat med den andel <a class="kb-term" href="/ordlista-s.html#term-syrgas" data-def="Medicinskt syre som tillförs för att höja blodets syresättning">syrgas</a> patienten andas, angiven som decimaltal — luft är 0,21. Kvoten finns för att ett syrgastryck ensamt inte säger något: 10 kPa på luft är något helt annat än 10 kPa på nittio procent <a class="kb-term" href="/ordlista-s.html#term-syrgas" data-def="Medicinskt syre som tillförs för att höja blodets syresättning">syrgas</a>. Genom att dela med syrgasandelen blir måttet jämförbart oavsett hur mycket stöd patienten får. De två högsta stegen förutsätter dessutom andningsstöd, eftersom en så låg kvot utan <a class="kb-term" href="/ordlista-v.html#term-ventilation" data-def="Luftutbytet mellan lungorna och omgivningen">ventilation</a> betyder att patienten inte fått den behandling stegen förutsätter.</p>
+
+      <h4><a class="kb-term" href="/ordlista-t.html#term-trombocyt" data-def="Blodplättar; cellfragment som startar blodets levring vid en kärlskada">Trombocyter</a> och <a class="kb-term" href="/ordlista-b.html#term-bilirubin" data-def="Gallfärgämne som bildas vid nedbrytning av hemoglobin och utsöndras av levern">bilirubin</a></h4>
+      <p>Två prover som mäter helt olika organ men fungerar likadant i skalan: båda faller respektive stiger när organet sviktar. <a class="kb-term" href="/ordlista-t.html#term-trombocyt" data-def="Blodplättar; cellfragment som startar blodets levring vid en kärlskada">Trombocyterna</a> förbrukas när <a class="kb-term" href="/ordlista-k.html#term-koagulation" data-def="Blodets levring, då lösligt fibrinogen omvandlas till ett fibrinnät">koagulationen</a> aktiveras brett i kroppen, vilket sker vid svår <a class="kb-term" href="/ordlista-s.html#term-sepsis" data-def="Livshotande organsvikt orsakad av kroppens reaktion på en infektion">sepsis</a>. <a class="kb-term" href="/ordlista-b.html#term-bilirubin" data-def="Gallfärgämne som bildas vid nedbrytning av hemoglobin och utsöndras av levern">Bilirubinet</a> stiger när <a class="kb-term" href="/ordlista-h.html#term-hepar" data-def="Kroppens största körtel, som omsätter näringsämnen och avgiftar blodet (hepar)">levern</a> inte längre hinner ta hand om det, och är därmed ett mått på leverfunktion snarare än på leverskada.</p>
+
+      <h4>Cirkulationen</h4>
+      <p>Det enda system som inte poängsätts på ett mätvärde utan på hur mycket stöd cirkulationen redan får. Stegen beskriver vad patienten står på, inte vad som ska ges: från ett <a class="kb-term" href="/ordlista-m.html#term-medelartartryck" data-def="Det genomsnittliga artärtrycket under ett helt hjärtslag; driver organens genomblödning">medelartärtryck</a> som håller sig självt, via ett som inte gör det, till ett som bara hålls uppe med stigande doser av kärlsammandragande läkemedel. Att behöva mer läkemedel för samma tryck är i sig ett mått på hur djup svikten är.</p>
+
+      <h4><a class="kb-term" href="/ordlista-g.html#term-glasgow-coma-scale" data-def="Skala 3–15 för medvetandegrad: ögonöppning, verbalt svar och motoriskt svar">Glasgow Coma Scale</a> och <a class="kb-term" href="/ordlista-k.html#term-kreatinin" data-def="Nedbrytningsprodukt från muskler som utsöndras av njurarna; mått på njurfunktion">kreatinin</a></h4>
+      <p><a class="kb-term" href="/ordlista-e.html#term-encephalon" data-def="Storhjärna, lillhjärna och hjärnstam tillsammans (encephalon)">Hjärnan</a> bedöms med samma medvetandeskala som används vid skallskador, och <a class="kb-term" href="/ordlista-n.html#term-njure" data-def="Bönformat parorgan som filtrerar blodet, bildar urin och reglerar vätske- och saltbalans">njuren</a> med kreatininet — eller med urinmängden, där under 500 ml per dygn ger tre poäng och under 200 ml ger fyra. Räknaren använder kreatininet, eftersom det är det som finns i ett enskilt provsvar.</p>
+
+      <h3>Varför just de här variablerna?</h3>
+
+      <p>Systemen är valda för att täcka de organ som sviktar först och mest förutsägbart vid ett kritiskt tillstånd, och varje system mäts med den variabel som var mest tillgänglig på en intensivvårdsavdelning när skalan togs fram 1996. Att alla sex fick samma skala 0–4 var ett medvetet val: det gör summan tolkbar och gör det möjligt att jämföra hur mycket varje system bidrar, i stället för att låta det organ som råkar ha finast mätmetod dominera.</p>
+
+      <p><strong>Sepsisdefinitionen bygger på förändringen, inte på nivån.</strong> <a class="kb-term" href="/ordlista-s.html#term-sepsis" data-def="Livshotande organsvikt orsakad av kroppens reaktion på en infektion">Sepsis</a>-3 definierar <a class="kb-term" href="/ordlista-s.html#term-sepsis" data-def="Livshotande organsvikt orsakad av kroppens reaktion på en infektion">sepsis</a> som en livshotande <a class="kb-term" href="/ordlista-o.html#term-organsvikt" data-def="Tillstånd där ett organs funktion inte längre räcker för kroppens behov">organsvikt</a> orsakad av ett stört svar på infektion, och operationaliserar det som en <em>akut ökning</em> med minst två SOFA-poäng vid misstänkt infektion. En patient med kronisk <a class="kb-term" href="/ordlista-n.html#term-njursvikt" data-def="Nedsatt förmåga hos njurarna att rena blodet och reglera vätskebalansen">njursvikt</a> kan ha två poäng till vardags utan att vara septisk; det är rörelsen uppåt som betyder något. För den som inte har några kända organproblem sedan tidigare antas utgångsläget vara noll, och då sammanfaller totalsumman med ökningen.</p>
+
+      <p><strong>Delpoängen säger mer än summan.</strong> Åtta poäng fördelade som fyra plus fyra på två system är en annan patient än åtta poäng spridda som ettor och tvåor över alla sex. Det är därför räknaren visar poängen per system och inte bara totalen — summan är en sammanfattning, inte hela bilden.</p>
+
+      <div class="vt-ansvar">
+        <p><strong>Räknaren ersätter inte bedömningen.</strong> SOFA är framtagen för intensivvård och förutsätter prover och mätvärden som ofta inte finns tillgängliga i andra sammanhang. Poängen beskriver <a class="kb-term" href="/ordlista-o.html#term-organsvikt" data-def="Tillstånd där ett organs funktion inte längre räcker för kroppens behov">organsvikt</a> på gruppnivå och är inte ett mått på prognosen för en enskild patient.</p>
+      </div>
+
+      <!-- =========================================================
+           3. DS-CRB-65
+           ========================================================= -->
+
+      <h2 id="dscrb65">DS-CRB-65 – allvarlighetsbedömning vid <a class="kb-term" href="/ordlista-p.html#term-pneumoni" data-def="Lunginflammation">pneumoni</a></h2>
+
+      <p>Den smalaste av de tre skalorna: den gäller bara samhällsförvärvad <a class="kb-term" href="/ordlista-l.html#term-lunginflammation" data-def="Infektion i lungvävnaden; pneumoni">lunginflammation</a>, men svarar på den fråga som ofta kommer först. Sex kriterier ger en poäng var, och summan används som stöd för att avgöra på vilken vårdnivå patienten rimligen hanteras.</p>
+
+      <div data-akut="dscrb65"></div>
+
+      <h3>Kriterier och tolkning</h3>
+
+      <table class="kb-mtable">
+        <caption>DS-CRB-65 – de sex kriterierna</caption>
+        <thead>
+          <tr>
+            <th scope="col">Kriterium</th>
+            <th scope="col">Poäng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Kriterium">D – känd <a class="kb-term" href="/ordlista-h.html#term-hjartsvikt" data-def="Hjärtats oförmåga att pumpa tillräckligt med blod för kroppens behov">hjärtsvikt</a>, lungsjukdom, njursjukdom, <a class="kb-term" href="/ordlista-l.html#term-leversvikt" data-def="Sjukdom i levern; vid svikt räcker organets funktion inte till">leversjukdom</a>, neurologisk eller <a class="kb-term" href="/ordlista-c.html#term-cerebrovaskular" data-def="Som rör hjärnans blodkärl">cerebrovaskulär</a> sjukdom, eller aktuell <a class="kb-term" href="/ordlista-m.html#term-malignitet" data-def="Elakartad tumörsjukdom med förmåga att växa in i omgivningen och sprida sig">malignitet</a></th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">S – <a class="kb-term" href="/ordlista-s.html#term-syresaturation" data-def="Andelen av blodets hemoglobin som är mättat med syre, angiven i procent">syresaturation</a> under 90 procent på luft</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">C – <a class="kb-term" href="/ordlista-k.html#term-konfusion" data-def="Förvirring med störd uppfattning om tid, rum och sammanhang">konfusion</a></th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">R – <a class="kb-term" href="/ordlista-a.html#term-andningsfrekvens" data-def="Antal andetag per minut; normalt 12–20 hos vuxen i vila">andningsfrekvens</a> över 30 andetag per minut</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">B – systoliskt <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtryck</a> under 90 mmHg eller diastoliskt 60 mmHg eller lägre</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">65 – ålder över 65 år</th><td data-label="Poäng">+1</td></tr>
+        </tbody>
+      </table>
+
+      <table class="kb-mtable">
+        <caption>DS-CRB-65 – tolkning av summan</caption>
+        <thead>
+          <tr>
+            <th scope="col">Summa</th>
+            <th scope="col">Bedömning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Summa">0–1 poäng</th><td data-label="Bedömning"><strong>0–1 poäng – lägre allvarlighetsgrad</strong>. Kan oftast handläggas i öppenvård med uppföljning</td></tr>
+          <tr><th scope="row" data-label="Summa">2 poäng eller mer</th><td data-label="Bedömning"><strong>2 poäng eller mer – högre allvarlighetsgrad</strong>. Sjukhusvård är ofta motiverad</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Vad betyder variablerna?</h3>
+
+      <h4>D och S – det som är nytt mot CRB-65</h4>
+      <p>Den äldre skalan CRB-65 innehöll bara de fyra sista bokstäverna: <a class="kb-term" href="/ordlista-k.html#term-konfusion" data-def="Förvirring med störd uppfattning om tid, rum och sammanhang">konfusion</a>, <a class="kb-term" href="/ordlista-a.html#term-andningsfrekvens" data-def="Antal andetag per minut; normalt 12–20 hos vuxen i vila">andningsfrekvens</a>, <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtryck</a> och ålder. Den svenska efterföljaren lägger till två framför. <strong>D</strong> står för underliggande sjukdom och fångar att samma <a class="kb-term" href="/ordlista-l.html#term-lunginflammation" data-def="Infektion i lungvävnaden; pneumoni">lunginflammation</a> slår olika hårt beroende på vilka reserver patienten har sedan tidigare. <strong>S</strong> står för saturation och lägger till det enda direkta måttet på hur väl lungan faktiskt fungerar just nu — vilket är anmärkningsvärt att det saknades i en skala för <a class="kb-term" href="/ordlista-l.html#term-lunginflammation" data-def="Infektion i lungvävnaden; pneumoni">lunginflammation</a>.</p>
+
+      <h4>Blodtryckskriteriet</h4>
+      <p>Uppfyllt om <em>något</em> av trycken ligger under sin gräns: systoliskt under 90 mmHg eller diastoliskt 60 mmHg eller lägre. Det räcker alltså med ett av dem, och kriteriet ger ändå bara en poäng. Att det diastoliska trycket finns med är ovanligt bland riskskalor, och det fångar den vidgade kärlbädden vid en svår infektion, som sänker det diastoliska trycket tidigare än det systoliska.</p>
+
+      <h4><a class="kb-term" href="/ordlista-k.html#term-konfusion" data-def="Förvirring med störd uppfattning om tid, rum och sammanhang">Konfusion</a></h4>
+      <p>Samma sorts fynd som i qSOFA och av samma skäl: hos en äldre patient kan förvirring vara det första och ibland enda tecknet på en allvarlig infektion, innan <a class="kb-term" href="/ordlista-f.html#term-feber" data-def="Förhöjd kroppstemperatur, oftast ett tecken på infektion eller inflammation">feber</a> eller hosta hunnit bli tydliga.</p>
+
+      <h3>Varför just de här variablerna?</h3>
+
+      <p>Kriterierna delar sig i två slag. Fyra av dem — saturation, <a class="kb-term" href="/ordlista-k.html#term-konfusion" data-def="Förvirring med störd uppfattning om tid, rum och sammanhang">konfusion</a>, <a class="kb-term" href="/ordlista-a.html#term-andningsfrekvens" data-def="Antal andetag per minut; normalt 12–20 hos vuxen i vila">andningsfrekvens</a> och <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtryck</a> — mäter hur sjuk patienten är <em>just nu</em>. De två andra, underliggande sjukdom och ålder, mäter hur lite marginal patienten har att förlora. Det är samma tudelning som sPESI bygger på vid <a class="kb-term" href="/ordlista-l.html#term-lungemboli" data-def="Blodpropp som täpper till ett kärl i lungcirkulationen">lungemboli</a>, och den återkommer i nästan varje riskskala: allvarlighetsgraden ensam räcker inte, eftersom samma påfrestning drabbar olika patienter olika hårt.</p>
+
+      <p><strong>Skalan är byggd för en vårdnivåfråga, inte för en diagnos.</strong> Det gör den till en annan sorts instrument än qSOFA och SOFA. Diagnosen <a class="kb-term" href="/ordlista-l.html#term-lunginflammation" data-def="Infektion i lungvävnaden; pneumoni">lunginflammation</a> förutsätts redan vara ställd; det skalan bidrar med är ett strukturerat sätt att väga samman de faktorer som avgör om patienten klarar sig hemma. Den ersätter inte bedömningen av den enskilda patienten, och det svenska vårdprogrammet säger det uttryckligen.</p>
+
+      <div class="kb-sources">
+        <h2>Referenser</h2>
+        <ul>
+          <li>Singer, M., Deutschman, C. S., Seymour, C. W., Shankar-Hari, M., Annane, D., Bauer, M., Bellomo, R., Bernard, G. R., Chiche, J.-D., Coopersmith, C. M., Hotchkiss, R. S., Levy, M. M., Marshall, J. C., Martin, G. S., Opal, S. M., Rubenfeld, G. D., van der Poll, T., Vincent, J.-L., &amp; Angus, D. C. (2016). The third international consensus definitions for sepsis and septic shock (Sepsis-3). <em>JAMA, 315</em>(8), 801–810.</li>
+          <li>Svenska infektionsläkarföreningen. (2024). <em>Vårdprogram för samhällsförvärvad pneumoni</em>. <a href="https://infektion.net/vardprogram/" target="_blank" rel="noopener noreferrer" class="info-link">infektion.net</a></li>
+          <li>Vincent, J.-L., Moreno, R., Takala, J., Willatts, S., De Mendonça, A., Bruining, H., Reinhart, C. K., Suter, P. M., &amp; Thijs, L. G. (1996). The SOFA (Sepsis-related Organ Failure Assessment) score to describe organ dysfunction/failure. <em>Intensive Care Medicine, 22</em>(7), 707–710.</li>
+        </ul>
+      </div>
+
+      <div class="actions">
+        <a href="/verktyg/akutmedicin/" class="btn primary">← Till akutmedicinen</a>
+        <a href="/medicinskordlista.html" class="btn">Slå upp en term</a>
+      </div>
+
+    </section>
+
+    <footer class="page-footer">
+      <p>Utbildningsmaterial, inte medicinsk rådgivning. Innehållet är avsett för studier och ersätter inte kurslitteratur, undervisning eller kliniska riktlinjer. Det ska inte användas som underlag för vård eller behandling av patienter.</p>
+      <p>Anatomiquiz använder inga kakor och samlar inte in personuppgifter. Läs mer i <a href="/integritet.html" class="info-link">integritetspolicyn</a>.</p>
+      <p class="page-updated">Senast uppdaterad <time data-updated datetime="2026-08-17">17 augusti 2026</time></p>
+    </footer>
+  </main>
+
+  <script src="/js/akutmedicin.js?v=0.9.415" defer></script>
+
+  <!-- Ordlistetooltips i löptexten (progressiv förbättring; .kb-term funkar som länk utan JS) -->
+  <script src="/js/kb-glossary.js" defer></script>
+
+</body>
+</html>

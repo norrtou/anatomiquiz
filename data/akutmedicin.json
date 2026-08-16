@@ -472,6 +472,233 @@
     ]
   },
 
+  "qsofa": {
+    "namn": "qSOFA",
+    "monster": "varde",
+    "rubrik": "qSOFA – snabb bedömning vid misstänkt infektion",
+    "intro": "Tre uppgifter som går att få fram vid sängkanten utan ett enda prov: andningsfrekvensen, det systoliska blodtrycket och om patienten är opåverkad i medvetandet. Varje uppfyllt kriterium ger en poäng. qSOFA ställer ingen diagnos utan pekar ut vilka patienter med misstänkt infektion som riskerar ett sämre förlopp.",
+    "summaetikett": "qSOFA",
+    "enhetssuffix": "poäng",
+    "kalla": "Singer et al. (2016)",
+
+    "parametrar": [
+      {
+        "namn": "af",
+        "etikett": "Andningsfrekvens",
+        "kort": "Andningsfrekvens",
+        "enhet": "andetag/min",
+        "typ": "tal",
+        "plats": "t.ex. 18",
+        "rimlig": { "min": 4, "max": 80 },
+        "hjalp": "Andningsfrekvensen är den enda av de tre som mäts genom att räkna, och den som oftast hoppas över. Den stiger tidigt vid begynnande organpåverkan, innan blodtrycket rör sig.",
+        "band": [
+          { "max": 21, "poang": 0, "intervall": "≤21" },
+          {            "poang": 1, "intervall": "≥22" }
+        ]
+      },
+      {
+        "namn": "sbt",
+        "etikett": "Systoliskt blodtryck",
+        "kort": "Systoliskt blodtryck",
+        "enhet": "mmHg",
+        "typ": "tal",
+        "plats": "t.ex. 125",
+        "rimlig": { "min": 40, "max": 300 },
+        "band": [
+          { "max": 100, "poang": 1, "intervall": "≤100" },
+          {             "poang": 0, "intervall": "≥101" }
+        ]
+      },
+      {
+        "namn": "medvetande",
+        "etikett": "Medvetandegrad",
+        "kort": "Medvetandegrad",
+        "typ": "val",
+        "hjalp": "Kriteriet gäller varje avvikelse från fullt vaken och orienterad, alltså allt under 15 på Glasgow Coma Scale. Nytillkommen förvirring räknas.",
+        "val": [
+          { "varde": "opaverkad", "text": "Vaken och orienterad", "poang": 0 },
+          { "varde": "paverkad", "text": "Påverkad medvetandegrad", "poang": 1 }
+        ]
+      }
+    ],
+
+    "band": [
+      { "max": 1, "niva": "lag", "rubrik": "0–1 poäng",
+        "overvakning": "Enligt verksamhetens ordinarie rutin.",
+        "atgard": "Kriteriet för förhöjd risk är inte uppfyllt. qSOFA är trubbig och utesluter inte sepsis — en patient med tydlig infektion och påverkat allmäntillstånd bedöms oavsett poängen." },
+      { "niva": "hog", "rubrik": "2 poäng eller mer",
+        "overvakning": "Täta kontroller av vitalparametrarna.",
+        "atgard": "Vid misstänkt infektion är detta den nivå där Sepsis-3 anger att risken för ett sämre förlopp är påtagligt förhöjd, och där organsvikt bör efterforskas med prover." }
+    ]
+  },
+
+  "sofa": {
+    "namn": "SOFA",
+    "monster": "varde",
+    "rubrik": "SOFA – organsvikt i sex system",
+    "intro": "Sex organsystem bedöms var för sig på en skala 0–4, och summan beskriver hur utbredd organsvikten är. Till skillnad från qSOFA kräver SOFA prover och mätvärden, och den är byggd för intensivvården — men den visar tydligare än något annat instrument hur ett poängsystem kan väga ihop helt olika sorters mätvärden till ett tal.",
+    "summaetikett": "SOFA",
+    "enhetssuffix": "poäng",
+    "kalla": "Singer et al. (2016); Vincent et al. (1996)",
+
+    "parametrar": [
+      {
+        "namn": "andningsstod",
+        "etikett": "Andningsstöd",
+        "kort": "Andningsstöd",
+        "typ": "val",
+        "roll": "instalning",
+        "hjalp": "De två högsta stegen i respirationsdelen (3 och 4 poäng) förutsätter att patienten har andningsstöd, alltså invasiv eller non-invasiv ventilation. Valet ger ingen poäng i sig — det avgör om de stegen alls kan nås.",
+        "val": [
+          { "varde": "nej", "text": "Nej", "poang": 0 },
+          { "varde": "ja", "text": "Ja, invasiv eller non-invasiv ventilation", "poang": 0 }
+        ]
+      },
+      {
+        "namn": "pafi",
+        "etikett": "PaO₂/FiO₂",
+        "kort": "PaO₂/FiO₂",
+        "enhet": "mmHg",
+        "typ": "tal",
+        "plats": "t.ex. 380",
+        "rimlig": { "min": 30, "max": 600 },
+        "hjalp": "Kvoten anges i mmHg enligt originaltabellen, eftersom gränserna då blir jämna hundratal. Räknat i kPa motsvarar de 53,3 – 40 – 26,7 – 13,3. Kvoten är syrgastrycket i artärblod delat med den andel syrgas patienten andas, angiven som decimaltal: luft är 0,21.",
+        "band": [
+          { "max": 99,  "poang": 4, "nar": { "andningsstod": "ja" }, "intervall": "<100 med andningsstöd" },
+          { "max": 199, "poang": 3, "nar": { "andningsstod": "ja" }, "intervall": "<200 med andningsstöd" },
+          { "max": 299, "poang": 2, "intervall": "<300" },
+          { "max": 399, "poang": 1, "intervall": "<400" },
+          {             "poang": 0, "intervall": "≥400" }
+        ]
+      },
+      {
+        "namn": "trombocyter",
+        "etikett": "Trombocyter",
+        "kort": "Trombocyter",
+        "enhet": "×10⁹/L",
+        "typ": "tal",
+        "plats": "t.ex. 250",
+        "rimlig": { "min": 1, "max": 1200 },
+        "band": [
+          { "max": 19,  "poang": 4, "intervall": "<20" },
+          { "max": 49,  "poang": 3, "intervall": "<50" },
+          { "max": 99,  "poang": 2, "intervall": "<100" },
+          { "max": 149, "poang": 1, "intervall": "<150" },
+          {             "poang": 0, "intervall": "≥150" }
+        ]
+      },
+      {
+        "namn": "bilirubin",
+        "etikett": "Bilirubin",
+        "kort": "Bilirubin",
+        "enhet": "µmol/L",
+        "typ": "tal",
+        "plats": "t.ex. 12",
+        "rimlig": { "min": 1, "max": 700 },
+        "band": [
+          { "max": 19,  "poang": 0, "intervall": "<20" },
+          { "max": 32,  "poang": 1, "intervall": "20–32" },
+          { "max": 101, "poang": 2, "intervall": "33–101" },
+          { "max": 204, "poang": 3, "intervall": "102–204" },
+          {             "poang": 4, "intervall": ">204" }
+        ]
+      },
+      {
+        "namn": "cirkulation",
+        "etikett": "Cirkulation",
+        "kort": "Cirkulation",
+        "typ": "val",
+        "hjalp": "Stegen beskriver vilket stöd cirkulationen redan får, inte vad som ska ges. Doserna anges i mikrogram per kilo och minut och är hämtade ur originaltabellen.",
+        "val": [
+          { "varde": "map70", "text": "Medelartärtryck 70 mmHg eller mer", "poang": 0 },
+          { "varde": "map_under70", "text": "Medelartärtryck under 70 mmHg", "poang": 1 },
+          { "varde": "dopamin_lag", "text": "Dopamin högst 5 eller dobutamin i någon dos", "poang": 2 },
+          { "varde": "dopamin_medel", "text": "Dopamin över 5, eller adrenalin/noradrenalin högst 0,1", "poang": 3 },
+          { "varde": "dopamin_hog", "text": "Dopamin över 15, eller adrenalin/noradrenalin över 0,1", "poang": 4 }
+        ]
+      },
+      {
+        "namn": "gcs",
+        "etikett": "Glasgow Coma Scale",
+        "kort": "Glasgow Coma Scale",
+        "enhet": "poäng",
+        "typ": "tal",
+        "plats": "t.ex. 15",
+        "rimlig": { "min": 3, "max": 15 },
+        "band": [
+          { "max": 5,  "poang": 4, "intervall": "<6" },
+          { "max": 9,  "poang": 3, "intervall": "6–9" },
+          { "max": 12, "poang": 2, "intervall": "10–12" },
+          { "max": 14, "poang": 1, "intervall": "13–14" },
+          {            "poang": 0, "intervall": "15" }
+        ]
+      },
+      {
+        "namn": "kreatinin",
+        "etikett": "Kreatinin",
+        "kort": "Kreatinin",
+        "enhet": "µmol/L",
+        "typ": "tal",
+        "plats": "t.ex. 80",
+        "rimlig": { "min": 20, "max": 1500 },
+        "hjalp": "Njurdelen kan också bedömas på urinmängd i stället för kreatinin: under 500 ml per dygn ger 3 poäng och under 200 ml per dygn ger 4. Räknaren använder kreatininet, som är det som finns tillgängligt vid ett enskilt provsvar.",
+        "band": [
+          { "max": 109, "poang": 0, "intervall": "<110" },
+          { "max": 170, "poang": 1, "intervall": "110–170" },
+          { "max": 299, "poang": 2, "intervall": "171–299" },
+          { "max": 440, "poang": 3, "intervall": "300–440" },
+          {             "poang": 4, "intervall": ">440" }
+        ]
+      }
+    ],
+
+    "band": [
+      { "max": 1, "niva": "lag", "rubrik": "0–1 poäng – ingen påvisad organsvikt",
+        "overvakning": "Enligt verksamhetens ordinarie rutin.",
+        "atgard": "Inget av de sex systemen visar mer än en lätt avvikelse." },
+      { "max": 9, "niva": "medel", "rubrik": "2–9 poäng – organsvikt föreligger",
+        "overvakning": "Enligt vårdnivåns rutin för organsvikt.",
+        "atgard": "Vid misstänkt infektion är en akut ökning med minst två poäng det som enligt Sepsis-3 definierar sepsis. Poängen säger var svikten sitter — läs delpoängen per system, inte bara summan." },
+      { "niva": "hog", "rubrik": "10 poäng eller mer – uttalad organsvikt",
+        "overvakning": "Kontinuerlig övervakning.",
+        "atgard": "Flera organsystem sviktar samtidigt. I de studier skalan bygger på steg dödligheten påtagligt i det här intervallet." }
+    ]
+  },
+
+  "dscrb65": {
+    "namn": "DS-CRB-65",
+    "monster": "kryss",
+    "rubrik": "DS-CRB-65 – allvarlighetsbedömning vid pneumoni",
+    "intro": "Sex kriterier som vart och ett ger en poäng. Skalan är den svenska efterföljaren till CRB-65 och lägger till två bokstäver framför: D för underliggande sjukdom och S för saturation. Den skattar hur allvarlig en samhällsförvärvad lunginflammation är, och därmed på vilken vårdnivå den rimligen hanteras.",
+    "summaetikett": "DS-CRB-65",
+    "enhetssuffix": "poäng",
+    "kalla": "Svenska infektionsläkarföreningen, vårdprogram för samhällsförvärvad pneumoni (2024)",
+
+    "kriterier": [
+      { "namn": "sjukdom", "kort": "Underliggande sjukdom", "poang": 1,
+        "etikett": "D – känd hjärtsvikt, lungsjukdom, njursjukdom, leversjukdom, neurologisk eller cerebrovaskulär sjukdom, eller aktuell malignitet",
+        "hjalp": "D och S är de två bokstäver som skiljer skalan från den äldre CRB-65. D fångar att samma lunginflammation slår olika hårt beroende på vilka reserver patienten har sedan tidigare." },
+      { "namn": "saturation", "kort": "Saturation under 90 procent", "poang": 1,
+        "etikett": "S – syresaturation under 90 procent på luft" },
+      { "namn": "konfusion", "kort": "Konfusion", "poang": 1,
+        "etikett": "C – konfusion" },
+      { "namn": "andningsfrekvens", "kort": "Andningsfrekvens över 30", "poang": 1,
+        "etikett": "R – andningsfrekvens över 30 andetag per minut" },
+      { "namn": "blodtryck", "kort": "Lågt blodtryck", "poang": 1,
+        "etikett": "B – systoliskt blodtryck under 90 mmHg eller diastoliskt 60 mmHg eller lägre",
+        "hjalp": "Kriteriet är uppfyllt om något av de två trycken ligger under sin gräns — det räcker alltså med ett av dem." },
+      { "namn": "alder", "kort": "Ålder över 65 år", "poang": 1,
+        "etikett": "65 – ålder över 65 år" }
+    ],
+
+    "band": [
+      { "max": 1, "niva": "lag", "rubrik": "0–1 poäng – lägre allvarlighetsgrad",
+        "text": "Enligt det svenska vårdprogrammet kan den här gruppen oftast handläggas i öppenvård med uppföljning." },
+      { "niva": "hog", "rubrik": "2 poäng eller mer – högre allvarlighetsgrad",
+        "text": "Från två poäng anger vårdprogrammet att sjukhusvård ofta är motiverad. Poängen ersätter inte den kliniska bedömningen av den enskilda patienten." }
+    ]
+  },
+
   "qtc": {
     "namn": "QTc",
     "monster": "formel",

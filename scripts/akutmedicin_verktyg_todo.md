@@ -268,7 +268,8 @@ Nya sidor **stoppar bygget** om de inte registreras — det är §0.4 och det ä
 | **3,5** | Motorn färdig: mönster A och D + facit för Wells DVT, CHA₂DS₂-VA och EHRA | ✅ **klart 0.9.415** |
 | **4a** | `blodproppar.html` — Wells DVT, PERC, sPESI + LMH-hänvisningen | ✅ **klart 0.9.416** |
 | **4b** | `hjartat.html` — QTc, CHA₂DS₂-VA, HAS-BLED, EHRA + GRACE förklarad | ✅ **klart 0.9.417** |
-| **5** | `infektion.html` + `neurologi.html` + `buken.html` | väntar |
+| **5a** | `infektion.html` — qSOFA, SOFA, DS-CRB-65 | ✅ **klart 0.9.418** |
+| **5b** | `neurologi.html` + `buken.html` | väntar — GCS, RLS 85, 4AT, BE-FAST, HINTS, Alvarado, Glasgow-Blatchford |
 | **6** | `kunskapsbank/kliniska-poangskalor.html` + korslänkning + `info.html`-källor | väntar |
 
 ### Släpp 1 — LEVERERAT 0.9.286
@@ -516,3 +517,46 @@ det ungefär och fyll på.**
 under larmverifieringen dog skriptet på `undefined` i stället för att säga vilket kriterium som
 saknades och vilka som fanns. Exitkoden var rätt, meddelandet värdelöst. `kryssa()` kastar nu
 ett läsbart fel med hela kriterielistan (§0.4 punkt 2).
+
+### Släpp 5a — LEVERERAT 0.9.418 (`infektion.html`)
+
+- [x] `verktyg/akutmedicin/infektion.html` — qSOFA, SOFA och DS-CRB-65 i tredelad form.
+- [x] **Båda flaggade källorna verifierade före skrivning** (§5). SOFA:s labbgränser stämdes av
+      mot Sepsis-3-tabellen, och DS-CRB-65:s svenska itemdefinitioner mot två oberoende svenska
+      källor som gav samma sex kriterier och samma gräns vid 2 poäng.
+- [x] **SOFA i mönster B** — sex organsystem à 0–4, maxsumma 24 (handkontrollerad). PaO₂/FiO₂
+      anges i **mmHg** eftersom gränserna då blir jämna hundratal; i kPa hade "<13,3" krävt ett
+      påhittat tak som 13,2 för att fungera med bandens inklusiva `max`. Motsvarigheterna i kPa
+      står på sidan. De två högsta respirationsstegen är villkorade med `nar` på andningsstödet,
+      samma mekanism som NEWS2:s mättnadsskala 2.
+- [x] **Cirkulationsdelen är ett valfält, inte en dosräknare.** Stegen beskriver vilket stöd
+      cirkulationen redan får och återger originaltabellens doser; de är en beskrivning av
+      patientens tillstånd, inte en ordination (§12.3, jfr LMH-beslutet i §0c).
+- [x] **DS-CRB-65 byggd som mönster A, inte B.** Inventeringen i §0a gissade B efter förlagan,
+      men kriterierna är binära och B-kriteriet är ett *eller* mellan två tryck — som kryssruta
+      blir det en poäng, som två talfält hade det blivit två. **CRB-65 byggs inte separat**: den
+      är en äkta delmängd av DS-CRB-65 och förklaras i stället i prosa under "vad betyder
+      variablerna".
+- [x] `check_akutmedicin.py`: nytt uppslag `VARDESKALOR` som speglar värdeskalor generiskt —
+      varje intervalltext och varje bandrubrik ur facit ska stå på sidan. NEWS2 behåller sin
+      cell-för-cell-spegling via `RADER`, eftersom dess tabell slår ihop band som facit håller
+      isär. Larmet verifierat med tre planterade fel plus ett falsk-positiv-prov.
+- [x] **4 nya ordlisteposter** (`organsvikt`, `medelartärtryck`, `Glasgow Coma Scale`,
+      `vasopressor`) och 12 nya i wiring-facit → 48 kb-term-länkar på sidan.
+- [x] Källorna (Singer m.fl. 2016, Svenska infektionsläkarföreningen 2024, Vincent m.fl. 1996)
+      inskrivna i `info.html` i samma pass (§3.2d).
+- [x] `test_verktyg_akutmedicin.js` 314 → 390 tester. Varje SOFA-gräns prövad åt båda håll.
+
+#### 7i. Tagg-strippningen sköt in ett mellanslag som inte fanns
+
+Systerfall till §7g, men en nivå värre. Där gällde det ett **dubblerat** mellanslag som
+`blanksteg()` kollapsade bort. Här sitter två länkar bredvid varandra —
+`adrenalin</a>/<a …>noradrenalin` — och när varje tagg byts mot ett mellanslag uppstår ett
+**nytt** mellanslag mitt i `adrenalin/noradrenalin`. Kollapsen räddar inte det, eftersom
+mellanslaget inte är dubblerat utan tillkommet.
+
+**Åtgärdat i verktyget:** `sidtext_for()` tar nu bort *inline*-taggar (`a`, `em`, `strong`,
+`span`, `sup`, `sub`, `abbr`, `b`, `i`, `code`) helt och byter bara blocktaggar mot mellanslag.
+Då kan två celler fortfarande inte smälta ihop till ett ord, samtidigt som en tooltip mitt i en
+mening inte längre bryter jämförelsen. Kontrollerat åt båda håll: de äkta larmen fälls
+fortfarande, och `≥400` respektive `<400` i två grannceller separeras alltjämt.
