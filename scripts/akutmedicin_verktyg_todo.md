@@ -126,15 +126,29 @@ omfattas inte — regeln gäller namn på *våra* funktioner.
 
 ### 3a. Fyra mönster täcker alla 19 instrument
 
-| Mönster | Mekanik | Instrument |
-|---|---|---|
-| **A. Kryssruteskala** | Summa av kryss → band | CHA₂DS₂-VA, HAS-BLED, Wells, sPESI, PERC, 4AT, Alvarado, Glasgow-Blatchford |
-| **B. Värdeskala** | Numeriskt värde → intervall → poäng | NEWS2, GCS, RLS 85, qSOFA, SOFA, CRB-65 |
-| **C. Formelräknare** | Aritmetik → tröskel | QTc, korrigerat Na, effektiv osmolalitet, blodgas |
-| **D. Beslutsgång** | Strukturerad tabell/steg | EHRA, BE-FAST, HINTS |
+| Mönster | Mekanik | Instrument | Renderare |
+|---|---|---|---|
+| **A. Kryssruteskala** | Summa av kryss → band | CHA₂DS₂-VA, HAS-BLED, Wells, sPESI, PERC, 4AT, Alvarado, Glasgow-Blatchford | ✅ `kryss` (0.9.415) |
+| **B. Värdeskala** | Numeriskt värde → intervall → poäng | NEWS2, GCS, RLS 85, qSOFA, SOFA, CRB-65 | ✅ `varde` (0.9.287) |
+| **C. Formelräknare** | Aritmetik → tröskel | QTc, korrigerat Na, effektiv osmolalitet | ✅ `formel` (0.9.305) |
+| **D. Beslutsgång** | Ett eller flera steg → utfall | EHRA, BE-FAST, HINTS | ✅ `gang` (0.9.415) |
 
-Därför: **`data/akutmedicin.json` + `js/akutmedicin.js` med fyra renderare.** En ny skala
-blir en JSON-post, inte ny kod.
+Blodgasklassificeraren fick ett eget mönster (`blodgas`) i stället för att tvingas in i C —
+se §7e. **Alla fyra mönstren är byggda sedan 0.9.415.** En ny skala är därmed en JSON-post,
+inte ny kod; det gäller nu på riktigt och inte bara som avsikt.
+
+**Mönster A, det som skiljer det från B:** en urkryssad ruta betyder att kriteriet saknas,
+inte att svaret uteblivit, så bedömningen är alltid komplett och resultatet visas från början
+(Wells 0 poäng ÄR ett svar). Vikter kan dessutom vara negativa — Wells drar av 2 poäng — så
+uträkningen skrivs med tecken. `grupp` gör två kriterier ömsesidigt uteslutande, vilket
+CHA₂DS₂-VA:s två åldersrader kräver; utan det kan skalan summeras till 3 åldersspoäng, en
+nivå som inte finns i instrumentet.
+
+**Mönster D, regeln som håller för alla tre instrumenten:** utfallet är det **högst rankade**
+bland de valda alternativen, aldrig en summa. Modifierad EHRA graderar efter det svåraste som
+stämmer, och BE-FAST och HINTS bygger båda på att ETT centralt fynd flyttar hela bedömningen.
+Ingen Träna-flik, av samma skäl som blodgasklassificeraren saknar en: det finns ingen
+uträkning att kontrollera sitt svar mot.
 
 **Blodgastolkningen byggs om.** Förlagan har en statisk stegtabell. Vi bygger en riktig
 klassificerare: in med pH, pCO₂, HCO₃⁻ och BE, ut med "metabol acidos med adekvat
@@ -251,7 +265,8 @@ Nya sidor **stoppar bygget** om de inte registreras — det är §0.4 och det ä
 | **1** | `wire_terms.py` utökas till `/verktyg/` + ordlistetermerna + §0.6 i reglerna | ✅ **klart 0.9.286** |
 | **2** | Motor (`akutmedicin.json` + `.js` + CSS) + hubb + `vitalparametrar.html` (NEWS2) + testskal | ✅ **klart 0.9.287** |
 | **3** | `syra-bas.html` — blodgasklassificeraren, korrigerat natrium, effektiv osmolalitet | ✅ **klart 0.9.305** |
-| **4** | `blodproppar.html` + `hjartat.html` | väntar |
+| **3,5** | Motorn färdig: mönster A och D + facit för Wells DVT, CHA₂DS₂-VA och EHRA | ✅ **klart 0.9.415** |
+| **4** | `blodproppar.html` + `hjartat.html` | väntar — **ingen ny motorkod behövs** |
 | **5** | `infektion.html` + `neurologi.html` + `buken.html` | väntar |
 | **6** | `kunskapsbank/kliniska-poangskalor.html` + korslänkning + `info.html`-källor | väntar |
 
@@ -386,3 +401,44 @@ att grundproblemet inte var en metabol acidos alls. Rättat till att bara trigga
 algoritmen faktiskt *landat* i `metabol_acidos` eller `blandad_acidos` som primär rubbning —
 inte varje gång bikarbonatet råkar vara lågt. Samma sorts fel som `hals` i släpp 2: rätt
 riktning på jämförelsen, fel villkor för när den ska prövas.
+
+### Släpp 3,5 — LEVERERAT 0.9.415 (motorn färdigbyggd)
+
+- [x] **Mönster A (`kryss`)** i `js/akutmedicin.js` — kryssruteskala med vikt per kriterium,
+      summa mot `bandFor()` (delas rakt av med mönster B), tecken i uträkningen för negativa
+      vikter och `grupp` för ömsesidigt uteslutande kriterier. Träna-läget döljer vikterna,
+      vilket är hela poängen: det man ska lära sig är just vad varje kriterium väger.
+- [x] **Mönster D (`gang`)** i `js/akutmedicin.js` — beslutsgång där utfallet är det högst
+      rankade valda alternativet. Skriven för flera steg, med ett instrument som använder ett;
+      BE-FAST och HINTS blir JSON-poster i släpp 5 utan ny kod.
+- [x] `byggValfalt` fick samma `utanPoang`-flagga som `byggTalfalt` redan hade, så
+      beslutsgångens steg slipper en poängchip som ändå står tom.
+- [x] **Wells DVT** i facit — tio kriterier ur Wells et al. (2003), nio à +1 p och avdraget
+      på −2 p, med 2003 års dikotomi (≥2 = DVT sannolik) som band.
+- [x] **CHA₂DS₂-VA** i facit — sju kriterier ur ESC (2024), utan könskriteriet. De två
+      åldersraderna ligger i `grupp: "alder"`.
+- [x] **Modifierad EHRA** i facit — fem klasser ur Wynn et al. (2014). 2b och 3 ligger på
+      samma allvarlighetsnivå, vilket är vad 2014 års modifiering visade.
+- [x] `css/verktyg.css` — `.vt-kravlista`, `.vt-krav`, `.vt-krav-text`, `.vt-poang.is-aktiv`,
+      `.vt-band.is-tom`. Under 480 px flyttar vikten ner under etiketten i stället för att
+      klämma ihop den till en spalt på några ord.
+- [x] `scripts/test_verktyg_akutmedicin.js` utökad 195 → 279 tester. Varje vikt prövas mot
+      instrumentets egen tabell och varje bandgräns åt båda håll, samma metod som för NEWS2.
+- [x] Larmen verifierade med fyra planterade fel: fel vikt på Wells avdrag, borttagen
+      `grupp` på åldersraden, EHRA 2b som pekar på fel utfall, och ett `monster` utan
+      renderare.
+
+#### 7f. Kontrollen visste inte om att facit kunde växa
+
+`check_akutmedicin.py` var handskriven per sida: den läste `news2` mot `vitalparametrar.html`
+och de tre syra-bas-instrumenten mot `syra-bas.html`. Nya poster i facit gick den helt förbi,
+alltså exakt den tystnad §0.4 finns för att förhindra — tre nya skalor hade kunnat läggas in
+utan att en enda kontroll märkte det.
+
+**Åtgärdat i samma pass:** `SPEGLAD_AV` och `UTAN_SIDA` täcker nu varje post i facit, och
+`kontrollera_tackning()` stoppar bygget i tre lägen — en skala som inte står i någotdera
+uppslag, ett uppslag som pekar på en skala som inte längre finns, och ett undantag i
+`UTAN_SIDA` vars sida faktiskt har byggts (då ska posten flyttas till `SPEGLAD_AV`, inte ligga
+kvar och tysta kontrollen för en sida som finns). Alla tre grenarna är verifierade genom att
+felet planterats, den sista genom att anropa funktionen direkt eftersom nodtestet hann fälla
+körningen först.

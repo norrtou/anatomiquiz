@@ -497,6 +497,82 @@
   font-weight: 500;
 }
 
+/* Kryssruteskalans vikt räknas just nu med. Färgen är densamma som
+   verktygskortets kantlinje, alltså sajtens "aktiv"-signal — och den
+   bär aldrig informationen ensam: rutan är ikryssad, uträkningen visar
+   talet, och summan står i .vt-out. */
+.vt-poang.is-aktiv {
+  color: var(--primary-deep);
+}
+
+/* ---------- Kryssruteskalan (mönster A) ---------- */
+
+/* Kriterierna är en lista med kryssrutor, inte ett rutnät med fält:
+   texterna är olika långa meningar och skulle brytas sönder i kolumner.
+   .vt-grid används därför INTE här. */
+.vt-kravlista {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 4px;
+}
+
+.vt-krav {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: baseline;
+  column-gap: 10px;
+  padding: 9px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.vt-krav:hover {
+  background: rgba(16, 185, 129, 0.06);
+}
+
+/* Träffytan ska nå 44 px i höjd även när etiketten är en enda rad —
+   samma minimimått som knapparna i .vt-mode. */
+.vt-krav input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  accent-color: var(--primary);
+  flex: 0 0 auto;
+  align-self: start;
+  transform: translateY(2px);
+}
+
+.vt-krav-text {
+  font-size: 0.94rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+/* Vikten står i egen kolumn och ska inte hoppa i sidled när talet
+   byter tecken eller bredd. */
+.vt-krav .vt-poang {
+  display: block;
+  margin-top: 0;
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* Under 480 px får vikten inte tränga ihop etiketten till en spalt på
+   några ord — den flyttar ner under texten i stället. */
+@media (max-width: 480px) {
+  .vt-krav {
+    grid-template-columns: auto 1fr;
+  }
+
+  .vt-krav .vt-poang {
+    grid-column: 2;
+    text-align: left;
+    margin-top: 3px;
+  }
+}
+
 /* Förklaringar som hör till ett enskilt fält. Finstilt, utan fetstil. */
 .vt-hjalp {
   margin-top: 12px;
@@ -571,6 +647,14 @@
 
 .vt-band.is-hog .vt-band-titel {
   color: var(--error-text-strong);
+}
+
+/* Beslutsgången innan något valts. Ärver .vt-band:s grundform, som är
+   just den neutrala: ingen tonad botten och grå kantlinje. Ett
+   obesvarat instrument får inte se ut som ett lugnande besked, så
+   den ska INTE plockas in under .is-ingen/.is-lag ovan. */
+.vt-band.is-tom {
+  color: var(--text-secondary);
 }
 
 /* Kolumnproportioner för poängskalornas uppslagstabeller. Basen

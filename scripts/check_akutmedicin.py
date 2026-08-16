@@ -62,6 +62,28 @@ SIDA = ROT / "verktyg" / "akutmedicin" / "vitalparametrar.html"
 SIDA_SYRABAS = ROT / "verktyg" / "akutmedicin" / "syra-bas.html"
 NODTEST = "scripts/test_verktyg_akutmedicin.js"
 
+# Vilken sida som speglar vilken skala. Varje post i facit måste stå i EN av
+# de två uppslagen nedan, annars stoppar skriptet: en ny skala som ingen sida
+# kontrollerar ska synas, inte tyst passera (CLAUDE_REGLER §0.4). Det var
+# precis så den här kontrollen kunde växa ifrån facit — den var handskriven
+# per sida och visste inte om att facit fått fler poster.
+SPEGLAD_AV = {
+    "news2": "vitalparametrar.html",
+    "natrium_korrigerat": "syra-bas.html",
+    "osmolalitet": "syra-bas.html",
+    "blodgas": "syra-bas.html",
+}
+
+# Skalor som ligger i facit men ännu inte har någon sida. Motorn och testskalet
+# täcker dem (scripts/test_verktyg_akutmedicin.js), men ingen statisk tabell
+# finns att spegla mot förrän sidan skrivs. Posten ska bort härifrån samma pass
+# som sidan byggs — därför står släppet i värdet.
+UTAN_SIDA = {
+    "wells_dvt": "släpp 4, blodproppar.html",
+    "chadsva": "släpp 4, hjartat.html",
+    "ehra": "släpp 4, hjartat.html",
+}
+
 # Formelkoefficienter som bara lever i JS — se modulens docstring.
 KOEFFICIENTER = {
     "natrium_korrigerat": ["1,6", "2,4", "5,55"],
@@ -259,10 +281,54 @@ def kör_nodtest() -> int:
     return 0
 
 
+def kontrollera_tackning(facit: dict) -> int:
+    """Varje skala i facit ska vara känd — speglad av en sida eller uttryckligen
+    undantagen. En okänd post stoppar bygget (CLAUDE_REGLER §0.4)."""
+    skalor = {n for n in facit if not n.startswith("_")}
+    okanda = sorted(skalor - set(SPEGLAD_AV) - set(UTAN_SIDA))
+    if okanda:
+        print("STOPP: dessa skalor finns i data/akutmedicin.json men är okända "
+              "för kontrollen:", file=sys.stderr)
+        for n in okanda:
+            print(f"  - {n}", file=sys.stderr)
+        print("\nLägg posten i SPEGLAD_AV (skalan har en sida med statisk "
+              "tabell) eller i UTAN_SIDA (sidan är inte byggd än). Att bara "
+              "ligga i facit räcker inte — då kontrolleras skalan aldrig.",
+              file=sys.stderr)
+        return 1
+
+    försvunna = sorted((set(SPEGLAD_AV) | set(UTAN_SIDA)) - skalor)
+    if försvunna:
+        print("STOPP: dessa skalor står i kontrollens uppslag men saknas i "
+              f"facit: {', '.join(försvunna)}.", file=sys.stderr)
+        return 1
+
+    # En skala i UTAN_SIDA vars sida faktiskt har byggts ska flyttas över, inte
+    # ligga kvar som undantag — annars tystnar kontrollen för en sida som finns.
+    kvar = []
+    for namn, var in UTAN_SIDA.items():
+        sidfil = var.split(", ")[-1]
+        if (ROT / "verktyg" / "akutmedicin" / sidfil).exists():
+            kvar.append(f"{namn}: {sidfil} finns nu — flytta posten till SPEGLAD_AV")
+    if kvar:
+        print("STOPP: undantag som inte längre gäller:", file=sys.stderr)
+        for r in kvar:
+            print("  - " + r, file=sys.stderr)
+        return 1
+
+    print(f"OK: alla {len(skalor)} skalor i facit är kända – {len(SPEGLAD_AV)} "
+          f"speglade av en sida, {len(UTAN_SIDA)} utan sida än "
+          f"({', '.join(sorted(UTAN_SIDA))}).")
+    return 0
+
+
 def main(argv) -> int:
     visa = "-v" in argv or "--verbose" in argv
 
     if kör_nodtest() != 0:
+        return 1
+
+    if kontrollera_tackning(json.loads(FACIT.read_text(encoding="utf-8"))) != 0:
         return 1
 
     skala = json.loads(FACIT.read_text(encoding="utf-8"))["news2"]

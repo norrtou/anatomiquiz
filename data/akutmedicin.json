@@ -320,5 +320,123 @@
       { "namn": "cl",   "etikett": "Klorid",                      "kort": "Klorid",     "typ": "tal", "enhet": "mmol/L", "plats": "t.ex. 100", "rimlig": { "min": 60, "max": 140 }, "valfri": true },
       { "namn": "laktat","etikett": "Laktat",                     "kort": "Laktat",     "typ": "tal", "enhet": "mmol/L", "plats": "t.ex. 1,2", "rimlig": { "min": 0, "max": 30 }, "valfri": true }
     ]
+  },
+
+  "wells_dvt": {
+    "namn": "Wells DVT",
+    "monster": "kryss",
+    "rubrik": "Wells score för djup ventrombos",
+    "intro": "Nio fynd talar för djup ventrombos och ger vardera en poäng. Det tionde kriteriet drar av två poäng och är det enda som pekar åt andra hållet: finns en annan diagnos som förklarar benet lika bra, sjunker sannolikheten för trombos. Kryssa i det som stämmer, så visas summan och vilken grupp patienten hamnar i.",
+    "summaetikett": "Wells score",
+    "enhetssuffix": "poäng",
+    "kalla": "Wells et al. (2003)",
+
+    "kriterier": [
+      { "namn": "cancer", "kort": "Aktiv cancer", "poang": 1,
+        "etikett": "Aktiv cancer — pågående behandling, behandling avslutad inom sex månader, eller palliativ vård" },
+      { "namn": "immobilisering", "kort": "Förlamning eller gips", "poang": 1,
+        "etikett": "Förlamning, pares eller nyligen gipsad nedre extremitet" },
+      { "namn": "sangliggande", "kort": "Sängliggande eller kirurgi", "poang": 1,
+        "etikett": "Sängliggande minst tre dygn, eller större kirurgi inom tolv veckor med narkos eller regional anestesi" },
+      { "namn": "omhet", "kort": "Ömhet längs venerna", "poang": 1,
+        "etikett": "Lokal ömhet längs de djupa venernas förlopp",
+        "hjalp": "Ömheten följer venernas sträckning på lårets insida och i knävecket, inte muskelbuken — det är det som skiljer fyndet från vanlig muskelömhet." },
+      { "namn": "helasvullet", "kort": "Hela benet svullet", "poang": 1,
+        "etikett": "Hela benet svullet" },
+      { "namn": "vadomfang", "kort": "Vadomfång", "poang": 1,
+        "etikett": "Vadomfånget minst tre centimeter större än på det friska benet",
+        "hjalp": "Vadomfånget mäts tio centimeter nedanför tuberositas tibiae på båda benen. Måttet är en av få objektiva punkter i skalan och tappar sitt värde om sidorna mäts på olika höjd." },
+      { "namn": "pittingodem", "kort": "Pittingödem", "poang": 1,
+        "etikett": "Pittingödem enbart i det symtomgivande benet" },
+      { "namn": "kollateraler", "kort": "Kollateralvener", "poang": 1,
+        "etikett": "Framträdande ytliga kollateralvener som inte är åderbråck" },
+      { "namn": "tidigaredvt", "kort": "Tidigare DVT", "poang": 1,
+        "etikett": "Tidigare dokumenterad djup ventrombos" },
+      { "namn": "alternativ", "kort": "Annan diagnos lika sannolik", "poang": -2,
+        "etikett": "Annan diagnos är minst lika sannolik som djup ventrombos",
+        "hjalp": "Avdraget är det enda i skalan och gör Wells till mer än en checklista: bedömaren tvingas väga in vad annat som kan förklara benet, till exempel erysipelas, muskelbristning eller en rupturerad Bakercysta." }
+    ],
+
+    "band": [
+      { "max": 1, "niva": "lag", "rubrik": "DVT osannolik",
+        "text": "I studien som skalan bygger på var förekomsten av trombos låg i den här gruppen, och en negativ D-dimer räckte där för att avfärda diagnosen utan ultraljud." },
+      { "niva": "hog", "rubrik": "DVT sannolik",
+        "text": "Den här gruppen gick i studien vidare till ultraljud oavsett D-dimer, eftersom förekomsten av trombos var för hög för att ett negativt blodprov skulle räcka." }
+    ]
+  },
+
+  "chadsva": {
+    "namn": "CHA₂DS₂-VA",
+    "monster": "kryss",
+    "rubrik": "CHA₂DS₂-VA – strokerisk vid förmaksflimmer",
+    "intro": "Sju riskfaktorer väger tillsammans samman risken för stroke vid förmaksflimmer. Fem av dem ger en poäng och två ger två — hög ålder och tidigare stroke väger dubbelt, eftersom de är de starkaste enskilda riskmarkörerna. Kryssa i det som stämmer, så visas summan och vad riktlinjerna säger om den nivån.",
+    "summaetikett": "CHA₂DS₂-VA",
+    "enhetssuffix": "poäng",
+    "kalla": "European Society of Cardiology (2024)",
+
+    "kriterier": [
+      { "namn": "hjartsvikt", "kort": "Hjärtsvikt", "poang": 1,
+        "etikett": "C – hjärtsvikt eller nedsatt vänsterkammarfunktion" },
+      { "namn": "hypertoni", "kort": "Hypertoni", "poang": 1,
+        "etikett": "H – hypertoni" },
+      { "namn": "alder75", "kort": "Ålder 75 år eller äldre", "poang": 2, "grupp": "alder",
+        "etikett": "A₂ – ålder 75 år eller äldre" },
+      { "namn": "diabetes", "kort": "Diabetes", "poang": 1,
+        "etikett": "D – diabetes" },
+      { "namn": "stroke", "kort": "Tidigare stroke", "poang": 2,
+        "etikett": "S₂ – tidigare stroke, TIA eller arteriell tromboembolism" },
+      { "namn": "karlsjukdom", "kort": "Kärlsjukdom", "poang": 1,
+        "etikett": "V – kärlsjukdom: tidigare hjärtinfarkt, perifer artärsjukdom eller plack i aorta" },
+      { "namn": "alder65", "kort": "Ålder 65–74 år", "poang": 1, "grupp": "alder",
+        "etikett": "A – ålder 65–74 år",
+        "hjalp": "Åldern räknas en gång. De två åldersraderna är ömsesidigt uteslutande, och räknaren lossar därför den ena när den andra kryssas i." }
+    ],
+
+    "band": [
+      { "max": 0, "niva": "lag", "rubrik": "0 poäng – låg risk",
+        "text": "Vid noll poäng rekommenderar ESC:s riktlinjer från 2024 inte antikoagulantia enbart på grund av förmaksflimret." },
+      { "max": 1, "niva": "medel", "rubrik": "1 poäng – måttlig risk",
+        "text": "Vid en poäng anger riktlinjerna att antikoagulantia bör övervägas, med hänsyn till patientens blödningsrisk och egen inställning." },
+      { "niva": "hog", "rubrik": "2 poäng eller mer – hög risk",
+        "text": "Från två poäng rekommenderar riktlinjerna antikoagulantia. Bedömningen av blödningsrisk görs vid sidan om och ersätter inte den här summan." }
+    ]
+  },
+
+  "ehra": {
+    "namn": "Modifierad EHRA",
+    "monster": "gang",
+    "rubrik": "Modifierad EHRA – symtomklass vid förmaksflimmer",
+    "intro": "EHRA-klassen beskriver hur mycket förmaksflimret besvärar patienten, inte hur allvarligt flimret är i sig. Den räknas inte fram utan väljs: leta upp den beskrivning som stämmer bäst, så visas klassen och vad den innebär.",
+    "kalla": "Wynn et al. (2014)",
+    "tomrubrik": "Ingen klass vald",
+    "tomtext": "Välj den beskrivning som stämmer bäst med patientens vardag.",
+
+    "steg": [
+      {
+        "namn": "symtom",
+        "etikett": "Hur påverkas patientens vardag av flimret?",
+        "hjalp": "Skillnaden mellan 2a och 2b är hela poängen med 2014 års modifiering. I båda klasserna fungerar vardagen, men i 2b är patienten besvärad av symtomen ändå — och den gruppen visade sig likna klass 3 mer än klass 2a.",
+        "val": [
+          { "varde": "1",  "text": "Inga symtom alls",                                            "utfall": "e1",  "rang": 1 },
+          { "varde": "2a", "text": "Lätta symtom, vardagen fungerar som vanligt",                  "utfall": "e2a", "rang": 2 },
+          { "varde": "2b", "text": "Måttliga symtom, vardagen fungerar men patienten besväras",    "utfall": "e2b", "rang": 3 },
+          { "varde": "3",  "text": "Svåra symtom, vardagen påverkas",                              "utfall": "e3",  "rang": 4 },
+          { "varde": "4",  "text": "Invalidiserande symtom, vanliga aktiviteter går inte att göra", "utfall": "e4",  "rang": 5 }
+        ]
+      }
+    ],
+
+    "utfall": {
+      "e1":  { "niva": "ingen", "rubrik": "EHRA 1 – inga symtom",
+               "text": "Flimret ger inga symtom och upptäcks ofta av en slump. Klassen säger ingenting om strokerisken, som bedöms separat." },
+      "e2a": { "niva": "lag", "rubrik": "EHRA 2a – lätta symtom",
+               "text": "Symtomen finns men stör inte vardagen, och patienten är inte besvärad av dem." },
+      "e2b": { "niva": "medel", "rubrik": "EHRA 2b – måttliga symtom",
+               "text": "Vardagen fungerar, men patienten besväras av symtomen. Det var den här gruppen 2014 års modifiering bröt ut ur den gamla klass 2, eftersom den i studien liknade klass 3 mer än klass 2a." },
+      "e3":  { "niva": "medel", "rubrik": "EHRA 3 – svåra symtom",
+               "text": "Vardagen påverkas av symtomen." },
+      "e4":  { "niva": "hog", "rubrik": "EHRA 4 – invalidiserande symtom",
+               "text": "Vanliga aktiviteter går inte längre att utföra." }
+    }
   }
 }

@@ -104,7 +104,8 @@ class SelectEl extends El {
 
 /* Monteringspunkterna på sidorna: en <div data-akut="…"> per skala.
    Flera skalor monteras samtidigt, precis som på syra-bas.html. */
-const SKALNAMN = ['news2', 'natrium_korrigerat', 'osmolalitet', 'blodgas'];
+const SKALNAMN = ['news2', 'natrium_korrigerat', 'osmolalitet', 'blodgas',
+                  'wells_dvt', 'chadsva', 'ehra'];
 const platser = {};
 SKALNAMN.forEach((namn) => {
   const p = new El('div');
@@ -647,6 +648,265 @@ async function kör() {
 
     r.nollknapp.fire('click');
     pastå('nollställt', r.falt.ph.input.value, '');
+  }
+
+  /* =========================================================
+     Kryssruteskalorna (mönster A): Wells DVT och CHA₂DS₂-VA
+     =========================================================
+     Samma metod som för NEWS2: instrumentets egen tabell är facit,
+     och varje kriterium prövas mot sin vikt i tabellen i stället för
+     att ett par patientexempel räknas igenom. Vikterna är avlästa ur
+     Wells et al. (2003) respektive ESC:s riktlinje från 2024 — inga
+     tal här är uträknade av mig.
+
+     Bandgränsen prövas åt BÅDA håll, precis som intervallgränserna i
+     NEWS2: en gräns som hamnar en poäng fel är den feltyp en
+     kryssruteskala drabbas av. */
+
+  function plockaKryss(namn) {
+    const kort = platser[namn].children[0];
+    const rutor = {};
+    kort.findAll((e) => e._class.has('vt-krav')).forEach((k) => {
+      rutor[k.dataset.falt] = {
+        el: k,
+        ruta: k.find((e) => e.tagName === 'INPUT'),
+        poang: k.find((e) => e._class.has('vt-poang'))
+      };
+    });
+    const ut = kort.find((e) => e._class.has('vt-out'));
+    const svarsruta = kort.find((e) => e._class.has('vt-svarsruta'));
+    return {
+      kort, rutor,
+      ut,
+      varde: ut.children[1],
+      calc: ut.children[2],
+      band: kort.find((e) => e._class.has('vt-band')),
+      svarsruta,
+      svarInput: svarsruta.find((e) => e.tagName === 'INPUT'),
+      svarKnapp: svarsruta.find((e) => e.tagName === 'BUTTON'),
+      dom: svarsruta.children[svarsruta.children.length - 1],
+      lagesknappar: kort.find((e) => e._class.has('vt-mode')).children,
+      nollknapp: kort.find((e) => e._class.has('vt-nollstall')).children[0]
+    };
+  }
+
+  const kryssa = (r, namn, pa) => {
+    r.rutor[namn].ruta.checked = pa !== false;
+    r.rutor[namn].ruta.fire('change');
+  };
+  const bandTitelAv = (r) =>
+    r.band.children.find((c) => c._class.has('vt-band-titel')).textContent;
+
+  /** Summan ETT ensamt kriterium ger, allt annat urkryssat. */
+  function viktFor(r, namn) {
+    r.nollknapp.fire('click');
+    kryssa(r, namn);
+    const m = /^(-?\d+) poäng$/.exec(r.varde.textContent);
+    return m ? Number(m[1]) : r.varde.textContent;
+  }
+
+  /* ---- Wells DVT ---- */
+  rubrik('Wells DVT — vikterna, en per kriterium (Wells et al. 2003)');
+  {
+    const r = plockaKryss('wells_dvt');
+
+    pastå('aktiv cancer', viktFor(r, 'cancer'), 1);
+    pastå('förlamning eller gips', viktFor(r, 'immobilisering'), 1);
+    pastå('sängliggande eller kirurgi', viktFor(r, 'sangliggande'), 1);
+    pastå('ömhet längs venerna', viktFor(r, 'omhet'), 1);
+    pastå('hela benet svullet', viktFor(r, 'helasvullet'), 1);
+    pastå('vadomfång', viktFor(r, 'vadomfang'), 1);
+    pastå('pittingödem', viktFor(r, 'pittingodem'), 1);
+    pastå('kollateralvener', viktFor(r, 'kollateraler'), 1);
+    pastå('tidigare DVT', viktFor(r, 'tidigaredvt'), 1);
+    pastå('annan diagnos lika sannolik drar av två', viktFor(r, 'alternativ'), -2);
+
+    rubrik('  Utgångsläget är ett svar, inte ett tomt fält');
+    r.nollknapp.fire('click');
+    pastå('noll poäng visas direkt', r.varde.textContent, '0 poäng');
+    pastå('uträkningen säger varför', r.calc.textContent, 'Inget kriterium ikryssat = 0');
+    pastå('bandet visas', bandTitelAv(r), 'DVT osannolik');
+
+    rubrik('  Bandgränsen prövad åt båda håll (dikotomin i 2003 års modell)');
+    r.nollknapp.fire('click');
+    kryssa(r, 'cancer');
+    pastå('1 poäng', r.varde.textContent, '1 poäng');
+    pastå('1 poäng ger osannolik', bandTitelAv(r), 'DVT osannolik');
+    pastå('nivån', r.band.className, 'vt-band is-lag');
+    kryssa(r, 'omhet');
+    pastå('2 poäng', r.varde.textContent, '2 poäng');
+    pastå('2 poäng ger sannolik', bandTitelAv(r), 'DVT sannolik');
+    pastå('nivån', r.band.className, 'vt-band is-hog');
+
+    rubrik('  Avdraget räknas med tecken och kan sänka under noll');
+    r.nollknapp.fire('click');
+    kryssa(r, 'alternativ');
+    pastå('summan', r.varde.textContent, '-2 poäng');
+    pastå('uträkningen', r.calc.textContent, '−2 = -2');
+    pastå('negativ summa hamnar i låga bandet', bandTitelAv(r), 'DVT osannolik');
+
+    rubrik('  Avdraget kan vända en sannolik bedömning till osannolik');
+    r.nollknapp.fire('click');
+    kryssa(r, 'cancer');
+    kryssa(r, 'omhet');
+    kryssa(r, 'helasvullet');
+    pastå('tre kriterier', bandTitelAv(r), 'DVT sannolik');
+    kryssa(r, 'alternativ');
+    pastå('summan efter avdrag', r.varde.textContent, '1 poäng');
+    pastå('uträkningen med tecken', r.calc.textContent, '1 + 1 + 1 − 2 = 1');
+    pastå('bedömningen vänder', bandTitelAv(r), 'DVT osannolik');
+
+    rubrik('  Alla nio positiva kriterier');
+    r.nollknapp.fire('click');
+    ['cancer', 'immobilisering', 'sangliggande', 'omhet', 'helasvullet',
+     'vadomfang', 'pittingodem', 'kollateraler', 'tidigaredvt']
+      .forEach((n) => kryssa(r, n));
+    pastå('maxsumman utan avdrag', r.varde.textContent, '9 poäng');
+
+    rubrik('  Vikten syns vid kriteriet och markeras när den räknas');
+    r.nollknapp.fire('click');
+    pastå('vikten står vid kriteriet', r.rutor.cancer.poang.textContent, '+1 p');
+    pastå('avdragets tecken', r.rutor.alternativ.poang.textContent, '−2 p');
+    pastå('urkryssad är tom', r.rutor.cancer.poang.className, 'vt-poang is-tom');
+    kryssa(r, 'cancer');
+    pastå('ikryssad är aktiv', r.rutor.cancer.poang.className, 'vt-poang is-aktiv');
+
+    rubrik('  Träningsläget döljer vikterna');
+    r.lagesknappar.find((b) => b.textContent === 'Träna').fire('click');
+    pastå('utfallet är dolt', r.ut.hidden, true);
+    pastå('bandet är dolt', r.band.hidden, true);
+    pastå('svarsrutan visas', r.svarsruta.hidden, false);
+    pastå('vikten är dold', r.rutor.cancer.poang.textContent, 'räkna själv');
+    pastå('även avdragets vikt', r.rutor.alternativ.poang.textContent, 'räkna själv');
+
+    r.svarInput.value = '1';
+    r.svarKnapp.fire('click');
+    pastå('rätt svar', r.dom.className, 'vt-dom ratt');
+    paståMed('facit skrivs ut', r.dom.textContent, 'aktiv cancer +1 = 1');
+    r.svarInput.value = '4';
+    r.svarKnapp.fire('click');
+    pastå('fel svar', r.dom.className, 'vt-dom fel');
+    paståMed('rätt summa anges', r.dom.textContent, 'Rätt summa är 1 poäng');
+    r.svarInput.value = 'x';
+    r.svarKnapp.fire('click');
+    paståMed('icke-tal avvisas', r.dom.textContent, 'heltal');
+
+    r.lagesknappar.find((b) => b.textContent === 'Räkna').fire('click');
+    pastå('tillbaka i räkneläget', r.ut.hidden, false);
+    pastå('vikten syns igen', r.rutor.cancer.poang.textContent, '+1 p');
+
+    rubrik('  Nollställ');
+    kryssa(r, 'omhet');
+    r.nollknapp.fire('click');
+    pastå('rutorna töms', r.rutor.omhet.ruta.checked, false);
+    pastå('summan nollas', r.varde.textContent, '0 poäng');
+  }
+
+  /* ---- CHA₂DS₂-VA ---- */
+  rubrik('CHA₂DS₂-VA — vikterna ur ESC 2024, kön ingår inte');
+  {
+    const r = plockaKryss('chadsva');
+
+    pastå('hjärtsvikt', viktFor(r, 'hjartsvikt'), 1);
+    pastå('hypertoni', viktFor(r, 'hypertoni'), 1);
+    pastå('ålder 75 år eller äldre väger dubbelt', viktFor(r, 'alder75'), 2);
+    pastå('diabetes', viktFor(r, 'diabetes'), 1);
+    pastå('tidigare stroke väger dubbelt', viktFor(r, 'stroke'), 2);
+    pastå('kärlsjukdom', viktFor(r, 'karlsjukdom'), 1);
+    pastå('ålder 65–74 år', viktFor(r, 'alder65'), 1);
+
+    rubrik('  Åldersraderna utesluter varandra');
+    r.nollknapp.fire('click');
+    kryssa(r, 'alder65');
+    kryssa(r, 'alder75');
+    pastå('den nyss ikryssade vinner', r.rutor.alder75.ruta.checked, true);
+    pastå('den andra lossas', r.rutor.alder65.ruta.checked, false);
+    pastå('summan räknar åldern en gång', r.varde.textContent, '2 poäng');
+    kryssa(r, 'alder65');
+    pastå('och åt andra hållet', r.rutor.alder75.ruta.checked, false);
+    pastå('summan', r.varde.textContent, '1 poäng');
+
+    rubrik('  Kriterier utanför gruppen rörs inte');
+    r.nollknapp.fire('click');
+    kryssa(r, 'hypertoni');
+    kryssa(r, 'alder75');
+    kryssa(r, 'alder65');
+    pastå('hypertonin står kvar', r.rutor.hypertoni.ruta.checked, true);
+    pastå('summan', r.varde.textContent, '2 poäng');
+
+    rubrik('  Bandgränserna prövade åt båda håll');
+    r.nollknapp.fire('click');
+    pastå('0 poäng', bandTitelAv(r), '0 poäng – låg risk');
+    pastå('nivån', r.band.className, 'vt-band is-lag');
+    kryssa(r, 'hypertoni');
+    pastå('1 poäng', bandTitelAv(r), '1 poäng – måttlig risk');
+    pastå('nivån', r.band.className, 'vt-band is-medel');
+    kryssa(r, 'diabetes');
+    pastå('2 poäng', bandTitelAv(r), '2 poäng eller mer – hög risk');
+    pastå('nivån', r.band.className, 'vt-band is-hog');
+
+    rubrik('  Ett tvåpoängskriterium ensamt passerar gränsen');
+    r.nollknapp.fire('click');
+    kryssa(r, 'stroke');
+    pastå('tidigare stroke ensam ger 2 poäng', r.varde.textContent, '2 poäng');
+    pastå('och når högsta bandet', bandTitelAv(r), '2 poäng eller mer – hög risk');
+
+    rubrik('  Maxsumman');
+    r.nollknapp.fire('click');
+    ['hjartsvikt', 'hypertoni', 'alder75', 'diabetes', 'stroke', 'karlsjukdom']
+      .forEach((n) => kryssa(r, n));
+    pastå('åtta poäng är taket', r.varde.textContent, '8 poäng');
+    pastå('uträkningen', r.calc.textContent, '1 + 1 + 2 + 1 + 2 + 1 = 8');
+  }
+
+  /* =========================================================
+     Beslutsgången (mönster D): modifierad EHRA
+     =========================================================
+     Instrumentet summerar ingenting — klassen väljs. Testet prövar
+     att varje beskrivning ur Wynn et al. (2014) leder till sin klass,
+     och att 2b och 3 hamnar på samma allvarlighetsnivå, vilket är
+     hela poängen med 2014 års modifiering. */
+
+  rubrik('Modifierad EHRA — de fem klasserna (Wynn et al. 2014)');
+  {
+    const kort = platser.ehra.children[0];
+    const valjare = kort.find((e) => e.tagName === 'SELECT');
+    const band = kort.find((e) => e._class.has('vt-band'));
+    const nollknapp = kort.find((e) => e._class.has('vt-nollstall')).children[0];
+    const titel = () =>
+      band.children.find((c) => c._class.has('vt-band-titel')).textContent;
+    const valj = (v) => { valjare.value = v; valjare.fire('change'); };
+
+    valj('1');
+    pastå('klass 1', titel(), 'EHRA 1 – inga symtom');
+    pastå('nivån', band.className, 'vt-band is-ingen');
+
+    valj('2a');
+    pastå('klass 2a', titel(), 'EHRA 2a – lätta symtom');
+    pastå('nivån', band.className, 'vt-band is-lag');
+
+    valj('2b');
+    pastå('klass 2b', titel(), 'EHRA 2b – måttliga symtom');
+    pastå('nivån', band.className, 'vt-band is-medel');
+    paståMed('modifieringen förklaras', band.textContent, 'liknade klass 3 mer än klass 2a');
+
+    valj('3');
+    pastå('klass 3', titel(), 'EHRA 3 – svåra symtom');
+    pastå('2b och 3 ligger på samma nivå', band.className, 'vt-band is-medel');
+
+    valj('4');
+    pastå('klass 4', titel(), 'EHRA 4 – invalidiserande symtom');
+    pastå('nivån', band.className, 'vt-band is-hog');
+
+    rubrik('  Ingen Träna-flik och ingen poängchip');
+    pastå('ingen lägesväljare', kort.find((e) => e._class.has('vt-mode')), null);
+    pastå('ingen poängchip vid steget', kort.find((e) => e._class.has('vt-poang')), null);
+
+    rubrik('  Nollställ går till första alternativet');
+    valj('4');
+    nollknapp.fire('click');
+    pastå('valet återställs', valjare.value, '1');
+    pastå('utfallet följer med', titel(), 'EHRA 1 – inga symtom');
   }
 
   console.log('\n' + (fel === 0

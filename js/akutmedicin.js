@@ -209,7 +209,12 @@
     return { el: wrap, input: input, valjare: null, poang: poang, spec: spec };
   }
 
-  function byggValfalt(spec, idPrefix) {
+  /**
+   * @param {boolean} [utanPoang] Beslutsgången (mönster D) summerar
+   *   ingenting, så dess steg har ingen poäng att visa. Chipen byggs
+   *   då inte alls — samma skäl som i byggTalfalt ovan.
+   */
+  function byggValfalt(spec, idPrefix, utanPoang) {
     var wrap = document.createElement('label');
     wrap.className = 'vt-field vt-field--val';
     wrap.dataset.falt = spec.namn;
@@ -232,10 +237,13 @@
     rad.appendChild(valjare);
     wrap.appendChild(rad);
 
-    var poang = document.createElement('span');
-    poang.className = 'vt-poang is-tom';
-    poang.textContent = '—';
-    wrap.appendChild(poang);
+    var poang = null;
+    if (!utanPoang) {
+      poang = document.createElement('span');
+      poang.className = 'vt-poang is-tom';
+      poang.textContent = '—';
+      wrap.appendChild(poang);
+    }
 
     return { el: wrap, input: null, valjare: valjare, poang: poang, spec: spec };
   }
@@ -1401,12 +1409,451 @@
     return kort;
   }
 
-  /* Mönster A (kryssruteskala) hängs på här när sitt instrument
-     byggs. Ett mönster utan instrument vore kod som ingen kör och
-     ingen testar. */
+  /* ---------------------------------------------------------
+     Renderaren: kryssruteskala (mönster A)
+     ---------------------------------------------------------
+     Varje kriterium är antingen uppfyllt eller inte och bär sin
+     egen vikt. Summan läses mot samma sorts svarstabell som
+     värdeskalan, så bandFor() delas rakt av.
+
+     Två skillnader mot värdeskalan, båda med följder för koden:
+
+     1. Det finns inget ofyllt läge. En urkryssad ruta betyder att
+        kriteriet saknas, inte att svaret uteblivit — bedömningen
+        är alltså alltid komplett och resultatet visas från början.
+        Wells 0 poäng ÄR ett svar, till skillnad från en NEWS2 utan
+        ifylld puls.
+     2. Vikterna kan vara negativa. Wells drar av 2 poäng när en
+        annan diagnos är minst lika sannolik som DVT, så uträkningen
+        skrivs med tecken i stället för som en kedja av plus.
+
+     `grupp` gör två kriterier ömsesidigt uteslutande. CHA₂DS₂-VA
+     har både "75 år eller äldre" (2 p) och "65–74 år" (1 p), och
+     ingen patient kan uppfylla båda; kryssas den ena i lossas den
+     andra. Utan det kan skalan summeras till 3 åldersspoäng, vilket
+     inte finns i instrumentet.
+     --------------------------------------------------------- */
+
+  /** Vikten som den skrivs vid kriteriet: "+1 p", "−2 p". */
+  function viktText(n) {
+    return (n < 0 ? '−' : '+') + Math.abs(n) + ' p';
+  }
+
+  /** Uträkningen med tecken: "1 + 1 − 2 = 0". */
+  function kryssUtrakning(delar, summa) {
+    if (!delar.length) return 'Inget kriterium ikryssat = 0';
+    var s = '';
+    delar.forEach(function (d, i) {
+      if (i === 0) s += (d.poang < 0 ? '−' : '') + Math.abs(d.poang);
+      else s += (d.poang < 0 ? ' − ' : ' + ') + Math.abs(d.poang);
+    });
+    return s + ' = ' + summa;
+  }
+
+  function bedomKryss(skala, ikryssade) {
+    var delar = [];
+    var summa = 0;
+    skala.kriterier.forEach(function (k) {
+      if (!ikryssade[k.namn]) return;
+      summa += k.poang;
+      delar.push({ kriterium: k, poang: k.poang });
+    });
+    return { summa: summa, delar: delar, band: bandFor(skala, summa) };
+  }
+
+  function byggKryssruta(spec, idPrefix) {
+    var wrap = document.createElement('label');
+    wrap.className = 'vt-krav';
+    wrap.dataset.falt = spec.namn;
+
+    var ruta = document.createElement('input');
+    ruta.type = 'checkbox';
+    ruta.id = idPrefix + '-' + spec.namn;
+    ruta.checked = false;
+    wrap.appendChild(ruta);
+
+    var text = document.createElement('span');
+    text.className = 'vt-krav-text';
+    text.textContent = spec.etikett;
+    wrap.appendChild(text);
+
+    var poang = document.createElement('span');
+    poang.className = 'vt-poang';
+    poang.textContent = viktText(spec.poang);
+    wrap.appendChild(poang);
+
+    return { el: wrap, ruta: ruta, poang: poang, spec: spec };
+  }
+
+  function skapaKryssruteskala(skala, id) {
+    var kort = document.createElement('section');
+    kort.className = 'vt-tool';
+    kort.id = id;
+
+    var huvud = document.createElement('div');
+    huvud.className = 'vt-tool-head';
+    var h3 = document.createElement('h3');
+    h3.textContent = skala.rubrik;
+    h3.id = id + '-rubrik';
+    huvud.appendChild(h3);
+
+    var lage = document.createElement('div');
+    lage.className = 'vt-mode';
+    lage.setAttribute('role', 'group');
+    lage.setAttribute('aria-label', 'Läge för ' + skala.namn);
+    var knappRakna = document.createElement('button');
+    knappRakna.type = 'button';
+    knappRakna.textContent = 'Räkna';
+    knappRakna.setAttribute('aria-pressed', 'true');
+    var knappTrana = document.createElement('button');
+    knappTrana.type = 'button';
+    knappTrana.textContent = 'Träna';
+    knappTrana.setAttribute('aria-pressed', 'false');
+    lage.appendChild(knappRakna);
+    lage.appendChild(knappTrana);
+    huvud.appendChild(lage);
+    kort.appendChild(huvud);
+
+    var intro = document.createElement('p');
+    intro.className = 'vt-tool-intro';
+    intro.textContent = skala.intro;
+    kort.appendChild(intro);
+
+    /* Kriterierna */
+    var lista = document.createElement('div');
+    lista.className = 'vt-kravlista';
+    kort.appendChild(lista);
+
+    var rutor = skala.kriterier.map(function (k) {
+      var r = byggKryssruta(k, id);
+      lista.appendChild(r.el);
+      return r;
+    });
+
+    /* Hjälptexterna vid kriterierna, samma finstilta form som i
+       värdeskalan: ingen fetstil, texten namnger sitt eget
+       kriterium (CLAUDE_REGLER §0.5 punkt 4). */
+    var hjalp = document.createElement('div');
+    hjalp.className = 'vt-hjalp';
+    skala.kriterier.forEach(function (k) {
+      if (!k.hjalp) return;
+      var rad = document.createElement('p');
+      rad.textContent = k.hjalp;
+      hjalp.appendChild(rad);
+    });
+    if (hjalp.children.length) kort.appendChild(hjalp);
+
+    /* Utfallet */
+    var ut = document.createElement('div');
+    ut.className = 'vt-out';
+    ut.setAttribute('aria-live', 'polite');
+    var utEtikett = document.createElement('span');
+    utEtikett.className = 'vt-out-label';
+    utEtikett.textContent = skala.summaetikett;
+    var utVarde = document.createElement('div');
+    utVarde.className = 'vt-out-value';
+    var utCalc = document.createElement('div');
+    utCalc.className = 'vt-calc';
+    ut.appendChild(utEtikett);
+    ut.appendChild(utVarde);
+    ut.appendChild(utCalc);
+    kort.appendChild(ut);
+
+    var band = document.createElement('div');
+    band.className = 'vt-band';
+    var bandTitel = document.createElement('strong');
+    bandTitel.className = 'vt-band-titel';
+    var bandText = document.createElement('p');
+    bandText.className = 'vt-band-rad';
+    band.appendChild(bandTitel);
+    band.appendChild(bandText);
+    kort.appendChild(band);
+
+    /* Svarsruta (träningsläget) */
+    var svarsruta = document.createElement('div');
+    svarsruta.className = 'vt-svarsruta';
+    svarsruta.hidden = true;
+    var svarEtikett = document.createElement('span');
+    svarEtikett.className = 'vt-out-label';
+    svarEtikett.textContent = 'Din ' + skala.namn + '-poäng';
+    var svarRad = document.createElement('div');
+    svarRad.className = 'vt-svarsrad';
+    var svarWrap = document.createElement('div');
+    svarWrap.className = 'vt-inputrow';
+    var svarInput = document.createElement('input');
+    svarInput.type = 'text';
+    svarInput.inputMode = 'numeric';
+    svarInput.autocomplete = 'off';
+    svarInput.id = id + '-ditt-svar';
+    svarInput.setAttribute('aria-label', 'Din ' + skala.namn + '-poäng');
+    var svarEnhet = document.createElement('span');
+    svarEnhet.className = 'vt-unit-fixed';
+    svarEnhet.textContent = skala.enhetssuffix;
+    svarWrap.appendChild(svarInput);
+    svarWrap.appendChild(svarEnhet);
+    var svarKnapp = document.createElement('button');
+    svarKnapp.type = 'button';
+    svarKnapp.textContent = 'Kontrollera';
+    svarRad.appendChild(svarWrap);
+    svarRad.appendChild(svarKnapp);
+    var dom = document.createElement('div');
+    dom.setAttribute('aria-live', 'polite');
+    svarsruta.appendChild(svarEtikett);
+    svarsruta.appendChild(svarRad);
+    svarsruta.appendChild(dom);
+    kort.appendChild(svarsruta);
+
+    var nollrad = document.createElement('div');
+    nollrad.className = 'vt-nollstall';
+    var nollknapp = document.createElement('button');
+    nollknapp.type = 'button';
+    nollknapp.textContent = 'Nollställ';
+    nollrad.appendChild(nollknapp);
+    kort.appendChild(nollrad);
+
+    /* ---- tillstånd ---- */
+    var traningslage = false;
+    var senaste = null;
+
+    function lasKryss() {
+      var v = {};
+      rutor.forEach(function (r) { v[r.spec.namn] = !!r.ruta.checked; });
+      return v;
+    }
+
+    function rakna() {
+      senaste = bedomKryss(skala, lasKryss());
+      var aktiva = {};
+      senaste.delar.forEach(function (d) { aktiva[d.kriterium.namn] = true; });
+
+      rutor.forEach(function (r) {
+        if (traningslage) {
+          r.poang.className = 'vt-poang is-dold';
+          r.poang.textContent = 'räkna själv';
+          return;
+        }
+        r.poang.className = 'vt-poang' + (aktiva[r.spec.namn] ? ' is-aktiv' : ' is-tom');
+        r.poang.textContent = viktText(r.spec.poang);
+      });
+
+      lagesvy();
+    }
+
+    function lagesvy() {
+      if (traningslage) {
+        ut.hidden = true;
+        band.hidden = true;
+        svarsruta.hidden = false;
+        return;
+      }
+      svarsruta.hidden = true;
+      ut.hidden = false;
+      band.hidden = false;
+
+      utVarde.textContent = poangText(senaste.summa);
+      utCalc.textContent = kryssUtrakning(senaste.delar, senaste.summa);
+      band.className = 'vt-band is-' + senaste.band.niva;
+      bandTitel.textContent = senaste.band.rubrik;
+      bandText.textContent = senaste.band.text;
+    }
+
+    function sattLage(trana) {
+      traningslage = trana;
+      kort.classList.toggle('is-trana', trana);
+      knappRakna.setAttribute('aria-pressed', String(!trana));
+      knappTrana.setAttribute('aria-pressed', String(trana));
+      dom.className = '';
+      dom.textContent = '';
+      svarInput.value = '';
+      rakna();
+    }
+
+    rutor.forEach(function (r) {
+      r.ruta.addEventListener('change', function () {
+        /* Ömsesidigt uteslutande kriterier: den nyss ikryssade
+           vinner och gruppens övriga lossas. */
+        if (r.spec.grupp && r.ruta.checked) {
+          rutor.forEach(function (annan) {
+            if (annan !== r && annan.spec.grupp === r.spec.grupp) {
+              annan.ruta.checked = false;
+            }
+          });
+        }
+        rakna();
+      });
+    });
+
+    knappRakna.addEventListener('click', function () { sattLage(false); });
+    knappTrana.addEventListener('click', function () { sattLage(true); });
+
+    svarKnapp.addEventListener('click', function () {
+      var mitt = tolkaTal(svarInput.value);
+      if (isNaN(mitt) || mitt !== Math.round(mitt)) {
+        dom.className = 'vt-dom fel';
+        dom.textContent = 'Skriv in din summa som ett heltal.';
+        return;
+      }
+      var facit = senaste.summa;
+      var utrakning = senaste.delar.length
+        ? senaste.delar.map(function (d) {
+            return d.kriterium.kort.toLowerCase() + ' ' + viktText(d.poang).replace(' p', '');
+          }).join(', ') + ' = ' + facit
+        : 'inget kriterium ikryssat = 0';
+
+      if (mitt === facit) {
+        dom.className = 'vt-dom ratt';
+        dom.textContent = 'Rätt. ' + utrakning + '. ' + senaste.band.rubrik + ' – ' +
+          senaste.band.text;
+      } else {
+        dom.className = 'vt-dom fel';
+        dom.textContent = 'Inte riktigt. Rätt summa är ' + poangText(facit) + ': ' +
+          utrakning + '. ' + senaste.band.rubrik + ' – ' + senaste.band.text;
+      }
+    });
+
+    svarInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') { e.preventDefault(); svarKnapp.click(); }
+    });
+
+    nollknapp.addEventListener('click', function () {
+      rutor.forEach(function (r) { r.ruta.checked = false; });
+      dom.className = '';
+      dom.textContent = '';
+      svarInput.value = '';
+      rakna();
+    });
+
+    rakna();
+    return kort;
+  }
+
+  /* ---------------------------------------------------------
+     Renderaren: beslutsgång (mönster D)
+     ---------------------------------------------------------
+     Instrument som inte summerar något. Läsaren svarar på ett
+     eller flera steg, och svaren pekar tillsammans ut ett utfall.
+
+     Utfallet är det HÖGST RANKADE bland de valda alternativen.
+     Det är den regel de tre instrumenten delar: modifierad EHRA
+     graderar efter det svåraste som stämmer, och BE-FAST och HINTS
+     bygger båda på att ETT centralt fynd räcker för att flytta hela
+     bedömningen — alltså max, aldrig summa. Instrument med flera
+     steg blir därför en JSON-post, inte en ny renderare.
+
+     Ingen Träna-flik, av samma skäl som blodgasklassificeraren
+     saknar en: det finns ingen uträkning att kontrollera sitt eget
+     svar mot, bara en klassificering man antingen känner igen
+     eller inte.
+     --------------------------------------------------------- */
+
+  function bedomGang(skala, val) {
+    var bast = null;
+    for (var i = 0; i < skala.steg.length; i++) {
+      var steg = skala.steg[i];
+      for (var j = 0; j < steg.val.length; j++) {
+        var alt = steg.val[j];
+        if (alt.varde !== val[steg.namn]) continue;
+        if (!alt.utfall) break;              // steget pekar inte ut något utfall
+        if (!bast || alt.rang > bast.rang) bast = alt;
+        break;
+      }
+    }
+    if (!bast) return null;
+    var u = skala.utfall[bast.utfall];
+    if (!u) return null;
+    return { nyckel: bast.utfall, utfall: u };
+  }
+
+  function skapaBeslutsgang(skala, id) {
+    var kort = document.createElement('section');
+    kort.className = 'vt-tool';
+    kort.id = id;
+
+    var huvud = document.createElement('div');
+    huvud.className = 'vt-tool-head';
+    var h3 = document.createElement('h3');
+    h3.textContent = skala.rubrik;
+    h3.id = id + '-rubrik';
+    huvud.appendChild(h3);
+    kort.appendChild(huvud);
+
+    var intro = document.createElement('p');
+    intro.className = 'vt-tool-intro';
+    intro.textContent = skala.intro;
+    kort.appendChild(intro);
+
+    var rutnat = document.createElement('div');
+    rutnat.className = 'vt-grid';
+    kort.appendChild(rutnat);
+
+    var falt = skala.steg.map(function (s) {
+      var f = byggValfalt(s, id, true);   // stegen ger ingen poäng
+      rutnat.appendChild(f.el);
+      return f;
+    });
+
+    var hjalp = document.createElement('div');
+    hjalp.className = 'vt-hjalp';
+    skala.steg.forEach(function (s) {
+      if (!s.hjalp) return;
+      var rad = document.createElement('p');
+      rad.textContent = s.hjalp;
+      hjalp.appendChild(rad);
+    });
+    if (hjalp.children.length) kort.appendChild(hjalp);
+
+    var band = document.createElement('div');
+    band.className = 'vt-band';
+    band.setAttribute('aria-live', 'polite');
+    var bandTitel = document.createElement('strong');
+    bandTitel.className = 'vt-band-titel';
+    var bandText = document.createElement('p');
+    bandText.className = 'vt-band-rad';
+    band.appendChild(bandTitel);
+    band.appendChild(bandText);
+    kort.appendChild(band);
+
+    var nollrad = document.createElement('div');
+    nollrad.className = 'vt-nollstall';
+    var nollknapp = document.createElement('button');
+    nollknapp.type = 'button';
+    nollknapp.textContent = 'Nollställ';
+    nollrad.appendChild(nollknapp);
+    kort.appendChild(nollrad);
+
+    function rakna() {
+      var val = {};
+      falt.forEach(function (f) { val[f.spec.namn] = f.valjare.value; });
+      var res = bedomGang(skala, val);
+      if (!res) {
+        /* Ett steg utan utfall får inte se ut som en lyckad
+           bedömning (CLAUDE_REGLER §0.4). */
+        band.className = 'vt-band is-tom';
+        bandTitel.textContent = skala.tomrubrik;
+        bandText.textContent = skala.tomtext;
+        return;
+      }
+      band.className = 'vt-band is-' + res.utfall.niva;
+      bandTitel.textContent = res.utfall.rubrik;
+      bandText.textContent = res.utfall.text;
+    }
+
+    falt.forEach(function (f) { f.valjare.addEventListener('change', rakna); });
+
+    nollknapp.addEventListener('click', function () {
+      falt.forEach(function (f) { f.valjare.value = f.spec.val[0].varde; });
+      rakna();
+    });
+
+    rakna();
+    return kort;
+  }
+
   var RENDERARE = {
     varde: skapaVardeskala,
+    kryss: skapaKryssruteskala,
     formel: skapaFormelraknare,
+    gang: skapaBeslutsgang,
     blodgas: skapaBlodgas
   };
 
