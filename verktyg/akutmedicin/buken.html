@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSP mot XSS: skript/stilar/data endast från egen origin. GitHub Pages tillåter inga egna HTTP-headers, därav meta. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+
+  <!-- Primär SEO -->
+  <title>Buken – Alvarados poäng och Glasgow-Blatchford | Anatomiquiz</title>
+  <meta name="description" content="Räknare för Alvarados poäng vid blindtarmsinflammation och Glasgow-Blatchford vid blödning i övre magtarmkanalen, med varje variabel förklarad.">
+  <meta name="author" content="Daniel Medin (Norrtou Creations)">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+  <link rel="canonical" href="https://anatomiquiz.se/verktyg/akutmedicin/buken.html">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anatomiquiz.se/verktyg/akutmedicin/buken.html">
+  <meta property="og:title" content="Buken – Alvarados poäng och Glasgow-Blatchford">
+  <meta property="og:description" content="Två skalor vid akut buksmärta och blödning: Alvarados poäng väger samman åtta fynd vid misstänkt blindtarmsinflammation, och Glasgow-Blatchford skattar risken innan en övre gastrointestinal blödning ens skopats.">
+  <meta property="og:image" content="https://anatomiquiz.se/img/og-image.png">
+  <meta property="og:image:width" content="1518">
+  <meta property="og:image:height" content="864">
+  <meta property="og:image:alt" content="Anatomiquiz — räknare för buk- och blödningsskalor">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="Anatomiquiz">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Buken – Alvarados poäng och Glasgow-Blatchford">
+  <meta name="twitter:description" content="Två skalor vid akut buksmärta och blödning: Alvarados poäng väger samman åtta fynd vid misstänkt blindtarmsinflammation, och Glasgow-Blatchford skattar risken innan en övre gastrointestinal blödning ens skopats.">
+  <meta name="twitter:image" content="https://anatomiquiz.se/img/og-image.png">
+  <meta name="twitter:image:alt" content="Anatomiquiz — räknare för buk- och blödningsskalor">
+
+  <meta name="theme-color" content="#10b981">
+  <meta name="color-scheme" content="light dark">
+  <!-- Tema (ljust/mörkt). Laddas SYNKRONT och före stilmallen: attributet
+       data-theme måste sitta på <html> innan första målningen, annars
+       blinkar sidan ljus. Inline gick inte – CSP:n tillåter bara egen origin. -->
+  <script src="/js/theme.js?v=0.9.260"></script>
+
+  <!-- Strukturerad data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "WebApplication",
+    "LearningResource"
+  ],
+  "name": "Buken – Alvarados poäng och Glasgow-Blatchford",
+  "description": "Räknare för Alvarados poäng vid misstänkt blindtarmsinflammation och Glasgow-Blatchford vid blödning i övre magtarmkanalen, med varje variabel förklarad.",
+  "url": "https://anatomiquiz.se/verktyg/akutmedicin/buken.html",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Alla webbläsare",
+  "inLanguage": "sv-SE",
+  "isAccessibleForFree": true,
+  "learningResourceType": "interactive tool",
+  "educationalUse": [
+    "self study",
+    "practice"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "SEK"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Anatomiquiz",
+    "url": "https://anatomiquiz.se/"
+  },
+  "datePublished": "2026-08-17",
+  "dateModified": "2026-08-17",
+  "author": {
+    "@type": "Person",
+    "@id": "https://anatomiquiz.se/#daniel-medin",
+    "name": "Daniel Medin",
+    "description": "Utbildad medicinsk sekreterare och studerande i arbetsterapi vid Lunds universitet, med särskilt intresse för anatomi.",
+    "url": "https://norrtou.se",
+    "sameAs": [
+      "https://norrtou.se",
+      "https://www.linkedin.com/in/danielmedin",
+      "https://github.com/norrtou"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://anatomiquiz.se/#norrtou-creations",
+    "name": "Norrtou Creations",
+    "url": "https://norrtou.se",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://anatomiquiz.se/img/icon-512.png"
+    },
+    "sameAs": [
+      "https://github.com/norrtou"
+    ]
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Blindtarmsinflammation"
+    },
+    {
+      "@type": "Thing",
+      "name": "Gastrointestinal blödning"
+    }
+  ],
+  "teaches": [
+    "Vilka åtta fynd som ingår i Alvarados poäng och varför två av dem väger dubbelt.",
+    "Varför Alvarados poäng är som mest osäker mitt i spannet, inte i ändarna.",
+    "Vilka nio variabler Glasgow-Blatchford bygger på och varför inget av dem kräver en endoskopi.",
+    "Varför noll poäng på Glasgow-Blatchford är den kliniskt viktigaste gränsen i skalan."
+  ],
+  "keywords": [
+    "alvarado",
+    "alvarados poäng",
+    "blindtarmsinflammation",
+    "glasgow-blatchford",
+    "gastrointestinal blödning"
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "A practical score for the early diagnosis of acute appendicitis",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Alvarado, A."
+        }
+      ],
+      "datePublished": "1986",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Annals of Emergency Medicine"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "A risk score to predict need for treatment for upper-gastrointestinal haemorrhage",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Blatchford, O."
+        },
+        {
+          "@type": "Person",
+          "name": "Murray, W. R."
+        },
+        {
+          "@type": "Person",
+          "name": "Blatchford, M."
+        }
+      ],
+      "datePublished": "2000",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "The Lancet"
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Anatomiquiz",
+      "item": "https://anatomiquiz.se/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Verktyg",
+      "item": "https://anatomiquiz.se/verktyg/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Akutmedicin",
+      "item": "https://anatomiquiz.se/verktyg/akutmedicin/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Buken",
+      "item": "https://anatomiquiz.se/verktyg/akutmedicin/buken.html"
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon.png">
+  <link rel="apple-touch-icon" href="/img/icon-192.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/css/styles.css?v=0.9.412">
+  <link rel="stylesheet" href="/css/verktyg.css?v=0.9.415">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+  <main id="main" class="container" role="main">
+
+    <header class="header">
+      <div class="header-title">
+        <h1>Buken</h1>
+      </div>
+      <p class="tagline">Alvarados poäng och Glasgow-Blatchford</p>
+    </header>
+
+    <section class="card" aria-labelledby="akutHeading">
+
+      <nav class="breadcrumb" aria-label="Brödsmula">
+        <a href="/" class="breadcrumb-link">← Anatomiquiz</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="/verktyg/" class="breadcrumb-link">Verktyg</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="/verktyg/akutmedicin/" class="breadcrumb-link">Akutmedicin</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <span class="breadcrumb-current" aria-current="page">Buken</span>
+      </nav>
+
+      <h2 id="akutHeading" class="sr-only">Poängskalor för buksmärta och blödning</h2>
+
+      <div class="info-about">
+        <p>Två skalor som inte har mycket gemensamt förutom att de handlar om buken. Alvarados poäng väger samman åtta <a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">kliniska</a> fynd för att skatta sannolikheten för blindtarmsinflammation innan patienten ens opererats. Glasgow-Blatchford gör något annat: den skattar risken vid en redan pågående blödning i övre magtarmkanalen, helt utan ett enda endoskopifynd, för att avgöra vem som säkert kan vänta.</p>
+      </div>
+
+      <div id="akut-utan-js" class="vt-warn">
+        Räknarna kräver JavaScript. Är det avstängt finns alla kriterier, poäng och tolkningsband som tabeller under varje rubrik.
+      </div>
+
+      <!-- =========================================================
+           1. Alvarados poäng
+           ========================================================= -->
+
+      <h2 id="alvarado">Alvarados poäng – misstänkt blindtarmsinflammation</h2>
+
+      <p>Åtta fynd, ihågkomna med minnesramsan MANTRELS: migration, anorexi, illamående/kräkning, tenderness (ömhet), rebound (släppömhet), elevated temperature (<a class="kb-term" href="/ordlista-f.html#term-feber" data-def="Förhöjd kroppstemperatur, oftast ett tecken på infektion eller inflammation">feber</a>), leukocytos och shift to the left (vänsterförskjutning). Sex av dem ger en poäng, och de två Alvarado själv bedömde som viktigast ger två poäng var, för en maxsumma på tio.</p>
+
+      <div data-akut="alvarado"></div>
+
+      <h3>Kriterier och tolkning</h3>
+
+      <table class="kb-mtable">
+        <caption>Alvarados poäng – de åtta kriterierna</caption>
+        <thead>
+          <tr>
+            <th scope="col">Kriterium</th>
+            <th scope="col">Poäng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Kriterium">Smärtan har vandrat till höger nedre kvadranten</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">Aptitlöshet</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">Illamående eller kräkning</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">Ömhet i höger nedre kvadranten</th><td data-label="Poäng">+2</td></tr>
+          <tr><th scope="row" data-label="Kriterium">Släppömhet (rebound-ömhet)</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium"><a class="kb-term" href="/ordlista-k.html#term-kroppstemperatur" data-def="Kroppens inre temperatur, normalt omkring 37 grader hos en vuxen i vila">Kroppstemperatur</a> 37,3 °C eller högre</th><td data-label="Poäng">+1</td></tr>
+          <tr><th scope="row" data-label="Kriterium">Leukocyter över 10 × 10⁹/L</th><td data-label="Poäng">+2</td></tr>
+          <tr><th scope="row" data-label="Kriterium">Vänsterförskjutning (andel neutrofiler över 75 procent)</th><td data-label="Poäng">+1</td></tr>
+        </tbody>
+      </table>
+
+      <table class="kb-mtable">
+        <caption>Alvarados poäng – tolkning av summan</caption>
+        <thead>
+          <tr>
+            <th scope="col">Summa</th>
+            <th scope="col">Bedömning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Summa">1–4 poäng</th><td data-label="Bedömning"><strong>1–4 poäng – osannolik</strong></td></tr>
+          <tr><th scope="row" data-label="Summa">5–6 poäng</th><td data-label="Bedömning"><strong>5–6 poäng – möjlig, oklar bild</strong>. Bilddiagnostik gör mest nytta här</td></tr>
+          <tr><th scope="row" data-label="Summa">7–8 poäng</th><td data-label="Bedömning"><strong>7–8 poäng – sannolik</strong>. Kirurgisk bedömning motiverad</td></tr>
+          <tr><th scope="row" data-label="Summa">9–10 poäng</th><td data-label="Bedömning"><strong>9–10 poäng – mycket sannolik</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h3>Vad betyder variablerna?</h3>
+
+      <h4>Smärtvandringen</h4>
+      <p>Klassiskt börjar smärtan diffust kring <a class="kb-term" href="/ordlista-u.html#term-umbilicus" data-def="Ärret efter navelsträngen mitt på buken (umbilicus)">naveln</a> eller i övre magtrakten, där tarmens egna smärtnerver ger en vag, svårlokaliserad känsla. När inflammationen sedan når <a class="kb-term" href="/ordlista-p.html#term-peritoneum" data-def="Den serösa hinna som bekläder bukhålans väggar och organ (peritoneum)">bukhinnan</a> över blindtarmsbihanget, som har en helt annan och mycket mer exakt nervförsörjning, flyttar smärtan till en punkt i höger nedre kvadranten och blir lätt att peka ut. Det är själva vandringen som är fyndet, inte bara var smärtan till slut sitter.</p>
+
+      <h4>Ömhet i höger nedre kvadranten</h4>
+      <p>Det enskilt viktigaste fyndet i hela skalan och ett av bara två kriterier som ger två poäng. Utan lokal ömhet just där är blindtarmsinflammation ett osannolikt fynd, oavsett hur många av de andra sju kriterierna som är uppfyllda.</p>
+
+      <h4>Släppömhet</h4>
+      <p>Trycket släpps snabbt efter en stunds palpation, och smärtan som då uppstår talar för att <a class="kb-term" href="/ordlista-p.html#term-peritoneum" data-def="Den serösa hinna som bekläder bukhålans väggar och organ (peritoneum)">bukhinnan</a> är involverad i inflammationen, inte bara <a class="kb-term" href="/ordlista-v.html#term-vavnad" data-def="Samling celler med likartad byggnad och funktion som tillsammans bygger upp kroppens organ (t.ex. muskel-, nerv- och bindväv)">vävnaden</a> under den. Fyndet är obehagligt för patienten och ska inte upprepas i onödan när det redan konstaterats.</p>
+
+      <h4>Leukocytos och vänsterförskjutning</h4>
+      <p>Två laboratoriefynd som båda speglar samma sak från olika håll. Leukocytos är det totala antalet vita blodkroppar, och ett tydligt förhöjt värde talar för en pågående bakteriell <a class="kb-term" href="/ordlista-i.html#term-inflammation" data-def="Kroppens försvarsreaktion på skada eller retning, med rodnad, värme, svullnad och smärta">inflammation</a>. Vänsterförskjutningen mäter i stället andelen omogna, nyligen mobiliserade vita blodkroppar och kan bli tydlig innan det totala antalet hunnit stiga lika mycket — den fångar alltså en tidigare fas av samma process.</p>
+
+      <h3>Varför just de här variablerna?</h3>
+
+      <p>Alvarado tog 1986 fram skalan genom att gå igenom journaler för patienter som opererats för misstänkt blindtarmsinflammation och notera vilka fynd som skilde de bekräftade fallen från de friska blindtarmar som ändå opererats bort. De åtta kriterierna representerar tre olika sorters information — <a class="kb-term" href="/ordlista-s.html#term-symtom" data-def="Tecken på sjukdom som den sjuke själv märker och beskriver">symtom</a> (migration, aptitlöshet, illamående), <a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">kliniska</a> fynd (ömhet, släppömhet, <a class="kb-term" href="/ordlista-f.html#term-feber" data-def="Förhöjd kroppstemperatur, oftast ett tecken på infektion eller inflammation">feber</a>) och laboratorievärden (leukocytos, vänsterförskjutning) — och just den blandningen är skalans styrka: den fångar upp det som redan går att fråga om och undersöka innan ett enda prov är taget, och lägger sedan till vad provsvaren tillför.</p>
+
+      <p><strong>Skalan är som mest osäker mitt i spannet, inte i ändarna.</strong> Vid låg och hög poäng är beslutet ofta självklart. Det är i mellangruppen, 5–6 poäng, som Alvarados poäng inte räcker för att avgöra saken på egen hand — och det är just där bilddiagnostik gör störst nytta, eftersom den kan skilja en verklig blindtarmsinflammation från de andra tillstånd som ger en liknande men lägre poäng.</p>
+
+      <div class="vt-ansvar">
+        <p><strong>Räknaren ersätter inte bedömningen.</strong> Alvarados poäng är framtagen för vuxna med misstänkt blindtarmsinflammation och tar inte hänsyn till skillnader hos till exempel barn eller gravida, där bilden ofta ser annorlunda ut.</p>
+      </div>
+
+      <!-- =========================================================
+           2. Glasgow-Blatchford
+           ========================================================= -->
+
+      <h2 id="blatchford">Glasgow-Blatchford – risk vid blödning i övre magtarmkanalen</h2>
+
+      <p>Nio variabler läggs samman till en summa mellan 0 och 23. Ingen av dem kräver en <a class="kb-term" href="/ordlista-e.html#term-endoskopi" data-def="Invändig undersökning av hålrum och kanaler i kroppen med ett endoskop (rör med ljuskälla)">endoskopi</a> — skalan är uttryckligen byggd för att kunna räknas ut innan patienten ens skopats, för att avgöra vem som säkert kan gå hem och vem som behöver skyndsam handläggning.</p>
+
+      <div data-akut="glasgow_blatchford"></div>
+
+      <h3>Poängtabellen</h3>
+
+      <table class="kb-mtable">
+        <caption>Glasgow-Blatchford – poäng per variabel</caption>
+        <thead>
+          <tr>
+            <th scope="col">Variabel</th>
+            <th scope="col">Poäng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Variabel">Blodurea &lt;6,5 mmol/L</th><td data-label="Poäng">0</td></tr>
+          <tr><th scope="row" data-label="Variabel">Blodurea 6,5–7,9 mmol/L</th><td data-label="Poäng">2</td></tr>
+          <tr><th scope="row" data-label="Variabel">Blodurea 8,0–9,9 mmol/L</th><td data-label="Poäng">3</td></tr>
+          <tr><th scope="row" data-label="Variabel">Blodurea 10,0–24,9 mmol/L</th><td data-label="Poäng">4</td></tr>
+          <tr><th scope="row" data-label="Variabel">Blodurea ≥25,0 mmol/L</th><td data-label="Poäng">6</td></tr>
+          <tr><th scope="row" data-label="Variabel"><a class="kb-term" href="/ordlista-h.html#term-hemoglobin" data-def="Det järnhaltiga proteinet i röda blodkroppar som binder och transporterar syre">Hemoglobin</a>, man, &lt;100 g/L</th><td data-label="Poäng">6</td></tr>
+          <tr><th scope="row" data-label="Variabel"><a class="kb-term" href="/ordlista-h.html#term-hemoglobin" data-def="Det järnhaltiga proteinet i röda blodkroppar som binder och transporterar syre">Hemoglobin</a>, man, 100–119 g/L</th><td data-label="Poäng">3</td></tr>
+          <tr><th scope="row" data-label="Variabel"><a class="kb-term" href="/ordlista-h.html#term-hemoglobin" data-def="Det järnhaltiga proteinet i röda blodkroppar som binder och transporterar syre">Hemoglobin</a>, man, 120–129 g/L</th><td data-label="Poäng">1</td></tr>
+          <tr><th scope="row" data-label="Variabel"><a class="kb-term" href="/ordlista-h.html#term-hemoglobin" data-def="Det järnhaltiga proteinet i röda blodkroppar som binder och transporterar syre">Hemoglobin</a>, man, ≥130 g/L</th><td data-label="Poäng">0</td></tr>
+          <tr><th scope="row" data-label="Variabel"><a class="kb-term" href="/ordlista-h.html#term-hemoglobin" data-def="Det järnhaltiga proteinet i röda blodkroppar som binder och transporterar syre">Hemoglobin</a>, kvinna, &lt;100 g/L</th><td data-label="Poäng">6</td></tr>
+          <tr><th scope="row" data-label="Variabel"><a class="kb-term" href="/ordlista-h.html#term-hemoglobin" data-def="Det järnhaltiga proteinet i röda blodkroppar som binder och transporterar syre">Hemoglobin</a>, kvinna, 100–119 g/L</th><td data-label="Poäng">1</td></tr>
+          <tr><th scope="row" data-label="Variabel"><a class="kb-term" href="/ordlista-h.html#term-hemoglobin" data-def="Det järnhaltiga proteinet i röda blodkroppar som binder och transporterar syre">Hemoglobin</a>, kvinna, ≥120 g/L</th><td data-label="Poäng">0</td></tr>
+          <tr><th scope="row" data-label="Variabel">Systoliskt <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtryck</a> &lt;90 mmHg</th><td data-label="Poäng">3</td></tr>
+          <tr><th scope="row" data-label="Variabel">Systoliskt <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtryck</a> 90–99 mmHg</th><td data-label="Poäng">2</td></tr>
+          <tr><th scope="row" data-label="Variabel">Systoliskt <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtryck</a> 100–109 mmHg</th><td data-label="Poäng">1</td></tr>
+          <tr><th scope="row" data-label="Variabel">Systoliskt <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtryck</a> ≥110 mmHg</th><td data-label="Poäng">0</td></tr>
+          <tr><th scope="row" data-label="Variabel"><a class="kb-term" href="/ordlista-p.html#term-puls" data-def="Tryckvågen som varje hjärtslag skickar ut i artärerna; mått på hjärtfrekvensen">Puls</a>: Under 100 slag per minut</th><td data-label="Poäng">0</td></tr>
+          <tr><th scope="row" data-label="Variabel"><a class="kb-term" href="/ordlista-p.html#term-puls" data-def="Tryckvågen som varje hjärtslag skickar ut i artärerna; mått på hjärtfrekvensen">Puls</a>: 100 slag per minut eller mer</th><td data-label="Poäng">1</td></tr>
+          <tr><th scope="row" data-label="Variabel">Svart, tjärliknande avföring — Nej / Ja</th><td data-label="Poäng">0 / 1</td></tr>
+          <tr><th scope="row" data-label="Variabel">Svimning i samband med blödningen — Nej / Ja</th><td data-label="Poäng">0 / 2</td></tr>
+          <tr><th scope="row" data-label="Variabel">Känd <a class="kb-term" href="/ordlista-l.html#term-leversvikt" data-def="Sjukdom i levern; vid svikt räcker organets funktion inte till">leversjukdom</a> — Nej / Ja</th><td data-label="Poäng">0 / 2</td></tr>
+          <tr><th scope="row" data-label="Variabel">Känd <a class="kb-term" href="/ordlista-h.html#term-hjartsvikt" data-def="Hjärtats oförmåga att pumpa tillräckligt med blod för kroppens behov">hjärtsvikt</a> — Nej / Ja</th><td data-label="Poäng">0 / 2</td></tr>
+        </tbody>
+      </table>
+
+      <table class="kb-mtable">
+        <caption>Glasgow-Blatchford – tolkning av summan</caption>
+        <thead>
+          <tr>
+            <th scope="col">Summa</th>
+            <th scope="col">Bedömning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Summa">0 poäng</th><td data-label="Bedömning"><strong>0 poäng – lägsta risk</strong>. Kandidat för öppenvård med uppföljande <a class="kb-term" href="/ordlista-e.html#term-endoskopi" data-def="Invändig undersökning av hålrum och kanaler i kroppen med ett endoskop (rör med ljuskälla)">endoskopi</a></td></tr>
+          <tr><th scope="row" data-label="Summa">1 poäng eller mer</th><td data-label="Bedömning"><strong>1 poäng eller mer</strong>. Risken för att behöva en åtgärd stiger med poängen; sjukhusbedömning motiverad</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Vad betyder variablerna?</h3>
+
+      <h4>Blodurea</h4>
+      <p>Den variabel som ensam ger flest poäng, och den minst intuitiva. Ureakvävet stiger vid en blödning i mag-tarmkanalen därför att blodets proteiner bryts ner av tarmbakterier till urea, som sedan absorberas — utöver den påverkan ett samtidigt lågt <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtryck</a> kan ha på njurarnas genomblödning. Ett förhöjt urea är alltså i sig ett tecken på hur mycket blod som runnit genom tarmen, inte bara ett mått på njurfunktionen.</p>
+
+      <h4><a class="kb-term" href="/ordlista-h.html#term-hemoglobin" data-def="Det järnhaltiga proteinet i röda blodkroppar som binder och transporterar syre">Hemoglobin</a></h4>
+      <p>Det mest direkta måttet på blodförlust, men med olika referensvärde för män och kvinnor eftersom det normala hemoglobinvärdet skiljer sig åt mellan könen. Ett färskt hemoglobinvärde speglar dessutom inte alltid den akuta blodförlusten fullt ut — vid en snabb, stor blödning hinner kroppens vätskebalans inte alltid jämna ut koncentrationen förrän efter någon timme.</p>
+
+      <h4>Systoliskt <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtryck</a> och <a class="kb-term" href="/ordlista-p.html#term-puls" data-def="Tryckvågen som varje hjärtslag skickar ut i artärerna; mått på hjärtfrekvensen">puls</a></h4>
+      <p>Cirkulationens två mest direkta mätvärden vid sängkanten. Ett fallande <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtryck</a> och en stigande <a class="kb-term" href="/ordlista-p.html#term-puls" data-def="Tryckvågen som varje hjärtslag skickar ut i artärerna; mått på hjärtfrekvensen">puls</a> är kroppens sätt att kompensera för minskad blodvolym, och båda kan vara helt normala tidigt i förloppet — det är därför skalan inte förlitar sig på dem ensamma utan väger in laboratorievärden och sjukhistoria också.</p>
+
+      <h4>Svimning</h4>
+      <p>Svimning tyder på en tillräckligt snabb och stor blodvolymförlust för att sänka blodtillförseln till <a class="kb-term" href="/ordlista-e.html#term-encephalon" data-def="Storhjärna, lillhjärna och hjärnstam tillsammans (encephalon)">hjärnan</a>, även om <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtrycket</a> vid ankomsten redan hunnit återhämta sig något. Fyndet väger därför dubbelt, som ett tecken på vad som redan hänt snarare än vad som mäts just nu.</p>
+
+      <h4><a class="kb-term" href="/ordlista-l.html#term-leversvikt" data-def="Sjukdom i levern; vid svikt räcker organets funktion inte till">Leversjukdom</a> och <a class="kb-term" href="/ordlista-h.html#term-hjartsvikt" data-def="Hjärtats oförmåga att pumpa tillräckligt med blod för kroppens behov">hjärtsvikt</a></h4>
+      <p>De två enda kriterierna som inte alls handlar om den pågående blödningen utan om patientens marginaler att klara den. Känd <a class="kb-term" href="/ordlista-l.html#term-leversvikt" data-def="Sjukdom i levern; vid svikt räcker organets funktion inte till">leversjukdom</a> kan innebära nedsatt koagulationsförmåga och vidgade <a class="kb-term" href="/ordlista-v.html#term-vas-sanguineum" data-def="Rörformigt kärl – artär, ven eller kapillär – som transporterar blod (vas sanguineum)">blodkärl</a> i matstrupen (esofagusvaricer) som blöder särskilt kraftigt. Känd <a class="kb-term" href="/ordlista-h.html#term-hjartsvikt" data-def="Hjärtats oförmåga att pumpa tillräckligt med blod för kroppens behov">hjärtsvikt</a> gör att kroppen tål blodförlust och den efterföljande vätskebehandlingen sämre. Båda väger dubbelt av samma skäl som svimning gör.</p>
+
+      <h3>Varför just de här variablerna?</h3>
+
+      <p>Blatchford och medarbetare tog 2000 fram skalan just för att den skulle kunna räknas ut med de uppgifter som redan finns vid första kontakten — <a class="kb-term" href="/ordlista-a.html#term-anamnes" data-def="Patientens sjukhistoria så som den berättas vid undersökningen">anamnes</a>, ett blodprov och enkla <a class="kb-term" href="/ordlista-v.html#term-vitalparameter" data-def="Grundläggande mätvärde för kroppens livsviktiga funktioner – andning, puls, blodtryck, temperatur, medvetande">vitalparametrar</a> — innan en <a class="kb-term" href="/ordlista-e.html#term-endoskopi" data-def="Invändig undersökning av hålrum och kanaler i kroppen med ett endoskop (rör med ljuskälla)">endoskopi</a> ens bokats. Det skiljer den från skalor som Rockall, som väger in vad endoskopin faktiskt visar och därför bara kan användas efteråt. Vinsten är att Glasgow-Blatchford kan styra prioriteringen direkt vid ankomsten, när den frågan är som mest brådskande.</p>
+
+      <p><strong>Noll poäng är den <a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">kliniskt</a> viktigaste gränsen, inte en skala som gradvis stiger i allvar.</strong> Skalans ursprungliga och mest validerade användning är att peka ut den grupp som är så lågriskad att den kan slippa läggas in alls. Från och med en enda poäng lämnar patienten den gruppen, och risken för att behöva transfusion, endoskopisk behandling eller kirurgi stiger därefter med poängen — men det är just steget från noll till ett som skalan är starkast på att särskilja.</p>
+
+      <div class="vt-ansvar">
+        <p><strong>Räknaren ersätter inte bedömningen.</strong> Glasgow-Blatchford är framtagen för vuxna med misstänkt övre gastrointestinal blödning och säger ingenting om blödningens exakta orsak eller läge — bara om hur brådskande och omfattande handläggningen behöver vara.</p>
+      </div>
+
+      <div class="kb-sources">
+        <h2>Referenser</h2>
+        <ul>
+          <li>Alvarado, A. (1986). A practical score for the early diagnosis of acute appendicitis. <em>Annals of Emergency Medicine, 15</em>(5), 557–564.</li>
+          <li>Blatchford, O., Murray, W. R., &amp; Blatchford, M. (2000). A risk score to predict need for treatment for upper-gastrointestinal haemorrhage. <em>The Lancet, 356</em>(9238), 1318–1321.</li>
+        </ul>
+      </div>
+
+      <div class="actions">
+        <a href="/verktyg/akutmedicin/" class="btn primary">← Till akutmedicinen</a>
+        <a href="/medicinskordlista.html" class="btn">Slå upp en term</a>
+      </div>
+
+    </section>
+
+    <footer class="page-footer">
+      <p>Utbildningsmaterial, inte medicinsk rådgivning. Innehållet är avsett för studier och ersätter inte kurslitteratur, undervisning eller kliniska riktlinjer. Det ska inte användas som underlag för vård eller behandling av patienter.</p>
+      <p>Anatomiquiz använder inga kakor och samlar inte in personuppgifter. Läs mer i <a href="/integritet.html" class="info-link">integritetspolicyn</a>.</p>
+      <p class="page-updated">Senast uppdaterad <time data-updated datetime="2026-08-17">17 augusti 2026</time></p>
+    </footer>
+  </main>
+
+  <script src="/js/akutmedicin.js?v=0.9.415" defer></script>
+
+  <!-- Ordlistetooltips i löptexten (progressiv förbättring; .kb-term funkar som länk utan JS) -->
+  <script src="/js/kb-glossary.js" defer></script>
+
+</body>
+</html>

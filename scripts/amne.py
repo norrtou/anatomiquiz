@@ -264,6 +264,19 @@ _s("verktyg/akutmedicin/neurologi.html",
    ["gcs", "glasgow coma scale", "rls-85", "4at", "delirium", "be-fast",
     "hints", "yrsel"])
 
+_s("verktyg/akutmedicin/buken.html",
+   [("Thing", "Blindtarmsinflammation"), ("Thing", "Gastrointestinal blödning")],
+   ["Vilka åtta fynd som ingår i Alvarados poäng och varför två av dem väger "
+    "dubbelt.",
+    "Varför Alvarados poäng är som mest osäker mitt i spannet, inte i "
+    "ändarna.",
+    "Vilka nio variabler Glasgow-Blatchford bygger på och varför inget av "
+    "dem kräver en endoskopi.",
+    "Varför noll poäng på Glasgow-Blatchford är den kliniskt viktigaste "
+    "gränsen i skalan."],
+   ["alvarado", "alvarados poäng", "blindtarmsinflammation",
+    "glasgow-blatchford", "gastrointestinal blödning"])
+
 # --- Ordlistan --------------------------------------------------------------
 _s("medicinskordlista.html",
    [("Thing", "Medicinsk terminologi"), ("Thing", "Medicinsk ordlista"),

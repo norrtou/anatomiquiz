@@ -257,8 +257,8 @@ Nya sidor **stoppar bygget** om de inte registreras — det är §0.4 och det ä
 ## 7. Releaseordning och status
 
 > ▶️ **Status läses i tabellen nedan, inte i den här rutan** — se §"Verifiera status mot
-> facitfilen" i minnesindexet. Kvar: släpp 5b-ii (`buken.html`) och släpp 6
-> (`kunskapsbank/kliniska-poangskalor.html` + korslänkning).
+> facitfilen" i minnesindexet. Alla sju verktygssidor är byggda sedan 0.9.420. Kvar: släpp 6,
+> `kunskapsbank/kliniska-poangskalor.html` + korslänkning.
 
 | Släpp | Innehåll | Status |
 |---|---|---|
@@ -270,8 +270,8 @@ Nya sidor **stoppar bygget** om de inte registreras — det är §0.4 och det ä
 | **4b** | `hjartat.html` — QTc, CHA₂DS₂-VA, HAS-BLED, EHRA + GRACE förklarad | ✅ **klart 0.9.417** |
 | **5a** | `infektion.html` — qSOFA, SOFA, DS-CRB-65 | ✅ **klart 0.9.418** |
 | **5b-i** | `neurologi.html` — GCS, RLS-85, 4AT, BE-FAST, HINTS | ✅ **klart 0.9.419** |
-| **5b-ii** | `buken.html` — Alvarado, Glasgow-Blatchford | väntar |
-| **6** | `kunskapsbank/kliniska-poangskalor.html` + korslänkning + `info.html`-källor | väntar |
+| **5b-ii** | `buken.html` — Alvarado, Glasgow-Blatchford | ✅ **klart 0.9.420 — alla sju verktygssidor byggda** |
+| **6** | `kunskapsbank/kliniska-poangskalor.html` + korslänkning | väntar — sista återstående steget |
 
 ### Släpp 1 — LEVERERAT 0.9.286
 
@@ -608,3 +608,40 @@ till ren text och köra om `wire_terms.py verktyg/akutmedicin/neurologi.html`, s
 korrekt ur facit. Samma metodfel som `puls`-länken i släpp 1 och sitemap-raden i släpp 4a:
 genererad/wirad utformning kopieras aldrig för hand, bara mönstret (statisk HTML,
 monteringspunkt, plain text) återanvänds.
+
+### Släpp 5b-ii — LEVERERAT 0.9.420 (`buken.html`) — alla sju verktygssidor byggda
+
+- [x] `verktyg/akutmedicin/buken.html` — Alvarados poäng och Glasgow-Blatchford i tredelad form.
+      Löptexten skriven som **ren text från början** den här gången — lärdomen från §7j — och
+      `wire_terms.py` wirade 66 länkar utan ett enda trasigt ankare.
+- [x] **Alvarado i mönster A**, ömhet och leukocytos värda två poäng var mot sex enpoängskriterier,
+      maxsumma tio.
+- [x] **Glasgow-Blatchford i mönster B**, med `kön` som `roll: instalning` och `bandvaljare` för
+      hemoglobinets tolkningstabell — samma mekanism NEWS2:s mättnadsskala och QTc:s könsval redan
+      bär, nu återanvänd en fjärde gång utan en rad ny kod.
+- [x] **Glasgow-Blatchfords poängtabell verifierad mot tre oberoende sekundärkällor** eftersom de
+      sinsemellan gav olika svar: två källor (fpnotebook, medicalcriteria.com) och en tredje
+      (mdcalc) gav identisk tabell med maxsumma 23, medan ett par andra sammanställningar angav
+      28 eller 29 — aritmetiskt omöjligt givet delsummornas egna tak (6+6+3+1+1+2+2+2 = 23).
+      Facit byggt på de tre samstämmiga källorna, inte majoriteten av träffar.
+- [x] **Bara den enda robust belagda tröskeln togs med** — 0 poäng mot 1 poäng eller mer.
+      Ytterligare gränser (till exempel ≥7 eller ≥12) förekom i sekundärlitteraturen men utan
+      samstämmighet om exakt nivå, och lämnades därför utanför facit.
+- [x] Registrerad hela vägen: `amne.py`, `data/llms.json`, sitemap via `generate_glossary.py`,
+      hubbkortet bytt från "Snart" till live-länk, `hasPart` och actions-raden uppdaterade.
+      Källorna (Alvarado 1986, Blatchford m.fl. 2000) inskrivna i `info.html` i samma pass.
+- [x] `test_verktyg_akutmedicin.js` utökad 486 → 546 tester.
+- [x] `check_akutmedicin.py`: `SPEGLAD_AV`, `KRYSSTABELLER` och `VARDESKALOR` utökade. Samtliga 21
+      skalor i facit speglas nu av en sida, 0 avvikelser.
+
+#### 7k. Ett testfel i mitt eget arbete: `kryssa()` togglar inte
+
+Ett första utkast av Alvarados bandgränstest byggde på att kryssa i samma kriterium två gånger för
+att slå av det igen — men `kryssa(r, namn)` sätter alltid `ruta.checked = true` om inget uttryckligt
+`false` skickas som tredje argument (se dess egen kommentar om varför: `undefined !== false` är
+sant). En andra `kryssa()` på ett redan ikryssat kriterium är alltså ett no-op, inte en växling.
+Testet räknade fel poäng och föll på fel band. **Rättat genom att bygga varje målsumma med en egen,
+fräsch uppsättning kriterier efter `nollknapp.fire('click')`**, i stället för att lita på en
+implicit togglingslogik som aldrig funnits i verktyget. Samma sorts fel som `puls`-länken och
+`AMT`/`lillhjärna`-länkarna i föregående släpp: ett antagande om hur befintlig kod beter sig,
+aldrig verifierat mot koden själv.

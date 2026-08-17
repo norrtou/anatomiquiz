@@ -107,7 +107,8 @@ class SelectEl extends El {
 const SKALNAMN = ['news2', 'natrium_korrigerat', 'osmolalitet', 'blodgas',
                   'wells_dvt', 'perc', 'spesi', 'chadsva', 'has_bled',
                   'qtc', 'ehra', 'qsofa', 'sofa', 'dscrb65',
-                  'gcs', 'rls85', 'fyra_at', 'befast', 'hints'];
+                  'gcs', 'rls85', 'fyra_at', 'befast', 'hints',
+                  'alvarado', 'glasgow_blatchford'];
 const platser = {};
 SKALNAMN.forEach((namn) => {
   const p = new El('div');
@@ -1396,6 +1397,133 @@ async function kör() {
       pastå(namn + ' ensamt', r.titel(), 'Ett eller flera fynd talar för central orsak');
       pastå(namn + ' nivå', r.band.className, 'vt-band is-hog');
     });
+  }
+
+  /* ---- Alvarados poäng ---- */
+  rubrik('Alvarados poäng — MANTRELS (Alvarado 1986)');
+  {
+    const r = plockaKryss('alvarado');
+
+    pastå('smärtvandring', viktFor(r, 'migration'), 1);
+    pastå('aptitlöshet', viktFor(r, 'anorexi'), 1);
+    pastå('illamående eller kräkning', viktFor(r, 'illamaende'), 1);
+    pastå('ömhet väger dubbelt', viktFor(r, 'omhet'), 2);
+    pastå('släppömhet', viktFor(r, 'slappomhet'), 1);
+    pastå('feber', viktFor(r, 'feber'), 1);
+    pastå('leukocytos väger dubbelt', viktFor(r, 'leukocytos'), 2);
+    pastå('vänsterförskjutning', viktFor(r, 'vansterforskjutning'), 1);
+
+    rubrik('  Maxsumman är tio, de två tvåpoängskriterierna räknade');
+    r.nollknapp.fire('click');
+    ['migration', 'anorexi', 'illamaende', 'omhet', 'slappomhet', 'feber',
+     'leukocytos', 'vansterforskjutning'].forEach((n) => kryssa(r, n));
+    pastå('tio poäng', r.varde.textContent, '10 poäng');
+
+    rubrik('  Bandgränserna prövade åt båda håll');
+    r.nollknapp.fire('click');
+    ['anorexi', 'illamaende', 'feber', 'vansterforskjutning'].forEach((n) => kryssa(r, n));
+    pastå('4 poäng', r.varde.textContent, '4 poäng');
+    pastå('osannolikt band', bandTitelAv(r), '1–4 poäng – osannolik');
+
+    r.nollknapp.fire('click');
+    ['anorexi', 'illamaende', 'feber', 'vansterforskjutning', 'slappomhet']
+      .forEach((n) => kryssa(r, n));
+    pastå('5 poäng', r.varde.textContent, '5 poäng');
+    pastå('oklart band', bandTitelAv(r), '5–6 poäng – möjlig, oklar bild');
+
+    r.nollknapp.fire('click');
+    ['anorexi', 'illamaende', 'feber', 'vansterforskjutning', 'slappomhet', 'migration']
+      .forEach((n) => kryssa(r, n));
+    pastå('6 poäng', r.varde.textContent, '6 poäng');
+    pastå('fortfarande oklart band', bandTitelAv(r), '5–6 poäng – möjlig, oklar bild');
+
+    r.nollknapp.fire('click');
+    ['anorexi', 'illamaende', 'feber', 'vansterforskjutning', 'slappomhet', 'omhet']
+      .forEach((n) => kryssa(r, n));
+    pastå('7 poäng', r.varde.textContent, '7 poäng');
+    pastå('sannolikt band', bandTitelAv(r), '7–8 poäng – sannolik');
+    pastå('nivån', r.band.className, 'vt-band is-hog');
+
+    r.nollknapp.fire('click');
+    ['anorexi', 'illamaende', 'feber', 'vansterforskjutning', 'omhet', 'leukocytos']
+      .forEach((n) => kryssa(r, n));
+    pastå('8 poäng', r.varde.textContent, '8 poäng');
+    pastå('fortfarande sannolikt band', bandTitelAv(r), '7–8 poäng – sannolik');
+
+    r.nollknapp.fire('click');
+    ['anorexi', 'illamaende', 'feber', 'vansterforskjutning', 'slappomhet', 'omhet',
+     'leukocytos'].forEach((n) => kryssa(r, n));
+    pastå('9 poäng', r.varde.textContent, '9 poäng');
+    pastå('mycket sannolikt band', bandTitelAv(r), '9–10 poäng – mycket sannolik');
+  }
+
+  /* ---- Glasgow-Blatchford ---- */
+  rubrik('Glasgow-Blatchford — risk vid övre GI-blödning (Blatchford m.fl. 2000)');
+  {
+    const r = plockaVarde('glasgow_blatchford');
+    const normal = () => {
+      valjV(r, 'kon', 'man'); skrivV(r, 'hb', 150); skrivV(r, 'urea', 5);
+      skrivV(r, 'sbt', 120); valjV(r, 'puls', 'nej'); valjV(r, 'melena', 'nej');
+      valjV(r, 'synkope', 'nej'); valjV(r, 'leversjukdom', 'nej');
+      valjV(r, 'hjartsvikt', 'nej');
+    };
+
+    rubrik('  Friska värden ger noll');
+    normal();
+    pastå('summan', r.varde.textContent, '0 poäng');
+    pastå('lägsta bandet', bandT(r), '0 poäng – lägsta risk');
+
+    rubrik('  Blodureans fem steg, varje gräns åt båda håll');
+    normal();
+    [[6.4, 0], [6.5, 2], [7.9, 2], [8.0, 3], [9.9, 3], [10.0, 4],
+     [24.9, 4], [25.0, 6]].forEach(([v, p]) => { skrivV(r, 'urea', v);
+      pastå(`urea ${v} mmol/L ger ${p}`, chipP(r, 'urea'), p); });
+
+    rubrik('  Hemoglobin hos män, varje gräns åt båda håll');
+    normal();
+    [[99, 6], [100, 3], [119, 3], [120, 1], [129, 1], [130, 0]]
+      .forEach(([v, p]) => { skrivV(r, 'hb', v);
+        pastå(`Hb ${v} g/L (man) ger ${p}`, chipP(r, 'hb'), p); });
+
+    rubrik('  Hemoglobin hos kvinnor, egen gränstabell');
+    normal(); valjV(r, 'kon', 'kvinna');
+    [[99, 6], [100, 1], [119, 1], [120, 0]].forEach(([v, p]) => {
+      skrivV(r, 'hb', v);
+      pastå(`Hb ${v} g/L (kvinna) ger ${p}`, chipP(r, 'hb'), p); });
+    skrivV(r, 'hb', 130);
+    pastå('130 hos en kvinna ger fortfarande 0', chipP(r, 'hb'), 0);
+
+    rubrik('  Blodtryckets fyra steg, varje gräns åt båda håll');
+    normal();
+    [[89, 3], [90, 2], [99, 2], [100, 1], [109, 1], [110, 0]]
+      .forEach(([v, p]) => { skrivV(r, 'sbt', v);
+        pastå(`SBT ${v} mmHg ger ${p}`, chipP(r, 'sbt'), p); });
+
+    rubrik('  De fem kryssfälten');
+    normal();
+    [['puls', 'ja', 1], ['melena', 'ja', 1], ['synkope', 'ja', 2],
+     ['leversjukdom', 'ja', 2], ['hjartsvikt', 'ja', 2]].forEach(([n, v, p]) => {
+      normal(); valjV(r, n, v);
+      pastå(`${n} ger ${p}`, chipP(r, n), p); });
+
+    rubrik('  Bandgränsen 0/1');
+    normal();
+    pastå('0 poäng', bandT(r), '0 poäng – lägsta risk');
+    valjV(r, 'puls', 'ja');
+    pastå('1 poäng', r.varde.textContent, '1 poäng');
+    pastå('1-poängsbandet', bandT(r), '1 poäng eller mer');
+    pastå('nivån', r.band.className, 'vt-band is-hog');
+
+    rubrik('  Maxsumman är 23');
+    valjV(r, 'kon', 'man'); skrivV(r, 'hb', 90); skrivV(r, 'urea', 30);
+    skrivV(r, 'sbt', 80); valjV(r, 'puls', 'ja'); valjV(r, 'melena', 'ja');
+    valjV(r, 'synkope', 'ja'); valjV(r, 'leversjukdom', 'ja');
+    valjV(r, 'hjartsvikt', 'ja');
+    pastå('summan', r.varde.textContent, '23 poäng');
+
+    rubrik('  Könet ger ingen egen poäng');
+    normal();
+    pastå('könsfältet', r.falt.kon.poang.textContent, 'ger ingen poäng');
   }
 
   console.log('\n' + (fel === 0

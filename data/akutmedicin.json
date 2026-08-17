@@ -1148,5 +1148,189 @@
       "perifer": { "niva": "lag", "rubrik": "Samtliga tre fynd talar för perifer orsak",
                    "text": "Ett avvikande (positivt) impulstest, en enkelriktad nystagmus och ett negativt skewtest bildar tillsammans den kombination som talar för en godartad, perifer orsak, till exempel vestibularisneurit. HINTS är bara validerad vid akut, ihållande yrsel som pågår när undersökningen görs — inte vid episodisk yrsel som redan klingat av — och ersätter aldrig den kliniska helhetsbedömningen." }
     }
+  },
+
+  "alvarado": {
+    "namn": "Alvarados poäng",
+    "monster": "kryss",
+    "rubrik": "Alvarados poäng – misstänkt blindtarmsinflammation",
+    "intro": "Åtta fynd, ihågkomna med minnesramsan MANTRELS. Sex av dem ger en poäng var, och de två fynd Alvarado själv bedömde som viktigast — ömhet i höger nedre kvadranten och ett förhöjt antal vita blodkroppar — ger två poäng var, för en maxsumma på tio. Kryssa i det som stämmer, så visas summan och vilken grupp patienten hamnar i.",
+    "summaetikett": "Alvarados poäng",
+    "enhetssuffix": "poäng",
+    "kalla": "Alvarado (1986)",
+
+    "kriterier": [
+      { "namn": "migration", "kort": "Smärtvandring", "poang": 1,
+        "etikett": "Smärtan har vandrat till höger nedre kvadranten",
+        "hjalp": "Klassiskt beskrivs smärtan som diffus kring naveln eller i övre magtrakten inledningsvis, för att sedan vandra till höger nedre kvadranten när bukhinnan över det inflammerade blindtarmsbihanget börjar reta. Vandringen, inte bara slutplatsen, är fyndet." },
+      { "namn": "anorexi", "kort": "Aptitlöshet", "poang": 1,
+        "etikett": "Aptitlöshet" },
+      { "namn": "illamaende", "kort": "Illamående eller kräkning", "poang": 1,
+        "etikett": "Illamående eller kräkning" },
+      { "namn": "omhet", "kort": "Ömhet i höger nedre kvadranten", "poang": 2,
+        "etikett": "Ömhet i höger nedre kvadranten",
+        "hjalp": "Det enskilt viktigaste fyndet i skalan och ett av bara två som ger två poäng. Utan lokal ömhet i höger nedre kvadranten är blindtarmsinflammation ett osannolikt fynd, oavsett hur många andra kriterier som är uppfyllda." },
+      { "namn": "slappomhet", "kort": "Släppömhet", "poang": 1,
+        "etikett": "Släppömhet (rebound-ömhet)" },
+      { "namn": "feber", "kort": "Feber", "poang": 1,
+        "etikett": "Kroppstemperatur 37,3 °C eller högre" },
+      { "namn": "leukocytos", "kort": "Leukocytos", "poang": 2,
+        "etikett": "Leukocyter över 10 × 10⁹/L",
+        "hjalp": "Det andra av de två fynd som väger dubbelt. Ett tydligt förhöjt antal vita blodkroppar talar för en pågående bakteriell inflammation snarare än en overksam mage." },
+      { "namn": "vansterforskjutning", "kort": "Vänsterförskjutning", "poang": 1,
+        "etikett": "Vänsterförskjutning (andel neutrofiler över 75 procent)",
+        "hjalp": "Ett tecken på att benmärgen snabbmobiliserar omogna vita blodkroppar, vilket kan synas innan det totala antalet leukocyter hunnit stiga lika tydligt." }
+    ],
+
+    "band": [
+      { "max": 4, "niva": "lag", "rubrik": "1–4 poäng – osannolik",
+        "text": "Blindtarmsinflammation är ett osannolikt fynd vid den här poängen. Andra orsaker till buksmärtan bör övervägas i första hand." },
+      { "max": 6, "niva": "medel", "rubrik": "5–6 poäng – möjlig, oklar bild",
+        "text": "Varken tillräckligt hög eller tillräckligt låg för att fälla avgörandet på egen hand. Den här gruppen är där bilddiagnostik — ultraljud eller datortomografi — gör mest nytta för att skilja mellan observation och operation." },
+      { "max": 8, "niva": "hog", "rubrik": "7–8 poäng – sannolik",
+        "text": "Fynden talar sammantaget för blindtarmsinflammation. Kirurgisk bedömning är motiverad." },
+      { "niva": "hog", "rubrik": "9–10 poäng – mycket sannolik",
+        "text": "Nästan samtliga kriterier är uppfyllda. Vid den här poängen är sannolikheten för blindtarmsinflammation i studien som skalan bygger på hög nog för att motivera skyndsam kirurgisk bedömning utan att invänta ytterligare utredning." }
+    ]
+  },
+
+  "glasgow_blatchford": {
+    "namn": "Glasgow-Blatchford",
+    "monster": "varde",
+    "rubrik": "Glasgow-Blatchford – risk vid blödning i övre magtarmkanalen",
+    "intro": "Nio variabler, ingen av dem ett endoskopifynd, läggs samman till en summa mellan 0 och 23. Skalan är byggd för att göras innan patienten ens skopats, för att avgöra vem som säkert kan vänta och vem som behöver skyndsam handläggning. Fyll i värdena och kryssen, så visas poängen per variabel och totalen.",
+    "summaetikett": "Glasgow-Blatchford",
+    "enhetssuffix": "poäng",
+    "kalla": "Blatchford, Murray & Blatchford (2000)",
+
+    "parametrar": [
+      {
+        "namn": "kon",
+        "etikett": "Kön",
+        "kort": "Kön",
+        "typ": "val",
+        "roll": "instalning",
+        "hjalp": "Könet ger ingen egen poäng — det avgör bara vilken hemoglobingräns som gäller, eftersom referensvärdet för hemoglobin skiljer sig åt mellan könen.",
+        "val": [
+          { "varde": "man", "text": "Man", "poang": 0 },
+          { "varde": "kvinna", "text": "Kvinna", "poang": 0 }
+        ]
+      },
+      {
+        "namn": "hb",
+        "etikett": "Hemoglobin",
+        "kort": "Hemoglobin",
+        "enhet": "g/L",
+        "typ": "tal",
+        "plats": "t.ex. 125",
+        "rimlig": { "min": 30, "max": 200 },
+        "bandvaljare": "kon",
+        "band": {
+          "man": [
+            { "max": 99,  "poang": 6, "intervall": "<100" },
+            { "max": 119, "poang": 3, "intervall": "100–119" },
+            { "max": 129, "poang": 1, "intervall": "120–129" },
+            {             "poang": 0, "intervall": "≥130" }
+          ],
+          "kvinna": [
+            { "max": 99,  "poang": 6, "intervall": "<100" },
+            { "max": 119, "poang": 1, "intervall": "100–119" },
+            {             "poang": 0, "intervall": "≥120" }
+          ]
+        }
+      },
+      {
+        "namn": "urea",
+        "etikett": "Blodurea",
+        "kort": "Blodurea",
+        "enhet": "mmol/L",
+        "typ": "tal",
+        "plats": "t.ex. 8",
+        "rimlig": { "min": 1, "max": 60 },
+        "hjalp": "Ureakvävet stiger vid blödning i mag-tarmkanalen därför att blodets proteiner bryts ner av tarmbakterier och absorberas som urea, utöver den påverkan ett samtidigt lågt blodtryck kan ha på njurarnas genomblödning. Ett förhöjt värde är alltså i sig ett tecken på blödningens storlek, inte bara på njurfunktionen.",
+        "band": [
+          { "max": 6.4,  "poang": 0, "intervall": "<6,5" },
+          { "max": 7.9,  "poang": 2, "intervall": "6,5–7,9" },
+          { "max": 9.9,  "poang": 3, "intervall": "8,0–9,9" },
+          { "max": 24.9, "poang": 4, "intervall": "10,0–24,9" },
+          {              "poang": 6, "intervall": "≥25,0" }
+        ]
+      },
+      {
+        "namn": "sbt",
+        "etikett": "Systoliskt blodtryck",
+        "kort": "Systoliskt blodtryck",
+        "enhet": "mmHg",
+        "typ": "tal",
+        "plats": "t.ex. 125",
+        "rimlig": { "min": 40, "max": 300 },
+        "band": [
+          { "max": 89,  "poang": 3, "intervall": "<90" },
+          { "max": 99,  "poang": 2, "intervall": "90–99" },
+          { "max": 109, "poang": 1, "intervall": "100–109" },
+          {             "poang": 0, "intervall": "≥110" }
+        ]
+      },
+      {
+        "namn": "puls",
+        "etikett": "Puls",
+        "kort": "Puls",
+        "typ": "val",
+        "val": [
+          { "varde": "nej", "text": "Under 100 slag per minut", "poang": 0 },
+          { "varde": "ja",  "text": "100 slag per minut eller mer", "poang": 1 }
+        ]
+      },
+      {
+        "namn": "melena",
+        "etikett": "Svart, tjärliknande avföring",
+        "kort": "Svart avföring",
+        "typ": "val",
+        "val": [
+          { "varde": "nej", "text": "Nej", "poang": 0 },
+          { "varde": "ja",  "text": "Ja", "poang": 1 }
+        ]
+      },
+      {
+        "namn": "synkope",
+        "etikett": "Svimning i samband med blödningen",
+        "kort": "Svimning",
+        "typ": "val",
+        "hjalp": "Svimning tyder på en tillräckligt snabb och stor blodvolymförlust för att sänka blodtillförseln till hjärnan, även om blodtrycket vid ankomsten hunnit återhämta sig.",
+        "val": [
+          { "varde": "nej", "text": "Nej", "poang": 0 },
+          { "varde": "ja",  "text": "Ja", "poang": 2 }
+        ]
+      },
+      {
+        "namn": "leversjukdom",
+        "etikett": "Känd leversjukdom",
+        "kort": "Leversjukdom",
+        "typ": "val",
+        "val": [
+          { "varde": "nej", "text": "Nej", "poang": 0 },
+          { "varde": "ja",  "text": "Ja", "poang": 2 }
+        ]
+      },
+      {
+        "namn": "hjartsvikt",
+        "etikett": "Känd hjärtsvikt",
+        "kort": "Hjärtsvikt",
+        "typ": "val",
+        "val": [
+          { "varde": "nej", "text": "Nej", "poang": 0 },
+          { "varde": "ja",  "text": "Ja", "poang": 2 }
+        ]
+      }
+    ],
+
+    "band": [
+      { "max": 0, "niva": "lag", "rubrik": "0 poäng – lägsta risk",
+        "overvakning": "Enligt verksamhetens rutin.",
+        "atgard": "I studien skalan bygger på hade patienter med noll poäng en mycket låg risk att behöva transfusion, endoskopisk åtgärd eller kirurgi, och gruppen har undersökts som kandidater för öppenvård med uppföljande endoskopi." },
+      { "niva": "hog", "rubrik": "1 poäng eller mer",
+        "overvakning": "Enligt verksamhetens rutin för övre gastrointestinal blödning.",
+        "atgard": "Risken för att behöva en åtgärd stiger med poängen. Redan en enda poäng är tillräckligt för att gruppen med lägst risk ska lämnas, och sjukhusbedömning är därför motiverad." }
+    ]
   }
 }

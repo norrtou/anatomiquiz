@@ -88,6 +88,8 @@ SPEGLAD_AV = {
     "fyra_at": "neurologi.html",
     "befast": "neurologi.html",
     "hints": "neurologi.html",
+    "alvarado": "buken.html",
+    "glasgow_blatchford": "buken.html",
 }
 
 # Kryssruteskalorna speglas cell för cell, som NEWS2 – de HAR en riktig
@@ -102,6 +104,7 @@ KRYSSTABELLER = {
     "chadsva": ("hjartat.html", "CHA₂DS₂-VA – kriterier och poäng"),
     "has_bled": ("hjartat.html", "HAS-BLED – kriterier och poäng"),
     "dscrb65": ("infektion.html", "DS-CRB-65 – de sex kriterierna"),
+    "alvarado": ("buken.html", "Alvarados poäng – de åtta kriterierna"),
 }
 
 # Beslutsgången har inga vikter att spegla, bara utfall. Varje utfalls rubrik
@@ -123,6 +126,7 @@ VARDESKALOR = {
     "sofa": "infektion.html",
     "gcs": "neurologi.html",
     "fyra_at": "neurologi.html",
+    "glasgow_blatchford": "buken.html",
 }
 
 # Formelräknarnas tal lever i js/akutmedicin.js (FORMLER) och i facits band.
