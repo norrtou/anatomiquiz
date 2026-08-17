@@ -858,5 +858,295 @@
       "e4":  { "niva": "hog", "rubrik": "EHRA 4 – invalidiserande symtom",
                "text": "Vanliga aktiviteter går inte längre att utföra." }
     }
+  },
+
+  "gcs": {
+    "namn": "GCS",
+    "monster": "varde",
+    "rubrik": "Glasgow Coma Scale – medvetandegrad",
+    "intro": "Tre delpoäng — ögonöppning, verbalt svar och motoriskt svar — läggs samman till en summa mellan 3 och 15. Välj det bästa svaret patienten visar i respektive del, så visas delpoängen och totalen.",
+    "summaetikett": "GCS",
+    "enhetssuffix": "poäng",
+    "kalla": "Teasdale & Jennett (1974)",
+
+    "parametrar": [
+      {
+        "namn": "oga",
+        "etikett": "Ögonöppning",
+        "kort": "Ögonöppning",
+        "typ": "val",
+        "val": [
+          { "varde": "4", "text": "Spontan", "poang": 4 },
+          { "varde": "3", "text": "Vid tilltal", "poang": 3 },
+          { "varde": "2", "text": "Vid smärta", "poang": 2 },
+          { "varde": "1", "text": "Ingen reaktion", "poang": 1 }
+        ]
+      },
+      {
+        "namn": "verbal",
+        "etikett": "Verbalt svar",
+        "kort": "Verbalt svar",
+        "typ": "val",
+        "val": [
+          { "varde": "5", "text": "Orienterad", "poang": 5 },
+          { "varde": "4", "text": "Desorienterad men konversation möjlig (konfusion)", "poang": 4 },
+          { "varde": "3", "text": "Enstaka, osammanhängande ord", "poang": 3 },
+          { "varde": "2", "text": "Oförståeliga ljud", "poang": 2 },
+          { "varde": "1", "text": "Ingen reaktion", "poang": 1 }
+        ]
+      },
+      {
+        "namn": "motorik",
+        "etikett": "Motoriskt svar",
+        "kort": "Motoriskt svar",
+        "typ": "val",
+        "hjalp": "Böjning och sträckning skiljs åt av hur armen rör sig vid smärtstimulering: böjning (dekortikering) drar armen stelt mot bålen, sträckning (decerebrering) pressar den rak och roterad inåt. Sträckning väger lägre eftersom mönstret pekar på en djupare, mer utbredd skada i hjärnstammen.",
+        "val": [
+          { "varde": "6", "text": "Lyder uppmaning", "poang": 6 },
+          { "varde": "5", "text": "Lokaliserar smärta", "poang": 5 },
+          { "varde": "4", "text": "Undandragande rörelse vid smärta", "poang": 4 },
+          { "varde": "3", "text": "Onormal böjning (dekortikering)", "poang": 3 },
+          { "varde": "2", "text": "Sträckning (decerebrering)", "poang": 2 },
+          { "varde": "1", "text": "Ingen reaktion", "poang": 1 }
+        ]
+      }
+    ],
+
+    "band": [
+      { "max": 8, "niva": "hog", "rubrik": "3–8 poäng – svår skallskada",
+        "overvakning": "Kontinuerlig övervakning.",
+        "atgard": "Åtta poäng eller lägre räknas som gränsen där medvetandet ofta är så påverkat att förmågan att skydda de egna luftvägarna är hotad." },
+      { "max": 12, "niva": "medel", "rubrik": "9–12 poäng – måttlig skallskada",
+        "overvakning": "Tät, upprepad bedömning.",
+        "atgard": "Medvetandet är påverkat, men patienten reagerar mer på omgivningen än vid en svår skada." },
+      { "niva": "lag", "rubrik": "13–15 poäng – lindrig skallskada",
+        "overvakning": "Enligt verksamhetens rutin.",
+        "atgard": "Den lindriga gruppen rymmer allt från en fullt vaken patient till en med viss konfusion — 13–15 är ett brett spann, inte ett enhetligt tillstånd." }
+    ]
+  },
+
+  "rls85": {
+    "namn": "RLS-85",
+    "monster": "gang",
+    "rubrik": "RLS-85 – reaktionsgradsskalan",
+    "intro": "En enda nivå väljs, inte flera delpoäng som läggs ihop: leta upp den beskrivning som stämmer bäst med patientens reaktion just nu, från fullt vaken (nivå 1) till ingen reaktion alls på smärta (nivå 8).",
+    "kalla": "Starmark, Stålhammar & Holmgren (1988)",
+    "tomrubrik": "Ingen nivå vald",
+    "tomtext": "Välj den beskrivning som stämmer bäst med patientens reaktion.",
+
+    "steg": [
+      {
+        "namn": "niva",
+        "etikett": "Vilken beskrivning stämmer bäst?",
+        "hjalp": "Nivåerna 1–3 beskriver en vaken patient med olika grad av kontaktbarhet. Nivåerna 4–8 räknas som medvetslös och skiljs åt av vilken rörelse smärtstimulering utlöser — från att lokalisera smärtan till att inte reagera alls.",
+        "val": [
+          { "varde": "1", "text": "1 – Vaken, kontaktbar utan fördröjning, orienterad", "utfall": "r1", "rang": 1 },
+          { "varde": "2", "text": "2 – Slö eller oklar, kontaktbar vid tilltal, tillrop eller beröring", "utfall": "r2", "rang": 2 },
+          { "varde": "3", "text": "3 – Mycket slö eller oklar, kontaktbar vid upprepade tillrop, ruskningar eller smärtstimulering", "utfall": "r3", "rang": 3 },
+          { "varde": "4", "text": "4 – Medvetslös, lokaliserar smärta men avvärjer inte", "utfall": "r4", "rang": 4 },
+          { "varde": "5", "text": "5 – Medvetslös, undandragande rörelse vid smärta", "utfall": "r5", "rang": 5 },
+          { "varde": "6", "text": "6 – Medvetslös, stereotyp böjning vid smärta", "utfall": "r6", "rang": 6 },
+          { "varde": "7", "text": "7 – Medvetslös, stereotyp sträckning vid smärta", "utfall": "r7", "rang": 7 },
+          { "varde": "8", "text": "8 – Medvetslös, ingen reaktion på smärtstimulering", "utfall": "r8", "rang": 8 }
+        ]
+      }
+    ],
+
+    "utfall": {
+      "r1": { "niva": "ingen", "rubrik": "Nivå 1 – vaken",
+              "text": "Patienten är vaken, kontaktbar utan fördröjning och orienterad till tid, rum och person." },
+      "r2": { "niva": "lag", "rubrik": "Nivå 2 – slö eller oklar",
+              "text": "Patienten går att väcka och få kontakt med genom tilltal, tillrop eller beröring, men är slö eller oklar däremellan." },
+      "r3": { "niva": "medel", "rubrik": "Nivå 3 – mycket slö eller oklar",
+              "text": "Kontakt kräver upprepade tillrop, ruskningar eller smärtstimulering. Patienten är fortfarande vaken i teknisk mening, men vakenheten är kraftigt nedsatt." },
+      "r4": { "niva": "medel", "rubrik": "Nivå 4 – medvetslös, lokaliserar smärta",
+              "text": "Från nivå 4 räknas patienten som medvetslös. Vid smärtstimulering för patienten en hand mot stimuleringsstället utan att dra sig undan eller avvärja det." },
+      "r5": { "niva": "hog", "rubrik": "Nivå 5 – medvetslös, undandragande rörelse",
+              "text": "Smärtstimulering utlöser en rörelse bort från stimuleringsstället, utan att patienten lokaliserar varifrån smärtan kommer." },
+      "r6": { "niva": "hog", "rubrik": "Nivå 6 – medvetslös, stereotyp böjning",
+              "text": "Smärtstimulering utlöser en stel böjrörelse i armen mot bålen (dekortikering) — ett mönster som styrs av hjärnstammen, inte en målinriktad rörelse." },
+      "r7": { "niva": "hog", "rubrik": "Nivå 7 – medvetslös, stereotyp sträckning",
+              "text": "Smärtstimulering utlöser en stel sträckrörelse med armen roterad inåt (decerebrering) — ett tecken på en djupare skada än böjmönstret i nivå 6." },
+      "r8": { "niva": "hog", "rubrik": "Nivå 8 – ingen reaktion",
+              "text": "Ingen synlig reaktion alls på smärtstimulering." }
+    }
+  },
+
+  "fyra_at": {
+    "namn": "4AT",
+    "monster": "varde",
+    "rubrik": "4AT – snabbtest för delirium och kognitiv svikt",
+    "intro": "Fyra deltest läggs samman till en summa mellan 0 och 12. Testet tar under två minuter och kräver ingen särskild utbildning eller utrustning — det är själva poängen med det.",
+    "summaetikett": "4AT",
+    "enhetssuffix": "poäng",
+    "kalla": "Bellelli et al. (2014)",
+
+    "parametrar": [
+      {
+        "namn": "vakenhet",
+        "etikett": "Vakenhetsgrad",
+        "kort": "Vakenhetsgrad",
+        "typ": "val",
+        "hjalp": "En tydligt avvikande vakenhetsgrad ger full poäng direkt. En grov avvikelse från det normala räknas som ett tecken på delirium i sig, oavsett vad de tre andra deltesten visar.",
+        "val": [
+          { "varde": "normal", "text": "Normal vakenhet, eller kort dåsighet (under 10 sekunder) som sedan normaliseras", "poang": 0 },
+          { "varde": "avvikande", "text": "Tydligt avvikande — påtagligt dåsig/svårväckt eller agiterad/överaktiv", "poang": 4 }
+        ]
+      },
+      {
+        "namn": "amt4",
+        "etikett": "AMT4 (ålder, födelsedatum, plats, årtal)",
+        "kort": "AMT4",
+        "typ": "val",
+        "hjalp": "Fyra frågor: ålder, födelsedatum, vilken plats eller byggnad patienten befinner sig på, och innevarande år.",
+        "val": [
+          { "varde": "0", "text": "Inga fel", "poang": 0 },
+          { "varde": "1", "text": "Ett fel", "poang": 1 },
+          { "varde": "2", "text": "Två eller fler fel, eller går inte att testa", "poang": 2 }
+        ]
+      },
+      {
+        "namn": "uppmarksamhet",
+        "etikett": "Uppmärksamhet",
+        "kort": "Uppmärksamhet",
+        "typ": "val",
+        "hjalp": "Patienten uppmanas räkna upp årets månader baklänges med start på december. En enda påminnelse (\"vilken månad kommer före december?\") är tillåten.",
+        "val": [
+          { "varde": "0", "text": "Sju månader eller fler korrekt", "poang": 0 },
+          { "varde": "1", "text": "Färre än sju månader korrekt, eller vägrar försöka", "poang": 1 },
+          { "varde": "2", "text": "Går inte att testa (för trött, dåsig eller ouppmärksam för att ens börja)", "poang": 2 }
+        ]
+      },
+      {
+        "namn": "akut",
+        "etikett": "Akut eller växlande förändring",
+        "kort": "Akut förändring",
+        "typ": "val",
+        "hjalp": "Gäller en tydlig förändring i vakenhet, kognition eller beteende under de senaste två veckorna som fortfarande märks, eller som har växlat i intensitet under det senaste dygnet. Uppgiften kommer ofta från anhöriga eller personal som känner patienten sedan tidigare.",
+        "val": [
+          { "varde": "nej", "text": "Ingen akut förändring eller växling", "poang": 0 },
+          { "varde": "ja", "text": "Akut förändring eller växlande förlopp föreligger", "poang": 4 }
+        ]
+      }
+    ],
+
+    "band": [
+      { "max": 0, "niva": "lag", "rubrik": "0 poäng",
+        "overvakning": "Enligt verksamhetens rutin.",
+        "atgard": "Delirium eller uttalad kognitiv svikt är osannolikt vid det här resultatet." },
+      { "max": 3, "niva": "medel", "rubrik": "1–3 poäng",
+        "overvakning": "Kognitiv uppföljning.",
+        "atgard": "Möjlig kognitiv svikt. Bör utredas vidare, till exempel med ett fullständigt kognitivt test — resultatet utesluter inte heller delirium." },
+      { "niva": "hog", "rubrik": "4 poäng eller mer",
+        "overvakning": "Läkarbedömning.",
+        "atgard": "Möjligt delirium, med eller utan samtidig kognitiv svikt. Leta efter en utlösande orsak." }
+    ]
+  },
+
+  "befast": {
+    "namn": "BE-FAST",
+    "monster": "gang",
+    "rubrik": "BE-FAST – snabb igenkänning av stroke",
+    "intro": "Fem fynd, vart och ett besvarat med Ja eller Nej. Ett enda Ja räcker för att flytta hela bedömningen — BE-FAST summerar ingenting, det är en igenkänningslista, inte en poängskala.",
+    "kalla": "Intermountain Healthcare (2011)",
+    "tomrubrik": "Inget svar valt ännu",
+    "tomtext": "Besvara de fem fynden med Ja eller Nej.",
+
+    "steg": [
+      {
+        "namn": "balans",
+        "etikett": "B – balans: plötslig yrsel, ostadighet eller svårighet att hålla balansen",
+        "val": [
+          { "varde": "nej", "text": "Nej", "utfall": "ingen", "rang": 1 },
+          { "varde": "ja", "text": "Ja", "utfall": "misstanke", "rang": 2 }
+        ]
+      },
+      {
+        "namn": "ogon",
+        "etikett": "E – ögon (eyes): plötslig synförändring, dubbelseende eller synbortfall på ena eller båda ögonen",
+        "val": [
+          { "varde": "nej", "text": "Nej", "utfall": "ingen", "rang": 1 },
+          { "varde": "ja", "text": "Ja", "utfall": "misstanke", "rang": 2 }
+        ]
+      },
+      {
+        "namn": "ansikte",
+        "etikett": "F – ansikte (face): sneddragen mun eller hängande ena sida av ansiktet",
+        "val": [
+          { "varde": "nej", "text": "Nej", "utfall": "ingen", "rang": 1 },
+          { "varde": "ja", "text": "Ja", "utfall": "misstanke", "rang": 2 }
+        ]
+      },
+      {
+        "namn": "arm",
+        "etikett": "A – armar (arms): svaghet eller domningar i en arm eller ett ben, ofta ensidigt",
+        "val": [
+          { "varde": "nej", "text": "Nej", "utfall": "ingen", "rang": 1 },
+          { "varde": "ja", "text": "Ja", "utfall": "misstanke", "rang": 2 }
+        ]
+      },
+      {
+        "namn": "tal",
+        "etikett": "S – tal (speech): sluddrigt tal, svårt att hitta ord eller svårt att förstå andra",
+        "val": [
+          { "varde": "nej", "text": "Nej", "utfall": "ingen", "rang": 1 },
+          { "varde": "ja", "text": "Ja", "utfall": "misstanke", "rang": 2 }
+        ]
+      }
+    ],
+
+    "utfall": {
+      "ingen": { "niva": "lag", "rubrik": "Inga fynd enligt BE-FAST",
+                 "text": "Inget av de fem fynden är ikryssat just nu. BE-FAST utesluter inte stroke — symtom kan tillkomma, eller redan ha klingat av som vid en TIA — men ingen av de fem varningssignalerna föreligger vid den här bedömningen." },
+      "misstanke": { "niva": "hog", "rubrik": "Misstanke om stroke – notera tidpunkten och larma",
+                     "text": "Ett eller flera fynd talar för stroke. T i BE-FAST står för Time: notera när patienten senast sågs symtomfri och larma omgående. Möjligheten till proppupplösande behandling eller trombektomi är starkt tidsberoende, så den tidpunkten är avgörande för det fortsatta handläggandet." }
+    }
+  },
+
+  "hints": {
+    "namn": "HINTS",
+    "monster": "gang",
+    "rubrik": "HINTS – ögonundersökning vid akut yrsel",
+    "intro": "Tre fynd vid sängkanten skiljer en godartad, perifer orsak till akut och ihållande yrsel från en farligare, central orsak som stroke. Ett enda \"farligt\" fynd räcker för att flytta hela bedömningen mot central orsak — minnesregeln är INFARCT (Impulse Normal, Fast-phase Alternating, Refixation on cover test).",
+    "kalla": "Kattah et al. (2009)",
+    "tomrubrik": "Inget svar valt ännu",
+    "tomtext": "Besvara de tre deltesten.",
+
+    "steg": [
+      {
+        "namn": "impuls",
+        "etikett": "Head Impulse Test",
+        "hjalp": "Huvudet vrids snabbt och kort åt sidan medan patienten fixerar blicken på undersökarens näsa. En korrigerande ögonrörelse (sackad) tillbaka mot målet efter vridningen är ett tecken på att balansorganets reflex är nedsatt på den sidan — alltså en perifer orsak.",
+        "val": [
+          { "varde": "avvikande", "text": "Avvikande – korrigerande sackad syns", "utfall": "perifer", "rang": 1 },
+          { "varde": "normal", "text": "Normalt – ingen korrigerande sackad", "utfall": "central", "rang": 2 }
+        ]
+      },
+      {
+        "namn": "nystagmus",
+        "etikett": "Nystagmus",
+        "hjalp": "Ögonens ofrivilliga, ryckande rörelse iakttas i olika blickriktningar.",
+        "val": [
+          { "varde": "enkelriktad", "text": "Enkelriktad, slår åt samma håll oavsett blickriktning", "utfall": "perifer", "rang": 1 },
+          { "varde": "vaxlande", "text": "Riktningsväxlande, vertikal eller vridande (torsionell)", "utfall": "central", "rang": 2 }
+        ]
+      },
+      {
+        "namn": "skew",
+        "etikett": "Test of skew",
+        "hjalp": "Ett alternerande täcktest av vardera ögat: handen flyttas snabbt mellan ögonen medan patienten fixerar en punkt rakt fram, och undersökaren tittar efter en vertikal korrigeringsrörelse i det nyss täckta ögat.",
+        "val": [
+          { "varde": "negativ", "text": "Negativt – ingen vertikal korrigering", "utfall": "perifer", "rang": 1 },
+          { "varde": "positiv", "text": "Positivt – vertikal korrigering syns (skew deviation)", "utfall": "central", "rang": 2 }
+        ]
+      }
+    ],
+
+    "utfall": {
+      "central": { "niva": "hog", "rubrik": "Ett eller flera fynd talar för central orsak",
+                   "text": "Ett normalt impulstest, riktningsväxlande nystagmus eller ett positivt skewtest talar vart och ett för en central orsak, till exempel stroke i lillhjärnan eller hjärnstammen — trots att patienten kan se ut att bara ha yrsel. Utred akut." },
+      "perifer": { "niva": "lag", "rubrik": "Samtliga tre fynd talar för perifer orsak",
+                   "text": "Ett avvikande (positivt) impulstest, en enkelriktad nystagmus och ett negativt skewtest bildar tillsammans den kombination som talar för en godartad, perifer orsak, till exempel vestibularisneurit. HINTS är bara validerad vid akut, ihållande yrsel som pågår när undersökningen görs — inte vid episodisk yrsel som redan klingat av — och ersätter aldrig den kliniska helhetsbedömningen." }
+    }
   }
 }

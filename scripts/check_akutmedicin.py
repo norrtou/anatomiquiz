@@ -83,6 +83,11 @@ SPEGLAD_AV = {
     "qsofa": "infektion.html",
     "sofa": "infektion.html",
     "dscrb65": "infektion.html",
+    "gcs": "neurologi.html",
+    "rls85": "neurologi.html",
+    "fyra_at": "neurologi.html",
+    "befast": "neurologi.html",
+    "hints": "neurologi.html",
 }
 
 # Kryssruteskalorna speglas cell för cell, som NEWS2 – de HAR en riktig
@@ -103,6 +108,9 @@ KRYSSTABELLER = {
 # ska stå på sidan – det är dem läsaren känner igen sin patient i.
 GANGSKALOR = {
     "ehra": "hjartat.html",
+    "rls85": "neurologi.html",
+    "befast": "neurologi.html",
+    "hints": "neurologi.html",
 }
 
 # Värdeskalor utanför NEWS2. NEWS2 speglas cell för cell via RADER nedan, vilket
@@ -113,6 +121,8 @@ GANGSKALOR = {
 VARDESKALOR = {
     "qsofa": "infektion.html",
     "sofa": "infektion.html",
+    "gcs": "neurologi.html",
+    "fyra_at": "neurologi.html",
 }
 
 # Formelräknarnas tal lever i js/akutmedicin.js (FORMLER) och i facits band.

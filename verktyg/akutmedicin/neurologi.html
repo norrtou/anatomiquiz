@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSP mot XSS: skript/stilar/data endast från egen origin. GitHub Pages tillåter inga egna HTTP-headers, därav meta. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+
+  <!-- Primär SEO -->
+  <title>Neurologi – GCS, RLS-85, 4AT, BE-FAST och HINTS | Anatomiquiz</title>
+  <meta name="description" content="Räknare för Glasgow Coma Scale, RLS-85, 4AT, BE-FAST och HINTS med varje variabel förklarad – medvetandegrad, delirium och akut yrsel vid stroke.">
+  <meta name="author" content="Daniel Medin (Norrtou Creations)">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+  <link rel="canonical" href="https://anatomiquiz.se/verktyg/akutmedicin/neurologi.html">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anatomiquiz.se/verktyg/akutmedicin/neurologi.html">
+  <meta property="og:title" content="Neurologi – GCS, RLS-85, 4AT, BE-FAST och HINTS">
+  <meta property="og:description" content="Fem instrument vid medvetandepåverkan, delirium och akut yrsel: två sätt att gradera medvetandegrad, ett snabbtest för delirium och två undersökningar som skiljer stroke från godartade orsaker.">
+  <meta property="og:image" content="https://anatomiquiz.se/img/og-image.png">
+  <meta property="og:image:width" content="1518">
+  <meta property="og:image:height" content="864">
+  <meta property="og:image:alt" content="Anatomiquiz — räknare för neurologiska bedömningsskalor">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="Anatomiquiz">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Neurologi – GCS, RLS-85, 4AT, BE-FAST och HINTS">
+  <meta name="twitter:description" content="Fem instrument vid medvetandepåverkan, delirium och akut yrsel: två sätt att gradera medvetandegrad, ett snabbtest för delirium och två undersökningar som skiljer stroke från godartade orsaker.">
+  <meta name="twitter:image" content="https://anatomiquiz.se/img/og-image.png">
+  <meta name="twitter:image:alt" content="Anatomiquiz — räknare för neurologiska bedömningsskalor">
+
+  <meta name="theme-color" content="#10b981">
+  <meta name="color-scheme" content="light dark">
+  <!-- Tema (ljust/mörkt). Laddas SYNKRONT och före stilmallen: attributet
+       data-theme måste sitta på <html> innan första målningen, annars
+       blinkar sidan ljus. Inline gick inte – CSP:n tillåter bara egen origin. -->
+  <script src="/js/theme.js?v=0.9.260"></script>
+
+  <!-- Strukturerad data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "WebApplication",
+    "LearningResource"
+  ],
+  "name": "Neurologi – GCS, RLS-85, 4AT, BE-FAST och HINTS",
+  "description": "Räknare för Glasgow Coma Scale och RLS-85 för medvetandegrad, 4AT för delirium, och BE-FAST och HINTS för akut yrsel och misstänkt stroke, med varje variabel förklarad.",
+  "url": "https://anatomiquiz.se/verktyg/akutmedicin/neurologi.html",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Alla webbläsare",
+  "inLanguage": "sv-SE",
+  "isAccessibleForFree": true,
+  "learningResourceType": "interactive tool",
+  "educationalUse": [
+    "self study",
+    "practice"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "SEK"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Anatomiquiz",
+    "url": "https://anatomiquiz.se/"
+  },
+  "datePublished": "2026-08-17",
+  "dateModified": "2026-08-17",
+  "author": {
+    "@type": "Person",
+    "@id": "https://anatomiquiz.se/#daniel-medin",
+    "name": "Daniel Medin",
+    "description": "Utbildad medicinsk sekreterare och studerande i arbetsterapi vid Lunds universitet, med särskilt intresse för anatomi.",
+    "url": "https://norrtou.se",
+    "sameAs": [
+      "https://norrtou.se",
+      "https://www.linkedin.com/in/danielmedin",
+      "https://github.com/norrtou"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://anatomiquiz.se/#norrtou-creations",
+    "name": "Norrtou Creations",
+    "url": "https://norrtou.se",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://anatomiquiz.se/img/icon-512.png"
+    },
+    "sameAs": [
+      "https://github.com/norrtou"
+    ]
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Medvetandegrad"
+    },
+    {
+      "@type": "Thing",
+      "name": "Delirium"
+    },
+    {
+      "@type": "Thing",
+      "name": "Stroke"
+    },
+    {
+      "@type": "Thing",
+      "name": "Yrsel"
+    }
+  ],
+  "teaches": [
+    "Hur Glasgow Coma Scale delar upp medvetandegraden i ögonöppning, verbalt svar och motoriskt svar.",
+    "Vad som skiljer RLS-85:s åtta nivåer åt, och var gränsen för medvetslöshet går.",
+    "Vilka fyra deltest 4AT bygger på och varför en grovt avvikande vakenhetsgrad väger tyngre än de tre andra tillsammans.",
+    "Varför BE-FAST lade till balans och syn till den äldre FAST-modellen.",
+    "Hur HINTS tre ögonfynd tillsammans skiljer en godartad yrsel från en stroke."
+  ],
+  "keywords": [
+    "gcs",
+    "glasgow coma scale",
+    "rls-85",
+    "4at",
+    "delirium",
+    "be-fast",
+    "hints",
+    "yrsel"
+  ],
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Validation of the 4AT, a new instrument for rapid delirium screening: a study in 234 hospitalised older people",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Bellelli, G."
+        },
+        {
+          "@type": "Person",
+          "name": "Morandi, A."
+        },
+        {
+          "@type": "Person",
+          "name": "Davis, D. H. J."
+        },
+        {
+          "@type": "Person",
+          "name": "Mazzola, P."
+        },
+        {
+          "@type": "Person",
+          "name": "Turco, R."
+        },
+        {
+          "@type": "Person",
+          "name": "Gentile, S."
+        },
+        {
+          "@type": "Person",
+          "name": "Ryan, T."
+        },
+        {
+          "@type": "Person",
+          "name": "Cash, H."
+        },
+        {
+          "@type": "Person",
+          "name": "Guerini, F."
+        },
+        {
+          "@type": "Person",
+          "name": "Torpilliesi, T."
+        },
+        {
+          "@type": "Person",
+          "name": "Del Santo, F."
+        },
+        {
+          "@type": "Person",
+          "name": "Trabucchi, M."
+        },
+        {
+          "@type": "Person",
+          "name": "Annoni, G."
+        },
+        {
+          "@type": "Person",
+          "name": "MacLullich, A. M. J."
+        }
+      ],
+      "datePublished": "2014",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Age and Ageing"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "BE FAST – recognizing the signs of stroke.",
+      "author": [
+        {
+          "@type": "Organization",
+          "name": "Intermountain Healthcare"
+        }
+      ],
+      "datePublished": "2011"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "HINTS to diagnose stroke in the acute vestibular syndrome: three-step bedside oculomotor examination more sensitive than early MRI diffusion-weighted imaging",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Kattah, J. C."
+        },
+        {
+          "@type": "Person",
+          "name": "Talkad, A. V."
+        },
+        {
+          "@type": "Person",
+          "name": "Wang, D. Z."
+        },
+        {
+          "@type": "Person",
+          "name": "Hsieh, Y.-H."
+        },
+        {
+          "@type": "Person",
+          "name": "Newman-Toker, D. E."
+        }
+      ],
+      "datePublished": "2009",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Stroke"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "The Reaction Level Scale (RLS85). Manual and guidelines",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Starmark, J.-E."
+        },
+        {
+          "@type": "Person",
+          "name": "Stålhammar, D."
+        },
+        {
+          "@type": "Person",
+          "name": "Holmgren, E."
+        }
+      ],
+      "datePublished": "1988",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Acta Neurochirurgica"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Assessment of coma and impaired consciousness: a practical scale",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Teasdale, G."
+        },
+        {
+          "@type": "Person",
+          "name": "Jennett, B."
+        }
+      ],
+      "datePublished": "1974",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "The Lancet"
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Anatomiquiz",
+      "item": "https://anatomiquiz.se/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Verktyg",
+      "item": "https://anatomiquiz.se/verktyg/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Akutmedicin",
+      "item": "https://anatomiquiz.se/verktyg/akutmedicin/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Neurologi",
+      "item": "https://anatomiquiz.se/verktyg/akutmedicin/neurologi.html"
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon.png">
+  <link rel="apple-touch-icon" href="/img/icon-192.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/css/styles.css?v=0.9.412">
+  <link rel="stylesheet" href="/css/verktyg.css?v=0.9.415">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+  <main id="main" class="container" role="main">
+
+    <header class="header">
+      <div class="header-title">
+        <h1><a class="kb-term" href="/ordlista-n.html#term-neurologi" data-def="Läran om nervsystemet och dess sjukdomar">Neurologi</a></h1>
+      </div>
+      <p class="tagline">GCS, RLS-85, 4AT, BE-FAST och HINTS</p>
+    </header>
+
+    <section class="card" aria-labelledby="akutHeading">
+
+      <nav class="breadcrumb" aria-label="Brödsmula">
+        <a href="/" class="breadcrumb-link">← Anatomiquiz</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="/verktyg/" class="breadcrumb-link">Verktyg</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="/verktyg/akutmedicin/" class="breadcrumb-link">Akutmedicin</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <span class="breadcrumb-current" aria-current="page">Neurologi</span>
+      </nav>
+
+      <h2 id="akutHeading" class="sr-only">Neurologiska bedömningsskalor</h2>
+
+      <div class="info-about">
+        <p>Fem instrument, i tre grupper. <a href="#gcs" class="info-link">GCS</a> och <a href="#rls85" class="info-link">RLS-85</a> gör samma sak på olika sätt: de graderar <a class="kb-term" href="/ordlista-m.html#term-medvetandegrad" data-def="Hur vaken och kontaktbar en person är, från fullt vaken till djupt medvetslös">medvetandegraden</a>. <a href="#fyraat" class="info-link">4AT</a> är ett snabbtest för <a class="kb-term" href="/ordlista-d.html#term-delirium" data-def="Akut förvirringstillstånd med störd uppmärksamhet och växlande medvetandegrad">delirium</a> och kognitiv <a class="kb-term" href="/ordlista-i.html#term-insufficiens" data-def="Otillräcklig funktion hos ett organ">svikt</a>. <a href="#befast" class="info-link">BE-FAST</a> och <a href="#hints" class="info-link">HINTS</a> hör ihop kring ett gemensamt problem — akut <a class="kb-term" href="/ordlista-y.html#term-yrsel" data-def="Känsla av ostadighet eller att omgivningen snurrar">yrsel</a> — men löser det på helt olika avstånd från patienten: det ena är en igenkänningslista för alla, det andra en ögonundersökning för den som redan är på plats.</p>
+      </div>
+
+      <div id="akut-utan-js" class="vt-warn">
+        Räknarna kräver JavaScript. Är det avstängt finns alla kriterier, poäng och tolkningsband som tabeller under varje rubrik.
+      </div>
+
+      <!-- =========================================================
+           1. GCS
+           ========================================================= -->
+
+      <h2 id="gcs">GCS – <a class="kb-term" href="/ordlista-g.html#term-glasgow-coma-scale" data-def="Skala 3–15 för medvetandegrad: ögonöppning, verbalt svar och motoriskt svar">Glasgow Coma Scale</a></h2>
+
+      <p>Tre delskalor — ögonöppning, verbalt svar och <a class="kb-term" href="/ordlista-m.html#term-motorisk" data-def="Som rör rörelse/muskelstyrning; leder signaler ut till muskler (motsats: sensorisk)">motoriskt</a> svar — läggs samman till en summa mellan 3 och 15. GCS är den mest spridda skalan för <a class="kb-term" href="/ordlista-m.html#term-medvetandegrad" data-def="Hur vaken och kontaktbar en person är, från fullt vaken till djupt medvetslös">medvetandegrad</a> i världen och används inom nästan alla specialiteter, inte bara vid skallskador som den togs fram för.</p>
+
+      <div data-akut="gcs"></div>
+
+      <h3>Poängtabellen</h3>
+
+      <table class="kb-mtable">
+        <caption>GCS – poäng per delskala</caption>
+        <thead>
+          <tr>
+            <th scope="col">Delskala</th>
+            <th scope="col">1</th>
+            <th scope="col">2</th>
+            <th scope="col">3</th>
+            <th scope="col">4</th>
+            <th scope="col">5</th>
+            <th scope="col">6</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Delskala">Ögonöppning</th><td data-label="1">Ingen reaktion</td><td data-label="2">Vid smärta</td><td data-label="3">Vid tilltal</td><td data-label="4">Spontan</td><td data-label="5">—</td><td data-label="6">—</td></tr>
+          <tr><th scope="row" data-label="Delskala">Verbalt svar</th><td data-label="1">Ingen reaktion</td><td data-label="2">Oförståeliga ljud</td><td data-label="3">Enstaka, osammanhängande ord</td><td data-label="4">Desorienterad men konversation möjlig (<a class="kb-term" href="/ordlista-k.html#term-konfusion" data-def="Förvirring med störd uppfattning om tid, rum och sammanhang">konfusion</a>)</td><td data-label="5">Orienterad</td><td data-label="6">—</td></tr>
+          <tr><th scope="row" data-label="Delskala"><a class="kb-term" href="/ordlista-m.html#term-motorisk" data-def="Som rör rörelse/muskelstyrning; leder signaler ut till muskler (motsats: sensorisk)">Motoriskt</a> svar</th><td data-label="1">Ingen reaktion</td><td data-label="2">Sträckning (decerebrering)</td><td data-label="3">Onormal böjning (dekortikering)</td><td data-label="4">Undandragande rörelse vid smärta</td><td data-label="5">Lokaliserar smärta</td><td data-label="6">Lyder uppmaning</td></tr>
+        </tbody>
+      </table>
+
+      <table class="kb-mtable">
+        <caption>GCS – tolkning av summan</caption>
+        <thead>
+          <tr>
+            <th scope="col">Summa</th>
+            <th scope="col">Bedömning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Summa">13–15 poäng</th><td data-label="Bedömning"><strong>13–15 poäng – lindrig skallskada</strong>. Ett brett spann, från fullt vaken till viss <a class="kb-term" href="/ordlista-k.html#term-konfusion" data-def="Förvirring med störd uppfattning om tid, rum och sammanhang">konfusion</a></td></tr>
+          <tr><th scope="row" data-label="Summa">9–12 poäng</th><td data-label="Bedömning"><strong>9–12 poäng – måttlig skallskada</strong></td></tr>
+          <tr><th scope="row" data-label="Summa">3–8 poäng</th><td data-label="Bedömning"><strong>3–8 poäng – svår skallskada</strong>. Gränsen där förmågan att skydda de egna luftvägarna ofta är hotad</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Vad betyder variablerna?</h3>
+
+      <h4>Ögonöppning</h4>
+      <p>Det grövsta måttet på vakenhet: öppnar patienten ögonen alls, och i så fall av sig själv, av tilltal eller bara av smärta? Ögonöppning kan förekomma utan att patienten i övrigt är kontaktbar — den mäter en enda funktion, inte medvetandet som helhet.</p>
+
+      <h4>Verbalt svar</h4>
+      <p>Den delskala som är svårast att bedöma vid till exempel <a class="kb-term" href="/ordlista-a.html#term-afasi" data-def="Förlust av förmågan att uppfatta eller använda språk; expressiv afasi rör oförmåga att uttrycka sig, sensorisk afasi oförmåga att förstå">afasi</a>, intubation eller om patienten talar ett annat språk än undersökaren. Orienterad innebär att patienten vet vem, var och när — brister i någon av delarna sänker svaret till <a class="kb-term" href="/ordlista-k.html#term-konfusion" data-def="Förvirring med störd uppfattning om tid, rum och sammanhang">konfusion</a>, inte lägre, så länge ett samtal ändå går att föra.</p>
+
+      <h4><a class="kb-term" href="/ordlista-m.html#term-motorisk" data-def="Som rör rörelse/muskelstyrning; leder signaler ut till muskler (motsats: sensorisk)">Motoriskt</a> svar</h4>
+      <p>Den delskala som väger tyngst och som ensam räcker för att följa en medvetslös patient över tid, eftersom den fortsätter att gå att bedöma även när tal och ögonöppning inte längre går att pröva. Böjning (dekortikering) och sträckning (decerebrering) är stela, stereotypa mönster som styrs av <a class="kb-term" href="/ordlista-h.html#term-hjarnstam" data-def="Mellanhjärna, pons och förlängda märgen">hjärnstammen</a> snarare än en målinriktad rörelse, och sträckning pekar på en djupare skada än böjning.</p>
+
+      <h3>Varför just de här variablerna?</h3>
+
+      <p>Teasdale och Jennett byggde GCS 1974 för att ersätta löst formulerade termer som "stupor" och "sopor", som olika undersökare lade helt olika betydelse i. Genom att bryta ner medvetandet i tre observerbara beteenden — inte tolkningar av vad patienten "egentligen" upplever — blev bedömningen möjlig att göra likadant oavsett vem som utförde den, och möjlig att jämföra över tid för att se om en patient försämras eller förbättras.</p>
+
+      <p><strong>Summan förenklar bort information som delpoängen bär.</strong> En summa på 11 kan komma från flera olika kombinationer av E, V och M, och de kombinationerna beskriver olika patienter. Det är därför GCS alltid bör anges som tre delpoäng (till exempel E3V4M4) och inte bara som en total — praxis på de flesta akutmottagningar, även om räknaren här visar totalen som sitt huvudresultat.</p>
+
+      <div class="vt-ansvar">
+        <p><strong>Räknaren ersätter inte bedömningen.</strong> GCS byggdes för skallskador men används brett vid alla tillstånd som kan påverka medvetandet. Den säger ingenting om orsaken till en sänkt poäng, bara hur påverkat medvetandet är just nu.</p>
+      </div>
+
+      <!-- =========================================================
+           2. RLS-85
+           ========================================================= -->
+
+      <h2 id="rls85">RLS-85 – reaktionsgradsskalan</h2>
+
+      <p>En svensk skala som graderar <a class="kb-term" href="/ordlista-m.html#term-medvetandegrad" data-def="Hur vaken och kontaktbar en person är, från fullt vaken till djupt medvetslös">medvetandegraden</a> i en enda nivå från 1 till 8, i stället för att lägga samman flera delpoäng. Nivåerna 1–3 beskriver en vaken patient med olika grad av kontaktbarhet, och nivåerna 4–8 en medvetslös patient, uppdelade efter vilken rörelse smärtstimulering utlöser.</p>
+
+      <div data-akut="rls85"></div>
+
+      <h3>Nivåerna</h3>
+
+      <table class="kb-mtable">
+        <caption>RLS-85 – de åtta nivåerna</caption>
+        <thead>
+          <tr>
+            <th scope="col">Nivå</th>
+            <th scope="col">Beskrivning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Nivå">Nivå 1 – vaken</th><td data-label="Beskrivning">Kontaktbar utan fördröjning, orienterad</td></tr>
+          <tr><th scope="row" data-label="Nivå">Nivå 2 – slö eller oklar</th><td data-label="Beskrivning">Kontaktbar vid tilltal, tillrop eller beröring</td></tr>
+          <tr><th scope="row" data-label="Nivå">Nivå 3 – mycket slö eller oklar</th><td data-label="Beskrivning">Kontaktbar vid upprepade tillrop, ruskningar eller smärtstimulering</td></tr>
+          <tr><th scope="row" data-label="Nivå">Nivå 4 – medvetslös, lokaliserar smärta</th><td data-label="Beskrivning">För en hand mot stimuleringsstället utan att avvärja det</td></tr>
+          <tr><th scope="row" data-label="Nivå">Nivå 5 – medvetslös, undandragande rörelse</th><td data-label="Beskrivning">Drar sig undan från smärtan utan att lokalisera den</td></tr>
+          <tr><th scope="row" data-label="Nivå">Nivå 6 – medvetslös, stereotyp böjning</th><td data-label="Beskrivning">Stel böjrörelse i armen mot bålen (dekortikering)</td></tr>
+          <tr><th scope="row" data-label="Nivå">Nivå 7 – medvetslös, stereotyp sträckning</th><td data-label="Beskrivning">Stel sträckrörelse med armen roterad inåt (decerebrering)</td></tr>
+          <tr><th scope="row" data-label="Nivå">Nivå 8 – ingen reaktion</th><td data-label="Beskrivning">Ingen synlig reaktion alls på smärtstimulering</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Vad betyder variablerna?</h3>
+
+      <p>RLS-85 tar bara hänsyn till en enda observation i taget — den bästa reaktion patienten visar — och kräver inget samtidigt svar från flera olika funktioner som <a href="#gcs" class="info-link">GCS</a> gör. Gränsen mellan nivå 3 och 4 är den viktigaste i hela skalan: den skiljer en vaken patient, hur påverkad denne än är, från en medvetslös. Nivåerna 4–8 skiljs sedan åt av rörelsemönstret vid smärtstimulering, från målinriktat (lokaliserar) via bortdragande, till de två stela hjärnstamsmönstren böjning och sträckning, och slutligen ingen reaktion alls.</p>
+
+      <h3>Varför just de här variablerna?</h3>
+
+      <p>Skalan togs fram i Sverige 1985 och publicerades av Starmark, Stålhammar och Holmgren 1988, som ett svar på att flera länder redan hade sin egen medvetandeskala och att jämförelser dem emellan var svåra. RLS-85 bygger, till skillnad från GCS, på en enda sammanvägd bedömning i stället för tre separata delpoäng — ett medvetet designval för att göra skalan snabb att använda vid sängkanten, på bekostnad av den detaljrikedom som GCS delpoäng ger.</p>
+
+      <div class="vt-ansvar">
+        <p><strong>Räknaren ersätter inte bedömningen.</strong> RLS-85 är i första hand spridd i Sverige och delar av Norden. Internationell litteratur, och de flesta andra instrument på den här sidan, utgår i stället från GCS.</p>
+      </div>
+
+      <!-- =========================================================
+           3. 4AT
+           ========================================================= -->
+
+      <h2 id="fyraat">4AT – snabbtest för <a class="kb-term" href="/ordlista-d.html#term-delirium" data-def="Akut förvirringstillstånd med störd uppmärksamhet och växlande medvetandegrad">delirium</a> och kognitiv <a class="kb-term" href="/ordlista-i.html#term-insufficiens" data-def="Otillräcklig funktion hos ett organ">svikt</a></h2>
+
+      <p>Fyra korta deltest läggs samman till en summa mellan 0 och 12. Testet är byggt för att ta under två minuter, kräver ingen särskild utbildning eller utrustning, och går att göra även om patienten inte orkar eller kan samarbeta fullt ut — det är själva poängen med det.</p>
+
+      <div data-akut="fyra_at"></div>
+
+      <h3>Poängtabellen</h3>
+
+      <table class="kb-mtable">
+        <caption>4AT – poäng per deltest</caption>
+        <thead>
+          <tr>
+            <th scope="col">Deltest</th>
+            <th scope="col">0 poäng</th>
+            <th scope="col">1 poäng</th>
+            <th scope="col">2 poäng</th>
+            <th scope="col">4 poäng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Deltest">Vakenhetsgrad</th><td data-label="0 poäng">Normal vakenhet, eller kort dåsighet (under 10 sekunder) som sedan normaliseras</td><td data-label="1 poäng">—</td><td data-label="2 poäng">—</td><td data-label="4 poäng">Tydligt avvikande — påtagligt dåsig/svårväckt eller agiterad/överaktiv</td></tr>
+          <tr><th scope="row" data-label="Deltest">AMT4 (ålder, födelsedatum, plats, årtal)</th><td data-label="0 poäng">Inga fel</td><td data-label="1 poäng">Ett fel</td><td data-label="2 poäng">Två eller fler fel, eller går inte att testa</td><td data-label="4 poäng">—</td></tr>
+          <tr><th scope="row" data-label="Deltest">Uppmärksamhet (månaderna baklänges)</th><td data-label="0 poäng">Sju månader eller fler korrekt</td><td data-label="1 poäng">Färre än sju månader korrekt, eller vägrar försöka</td><td data-label="2 poäng">Går inte att testa (för trött, dåsig eller ouppmärksam för att ens börja)</td><td data-label="4 poäng">—</td></tr>
+          <tr><th scope="row" data-label="Deltest">Akut eller växlande förändring</th><td data-label="0 poäng">Ingen akut förändring eller växling</td><td data-label="1 poäng">—</td><td data-label="2 poäng">—</td><td data-label="4 poäng">Akut förändring eller växlande förlopp föreligger</td></tr>
+        </tbody>
+      </table>
+
+      <table class="kb-mtable">
+        <caption>4AT – tolkning av summan</caption>
+        <thead>
+          <tr>
+            <th scope="col">Summa</th>
+            <th scope="col">Bedömning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Summa">0 poäng</th><td data-label="Bedömning"><strong>0 poäng</strong>. <a class="kb-term" href="/ordlista-d.html#term-delirium" data-def="Akut förvirringstillstånd med störd uppmärksamhet och växlande medvetandegrad">Delirium</a> eller uttalad kognitiv <a class="kb-term" href="/ordlista-i.html#term-insufficiens" data-def="Otillräcklig funktion hos ett organ">svikt</a> är osannolikt</td></tr>
+          <tr><th scope="row" data-label="Summa">1–3 poäng</th><td data-label="Bedömning"><strong>1–3 poäng</strong>. Möjlig kognitiv <a class="kb-term" href="/ordlista-i.html#term-insufficiens" data-def="Otillräcklig funktion hos ett organ">svikt</a>, bör utredas vidare</td></tr>
+          <tr><th scope="row" data-label="Summa">4 poäng eller mer</th><td data-label="Bedömning"><strong>4 poäng eller mer</strong>. Möjligt <a class="kb-term" href="/ordlista-d.html#term-delirium" data-def="Akut förvirringstillstånd med störd uppmärksamhet och växlande medvetandegrad">delirium</a>, med eller utan samtidig kognitiv <a class="kb-term" href="/ordlista-i.html#term-insufficiens" data-def="Otillräcklig funktion hos ett organ">svikt</a></td></tr>
+        </tbody>
+      </table>
+
+      <h3>Vad betyder variablerna?</h3>
+
+      <h4>Vakenhetsgrad</h4>
+      <p>Det enda deltestet som ensamt kan avgöra hela summan: en grovt avvikande vakenhetsgrad ger full poäng direkt, oavsett vad de tre andra deltesten visar. En patient som är svårväckt eller påtagligt agiterad behöver inte genomgå resten av testet för att räknas till den högsta risknivån.</p>
+
+      <h4>AMT4</h4>
+      <p>En förkortad version av det äldre tiofrågors Abbreviated Mental Test, med bara fyra frågor: ålder, födelsedatum, plats och årtal. Testet fångar orienteringsförmågan snabbt, men skiljer inte i sig mellan <a class="kb-term" href="/ordlista-d.html#term-delirium" data-def="Akut förvirringstillstånd med störd uppmärksamhet och växlande medvetandegrad">delirium</a> och en bakomliggande demens — det är uppgiften för nästa deltest och för det sista.</p>
+
+      <h4>Uppmärksamhet</h4>
+      <p>Att räkna månaderna baklänges kräver aktivt fokus på ett sätt som att bara svara på frågor inte gör. Nedsatt uppmärksamhetsförmåga är ett kärnkriterium för <a class="kb-term" href="/ordlista-d.html#term-delirium" data-def="Akut förvirringstillstånd med störd uppmärksamhet och växlande medvetandegrad">delirium</a> enligt DSM-5, till skillnad från demens där uppmärksamheten ofta är bevarad långt in i förloppet.</p>
+
+      <h4>Akut eller växlande förändring</h4>
+      <p>Den enda uppgift som sällan kommer från patienten själv, utan från anhöriga eller personal som känner patienten sedan tidigare. Just växlingen — att patienten är tydligt annorlunda vid olika tillfällen under samma dygn — är ett kännetecken för <a class="kb-term" href="/ordlista-d.html#term-delirium" data-def="Akut förvirringstillstånd med störd uppmärksamhet och växlande medvetandegrad">delirium</a> som skiljer det från de flesta andra orsaker till kognitiv <a class="kb-term" href="/ordlista-i.html#term-insufficiens" data-def="Otillräcklig funktion hos ett organ">svikt</a>.</p>
+
+      <h3>Varför just de här variablerna?</h3>
+
+      <p>4AT togs fram av en forskargrupp i Edinburgh, ledd av Alasdair MacLullich, för att fylla ett gap: äldre <a class="kb-term" href="/ordlista-d.html#term-delirium" data-def="Akut förvirringstillstånd med störd uppmärksamhet och växlande medvetandegrad">delirium</a>-instrument krävde antingen särskild träning eller tog för lång tid för att användas rutinmässigt på en akutmottagning. De fyra deltesten valdes för att tillsammans täcka DSM-5:s kärnkriterier för <a class="kb-term" href="/ordlista-d.html#term-delirium" data-def="Akut förvirringstillstånd med störd uppmärksamhet och växlande medvetandegrad">delirium</a> — störd <a class="kb-term" href="/ordlista-m.html#term-medvetandegrad" data-def="Hur vaken och kontaktbar en person är, från fullt vaken till djupt medvetslös">medvetandegrad</a>, nedsatt uppmärksamhet, kognitiv påverkan och ett akut eller växlande förlopp — utan att kräva mer än det som redan går att observera eller fråga om vid sängkanten.</p>
+
+      <p><strong>4AT screenar, det diagnostiserar inte.</strong> Ett högt resultat innebär att <a class="kb-term" href="/ordlista-d.html#term-delirium" data-def="Akut förvirringstillstånd med störd uppmärksamhet och växlande medvetandegrad">delirium</a> är möjligt och bör utredas vidare med en <a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">klinisk</a> bedömning av bakomliggande orsak, inte att diagnosen är satt. Testet är inte heller avsett att upprepas flera gånger samma dag för att följa förloppet — det är en engångsscreening, inte ett övervakningsverktyg.</p>
+
+      <div class="vt-ansvar">
+        <p><strong>Räknaren ersätter inte bedömningen.</strong> 4AT är ett screeninginstrument för vuxna, i första hand äldre patienter. Det ställer ingen diagnos och ersätter inte en fullständig kognitiv utredning.</p>
+      </div>
+
+      <!-- =========================================================
+           4. BE-FAST
+           ========================================================= -->
+
+      <h2 id="befast">BE-FAST – snabb igenkänning av <a class="kb-term" href="/ordlista-s.html#term-stroke" data-def="Plötslig skada i hjärnan av avstängd blodförsörjning eller blödning">stroke</a></h2>
+
+      <p>Fem fynd, vart och ett besvarat med Ja eller Nej. BE-FAST summerar ingenting — det är en igenkänningslista byggd för att vem som helst, inte bara vårdpersonal, snabbt ska kunna avgöra om <a class="kb-term" href="/ordlista-s.html#term-symtom" data-def="Tecken på sjukdom som den sjuke själv märker och beskriver">symtomen</a> kan vara en <a class="kb-term" href="/ordlista-s.html#term-stroke" data-def="Plötslig skada i hjärnan av avstängd blodförsörjning eller blödning">stroke</a>.</p>
+
+      <div data-akut="befast"></div>
+
+      <h3>De fem fynden</h3>
+
+      <table class="kb-mtable">
+        <caption>BE-FAST – bokstäverna och vad de betyder</caption>
+        <thead>
+          <tr>
+            <th scope="col">Bokstav</th>
+            <th scope="col">Fynd</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Bokstav">B – balans</th><td data-label="Fynd">Plötslig <a class="kb-term" href="/ordlista-y.html#term-yrsel" data-def="Känsla av ostadighet eller att omgivningen snurrar">yrsel</a>, ostadighet eller svårighet att hålla balansen</td></tr>
+          <tr><th scope="row" data-label="Bokstav">E – ögon (eyes)</th><td data-label="Fynd">Plötslig synförändring, <a class="kb-term" href="/ordlista-d.html#term-dubbelseende" data-def="Att se två bilder av ett föremål">dubbelseende</a> eller synbortfall på ena eller båda ögonen</td></tr>
+          <tr><th scope="row" data-label="Bokstav">F – <a class="kb-term" href="/ordlista-f.html#term-facies" data-def="Yta på en benstruktur, t.ex. facies articularis (facies)">ansikte</a> (face)</th><td data-label="Fynd">Sneddragen mun eller hängande ena sida av ansiktet</td></tr>
+          <tr><th scope="row" data-label="Bokstav">A – armar (arms)</th><td data-label="Fynd">Svaghet eller domningar i en arm eller ett ben, ofta ensidigt</td></tr>
+          <tr><th scope="row" data-label="Bokstav">S – tal (speech)</th><td data-label="Fynd">Sluddrigt tal, svårt att hitta ord eller svårt att förstå andra</td></tr>
+        </tbody>
+      </table>
+
+      <table class="kb-mtable">
+        <caption>BE-FAST – tolkning</caption>
+        <thead>
+          <tr>
+            <th scope="col">Svar</th>
+            <th scope="col">Bedömning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Svar">Inget av fynden</th><td data-label="Bedömning"><strong>Inga fynd enligt BE-FAST</strong></td></tr>
+          <tr><th scope="row" data-label="Svar">Minst ett fynd</th><td data-label="Bedömning"><strong>Misstanke om <a class="kb-term" href="/ordlista-s.html#term-stroke" data-def="Plötslig skada i hjärnan av avstängd blodförsörjning eller blödning">stroke</a> – notera tidpunkten och larma</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h3>Vad betyder variablerna?</h3>
+
+      <h4>Balans och ögon — det som lades till</h4>
+      <p>Den äldre modellen FAST (<a class="kb-term" href="/ordlista-f.html#term-facies" data-def="Yta på en benstruktur, t.ex. facies articularis (facies)">ansikte</a>, arm, tal, tid) missar <a class="kb-term" href="/ordlista-s.html#term-stroke" data-def="Plötslig skada i hjärnan av avstängd blodförsörjning eller blödning">stroke</a> i bakre skallgropen, det vill säga i <a class="kb-term" href="/ordlista-c.html#term-cerebellum" data-def="Lillhjärnan (cerebellum); koordinerar rörelser, balans och finmotorik">lillhjärnan</a> och <a class="kb-term" href="/ordlista-h.html#term-hjarnstam" data-def="Mellanhjärna, pons och förlängda märgen">hjärnstammen</a>, eftersom de sällan ger ansikts-, arm- eller talpåverkan. Sådana <a class="kb-term" href="/ordlista-s.html#term-stroke" data-def="Plötslig skada i hjärnan av avstängd blodförsörjning eller blödning">stroke</a> visar sig i stället som plötslig <a class="kb-term" href="/ordlista-y.html#term-yrsel" data-def="Känsla av ostadighet eller att omgivningen snurrar">yrsel</a>, balanssvårighet eller synpåverkan — exakt det B och E lägger till. Utan dem missas en betydande andel av alla <a class="kb-term" href="/ordlista-s.html#term-stroke" data-def="Plötslig skada i hjärnan av avstängd blodförsörjning eller blödning">stroke</a>.</p>
+
+      <h4>Tid</h4>
+      <p>T:et är ingen sjuksymtom utan en instruktion: notera exakt när patienten senast sågs symtomfri, och larma omgående. Möjligheten till proppupplösande behandling eller trombektomi är starkt tidsberoende, så den tidpunkten avgör ofta vilken behandling som över huvud taget är möjlig.</p>
+
+      <h3>Varför just de här variablerna?</h3>
+
+      <p>BE-FAST togs fram av Intermountain Healthcare i USA 2011 som en direkt vidareutveckling av FAST, med målet att fånga fler <a class="kb-term" href="/ordlista-s.html#term-stroke" data-def="Plötslig skada i hjärnan av avstängd blodförsörjning eller blödning">stroke</a> utan att göra listan för lång för att minnas i stunden. Alla sex bokstäver beskriver <a class="kb-term" href="/ordlista-s.html#term-symtom" data-def="Tecken på sjukdom som den sjuke själv märker och beskriver">symtom</a> som kan uppstå plötsligt och som en lekman kan lägga märke till utan medicinsk utbildning — det är avsiktligt en igenkänningslista för allmänheten, inte ett <a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">kliniskt</a> undersökningsinstrument som <a href="#hints" class="info-link">HINTS</a>.</p>
+
+      <div class="vt-ansvar">
+        <p><strong>Räknaren ersätter inte bedömningen.</strong> BE-FAST är en igenkänningslista, inte ett diagnostiskt test. Ett negativt resultat utesluter inte <a class="kb-term" href="/ordlista-s.html#term-stroke" data-def="Plötslig skada i hjärnan av avstängd blodförsörjning eller blödning">stroke</a>, och alla fynd ska bedömas i sitt sammanhang av vårdpersonal.</p>
+      </div>
+
+      <!-- =========================================================
+           5. HINTS
+           ========================================================= -->
+
+      <h2 id="hints">HINTS – ögonundersökning vid akut <a class="kb-term" href="/ordlista-y.html#term-yrsel" data-def="Känsla av ostadighet eller att omgivningen snurrar">yrsel</a></h2>
+
+      <p>Tre fynd vid sängkanten — inte fem fynd för allmänheten som <a href="#befast" class="info-link">BE-FAST</a> — skiljer en godartad, <a class="kb-term" href="/ordlista-p.html#term-perifer" data-def="Belägen i utkanten, långt från centrum; i nervsystemet = utanför hjärna och ryggmärg (jfr central)">perifer</a> orsak till akut och ihållande <a class="kb-term" href="/ordlista-y.html#term-yrsel" data-def="Känsla av ostadighet eller att omgivningen snurrar">yrsel</a> från en farligare, <a class="kb-term" href="/ordlista-c.html#term-central" data-def="Mot centrum; i nervsystemet avser det hjärnan och ryggmärgen (CNS)">central</a> orsak som <a class="kb-term" href="/ordlista-s.html#term-stroke" data-def="Plötslig skada i hjärnan av avstängd blodförsörjning eller blödning">stroke</a>. HINTS är ett <a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">kliniskt</a> undersökningsinstrument, inte en checklista att fråga patienten om.</p>
+
+      <div data-akut="hints"></div>
+
+      <h3>De tre deltesten</h3>
+
+      <table class="kb-mtable">
+        <caption>HINTS – deltest och tolkning</caption>
+        <thead>
+          <tr>
+            <th scope="col">Deltest</th>
+            <th scope="col">Talar för <a class="kb-term" href="/ordlista-p.html#term-perifer" data-def="Belägen i utkanten, långt från centrum; i nervsystemet = utanför hjärna och ryggmärg (jfr central)">perifer</a> orsak</th>
+            <th scope="col">Talar för <a class="kb-term" href="/ordlista-c.html#term-central" data-def="Mot centrum; i nervsystemet avser det hjärnan och ryggmärgen (CNS)">central</a> orsak</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Deltest">Head Impulse Test</th><td data-label="Perifer">Avvikande – korrigerande sackad syns</td><td data-label="Central">Normalt – ingen korrigerande sackad</td></tr>
+          <tr><th scope="row" data-label="Deltest"><a class="kb-term" href="/ordlista-n.html#term-nystagmus" data-def="Ofrivilliga, rytmiska ögonrörelser med omväxlande långsam och snabb fas i motsatt riktning">Nystagmus</a></th><td data-label="Perifer">Enkelriktad, slår åt samma håll oavsett blickriktning</td><td data-label="Central">Riktningsväxlande, vertikal eller vridande (torsionell)</td></tr>
+          <tr><th scope="row" data-label="Deltest">Test of skew</th><td data-label="Perifer">Negativt – ingen vertikal korrigering</td><td data-label="Central">Positivt – vertikal korrigering syns (skew <a class="kb-term" href="/ordlista-d.html#term-deviation" data-def="Avvikelse från det normala läget eller riktningen">deviation</a>)</td></tr>
+        </tbody>
+      </table>
+
+      <table class="kb-mtable">
+        <caption>HINTS – tolkning</caption>
+        <thead>
+          <tr>
+            <th scope="col">Fynd</th>
+            <th scope="col">Bedömning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row" data-label="Fynd">Samtliga tre reassurerande</th><td data-label="Bedömning"><strong>Samtliga tre fynd talar för <a class="kb-term" href="/ordlista-p.html#term-perifer" data-def="Belägen i utkanten, långt från centrum; i nervsystemet = utanför hjärna och ryggmärg (jfr central)">perifer</a> orsak</strong></td></tr>
+          <tr><th scope="row" data-label="Fynd">Minst ett farligt</th><td data-label="Bedömning"><strong>Ett eller flera fynd talar för <a class="kb-term" href="/ordlista-c.html#term-central" data-def="Mot centrum; i nervsystemet avser det hjärnan och ryggmärgen (CNS)">central</a> orsak</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h3>Vad betyder variablerna?</h3>
+
+      <h4>Head Impulse Test</h4>
+      <p>Huvudet vrids snabbt och kort åt sidan medan patienten fixerar blicken på undersökarens näsa. Fungerar balansorganets reflex normalt hinner ögonen ändå stanna kvar på målet. Är reflexen nedsatt hamnar blicken fel och en synlig korrigeringsrörelse (sackad) för ögonen tillbaka — paradoxalt nog det fynd som talar för den ofarligare, <a class="kb-term" href="/ordlista-p.html#term-perifer" data-def="Belägen i utkanten, långt från centrum; i nervsystemet = utanför hjärna och ryggmärg (jfr central)">perifera</a> orsaken, eftersom det pekar på en isolerad skada i balansnerven snarare än i <a class="kb-term" href="/ordlista-h.html#term-hjarnstam" data-def="Mellanhjärna, pons och förlängda märgen">hjärnstammen</a>.</p>
+
+      <h4><a class="kb-term" href="/ordlista-n.html#term-nystagmus" data-def="Ofrivilliga, rytmiska ögonrörelser med omväxlande långsam och snabb fas i motsatt riktning">Nystagmus</a></h4>
+      <p>Ögonens ofrivilliga, ryckande rörelse. En <a class="kb-term" href="/ordlista-p.html#term-perifer" data-def="Belägen i utkanten, långt från centrum; i nervsystemet = utanför hjärna och ryggmärg (jfr central)">perifer</a> skada ger nästan alltid en <a class="kb-term" href="/ordlista-n.html#term-nystagmus" data-def="Ofrivilliga, rytmiska ögonrörelser med omväxlande långsam och snabb fas i motsatt riktning">nystagmus</a> som slår åt samma håll oavsett blickriktning. Byter nystagmusen riktning, eller är den vertikal eller vridande, pekar det mot en <a class="kb-term" href="/ordlista-c.html#term-central" data-def="Mot centrum; i nervsystemet avser det hjärnan och ryggmärgen (CNS)">central</a> orsak i <a class="kb-term" href="/ordlista-h.html#term-hjarnstam" data-def="Mellanhjärna, pons och förlängda märgen">hjärnstammen</a> eller <a class="kb-term" href="/ordlista-c.html#term-cerebellum" data-def="Lillhjärnan (cerebellum); koordinerar rörelser, balans och finmotorik">lillhjärnan</a>.</p>
+
+      <h4>Test of skew</h4>
+      <p>Ett alternerande täcktest: handen flyttas snabbt mellan patientens ögon medan blicken hålls på en fast punkt, och undersökaren tittar efter en vertikal korrigeringsrörelse i det nyss täckta ögat. En sådan vertikal feställning (skew <a class="kb-term" href="/ordlista-d.html#term-deviation" data-def="Avvikelse från det normala läget eller riktningen">deviation</a>) uppstår vid skador i hjärnstammens bansystem för ögonens samordning och talar starkt för en <a class="kb-term" href="/ordlista-c.html#term-central" data-def="Mot centrum; i nervsystemet avser det hjärnan och ryggmärgen (CNS)">central</a> orsak.</p>
+
+      <h3>Varför just de här variablerna?</h3>
+
+      <p>Kattah och medarbetare visade 2009 att kombinationen av de tre fynden var känsligare för att upptäcka <a class="kb-term" href="/ordlista-s.html#term-stroke" data-def="Plötslig skada i hjärnan av avstängd blodförsörjning eller blödning">stroke</a> hos patienter med akut, ihållande <a class="kb-term" href="/ordlista-y.html#term-yrsel" data-def="Känsla av ostadighet eller att omgivningen snurrar">yrsel</a> än en tidig MR med diffusionsviktade bilder — den undersökning som annars räknas som referensmetoden. Minnesregeln INFARCT (Impulse Normal, Fast-phase Alternating, Refixation on cover test) sammanfattar den farliga kombinationen: ett normalt impulstest, en riktningsväxlande <a class="kb-term" href="/ordlista-n.html#term-nystagmus" data-def="Ofrivilliga, rytmiska ögonrörelser med omväxlande långsam och snabb fas i motsatt riktning">nystagmus</a> eller ett positivt skewtest. Vart och ett av dem räcker ensamt för att flytta bedömningen mot <a class="kb-term" href="/ordlista-c.html#term-central" data-def="Mot centrum; i nervsystemet avser det hjärnan och ryggmärgen (CNS)">central</a> orsak, medan en trygg bedömning kräver att alla tre pekar åt det <a class="kb-term" href="/ordlista-p.html#term-perifer" data-def="Belägen i utkanten, långt från centrum; i nervsystemet = utanför hjärna och ryggmärg (jfr central)">perifera</a> hållet samtidigt.</p>
+
+      <p><strong>HINTS gäller bara akut, ihållande <a class="kb-term" href="/ordlista-y.html#term-yrsel" data-def="Känsla av ostadighet eller att omgivningen snurrar">yrsel</a> som pågår vid undersökningen.</strong> Det är den viktigaste begränsningen. Vid episodisk <a class="kb-term" href="/ordlista-y.html#term-yrsel" data-def="Känsla av ostadighet eller att omgivningen snurrar">yrsel</a> som redan klingat av när patienten undersöks går testet inte att tolka på samma sätt, och det ersätter aldrig den samlade <a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">kliniska</a> bilden.</p>
+
+      <div class="vt-ansvar">
+        <p><strong>Räknaren ersätter inte bedömningen.</strong> HINTS kräver övning för att utföras tillförlitligt och är i första hand ett instrument för den som redan undersöker patienten <a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">kliniskt</a>, inte för en lekman att bedöma på egen hand.</p>
+      </div>
+
+      <div class="kb-sources">
+        <h2>Referenser</h2>
+        <ul>
+          <li>Bellelli, G., Morandi, A., Davis, D. H. J., Mazzola, P., Turco, R., Gentile, S., Ryan, T., Cash, H., Guerini, F., Torpilliesi, T., Del Santo, F., Trabucchi, M., Annoni, G., &amp; MacLullich, A. M. J. (2014). Validation of the 4AT, a new instrument for rapid delirium screening: a study in 234 hospitalised older people. <em>Age and Ageing, 43</em>(4), 496–502.</li>
+          <li>Intermountain Healthcare. (2011). <em>BE FAST – recognizing the signs of stroke.</em></li>
+          <li>Kattah, J. C., Talkad, A. V., Wang, D. Z., Hsieh, Y.-H., &amp; Newman-Toker, D. E. (2009). HINTS to diagnose stroke in the acute vestibular syndrome: three-step bedside oculomotor examination more sensitive than early MRI diffusion-weighted imaging. <em>Stroke, 40</em>(11), 3504–3510.</li>
+          <li>Starmark, J.-E., Stålhammar, D., &amp; Holmgren, E. (1988). The Reaction Level Scale (RLS85). Manual and guidelines. <em>Acta Neurochirurgica, 91</em>(1–2), 12–20.</li>
+          <li>Teasdale, G., &amp; Jennett, B. (1974). Assessment of coma and impaired consciousness: a practical scale. <em>The Lancet, 2</em>(7872), 81–84.</li>
+        </ul>
+      </div>
+
+      <div class="actions">
+        <a href="/verktyg/akutmedicin/" class="btn primary">← Till akutmedicinen</a>
+        <a href="/medicinskordlista.html" class="btn">Slå upp en term</a>
+      </div>
+
+    </section>
+
+    <footer class="page-footer">
+      <p>Utbildningsmaterial, inte medicinsk rådgivning. Innehållet är avsett för studier och ersätter inte kurslitteratur, undervisning eller kliniska riktlinjer. Det ska inte användas som underlag för vård eller behandling av patienter.</p>
+      <p>Anatomiquiz använder inga kakor och samlar inte in personuppgifter. Läs mer i <a href="/integritet.html" class="info-link">integritetspolicyn</a>.</p>
+      <p class="page-updated">Senast uppdaterad <time data-updated datetime="2026-08-17">17 augusti 2026</time></p>
+    </footer>
+  </main>
+
+  <script src="/js/akutmedicin.js?v=0.9.415" defer></script>
+
+  <!-- Ordlistetooltips i löptexten (progressiv förbättring; .kb-term funkar som länk utan JS) -->
+  <script src="/js/kb-glossary.js" defer></script>
+
+</body>
+</html>

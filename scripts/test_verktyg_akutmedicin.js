@@ -106,7 +106,8 @@ class SelectEl extends El {
    Flera skalor monteras samtidigt, precis som på syra-bas.html. */
 const SKALNAMN = ['news2', 'natrium_korrigerat', 'osmolalitet', 'blodgas',
                   'wells_dvt', 'perc', 'spesi', 'chadsva', 'has_bled',
-                  'qtc', 'ehra', 'qsofa', 'sofa', 'dscrb65'];
+                  'qtc', 'ehra', 'qsofa', 'sofa', 'dscrb65',
+                  'gcs', 'rls85', 'fyra_at', 'befast', 'hints'];
 const platser = {};
 SKALNAMN.forEach((namn) => {
   const p = new El('div');
@@ -1195,6 +1196,206 @@ async function kör() {
     ['sjukdom', 'saturation', 'konfusion', 'andningsfrekvens', 'blodtryck', 'alder']
       .forEach((n) => kryssa(r, n));
     pastå('sex poäng', r.varde.textContent, '6 poäng');
+  }
+
+  /* ---- GCS ---- */
+  rubrik('GCS — Glasgow Coma Scale (Teasdale & Jennett 1974)');
+  {
+    const r = plockaVarde('gcs');
+    const normal = () => { valjV(r, 'oga', '4'); valjV(r, 'verbal', '5'); valjV(r, 'motorik', '6'); };
+
+    rubrik('  Full poäng ger 15');
+    normal();
+    pastå('summan', r.varde.textContent, '15 poäng');
+    pastå('lindrigt band', bandT(r), '13–15 poäng – lindrig skallskada');
+
+    rubrik('  Ögonöppningens fyra steg');
+    normal();
+    [['4', 4], ['3', 3], ['2', 2], ['1', 1]].forEach(([v, p]) => {
+      valjV(r, 'oga', v); pastå('öga ' + v, chipP(r, 'oga'), p); });
+
+    rubrik('  Verbala svarets fem steg');
+    normal();
+    [['5', 5], ['4', 4], ['3', 3], ['2', 2], ['1', 1]].forEach(([v, p]) => {
+      valjV(r, 'verbal', v); pastå('verbalt ' + v, chipP(r, 'verbal'), p); });
+
+    rubrik('  Motoriska svarets sex steg');
+    normal();
+    [['6', 6], ['5', 5], ['4', 4], ['3', 3], ['2', 2], ['1', 1]].forEach(([v, p]) => {
+      valjV(r, 'motorik', v); pastå('motoriskt ' + v, chipP(r, 'motorik'), p); });
+
+    rubrik('  Lägsta möjliga summa är tre, inte noll');
+    valjV(r, 'oga', '1'); valjV(r, 'verbal', '1'); valjV(r, 'motorik', '1');
+    pastå('summan', r.varde.textContent, '3 poäng');
+    pastå('svårt band', bandT(r), '3–8 poäng – svår skallskada');
+    pastå('nivån', r.band.className, 'vt-band is-hog');
+
+    rubrik('  Bandgränsen 8/9 prövad åt båda håll');
+    valjV(r, 'oga', '1'); valjV(r, 'verbal', '2'); valjV(r, 'motorik', '5');
+    pastå('summan', r.varde.textContent, '8 poäng');
+    pastå('svårt band', bandT(r), '3–8 poäng – svår skallskada');
+    valjV(r, 'verbal', '3');
+    pastå('summan', r.varde.textContent, '9 poäng');
+    pastå('måttligt band', bandT(r), '9–12 poäng – måttlig skallskada');
+
+    rubrik('  Bandgränsen 12/13 prövad åt båda håll');
+    valjV(r, 'oga', '2'); valjV(r, 'verbal', '4'); valjV(r, 'motorik', '6');
+    pastå('summan', r.varde.textContent, '12 poäng');
+    pastå('måttligt band', bandT(r), '9–12 poäng – måttlig skallskada');
+    valjV(r, 'oga', '3');
+    pastå('summan', r.varde.textContent, '13 poäng');
+    pastå('lindrigt band', bandT(r), '13–15 poäng – lindrig skallskada');
+  }
+
+  /* ---- 4AT ---- */
+  rubrik('4AT — snabbtest för delirium (Bellelli et al. 2014)');
+  {
+    const r = plockaVarde('fyra_at');
+    const normal = () => { valjV(r, 'vakenhet', 'normal'); valjV(r, 'amt4', '0');
+                           valjV(r, 'uppmarksamhet', '0'); valjV(r, 'akut', 'nej'); };
+
+    rubrik('  Alla nollor ger 0 poäng');
+    normal();
+    pastå('summan', r.varde.textContent, '0 poäng');
+    pastå('bandet', bandT(r), '0 poäng');
+
+    rubrik('  Vakenheten ger noll eller fyra, inget däremellan');
+    normal();
+    [['normal', 0], ['avvikande', 4]].forEach(([v, p]) => {
+      valjV(r, 'vakenhet', v); pastå('vakenhet ' + v, chipP(r, 'vakenhet'), p); });
+
+    rubrik('  AMT4:s tre steg');
+    normal();
+    [['0', 0], ['1', 1], ['2', 2]].forEach(([v, p]) => {
+      valjV(r, 'amt4', v); pastå('AMT4 ' + v + ' fel', chipP(r, 'amt4'), p); });
+
+    rubrik('  Uppmärksamhetens tre steg');
+    normal();
+    [['0', 0], ['1', 1], ['2', 2]].forEach(([v, p]) => {
+      valjV(r, 'uppmarksamhet', v); pastå('uppmärksamhet ' + v, chipP(r, 'uppmarksamhet'), p); });
+
+    rubrik('  Akut förändring ger noll eller fyra');
+    normal();
+    [['nej', 0], ['ja', 4]].forEach(([v, p]) => {
+      valjV(r, 'akut', v); pastå('akut ' + v, chipP(r, 'akut'), p); });
+
+    rubrik('  Bandgränsen 0/1');
+    normal();
+    pastå('0 poäng', bandT(r), '0 poäng');
+    valjV(r, 'amt4', '1');
+    pastå('1 poäng', bandT(r), '1–3 poäng');
+
+    rubrik('  Bandgränsen 3/4');
+    normal(); valjV(r, 'amt4', '1'); valjV(r, 'uppmarksamhet', '2');
+    pastå('3 poäng', r.varde.textContent, '3 poäng');
+    pastå('3-poängsbandet', bandT(r), '1–3 poäng');
+    valjV(r, 'akut', 'ja');
+    pastå('7 poäng', r.varde.textContent, '7 poäng');
+    pastå('4-eller-mer-bandet', bandT(r), '4 poäng eller mer');
+    pastå('nivån', r.band.className, 'vt-band is-hog');
+
+    rubrik('  Maxsumman är 12');
+    valjV(r, 'vakenhet', 'avvikande'); valjV(r, 'amt4', '2');
+    valjV(r, 'uppmarksamhet', '2'); valjV(r, 'akut', 'ja');
+    pastå('12 poäng', r.varde.textContent, '12 poäng');
+  }
+
+  /* =========================================================
+     Beslutsgången (mönster D): RLS-85, BE-FAST och HINTS
+     ========================================================= */
+
+  function plockaGang(namn) {
+    const kort = platser[namn].children[0];
+    const falt = {};
+    kort.findAll((e) => e._class.has('vt-field')).forEach((f) => {
+      falt[f.dataset.falt] = { valjare: f.find((e) => e.tagName === 'SELECT') };
+    });
+    const band = kort.find((e) => e._class.has('vt-band'));
+    return {
+      kort, falt, band,
+      titel: () => band.children.find((c) => c._class.has('vt-band-titel')).textContent,
+      nollknapp: kort.find((e) => e._class.has('vt-nollstall')).children[0]
+    };
+  }
+  const valjG = (r, namn, v) => { r.falt[namn].valjare.value = v; r.falt[namn].valjare.fire('change'); };
+
+  /* ---- RLS-85 ---- */
+  rubrik('RLS-85 — reaktionsgradsskalan (Starmark, Stålhammar & Holmgren 1988)');
+  {
+    const r = plockaGang('rls85');
+    const valj = (v) => valjG(r, 'niva', v);
+
+    rubrik('  Samtliga åtta nivåer pekar på sin egen text');
+    [
+      ['1', 'Nivå 1 – vaken', 'vt-band is-ingen'],
+      ['2', 'Nivå 2 – slö eller oklar', 'vt-band is-lag'],
+      ['3', 'Nivå 3 – mycket slö eller oklar', 'vt-band is-medel'],
+      ['4', 'Nivå 4 – medvetslös, lokaliserar smärta', 'vt-band is-medel'],
+      ['5', 'Nivå 5 – medvetslös, undandragande rörelse', 'vt-band is-hog'],
+      ['6', 'Nivå 6 – medvetslös, stereotyp böjning', 'vt-band is-hog'],
+      ['7', 'Nivå 7 – medvetslös, stereotyp sträckning', 'vt-band is-hog'],
+      ['8', 'Nivå 8 – ingen reaktion', 'vt-band is-hog']
+    ].forEach(([v, titel, niva]) => {
+      valj(v);
+      pastå('nivå ' + v, r.titel(), titel);
+      pastå('nivå ' + v + ' klass', r.band.className, niva);
+    });
+
+    rubrik('  Ingen Träna-flik och ingen poängchip');
+    pastå('ingen lägesväljare', r.kort.find((e) => e._class.has('vt-mode')), null);
+    pastå('ingen poängchip vid steget', r.kort.find((e) => e._class.has('vt-poang')), null);
+
+    rubrik('  Nollställ går till nivå 1');
+    valj('8');
+    r.nollknapp.fire('click');
+    pastå('valet återställs', r.falt.niva.valjare.value, '1');
+    pastå('utfallet följer med', r.titel(), 'Nivå 1 – vaken');
+  }
+
+  /* ---- BE-FAST ---- */
+  rubrik('BE-FAST — snabb igenkänning av stroke (Intermountain Healthcare 2011)');
+  {
+    const r = plockaGang('befast');
+
+    rubrik('  Standardläget är alla Nej, vilket är ett äkta svar');
+    pastå('rubriken', r.titel(), 'Inga fynd enligt BE-FAST');
+    pastå('nivån', r.band.className, 'vt-band is-lag');
+
+    rubrik('  Vart och ett av de fem fynden flyttar bedömningen ensamt');
+    ['balans', 'ogon', 'ansikte', 'arm', 'tal'].forEach((namn) => {
+      valjG(r, namn, 'ja');
+      pastå(namn + ' ensamt', r.titel(), 'Misstanke om stroke – notera tidpunkten och larma');
+      pastå(namn + ' nivå', r.band.className, 'vt-band is-hog');
+      valjG(r, namn, 'nej');
+      pastå(namn + ' återställt', r.titel(), 'Inga fynd enligt BE-FAST');
+    });
+
+    rubrik('  Flera Ja ändrar inte utfallet');
+    valjG(r, 'balans', 'ja'); valjG(r, 'ogon', 'ja'); valjG(r, 'tal', 'ja');
+    pastå('fortfarande misstanke', r.titel(), 'Misstanke om stroke – notera tidpunkten och larma');
+    paståMed('T-förklaringen finns med', r.band.textContent, 'Time');
+  }
+
+  /* ---- HINTS ---- */
+  rubrik('HINTS — ögonundersökning vid akut yrsel (Kattah et al. 2009)');
+  {
+    const r = plockaGang('hints');
+    const perifert = () => {
+      valjG(r, 'impuls', 'avvikande'); valjG(r, 'nystagmus', 'enkelriktad'); valjG(r, 'skew', 'negativ'); };
+
+    rubrik('  Samtliga tre reassurerande fynd ger perifer bedömning');
+    perifert();
+    pastå('rubriken', r.titel(), 'Samtliga tre fynd talar för perifer orsak');
+    pastå('nivån', r.band.className, 'vt-band is-lag');
+    paståMed('reservationen om akut, ihållande yrsel finns med', r.band.textContent, 'ihållande yrsel');
+
+    rubrik('  Vart och ett av de tre farliga fynden flyttar bedömningen ensamt');
+    [['impuls', 'normal'], ['nystagmus', 'vaxlande'], ['skew', 'positiv']].forEach(([namn, varde]) => {
+      perifert();
+      valjG(r, namn, varde);
+      pastå(namn + ' ensamt', r.titel(), 'Ett eller flera fynd talar för central orsak');
+      pastå(namn + ' nivå', r.band.className, 'vt-band is-hog');
+    });
   }
 
   console.log('\n' + (fel === 0

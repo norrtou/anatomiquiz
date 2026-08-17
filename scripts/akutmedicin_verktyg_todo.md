@@ -256,9 +256,9 @@ Nya sidor **stoppar bygget** om de inte registreras — det är §0.4 och det ä
 
 ## 7. Releaseordning och status
 
-> ▶️ **ÅTERUPPTAGET 2026-07-31 på användarens begäran.** Släpp 3 är byggt och levererat
-> (0.9.305) utan att formen från släpp 2 stämdes av separat innan — användaren bad om
-> fortsättning direkt. Släpp 4–6 väntar fortsatt på sin tur, i ordning nedan.
+> ▶️ **Status läses i tabellen nedan, inte i den här rutan** — se §"Verifiera status mot
+> facitfilen" i minnesindexet. Kvar: släpp 5b-ii (`buken.html`) och släpp 6
+> (`kunskapsbank/kliniska-poangskalor.html` + korslänkning).
 
 | Släpp | Innehåll | Status |
 |---|---|---|
@@ -269,7 +269,8 @@ Nya sidor **stoppar bygget** om de inte registreras — det är §0.4 och det ä
 | **4a** | `blodproppar.html` — Wells DVT, PERC, sPESI + LMH-hänvisningen | ✅ **klart 0.9.416** |
 | **4b** | `hjartat.html` — QTc, CHA₂DS₂-VA, HAS-BLED, EHRA + GRACE förklarad | ✅ **klart 0.9.417** |
 | **5a** | `infektion.html` — qSOFA, SOFA, DS-CRB-65 | ✅ **klart 0.9.418** |
-| **5b** | `neurologi.html` + `buken.html` | väntar — GCS, RLS 85, 4AT, BE-FAST, HINTS, Alvarado, Glasgow-Blatchford |
+| **5b-i** | `neurologi.html` — GCS, RLS-85, 4AT, BE-FAST, HINTS | ✅ **klart 0.9.419** |
+| **5b-ii** | `buken.html` — Alvarado, Glasgow-Blatchford | väntar |
 | **6** | `kunskapsbank/kliniska-poangskalor.html` + korslänkning + `info.html`-källor | väntar |
 
 ### Släpp 1 — LEVERERAT 0.9.286
@@ -560,3 +561,50 @@ mellanslaget inte är dubblerat utan tillkommet.
 Då kan två celler fortfarande inte smälta ihop till ett ord, samtidigt som en tooltip mitt i en
 mening inte längre bryter jämförelsen. Kontrollerat åt båda håll: de äkta larmen fälls
 fortfarande, och `≥400` respektive `<400` i två grannceller separeras alltjämt.
+
+### Släpp 5b-i — LEVERERAT 0.9.419 (`neurologi.html`)
+
+- [x] `verktyg/akutmedicin/neurologi.html` — GCS, RLS-85, 4AT, BE-FAST och HINTS i tredelad
+      form. Tre grupper: två sätt att gradera medvetandegrad, ett snabbtest för delirium, och
+      två sätt att bedöma akut yrsel på helt olika avstånd från patienten.
+- [x] **GCS och 4AT i mönster B**, men utan ett enda talfält — varje delskala är ett urval där
+      alternativet bär sin egen poäng, samma mekanism som NEWS2:s ACVPU redan använder. Ingen ny
+      kod krävdes: mönster B har burit valfält sedan starten, bara aldrig en hel skala av dem.
+- [x] **RLS-85 byggd i mönster D, inte B som §3a:s tabell ursprungligen angav.** Skalan väljer en
+      enda nivå av åtta och summerar ingenting — det finns ingen uträkning att träna sig på,
+      exakt det mönster D är byggt för (jfr DS-CRB-65:s avsteg i släpp 5a). Ett enda `steg` med
+      åtta `val`, var sin `utfall`-nyckel och `rang` 1–8.
+- [x] **BE-FAST och HINTS delar mekaniken "ett fynd flyttar allt" åt varsitt håll.** BE-FAST:s
+      fem Ja/Nej-steg delar två utfall (`ingen`/`misstanke`) tvärs över alla fem — varje Ja får
+      rang 2, varje Nej rang 1, så ett enda Ja vinner oavsett vilket steg det satt i. HINTS
+      speglar det: tre steg delar `perifer`/`central`, och bara om alla tre väljer det
+      reassurerande alternativet blir bedömningen trygg (minnesregeln INFARCT).
+- [x] **Källorna verifierade mot primärlitteraturen före skrivning** (§5): Teasdale & Jennett
+      (1974), Starmark, Stålhammar & Holmgren (1988), Bellelli m.fl. (2014), Intermountain
+      Healthcare (2011) och Kattah m.fl. (2009).
+- [x] Registrerad hela vägen: `amne.py`, `data/llms.json`, sitemap via `generate_glossary.py`,
+      hubbkortet bytt från "Snart" till live-länk, `hasPart` och actions-raden uppdaterade.
+- [x] `test_verktyg_akutmedicin.js` utökad 390 → 486 tester. Larmet verifierat med ett planterat
+      fel i BE-FAST:s rangordning (Ja satt till samma rang som Nej, så ett ensamt fynd slutade
+      flytta bedömningen).
+- [x] `check_akutmedicin.py`: `SPEGLAD_AV`, `VARDESKALOR` och `GANGSKALOR` utökade med de fem nya
+      skalorna. Samtliga 19 skalor i facit speglas nu av en sida, 0 avvikelser.
+
+#### 7j. Ett metodfel i mitt eget arbetssätt, hittat av länkkontrollen
+
+**Löptexten skrevs först med handskrivna `kb-term`-länkar**, kopierade i stilen från hur en redan
+wirad sida (`infektion.html`) ser ut på disk — men den filen visar `wire_terms.py`:s *utdata*,
+inte hur en ny sida ska *skrivas*. Två av de 83 handskrivna länkarna pekade på ankare som inte
+finns: `#term-amt` (aldrig något uppslagsord) och en felstavad `#term-lillhjarna` (facit har
+`lillhjärnan` → `#term-cerebellum`). `check_links.py`, som körs i `check_generators.py`:s kedja,
+fällde båda.
+
+**Skillnaden mot hur en ny sida ska byggas:** all termbärande löptext skrivs som **ren text**, och
+`wire_terms.py --all` gör hela länkningen mot sitt eget facit (`data/kb_glossary_terms.json`).
+Handskrivna `kb-term`-taggar hoppas över av skriptet ("befintliga kb-term/`<a>` hoppas över"), så
+en felaktig hand-länk upptäcks aldrig av wiringen själv — bara av en efterföljande kontroll som
+`check_links.py`, om en sådan körs. **Rättat genom att riva ut samtliga 83 handskrivna länkar**
+till ren text och köra om `wire_terms.py verktyg/akutmedicin/neurologi.html`, som wirade 81 länkar
+korrekt ur facit. Samma metodfel som `puls`-länken i släpp 1 och sitemap-raden i släpp 4a:
+genererad/wirad utformning kopieras aldrig för hand, bara mönstret (statisk HTML,
+monteringspunkt, plain text) återanvänds.

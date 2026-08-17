@@ -249,6 +249,21 @@ _s("verktyg/akutmedicin/infektion.html",
     "ersätta varandra."],
    ["qsofa", "sofa", "ds-crb-65", "sepsis", "organsvikt", "pneumoni"])
 
+_s("verktyg/akutmedicin/neurologi.html",
+   [("Thing", "Medvetandegrad"), ("Thing", "Delirium"),
+    ("Thing", "Stroke"), ("Thing", "Yrsel")],
+   ["Hur Glasgow Coma Scale delar upp medvetandegraden i ögonöppning, "
+    "verbalt svar och motoriskt svar.",
+    "Vad som skiljer RLS-85:s åtta nivåer åt, och var gränsen för "
+    "medvetslöshet går.",
+    "Vilka fyra deltest 4AT bygger på och varför en grovt avvikande "
+    "vakenhetsgrad väger tyngre än de tre andra tillsammans.",
+    "Varför BE-FAST lade till balans och syn till den äldre FAST-modellen.",
+    "Hur HINTS tre ögonfynd tillsammans skiljer en godartad yrsel från en "
+    "stroke."],
+   ["gcs", "glasgow coma scale", "rls-85", "4at", "delirium", "be-fast",
+    "hints", "yrsel"])
+
 # --- Ordlistan --------------------------------------------------------------
 _s("medicinskordlista.html",
    [("Thing", "Medicinsk terminologi"), ("Thing", "Medicinsk ordlista"),
