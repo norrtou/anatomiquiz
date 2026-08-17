@@ -888,6 +888,15 @@ _s("kunskapsbank/lakemedelsberakning-omvandlingar.html",
    ["omvandlingar", "formler", "procent", "droppfaktor",
     "läkemedelsberäkning"])
 
+_s("kunskapsbank/kliniska-poangskalor.html",
+   [("Thing", "Kliniska poängskalor"), ("Thing", "Sensitivitet och specificitet")],
+   ["Vad en klinisk poängskala är och varför den är reproducerbar.",
+    "Skillnaden mellan sensitivitet och specificitet, och varför "
+    "prevalensen påverkar hur ett resultat ska tolkas.",
+    "Varför ett rule-out-instrument som PERC fungerar annorlunda än en "
+    "riskskala som CHA₂DS₂-VA."],
+   ["poängskala", "sensitivitet", "specificitet", "cut-off", "riskskala"])
+
 # --- Medicinsk terminologi --------------------------------------------------
 _s("kunskapsbank/medicinskt-latin.html",
    [("Thing", "Medicinskt latin"), ("Thing", "Medicinsk terminologi"),

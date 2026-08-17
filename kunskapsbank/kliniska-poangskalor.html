@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSP mot XSS: skript/stilar/data endast från egen origin. GitHub Pages tillåter inga egna HTTP-headers, därav meta. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+
+  <!-- Primär SEO -->
+  <title>Kliniska poängskalor – vad siffrorna mäter | Anatomiquiz</title>
+  <meta name="description" content="Vad en klinisk poängskala är, sensitivitet och specificitet, varför en cut-off aldrig är ett beslut, och rule-out-instrument kontra riskskalor.">
+  <meta name="author" content="Daniel Medin (Norrtou Creations)">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+  <link rel="canonical" href="https://anatomiquiz.se/kunskapsbank/kliniska-poangskalor.html">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://anatomiquiz.se/kunskapsbank/kliniska-poangskalor.html">
+  <meta property="og:title" content="Kliniska poängskalor – vad siffrorna mäter">
+  <meta property="og:description" content="Vad en klinisk poängskala är, sensitivitet och specificitet, varför en cut-off aldrig är ett beslut, och rule-out-instrument kontra riskskalor.">
+  <meta property="og:image" content="https://anatomiquiz.se/img/og-image.png">
+  <meta property="og:image:width" content="1518">
+  <meta property="og:image:height" content="864">
+  <meta property="og:image:alt" content="Anatomiquiz — kliniska poängskalor">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="Anatomiquiz">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kliniska poängskalor – vad siffrorna mäter">
+  <meta name="twitter:description" content="Vad en klinisk poängskala är, sensitivitet och specificitet, varför en cut-off aldrig är ett beslut, och rule-out-instrument kontra riskskalor.">
+  <meta name="twitter:image" content="https://anatomiquiz.se/img/og-image.png">
+  <meta name="twitter:image:alt" content="Anatomiquiz — kliniska poängskalor">
+
+  <meta name="theme-color" content="#10b981">
+  <meta name="color-scheme" content="light dark">
+  <!-- Tema (ljust/mörkt). Laddas SYNKRONT och före stilmallen: attributet
+       data-theme måste sitta på <html> innan första målningen, annars
+       blinkar sidan ljus. Inline gick inte – CSP:n tillåter bara egen origin. -->
+  <script src="/js/theme.js?v=0.9.260"></script>
+
+  <!-- Strukturerad data — artikel + lärresurs (SEO_REGLER §6). -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "Article",
+    "LearningResource"
+  ],
+  "headline": "Kliniska poängskalor – vad siffrorna mäter",
+  "description": "Vad en klinisk poängskala är, sensitivitet och specificitet, prediktiva värden, varför en cut-off aldrig är ett beslut, och skillnaden mellan rule-out-instrument och riskskalor.",
+  "inLanguage": "sv-SE",
+  "isAccessibleForFree": true,
+  "learningResourceType": "reading",
+  "educationalUse": [
+    "self study",
+    "professional development"
+  ],
+  "datePublished": "2026-08-17",
+  "dateModified": "2026-08-17",
+  "author": {
+    "@type": "Person",
+    "@id": "https://anatomiquiz.se/#daniel-medin",
+    "name": "Daniel Medin",
+    "description": "Utbildad medicinsk sekreterare och studerande i arbetsterapi vid Lunds universitet, med särskilt intresse för anatomi.",
+    "url": "https://norrtou.se",
+    "sameAs": [
+      "https://norrtou.se",
+      "https://www.linkedin.com/in/danielmedin",
+      "https://github.com/norrtou"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://anatomiquiz.se/#norrtou-creations",
+    "name": "Norrtou Creations",
+    "url": "https://norrtou.se",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://anatomiquiz.se/img/icon-512.png"
+    },
+    "sameAs": [
+      "https://github.com/norrtou"
+    ]
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Anatomiquiz",
+    "url": "https://anatomiquiz.se/"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Kliniska poängskalor"
+    },
+    {
+      "@type": "Thing",
+      "name": "Sensitivitet och specificitet"
+    }
+  ],
+  "teaches": [
+    "Vad en klinisk poängskala är och varför den är reproducerbar.",
+    "Skillnaden mellan sensitivitet och specificitet, och varför prevalensen påverkar hur ett resultat ska tolkas.",
+    "Varför ett rule-out-instrument som PERC fungerar annorlunda än en riskskala som CHA₂DS₂-VA."
+  ],
+  "keywords": [
+    "poängskala",
+    "sensitivitet",
+    "specificitet",
+    "cut-off",
+    "riskskala"
+  ],
+  "citation": [
+    {
+      "@type": "Book",
+      "name": "Clinical epidemiology: The essentials",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Fletcher, G. S."
+        }
+      ],
+      "datePublished": "2020",
+      "bookEdition": "6:e uppl.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Wolters Kluwer"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Users' guides to the medical literature: XXII. How to use articles about clinical decision rules",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "McGinn, T. G."
+        },
+        {
+          "@type": "Person",
+          "name": "Guyatt, G. H."
+        },
+        {
+          "@type": "Person",
+          "name": "Wyer, P. C."
+        },
+        {
+          "@type": "Person",
+          "name": "Naylor, C. D."
+        },
+        {
+          "@type": "Person",
+          "name": "Stiell, I. G."
+        },
+        {
+          "@type": "Person",
+          "name": "Richardson, W. S."
+        }
+      ],
+      "datePublished": "2000",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "JAMA"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "The threshold approach to clinical decision making",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Pauker, S. G."
+        },
+        {
+          "@type": "Person",
+          "name": "Kassirer, J. P."
+        }
+      ],
+      "datePublished": "1980",
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "New England Journal of Medicine"
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Anatomiquiz",
+      "item": "https://anatomiquiz.se/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Kunskapsbank",
+      "item": "https://anatomiquiz.se/kunskapsbank/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Faktatexter",
+      "item": "https://anatomiquiz.se/kunskapsbank/faktatexter.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Plugga & tenta",
+      "item": "https://anatomiquiz.se/kunskapsbank/artiklar/plugga-och-tenta.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Kliniska poängskalor",
+      "item": "https://anatomiquiz.se/kunskapsbank/kliniska-poangskalor.html"
+    }
+  ]
+}
+  </script>
+  <!-- FAQPage speglar den synliga FAQ-sektionen ord för ord i sak (SEO_REGLER §6). -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Vad är en klinisk poängskala?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ett sätt att göra en sammansatt klinisk bedömning reproducerbar. Flera fynd som var för sig är för svaga för att avgöra saken vägs samman till ett enda tal, så att två olika undersökare som bedömer samma patient landar i samma svar. Ett tal är bara användbart om skalan är validerad – framtagen i en patientgrupp och bekräftad i en annan – annars är den bara en lista med kryssrutor som råkar se ut som ett instrument."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vad är skillnaden mellan sensitivitet och specificitet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sensitivitet är hur stor andel av dem som verkligen har tillståndet som skalan fångar upp. Specificitet är hur stor andel av dem som inte har det som skalan korrekt friar. De två går åt olika håll: flyttas gränsen så att fler sjuka fångas upp fångas oundvikligen fler friska också, och tvärtom. En skala som är byggd för att missa så få som möjligt, som NEWS2, har därför medvetet valt hög sensitivitet framför hög specificitet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Varför ger samma poängskala olika träffsäkerhet på olika avdelningar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sensitivitet och specificitet är egenskaper hos själva skalan och ändras inte med var den används. Det som ändras är hur mycket ett resultat faktiskt säger om patienten, och det beror på hur vanligt tillståndet är i den grupp som testas. Samma positiva utfall betyder mer på en avdelning där tillståndet är vanligt än på en där det är sällsynt – det är därför ett instrument som PERC uttryckligen bara ska användas efter att sannolikheten för sjukdomen redan bedömts som låg."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan man lita på en poängskalas cut-off rakt av?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gränsen är inte en egenskap hos patienten utan ett importerat beslut – en avvägning som forskarna bakom skalan gjorde mellan att missa fall och att utreda i onödan, satt för den population de studerade. Stämmer patienten och sammanhanget dåligt överens med det underlaget håller inte samma gräns automatiskt, vilket är skälet till att varje skala på Anatomiquiz anger vilka patientgrupper den är validerad för."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vad är skillnaden mellan ett rule-out-instrument och en riskskala?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ett rule-out-instrument som PERC eller Wells score används innan diagnosen är satt, för att avgöra om vidare utredning kan avstås. En riskskala som CHA₂DS₂-VA eller HAS-BLED används efter att diagnosen redan är satt, för att gradera en risk och styra en behandling. Båda kan se ut som samma sorts kryssrutelista, men den ena svarar på om sjukdomen finns och den andra på hur den ska hanteras."
+      }
+    }
+  ]
+}
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="/img/favicon.png">
+  <link rel="apple-touch-icon" href="/img/icon-192.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/css/styles.css?v=0.9.412">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+  <main id="main" class="container" role="main">
+
+    <header class="header">
+      <div class="header-title">
+        <h1><a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">Kliniska</a> poängskalor</h1>
+      </div>
+      <p class="tagline">Vad siffrorna mäter, och vad de inte avgör</p>
+    </header>
+
+    <section class="card" aria-labelledby="kpsHeading">
+
+      <nav class="breadcrumb" aria-label="Brödsmula">
+        <a href="/" class="breadcrumb-link">← Anatomiquiz</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="/kunskapsbank/" class="breadcrumb-link">Kunskapsbank</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="/kunskapsbank/faktatexter.html" class="breadcrumb-link">Faktatexter</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="/kunskapsbank/artiklar/plugga-och-tenta.html" class="breadcrumb-link">Plugga &amp; tenta</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <span class="breadcrumb-current" aria-current="page">Kliniska poängskalor</span>
+      </nav>
+
+      <h2 id="kpsHeading" class="sr-only"><a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">Kliniska</a> poängskalor – <a class="kb-term" href="/ordlista-s.html#term-sensitivitet" data-def="Ett tests förmåga att fånga upp dem som verkligen har tillståndet">sensitivitet</a>, <a class="kb-term" href="/ordlista-s.html#term-specificitet" data-def="Ett tests förmåga att friskförklara dem som verkligen är friska">specificitet</a> och cut-offs</h2>
+
+      <div class="info-about">
+        <p>En poängskala reducerar en bedömning som annars vore en fråga om erfarenhet och känsla till ett tal som går att räkna ut på samma sätt varje gång. Det gör den kraftfull, men det gör den också lätt att missförstå: talet svarar bara på den fråga skalan faktiskt är byggd för att ställa, och det är sällan samma fråga som "vad är fel på patienten?". Den här texten går igenom vad en poängskala mäter, vad <a class="kb-term" href="/ordlista-s.html#term-sensitivitet" data-def="Ett tests förmåga att fånga upp dem som verkligen har tillståndet">sensitivitet</a> och <a class="kb-term" href="/ordlista-s.html#term-specificitet" data-def="Ett tests förmåga att friskförklara dem som verkligen är friska">specificitet</a> betyder, varför en cut-off inte är en egenskap hos patienten, och varför ett instrument som ska utesluta en diagnos är konstruerat annorlunda än ett som graderar en risk.</p>
+      </div>
+
+      <!-- =========================================================
+           Vad en klinisk poängskala är
+           ========================================================= -->
+      <div class="info-about">
+        <h2>Vad en <a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">klinisk</a> poängskala är</h2>
+        <p>Gemensamt för alla instrument under <a href="/verktyg/akutmedicin/">Akutmedicin</a> är att de tar flera fynd som var för sig är för svaga för att avgöra någonting och väger samman dem till ett enda, reproducerbart tal. NEWS2 summerar sju <a class="kb-term" href="/ordlista-v.html#term-vitalparameter" data-def="Grundläggande mätvärde för kroppens livsviktiga funktioner – andning, puls, blodtryck, temperatur, medvetande">vitalparametrar</a>. Wells score summerar nio fynd i sjukhistoria och status. CHA₂DS₂-VA summerar sju riskfaktorer för <a class="kb-term" href="/ordlista-s.html#term-stroke" data-def="Plötslig skada i hjärnan av avstängd blodförsörjning eller blödning">stroke</a>. Ingen enskild variabel i någon av dem räcker för att fälla avgörandet, men tillsammans, viktade och adderade på ett sätt som är fastställt i förväg, ger de en siffra som betyder samma sak oavsett vem som räknar ut den. Det är hela poängen: en strukturerad bedömning ger samma svar två gånger, en ostrukturerad gör det inte alltid.</p>
+        <p>Den reproducerbarheten är bara värd något om talet faktiskt mäter det det påstår sig mäta, och det är inte en självklarhet bara för att ett instrument har ett namn och en poängtabell. En vedertagen <a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">klinisk</a> beslutsregel har gått igenom flera steg innan den publiceras: den är först <em>härledd</em> i en patientgrupp där forskarna testat vilka variabler som faktiskt hänger ihop med utfallet, sedan <em>validerad</em> genom att samma regel prövas på en ny, oberoende grupp patienter för att se om den håller. De starkaste instrumenten har dessutom gått igenom en tredje prövning där man mätt om vårdpersonal som faktiskt använder regeln i sitt dagliga arbete fattar bättre beslut än de gjorde utan den. Ett kryssschema som bara <em>ser ut</em> som en etablerad skala men saknar den här historien är ett annat instrument, även om det delar namn med originalet – precis det problem som förenklade varianter av GRACE illustrerar.</p>
+        <p>Räknesättet skiljer sig också åt mellan instrumenten, trots att alla mynnar ut i samma sorts svar. Vissa, som Wells score och CHA₂DS₂-VA, är rena kryssrutesummor där varje kriterium bidrar med en fast poäng. Andra, som NEWS2 och qSOFA, läser av ett uppmätt värde – en <a class="kb-term" href="/ordlista-a.html#term-andningsfrekvens" data-def="Antal andetag per minut; normalt 12–20 hos vuxen i vila">andningsfrekvens</a>, ett <a class="kb-term" href="/ordlista-b.html#term-blodtryck" data-def="Trycket blodet utövar mot artärväggen, angivet systoliskt genom diastoliskt i mmHg">blodtryck</a> – och placerar det i ett intervall som ger poängen. Ytterligare andra, som QTc och korrigerat <a class="kb-term" href="/ordlista-n.html#term-natrium" data-def="Grundämne och elektrolyt som styr kroppens vatten- och saltbalans">natrium</a>, är renodlade formler utan poängtabell alls, och några, som modifierad EHRA och HINTS, väljer inte en summa utan det högst rankade av flera möjliga utfall. Fyra olika sätt att räkna, men samma bakomliggande fråga: vilken siffra sammanfattar bilden bäst? Att mekaniken skiljer sig är värt att hålla i minnet, för den avgör inte vilken <a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">klinisk</a> fråga skalan svarar på – det gör i stället vad talet jämförs mot, vilket avsnitten nedan går igenom.</p>
+      </div>
+
+      <!-- =========================================================
+           Sensitivitet och specificitet
+           ========================================================= -->
+      <div class="info-about">
+        <h2><a class="kb-term" href="/ordlista-s.html#term-sensitivitet" data-def="Ett tests förmåga att fånga upp dem som verkligen har tillståndet">Sensitivitet</a> och <a class="kb-term" href="/ordlista-s.html#term-specificitet" data-def="Ett tests förmåga att friskförklara dem som verkligen är friska">specificitet</a></h2>
+        <p>De flesta instrumenten på Anatomiquiz fungerar som ett test med ett gränsvärde: under gränsen ett utfall, över gränsen ett annat. Två mått beskriver hur bra det gränsvärdet skiljer sjuka från friska. <a class="kb-term" href="/ordlista-s.html#term-sensitivitet" data-def="Ett tests förmåga att fånga upp dem som verkligen har tillståndet">Sensitivitet</a> är andelen av de verkligt sjuka som testet fångar upp – ett högsensitivt test missar få. <a class="kb-term" href="/ordlista-s.html#term-specificitet" data-def="Ett tests förmåga att friskförklara dem som verkligen är friska">Specificitet</a> är andelen av de verkligt friska som testet korrekt friar – ett högspecifikt test slår sällan falskt.</p>
+        <p>De två måtten drar åt olika håll, och det går inte att förbättra båda samtidigt genom att bara flytta samma gräns. Sänks tröskeln för vad som räknas som ett positivt fynd fångas fler sjuka upp, men fler friska hamnar också över gränsen – sensitiviteten stiger på specificitetens bekostnad. Höjs tröskeln i stället blir testet mer träffsäkert för dem det slår ut, men fler sjuka slinker igenom. Vilken sida av den avvägningen ett instrument ska stå på är ett medvetet designval, inte ett misstag som går att räkna bort. NEWS2 är ett rakt exempel: skalan är byggd för att vara känslig snarare än träffsäker, eftersom priset för att missa en patient i försämring är mycket högre än priset för att en och annan frisk patient granskas en extra gång.</p>
+        <p>Ett räkneexempel gör avvägningen konkret. Tänk en grupp på 100 patienter där 10 verkligen har det tillstånd som testas för, och tänk ett test med 90 procents <a class="kb-term" href="/ordlista-s.html#term-sensitivitet" data-def="Ett tests förmåga att fånga upp dem som verkligen har tillståndet">sensitivitet</a> och 90 procents <a class="kb-term" href="/ordlista-s.html#term-specificitet" data-def="Ett tests förmåga att friskförklara dem som verkligen är friska">specificitet</a>. Av de 10 sjuka fångas 9 upp och 1 missas. Av de 90 friska frias 81 korrekt, medan 9 ändå slår ut som positiva. Testet ger alltså 18 positiva svar totalt, men bara 9 av dem tillhör någon som faktiskt är sjuk – hälften av de positiva svaren är falska larm, trots att både sensitiviteten och specificiteten ser goda ut var för sig. Den skillnaden mellan hur bra ett test är och hur mycket ett enskilt svar går att lita på är precis det nästa avsnitt handlar om.</p>
+      </div>
+
+      <!-- =========================================================
+           Prediktiva värden och prevalensens roll
+           ========================================================= -->
+      <div class="info-about">
+        <h2>Prediktiva värden och varför sammanhanget spelar roll</h2>
+        <p><a class="kb-term" href="/ordlista-s.html#term-sensitivitet" data-def="Ett tests förmåga att fånga upp dem som verkligen har tillståndet">Sensitivitet</a> och <a class="kb-term" href="/ordlista-s.html#term-specificitet" data-def="Ett tests förmåga att friskförklara dem som verkligen är friska">specificitet</a> är egenskaper hos instrumentet, uträknade mot en grupp där man redan visste vilka som var sjuka. De ändras inte av var testet sedan används. Men den fråga en kliniker faktiskt ställer är en annan: "den här patienten fick ett positivt utfall – hur troligt är det att hen verkligen är sjuk?" Det svaret kallas det prediktiva värdet, och till skillnad från <a class="kb-term" href="/ordlista-s.html#term-sensitivitet" data-def="Ett tests förmåga att fånga upp dem som verkligen har tillståndet">sensitivitet</a> och <a class="kb-term" href="/ordlista-s.html#term-specificitet" data-def="Ett tests förmåga att friskförklara dem som verkligen är friska">specificitet</a> beror det tungt på hur vanligt tillståndet är i den grupp som testas, det vill säga sannolikheten innan testet ens gjordes.</p>
+        <p>Samma test ger olika prediktiva värden i olika sammanhang trots att sensitiviteten och specificiteten är oförändrade. Ett positivt utfall väger tyngre på en avdelning där tillståndet är vanligt än på en där det är sällsynt, av samma skäl som en regnvarning betyder mer i en region där det ofta regnar. Fortsätter man räkneexemplet ovan men byter den underliggande andelen sjuka från 10 till 50 av 100 patienter, utan att röra vare sig sensitiviteten eller specificiteten, blir bilden en annan: 45 sjuka fångas upp och 5 friska slår ut falskt, vilket ger 50 positiva svar där 45 verkligen är sjuka – ett prediktivt värde på 90 procent i stället för 50. Testet är exakt samma, men svaret det ger går att lita på i helt olika grad beroende på vilka patienter det används på.</p>
+        <p>Det är därför PERC uttryckligen bara ska tillämpas efter att en kliniker redan bedömt sannolikheten för <a class="kb-term" href="/ordlista-l.html#term-lungemboli" data-def="Blodpropp som täpper till ett kärl i lungcirkulationen">lungemboli</a> som låg. Regeln bygger på att den redan opererar i en grupp där tillståndet är ovanligt; används samma regel på en avdelning eller en patientgrupp där sannolikheten i stället är hög blir det prediktiva värdet ett annat, även om PERC:s egen <a class="kb-term" href="/ordlista-s.html#term-sensitivitet" data-def="Ett tests förmåga att fånga upp dem som verkligen har tillståndet">sensitivitet</a> och <a class="kb-term" href="/ordlista-s.html#term-specificitet" data-def="Ett tests förmåga att friskförklara dem som verkligen är friska">specificitet</a> inte har rört sig ur fläcken. Poängen fångar inte upp det här automatiskt – den som räknar måste själv veta vilken grupp patienten hör till innan resultatet tolkas.</p>
+      </div>
+
+      <!-- =========================================================
+           Cut-offen är en importerad tröskel, inte ett fynd
+           ========================================================= -->
+      <div class="info-about">
+        <h2>Varför en cut-off aldrig är ett beslut</h2>
+        <p>En etablerad modell för hur diagnostisk information ska styra handling beskriver två trösklar. Under en <em>testtröskel</em> är sannolikheten för sjukdom så låg att varken testning eller behandling är motiverad – risken med själva testet väger tyngre än vad ett svar skulle förändra. Över en <em>behandlingströskel</em> är sannolikheten så hög att behandling kan inledas utan ytterligare utredning. Mellan de två trösklarna är testning motiverat, eftersom svaret rimligen kan flytta bedömningen över eller under någon av gränserna. En poängskalas cut-off är, i den modellen, någon annans uträkning av var de gränserna låg – gjord för den patientgrupp och den avvägning mellan att missa fall och att utreda i onödan som gällde i just den studien.</p>
+        <p>Att låna den gränsen är bara giltigt om den egna patienten och det egna sammanhanget liknar det gränsen kalibrerades för. Det är skälet till att NEWS2 uttryckligen inte är validerad för barn eller gravida, och till att varje skala på Anatomiquiz upprepar att poängen inte ersätter bedömningen. En cut-off är alltså inte något skalan har upptäckt om patienten – den är en importerad linje, användbar men flyttad från ett annat sammanhang, och den frigör aldrig undersökaren från att fråga om patienten framför en faktiskt liknar patienterna gränsen byggdes för.</p>
+        <p>Flera av instrumenten på Anatomiquiz visar samma princip från olika håll. sPESI graderar bara nedåt: noll poäng pekar ut en lågriskgrupp, men fyra poäng betyder inte fyra gånger så hög risk, bara att patienten inte hör till lågriskgruppen – skalan är byggd kring en enda tröskel, inte en jämn stigande skala. Glasgow-Blatchford har på samma sätt en enda robust belagd gräns, noll poäng, som skiljer ut vilka som klarar sig utan inläggning, medan resten av spannet inte är lika säkert graderat. Och Alvarados poäng är som mest osäker mitt i sitt intervall, där varken en låg eller en hög poäng räcker för att avgöra saken utan vidare utredning. Gemensamt för alla tre är att en enda siffra sällan bär hela svaret – det gör oftast bara en särskild punkt på skalan, den som forskarna faktiskt undersökt och satt en tröskel vid.</p>
+      </div>
+
+      <!-- =========================================================
+           Rule-out kontra riskskalor
+           ========================================================= -->
+      <div class="info-about">
+        <h2>Rule-out-instrument kontra riskskalor</h2>
+        <p>Samma räknesätt – kryssa i fynd, summera poängen – bär två helt olika <a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">kliniska</a> frågor, och skillnaden är lätt att missa när gränssnittet ser identiskt ut. <a href="/verktyg/akutmedicin/blodproppar.html">PERC och Wells score</a> används <em>innan</em> en diagnos är satt. Frågan de svarar på är om utredningen kan avslutas utan bilddiagnostik eller <a class="kb-term" href="/ordlista-d.html#term-d-dimer" data-def="Nedbrytningsprodukt av fibrin; blodprov som stiger vid blodproppssjukdom">D-dimer</a>, och de är därför byggda för att vara sensitiva snarare än specifika: ett negativt utfall ska betyda att diagnosen med rimlig säkerhet kan uteslutas, och priset är att många patienter som egentligen är friska ändå går vidare till utredning. Det är hela idén med ett rule-out-instrument – det är konstruerat för att avfärda, inte för att bekräfta.</p>
+        <p><a href="/verktyg/akutmedicin/hjartat.html">CHA₂DS₂-VA och HAS-BLED</a> används <em>efter</em> att en diagnos redan är satt. Förmaksflimret är redan konstaterat när skalorna fylls i; frågan är inte längre om tillståndet finns utan hur stor risken är för <a class="kb-term" href="/ordlista-s.html#term-stroke" data-def="Plötslig skada i hjärnan av avstängd blodförsörjning eller blödning">stroke</a> respektive blödning om patienten sätts på blodförtunnande behandling. Det finns inget "negativt utfall" som friar patienten från något, eftersom ingenting ska uteslutas – skalan placerar i stället en redan bekräftad diagnos på en riskskala för att väga två motstående risker mot varandra. Att en checklista med kryssrutor kan tjäna två så olika syften är värt att hålla isär: den ena sortens instrument avfärdar en möjlighet, den andra sorterar en säkerhet.</p>
+        <p>En tredje familj gör varken det ena eller det andra. NEWS2, GCS, RLS-85, qSOFA och SOFA ställer inte frågan "finns tillståndet" och inte heller "hur stor är risken på sikt" – de mäter hur allvarligt läget är just nu, avsett att jämföras med nästa mätning på samma patient. En poäng som stiger från en kontroll till nästa betyder försämring oavsett vad den absoluta siffran är, på samma sätt som modifierad EHRA används för att se om ett <a class="kb-term" href="/ordlista-f.html#term-formaksflimmer" data-def="Oregelbunden, snabb elektrisk aktivitet i hjärtats förmak">förmaksflimmer</a> blivit lindrigare eller värre efter en insatt behandling, inte för att fastställa diagnosen. Den familjen är alltså varken diagnostisk eller prognostisk i den mening de två första är, utan ett standardiserat sätt att beskriva ett tillstånd som rör sig över tid.</p>
+      </div>
+
+      <!-- =========================================================
+           Länktabell in i de sju verktygssidorna
+           ========================================================= -->
+      <div class="info-about">
+        <h2>Poängskalorna i Anatomiquiz</h2>
+        <p>Sju sidor under <a href="/verktyg/akutmedicin/">Akutmedicin</a> samlar sammanlagt 21 instrument. Varje sida har samma tre delar: räknaren, en förklaring av vad variablerna betyder, och en genomgång av varför just de variablerna väger.</p>
+      </div>
+
+      <div class="kb-grid">
+
+        <a class="kb-card" href="/verktyg/akutmedicin/vitalparametrar.html">
+          <h3 class="kb-card-title">Vitalparametrar</h3>
+          <p class="kb-card-desc">NEWS2 – tidig varningspoäng ur sju vitalparametrar.</p>
+          <span class="kb-card-go">Öppna räknaren →</span>
+        </a>
+
+        <a class="kb-card" href="/verktyg/akutmedicin/syra-bas.html">
+          <h3 class="kb-card-title">Syra och bas</h3>
+          <p class="kb-card-desc">Blodgastolkning, korrigerat natrium och effektiv serumosmolalitet.</p>
+          <span class="kb-card-go">Öppna räknarna →</span>
+        </a>
+
+        <a class="kb-card" href="/verktyg/akutmedicin/blodproppar.html">
+          <h3 class="kb-card-title">Blodproppar</h3>
+          <p class="kb-card-desc">Wells score, PERC och sPESI – rule-out-instrument och prognos.</p>
+          <span class="kb-card-go">Öppna räknarna →</span>
+        </a>
+
+        <a class="kb-card" href="/verktyg/akutmedicin/hjartat.html">
+          <h3 class="kb-card-title">Hjärtat</h3>
+          <p class="kb-card-desc">QTc, CHA₂DS₂-VA, HAS-BLED och modifierad EHRA.</p>
+          <span class="kb-card-go">Öppna räknarna →</span>
+        </a>
+
+        <a class="kb-card" href="/verktyg/akutmedicin/infektion.html">
+          <h3 class="kb-card-title">Infektion</h3>
+          <p class="kb-card-desc">qSOFA, SOFA och DS-CRB-65 vid sepsis och lunginflammation.</p>
+          <span class="kb-card-go">Öppna räknarna →</span>
+        </a>
+
+        <a class="kb-card" href="/verktyg/akutmedicin/neurologi.html">
+          <h3 class="kb-card-title">Neurologi</h3>
+          <p class="kb-card-desc">GCS, RLS-85, 4AT, BE-FAST och HINTS.</p>
+          <span class="kb-card-go">Öppna räknarna →</span>
+        </a>
+
+        <a class="kb-card" href="/verktyg/akutmedicin/buken.html">
+          <h3 class="kb-card-title">Buken</h3>
+          <p class="kb-card-desc">Alvarados poäng och Glasgow-Blatchford.</p>
+          <span class="kb-card-go">Öppna räknarna →</span>
+        </a>
+
+      </div>
+
+      <!-- =========================================================
+           FAQ — matchar FAQPage-JSON-LD ovan
+           ========================================================= -->
+      <div class="info-about" id="faq">
+        <h2>Fråga &amp; svar om <a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">kliniska</a> poängskalor</h2>
+        <p><strong>Vad är en <a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">klinisk</a> poängskala?</strong><br>Ett sätt att göra en sammansatt <a class="kb-term" href="/ordlista-k.html#term-klinisk" data-def="Som rör den direkta undersökningen och vården av patienter vid sjukbädden">klinisk</a> bedömning reproducerbar. Flera fynd som var för sig är för svaga för att avgöra saken vägs samman till ett enda tal, så att två olika undersökare som bedömer samma patient landar i samma svar. Ett tal är bara användbart om skalan är validerad – framtagen i en patientgrupp och bekräftad i en annan – annars är den bara en lista med kryssrutor som råkar se ut som ett instrument.</p>
+        <p><strong>Vad är skillnaden mellan <a class="kb-term" href="/ordlista-s.html#term-sensitivitet" data-def="Ett tests förmåga att fånga upp dem som verkligen har tillståndet">sensitivitet</a> och <a class="kb-term" href="/ordlista-s.html#term-specificitet" data-def="Ett tests förmåga att friskförklara dem som verkligen är friska">specificitet</a>?</strong><br><a class="kb-term" href="/ordlista-s.html#term-sensitivitet" data-def="Ett tests förmåga att fånga upp dem som verkligen har tillståndet">Sensitivitet</a> är hur stor andel av dem som verkligen har tillståndet som skalan fångar upp. <a class="kb-term" href="/ordlista-s.html#term-specificitet" data-def="Ett tests förmåga att friskförklara dem som verkligen är friska">Specificitet</a> är hur stor andel av dem som inte har det som skalan korrekt friar. De två går åt olika håll: flyttas gränsen så att fler sjuka fångas upp fångas oundvikligen fler friska också, och tvärtom. En skala som är byggd för att missa så få som möjligt, som NEWS2, har därför medvetet valt hög <a class="kb-term" href="/ordlista-s.html#term-sensitivitet" data-def="Ett tests förmåga att fånga upp dem som verkligen har tillståndet">sensitivitet</a> framför hög <a class="kb-term" href="/ordlista-s.html#term-specificitet" data-def="Ett tests förmåga att friskförklara dem som verkligen är friska">specificitet</a>.</p>
+        <p><strong>Varför ger samma poängskala olika träffsäkerhet på olika avdelningar?</strong><br><a class="kb-term" href="/ordlista-s.html#term-sensitivitet" data-def="Ett tests förmåga att fånga upp dem som verkligen har tillståndet">Sensitivitet</a> och <a class="kb-term" href="/ordlista-s.html#term-specificitet" data-def="Ett tests förmåga att friskförklara dem som verkligen är friska">specificitet</a> är egenskaper hos själva skalan och ändras inte med var den används. Det som ändras är hur mycket ett resultat faktiskt säger om patienten, och det beror på hur vanligt tillståndet är i den grupp som testas. Samma positiva utfall betyder mer på en avdelning där tillståndet är vanligt än på en där det är sällsynt – det är därför ett instrument som PERC uttryckligen bara ska användas efter att sannolikheten för sjukdomen redan bedömts som låg.</p>
+        <p><strong>Kan man lita på en poängskalas cut-off rakt av?</strong><br>Gränsen är inte en egenskap hos patienten utan ett importerat beslut – en avvägning som forskarna bakom skalan gjorde mellan att missa fall och att utreda i onödan, satt för den population de studerade. Stämmer patienten och sammanhanget dåligt överens med det underlaget håller inte samma gräns automatiskt, vilket är skälet till att varje skala på Anatomiquiz anger vilka patientgrupper den är validerad för.</p>
+        <p><strong>Vad är skillnaden mellan ett rule-out-instrument och en riskskala?</strong><br>Ett rule-out-instrument som PERC eller Wells score används innan diagnosen är satt, för att avgöra om vidare utredning kan avstås. En riskskala som CHA₂DS₂-VA eller HAS-BLED används efter att diagnosen redan är satt, för att gradera en risk och styra en behandling. Båda kan se ut som samma sorts kryssrutelista, men den ena svarar på om sjukdomen finns och den andra på hur den ska hanteras.</p>
+      </div>
+
+      <!-- =========================================================
+           CTA: korslänkar tillbaka till verktygen
+           ========================================================= -->
+      <div class="info-about">
+        <p>Vill du räkna i stället för att läsa finns hela samlingen under <a href="/verktyg/akutmedicin/">Akutmedicin</a>, med räknare för alla 21 instrument. Enskilda termer slås upp i den <a href="/medicinskordlista.html">medicinska ordlistan</a>.</p>
+      </div>
+
+      <!-- Granskningsdatum enligt ARTIKLAR_REGLER §5.1. -->
+      <div class="info-about">
+        <p>Faktagranskad 2026-08-17.</p>
+      </div>
+
+      <!-- =========================================================
+           Källor
+           ========================================================= -->
+      <div class="kb-sources">
+        <h2>Referenser</h2>
+        <ul>
+          <li>Fletcher, G. S. (2020). <em>Clinical epidemiology: The essentials</em> (6:e uppl.). Wolters Kluwer.</li>
+          <li>McGinn, T. G., Guyatt, G. H., Wyer, P. C., Naylor, C. D., Stiell, I. G., &amp; Richardson, W. S. (2000). Users' guides to the medical literature: XXII. How to use articles about clinical decision rules. <em>JAMA, 284</em>(1), 79–84.</li>
+          <li>Pauker, S. G., &amp; Kassirer, J. P. (1980). The threshold approach to clinical decision making. <em>New England Journal of Medicine, 302</em>(20), 1109–1117.</li>
+        </ul>
+      </div>
+
+      <div class="actions">
+        <a href="/verktyg/akutmedicin/" class="btn primary">Till Akutmedicin</a>
+        <a href="/kunskapsbank/artiklar/plugga-och-tenta.html" class="btn">← Till plugga &amp; tenta</a>
+      </div>
+
+    </section>
+
+    <footer class="page-footer">
+      <p>Utbildningsmaterial, inte medicinsk rådgivning. Innehållet är avsett för studier och ersätter inte kurslitteratur, undervisning eller kliniska riktlinjer. Det ska inte användas som underlag för vård eller behandling av patienter.</p>
+      <p>Anatomiquiz använder inga kakor och samlar inte in personuppgifter. Läs mer i <a href="/integritet.html" class="info-link">integritetspolicyn</a>.</p>
+      <p class="page-updated">Senast uppdaterad <time data-updated datetime="2026-08-17">17 augusti 2026</time></p>
+    </footer>
+  </main>
+
+  <!-- Ordlistetooltips i löptexten (progressiv förbättring; .kb-term funkar som länk utan JS) -->
+  <script src="/js/kb-glossary.js" defer></script>
+  <!-- Skriv ut / spara som PDF (progressiv förbättring; CSP-säkert) -->
+  <script src="/js/kb-table-tools.js?v=0.9.223" defer></script>
+
+</body>
+</html>

@@ -257,8 +257,9 @@ Nya sidor **stoppar bygget** om de inte registreras — det är §0.4 och det ä
 ## 7. Releaseordning och status
 
 > ▶️ **Status läses i tabellen nedan, inte i den här rutan** — se §"Verifiera status mot
-> facitfilen" i minnesindexet. Alla sju verktygssidor är byggda sedan 0.9.420. Kvar: släpp 6,
-> `kunskapsbank/kliniska-poangskalor.html` + korslänkning.
+> facitfilen" i minnesindexet. **Hela utbyggnaden är klar sedan 0.9.421** — alla sju
+> verktygssidor (0.9.420) plus faktatexten `kunskapsbank/kliniska-poangskalor.html`
+> med korslänkning (0.9.421, släpp 6).
 
 | Släpp | Innehåll | Status |
 |---|---|---|
@@ -271,7 +272,7 @@ Nya sidor **stoppar bygget** om de inte registreras — det är §0.4 och det ä
 | **5a** | `infektion.html` — qSOFA, SOFA, DS-CRB-65 | ✅ **klart 0.9.418** |
 | **5b-i** | `neurologi.html` — GCS, RLS-85, 4AT, BE-FAST, HINTS | ✅ **klart 0.9.419** |
 | **5b-ii** | `buken.html` — Alvarado, Glasgow-Blatchford | ✅ **klart 0.9.420 — alla sju verktygssidor byggda** |
-| **6** | `kunskapsbank/kliniska-poangskalor.html` + korslänkning | väntar — sista återstående steget |
+| **6** | `kunskapsbank/kliniska-poangskalor.html` + korslänkning | ✅ **klart 0.9.421 — hela utbyggnaden avslutad** |
 
 ### Släpp 1 — LEVERERAT 0.9.286
 
@@ -645,3 +646,50 @@ fräsch uppsättning kriterier efter `nollknapp.fire('click')`**, i stället fö
 implicit togglingslogik som aldrig funnits i verktyget. Samma sorts fel som `puls`-länken och
 `AMT`/`lillhjärna`-länkarna i föregående släpp: ett antagande om hur befintlig kod beter sig,
 aldrig verifierat mot koden själv.
+
+### Släpp 6 — LEVERERAT 0.9.421 (`kunskapsbank/kliniska-poangskalor.html`) — hela utbyggnaden avslutad
+
+- [x] Ny faktatext, byggd i samma roll som `lakemedelsberakning.html` har för läkemedelsberäknaren:
+      `typ: guide`, hubb `plugga-och-tenta`, flat URL (`sokvag`-fält i `data/artiklar.json`) i
+      stället för `/kunskapsbank/artiklar/`-namnrymden nya artiklar annars får. Beslutet följer
+      §12.2:s egen motivering för läkemedelsberäkningssidan: sidan är nav-text för en
+      verktygssamling, inte en topikartikel i N3-hierarkin.
+- [x] ~1 900 ord prosa: vad en poängskala är (fyra mönster, samma bakomliggande fråga), sensitivitet
+      och specificitet (med ett räkneexempel på 100 patienter), prediktiva värden och varför
+      prevalensen ändrar tolkningen (50 % kontra 90 % PPV vid oförändrat test), varför en cut-off är
+      en importerad tröskel och inte ett fynd (Pauker & Kassirers tröskelmodell, med sPESI/Glasgow-
+      Blatchford/Alvarado som exempel på enstaka robusta trösklar), och rule-out-instrument (PERC,
+      Wells) kontra riskskalor (CHA₂DS₂-VA, HAS-BLED) kontra en tredje familj severitetsmått
+      (NEWS2, GCS, qSOFA, SOFA, EHRA) som varken utesluter eller stratifierar utan följer förlopp.
+- [x] Tre källor uppslagna innan de skrevs (§6.2, ingen bibliografisk uppgift gissad): Fletcher, G. S.
+      (2020) *Clinical Epidemiology: The Essentials* (6:e uppl.), McGinn m.fl. (2000) JAMA 284(1),
+      79–84 om kliniska beslutsregler, Pauker & Kassirer (1980) NEJM 302(20), 1109–1117 om
+      tröskelresonemanget.
+- [x] Länktabell (`.kb-grid`) till alla sju verktygssidor + CTA-rad "Vad är en poängskala?" tillagd
+      i `class="actions"` på samtliga sju verktygssidor och på `/verktyg/akutmedicin/`-hubben
+      (både i löptexten och actions-raden).
+- [x] Registrerad hela vägen: `data/artiklar.json`, `scripts/amne.py`, `data/llms.json`,
+      `scripts/relaterat.py` (`UTAN_RELATERAT` med skälet att sidan redan länkas från verktygen).
+- [x] Hela kedjan körd i KEDJA-ordning: `generate_artiklar.py` (byggde om `faktatexter.html`,
+      `plugga-och-tenta.html` och `artiklar/index.html`), `wire_terms.py` (19 nya `kb-term`-länkar,
+      alla verifierat rätt riktade), `wire_citations.py`, `wire_relaterat.py`, `wire_lang.py`,
+      `wire_identity.py`, `wire_amne.py`, `wire_sidfot.py`, `wire_dates.py`, `generate_llms.py`.
+- [x] `check_generators.py`: rundtripp identisk över 130 filer, 0 avvikelser. `check_meta.py`,
+      `check_kontrast.py`, `check_links.py` (17 726 länkar) och `check_akutmedicin.py` (546 tester)
+      gröna.
+
+#### 7l. Ordningsfällan: `sidodatum.py` ligger utanför KEDJA men måste vara stabil FÖRE den
+
+`sidodatum.py --update` är inte ett steg i `check_generators.py:KEDJA` — det är ett fristående,
+git-historik-drivet steg som måste vara **helt klart innan kedjan körs**, eftersom
+`generate_glossary.py` (tidigt i KEDJA, och en andra gång senare) läser `data/sidodatum.json` för
+att sätta `sitemap.xml`s `lastmod`. Att köra `sidodatum.py --update` en andra gång **efter** att
+hela kedjan redan körts klart (för att rätta två sidor som fått fel datum av oincheckade
+mellansteg) skrev en nyare `data/sidodatum.json` än den `sitemap.xml` som redan låg på disk — och
+att sedan bara köra om `generate_glossary.py` för att fixa det bröt i sin tur `wire_lang.py`,
+`wire_identity.py`, `wire_amne.py`, `wire_sidfot.py` och `wire_dates.py`:s skrivningar i
+ordlistans 33 sidor, exakt det scenario KEDJA-kommentaren varnar för. **Rätt åtgärd fanns redan
+dokumenterad ovan (§"Kedjekörning") men gällde bara `git add -A` FÖRE kedjan — den täckte inte
+fallet att kedjan behöver köras om en andra gång efter en sen `sidodatum.py`-korrigering.**
+Lärdomen: upptäcks ett datumfel efter en full kedjekörning, kör **hela** KEDJA i ordning igen från
+`generate_glossary.py`, aldrig bara det enskilda steget som råkar äga filen med felet.

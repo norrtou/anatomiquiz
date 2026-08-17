@@ -263,6 +263,34 @@
       "llms": "Guide till läkemedelsberäkning för sjuksköterskor. Utgår från att felen sitter i enheterna och inte i räkneoperationen, och lär ut enhetsräkning som genomgående metod: skriv ut enheten efter varje tal och låt enheterna visa om divisionen gick åt rätt håll (mg delat med mg/ml ger ml). Skiljer på ordination, styrka och dos, med Socialstyrelsens krav på vad en dokumenterad ordination ska innehålla, och går igenom beredningsformerna peroral, intravenös, intramuskulär och subkutan samt skillnaden enteral–parenteral. Behandlar omvandling mellan kg, g, mg och mikrogram i steg om tusen och varför ett felplacerat decimaltecken ger tiofaldigt fel, samt enheter som inte är massa – insulin i enheter med standardstyrkan 100 enheter/ml, heparin i internationella enheter och elektrolyter i millimol – med regeln att en aktivitetsenhet aldrig får räknas om till milligram på egen hand. Visar de tre grundformlerna som tre läsriktningar av samma samband, dosering per kilo i två steg, infusionshastighet i ml/h, dropptakt med droppfaktor samt den omvända räkningen från mg/kg/h till ml/h (70 kg och 5 mg/kg/h ur en lösning på 25 mg/ml ger 14 ml/h). Går igenom procentlösningar (1 % = 10 mg/ml) och spädning enligt styrka₁ × volym₁ = styrka₂ × volym₂, och avslutas med kontrollräkning: rimlighetsbedömning mot ordinationen och det iordningställda läkemedlet, avrunda sist, kontrollräkna med en annan metod än den först använda, och att lokala rutiner styr när en andra person ska kontrollräkna. Korslänkad till uppslagstabellen Omvandlingar & formler och till quizet Läkemedelsräkning."
     },
     {
+      "slug": "kliniska-poangskalor",
+      "sokvag": "/kunskapsbank/kliniska-poangskalor.html",
+      "titel": "Kliniska poängskalor",
+      "kortbeskrivning": "Vad en klinisk poängskala är, sensitivitet och specificitet, prediktiva värden, varför en cut-off aldrig är ett beslut, och rule-out-instrument kontra riskskalor.",
+      "poang": "Sensitivitet och specificitet är egenskaper hos själva skalan, men det prediktiva värdet av ett resultat beror på hur vanligt tillståndet är där skalan används, och en cut-off är därför en importerad tröskel snarare än ett fynd hos patienten.",
+      "typ": "guide",
+      "hubb": "plugga-och-tenta",
+      "malgrupp": [
+        "sjukskoterska"
+      ],
+      "taggar": [
+        "poängskala",
+        "sensitivitet",
+        "specificitet",
+        "prediktivt värde",
+        "cut-off",
+        "riskskala"
+      ],
+      "publicerad": "2026-08-17",
+      "uppdaterad": "2026-08-17",
+      "granskad": "2026-08-17",
+      "beroenden": [],
+      "quiz": [],
+      "tabeller": [],
+      "status": "live",
+      "llms": "Guide till hur kliniska poängskalor fungerar, skriven som nav-text för de sju verktygssidorna under /verktyg/akutmedicin/. Förklarar att en poängskala väger samman flera var för sig svaga fynd till ett reproducerbart tal (NEWS2:s sju vitalparametrar, Wells nio fynd, CHA₂DS₂-VA:s sju riskfaktorer för stroke), och att talet bara är tillförlitligt om skalan är härledd och validerad enligt McGinn et al.:s ramverk för kliniska beslutsregler. Går igenom sensitivitet (andelen sjuka som fångas upp) och specificitet (andelen friska som frias korrekt) med ett räkneexempel på 100 patienter, och visar hur samma sensitivitet och specificitet ger olika prediktivt värde beroende på hur vanligt tillståndet är i den testade gruppen (50 % kontra 90 % positivt prediktivt värde vid oförändrat test men olika prevalens) – grunden till varför PERC bara ska användas efter att sannolikheten för lungemboli redan bedömts som låg. Förklarar cut-offen som en importerad tröskel med Pauker & Kassirers tröskelmodell (testtröskel och behandlingströskel), med sPESI, Glasgow-Blatchford och Alvarados poäng som exempel på skalor där bara en punkt på skalan är robust belagd. Ställer till sist rule-out-instrument som PERC och Wells (används före diagnos, byggda för att avfärda) mot riskskalor som CHA₂DS₂-VA och HAS-BLED (används efter diagnos, graderar en redan bekräftad risk), och nämner NEWS2/GCS/qSOFA/SOFA/EHRA som en tredje familj: severitetsmått avsedda att jämföras över tid snarare än att diagnostisera eller förutsäga. Länkar till samtliga sju verktygssidor under Akutmedicin."
+    },
+    {
       "slug": "medicinskt-latin",
       "sokvag": "/kunskapsbank/medicinskt-latin.html",
       "titel": "Medicinskt latin",

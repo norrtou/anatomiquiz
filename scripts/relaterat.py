@@ -204,6 +204,7 @@ UTAN_RELATERAT = {
     "kunskapsbank/uttalsregler.html": "terminologisida, korslänkad i brödtext",
     "kunskapsbank/lakemedelsberakning.html": "faktatext, länkas från verktyget",
     "kunskapsbank/lakemedelsberakning-omvandlingar.html": "faktatext, länkas från verktyget",
+    "kunskapsbank/kliniska-poangskalor.html": "faktatext, länkas från de sju verktygssidorna i /verktyg/akutmedicin/",
     "kunskapsbank/artiklar/anatomiska-riktningar.html": "artikel, korslänkad i brödtext",
     "kunskapsbank/artiklar/dermatom-myotom-sklerotom.html": "artikel, korslänkad i brödtext",
     "kunskapsbank/artiklar/engelska-i-medicinskt-sprak.html": "artikel, korslänkad i brödtext",
