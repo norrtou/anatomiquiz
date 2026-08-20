@@ -329,10 +329,33 @@ def skriv(reg: dict[str, dict[str, str]]) -> str:
     return json.dumps(ut, ensure_ascii=False, indent=2) + "\n"
 
 
+def kräv_hel_historik() -> None:
+    """Stoppa i en avgränsad (shallow) klon — datumen blir tyst felaktiga där.
+
+    `senast_ändrad()` går bakåt tills innehållet skiljer sig, och returnerar den
+    äldsta revision den ser när historiken tar slut. I en klon som är avgränsad
+    vid en viss commit dateras därför VARJE sida vars innehåll ändrades före
+    klongränsen om till gränsens datum — och `git log --raw` rapporterar dem
+    dessutom som `A` vid gränsen, vilket ger samma fel via en andra väg.
+
+    Upptäckt 0.9.424: i en klon avgränsad vid 2026-08-07 påstod `--check` att 78
+    sidor drev; efter `git fetch --unshallow` var det 1. Hade `--update` körts i
+    den klonen hade 77 sidor fått ett felaktigt "Senast uppdaterad" utskrivet
+    för läsaren. Ett tyst fel som skriver om hela sajtens datum ska stoppa
+    bygget, inte passera (§0.4).
+    """
+    if _git("rev-parse", "--is-shallow-repository").strip() == "true":
+        raise SystemExit(
+            "STOPP: repot är en avgränsad (shallow) klon – datumen kan inte "
+            "härledas.\nVarje sida vars innehåll ändrades före klongränsen "
+            "skulle daterats om till gränsens datum.\nKör: git fetch --unshallow")
+
+
 def main(argv):
     if not argv or argv[0] not in ("--update", "--check"):
         print(__doc__)
         return 0
+    kräv_hel_historik()
     gammalt = läs_register()
     nytt = bygg(gammalt)
     text = skriv(nytt)
