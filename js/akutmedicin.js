@@ -164,7 +164,37 @@
 
   /* ---------------------------------------------------------
      Fälten
+     ---------------------------------------------------------
+     VARFÖR FÄLTET ÄR EN <div> OCH INTE EN <label>: förklaringen
+     till ett enskilt fält ligger hopfälld VID fältet (byggHint
+     nedan). En <summary> inuti en <label> skulle träffa fältet vid
+     varje klick — man öppnar förklaringen och hamnar i inmatningen
+     samtidigt. Etiketten är därför en egen <label for="…">, och
+     fältet en behållare runt etikett, inmatning, poäng och hjälp.
      --------------------------------------------------------- */
+
+  /**
+   * Förklaringen till ETT fält eller kriterium, hopfälld vid fältet.
+   *
+   * Tidigare låg alla hjälptexter i ett samlat `.vt-hjalp`-block under
+   * rutnätet — upp till fem stycken i rad (SOFA), utan synlig koppling
+   * till vilket fält de gällde. Det var det som gjorde verktygen
+   * svåröverblickade: den som bara ville räkna fick läsa förbi
+   * förklaringarna, och den som behövde en förklaring fick leta efter
+   * rätt stycke. Hopfälld vid fältet är den tyst tills den efterfrågas
+   * och står då exakt där frågan uppstod.
+   */
+  function byggHint(text) {
+    var d = document.createElement('details');
+    d.className = 'vt-hint';
+    var s = document.createElement('summary');
+    s.textContent = 'Vad menas?';
+    var p = document.createElement('p');
+    p.textContent = text;
+    d.appendChild(s);
+    d.appendChild(p);
+    return d;
+  }
 
   /**
    * @param {boolean} [utanPoang] Formelräknaren (mönster C) har ingen
@@ -172,11 +202,15 @@
    *   inte alls i stället för att byggas och tas bort igen.
    */
   function byggTalfalt(spec, idPrefix, utanPoang) {
-    var wrap = document.createElement('label');
+    var wrap = document.createElement('div');
     wrap.className = 'vt-field';
     wrap.dataset.falt = spec.namn;
 
-    var rubrik = document.createElement('span');
+    var faltId = idPrefix + '-' + spec.namn;
+
+    var rubrik = document.createElement('label');
+    rubrik.className = 'vt-field-titel';
+    rubrik.setAttribute('for', faltId);
     rubrik.textContent = spec.etikett;
     wrap.appendChild(rubrik);
 
@@ -186,7 +220,7 @@
     input.type = 'text';
     input.inputMode = 'decimal';
     input.autocomplete = 'off';
-    input.id = idPrefix + '-' + spec.namn;
+    input.id = faltId;
     input.placeholder = spec.plats || '';
     rad.appendChild(input);
 
@@ -206,6 +240,8 @@
       wrap.appendChild(poang);
     }
 
+    if (spec.hjalp) wrap.appendChild(byggHint(spec.hjalp));
+
     return { el: wrap, input: input, valjare: null, poang: poang, spec: spec };
   }
 
@@ -215,18 +251,22 @@
    *   då inte alls — samma skäl som i byggTalfalt ovan.
    */
   function byggValfalt(spec, idPrefix, utanPoang) {
-    var wrap = document.createElement('label');
+    var wrap = document.createElement('div');
     wrap.className = 'vt-field vt-field--val';
     wrap.dataset.falt = spec.namn;
 
-    var rubrik = document.createElement('span');
+    var faltId = idPrefix + '-' + spec.namn;
+
+    var rubrik = document.createElement('label');
+    rubrik.className = 'vt-field-titel';
+    rubrik.setAttribute('for', faltId);
     rubrik.textContent = spec.etikett;
     wrap.appendChild(rubrik);
 
     var rad = document.createElement('div');
     rad.className = 'vt-inputrow';
     var valjare = document.createElement('select');
-    valjare.id = idPrefix + '-' + spec.namn;
+    valjare.id = faltId;
     spec.val.forEach(function (v, i) {
       var o = document.createElement('option');
       o.value = v.varde;
@@ -245,8 +285,18 @@
       wrap.appendChild(poang);
     }
 
+    if (spec.hjalp) wrap.appendChild(byggHint(spec.hjalp));
+
     return { el: wrap, input: null, valjare: valjare, poang: poang, spec: spec };
   }
+
+  /* Lägesväljarens förklaring. Står som en rad i kortet i stället för
+     som en permanent mening: den behövs bara när Träna är valt, och
+     "Träna" säger inte av sig själv att poängen försvinner. En sträng
+     per mönster i koden, inte per skala i facit — texten ska vara
+     identisk i alla tjugo instrumenten. */
+  var TRANA_SUMMA = 'Träningsläget döljer poängen. Räkna själv och kontrollera din summa nedan.';
+  var TRANA_SVAR = 'Träningsläget döljer svaret. Räkna själv och kontrollera det nedan.';
 
   /* ---------------------------------------------------------
      Renderaren: värdeskala (mönster B)
@@ -303,21 +353,6 @@
       return f;
     });
 
-    /* Hjälptexter — de parametrar som behöver en förklaring vid
-       fältet, inte bara i brödtexten längre ner. Ingen fetstil här:
-       finstilt ska kunna läsas av den som söker den och annars vara
-       tyst (CLAUDE_REGLER §0.5 punkt 4). Texten namnger därför sin
-       egen parameter i stället för att bära en fet etikett. */
-    var hjalp = document.createElement('div');
-    hjalp.className = 'vt-hjalp';
-    skala.parametrar.forEach(function (p) {
-      if (!p.hjalp) return;
-      var rad = document.createElement('p');
-      rad.textContent = p.hjalp;
-      hjalp.appendChild(rad);
-    });
-    if (hjalp.children.length) kort.appendChild(hjalp);
-
     /* Utfallet */
     var ut = document.createElement('div');
     ut.className = 'vt-out is-tom';
@@ -334,7 +369,10 @@
     ut.appendChild(utCalc);
     kort.appendChild(ut);
 
-    /* Svarsbandet — svarstabellens rad för den här summan. */
+    /* Svarsbandet — svarstabellens rad för den här summan. Sist ligger
+       förbehållet (`not`): det som begränsar hur resultatet får läsas,
+       finstilt och avskilt i stället för inbakat sist i åtgärdsraden
+       där det drunknade. */
     var band = document.createElement('div');
     band.className = 'vt-band';
     band.hidden = true;
@@ -344,9 +382,13 @@
     bandOver.className = 'vt-band-rad';
     var bandAtgard = document.createElement('p');
     bandAtgard.className = 'vt-band-rad';
+    var bandNot = document.createElement('p');
+    bandNot.className = 'vt-band-not';
+    bandNot.hidden = true;
     band.appendChild(bandTitel);
     band.appendChild(bandOver);
     band.appendChild(bandAtgard);
+    band.appendChild(bandNot);
     kort.appendChild(band);
 
     /* Röd poäng — en enskild parameter som ensam når gränsen. */
@@ -533,6 +575,8 @@
       bandTitel.textContent = res.band.rubrik;
       bandOver.textContent = 'Övervakning: ' + res.band.overvakning;
       bandAtgard.textContent = res.band.atgard;
+      bandNot.hidden = !res.band.not;
+      bandNot.textContent = res.band.not || '';
 
       if (res.kritiska.length && skala.kritisk) {
         krit.hidden = false;
@@ -555,6 +599,7 @@
       kort.classList.toggle('is-trana', trana);
       knappRakna.setAttribute('aria-pressed', String(!trana));
       knappTrana.setAttribute('aria-pressed', String(trana));
+      intro.textContent = trana ? TRANA_SUMMA : skala.intro;
       dom.className = '';
       dom.textContent = '';
       svarInput.value = '';
@@ -738,16 +783,6 @@
       rutnat.appendChild(f.el);
       return f;
     });
-
-    var hjalp = document.createElement('div');
-    hjalp.className = 'vt-hjalp';
-    skala.falt.forEach(function (p) {
-      if (!p.hjalp) return;
-      var rad = document.createElement('p');
-      rad.textContent = p.hjalp;
-      hjalp.appendChild(rad);
-    });
-    if (hjalp.children.length) kort.appendChild(hjalp);
 
     /* Rimlighetsvarningen — direkt under fälten, samma komponent som
        värdeskalan använder men här byggd separat eftersom
@@ -946,6 +981,7 @@
       kort.classList.toggle('is-trana', trana);
       knappRakna.setAttribute('aria-pressed', String(!trana));
       knappTrana.setAttribute('aria-pressed', String(trana));
+      intro.textContent = trana ? TRANA_SVAR : skala.intro;
       rader.forEach(function (rad) {
         rad.svarInput.value = '';
         rad.dom.className = '';
@@ -1303,9 +1339,13 @@
       return f;
     });
 
+    /* Vilka fält som är valfria är det enda den som fyller i behöver
+       veta här; VARFÖR de är valfria står hopfällt vid respektive
+       fält. Tidigare stod båda sakerna i samma tvåradiga stycke mitt
+       i verktyget. */
     var valfriNot = document.createElement('p');
     valfriNot.className = 'vt-extra';
-    valfriNot.textContent = 'Natrium och klorid är valfria och används bara för att räkna ut anjongapet. Laktatet är valfritt och används bara för att kommentera ett förhöjt anjongap.';
+    valfriNot.textContent = 'De fyra första fälten krävs. Natrium, klorid och laktat är valfria.';
     kort.appendChild(valfriNot);
 
     var varnBox = document.createElement('div');
@@ -1498,26 +1538,39 @@
     return { summa: summa, delar: delar, band: bandFor(skala, summa) };
   }
 
+  /* Kryssrutan följer samma uppdelning som talfältet: en <label> för
+     själva raden (ruta, text och vikt) och en behållare runt den, så
+     att förklaringen kan fällas ut utan att klicket samtidigt kryssar
+     i kriteriet. */
   function byggKryssruta(spec, idPrefix) {
-    var wrap = document.createElement('label');
+    var wrap = document.createElement('div');
     wrap.className = 'vt-krav';
     wrap.dataset.falt = spec.namn;
 
+    var rutId = idPrefix + '-' + spec.namn;
+
+    var rad = document.createElement('label');
+    rad.className = 'vt-krav-rad';
+    rad.setAttribute('for', rutId);
+
     var ruta = document.createElement('input');
     ruta.type = 'checkbox';
-    ruta.id = idPrefix + '-' + spec.namn;
+    ruta.id = rutId;
     ruta.checked = false;
-    wrap.appendChild(ruta);
+    rad.appendChild(ruta);
 
     var text = document.createElement('span');
     text.className = 'vt-krav-text';
     text.textContent = spec.etikett;
-    wrap.appendChild(text);
+    rad.appendChild(text);
 
     var poang = document.createElement('span');
     poang.className = 'vt-poang';
     poang.textContent = viktText(spec.poang);
-    wrap.appendChild(poang);
+    rad.appendChild(poang);
+
+    wrap.appendChild(rad);
+    if (spec.hjalp) wrap.appendChild(byggHint(spec.hjalp));
 
     return { el: wrap, ruta: ruta, poang: poang, spec: spec };
   }
@@ -1567,19 +1620,6 @@
       return r;
     });
 
-    /* Hjälptexterna vid kriterierna, samma finstilta form som i
-       värdeskalan: ingen fetstil, texten namnger sitt eget
-       kriterium (CLAUDE_REGLER §0.5 punkt 4). */
-    var hjalp = document.createElement('div');
-    hjalp.className = 'vt-hjalp';
-    skala.kriterier.forEach(function (k) {
-      if (!k.hjalp) return;
-      var rad = document.createElement('p');
-      rad.textContent = k.hjalp;
-      hjalp.appendChild(rad);
-    });
-    if (hjalp.children.length) kort.appendChild(hjalp);
-
     /* Utfallet */
     var ut = document.createElement('div');
     ut.className = 'vt-out';
@@ -1602,8 +1642,12 @@
     bandTitel.className = 'vt-band-titel';
     var bandText = document.createElement('p');
     bandText.className = 'vt-band-rad';
+    var bandNot = document.createElement('p');
+    bandNot.className = 'vt-band-not';
+    bandNot.hidden = true;
     band.appendChild(bandTitel);
     band.appendChild(bandText);
+    band.appendChild(bandNot);
     kort.appendChild(band);
 
     /* Svarsruta (träningsläget) */
@@ -1692,6 +1736,8 @@
       band.className = 'vt-band is-' + senaste.band.niva;
       bandTitel.textContent = senaste.band.rubrik;
       bandText.textContent = senaste.band.text;
+      bandNot.hidden = !senaste.band.not;
+      bandNot.textContent = senaste.band.not || '';
     }
 
     function sattLage(trana) {
@@ -1699,6 +1745,7 @@
       kort.classList.toggle('is-trana', trana);
       knappRakna.setAttribute('aria-pressed', String(!trana));
       knappTrana.setAttribute('aria-pressed', String(trana));
+      intro.textContent = trana ? TRANA_SUMMA : skala.intro;
       dom.className = '';
       dom.textContent = '';
       svarInput.value = '';
@@ -1829,16 +1876,6 @@
       return f;
     });
 
-    var hjalp = document.createElement('div');
-    hjalp.className = 'vt-hjalp';
-    skala.steg.forEach(function (s) {
-      if (!s.hjalp) return;
-      var rad = document.createElement('p');
-      rad.textContent = s.hjalp;
-      hjalp.appendChild(rad);
-    });
-    if (hjalp.children.length) kort.appendChild(hjalp);
-
     var band = document.createElement('div');
     band.className = 'vt-band';
     band.setAttribute('aria-live', 'polite');
@@ -1846,8 +1883,12 @@
     bandTitel.className = 'vt-band-titel';
     var bandText = document.createElement('p');
     bandText.className = 'vt-band-rad';
+    var bandNot = document.createElement('p');
+    bandNot.className = 'vt-band-not';
+    bandNot.hidden = true;
     band.appendChild(bandTitel);
     band.appendChild(bandText);
+    band.appendChild(bandNot);
     kort.appendChild(band);
 
     var nollrad = document.createElement('div');
@@ -1868,11 +1909,15 @@
         band.className = 'vt-band is-tom';
         bandTitel.textContent = skala.tomrubrik;
         bandText.textContent = skala.tomtext;
+        bandNot.hidden = true;
+        bandNot.textContent = '';
         return;
       }
       band.className = 'vt-band is-' + res.utfall.niva;
       bandTitel.textContent = res.utfall.rubrik;
       bandText.textContent = res.utfall.text;
+      bandNot.hidden = !res.utfall.not;
+      bandNot.textContent = res.utfall.not || '';
     }
 
     falt.forEach(function (f) { f.valjare.addEventListener('change', rakna); });

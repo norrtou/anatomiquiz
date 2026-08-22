@@ -72,7 +72,7 @@
     "url": "https://anatomiquiz.se/"
   },
   "datePublished": "2026-07-31",
-  "dateModified": "2026-08-17",
+  "dateModified": "2026-08-22",
   "author": {
     "@type": "Person",
     "@id": "https://anatomiquiz.se/#daniel-medin",
@@ -265,7 +265,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
   <link rel="stylesheet" href="/css/styles.css?v=0.9.412">
-  <link rel="stylesheet" href="/css/verktyg.css?v=0.9.415">
+  <link rel="stylesheet" href="/css/verktyg.css?v=0.9.425">
 </head>
 <body>
 
@@ -297,6 +297,15 @@
       <div class="info-about">
         <p>Tre räknare som hör ihop: <a href="#blodgas" class="info-link">blodgasklassificeraren</a> tolkar pH, pCO₂, <a class="kb-term" href="/ordlista-b.html#term-bikarbonat" data-def="HCO₃⁻; blodets viktigaste buffert, reglerad av njurarna">bikarbonat</a> och <a class="kb-term" href="/ordlista-b.html#term-basoverskott" data-def="BE; hur mycket bas som måste tillföras eller tas bort för att normalisera blodets pH">basöverskott</a> och visar resonemanget steg för steg i stället för bara ett facit. <a href="#natrium" class="info-link">Korrigerat natrium</a> räknar bort den utspädning ett högt <a class="kb-term" href="/ordlista-g.html#term-glukos" data-def="Druvsocker; kroppens viktigaste enkla sockerart och energikälla">P-glukos</a> orsakar. <a href="#osmolalitet" class="info-link">Effektiv serumosmolalitet</a> mäter hur starkt blodet drar vatten till sig. Alla tre är byggda ur sina originalpublikationer, angivna längst ner.</p>
       </div>
+
+      <nav class="vt-hopp" id="verktygen" aria-labelledby="vt-hopp-titel">
+        <span class="vt-hopp-titel" id="vt-hopp-titel">Verktyg på sidan</span>
+        <div class="vt-hopp-rad">
+          <a class="vt-hopp-knapp" href="#blodgas">Blodgas</a>
+          <a class="vt-hopp-knapp" href="#natrium">Korrigerat natrium</a>
+          <a class="vt-hopp-knapp" href="#osmolalitet">Osmolalitet</a>
+        </div>
+      </nav>
 
       <div id="akut-utan-js" class="vt-warn">
         Räknarna kräver JavaScript. Är det avstängt finns referensvärdena, formlerna och tolkningsbanden som text under varje rubrik.
@@ -394,6 +403,8 @@
            2. Korrigerat natrium
            ========================================================= -->
 
+      <p class="vt-tillbaka"><a href="#verktygen">↑ Verktyg på sidan</a></p>
+
       <h2 id="natrium">Korrigerat <a class="kb-term" href="/ordlista-n.html#term-natrium" data-def="Grundämne och elektrolyt som styr kroppens vatten- och saltbalans">natrium</a> vid högt <a class="kb-term" href="/ordlista-g.html#term-glukos" data-def="Druvsocker">glukos</a></h2>
 
       <p>Ett högt <a class="kb-term" href="/ordlista-g.html#term-glukos" data-def="Druvsocker; kroppens viktigaste enkla sockerart och energikälla">P-glukos</a> drar vatten ut ur cellerna och späder ut natriumet i blodet, så att det uppmätta värdet ser lägre ut än kroppens verkliga saltbalans. Räknaren visar det korrigerade natriumet enligt två formler: Katz (1973), som länge var standard, och Hillier, Abbott och Barrett (1999), som mätte upp att effekten är starkare än Katz uppskattade.</p>
@@ -452,6 +463,8 @@
            3. Effektiv serumosmolalitet
            ========================================================= -->
 
+      <p class="vt-tillbaka"><a href="#verktygen">↑ Verktyg på sidan</a></p>
+
       <h2 id="osmolalitet">Effektiv serumosmolalitet</h2>
 
       <p><a class="kb-term" href="/ordlista-t.html#term-tonicitet" data-def="En lösnings förmåga att dra vatten in i eller ut ur en cell">Tonicitet</a>, eller effektiv <a class="kb-term" href="/ordlista-o.html#term-osmolalitet" data-def="Måttet på hur många lösta partiklar en vätska innehåller per kilo lösningsmedel">osmolalitet</a>, mäter hur starkt blodet drar vatten till sig — men bara med de partiklar som inte fritt passerar <a class="kb-term" href="/ordlista-c.html#term-cellmembran" data-def="Det hinnlager som avgränsar cellen mot omgivningen">cellmembran</a>. Urea utelämnas därför avsiktligt, till skillnad från den totala <a class="kb-term" href="/ordlista-o.html#term-osmolalitet" data-def="Måttet på hur många lösta partiklar en vätska innehåller per kilo lösningsmedel">osmolalitet</a> ett laboratorium ibland rapporterar.</p>
@@ -490,6 +503,8 @@
 
       <p>Just därför är <a class="kb-term" href="/ordlista-t.html#term-tonicitet" data-def="En lösnings förmåga att dra vatten in i eller ut ur en cell">tonicitet</a> också avgörande för <em>hur</em> ett sådant tillstånd behandlas, inte bara för att upptäcka det. Sänks glukoset och därmed toniciteten för snabbt hinner inte hjärnans celler anpassa sig, och vatten strömmar tillbaka in i dem fortare än de klarar av — med hjärnödem som följd. Det är samma princip som gör att en kronisk <a class="kb-term" href="/ordlista-h.html#term-hyponatremi" data-def="För lågt natrium i blodet">hyponatremi</a> inte får korrigeras för snabbt, fast i motsatt riktning.</p>
 
+      <p class="vt-tillbaka"><a href="#verktygen">↑ Verktyg på sidan</a></p>
+
       <div class="kb-sources">
         <h2>Referenser</h2>
         <ul>
@@ -511,11 +526,11 @@
     <footer class="page-footer">
       <p>Utbildningsmaterial, inte medicinsk rådgivning. Innehållet är avsett för studier och ersätter inte kurslitteratur, undervisning eller kliniska riktlinjer. Det ska inte användas som underlag för vård eller behandling av patienter.</p>
       <p>Anatomiquiz använder inga kakor och samlar inte in personuppgifter. Läs mer i <a href="/integritet.html" class="info-link">integritetspolicyn</a>.</p>
-      <p class="page-updated">Senast uppdaterad <time data-updated datetime="2026-08-17">17 augusti 2026</time></p>
+      <p class="page-updated">Senast uppdaterad <time data-updated datetime="2026-08-22">22 augusti 2026</time></p>
     </footer>
   </main>
 
-  <script src="/js/akutmedicin.js?v=0.9.417" defer></script>
+  <script src="/js/akutmedicin.js?v=0.9.425" defer></script>
 
   <!-- Ordlistetooltips i löptexten (progressiv förbättring; .kb-term funkar som länk utan JS) -->
   <script src="/js/kb-glossary.js" defer></script>

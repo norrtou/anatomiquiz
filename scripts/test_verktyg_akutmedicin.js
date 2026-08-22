@@ -257,7 +257,7 @@ async function kör() {
   rubrik('Montering');
   pastå('kortets id', kort.id, 'akut-news2');
   pastå('rubriken', kort.find(e => e.tagName === 'H3').textContent,
-        'NEWS2 – tidig varningspoäng');
+        'Räkna NEWS2');
   pastå('sju parametrar + skalväljaren', Object.keys(falt).length, 8);
   pastå('rutan för avstängt JS döljs', utanJs.hidden, true);
 
@@ -1524,6 +1524,125 @@ async function kör() {
     rubrik('  Könet ger ingen egen poäng');
     normal();
     pastå('könsfältet', r.falt.kon.poang.textContent, 'ger ingen poäng');
+  }
+
+  /* =========================================================
+     Gränssnittet: överblicken i kortet
+     =========================================================
+     Texterna INNE i verktyget var det användaren pekade ut som
+     överväldigande. Tre ändringar bär den fixen, och alla tre kan
+     tyst falla tillbaka utan att en enda poängberäkning går fel —
+     därför prövas de här (§ship-the-guardrail).
+
+     1. Kortets rubrik säger vad man GÖR. Sa förut samma sak som
+        sidans <h2> rakt ovanför, så läsaren mötte två rubriker och
+        två introduktioner om samma instrument.
+     2. Förklaringen ligger hopfälld VID sitt fält (.vt-hint), inte
+        i ett samlat .vt-hjalp-block under rutnätet.
+     3. Förbehållet i ett resultat står för sig (.vt-band-not). */
+
+  rubrik('Gränssnittet — kortets rubrik är en handling, inte en upprepning');
+  {
+    /* Ingen rubrik får inledas med instrumentets namn följt av tankstreck:
+       det var exakt formen som dubblerade sidans <h2>. */
+    const facit = JSON.parse(fs.readFileSync(FACIT, 'utf8'));
+    let dubbletter = 0;
+    SKALNAMN.forEach((namn) => {
+      const h3 = platser[namn].children[0].find((e) => e.tagName === 'H3');
+      if (/^\S.* – /.test(h3.textContent)) dubbletter++;
+    });
+    pastå('ingen kortrubrik har kvar den gamla "Namn – beskrivning"-formen',
+          dubbletter, 0);
+
+    /* Instruktionen ska vara kort nog att läsas i förbifarten. */
+    const langsta = Math.max(...SKALNAMN.map((n) => facit[n].intro.length));
+    pastå('längsta instruktionen är under 120 tecken', langsta < 120, true);
+  }
+
+  rubrik('Gränssnittet — förklaringen ligger vid sitt fält');
+  {
+    const facit = JSON.parse(fs.readFileSync(FACIT, 'utf8'));
+
+    /* Det gamla samlade blocket får inte finnas kvar någonstans. */
+    let samlade = 0;
+    SKALNAMN.forEach((namn) => {
+      samlade += platser[namn].children[0]
+        .findAll((e) => e._class.has('vt-hjalp')).length;
+    });
+    pastå('inget samlat .vt-hjalp-block finns kvar', samlade, 0);
+
+    /* Varje hjalp i facit ska renderas som en .vt-hint inuti SITT eget
+       fält — inte bara finnas någonstans i kortet. */
+    let vantade = 0, hittade = 0, felplacerade = 0;
+    SKALNAMN.forEach((namn) => {
+      const skala = facit[namn];
+      const kort = platser[namn].children[0];
+      ['parametrar', 'falt', 'kriterier', 'steg'].forEach((grupp) => {
+        (skala[grupp] || []).forEach((spec) => {
+          if (!spec.hjalp) return;
+          vantade++;
+          const bararen = kort.findAll(
+            (e) => (e._class.has('vt-field') || e._class.has('vt-krav')) &&
+                   e.dataset.falt === spec.namn)[0];
+          if (!bararen) { felplacerade++; return; }
+          const hint = bararen.findAll((e) => e._class.has('vt-hint'))[0];
+          if (!hint) { felplacerade++; return; }
+          hittade++;
+          if (hint.textContent.indexOf(spec.hjalp) === -1) felplacerade++;
+        });
+      });
+    });
+    pastå('alla hjälptexter i facit renderas', hittade, vantade);
+    pastå('var och en sitter i sitt eget fält', felplacerade, 0);
+    pastå('det finns hjälptexter att pröva', vantade > 20, true);
+
+    /* Hopfälld som standard: den som bara vill räkna ska mötas av en
+       ren yta. <details> utan open-attribut är stängd. */
+    let oppna = 0;
+    SKALNAMN.forEach((namn) => {
+      platser[namn].children[0].findAll((e) => e._class.has('vt-hint'))
+        .forEach((d) => { if (d.getAttribute('open') != null) oppna++; });
+    });
+    pastå('alla förklaringar är hopfällda från start', oppna, 0);
+  }
+
+  rubrik('Gränssnittet — förbehållet står för sig i resultatet');
+  {
+    const facit = JSON.parse(fs.readFileSync(FACIT, 'utf8'));
+
+    /* Wells 0 poäng: bandet "DVT osannolik" har inget förbehåll. */
+    const w = plockaKryss('wells_dvt');
+    w.nollknapp.fire('click');
+    const wNot = w.band.children.find((c) => c._class.has('vt-band-not'));
+    pastå('band utan förbehåll döljer raden', wNot.hidden, true);
+
+    /* PERC 0 kriterier: bandet HAR ett förbehåll i facit. */
+    const p = plockaKryss('perc');
+    p.nollknapp.fire('click');
+    const pNot = p.band.children.find((c) => c._class.has('vt-band-not'));
+    pastå('band med förbehåll visar raden', pNot.hidden, false);
+    pastå('förbehållet är facitets', pNot.textContent, facit.perc.band[0].not);
+    /* Och det står INTE kvar i huvudtexten. */
+    const pText = p.band.children.find((c) => c._class.has('vt-band-rad'));
+    pastå('förbehållet upprepas inte i beskedet',
+          pText.textContent.indexOf(facit.perc.band[0].not), -1);
+  }
+
+  rubrik('Gränssnittet — Träna-läget förklarar sig självt');
+  {
+    const facit = JSON.parse(fs.readFileSync(FACIT, 'utf8'));
+    const kort = platser.wells_dvt.children[0];
+    const intro = kort.find((e) => e._class.has('vt-tool-intro'));
+    const knappar = kort.find((e) => e._class.has('vt-mode')).children;
+
+    pastå('räkneläget visar instruktionen', intro.textContent,
+          facit.wells_dvt.intro);
+    knappar.find((b) => b.textContent === 'Träna').fire('click');
+    paståMed('träningsläget förklarar att poängen är dold',
+             intro.textContent, 'döljer poängen');
+    knappar.find((b) => b.textContent === 'Räkna').fire('click');
+    pastå('tillbaka till instruktionen', intro.textContent,
+          facit.wells_dvt.intro);
   }
 
   console.log('\n' + (fel === 0

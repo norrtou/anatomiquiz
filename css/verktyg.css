@@ -13,7 +13,13 @@
    språket ska vara IDENTISKT, inte "nästan lika" — därför ärver
    poängskalorna .vt-tool, .vt-field, .vt-inputrow, .vt-out,
    .vt-warn, .vt-svarsruta och .vt-mode rakt av, och lägger bara
-   till det som saknades (.vt-poang, .vt-band, .vt-krit, .vt-hjalp).
+   till det som saknades (.vt-poang, .vt-band, .vt-krit, .vt-hint).
+
+   Överblicken på verktygssidorna vilar på tre komponenter:
+   .vt-hopp   – genvägsrad överst, ett piller per instrument
+   .vt-tillbaka – vägen tillbaka, sist i varje instrumentavsnitt
+   .vt-hint   – förklaringen hopfälld VID sitt fält, inte i ett
+                samlat block under rutnätet (ersatte .vt-hjalp)
    ========================================================= */
 
 /* ---------- Verktygskortet ---------- */
@@ -106,12 +112,27 @@
   margin: 0;
 }
 
-.vt-field > span {
+/* Fältets etikett. Två selektorer med flit: läkemedelsberäknaren bygger
+   etiketten som ett <span> direkt i en <label class="vt-field">, medan
+   poängskalorna bygger fältet som en <div> med en egen <label
+   class="vt-field-titel"> — det senare krävs för att förklaringen ska
+   kunna fällas ut vid fältet utan att klicket också träffar
+   inmatningen (se js/akutmedicin.js).
+
+   `:first-child` är nödvändigt, inte kosmetik. Utan det matchar
+   `.vt-field > span` ÄVEN poängchipen `.vt-poang`, som är ett span
+   längre ner i samma fält — och med högre specificitet (0,1,1 mot
+   0,1,0) vann etikettens storlek och färg över chipens. Chipen såg
+   därför ut som en andra etikett i stället för som en underordnad
+   notis, vilket är precis det som gjorde fälten svårlästa. */
+.vt-field > span:first-child,
+.vt-field-titel {
   display: block;
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 4px;
+  letter-spacing: normal;
+  margin: 0 0 4px;
 }
 
 /* Talet och enheten sitter i samma ram: enhetsbytet ska aldrig
@@ -517,18 +538,25 @@
   margin-top: 4px;
 }
 
-.vt-krav {
+/* Kriteriet är behållaren, raden är det klickbara. Uppdelningen finns
+   för att en utfällbar förklaring ska kunna ligga under raden utan att
+   ett klick på den också kryssar i kriteriet. */
+.vt-krav-rad {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: baseline;
   column-gap: 10px;
+  margin: 0;
   padding: 9px 10px;
   border-radius: var(--radius-sm);
+  font-size: inherit;
+  font-weight: 400;
+  letter-spacing: normal;
   cursor: pointer;
   transition: background var(--transition-fast);
 }
 
-.vt-krav:hover {
+.vt-krav-rad:hover {
   background: rgba(16, 185, 129, 0.06);
 }
 
@@ -562,7 +590,7 @@
 /* Under 480 px får vikten inte tränga ihop etiketten till en spalt på
    några ord — den flyttar ner under texten i stället. */
 @media (max-width: 480px) {
-  .vt-krav {
+  .vt-krav-rad {
     grid-template-columns: auto 1fr;
   }
 
@@ -573,20 +601,75 @@
   }
 }
 
-/* Förklaringar som hör till ett enskilt fält. Finstilt, utan fetstil. */
-.vt-hjalp {
-  margin-top: 12px;
+/* ---------- Förklaringen vid fältet ---------- */
+
+/* Hopfälld vid sitt eget fält i stället för samlad i ett block under
+   rutnätet. Den som bara vill räkna ser en ren yta; den som undrar vad
+   ett kriterium betyder får svaret där frågan uppstod, inte i ett
+   stycke längre ner som måste paras ihop med rätt fält.
+
+   Formen är finstilt genomgående (CLAUDE_REGLER §0.5 punkt 4): ingen
+   ram, ingen platta, ingen fetstil — bara en understruken rad som går
+   att hitta för den som söker den och annars är tyst. */
+.vt-hint {
+  margin-top: 6px;
   font-size: 0.84rem;
   line-height: 1.5;
   color: var(--text-secondary);
 }
 
-.vt-hjalp p {
-  margin: 0;
+.vt-hint > summary {
+  display: inline-block;
+  padding: 4px 0;
+  color: var(--primary-deep);
+  font-size: 0.8rem;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+  list-style: none;
 }
 
-.vt-hjalp p + p {
-  margin-top: 6px;
+/* Webkit ritar en egen triangel som list-style inte når. */
+.vt-hint > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Egen pil, så att öppet och stängt går att se utan att läsa texten. */
+.vt-hint > summary::before {
+  content: "›";
+  display: inline-block;
+  margin-right: 6px;
+  transition: transform var(--transition-fast);
+}
+
+.vt-hint[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.vt-hint > summary:focus-visible {
+  outline: 3px solid var(--primary-dark);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.vt-hint > p {
+  margin: 0 0 4px;
+  padding-left: 14px;
+  border-left: 2px solid rgba(16, 185, 129, 0.3);
+}
+
+/* I kriterielistan ligger förklaringen under en rad som redan har
+   indrag för kryssrutan — den linjeras med kriterietexten, inte med
+   rutan. */
+.vt-krav > .vt-hint {
+  margin: 0 0 4px;
+  padding: 0 10px 0 40px;
+}
+
+@media (max-width: 480px) {
+  .vt-krav > .vt-hint {
+    padding-left: 30px;
+  }
 }
 
 /* Svarsbandet — instrumentets egen svarstabell för just den summan.
@@ -615,6 +698,19 @@
 
 .vt-band-rad + .vt-band-rad {
   margin-top: 4px;
+}
+
+/* Förbehållet: det som begränsar hur resultatet får läsas. Låg
+   tidigare inbakat sist i samma stycke som besked och åtgärd, där ett
+   resultat kunde bli 380 tecken i ett svep. Avskilt och finstilt går
+   både beskedet och begränsningen att se utan att läsa hela rutan. */
+.vt-band-not {
+  margin: 8px 0 0;
+  padding-top: 8px;
+  border-top: 1px solid rgba(107, 114, 128, 0.25);
+  font-size: 0.86rem;
+  line-height: 1.5;
+  opacity: 0.85;
 }
 
 .vt-band.is-ingen,
@@ -683,6 +779,99 @@
   font-size: 0.88rem;
   line-height: 1.5;
   color: var(--error-text);
+}
+
+/* ---------- Hoppa till verktyget ---------- */
+
+/* Sidorna bär två till fem instrument var, och varje instrument har
+   räknare, tabeller och två förklarande avsnitt. Utan en genväg överst
+   är enda vägen till det tredje verktyget att skrolla förbi de två
+   första i sin helhet. Formen är .vt-flikar:s pillerknappar — samma
+   visuella språk som lägesväljaren, inte en ny sorts navigering.
+
+   Ligger som en <nav> direkt under sidans ingress. Motsvarande
+   tillbakalänk står sist i varje instrumentavsnitt (.vt-tillbaka), så
+   vägen går åt båda hållen. */
+.vt-hopp {
+  margin: 0 0 18px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  background: rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.18);
+}
+
+.vt-hopp-titel {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+}
+
+.vt-hopp-rad {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.vt-hopp-knapp {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 7px 14px;
+  border: 2px solid rgba(16, 185, 129, 0.35);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--primary-deep);
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.vt-hopp-knapp:hover,
+.vt-hopp-knapp:focus-visible {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: var(--primary-dark);
+  text-decoration: none;
+}
+
+.vt-hopp-knapp:focus-visible {
+  outline: 3px solid var(--primary-dark);
+  outline-offset: 2px;
+}
+
+/* Hoppet får inte lägga rubriken kant i kant med skärmens överkant —
+   då syns inte att man landat på en ny rubrik. Regeln träffar rubriker
+   med id, alltså precis de som är hoppmål; att i stället märka upp dem
+   med en klass hade betytt en attributändring i 21 rubriker utan att
+   ge något extra. verktyg.css laddas bara av /verktyg/-sidorna, så
+   räckvidden är redan avgränsad. */
+h2[id],
+.vt-hopp {
+  scroll-margin-top: 16px;
+}
+
+/* Tillbaka till genvägsraden, sist i varje instrumentavsnitt. Finstilt
+   och högerställd: en väg tillbaka, inte en uppmaning. */
+.vt-tillbaka {
+  margin: 0 0 26px;
+  text-align: right;
+  font-size: 0.85rem;
+}
+
+.vt-tillbaka a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.vt-tillbaka a:hover,
+.vt-tillbaka a:focus-visible {
+  color: var(--primary-deep);
+  text-decoration: underline;
 }
 
 /* ---------- Övrigt ---------- */

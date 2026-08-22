@@ -72,7 +72,7 @@
     "url": "https://anatomiquiz.se/"
   },
   "datePublished": "2026-08-16",
-  "dateModified": "2026-08-17",
+  "dateModified": "2026-08-22",
   "author": {
     "@type": "Person",
     "@id": "https://anatomiquiz.se/#daniel-medin",
@@ -323,7 +323,7 @@
   <link rel="apple-touch-icon" href="/img/icon-192.png">
   <link rel="manifest" href="/manifest.json">
   <link rel="stylesheet" href="/css/styles.css?v=0.9.412">
-  <link rel="stylesheet" href="/css/verktyg.css?v=0.9.415">
+  <link rel="stylesheet" href="/css/verktyg.css?v=0.9.425">
 </head>
 <body>
 
@@ -355,6 +355,15 @@
       <div class="info-about">
         <p>Tre skalor som ligger på olika avstånd från patienten. <a href="#qsofa" class="info-link">qSOFA</a> bygger på tre uppgifter som går att få fram vid sängkanten utan ett enda prov. <a href="#sofa" class="info-link">SOFA</a> kräver prover och mätvärden och kartlägger sex organsystem var för sig. <a href="#dscrb65" class="info-link">DS-CRB-65</a> är smalare och gäller bara <a class="kb-term" href="/ordlista-l.html#term-lunginflammation" data-def="Infektion i lungvävnaden; pneumoni">lunginflammation</a>, men svarar på den fråga som ofta är den första: var ska den här patienten vårdas?</p>
       </div>
+
+      <nav class="vt-hopp" id="verktygen" aria-labelledby="vt-hopp-titel">
+        <span class="vt-hopp-titel" id="vt-hopp-titel">Verktyg på sidan</span>
+        <div class="vt-hopp-rad">
+          <a class="vt-hopp-knapp" href="#qsofa">qSOFA</a>
+          <a class="vt-hopp-knapp" href="#sofa">SOFA</a>
+          <a class="vt-hopp-knapp" href="#dscrb65">DS-CRB-65</a>
+        </div>
+      </nav>
 
       <div id="akut-utan-js" class="vt-warn">
         Räknarna kräver JavaScript. Är det avstängt finns alla kriterier, poäng och tolkningsband som tabeller under varje rubrik.
@@ -426,6 +435,8 @@
       <!-- =========================================================
            2. SOFA
            ========================================================= -->
+
+      <p class="vt-tillbaka"><a href="#verktygen">↑ Verktyg på sidan</a></p>
 
       <h2 id="sofa">SOFA – <a class="kb-term" href="/ordlista-o.html#term-organsvikt" data-def="Tillstånd där ett organs funktion inte längre räcker för kroppens behov">organsvikt</a> i sex system</h2>
 
@@ -504,6 +515,8 @@
            3. DS-CRB-65
            ========================================================= -->
 
+      <p class="vt-tillbaka"><a href="#verktygen">↑ Verktyg på sidan</a></p>
+
       <h2 id="dscrb65">DS-CRB-65 – allvarlighetsbedömning vid <a class="kb-term" href="/ordlista-p.html#term-pneumoni" data-def="Lunginflammation">pneumoni</a></h2>
 
       <p>Den smalaste av de tre skalorna: den gäller bara samhällsförvärvad <a class="kb-term" href="/ordlista-l.html#term-lunginflammation" data-def="Infektion i lungvävnaden; pneumoni">lunginflammation</a>, men svarar på den fråga som ofta kommer först. Sex kriterier ger en poäng var, och summan används som stöd för att avgöra på vilken vårdnivå patienten rimligen hanteras.</p>
@@ -561,6 +574,8 @@
 
       <p><strong>Skalan är byggd för en vårdnivåfråga, inte för en diagnos.</strong> Det gör den till en annan sorts instrument än qSOFA och SOFA. Diagnosen <a class="kb-term" href="/ordlista-l.html#term-lunginflammation" data-def="Infektion i lungvävnaden; pneumoni">lunginflammation</a> förutsätts redan vara ställd; det skalan bidrar med är ett strukturerat sätt att väga samman de faktorer som avgör om patienten klarar sig hemma. Den ersätter inte bedömningen av den enskilda patienten, och det svenska vårdprogrammet säger det uttryckligen.</p>
 
+      <p class="vt-tillbaka"><a href="#verktygen">↑ Verktyg på sidan</a></p>
+
       <div class="kb-sources">
         <h2>Referenser</h2>
         <ul>
@@ -581,11 +596,11 @@
     <footer class="page-footer">
       <p>Utbildningsmaterial, inte medicinsk rådgivning. Innehållet är avsett för studier och ersätter inte kurslitteratur, undervisning eller kliniska riktlinjer. Det ska inte användas som underlag för vård eller behandling av patienter.</p>
       <p>Anatomiquiz använder inga kakor och samlar inte in personuppgifter. Läs mer i <a href="/integritet.html" class="info-link">integritetspolicyn</a>.</p>
-      <p class="page-updated">Senast uppdaterad <time data-updated datetime="2026-08-17">17 augusti 2026</time></p>
+      <p class="page-updated">Senast uppdaterad <time data-updated datetime="2026-08-22">22 augusti 2026</time></p>
     </footer>
   </main>
 
-  <script src="/js/akutmedicin.js?v=0.9.415" defer></script>
+  <script src="/js/akutmedicin.js?v=0.9.425" defer></script>
 
   <!-- Ordlistetooltips i löptexten (progressiv förbättring; .kb-term funkar som länk utan JS) -->
   <script src="/js/kb-glossary.js" defer></script>

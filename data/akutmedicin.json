@@ -4,8 +4,8 @@
   "news2": {
     "namn": "NEWS2",
     "monster": "varde",
-    "rubrik": "NEWS2 – tidig varningspoäng",
-    "intro": "Varje vitalparameter faller i ett intervall, och varje intervall är värt 0–3 poäng. Summan är patientens NEWS2. Fyll i de fem mätvärdena och kontrollera de tre valen, så visas poängen per parameter tillsammans med totalen.",
+    "rubrik": "Räkna NEWS2",
+    "intro": "Fyll i de fem mätvärdena och gör de tre valen. Poängen visas per parameter och som summa.",
     "summaetikett": "NEWS2",
     "enhetssuffix": "poäng",
     "kalla": "Royal College of Physicians (2017)",
@@ -192,8 +192,8 @@
   "natrium_korrigerat": {
     "namn": "Korrigerat natrium",
     "monster": "formel",
-    "rubrik": "Korrigerat natrium vid högt glukos",
-    "intro": "Ett högt P-glukos drar vatten ut ur cellerna och späder ut natriumet i blodet, så att uppmätt natrium ser lägre ut än kroppens faktiska saltbalans. Räknaren visar det korrigerade natriumet enligt två formler: Katz (1973), som länge var standard, och Hillier et al. (1999), som mätte upp att effekten är starkare än Katz uppskattade.",
+    "rubrik": "Räkna korrigerat natrium",
+    "intro": "Fyll i natrium och P-glukos. Båda formlerna räknas ut samtidigt.",
     "kalla": "Katz (1973); Hillier, Abbott & Barrett (1999)",
 
     "falt": [
@@ -246,8 +246,8 @@
   "osmolalitet": {
     "namn": "Effektiv serumosmolalitet",
     "monster": "formel",
-    "rubrik": "Effektiv serumosmolalitet",
-    "intro": "Effektiv osmolalitet (tonicitet) mäter hur starkt blodet drar vatten till sig — bara de partiklar som inte fritt passerar cellmembran räknas med. Urea utelämnas därför avsiktligt, till skillnad från den totala osmolalitet som labbet ibland rapporterar.",
+    "rubrik": "Räkna effektiv osmolalitet",
+    "intro": "Fyll i natrium, kalium och P-glukos.",
     "kalla": "Mustafa, Haq, Dashora, Castro & Dhatariya (2023), Joint British Diabetes Societies",
 
     "falt": [
@@ -298,8 +298,8 @@
   "blodgas": {
     "namn": "Blodgastolkning",
     "monster": "blodgas",
-    "rubrik": "Blodgasklassificerare",
-    "intro": "Fyll i pH, pCO₂, bikarbonat och basöverskott, så visas den primära rubbningen och om kompensationen är den förväntade — steg för steg, inte bara ett facit. Natrium och klorid ger dessutom anjongapet, som hjälper till att förklara en metabol acidos.",
+    "rubrik": "Tolka blodgasen",
+    "intro": "Fyll i värdena, så byggs bedömningen upp steg för steg under fälten.",
     "kalla": "Berend, de Vries & Gans (2014)",
 
     "referens": {
@@ -316,17 +316,19 @@
       { "namn": "pco2", "etikett": "pCO₂",                        "kort": "pCO₂",       "typ": "tal", "enhet": "kPa",    "plats": "t.ex. 7,0", "rimlig": { "min": 1, "max": 20 } },
       { "namn": "hco3", "etikett": "Aktuellt bikarbonat (HCO₃⁻)", "kort": "Bikarbonat", "typ": "tal", "enhet": "mmol/L", "plats": "t.ex. 30",  "rimlig": { "min": 2, "max": 60 } },
       { "namn": "be",   "etikett": "Basöverskott (BE)",           "kort": "Basöverskott","typ": "tal", "enhet": "mmol/L", "plats": "t.ex. 5",  "rimlig": { "min": -30, "max": 30 } },
-      { "namn": "na",   "etikett": "Natrium",                     "kort": "Natrium",    "typ": "tal", "enhet": "mmol/L", "plats": "t.ex. 138", "rimlig": { "min": 100, "max": 170 }, "valfri": true },
+      { "namn": "na",   "etikett": "Natrium",                     "kort": "Natrium",    "typ": "tal", "enhet": "mmol/L", "plats": "t.ex. 138", "rimlig": { "min": 100, "max": 170 }, "valfri": true,
+        "hjalp": "Natrium och klorid behövs bara för anjongapet, som räknas ut när bedömningen landat i en metabol acidos. Utan dem görs resten av bedömningen ändå." },
       { "namn": "cl",   "etikett": "Klorid",                      "kort": "Klorid",     "typ": "tal", "enhet": "mmol/L", "plats": "t.ex. 100", "rimlig": { "min": 60, "max": 140 }, "valfri": true },
-      { "namn": "laktat","etikett": "Laktat",                     "kort": "Laktat",     "typ": "tal", "enhet": "mmol/L", "plats": "t.ex. 1,2", "rimlig": { "min": 0, "max": 30 }, "valfri": true }
+      { "namn": "laktat","etikett": "Laktat",                     "kort": "Laktat",     "typ": "tal", "enhet": "mmol/L", "plats": "t.ex. 1,2", "rimlig": { "min": 0, "max": 30 }, "valfri": true,
+        "hjalp": "Laktatet används bara för att kommentera ett förhöjt anjongap: det skiljer en laktacidos från andra orsaker till gapet, till exempel ketoacidos eller njursvikt." }
     ]
   },
 
   "wells_dvt": {
     "namn": "Wells DVT",
     "monster": "kryss",
-    "rubrik": "Wells score för djup ventrombos",
-    "intro": "Nio fynd talar för djup ventrombos och ger vardera en poäng. Det tionde kriteriet drar av två poäng och är det enda som pekar åt andra hållet: finns en annan diagnos som förklarar benet lika bra, sjunker sannolikheten för trombos. Kryssa i det som stämmer, så visas summan och vilken grupp patienten hamnar i.",
+    "rubrik": "Räkna Wells score",
+    "intro": "Kryssa i det som stämmer. Sista kriteriet drar av två poäng.",
     "summaetikett": "Wells score",
     "enhetssuffix": "poäng",
     "kalla": "Wells et al. (2003)",
@@ -368,8 +370,8 @@
   "perc": {
     "namn": "PERC",
     "monster": "kryss",
-    "rubrik": "PERC – kriterier för att avfärda lungemboli",
-    "intro": "PERC är byggd baklänges mot de andra skalorna: den letar inte efter tecken som talar för lungemboli, utan efter allt som skulle göra det oförsvarligt att avfärda diagnosen utan prov. Först när samtliga åtta kriterier är frånvarande är regeln uppfylld. Kryssa i det som stämmer.",
+    "rubrik": "Pröva PERC-kriterierna",
+    "intro": "Kryssa i det som stämmer. Regeln är uppfylld först när ingen ruta är ikryssad.",
     "summaetikett": "Uppfyllda kriterier",
     "enhetssuffix": "poäng",
     "kalla": "Kline et al. (2008)",
@@ -396,17 +398,19 @@
 
     "band": [
       { "max": 0, "niva": "lag", "rubrik": "PERC uppfylld – inget kriterium ikryssat",
-        "text": "Med samtliga åtta kriterier frånvarande, och när den kliniska misstanken redan bedömts som låg, var risken för lungemboli i studien så liten att vidare provtagning inte ansågs motiverad. Regeln gäller bara i den kombinationen — den ersätter inte den kliniska bedömningen utan förutsätter den." },
+        "text": "Med samtliga åtta kriterier frånvarande, och när den kliniska misstanken redan bedömts som låg, var risken för lungemboli i studien så liten att vidare provtagning inte ansågs motiverad.",
+        "not": "Regeln gäller bara i den kombinationen — den ersätter inte den kliniska bedömningen utan förutsätter den." },
       { "niva": "medel", "rubrik": "PERC inte uppfylld",
-        "text": "Ett enda ikryssat kriterium räcker för att regeln inte ska gälla. Det betyder inte att patienten har lungemboli, bara att PERC inte kan användas för att avfärda den — utredningen fortsätter på vanligt sätt." }
+        "text": "Ett enda ikryssat kriterium räcker för att regeln inte ska gälla.",
+        "not": "Det betyder inte att patienten har lungemboli, bara att PERC inte kan användas för att avfärda den — utredningen fortsätter på vanligt sätt." }
     ]
   },
 
   "spesi": {
     "namn": "sPESI",
     "monster": "kryss",
-    "rubrik": "sPESI – riskbedömning vid bekräftad lungemboli",
-    "intro": "sPESI används först när lungembolin är bekräftad och besvarar en annan fråga än Wells och PERC: hur allvarlig är den? Sex kriterier väger vardera en poäng, och det är skillnaden mellan noll och minst en som betyder något — inte hur högt summan blir.",
+    "rubrik": "Räkna sPESI",
+    "intro": "Kryssa i det som stämmer. Varje kriterium väger en poäng.",
     "summaetikett": "sPESI",
     "enhetssuffix": "poäng",
     "kalla": "Jiménez et al. (2010)",
@@ -431,15 +435,16 @@
       { "max": 0, "niva": "lag", "rubrik": "0 poäng – låg risk",
         "text": "I studien som skalan bygger på avled omkring en procent av patienterna med noll poäng inom trettio dagar. Det är den grupp där vård utanför sjukhus har undersökts som ett alternativ." },
       { "niva": "hog", "rubrik": "1 poäng eller mer – förhöjd risk",
-        "text": "Från en poäng låg dödligheten inom trettio dagar i studien kring elva procent. Skalan skiljer alltså ut en lågriskgrupp; den graderar inte risken vidare uppåt, så fyra poäng säger inte något annat än att patienten inte tillhör lågriskgruppen." }
+        "text": "Från en poäng låg dödligheten inom trettio dagar i studien kring elva procent.",
+        "not": "Skalan skiljer alltså ut en lågriskgrupp; den graderar inte risken vidare uppåt, så fyra poäng säger inte något annat än att patienten inte tillhör lågriskgruppen." }
     ]
   },
 
   "chadsva": {
     "namn": "CHA₂DS₂-VA",
     "monster": "kryss",
-    "rubrik": "CHA₂DS₂-VA – strokerisk vid förmaksflimmer",
-    "intro": "Sju riskfaktorer väger tillsammans samman risken för stroke vid förmaksflimmer. Fem av dem ger en poäng och två ger två — hög ålder och tidigare stroke väger dubbelt, eftersom de är de starkaste enskilda riskmarkörerna. Kryssa i det som stämmer, så visas summan och vad riktlinjerna säger om den nivån.",
+    "rubrik": "Räkna CHA₂DS₂-VA",
+    "intro": "Kryssa i det som stämmer. De två åldersraderna utesluter varandra.",
     "summaetikett": "CHA₂DS₂-VA",
     "enhetssuffix": "poäng",
     "kalla": "European Society of Cardiology (2024)",
@@ -468,15 +473,16 @@
       { "max": 1, "niva": "medel", "rubrik": "1 poäng – måttlig risk",
         "text": "Vid en poäng anger riktlinjerna att antikoagulantia bör övervägas, med hänsyn till patientens blödningsrisk och egen inställning." },
       { "niva": "hog", "rubrik": "2 poäng eller mer – hög risk",
-        "text": "Från två poäng rekommenderar riktlinjerna antikoagulantia. Bedömningen av blödningsrisk görs vid sidan om och ersätter inte den här summan." }
+        "text": "Från två poäng rekommenderar riktlinjerna antikoagulantia.",
+        "not": "Bedömningen av blödningsrisk görs vid sidan om och ersätter inte den här summan." }
     ]
   },
 
   "qsofa": {
     "namn": "qSOFA",
     "monster": "varde",
-    "rubrik": "qSOFA – snabb bedömning vid misstänkt infektion",
-    "intro": "Tre uppgifter som går att få fram vid sängkanten utan ett enda prov: andningsfrekvensen, det systoliska blodtrycket och om patienten är opåverkad i medvetandet. Varje uppfyllt kriterium ger en poäng. qSOFA ställer ingen diagnos utan pekar ut vilka patienter med misstänkt infektion som riskerar ett sämre förlopp.",
+    "rubrik": "Räkna qSOFA",
+    "intro": "Fyll i andningsfrekvens och systoliskt blodtryck, och ange medvetandegraden.",
     "summaetikett": "qSOFA",
     "enhetssuffix": "poäng",
     "kalla": "Singer et al. (2016)",
@@ -525,7 +531,8 @@
     "band": [
       { "max": 1, "niva": "lag", "rubrik": "0–1 poäng",
         "overvakning": "Enligt verksamhetens ordinarie rutin.",
-        "atgard": "Kriteriet för förhöjd risk är inte uppfyllt. qSOFA är trubbig och utesluter inte sepsis — en patient med tydlig infektion och påverkat allmäntillstånd bedöms oavsett poängen." },
+        "atgard": "Kriteriet för förhöjd risk är inte uppfyllt.",
+        "not": "qSOFA är trubbig och utesluter inte sepsis — en patient med tydlig infektion och påverkat allmäntillstånd bedöms oavsett poängen." },
       { "niva": "hog", "rubrik": "2 poäng eller mer",
         "overvakning": "Täta kontroller av vitalparametrarna.",
         "atgard": "Vid misstänkt infektion är detta den nivå där Sepsis-3 anger att risken för ett sämre förlopp är påtagligt förhöjd, och där organsvikt bör efterforskas med prover." }
@@ -535,8 +542,8 @@
   "sofa": {
     "namn": "SOFA",
     "monster": "varde",
-    "rubrik": "SOFA – organsvikt i sex system",
-    "intro": "Sex organsystem bedöms var för sig på en skala 0–4, och summan beskriver hur utbredd organsvikten är. Till skillnad från qSOFA kräver SOFA prover och mätvärden, och den är byggd för intensivvården — men den visar tydligare än något annat instrument hur ett poängsystem kan väga ihop helt olika sorters mätvärden till ett tal.",
+    "rubrik": "Räkna SOFA",
+    "intro": "Fyll i värdena för de sex organsystemen. Poängen visas per system och som summa.",
     "summaetikett": "SOFA",
     "enhetssuffix": "poäng",
     "kalla": "Singer et al. (2016); Vincent et al. (1996)",
@@ -658,7 +665,8 @@
         "atgard": "Inget av de sex systemen visar mer än en lätt avvikelse." },
       { "max": 9, "niva": "medel", "rubrik": "2–9 poäng – organsvikt föreligger",
         "overvakning": "Enligt vårdnivåns rutin för organsvikt.",
-        "atgard": "Vid misstänkt infektion är en akut ökning med minst två poäng det som enligt Sepsis-3 definierar sepsis. Poängen säger var svikten sitter — läs delpoängen per system, inte bara summan." },
+        "atgard": "Vid misstänkt infektion är en akut ökning med minst två poäng det som enligt Sepsis-3 definierar sepsis.",
+        "not": "Poängen säger var svikten sitter — läs delpoängen per system, inte bara summan." },
       { "niva": "hog", "rubrik": "10 poäng eller mer – uttalad organsvikt",
         "overvakning": "Kontinuerlig övervakning.",
         "atgard": "Flera organsystem sviktar samtidigt. I de studier skalan bygger på steg dödligheten påtagligt i det här intervallet." }
@@ -668,8 +676,8 @@
   "dscrb65": {
     "namn": "DS-CRB-65",
     "monster": "kryss",
-    "rubrik": "DS-CRB-65 – allvarlighetsbedömning vid pneumoni",
-    "intro": "Sex kriterier som vart och ett ger en poäng. Skalan är den svenska efterföljaren till CRB-65 och lägger till två bokstäver framför: D för underliggande sjukdom och S för saturation. Den skattar hur allvarlig en samhällsförvärvad lunginflammation är, och därmed på vilken vårdnivå den rimligen hanteras.",
+    "rubrik": "Räkna DS-CRB-65",
+    "intro": "Kryssa i det som stämmer. Varje kriterium väger en poäng.",
     "summaetikett": "DS-CRB-65",
     "enhetssuffix": "poäng",
     "kalla": "Svenska infektionsläkarföreningen, vårdprogram för samhällsförvärvad pneumoni (2024)",
@@ -695,15 +703,16 @@
       { "max": 1, "niva": "lag", "rubrik": "0–1 poäng – lägre allvarlighetsgrad",
         "text": "Enligt det svenska vårdprogrammet kan den här gruppen oftast handläggas i öppenvård med uppföljning." },
       { "niva": "hog", "rubrik": "2 poäng eller mer – högre allvarlighetsgrad",
-        "text": "Från två poäng anger vårdprogrammet att sjukhusvård ofta är motiverad. Poängen ersätter inte den kliniska bedömningen av den enskilda patienten." }
+        "text": "Från två poäng anger vårdprogrammet att sjukhusvård ofta är motiverad.",
+        "not": "Poängen ersätter inte den kliniska bedömningen av den enskilda patienten." }
     ]
   },
 
   "qtc": {
     "namn": "QTc",
     "monster": "formel",
-    "rubrik": "QTc – frekvenskorrigerad QT-tid",
-    "intro": "QT-tiden på EKG:t blir kortare ju fortare hjärtat slår, så en uppmätt QT-tid går inte att bedöma utan att först räknas om till den tid den skulle ha haft vid 60 slag per minut. Räknaren visar två korrigeringar: Bazett (1920), som är den vanligaste, och Fridericia (1920), som håller sig bättre vid höga och låga pulser.",
+    "rubrik": "Räkna QTc",
+    "intro": "Fyll i QT-tiden och hjärtfrekvensen. Båda korrigeringarna räknas ut samtidigt.",
     "kalla": "Bazett (1920); Fridericia (1920)",
 
     "falt": [
@@ -785,8 +794,8 @@
   "has_bled": {
     "namn": "HAS-BLED",
     "monster": "kryss",
-    "rubrik": "HAS-BLED – blödningsrisk vid antikoagulantiabehandling",
-    "intro": "Nio kryssrutor fördelade på sju bokstäver — A och D står vardera för två skilda saker och kan därför ge två poäng var. Skalan skattar risken för allvarlig blödning under behandling med blodförtunnande läkemedel, och är avsedd att peka ut vad som går att åtgärda, inte att avgöra om behandlingen ska ges.",
+    "rubrik": "Räkna HAS-BLED",
+    "intro": "Kryssa i det som stämmer. A och D täcker två saker var och kan ge två poäng.",
     "summaetikett": "HAS-BLED",
     "enhetssuffix": "poäng",
     "kalla": "Pisters et al. (2010)",
@@ -816,17 +825,19 @@
 
     "band": [
       { "max": 2, "niva": "lag", "rubrik": "0–2 poäng – låg blödningsrisk",
-        "text": "Risken för allvarlig blödning under behandling bedöms som låg. Poängen säger ingenting om nyttan av behandlingen, som skattas separat med CHA₂DS₂-VA." },
+        "text": "Risken för allvarlig blödning under behandling bedöms som låg.",
+        "not": "Poängen säger ingenting om nyttan av behandlingen, som skattas separat med CHA₂DS₂-VA." },
       { "niva": "medel", "rubrik": "3 poäng eller mer – hög blödningsrisk",
-        "text": "Från tre poäng räknas blödningsrisken som hög. Skalan är uttryckligen inte avsedd att användas för att avstå från antikoagulantia — den pekar ut vad som går att åtgärda, som blodtryck, läkemedelskombinationer och alkohol, och vilka patienter som behöver tätare uppföljning." }
+        "text": "Från tre poäng räknas blödningsrisken som hög.",
+        "not": "Skalan är uttryckligen inte avsedd att användas för att avstå från antikoagulantia — den pekar ut vad som går att åtgärda, som blodtryck, läkemedelskombinationer och alkohol, och vilka patienter som behöver tätare uppföljning." }
     ]
   },
 
   "ehra": {
     "namn": "Modifierad EHRA",
     "monster": "gang",
-    "rubrik": "Modifierad EHRA – symtomklass vid förmaksflimmer",
-    "intro": "EHRA-klassen beskriver hur mycket förmaksflimret besvärar patienten, inte hur allvarligt flimret är i sig. Den räknas inte fram utan väljs: leta upp den beskrivning som stämmer bäst, så visas klassen och vad den innebär.",
+    "rubrik": "Välj EHRA-klass",
+    "intro": "Välj den beskrivning som stämmer bäst med patientens vardag.",
     "kalla": "Wynn et al. (2014)",
     "tomrubrik": "Ingen klass vald",
     "tomtext": "Välj den beskrivning som stämmer bäst med patientens vardag.",
@@ -848,11 +859,13 @@
 
     "utfall": {
       "e1":  { "niva": "ingen", "rubrik": "EHRA 1 – inga symtom",
-               "text": "Flimret ger inga symtom och upptäcks ofta av en slump. Klassen säger ingenting om strokerisken, som bedöms separat." },
+               "text": "Flimret ger inga symtom och upptäcks ofta av en slump.",
+        "not": "Klassen säger ingenting om strokerisken, som bedöms separat." },
       "e2a": { "niva": "lag", "rubrik": "EHRA 2a – lätta symtom",
                "text": "Symtomen finns men stör inte vardagen, och patienten är inte besvärad av dem." },
       "e2b": { "niva": "medel", "rubrik": "EHRA 2b – måttliga symtom",
-               "text": "Vardagen fungerar, men patienten besväras av symtomen. Det var den här gruppen 2014 års modifiering bröt ut ur den gamla klass 2, eftersom den i studien liknade klass 3 mer än klass 2a." },
+               "text": "Vardagen fungerar, men patienten besväras av symtomen.",
+        "not": "Det var den här gruppen 2014 års modifiering bröt ut ur den gamla klass 2, eftersom den i studien liknade klass 3 mer än klass 2a." },
       "e3":  { "niva": "medel", "rubrik": "EHRA 3 – svåra symtom",
                "text": "Vardagen påverkas av symtomen." },
       "e4":  { "niva": "hog", "rubrik": "EHRA 4 – invalidiserande symtom",
@@ -863,8 +876,8 @@
   "gcs": {
     "namn": "GCS",
     "monster": "varde",
-    "rubrik": "Glasgow Coma Scale – medvetandegrad",
-    "intro": "Tre delpoäng — ögonöppning, verbalt svar och motoriskt svar — läggs samman till en summa mellan 3 och 15. Välj det bästa svaret patienten visar i respektive del, så visas delpoängen och totalen.",
+    "rubrik": "Räkna GCS",
+    "intro": "Välj det bästa svar patienten visar i varje delskala.",
     "summaetikett": "GCS",
     "enhetssuffix": "poäng",
     "kalla": "Teasdale & Jennett (1974)",
@@ -928,8 +941,8 @@
   "rls85": {
     "namn": "RLS-85",
     "monster": "gang",
-    "rubrik": "RLS-85 – reaktionsgradsskalan",
-    "intro": "En enda nivå väljs, inte flera delpoäng som läggs ihop: leta upp den beskrivning som stämmer bäst med patientens reaktion just nu, från fullt vaken (nivå 1) till ingen reaktion alls på smärta (nivå 8).",
+    "rubrik": "Välj RLS-85-nivå",
+    "intro": "Välj den beskrivning som stämmer bäst med patientens reaktion just nu.",
     "kalla": "Starmark, Stålhammar & Holmgren (1988)",
     "tomrubrik": "Ingen nivå vald",
     "tomtext": "Välj den beskrivning som stämmer bäst med patientens reaktion.",
@@ -975,8 +988,8 @@
   "fyra_at": {
     "namn": "4AT",
     "monster": "varde",
-    "rubrik": "4AT – snabbtest för delirium och kognitiv svikt",
-    "intro": "Fyra deltest läggs samman till en summa mellan 0 och 12. Testet tar under två minuter och kräver ingen särskild utbildning eller utrustning — det är själva poängen med det.",
+    "rubrik": "Räkna 4AT",
+    "intro": "Gör de fyra deltesten och välj resultatet i respektive lista.",
     "summaetikett": "4AT",
     "enhetssuffix": "poäng",
     "kalla": "Bellelli et al. (2014)",
@@ -1036,7 +1049,8 @@
         "atgard": "Delirium eller uttalad kognitiv svikt är osannolikt vid det här resultatet." },
       { "max": 3, "niva": "medel", "rubrik": "1–3 poäng",
         "overvakning": "Kognitiv uppföljning.",
-        "atgard": "Möjlig kognitiv svikt. Bör utredas vidare, till exempel med ett fullständigt kognitivt test — resultatet utesluter inte heller delirium." },
+        "atgard": "Möjlig kognitiv svikt. Bör utredas vidare, till exempel med ett fullständigt kognitivt test —",
+        "not": "resultatet utesluter inte heller delirium." },
       { "niva": "hog", "rubrik": "4 poäng eller mer",
         "overvakning": "Läkarbedömning.",
         "atgard": "Möjligt delirium, med eller utan samtidig kognitiv svikt. Leta efter en utlösande orsak." }
@@ -1046,8 +1060,8 @@
   "befast": {
     "namn": "BE-FAST",
     "monster": "gang",
-    "rubrik": "BE-FAST – snabb igenkänning av stroke",
-    "intro": "Fem fynd, vart och ett besvarat med Ja eller Nej. Ett enda Ja räcker för att flytta hela bedömningen — BE-FAST summerar ingenting, det är en igenkänningslista, inte en poängskala.",
+    "rubrik": "Gå igenom BE-FAST",
+    "intro": "Svara Ja eller Nej på de fem fynden. Ett enda Ja flyttar hela bedömningen.",
     "kalla": "Intermountain Healthcare (2011)",
     "tomrubrik": "Inget svar valt ännu",
     "tomtext": "Besvara de fem fynden med Ja eller Nej.",
@@ -1097,17 +1111,19 @@
 
     "utfall": {
       "ingen": { "niva": "lag", "rubrik": "Inga fynd enligt BE-FAST",
-                 "text": "Inget av de fem fynden är ikryssat just nu. BE-FAST utesluter inte stroke — symtom kan tillkomma, eller redan ha klingat av som vid en TIA — men ingen av de fem varningssignalerna föreligger vid den här bedömningen." },
+                 "text": "Inget av de fem fynden föreligger vid den här bedömningen.",
+        "not": "BE-FAST utesluter inte stroke — symtom kan tillkomma, eller redan ha klingat av som vid en TIA." },
       "misstanke": { "niva": "hog", "rubrik": "Misstanke om stroke – notera tidpunkten och larma",
-                     "text": "Ett eller flera fynd talar för stroke. T i BE-FAST står för Time: notera när patienten senast sågs symtomfri och larma omgående. Möjligheten till proppupplösande behandling eller trombektomi är starkt tidsberoende, så den tidpunkten är avgörande för det fortsatta handläggandet." }
+                     "text": "Ett eller flera fynd talar för stroke. T i BE-FAST står för Time: notera när patienten senast sågs symtomfri och larma omgående.",
+        "not": "Möjligheten till proppupplösande behandling eller trombektomi är starkt tidsberoende, så den tidpunkten är avgörande för det fortsatta handläggandet." }
     }
   },
 
   "hints": {
     "namn": "HINTS",
     "monster": "gang",
-    "rubrik": "HINTS – ögonundersökning vid akut yrsel",
-    "intro": "Tre fynd vid sängkanten skiljer en godartad, perifer orsak till akut och ihållande yrsel från en farligare, central orsak som stroke. Ett enda \"farligt\" fynd räcker för att flytta hela bedömningen mot central orsak — minnesregeln är INFARCT (Impulse Normal, Fast-phase Alternating, Refixation on cover test).",
+    "rubrik": "Gå igenom HINTS",
+    "intro": "Ange fyndet i vart och ett av de tre deltesten. Ett enda farligt fynd flyttar hela bedömningen.",
     "kalla": "Kattah et al. (2009)",
     "tomrubrik": "Inget svar valt ännu",
     "tomtext": "Besvara de tre deltesten.",
@@ -1146,15 +1162,16 @@
       "central": { "niva": "hog", "rubrik": "Ett eller flera fynd talar för central orsak",
                    "text": "Ett normalt impulstest, riktningsväxlande nystagmus eller ett positivt skewtest talar vart och ett för en central orsak, till exempel stroke i lillhjärnan eller hjärnstammen — trots att patienten kan se ut att bara ha yrsel. Utred akut." },
       "perifer": { "niva": "lag", "rubrik": "Samtliga tre fynd talar för perifer orsak",
-                   "text": "Ett avvikande (positivt) impulstest, en enkelriktad nystagmus och ett negativt skewtest bildar tillsammans den kombination som talar för en godartad, perifer orsak, till exempel vestibularisneurit. HINTS är bara validerad vid akut, ihållande yrsel som pågår när undersökningen görs — inte vid episodisk yrsel som redan klingat av — och ersätter aldrig den kliniska helhetsbedömningen." }
+                   "text": "Ett avvikande (positivt) impulstest, en enkelriktad nystagmus och ett negativt skewtest bildar tillsammans den kombination som talar för en godartad, perifer orsak, till exempel vestibularisneurit.",
+        "not": "HINTS är bara validerad vid akut, ihållande yrsel som pågår när undersökningen görs — inte vid episodisk yrsel som redan klingat av — och ersätter aldrig den kliniska helhetsbedömningen." }
     }
   },
 
   "alvarado": {
     "namn": "Alvarados poäng",
     "monster": "kryss",
-    "rubrik": "Alvarados poäng – misstänkt blindtarmsinflammation",
-    "intro": "Åtta fynd, ihågkomna med minnesramsan MANTRELS. Sex av dem ger en poäng var, och de två fynd Alvarado själv bedömde som viktigast — ömhet i höger nedre kvadranten och ett förhöjt antal vita blodkroppar — ger två poäng var, för en maxsumma på tio. Kryssa i det som stämmer, så visas summan och vilken grupp patienten hamnar i.",
+    "rubrik": "Räkna Alvarados poäng",
+    "intro": "Kryssa i det som stämmer. Ömhet och leukocytos väger två poäng var.",
     "summaetikett": "Alvarados poäng",
     "enhetssuffix": "poäng",
     "kalla": "Alvarado (1986)",
@@ -1197,8 +1214,8 @@
   "glasgow_blatchford": {
     "namn": "Glasgow-Blatchford",
     "monster": "varde",
-    "rubrik": "Glasgow-Blatchford – risk vid blödning i övre magtarmkanalen",
-    "intro": "Nio variabler, ingen av dem ett endoskopifynd, läggs samman till en summa mellan 0 och 23. Skalan är byggd för att göras innan patienten ens skopats, för att avgöra vem som säkert kan vänta och vem som behöver skyndsam handläggning. Fyll i värdena och kryssen, så visas poängen per variabel och totalen.",
+    "rubrik": "Räkna Glasgow-Blatchford",
+    "intro": "Fyll i värdena och kryssa i det som stämmer.",
     "summaetikett": "Glasgow-Blatchford",
     "enhetssuffix": "poäng",
     "kalla": "Blatchford, Murray & Blatchford (2000)",
