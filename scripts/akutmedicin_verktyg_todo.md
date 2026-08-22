@@ -137,6 +137,12 @@ Blodgasklassificeraren fick ett eget mönster (`blodgas`) i stället för att tv
 se §7e. **Alla fyra mönstren är byggda sedan 0.9.415.** En ny skala är därmed en JSON-post,
 inte ny kod; det gäller nu på riktigt och inte bara som avsikt.
 
+**Med en gräns som 0.9.426 hittade: påståendet gällde bara de värden mönstret redan sett.**
+Wells PE är den första skalan med halva poäng, och den krävde fyra ändringar i renderaren
+innan JSON-posten kunde fungera — `poangText`, `viktText` och `kryssUtrakning` skrev
+decimalpunkt i stället för svenskt komma, och träningslägets svarskontroll avvisade allt som
+inte var ett heltal, vilket gjorde läget oanvändbart för skalan. Se §7m.
+
 **Mönster A, det som skiljer det från B:** en urkryssad ruta betyder att kriteriet saknas,
 inte att svaret uteblivit, så bedömningen är alltid komplett och resultatet visas från början
 (Wells 0 poäng ÄR ett svar). Vikter kan dessutom vara negativa — Wells drar av 2 poäng — så
@@ -220,7 +226,8 @@ Verktygssektionen stod utanför ordlistelänkningen.
 Byggs mot primärkällan, aldrig mot förlagans markup:
 
 RCP (NEWS2, 2017) · ESC (2024, CHA₂DS₂-VA) · Pisters et al. (2010, HAS-BLED) ·
-Wells et al. (2003) · Kline et al. (2008, PERC) · Jiménez et al. (2010, sPESI) ·
+Wells et al. (2003, DVT) · Wells et al. (2000, 2001, PE) · Kline et al. (2008, PERC) ·
+Jiménez et al. (2010, sPESI) ·
 Katz (1973) · Hillier et al. (1999) · Bazett (1920) · Fridericia (1920) ·
 Teasdale & Jennett (1974, GCS) · Starmark et al. (1988, RLS 85) ·
 Bellelli et al. (2014, 4AT) · Alvarado (1986) · Blatchford et al. (2000) ·
@@ -259,7 +266,8 @@ Nya sidor **stoppar bygget** om de inte registreras — det är §0.4 och det ä
 > ▶️ **Status läses i tabellen nedan, inte i den här rutan** — se §"Verifiera status mot
 > facitfilen" i minnesindexet. **Hela utbyggnaden är klar sedan 0.9.421** — alla sju
 > verktygssidor (0.9.420) plus faktatexten `kunskapsbank/kliniska-poangskalor.html`
-> med korslänkning (0.9.421, släpp 6).
+> med korslänkning (0.9.421, släpp 6). Släpp 7 (0.9.426) är ett efterkommande
+> tillägg av ett enskilt instrument, inte en fortsättning på utbyggnaden.
 
 | Släpp | Innehåll | Status |
 |---|---|---|
@@ -273,6 +281,7 @@ Nya sidor **stoppar bygget** om de inte registreras — det är §0.4 och det ä
 | **5b-i** | `neurologi.html` — GCS, RLS-85, 4AT, BE-FAST, HINTS | ✅ **klart 0.9.419** |
 | **5b-ii** | `buken.html` — Alvarado, Glasgow-Blatchford | ✅ **klart 0.9.420 — alla sju verktygssidor byggda** |
 | **6** | `kunskapsbank/kliniska-poangskalor.html` + korslänkning | ✅ **klart 0.9.421 — hela utbyggnaden avslutad** |
+| **7** | `blodproppar.html` — Wells PE, samt halva poäng i mönster A | ✅ **klart 0.9.426 — efterkommande tillägg** |
 
 ### Släpp 1 — LEVERERAT 0.9.286
 
@@ -693,3 +702,56 @@ dokumenterad ovan (§"Kedjekörning") men gällde bara `git add -A` FÖRE kedjan
 fallet att kedjan behöver köras om en andra gång efter en sen `sidodatum.py`-korrigering.**
 Lärdomen: upptäcks ett datumfel efter en full kedjekörning, kör **hela** KEDJA i ordning igen från
 `generate_glossary.py`, aldrig bara det enskilda steget som råkar äga filen med felet.
+
+
+### Släpp 7 — LEVERERAT 0.9.426 (`wells_pe` på `blodproppar.html`)
+
+Efterkommande släpp till en avdelning som var avslutad sedan 0.9.421. Fyndet gjordes under
+verktygsanalysen 2026-08-22 (`scripts/verktyg_backlog_todo.md` §1) och åtgärdades i samma
+arbetspass som det rapporterades.
+
+- [x] **Hålet var i resonemangskedjan, inte i någon räknare.** Sidan hade Wells DVT, PERC och
+      sPESI. PERC-texten säger att regeln bara gäller vid redan låg klinisk misstanke, och
+      sPESI-texten hänvisade sannolikhetsfrågan till "Wells och PERC ovan" — men sidans enda
+      Wells var DVT-versionen. För lungemboli lärde sidan alltså ut att förtestsannolikheten
+      måste fastställas först, utan att ge instrumentet som gör det.
+- [x] `wells_pe` i `data/akutmedicin.json`, mönster A. Sju kriterier, vikterna 3 / 3 / 1,5 /
+      1,5 / 1,5 / 1 / 1, maxsumma 12,5.
+- [x] **Båda grupperingarna redovisas, eftersom de skär olika.** Tre nivåer (låg under 2,
+      måttlig 2–6, hög över 6) och tvådelningen vid 4 poäng. Den måttliga gruppen ligger på
+      båda sidor om den dikotoma gränsen, så bandet 2–6 är delat i två poster med samma
+      `rubrik` och olika `not` — 4 poäng är måttlig + osannolik, 4,5 är måttlig + sannolik.
+      Att de två indelningarna förväxlas är ett eget inlärningsproblem och nu sidans egen
+      poäng, inte en förenkling bort.
+- [x] Statisk prosa enligt §3b, monteringspunkt `<div data-akut="wells_pe"></div>`. 33
+      tooltips lagda av `wire_terms.py`, alla 16 distinkta kontrollerade rätt riktade.
+- [x] sPESI-hänvisningen rättad till "Wells score för lungemboli och PERC ovan". Wells
+      DVT-avsnittet fick en mening som skiljer de två skalorna med samma namn åt.
+- [x] Källorna uppslagna före de skrevs (§6.2): Wells et al. (2000) *Thromb Haemost* 83(3),
+      416–420 och Wells et al. (2001) *Ann Intern Med* 135(2), 98–107. Fullständiga
+      författarlistor verifierade, in i sidans APA-lista och i `info.html` i samma pass.
+      Källan bekräftade dessutom bandgränserna ordagrant.
+- [x] Registren: `data/llms.json` (`kort` + `lang` sade "tre skalor"), `scripts/amne.py`
+      (`teaches`). Hela KEDJA körd, `check_generators.py` rundtripp identisk.
+- [x] `check_akutmedicin.py`: 22 skalor kända, 61 kriterier och 21 band speglade, 0
+      avvikelser. `test_verktyg_akutmedicin.js` 560 → 599 tester gröna.
+
+#### 7m. "En ny skala är bara en JSON-post" gällde bara de värden mönstret redan sett
+
+Mönster A hade byggts, prövats och beskrivits som färdigt med åtta skalor — men alla åtta
+hade **heltalsvikter**. Wells PE är den första med halva poäng, och tre av renderarens
+utskriftsfunktioner skrev då `1.5` med decimalpunkt i stället för `1,5`. Den fjärde var
+värre: träningslägets svarskontroll avvisade allt som inte var ett heltal med *"Skriv in din
+summa som ett heltal"*, vilket gör läget omöjligt att klara för en skala vars summa kan bli
+4,5. Ingen av dem hade kunnat upptäckas av de befintliga testerna, eftersom inget facit
+innehöll ett decimaltal.
+
+**Lärdomen är inte "kolla decimaler".** Den är att ett arkitekturpåstående av formen *"en ny
+X är bara data"* är belagt för de värdeområden som redan finns i facit, och för inga andra.
+Nästa skala som bryter mot ett outtalat antagande — negativa band, ett kriterium utan vikt,
+en summa som inte är ett tal — kommer att kräva kod på samma sätt. Påståendet i §3a är
+därför omskrivet med den gränsen utsatt.
+
+**En iPhone-detalj som följde med:** `inputMode = 'numeric'` ger ett knappsatstangentbord
+utan decimaltecken på iOS. Ett fält som ska ta emot `4,5` måste ha `'decimal'`, annars går
+svaret inte att skriva på den plattform användaren faktiskt sitter på.

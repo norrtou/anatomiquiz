@@ -367,6 +367,50 @@
     ]
   },
 
+  "wells_pe": {
+    "namn": "Wells PE",
+    "monster": "kryss",
+    "rubrik": "Räkna Wells score för lungemboli",
+    "intro": "Kryssa i det som stämmer. Två kriterier väger tre poäng, tre väger en och en halv.",
+    "summaetikett": "Wells score",
+    "enhetssuffix": "poäng",
+    "kalla": "Wells et al. (2000, 2001)",
+
+    "kriterier": [
+      { "namn": "dvttecken", "kort": "Tecken på djup ventrombos", "poang": 3,
+        "etikett": "Kliniska tecken på djup ventrombos — bensvullnad och ömhet vid palpation av de djupa venerna",
+        "hjalp": "Kriteriet väger tyngst i skalan, tillsammans med bedömarens helhetsintryck, och skälet är att de flesta lungembolier kommer från en trombos i benen. Ett ben som redan talar för trombos gör alltså embolin i lungan sannolikare än något enskilt lungsymtom gör." },
+      { "namn": "alternativ", "kort": "Ingen mer sannolik förklaring", "poang": 3,
+        "etikett": "Lungemboli är minst lika sannolik som någon annan diagnos",
+        "hjalp": "Skalans enda öppna bedömning, och den svåraste att fylla i. Frågan är inte om lungemboli är möjlig, utan om något annat — lunginflammation, hjärtsvikt, en revbensfraktur — förklarar bilden bättre. Finns ingen sådan förklaring väger kriteriet lika tungt som ett ben med tromboskänn." },
+      { "namn": "puls", "kort": "Puls över 100", "poang": 1.5,
+        "etikett": "Puls över 100 slag per minut" },
+      { "namn": "immobilisering", "kort": "Immobilisering eller kirurgi", "poang": 1.5,
+        "etikett": "Sängliggande minst tre dygn, eller kirurgi inom fyra veckor" },
+      { "namn": "tidigare", "kort": "Tidigare propp", "poang": 1.5,
+        "etikett": "Tidigare djup ventrombos eller lungemboli" },
+      { "namn": "blodhosta", "kort": "Blodhosta", "poang": 1,
+        "etikett": "Blodhosta" },
+      { "namn": "cancer", "kort": "Aktiv cancer", "poang": 1,
+        "etikett": "Aktiv cancer — pågående behandling, behandling avslutad inom sex månader, eller palliativ vård" }
+    ],
+
+    "band": [
+      { "max": 1.99, "niva": "lag", "rubrik": "Låg sannolikhet",
+        "text": "Under två poäng. Det är den här gruppen PERC är byggd för — regeln får användas först när sannolikheten redan bedömts som låg, och det är här den bedömningen görs.",
+        "not": "I den dikotoma indelningen: lungemboli osannolik (4 poäng eller lägre)." },
+      { "max": 4, "niva": "medel", "rubrik": "Måttlig sannolikhet",
+        "text": "Mellangruppen är den största i studien och den skalan egentligen finns för. Här räcker varken misstanken för att gå vidare direkt eller frånvaron av fynd för att släppa frågan, och det är D-dimern som avgör vad som händer sedan.",
+        "not": "I den dikotoma indelningen: lungemboli osannolik (4 poäng eller lägre). Den måttliga gruppen spänner över den dikotoma gränsen — från 4,5 poäng hamnar samma grupp på andra sidan." },
+      { "max": 6, "niva": "medel", "rubrik": "Måttlig sannolikhet",
+        "text": "Mellangruppen är den största i studien och den skalan egentligen finns för. Här räcker varken misstanken för att gå vidare direkt eller frånvaron av fynd för att släppa frågan, och det är D-dimern som avgör vad som händer sedan.",
+        "not": "I den dikotoma indelningen: lungemboli sannolik (mer än 4 poäng). Samma trenivågrupp som mellan 2 och 4 poäng, men på andra sidan den dikotoma gränsen." },
+      { "niva": "hog", "rubrik": "Hög sannolikhet",
+        "text": "Mer än sex poäng. I studien var förekomsten av lungemboli så hög i den här gruppen att ett normalt D-dimersvar inte räckte för att avfärda diagnosen.",
+        "not": "I den dikotoma indelningen: lungemboli sannolik (mer än 4 poäng)." }
+    ]
+  },
+
   "perc": {
     "namn": "PERC",
     "monster": "kryss",

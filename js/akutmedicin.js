@@ -61,7 +61,7 @@
   /** "poäng" böjs inte i singular på svenska, men "1 poäng" ska ändå
       läsas som en poäng — ordet är detsamma, bara räkneordet byts. */
   function poangText(n) {
-    return n + ' poäng';
+    return visaTal(n) + ' poäng';
   }
 
   /* ---------------------------------------------------------
@@ -1513,7 +1513,17 @@
 
   /** Vikten som den skrivs vid kriteriet: "+1 p", "−2 p". */
   function viktText(n) {
-    return (n < 0 ? '−' : '+') + Math.abs(n) + ' p';
+    return (n < 0 ? '−' : '+') + visaTal(Math.abs(n)) + ' p';
+  }
+
+  /** Sant om skalan har vikter som inte är hela poäng. Wells PE är den enda
+      hittills: två kriterier väger 3, tre väger 1,5. Det ändrar två saker i
+      träningsläget — kravet på heltalssvar går inte att ställa, och
+      tangentbordet måste kunna skriva ett decimaltecken. */
+  function harHalvaPoang(skala) {
+    return skala.kriterier.some(function (k) {
+      return k.poang !== Math.round(k.poang);
+    });
   }
 
   /** Uträkningen med tecken: "1 + 1 − 2 = 0". */
@@ -1521,10 +1531,10 @@
     if (!delar.length) return 'Inget kriterium ikryssat = 0';
     var s = '';
     delar.forEach(function (d, i) {
-      if (i === 0) s += (d.poang < 0 ? '−' : '') + Math.abs(d.poang);
-      else s += (d.poang < 0 ? ' − ' : ' + ') + Math.abs(d.poang);
+      if (i === 0) s += (d.poang < 0 ? '−' : '') + visaTal(Math.abs(d.poang));
+      else s += (d.poang < 0 ? ' − ' : ' + ') + visaTal(Math.abs(d.poang));
     });
-    return s + ' = ' + summa;
+    return s + ' = ' + visaTal(summa);
   }
 
   function bedomKryss(skala, ikryssade) {
@@ -1576,6 +1586,7 @@
   }
 
   function skapaKryssruteskala(skala, id) {
+    var halvaPoang = harHalvaPoang(skala);
     var kort = document.createElement('section');
     kort.className = 'vt-tool';
     kort.id = id;
@@ -1663,7 +1674,7 @@
     svarWrap.className = 'vt-inputrow';
     var svarInput = document.createElement('input');
     svarInput.type = 'text';
-    svarInput.inputMode = 'numeric';
+    svarInput.inputMode = halvaPoang ? 'decimal' : 'numeric';
     svarInput.autocomplete = 'off';
     svarInput.id = id + '-ditt-svar';
     svarInput.setAttribute('aria-label', 'Din ' + skala.namn + '-poäng');
@@ -1772,9 +1783,15 @@
 
     svarKnapp.addEventListener('click', function () {
       var mitt = tolkaTal(svarInput.value);
-      if (isNaN(mitt) || mitt !== Math.round(mitt)) {
+      /* Steget skalan kan landa på: hela poäng, eller halva när någon vikt
+         är det. Halvor är exakta i binär flyttal, så jämförelsen nedan
+         behöver ingen tolerans. */
+      var steg = halvaPoang ? 0.5 : 1;
+      if (isNaN(mitt) || Math.abs(mitt / steg - Math.round(mitt / steg)) > 1e-9) {
         dom.className = 'vt-dom fel';
-        dom.textContent = 'Skriv in din summa som ett heltal.';
+        dom.textContent = halvaPoang
+          ? 'Skriv in din summa i hela eller halva poäng, till exempel 4,5.'
+          : 'Skriv in din summa som ett heltal.';
         return;
       }
       var facit = senaste.summa;

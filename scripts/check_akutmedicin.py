@@ -74,6 +74,7 @@ SPEGLAD_AV = {
     "osmolalitet": "syra-bas.html",
     "blodgas": "syra-bas.html",
     "wells_dvt": "blodproppar.html",
+    "wells_pe": "blodproppar.html",
     "perc": "blodproppar.html",
     "spesi": "blodproppar.html",
     "qtc": "hjartat.html",
@@ -99,6 +100,7 @@ SPEGLAD_AV = {
 # två gamla inte tyst förskjuter varje jämförelse.
 KRYSSTABELLER = {
     "wells_dvt": ("blodproppar.html", "Wells score – kriterier och poäng"),
+    "wells_pe": ("blodproppar.html", "Wells PE – de sju kriterierna"),
     "perc": ("blodproppar.html", "PERC – de åtta kriterierna"),
     "spesi": ("blodproppar.html", "sPESI – de sex kriterierna"),
     "chadsva": ("hjartat.html", "CHA₂DS₂-VA – kriterier och poäng"),
@@ -343,10 +345,12 @@ def blanksteg(text: str) -> str:
     return re.sub(r"\s+", " ", text)
 
 
-def vikt(n: int) -> str:
-    """Vikten som den skrivs på sidan: '+1', '−2'. Minustecknet är U+2212, samma
-    som js/akutmedicin.js skriver ut – ett bindestreck här hade gett falskt larm."""
-    return ("−" if n < 0 else "+") + str(abs(n))
+def vikt(n) -> str:
+    """Vikten som den skrivs på sidan: '+1', '−2', '+1,5'. Minustecknet är U+2212,
+    samma som js/akutmedicin.js skriver ut – ett bindestreck här hade gett falskt
+    larm. Halva vikter (Wells PE) skrivs med komma via sv(), av samma skäl: det är
+    så visaTal() i modulen skriver dem, och en punkt här hade larmat falskt."""
+    return ("−" if n < 0 else "+") + sv(abs(n))
 
 
 # Taggar som sitter INUTI en mening och inte avgränsar något. De tas bort utan

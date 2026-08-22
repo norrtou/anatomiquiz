@@ -105,7 +105,7 @@ class SelectEl extends El {
 /* Monteringspunkterna på sidorna: en <div data-akut="…"> per skala.
    Flera skalor monteras samtidigt, precis som på syra-bas.html. */
 const SKALNAMN = ['news2', 'natrium_korrigerat', 'osmolalitet', 'blodgas',
-                  'wells_dvt', 'perc', 'spesi', 'chadsva', 'has_bled',
+                  'wells_dvt', 'wells_pe', 'perc', 'spesi', 'chadsva', 'has_bled',
                   'qtc', 'ehra', 'qsofa', 'sofa', 'dscrb65',
                   'gcs', 'rls85', 'fyra_at', 'befast', 'hints',
                   'alvarado', 'glasgow_blatchford'];
@@ -712,8 +712,8 @@ async function kör() {
   function viktFor(r, namn) {
     r.nollknapp.fire('click');
     kryssa(r, namn);
-    const m = /^(-?\d+) poäng$/.exec(r.varde.textContent);
-    return m ? Number(m[1]) : r.varde.textContent;
+    const m = /^(-?\d+(?:,\d+)?) poäng$/.exec(r.varde.textContent);
+    return m ? Number(m[1].replace(',', '.')) : r.varde.textContent;
   }
 
   /* ---- Wells DVT ---- */
@@ -811,6 +811,94 @@ async function kör() {
     r.nollknapp.fire('click');
     pastå('rutorna töms', r.rutor.omhet.ruta.checked, false);
     pastå('summan nollas', r.varde.textContent, '0 poäng');
+  }
+
+  /* ---- Wells PE ---- */
+  rubrik('Wells PE — vikterna ur originalpublikationen (Wells et al. 2000)');
+  {
+    const r = plockaKryss('wells_pe');
+
+    pastå('tecken på djup ventrombos väger tre', viktFor(r, 'dvttecken'), 3);
+    pastå('ingen mer sannolik förklaring väger tre', viktFor(r, 'alternativ'), 3);
+    pastå('puls över 100', viktFor(r, 'puls'), 1.5);
+    pastå('immobilisering eller kirurgi', viktFor(r, 'immobilisering'), 1.5);
+    pastå('tidigare propp', viktFor(r, 'tidigare'), 1.5);
+    pastå('blodhosta', viktFor(r, 'blodhosta'), 1);
+    pastå('aktiv cancer', viktFor(r, 'cancer'), 1);
+
+    rubrik('  Halva poäng skrivs med svenskt decimalkomma, aldrig punkt');
+    r.nollknapp.fire('click');
+    kryssa(r, 'puls');
+    pastå('summan', r.varde.textContent, '1,5 poäng');
+    pastå('uträkningen', r.calc.textContent, '1,5 = 1,5');
+    pastå('vikten vid kriteriet', r.rutor.puls.poang.textContent, '+1,5 p');
+    kryssa(r, 'immobilisering');
+    pastå('två halvor blir ett helt tal', r.varde.textContent, '3 poäng');
+    pastå('uträkningen med två halvor', r.calc.textContent, '1,5 + 1,5 = 3');
+
+    rubrik('  Maxsumman är 12,5 poäng');
+    r.nollknapp.fire('click');
+    ['dvttecken', 'alternativ', 'puls', 'immobilisering', 'tidigare',
+     'blodhosta', 'cancer'].forEach((n) => kryssa(r, n));
+    pastå('alla sju kriterier', r.varde.textContent, '12,5 poäng');
+    pastå('högsta bandet', bandTitelAv(r), 'Hög sannolikhet');
+
+    rubrik('  Trenivågrupperingen: under 2, 2–6, över 6');
+    r.nollknapp.fire('click');
+    pastå('noll poäng visas direkt', r.varde.textContent, '0 poäng');
+    pastå('noll ger låg', bandTitelAv(r), 'Låg sannolikhet');
+    pastå('nivån', r.band.className, 'vt-band is-lag');
+    kryssa(r, 'puls');
+    pastå('1,5 är fortfarande under 2', bandTitelAv(r), 'Låg sannolikhet');
+    kryssa(r, 'blodhosta');
+    pastå('2,5 poäng', r.varde.textContent, '2,5 poäng');
+    pastå('2,5 ger måttlig', bandTitelAv(r), 'Måttlig sannolikhet');
+    pastå('nivån', r.band.className, 'vt-band is-medel');
+    r.nollknapp.fire('click');
+    ['dvttecken', 'puls', 'blodhosta', 'cancer'].forEach((n) => kryssa(r, n));
+    pastå('6,5 poäng', r.varde.textContent, '6,5 poäng');
+    pastå('över 6 ger hög', bandTitelAv(r), 'Hög sannolikhet');
+    pastå('nivån', r.band.className, 'vt-band is-hog');
+
+    rubrik('  Den dikotoma gränsen skär mitt igenom den måttliga gruppen');
+    const notAv = (x) => x.band.children[2].textContent;
+    r.nollknapp.fire('click');
+    ['puls', 'immobilisering', 'cancer'].forEach((n) => kryssa(r, n));
+    pastå('4 poäng', r.varde.textContent, '4 poäng');
+    pastå('4 poäng är måttlig', bandTitelAv(r), 'Måttlig sannolikhet');
+    paståMed('men dikotomt osannolik', notAv(r), 'lungemboli osannolik');
+    r.nollknapp.fire('click');
+    ['puls', 'immobilisering', 'tidigare'].forEach((n) => kryssa(r, n));
+    pastå('4,5 poäng', r.varde.textContent, '4,5 poäng');
+    pastå('4,5 poäng är fortfarande måttlig', bandTitelAv(r), 'Måttlig sannolikhet');
+    paståMed('men dikotomt sannolik', notAv(r), 'lungemboli sannolik');
+    r.nollknapp.fire('click');
+    ['dvttecken', 'puls', 'immobilisering'].forEach((n) => kryssa(r, n));
+    pastå('6 poäng', r.varde.textContent, '6 poäng');
+    pastå('6 poäng är översta måttliga', bandTitelAv(r), 'Måttlig sannolikhet');
+
+    rubrik('  Träningsläget måste släppa igenom halva poäng');
+    pastå('tangentbordet kan skriva decimaltecken', r.svarInput.inputMode, 'decimal');
+    r.nollknapp.fire('click');
+    ['puls', 'immobilisering', 'tidigare'].forEach((n) => kryssa(r, n));
+    r.lagesknappar.find((b) => b.textContent === 'Träna').fire('click');
+    ['puls', 'immobilisering', 'tidigare'].forEach((n) => kryssa(r, n));
+    r.svarInput.value = '4,5';
+    r.svarKnapp.fire('click');
+    pastå('4,5 med komma godtas', r.dom.className, 'vt-dom ratt');
+    r.svarInput.value = '4.5';
+    r.svarKnapp.fire('click');
+    pastå('4.5 med punkt godtas också', r.dom.className, 'vt-dom ratt');
+    r.svarInput.value = '4';
+    r.svarKnapp.fire('click');
+    pastå('fel svar', r.dom.className, 'vt-dom fel');
+    paståMed('rätt summa skrivs med komma', r.dom.textContent, 'Rätt summa är 4,5 poäng');
+    r.svarInput.value = '4,3';
+    r.svarKnapp.fire('click');
+    paståMed('en tredjedels poäng avvisas', r.dom.textContent, 'hela eller halva poäng');
+    r.svarInput.value = 'x';
+    r.svarKnapp.fire('click');
+    paståMed('icke-tal avvisas', r.dom.textContent, 'hela eller halva poäng');
   }
 
   /* ---- CHA₂DS₂-VA ---- */

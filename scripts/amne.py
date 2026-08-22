@@ -209,8 +209,9 @@ _s("verktyg/akutmedicin/syra-bas.html",
 _s("verktyg/akutmedicin/blodproppar.html",
    [("Thing", "Djup ventrombos"), ("Thing", "Lungemboli"),
     ("Thing", "Wells score"), ("Thing", "D-dimer")],
-   ["Vilka kriterier som ingår i Wells score för djup ventrombos och vad "
-    "avdraget på två poäng gör.",
+   ["Att Wells score finns i två upplagor med samma namn: en för djup "
+    "ventrombos med ett avdrag på två poäng, och en för lungemboli med sju "
+    "kriterier och två grupperingar som skär olika.",
     "Varför PERC är byggd för att avfärda en diagnos i stället för att "
     "styrka den.",
     "Hur en skala med hög sensitivitet skiljer sig från en med hög "
