@@ -1,0 +1,32 @@
+{
+  "_läs_detta": "Triagerade falska träffar från scripts/ordlista_luckor.py. Ett ord hamnar här när det INTE hör hemma i ordlistan — inte när det är jobbigt att skriva. Motivering är obligatorisk: nästa person ska kunna se att beslutet togs, inte gissa. Ta bort en rad igen om bedömningen ändras.",
+
+  "eftersom": "vanligt svenskt ord, inte medicinsk term (matchar suffixet -om)",
+  "såsom": "vanligt svenskt ord (matchar -om)",
+  "alltsom": "vanligt svenskt ord (matchar -om)",
+  "ovanom": "vanligt svenskt ord (matchar -om)",
+  "inbördes": "vanligt svenskt ord (matchar -es)",
+  "testas": "böjd verbform i löptext (matchar -as)",
+  "belastas": "böjd verbform i löptext (matchar -as)",
+  "anpassas": "böjd verbform i löptext (matchar -as)",
+  "behållit": "böjd verbform i löptext (matchar -it)",
+  "lagra": "vanligt svenskt verb (matchar -ra)",
+  "grundform": "allmänspråkligt ord, förklaras i löptext där det används",
+  "beredningsform": "allmänspråkligt ord i farmacikontext, inte eget uppslagsord",
+  "kombineringsform": "metaterm i ordlistans egna prefixposter, inte medicinsk term",
+
+  "diagnosis": "engelsk form; svenska uppslagsordet är diagnos",
+  "analysis": "engelsk form; svenska uppslagsordet är analys",
+  "disease": "engelskt ord ur Eng.-fältet, inte svenskt uppslagsord",
+  "nodes": "engelskt ord ur Eng.-fältet, inte svenskt uppslagsord",
+  "capitis": "latinsk genitiv av caput; oregelbunden böjning som filtret inte fångar",
+  "cordis": "latinsk genitiv av cor",
+  "hyoeides": "grekisk form i etymologi; svenska uppslagsordet är os hyoideum",
+  "kyboeides": "grekisk form i etymologi; svenska uppslagsordet är os cuboideum",
+
+  "psula": "avhugget ord ur en radbruten HTML-källa, inget ord",
+  "terminologia": "ingår i egennamnet Terminologia Anatomica, som redan har post",
+  "snittanatomi": "ämnesnyckel i quizbankerna, inte en term",
+  "karlanatomi": "ämnesnyckel i quizbankerna, inte en term",
+  "klinkemi": "ämnesnyckel i quizbankerna, inte en term"
+}

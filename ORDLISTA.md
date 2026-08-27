@@ -168,6 +168,44 @@ versal (`Adj./subst.:`, `Egennamn:`, `Förled:`) — de renderades utan kursiv o
 eftersom `format_def()` bara kursiverar en gement skriven tagg. **Skriv aldrig en ny
 post utan tagg först**, och skriv den gement: mätsnutten ovan ska förbli 0 saknade.
 
+### Breddtäckning — vilka ord som SAKNAS (mätt 2026-08-27)
+
+Fälttäckningen ovan mäter **djup**: hur färdiga de poster som finns är. Den kan inte
+se ett saknat uppslagsord, och det kan inte arbetsflödet "en bokstav i taget" heller —
+**en bokstavsvandring läser de rader som är skrivna, och ett hål har ingen rad att
+läsa.** Filen har därför `enterokolit`, `ulcerös kolit` och `mikroskopisk kolit` men
+inte `kolit`; `antimetabolit` men inte `metabolit`; `karcinomatos` men inte `karcinom`;
+åtta `-skopi`-poster men varken `koloskopi`, `otoskopi` eller `mikroskopi`.
+
+Bredden mäts med ett eget verktyg, som härleder kandidater ur belägg som redan finns
+i trädet — **ingen källa gissar fram ord, och kombinatorik är medvetet bortvald**
+(stam × ändelse ger `dysalgi` och `dyscyt`, alltså påhittade ord; §0.3 förbjuder det):
+
+```bash
+python3 scripts/ordlista_luckor.py                  # sammanfattning per källa
+python3 scripts/ordlista_luckor.py --lista korsref  # kandidaterna i en källa
+python3 scripts/ordlista_luckor.py --check          # spärr: exit 1 om en källa vuxit
+```
+
+| Källa | Kandidater | Belägget |
+|---|---:|---|
+| `korsref` | 176 | `Jfr …`/`Se …`/`Motsats …` pekar på något utan post |
+| `exempel` | 415 | `Ex:` i en prefix-/suffixpost nämner ordet |
+| `synonym` | 2 296 | ordet står som `Sv. <ord>` men är inte lemma |
+| `brodtext` | 548 | ordlistans egen definitionstext använder ordet |
+| `korpus` | 786 | sajtens quiz/kunskapsbank använder ordet |
+| `huvudord` | 17 | sammansättningen finns, huvudordet saknas |
+
+3 770 unika ord, varav 1 576 utanför `synonym` (som är en policyfråga: ska `hjärta`,
+`muskel` och `blod` vara egna uppslagsord eller bara synonymer inne i `cor`,
+`musculus` och `sanguis`?). **Metoden, triagen, vägvalet och etapperna står i
+[`scripts/ordlista_tackning_todo.md`](scripts/ordlista_tackning_todo.md)** — läs den
+innan en post skrivs ur listorna.
+
+Två saker gäller ovillkorligt: kandidatlistan är **underlag, aldrig poster** — texten
+skrivs för hand i husformat — och ett ord som visar sig inte vara en etablerad term
+läggs inte in, utan motiveras bort i `data/ordlista_luckor_ignorerade.json`.
+
 ### Berikningslogg per bokstav (fas 2, avslutad)
 
 - **A: klart** (475 poster berikade).
@@ -2145,4 +2183,8 @@ ordningen kan inte rubbas. (0.9.286 lade in 17 poster så: 68 rader, noll omflyt
 | `js/glossary.js` | Dynamisk rendering + sökning (hoppar över stubs). |
 | `scripts/test_ordlista_sok.js` | Testskal för sökningen — körs av `check_generators.py`. |
 | `medicinskordlista.html` | Genererad sida (redigera inte de genererade blocken för hand). |
+| `scripts/ordlista_luckor.py` | Mäter breddtäckning: vilka uppslagsord som saknas. |
+| `scripts/ordlista_tackning_todo.md` | Metod, triage och etapper för breddtäckningen. |
+| `data/ordlista_luckor_ignorerade.json` | Triagerade falska träffar, med motivering. |
+| `data/ordlista_luckor_facit.json` | Facit för `ordlista_luckor.py --check`. Skrivs av verktyget. |
 | `CLAUDE_REGLER.md` | Projektregler (dubblettförbud, källtrohet, versionering). |
