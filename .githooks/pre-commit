@@ -3,7 +3,62 @@
 # quiz-datafil bryter mot en maskinellt kontrollerbar regel.
 # Kollar bara stageade data/*.json – gammal skuld i orörda filer blockerar inte.
 # Kringgå medvetet vid behov med:  git commit --no-verify
+#
+# INSTALLATION: hooken ligger i .githooks/ och är inaktiv i en färsk klon tills
+# `git config core.hooksPath .githooks` körts. Det görs numera av SessionStart-
+# hooken i .claude/settings.json, så att spärren lever i webb-sessioner också.
+# Kontrollera med:  git config core.hooksPath   (ska säga .githooks)
 set -euo pipefail
+
+stoppa() {
+  echo ""
+  echo "⛔ Commit stoppad: $1"
+  shift
+  for rad in "$@"; do echo "   $rad"; done
+  echo "   Medvetet undantag: git commit --no-verify"
+  exit 1
+}
+
+stageade=$(git diff --cached --name-only --diff-filter=ACM)
+
+# --- Version + CHANGELOG för VARJE commit (SEO_REGLER §11 A, §12) -----------
+# Kedjan i §11 A är avbockad först när versionen är satt med bump_version.py
+# OCH CHANGELOG.md bär en post för just den versionen. §12 kör den avbockningen
+# före commit — alltså gäller den varje commit, inte bara sidändringar.
+#
+# Den här grinden fanns tidigare bara som en versionssynk-kontroll, och den
+# utlöstes av att VERSION/index.html/js/css var stageat. En commit som rör
+# enbart scripts/ eller data/ passerade därför utan vare sig bump eller
+# CHANGELOG-post. Det hände i 624dc74a (mätverktyget för breddtäckning), och
+# felet var osynligt eftersom hooken dessutom var oinstallerad i klonen.
+if git rev-parse -q --verify MERGE_HEAD >/dev/null; then
+  :   # merge-commit: kedjan hör till de commits som mergas, inte till mergen
+else
+  grep -qx 'VERSION' <<<"$stageade" || stoppa \
+    "VERSION är inte bumpad (SEO_REGLER §11 A)." \
+    "Bumpa aldrig för hand:" \
+    "  python3 scripts/bump_version.py <version>"
+
+  ver=$(git show :VERSION | tr -d '[:space:]')
+
+  grep -qx 'CHANGELOG.md' <<<"$stageade" || stoppa \
+    "CHANGELOG.md saknar post för $ver (SEO_REGLER §11 A)." \
+    "Skriv posten överst i filen, för hand, och stagea den."
+
+  # Två fällor, bägge påträffade när grinden provkördes mot sig själv:
+  #
+  # 1. Ankaret måste stå sist i uttrycket. `$` inuti en grupp, `(…|$)`, tolkas
+  #    inte som radslut av grep -E utan får hela alternativet att falla.
+  # 2. Läs filen till en variabel, pipa den inte till `grep -q`. Grep avslutar
+  #    vid första träffen, `git show` dör då av SIGPIPE (141), och med
+  #    `set -o pipefail` blir pipelinens status 141 — alltså "misslyckad"
+  #    just när rubriken FANNS. Felet slår bara till i lyckat fall och är
+  #    därför osynligt i alla negativa test.
+  changelog=$(git show :CHANGELOG.md)
+  grep -qE "^## +${ver//./\\.}([[:space:]].*)?$" <<<"$changelog" || stoppa \
+    "CHANGELOG.md har ingen rubrik '## $ver' (SEO_REGLER §11 A)." \
+    "VERSION säger $ver — posten överst måste bära samma nummer."
+fi
 
 # --- Versionssynk (SEO_REGLER §11 A och §11 C) ------------------------------
 # Versionen står på tre ställen som måste vara identiska: VERSION,
@@ -14,22 +69,17 @@ set -euo pipefail
 # Kontrollen omfattar även ?v= för ÄNDRADE js/css-filer, och utlöses därför av
 # att någon av dem är stagead: en ny js-modul eller en CSS-ändring utan bumpad
 # buster serveras från cache hos återvändande besökare.
-if git diff --cached --name-only --diff-filter=ACM \
-     | grep -qE '^(VERSION|index\.html|js/.*\.js|css/.*\.css)$'; then
+if grep -qE '^(VERSION|index\.html|js/.*\.js|css/.*\.css)$' <<<"$stageade"; then
   if ! python3 scripts/bump_version.py --check; then
-    echo ""
-    echo "⛔ Commit stoppad: versionerna är inte i synk."
-    echo "   Kör: python3 scripts/bump_version.py <version>"
-    exit 1
+    stoppa "versionerna är inte i synk." \
+      "Kör: python3 scripts/bump_version.py <version>"
   fi
 fi
 
-staged=$(git diff --cached --name-only --diff-filter=ACM | grep -E '^data/.*\.json$' || true)
+staged=$(grep -E '^data/.*\.json$' <<<"$stageade" || true)
 [ -z "$staged" ] && exit 0
 
 echo "🔍 Quiz-regelkontroll av stageade datafiler…"
 if ! python3 scripts/validate_quiz.py $staged; then
-  echo ""
-  echo "⛔ Commit stoppad: åtgärda FELen ovan, eller kör 'git commit --no-verify' om du medvetet vill hoppa över."
-  exit 1
+  stoppa "åtgärda FELen ovan."
 fi

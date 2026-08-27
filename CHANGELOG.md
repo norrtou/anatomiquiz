@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.431
+- **`.githooks/pre-commit` kräver nu versionsbump och CHANGELOG-post för VARJE commit.** Grinden fanns tidigare bara som en versionssynk-kontroll, och den utlöstes av att `VERSION`, `index.html` eller en js/css-fil var stagead. En commit som rörde enbart `scripts/` eller `data/` passerade därför utan vare sig bump eller CHANGELOG-post — vilket är precis vad som hände i **`624dc74a`** (mätverktyget för breddtäckning). Hooken läser nu den **stageade** `VERSION` och kräver en `## <version>`-rubrik i den **stageade** `CHANGELOG.md`; merge-commits undantas, eftersom kedjan hör till de commits som mergas. `git commit --no-verify` är kvar som medvetet undantag.
+- **Hooken var inte installerad.** `core.hooksPath` var tom och `.git/hooks/pre-commit` saknades, så `.githooks/pre-commit` hade aldrig kört — inte för en enda commit. Webbsessioner klonar färskt varje gång, så spärren var död precis i den miljö arbetet utförs i. Installationssteget står nu i hookens egen huvudkommentar: `git config core.hooksPath .githooks`, kontrolleras med `git config core.hooksPath`.
+- **Kvar att göra, kräver ditt handgrepp:** ett `SessionStart`-block i `.claude/settings.json` som kör installationskommandot vid varje sessionsstart. Kommandot är pipe-testat (`exit=0`), men själva inskrivningen av en automatiskt körd hook i agentkonfigurationen nekades av behörighetskontrollen — den ändringen ska komma från användaren, inte från mig.
+- **Grinden provkörd mot sig själv, med planterade fel** (§ship-the-guardrail): full stage → exit 0; `VERSION` ostageat → blockerad; `CHANGELOG.md` ostageat → blockerad. Provkörningen fällde **två egna buggar** som inget negativt test hade visat:
+  - `$` inuti en grupp — `(…|$)` — tolkas inte som radslut av `grep -E`, utan får hela alternativet att falla. Ankaret måste stå sist i uttrycket.
+  - `git show … | grep -q` under `set -o pipefail`: grep avslutar vid första träffen, `git show` dör av SIGPIPE (141), och pipelinens status blir 141. Felet slår till **bara när rubriken hittades** — det vill säga bara i lyckat fall — och är därför osynligt i varje negativt test. Filen läses nu till en variabel först.
+- Ingen ordlistepost och ingen sidändring i det här släppet.
+
 ## 0.9.430
 - **Två strukturella filter i `brodtext`-källan — 360 → 332 kandidater, inför etapp 4.** Källan läser ordlistans egna definitioner och letar ord som förklarar en annan post utan att själva gå att slå upp. Två klasser av utslag var inte luckor utan notation:
   - **Etymon skrivna utan språkkod.** Filen bär sedan länge formen `articulus = led.`, `rhomboeides = rombformig`, `sigmoeides = S-formad` — samma blinda fläck som etymologimätningen i `ORDLISTA.md` redan har dokumenterat för `Efter [Namn]` och `Bildat av …`. Ordet före likhetstecknet är källordet, inte ett saknat svenskt uppslagsord. 13 utslag.
