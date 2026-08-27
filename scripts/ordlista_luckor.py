@@ -255,9 +255,38 @@ FRAMMANDE = re.compile(
     r"(?:Eng\.|Lat\.|Gr\.|Av (?:lat|gr|grek|eng|fr|ty|ital|arab|sanskr)[^.]*)\.?[^.]*\.")
 
 
+# Etymon skrivna UTAN språkkod: `articulus = led.`, `rhomboeides = rombformig`.
+# Notationen är levande i filen (samma blinda fläck som etymologimätningen i
+# ORDLISTA.md har) och ordet före likhetstecknet är källordet, inte ett saknat
+# svenskt uppslagsord.
+ETYMON = re.compile(r"([a-zåäöéèü-]{4,})\s*=\s")
+
+
+def _svensk_sammansattning(o, lem):
+    """`diabetesform`, `cancerform`, `beroendesyndrom` — vanliga svenska
+    sammansättningar vars förled redan är uppslagsord. Ändelserna är samtidigt
+    äkta medicinska suffix (`vermiform`, `filiform`), så de kan inte tas bort
+    ur suffixlistan; skillnaden är just att förledet här står i filen."""
+    for slut in ("form", "syndrom", "analys"):
+        if o.endswith(slut) and len(o) > len(slut) + 3:
+            forled = o[:-len(slut)].rstrip("s")
+            if forled in lem or forled + "s" in lem:
+                return True
+    return False
+
+
 def kalla_brodtext(poster, lem, suffix):
-    kropp = (FRAMMANDE.sub(" ", e.get("def", "")) for e in poster)
-    return _medicinska(frekvens(kropp), lem, suffix)
+    etymon = set()
+    kroppar = []
+    for e in poster:
+        kropp = FRAMMANDE.sub(" ", e.get("def", ""))
+        kroppar.append(kropp)
+        etymon.update(m.group(1).lower() for m in ETYMON.finditer(kropp))
+    tr = _medicinska(frekvens(kroppar), lem, suffix)
+    for o in list(tr):
+        if o in etymon or _svensk_sammansattning(o, lem):
+            del tr[o]
+    return tr
 
 
 def kalla_korpus(frek_korpus, lem, suffix):
