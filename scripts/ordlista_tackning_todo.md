@@ -160,7 +160,7 @@ ambition, med spärr är den ett tillstånd som inte kan försämras obemärkt.
 | `synonym` | 2 296 | svenskt synonymord utan eget uppslagsord |
 | `brodtext` | 548 | ordet förklarar en annan post men saknar egen |
 | `korpus` | 786 | ordet används på sajten men saknas i ordlistan |
-| `huvudord` | 17 | sammansättningar finns, huvudordet saknas |
+| `huvudord` | 17 → **0** | sammansättningar finns, huvudordet saknas (etapp 2, 0.9.428) |
 
 **3 770 unika ord** totalt; **1 576** om `synonym` räknas bort (efter etapp 1: 3 612 respektive 1 404) (den är en policyfråga,
 se §4). Källorna överlappar med flit — ett ord som faller ut ur flera är starkare
@@ -257,8 +257,15 @@ Bocka av här när något görs, och skriv in vad som faktiskt hände.
       sina utskrivna namn och å/ä/ö efter z i ordningen ä, å, ö (98,95 % av
       granneparen, mot 98,28 % för diakritisk fold). Sidoeffekt utan eget arbete:
       `exempel` 415 → 405, `brodtext` 548 → 536, `korpus` 786 → 775.
-- [ ] **Etapp 2 · `huvudord` (17).** Litet, men lagar det pinsammaste hålet —
-      `kolit`, `myopati`, `myalgi`, `myosit`, `sjukdom`, `medicin`.
+- [x] **Etapp 2 · `huvudord` (17) — KLAR (0.9.428). Nollad.** 14 nya poster
+      (11 098 → 11 112), 3 motiverat ignorerade. `sjukdom` stod bakom 30
+      sammansättningar och `medicin` bakom 21 utan att själva vara uppslagsord.
+      **Placeringslogiken byggdes om i samma pass:** ren `bisect` landade
+      `myopati` efter `Ménières sjukdom`, och "första platsen som inte bryter
+      ordningen" tog emot allt i suffixblocket först i filen (som tappar sitt
+      bindestreck i nyckeln och sorterar som a-ord). Nu poängsätts varje giltig
+      plats efter delat prefix med **båda** grannarna. `kolit` ligger kvar i
+      `korpus` — den kommer i etapp 5.
 - [ ] **Etapp 3 · `exempel` (415).** Prefix-/suffixposterna blir samtidigt
       genomgångna, vilket ORDLISTA.md:s byggstensavsnitt tjänar på.
 - [ ] **Etapp 4 · `brodtext` (548)** och **etapp 5 · `korpus` (786)**, i den ordningen:

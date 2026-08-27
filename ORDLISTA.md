@@ -168,7 +168,7 @@ versal (`Adj./subst.:`, `Egennamn:`, `Förled:`) — de renderades utan kursiv o
 eftersom `format_def()` bara kursiverar en gement skriven tagg. **Skriv aldrig en ny
 post utan tagg först**, och skriv den gement: mätsnutten ovan ska förbli 0 saknade.
 
-### Breddtäckning — vilka ord som SAKNAS (mätt 2026-08-27, efter etapp 1)
+### Breddtäckning — vilka ord som SAKNAS (mätt 2026-08-27, efter etapp 1–2)
 
 Fälttäckningen ovan mäter **djup**: hur färdiga de poster som finns är. Den kan inte
 se ett saknat uppslagsord, och det kan inte arbetsflödet "en bokstav i taget" heller —
@@ -192,13 +192,13 @@ python3 scripts/ordlista_luckor.py --check          # spärr: exit 1 om en käll
 | Källa | Kandidater | Belägget |
 |---|---:|---|
 | `korsref` | **0** | `Jfr …`/`Se …`/`Motsats …` pekar på något utan post — nollad i 0.9.427 |
-| `exempel` | 405 | `Ex:` i en prefix-/suffixpost nämner ordet |
-| `synonym` | 2 297 | ordet står som `Sv. <ord>` men är inte lemma |
-| `brodtext` | 536 | ordlistans egen definitionstext använder ordet |
-| `korpus` | 775 | sajtens quiz/kunskapsbank använder ordet |
-| `huvudord` | 17 | sammansättningen finns, huvudordet saknas |
+| `exempel` | 400 | `Ex:` i en prefix-/suffixpost nämner ordet |
+| `synonym` | 2 298 | ordet står som `Sv. <ord>` men är inte lemma |
+| `brodtext` | 531 | ordlistans egen definitionstext använder ordet |
+| `korpus` | 771 | sajtens quiz/kunskapsbank använder ordet |
+| `huvudord` | **0** | sammansättningen finns, huvudordet saknas — nollad i 0.9.428 |
 
-3 612 unika ord, varav 1 404 utanför `synonym` (som är en policyfråga: ska `hjärta`,
+3 598 unika ord, varav 1 387 utanför `synonym` (som är en policyfråga: ska `hjärta`,
 `muskel` och `blod` vara egna uppslagsord eller bara synonymer inne i `cor`,
 `musculus` och `sanguis`?). **Metoden, triagen, vägvalet och etapperna står i
 [`scripts/ordlista_tackning_todo.md`](scripts/ordlista_tackning_todo.md)** — läs den
