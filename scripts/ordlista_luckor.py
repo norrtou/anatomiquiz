@@ -129,11 +129,24 @@ def kalla_korsref(poster, lem):
 
 
 def kalla_exempel(poster, lem):
+    """Exempelord i prefix-/suffixposternas `Ex:`-klausul.
+
+    Separatorn mellan två exempel är semikolon, aldrig komma: av 805
+    `Ex:`-klausuler bär 124 semikolon och 11 komma — och alla elva har kommat
+    INNE i förklaringen (`Ex: baryfoni = djup, grov röst`). Delas det på komma
+    blir förklaringens andra hälft ett eget uppslagsord, och källan svarar
+    `grov röst`, `hård avföring`, `luftlös lunga`.
+    """
     tr = collections.Counter()
     for e in poster:
         for m in re.finditer(r"Ex:\s*([^.]+)", e.get("def", "")):
-            for bit in re.split(r"[;,]", m.group(1)):
+            for bit in m.group(1).split(";"):
                 o = re.sub(r"\s+", " ", bit.split("=")[0].strip().lower())
+                # Uppslagsordet slutar vid en inskjuten parentes:
+                # `elektrokardiogram (ekg)`, `insulin (av Langerhans cellöar)`.
+                o = re.sub(r"\s*\(.*$", "", o).strip()
+                if o.startswith("se "):        # ren hänvisning, inget exempel
+                    continue
                 if len(o) > 3 and o not in lem:
                     tr[o] += 1
     return tr

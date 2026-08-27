@@ -156,7 +156,7 @@ ambition, med spärr är den ett tillstånd som inte kan försämras obemärkt.
 | Källa | Kandidater | Vad utslaget betyder |
 |---|---:|---|
 | `korsref` | 176 → **0** | posten lovar ett uppslagsord som inte finns (etapp 1, 0.9.427) |
-| `exempel` | 415 | byggstenens exempelord saknar egen post |
+| `exempel` | 415 → **0** | byggstenens exempelord saknar egen post (etapp 3, 0.9.429) |
 | `synonym` | 2 296 | svenskt synonymord utan eget uppslagsord |
 | `brodtext` | 548 | ordet förklarar en annan post men saknar egen |
 | `korpus` | 786 | ordet används på sajten men saknas i ordlistan |
@@ -266,8 +266,16 @@ Bocka av här när något görs, och skriv in vad som faktiskt hände.
       bindestreck i nyckeln och sorterar som a-ord). Nu poängsätts varje giltig
       plats efter delat prefix med **båda** grannarna. `kolit` ligger kvar i
       `korpus` — den kommer i etapp 5.
-- [ ] **Etapp 3 · `exempel` (415).** Prefix-/suffixposterna blir samtidigt
-      genomgångna, vilket ORDLISTA.md:s byggstensavsnitt tjänar på.
+- [x] **Etapp 3 · `exempel` (400) — KLAR (0.9.429). Nollad.** 379 nya poster
+      (11 112 → 11 491), 6 motiverat ignorerade. **Två fel i källan rättades
+      först:** separatorn mellan exempel är semikolon, aldrig komma (11 av 805
+      klausuler har komma, alla inne i förklaringen — `Ex: baryfoni = djup, grov
+      röst` gav `grov röst` som eget uppslagsord), och uppslagsordet slutar vid
+      en inskjuten parentes. 136 hängande referenser i utkasten ströks före
+      insättning. **Placeringsgränsen härleds nu ur filen** — den hårdkodade
+      9346 var mätt före etapp 1 och låg 173 rader fel, vilket kastade sju v-,
+      x- och z-ord ned i suffixblocket. Sidoeffekt: `brodtext` 531 → 360,
+      `korpus` 775 → 721.
 - [ ] **Etapp 4 · `brodtext` (548)** och **etapp 5 · `korpus` (786)**, i den ordningen:
       brödtexten är ordlistans eget löfte, korpusen sajtens.
 - [ ] **Etapp 6 · Spärren in i arbetsflödet.** Lägg `ordlista_luckor.py --check` i

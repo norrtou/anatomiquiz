@@ -168,16 +168,16 @@ versal (`Adj./subst.:`, `Egennamn:`, `Förled:`) — de renderades utan kursiv o
 eftersom `format_def()` bara kursiverar en gement skriven tagg. **Skriv aldrig en ny
 post utan tagg först**, och skriv den gement: mätsnutten ovan ska förbli 0 saknade.
 
-### Breddtäckning — vilka ord som SAKNAS (mätt 2026-08-27, efter etapp 1–2)
+### Breddtäckning — vilka ord som SAKNAS (mätt 2026-08-27, efter etapp 1–3)
 
 Fälttäckningen ovan mäter **djup**: hur färdiga de poster som finns är. Den kan inte
 se ett saknat uppslagsord, och det kan inte arbetsflödet "en bokstav i taget" heller —
 **en bokstavsvandring läser de rader som är skrivna, och ett hål har ingen rad att
 läsa.** Filen har därför `enterokolit`, `ulcerös kolit` och `mikroskopisk kolit` men
 inte `kolit`; `antimetabolit` men inte `metabolit`; `karcinomatos` men inte `karcinom`;
-åtta `-skopi`-poster men varken `koloskopi` eller `otoskopi`. De exemplen står kvar
-för att visa hålets form — de ligger i källorna `huvudord` och `korpus`, som ännu inte
-arbetats av.
+åtta `-skopi`-poster men varken `koloskopi` eller `otoskopi`. `kolit` och `sjukdom` är
+skrivna sedan etapp 2–3; `metabolit`, `karcinom` och `koloskopi` ligger kvar i `korpus`
+och står här för att visa hålets form.
 
 Bredden mäts med ett eget verktyg, som härleder kandidater ur belägg som redan finns
 i trädet — **ingen källa gissar fram ord, och kombinatorik är medvetet bortvald**
@@ -192,13 +192,13 @@ python3 scripts/ordlista_luckor.py --check          # spärr: exit 1 om en käll
 | Källa | Kandidater | Belägget |
 |---|---:|---|
 | `korsref` | **0** | `Jfr …`/`Se …`/`Motsats …` pekar på något utan post — nollad i 0.9.427 |
-| `exempel` | 400 | `Ex:` i en prefix-/suffixpost nämner ordet |
-| `synonym` | 2 298 | ordet står som `Sv. <ord>` men är inte lemma |
-| `brodtext` | 531 | ordlistans egen definitionstext använder ordet |
-| `korpus` | 771 | sajtens quiz/kunskapsbank använder ordet |
+| `exempel` | **0** | `Ex:` i en prefix-/suffixpost nämner ordet — nollad i 0.9.429 |
+| `synonym` | 2 306 | ordet står som `Sv. <ord>` men är inte lemma |
+| `brodtext` | 360 | ordlistans egen definitionstext använder ordet |
+| `korpus` | 721 | sajtens quiz/kunskapsbank använder ordet |
 | `huvudord` | **0** | sammansättningen finns, huvudordet saknas — nollad i 0.9.428 |
 
-3 598 unika ord, varav 1 387 utanför `synonym` (som är en policyfråga: ska `hjärta`,
+3 234 unika ord, varav 989 utanför `synonym` (som är en policyfråga: ska `hjärta`,
 `muskel` och `blod` vara egna uppslagsord eller bara synonymer inne i `cor`,
 `musculus` och `sanguis`?). **Metoden, triagen, vägvalet och etapperna står i
 [`scripts/ordlista_tackning_todo.md`](scripts/ordlista_tackning_todo.md)** — läs den
