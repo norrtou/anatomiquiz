@@ -151,18 +151,18 @@ ambition, med spärr är den ett tillstånd som inte kan försämras obemärkt.
 
 ## 3. Utgångsläget (mätt 2026-08-27 — gissa inte om)
 
-`data/ordlista.json`: **10 940 poster.**
+`data/ordlista.json`: **10 940 poster** (11 098 efter etapp 1).
 
 | Källa | Kandidater | Vad utslaget betyder |
 |---|---:|---|
-| `korsref` | 176 | posten lovar ett uppslagsord som inte finns |
+| `korsref` | 176 → **0** | posten lovar ett uppslagsord som inte finns (etapp 1, 0.9.427) |
 | `exempel` | 415 | byggstenens exempelord saknar egen post |
 | `synonym` | 2 296 | svenskt synonymord utan eget uppslagsord |
 | `brodtext` | 548 | ordet förklarar en annan post men saknar egen |
 | `korpus` | 786 | ordet används på sajten men saknas i ordlistan |
 | `huvudord` | 17 | sammansättningar finns, huvudordet saknas |
 
-**3 770 unika ord** totalt; **1 576** om `synonym` räknas bort (den är en policyfråga,
+**3 770 unika ord** totalt; **1 576** om `synonym` räknas bort (efter etapp 1: 3 612 respektive 1 404) (den är en policyfråga,
 se §4). Källorna överlappar med flit — ett ord som faller ut ur flera är starkare
 belagt, och `--json` ger hela materialet för den som vill korsa listorna.
 
@@ -246,8 +246,17 @@ Bocka av här när något görs, och skriv in vad som faktiskt hände.
 
 - [ ] **Etapp 0 · Beslut om `synonym`** (§4). Blockerar 2 296 av 3 770 kandidater;
       allt annat arbete blir billigare när vägvalet är gjort. En sittning, inte ett pass.
-- [ ] **Etapp 1 · `korsref` (176).** Hårdast belagda källan och minst av dem: filen
-      lovar orden redan. Bör kunna nollas.
+- [x] **Etapp 1 · `korsref` (176) — KLAR (0.9.427). Nollad.** 158 nya poster
+      (10 940 → 11 098), 19 utslag motiverat ignorerade, 2 fel i befintliga poster
+      rättade (`tarsorafi` hänvisade till `-rafi` med ett r; `maternell` pekade på
+      `paternell` som bara fanns som `paternal`). Två saker att ta med sig:
+      **(a)** de nyskrivna definitionerna kördes genom källan *före* insättning och
+      innehöll då 33 egna hängande referenser — en etapp som stänger 176 luckor och
+      öppnar 33 nya är ingen etapp, så det steget hör till arbetsordningen nedan.
+      **(b)** insättningsnyckeln mättes fram: filen sorterar grekiska bokstäver som
+      sina utskrivna namn och å/ä/ö efter z i ordningen ä, å, ö (98,95 % av
+      granneparen, mot 98,28 % för diakritisk fold). Sidoeffekt utan eget arbete:
+      `exempel` 415 → 405, `brodtext` 548 → 536, `korpus` 786 → 775.
 - [ ] **Etapp 2 · `huvudord` (17).** Litet, men lagar det pinsammaste hålet —
       `kolit`, `myopati`, `myalgi`, `myosit`, `sjukdom`, `medicin`.
 - [ ] **Etapp 3 · `exempel` (415).** Prefix-/suffixposterna blir samtidigt
@@ -266,11 +275,17 @@ Bocka av här när något görs, och skriv in vad som faktiskt hände.
 1. `python3 scripts/ordlista_luckor.py --lista <källa> --topp 0`
 2. Gå igenom uppifrån (frekvensordnat = mest efterfrågat först). Varje ord:
    skriv post, eller motivera in det i ignorerlistan.
-3. Nya poster infogas mellan sina två grannar — **sortera aldrig om filen**
-   (`ORDLISTA.md`, avsnittet Sortering).
-4. `python3 scripts/generate_glossary.py` — sluggkollisionskontroll.
-5. `python3 scripts/check_generators.py` — rundtripp identisk.
-6. `python3 scripts/ordlista_luckor.py --skriv-facit`, versionsbump, commit.
+3. **Kör utkasten genom korsreferenskontrollen innan de sätts in.** Varje `Jfr`,
+   `Se` och `Motsats` i en ny definition ska peka på ett lemma som finns — annars
+   betalar etappen tillbaka en del av det den tjänade. I etapp 1 var det 33 av 158.
+4. Nya poster infogas mellan sina två grannar — **sortera aldrig om filen**
+   (`ORDLISTA.md`, avsnittet Sortering). Nyckeln: grekiska bokstäver som utskrivna
+   namn, å/ä/ö efter z i ordningen ä, å, ö. Granska grannparen i utskrift före
+   skrivning, och skriv med `indent=2` + avslutande radbrytning så att diffen blir
+   fyra rader per post.
+5. `python3 scripts/generate_glossary.py` — sluggkollisionskontroll.
+6. `python3 scripts/check_generators.py` — rundtripp identisk.
+7. `python3 scripts/ordlista_luckor.py --skriv-facit`, versionsbump, commit.
 
 ---
 
