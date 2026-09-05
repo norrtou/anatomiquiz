@@ -151,19 +151,24 @@ därför inte** förrän motsägelsen är utredd; den ligger i §3.
 | `#144337` | Karin 88 år promenerar sin vanliga runda under pandemin. Tenta E bockar aktivitetsteorin, men "den vanliga rundan" är kontinuitetsteorins kärna. Enda förekomsten ligger i en underkänd tenta. |
 | HT20 fråga 10 | Formella operationernas stadium. **Samma trasiga fråga som `#47646`** — alternativ 1 och 3 ordagrant identiska, i en andra tenta. Hittad vid genomskrivningen, inte vid den första inventeringen. |
 | HT21 fråga 8 | "Vilket påstående stämmer bäst när det gäller personlighet?" Två av fyra alternativ är försvarbara: att personligheten är en kombination av genetik och livserfarenheter som ändras livet ut, och att en frontallobsskada ger förlust av förmågan att självreglera beteende. Det senare ligger i linje med `#184834`, men frågan bär ingen bock i någon tenta och har inget facit. |
+| Rut, andningsbesvären (f.d. `psyatp_91`) | **Struken 2026-09-05 vid den manuella genomläsningen** (§6.2), efter ditt besked. Två försvarbara svar: bocken säger *Disengagemangsteorin*, men *selektiv optimering med kompensation* står bland alternativen och passar minst lika bra — att ta bussen när bilkörningen inte går längre **är** kompensation, och färre besök är selektering. Disengagemangsteorin förutsätter ett ömsesidigt undandragande; vignetten beskriver ett fysiskt hinder, varken att Rut drar sig undan eller att omgivningen gör det. Enda förekomsten ligger i omtentan 2025-04-02 (50 %, underkänd) — samma profil som `#144337`. |
+| Homunculus, "halva barken" (f.d. `psyatp_117`) | **Struken 2026-09-05 vid den manuella genomläsningen** (§6.2), efter ditt besked. Enda förekomsten ligger i tentan 2025-03-07 (44,4 %, underkänd), ingen annan fråga i ämnet täcker homunculus, och distraktorn *Fingrarna, handen och handleden* är en stark konkurrent: den vanliga läroboksformuleringen är att handen **och** talorganen tillsammans upptar ungefär halva motorbarken. Går inte att avgöra utan kursboken. |
 
 **Vad som skulle krävas för att bygga dem ändå.** Posterna ovan är inte omöjliga för alltid —
 de saknar bara ett facit som går att lita på. Fyra av dem (`#375360`, `#320458`, `#371714`,
 `#144337`) löses av ett besked från kursansvarig eller av kursboken; `#254055` löses av samma
 besked som klargör lärarens rättelse av `#47846`; HT21 fråga 8 av vilket alternativ kursens
 personlighetskapitel faktiskt pekar ut. `#47646` och HT20 fråga 10 går inte att rädda ur den
-här PDF:en alls — där behövs tentans original, eftersom felet ligger i källan.
+här PDF:en alls — där behövs tentans original, eftersom felet ligger i källan. De två sist
+tillkomna (Rut och homunculus) löses båda av kursboken eller ett besked från kursansvarig.
 
-**Åtta frågor stryks, nio förekomster.** `#375360` förekommer två gånger (C18, D22), övriga
+**Tio frågor stryks, elva förekomster.** `#375360` förekommer två gånger (C18, D22), övriga
 en gång vardera. Räkningen justerad efter genomskrivningen: mejlets fem frågebilder är två nya
 sakfrågor plus tre rättelser av frågor som redan räknats i tenta A, så underlaget är **215
 förekomster**, inte 218. Med 13 unika fritextförekomster ger det **202 quizbara förekomster**,
-och efter strykningarna **193 frågor som byggs**.
+och efter strykningarna **191 frågor som byggs** (193 vid bygget, minus de två som den manuella
+genomläsningen fällde). Id-luckorna efter `psyatp_91` och `psyatp_117` lämnas kvar — id behöver
+bara vara unika, och omnumrering ger onödigt stor diff.
 
 ---
 
@@ -195,7 +200,8 @@ och efter strykningarna **193 frågor som byggs**.
 - [x] Fritextfrågorna utbrutna och facit avskrivet (§1)
 - [x] Lärarens rättelser identifierade (§2)
 - [x] Obelagda frågor utredda och avfärdade (§3)
-- [x] `data/psykologi_atp.json` byggd — **193 frågor (124 MC + 69 TF)**, 93 unika sakfrågor
+- [x] `data/psykologi_atp.json` byggd — **191 frågor (122 MC + 69 TF)**, 91 unika sakfrågor
+      (193/124 vid bygget; två strukna vid den manuella genomläsningen, se §3 och §6.2)
 - [x] Registrering i `index.html` (`data-nonmedical="1"`, P mellan OTIPM och Tentaplugg),
       `js/app.js` (`getQuestionsPath`) och `info.html` (källan, mellan Logemann och Lundy-Ekman)
 - [x] `validate_quiz.py`: **0 fel, 0 varningar** för ämnet
@@ -233,14 +239,26 @@ varje nyckel krävdes ge träff (§0.4, §2.13).
 | `psyatp_122` | **Prompten sa "taktil agnosi" men bara ett alternativ rörde känseln** — de andra var afasi, visuell agnosi och medfödd hörselnedsättning. Frågan testade därmed att *taktil* betyder känsel, inte vad *agnosi* är | alla tre distraktorer omskrivna till fel inom samma domän (nedsatt känsel, apraxi, ofrivilliga rörelser) |
 
 **Mätt om efter patcharna:** `validate_quiz.py` 0 fel och 0 varningar, TF-balans oförändrad
-55 % Sant, längdbias 36 % → **35 %** av 121 mätbara MC.
+55 % Sant, längdbias 36 % → **35 %** av 121 mätbara MC. Efter strykningarna i §6.2:
+**191 frågor**, TF-balans fortsatt 55 % Sant, längdbias 35 % av 119 mätbara MC, 0/0 i
+validatorn och 0 dubbletter på prompt + correct.
 
-### 6.2 Öppna beslutspunkter — kräver besked, byggs inte om på egen hand
+### 6.2 Fynd som rörde facit självt — **avgjorda 2026-09-05**
 
-Tre fynd rör **facit självt** och faller därmed under §0b/§3, alltså den ordning där du avgör.
-De är inte förbisedda utan utredda och lämnade öppna med avsikt.
+Tre fynd rör **facit självt** och föll därmed under §0b/§3, alltså den ordning där du avgör.
+De lades fram som en plan och **du gav besked samma dag: kör**. Utfallet:
 
-1. **`psyatp_91` (Rut, andningsbesvär) har två försvarbara svar.** Facit är
+- **`psyatp_91` och `psyatp_117` strukna** enligt §0b punkt 5 — de står nu i §3:s tabell med
+  var sin motivering, och id-luckorna är kvar.
+- **`psyatp_165` har fått en egen definition av problemlösning:** "Det är när någon ringar in
+  vad hindret består i, väger strategier mot varandra och genomför en av dem" (101 tecken, mot
+  distraktorernas 99 och 97). Kollisionen med `psyatp_47`s definition av kreativitet är därmed
+  borta: kreativitet är att använda befintlig kunskap på ett nytt sätt, problemlösning är
+  processen att ringa in hindret, väga strategier och genomföra en.
+
+Underlaget för besluten, som det såg ut när de lades fram:
+
+1. **`psyatp_91` (Rut, andningsbesvär) hade två försvarbara svar.** Facit är
    *Disengagemangsteorin*, men *Selektiv optimering med kompensation* står bland distraktorerna
    och passar minst lika bra: att ta bussen när bilkörningen inte går längre **är**
    kompensation, och färre besök är selektering. Disengagemangsteorin förutsätter ett
@@ -248,19 +266,19 @@ De är inte förbisedda utan utredda och lämnade öppna med avsikt.
    gör det, utan ett fysiskt hinder. Frågan bärs **bara av omtentan 2025-04-02 (50 %, underkänd)**
    och saknar motsvarighet i någon godkänd tenta. Det är exakt profilen för `#144337` (Karin,
    promenaden), som redan är struken i §3.
-2. **`psyatp_117` ("ungefär halva barken") är obelagd.** Enda förekomsten ligger i tentan
+2. **`psyatp_117` ("ungefär halva barken") var obelagd.** Enda förekomsten ligger i tentan
    2025-03-07 (44,4 %, underkänd), ingen annan fråga i ämnet täcker homunculus, och
    distraktorn *Fingrarna, handen och handleden* är en stark konkurrent — den vanliga
    läroboksformuleringen är att handen **och** talorganen tillsammans tar ungefär halva
    motorbarken. Går inte att avgöra utan kursboken.
-3. **`psyatp_47` och `psyatp_165` ger samma definition åt två olika begrepp.** Kreativitet är
+3. **`psyatp_47` och `psyatp_165` gav samma definition åt två olika begrepp.** Kreativitet är
    "använder **befintlig** kunskap på ett **nytt sätt** för att lösa **ett problem**";
    problemlösning är "får en ny uppgift och använder **gammal** kunskap på ett **nytt sätt**
    för att lösa **den**". Möter en student båda i samma omgång går de inte att skilja åt.
    `psyatp_47` kommer från den godkända tentan 2024-10-11 (96,3 %), medan `psyatp_165` kommer
    från diagnostiska provet HT21 — **som saknar bockar helt**, så dess facit är en slutledning,
-   inte en nyckel. Om det ska rättas är det `psyatp_165` som ska få en egen definition
-   (identifiera problemet, väga strategier mot varandra, välja en och genomföra den).
+   inte en nyckel. `psyatp_165` fick därför den egna definitionen (se ovan); `psyatp_47`,
+   som vilar på den godkända tentans bock, lämnades orörd.
 
 ### 6.3 Noterat men lämnat orört
 
