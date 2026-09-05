@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.436
+- **Fyra källor till psykologiämnet inskrivna i `info.html`s källista** (§3.2d), på plats i bokstavsordningen. Ur kurslitteraturen är det de fyra som faktiskt täcker ämnets innehåll: **Hwang m.fl.** för utvecklingspsykologi, inlärning, minne, personlighet, motivation och emotion; **Tornstam** för åldrandets teorier, inte minst gerotranscendensen han själv formulerade; **Nyman & Bartfai** för uppmärksamhet, minne, språk och exekutiva funktioner, alltså afasi, agnosi, apraxi och neglekt; **Eklund m.fl.** för grupperna, den terapeutiska relationen, motivationen och kreativiteten.
+- **Två titlar i listan täcker inget som ämnet frågar om och står därför utanför:** en om samtalskonst och en om kris- och katastrofpsykologi. Ämnets stressfrågor rör kamp–flykt-responsen och KBT, inte kristeori.
+- **Utgåva och årtal är uppslagna, inte gissade** (§"Verifiera ärvda referenser"): Hwang m.fl. 2012, Eklund m.fl. andra upplagan 2020, Nyman & Bartfai tredje upplagan 2023, Tornstam nionde upplagan 2018. Medförfattarens initial rättad till Smedler, A.-C.
+
 ## 0.9.435
 - **Nyhetsnotis om det nya ämnet inlagd i `info.html`** under fliken Nyheter, daterad 5 september 2026 och med de områden ämnet täcker. Notisen pekar på inställningen som gör ämnet synligt, eftersom det annars är dolt som standard.
 - **`source`-fältet i `data/psykologi_atp.json` lagt i husstil.** Fältet bär nu ämnets namn — `Psykologi för arbetsterapeuter` — på samtliga 191 frågor, precis som `Osteologi` i `ben.json` och `Olika åldrar` i `olika_aldrar.json`. Fältet läses aldrig ut i gränssnittet; `js/app.js` använder det uteslutande för att känna igen strängen `placeholder`.
