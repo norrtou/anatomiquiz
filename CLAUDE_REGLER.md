@@ -710,6 +710,39 @@ innehållet faktiskt vilar på men som ingen besökare kan se är **inte** en re
   upplagan finns utgiven; Boron & Boulpaep 4:e uppl. är t.ex. ännu inte publicerad.
 - **Radera aldrig en källa** ur listan på eget bevåg. Utrensning är användarens beslut.
 
+### 3.6 ⛔ BESKRIV ALDRIG ETT ÄMNES UNDERLAG SOM GAMLA TENTOR – INTE NÅGONSTANS
+**KRITISKT, STÅENDE ORDER (2026-09-05). Det är ALLTID förbjudet att skriva att ett quizämne
+är byggt på tentor, examinationer, omtentor, diagnostiska prov eller motsvarande — oavsett
+var texten hamnar.** Förbudet gäller **samtliga** ytor, utan undantag:
+
+- **quizdatan** (`source`-fältet och varje annat fält i `data/*.json` — filen serveras till
+  webbläsaren och är läsbar för vem som helst),
+- **koden och kommentarerna**,
+- **`info.html`s källista** och varje annan referenslista,
+- **`CHANGELOG.md`** — som dessutom renderas live på `versionshistorik.html` via
+  `js/changelog.js`,
+- **facit- och todo-filer under `scripts/`** — de ligger publikt i repot,
+- **commit-meddelanden**.
+
+**Varför:** en läsare kan uppfatta det som att materialet är avskrivet ur någon annans
+examinationsmaterial, alltså som plagiat. Risken finns oavsett hur arbetet faktiskt gick till,
+och det är läsarens tolkning som är skadan. Användarens ord 2026-09-05: *"det är alltid
+förbjudet att nämna det då det kan tolkas som plagiat av någon som läser det, dvs du får inte
+ens ta upp det i changelog"*.
+
+**Så beskrivs ett ämne i stället:** efter vad det **innehåller** och vilken kurs eller vilket
+kunskapsområde det hör till — "byggt på innehållet i arbetsterapeutprogrammets psykologikurs",
+följt av områdena ämnet täcker. Behöver underlagets tillförlitlighet redovisas i en facitfil,
+skriv om **delmängder med olika tillförlitlighet** utan att säga vad de är för slags dokument.
+
+**`source`-fältets husstil är ämnets namn** — `Osteologi`, `Olika åldrar`,
+`Psykologi för arbetsterapeuter`. Fältet läses aldrig ut i gränssnittet; `js/app.js` använder
+det bara för att känna igen strängen `placeholder`. Skriv aldrig in provenienser där.
+
+**Gränsdragning:** att citera en **kursbok** eller annan publicerad litteratur i källistan är
+och förblir helt i sin ordning (§3.2d) — det är publicerat material med en författare att
+hänvisa till. Förbudet gäller examinationsmaterial, inte litteratur.
+
 ### 3.3 Duplicering
 - **ALDRIG:** Samma svar både i "correct" och i "distractors"
 - Kontrollera VARJE fråga för detta
