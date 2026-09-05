@@ -202,12 +202,76 @@ och efter strykningarna **193 frågor som byggs**.
 - [x] Mätt själv (validatorn kollar det inte): TF-balans **55 % Sant** (mål 40–60), absoluta ord
       i 2 TF-påståenden med fördelningen 1 Sant / 1 Falskt — ingen genväg, 0 dubbletter på
       prompt + correct, längdbias under larmgränsen
-- [ ] Manuell isolerad genomläsning fråga för fråga (§2.14) — återstår
+- [x] Manuell isolerad genomläsning fråga för fråga (§2.14) — **gjord 2026-09-05, alla 193
+      frågor lästa mot sitt eget innehåll**, se §6
 
-### 5a. Kvar att göra
+---
 
-Den manuella genomläsningen är inte gjord. `validate_quiz.py` gav 0/0 och det är inget bevis
-([[feedback_validator_zero_not_proof]]) — särskilt inte för ett ämne där facit har fastställts
-ur bockar som ibland är studentsvar. Läsningen ska göras fråga för fråga mot frågans **eget**
-innehåll, inte som en jakt på det mönster som redan hittats
-([[feedback_full_isolated_reread_after_bug_found]]).
+## 6. Manuell isolerad genomläsning (§2.14) — gjord 2026-09-05
+
+Alla 193 frågor lästa en och en: prompt + `correct` + samtliga distraktorer, med gissa-testet
+(§2.12) tillämpat på nytt för varje fråga, oberoende av vad tidigare pass sagt. Validatorns
+0/0 användes som första filter, inte som bevis ([[feedback_validator_zero_not_proof]]).
+
+### 6.1 Rättat i samma pass (19 patchar, `validate_quiz.py` fortsatt 0/0)
+
+Alla patchar slogs upp på **innehåll** (id + den exakta strängen), aldrig på listposition, och
+varje nyckel krävdes ge träff (§0.4, §2.13).
+
+| Fråga | Fynd | Åtgärd |
+|---|---|---|
+| `psyatp_6`, `psyatp_152` | **Vygotskijs förnamn var Lev, inte Leo.** I `psyatp_152` stod dessutom det felstavade namnet bland tre korrekt skrivna (Erik Erikson, Jean Piaget, John Bowlby) | `Leo` → `Lev` på båda ställena |
+| `psyatp_36` | **"depraverade förhållanden"** — falsk vän för engelskans *deprived*; svenskans *depraverad* betyder moraliskt fördärvad | → "under svår deprivation" |
+| `psyatp_148` | **"En klient som uteblir från resultat i behandlingen"** är inte svenska; *utebli från* betyder inte infinna sig | → "När resultatet av behandlingen uteblir bör klienten …" |
+| `psyatp_4`, `psyatp_42`, `psyatp_123` | Stadiet stavades **"Senso-motoriska"** på tre ställen och **"Sensomotoriska"** på två — samma term, två stavningar i samma ämne | enhetligt "Sensomotoriska stadiet" |
+| `psyatp_123` | **Eko (§2.9):** prompten sa "resonera logiskt om **konkreta** ting", svaret var "**Konkreta** operationernas stadium" — går att matcha på ordlikhet utan Piaget-kunskap | prompten skriven om till "sådant det ser och tar på … men ännu inte om rena antaganden" |
+| `psyatp_124` | **Prompten frågade efter en förälder** ("Vilken **förälders** betydelse …") men två av fyra alternativ var *Mor- och farföräldrarnas* och *Syskonens* — inga föräldrar. Två alternativ gick att stryka på frågans grammatik (§2.12b p7) | → "Vems betydelse för barnet stod i centrum …" |
+| `psyatp_191` | Kongruens: "**Ett barn** … medan **hon** lekte med den" | → "medan **det** lekte med den" |
+| `psyatp_11` | **Distraktorerna var delmängder av rätt svar.** "fokusera på en sak i taget" (38 tecken) och "ignorera eller blockera inkommande stimuli" (55) mot facits "fokusera på en sak **och samtidigt** kunna ignorera andra stimuli" (74) — det mest kompletta alternativet vinner utan ämneskunskap | båda distraktorerna omskrivna till fristående felpåståenden i jämförbar längd (75 / 71) |
+| `psyatp_31` | **Prompten lämnade ut båda definitionerna** ("antingen integreras i befintliga mentala scheman eller kräver att nya scheman formas") och två alternativ var dessutom av fel typ — *förmågor* i stället för *processer*, alltså strykbara på formen | prompten neutraliserad; de två stadie-alternativen omskrivna till "Att …"-processdefinitioner så att alla fyra har samma form |
+| `psyatp_58` | Negativ polaritet ("stämmer **inte**") gör att tellen vänder: det falska påståendet var **både längst** (171 mot 152) **och det enda med "bara"**. En van tentaskrivare stryker det kategoriska och har rätt | omskrivet till 142 tecken utan kvasi-absolut ord |
+| `psyatp_122` | **Prompten sa "taktil agnosi" men bara ett alternativ rörde känseln** — de andra var afasi, visuell agnosi och medfödd hörselnedsättning. Frågan testade därmed att *taktil* betyder känsel, inte vad *agnosi* är | alla tre distraktorer omskrivna till fel inom samma domän (nedsatt känsel, apraxi, ofrivilliga rörelser) |
+
+**Mätt om efter patcharna:** `validate_quiz.py` 0 fel och 0 varningar, TF-balans oförändrad
+55 % Sant, längdbias 36 % → **35 %** av 121 mätbara MC.
+
+### 6.2 Öppna beslutspunkter — kräver besked, byggs inte om på egen hand
+
+Tre fynd rör **facit självt** och faller därmed under §0b/§3, alltså den ordning där du avgör.
+De är inte förbisedda utan utredda och lämnade öppna med avsikt.
+
+1. **`psyatp_91` (Rut, andningsbesvär) har två försvarbara svar.** Facit är
+   *Disengagemangsteorin*, men *Selektiv optimering med kompensation* står bland distraktorerna
+   och passar minst lika bra: att ta bussen när bilkörningen inte går längre **är**
+   kompensation, och färre besök är selektering. Disengagemangsteorin förutsätter ett
+   ömsesidigt undandragande — här beskrivs varken att Rut drar sig undan eller att omgivningen
+   gör det, utan ett fysiskt hinder. Frågan bärs **bara av omtentan 2025-04-02 (50 %, underkänd)**
+   och saknar motsvarighet i någon godkänd tenta. Det är exakt profilen för `#144337` (Karin,
+   promenaden), som redan är struken i §3.
+2. **`psyatp_117` ("ungefär halva barken") är obelagd.** Enda förekomsten ligger i tentan
+   2025-03-07 (44,4 %, underkänd), ingen annan fråga i ämnet täcker homunculus, och
+   distraktorn *Fingrarna, handen och handleden* är en stark konkurrent — den vanliga
+   läroboksformuleringen är att handen **och** talorganen tillsammans tar ungefär halva
+   motorbarken. Går inte att avgöra utan kursboken.
+3. **`psyatp_47` och `psyatp_165` ger samma definition åt två olika begrepp.** Kreativitet är
+   "använder **befintlig** kunskap på ett **nytt sätt** för att lösa **ett problem**";
+   problemlösning är "får en ny uppgift och använder **gammal** kunskap på ett **nytt sätt**
+   för att lösa **den**". Möter en student båda i samma omgång går de inte att skilja åt.
+   `psyatp_47` kommer från den godkända tentan 2024-10-11 (96,3 %), medan `psyatp_165` kommer
+   från diagnostiska provet HT21 — **som saknar bockar helt**, så dess facit är en slutledning,
+   inte en nyckel. Om det ska rättas är det `psyatp_165` som ska få en egen definition
+   (identifiera problemet, väga strategier mot varandra, välja en och genomföra den).
+
+### 6.3 Noterat men lämnat orört
+
+- **En frågas prompt kan innehålla en annan frågas svar.** Starkast: `psyatp_18`s prompt
+  ("Prägling hos gässlingar är ett exempel på en så kallad kritisk period") är ordagrant det
+  `psyatp_184` frågar efter, och `psyatp_119`s TF-påstående är ordagrant `psyatp_183`s
+  `correct`. Detta följer direkt av beställningen i §0a — samma sakfråga ska komma med varje
+  gång den förekommer i underlaget — och går inte att bygga bort utan att riva den ordern.
+- **Hedgnings-mönstret:** i flera frågor är rätt svar det enda med "kan" medan distraktorerna
+  är kategoriska (`psyatp_13`, `psyatp_129`). Inom normalvariationen för den här sortens
+  påståendefrågor och inte tillräckligt för att peka ut svaret på egen hand.
+- `psyatp_28` (sex minnessystem) och `psyatp_88` vilar på det diagnostiska provets nyckel.
+  Taxonomin går inte att verifiera mot kursboken härifrån, men nyckeln är den starkaste
+  källan som finns för frågan (§0b punkt 2) och lämnas därför som den är.
