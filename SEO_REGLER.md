@@ -1024,22 +1024,31 @@ Skriptet sätter alla tre ställena i en operation, så en partiell bump inte ka
       sätter också `?v=` för alla andra `js/*.js` och `css/*.css` som ändrats sedan
       HEAD**, i varje HTML-sida som refererar dem, plus generatorernas
       `STYLES_V`/`CSS_V` (§11 C behöver alltså ingen egen åtgärd).
-- [ ] `python3 scripts/wire_lang.py --all` — latinet på sidan får `lang="la"`
-      (§7b). Skriv aldrig attributet för hand.
-- [ ] `python3 scripts/wire_relaterat.py --all` — kunskapsbankssidan får sitt
-      "Se även"-block (§6f). Nya kunskapsbankssidor måste först in i en grupp
-      eller i `UTAN_RELATERAT` i `scripts/relaterat.py`, annars stoppar bygget.
-- [ ] `python3 scripts/wire_amne.py --all` — sidans `about`, `teaches` och
-      `keywords` skrivs ur `scripts/amne.py` (§6g). Nya sidor måste först in i
-      registret, annars stoppar bygget. Skriv aldrig fälten för hand, och lägg
-      **aldrig** in `<meta name="keywords">`.
-- [ ] `python3 scripts/wire_sidfot.py --all` — sidan får den delade sidfoten
-      (friskrivning, integritetsrad, datum), ordagrant som alla andra (§6e).
-- [ ] `python3 scripts/sidodatum.py --update && python3 scripts/wire_dates.py --all`
-      — sidans synliga datum, dess `dateModified` och dess `<lastmod>` följer med
-      innehållet (§6d). Skriv aldrig datumet för hand. Kör **efter**
-      `wire_sidfot.py`; datumraden ska stå sist i sidfoten.
+- [ ] `python3 scripts/kedjan.py` — **hela generator- och wire-kedjan i rätt
+      ordning, i ett kommando.** Kör den alltid i sin helhet; plocka aldrig ut
+      enskilda steg. Kedjan är idempotent — mot ett orört träd ändrar den
+      ingenting — så det kostar inget att köra allt, och att köra *delar* av den
+      är det som förstör sidor (se rutan nedan).
 - [ ] `CHANGELOG.md`: ny post överst med vad som ändrats (görs för hand).
+- [ ] `python3 scripts/check_generators.py` — bevisar att kedjan rundtrippar och
+      kör kontrollerna. Grön här är det som gör commiten redo.
+
+> **Kedjan står i `scripts/kedjan.py`, inte här.** Den listades tidigare som
+> punkter i det här dokumentet, och avskriften saknade fyra steg —
+> `generate_glossary.py` självt, `wire_terms.py`, `wire_citations.py` och
+> `wire_identity.py`. Följde man listan efter att ha rört en ordlistesida
+> regenererades ordlistans 33 sidor plus `medicinskordlista.html` **utan**
+> `author`- och `publisher`-noderna i JSON-LD:n: generatorn skriver ren HTML och
+> identiteten läggs på av `wire_identity.py`, som inte stod med. Resultatet var
+> giltig HTML, grönt på varje kontroll listan nämnde, och sajtens starkaste
+> E-E-A-T-signal borta från 34 sidor utan ett ord. En kedja som går att köra kan
+> inte drivas isär från sig själv; en kedja avskriven i ett dokument kan det, och
+> hade gjort det (§0.4). **Nya steg läggs därför in i `scripts/kedjan.py` — att
+> räkna upp dem igen här vore att återskapa exakt den defekten.**
+>
+> Vad de enskilda stegen gör står kvar i sina egna avsnitt: `wire_lang.py` (§7b),
+> `wire_relaterat.py` (§6f), `wire_amne.py` (§6g), `wire_sidfot.py` (§6e),
+> `wire_terms.py` (§6c), `sidodatum.py` + `wire_dates.py` (§6d).
 
 **Varför alla tre måste vara identiska:** `VERSION` är källan och hämtas färsk vid sidladdning;
 cachebustern tvingar webbläsaren att hämta ny `app.js`; `APP_VERSION` är inbakad i den körda

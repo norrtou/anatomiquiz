@@ -76,6 +76,38 @@ if grep -qE '^(VERSION|index\.html|js/.*\.js|css/.*\.css)$' <<<"$stageade"; then
   fi
 fi
 
+# --- Hela wire-kedjan körd, inte delar av den (SEO_REGLER §11 A) -----------
+# Sidgeneratorerna skriver REN HTML; tooltips, referenser, identitet, ämne,
+# sidfot, latin och datum läggs på av wire-stegen EFTERÅT. Körs bara en del av
+# kedjan blir resultatet giltig HTML som saknar något — och ingenting syns.
+# Det hände i 0.9.437: `generate_glossary.py` kördes ensam för att uppdatera
+# <lastmod>, och ordlistans 33 sidor plus medicinskordlista.html tappade
+# `author`- och `publisher`-noderna i JSON-LD:n. Sajtens starkaste E-E-A-T-
+# signal, borta från 34 sidor, utan ett larm någonstans.
+#
+# Grinden mäter mot HELA sajten, inte mot de stageade filerna (§0.1 i
+# CLAUDE_REGLER): ett wire-steg som inte kördes har oftast rört fler sidor än
+# de som råkade hamna i commiten, och en kontroll som bara tittar på diffen är
+# per definition blind för dem.
+#
+# OBS: stegen läser arbetskopian, inte indexet — precis som versionssynken
+# ovan. En commit med `git add -p` och orörda ändringar kvar i trädet mäts
+# alltså mot trädet. Det är rätt avvägning här: felet grinden finns för uppstår
+# av en ofullständig KÖRNING, och en körning träffar hela trädet.
+if grep -qE '\.html$' <<<"$stageade"; then
+  echo "🔍 Kontrollerar att hela wire-kedjan körts…"
+  for steg in wire_identity wire_lang wire_amne wire_relaterat \
+              wire_sidfot wire_citations wire_dates wire_terms; do
+    if ! ut=$(python3 "scripts/$steg.py" --check --all 2>&1); then
+      echo "$ut"
+      stoppa "scripts/$steg.py --check --all larmar (SEO_REGLER §11 A)." \
+        "Ett steg i kedjan har inte körts på sidorna." \
+        "Kör HELA kedjan — aldrig det enskilda steget:" \
+        "  python3 scripts/kedjan.py"
+    fi
+  done
+fi
+
 staged=$(grep -E '^data/.*\.json$' <<<"$stageade" || true)
 [ -z "$staged" ] && exit 0
 

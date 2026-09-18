@@ -19,7 +19,7 @@ körningen; se `scripts/apa.py`.
 
 Användning:
     python3 scripts/wire_citations.py --all
-    python3 scripts/wire_citations.py --check --all    # tyst = inget att göra
+    python3 scripts/wire_citations.py --check --all    # exit 1 om något skulle ändras
     python3 scripts/wire_citations.py kunskapsbank/ledtyper.html
 """
 import json
@@ -139,7 +139,10 @@ def main(argv):
     verb = "skulle skrivas" if check else "skrivna"
     print(f"{tot} referenser {verb} som citation i {ändrade} av "
           f"{len(filer)} sidor.")
-    return 0
+    # Se wire_identity.py: --check gav exit 0 även med fynd fram till 0.9.438.
+    # Samma defekt, samma rättelse — en kontroll som är tyst både när allt är
+    # rätt och när den hittat något är värdelös (CLAUDE_REGLER §0.1).
+    return 1 if (check and ändrade) else 0
 
 
 if __name__ == "__main__":

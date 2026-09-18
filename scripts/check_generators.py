@@ -45,44 +45,14 @@ from check_spellagen import spellagen
 ROOT = Path(__file__).resolve().parent.parent
 INDEX = ROOT / "index.html"
 
-# Ordningen är kedjans: sidgeneratorerna skriver REN HTML, wire_terms lägger på
-# tooltipsen, wire_citations läser sidans synliga referenslista och skriver in
-# den som `citation` i JSON-LD, och generate_glossary körs näst sist eftersom
-# den äger sitemap.xml och måste se de färdiga sidorna. wire_lang, wire_identity
-# och wire_dates ligger allra sist just därför — de skriver i ordlistans 33 sidor
-# också, och hade blivit överskrivna av glossary-generatorn i vilket tidigare
-# läge som helst.
-KEDJA = [
-    ["scripts/generate_glossary.py"],
-    ["scripts/generate_karl.py"],
-    ["scripts/generate_leder.py"],
-    ["scripts/generate_muskeltabeller.py"],
-    ["scripts/generate_skelett.py"],
-    ["scripts/generate_artiklar.py"],
-    ["scripts/generate_medicinsk_latin.py"],
-    ["scripts/generate_muskler_flashcards.py"],
-    ["scripts/wire_terms.py", "--all"],
-    ["scripts/wire_citations.py", "--all"],
-    # Se även-blocket läggs före referenslistan och måste därför skrivas efter
-    # att den finns. Steget stoppar på en kunskapsbankssida som varken står i
-    # en relationsgrupp eller i UTAN_RELATERAT — en ny tabellsida ska tvinga
-    # fram ett beslut, inte tyst hamna utanför korslänkningen (§0.4).
-    ["scripts/wire_relaterat.py", "--all"],
-    ["scripts/generate_glossary.py"],
-    ["scripts/wire_lang.py", "--all"],
-    ["scripts/wire_identity.py", "--all"],
-    # about/teaches/keywords. Steget stoppar på en sida som saknas i registret,
-    # på ett about-namn eller nyckelord som inte står i sidans egen text, och
-    # på att <meta name="keywords"> dykt upp igen någonstans.
-    ["scripts/wire_amne.py", "--all"],
-    ["scripts/wire_sidfot.py", "--all"],
-    ["scripts/wire_dates.py", "--all"],
-    # Sist: llms.txt och llms-full.txt beskriver sajten och behöver se den
-    # färdig. Steget kontrollerar dessutom att varje <loc> i sitemap.xml står i
-    # data/llms.json — en ny sida som aldrig kom in i indexfilen stoppar bygget
-    # i stället för att tyst utebli (§0.4).
-    ["scripts/generate_llms.py"],
-]
+# Kedjan ÄGS av scripts/kedjan.py och importeras härifrån — den ska finnas i
+# exakt en upplaga. Fram till 0.9.438 stod den här, och SEO_REGLER §11 A bar en
+# handskriven avskrift som saknade fyra steg (`generate_glossary.py`,
+# `wire_terms.py`, `wire_citations.py` och `wire_identity.py`). Avskriften gick
+# inte att köra, så ingenting kunde upptäcka att den drivit isär: den som följde
+# den regenererade ordlistan utan identitetsnoderna i JSON-LD:n och fick grönt
+# på varje kontroll som fanns i listan (§0.4).
+from kedjan import KEDJA
 
 
 def spårade_filer():

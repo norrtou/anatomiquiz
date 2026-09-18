@@ -16,7 +16,7 @@ ordning i objektet bevaras och diffen stannar vid det som faktiskt ändras.
 
 Användning:
     python3 scripts/wire_identity.py --all
-    python3 scripts/wire_identity.py --check --all    # tyst = inget att göra
+    python3 scripts/wire_identity.py --check --all    # exit 1 om något skulle ändras
     python3 scripts/wire_identity.py kunskapsbank/ledtyper.html
 """
 import json
@@ -67,7 +67,13 @@ def main(argv):
     verb = "skulle skrivas" if check else "skrivna"
     print(f"author + publisher {verb} i {noder} sidnoder över {ändrade} av "
           f"{len(filer)} sidor.")
-    return 0
+    # --check MÅSTE ge exit 1 när något skulle skrivas — samma form som
+    # wire_lang, wire_amne, wire_relaterat, wire_sidfot och wire_dates. Fram
+    # till 0.9.438 returnerade det här steget 0 oavsett fynd: det RÄKNADE UPP
+    # sidorna som tappat identiteten och sa ändå "allt är bra" till den som
+    # bara läste exitkoden. Det var så 34 sidor kunde tappa `author` och
+    # `publisher` i 0.9.437 utan att någon kontroll larmade (§0.4).
+    return 1 if (check and ändrade) else 0
 
 
 if __name__ == "__main__":
