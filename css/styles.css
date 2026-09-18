@@ -735,11 +735,28 @@ select:focus-visible {
    BUTTONS & ACTIONS
    ============================================================================ */
 
+/* Knapparna ligger i EN kolumn på telefon och två först när de ryms.
+   Två kolumner var basen fram till 0.9.439, och vid 320 px blev varje knapp
+   98 px bred invändigt — smalare än orden på dem. `.btn` bär
+   `word-break: break-word`, så etiketten bröts då mitt inne i ordet:
+   "läkemedelsberäknaren" (144 px) delades på tre rader. Avstavning är aldrig
+   tillåten (CSS_KARTA, `.header h1`), och regeln gäller knappar lika mycket
+   som rubriker — 14 knappar på 12 sidor bröt mot den.
+   Brytpunkten är 480 px, samma som `.hub-nav` redan använder för samma sak:
+   under den ryms inte en svensk sammansättning i en halv kolumn. Mätt, inte
+   gissad — `word-break` ligger kvar som skyddsnät för en framtida etikett som
+   ändå inte ryms, men får inga ord att bryta på dagens sidor. */
 .actions {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 12px;
   margin-top: 24px;
+}
+
+@media (min-width: 480px) {
+  .actions {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (min-width: 600px) {
