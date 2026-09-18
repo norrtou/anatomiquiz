@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.437
+- **Läkemedelsberäknaren når man nu från faktatextens topp.** `kunskapsbank/lakemedelsberakning.html` hade sin enda länk till `verktyg/lakemedelsberakning.html` i ett stycke långt ned på sidan, efter FAQ:n och strax före referenserna — den som kom till sidan mitt i en uträkning fick läsa igenom hela faktatexten innan verktyget ens syntes. En `.actions`-rad ligger nu **före** brödtexten, direkt under brödsmulan, med **Öppna läkemedelsberäknaren** som primärknapp och **Omvandlingar & formler** bredvid.
+- **Samma länk saknades också i sidans avslutande knapprad**, som bara pekade vidare till tabellsidan och till plugga & tenta. Räknaren är nu primärknapp även där; tabellsidan ligger kvar som sekundär. Raden speglar därmed tabellsidans egen `.actions`, som redan hade alla tre destinationerna.
+- **Ingen ny form uppfunnen** (SEO_REGLER §0b punkt 3): knapparna ärver `.actions` + `.btn`/`.btn primary` ordagrant från sidans befintliga avslutsrad, så ingen rad CSS behövde röras och `styles.css?v=` står kvar på 0.9.412.
+
 ## 0.9.436
 - **Fyra källor till psykologiämnet inskrivna i `info.html`s källista** (§3.2d), på plats i bokstavsordningen. Ur kurslitteraturen är det de fyra som faktiskt täcker ämnets innehåll: **Hwang m.fl.** för utvecklingspsykologi, inlärning, minne, personlighet, motivation och emotion; **Tornstam** för åldrandets teorier, inte minst gerotranscendensen han själv formulerade; **Nyman & Bartfai** för uppmärksamhet, minne, språk och exekutiva funktioner, alltså afasi, agnosi, apraxi och neglekt; **Eklund m.fl.** för grupperna, den terapeutiska relationen, motivationen och kreativiteten.
 - **Två titlar i listan täcker inget som ämnet frågar om och står därför utanför:** en om samtalskonst och en om kris- och katastrofpsykologi. Ämnets stressfrågor rör kamp–flykt-responsen och KBT, inte kristeori.
