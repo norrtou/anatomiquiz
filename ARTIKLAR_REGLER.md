@@ -688,8 +688,10 @@ exempel. Minnet är kopian; det här dokumentet är originalet.
   FAQ:n, så det var **speglat i det ögonblick det skapades**, men garantin håller bara till
   nästa gång någon redigerar en fråga för hand. **Åtgärden är ett kedjesteg, inte en bättre
   kontroll:** ett `wire_faq.py` som skriver om blocket ur `#faq` på alla åtta sidorna vid varje
-  körning gör glidningen omöjlig i stället för upptäckbar. Tills det finns: generera blocket
-  maskinellt även när det bara gäller en sida, och kör §12-snuttens fråge- **och** svarsjämförelse.
+  körning gör glidningen omöjlig i stället för upptäckbar. **Löst i 0.9.441:**
+  `scripts/wire_faq.py` ligger i kedjan och skriver blocket på alla 21 sidor med FAQ, även
+  när en ny artikel ännu saknar block. Skriv FAQ:n synlig i `#faq` och kör kedjan; formen
+  som steget läser står i SEO_REGLER §6.
 - **2026-07-26** — **§4:s friskrivningsrad var redan byggd, på rätt nivå.** Paragrafen kräver
   att varje artikel i `klinisk-anatomi` bär raden *"Den här texten beskriver anatomi i
   utbildningssyfte och är inte medicinsk rådgivning."* Kravet skrevs 2026-07-20, alltså före

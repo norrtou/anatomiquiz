@@ -69,8 +69,8 @@ större text. Raden blir högre och kan bryta på fler rader på mobil.
 **2.4 Inladdningsanimationen på `.card` och `.header` (fynd G).** Sidorna slutar glida in. I
 gengäld landar länkar rätt och LCP sjunker med upp till 0,5 s (mätt 0,1–0,5 s beroende på sida).
 
-**2.5 FAQPage-blocken (fynd K4).** Behålla och bygga `wire_faq.py`, behålla som de är, eller
-ta bort blocken.
+**2.5 FAQPage-blocken (fynd K4).** ✅ **Beslutat 2026-09-23: alternativ a. Genomfört i
+0.9.441** – `scripts/wire_faq.py` skriver blocken ur den synliga FAQ:n.
 
 **2.6 Klinisk granskning av verktygen (avsnitt 6).** Bara om en legitimerad person faktiskt
 granskar verktygen kan `reviewedBy` sättas.
@@ -438,6 +438,9 @@ att starta quizet.
    och fortsätt med kontrollsnutten i §12, eller (c) ta bort blocken och därmed risken för
    isärglidning. Jag lutar åt (a) eller (c). (b) är det enda läget som lämnar en känd
    reaktiv kontroll kvar.
+   ✅ **Beslutat 2026-09-23: (a). Genomfört i 0.9.441.** `scripts/wire_faq.py` ligger i kedjan
+   och skriver alla 21 block ur sidornas synliga FAQ. Innehållet var redan i synk på alla
+   114 frågor, så bara formen ändrades.
 
 ### L. `manifest.json` låser stående läge — prioritet 3
 

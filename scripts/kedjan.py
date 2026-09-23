@@ -63,6 +63,11 @@ KEDJA = [
     # fram ett beslut, inte tyst hamna utanför korslänkningen (§0.4).
     ["scripts/wire_relaterat.py", "--all"],
     ["scripts/generate_glossary.py"],
+    # FAQPage ur sidans synliga #faq. Efter generate_glossary, som skriver om
+    # medicinskordlista.html utan märkningen, och före wire_identity & co, som
+    # inte rör FAQPage. Steget stoppar på en FAQ det inte kan läsa och på ett
+    # FAQPage-block utan synlig FAQ (§0.4).
+    ["scripts/wire_faq.py", "--all"],
     ["scripts/wire_lang.py", "--all"],
     ["scripts/wire_identity.py", "--all"],
     # about/teaches/keywords. Steget stoppar på en sida som saknas i registret,

@@ -324,65 +324,63 @@
   }
   </script>
 
-  <!-- FAQPage speglar den synliga FAQ:n (#faq) ord för ord i sak (SEO_REGLER §6).
-       Blocket är genererat ur den synliga HTML:en – ändra alltid sidan först och
-       generera om, aldrig tvärtom. -->
+  <!-- FAQPage skrivs av scripts/wire_faq.py ur sidans synliga FAQ (#faq). Ändra frågorna på sidan, aldrig här (SEO_REGLER §6). -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "inLanguage": "sv-SE",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Vilket läge ska jag välja?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ska du lära dig något nytt: börja med flashcards för att få en första bekantskap, gå sedan över till quizet. Ska du befästa något du redan läst: kör quiz eller Leitner Light, som är de lägen där du måste plocka fram svaret ur minnet. Har du ont om tid och vill se var luckorna finns: Tidsjakt, eftersom det du tvekar på syns direkt i listan över missade frågor. Matcha passar när du vill koppla samman termer och deras betydelser, till exempel latinska namn mot svenska. Sortera passar när det är riktningar och proportioner som ska sitta – där är svaret en ordning, och det går inte att gissa sig till. Arcade: Pop! passar när termerna ska sitta snabbt, och Arcade: Shoot! när de ska sitta även under press."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Är det bättre att göra quiz än att läsa om samma text igen?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "För att minnas något längre än ett par dagar: ja. I den klassiska studien från 2006 fick en grupp läsa om en text flera gånger medan en annan i stället testades på den. Efter fem minuter var omläsning bäst, men efter två dagar och en vecka mindes de som testats betydligt mer. Att öva med frågor är en av två tekniker som en stor forskningsgenomgång från 2013 bedömde som högsta nytta bland tio undersökta studietekniker."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Hur ofta ska jag repetera?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sällan men regelbundet slår ofta och sammanpressat. Ju längre fram i tiden du behöver kunskapen, desto längre mellanrum tjänar du på – det är slutsatsen i en sammanställning av 839 mätningar av repetitionsintervall. Ska du kunna det på en tenta om en månad är några dagar mellan repetitionerna rimligt. Leitner Light räknar ut det åt dig och glesar ut varje kort du svarar rätt på."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Följer mina resultat och lådor med mellan mobilen och datorn?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nej. Allt sparas lokalt i den webbläsare du spelar i, eftersom appen inte har konton och inte lagrar något om dig. Mobilen och datorn har därför skilda resultat, och även en genväg på hemskärmen kan ha ett eget fack skilt från webbläsarfliken. Du kan flytta över dem med Exportera och Importera i topplistan – Leitner Lights export tar med både passresultaten och lådornas status."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Fungerar spellägena på mobilen?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja, samtliga lägen är byggda för att spelas med tummen på en telefon och anpassar sin storlek så att både frågan, svarsalternativen och knappen ryms utan att du behöver skrolla mitt i en runda. Ljudeffekter och vibration kan stängas av under Inställningar."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Vad gör jag om jag hittar en fråga som är fel?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Rapportera den gärna via kontaktformuläret på sidan Om Anatomiquiz. Du kan också markera frågan som felaktig, eller utesluta den ur dina egna quiz, under Hantera frågor. Materialet är faktagranskat mot standardverk men kan innehålla fel, och en rapport gör att felet kan rättas för alla."
-        }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "sv-SE",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Vilket läge ska jag välja?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ska du lära dig något nytt: börja med flashcards för att få en första bekantskap, gå sedan över till quizet. Ska du befästa något du redan läst: kör quiz eller Leitner Light, som är de lägen där du måste plocka fram svaret ur minnet. Har du ont om tid och vill se var luckorna finns: Tidsjakt, eftersom det du tvekar på syns direkt i listan över missade frågor. Matcha passar när du vill koppla samman termer och deras betydelser, till exempel latinska namn mot svenska. Sortera passar när det är riktningar och proportioner som ska sitta – där är svaret en ordning, och det går inte att gissa sig till. Arcade: Pop! passar när termerna ska sitta snabbt, och Arcade: Shoot! när de ska sitta även under press."
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "Är det bättre att göra quiz än att läsa om samma text igen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "För att minnas något längre än ett par dagar: ja. I den klassiska studien från 2006 fick en grupp läsa om en text flera gånger medan en annan i stället testades på den. Efter fem minuter var omläsning bäst, men efter två dagar och en vecka mindes de som testats betydligt mer. Att öva med frågor är en av två tekniker som en stor forskningsgenomgång från 2013 bedömde som högsta nytta bland tio undersökta studietekniker."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hur ofta ska jag repetera?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sällan men regelbundet slår ofta och sammanpressat. Ju längre fram i tiden du behöver kunskapen, desto längre mellanrum tjänar du på – det är slutsatsen i en sammanställning av 839 mätningar av repetitionsintervall. Ska du kunna det på en tenta om en månad är några dagar mellan repetitionerna rimligt. Leitner Light räknar ut det åt dig och glesar ut varje kort du svarar rätt på."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Följer mina resultat och lådor med mellan mobilen och datorn?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nej. Allt sparas lokalt i den webbläsare du spelar i, eftersom appen inte har konton och inte lagrar något om dig. Mobilen och datorn har därför skilda resultat, och även en genväg på hemskärmen kan ha ett eget fack skilt från webbläsarfliken. Du kan flytta över dem med Exportera och Importera i topplistan – Leitner Lights export tar med både passresultaten och lådornas status."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Fungerar spellägena på mobilen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, samtliga lägen är byggda för att spelas med tummen på en telefon och anpassar sin storlek så att både frågan, svarsalternativen och knappen ryms utan att du behöver skrolla mitt i en runda. Ljudeffekter och vibration kan stängas av under Inställningar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vad gör jag om jag hittar en fråga som är fel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rapportera den gärna via kontaktformuläret på sidan Om Anatomiquiz. Du kan också markera frågan som felaktig, eller utesluta den ur dina egna quiz, under Hantera frågor. Materialet är faktagranskat mot standardverk men kan innehålla fel, och en rapport gör att felet kan rättas för alla."
+      }
+    }
+  ]
+}
   </script>
 
   <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">

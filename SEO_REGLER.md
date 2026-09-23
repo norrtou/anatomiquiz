@@ -202,20 +202,42 @@ uttrycklig begäran (CLAUDE_REGLER, meta-regeln).
 
 Regler:
 
-- **`FAQPage`-blocket SKA GENERERAS ur den synliga HTML:en — handskrivet block är ett regelbrott.**
-  Detta är regelns proaktiva kärna (§0 i CLAUDE_REGLER): ett genererat block *kan inte* glida
-  isär från sidan, ett handskrivet gör det alltid vid nästa revidering. Generera ur
-  `#faq`-behållarens `<p><strong>Fråga</strong><br>Svar</p>` med märkningen bortstädad, så
-  blir speglingen exakt tecken för tecken. Skriv FAQ:n synlig **först**, generera blocket
-  **sedan** — aldrig tvärtom. Vill du ha ett utförligare svar i märkningen är rätt åtgärd att
-  skriva in det i den synliga texten och generera om; JSON-LD:t får aldrig bli en egen,
-  osynlig version av artikeln.
-- **FAQPage måste spegla en synlig FAQ** på sidan, ord för ord i sak (annars policybrott).
-  Kontrollen i §12 är skyddsnätet när ett block ändå skrivits för hand: den jämför **frågor
-  och svar** par för par, i båda riktningarna, med extraktionen scopad till `#faq`. Historiken
-  som motiverar kravet ovan: `deklinationer-pluralformer.html` hade sex frågor i märkningen och
-  sju på sidan (2026-07-21), och `grekiska-i-medicinen.html` hade **samtliga sex svar**
-  isärdrivna utan att någon frågekontroll kunde se det (2026-07-24).
+- **`FAQPage`-blocket skrivs av `scripts/wire_faq.py` ur sidans synliga `#faq` — skriv det
+  aldrig för hand.** Så här ser en FAQ ut som steget kan läsa, i någon av två former:
+
+  ```html
+  <div class="info-about" id="faq">                      <!-- artiklar, tabellsidor -->
+    <h2>Fråga &amp; svar om …</h2>
+    <p><strong>Frågan?</strong><br>Svaret, ett stycke.</p>
+  </div>
+
+  <section class="card" id="faq" aria-labelledby="faqHeading">   <!-- info, spellägen, ordlistan -->
+    <h2 id="faqHeading">Vanliga frågor om …</h2>
+    <div class="info-prose">
+      <h3 class="info-subheading">Frågan?</h3>
+      <p>Svaret, ett stycke.</p>
+    </div>
+  </section>
+  ```
+
+  Skriv FAQ:n på sidan och kör `python3 scripts/kedjan.py`; blocket skrivs av steget, även
+  på en ny sida som ännu inte har något. Fråga och svar blir ren text: tooltips, `<em>` och
+  länkar stryks, entiteter avkodas. **Steget gissar inte:** en ingress inne i `#faq`, ett svar
+  på två stycken, två `#faq` på samma sida eller ett `FAQPage`-block utan synlig FAQ stoppar
+  bygget med ett besked om vad som ska göras (CLAUDE_REGLER §0.4). Behöver en FAQ en annan
+  form är rätt åtgärd att lära skriptet formen — inte att skriva blocket för hand.
+  Kontrollen `python3 scripts/wire_faq.py --check --all` säger vad som skiljer: en fråga, ett
+  svar, antalet eller bara formen.
+- **Varför det är ett kedjesteg och inte en kontroll.** Fram till 0.9.441 fanns kravet att
+  blocket skulle genereras, men inget steg som gjorde det; alla 21 block var handskrivna och
+  §12-snutten var det enda skyddet, alltså en efterhandskontroll. Två gånger hade blocket
+  redan glidit isär: `deklinationer-pluralformer.html` hade sex frågor i märkningen och sju på
+  sidan (2026-07-21), och `grekiska-i-medicinen.html` hade **samtliga sex svar** omskrivna i
+  märkningen men inte på sidan (2026-07-24). Ett genererat block *kan inte* glida isär.
+- **Blocken står kvar trots att Google slutat visa FAQ-rika resultat (7 maj 2026).** Beslutat
+  2026-09-23: märkningen är fortfarande giltig, skadar inte och kan läsas av Bing och
+  AI-tjänster, och med steget ovan kostar den inget att hålla rätt. Ta inte upp frågan om att
+  ta bort blocken igen utan nytt underlag.
 - **Kravet gäller SVAREN lika hårt som frågorna.** Detta var den tysta halvan av regeln fram
   till 2026-07-24: §12-snutten jämförde bara frågorna, så en sida kunde rapporteras ren med
   samtliga svar isärdrivna. `grekiska-i-medicinen.html` hade två omformulerade frågor **och sex
@@ -1048,7 +1070,7 @@ Skriptet sätter alla tre ställena i en operation, så en partiell bump inte ka
 >
 > Vad de enskilda stegen gör står kvar i sina egna avsnitt: `wire_lang.py` (§7b),
 > `wire_relaterat.py` (§6f), `wire_amne.py` (§6g), `wire_sidfot.py` (§6e),
-> `wire_terms.py` (§6c), `sidodatum.py` + `wire_dates.py` (§6d).
+> `wire_terms.py` (§6c), `wire_faq.py` (§6), `sidodatum.py` + `wire_dates.py` (§6d).
 
 **Varför alla tre måste vara identiska:** `VERSION` är källan och hämtas färsk vid sidladdning;
 cachebustern tvingar webbläsaren att hämta ny `app.js`; `APP_VERSION` är inbakad i den körda
@@ -1101,7 +1123,9 @@ stod kvar på `0.9.236`, och felet syntes inte i något av de svep som kördes, 
 - [ ] **Description** 25–150 tecken, unik.
 - [ ] `og:title = twitter:title = titel-core`; alla OG/Twitter-fält ifyllda.
 - [ ] Canonical självrefererande; `robots` korrekt; ingen `google-site-verification` på undersida.
-- [ ] **JSON-LD validerar** (giltig JSON); FAQPage speglar synlig FAQ; BreadcrumbList finns.
+- [ ] **JSON-LD validerar** (giltig JSON); BreadcrumbList finns.
+- [ ] **FAQ (§6):** inget `FAQPage`-block handskrivet; FAQ:n står synlig i `#faq`.
+      `python3 scripts/wire_faq.py --check --all` ska gå igenom.
 - [ ] **Datum (§6d):** inget datum handskrivet i HTML eller JSON-LD;
       `python3 scripts/sidodatum.py --check` säger "aktuellt".
 - [ ] **Sidfot (§6e):** ingen friskrivning eller integritetsrad handskriven på
@@ -1157,44 +1181,11 @@ for b in re.findall(r'application/ld\+json">(.*?)</script>',h,re.S):
 print("tabeller",h.count('<table'),"captions",h.count('<caption>'),
       "-> OK" if h.count('<table')==h.count('<caption>') else "-> SAKNAS")
 print("JSON-LD: giltig")
-# FAQPage speglar synlig FAQ (§6): jämför fråga för fråga OCH svar för svar.
-import html as _h
-def _plain(s): return _h.unescape(re.sub(r'\s+',' ',re.sub(r'<[^>]+>','',s))).strip()
-_fq=[(q["name"],q["acceptedAnswer"]["text"])
-     for b in re.findall(r'application/ld\+json">(.*?)</script>',h,re.S)
-     if '"FAQPage"' in b for q in json.loads(b)["mainEntity"]]
-faq=[q for q,_ in _fq]; faq_a=[a for _,a in _fq]
-# Två markupmönster förekommer: <p><strong>Fråga?</strong><br>svar (artiklar och
-# tabellsidor) och <h3>Fråga?</h3><p>svar (medicinskordlista.html, info.html).
-# Snutten måste känna igen båda – med bara det första passerade ordlistans FAQ
-# som "0 synliga", alltså tyst godkänd utan att någonsin ha jämförts (2026-07-21).
-# Leta upp #faq-behållaren via ett REGEXP, inte via h.find('id="faq"'): ligger
-# strängen ordagrant i en head-kommentar slår find() an där och läser fel
-# sektion, vilket ger falskt "0 synliga" (upptäckt 2026-07-24 i info.html).
-# EXTRAHERA ALLTID INOM #faq, aldrig ur hela filen. Ett <p><strong>Ingress</strong>
-# i brödtexten som INTE följs av <br> får annars det icke-giriga (.*?) att skanna
-# vidare till nästa </strong><br> och svälja allt däremellan – frågan blir då ett
-# helt stycke brödtext och sidan rapporteras falskt som isärdriven, med rätt
-# ANTAL par (upptäckt 2026-07-24 i deklinationer-pluralformer/terminologins-historia).
-m=re.search(r'<(?:div|section)[^>]*\bid="faq"',h)
-seg=h[m.start():min([x for x in (h.find('</section>',m.start()),
-                                 h.find('</div>',m.start())) if x>0] or [len(h)])] if m else h
-_pairs=re.findall(r'<p><strong>(.*?)</strong><br>(.*?)</p>',seg,re.S)
-if _pairs:
-    vis=[_plain(q) for q,_ in _pairs]; vis_a=[_plain(a) for _,a in _pairs]
-else:
-    vis=[_plain(s) for s in re.findall(r'<h3[^>]*>(.*?)</h3>',seg,re.S)]
-    vis_a=[_plain(s) for s in re.findall(r'<p>(.*?)</p>',seg,re.S)]
-if faq or vis:
-    print("FAQ:",len(faq),"i JSON-LD /",len(vis),"synliga",
-          "-> OK" if [_h.unescape(x) for x in faq]==vis else "-> GLIDIT ISÄR")
-    # Svaren MÅSTE jämföras separat. Fram till 2026-07-24 gjorde snutten det
-    # inte, och grekiska-i-medicinen.html hade därför sex svar som drivit isär
-    # helt oupptäckt medan frågekontrollen sa OK.
-    print("FAQ-svar:",len(faq_a),"/",len(vis_a),
-          "-> OK" if faq_a==vis_a else "-> GLIDIT ISÄR")
-    for _n,(_a,_b) in enumerate(zip(faq_a,vis_a),1):
-        if _a!=_b: print(f"   svar {_n} avviker\n     json: {_a[:100]}\n     html: {_b[:100]}")
+# FAQPage jämförs INTE här längre. Blocket skrivs av scripts/wire_faq.py och
+# kontrolleras av `python3 scripts/wire_faq.py --check --all` (§6). Fram till
+# 0.9.441 låg en egen FAQ-parser här — en andra upplaga av samma regel, och den
+# hade redan behövt lagas tre gånger (h3-formen, kommentaren i info.html,
+# ingressen som svaldes av ett icke-girigt mönster).
 PY
 # (sätt F=… till filsökvägen)
 ```

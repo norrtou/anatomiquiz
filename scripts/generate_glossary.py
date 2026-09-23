@@ -36,7 +36,8 @@ vänta på 2,4 MB. Se build_search_index() nedan.
 
 JSON-LD: medvetet LÄTT. Bokstavssidorna är CollectionPage; landningssidan är en
 DefinedTermSet på SET-nivå (namn + länkar till bokstavssidorna, INGA per-term-
-URL:er) plus en FAQPage. Den tidigare DefinedTermSet:en med SAMTLIGA termers
+URL:er). Landningssidans FAQPage skrivs av scripts/wire_faq.py ur sidans synliga
+FAQ, inte här. Den tidigare DefinedTermSet:en med SAMTLIGA termers
 URL:er stod för ~1,8 MB och gav minimal rich-result-nytta och återinförs INTE —
 per-term-innehållet är ändå fullt crawlbart som semantisk <dl>.
 """
@@ -587,19 +588,12 @@ def build_landing_index(groups: dict[str, list[dict]]) -> str:
 # oförändrade kvar på ordlista-a.html; här visas bara set-nivå: rutnät + prosa.
 # ---------------------------------------------------------------------------
 
-_TAG_RE = re.compile(r"<[^>]+>")
-
-
-def strip_tags(markup: str) -> str:
-    """Ren text ur enkel inline-HTML (endast <a>/<em> förekommer). Används för
-    FAQ-schemats text så att den ALLTID matchar den synliga texten (en källa,
-    kan aldrig divergera)."""
-    return html.unescape(_TAG_RE.sub("", markup)).strip()
-
-
-# FAQ: EN källa för både synlig text och FAQPage-schemat. Svaren får innehålla
-# <a>/<em>; schematexten härleds via strip_tags(). Frågorna är valda efter äkta
-# sökintention kring "medicinsk ordlista/termer", inte fyllnad.
+# FAQ: den synliga texten skrivs härifrån. FAQPage-schemat skrivs INTE här utan
+# av scripts/wire_faq.py, som läser den färdiga sidans #faq — samma steg som ger
+# de övriga 20 sidorna med FAQ sin märkning, så att det finns en enda väg från
+# synlig FAQ till FAQPage på hela sajten (SEO_REGLER §6). Svaren får innehålla
+# <a>/<em>. Frågorna är valda efter äkta sökintention kring "medicinsk
+# ordlista/termer", inte fyllnad.
 LANDING_FAQ: list[dict[str, str]] = [
     {
         "q": "Vad är en medicinsk ordlista och vad har jag för nytta av den?",
@@ -706,26 +700,6 @@ def build_faq_html(faq: list[dict[str, str]]) -> str:
     return "\n".join(lines)
 
 
-def faq_jsonld(faq: list[dict[str, str]]) -> dict:
-    """FAQPage-schema. Svarstexten härleds ur den synliga HTML:en (strip_tags),
-    så schema och sida aldrig kan skilja sig åt."""
-    return {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": item["q"],
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": strip_tags(item["a"]),
-                },
-            }
-            for item in faq
-        ],
-    }
-
-
 def build_landing_about() -> str:
     """Beskrivande om-text (unik brödtext för SEO/EEAT)."""
     return (
@@ -829,7 +803,6 @@ def render_page(
     alphabet_html: str,
     content_html: str,
     is_landing: bool,
-    extra_jsonld: list[dict] | None = None,
 ) -> str:
     """Bygg en komplett HTML-sida från den gemensamma mallen."""
     url = f"{SITE}/{filename}"
@@ -840,11 +813,6 @@ def render_page(
     # data-page-key låter glossary.js veta vilken grupp sidan visar, så att
     # sökträffar på samma sida länkas med rent #ankare i stället för full URL.
     page_attr = "" if is_landing else f' data-page="{page_file_key(filename)}"'
-
-    # Extra JSON-LD (t.ex. FAQPage på landningssidan) läggs efter brödsmulan.
-    extra_jsonld_html = (
-        "\n" + "\n".join(jsonld(obj) for obj in extra_jsonld) if extra_jsonld else ""
-    )
 
     # Landningssidan bär rutnät + info-rutor (inte en <dl>) i #glossaryContent →
     # ta bort listramen så info-rutorna inte dubbelinramas. Gruppsidor behåller.
@@ -911,7 +879,7 @@ def render_page(
 
   <!-- Strukturerad data — AUTO-GENERERAD av scripts/generate_glossary.py, redigera ej för hand. -->
 {jsonld(page_jsonld)}
-{jsonld(breadcrumb_obj)}{extra_jsonld_html}
+{jsonld(breadcrumb_obj)}
 
   <meta name="theme-color" content="#10b981">
   <meta name="color-scheme" content="light dark">
@@ -1060,7 +1028,6 @@ def build_landing(groups: dict[str, list[dict]]) -> str:
         alphabet_html=build_alphabet(set(groups), None),
         content_html=build_landing_content(groups, LANDING_FAQ),
         is_landing=True,
-        extra_jsonld=[faq_jsonld(LANDING_FAQ)],
     )
 
 

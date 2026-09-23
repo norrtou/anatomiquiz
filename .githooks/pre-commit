@@ -94,10 +94,17 @@ fi
 # ovan. En commit med `git add -p` och orörda ändringar kvar i trädet mäts
 # alltså mot trädet. Det är rätt avvägning här: felet grinden finns för uppstår
 # av en ofullständig KÖRNING, och en körning träffar hela trädet.
+#
+# Listan över wire-steg läses ur scripts/kedjan.py, den skrivs inte av här.
+# Fram till 0.9.441 stod de åtta stegen uppräknade i den här filen — en andra
+# upplaga av kedjan, exakt den sortens avskrift 0.9.438 tog bort ur SEO_REGLER.
+# När wire_faq.py tillkom hade den glömts här utan att något sa till.
 if grep -qE '\.html$' <<<"$stageade"; then
   echo "🔍 Kontrollerar att hela wire-kedjan körts…"
-  for steg in wire_identity wire_lang wire_amne wire_relaterat \
-              wire_sidfot wire_citations wire_dates wire_terms; do
+  wire_steg=$(python3 -c "import sys; sys.path.insert(0, 'scripts'); from kedjan import KEDJA; print(' '.join(dict.fromkeys(c[0].split('/')[-1][:-3] for c in KEDJA if c[0].split('/')[-1].startswith('wire_'))))") \
+    || stoppa "kunde inte läsa wire-stegen ur scripts/kedjan.py."
+  [ -n "$wire_steg" ] || stoppa "scripts/kedjan.py innehåller inga wire-steg — urvalet är trasigt."
+  for steg in $wire_steg; do
     if ! ut=$(python3 "scripts/$steg.py" --check --all 2>&1); then
       echo "$ut"
       stoppa "scripts/$steg.py --check --all larmar (SEO_REGLER §11 A)." \

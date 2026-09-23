@@ -1,5 +1,15 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.441
+- **FAQPage-märkningen skrivs nu av ett kedjesteg, `scripts/wire_faq.py`, ur sidans synliga FAQ — aldrig för hand.** SEO_REGLER §6 har sedan juli krävt att blocket genereras, men inget steg gjorde det. Alla 21 block var handskrivna, och det enda skyddet var en jämförelse i §12-snutten, som bara upptäcker felet i efterhand. Två gånger hade märkningen redan glidit isär från sidan (deklinationer 2026-07-21, grekiska 2026-07-24). Nu kan den inte göra det.
+- **Steget läser båda formerna som finns på sajten**, `<p><strong>fråga</strong><br>svar</p>` och `<h3>fråga</h3><p>svar</p>`, och skriver fråga och svar som ren text. Saknas blocket på en sida med synlig FAQ läggs det in, så en ny artikel får sin märkning utan handarbete.
+- **Steget gissar inte.** En ingress inne i FAQ-sektionen, ett svar på två stycken, två FAQ-sektioner på samma sida eller ett FAQPage-block utan synlig FAQ stoppar bygget med ett besked om vad som ska göras. Verifierat med planterade fel: ändrat svar, handredigerad fråga, borttaget block, borttagen FAQ, två stycken, ingress, dubbel sektion och tom sektion gav alla exit 1. En kommentar som citerar sektionens id lurade inte steget, och ett borttaget block återskapades byte för byte.
+- **Innehållet var redan i synk:** alla 114 frågor och svar på de 21 sidorna var identiska före och efter. Ändringen gäller bara formen — samma indrag på alla block, `inLanguage: sv-SE` på alla, och en enda kommentar ovanför blocket i stället för fem olika. Inget i `<body>` rördes, så inga datum flyttades.
+- **Ordlistegeneratorn skriver inte längre egen FAQPage.** Den hade en egen väg från FAQ-listan till märkningen. Nu finns bara en väg på hela sajten, och den oanvända mekanismen för extra JSON-LD är borttagen.
+- **`.githooks/pre-commit` läser wire-stegen ur `scripts/kedjan.py`** i stället för att räkna upp dem. Listan i hooken var en andra upplaga av kedjan och hade glömt det nya steget.
+- **Regler:** SEO_REGLER §6 visar hur en FAQ skrivs så att steget kan läsa den, och den egna FAQ-parsern i §12-snutten är borttagen. Beslutet att behålla blocken trots att Google slutat visa FAQ-rika resultat (7 maj 2026) är inskrivet. ARTIKLAR_REGLER §14 markerar lärdomen från 2026-07-26 som löst. CLAUDE_REGLER §12.2 räknar med steget.
+- `check_generators.py`: rundtripp identisk efter 19 steg, 599 tester gröna.
+
 ## 0.9.440
 - **Granskningsrapport för SEO, GEO, agentläsning och tillgänglighet: `scripts/granskning_2026-09_seo_geo_agent_a11y.md`.** Ingenting i appen är ändrat. Rapporten samlar fynden med belägg, förslag och konsekvenser, och lägger besluten för sig.
 - **Underlaget är mätt, inte läst.** axe-core körd på alla 131 sidor i båda teman. Lighthouse 13.5 körd med den nya kategorin Agentic Browsing. GitHub Pages byggsteg återskapat lokalt. Renderade mätningar av fokus, ankarlänkar, sidledsscroll och länkfärger.
