@@ -839,7 +839,12 @@ PageSpeed-kravet "tillgänglighetsträdet korrekt formaterat" = **alla** a11y-gr
   Inga inline-`style`-attribut (CSP `style-src 'self'`) – kolumnbredder via CSS-klasser på `<col>`.
 - **Bilder:** alltid meningsfull `alt`. Dekorativa bilder: `alt=""`.
 - Kontrast ≥ WCAG AA — **och den räknas, inte bedöms.** Se §7c.
-- Synligt fokus. Klickbara ytor ≥ 24×24 px.
+- Synligt fokus. Klickbara ytor ≥ 24×24 px (WCAG 2.2 2.5.8). **Ytan växer med utfyllnad och
+  `min-width`/`min-height`, aldrig med större text** – textstorlekarna är fredade. Mönstret står
+  på `.glossary-alpha` i `glossary.css`: `display: flex`, centrerat innehåll, `min-width: 24px`,
+  `min-height: 24px` och rutorna kant i kant, så att avståndet mellan bokstäverna kommer från
+  rutan och raden inte behöver egna mellanrum. Före 0.9.446 var bokstavsraden 3,9 × 17,9 px på
+  alla 34 ordlistesidor; axe `target-size` fångade det, `check_kontrast.py` gör det inte.
 - Inga `tabindex > 0`. Formulärfält har `<label>`.
 - **Latinsk text märks `lang="la"`** — se §7b.
 
@@ -940,7 +945,10 @@ någon ser det — det var felet i `.answer-btn.correct` (rätt svar, 1,92:1),
 **Sex regler som följer av kontrollens byggnad:**
 
 1. **Genomskinlig botten** (`rgba(…)`) har ingen kontrast i sig. Ny sådan yta ska in
-   i `BAKGRUND` med vad som ligger bakom — annars stoppar bygget.
+   i `BAKGRUND` med vad som ligger bakom — annars stoppar bygget. **En post som ingen yta
+   längre använder stoppar också.** `.glossary-alpha` stod kvar i `BAKGRUND` efter att
+   bokstavsraden tappat sin genomskinliga bakgrund. Posten såg ut som ett mått men mätte
+   ingenting, medan raden låg på 2,54:1 på 34 sidor (rättat i 0.9.446).
 2. **Gradient som textfyllning** (`background-clip: text`) mäts som *text*, mot det
    som ligger bakom elementet, och ska in i `TEXT_PLATTOR`.
 3. **`@keyframes` som animerar `background`** ska in i `KEYFRAME_PLATTOR` med den
@@ -954,8 +962,12 @@ någon ser det — det var felet i `.answer-btn.correct` (rätt svar, 1,92:1),
 5. **Text i hel färg utan egen bakgrund** – en regel som bara sätter `color` – mäts inte
    alls av sig själv, för regeln säger inte vad texten ligger på. Ligger den på kända
    palettytor ska den in i `TEXT_PÅ_YTOR` med de ytorna; den mäts då mot var och en i
-   båda teman. Så mäts sajtens standardlänkar (`:where(a:any-link)`, se nedan). En
-   post vars selektor inte längre finns stoppar bygget.
+   båda teman. Så mäts sajtens standardlänkar (`:where(a:any-link)`, se nedan),
+   ordlistans bokstavsrad och indexkorten. En post vars selektor inte längre finns
+   stoppar bygget. **Registret är opt-in:** 319 regler sätter bara `color` och mäts inte
+   förrän de står här. En ny textfärg ur de ljusa accenterna (`--primary`, `--accent`,
+   `--primary-light`) på en ljus yta ska alltid in, eftersom ingen av dem klarar 4,5:1 på
+   vitt: `--primary` 2,54, `--primary-light` 1,92 och `--accent` 3,74. Använd `-deep`.
 6. **`REDOVISADE` är användarens lista, inte min.** En mätt yta som medvetet lämnas
    oförändrad står där med sin kvot — ändras kvoten fälls posten. Skriv aldrig in
    något där för att bli av med ett larm.

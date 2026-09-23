@@ -93,26 +93,40 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  column-gap: 6px;
-  row-gap: 2px;
   margin-bottom: 12px;
 }
 
 /* En kompakt bokstav — bara text, ingen ram. Länkar (befintliga bokstäver)
    och inaktiva <span> (bokstäver utan poster) delar utseende; .is-disabled
-   tonar ned. */
+   tonar ned.
+
+   Träffytan är minst 24 × 24 px (WCAG 2.2 2.5.8, SEO_REGLER §7), men texten
+   har samma storlek som förut: ytan växer med utfyllnad, inte med bokstaven.
+   Före 0.9.446 var "I" 3,9 px bred och alla bokstäver 17,9 px höga, med 6 px
+   mellanrum. Rutorna ligger nu kant i kant; avståndet mellan bokstäverna kommer
+   från rutan, så raden behöver inga egna mellanrum. Längre etiketter (0–9,
+   prefix, suffix) får 4 px luft på var sida.
+
+   Färgen är --primary-deep, samma som sajtens övriga länkar. --primary gav
+   2,54:1 mot kortet i ljust läge. */
 .glossary-alpha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  min-height: 24px;
+  padding: 0 4px;
   font-size: 0.8rem;
   font-weight: 700;
   line-height: 1.4;
-  color: var(--primary);
+  color: var(--primary-deep);
   text-decoration: none;
   user-select: none;
 }
 
 a.glossary-alpha:hover,
 a.glossary-alpha:focus-visible {
-  color: var(--primary-deep);
+  color: var(--primary-deepest);
   text-decoration: underline;
 }
 
@@ -333,13 +347,15 @@ a.glossary-alpha:focus-visible {
   letter-spacing: 0;
 }
 
+/* Samma färg som bokstaven bredvid. --primary gav 2,54:1 mot kortet i ljust
+   läge (0.9.446); axe såg det inte, eftersom kortets bakgrund är en gradient. */
 .gi-count {
   align-self: end;
   font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.6px;
-  color: var(--primary);
+  color: var(--primary-deep);
 }
 
 /* Exempelord — kursiv systemserif ger redaktionell kontrast mot bokstaven */
@@ -436,9 +452,5 @@ a.glossary-alpha:focus-visible {
   .term-count {
     text-align: center;
     min-width: unset;
-  }
-
-  .glossary-alphabet {
-    column-gap: 5px;
   }
 }

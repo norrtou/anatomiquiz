@@ -22,7 +22,7 @@ dem kan fångas av skript som läser HTML och CSS som text, och därför har de 
 | C | Verktygssidorna kan scrollas i sidled på mobil, och två artiklar vid 320 px | 5 sidor vid 390 px, 9 vid 320 px | **1** |
 | D | Lighthouse underkänner tillgänglighetsträdet för agenter p.g.a. tooltiplänkar i `<caption>` | 40 sidor | **1** – ✅ 0.9.445 |
 | E | Fokus hamnar på `<body>` vid varje vybyte i appen, utom i quizet | 9 vybyten | 2 |
-| F | Ordlistans bokstavsrad är för liten att träffa, och tre av länkarna har kontrast 2,5:1 | 33 sidor | 2 |
+| F | Ordlistans bokstavsrad är för liten att träffa, och tre av länkarna har kontrast 2,5:1 | 33 sidor | 2 – ✅ 0.9.446 |
 | G | Inladdningsanimationen gör att länkar till en ordlistepost landar 20 px för högt, och den skjuter upp LCP med upp till 0,5 s | alla sidor | 2 |
 | H | `llms-full.txt` säger fortfarande att man väljer svårighetsgrad | 1 post | 2 – liten insats |
 | I | IndexNow skickar alla 129 URL:er vid varje publicering, även de som inte ändrats | varje push | 2 |
@@ -65,8 +65,8 @@ Genomfört i 0.9.444** – länkar utan egen stil har sajtens gröna (`--primary
 `--primary-deepest`, samma som `.info-link`) i stället för webbläsarens blå och lila.
 Steg 1–2 genomfördes i 0.9.443.
 
-**2.3 Större träffytor i ordlistans bokstavsrad (fynd F).** Utfyllnad runt bokstäverna, inte
-större text. Raden blir högre och kan bryta på fler rader på mobil.
+**2.3 Större träffytor i ordlistans bokstavsrad (fynd F).** ✅ **Beslutat 2026-09-23.
+Genomfört i 0.9.446** – 24 × 24 px med utfyllnad, samma textstorlek, färgen `--primary-deep`.
 
 **2.4 Inladdningsanimationen på `.card` och `.header` (fynd G).** Sidorna slutar glida in. I
 gengäld landar länkar rätt och LCP sjunker med upp till 0,5 s (mätt 0,1–0,5 s beroende på sida).
@@ -366,6 +366,23 @@ teckenstorleken**, som enligt beslut inte får röras. Färgen blir `--primary-d
 `glossary.css` får ny cachebuster på 33 sidor. Den utökade mätningen kommer sannolikt att
 hitta fler regler med bara `color`, och de ska mätas, inte tystas.
 
+✅ **Genomfört i 0.9.446.** Varje bokstav är minst 24 × 24 px och texten har samma storlek
+(12,8 px). Rutorna ligger kant i kant. Färgen är `--primary-deep`, 5,48:1 i ljust och 8,37:1 i
+mörkt, och hover är `--primary-deepest`. Raden blev högre: 390 px gick från 2 till 3 rader
+(38 → 72 px), 320 px från 3 till 4 (58 → 96 px) och 768 px från 1 till 2. På dator är den
+fortfarande en rad. axe över alla 131 sidor: `color-contrast` gick från 102 noder till **0**,
+och alla 102 satt i raden. `target-size` gick från 1036 till 16. De 16 som är kvar är
+ordlistelänkar i tabellceller på en sida.
+- **Samma fel på ett ställe till:** `.gi-count` ("1018 ord" på indexkorten i
+  `medicinskordlista.html`) hade också `--primary` på vitt, 2,54:1 på 32 kort. axe såg det inte,
+  eftersom kortets bakgrund är en gradient. Nu `--primary-deep`, samma färg som bokstaven bredvid.
+- **Varför kontrollen missade det:** `check_kontrast.py` hade `.glossary-alpha` i `BAKGRUND`,
+  men den posten används bara för regler med genomskinlig bakgrund, och den regeln hade tappat
+  sin. Posten såg ut som ett mått men mätte ingenting. Skriptet stoppar nu på döda
+  `BAKGRUND`-poster, och raden och indexkorten mäts via `TEXT_PÅ_YTOR` (237 mätpunkter).
+- **Kvar, inte rört:** under en sökning tonas bokstäver utan träffar ned till 35 % och kan
+  inte klickas med mus, men de går fortfarande att nå och följa med tangentbordet.
+
 ### G. Inladdningsanimationen flyttar innehåll och skjuter upp LCP — prioritet 2
 
 **Belägg.**
@@ -579,7 +596,7 @@ som saknar `lang="la"` är känt och kräver ett språkfält i datafilen (SEO_RE
 2. **C** och **D** (D genomförd i 0.9.445).
 3. **E** och **I**.
 4. **P**, uppdatering av reglerna, i samma pass som de fynd den gäller, inte i efterhand.
-5. Dina beslut: **2.3, 2.4 och 2.6** (2.1, 2.2 och 2.5 är genomförda), sedan **J**, **K** och **L–O**.
+5. Dina beslut: **2.4 och 2.6** (2.1, 2.2, 2.3 och 2.5 är genomförda), sedan **J**, **K** och **L–O**.
 
 ---
 

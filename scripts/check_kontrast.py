@@ -72,6 +72,11 @@ STOR_REM_FET = 14 / 12  # 1,1667 rem
 # Ytor med genomskinlig bakgrund: vad ligger bakom? Handskrivet, för det är
 # omdöme. Värdet är en palettvariabel eller en hex; den blandas med ytans egen
 # alfafärg innan kontrasten räknas.
+#
+# En post som ingen yta använder stoppar bygget. `.glossary-alpha` stod här i
+# månader efter att bokstavsraden tappat sin genomskinliga bakgrund. Posten såg
+# ut som ett mått men mätte ingenting, och under tiden låg bokstäverna på
+# 2,54:1 (0.9.446). Regeln sätter bara `color`; sådana mäts via TEXT_PÅ_YTOR.
 BAKGRUND = {
     ".badge": "--surface",
     ".badge.placeholder": "--surface",
@@ -91,7 +96,6 @@ BAKGRUND = {
     ".kb-tabletools-btn": "--surface",
     ".vt-inputrow select": "--surface",
     ".vt-unit-fixed": "--surface",
-    ".glossary-alpha": "--surface",
     # Om-sidans flikrad ligger inte i ett kort utan direkt på sidbakgrunden
     # (gradienten i html, body). --bg-main är gradientens ena ände och den
     # ände som ger sämst kontrast i mörkt läge, alltså det konservativa valet.
@@ -156,6 +160,19 @@ TEXT_PÅ_YTOR = {
     # webbläsarens blå och lila, som ingen regel här kunde se.
     ":where(a:any-link)": ("--surface", "--bg-main"),
     ":where(a:any-link:hover)": ("--surface", "--bg-main"),
+    # Ordlistans bokstavsrad ligger i kortet (.glossary-card) i båda teman.
+    # Mättes inte alls före 0.9.446 och låg då på 2,54:1.
+    ".glossary-alpha": ("--surface",),
+    "a.glossary-alpha:hover": ("--surface",),
+    "a.glossary-alpha:focus-visible": ("--surface",),
+    # Ordlistans indexkort: --surface med en 6 % grön ton ovanpå. Tonen ligger
+    # mellan --surface och --bg-main i ljust läge, så de två ramar in den. I
+    # mörkt läge ljusar tonen kortet en aning. Räknat med hela tonen (#162d24)
+    # blir kvoten 7,61:1 för .gi-count och 7,09:1 för .gi-example, mot 8,37 och
+    # 7,80 här. Marginalen är stor, men ändras tonen ska det räknas om.
+    ".gi-letter": ("--surface", "--bg-main"),
+    ".gi-count": ("--surface", "--bg-main"),
+    ".gi-example": ("--surface", "--bg-main"),
 }
 
 # Gradient som TEXTFYLLNING (`background-clip: text`). Där är gradienten
@@ -437,6 +454,9 @@ def gräns(dekl):
 
 
 # --------------------------------------------------------------------------- #
+BAKGRUND_ANVÄNDA = set()   # fylls av mät(); det som blir kvar i BAKGRUND är dött
+
+
 def mät(selektor, dekl, palett, styles_palett):
     """(kvot, textfärg, bakgrundsstopp) eller (None, skäl, None) om omätbar."""
     fram_o, fram_g = färgstopp(dekl["color"], palett)
@@ -458,6 +478,7 @@ def mät(selektor, dekl, palett, styles_palett):
         bakdel = BAKGRUND.get(selektor)
         if bakdel is None:
             return None, "genomskinlig bakgrund utan post i BAKGRUND", None
+        BAKGRUND_ANVÄNDA.add(selektor)
         stopp, _ = färgstopp(f"var({bakdel})" if bakdel.startswith("--") else bakdel, palett)
         if not stopp:
             return None, f"bakdelen {bakdel} går inte att läsa", None
@@ -583,6 +604,11 @@ def main(argv):
                     brister.append(rad)
                 elif utförlig:
                     print("  ok   " + rad)
+
+    okända += [(k, "står i BAKGRUND men ingen mätt yta har genomskinlig bakgrund "
+                   "med den selektorn – ta bort posten, eller mät regeln via "
+                   "TEXT_PÅ_YTOR om den bara sätter color")
+               for k in BAKGRUND if k not in BAKGRUND_ANVÄNDA]
 
     kf_brister, kf_okända, kf_mätta = mät_keyframes(text, teman)
     brister += kf_brister

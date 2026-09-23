@@ -95,7 +95,7 @@ def läs_sidodatum() -> dict[str, dict[str, str]]:
 # js/theme.js inte rörts sedan 0.9.260.
 STYLES_V = "0.9.444"        # css/styles.css
 THEME_V = "0.9.443"         # js/theme.js
-GLOSSARY_CSS_V = "0.9.401"  # css/glossary.css
+GLOSSARY_CSS_V = "0.9.446"  # css/glossary.css
 GLOSSARY_JS_V = "0.9.402"   # js/glossary.js
 
 # Svenska alfabetet — fast ordning för alfabetsraden. Bokstäver utan poster
