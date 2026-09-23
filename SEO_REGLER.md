@@ -1057,11 +1057,13 @@ Mål: **CLS = 0**, snabb LCP, minimal payload.
   `scripts/test_inladdning.js` fäller båda felen för `.header` och `.card`.
 - **En intoning kostar tid innan innehållet räknas som ritat.** Chrome räknar inte text med
   opacitet 0 som ritad, så FCP och LCP väntar ut intoningen. Mätt i webbläsare 2026-09-23:
-  `muskeltabell-handen` 632 ms med intoning mot 116 ms utan, och `ordlista-b` 644 mot 128 ms.
+  `muskeltabell-handen` 632 ms med intoning mot 104 ms utan, och `ordlista-b` 644 mot 132 ms.
   Lighthouses simulerade LCP ser inte skillnaden, eftersom den bara räknar på nätverket.
+  **Därför har `.header` och `.card` ingen inladdningsanimation sedan 0.9.449** (användarens
+  beslut). Lägg inte till en intoning på innehåll som syns när sidan laddas utan beslut. Den
+  borttagna intoningen och exakt CSS för att återställa den står i `CSS_KARTA.md`.
   **Försök aldrig lura mätningen**, till exempel med en intoning som börjar på 0,01 i stället
-  för 0. Läsaren väntar lika länge ändå. Att behålla intoningen är ett formbeslut som kostar
-  runt en halv sekund.
+  för 0. Läsaren väntar lika länge ändå.
 - **Minimal JS:** ladda bara `js/app.js` på sidor som behöver den, alltid med `defer`. Rena
   faktasidor ska helst ha **0 JS**.
 - **Inga externa resurser** (CSP `'self'`): inga CDN, fonter eller skript från andra origin.

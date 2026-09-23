@@ -349,19 +349,18 @@ main {
    HEADER & TYPOGRAPHY
    ============================================================================ */
 
-/* Sidhuvudet och korten tonas in, men flyttas inte (0.9.448). Förut gled de
-   20 px på plats med transform. Webbläsaren hoppar till ett #ankare innan
-   animationen är klar, så en länk till en ordlistepost landade 20 px för högt
-   och klippte termen, på alla 130 sidor. Rör heller aldrig `transform` i en
-   inladdningsanimation: CLS räknar inte transformer, så felet syns inte i
-   Lighthouse. Vid reducerad rörelse stängs båda av (se slutet av blocket
-   nedan). SEO_REGLER §7. */
+/* Sidhuvudet och korten syns direkt, utan inladdningsanimation (0.9.449).
+   Fram till 0.9.447 gled de 20 px på plats, och i 0.9.448 tonades de in. Båda
+   kostade: glidningen fick länkar till en ordlistepost att landa 20 px för
+   högt, och intoningen höll innehållet osynligt i en halv sekund, så Chrome
+   räknade sidan som ritad först efteråt (LCP 632 ms mot 116 ms utan).
+   Lägg inte tillbaka någon av dem utan beslut. Exakt CSS för att återställa
+   står i CSS_KARTA.md, och vad det kostar i SEO_REGLER §8. */
 .header {
   display: flex;
   flex-direction: column;
   gap: 8px;
   margin-bottom: 32px;
-  animation: fadeIn 0.6s ease-out;
 }
 
 .header h1 {
@@ -590,19 +589,11 @@ main {
   box-shadow: var(--shadow);
   margin-bottom: 20px;
   border: 1px solid rgba(16, 185, 129, 0.1);
-  animation: fadeIn 0.5s ease-out;
   transition: all var(--transition);
 }
 
 .card:hover {
   box-shadow: var(--shadow-lg);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .header,
-  .card {
-    animation: none;
-  }
 }
 
 .card.hidden {

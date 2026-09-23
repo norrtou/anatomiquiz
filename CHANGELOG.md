@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.449
+- **Sidorna syns direkt: intoningen på sidhuvud och innehållskort är borttagen, och innehållet visas ungefär en halv sekund tidigare.** Chrome räknar inte text med opacitet 0 som ritad, så intoningen höll sidan "oritad" tills den var klar. Medianer av sju laddningar i webbläsare, med intoning mot utan: `muskeltabell-handen` 632 mot 104 ms, `ordlista-b` 644 mot 132 ms och startsidan 708 mot 108 ms. Det gäller alla 130 sidor med sidhuvud och kort.
+- **Synlig ändring, användarens beslut:** sidhuvudet och korten tonas inte längre in. I quizet på startsidan tonas inte heller vyerna in vid vybyte. Quizfrågornas egen korta intoning när en ny fråga visas är kvar, eftersom den inte påverkar sidladdningen.
+- **Länkarna till ordlistan landar fortfarande rätt** (0 px, mätt på `#term-brachium` och `#term-femur`), med och utan minskad rörelse.
+- **Intoningen är sparad, ifall beslutet ändras.** `CSS_KARTA.md` har ett avsnitt med hur den såg ut, vad den kostar och exakt CSS för att återställa den. Hela versionen finns också i commit `5877c489` (0.9.448). Den ursprungliga glidningen ska inte tillbaka, och det står varför.
+- **`scripts/test_inladdning.js`** godkänner att animation saknas, men fäller fortfarande en animation som flyttar något och en som inte stängs av vid minskad rörelse. Båda planterades och fälldes.
+- **Regler:** SEO_REGLER §8 säger att innehåll som syns vid sidladdning inte ska tonas in utan beslut, och hänvisar till CSS_KARTA. CLAUDE_REGLER har en ny §0.7: säg vad ett alternativ inte ger, och stanna och fråga om en mätning ändrar svaret. Den kom till för att jag rekommenderade 0.9.448 utan att säga att hastighetsvinsten var omätt.
+
 ## 0.9.448
 - **Sidorna tonas in men glider inte längre, och länkar till en ordlisteterm landar rätt.** Sidhuvudet och innehållskorten gled 20 px på plats när sidan laddades, på 130 av 131 sidor. Webbläsaren hoppar till ett `#ankare` innan animationen är klar, så varje länk till en ordlistepost landade 20 px för högt och termen klipptes i överkant. Nu tonas båda in som förut men står still. Mätt: `ordlista-b.html#term-brachium` och `ordlista-f.html#term-femur` landar på 0 px i stället för −20 px, och termen syns hel.
 - **Minska rörelse respekteras.** Med `prefers-reduced-motion: reduce` visas sidhuvud och kort direkt, utan animation. Förut kördes den för alla. Spellägenas egna animationer stängdes redan av.

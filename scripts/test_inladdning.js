@@ -5,20 +5,22 @@
    Körs också av check_generators.py, som hittar varje scripts/test_*.js.
    Avslutar med kod 0 när allt är grönt, annars 1.
 
-   `.header` och `.card` finns på 130 av 131 sidor och tonas in när sidan
-   laddas. Fram till 0.9.448 gled de dessutom 20 px på plats med `transform`.
-   Webbläsaren hoppar till ett #ankare innan animationen är klar, så varje
-   länk till en ordlistepost landade 20 px för högt och klippte termen. CLS
-   räknar inte transformer, så Lighthouse såg ingenting. Animationerna kördes
-   också för den som bett om minskad rörelse.
+   `.header` och `.card` finns på 130 av 131 sidor. Fram till 0.9.447 gled de
+   20 px på plats när sidan laddades. Webbläsaren hoppar till ett #ankare innan
+   animationen är klar, så varje länk till en ordlistepost landade 20 px för
+   högt och klippte termen. CLS räknar inte transformer, så Lighthouse såg
+   ingenting. Animationen kördes också för den som bett om minskad rörelse.
+   Sedan 0.9.449 har de ingen inladdningsanimation alls (se CSS_KARTA.md).
 
-   Testet läser css/styles.css och fäller om
-     * animationen på `.header` eller `.card` använder en @keyframes som flyttar,
-       skalar eller roterar något, eller om den @keyframes saknas,
-     * `@media (prefers-reduced-motion: reduce)` inte stänger av båda.
+   Testet läser css/styles.css. Ingen animation är godkänt. Läggs en tillbaka
+   fäller testet om
+     * den använder en @keyframes som flyttar, skalar eller roterar något, eller
+       om den @keyframes saknas,
+     * `@media (prefers-reduced-motion: reduce)` inte stänger av den.
 
    Det kan INTE se att en animation känns rätt, eller vad den kostar i tid
-   innan innehållet räknas som ritat (LCP). Det mäts i webbläsare.
+   innan innehållet räknas som ritat (LCP). En intoning kostade en halv sekund
+   (SEO_REGLER §8). Det mäts i webbläsare.
    ========================================================= */
 
 const fs = require('fs')
@@ -68,6 +70,7 @@ const alla = block(CSS)
 const RÖRELSE = /(^|[;\s])(transform|translate|scale|rotate|top|left|margin[a-z-]*)\s*:/
 
 /* --- 1. Animationen tonar, den flyttar inte ------------------------------- */
+const animerade = []
 for (const sel of ['.header', '.card']) {
   const regel = alla.find(b => selektorer(b.huvud).includes(sel))
   ok(`${sel}: regeln finns på toppnivån i styles.css`, !!regel)
@@ -77,6 +80,7 @@ for (const sel of ['.header', '.card']) {
     ok(`${sel}: ingen animation – inget att flytta`, true)
     continue
   }
+  animerade.push(sel)
   const namn = anim.split(/\s+/)[0]
   const kf = alla.find(b => b.huvud === `@keyframes ${namn}`)
   ok(`${sel}: @keyframes ${namn} finns`, !!kf)
@@ -86,7 +90,7 @@ for (const sel of ['.header', '.card']) {
   }
 }
 
-/* --- 2. Minskad rörelse stänger av båda ----------------------------------- */
+/* --- 2. Minskad rörelse stänger av varje animation som finns -------------- */
 {
   const avstängda = new Set()
   alla.filter(b => /^@media[^{]*prefers-reduced-motion:\s*reduce/.test(b.huvud))
@@ -95,8 +99,9 @@ for (const sel of ['.header', '.card']) {
         selektorer(r.huvud).forEach(s => avstängda.add(s))
       }
     }))
-  ok('prefers-reduced-motion stänger av animationen på .header', avstängda.has('.header'))
-  ok('prefers-reduced-motion stänger av animationen på .card', avstängda.has('.card'))
+  for (const sel of animerade) {
+    ok(`prefers-reduced-motion stänger av animationen på ${sel}`, avstängda.has(sel))
+  }
 }
 
 /* --- Sammanfattning --------------------------------------------------------- */

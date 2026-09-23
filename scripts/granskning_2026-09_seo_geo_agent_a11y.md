@@ -23,7 +23,7 @@ dem kan fångas av skript som läser HTML och CSS som text, och därför har de 
 | D | Lighthouse underkänner tillgänglighetsträdet för agenter p.g.a. tooltiplänkar i `<caption>` | 40 sidor | **1** – ✅ 0.9.445 |
 | E | Fokus hamnar på `<body>` vid varje vybyte i appen, utom i quizet | 9 vybyten | 2 |
 | F | Ordlistans bokstavsrad är för liten att träffa, och tre av länkarna har kontrast 2,5:1 | 33 sidor | 2 – ✅ 0.9.446 |
-| G | Inladdningsanimationen gör att länkar till en ordlistepost landar 20 px för högt, och den skjuter upp LCP med upp till 0,5 s | alla sidor | 2 – ✅ (c) 0.9.448, LCP kvar |
+| G | Inladdningsanimationen gör att länkar till en ordlistepost landar 20 px för högt, och den skjuter upp LCP med upp till 0,5 s | alla sidor | 2 – ✅ 0.9.448–0.9.449 |
 | H | `llms-full.txt` säger fortfarande att man väljer svårighetsgrad | 1 post | 2 – liten insats |
 | I | IndexNow skickar alla 129 URL:er vid varje publicering, även de som inte ändrats | varje push | 2 |
 | J | "Testa dig själv i quizet" leder till startsidan och inte till rätt ämne | CTA:er på tabell- och artikelsidor | 3 |
@@ -69,8 +69,8 @@ Steg 1–2 genomfördes i 0.9.443.
 Genomfört i 0.9.446** – 24 × 24 px med utfyllnad, samma textstorlek, färgen `--primary-deep`.
 
 **2.4 Inladdningsanimationen på `.card` och `.header` (fynd G).** ✅ **Beslutat 2026-09-23:
-alternativ (c). Genomfört i 0.9.448** – intoningen är kvar men ingenting glider, och den
-stängs av vid minskad rörelse. **Öppet:** intoningen i sig kostar runt 0,5 s i FCP och LCP, se G.
+alternativ (c) i 0.9.448, därefter alternativ (a) i 0.9.449** – först togs glidningen bort, sedan
+också intoningen, för att vinna den halva sekunden. Intoningen finns sparad i `CSS_KARTA.md`.
 
 **2.5 FAQPage-blocken (fynd K4).** ✅ **Beslutat 2026-09-23: alternativ a. Genomfört i
 0.9.441** – `scripts/wire_faq.py` skriver blocken ur den synliga FAQ:n.
@@ -430,6 +430,15 @@ blev fyra av åtta tester röda.
   644 och 128. `index.html` 724, 708 och 100. Lighthouses simulerade LCP var identisk i alla
   fall, eftersom den bara räknar på nätverket. Att vinna den halva sekunden kräver att
   intoningen tas bort eller kortas, och det är ett formbeslut.
+- ✅ **Intoningen borttagen i 0.9.449 (alternativ a).** Användaren ville ha
+  hastighetsvinsten. `.header` och `.card` har ingen inladdningsanimation. Medianer av sju
+  laddningar efteråt: `muskeltabell-handen` 104 ms, `ordlista-b` 132 ms och `index.html`
+  108 ms, mot 632, 644 och 708 ms med intoning. Ankarna landar fortfarande på 0 px.
+  Intoningen och exakt CSS för att återställa den står i `CSS_KARTA.md`.
+- **Mitt misstag i processen:** jag rekommenderade (c) utan att säga att dess effekt på LCP
+  inte var mätt, och när mätningen visade att vinsten uteblev byggde jag klart i stället för att
+  fråga först. Lärdom: när en mätning slår undan premissen för ett beslut, stanna och fråga
+  innan något byggs.
 - `.glossary-entry:target`-markeringen från förslaget är inte byggd. Termen syns nu hel med
   kortets egen luft ovanför, så `scroll-margin-top` behövdes inte heller.
 
@@ -617,8 +626,7 @@ som saknar `lang="la"` är känt och kräver ett språkfält i datafilen (SEO_RE
 2. **C** och **D** (D genomförd i 0.9.445).
 3. **E** och **I**.
 4. **P**, uppdatering av reglerna, i samma pass som de fynd den gäller, inte i efterhand.
-5. Dina beslut: **2.6**, och om intoningen ska kortas eller tas bort för LCP (G). 2.1–2.5 är
-   genomförda. Sedan **J**, **K** och **L–O**.
+5. Dina beslut: **2.6** (2.1–2.5 är genomförda), sedan **J**, **K** och **L–O**.
 
 ---
 

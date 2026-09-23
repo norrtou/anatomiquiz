@@ -228,6 +228,23 @@ facit. Kör den efter varje facitändring.
 **Gäller inte** ord som redan täcks av en publicerad post i annan form — då integreras
 varianten i den befintliga posten med "även …" (se `ORDLISTA.md`), den får ingen egen post.
 
+### 0.7 Säg vad ett alternativ INTE ger – och stanna om en mätning ändrar svaret
+
+När du lägger fram alternativ för ett beslut ska varje alternativ säga vad det **inte** löser,
+och vad som inte är mätt. Ett alternativ som rekommenderas för att det "löser det mesta" får
+aldrig tyst tappa det som var hela poängen för användaren.
+
+Visar en mätning under arbetet att det valda alternativet inte ger det som beslutet byggde på:
+**stanna, berätta och fråga innan du bygger vidare.** Ett "gör C om du menar det är bäst" är
+ett villkor. Faller villkoret faller uppdraget.
+
+**Bakgrunden (0.9.448, 2026-09-23):** granskningen lovade en hastighetsvinst på en halv sekund
+om inladdningsanimationen togs bort. I chatten rekommenderade jag alternativ (c), att behålla
+intoningen men ta bort glidningen, utan att säga att vinsten med (c) var omätt. Mätningen
+visade sedan att intoningen var det som kostade tiden, och att (c) inte gav någon vinst alls.
+Jag byggde ändå klart och berättade det efteråt. Användaren fick be om en förklaring och välja
+om. Rättat i 0.9.449.
+
 ---
 
 ## 1. SPRÅK OCH TERMINOLOGI

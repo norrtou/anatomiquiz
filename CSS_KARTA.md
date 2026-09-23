@@ -139,6 +139,52 @@ automatiskt, så:
 - **Webbläsarens blå eller lila på en länk** betyder att regeln fallit bort – den ska
   aldrig synas någonstans på sajten.
 
+## Borttagen intoning på sidhuvud och kort – så återställs den
+
+**Beslut 2026-09-23 (0.9.449):** `.header` och `.card` har ingen inladdningsanimation. Användaren
+valde bort intoningen för att innehållet ska synas direkt, och bad att den sparas här ifall
+beslutet ändras. Återställ den **bara** på användarens begäran.
+
+**Så såg den ut (0.9.448):** sidhuvudet (sajtnamnet och sidans rubrik) och varje innehållskort
+tonades från osynligt till synligt när sidan laddades, på 0,6 s respektive 0,5 s och utan någon
+rörelse. I quizet på startsidan tonades varje vy in på samma sätt vid vybyte, eftersom varje vy
+är ett eget `.card`. Vid "minska rörelse" visades allt direkt.
+
+**Vad den kostar:** Chrome räknar inte text med opacitet 0 som ritad, så FCP och LCP väntar ut
+intoningen. Mätt i webbläsare, som median av sju laddningar: `muskeltabell-handen` 632 ms med
+intoning mot 104 ms utan, `ordlista-b` 644 mot 132 ms och `index.html` 708 mot 108 ms.
+
+**Exakt CSS för att återställa**, i `css/styles.css`. `@keyframes fadeIn` finns redan, eftersom
+quizfrågorna använder den:
+
+```css
+.header {
+  /* … befintliga rader … */
+  animation: fadeIn 0.6s ease-out;
+}
+
+.card {
+  /* … befintliga rader … */
+  animation: fadeIn 0.5s ease-out;
+  transition: all var(--transition);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header,
+  .card {
+    animation: none;
+  }
+}
+```
+
+Avstängningen vid minskad rörelse är obligatorisk: `scripts/test_inladdning.js` fäller annars.
+Hela versionen finns också i git, i commit `5877c489` (0.9.448).
+
+**Den ursprungliga glidningen (till och med 0.9.447) ska inte tillbaka.** Sidhuvudet gled ned
+20 px (`slideDown`, 0,6 s med studs) och korten upp 20 px (`fadeInUp`, 0,5 s) med `transform`.
+Då landade länkar till en ordlistepost 20 px för högt och termen klipptes. Testet fäller varje
+animation på `.header` och `.card` som flyttar något. Versionen finns i commit `b513a738`.
+
 ## ⚠️ `.hidden` är INTE en global utility – döljer bara vissa element
 
 Det finns **ingen** global `.hidden { display: none }` i projektet. `.hidden` fungerar
