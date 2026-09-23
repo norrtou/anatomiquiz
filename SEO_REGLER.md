@@ -845,6 +845,14 @@ PageSpeed-kravet "tillgänglighetsträdet korrekt formaterat" = **alla** a11y-gr
   `min-height: 24px` och rutorna kant i kant, så att avståndet mellan bokstäverna kommer från
   rutan och raden inte behöver egna mellanrum. Före 0.9.446 var bokstavsraden 3,9 × 17,9 px på
   alla 34 ordlistesidor; axe `target-size` fångade det, `check_kontrast.py` gör det inte.
+- **Nedtonat är inaktivt för alla, inte bara för musen.** En länk eller knapp som tonas ned
+  för att den inte går att använda just nu ska få `aria-disabled="true"` och `tabindex="-1"`,
+  och ett klick på den ska stoppas i skriptet. `pointer-events: none` räcker inte, eftersom
+  det bara stoppar musen. Ordlistans bokstavsrad tonade under en sökning ned bokstäver utan
+  träffar på det sättet, och de gick fortfarande att nå med Tab och följa med Enter, medan
+  skärmläsaren läste dem som vanliga länkar (rättat i 0.9.447, `updateAlphabet` i
+  `js/glossary.js`, testat i `scripts/test_ordlista_sok.js`). Först när elementet verkligen är
+  inaktivt gäller undantaget från kontrastkravet för nedtonad text.
 - Inga `tabindex > 0`. Formulärfält har `<label>`.
 - **Latinsk text märks `lang="la"`** — se §7b.
 

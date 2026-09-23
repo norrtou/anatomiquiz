@@ -75,7 +75,11 @@ function makeEl (tag = 'DIV') {
     textContent: '',
     dataset: {},
     _classes: new Set(),
+    _attrs: {},
     _listeners: {},
+    setAttribute (k, v) { this._attrs[k] = String(v) },
+    removeAttribute (k) { delete this._attrs[k] },
+    getAttribute (k) { return k in this._attrs ? this._attrs[k] : null },
     classList: {
       toggle (c, on) { on ? this._owner._classes.add(c) : this._owner._classes.delete(c) },
       contains (c) { return this._owner._classes.has(c) }
@@ -176,7 +180,13 @@ function makeWorld ({ page = 'a' } = {}) {
       await world.serve(DATA_URL, FULL_RAW)
     },
     rows: () => parseRows(results.innerHTML),
-    dimmed: () => chips.filter(c => c._classes.has('is-disabled')).map(c => c.dataset.group)
+    dimmed: () => chips.filter(c => c._classes.has('is-disabled')).map(c => c.dataset.group),
+    /** Klicka på en bokstav; true om klicket stoppades. */
+    click (chip) {
+      const ev = { stoppad: false, preventDefault () { this.stoppad = true } }
+      chip.fire('click', ev)
+      return ev.stoppad
+    }
   }
   return world
 }
@@ -450,6 +460,39 @@ async function main () {
     const w = makeWorld()
     await w.searchFully('appendicit')
     eq('exakt träff hamnar först', w.rows()[0].term, 'appendicit')
+  }
+
+  /* Nedtonad betyder inaktiv för alla, inte bara för musen (0.9.447). Förut
+     stoppade `pointer-events: none` bara klicket: länken låg kvar i
+     tabbordningen, Enter följde den och skärmläsaren läste en vanlig länk. */
+  {
+    const w = makeWorld()
+    await w.searchFully('ödem')
+    const nedtonade = w.chips.filter(c => c._classes.has('is-disabled'))
+    const aktiva = w.chips.filter(c => !c._classes.has('is-disabled'))
+    ok('nedtonad bokstav: aria-disabled="true" på varje',
+      nedtonade.length > 0 && nedtonade.every(c => c.getAttribute('aria-disabled') === 'true'))
+    ok('  och utanför tabbordningen (tabindex="-1")',
+      nedtonade.every(c => c.getAttribute('tabindex') === '-1'))
+    ok('  och ett klick på den stoppas (Enter, skärmläsarens bläddringsläge)',
+      nedtonade.every(c => w.click(c)))
+    ok('aktiv bokstav: varken aria-disabled eller tabindex',
+      aktiva.length > 0 && aktiva.every(c =>
+        c.getAttribute('aria-disabled') === null && c.getAttribute('tabindex') === null))
+    ok('  och ett klick på den går igenom', aktiva.every(c => !w.click(c)))
+
+    await w.type('')
+    ok('tömd sökruta: ingen bokstav är nedtonad', w.dimmed().length === 0)
+    ok('  ingen bär aria-disabled eller tabindex kvar',
+      w.chips.every(c => c.getAttribute('aria-disabled') === null && c.getAttribute('tabindex') === null))
+    ok('  och alla klick går igenom igen', w.chips.every(c => !w.click(c)))
+  }
+  {
+    const w = makeWorld()
+    await w.searchFully('zzzqqq')
+    ok('inga träffar: varje bokstav inaktiv på alla sätt',
+      w.chips.every(c => c._classes.has('is-disabled') &&
+        c.getAttribute('aria-disabled') === 'true' && c.getAttribute('tabindex') === '-1' && w.click(c)))
   }
 
   /* =========================================================================

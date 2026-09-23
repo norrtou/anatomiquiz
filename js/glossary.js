@@ -535,12 +535,25 @@ function renderResults(data, query, currentPage) {
  * Tonar ned grupper i alfabetsraden som saknar sökträffar. <span>-chips
  * (grupper helt utan sida) förblir alltid nedtonade. present === null
  * återställer alla <a>-chips till aktiva (ingen aktiv sökning).
+ *
+ * Nedtonad betyder inaktiv för alla, inte bara för musen (0.9.447). Förut
+ * stoppade `pointer-events: none` i glossary.css bara klicket: länken låg kvar
+ * i tabbordningen, Enter följde den och skärmläsaren läste en vanlig länk. Nu
+ * läses den som otillgänglig (aria-disabled, samma som <span>-chipsen), lämnar
+ * tabbordningen, och ett klick på den stoppas i init().
  */
 function updateAlphabet(present) {
   document.querySelectorAll('#glossaryAlphabet .glossary-alpha').forEach(el => {
     if (el.tagName !== 'A') return // saknar sida → alltid nedtonad
     const active = present === null || present.has(el.dataset.group)
     el.classList.toggle('is-disabled', !active)
+    if (active) {
+      el.removeAttribute('aria-disabled')
+      el.removeAttribute('tabindex')
+    } else {
+      el.setAttribute('aria-disabled', 'true')
+      el.setAttribute('tabindex', '-1')
+    }
   })
 }
 
@@ -576,6 +589,15 @@ function init() {
   function draw() {
     renderResults(data, input.value, currentPage)
   }
+
+  // En nedtonad bokstav är utanför tabbordningen, men en skärmläsare i
+  // bläddringsläge kan fortfarande aktivera den. Det klicket stoppas här.
+  document.querySelectorAll('#glossaryAlphabet .glossary-alpha').forEach(el => {
+    if (el.tagName !== 'A') return
+    el.addEventListener('click', ev => {
+      if (el.getAttribute('aria-disabled') === 'true') ev.preventDefault()
+    })
+  })
 
   /**
    * Steg 2 i bakgrunden. Startas vid första sökningen, inte vid fokus: en tapp

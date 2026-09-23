@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.447
+- **Nedtonade bokstäver i ordlistans bokstavsrad är inaktiva på alla sätt, inte bara för musen.** Under en sökning tonas bokstäver utan träffar ned, och `pointer-events: none` hindrade att de klickades med mus. Men de låg kvar i tabbordningen, Enter följde länken och skärmläsaren läste dem som vanliga länkar. Mätt med sökningen "ödem": Tab nådde 16 nedtonade bokstäver, och Enter tog en till en sida utan träffar.
+- **Nu får en nedtonad bokstav `aria-disabled="true"` och `tabindex="-1"`**, precis som de bokstäver som saknar sida, och ett klick på den stoppas i skriptet. Det gäller även ett klick från en skärmläsare i bläddringsläge, som kan nå element utanför tabbordningen. När sökrutan töms försvinner båda attributen, och alla 32 bokstäver går att nå igen.
+- **Verifierat i webbläsare i båda teman:** Tab når 0 nedtonade bokstäver (16 förut), Enter på en nedtonad bokstav gör ingenting, och axe går från 1 kontrastfel i raden under sökning till 0. Nedtonad text är undantagen från kontrastkravet bara när elementet verkligen är inaktivt, och det är det nu.
+- **Test:** `scripts/test_ordlista_sok.js` har 9 nya kontroller: nedtonad bokstav, aktiv bokstav, tömd sökruta och sökning utan träffar. Fyra av dem fälldes av koden före ändringen. Nu 92 gröna.
+- **Regel:** SEO_REGLER §7 säger att nedtonat ska vara inaktivt för alla, och att `pointer-events: none` inte räcker.
+
 ## 0.9.446
 - **Ordlistans bokstavsrad går att träffa och läsa: varje bokstav är minst 24 × 24 px och har sajtens mörkare gröna.** Före var bokstäverna 17,9 px höga och "I" 3,9 px bred, med 6 px mellanrum, på alla 34 ordlistesidor. WCAG 2.2 2.5.8 och SEO_REGLER §7 kräver 24 × 24 px. Färgen `--primary` gav 2,54:1 mot kortet i ljust läge. Nu gäller `--primary-deep`, 5,48:1, och hover `--primary-deepest`, samma som sajtens övriga länkar.
 - **Texten har samma storlek som förut (12,8 px).** Ytan växer med utfyllnad, inte med bokstaven. Rutorna ligger kant i kant, så avståndet mellan bokstäverna kommer från rutan och raden behöver inga egna mellanrum.

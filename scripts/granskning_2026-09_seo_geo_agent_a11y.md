@@ -380,8 +380,12 @@ ordlistelänkar i tabellceller på en sida.
   men den posten används bara för regler med genomskinlig bakgrund, och den regeln hade tappat
   sin. Posten såg ut som ett mått men mätte ingenting. Skriptet stoppar nu på döda
   `BAKGRUND`-poster, och raden och indexkorten mäts via `TEXT_PÅ_YTOR` (237 mätpunkter).
-- **Kvar, inte rört:** under en sökning tonas bokstäver utan träffar ned till 35 % och kan
-  inte klickas med mus, men de går fortfarande att nå och följa med tangentbordet.
+- ✅ **Nedtoningen under sökning, 0.9.447:** bokstäver utan träffar tonades ned och gick inte
+  att klicka med mus, men de gick fortfarande att nå med Tab och följa med Enter, och
+  skärmläsaren läste dem som vanliga länkar. Nu får de `aria-disabled` och `tabindex="-1"`,
+  och ett klick på dem stoppas. Renderat med sökningen "ödem": Tab nådde 16 nedtonade
+  bokstäver före och 0 efter, Enter följde länken före men inte efter, och axe gick från 1
+  kontrastfel i raden till 0.
 
 ### G. Inladdningsanimationen flyttar innehåll och skjuter upp LCP — prioritet 2
 
