@@ -1114,6 +1114,35 @@ stod kvar på `0.9.236`, och felet syntes inte i något av de svep som kördes, 
 ### E. Aldrig
 - [ ] Ändra en redan publicerad/indexerad **URL**.
 - [ ] Lämna `sitemap.xml`, `llms.txt` eller korslänkar osynkade med verkligheten.
+- [ ] Ta bort `.nojekyll`, eller lägga till `_config.yml` eller front matter för att få
+      Jekyll att bygga något (§11 F).
+
+### F. Ny `.md`-fil (regel, dokument, backlogg, facit, rapport)
+
+**Skriv den var som helst i repot, som vanlig Markdown — den blir aldrig en sida på sajten.**
+Det är `.nojekyll` i roten som gör det: GitHub Pages kör då inte Jekyll, och en `.md` serveras
+som den rå textfil den är. Ingen sidhuvud, ingen titel, ingen description, ingen länk från
+någon sida och ingen post i `sitemap.xml` eller `llms.txt`.
+
+- **Behöver innehållet vara en sida på sajten skrivs det som HTML** enligt §1 och §11 A–B,
+  inte som en `.md` som Jekyll får göra om. En sida som byggts av Jekyll saknar CSP,
+  canonical, sidfot, JSON-LD och språkmärkning, och ingen kontroll i kedjan ser den.
+- **Filen är ändå publik**, som allt i repot: den kan läsas som råtext på
+  `anatomiquiz.se/<sökväg>.md` och på GitHub. Skriv därför aldrig något i en `.md` som inte
+  tål att läsas av vem som helst (CLAUDE_REGLER §3.6 gäller fullt ut).
+- **`CHANGELOG.md` är den enda `.md` som sajten läser**, som text via `js/changelog.js` på
+  `versionshistorik.html`. Den fungerar tack vare att filen serveras rå.
+
+**Varför regeln finns:** utan `.nojekyll` gör GitHub Pages standardtillägg
+`jekyll-optional-front-matter` varje `.md` till en HTML-sida med GitHubs standardtema. När
+det upptäcktes i granskningen 2026-09-22 låg 23 sådana sidor publikt och indexerbara —
+CLAUDE_REGLER, SEO_REGLER, backloggarna i `scripts/` och `CHANGELOG.html` på 1,6 MB —
+märkta som engelska, med samma description och med appens gamla namn i `RELEASE_NOTES`.
+Ingen kontroll kunde se dem, eftersom inget i repots HTML ändrades när de skapades.
+
+**Skyddet:** `scripts/check_links.py` stoppar om `.nojekyll` saknas i arbetskopian, och
+`.githooks/pre-commit` stoppar varje commit — även en merge — där filen saknas i det som
+committas.
 
 ---
 

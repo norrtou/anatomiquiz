@@ -21,6 +21,17 @@ stoppa() {
 
 stageade=$(git diff --cached --name-only --diff-filter=ACM)
 
+# --- .nojekyll måste finnas i det som committas (SEO_REGLER §11 F) ----------
+# Utan filen kör GitHub Pages Jekyll och publicerar varje .md i repot som en
+# egen HTML-sida på domänen — 23 stycken när det upptäcktes 2026-09-22. Kollen
+# läser indexet, inte arbetskopian: det är det som committas som publiceras.
+# Den körs på varje commit, även merge, eftersom en merge lika gärna kan ta
+# bort filen.
+git cat-file -e :.nojekyll 2>/dev/null || stoppa \
+  ".nojekyll saknas i commiten (SEO_REGLER §11 F)." \
+  "Utan den gör GitHub Pages varje .md till en publik HTML-sida." \
+  "Återställ den tomma filen:  : > .nojekyll && git add .nojekyll"
+
 # --- Version + CHANGELOG för VARJE commit (SEO_REGLER §11 A, §12) -----------
 # Kedjan i §11 A är avbockad först när versionen är satt med bump_version.py
 # OCH CHANGELOG.md bär en post för just den versionen. §12 kör den avbockningen

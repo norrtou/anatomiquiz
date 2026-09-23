@@ -27,6 +27,13 @@ länkar) fram till dess.
 Arkivfiler (`_ARCHIVED*`, `_arkiv/`) får inte ligga publikt — punkt 3 i samma
 svep tog bort 253 KB som ingen sida länkade till men som låg utlagt ändå.
 
+`.nojekyll` måste ligga i roten (0.9.442). Utan den kör GitHub Pages Jekyll, som
+gör VARJE `.md` i repot till en egen HTML-sida på domänen — i granskningen
+2026-09-22 var det 23 sidor: regelverket, backloggen och en changelog på 1,6 MB,
+indexerbara, märkta som engelska och med samma description. Det är en fil som
+skapar sidor utan att någon HTML i repot ändras, och därför kan ingen annan
+kontroll här se det (SEO_REGLER §11 F).
+
 Användning:
     python3 scripts/check_links.py          # exit 1 vid första bristen
     python3 scripts/check_links.py -v       # lista allt som kontrollerades
@@ -174,7 +181,14 @@ def main(argv):
         if "_arkiv" not in p.parts:
             brister.append(f"{p.relative_to(ROOT)}: arkivfil ligger publikt")
 
-    # 6. Tooltip-facit, läst direkt ur JSON i stället för ur någon sida.
+    # 6. `.nojekyll` i roten. Saknas den gör GitHub Pages varje .md till en
+    # sida — utan att något i sidorna ändras, så inget annat här larmar.
+    if not (ROOT / ".nojekyll").is_file():
+        brister.append(".nojekyll saknas i roten — GitHub Pages kör då Jekyll och "
+                       "publicerar varje .md i repot som en HTML-sida "
+                       "(SEO_REGLER §11 F). Återställ den tomma filen.")
+
+    # 7. Tooltip-facit, läst direkt ur JSON i stället för ur någon sida.
     #
     # Ordningen är avsiktlig: formen kontrolleras FÖRE ankaret. En href som
     # saknar fragment eller pekar utanför ordlistan hade annars rapporterats

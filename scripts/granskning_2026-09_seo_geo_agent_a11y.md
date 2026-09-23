@@ -56,8 +56,9 @@ Förslagen nedan ändrar sajtens utseende, publicering eller policy. Enligt CLAU
 och förra svepets regel ska sådant läggas fram men inte byggas oombett. Varje punkt har sitt
 eget stycke.
 
-**2.1 `.nojekyll` i roten (fynd A).** Tar bort de 23 HTML-versionerna av regel-, todo- och
-changelogfilerna från domänen. Råfilerna (`.md`) ligger kvar publikt precis som i dag.
+**2.1 `.nojekyll` i roten (fynd A).** ✅ **Beslutat 2026-09-23. Genomfört i 0.9.442** –
+`.nojekyll` finns, regeln för nya `.md` står i SEO_REGLER §11 F, och både `check_links.py`
+och pre-commit-hooken stoppar om filen försvinner.
 
 **2.2 Egen länkfärg för innehållslänkar (fynd B, steg 3).** Steg 1–2 lagar kontrasten utan
 att något syns för den som har samma läge i telefonen som på sajten. Steg 3 ger länkarna en
@@ -178,6 +179,9 @@ länkar dit, men insatsen är minimal.
   varje commit.
 - Regeldokument: SEO_REGLER §11 E bör få en rad om att `.nojekyll` aldrig får tas bort.
 - **Den här rapporten** blir själv en publik sida om den når `main` innan filen finns.
+
+✅ **Genomfört i 0.9.442** enligt förslaget ovan, med regel i SEO_REGLER §11 F och skydd i
+`check_links.py` och `.githooks/pre-commit`.
 
 **Alternativ som avråds:** `_config.yml` med `exclude:`. Listan måste hållas i synk med varje
 ny `.md`-fil och glömmer tyst den som inte står där, alltså CLAUDE_REGLER §0.4.

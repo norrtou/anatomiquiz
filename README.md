@@ -28,6 +28,8 @@ Anatomiquiz är byggd och skriven av Daniel Medin – **[norrtou.se](https://nor
 
 Statisk sajt (HTML, CSS och vanilla JavaScript) som körs på GitHub Pages med egen domän. Frågor, ordlista och tabeller ligger som JSON i `data/` och renderas i klienten; ordlistan förrenderas dessutom till en sida per bokstav med `scripts/generate_glossary.py`.
 
+Sajten byggs **utan Jekyll**: den tomma filen `.nojekyll` i roten gör att GitHub Pages serverar filerna precis som de ligger. Utan den hade varje `.md` i repot publicerats som en egen HTML-sida. Filen får aldrig tas bort; se `SEO_REGLER.md` §11 F.
+
 Ordlistans syfte, datamodell och arbetsgång beskrivs i **[ORDLISTA.md](ORDLISTA.md)**.
 
 ### IndexNow (sökmotor-ping)
