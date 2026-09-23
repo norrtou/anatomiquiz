@@ -61,7 +61,8 @@ eget stycke.
 och pre-commit-hooken stoppar om filen försvinner.
 
 **2.2 Egen länkfärg för innehållslänkar (fynd B, steg 3).** Steg 1–2 lagar kontrasten utan
-att något syns för den som har samma läge i telefonen som på sajten. Steg 3 ger länkarna en
+att något syns för den som har samma läge i telefonen som på sajten (✅ **genomfört i
+0.9.443**; steg 3 är fortfarande öppet). Steg 3 ger länkarna en
 färg ur sajtens palett i stället för webbläsarens blå, och det är ett formbeslut.
 
 **2.3 Större träffytor i ordlistans bokstavsrad (fynd F).** Utfyllnad runt bokstäverna, inte
@@ -217,6 +218,12 @@ Det är en ny ytform av kontrastfelet (CLAUDE_REGLER §0.2).
    den redan skriver `theme-color`. Då målas även den första bildrutan innan CSS:en laddats
    i rätt läge, och den som har ljust tema i en mörk telefon slipper en mörk blixt.
 3. *(Ditt beslut, 2.2)* En gemensam länkfärg för innehållslänkar, som en token i paletten.
+
+✅ **Steg 1–2 genomförda i 0.9.443.** 471 länkar på 106 sidor gick ned till 0. Ljus sajt i
+mörk telefon renderas nu identiskt med ljus sajt i ljus telefon, och likadant för mörkt, på
+alla 130 sidor. Det är mätt på varje länks och formulärdels färg och med skärmbilder pixel
+för pixel. Skyddet ligger i `test_theme.js`, och regeln står i SEO_REGLER §7c. Steg 3 är
+fortfarande ditt beslut.
 
 **Konsekvenser.**
 - Steg 1–2 rör bara `styles.css` och `theme.js`. `bump_version.py` sätter om cachebustern på

@@ -117,6 +117,16 @@
   /* Transitions */
   --transition-fast: 0.15s ease;
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Webbläsarens EGNA färger – länkar utan egen färg, formulärdelar,
+     rullister – ska följa SAJTENS tema, inte telefonens. Sidorna bär
+     <meta name="color-scheme" content="light dark">, och utan den här raden
+     valde webbläsaren sina standardfärger efter telefonens läge: ljus sajt i
+     mörk telefon gav länkar i #9e9eff på vitt (2,4:1), mörk sajt i ljus
+     telefon #0000ee på mörkgrönt (1,7:1). 471 länkar på 106 sidor, och
+     check_kontrast.py kunde inte se det, eftersom färgerna inte står i någon
+     regel (0.9.443, SEO_REGLER §7c). Ljust är förval även utan JS. */
+  color-scheme: light;
 }
 
 /* ============================================================================
@@ -135,6 +145,9 @@
    ============================================================================ */
 
 :root[data-theme="dark"] {
+  /* Webbläsarens egna färger i mörk version – se color-scheme i :root ovan. */
+  color-scheme: dark;
+
   /* Gröna toner ljusnar: --primary-deep är TEXTFÄRG på 64 ställen och måste
      läsas mot mörk yta. Knappens botten ligger kvar mörk i --btn-primary-*. */
   --primary: #34d399;

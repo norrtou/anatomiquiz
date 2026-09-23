@@ -50,6 +50,13 @@
     // Webbläsarens adressfält/statusrad följer med.
     var meta = document.querySelector('meta[name="theme-color"]')
     if (meta) meta.setAttribute('content', theme === 'dark' ? '#0e1a15' : '#10b981')
+    // Webbläsarens egna färger (länkar, formulär, rullister, bakgrunden innan
+    // stilmallen hunnit laddas) följer sajtens tema och inte telefonens.
+    // Sidorna bär "light dark", vilket lät en mörk telefon ge ljus sajt
+    // ljuslila standardlänkar (2,4:1). styles.css sätter samma sak med
+    // color-scheme; den här raden gäller redan före första målningen.
+    var schema = document.querySelector('meta[name="color-scheme"]')
+    if (schema) schema.setAttribute('content', theme)
   }
 
   var pref = read()

@@ -85,9 +85,11 @@ Varje indexerbar sida följer **samma ordning och samma element som `index.html`
   <link rel="canonical" href="https://anatomiquiz.se/SÖKVÄG.html">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
-  <!-- Webbläsartema -->
+  <!-- Webbläsartema. Metan FÖRE theme.js: skriptet skriver om båda till sajtens
+       tema innan första målningen (§7c, "Webbläsarens egna färger"). -->
   <meta name="theme-color" content="#10b981">
-  <meta name="color-scheme" content="light">
+  <meta name="color-scheme" content="light dark">
+  <script src="/js/theme.js?v=X.Y.Z"></script>
 
   <!-- Open Graph -->
   <meta property="og:type" content="article">         <!-- "website" för hub-/landningssidor -->
@@ -945,6 +947,38 @@ någon ser det — det var felet i `.answer-btn.correct` (rätt svar, 1,92:1),
 mot mintbakgrunden, kravet för stor text är 3:1). Att mörka ner den ändrar hela
 startsidans uttryck och är ett designbeslut, inte en metadataförbättring — samma
 gräns som `reviewedBy` (§6e) och `license` (punkt 14) drar.
+
+### Webbläsarens egna färger följer sajtens tema — inte telefonens
+
+Allt som sajten inte färgsätter själv – länkar utan egen färg, formulärdelar, rullister,
+sidans bakgrund innan stilmallen laddats – får webbläsarens standardfärger. De väljs efter
+`color-scheme`, och därför sätts den **alltid till sajtens tema**:
+
+```css
+:root                    { color-scheme: light; }   /* förval, gäller även utan JS */
+:root[data-theme="dark"] { color-scheme: dark;  }
+```
+
+och `js/theme.js` skriver det lösta temat till `<meta name="color-scheme">` före första
+målningen, på samma sätt som till `theme-color`. Metan måste därför stå **före** skriptet i
+`<head>` (§1).
+
+- **En ny sida med egen stilmall, eller ett nytt tema, ska göra samma sak.** Sätter en
+  stilmall `color-scheme` till något annat än temat får den ytan tillbaka felet.
+- **Varför det är en egen regel:** sidorna bär `content="light dark"`, som säger "båda går
+  bra" — och då valde webbläsaren efter *telefonens* läge. En mörk telefon gav den ljusa
+  sajten ljuslila standardlänkar (`#9e9eff` på vitt, **2,4:1**), och en ljus telefon gav den
+  mörka sajten blå (`#0000ee` på mörkgrönt, **1,7:1**). Det gällde **471 länkar på 106
+  sidor** och drabbade i praktiken alla som har telefonen i mörkt läge, eftersom sajtens
+  förval är ljust. Rättat i 0.9.443.
+- **Varför `check_kontrast.py` inte såg det:** skriptet räknar på färger som står i
+  CSS-regler, och standardfärgerna står inte i någon. Skyddet är i stället
+  `scripts/test_theme.js`, som fäller om `color-scheme` saknas i något av lägena eller om
+  `theme.js` slutar skriva metan. Testet körs av `check_generators.py`.
+- **Så verifierades det:** ljus sajt i mörk telefon renderas nu identiskt med ljus sajt i
+  ljus telefon, och likadant för mörkt, på alla 130 sidor – mätt på varje länks och
+  formulärdels färg och med skärmbilder pixel för pixel. Den som redan hade samma läge på
+  båda ser ingen skillnad.
 
 ---
 

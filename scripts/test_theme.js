@@ -8,7 +8,8 @@
    styrbar localStorage. Testerna träffar alltså den kod som levereras.
 
    Skalet fångar valet, utläsningen av 'auto', lagringen, att systembytet slår
-   igenom bara i auto-läge, att theme-color-metan följer med och att en trasig
+   igenom bara i auto-läge, att theme-color- och color-scheme-metan följer med,
+   att styles.css bär color-scheme per tema och att en trasig
    localStorage (privat läge) inte kastar. Det kan INTE fånga att paletten
    faktiskt är läsbar, att inget blinkar vid sidladdning eller att kontrasten
    räcker – det kräver visuell kontroll i webbläsare (CLAUDE_REGLER §13.1).
@@ -50,6 +51,7 @@ function makeWorld ({ stored = null, systemDark = false, brokenStorage = false, 
   }
 
   const meta = { _content: '#10b981', getAttribute: () => meta._content, setAttribute: (_k, v) => { meta._content = v } }
+  const schema = { _content: 'light dark', getAttribute: () => schema._content, setAttribute: (_k, v) => { schema._content = v } }
 
   const html = {
     _attrs: {},
@@ -69,7 +71,9 @@ function makeWorld ({ stored = null, systemDark = false, brokenStorage = false, 
     localStorage,
     document: {
       documentElement: html,
-      querySelector: (sel) => (withMeta && sel === 'meta[name="theme-color"]' ? meta : null)
+      querySelector: (sel) => (!withMeta ? null
+        : sel === 'meta[name="theme-color"]' ? meta
+          : sel === 'meta[name="color-scheme"]' ? schema : null)
     }
   }
   win.window = win
@@ -80,6 +84,7 @@ function makeWorld ({ stored = null, systemDark = false, brokenStorage = false, 
   return {
     html,
     meta,
+    schema,
     store,
     AQTheme: win.AQTheme,
     theme: () => html.getAttribute('data-theme'),
@@ -183,6 +188,28 @@ function makeWorld ({ stored = null, systemDark = false, brokenStorage = false, 
   ok('sida utan theme-color-meta kastar inte', !threw)
 }
 
+/* --- 6b. color-scheme-metan följer SAJTENS tema, inte telefonens ------------
+   Sidorna bär "light dark". Utan omskrivning valde webbläsaren sina egna
+   standardfärger efter telefonen: ljus sajt i mörk telefon gav länkar i
+   #9e9eff på vitt (2,4:1) på 106 sidor (0.9.443). */
+{
+  const w = makeWorld({ systemDark: true })
+  eq('förval ljust i MÖRK telefon → color-scheme light', w.schema.getAttribute(), 'light')
+  w.AQTheme.set('dark')
+  eq('valt mörkt → color-scheme dark', w.schema.getAttribute(), 'dark')
+  w.AQTheme.set('light')
+  eq('tillbaka till ljust → color-scheme light', w.schema.getAttribute(), 'light')
+}
+{
+  const w = makeWorld({ stored: 'dark', systemDark: false })
+  eq('valt mörkt i LJUS telefon → color-scheme dark', w.schema.getAttribute(), 'dark')
+}
+{
+  const w = makeWorld({ stored: 'auto', systemDark: false })
+  w.flipSystem(true)
+  eq('auto: systembyte till mörkt → color-scheme dark', w.schema.getAttribute(), 'dark')
+}
+
 /* --- 7. Privat läge / full kvot får inte kasta ------------------------------ */
 {
   let threw = false
@@ -218,6 +245,13 @@ function makeWorld ({ stored = null, systemDark = false, brokenStorage = false, 
   ok('  ingen kvarglömd @media prefers-color-scheme-dubblett',
     !/@media[^{]*prefers-color-scheme/.test(rules))
   ok('  bildplattan är ljus även i mörkt läge', /--image-plate:\s*#eef2f0/.test(css))
+  // Webbläsarens egna färger ska följa sajtens tema i BÅDA lägena. Utan raden
+  // i :root faller en sida utan JS tillbaka på telefonens läge; utan raden i
+  // mörkt läge får en mörk sajt i ljus telefon blå standardlänkar (1,7:1).
+  const rot = (rules.match(/(^|\n):root\s*\{[\s\S]*?\n\}/) || [''])[0]
+  const mork = (rules.match(/:root\[data-theme="dark"\]\s*\{[\s\S]*?\n\}/) || [''])[0]
+  ok('  :root sätter color-scheme: light', /color-scheme:\s*light\s*;/.test(rot))
+  ok('  mörkt läge sätter color-scheme: dark', /color-scheme:\s*dark\s*;/.test(mork))
 }
 
 /* --- Sammanfattning --------------------------------------------------------- */
