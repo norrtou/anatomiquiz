@@ -23,7 +23,7 @@ dem kan fångas av skript som läser HTML och CSS som text, och därför har de 
 | D | Lighthouse underkänner tillgänglighetsträdet för agenter p.g.a. tooltiplänkar i `<caption>` | 40 sidor | **1** – ✅ 0.9.445 |
 | E | Fokus hamnar på `<body>` vid varje vybyte i appen, utom i quizet | 9 vybyten | 2 |
 | F | Ordlistans bokstavsrad är för liten att träffa, och tre av länkarna har kontrast 2,5:1 | 33 sidor | 2 – ✅ 0.9.446 |
-| G | Inladdningsanimationen gör att länkar till en ordlistepost landar 20 px för högt, och den skjuter upp LCP med upp till 0,5 s | alla sidor | 2 |
+| G | Inladdningsanimationen gör att länkar till en ordlistepost landar 20 px för högt, och den skjuter upp LCP med upp till 0,5 s | alla sidor | 2 – ✅ (c) 0.9.448, LCP kvar |
 | H | `llms-full.txt` säger fortfarande att man väljer svårighetsgrad | 1 post | 2 – liten insats |
 | I | IndexNow skickar alla 129 URL:er vid varje publicering, även de som inte ändrats | varje push | 2 |
 | J | "Testa dig själv i quizet" leder till startsidan och inte till rätt ämne | CTA:er på tabell- och artikelsidor | 3 |
@@ -68,8 +68,9 @@ Steg 1–2 genomfördes i 0.9.443.
 **2.3 Större träffytor i ordlistans bokstavsrad (fynd F).** ✅ **Beslutat 2026-09-23.
 Genomfört i 0.9.446** – 24 × 24 px med utfyllnad, samma textstorlek, färgen `--primary-deep`.
 
-**2.4 Inladdningsanimationen på `.card` och `.header` (fynd G).** Sidorna slutar glida in. I
-gengäld landar länkar rätt och LCP sjunker med upp till 0,5 s (mätt 0,1–0,5 s beroende på sida).
+**2.4 Inladdningsanimationen på `.card` och `.header` (fynd G).** ✅ **Beslutat 2026-09-23:
+alternativ (c). Genomfört i 0.9.448** – intoningen är kvar men ingenting glider, och den
+stängs av vid minskad rörelse. **Öppet:** intoningen i sig kostar runt 0,5 s i FCP och LCP, se G.
 
 **2.5 FAQPage-blocken (fynd K4).** ✅ **Beslutat 2026-09-23: alternativ a. Genomfört i
 0.9.441** – `scripts/wire_faq.py` skriver blocken ur den synliga FAQ:n.
@@ -416,6 +417,22 @@ mätte bara med båda animationerna borttagna, och det går inte att säga hur m
 beror på opaciteten ensam. Det här rör bara CSS, så inga datum flyttas. CLS ligger kvar på 0, för
 transformer räknas inte som layoutskift, och det är därför felet inte syns i CLS-måttet.
 
+✅ **Alternativ (c) genomfört i 0.9.448.** `.header` och `.card` använder nu den befintliga
+`fadeIn` (bara opacitet). `slideDown` och `fadeInUp` är borttagna, och båda animationerna
+stängs av under `prefers-reduced-motion: reduce`. `scripts/test_inladdning.js` fäller om en
+av dem börjar flytta något igen eller om avstängningen försvinner. Mot den gamla stilmallen
+blev fyra av åtta tester röda.
+- **Ankarna:** `ordlista-b.html#term-brachium` och `ordlista-f.html#term-femur` landar nu på
+  0 px och ligger kvar där, med och utan minskad rörelse. Förut landade de på −20 px.
+- **LCP – nu mätt, och (c) hjälper inte:** Chrome räknar inte text med opacitet 0 som ritad,
+  så FCP och LCP väntar ut intoningen. Medianer av sju laddningar i webbläsare:
+  `muskeltabell-handen` 628 ms före, 632 med (c) och 116 utan animation. `ordlista-b` 652,
+  644 och 128. `index.html` 724, 708 och 100. Lighthouses simulerade LCP var identisk i alla
+  fall, eftersom den bara räknar på nätverket. Att vinna den halva sekunden kräver att
+  intoningen tas bort eller kortas, och det är ett formbeslut.
+- `.glossary-entry:target`-markeringen från förslaget är inte byggd. Termen syns nu hel med
+  kortets egen luft ovanför, så `scroll-margin-top` behövdes inte heller.
+
 ### H. Inaktuell uppgift i agentfilen — prioritet 2
 
 **Belägg.** `data/llms.json` → `llms-full.txt` säger om startsidan: "Välj utbildning, ämne,
@@ -600,7 +617,8 @@ som saknar `lang="la"` är känt och kräver ett språkfält i datafilen (SEO_RE
 2. **C** och **D** (D genomförd i 0.9.445).
 3. **E** och **I**.
 4. **P**, uppdatering av reglerna, i samma pass som de fynd den gäller, inte i efterhand.
-5. Dina beslut: **2.4 och 2.6** (2.1, 2.2, 2.3 och 2.5 är genomförda), sedan **J**, **K** och **L–O**.
+5. Dina beslut: **2.6**, och om intoningen ska kortas eller tas bort för LCP (G). 2.1–2.5 är
+   genomförda. Sedan **J**, **K** och **L–O**.
 
 ---
 

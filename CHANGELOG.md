@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.448
+- **Sidorna tonas in men glider inte längre, och länkar till en ordlisteterm landar rätt.** Sidhuvudet och innehållskorten gled 20 px på plats när sidan laddades, på 130 av 131 sidor. Webbläsaren hoppar till ett `#ankare` innan animationen är klar, så varje länk till en ordlistepost landade 20 px för högt och termen klipptes i överkant. Nu tonas båda in som förut men står still. Mätt: `ordlista-b.html#term-brachium` och `ordlista-f.html#term-femur` landar på 0 px i stället för −20 px, och termen syns hel.
+- **Minska rörelse respekteras.** Med `prefers-reduced-motion: reduce` visas sidhuvud och kort direkt, utan animation. Förut kördes den för alla. Spellägenas egna animationer stängdes redan av.
+- **Samma utseende i övrigt.** `.header` och `.card` använder den intoning som redan fanns (`fadeIn`), och de oanvända `slideDown` och `fadeInUp` är borttagna. I quizet tonas varje vy in som förut vid vybyte.
+- **Skyddet:** `scripts/test_inladdning.js`, 8 tester, fäller om animationen på `.header` eller `.card` börjar flytta något igen eller om avstängningen vid minskad rörelse försvinner. Mot den gamla stilmallen blev fyra röda. `check_generators.py` kör testet automatiskt.
+- **Mätt och inte lagat, ditt beslut:** intoningen i sig gör att Chrome räknar innehållet som ritat först när den är klar. Medianer av sju laddningar: `muskeltabell-handen` 632 ms med intoning mot 116 ms utan, `ordlista-b` 644 mot 128 ms. Den här ändringen påverkar inte det; före var det 628 och 652 ms. Lighthouses simulerade LCP ser inte skillnaden alls. Att vinna tiden kräver att intoningen tas bort eller kortas.
+- **Regel:** SEO_REGLER §8 säger att en inladdningsanimation tonar men aldrig flyttar och stängs av vid minskad rörelse. Den säger också vad en intoning kostar i LCP, och att mätningen aldrig ska luras.
+
 ## 0.9.447
 - **Nedtonade bokstäver i ordlistans bokstavsrad är inaktiva på alla sätt, inte bara för musen.** Under en sökning tonas bokstäver utan träffar ned, och `pointer-events: none` hindrade att de klickades med mus. Men de låg kvar i tabbordningen, Enter följde länken och skärmläsaren läste dem som vanliga länkar. Mätt med sökningen "ödem": Tab nådde 16 nedtonade bokstäver, och Enter tog en till en sida utan träffar.
 - **Nu får en nedtonad bokstav `aria-disabled="true"` och `tabindex="-1"`**, precis som de bokstäver som saknar sida, och ett klick på den stoppas i skriptet. Det gäller även ett klick från en skärmläsare i bläddringsläge, som kan nå element utanför tabbordningen. När sökrutan töms försvinner båda attributen, och alla 32 bokstäver går att nå igen.

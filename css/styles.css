@@ -349,23 +349,19 @@ main {
    HEADER & TYPOGRAPHY
    ============================================================================ */
 
+/* Sidhuvudet och korten tonas in, men flyttas inte (0.9.448). Förut gled de
+   20 px på plats med transform. Webbläsaren hoppar till ett #ankare innan
+   animationen är klar, så en länk till en ordlistepost landade 20 px för högt
+   och klippte termen, på alla 130 sidor. Rör heller aldrig `transform` i en
+   inladdningsanimation: CLS räknar inte transformer, så felet syns inte i
+   Lighthouse. Vid reducerad rörelse stängs båda av (se slutet av blocket
+   nedan). SEO_REGLER §7. */
 .header {
   display: flex;
   flex-direction: column;
   gap: 8px;
   margin-bottom: 32px;
-  animation: slideDown 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  animation: fadeIn 0.6s ease-out;
 }
 
 .header h1 {
@@ -594,7 +590,7 @@ main {
   box-shadow: var(--shadow);
   margin-bottom: 20px;
   border: 1px solid rgba(16, 185, 129, 0.1);
-  animation: fadeInUp 0.5s ease-out;
+  animation: fadeIn 0.5s ease-out;
   transition: all var(--transition);
 }
 
@@ -602,14 +598,10 @@ main {
   box-shadow: var(--shadow-lg);
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+@media (prefers-reduced-motion: reduce) {
+  .header,
+  .card {
+    animation: none;
   }
 }
 

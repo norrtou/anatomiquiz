@@ -93,7 +93,7 @@ def läs_sidodatum() -> dict[str, dict[str, str]]:
 # theme.js hängde på STYLES_V, styles.css ändrades i 0.9.264, och en
 # regenerering hade skrivit theme.js?v=0.9.264 på 33 sidor trots att
 # js/theme.js inte rörts sedan 0.9.260.
-STYLES_V = "0.9.444"        # css/styles.css
+STYLES_V = "0.9.448"        # css/styles.css
 THEME_V = "0.9.443"         # js/theme.js
 GLOSSARY_CSS_V = "0.9.446"  # css/glossary.css
 GLOSSARY_JS_V = "0.9.447"   # js/glossary.js

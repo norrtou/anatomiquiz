@@ -1048,6 +1048,20 @@ Mål: **CLS = 0**, snabb LCP, minimal payload.
 
 - **CLS 0:** sätt alltid `width`/`height` (eller `aspect-ratio`) på bilder/inbäddningar; injicera
   inget innehåll som skjuter layouten; ladda inga webbtypsnitt som orsakar omflöde.
+- **Inladdningsanimationer tonar, de flyttar aldrig.** En animation som körs när sidan laddas får
+  inte använda `transform` eller flytta något på annat sätt. Webbläsaren hoppar till ett
+  `#ankare` innan animationen är klar, så målet landar fel. `.card` och `.header` gled 20 px på
+  plats fram till 0.9.448, och varje länk till en ordlistepost landade då 20 px för högt och
+  klippte termen, på 130 sidor. **CLS räknar inte transformer**, så Lighthouse visade 0 hela
+  tiden. Varje sådan animation stängs också av under `prefers-reduced-motion: reduce`.
+  `scripts/test_inladdning.js` fäller båda felen för `.header` och `.card`.
+- **En intoning kostar tid innan innehållet räknas som ritat.** Chrome räknar inte text med
+  opacitet 0 som ritad, så FCP och LCP väntar ut intoningen. Mätt i webbläsare 2026-09-23:
+  `muskeltabell-handen` 632 ms med intoning mot 116 ms utan, och `ordlista-b` 644 mot 128 ms.
+  Lighthouses simulerade LCP ser inte skillnaden, eftersom den bara räknar på nätverket.
+  **Försök aldrig lura mätningen**, till exempel med en intoning som börjar på 0,01 i stället
+  för 0. Läsaren väntar lika länge ändå. Att behålla intoningen är ett formbeslut som kostar
+  runt en halv sekund.
 - **Minimal JS:** ladda bara `js/app.js` på sidor som behöver den, alltid med `defer`. Rena
   faktasidor ska helst ha **0 JS**.
 - **Inga externa resurser** (CSP `'self'`): inga CDN, fonter eller skript från andra origin.
