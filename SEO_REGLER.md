@@ -385,8 +385,8 @@ följts.
 **Grundkrav (vilka ord som ska ha tooltip):**
 
 - **KRITERIET ÄR MEDICINSKT/LATINSKT INNEHÅLL – inte fetstil.** Varje facklatinsk och
-  medicinsk **term** ska ha en `kb-term`-tooltip, i löptext, listor, rubriker och tabellceller.
-  Var INTE snål; "facit-only-minimum" räcker inte. Hellre en för mycket än en missad.
+  medicinsk **term** ska ha en `kb-term`-tooltip, i löptext, listor, rubriker och tabellceller
+  – men **aldrig i en tabellrubrik (`<caption>`)**, se nästa punkt. Var INTE snål; "facit-only-minimum" räcker inte. Hellre en för mycket än en missad.
   **`<strong>` är INTE kriteriet** – fetstil används också för pedagogisk betoning (meningar,
   FAQ-frågor, minnesramsor, personnamn) och de ska INTE wiras. Att alla missade ord råkade
   vara fetmarkerade i en viss artikel var en tillfällighet. Använd `<strong>`-listan som ett
@@ -397,6 +397,17 @@ följts.
   ta ett av orden eller dela upp den i lösa intilliggande tooltips. Lägg multiordsnyckeln i
   facit; `wire_terms` väljer längsta match. Två **genuint separata** ord (t.ex.
   `abductor pollicis`) får däremot var sin tooltip.
+- **Tabellrubriker (`<caption>`) får ALDRIG innehålla tooltips – och ingen annan länk.** En
+  länk i `<caption>` fäller Lighthouses granskning av agentens tillgänglighetsträd (§9): axe-regeln
+  `aria-required-children`, som är kritisk, ser länken som ett barn som inte får stå i en tabell med
+  `role="table"` (§7 kräver den rollen på `.kb-mtable`). 145 tooltips i 98 rubriker fällde **40
+  sidor** tills 0.9.445, och gav dem 67 i stället för 100 i agentgranskningen. Chromes eget träd
+  var korrekt, men granskningen är kravet. `wire_terms.py` skyddar `<caption>` som zon **och tar
+  bort** varje kb-term som står där. Det behövs eftersom wiringen annars bara lägger till, och en
+  handskriven sida hade behållit sina rubriktooltips för alltid. Står någon **annan** länk i en
+  rubrik stoppar skriptet, för vad den ska bli är ett beslut. Termen står nästan alltid också i
+  tabellens celler eller i texten ovanför, och där får den sin tooltip. `sidodatum.py` räknar
+  inte borttagningen som en uppdatering (se `_caption_utan_tooltips`).
 - **Kort (`.kb-card`) får ALDRIG innehålla tooltips.** En `kb-term`-länk inuti ett kort stör
   klicket till målsidan – och blir en **nästlad `<a>`** i klickbara kort (ogiltig HTML). Gäller
   både `<a class="kb-card">` och `<div class="kb-card">` (placeholders). `wire_terms.py`
@@ -819,6 +830,7 @@ PageSpeed-kravet "tillgänglighetsträdet korrekt formaterat" = **alla** a11y-gr
 - Landmärken: `<main id="main">`, `<nav aria-label="…">`, `<header>`. Breadcrumb-`<nav>` med
   `aria-current="page"` på sista steget.
 - **Tabeller:** varje datatabell har `<caption>` **och** `<th scope="col">` (ev. `scope="row"`).
+  `<caption>` är ren text utan länkar, se §6c.
 - **Tabeller får ALDRIG kräva horisontell scroll/slider.** Breda tabeller (t.ex. muskeltabeller
   med 6 kolumner) ska vara **responsiva**: fast kolumnlayout som ryms på desktop och **stackas
   till kort på mobil** (≤720px) med fältetiketter via `data-label` + `td::before`. Använd klassen
@@ -1032,6 +1044,7 @@ granskning. Officiell Google-doc: **inget särskilt markup-/filkrav** utöver st
 robots-kontroller. **PageSpeed mäter tre kriterier – alla ska vara gröna:**
 
 1. **Tillgänglighetsträdet korrekt formaterat** → följ §7 (agenter läser DOM + a11y-trädet).
+   Granskningen kör axe-regler. En länk i en `<caption>` räcker för att fälla den (§6c).
 2. **Cumulative Layout Shift = 0** → följ §8.
 3. **llms.txt följer rekommendationerna** → uppdaterad vid varje ny sida (§11).
 

@@ -3,17 +3,17 @@
 
 Steg 2 efter sidgenerering: generatorerna (generate_glossary.py,
 generate_muskeltabeller.py m.fl.) skriver REN HTML utan tooltips. Detta skript
-wire:ar in `<a class="kb-term" …>`-länkar i löptext, rubriker, tabellceller och
-referenser – men ALDRIG i <head>/JSON-LD, brödsmulan eller befintliga <a>.
+wire:ar in `<a class="kb-term" …>`-länkar i löptext, rubriker och tabellceller – men
+ALDRIG i <head>/JSON-LD, brödsmulan, tabellrubriker (<caption>) eller befintliga <a>.
+Tooltips som redan står i en <caption> tas bort (avwira_captions).
 
 Körs OM efter varje gång en sida regenererats (regenerering nollställer
 tooltipsen). Skriptet är idempotent: befintliga kb-term/<a> hoppas över, så en
 redan wirad sida ändras inte.
 
-Termkälla = `data/kb_glossary_terms.json` (term → href + kort definition).
-Den filen byggs av build_terms() ur de redan wirade sidorna (facit) + en
-kurerad utökning för anatomitermer som är nya för en sida. Håll href/def
-byte-identiska mot js/glossary.js-ankarna.
+Termkälla = `data/kb_glossary_terms.json` (term → href + kort definition),
+kallad facit. Den underhålls för hand och läses aldrig tillbaka ur de wirade
+sidorna. Håll href/def byte-identiska mot js/glossary.js-ankarna.
 
 Definitionerna kvalitetssäkras vid källan: skriptet VÄGRAR köra om någon `def` i
 facit är en tom tooltip (upprepar uppslagsordet, är det böjt, är enbart latin-
@@ -298,7 +298,8 @@ def wire_html(html, terms, rx, stats=None):
             # gör det inte — och blir ett ord i den någonsin en facitnyckel
             # hade blocket sett olika ut från sida till sida (SEO_REGLER §6f).
             is_kb_seealso = bool(re.search(r'class="kb-seealso[ "]', attrs))
-            if (name in ("head", "script", "style") or is_breadcrumb_nav
+            # Tabellrubriken (<caption>) får inga tooltips — se avwira_captions.
+            if (name in ("head", "script", "style", "caption") or is_breadcrumb_nav
                     or (is_kb_card and name != "a")
                     or (is_kb_sources and name != "a")
                     or (is_page_updated and name != "a")
@@ -310,6 +311,49 @@ def wire_html(html, terms, rx, stats=None):
         out.append(m.group(0))
         i = m.end()
     return "".join(out)
+
+# En tooltip i en tabellrubrik gör tabellen ogiltig för Lighthouse. axe-regeln
+# aria-required-children (kritisk) ser länken i <caption> som ett barn som inte
+# får stå i en tabell med role="table", och den regeln ingår i granskningen av
+# agentens tillgänglighetsträd, som §9 kräver ska vara grön. 145 länkar i 98
+# rubriker på 49 sidor fällde 40 sidor (0.9.445). Chromes eget träd var rätt,
+# men granskningen är kravet. Termen står nästan alltid också i tabellens celler
+# eller i texten ovanför, och där behåller den sin tooltip.
+#
+# Att skydda zonen räcker inte: wire_html lägger till men tar aldrig bort, så
+# länkar som redan står i en rubrik – på handskrivna sidor för alltid – hade
+# legat kvar. Därför tas de bort här, före wiringen, på varje sida varje gång.
+CAPTION_RX = re.compile(r"(<caption\b[^>]*>)(.*?)(</caption>)", re.S | re.I)
+CAPTION_TERM_RX = re.compile(
+    r'<a class="kb-term" href="[^"]*" data-def="[^"]*">([^<]*)</a>')
+
+
+class OkändCaptionlänk(Exception):
+    """En länk i <caption> som avwira_captions inte känner igen."""
+
+
+def avwira_captions(html, stats=None):
+    """Ta bort kb-term-omslaget i varje <caption> och behåll ordet.
+
+    Stoppar (OkändCaptionlänk) om en rubrik innehåller någon annan länk än en
+    kb-term i sin vanliga form. En sådan länk bryter granskningen på samma sätt,
+    men vad den ska bli i stället är ett beslut, inte något som ska gissas
+    (CLAUDE_REGLER §0.4).
+    """
+    def ordet(t):
+        if stats is not None:
+            k = t.group(1).lower()
+            stats[k] = stats.get(k, 0) + 1
+        return t.group(1)
+
+    def repl(m):
+        öppna, inre, stäng = m.groups()
+        ny = CAPTION_TERM_RX.sub(ordet, inre)
+        if re.search(r"<a\b", ny, re.I):
+            raise OkändCaptionlänk(re.sub(r"\s+", " ", inre).strip()[:160])
+        return öppna + ny + stäng
+    return CAPTION_RX.sub(repl, html)
+
 
 def _sub(text, rx, terms, stats):
     def repl(mo):
@@ -349,7 +393,12 @@ def säkra_tooltipskript(html, rel):
         f"  {TOOLTIP_KOMMENTAR}\n  {TOOLTIP_SKRIPT}\n\n</body>", 1)
 
 
-def wire_file(path, terms, rx, write=True):
+def wire_file(path, terms, rx, write=True, avwirade=None):
+    """Wira en sida. Returnerar (antal lagda, {nyckel: antal}).
+
+    `avwirade`, om en dict skickas med, fylls med tooltips som togs bort ur
+    tabellrubriker. Returvärdet hålls oförändrat för generatorerna som anropar.
+    """
     path = pathlib.Path(path)
     spärr = BLOCKERADE_PER_SIDA.get(_rel(path))
     if spärr:
@@ -357,7 +406,15 @@ def wire_file(path, terms, rx, write=True):
         rx = build_regex(terms)
     html = path.read_text(encoding="utf-8")
     stats = {}
-    new = säkra_tooltipskript(wire_html(html, terms, rx, stats), _rel(path))
+    try:
+        rensad = avwira_captions(html, avwirade)
+    except OkändCaptionlänk as e:
+        raise SystemExit(
+            f"STOPP: {_rel(path)} har en länk i en tabellrubrik (<caption>) som "
+            f"inte är en vanlig kb-term:\n  {e}\nTabellrubriker ska vara ren "
+            "text (SEO_REGLER §6c). Flytta länken till tabellen eller texten "
+            "ovanför.")
+    new = säkra_tooltipskript(wire_html(rensad, terms, rx, stats), _rel(path))
     n = sum(stats.values())
     if write and new != html:
         path.write_text(new, encoding="utf-8")
@@ -541,19 +598,30 @@ def main(argv):
     else:
         files = [ROOT / a for a in argv]
 
-    tot = 0
+    tot = tot_av = 0
     for f in files:
-        n, stats = wire_file(f, terms, rx, write=not check)
+        av = {}
+        n, stats = wire_file(f, terms, rx, write=not check, avwirade=av)
         tot += n
+        n_av = sum(av.values())
+        tot_av += n_av
         # Vid --check är tystnad det intressanta: bara sidor som skulle ändras
         # skrivs ut, så en ren körning ger ingen utdata alls.
         if not check:
-            print(f"  {f.relative_to(ROOT)}: {n} kb-term-länkar")
-        elif n:
-            print(f"  {f.relative_to(ROOT)}: {n} skulle läggas ({len(stats)} unika): "
-                  f"{', '.join(sorted(stats))}")
+            print(f"  {f.relative_to(ROOT)}: {n} kb-term-länkar"
+                  + (f", {n_av} borttagna ur tabellrubriker" if n_av else ""))
+        else:
+            if n:
+                print(f"  {f.relative_to(ROOT)}: {n} skulle läggas ({len(stats)} unika): "
+                      f"{', '.join(sorted(stats))}")
+            if n_av:
+                print(f"  {f.relative_to(ROOT)}: {n_av} skulle tas bort ur "
+                      f"tabellrubriker: {', '.join(sorted(av))}")
     verb = "skulle läggas" if check else "lagda"
     print(f"Totalt {tot} länkar {verb} i {len(files)} filer.")
+    if tot_av:
+        verb = "skulle tas bort" if check else "borttagna"
+        print(f"Totalt {tot_av} länkar {verb} ur tabellrubriker (<caption>).")
     return 0
 
 if __name__ == "__main__":

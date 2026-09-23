@@ -47,6 +47,7 @@ from jsonld import LD, ROOT, är_sidnod  # noqa: E402
 from relaterat import RX as RELATERAT_RX  # noqa: E402
 from sidfot import HISTORISKA_RX  # noqa: E402
 from sidfot import RX as SIDFOT_RX  # noqa: E402
+from wire_terms import CAPTION_RX, CAPTION_TERM_RX  # noqa: E402
 
 REGISTER = ROOT / "data" / "sidodatum.json"
 
@@ -93,6 +94,20 @@ CACHEBUSTER_RX = re.compile(r"\?v=[0-9]+\.[0-9]+\.[0-9]+")
 LANG_RX = re.compile(r' lang="la"')
 BLANKSTEG_RX = re.compile(r"\s+")
 
+# Tooltips i tabellrubriker (<caption>) togs bort på 49 sidor i 0.9.445
+# (wire_terms.avwira_captions). Ordet står kvar, bara länken runt det försvann.
+# Räknades det som en uppdatering hade alla 49 daterats om till den dagen –
+# mätt: 49 av 49. Tooltips är märkning precis som `lang="la"`, men strykningen
+# gäller MEDVETET bara rubrikerna: att stryka alla tooltips på sajten hade
+# ändrat vad varje tidigare wiring räknas som, och kunnat flytta datum bakåt på
+# sidor som ingen rört nu. Mönstren bor i wire_terms.py, som äger markupen.
+
+
+def _caption_utan_tooltips(html: str) -> str:
+    return CAPTION_RX.sub(
+        lambda m: m.group(1) + CAPTION_TERM_RX.sub(r"\1", m.group(2)) + m.group(3),
+        html)
+
 # "Se även"-blocket (wire_relaterat.py) är navigering, inte artikelinnehåll.
 # Det lades på 46 sidor samma dag och hade annars daterat om exakt de sidor
 # punkten finns för att lyfta — mätt genom att stänga av den här raden: 46
@@ -121,6 +136,7 @@ def normalisera(html: str) -> str:
       falska färskhetssignal den här normaliseringen finns för att undvika.
     * cachebusters — `?v=0.9.269` är en versionsbump, inte en ändring.
     * `lang="la"` — se LANG_RX ovan. Märkning för skärmläsare, inte innehåll.
+    * tooltips i tabellrubriker — se _caption_utan_tooltips ovan.
     * "Se även"-blocket — se RELATERAT_RX ovan. Navigering, inte artikeltext.
     * blankstegsskillnader — omindentering är inte en uppdatering.
     """
@@ -134,6 +150,7 @@ def normalisera(html: str) -> str:
     html = TIME_RX.sub("", html)
     html = CACHEBUSTER_RX.sub("?v=", html)
     html = LANG_RX.sub("", html)
+    html = _caption_utan_tooltips(html)
     return BLANKSTEG_RX.sub(" ", html).strip()
 
 

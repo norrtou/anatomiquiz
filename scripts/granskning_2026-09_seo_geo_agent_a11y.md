@@ -20,7 +20,7 @@ dem kan fångas av skript som läser HTML och CSS som text, och därför har de 
 | A | GitHub Pages publicerar 23 interna `.md`-dokument som HTML-sidor på anatomiquiz.se | 23 sidor | **1** – liten insats |
 | B | Länkar får webbläsarens standardfärg när telefonens läge och sajtens tema skiljer sig åt, med kontrast ned till 1,7:1 | 471 länkar på 106 sidor | **1** |
 | C | Verktygssidorna kan scrollas i sidled på mobil, och två artiklar vid 320 px | 5 sidor vid 390 px, 9 vid 320 px | **1** |
-| D | Lighthouse underkänner tillgänglighetsträdet för agenter p.g.a. tooltiplänkar i `<caption>` | 40 sidor | **1** |
+| D | Lighthouse underkänner tillgänglighetsträdet för agenter p.g.a. tooltiplänkar i `<caption>` | 40 sidor | **1** – ✅ 0.9.445 |
 | E | Fokus hamnar på `<body>` vid varje vybyte i appen, utom i quizet | 9 vybyten | 2 |
 | F | Ordlistans bokstavsrad är för liten att träffa, och tre av länkarna har kontrast 2,5:1 | 33 sidor | 2 |
 | G | Inladdningsanimationen gör att länkar till en ordlistepost landar 20 px för högt, och den skjuter upp LCP med upp till 0,5 s | alla sidor | 2 |
@@ -311,6 +311,21 @@ och avwira de 98 länkarna.
 - SEO_REGLER §6c säger "rubriker och tabellceller" och behöver ett uttryckligt undantag för
   `<caption>`, skrivet proaktivt enligt §0.
 
+✅ **Genomfört i 0.9.445.** `wire_terms.py` skyddar `<caption>` som zon och tar bort varje
+kb-term som redan står där; ordet står kvar som text. Det behövdes eftersom wiringen bara
+lägger till. En annan länk i en rubrik stoppar skriptet. 145 länkar i 98 rubriker på 49 sidor
+togs bort. axe över alla 131 sidor: `aria-required-children` gick från 84 tabeller på 40
+sidor till **0**, och övriga överträdelser är oförändrade. Lighthouse på
+`muskeltabell-handen`: Agentic Browsing 67 → **100**, tillgänglighet 95 → **100**.
+- **Datumen:** `sidodatum.py` stryker kb-term-omslaget, men bara inne i `<caption>`. Utan det
+  hade alla 49 sidor fått dagens datum. Nu flyttas **0** sidor, och samma normalisering mot
+  läget före ändringen ger också 0, så inget historiskt datum ändras. Att stryka alla tooltips
+  hade ändrat vad varje tidigare wiring räknas som, och därför är strykningen avgränsad.
+- **Facit:** `build_terms()` finns inte längre. `data/kb_glossary_terms.json` underhålls för
+  hand och läses aldrig ur sidorna, så ingen nyckel kan tappas. Docstringen i `wire_terms.py`
+  som påstod något annat är rättad.
+- **Regler:** SEO_REGLER §6c (undantaget med skäl), §7 (tabellrubrik är ren text) och §9.
+
 ### E. Fokus försvinner vid vybyten i appen — prioritet 2
 
 **Belägg.** Testat med tangentbordet i Chromium. När man aktiverar Inställningar, Tillbaka,
@@ -561,7 +576,7 @@ som saknar `lang="la"` är känt och kräver ett språkfält i datafilen (SEO_RE
 
 1. **A** efter att det bekräftats live, **H**, och **B steg 1–2**. Alla tre är små, har ingen
    synlig påverkan och kräver inga beslut utöver 2.1.
-2. **C** och **D**, inklusive `KBTERM_RX` i `sidodatum.py` innan någon caption avwiras.
+2. **C** och **D** (D genomförd i 0.9.445).
 3. **E** och **I**.
 4. **P**, uppdatering av reglerna, i samma pass som de fynd den gäller, inte i efterhand.
 5. Dina beslut: **2.3, 2.4 och 2.6** (2.1, 2.2 och 2.5 är genomförda), sedan **J**, **K** och **L–O**.
