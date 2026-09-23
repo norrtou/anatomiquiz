@@ -60,10 +60,10 @@ eget stycke.
 `.nojekyll` finns, regeln för nya `.md` står i SEO_REGLER §11 F, och både `check_links.py`
 och pre-commit-hooken stoppar om filen försvinner.
 
-**2.2 Egen länkfärg för innehållslänkar (fynd B, steg 3).** Steg 1–2 lagar kontrasten utan
-att något syns för den som har samma läge i telefonen som på sajten (✅ **genomfört i
-0.9.443**; steg 3 är fortfarande öppet). Steg 3 ger länkarna en
-färg ur sajtens palett i stället för webbläsarens blå, och det är ett formbeslut.
+**2.2 Egen länkfärg för innehållslänkar (fynd B, steg 3).** ✅ **Beslutat 2026-09-23.
+Genomfört i 0.9.444** – länkar utan egen stil har sajtens gröna (`--primary-deep`, hover
+`--primary-deepest`, samma som `.info-link`) i stället för webbläsarens blå och lila.
+Steg 1–2 genomfördes i 0.9.443.
 
 **2.3 Större träffytor i ordlistans bokstavsrad (fynd F).** Utfyllnad runt bokstäverna, inte
 större text. Raden blir högre och kan bryta på fler rader på mobil.
@@ -222,8 +222,15 @@ Det är en ny ytform av kontrastfelet (CLAUDE_REGLER §0.2).
 ✅ **Steg 1–2 genomförda i 0.9.443.** 471 länkar på 106 sidor gick ned till 0. Ljus sajt i
 mörk telefon renderas nu identiskt med ljus sajt i ljus telefon, och likadant för mörkt, på
 alla 130 sidor. Det är mätt på varje länks och formulärdels färg och med skärmbilder pixel
-för pixel. Skyddet ligger i `test_theme.js`, och regeln står i SEO_REGLER §7c. Steg 3 är
-fortfarande ditt beslut.
+för pixel. Skyddet ligger i `test_theme.js`, och regeln står i SEO_REGLER §7c.
+
+✅ **Steg 3 genomfört i 0.9.444.** `:where(a:any-link)` i `styles.css` ger länkar utan egen
+färg sajtens gröna. Regeln har noll specificitet och vinner därför bara över webbläsarens
+standard; varje länk som redan hade en egen färg behåller den. Ingen ny palettvariabel.
+Renderat: 473 länkar i ljust läge hade webbläsarens färger (318 i artiklarnas brödtext, 80 i
+tabellceller, 33 i ordlistans källrad), nu 0. Lägsta kontrast är 4,99:1 i ljust läge och
+7,61:1 i mörkt. `check_kontrast.py` mäter nu regeln via `TEXT_PÅ_YTOR`, en ny form i
+skriptet, och stoppar både vid för låg kontrast och om selektorn försvinner.
 
 **Konsekvenser.**
 - Steg 1–2 rör bara `styles.css` och `theme.js`. `bump_version.py` sätter om cachebustern på
@@ -557,7 +564,7 @@ som saknar `lang="la"` är känt och kräver ett språkfält i datafilen (SEO_RE
 2. **C** och **D**, inklusive `KBTERM_RX` i `sidodatum.py` innan någon caption avwiras.
 3. **E** och **I**.
 4. **P**, uppdatering av reglerna, i samma pass som de fynd den gäller, inte i efterhand.
-5. Dina beslut: **2.2–2.6**, sedan **J**, **K** och **L–O**.
+5. Dina beslut: **2.3, 2.4 och 2.6** (2.1, 2.2 och 2.5 är genomförda), sedan **J**, **K** och **L–O**.
 
 ---
 

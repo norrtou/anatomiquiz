@@ -262,6 +262,23 @@ main {
   flex: 1;
 }
 
+/* Länkar utan egen stil – i brödtext, tabellceller, referenslistor, ordlistans
+   källrad – får sajtens gröna i stället för webbläsarens blå och lila. Samma
+   färg och hover som .info-link, alltså ingen ny palettvariabel (CSS_KARTA).
+   Understrykningen från webbläsaren ligger kvar: den skiljer länken från
+   texten runt om utan att färgen behöver göra det ensam (WCAG 1.4.1).
+
+   :where() ger regeln noll specificitet. Den vinner därför bara över
+   webbläsarens standard, och varje länk som redan har en egen färg – .btn,
+   .kb-term, .info-link, brödsmulor, kort – behåller den (0.9.444). */
+:where(a:any-link) {
+  color: var(--primary-deep);
+}
+
+:where(a:any-link:hover) {
+  color: var(--primary-deepest);
+}
+
 /* ============================================================================
    ACCESSIBILITY
    ============================================================================ */

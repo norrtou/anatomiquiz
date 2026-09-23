@@ -120,10 +120,24 @@ till en femte variabel med samma värde, det blir två sanningar att hålla i sy
 
 **Kontrollen körs, den bedöms inte:** `python3 scripts/check_kontrast.py` mäter varje
 yta som sätter både `color` och `background` i båda teman, plus gradienter som är
-textfyllning (`background-clip: text`), dämpad text vars botten sitter i en annan regel och
-bakgrunder inne i `@keyframes`. Den ingår i
-`check_generators.py`. Regeln med alla fem följdregler står i
+textfyllning (`background-clip: text`), dämpad text vars botten sitter i en annan regel,
+text i hel färg på kända ytor (`TEXT_PÅ_YTOR`) och bakgrunder inne i `@keyframes`. Den
+ingår i `check_generators.py`. Regeln med alla sex följdregler står i
 [`SEO_REGLER.md` §7c](SEO_REGLER.md).
+
+## Länkfärg: `:where(a:any-link)` ger klasslösa länkar sajtens gröna
+
+Länkar utan egen klass får `--primary-deep` (hover `--primary-deepest`) från en regel med
+**noll specificitet** i `styles.css` (0.9.444). Alla länkar med egen färg vinner över den
+automatiskt, så:
+
+- **Ny länk utan klass** → blir grön och understruken av sig själv. Gör ingenting.
+- **Ny länktyp med egen färg** → sätt färgen på klassen som vanligt; den vinner.
+- **Aldrig `a:hover`, `a:link` eller `a:visited` utan `:where()`.** De väger mer än en
+  klass (element + pseudoklass mot bara klass) och tar över färgen på `.btn` och andra
+  länkknappar – till exempel grön knapptext vid hover.
+- **Webbläsarens blå eller lila på en länk** betyder att regeln fallit bort – den ska
+  aldrig synas någonstans på sajten.
 
 ## ⚠️ `.hidden` är INTE en global utility – döljer bara vissa element
 

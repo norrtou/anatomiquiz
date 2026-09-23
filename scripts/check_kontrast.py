@@ -26,10 +26,10 @@ Ytan mäts **två gånger**, en gång per tema. I mörkt läge läggs eventuella
 så paletten faktiskt fungerar, och utan det hade kontrollen larmat om ytor som
 mörkt läge redan lagat.
 
-Fyra former mäts som annars hade sluppit undan: genomskinliga bottnar,
+Fem former mäts som annars hade sluppit undan: genomskinliga bottnar,
 halvgenomskinlig text vars botten sitter i en annan regel (`ÄRVD_BOTTEN`),
-gradient som textfyllning (`TEXT_PLATTOR`) och bakgrunder inne i `@keyframes`
-(`KEYFRAME_PLATTOR`).
+text i hel färg vars ytor är kända (`TEXT_PÅ_YTOR`), gradient som textfyllning
+(`TEXT_PLATTOR`) och bakgrunder inne i `@keyframes` (`KEYFRAME_PLATTOR`).
 
 ## Genomskinliga ytor
 
@@ -143,6 +143,19 @@ OMÄTBARA = {
 # mätningen i 0.9.280 just för att den inte sätter någon egen bakgrund.
 ÄRVD_BOTTEN = {
     ".glossary-top": ".glossary-letter",
+}
+
+# Text med HEL färg men utan egen bakgrund, där ytorna den ligger på är kända.
+# Nyckeln är selektorn, värdet de palettytor texten ligger på; den mäts mot var
+# och en i båda teman. Handskrivet, för vad som ligger bakom en regel går inte
+# att läsa ur regeln (§0.3). En nyckel som inte längre matchar någon regel
+# stoppar bygget, precis som en kvarglömd post i REDOVISADE.
+TEXT_PÅ_YTOR = {
+    # Länkar utan egen stil (0.9.444): i korten (--surface) och direkt på
+    # sidans bakgrund, som ordlistans källrad (--bg-main). Före 0.9.444 hade de
+    # webbläsarens blå och lila, som ingen regel här kunde se.
+    ":where(a:any-link)": ("--surface", "--bg-main"),
+    ":where(a:any-link:hover)": ("--surface", "--bg-main"),
 }
 
 # Gradient som TEXTFYLLNING (`background-clip: text`). Där är gradienten
@@ -347,6 +360,31 @@ def ärvda_ytor(alla):
     return ut, okända
 
 
+def text_på_ytor(alla):
+    """Regler i TEXT_PÅ_YTOR → en syntetisk yta per känd bakgrund.
+
+    Returnerar (ytor, okända). En nyckel utan regel är ett fel: listan skulle
+    annars kunna tyst sluta mäta något den tror att den mäter (§0.4).
+    """
+    ut, träffade = [], set()
+    for fil, sel, media, d in alla:
+        if "color" not in d or "background" in d or "background-color" in d:
+            continue
+        for del_ in sel.split(","):
+            del_ = del_.strip()
+            if del_ not in TEXT_PÅ_YTOR:
+                continue
+            träffade.add(del_)
+            for yta in TEXT_PÅ_YTOR[del_]:
+                syntetisk = dict(d)
+                syntetisk["background"] = f"var({yta})"
+                ut.append((fil, f"{del_} på {yta}", media, syntetisk))
+    okända = [(k, "står i TEXT_PÅ_YTOR men ingen regel sätter bara color med den "
+                  "selektorn – ta bort posten eller rätta selektorn")
+              for k in TEXT_PÅ_YTOR if k not in träffade]
+    return ut, okända
+
+
 def textplattor(text):
     """Gradient som textfyllning → yta där gradienten är TEXTEN, bottnen bakdelen.
 
@@ -493,9 +531,10 @@ def main(argv):
 
     text_ytor, okända_text = textplattor(text)
     ärvda, okända_ärvda = ärvda_ytor(alla)
-    okända += okända_text + okända_ärvda
+    på_ytor, okända_på_ytor = text_på_ytor(alla)
+    okända += okända_text + okända_ärvda + okända_på_ytor
 
-    for fil, selektor, media, dekl in ytor(alla) + text_ytor + ärvda:
+    for fil, selektor, media, dekl in ytor(alla) + text_ytor + ärvda + på_ytor:
         for del_ in selektor.split(","):
             del_ = del_.strip()
             if not del_ or del_.startswith("@"):
@@ -560,8 +599,8 @@ def main(argv):
 
     if okända:
         print(f"FEL: {len(okända)} yta/ytor går inte att mäta och står inte i "
-              f"BAKGRUND, ÄRVD_BOTTEN, OMÄTBARA, TEXT_PLATTOR eller "
-              f"KEYFRAME_PLATTOR i scripts/check_kontrast.py:", file=sys.stderr)
+              f"BAKGRUND, ÄRVD_BOTTEN, TEXT_PÅ_YTOR, OMÄTBARA, TEXT_PLATTOR "
+              f"eller KEYFRAME_PLATTOR i scripts/check_kontrast.py:", file=sys.stderr)
         for sel, skäl in okända:
             print(f"  {sel}: {skäl}", file=sys.stderr)
         print("\nSkriv in vad som ligger bakom ytan eller varför den inte går att "

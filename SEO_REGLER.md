@@ -925,7 +925,7 @@ någon ser det — det var felet i `.answer-btn.correct` (rätt svar, 1,92:1),
 `.answer-btn.wrong`, `.timer.warning` och fyra ytor i `verktyg.css`.
 **`--plate-*` överskrivs aldrig i `[data-theme="dark"]`.** Det är hela poängen.
 
-**Fem regler som följer av kontrollens byggnad:**
+**Sex regler som följer av kontrollens byggnad:**
 
 1. **Genomskinlig botten** (`rgba(…)`) har ingen kontrast i sig. Ny sådan yta ska in
    i `BAKGRUND` med vad som ligger bakom — annars stoppar bygget.
@@ -939,7 +939,12 @@ någon ser det — det var felet i `.answer-btn.correct` (rätt svar, 1,92:1),
    yta den *ligger* på, angiven i `ÄRVD_BOTTEN`. En dämpad textfärg är alltid dämpad
    mot något, och just den formen slank igenom hela mätningen i 0.9.280:
    `.glossary-top` ("Topp"-länken i bokstavsrubriken) låg på 4,43:1.
-5. **`REDOVISADE` är användarens lista, inte min.** En mätt yta som medvetet lämnas
+5. **Text i hel färg utan egen bakgrund** – en regel som bara sätter `color` – mäts inte
+   alls av sig själv, för regeln säger inte vad texten ligger på. Ligger den på kända
+   palettytor ska den in i `TEXT_PÅ_YTOR` med de ytorna; den mäts då mot var och en i
+   båda teman. Så mäts sajtens standardlänkar (`:where(a:any-link)`, se nedan). En
+   post vars selektor inte längre finns stoppar bygget.
+6. **`REDOVISADE` är användarens lista, inte min.** En mätt yta som medvetet lämnas
    oförändrad står där med sin kvot — ändras kvoten fälls posten. Skriv aldrig in
    något där för att bli av med ett larm.
 
@@ -979,6 +984,29 @@ målningen, på samma sätt som till `theme-color`. Metan måste därför stå *
   ljus telefon, och likadant för mörkt, på alla 130 sidor – mätt på varje länks och
   formulärdels färg och med skärmbilder pixel för pixel. Den som redan hade samma läge på
   båda ser ingen skillnad.
+
+**Länkar utan egen stil har ändå sajtens färg (0.9.444).** Länkar i brödtext,
+tabellceller, referenslistor och ordlistans källrad hade ingen egen färg och visades i
+webbläsarens blå och lila. Nu gäller:
+
+```css
+:where(a:any-link)       { color: var(--primary-deep); }
+:where(a:any-link:hover) { color: var(--primary-deepest); }
+```
+
+- **Samma färg och hover som `.info-link`** – ingen ny palettvariabel (CSS_KARTA).
+- **`:where()` ger regeln noll specificitet.** Den vinner därför bara över webbläsarens
+  standard; varje länk som har en egen färg (`.btn`, `.kb-term`, `.info-link`,
+  brödsmulor, kort) behåller den. En ny länktyp med egen färg behöver inte göra något,
+  och en ny länk utan klass blir grön av sig själv. Skriv **aldrig** `a:hover`,
+  `a:link` eller `a:visited` utan `:where()`: de väger mer än en klass och tar över
+  färgen på `.btn` och andra länkknappar – en grön knapptext vid hover, till exempel.
+- **Understrykningen ligger kvar.** Den skiljer länken från texten runt om utan att
+  färgen ensam behöver göra det (WCAG 1.4.1). Ta inte bort den för brödtextlänkar.
+- **Mäts av `check_kontrast.py`** via `TEXT_PÅ_YTOR` (regel 5 ovan), mot korten
+  (`--surface`) och sidans bakgrund (`--bg-main`). Lägst är 4,99:1 (ljust, mintbakgrund).
+  Renderat på alla sidor, där några länkar ligger på andra ytor, är lägsta kvoten 4,99:1 i
+  ljust och 7,61:1 i mörkt läge. Det gällde 473 länkar i ljust läge.
 
 ---
 
