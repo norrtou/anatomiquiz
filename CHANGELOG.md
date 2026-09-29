@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.450
+- **Ordlistan: nytt efterled `-phrenia / -freni`** (sinne, förstånd, själsliv), andra ledet i *schizofreni*. Förledet `phren-` fanns redan, men efterledet saknades i suffixgruppen. Exemplen (*schizofreni*, *hebefreni*, *oligofreni*) har alla egna poster. Suffixgruppen har nu 157 ord, ordlistan 11 492.
+
 ## 0.9.449
 - **Sidorna syns direkt: intoningen på sidhuvud och innehållskort är borttagen, och innehållet visas ungefär en halv sekund tidigare.** Chrome räknar inte text med opacitet 0 som ritad, så intoningen höll sidan "oritad" tills den var klar. Medianer av sju laddningar i webbläsare, med intoning mot utan: `muskeltabell-handen` 632 mot 104 ms, `ordlista-b` 644 mot 132 ms och startsidan 708 mot 108 ms. Det gäller alla 130 sidor med sidhuvud och kort.
 - **Synlig ändring, användarens beslut:** sidhuvudet och korten tonas inte längre in. I quizet på startsidan tonas inte heller vyerna in vid vybyte. Quizfrågornas egen korta intoning när en ny fråga visas är kvar, eftersom den inte påverkar sidladdningen.
