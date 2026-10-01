@@ -472,6 +472,7 @@ längdbias-mätningen ("Falskt" är 2 tecken längre än "Sant" → falsk 100 %-
     - **Skriv rätt från början:** när svaret är en term på latin eller grekiska, översätt prompten mentalt till det språket innan den skrivs. Beskriver prompten strukturen med det svenska ordet för terminens egen betydelse (`lång` för *longus*, `kort` för *brevis*, `platt` för *planus*, `stor`/`liten` för *major*/*minor*, `främre`/`bakre` för *anterior*/*posterior*) — byt till ett beskrivande ord som pekar på **något annat** av strukturens egenskaper. Går det inte: ge varje distraktor samma sorts beskrivning, så att ordlikheten inte skiljer ut något.
     - **Detta läggs medvetet INTE i `validate_quiz.py`.** Det kräver en översättningslista mellan latin och svenska för varje alternativ, och en approximation skulle antingen missa det mesta eller dränka de äkta fynden i brus. Kontrolleras för hand, som ordbildningspariteten nedan.
   - **⚠️ Ordbildningsparitet: rätt svar får inte vara det enda alternativet med en annan ordform (hittat 2026-08-08, `mta_q168`).** Systerfall till språkpariteten nedan. `Débridering` (svensk `-ing`-avledning) stod bland `Kyrettage` / `Tamponad` / `Dränage` – alla fyra äkta franska lånord, men rätt svar var det enda som inte såg ut som ett lånord. Fix: `Tamponering` / `Sondering` / `Kanylering`, alltså samma avledningsform på alla fyra. **Test:** läs alternativens ÄNDELSER för sig, utan betydelserna. Sticker rätt svar ut i form – byt distraktorer tills alla fyra har samma sorts ordbildning.
+  - **Samma sak gäller artikel och genus (hittat 2026-10-01 i utkastet till `psyatp_262`/`psyatp_263`).** Bär alternativen obestämd artikel ska rätt svar inte vara ensamt om sin: `En emotion` bland `Ett humör` / `Ett temperament` / `Ett personlighetsdrag`, och omvänt `Ett humör` bland `En emotion` / `En sensation` / `En reflex`. Fix: blanda genus bland distraktorerna (`Ett humör` / `En attityd` / `En egenskap`) eller stryk artikeln på alla. **Test:** läs alternativens första ord för sig.
 - **Numerisk-/format-paritet:** Rätt svar får inte vara det enda alternativet som är numeriskt eller format-mässigt korrekt. Efterfrågas ett antal/en siffra ska ALLA alternativ vara tal. Efterfrågas ett visst antal saker (plural) ska ALLA alternativ innehålla exakt lika många – t.ex. om rätt svar listar tre strukturer måste varje distraktor också lista tre, aldrig två eller fyra. Annars kan man räkna sig fram till svaret utan sakkunskap.
   - ⚠️ **Antals-asymmetri fångas INTE av `validate_quiz.py` – den måste kontrolleras för hand.** Skräckexempel (hittat 2026-07-13 i `bma_karlfys_42`): frågan löd "Vilka **tre** huvudsakliga faktorer (Virchows triad) …", rätt svar listade tre faktorer medan alla tre distraktorer började med "Enbart …" och listade EN. Då räcker det att räkna för att hitta rätt. Fix: skriv om distraktorerna så att de också listar tre (fortsatt fel) faktorer.
   - När du bygger/rättar ett ämne: sök aktivt efter frågor vars prompt innehåller ett räkneord (två/tre/fyra/tre huvudsakliga …) och kontrollera antalet poster i VARJE alternativ.
@@ -677,6 +678,33 @@ faktiska `id`), aldrig på en position jag räknat fram i huvudet.
 - Validatorn/skript får köras som ett FÖRSTA, billigt filter för rent mekaniska tells – men den ersätter aldrig den manuella genomläsningen, och "0 varningar" får aldrig rapporteras till användaren som att kontrollen är klar.
 - Gäller lika för artiklar: en begärd korrekturläsning innebär att läsa hela artikeltexten, inte att `grep`:a efter ett tidigare hittat stavfel eller sakfel och anta att övrigt är korrekt.
 - Rapportera ALDRIG en kontroll som uttömmande om den inte var det – säg hellre "jag kontrollerade X men inte Y" än att antyda fullständighet.
+
+### 2.15 KORTA FRÅGOR FÖR MATCHA – VARJE PROMPT SKA PASSA ETT ENDA SVAR I HELA POOLEN
+**STÅENDE REGEL (2026-10-01, vid bygget av 100 korta frågor i `psykologi_atp`).** I Matcha läggs
+fem prompter och fem svar bredvid varandra, slumpat ur hela ämnet. En fråga kan alltså vara
+felfri som flervalsfråga och ändå ge ett tvetydigt par, eftersom den nu konkurrerar med
+**andra frågors** svar, inte bara med sina egna distraktorer.
+
+**Mall (så skrivs en kort fråga rätt från början):**
+1. **Längd:** prompt ≤ 55 tecken och `correct` ≤ 26 tecken (`MATCHA_MAX_PROMPT_LEN`,
+   `MATCHA_MAX_ANSWER_LEN` i `js/matcha.js`), `type: "mc"`, gärna tre distraktorer så att även
+   Shoot kan dra frågan. Övriga regler i §2 gäller som vanligt.
+2. **Ett svar, ett begrepp.** Varje `correct` är unik i ämnet; appen kastar dessutom bort par
+   med samma prompt eller samma svar. Två synonymer får aldrig vara svar på var sin fråga
+   (`Mentalisering` och `Theory of mind`): då passar båda prompterna båda svaren.
+3. **Prompten ska avgöra svarets typ.** Skriv "Vilken förstärkning …", "Vilken teori …" och
+   "Vem …" när ett annat svar i poolen annars skulle passa. Frågan om vilken inriktning som
+   bygger på förstärkning och straff (`Behaviorismen`) och en fråga om inlärning via konsekvenser
+   (`Operant betingning`) passar varandras svar, så båda får inte vara svar i samma ämne.
+4. **Inga negativa prompter.** "Vilket hör inte till utvecklingspsykologins frågor?" fungerar
+   som flervalsfråga men inte i Matcha, där nästan varje annat svar på brädet också "inte hör
+   till".
+5. **Generiska prompter går inte.** "Nämn en av Yaloms faktorer" passar varje Yalom-faktor
+   som är svar någon annanstans. Fråga efter det som skiljer begreppet från grannarna.
+
+**Test:** läs varje prompt mot **alla** svar i ämnets Matcha-pool, inte bara mot de egna
+distraktorerna. Passar prompten fler än ett svar ska en av frågorna byggas om. Validatorn kan
+inte se det här.
 
 ---
 

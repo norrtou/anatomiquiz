@@ -185,6 +185,8 @@ kvar — id behöver bara vara unika, och omnumrering ger onödigt stor diff.
 - [x] Manuell isolerad genomläsning fråga för fråga (§2.14) — **gjord 2026-09-05, alla 193
       frågor lästa mot sitt eget innehåll**, se §6
 - [x] Facitbesluten fattade 2026-09-05 (§6.2)
+- [x] **100 korta MC-frågor för Matcha** tillagda 2026-10-01 (`psyatp_194`–`psyatp_293`), se §7.
+      Ämnet har nu **291 frågor (222 MC + 69 TF)**
 
 ---
 
@@ -246,3 +248,41 @@ avgör. De lades fram som en plan och **beskedet kom samma dag: kör**. Utfallet
 - `psyatp_28` (sex minnessystem) och `psyatp_88` vilar på den delmängd som bär en verifierad
   svarsnyckel. Taxonomin går inte att verifiera mot kursboken härifrån, men nyckeln är den
   starkaste källan som finns för frågan (§0 punkt 2) och lämnas därför som den är.
+
+---
+
+## 7. Korta frågor för Matcha och arkadlägena — tillagda 2026-10-01
+
+Beställt 2026-10-01: 100 nya korta frågor + svar, **helt byggda på ämnets befintliga frågor och
+svar**, så att Matcha går att spela på ämnet. Före tillägget klarade bara en fråga
+(`psyatp_107`) Matchas längdgränser, och läget vägrade starta.
+
+### 7.1 Så byggs en kort fråga i det här ämnet
+
+- **Innehållet hämtas ur en befintlig fråga** i ämnet — ett begrepp, en definition, en
+  teoretiker eller ett exempel som redan står i en prompt, ett `correct` eller en distraktor som
+  frågan uttryckligen pekar ut som sann. Inget nytt sakinnehåll förs in.
+- **Längd:** prompt ≤ 55 tecken, `correct` ≤ 26 tecken (`MATCHA_MAX_PROMPT_LEN`,
+  `MATCHA_MAX_ANSWER_LEN` i `js/matcha.js`). `type: "mc"`, helst tre distraktorer så att även
+  Shoot kan dra frågan.
+- **Varje `correct` är unik i ämnets Matcha-pool**, och varje prompt pekar ut exakt ett av
+  poolens svar — regeln och dess fällor står i `CLAUDE_REGLER.md` §2.15.
+- **Dubletter mot ämnets äldre frågor är tillåtna** (§0a, och användarens beställning
+  2026-10-01). Samma sakfråga kan alltså finnas både som lång och som kort fråga; de 100 korta
+  är inbördes unika på både prompt och svar.
+
+### 7.2 Mätt vid leveransen
+
+- `validate_quiz.py` **0 fel, 0 varningar**; 0 dubbletter på prompt + correct; 0 mjuka
+  bindestreck.
+- De 100 nya: rätt svar längst i 11 % och kortast i 15 % av de 66 mätbara — ingen längdtell åt
+  något håll. Ämnet totalt: längdbias **26 %** (49 av 185 mätbara MC), TF-balansen oförändrad
+  55 % Sant.
+- Spelbara frågor före → efter: Matcha 1 → 101 par, Pop 7 → 72 (strikt) och 12 → 98
+  (relaxat), Shoot 3 → 36 och 8 → 74, Tidsjakt 43 → 143.
+- Spelat i Chromium på 390 px bredd: Matcha startar med 100 par i 20 omgångar, rutorna ryms.
+- Manuell isolerad genomläsning av alla 100 (§2.14) före inskrivning. Tretton rättelser: två
+  synonyma distraktorer som gick att stryka tillsammans, två frågor där rätt svar var det enda
+  med avvikande genus (§2.9), en distraktor som inte var en stressnivå, och språket i nio
+  prompter. Kontrollskriptet fångade därtill ett ordeko (`hjärndel` → `Hjärnstammen`) och
+  två prompter över 55 tecken.

@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.451
+- **Psykologi för arbetsterapeuter går att spela i Matcha: 100 nya korta flervalsfrågor (`psyatp_194`–`psyatp_293`).** Före tillägget klarade bara en av ämnets frågor Matchas längdgränser (prompt högst 55 tecken, svar högst 26), så läget vägrade starta. Nu finns 101 par, och ett spel med 100 par går i 20 omgångar. Ämnet har 291 frågor, 222 MC och 69 TF.
+- **Byggda helt på ämnets befintliga frågor och svar.** De tar upp Piagets stadier, anknytning, inlärning och betingning, minne och kognition, hjärnans funktioner, personlighet och motivation, känslor och stress, åldrandets teorier och grupprocesser. Dubletter mot ämnets äldre frågor är tillåtna enligt beställningen, men de 100 nya är inbördes unika på både prompt och svar. Varje prompt passar ett enda svar i ämnets Matcha-pool.
+- **Arkadlägena får fler frågor.** Spelbara frågor före och efter: Pop 7 → 72 (strikt) och 12 → 98 (relaxat), Shoot 3 → 36 och 8 → 74, Tidsjakt 43 → 143.
+- **Kontrollerat:** `validate_quiz.py` 0 fel och 0 varningar, och 0 dubbletter på prompt + correct. Av de nya är rätt svar längst i 11 % och kortast i 15 % av de mätbara frågorna. Ämnets längdbias gick från 35 % till 26 %, och TF-balansen är oförändrad på 55 % Sant. Alla 100 är lästa var för sig före inskrivningen (§2.14), och 13 rättelser gjordes. Matcha är spelat i Chromium på 390 px bredd, och rutorna ryms. `check_generators.py` är grön med 599 tester.
+- **Regler:** CLAUDE_REGLER har en ny §2.15 om att en kort fråga för Matcha bara får passa ett svar i hela ämnets pool. §2.9 säger nu att rätt svar inte får vara ensamt om sin artikel eller sitt genus.
+
 ## 0.9.450
 - **Ordlistan: nytt efterled `-phrenia / -freni`** (sinne, förstånd, själsliv), andra ledet i *schizofreni*. Förledet `phren-` fanns redan, men efterledet saknades i suffixgruppen. Exemplen (*schizofreni*, *hebefreni*, *oligofreni*) har alla egna poster. Suffixgruppen har nu 157 ord, ordlistan 11 492.
 
