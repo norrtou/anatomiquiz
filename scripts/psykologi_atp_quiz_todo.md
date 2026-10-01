@@ -187,6 +187,9 @@ kvar — id behöver bara vara unika, och omnumrering ger onödigt stor diff.
 - [x] Facitbesluten fattade 2026-09-05 (§6.2)
 - [x] **100 korta MC-frågor för Matcha** tillagda 2026-10-01 (`psyatp_194`–`psyatp_293`), se §7.
       Ämnet har nu **291 frågor (222 MC + 69 TF)**
+- [x] **100 korta MC-frågor till** tillagda 2026-10-01 (`psyatp_294`–`psyatp_393`), se §7.3.
+      Ämnet har nu **391 frågor (322 MC + 69 TF)**. Kopian `psykologi_allmant` (Allmänt → Psykologi,
+      id `psyalm_*`) uppdateras alltid identiskt, se §8
 
 ---
 
@@ -286,3 +289,37 @@ svar**, så att Matcha går att spela på ämnet. Före tillägget klarade bara 
   med avvikande genus (§2.9), en distraktor som inte var en stressnivå, och språket i nio
   prompter. Kontrollskriptet fångade därtill ett ordeko (`hjärndel` → `Hjärnstammen`) och
   två prompter över 55 tecken.
+
+### 7.3 Andra omgången — 100 korta frågor till (2026-10-01)
+
+Beställt 2026-10-01: 100 nya korta frågor, unika mot de 101 som redan fanns i Matcha-poolen,
+byggda på ämnets fullängdsfrågor och på kursmaterial i psykologi för arbetsterapeuter som
+användaren lämnade samma dag. Kursmaterialet tillförde bland annat Baltes och Baltes (SOK),
+Webster och Schwartzberg (aktivitetsfaktorer), Lorentzon och Sandler (tillägg till Bion),
+teratogener (organbildningen, alkohol, nikotin, röda hund), språkutvecklingen vid två år,
+begreppet kognition, ValMO och fysiska aspekter i gruppen.
+
+- **Primär motivation är nu belagd.** Kursmaterialet ger "att dricka när man är törstig", samma
+  svar som läroboksexemplet. Frågan i §3 byggdes därför som kort fråga (`psyatp_342`).
+- **Fortfarande inte byggt:** homunculus ("ca halva barken"). Kursmaterialet anger ansiktet,
+  munnen, tungan och struphuvudet, men handen är fortfarande en stark konkurrent (§6.2). Rut och
+  Karin byggdes inte heller som korta frågor: deras svar är teorier som redan är svar i
+  Matcha-poolen, och då hade paren blivit tvetydiga (`CLAUDE_REGLER.md` §2.15).
+- **Stavningen `Schwarzberg` → `Schwartzberg`** i `psyatp_44`, belagd i kursmaterialet.
+- **Mätt:** `validate_quiz.py` 0 fel och 0 varningar. Matcha-poolen har 201 par med 201 unika
+  prompter, och 0 dubbletter på prompt + correct. Rätt svar längst i 26 % av de 80 mätbara nya
+  frågorna, och ämnet totalt 26 % (70 av 265). TF-balansen är oförändrad, 55 % Sant. Matcha är
+  spelat i Chromium i båda kategorierna.
+- **Manuell genomläsning (§2.14) före inskrivning.** Fynd: ett tvetydigt par ("Att planera och
+  organisera" passade även frågan om frontallobsdemens) som byttes ut, en distraktor av fel typ,
+  ett vardagsord i en prompt, två distraktorer med absoluta eller kategoriska ord, och tolv
+  prompter över 55 tecken samt två ordekon, som fångades av kontrollskriptet.
+
+---
+
+## 8. Kopian under Allmänt — `psykologi_allmant`
+
+`data/psykologi_allmant.json` är en identisk kopia av ämnet, med id `psyalm_<samma nummer>`,
+`topic: psykologi_allmant` och `source: Psykologi`. **Varje ändring i det ena ämnet görs i båda i
+samma pass**, och identiteten verifieras genom att jämföra filerna på allt utom `id`, `topic`
+och `source`.

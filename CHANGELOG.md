@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.453
+- **100 korta frågor till i psykologi, i båda ämnena: Psykologi för arbetsterapeuter (`psyatp_294`–`psyatp_393`) och Allmänt → Psykologi (`psyalm_294`–`psyalm_393`).** Båda har nu 391 frågor, 322 MC och 69 TF, och de två filerna är verifierat identiska på allt utom id, ämnesnyckel och `source`. Matcha har 201 par att slumpa ur, alla med unika frågor och svar.
+- **Byggda på ämnets fullängdsfrågor och på kursmaterial i psykologi för arbetsterapeuter.** Nytt innehåll är bland annat Baltes och Baltes bakom SOK-modellen, Webster och Schwartzberg bakom aktivitetsfaktorerna, Lorentzon och Sandlers tillägg till Bion, teratogener, språkutvecklingen vid två år, begreppet kognition, ValMO och de fysiska förutsättningarna för grupparbete. De nya frågorna är unika mot de 101 korta som redan fanns, och varje fråga passar ett enda svar i Matcha-poolen (§2.15). Alla är flervalsfrågor med fyra alternativ och dras även i det vanliga quizet.
+- **Stavningen rättad:** "Webster och Schwarzberg" heter Webster och Schwartzberg (`psyatp_44` och `psyalm_44`), vilket kursmaterialet bekräftar.
+- **Arkadlägena får fler frågor.** Spelbara frågor per ämne: Pop 72 → 122 (strikt) och 98 → 177 (relaxat), Shoot 36 → 68 och 74 → 137, Tidsjakt 143 → 243.
+- **Kontrollerat:** `validate_quiz.py` 0 fel och 0 varningar i båda filerna, och 0 dubbletter på prompt + correct. Rätt svar är längst i 26 % av de mätbara nya frågorna, och längdbiasen för hela ämnet är 26 %. TF-balansen är oförändrad på 55 % Sant. Alla 100 är lästa var för sig före inskrivningen (§2.14). En fråga byttes ut eftersom svaret även passade en befintlig fråga i Matcha. Matcha är spelat i Chromium i båda kategorierna.
+- **Facitfilen** har en ny §7.3 och en §8: kopian under Allmänt uppdateras alltid identiskt i samma pass.
+
 ## 0.9.452
 - **Nytt ämne under Allmänt: "Psykologi" (`psykologi_allmant`), 291 frågor (222 MC och 69 TF).** Ämnet är en identisk kopia av Psykologi för arbetsterapeuter: samma frågor, svar och distraktorer i samma ordning. Kopian ligger i en egen fil, `data/psykologi_allmant.json`, och har egna id (`psyalm_*`). Därför påverkar en fråga som utesluts eller flaggas i det ena ämnet inte det andra.
 - **Syns utan inställningar.** Ämnet ligger i Allmänt med etiketten "Psykologi (MC+TF)", efter Osteologi. Det döljs inte bakom "Visa även icke-medicinska ämnen" som originalet gör under Arbetsterapeut.
