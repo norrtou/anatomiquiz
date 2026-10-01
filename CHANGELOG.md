@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.452
+- **Nytt ämne under Allmänt: "Psykologi" (`psykologi_allmant`), 291 frågor (222 MC och 69 TF).** Ämnet är en identisk kopia av Psykologi för arbetsterapeuter: samma frågor, svar och distraktorer i samma ordning. Kopian ligger i en egen fil, `data/psykologi_allmant.json`, och har egna id (`psyalm_*`). Därför påverkar en fråga som utesluts eller flaggas i det ena ämnet inte det andra.
+- **Syns utan inställningar.** Ämnet ligger i Allmänt med etiketten "Psykologi (MC+TF)", efter Osteologi. Det döljs inte bakom "Visa även icke-medicinska ämnen" som originalet gör under Arbetsterapeut.
+- **Inkopplat** i `index.html`, `js/app.js` (`getQuestionsPath`) och ämnesöversikten i `js/info.js`. Startsidans ändringsdatum är uppdaterat via hela wire-kedjan.
+- **Kontrollerat:** `validate_quiz.py` 0 fel och 0 varningar. Ett skript bekräftar att innehållet är identiskt med originalet, med undantag för id, `topic` och `source`. Spelat i Chromium: quizet startar, och Matcha startar med 100 par i 20 omgångar. `check_generators.py` är grön med 599 tester.
+
 ## 0.9.451
 - **Psykologi för arbetsterapeuter går att spela i Matcha: 100 nya korta flervalsfrågor (`psyatp_194`–`psyatp_293`).** Före tillägget klarade bara en av ämnets frågor Matchas längdgränser (prompt högst 55 tecken, svar högst 26), så läget vägrade starta. Nu finns 101 par, och ett spel med 100 par går i 20 omgångar. Ämnet har 291 frågor, 222 MC och 69 TF.
 - **Byggda helt på ämnets befintliga frågor och svar.** De tar upp Piagets stadier, anknytning, inlärning och betingning, minne och kognition, hjärnans funktioner, personlighet och motivation, känslor och stress, åldrandets teorier och grupprocesser. Dubletter mot ämnets äldre frågor är tillåtna enligt beställningen, men de 100 nya är inbördes unika på både prompt och svar. Varje prompt passar ett enda svar i ämnets Matcha-pool.

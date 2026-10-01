@@ -220,6 +220,7 @@ const EDUCATIONS = [
     { label: 'Lägen, rörelser & riktningar', file: './data/lagen_rorelser_riktningar.json' },
     { label: 'Medicinsk terminologi',        file: './data/medicinsk_terminologi_allmant.json' },
     { label: 'Osteologi',                    file: './data/osteologi_allmant.json' },
+    { label: 'Psykologi',                    file: './data/psykologi_allmant.json' },
   ]},
 ]
 
