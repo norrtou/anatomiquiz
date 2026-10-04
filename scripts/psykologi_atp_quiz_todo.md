@@ -317,6 +317,63 @@ begreppet kognition, ValMO och fysiska aspekter i gruppen.
 
 ---
 
+### 7.4 Tredje omgången — åtta frågor ur nytt underlag (2026-10-04)
+
+Beställning: anpassa inskickade frågor och lägg in dem både som korta Matcha-par och som
+längre MC. **`psyatp_394`–`401` / `psyalm_394`–`401`**, ämnet går 391 → **399 frågor**.
+
+**Tre av de inskickade frågorna fanns redan ordagrant** och byggdes inte om:
+Vygotskij-frågan med prägling som felaktigt påstående är `psyatp_43` med samma fyra
+alternativ; frågan om hjärnan hos den som förlorat synen är `psyatp_7`, också med samma
+alternativ; parbildningsfrågan är `psyatp_48`. Alla tre har dessutom korta par i
+Matcha-poolen sedan §7.1–7.3. Att lägga in dem en fjärde gång skulle bryta §2.15, eftersom
+deras svar redan är upptagna i poolen.
+
+**Det som byggdes:**
+
+| Id | Form | Innehåll |
+|---|---|---|
+| 394 | MC | Varför enäggstvillingar studeras: delad arvsmassa gör att skillnader kan knytas till miljö och livsstil. Distraktor 1 är den omvända slutsatsen (delad miljö → arvet), alltså det halvkunniga felet |
+| 395 | kort | Vilka delar i princip hela arvsmassan → `Enäggstvillingar`, mot tvåäggstvillingar, helsyskon och förälder–barn (alla ~50 %) |
+| 396 | MC | Känslans kognitiva komponent rymmer de automatiska tankarna. Alla fyra alternativ har formen "Den X komponenten, som står för …" och är äkta komponenter |
+| 397 | kort | Vilken känslokomponent står för tankarna → `Kognitiva komponenten` |
+| 398 | MC | Vygotskij om språket: redskap för tänkandet som bär kulturen in i barnet. Distraktorerna är Piagets, Chomskys och Skinners positioner — sanna om andra, falska om Vygotskij |
+| 399 | kort | Vad Vygotskij ansåg avgörande för tänkandet → `Språket` |
+| 400 | MC | Vedertagen definition av personlighet |
+| 401 | MC | Begreppet kognition |
+
+**Två av de inskickade svaren kunde inte användas som facit (§0 punkt 4 avgjorde).** I
+underlaget fanns bara ett alternativ angivet per fråga, och för personlighet respektive
+kognition var det alternativ som följde med inte ett facit:
+
+- **Personlighet:** "en uppsättning känslomässiga reaktioner som de flesta människor uppvisar
+  i liknande vardagssituationer" beskriver vad människor har **gemensamt**, medan personlighet
+  rör de förhållandevis stabila mönster som **skiljer** personer åt — och inte bara känslor,
+  utan även tänkande och beteende. Formuleringen ligger nu kvar som distraktor i `400`, där
+  den gör god tjänst.
+- **Kognition:** "den uppsättning aktiviteter genom vilka människor reagerar känslomässigt på"
+  var dessutom avhuggen mitt i satsen och beskriver emotion, inte kognition. Den ligger nu som
+  distraktor i `401`, kompletterad till en hel mening.
+
+**En äkta §2.15-krock fångades och åtgärdades under bygget.** `397` hade först prompten
+"Vilken del av en känsla rymmer automatiska tankar?", men poolen bär redan svaret
+`Automatiska tankar` (← "Vad lär KBT människor att ifrågasätta?"). I Matcha kunde de två paren
+hamna på samma bräde, och prompten gick då att paras på ren ordlikhet. Prompten är omskriven
+till "Vilken känslokomponent står för tankarna?".
+
+**Kvarstående notering:** `399`s prompt nämner Vygotskij, och poolen har svaret `Lev Vygotskij`.
+Prompten frågar *vad* han ansåg, inte *vem*, så den passar bara ett svar — och poolen bar redan
+två Vygotskij-prompter vid sidan av det svaret sedan §7.1. Lämnat som det är.
+
+**Mätt efter bygget:** `validate_quiz.py` 0 fel och 0 varningar i båda filerna, TF-balans
+oförändrad 55 % Sant, längdbias **26 %** (nära slumpnivån), Matcha-poolen 201 → **204 par**,
+0 dubbletter på prompt + correct, och filerna identiska på allt utom `id`, `topic` och `source`.
+
+**Inte byggt, väntar på besked:** Rut-vignetten (f.d. `psyatp_91`) skickades in igen med hela
+alternativlistan. Den är struken enligt §3 därför att *Disengagemangsteorin* och *SOK* båda är
+försvarbara, och den motsägelsen är inte löst av att frågan kommer in på nytt. Den byggs när
+det är klart vilket av de två kursen räknar som rätt.
+
 ## 8. Kopian under Allmänt — `psykologi_allmant`
 
 `data/psykologi_allmant.json` är en identisk kopia av ämnet, med id `psyalm_<samma nummer>`,
