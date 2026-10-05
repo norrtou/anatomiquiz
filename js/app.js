@@ -140,7 +140,7 @@ const NEW_SCORES_KEY = 'hur_highscores'
 // Version som är inbakad i DENNA app.js. Jämförs mot färska VERSION-filen så att
 // en gammal cachad app.js avslöjar sig själv ("ladda om") i stället för att tyst
 // köra föråldrad logik (t.ex. före topplistans säkerhetsnät). Håll i synk med VERSION.
-const APP_VERSION = '0.9.454'
+const APP_VERSION = '0.9.455'
 // IDs på frågor spelaren senast svarade FEL på (lokalt per webbläsare/enhet).
 // Används av "Öva extra på de jag svarar fel på" för att vikta upp dem i quizurvalet.
 const WRONG_KEY = 'hur_wrong_questions'
@@ -746,7 +746,12 @@ function fitActiveView(){
     let fit = 1
     sec.style.setProperty('--view-fit', '1')
     // Kortets underkant (primärknappen) ska ligga innanför den synliga ytan.
-    while(fit > VIEW_FIT_MIN && sec.getBoundingClientRect().bottom > avail - 8){
+    // Mät i DOKUMENTkoordinater (som om sidan stod överst), inte mot nuvarande
+    // scrollläge. Annars räknades ett nedscrollat kort som "ryms": när Safaris
+    // verktygsfält fälls in under scroll triggas resize, mätningen började om
+    // på 1 och stannade där – och användaren scrollade upp till en ofixad vy.
+    const docBottom = () => sec.getBoundingClientRect().bottom + window.scrollY
+    while(fit > VIEW_FIT_MIN && docBottom() > avail - 8){
       fit = Math.round((fit - VIEW_FIT_STEP) * 100) / 100
       sec.style.setProperty('--view-fit', String(fit))
     }

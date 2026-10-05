@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.455
+- **Långa quizfrågor skalas nu ned på mobil även efter att man scrollat.** Rapporterat i Psykologi: frågan och svarsalternativen visades i full storlek och rymdes inte på skärmen. Orsaken låg i `fitActiveView()` i `js/app.js`, som mätte kortets underkant mot den **nuvarande scrollpositionen**. När man scrollat ner för att nå svaren eller Nästa, och Safaris verktygsfält fälldes in eller ut, utlöstes en resize. Mätningen började då om på skala 1, såg ett kort som "fick plats" och stannade där. Vyn var ofixad när man scrollade upp igen.
+- **Mätningen sker nu i dokumentkoordinater**, alltså som om sidan stod överst, och blir därmed oberoende av scrollläget. Det gäller quizet och alla spellägen som använder samma funktion.
+- **Kontrollerat i Chromium på 390 px bredd**, med längsta psykologifrågorna och frågan från rapporten (`psyalm_11`). Efter scroll till botten och resize: gammal kod 0.68 → 0.80 och 0.68 → 0.76, ny kod oförändrad på 0.68. Upprepade mätningar på scrollläge 0 och botten ger samma skala, 0 avvikelser.
+
 ## 0.9.454
 - **Åtta nya frågor i båda psykologiämnena — 391 → 399 frågor var.** `psyatp_394`–`401` och `psyalm_394`–`401`, byggda i de två former som efterfrågades: korta par som Matcha och arkadlägena kan dra, och längre flervalsfrågor. Nytt innehåll är **enäggstvillingar** (varför de studeras trots svår rekrytering), **känslans kognitiva komponent** (den som rymmer de automatiska tankarna), **Vygotskij om språket** i positiv form, samt vedertagna definitioner av **personlighet** och **kognition**.
 - **Tre av de inskickade frågorna fanns redan ordagrant** och byggdes inte en gång till: Vygotskij-frågan med prägling som felaktigt påstående är `psyatp_43` med samma fyra alternativ, frågan om hjärnan hos den som förlorat synen är `psyatp_7`, och parbildningsfrågan är `psyatp_48`. Alla tre har dessutom korta par i Matcha-poolen sedan tidigare, och deras svar är därmed upptagna — en fjärde kopia hade brutit §2.15.
