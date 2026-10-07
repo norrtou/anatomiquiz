@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.467
+- **Omvända frågor har fått negationen i versaler, så att de inte kan läsas som vanliga frågor.** Frågan om Bowlby — *Vilket alternativ stämmer SÄMST med hans teori?* — lästes som en vanlig fråga: man valde överlevnad (som stämmer med Bowlby), fick fel och uppfattade det som att quizet påstod att pappans roll var viktigast. Facit var rätt hela tiden och stämmer med övriga Bowlbyfrågor (moderns betydelse i centrum, anknytningen ökade chansen att överleva); det var det gemena *sämst* som lurade. Quizet är till för inlärning, inte för att lura spelaren.
+- **21 frågor ändrade** (bara versaler, inget sakinnehåll): psykologi `_5`, `_14`, `_43`, `_58`, `_64`, `_132`, `_406` i både `psyatp` och `psyalm`; ben `q288`–`q291`; sjuksköterska `ssk_vital_60`, `ssk_vital_82`, `ssk_resp_82`. Omvända frågor som redan hade versaler (grepp, handen, läkare, BMA, röntgen, tandläkare) var orörda.
+- **Ny regel CLAUDE_REGLER §2.3b** med mall för hur en omvänd fråga skrivs, och **`validate_quiz.py` blockerar nu** en MC-fråga med gemen negation i de vanliga omvända formerna (*stämmer inte/sämst*, *är felaktigt?*, *Vilket av dessa … inte*, *ingår/hör inte*, *… inte?*). Mönstren är skiftlägeskänsliga, så korrekt skrivna frågor passerar.
+- **Kontrollerat:** hela `data/` genomsökt, 0 kvarvarande träffar; `validate_quiz.py` 0 blockerande fel i 50 filer; psykologifilerna fortfarande identiska på allt utom `id`, `topic` och `source`.
+
 ## 0.9.466
 - **Resten av svarsnyckeln avstämd — punkt 58–102, där 38 av 41 kontrollerbara stämde.** Tillsammans med 0.9.465 är därmed hela uppsättningen om 102 frågor genomgången.
 - **Rättat: `psyatp_404` (Karin som fortsätter sin skogsrunda under pandemin).** Rätt svar är **aktivitetsteorin**, inte kontinuitetsteorin. Jag byggde den i 0.9.463 på eget resonemang om att ordet *vanliga* pekade mot kontinuitet. Det centrala i frågan är att Karin fortsätter hålla sig aktiv trots omständigheterna. Kontinuitetsteorin ligger nu som felsvar.

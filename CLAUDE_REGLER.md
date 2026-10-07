@@ -341,6 +341,29 @@ En fråga utan relevanta alternativ är värdelös och förstör quizet. Inga fi
   - Duplikat (samma svar både i "correct" och i "distractors")
   - Filler-ord
 
+### 2.3b Omvänd fråga: negationen skrivs i VERSALER
+Quizet är till för inlärning, inte för att lura spelaren. När frågan ber om alternativet
+som **inte** stämmer vänder ett enda ord hela uppgiften, och det ordet ska synas direkt.
+
+**Så här ser en korrekt omvänd fråga ut:**
+- *Vilket alternativ stämmer **SÄMST** med Bowlbys teori?*
+- *Vilket påstående om Vygotskij stämmer **INTE**?*
+- *Vilket av påståendena om KBT vid långvarig stress är **FELAKTIGT**?*
+- *Vilket av dessa ben är **INTE** i skallen?*
+
+Skriv alltid `INTE`, `SÄMST` och `FELAKTIGT` i versaler i frågetexten, första gången frågan
+skrivs. Vill du hellre undvika negationen: ställ frågan positivt (*Vems betydelse stod i
+centrum för Bowlbys forskning?*). En omvänd fråga är bara motiverad när poängen är att skilja
+ut det enda påståendet som inte hör hemma.
+
+Bakgrund (0.9.467): *Vilket alternativ stämmer sämst med hans teori?* om Bowlby lästes som
+en vanlig fråga. Spelaren valde överlevnad (som stämmer), fick fel, och uppfattade det som att
+quizet påstod att pappan var viktigast — i strid med två andra frågor. Facit var rätt; det var
+den gemena negationen som lurade.
+
+`validate_quiz.py` vägrar committa en MC-fråga med gemen negation i de vanliga omvända formerna
+(*stämmer inte/sämst*, *är felaktigt?*, *Vilket av dessa … inte*, *ingår/hör inte*, *… inte?*).
+
 ### 2.4 True/False Format
 - Max 2 svarsalternativ: "Sant" och "Falskt"
 - Kan användas sparsamt för vissa faktapåstående

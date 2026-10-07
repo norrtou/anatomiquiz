@@ -7,7 +7,8 @@ Körs fristående eller som git pre-commit-hook / Claude Code-hook.
 
 ERROR (avslutkod 1, blockerar commit): bildfråga med icke-tom prompt, dubblett-id,
 tomt/duplicerat svarsalternativ, rätt svar bland distraktorerna, fel antal MC-alternativ,
-dubblerad frågetext inom ett ämne, TF-fråga felmärkt som "mc" (dras aldrig av appen, §2.4).
+dubblerad frågetext inom ett ämne, TF-fråga felmärkt som "mc" (dras aldrig av appen, §2.4),
+omvänd fråga vars negation inte står i versaler (INTE/SÄMST/FELAKTIGT, §2.3b).
 
 Kontrolleras INTE maskinellt (§2.4, §2.9) – gör dem för hand: TF-balansen Sant/Falskt per
 ämne, antals-paritet i frågor med räkneord, och kvasi-absoluta "bara"/"alla" i distraktorer.
@@ -45,6 +46,17 @@ SELF_LABEL = re.compile(r"\b(en|ett)\s+(helt\s+)?(annan|annat)\b|vilket är fela
 FILLER = re.compile(r"(ing[ae]n av dessa|inget av dessa|ing[ae]n av ovanstående|inget av ovanstående|"
                     r"ing[ae]n av alternativen|inget av alternativen|inget alternativ|"
                     r"annat ben|annan struktur)", re.I)
+
+# §2.3b: omvänd fråga – spelaren ska välja det alternativ som INTE stämmer. Negationen
+# vänder hela frågan och ska därför stå i versaler (INTE, SÄMST, FELAKTIGT). Mönstren är
+# skiftlägeskänsliga med avsikt: de träffar bara den gemena formen, så en korrekt skriven
+# fråga passerar och en ny omvänd fråga med gemen negation går inte att committa.
+NEG_SELECT = re.compile(
+    r"\b(?:stämmer|passar|överensstämmer) (?:inte|sämst)\b"           # "Vilket påstående stämmer inte?"
+    r"|\bär (?:felaktig[at]?|fel)\s*\?"                              # "Vilket av påståendena är felaktigt?"
+    r"|[Vv]ilk\w+ av (?:dessa|följande|påståendena)\b[^?]*\binte\b"  # "Vilket av dessa ben är inte …"
+    r"|\b(?:ingår|hör) inte\b(?=[^.!]*\?)"                          # "Vilket värde ingår inte …"
+    r"|\binte\?\s*$")                                              # "Vad mäter pulsoximetern inte?"
 
 # §2.9: frågor som testar BÖJNING – där ska svaret vara den böjda formen av frågans ord,
 # så morfologiskt eko är korrekt och ska inte flaggas.
@@ -155,6 +167,13 @@ def check_file(path, errors, warnings):
         prompt = it.get("prompt", "")
         correct = it.get("correct")
         ds = it.get("distractors")
+
+        # Omvänd fråga: negationen ska stå i versaler (§2.3b)
+        if it.get("type") == "mc" and prompt:
+            m = NEG_SELECT.search(prompt)
+            if m:
+                errors.append(f"{name}:{qid} omvänd fråga med gemen negation "
+                              f"'{m.group(0)[:40]}' – skriv INTE/SÄMST/FELAKTIGT i versaler (§2.3b)")
 
         # Bildfråga måste ha tom prompt (§2.10)
         if it.get("image") and prompt.strip():
