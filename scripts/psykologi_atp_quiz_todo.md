@@ -134,7 +134,7 @@ ligger i §3.
 | Karin 88 år, promenaden under pandemin | Markeringen säger aktivitetsteorin, men "den vanliga rundan" är kontinuitetsteorins kärna. Enda förekomsten ligger i en delmängd med bevisligen felaktiga markeringar. |
 | Personlighet, "vilket stämmer bäst" | Två av fyra alternativ är försvarbara: att personligheten är en kombination av genetik och livserfarenheter som ändras livet ut, och att en frontallobsskada ger förlust av förmågan att självreglera beteende. Frågan bär ingen markering någonstans och har inget facit. |
 | Rut, andningsbesvären (f.d. `psyatp_91`) | **Struken 2026-09-05 vid den manuella genomläsningen** (§6.2), efter besked. Två försvarbara svar: markeringen säger *Disengagemangsteorin*, men *selektiv optimering med kompensation* står bland alternativen och passar minst lika bra — att ta bussen när bilkörningen inte går längre **är** kompensation, och färre besök är selektering. Disengagemangsteorin förutsätter ett ömsesidigt undandragande; vignetten beskriver ett fysiskt hinder, varken att Rut drar sig undan eller att omgivningen gör det. Enda förekomsten ligger i en delmängd med bevisligen felaktiga markeringar. |
-| Homunculus, "halva barken" (f.d. `psyatp_117`) | **Struken 2026-09-05 vid den manuella genomläsningen** (§6.2), efter besked. Enda förekomsten ligger i en delmängd med bevisligen felaktiga markeringar, ingen annan fråga i ämnet täcker homunculus, och distraktorn *Fingrarna, handen och handleden* är en stark konkurrent: den vanliga läroboksformuleringen är att handen **och** talorganen tillsammans upptar ungefär halva motorbarken. Går inte att avgöra utan kursboken. |
+| Homunculus, "halva barken" (f.d. `psyatp_117`) | **Struken 2026-09-05 vid den manuella genomläsningen** (§6.2), efter besked. Enda förekomsten ligger i en delmängd med bevisligen felaktiga markeringar, ingen annan fråga i ämnet täcker homunculus, och distraktorn *Fingrarna, handen och handleden* är en stark konkurrent: den vanliga läroboksformuleringen är att handen **och** talorganen tillsammans upptar ungefär halva motorbarken. Går inte att avgöra utan kursboken. **Byggd igen 2026-10-07 som `psyatp_402`, se §7.5.** |
 
 **Vad som skulle krävas för att bygga dem ändå.** Posterna ovan är inte omöjliga för alltid —
 de saknar bara ett facit som går att lita på. De flesta löses av ett besked från kursansvarig
@@ -373,6 +373,27 @@ oförändrad 55 % Sant, längdbias **26 %** (nära slumpnivån), Matcha-poolen 2
 alternativlistan. Den är struken enligt §3 därför att *Disengagemangsteorin* och *SOK* båda är
 försvarbara, och den motsägelsen är inte löst av att frågan kommer in på nytt. Den byggs när
 det är klart vilket av de två kursen räknar som rätt.
+
+### 7.5 Två frågor ur tentaunderlag (2026-10-07)
+
+Beställning: bygg homunculusfrågan enligt kursmaterialet (alternativ 1) och en fråga med
+tentans ord **pairing**. **`psyatp_402`–`403` / `psyalm_402`–`403`**, ämnet går 399 → **401 frågor**.
+
+- **`psyatp_402`, homunculus.** Avgjort av användaren 2026-10-07: kursmaterialets svar gäller,
+  *Ansiktet, munnen, tungan och struphuvudet*. Tentaversionen bockade *Bålen*, vilket är fel och
+  bekräftar §3:s bedömning av den delmängden. Konkurrenten från §6.2, handen, finns **inte**
+  bland alternativen: tentans *Fingrar* är utbytt mot *Armarna, axlarna, armbågarna och
+  handlederna*, så att frågan bara har ett försvarbart svar. Alla fyra alternativen är
+  uppräkningar av samma form, och rätt svar är inte längst (§2.9). Raden i §3 gäller därmed
+  inte längre.
+- **`psyatp_403`, pairing.** Samma sakfråga som `psyatp_86` och `psyatp_290`, avsiktligt (§0a),
+  men med tentans engelska term så att den känns igen på tentan. Tentans alternativ *Både …* och
+  *Inget av ovanstående* är förbjudna (`CLAUDE_REGLER.md` §2.2) och ersatta med *Aktivitetsgrupp*
+  och *Problemlösningsgrupp*. *Sluten grupp* prövades först men gjorde rätt svar längst.
+- **Båda är långa frågor** (prompt > 55 tecken) och går alltså inte in i Matcha, där `psyatp_403`
+  annars hade delat svar med `psyatp_86` (§2.15).
+- **Mätt:** `validate_quiz.py` 0 blockerande fel i båda filerna, filerna identiska på allt utom
+  `id`, `topic` och `source`.
 
 ## 8. Kopian under Allmänt — `psykologi_allmant`
 

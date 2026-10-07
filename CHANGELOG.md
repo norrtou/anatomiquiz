@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.458
+- **Två nya frågor i båda psykologiämnena, 399 → 401 frågor var** (`psyatp_402`–`403` och `psyalm_402`–`403`). Båda kommer från tentaunderlag.
+- **Homunculus:** vilken del av kroppen representeras av ungefär halva den motoriska och den somatosensoriska barken? Svaret är *ansiktet, munnen, tungan och struphuvudet*, enligt kursmaterialet. Frågan ströks 2026-09-05 eftersom handen konkurrerade som svar och den enda förekomsten låg i ett underlag med felaktiga markeringar. Tentans version bockade dessutom *Bålen*, vilket är fel. Nu följer frågan kursmaterialet, och handen finns inte med bland alternativen, så frågan har bara ett försvarbart svar.
+- **Pairing:** "Den symbiotiska gruppen, den beroende gruppen och pairing är exempel på vad?" Samma sakfråga som `psyatp_86` men med tentans engelska term, så att den känns igen. Tentans alternativ *Både …* och *Inget av ovanstående* är ersatta, eftersom sådana alternativ inte används på sajten.
+- **Kontrollerat:** `validate_quiz.py` 0 blockerande fel i båda filerna, filerna identiska utom id, ämne och källa. Rätt svar är inte det längsta alternativet i någon av frågorna. Båda är långa frågor och går därför inte in i Matcha, där pairing-frågan annars hade delat svar med en befintlig fråga.
+
 ## 0.9.457
 - **Obegriplig sant/falskt-fråga om motivation omskriven, i båda psykologiämnena** (`psyatp_108` och `psyalm_108`). Den löd "Motivation definieras som en benägenhet att bete sig på ett visst sätt, medveten eller omedveten." Slutet var avskrivet ur kursens definition och gick inte att förstå utan den. Nu: "Motivation är en benägenhet att bete sig på ett visst sätt, och den kan vara både medveten och omedveten." Svaret är fortfarande Sant.
 - **Sakfrågan behålls med avsikt.** Definitionen finns även som flervalsfråga (`psyatp_26`, `psyatp_249`), och återkommande frågor ska finnas i båda formerna enligt ämnets facit §0a.
