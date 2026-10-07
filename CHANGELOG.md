@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.460
+- **CLAUDE_REGLER §3.2e utökad:** när användaren frågar efter rätt svar slås det upp i goda vetenskapliga källor eller i de källor användaren anger, och källorna redovisas. Säger källorna inte entydigt det frågan påstår, ska det sägas.
+
 ## 0.9.459
 - **Homunculusfrågan hade fel facit och är rättad, i båda psykologiämnena** (`psyatp_402` och `psyalm_402`). Rätt svar är nu *Fingrar*, enligt tentan. Frågan byggdes i 0.9.458 med *Ansiktet, munnen, tungan och struphuvudet* som svar. Det svaret kom bara från en anteckning som en tidigare session skrivit i facitfilen, och källan till den finns inte i repot. Felsvaren är nu *Bålen*, *Benen* och *Armarna och axlarna*. Ansiktet är borttaget som alternativ eftersom det också har en stor yta i barken.
 - **Ny stående regel, CLAUDE_REGLER §3.2e:** egna anteckningar är aldrig en källa. Facitfiler, todo-filer, CHANGELOG och tidigare sessioners slutsatser får inte användas för att avgöra vad som är rätt svar eller för att bygga eller rätta en fråga. Den felaktiga raden i facitfilen är märkt som obelagd.

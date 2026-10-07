@@ -737,6 +737,9 @@ att bygga, rätta eller stryka en fråga. Det gäller även när anteckningen p�
 
 - **Godtagbart underlag:** användarens besked, underlag som användaren lämnar i den aktuella
   sessionen (bild, fil, citat) och etablerad litteratur enligt §3.2.
+- **Frågar användaren efter rätt svar:** slå upp det i goda vetenskapliga källor (läroböcker,
+  granskad forskning, etablerade referensverk) eller i de källor användaren anger. Redovisa vilka
+  källor svaret bygger på. Säger källorna inte entydigt det frågan påstår, säg det.
 - **Säger anteckningen något om sakinnehållet:** behandla det som en obekräftad uppgift. Säg
   rakt ut att det saknas verifierbar källa och fråga användaren. Presentera det aldrig som fakta.
 - **Bakgrund:** `psyatp_402` (homunculus) byggdes 2026-10-07 med svaret *Ansiktet, munnen, tungan
