@@ -1,5 +1,16 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.466
+- **Resten av svarsnyckeln avstämd — punkt 58–102, där 38 av 41 kontrollerbara stämde.** Tillsammans med 0.9.465 är därmed hela uppsättningen om 102 frågor genomgången.
+- **Rättat: `psyatp_404` (Karin som fortsätter sin skogsrunda under pandemin).** Rätt svar är **aktivitetsteorin**, inte kontinuitetsteorin. Jag byggde den i 0.9.463 på eget resonemang om att ordet *vanliga* pekade mot kontinuitet. Det centrala i frågan är att Karin fortsätter hålla sig aktiv trots omständigheterna. Kontinuitetsteorin ligger nu som felsvar.
+- **Rättat: `psyatp_165` (problemlösning) har fått tillbaka underlagets formulering** — *att få en ny uppgift och använda gammal kunskap på ett nytt sätt*. Jag skrev om den i 0.9.434 därför att den krockade med definitionen av kreativitet i `psyatp_47`. Den överlappningen finns i underlaget självt och ska inte byggas bort; båda svaren är nu som de ska.
+- **Tre tidigare obelagda frågor har fått svar och är inlagda** (`psyatp_414`–`416` och `psyalm_414`–`416`), 411 → 414 frågor var:
+  - **Rut som tar bussen till dottern sedan hon fått andningsbesvär** → *SOK-modellen*. Hon har minskade kroppsliga resurser men bevarar en betydelsefull aktivitet genom att byta transportmedel, alltså kompensation. Frågan ströks 2026-09-05 just för att svaret inte gick att fastställa.
+  - **Det formella operationernas stadium** → vetenskapligt och systematiskt tänkande med hypotetiska begrepp. Frågan kunde inte byggas tidigare eftersom två svarsalternativ var ordagrant identiska i källan; här är alternativen de tre övriga stadierna.
+  - **Personlighet vid frontallobsskada** → skadan kan ändra personligheten främst genom förlorad förmåga att självreglera beteende, snarare än att ge en ny personlighet.
+- **En varning från `validate_quiz.py` åtgärdad under bygget.** Formuleringen *en helt annan personlighet* träffade mönstret för självutpekande distraktorer (§2.2), som finns för fall av typen "Ductus thoracicus, en helt annan struktur". Här var det sakinnehåll och inte en självetikett, men både rätt svar och distraktor är omskrivna så att vakten inte står och tjuter.
+- **Kontrollerat:** `validate_quiz.py` 0 fel och 0 varningar i båda filerna, alla tre nya har långa frågetexter och går inte in i Matcha, och filerna är identiska på allt utom `id`, `topic` och `source`.
+
 ## 0.9.465
 - **Ämnets facit avstämt mot en genomgången svarsnyckel för 57 frågor — 49 av 50 kontrollerbara stämde.** Jämförelsen gjordes post för post mot `correct`-fältet, inte mot en sammanfattning.
 - **Rättat: `psyatp_406` hade fel svar.** Frågan gäller vilket påstående om intelligens och kognition som *inte* stämmer. Rätt svar är att **resultat på intelligenstest inte skulle påverkas av kultur eller uppväxtmiljö** — det är det tydligt felaktiga påståendet, eftersom språk, utbildning och kulturella erfarenheter mycket väl påverkar testresultat. Frågan byggdes i 0.9.464 med *de flesta intelligenstest kräver tal och finmotorik* som svar; det påståendet är svepande men i huvudsak sant och ligger nu som felsvar. Detta var också den enda frågan där vårt facit avvek, och den förklarar var den förlorade poängen låg i underlaget.
