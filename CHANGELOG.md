@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.457
+- **Obegriplig sant/falskt-fråga om motivation omskriven, i båda psykologiämnena** (`psyatp_108` och `psyalm_108`). Den löd "Motivation definieras som en benägenhet att bete sig på ett visst sätt, medveten eller omedveten." Slutet var avskrivet ur kursens definition och gick inte att förstå utan den. Nu: "Motivation är en benägenhet att bete sig på ett visst sätt, och den kan vara både medveten och omedveten." Svaret är fortfarande Sant.
+- **Sakfrågan behålls med avsikt.** Definitionen finns även som flervalsfråga (`psyatp_26`, `psyatp_249`), och återkommande frågor ska finnas i båda formerna enligt ämnets facit §0a.
+- **Kontrollerat:** `validate_quiz.py` 0 blockerande fel i båda filerna, filerna fortfarande identiska utom id, ämne och källa, TF-balansen oförändrad på 55 % Sant. Exemplet är inskrivet under CLAUDE_REGLER §2.12b punkt 7.
+
 ## 0.9.456
 - **Repot har nu en licensfil, `LICENSE` i roten.** Tidigare saknades licens helt. Juridiskt betydde det redan "alla rättigheter förbehållna", men samtidigt sade `BILDER_REGLER.md` att bilderna var CC BY 4.0, och det stod bara i en intern regelfil. Nu står båda delarna på ett ställe.
 - **Texter, quizfrågor, ordlista och kod: alla rättigheter förbehållna.** Att källkoden går att läsa på GitHub ger ingen rätt att använda den.

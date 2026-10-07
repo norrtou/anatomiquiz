@@ -626,6 +626,7 @@ Skriptet är facit för *formtells* (§2.13), men följande feltyper är osynlig
   - `lak_rygg_81` "Vilken **struktur skadas** vid en Chance-fraktur?" med `correct` som beskriver frakturens förlopp, inte en struktur.
   - `lak_rygg_58` "**Var mellan vilka nivåer** är ryggmärgens blodförsörjning mest sårbar?" – två frågeord i samma mening.
   - `lak_buk_80` "Vilket lager omger njuren **närmast** och innehåller fettvävnad?" – motsäger sig själv: närmast är capsula fibrosa, fettet är capsula adiposa. Distraktorn blev då lika rätt som svaret.
+  - `psyatp_108`/`psyalm_108` (TF) "Motivation definieras som en benägenhet att bete sig på ett visst sätt**, medveten eller omedveten**." – en kvalificerare hängde löst sist i meningen, avskriven ur en kursdefinition. Den som inte redan kunde definitionen kunde inte se vad "medveten eller omedveten" syftade på. Omskriven 2026-10-07 till "…och den kan vara både medveten och omedveten." Ett TF-påstående ska kunna läsas som en hel mening av någon som inte sett källan.
   - **Test:** läs prompten ensam, utan alternativ, och formulera svaret själv. Matchar din svarstyp `correct`s svarstyp (struktur/uppgift/tidpunkt/mekanism)? Bär prompten en kvalificerare som gör en distraktor sann?
 
 **8. Fel böjning av latinska/grekiska fackord i själva svarstexten.** Skild från genusfelen i punkt 6 – här är ordet rätt men formen fel, och det ser ut som kunskap:
