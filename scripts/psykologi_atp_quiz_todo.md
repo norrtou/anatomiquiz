@@ -301,8 +301,8 @@ begreppet kognition, ValMO och fysiska aspekter i gruppen.
 
 - **Primär motivation är nu belagd.** Kursmaterialet ger "att dricka när man är törstig", samma
   svar som läroboksexemplet. Frågan i §3 byggdes därför som kort fråga (`psyatp_342`).
-- **Fortfarande inte byggt:** homunculus ("ca halva barken"). Kursmaterialet anger ansiktet,
-  munnen, tungan och struphuvudet, men handen är fortfarande en stark konkurrent (§6.2). Rut och
+- **Fortfarande inte byggt:** homunculus ("ca halva barken"). *[Obelagt, se §7.5: påståendet att
+  kursmaterialet anger ansiktet saknar källa i repot och visade sig gå emot tentans svar Fingrar.]* Rut och
   Karin byggdes inte heller som korta frågor: deras svar är teorier som redan är svar i
   Matcha-poolen, och då hade paren blivit tvetydiga (`CLAUDE_REGLER.md` §2.15).
 - **Stavningen `Schwarzberg` → `Schwartzberg`** i `psyatp_44`, belagd i kursmaterialet.
@@ -379,13 +379,12 @@ det är klart vilket av de två kursen räknar som rätt.
 Beställning: bygg homunculusfrågan enligt kursmaterialet (alternativ 1) och en fråga med
 tentans ord **pairing**. **`psyatp_402`–`403` / `psyalm_402`–`403`**, ämnet går 399 → **401 frågor**.
 
-- **`psyatp_402`, homunculus.** Avgjort av användaren 2026-10-07: kursmaterialets svar gäller,
-  *Ansiktet, munnen, tungan och struphuvudet*. Tentaversionen bockade *Bålen*, vilket är fel och
-  bekräftar §3:s bedömning av den delmängden. Konkurrenten från §6.2, handen, finns **inte**
-  bland alternativen: tentans *Fingrar* är utbytt mot *Armarna, axlarna, armbågarna och
-  handlederna*, så att frågan bara har ett försvarbart svar. Alla fyra alternativen är
-  uppräkningar av samma form, och rätt svar är inte längst (§2.9). Raden i §3 gäller därmed
-  inte längre.
+- **`psyatp_402`, homunculus. Facit: *Fingrar*, enligt tentan (användarens besked 2026-10-07).**
+  Frågan byggdes först samma dag med *Ansiktet, munnen, tungan och struphuvudet* som svar.
+  Det byggde enbart på raden i §7.3 nedan om vad "kursmaterialet anger", skriven av en tidigare
+  session utan att källan finns i repot. Den raden är **inte** ett belägg (`CLAUDE_REGLER.md`
+  §3.2e). Felsvar: *Bålen*, *Benen*, *Armarna och axlarna*. Ansiktet är inte med som alternativ,
+  eftersom det också har en stor yta i barken.
 - **`psyatp_403`, pairing.** Samma sakfråga som `psyatp_86` och `psyatp_290`, avsiktligt (§0a),
   men med tentans engelska term så att den känns igen på tentan. Tentans alternativ *Både …* och
   *Inget av ovanstående* är förbjudna (`CLAUDE_REGLER.md` §2.2) och ersatta med *Aktivitetsgrupp*

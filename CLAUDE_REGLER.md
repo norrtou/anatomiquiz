@@ -728,6 +728,21 @@ inte se det här.
 - Konkret miss att inte upprepa: extrinsisk/intrinsisk-märkningen togs bort från biceps/triceps/deltoideus/supraspinatus med eget resonemang – kursen använder den bredare uppdelningen (extrinsisk = muskelbuk utanför handen). Källan hade rätt.
 - När källan krockar med min anatomiska intuition: **flagga och FRÅGA**, överkör aldrig tyst.
 
+### 3.2e ⛔ EGNA ANTECKNINGAR ÄR ALDRIG EN KÄLLA
+**STÅENDE REGEL (2026-10-07), användarens uttryckliga besked.** Det Claude själv har skrivit –
+facitfiler, todo-filer, CHANGELOG, commit-meddelanden, kodkommentarer, regelfiler, tidigare
+sessioners slutsatser – får **aldrig** användas för att avgöra vad som är rätt svar, eller för
+att bygga, rätta eller stryka en fråga. Det gäller även när anteckningen påstår att
+"kursmaterialet anger X": är kursmaterialet inte framför mig är påståendet obelagt.
+
+- **Godtagbart underlag:** användarens besked, underlag som användaren lämnar i den aktuella
+  sessionen (bild, fil, citat) och etablerad litteratur enligt §3.2.
+- **Säger anteckningen något om sakinnehållet:** behandla det som en obekräftad uppgift. Säg
+  rakt ut att det saknas verifierbar källa och fråga användaren. Presentera det aldrig som fakta.
+- **Bakgrund:** `psyatp_402` (homunculus) byggdes 2026-10-07 med svaret *Ansiktet, munnen, tungan
+  och struphuvudet*, enbart på grund av en rad i `scripts/psykologi_atp_quiz_todo.md` som en
+  tidigare session skrivit. Tentans svar var *Fingrar*. Frågan låg ute med fel facit.
+
 ### 3.2c Skyddade källfiler
 - `data/medicinsk_terminologi.json` bygger på en säker källa och ska **INTE röras/redigeras** vid språk- eller faktagranskningar. Hoppa över den om användaren inte uttryckligen säger annat.
 

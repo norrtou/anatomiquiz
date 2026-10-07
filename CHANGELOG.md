@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.459
+- **Homunculusfrågan hade fel facit och är rättad, i båda psykologiämnena** (`psyatp_402` och `psyalm_402`). Rätt svar är nu *Fingrar*, enligt tentan. Frågan byggdes i 0.9.458 med *Ansiktet, munnen, tungan och struphuvudet* som svar. Det svaret kom bara från en anteckning som en tidigare session skrivit i facitfilen, och källan till den finns inte i repot. Felsvaren är nu *Bålen*, *Benen* och *Armarna och axlarna*. Ansiktet är borttaget som alternativ eftersom det också har en stor yta i barken.
+- **Ny stående regel, CLAUDE_REGLER §3.2e:** egna anteckningar är aldrig en källa. Facitfiler, todo-filer, CHANGELOG och tidigare sessioners slutsatser får inte användas för att avgöra vad som är rätt svar eller för att bygga eller rätta en fråga. Den felaktiga raden i facitfilen är märkt som obelagd.
+- **Kontrollerat:** `validate_quiz.py` 0 blockerande fel i båda filerna, filerna identiska utom id, ämne och källa.
+
 ## 0.9.458
 - **Två nya frågor i båda psykologiämnena, 399 → 401 frågor var** (`psyatp_402`–`403` och `psyalm_402`–`403`). Båda kommer från tentaunderlag.
 - **Homunculus:** vilken del av kroppen representeras av ungefär halva den motoriska och den somatosensoriska barken? Svaret är *ansiktet, munnen, tungan och struphuvudet*, enligt kursmaterialet. Frågan ströks 2026-09-05 eftersom handen konkurrerade som svar och den enda förekomsten låg i ett underlag med felaktiga markeringar. Tentans version bockade dessutom *Bålen*, vilket är fel. Nu följer frågan kursmaterialet, och handen finns inte med bland alternativen, så frågan har bara ett försvarbart svar.
