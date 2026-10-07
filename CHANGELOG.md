@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.470
+- **Ny post i ordlistan: *vagitus*** — det nyfödda barnets skrik, särskilt det första skriket direkt efter födseln när lungorna fylls med luft och andningen kommer igång. Latinsk uppslagsform, så ingen svensk böjning (ORDLISTA.md); `Eng.`, `Vardag.`, etymologi (lat. *vagire* = skrika, om spädbarn) och `Jfr Partus, Apgar`. Inlagd mellan *vagitorium* och *vagotomi*.
+- Ordet används inte i någon sidtext, så det har ingen tooltip i `kb_glossary_terms.json` (§0.6 gäller ord som står på sajten).
+- **Kontrollerat:** hela kedjan körd, `check_generators.py` utan avvikelser, ordlistan 11 492 → 11 493 ord, V-sidan 300 → 301.
+
 ## 0.9.469
 - **Exempelpersoner i quizet har fått nya, vanliga namn som passar deras ålder.** Verkliga personer (Bowlby, Erik Erikson, Arthur Rubinstein, Fisher och Nyman m.fl.) är orörda. Ändrat:
   - Psykologi (båda ämnena): Trille → Alva (1,5 år), Maria → Ella (9 år), Maria och Joel i betingningsfrågan → Saga och Hugo, Marja → Petra, Karin (88) → Margit, Christina (91) → Gunvor, personalen Anna → Lina, dottern Britt-Marie → Agneta, Rut → Birgit.
