@@ -341,6 +341,17 @@ En fråga utan relevanta alternativ är värdelös och förstör quizet. Inga fi
   - Duplikat (samma svar både i "correct" och i "distractors")
   - Filler-ord
 
+### 2.3c Exempelpersoner får vanliga, påhittade namn
+När en fråga beskriver ett fall (*"Alva är 1,5 år. I vilket Piagetstadium är hon?"*) ska personen
+ha ett vanligt svenskt förnamn som passar ålder och kön i texten: barn får barnnamn (Alva, Hugo),
+äldre får namn som passar deras generation (Gunvor, Margit). Ta aldrig över namnet från
+underlaget eller en tentafråga, och använd inga ovanliga smeknamn. Samma person heter samma sak i
+alla frågor där fallet återkommer, och i båda psykologiämnena.
+
+Gäller INTE verkliga personer (Bowlby, Erik Erikson, Arthur Rubinstein, Fisher och Nyman) — deras
+namn är sakinnehåll. Undvik namn som också är facktermer i quizet (t.ex. *Carina*, *Iris*,
+*Pia*, *Sanna*).
+
 ### 2.3b Omvänd fråga: negationen skrivs i VERSALER
 Quizet är till för inlärning, inte för att lura spelaren. När frågan ber om alternativet
 som **inte** stämmer vänder ett enda ord hela uppgiften, och det ordet ska synas direkt.

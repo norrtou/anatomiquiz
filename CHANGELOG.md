@@ -1,5 +1,15 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.469
+- **Exempelpersoner i quizet har fått nya, vanliga namn som passar deras ålder.** Verkliga personer (Bowlby, Erik Erikson, Arthur Rubinstein, Fisher och Nyman m.fl.) är orörda. Ändrat:
+  - Psykologi (båda ämnena): Trille → Alva (1,5 år), Maria → Ella (9 år), Maria och Joel i betingningsfrågan → Saga och Hugo, Marja → Petra, Karin (88) → Margit, Christina (91) → Gunvor, personalen Anna → Lina, dottern Britt-Marie → Agneta, Rut → Birgit.
+  - Ergonomi: Anna → Sofia, Erik → Johan.
+  - Anatomi och fysiologi (flashcards): Olle → Viktor, Rebecca → Tilda.
+  - Studenters flashcards och tentaplugg: Karin → Lena, Stellan → Göran, Johanna → Malin.
+- Bara namnen är ändrade; frågor, svar och pronomen är desamma.
+- **Ny regel CLAUDE_REGLER §2.3c** om hur exempelpersoner namnges.
+- **Kontrollerat:** `validate_quiz.py` 0 blockerande fel, psykologifilerna identiska på allt utom `id`, `topic` och `source`, inga gamla exempelnamn kvar i `data/`.
+
 ## 0.9.468
 - **Bowlbyfrågan (`psyatp_5`/`psyalm_5`) är omskriven till en positiv fråga: *Vilket påstående stämmer med hans teori?*** Versalerna i 0.9.467 räckte inte. I den omvända formen fick det falska påståendet *Han lade stor vikt vid pappans roll* den gröna bocken, och den bilden fastnar som sann — i strid med `_124`, `_169`, `_202` och `_243`, som alla säger att modern stod i centrum och att fadern inte gjorde det. Nu är rätt svar att anknytningen ökade chanserna för överlevnad, och pappans roll ligger som felsvar.
 - Nya felsvar: att anknytningen skulle vara inlärd genom belöning med mat (den förklaring Bowlby vände sig emot) och att den skulle formas först i skolåldern. De två tidigare felsvaren om tre anknytningsgrupper och fyra stadier stämmer med teorin och kan inte vara felsvar i en positiv fråga; de tre grupperna täcks redan av `_203` och `_305`.
