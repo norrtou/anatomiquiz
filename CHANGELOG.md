@@ -1,5 +1,22 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.461
+- **Tolv psykologifrågor har fått den kontext de saknade, i båda psykologiämnena.** Frågorna syftade på ett exempel, en studie eller en kurs som läsaren inte ser, till exempel "Vad kopplades ihop med smärtan efter trafikolyckan?" och "Vad bygger kreativitet på enligt kursen?". Nu står varje fråga för sig själv. Svaren är oförändrade.
+  - `328` → "Vad betingas till rädsla efter en svår bilolycka?"
+  - `329` → "Vad händer med ångesten när en bilrädd kliver ur bilen?"
+  - `120` → "Att barn som stannat länge på barnhem under svår deprivation fick fler kognitiva problem är ett exempel på pruning …"
+  - `310` → "Vad gav lång tid på barnhem under svår deprivation?"
+  - `340` → "I vilken ålder beskrev Rubinstein sina pianostrategier?"
+  - `360` → "Vilket av exemplen är ett humör snarare än en emotion?"
+  - `341`, `361` → "enligt kursen" borttaget
+  - `368` → "Vilket standardiserat IQ-test är vanligt för vuxna?"
+  - `250` → "Vad bör utforskas när en behandling inte ger resultat?"
+  - `317` → "Hur ser tidig språkutveckling ut i olika kulturer?"
+  - `339` → "Vilken förmåga ingår i att styra uppmärksamheten?"
+- **`367` är inte omskriven.** Dess svar ("ett IQ-test mäter vad någon vet") är ifrågasatt och väntar på beslut.
+- **Faktagranskning av hela ämnet:** de frågor vars svar är tveksamma enligt vetenskapliga källor står i facitfilen §9 som en arbetslista. Ingen av dem är ändrad.
+- **Kontrollerat:** `validate_quiz.py` 0 blockerande fel i båda filerna, filerna identiska utom id, ämne och källa. Matcha-poolen är oförändrad: 204 par, alla med unika svar. Alla omskrivna korta frågor är högst 55 tecken.
+
 ## 0.9.460
 - **CLAUDE_REGLER §3.2e utökad:** när användaren frågar efter rätt svar slås det upp i goda vetenskapliga källor eller i de källor användaren anger, och källorna redovisas. Säger källorna inte entydigt det frågan påstår, ska det sägas.
 

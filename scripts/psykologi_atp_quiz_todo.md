@@ -394,6 +394,31 @@ tentans ord **pairing**. **`psyatp_402`–`403` / `psyalm_402`–`403`**, ämnet
 - **Mätt:** `validate_quiz.py` 0 blockerande fel i båda filerna, filerna identiska på allt utom
   `id`, `topic` och `source`.
 
+## 9. Faktagranskning 2026-10-07 — öppna punkter, väntar på användarens beslut
+
+Hela ämnet (401 frågor) lästes fråga för fråga och kontrollerades mot vetenskapliga källor.
+**Det här är en arbetslista, inte ett facit.** Ingen fråga nedan får ändras med listan som
+underlag (`CLAUDE_REGLER.md` §3.2e). Varje punkt avgörs av användaren, en i taget, och slås
+upp på nytt i källorna när den tas upp. Gäller också kopiorna `psyalm_<samma nummer>`.
+
+| # | Frågor | Vad som är tveksamt | Källa |
+|---|---|---|---|
+| 11 | `104`, `227`, `354` | Facit: personligheten är densamma vid frontallobsdemens. Diagnoskriterierna beskriver beteendevarianten som progressiv **personlighetsförändring**, alltså distraktorns svar. | Rascovsky m.fl. 2011, *Brain* 134(9) |
+| 12 | `14`, `270` | Aktivitetsteorin tillskrivs Neugarten. Standardattributionen är Havighurst 1961, med Neugarten som medförfattare 1968. | Havighurst, Neugarten och Tobin 1968 |
+| 13 | `14`, `131`, `156` | Facit: aktiviteten behöver inte upplevas som meningsfull. Lemon, Bengtson och Peterson 1972 fann att informella, personligt betydelsefulla aktiviteter påverkar välbefinnandet mest. | Lemon m.fl. 1972 |
+| 14 | `63`, `271` | Sociala sammanbrottsteorin om åldrande tillskrivs Zusman. Teorin formulerades av Kuypers och Bengtson 1973; Zusman 1966 beskrev syndromet hos psykiatriska patienter. | Kuypers och Bengtson 1973, *Human Development* 16 |
+| 15 | `305`, distraktor i `5` | Facit: tre anknytningsmönster. Sedan Main och Solomon 1986 används fyra, med desorganiserad anknytning. I `5` är distraktorn "tre grupper" Ainsworths indelning, inte Bowlbys, så den stämmer också "sämst" med Bowlby. | Main och Solomon 1986 |
+| 16 | `189`, `366`, `367` | Facit: ett IQ-test mäter "vad någon vet". WAIS mäter kognitiv förmåga (resonemang, arbetsminne, snabbhet). I `366` är distraktorn "Motivation och vilja" ett känt inflytande på testresultat. Den mest citerade metaanalysen (Duckworth m.fl. 2011) är tillbakadragen 2025. `367` säger fortfarande "enligt kursen" och skrevs inte om 2026-10-07 i väntan på beslutet. | Wechsler; Duckworth m.fl. 2011 (tillbakadragen) |
+| 17 | `49`, `246` | Facit: personlighetsdrag är varken bra eller dåliga. Distraktorerna om hög neuroticism har stöd: hög neuroticism hänger samman med sämre psykisk hälsa. Två försvarbara svar. | Forskning om femfaktormodellen |
+| 18 | `28`, `331`, `88` | "Sex minnessystem" är inte fastslaget i forskningen. Squires taxonomi räknar "priming och perceptuell inlärning" som ett system, så "Perception" som fel alternativ i `28` är tvetydigt. | Squire 2004 |
+| 19 | `369` | "Stabilitet" som eget krav utöver reliabilitet och validitet. Stabilitet över tid är en form av reliabilitet; det vedertagna tredje kravet är standardisering och normering. | Psykometrisk grundlitteratur |
+| 20 | `23`, `230` | Facit: metakognition = att reglera sitt bemötande. Vetenskapligt är metakognition att övervaka och styra sitt eget tänkande. Tidigare noterat som kursansvarigs förtydligande, vilket inte är belagt. | Flavell 1979 |
+| 21 | `41`, `148`, `343` | "Alla är motiverade" är ett arbetsterapeutiskt förhållningssätt, inte ett vetenskapligt faktum. `343` ("De kom till behandlingen") är svagast. | — |
+| 22 | `77` | Facit: övriga drag formas under barndomen. Personligheten fortsätter att förändras genom vuxenlivet. | Forskning om personlighetsutveckling i vuxen ålder |
+
+Punkt 1–10 i samma granskning (kontextlösa frågor) åtgärdades 2026-10-07 i 0.9.461. Punkt 23
+(`402`, homunculus) har *Fingrar* som svar enligt tentan sedan 0.9.459.
+
 ## 8. Kopian under Allmänt — `psykologi_allmant`
 
 `data/psykologi_allmant.json` är en identisk kopia av ämnet, med id `psyalm_<samma nummer>`,
