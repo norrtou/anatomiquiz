@@ -302,7 +302,7 @@ begreppet kognition, ValMO och fysiska aspekter i gruppen.
 - **Primär motivation är nu belagd.** Kursmaterialet ger "att dricka när man är törstig", samma
   svar som läroboksexemplet. Frågan i §3 byggdes därför som kort fråga (`psyatp_342`).
 - **Fortfarande inte byggt:** homunculus ("ca halva barken"). *[Obelagt, se §7.5: påståendet att
-  kursmaterialet anger ansiktet saknar källa i repot och visade sig gå emot tentans svar Fingrar.]* Rut och
+  kursmaterialet anger ansiktet saknar källa i repot och visade sig gå emot underlagets svar Fingrar.]* Rut och
   Karin byggdes inte heller som korta frågor: deras svar är teorier som redan är svar i
   Matcha-poolen, och då hade paren blivit tvetydiga (`CLAUDE_REGLER.md` §2.15).
 - **Stavningen `Schwarzberg` → `Schwartzberg`** i `psyatp_44`, belagd i kursmaterialet.
@@ -374,19 +374,19 @@ alternativlistan. Den är struken enligt §3 därför att *Disengagemangsteorin*
 försvarbara, och den motsägelsen är inte löst av att frågan kommer in på nytt. Den byggs när
 det är klart vilket av de två kursen räknar som rätt.
 
-### 7.5 Två frågor ur tentaunderlag (2026-10-07)
+### 7.5 Två frågor ur kursunderlaget (2026-10-07)
 
 Beställning: bygg homunculusfrågan enligt kursmaterialet (alternativ 1) och en fråga med
-tentans ord **pairing**. **`psyatp_402`–`403` / `psyalm_402`–`403`**, ämnet går 399 → **401 frågor**.
+underlagets ord **pairing**. **`psyatp_402`–`403` / `psyalm_402`–`403`**, ämnet går 399 → **401 frågor**.
 
-- **`psyatp_402`, homunculus. Facit: *Fingrar*, enligt tentan (användarens besked 2026-10-07).**
+- **`psyatp_402`, homunculus. Facit: *Fingrar* (användarens besked 2026-10-07).**
   Frågan byggdes först samma dag med *Ansiktet, munnen, tungan och struphuvudet* som svar.
   Det byggde enbart på raden i §7.3 nedan om vad "kursmaterialet anger", skriven av en tidigare
   session utan att källan finns i repot. Den raden är **inte** ett belägg (`CLAUDE_REGLER.md`
   §3.2e). Felsvar: *Bålen*, *Benen*, *Armarna och axlarna*. Ansiktet är inte med som alternativ,
   eftersom det också har en stor yta i barken.
 - **`psyatp_403`, pairing.** Samma sakfråga som `psyatp_86` och `psyatp_290`, avsiktligt (§0a),
-  men med tentans engelska term så att den känns igen på tentan. Tentans alternativ *Både …* och
+  men med den engelska termen så att den känns igen. Underlagets alternativ *Både …* och
   *Inget av ovanstående* är förbjudna (`CLAUDE_REGLER.md` §2.2) och ersatta med *Aktivitetsgrupp*
   och *Problemlösningsgrupp*. *Sluten grupp* prövades först men gjorde rätt svar längst.
 - **Båda är långa frågor** (prompt > 55 tecken) och går alltså inte in i Matcha, där `psyatp_403`
@@ -417,7 +417,7 @@ upp på nytt i källorna när den tas upp. Gäller också kopiorna `psyalm_<samm
 | 22 | `77` | Facit: övriga drag formas under barndomen. Personligheten fortsätter att förändras genom vuxenlivet. | Forskning om personlighetsutveckling i vuxen ålder |
 
 Punkt 1–10 i samma granskning (kontextlösa frågor) åtgärdades 2026-10-07 i 0.9.461. Punkt 23
-(`402`, homunculus) har *Fingrar* som svar enligt tentan sedan 0.9.459.
+(`402`, homunculus) har *Fingrar* som svar sedan 0.9.459.
 
 ## 8. Kopian under Allmänt — `psykologi_allmant`
 

@@ -1,5 +1,10 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.462
+- **Formuleringarna om psykologiämnets underlag lagda i linje med §3.6.** Tio ställen i `CHANGELOG.md` och `scripts/psykologi_atp_quiz_todo.md` beskrev underlaget på ett sätt regeln inte tillåter. Ämnet beskrivs efter vad det innehåller och vilken kurs det hör till; sakinnehållet i posterna är oförändrat, och inga frågor är rörda.
+- **Två äldre poster rättade samtidigt** (0.3.x och 0.5.x), som hade samma formulering om två andra ämnen. De låg kvar sedan den förra genomgången, eftersom sökningen då inte täckte deras ordval.
+- **Påminnelse om varför det här återkommer:** `CHANGELOG.md` renderas live på `versionshistorik.html` via `js/changelog.js`, och facitfilerna under `scripts/` ligger publikt i repot. Båda är alltså lästa ytor, inte interna anteckningar.
+
 ## 0.9.461
 - **Tolv psykologifrågor har fått den kontext de saknade, i båda psykologiämnena.** Frågorna syftade på ett exempel, en studie eller en kurs som läsaren inte ser, till exempel "Vad kopplades ihop med smärtan efter trafikolyckan?" och "Vad bygger kreativitet på enligt kursen?". Nu står varje fråga för sig själv. Svaren är oförändrade.
   - `328` → "Vad betingas till rädsla efter en svår bilolycka?"
@@ -21,14 +26,14 @@
 - **CLAUDE_REGLER §3.2e utökad:** när användaren frågar efter rätt svar slås det upp i goda vetenskapliga källor eller i de källor användaren anger, och källorna redovisas. Säger källorna inte entydigt det frågan påstår, ska det sägas.
 
 ## 0.9.459
-- **Homunculusfrågan hade fel facit och är rättad, i båda psykologiämnena** (`psyatp_402` och `psyalm_402`). Rätt svar är nu *Fingrar*, enligt tentan. Frågan byggdes i 0.9.458 med *Ansiktet, munnen, tungan och struphuvudet* som svar. Det svaret kom bara från en anteckning som en tidigare session skrivit i facitfilen, och källan till den finns inte i repot. Felsvaren är nu *Bålen*, *Benen* och *Armarna och axlarna*. Ansiktet är borttaget som alternativ eftersom det också har en stor yta i barken.
+- **Homunculusfrågan hade fel facit och är rättad, i båda psykologiämnena** (`psyatp_402` och `psyalm_402`). Rätt svar är nu *Fingrar*, enligt ditt besked. Frågan byggdes i 0.9.458 med *Ansiktet, munnen, tungan och struphuvudet* som svar. Det svaret kom bara från en anteckning som en tidigare session skrivit i facitfilen, och källan till den finns inte i repot. Felsvaren är nu *Bålen*, *Benen* och *Armarna och axlarna*. Ansiktet är borttaget som alternativ eftersom det också har en stor yta i barken.
 - **Ny stående regel, CLAUDE_REGLER §3.2e:** egna anteckningar är aldrig en källa. Facitfiler, todo-filer, CHANGELOG och tidigare sessioners slutsatser får inte användas för att avgöra vad som är rätt svar eller för att bygga eller rätta en fråga. Den felaktiga raden i facitfilen är märkt som obelagd.
 - **Kontrollerat:** `validate_quiz.py` 0 blockerande fel i båda filerna, filerna identiska utom id, ämne och källa.
 
 ## 0.9.458
-- **Två nya frågor i båda psykologiämnena, 399 → 401 frågor var** (`psyatp_402`–`403` och `psyalm_402`–`403`). Båda kommer från tentaunderlag.
-- **Homunculus:** vilken del av kroppen representeras av ungefär halva den motoriska och den somatosensoriska barken? Svaret är *ansiktet, munnen, tungan och struphuvudet*, enligt kursmaterialet. Frågan ströks 2026-09-05 eftersom handen konkurrerade som svar och den enda förekomsten låg i ett underlag med felaktiga markeringar. Tentans version bockade dessutom *Bålen*, vilket är fel. Nu följer frågan kursmaterialet, och handen finns inte med bland alternativen, så frågan har bara ett försvarbart svar.
-- **Pairing:** "Den symbiotiska gruppen, den beroende gruppen och pairing är exempel på vad?" Samma sakfråga som `psyatp_86` men med tentans engelska term, så att den känns igen. Tentans alternativ *Både …* och *Inget av ovanstående* är ersatta, eftersom sådana alternativ inte används på sajten.
+- **Två nya frågor i båda psykologiämnena, 399 → 401 frågor var** (`psyatp_402`–`403` och `psyalm_402`–`403`). Båda kommer från kursunderlaget.
+- **Homunculus:** vilken del av kroppen representeras av ungefär halva den motoriska och den somatosensoriska barken? Svaret är *ansiktet, munnen, tungan och struphuvudet*, enligt kursmaterialet. Frågan ströks 2026-09-05 eftersom handen konkurrerade som svar och den enda förekomsten låg i ett underlag med felaktiga markeringar. Underlaget angav dessutom *Bålen*, vilket är fel. Nu följer frågan kursmaterialet, och handen finns inte med bland alternativen, så frågan har bara ett försvarbart svar.
+- **Pairing:** "Den symbiotiska gruppen, den beroende gruppen och pairing är exempel på vad?" Samma sakfråga som `psyatp_86` men med den engelska termen, så att den känns igen. Underlagets alternativ *Både …* och *Inget av ovanstående* är ersatta, eftersom sådana alternativ inte används på sajten.
 - **Kontrollerat:** `validate_quiz.py` 0 blockerande fel i båda filerna, filerna identiska utom id, ämne och källa. Rätt svar är inte det längsta alternativet i någon av frågorna. Båda är långa frågor och går därför inte in i Matcha, där pairing-frågan annars hade delat svar med en befintlig fråga.
 
 ## 0.9.457
@@ -4083,7 +4088,7 @@
   - `skuldra_leder` (30): **de fyra lederna** som efterfrågades — art. glenohumerale (kulled, labrum, rörelser, instabilitet), art. acromioclavicularis (plan led, lig. coracoclaviculare), art. sternoclavicularis (enda äkta förbindelsen till axialskelettet, discus articularis, sadelled) och den skapulotorakala leden (funktionell, ej synovial).
   - `skuldra_muskler` (34): deltoideus, trapezius, serratus anterior, mm. rhomboidei, levator scapulae, pectoralis major/minor, latissimus dorsi, teres major, biceps/triceps/coracobrachialis (ursprung/fäste/funktion/innervation). Rotatorkuffen nedtonad till ett par stabiliseringsfrågor.
   - `skuldra_funktion` (8): skapulohumeral rytm (~2:1), samspel mellan lederna vid abduktion, bursa subacromialis, luxation (anterior).
-- Frågor återanvänder och omformulerar typiska tenta-/ben-/muskelfrågor utan att dubblera befintliga frågor ordagrant.
+- Frågor återanvänder och omformulerar typiska ben- och muskelfrågor utan att dubblera befintliga frågor ordagrant.
 - Inkopplat i app.js (`getQuestionsPath` + båda `topicMatch`-blocken, prefix `skuldra_`), ämnesmenyn i index.html samt statistiklistan i info.js.
 - Cachebustrar och APP_VERSION bumpade till 0.6.12.
 - Highscore-datan i localStorage är orörd.
@@ -4485,7 +4490,7 @@
 - Infosidan: Studenters flashcards visas dynamiskt i frågestatistiken, separat under quiztotalen med egna kolumnmarkeringar.
 
 ## 0.3.97
-- Studenters flashcards: tar bort examensrelikter — instruktionsprefix ("Skriv ut de latinska namnen för...", "Skriv följande begrepp på latin...", "Välj rätt svar" m.fl.) och tentanumrering borttagna. 54 fält åtgärdade.
+- Studenters flashcards: tar bort uppgiftsrelikter — instruktionsprefix ("Skriv ut de latinska namnen för...", "Skriv följande begrepp på latin...", "Välj rätt svar" m.fl.) och tentanumrering borttagna. 54 fält åtgärdade.
 
 ## 0.3.96
 - Studenters flashcards: tar bort poängreferenser som (1p), (2p), (6p) m.fl. 99 fält åtgärdade.
