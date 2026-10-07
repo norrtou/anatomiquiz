@@ -1,5 +1,14 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.464
+- **Ämnets facit avstämt mot en fullständig nyckel — alla 22 flervalsfrågor stämde, noll avvikelser.** Hela uppsättningen jämfördes svar för svar mot quizet: Piagets inriktning, det preoperationella stadiet, den centrala frågeställning som inte hör hemma, kontinuitetsteorin, successful ageing, SOK-ordningen, emotion, Maslows andra steg, sociala sammanbrottsteorin, afasi, gerotranscendens, Yalom och Leszcz, negativ förstärkning, extroversion, kreativitet, KBT vid stress, parbildning, personlighetsegenskaper, apraxi, hjärnstammen och de taktila signalerna.
+- **Tre frågor saknades och är inlagda i båda psykologiämnena** (`psyatp_406`–`408` och `psyalm_406`–`408`), 403 → 406 frågor var:
+  - **Intelligens och kognition, vilket påstående som inte stämmer.** Svar: *de flesta intelligenstest kräver att man kan tala och använda finmotorik*. Frågan fanns inte i ämnet eftersom underlaget tidigare pekade åt två håll; nu är svaret fastställt.
+  - **Gruppledarens två kompetenser enligt Snäckan:** *kognitiv eller teoretisk kompetens* och *emotionell kompetens*.
+  - **Stolarnas placering i grupparbete enligt Snäckan:** *U-form eller öppen fyrkant*.
+- **Stavningen `Webster & Schwarzberg` i `psyatp_44` är bekräftad** och ska stå kvar som den är.
+- **Kontrollerat:** `validate_quiz.py` 0 blockerande fel i båda filerna, rätt svar är inte det längsta alternativet i någon av de tre nya, alla tre har långa frågetexter och går därför inte in i Matcha, och filerna är identiska på allt utom `id`, `topic` och `source`.
+
 ## 0.9.463
 - **Täckningskontroll mot de frågor som återkommer oftast i kursunderlaget — 77 punkter prövade mot ämnets 401 frågor.** 73 var redan täckta i någon form, och varje träff verifierades mot frågans faktiska text i stället för mot en nyckelordsmatchning: den grova sökningen gav flera falska förstaträffar som inte höll vid granskning.
 - **Två frågor saknades och är inlagda, i båda psykologiämnena** (`psyatp_404`–`405` och `psyalm_404`–`405`), 401 → 403 frågor var:
