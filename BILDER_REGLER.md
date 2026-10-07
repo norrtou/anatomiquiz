@@ -81,15 +81,24 @@ SEO-nackdelen.
 - Dekorbild utan informationsvärde: tom `alt=""` (men sådana hör sällan hemma här).
 
 ## Rättigheter
-- Registrera `source` och `license` för varje bild.
-- **Standard för egna bilder (default):** `source: "Eget verk (Anatomiquiz)"`,
-  `license: "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"`. Dvs fria
-  att återanvändas av andra med hänvisning till Anatomiquiz. Ingen synlig `credit`
-  behövs på den egna sajten (självkreditering är onödig); attributionskravet gäller
-  externt återbruk.
-- Tredjepartsbild: säkerställ licens och fyll i `credit` om den kräver synlig
-  kreditering (visas som `<figcaption>`).
-- Ladda aldrig upp bild utan klarlagd licens.
+**STÅENDE REGEL (2026-10-07). Bara egna bilder.** Sajten använder enbart bilder som
+Anatomiquiz själv har skapat. Tredjepartsbilder läggs inte in, oavsett licens – inte
+heller public domain eller CC-licensierade. Då gäller en och samma licens för alla
+innehållsbilder, och den står i `LICENSE` i roten.
+
+- Varje post i `data/bilder.json` får exakt
+  `source: "Eget verk (Anatomiquiz)"` och
+  `license: "CC BY 4.0 – fri att använda med hänvisning till Anatomiquiz"`.
+  Andra värden förekommer inte.
+- CC BY 4.0 betyder att andra får återanvända bilderna, även kommersiellt, med
+  hänvisning till Anatomiquiz. Ingen synlig `credit` på den egna sajten
+  (självkreditering är onödig); attributionskravet gäller externt återbruk.
+- Licensen gäller bara `img/media/`. Logotyp, favicon, ikoner och delningsbild i `img/`
+  är alla rättigheter förbehållna, som texterna och koden (`LICENSE` §1).
+- Är en bild inte egen eller ursprunget oklart: lägg inte in den. Säg det till
+  användaren i stället.
+- Ändras licensen ska `LICENSE`, den här sektionen, varje post i `data/bilder.json` och
+  licensraden i `info.html` ändras i samma commit.
 
 ## Arbetsflöde när en ny bild kommer in
 1. Lägg filen i rätt mapp under `img/media/<kategori>/<region>/` (rätt namn, optimerad).

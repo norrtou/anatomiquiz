@@ -39,3 +39,7 @@ Sajten använder [IndexNow](https://www.indexnow.org/) för att meddela Bing, Ya
 - **Nyckelfil:** `ff1efd99d9aa024279a96e753a78c317.txt` i roten (måste ligga kvar; bevisar domänägande).
 - **Automatik:** `.github/workflows/indexnow.yml` körs när GitHub Pages-bygget är live (`page_build`) och postar URL:erna ur `sitemap.xml`.
 - **Manuell körning:** Actions-fliken → *IndexNow* → *Run workflow* (`workflow_dispatch`).
+
+## Licens
+
+© 2026 Daniel Medin / Norrtou Creations. Texter, quizfrågor, ordlista och kod: alla rättigheter förbehållna. Innehållsbilderna i `img/media/` är egna verk under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.sv) med hänvisning till Anatomiquiz. Fullständiga villkor i [`LICENSE`](LICENSE).

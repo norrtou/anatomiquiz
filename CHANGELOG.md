@@ -1,5 +1,12 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.456
+- **Repot har nu en licensfil, `LICENSE` i roten.** Tidigare saknades licens helt. Juridiskt betydde det redan "alla rättigheter förbehållna", men samtidigt sade `BILDER_REGLER.md` att bilderna var CC BY 4.0, och det stod bara i en intern regelfil. Nu står båda delarna på ett ställe.
+- **Texter, quizfrågor, ordlista och kod: alla rättigheter förbehållna.** Att källkoden går att läsa på GitHub ger ingen rätt att använda den.
+- **Innehållsbilderna i `img/media/` är CC BY 4.0** och får återanvändas, även kommersiellt, med hänvisning till Anatomiquiz. Logotyp, favicon, ikoner och delningsbild i `img/` omfattas inte.
+- **Bara egna bilder.** `BILDER_REGLER.md` §Rättigheter säger nu att tredjepartsbilder inte läggs in oavsett licens, så att en enda licens gäller för alla bilder. Schemat och exemplet i `data/bilder.json` är anpassade efter det. Alla 54 registrerade bilder var redan märkta som eget verk under CC BY 4.0, så ingen post behövde ändras.
+- **Synligt på sajten:** en rad i det finstilta blocket under Referenser på `info.html`, efter raden om vem som skapat sajten, med länk till licensen. README har fått ett avsnitt om licensen.
+
 ## 0.9.455
 - **Långa quizfrågor skalas nu ned på mobil även efter att man scrollat.** Rapporterat i Psykologi: frågan och svarsalternativen visades i full storlek och rymdes inte på skärmen. Orsaken låg i `fitActiveView()` i `js/app.js`, som mätte kortets underkant mot den **nuvarande scrollpositionen**. När man scrollat ner för att nå svaren eller Nästa, och Safaris verktygsfält fälldes in eller ut, utlöstes en resize. Mätningen började då om på skala 1, såg ett kort som "fick plats" och stannade där. Vyn var ofixad när man scrollade upp igen.
 - **Mätningen sker nu i dokumentkoordinater**, alltså som om sidan stod överst, och blir därmed oberoende av scrollläget. Det gäller quizet och alla spellägen som använder samma funktion.
