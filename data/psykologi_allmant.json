@@ -5479,9 +5479,9 @@
     "id": "psyalm_406",
     "type": "mc",
     "prompt": "I multidisciplinära diskussioner om intelligenstestning och kognition: vilket påstående stämmer inte?",
-    "correct": "De flesta intelligenstest kräver att man kan tala och använda finmotorik",
+    "correct": "Det finns evidens för att intelligenstest inte påverkas av kultur eller uppväxtmiljö",
     "distractors": [
-      "Det finns evidens för att resultat på intelligenstest inte påverkas av kultur eller var en person växte upp",
+      "De flesta intelligenstest kräver att man kan tala och använda finmotorik",
       "Alfred Binet var en av de första som arbetade med att konstruera ett intelligenstest",
       "Wechslerskalorna har ett genomsnitt på 100 och en standardavvikelse på 15 poäng"
     ],
@@ -5512,6 +5512,76 @@
       "I rader bakom varandra mot ledaren",
       "Runt ett bord med ledaren vid kortänden",
       "Fritt, där var och en råkar sätta sig"
+    ],
+    "topic": "psykologi_allmant",
+    "difficulty": "Normal",
+    "source": "Psykologi"
+  },
+  {
+    "id": "psyalm_409",
+    "type": "mc",
+    "prompt": "Christina, 91 år, bor på ett omsorgsboende. Hon drar sig undan, vill inte lära känna de andra, sitter med ett fotoalbum och talar mest om människor som inte lever längre. Vilken åldrandeteori passar bäst in på hennes agerande?",
+    "correct": "Gerotranscendens",
+    "distractors": [
+      "Aktivitetsteorin",
+      "Kontinuitetsteorin",
+      "Sociala sammanbrottsteorin"
+    ],
+    "topic": "psykologi_allmant",
+    "difficulty": "Normal",
+    "source": "Psykologi"
+  },
+  {
+    "id": "psyalm_410",
+    "type": "mc",
+    "prompt": "Personalen Anna försöker få med Christina på sittgympa och promenader och menar att alla mår bra av att komma igång, röra sig och vara bland folk. Vilken åldrandeteori passar bäst in på Annas synsätt?",
+    "correct": "Aktivitetsteorin",
+    "distractors": [
+      "Gerotranscendens",
+      "Kontinuitetsteorin",
+      "Disengagemangsteorin"
+    ],
+    "topic": "psykologi_allmant",
+    "difficulty": "Normal",
+    "source": "Psykologi"
+  },
+  {
+    "id": "psyalm_411",
+    "type": "mc",
+    "prompt": "Dottern Britt-Marie invänder att modern aldrig gillat gympa eller trädgårdsarbete utan handarbete och måleri, och att man måste bygga på de äldres tidigare intressen. Vilken åldrandeteori passar bäst in på hennes synsätt?",
+    "correct": "Kontinuitetsteorin",
+    "distractors": [
+      "Aktivitetsteorin",
+      "Gerotranscendens",
+      "Disengagemangsteorin"
+    ],
+    "topic": "psykologi_allmant",
+    "difficulty": "Normal",
+    "source": "Psykologi"
+  },
+  {
+    "id": "psyalm_412",
+    "type": "mc",
+    "prompt": "Den tidiga språkutvecklingen ser i stort sett likadan ut i hela världen. Vilket alternativ stämmer bäst om barns kommunikation?",
+    "correct": "Vid 2 års ålder behärskar de flesta barn en viss grammatisk struktur",
+    "distractors": [
+      "Vid 24–30 månaders ålder yttrar barnet sina allra första ord",
+      "Vid 2 månaders ålder jollrar barnet och använder sina första ord",
+      "I länder i Asien utvecklas språket i genomsnitt fem månader senare"
+    ],
+    "topic": "psykologi_allmant",
+    "difficulty": "Normal",
+    "source": "Psykologi"
+  },
+  {
+    "id": "psyalm_413",
+    "type": "mc",
+    "prompt": "I en grupp sätter en medlem genomgående sina egna åsikter och behov före gruppens gemensamma uppgift och saknar intresse för vad de andra tycker. Vilket grundantagande, i Lorentzons och Sandlers tillägg till Bion, beskriver detta?",
+    "correct": "Individualism",
+    "distractors": [
+      "Parbildning",
+      "Den beroende gruppen",
+      "Kamp och flykt"
     ],
     "topic": "psykologi_allmant",
     "difficulty": "Normal",

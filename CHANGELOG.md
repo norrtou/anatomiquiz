@@ -1,5 +1,15 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.465
+- **Ämnets facit avstämt mot en genomgången svarsnyckel för 57 frågor — 49 av 50 kontrollerbara stämde.** Jämförelsen gjordes post för post mot `correct`-fältet, inte mot en sammanfattning.
+- **Rättat: `psyatp_406` hade fel svar.** Frågan gäller vilket påstående om intelligens och kognition som *inte* stämmer. Rätt svar är att **resultat på intelligenstest inte skulle påverkas av kultur eller uppväxtmiljö** — det är det tydligt felaktiga påståendet, eftersom språk, utbildning och kulturella erfarenheter mycket väl påverkar testresultat. Frågan byggdes i 0.9.464 med *de flesta intelligenstest kräver tal och finmotorik* som svar; det påståendet är svepande men i huvudsak sant och ligger nu som felsvar. Detta var också den enda frågan där vårt facit avvek, och den förklarar var den förlorade poängen låg i underlaget.
+- **Fem frågor tillagda i båda psykologiämnena** (`psyatp_409`–`413` och `psyalm_409`–`413`), 406 → 411 frågor var:
+  - **Fallet med Christina, personalen Anna och dottern Britt-Marie, som tre frågor.** Christina som drar sig undan och talar om de döda → *gerotranscendens*. Anna som menar att alla mår bra av att röra på sig och vara bland folk → *aktivitetsteorin*. Britt-Marie som vill bygga på moderns tidigare intressen → *kontinuitetsteorin*. Fallet kunde inte byggas tidigare eftersom själva fallbeskrivningen saknades.
+  - **Barns tidiga språkutveckling.** Svar: vid 2 års ålder behärskar de flesta barn en viss grammatisk struktur. Felsvaren är att de första orden skulle komma vid 24–30 månader, att barnet använder ord vid 2 månader, och att språket utvecklas senare i Asien.
+  - **Individualism som grundantagande**, i Lorentzons och Sandlers tillägg till Bion: medlemmen som sätter sina egna åsikter före gruppens uppgift. Kompletterar `psyatp_405`, som täcker kamp och flykt i samma fall.
+- **Bekräftat utan ändring:** att parbildning *inte* är rätt svar på gruppfallet bara för att två personer bråkar — parbildning kräver att gruppen lägger sitt hopp till ett par. Den ligger kvar som felsvar i `psyatp_405`, vilket stämmer.
+- **Kontrollerat:** `validate_quiz.py` 0 blockerande fel, rätt svar är inte det längsta alternativet i någon av de nya eller i den rättade, alla har långa frågetexter och går inte in i Matcha, och filerna är identiska på allt utom `id`, `topic` och `source`.
+
 ## 0.9.464
 - **Ämnets facit avstämt mot en fullständig nyckel — alla 22 flervalsfrågor stämde, noll avvikelser.** Hela uppsättningen jämfördes svar för svar mot quizet: Piagets inriktning, det preoperationella stadiet, den centrala frågeställning som inte hör hemma, kontinuitetsteorin, successful ageing, SOK-ordningen, emotion, Maslows andra steg, sociala sammanbrottsteorin, afasi, gerotranscendens, Yalom och Leszcz, negativ förstärkning, extroversion, kreativitet, KBT vid stress, parbildning, personlighetsegenskaper, apraxi, hjärnstammen och de taktila signalerna.
 - **Tre frågor saknades och är inlagda i båda psykologiämnena** (`psyatp_406`–`408` och `psyalm_406`–`408`), 403 → 406 frågor var:
