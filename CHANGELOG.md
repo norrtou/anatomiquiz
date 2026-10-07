@@ -1,5 +1,13 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.463
+- **Täckningskontroll mot de frågor som återkommer oftast i kursunderlaget — 77 punkter prövade mot ämnets 401 frågor.** 73 var redan täckta i någon form, och varje träff verifierades mot frågans faktiska text i stället för mot en nyckelordsmatchning: den grova sökningen gav flera falska förstaträffar som inte höll vid granskning.
+- **Två frågor saknades och är inlagda, i båda psykologiämnena** (`psyatp_404`–`405` och `psyalm_404`–`405`), 401 → 403 frågor var:
+  - **Karin, 88 år, som fortsätter sin vanliga skogsrunda under pandemin.** Svar: *kontinuitetsteorin*. Den beskriver att äldre håller fast vid etablerade mönster, vanor och livsstil, och frågans bärande ord är att rundan är den *vanliga*. Alternativen är de fyra som hör till frågan: aktivitetsteorin, disengagemangsteorin och Eriksons utvecklingsteori.
+  - **Gruppfallet med en dominant medlem och en motståndare**, där de övriga blir tysta och passiva. Svar: *kamp och flykt* — paret som bråkar, och flykten hos de andra. Parbildning är med som felsvar, eftersom den förväxlingen ligger nära: parbildning är två som förenas i hopp om något bättre, inte två som strider.
+- **Båda har långa frågetexter och går därför inte in i Matcha**, där svaren *Kontinuitetsteorin* och *Kamp och flykt* redan är upptagna av `psyatp_273` och `psyatp_381` (§2.15).
+- **Kontrollerat:** `validate_quiz.py` 0 blockerande fel i båda filerna, och filerna identiska på allt utom `id`, `topic` och `source`.
+
 ## 0.9.462
 - **Formuleringarna om psykologiämnets underlag lagda i linje med §3.6.** Tio ställen i `CHANGELOG.md` och `scripts/psykologi_atp_quiz_todo.md` beskrev underlaget på ett sätt regeln inte tillåter. Ämnet beskrivs efter vad det innehåller och vilken kurs det hör till; sakinnehållet i posterna är oförändrat, och inga frågor är rörda.
 - **Två äldre poster rättade samtidigt** (0.3.x och 0.5.x), som hade samma formulering om två andra ämnen. De låg kvar sedan den förra genomgången, eftersom sökningen då inte täckte deras ordval.
