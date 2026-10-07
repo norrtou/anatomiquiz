@@ -356,7 +356,15 @@ skrivs. Vill du hellre undvika negationen: ställ frågan positivt (*Vems betyde
 centrum för Bowlbys forskning?*). En omvänd fråga är bara motiverad när poängen är att skilja
 ut det enda påståendet som inte hör hemma.
 
-Bakgrund (0.9.467): *Vilket alternativ stämmer sämst med hans teori?* om Bowlby lästes som
+**Skriv frågan positivt när rätt svar annars blir ett felaktigt påstående som spelaren
+minns.** I en omvänd fråga får det *falska* påståendet den gröna bocken. Spelaren lär sig
+bilden "grönt = sant", och ett falskt påstående om en teoretiker (*Bowlby lade stor vikt vid
+pappans roll*) fastnar då som sant — och krockar med andra frågor som säger motsatsen. Ställ
+i stället frågan *Vilket påstående stämmer med hans teori?* och låt det falska påståendet
+vara en distraktor. Omvänd form med versaler duger bara när rätt svar är något neutralt som
+inte blir en felaktig sakuppgift, t.ex. *Vilket av dessa ben är INTE i skallen? → Sternum*.
+
+Bakgrund (0.9.467–0.9.468): *Vilket alternativ stämmer sämst med hans teori?* om Bowlby lästes som
 en vanlig fråga. Spelaren valde överlevnad (som stämmer), fick fel, och uppfattade det som att
 quizet påstod att pappan var viktigast — i strid med två andra frågor. Facit var rätt; det var
 den gemena negationen som lurade.

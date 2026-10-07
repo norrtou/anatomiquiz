@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.468
+- **Bowlbyfrågan (`psyatp_5`/`psyalm_5`) är omskriven till en positiv fråga: *Vilket påstående stämmer med hans teori?*** Versalerna i 0.9.467 räckte inte. I den omvända formen fick det falska påståendet *Han lade stor vikt vid pappans roll* den gröna bocken, och den bilden fastnar som sann — i strid med `_124`, `_169`, `_202` och `_243`, som alla säger att modern stod i centrum och att fadern inte gjorde det. Nu är rätt svar att anknytningen ökade chanserna för överlevnad, och pappans roll ligger som felsvar.
+- Nya felsvar: att anknytningen skulle vara inlärd genom belöning med mat (den förklaring Bowlby vände sig emot) och att den skulle formas först i skolåldern. De två tidigare felsvaren om tre anknytningsgrupper och fyra stadier stämmer med teorin och kan inte vara felsvar i en positiv fråga; de tre grupperna täcks redan av `_203` och `_305`.
+- **CLAUDE_REGLER §2.3b utökad:** en omvänd fråga där rätt svar blir en felaktig sakuppgift ska skrivas positivt.
+- **Kontrollerat:** `validate_quiz.py` 0 blockerande fel, psykologifilerna identiska på allt utom `id`, `topic` och `source`.
+
 ## 0.9.467
 - **Omvända frågor har fått negationen i versaler, så att de inte kan läsas som vanliga frågor.** Frågan om Bowlby — *Vilket alternativ stämmer SÄMST med hans teori?* — lästes som en vanlig fråga: man valde överlevnad (som stämmer med Bowlby), fick fel och uppfattade det som att quizet påstod att pappans roll var viktigast. Facit var rätt hela tiden och stämmer med övriga Bowlbyfrågor (moderns betydelse i centrum, anknytningen ökade chansen att överleva); det var det gemena *sämst* som lurade. Quizet är till för inlärning, inte för att lura spelaren.
 - **21 frågor ändrade** (bara versaler, inget sakinnehåll): psykologi `_5`, `_14`, `_43`, `_58`, `_64`, `_132`, `_406` i både `psyatp` och `psyalm`; ben `q288`–`q291`; sjuksköterska `ssk_vital_60`, `ssk_vital_82`, `ssk_resp_82`. Omvända frågor som redan hade versaler (grepp, handen, läkare, BMA, röntgen, tandläkare) var orörda.
