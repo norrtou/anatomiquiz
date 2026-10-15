@@ -1,5 +1,11 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.471
+- **100 nya frågor i grundläggande psykologi, i båda ämnena: Psykologi för arbetsterapeuter (`psyatp_417`–`psyatp_516`) och Allmänt → Psykologi (`psyalm_417`–`psyalm_516`).** Båda har nu 514 frågor, 445 MC och 69 TF, och de två filerna är verifierat identiska på allt utom id, ämnesnyckel och `source`.
+- **20 korta frågor för Matcha** (`417`–`436`): Milgram, Asch, detet och överjaget, projektion och förträngning, hippocampus, dopamin, REM-sömn, Millers sju plus minus två, Ebbinghaus, Wundt, Rogers, kognitiv dissonans, inlärd hjälplöshet, bekräftelsebias, Bandura, främmande situationen, åskådareffekten och neuroticism. Matcha har nu 224 par, alla med unika frågor och svar, och varje prompt passar ett enda svar i poolen (§2.15).
+- **80 längre flervalsfrågor** (`437`–`516`) om psykologins perspektiv och försvarsmekanismer, forskningsmetod, biologisk psykologi, perception och uppmärksamhet, inlärning, minne, tänkande och intelligens, motivation och emotion, personlighet, utveckling, socialpsykologi samt stress och coping.
+- **Kontrollerat:** `validate_quiz.py` 0 fel och 0 varningar i båda filerna. Rätt svar är längst i 26 % av de mätbara nya frågorna, och ämnets längdbias är 26 %. TF-balansen är oförändrad. Alla 100 är lästa var för sig före inskrivningen (§2.14); rättelserna står i facitfilens §7.6.
+
 ## 0.9.470
 - **Ny post i ordlistan: *vagitus*** — det nyfödda barnets skrik, särskilt det första skriket direkt efter födseln när lungorna fylls med luft och andningen kommer igång. Latinsk uppslagsform, så ingen svensk böjning (ORDLISTA.md); `Eng.`, `Vardag.`, etymologi (lat. *vagire* = skrika, om spädbarn) och `Jfr Partus, Apgar`. Inlagd mellan *vagitorium* och *vagotomi*.
 - Ordet används inte i någon sidtext, så det har ingen tooltip i `kb_glossary_terms.json` (§0.6 gäller ord som står på sajten).

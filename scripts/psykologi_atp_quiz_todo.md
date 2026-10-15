@@ -394,6 +394,43 @@ underlagets ord **pairing**. **`psyatp_402`–`403` / `psyalm_402`–`403`**, ä
 - **Mätt:** `validate_quiz.py` 0 blockerande fel i båda filerna, filerna identiska på allt utom
   `id`, `topic` och `source`.
 
+### 7.6 Fjärde omgången — 100 frågor i grundläggande psykologi (2026-10-15)
+
+Beställning: 100 nya frågor i grundläggande psykologi, i samma stil som ämnets befintliga
+frågor — 20 korta för Matcha och 80 längre flervalsfrågor. **`psyatp_417`–`516` /
+`psyalm_417`–`516`**, ämnet går 414 → **514 frågor** (445 MC, 69 TF).
+
+- **`417`–`436` är korta** (prompt ≤ 55, `correct` ≤ 26 tecken) och går in i Matcha-poolen,
+  som går 204 → **224 par** med 224 unika prompter och 224 unika svar. Varje prompt är läst mot
+  hela poolens svar (`CLAUDE_REGLER.md` §2.15).
+- **`437`–`516` är långa** med prompt > 55 tecken, så de går inte in i Matcha.
+- **Innehållet är grundläggande psykologi som ämnet inte täckte tidigare:** psykologins
+  perspektiv och Freuds strukturmodell med försvarsmekanismer, forskningsmetod (variabler,
+  slumpmässig fördelning, samband och orsak, dubbelblind, reliabilitet, longitudinell studie),
+  biologisk psykologi (synaps, serotonin, dopamin, Phineas Gage, Broca, split brain, kortisol,
+  REM-sömn, hippocampus), perception och uppmärksamhet (gestaltlagar, cocktailpartyeffekten,
+  Stroop, förändringsblindhet, sensorisk adaptation), klassisk och operant betingning
+  (lille Albert, utsläckning, förstärkningsscheman, Thorndike, Köhler, Tolman, self-efficacy),
+  minne (Atkinson–Shiffrin, Miller, Ebbinghaus, interferens, amnesi, seriepositionseffekten,
+  Loftus, utspridd repetition), tänkande och intelligens (heuristiker, funktionell låsning,
+  divergent tänkande, Spearman, Cattell, Gardner), motivation och emotion (inre och yttre
+  motivation, flow, självbestämmandeteorin, James–Lange, Ekman, Mischel), personlighet
+  (femfaktormodellen, kontrollokus, Rogers), utveckling (Ainsworth, Harlow, Kohlberg, Marcia),
+  socialpsykologi (Asch, Milgram, åskådareffekten, attributionsfelet, kognitiv dissonans,
+  grupptänkande, haloeffekten, självuppfyllande profetia, Sherif, Zimbardo) samt stress och
+  coping (Selye, Lazarus, inlärd hjälplöshet). Underlaget är etablerad läroboksstoff i
+  grundläggande psykologi, bland annat Hwang m.fl., *Grunderna i vår tids psykologi*, som redan
+  står i källistan i `info.html`.
+- **Mätt:** `validate_quiz.py` 0 fel och 0 varningar i båda filerna; filerna identiska på allt
+  utom `id`, `topic` och `source`; 0 mjuka bindestreck. Rätt svar längst i 26 % av de 88
+  mätbara nya frågorna, och ämnet totalt 26 % (96 av 373). TF-balansen är oförändrad.
+- **Manuell genomläsning (§2.14) före inskrivning.** Rättat i samma pass: ett ordeko per fråga i
+  sex frågor (bland annat *villkor* → *villkorslös*, *uppskattningar* → *uppskattningen*), en
+  kvalificerare som bara rätt svar bar (synapsen), två distraktorer som delvis var sanna (REM-sömnen
+  före uppvaknandet, recency-glömskan i seriepositionsfrågan), femfaktorfrågan där rätt svar
+  gick att pussla ihop ur distraktorernas första ord, en prompt som frågade *varför* när svaret
+  var ett begrepp, samt fem formtells som validatorn fångade (tre *ett annat …*, två absoluta ord).
+
 ## 9. Faktagranskning 2026-10-07 — öppna punkter, väntar på användarens beslut
 
 Hela ämnet (401 frågor) lästes fråga för fråga och kontrollerades mot vetenskapliga källor.
