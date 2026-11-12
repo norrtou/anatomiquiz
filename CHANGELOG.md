@@ -1,5 +1,8 @@
 # CHANGELOG - Anatomiquiz
 
+## 0.9.472
+- **Psykologi borttaget ur ämnesväljaren under Arbetsterapeut.** Raden för *Psykologi för arbetsterapeuter* (`psykologi_atp`) är utkommenterad i `index.html`. Ämnet ligger kvar i Allmänt → Psykologi (`psykologi_allmant`) med samma frågor. Inget är raderat: `data/psykologi_atp.json` och laddvägen i `js/app.js` finns kvar, så ämnet kan slås på igen genom att ta bort kommentaren.
+
 ## 0.9.471
 - **100 nya frågor i grundläggande psykologi, i båda ämnena: Psykologi för arbetsterapeuter (`psyatp_417`–`psyatp_516`) och Allmänt → Psykologi (`psyalm_417`–`psyalm_516`).** Båda har nu 514 frågor, 445 MC och 69 TF, och de två filerna är verifierat identiska på allt utom id, ämnesnyckel och `source`.
 - **20 korta frågor för Matcha** (`417`–`436`): Milgram, Asch, detet och överjaget, projektion och förträngning, hippocampus, dopamin, REM-sömn, Millers sju plus minus två, Ebbinghaus, Wundt, Rogers, kognitiv dissonans, inlärd hjälplöshet, bekräftelsebias, Bandura, främmande situationen, åskådareffekten och neuroticism. Matcha har nu 224 par, alla med unika frågor och svar, och varje prompt passar ett enda svar i poolen (§2.15).
